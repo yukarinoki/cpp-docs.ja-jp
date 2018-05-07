@@ -1,24 +1,19 @@
 ---
-title: "基本的な型 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: 基本的な型 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-types-ccx"></a>基本的な型 (C++/CX)
 だけでなく、標準 C++ の組み込み型、C + + CX 基本的な Windows ランタイム型の標準の C++ 型にマップする typedef を提供することにより、Windows ランタイムのアーキテクチャによって定義されている型システムをサポートしています. C + + CX はブール値を文字、および数値の基本型を実装します。 これらの typedefs は、 `default` 名前空間 (明示的に指定する必要はない) で定義されます。 さらに、C + + CX が特定の Windows ランタイム型とインターフェイスのラッパーと具体的な実装を提供します。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 02/14/2018
 |uint16|16 ビット符号なし整数。|unsigned short|0 ～ 65,535|  
 |int32|32 ビット符号付き整数。|int|-2,147, 483,648 ~ 2,147, 483,647|  
 |uint32|32 ビット符号なし整数。|unsigned int|0 ～ 4,294,967,295|  
-|int64|64 ビット符号付き整数。|long long  -or- __int64|-9,223,372,036,854、9,223,372,036,854,775,807 を通じて 775,808|  
+|int64|64 ビット符号付き整数。|long long - または - _ _int64|-9,223,372,036,854、9,223,372,036,854,775,807 を通じて 775,808|  
 |uint64|64 ビット符号なし整数。|unsigned long long  -or- unsigned __int64|0 ～ 18,446,744,073,709,551,615|  
 |float32|32 ビットの IEEE 754 浮動小数点数。|float|3.4E +/- 38 (7 桁)|  
 |float64|64 ビットの IEEE 754 浮動小数点数。|double|1.7E +/- 308 (15 桁)|  
@@ -61,5 +56,5 @@ ms.lasthandoff: 02/14/2018
 |UIntPtr|(内部使用のみ。)ポインターとして使用される符号なし 64 ビット値。|  
 |IntPtr|(内部使用のみ。)ポインターとして使用される符号付き 64 ビット値。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)

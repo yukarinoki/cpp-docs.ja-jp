@@ -1,13 +1,10 @@
 ---
-title: "ウィンドウの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ウィンドウの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CWnd objects [MFC]
 - CWnd objects [MFC], creating
 ms.assetid: f5ff91a6-4069-47d7-9177-1e6c80d3792c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3563395020919c59acbd94bfc8653d349090ff96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 446ebb4904b8f34576b03f88988bfc58138736a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-windows"></a>ウィンドウの作成
 フレームワークは、フレームワーク プログラムで必要がある windows のほとんどを自動的に作成します。 [ドキュメント/ビューの作成](../mfc/document-view-creation.md)フレームワークがドキュメントとビューに関連付けられているフレーム ウィンドウを作成する方法を示しています。 な特別な用途のための独自のウィンドウを作成することができますが、— フレーム ウィンドウまたはビューの独自の子ウィンドウを含む — フレームワークによって提供される windows だけでなくです。  
@@ -41,6 +36,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [ウィンドウ オブジェクトの操作](../mfc/working-with-window-objects.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Window オブジェクト](../mfc/window-objects.md)
 

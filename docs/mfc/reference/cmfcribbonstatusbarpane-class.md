@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonStatusBarPane クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCRibbonStatusBarPane クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBarPane
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3d5059adf0ebbd1ed651d57354ae73beadb919f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane クラス
 `CMFCRibbonStatusBarPane`クラスは、リボン ステータス バーに追加できるリボン要素を実装します。  
@@ -106,10 +101,10 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
  [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribbonstatusbarpane.h  
   
-##  <a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
+##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
  ステータス バーのウィンドウのオブジェクトを構築します。  
   
 ```  
@@ -167,7 +162,7 @@ CMFCRibbonStatusBarPane(
  [入力] `uiAnimationListResID`  
  アニメーションで使用されているイメージ リストのリソース ID を指定します。  
   
-##  <a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText  
+##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  ステータス バー ペインを表示できる最も長いテキスト文字列を取得します。  
   
 ```  
@@ -177,7 +172,7 @@ LPCTSTR GetAlmostLargeText() const;
 ### <a name="return-value"></a>戻り値  
  ステータス バー ペインを表示できる最も長いテキスト文字列。  
   
-##  <a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign  
+##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign  
  ステータス バー ペインのラベルのテキストの配置の現在の設定を取得します。  
   
 ```  
@@ -193,7 +188,7 @@ int GetTextAlign() const;
   
 -   TA_RIGHT です。  
   
-##  <a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation  
+##  <a name="isanimation"></a>  CMFCRibbonStatusBarPane::IsAnimation  
  アニメーションが進行中かどうかを判断します。  
   
 ```  
@@ -201,9 +196,9 @@ BOOL IsAnimation() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`アニメーションの実行中である場合`FALSE`それ以外の場合。  
+ `TRUE` アニメーションの実行中である場合`FALSE`それ以外の場合。  
   
-##  <a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended  
+##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended  
  リボン ステータス バーの拡張領域内のウィンドウがあるかどうかを決定します。  
   
 ```  
@@ -211,9 +206,9 @@ BOOL IsExtended() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ウィンドウがステータス バーの拡張領域にある場合は。 それ以外の場合は `FALSE`。  
+ `TRUE` ウィンドウがステータス バーの拡張領域にある場合は。 それ以外の場合は `FALSE`。  
   
-##  <a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -225,7 +220,7 @@ virtual void OnDrawBorder(CDC*);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -239,7 +234,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation  
+##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation  
  フレームワークは、ウィンドウに割り当てられているアニメーションの終了時にこのメソッドを呼び出します。  
   
 ```  
@@ -247,9 +242,9 @@ virtual void OnFinishAnimation();
 ```  
   
 ### <a name="remarks"></a>コメント  
- `StopAnimation`メソッドの呼び出し、`OnFinishAnimation`メソッドで、アニメーションの終了時にデータのクリーンアップを行うこともできます。  
+ `StopAnimation` メソッドの呼び出し、`OnFinishAnimation`メソッドで、アニメーションの終了時にデータのクリーンアップを行うこともできます。  
   
-##  <a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText  
+##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText  
  ステータス バー ペインが切り詰めなしで表示できる最も長いテキストを定義します。  
   
 ```  
@@ -263,7 +258,7 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ### <a name="remarks"></a>コメント  
  ライブラリは、テキストのサイズを計算する`lpszAlmostLargeText`を指定し、それに応じて、ウィンドウのサイズを変更します。 ウィンドウで、まだ適合しない場合は、テキストが切り捨てられます。  
   
-##  <a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList  
+##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  ステータス バー ペインに、アニメーションを使用できるイメージ リストをアタッチします。  
   
 ```  
@@ -292,9 +287,9 @@ BOOL SetAnimationList(
  イメージ リストのリソース ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`イメージ リストが、ステータス バー ペインを正常にアタッチされている場合`FALSE`それ以外の場合。  
+ `TRUE` イメージ リストが、ステータス バー ペインを正常にアタッチされている場合`FALSE`それ以外の場合。  
   
-##  <a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign  
+##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign  
  ステータス バー ペインのラベルのテキストの配置を設定します。  
   
 ```  
@@ -306,15 +301,15 @@ void SetTextAlign(int nAlign);
  テキストの配置を指定します。  
   
 ### <a name="remarks"></a>コメント  
- `nAlign`次の値のいずれかを持つことができます。  
+ `nAlign` 次の値のいずれかを持つことができます。  
   
 - `TA_LEFT`: 左寄せ  
   
-- `TA_CENTER:`中央揃え  
+- `TA_CENTER:` 中央揃え  
   
-- `TA_RIGHT:`右揃え  
+- `TA_RIGHT:` 右揃え  
   
-##  <a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation  
+##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation  
  ペインに割り当てるアニメーションを開始します。  
   
 ```  
@@ -333,14 +328,14 @@ void StartAnimation(
 ### <a name="remarks"></a>コメント  
  呼び出す前に、イメージ リストへのハンドルを指定する必要があります`StartAnimation`を使用して`SetAnimationList`です。  
   
-##  <a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation  
+##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation  
  ステータス バー ペインに割り当てられているアニメーションを停止します。  
   
 ```  
 void StopAnimation();
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)   

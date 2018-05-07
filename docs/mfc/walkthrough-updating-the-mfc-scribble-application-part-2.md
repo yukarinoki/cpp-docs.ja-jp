@@ -1,29 +1,24 @@
 ---
-title: "チュートリアル: MFC Scribble アプリケーション (パート 2) の更新 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: MFC Scribble アプリケーション (パート 2) の更新 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)
 [第 1 部](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)このチュートリアルでは、クラシックに Office Fluent リボンを追加する方法を示しましたの Scribble アプリケーションです。 この部分では、リボン パネルやユーザーがメニューやコマンドの代わりに使用できるコントロールを追加する方法を示します。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [初期化と環境設定の保存](#initpensave)  
   
-##  <a name="addnewpanel"></a>新しいパネルをリボンに追加します。  
+##  <a name="addnewpanel"></a> 新しいパネルをリボンに追加します。  
  次の手順を追加する方法を説明する、**ビュー**ツールバーとステータス バーの可視性を制御する 2 つのチェック ボックスを含むパネルとも、**ウィンドウ**を垂直方向の分割を含むパネル作成とマルチ ドキュメント インターフェイス (MDI) ウィンドウの配置を制御するボタンをクリックします。  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>リボン バーにビュー パネルとウィンドウのパネルを追加するには  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[セクション](#top)]  
   
-##  <a name="addhelppanel"></a>ヘルプ パネルをリボンに追加します。  
+##  <a name="addhelppanel"></a> ヘルプ パネルをリボンに追加します。  
  ここで、名前が付けられるリボン ボタンに Scribble アプリケーションで定義されている 2 つのメニュー項目を割り当てることができます**ヘルプ トピック**と**について Scribble**です。 ボタンがという名前の新しいパネルに追加されます**ヘルプ**です。  
   
 #### <a name="to-add-a-help-panel"></a>ヘルプ パネルを追加するには  
@@ -101,14 +96,14 @@ ms.lasthandoff: 12/21/2017
   
  [[セクション](#top)]  
   
-##  <a name="addpenpanel"></a>ペン パネルをリボンに追加します。  
+##  <a name="addpenpanel"></a> ペン パネルをリボンに追加します。  
  ここで、太さ、ペンの色を制御するボタンを表示するパネルを追加します。 このパネルには、シック (thick) およびシン ペン間を切り替える チェック ボックスが含まれています。 その機能に似ています、**太い線**Scribble アプリケーションのメニュー項目。  
   
  元の Scribble アプリケーションでは、ユーザーは、ユーザーがクリックしたときに表示されるダイアログ ボックスをペンの幅を選択**ペンの幅**メニュー。 リボン バーには、新しいコントロールの十分な余裕があるために、リボンを次の 2 つのコンボ ボックスを使用して、ダイアログ ボックスを置き換えることができます。 細いペンの幅を調整します。 1 つのコンボ ボックスと、その他のコンボ ボックスがシック (thick) のペンの幅を調整します。  
   
 #### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>ペン パネルとコンボ ボックスをリボンに追加するには  
   
-1.  **ツールボックス**、ドラッグ、**パネル**を**ホーム**カテゴリ。 ドラッグし、  **チェック ボックスを**と 2 つ**コンボ ボックス**パネルにします。  
+1.  **ツールボックス**、ドラッグ、**パネル**を**ホーム**カテゴリ。 ドラッグし、 ** チェック ボックスを**と 2 つ**コンボ ボックス**パネルにします。  
   
 2.  そのプロパティを変更するパネルをクリックします。 変更**キャプション**に`Pen`です。  
   
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[セクション](#top)]  
   
-##  <a name="addcolorbutton"></a>ペン パネルにカラー ボタンを追加します。  
+##  <a name="addcolorbutton"></a> ペン パネルにカラー ボタンを追加します。  
  次に、追加、 [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md)により、ユーザー オブジェクトの色で scribble です。  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>カラー ボタン、[ペン] パネルを追加するには  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[セクション](#top)]  
   
-##  <a name="addcolormember"></a>ドキュメント クラスへの色のメンバーの追加  
- 元の Scribble アプリケーションがある色のペン、それらの実装を記述する必要があります。 ドキュメントのペンの色を保存するには、ドキュメント クラスに新しいメンバーを追加します。`CscribbleDoc.`  
+##  <a name="addcolormember"></a> ドキュメント クラスへの色のメンバーの追加  
+ 元の Scribble アプリケーションがある色のペン、それらの実装を記述する必要があります。 ドキュメントのペンの色を保存するには、ドキュメント クラスに新しいメンバーを追加します。 `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>ドキュメント クラスに色のメンバーを追加するには  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[セクション](#top)]  
   
-##  <a name="initpensave"></a>初期化と環境設定の保存  
+##  <a name="initpensave"></a> 初期化と環境設定の保存  
  次に、ペンの幅と色を初期化します。 最後に、保存し、カラー ファイルから描画を読み込みます。  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>リボン バーのコントロールを初期化するには  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      Scribdoc.cpp に次のコードを追加、`CScribbleDoc::InitDocument`メソッドの後に、`m_sizeDoc = CSize(200,200)`ステートメントです。  
   
- ```*/リボン UI をその初期値 CMFCRibbonBar にリセット/* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) GetRibbonBar();]-> [ASSERT_VALID(pRibbon) です。
+ ``` *リボン UI をその初期値 CMFCRibbonBar にリセット*pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) GetRibbonBar();]-> [ASSERT_VALID(pRibbon) です。
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton、pRibbon]-> [FindByID(ID_PEN_COLOR)) です。*//Set を黒に ColorButton  
     pColorBtn SetColor RGB (0, 0, 0);]-> [します。

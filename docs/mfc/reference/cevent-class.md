@@ -1,12 +1,9 @@
 ---
-title: "CEvent クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CEvent クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>CEvent クラス
 これは 1 つのスレッドに別のイベントが発生したことを通知できるようにする同期オブジェクト、イベントを表します。  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>コメント  
  イベントは、スレッドは、そのタスクを実行するタイミングを知る必要があるときに便利です。 たとえば、データ アーカイブにデータをコピーするスレッドは、新しいデータが使用可能な場合に通知する必要があります。 使用して、`CEvent`オブジェクトに新しいデータがある場合、コピー スレッドの通知をできるだけ早く、スレッドがそのタスクを行うことができます。  
   
- `CEvent`オブジェクトに 2 種類があります: 手動と自動です。  
+ `CEvent` オブジェクトに 2 種類があります: 手動と自動です。  
   
  自動`CEvent`には、少なくとも 1 つのスレッドが解放された後、このオブジェクトは、自動的を非シグナル (使用不可) 状態を返します。 既定では、`CEvent`しない限り、オブジェクトが自動`TRUE`の`bManualReset`構築時にパラメーター。  
   
@@ -88,14 +83,14 @@ class CEvent : public CSyncObject
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [関数](../../mfc/reference/csyncobject-class.md)  
+ [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CEvent`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  名前付きまたは名前のない構築`CEvent`オブジェクト。  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  作成した後、`CEvent`オブジェクトを使用して[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)ミュー テックスが既に存在していないすることを確認します。 ミュー テックスが予期せず存在、悪意のあるプロセスが発生したり、悪意ミュー テックスを使用することがある必ずしも意図している可能性があります。 ここでは、推奨されるセキュリティを考慮したプロシージャがハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  (使用可能) イベントが通知の状態を設定、任意の待機中のスレッドを解放し、リセットを非シグナル (使用不可) 自動的にします。  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  待機しているスレッドがないか、すぐに解放する`PulseEvent`するイベントの状態を非シグナル状態に設定しを返します。  
   
- `PulseEvent`基になる Win32 を使用して`PulseEvent`関数で、すぐに削除できます待機状態から、カーネル モードの非同期のプロシージャ呼び出しで。 したがって、`PulseEvent`信頼性が低いと、新しいアプリケーションでは使用できません。 詳細については、次を参照してください。、 [PulseEvent 関数](http://msdn.microsoft.com/library/windows/desktop/ms684914)です。  
+ `PulseEvent` 基になる Win32 を使用して`PulseEvent`関数で、すぐに削除できます待機状態から、カーネル モードの非同期のプロシージャ呼び出しで。 したがって、`PulseEvent`信頼性が低いと、新しいアプリケーションでは使用できません。 詳細については、次を参照してください。、 [PulseEvent 関数](http://msdn.microsoft.com/library/windows/desktop/ms684914)です。  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  設定するイベントの状態まで非シグナル状態に明示的にシグナル状態に設定、 [SetEvent](#setevent)メンバー関数。  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  このメンバー関数は、自動イベントでは使用されません。  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  待機中のスレッドを解放するイベントをシグナルの状態を設定します。  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>コメント  
  イベントをまでシグナル状態になりますが、イベントが手動の場合は、 [ResetEvent](#resetevent)と呼びます。 ここでは、複数のスレッドが解放できます。 イベントが自動の場合は、イベント シグナル状態になります、1 つのスレッドが解放されるまでです。 システムは、非シグナル状態に、イベントの状態が設定されます。 スレッドが待機していない場合、状態は、1 つのスレッドが解放されるまでシグナル状態のままです。  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  イベント オブジェクトを解放します。  
   
 ```  
@@ -185,7 +180,7 @@ BOOL Unlock();
 ### <a name="remarks"></a>コメント  
  このメンバー関数を解放することが、終了後、ロック オブジェクトが再利用することがある場合、自動イベントを現在所有するスレッドで呼び出されます。 ロック オブジェクトは、再利用することはできませんの場合は、ロック オブジェクトのデストラクターでこの関数が呼び出されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数クラス](../../mfc/reference/csyncobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

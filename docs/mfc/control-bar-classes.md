@@ -1,13 +1,10 @@
 ---
-title: "コントロール バー クラス |Microsoft ドキュメント"
-ms.custom: 
+title: コントロール バー クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.control
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44fcecbf1d7ddb6c46469f25349d972c8b317809
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4974b7ba3b71e60b8edf2a73ea5f06fab64ddfb7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bar-classes"></a>コントロール バー クラス
 コントロール バーは、フレーム ウィンドウにアタッチされます。 ボタン、ステータス ウィンドウまたはダイアログ テンプレートが含まれます。 添付してフローティング コントロール バー, ツール パレットとも呼ばれますが実装されている、 [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)オブジェクト。  
@@ -67,6 +62,6 @@ ms.lasthandoff: 12/21/2017
  [変更](../mfc/reference/cdockstate-class.md)  
  永続的なストレージのドッキング コントロール バーの状態データを処理します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

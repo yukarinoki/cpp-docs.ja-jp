@@ -1,13 +1,10 @@
 ---
-title: "フレームワーク (MFC) |Microsoft ドキュメント"
-ms.custom: 
+title: フレームワーク (MFC) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c021b11809b3e6598e694fdaa46b7f829358e24f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd75d29ce907b089d698c066e5a6cb41fcae3281
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
 Microsoft Foundation Class (MFC) ライブラリのフレームワークを使用する作業は、いくつかの主要なクラスといくつかの Visual C ツールに主に基づいています。 一部のクラスでは、Win32 アプリケーション プログラミング インターフェイス (API) の大部分をカプセル化します。 その他のクラスには、ドキュメント、ビュー、および、アプリケーション自体などのアプリケーションの概念がカプセル化します。 まだ他のユーザーは、OLE の機能とデータ アクセス機能が ODBC と DAO カプセル化します。  
@@ -60,5 +55,5 @@ Microsoft Foundation Class (MFC) ライブラリのフレームワークを使�
   
  [Window オブジェクト](../mfc/window-objects.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)

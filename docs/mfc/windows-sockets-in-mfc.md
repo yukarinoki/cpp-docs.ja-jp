@@ -1,13 +1,10 @@
 ---
-title: "MFC における Windows ソケット |Microsoft ドキュメント"
-ms.custom: 
+title: MFC における Windows ソケット |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC における Windows ソケット
 > [!NOTE]
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
  Windows ソケットの場合、そのソケットの概念の説明については、次を参照してください。 [Windows ソケット: バック グラウンド](../mfc/windows-sockets-background.md)です。  
   
-##  <a name="_core_sockets_programming_models"></a>ソケット プログラミング モデル  
+##  <a name="_core_sockets_programming_models"></a> ソケット プログラミング モデル  
  次のクラスでは、次の 2 つの MFC Windows ソケット プログラミング モデルがサポートされています。  
   
 -   `CAsyncSocket`  
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
  作成と使用`CSocket`と`CAsyncSocket`オブジェクトについては、「 [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)と[Windows ソケット: を使用してクラス CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)です。  
   
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Windows Sockets Dll  
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows Sockets Dll  
  Microsoft Windows オペレーティング システムでは、Windows ソケットのダイナミック リンク ライブラリ (DLL) を指定します。 Visual C では、適切なヘッダー ファイルとライブラリと、Windows ソケット仕様を提供します。  
   
  Windows ソケットの詳細についてを参照してください。  
@@ -83,6 +78,6 @@ ms.lasthandoff: 02/09/2018
   
 -   [Windows ソケット: ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows ソケット](../mfc/windows-sockets.md)
 

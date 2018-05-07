@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyGridCtrl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCPropertyGridCtrl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
@@ -159,17 +156,15 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a07b8049f01d10556bded754ec2aae55581b7cb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79cba2981a6ae6a742ad2839499f2acff6f0a5f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl クラス
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -323,10 +318,10 @@ class CMFCPropertyGridCtrl : public CWnd
   
  [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxpropertygridctrl.h  
   
-##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
+##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect  
 
   
 ```  
@@ -343,7 +338,7 @@ virtual HRESULT accSelect(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
+##  <a name="addproperty"></a>  CMFCPropertyGridCtrl::AddProperty  
  プロパティ グリッド コントロールに新しいプロパティを追加します。  
   
 ```  
@@ -358,10 +353,10 @@ int AddProperty(
  プロパティへのポインター。  
   
  [入力] `bRedraw`  
- `TRUE`プロパティをすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` プロパティをすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
  [入力] `bAdjustLayout`  
- `TRUE`テキストと、プロパティの値を描画し、プロパティを描画する方法を再計算するには`FALSE`プロパティを描画する既存の計算を使用します。 既定値は `TRUE` です。  
+ `TRUE` テキストと、プロパティの値を描画し、プロパティを描画する方法を再計算するには`FALSE`プロパティを描画する既存の計算を使用します。 既定値は `TRUE` です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功すると、プロパティ グリッド コントロール内のプロパティを追加する位置。 位置の 0 から始まるインデックスそれ以外の場合、-1 を返します。  
@@ -369,7 +364,7 @@ int AddProperty(
 ### <a name="remarks"></a>コメント  
  このメソッドは、プロパティ グリッド コントロールのプロパティの一覧の末尾に指定されたプロパティへのポインターを追加します。 プロパティを破棄したり、グリッド コントロールが破棄される前にスコープ外に出るようにしないでください。 プロパティ グリッド コントロールが完了したら、ときに呼び出す[CMFCPropertyGridCtrl::RemoveAll](#removeall)を追加したすべてのプロパティを削除します。 AddProperty メソッドは、指定したプロパティは、一覧に既に追加されている場合に失敗します。  
   
-##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
+##  <a name="adjustlayout"></a>  CMFCPropertyGridCtrl::AdjustLayout  
  プロパティ グリッド コントロールとそのプロパティを再描画します。  
   
 ```  
@@ -379,7 +374,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>コメント  
  このメソッドは、全体のプロパティ グリッド コントロールとそのプロパティは、イメージ、フォント、およびコントロールを含むを描画する方法を再計算します。  
   
-##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
+##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
 
   
 ```  
@@ -391,7 +386,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
+##  <a name="closecolorpopup"></a>  CMFCPropertyGridCtrl::CloseColorPopup  
  色の選択 ダイアログ ボックスを閉じます。  
   
 ```  
@@ -401,7 +396,7 @@ virtual void CloseColorPopup();
 ### <a name="remarks"></a>コメント  
  色の選択 ダイアログ ボックスの詳細については、次を参照してください。 [CMFCPropertyGridColorProperty クラス](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)です。  
   
-##  <a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
+##  <a name="cmfcpropertygridctrl"></a>  CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
  `CMFCPropertyGridCtrl` オブジェクトを構築します。  
   
 ```  
@@ -412,7 +407,7 @@ CMFCPropertyGridCtrl();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
+##  <a name="compareprops"></a>  CMFCPropertyGridCtrl::CompareProps  
  プロパティを並べ替えるプロパティ グリッド コントロールによって呼び出されます。  
   
 ```  
@@ -439,7 +434,7 @@ virtual int CompareProps(
 ### <a name="remarks"></a>コメント  
  既定では、このメソッドを使用して、 [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)を比較するメソッド、`CMFCPropertyGridProperty::m_strName`指定したパラメーターのメンバーです。  
   
-##  <a name="create"></a>CMFCPropertyGridCtrl::Create  
+##  <a name="create"></a>  CMFCPropertyGridCtrl::Create  
  プロパティ グリッド コントロールを作成し、プロパティ グリッド コントロール オブジェクトにアタッチします。  
   
 ```  
@@ -464,7 +459,7 @@ virtual BOOL Create(
  子ウィンドウの ID です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ウィンドウを正常に作成した場合それ以外の場合、`FALSE`です。  
+ `TRUE` ウィンドウを正常に作成した場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  プロパティ グリッド コントロールの最初の呼び出しを作成する[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)プロパティ グリッド オブジェクトを構築します。 呼び出す`CMFCPropertyGridCtrl::Create`です。  
@@ -474,7 +469,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]  
   
-##  <a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
+##  <a name="deleteproperty"></a>  CMFCPropertyGridCtrl::DeleteProperty  
  プロパティ グリッド コントロールから、指定されたプロパティを削除します。  
   
 ```  
@@ -489,18 +484,18 @@ BOOL DeleteProperty(
  プロパティへのポインター。  
   
  [入力] `bRedraw`  
- `TRUE`プロパティ グリッド コントロールを再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` プロパティ グリッド コントロールを再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
  [入力] `bAdjustLayout`  
- `TRUE`プロパティ グリッド コントロールで、すべてのテキスト、イメージ、および項目を描画してコントロールを描画する方法を再計算するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` プロパティ グリッド コントロールで、すべてのテキスト、イメージ、および項目を描画してコントロールを描画する方法を再計算するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`このメソッドが成功した場合それ以外の場合、`FALSE`です。  
+ `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドを使用して、プロパティ グリッド コントロールからプロパティ、およびすべてのサブ項目を削除します。  
   
-##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
+##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors  
 
   
 ```  
@@ -511,7 +506,7 @@ BOOL DrawControlBarColors() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
+##  <a name="edititem"></a>  CMFCPropertyGridCtrl::EditItem  
  ユーザーがプロパティの変更を開始すると、フレームワークによって呼び出されます。  
   
 ```  
@@ -528,11 +523,11 @@ virtual BOOL EditItem(
  編集操作を開始するユーザーがクリックしたプロパティのグリッド コントロール上のポイント。 コントロールのクライアント座標でです。 既定値は `NULL` です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`メソッドが成功した場合それ以外の場合、`FALSE`です。  
+ `TRUE` メソッドが成功した場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
+##  <a name="enabledescriptionarea"></a>  CMFCPropertyGridCtrl::EnableDescriptionArea  
  有効またはプロパティ グリッド コントロール内のプロパティの一覧の下に表示される説明の領域を無効にします。  
   
 ```  
@@ -541,12 +536,12 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`説明領域; を有効にするには`FALSE`説明領域を無効にします。 既定値は `TRUE` です。  
+ `TRUE` 説明領域; を有効にするには`FALSE`説明領域を無効にします。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  説明の領域は、プロパティ グリッド コントロールの下部に表示されます。 既定では、説明の領域は、無効になっており、非表示です。  
   
-##  <a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
+##  <a name="enableheaderctrl"></a>  CMFCPropertyGridCtrl::EnableHeaderCtrl  
  有効またはプロパティ グリッド コントロールの上部にヘッダー コントロールを無効にします。  
   
 ```  
@@ -558,7 +553,7 @@ void EnableHeaderCtrl(
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`ヘッダー コントロールを有効にするには`FALSE`をヘッダー コントロールを無効にします。 既定値は `TRUE` です。  
+ `TRUE` ヘッダー コントロールを有効にするには`FALSE`をヘッダー コントロールを無効にします。 既定値は `TRUE` です。  
   
  [入力] `lpszLeftColumn`  
  ヘッダー コントロールの左の列のタイトル。 既定値は**プロパティ**です。  
@@ -566,7 +561,7 @@ void EnableHeaderCtrl(
  [入力] `lpszRightColumn`  
  ヘッダー コントロールの右側の列のタイトル。 既定値は**値**です。  
   
-##  <a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
+##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  プロパティを変更するユーザーが終了したときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -575,14 +570,14 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bUpdateData`  
- `TRUE`編集操作が完了したときに変更されたプロパティのデータを検証する必要がありますを指定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` 編集操作が完了したときに変更されたプロパティのデータを検証する必要がありますを指定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`編集操作が正常に終了した場合`FALSE`変更されたプロパティのデータが有効でない場合、または編集操作を続行する必要があります。  
+ `TRUE` 編集操作が正常に終了した場合`FALSE`変更されたプロパティのデータが有効でない場合、または編集操作を続行する必要があります。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CMFCPropertyGridCtrl::EnsureVisible  
  プロパティ グリッド コントロールをスクロールし、指定したプロパティが表示されるまでプロパティ項目を展開します。  
   
 ```  
@@ -596,11 +591,11 @@ void EnsureVisible(
  プロパティへのポインター。  
   
  [入力] `bExpandParents`  
- `TRUE`指定したプロパティを表示します。 する親項目を展開するにはそれ以外の場合、`FALSE`です。 既定値は、`FALSE` です。  
+ `TRUE` 指定したプロパティを表示します。 する親項目を展開するにはそれ以外の場合、`FALSE`です。 既定値は、`FALSE` です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
+##  <a name="expandall"></a>  CMFCPropertyGridCtrl::ExpandAll  
  展開またはプロパティ グリッド コントロールのすべてのノードを折りたたみます。  
   
 ```  
@@ -609,11 +604,11 @@ void ExpandAll(BOOL bExpand=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bExpand`  
- `TRUE`すべてのノードを展開するには`FALSE`すべてのノードを折りたたみます。 既定値は `TRUE` です。  
+ `TRUE` すべてのノードを展開するには`FALSE`すべてのノードを折りたたみます。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
+##  <a name="finditembydata"></a>  CMFCPropertyGridCtrl::FindItemByData  
  ユーザー定義に関連付けられているプロパティを取得`DWORD`値。  
   
 ```  
@@ -627,7 +622,7 @@ CMFCPropertyGridProperty* FindItemByData(
  `DWORD` 値。  
   
  [入力] `bSearchSubItems`  
- `TRUE`プロパティのサブ項目を検索するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` プロパティのサブ項目を検索するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は、関連付けられているプロパティ オブジェクトへのポインターそれ以外の場合、`NULL`です。  
@@ -635,7 +630,7 @@ CMFCPropertyGridProperty* FindItemByData(
 ### <a name="remarks"></a>コメント  
  使用して、 [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)コンス トラクターまたは[CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata)メソッドに関連付けるには、`DWORD`プロパティを設定します。  
   
-##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
+##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount  
 
   
 ```  
@@ -649,7 +644,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
+##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus  
 
   
 ```  
@@ -663,7 +658,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
+##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp  
 
   
 ```  
@@ -680,7 +675,7 @@ virtual HRESULT get_accHelp(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic  
 
   
 ```  
@@ -699,7 +694,7 @@ virtual HRESULT get_accHelpTopic(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
+##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut  
 
   
 ```  
@@ -716,7 +711,7 @@ virtual HRESULT get_accKeyboardShortcut(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
+##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection  
 
   
 ```  
@@ -730,7 +725,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CMFCPropertyGridCtrl::GetBkColor  
  現在のプロパティ グリッド コントロールの背景色を取得します。  
   
 ```  
@@ -743,7 +738,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>コメント  
  このメソッドは、現在のプロパティ グリッド コントロールの背景を描画するフレームワークを使用する色を取得します。 [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)メソッドは、前景色を取得します。  
   
-##  <a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
+##  <a name="getboldfont"></a>  CMFCPropertyGridCtrl::GetBoldFont  
  太字スタイルでは、現在のプロパティ グリッド コントロールでテキストの描画に使用されている Windows フォントを取得します。  
   
 ```  
@@ -753,7 +748,7 @@ CFont& GetBoldFont();
 ### <a name="return-value"></a>戻り値  
  参照、 [CFont](../../mfc/reference/cfont-class.md)太字のフォントの特性を記述するオブジェクト。  
   
-##  <a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
+##  <a name="getcursel"></a>  CMFCPropertyGridCtrl::GetCurSel  
  現在選択されているプロパティを取得します。  
   
 ```  
@@ -765,7 +760,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
+##  <a name="getcustomcolors"></a>  CMFCPropertyGridCtrl::GetCustomColors  
  プロパティ グリッド コントロール要素に対して現在定義されているカスタムの色を取得します。  
   
 ```  
@@ -804,7 +799,7 @@ void GetCustomColors(
 ### <a name="remarks"></a>コメント  
  使用して、 [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)カスタム カラーを設定します。  
   
-##  <a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
+##  <a name="getdescriptionheight"></a>  CMFCPropertyGridCtrl::GetDescriptionHeight  
  これは、プロパティ グリッド コントロールの下部にある説明領域の高さを取得します。  
   
 ```  
@@ -819,7 +814,7 @@ int GetDescriptionHeight() const;
   
  使用して、 [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法または説明の領域を非表示にします。 使用して、 [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)説明領域を表示または非表示かどうかを調べます。  
   
-##  <a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
+##  <a name="getdescriptionrows"></a>  CMFCPropertyGridCtrl::GetDescriptionRows  
  現在のプロパティ グリッド コントロールの説明の領域内の行の数を取得します。  
   
 ```  
@@ -832,7 +827,7 @@ int GetDescriptionRows() const;
 ### <a name="remarks"></a>コメント  
  [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)コンス トラクターは、3 つの行に説明の領域を初期化します。  
   
-##  <a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CMFCPropertyGridCtrl::GetHeaderCtrl  
  内部取得[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)フレームワークを使用して、現在のプロパティ グリッド コントロールを表示するオブジェクトします。  
   
 ```  
@@ -842,7 +837,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="return-value"></a>戻り値  
  `CMFCHeaderCtrl` オブジェクトへの参照。  
   
-##  <a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
+##  <a name="getheaderheight"></a>  CMFCPropertyGridCtrl::GetHeaderHeight  
  プロパティ グリッド コントロールのヘッダーの高さを取得します。  
   
 ```  
@@ -854,7 +849,7 @@ int GetHeaderHeight() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
+##  <a name="getleftcolumnwidth"></a>  CMFCPropertyGridCtrl::GetLeftColumnWidth  
  各プロパティの名前を含む、現在のプロパティ グリッド コントロールの左の列の幅を取得します。  
   
 ```  
@@ -867,7 +862,7 @@ int GetLeftColumnWidth() const;
 ### <a name="remarks"></a>コメント  
  プロパティ グリッド コントロールの右側の列には、各プロパティの値が含まれています。  
   
-##  <a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
+##  <a name="getlistrect"></a>  CMFCPropertyGridCtrl::GetListRect  
  プロパティ グリッド コントロールの外接する四角形を取得します。  
   
 ```  
@@ -879,7 +874,7 @@ CRect GetListRect() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
+##  <a name="getproperty"></a>  CMFCPropertyGridCtrl::GetProperty  
  プロパティ グリッド コントロール内の項目の指定したインデックスに対応するプロパティ オブジェクトへのポインターを取得します。  
   
 ```  
@@ -897,7 +892,7 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
+##  <a name="getpropertycolumnwidth"></a>  CMFCPropertyGridCtrl::GetPropertyColumnWidth  
  プロパティ値を含む列の現在の幅を取得します。  
   
 ```  
@@ -910,7 +905,7 @@ int GetPropertyColumnWidth() const;
 ### <a name="remarks"></a>コメント  
  プロパティ グリッド コントロールの右側の列には、プロパティの値が含まれています。 顧客は、プロパティ グリッド コントロールの分割ボックスを使用して、[値] 列の幅を変更します。  
   
-##  <a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
+##  <a name="getpropertycount"></a>  CMFCPropertyGridCtrl::GetPropertyCount  
  プロパティ グリッド コントロールのプロパティの数を取得します。  
   
 ```  
@@ -922,7 +917,7 @@ int GetPropertyCount() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCPropertyGridCtrl::GetRowHeight  
  プロパティ グリッド コントロールで行の高さを取得します。  
   
 ```  
@@ -935,7 +930,7 @@ int GetRowHeight() const;
 ### <a name="remarks"></a>コメント  
  行の高さは、現在のフォントの高さ 4 ピクセルを加算すると同じです。  
   
-##  <a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  CMFCPropertyGridCtrl::GetScrollBarCtrl  
  プロパティ グリッド コントロールのスクロール バー コントロールへのポインターを取得します。  
   
 ```  
@@ -952,7 +947,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="remarks"></a>コメント  
  垂直スクロール バー コントロールに直接アクセスするのにには、このメソッドを使用します。  
   
-##  <a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>  CMFCPropertyGridCtrl::GetTextColor  
  現在のプロパティ グリッド コントロールのプロパティ項目のテキストの描画に使用される色を取得します。  
   
 ```  
@@ -965,7 +960,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>コメント  
  このメソッドは、フレームワークが現在のプロパティ グリッド コントロールの前景の描画に使用する色を取得します。 [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)メソッドは、背景色を取得します。  
   
-##  <a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
+##  <a name="hittest"></a>  CMFCPropertyGridCtrl::HitTest  
  指定したポイントが、項目の場合は、プロパティ グリッド コントロール項目に対応するプロパティ オブジェクトへのポインターを取得します。 このメソッドは、ポイントを含む、プロパティ グリッド コントロールでは、領域も示します。  
   
 ```  
@@ -983,7 +978,7 @@ CMFCPropertyGridProperty* HitTest(
  ポインター、`ClickArea`変数。 このメソッドが返す場合、変数を示します、*プロパティ領域*指定したポイントを格納しています。 プロパティ領域の詳細については、「解説」を参照してください。  
   
  [入力] `bPropsOnly`  
- `TRUE`プロパティ領域のみをテストするには`FALSE`をテストする、*説明領域*プロパティ領域に指定したポイントがない場合。 既定値は `FALSE` です。 説明の領域の詳細については、「解説」を参照してください。  
+ `TRUE` プロパティ領域のみをテストするには`FALSE`をテストする、*説明領域*プロパティ領域に指定したポイントがない場合。 既定値は `FALSE` です。 説明の領域の詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  場合、`bPropsOnly`パラメーターは`TRUE`プロパティ領域には、指定した点とは、戻り値は、対応するプロパティ オブジェクトへのポインター。 さらに、`pnArea`パラメーターが指定したポイントを含む特定の領域に設定します。 それ以外の場合、戻り値は`NULL`と`pnArea`パラメーターは変更されません。  
@@ -1002,7 +997,7 @@ CMFCPropertyGridProperty* HitTest(
 |`ClickArea::ClickValue`|プロパティ値。|  
 |`CMFCPropertyGridProperty::ClickDescription`|プロパティ グリッド コントロールの説明領域。|  
   
-##  <a name="init"></a>CMFCPropertyGridCtrl::Init  
+##  <a name="init"></a>  CMFCPropertyGridCtrl::Init  
  プロパティ グリッド コントロールを初期化するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1011,14 +1006,14 @@ virtual void Init();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
+##  <a name="initheader"></a>  CMFCPropertyGridCtrl::InitHeader  
  内部初期化[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)フレームワークを使用して、現在のプロパティ グリッド コントロールを表示するオブジェクトします。  
   
 ```  
 virtual void InitHeader();
 ```  
   
-##  <a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
+##  <a name="isalphabeticmode"></a>  CMFCPropertyGridCtrl::IsAlphabeticMode  
  プロパティ グリッド コントロールがアルファベット モードかどうかを示します。  
   
 ```  
@@ -1026,14 +1021,14 @@ BOOL IsAlphabeticMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`プロパティ グリッド コントロールがアルファベット モードである場合それ以外の場合`FALSE`です。  
+ `TRUE` プロパティ グリッド コントロールがアルファベット モードである場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  プロパティ グリッド コントロールは、アルファベットのモードでは、ときに、名前ですべてのプロパティはアルファベット順に並べ替えます。 それ以外の場合、プロパティは親ノードの下にグループ化されます。  
   
  使用して、 [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)メソッドを有効にするにまたはアルファベット モードを無効にします。  
   
-##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
+##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
 
   
 ```  
@@ -1044,7 +1039,7 @@ BOOL IsAlwaysShowUserToolTip() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
+##  <a name="isdescriptionarea"></a>  CMFCPropertyGridCtrl::IsDescriptionArea  
  プロパティ グリッド コントロールの説明の領域を表示するかどうかを示します。  
   
 ```  
@@ -1052,12 +1047,12 @@ BOOL IsDescriptionArea() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`説明の領域を表示する場合それ以外の場合、`FALSE`です。  
+ `TRUE` 説明の領域を表示する場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  使用して、 [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)メソッド説明領域を表示または非表示にします。  
   
-##  <a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
+##  <a name="isgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::IsGroupNameFullWidth  
  各プロパティ グループの名前が現在のプロパティ グリッド コントロールの幅にまたがって表示されるかどうかを示します。  
   
 ```  
@@ -1065,12 +1060,12 @@ BOOL IsGroupNameFullWidth() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`グループ名が、プロパティ グリッド コントロールの幅にまたがって表示されている場合`FALSE`コントロールの右 (値) の列でグループの名前が切り詰められている場合。  
+ `TRUE` グループ名が、プロパティ グリッド コントロールの幅にまたがって表示されている場合`FALSE`コントロールの右 (値) の列でグループの名前が切り詰められている場合。  
   
 ### <a name="remarks"></a>コメント  
  A*グループ*プロパティ グリッド コントロールに関連するプロパティのコレクションです。 コントロールが階層的に表示されている場合、*グループ名*がグループ上にある行のカテゴリのタイトルとして表示されます。  
   
-##  <a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
+##  <a name="isheaderctrl"></a>  CMFCPropertyGridCtrl::IsHeaderCtrl  
  ヘッダー コントロールが表示されるかどうかを示します。  
   
 ```  
@@ -1078,12 +1073,12 @@ BOOL IsHeaderCtrl() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ヘッダー コントロールを表示する場合それ以外の場合`FALSE`です。  
+ `TRUE` ヘッダー コントロールを表示する場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  使用して、 [CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)メソッド ヘッダー コントロールを表示または非表示にします。  
   
-##  <a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
+##  <a name="ismarkmodifiedproperties"></a>  CMFCPropertyGridCtrl::IsMarkModifiedProperties  
  プロパティ グリッド コントロールが変更されたプロパティを表示する方法を示します。  
   
 ```  
@@ -1091,11 +1086,11 @@ BOOL IsMarkModifiedProperties() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`太字のスタイルを使用して表示する場合に変更されたプロパティです。`FALSE`標準スタイルを使用して表示する場合は、プロパティを変更します。  
+ `TRUE` 太字のスタイルを使用して表示する場合に変更されたプロパティです。`FALSE`標準スタイルを使用して表示する場合は、プロパティを変更します。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
+##  <a name="isshowdragcontext"></a>  CMFCPropertyGridCtrl::IsShowDragContext  
  フレームワークでは、ユーザー、列のサイズを変更するときに、現在のプロパティ グリッド コントロールの名前と値の列が再描画するかどうかを示します。  
   
 ```  
@@ -1103,12 +1098,12 @@ BOOL IsShowDragContext() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`フレームワークは、サイズ変更操作中に名前と値の列を再描画する場合`FALSE`場合は、フレームワークは、ドラッグ操作が完了した後に列を再描画します。  
+ `TRUE` フレームワークは、サイズ変更操作中に名前と値の列を再描画する場合`FALSE`場合は、フレームワークは、ドラッグ操作が完了した後に列を再描画します。  
   
 ### <a name="remarks"></a>コメント  
  ユーザーは、列の間にある分割バーをドラッグして、プロパティ グリッド コントロールの名前と値の列のサイズを変更できます。 ドラッグ コンテキストが表示されたら、ユーザーが分割バーをドラッグしている間に、名前と値の列がサイズ変更されます。 それ以外の場合、分割バーが移動しますが、列は、ドラッグ操作が完了するまで再描画されません。  
   
-##  <a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
+##  <a name="isvsdotnetlook"></a>  CMFCPropertyGridCtrl::IsVSDotNetLook  
  プロパティ グリッド コントロールの外観が Visual Studio .NET のスタイルかどうかを示します。  
   
 ```  
@@ -1116,12 +1111,12 @@ BOOL IsVSDotNetLook() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`プロパティ グリッド コントロールが Visual Studio .NET 以外のスタイルの場合それ以外の場合、`FALSE`です。  
+ `TRUE` プロパティ グリッド コントロールが Visual Studio .NET 以外のスタイルの場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  使用して、 [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)プロパティ グリッド コントロールを Visual Studio .NET のスタイルに設定します。  
   
-##  <a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
+##  <a name="markmodifiedproperties"></a>  CMFCPropertyGridCtrl::MarkModifiedProperties  
  変更されたプロパティを表示する方法を指定します。  
   
 ```  
@@ -1132,14 +1127,14 @@ void MarkModifiedProperties(
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bMark`  
- `TRUE`変更された太字スタイルでプロパティを表示するには`FALSE`標準スタイルで変更されたプロパティを表示します。 既定値は `TRUE` です。  
+ `TRUE` 変更された太字スタイルでプロパティを表示するには`FALSE`標準スタイルで変更されたプロパティを表示します。 既定値は `TRUE` です。  
   
  [入力] `bRedraw`  
- `TRUE`プロパティ グリッド コントロールをすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` プロパティ グリッド コントロールをすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
+##  <a name="onchangeselection"></a>  CMFCPropertyGridCtrl::OnChangeSelection  
  現在の選択が変更されたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1158,7 +1153,7 @@ virtual void OnChangeSelection(
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。  
   
-##  <a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
+##  <a name="onclickbutton"></a>  CMFCPropertyGridCtrl::OnClickButton  
  プロパティ ボタンがクリックされたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1172,7 +1167,7 @@ virtual void OnClickButton(CPoint point);
 ### <a name="remarks"></a>コメント  
  既定では、このメソッドは、現在のプロパティ値を更新します。  
   
-##  <a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCPropertyGridCtrl::OnDrawBorder  
  プロパティ グリッド コントロールの周囲に罫線を描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1185,7 +1180,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>  CMFCPropertyGridCtrl::OnDrawDescription  
  説明の領域を描画し、説明テキストを表示するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1204,7 +1199,7 @@ virtual void OnDrawDescription(
 ### <a name="remarks"></a>コメント  
  使用して、 [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)説明領域を表示するメソッド。  
   
-##  <a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
+##  <a name="ondrawlist"></a>  CMFCPropertyGridCtrl::OnDrawList  
  プロパティ グリッド コントロールのプロパティの一覧を表示するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1217,7 +1212,7 @@ virtual void OnDrawList(CDC* pDC);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
+##  <a name="ondrawproperty"></a>  CMFCPropertyGridCtrl::OnDrawProperty  
  プロパティを表示するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1234,11 +1229,11 @@ virtual int OnDrawProperty(
  プロパティのオブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`このメソッドが成功した場合それ以外の場合、`FALSE`です。  
+ `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
+##  <a name="onpropertychanged"></a>  CMFCPropertyGridCtrl::OnPropertyChanged  
  プロパティの値が変更されたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1252,7 +1247,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ### <a name="remarks"></a>コメント  
  このメソッドは既定では、送信、 [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md)メッセージ プロパティ グリッド コントロールの所有者にします。  
   
-##  <a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
+##  <a name="onselectcombo"></a>  CMFCPropertyGridCtrl::OnSelectCombo  
  コンボ ボックス コントロールを格納するプロパティが選択されているときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1261,7 +1256,7 @@ void OnSelectCombo();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
+##  <a name="removeall"></a>  CMFCPropertyGridCtrl::RemoveAll  
  プロパティ グリッド コントロールからすべてのプロパティ オブジェクトを削除します。  
   
 ```  
@@ -1270,7 +1265,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
+##  <a name="resetoriginalvalues"></a>  CMFCPropertyGridCtrl::ResetOriginalValues  
  すべてのプロパティの元の値を復元します。  
   
 ```  
@@ -1279,11 +1274,11 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bRedraw`  
- `TRUE`プロパティ リストを再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` プロパティ リストを再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
+##  <a name="setalphabeticmode"></a>  CMFCPropertyGridCtrl::SetAlphabeticMode  
  設定またはアルファベット モードをリセットします。  
   
 ```  
@@ -1292,12 +1287,12 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bSet`  
- `TRUE`アルファベット モードを設定するには`FALSE`アルファベット モードをリセットします。 既定値は `TRUE` です。  
+ `TRUE` アルファベット モードを設定するには`FALSE`アルファベット モードをリセットします。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  プロパティ グリッド コントロールは、アルファベットのモードでは、コントロールは、プロパティ名が含まれているすべてのプロパティを並べ替えます。  
   
-##  <a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
+##  <a name="setboollabels"></a>  CMFCPropertyGridCtrl::SetBoolLabels  
  ブール値のラベルのテキストを指定します。  
   
 ```  
@@ -1315,7 +1310,7 @@ void SetBoolLabels(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
+##  <a name="setcursel"></a>  CMFCPropertyGridCtrl::SetCurSel  
  プロパティ グリッド コントロールのプロパティを選択します。  
   
 ```  
@@ -1329,12 +1324,12 @@ void SetCurSel(
  プロパティのオブジェクトへのポインター。  
   
  [入力] `bRedraw`  
- `TRUE`プロパティ グリッド コントロールをすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` プロパティ グリッド コントロールをすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドを使用して、プロパティ グリッド コントロールの現在のアイテムの選択を解除し、指定したプロパティに対応する項目を選択します。  
   
-##  <a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
+##  <a name="setcustomcolors"></a>  CMFCPropertyGridCtrl::SetCustomColors  
  さまざまな要素、プロパティ グリッド コントロールに対して独自の色を指定します。  
   
 ```  
@@ -1375,7 +1370,7 @@ void SetCustomColors(
   
  特定のプロパティの外観をカスタマイズするには、派生クラスを[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)クラスをオーバーライドし、 [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname)、 [Cmfcpropertygridproperty::ondrawvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue)、 [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)、および[CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton)メソッドです。  
   
-##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
+##  <a name="setdescriptionrows"></a>  CMFCPropertyGridCtrl::SetDescriptionRows  
  現在のプロパティ グリッド コントロールの [説明] セクションに表示する行の数を指定します。  
   
 ```  
@@ -1386,7 +1381,7 @@ void SetDescriptionRows(int nDescRows);
  [入力] `nDescRows`  
  プロパティの説明に表示する行の数。  
   
-##  <a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
+##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  現在のプロパティ グリッド コントロールのプロパティのグループのカテゴリ名の幅全体を表示するかどうかを指定します。  
   
 ```  
@@ -1397,17 +1392,17 @@ void SetGroupNameFullWidth(
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bGroupNameFullWidth`  
- `TRUE`プロパティ名 列の幅に関係なく、カテゴリ名の完全な幅を表示します。 `FALSE`プロパティ名 列の幅にカテゴリ名の幅を制限します。 既定値は `TRUE` です。  
+ `TRUE` プロパティ名 列の幅に関係なく、カテゴリ名の完全な幅を表示します。 `FALSE` プロパティ名 列の幅にカテゴリ名の幅を制限します。 既定値は `TRUE` です。  
   
  [入力] `bRedraw`  
- `TRUE`プロパティ グリッド コントロールを直ちに更新するには`FALSE`コントロールを更新して、次にイベントが再描画するときに発生します。 既定値は `TRUE` です。  
+ `TRUE` プロパティ グリッド コントロールを直ちに更新するには`FALSE`コントロールを更新して、次にイベントが再描画するときに発生します。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  プロパティ グリッド コントロールから成る、サイズ変更可能な*プロパティ名*列と*プロパティ値*列です。 [名前] 列の末尾が [値] 列の開始もあります。 列のサイズを変更するには、列の間の境界線をドラッグします。  
   
  条項*グループ名*と*カテゴリ名*このメソッドで同じ意味で使用されます。 カテゴリ名は、関連するプロパティと値のセットの見出し行に表示されます。 このメソッドは、プロパティ名 列の幅もカテゴリ名の表示の幅を指定するかどうかを指定します。  
   
-##  <a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
+##  <a name="setlistdelimiter"></a>  CMFCPropertyGridCtrl::SetListDelimiter  
  プロパティ値のリスト内の区切り記号として使用される文字を定義します。  
   
 ```  
@@ -1423,7 +1418,7 @@ void SetListDelimiter(TCHAR c);
   
  既定では、 [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)コンス トラクターは、コンマを区切り文字を設定 (',')。  
   
-##  <a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
+##  <a name="setshowdragcontext"></a>  CMFCPropertyGridCtrl::SetShowDragContext  
  フレームワークでは、ユーザー、列のサイズを変更するときに、現在のプロパティ グリッド コントロールの名前と値の列が再描画するかどうかを指定します。  
   
 ```  
@@ -1432,12 +1427,12 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bShowDragContext`  
- `TRUE`サイズ変更操作中に名前と値の列を再描画するには`FALSE`ドラッグ操作が完了した後、列が再描画します。 既定値は `TRUE` です。  
+ `TRUE` サイズ変更操作中に名前と値の列を再描画するには`FALSE`ドラッグ操作が完了した後、列が再描画します。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  ユーザーは、列の間にある分割バーをドラッグして、プロパティ グリッド コントロールの名前と値の列のサイズを変更できます。 ドラッグ コンテキストが表示されたら、ユーザーが分割バーをドラッグしている間に、名前と値の列がサイズ変更されます。 それ以外の場合、分割バーが移動しますが、列は、ドラッグ操作が完了するまで再描画されません。  
   
-##  <a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
+##  <a name="setvsdotnetlook"></a>  CMFCPropertyGridCtrl::SetVSDotNetLook  
  Visual Studio .NET で使用されるスタイルをプロパティ グリッド コントロールの外観を設定します。  
   
 ```  
@@ -1446,11 +1441,11 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bSet`  
- `TRUE`Visual Studio .NET で使用されているスタイルにプロパティ グリッド コントロールを設定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` Visual Studio .NET で使用されているスタイルにプロパティ グリッド コントロールを設定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
+##  <a name="updatecolor"></a>  CMFCPropertyGridCtrl::UpdateColor  
  現在選択されている色のプロパティの色の値を設定します。  
   
 ```  
@@ -1464,7 +1459,7 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="remarks"></a>コメント  
  このメソッドは、プロパティ グリッド コントロールの現在選択されているプロパティは、色のプロパティでがない場合、デバッグ モードでアサートします。  
   
-##  <a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
+##  <a name="validateitemdata"></a>  CMFCPropertyGridCtrl::ValidateItemData  
  プロパティ データを検証するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1485,6 +1480,6 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
  このメソッドをオーバーライドする場合は、返す`TRUE`場合は、指定したプロパティのデータが無効です。 それ以外の場合、返す`FALSE`、その場合、フレームワークにプロパティを更新できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)

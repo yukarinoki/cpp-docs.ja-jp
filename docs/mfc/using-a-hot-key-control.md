@@ -1,30 +1,25 @@
 ---
-title: "ホット キー コントロールの使い方 |Microsoft ドキュメント"
-ms.custom: 
+title: ホット キー コントロールの使い方 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a64de06d5bc499d5b566d6d40508d08e920264
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4442d45cffdae63600fa3a405e29a139b149175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-hot-key-control"></a>ホット キー コントロールの使い方
 ホット キー コントロールの一般的な使用方法は、次のパターンを次に示します。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ホット キー コントロールがダイアログ ボックスでは、場合、および`CHotKeyCtrl`オブジェクトは自動的に破棄されます。 かどうか、する必要はありません、両方のコントロールをことを確認して、`CHotKeyCtrl`オブジェクトが破棄されました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CHotKeyCtrl の使い方](../mfc/using-chotkeyctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

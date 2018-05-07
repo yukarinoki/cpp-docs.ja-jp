@@ -1,12 +1,9 @@
 ---
-title: "CAnimationSize クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CAnimationSize クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationSize
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationsize-class"></a>CAnimationSize クラス
 サイズをアニメーション化できるサイズ オブジェクトの機能を実装します。  
@@ -90,7 +85,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|アニメーションのサイズの幅を表すアニメーションをカプセル化された変数です。|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|アニメーションのサイズの高さを表すアニメーションをカプセル化された変数です。|  
@@ -105,10 +100,10 @@ class CAnimationSize : public CAnimationBaseObject;
   
  `CAnimationSize` 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationSize::AddTransition  
+##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
  幅と高さの遷移を追加します。  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>コメント  
  変数に適用するアニメーションの幅と高さへの遷移の内部リストに指定された遷移を追加するには、この関数を呼び出します。 切り替え効果を追加すると、いないすぐに適用されるとなり、内部の一覧に格納されています。 遷移を (特定の値のストーリー ボードへの追加) に適用されます CAnimationController::AnimateGroup を呼び出すとします。 ディメンションの 1 つの遷移を適用する必要としない場合は、NULL を渡すことができます。  
   
-##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
+##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize  
  アニメーション サイズ オブジェクトを構築します。  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationSize(
 ### <a name="remarks"></a>コメント  
  幅、高さの既定値を持つオブジェクトが構築されたオブジェクトの ID とグループの ID を 0 に設定されます。 これらは、SetDefaultValue および SetID を使用して実行時に後で変更することができます。  
   
-##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList  
  一覧にカプセル化されたアニメーション変数を追加します。  
   
 ```  
@@ -170,7 +165,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  関数から返されたときに、幅と高さを表す 2 つの CAnimationVariable オブジェクトへのポインターを格納します。  
   
-##  <a name="getcx"></a>CAnimationSize::GetCX  
+##  <a name="getcx"></a>  CAnimationSize::GetCX  
  幅を表す CAnimationVariable へのアクセスを提供します。  
   
 ```  
@@ -183,7 +178,7 @@ CAnimationVariable& GetCX();
 ### <a name="remarks"></a>コメント  
  幅を表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
-##  <a name="getcy"></a>CAnimationSize::GetCY  
+##  <a name="getcy"></a>  CAnimationSize::GetCY  
  高さを表す CAnimationVariable へのアクセスを提供します。  
   
 ```  
@@ -196,7 +191,7 @@ CAnimationVariable& GetCY();
 ### <a name="remarks"></a>コメント  
  高さを表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
-##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue  
  既定値の幅と高さを返します。  
   
 ```  
@@ -209,7 +204,7 @@ CSize GetDefaultValue();
 ### <a name="remarks"></a>コメント  
  コンス トラクターまたは SetDefaultValue で以前に設定された既定値を取得するには、この関数を呼び出します。  
   
-##  <a name="getvalue"></a>CAnimationSize::GetValue  
+##  <a name="getvalue"></a>  CAnimationSize::GetValue  
  現在の値を返します。  
   
 ```  
@@ -226,21 +221,21 @@ BOOL GetValue(CSize& szValue);
 ### <a name="remarks"></a>コメント  
  アニメーションのサイズの現在の値を取得するには、この関数を呼び出します。 このメソッドが失敗した、または幅とサイズを基になる COM オブジェクトが初期化されていない、szValue には、コンス トラクターまたは SetDefaultValue によって設定されている既定値が含まれています。  
   
-##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
+##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue  
  アニメーションのサイズの幅を表すアニメーションをカプセル化された変数です。  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
+##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue  
  アニメーションのサイズの高さを表すアニメーションをカプセル化された変数です。  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
+##  <a name="operator_csize"></a>  CAnimationSize::operator CSize  
  CSize、CAnimationSize に変換します。  
   
 ```  
@@ -253,7 +248,7 @@ operator CSize();
 ### <a name="remarks"></a>コメント  
  この関数は、GetValue を内部的に呼び出します。 GetValue 何らかの理由により失敗した場合、返されるサイズは幅と高さの既定値が格納されます。  
   
-##  <a name="operator_eq"></a>CAnimationSize::operator =  
+##  <a name="operator_eq"></a>  CAnimationSize::operator =  
  CAnimationSize に szSrc を割り当てます。  
   
 ```  
@@ -267,7 +262,7 @@ void operator=(const CSize& szSrc);
 ### <a name="remarks"></a>コメント  
  CAnimationSize に szSrc を割り当てます。 お勧めをアニメーションの開始前に行うにはこの演算子は、それが作成された場合に、幅と高さの基になる COM オブジェクトを作成し直さ SetDefaultValue を呼び出すためです。 このアニメーション オブジェクト (ValueChanged または IntegerValueChanged) イベントをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。  
   
-##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue  
  既定値を設定します。  
   
 ```  
@@ -281,5 +276,5 @@ void SetDefaultValue(const CSize& szDefault);
 ### <a name="remarks"></a>コメント  
  既定値をアニメーション オブジェクトに設定するのにには、この関数を使用します。 このメソッドは、既定値をアニメーションのサイズの幅と高さに割り当てます。 それが作成された場合は、基になる COM オブジェクトも再作成します。 このアニメーション オブジェクト (ValueChanged または IntegerValueChanged) イベントをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

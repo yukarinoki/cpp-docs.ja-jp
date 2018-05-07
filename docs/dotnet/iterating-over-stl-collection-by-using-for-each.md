@@ -1,30 +1,25 @@
 ---
-title: "For each を使用して、C++ 標準ライブラリのコレクションを反復処理する |Microsoft ドキュメント"
-ms.custom: 
+title: For each を使用して、C++ 標準ライブラリのコレクションを反復処理する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1a4ce2de13380895f1f313559abeb87e4cd65db2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 963c8a4213da756f03e95924940dc179bd305f60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>For each を使用して、C++ 標準ライブラリのコレクションを反復処理します。
 `for each`キーワードは、C++ 標準ライブラリのコレクションを反復処理するために使用できます。  
@@ -120,7 +115,7 @@ retval: 60
   
  この機能のプラットフォーム固有の解説はありません。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -128,9 +123,9 @@ retval: 60
   
  この機能のプラットフォーム固有の解説はありません。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ごとに、](../dotnet/for-each-in.md)   
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

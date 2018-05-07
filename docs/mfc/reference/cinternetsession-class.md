@@ -1,12 +1,9 @@
 ---
-title: "CInternetSession クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CInternetSession クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetSession
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7aad2f6ce26fd5ca9ed0ec323a8fcb05ac17f7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 単一のインターネット セッションまたは複数の同時インターネット セッションを作成し、初期化します。必要な場合は、プロキシ サーバーへの接続も記述します。  
@@ -96,7 +91,7 @@ class CInternetSession : public CObject
 ## <a name="remarks"></a>コメント  
  アプリケーションの実行中には、インターネット接続を保持する必要が場合、は、作成、`CInternetSession`クラスのメンバー [CWinApp](../../mfc/reference/cwinapp-class.md)です。  
   
- インターネット セッションを確立すると呼び出す[OpenURL](#openurl)です。 `CInternetSession`グローバル関数を呼び出すことによって、URL を解析[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)です。 そのプロトコルの種類に関係なく`CInternetSession`URL を解釈しを管理します。 URL リソース file:// で識別されるローカル ファイルへの要求を処理できます。 `OpenURL`ポインターを返す、 [CStdioFile](../../mfc/reference/cstdiofile-class.md)オブジェクト名を渡す場合に、ローカル ファイルです。  
+ インターネット セッションを確立すると呼び出す[OpenURL](#openurl)です。 `CInternetSession` グローバル関数を呼び出すことによって、URL を解析[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)です。 そのプロトコルの種類に関係なく`CInternetSession`URL を解釈しを管理します。 URL リソース file:// で識別されるローカル ファイルへの要求を処理できます。 `OpenURL` ポインターを返す、 [CStdioFile](../../mfc/reference/cstdiofile-class.md)オブジェクト名を渡す場合に、ローカル ファイルです。  
   
  使用してインターネット サーバーの URL を開くかどうか`OpenURL`、サイトから情報を読み取ることができます。 に対して、サーバー上にあるファイル (例、HTTP、FTP、または gopher) 用サービスに固有のアクションを実行する場合は、そのサーバーに適切な接続を確立する必要があります。 特定の種類の特定のサービスに直接接続を開くには、次のメンバー関数のいずれかの手順に従います。  
   
@@ -108,22 +103,22 @@ class CInternetSession : public CObject
   
  [SetOption](#setoption)タイムアウト値、再試行の回数など、セッションのクエリ オプションを設定したりすることができます。  
   
- `CInternetSession`メンバー関数[SetCookie](#setcookie)、 [GetCookie](#getcookie)、および[GetCookieLength](#getcookielength)サーバーおよびスクリプトを維持する Win32 cookie データベースを管理する手段を提供クライアント ワークステーションに関する状態情報。  
+ `CInternetSession` メンバー関数[SetCookie](#setcookie)、 [GetCookie](#getcookie)、および[GetCookieLength](#getcookielength)サーバーおよびスクリプトを維持する Win32 cookie データベースを管理する手段を提供クライアント ワークステーションに関する状態情報。  
   
  インターネットの基本的なプログラミング タスクの詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)です。 MFC WinInet クラスの使用に関する一般的な情報の記事を参照してください。 [wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)です。  
   
 > [!NOTE]
-> `CInternetSession`スローされます、 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)サポートされていないサービスの種類。 次のサービス型のみが現在サポートされて: FTP、HTTP、gopher、およびファイルです。  
+> `CInternetSession` スローされます、 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)サポートされていないサービスの種類。 次のサービス型のみが現在サポートされて: FTP、HTTP、gopher、およびファイルです。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CInternetSession`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
-##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
+##  <a name="cinternetsession"></a>  CInternetSession::CInternetSession  
  このメンバー関数が呼び出されます、`CInternetSession`オブジェクトを作成します。  
   
 ```  
@@ -141,16 +136,16 @@ CInternetSession(
  アプリケーションまたはインターネット関数 (たとえば、「Microsoft インターネット ブラウザー」) を呼び出してエンティティの名前を識別する文字列へのポインター。 場合`pstrAgent`は**NULL** (既定)、フレームワークがグローバル関数を呼び出す[AfxGetAppName](application-information-and-management.md#afxgetappname)アプリケーションの名前を表す null で終わる文字列が返されます。 一部のプロトコルでは、この文字列を使用するサーバーにアプリケーションを識別します。  
   
  `dwContext`  
- 操作のコンテキストの識別子。 `dwContext`によって返される操作のステータス情報を識別する[:onstatuscallback](#onstatuscallback)です。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はしたコンテキスト ID と関連付けられます  
+ 操作のコンテキストの識別子。 `dwContext` によって返される操作のステータス情報を識別する[:onstatuscallback](#onstatuscallback)です。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はしたコンテキスト ID と関連付けられます  
   
  `dwAccessType`  
  必要なアクセスの種類。 これを 1 つを指定することがあります、有効な値を次に示します。  
   
 - **INTERNET_OPEN_TYPE_PRECONFIG**レジストリに事前に構成された設定を使用して接続します。 このアクセスの種類は、既定値として設定されます。 TIS プロキシを介して接続するには、設定`dwAccessType`です。 この値にする、レジストリを適切に設定します。  
   
-- `INTERNET_OPEN_TYPE_DIRECT`インターネットに直接接続します。  
+- `INTERNET_OPEN_TYPE_DIRECT` インターネットに直接接続します。  
   
-- `INTERNET_OPEN_TYPE_PROXY`CERN プロキシ経由で接続します。  
+- `INTERNET_OPEN_TYPE_PROXY` CERN プロキシ経由で接続します。  
   
  さまざまな種類のプロキシの接続の詳細については、次を参照してください。[典型的な FTP クライアント アプリケーションのステップ](../../mfc/steps-in-a-typical-ftp-client-application.md)です。  
   
@@ -163,9 +158,9 @@ CInternetSession(
  `dwFlags`  
  さまざまなキャッシュ オプションを示します。 既定値は 0 に設定されます。 使用可能な値は次のとおりです。  
   
-- `INTERNET_FLAG_DONT_CACHE`ローカルまたはゲートウェイ サーバーに、データをキャッシュしません。  
+- `INTERNET_FLAG_DONT_CACHE` ローカルまたはゲートウェイ サーバーに、データをキャッシュしません。  
   
-- `INTERNET_FLAG_OFFLINE`ダウンロード操作がなければ、永続的なキャッシュのみを使用します。 項目がキャッシュに存在しない場合は、該当するエラー コードが返されます。 このフラグは、ビットごとと組み合わせること`OR`( **&#124;**) 演算子。  
+- `INTERNET_FLAG_OFFLINE` ダウンロード操作がなければ、永続的なキャッシュのみを使用します。 項目がキャッシュに存在しない場合は、該当するエラー コードが返されます。 このフラグは、ビットごとと組み合わせること`OR`( **&#124;**) 演算子。  
   
 ### <a name="remarks"></a>コメント  
  **CInternetSession**は、最初のインターネット関数は、アプリケーションによって呼び出されます。 内部データ構造体を初期化し、アプリケーションからの以降の呼び出しを準備します。  
@@ -175,7 +170,7 @@ CInternetSession(
 ### <a name="example"></a>例  
   例を参照して[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)です。  
   
-##  <a name="close"></a>CInternetSession::Close  
+##  <a name="close"></a>  CInternetSession::Close  
  このメンバー関数を使用して、アプリケーションが終了すると、`CInternetSession`オブジェクト。  
   
 ```  
@@ -185,7 +180,7 @@ virtual void Close();
 ### <a name="example"></a>例  
   例を参照して[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)です。  
   
-##  <a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
+##  <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback  
  ステータス コールバックを有効にするには、このメンバー関数を呼び出します。  
   
 ```  
@@ -208,7 +203,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
   
  何らかの操作を非同期的に処理するためには、独自のスレッドを作成するか、MFC を使わない WinInet 関数を使用する必要があります。  
   
-##  <a name="getcontext"></a>CInternetSession::GetContext  
+##  <a name="getcontext"></a>  CInternetSession::GetContext  
  特定のアプリケーションのセッションのコンテキスト値を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -223,7 +218,7 @@ DWORD_PTR GetContext() const;
   
  非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)です。  
   
-##  <a name="getcookie"></a>CInternetSession::GetCookie  
+##  <a name="getcookie"></a>  CInternetSession::GetCookie  
  このメンバー関数は、Win32 関数の動作を実装して[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)Windows SDK で説明されている。  
   
 ```  
@@ -263,7 +258,7 @@ static BOOL GetCookie(
 ### <a name="remarks"></a>コメント  
  2 番目のオーバー ロードでは、MFC、cookie にデータを取得、指定された`CString`オブジェクト。  
   
-##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
+##  <a name="getcookielength"></a>  CInternetSession::GetCookieLength  
  バッファーに格納されている cookie の長さを取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -285,7 +280,7 @@ static DWORD GetCookieLength(
 ### <a name="remarks"></a>コメント  
  この値を使用して[GetCookie](#getcookie)です。  
   
-##  <a name="getftpconnection"></a>CInternetSession::GetFtpConnection  
+##  <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection  
  FTP 接続を確立しへのポインターを取得するには、このメンバー関数を呼び出す、`CFtpConnection`オブジェクト。  
   
 ```  
@@ -324,12 +319,12 @@ CFtpConnection* GetFtpConnection(
  ポインター、 [CFtpConnection](../../mfc/reference/cftpconnection-class.md)オブジェクト。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
 ### <a name="remarks"></a>コメント  
- `GetFtpConnection`FTP サーバーに接続しを作成してへのポインターを返します、 **CFTPConnection**オブジェクト。 サーバー上の特定の操作は行われません。 ファイルに対する読み取りまたは書き込みする場合は、たとえば、別の手順としてこれらの操作を実行する必要があります。 クラスを参照してください[CFtpConnection](../../mfc/reference/cftpconnection-class.md)と[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)ファイルの検索方法については、のファイルを開くの読み取りや書き込みをファイルにします。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)FTP 接続の一般的なタスクを実行する手順についてです。  
+ `GetFtpConnection` FTP サーバーに接続しを作成してへのポインターを返します、 **CFTPConnection**オブジェクト。 サーバー上の特定の操作は行われません。 ファイルに対する読み取りまたは書き込みする場合は、たとえば、別の手順としてこれらの操作を実行する必要があります。 クラスを参照してください[CFtpConnection](../../mfc/reference/cftpconnection-class.md)と[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)ファイルの検索方法については、のファイルを開くの読み取りや書き込みをファイルにします。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)FTP 接続の一般的なタスクを実行する手順についてです。  
   
 ### <a name="example"></a>例  
   例を参照して[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)です。  
   
-##  <a name="getgopherconnection"></a>代わり  
+##  <a name="getgopherconnection"></a>  代わり  
  Gopher の新しい接続を確立しへのポインターを取得するには、このメンバー関数を呼び出す、`CGopherConnection`オブジェクト。  
   
 ```  
@@ -357,9 +352,9 @@ CGopherConnection* GetGopherConnection(
  ポインター、[関数](../../mfc/reference/cgopherconnection-class.md)オブジェクト。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
 ### <a name="remarks"></a>コメント  
- `GetGopherConnection`gopher サーバーに接続しを作成してへのポインターを返します、`CGopherConnection`オブジェクト。 サーバー上の特定の操作は行われません。 データを読み取ったり書き込んだりする場合は、たとえば、別の手順としてこれらの操作を実行する必要があります。 クラスを参照してください[関数](../../mfc/reference/cgopherconnection-class.md)、 [CGopherFile](../../mfc/reference/cgopherfile-class.md)、および[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)ファイルの検索方法については、のファイルを開くの読み取りや書き込みをファイルにします。 FTP サイトを参照する方法については、このメンバー関数を参照してください。 [OpenURL](#openurl)です。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)gopher 接続の一般的なタスクを実行する手順についてです。  
+ `GetGopherConnection` gopher サーバーに接続しを作成してへのポインターを返します、`CGopherConnection`オブジェクト。 サーバー上の特定の操作は行われません。 データを読み取ったり書き込んだりする場合は、たとえば、別の手順としてこれらの操作を実行する必要があります。 クラスを参照してください[関数](../../mfc/reference/cgopherconnection-class.md)、 [CGopherFile](../../mfc/reference/cgopherfile-class.md)、および[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)ファイルの検索方法については、のファイルを開くの読み取りや書き込みをファイルにします。 FTP サイトを参照する方法については、このメンバー関数を参照してください。 [OpenURL](#openurl)です。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)gopher 接続の一般的なタスクを実行する手順についてです。  
   
-##  <a name="gethttpconnection"></a>代わりに  
+##  <a name="gethttpconnection"></a>  代わりに  
  HTTP 接続を確立しへのポインターを取得するには、このメンバー関数を呼び出す、`CHttpConnection`オブジェクト。  
   
 ```  
@@ -398,9 +393,9 @@ CHttpConnection* GetHttpConnection(
  ポインター、 [CHttpConnection](../../mfc/reference/chttpconnection-class.md)オブジェクト。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
 ### <a name="remarks"></a>コメント  
- `GetHttpConnection`HTTP サーバーに接続しを作成してへのポインターを返します、`CHttpConnection`オブジェクト。 サーバー上の特定の操作は行われません。 たとえば、HTTP ヘッダーを照会する場合は、別のステップとしてこの操作を実行する必要があります。 クラスを参照してください[CHttpConnection](../../mfc/reference/chttpconnection-class.md)と[CHttpFile](../../mfc/reference/chttpfile-class.md)操作については、HTTP サーバーへの接続を使用して実行することができます。 HTTP サイトを参照する方法については、このメンバー関数を参照してください。 [OpenURL](#openurl)です。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)HTTP 接続の一般的なタスクを実行する手順についてです。  
+ `GetHttpConnection` HTTP サーバーに接続しを作成してへのポインターを返します、`CHttpConnection`オブジェクト。 サーバー上の特定の操作は行われません。 たとえば、HTTP ヘッダーを照会する場合は、別のステップとしてこの操作を実行する必要があります。 クラスを参照してください[CHttpConnection](../../mfc/reference/chttpconnection-class.md)と[CHttpFile](../../mfc/reference/chttpfile-class.md)操作については、HTTP サーバーへの接続を使用して実行することができます。 HTTP サイトを参照する方法については、このメンバー関数を参照してください。 [OpenURL](#openurl)です。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)HTTP 接続の一般的なタスクを実行する手順についてです。  
   
-##  <a name="onstatuscallback"></a>:Onstatuscallback  
+##  <a name="onstatuscallback"></a>  :Onstatuscallback  
  このメンバー関数は、ステータス コールバックが有効にし、操作が保留中の状態を更新するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -427,7 +422,7 @@ virtual void OnStatusCallback(
 ### <a name="remarks"></a>コメント  
  最初に呼び出す必要があります[使用](#enablestatuscallback)ステータス コールバックを活用するためにします。  
   
- `dwInternetStatus`パラメーターは、実行中の操作を示すしの内容を決定`lpvStatusInformation`になります。 `dwStatusInformationLength`含まれるデータの長さを示す`lpvStatusInformation`です。 次の状態の値を`dwInternetStatus`次のように定義されます。  
+ `dwInternetStatus`パラメーターは、実行中の操作を示すしの内容を決定`lpvStatusInformation`になります。 `dwStatusInformationLength` 含まれるデータの長さを示す`lpvStatusInformation`です。 次の状態の値を`dwInternetStatus`次のように定義されます。  
   
 |[値]|説明|  
 |-----------|-------------|  
@@ -453,7 +448,7 @@ virtual void OnStatusCallback(
   
  非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)です。  
   
-##  <a name="openurl"></a>できます  
+##  <a name="openurl"></a>  できます  
  HTTP サーバーに指定された要求を送信し、MIME 追加 RFC822 を指定するクライアントを許可するには、関数、または、要求と共に送信する HTTP ヘッダーは、このメンバーを呼び出します。  
   
 ```  
@@ -479,11 +474,11 @@ CStdioFile* OpenURL(
   
 - **INTERNET_FLAG_TRANSFER_BINARY**バイナリ ファイルとしてファイルを転送します。  
   
-- `INTERNET_FLAG_RELOAD`ローカルにキャッシュされている場合でも、通信回線からデータを取得します。  
+- `INTERNET_FLAG_RELOAD` ローカルにキャッシュされている場合でも、通信回線からデータを取得します。  
   
-- `INTERNET_FLAG_DONT_CACHE`ローカルまたはすべてのゲートウェイに、データをキャッシュしません。  
+- `INTERNET_FLAG_DONT_CACHE` ローカルまたはすべてのゲートウェイに、データをキャッシュしません。  
   
-- `INTERNET_FLAG_SECURE`このフラグは、HTTP 要求のみに適用します。 セキュア ソケット レイヤーまたは割合で、ネットワーク上でセキュリティ保護されたトランザクションを要求します。  
+- `INTERNET_FLAG_SECURE` このフラグは、HTTP 要求のみに適用します。 セキュア ソケット レイヤーまたは割合で、ネットワーク上でセキュリティ保護されたトランザクションを要求します。  
   
 - **INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT**によって生成される新しい要求をサーバーに既存の接続を再利用可能であれば、 **OpenUrl**接続要求ごとに新しいセッションを作成する代わりにします。  
   
@@ -510,18 +505,18 @@ CStdioFile* OpenURL(
 ### <a name="remarks"></a>コメント  
  パラメーター`dwFlags`いずれかを含める必要があります**INTERNET_FLAG_TRANSFER_ASCII**または**INTERNET_FLAG_TRANSFER_BINARY**、両方は使用しません。 その他のフラグは、演算と組み合わせることができます`OR`演算子 ( **&#124;**)。  
   
- `OpenURL`、Win32 関数をラップする**アクセス**、のみをダウンロード、取得、およびインターネット サーバーからのデータの読み取りを許可します。 `OpenURL`により、なし、リモートの場所にファイルの操作に必要のないように[関数](../../mfc/reference/cinternetconnection-class.md)オブジェクト。  
+ `OpenURL`、Win32 関数をラップする**アクセス**、のみをダウンロード、取得、およびインターネット サーバーからのデータの読み取りを許可します。 `OpenURL` により、なし、リモートの場所にファイルの操作に必要のないように[関数](../../mfc/reference/cinternetconnection-class.md)オブジェクト。  
   
  特定の接続を使用する (つまり、プロトコル固有) 関数など、ファイルへの書き込み、する必要がありますセッションを開く特定の種類の接続を開くし、その接続を使用して、目的のモードでファイルを開きます。 参照してください`CInternetConnection`接続に固有の機能についての詳細。  
   
-##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetSession::operator HINTERNET  
  この演算子を使用して、現在のインターネット セッションの Windows ハンドルを取得します。  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="setcookie"></a>CInternetSession::SetCookie  
+##  <a name="setcookie"></a>  CInternetSession::SetCookie  
  指定された URL の cookie を設定します。  
   
 ```  
@@ -547,7 +542,7 @@ static BOOL SetCookie(
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、Win32 メッセージの動作を実装して[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)Windows SDK で説明されている。  
   
-##  <a name="setoption"></a>CInternetSession::SetOption  
+##  <a name="setoption"></a>  CInternetSession::SetOption  
  インターネット セッションのオプションを設定するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -580,14 +575,14 @@ BOOL SetOption(
  `dwFlags`  
  さまざまなキャッシュ オプションを示します。 既定値は 0 に設定されます。 使用可能な値は次のとおりです。  
   
-- `INTERNET_FLAG_DONT_CACHE`ローカルまたはゲートウェイ サーバーに、データをキャッシュしません。  
+- `INTERNET_FLAG_DONT_CACHE` ローカルまたはゲートウェイ サーバーに、データをキャッシュしません。  
   
-- `INTERNET_FLAG_OFFLINE`ダウンロード操作がなければ、永続的なキャッシュのみを使用します。 項目がキャッシュに存在しない場合は、該当するエラー コードが返されます。 このフラグは、ビットごとと組み合わせること`OR`( **&#124;**) 演算子。  
+- `INTERNET_FLAG_OFFLINE` ダウンロード操作がなければ、永続的なキャッシュのみを使用します。 項目がキャッシュに存在しない場合は、該当するエラー コードが返されます。 このフラグは、ビットごとと組み合わせること`OR`( **&#124;**) 演算子。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合、値は**TRUE**が返されます。 エラーが発生しました、値の場合**FALSE**が返されます。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するのに呼び出せる可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [関数クラス](../../mfc/reference/cinternetconnection-class.md)   

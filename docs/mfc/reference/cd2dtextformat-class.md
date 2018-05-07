@@ -1,12 +1,9 @@
 ---
-title: "CD2DTextFormat クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CD2DTextFormat クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DTextFormat
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fbbbe2d9f5edde6e247d69e9e6bc840f05a55b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat クラス
 IDWriteTextFormat のラッパーです。  
@@ -83,7 +78,7 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|IDWriteTextFormat へのポインター。|  
   
@@ -94,17 +89,17 @@ class CD2DTextFormat : public CD2DResource;
   
  [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextformat"></a>CD2DTextFormat:: ~ CD2DTextFormat  
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat:: ~ CD2DTextFormat  
  デストラクターです。 D2D オブジェクトのテキスト書式設定が破棄されるときに呼び出されます。  
   
 ```  
 virtual ~CD2DTextFormat();
 ```  
   
-##  <a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextFormat  
+##  <a name="cd2dtextformat"></a>  CD2DTextFormat::CD2DTextFormat  
  CD2DTextFormat オブジェクトを構築します。  
   
 ```  
@@ -148,7 +143,7 @@ CD2DTextFormat(
  `bAutoDestroy`  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
-##  <a name="create"></a>CD2DTextFormat::Create  
+##  <a name="create"></a>  CD2DTextFormat::Create  
  CD2DTextFormat を作成します。  
   
 ```  
@@ -158,14 +153,14 @@ virtual HRESULT Create(CRenderTarget* */);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-##  <a name="destroy"></a>CD2DTextFormat::Destroy  
+##  <a name="destroy"></a>  CD2DTextFormat::Destroy  
  CD2DTextFormat オブジェクトを破棄します。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextFormat::Get  
+##  <a name="get"></a>  CD2DTextFormat::Get  
  返します IDWriteTextFormat インターフェイス  
   
 ```  
@@ -175,7 +170,7 @@ IDWriteTextFormat* Get();
 ### <a name="return-value"></a>戻り値  
  IDWriteTextFormat インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName  
+##  <a name="getfontfamilyname"></a>  CD2DTextFormat::GetFontFamilyName  
  フォント ファミリ名のコピーを取得します。  
   
 ```  
@@ -185,7 +180,7 @@ CString GetFontFamilyName() const;
 ### <a name="return-value"></a>戻り値  
  現在のフォント ファミリ名を格納する CString オブジェクト。  
   
-##  <a name="getlocalename"></a>CD2DTextFormat::GetLocaleName  
+##  <a name="getlocalename"></a>  CD2DTextFormat::GetLocaleName  
  ロケール名のコピーを取得します。  
   
 ```  
@@ -195,7 +190,7 @@ CString GetLocaleName() const;
 ### <a name="return-value"></a>戻り値  
  現在のロケール名を格納する CString オブジェクト。  
   
-##  <a name="isvalid"></a>CD2DTextFormat::IsValid  
+##  <a name="isvalid"></a>  CD2DTextFormat::IsValid  
  リソースの有効性のチェック  
   
 ```  
@@ -205,14 +200,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>戻り値  
  リソースが無効である場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat  
+##  <a name="m_ptextformat"></a>  CD2DTextFormat::m_pTextFormat  
  IDWriteTextFormat へのポインター。  
   
 ```  
 IDWriteTextFormat* m_pTextFormat;  
 ```  
   
-##  <a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operator IDWriteTextFormat *  
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat *  
  返します IDWriteTextFormat インターフェイス  
   
 ```  
@@ -222,7 +217,7 @@ operator IDWriteTextFormat*();
 ### <a name="return-value"></a>戻り値  
  IDWriteTextFormat インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="recreate"></a>CD2DTextFormat::ReCreate  
+##  <a name="recreate"></a>  CD2DTextFormat::ReCreate  
  CD2DTextFormat を再作成されます。  
   
 ```  
@@ -232,5 +227,5 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

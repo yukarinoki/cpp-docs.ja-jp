@@ -1,12 +1,9 @@
 ---
-title: "メンバー クラス |Microsoft ドキュメント"
-ms.custom: 
+title: メンバー クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 142a000b5521458e3bdace8f840295efd07209fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapstringtostring-class"></a>メンバー クラス
 `CString` オブジェクトをキーとした `CString` オブジェクトのマップをサポートします。  
@@ -83,7 +78,7 @@ class CMapStringToString : public CObject
   
 ### <a name="public-structures"></a>パブリック構造体  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMapStringToString::CPair](#cpair)|キーの値と関連付けられている文字列オブジェクトの値を含む入れ子になった構造体。|  
   
@@ -121,7 +116,7 @@ class CMapStringToString : public CObject
 |[CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
   
 ## <a name="remarks"></a>コメント  
- `CMapStringToString` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 各要素がシリアル化されるさらに、アーカイブ、オーバー ロードされた出力ストリームにマップが格納されている場合 (  **<<** ) 演算子、または、`Serialize`メンバー関数。  
+ `CMapStringToString` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 各要素がシリアル化されるさらに、アーカイブ、オーバー ロードされた出力ストリームにマップが格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数。  
   
  個別にダンプする必要がある場合`CString` -  `CString`要素、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
   
@@ -134,10 +129,10 @@ class CMapStringToString : public CObject
   
  `CMapStringToString`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
-##  <a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>  CMapStringToString::CPair  
  キー値と関連付けられている文字列オブジェクトの値が含まれています。  
   
 ### <a name="remarks"></a>コメント  
@@ -154,7 +149,7 @@ class CMapStringToString : public CObject
 ### <a name="example"></a>例  
   使用状況の例は、の例を参照してください。 [CMapStringToString::PLookup](#plookup)です。  
   
-##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMapStringToString::PGetFirstAssoc  
  マップ オブジェクトの最初のエントリを返します。  
   
 ```  
@@ -172,7 +167,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
  によって示されるマップ要素を取得`pAssocRec`です。  
   
 ```  
@@ -194,7 +189,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="example"></a>例  
   例を参照して[CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)です。  
   
-##  <a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>  CMapStringToString::PLookup  
  指定されたキーにマップされている値を検索します。  
   
 ```  
@@ -216,7 +211,7 @@ CPair* PLookup(LPCTSTR key);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#74](../../mfc/codesnippet/cpp/cmapstringtostring-class_2.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプルの収集](../../visual-cpp-samples.md)   
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)

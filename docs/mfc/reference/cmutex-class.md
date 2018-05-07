@@ -1,12 +1,9 @@
 ---
-title: "CMutex クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMutex クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMutex
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d87d613356589ee192ef141a3e222fdc4d8f03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmutex-class"></a>CMutex クラス
 「ミュー テックス」を表す、リソースへの 1 つのスレッド相互に排他的アクセスを許可する同期オブジェクトです。  
@@ -60,14 +55,14 @@ class CMutex : public CSyncObject
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [関数](../../mfc/reference/csyncobject-class.md)  
+ [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CMutex`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxmt.h  
   
-##  <a name="cmutex"></a>CMutex::CMutex  
+##  <a name="cmutex"></a>  CMutex::CMutex  
  名前付きまたは名前のない構築`CMutex`オブジェクト。  
   
 ```  
@@ -93,7 +88,7 @@ CMutex(
 > [!IMPORTANT]
 >  作成した後、`CMutex`オブジェクトを使用して[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)をミュー テックスが既に存在しないことを確認します。 ミュー テックスが予期せず存在、悪意のあるプロセスが発生したり、悪意ミュー テックスを使用することがある必ずしも意図している可能性があります。 ここでは、推奨されるセキュリティを考慮したプロシージャがハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数クラス](../../mfc/reference/csyncobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

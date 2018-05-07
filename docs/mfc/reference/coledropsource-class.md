@@ -1,12 +1,9 @@
 ---
-title: "COleDropSource クラス |Microsoft ドキュメント"
-ms.custom: 
+title: COleDropSource クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>COleDropSource クラス
 により、データをドロップ ターゲットにドラッグします。  
@@ -76,17 +71,17 @@ class COleDropSource : public CCmdTarget
   
  `COleDropSource`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  `COleDropSource` オブジェクトを構築します。  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  呼び出した後に、フレームワークによって呼び出されます[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)または[COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)です。  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  ユーザーに表示するには効果は通常目的を示すこの時点で、選択したデータのドロップが発生した場合になります。 通常、これは、最新の呼び出しによって返される値[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)または[直前](../../mfc/reference/cview-class.md#ondragover)です。 次の 1 つ以上を指定できます。  
   
-- `DROPEFFECT_NONE`ドロップは許可されていません。  
+- `DROPEFFECT_NONE` ドロップは許可されていません。  
   
-- `DROPEFFECT_COPY`コピー操作が実行されます。  
+- `DROPEFFECT_COPY` コピー操作が実行されます。  
   
-- `DROPEFFECT_MOVE`移動操作が実行されます。  
+- `DROPEFFECT_MOVE` 移動操作が実行されます。  
   
-- `DROPEFFECT_LINK`ドロップされたデータから、元のデータへのリンクが確立できません。  
+- `DROPEFFECT_LINK` ドロップされたデータから、元のデータへのリンクが確立できません。  
   
-- `DROPEFFECT_SCROLL`ドラッグ スクロール操作では、発生するか、ターゲットで発生しています。  
+- `DROPEFFECT_SCROLL` ドラッグ スクロール操作では、発生するか、ターゲットで発生しています。  
   
 ### <a name="return-value"></a>戻り値  
  返します**操作**ドラッグが進行中の場合**NOERROR**されていない場合。  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  詳細については、次を参照してください。 [IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)、 [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)、および[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK に含まれています。  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  によって呼び出される、イベントが発生したときに、フレームワークは、マウスの左ボタンを押すなどのドラッグ操作を開始できません。  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>コメント  
  ドラッグの処理を開始する方法を変更する場合は、この関数をオーバーライドします。 既定の実装では、マウスをキャプチャし、ユーザー左または右マウス ボタンをクリックするか、マウスを解放する時に、esc キーを押すまでドラッグ モードのままです。  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  ドラッグが始まると、この関数は、ドラッグ操作が取り消されたかを完了するまで、フレームワークによって繰り返し呼び出されます。  
   
 ```  
@@ -158,7 +153,7 @@ virtual SCODE QueryContinueDrag(
   
  この関数が頻繁に呼び出されるためにを最適化することが可能な限りです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   
  [MFC サンプル OCLIENT](../../visual-cpp-samples.md)   
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   

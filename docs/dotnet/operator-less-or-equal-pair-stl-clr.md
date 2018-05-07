@@ -1,12 +1,9 @@
 ---
-title: "演算子&lt;= (組) (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: 演算子&lt;= (組) (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::pair::operator<=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator<= member [STL/CLR]
 ms.assetid: 94a4cc0a-cef4-4050-bd59-f826bd318e7b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b62b79bb774d84b7ba6f9551efc0872b92d695d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3e74b6f11cf54d694ac726670d92cb4e02aa563
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-pair-stlclr"></a>演算子&lt;= (組) (STL/CLR)
 以下のペアの比較できます。  
@@ -80,12 +75,12 @@ int main()
 [x 4] <= [x 3] is False  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext ユーティリティ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ペア (STL/CLR)](../dotnet/pair-stl-clr.md)   
  [演算子 = = (組) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)   
  [operator! = (組) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)   

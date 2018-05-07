@@ -1,13 +1,10 @@
 ---
-title: "レコード セット: バルク (ODBC) レコードを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 'レコード セット: バルク (ODBC) レコードを追加する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - recordsets, adding records
 - bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 251d2fa4b7c28c1458fdc5643c9b17c53ba1b0ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7bb39b910eae797f360513954ad0c32d5e99bb86
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-adding-records-in-bulk-odbc"></a>レコードセット: レコードを大量に追加する方法 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -40,13 +35,13 @@ ms.lasthandoff: 12/21/2017
   
  データベース クラスを活用するために使用するかどうか、 **:: SQLSetPos** ODBC API 関数の追加、編集、およびレコードを削除するには、この最適化は必要ありません。  
   
- ODBC カーソル ライブラリが読み込まれる、または ODBC ドライバーでは、追加もサポートされていません、編集、および削除**:: SQLSetPos**、この最適化のパフォーマンスを追加します。 この最適化を有効にするには設定、 **dwOptions**内のパラメーター、**開く**レコード セットには、次の呼び出し。  
+ ODBC カーソル ライブラリが読み込まれる、または ODBC ドライバーでは、追加もサポートされていません、編集、および削除 **:: SQLSetPos**、この最適化のパフォーマンスを追加します。 この最適化を有効にするには設定、 **dwOptions**内のパラメーター、**開く**レコード セットには、次の呼び出し。  
   
 ```  
 appendOnly | optimizeBulkAdd  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: 追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
  [レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -1,13 +1,10 @@
 ---
-title: "方法: ユーザー インターフェイス オブジェクトの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ユーザー インターフェイス オブジェクトの更新 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e6d13e840c29d3ea9600183fafd9260966a2f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 422be3d80614c526c7e634d22a0930458e4b4e26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-update-user-interface-objects"></a>ユーザー インターフェイス オブジェクトの更新方法
 通常、メニュー項目とツール バー ボタンした複数の状態。 たとえば、メニュー項目は淡色表示 (淡色) は現在のコンテキストで使用可能な場合です。 メニュー項目には、オンまたはオフができます。 ツール バー ボタンは、使用できない場合は無効になっても、または確認されることができます。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [CCmdUI クラス](../mfc/the-ccmdui-class.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニュー](../mfc/menus-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "ツリー コントロールの親と子項目 |Microsoft ドキュメント"
-ms.custom: 
+title: ツリー コントロールの親と子項目 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], parent and child items
 - tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feaf59932da66be2bf269316c7ee9587d4037b3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 260cbf640f6c57e4b145d01e8f883025a4dc6507
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-parent-and-child-items"></a>ツリー コントロールの親項目と子項目
 ツリー コントロールの項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 関連付けられている子項目と呼ばれる、サブ項目の一覧を持つことができます。 1 つまたは複数の子項目をあるアイテムには、親項目が呼び出されます。 子項目は、親項目下に表示され、親のサブことを示すためにインデントされます。 親を持たない項目は、階層の最上部となりますルート項目は呼び出されます。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  子アイテムの一覧を展開すると、親項目を基準にインデントされます。 使用してインデントの値を設定することができます、 [SetIndent](../mfc/reference/ctreectrl-class.md#setindent)メンバー関数または取得を使用して現在の量、 [GetIndent](../mfc/reference/ctreectrl-class.md#getindent)メンバー関数。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "MFC インターネット プログラミングの基礎 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC インターネット プログラミングの基礎 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c03cdca832dcf0627ad033082085661c3b26847
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 Microsoft は、クライアントとサーバーの両方のアプリケーションのプログラミングの多くの Api を提供します。 多くの新しいアプリケーションが、インターネットに書き込まれていると、テクノロジ、ブラウザーの機能、およびセキュリティ オプションの変更、新しい種類のアプリケーションが書き込まれます。 World Wide Web にアクセスするため、テキスト、グラフィック、ActiveX コントロール、およびドキュメントを含む HTML ページを表示して、クライアント コンピューターでブラウザーを実行します。 サーバーは、FTP、HTTP、および gopher サービスを提供し、CGI を使用してサーバー拡張機能のアプリケーションを実行します。 カスタム アプリケーションでは、情報を取得でき、インターネット上にデータを提供することができます。  
@@ -82,17 +77,17 @@ Microsoft は、クライアントとサーバーの両方のアプリケーシ�
   
 -   [DHTML コントロールの ATL サポート](../atl/atl-support-for-dhtml-controls.md)  
   
-##  <a name="_core_web_sites_for_more_information"></a>詳細については、Web サイト  
+##  <a name="_core_web_sites_for_more_information"></a> 詳細については、Web サイト  
  Microsoft Internet テクノロジに関する詳細については、次を参照してください。、 [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) Web サイトです。 (リンクは、将来予告なしに変更可能性があります)。  
   
  開発者向けのこの Web サイトには、Microsoft の開発ツールとテクノロジ、および最新と今後の会議のトップ記事の使用に関する情報が含まれています。 このページには、.NET、および XML のデベロッパー センターを含む、多くの関連 developer サイトにジャンプすることができます。 ベータ版の Sdk およびサンプルをダウンロードすることもできます。  
   
  [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) HTML、HTTP、CGI、およびその他の World Wide Web テクノロジの仕様を公開します。  
   
-##  <a name="_core_more_internet_help"></a>さらにインターネット ヘルプ  
+##  <a name="_core_more_internet_help"></a> さらにインターネット ヘルプ  
  Windows SDK の OLE セクションには、OLE プログラミングに関する追加情報が含まれています。 この情報は、MFC クラスではなく、直接、Win32 WinInet 関数の使用方法の詳細を説明します。 また、インターネット技術に関する概要情報も含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 
 

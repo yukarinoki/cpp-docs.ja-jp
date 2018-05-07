@@ -1,12 +1,9 @@
 ---
-title: "_mm_cvtsi64x_ss |Microsoft ドキュメント"
-ms.custom: 
+title: _mm_cvtsi64x_ss |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_cvtsi64x_ss
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29a914b2cfbc807ac3a0dae8cadc3459d3de23a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8bb529e8aab204df85de2da0a2fdf4c820964239
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 固有の仕様**  
@@ -52,7 +47,7 @@ __m128 _mm_cvtsi64x_ss(
 ## <a name="return-value"></a>戻り値  
  `__m128`構造体の最初の浮動小数点値は変換の結果。 その他の 3 つの値から変更されていないコピー`a`です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -99,6 +94,6 @@ int main()
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [__m128](../cpp/m128.md)   
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

@@ -1,13 +1,10 @@
 ---
-title: "TN059: MFC の MBCS Unicode 変換マクロの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN059: MFC の MBCS Unicode 変換マクロの使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.mbcs
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45df45fe3d06e71b33c20ecd88d3f958a5673df1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>テクニカル ノート 59: MFC の MBCS/Unicode 変換マクロの使用
 > [!NOTE]
@@ -111,7 +106,7 @@ W2A      (LPCWSTR) -> (LPSTR)
 ## <a name="ole-conversion-macros"></a>OLE 変換マクロ  
  OLE 変換マクロが期待する関数の処理用に設計された**OLESTR**文字です。 OLE ヘッダーを確認する場合に多くの参照が表示されます**LPCOLESTR**と**OLECHAR**です。 これらの型は、プラットフォームに固有ではない方法での OLE インターフェイスで使用される文字の種類を参照に使用されます。 **OLECHAR**にマップ`char`Win16 または Macintosh プラットフォームと**WCHAR** Win32 でします。  
   
- 数を保持するために**#ifdef** MFC でのディレクティブのコードを最小限に抑えるの各変換のようなマクロがあることを OLE 文字列が関係しています。 次のマクロがよく使用されます。  
+ 数を保持するために **#ifdef** MFC でのディレクティブのコードを最小限に抑えるの各変換のようなマクロがあることを OLE 文字列が関係しています。 次のマクロがよく使用されます。  
   
 ```  
 T2COLE   (LPCTSTR) -> (LPCOLESTR)  
@@ -149,7 +144,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 }  
 ```  
   
- 文字列が定数でない場合は、関数にメソッドの呼び出しをカプセル化します。 これは、毎回解放する変換バッファーで許可されます。 例:  
+ 文字列が定数でない場合は、関数にメソッドの呼び出しをカプセル化します。 これは、毎回解放する変換バッファーで許可されます。 例えば:  
   
 ```  
 void CallSomeMethod(int ii, LPCTSTR lpsz)  
@@ -203,7 +198,7 @@ CString BetterConvert(ISomeInterface* pI)
   
  マクロは使いやすく、簡単に、コードに挿入しますが、上の注意事項がありますから分かるようには、これらを使用する際は注意する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

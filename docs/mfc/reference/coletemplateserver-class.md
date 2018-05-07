@@ -1,12 +1,9 @@
 ---
-title: "COleTemplateServer クラス |Microsoft ドキュメント"
-ms.custom: 
+title: COleTemplateServer クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer クラス
 OLE のビジュアル編集サーバー、オートメーション サーバー、およびリンク コンテナー (埋め込みアイテムへのリンクをサポートするアプリケーションのことです) で使います。  
@@ -61,9 +56,9 @@ class COleTemplateServer : public COleObjectFactory
 |[COleTemplateServer::UpdateRegistry](#updateregistry)|OLE システム レジストリをドキュメントの種類を登録します。|  
   
 ## <a name="remarks"></a>コメント  
- このクラスは、クラスから派生[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)以外の場合は通常、使用することができます`COleTemplateServer`独自のクラスを派生するのではなく、直接です。 `COleTemplateServer`使用して、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)サーバー ドキュメントを管理するオブジェクト。 使用して`COleTemplateServer`スタンドアロン アプリケーションとして実行できるサーバーは、サーバー全体を実装する場合。 フル サーバーは、シングル ドキュメント インターフェイス (SDI) アプリケーションはサポートされていますが、マルチ ドキュメント インターフェイス (MDI) アプリケーションでは、通常します。 1 つ`COleTemplateServer`アプリケーションをサポートしているサーバー ドキュメントの種類ごとにオブジェクトが必要です。 つまり、サーバー アプリケーションは、ワークシートとグラフの両方をサポートする場合必要がありますに 2 つ`COleTemplateServer`オブジェクト。  
+ このクラスは、クラスから派生[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)以外の場合は通常、使用することができます`COleTemplateServer`独自のクラスを派生するのではなく、直接です。 `COleTemplateServer` 使用して、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)サーバー ドキュメントを管理するオブジェクト。 使用して`COleTemplateServer`スタンドアロン アプリケーションとして実行できるサーバーは、サーバー全体を実装する場合。 フル サーバーは、シングル ドキュメント インターフェイス (SDI) アプリケーションはサポートされていますが、マルチ ドキュメント インターフェイス (MDI) アプリケーションでは、通常します。 1 つ`COleTemplateServer`アプリケーションをサポートしているサーバー ドキュメントの種類ごとにオブジェクトが必要です。 つまり、サーバー アプリケーションは、ワークシートとグラフの両方をサポートする場合必要がありますに 2 つ`COleTemplateServer`オブジェクト。  
   
- `COleTemplateServer`上書き、`OnCreateInstance`によって定義されたメンバー関数`COleObjectFactory`です。 このメンバー関数は、適切な型の C++ オブジェクトを作成するためにフレームワークによって呼び出されます。  
+ `COleTemplateServer` 上書き、`OnCreateInstance`によって定義されたメンバー関数`COleObjectFactory`です。 このメンバー関数は、適切な型の C++ オブジェクトを作成するためにフレームワークによって呼び出されます。  
   
  サーバーの詳細については、記事を参照してください。[サーバー: サーバーの実装](../../mfc/servers-implementing-a-server.md)です。  
   
@@ -76,10 +71,10 @@ class COleTemplateServer : public COleObjectFactory
   
  `COleTemplateServer`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
  `COleTemplateServer` オブジェクトを構築します。  
   
 ```  
@@ -89,7 +84,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>コメント  
  使用した簡単な説明、`COleTemplateServer`クラスを参照してください、[直接](../../mfc/reference/colelinkingdoc-class.md)クラスの概要です。  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
  接続によって示されるドキュメント テンプレート`pDocTemplate`基になる[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)オブジェクト。  
   
 ```  
@@ -112,7 +107,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  関連付けられたドキュメント テンプレートの登録を解除します。  
   
 ```  
@@ -125,7 +120,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>コメント  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
  ドキュメント テンプレート文字列からファイルの種類の情報を読み込んで OLE システム レジストリに格納します。  
   
 ```  
@@ -140,13 +135,13 @@ void UpdateRegistry(
  `nAppType`  
  値、 **OLE_APPTYPE**列挙体、列挙子。H. 次の値のいずれかを取ります。  
   
-- `OAT_INPLACE_SERVER`サーバーには、サーバー全体のユーザー インターフェイスがあります。  
+- `OAT_INPLACE_SERVER` サーバーには、サーバー全体のユーザー インターフェイスがあります。  
   
-- `OAT_SERVER`サーバーは、埋め込みだけをサポートします。  
+- `OAT_SERVER` サーバーは、埋め込みだけをサポートします。  
   
-- `OAT_CONTAINER`コンテナーは、埋め込みオブジェクトへのリンクをサポートします。  
+- `OAT_CONTAINER` コンテナーは、埋め込みオブジェクトへのリンクをサポートします。  
   
-- `OAT_DISPATCH_OBJECT`オブジェクトが`IDispatch`に対応します。  
+- `OAT_DISPATCH_OBJECT` オブジェクトが`IDispatch`に対応します。  
   
 - **OAT_DOC_OBJECT_SERVER**サーバーでは、両方がサポートを埋め込むと、ドキュメント オブジェクト コンポーネント モデル。  
   
@@ -168,7 +163,7 @@ void UpdateRegistry(
   
  詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   
  [COleObjectFactory クラス](../../mfc/reference/coleobjectfactory-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

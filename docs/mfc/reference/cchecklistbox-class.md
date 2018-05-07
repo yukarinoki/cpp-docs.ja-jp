@@ -1,12 +1,9 @@
 ---
-title: "CCheckListBox クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CCheckListBox クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox クラス
 Windows のチェックリスト ボックスの機能を提供します。  
@@ -84,7 +79,7 @@ class CCheckListBox : public CListBox
 ## <a name="remarks"></a>コメント  
  「チェックリスト ボックス」には、ファイル名などのアイテムの一覧が表示されます。 リスト内の各項目は、ユーザーがオンまたはオフを隣のチェック ボックスがします。  
   
- `CCheckListBox`オーナー描画コントロールに対してのみ、一覧に含まれるテキスト文字列を超えるためです。 簡単に言うと、チェックリスト ボックスにはテキスト文字列とチェック ボックスが含まれていますが、すべてのテキストにする必要はありません。 たとえば、一連の各項目の横にあるチェック ボックスが小さいビットマップのことができます。  
+ `CCheckListBox` オーナー描画コントロールに対してのみ、一覧に含まれるテキスト文字列を超えるためです。 簡単に言うと、チェックリスト ボックスにはテキスト文字列とチェック ボックスが含まれていますが、すべてのテキストにする必要はありません。 たとえば、一連の各項目の横にあるチェック ボックスが小さいビットマップのことができます。  
   
  独自のチェックリスト ボックスを作成する必要がありますから独自のクラスを派生させる`CCheckListBox`です。 独自のクラスを派生させる記述するには、派生クラスのコンス トラクターを呼び出す**作成**です。  
   
@@ -92,7 +87,7 @@ class CCheckListBox : public CListBox
   
  各メッセージ マップ エントリは次の形式になります。  
   
- **On _**通知**(**`id`、 `memberFxn` **)**  
+ **On _** 通知 **(**`id`、 `memberFxn` **)**  
   
  ここで`id`通知を送信するコントロールの子ウィンドウ ID を指定し、`memberFxn`通知の処理を記述した親メンバー関数の名前を指定します。  
   
@@ -119,10 +114,10 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>サンプル  
+##  <a name="cchecklistbox"></a>  サンプル  
  `CCheckListBox` オブジェクトを構築します。  
   
 ```  
@@ -135,7 +130,7 @@ CCheckListBox();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>  CCheckListBox::Create  
  Windows のチェックリスト ボックスを作成し、それにアタッチ、`CCheckListBox`オブジェクト。  
   
 ```  
@@ -185,7 +180,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP**コントロールのタブ オーダーを許可するには  
   
-##  <a name="drawitem"></a>:Drawitem  
+##  <a name="drawitem"></a>  :Drawitem  
  オーナー描画のチェックリスト ボックスの変更のビジュアルな部分のときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -205,7 +200,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  チェックリスト ボックス スタイルのチェックリスト ボックスの項目はすべて同じ高さではない場合、(で指定された**作成**) する必要があります**一定**、オーバーライドする必要がありますと、 [MeasureItem](#measureitem)関数。  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>  CCheckListBox::Enable  
  有効にするにまたはチェックリスト ボックスの項目を無効にするには、この関数を呼び出します。  
   
 ```  
@@ -221,7 +216,7 @@ void Enable(
  `bEnabled`  
  項目が有効になっているかどうかを指定します。  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
  指定されたチェック ボックスの状態を取得します。  
   
 ```  
@@ -241,7 +236,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|チェック ボックスはチェックされません。|  
 |`BST_INDETERMINATE`|チェック ボックスをオン状態が不定になります。|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
  この関数では、チェックリスト ボックスのスタイルを取得します。  
   
 ```  
@@ -254,7 +249,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>コメント  
  可能なスタイルのについては、次を参照してください。[有効なスタイル](#setcheckstyle)です。  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
  アイテムが有効になっているかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -268,7 +263,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>戻り値  
  項目が有効である場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
  既定以外のスタイルのチェックリスト ボックスが作成されるときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -282,7 +277,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>コメント  
  既定では、このメンバー関数では何も行いません。 このメンバー関数をオーバーライドし、入力、`MEASUREITEMSTRUCT`チェックリスト ボックスの項目のサイズの Windows に通知する構造体。 チェックリスト ボックスがで作成された場合、 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)リスト ボックス内の各項目のスタイル、フレームワークからこのメンバー関数。 それ以外の場合、このメンバーは、1 回だけ呼び出されます。  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
  フレームワークは、項目のチェック ボックスのサイズと位置を取得するには、この関数を呼び出します。  
   
 ```  
@@ -304,7 +299,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>コメント  
  既定の実装は、既定の位置とサイズのチェック ボックスにのみを返します ( `rectCheckBox`)。 既定は、チェック ボックスは、アイテムの左上隅に配置し、標準のチェック ボックスのサイズです。 場合、右側のチェック ボックスまたはチェック ボックスを拡大または縮小した位置である可能性があります。 このような場合は、オーバーライド`OnGetCheckPosition` チェック ボックスの位置とサイズ内に項目を変更します。  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
  指定されたチェック ボックスの状態を設定します。  
   
 ```  
@@ -329,7 +324,7 @@ void SetCheck(
 |**設定されています。**|指定されたチェック ボックスをオフにします。|  
 |**BST_INDETERMINATE**|不確定なチェック ボックスを指定した状態に設定します。<br /><br /> この状態は、チェック ボックスのスタイルが場合にのみ`BS_AUTO3STATE`または`BS_3STATE`です。 詳細については、次を参照してください。[ボタン スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)です。|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
  チェックリスト ボックスのチェック ボックスのスタイルを設定するには、この関数を呼び出します。  
   
 ```  
@@ -353,7 +348,7 @@ void SetCheckStyle(UINT nStyle);
   
  詳細については、これらのスタイルは、次を参照してください。[ボタン スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル TSTCON](../../visual-cpp-samples.md)   
  [CListBox クラス](../../mfc/reference/clistbox-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

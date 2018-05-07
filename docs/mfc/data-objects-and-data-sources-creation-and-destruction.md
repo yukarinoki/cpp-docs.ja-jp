@@ -1,13 +1,10 @@
 ---
-title: "データ オブジェクトとデータ ソース: 作成と破棄 |Microsoft ドキュメント"
-ms.custom: 
+title: 'データ オブジェクトとデータ ソース: 作成と破棄 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d468bef2eee05600b4d298f966533a7e6bc025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>データ オブジェクトとデータ ソース : 作成と破棄
 アーティクルの説明に従って[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)、データ オブジェクトとデータ ソースは、データ転送の両側を表します。 ここでは、データ転送を正しく実行するために、これらのオブジェクトとソースをいつ作成し、いつ破棄するかについて説明します。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [データ ソースの破棄](#_core_destroying_data_sources)  
   
-##  <a name="_core_creating_data_objects"></a>データ オブジェクトの作成  
+##  <a name="_core_creating_data_objects"></a> データ オブジェクトの作成  
  データ オブジェクトは、転送先アプリケーション (クライアントまたはサーバー) で使用されます。 転送先アプリケーションのデータ オブジェクトは、転送元アプリケーションと転送先アプリケーション間の接続の片端となります。 転送先アプリケーションのデータ オブジェクトは、データ ソース内のデータへのアクセスと対話に使用されます。  
   
  データ オブジェクトが必要な状況は、一般的に 2 つあります。 1 つ目は、ドラッグ アンド ドロップを使用してアプリケーションにデータをドロップする場合です。 2 つ目は、[編集] メニューの [貼り付け] または [形式を選択して貼り付け] を選択する場合です。  
@@ -56,12 +51,12 @@ ms.lasthandoff: 12/21/2017
   
  アプリケーションで [貼り付け] または [形式を選択して貼り付け] 操作を実行する場合は、`COleDataObject` オブジェクトを作成し、その `AttachClipboard` メンバー関数を呼び出す必要があります。 これにより、データ オブジェクトはクリップボード上のデータと関連付けられます。 その後、貼り付け関数でこのデータ オブジェクトを使用できます。  
   
-##  <a name="_core_destroying_data_objects"></a>データ オブジェクトの破棄  
+##  <a name="_core_destroying_data_objects"></a> データ オブジェクトの破棄  
  説明した手法に従う場合[データ オブジェクトの作成](#_core_creating_data_objects)、データ転送の一環としては、データ オブジェクトを破棄します。 貼り付け関数で作成されたデータ オブジェクトは、関数から制御が戻るときに、MFC によって破棄されます。  
   
  貼り付け操作を別の方法で処理する場合は、貼り付け操作が完了した後にデータ オブジェクトが破棄されるようにしてください。 データ オブジェクトが破棄されるまで、アプリケーションではデータをクリップボードに正常にコピーすることができません。  
   
-##  <a name="_core_creating_data_sources"></a>データ ソースの作成  
+##  <a name="_core_creating_data_sources"></a> データ ソースの作成  
  データ ソースは、データ転送の送信元によって使用されます。この送信元は、データ転送のクライアント側の場合もサーバー側の場合もあります。 転送元アプリケーションのデータ ソースは、転送元アプリケーションと転送先アプリケーション間の接続の片端となります。 転送先アプリケーションのデータ オブジェクトは、データ ソース内のデータとの対話に使用されます。  
   
  データ ソースは、アプリケーションでデータをクリップボードにコピーすることが必要な場合に作成されます。 一般的なシナリオは次のようになります。  
@@ -82,8 +77,8 @@ ms.lasthandoff: 12/21/2017
   
  さらに、ドラッグ アンド ドロップ操作の既定の動作を変更する場合にも、`COleDataSource` オブジェクトの作成が必要になることがあります。 詳細については、次を参照してください。、[ドラッグ アンド ドロップ: カスタマイズ](../mfc/drag-and-drop-customizing.md)資料です。  
   
-##  <a name="_core_destroying_data_sources"></a>データ ソースの破棄  
- データ ソースは、現在データ ソースを管理しているアプリケーションによって破棄する必要があります。 OLE にデータ ソースを配信する場合、呼び出しなど[された](../mfc/reference/coledatasource-class.md#dodragdrop)、呼び出す必要がある**pDataSrc InternalRelease]-> [**です。 例:  
+##  <a name="_core_destroying_data_sources"></a> データ ソースの破棄  
+ データ ソースは、現在データ ソースを管理しているアプリケーションによって破棄する必要があります。 OLE にデータ ソースを配信する場合、呼び出しなど[された](../mfc/reference/coledatasource-class.md#dodragdrop)、呼び出す必要がある**pDataSrc InternalRelease]-> [** です。 例えば:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   
@@ -91,7 +86,7 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、次を参照してください。[ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)、[クリップボード](../mfc/clipboard.md)、および[を操作するデータ オブジェクトとデータ ソース](../mfc/data-objects-and-data-sources-manipulation.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject クラス](../mfc/reference/coledataobject-class.md)   
  [COleDataSource クラス](../mfc/reference/coledatasource-class.md)

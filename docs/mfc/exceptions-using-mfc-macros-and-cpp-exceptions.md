@@ -1,13 +1,10 @@
 ---
-title: "例外処理: MFC マクロと C++ 例外の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: '例外処理: MFC マクロと C++ 例外の使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6597f43deee73addff8e8f2045a38d7b1109fc0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外処理 : MFC マクロと C++ 例外機構の使用
 この記事では、MFC 例外処理マクロと C++ 例外処理のキーワードの両方を使用するコードを記述するための考慮事項について説明します。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Try catch ブロック内のブロック](#_core_try_blocks_inside_catch_blocks)  
   
-##  <a name="_core_mixing_exception_keywords_and_macros"></a>例外のキーワードとマクロの混在  
+##  <a name="_core_mixing_exception_keywords_and_macros"></a> 例外のキーワードとマクロの混在  
  MFC 例外マクロと同じプログラムで C++ 例外処理キーワードを混在させることができます。 マクロ例外オブジェクトを自動的に削除のスコープ外に出ると、例外処理キーワードを使用するコードは実行されませんので、同じブロックでの C++ 例外のキーワードと MFC マクロを組み合わせることはできません。 詳細については、記事を参照してください。[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)です。  
   
  マクロとキーワードの主な違いは、例外がスコープ外に出るときに、マクロがそのキャッチした例外を「自動」削除することです。 キーワードを使用してコードを削除しません。catch ブロックでキャッチされた例外は、明示的に削除する必要があります。 マクロと C++ 例外処理キーワードまたは、メモリ リークが発生する例外オブジェクトを削除できなかった場合、例外が 2 回削除されたときにヒープが破損します。  
@@ -59,13 +54,13 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   
-##  <a name="_core_try_blocks_inside_catch_blocks"></a>Try Catch ブロック内のブロック  
+##  <a name="_core_try_blocks_inside_catch_blocks"></a> Try Catch ブロック内のブロック  
  内から現在の例外を再スローすることはできません、**再試行**ブロック内にある、**キャッチ**ブロックします。 次の例では、有効です。  
   
  [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]  
   
  詳細については、次を参照してください。[例外: 例外の内容の調査](../mfc/exceptions-examining-exception-contents.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外処理](../mfc/exception-handling-in-mfc.md)
 

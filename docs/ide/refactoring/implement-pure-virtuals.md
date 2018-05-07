@@ -1,31 +1,27 @@
 ---
-title: "純粋仮想を実装して |Microsoft ドキュメント"
-ms.custom: 
+title: 純粋仮想を実装して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311c2e5832754bfd785084b9aa930b5dbe43845
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-pure-virtuals"></a>純粋仮想を実装します。
-**新機能:**直ちにクラスですべての純粋仮想メソッドを実装するために必要なコードを生成することができます。 
+**新機能:** 直ちにクラスですべての純粋仮想メソッドを実装するために必要なコードを生成することができます。 
 
-**条件:**純粋仮想関数を持つクラスから継承します。  
+**条件:** 純粋仮想関数を持つクラスから継承します。  
 
-**理由:**すべて純粋仮想関数を 1 つずつを手動で実装でしたが、この機能では、すべてのメソッド署名を自動的に作成されます。
+**理由:** すべて純粋仮想関数を 1 つずつを手動で実装でしたが、この機能では、すべてのメソッド署名を自動的に作成されます。
 
 **方法:**
 
@@ -37,7 +33,7 @@ ms.lasthandoff: 03/16/2018
    * **キーボード**
      * **Ctrl + .** キーを押して、 トリガーに、**クイック アクションとリファクタリング**メニュー**クラスのすべての純粋仮想を実装する*ClassName*'** 、コンテキスト メニューから場所*ClassName*選択したクラスの名前を指定します。
    * **マウス**
-     * 右クリックし、選択、**クイック アクションとリファクタリング**メニュー**クラスのすべての純粋仮想を実装する*ClassName*'**コンテキスト メニューから場所*ClassName*選択したクラスの名前を指定します。
+     * 右クリックし、選択、**クイック アクションとリファクタリング**メニュー**クラスのすべての純粋仮想を実装する*ClassName*'** コンテキスト メニューから場所*ClassName*選択したクラスの名前を指定します。
 
 1. 純粋仮想メソッドのシグネチャは、自動的に作成された、実装する準備完了になります。
 

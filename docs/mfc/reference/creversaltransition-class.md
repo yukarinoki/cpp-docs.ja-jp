@@ -1,12 +1,9 @@
 ---
-title: "CReversalTransition クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CReversalTransition クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CReversalTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdce13f41e95cda592fec03fcedb01984fb34ab9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 623e341610fbecb3dfc9ea0c2e2eed5ee06abebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition クラス
 逆遷移をカプセル化します。  
@@ -72,10 +67,10 @@ class CReversalTransition : public CBaseTransition;
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CReversalTransition::Create  
+##  <a name="create"></a>  CReversalTransition::Create  
  カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。  
   
 ```  
@@ -91,7 +86,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>戻り値  
  移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
  取消遷移オブジェクトを構築し、その継続時間を初期化します。  
   
 ```  
@@ -102,12 +97,12 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
  `duration`  
  移行の期間です。  
   
-##  <a name="m_duration"></a>CReversalTransition::m_duration  
+##  <a name="m_duration"></a>  CReversalTransition::m_duration  
  移行の期間です。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

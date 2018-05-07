@@ -1,29 +1,24 @@
 ---
-title: "既存のコードからプロジェクトを新しいリリースの構成 |Microsoft ドキュメント"
-ms.custom: 
+title: 既存のコードからプロジェクトを新しいリリースの構成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.releasesettings
 dev_langs:
 - C++
 ms.assetid: 3e2fc73c-bdbd-4790-b2bd-d31731f0cece
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff208af8bb89dbcb7df00b37ce542a5adae5fa23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f3995b1a7227e4d2f0a531c86726b84e960d8ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>[リリースの構成の設定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)
 既存コード ファイルからの新しいプロジェクトの作成ウィザードのこのページを使用すると、リリース構成のプロジェクト設定を指定できます。  
@@ -62,5 +57,5 @@ ms.lasthandoff: 12/21/2017
  **.NET アセンブリを使用して強制的に (/FU)**  
  新しいプロジェクトをビルド時に .NET アセンブリを指定します。 詳細については、「[/FU (強制 #using ファイルの名前の指定)](../build/reference/fu-name-forced-hash-using-file.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[プロジェクト設定の指定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

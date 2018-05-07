@@ -1,13 +1,10 @@
 ---
-title: "方法: 埋め込み PInvoke を使用してポインターをマーシャ リングする. |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 埋め込み PInvoke を使用してポインターをマーシャ リングする. |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd2717e5ffc5dc25f7a98f679a23d6f97fd335a5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a07c9742c393abe2a6213378ee8963839ab66c90
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>方法: PInvoke を使用して埋め込みポインターをマーシャリングする
 アンマネージ Dll に実装されている関数は、Platform Invoke (P/invoke) 機能を使用してマネージ コードから呼び出すことができます。 DLL のソース コードが使用できない場合は、相互運用するための唯一のオプションは P/invoke です。 ただし、Visual C は、他の .NET 言語とは異なり、P/invoke する代わりを提供します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)と[する方法: マーシャ リング埋め込みポインターを使用して C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)です。  
@@ -112,5 +107,5 @@ int main() {
   
  従来を使用してマネージ コードに、DLL の一部は公開されていませんことに注意してください #include ディレクティブです。 実際には、DLL は実行時にのみでの機能に問題が取り込まれるように<xref:System.Runtime.InteropServices.DllImportAttribute>はコンパイル時に、検出されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ での明示的な PInvoke (DllImport 属性) の使用方法](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

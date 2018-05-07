@@ -1,12 +1,9 @@
 ---
-title: "CRowsetImpl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CRowsetImpl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowsetImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d97eefdc1885c532df9c9be913e3f1beea2ff09
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eece641adacd6ce918929366c4fc6dc78105e71a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl クラス
 多くの実装インターフェイスの多重継承を必要とせず、標準の OLE DB 行セットの実装を提供します。  
@@ -99,5 +94,5 @@ class CRowsetImpl :
   
  いずれかを実装する、 `CRowsetImpl`-派生**Execute**メソッド、内部データ バッファーを設定する必要があります ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md))。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h

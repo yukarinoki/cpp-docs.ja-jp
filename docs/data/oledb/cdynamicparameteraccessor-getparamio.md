@@ -1,12 +1,9 @@
 ---
-title: CDynamicParameterAccessor::GetParamIO | Microsoft Docs
-ms.custom: 
+title: Cdynamicparameteraccessor::getparamio |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetParamIO
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetParamIO method
 ms.assetid: 9c485e39-c67e-4df7-a707-c773019c4d1e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a4ed23081ea7d9ee146a749ff642328fac7d80f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 322fa8fe90d323bc14593028386b119a24377e83
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamio"></a>CDynamicParameterAccessor::GetParamIO
 指定されたパラメーターが入力または出力パラメーターであるかどうかを判断します。  
@@ -62,8 +57,8 @@ enum DBPARAMIOENUM {
 ## <a name="return-value"></a>戻り値  
  返します**true**成功した場合または**false**エラー発生時にします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "CDaoRecordView クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDaoRecordView クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fffeed33d5b966faf511f60da740c39f2b91581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView クラス
 コントロール内にデータベース レコードを表示するビューです。  
@@ -64,7 +59,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 |[CDaoRecordView::OnMove](#onmove)|現在のレコードを変更した場合、データ ソースを更新し、指定されたレコードに移動 (次に、前の最初のページまたは最後)。|  
   
 ## <a name="remarks"></a>コメント  
- ビューに直接接続されているフォーム ビュー、`CDaoRecordset`オブジェクト。 ビューはダイアログ テンプレート リソースから作成およびのフィールドを表示、`CDaoRecordset`ダイアログ テンプレートのコントロール内のオブジェクト。 `CDaoRecordView`オブジェクト ダイアログ データ エクス (チェンジ DDX) および DAO レコード フィールド エクス (チェンジ DFX) を使用して、フォーム上のコントロールとレコード セットのフィールドの間でデータの移動を自動化します。 `CDaoRecordView`移動するための既定の実装を提供、最初に [次へ]、前、または最後のレコードと、ビューで現在のレコードを更新するためのインターフェイスです。  
+ ビューに直接接続されているフォーム ビュー、`CDaoRecordset`オブジェクト。 ビューはダイアログ テンプレート リソースから作成およびのフィールドを表示、`CDaoRecordset`ダイアログ テンプレートのコントロール内のオブジェクト。 `CDaoRecordView`オブジェクト ダイアログ データ エクス (チェンジ DDX) および DAO レコード フィールド エクス (チェンジ DFX) を使用して、フォーム上のコントロールとレコード セットのフィールドの間でデータの移動を自動化します。 `CDaoRecordView` 移動するための既定の実装を提供、最初に [次へ]、前、または最後のレコードと、ビューで現在のレコードを更新するためのインターフェイスです。  
   
 > [!NOTE]
 >  DAO データベース クラスは、MFC データベース クラス ODBC Open Database Connectivity () をベースとは異なります。 DAO データベース クラスの名前では、"CDao"プレフィックスがあります。 DAO クラス; で ODBC データ ソースのアクセスをできます。Microsoft Jet データベース エンジンを使用するため、DAO クラスは通常、優れた機能を提供します。  
@@ -77,7 +72,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  レコード間を移動するための既定の実装については、次を参照してください。`IsOnFirstRecord`と`IsOnLastRecord`」および「[レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)、両方に適用されます`CRecordView`と`CDaoRecordView`です。  
   
- `CDaoRecordView`追跡レコード セット内のユーザーの位置、レコード ビューは、ユーザー インターフェイスを更新できるようにします。 ユーザーは、レコード セットの先頭または末尾に移動、レコード ビュー、ユーザー インターフェイス オブジェクトを無効になります: メニュー項目またはツール バー ボタンなど — を移動するため、同じ方向にさらに。  
+ `CDaoRecordView` 追跡レコード セット内のユーザーの位置、レコード ビューは、ユーザー インターフェイスを更新できるようにします。 ユーザーは、レコード セットの先頭または末尾に移動、レコード ビュー、ユーザー インターフェイス オブジェクトを無効になります: メニュー項目またはツール バー ボタンなど — を移動するため、同じ方向にさらに。  
   
  詳細については、宣言して、レコード ビューとレコード セット クラスを使用して、参照してください「の作成、レコード ビューのデザインと」アーティクル[レコード ビュー](../../data/record-views-mfc-data-access.md)です。 レコード ビューの動作とその使用方法の詳細については、記事を参照してください。[レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)です。 上記のすべてのアーティクルが両方に適用`CRecordView`と`CDaoRecordView`です。  
   
@@ -96,10 +91,10 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  `CDaoRecordView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>指定して  
+##  <a name="cdaorecordview"></a>  指定して  
  派生した型のオブジェクトを作成するときに`CDaoRecordView`、ビュー オブジェクトを初期化し、ビューの基になるダイアログ リソースを識別するコンス トラクターのいずれかの形式を呼び出します。  
   
 ```  
@@ -127,7 +122,7 @@ explicit CDaoRecordView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
  現在のレコードがレコード ビューに関連付けられているレコード セット オブジェクトの最初のレコードであるかどうかを判別するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -142,7 +137,7 @@ BOOL IsOnFirstRecord();
   
  ユーザーは、最初のレコードに移動、すべてのユーザー インターフェイス オブジェクト (メニュー項目やツール バー ボタンなど) フレームワークを無効になりますがある場合、最初のページと前のレコードに移動するためです。  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
  現在のレコードがレコード ビューに関連付けられているレコード セット オブジェクトの最後のレコードであるかどうかを判別するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -158,7 +153,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  ビューは、それ以降、ユーザーに移動されるまで、レコード セットの末尾が検出できない場合がある点を除いて、この関数の結果は信頼できます。 ユーザーは、[次へ] または最後のレコードに移動するためのユーザー インターフェイス オブジェクトを無効にする必要があります、レコード ビューが通知前に、最後のレコードを超える移動する必要があります。 最後のレコードの後ろに移動し、移動最後のレコード (またはその前に)、レコード ビュー、レコード セット内のユーザーの位置を追跡できユーザー インターフェイス オブジェクトを正しく無効にできます。  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
  ポインターを返します、 `CDaoRecordset`-レコード ビューに関連付けられているオブジェクトを派生します。  
   
 ```  
@@ -173,7 +168,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
   
  詳細と例については、記事を参照してください。[レコード ビュー: レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)です。  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
  レコード セット内の別のレコードに移動し、レコード ビューのコントロールにそのフィールドを表示するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -184,13 +179,13 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  `nIDMoveCommand`  
  標準コマンド ID 値は次のいずれかです。  
   
-- `ID_RECORD_FIRST`レコード セットの最初のレコードに移動します。  
+- `ID_RECORD_FIRST` レコード セットの最初のレコードに移動します。  
   
-- `ID_RECORD_LAST`レコード セットの最後のレコードに移動します。  
+- `ID_RECORD_LAST` レコード セットの最後のレコードに移動します。  
   
-- `ID_RECORD_NEXT`レコード セットの次のレコードに移動します。  
+- `ID_RECORD_NEXT` レコード セットの次のレコードに移動します。  
   
-- `ID_RECORD_PREV`レコード セットの前のレコードに移動します。  
+- `ID_RECORD_PREV` レコード セットの前のレコードに移動します。  
   
 ### <a name="return-value"></a>戻り値  
  移動が成功した場合は 0 以外。移動要求が拒否された場合は、それ以外の場合 0 を返します。  
@@ -207,7 +202,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 > [!CAUTION]
 >  呼び出す`OnMove`レコード セットにレコードが存在しない場合、例外をスローします。 適切なユーザー インターフェイス更新ハンドラー関数を呼び出す — **OnUpdateRecordFirst**、 **OnUpdateRecordLast**、 **OnUpdateRecordNext**、または**OnUpdateRecordPrev** : 対応する前に、レコード セットがすべてのレコードを持つかどうかを決定する操作を移動します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CFormView クラス](../../mfc/reference/cformview-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CDaoRecordset クラス](../../mfc/reference/cdaorecordset-class.md)   

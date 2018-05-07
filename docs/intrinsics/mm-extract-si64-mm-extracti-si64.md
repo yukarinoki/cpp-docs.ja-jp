@@ -1,12 +1,9 @@
 ---
-title: "_mm_extract_si64、_mm_extracti_si64 |Microsoft ドキュメント"
-ms.custom: 
+title: _mm_extract_si64、_mm_extracti_si64 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_extracti_si64
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc65289ce52be9acb1cfe01d1149480a8381e3b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a8ba4986abf097a5827d3db7f93dbbd0a9640862
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64、_mm_extracti_si64
 **Microsoft 固有の仕様**  
@@ -65,7 +60,7 @@ __m128i _mm_extracti_si64(
 ## <a name="return-value"></a>戻り値  
  その最下位のビット単位で抽出されたフィールドでは、128 ビット フィールドです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -119,8 +114,8 @@ result3 = 0x30eca86
 ```  
   
 **Microsoft 固有の仕様はここまで**  
- Copyright 2007 by Advanced Micro Devices, Inc.All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
+ 高度なマイクロ デバイス, Inc. によって copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [_mm_insert_si64、_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

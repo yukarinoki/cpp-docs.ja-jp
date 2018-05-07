@@ -1,12 +1,9 @@
 ---
-title: "COLUMN_NAME_TYPE |Microsoft ドキュメント"
-ms.custom: 
+title: COLUMN_NAME_TYPE |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME_TYPE
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME_TYPE macro
 ms.assetid: 815ace8f-8ec3-4ad7-a7a0-37fa8e4bc68c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6294efd7a1b78a53673d5df7d9a051e852604edf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d5ceae9bfb023806daaeb593b48bad521ce6774b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnnametype"></a>COLUMN_NAME_TYPE
 行セットの特定の列を行セットのバインドを表します。 ような[COLUMN_NAME](../../data/oledb/column-name.md)ただし、このマクロでは、データ型も受け取ります。  
@@ -51,10 +46,10 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 ## <a name="remarks"></a>コメント  
  参照してください[COLUMN_NAME](../../data/oledb/column-name.md)場所について、 **COLUMN_NAME_\*** マクロを使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロと OLE DB コンシューマー テンプレート用グローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   

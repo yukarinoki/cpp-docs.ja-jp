@@ -1,12 +1,9 @@
 ---
-title: "CD2DResource クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CD2DResource クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DResource
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cc6b80803cbddcbd05655a8f9620c102aef3e9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eed5b60954d05094db610a233968c9c7dd83c704
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dresource-class"></a>CD2DResource クラス
 ブラシ、レイヤー、テキストなどの D2D リソースの作成および管理インターフェイスを提供する抽象クラスです。  
@@ -78,7 +73,7 @@ class CD2DResource : public CObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|(CRenderTarget) の所有者によって destoyed されるリソースには|  
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|親 CRenderTarget へのポインター)|  
@@ -88,17 +83,17 @@ class CD2DResource : public CObject;
   
  `CD2DResource`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
+##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource  
  デストラクターです。 D2D リソース オブジェクトが破棄されるときに呼び出されます。  
   
 ```  
 virtual ~CD2DResource();
 ```  
   
-##  <a name="cd2dresource"></a>CD2DResource::CD2DResource  
+##  <a name="cd2dresource"></a>  CD2DResource::CD2DResource  
  CD2DResource オブジェクトを構築します。  
   
 ```  
@@ -114,7 +109,7 @@ CD2DResource(
  `bAutoDestroy`  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
-##  <a name="create"></a>CD2DResource::Create  
+##  <a name="create"></a>  CD2DResource::Create  
  CD2DResource を作成します。  
   
 ```  
@@ -128,14 +123,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-##  <a name="destroy"></a>CD2DResource::Destroy  
+##  <a name="destroy"></a>  CD2DResource::Destroy  
  CD2DResource オブジェクトを破棄します。  
   
 ```  
 virtual void Destroy() = 0;  
 ```  
   
-##  <a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
+##  <a name="isautodestroy"></a>  CD2DResource::IsAutoDestroy  
  チェック自動では、フラグを破棄します。  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="return-value"></a>戻り値  
  その所有者によって、オブジェクトが破棄される場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="isvalid"></a>CD2DResource::IsValid  
+##  <a name="isvalid"></a>  CD2DResource::IsValid  
  リソースの有効性のチェック  
   
 ```  
@@ -155,21 +150,21 @@ virtual BOOL IsValid() const = 0;
 ### <a name="return-value"></a>戻り値  
  リソースが無効である場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
+##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy  
  (CRenderTarget) の所有者によって destoyed されるリソースには  
   
 ```  
 BOOL m_bIsAutoDestroy;  
 ```  
   
-##  <a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
+##  <a name="m_pparenttarget"></a>  CD2DResource::m_pParentTarget  
  親 CRenderTarget へのポインター)  
   
 ```  
 CRenderTarget* m_pParentTarget;  
 ```  
   
-##  <a name="recreate"></a>CD2DResource::ReCreate  
+##  <a name="recreate"></a>  CD2DResource::ReCreate  
  CD2DResource を再作成されます。  
   
 ```  
@@ -183,5 +178,5 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

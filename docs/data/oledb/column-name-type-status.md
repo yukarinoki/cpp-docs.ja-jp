@@ -1,12 +1,9 @@
 ---
-title: COLUMN_NAME_TYPE_STATUS | Microsoft Docs
-ms.custom: 
+title: COLUMN_NAME_TYPE_STATUS |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME_TYPE_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME_TYPE_STATUS macro
 ms.assetid: 72ad3728-5b3e-4131-9f38-835d776529d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dce1ccb8d79dc1c0c7401ff475435de36075341c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2a6c0c4f0e0f36b7ec0fa5eda059e9ed6d0e22c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnnametypestatus"></a>COLUMN_NAME_TYPE_STATUS
 行セットの特定の列を行セットのバインドを表します。 ような[COLUMN_NAME](../../data/oledb/column-name.md)ただし、このマクロでは、データ型と列の状態も受け取ります。  
@@ -54,10 +49,10 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 ## <a name="remarks"></a>コメント  
  参照してください[COLUMN_NAME](../../data/oledb/column-name.md)場所について、 **COLUMN_NAME_\*** マクロを使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロと OLE DB コンシューマー テンプレート用グローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   

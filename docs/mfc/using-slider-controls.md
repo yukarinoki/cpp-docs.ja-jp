@@ -1,13 +1,10 @@
 ---
-title: "スライダー コントロールを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: スライダー コントロールを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - slider controls
 - slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fdab6a7fae25845da81ee7263e045e50951f557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9180d792f38652b22f430e497ef0e42dc54f6d73
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-slider-controls"></a>スライダー コントロールの使い方
 通常、スライダー コントロールの使い方は、次のパターンを次に示します。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 -   コントロールに完了したらが正常に破棄されるかどうかを確認する必要があります。 スライダー コントロールがダイアログ ボックスでは、場合、および`CSliderCtrl`オブジェクトは自動的に破棄されます。 かどうか、する必要はありません、両方のコントロールをことを確認して、`CSliderCtrl`オブジェクトが破棄されました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CSliderCtrl の使い方](../mfc/using-csliderctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

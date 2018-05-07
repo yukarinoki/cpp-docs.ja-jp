@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: MFC プロジェクトへのアニメーションの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: MFC プロジェクトへのアニメーションの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f027da0e90bc8dde015c2d42bd72ceb388aa0bba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8ae7496daf6827a6be7769d60af10bca45f7a3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへのアニメーションの追加
 このチュートリアルでは、基本的なアニメーション化されたオブジェクトを Visual C、Microsoft Foundation Class ライブラリ (MFC) プロジェクトに追加する方法を説明します。  
@@ -50,11 +45,11 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-create-an-mfc-application"></a>MFC アプリケーションを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **[名前]** ボックスに「`MFCAnimationWalkthrough`」と入力します。 **[OK]**をクリックします。  
+2.  **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **[名前]** ボックスに「`MFCAnimationWalkthrough`」と入力します。 **[OK]** をクリックします。  
   
-3.  **MFC アプリケーション ウィザード** ダイアログ ボックスであることを確認**アプリケーションの種類**は**複数ドキュメント**、**プロジェクト形式**には**Visual Studio**、および**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択します。 **[完了]**をクリックします。  
+3.  **MFC アプリケーション ウィザード** ダイアログ ボックスであることを確認**アプリケーションの種類**は**複数ドキュメント**、**プロジェクト形式**には**Visual Studio**、および**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択します。 **[完了]** をクリックします。  
   
 ### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>メニューを追加しを起動し、アニメーションを停止するためのコマンドを追加するには  
   
@@ -434,6 +429,6 @@ if (pManager != NULL)
   
 1.  アプリケーションをビルドして実行します。 **アニメーション** メニューのをクリックして**開始フォワード**です。 四角形は、表示され、中央の領域を埋める必要があります。 クリックすると**開始旧バージョンと**アニメーションを戻す必要がありをクリックすると、**停止**、それを停止する必要があります。 アニメーションの進行状況に応じて、四角形の塗りつぶしの色を変更する必要があり、アニメーションをウィンドウの上部にある現在の色を表示する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル](../mfc/walkthroughs-mfc.md)
 

@@ -1,29 +1,24 @@
 ---
-title: "方法: 既存のコードから C++ プロジェクトを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 既存のコードから C++ プロジェクトを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - C++, creating projects from existing code
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6781709c105c606f6ceb856654525385738c1ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1786e5704d7afd07576ab738d907eb841518f8be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>方法 : 既存のコードから C++ プロジェクトを作成する
 
@@ -45,7 +40,7 @@ Visual C プロジェクトに既存のコード ファイルを移植するに�
 
 1.  使用するリリースの構成設定を指定します。 このページの詳細については、「[リリース構成設定の指定、新しいプロジェクトから既存コード ファイル作成ウィザード](../ide/specify-release-configuration.md)です。 選択**完了**新しいプロジェクトを生成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [プロジェクトを指定の場所とソース ファイル、既存コード ファイル ウィザードから新しいプロジェクトの作成](../ide/specify-project-location-and-source-files.md)   
 [プロジェクトの設定を指定して、既存のコード ファイル ウィザードから新しいプロジェクトの作成](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)   

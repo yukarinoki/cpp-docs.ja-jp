@@ -1,13 +1,10 @@
 ---
-title: "一般的なウィンドウ作成順序 |Microsoft ドキュメント"
-ms.custom: 
+title: 一般的なウィンドウ作成順序 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bed4387a6b8e6edeb504e29d221e76a0b39d18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75a9c6ecf6516adceda845dadd4f0313ae605f0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-window-creation-sequence"></a>一般的なウィンドウ作成順序
 フレームワークがで説明したものと同じプロセスよりを使用して子などの独自のウィンドウのウィンドウを作成するときに[ドキュメント/ビューの作成](../mfc/document-view-creation.md)です。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  **作成**メンバー関数では、Windows の期間を格納およびその`HWND`C++ オブジェクトのパブリック データ メンバーに[m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)です。 **作成**な作成パラメーター経由で完全な柔軟性を提供します。 呼び出しの前に**作成**、グローバル関数でウィンドウ クラスを登録することがあります[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)フレームのアイコンとクラスのスタイルを設定するためにします。  
   
- フレーム ウィンドウを使用できます、 [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)メンバー関数の代わりに**作成**です。 `LoadFrame`以下のパラメーターを使用して Windows のウィンドウになります。 フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースから多くの既定値を取得します。  
+ フレーム ウィンドウを使用できます、 [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)メンバー関数の代わりに**作成**です。 `LoadFrame` 以下のパラメーターを使用して Windows のウィンドウになります。 フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースから多くの既定値を取得します。  
   
 > [!NOTE]
 >  アイコン、アクセラレータ テーブル、およびメニュー リソースが必要で共通のリソース ID など**IDR_MAINFRAME**、LoadFrame によって読み込まれることにします。  
@@ -50,6 +45,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [ドキュメント フレーム ウィンドウの作成](../mfc/creating-document-frame-windows.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ウィンドウの作成](../mfc/creating-windows.md)
 

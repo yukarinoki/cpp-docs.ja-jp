@@ -1,12 +1,9 @@
 ---
-title: "CFindReplaceDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CFindReplaceDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFindReplaceDialog
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1d0b5658da375c2202729e6888fa078063beb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog クラス
 アプリケーションで標準文字列検索と置換 ダイアログ ボックスを実装できます。  
@@ -105,7 +100,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  ダイアログ ボックスを終了したかどうかを決定できます、`IsTerminating`メンバー関数。  
   
- `CFindReplaceDialog`COMMDLG に依存します。Windows 3.1 以降のバージョンに付属している DLL ファイルです。  
+ `CFindReplaceDialog` COMMDLG に依存します。Windows 3.1 以降のバージョンに付属している DLL ファイルです。  
   
  ダイアログ ボックスをカスタマイズするからクラスを派生`CFindReplaceDialog`拡張コントロールから通知メッセージを処理するメッセージ マップの追加を独自のダイアログ テンプレートを提供します。 基本クラスには、処理されないメッセージを渡す必要があります。  
   
@@ -126,10 +121,10 @@ class CFindReplaceDialog : public CCommonDialog
   
  `CFindReplaceDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
-##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
+##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
  `CFindReplaceDialog` オブジェクトを構築します。  
   
 ```  
@@ -146,7 +141,7 @@ CFindReplaceDialog();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="create"></a>CFindReplaceDialog::Create  
+##  <a name="create"></a>  CFindReplaceDialog::Create  
  作成し、[検索] または [検索と置換] ダイアログ ボックスによってオブジェクトの値を表示`bFindDialogOnly`です。  
   
 ```  
@@ -191,7 +186,7 @@ virtual BOOL Create(
 ### <a name="example"></a>例  
   例を参照して[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)です。  
   
-##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
+##  <a name="findnext"></a>  CFindReplaceDialog::FindNext  
  この関数、ユーザーが検索文字列の次の出現箇所を検索するかどうかを決定するコールバック関数を呼び出します。  
   
 ```  
@@ -201,7 +196,7 @@ BOOL FindNext() const;
 ### <a name="return-value"></a>戻り値  
  ユーザーが検索文字列の次の出現箇所を検索する場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
+##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString  
  この関数を検索する既定の文字列を取得するコールバック関数を呼び出します。  
   
 ```  
@@ -214,7 +209,7 @@ CString GetFindString() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
+##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier  
  現在の検索置換 ダイアログ ボックスへのポインターを取得するには、この関数を呼び出します。  
   
 ```  
@@ -236,7 +231,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
   
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
+##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString  
  この関数では、現在の置換文字列を取得します。  
   
 ```  
@@ -249,7 +244,7 @@ CString GetReplaceString() const;
 ### <a name="example"></a>例  
   例を参照して[CFindReplaceDialog::GetFindString](#getfindstring)です。  
   
-##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
+##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating  
  ユーザーをダイアログ ボックスを終了することにしたかどうかを決定するコールバック関数の中からこの関数を呼び出します。  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsTerminating() const;
 ### <a name="example"></a>例  
   例を参照して[CFindReplaceDialog::GetFindString](#getfindstring)です。  
   
-##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
+##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr  
  カスタマイズに使用される、`CFindReplaceDialog`オブジェクト。  
   
 ```  
@@ -273,14 +268,14 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>コメント  
- `m_fr`型の構造体は、 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)です。 そのメンバーは、ダイアログ ボックスのオブジェクトの特性を格納します。 構築した後、`CFindReplaceDialog`オブジェクトを使用する`m_fr` ダイアログ ボックスのさまざまな値を変更します。  
+ `m_fr` 型の構造体は、 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)です。 そのメンバーは、ダイアログ ボックスのオブジェクトの特性を格納します。 構築した後、`CFindReplaceDialog`オブジェクトを使用する`m_fr` ダイアログ ボックスのさまざまな値を変更します。  
   
  この構造体の詳細については、次を参照してください。、 **FINDREPLACE** Windows SDK 内の構造。  
   
 ### <a name="example"></a>例  
   例を参照して[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)です。  
   
-##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
+##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase  
  ユーザーが検索文字列の大文字と小文字を正確に一致するかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -290,7 +285,7 @@ BOOL MatchCase() const;
 ### <a name="return-value"></a>戻り値  
  ユーザーが検索文字列の大文字と小文字を正確に一致する検索文字列の出現を検索する場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
+##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord  
  ユーザーが全体の単語のみが一致するかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -300,7 +295,7 @@ BOOL MatchWholeWord() const;
 ### <a name="return-value"></a>戻り値  
  ユーザーが検索文字列の全体の単語のみが一致する場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
+##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll  
  この関数をユーザーが置換される文字列のすべての項目であるかどうかを判断します。  
   
 ```  
@@ -310,7 +305,7 @@ BOOL ReplaceAll() const;
 ### <a name="return-value"></a>戻り値  
  ユーザーが置換文字列に一致するすべての文字列が置き換えられることです。 要求している場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
+##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent  
  ユーザーに現在の単語を置換するかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -320,7 +315,7 @@ BOOL ReplaceCurrent() const;
 ### <a name="return-value"></a>戻り値  
  ユーザーが、現在選択されている文字列を置換文字列に置き換えることを要求した場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
+##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown  
  ユーザーが下方向へ検索であるかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -330,6 +325,6 @@ BOOL SearchDown() const;
 ### <a name="return-value"></a>戻り値  
  ユーザーは、下方向の方向に続行する検索を望んでいる場合は 0 以外。上方向へ検索する場合は 0 を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)  

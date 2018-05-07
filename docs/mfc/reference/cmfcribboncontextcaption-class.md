@@ -2,11 +2,8 @@
 title: CMFCRibbonContextCaption クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonContextCaption
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc05d791ad1d9fc51d11947686e0d6b939ef982f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fa63de2a633b2c8a9fff975de6eaaae7cbb470c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption クラス
 リボン カテゴリまたはコンテキスト カテゴリの最上位に表示される色付きのキャプションを実装します。  
@@ -65,10 +60,10 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
   
  [CMFCRibbonContextCaption](../../mfc/reference/cmfcribboncontextcaption-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxRibbonBar.h  
   
-##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
+##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor  
  キャプションの背景色を返します。  
   
 ```  
@@ -97,7 +92,7 @@ AFX_RibbonCategoryColor GetColor() const;
 ### <a name="remarks"></a>コメント  
  呼び出して、キャプションの色を設定することができます[cmfcribboncategory::settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)または[cmfcribbonbar::addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)です。  
   
-##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
+##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX  
  カテゴリのリボン タブの右側のエッジの位置を取得します。  
   
 ```  
@@ -109,7 +104,7 @@ int GetRightTabX() const;
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)   

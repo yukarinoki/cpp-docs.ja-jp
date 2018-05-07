@@ -1,30 +1,25 @@
 ---
-title: "OLE DB プロバイダーへの文字列を読み取る |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB プロバイダーへの文字列を読み取る |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e2d01fb6610f9b5e8f1d1298aaa49de6a83b561
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 073ddbea18e728ffb6777ff16c86bfa4695e05cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の読み込み
 `RMyProviderRowset::Execute`関数は、ファイルを開き、文字列を読み取ります。 コンシューマーが、プロバイダーを呼び出すことによってファイルの名前を渡します[icommandtext::setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)です。 プロバイダーは、ファイル名を受け取るし、メンバー変数に格納`m_szCommandText`です。 `Execute` ファイル名を読み取って`m_szCommandText`です。 ファイル名が正しくないか、ファイルが使用できない場合`Execute`はエラーを返します。 ファイル、および呼び出しを開きます、それ以外の場合、`fgets`文字列を取得します。 各セットの文字列の読み取り、`Execute`ユーザー レコードのインスタンスを作成 (`CAgentMan`) と配列に配置します。  
@@ -110,5 +105,5 @@ public:
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [単純な読み取り専用プロバイダーの実装](../../data/oledb/implementing-the-simple-read-only-provider.md)

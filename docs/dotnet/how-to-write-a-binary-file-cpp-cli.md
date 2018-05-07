@@ -2,30 +2,25 @@
 title: '方法: バイナリ ファイルを書き込む (C + + CLI) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - binary files, writing in C++
 - files [C++], binary
 ms.assetid: 35d97ee6-fc7e-4c36-be18-8bbb3b44b3ae
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 66d4c46fa82713e55ce39880f5e379cafcdf9ec6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69467b913ea76b5f5e19772ee7d0d846a363c5e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>方法: バイナリ ファイルを書き込む (C++/CLI)
 バイナリ データをファイルに書き込む方法を次のコード例に示します。 <xref:System.IO> 名前空間の 2 つのクラス、<xref:System.IO.FileStream> と <xref:System.IO.BinaryWriter> が使用されます。 <xref:System.IO.FileStream> は実際のファイルを表し、<xref:System.IO.BinaryWriter> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。  
@@ -69,6 +64,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ファイルおよびストリーム入出力](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

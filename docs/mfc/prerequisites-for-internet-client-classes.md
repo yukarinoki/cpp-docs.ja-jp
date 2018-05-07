@@ -1,13 +1,10 @@
 ---
-title: "インターネット クライアント クラスの前提条件 |Microsoft ドキュメント"
-ms.custom: 
+title: インターネット クライアント クラスの前提条件 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d73ef71854753ffd561053cc71509c7654d33b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6c16c3658ee5d27def4892997c50115dc0b8831
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>インターネット クライアント クラスの必要条件
 (たとえば、ファイルの読み取り)、インターネット クライアントによって実行されるいくつかの操作 (この場合は、インターネット接続を確立する) の前提条件を持つことです。 次の表は、一部のクライアント操作の前提条件を一覧表示します。  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
 |Gopher ファイルを開きます。|Gopher の接続を確立します。 Gopher ロケーターを作成[CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator)のロケーターを検索または[なった](../mfc/reference/cgopherfilefind-class.md#getlocator)です。 呼び出す[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)です。|  
 |Gopher ファイルを読み取る。|Gopher ファイルを開きます。 使用して[CGopherFile](../mfc/reference/cgopherfile-class.md)です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [インターネット クライアント アプリケーションの作成用の MFC クラス](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
  [MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

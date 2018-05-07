@@ -1,13 +1,10 @@
 ---
-title: "ウィンドウなしのアクティベーション |Microsoft ドキュメント"
-ms.custom: 
+title: ウィンドウなしのアクティベーション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>ウィンドウなしのアクティベーション
 ウィンドウを作成するコード (つまり、すべてのものを呼び出すときに発生する**CreateWindow**) を実行するコストがかかります。 保持するコントロール、ウィンドウがウィンドウのメッセージを管理するにが画面に表示されます。 ウィンドウなしのコントロールはウィンドウを持つコントロールよりも高速ではこのためです。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  ウィンドウなしのコントロールは、独自の windows があるないため、コンテナーを持つウィンドウ) はコントロールのウィンドウで提供されてそれ以外の場合はサービスを提供します。 たとえば、コントロールは、キーボード フォーカス、マウスのキャプチャ、またはデバイス コンテキストを取得する必要があります、これらの操作は、コンテナーによって管理されます。 コンテナーは、適切なウィンドウなしのコントロールには、そのウィンドウに送信されるユーザー入力メッセージをルーティングを使用して、`IOleInPlaceObjectWindowless`インターフェイスです。 (を参照してください、 *ActiveX SDK*このインターフェイスの詳細についてはします)。`COleControl`メンバー関数は、コンテナーからこれらのサービスを呼び出します。  
   
- ウィンドウなしのアクティベーションを使用して、コントロールをインクルード、 **windowlessActivate**によって返されるフラグのセットでフラグ[オン](../mfc/reference/colecontrol-class.md#getcontrolflags)です。 例:  
+ ウィンドウなしのアクティベーションを使用して、コントロールをインクルード、 **windowlessActivate**によって返されるフラグのセットでフラグ[オン](../mfc/reference/colecontrol-class.md#getcontrolflags)です。 例えば:  
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  コンテナーがコントロールの入力メッセージを委任するウィンドウなしのアクティベーションを有効にすると、`IOleInPlaceObjectWindowless`インターフェイスです。 `COleControl`このインターフェイスの実装は、座標を適切にマウスの調整後に、コントロールのメッセージ マップを通じてメッセージをディスパッチします。 メッセージ マップに対応するエントリを追加することでは、通常のウィンドウのメッセージのようにメッセージを処理できます。 これらのメッセージのハンドラーでは、使用しないでください、`m_hWnd`メンバー変数 (またはそれを使用する任意のメンバー関数) の値ではない最初に確認**NULL**です。  
   
- `COleControl`マウスのキャプチャ、キーボード フォーカス、スクロール、およびなど、必要に応じて、コンテナーから他のウィンドウ サービスを呼び出すメンバー関数を提供します。  
+ `COleControl` マウスのキャプチャ、キーボード フォーカス、スクロール、およびなど、必要に応じて、コンテナーから他のウィンドウ サービスを呼び出すメンバー関数を提供します。  
   
 -   [フォーカス](../mfc/reference/colecontrol-class.md#getfocus)、 [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   
@@ -63,10 +58,10 @@ ms.lasthandoff: 12/21/2017
   
  ウィンドウなしのコントロールでは、常に使用することは、`COleControl`メンバー関数、対応するのではなく`CWnd`メンバー関数またはその関連する Win32 API 関数。  
   
- ウィンドウなしのコントロールを OLE ドラッグ アンド ドロップ操作のターゲットにすることができます。 通常、このコントロールのウィンドウがドロップ先として登録する必要があります。 コントロールに、独自のウィンドウがあるないため、コンテナーは、ドロップ先として独自のウィンドウを使用します。 コントロールの実装を提供する、`IDropTarget`インターフェイスをコンテナーは、適切なタイミングで呼び出しを委任できます。 コンテナーには、このインターフェイスを公開するためにオーバーライド[COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)です。 例:  
+ ウィンドウなしのコントロールを OLE ドラッグ アンド ドロップ操作のターゲットにすることができます。 通常、このコントロールのウィンドウがドロップ先として登録する必要があります。 コントロールに、独自のウィンドウがあるないため、コンテナーは、ドロップ先として独自のウィンドウを使用します。 コントロールの実装を提供する、`IDropTarget`インターフェイスをコンテナーは、適切なタイミングで呼び出しを委任できます。 コンテナーには、このインターフェイスを公開するためにオーバーライド[COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)です。 例えば:  
   
  [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)
 

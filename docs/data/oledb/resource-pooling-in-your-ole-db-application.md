@@ -1,12 +1,9 @@
 ---
-title: "OLE DB アプリケーションでのリソース プール |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB アプリケーションでのリソース プール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84b8814974850238ccf0be7411821d6e2cce8880
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ece7ce128251f66360566c9b1965466352c4e493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB アプリケーションでのリソース プール
 アプリケーションでのプールを活用するには、OLE DB サービスが使用して、データ ソースを取得することによって呼び出されることを確認してください**IDataInitialize**または**IDBPromptInitialize**です。 直接使用する場合`CoCreateInstance`呼び出すには、プロバイダーの CLSID に基づく、プロバイダー、OLE DB サービスは呼び出されません。  
@@ -40,5 +35,5 @@ ms.lasthandoff: 02/23/2018
   
  最後に、ADO 自動的に利用するための OLE DB サービス、ADO を使用して接続を確立し、プールと参加リストが自動的に行われます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB リソース プールとサービス](../../data/oledb/ole-db-resource-pooling-and-services.md)
