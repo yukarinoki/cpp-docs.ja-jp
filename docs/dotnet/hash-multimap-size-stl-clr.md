@@ -2,11 +2,8 @@
 title: hash_multimap::size (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::size
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - size member [STL/CLR]
 ms.assetid: 6937c980-5952-48bf-b411-81ab03b2f940
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 64a511798f59ef7329bc398e1b2d2100ae976d47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47b1e408fca13c1293c26f35b31faa2cc31b9c75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimapsize-stlclr"></a>hash_multimap::size (STL/CLR)
 要素の数をカウントします。  
@@ -79,11 +74,11 @@ size() = 0 after clearing
 size() = 2 after adding 2  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)

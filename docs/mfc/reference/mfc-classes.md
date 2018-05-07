@@ -1,12 +1,9 @@
 ---
-title: "MFC クラス |Microsoft ドキュメント"
-ms.custom: 
+title: MFC クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3775ad9c67e2ab4be4f36d0de257cd075b77ce86
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-classes"></a>MFC クラス
 Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示すクラスが含まれています。  
@@ -724,7 +719,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  Rebar コントロールのレイアウト、永続性、および状態に関する情報を提供するコントロール バーです。  
   
  [CMFCRibbonApplicationButton クラス](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
- アプリケーション ウィンドウの左上隅に表示される特殊なボタンを実装します。 このボタンがクリックされると、通常は、一般的な **[ファイル]** メニューのコマンド ( **[開く]**、 **[上書き保存]**、 **[終了]**など) を含むメニューが開かれます。  
+ アプリケーション ウィンドウの左上隅に表示される特殊なボタンを実装します。 このボタンがクリックされると、通常は、一般的な **[ファイル]** メニューのコマンド ( **[開く]**、 **[上書き保存]**、 **[終了]** など) を含むメニューが開かれます。  
   
  [CMFCRibbonBaseElement クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)  
  基底クラスに追加できるすべての要素を[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)です。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
@@ -826,7 +821,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  アプリケーション リソースまたはファイルから読み込んだツール バー イメージを管理します。  
   
  [CMFCToolBarInfo クラス](../../mfc/reference/cmfctoolbarinfo-class.md)  
- さまざまな状態のツール バー イメージのリソース ID を含みます。 `CMFCToolBarInfo`パラメーターとして使用されるヘルパー クラスには、 [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドです。  
+ さまざまな状態のツール バー イメージのリソース ID を含みます。 `CMFCToolBarInfo` パラメーターとして使用されるヘルパー クラスには、 [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドです。  
   
  [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  ポップアップ メニューを含むツール バー ボタンです。  

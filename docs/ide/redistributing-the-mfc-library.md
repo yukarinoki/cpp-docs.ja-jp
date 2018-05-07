@@ -1,30 +1,25 @@
 ---
-title: "MFC ライブラリの再配布 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC ライブラリの再配布 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca153ec9ca079bf13b1c1c1dcedd6e41497307f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-the-mfc-library"></a>MFC ライブラリの再配布
 アプリケーションを MFC ライブラリを動的にリンクする場合は、一致する MFC DLL を再配布する必要があります。 たとえば、MFC アプリが Visual Studio 2015 に同梱されている MFC のバージョンを使用して組み込まれている場合必要があります再配布する mfc140.dll または mfc140u.dll、ナロー文字または Unicode のサポート用にアプリをコンパイルするかどうかによって異なります。  
@@ -57,5 +52,5 @@ ms.lasthandoff: 01/03/2018
   
  MFC のローカライズ用 DLL を再配布するには、MFC DLL をアプリケーションのローカル フォルダーに配置します。 Visual C ライブラリを再配布する方法の詳細については、次を参照してください。 [Visual c ファイルの再配布](../ide/redistributing-visual-cpp-files.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)

@@ -1,13 +1,10 @@
 ---
-title: "値の型のセマンティクス |Microsoft ドキュメント"
-ms.custom: 
+title: 値の型のセマンティクス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>値型セマンティクス
 値型のセマンティクスは、Visual C に C++ のマネージ拡張から変更されました。  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>継承された仮想メソッドを呼び出す  
- `Form (1)`正規の値のオブジェクトでありことは合理的な程度を理解、継承された仮想メソッドを呼び出すように試行する場合を除く`ToString()`です。 例:  
+ `Form (1)` 正規の値のオブジェクトでありことは合理的な程度を理解、継承された仮想メソッドを呼び出すように試行する場合を除く`ToString()`です。 例えば:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  値型ではなく、参照型を 2 つのヒープの割り当てを回避するに小さなネイティブ クラスをラップするよう: ネイティブ型を保持するために、ネイティブ ヒープとマネージ ラッパーを保持するために、CLR ヒープ。 値型の中でネイティブ クラスをラップ、マネージ ヒープを回避することができますが、ネイティブ ヒープ メモリの解放を自動化する方法が用意されていません。 参照型は、重要なネイティブ クラスをラップする実際的なマネージ型です。  
   
 ## <a name="interior-pointers"></a>内部ポインター  
- `Form (2)`および`Form (3)`上記のほとんどすべてをアドレスの世界または (つまり、何もマネージまたはネイティブ)、次にします。 そのため、たとえば、次のすべてはマネージ拡張で許可されます。  
+ `Form (2)` および`Form (3)`上記のほとんどすべてをアドレスの世界または (つまり、何もマネージまたはネイティブ)、次にします。 そのため、たとえば、次のすべてはマネージ拡張で許可されます。  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`および`Form (3)`マネージ拡張のマップ`interior_ptr<V>`です。 `Form (4)`追跡ハンドルです。 マネージ ヒープ内にボックス化されたオブジェクトの全体の宛先を指定します。 新しい構文で変換されます、 `V^`、  
+ `Form (2)` および`Form (3)`マネージ拡張のマップ`interior_ptr<V>`です。 `Form (4)` 追跡ハンドルです。 マネージ ヒープ内にボックス化されたオブジェクトの全体の宛先を指定します。 新しい構文で変換されます、 `V^`、  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    
@@ -219,7 +214,7 @@ void f( G^ g ) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [値の型とその動作 (C + + CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)   
  [interior_ptr (C + + CLI)](../windows/interior-ptr-cpp-cli.md)   

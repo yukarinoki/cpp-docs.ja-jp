@@ -1,12 +1,9 @@
 ---
-title: "_ _incfsbyte、_ _incfsword、_ _incfsdword |Microsoft ドキュメント"
-ms.custom: 
+title: _ _incfsbyte、_ _incfsword、_ _incfsdword |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __incfsword
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - __incfsdword intrinsic
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c55ebcb2816d4e614c39cea96a17114e693c370c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte、__incfsword、__incfsdword
 **Microsoft 固有の仕様**  
@@ -57,7 +52,7 @@ void __incfsdword(
  [入力] `Offset`  
  先頭からのオフセット`FS`です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -70,8 +65,8 @@ void __incfsdword(
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+ [_ _readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
  [_ _writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

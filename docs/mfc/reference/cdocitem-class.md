@@ -1,12 +1,9 @@
 ---
-title: "CDocItem クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDocItem クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocitem-class"></a>CDocItem クラス
 ドキュメント アイテムの基底クラスであり、ドキュメント データのコンポーネントです。  
@@ -50,7 +45,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|項目が情報を格納しているかどうかを判断します。|  
   
 ## <a name="remarks"></a>コメント  
- `CDocItem`オブジェクトは、クライアントとサーバーの両方のドキュメントで OLE 項目を表すために使用されます。  
+ `CDocItem` オブジェクトは、クライアントとサーバーの両方のドキュメントで OLE 項目を表すために使用されます。  
   
  詳細については、記事を参照してください。[コンテナー: コンテナーの実装](../../mfc/containers-implementing-a-container.md)です。  
   
@@ -61,10 +56,10 @@ class CDocItem : public CCmdTarget
   
  `CDocItem`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
  この関数では、項目を含むドキュメントを取得します。  
   
 ```  
@@ -77,7 +72,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>コメント  
  この関数は、派生クラスでオーバーライドされる[COleClientItem](../../mfc/reference/coleclientitem-class.md)と[COleServerItem](../../mfc/reference/coleserveritem-class.md)、いずれかにポインターを返す、 [COleDocument](../../mfc/reference/coledocument-class.md)、 [直接](../../mfc/reference/colelinkingdoc-class.md)、または[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)オブジェクト。  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
  既定のシリアル化が発生したときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -92,7 +87,7 @@ virtual BOOL IsBlank() const;
   
  シリアル化中に他のアクションを実装する場合は、この関数をオーバーライドします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [COleDocument クラス](../../mfc/reference/coledocument-class.md)   

@@ -1,13 +1,10 @@
 ---
-title: "拡張コンボ ボックス コントロールでのイメージ リストの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 拡張コンボ ボックス コントロールでのイメージ リストの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac69e7d0dbe1748a409b107579c747b7f9a4a7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c9a701871631fead48c22b1ffb2cbc3c386b960
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>拡張コンボ ボックス コントロールでのイメージ リストの使い方
 拡張コンボ ボックス コントロールの主な機能は、コンボ ボックス コントロール内の各項目にはイメージ リストのイメージを関連付ける機能です。 各項目は次の 3 つのさまざまなイメージを表示できません: 選択した状態、その選択解除状態、およびオーバーレイを表す 3 番目に 1 つのいずれか。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  イメージ リストがコントロールに関連付けられると、各項目は、3 つの状態を使用するイメージを個別に指定できます。 詳細については、次を参照してください。[個々 の項目のイメージの設定](../mfc/setting-the-images-for-an-individual-item.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CComboBoxEx の使い方](../mfc/using-ccomboboxex.md)   
  [コントロール](../mfc/controls-mfc.md)
 

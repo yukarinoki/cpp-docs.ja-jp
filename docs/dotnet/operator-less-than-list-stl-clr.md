@@ -1,12 +1,9 @@
 ---
-title: "演算子&lt;(リスト) (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: 演算子&lt;(リスト) (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::operator<
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: 6990fac2-3eeb-481f-b289-1c93f51422e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d1908042e1a8724557100d419727667976e71686
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9cfea5ae23ffa7e84367ea878bcf3c74c002280a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-list-stlclr"></a>演算子&lt;(リスト) (STL/CLR)
 リストが比較未満です。  
@@ -95,12 +90,12 @@ int main()
 [a b c] < [a b d] is True  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/一覧 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一覧 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [演算子 = = (リスト) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
  [operator! = (リスト) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   

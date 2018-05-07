@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: MFC Scribble アプリケーション (パート 1) の更新 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: MFC Scribble アプリケーション (パート 1) の更新 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>チュートリアル: MFC Scribble アプリケーション (パート 1) の更新
 このチュートリアルでは、リボン ユーザー インターフェイスを使用するために MFC アプリケーションを修正する方法を説明します。 Visual Studio は、Office 2007 リボンと Windows 7 Scenic リボンの両方をサポートしています。 リボンのユーザー インターフェイスの詳細については、次を参照してください。[リボン](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN Web サイトです。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 01/03/2018
   
 - [アプリケーションの外観の設定](#setlook)  
   
-##  <a name="replaceclass"></a>基底クラスの置き換え  
+##  <a name="replaceclass"></a> 基底クラスの置き換え  
  メニュー ベースのアプリケーションをリボン ベースのアプリケーションに変換するには、アプリケーション、フレーム ウィンドウ、ツール バーの各クラスを、更新された基底クラスから派生させる必要があります  (元の Scribble サンプルは変更せず、Scribble プロジェクトをクリーンアップし、別のディレクトリにコピーして、そのコピーを変更することをお勧めします)。  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Scribble アプリケーションの基底クラスを置き換えるには  
@@ -130,7 +125,7 @@ ms.lasthandoff: 01/03/2018
   
  [[セクション](#top)]  
   
-##  <a name="addbitmap"></a>プロジェクトのビットマップの追加  
+##  <a name="addbitmap"></a> プロジェクトのビットマップの追加  
  このチュートリアルの次の 4 つの手順には、ビットマップ リソースが必要です。 適切なビットマップをさまざまな方法で取得できます。  
   
 -   使用して、[リソース エディター](../windows/resource-editors.md)独自のビットマップを作成します。 または、リソース エディターを使用して、[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] に用意されている Portable Network Graphics (.png) イメージからビットマップを作成します。 これらのイメージは、`VS2008ImageLibrary`ディレクトリ。  
@@ -175,7 +170,7 @@ ms.lasthandoff: 01/03/2018
   
  [[セクション](#top)]  
   
-##  <a name="addribbon"></a>プロジェクトにリボン リソースの追加  
+##  <a name="addribbon"></a> プロジェクトにリボン リソースの追加  
  メニューを使用するアプリケーションを、リボンを使用するアプリケーションに変更する場合は、既存のメニューを削除する必要も、無効にする必要もありません。 代わりに、リボン リソースを作成し、リボン ボタンを追加し、新しいボタンをメニュー項目と関連付けます。 メニューは表示されなくなりますが、リボン バーからのメッセージはメニュー経由で送られます。 また、メニューのショートカットは引き続き機能します。  
   
  リボンはアプリケーション ボタンと 1 つ以上のカテゴリ タブで構成されます。アプリケーション ボタンは、リボンの左上にある大きいボタンです。 各カテゴリ タブは、1 つまたは複数のパネルで構成されます。パネルは、リボンのボタンやコントロールのコンテナーの役割を果たします。 次の手順では、リボン リソースを作成して、アプリケーション ボタンをカスタマイズする方法を説明します。  
@@ -226,7 +221,7 @@ ms.lasthandoff: 01/03/2018
   
  [[セクション](#top)]  
   
-##  <a name="createinstance"></a>リボン バーのインスタンスを作成します。  
+##  <a name="createinstance"></a> リボン バーのインスタンスを作成します。  
  次の手順では、アプリケーションの起動時にリボン バーのインスタンスを作成する方法を説明します。 リボン バーをアプリケーションに追加するには、mainfrm.h ファイルでリボン バーを宣言します。 次に、mainfrm.cpp ファイルで、リボン リソースを読み込むコードを作成します。  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>リボン バーのインスタンスを作成するには  
@@ -250,7 +245,7 @@ ms.lasthandoff: 01/03/2018
   
  [[セクション](#top)]  
   
-##  <a name="addcategory"></a>リボン リソースのカスタマイズ  
+##  <a name="addcategory"></a> リボン リソースのカスタマイズ  
  アプリケーション ボタンを作成したので、要素をリボンに追加できます。  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ ms.lasthandoff: 01/03/2018
   
  [[セクション](#top)]  
   
-##  <a name="setlook"></a>アプリケーションの外観の設定  
+##  <a name="setlook"></a> アプリケーションの外観の設定  
  A*ビジュアル マネージャー*アプリケーションのすべての描画を制御するグローバル オブジェクトです。 元の Scribble アプリケーションは Office 2000 のユーザー インターフェイス (UI) スタイルを使用しているため、このアプリケーションの外観は古めかしく感じられるかもしれません。 このアプリケーションは、Office 2007 のビジュアル マネージャーを使用するようにリセットして、Office 2007 のような外観にすることができます。  
   
 #### <a name="to-set-the-look-of-the-application"></a>アプリケーションの外観を設定するには  

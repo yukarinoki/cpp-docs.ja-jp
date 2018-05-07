@@ -2,35 +2,30 @@
 title: 例外処理と CLR での動作の相違 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR における例外処理動作の相違点
 [マネージ例外の使用の基本的な概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)マネージ アプリケーションでの例外処理について説明します。 このトピックでは例外処理および制限がいくつかの標準の動作の違いは詳しく説明します。 詳細については、次を参照してください。 [_set_se_translator 関数](../c-runtime-library/reference/set-se-translator.md)です。  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a>ジャンプ、Finally ブロック  
+##  <a name="vcconjumpingoutofafinallyblock"></a> ジャンプ、Finally ブロック  
  ネイティブ C/C++ コードで、_ _ からジャンプ**finally**構造化例外処理 (SEH) を使用してブロックを使用すると、ただし、警告が生成されます。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)、out の移動、**最後に**ブロックが発生したエラー。  
   
 ```  
@@ -44,7 +39,7 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>例外フィルター内の例外を発生させる  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> 例外フィルター内の例外を発生させる  
  処理中に例外が発生すると、[例外フィルター](../cpp/writing-an-exception-filter.md) 、マネージ コード内で例外がキャッチされ、フィルターは 0 を返しますとして扱われます。  
   
  これは、動作とは対照的に入れ子になった例外が発生するネイティブ コード、 **ExceptionRecord**フィールドで、 **EXCEPTION_RECORD**構造 (によって返される[GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) が設定されていると、 **ExceptionFlags**フィールドが 0x10 ビットを設定します。 次の例では、動作の違いを示します。  
@@ -107,7 +102,7 @@ Caught a nested exception
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a>分離再スロー  
+##  <a name="vccondisassociatedrethrows"></a> 分離再スロー  
  **/clr**は catch ハンドラー (分離 rethrow と呼ばれます) の外部で例外を再スローをサポートしていません。 この種類の例外は処理として標準 C++ の再スローします。 分離の再スローがアクティブなマネージ例外がある場合に、検出した場合、例外は、C++ 例外としてラップされ、再スローされます。 型の例外として、この種類の例外をキャッチのみできます[System::SEHException](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx)です。  
   
  次の例では、C++ 例外として再スローされるマネージ例外を示します。  
@@ -158,7 +153,7 @@ int main() {
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>例外フィルターおよび EXCEPTION_CONTINUE_EXECUTION  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外フィルターおよび EXCEPTION_CONTINUE_EXECUTION  
  フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`マネージ アプリケーションではフィルターが返したかように扱われます`EXCEPTION_CONTINUE_SEARCH`です。 これらの定数の詳細については、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)です。  
   
  次の例では、この違いを示しています。  
@@ -198,7 +193,7 @@ int main() {
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a>_Set_se_translator 関数  
+##  <a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator 関数  
  変換関数の設定への呼び出しによって`_set_se_translator`、アンマネージ コードでキャッチのみに影響します。 次の例では、この制限を示しています。  
   
 ```  
@@ -284,7 +279,7 @@ In my_trans_func.
 Caught an SEH exception with exception code: e0000101  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外処理](../windows/exception-handling-cpp-component-extensions.md)   
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)   
  [例外処理](../cpp/exception-handling-in-visual-cpp.md)

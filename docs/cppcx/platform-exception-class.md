@@ -1,11 +1,8 @@
 ---
-title: "Platform::exception クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::exception クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception クラス
 アプリケーションの実行中に発生したエラーを表します。 カスタム例外クラスは、 `Platform::Exception`から派生できません。 カスタム例外が必要な場合は、 `Platform::COMException` を使用し、アプリケーション特有の HRESULT を指定できます。  
@@ -47,7 +42,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |メンバー|説明|  
 |------------|-----------------|  
-|[Exception::Exception](#ctor)|`Exception` クラスの新しいインスタンスを初期化します。|  
+|[Exception::exception](#ctor)|`Exception` クラスの新しいインスタンスを初期化します。|  
   
 ### <a name="methods"></a>メソッド  
  `Exception`クラスは継承、 `Equals()`、 `Finalize()`、`GetHashCode()`、`GetType()`、`MemberwiseClose()`、および`ToString()`メソッドを[platform::object クラス](../cppcx/platform-object-class.md)です。 `Exception` クラスには、次のメソッドもあります。  
@@ -64,7 +59,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 |[Exception::HResult](#hresult)|例外に対応する HRESULT。|  
 |[Exception::Message](#message)|例外について説明するメッセージ。 この値は読み取り専用で、 `Exception` が構築された後は変更できません。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -154,5 +149,5 @@ public:property String^ Message;
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)

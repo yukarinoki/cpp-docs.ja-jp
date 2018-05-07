@@ -1,12 +1,9 @@
 ---
-title: "_ _nop |Microsoft ドキュメント"
-ms.custom: 
+title: _ _nop |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __nop
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26da0b067819d24bb672d66a7212548c48ba20b5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 25ada52595b5d811f68a05813d8df5c68d4a70c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nop"></a>__nop
 **Microsoft 固有の仕様**  
@@ -39,11 +34,11 @@ ms.lasthandoff: 02/23/2018
 void __nop();  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__nop`|x86、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__nop`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
@@ -52,6 +47,6 @@ void __nop();
 ## <a name="remarks"></a>コメント  
  `__nop`関数と同じ、`NOP`マシン語命令します。 詳細については、検索、ドキュメントの"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照を"で、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [__noop](../intrinsics/noop.md)

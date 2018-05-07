@@ -2,12 +2,9 @@
 title: 'レコード セット: AddNew、Edit、および Delete のしくみ (ODBC) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>レコードセット: AddNew、Edit、Delete の動作のしくみ (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  を補完することができますを読み取る[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)、更新操作での RFX の対応するロールをについて説明します。  
   
-##  <a name="_core_adding_a_record"></a>レコードを追加します。  
+##  <a name="_core_adding_a_record"></a> レコードを追加します。  
 
  レコード セットのレコード セットに新しいレコードを追加するのには[AddNew](../../mfc/reference/crecordset-class.md#addnew)メンバー関数の場合、新しいレコードのフィールド データ メンバーの値を設定して、呼び出し、[更新](../../mfc/reference/crecordset-class.md#update)を記述するメンバー関数データ ソースのレコードです。  
   
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ODBC ドライバーがサポートされている場合、 **:: SQLSetPos** ODBC API 関数では、MFC では、関数を使用して、データ ソースのレコードを追加します。 **:: SQLSetPos**、MFC レコードを追加できるより効率的に構築し、SQL ステートメントの処理があるないためです。  
   
--   場合**:: SQLSetPos**することはできません、次の処理を MFC を使用します。  
+-   場合 **:: SQLSetPos**することはできません、次の処理を MFC を使用します。  
   
     1.  変更が検出されなかった場合**更新**何も行わないし、0 を返します。  
   
@@ -93,18 +88,18 @@ ms.lasthandoff: 12/21/2017
     >  新しいレコードを完全に制御を必要となる場合、次の方法: 値を持つ呼び出すことによって Null が維持されるフィールドを明示的に設定される任意のフィールドの値を設定`SetFieldNull`フィールドであり、パラメーターへのポインターを**は TRUE。** (既定)。 フィールドがデータ ソース、呼び出しに書き込まれないことを確認する場合は、`SetFieldDirty`フィールドであり、パラメーターへのポインターを**FALSE**フィールドの値を変更しないようにします。 フィールドが Null を指定できるかどうかを確認するのには、呼び出す`IsFieldNullable`です。  
   
     > [!TIP]
-    >  MFC を使用するにはレコード セットのデータ メンバーの値を変更すると、検出、 **PSEUDO_**レコード セットに格納できるデータ型ごとに適切な値です。 場合、フィールドを明示的に設定する必要があります、 **PSEUDO_**とフィールドの値は、Null の場合、マークする既には発生も呼び出す必要があります`SetFieldNull`、最初のパラメーターのフィールドのアドレスを渡すと**FALSE**2 番目のパラメーターです。  
+    >  MFC を使用するにはレコード セットのデータ メンバーの値を変更すると、検出、 **PSEUDO_** レコード セットに格納できるデータ型ごとに適切な値です。 場合、フィールドを明示的に設定する必要があります、 **PSEUDO_** とフィールドの値は、Null の場合、マークする既には発生も呼び出す必要があります`SetFieldNull`、最初のパラメーターのフィールドのアドレスを渡すと**FALSE**2 番目のパラメーターです。  
   
-##  <a name="_core_visibility_of_added_records"></a>追加されたレコードの可視性  
+##  <a name="_core_visibility_of_added_records"></a> 追加されたレコードの可視性  
  追加したレコードは、レコード セットを表示しますか。 追加されたレコードは、場合によって表示され、場合によっては表示されず、2 つの操作によって。  
   
 -   どのようなドライバーはできます。  
   
 -   どのようなフレームワークを利用します。  
   
- ODBC ドライバーがサポートされている場合、 **:: SQLSetPos** ODBC API 関数では、MFC では、関数を使用して、レコードを追加します。 **:: SQLSetPos**、追加したレコードは、更新可能な MFC のレコード セットを表示します。 関数のサポートがなければ追加レコードを表示して、呼び出す必要があります**Requery**にそれらを参照してください。 使用して**:: SQLSetPos**も効率的です。  
+ ODBC ドライバーがサポートされている場合、 **:: SQLSetPos** ODBC API 関数では、MFC では、関数を使用して、レコードを追加します。 **:: SQLSetPos**、追加したレコードは、更新可能な MFC のレコード セットを表示します。 関数のサポートがなければ追加レコードを表示して、呼び出す必要があります**Requery**にそれらを参照してください。 使用して **:: SQLSetPos**も効率的です。  
   
-##  <a name="_core_editing_an_existing_record"></a>既存のレコードの編集  
+##  <a name="_core_editing_an_existing_record"></a> 既存のレコードの編集  
  レコード セット内の既存のレコードを編集するには、レコード セットのレコードをスクロールが含まれます[編集](../../mfc/reference/crecordset-class.md#edit)メンバー関数の場合、新しいレコードのフィールド データ メンバーの値を設定して、呼び出し、[更新](../../mfc/reference/crecordset-class.md#update)メンバー関数、データ ソースに変更されたレコードを書き込めません。  
   
  呼び出し元の事前条件として**編集**、更新可能なとレコードのレコード セットがある必要があります。 `CanUpdate`と`IsDeleted`メンバー関数を使用して、これらの条件を確認できます。 現在のレコードもする必要がありますされませんが、既に削除されて、レコード セットのレコードが必要 (両方`IsBOF`と`IsEOF`0 が返されます)。  
@@ -124,7 +119,7 @@ ms.lasthandoff: 12/21/2017
   
      - または -  
   
--   場合**:: SQLSetPos**することはできません、次の処理を MFC を使用します。  
+-   場合 **:: SQLSetPos**することはできません、次の処理を MFC を使用します。  
   
     1.  行われていない場合、変更**更新**何も行わないし、0 を返します。  
   
@@ -140,18 +135,18 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  呼び出す場合は`AddNew`または**編集**以前がする前に、いずれかの関数を呼び出したことの後に呼び出す**更新**をエディット バッファーで新しいまたは編集されたレコードを置き換えるストアドのレコードに更新進行中です。 この動作により、中止する方法、`AddNew`または**編集**し、新しい開始: 進行中のレコードが障害であると判断した場合を呼び出すだけ**編集**または`AddNew`もう一度です。  
   
-##  <a name="_core_deleting_a_record"></a>レコードを削除します。  
+##  <a name="_core_deleting_a_record"></a> レコードを削除します。  
  レコード セットからレコードを削除するには、レコードをスクロールし、レコード セットの[削除](../../mfc/reference/crecordset-class.md#delete)メンバー関数。 異なり`AddNew`と**編集**、**削除**に一致する呼び出しは必要ありません**更新**です。  
   
  呼び出し元の事前条件として**削除**レコード セットは更新可能である必要があります、およびそのレコードに存在する必要があります。 `CanUpdate`、 `IsBOF`、 `IsEOF`、および`IsDeleted`メンバー関数を使用して、これらの条件を確認できます。  
   
  呼び出すと**削除**:  
   
--   ODBC ドライバーがサポートされている場合、 **:: SQLSetPos** ODBC API 関数では、MFC では、関数を使用して、データ ソースのレコードを削除します。 使用して**:: SQLSetPos** SQL を使用するよりも効率的です。  
+-   ODBC ドライバーがサポートされている場合、 **:: SQLSetPos** ODBC API 関数では、MFC では、関数を使用して、データ ソースのレコードを削除します。 使用して **:: SQLSetPos** SQL を使用するよりも効率的です。  
   
      - または -  
   
--   場合**:: SQLSetPos**することはできません、次の処理を MFC を使用します。  
+-   場合 **:: SQLSetPos**することはできません、次の処理を MFC を使用します。  
   
     1.  エディット バッファーの現在のレコードはバックアップされませんとして`AddNew`と**編集**です。  
   
@@ -168,7 +163,7 @@ ms.lasthandoff: 12/21/2017
   
  更新操作で使用される SQL ステートメントの概要については、次を参照してください。 [SQL](../../data/odbc/sql.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: 更新プログラムについて (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)   
  [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

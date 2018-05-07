@@ -1,12 +1,9 @@
 ---
-title: "multimap::multimap (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: multimap::multimap (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::multimap
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - multimap member [STL/CLR]
 ms.assetid: cdf9c5dc-774c-424e-aeea-7554643e401c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab4f50af1a7fd161ec192890fb7be3134ad4c72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84d0243ca39aae230f3cfe42d53fdf33d48b7314
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapmultimap-stlclr"></a>multimap::multimap (STL/CLR)
 コンテナー オブジェクトを構築します。  
@@ -199,12 +194,12 @@ size() = 0
  [a 1] [b 2] [c 3]  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap::generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)   
  [multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)

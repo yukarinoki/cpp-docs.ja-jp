@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: ツールバーへのコントロールを配置する |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ツールバーへのコントロールを配置する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f991f8ebf87535de09dc7c3dce5e0f4ca2ee457b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c134431500ed3e7b2b2229ea5b4b3da7cac6fa48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>チュートリアル: ツール バーへのコントロールの追加
 このトピックでは、Windows コントロールを含むツール バー ボタンをツール バーに追加する方法を説明します。 MFC では、ツールバーのボタンがある必要があります、 [CMFCToolBarButton クラス](../mfc/reference/cmfctoolbarbutton-class.md)-たとえば、クラスを派生[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)、 [CMFCToolBarEditBoxButton クラス](../mfc/reference/cmfctoolbareditboxbutton-class.md)、[CMFCDropDownToolbarButton クラス](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)、または[CMFCToolBarMenuButton クラス](../mfc/reference/cmfctoolbarmenubutton-class.md)です。  
@@ -105,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>[カスタマイズ] ダイアログ ボックスへの Find コントロールの追加  
  カスタマイズ ハンドラーで`OnViewCustomize`、呼び出す[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)を置き換える、`Find`ボタン (コマンド ID を持つボタンは、`ID_EDIT_FIND)`で、`CFindComboButton`オブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../mfc/hierarchy-chart.md)   
  [クラス](../mfc/reference/mfc-classes.md)   
  [CMFCToolBar クラス](../mfc/reference/cmfctoolbar-class.md)   

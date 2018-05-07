@@ -1,13 +1,10 @@
 ---
-title: "ヘッダー コントロールおよびリスト コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: ヘッダー コントロールおよびリスト コントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213d2eeec7628c54d68bbd8f636ae85d90e7e8de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a84386781bf28edb9223f608fa7a64040eb68379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="header-control-and-list-control"></a>ヘッダー コントロールおよびリスト コントロール
 ほとんどの場合に埋め込まれているヘッダー コントロールを使用して、 [CListCtrl](../mfc/reference/clistctrl-class.md)または[CListView](../mfc/reference/clistview-class.md)オブジェクト。 ただし、別のヘッダー コントロール オブジェクトが内の行または列に配置されたデータを操作するなど、望ましい場合がある、 [CView](../mfc/reference/cview-class.md)-派生オブジェクト。 このような場合は、埋め込みヘッダー コントロールの既定の動作と外観を細かく制御する必要があります。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [イメージ リストのヘッダー コントロールの使い方](../mfc/using-image-lists-with-header-controls.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

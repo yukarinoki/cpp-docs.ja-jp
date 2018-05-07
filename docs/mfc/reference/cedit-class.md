@@ -1,12 +1,9 @@
 ---
-title: "CEdit クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CEdit クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows のエディット コントロールの機能が用意されています。  
@@ -193,7 +188,7 @@ class CEdit : public CWnd
   
  各メッセージ マップ エントリは次の形式になります。  
   
- **On _**通知**(** *id、memberFxn * * *)**  
+ **On _** 通知 **(** *id、memberFxn * * *)**  
   
  ここで`id`、通知を送信するエディット コントロールの子ウィンドウ ID を指定し、`memberFxn`通知の処理を記述した親メンバー関数の名前を指定します。  
   
@@ -231,7 +226,7 @@ class CEdit : public CWnd
   
 - [コントロール](../../mfc/controls-mfc.md)  
   
--   Knowledge Base article Q259949 : INFO: SetCaretPos() Is Not Appropriate with CEdit or CRichEditCtrl Controls  
+-   サポート技術情報の記事 Q259949: 情報: SetCaretPos() が適切ではない CEdit または CRichEditCtrl コントロール  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](cobject-class.md)  
@@ -242,7 +237,7 @@ class CEdit : public CWnd
   
  `CEdit`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="canundo"></a>  CEdit::CanUndo  
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  ときに、`SetPasswordChar`メンバー関数が呼び出されると、`CEdit`で指定された文字を使用してすべて表示可能な文字を再描画*ch*です。  
   
- 編集コントロールが作成された場合、 [ES_PASSWORD](styles-used-by-mfc.md#edit-styles)スタイル、既定のパスワードの文字に設定には、アスタリスク (  **\*** )。 このスタイルは`SetPasswordChar`で呼び出された*ch*を 0 に設定します。  
+ 編集コントロールが作成された場合、 [ES_PASSWORD](styles-used-by-mfc.md#edit-styles)スタイル、既定のパスワードの文字に設定には、アスタリスク ( **\***)。 このスタイルは`SetPasswordChar`で呼び出された*ch*を 0 に設定します。  
   
  詳細については、次を参照してください。 [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) Windows SDK に含まれています。  
   
@@ -1288,7 +1283,7 @@ BOOL Undo();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル CALCDRIV](../../visual-cpp-samples.md)   
  [MFC サンプル CMNCTRL2](../../visual-cpp-samples.md)   
  [CWnd クラス](../../mfc/reference/cwnd-class.md)   

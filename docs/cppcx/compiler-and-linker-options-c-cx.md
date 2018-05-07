@@ -1,24 +1,19 @@
 ---
-title: "コンパイラとリンカーのオプション (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラとリンカーのオプション (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>コンパイラとリンカーのオプション (C++/CX)
 環境変数、C + + CX コンパイラ オプションとリンカーのオプションは、Windows ランタイム アプリの構築をサポートします。  
@@ -49,5 +44,5 @@ ms.lasthandoff: 02/14/2018
 ### <a name="remarks"></a>コメント  
  **/ZW**が使用されると、コンパイラは DLL バージョンの C ランタイム (CRT) に自動的にリンクします。 スタティック ライブラリ バージョンへのリンクが許可されていません。 とユニバーサル Windows プラットフォーム アプリで許可されていない CRT 関数を使用するには、コンパイル時エラーが発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アプリのビルドとライブラリ](../cppcx/building-apps-and-libraries-c-cx.md)

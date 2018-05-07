@@ -1,12 +1,9 @@
 ---
-title: "Cbulkrowset::movetoratio |Microsoft ドキュメント"
-ms.custom: 
+title: Cbulkrowset::movetoratio |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBulkRowset.MoveToRatio
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - MoveToRatio method
 ms.assetid: 86be60f5-9341-44c1-8e1e-9174c082d0d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 675d2ec6c9a43e7f5b17acdb0c546e003fd5e986
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0ab702781ed47a4520b53e9698319b5c245e2dfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbulkrowsetmovetoratio"></a>CBulkRowset::MoveToRatio
 行セット内の小数部の位置から始まる行がフェッチされます。  
@@ -62,8 +57,8 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
  ここで`RowsetSize`行数で指定された、行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、「 [::getrowsatratio](https://msdn.microsoft.com/en-us/library/ms709602.aspx)で、 *OLE DB プログラマーズ リファレンス*です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CBulkRowset クラス](../../data/oledb/cbulkrowset-class.md)

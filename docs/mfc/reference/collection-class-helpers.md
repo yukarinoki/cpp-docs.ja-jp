@@ -1,13 +1,10 @@
 ---
-title: "コレクション クラスのヘルパー |Microsoft ドキュメント"
-ms.custom: 
+title: コレクション クラスのヘルパー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-class-helpers"></a>コレクション クラスのヘルパー
 コレクション クラス`CMap`、 `CList`、および`CArray`を比較する、コピー、および要素をシリアル化するためにグローバル テンプレートのヘルパー関数を使用します。 基づくクラスの実装の一部として`CMap`、 `CList`、および`CArray`マップ、リスト、または配列に格納されたデータの種類に合うように、必要に応じて、これらの関数をオーバーライドする必要があります。 などのヘルパー関数を上書きする方法について`SerializeElements`、記事を参照して[コレクション: タイプ セーフなコレクションを作成する方法](../../mfc/how-to-make-a-type-safe-collection.md)です。 なお**ConstructElements**と**DestructElements**使用されなくなりました。  
@@ -46,8 +41,8 @@ ms.lasthandoff: 12/21/2017
 |[HashKey](#hashkey)|ハッシュ キーを計算します。|  
 |[SerializeElements](#serializeelements)|保存またはアーカイブからの要素を取得します。|  
   
-##  <a name="compareelements"></a>CompareElements  
- によって直接呼び出されます [CList::Find] (clist class.md #not_found.md #clist__find と間接的に[cmap__lookup](cmap-class.md#lookup)と[cmap__operator & #91、&#93;](cmap-class.md#operator_at)です。  
+##  <a name="compareelements"></a>  CompareElements  
+ によって直接呼び出されます。 [CList::Find] (clist class.md #not_found.md #clist__find と間接的に[cmap__lookup](cmap-class.md#lookup)と[cmap__operator &#91; &#93;](cmap-class.md#operator_at)です。  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -58,7 +53,7 @@ CompareElements(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *型*  
+ *TYPE*  
  比較する最初の要素の型。  
   
  `pElement1`  
@@ -80,10 +75,10 @@ CompareElements(
   
  C++ 言語には、比較演算子が定義されています ( `==`) 単純型の場合 ( `char`、 `int`、 **float**など) クラスおよび構造体の比較演算子が定義されていません。 使用する場合`CompareElements`それを使用するコレクション クラスの 1 つのインスタンスを作成、比較演算子を定義するか、オーバー ロードまたは`CompareElements`バージョン適切な値を返しますを使用します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
    **ヘッダー:** afxtempl.h   
   
-##  <a name="copyelements"></a>CopyElements  
+##  <a name="copyelements"></a>  CopyElements  
  この関数が直接呼び出された[CArray::Append](carray-class.md#append)と[CArray::Copy](carray-class.md#copy)です。  
   
 ```   
@@ -95,7 +90,7 @@ void AFXAPI CopyElements(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *型*  
+ *TYPE*  
  コピーする要素の型を指定するテンプレート パラメーター。  
   
  `pDest`  
@@ -108,14 +103,14 @@ void AFXAPI CopyElements(
  コピーする要素の数。  
   
 ### <a name="remarks"></a>コメント  
- 既定の実装は、単純な代入演算子を使用して (  **=**  )、コピー操作を実行します。 コピーされた型がオーバー ロードされた演算子 =、既定の実装は、ビットごとのコピーを実行します。  
+ 既定の実装は、単純な代入演算子を使用して ( **=** )、コピー操作を実行します。 コピーされた型がオーバー ロードされた演算子 =、既定の実装は、ビットごとのコピーを実行します。  
   
  この関数およびその他のヘルパー関数を実装する方法については、記事を参照してください。[コレクション: タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxtempl.h  
   
-##  <a name="dumpelements"></a>DumpElements  
+##  <a name="dumpelements"></a>  DumpElements  
  オーバーライドされた場合、コレクションの要素のテキスト形式のストリーム指向の診断出力を提供します。  
   
 ```   
@@ -130,7 +125,7 @@ void  AFXAPI DumpElements(
  `dc`  
  要素をダンプするためのコンテキストをダンプします。  
   
- *型*  
+ *TYPE*  
  要素の型を指定するテンプレート パラメーター。  
   
  `pElements`  
@@ -145,10 +140,10 @@ void  AFXAPI DumpElements(
  既定の実装では、何も行われません。 場合は、コレクションの要素から派生`CObject`を呼び出してオーバーライドは通常、コレクションの要素を反復処理する`Dump`ターンの各要素に対してです。  
   
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
+##  <a name="hashkey"></a>  HashKey  
  指定したキーのハッシュ値を計算します。  
   
 ```  
@@ -167,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  キーのハッシュ値。  
   
 ### <a name="remarks"></a>コメント  
- この関数が直接呼び出された[CMap::RemoveKey](cmap-class.md#removekey)および間接的に[CMap::Lookup](cmap-class.md#lookup)と[CMap::Operator & #91、&#93;](cmap-class.md#operator_at)です。
+ この関数が直接呼び出された[CMap::RemoveKey](cmap-class.md#removekey)および間接的に[CMap::Lookup](cmap-class.md#lookup)と[CMap::Operator &#91; &#93;](cmap-class.md#operator_at)です。
   
  既定の実装では、ハッシュ値を作成脱却しつつ`key`して 4 つの位置。 アプリケーションに適したハッシュ値を返すように、この関数をオーバーライドします。  
   
@@ -181,10 +176,10 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxtempl.h 
   
-##  <a name="serializeelements"></a>SerializeElements  
+##  <a name="serializeelements"></a>  SerializeElements  
  [CArray](carray-class.md)、 [CList](clist-class.md)、および[CMap](cmap-class.md)要素をシリアル化するには、この関数を呼び出します。  
   
 ```   
@@ -193,7 +188,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *型*  
+ *TYPE*  
  要素の型を指定するテンプレート パラメーター。  
   
  `ar`  
@@ -213,10 +208,10 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="example"></a>例  
  アーティクルの例を参照して[コレクション: タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)です。  
  
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxtempl.h 
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [CMap クラス](cmap-class.md)   
  [CList クラス](clist-class.md)   

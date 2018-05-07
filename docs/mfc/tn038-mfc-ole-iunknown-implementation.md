@@ -1,13 +1,10 @@
 ---
-title: "TN038: MFC OLE IUnknown の実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN038: MFC OLE IUnknown の実装 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>テクニカル ノート 38: MFC/OLE IUnknown の実装
 > [!NOTE]
@@ -106,7 +101,7 @@ pPrint->Release();
 }  
 ```  
   
- とても簡単ですがされるように見えますが、両方、IPrintInterface をサポートするオブジェクトを実装する方法と[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)インターフェイスは単純な IPrintInterface がから直接派生したためここでは[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) —、IPrintInterface を実装することによって[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)は自動的にサポートします。 例:  
+ とても簡単ですがされるように見えますが、両方、IPrintInterface をサポートするオブジェクトを実装する方法と[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)インターフェイスは単純な IPrintInterface がから直接派生したためここでは[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) —、IPrintInterface を実装することによって[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)は自動的にサポートします。 例えば:  
   
 ```  
 class CPrintObj : public CPrintInterface  
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  集計の詳細については、次を参照してください。、[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx)トピックです。  
   
- MFC インターフェイス マップの基点は `CCmdTarget` クラスです。 `CCmdTarget`"*しました*"カウントだけでなく、メンバー関数に関連付けられているすべての参照、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)実装 (参照カウントがであるなど`CCmdTarget`)。 OLE COM をサポートするクラスを作成するには `CCmdTarget` の派生クラスを作成し、マクロや `CCmdTarget` メンバー関数を利用して必要なインターフェイスを実装します。 MFC 実装では、上の例で示したように各インターフェイスの実装で入れ子になったクラスが使用され、 IUnknown の標準実装によって簡略化されています。また、コード簡略化のために多くのマクロも用意されています。  
+ MFC インターフェイス マップの基点は `CCmdTarget` クラスです。 `CCmdTarget` "*しました*"カウントだけでなく、メンバー関数に関連付けられているすべての参照、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)実装 (参照カウントがであるなど`CCmdTarget`)。 OLE COM をサポートするクラスを作成するには `CCmdTarget` の派生クラスを作成し、マクロや `CCmdTarget` メンバー関数を利用して必要なインターフェイスを実装します。 MFC 実装では、上の例で示したように各インターフェイスの実装で入れ子になったクラスが使用され、 IUnknown の標準実装によって簡略化されています。また、コード簡略化のために多くのマクロも用意されています。  
   
 ## <a name="interface-map-basics"></a>インターフェイス マップの基本  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  親 (`METHOD_PROLOGUE` 派生オブジェクト) にアクセスするにはマクロ `CCmdTarget` を使用します。  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)、および[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)に委任することができます、`CCmdTarget`これらの関数の実装 (`ExternalAddRef`、 `ExternalRelease`、および`ExternalQueryInterface`).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)、および[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)に委任することができます、`CCmdTarget`これらの関数の実装 (`ExternalAddRef`、 `ExternalRelease`、および`ExternalQueryInterface`)。  
   
  上の例の CPrintEditObj の場合は次のように実装できます。  
   
@@ -432,7 +427,7 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 3.  適切な時点で (普通は `CCmdTarget::OnCreateAggregates` 内) このメンバー変数を NULL 値以外の値に初期化します。  
   
- 例:  
+ 例えば:  
   
 ```  
 class CAggrExample : public CCmdTarget  
@@ -584,7 +579,7 @@ END_INTERFACE_PART(
   
  引数 `localClass` に定義するローカル クラス名を指定します。 名前の先頭には 'X' が自動的に付けられます。 この名前付け規則は、グローバル クラス名との競合を回避するためです。 また埋め込みメンバーには `localClass` 名の前に 'm_x' を付けた名前が指定されます。  
   
- 例:  
+ 例えば:  
   
 ```  
 BEGIN_INTERFACE_PART(MyAdviseSink,
@@ -714,7 +709,7 @@ END_INTERFACE_MAP
 ## <a name="remarks"></a>コメント  
  このマクロは、クラスが集約オブジェクトを使用することをフレームワークに知らせます。 このマクロは `BEGIN_INTERFACE_PART` マクロと `END_INTERFACE_PART` マクロの間に記述します。 集約オブジェクトが別のオブジェクトから派生した[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)です。 集約と `INTERFACE_AGGREGATE` マクロを使用すると、集約によってサポートされているすべてのインターフェイスを、オブジェクトによって直接サポートされているように見せることができます。 `theAggr`引数はから派生するクラスのメンバー変数の名前だけで[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (直接または間接的に)。 `INTERFACE_AGGREGATE` マクロをインターフェイス マップの中に記述するときは、必ず `INTERFACE_PART` マクロの後に記述します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

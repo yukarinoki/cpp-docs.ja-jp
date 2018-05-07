@@ -1,13 +1,10 @@
 ---
-title: "ODBC クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ODBC クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fcc3453d36a2567330f60cec73383f842210c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98ef4509e7e7570d8c07013f0287fe01105e154a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes"></a>ODBC クラス
 これらのクラスは作業をオープン データベース コネクティビティ (ODBC) ドライバーが利用可能なデータベースのさまざまなに簡単にアクセスを提供するその他のアプリケーション フレームワークのクラスを使用します。  
@@ -50,11 +45,11 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="related-classes"></a>関連するクラス  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- ビットマップなど、バイナリ ラージ オブジェクト (BLOB) の記憶域へのハンドルをカプセル化します。 `CLongBinary`オブジェクトを使用して、データベース テーブルに格納されている大規模なデータ オブジェクトを管理できます。  
+ ビットマップなど、バイナリ ラージ オブジェクト (BLOB) の記憶域へのハンドルをカプセル化します。 `CLongBinary` オブジェクトを使用して、データベース テーブルに格納されている大規模なデータ オブジェクトを管理できます。  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- 値のデータ型について心配する値を格納できます。 `CDBVariant`共用体に格納されている現在の値のデータ型を追跡します。  
+ 値のデータ型について心配する値を格納できます。 `CDBVariant` 共用体に格納されている現在の値のデータ型を追跡します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

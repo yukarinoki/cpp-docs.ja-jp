@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール: オートメーション サーバーの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: オートメーション サーバーの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3de04fbbfa9f2d0b55b7e31ca02faeddfa5c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 617d84b8603467da74b21be8c2bfb2e6cb418f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX コントロール : オートメーション サーバーの作成
 MFC ActiveX コントロールは、プログラムで別のアプリケーションでそのコントロールを埋め込むと、アプリケーションのコントロールのメソッドを呼び出すことを目的としてオートメーション サーバーとして開発できます。 このようなコントロールがまだできるように ActiveX コントロール コンテナーでホストされます。  
@@ -60,6 +55,6 @@ MFC ActiveX コントロールは、プログラムで別のアプリケーシ�
   
  アプリケーションで使用した後、ActiveX コントロールにメソッドを追加する場合は、タイプ ライブラリをインポートしたときに作成されたファイルを削除することによって、アプリケーションでコントロールの最新のバージョンを使用を開始できます。 再度、タイプ ライブラリをインポートします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 

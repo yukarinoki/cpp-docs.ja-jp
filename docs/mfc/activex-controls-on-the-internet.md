@@ -1,13 +1,10 @@
 ---
-title: "インターネット上の ActiveX コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: インターネット上の ActiveX コントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 ActiveX コントロールは、更新されたバージョンの OLE コントロールの仕様です。 コントロールは、さまざまなインターネット上の COM 対応の Web ブラウザーも含めて、別のコンテナーで使用できるプログラミング可能なソフトウェア コンポーネントを開発するための基本的なアーキテクチャです。 ActiveX コントロール インターネット制御とできます作業中の文書にその機能を追加したり、Web ページの一部にします。 Web ページ上のコントロールは、スクリプトを使用して相互に通信できます。  
@@ -113,7 +108,7 @@ ActiveX コントロールは、更新されたバージョンの OLE コント�
   
      AFXCMN を含める必要がある注意してください。使用する H、`CListCtrl`クラスです。  
   
-4.  コントロールの全体的な状態が変化 (たとえば、読み込みに初期化またはユーザーから対話型)、呼び出し`COleControl::InternalSetReadyState`です。 コードを追加するには、コントロールに 1 つのデータ パスのプロパティがある場合は、**知らせる**ダウンロードが完了したコンテナーに通知します。 例:  
+4.  コントロールの全体的な状態が変化 (たとえば、読み込みに初期化またはユーザーから対話型)、呼び出し`COleControl::InternalSetReadyState`です。 コードを追加するには、コントロールに 1 つのデータ パスのプロパティがある場合は、**知らせる**ダウンロードが完了したコンテナーに通知します。 例えば:  
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -127,7 +122,7 @@ ActiveX コントロールは、更新されたバージョンの OLE コント�
   
 2.  **プロパティの追加ウィザード**、select、 **Set/get メソッド**ラジオ ボタン、型、**プロパティ名**例、EditControlText、および、としてBSTRを選択するために、**プロパティの型**です。  
   
-3.  **[完了]**をクリックします。  
+3.  **[完了]** をクリックします。  
   
 4.  メンバー変数を宣言、 `CDataPathProperty`-ActiveX コントロール クラスにクラスを派生します。  
   
@@ -165,9 +160,9 @@ ActiveX コントロールは、更新されたバージョンの OLE コント�
   
  実装する[非同期モニカー](../mfc/asynchronous-monikers-on-the-internet.md)を使用して、`CAsyncMonikerFile`クラスです。 ただし、ActiveX コントロールを使用して、`CDataPathProperty`から派生したクラス`CAsyncMonikerFile`、非同期のコントロールのプロパティの実装に役立ちます。  
   
- ASYNDOWN サンプルでは、データの読み取りにタイマーを使用して、非同期ループを設定する方法を示します。 ASYNDOWN は"HOWTO:: AsyncDown 示します非同期のデータのダウンロード"(Q177244)、サポート技術情報の記事で詳しく説明したし、は、Microsoft ダウンロード センターからダウンロードできます。 (詳細については、Microsoft ダウンロード センターからファイルをダウンロードする、「方法に入手 Microsoft サポート オンライン サービスからファイル」(Q119591) では、Microsoft サポート技術情報の記事を参照してください)。サポート技術情報を見つけることができます[http://support.microsoft.com/support](http://support.microsoft.com/support)です。  
+ ASYNDOWN サンプルでは、データの読み取りにタイマーを使用して、非同期ループを設定する方法を示します。 ASYNDOWN は"HOWTO:: AsyncDown 示します非同期のデータのダウンロード"(Q177244)、サポート技術情報の記事で詳しく説明したし、は、Microsoft ダウンロード センターからダウンロードできます。 (詳細については、Microsoft ダウンロード センターからファイルをダウンロードする、「方法に入手 Microsoft サポート オンライン サービスからファイル」(Q119591) では、Microsoft サポート技術情報の記事を参照してください)。サポート技術情報を見つけることができます[ http://support.microsoft.com/support](http://support.microsoft.com/support)です。  
   
- ASYNDOWN で使用される基本的な手法タイマーを設定する**CDataPathProperty::OnDataAvailable**データが使用可能なことを示すです。 タイマー メッセージを受信すると、アプリケーションが 128 バイトのデータ ブロックの読み取りし、エディット コントロールします。 タイマー メッセージを処理するときにデータが使用できない場合は、タイマーはになっています。 `OnDataAvailable`多くのデータを後で受信した場合に、タイマーをオンにします。  
+ ASYNDOWN で使用される基本的な手法タイマーを設定する**CDataPathProperty::OnDataAvailable**データが使用可能なことを示すです。 タイマー メッセージを受信すると、アプリケーションが 128 バイトのデータ ブロックの読み取りし、エディット コントロールします。 タイマー メッセージを処理するときにデータが使用できない場合は、タイマーはになっています。 `OnDataAvailable` 多くのデータを後で受信した場合に、タイマーをオンにします。  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>Web ページ上のコントロールを表示します。  
  オブジェクト タグと Web ページ上のコントロールを挿入するための属性の使用例を次に示します。  
@@ -211,7 +206,7 @@ ActiveX コントロールは、更新されたバージョンの OLE コント�
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)   
  [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonUndoButton クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCRibbonUndoButton クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonUndoButton
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 720a1de11dcf4c37b4b321bb0e014a9ae4e2e459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton クラス
 `CMFCRibbonUndoButton`クラスは、最新のユーザー コマンドを含むドロップダウン リスト ボタンを実装します。 ユーザーは、1 つ以上の最新のコマンドを元に戻すかやり直すにドロップダウン リストから選択できます。  
@@ -82,10 +77,10 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribbonundobutton.h  
   
-##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
+##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
  アクションの一覧に新しいアクションを追加します。  
   
 ```  
@@ -96,14 +91,14 @@ void AddUndoAction(LPCTSTR lpszLabel);
  [入力] `lpszLabel`  
  ドロップダウン リストに表示されるアクション ラベルです。  
   
-##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
+##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  ドロップダウン リストであるアクションの一覧をクリアします。  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
  新しい`CMFCRibbonUndoButton`を指定するコマンド ID、テキスト ラベルと親オブジェクトのイメージ リストのイメージを使用してオブジェクト。  
   
 ```  
@@ -136,7 +131,7 @@ CMFCRibbonUndoButton(
  [入力] `hIcon`  
  ボタンのイメージとして使用できるアイコンへのハンドル。  
   
-##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
+##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  ユーザーがドロップダウン リストから選択した項目の数を決定します。  
   
 ```  
@@ -146,7 +141,7 @@ int GetActionNumber() const;
 ### <a name="return-value"></a>戻り値  
  ユーザーが選択されている項目の数。  
   
-##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
+##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
  オブジェクトにメニューが含まれるかどうかを示します。  
   
 ```  
@@ -158,7 +153,7 @@ virtual BOOL HasMenu() const;
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonGallery クラス](../../mfc/reference/cmfcribbongallery-class.md)   

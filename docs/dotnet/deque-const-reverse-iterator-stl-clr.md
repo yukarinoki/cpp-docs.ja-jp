@@ -1,12 +1,9 @@
 ---
-title: "deque::const_reverse_iterator (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: deque::const_reverse_iterator (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::const_reverse_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - const_reverse_iterator member [STL/CLR]
 ms.assetid: fd3a99de-2721-432b-a502-412a72b98e74
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9c69d119b4041ce9c538499820cdff2c66a4e4e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b435e8f1116b3b810aa468f62cdb81c814d922b4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequeconstreverseiterator-stlclr"></a>deque::const_reverse_iterator (STL/CLR)
 被制御シーケンスの定数反転反復子の型。  
@@ -69,11 +64,11 @@ int main()
 c b a  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/deque >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque::reverse_iterator (STL/CLR)](../dotnet/deque-reverse-iterator-stl-clr.md)

@@ -1,13 +1,10 @@
 ---
-title: "リスト コントロールとリスト ビュー |Microsoft ドキュメント"
-ms.custom: 
+title: リスト コントロールとリスト ビュー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - list views [MFC]
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c9d559d642b6edf926b9feb49332ef7ec2924a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3279ae5edc02ec52ded065c4a45d18e3236802f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-control-and-list-view"></a>リスト コントロールとリスト ビュー
 便宜上は、MFC は、2 つの方法でリスト コントロールをカプセル化します。 リスト コントロールを使用することができます。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 -   クラスを使用して直接、 [CListView](../mfc/reference/clistview-class.md)です。  
   
- `CListView`簡単にコントロールをカプセル化 MFC ドキュメント/ビュー アーキテクチャは、リスト コントロールを統合すると同じ[CEditView](../mfc/reference/ceditview-class.md)エディット コントロールをカプセル化: コントロールが MFC ビューのすべての画面領域を塗りつぶします。 (ビュー*は*にキャスト、コントロール`CListView`)。  
+ `CListView` 簡単にコントロールをカプセル化 MFC ドキュメント/ビュー アーキテクチャは、リスト コントロールを統合すると同じ[CEditView](../mfc/reference/ceditview-class.md)エディット コントロールをカプセル化: コントロールが MFC ビューのすべての画面領域を塗りつぶします。 (ビュー*は*にキャスト、コントロール`CListView`)。  
   
  A`CListView`オブジェクトから継承[CCtrlView](../mfc/reference/cctrlview-class.md)とその基本クラスを基になるリスト コントロールを取得するメンバー関数を追加します。 ビューをビューとして使用するには、メンバーの表示を使用します。 使用して、 [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)リスト コントロールのメンバー関数にアクセスするためにメンバー関数。 これらのメンバーを使用します。  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  このトピックでは、リスト コントロールを使用する両方の方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CListCtrl の使い方](../mfc/using-clistctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "ドキュメント テンプレート文字列、MFC アプリケーション ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメント テンプレート文字列、MFC アプリケーション ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.doctemp
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d6039459eed097af5e927c4bd2f30d3e7c3c4bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>[ドキュメント テンプレート文字列] (MFC アプリケーション ウィザード)
 MFC アプリケーション ウィザードのこのページではドキュメント管理とローカライズ化のために次のオプションを指定または変更します。 ドキュメント テンプレート文字列が含むアプリケーションの使用可能な**ドキュメント/ビュー アーキテクチャ サポート**で、[アプリケーションの種類](../../mfc/reference/application-type-mfc-application-wizard.md)です。 これらはダイアログ ボックスを使用できません。 ドキュメント テンプレート文字列のほとんどは表示されているアプリケーションのユーザーによって使用されるためにローカライズされます、**リソース言語**に示されている、**アプリケーションの種類**ウィザードのページです。  
@@ -50,6 +45,6 @@ MFC アプリケーション ウィザードのこのページではドキュメ
 |**ファイルの新しい短い名前**|標準の Windows に表示される名前を設定`New`ダイアログ ボックスで、1 つ以上の新しいドキュメント テンプレートがある場合。 アプリケーションの場合、[オートメーション サーバー](../../mfc/automation-servers.md)、この名前は、オートメーション オブジェクトの短い名前として使用します。 既定では、プロジェクトの名前。|  
 |**ファイルの種類の長い名前**|システム レジストリでファイルの種類名を設定します。 アプリケーションがオートメーション サーバーの場合は、この名前は、オートメーション オブジェクトの長い名前として使用されます。 既定では、プロジェクト名とします。ドキュメントです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)
 

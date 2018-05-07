@@ -1,11 +1,8 @@
 ---
-title: "Platform::collections Namespace |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::collections Namespace |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f7c99f99e0935fd96aa02240de2c0c72ce890a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 名前空間
 
@@ -47,7 +42,7 @@ using namespace Platform::Collections;
 
 この名前空間には、次のメンバーが含まれます。
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator クラス](../cppcx/platform-collections-backinsertiterator-class.md)|コレクションの末尾に要素を挿入する反復子を表します。|
 |[Platform::Collections::InputIterator クラス](../cppcx/platform-collections-inputiterator-class.md)|コレクションの先頭に要素を挿入する反復子を表します。|
@@ -62,7 +57,7 @@ using namespace Platform::Collections;
 
 [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **メタデータ:** platform.winmd
 

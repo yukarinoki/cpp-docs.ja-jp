@@ -1,13 +1,10 @@
 ---
-title: "ファイルのヒント |Microsoft ドキュメント"
-ms.custom: 
+title: ファイルのヒント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>ヒント ファイル
 A*ヒント ファイル*により、Visual Studio 統合開発環境 (IDE) は、関数とマクロの名前など、Visual C の識別子を解釈します。 Visual C プロジェクト、IDE の開く*解析システム*プロジェクト内の各ソース ファイル内のコードを分析し、すべての識別子に関する情報を収集します。 IDE では、その情報を使用してなどの機能のサポート、**クラス ビュー**ブラウザーと**ナビゲーション バー**です。  
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |構文|説明|  
 |------------|-------------|  
-|`#define`*ヒント名前**置換文字列*<br /><br /> `#define`*ヒント名前* `(` *パラメーター*、.`)`*置換文字列*|新しいヒントを定義または既存のヒントを再定義するプリプロセッサ ディレクティブです。 プリプロセッサは、ディレクティブの後に一致する各を置き換えます*ヒント名前*ソース コードで*置換文字列*です。<br /><br /> 2 番目の構文形式では、関数のようなヒントを定義します。 関数のようなヒントは、ソース コードで発生する場合、プリプロセッサ最初をすべて置き換えますの*パラメーター*で*置換文字列*ソース コード、および置換の対応する引数を持つ*ヒント名前*で*置換文字列*です。|  
+|`#define` *ヒント名前**置換文字列*<br /><br /> `#define` *ヒント名前* `(` *パラメーター*、.`)`*置換文字列*|新しいヒントを定義または既存のヒントを再定義するプリプロセッサ ディレクティブです。 プリプロセッサは、ディレクティブの後に一致する各を置き換えます*ヒント名前*ソース コードで*置換文字列*です。<br /><br /> 2 番目の構文形式では、関数のようなヒントを定義します。 関数のようなヒントは、ソース コードで発生する場合、プリプロセッサ最初をすべて置き換えますの*パラメーター*で*置換文字列*ソース コード、および置換の対応する引数を持つ*ヒント名前*で*置換文字列*です。|  
 |`@<`|特定のヒント ファイル*置換文字列*最初のマップ要素のセットを示すです。|  
 |`@=`|特定のヒント ファイル*置換文字列*中級者向けのマップ要素を示すです。 マップには、複数のマップ要素をことができます。|  
 |`@>`|特定のヒント ファイル*置換文字列*マップ要素のセットの末尾を示すです。|  
-|`#undef`*ヒント名前*|既存のヒントを削除するプリプロセッサ ディレクティブです。 によって、ヒントの名前が提供される、*ヒント名前*識別子。|  
-|`//`*コメント*|単一行コメント。|  
+|`#undef` *ヒント名前*|既存のヒントを削除するプリプロセッサ ディレクティブです。 によって、ヒントの名前が提供される、*ヒント名前*識別子。|  
+|`//` *コメント*|単一行コメント。|  
 |`/*` *comment* `*/`|複数行のコメント。|  
   
 ## <a name="what-macros-require-a-hint"></a>どのようなマクロのヒントを必要としますか?  
@@ -129,7 +124,7 @@ STDMETHOD(myMethod)(int parameter1);
 static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
 ```  
   
- **方法:**定義は Null  
+ **方法:** 定義は Null  
   
  このような状況に対応する方法が存在しないかのように SAL 注釈を処理します。 これを行うには、置換文字列が null のヒントを指定します。 その結果、解析を行って、システムが、注釈は無視されますと**クラス ビュー**ブラウザーは表示されません。 (Visual C には、SAL 注釈を非表示にする組み込みのヒント ファイルが含まれています)。  
   
@@ -150,7 +145,7 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
- **方法:**コピーを直接  
+ **方法:** コピーを直接  
   
  マクロのセマンティクスが閲覧時に重要な場合は、マクロと同じであるヒントを作成します。 解析のシステムでは、ヒント ファイル内の定義に、マクロが解決されます。  
   
@@ -179,7 +174,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }  
 ```  
   
- **方法:**マップ要素の識別  
+ **方法:** マップ要素の識別  
   
  開始、中間 (存在する場合)、および終了のヒントを指定、マップの要素。 特別なマップ置換文字列を使用して`@<`、 `@=`、および`@>`です。 詳細については、次を参照してください。、 `Syntax` 」セクションを参照します。  
   
@@ -207,7 +202,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP  
 ```  
   
- **方法:**コピーを直接  
+ **方法:** コピーを直接  
   
  ヒントを作成、`START_NAMESPACE`と`BEGIN_CATEGORY_MAP`、マクロのヒントを作成し、`NSandMAP`マクロは、ソース コードの前に示したのと同じです。 また、複合マクロは、中断を伴うマクロと空白のみで構成され場合、は、置換文字列が null の定義は、ヒントを定義できます。  
   
@@ -228,7 +223,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
 ```  
   
- **方法:**単純化  
+ **方法:** 単純化  
   
  単純なマクロ定義を表示するヒントを作成します。  
   
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  次の図は、Visual C プロジェクト内の物理ディレクトリの一部を示しています。 ヒント ファイルは、 `vcpackages`、 `Debug`、 `A1`、および`A2`ディレクトリ。  
   
 ### <a name="hint-file-directories"></a>ヒント ファイルのディレクトリ  
- ![一般的なプロジェクト &#45; のおよび特定のヒント ファイルのディレクトリ。] (../ide/media/hintfile.png "HintFile")  
+ ![共通およびプロジェクト&#45;特定ヒント ファイルのディレクトリ。] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>ディレクトリとヒント ファイルの内容  
  ヒント ファイル、およびそれらのヒント ファイルの内容を含むこのプロジェクト内のディレクトリを次に示します。 多くのヒントの一部のみ、`vcpackages`ヒント ファイルのディレクトリの一覧が表示されます。  
@@ -318,7 +313,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
   
 -   `#undef`でヒント、`A2`ディレクトリのヒントを削除する`OBRACE`と`CBRACE`で、`Debug`ディレクトリ ヒント ファイル。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)    
  [#define ディレクティブ (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
  [#undef ディレクティブ (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   

@@ -1,12 +1,9 @@
 ---
-title: "CBitmapButton クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CBitmapButton クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton クラス
 ラベルがテキストではなくビットマップ イメージのプッシュ ボタン コントロールを作成します。  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|ビットマップに合わせてボタンのサイズを設定します。|  
   
 ## <a name="remarks"></a>コメント  
- `CBitmapButton`オブジェクトに含める最大 4 つのビットマップは、ボタンのさまざまな状態の画像が含まれて: を (標準)、下 (または選択した)、中心し、無効になっています。 最初のビットマップのみが必要です。その他はオプションです。  
+ `CBitmapButton` オブジェクトに含める最大 4 つのビットマップは、ボタンのさまざまな状態の画像が含まれて: を (標準)、下 (または選択した)、中心し、無効になっています。 最初のビットマップのみが必要です。その他はオプションです。  
   
  ビットマップ ボタンのイメージには、そのイメージ自体と同様に、画像の周りの境界線が含まれます。 罫線は、通常、ボタンの状態の表示中に役割を果たします。 たとえば、フォーカスのある状態のビットマップと同様に、1 つの状態が、罫線または境界の実線シック (thick) から四角形の破線埋め込み通常です。 ビットマップ、無効な状態を通常のと似ていますが (淡色表示のメニュー選択) のようなコントラストがはっきりして最新の状態にします。  
   
@@ -102,7 +97,7 @@ class CBitmapButton : public CButton
   
 6.  `CDialog`オブジェクトの[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンを呼び出し、`CBitmapButton`オブジェクトの[AutoLoad](#autoload)関数は、ボタンのコントロール ID をパラメーターとして使用して、`CDialog`オブジェクト**この**ポインター。  
   
- など、Windows の通知メッセージを処理するかどうかは**BN_CLICKED**ビットマップ ボタン コントロールをその親によって送信された、(通常から派生したクラス**CDialog)**への追加、 `CDialog`-派生各メッセージのメッセージ マップ エントリとメッセージ ハンドラー メンバー関数をオブジェクトです。 送信された通知、`CBitmapButton`オブジェクトは、によって送信されたものと同じ、 [CButton](../../mfc/reference/cbutton-class.md)オブジェクト。  
+ など、Windows の通知メッセージを処理するかどうかは**BN_CLICKED**ビットマップ ボタン コントロールをその親によって送信された、(通常から派生したクラス**CDialog)** への追加、 `CDialog`-派生各メッセージのメッセージ マップ エントリとメッセージ ハンドラー メンバー関数をオブジェクトです。 送信された通知、`CBitmapButton`オブジェクトは、によって送信されたものと同じ、 [CButton](../../mfc/reference/cbutton-class.md)オブジェクト。  
   
  クラス[CToolBar](../../mfc/reference/ctoolbar-class.md)ビットマップ ボタンへのさまざまなアプローチです。  
   
@@ -119,10 +114,10 @@ class CBitmapButton : public CButton
   
  `CBitmapButton`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
  ダイアログ ボックスのボタンのオブジェクトに関連付け、`CBitmapButton`クラス、名前で、ビットマップをロードおよびビットマップに合わせてボタンのサイズを設定します。  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  
           `CBitmapButton` オブジェクトを作成します。  
   
@@ -161,7 +156,7 @@ CBitmapButton();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  識別されたリソース名または ID 番号を使用できない場合にビットマップ イメージを読み込む場合は、この関数を使用して、 `AutoLoad` 、たとえば、ダイアログ ボックスの一部ではないビットマップ ボタンを作成するために機能します。  
   
 ```  
@@ -210,7 +205,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  ビットマップのサイズをビットマップ ボタンのサイズを変更するには、この関数を呼び出します。  
   
 ```  
@@ -220,7 +215,7 @@ void SizeToContent();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル CTRLTEST](../../visual-cpp-samples.md)   
  [CButton クラス](../../mfc/reference/cbutton-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)

@@ -1,12 +1,9 @@
 ---
-title: "CRichEditDoc クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CRichEditDoc クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditDoc
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c427dc034a37bf3b0686b0fd95e62c3b718fbaea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28b84747a694a62139546f3105f84c9e799b292a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc クラス
 [CRichEditView](../../mfc/reference/cricheditview-class.md)と[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)MFC のドキュメント ビュー アーキテクチャのコンテキストでリッチ エディット コントロールの機能を提供します。  
@@ -63,7 +58,7 @@ class CRichEditDoc : public COleServerDoc
 ## <a name="remarks"></a>コメント  
  「リッチ エディット コントロール」は、ユーザーを入力し、テキストを編集するウィンドウです。 テキストは、文字と段落の書式に割り当てることができるし、埋め込み OLE オブジェクトを含めることができます。 リッチ エディット コントロールでは、テキストの書式設定のプログラミング インターフェイスを提供します。 ただし、アプリケーションでは、書式設定操作をユーザーに使用できるようにするために必要なすべてのユーザー インターフェイス コンポーネントを実装する必要があります。  
   
- `CRichEditView`テキストとテキストの書式設定特性を保持します。 `CRichEditDoc`ビューにあるクライアント項目の一覧を保持します。 `CRichEditCntrItem`コンテナー側 OLE クライアント アイテムへのアクセスを提供します。  
+ `CRichEditView` テキストとテキストの書式設定特性を保持します。 `CRichEditDoc` ビューにあるクライアント項目の一覧を保持します。 `CRichEditCntrItem` コンテナー側 OLE クライアント アイテムへのアクセスを提供します。  
   
  この Windows コモン コントロール (および、 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)および関連クラス) は、Windows 95/98 および Windows NT version 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
   
@@ -84,10 +79,10 @@ class CRichEditDoc : public COleServerDoc
   
  `CRichEditDoc`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrich.h  
   
-##  <a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
+##  <a name="createclientitem"></a>  CRichEditDoc::CreateClientItem  
  作成するには、この関数を呼び出して、`CRichEditCntrItem`オブジェクトし、このドキュメントに追加します。  
   
 ```  
@@ -106,7 +101,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
  詳細については、次を参照してください。、 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 内の構造。  
   
-##  <a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
+##  <a name="getstreamformat"></a>  CRichEditDoc::GetStreamFormat  
  この関数では、豊富な編集のコンテンツをストリームのテキスト形式を特定します。  
   
 ```  
@@ -116,14 +111,14 @@ int GetStreamFormat() const;
 ### <a name="return-value"></a>戻り値  
  次のフラグのいずれかです。  
   
-- `SF_TEXT`リッチ エディット コントロールでの書式情報が保持されないことを示します。  
+- `SF_TEXT` リッチ エディット コントロールでの書式情報が保持されないことを示します。  
   
-- `SF_RTF`リッチ エディット コントロールはの書式情報を保持することを示します。  
+- `SF_RTF` リッチ エディット コントロールはの書式情報を保持することを示します。  
   
 ### <a name="remarks"></a>コメント  
  戻り値がに基づいて、 [m_bRTF](#m_brtf)データ メンバーです。 この関数を返します`SF_RTF`場合`m_bRTF`は**TRUE**、それ以外の`SF_TEXT`します。  
   
-##  <a name="getview"></a>CRichEditDoc::GetView  
+##  <a name="getview"></a>  CRichEditDoc::GetView  
  この関数にアクセスする、 [CRichEditView](../../mfc/reference/cricheditview-class.md)オブジェクトに関連付けられた`CRichEditDoc`オブジェクト。  
   
 ```  
@@ -136,14 +131,14 @@ virtual CRichEditView* GetView() const;
 ### <a name="remarks"></a>コメント  
  テキストと書式設定情報内に含まれる、`CRichEditView`オブジェクト。 `CRichEditDoc`オブジェクトはシリアル化のための OLE 項目を保持します。 1 つだけあります`CRichEditView`各`CRichEditDoc`です。  
   
-##  <a name="m_brtf"></a>:M_brtf  
+##  <a name="m_brtf"></a>  :M_brtf  
  ときに**TRUE**、ことを示します[CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)と[CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout)段落と文字の書式設定特性を格納する必要があります。  
   
 ```  
 BOOL m_bRTF;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル ワードパッド](../../visual-cpp-samples.md)   
  [COleServerDoc クラス](../../mfc/reference/coleserverdoc-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

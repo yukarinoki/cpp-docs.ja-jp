@@ -1,12 +1,9 @@
 ---
-title: "CListView クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CListView クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CListView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9d90df0ac3d91f58c1e9592e65ce84ac900f6e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clistview-class"></a>CListView クラス
 リスト コントロールの使用との使用を簡略化[CListCtrl](../../mfc/reference/clistctrl-class.md)MFC のドキュメント/ビュー アーキテクチャのリスト コントロールの機能をカプセル化するクラス。  
@@ -78,17 +73,17 @@ class CListView : public CCtrlView
   
  `CListView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcview.h  
   
-##  <a name="clistview"></a>CListView::CListView  
+##  <a name="clistview"></a>  CListView::CListView  
  `CListView` オブジェクトを構築します。  
   
 ```  
 CListView();
 ```  
   
-##  <a name="getlistctrl"></a>CListView::GetListCtrl  
+##  <a name="getlistctrl"></a>  CListView::GetListCtrl  
  ビューに関連付けられているリスト コントロールへの参照を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -101,7 +96,7 @@ CListCtrl& GetListCtrl() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
-##  <a name="removeimagelist"></a>CListView::RemoveImageList  
+##  <a name="removeimagelist"></a>  CListView::RemoveImageList  
  リスト ビューから指定されたイメージ リストを削除します。  
   
 ```  
@@ -112,7 +107,7 @@ void RemoveImageList(int nImageList);
  `nImageList`  
  削除するイメージの 0 から始まるインデックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル rowlist で](../../visual-cpp-samples.md)   
  [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

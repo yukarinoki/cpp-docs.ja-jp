@@ -2,12 +2,9 @@
 title: ビルド イベントの指定 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCEventTool.CommandLine
 - VC.Project.IVCEventTool.ExcludedFromBuild
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825eec000a2b08bd7a5a4d7769405df2f5570523
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-build-events"></a>ビルド イベントの指定
 
@@ -60,7 +55,7 @@ ms.lasthandoff: 01/03/2018
 
       複数の入力と出力ファイルは、MSBuild マクロでのシンボルで指定できます。 ファイルの場所または一連のファイルの名前を指定する方法については、次を参照してください。[のビルドのコマンドとプロパティの一般的なマクロ](../ide/common-macros-for-build-commands-and-properties.md)です。
 
-      '%' 文字は、各環境変数を置き換える、指定した場合、MSBuild によって予約されているため **%** 文字をエスケープ、 **%25** 16 進数のエスケープ シーケンスです。 たとえば、置き換える**%windir%**で**%25windir 25**です。 各 MSBuild が置き換えられます**%25**とシーケンス、  **%** 文字の環境変数にアクセスする前にします。
+      '%' 文字は、各環境変数を置き換える、指定した場合、MSBuild によって予約されているため**%** 文字をエスケープ、 **%25** 16 進数のエスケープ シーケンスです。 たとえば、置き換える **%windir%** で **%25windir 25**です。 各 MSBuild が置き換えられます **%25**とシーケンス、 **%** 文字の環境変数にアクセスする前にします。
 
    - **説明**、このイベントの説明を入力します。 説明に出力され、**出力**このイベントが発生したときにウィンドウです。
 

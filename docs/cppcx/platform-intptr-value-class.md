@@ -1,11 +1,8 @@
 ---
-title: "Platform::intptr 値クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::intptr 値クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/PlatformIntPtr::IntPtr
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93263e1347857b9c78a62852bea96e10c8d68fac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b54facc94be3f43b500e38371e0eba9e00d130a4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 値クラス
 サイズがプラットフォームに特有の (32 ビットまたは 64 ビット)、符号付きポインターまたはハンドルを表します。  
@@ -46,7 +41,7 @@ public value struct IntPtr
 |[IntPtr::op_explicit 演算子](#op-explicit)|指定されたパラメーターを IntPtr、または IntPtr 値へのポインターに変換します。|  
 |[IntPtr::ToInt32](#toint32)|現在の IntPtr を 32 ビット整数に変換します。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -107,5 +102,5 @@ int32 IntPtr::ToInt32();
  32 ビット整数。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)

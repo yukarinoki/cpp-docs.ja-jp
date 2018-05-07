@@ -1,13 +1,10 @@
 ---
-title: "ボタン スタイル |Microsoft ドキュメント"
-ms.custom: 
+title: ボタン スタイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BS_DEFPUSHBUTTON
 - BS_NOTIFY
@@ -67,17 +64,15 @@ helpviewer_keywords:
 - BS_TOP constant [MFC]
 - BS_TEXT constant
 ms.assetid: 41206f72-2b92-4250-ae32-31184046402f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ed2dcffbcd45215008b3d0caa802a5384367b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ec945c95b81570e52cca03ed4e52355350d8121
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="button-styles"></a>ボタン スタイル
 ここでは、ボタンの種類とスタイルについて説明します。  
@@ -142,7 +137,7 @@ ms.lasthandoff: 12/21/2017
 |`BS_MULTILINE`|文字列が長すぎてボタンの四角形の内部に 1 行で収まらない場合は、ボタン テキストを複数行に折り返します。|  
 |`BS_NOTIFY`|ボタンが `BN_DBLCLK`、`BN_KILLFOCUS`、`BN_SETFOCUS` の各通知メッセージを親ウィンドウに送信できるようになります。 ボタンは、このスタイルが指定されているかどうかに関係なく、`BN_CLICKED` 通知を送信します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC によって使用されているスタイル](../../mfc/reference/styles-used-by-mfc.md)   
  [CButton::Create](../../mfc/reference/cbutton-class.md#create) [ボタン スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775951)   
 

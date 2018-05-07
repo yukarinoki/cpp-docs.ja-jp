@@ -1,13 +1,10 @@
 ---
-title: "TN026: DDX ルーチンおよび DDV ルーチン |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN026: DDX ルーチンおよび DDV ルーチン |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>テクニカル ノート 26: DDX ルーチンおよび DDV ルーチン
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  データの初期値は、標準 C++ のコンス トラクターで、通常のブロック設定`//{{AFX_DATA_INIT`と`//}}AFX_DATA_INIT`コメントです。  
   
- `CWnd::UpdateData`初期化とエラーの呼び出しを処理を行う操作は、`DoDataExchange`です。  
+ `CWnd::UpdateData` 初期化とエラーの呼び出しを処理を行う操作は、`DoDataExchange`です。  
   
  呼び出すことができます`CWnd::UpdateData`データ交換と検証を実行するには、いつでもできます。 既定では`UpdateData`(TRUE) は、既定値で呼び出される`CDialog::OnOK`ハンドラーと`UpdateData`(FALSE) が既定値で呼び出される`CDialog::OnInitDialog`です。  
   
@@ -89,7 +84,7 @@ DDV_Custom(pDX,
   
  `DoDataExchange`メンバー関数は、非常によく似た、`Serialize`メンバー関数を取得または設定するデータを外部のフォームから (ここでは、ダイアログ ボックスで制御) から/クラスにメンバーのデータにします。 `pDX`パラメーターのデータ交換を行うためのコンテキストし、似ています、`CArchive`パラメーターを`CObject::Serialize`です。 `pDX` (、`CDataExchange`オブジェクト) が似てフラグ方向`CArchive`方向フラグします。  
   
--   場合**! m_bSaveAndValidate**コントロールにデータの状態を読み込みます。  
+-   場合 **! m_bSaveAndValidate**コントロールにデータの状態を読み込みます。  
   
 -   場合`m_bSaveAndValidate`、コントロールからデータの状態を設定します。  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: ウィンドウ (通常はダイアログ) コントロールを含むです。 これは、ddx _ および DDV_ グローバル関数の呼び出し元は 'this' を渡さずに各 DDX/DDV ルーチンにありません。  
   
-- `PrepareCtrl`、および`PrepareEditCtrl`: データ交換するためのダイアログ コントロールを準備します。 検証が失敗した場合、フォーカスを設定するため、そのコントロールのハンドルを格納します。 `PrepareCtrl`エディット コントロールの使用と`PrepareEditCtrl`エディット コントロールのために使用します。  
+- `PrepareCtrl`、および`PrepareEditCtrl`: データ交換するためのダイアログ コントロールを準備します。 検証が失敗した場合、フォーカスを設定するため、そのコントロールのハンドルを格納します。 `PrepareCtrl` エディット コントロールの使用と`PrepareEditCtrl`エディット コントロールのために使用します。  
   
 - **失敗**: ユーザーが入力のエラーを警告メッセージ ボックスの後に呼び出されます。 このルーチンは、最後のコントロールにフォーカスを復元します (最後の呼び出し`PrepareCtrl` / `PrepareEditCtrl`)、例外をスローします。 このメンバー関数は、ddx _ と DDV_ の両方のルーチンから呼び出すことができます。  
   
@@ -266,7 +261,7 @@ ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>
   
  s = 文字列  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

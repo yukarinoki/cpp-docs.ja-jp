@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -116,6 +116,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|別の場所を使用して PDB ファイルを保存します。|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|プログラム データベース (PDB) ファイルの作成時にプライベート シンボルを含めません。|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|ガイド付き最適化のプロファイル用の .pgd ファイルを指定します。|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**古い**スレッド セーフなインストルメント化により、PGO ビルドを作成します。|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|パフォーマンス ツール プロファイラーで使用できる出力ファイルを作成します。|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|.exe ヘッダーにチェックサムを設定します。|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|安全な例外ハンドラーのテーブルがイメージに含まれるように指定します。|
@@ -127,6 +128,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|リンカーによって生成されたタイプ ライブラリのリソース ID を指定します。|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|.tlb ファイル名およびその他の MIDL の出力ファイル名を指定します。|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|ターミナル サーバーでの実行専用のアプリケーションを作成します。|
+|[/USEPROFILE](../../build/reference/useprofile.md)|最適化されたイメージを作成するには、最適化トレーニング データをプロファイル ガイド付きの使用。|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|リンカーの進行状況メッセージを出力します。|
 |[/VERSION](../../build/reference/version-version-information.md)|バージョン番号を割り当てます。|
 |[/WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|指定された静的ライブラリからすべてのオブジェクト ファイルが含まれます。|

@@ -1,12 +1,9 @@
 ---
-title: "CBaseKeyFrame クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CBaseKeyFrame クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBaseKeyFrame
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dba8ba22325d3ea9e68411f0372cfac4d6b0659d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame クラス
 キーフレームの基本機能を実装します。  
@@ -71,7 +66,7 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|このキーフレームがストーリー ボードに追加されたかどうかを指定します。|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|このキーフレームをストーリー ボードの別の既存のキーフレームからのオフセットまたはいくつかの遷移の末尾に追加するかどうかを指定します。|  
@@ -85,10 +80,10 @@ class CBaseKeyFrame : public CObject;
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
  ストーリー ボードにキーフレームを追加します。  
   
 ```  
@@ -110,14 +105,14 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>コメント  
  ストーリー ボードにキーフレームを追加する、このメソッドが呼び出されます。  
   
-##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
  キーフレームのオブジェクトを構築します。  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
  キーフレームの基になる値を返します。  
   
 ```  
@@ -130,7 +125,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ### <a name="remarks"></a>コメント  
  これは、アクセサーを基になるキーフレーム値です。  
   
-##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
  ストーリー ボードにキーフレームが追加されているかどうかを指示します。  
   
 ```  
@@ -143,7 +138,7 @@ BOOL IsAdded() const;
 ### <a name="remarks"></a>コメント  
  基底クラスでも常に TRUE を返しますが、派生クラスでオーバーライドされます。  
   
-##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
  ストーリー ボードのオフセット、または移行後に、キーフレームを追加するかどうかを指定します。  
   
 ```  
@@ -156,26 +151,26 @@ BOOL IsKeyframeAtOffset() const;
 ### <a name="remarks"></a>コメント  
  ストーリー ボードのオフセット位置にキーフレームを追加する必要があるかどうかを指定します。 派生クラスでは、オフセットまたは遷移を指定する必要があります。  
   
-##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
  このキーフレームがストーリー ボードに追加されたかどうかを指定します。  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
  このキーフレームをストーリー ボードの別の既存のキーフレームからのオフセットまたはいくつかの遷移の末尾に追加するかどうかを指定します。  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
  Windows Animation API キーフレームを表します。 キーフレームが初期化されていない場合は、UI_ANIMATION_KEYFRAME_STORYBOARD_START 定義済みの値に設定されます。  
   
 ```  
 UI_ANIMATION_KEYFRAME m_keyframe;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

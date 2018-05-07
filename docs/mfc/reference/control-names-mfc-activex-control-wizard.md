@@ -2,12 +2,9 @@
 title: コントロール名、MFC ActiveX コントロール ウィザード |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.names
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f3444ec69ea96ee89ed7a0965f3575fc79e3b9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.openlocfilehash: 08a406bf633715f6a6e9546295da3b02a41f0063
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>[コントロール名] \(MFC ActiveX コントロール ウィザード)
 コントロール クラスとプロパティ ページ クラス、型名の名前を指定し、コントロールの識別子を入力します。 例外を除いて**短い名前**、他のすべてのフィールドが個別に編集していないことができます。 テキストを変更する場合**短い名前**、このページの他のすべてのフィールドの名前に、変更が反映されます。 この名前付けの動作は、コントロールを開発する際に簡単に識別できるように、すべての名前に設計されています。  
@@ -83,7 +78,7 @@ ms.lasthandoff: 12/21/2017
   
  *ProjectName.NewShortName*PropPage.1  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)   
  [アプリケーションの設定、MFC ActiveX コントロール ウィザード](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
  [コントロールの設定、MFC ActiveX コントロール ウィザード](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   

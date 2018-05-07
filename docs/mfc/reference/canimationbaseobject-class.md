@@ -1,12 +1,9 @@
 ---
-title: "CAnimationBaseObject クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CAnimationBaseObject クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationBaseObject
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35af11c38c70513cb2225bbeb8e74c4ab61c8cc5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject クラス
 すべてのアニメーション オブジェクトの基底クラスです。  
@@ -117,7 +112,7 @@ class CAnimationBaseObject : public CObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|関連する遷移が自動的に破棄する必要があるかどうかを指定します。|  
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|ユーザー定義データを格納します。|  
@@ -133,17 +128,17 @@ class CAnimationBaseObject : public CObject;
   
  `CAnimationBaseObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationbaseobject"></a>CAnimationBaseObject:: ~ CAnimationBaseObject  
+##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject:: ~ CAnimationBaseObject  
  デストラクターです。 アニメーション オブジェクトが破棄されるときに呼び出されます。  
   
 ```  
 virtual ~CAnimationBaseObject();
 ```  
   
-##  <a name="applytransitions"></a>CAnimationBaseObject::ApplyTransitions  
+##  <a name="applytransitions"></a>  CAnimationBaseObject::ApplyTransitions  
  カプセル化されたアニメーション変数のストーリー ボードへの切り替えを追加します。  
   
 ```  
@@ -165,7 +160,7 @@ virtual BOOL ApplyTransitions(
 ### <a name="remarks"></a>コメント  
  AddTransition (派生クラスではオーバー ロードされたメソッド) に、ストーリー ボードに追加されている、関連する遷移を追加します。  
   
-##  <a name="canimationbaseobject"></a>CAnimationBaseObject::CAnimationBaseObject  
+##  <a name="canimationbaseobject"></a>  CAnimationBaseObject::CAnimationBaseObject  
  アニメーション オブジェクトを構築します。  
   
 ```  
@@ -191,7 +186,7 @@ CAnimationBaseObject(
 ### <a name="remarks"></a>コメント  
  アニメーション オブジェクトを構築し、既定のオブジェクト ID (0) とグループ ID (0) を割り当てます。  
   
-##  <a name="cleartransitions"></a>CAnimationBaseObject::ClearTransitions  
+##  <a name="cleartransitions"></a>  CAnimationBaseObject::ClearTransitions  
  すべての関連する遷移を削除します。  
   
 ```  
@@ -205,7 +200,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ### <a name="remarks"></a>コメント  
  関連するすべての遷移を削除し、bAutodestroy または m_bAutodestroyTransitions フラグが TRUE の場合は、それらを破棄します。 遷移は、スタックにない割り当てられている場合にのみ、自動的に破棄する必要があります。 上記のフラグが FALSE の場合は、遷移のみ関連する遷移の内部リストから削除されます。  
   
-##  <a name="containsvariable"></a>CAnimationBaseObject::ContainsVariable  
+##  <a name="containsvariable"></a>  CAnimationBaseObject::ContainsVariable  
  アニメーション オブジェクトが特定のアニメーション変数を含めるかどうかを判断します。  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ### <a name="remarks"></a>コメント  
  このメソッドは、pVariable で指定されたアニメーション変数がアニメーション オブジェクト内に含まれるかどうかを決定する使用できます。 種類に応じて、アニメーション オブジェクトは、いくつかのアニメーション変数を含めることがあります。 たとえば、CAnimationColor には、3 つの変数が各色要素 (赤、緑、および青) のいずれかが含まれています。 アニメーション変数の値が変更されたときに、Windows Animation API は ValueChanged または IntegerValueChanged イベント (有効な場合)、および、このイベントのパラメーターはアニメーション変数の IUIAnimationVariable インターフェイスへのポインターを送信します。 このメソッドは、格納されている COM オブジェクトへのポインターからアニメーションへのポインターを取得するのに役立ちます。  
   
-##  <a name="createtransitions"></a>CAnimationBaseObject::CreateTransitions  
+##  <a name="createtransitions"></a>  CAnimationBaseObject::CreateTransitions  
  アニメーション オブジェクトに関連付けられている遷移を作成します。  
   
 ```  
@@ -235,7 +230,7 @@ BOOL CreateTransitions();
 ### <a name="remarks"></a>コメント  
  アニメーションの派生オブジェクトにカプセル化されたアニメーション変数の一覧をループ処理し、アニメーションの各変数に関連付けられている遷移を作成します。  
   
-##  <a name="detachfromcontroller"></a>CAnimationBaseObject::DetachFromController  
+##  <a name="detachfromcontroller"></a>  CAnimationBaseObject::DetachFromController  
  親アニメーション コント ローラーからのアニメーション オブジェクトをデタッチします。  
   
 ```  
@@ -245,7 +240,7 @@ void DetachFromController();
 ### <a name="remarks"></a>コメント  
  このメソッドは内部的に使用されます。  
   
-##  <a name="enableintegervaluechangedevent"></a>CAnimationBaseObject::EnableIntegerValueChangedEvent  
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationBaseObject::EnableIntegerValueChangedEvent  
  整数値が変更されたイベント ハンドラーを設定します。  
   
 ```  
@@ -264,7 +259,7 @@ virtual void EnableIntegerValueChangedEvent(
 ### <a name="remarks"></a>コメント  
  整数値が変更されたイベント ハンドラーが有効になっている場合は、CAnimationController 派生クラスでオーバーライドする必要がある CAnimationController::OnAnimationIntegerValueChanged メソッドでは、このイベントを処理できます。 アニメーションの整数値が変更されるたびに、このメソッドが呼び出されます。  
   
-##  <a name="enablevaluechangedevent"></a>CAnimationBaseObject::EnableValueChangedEvent  
+##  <a name="enablevaluechangedevent"></a>  CAnimationBaseObject::EnableValueChangedEvent  
  イベント ハンドラーの値が変更を設定します。  
   
 ```  
@@ -283,7 +278,7 @@ virtual void EnableValueChangedEvent(
 ### <a name="remarks"></a>コメント  
  値が変更されたイベント ハンドラーが有効になっている場合は、CAnimationController 派生クラスでオーバーライドする必要がある CAnimationController::OnAnimationValueChanged メソッドでは、このイベントを処理できます。 アニメーションの値が変更されるたびに、このメソッドが呼び出されます。  
   
-##  <a name="getanimationvariablelist"></a>CAnimationBaseObject::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationBaseObject::GetAnimationVariableList  
  アニメーションが含まれている変数へのポインターを収集します。  
   
 ```  
@@ -299,7 +294,7 @@ virtual void GetAnimationVariableList(
 ### <a name="remarks"></a>コメント  
  これは、派生クラスでオーバーライドされる必要がある純粋仮想メソッドです。 種類に応じて、アニメーション オブジェクトには、1 つまたは複数のアニメーション変数が含まれています。 たとえば、CAnimationPoint は、X 座標と Y 座標はそれぞれの 2 つの変数を格納します。 基底クラス CAnimationBaseObject、アニメーション変数の一覧で操作を実行する一部のジェネリック メソッドの実装: ApplyTransitions、ClearTransitions、EnableValueChangedEvent、EnableIntegerValueChangedEvent です。 これらのメソッドは GetAnimationVariableList で、特定のアニメーション オブジェクトに含まれる実際のアニメーションの変数が派生クラスに入力されますを呼び出して一覧をループし、必要なアクションを実行します。 アニメーション オブジェクトを作成する場合は、そのオブジェクトに含まれるすべてのアニメーション変数を lst を追加する必要があります。  
   
-##  <a name="getautodestroytransitions"></a>CAnimationBaseObject::GetAutodestroyTransitions  
+##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions  
  関連する遷移が自動的に破棄されるかどうかを指示します。  
   
 ```  
@@ -312,7 +307,7 @@ BOOL GetAutodestroyTransitions() const;
 ### <a name="remarks"></a>コメント  
  既定ではこのフラグは TRUE です。 呼び出し元アプリケーションによって遷移の割り当てを解除する必要があります、スタック上のトランジションを割り当てられている場合のみ、このフラグを設定します。  
   
-##  <a name="getgroupid"></a>CAnimationBaseObject::GetGroupID  
+##  <a name="getgroupid"></a>  CAnimationBaseObject::GetGroupID  
  現在のグループ ID を返します。  
   
 ```  
@@ -325,7 +320,7 @@ UINT32 GetGroupID() const;
 ### <a name="remarks"></a>コメント  
  このメソッドを使用して、グループ ID を取得するには グループ ID が設定されていない明示的にコンス トラクターや SetID の場合は 0 の。  
   
-##  <a name="getobjectid"></a>CAnimationBaseObject::GetObjectID  
+##  <a name="getobjectid"></a>  CAnimationBaseObject::GetObjectID  
  現在のオブジェクト ID を返します。  
   
 ```  
@@ -338,7 +333,7 @@ UINT32 GetObjectID() const;
 ### <a name="remarks"></a>コメント  
  このメソッドを使用して、オブジェクト ID を取得するには オブジェクト ID が設定されていない明示的にコンス トラクターや SetID の場合は 0 の。  
   
-##  <a name="getuserdata"></a>CAnimationBaseObject::GetUserData  
+##  <a name="getuserdata"></a>  CAnimationBaseObject::GetUserData  
  ユーザー定義データを返します。  
   
 ```  
@@ -351,42 +346,42 @@ DWORD GetUserData() const;
 ### <a name="remarks"></a>コメント  
  実行時にカスタム データを取得するには、このメソッドを呼び出します。 明示的にコンス トラクター、または SetUserData で初期化されてがいない場合は、返された値を 0 になります。  
   
-##  <a name="m_bautodestroytransitions"></a>CAnimationBaseObject::m_bAutodestroyTransitions  
+##  <a name="m_bautodestroytransitions"></a>  CAnimationBaseObject::m_bAutodestroyTransitions  
  関連する遷移が自動的に破棄する必要があるかどうかを指定します。  
   
 ```  
 BOOL m_bAutodestroyTransitions;  
 ```  
   
-##  <a name="m_dwuserdata"></a>CAnimationBaseObject::m_dwUserData  
+##  <a name="m_dwuserdata"></a>  CAnimationBaseObject::m_dwUserData  
  ユーザー定義データを格納します。  
   
 ```  
 DWORD m_dwUserData;  
 ```  
   
-##  <a name="m_ngroupid"></a>CAnimationBaseObject::m_nGroupID  
+##  <a name="m_ngroupid"></a>  CAnimationBaseObject::m_nGroupID  
  アニメーション オブジェクトのグループ ID を指定します。  
   
 ```  
 UINT32 m_nGroupID;  
 ```  
   
-##  <a name="m_nobjectid"></a>CAnimationBaseObject::m_nObjectID  
+##  <a name="m_nobjectid"></a>  CAnimationBaseObject::m_nObjectID  
  アニメーション オブジェクトのオブジェクト ID を指定します。  
   
 ```  
 UINT32 m_nObjectID;  
 ```  
   
-##  <a name="m_pparentcontroller"></a>CAnimationBaseObject::m_pParentController  
+##  <a name="m_pparentcontroller"></a>  CAnimationBaseObject::m_pParentController  
  親アニメーション コント ローラーへのポインター。  
   
 ```  
 CAnimationController* m_pParentController;  
 ```  
   
-##  <a name="setautodestroytransitions"></a>CAnimationBaseObject::SetAutodestroyTransitions  
+##  <a name="setautodestroytransitions"></a>  CAnimationBaseObject::SetAutodestroyTransitions  
  切り替え効果を自動的に破棄する順序付けをするフラグを設定します。  
   
 ```  
@@ -400,7 +395,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ### <a name="remarks"></a>コメント  
  新しい演算子を使用して transition オブジェクトに割り当てている場合にのみ、このフラグを設定します。 自動の破棄、何らかの理由 transition オブジェクトは、スタックに割り当てられたフラグが FALSE にする必要があります。 既定ではこのフラグは TRUE です。  
   
-##  <a name="setid"></a>CAnimationBaseObject::SetID  
+##  <a name="setid"></a>  CAnimationBaseObject::SetID  
  新しい Id を設定します。  
   
 ```  
@@ -419,7 +414,7 @@ void SetID(
 ### <a name="remarks"></a>コメント  
  オブジェクト ID とグループ ID を変更するのには、します。 新しいグループの ID と異なる場合、現在の ID、アニメーション オブジェクトは、別のグループ (新しいグループは作成されません、必要な場合) に移動されます。  
   
-##  <a name="setparentanimationobjects"></a>CAnimationBaseObject::SetParentAnimationObjects  
+##  <a name="setparentanimationobjects"></a>  CAnimationBaseObject::SetParentAnimationObjects  
  アニメーション変数、アニメーション オブジェクト、およびそのコンテナーに含まれている間のリレーションシップを確立します。  
   
 ```  
@@ -429,7 +424,7 @@ virtual void SetParentAnimationObjects();
 ### <a name="remarks"></a>コメント  
  これは、アニメーション オブジェクト、およびそのコンテナーに含まれている、アニメーション変数の間のリレーションシップを確立するために使用できるヘルパーです。 アニメーション変数をループ処理し、各アニメーション変数の親アニメーション オブジェクトへのバック ポインターを設定します。 CAnimationBaseObject::ApplyTransitions で実際の関係が確立された現在の実装、したがってバック ポインターは設定されません CAnimationGroup::Animate が呼び出されるまで。 CAnimationVariable (使用 CAnimationVariable::GetParentAnimationObject) からオブジェクトのイベントと親アニメーションを取得する必要性を処理するときに、リレーションシップを知ることが便利な場合がありますに。  
   
-##  <a name="setuserdata"></a>CAnimationBaseObject::SetUserData  
+##  <a name="setuserdata"></a>  CAnimationBaseObject::SetUserData  
  ユーザー定義データを設定します。  
   
 ```  
@@ -443,5 +438,5 @@ void SetUserData (DWORD dwUserData);
 ### <a name="remarks"></a>コメント  
  アニメーション オブジェクトとカスタム データを関連付けるには、このメソッドを使用します。 このデータを取得できます後で実行時に GetUserData で。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

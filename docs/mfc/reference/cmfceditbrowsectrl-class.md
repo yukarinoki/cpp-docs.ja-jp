@@ -1,12 +1,9 @@
 ---
-title: "CMFCEditBrowseCtrl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCEditBrowseCtrl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCEditBrowseCtrl
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl クラス
 `CMFCEditBrowseCtrl`クラスは、参照機能付きコントロール、これは、[参照] ボタンを含む (オプション) を編集可能なテキスト ボックスをサポートします。 ユーザーが参照ボタンをクリックすると、このコントロールはカスタム動作を実行するか、ファイル参照またはフォルダー参照を含む標準ダイアログ ボックスを表示します。  
@@ -131,10 +126,10 @@ class CMFCEditBrowseCtrl : public CEdit
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxeditbrowsectrl.h  
   
-##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton  
  表示または現在の参照機能付きコントロールでは、参照ボタンは表示されません。  
   
 ```  
@@ -145,7 +140,7 @@ void EnableBrowseButton(
   
 ### <a name="parameters"></a>パラメーター  
  `bEnable`  
- `TRUE`[参照] ボタンを表示するには`FALSE` [参照] ボタンを表示しないようにします。 既定値は `TRUE` です。  
+ `TRUE` [参照] ボタンを表示するには`FALSE` [参照] ボタンを表示しないようにします。 既定値は `TRUE` です。  
   
  `szLabel`  
  [参照] ボタンに表示されるラベルです。 既定値は" **.**".  
@@ -155,7 +150,7 @@ void EnableBrowseButton(
   
  場合、`bEnable`パラメーターは`TRUE`、コントロールのブラウズ モードは`BrowseMode_Default`以外の場合、ブラウズ モードは`BrowseMode_None`します。 ブラウズ モードの詳細については、次を参照してください。、 [GetMode](#getmode)メソッドです。  
   
-##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton  
  現在の参照機能付きコントロールで参照ボタンを表示し、コントロールを*ファイル参照*モード。  
   
 ```  
@@ -180,7 +175,7 @@ void EnableFileBrowseButton(
   
  使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](https://msdn.microsoft.com/library/ms646839.aspx)です。  
   
-##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  現在の参照機能付きコントロールで参照ボタンを表示し、コントロールを*フォルダー参照*モード。  
   
 ```  
@@ -190,7 +185,7 @@ void EnableFolderBrowseButton();
 ### <a name="remarks"></a>コメント  
  フォルダー参照モードでは、参照機能付きコントロール、ユーザーが、参照ボタンをクリックして、ときに、コントロールは標準のフォルダーの選択 ダイアログ ボックスを表示します。  
   
-##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode  
  現在の参照機能付きコントロールのブラウズ モードを取得します。  
   
 ```  
@@ -212,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ### <a name="remarks"></a>コメント  
  既定では、`CMFCEditBrowseCtrl`オブジェクトが初期化`BrowseMode_None`モード。 ブラウズ モードでの変更、 [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)、 [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)、および[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)メソッドです。  
   
-##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate  
  参照操作の結果を含む参照機能付きコントロールを更新した後に、フレームワークによって呼び出されます。  
   
 ```  
@@ -222,7 +217,7 @@ virtual void OnAfterUpdate();
 ### <a name="remarks"></a>コメント  
  カスタム アクションを実装する派生クラスでこのメソッドをオーバーライドします。  
   
-##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse  
  ユーザーが参照機能付きコントロールの参照ボタンをクリックした後に、フレームワークによって呼び出されます。  
   
 ```  
@@ -232,7 +227,7 @@ virtual void OnBrowse();
 ### <a name="remarks"></a>コメント  
  このメソッドを使用すると、ユーザーが参照機能付きコントロールの参照ボタンをクリックしたときに、カスタム コードを実行します。 独自のクラスを派生させる、`CMFCEditBrowseCtrl`クラスし、オーバーライドの`OnBrowse`メソッドです。 このメソッドでカスタム参照アクションを実装し、必要に応じて参照機能付きコントロールのテキスト ボックスを更新します。 アプリケーションで使用して、 [EnableBrowseButton](#enablebrowsebutton)メソッドに参照機能付きコントロールを配置する*カスタム参照*モード。  
   
-##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout  
  現在の参照機能付きコントロールを再描画します。  
   
 ```  
@@ -242,7 +237,7 @@ virtual void OnChangeLayout();
 ### <a name="remarks"></a>コメント  
  フレームワークは、ブラウズ モードの参照機能付きコントロール変更されるときに、このメソッドを呼び出します。 詳細については、次を参照してください。 [CMFCEditBrowseCtrl::GetMode](#getmode)です。  
   
-##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton  
  参照機能付きコントロールに、参照ボタンを描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -261,15 +256,15 @@ virtual void OnDrawBrowseButton(
  [参照] ボタンの外接する四角形。  
   
  `bIsButtonPressed`  
- `TRUE`場合は、ボタンが押されたです。それ以外の場合、`FALSE`です。  
+ `TRUE` 場合は、ボタンが押されたです。それ以外の場合、`FALSE`です。  
   
  `bIsButtonHot`  
- `TRUE`場合は、ボタンが強調表示されます。それ以外の場合、`FALSE`です。  
+ `TRUE` 場合は、ボタンが強調表示されます。それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  [参照] ボタンの外観をカスタマイズする派生クラスでは、この関数をオーバーライドします。  
   
-##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage  
  参照機能付きコントロールの参照ボタンをカスタム イメージを設定します。  
   
 ```  
@@ -296,12 +291,12 @@ void SetBrowseButtonImage(UINT uiBmpResId);
  ビットマップのリソース ID です。  
   
  `bAutoDestroy`  
- `TRUE`このメソッドを終了時に指定されたアイコンまたはビットマップを削除するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` このメソッドを終了時に指定されたアイコンまたはビットマップを削除するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  [参照] ボタンにカスタム イメージを適用するのにには、このメソッドを使用します。 既定では、フレームワークときに取得する標準的なイメージでは、参照機能付きコントロール*ファイル参照*または*フォルダー参照*モード。  
   
-##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName  
  無効なファイル名が編集コントロールに入力されたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -317,6 +312,6 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)

@@ -1,13 +1,10 @@
 ---
-title: "CToolTipCtrl を使用して作成して CToolTipCtrl オブジェクトを操作する |Microsoft ドキュメント"
-ms.custom: 
+title: CToolTipCtrl を使用して作成して CToolTipCtrl オブジェクトを操作する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolTipCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da4c98e327d2d78050410e75869c894d73324281
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f2143ea37cfe9448e43aacfa75622beab93d2fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する方法
 例を次に示します[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)使用状況。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  呼び出す[GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount)ツール ヒント コントロールに登録されているツールの数を取得します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CToolTipCtrl の使い方](../mfc/using-ctooltipctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

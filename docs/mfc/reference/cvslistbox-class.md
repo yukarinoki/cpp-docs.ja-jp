@@ -1,12 +1,9 @@
 ---
-title: "CVSListBox クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CVSListBox クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CVSListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 `CVSListBox`クラスが編集可能なリスト コントロールをサポートします。  
@@ -114,10 +109,10 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>  CVSListBox::AddItem  
  リスト コントロールに文字列を追加します。  
   
 ```  
@@ -143,7 +138,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>コメント  
  使用して、 [CVSListBox::GetItemData](#getitemdata)で指定された値を取得するメソッド、`dwData`パラメーター。 この値は、アプリケーション固有の整数またはその他のデータへのポインターにすることができます。  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  `CVSListBox` オブジェクトを構築します。  
   
 ```  
@@ -154,7 +149,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
  リスト コントロール項目のテキストの編集操作を開始します。  
   
 ```  
@@ -166,12 +161,12 @@ virtual BOOL EditItem(int iIndex);
  リスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`編集操作が正常に開始する場合それ以外の場合、`FALSE`です。  
+ `TRUE` 編集操作が正常に開始する場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  項目のラベルをダブルクリックするか、キーを押して、ユーザーが編集操作を開始、 **F2**または**space キー**キーの項目にフォーカスがあるとします。  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
  編集可能なリスト コントロール内の文字列の数を取得します。  
   
 ```  
@@ -184,7 +179,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>コメント  
  数が 1 つの最後の項目のインデックス値より大きいインデックスが 0 から始まるため、注意してください。  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
  編集可能なリスト コントロール項目に関連付けられているアプリケーション固有の 32 ビット値を取得します。  
   
 ```  
@@ -201,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>コメント  
  使用して、 [CVSListBox::SetItemData](#setitemdata)または[CVSListBox::AddItem](#additem)に 32 ビット値をリスト コントロール項目に関連付けるメソッド。 この値は、アプリケーション固有の整数またはその他のデータへのポインターにすることができます。  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
  編集可能なリスト コントロール項目のテキストを取得します。  
   
 ```  
@@ -217,7 +212,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
  現在の埋め込みリスト ビュー コントロールにハンドルを返します。  
   
 ```  
@@ -230,7 +225,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>コメント  
  このメソッドを使用して、サポートする埋め込みリスト ビュー コントロールへのハンドルを取得、`CVSListBox`クラスです。  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
  編集可能なリスト コントロールで現在選択されている項目の 0 から始まるインデックスを取得します。  
   
 ```  
@@ -242,7 +237,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
  編集可能なリスト コントロールから項目を削除します。  
   
 ```  
@@ -254,11 +249,11 @@ virtual BOOL RemoveItem(int iIndex);
  編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`指定した項目が削除された場合それ以外の場合、`FALSE`です。  
+ `TRUE` 指定した項目が削除された場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
  編集可能なリスト コントロール文字列を選択します。  
   
 ```  
@@ -270,12 +265,12 @@ virtual BOOL SelectItem(int iItem);
  編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`このメソッドが成功した場合それ以外の場合、`FALSE`です。  
+ `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドは、指定した項目を選択し、必要な場合は、ビューに、項目をスクロールします。  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
  アプリケーション固有の 32 ビット値を編集可能なリスト コントロール項目に関連付けます。  
   
 ```  
@@ -293,6 +288,6 @@ virtual void SetItemData(
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)

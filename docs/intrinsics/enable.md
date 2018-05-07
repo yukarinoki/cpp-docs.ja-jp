@@ -1,12 +1,9 @@
 ---
-title: _enable | Microsoft Docs
-ms.custom: 
+title: 有効にする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _enable
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab8aa486c946cba692a646b9aaaea63d84a5035c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 86e6c8ba9fc1b4dff9b1ad947a770ae901937611
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enable"></a>_enable
 **Microsoft 固有の仕様**  
@@ -41,11 +36,11 @@ ms.lasthandoff: 02/23/2018
 void _enable(void);  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`_enable`|x86、ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_enable`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
@@ -56,5 +51,5 @@ void _enable(void);
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

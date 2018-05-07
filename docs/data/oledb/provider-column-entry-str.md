@@ -1,12 +1,9 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_STR |Microsoft ドキュメント"
-ms.custom: 
+title: PROVIDER_COLUMN_ENTRY_STR |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROVIDER_COLUMN_ENTRY_STR
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROVIDER_COLUMN_ENTRY_STR macro
 ms.assetid: f1c27dd6-9ab8-4821-8685-d4dd15e76e88
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40f6b44ad4a3154dbcdcfc1d3daca6e9c37cb63d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9ede31951c916c8b70b4942c3077442b5e2e3313
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providercolumnentrystr"></a>PROVIDER_COLUMN_ENTRY_STR
 プロバイダーでサポートされている特定の列を表します。  
@@ -54,10 +49,10 @@ PROVIDER_COLUMN_ENTRY_STR(name
 ## <a name="example"></a>例  
  参照してください[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート用マクロ](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)   

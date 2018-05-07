@@ -1,12 +1,9 @@
 ---
-title: "_InterlockedXor の組み込み関数 |Microsoft ドキュメント"
-ms.custom: 
+title: _InterlockedXor の組み込み関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedXor_nf
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b648a0130a72a27b965906bd72aa17c54b8ef2ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7dea8e222660825824c8dc02405832da4395b69f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor の組み込み関数
 **Microsoft 固有の仕様**  
@@ -171,14 +166,14 @@ __int64 _InterlockedXor64_rel(
 ## <a name="return-value"></a>戻り値  
  最初のオペランドの元の値。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|ヘッダー|  
 |---------------|------------------|------------|  
-|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
 |`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|  
 |`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
-|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
   
 ## <a name="remarks"></a>コメント  
  各関数の名前に含まれる数値は、引数のビット サイズを示しています。  
@@ -214,6 +209,6 @@ int main()
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

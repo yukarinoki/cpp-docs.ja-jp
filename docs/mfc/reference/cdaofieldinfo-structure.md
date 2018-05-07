@@ -2,12 +2,9 @@
 title: CDaoFieldInfo 構造体 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 構造体
 `CDaoFieldInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているフィールド オブジェクトに関する情報が含まれています。  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary**長いバイナリ (OLE オブジェクト) です。 MFC クラスを使用する場合があります[CByteArray](../../mfc/reference/cbytearray-class.md)クラスではなく`CLongBinary`として`CByteArray`が豊富な使用を簡単にします。  
   
-- **dbMemo**メモ; を参照してください MFC クラス`CString`  
+- **dbMemo**メモ; を参照してください MFC クラス `CString`  
   
 - **データと**グローバルに一意の識別子/ユニバーサル一意の識別子リモート プロシージャ呼び出しで使用します。 詳細については、DAO ヘルプの「型プロパティ」を参照してください。  
   
@@ -159,12 +154,12 @@ struct CDaoFieldInfo
   
  オブジェクトのプロパティを確認するための使用だけでなく使用することも`CDaoFieldInfo`テーブル定義内の新しいフィールドを作成するための入力パラメーターを構築するためにします。 簡単なオプションは使用できます、このタスクをより細かく制御する場合は、バージョンを使用することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)を受け取る、`CDaoFieldInfo`パラメーター。  
   
- によって取得される情報、 `GetFieldInfo` (フィールドを含むクラス) のメンバー関数は、`CDaoFieldInfo`構造体。 呼び出す、 `GetFieldInfo` Fields コレクションを持つフィールド オブジェクトが格納されている親オブジェクトのメンバー関数。 `CDaoFieldInfo`定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoFieldInfo`オブジェクト。  
+ によって取得される情報、 `GetFieldInfo` (フィールドを含むクラス) のメンバー関数は、`CDaoFieldInfo`構造体。 呼び出す、 `GetFieldInfo` Fields コレクションを持つフィールド オブジェクトが格納されている親オブジェクトのメンバー関数。 `CDaoFieldInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoFieldInfo`オブジェクト。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)   
  [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)   

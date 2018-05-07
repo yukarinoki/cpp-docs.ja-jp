@@ -1,29 +1,24 @@
 ---
-title: "再頒布可能パッケージ (C++) を使用してアプリを配置 |Microsoft ドキュメント"
-ms.custom: 
+title: 再頒布可能パッケージ (C++) を使用してアプリを配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3b048f896f0cfd532cb3000617756af2dca92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37bba00efdf0368973fa4ffbac1cbc6bb6298ce1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置
 この資料では、Visual C 再頒布可能パッケージを使用して、Visual C アプリケーションを展開する方法について説明します。  
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
     10. **完了メッセージ**] ページで、[**メッセージはありません**を選択し**次**です。  
   
-    11. **パッケージ名とオプション**] ページで、select、自己解凍形式のセットアップ ファイルの名前を入力、**パッケージ内に長いファイル名を使用してファイルを格納**オプションをクリックして**[次へ**. ファイル名の末尾には、Setup.exe—for 例では、MyMFCApplicationSetup.exe をする必要があります。  
+    11. **パッケージ名とオプション**] ページで、select、自己解凍形式のセットアップ ファイルの名前を入力、**パッケージ内に長いファイル名を使用してファイルを格納**オプションをクリックして **[次へ**. ファイル名の末尾には、Setup.exe—for 例では、MyMFCApplicationSetup.exe をする必要があります。  
   
     12. **再起動を構成する**] ページで、[**再起動しない**を選択し**次**です。  
   
@@ -97,5 +92,5 @@ ms.lasthandoff: 12/21/2017
         > [!IMPORTANT]
         >  インストーラーを調べるには、ランタイムのバージョンがインストールされているには、レジストリ キー \HKLM\SOFTWARE\Microsoft\VisualStudio\11.0\VC\Runtimes を確認\\[platform] です。 現在インストールされているバージョンをインストールしようとして、インストーラーのバージョンよりも新しい場合は、インストーラーは、古いバージョンをインストールしなくても成功を返し、コントロール パネルの インストールされているプログラム ページの追加のエントリのままにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [配置例](../ide/deployment-examples.md)

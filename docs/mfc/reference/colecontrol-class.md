@@ -1,12 +1,9 @@
 ---
-title: "COleControl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: COleControl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 OLE コントロールを開発するための強力な基底クラスです。  
@@ -899,7 +894,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
  ポインター、`CPropExchange`オブジェクト。 フレームワークは、方向など、プロパティの交換のコンテキストを確立するには、このオブジェクトを提供します。  
   
 ### <a name="remarks"></a>コメント  
- 呼び出しでこの関数は通常、 **px _**読み込みまたは OLE コントロールの特定のユーザー定義プロパティを格納する関数のファミリです。  
+ 呼び出しでこの関数は通常、 **px _** 読み込みまたは OLE コントロールの特定のユーザー定義プロパティを格納する関数のファミリです。  
   
  OLE コントロール プロジェクトを作成するコントロールのウィザードを使用して、この関数のオーバーライドされたバージョンがシリアル化がサポートするストック プロパティ`COleControl`基底クラスの関数を呼び出して`COleControl::DoPropExchange`です。 OLE コントロールにユーザー定義のプロパティを追加すると、新しいプロパティをシリアル化するには、この関数を変更する必要があります。 シリアル化の詳細については、記事を参照してください。 [ActiveX コントロール: シリアル化する](../../mfc/mfc-activex-controls-serializing.md)です。  
   
@@ -1101,7 +1096,7 @@ void AFX_CDECL FireEvent(
 ### <a name="remarks"></a>コメント  
  通常この関数は呼び出せません直接です。 代わりには、コントロールのクラス宣言のイベント マップのセクションでイベントを発生させる関数を呼び出します。  
   
- `pbParams`引数は、のスペースで区切られたリスト**vts _**です。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 次の値を指定できます。  
+ `pbParams`引数は、のスペースで区切られたリスト**vts _** です。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 次の値を指定できます。  
   
 |シンボル|パラメーターの型|  
 |------------|--------------------|  
@@ -1426,7 +1421,7 @@ BOOL GetAmbientProperty(
  アンビエント プロパティがサポートされる場合は 0 以外。それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>コメント  
- 使用する場合`GetAmbientProperty`アンビエント DisplayName と ScaleUnits プロパティを取得するには、次のように設定します。`vtProp`に`VT_BSTR`と`pvProp`に**CString\***です。 アンビエントのフォント プロパティを取得する場合は、設定`vtProp`に**VT_FONT**と`pvProp`に**LPFONTDISP\***です。  
+ 使用する場合`GetAmbientProperty`アンビエント DisplayName と ScaleUnits プロパティを取得するには、次のように設定します。`vtProp`に`VT_BSTR`と`pvProp`に**CString\*** です。 アンビエントのフォント プロパティを取得する場合は、設定`vtProp`に**VT_FONT**と`pvProp`に**LPFONTDISP\*** です。  
   
  関数が既に提供されて共通のアンビエント プロパティのように注意してください[AmbientBackColor](#ambientbackcolor)と[AmbientFont](#ambientfont)です。  
   
@@ -2308,7 +2303,7 @@ virtual void OnForeColorChanged();
  このプロパティが変更された後に通知を使用する場合は、この関数をオーバーライドします。  
   
 ##  <a name="onfreezeevents"></a>  COleControl::OnFreezeEvents  
- コンテナーの呼び出し後に、フレームワークによって呼び出されます**:freezeevents**です。  
+ コンテナーの呼び出し後に、フレームワークによって呼び出されます **:freezeevents**です。  
   
 ```  
 virtual void OnFreezeEvents(BOOL bFreeze);
@@ -2892,7 +2887,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>コメント  
  コントロール オブジェクトを使用して、以前に適用した指定の形式は、[に](../../mfc/reference/coledatasource-class.md#delayrenderdata)または[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)メンバー関数の遅延レンダリングします。 この関数の既定の実装を呼び出す`OnRenderFileData`または`OnRenderGlobalData`、それぞれ、指定されたストレージ メディアがメモリまたはファイルの場合。 要求された形式の場合`CF_METAFILEPICT`永続的なプロパティの形式を設定するか、既定の実装は、適切なデータを表示し、0 以外を返します。 それ以外の場合は 0 を返し、何も行われません。  
   
- 場合*lpStgMedium tymed]-> [*は**TYMED_NULL**、 **STGMEDIUM**割り当てられで指定された入力*lpFormatEtc tymed]->[*. ない場合**TYMED_NULL**、 **STGMEDIUM**のデータが配置を入力する必要があります。  
+ 場合*lpStgMedium tymed]-> [* は**TYMED_NULL**、 **STGMEDIUM**割り当てられで指定された入力*lpFormatEtc tymed]->[*. ない場合**TYMED_NULL**、 **STGMEDIUM**のデータが配置を入力する必要があります。  
   
  要求された形式および中規模でデータを提供するには、この関数をオーバーライドします。 によっては、データを代わりにこの関数の他のバージョンの 1 つを上書きする可能性があります。 データが小規模で固定サイズの場合は、オーバーライド`OnRenderGlobalData`です。 データをファイル内や可変サイズのオーバーライド`OnRenderFileData`です。  
   
@@ -3702,7 +3697,7 @@ void TransformCoords(
   
 - **XFORMCOORDS_HIMETRICTOCONTAINER**変換**HIMETRIC**ユニットまで、コンテナーの単位。  
   
-- **XFORMCOORDS_CONTAINERTOHIMETRIC** Transform the container's units to **HIMETRIC** units.  
+- **XFORMCOORDS_CONTAINERTOHIMETRIC**するコンテナーの単位変換**HIMETRIC**単位です。  
   
 ### <a name="remarks"></a>コメント  
  最初の 2 つのフラグ、 **XFORMCOORDS_POSITION**と**XFORMCOORDS_SIZE**座標が、位置またはサイズとして扱われるかどうか。 残りの 2 つのフラグは、変換の方向を示します。  

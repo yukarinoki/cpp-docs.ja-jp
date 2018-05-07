@@ -1,12 +1,9 @@
 ---
-title: "hash_multiset::size (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_multiset::size (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::size
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - size member [STL/CLR]
 ms.assetid: 45f1f35e-35c4-4e39-8485-0786c1de22e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 15688ba7ac9a9d08b180a024e1d47405be4464d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3027eb62115fb240b77a84a7a006b8b567725dc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetsize-stlclr"></a>hash_multiset::size (STL/CLR)
 要素の数をカウントします。  
@@ -81,11 +76,11 @@ size() = 0 after clearing
 size() = 2 after adding 2  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)

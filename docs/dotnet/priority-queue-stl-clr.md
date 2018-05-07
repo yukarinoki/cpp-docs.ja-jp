@@ -1,12 +1,9 @@
 ---
-title: "priority_queue (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: priority_queue (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <queue> header [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63e806603a795a71dc2afb95ae17779d1c6f210b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 このテンプレート クラスは、可変長のアクセスが制限されている要素のシーケンスを順序付けを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`priority_queue`優先度のキューとしてを基になるコンテナーを管理します。  
@@ -102,7 +97,7 @@ template<typename Value,
   
  このようなデリゲート オブジェクト必要があります、厳密弱順序強制型の値で[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)です。 つまり、任意の 2 つのキーの`X`と`Y`:  
   
- `value_comp()(X, Y)`すべての呼び出しでブール値を同じ結果を返します。  
+ `value_comp()(X, Y)` すべての呼び出しでブール値を同じ結果を返します。  
   
  場合`value_comp()(X, Y)`が true の場合、 `value_comp()(Y, X)` false である必要があります。  
   
@@ -122,12 +117,12 @@ template<typename Value,
   
  したがって、候補となる、基になるコンテナーを含める[deque (STL/CLR)](../dotnet/deque-stl-clr.md)と[ベクター (STL/CLR)](../dotnet/vector-stl-clr.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/キュー >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [キュー (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [スタック (STL/CLR)](../dotnet/stack-stl-clr.md)   

@@ -1,31 +1,26 @@
 ---
-title: "コレクション (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: コレクション (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0296422ce0f9ef49b096d5ea8512530871fc733b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 C + +/CX プログラムすることができますの標準テンプレート ライブラリ (STL) コンテナー、またはその他のユーザー定義コレクション型を自由に使用します。 ただし、コレクションを渡す場合前後 Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を越えて — たとえば、XAML コントロールまたは JavaScript クライアントに-Windows ランタイムのコレクション型を使用する必要があります。  
   
  Windows ランタイムのコレクションと関連する型、および C + のインターフェイスも定義 + CX は collection.h ヘッダー ファイルで具象 C++ 実装を提供します。 この図は、コレクション型間のリレーションシップを示しています。  
   
- ![C &#43; &#43; #47コレクション型の/CX 継承ツリー](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
+ ![C&#43;&#43;&#47;/CX 継承ツリーのコレクション型の](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
   
 -   [Platform::Collections::Vector クラス](../cppcx/platform-collections-vector-class.md) は [std::vector クラス](../standard-library/vector-class.md)と似ています。  
   
@@ -71,7 +66,7 @@ C + +/CX プログラムすることができますの標準テンプレート �
   
  `range for` に対する `IVector<Person^>`ループ処理の例を次に示します。 実行が 64 行のブレークポイントで停止していることに注意してください。 **[クイック ウォッチ]** ウィンドウには、反復子変数 `p` が実際には `VectorProxy<Person^>` メンバー変数と `m_v` メンバー変数を持つ `m_i` であることが示されています。 ただし、この変数で `GetType` を呼び出すと、 `Person` インスタンス `p2`と同一の型が返されます。 `VectorProxy` と `ArrowProxy` が **[クイック ウォッチ]**、デバッガーの一部のコンパイラ エラー、またはその他の場所に表示される場合でも、通常はそれらについて明示的にコーディングする必要はありません。  
   
- ![範囲 &#45; 内にある VectorProxy ベースの for ループ](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
+ ![範囲内にある VectorProxy&#45;ベースの for ループ](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
   
  プロキシ オブジェクトに関してコーディングする必要があるのは、 `dynamic_cast` 要素コレクションで特定の型の XAML オブジェクトを探している場合など、要素で `UIElement` を実行する必要がある場合です。 この場合は、最初に [Platform::Object](../cppcx/platform-object-class.md)^ に要素をキャストし、その後に動的キャストを実行する必要があります。  
   
@@ -136,18 +131,18 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|関数|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (内部に格納[:foundation:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)と int です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (内部に格納[:foundation:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)と int です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
 |[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (内部に格納[IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ と int です)。|[開始](../cppcx/begin-function.md)/ [終了](../cppcx/end-function.md)([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
-|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ と t です)。|[開始](../cppcx/begin-function.md)/ [終了](../cppcx/end-function.md)([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ と t です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IMap\<K,V>](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ と t です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ と t です)。|[開始](../cppcx/begin-function.md)/ [終了](../cppcx/end-function.md)([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
+|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ と t です)。|[開始](../cppcx/begin-function.md)/ [終了](../cppcx/end-function.md)([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)です。|  
+|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ と t です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>コレクション変更イベント  
  `Vector` と `Map` は、XAML コレクションでのデータ バインドをサポートしていますが、これは、コレクション オブジェクトが変更またはリセットされたとき、またはコレクションのいずれかの要素が挿入、削除、または変更されたときに発生するイベントを実装することで実現されています。 データ バインドをサポートする独自の型を作成できます。ただし、 `Map` と `Vector` から継承することはできません。これらの型はシールされているためです。  
   
  [Windows::Foundation::Collections::VectorChangedEventHandler](http://msdn.microsoft.com/library/windows/apps/br206656.aspx) デリゲートと [Windows::Foundation::Collections::MapChangedEventHandler](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) デリゲートは、コレクション変更イベントのイベント ハンドラーのシグネチャを指定します。 [Windows::Foundation::Collections::CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) パブリック列挙型クラス、 `Platform::Collection::Details::MapChangedEventArgs` 、 `Platform::Collections::Details::VectorChangedEventArgs` ref クラスは、イベントの原因を特定するためにイベント引数を格納します。 *`EventArgs` 型は `Details` 名前空間で定義されますが、これは、 `Map` か `Vector`を使用するときには、それらを明示的に作成および利用する必要がないためです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [組み込み型](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   

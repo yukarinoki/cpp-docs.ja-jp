@@ -1,30 +1,25 @@
 ---
-title: "MFC ActiveX コントロール: ActiveX コントロールの描画 |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: ActiveX コントロールの描画 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールの描画
 この記事では、ActiveX コントロールの描画プロセスとプロセスを最適化する描画コードを変更する方法について説明します。 (を参照してください[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)ないコントロールを個別に描画を最適化する方法の手法が以前に選択した GDI オブジェクトを復元します。 すべてのコントロールの描画されたが、コンテナーが自動的に復元元のオブジェクトです。)  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [メタファイルを使ってコントロールを描画する方法](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>ActiveX コントロールの描画プロセス  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX コントロールの描画プロセス  
  1 つの重要な違いと、MFC を使用して開発された他のアプリケーションのような描画プロセスに従うと ActiveX コントロールが最初に表示されますが再描画される、: ActiveX コントロールがアクティブまたは非アクティブな状態にすることができます。  
   
  アクティブなコントロールは、子ウィンドウで ActiveX コントロール コンテナーで表されます。 他のウィンドウと同様に、それ自体を描画時に、`WM_PAINT`メッセージを受信します。 コントロールの基底クラス、 [COleControl](../mfc/reference/colecontrol-class.md)でメッセージを処理、`OnPaint`関数。 この既定の実装を呼び出す、`OnDraw`コントロールの関数。  
@@ -62,14 +57,14 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  コントロールを描画する必要がありますいないとして渡されるデバイス コンテキストの状態に関する前提条件、 *pdc*パラメーターを`OnDraw`関数。 場合によってはデバイス コンテキストでは、コンテナー アプリケーションによって提供され、既定の状態には必ずしも初期化されません。 ペン、ブラシ、色、フォント、および描画コードが依存するその他のリソースを明示的に選択具体的には、します。  
   
-##  <a name="_core_optimizing_your_paint_code"></a>描画コードの最適化  
+##  <a name="_core_optimizing_your_paint_code"></a> 描画コードの最適化  
  次の手順を最適化するためには、コントロールが自身を正常に描画は、後に、`OnDraw`関数。  
   
  ActiveX コントロールの描画の既定の実装では、コントロール全体の領域を描画します。 これは単純なコントロールは、のための十分なが多くの場合、コントロールを再描画するは高速更新が必要な部分が再描画される、コントロール全体ではなくだけの場合。  
   
  `OnDraw`関数を渡すことによって最適化の簡単な方法を提供する`rcInvalid`、再描画が必要なコントロールの四角形の領域。 描画プロセスを高速化に通常領域よりも小さければ、コントロール全体、この領域を使用します。  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>メタファイルを使用して、コントロールの描画  
+##  <a name="_core_painting_your_control_using_metafiles"></a> メタファイルを使用して、コントロールの描画  
  ほとんどの場合、`pdc`パラメーターを`OnDraw`関数が画面デバイス コンテキスト (DC) を指します。 、または印刷プレビュー セッション中に、コントロールのイメージを印刷する場合に表示するために受信した DC が「メタファイル DC」と呼ばれる特殊な種類です。 送信された要求をすぐに処理するには、画面、DC とは異なりは、メタファイル DC は、後で再生するための要求を格納します。 コンテナー アプリケーションによっては、メタファイル デザイン モードでの DC を使用してコントロールのイメージをレンダリングすることもできます。  
   
  要求を描画するメタファイル使用できる 2 つのインターフェイス関数を使用して、コンテナー: **IViewObject::Draw** (この関数できますも呼び出される非メタファイルの描画の) と**IDataObject::GetData**です。 MFC フレームワークへの呼び出しは、DC は、パラメーターの 1 つとして渡されるメタファイル、ときに[COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)です。 これは、仮想メンバー関数であるため、特別な処理を実行するコントロール クラスのこの関数をオーバーライドします。 既定の動作`COleControl::OnDraw`です。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 |円弧|BibBlt|弦|  
 |---------|------------|-----------|  
-|**楕円**|**エスケープ**|`ExcludeClipRect`|  
+|**楕円**|**Escape**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
@@ -115,6 +110,6 @@ ms.lasthandoff: 12/21/2017
   
      メタファイルを表示する別のウィンドウが表示されます。 スケーリングがコントロールのメタファイルに与える影響を確認するには、このウィンドウのサイズを変更することができます。 このウィンドウは、いつでも閉じることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 

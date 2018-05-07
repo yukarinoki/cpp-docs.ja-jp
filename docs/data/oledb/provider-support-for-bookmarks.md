@@ -1,12 +1,9 @@
 ---
-title: "プロバイダーのブックマーク サポート |Microsoft ドキュメント"
-ms.custom: 
+title: プロバイダーのブックマーク サポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39720b271834a585eff3ef3893154462bcdf7424
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 139956fcd7d9244c486ad37797696817c7080fbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>プロバイダーのブックマーク サポート
 このトピックの例では追加、`IRowsetLocate`へのインターフェイス、`CMyProviderRowset`クラスです。 ほとんどの場合では、既存の COM オブジェクトへのインターフェイスを追加することで起動します。 その後、コンシューマー テンプレートからの呼び出しを追加してテストすることができます。 この例をする方法。  
@@ -279,5 +274,5 @@ END_ACCESSOR_MAP()
   
  コードを更新したら、ビルドおよびを使用してプロバイダーを実行するはずの`IRowsetLocate`インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)

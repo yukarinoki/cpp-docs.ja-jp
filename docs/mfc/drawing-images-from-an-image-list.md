@@ -1,13 +1,10 @@
 ---
-title: "イメージ リストのイメージの描画 |Microsoft ドキュメント"
-ms.custom: 
+title: イメージ リストのイメージの描画 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-images-from-an-image-list"></a>イメージ リストのイメージの描画
 イメージを描画するには、 [:draw](../mfc/reference/cimagelist-class.md#draw)メンバー関数。 デバイス コンテキスト オブジェクトを描画するイメージを描画するためにデバイス コンテキスト内の場所にイメージのインデックスおよび描画スタイルを示すフラグのセットへのポインターを指定します。  
@@ -41,9 +36,9 @@ ms.lasthandoff: 12/21/2017
   
  移行先デバイス コンテキストを使用して、マスクされていないイメージがコピー、 **SRCCOPY**ラスター オペレーションです。 イメージの色には、デバイス コンテキストの背景色に関係なく同じが表示されます。 指定された描画スタイル**描画**マスクされていないイメージの外観に影響を与えるもありません。  
   
- Draw メンバー関数、別の関数に加えて[もう 1 つ](../mfc/reference/cimagelist-class.md#drawindirect)画像を表示する機能を拡張します。 `DrawIndirect`パラメーターとして受け取り、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。 この構造体はラスター オペレーション (ROP) コードの使用を含む、現在のイメージの表示をカスタマイズするためにことができます。 ROP コードの詳細については、次を参照してください。[ラスター オペレーション コード](http://msdn.microsoft.com/library/windows/desktop/dd162892)と[ビットマップ ブラシを](http://msdn.microsoft.com/library/windows/desktop/dd183378)Windows SDK に含まれています。  
+ Draw メンバー関数、別の関数に加えて[もう 1 つ](../mfc/reference/cimagelist-class.md#drawindirect)画像を表示する機能を拡張します。 `DrawIndirect` パラメーターとして受け取り、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。 この構造体はラスター オペレーション (ROP) コードの使用を含む、現在のイメージの表示をカスタマイズするためにことができます。 ROP コードの詳細については、次を参照してください。[ラスター オペレーション コード](http://msdn.microsoft.com/library/windows/desktop/dd162892)と[ビットマップ ブラシを](http://msdn.microsoft.com/library/windows/desktop/dd183378)Windows SDK に含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CImageList の使い方](../mfc/using-cimagelist.md)   
  [コントロール](../mfc/controls-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "OLE の背景知識: MFC における実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 'OLE の背景知識: MFC における実装 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IMarshall
 - IMoniker
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE の背景知識 : MFC における実装
 によりのサイズと複雑さ生 OLE API、OLE アプリケーションを作成するには、直接呼び出すなる可能性が非常に時間がかかります。 OLE の Microsoft Foundation Class ライブラリの実装の目的は、全機能を備えた、OLE 対応のアプリケーションを作成するために必要な作業の量を削減します。  
   
  この記事では、MFC の内部実装されていない OLE API の部分について説明します。 説明では、新機能は実装にマップする方法、Windows SDK の OLE セクションについても説明します。  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a>クラス ライブラリで実装されていない OLE の部分  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> クラス ライブラリで実装されていない OLE の部分  
  いくつかのインターフェイスと OLE の機能が直接指定されていない MFC でします。 これらの機能を使用する場合は、直接 OLE API を呼び出すことができます。  
   
  IMoniker インターフェイス  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  Microsoft Foundation OLE クラスが OLE インターフェイスを実装する方法の詳細については、MFC テクニカル ノートを参照してください。 [38](../mfc/tn038-mfc-ole-iunknown-implementation.md)、 [39](../mfc/tn039-mfc-ole-automation-implementation.md)、および[40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE の背景知識](../mfc/ole-background.md)   
  [OLE の背景知識: 実装の方法](../mfc/ole-background-implementation-strategies.md)
 

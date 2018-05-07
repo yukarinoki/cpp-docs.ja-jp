@@ -1,12 +1,9 @@
 ---
-title: "CMFCAcceleratorKey クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCAcceleratorKey クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey クラス
 仮想キーのマッピングおよび書式設定を実装するヘルパー クラスです。  
@@ -72,10 +67,10 @@ class CMFCAcceleratorKey : public CObject
   
  `CMFCAcceleratorKey`   
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxacceleratorkey.h  
   
-##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
  構築、 [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)オブジェクト。  
   
 ```  
@@ -90,7 +85,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>コメント  
  作成するときは、ショートカット キーを指定しないかどうか、`CMFCAccleratorKey`を使用して、 [CMFCAcceleratorKey::SetAccelerator](#setaccelerator)メソッドのショートカット キーを関連付けるには、`CMFCAcceleratorKey`オブジェクト。  
   
-##  <a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>  CMFCAcceleratorKey::Format  
  関連付けられている文字列値がそのアクセル構造を変換します。  
   
 ```  
@@ -104,7 +99,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>コメント  
  このメソッドは、関連付けられているショートカット キーの文字列形式を取得します。 文字列形式を設定することができます、 [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)オブジェクト コンス トラクターまたはメソッドのいずれかを使用して[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)です。  
   
-##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  ショートカット キーを設定、 [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)オブジェクト。  
   
 ```  
@@ -118,7 +113,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ### <a name="remarks"></a>コメント  
  このメソッドのショートカット キーの設定を使用して、`CMFCAcceleratorKey`作成したときに、ショートカット キーを指定しなかったかどうか、`CMFCAcceleratorKey`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)

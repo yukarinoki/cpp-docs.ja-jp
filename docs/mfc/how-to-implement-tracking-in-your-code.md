@@ -1,29 +1,24 @@
 ---
-title: "方法: コード内の追跡を実装して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: コード内の追跡を実装して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad49c70113780e0c0570e88efab06efc347e83d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae9696be10ab00a076a73c14281a9baabe3d6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>コードでのトラッカーの実装方法
 OLE 項目を追跡するには、項目をクリックするか、ドキュメントのビューの更新などのアイテムに関連する特定のイベントを処理する必要があります。 すべてのケースでは、一時的なを宣言するための十分な[CRectTracker](../mfc/reference/crecttracker-class.md)オブジェクトをこのオブジェクトを使用して、項目を操作します。  
@@ -66,6 +61,6 @@ OLE 項目を追跡するには、項目をクリックするか、ドキュメ�
   
  [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トラッカー: OLE アプリケーションでのトラッカーの実装](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 

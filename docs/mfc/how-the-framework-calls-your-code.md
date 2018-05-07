@@ -1,13 +1,10 @@
 ---
-title: "フレームワークが、コードを呼び出す方法 |Microsoft ドキュメント"
-ms.custom: 
+title: フレームワークが、コードを呼び出す方法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83eeb1c7fd3032ae33c213f17522b171bdb46e55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-framework-calls-your-code"></a>フレームワークと記述したコードとの関係
 これは、ソース コードと、MFC フレームワーク内のコード間の関係を理解するために重要です。 アプリケーションを実行するときに、制御フローのほとんどは、framework のコードに存在します。 フレームワークは、メッセージのように、ユーザーがコマンドを選択し、編集ビューでのデータを Windows から取得されるメッセージ ループを管理します。 フレームワークは、それ自体で処理できるイベントに依存しないコードにします。 たとえば、フレームワークは、ユーザー コマンドへの応答でアプリケーションを終了する方法と、ウィンドウを閉じる方法を認識します。 これらのタスク処理時に、フレームワークはこれらのイベントに応答するのに機会を提供するのにメッセージ ハンドラーと C++ の仮想関数を使用します。 ただし; は、コントロールではなく、コードです。フレームワークです。  
@@ -44,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、次を参照してください。[クラス CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)と[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)
 

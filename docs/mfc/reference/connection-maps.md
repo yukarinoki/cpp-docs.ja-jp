@@ -1,13 +1,10 @@
 ---
-title: "コネクション マップ |Microsoft ドキュメント"
-ms.custom: 
+title: コネクション マップ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>コネクション マップ
 OLE コントロールは、他のアプリケーションへのインターフェイスを公開できます。 これらのインターフェイスは、そのコントロールにのみ、コンテナーからのアクセスを許可します。 OLE コントロールは、他の OLE オブジェクトの外部インターフェイスにアクセスする場合、接続ポイントを確立する必要があります。 この接続ポイントは、コントロールからイベント マップや通知関数などの外部のディスパッチ マップへのアクセスを許可します。  
@@ -55,7 +50,7 @@ OLE コントロールは、他のアプリケーションへのインターフ�
 |[AfxConnectionAdvise](#afxconnectionadvise)|ソースとシンク間の接続を確立します。|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|ソースとシンクの間の接続を切断します。|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
  使用して、`BEGIN_CONNECTION_PART`マクロのイベントおよびプロパティの通知の接続ポイントを超えた追加の接続ポイントの定義を開始します。  
   
 ```   
@@ -72,10 +67,10 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="remarks"></a>コメント  
  クラスのメンバー関数を定義する宣言 (.h) ファイル、起動接続ポイントが、`BEGIN_CONNECTION_PART`マクロを追加して、`CONNECTION_IID`マクロと実装、および接続ポイントのマップを完了したいその他の任意のメンバー関数`END_CONNECTION_PART`マクロです。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
  コネクション ポイントの宣言を終了します。  
   
 ```   
@@ -86,10 +81,10 @@ END_CONNECTION_PART(localClass)
  *マクロ*  
  接続ポイントを実装するローカル クラスの名前を指定します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
  間で使用して、`BEGIN_CONNECTION_PART`と`END_CONNECTION_PART`OLE コントロールでサポートされる接続ポイントのインターフェイス ID を定義するマクロです。  
   
 ```   
@@ -101,16 +96,16 @@ CONNECTION_IID(iid)
  接続ポイントによると呼ばれるインターフェイスのインターフェイス ID です。  
   
 ### <a name="remarks"></a>コメント  
- `iid`引数は、接続ポイントを接続シンクで呼び出すインターフェイスを識別するインターフェイス ID です。 例:  
+ `iid`引数は、接続ポイントを接続シンクで呼び出すインターフェイスを識別するインターフェイス ID です。 例えば:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
  呼び出す接続ポイントを指定します、`ISinkInterface`インターフェイスです。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
  各`COleControl`-プログラム内の派生クラスには、自分の管理をサポートする追加の接続ポイントを指定する接続のマップが用意されています。  
   
 ```   
@@ -120,10 +115,10 @@ DECLARE_CONNECTION_MAP()
 ### <a name="remarks"></a>コメント  
  使用して、コントロールは、追加の点をサポートする場合、`DECLARE_CONNECTION_MAP`クラスの宣言の最後にマクロです。 クラスのメンバー関数を定義する .cpp ファイルを使用して、`BEGIN_CONNECTION_MAP`マクロ、`CONNECTION_PART`用の各コントロールの接続ポイントでは、マクロ、および`END_CONNECTION_MAP`コネクション マップの最後を宣言するマクロ。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
  各`COleControl`-プログラム内の派生クラスには、コントロールがサポートする接続ポイントを指定する接続のマップが用意されています。  
   
 ```   
@@ -140,20 +135,20 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="remarks"></a>コメント  
  実装 (です。CPP) ファイルをクラスのメンバー関数を定義すると接続のマップの開始、`BEGIN_CONNECTION_MAP`マクロを使用して、接続ポイントの各マクロ エントリを追加、 [CONNECTION_PART](#connection_part)マクロです。 コネクション マップを最後に、完了、 [END_CONNECTION_MAP](#end_connection_map)マクロです。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
  コネクション マップの定義を終了します。  
   
 ```   
 END_CONNECTION_MAP()  
 ```  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>  CONNECTION_PART  
  OLE コントロールの接続ポイントを特定のインターフェイス ID にマップします。  
   
 ```   
@@ -171,16 +166,16 @@ CONNECTION_PART(theClass, iid, localClass)
  接続ポイントを実装するローカル クラスの名前を指定します。  
   
 ### <a name="remarks"></a>コメント  
- 例:  
+ 例えば:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
  呼び出しである接続ポイントとの接続のマップを実装、`IID_ISinkInterface`インターフェイスです。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
  指定される、ソースとの間の接続を確立するには、この関数を呼び出す`pUnkSrc`とで指定された、シンク`pUnkSink`です。  
   
 ```   
@@ -214,10 +209,10 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
  指定される、ソースとの間の接続を切断するには、この関数を呼び出す`pUnkSrc`とで指定された、シンク`pUnkSink`です。  
   
 ```   
@@ -251,8 +246,8 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h 
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

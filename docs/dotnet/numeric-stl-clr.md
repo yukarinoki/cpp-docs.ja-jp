@@ -1,12 +1,9 @@
 ---
-title: "数値 (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: 数値 (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/numeric>
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/numeric> header [STL/CLR]
 - <numeric> header [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cdf9ccb65299af688fde2fbff7b3d6cedad6de96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d02423b2f8a2573fb4a90fd6f348a8e012dc91b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="numeric-stlclr"></a>数値 (STL/CLR)
 数値処理のために用意されているアルゴリズムを実行するコンテナーのテンプレート関数を定義します。  
@@ -48,10 +43,10 @@ ms.lasthandoff: 12/21/2017
 |[inner_product (STL/CLR)](../dotnet/inner-product-stl-clr.md)|2 つの範囲の要素ごとの積の合計を計算し、それを指定された初期値に加算するか、または和や積の二項演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。|  
 |[partial_sum (STL/CLR)](../dotnet/partial-sum-stl-clr.md)|一連の最初の要素から入力範囲内の合計を計算、`i`番目の要素でこのような各合計の結果を格納および`i`番目の要素をターゲット範囲の汎用化されたプロシージャの結果を計算または場所合計演算指定した別の二項演算に置き換えられます。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/numeric >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)

@@ -1,13 +1,10 @@
 ---
-title: "イベント (Visual C) の追加 |Microsoft ドキュメント"
-ms.custom: 
+title: イベント (Visual C) の追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [C++], adding events
 - events [C++], ActiveX controls
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2fea0b9a514e51db556e256f9ff17329cf4ad5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 657053f33a83d67e79bea13ab87da21156bde94c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-event-visual-c"></a>イベントの追加 (Visual C++)
 クラス ビューを使用して、イベントを追加できます、[イベント追加ウィザード](../ide/add-event-wizard.md)のコントロール クラスにのみ、 [MFC ActiveX コントロール](../mfc/reference/creating-an-mfc-activex-control.md)プロジェクト。 イベントを別の種類のプロジェクトに追加する場合は、使用、**イベント**ボタンをクリックして、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  をクリックして**完了**イベントをプロジェクトに追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [クラスの追加](../ide/adding-a-class-visual-cpp.md)   
  [メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)   

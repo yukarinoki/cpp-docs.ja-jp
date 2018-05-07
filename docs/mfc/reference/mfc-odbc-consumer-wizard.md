@@ -1,13 +1,10 @@
 ---
-title: "MFC ODBC コンシューマー ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: MFC ODBC コンシューマー ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.consumer.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9e4aeb15d2af04987883b6554d569e3cc16b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8a707df6878cd0031cb2ec9b06285e568503992
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC コンシューマー ウィザード
 「検索結果」の概要をここに挿入します。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
      このダイアログ ボックスから新しいファイル データ ソースを作成するには、クリックして`New`DSN の名前を指定する、**データ ソースの新規作成** ダイアログ ボックスが表示されます。 **データ ソースの新規作成** ダイアログ ボックスで、適切なドライバーを選択し、クリックして`Next`; をクリックして**参照**、(選択する必要が「すべてのファイル」をデータ ソースとして使用するファイルの名前を選択非 DSN ファイルの表示、.xls ファイルなど)。をクリックして`Next`、クリックして**完了**です。 (非 DSN ファイルを選択した表示されます"ODBC Microsoft Excel Setup、"DSN にファイルを変換するなど、ドライバー固有のダイアログ ボックス。)  
   
     > [!NOTE]
-    >  ODBC データ ソース アドミニストレーターを使用して、新しいファイル データ ソースを作成することもできます。 **開始**メニューの **設定**、**コントロール パネルの** 、**管理ツール**、**データ ソース (ODBC)**、し**ODBC データ ソース アドミニストレーター**です。  
+    >  ODBC データ ソース アドミニストレーターを使用して、新しいファイル データ ソースを作成することもできます。 **開始**メニューの **設定**、**コントロール パネルの **、**管理ツール**、**データ ソース (ODBC)**、し**ODBC データ ソース アドミニストレーター**です。  
   
      **DSN 名**ボックスでは、ファイル データ ソースの名前を指定することができます。 DSN の名前が Excel ファイルを .xls ファイルへのアクセスの .mdb などに、適切なファイル拡張子で終わることを確認する必要があります。  
   
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  **すべての列をバインドします。**  
  選択したテーブルのすべての列がバインドされているかどうかを指定します。 (既定値) は、このボックスを選択すると、すべての列がバインドされます。このボックスを選択しない場合は、列がバインドされていないとレコード セット クラスで手動でバインドする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ODBC コンシューマーします。](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

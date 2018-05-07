@@ -1,12 +1,9 @@
 ---
-title: "どちらのクラス |Microsoft ドキュメント"
-ms.custom: 
+title: どちらのクラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoTableDef
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledef-class"></a>どちらのクラス
 ベース テーブル、またはアタッチ テーブルの格納された定義を表現します。  
@@ -196,10 +191,10 @@ class CDaoTableDef : public CObject
   
  `CDaoTableDef`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
-##  <a name="append"></a>CDaoTableDef::Append  
+##  <a name="append"></a>  CDaoTableDef::Append  
  このメンバー関数を呼び出した後[作成](#create)をデータベースにテーブル定義を保存する新しいテーブル定義オブジェクトを作成します。  
   
 ```  
@@ -214,7 +209,7 @@ virtual void Append();
   
  関連情報については、「DAO ヘルプの「メソッドの追加」」を参照してください。  
   
-##  <a name="canupdate"></a>CDaoTableDef::CanUpdate  
+##  <a name="canupdate"></a>  CDaoTableDef::CanUpdate  
  決定するには、このメンバー関数を呼び出すかどうか基になるテーブルの定義、`CDaoTableDef`オブジェクトを変更することができます。  
   
 ```  
@@ -229,7 +224,7 @@ BOOL CanUpdate();
   
  関連情報については、DAO ヘルプの「更新可能なプロパティ」を参照してください。  
   
-##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
+##  <a name="cdaotabledef"></a>  CDaoTableDef::CDaoTableDef  
  構築、**どちら**オブジェクト。  
   
 ```  
@@ -243,7 +238,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ### <a name="remarks"></a>コメント  
  オブジェクトを構築するには、後に呼び出す必要があります、[作成](#create)または[開く](#open)メンバー関数。 オブジェクトが完了したら、ときに呼び出す必要があります、[閉じる](#close)メンバー関数し、破棄、`CDaoTableDef`オブジェクト。  
   
-##  <a name="close"></a>CDaoTableDef::Close  
+##  <a name="close"></a>  CDaoTableDef::Close  
  このメンバー関数を閉じるし、テーブル定義オブジェクトを解放します。  
   
 ```  
@@ -257,7 +252,7 @@ virtual void Close();
   
  関連情報については、「Close メソッド」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="create"></a>CDaoTableDef::Create  
+##  <a name="create"></a>  CDaoTableDef::Create  
  保存されている新しいテーブルを作成するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -293,7 +288,7 @@ virtual void Create(
   
  関連情報については、DAO ヘルプの「CreateTableDef メソッド」を参照してください。  
   
-##  <a name="createfield"></a>CDaoTableDef::CreateField  
+##  <a name="createfield"></a>  CDaoTableDef::CreateField  
  テーブルにフィールドを追加するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -363,7 +358,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
   
  関連情報については、DAO ヘルプの「CreateField メソッド」を参照してください。  
   
-##  <a name="createindex"></a>CDaoTableDef::CreateIndex  
+##  <a name="createindex"></a>  CDaoTableDef::CreateIndex  
  テーブルにインデックスを追加するには、この関数を呼び出します。  
   
 ```  
@@ -383,13 +378,13 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **m_strName**名前を指定する必要があります。  
   
-- `m_pFieldInfos`型の配列を指す必要があります`CDaoIndexFieldInfo`構造体。  
+- `m_pFieldInfos` 型の配列を指す必要があります`CDaoIndexFieldInfo`構造体。  
   
-- `m_nFields`配列内のフィールドの数を指定する必要があります`CDaoFieldInfo`構造体。  
+- `m_nFields` 配列内のフィールドの数を指定する必要があります`CDaoFieldInfo`構造体。  
   
  残りのメンバーは無視される場合に設定されます**FALSE**です。 さらに、 **m_lDistinctCount**メンバーは、インデックスの作成時に無視されます。  
   
-##  <a name="deletefield"></a>CDaoTableDef::DeleteField  
+##  <a name="deletefield"></a>  CDaoTableDef::DeleteField  
  フィールドを削除し、アクセスできないようにするには、このメンバー関数を呼び出します。  
   
 ```  
@@ -409,7 +404,7 @@ void DeleteField(int nIndex);
   
  関連情報については、「Delete メソッド」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
+##  <a name="deleteindex"></a>  CDaoTableDef::DeleteIndex  
  基になるテーブルのインデックスを削除するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -429,7 +424,7 @@ void DeleteIndex(int nIndex);
   
  関連情報については、「Delete メソッド」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="getattributes"></a>CDaoTableDef::GetAttributes  
+##  <a name="getattributes"></a>  CDaoTableDef::GetAttributes  
  `CDaoTableDef`オブジェクトによって表されるテーブルの特性を指定する、戻り値、`CDaoTableDef`オブジェクトし、これらの定数の合計を指定できます。  
   
 ```  
@@ -456,7 +451,7 @@ long GetAttributes();
   
  関連情報については、DAO ヘルプの「属性プロパティ」を参照してください。  
   
-##  <a name="getconnect"></a>CDaoTableDef::GetConnect  
+##  <a name="getconnect"></a>  CDaoTableDef::GetConnect  
  データ ソースの接続文字列を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -479,7 +474,7 @@ CString GetConnect();
   
  関連情報については、"接続 Property"DAO ヘルプのトピックを参照してください。  
   
-##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoTableDef::GetDateCreated  
  テーブルの基になる日付と時刻を判断するには、この関数を呼び出して、`CDaoTableDef`オブジェクトが作成されました。  
   
 ```  
@@ -494,7 +489,7 @@ COleDateTime GetDateCreated();
   
  関連情報については、DAO ヘルプのトピックの「作成日時、LastUpdated プロパティ」を参照してください。  
   
-##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
  テーブルの基になる日付と時刻を判断するには、この関数を呼び出して、**どちら**オブジェクトが最後に更新されました。  
   
 ```  
@@ -509,7 +504,7 @@ COleDateTime GetDateLastUpdated();
   
  関連情報については、DAO ヘルプのトピックの「作成日時、LastUpdated プロパティ」を参照してください。  
   
-##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoTableDef::GetFieldCount  
  テーブルで定義されたフィールドの数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -524,7 +519,7 @@ short GetFieldCount();
   
  関連情報については、「Count プロパティ」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoTableDef::GetFieldInfo  
  さまざまなテーブル定義で定義されているフィールドに関する情報を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -550,11 +545,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  取得するフィールドに関する情報を指定するオプション。 使用可能なオプションを返す関数が何もここで表示されます。  
   
-- `AFX_DAO_PRIMARY_INFO`(既定値)名前、種類、サイズ、属性です。 最も高速なパフォーマンスを得るには、このオプションを使用します。  
+- `AFX_DAO_PRIMARY_INFO` (既定値)名前、種類、サイズ、属性です。 最も高速なパフォーマンスを得るには、このオプションを使用します。  
   
-- `AFX_DAO_SECONDARY_INFO`プライマリについては、プラス: 必要に応じて、序数位置 0 長、照合順序、外部名、ソース フィールド、ソース テーブルを許可します。  
+- `AFX_DAO_SECONDARY_INFO` プライマリについては、プラス: 必要に応じて、序数位置 0 長、照合順序、外部名、ソース フィールド、ソース テーブルを許可します。  
   
-- `AFX_DAO_ALL_INFO`プライマリとセカンダリの情報と: 検証規則、入力テキストの場合は、既定値  
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と: 検証規則、入力テキストの場合は、既定値  
   
  `lpszName`  
  名前で検索のフィールド オブジェクトの名前へのポインター。 名前は、フィールドの一意名で、最大 64 文字の文字列です。  
@@ -566,7 +561,7 @@ void GetFieldInfo(
   
  関連情報については、DAO ヘルプの「属性プロパティ」を参照してください。  
   
-##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoTableDef::GetIndexCount  
  テーブルのインデックスの数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -581,7 +576,7 @@ short GetIndexCount();
   
  関連情報については、「Count プロパティ」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoTableDef::GetIndexInfo  
  さまざまなテーブル定義で定義されているインデックスに関する情報を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -607,11 +602,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  取得するインデックスに関する情報を指定するオプション。 使用可能なオプションを返す関数が何もここで表示されます。  
   
-- `AFX_DAO_PRIMARY_INFO`名前、フィールドの情報、フィールドです。 最も高速なパフォーマンスを得るには、このオプションを使用します。  
+- `AFX_DAO_PRIMARY_INFO` 名前、フィールドの情報、フィールドです。 最も高速なパフォーマンスを得るには、このオプションを使用します。  
   
-- `AFX_DAO_SECONDARY_INFO`プライマリについては、プラス: プライマリ、Unique、クラスター化された、Null を無視、必要に応じて、異形式  
+- `AFX_DAO_SECONDARY_INFO` プライマリについては、プラス: プライマリ、Unique、クラスター化された、Null を無視、必要に応じて、異形式  
   
-- `AFX_DAO_ALL_INFO`プライマリとセカンダリの情報と: 個別のカウント  
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と: 個別のカウント  
   
  `lpszName`  
  名前で検索のインデックス オブジェクトの名前へのポインター。  
@@ -623,7 +618,7 @@ void GetIndexInfo(
   
  関連情報については、DAO ヘルプの「属性プロパティ」を参照してください。  
   
-##  <a name="getname"></a>CDaoTableDef::GetName  
+##  <a name="getname"></a>  CDaoTableDef::GetName  
  基になるテーブルのユーザー定義名を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -638,7 +633,7 @@ CString GetName();
   
  関連情報については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
-##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoTableDef::GetRecordCount  
  レコードの数を調べるには、このメンバー関数を呼び出す、`CDaoTableDef`オブジェクト。  
   
 ```  
@@ -653,7 +648,7 @@ long GetRecordCount();
   
  関連情報については、DAO ヘルプの「RecordCount プロパティ」を参照してください。  
   
-##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
+##  <a name="getsourcetablename"></a>  CDaoTableDef::GetSourceTableName  
  ソース データベースのアタッチ テーブルの名前を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -668,7 +663,7 @@ CString GetSourceTableName();
   
  関連情報については、DAO ヘルプの「SourceTableName プロパティ」を参照してください。  
   
-##  <a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoTableDef::GetValidationRule  
  テーブル定義の検証規則を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -683,7 +678,7 @@ CString GetValidationRule();
   
  関連情報については、"Validationrule"DAO ヘルプのトピックを参照してください。  
   
-##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoTableDef::GetValidationText  
  ユーザーが入力の検証規則に一致しないデータを表示する文字列を取得するには、この関数を呼び出します。  
   
 ```  
@@ -698,7 +693,7 @@ CString GetValidationText();
   
  関連情報については、「プロパティ」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="isopen"></a>CDaoTableDef::IsOpen  
+##  <a name="isopen"></a>  CDaoTableDef::IsOpen  
  決定するには、このメンバー関数を呼び出すかどうか、`CDaoTableDef`オブジェクトが現在開いています。  
   
 ```  
@@ -710,18 +705,18 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoTableDef::m_pDatabase  
  ポインターが含まれています、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)このテーブルのオブジェクト。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
+##  <a name="m_pdaotabledef"></a>  CDaoTableDef::m_pDAOTableDef  
  DAO tabledef オブジェクト基になるの OLE インターフェイスへのポインターが含まれています、`CDaoTableDef`オブジェクト。  
   
 ### <a name="remarks"></a>コメント  
  DAO インターフェイスに直接アクセスする必要がある場合は、このポインターを使用します。  
   
-##  <a name="open"></a>CDaoTableDef::Open  
+##  <a name="open"></a>  CDaoTableDef::Open  
  開くには、テーブル定義には、このメンバー関数がデータベースに保存した呼び出しはのテーブル定義のコレクションです。  
   
 ```  
@@ -734,7 +729,7 @@ virtual void Open(LPCTSTR lpszName);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink  
+##  <a name="refreshlink"></a>  CDaoTableDef::RefreshLink  
  接続されたテーブルの接続情報を更新するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -748,7 +743,7 @@ void RefreshLink();
   
  関連情報については、DAO ヘルプの「RefreshLink メソッド」を参照してください。  
   
-##  <a name="setattributes"></a>CDaoTableDef::SetAttributes  
+##  <a name="setattributes"></a>  CDaoTableDef::SetAttributes  
  1 つまたは複数の特性を示す値を設定、`CDaoTableDef`オブジェクト。  
   
 ```  
@@ -769,13 +764,13 @@ void SetAttributes(long lAttributes);
 ### <a name="remarks"></a>コメント  
  に複数の属性を設定するときは、ビットごとの OR 演算子を使用して適切な定数を組み合わせることができます。 設定**dbAttachExclusive**非添付テーブルで例外が生成されます。 結合は次の値も、例外が発生します。  
   
-- **dbAttachExclusive &#124;です。dbAttachedODBC**  
+- **dbAttachExclusive &#124; dbAttachedODBC**  
   
-- **dbAttachSavePWD &#124;です。dbAttachedTable**  
+- **dbAttachSavePWD &#124; dbAttachedTable**  
   
  関連情報については、DAO ヘルプの「属性プロパティ」を参照してください。  
   
-##  <a name="setconnect"></a>CDaoTableDef::SetConnect  
+##  <a name="setconnect"></a>  CDaoTableDef::SetConnect  
  `CDaoTableDef`アタッチ テーブルの文字列オブジェクトを表すオブジェクトは、1 つまたは 2 つの部分 (データベースの型指定子およびデータベースへのパス) で構成されます。  
   
 ```  
@@ -810,8 +805,8 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML のインポート|「HTML のインポートです。」|" `drive`:\\\ *パス*\ *filename*"|  
 |HTML のエクスポート|「HTML エクスポート;」|" `drive`:\\\ *パス*"|  
 |テキスト|"Text"です。|"ドライブ:\\\path"|  
-|ODBC|"ODBC です。データベース =`database`です。UID =*ユーザー*です。PWD =*パスワード*です。DSN = *%datasourcename;*LOGINTIMEOUT =*秒;*"(すべてのサーバーの完全な接続文字列とは限りません。 これは単なる例。 パラメーター間にスペースが非常に重要です。)|なし|  
-|Exchange|"Exchange です。<br /><br /> MAPILEVEL = *folderpath*です。<br /><br /> [TABLETYPE = {0 &#124; 1} です]。<br /><br /> [プロファイル =*プロファイル*です]。<br /><br /> [PWD =*パスワード*です]。<br /><br /> [データベース = `database`;]"|*"ドライブ*:\\\ *パス*\\\ *filename*です。MDB"|  
+|ODBC|"ODBC です。データベース =`database`です。UID =*ユーザー*です。PWD =*パスワード*です。DSN = *%datasourcename;* LOGINTIMEOUT =*秒;*"(すべてのサーバーの完全な接続文字列とは限りません。 これは単なる例。 パラメーター間にスペースが非常に重要です。)|なし|  
+|Exchange|"Exchange です。<br /><br /> MAPILEVEL = *folderpath*です。<br /><br /> [TABLETYPE = {0 &AMP;#124; 1} です]。<br /><br /> [プロファイル =*プロファイル*です]。<br /><br /> [PWD =*パスワード*です]。<br /><br /> [データベース = `database`;]"|*"ドライブ*:\\\ *パス*\\\ *filename*です。MDB"|  
   
 > [!NOTE]
 >  DAO 3.5 の時点では、市販がサポートされていません。  
@@ -824,7 +819,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  関連情報については、"接続 Property"DAO ヘルプのトピックを参照してください。  
   
-##  <a name="setname"></a>CDaoTableDef::SetName  
+##  <a name="setname"></a>  CDaoTableDef::SetName  
  ユーザー定義テーブルの名前を設定するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -840,7 +835,7 @@ void SetName(LPCTSTR lpszName);
   
  関連情報については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
-##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
+##  <a name="setsourcetablename"></a>  CDaoTableDef::SetSourceTableName  
  接続されているテーブルの名前またはベース テーブルの名前を指定するには、このメンバー関数を呼び出す、`CDaoTableDef`オブジェクトが基のデータの元のソースに存在します。  
   
 ```  
@@ -856,7 +851,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
   
  関連情報については、DAO ヘルプの「SourceTableName プロパティ」を参照してください。  
   
-##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
+##  <a name="setvalidationrule"></a>  CDaoTableDef::SetValidationRule  
  テーブル定義の検証規則を設定するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -878,7 +873,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  関連情報については、"Validationrule"DAO ヘルプのトピックを参照してください。  
   
-##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
+##  <a name="setvalidationtext"></a>  CDaoTableDef::SetValidationText  
  検証規則の例外のテキストを設定するには、このメンバー関数を呼び出す、 `CDaoTableDef` Microsoft Jet データベース エンジンでサポートされている、基になるベース テーブルを持つオブジェクト。  
   
 ```  
@@ -894,7 +889,7 @@ void SetValidationText(LPCTSTR lpszValidationText);
   
  関連情報については、「プロパティ」DAO ヘルプのトピックを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CDaoDatabase クラス](../../mfc/reference/cdaodatabase-class.md)   

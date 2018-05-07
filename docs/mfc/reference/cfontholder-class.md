@@ -1,12 +1,9 @@
 ---
-title: "CFontHolder クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CFontHolder クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontHolder
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5f13f2ec48f38fde140361d31a5e08ae6228b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontholder-class"></a>CFontHolder クラス
 ストック フォント プロパティを実装し、Windows のフォント オブジェクトと `IFont` インターフェイスの機能をカプセル化します。  
@@ -84,17 +79,17 @@ class CFontHolder
 |[CFontHolder::m_pFont](#m_pfont)|ポインター、`CFontHolder`オブジェクトの`IFont`インターフェイスです。|  
   
 ## <a name="remarks"></a>コメント  
- `CFontHolder`基本クラスはありません。  
+ `CFontHolder` 基本クラスはありません。  
   
  このクラスを使用すると、コントロールのカスタム フォントのプロパティを実装します。 このようなプロパティを作成する方法については、記事を参照してください。 [ActiveX コントロール: フォントの使用](../../mfc/mfc-activex-controls-using-fonts.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CFontHolder`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
   
-##  <a name="cfontholder"></a>CFontHolder::CFontHolder  
+##  <a name="cfontholder"></a>  CFontHolder::CFontHolder  
  `CFontHolder` オブジェクトを構築します。  
   
 ```  
@@ -108,7 +103,7 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="remarks"></a>コメント  
  呼び出す必要があります`InitializeFont`を使用する前に、結果のオブジェクトを初期化します。  
   
-##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString  
  コンテナーのプロパティ ブラウザーで表示できる文字列を取得します。  
   
 ```  
@@ -122,7 +117,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>戻り値  
  文字列が取得できた場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch  
+##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch  
  フォントのディスパッチ インターフェイスへのポインターを取得するには、この関数を呼び出します。  
   
 ```  
@@ -135,7 +130,7 @@ LPFONTDISP GetFontDispatch();
 ### <a name="remarks"></a>コメント  
  呼び出す`InitializeFont`呼び出す前に`GetFontDispatch`です。  
   
-##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle  
+##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle  
  Windows フォントへのハンドルを取得するには、この関数を呼び出します。  
   
 ```  
@@ -164,7 +159,7 @@ HFONT GetFontHandle(
   
  パラメーターなしのバージョンでは、画面のサイズが正しく構成フォントにハンドルを返します。  
   
-##  <a name="initializefont"></a>CFontHolder::InitializeFont  
+##  <a name="initializefont"></a>  CFontHolder::InitializeFont  
  初期化、`CFontHolder`オブジェクト。  
   
 ```  
@@ -187,14 +182,14 @@ void InitializeFont(
   
  構築の後にこの関数を呼び出し、`CFontHolder`オブジェクト。  
   
-##  <a name="m_pfont"></a>CFontHolder::m_pFont  
+##  <a name="m_pfont"></a>  CFontHolder::m_pFont  
  ポインター、`CFontHolder`オブジェクトの`IFont`インターフェイスです。  
   
 ```  
 LPFONT m_pFont;  
 ```  
   
-##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics  
+##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics  
  によって表される物理フォントに関する情報を取得、`CFontHolder`オブジェクト。  
   
 ```  
@@ -205,14 +200,14 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
  `lptm`  
  ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd145132)情報を受け取る。  
   
-##  <a name="releasefont"></a>CFontHolder::ReleaseFont  
+##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
  この関数は切断、`CFontHolder`オブジェクトからその`IFont`インターフェイスです。  
   
 ```  
 void ReleaseFont();
 ```  
   
-##  <a name="select"></a>CFontHolder::Select  
+##  <a name="select"></a>  CFontHolder::Select  
  この関数では、指定したデバイス コンテキストにコントロールのフォントを選択します。  
   
 ```  
@@ -238,7 +233,7 @@ CFont* Select(
 ### <a name="remarks"></a>コメント  
  参照してください[GetFontHandle](#getfonthandle)については、`cyLogical`と`cyHimetric`パラメーター。  
   
-##  <a name="setfont"></a>CFontHolder::SetFont  
+##  <a name="setfont"></a>  CFontHolder::SetFont  
  任意の既存のフォントを解放し、接続、`CFontHolder`オブジェクトを`IFont`インターフェイスです。  
   
 ```  
@@ -249,6 +244,6 @@ void SetFont(LPFONT pNewFont);
  *pNewFont*  
  新しいポインター`IFont`インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CPropExchange クラス](../../mfc/reference/cpropexchange-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "MFC ツールバーの実装 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC ツールバーの実装 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f3240588b8e6fde119a167eace8103ef58c5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC ツール バーの実装
 ツールバーは、[コントロール バー](../mfc/control-bars.md)コントロールのビットマップ イメージを格納しています。 これらのイメージはプッシュ ボタン、チェック ボックス、オプション ボタンに似た動作をすることができます。 MFC クラスを提供する[CToolbar](../mfc/reference/ctoolbar-class.md)ツールバーを管理します。  
@@ -64,12 +59,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [ツールバーのビットマップ](#_core_the_toolbar_bitmap)  
   
-##  <a name="_core_toolbar_buttons"></a>ツール バー ボタン  
+##  <a name="_core_toolbar_buttons"></a> ツール バー ボタン  
  ツール バー内のボタンは、メニュー内の項目に似ています。 どちらの種類のユーザー インターフェイス オブジェクトも、コマンドを生成します。プログラムはハンドラー関数を提供して、これらのコマンドを処理します。 多くの場合、ツール バー ボタンはメニュー コマンドの機能を複製したものであり、同じ機能に対する別のユーザー インターフェイスを提供します。 このような重複は、単純にボタンとメニュー項目に対して同じ ID を付与する方法で実現できます。  
   
  ツール バー内で、プッシュ ボタン、チェック ボックス、またはオプション ボタンと同じ外観でボタンを作成し、同じ動作をさせることができます。 詳細については、クラスを参照してください。 [CToolBar](../mfc/reference/ctoolbar-class.md)です。  
   
-##  <a name="_core_docking_and_floating_toolbars"></a>ドッキングとフローティング ツールバー  
+##  <a name="_core_docking_and_floating_toolbars"></a> ドッキングとフローティング ツールバー  
  MFC ツール バーでは、次のことを実行できます。  
   
 -   親ウィンドウの 1 つの辺に固定したままにします。  
@@ -82,10 +77,10 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、記事を参照してください。[ドッキング ツールバーとフローティング ツールバー](../mfc/docking-and-floating-toolbars.md)です。  
   
-##  <a name="_core_toolbars_and_tool_tips"></a>ツールバーとツール ヒント  
+##  <a name="_core_toolbars_and_tool_tips"></a> ツールバーとツール ヒント  
  MFC ツール バーには "ツール ヒント" を表示させることもできます。ツール ヒントとは、ツール バー ボタンの用途を説明する短いテキストを表示する小さなポップアップ ウィンドウのことです。 ユーザーがツール バー ボタンの上にマウス ポインタを置くと、ヒントを示すツール ヒントのウィンドウがポップアップ表示されます。 詳細については、記事を参照してください。[ツールバーのツール ヒント](../mfc/toolbar-tool-tips.md)です。  
   
-##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a>CToolBar クラスと CToolBarCtrl クラス  
+##  <a name="_core_the_ctoolbar_and_ctoolbarctrl_classes"></a> CToolBar クラスと CToolBarCtrl クラス  
  クラスを使用して、アプリケーションのツールバーを管理する[CToolBar](../mfc/reference/ctoolbar-class.md)です。 MFC Version 4.0 では、Windows 95 以降、および Windows NT Version 3.51 以降のバージョンで使用されているツール バー コモン コントロールを使用できるように、`CToolBar` が再実装されています。  
   
  この再実装により、それらのオペレーティング システムでサポートされているコントロールを MFC で利用できるため、ツール バー関連の MFC コードは少なくなりました。 また、この再実装によって性能も向上しています。 使用することができます`CToolBar`ツールバー、またはを操作するメンバー関数は、基になるへの参照を取得できます[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクトおよびツールバーをカスタマイズし、追加の機能のメンバー関数を呼び出します。  
@@ -95,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
  また、MFC サンプルを参照してください[DOCKTOOL](../visual-cpp-samples.md)です。  
   
-##  <a name="_core_the_toolbar_bitmap"></a>ツールバーのビットマップ  
+##  <a name="_core_the_toolbar_bitmap"></a> ツールバーのビットマップ  
  `CToolBar` オブジェクトは、いったん生成された後は、各ボタンのイメージを含む 1 つのビットマップを読み込んでツール バー イメージを作成します。 アプリケーション ウィザードでは、Visual C でカスタマイズできる標準 ツールバーのビットマップを作成[ツール バー エディター](../windows/toolbar-editor.md)です。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
@@ -112,7 +107,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [CToolBar](../mfc/reference/ctoolbar-class.md)と[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)クラス  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツールバー](../mfc/toolbars.md)   
  [ツール バー エディター](../windows/toolbar-editor.md)
 

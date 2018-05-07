@@ -1,12 +1,9 @@
 ---
-title: "CSinusoidalTransitionFromRange クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSinusoidalTransitionFromRange クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSinusoidalTransitionFromRange
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53e89f1fa73926976896743ab5293d85e5d81c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange クラス
 振幅が指定の範囲である正弦波範囲遷移をカプセル化します。  
@@ -84,10 +79,10 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
   
  [CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSinusoidalTransitionFromRange::Create  
+##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create  
  カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。  
   
 ```  
@@ -103,7 +98,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>戻り値  
  移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
+##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
  移行のオブジェクトを構築します。  
   
 ```  
@@ -131,40 +126,40 @@ CSinusoidalTransitionFromRange(
  `slope`  
  移行の開始時に傾斜です。  
   
-##  <a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
+##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  
  正弦波のピーク時のアニメーション変数の値。  
   
 ```  
 DOUBLE m_dblMaximumValue;  
 ```  
   
-##  <a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
+##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue  
  正弦波の谷のアニメーション変数の値です。  
   
 ```  
 DOUBLE m_dblMinimumValue;  
 ```  
   
-##  <a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
+##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration  
  移行の期間です。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
+##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period  
  秒単位で正弦波の振幅の期間。  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-##  <a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
+##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope  
  移行の開始時に傾斜です。  
   
 ```  
 UI_ANIMATION_SLOPE m_slope;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)
