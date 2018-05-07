@@ -1,31 +1,26 @@
 ---
-title: "方法: 正規表現を使用してデータを並べ替える (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 正規表現を使用してデータを並べ替える (C + + CLI) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - regular expressions [C++], rearranging data
 - data [C++], rearranging
 ms.assetid: 5f91e777-9471-424e-ba75-dca3d1b49e42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf60fff6c15313a6f7df1104f67c1f043f885eac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 72c72721aa68417ff13905fdf96f8d2a48b310cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>方法: 正規表現を使用してデータを再配置する (C++/CLI)
 次のコード例では、.NET Framework 正規表現のサポートを使用して、再配置、またはデータの書式設定を変更する方法を示します。 次のコード例では、<xref:System.Text.RegularExpressions.Regex>と<xref:System.Text.RegularExpressions.Match>クラスを文字列からの姓と名を抽出し、逆の順序でこれらの要素の名前を表示します。  
@@ -70,6 +65,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework 正規表現](/dotnet/standard/base-types/regular-expressions)   
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,12 +1,9 @@
 ---
-title: "auto_gcroot::operator auto_gcroot |Microsoft ドキュメント"
-ms.custom: 
+title: auto_gcroot::operator auto_gcroot |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - auto_gcroot.operator auto_gcroot
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_gcroot operator
 ms.assetid: 43e3f27a-9f68-444f-9149-a9282a9b935a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 58ccf1aa32a999fd85f6dc0a14fb514f6508a386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb713f6dfd959441a409a59cc83cb87ab3299162
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcrootoperator-autogcroot"></a>auto_gcroot::operator auto_gcroot
 間に型キャスト演算子`auto_gcroot`と互換性のある型。  
@@ -86,10 +81,10 @@ Hello from first B!
 Hello from first A!  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [auto_gcroot のメンバー](../dotnet/auto-gcroot-members.md)
