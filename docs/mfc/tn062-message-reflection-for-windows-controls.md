@@ -1,13 +1,10 @@
 ---
-title: "TN062: メッセージの Windows コントロールへのリフレクション |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN062: メッセージの Windows コントロールへのリフレクション |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.messages
 dev_langs:
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9a0dd227cb54ba85c85901f706966326b1b66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)
 > [!NOTE]
@@ -70,11 +65,11 @@ ms.lasthandoff: 12/21/2017
   
  特定のメッセージのハンドラーを指定するか、上書きの親ウィンドウのクラス内のメッセージの範囲の場合、独自のハンドラーの基本クラスのハンドラー関数を呼び出さない限り、同じメッセージのメッセージ ハンドラーに反映されます。 たとえば、処理する`WM_CTLCOLOR`ダイアログ ボックス クラスで、処理には、リフレクション メッセージ ハンドラーもよりも優先されます。  
   
- 親ウィンドウ クラスで特定のハンドラーを指定する場合は、 **WM_NOTIFY**メッセージまたは範囲の**WM_NOTIFY**メッセージ、それらのメッセージを送信する子コントロールを使用している場合にのみ、ハンドラーが呼び出されますいないを介して反映されたメッセージのハンドラーを持つ**ON_NOTIFY_REFLECT()**です。 使用する場合**ON_NOTIFY_REFLECT_EX()**メッセージ ハンドラー、メッセージ マップに可能性がありますまたはメッセージを処理する親ウィンドウを許可しない場合があります。 ハンドラーが戻った場合**FALSE**を返す呼び出し中に、同様に、親によってメッセージが処理される**TRUE**親それを処理することはできません。 リフレクション メッセージが通知メッセージの前に処理されることに注意してください。  
+ 親ウィンドウ クラスで特定のハンドラーを指定する場合は、 **WM_NOTIFY**メッセージまたは範囲の**WM_NOTIFY**メッセージ、それらのメッセージを送信する子コントロールを使用している場合にのみ、ハンドラーが呼び出されますいないを介して反映されたメッセージのハンドラーを持つ**ON_NOTIFY_REFLECT()** です。 使用する場合**ON_NOTIFY_REFLECT_EX()** メッセージ ハンドラー、メッセージ マップに可能性がありますまたはメッセージを処理する親ウィンドウを許可しない場合があります。 ハンドラーが戻った場合**FALSE**を返す呼び出し中に、同様に、親によってメッセージが処理される**TRUE**親それを処理することはできません。 リフレクション メッセージが通知メッセージの前に処理されることに注意してください。  
   
  ときに、 **WM_NOTIFY**メッセージが送信される、コントロールはそれを処理する最初の機会を提供します。 他のリフレクションされたメッセージを送信する場合、親ウィンドウがそれを処理する最初の機会とコントロール反映されたメッセージが表示されます。 これを行うことが必要ハンドラー関数と、コントロールのクラスのメッセージ マップに適切なエントリです。  
   
- リフレクション メッセージのメッセージ マップ マクロは通常の通知よりも若干異なります: が**_REFLECT**通常の名前に追加されます。 インスタンスを処理する、 **WM_NOTIFY**メッセージ マクロを使用して、親の`ON_NOTIFY`親のメッセージ マップにします。 子コントロールに反映されたメッセージを処理する、 **ON_NOTIFY_REFLECT**で子コントロールのメッセージ マップ マクロです。 場合によっては、パラメーターに異なるも同様です。 ClassWizard のメッセージ マップ エントリを追加および正しいパラメーターを持つ関数の骨組み実装を提供することが通常に注意してください。  
+ リフレクション メッセージのメッセージ マップ マクロは通常の通知よりも若干異なります: が **_REFLECT**通常の名前に追加されます。 インスタンスを処理する、 **WM_NOTIFY**メッセージ マクロを使用して、親の`ON_NOTIFY`親のメッセージ マップにします。 子コントロールに反映されたメッセージを処理する、 **ON_NOTIFY_REFLECT**で子コントロールのメッセージ マップ マクロです。 場合によっては、パラメーターに異なるも同様です。 ClassWizard のメッセージ マップ エントリを追加および正しいパラメーターを持つ関数の骨組み実装を提供することが通常に注意してください。  
   
  参照してください[TN061: ON_NOTIFY メッセージと WM_NOTIFY メッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md)については、新しい**WM_NOTIFY**メッセージ。  
   
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
  ClassWizard 通常これらのメッセージ マップ エントリを追加してスケルトン関数の実装を提供します。 参照してください[リフレクション メッセージ用のメッセージ ハンドラーを定義する](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)返送されたメッセージのハンドラーを定義する方法についてはします。  
   
- メッセージ名からリフレクションされたマクロ名に変換する前に付けます**on _**および追加**_REFLECT**です。 たとえば、`WM_CTLCOLOR`なります**ON_WM_CTLCOLOR_REFLECT**です。 (を反映するメッセージを表示するには、次の表に、マクロのエントリを逆の変換をしないでください)。  
+ メッセージ名からリフレクションされたマクロ名に変換する前に付けます**on _** および追加 **_REFLECT**です。 たとえば、`WM_CTLCOLOR`なります**ON_WM_CTLCOLOR_REFLECT**です。 (を反映するメッセージを表示するには、次の表に、マクロのエントリを逆の変換をしないでください)。  
   
  上記のルールに 3 つの例外は次のとおりです。  
   
@@ -181,7 +176,7 @@ ms.lasthandoff: 12/21/2017
   
 8.  アプリケーションをビルドして実行します。 エディット コントロールでは、黄色の背景色があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

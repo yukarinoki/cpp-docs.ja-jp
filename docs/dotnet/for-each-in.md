@@ -1,12 +1,9 @@
 ---
-title: "ごとで |Microsoft ドキュメント"
-ms.custom: 
+title: ごとで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-each-in"></a>for each、in
 配列またはコレクションを反復処理します。 この非標準のキーワードは、C++/CLI プロジェクトと C++ ネイティブ プロジェクトの両方で使用できます。 ただし、これを使用することはお勧めしません。 標準的な使用を検討して[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)代わりにします。  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  *ステートメント*配列またはコレクションの各要素に対して実行されます。 コレクション内の全要素に対する繰り返しが完了すると、制御は、`for each` ブロックに続くステートメントに移動します。  
   
- `for each`および`in`は[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。  
+ `for each` および`in`は[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。  
   
  詳細情報  
   
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ### <a name="example"></a>例  
@@ -127,9 +122,9 @@ Testing
  *式*  
  マネージ配列式またはコレクション。 コレクション要素は、コンパイラがからに変換できるようにする必要があります<xref:System.Object>を*識別子*型です。  
   
- *式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または、定義された型、`GetEnumerator`を実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>かすべてで定義されているメソッドの宣言`IEnumerator`.  
+ *式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または、定義された型、`GetEnumerator`を実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>すべてで定義されているメソッドの宣言または`IEnumerator`.  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="example"></a>例  
@@ -168,5 +163,5 @@ abcd
 Testing   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

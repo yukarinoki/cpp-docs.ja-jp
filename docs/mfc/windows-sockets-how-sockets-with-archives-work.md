@@ -1,13 +1,10 @@
 ---
-title: "Windows ソケット: アーカイブ付きソケットの動作 |Microsoft ドキュメント"
-ms.custom: 
+title: 'Windows ソケット: アーカイブ付きソケットの動作 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows ソケット : アーカイブ付きソケットの動作
 この記事で説明する方法、 [CSocket](../mfc/reference/csocket-class.md)オブジェクト、 [CSocketFile](../mfc/reference/csocketfile-class.md)オブジェクト、および[CArchive](../mfc/reference/carchive-class.md)オブジェクトが結合され、Windows を使用してデータの送受信を簡略化ソケットします。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  A`CArchive`オブジェクトは、バッファーを管理します。 格納 (送信) アーカイブのバッファーがいっぱいのとき、関連付けられている`CFile`オブジェクトが、バッファーの内容を書き込みます。 ソケットにアタッチされているアーカイブのバッファーのフラッシュは、メッセージを送信するのと同じです。 読み込み (受信) アーカイブのバッファーがいっぱいになると、ときに、`CFile`バッファーが再び使用可能になるまで、オブジェクトが読み取りを停止します。  
   
- クラス`CSocketFile`から派生した`CFile`をサポートしていませんが、 [CFile](../mfc/reference/cfile-class.md)ポジショニング関数などのメンバー関数 (`Seek`、 `GetLength`、`SetLength`など)、(ロック関数`LockRange`、 `UnlockRange`)、または`GetPosition`関数。 すべての[CSocketFile](../mfc/reference/csocketfile-class.md)オブジェクトを実行する必要がありますは書き込みまたはとの間、関連付けられているバイトのシーケンスを読み取り`CSocket`オブジェクト。 ファイルが関与しないためなどの操作`Seek`と`GetPosition`をなしません。 `CSocketFile`派生した`CFile`ので、すべてこれらのメンバー関数の継承は通常、します。 これを防ぐため、サポートされていない`CFile`でメンバー関数がオーバーライドされて`CSocketFile`をスローする、[行わない](../mfc/reference/cnotsupportedexception-class.md)です。  
+ クラス`CSocketFile`から派生した`CFile`をサポートしていませんが、 [CFile](../mfc/reference/cfile-class.md)ポジショニング関数などのメンバー関数 (`Seek`、 `GetLength`、`SetLength`など)、(ロック関数`LockRange`、 `UnlockRange`)、または`GetPosition`関数。 すべての[CSocketFile](../mfc/reference/csocketfile-class.md)オブジェクトを実行する必要がありますは書き込みまたはとの間、関連付けられているバイトのシーケンスを読み取り`CSocket`オブジェクト。 ファイルが関与しないためなどの操作`Seek`と`GetPosition`をなしません。 `CSocketFile` 派生した`CFile`ので、すべてこれらのメンバー関数の継承は通常、します。 これを防ぐため、サポートされていない`CFile`でメンバー関数がオーバーライドされて`CSocketFile`をスローする、[行わない](../mfc/reference/cnotsupportedexception-class.md)です。  
   
  `CSocketFile`オブジェクトは、メンバーの関数を呼び出してその`CSocket`データ送信または受信するオブジェクト。  
   
@@ -61,7 +56,7 @@ CArchive、CSocketFile、CSocket
   
  詳細については、次を参照してください[Windows ソケット: アーカイブ付きソケットの使用。](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)   
  [Cobject::serialize](../mfc/reference/cobject-class.md#serialize)
 

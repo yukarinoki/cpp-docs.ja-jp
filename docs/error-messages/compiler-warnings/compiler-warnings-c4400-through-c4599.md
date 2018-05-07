@@ -1,8 +1,8 @@
 ---
-title: "コンパイラの警告 C4400 C4599 を通じて |Microsoft ドキュメント"
+title: コンパイラの警告 C4400 C4599 を通じて |Microsoft ドキュメント
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>コンパイラの警告 C4400 C4599 経由
 
@@ -199,8 +198,8 @@ ms.lasthandoff: 03/16/2018
 |[コンパイラの警告 (レベル 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|型指定子がありません - int と仮定しました。 メモ: C は、現在 int を既定値としてサポートしていません|
 |[コンパイラの警告 (レベル 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|静的コンス トラクターはプライベート アクセシビリティをいる必要があります。プライベート アクセスに変更します。|
 |[コンパイラの警告 (レベル 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*':/vd2 下のオブジェクトのレイアウトは仮想ベースにより変更されます'*base_class*'|
-|[コンパイラの警告 (レベル 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dynamic\_cast from virtual base '*base_class*' to '*derived_class*' in constructor or destructor could fail with partially-constructed object|
-|[コンパイラの警告 (レベル 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dynamic\_cast from virtual base '*base_class*' to '*derived_class*' could fail in some contexts|
+|[コンパイラの警告 (レベル 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|動的\_仮想ベースからキャスト '*base_class*'to'*derived_class*' コンス トラクターまたはデストラクターで部分的に構築されるオブジェクトを使用することができません|
+|[コンパイラの警告 (レベル 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|動的\_仮想ベースからキャスト '*base_class*'to'*derived_class*' 一部のコンテキストで失敗する可能性があります|
 |コンパイラの警告 C4438|'*関数*':/await で安全に呼び出すことはできません:/await:clrcompat モード。 場合 '*関数*' CLR への呼び出しを CLR ヘッドが破損する可能性があります|
 |[コンパイラの警告 (エラー) C4439](../../error-messages/compiler-warnings/compiler-warning-c4439.md)|'*関数*': シグネチャのマネージ型を伴う関数定義は _ _clrcall 呼び出し規約を持つ必要があります|
 |[コンパイラの警告 (レベル 1) C4440](../../error-messages/compiler-warnings/compiler-warning-level-1-c4440.md)|呼び出し規約の再から '*calling_convention1*'to'*calling_convenction2*' は無視されます|
@@ -321,7 +320,7 @@ ms.lasthandoff: 03/16/2018
 |コンパイラの警告 (レベル 1) C4575|'_ _vectorcall' と互換性のない、'/clr' オプション: '_ _stdcall' に変換します。|
 |コンパイラの警告 (レベル 1、エラー) C4576|初期化子リストに続くかっこで囲まれた型は非標準の明示的な型変換の構文|
 |コンパイラの警告 (レベル 1、エラー) C4578|'abs': から変換 '*type1*'to'*type2*'、データ損失の可能性 (を呼び出すもしかすると次の間'*関数*' または #include <cmath>?)|
-|[コンパイラの警告 (レベル 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] は使用できません。System::Attribute または Platform::Metadata を基底クラスとして指定してください|
+|[コンパイラの警告 (レベル 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] は非推奨とされます。System::Attribute または Platform::Metadata を基底クラスとして指定してください|
 |[コンパイラの警告 (レベル 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|動作が使用されていません: '"*文字列*"' に置き換えられます '*文字列*' 属性を処理|
 |コンパイラの警告 (レベル 4) C4582|'*型*': コンス トラクターは暗黙的に呼び出されません|
 |コンパイラの警告 (レベル 4) C4583|'*型*': デストラクターは暗黙的に呼び出されません|

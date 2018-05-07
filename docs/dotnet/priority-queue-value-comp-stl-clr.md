@@ -1,12 +1,9 @@
 ---
-title: "priority_queue::value_comp (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: priority_queue::value_comp (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::value_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_comp member [STL/CLR]
 ms.assetid: af28e541-087d-4837-9ff0-cd36d4cfc57a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 57c663d8fd9786e296533150bbdbfd21faf079ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6dc5a4ba4d57df8b9bb4ee0918118721bb2e8080
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueuevaluecomp-stlclr"></a>priority_queue::value_comp (STL/CLR)
 2 つの要素の順序付けのデリゲートをコピーします。  
@@ -86,12 +81,12 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/キュー >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)   
  [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)

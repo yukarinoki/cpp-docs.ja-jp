@@ -1,13 +1,10 @@
 ---
-title: "ツリーのコントロールの通知メッセージ |Microsoft ドキュメント"
-ms.custom: 
+title: ツリーのコントロールの通知メッセージ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5044416ca38f6b3ead743c571ea7175022d51fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7c352da9f9283f53c926a8223984620ee7fa6ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-notification-messages"></a>ツリー コントロールの通知メッセージ
 ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) として、次の通知メッセージを送信**WM_NOTIFY**メッセージ。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |**TVN_SELCHANGING**|選択範囲は 1 つの項目から別に変更することを通知|  
 |**TVN_SETDISPINFO**|アイテムを管理している情報を更新する通知|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

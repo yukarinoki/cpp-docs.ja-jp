@@ -1,24 +1,19 @@
 ---
-title: "列挙型 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: 列挙型 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3a95af557dd416d99368dbd1ab51495e0bd1d85
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c96fa4e7194e262eec0be4cf5f7467c163530bd2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enums-ccx"></a>列挙型 (C++/CX)
 C + + CX をサポートしている、`public enum class`キーワードは、標準の C++ に似ている`scoped  enum`です。 `public enum class` キーワードを使用して宣言された列挙子を使用する場合、列挙体識別子を使用して各列挙子値の範囲を指定する必要があります。  
@@ -45,7 +40,7 @@ C + + CX をサポートしている、`public enum class`キーワードは、�
   
  [!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   
  [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

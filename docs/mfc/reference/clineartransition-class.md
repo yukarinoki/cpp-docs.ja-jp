@@ -1,12 +1,9 @@
 ---
-title: "CLinearTransition クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CLinearTransition クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLinearTransition
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7379c49ef54a86d68e5b9f47a35437befc53d8d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d342fdd903de610c0676d7a9e0b6e58ef15f41f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clineartransition-class"></a>CLinearTransition クラス
 線形遷移をカプセル化します。  
@@ -75,10 +70,10 @@ class CLinearTransition : public CBaseTransition;
   
  [CLinearTransition](../../mfc/reference/clineartransition-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition  
  線形遷移オブジェクトを構築し、期間と最終的な値で初期化します。  
   
 ```  
@@ -94,7 +89,7 @@ CLinearTransition(
  `dblFinalValue`  
  遷移の終了時、アニメーション変数の値。  
   
-##  <a name="create"></a>CLinearTransition::Create  
+##  <a name="create"></a>  CLinearTransition::Create  
  カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。  
   
 ```  
@@ -110,19 +105,19 @@ virtual BOOL Create(
 ### <a name="return-value"></a>戻り値  
  移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue  
  遷移の終了時、アニメーション変数の値。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_duration"></a>CLinearTransition::m_duration  
+##  <a name="m_duration"></a>  CLinearTransition::m_duration  
  移行の期間です。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

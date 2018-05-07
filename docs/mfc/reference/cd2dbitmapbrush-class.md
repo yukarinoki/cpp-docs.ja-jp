@@ -1,12 +1,9 @@
 ---
-title: "CD2DBitmapBrush クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CD2DBitmapBrush クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DBitmapBrush
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd588a26b73fb6e5f1b205b20f21aab8272c439
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush クラス
 ID2D1BitmapBrush のラッパーです。  
@@ -113,7 +108,7 @@ class CD2DBitmapBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|CD2DBitmap オブジェクトへのポインターを格納します。|  
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|ID2D1BitmapBrush オブジェクトへのポインターを格納します。|  
@@ -128,17 +123,17 @@ class CD2DBitmapBrush : public CD2DBrush;
   
  `CD2DBitmapBrush`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrendertarget.h  
   
-##  <a name="dtor"></a>CD2DBitmapBrush:: ~ CD2DBitmapBrush  
+##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush  
  デストラクターです。 D2D ビットマップ ブラシ オブジェクトが破棄されるときに呼び出されます。  
   
 ```  
 virtual ~CD2DBitmapBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBitmapBrush::Attach  
+##  <a name="attach"></a>  CD2DBitmapBrush::Attach  
  既存のリソースのインターフェイス オブジェクトへの接続  
   
 ```  
@@ -149,7 +144,7 @@ void Attach(ID2D1BitmapBrush* pResource);
  `pResource`  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
-##  <a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush  
+##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
  CD2DBitmapBrush オブジェクトを構築します。  
   
 ```  
@@ -204,7 +199,7 @@ CD2DBitmapBrush(
  `lpszImagePath`  
  ファイルの名前を表す null で終わる文字列へのポインター。  
   
-##  <a name="commoninit"></a>CD2DBitmapBrush::CommonInit  
+##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
  オブジェクトを初期化します  
   
 ```  
@@ -215,7 +210,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
  `pBitmapBrushProperties`  
  ビットマップのブラシのプロパティへのポインター。  
   
-##  <a name="create"></a>CD2DBitmapBrush::Create  
+##  <a name="create"></a>  CD2DBitmapBrush::Create  
  CD2DBitmapBrush を作成します。  
   
 ```  
@@ -229,14 +224,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-##  <a name="destroy"></a>CD2DBitmapBrush::Destroy  
+##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy  
  CD2DBitmapBrush オブジェクトを破棄します。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBitmapBrush::Detach  
+##  <a name="detach"></a>  CD2DBitmapBrush::Detach  
  オブジェクトからリソースのインターフェイスの関連付けを解除します。  
   
 ```  
@@ -246,7 +241,7 @@ ID2D1BitmapBrush* Detach();
 ### <a name="return-value"></a>戻り値  
  デタッチされたリソースのインターフェイスへのポインター。  
   
-##  <a name="get"></a>CD2DBitmapBrush::Get  
+##  <a name="get"></a>  CD2DBitmapBrush::Get  
  返します ID2D1BitmapBrush インターフェイス  
   
 ```  
@@ -256,7 +251,7 @@ ID2D1BitmapBrush* Get();
 ### <a name="return-value"></a>戻り値  
  ID2D1BitmapBrush インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="getbitmap"></a>CD2DBitmapBrush::GetBitmap  
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap  
  ソースを取得しますビットマップを描画するブラシを使用します。  
   
 ```  
@@ -266,7 +261,7 @@ CD2DBitmap* GetBitmap();
 ### <a name="return-value"></a>戻り値  
  CD2DBitmap オブジェクトまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX  
+##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX  
  メソッドを取得します、ブラシ水平方向にタイルがそのビットマップを越える領域  
   
 ```  
@@ -276,7 +271,7 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 ### <a name="return-value"></a>戻り値  
  そのビットマップを越える領域が水平方向にタイル ブラシ方法を指定する値  
   
-##  <a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY  
+##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY  
  メソッドを取得します、ブラシ垂直方向にタイルがそのビットマップを越える領域  
   
 ```  
@@ -286,7 +281,7 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 ### <a name="return-value"></a>戻り値  
  ブラシが垂直方向にそのビットマップを超えてが領域をタイル方法を指定する値  
   
-##  <a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode  
+##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode  
  ブラシ ビットマップのスケールまたは回転したときに使用される補間メソッドを取得します  
   
 ```  
@@ -296,28 +291,28 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 ### <a name="return-value"></a>戻り値  
  ブラシ ビットマップのスケールまたは回転したときに使用される補間メソッド  
   
-##  <a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap  
+##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap  
  CD2DBitmap オブジェクトへのポインターを格納します。  
   
 ```  
 CD2DBitmap* m_pBitmap;  
 ```  
   
-##  <a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush  
+##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush  
  ID2D1BitmapBrush オブジェクトへのポインターを格納します。  
   
 ```  
 ID2D1BitmapBrush* m_pBitmapBrush;  
 ```  
   
-##  <a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties  
+##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties  
  ブラシのプロパティをビットマップします。  
   
 ```  
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush *  
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *  
  返します ID2D1BitmapBrush インターフェイス  
   
 ```  
@@ -327,7 +322,7 @@ operator ID2D1BitmapBrush*();
 ### <a name="return-value"></a>戻り値  
  ID2D1BitmapBrush インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap  
+##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap  
  このブラシが描画に使用するビットマップのソースを指定します  
   
 ```  
@@ -338,7 +333,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
  `pBitmap`  
  ブラシで使用されるビットマップのソース  
   
-##  <a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX  
+##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
  そのビットマップを越える領域が水平方向にタイル ブラシ方法を指定します  
   
 ```  
@@ -349,7 +344,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
  `extendModeX`  
  そのビットマップを越える領域が水平方向にタイル ブラシ方法を指定する値  
   
-##  <a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY  
+##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
  ブラシが垂直方向にそのビットマップを超えてが領域をタイル方法を指定します  
   
 ```  
@@ -360,7 +355,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
  `extendModeY`  
  ブラシが垂直方向にそのビットマップを超えてが領域をタイル方法を指定する値  
   
-##  <a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode  
+##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
  ブラシ ビットマップのスケールまたは回転したときに使用される補間モードを指定します  
   
 ```  
@@ -371,5 +366,5 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
  `interpolationMode`  
  ブラシ ビットマップのスケールまたは回転したときに使用される補間モード  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

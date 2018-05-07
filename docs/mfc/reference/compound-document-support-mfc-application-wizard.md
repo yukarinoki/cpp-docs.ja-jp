@@ -2,28 +2,23 @@
 title: 複合ドキュメント サポート、MFC アプリケーション ウィザード |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 dev_langs:
 - C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.openlocfilehash: 361ad662ed0bc0f499b35c102502f86d063b8e5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>[複合ドキュメント サポート] \(MFC アプリケーション ウィザード)
 MFC アプリケーション ウィザードのこのページでは、どのようなレベルに複合とアクティブなドキュメントのサポートを提供するアプリケーションを指定します。 アプリケーションでは、複合ドキュメントおよびドキュメント テンプレートをサポートするためにドキュメント/ビュー アーキテクチャをサポートする必要があります。  
@@ -54,6 +49,6 @@ MFC アプリケーション ウィザードのこのページでは、どのよ
 |**Active ドキュメント コンテナー**|アプリケーションは、そのフレーム内でアクティブなドキュメントを含めることができますを示します。 アクティブ ドキュメントがあります、たとえば、Internet Explorer のドキュメントまたは Microsoft Word ファイルや Excel ワークシートなどの Office ドキュメント。 参照してください[Active ドキュメント コンテインメント](../../mfc/active-document-containment.md)詳細についてはします。|  
 |**複合ファイルのサポート**|複合ファイル形式を使用して、コンテナー アプリケーションのドキュメントをシリアル化されません。 このオプションは、メモリにオブジェクトを含む、ファイル全体の読み込みを強制します。 個々 のオブジェクトへの増分の保存は、ご利用いただけません。 1 つのオブジェクトを変更してから保存して、ファイル内のすべてのオブジェクトは保存されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)
 

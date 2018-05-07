@@ -1,13 +1,10 @@
 ---
-title: "Windows ソケット: ソケット通知 |Microsoft ドキュメント"
-ms.custom: 
+title: 'Windows ソケット: ソケット通知 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows ソケット : ソケット通知
 この記事では、ソケット クラス内の通知関数について説明します。 これらのメンバー関数は、重要なイベントのソケット オブジェクトに通知するフレームワークから呼び出されるコールバック関数です。 通知機能は次のとおりです。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  クラスから派生した場合`CAsyncSocket`、ネットワーク、アプリケーションに関心のあるイベントの通知関数をオーバーライドする必要があります。 クラスからクラスを派生する場合`CSocket`には、選択対象の通知関数をオーバーライドするかどうか。 使用することも`CSocket`自体、後者通知機能は何の既定値は。  
   
- これらの関数は、オーバーライド可能なコールバック関数です。 `CAsyncSocket`および`CSocket`に通知をメッセージの変換が、それらを使用する場合に、応答に対して、通知で実行される関数を実装する必要があります。 通知機能は、ソケットが読み取られるデータが存在するなど、目的のイベントの通知時に呼び出されます。  
+ これらの関数は、オーバーライド可能なコールバック関数です。 `CAsyncSocket` および`CSocket`に通知をメッセージの変換が、それらを使用する場合に、応答に対して、通知で実行される関数を実装する必要があります。 通知機能は、ソケットが読み取られるデータが存在するなど、目的のイベントの通知時に呼び出されます。  
   
  MFC が通知される時に、ソケットの動作をカスタマイズするために通知関数を呼び出します。 たとえば、呼び出すことができます**受信**から、`OnReceive`通知関数が通知を受け取ることを読み取るデータが、呼び出す**受信**を読むことです。 この方法は、必要ではありませんが、有効なシナリオです。 代わりにの進行状況を追跡するために、通知関数を使用する場合があります印刷**トレース**メッセージ、およびなどです。  
   
@@ -72,6 +67,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
 

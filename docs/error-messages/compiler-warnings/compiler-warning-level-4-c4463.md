@@ -1,12 +1,9 @@
 ---
-title: "コンパイラの警告 (レベル 4) C4463 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラの警告 (レベル 4) C4463 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,23 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>コンパイラの警告 (レベル 4) C4463  
   
 > オーバーフローです。割り当てる*値*のみからの値を保持できるビット フィールドに*low_value*に*high_value*  
   
-割り当てられている*値*ビット フィールドを保持できる値の範囲外です。 符号付きビット フィールド型は、符号ビットの高位を使用できるよう *n* ビット フィールドのサイズ、範囲が符号付きビット フィールドは-2<sup>n-1</sup> 2<sup>n-1</sup>-1 で、中に符号なしビット フィールドが 0 ~ 2 の範囲にある<sup>n</sup>-1 です。  
+割り当てられている*値*ビット フィールドを保持できる値の範囲外です。 符号付きビット フィールド型は、符号ビットの高位を使用できるよう*n*ビット フィールドのサイズ、範囲が符号付きビット フィールドは-2<sup>n-1</sup> 2<sup>n-1</sup>-1 で、署名されていないときにビット フィールドが 0 ~ 2 の範囲にある<sup>n</sup>-1 です。  
   
 ## <a name="example"></a>例  
   

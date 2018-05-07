@@ -1,12 +1,9 @@
 ---
-title: "Cdatasource::getproperty |Microsoft ドキュメント"
-ms.custom: 
+title: Cdatasource::getproperty |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::GetProperty
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - GetProperty method
 ms.assetid: 6531147c-b164-4ab5-a4a7-509634b85b4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d12c6bc45c7caac743d996924070dd0c8e5d350c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afe21f6f41491a4f62eda09e2df43aa470417e20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourcegetproperty"></a>CDataSource::GetProperty
 接続されているデータ ソース オブジェクトに対して指定されたプロパティの値を返します。  
@@ -58,8 +53,8 @@ HRESULT GetProperty(const GUID& guid,
 ## <a name="remarks"></a>コメント  
  複数のプロパティを取得する[GetProperties](../../data/oledb/cdatasource-getproperties.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDataSource クラス](../../data/oledb/cdatasource-class.md)

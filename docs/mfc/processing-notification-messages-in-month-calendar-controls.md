@@ -1,13 +1,10 @@
 ---
-title: "予定表コントロールの月の通知メッセージの処理 |Microsoft ドキュメント"
-ms.custom: 
+title: 予定表コントロールの月の通知メッセージの処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - notifications [MFC], for CMonthCalCtrl
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75b07973b1410c7f8bbaa527876efa9b9f1481a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26b4d73284b0cff362ba16248e0906b76c7f52a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>月間予定表コントロールでの通知メッセージの処理
 月間予定表コントロール (日付を選択するや別の月を表示する)、コントロールを操作するユーザーと (`CMonthCalCtrl`)、その親ウィンドウに通知メッセージを送信通常ビューまたはダイアログのオブジェクト。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーを表示する新しい 1 か月を選択すると、強調する日付のセットを指定できます。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **MCN_SELECT**を明示的に日付選択された親に通知します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CMonthCalCtrl の使い方](../mfc/using-cmonthcalctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

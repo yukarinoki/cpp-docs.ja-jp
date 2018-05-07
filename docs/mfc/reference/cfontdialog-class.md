@@ -1,12 +1,9 @@
 ---
-title: "CFontDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CFontDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontDialog
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab9420ce86785595bb2d172ef32afe89c2845374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontdialog-class"></a>CFontDialog クラス
 フォントの選択 ダイアログ ボックスをアプリケーションに組み込むことができます。  
@@ -102,13 +97,13 @@ class CFontDialog : public CCommonDialog
   
  1 回、`CFontDialog`オブジェクトが構築された、使用することができます、`m_cf`値やダイアログ ボックスのコントロールの状態を初期化するためにします。 [構造体](#m_cf)構造体は型[CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832)です。 この構造体の詳細については、Windows SDK を参照してください。  
   
- ダイアログ オブジェクトのコントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、フォントを選択するユーザーを許可するメンバー関数。 `DoModal`ユーザーが、[ok] を選択するかどうかを返します ( **IDOK**) か、またはキャンセル ( **IDCANCEL**) ボタンをクリックします。  
+ ダイアログ オブジェクトのコントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、フォントを選択するユーザーを許可するメンバー関数。 `DoModal` ユーザーが、[ok] を選択するかどうかを返します ( **IDOK**) か、またはキャンセル ( **IDCANCEL**) ボタンをクリックします。  
   
  場合`DoModal`返します**IDOK**のいずれかを使用することができます`CFontDialog`のユーザーが入力情報を取得するメンバー関数。  
   
  Windows を使用する[情報を得る](http://msdn.microsoft.com/library/windows/desktop/ms646916)関数およびエラーに関する詳細については、ダイアログ ボックスの初期化中にエラーが発生するかどうかを決定します。 この関数の詳細については、Windows SDK を参照してください。  
   
- `CFontDialog`COMMDLG に依存します。Windows 3.1 以降のバージョンに付属している DLL ファイルです。  
+ `CFontDialog` COMMDLG に依存します。Windows 3.1 以降のバージョンに付属している DLL ファイルです。  
   
  ダイアログ ボックスをカスタマイズするからクラスを派生`CFontDialog`拡張コントロールから通知メッセージを処理するメッセージ マップの追加を独自のダイアログ テンプレートを提供します。 基本クラスには、処理されないメッセージを渡す必要があります。  
   
@@ -129,10 +124,10 @@ class CFontDialog : public CCommonDialog
   
  `CFontDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
+##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
  `CFontDialog` オブジェクトを構築します。  
   
 ```  
@@ -150,7 +145,7 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- l`plfInitial`  
+ L `plfInitial`  
  ポインター、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)フォントの特性の一部を設定できるようにするデータ構造体。  
   
  `charFormat`  
@@ -174,7 +169,7 @@ CFontDialog(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CFontDialog::DoModal  
+##  <a name="domodal"></a>  CFontDialog::DoModal  
  この関数では、Windows に共通の [フォント] ダイアログ ボックスを表示し、ユーザーがフォントを選択できます。  
   
 ```  
@@ -194,7 +189,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>例  
   例を参照して[CFontDialog::CFontDialog](#cfontdialog)と[CFontDialog::GetColor](#getcolor)です。  
   
-##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
+##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat  
  選択したフォントの文字の書式設定を取得します。  
   
 ```  
@@ -205,7 +200,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
  `cf`  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)選択したフォントの文字の書式設定に関する情報を含む構造体。  
   
-##  <a name="getcolor"></a>CFontDialog::GetColor  
+##  <a name="getcolor"></a>  CFontDialog::GetColor  
  選択したフォントの色を取得するには、この関数を呼び出します。  
   
 ```  
@@ -218,7 +213,7 @@ COLORREF GetColor() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
+##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
  メンバーに現在選択されているフォントの特性を割り当てるには、この関数を呼び出して、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
   
 ```  
@@ -237,7 +232,7 @@ void GetCurrentFont(LPLOGFONT lplf);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="getfacename"></a>CFontDialog::GetFaceName  
+##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
  選択したフォントの書体名を取得するには、この関数を呼び出します。  
   
 ```  
@@ -250,7 +245,7 @@ CString GetFaceName() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="getsize"></a>CFontDialog::GetSize  
+##  <a name="getsize"></a>  CFontDialog::GetSize  
  この関数では、選択したフォントのサイズを取得します。  
   
 ```  
@@ -263,7 +258,7 @@ int GetSize() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="getstylename"></a>CFontDialog::GetStyleName  
+##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
  この関数では、選択したフォントのスタイル名を取得します。  
   
 ```  
@@ -276,7 +271,7 @@ CString GetStyleName() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="getweight"></a>CFontDialog::GetWeight  
+##  <a name="getweight"></a>  CFontDialog::GetWeight  
  この関数では、選択したフォントの太さを取得します。  
   
 ```  
@@ -292,7 +287,7 @@ int GetWeight() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="isbold"></a>CFontDialog::IsBold  
+##  <a name="isbold"></a>  CFontDialog::IsBold  
  この関数では、選択したフォントが太字かを判断します。  
   
 ```  
@@ -305,7 +300,7 @@ BOOL IsBold() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="isitalic"></a>CFontDialog::IsItalic  
+##  <a name="isitalic"></a>  CFontDialog::IsItalic  
  この関数では、選択したフォントが斜体かを判断します。  
   
 ```  
@@ -318,7 +313,7 @@ BOOL IsItalic() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
+##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
  選択したフォントが取り消し線付きで表示されるかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -331,7 +326,7 @@ BOOL IsStrikeOut() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="isunderline"></a>CFontDialog::IsUnderline  
+##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
  選択したフォントに下線を付けるかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -344,7 +339,7 @@ BOOL IsUnderline() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="m_cf"></a>CFontDialog::m_cf  
+##  <a name="m_cf"></a>  CFontDialog::m_cf  
  メンバーのダイアログ オブジェクトの特性を格納する構造体。  
   
 ```  
@@ -357,7 +352,7 @@ CHOOSEFONT m_cf;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   
  [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)

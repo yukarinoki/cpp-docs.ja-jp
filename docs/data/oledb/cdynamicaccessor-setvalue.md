@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicaccessor::setvalue |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicaccessor::setvalue |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor.SetValue
@@ -21,18 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - SetValue method
 ms.assetid: ecc18850-96e5-4845-abe5-ab34ad467238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c919c5ec9605f65df9a20bf5ccad03ae2bf2761c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9322394f2b72b49afe988c371858d9ee580825ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorsetvalue"></a>CDynamicAccessor::SetValue
 指定された列にデータを格納します。  
@@ -74,8 +69,8 @@ bool SetValue(
   
  その他のすべてのデータ型は、テンプレート化されたバージョンを使用する方が簡単`GetValue`です。 テンプレート化されたバージョンを返す**true**成功した場合または**false**エラー発生時にします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)

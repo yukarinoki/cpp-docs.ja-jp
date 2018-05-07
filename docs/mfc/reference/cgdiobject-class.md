@@ -1,12 +1,9 @@
 ---
-title: "CGdiObject クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CGdiObject クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGdiObject
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgdiobject-class"></a>CGdiObject クラス
 ビットマップ、領域、ブラシ、ペン、パレット、フォントなどの Windows のさまざまな種類のグラフィックス デバイス インターフェイス (GDI) の基底クラスを提供します。  
@@ -107,10 +102,10 @@ class CGdiObject : public CObject
   
  `CGdiObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="attach"></a>CGdiObject::Attach  
+##  <a name="attach"></a>  CGdiObject::Attach  
  Windows GDI オブジェクトをアタッチ、`CGdiObject`オブジェクト。  
   
 ```  
@@ -124,7 +119,7 @@ BOOL Attach(HGDIOBJ hObject);
 ### <a name="return-value"></a>戻り値  
  添付ファイルが正常に終了した場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="cgdiobject"></a>CGdiObject::CGdiObject  
+##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
  `CGdiObject` オブジェクトを構築します。  
   
 ```  
@@ -134,7 +129,7 @@ CGdiObject();
 ### <a name="remarks"></a>コメント  
  作成することはありません、`CGdiObject`直接です。 代わりに、オブジェクトを作成するその派生クラスのいずれかのように`CPen`または**Cbrush**です。  
   
-##  <a name="createstockobject"></a>CGdiObject::CreateStockObject  
+##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  定義済みのストック Windows GDI ペン、ブラシ、フォントのいずれかへのハンドルを取得しに GDI オブジェクトをアタッチ、`CGdiObject`オブジェクト。  
   
 ```  
@@ -151,7 +146,7 @@ BOOL CreateStockObject(int nIndex);
 ### <a name="remarks"></a>コメント  
  クラスの派生クラスのいずれかでこの関数の呼び出しなどの Windows GDI オブジェクトの種類に対応`CPen`ストック ペン用です。  
   
-##  <a name="deleteobject"></a>CGdiObject::DeleteObject  
+##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
  Windows GDI オブジェクトに関連付けられているすべてのシステムの記憶域を解放することで、メモリから、アタッチされた Windows GDI オブジェクトを削除します。  
   
 ```  
@@ -166,7 +161,7 @@ BOOL DeleteObject();
   
  ブラシ パターンが削除されると、ブラシに関連付けられたビットマップは削除されません。 ビットマップは個別に削除する必要があります。  
   
-##  <a name="deletetempmap"></a>CGdiObject::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
  によって自動的に呼び出されます、`CWinApp`アイドル処理ハンドラー`DeleteTempMap`一時的な削除`CGdiObject`によって作成されたオブジェクト`FromHandle`です。  
   
 ```  
@@ -174,12 +169,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>コメント  
- `DeleteTempMap`一時的に接続されている Windows GDI オブジェクトをデタッチ`CGdiObject`オブジェクトを削除する前に、`CGdiObject`オブジェクト。  
+ `DeleteTempMap` 一時的に接続されている Windows GDI オブジェクトをデタッチ`CGdiObject`オブジェクトを削除する前に、`CGdiObject`オブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
-##  <a name="detach"></a>CGdiObject::Detach  
+##  <a name="detach"></a>  CGdiObject::Detach  
  Windows GDI オブジェクトからのデタッチ、`CGdiObject`オブジェクトおよびハンドル Windows GDI オブジェクトを返します。  
   
 ```  
@@ -189,7 +184,7 @@ HGDIOBJ Detach();
 ### <a name="return-value"></a>戻り値  
  A`HANDLE`オブジェクト デタッチ; それ以外の場合に、Windows GDI **NULL** GDI オブジェクトがアタッチされていない場合。  
   
-##  <a name="fromhandle"></a>CGdiObject::FromHandle  
+##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
  ポインターを返します、 `CGdiObject` Windows GDI オブジェクトへのハンドルを指定されたオブジェクト。  
   
 ```  
@@ -208,7 +203,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
   
  この一時`CGdiObject`オブジェクトは、次のアプリケーションが、すべての一時的なグラフィック オブジェクトの削除時に、イベント ループのアイドル時間までのみ有効です。 言い換えると、別の方法は、1 つのウィンドウ メッセージを処理中に、一時オブジェクトが有効でのみことです。  
   
-##  <a name="getobject"></a>CGdiObject::GetObject  
+##  <a name="getobject"></a>  CGdiObject::GetObject  
  指定したオブジェクトを定義するデータをバッファーします。  
   
 ```  
@@ -243,7 +238,7 @@ int GetObject(
   
  オブジェクトがある場合、`CPalette`オブジェクト、`GetObject`取得、 **WORD**パレット内のエントリの数を指定します。 関数を取得することはありません、[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)パレットを定義する構造体。 アプリケーションが呼び出すことによってパレット エントリに関する情報を取得できます[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)です。  
   
-##  <a name="getobjecttype"></a>CGdiObject::GetObjectType  
+##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  GDI オブジェクトの種類を取得します。  
   
 ```  
@@ -279,7 +274,7 @@ UINT GetObjectType() const;
   
 - **OBJ_ENHMETADC**拡張メタファイル デバイス コンテキスト  
   
-##  <a name="getsafehandle"></a>CGdiObject::GetSafeHandle  
+##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
  返します`m_hObject`しない限り、**この**は**NULL**、後者**NULL**が返されます。  
   
 ```  
@@ -295,14 +290,14 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="example"></a>例  
   例を参照して[CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)です。  
   
-##  <a name="m_hobject"></a>CGdiObject::m_hObject  
+##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
  A`HANDLE`を含む、 `HBITMAP`、 **HRGN**、 `HBRUSH`、 `HPEN`、 `HPALETTE`、または**HFONT**このオブジェクトにアタッチします。  
   
 ```  
 HGDIOBJ m_hObject;  
 ```  
   
-##  <a name="operator_neq"></a>CGdiObject::operator! =  
+##  <a name="operator_neq"></a>  CGdiObject::operator! =  
  2 つの GDI オブジェクトが等しく論理的にないかどうかを判断します。  
   
 ```  
@@ -316,7 +311,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ### <a name="remarks"></a>コメント  
  左側の GDI オブジェクトが右側の GDI オブジェクトと等しくないかどうかを判断します。  
   
-##  <a name="operator_eq_eq"></a>CGdiObject::operator = =  
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =  
  2 つの GDI オブジェクトが論理的に等しいかどうかを判断します。  
   
 ```  
@@ -330,14 +325,14 @@ BOOL operator==(const CGdiObject& obj) const;
 ### <a name="remarks"></a>コメント  
  左側の GDI オブジェクトが右側の GDI オブジェクトと等しいかどうかを判断します。  
   
-##  <a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
+##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
  取得、`HANDLE`にアタッチされた Windows GDI オブジェクトです。 それ以外の場合**NULL**オブジェクトがアタッチされていない場合。  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
-##  <a name="unrealizeobject"></a>CGdiObject::UnrealizeObject  
+##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
  ブラシの原点のリセット、または論理パレットがリセットされます。  
   
 ```  
@@ -354,7 +349,7 @@ BOOL UnrealizeObject();
   
  `UnrealizeObject`関数はストック オブジェクトを使用する必要があります。 `UnrealizeObject`新しいブラシの原点が設定されているときに、関数を呼び出す必要があります (により、 [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg)関数)。 `UnrealizeObject`現在選択されているブラシまたはディスプレイ コンテキストの現在選択されているパレットの関数を呼び出すことがない必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CBitmap クラス](../../mfc/reference/cbitmap-class.md)   
  [CBrush クラス](../../mfc/reference/cbrush-class.md)   

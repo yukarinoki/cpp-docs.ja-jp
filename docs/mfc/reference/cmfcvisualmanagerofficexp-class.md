@@ -1,12 +1,9 @@
 ---
-title: "CMFCVisualManagerOfficeXP クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCVisualManagerOfficeXP クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerOfficeXP
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCVisualManagerOfficeXP class [MFC]
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3495e8cb08f6481e8ece7781099da8b75c2276
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8450df47de5f7947aaf1a94e0f5022ac9fc66516
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP クラス
 `CMFCVisualManagerOfficeXP`アプリケーション、Microsoft Office XP の外観を与えます。  
@@ -56,10 +51,10 @@ class CMFCVisualManagerOfficeXP : public CMFCVisualManager
   
  [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxvisualmanagerofficexp.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)

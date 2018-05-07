@@ -1,12 +1,9 @@
 ---
-title: "コンパイラ エラー C2220 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C2220 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2220
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2220
 ms.assetid: d610802c-64d7-40ad-a2a6-0ed0b6815a6c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14da9ea0905f2aa7aa67c2b7524314a4af74246b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d23476de35e0af45b46a775683ba8673b4959346
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2220"></a>コンパイラ エラー C2220
 warning treated as error - no object file generated  
@@ -38,8 +33,8 @@ warning treated as error - no object file generated
   
 -   プロジェクトの警告の原因となった問題を解決します。  
   
--   下の警告レベルをコンパイル — たとえば、使用して**/W3**の代わりに**/W4**です。  
+-   下の警告レベルをコンパイル — たとえば、使用して **/W3**の代わりに **/W4**です。  
   
 -   使用して、[警告](../../preprocessor/warning.md)プラグマを無効にするか、特定の警告を抑制します。  
   
--   使用しない**/WX**をコンパイルします。
+-   使用しない **/WX**をコンパイルします。

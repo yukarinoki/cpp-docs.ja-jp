@@ -1,13 +1,10 @@
 ---
-title: "Active ドキュメント コンテインメント |Microsoft ドキュメント"
-ms.custom: 
+title: Active ドキュメント コンテインメント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containment"></a>Active ドキュメント コンテインメント
 Active ドキュメント コンテインメントは、強制的に作成し、各ドキュメントの種類の複数のアプリケーションのフレームを使用することではなく、ドキュメントを処理するための 1 つのフレームを提供するテクノロジです。 OLE の機能を 1 つのコンテンツのみアクティブにできる複合ドキュメント内の埋め込みオブジェクトとを基本的な OLE 技術とは異なります。 Active ドキュメント コンテインメントは 1 つのフレームのコンテキスト内で、ドキュメント全体 (つまり、アプリケーション全体、関連付けられたメニューのツールバー、およびなどを含む) を有効にします。  
@@ -50,6 +45,6 @@ Active ドキュメント コンテインメントは、強制的に作成し、
   
 -   [MFCBIND](../visual-cpp-samples.md)サンプル active ドキュメント コンテナー アプリケーションの実装を示しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC COM](../mfc/mfc-com.md)
 

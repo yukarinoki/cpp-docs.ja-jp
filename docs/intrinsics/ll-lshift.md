@@ -1,12 +1,9 @@
 ---
-title: "_ _ll_lshift |Microsoft ドキュメント"
-ms.custom: 
+title: _ _ll_lshift |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __ll_lshift_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8aed34d31fe1675dc13d0c040c1a9f0b1f208e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft 固有の仕様**  
@@ -53,11 +48,11 @@ unsigned __int64 __ll_lshift(
 ## <a name="return-value"></a>戻り値  
  マスクで左にシフト`nBit`ビットです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__ll_lshift`|x86、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
@@ -97,7 +92,7 @@ int main()
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [__ll_rshift](../intrinsics/ll-rshift.md)   
  [__ull_rshift](../intrinsics/ull-rshift.md)   
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

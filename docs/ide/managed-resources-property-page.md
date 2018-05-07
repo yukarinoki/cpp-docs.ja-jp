@@ -1,13 +1,10 @@
 ---
-title: "マネージ リソース プロパティ ページ |Microsoft ドキュメント"
-ms.custom: 
+title: マネージ リソース プロパティ ページ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8683c9212a25a5b278405c2d2c31d7fc607d0f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-resources-property-page"></a>[マネージ リソース] プロパティ ページ
 リソース コンパイラの設定を有効にします。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  アクセスする方法については、**マネージ リソース**プロパティ ページを参照してください[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RC (RC コマンドライン) を使用します。](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
- [/ASSEMBLYRESOURCE (マネージ リソースを埋め込む)](../build/reference/assemblyresource-embed-a-managed-resource.md)
+ [/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](../build/reference/assemblyresource-embed-a-managed-resource.md)

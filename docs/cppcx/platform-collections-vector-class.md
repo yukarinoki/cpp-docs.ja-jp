@@ -1,11 +1,8 @@
 ---
-title: "Platform::collections: クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 'Platform::collections: クラス |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -90,31 +85,31 @@ Vector オブジェクトに含まれている要素の型。
 |名前|説明|
 |----------|-----------------|
 |[Vector::append](#append)|指定された項目を、現在の Vector の最後の項目の後に挿入します。|
-|[Vector::Clear](#clear)|現在のベクター内のすべての要素を削除します。|
-|[Vector::First](#first)|Vector 内の最初の要素を指定する反復子を返します。|
+|[Vector::clear](#clear)|現在のベクター内のすべての要素を削除します。|
+|[Vector::first](#first)|Vector 内の最初の要素を指定する反復子を返します。|
 |[Vector::GetAt](#getat)|指定されたインデックスで識別される現在のベクターの要素を取得します。|
-|[Vector::GetMany](#getmany)|指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得します。|
-|[Vector::GetView](#getview)|ベクターの読み取り専用ビュー、つまり [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)を返します。|
-|[Vector::IndexOf](#indexof)|現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
-|[Vector::InsertAt](#insertat)|指定されたインデックスによって識別される要素の後の現在のベクターに、指定された項目を挿入します。|
+|[Vector::getmany](#getmany)|指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得します。|
+|[Vector::getview](#getview)|ベクターの読み取り専用ビュー、つまり [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)を返します。|
+|[Vector::indexof](#indexof)|現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
+|[Vector::insertat](#insertat)|指定されたインデックスによって識別される要素の後の現在のベクターに、指定された項目を挿入します。|
 |[Vector::ReplaceAll](#replaceall)|現在のベクターの要素を削除し、指定された配列の要素を挿入します。|
 |[Vector::RemoveAt](#removeat)|現在のベクターから指定されたインデックスで識別される要素を削除します。|
 |[Vector::RemoveAtEnd](#removeatend)|現在の Vector の末尾から要素を削除します。|
-|[Vector::SetAt](#setat)|現在の Vector で、指定されたインデックスによって識別される要素に、指定された値を割り当てます。|
+|[Vector::setat](#setat)|現在の Vector で、指定されたインデックスによって識別される要素に、指定された値を割り当てます。|
 |[Vector::size](#size)|現在のベクター オブジェクトの要素数を返します。|
 
 ### <a name="events"></a>イベント
 
 |||
 |-|-|
-|name|説明|
+|名前|説明|
 |イベント[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector が変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `Vector`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -402,7 +397,7 @@ A [std::initializer_list](../standard-library/initializer-list-class.md)型の�
 *last*  
 現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 型*最後*により渡される*完全転送を行います*です。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)  
 [C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

@@ -1,13 +1,10 @@
 ---
-title: "OLE コントロールの永続化 |Microsoft ドキュメント"
-ms.custom: 
+title: OLE コントロールの永続化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3452bccd4bdf94c84e4549f99829aaa087e1803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-of-ole-controls"></a>OLE コントロールの永続化
 OLE コントロールの機能の 1 つは永続化 (またはプロパティのシリアル化)、これにより、ファイルやストリームとの間、プロパティの値を読み書きする OLE コントロール。 コンテナー アプリケーションでは、シリアル化を使用して、アプリケーションがコントロールを破棄した後も、コントロールのプロパティの値を格納します。 OLE コントロールのプロパティ値をファイルから読み取ることができますし、または、後でストリームとコントロールの新しいインスタンスを作成します。  
@@ -54,7 +49,7 @@ OLE コントロールの機能の 1 つは永続化 (またはプロパティ�
   
  さらに、`AfxOleTypeMatchGuid`間で一致の判定に用意されているグローバル関数、`TYPEDESC`と指定された GUID。  
   
-##  <a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>  PX_Blob  
  コントロールの内には、この関数を呼び出して`DoPropExchange`メンバー関数をシリアル化またはバイナリ ラージ オブジェクト (BLOB) データを格納するプロパティを初期化します。  
   
 ```  
@@ -99,7 +94,7 @@ hBlobDefault
   
  注意してください`PX_Blob`、Windows を使用しているメモリを割り当てる[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API、BLOB 型のプロパティを読み込むときにします。 このメモリの解放を担当しています。 したがって、コントロールのデストラクターを呼び出す必要があります[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)ハンドルを解放は任意の BLOB 型のプロパティをコントロールに割り当てられたメモリをセットアップします。  
   
-##  <a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>  PX_Bool  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**BOOL**です。  
   
 ```  
@@ -142,7 +137,7 @@ bValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`bValue` をクリックします。 場合`bDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>  PX_Color  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**OLE_COLOR**です。  
   
 ```  
@@ -184,7 +179,7 @@ clrDefault);
 ### <a name="remarks"></a>コメント  
  プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`clrValue` をクリックします。 場合`clrDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>  PX_Currency  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**通貨**です。  
   
 ```  
@@ -227,7 +222,7 @@ cyValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`cyValue` をクリックします。 場合`cyDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>  PX_DataPath  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のデータ パス プロパティを初期化するメンバー関数[関数](../../mfc/reference/cdatapathproperty-class.md)です。  
   
 ```  
@@ -263,7 +258,7 @@ pPX,
 ### <a name="remarks"></a>コメント  
  データ パスのプロパティは、非同期のコントロールのプロパティを実装します。 プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`dataPathProperty` をクリックします。  
   
-##  <a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>  PX_Double  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**二重**です。  
   
 ```  
@@ -306,7 +301,7 @@ doubleValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる`doubleValue` をクリックします。 場合`doubleDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>  PX_Font  
  コントロールの内には、この関数を呼び出して`DoPropExchange`メンバー関数をシリアル化または種類のフォントのプロパティを初期化します。  
   
 ```  
@@ -352,7 +347,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>コメント  
  プロパティの値がから読み取るまたは書き込む`font`、`CFontHolder`参照、適切な場合です。 場合`pFontDesc`と`pFontDispAmbient`は指定すると、必要なときに、プロパティの既定値を初期化するために使用されます。 これらの値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。 通常、渡す**NULL**の`pFontDesc`アンビエントにによって返される値と`COleControl::AmbientFont`の`pFontDispAmbient`です。 フォント オブジェクトによって返されます注`COleControl::AmbientFont`への呼び出しによって解放される必要があります、 **IFontDisp::Release**メンバー関数。  
   
-##  <a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>  PX_Float  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**float**です。  
   
 ```  
@@ -395,7 +390,7 @@ floatValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる`floatValue` をクリックします。 場合`floatDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>  PX_IUnknown  
  コントロールの内には、この関数を呼び出して`DoPropExchange`、オブジェクトを持つによって表されるプロパティを初期化または逆シリアル化するメンバー関数、 **IUnknown**-派生インターフェイスです。  
   
 ```  
@@ -437,7 +432,7 @@ pUnkDefault
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる*pUnk* をクリックします。 場合`pUnkDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>  PX_Long  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**長い**です。  
   
 ```  
@@ -480,7 +475,7 @@ lValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる`lValue` をクリックします。 場合`lDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>  PX_Picture  
  コントロールの内には、この関数を呼び出して`DoPropExchange`メンバー関数をシリアル化またはコントロールの picture プロパティを初期化します。  
   
 ```  
@@ -523,7 +518,7 @@ pict  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる`pict` をクリックします。 場合`pictDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>  PX_Short  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**短い**です。  
   
 ```  
@@ -566,7 +561,7 @@ sValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる`sValue` をクリックします。 場合`sDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>  PX_ULong  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**ULONG**です。  
   
 ```  
@@ -609,7 +604,7 @@ ulValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる`ulValue` をクリックします。 場合`ulDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>  PX_UShort  
  コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数`unsigned`**短い**です。  
   
 ```  
@@ -652,7 +647,7 @@ usValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる*usValue* をクリックします。 場合*usDefault*を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>  PXstring  
  コントロールの内には、この関数を呼び出して**DoPropExchange**メンバー関数をシリアル化または文字の文字列プロパティを初期化します。  
   
 ```  
@@ -695,7 +690,7 @@ strValue  ,
 ### <a name="remarks"></a>コメント  
  プロパティの値を読み取りまたはで参照される変数に書き込まれる`strValue` をクリックします。 場合`strDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
-##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
  コントロールの内には、この関数を呼び出して`DoPropExchange`VBX コントロールのフォントに関連するプロパティを変換することで、[フォント] プロパティを初期化するためにメンバー関数。  
   
 ```  
@@ -718,12 +713,12 @@ pPX  ,
  交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>コメント  
- この関数は、直接の代わりに、VBX コントロールに設計されている OLE コントロールでのみ使用する必要があります。 Visual Basic 開発環境では、対応する置換 OLE コントロールを使用する VBX コントロールを含むフォームが変換されるときに呼び出すことが、コントロールの**IDataObject::SetData**関数、プロパティに渡すことを設定します。VBX コントロールのプロパティのデータが含まれています。 この操作により、コントロールの`DoPropExchange`呼び出される関数。 `DoPropExchange`呼び出すことができます`PX_VBXFontConvert`VBX コントロールのフォントに関連するプロパティに変換する (たとえば、"FontName、""FontSize、"など) を OLE コントロールのフォントのプロパティの対応するコンポーネントです。  
+ この関数は、直接の代わりに、VBX コントロールに設計されている OLE コントロールでのみ使用する必要があります。 Visual Basic 開発環境では、対応する置換 OLE コントロールを使用する VBX コントロールを含むフォームが変換されるときに呼び出すことが、コントロールの**IDataObject::SetData**関数、プロパティに渡すことを設定します。VBX コントロールのプロパティのデータが含まれています。 この操作により、コントロールの`DoPropExchange`呼び出される関数。 `DoPropExchange` 呼び出すことができます`PX_VBXFontConvert`VBX コントロールのフォントに関連するプロパティに変換する (たとえば、"FontName、""FontSize、"など) を OLE コントロールのフォントのプロパティの対応するコンポーネントです。  
   
- `PX_VBXFontConvert`コントロールが VBX フォーム アプリケーションから実際に変換されている場合にのみ呼び出す必要があります。 例:  
+ `PX_VBXFontConvert` コントロールが VBX フォーム アプリケーションから実際に変換されている場合にのみ呼び出す必要があります。 例えば:  
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,12 +1,9 @@
 ---
-title: "CCommand クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CCommand クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CCommand
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4c53d7b27c98e0509cd434bf6eac2412b9c1a1a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 667e86c173a7001ae22036cb1f0dd8f3fbfcf6a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommand-class"></a>CCommand クラス
 設定し、コマンドを実行するメソッドを提供します。  
@@ -84,9 +79,9 @@ class CCommand :
   
  注ことことはできませんストアド プロシージャを使用する OLE DB Provider for Jet そのプロバイダーがサポートしていないためには、(定数だけをクエリ文字列で使用) の手順が格納されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

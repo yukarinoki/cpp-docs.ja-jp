@@ -1,12 +1,9 @@
 ---
-title: "OLE DB でのトランザクションのサポート |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB でのトランザクションのサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>OLE DB でのトランザクションのサポート
 A[トランザクション](../../data/transactions-mfc-data-access.md)グループ、またはバッチの場合は、すべて成功が 1 回にコミットされるか (存在する任意の 1 つには失敗) は一切コミットされませんように一連のデータ ソースを更新する方法は、トランザクション全体がロールバックされます。 このプロセスは、データ ソースの結果の整合性を確保します。  
@@ -64,5 +59,5 @@ A[トランザクション](../../data/transactions-mfc-data-access.md)グルー
 ## <a name="distributed-transactions"></a>分散トランザクション  
  分散トランザクションは、分散型データを更新するトランザクションです。1 つ以上のネットワーク コンピューター システム上のデータは、します。 分散システムでトランザクションをサポートする場合は、OLE DB トランザクション サポートではなく、.NET Framework を使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセサーの使用](../../data/oledb/using-accessors.md)

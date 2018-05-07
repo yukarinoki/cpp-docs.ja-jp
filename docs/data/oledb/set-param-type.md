@@ -1,12 +1,9 @@
 ---
-title: SET_PARAM_TYPE | Microsoft Docs
-ms.custom: 
+title: SET_PARAM_TYPE |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - SET_PARAM_TYPE
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SET_PARAM_TYPE macro
 ms.assetid: 85979070-2d55-4c67-94b1-9b9058babc59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c2355b69be471f2f644a0126533bf17c4702cdc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9ab4884032425f13c2cc506d6e66c955eb439f7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 `COLUMN_ENTRY` マクロの後に続く `SET_PARAM_TYPE` マクロが入力、出力、入出力のいずれであるかを指定します。  
@@ -51,7 +46,7 @@ SET_PARAM_TYPE(type)
   
 -   **DBPARAMIO_OUTPUT** 出力パラメーター。  
   
--   **DBPARAMIO_INPUT &#124; DBPARAMIO_OUTPUT** The parameter is both an input and an output parameter.  
+-   **DBPARAMIO_INPUT &#124; DBPARAMIO_OUTPUT**パラメーターは、入力と出力パラメーターの両方です。  
   
 ## <a name="example"></a>例  
 ```
@@ -95,8 +90,8 @@ END_COLUMN_MAP()
 };
 ``` 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート用マクロおよびグローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

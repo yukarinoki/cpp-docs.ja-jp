@@ -1,31 +1,26 @@
 ---
-title: "ANSI Api を非推奨 |Microsoft ドキュメント"
-ms.custom: 
+title: ANSI Api を非推奨 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ba520f133ff020b6a1a51e8be7ae75b6fcdb969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="deprecated-ansi-apis"></a>サポートされなくなった ANSI API
+# <a name="deprecated-ansi-apis"></a>非推奨の ANSI API
 Microsoft Foundation Class (MFC) ライブラリは、クラスと、Unicode 文字セットに基づくメソッドに向けた移行します。 その結果、複数の MFC メソッドの ANSI バージョンの使用は推奨されていません。 今後のアプリケーションでこれらのメソッドの Unicode バージョンを使用します。  
   
  付属する Windows コモン コントロール バージョン 6.1 以降[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]ANSI の次の方法は推奨されなくなりました。  
@@ -181,6 +176,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows Vista コモン コントロールの作成要件](../mfc/build-requirements-for-windows-vista-common-controls.md)
 

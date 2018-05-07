@@ -1,12 +1,9 @@
 ---
-title: "hash_set::bucket_count (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_set::bucket_count (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::bucket_count
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - bucket_count member [STL/CLR]
 ms.assetid: 3ff49f99-b70d-4455-93e8-2bdc983a0e67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7e0d7535c651af38930d2e0f411d4caf03b17005
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96c4cbb793fda13bb15592d606f187fb64a72ff5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetbucketcount-stlclr"></a>hash_set::bucket_count (STL/CLR)
 バケットの数をカウントします。  
@@ -101,12 +96,12 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)   
  [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)

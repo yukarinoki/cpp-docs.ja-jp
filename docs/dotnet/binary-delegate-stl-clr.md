@@ -1,12 +1,9 @@
 ---
-title: "binary_delegate (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: binary_delegate (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::binary_delegate
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - binary_delegate function [STL/CLR]
 ms.assetid: 52a9291a-e354-4b9e-a035-78dac1179ec5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 178aad61a49740e9194014b5e63e0e9dcbdfff78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdca27b416f8e721a44b475d115ac902696b4a85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binarydelegate-stlclr"></a>binary_delegate (STL/CLR)
 Genereic クラスでは、2 つの引数のデリゲートについて説明します。 使用するデリゲートの引数と戻り値の型を指定します。  
@@ -102,12 +97,12 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/機能 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
  [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
  [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

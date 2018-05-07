@@ -1,12 +1,9 @@
 ---
-title: "CDynamicAccessor クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDynamicAccessor クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1f07ceae02c9c243f59f37ea49e77ef3113b5a54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2a4006afa9ebdfcf95a01103d1fd97643a6b749f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor クラス
 データベース スキーマ (データベースの基になる構造) の知識があるない場合にデータ ソースにアクセスできます。  
@@ -73,10 +68,10 @@ class CDynamicAccessor : public CAccessorBase
   
  ディスカッションと動的なアクセサー クラスを使用しての例では、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー**: atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor クラス](../../data/oledb/caccessor-class.md)   

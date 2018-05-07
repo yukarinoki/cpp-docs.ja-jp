@@ -1,13 +1,10 @@
 ---
-title: ": レコード更新レコードのしくみ (ODBC) |Microsoft ドキュメント"
-ms.custom: 
+title: ': レコード更新レコードのしくみ (ODBC) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>レコードセット: レコード更新のしくみ (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  [レコード セット: 詳細の更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)トランザクションが更新プログラムに与える影響、レコード セットを閉じるか、またはスクロールへの影響、進行中の更新、および更新内容が他の更新プログラムと対話する方法について説明して、レコード セットの更新プログラムのストーリーを完了しますユーザー。  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>レコード セットを更新中に、ロール  
+##  <a name="_core_your_role_in_recordset_updating"></a> レコード セットを更新中に、ロール  
  次の表は、レコード セットを使用して、追加、編集、またはフレームワークの動作をすると、レコードを削除するロールを示します。  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>レコード セットの更新: プログラマとフレームワーク  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  トランザクションの詳細については、次を参照してください。[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)です。  
   
-##  <a name="_core_the_edit_buffer"></a>エディット バッファー  
+##  <a name="_core_the_edit_buffer"></a> エディット バッファー  
  集合的に実行されるように、レコード セットのフィールド データ メンバーを 1 つのレコードを格納しているエディット バッファーとして機能-現在のレコードです。 更新操作では、このバッファーを使用して、現在のレコードを操作します。  
   
 -   レコードを追加する時に、エディット バッファーを使用して、新しいレコードを作成します。 レコードの追加が完了したら、以前の現在のレコードが再び現在します。  
@@ -78,9 +73,9 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  エディット バッファーは、レコードの削除で役割を果たすありません。 現在のレコードを削除してレコードは、削除済みとしてマークされているレコード セットは、別のレコードをスクロールするまで"レコード"ではなく、します。  
   
-##  <a name="_core_dynasets_and_snapshots"></a>ダイナセットを使う場合とスナップショット  
+##  <a name="_core_dynasets_and_snapshots"></a> ダイナセットを使う場合とスナップショット  
  [ダイナセットを使う場合](../../data/odbc/dynaset.md)レコードをスクロールすると、レコードの内容を更新します。 [スナップショット](../../data/odbc/snapshot.md)ない限り、レコードの内容が更新されないため、レコードの静的な表現は、 [Requery](../../mfc/reference/crecordset-class.md#requery)です。 ダイナセットを使う場合のすべての機能を使用するには、ODBC API のサポートの適切なレベルに準拠している ODBC ドライバーで作業する必要があります。 詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)と[ダイナセット](../../data/odbc/dynaset.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコードセット: AddNew、Edit、Delete の動作のしくみ (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

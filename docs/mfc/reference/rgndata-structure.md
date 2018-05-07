@@ -1,13 +1,10 @@
 ---
-title: "RGNDATA 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: RGNDATA 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - RGNDATA
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - RGNDATA structure [MFC]
 ms.assetid: 72257c00-f440-4dca-979e-9b6b5b2d5f2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4170b3590cc841f3edc10d4767045a4fede9782
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 591c2dd65fdb9dde00f0ac1373c39affbe82da85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rgndata-structure"></a>RGNDATA 構造体
 `RGNDATA`構造には、ヘッダーと領域を構成する四角形の配列が含まれています。 これらの四角形、並べ替えられた上から下、左右からへは重複しません。  
@@ -46,10 +41,10 @@ typedef struct _RGNDATA { /* rgnd */
  `Buffer`  
  含む任意のサイズのバッファーを指定します、 [RECT](../../mfc/reference/rect-structure1.md)領域を構成する構造体。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** wingdi.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRgn::CreateFromData](../../mfc/reference/crgn-class.md#createfromdata)   
  [CRgn::GetRegionData](../../mfc/reference/crgn-class.md#getregiondata)

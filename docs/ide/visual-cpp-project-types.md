@@ -1,13 +1,10 @@
 ---
-title: "Visual C プロジェクトの種類 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C プロジェクトの種類 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 10/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a837aa04b0e0c2b8d3d9f5cfd48181a9ea23b346
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-project-types"></a>Visual C++ プロジェクトの種類
 
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 プロジェクトの作成にテンプレートを使用する必要はありませんが、多くの場合、テンプレートを使用した方が効率的です。用意されたプロジェクト ファイルおよび構造を修正する方が、初めから作成するよりも簡単なためです。  
   
 > [!NOTE]
-> C++ プロジェクト テンプレートを使用して C 言語プロジェクトを作成できます。 生成されたプロジェクトで、.cpp ファイル名拡張子を持つファイルを検索して .c に変更します。 次に、プロジェクト (ソリューションではない) の **[プロジェクトのプロパティ]** ページで、 **[構成プロパティ]**、 **[C/C++]** の順に展開し、 **[詳細]**を選択します。 **[コンパイル言語の選択]** 設定を **[C コードとしてコンパイル (/TC)]**に変更します。
+> C++ プロジェクト テンプレートを使用して C 言語プロジェクトを作成できます。 生成されたプロジェクトで、.cpp ファイル名拡張子を持つファイルを検索して .c に変更します。 次に、プロジェクト (ソリューションではない) の **[プロジェクトのプロパティ]** ページで、 **[構成プロパティ]**、 **[C/C++]** の順に展開し、 **[詳細]** を選択します。 **[コンパイル言語の選択]** 設定を **[C コードとしてコンパイル (/TC)]** に変更します。
 
 ## <a name="project-templates"></a>プロジェクト テンプレート
 
@@ -106,6 +101,6 @@ C++ での Windows ユニバーサル アプリの概要については、次を
 
 プロジェクト テンプレートによって生成されたファイルの多くには TODO コメントが含まれています。このコメントは、独自のソース コードを作成できる場所を特定するのに役立ちます。 コードを追加する方法の詳細については、次を参照してください。[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)と[リソース ファイルの操作](../windows/working-with-resource-files.md)です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)   

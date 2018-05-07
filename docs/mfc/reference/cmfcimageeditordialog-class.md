@@ -1,12 +1,9 @@
 ---
-title: "CMFCImageEditorDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCImageEditorDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187373e911a91934741152110c67b7d133af827e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog クラス
 `CMFCImageEditorDialog`クラスは、イメージ エディター ダイアログ ボックスをサポートしています。  
@@ -76,10 +71,10 @@ class CMFCImageEditorDialog : public CDialogEx
   
  [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afximageeditordialog.h  
   
-##  <a name="cmfcimageeditordialog"></a>CMFCImageEditorDialog::CMFCImageEditorDialog  
+##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog  
  `CMFCImageEditorDialog` オブジェクトを構築します。  
   
 ```  
@@ -110,7 +105,7 @@ CMFCImageEditorDialog(
  [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]  
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)

@@ -1,24 +1,19 @@
 ---
-title: "ボックス化 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: ボックス化 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24fcd5b24d03b70901c0216c46211d2bdc935f21
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9e47313f65c4129bbc6fbf0a7bfbf698eb092f9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="boxing-ccx"></a>ボックス化 (C++/CX)
 *ボックス化* とは、入力型として [Platform::Object^](http://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)を取るメソッドに変数が渡されたときに、ref クラス内で、値の型変数 ( `int`Windows::Foundation::DateTime [など) または基本的スカラー型 (](../cppcx/platform-object-class.md) など) をラップすることです。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 02/14/2018
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム (C++/CX)](../cppcx/type-system-c-cx.md)   
  [キャスト (C + + CX)](../cppcx/casting-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   

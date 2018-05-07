@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: プロジェクトのデバッグ (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プロジェクトのデバッグ (C++) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>チュートリアル: プロジェクトのデバッグ (C++)
 このチュートリアルでは、プロジェクトのテスト時に検出された問題を修正するため、プログラムに変更を加えます。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
      **クラス ビュー**ウィンドウで、展開、**ゲーム**プロジェクト ツリーを選択、 **Cardgame**クラス メンバーとメソッドを表示するクラス。  
   
-     ショートカット メニューを開き、 **~Cardgame(void)**デストラクターを選択し**定義へ移動**です。  
+     ショートカット メニューを開き、 **~Cardgame(void)** デストラクターを選択し**定義へ移動**です。  
   
 2.  Cardgame が終了したときに `totalParticipants` を減らすには、`Cardgame::~Cardgame` デストラクターの左右の中かっこの間に次のコードを入力します。  
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]  
   
-4.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+4.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
 5.  ビルドが完了したら、デバッグ モードで選択して実行**デバッグ**、**デバッグの開始**メニュー バーで、または F5 キーを選択します。 プログラムは、最初のブレークポイントで停止します。  
   
@@ -65,8 +60,8 @@ ms.lasthandoff: 12/21/2017
 7.  セッションを終了するまで、プログラムをステップ実行を続行するかを選択して実行できるように**デバッグ**、**実行**メニュー バーで、または F5 キーを選択します。  
   
 ## <a name="next-steps"></a>次の手順  
- **前:** [チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124;です。**次:**[チュートリアル: プログラムの配置 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
+ **前:** [チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **次:**[チュートリアル: プログラムの配置 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   
  [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)

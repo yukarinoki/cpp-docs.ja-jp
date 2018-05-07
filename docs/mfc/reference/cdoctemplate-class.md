@@ -1,12 +1,9 @@
 ---
-title: "CDocTemplate クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDocTemplate クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocTemplate
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d44aac1ca7a018be7be1b375dd92920af96dba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate クラス
 ドキュメント テンプレートの基本的な機能を定義する抽象基底クラスです。  
@@ -138,10 +133,10 @@ class CDocTemplate : public CCmdTarget
   
  `CDocTemplate`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="adddocument"></a>CDocTemplate::AddDocument  
+##  <a name="adddocument"></a>  CDocTemplate::AddDocument  
  テンプレートにドキュメントを追加するのにには、この関数を使用します。  
   
 ```  
@@ -155,7 +150,7 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="remarks"></a>コメント  
  派生クラス[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)と[関数](../../mfc/reference/csingledoctemplate-class.md)この関数をオーバーライドします。 独自のドキュメント テンプレート クラスを派生させるかどうか`CDocTemplate`、派生クラスは、この関数をオーバーライドする必要があります。  
   
-##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
+##  <a name="cdoctemplate"></a>  CDocTemplate::CDocTemplate  
  `CDocTemplate` オブジェクトを構築します。  
   
 ```  
@@ -170,7 +165,7 @@ CDocTemplate (
  `nIDResource`  
  ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースが含まれます。  
   
- 文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、プレース ホルダーとして '\n' 文字が必要ですただし、末尾の '\n' 文字は必要ありません;)。これらの部分文字列では、ドキュメントの種類について説明します。 詳細については、部分文字列は、次を参照してください。 [GetDocString](#getdocstring)です。 この文字列リソースについては、アプリケーションのリソース ファイルにあります。 例:  
+ 文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、プレース ホルダーとして '\n' 文字が必要ですただし、末尾の '\n' 文字は必要ありません;)。これらの部分文字列では、ドキュメントの種類について説明します。 詳細については、部分文字列は、次を参照してください。 [GetDocString](#getdocstring)です。 この文字列リソースについては、アプリケーションのリソース ファイルにあります。 例えば:  
   
  `// MYCALC.RC`  
   
@@ -196,7 +191,7 @@ CDocTemplate (
 ### <a name="remarks"></a>コメント  
  このメンバー関数を使用して構築するために、`CDocTemplate`オブジェクト。 動的に割り当てる、`CDocTemplate`オブジェクトに渡すと[とき](../../mfc/reference/cwinapp-class.md#adddoctemplate)から、`InitInstance`アプリケーション クラスのメンバー関数。  
   
-##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
+##  <a name="closealldocuments"></a>  CDocTemplate::CloseAllDocuments  
  開いているすべてのドキュメントを閉じるには、このメンバー関数を呼び出します。  
   
 ```  
@@ -212,7 +207,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
   
  ユーザーがドキュメントを閉じる前に、特別なクリーンアップ処理を実行する必要をする場合は、この関数をオーバーライドします。 たとえば、ドキュメントでは、データベース内のレコードを表す、場合、データベースを終了するには、この関数をオーバーライドします。  
   
-##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
+##  <a name="createnewdocument"></a>  CDocTemplate::CreateNewDocument  
  このドキュメント テンプレートに関連付けられている型の新しいドキュメントを作成するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -222,7 +217,7 @@ virtual CDocument* CreateNewDocument();
 ### <a name="return-value"></a>戻り値  
  新しく作成されたドキュメントへのポインターまたは**NULL**場合は、エラーが発生します。  
   
-##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
+##  <a name="createnewframe"></a>  CDocTemplate::CreateNewFrame  
  ドキュメントとビューを含む新しいフレーム ウィンドウを作成します。  
   
 ```  
@@ -242,11 +237,11 @@ virtual CFrameWnd* CreateNewFrame(
  新しく作成されたフレーム ウィンドウへのポインターまたは**NULL**場合は、エラーが発生します。  
   
 ### <a name="remarks"></a>コメント  
- `CreateNewFrame`使用して、`CRuntimeClass`オブジェクトを表示と添付されたドキュメントを使用して、新しいフレーム ウィンドウを作成するコンス トラクターに渡されます。 場合、`pDoc`パラメーターは**NULL**フレームワークは、トレース メッセージを出力します。  
+ `CreateNewFrame` 使用して、`CRuntimeClass`オブジェクトを表示と添付されたドキュメントを使用して、新しいフレーム ウィンドウを作成するコンス トラクターに渡されます。 場合、`pDoc`パラメーターは**NULL**フレームワークは、トレース メッセージを出力します。  
   
  `pOther`新しいウィンドウのコマンドを実装するパラメーターを使用します。 新しいフレーム ウィンドウをモデル化するフレーム ウィンドウを提供します。 新しいフレーム ウィンドウを非表示には、通常は作成されます。 新しいファイルとファイルを開くの標準的なフレームワークの実装の外部のフレーム ウィンドウを作成するには、この関数を呼び出します。  
   
-##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
+##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  OLE のフレーム ウィンドウを作成します。  
   
 ```  
@@ -272,7 +267,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="remarks"></a>コメント  
  場合`bCreateView`0 の場合は、空のフレームを作成します。  
   
-##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
+##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  ドキュメントの種類に関連付けられている文字列を取得します。  
   
 ```  
@@ -285,7 +280,7 @@ virtual BOOL GetDocString(
  `rString`  
  参照、`CString`関数が戻るときに、文字列を格納するオブジェクト。  
   
- *インデックス*  
+ *index*  
  ドキュメントの種類を説明する文字列から取得する部分文字列のインデックス。 このパラメーターには、次のいずれかの値を指定できます。  
   
 - **CDocTemplate::windowTitle**アプリケーション ウィンドウのタイトル バーの (たとえば、"Excel") に表示される名前です。 SDI アプリケーションのドキュメント テンプレートにのみ存在します。  
@@ -310,7 +305,7 @@ virtual BOOL GetDocString(
   
  独自のクラスから派生する場合にのみ、この関数を呼び出す`CDocTemplate`です。  
   
-##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
+##  <a name="getfirstdocposition"></a>  CDocTemplate::GetFirstDocPosition  
  このテンプレートに関連付けられている最初のドキュメントの位置を取得します。  
   
 ```  
@@ -325,7 +320,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
   
  [関数](../../mfc/reference/csingledoctemplate-class.md)と[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)両方純粋仮想関数をオーバーライドします。 任意のクラスから派生した`CDocTemplate`も、この関数をオーバーライドしなければなりません。  
   
-##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
+##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
  によって識別されるリストの要素を取得`rPos`を設定し、`rPos`を**位置**一覧の次のエントリの値。  
   
 ```  
@@ -346,7 +341,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
   
  確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
-##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>  CDocTemplate::InitialUpdateFrame  
  フレーム ウィンドウを初期化し、必要に応じて表示にします。  
   
 ```  
@@ -371,7 +366,7 @@ virtual void InitialUpdateFrame(
   
  新しいファイルとファイルを開くのフレームワークの実装を使用する場合は、この関数を呼び出す必要はありません。  
   
-##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
+##  <a name="loadtemplate"></a>  CDocTemplate::LoadTemplate  
  リソースを読み込み、指定された`CDocTemplate`またはその派生クラス。  
   
 ```  
@@ -381,7 +376,7 @@ virtual void LoadTemplate();
 ### <a name="remarks"></a>コメント  
  リソースを読み込むために、フレームワークによって呼び出されます、指定された`CDocTemplate`またはその派生クラス。 通常ときに呼び出されます、構築時に除く、テンプレートがグローバルに構築されます。 その場合への呼び出しで`LoadTemplate`まで遅延[とき](../../mfc/reference/cwinapp-class.md#adddoctemplate)と呼びます。  
   
-##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
+##  <a name="matchdoctype"></a>  CDocTemplate::MatchDocType  
  ドキュメントの種類とテンプレートの間の一致で信頼度を決定します。  
   
 ```  
@@ -423,7 +418,7 @@ enum Confidence
   
  既定の実装を返さない**CDocTemplate::maybeAttemptForeign**または**CDocTemplate::maybeAttemptNative**です。 などからこれらの 2 つの値を使用して、アプリケーションに適したの型が一致するロジックを実装するには、この関数をオーバーライドして、**信頼**列挙します。  
   
-##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>  CDocTemplate::OpenDocumentFile  
  パスで指定されたファイルを開きます。  
   
 ```  
@@ -439,7 +434,7 @@ virtual CDocument* OpenDocumentFile(
  開かれるドキュメントを含むファイルのパスへのポインター。  
   
  [入力] `bAddToMRU`  
- `TRUE`このドキュメントは、最新のファイルのいずれかを示します`FALSE`ドキュメントが最新のファイルの 1 つでないことを示します。  
+ `TRUE` このドキュメントは、最新のファイルのいずれかを示します`FALSE`ドキュメントが最新のファイルの 1 つでないことを示します。  
   
 ### <a name="return-value"></a>戻り値  
  ファイルの名前は、ドキュメントへのポインター`lpszPathName`です。`NULL`失敗した場合。  
@@ -447,7 +442,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="remarks"></a>コメント  
  パスを持つには、指定されたファイルを開きます`lpszPathName`です。 場合`lpszPathName`は`NULL`、このテンプレートに関連付けられている型のドキュメントを含む新しいファイルを作成します。  
   
-##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
+##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
  によって示されるドキュメントが削除`pDoc`このテンプレートに関連付けられているドキュメントの一覧からです。  
   
 ```  
@@ -461,7 +456,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="remarks"></a>コメント  
  派生クラス`CMultiDocTemplate`と`CSingleDocTemplate`この関数をオーバーライドします。 独自のドキュメント テンプレート クラスを派生させるかどうか`CDocTemplate`、派生クラスは、この関数をオーバーライドする必要があります。  
   
-##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
+##  <a name="saveallmodified"></a>  CDocTemplate::SaveAllModified  
  変更されているすべてのドキュメントを保存します。  
   
 ```  
@@ -471,7 +466,7 @@ virtual BOOL SaveAllModified();
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外それ以外の場合 0 を返します。  
   
-##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
+##  <a name="setcontainerinfo"></a>  CDocTemplate::SetContainerInfo  
  インプレースで OLE 項目を編集する場合は、OLE コンテナーのリソースを決定します。  
   
 ```  
@@ -487,7 +482,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
   
  関連付けられたメニュー`nIDOleInPlaceContainer`コンテナー アプリケーションのメニューにマージするアクティブ化されたインプレースで項目のメニューを許可する区切り記号が含まれています。 サーバーとコンテナーのメニューのマージに関する詳細については、記事を参照してください。[メニューとリソース (OLE)](../../mfc/menus-and-resources-ole.md)です。  
   
-##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
+##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  ドキュメントの既定のタイトルを読み込んで、ドキュメントのタイトル バーに表示するには、この関数を呼び出します。  
   
 ```  
@@ -501,7 +496,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="remarks"></a>コメント  
  既定のタイトルの詳細については、の説明を参照してください。 **CDocTemplate::docName**で[CDocTemplate::GetDocString](#getdocstring)です。  
   
-##  <a name="setserverinfo"></a>CDocTemplate::SetServerInfo  
+##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo  
  サーバー ドキュメントが埋め込まれているまたはインプレースを編集するときに、リソースやクラスを決定します。  
   
 ```  
@@ -530,7 +525,7 @@ void SetServerInfo(
   
  関連付けられたメニュー`nIDOleInPlaceServer`コンテナーのメニューで [サーバー] メニューをマージするを許可する区切り記号が含まれています。 サーバーとコンテナーのメニューのマージに関する詳細については、記事を参照してください。[メニューとリソース (OLE)](../../mfc/menus-and-resources-ole.md)です。  
   
-##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
+##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  リッチ プレビューに使用する子フレームを作成します。  
   
 ```  
@@ -551,7 +546,7 @@ CFrameWnd* CreatePreviewFrame(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
+##  <a name="setpreviewinfo"></a>  CDocTemplate::SetPreviewInfo  
  プロセスのプレビュー ハンドラーの出力を設定します。  
   
 ```  
@@ -573,7 +568,7 @@ void SetPreviewInfo(
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [関数クラス](../../mfc/reference/csingledoctemplate-class.md)   

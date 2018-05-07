@@ -1,12 +1,9 @@
 ---
-title: "乗算 (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: 乗算 (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiplies
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - multiplies function [STL/CLR]
 ms.assetid: 76d23149-789a-48a1-89f8-9103df82a1df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1012997408f108192425a4a7c127baa873b34795
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6c7d89aa34311c5f880d3e7af30a44e9d9d5b17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiplies-stlclr"></a>multiplies (STL/CLR)
 このテンプレート クラスは、ファンクタを記述、呼び出されると、時間、2 つ目の最初の引数を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
@@ -127,11 +122,11 @@ int main()
 8 3  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/機能 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [除算 (STL/CLR)](../dotnet/divides-stl-clr.md)   
  [modulus (STL/CLR)](../dotnet/modulus-stl-clr.md)

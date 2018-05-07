@@ -1,12 +1,9 @@
 ---
-title: "CTooltipManager クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CTooltipManager クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTooltipManager
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2adb62f107cb50ade529d552ce1735c57f74b171
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78b191766e33d291317ef50a4d5373dc26428577
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager クラス
 ツールヒントに関するランタイム情報を保持します。 `CTooltipManager` クラスのインスタンスは、アプリケーションごとに 1 回作成されます。  
@@ -66,10 +61,10 @@ class CTooltipManager : public CObject
   
  [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtooltipmanager.h  
   
-##  <a name="createtooltip"></a>CTooltipManager::CreateToolTip  
+##  <a name="createtooltip"></a>  CTooltipManager::CreateToolTip  
  ツール ヒント コントロールを作成します。  
   
 ```  
@@ -113,7 +108,7 @@ static BOOL CreateToolTip(
 |AFX_TOOLTIP_TYPE_TOOLBAR|ツールバーです。|CMFCToolBar、CMFCPopupMenuBar|  
 |AFX_TOOLTIP_TYPE_TOOLBOX|ツールボックス。|なし。|  
   
-##  <a name="deletetooltip"></a>CTooltipManager::DeleteToolTip  
+##  <a name="deletetooltip"></a>  CTooltipManager::DeleteToolTip  
  ツールヒント コントロールを削除します。  
   
 ```  
@@ -127,7 +122,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ### <a name="remarks"></a>コメント  
  このメソッドの各呼び出し[CToolTipCtrl クラス](../../mfc/reference/ctooltipctrl-class.md)によって作成された[CTooltipManager::CreateToolTip](#createtooltip)です。 親コントロールからこのメソッドを呼び出す必要があります、`OnDestroy`ハンドラー。 これは、正しくフレームワークからヒントを削除する必要があります。 このメソッドは設定`pToolTip`に`NULL`を返す前にします。  
   
-##  <a name="settooltipparams"></a>:Settooltipparams  
+##  <a name="settooltipparams"></a>  :Settooltipparams  
  指定された Windows コントロールの種類のツールヒント コントロールの外観をカスタマイズします。  
   
 ```  
@@ -152,14 +147,14 @@ void SetTooltipParams(
   
  このメソッドを呼び出す、既存のすべてのツールヒント所有者が AFX_WM_UPDATETOOLTIPS メッセージを受信しすると、ツールヒントを使用して再作成する必要があります[CTooltipManager::CreateToolTip](#createtooltip)です。  
   
- `nTypes`有効なツールヒントの任意の組み合わせの種類を指定できます[CTooltipManager::CreateToolTip](#createtooltip)が使用することもできます AFX_TOOLTIP_TYPE_ALL です。 AFX_TOOLTIP_TYPE_ALL を渡すと、すべてのツール ヒントの種類に影響します。  
+ `nTypes` 有効なツールヒントの任意の組み合わせの種類を指定できます[CTooltipManager::CreateToolTip](#createtooltip)が使用することもできます AFX_TOOLTIP_TYPE_ALL です。 AFX_TOOLTIP_TYPE_ALL を渡すと、すべてのツール ヒントの種類に影響します。  
   
 ### <a name="example"></a>例  
  次の例で使用する方法、`SetTooltipParams`のメソッド、`CTooltipManager`クラスです。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
   
  [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]  
   
-##  <a name="settooltiptext"></a>CTooltipManager::SetTooltipText  
+##  <a name="settooltiptext"></a>  CTooltipManager::SetTooltipText  
  テキストとツールヒントの説明を設定します。  
   
 ```  
@@ -190,7 +185,7 @@ static void SetTooltipText(
 ### <a name="remarks"></a>コメント  
  値`nType`と同じ値にする必要があります、`nType`のパラメーター [CTooltipManager::CreateToolTip](#createtooltip)ツールヒントを作成したときにします。  
   
-##  <a name="updatetooltips"></a>CTooltipManager::UpdateTooltips  
+##  <a name="updatetooltips"></a>  CTooltipManager::UpdateTooltips  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -199,7 +194,7 @@ void UpdateTooltips();
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)   

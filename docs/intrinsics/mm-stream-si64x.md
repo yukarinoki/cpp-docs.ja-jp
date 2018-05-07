@@ -1,12 +1,9 @@
 ---
-title: "_mm_stream_si64x |Microsoft ドキュメント"
-ms.custom: 
+title: _mm_stream_si64x |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_stream_si64x
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d70999ad56cd84b2b55b5064235a25e14a04dbc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2ea6b9bdc57765b15128ebcc6f9a17bba2612e29
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
@@ -51,7 +46,7 @@ void _mm_stream_si64x(
  [入力] `Source`  
  書き込むデータ。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -91,5 +86,5 @@ int main()
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

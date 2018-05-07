@@ -1,13 +1,10 @@
 ---
-title: "指定するカスタム ビルド ツール |Microsoft ドキュメント"
-ms.custom: 
+title: 指定するカスタム ビルド ツール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>カスタム ビルド ツールを指定します。
 
@@ -65,7 +61,7 @@ A*カスタム ビルド ツール*ビルド システムを特定の入力フ�
 
       複数の入力と出力ファイルは、MSBuild マクロでのシンボルで指定できます。 ファイルの場所または一連のファイルの名前を指定する方法については、次を参照してください。[のビルドのコマンドとプロパティの一般的なマクロ](../ide/common-macros-for-build-commands-and-properties.md)です。
 
-      '%' 文字は、各環境変数を置き換える、指定した場合、MSBuild によって予約されているため **%** 文字をエスケープ、 **%25** 16 進数のエスケープ シーケンスです。 たとえば、置き換える**%windir%**で**%25windir 25**です。 各 MSBuild が置き換えられます**%25**とシーケンス、  **%** 文字の環境変数にアクセスする前にします。
+      '%' 文字は、各環境変数を置き換える、指定した場合、MSBuild によって予約されているため**%** 文字をエスケープ、 **%25** 16 進数のエスケープ シーケンスです。 たとえば、置き換える **%windir%** で **%25windir 25**です。 各 MSBuild が置き換えられます **%25**とシーケンス、 **%** 文字の環境変数にアクセスする前にします。
 
    - **説明**、このカスタム ビルド ツールに関するわかりやすいメッセージを入力します。 メッセージが出力、**出力**ウィンドウ、ビルド システムがこのツールを処理するときにします。
 

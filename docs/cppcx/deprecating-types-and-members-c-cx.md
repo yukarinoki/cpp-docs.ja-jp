@@ -1,27 +1,22 @@
 ---
-title: "型およびメンバーの非推奨化 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: 型およびメンバーの非推奨化 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc0ef30006afb9fcad65bc64e3f12fe9586d920
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 5b82f22f996b0f52889bd76227647ab367118898
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deprecating-types-and-members-ccx"></a>型およびメンバーの非推奨化 (C++/CX)
-C + + CX、プロデューサーおよびコンシューマーを使用して用の Windows ランタイム型とメンバーの非推奨、[推奨されなくなった](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)属性はサポートされています。 この属性が適用された API を利用すると、その API は推奨されておらず、代替 API の使用を推奨する警告メッセージがコンパイル時に表示されます。 独自のパブリック型およびメソッドでこの属性を適用し、独自のカスタム メッセージを提供することもできます。  
+C + + CX、プロデューサーおよびコンシューマーを使用して用の Windows ランタイム型とメンバーの非推奨、[推奨されなくなった](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)属性はサポートされています。 この属性が適用された API を利用すると、その API は非推奨とされており、代替 API の使用を推奨する警告メッセージがコンパイル時に表示されます。 独自のパブリック型およびメソッドでこの属性を適用し、独自のカスタム メッセージを提供することもできます。  
   
 > [!CAUTION]
 >  [Deprecated](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c)属性は、Windows ランタイム型でのみ使用します。 標準 C++ のクラスおよびメンバーの場合は、 [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx)を使用します。  
@@ -45,7 +40,7 @@ public:
 ```  
   
 ## <a name="supported-targets"></a>サポート対象  
- 次の表では、Deprecated 属性を適用できるコンストラクトを示します:  
+ 次の表では、非推奨の属性を適用できるコンストラクトを示します:  
   
 ||  
 |-|  
@@ -62,7 +57,7 @@ public:
 |構造体のフィールド|  
 |パラメーター化されたコンストラクター|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   
  [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

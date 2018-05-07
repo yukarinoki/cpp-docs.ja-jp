@@ -1,13 +1,10 @@
 ---
-title: "メニュー (MFC) |Microsoft ドキュメント"
-ms.custom: 
+title: メニュー (MFC) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - menus [MFC], manipulating during execution
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc91a618dc6f8f87874868c70983d421e01a4b23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 839b38a135f9f7ada413de757035370e009cfa57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-mfc"></a>メニュー (MFC)
 MFC では、メニューを操作するときに 2 つの要素を指定します。  
@@ -45,5 +40,5 @@ MFC では、メニューを操作するときに 2 つの要素を指定しま�
   
 -   [サンプル](../mfc/menu-sample-list.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)

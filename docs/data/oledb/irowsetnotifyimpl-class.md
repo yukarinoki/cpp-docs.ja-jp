@@ -1,12 +1,9 @@
 ---
-title: "IRowsetNotifyImpl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: IRowsetNotifyImpl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetNotifyImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetNotifyImpl class
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43a71127512f679131cf767cfdc5147efe23e2ef
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 860b735863acbcac869a4a297984084946aaf028
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl クラス
 実装し、登録[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)コンシューマー (とも呼ばれる、「シンク」) の通知を処理できるようにします。  
@@ -54,10 +49,10 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
   
  `IRowsetNotifyImpl` ダミー実装を提供`IRowsetNotify`、用の空の関数で、`IRowsetNotify`メソッド[OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx)、 [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)、および[OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). 実装するときに、このクラスから継承する場合、`IRowsetNotify`インターフェイスに必要なメソッドのみを実装することができます。 また、他のメソッドの空の実装を提供する必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)   

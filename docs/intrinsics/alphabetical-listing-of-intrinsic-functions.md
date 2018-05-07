@@ -1,12 +1,9 @@
 ---
-title: "組み込み関数の一覧がアルファベット |Microsoft ドキュメント"
-ms.custom: 
+title: 組み込み関数の一覧がアルファベット |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad46e20a0182923593f20bd8a56269af18772876
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e4418835d29fed1f054888f16b188a8775307d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>組み込み関数のアルファベット順の一覧
 次のセクションでは、一部またはすべてのアーキテクチャで使用可能な Microsoft 固有の組み込み関数について説明します。 サポートされているその他の組み込みについては、プロセッサの製造元により、ヘッダー ファイルまたは各社の Web サイトで文書化されています。 参照してください、 [ARM 組み込み](../intrinsics/arm-intrinsics.md)、 [x86 組み込み](../intrinsics/x86-intrinsics-list.md)、および[x64 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)セクションでは、製造元のドキュメントへのリンク。 組み込みがそれらの実装されている C ランタイム ライブラリ (CRT) 関数がここに記載されていません。これらの関数については、『、 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)です。  
   
  [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)  
   
- [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
+ [_ _addgsbyte、 \__addgsword、 \__addgsdword、 \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
   
  [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)  
   
@@ -72,9 +67,9 @@ ms.lasthandoff: 02/23/2018
   
  [__inbytestring](../intrinsics/inbytestring.md)  
   
- [__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)  
+ [_ _incfsbyte、 \__incfsword、 \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)  
   
- [__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
+ [_ _incgsbyte、 \__incgsword、 \__incgsdword、 \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
   
  [__indword](../intrinsics/indword.md)  
   
@@ -124,7 +119,7 @@ ms.lasthandoff: 02/23/2018
   
  [__ll_rshift](../intrinsics/ll-rshift.md)  
   
- [__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
+ [_ _lzcnt16、 \__lzcnt、 \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
   
  [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)  
   
@@ -192,9 +187,9 @@ ms.lasthandoff: 02/23/2018
   
  [__readeflags](../intrinsics/readeflags.md)  
   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
+ [_ _readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
   
- [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
+ [_ _readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
   
  [__readmsr](../intrinsics/readmsr.md)  
   
@@ -282,9 +277,9 @@ ms.lasthandoff: 02/23/2018
   
  [_ _writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)  
   
- [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
+ [_ _writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
   
  [__writemsr](../intrinsics/writemsr.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

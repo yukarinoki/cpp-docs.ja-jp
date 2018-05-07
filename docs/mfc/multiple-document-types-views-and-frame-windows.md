@@ -1,13 +1,10 @@
 ---
-title: "複数のドキュメント タイプ、ビュー、およびフレーム ウィンドウ |Microsoft ドキュメント"
-ms.custom: 
+title: 複数のドキュメント タイプ、ビュー、およびフレーム ウィンドウ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>複数のドキュメント タイプ、ビュー、フレーム ウィンドウ
 ドキュメント、そのビュー、およびそのフレーム ウィンドウの間の標準的な関係については、「 [ドキュメントおよびビューの作成](../mfc/document-view-creation.md)」を参照してください。 アプリケーションの多くが、ドキュメントごとに 1 つのビューと 1 つのフレーム ウィンドウを備えた、1 つのドキュメント タイプをサポートしますが (1 つのドキュメント タイプのドキュメントを複数開くことはできます)、 アプリケーションによっては、こうした 1 つ以上の既定値の変更が必要になる場合があります。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  次の図は、a、b、c の 3 つに分けて、前述の 3 つのユーザー インターフェイス モデルを順に示しています。  
   
- ![複数 &#45; ビュー ユーザー インターフェイス](../mfc/media/vc37a71.gif "vc37a71")  
+ ![複数&#45;ユーザー インターフェイスを表示](../mfc/media/vc37a71.gif "vc37a71")  
 マルチ ビューによるユーザー インターフェイス  
   
  「 [分割ウィンドウ](../mfc/reference/csplitterwnd-class.md)」で説明されているように、フレームワークでは、[新規ウィンドウ] コマンドの実装と [CSplitterWnd](#_core_splitter_windows)クラスの提供により、これらのモデルを用意します。 その他のモデルを実装するには、これを開始点として使用できます。 ビュー、フレーム ウィンドウ、分割ウィンドウのさまざまな構成を示すサンプル プログラムについては、「 [MFC サンプル](../visual-cpp-samples.md)」を参照してください。  
@@ -94,6 +89,6 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、 [MFC リファレンス](../mfc/reference/csplitterwnd-class.md) の *CSplitterWnd* に関するトピックと、 [MFC サンプル](../visual-cpp-samples.md)を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
 

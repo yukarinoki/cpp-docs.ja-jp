@@ -1,13 +1,10 @@
 ---
-title: "レコード フィールド エクス チェンジ関数 |Microsoft ドキュメント"
-ms.custom: 
+title: レコード フィールド エクス チェンジ関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>レコード フィールド エクスチェンジ (RFX) 関数
 このトピックの一覧、レコード フィールド エクス チェンジ (RFX、バルク RFX と DFX) 関数をレコード セット オブジェクトとそのデータ ソース間のデータ転送を自動化して、データの他の操作を実行するために使用します。  
@@ -160,7 +155,7 @@ void RFX_Binary(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_bool"></a>  RFX_Bool
@@ -188,7 +183,7 @@ void RFX_Bool(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_byte"></a>  RFX_Byte
@@ -216,7 +211,7 @@ void RFX_Byte(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_date"></a>  RFX_Date
@@ -261,7 +256,7 @@ void RFX_Date(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_double"></a>  RFX_Double
@@ -289,7 +284,7 @@ void RFX_Double(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_int"></a>  RFX_Int
@@ -317,7 +312,7 @@ void RFX_Int(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_long"></a>  RFX_Long
@@ -346,7 +341,7 @@ value );
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 ## <a name="rfx_longbinary"></a>  RFX_LongBinary
@@ -374,7 +369,7 @@ void RFX_LongBinary(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_single"></a>  RFX_Single
@@ -402,7 +397,7 @@ void RFX_Single(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 
@@ -438,7 +433,7 @@ void RFX_Text(
  主にパラメーターを使用します。 パラメーターのデータ型を示す整数。 種類は、フォームの ODBC データ型**SQL_XXX**です。  
   
  `nScale`  
- ODBC 型の値の小数点以下桁数を示す**SQL_DECIMAL**または**SQL_NUMERIC**です。 `nScale`パラメーターの値を設定するときに役立ちますのみです。 詳細についてを参照してください「の有効桁数、小数点以下桁数、長さ、および表示サイズ」の付録 D、 *ODBC SDK プログラマ リファレンス*です。  
+ ODBC 型の値の小数点以下桁数を示す**SQL_DECIMAL**または**SQL_NUMERIC**です。 `nScale` パラメーターの値を設定するときに役立ちますのみです。 詳細についてを参照してください「の有効桁数、小数点以下桁数、長さ、および表示サイズ」の付録 D、 *ODBC SDK プログラマ リファレンス*です。  
   
 ### <a name="remarks"></a>コメント  
  間にこれらの型のすべてのデータ ソース内のデータがマップされている`CString`レコード セットにします。  
@@ -464,7 +459,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 
@@ -511,7 +506,7 @@ void RFX_Binary_Bulk(
 ### <a name="example"></a>例  
  参照してください[RFX_Text_Bulk](#rfx_text_bulk)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_bool_bulk"></a>  RFX_Bool_Bulk
@@ -553,7 +548,7 @@ void RFX_Bool_Bulk(
 ### <a name="example"></a>例  
  参照してください[RFX_Text_Bulk](#rfx_text_bulk)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_byte_bulk"></a>  RFX_Byte_Bulk
@@ -595,7 +590,7 @@ void RFX_Byte_Bulk(
 ### <a name="example"></a>例  
  参照してください[RFX_Text_Bulk](#rfx_text_bulk)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 ## <a name="rfx_date_bulk"></a>  RFX_Date_Bulk
@@ -637,7 +632,7 @@ void RFX_Date_Bulk(
 ### <a name="example"></a>例  
  参照してください[RFX_Text_Bulk](#rfx_text_bulk)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_double_bulk"></a>  RFX_Double_Bulk
@@ -679,7 +674,7 @@ void RFX_Double_Bulk(
 ### <a name="example"></a>例  
  参照してください[RFX_Text_Bulk](#rfx_text_bulk)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_int_bulk"></a>  RFX_Int_Bulk
@@ -707,7 +702,7 @@ void RFX_Int(
 ### <a name="example"></a>例  
  参照してください[RFX_Text](#rfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_long_bulk"></a>  RFX_Long_Bulk
@@ -749,7 +744,7 @@ void RFX_Long_Bulk(
 ### <a name="example"></a>例  
  参照してください[RFX_Text_Bulk](#rfx_text_bulk)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="rfx_single_bulk"></a>  RFX_Single_Bulk
@@ -791,7 +786,7 @@ void RFX_Single_Bulk(
 ### <a name="example"></a>例  
  参照してください[RFX_Text_Bulk](#rfx_text_bulk)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
 
@@ -853,7 +848,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ``` 
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
 ## <a name="dfx_binary"></a>  DFX_Binary
@@ -895,7 +890,7 @@ void AFXAPI DFX_Binary(
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
 
@@ -934,7 +929,7 @@ void AFXAPI DFX_Bool(
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
 
 ## <a name="dfx_byte"></a>  DFX_Byte
@@ -972,7 +967,7 @@ void AFXAPI DFX_Byte(
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
 
 ## <a name="dfx_currency"></a>  DFX_Currency
@@ -1010,7 +1005,7 @@ void AFXAPI DFX_Currency(
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
 
 ## <a name="dfx_datetime"></a>  DFX_DateTime
@@ -1046,12 +1041,12 @@ void AFXAPI DFX_DateTime(
  型の間のデータのマップ**DAO_DATE** DAO」と入力[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)レコード セットにします。  
   
 > [!NOTE]
->  `COleDateTime`置換[CTime](../../atl-mfc-shared/reference/ctime-class.md)と**TIMESTAMP_STRUCT** DAO クラスでは、この目的のためです。 `CTime`および**TIMESTAMP_STRUCT**されて ODBC ベースのデータ アクセス クラスを使用します。  
+>  `COleDateTime` 置換[CTime](../../atl-mfc-shared/reference/ctime-class.md)と**TIMESTAMP_STRUCT** DAO クラスでは、この目的のためです。 `CTime` および**TIMESTAMP_STRUCT**されて ODBC ベースのデータ アクセス クラスを使用します。  
   
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
 
 ## <a name="dfx_double"></a>  DFX_Double
@@ -1089,7 +1084,7 @@ void AFXAPI DFX_Double(
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
 
 ## <a name="dfx_long"></a>  DFX_Long
@@ -1127,7 +1122,7 @@ void AFXAPI DFX_Long(
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
 
@@ -1165,12 +1160,12 @@ void AFXAPI DFX_LongBinary(
 >  かどうかのデータは double を設定して、既定でバッファリングを制御する[CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)です。  
   
 ### <a name="remarks"></a>コメント  
- `DFX_LongBinary`MFC ODBC クラスとの互換性を指定できます。 `DFX_LongBinary`関数がクラスを使用してバイナリ ラージ オブジェクト (BLOB) データを転送`CLongBinary`のフィールド データ メンバーの間、 [CDaoRecordset](cdaorecordset-class.md)オブジェクトおよびデータ ソースのレコードの列です。 型の間のデータのマップ**DAO_BYTES** DAO」と入力[CLongBinary](clongbinary-class.md)レコード セットにします。  
+ `DFX_LongBinary` MFC ODBC クラスとの互換性を指定できます。 `DFX_LongBinary`関数がクラスを使用してバイナリ ラージ オブジェクト (BLOB) データを転送`CLongBinary`のフィールド データ メンバーの間、 [CDaoRecordset](cdaorecordset-class.md)オブジェクトおよびデータ ソースのレコードの列です。 型の間のデータのマップ**DAO_BYTES** DAO」と入力[CLongBinary](clongbinary-class.md)レコード セットにします。  
   
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
 
 ## <a name="dfx_short"></a>  DFX_Short
@@ -1206,12 +1201,12 @@ void AFXAPI DFX_Short(
  型の間のデータのマップ**DAO_I2** DAO」と入力**短い**レコード セットにします。  
   
 > [!NOTE]
->  `DFX_Short`等価[RFX_Int](#rfx_int) ODBC ベースのクラスにします。  
+>  `DFX_Short` 等価[RFX_Int](#rfx_int) ODBC ベースのクラスにします。  
   
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
 
@@ -1250,7 +1245,7 @@ void AFXAPI DFX_Single(
 ### <a name="example"></a>例  
  参照してください[DFX_Text](#dfx_text)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
 
 ## <a name="dfx_text"></a>  DFX_Text
@@ -1287,7 +1282,7 @@ void AFXAPI DFX_Text(
 >  かどうかのデータは double を設定して、既定でバッファリングを制御する[CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)です。  
   
 ### <a name="remarks"></a>コメント  
- 型の間のデータのマップ**DAO_CHAR** DAO での (またはの場合、シンボル**_UNICODE**が定義されている**DAO_WCHAR**) と型[CString](../../atl-mfc-shared/reference/cstringt-class.md)で、レコード セットです。  n
+ 型の間のデータのマップ**DAO_CHAR** DAO での (またはの場合、シンボル **_UNICODE**が定義されている**DAO_WCHAR**) と型[CString](../../atl-mfc-shared/reference/cstringt-class.md)で、レコード セットです。  n
   
 ### <a name="example"></a>例  
  この例を複数回呼び出します`DFX_Text`です。 2 つの呼び出しにも注意してください[CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype)です。 最初の呼び出しを記述する必要があります`SetFieldType`とその**DFX**呼び出します。 2 番目の呼び出しとそれに関連する**DFX**呼び出しは通常、クラスを生成するコード ウィザードによって書き込まれます。  
@@ -1308,10 +1303,10 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)   
  [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)   

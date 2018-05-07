@@ -1,30 +1,25 @@
 ---
-title: "OLE DB アーキテクチャの設計上の問題 |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB アーキテクチャの設計上の問題 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cfb6b8ff4941aff1271662c27dddd509b023c55
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 75d996416e92ded920f45d3352c6478dd8c67a86
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB アーキテクチャのデザインの問題
 OLE DB アプリケーションを開始する前に、次の問題を考慮してください。  
@@ -47,12 +42,12 @@ OLE DB アプリケーションを開始する前に、次の問題を考慮し�
   
 -   [Microsoft データ アクセス技術情報の概要](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Visual Studio Solution Center](http://go.microsoft.com/fwlink/p/?linkid=148215)  
+-   [Visual Studio ソリューション センター](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [Microsoft.com を検索します。](http://search.microsoft.com/)  
   
- 検索を実行するときに、シナリオに最適なキーワードの組み合わせを入力してください。例: OLE DB プロバイダーで ADO オブジェクトを使用していた場合は、ブール型の検索を再試行してくださいで**ADO および OLE DB""**です。 ODBC に古い DAO コードを移行する場合は、「すべての単語」を選択し、文字列を指定します。**移行 DAO**です。  
+ 検索を実行するときに、シナリオに最適なキーワードの組み合わせを入力してください。例: OLE DB プロバイダーで ADO オブジェクトを使用していた場合は、ブール型の検索を再試行してくださいで**ADO および OLE DB""** です。 ODBC に古い DAO コードを移行する場合は、「すべての単語」を選択し、文字列を指定します。**移行 DAO**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)   
  [OLE DB プログラミングの概要](../../data/oledb/ole-db-programming-overview.md)

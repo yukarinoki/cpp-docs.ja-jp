@@ -2,11 +2,8 @@
 title: hash_set::lower_bound (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::lower_bound
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - lower_bound member [STL/CLR]
 ms.assetid: 54fe8ee5-1977-4192-9cc6-b51e84b03a16
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e1591f8309efda56305fffddc5faad4f1d54457c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f36f90a7585002610fa6d000130d14a616db7382
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetlowerbound-stlclr"></a>hash_set::lower_bound (STL/CLR)
 指定したキーに一致する範囲の先頭を検出します。  
@@ -83,12 +78,12 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
  [hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   

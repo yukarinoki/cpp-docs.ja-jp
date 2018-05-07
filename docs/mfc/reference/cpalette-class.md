@@ -1,12 +1,9 @@
 ---
-title: "CPalette クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CPalette クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPalette
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486338d579f304a6de1a54674a7711bb6c56f38c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpalette-class"></a>CPalette クラス
 Windows のカラー パレットをカプセル化します。  
@@ -98,10 +93,10 @@ class CPalette : public CGdiObject
   
  `CPalette`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="animatepalette"></a>CPalette::AnimatePalette  
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
  接続されている論理パレット内のエントリを置き換える、`CPalette`オブジェクト。  
   
 ```  
@@ -126,7 +121,7 @@ void AnimatePalette(
   
  `AnimatePalette`関数が持つエントリを変更するのみ、 **PC_RESERVED**フラグは、対応する設定**palPaletteEntry**のメンバー、[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)構造体接続されている、`CPalette`オブジェクト。 参照してください**保持**この構造体の詳細については、Windows SDK に含まれています。  
   
-##  <a name="cpalette"></a>CPalette::CPalette  
+##  <a name="cpalette"></a>  CPalette::CPalette  
  `CPalette` オブジェクトを構築します。  
   
 ```  
@@ -136,7 +131,7 @@ CPalette();
 ### <a name="remarks"></a>コメント  
  オブジェクトを含んでいない添付パレットが呼び出されるまで`CreatePalette`を 1 つをアタッチします。  
   
-##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
+##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
  デバイス コンテキストのハーフトーン パレットを作成します。  
   
 ```  
@@ -155,7 +150,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
   
  詳細については、Windows SDK を参照してください`CreateHalftonePalette`と**StretchDIBits**です。  
   
-##  <a name="createpalette"></a>CPalette::CreatePalette  
+##  <a name="createpalette"></a>  CPalette::CreatePalette  
  初期化、 `CPalette` Windows 論理カラー パレットを作成してアタッチするオブジェクト、`CPalette`オブジェクト。  
   
 ```  
@@ -172,7 +167,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="remarks"></a>コメント  
  詳細については、Windows SDK を参照してください、**保持**構造体。  
   
-##  <a name="fromhandle"></a>CPalette::FromHandle  
+##  <a name="fromhandle"></a>  CPalette::FromHandle  
  ポインターを返します、 `CPalette` Windows パレット オブジェクトへのハンドルが指定されるとします。  
   
 ```  
@@ -189,7 +184,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="remarks"></a>コメント  
  場合、 `CPalette` Windows パレット、一時的なにオブジェクトが既にアタッチされていない`CPalette`オブジェクトが作成され、接続されています。 この一時`CPalette`オブジェクトが有効では、次回アプリケーションがある移動するまでのアイドル時間イベント ループで、すべて一時的なグラフィックを時間でオブジェクトが削除専用です。 つまり、一時オブジェクトは 1 つのウィンドウ メッセージを処理中にのみ有効です。  
   
-##  <a name="getentrycount"></a>CPalette::GetEntryCount  
+##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
  指定した論理パレット内のエントリの数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -199,7 +194,7 @@ int GetEntryCount();
 ### <a name="return-value"></a>戻り値  
  論理パレット内のエントリの数です。  
   
-##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
+##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
  指定した色の値に最も近い論理パレットのエントリのインデックスを返します。  
   
 ```  
@@ -213,7 +208,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="return-value"></a>戻り値  
  論理パレット内のエントリのインデックス。 エントリには、指定された色に最も近い色が含まれています。  
   
-##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
+##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
  論理パレットのパレット エントリの範囲を取得します。  
   
 ```  
@@ -236,7 +231,7 @@ UINT GetPaletteEntries(
 ### <a name="return-value"></a>戻り値  
  論理パレット; から取得されたエントリ数関数が失敗した場合は 0 を返します。  
   
-##  <a name="operator_hpalette"></a>CPalette::operator HPALETTE  
+##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE  
  この演算子のアタッチされた Windows GDI ハンドルの取得を使用して、`CPalette`オブジェクト。  
   
 ```  
@@ -251,7 +246,7 @@ operator HPALETTE() const;
   
  グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
   
-##  <a name="resizepalette"></a>CPalette::ResizePalette  
+##  <a name="resizepalette"></a>  CPalette::ResizePalette  
  接続されている論理パレットのサイズを変更、`CPalette`オブジェクトで指定されたエントリの数を`nNumEntries`です。  
   
 ```  
@@ -270,7 +265,7 @@ BOOL ResizePalette(UINT nNumEntries);
   
  Windows API の詳細については`ResizePalette`を参照してください[ため](http://msdn.microsoft.com/library/windows/desktop/dd162928)Windows SDK に含まれています。  
   
-##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
+##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
  論理パレット内のエントリの範囲内には、RGB 色の値とフラグを設定します。  
   
 ```  
@@ -298,7 +293,7 @@ UINT SetPaletteEntries(
   
  Windows 構造体について詳しく**受け取る**を参照してください[受け取る](http://msdn.microsoft.com/library/windows/desktop/dd162769)Windows SDK に含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル DIBLOOK](../../visual-cpp-samples.md)   
  [CGdiObject クラス](../../mfc/reference/cgdiobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

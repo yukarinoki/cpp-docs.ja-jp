@@ -1,8 +1,8 @@
 ---
-title: "コンパイラの警告 C4800 C5999 を通じて |Microsoft ドキュメント"
+title: コンパイラの警告 C4800 C5999 を通じて |Microsoft ドキュメント
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4806
@@ -104,14 +104,13 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラの警告 C4800 C5999 経由
 
@@ -163,7 +162,7 @@ ms.lasthandoff: 02/21/2018
 |コンパイラの警告 C4900|Il の不一致 '*tool1*'version'*version1*'および'*tool2*'version'*version2*'|
 |[コンパイラの警告 (レベル 1) C4905](compiler-warning-level-1-c4905.md)|'LPSTR' にキャストされた幅の広いリテラル文字列|
 |[コンパイラの警告 (レベル 1) C4906](compiler-warning-level-1-c4906.md)|'LPWSTR' にキャストされたリテラル文字列|
-|コンパイラの警告 (レベル 1) C4910|'\<identifier>: '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation|
+|コンパイラの警告 (レベル 1) C4910|'\<識別子 >: '関数' と 'extern' 明示的なインスタンス化に互換性がありません|
 |コンパイラの警告 (レベル 1) C4912|'*属性*': 属性には、入れ子になった UDT 上で動作が定義されていません|
 |コンパイラの警告 (レベル 4) C4913|ユーザー定義のバイナリ演算子 ',' は存在しますが、すべてのオペランドに適用できるオーバーロードは見つかりませんでした。既定のビルドインバイナリ演算子 ',' を使用します。|
 |コンパイラの警告 (レベル 1) C4916|dispid を指定するには、するために '*説明*': インターフェイスによって導入されなければなりません|
@@ -184,7 +183,7 @@ ms.lasthandoff: 02/21/2018
 |コンパイラの警告 (レベル 1、エラー) C4936|この __declspec は、/clr または /clr:pure でコンパイルされるときのみサポートされます|
 |コンパイラの警告 (レベル 4) C4937|'*text1*'および'*text2*'は区別できないために引数として'*ディレクティブ*'|
 |コンパイラの警告 (レベル 4) C4938|'*var*': 浮動小数点の減少変数/fp で矛盾する結果が発生する可能性があります: 厳密なまたは #pragma fenv_access|
-|コンパイラの警告 C4939|#pragma vtordisp は使用できません。今後の Visual C++ バージョンからは削除されます|
+|コンパイラの警告 C4939|#pragma vtordisp は非推奨とされます。今後の Visual C++ バージョンからは削除されます|
 |コンパイラの警告 (レベル 1) C4944|'*シンボル*': シンボルをからインポートできません'*assembly1*': '*シンボル*'、現在のスコープに既に存在|
 |[コンパイラの警告 (レベル 1) C4945](compiler-warning-level-1-c4945.md)|'*シンボル*': シンボルをからインポートできません'*assembly1*': '*シンボル*'は既にインポートされて別のアセンブリから'*assembly2*'|
 |[コンパイラの警告 (レベル 1) C4946](compiler-warning-level-1-c4946.md)|reinterpret_cast が関連クラス間で使用されました: '*class1*'および'*class2*'|

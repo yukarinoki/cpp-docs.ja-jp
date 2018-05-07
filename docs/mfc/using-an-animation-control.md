@@ -1,13 +1,10 @@
 ---
-title: "アニメーション コントロールの使い方 |Microsoft ドキュメント"
-ms.custom: 
+title: アニメーション コントロールの使い方 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CAnimateCtrl class [MFC], animation controls
 - animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38523c832f4a30f247bd3e1d0b8318f44f5c47b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecde11ddb55992032b2a8b052e2897a384293bc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-an-animation-control"></a>アニメーション コントロールの使い方
 アニメーション コントロールの一般的な使用方法は、次のパターンを次に示します。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   アニメーション コントロールがダイアログ ボックスでは、場合、および`CAnimateCtrl`オブジェクトは自動的に破棄されます。 かどうか、する必要はありません、両方のコントロールをことを確認して、`CAnimateCtrl`オブジェクトが破棄されました。 コントロールを自動的に破棄するには、AVI クリップが閉じられます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAnimateCtrl の使い方](../mfc/using-canimatectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

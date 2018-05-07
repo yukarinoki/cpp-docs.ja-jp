@@ -1,13 +1,10 @@
 ---
-title: "MFC デスクトップ アプリケーション |Microsoft ドキュメント"
-ms.custom: 
+title: MFC デスクトップ アプリケーション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MFC
 - mfc
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5f99270afc1f603b8e5e44a23cd422f96558efb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3afd68e8407d1e02fa39b76316da66fcfe56b8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-desktop-applications"></a>MFC デスクトップ アプリケーション
 Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の多くにオブジェクト指向のラッパーを提供します。 かなりシンプルなデスクトップ アプリケーションの作成にも使用できますが、複数のコントロールを使用する複雑なユーザー インターフェイスを開発する必要がある場合に最も役立ちます。 MFC を使用すると、Office スタイルのユーザー インターフェイスを持つアプリケーションを作成できます。  
@@ -99,5 +94,5 @@ Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の
  [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio.md)  
  Visual Studio デバッガーを使用してアプリケーションやストアド プロシージャの論理エラーを修正する方法を説明するトピックへのリンクがあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC と ATL](mfc-and-atl.md)

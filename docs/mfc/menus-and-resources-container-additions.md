@@ -1,13 +1,10 @@
 ---
-title: "メニューとリソース: コンテナーの変更点 |Microsoft ドキュメント"
-ms.custom: 
+title: 'メニューとリソース: コンテナーの変更点 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>メニューとリソース : コンテナーの変更点
 この記事では、メニューやその他のビジュアル編集コンテナー アプリケーションのリソースに必要な変更について説明します。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [文字列テーブルの変更点](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>コンテナーのメニューの追加  
+##  <a name="_core_container_menu_additions"></a> コンテナーのメニューの追加  
  [編集] メニューに、次の項目を追加する必要があります。  
   
 |アイテム|目的|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  含まれているアイテムのインプレース アクティブ化をサポートする場合は、コンテナー アプリケーションの新しいメニューを作成する必要があります。 このメニューは、同じファイル メニューとウィンドウのポップアップ メニューが、開いているファイルが、それらの間に配置する 2 つの区切り記号があるときに使用で構成されます。 これらの区切り文字を使用して、サーバー (コンポーネント) の項目 (アプリケーション) がインプレース アクティブ化されたとき、そのメニューを配置する場所を指定します。 このメニューのマージ方法の詳細については、次を参照してください。[メニューとリソース: メニューのマージ](../mfc/menus-and-resources-menu-merging.md)です。  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>コンテナー アプリケーションのアクセラレータ テーブルの変更点  
+##  <a name="_core_container_application_accelerator_table_additions"></a> コンテナー アプリケーションのアクセラレータ テーブルの変更点  
  コンテナー アプリケーションのアクセラレータ テーブル リソースを少し変更は、インプレース アクティブ化をサポートしている場合に必要です。 最初の変更により、一括編集モードをキャンセルするには、(ESC) は、esc キーを押すようにユーザーにします。 メインのアクセラレータ テーブルに、次のエントリを追加します。  
   
 |ID|キー|型|  
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
 |**ID_PREV_PANE**|SHIFT キーを押しながら VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>コンテナー アプリケーションの文字列テーブルの変更点  
+##  <a name="_core_string_table_additions_for_container_applications"></a> コンテナー アプリケーションの文字列テーブルの変更点  
  コンテナー アプリケーションの文字列テーブルに対する変更のほとんどに記載されている追加のメニュー項目に対応して[コンテナー メニューの変更点](#_core_container_menu_additions)です。 各メニュー項目が表示されるときに、ステータス バーに表示されるテキストを指定します。 たとえば、アプリケーションのウィザードが生成されますストリング テーブルのエントリを次に示します。  
   
 |ID|String|  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 |**IDP_OLE_INIT_FAILED**|OLE の初期化に失敗しました。 OLE ライブラリが適切なバージョンを確認します。|  
 |**IDP_FAILED_TO_CREATE**|オブジェクトを作成できませんでした。 システム レジストリにオブジェクトを入力することを確認します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)   
  [メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)
 

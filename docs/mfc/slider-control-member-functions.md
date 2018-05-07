@@ -1,30 +1,25 @@
 ---
-title: "スライダー コントロールのメンバー関数 |Microsoft ドキュメント"
-ms.custom: 
+title: スライダー コントロールのメンバー関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CSliderCtrl class [MFC], methods
 - slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bd6c1d05ce7b137e6153ad2ea3fc5df99565a52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3793ca47aa0537d5ca8d6858c165fc2c5ac64943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-control-member-functions"></a>スライダー コントロールのメンバー関数
 アプリケーションをスライダー コントロールのメンバー関数を呼び出すスライダー コントロールの概要情報を取得する ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) とその特性を変更します。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  スライダー コントロールがある場合、`TBS_ENABLESELRANGE`スタイル、ユーザーはそこから連続する値の範囲を選択することができます。 メンバー関数の数は、動的に調整されるように選択範囲を許可します。 [SetSelection](../mfc/reference/csliderctrl-class.md#setselection)メンバー関数は、開始と終了値選択範囲の位置を設定します。 ユーザーは、選択範囲の設定が完了したら、アプリケーション設定を使用して、 [GetSelection](../mfc/reference/csliderctrl-class.md#getselection)メンバー関数。 ユーザーの選択をクリアする、 [ClearSel](../mfc/reference/csliderctrl-class.md#clearsel)メンバー関数。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CSliderCtrl の使い方](../mfc/using-csliderctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

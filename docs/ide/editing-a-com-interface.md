@@ -1,13 +1,10 @@
 ---
-title: "COM インターフェイスの編集 |Microsoft ドキュメント"
-ms.custom: 
+title: COM インターフェイスの編集 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.com.editing.interfaces
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 6c2909e0-af2d-4a37-bb39-ed372e6129cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8911f23ce8e28f2da13c3d8305f4f13a861bb60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd7a61593a1024c00c0fd0de6bd62ff3ee9323b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="editing-a-com-interface"></a>COM インターフェイスの編集
 クラス ビューのショートカット メニューからコマンドを使用すると、Visual C プロジェクトで新しいメソッドと、COM インターフェイスのプロパティを定義できます。 さらに、ツールボックスから、ActiveX コントロールのイベントを定義できます。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  クラス ビュー で、オブジェクトのコントロール クラスを右クリックし、COM コントロールに新しいインターフェイスを実装するさらに、[インターフェイスの実装](../ide/implement-interface-wizard.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ファイルの操作](../windows/working-with-resource-files.md)   
  [コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)

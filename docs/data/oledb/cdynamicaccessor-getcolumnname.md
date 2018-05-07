@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicaccessor::getcolumnname |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicaccessor::getcolumnname |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDynamicAccessor::GetColumnName
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetColumnName method
 ms.assetid: 96a7452a-1f5b-41e9-ab37-88dac026f961
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6175b6c34547f1fa4eba3fd7c25f6592afc89118
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a3ad9a1830be94a2c0d3649bf72a6d25af1fb4e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetcolumnname"></a>CDynamicAccessor::GetColumnName
 指定された列の名前を取得します。  
@@ -48,8 +43,8 @@ ms.lasthandoff: 02/23/2018
 ## <a name="return-value"></a>戻り値  
  指定された列の名前。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)

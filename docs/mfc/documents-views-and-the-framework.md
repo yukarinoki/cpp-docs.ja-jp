@@ -1,13 +1,10 @@
 ---
-title: "ドキュメント、ビュー、およびフレームワーク |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメント、ビュー、およびフレームワーク |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documents-views-and-the-framework"></a>ドキュメント、ビュー、フレームワーク
 MFC フレームワークの中核にドキュメントとビューの概念があります。 ドキュメントは、ユーザーが編集セッションでやり取りするデータ オブジェクトです。 によって作成されて、`New`または**開く**コマンドを**ファイル**メニューし、通常、ファイルに保存します。 (MFC の標準ドキュメントでは、クラスから派生した**CDocument**はアクティブなドキュメント、および OLE 複合ドキュメントによって異なります)。ビューは、使用するユーザーは、ドキュメントを操作ウィンドウ オブジェクトです。  
@@ -77,5 +72,5 @@ MFC フレームワークの中核にドキュメントとビューの概念が�
   
  この一連のトピックの残りの部分は、フレームワークのツール、MFC アプリケーション ウィザード、およびリソース エディターがこれらのオブジェクトを作成する方法、しくみ、および、プログラミングでの使用方法について説明します。 ドキュメント、ビュー、およびフレーム ウィンドウがで詳しく説明されている[ウィンドウ オブジェクト](../mfc/window-objects.md)と[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)

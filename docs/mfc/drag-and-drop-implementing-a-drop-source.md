@@ -1,13 +1,10 @@
 ---
-title: "ドラッグ アンド ドロップ: ドロップ ソースの実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 'ドラッグ アンド ドロップ: ドロップ ソースの実装 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - drag and drop [MFC], initiating drag operations
 - drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 301980f7f5a901aa4e2cba40357b18311eef581e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c057657605296b3ba65128f26b25aa526f45b211
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>ドラッグ アンド ドロップ: ドロップ ソースの実装
 この記事では、ドラッグ アンド ドロップ操作にデータを提供するアプリケーションを取得する方法について説明します。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [OLE データ オブジェクトとデータ ソースを操作します。](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)   
  [された](../mfc/reference/coledatasource-class.md#dodragdrop)   
  [クラス](../mfc/reference/coleclientitem-class.md#dodragdrop)   

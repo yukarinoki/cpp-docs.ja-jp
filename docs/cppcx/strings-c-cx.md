@@ -1,24 +1,19 @@
 ---
-title: "文字列 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: 文字列 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70f5fc5478d0950a7287da690822046621e517b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-ccx"></a>文字列 (C++/CX)
 Windows ランタイムでのテキストが C + で表される + によって CX、 [platform::string Class](../cppcx/platform-string-class.md)です。 使用して、 `Platform::String Class` Windows ランタイム クラスのメソッドに文字列を行ったり来たり渡す場合、または、アプリケーション バイナリ インターフェイス (ABI) の境界を越えて他の Windows ランタイム コンポーネントと対話するとき。 `Platform::String Class` は、いくつかの一般的な文字列操作のメソッドを提供しますが、すべての機能を備えた文字列クラスとしては設計されていません。 C++ モジュールでは、重要なテキスト処理のために [wstring](../standard-library/basic-string-class.md) などの標準 C++ 文字列型を使用し、パブリック インターフェイスとの間でやり取りする前に、最終結果を [Platform::String^](../cppcx/platform-string-class.md) に変換します。 `wstring` または `wchar_t*` と `Platform::String`の間で変換することは簡単かつ効率的です。  
@@ -79,5 +74,5 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [組み込み型](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)

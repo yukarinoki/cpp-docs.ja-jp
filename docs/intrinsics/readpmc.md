@@ -1,12 +1,9 @@
 ---
-title: "_ _readpmc |Microsoft ドキュメント"
-ms.custom: 
+title: _ _readpmc |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __readpmc
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa479f2b37198911ba1140cf551dd736b6e118d4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 73d98db19be60bd038965763a24b83ddd0016c9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="readpmc"></a>__readpmc
 **Microsoft 固有の仕様**  
@@ -49,11 +44,11 @@ unsigned __int64 __readpmc(
 ## <a name="return-value"></a>戻り値  
  指定されたパフォーマンス カウンターの値。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__readpmc`|x86、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readpmc`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
@@ -62,5 +57,5 @@ unsigned __int64 __readpmc(
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

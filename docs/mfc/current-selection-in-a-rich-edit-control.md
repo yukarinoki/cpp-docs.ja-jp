@@ -2,12 +2,9 @@
 title: リッチ エディット コントロールの現在の選択 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5f0d9332d1118809ae3d62c187ec848ec95ffbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 782984bc53bc16f8dc89e4e705811fef24b8931e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>リッチ エディット コントロールでの現在の選択項目
 ユーザーは、リッチ エディット コントロールでテキストを選択することができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))、マウスまたはキーボードを使用しています。 現在の選択は、選択した文字の範囲または文字を含まない場合に、カーソルの位置を選択します。 アプリケーションは現在の選択に関する情報を取得、現在の選択範囲を設定、現在の選択内容、および表示または非表示、選択範囲が強調表示を決定します。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  使用して、リッチ エディット コントロールで文字列を検索することができます、 [FindText](../mfc/reference/cricheditctrl-class.md#findtext)メンバー関数、[指定](http://msdn.microsoft.com/library/windows/desktop/bb787909)この関数で使用される構造体を検索し、検索する文字列をテキスト範囲を指定します。 検索は大文字小文字を区別するかどうかとしてこのようなオプションを指定することもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRichEditCtrl の使い方](../mfc/using-cricheditctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

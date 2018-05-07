@@ -1,13 +1,10 @@
 ---
-title: "コード ウィザード (C++) による機能の追加 |Microsoft ドキュメント"
-ms.custom: 
+title: コード ウィザード (C++) による機能の追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27aeb10a58c828b6503ce96ddaadf138c258f27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>コード ウィザード (C++) を使用した機能を追加します。
 プロジェクトを作成した後はするプロジェクトの機能を変更または追加します。 このようなタスクには、新しいメンバー関数と変数、および追加のオートメーション メソッドおよびプロパティの追加、新しいクラスの作成が含まれます。 コード ウィザードは、これらすべての操作を実行できるように設計されています。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
     |ソリューション エクスプローラー|ソリューション エクスプ ローラーから使用できるコード ウィザードは、項目を右クリックすると、カーソルのフォーカスがここではによって異なります。 場合、**追加**開発ツリー内で 1 レベル上にカーソルを移動し、項目を右クリックすると、オプションが表示されないと、もう一度やり直してください。 コード ウィザードは場所にカーソルがあるかにかかわらず開発ツリーで、適切な場所に追加のコードを常に配置します。 ソリューション エクスプ ローラーから使用できるコード ウィザードは次のとおりです。<br /><br /> クラスを追加 (開きます、**クラスの追加** ダイアログ ボックスの新しいコード ウィザードを含む)。<br />-リソースの追加 (新規、インポート、またはカスタム)。<br />-Web 参照を追加します。|  
     |クラス ビュー|クラス ビューから入手できるコード ウィザードは、カーソルのフォーカス、項目を右クリックしたときの位置によって異なります。 場合、**追加**上の 1 つのレベル、クラス ツリーで、ポインターを移動し、項目を右クリックしたときにオプションが表示されないと、もう一度やり直してください。 コード ウィザードは場所にカーソルがあるかにかかわらず開発ツリーで、適切な場所に追加のコードを常に配置します。 クラス ビューから使用できるコード ウィザードは次のとおりです。<br /><br /> -   [メンバー関数を追加](../ide/adding-a-member-function-visual-cpp.md)です。<br />-   [メンバー変数を追加](../ide/adding-a-member-variable-visual-cpp.md)です。<br />-   [クラスの追加](../ide/adding-a-class-visual-cpp.md)です。<br />-   [インターフェイスを実装して](../ide/implement-interface-wizard.md)(、コントロール クラスからのみ)<br />-   [接続ポイントを追加](../ide/implement-connection-point-wizard.md)(ATL クラスのみ)<br />-   [メソッドを追加](../ide/add-method-wizard.md)(インターフェイスからのみ)<br />-   [プロパティを追加](../ide/names-add-property-wizard.md)(インターフェイスからのみ)<br />-   [イベントの追加](../ide/add-event-wizard.md)(、コントロール クラスからのみ)<br /><br /> クラスの追加の選択 を開きます、**クラスの追加** ダイアログ ボックスは、すべての新しいクラスの追加コード ウィザードに対するアクセスを提供します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [クラス各部へ](../ide/navigating-the-class-structure-visual-cpp.md)   
  [アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)   

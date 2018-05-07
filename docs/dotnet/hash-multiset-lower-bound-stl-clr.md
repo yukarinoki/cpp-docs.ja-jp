@@ -2,11 +2,8 @@
 title: hash_multiset::lower_bound (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::lower_bound
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - lower_bound member [STL/CLR]
 ms.assetid: 891898fa-c9e8-4132-a71d-36e5141793f1
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fb799c12bf153ed3279d8d3d6fb10d59bd1cf22d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9cfb7050cbfcbab8ba9bbbb0c24fad199e32b212
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetlowerbound-stlclr"></a>hash_multiset::lower_bound (STL/CLR)
 指定したキーに一致する範囲の先頭を検出します。  
@@ -83,12 +78,12 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset::count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)   
  [hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)   

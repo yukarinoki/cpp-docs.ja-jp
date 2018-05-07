@@ -1,12 +1,9 @@
 ---
-title: "CRichEditCntrItem クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CRichEditCntrItem クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditCntrItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebb8cf92a522b63fb88338fe9befacc7d5f1d506
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem クラス
 [CRichEditView](../../mfc/reference/cricheditview-class.md)と[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)MFC のドキュメント ビュー アーキテクチャのコンテキストでリッチ エディット コントロールの機能を提供します。  
@@ -57,7 +52,7 @@ class CRichEditCntrItem : public COleClientItem
 ## <a name="remarks"></a>コメント  
  「リッチ エディット コントロール」は、ユーザーを入力し、テキストを編集するウィンドウです。 テキストは、文字と段落の書式に割り当てることができるし、埋め込み OLE オブジェクトを含めることができます。 リッチ エディット コントロールでは、テキストの書式設定のプログラミング インターフェイスを提供します。 ただし、アプリケーションでは、書式設定操作をユーザーに使用できるようにするために必要なすべてのユーザー インターフェイス コンポーネントを実装する必要があります。  
   
- `CRichEditView`テキストとテキストの書式設定特性を保持します。 `CRichEditDoc`ビューでは OLE クライアント アイテムの一覧を保持します。 `CRichEditCntrItem`コンテナー側 OLE クライアント アイテムへのアクセスを提供します。  
+ `CRichEditView` テキストとテキストの書式設定特性を保持します。 `CRichEditDoc` ビューでは OLE クライアント アイテムの一覧を保持します。 `CRichEditCntrItem` コンテナー側 OLE クライアント アイテムへのアクセスを提供します。  
   
  この Windows コモン コントロール (および、 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)および関連クラス) は、Windows 95/98 および Windows NT version 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
   
@@ -74,10 +69,10 @@ class CRichEditCntrItem : public COleClientItem
   
  `CRichEditCntrItem`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrich.h  
   
-##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
+##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem  
  作成するには、この関数を呼び出して、`CRichEditCntrItem`オブジェクトおよびコンテナーのドキュメントに追加します。  
   
 ```  
@@ -98,7 +93,7 @@ CRichEditCntrItem(
   
  詳細については、次を参照してください。、 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK 内の構造。  
   
-##  <a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
+##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
  デバイスの側面を同期するためには、この関数を呼び出す[型](http://msdn.microsoft.com/library/windows/desktop/ms690318)、この**CRichEditCntrltem**によって指定される*reo*です。  
   
 ```  
@@ -112,7 +107,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。[型](http://msdn.microsoft.com/library/windows/desktop/ms690318)Windows SDK に含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル ワードパッド](../../visual-cpp-samples.md)   
  [COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -1,24 +1,19 @@
 ---
-title: "Ref クラスと構造体 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: Ref クラスと構造体 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref クラスと構造体 (C++/CX)
 C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、およびユーザー定義*値クラス*と*構造体の値*です。 これらのデータ構造は、の主コンテナーする C + + CX は、Windows ランタイムの型システムをサポートしています。 その内容は、特定の規則に従ってメタデータに出力され、Windows ランタイム コンポーネントおよび C++ やその他の言語で記述されているユニバーサル Windows プラットフォーム アプリ間で渡されることができます。  
@@ -130,7 +125,7 @@ C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、�
   
  [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [値クラスと構造体](../cppcx/value-classes-and-structs-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   

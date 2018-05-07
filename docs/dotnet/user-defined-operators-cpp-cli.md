@@ -1,30 +1,25 @@
 ---
-title: "ユーザー定義の演算子 (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー定義の演算子 (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cf5583b3ae896ea252d191fbeba86e202b56cef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-operators-ccli"></a>ユーザー定義の演算子 (C++/CLI)
 マネージ型の場合、ユーザー定義の演算子は、静的メンバーまたはインスタンス メンバーまたはグローバル スコープで許可されます。 ただし、Visual C 以外の言語で記述されたクライアントにメタデータを通じてアクセスできるは静的演算子のみです。  
@@ -150,7 +145,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>例  
- 次の例は、使用する場合にのみ使用される演算子合成**/clr**をコンパイルします。 複合演算子を使用する、バイナリ演算子の割り当てフォームを作成場合は 1 つが定義されていません、代入演算子の左側にあるが、CLR 型を持ちます。  
+ 次の例は、使用する場合にのみ使用される演算子合成 **/clr**をコンパイルします。 複合演算子を使用する、バイナリ演算子の割り当てフォームを作成場合は 1 つが定義されていません、代入演算子の左側にあるが、CLR 型を持ちます。  
   
 ```cpp  
 // mcppv2_user-defined_operators_2.cpp  
@@ -176,5 +171,5 @@ int main() {
 30  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)

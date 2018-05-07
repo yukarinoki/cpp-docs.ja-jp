@@ -1,13 +1,10 @@
 ---
-title: "Win32 インターネット クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Win32 インターネット クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.win32
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 574f4def0f480741876df8f0d74f87a60f69671c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="win32-internet-classes"></a>Win32 インターネット クラス
 MFC は、インターネット プログラミングが容易には、Win32 のインターネット (WinInet) と ActiveX テクノロジをラップします。  
@@ -36,7 +31,7 @@ MFC は、インターネット プログラミングが容易には、Win32 の
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
  作成 1 つのインターネット セッションまたは複数の同時インターネット セッションを初期化、および、必要に応じて、プロキシ サーバーへの接続を説明します。  
   
- [関数](../mfc/reference/cinternetconnection-class.md)  
+ [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
  インターネット サーバーへの接続を管理します。  
   
  [CInternetFile](../mfc/reference/cinternetfile-class.md)  
@@ -72,6 +67,6 @@ MFC は、インターネット プログラミングが容易には、Win32 の
  [CInternetException](../mfc/reference/cinternetexception-class.md)  
  インターネット操作に関する例外条件を表します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

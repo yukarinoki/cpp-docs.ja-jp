@@ -1,13 +1,10 @@
 ---
-title: "OLE の初期化 |Microsoft ドキュメント"
-ms.custom: 
+title: OLE の初期化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - afxdisp/AfxOleInit
 - afxdisp/AfxEnableControlContainer
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 014d0679be8a03b60c2e759b36c056b35784be78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b8224cf27313b056b95990f514e02eb9d9c08cad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 アプリケーションでは、OLE システム サービスを使用できます、前に OLE システム Dll の初期化する必要があり、Dll が適切なバージョンであることを確認します。 **AfxOleInit**関数を OLE システム Dll を初期化します。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|アプリケーション オブジェクトのこの関数の呼び出し`InitInstance`OLE コントロールのコンテインメントのサポートを有効にする関数。| 
 
 
-## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
+## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
 アプリケーション オブジェクトのこの関数の呼び出し`InitInstance`OLE コントロールのコンテインメントのサポートを有効にする関数。  
    
 ### <a name="syntax"></a>構文    
@@ -50,11 +45,11 @@ void AfxEnableControlContainer( );
 ### <a name="remarks"></a>コメント  
  (ActiveX コントロールと呼ばれるようになりました) OLE コントロールの詳細については、次を参照してください。 [ActiveX コントロールのトピック](../mfc-activex-controls.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
 
   
-##  <a name="afxoleinit"></a>AfxOleInit  
+##  <a name="afxoleinit"></a>  AfxOleInit  
  アプリケーションの OLE サポートを初期化します。  
   
 ``` 
@@ -75,10 +70,10 @@ BOOL AFXAPI AfxOleInit();
 >  場合**AfxOleInit**が呼び出された MFC dll の場合は、呼び出しは失敗します。 この関数は DLL から呼び出された場合、呼び出し元アプリケーションによって OLE システムが既に初期化されていることを想定するため、失敗が生じます。  
   
 > [!NOTE]
->  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)で、`InitInstance`オーバーライドで指定`COINIT_APARTMENTTHREADED`(なく`COINIT_MULTITHREADED`)。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)です。  
+>  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)で、`InitInstance`オーバーライドで指定`COINIT_APARTMENTTHREADED`(なく`COINIT_MULTITHREADED`)。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

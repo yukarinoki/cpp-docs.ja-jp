@@ -1,12 +1,9 @@
 ---
-title: "COLUMN_NAME |Microsoft ドキュメント"
-ms.custom: 
+title: COLUMN_NAME |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_NAME
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_NAME macro
 ms.assetid: a213b9a0-2148-4a08-9111-d9fa8fdec462
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: db731667c4e86f7220f95503c5a61b10679d450b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f60acfac21e003f6a548c5702ebb975a458a93cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnname"></a>COLUMN_NAME
 行セットの特定の列を行セットのバインドを表します。 ような[COLUMN_ENTRY](../../data/oledb/column-entry.md)ただし、このマクロは列の数値の代わりに列名を取得します。  
@@ -54,10 +49,10 @@ COLUMN_NAME(pszName, data)
   
 -   間、 [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)マクロです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロと OLE DB コンシューマー テンプレート用グローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   

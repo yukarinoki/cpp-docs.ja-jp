@@ -1,13 +1,10 @@
 ---
-title: "オートメーション サーバー |Microsoft ドキュメント"
-ms.custom: 
+title: オートメーション サーバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>オートメーション サーバー
 オートメーションにより別のアプリケーションで実装されているオブジェクトを操作する、または操作できるようにするオブジェクトを公開する、アプリケーションのできます。 オートメーション サーバーは、他のアプリケーションを (オートメーション オブジェクトと呼ばれる) プログラミング可能なオブジェクトを公開するアプリケーション (と呼ばれる[オートメーション クライアント](../mfc/automation-clients.md))。 オートメーション サーバー、オートメーションのコンポーネントとも呼ばれます。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  一般的な適切に定義されたインターフェイスを介してアプリケーションの機能を公開すると、オートメーションできるようになります、1 つ一般的なプログラミング言語での代わりに Microsoft Visual Basic と同様に、アプリケーション固有のさまざまなマクロでアプリケーションを構築するには言語。  
   
-##  <a name="_core_support_for_automation_servers"></a>オートメーション サーバー用のサポート  
+##  <a name="_core_support_for_automation_servers"></a> オートメーション サーバー用のサポート  
  Visual C と MFC フレームワークは、オートメーション サーバーの広範なサポートを提供します。 アプリケーションの機能に専念することができますので、オートメーション サーバーの作成には、オーバーヘッドの大半を処理します。  
   
  オートメーションをサポートするため、フレームワークの主要機構は、ディスパッチ マップ、宣言と OLE のメソッドとプロパティを公開するために必要な呼び出しに展開されたマクロのセットです。 典型的なディスパッチ マップは、次のようになります。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [COleDispatchDriver のクラスの詳細を表示します](../mfc/reference/coledispatchdriver-class.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オートメーション](../mfc/automation.md)   
  [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)
 

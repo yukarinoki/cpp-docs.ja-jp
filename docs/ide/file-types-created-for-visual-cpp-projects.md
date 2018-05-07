@@ -1,13 +1,10 @@
 ---
-title: "ファイルの種類の Visual C プロジェクトに対して作成される |Microsoft ドキュメント"
-ms.custom: 
+title: ファイルの種類の Visual C プロジェクトに対して作成される |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Visual C++ プロジェクトに対して作成されるファイルの種類
 このトピックでは、従来のデスクトップ アプリケーションの Visual C++ プロジェクトに関連付けられているすべての種類のファイルについて説明します。 実際にプロジェクトにインクルードされるファイルは、プロジェクトの種類、およびウィザードで選択したオプションによって異なります。  
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  プロジェクトに項目を追加すると、その項目をビルドできるかどうかにかかわらず、プロジェクトのすべての構成にその項目が追加されます。 たとえば、MyProject というプロジェクトに項目を追加すると、プロジェクトのデバッグ構成とリリース構成の両方にその項目が追加されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C++ プロジェクトの作成および管理](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Visual C プロジェクトの種類](../ide/visual-cpp-project-types.md)   
  [ウィザードでサポートされるその他の言語](../ide/wizard-support-for-other-languages.md)

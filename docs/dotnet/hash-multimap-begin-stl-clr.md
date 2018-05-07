@@ -1,12 +1,9 @@
 ---
-title: "hash_multimap::begin (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_multimap::begin (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::begin
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - begin member [STL/CLR]
 ms.assetid: 7f8d51c1-8183-4dc1-9dfc-f58dbf594c42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0b040c76547c9ef400064e20f3cc481b67e078b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b47c42a7ceb60937115fca186c827bf93e46aec7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimapbegin-stlclr"></a>hash_multimap::begin (STL/CLR)
 被制御シーケンスの先頭を指定します。  
@@ -78,11 +73,11 @@ int main()
 *++begin() = [b 2]  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)

@@ -1,12 +1,9 @@
 ---
-title: "CMFCAutoHideBar クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCAutoHideBar クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideBar
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdf8ae6346335b54e22170d4397ac95e8918470
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar クラス
 `CMFCAutoHideBar` クラスは、自動非表示機能を実装している、特殊なツール バー クラスです。  
@@ -98,7 +93,7 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|経由で、ユーザーがマウス カーソルを配置するときに、現在の時間遅延、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、関連付けられたウィンドウをフレームワークが表示されます。|  
   
@@ -127,10 +122,10 @@ class CMFCAutoHideBar : public CPane
   
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxautohidebar.h  
   
-##  <a name="addautohidewindow"></a>CMFCAutoHideBar::AddAutoHideWindow  
+##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
  自動的に隠す機能を `CDockablePane` ウィンドウに追加します。  
   
 ```  
@@ -159,7 +154,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -170,7 +165,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout  
 
   
 ```  
@@ -187,7 +182,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="cmfcautohidebar"></a>CMFCAutoHideBar::CMFCAutoHideBar  
+##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
  CMFCAutoHideBar オブジェクトを構築します。  
   
 ```  
@@ -196,7 +191,7 @@ CMFCAutoHideBar();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="create"></a>CMFCAutoHideBar::Create  
+##  <a name="create"></a>  CMFCAutoHideBar::Create  
 
   
 ```  
@@ -223,7 +218,7 @@ virtual BOOL Create(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getfirstahwindow"></a>CMFCAutoHideBar::GetFirstAHWindow  
+##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
  アプリケーションの最初の自動非表示ウィンドウへのポインターを返します。  
   
 ```  
@@ -235,7 +230,7 @@ CDockablePane* GetFirstAHWindow();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getvisiblecount"></a>CMFCAutoHideBar::GetVisibleCount  
+##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
  自動的に隠すボタンのうち、表示されているものの数を取得します。  
   
 ```  
@@ -247,7 +242,7 @@ int GetVisibleCount();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="m_nshowahwnddelay"></a>CMFCAutoHideBar::m_nShowAHWndDelay  
+##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
  経由で、ユーザーがマウス カーソルを配置するときに、現在の時間遅延、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、関連付けられたウィンドウをフレームワークが表示されます。  
   
 ```  
@@ -257,7 +252,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 ### <a name="remarks"></a>コメント  
  経由で、ユーザーがマウス カーソルを配置するときに、`CMFCAutoHideButton`フレームワークは、関連付けられたウィンドウを表示する前に若干の遅延があります。 このパラメーターは、その遅延 (ミリ秒) の長さを決定します。  
   
-##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
+##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
   
 ```  
@@ -271,7 +266,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="removeautohidewindow"></a>CMFCAutoHideBar::RemoveAutoHideWindow  
+##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
  自動的に隠すウィンドウを削除して破棄します。  
   
 ```  
@@ -279,7 +274,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- CDockablePane *`pAutoHideWnd`  
+ CDockablePane * `pAutoHideWnd`  
  削除する自動的に隠すウィンドウ。  
   
 ### <a name="return-value"></a>戻り値  
@@ -287,7 +282,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setactiveingroup"></a>CMFCAutoHideBar::SetActiveInGroup  
+##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
  自動的に隠すバーにアクティブというフラグを付けます。  
   
 ```  
@@ -295,13 +290,13 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]BOOL`bActive`  
+ [in]BOOL `bActive`  
  アクティブに設定する場合は TRUE、それ以外の場合は FALSE。  
   
 ### <a name="remarks"></a>コメント  
  参照してください[cpane::setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup)です。  
   
-##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
+##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
   
 ```  
@@ -313,7 +308,7 @@ void SetRecentVisibleState(BOOL bState);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="showautohidewindow"></a>CMFCAutoHideBar::ShowAutoHideWindow  
+##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
  自動的に隠すウィンドウを示します。  
   
 ```  
@@ -324,11 +319,11 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]CDockablePane *`pAutoHideWnd`  
- [in]BOOL`bShow`  
+ [in]CDockablePane * `pAutoHideWnd`  
+ [in]BOOL `bShow`  
  ウィンドウを表示する場合は TRUE。  
   
- [in]BOOL`bDelay`  
+ [in]BOOL `bDelay`  
  このパラメーターは無視されます。  
   
 ### <a name="return-value"></a>戻り値  
@@ -336,7 +331,7 @@ BOOL ShowAutoHideWindow(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="stretchpane"></a>CMFCAutoHideBar::StretchPane  
+##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
  折りたたまれた状態の自動的に隠すバーを `CMFCAutoHideButton` オブジェクトに合わせてサイズ変更します。  
   
 ```  
@@ -358,7 +353,7 @@ virtual CSize StretchPane(
 ### <a name="remarks"></a>コメント  
  派生クラスは、このメソッドをオーバーライドして動作をカスタマイズできます。  
   
-##  <a name="unsetautohidemode"></a>CMFCAutoHideBar::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
  自動的に隠すバーのグループの自動非表示モードを無効にします。  
   
 ```  
@@ -371,7 +366,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="updatevisiblestate"></a>CMFCAutoHideBar::UpdateVisibleState  
+##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
  自動的に隠すバーを再描画する必要がある場合に、フレームワークによって呼び出されます。  
   
 ```  
@@ -380,7 +375,7 @@ void UpdateVisibleState();
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CPane クラス](../../mfc/reference/cpane-class.md)   

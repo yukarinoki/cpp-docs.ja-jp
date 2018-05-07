@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: MFC ActiveX コントロール ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.overview
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e562ceb73da2b103360ab9607cecbbe9f1da02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45af43a98244e90f52075817fc9e17a905cbf065
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX コントロール ウィザード
 ActiveX コントロールは、特定の種類の[オートメーション サーバー](../../mfc/automation-servers.md); が再利用可能なコンポーネントです。 ActiveX コントロールをホストしているアプリケーションは、[オートメーション クライアント](../../mfc/automation-clients.md)を制御するのです。 目標は、このような再利用可能なコンポーネントを作成するの場合は、コントロールを作成するこのウィザードを使用します。 参照してください[MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)詳細についてはします。  
@@ -71,7 +66,7 @@ ActiveX コントロールは、特定の種類の[オートメーション サ�
   
 -   コントロールがない既存の Windows コントロールに基づくが、これが表示され、ユーザー インターフェイスを持つを含めた場合にアクティブ化、**に関する** ダイアログ ボックス。 既定の設定を変更することができます、[コントロール設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)ページ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C++ プロジェクトの作成および管理](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Visual C プロジェクトの種類](../../ide/visual-cpp-project-types.md)   
  [概念](../../atl/active-template-library-atl-concepts.md)

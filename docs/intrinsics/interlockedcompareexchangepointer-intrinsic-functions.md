@@ -1,12 +1,9 @@
 ---
-title: "_InterlockedCompareExchangePointer の組み込み関数 |Microsoft ドキュメント"
-ms.custom: 
+title: _InterlockedCompareExchangePointer の組み込み関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a75c25caef43a0f1908cfe326b5b194480c3190c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6c8e7a31c5377d71eaad96fddc7d93215ed3abb4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
 **Microsoft 固有の仕様**  
@@ -103,13 +98,13 @@ long _InterlockedCompareExchangePointer_rel (
 ## <a name="return-value"></a>戻り値  
  戻り値は、対象の初期値です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86、ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchangePointer`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
 |`_InterlockedCompareExchangePointer_acq`、`_InterlockedCompareExchangePointer_nf`、`_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
   
 ## <a name="remarks"></a>コメント  
  `_InterlockedCompareExchangePointer` は `Destination` アドレスと `Comparand` アドレスのアトミックな比較を実行します。 `Destination` のアドレスが `Comparand` のアドレスと等しい場合、`Exchange` のアドレスは `Destination` で指定したアドレスに格納されます。 それ以外の場合は演算が実行されません。  
@@ -128,6 +123,6 @@ long _InterlockedCompareExchangePointer_rel (
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [キーワード](../cpp/keywords-cpp.md)

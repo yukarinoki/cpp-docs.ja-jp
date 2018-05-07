@@ -1,31 +1,26 @@
 ---
-title: "方法: c# で使用するためのネイティブ クラスをラップ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: c# で使用するためのネイティブ クラスをラップ |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e206fcfe0c8c4d82276e8c477061fd0522fe5722
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d12f922e6f20499aa5a231be244e62a826cb6aaf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>方法: ネイティブ クラスを C# で使用できるようにラップする
 このサンプルでは、ネイティブの C++ クラスをラップして、C# の場合、またはその他の .NET 言語で作成されたコードで使用できるようにする方法を示します。  
@@ -80,5 +75,5 @@ private:
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

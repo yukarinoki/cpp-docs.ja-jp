@@ -1,12 +1,9 @@
 ---
-title: "list::operator = (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: list::operator = (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::operator=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator= member [STL/CLR]
 ms.assetid: 0e4fdcc6-7574-40af-b947-98c2c683676d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8a6c606844f4dbd926aacb33dc90057371b7593d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2af22713e5f8339eb9a60509bba04d67dfb5f572
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listoperator-stlclr"></a>list::operator= (STL/CLR)
 被制御シーケンスを置き換えます。  
@@ -79,11 +74,11 @@ a b c
 a b c  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/一覧 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一覧 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)

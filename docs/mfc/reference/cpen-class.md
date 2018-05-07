@@ -1,12 +1,9 @@
 ---
-title: "CPen クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CPen クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPen
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ea9aadc5d5ca8fb5a5a253d2ddb5972bf0dfdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpen-class"></a>CPen クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のペンをカプセル化したものです。  
@@ -82,10 +77,10 @@ class CPen : public CGdiObject
   
  `CPen`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>  CPen::CPen  
  `CPen` オブジェクトを構築します。  
   
 ```  
@@ -124,7 +119,7 @@ CPen(
   
 - **ペン**外接する四角形を指定する Windows GDI 出力関数によって生成される閉じた図形のフレーム内の行を描画するペンを作成 (たとえば、**楕円**、**四角形**、 `RoundRect`、 `Pie`、および`Chord`メンバー関数)。 外接する四角形が指定されていない Windows GDI 関数と共にこのスタイルを使用した場合 (たとえば、`LineTo`メンバー関数)、ペンの描画領域は、フレームによって制限を受けません。  
   
- 2 番目のバージョン、`CPen`コンス トラクターは、種類、スタイル、端点キャップ、および結合の属性の組み合わせを指定します。 ビットごとの OR 演算子 (&#124;) を使用して、各カテゴリの値を組み合わせる必要があります。 ペンの種類には、次の値のいずれかを指定できます。  
+ 2 番目のバージョン、`CPen`コンス トラクターは、種類、スタイル、端点キャップ、および結合の属性の組み合わせを指定します。 ビットごとの OR 演算子を使用して、各カテゴリの値を組み合わせる必要があります (&#124;)。 ペンの種類には、次の値のいずれかを指定できます。  
   
 - **PS_GEOMETRIC**幾何学的ペンを作成します。  
   
@@ -179,7 +174,7 @@ CPen(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>  CPen::CreatePen  
  指定したスタイル、幅、およびブラシ属性と論理表面的なまたは幾何学的ペンを作成しにアタッチ、`CPen`オブジェクト。  
   
 ```  
@@ -243,7 +238,7 @@ BOOL CreatePen(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
  ペンをスタイル、幅、およびが指す構造体で指定された色を初期化します`lpLogPen`です。  
   
 ```  
@@ -265,7 +260,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
  ポインターを返します、 `CPen` Windows GDI pen オブジェクトへのハンドルを指定されたオブジェクト。  
   
 ```  
@@ -274,7 +269,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
   
 ### <a name="parameters"></a>パラメーター  
  *hPen*  
- `HPEN`Windows GDI ペンへのハンドルします。  
+ `HPEN` Windows GDI ペンへのハンドルします。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CPen`それ以外の成功した場合は、オブジェクト**NULL**です。  
@@ -285,7 +280,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
  取得、**保持**構造体の基になります。  
   
 ```  
@@ -317,7 +312,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
  取得、`LOGPEN`構造体の基になります。  
   
 ```  
@@ -347,7 +342,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
  [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>CPen::operator HPEN  
+##  <a name="operator_hpen"></a>  CPen::operator HPEN  
  接続されている Windows GDI ハンドルを取得、`CPen`オブジェクト。  
   
 ```  
@@ -365,7 +360,7 @@ operator HPEN() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CGdiObject クラス](../../mfc/reference/cgdiobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CBrush クラス](../../mfc/reference/cbrush-class.md)

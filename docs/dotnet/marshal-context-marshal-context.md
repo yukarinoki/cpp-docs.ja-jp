@@ -1,12 +1,9 @@
 ---
-title: "marshal_context::marshal_context |Microsoft ドキュメント"
-ms.custom: 
+title: marshal_context::marshal_context |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::interop::marshal_context::marshal_context
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - marshal_context class [C++], operations
 ms.assetid: 5f08c895-60b0-4f72-97ff-7ae37c68e853
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a91b4f1c5f30711c46550dabb4369e380214fce1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e8838864c4ec1c6414401608b848cb12b01c16e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
 構築、`marshal_context`マネージ コードとネイティブのデータ型の間でデータ変換を使用するオブジェクト。  
@@ -46,12 +41,12 @@ marshal_context();
 ## <a name="example"></a>例  
  例を参照して[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル:** \<msclr\marshal.h >、 \<msclr\marshal_windows.h >、 \<msclr\marshal_cppstd.h >、または\<msclr\marshal_atl.h >  
   
  **Namespace:** msclr::interop  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ におけるマーシャ リングの概要](../dotnet/overview-of-marshaling-in-cpp.md)   
  [marshal_as](../dotnet/marshal-as.md)   
  [marshal_context クラス](../dotnet/marshal-context-class.md)

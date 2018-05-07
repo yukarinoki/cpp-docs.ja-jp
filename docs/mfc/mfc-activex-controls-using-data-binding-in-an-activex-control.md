@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール: ActiveX コントロールにおけるデータ バインディングを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: ActiveX コントロールにおけるデータ バインディングを使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用
 ActiveX コントロールのより強力な用途の 1 つは、データ バインディングは、データベース内の特定のフィールドにバインドするコントロールのプロパティを使用します。 ユーザーは、このバインド プロパティ内のデータを変更するとき、コントロールは、データベースとレコードのフィールドを更新する要求を通知します。 データベースでは、成功のコントロールまたは要求の失敗が通知します。  
   
  この記事では、制御側での処理について説明します。 データベースとの相互作用をデータ バインディングを実装することは、コントロール コンテナーの責任です。 このドキュメントの範囲を超えては、コンテナー内のデータベースとのやり取りを管理する方法です。 データ バインディング コントロールを準備する方法については、この記事の残りの部分で説明します。  
   
- ![データ &#45;の概念図; バインドされたコントロール](../mfc/media/vc374v1.gif "vc374v1")  
+ ![データの概念図&#45;にバインドされたコントロール](../mfc/media/vc374v1.gif "vc374v1")  
 データ バインド コントロールの概念図  
   
  `COleControl`クラスには、データ バインディングを実装する簡単な手順を構成する 2 つのメンバー関数が用意されています。 最初の関数では、 [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)プロパティの値を変更するアクセス許可を要求するために使用します。 [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged)プロパティの値が正常に変更された後に、2 番目の関数が呼び出されます。  
@@ -51,7 +46,7 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
   
 -   [バインド可能な Get と Set メソッドを作成します。](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>バインド可能なストック プロパティを作成します。  
+##  <a name="vchowcreatingbindablestockproperty"></a> バインド可能なストック プロパティを作成します。  
  データ バインドのストック プロパティを作成することが必要になる可能性が高くなりますが、[バインド可能な get と set メソッド](#vchowcreatingbindablegetsetmethod)です。  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
   
  コントロールを登録した、プロジェクトをビルドすることができますようになりました。 ダイアログ ボックスでは、コントロールを挿入するときに、**データ フィールド**と**データソース**プロパティが追加されましたおよびデータ ソースと、コントロールに表示するフィールドを選択できるようになりました。  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>バインド可能な Get と Set メソッドを作成します。  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> バインド可能な Get と Set メソッドを作成します。  
  データ バインド メソッドの取得/設定だけでなく作成することも、[バインド可能なストック プロパティ](#vchowcreatingbindablestockproperty)です。  
   
 > [!NOTE]
@@ -103,11 +98,11 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
   
 7.  データ型を選択、**プロパティの型**ドロップダウン リスト ボックス。 使用して**短い**この例です。  
   
-8.  **[実装型]**として、 **[Get/Set メソッド]**をクリックします。  
+8.  **[実装型]** として、 **[Get/Set メソッド]** をクリックします。  
   
 9. IDL 属性 タブから次のチェック ボックスをオン:**バインド可能な**、 **requestedit**、 **displaybind**、および**defaultbind**を追加するにはプロジェクトのプロパティの定義の属性です。IDL ファイルです。 これらの属性は、コントロールをユーザーに表示されるように、ストック プロパティの既定のバインド可能なプロパティを作成します。  
   
-10. **[完了]**をクリックします。  
+10. **[完了]** をクリックします。  
   
 11. 本体を変更、`SetMyProp`関数の次のコードが含まれるようにします。  
   
@@ -141,6 +136,6 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
   
  コントロールを登録した、プロジェクトをビルドすることができますようになりました。 ダイアログ ボックスでは、コントロールを挿入するときに、**データ フィールド**と**データソース**プロパティが追加されましたおよびデータ ソースと、コントロールに表示するフィールドを選択できるようになりました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
 

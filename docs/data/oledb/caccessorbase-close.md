@@ -1,12 +1,9 @@
 ---
-title: "Caccessorbase::close |Microsoft ドキュメント"
-ms.custom: 
+title: Caccessorbase::close |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CAccessorBase.Close
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Close method
 ms.assetid: 342e2a12-cd0a-4c2a-8867-12d24a660c4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 476a1a2b6c36a08b6c1954f260a2df39543ebb1d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 30b6c72dda5f26f3cf87f8bf6e22310277010886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorbaseclose"></a>CAccessorBase::Close
 アクセサーを閉じます。  
@@ -42,8 +37,8 @@ void Close();
 ## <a name="remarks"></a>コメント  
  呼び出す必要があります[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)最初。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAccessorBase クラス](../../data/oledb/caccessorbase-class.md)

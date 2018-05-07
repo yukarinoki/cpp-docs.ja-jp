@@ -1,12 +1,9 @@
 ---
-title: "コンシューマーに返される列を動的に判断 |Microsoft ドキュメント"
-ms.custom: 
+title: コンシューマーに返される列を動的に判断 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da3d6e700ef69bda084a6bc5c010957c7fddd0c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd84b6f9451e924fac9e3630df38719c83ff583a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>コンシューマーに返される列の動的な判断
 PROVIDER_COLUMN_ENTRY マクロの通常の処理、 **icolumnsinfo::getcolumnsinfo**呼び出します。 ただし、ため、コンシューマーは、ブックマークを選ぶことも、プロバイダーは、コンシューマーが、ブックマークを要求するかどうかによって返される列を変更することでする必要があります。  
@@ -159,5 +154,5 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
   
  コンパイルを拡張プロバイダーを実行できます。 プロバイダーをテストするにはテスト コンシューマーを」の説明に従って変更[単純なコンシューマーを実装する](../../data/oledb/implementing-a-simple-consumer.md)です。 プロバイダーをテスト コンシューマーを実行します。 クリックすると、テストのコンシューマーが、プロバイダーから適切な文字列を取得することを確認、**実行**ボタンをクリックして、**テスト コンシューマー**  ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [単純な読み取り専用プロバイダーの機能の拡張](../../data/oledb/enhancing-the-simple-read-only-provider.md)

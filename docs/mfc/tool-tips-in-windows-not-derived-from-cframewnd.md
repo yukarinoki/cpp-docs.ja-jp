@@ -1,13 +1,10 @@
 ---
-title: "CFrameWnd から派生していないウィンドウのツール ヒント |Microsoft ドキュメント"
-ms.custom: 
+title: CFrameWnd から派生していないウィンドウのツール ヒント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27126954f72eb4a075d0741b0ec0faec94f381c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34eb8f0b7394828782a3d0f9ed1ca44fb5731af6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>CFrameWnd から派生していないウィンドウのツール ヒント
 ここから派生していない、ウィンドウに含まれているコントロールの有効化のツール ヒントを説明する[CFrameWnd](../mfc/reference/cframewnd-class.md)です。 アーティクル[ツールバーのツール ヒント](../mfc/toolbar-tool-tips.md)でのコントロールのツール ヒントに関する情報を提供する`CFrameWnd`です。  
@@ -47,6 +42,6 @@ ms.lasthandoff: 12/21/2017
   
  によって、windows の既定ツール ヒント[CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips)それらに関連付けられたテキストはありません。 テキストを表示するツールヒントを取得する、 **TTN_NEEDTEXT**ツール ヒントのウィンドウが表示される直前に、ツール ヒント コントロールの親ウィンドウに通知が送信されます。 いくつかの値を割り当てるには、このメッセージのハンドラーがないかどうか、 **pszText**のメンバー、 **TOOLTIPTEXT**構造体にはないツール ヒントに表示されるテキストです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツール ヒント](../mfc/tool-tips.md)
 

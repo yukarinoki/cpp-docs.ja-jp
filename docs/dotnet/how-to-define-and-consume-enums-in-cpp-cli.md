@@ -1,30 +1,25 @@
 ---
-title: "方法: を定義および使用の列挙型 C + + CLI |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: を定義および使用の列挙型 C + + CLI |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 59d3619daecfad221bd9eac31c4950bae5ace4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5c30b679b24e574d359a1f838785f0196f290d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>方法: C++/CLI で列挙型を定義および使用する
 このトピックで C 列挙型/CLI です。  
@@ -98,7 +93,7 @@ a and day2 are the same
 |++ --|  
 |sizeof|  
   
- 演算子 &#124;です。^ (& a) ~ + +--bool を含まない型の基になる整数と列挙型に対してのみ定義されます。  両方のオペランドは、列挙型でなければなりません。  
+ 演算子&#124;^ (& a) ~ + +--bool を含まない型の基になる整数と列挙型に対してのみ定義されます。  両方のオペランドは、列挙型でなければなりません。  
   
  静的または動的の列挙操作の結果の確認を要求している、コンパイラは行われません操作は、列挙型の有効な列挙子の範囲にない値があります。  
   
@@ -146,5 +141,5 @@ int main() {
 True  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列挙型クラス](../windows/enum-class-cpp-component-extensions.md)

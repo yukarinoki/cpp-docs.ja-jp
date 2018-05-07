@@ -1,12 +1,9 @@
 ---
-title: "リンカ ツール エラー LNK2027 |Microsoft ドキュメント"
-ms.custom: 
+title: リンカ ツール エラー LNK2027 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2027
@@ -15,28 +12,26 @@ dev_langs:
 helpviewer_keywords:
 - LNK2027
 ms.assetid: e2f857a8-8e8a-4697-bbff-12ccb84a35c1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 554dac121c066dac4c05685be1b937298344a76a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 156310a0d21651b9fd2ee6002ace419db4996681
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2027"></a>リンカ ツール エラー LNK2027
 未解決のモジュール参照 ' module'  
   
- リンカーに渡されたファイルで指定されているモジュールに依存している**/ASSEMBLYMODULE**もリンカーに直接渡されません。  
+ リンカーに渡されたファイルで指定されているモジュールに依存している **/ASSEMBLYMODULE**もリンカーに直接渡されません。  
   
  Lnk2027 エラーを解決するには、次のいずれかの操作を行います。  
   
 -   渡さないでくださいリンカーをモジュールの依存関係を持つファイルです。  
   
--   モジュールを指定**/ASSEMBLYMODULE**です。  
+-   モジュールを指定 **/ASSEMBLYMODULE**です。  
   
 -   モジュールが安全な .netmodule の場合は、モジュールをリンカーに直接渡します。  
   

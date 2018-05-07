@@ -1,12 +1,9 @@
 ---
-title: "CAnimationTimerEventHandler クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CAnimationTimerEventHandler クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationTimerEventHandler
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f47caa836a93ecce28e77f9bf768aeb4d1ea3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler クラス
 タイミング イベントの発生時に Animation API によって呼び出されるコールバックを実装します。  
@@ -68,10 +63,10 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
   
  `CAnimationTimerEventHandler`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="createinstance"></a>CAnimationTimerEventHandler::CreateInstance  
+##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance  
  CAnimationTimerEventHandler コールバックのインスタンスを作成します。  
   
 ```  
@@ -89,7 +84,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-##  <a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate  
+##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate  
  アニメーションの更新プログラムの完了後に発生するイベントを処理します。  
   
 ```  
@@ -99,7 +94,7 @@ IFACEMETHOD(OnPostUpdate)();
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK、それ以外の場合 E_FAIL です。  
   
-##  <a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate  
+##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate  
  アニメーションの更新プログラムの開始前に発生するイベントを処理します。  
   
 ```  
@@ -109,7 +104,7 @@ IFACEMETHOD(OnPreUpdate)();
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK、それ以外の場合 E_FAIL です。  
   
-##  <a name="onrenderingtooslow"></a>CAnimationTimerEventHandler::OnRenderingTooSlow  
+##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow  
  アニメーションのレンダリングのフレーム レートが、最低限の適切なフレーム レートを下回った場合に発生するイベントを処理します。  
   
 ```  
@@ -122,7 +117,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK、それ以外の場合 E_FAIL です。  
   
-##  <a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController  
  イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。  
   
 ```  
@@ -133,5 +128,5 @@ void SetAnimationController(CAnimationController* pAnimationController);
  `pAnimationController`  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

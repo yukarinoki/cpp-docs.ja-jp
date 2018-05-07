@@ -1,12 +1,9 @@
 ---
-title: "CCreateContext 構造 |Microsoft ドキュメント"
-ms.custom: 
+title: CCreateContext 構造 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 構造体
 フレームワークを使用して、`CCreateContext`フレーム ウィンドウとドキュメントに関連付けられているビューの作成時に構造体します。  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>コメント  
- `CCreateContext`構造体は、基本クラスではありません。  
+ `CCreateContext` 構造体は、基本クラスではありません。  
   
  ウィンドウを作成するときに、この構造体の値は、そのデータのビューに、ドキュメントのコンポーネントを接続するために使用情報を提供します。 のみを使用する必要がある`CCreateContext`作成プロセスの一部をオーバーライドする場合。  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |メンバー|型|何が|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`新しいビューを作成します。|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` 新しいビューを作成します。|  
 |`m_pCurrentDoc`|`CDocument*`|新しいビューに関連する既存のドキュメントです。|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|新しい MDI フレーム ウィンドウの作成に関連付けられているドキュメント テンプレートです。|  
 |`m_pLastView`|`CView*`|元のビューを他のビューは、モデル化、分割ウィンドウのビューの作成またはドキュメント上の 2 つ目のビューの作成と同様にします。|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  すべてのポインターの`CCreateContext`は省略可能であり`NULL`指定されていないか不明な場合です。  
   
- `CCreateContext`下に表示するメンバー関数によって使用される「ご覧ください」。 これらをオーバーライドする場合に、特定の情報をこれらの関数の説明を参照してください。  
+ `CCreateContext` 下に表示するメンバー関数によって使用される「ご覧ください」。 これらをオーバーライドする場合に、特定の情報をこれらの関数の説明を参照してください。  
   
  次に、いくつかの一般的なガイドラインを示します。  
   
@@ -70,15 +65,15 @@ struct CCreateContext
   
  詳細については`CCreateContext`、MFC サンプルを参照して[VIEWEX](../../visual-cpp-samples.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
  [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   
  [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   
  [CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)   
  [CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)   
- [Cwnd::create](../../mfc/reference/cwnd-class.md#create)
+ [CWnd::Create](../../mfc/reference/cwnd-class.md#create)
 

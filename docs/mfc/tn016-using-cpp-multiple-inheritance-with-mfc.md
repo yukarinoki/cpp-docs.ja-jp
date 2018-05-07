@@ -1,13 +1,10 @@
 ---
-title: "TN016: MFC での C++ の多重継承の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN016: MFC での C++ の多重継承の使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.inheritance
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b276e316ffc8ce04577532ac3b15400ee28f9f33
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>テクニカル ノート 16: MFC における C++ の多重継承
 ここでは、Microsoft Foundation Classes で複数継承 (MI) を使用する方法について説明します。 多重継承の使用は、MFC で必要はありません。 MI は、すべての MFC クラスでは使用されませんし、クラス ライブラリを作成する必要はありません。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  代わりに使用するが、`dynamic_cast`演算子。 その基本クラスのいずれかに多重継承を持つオブジェクトをキャストすると、関数を使用して、指定された基本クラスのコンパイラは必ずです。 詳細については、次を参照してください。 [dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)です。  
   
 ## <a name="cobject---the-root-of-all-classes"></a>CObject のすべてのクラスのルート  
- すべての重要なクラスがクラスから直接または間接的に派生`CObject`です。 `CObject`メンバーのデータがありませんが一部の既定の機能です。 多重継承を使用して、2 つ以上から継承は通常する`CObject`-クラスを派生します。 次の例がクラスから継承されるしくみを示しています、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CObList](../mfc/reference/coblist-class.md):  
+ すべての重要なクラスがクラスから直接または間接的に派生`CObject`です。 `CObject` メンバーのデータがありませんが一部の既定の機能です。 多重継承を使用して、2 つ以上から継承は通常する`CObject`-クラスを派生します。 次の例がクラスから継承されるしくみを示しています、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CObList](../mfc/reference/coblist-class.md):  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -197,7 +192,7 @@ BOOL CHelloAppAndFrame::InitInstance()
 CHelloAppAndFrame theHelloAppAndFrame;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

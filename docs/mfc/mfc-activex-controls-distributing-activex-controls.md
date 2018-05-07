@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール: ActiveX コントロールの配布 |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: ActiveX コントロールの配布 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - GetWindowsDirectory
 - GetSystemDirectory
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce6602696f733ca3bac03441a58515c57e0dc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX コントロール : ActiveX コントロールの配布
 この記事では、ActiveX コントロールを再配布に関連するいくつかの問題について説明します。  
@@ -55,12 +50,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [コントロールの登録](#_core_registering_controls)  
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a>ANSI または Unicode コントロールのバージョン  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI または Unicode コントロールのバージョン  
  コントロール、または両方の ANSI または Unicode のバージョンに付属するかどうかを決定する必要があります。 この決定は、ANSI と Unicode の文字セットに固有の移植性の要因に基づいています。  
   
  ANSI コントロールは、すべての Win32 オペレーティング システムで動作するは、さまざまな Win32 オペレーティング システム間で最大の移植性を許可します。 Unicode のコントロールは、Windows NT (version 3.51 以降) だけではなく Windows 95 または Windows 98 に動作します。 移植性が重視される場合、ANSI コントロールである場合。 コントロールは、Windows NT でのみ実行される場合、は、Unicode コントロールを出荷することができます。 両方の出荷を用意し、アプリケーションがユーザーのオペレーティング システムに最適のバージョンをインストールする可能性がありますもできます。  
   
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a>ActiveX コントロールと再頒布可能 Dll をインストールします。  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> ActiveX コントロールと再頒布可能 Dll をインストールします。  
  ActiveX コントロールを提供するセットアップ プログラムは、特別な Windows ディレクトリのサブディレクトリを作成し、コントロールのインストールする必要があります。OCX ファイルが入っています。  
   
 > [!NOTE]
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  ActiveX コントロールは、OLE コンテナー アプリケーションでのみ使用できる、ために、コントロールと OLE Dll の完全なセットを配布する必要はありません。 コンテナー アプリケーション (またはオペレーティング システム自体) が、標準的な OLE インストールされている Dll を想定することができます。  
   
-##  <a name="_core_registering_controls"></a>コントロールの登録  
+##  <a name="_core_registering_controls"></a> コントロールの登録  
  コントロールを使用することができます、前に、Windows レジストリ データベースにその適切なエントリが作成する必要があります。 一部の ActiveX コントロール コンテナーは、新しいコントロールを登録するユーザーのメニュー項目を提供しますが、この機能は、すべてのコンテナーで使用できない可能性があります。 そのため、セットアップ プログラムがインストールされている場合に、コントロールを登録することができます。  
   
  場合は、代わりに直接コントロールを登録するセットアップ プログラムを記述することができます。  
@@ -86,6 +81,6 @@ ms.lasthandoff: 12/21/2017
   
  MFCx0.DLL を登録する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 

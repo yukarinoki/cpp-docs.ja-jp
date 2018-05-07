@@ -1,16 +1,12 @@
 ---
-title: "コンパイラ エラー C2400 C2499 から |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C2400 C2499 から |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>コンパイラ エラー C2400 C2499 から
 
@@ -88,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 |[コンパイラ エラー C2426](compiler-error-c2426.md)|'*トークン*': 無効な演算子で'*コンテキスト*'|
 |[コンパイラ エラー C2427](compiler-error-c2427.md)|'*クラス*': このスコープでクラスを定義することはできません|
 |[コンパイラ エラー C2428](compiler-error-c2428.md)|'*操作*': 型 'bool' のオペランドでは使用できません|
-|コンパイラ エラー C2429|*コンテキスト*'*コンテキスト*'コンパイラ フラグが必要'*オプション*'|
+|[コンパイラ エラー C2429](compiler-error-c2429.md)|'*言語機能*'コンパイラ フラグが必要'*コンパイラ オプション*'|
 |[コンパイラ エラー C2430](compiler-error-c2430.md)|1 つ以上のインデックス レジスタで '*コンテキスト*'|
 |[コンパイラ エラー C2431](compiler-error-c2431.md)|無効なインデックス レジスタで '*コンテキスト*'|
 |[コンパイラ エラー C2432](compiler-error-c2432.md)|16 ビットのデータに無効な参照 '*コンテキスト*'|
@@ -149,7 +142,7 @@ ms.lasthandoff: 12/21/2017
 |[コンパイラ エラー C2491](compiler-error-c2491.md)|'*識別子*': dllimport の定義*関数*許可されていません|
 |[コンパイラ エラー C2492](compiler-error-c2492.md)|'*変数*': スレッド ストレージ存続期間を使用してデータには、dll インターフェイスはありません。|
 |[コンパイラ エラー C2493](compiler-error-c2493.md)|_ _based の無効な形式|
-|[コンパイラ エラー C2494](compiler-error-c2494.md)|'*キーワード*' フィルター式内から呼び出すことはできませんまたは &#95; &#95; 最後に/finally ブロック|
+|[コンパイラ エラー C2494](compiler-error-c2494.md)|'*キーワード*' フィルター式内から呼び出すことはできませんまたは&#95; &#95;finally/finally ブロック|
 |[コンパイラ エラー C2495](compiler-error-c2495.md)|'*識別子*': '__declspec(noexcept)' は関数宣言または定義にのみ適用できます|
 |[コンパイラ エラー C2496](compiler-error-c2496.md)|'*識別子*': 'selectany' は外部リンケージを持つデータ項目にのみ適用できます|
 |コンパイラ エラー C2497|'*識別子*': 'implementation_key' は関数宣言にのみ適用できます|

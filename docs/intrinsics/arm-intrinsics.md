@@ -1,12 +1,9 @@
 ---
-title: "ARM 組み込み |Microsoft ドキュメント"
-ms.custom: 
+title: ARM 組み込み |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
@@ -1940,17 +1937,15 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c34855fa3099fa9c91badba96d39b90f4c25792b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 305c4251808e7a9cbe152f3bbae043080dcb7d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
 Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み込みが使用できるようになります。 ARM の詳細については、次を参照してください。、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトです。  
@@ -1966,7 +1961,7 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
   
 |関数名|命令|関数プロトタイプ|  
 |-------------------|-----------------|------------------------|  
-|_arm_smlal|SMLAL|__int64 _arm_smlal(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlal|SMLAL|_ _int64 _arm_smlal (\__int64 _RdHiLo、int _Rn int _Rm)|  
 |_arm_umlal|UMLAL|unsigned __int64 _arm_umlal(unsigned \__int64 _RdHiLo, unsigned int _Rn, unsigned int _Rm)|  
 |_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|  
 |_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|  
@@ -1977,9 +1972,9 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
-|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlalbb|SMLALBB|_ _int64 _arm_smlalbb (\__int64 _RdHiLo、int _Rn int _Rm)|  
+|_arm_smlalbt|SMLALBT|_ _int64 _arm_smlalbt (\__int64 _RdHiLo、int _Rn int _Rm)|  
+|_arm_smlaltb|SMLALTB|_ _int64 _arm_smlaltb (\__int64 _RdHiLo、int _Rn int _Rm)|  
 |_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|  
@@ -2058,7 +2053,7 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|  
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|  
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|  
-|_arm_smlald|SMLALD|__int64 _arm_smlald(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlald|SMLALD|_ _int64 _arm_smlald (\__int64 _RdHiLo、int _Rn int _Rm)|  
 |_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
@@ -2083,8 +2078,8 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
 |__emit||void __emit(unsigned \__int32 opcode)<br /><br /> コンパイラから出力される命令ストリームに、指定された命令を挿入します。<br /><br /> `opcode` の値は、コンパイル時に既知の定数式である必要があります。 命令語のサイズは 16 ビットであり、`opcode` の最上位 16 ビットは無視されます。<br /><br /> コンパイラは `opcode` の内容を解釈しようとせず、挿入された命令を実行する前の CPU またはメモリの状態は保証されません。<br /><br /> コンパイラは、挿入された命令を実行した後に CPU とメモリの状態が変更されていないことを前提としています。 したがって、状態を変更する命令は、コンパイラにより生成される通常のコードに好ましくない影響を与えることがあります。<br /><br /> このため、`emit` を使用するのは、コンパイラが正常に処理できない CPU の状態 (コプロセッサの状態など) に影響を与える命令を挿入する場合か、次を使用して宣言されている関数を実装する場合のみとします。`declspec(naked)`|  
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|  
 |__iso_volatile_load16||__int16 \__iso_volatile_load16(const volatile \__int16 *)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
-|__iso_volatile_load32||__int32 \__iso_volatile_load32(const volatile \__int32 *)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
-|__iso_volatile_load64||__int64 \__iso_volatile_load64(const volatile \__int64 *)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
+|__iso_volatile_load32||_ _int32 \__iso_volatile_load32 (const volatile \__int32 *)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
+|__iso_volatile_load64||_ _int64 \__iso_volatile_load64 (const volatile \__int64 *)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
 |__iso_volatile_load8||__int8 \__iso_volatile_load8(const volatile \__int8 *)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
 |__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 *, \__int16)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
 |__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 *, \__int32)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
@@ -2092,7 +2087,7 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
 |__iso_volatile_store8||void __iso_volatile_store8(volatile \__int8 *, \__int8)<br /><br /> 詳細については、次を参照してください。 [_iso_volatile_load/store 組み込み](#IsoVolatileLoadStore)です。|  
 |__ldrexd|LDREXD|_ _int64 \__ldrexd (const volatile \__int64 *)|  
 |__prefetch|PLD|void __cdecl \__prefetch(const void *)<br /><br /> 指定したアドレス、またはその付近のアドレスのメモリに間もなくアクセスする可能性があるという `PLD` メモリ ヒントをシステムに提供します。 システムによっては、実行時のパフォーマンスを向上させるために、そのメモリへのアクセス パターンを最適化する場合があります。 ただし、C++ 言語側からすると、この関数には目に見える効果がなく、何も実行しないことがあります。|  
-|__rdpmccntr64||unsigned __int64 \__rdpmccntr64(void)|  
+|__rdpmccntr64||符号なし _ _int64 \__rdpmccntr64(void)|  
 |__sev|SEV|void __sev(void)|  
 |__static_assert||void __static_assert(int, const char *)|  
 |__swi|SVC|unsigned int __swi(unsigned int, ...)|  
@@ -2105,11 +2100,11 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|  
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|  
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|  
-|_CountLeadingOnes64||unsigned int _CountLeadingOnes64(unsigned \__int64)|  
+|_CountLeadingOnes64||符号なし int _CountLeadingOnes64 (符号なし\__int64)|  
 |_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|  
-|_CountLeadingSigns64||unsigned int _CountLeadingSigns64(\__int64)|  
+|_CountLeadingSigns64||符号なし int _CountLeadingSigns64 (\__int64)|  
 |_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|  
-|_CountLeadingZeros64||unsigned int _CountLeadingZeros64(unsigned \__int64)|  
+|_CountLeadingZeros64||符号なし int _CountLeadingZeros64 (符号なし\__int64)|  
 |_CountOneBits||unsigned int _CountOneBits(unsigned long)|  
 |_CountOneBits64||unsigned int _CountOneBits64(unsigned \__int64)|  
 |_DAddSatInt|QDADD|int _DAddSatInt(int, int)|  
@@ -2121,7 +2116,7 @@ Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み�
 |_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveFromCoprocessor64](#MoveFromCo64)です。|  
 |_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)です。|  
 |_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)です。|  
-|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64(unsigned \__int64, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor64](#MoveToCo64)です。|  
+|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (符号なし\__int64、unsigned int、unsigned int、unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor64](#MoveToCo64)です。|  
 |_MulHigh||long _MulHigh(long, long)|  
 |_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|  
 |_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|  
@@ -2178,7 +2173,7 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **解説**  
   
- 組み込みの `__iso_volatile_load8/16/32/64` および `__iso_volatile_store8/16/32/64` を使用すると、コンパイラによる最適化の対象にはならないメモリ アクセスを明示的に実行することができます。 コンパイラはこれらの操作の相対順序を削除、合成、または変更できませんが、暗黙的なハードウェア メモリ バリアを生成しません。 したがって、ハードウェアでも複数のスレッド間で観察可能なメモリ アクセスの順序が変更される場合があります。 具体的には、これらの組み込みでコンパイルされる次の式に相当**/volatile:iso**です。  
+ 組み込みの `__iso_volatile_load8/16/32/64` および `__iso_volatile_store8/16/32/64` を使用すると、コンパイラによる最適化の対象にはならないメモリ アクセスを明示的に実行することができます。 コンパイラはこれらの操作の相対順序を削除、合成、または変更できませんが、暗黙的なハードウェア メモリ バリアを生成しません。 したがって、ハードウェアでも複数のスレッド間で観察可能なメモリ アクセスの順序が変更される場合があります。 具体的には、これらの組み込みでコンパイルされる次の式に相当 **/volatile:iso**です。  
   
 ```  
   
@@ -2272,7 +2267,7 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  `_MoveFromCoprocessor64` は MRRC 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。  
   
-###  <a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2  
+###  <a name="MoveToCo"></a> _MoveToCoprocessor、_MoveToCoprocessor2  
  これらの組み込み関数は、コプロセッサのデータ転送命令を使用して、ARM コプロセッサにデータを書き込みます。  
   
 ```  
@@ -2369,8 +2364,8 @@ void _MoveFromCoprocessor64(
 |__code_seg|void __code_seg(const char *)|  
 |__debugbreak|void __cdecl \__debugbreak(void)|  
 |__fastfail|__declspec(noreturn) void \__fastfail (符号なし int)|  
-|__nop|void __nop(void)**注:**で ARM プラットフォームでは、この関数は、1 つが、ターゲット アーキテクチャで実装された場合に、NOP 命令を生成以外の場合は、プログラムまたは CPU の状態が変化しない代わりの命令は、それ以外の場合生成された — たとえば、`MOV r8, r8`です。 これは機能的に等価、 \__nop 他のハードウェア アーキテクチャの組み込みです。 プログラムまたは CPU の状態に影響がない命令は最適化の手法としてターゲット アーキテクチャで無視される場合があるため、命令は必ずしも CPU サイクルを消費しません。 したがって、使用しないで、 \__nop 組み込みを CPU の動作について確信がない限り、コード シーケンスの実行時間を操作します。 代わりに、使用することができます、 \__nop 組み込みを特定の 32 ビット境界アドレスに次の命令を配置します。|  
-|__yield|__yield(void) を無効にする**注:**で ARM プラットフォームでは、この関数は生成 YIELD 命令には、スレッドが実行を一時的に中断できるタスクを実行していることを示します: スピンロックなど-なしプログラムが悪影響を与えることに影響します。 これにより、CPU が実行サイクル中に他のタスクを実行できるようになり、実行サイクルが浪費されなくなります。|  
+|__nop|void __nop(void)**注:** で ARM プラットフォームでは、この関数は、1 つが、ターゲット アーキテクチャで実装された場合に、NOP 命令を生成以外の場合は、プログラムまたは CPU の状態が変化しない代わりの命令は、それ以外の場合生成された — たとえば、`MOV r8, r8`です。 これは機能的に等価、 \__nop 他のハードウェア アーキテクチャの組み込みです。 プログラムまたは CPU の状態に影響がない命令は最適化の手法としてターゲット アーキテクチャで無視される場合があるため、命令は必ずしも CPU サイクルを消費しません。 したがって、使用しないで、 \__nop 組み込みを CPU の動作について確信がない限り、コード シーケンスの実行時間を操作します。 代わりに、使用することができます、 \__nop 組み込みを特定の 32 ビット境界アドレスに次の命令を配置します。|  
+|__yield|__yield(void) を無効にする**注:** で ARM プラットフォームでは、この関数は生成 YIELD 命令には、スレッドが実行を一時的に中断できるタスクを実行していることを示します: スピンロックなど-なしプログラムが悪影響を与えることに影響します。 これにより、CPU が実行サイクル中に他のタスクを実行できるようになり、実行サイクルが浪費されなくなります。|  
 |_AddressOfReturnAddress|void * _AddressOfReturnAddress(void)|  
 |_BitScanForward|unsigned char _BitScanForward(unsigned long * _Index, unsigned long _Mask)|  
 |_BitScanReverse|unsigned char _BitScanReverse(unsigned long * _Index, unsigned long _Mask)|  
@@ -2472,7 +2467,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel(char volatile *, char, char)|  
 |_InterlockedCompareExchangePointer|void * _InterlockedCompareExchangePointer(void \* volatile \*, void \*, void \*)|  
 |_InterlockedCompareExchangePointer_acq|void * _InterlockedCompareExchangePointer_acq(void \* volatile \*, void \*, void \*)|  
-|_InterlockedCompareExchangePointer_nf|void * _InterlockedCompareExchangePointer_nf(void \* volatile \*, void \*, void \*)|  
+|_InterlockedCompareExchangePointer_nf|void * _InterlockedCompareExchangePointer_nf (void \* volatile \*, void \*, void \*)|  
 |_InterlockedCompareExchangePointer_rel|void * _InterlockedCompareExchangePointer_rel(void \* volatile \*, void \*, void \*)|  
 |_InterlockedCompareExchange_acq|long _InterlockedCompareExchange_acq(long volatile *, long, long)|  
 |_InterlockedCompareExchange_nf|long _InterlockedCompareExchange_nf(long volatile *, long, long)|  
@@ -2517,7 +2512,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchangeAdd_rel|long _InterlockedExchangeAdd_rel(long volatile *, long)|  
 |_InterlockedExchangePointer|void * _InterlockedExchangePointer(void \* volatile \* _Target, void \*)|  
 |_InterlockedExchangePointer_acq|void * _InterlockedExchangePointer_acq(void \* volatile \* _Target, void \*)|  
-|_InterlockedExchangePointer_nf|void * _InterlockedExchangePointer_nf(void \* volatile \* _Target, void \*)|  
+|_InterlockedExchangePointer_nf|void * _InterlockedExchangePointer_nf (void \* volatile \* _Target、void \*)|  
 |_InterlockedExchange_acq|long _InterlockedExchange_acq(long volatile * _Target, long)|  
 |_InterlockedExchange_nf|long _InterlockedExchange_nf(long volatile * _Target, long)|  
 |_InterlockedIncrement|long __cdecl _InterlockedIncrement(long volatile *)|  
@@ -2553,7 +2548,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedXor16_acq|short _InterlockedXor16_acq(short volatile *, short)|  
 |_InterlockedXor16_nf|short _InterlockedXor16_nf(short volatile *, short)|  
 |_InterlockedXor16_rel|short _InterlockedXor16_rel(short volatile *, short)|  
-|_InterlockedXor64|__int64 _InterlockedXor64(\__int64 volatile *, \__int64)|  
+|_InterlockedXor64|_ _ int64 _InterlockedXor64 (\__int64 volatile *、 \__int64)|  
 |_InterlockedXor64_acq|__int64 _InterlockedXor64_acq(\__int64 volatile *, \__int64)|  
 |_InterlockedXor64_nf|__int64 _InterlockedXor64_nf(\__int64 volatile *, \__int64)|  
 |_InterlockedXor64_rel|__int64 _InterlockedXor64_rel(\__int64 volatile *, \__int64)|  
@@ -2583,7 +2578,7 @@ void _MoveFromCoprocessor64(
   
  [[NEON](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [ARM アセンブラー リファレンス](../assembler/arm/arm-assembler-reference.md)   
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)

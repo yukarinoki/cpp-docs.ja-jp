@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicaccessor::getlength |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicaccessor::getlength |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicAccessor.GetLength
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - GetLength method
 ms.assetid: 3ae8983b-b267-4cf9-bfc0-3e191f79e646
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb5f10495e1e57a93cc79f98a234aa1007dadce6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cc7203f030fc3a9ca00839bc9955c85eaa770935
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetlength"></a>CDynamicAccessor::GetLength
 指定された列の長さを取得します。  
@@ -63,9 +58,9 @@ bool GetLength(const WCHAR* pColumnName,
 ## <a name="remarks"></a>コメント  
  最初のオーバーライドは、列番号を受け取り、2 番目と 3 番目の上書き列名を ANSI または Unicode の形式でそれぞれ行います。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::SetLength](../../data/oledb/cdynamicaccessor-setlength.md)

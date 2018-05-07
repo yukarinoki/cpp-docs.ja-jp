@@ -1,12 +1,9 @@
 ---
-title: "CSettingsStore クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSettingsStore クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Windows API 関数をラップし、レジストリへのアクセスに使用するオブジェクト指向インターフェイスを提供します。  
@@ -85,10 +80,10 @@ class CSettingsStore : public CObject
   
  `CSettingsStore`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  開いているレジストリ キーを閉じます。  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>コメント  
  デストラクターは、既定では、このメソッドが呼び出されます、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)です。  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  レジストリ キーを開くか、存在しない場合は作成します。  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  正常終了した場合は 0それ以外の場合は 0 以外の値。  
   
 ### <a name="remarks"></a>コメント  
- `CreateKey`使用して`m_hKey`レジストリの照会のルートとして。 検索`pszPath`のサブキーとして`m_hKey`です。 キーが存在しない場合`CreateKey`によって作成されます。 それ以外の場合、キーを開きます。 `CreateKey`設定し、`m_hKey`作成または開かれたキーにします。  
+ `CreateKey` 使用して`m_hKey`レジストリの照会のルートとして。 検索`pszPath`のサブキーとして`m_hKey`です。 キーが存在しない場合`CreateKey`によって作成されます。 それ以外の場合、キーを開きます。 `CreateKey` 設定し、`m_hKey`作成または開かれたキーにします。  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  
           `CSettngsStore` オブジェクトを作成します。  
   
@@ -139,7 +134,7 @@ CSettingsStore(
   
  デストラクター`CSettingsStore`解放`m_hKey`自動的にします。  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  レジストリからキーとそのすべての子を削除します。  
   
 ```  
@@ -163,7 +158,7 @@ virtual BOOL DeleteKey(
   
  場合、パラメーター`bAdmin`ゼロ、`DeleteKey`下で削除するキーの検索`HKEY_CURRENT_USER`です。 場合`bAdmin`がゼロ以外、`DeleteKey`下で削除するキーの検索`HKEY_LOCAL_MACHINE`です。  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  値を削除`m_hKey`です。  
   
 ```  
@@ -177,7 +172,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  レジストリ キーを開きます。  
   
 ```  
@@ -194,7 +189,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>コメント  
  このメソッドは、指定したキーを正常に開いたら、設定`m_hKey`をこのキーのハンドル。  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  レジストリ内のキーから値を読み取ります。  
   
 ```  
@@ -322,9 +317,9 @@ virtual BOOL Read(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>コメント  
- `Read`チェック`pszKey`のサブキーとして`m_hKey`です。  
+ `Read` チェック`pszKey`のサブキーとして`m_hKey`です。  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  開いているキーの下のレジストリ値を書き込みます。  
   
 ```  
@@ -454,7 +449,7 @@ virtual BOOL Write(
 ### <a name="remarks"></a>コメント  
  レジストリへの書き込みをするために設定する必要があります`bReadOnly`0 以外の値を作成するときに、 [CSettingsStore](../../mfc/reference/csettingsstore-class.md)オブジェクト。 詳細については、次を参照してください。 [CSettingsStore::CSettingsStore](#csettingsstore)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)

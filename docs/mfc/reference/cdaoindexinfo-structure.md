@@ -1,13 +1,10 @@
 ---
-title: "CDaoIndexInfo 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: CDaoIndexInfo 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 構造体
 `CDaoIndexInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているインデックス オブジェクトに関する情報が含まれています。  
@@ -110,14 +105,14 @@ struct CDaoIndexInfo {
   
  Index オブジェクトは、MFC クラスでは表されません。 DAO オブジェクト クラスの基になる MFC オブジェクトの代わりに、[どちら](../../mfc/reference/cdaotabledef-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)インデックス コレクションと呼ばれるインデックス オブジェクトのコレクションを格納します。 これらのクラスは、インデックス情報の各アイテムにアクセスするメンバー関数を指定するか、すべて同時にアクセスすることができます、`CDaoIndexInfo`オブジェクトを呼び出して、`GetIndexInfo`親オブジェクトのメンバー関数。  
   
- `CDaoIndexInfo`コンス トラクターとデストラクターが正しく割り当ておよびでインデックスのフィールド情報を解放するために`m_pFieldInfos`です。  
+ `CDaoIndexInfo` コンス トラクターとデストラクターが正しく割り当ておよびでインデックスのフィールド情報を解放するために`m_pFieldInfos`です。  
   
- によって取得される情報、`GetIndexInfo`テーブル定義オブジェクトのメンバー関数は、`CDaoIndexInfo`構造体。 呼び出す、`GetIndexInfo`インデックス オブジェクトが格納されているコレクションを持つインデックスを含むテーブル定義オブジェクトのメンバー関数。 `CDaoIndexInfo`定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoIndexInfo`オブジェクト。  
+ によって取得される情報、`GetIndexInfo`テーブル定義オブジェクトのメンバー関数は、`CDaoIndexInfo`構造体。 呼び出す、`GetIndexInfo`インデックス オブジェクトが格納されているコレクションを持つインデックスを含むテーブル定義オブジェクトのメンバー関数。 `CDaoIndexInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoIndexInfo`オブジェクト。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)
 

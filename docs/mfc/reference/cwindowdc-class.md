@@ -1,12 +1,9 @@
 ---
-title: "CWindowDC クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CWindowDC クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWindowDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc3219ff6570fab18b19f350f7dca3171ab4832
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwindowdc-class"></a>CWindowDC クラス
 `CDC`の派生クラスです。  
@@ -50,7 +45,7 @@ class CWindowDC : public CDC
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CWindowDC::m_hWnd](#m_hwnd)|`HWND` の割り当て先である `CWindowDC`。|  
   
@@ -66,10 +61,10 @@ class CWindowDC : public CDC
   
  `CWindowDC`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  ヘッダー: afxwin.h  
   
-##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
+##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
  構築、 `CWindowDC` 、画面全体 (クライアントと非クライアントの両方) の領域にアクセスするオブジェクト、`CWnd`によって指されるオブジェクト`pWnd`です。  
   
 ```  
@@ -88,7 +83,7 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
  `HWND`の`CWnd`ポインターが構築するために使用される、`CWindowDC`オブジェクト。  
   
 ```  
@@ -96,12 +91,12 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>コメント  
- `m_hWnd`保護された型の変数は、`HWND`です。  
+ `m_hWnd` 保護された型の変数は、`HWND`です。  
   
 ### <a name="example"></a>例  
   例を参照して[CWindowDC::CWindowDC](#cwindowdc)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC クラス](../../mfc/reference/cdc-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CDC クラス](../../mfc/reference/cdc-class.md)

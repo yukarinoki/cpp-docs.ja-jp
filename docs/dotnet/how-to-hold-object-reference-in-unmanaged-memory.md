@@ -1,13 +1,10 @@
 ---
 title: '方法: アンマネージ メモリ内のオブジェクト参照を保持 |Microsoft ドキュメント'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: debda931ae121e109c4b1008054ace11a714f065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: adff91c4cbceb61a7b6d8996b6f90e7350ae637d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>方法: アンマネージ メモリ内にオブジェクト参照を保持する
 ラップされる gcroot.h を使用する<xref:System.Runtime.InteropServices.GCHandle>をアンマネージ メモリ内の CLR オブジェクトの参照を保持します。 また、使用することができます`GCHandle`直接です。  
@@ -69,7 +64,7 @@ StringWrapper::x == ManagedString
 ```  
   
 ## <a name="example"></a>例  
- `GCHandle`アンマネージ メモリ内の参照をマネージ オブジェクトを保持するための手段を提供します。  使用する、<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>マネージ オブジェクトに不透明なハンドルを作成する方法と<xref:System.Runtime.InteropServices.GCHandle.Free%2A>解放します。 また、<xref:System.Runtime.InteropServices.GCHandle.Target%2A>メソッドでは、マネージ コードでハンドルから返されたオブジェクトの参照を取得することができます。  
+ `GCHandle` アンマネージ メモリ内の参照をマネージ オブジェクトを保持するための手段を提供します。  使用する、<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>マネージ オブジェクトに不透明なハンドルを作成する方法と<xref:System.Runtime.InteropServices.GCHandle.Free%2A>解放します。 また、<xref:System.Runtime.InteropServices.GCHandle.Target%2A>メソッドでは、マネージ コードでハンドルから返されたオブジェクトの参照を取得することができます。  
   
 ```  
 // hold_object_reference_2.cpp  
@@ -106,5 +101,5 @@ int main() {
 StringWrapper::m_handle == ManagedString  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

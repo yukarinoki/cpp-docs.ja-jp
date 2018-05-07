@@ -1,13 +1,10 @@
 ---
-title: "CLR 列挙型 |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 列挙型 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,23 +12,21 @@ helpviewer_keywords:
 - enum struct keyword [C++]
 - enum class keyword [C++]
 ms.assetid: 4541d952-97bb-4e35-a7f8-d14f5f6a6606
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ad82c1d867c511121cd024f2affd5df98b4642bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2416a306373db08c5e925b4987fc8a9273973c39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-enum-type"></a>CLR 列挙型
 列挙型の動作と宣言が変更されたマネージ拡張から C++ の Visual C にします。  
   
- マネージ拡張 enum 宣言の後、`__value`キーワード。 派生する CLR 列挙型からネイティブ列挙型を区別するためには、この考え方`System::ValueType`、類似の機能を提案されているときにします。 例:  
+ マネージ拡張 enum 宣言の後、`__value`キーワード。 派生する CLR 列挙型からネイティブ列挙型を区別するためには、この考え方`System::ValueType`、類似の機能を提案されているときにします。 例えば:  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -182,6 +177,6 @@ public:
   
  Visual C 列挙が不要になったクラス内で列挙型をカプセル化することに説得力のある利点です。 実際には、確認する場合、`System`名前空間、その列挙型、クラス、およびインターフェイスをすべて同じ宣言領域の存在が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [値の型とその動作 (C + + CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [列挙型クラス](../windows/enum-class-cpp-component-extensions.md)

@@ -1,13 +1,10 @@
 ---
-title: "汎用 C++ クラス ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: 汎用 C++ クラス ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.generic
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Generic C++ Class Wizard [C++]
 ms.assetid: aa95be9e-fc1b-45db-a11d-0d32c4929077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d706c30c729f490f6bfdec3344d5dab537a689
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43e86a4047ef025f49dd01eda90f324623a90752
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-c-class-wizard"></a>汎用 C++ クラス ウィザード
 一般 C++ クラスをプロジェクトに追加します。 クラスは、ATL または MFC からは継承できません。  
@@ -62,5 +57,5 @@ ms.lasthandoff: 12/21/2017
  **管理されています。**  
  選択した場合は、マネージ クラスとヘッダー ファイルを追加します。 オフの場合は、ネイティブのクラスとヘッダー ファイルを追加します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一般 C++ クラスの追加](../ide/adding-a-generic-cpp-class.md)

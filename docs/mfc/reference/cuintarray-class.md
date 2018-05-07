@@ -1,12 +1,9 @@
 ---
-title: "CUIntArray クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CUIntArray クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>CUIntArray クラス
 符号なし整数の配列をサポートします。  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>コメント  
  符号なし整数または**UINT**、ワード、ダブルワードを異なるの物理サイズ、 **UINT**によっては、ターゲットの実行環境を変更することができます。 A **UINT**ダブルワードと同じサイズです。  
   
- `CUIntArray`組み込まれており、 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)実行時の型へのアクセスとダンプをサポートするマクロ、 [CDumpContext](../../mfc/reference/cdumpcontext-class.md)オブジェクト。 符号なし整数の個々 の要素をダンプする場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。 符号なし整数の配列をシリアル化できません。  
+ `CUIntArray` 組み込まれており、 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)実行時の型へのアクセスとダンプをサポートするマクロ、 [CDumpContext](../../mfc/reference/cdumpcontext-class.md)オブジェクト。 符号なし整数の個々 の要素をダンプする場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。 符号なし整数の配列をシリアル化できません。  
   
 > [!NOTE]
 >  配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。  
@@ -130,10 +125,10 @@ class CUIntArray : public CObject
   
  `CUIntArray`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

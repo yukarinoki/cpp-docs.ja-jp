@@ -1,11 +1,8 @@
 ---
-title: "Platform::guid 値クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::guid 値クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Guid
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5323c934efb7d9416d1016f355390288885cb0c9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 値クラス
 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) の種類を、Windows ランタイムの型システムで表します。  
@@ -48,7 +43,7 @@ public value struct Guid
 ### <a name="remarks"></a>コメント  
  Windows の関数 [CoCreateGuid](http://msdn.microsoft.com/library/windows/desktop/ms688568\(v=vs.85\).aspx)を使用して新しい Platform::Guid を作成する例については、「 [WinRT コンポーネント: GUID を作成する方法](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)」を参照してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -167,5 +162,5 @@ Platform::Guid operator()
  GUID 構造体。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)

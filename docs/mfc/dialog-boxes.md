@@ -1,13 +1,10 @@
 ---
-title: "ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8de283d81aa9d260b891f285f06555dc67895f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes"></a>ダイアログ ボックス
 Windows アプリケーションの頻繁にユーザーとの通信ダイアログ ボックスを使用します。 クラス[CDialog](../mfc/reference/cdialog-class.md)  ダイアログ ボックスを管理するには、Visual C ダイアログ エディター簡単にダイアログ ボックスを設計およびそのダイアログ テンプレート リソースを作成して、コード ウィザードの初期化処理を簡略化のインターフェイスを提供し、検証コントロール ダイアログ ボックスでは、ユーザーが入力した値を収集しています。  
@@ -78,5 +73,5 @@ Windows アプリケーションの頻繁にユーザーとの通信ダイアロ
   
 -   [サンプル](../mfc/dialog-sample-list.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)

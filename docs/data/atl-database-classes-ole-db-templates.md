@@ -2,12 +2,9 @@
 title: ATL データベース クラス (OLE DB テンプレート) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: fabced79232d17807d252da9dac5b066ddf69f25
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL データベース クラス (OLE DB テンプレート)
 Microsoft では、OLE DB では、さまざまな情報源や形式でのデータへの統一されたアクセスを提供する COM インターフェイスのセットのいくつかの実装を提供します。  OLE DB は正式に廃止されました。このドキュメントは、レガシ コードを保持している開発者です。 新しいアプリケーションは、ODBC を使用して、SQL データ ソースに接続する必要があります。
@@ -45,7 +40,7 @@ Microsoft では、OLE DB では、さまざまな情報源や形式でのデー
   
  詳細については、次を参照してください。 [OLE DB プログラミング](../data/oledb/ole-db-programming.md)と[OLE DB プログラマ ガイド](http://go.microsoft.com/fwlink/p/?linkid=121548)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマーの作成](../data/oledb/creating-an-ole-db-consumer.md)   
  [OLE DB プロバイダーの作成](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../data/oledb/ole-db-consumer-templates-reference.md)   

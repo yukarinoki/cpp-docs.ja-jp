@@ -1,12 +1,9 @@
 ---
-title: "コンパイラ エラー C3400 C3499 から |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C3400 C3499 から |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>コンパイラ エラー C3400 C3499 から
 
@@ -173,8 +168,8 @@ ms.lasthandoff: 12/21/2017
 |コンパイラ エラー C3441|'*宣言*':'*キーワード*' クラスを定義した後に適用することはできません|
 |コンパイラ エラー C3442|共用体の複数のメンバーの初期化: '*member1*'および'*member2*'|
 |コンパイラ エラー C3443|既定のメンバー初期化子 '*クラス*' は、再帰|
-|コンパイラ エラー C3444|集計のクラスを空にする*クラス*' '{}' で初期化する必要があります|
-|コンパイラ エラー C3445|コピーのリストの初期化の '*型*' 明示的なコンス トラクターを使用することはできません|
+|コンパイラ エラー C3444|集計のクラスを空にする*クラス*'で初期化する必要があります'{}'|
+|[コンパイラ エラー C3445](compiler-error-c3445.md)|コピーのリストの初期化の '*型*' 明示的なコンス トラクターを使用することはできません|
 |[コンパイラ エラー C3446](compiler-error-c3446.md)|'*クラス*': 値クラスのメンバーの既定のメンバー初期化子は許可されていません|
 |コンパイラ エラー C3447|互換性のために残されています。|
 |コンパイラ エラー C3448|互換性のために残されています。|

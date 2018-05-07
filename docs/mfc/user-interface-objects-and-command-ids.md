@@ -1,13 +1,10 @@
 ---
-title: "ユーザー インターフェイス オブジェクトとコマンド Id |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー インターフェイス オブジェクトとコマンド Id |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - command routing [MFC], MFC
 - command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e085c6d9e4d030c8db44e11e570ffa1033abee35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b56babf0e42dde521a6bda3a7d9713db519182c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-objects-and-command-ids"></a>ユーザー インターフェイス オブジェクトとコマンド ID
 メニュー項目、ツール バー ボタン、およびアクセラレータ キー、「ユーザー インターフェイス オブジェクト」コマンドを生成できます。 このような各ユーザー インターフェイス オブジェクトは、ID を持つ オブジェクトとコマンドに同じ ID を割り当てることによって、ユーザー インターフェイス オブジェクトをコマンドに関連付けます。 説明したよう[メッセージ](../mfc/messages.md)コマンドは、特別なメッセージとして実装されます。 「コマンド フレームワーク内の」次の図は、フレームワークがコマンドを管理する方法を示します。 生成するとき、ユーザー インターフェイス オブジェクトのコマンドなど`ID_EDIT_CLEAR_ALL`、コマンドを処理できないアプリケーション内のオブジェクトのいずれかの: ドキュメント オブジェクトの下の図の`OnEditClearAll`関数は、ドキュメントのメッセージ マップを通じて呼び出されます。  
@@ -43,6 +38,6 @@ ms.lasthandoff: 12/21/2017
  ![Framework の更新コマンド](../mfc/media/vc385p2.png "vc385p2")  
 フレームワーク内のコマンド更新  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
 

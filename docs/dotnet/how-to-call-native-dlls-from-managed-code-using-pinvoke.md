@@ -1,13 +1,10 @@
 ---
-title: "方法: PInvoke を使用してマネージ コードからネイティブ Dll を呼び出す |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: PInvoke を使用してマネージ コードからネイティブ Dll を呼び出す |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5d22f493a582b6ef09615f94c7b321a7cc535e5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e82690e49daf324d0ff77f89710ecdd09b208c19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>方法: PInvoke を使用してマネージ コードからネイティブ DLL を呼び出す
 アンマネージ Dll に実装されている関数は、Platform Invoke (P/invoke) 機能を使用してマネージ コードから呼び出すことができます。 DLL のソース コードが使用できない場合は、相互運用するための唯一のオプションは P/invoke です。 ただし、Visual C は、他の .NET 言語とは異なり、P/invoke する代わりを提供します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)です。  
@@ -64,5 +59,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ での明示的な PInvoke (DllImport 属性) の使用方法](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonLabel クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCRibbonLabel クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel クラス
 リボンのクリックできないテキスト ラベルを実装します。  
@@ -71,10 +66,10 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  構築して初期化、 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)を指定した文字列を表示するオブジェクト。  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  ラベルに表示されるテキストです。  
   
  [入力] `bIsMultiLine`  
- `TRUE`ラベルが、複数行のラベルであることを指定するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` ラベルが、複数行のラベルであることを指定するにはそれ以外の場合、`FALSE`です。  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  現在のリボン label 要素のアクセシビリティ データを決定します。  
   
 ```  
@@ -107,9 +102,9 @@ virtual BOOL SetACCData(
  型のオブジェクト`CAccessibilityData`を現在のリボンのラベルのアクセシビリティ データが格納されます。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合、`data`パラメーターが正常に設定された状態でリボン ラベルを現在のユーザー補助データです。 それ以外の場合、`FALSE`です。  
+ `TRUE` 場合、`data`パラメーターが正常に設定された状態でリボン ラベルを現在のユーザー補助データです。 それ以外の場合、`FALSE`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "ウィンドウ クラスを派生 |Microsoft ドキュメント"
-ms.custom: 
+title: ウィンドウ クラスを派生 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eddc6c59190856d09eae75c6f4314c902740092f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-window-classes"></a>ウィンドウ クラスの派生
 Windows から直接を作成する[CWnd](../mfc/reference/cwnd-class.md)から新しいウィンドウ クラスを派生または`CWnd`です。 これは、独自のカスタム ウィンドウを作成する一般的な方法です。 ただし、フレームワーク プログラムで使用されるほとんどのウィンドウは、MFC に用意されている、`CWnd` から派生するフレーム ウィンドウ クラスのいずれかから作成されます。  
@@ -71,6 +66,6 @@ Windows から直接を作成する[CWnd](../mfc/reference/cwnd-class.md)から�
   
  [ウィンドウの作成](../mfc/creating-windows.md)ウィンドウ オブジェクトと、windows の管理の作成について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Window オブジェクト](../mfc/window-objects.md)
 

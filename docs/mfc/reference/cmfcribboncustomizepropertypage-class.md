@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonCustomizePropertyPage クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCRibbonCustomizePropertyPage クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizePropertyPage
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad58cb0b062e25a52742eec5491489d3744a9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage クラス
 カスタム ページを実装して、**カスタマイズ**リボン ベースのアプリケーション ダイアログ ボックス。  
@@ -85,10 +80,10 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
  [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribboncustomizedialog.h  
   
-##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  カスタム カテゴリを追加、**コマンド**コンボ ボックス。  
   
 ```  
@@ -108,7 +103,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>コメント  
  このメソッドは、という名前のカテゴリを追加`lpszName`を**コマンド**コンボ ボックス。 コマンドがで指定されたユーザーは、カテゴリを選択するときに`lstIDS`コマンドの一覧に表示されます。  
   
-##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  `CMFCRibbonCustomizePropertyPage` オブジェクトを構築します。  
   
 ```  
@@ -119,7 +114,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [入力] `pRibbonBar`  
  対象のリボン コントロールへのポインターをカスタマイズするオプションです。  
   
-##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
  ユーザーがクリックしたときに、システムによって Calleld **ok**上、**カスタマイズ** ダイアログ ボックス。  
   
 ```  
@@ -129,6 +124,6 @@ virtual void OnOK();
 ### <a name="remarks"></a>コメント  
  既定の実装で選択したオプションの適用、**カスタマイズ**クイック アクセス ツールバーに ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)

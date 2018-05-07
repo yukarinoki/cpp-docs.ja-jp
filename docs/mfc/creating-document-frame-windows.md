@@ -1,13 +1,10 @@
 ---
-title: "ドキュメント フレーム ウィンドウの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメント フレーム ウィンドウの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-document-frame-windows"></a>ドキュメント フレーム ウィンドウの作成
 [ドキュメント/ビューの作成](../mfc/document-view-creation.md)を示していますが、どのように[CDocTemplate](../mfc/reference/cdoctemplate-class.md)オブジェクト統制フレーム ウィンドウ、ドキュメント、およびビューを作成し、それらをすべて同時に接続します。 次の 3 つ[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)への引数、`CDocTemplate`コンス トラクターは、フレーム ウィンドウ、ドキュメント、およびファイルの新しいコマンドなどのユーザー コマンドに応答ドキュメント テンプレートを動的に作成するビュー クラスを指定します。メニューまたは MDI ウィンドウ メニューで、新しいウィンドウ コマンド。 ドキュメント テンプレートは、ビューおよびドキュメントのフレーム ウィンドウを作成するときに、後で使用するためのこの情報を格納します。  
@@ -48,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [フレーム ウィンドウの破棄](../mfc/destroying-frame-windows.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
 
