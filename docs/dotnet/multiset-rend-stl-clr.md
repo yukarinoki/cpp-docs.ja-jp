@@ -1,12 +1,9 @@
 ---
-title: "multiset::rend (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: multiset::rend (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::rend
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - rend member [STL/CLR]
 ms.assetid: db84e142-efa7-4171-bad6-8132f3f5f741
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 46856f7c305b83d88452bd3d6db0ed600a910bd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50d87790e3165d27c7d6ca87fafb112fc51a7fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetrend-stlclr"></a>multiset::rend (STL/CLR)
 反転被制御シーケンスの末尾を指定します。  
@@ -76,12 +71,12 @@ int main()
 *--rend() = a  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext と set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マルチセット (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)   
  [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)   

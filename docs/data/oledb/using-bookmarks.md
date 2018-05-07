@@ -1,12 +1,9 @@
 ---
-title: "ブックマークの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: ブックマークの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5aa16d5f2a3a02d0e9fd6bb3dd5de71494e81d4a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-bookmarks"></a>ブックマークの使用
 行セットを開く前に、ブックマークを使用することをプロバイダーに指示する必要があります。 これを行うには、次のように設定します。、 **DBPROP_BOOKMARKS**プロパティを**true**プロパティで設定します。 特殊マクロを使用する必要がありますので、プロバイダーが列 0 としてブックマークを取得`BOOKMARK_ENTRY`と`CBookmark`クラスの静的アクセサーを使用している場合。 `CBookmark` 引数がブックマーク バッファーの長さ (バイト単位) は、テンプレート クラスです。 ブックマークに必要なバッファーの長さは、プロバイダーによって異なります。 次の例で示すように、ODBC OLE DB プロバイダーを使用する場合、バッファーは 4 バイトにする必要があります。  
@@ -71,5 +66,5 @@ product.GetBookmark(&bookmark);
   
  プロバイダーのブックマークをサポートする方法については、次を参照してください。[プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセサーの使用](../../data/oledb/using-accessors.md)

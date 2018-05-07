@@ -1,11 +1,8 @@
 ---
-title: "Platform::metadata Namespace |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::metadata Namespace |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Metadata
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61824ff4eb91fa7d62bb663e713bc269f50b4e01
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 11dc54463207efade9a8ebb7179654d0b1e18909
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 名前空間
 この名前空間には、型の宣言を変更する属性が含まれます。  
@@ -41,7 +36,7 @@ namespace Platform {
 ### <a name="members"></a>メンバー  
  この名前空間は内部使用のためのものですが、ブラウザーでこの名前空間の次のメンバーを表示できます。  
   
-|name|コメント|  
+|名前|コメント|  
 |----------|------------|  
 |属性|属性の基底クラス。|  
 |[Platform::Metadata::DefaultMemberAttribute 属性](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|使用できる複数のオーバーロード関数から呼び出す、推奨される関数を示します。|  
@@ -51,10 +46,10 @@ namespace Platform {
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Platform`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **メタデータ:** platform.winmd  
   
  **名前空間:** Platform::Metadata  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

@@ -1,12 +1,9 @@
 ---
-title: "_mm_stream_sd |Microsoft ドキュメント"
-ms.custom: 
+title: _mm_stream_sd |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_stream_sd
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5d9d5a4d984e09ef8e77a4b7128d266d05f6b64
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3e8a65066ad19b78319867782255d70da8d5b721
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 **Microsoft 固有の仕様**  
@@ -52,7 +47,7 @@ void _mm_stream_sd(
 ## <a name="return-value"></a>戻り値  
  なし。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -93,9 +88,9 @@ d[0] = -1, d[1] = 1
 ```  
   
 **Microsoft 固有の仕様はここまで**  
- Copyright 2007 by Advanced Micro Devices, Inc.All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
+ 高度なマイクロ デバイス, Inc. によって copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   
  [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)   
  [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)   

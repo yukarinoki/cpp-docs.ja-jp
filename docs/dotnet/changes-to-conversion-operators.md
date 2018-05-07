@@ -1,13 +1,10 @@
 ---
-title: "変換演算子の変更 |Microsoft ドキュメント"
-ms.custom: 
+title: 変換演算子の変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - conversions, explicit
 - explicit keyword [C++]
 ms.assetid: 9b83925c-71b7-4bd3-ac2e-843dd7c7f184
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8f89c49035e2e48dde8d502b1d61fa33d198f69a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 750d16bc6fee86d8a3f8b912cdc4c251221dffb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-conversion-operators"></a>変換演算子に対する変更点
 変換演算子の構文は、Visual C を c++ マネージ拡張から変更されました。  
@@ -74,5 +69,5 @@ public:
   
  別の変更は、引数を 1 つのコンス トラクターとして宣言されているかのように処理する`explicit`です。 これは、その呼び出しをトリガーするために、明示的なキャストが必要であることを意味します。 ただし、明示的な変換演算子が定義されている場合と、単一の引数を持つコンス トラクター、されませんが呼び出されることに注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスまたはインターフェイス内でのメンバー宣言 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

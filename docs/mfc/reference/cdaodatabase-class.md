@@ -1,12 +1,9 @@
 ---
-title: "CDaoDatabase クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDaoDatabase クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoDatabase
@@ -67,17 +64,15 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b5ae20f06cee55a13327d5bbe7ad058047b53c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase クラス
 それを通じてデータを操作することのできるデータベースへの接続を表します。  
@@ -135,7 +130,7 @@ class CDaoDatabase : public CObject
  サポートされているデータベースの形式については、次を参照してください。、 [GetName](../../mfc/reference/cdaoworkspace-class.md#getname)メンバー関数。 1 つ以上を持つことができます`CDaoDatabase`与えられた"ワークスペースで、"で表されるオブジェクトを一度にアクティブ、 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)オブジェクト。 ワークスペースは、データベース コレクションと呼ばれる、開いているデータベース オブジェクトのコレクションを保持します。  
   
 > [!NOTE]
->  MFC DAO データベース クラスは、ODBC に基づいて MFC データベース クラスとは異なります。 DAO データベース クラスの名前では、"CDao"プレフィックスがあります。 クラス`CDaoDatabase`の ODBC クラスに似たインターフェイスを提供[CDatabase](../../mfc/reference/cdatabase-class.md)です。 その主な違いは`CDatabase`DBMS のオープン データベース コネクティビティ (ODBC) と ODBC ドライバーを介して、DBMS にアクセスします。 `CDaoDatabase`Microsoft Jet データベース エンジンに基づくデータ アクセス オブジェクト (DAO) を介してデータにアクセスします。 一般に、DAO に基づいて MFC クラスは ODBC; に基づいて MFC クラスよりもより高機能ですDAO ベースのクラスは、独自のデータベース エンジンを使用して、ODBC ドライバーを介してなどのデータにアクセスできます。 DAO ベースのクラスには、DAO を直接呼び出すことがなく、クラスを使用してテーブルの追加などのデータ定義言語 (DDL) 操作もサポートします。  
+>  MFC DAO データベース クラスは、ODBC に基づいて MFC データベース クラスとは異なります。 DAO データベース クラスの名前では、"CDao"プレフィックスがあります。 クラス`CDaoDatabase`の ODBC クラスに似たインターフェイスを提供[CDatabase](../../mfc/reference/cdatabase-class.md)です。 その主な違いは`CDatabase`DBMS のオープン データベース コネクティビティ (ODBC) と ODBC ドライバーを介して、DBMS にアクセスします。 `CDaoDatabase` Microsoft Jet データベース エンジンに基づくデータ アクセス オブジェクト (DAO) を介してデータにアクセスします。 一般に、DAO に基づいて MFC クラスは ODBC; に基づいて MFC クラスよりもより高機能ですDAO ベースのクラスは、独自のデータベース エンジンを使用して、ODBC ドライバーを介してなどのデータにアクセスできます。 DAO ベースのクラスには、DAO を直接呼び出すことがなく、クラスを使用してテーブルの追加などのデータ定義言語 (DDL) 操作もサポートします。  
   
 ## <a name="usage"></a>使用法  
  レコード セット オブジェクトを作成するときに、暗黙的に、データベース オブジェクトを作成できます。 明示的にデータベース オブジェクトを作成することもできます。 使用して明示的に既存のデータベースを使用する`CDaoDatabase`次のいずれかの操作します。  
@@ -167,10 +162,10 @@ class CDaoDatabase : public CObject
   
  `CDaoDatabase`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
-##  <a name="cantransact"></a>CDaoDatabase::CanTransact  
+##  <a name="cantransact"></a>  CDaoDatabase::CanTransact  
  データベースがトランザクションを許可するかどうかを決定するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -183,7 +178,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>コメント  
  トランザクションは、データベースのワークスペースで管理されます。  
   
-##  <a name="canupdate"></a>CDaoDatabase::CanUpdate  
+##  <a name="canupdate"></a>  CDaoDatabase::CanUpdate  
  決定するには、このメンバー関数を呼び出すかどうか、`CDaoDatabase`オブジェクトの更新が許可されます。  
   
 ```  
@@ -196,7 +191,7 @@ BOOL CanUpdate();
 ### <a name="remarks"></a>コメント  
  データベースの更新方法については、DAO ヘルプの「更新可能なプロパティ」を参照してください。  
   
-##  <a name="cdaodatabase"></a>CDaoDatabase::CDaoDatabase  
+##  <a name="cdaodatabase"></a>  CDaoDatabase::CDaoDatabase  
  `CDaoDatabase` オブジェクトを構築します。  
   
 ```  
@@ -217,7 +212,7 @@ CDaoDatabase(CDaoWorkspace* pWorkspace = NULL);
 > [!NOTE]
 >  A`CDaoDatabase`を開いた場合、オブジェクトは暗黙的に作成されるも、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを既存のポインターを渡さずに`CDaoDatabase`オブジェクト。 レコード セット オブジェクトを閉じると、このデータベース オブジェクトは閉じられます。  
   
-##  <a name="close"></a>CDaoDatabase::Close  
+##  <a name="close"></a>  CDaoDatabase::Close  
  このメンバー関数をデータベースから切断し、開いているレコード セット、テーブル定義、およびデータベースに関連付けられているクエリ定義を閉じてを呼び出します。  
   
 ```  
@@ -235,7 +230,7 @@ virtual void Close();
   
  データベース オブジェクトが、関数のスコープ外に定義されている終了せず、関数を終了する場合は、データベース オブジェクトを明示的に閉じられるまで開いたままになりかが定義されているモジュールがスコープ外です。  
   
-##  <a name="create"></a>CDaoDatabase::Create  
+##  <a name="create"></a>  CDaoDatabase::Create  
  新しい Microsoft Jet を作成する (です。MDB) データベースを構築した後にこのメンバー関数を呼び出して、`CDaoDatabase`オブジェクト。  
   
 ```  
@@ -306,7 +301,7 @@ virtual void Create(
 > [!NOTE]
 >  **作成**、Microsoft Jet のみを作成することができます (です。MDB) データベース。 ISAM データベースまたは ODBC データベースを作成することはできません。  
   
-##  <a name="createrelation"></a>CDaoDatabase::CreateRelation  
+##  <a name="createrelation"></a>  CDaoDatabase::CreateRelation  
  データベースの主テーブル内の 1 つ以上のフィールドと外部テーブル (データベース内の別のテーブル) 内の 1 つ以上のフィールド間の関係を確立するためにこのメンバー関数を呼び出します。  
   
 ```  
@@ -366,7 +361,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
   
  関連情報については、DAO ヘルプの「CreateRelation メソッド」を参照してください。  
   
-##  <a name="deletequerydef"></a>CDaoDatabase::DeleteQueryDef  
+##  <a name="deletequerydef"></a>  CDaoDatabase::DeleteQueryDef  
  指定したクエリ定義を削除するには、このメンバー関数を呼び出す: クエリを保存 — から、`CDaoDatabase`オブジェクトのクエリ定義のコレクション。  
   
 ```  
@@ -382,7 +377,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
   
  クエリ定義オブジェクトを作成する方法の詳細については、クラスを参照してください。 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)です。 クエリ定義オブジェクトが特定の関連付けられる`CDaoDatabase`オブジェクトを構築するとき、`CDaoQueryDef`オブジェクト、データベース オブジェクトへのポインターを渡します。  
   
-##  <a name="deleterelation"></a>CDaoDatabase::DeleteRelation  
+##  <a name="deleterelation"></a>  CDaoDatabase::DeleteRelation  
  データベース オブジェクトの関係のコレクションから既存のリレーションシップを削除するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -398,7 +393,7 @@ void DeleteRelation(LPCTSTR lpszName);
   
  関連情報については、「Delete メソッド」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="deletetabledef"></a>CDaoDatabase::DeleteTableDef  
+##  <a name="deletetabledef"></a>  CDaoDatabase::DeleteTableDef  
  指定したテーブルとそのすべてのデータからを削除するには、このメンバー関数を呼び出す、`CDaoDatabase`オブジェクトのテーブル定義のコレクション。  
   
 ```  
@@ -419,7 +414,7 @@ void DeleteTableDef(LPCTSTR lpszName);
   
  関連情報については、「Delete メソッド」DAO ヘルプのトピックを参照してください。  
   
-##  <a name="execute"></a>CDaoDatabase::Execute  
+##  <a name="execute"></a>  CDaoDatabase::Execute  
  アクション クエリを実行するか、データベースで SQL ステートメントを実行するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -433,7 +428,7 @@ void Execute(
  実行する有効な SQL コマンドを含む null で終わる文字列へのポインター。  
   
  `nOptions`  
- クエリの整合性に関連するオプションを指定する整数。 ビットごとの OR 演算子を使用することができます ( **&#124;**) 定数は、次のいずれかを結合する (組み合わせ意味をなさなく指定 — などありませんを組み合わせることが**組み合わせて**で**指定できます**)。  
+ クエリの整合性に関連するオプションを指定する整数。 ビットごとの OR 演算子を使用することができます ( **&#124;**) 定数は、次のいずれかを結合する (組み合わせ意味をなさなく指定 — などを組み合わせて**組み合わせて**で**指定できます**)。  
   
 - **dbDenyWrite**他のユーザーへの書き込み権限を拒否します。  
   
@@ -462,7 +457,7 @@ void Execute(
   
  **実行**はレコード セットを返しません。 使用して**Execute**レコードを選択するクエリで MFC の種類の例外をスローすると、`CDaoException`です。 (がない`ExecuteSQL`メンバー関数に似ています`CDatabase::ExecuteSQL`)。  
   
-##  <a name="getconnect"></a>CDaoDatabase::GetConnect  
+##  <a name="getconnect"></a>  CDaoDatabase::GetConnect  
  接続に使用する接続文字列を取得するには、このメンバー関数を呼び出す、 `CDaoDatabase` ODBC または ISAM データベースへのオブジェクト。  
   
 ```  
@@ -483,7 +478,7 @@ CString GetConnect();
   
  参照してください、[開く](#open)接続文字列を作成する方法の詳細については、メンバー関数。 接続文字列が設定されると、**開く**呼び出し、後で使用できます、種類、パス、データベースのユーザー ID、パスワード、または ODBC データ ソースを決定する設定を確認します。  
   
-##  <a name="getname"></a>CDaoDatabase::GetName  
+##  <a name="getname"></a>  CDaoDatabase::GetName  
  既存のデータベース ファイルの名前を現在開いているデータベースの名前または登録された ODBC データ ソースの名前を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -513,7 +508,7 @@ CString GetName();
   
  SQL Server、Oracle などの ODBC データベース、データベースの接続文字列は、ODBC によって登録されているデータ ソース名 (DSN) を識別します。  
   
-##  <a name="getquerydefcount"></a>CDaoDatabase::GetQueryDefCount  
+##  <a name="getquerydefcount"></a>  CDaoDatabase::GetQueryDefCount  
  データベースのクエリ定義のコレクションで定義されているクエリの数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -524,9 +519,9 @@ short GetQueryDefCount();
  データベースで定義されているクエリの数。  
   
 ### <a name="remarks"></a>コメント  
- `GetQueryDefCount`QueryDefs コレクション内のすべてのクエリ定義をループする必要がある場合に便利ですが。 コレクション内の指定されたクエリに関する情報を取得するには、次を参照してください。 [GetQueryDefInfo](#getquerydefinfo)です。  
+ `GetQueryDefCount` QueryDefs コレクション内のすべてのクエリ定義をループする必要がある場合に便利ですが。 コレクション内の指定されたクエリに関する情報を取得するには、次を参照してください。 [GetQueryDefInfo](#getquerydefinfo)です。  
   
-##  <a name="getquerydefinfo"></a>CDaoDatabase::GetQueryDefInfo  
+##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo  
  さまざまな種類のデータベースで定義されたクエリに関する情報を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -552,11 +547,11 @@ void GetQueryDefInfo(
  `dwInfoOptions`  
  取得するレコード セットに関する情報を指定するオプション。 使用可能なオプションは、関数は、レコード セットを返しますもここで表示されます。  
   
-- `AFX_DAO_PRIMARY_INFO`(既定値)名前、型  
+- `AFX_DAO_PRIMARY_INFO` (既定値)名前、型  
   
-- `AFX_DAO_SECONDARY_INFO`プライマリ情報に加えて: 作成日付、前回の更新の日付をレコードを返す、更新可能  
+- `AFX_DAO_SECONDARY_INFO` プライマリ情報に加えて: 作成日付、前回の更新の日付をレコードを返す、更新可能  
   
-- `AFX_DAO_ALL_INFO`プライマリとセカンダリの情報に加えて: SQL では、接続、補足  
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報に加えて: SQL では、接続、補足  
   
  `lpszName`  
  名前で検索する場合、データベースで定義されたクエリの名前を含む文字列。  
@@ -566,7 +561,7 @@ void GetQueryDefInfo(
   
  返される情報の詳細については*querydefinfo*を参照してください、 [CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)構造体。 この構造体メンバーの説明に上記の情報項目に対応するは`dwInfoOptions`します。 1 つのレベルの情報を要求すると、その情報も同様のレベルを取得します。  
   
-##  <a name="getquerytimeout"></a>CDaoDatabase::GetQueryTimeout  
+##  <a name="getquerytimeout"></a>  CDaoDatabase::GetQueryTimeout  
  現在接続されているデータベースの後続の処理がタイムアウトするまで許可する秒数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -583,7 +578,7 @@ short GetQueryTimeout();
   
  関連情報については、DAO ヘルプの「QueryTimeout プロパティ」を参照してください。  
   
-##  <a name="getrecordsaffected"></a>CDaoDatabase::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>  CDaoDatabase::GetRecordsAffected  
  最新の呼び出しによって影響を受けたレコードの数を決定するには、このメンバー関数を呼び出す、 [Execute](#execute)メンバー関数。  
   
 ```  
@@ -598,7 +593,7 @@ long GetRecordsAffected();
   
  関連情報については、DAO ヘルプの「RecordsAffected プロパティ」を参照してください。  
   
-##  <a name="getrelationcount"></a>CDaoDatabase::GetRelationCount  
+##  <a name="getrelationcount"></a>  CDaoDatabase::GetRelationCount  
  データベース内のテーブル間で定義されているリレーションシップの数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -613,7 +608,7 @@ short GetRelationCount();
   
  リレーションシップの概念を示すためには、Suppliers テーブルと一対多のリレーションシップを持つ可能性があります製品のテーブルを検討してください。 このリレーションシップでは、1 つの仕入先は 1 つ以上の製品を提供できます。 その他の関係は、一対一および多対多です。  
   
-##  <a name="getrelationinfo"></a>CDaoDatabase::GetRelationInfo  
+##  <a name="getrelationinfo"></a>  CDaoDatabase::GetRelationInfo  
  データベースの Relations コレクションで指定されたリレーションシップに関する情報を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -639,9 +634,9 @@ void GetRelationInfo(
  `dwInfoOptions`  
  取得する関係に関する情報を指定するオプションです。 使用可能なオプションは、関数が返す関連情報が何もここで表示されます。  
   
-- `AFX_DAO_PRIMARY_INFO`(既定値)名前、テーブル、外部テーブル  
+- `AFX_DAO_PRIMARY_INFO` (既定値)名前、テーブル、外部テーブル  
   
-- `AFX_DAO_SECONDARY_INFO`属性、フィールドの情報  
+- `AFX_DAO_SECONDARY_INFO` 属性、フィールドの情報  
   
  フィールドの情報は、 [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)リレーションシップに関係する主テーブルからフィールドを含むオブジェクト。  
   
@@ -654,7 +649,7 @@ void GetRelationInfo(
 > [!NOTE]
 >  連鎖操作をアクティブ化するオブジェクトの属性リレーションシップを設定した場合 ( **dbRelationUpdateCascades**または**dbRelationDeleteCascades**)、Microsoft Jet データベース エンジンを自動的に更新または関連の主キー テーブルを変更するときは、その他の 1 つまたは複数のテーブル内のレコードを削除します。 たとえば、Customers テーブルと Orders テーブルの間で連鎖削除のリレーションシップを確立するとします。 Customers テーブルからレコードを削除すると、その顧客に関連する受注テーブル内のレコードも削除されます。 さらに、他のテーブルと Orders テーブルの間で連鎖削除のリレーションシップを確立すると、それらのテーブルからレコードを自動的に削除、Customers テーブルからレコードを削除するとします。  
   
-##  <a name="gettabledefcount"></a>:Gettabledefcount  
+##  <a name="gettabledefcount"></a>  :Gettabledefcount  
  データベースで定義されているテーブルの数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -665,9 +660,9 @@ short GetTableDefCount();
  データベースで定義されているテーブルの数。  
   
 ### <a name="remarks"></a>コメント  
- `GetTableDefCount`データベースのテーブル定義のコレクション内のすべてのテーブル定義をループする必要がある場合に役立ちます。 コレクションの指定されたテーブルに関する情報を取得するには、次を参照してください。[プライマリ](#gettabledefinfo)です。  
+ `GetTableDefCount` データベースのテーブル定義のコレクション内のすべてのテーブル定義をループする必要がある場合に役立ちます。 コレクションの指定されたテーブルに関する情報を取得するには、次を参照してください。[プライマリ](#gettabledefinfo)です。  
   
-##  <a name="gettabledefinfo"></a>Cdaodatabase::gettabledefinfo  
+##  <a name="gettabledefinfo"></a>  Cdaodatabase::gettabledefinfo  
  各種のデータベースで定義されているテーブルに関する情報を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -693,11 +688,11 @@ void GetTableDefInfo(
  `dwInfoOptions`  
  取得するテーブルに関する情報を指定するオプション。 使用可能なオプションは、関数が返す関連情報が何もここで表示されます。  
   
-- `AFX_DAO_PRIMARY_INFO`(既定値)更新可能な名前、属性  
+- `AFX_DAO_PRIMARY_INFO` (既定値)更新可能な名前、属性  
   
-- `AFX_DAO_SECONDARY_INFO`プライマリ情報に加えて: 日付 Created、最終更新日、ソース テーブル名、接続  
+- `AFX_DAO_SECONDARY_INFO` プライマリ情報に加えて: 日付 Created、最終更新日、ソース テーブル名、接続  
   
-- `AFX_DAO_ALL_INFO`プライマリとセカンダリの情報に加えて: 検証規則、検証のテキストのレコードの数  
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報に加えて: 検証規則、検証のテキストのレコードの数  
   
  `lpszName`  
  名前で検索する場合、テーブル定義オブジェクトの名前。  
@@ -710,7 +705,7 @@ void GetTableDefInfo(
 > [!NOTE]
 >  `AFX_DAO_ALL_INFO`オプションは、取得に時間がかかることができる情報を提供します。 この場合、テーブル内のレコードのカウントが非常に時間がかかる場合は、多数のレコードがある可能性があります。  
   
-##  <a name="getversion"></a>CDaoDatabase::GetVersion  
+##  <a name="getversion"></a>  CDaoDatabase::GetVersion  
  Microsoft Jet データベース ファイルのバージョンを確認するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -725,7 +720,7 @@ CString GetVersion();
   
  関連情報については、DAO ヘルプの「バージョン プロパティ」を参照してください。  
   
-##  <a name="isopen"></a>CDaoDatabase::IsOpen  
+##  <a name="isopen"></a>  CDaoDatabase::IsOpen  
  決定するには、このメンバー関数を呼び出すかどうか、`CDaoDatabase`オブジェクトがデータベースで現在開かれています。  
   
 ```  
@@ -737,7 +732,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="m_pdaodatabase"></a>CDaoDatabase::m_pDAODatabase  
+##  <a name="m_pdaodatabase"></a>  CDaoDatabase::m_pDAODatabase  
  DAO データベース オブジェクトの基になる OLE インターフェイスへのポインターが含まれています、`CDaoDatabase`オブジェクト。  
   
 ### <a name="remarks"></a>コメント  
@@ -745,13 +740,13 @@ BOOL IsOpen() const;
   
  呼び出し元の DAO に関する情報を参照してください、直接[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)です。  
   
-##  <a name="m_pworkspace"></a>CDaoDatabase::m_pWorkspace  
+##  <a name="m_pworkspace"></a>  CDaoDatabase::m_pWorkspace  
  ポインターが含まれています、 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)データベース オブジェクトを含むオブジェクト。  
   
 ### <a name="remarks"></a>コメント  
  ワークスペースに直接アクセスする必要がある場合は、このポインターを使用して、たとえば、ワークスペースのデータベース コレクション内の他のデータベース オブジェクトへのポインターを取得するためです。  
   
-##  <a name="open"></a>CDaoDatabase::Open  
+##  <a name="open"></a>  CDaoDatabase::Open  
  新しく構築された初期化するためにこのメンバー関数を呼び出す必要があります`CDaoDatabase`を既存のデータベースを表すオブジェクト。  
   
 ```  
@@ -810,7 +805,7 @@ virtual void Open(
   
  複数レベルのログインの権限の接続文字列を使用することもできます (それぞれ異なるを`CDaoDatabase`オブジェクト) またはその他のデータベースに固有の情報を伝達します。  
   
-##  <a name="setquerytimeout"></a>CDaoDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>  CDaoDatabase::SetQueryTimeout  
  既定の接続されているデータベースのタイムアウトの後続の処理になるまでの秒数をオーバーライドする場合は、このメンバー関数を呼び出します。  
   
 ```  
@@ -828,7 +823,7 @@ void SetQueryTimeout(short nSeconds);
   
  関連情報については、DAO ヘルプの「QueryTimeout プロパティ」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CDaoWorkspace クラス](../../mfc/reference/cdaoworkspace-class.md)   

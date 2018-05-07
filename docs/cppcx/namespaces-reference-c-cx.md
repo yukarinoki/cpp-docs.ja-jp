@@ -1,28 +1,23 @@
 ---
-title: "名前空間参照 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: 名前空間参照 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - C++/CX namespaces
 ms.assetid: 5ebc0b49-1f22-48a7-90c4-a310bab9aba6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98510e6a027927ee7e24bdf7ba44c7a902b84a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bd70990fb54952b9982ffdcc4e2848e545f62b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-reference-ccx"></a>名前空間参照 (C++/CX)
 ドキュメントのこのセクションの記事の C + コンパイラをサポートする名前空間を説明する + CX です。  
@@ -38,5 +33,5 @@ ms.lasthandoff: 12/21/2017
 |[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)|使用できる型、およびコンパイラ インフラストラクチャによってのみ使用される内部型についての説明が含まれます。|  
 |[:Foundation Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)|拡張機能と Windows ランタイムへの拡張機能の説明が含まれます`Windows::Foundation::Collections`名前空間。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)

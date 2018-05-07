@@ -1,13 +1,10 @@
 ---
-title: "ドラッグ アンド ドロップ: ドロップ ターゲットの実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 'ドラッグ アンド ドロップ: ドロップ ターゲットの実装 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc73eb6627e63b8013180b7608633a9ee424c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>ドラッグ アンド ドロップ: ドロップ ターゲットの実装
 この記事では、ドロップ ターゲット アプリケーションを作成する方法について説明します。 ドロップ ソースを実装するよりも少し多い作業を受け取るドロップ ターゲットの実装が、それでも比較的簡単です。 これらの手法は、非 OLE アプリケーションにも適用されます。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  ドロップ ターゲットにする、アプリケーション内の各ビューにメンバー変数を追加します。 このメンバー変数は、型でなければなりません`COleDropTarget`またはその派生クラス。  
   
-2.  処理するビュー クラスの関数から、`WM_CREATE`メッセージ (通常`OnCreate`)、新しいメンバー変数の`Register`メンバー関数。 `Revoke`に対して呼び出されるは自動的にする、ビューが破棄されるとします。  
+2.  処理するビュー クラスの関数から、`WM_CREATE`メッセージ (通常`OnCreate`)、新しいメンバー変数の`Register`メンバー関数。 `Revoke` に対して呼び出されるは自動的にする、ビューが破棄されるとします。  
   
 3.  次の関数をオーバーライドします。 アプリケーション全体で同じ動作をする場合は、ビュー クラスでこれらの関数をオーバーライドします。 特殊なケースでの動作を変更またはにドロップすることではないを有効にする場合`CView`、windows でこれらの関数のオーバーライド、 `COleDropTarget`-クラスを派生します。  
   
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [OLE データ オブジェクトとデータ ソースを操作します。](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropTarget クラス](../mfc/reference/coledroptarget-class.md)

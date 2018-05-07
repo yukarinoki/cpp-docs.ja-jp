@@ -1,13 +1,10 @@
 ---
-title: "ツールバーに関する基本事項 |Microsoft ドキュメント"
-ms.custom: 
+title: ツールバーに関する基本事項 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RT_TOOLBAR
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b9f5dd36c9e4092b8e5c15ac1738541cf71f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-fundamentals"></a>ツール バーに関する基本事項
 この記事では、アプリケーションのウィザードでオプションを選択して、アプリケーションに既定のツールバーを追加できる基本的な MFC 実装について説明します。 トピックは次のとおりです。  
@@ -52,14 +47,14 @@ ms.lasthandoff: 12/21/2017
   
 -   [複数のツールバー](#_core_multiple_toolbars)  
   
-##  <a name="_core_the_appwizard_toolbar_option"></a>アプリケーション ウィザード ツールバーのオプション  
+##  <a name="_core_the_appwizard_toolbar_option"></a> アプリケーション ウィザード ツールバーのオプション  
  既定のボタンを持つ 1 つのツールバーを取得するには、標準ドッキング ツールバーで、オプションというラベルの付いたユーザー インターフェイス機能 ページを選択します。 コードをアプリケーションに追加します。  
   
 -   ツール バー オブジェクトを作成します。  
   
 -   ツールバーをドッキングまたはフローティングする機能を管理します。  
   
-##  <a name="_core_the_toolbar_in_code"></a>ツールバーのコード  
+##  <a name="_core_the_toolbar_in_code"></a> ツールバーのコード  
  ツールバーは、 [CToolBar](../mfc/reference/ctoolbar-class.md)オブジェクトは、アプリケーションのデータ メンバーとして宣言されている**CMainFrame**クラスです。 つまり、ツールバーのオブジェクトは、メイン フレーム ウィンドウ オブジェクトに埋め込まれます。 これは、フレーム ウィンドウを作成およびフレーム ウィンドウが破棄されると、ツールバーの破棄時に、MFC でツールバーを作成することを意味します。 複数ドキュメント インターフェイス (MDI) アプリケーションの場合、次の部分クラス宣言では、埋め込みのツールバーに表示される埋め込みステータス バーのデータ メンバーを示します。 オーバーライドも示しています、`OnCreate`メンバー関数。  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  ドッキング、フローティング、およびツール ヒントの呼び出しはオプションです。 これらの行を削除する`OnCreate`したい場合。 結果は、固定、フローティングやできず、ツール ヒントを表示できませんに残っているツールバーです。  
   
-##  <a name="_core_editing_the_toolbar_resource"></a>ツール バー リソースの編集  
+##  <a name="_core_editing_the_toolbar_resource"></a> ツール バー リソースの編集  
  アプリケーション ウィザードを使用して取得する既定のツールバーがに基づいて、 **RT_TOOLBAR**カスタム リソースを MFC バージョン 4.0 で導入されました。 このリソースを編集できる、[ツール バー エディター](../windows/toolbar-editor.md)です。 エディターでは、追加、削除、およびボタンを再配置を簡単にすることができます。 Visual C での一般的なグラフィックス エディターによく似ているボタン用のグラフィカル エディターが含まれています。 以前のバージョンの Visual C でツールバーを編集する場合がありますタスクはるかに簡単ようになりました。  
   
  ツール バー ボタンをコマンドに接続するにするなどの指定、ボタン コマンド ID`ID_MYCOMMAND`です。 ツール バー エディターのボタンのプロパティ ページで、コマンド ID を指定します。 コマンドのハンドラー関数を作成し、(を参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)詳細については)。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  ツール バー エディターの使用に関する詳細については、「[ツール バー エディター](../windows/toolbar-editor.md)です。  
   
-##  <a name="_core_multiple_toolbars"></a>複数のツールバー  
+##  <a name="_core_multiple_toolbars"></a> 複数のツールバー  
  アプリケーションのウィザードは、1 つの既定のツールバーを提供します。 アプリケーションで複数のツールバーを必要がある場合、コード内の既定のツールバーのウィザードで生成されたコードに基づく追加のツールバーをモデル化できます。  
   
  コマンドの結果として、ツールバーを表示する場合は、する必要があります。  
@@ -111,6 +106,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [古いツールバーの使用方法](../mfc/using-your-old-toolbars.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ツール バーの実装](../mfc/mfc-toolbar-implementation.md)
 

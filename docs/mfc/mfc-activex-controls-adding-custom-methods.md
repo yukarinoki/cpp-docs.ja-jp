@@ -1,37 +1,32 @@
 ---
-title: "MFC ActiveX コントロール: カスタム メソッドの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: カスタム メソッドの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX コントロール : カスタム メソッドの追加
 カスタム メソッドとは異なりストック メソッドによって実装されていない`COleControl`です。 コントロールを追加する各カスタム メソッドの実装を指定する必要があります。  
   
  ActiveX コントロールのユーザーは、コントロールに固有のアクションを実行するには、いつでもカスタム メソッドを呼び出すことができます。 形式は、カスタム メソッドのディスパッチ マップ エントリ`DISP_FUNCTION`です。  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>カスタム メソッドを追加する、メソッドの追加ウィザード  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> カスタム メソッドを追加する、メソッドの追加ウィザード  
  次の手順では、ActiveX コントロールのスケルトン コードを PtInCircle カスタム メソッドを追加することを示します。 PtInCircle は、コントロールに渡される座標が内側または外側円かどうかを判断します。 これと同じ手順は、その他のカスタム メソッドを追加しても使用できます。 PtInCircle メソッドの名前およびパラメーターについては、そのパラメーターのカスタム メソッド名に置き換えます。  
   
 > [!NOTE]
@@ -59,9 +54,9 @@ ms.lasthandoff: 12/21/2017
   
 9. 使用して、**パラメーターの型**と**パラメーター名**コントロール、という名前のパラメーターを追加する`yCoord`(型**OLE_YPOS_PIXELS**)。  
   
-10. **[完了]**をクリックします。  
+10. **[完了]** をクリックします。  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>カスタム メソッドのメソッド ウィザードの変更を追加します。  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> カスタム メソッドのメソッド ウィザードの変更を追加します。  
  メソッド追加ウィザードにはコントロール クラスのヘッダーをいくつかの変更がカスタム メソッドを追加すると (です。H) と実装 (です。CPP) ファイル。 ディスパッチ マップ宣言では、コントロール クラスのヘッダーに、次の行が追加されます (です。H) ファイル:  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_4.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
  [[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン](/visualstudio/ide/class-view-and-object-browser-icons)
 

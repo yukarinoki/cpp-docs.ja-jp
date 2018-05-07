@@ -1,12 +1,9 @@
 ---
-title: "Irowsetcreatorimpl::setsite |Microsoft ドキュメント"
-ms.custom: 
+title: Irowsetcreatorimpl::setsite |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetCreatorImpl.SetSite
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - SetSite method
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec7621972020d15068d53ccb3351983bc2b1b825
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: af2883b261b754cee04e2c5090d1ef9b9887c04f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
 行セット オブジェクトを含むサイトを設定します。 詳細については、次を参照してください。 [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)です。  
@@ -54,8 +49,8 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>コメント  
  さらに、`IRowsetCreatorImpl::SetSite`により、OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**プロパティです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IRowsetCreatorImpl クラス](../../data/oledb/irowsetcreatorimpl-class.md)

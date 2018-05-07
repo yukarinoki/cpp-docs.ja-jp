@@ -1,12 +1,9 @@
 ---
-title: "CInterpolatorBase クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CInterpolatorBase クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInterpolatorBase
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79cea720391127f52d441de8f02c53756790d4b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase クラス
 アニメーション変数の新しい値を計算する必要があるときに、Animation API によって呼び出されるコールバックを実装します。  
@@ -88,17 +83,17 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
   
  `CInterpolatorBase`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
+##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase  
  CInterpolatorBase オブジェクトを構築します。  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
+##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance  
  CInterpolatorBase のインスタンスを作成し、イベントを処理するカスタム補間へのポインターを格納します。  
   
 ```  
@@ -116,7 +111,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="return-value"></a>戻り値  
   
-##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
+##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies  
  Interpolator の依存関係を取得します。  
   
 ```  
@@ -139,7 +134,7 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 CCustomInterpolator が設定されていない、またはカスタムの実装は GetDependencies メソッドから FALSE を返す場合は E_FAIL を返します。  
   
-##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
+##  <a name="getduration"></a>  CInterpolatorBase::GetDuration  
  Interpolator の期間を取得します。  
   
 ```  
@@ -153,7 +148,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 CCustomInterpolator が設定されていない、またはカスタムの実装は GetDuration メソッドから FALSE を返す場合は E_FAIL を返します。  
   
-##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
+##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue  
  Interpolator が潜在顧客の最終的な値を取得します。  
   
 ```  
@@ -167,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 CCustomInterpolator が設定されていない、またはカスタムの実装は GetFinalValue メソッドから FALSE を返す場合は E_FAIL を返します。  
   
-##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
+##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue  
  指定されたオフセット値を補間します。  
   
 ```  
@@ -186,7 +181,7 @@ IFACEMETHOD(InterpolateValue)(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 CCustomInterpolator が設定されていない、またはカスタムの実装は InterpolateValue メソッドから FALSE を返す場合は E_FAIL を返します。  
   
-##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity  
  指定されたオフセット ベロシティを補間します。  
   
 ```  
@@ -205,7 +200,7 @@ IFACEMETHOD(InterpolateVelocity)(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 CCustomInterpolator が設定されていない、またはカスタムの実装は InterpolateVelocity メソッドから FALSE を返す場合は E_FAIL を返します。  
   
-##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
+##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator  
  イベントを処理するカスタム補間へのポインターを格納します。  
   
 ```  
@@ -216,7 +211,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  カスタムのインターポレータへのポインター。  
   
-##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
+##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
  Interpolator の期間を設定します。  
   
 ```  
@@ -230,7 +225,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 CCustomInterpolator が設定されていない、またはカスタムの実装は SetDuration メソッドから FALSE を返す場合は E_FAIL を返します。  
   
-##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity  
  Interpolator の初期値と速度を設定します。  
   
 ```  
@@ -249,5 +244,5 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 CCustomInterpolator が設定されていない、またはカスタムの実装は SetInitialValueAndVelocity メソッドから FALSE を返す場合は E_FAIL を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

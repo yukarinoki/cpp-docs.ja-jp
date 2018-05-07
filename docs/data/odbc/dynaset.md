@@ -1,13 +1,10 @@
 ---
-title: "ダイナセット |Microsoft ドキュメント"
-ms.custom: 
+title: ダイナセット |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynaset"></a>ダイナセット
 このトピックは、ダイナセットを使う場合を説明し、説明、[可用性](#_core_availability_of_dynasets)です。  
@@ -50,9 +45,9 @@ ms.lasthandoff: 12/21/2017
  レコード セットには、ダイナセットを指定するには、渡す**crecordset::dynaset**最初のパラメーターとして、**開く**レコード セット オブジェクトのメンバー関数。  
   
 > [!NOTE]
->  ODBC ドライバーの更新可能なダイナセットを使う場合、位置指定の update ステートメントのいずれかをサポートする必要がありますまたは**:: SQLSetPos** ODBC API 関数。 MFC を使用して、両方がサポートされている場合**:: SQLSetPos**効率を上げるのためです。  
+>  ODBC ドライバーの更新可能なダイナセットを使う場合、位置指定の update ステートメントのいずれかをサポートする必要がありますまたは **:: SQLSetPos** ODBC API 関数。 MFC を使用して、両方がサポートされている場合 **:: SQLSetPos**効率を上げるのためです。  
   
-##  <a name="_core_availability_of_dynasets"></a>ダイナセットの可用性  
+##  <a name="_core_availability_of_dynasets"></a> ダイナセットの可用性  
  MFC データベース クラスは、ダイナセットをサポートして、次の要件が満たされた場合。  
   
 -   ODBC カーソル ライブラリ DLL はこのデータ ソースの使用ではなければなりません。  
@@ -71,9 +66,9 @@ ms.lasthandoff: 12/21/2017
   
      拡張フェッチは、SQL クエリの結果のレコードを逆方向にスクロール機能です。 ドライバーがこの機能をサポートしているかどうかを確認するのには、呼び出し、 **:: SQLGetFunctions** ODBC API 関数を**SQL_API_SQLEXTENDEDFETCH**パラメーター。  
   
- 更新可能なダイナセットを使う場合 (またはそのさらに言えば、スナップショット) する場合、ODBC ドライバー必要がありますもサポートするか、 **:: SQLSetPos** ODBC API 関数または位置指定更新します。 **:: SQLSetPos**関数により、MFC を SQL ステートメントを送信せずに、データ ソースを更新します。 このサポートが利用可能な場合は、MFC は、SQL を使用して更新を行う方が優先的に使用します。 ドライバーをサポートしているかどうかを判断する**:: SQLSetPos**、呼び出す**:: SQLGetInfo**で、 **SQL_POS_OPERATIONS**パラメーター。  
+ 更新可能なダイナセットを使う場合 (またはそのさらに言えば、スナップショット) する場合、ODBC ドライバー必要がありますもサポートするか、 **:: SQLSetPos** ODBC API 関数または位置指定更新します。 **:: SQLSetPos**関数により、MFC を SQL ステートメントを送信せずに、データ ソースを更新します。 このサポートが利用可能な場合は、MFC は、SQL を使用して更新を行う方が優先的に使用します。 ドライバーをサポートしているかどうかを判断する **:: SQLSetPos**、呼び出す **:: SQLGetInfo**で、 **SQL_POS_OPERATIONS**パラメーター。  
   
- 位置指定更新は、SQL 構文を使用して (フォームの**WHERE CURRENT OF** \<カーソル名 >) をデータ ソースのテーブルの特定の行を識別します。 ドライバーが位置指定更新をサポートしているかどうかを確認するのには、呼び出す**:: SQLGetInfo**で、 **SQL_POSITIONED_STATEMENTS**パラメーター。  
+ 位置指定更新は、SQL 構文を使用して (フォームの**WHERE CURRENT OF** \<カーソル名 >) をデータ ソースのテーブルの特定の行を識別します。 ドライバーが位置指定更新をサポートしているかどうかを確認するのには、呼び出す **:: SQLGetInfo**で、 **SQL_POSITIONED_STATEMENTS**パラメーター。  
   
  一般に、MFC ダイナセットを使う場合 (ただし、前方スクロール専用レコード セット) には、レベル 2 の API への準拠の ODBC ドライバーが必要です。 データ ソースのドライバーは、レベル 1 の API セットに従ってが、更新可能なと読み取り専用のスナップショットと順方向専用レコード セットでは、ダイナセットは引き続き使用できます。 ただし、レベル 1 のドライバーでは、ダイナセット拡張フェッチをサポートしている場合、キーセット ドリブン カーソルをサポートできます。 ODBC 準拠のレベルの詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)です。  
   
@@ -84,5 +79,5 @@ ms.lasthandoff: 12/21/2017
   
  このバージョンの Visual C に含まれている ODBC ドライバーの一覧、および追加のドライバーを取得する方法についてを参照してください。 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

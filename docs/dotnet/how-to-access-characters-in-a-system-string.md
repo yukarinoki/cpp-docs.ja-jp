@@ -1,13 +1,10 @@
 ---
-title: "方法: system::string の文字にアクセス |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: system::string の文字にアクセス |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::String の文字にアクセスする
 文字にアクセスすることができます、<xref:System.String>アンマネージ呼び出しを高パフォーマンスのためのオブジェクトの関数を受け取る`wchar_t*`文字列。 メソッドの最初の文字への内部ポインターを生成する、<xref:System.String>オブジェクト。 このポインター直接操作またはピン留めして通常必要とする関数に渡される`wchar_t`文字列。  
   
 ## <a name="example"></a>例  
- `PtrToStringChars`返します、 <xref:System.Char>、内部ポインターである (とも呼ばれる、 `byref`)。 そのため、ガベージ コレクションの対象となります。 ネイティブ関数に渡すしようとしている場合を除き、このポインターをピン留めする必要はありません。  
+ `PtrToStringChars` 返します、 <xref:System.Char>、内部ポインターである (とも呼ばれる、 `byref`)。 そのため、ガベージ コレクションの対象となります。 ネイティブ関数に渡すしようとしている場合を除き、このポインターをピン留めする必要はありません。  
   
  次のコードについて考えてみましょう。  ピン留めは必要ありませんので`ppchar`内部ポインターであり、ガベージ コレクターが指す文字列を移動した場合は更新も`ppchar`します。 なし、 [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)されませんが、パフォーマンスが低下の原因となったをピン留めする、コードが動作します。  
   
@@ -109,5 +104,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

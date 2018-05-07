@@ -1,12 +1,9 @@
 ---
-title: "CBaseTabbedPane クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CBaseTabbedPane クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBaseTabbedPane
@@ -71,17 +68,15 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be9752822ee009ceddb735806d36ea3507242951
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d628758f19c36112bf896e11c97df3e1f92cbc47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane クラス
 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) の機能を拡張して、タブ付きウィンドウの作成をサポートします。  
@@ -162,10 +157,10 @@ class CBaseTabbedPane : public CDockablePane
   
  `CBaseTabbedPane`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxBaseTabbedPane.h  
   
-##  <a name="addtab"></a>Cbasetabbedpane::addtab  
+##  <a name="addtab"></a>  Cbasetabbedpane::addtab  
  タブ付きペインに新しいタブを追加します。  
   
 ```  
@@ -177,25 +172,25 @@ virtual BOOL AddTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in][out]`pNewBar`  
+ [in][out] `pNewBar`  
  追加するウィンドウへのポインター。 このポインターはこのメソッドを呼び出した後、無効になる可能性があります。 詳細については、「解説」を参照してください。  
   
  [入力] `bVisible`  
- `TRUE`タブが表示されるようにするにはそれ以外の場合、`FALSE`です。  
+ `TRUE` タブが表示されるようにするにはそれ以外の場合、`FALSE`です。  
   
  [入力] `bSetActive`  
- `TRUE`アクティブなタブ、タブを作成するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` アクティブなタブ、タブを作成するにはそれ以外の場合、`FALSE`です。  
   
  [入力] `bDetachable`  
- `TRUE`タブを切り離し可能です。それ以外の場合、`FALSE`です。  
+ `TRUE` タブを切り離し可能です。それ以外の場合、`FALSE`です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ウィンドウがタブとして正常に追加されました、できなかった場合は、プロセスで破棄されます。 `FALSE`追加されるウィンドウは、型のオブジェクトが場合`CBaseTabbedPane`です。 詳細については、「解説」を参照してください。  
+ `TRUE` ウィンドウがタブとして正常に追加されました、できなかった場合は、プロセスで破棄されます。 `FALSE` 追加されるウィンドウは、型のオブジェクトが場合`CBaseTabbedPane`です。 詳細については、「解説」を参照してください。  
   
 ### <a name="remarks"></a>コメント  
  タブ付きペインに新しいタブとして、ウィンドウを追加するには、このメソッドを呼び出します。 場合`pNewBar`型のオブジェクトを指す`CBaseTabbedPane`、そのすべてのタブはタブ付きペインにコピーし、`pNewBar`は破棄されます。 したがって、`pNewBar`に無効なポインターになりは使用できません。  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  空のタブ付きペインを破棄するかどうかを指定します。  
   
 ```  
@@ -203,12 +198,12 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合は空のタブ付きウィンドウに破棄できます。それ以外の場合、`FALSE`です。 既定の実装では、常に `TRUE` を返します。  
+ `TRUE` 場合は空のタブ付きウィンドウに破棄できます。それ以外の場合、`FALSE`です。 既定の実装では、常に `TRUE` を返します。  
   
 ### <a name="remarks"></a>コメント  
  空のタブ付きペインは、破棄されることは許可されていない場合、フレームワークは、ウィンドウを代わりに表示されません。  
   
-##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
+##  <a name="applyrestoredtabinfo"></a>  CBaseTabbedPane::ApplyRestoredTabInfo  
  レジストリから タブの設定を読み込んで、タブ付きウィンドウに適用します。  
   
 ```  
@@ -222,7 +217,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ### <a name="remarks"></a>コメント  
  レジストリからドッキング状態情報を再読み込み時に、このメソッドは、フレームワークによって呼び出されます。 メソッドは、タブ オーダーおよびタブ付きウィンドウのタブ名に関する情報を取得します。  
   
-##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
+##  <a name="canfloat"></a>  CBaseTabbedPane::CanFloat  
  タブ付きペインをフローティングできるかどうかを指定します。  
   
 ```  
@@ -230,9 +225,9 @@ virtual BOOL CanFloat() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ペインをフローティングできる; 場合それ以外の場合、`FALSE`です。  
+ `TRUE` ペインをフローティングできる; 場合それ以外の場合、`FALSE`です。  
   
-##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>  CBaseTabbedPane::CanSetCaptionTextToTabName  
  タブ付きウィンドウのキャプションがアクティブなタブとして同じテキストを表示するかどうかを判断します。  
   
 ```  
@@ -240,12 +235,12 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`タブ付きウィンドウのキャプションのテキストがアクティブなタブのテキストに設定されている場合それ以外の場合、`FALSE`です。  
+ `TRUE` タブ付きウィンドウのキャプションのテキストがアクティブなタブのテキストに設定されている場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  メソッドはタブ付きペインのキャプションに表示されるテキストが、アクティブなタブのラベルを使用するかどうかを決定するために使用します。有効にするにまたは呼び出すことによってこの機能を無効にする[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)です。  
   
-##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>  CBaseTabbedPane::ConvertToTabbedDocument  
  1 つまたは複数のドッキング可能ペインを MDI タブ付きドキュメントに変換します。  
   
 ```  
@@ -256,7 +251,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
  [入力] `bActiveTabOnly`  
  タブ付きペインを変換するときに指定`TRUE`にアクティブなタブのみを変換します。指定`FALSE`ペイン内のすべてのタブに変換します。  
   
-##  <a name="detachpane"></a>Cbasetabbedpane::detachpane  
+##  <a name="detachpane"></a>  Cbasetabbedpane::detachpane  
  タブ付きウィンドウからウィンドウをデタッチします。  
   
 ```  
@@ -273,12 +268,12 @@ virtual BOOL DetachPane(
  フレームワークがデタッチされた後に、ペインが非表示にするかどうかを示すブール型のパラメーターです。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`フレームワークは、;、ウィンドウを正常にデタッチ場合`FALSE`場合`pBar`は`NULL`かタブ付きペインに含まれていないペインを参照します。  
+ `TRUE` フレームワークは、;、ウィンドウを正常にデタッチ場合`FALSE`場合`pBar`は`NULL`かタブ付きペインに含まれていないペインを参照します。  
   
 ### <a name="remarks"></a>コメント  
  フレームワークは、可能であればデタッチされたペインをフローティング状態です。 詳細については、次を参照してください。 [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)です。  
   
-##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
+##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName  
  有効またはアクティブなタブにラベルのテキストとキャプション テキストを同期するタブ付きペインの機能を無効にします。  
   
 ```  
@@ -287,9 +282,9 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`タブ付きペインのキャプションをアクティブなタブのキャプションと同期するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` タブ付きペインのキャプションをアクティブなタブのキャプションと同期するにはそれ以外の場合、`FALSE`です。  
   
-##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
+##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
  内部のタブ オーダーを既定の状態に復元します。  
   
 ```  
@@ -299,7 +294,7 @@ void FillDefaultTabsOrderArray();
 ### <a name="remarks"></a>コメント  
  フレームワークは、初期状態にある Outlook バーを復元する際に、このメソッドが呼び出されます。  
   
-##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
+##  <a name="findpanebyid"></a>  CBaseTabbedPane::FindPaneByID  
  ペインの ID によって識別されるペインを返します  
   
 ```  
@@ -316,7 +311,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ### <a name="remarks"></a>コメント  
  このメソッドは、ペイン内のすべてのタブを比較しで指定された ID を持つ 1 つを返します、`uBarID`パラメーター。  
   
-##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
+##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
  タブ内にあるペインを返します。  
   
 ```  
@@ -330,7 +325,7 @@ virtual CWnd* FindBarByTabNumber(
  取得するタブの 0 から始まるインデックスを指定します。  
   
  [入力] `bGetWrappedBar`  
- `TRUE`ペイン自体ではなく、ペインの基になる (ラップ) のウィンドウに戻すそれ以外の場合`FALSE`です。 派生したウィンドウのみに限定される[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)です。  
+ `TRUE` ペイン自体ではなく、ペインの基になる (ラップ) のウィンドウに戻すそれ以外の場合`FALSE`です。 派生したウィンドウのみに限定される[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)です。  
   
 ### <a name="return-value"></a>戻り値  
  ウィンドウが見つかった場合、検索対象のウィンドウに、有効なポインターが返されます。それ以外の場合、`NULL`です。  
@@ -338,7 +333,7 @@ virtual CWnd* FindBarByTabNumber(
 ### <a name="remarks"></a>コメント  
  指定されたタブ内に存在するウィンドウを取得するには、このメソッドを呼び出して、`nTabNum`パラメーター。  
   
-##  <a name="floattab"></a>Cbasetabbedpane::floattab  
+##  <a name="floattab"></a>  Cbasetabbedpane::floattab  
  現在ペインが切り離し可能なタブに存在する場合のみ、そのペインを切り離して表示します。  
   
 ```  
@@ -350,7 +345,7 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in][out]`pBar`  
+ [in][out] `pBar`  
  浮動小数点 ウィンドウへのポインター。  
   
  [入力] `nTabID`  
@@ -360,17 +355,17 @@ virtual BOOL FloatTab(
  ペインをフローティングの作成に使用する方法を指定します。 詳細については、「解説」を参照してください。  
   
  [入力] `bHide`  
- `TRUE`フローティングする前に、ウィンドウを非表示にするにはそれ以外の場合、`FALSE`です。  
+ `TRUE` フローティングする前に、ウィンドウを非表示にするにはそれ以外の場合、`FALSE`です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合は、ペインをフローティング状態それ以外の場合、`FALSE`です。  
+ `TRUE` 場合は、ペインをフローティング状態それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  切り離し可能なタブに現在あるペインをフローティングするには、このメソッドを呼び出します。  
   
  ウィンドウをプログラムからデタッチする場合は、指定`DM_SHOW`の`dockMethod`パラメーター。 ここで、フロート以前の同じ位置にペインをフローティングを指定する場合`DM_DBL_CLICK`として、`dockMethod`パラメーター。  
   
-##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
+##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
  ウィンドウでタブの既定の順序を返します。  
   
 ```  
@@ -383,7 +378,7 @@ const CArray<int,int>& GetDefaultTabsOrder();
 ### <a name="remarks"></a>コメント  
  フレームワークは、初期状態にある Outlook バーがリセットされたときに、このメソッドを呼び出します。  
   
-##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
+##  <a name="getfirstvisibletab"></a>  CBaseTabbedPane::GetFirstVisibleTab  
  最初に表示されているタブへのポインターを取得します。  
   
 ```  
@@ -397,7 +392,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ### <a name="return-value"></a>戻り値  
  成功した場合、最初に表示されているタブへのポインターそれ以外の場合、`NULL`です。  
   
-##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
+##  <a name="getminsize"></a>  CBaseTabbedPane::GetMinSize  
  下限のウィンドウのサイズを取得します。  
   
 ```  
@@ -411,7 +406,7 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="remarks"></a>コメント  
  最小ウィンドウ サイズの一貫した処理がアクティブな場合 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize))、`size`はアクティブなタブのサイズが許容される最小で塗りつぶされます。それ以外の場合、`size`の戻り値が格納[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)です。  
   
-##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
+##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
  下限のウィンドウのサイズを取得します。  
   
 ```  
@@ -425,7 +420,7 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="remarks"></a>コメント  
  最小ウィンドウ サイズの一貫した処理がアクティブな場合 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize))、`size`はアクティブなタブのサイズが許容される最小で塗りつぶされます。それ以外の場合、`size`の戻り値が格納[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)です。  
   
-##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
+##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
  タブ付きペインに含まれているペインの一覧を返します。  
   
 ```  
@@ -441,7 +436,7 @@ virtual void GetPaneList(
  [入力] `pRTCFilter`  
  ない場合は`NULL`、返された一覧には、指定したランタイム クラスのペインのみが含まれています。  
   
-##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
  上部と下部のタブ領域に外接する四角形を返します。  
   
 ```  
@@ -460,7 +455,7 @@ virtual void GetTabArea(
 ### <a name="remarks"></a>コメント  
  外接する四角形の上限と下限のタブ領域に、画面座標を判断するには、このメソッドを呼び出します。  
   
-##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
+##  <a name="gettabsnum"></a>  CBaseTabbedPane::GetTabsNum  
  タブ ウィンドウでタブの数を返します。  
   
 ```  
@@ -470,7 +465,7 @@ virtual int GetTabsNum() const;
 ### <a name="return-value"></a>戻り値  
  タブ付きペインにあるタブの数。  
   
-##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
+##  <a name="getunderlyingwindow"></a>  CBaseTabbedPane::GetUnderlyingWindow  
  基になる (ラッピングした) タブ ウィンドウを取得します。  
   
 ```  
@@ -480,7 +475,7 @@ virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ### <a name="return-value"></a>戻り値  
  基になるタブ ウィンドウへのポインター。  
   
-##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
+##  <a name="getvisibletabsnum"></a>  CBaseTabbedPane::GetVisibleTabsNum  
  表示されるタブの数を返します。  
   
 ```  
@@ -493,7 +488,7 @@ virtual int GetVisibleTabsNum() const;
 ### <a name="remarks"></a>コメント  
  タブ付きペインに表示されるタブの数を決定するには、このメソッドを呼び出します。  
   
-##  <a name="hasautohidemode"></a>Cbasetabbedpane::hasautohidemode  
+##  <a name="hasautohidemode"></a>  Cbasetabbedpane::hasautohidemode  
  タブ付きペインを AutoHide モードに切り替えられるかどうかを判断します。  
   
 ```  
@@ -501,12 +496,12 @@ virtual BOOL HasAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ウィンドウを隠すモードに切り替えることができる場合それ以外の場合、`FALSE`です。  
+ `TRUE` ウィンドウを隠すモードに切り替えることができる場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  自動非表示モードが無効になっている場合は、タブ付きウィンドウのキャプションに固定 ボタンは表示されません。  
   
-##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
+##  <a name="ishidesingletab"></a>  CBaseTabbedPane::IsHideSingleTab  
  1 つのタブが表示されるだけの場合に、タブ付きウィンドウを非表示にするかどうかを判断します。  
   
 ```  
@@ -514,12 +509,12 @@ virtual BOOL IsHideSingleTab() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`1 つだけに表示されるタブ; がある場合に、タブ ウィンドウが表示されない場合それ以外の場合、`FALSE`です。  
+ `TRUE` 1 つだけに表示されるタブ; がある場合に、タブ ウィンドウが表示されない場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  1 つだけのタブが開いているため、ウィンドウが表示されない場合は、タブ付きペインが正常に動作しているかどうかを確認するには、このメソッドを呼び出すことができます。  
   
-##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
+##  <a name="removepane"></a>  CBaseTabbedPane::RemovePane  
  タブ付きウィンドウからウィンドウを削除します。  
   
 ```  
@@ -527,16 +522,16 @@ virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in][out]`pBar`  
+ [in][out] `pBar`  
  タブ付きウィンドウから削除するウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ウィンドウはタブ付きウィンドウから正常に削除された場合、およびタブ付きウィンドウがまだ有効な場合は。 `FALSE`最後のウィンドウがタブ付きペインと、タブ付きウィンドウから削除された場合は、破棄されようとしてです。 場合は、戻り値は`FALSE`、かどうかをタブ付きペインを使用しないでください。  
+ `TRUE` ウィンドウはタブ付きウィンドウから正常に削除された場合、およびタブ付きウィンドウがまだ有効な場合は。 `FALSE` 最後のウィンドウがタブ付きペインと、タブ付きウィンドウから削除された場合は、破棄されようとしてです。 場合は、戻り値は`FALSE`、かどうかをタブ付きペインを使用しないでください。  
   
 ### <a name="remarks"></a>コメント  
  指定されたウィンドウを削除するには、このメソッドを呼び出して、`pBar`タブ付きウィンドウからのパラメーターです。  
   
-##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
+##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
  タブ形式のコントロール バーを自動的に破棄されるかどうかを判断します。  
   
 ```  
@@ -545,12 +540,12 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bAutoDestroy`  
- `TRUE`タブ付きペインが動的に作成され、です。 有効期間を制御していない場合それ以外の場合、`FALSE`です。  
+ `TRUE` タブ付きペインが動的に作成され、です。 有効期間を制御していない場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  設定の自動破棄モードを`TRUE`タブ付きペインを動的に作成する場合、およびその有効期間を制御していない場合。 場合は自動破棄モードは`TRUE`、タブ付きペインは、フレームワークによって自動的に破棄します。  
   
-##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
+##  <a name="showtab"></a>  CBaseTabbedPane::ShowTab  
  タブの表示と非表示を切り替えます。  
   
 ```  
@@ -566,21 +561,21 @@ virtual BOOL ShowTab(
  非表示 ウィンドウへのポインター。  
   
  [入力] `bShow`  
- `TRUE`ウィンドウを表示するには`FALSE`ウィンドウを非表示にします。  
+ `TRUE` ウィンドウを表示するには`FALSE`ウィンドウを非表示にします。  
   
  [入力] `bDelay`  
- `TRUE`タブ レイアウトの調整を遅延するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` タブ レイアウトの調整を遅延するにはそれ以外の場合、`FALSE`です。  
   
  [入力] `bActivate`  
- `TRUE`アクティブなタブ、タブを作成するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` アクティブなタブ、タブを作成するにはそれ以外の場合、`FALSE`です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合は、タブが表示または非表示に正常にそれ以外の場合、`FALSE`です。  
+ `TRUE` 場合は、タブが表示または非表示に正常にそれ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドを呼び出すときにウィンドウを表示または非表示の値に応じて、`bShow`パラメーター。 タブを非表示にして、基になるタブ ウィンドウの最後に表示されるタブは、タブ付きペインが表示されます。 存在しなかった以前タブ表示されているときに、タブを表示する場合は、タブ付きペインが表示されます。  
   
-##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
+##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
  ウィンドウのレイアウト情報を再計算されます。  
   
 ```  
@@ -592,7 +587,7 @@ virtual void RecalcLayout();
   
  場合は、ウィンドウがドッキングされている場合、このメソッドは何も行いません。  
   
-##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
+##  <a name="setautohidemode"></a>  CBaseTabbedPane::SetAutoHideMode  
  タブ付きペインの切り離し可能なウィンドウの自動非表示モードを設定します。  
   
 ```  
@@ -605,12 +600,12 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bMode`  
- `TRUE`自動非表示モードを有効にするには`FALSE`標準ドッキング モードを有効にします。  
+ `TRUE` 自動非表示モードを有効にするには`FALSE`標準ドッキング モードを有効にします。  
   
  [入力] `dwAlignment`  
  作成するときに自動的に隠すウィンドウの配置を指定します。 使用可能な値の一覧は、次を参照してください。 [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)です。  
   
- [in][out]`pCurrAutoHideBar`  
+ [in][out] `pCurrAutoHideBar`  
  現在の自動的に隠すツールバーへのポインター。 指定できます`NULL`です。  
   
  [入力] `bUseTimer`  
@@ -626,7 +621,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
   
  タブ付きペインをプログラムで自動非表示モードに切り替えるには、このメソッドを呼び出します。 メイン フレーム ウィンドウに、ウィンドウをドッキングする必要があります ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider)への有効なポインターを返す必要があります、 [CPaneDivider](../../mfc/reference/cpanedivider-class.md))。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)

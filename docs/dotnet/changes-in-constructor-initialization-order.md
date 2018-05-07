@@ -1,30 +1,25 @@
 ---
-title: "コンス トラクターの初期化の順序の変更 |Microsoft ドキュメント"
-ms.custom: 
+title: コンス トラクターの初期化の順序の変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 499855ec5052c039e007df8348db094aee356411
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32dad73e3d2026726e3042b0c619eeff11a5f57c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-in-constructor-initialization-order"></a>コンストラクターの初期化処理の順序における変更
 クラスのコンス トラクターの初期化の順序は、Visual C を c++ マネージ拡張から変更されました。  
@@ -119,7 +114,7 @@ private:
 ## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>この意味 c++ マネージ拡張から Visual C 2010 に移動  
  多くの場合にクラスのコンス トラクターの実行順序を変更する必要があります、プログラマに対して透過的に基底クラスに継承するクラスの動作の概念があるないためです。 ただし、これらのコード例に示すよう継承するクラスのコンス トラクターは、影響する可能性が大幅にその初期化リストは、基本クラスのメンバーの値に依存している場合。 移動を検討する新しい構文で、c++ マネージ拡張からコードを移動するときに実行が確実に、クラスのコンス トラクターの本体には、このようなコンストラクトが最後に発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [コンストラクター](../cpp/constructors-cpp.md)   
  

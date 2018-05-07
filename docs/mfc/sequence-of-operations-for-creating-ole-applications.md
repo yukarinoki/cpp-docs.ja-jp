@@ -1,13 +1,10 @@
 ---
-title: "OLE アプリケーションの作成操作のシーケンス |Microsoft ドキュメント"
-ms.custom: 
+title: OLE アプリケーションの作成操作のシーケンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db3b5b9a5f4f62fa71cffa37b30a89aee41fe56f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 412fa5c104d6e85bcaa6ba3703cc8c7ba535f25f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>OLE アプリケーションの作成手順
 次の表は、OLE をリンクして、埋め込みアプリケーションを作成して、フレームワークの役割分担を示します。 これらを実行する手順のシーケンスではなく使用可能なオプションを表します。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |コンテナー アプリケーションを最初から作成します。|MFC アプリケーション ウィザードを実行します。 選択**コンテナー**で、**複合ドキュメント サポート**タブです。クラス ビューを使用して、、ソース コード エディターに移動します。 COM ハンドラー関数のコードを入力します。|フレームワークは、COM コンポーネント (サーバー) のアプリケーションによって作成された COM オブジェクトを挿入できる、スケルトン アプリケーションを生成します。|  
 |最初からオートメーションをサポートするアプリケーションを作成します。|MFC アプリケーション ウィザードを実行します。 選択**オートメーション**から、**高度な機能**タブです。Automation 用のアプリケーションのメソッドとプロパティを公開するのにには、クラス ビューを使用します。|フレームワークは、スケルトン アプリケーションをアクティブ化し、他のアプリケーションによって自動化できますを生成します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フレームワークでのビルド](../mfc/building-on-the-framework.md)   
  [MFC アプリケーションの作成操作のシーケンス](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
  [ActiveX コントロールの作成操作のシーケンス](../mfc/sequence-of-operations-for-creating-activex-controls.md)   

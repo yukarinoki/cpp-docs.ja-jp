@@ -1,12 +1,9 @@
 ---
-title: "CBrush クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CBrush クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>CBrush クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のブラシをカプセル化します。  
@@ -95,10 +90,10 @@ class CBrush : public CGdiObject
   
  `CBrush`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  `CBrush` オブジェクトを構築します。  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  ブラシの陰影のスタイルを指定します。 次の値のいずれかを指定できます。  
   
-- `HS_BDIAGONAL`45 度で下ハッチ (左右から)  
+- `HS_BDIAGONAL` 45 度で下ハッチ (左右から)  
   
-- `HS_CROSS`水平および垂直方向の格子  
+- `HS_CROSS` 水平および垂直方向の格子  
   
-- `HS_DIAGCROSS`45 度をクロスハッチします。  
+- `HS_DIAGCROSS` 45 度をクロスハッチします。  
   
-- `HS_FDIAGONAL`45 度の位置 (左右から) 上のハッチ  
+- `HS_FDIAGONAL` 45 度の位置 (左右から) 上のハッチ  
   
-- `HS_HORIZONTAL`水平方向の陰影  
+- `HS_HORIZONTAL` 水平方向の陰影  
   
-- `HS_VERTICAL`垂直方向の陰影  
+- `HS_VERTICAL` 垂直方向の陰影  
   
  `pBitmap`  
  指す、`CBitmap`ブラシを描画するビットマップを指定するオブジェクト。  
   
 ### <a name="remarks"></a>コメント  
- `CBrush`次の 4 つオーバー ロードされたコンス トラクターです。引数なしのコンス トラクターを作成、初期化されていない`CBrush`オブジェクトを使用する前に初期化する必要があります。  
+ `CBrush` 次の 4 つオーバー ロードされたコンス トラクターです。引数なしのコンス トラクターを作成、初期化されていない`CBrush`オブジェクトを使用する前に初期化する必要があります。  
   
  引数なしのコンス トラクターを使用する場合、その結果を初期化する必要があります`CBrush`オブジェクト[CreateSolidBrush](#createsolidbrush)、 [CreateHatchBrush](#createhatchbrush)、 [CreateBrushIndirect](#createbrushindirect)、[とき](#createpatternbrush)、または[構築](#createdibpatternbrush)です。 いずれかの引数を受け取るコンス トラクターを使用する場合、それ以上初期化は必要です。 引数を持つコンス トラクターは、引数なしのコンス トラクターは常に成功しますが、エラーが発生した場合、例外をスローできます。  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  スタイル、色、およびで指定されたパターンでブラシを初期化、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)構造体。  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  デバイスに依存しないビットマップ (DIB) で指定されたパターンでブラシを初期化します。  
   
 ```  
@@ -185,7 +180,7 @@ BOOL CreateDIBPatternBrush(
  パックされたデバイスに依存しないビットマップ (DIB) を含むグローバル メモリ オブジェクトを識別します。  
   
  *nUsage*  
- 指定するかどうか、 **bmiColors:operator[]**のフィールド、 [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) (「パック DIB」の一部) のデータ構造は、明示的な RGB 値またはインデックスを現在実現論理パレットに含まれています。 パラメーターには、値は次のいずれかを指定する必要があります。  
+ 指定するかどうか、 **bmiColors:operator[]** のフィールド、 [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) (「パック DIB」の一部) のデータ構造は、明示的な RGB 値またはインデックスを現在実現論理パレットに含まれています。 パラメーターには、値は次のいずれかを指定する必要があります。  
   
 - **DIB_PAL_COLORS**カラー テーブルは、16 ビットのインデックスの配列で構成されます。  
   
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  指定したハッシュ パターンおよび色のブラシを初期化します。  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  ブラシの陰影のスタイルを指定します。 次の値のいずれかを指定できます。  
   
-- `HS_BDIAGONAL`45 度で下ハッチ (左右から)  
+- `HS_BDIAGONAL` 45 度で下ハッチ (左右から)  
   
-- `HS_CROSS`水平および垂直方向の格子  
+- `HS_CROSS` 水平および垂直方向の格子  
   
-- `HS_DIAGCROSS`45 度をクロスハッチします。  
+- `HS_DIAGCROSS` 45 度をクロスハッチします。  
   
-- `HS_FDIAGONAL`45 度の位置 (左右から) 上のハッチ  
+- `HS_FDIAGONAL` 45 度の位置 (左右から) 上のハッチ  
   
-- `HS_HORIZONTAL`水平方向の陰影  
+- `HS_HORIZONTAL` 水平方向の陰影  
   
-- `HS_VERTICAL`垂直方向の陰影  
+- `HS_VERTICAL` 垂直方向の陰影  
   
  `crColor`  
  RGB 色 (の陰影の色) として、ブラシの前景色を指定します。 参照してください[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)詳細については、Windows SDK に含まれています。  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  ビットマップで指定されたパターンでブラシを初期化します。  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  指定した純色でブラシを初期化します。  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>例  
   例を参照して[CBrush::CBrush](#cbrush)です。  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  ブラシの色を初期化します。  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  ポインターを返します、`CBrush`オブジェクト ハンドルを指定して、Windows にとき[HBRUSH](#operator_hbrush)オブジェクト。  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>パラメーター  
  `hBrush`  
- `HANDLE`Windows GDI ブラシ。  
+ `HANDLE` Windows GDI ブラシ。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CBrush`それ以外の成功した場合は、オブジェクト**NULL**です。  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>例  
   例を参照して[CBrush::CBrush](#cbrush)です。  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  取得するには、このメンバー関数を呼び出す、`LOGBRUSH`構造体。  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
  この演算子のアタッチされた Windows GDI ハンドルの取得を使用して、`CBrush`オブジェクト。  
   
 ```  
@@ -396,7 +391,7 @@ operator HBRUSH() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル PROPDLG](../../visual-cpp-samples.md)   
  [CGdiObject クラス](../../mfc/reference/cgdiobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -1,13 +1,10 @@
 ---
-title: "日付と時刻の選択のコールバック フィールドを使用してコントロール |Microsoft ドキュメント"
-ms.custom: 
+title: 日付と時刻の選択のコールバック フィールドを使用してコントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DTN_FORMATQUERY
 - DTN_FORMAT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5526b0f8826a91eb0b1c5a6eae250abbb02fcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b0d59aa8c30e9308448467bb198e898106e61f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>日時指定コントロールでのコールバック フィールドの使い方
 日付と時刻の選択フィールドを定義する標準書式文字、に加えてコールバック フィールドとして、カスタム書式指定文字列の特定の部分を指定することによって、出力をカスタマイズできます。 コールバック フィールドを宣言するには、1 つまたは複数の"X"文字 (ASCII コード 88) を書式指定文字列の本文に任意の場所含めます。 たとえば、次の文字列"' は現在: 'yy '/' MM '/' dd' (日 'X')'"により、年、月、日、および最後に、年の日付を続けてとして現在の値を表示する日付と時刻のピッカー コントロール。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  ポインター、 **NMDATETIMEFORMAT**通知ハンドラーが適切な型への最初のパラメーターをキャストして構造が検出されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDateTimeCtrl の使い方](../mfc/using-cdatetimectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "operator! = (map) (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: operator! = (map) (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::operator!=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator!= member [STL/CLR]
 ms.assetid: 335c3b24-27ed-4cc8-b49d-02b83ec5fd0b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 705289c4ca29df6360fea7b0f8fee89f4a5a7c5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66c3ac75105f22269acbd23497363d3dd4b84abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-map-stlclr"></a>operator!= (map) (STL/CLR)
 等しくない比較を一覧表示します。  
@@ -97,12 +92,12 @@ int main()
 [a b c] != [a b d] is True  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップ (STL/CLR)](../dotnet/map-stl-clr.md)   
  [演算子 = = (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)   
  [演算子\<(map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   

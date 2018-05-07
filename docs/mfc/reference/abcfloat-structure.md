@@ -1,13 +1,10 @@
 ---
-title: "ABCFLOAT 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: ABCFLOAT 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - ABCFLOAT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ABCFLOAT structure [MFC]
 ms.assetid: 338e7e15-9d2c-42d0-aa80-273acfde5cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58871df5a526455297dd6d092f98e9facd901ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5be39336f3da839dc9b1c7be6a64db54b59f99bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="abcfloat-structure"></a>ABCFLOAT 構造体
 `ABCFLOAT`構造には、フォントの文字の A、B、および C の幅が含まれています。  
@@ -53,10 +48,10 @@ typedef struct _ABCFLOAT { /* abcf */
 ## <a name="remarks"></a>コメント  
  A、B、および C の幅は、フォントのベース ラインに沿って測定されます。 文字の文字インクリメント (合計幅) は、A、B、および C のスペースの合計です。 A または C 領域のいずれかのスペーシングまたはオーバー ハングを示す負できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** wingdi.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 

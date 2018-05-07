@@ -2,12 +2,9 @@
 title: 'レコード セット: レコード (ODBC) のフィルター処理 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b6d6e8b41e67c9f33d643a2f64c7bdf2d2251eff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b4860726fa77d7b852290d8ea4680fe1bbbd86f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-filtering-records-odbc"></a>レコードセット: レコードのフィルター処理 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -101,7 +96,7 @@ m_strFilter = "StudentID = 100";   // incorrect for some drivers
 > [!NOTE]
 >  独自の SQL 文字列を渡すことによって、レコード セットの既定の SQL 文字列を上書きする場合**開く**、カスタム文字列がある場合にフィルターを設定しないでください、**場所**句。 既定の SQL をオーバーライドする方法の詳細については、次を参照してください。 [SQL: をカスタマイズするレコード セットの SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)   
  [: レコード選択レコードのしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   

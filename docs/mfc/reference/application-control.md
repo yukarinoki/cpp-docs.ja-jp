@@ -1,13 +1,10 @@
 ---
-title: "アプリケーションの制御 |Microsoft ドキュメント"
-ms.custom: 
+title: アプリケーションの制御 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c055f5489c7b85f5f974256709451426b614db47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-control"></a>アプリケーションの制御
 OLE には、アプリケーションとそれらのオブジェクトを十分に制御が必要です。 OLE システム Dll は、起動アプリケーションのリリースを自動的に、その運用環境と、オブジェクトの変更を調整し、できる必要があります。 このトピック内の関数は、それらの要件を満たしています。 に加えて、OLE システム Dll によって呼び出されるは、アプリケーションもによって、これらの関数を呼び出される場合がありますする必要があります。 
@@ -46,7 +41,7 @@ OLE には、アプリケーションとそれらのオブジェクトを十分�
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|ユーザー インターフェイスを実装して、 *typename*コマンド オブジェクトです。|  
 
   
-##  <a name="afxolecanexitapp"></a>AfxOleCanExitApp  
+##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp  
  アプリケーションが終了できるかどうかを示します。  
   
 ```   
@@ -62,10 +57,10 @@ BOOL AFXAPI AfxOleCanExitApp();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h 
 
-##  <a name="afxolegetmessagefilter"></a>AfxOleGetMessageFilter  
+##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
  アプリケーションの現在のメッセージ フィルターを取得します。  
   
 ```   
@@ -83,10 +78,10 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
   
  [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxwin.h 
 
-##  <a name="afxolegetuserctrl"></a>AfxOleGetUserCtrl  
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl  
  現在のユーザー制御フラグを取得します。  
   
 ```   
@@ -99,10 +94,10 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 ### <a name="remarks"></a>コメント  
  ユーザーが明示的に開かれるか、新しいドキュメントを作成した場合、ユーザーは、アプリケーションのコントロールです。 ユーザーはコントロールにもが OLE システム Dll によって、アプリケーションが起動していない場合: つまり、ユーザーがシステムのシェルを使用してアプリケーションを起動した場合。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>AfxOleSetUserCtrl  
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl  
  設定またはのリファレンスで説明されているユーザー制御フラグをクリア`AfxOleGetUserCtrl`です。  
   
 ```  
@@ -118,10 +113,10 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
   
  アプリケーションの他の操作は、アプリケーションのコントロールにユーザーを配置する必要がある場合は、この関数を呼び出します。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>AfxOleLockApp  
+##  <a name="afxolelockapp"></a>  AfxOleLockApp  
  フレームワークのグローバルなアプリケーションのアクティブなオブジェクトの数のカウントをインクリメントします。  
   
 ```   
@@ -138,10 +133,10 @@ void AFXAPI AfxOleLockApp();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>Afxoleunlockapp を呼び出します  
+##  <a name="afxoleunlockapp"></a>  Afxoleunlockapp を呼び出します  
  デクリメント、アプリケーションのアクティブなオブジェクトのフレームワークの数。  
   
 ```   
@@ -156,7 +151,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="example"></a>例  
  例を参照して[AfxOleLockApp](#afxolelockapp)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h  
 
  ## <a name="afxolelockcontrol"></a>AfxOleLockControl
@@ -189,14 +184,14 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** < afxwin.h >  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [AfxOleUnlockControl](#afxoleunlockcontrol)
  
-##  <a name="afxoleregisterserverclass"></a>AfxOleRegisterServerClass  
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass  
  この関数では、OLE システム レジストリにサーバーを登録することができます。  
   
 ```   
@@ -226,13 +221,13 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  `nAppType`  
  取得された、値、 **OLE_APPTYPE** OLE アプリケーションの種類を指定します。 使用可能な値は次のとおりです。  
   
-- `OAT_INPLACE_SERVER`サーバーには、サーバー全体のユーザー インターフェイスがあります。  
+- `OAT_INPLACE_SERVER` サーバーには、サーバー全体のユーザー インターフェイスがあります。  
   
-- `OAT_SERVER`サーバーは、埋め込みだけをサポートします。  
+- `OAT_SERVER` サーバーは、埋め込みだけをサポートします。  
   
-- `OAT_CONTAINER`コンテナーは、埋め込みアイテムへのリンクをサポートします。  
+- `OAT_CONTAINER` コンテナーは、埋め込みアイテムへのリンクをサポートします。  
   
-- `OAT_DISPATCH_OBJECT``IDispatch`-できるオブジェクト。  
+- `OAT_DISPATCH_OBJECT` `IDispatch`-できるオブジェクト。  
   
  `rglpszRegister`  
  キーとキーの既存の値が見つからない場合は、OLE システム レジストリに追加する値を表す文字列へのポインターの配列です。  
@@ -258,10 +253,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 |%4|Short 型の名前|  
 |%5|Long 型の名前|  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>AfxOleSetEditMenu  
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu  
  ユーザー インターフェイスを実装して、 *typename*コマンド オブジェクトです。  
   
 ```   
@@ -300,13 +295,13 @@ void AFXAPI AfxOleSetEditMenu(
   
  **#include \<afxolecl.rc >**  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxole.h 
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
 
-## <a name="afxoleunlockcontrol"></a>AfxOleUnlockControl
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 指定されたコントロールのクラス ファクトリのロックを解除します。  
    
 ### <a name="syntax"></a>構文  
@@ -335,10 +330,10 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 ```
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** < afxwin.h >  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)  
  [AfxOleLockControl](#afxolelockcontrol)
 

@@ -1,12 +1,9 @@
 ---
-title: "map::count (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: map::count (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::Count
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - count member [STL/CLR]
 ms.assetid: 835f5b11-cb15-4a0b-8808-cd9b36c83e0b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4308f060285918a8436160cdde59860fda39542b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef3497c94e45de83afc2412948b354a11e8224d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapcount-stlclr"></a>map::count (STL/CLR)
 指定したキーに一致する要素の数を検索します。  
@@ -79,11 +74,11 @@ count(L'b') = 1
 count(L'C') = 0  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップ (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map::equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)

@@ -1,13 +1,10 @@
 ---
-title: "Windows ソケット: ポートとソケット アドレス |Microsoft ドキュメント"
-ms.custom: 
+title: 'Windows ソケット: ポートとソケット アドレス |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,29 +16,27 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c7b2e15761815b75ba8001ad4eb5a5c276f5056
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ea9b8a39de8d36ecb621164d98e072a4041211
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows ソケット : ポートとソケット アドレス
 この記事では、用語"port"および"address"として Windows ソケットの使用について説明します。  
   
-##  <a name="_core_port"></a>ポート  
+##  <a name="_core_port"></a> ポート  
  ポートは、サービスを提供できる一意のプロセスを識別します。 現在のコンテキストでは、ポートは、Windows ソケットをサポートするアプリケーションに関連付けられます。 目的は、同時に、マシンで実行されている 1 つ以上の Windows ソケット アプリケーションがあることができますので、各 Windows ソケット アプリケーションを一意に識別します。  
   
  特定のポートは、FTP などの一般的なサービス用に予約されています。 この種のサービスを提供している場合を除き、これらのポートを使用してを避ける必要があります。 Windows ソケット仕様では、これらの予約ポートについて説明します。 WINSOCK ファイル。H では、それらも表示されます。  
   
  使用可能なポートを選択して Windows Sockets DLL をできるようにするには、ポートの値として 0 を渡します。 MFC では、10 進数は 1,024 を超えるポート値を選択します。 MFC を呼び出すことによって選択されているポートの値を取得することができます、[で](../mfc/reference/casyncsocket-class.md#getsockname)メンバー関数。  
   
-##  <a name="_core_socket_address"></a>ソケット アドレス  
+##  <a name="_core_socket_address"></a> ソケット アドレス  
  各ソケット オブジェクトは、ネットワーク上、インターネット プロトコル (IP) アドレスに関連付けられます。 通常、アドレスは、「専用」などのコンピューター名または「128.56.22.8」などのピリオドで区切られた番号です。  
   
  ソケットを作成するとき、通常は、独自のアドレスを指定する必要はありません。  
@@ -61,6 +56,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
 

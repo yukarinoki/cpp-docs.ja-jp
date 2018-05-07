@@ -1,11 +1,8 @@
 ---
-title: "Platform::stathreadattribute クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::stathreadattribute クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Platform
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db66ba0775ad3b38be1b43fd5781be611ca2f333
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute クラス
 アプリケーションのスレッド モデルがシングル スレッド アパートメント (STA) であることを示します。  
@@ -50,7 +45,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>パブリック メソッド  
  STAThreadAttribute 属性が継承[platform::object クラス](../cppcx/platform-object-class.md)です。 また STAThreadAttribute は次のメンバーもオーバーロードしたり、含んだりします。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|  
@@ -59,7 +54,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Platform`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** collection.h  
   
  **名前空間:** Platform  
@@ -123,5 +118,5 @@ public:String^ ToString()
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

@@ -1,12 +1,9 @@
 ---
-title: "STL/CLR コンテナー |Microsoft ドキュメント"
-ms.custom: 
+title: STL/CLR コンテナー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce6a2f096e5ee24716fcffd89411ffdf926a59aa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stlclr-containers"></a>STL/CLR コンテナー
 STL/CLR ライブラリ、C++ 標準ライブラリ内にある同じコンテナーが、.NET Framework の管理対象環境内で実行されます。 場合は、C++ 標準ライブラリに慣れて既に STL/CLR、引き続き共通言語ランタイム (CLR) ターゲットをコードのアップグレード中に作成したスキルを使用する最適な方法です。  
@@ -313,5 +308,5 @@ int main()
   
  クリア テキストの呼び出しまたはハンドル オブジェクトのコンテナーのメソッドを消去すると、ハンドルが参照するオブジェクトがメモリから解放されません。 必要がありますか、明示的にオブジェクトを削除したり、これらのオブジェクトが、マネージ ヒープ上にあるため、オブジェクトが使用されていないことを決定したら、メモリを解放するガベージ コレクターを許可します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

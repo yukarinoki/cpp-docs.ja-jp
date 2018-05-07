@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98c14611bbca828f6264c3fcfa66462c02320432
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7985b36c0eeaa7adf5441a7a6fbb3314bac8353f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加
 このチュートリアルで基本 Direct2D を追加する方法について説明 (D2D) が Visual C、Microsoft Foundation Class ライブラリ (MFC) プロジェクトにオブジェクトを出力するアプリケーションに、プロジェクトをビルド「こんにちは, world」グラデーションの背景にします。  
@@ -48,9 +43,9 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-create-an-mfc-application"></a>MFC アプリケーションを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **[名前]** ボックスに「`MFCD2DWalkthrough`」と入力します。 **[OK]**をクリックします。  
+2.  **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **[名前]** ボックスに「`MFCD2DWalkthrough`」と入力します。 **[OK]** をクリックします。  
   
 3.  **MFC アプリケーション ウィザード**をクリックして**完了**設定を変更せずします。  
   

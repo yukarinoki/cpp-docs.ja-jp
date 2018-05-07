@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール ウィザード、設定を制御 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC ActiveX コントロール ウィザード、設定を制御 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.settings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2161cea739d918bc0f5772a6cb08c29082a6e670
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>[コントロールの設定] (MFC ActiveX コントロール ウィザード)
 ウィザードのこのページを使用すると、動作を制御する方法を指定できます。 たとえば、標準の Windows のコントロール型に制御の基盤な動作と外観を最適化する、またはコントロールの他のコントロールのコンテナーとして機能するかを示すできます。  
@@ -93,7 +88,7 @@ ms.lasthandoff: 01/03/2018
  **プロパティを非同期的に読み込みます**  
  以前の非同期データのリセットを有効にし、コントロールの非同期のプロパティの新しい読み込みを開始します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)   
  [アプリケーションの設定、MFC ActiveX コントロール ウィザード](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
  [[コントロール名] (MFC ActiveX コントロール ウィザード)](../../mfc/reference/control-names-mfc-activex-control-wizard.md)

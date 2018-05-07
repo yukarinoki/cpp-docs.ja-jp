@@ -1,13 +1,10 @@
 ---
-title: "スライダー コントロールのスタイル |Microsoft ドキュメント"
-ms.custom: 
+title: スライダー コントロールのスタイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fa099e050bd460756ff9e2584d37f9e628293f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-control-styles"></a>スライダー コントロールのスタイル
 スライダー コントロール ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 垂直または水平方向の方向を持つことができます。 いずれかの側では、目盛りはことができます、側またはどちらもします。 また、連続する値の範囲を指定するも使用できます。 これらのプロパティは、スライダー コントロールを作成する場合を指定するスライダー コントロールのスタイルを使用して制御されます。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  既定では、スライダー コントロールのスライダーの長さは、選択範囲の変化に応じて異なります。 スライダー コントロールがある場合、 **TBS_FIXEDLENGTH**スタイル、スライダーの長さはそのまま同じ場合でも、選択範囲を変更します。 スライダー コントロールを持つ、 **TBS_NOTHUMB**スタイルは、スライダーは含まれません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CSliderCtrl の使い方](../mfc/using-csliderctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

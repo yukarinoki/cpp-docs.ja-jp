@@ -1,13 +1,10 @@
 ---
-title: "レコード セット: 追加、更新、および削除 (Odbc) |Microsoft ドキュメント"
-ms.custom: 
+title: 'レコード セット: 追加、更新、および削除 (Odbc) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cad50d25f6b9e2cc619fb19e21c2b6575ababa47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3a3eb08ce5749c0cfe5ca2d1f59213826ff7ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>レコードセット: レコードの追加、更新、削除 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
 |追加のみ可能 (Append-only)|Y|N|N|Y|  
 |すべて更新可能|Y|Y|Y|Y|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>確認するかどうかレコード セットの更新可能性  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> 確認するかどうかレコード セットの更新可能性  
  レコードセット オブジェクトは、データ ソースが更新可能であり、レコードセットが更新できるという設定で開かれている場合に更新できます。 また、使用する SQL ステートメント、ODBC ドライバーの機能、ODBC カーソル ライブラリがメモリ内にあるかどうかなどに応じて更新できるかどうかが決まります。 レコードセットかデータ ソースが読み取り専用のときは、更新できません。  
   
 #### <a name="to-determine-whether-your-recordset-is-updatable"></a>レコードセットが更新可能かどうかを調べるには  
@@ -97,7 +92,7 @@ if( !rsStudentSet.CanUpdate( ) )
 > [!CAUTION]
 >  呼び出すことによって、レコード セットを更新する準備するときに**更新**、レコード セットが、テーブル (またはすべてのテーブルの一意のインデックスの列) の主キーを構成するすべての列が含まれているように注意します。 場合によっては、フレームワークは、レコードセット内で選択されている列だけに基づいてテーブル内の更新するレコードを特定します。 選択されている列数が不足していると、テーブル内の複数のレコードが更新されることがあり、場合によっては、テーブルの参照整合性が損なわれます。 呼び出すときにフレームワークが例外をスローするこの例では、**更新**です。  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a>レコード セットにレコードを追加します。  
+##  <a name="_core_adding_a_record_to_a_recordset"></a> レコード セットにレコードを追加します。  
  場合、レコード セットに新しいレコードを追加することができます、 [CanAppend](../../mfc/reference/crecordset-class.md#canappend)メンバー関数は 0 以外の値を返します。  
   
 #### <a name="to-add-a-new-record-to-a-recordset"></a>新しいレコードをレコードセットに追加するには  
@@ -139,7 +134,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  [キャンセル] を`AddNew`または**編集**ようにするだけで別の呼び出し、呼び出し`AddNew`または**編集**呼び出したり**移動**で、 **AFX_MOVE_REFRESH**パラメーター。 データ メンバーは前回の値にリセットされが継続**編集**または**追加**モード。  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a>レコード セットのレコードの編集  
+##  <a name="_core_editing_a_record_in_a_recordset"></a> レコード セットのレコードの編集  
  既存のレコードを編集するには、場合、レコード セットの[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)メンバー関数は 0 以外の値を返します。  
   
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>レコードセット内の既存のレコードを編集するには  
@@ -180,7 +175,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  [キャンセル] を`AddNew`または**編集**ようにするだけで別の呼び出し、呼び出し`AddNew`または**編集**呼び出したり**移動**で、 **AFX_MOVE_REFRESH**パラメーター。 データ メンバーは前回の値にリセットされが継続**編集**または**追加**モード。  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a>レコード セットからレコードを削除します。  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a> レコード セットからレコードを削除します。  
  レコードを削除できる場合、レコード セットの[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)メンバー関数は 0 以外の値を返します。  
   
 #### <a name="to-delete-a-record"></a>レコードを削除するには  
@@ -209,6 +204,6 @@ rsStudent.MoveNext( );
   
  場合の影響の詳細については、 `AddNew`、**編集**、および**削除**メンバー関数を参照してください[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

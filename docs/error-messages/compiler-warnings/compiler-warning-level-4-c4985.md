@@ -1,29 +1,24 @@
 ---
-title: "コンパイラの警告 (レベル 4) C4985 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラの警告 (レベル 4) C4985 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2b95e10a5a5e2b6fcaf67ab41880580267ec7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8f0b62a72d61ee061fd996f93638acba9e7ebb0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4985"></a>コンパイラの警告 (レベル 4) C4985
 'symbol name': 前の宣言に属性が存在しません。  
@@ -38,5 +33,5 @@ ms.lasthandoff: 12/21/2017
   
 1.  メソッドの定義と、そのすべての宣言で、同じ SAL 注釈を使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SAL 注釈](../../c-runtime-library/sal-annotations.md)

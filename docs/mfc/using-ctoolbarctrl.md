@@ -1,13 +1,10 @@
 ---
-title: "CToolBarCtrl の使い方 |Microsoft ドキュメント"
-ms.custom: 
+title: CToolBarCtrl の使い方 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86bca4c48403bd41ce40b79a4b9f7c041ebb26e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54031677ae33675ca0fa295c24c78e5390f5dd49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctoolbarctrl"></a>CToolBarCtrl の使い方
 ツール バー コントロールを使用することができます ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) ボタンと省略可能なスペースを含むコントロール ウィンドウを作成します。 ツール バー コントロールのウィンドウ内の各ボタンは、ユーザーがその親ウィンドウにコマンド メッセージを送信します。 通常、ツールバーのボタンは、アプリケーションのコマンドにアクセスするユーザーの追加と直接的な方法を提供するアプリケーションのメニュー内の項目に対応しています。  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [ツール バー コントロールの外観のカスタマイズ](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コントロール](../mfc/controls-mfc.md)
 

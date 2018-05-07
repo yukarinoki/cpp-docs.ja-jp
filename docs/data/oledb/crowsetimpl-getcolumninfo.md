@@ -1,12 +1,9 @@
 ---
-title: "Crowsetimpl::getcolumninfo |Microsoft ドキュメント"
-ms.custom: 
+title: Crowsetimpl::getcolumninfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetColumnInfo
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetColumnInfo method
 ms.assetid: 9ef76525-f996-4c6f-81b9-68eb260350ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18ed527d47b8bfb4ffa64c88597cc2e241ad9852
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a989b31d672c9019d2ed5e61490f4e0042ab4c47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetimplgetcolumninfo"></a>CRowsetImpl::GetColumnInfo
 特定のクライアント要求の列情報を取得します。  
@@ -59,8 +54,8 @@ ms.lasthandoff: 02/23/2018
   
  [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRowsetImpl クラス](../../data/oledb/crowsetimpl-class.md)

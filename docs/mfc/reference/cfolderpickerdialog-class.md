@@ -1,12 +1,9 @@
 ---
-title: "CFolderPickerDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CFolderPickerDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFolderPickerDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e93bb9c9ac6aa447e3df43d4612bd792df091e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog クラス
 CFolderPickerDialog クラスは、フォルダー ピッカー モードの CFileDialog を実装します。  
@@ -64,10 +59,10 @@ class CFolderPickerDialog : public CFileDialog;
   
  `CFolderPickerDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
-##  <a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
+##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
  コンストラクターです。  
   
 ```  
@@ -93,7 +88,7 @@ explicit CFolderPickerDialog(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog  
  デストラクターです。  
   
 ```  
@@ -102,5 +97,5 @@ virtual ~CFolderPickerDialog();
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

@@ -1,12 +1,9 @@
 ---
-title: "CRichEditCtrl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CRichEditCtrl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditCtrl
@@ -161,17 +158,15 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef5135130590d142e9725e1d064b932cc7ff4d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: 0d18e1352e0d8ba74709e2f1a5626678e81729a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
 リッチ エディット コントロールの機能を提供します。  
@@ -294,10 +289,10 @@ class CRichEditCtrl : public CWnd
   
  `CRichEditCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
-##  <a name="canpaste"></a>CRichEditCtrl::CanPaste  
+##  <a name="canpaste"></a>  CRichEditCtrl::CanPaste  
  リッチ エディット コントロールが指定されたクリップボードの形式を貼り付けることができるかどうかを判断します。  
   
 ```  
@@ -319,7 +314,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
   
-##  <a name="canredo"></a>CRichEditCtrl::CanRedo  
+##  <a name="canredo"></a>  CRichEditCtrl::CanRedo  
  任意のアクションが再実行キューに含まれて かどうかを判断します。  
   
 ```  
@@ -334,7 +329,7 @@ BOOL CanRedo() const;
   
  詳細については、次を参照してください。 [EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) Windows SDK に含まれています。  
   
-##  <a name="canundo"></a>CRichEditCtrl::CanUndo  
+##  <a name="canundo"></a>  CRichEditCtrl::CanUndo  
  最後の編集操作を元に戻すことができるかどうかを決定します。  
   
 ```  
@@ -350,7 +345,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
-##  <a name="charfrompos"></a>CRichEditCtrl::CharFromPos  
+##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
  パラメーターに指定された位置の文字に関する情報を取得`pt`です。  
   
 ```  
@@ -369,7 +364,7 @@ int CharFromPos(CPoint pt) const;
   
  詳細については、次を参照してください。 [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) Windows SDK に含まれています。  
   
-##  <a name="clear"></a>CRichEditCtrl::Clear  
+##  <a name="clear"></a>  CRichEditCtrl::Clear  
  削除 (クリア) 現在の選択 (存在する場合)、リッチ エディット コントロール。  
   
 ```  
@@ -386,7 +381,7 @@ void Clear();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
   
-##  <a name="copy"></a>CRichEditCtrl::Copy  
+##  <a name="copy"></a>  CRichEditCtrl::Copy  
  現在の選択 (もしあれば) リッチ エディット コントロールでクリップボードにコピーします。  
   
 ```  
@@ -399,7 +394,7 @@ void Copy();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
   
-##  <a name="create"></a>CRichEditCtrl::Create  
+##  <a name="create"></a>  CRichEditCtrl::Create  
  Windows リッチ エディット コントロールを作成し、この関連付けます`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -452,7 +447,7 @@ virtual BOOL Create(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
   
-##  <a name="createex"></a>CRichEditCtrl::CreateEx  
+##  <a name="createex"></a>  CRichEditCtrl::CreateEx  
  コントロール (子ウィンドウ) を作成しに関連付けます、`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -486,7 +481,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>コメント  
  使用して`CreateEx`の代わりに**作成**Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。  
   
-##  <a name="cricheditctrl"></a>CRichEditCtrl::CRichEditCtrl  
+##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
  `CRichEditCtrl` オブジェクトを構築します。  
   
 ```  
@@ -499,7 +494,7 @@ CRichEditCtrl();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#6](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
   
-##  <a name="cut"></a>CRichEditCtrl::Cut  
+##  <a name="cut"></a>  CRichEditCtrl::Cut  
  削除 (切り取り) 現在の選択 (存在する場合)、リッチ エディット コントロールであり削除したテキストをクリップボードにコピーします。  
   
 ```  
@@ -516,7 +511,7 @@ void Cut();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
   
-##  <a name="displayband"></a>CRichEditCtrl::DisplayBand  
+##  <a name="displayband"></a>  CRichEditCtrl::DisplayBand  
  によって既に書式設定 (テキストと OLE アイテム) のリッチ エディット コントロールの内容の一部が表示され[FormatRange](#formatrange)です。  
   
 ```  
@@ -538,7 +533,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="example"></a>例  
   例を参照して[CRichEditCtrl::FormatRange](#formatrange)です。  
   
-##  <a name="emptyundobuffer"></a>CRichEditCtrl::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>  CRichEditCtrl::EmptyUndoBuffer  
  リッチ エディット コントロールの取り消しのフラグをリセット (オフ) します。  
   
 ```  
@@ -555,7 +550,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
   
-##  <a name="findtext"></a>CRichEditCtrl::FindText  
+##  <a name="findtext"></a>  CRichEditCtrl::FindText  
  リッチ エディット コントロール内のテキストを検索します。  
   
 ```  
@@ -582,7 +577,7 @@ long FindText(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
-##  <a name="findwordbreak"></a>CRichEditCtrl::FindWordBreak  
+##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
  指定した位置の前後にワード区切りを検索`nStart`です。  
   
 ```  
@@ -604,7 +599,7 @@ DWORD FindWordBreak(
 ### <a name="remarks"></a>コメント  
  このメンバー関数を使用すると、指定した位置にある文字に関する情報を取得します。  
   
-##  <a name="formatrange"></a>CRichEditCtrl::FormatRange  
+##  <a name="formatrange"></a>  CRichEditCtrl::FormatRange  
  特定のデバイスのリッチ エディット コントロールでテキストの範囲の書式を設定します。  
   
 ```  
@@ -631,7 +626,7 @@ long FormatRange(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
   
-##  <a name="getcharpos"></a>CRichEditCtrl::GetCharPos  
+##  <a name="getcharpos"></a>  CRichEditCtrl::GetCharPos  
  内で指定された文字の位置 (左上隅) を取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -650,7 +645,7 @@ CPoint GetCharPos(long lChar) const;
   
  詳細については、次を参照してください。 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows SDK に含まれています。  
   
-##  <a name="getdefaultcharformat"></a>CRichEditCtrl::GetDefaultCharFormat  
+##  <a name="getdefaultcharformat"></a>  CRichEditCtrl::GetDefaultCharFormat  
  既定の文字書式のこの属性を取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -672,7 +667,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 ### <a name="example"></a>例  
   例を参照して[SetDefaultCharFormat](#setdefaultcharformat)です。  
   
-##  <a name="geteventmask"></a>CRichEditCtrl::GetEventMask  
+##  <a name="geteventmask"></a>  CRichEditCtrl::GetEventMask  
  このイベント マスクを取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -690,7 +685,7 @@ long GetEventMask() const;
 ### <a name="example"></a>例  
   例を参照して[CRichEditCtrl::SetEventMask](#seteventmask)です。  
   
-##  <a name="getfirstvisibleline"></a>CRichEditCtrl::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>  CRichEditCtrl::GetFirstVisibleLine  
  この最上位に表示されている行を決定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -706,7 +701,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
-##  <a name="getiricheditole"></a>CRichEditCtrl::GetIRichEditOle  
+##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
  アクセス、 **IRichEditOle**このインターフェイス`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -721,7 +716,7 @@ IRichEditOle* GetIRichEditOle() const;
   
  詳細については、次を参照してください。 [EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041)メッセージと[IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) Windows SDK のインターフェイスです。  
   
-##  <a name="getlimittext"></a>CRichEditCtrl::GetLimitText  
+##  <a name="getlimittext"></a>  CRichEditCtrl::GetLimitText  
  このテキストの制限値を取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -739,7 +734,7 @@ long GetLimitText() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
   
-##  <a name="getline"></a>CRichEditCtrl::GetLine  
+##  <a name="getline"></a>  CRichEditCtrl::GetLine  
  これから、行のテキストを取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -777,7 +772,7 @@ int GetLine(
 ### <a name="example"></a>例  
   例を参照して[GetLineCount](#getlinecount)です。  
   
-##  <a name="getlinecount"></a>CRichEditCtrl::GetLineCount  
+##  <a name="getlinecount"></a>  CRichEditCtrl::GetLineCount  
  内の行の数を取得、`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -793,7 +788,7 @@ int GetLineCount() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
   
-##  <a name="getmodify"></a>CRichEditCtrl::GetModify  
+##  <a name="getmodify"></a>  CRichEditCtrl::GetModify  
  かどうかをこの`CRichEditCtrl`オブジェクトが変更されています。  
   
 ```  
@@ -811,7 +806,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
   
-##  <a name="getoptions"></a>CRichEditCtrl::GetOptions  
+##  <a name="getoptions"></a>  CRichEditCtrl::GetOptions  
  リッチ エディット コントロールに現在設定オプションを取得します。  
   
 ```  
@@ -819,9 +814,9 @@ UINT GetOptions() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在のオプション フラグの値の組み合わせ。 これらの値の一覧は、次を参照してください。、 *foptions の* 内のパラメーター、 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254)メッセージ、Windows SDK で説明します。  
+ 現在のオプション フラグの値の組み合わせ。 これらの値の一覧は、次を参照してください。、 *foptions の *内のパラメーター、 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254)メッセージ、Windows SDK で説明します。  
   
-##  <a name="getparaformat"></a>CRichEditCtrl::GetParaFormat  
+##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat  
  現在の選択の属性を段落書式指定を取得します。  
   
 ```  
@@ -845,7 +840,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="example"></a>例  
   例を参照して[CRichEditCtrl::SetParaFormat](#setparaformat)です。  
   
-##  <a name="getpunctuation"></a>CRichEditCtrl::GetPunctuation  
+##  <a name="getpunctuation"></a>  CRichEditCtrl::GetPunctuation  
  リッチ エディット コントロールで現在の区切り文字を取得します。  
   
 ```  
@@ -867,7 +862,7 @@ BOOL GetPunctuation(
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、オペレーティング システムのアジア言語のバージョンのみで利用可能です。  
   
-##  <a name="getrect"></a>CRichEditCtrl::GetRect  
+##  <a name="getrect"></a>  CRichEditCtrl::GetRect  
  この書式設定の四角形を取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -886,7 +881,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>例  
   例を参照して[LimitText](#limittext)です。  
   
-##  <a name="getredoname"></a>CRichEditCtrl::GetRedoName  
+##  <a name="getredoname"></a>  CRichEditCtrl::GetRedoName  
  存在する場合は、再実行キューでは、次のアクションの種類を取得します。  
   
 ```  
@@ -899,7 +894,7 @@ UNDONAMEID GetRedoName() const;
 ### <a name="remarks"></a>コメント  
  元に戻すまたはやり直すことができるアクションの種類は、入力、delete、ドラッグ アンド ドロップ、切り取り、および貼り付け操作します。 この情報は、アンドゥ操作のドロップダウン リスト ボックスなどの取り消しとやり直し操作に対して拡張ユーザー インターフェイスを提供するアプリケーションで役立ちます。  
   
-##  <a name="getsel"></a>CRichEditCtrl::GetSel  
+##  <a name="getsel"></a>  CRichEditCtrl::GetSel  
  この現在の選択範囲の境界を取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -923,9 +918,9 @@ void GetSel(
 ### <a name="remarks"></a>コメント  
  この関数の 2 つの形式は、選択範囲の境界を取得する代替方法を提供します。 これらの形式の簡単な説明に従ってください。  
   
-- **GetSel (** `cr` **)**このフォームを使用して、**上**構造体、 **cpMin**と**cpMax**境界を取得するメンバー。  
+- **GetSel (** `cr` **)** このフォームを使用して、**上**構造体、 **cpMin**と**cpMax**するメンバー境界を取得します。  
   
-- **GetSel (** `nStartChar` **、** `nEndChar` **)**このフォームは、パラメーターで境界を返します`nStartChar`と`nEndChar`です。  
+- **GetSel (** `nStartChar` **、** `nEndChar` **)** このフォームは、パラメーターで境界を返します`nStartChar`と`nEndChar`です。  
   
  選択範囲を含むすべての場合、先頭 ( **cpMin**または`nStartChar`) 0 と終了は、( **cpMax**または`nEndChar`) が - 1。  
   
@@ -934,7 +929,7 @@ void GetSel(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
   
-##  <a name="getselectioncharformat"></a>CRichEditCtrl::GetSelectionCharFormat  
+##  <a name="getselectioncharformat"></a>  CRichEditCtrl::GetSelectionCharFormat  
  現在の選択の属性を書式指定文字を取得します。  
   
 ```  
@@ -958,7 +953,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="example"></a>例  
   例を参照して[SetSelectionCharFormat](#setselectioncharformat)です。  
   
-##  <a name="getselectiontype"></a>CRichEditCtrl::GetSelectionType  
+##  <a name="getselectiontype"></a>  CRichEditCtrl::GetSelectionType  
  この選択の種類を決定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -968,15 +963,15 @@ WORD GetSelectionType() const;
 ### <a name="return-value"></a>戻り値  
  現在の選択範囲の内容を示すフラグです。 次のフラグの組み合わせです。  
   
-- `SEL_EMPTY`現在選択されていないことを示します。  
+- `SEL_EMPTY` 現在選択されていないことを示します。  
   
-- `SEL_TEXT`現在の選択範囲にテキストが含まれていることを示します。  
+- `SEL_TEXT` 現在の選択範囲にテキストが含まれていることを示します。  
   
-- `SEL_OBJECT`現在の選択範囲に少なくとも 1 つの OLE 項目が含まれていることを示します。  
+- `SEL_OBJECT` 現在の選択範囲に少なくとも 1 つの OLE 項目が含まれていることを示します。  
   
-- `SEL_MULTICHAR`現在の選択範囲にテキストの 2 つ以上の文字が含まれていることを示します。  
+- `SEL_MULTICHAR` 現在の選択範囲にテキストの 2 つ以上の文字が含まれていることを示します。  
   
-- `SEL_MULTIOBJECT`現在の選択範囲が 1 つ以上の OLE オブジェクトが含まれていることを示します。  
+- `SEL_MULTIOBJECT` 現在の選択範囲が 1 つ以上の OLE オブジェクトが含まれていることを示します。  
   
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) Windows SDK に含まれています。  
@@ -984,7 +979,7 @@ WORD GetSelectionType() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
   
-##  <a name="getseltext"></a>CRichEditCtrl::GetSelText  
+##  <a name="getseltext"></a>  CRichEditCtrl::GetSelText  
  この現在の選択範囲からテキストを取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -998,19 +993,19 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ### <a name="return-value"></a>戻り値  
  フォームによって異なります。  
   
-- **GetSelText (** `lpBuf` **)**にコピーされた文字数`lpBuf`終端の null は含まない。  
+- **GetSelText (** `lpBuf` **)** にコピーされた文字数`lpBuf`終端の null は含まない。  
   
-- **GetSelText に関するページ ()**現在の選択範囲を含む文字列。  
+- **GetSelText に関するページ ()** 現在の選択範囲を含む文字列。  
   
 ### <a name="remarks"></a>コメント  
- 最初の形式を使用する場合**GetSelText (** `lpBuf` **)**バッファーが十分な大きさを受信するテキストにあることを確認する必要があります。 呼び出す[GetSel](#getsel)を現在の選択範囲の文字数を決定します。  
+ 最初の形式を使用する場合**GetSelText (** `lpBuf` **)** バッファーが十分な大きさを受信するテキストにあることを確認する必要があります。 呼び出す[GetSel](#getsel)を現在の選択範囲の文字数を決定します。  
   
  詳細については、次を参照してください。 [EM_GETSELTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774190) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例を参照して[CRichEditCtrl::GetSelectionType](#getselectiontype)です。  
   
-##  <a name="gettextlength"></a>CRichEditCtrl::GetTextLength  
+##  <a name="gettextlength"></a>  CRichEditCtrl::GetTextLength  
  これで、文字のテキストの長さを取得`CRichEditCtrl`オブジェクト、終端の null 文字は含まれません。  
   
 ```  
@@ -1026,7 +1021,7 @@ long GetTextLength() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
   
-##  <a name="gettextlengthex"></a>CRichEditCtrl::GetTextLengthEx  
+##  <a name="gettextlengthex"></a>  CRichEditCtrl::GetTextLengthEx  
  リッチ エディット コントロール内のテキストの長さを計算します。  
   
 ```  
@@ -1046,9 +1041,9 @@ long GetTextLengthEx(
  文字またはエディット コントロールでのバイト数。 互換性のないフラグが設定されている場合`dwFlags`、このメンバー関数を返します`E_INVALIDARG`です。  
   
 ### <a name="remarks"></a>コメント  
- `GetTextLengthEx`テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 参照してください[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor の詳細についてはします。  
+ `GetTextLengthEx` テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 参照してください[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor の詳細についてはします。  
   
-##  <a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
+##  <a name="gettextmode"></a>  CRichEditCtrl::GetTextMode  
  リッチ エディット コントロールの現在のテキスト モードと元に戻すレベルを取得します。  
   
 ```  
@@ -1058,7 +1053,7 @@ UINT GetTextMode() const;
 ### <a name="return-value"></a>戻り値  
  ビット フラグのセット、 [TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364) Windows SDK」の説明に従って、列挙型。 フラグは、現在のテキスト モードを示し、コントロールのレベルを元に戻します。  
   
-##  <a name="gettextrange"></a>CRichEditCtrl::GetTextRange  
+##  <a name="gettextrange"></a>  CRichEditCtrl::GetTextRange  
  指定された文字の範囲を取得します。  
   
 ```  
@@ -1084,9 +1079,9 @@ int GetTextRange(
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) Windows SDK に含まれています。  
   
- `GetTextRange`リッチ エディット 2.0 の機能をサポートしています。 参照してください[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor の詳細についてはします。  
+ `GetTextRange` リッチ エディット 2.0 の機能をサポートしています。 参照してください[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor の詳細についてはします。  
   
-##  <a name="getundoname"></a>CRichEditCtrl::GetUndoName  
+##  <a name="getundoname"></a>  CRichEditCtrl::GetUndoName  
  存在する場合は、元に戻すキューの次の使用可能なアクションの種類を取得します。  
   
 ```  
@@ -1099,7 +1094,7 @@ UNDONAMEID GetUndoName() const;
 ### <a name="remarks"></a>コメント  
  元に戻すまたはやり直すことができるアクションの種類は、入力、delete、ドラッグ アンド ドロップ、切り取り、および貼り付け操作します。 この情報は、元に戻すことができる操作のドロップダウン リスト ボックスなどの取り消しとやり直し操作に対して拡張ユーザー インターフェイスを提供するアプリケーションで役立ちます。  
   
-##  <a name="getwordwrapmode"></a>CRichEditCtrl::GetWordWrapMode  
+##  <a name="getwordwrapmode"></a>  CRichEditCtrl::GetWordWrapMode  
  リッチ エディット コントロールの word 互換性に影響するオプションの現在のワード ラップを取得します。  
   
 ```  
@@ -1112,7 +1107,7 @@ UINT GetWordWrapMode() const;
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、オペレーティング システムのアジア言語のバージョンでのみ使用できます。  
   
-##  <a name="hideselection"></a>CRichEditCtrl::HideSelection  
+##  <a name="hideselection"></a>  CRichEditCtrl::HideSelection  
  選択範囲の可視性を変更します。  
   
 ```  
@@ -1136,7 +1131,7 @@ void HideSelection(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
   
-##  <a name="limittext"></a>CRichEditCtrl::LimitText  
+##  <a name="limittext"></a>  CRichEditCtrl::LimitText  
  ユーザーがエディット コントロールに入力できるテキストの長さを制限します。  
   
 ```  
@@ -1158,7 +1153,7 @@ void LimitText(long nChars = 0);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
   
-##  <a name="linefromchar"></a>CRichEditCtrl::LineFromChar  
+##  <a name="linefromchar"></a>  CRichEditCtrl::LineFromChar  
  指定した文字のインデックスを含む行の行番号を取得します。  
   
 ```  
@@ -1180,7 +1175,7 @@ long LineFromChar(long nIndex) const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
   
-##  <a name="lineindex"></a>CRichEditCtrl::LineIndex  
+##  <a name="lineindex"></a>  CRichEditCtrl::LineIndex  
  この内の行の文字インデックスを取得`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1202,7 +1197,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
   
-##  <a name="linelength"></a>CRichEditCtrl::LineLength  
+##  <a name="linelength"></a>  CRichEditCtrl::LineLength  
  リッチ エディット コントロール内の行の長さを取得します。  
   
 ```  
@@ -1224,7 +1219,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>例  
   例を参照して[LineIndex](#lineindex)です。  
   
-##  <a name="linescroll"></a>CRichEditCtrl::LineScroll  
+##  <a name="linescroll"></a>  CRichEditCtrl::LineScroll  
  複数行のエディット コントロールのテキストをスクロールします。  
   
 ```  
@@ -1243,14 +1238,14 @@ void LineScroll(
 ### <a name="remarks"></a>コメント  
  エディット コントロールは、過去のエディット コントロールでテキストの最後の行は垂直方向にスクロールされません。 場合は、現在の行で指定された行の数と`nLines`エディット コントロールで行の合計数を超える場合、値がエディット コントロールの最後の行がエディット コントロール ウィンドウの一番上にスクロールされる基準を調整します。  
   
- `LineScroll`過去の任意の行の最後の文字、水平方向にスクロールするために使用します。  
+ `LineScroll` 過去の任意の行の最後の文字、水平方向にスクロールするために使用します。  
   
  詳細については、次を参照してください。 [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
   例を参照して[GetFirstVisibleLine](#getfirstvisibleline)です。  
   
-##  <a name="paste"></a>CRichEditCtrl::Paste  
+##  <a name="paste"></a>  CRichEditCtrl::Paste  
  クリップボードからデータを挿入、`CRichEditCtrl`カーソル、カーソルの場所にします。  
   
 ```  
@@ -1265,7 +1260,7 @@ void Paste();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
   
-##  <a name="pastespecial"></a>CRichEditCtrl::PasteSpecial  
+##  <a name="pastespecial"></a>  CRichEditCtrl::PasteSpecial  
  これに特定のクリップボード形式でデータを貼り付けます`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1293,7 +1288,7 @@ void PasteSpecial(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
   
-##  <a name="posfromchar"></a>CRichEditCtrl::PosFromChar  
+##  <a name="posfromchar"></a>  CRichEditCtrl::PosFromChar  
  指定した文字エディット コントロール内のクライアント領域の座標を取得します。  
   
 ```  
@@ -1310,7 +1305,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows SDK に含まれています。  
   
-##  <a name="redo"></a>CRichEditCtrl::Redo  
+##  <a name="redo"></a>  CRichEditCtrl::Redo  
  コントロールの再実行キュー内の次の操作をやり直します。  
   
 ```  
@@ -1323,7 +1318,7 @@ BOOL Redo();
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) Windows SDK に含まれています。  
   
-##  <a name="replacesel"></a>CRichEditCtrl::ReplaceSel  
+##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel  
  この現在の選択項目を置き換えます`CRichEditCtrl`テキストが指定されたオブジェクト。  
   
 ```  
@@ -1351,7 +1346,7 @@ void ReplaceSel(
 ### <a name="example"></a>例  
   例を参照して[LineIndex](#lineindex)です。  
   
-##  <a name="requestresize"></a>CRichEditCtrl::RequestResize  
+##  <a name="requestresize"></a>  CRichEditCtrl::RequestResize  
  これを強制的`CRichEditCtrl`を送信するオブジェクト**EN_REQUESTRESIZE**親ウィンドウに通知メッセージです。  
   
 ```  
@@ -1363,7 +1358,7 @@ void RequestResize();
   
  詳細については、次を参照してください。、 [EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220)メッセージ、および**ボトムレス リッチ エディット コントロール**のセクション[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDK にします。  
   
-##  <a name="setautourldetect"></a>CRichEditCtrl::SetAutoURLDetect  
+##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect  
  URL を自動的に検出するためにリッチ エディット コントロールを設定します。  
   
 ```  
@@ -1381,9 +1376,9 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
  有効な場合、リッチ エディット コントロールは、標準の URL の形式と一致するかどうかを決定するテキストをスキャンします。 これらの URL 形式の一覧は、次を参照してください。 [EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) Windows SDK に含まれています。  
   
 > [!NOTE]
->  設定しないでください`SetAutoURLDetect`に**TRUE**エディット コントロールで使用する場合、 **CFE_LINK** Url 以外のテキストに対して有効にします。 `SetAutoURLDetect`Url に対してこの特殊効果を有効にし、その他のすべてのテキストを無効にします。 参照してください[EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970)の詳細については、 **CFE_LINK**効果。  
+>  設定しないでください`SetAutoURLDetect`に**TRUE**エディット コントロールで使用する場合、 **CFE_LINK** Url 以外のテキストに対して有効にします。 `SetAutoURLDetect` Url に対してこの特殊効果を有効にし、その他のすべてのテキストを無効にします。 参照してください[EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970)の詳細については、 **CFE_LINK**効果。  
   
-##  <a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor  
  背景色を設定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1410,7 +1405,7 @@ COLORREF SetBackgroundColor(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
   
-##  <a name="setdefaultcharformat"></a>CRichEditCtrl::SetDefaultCharFormat  
+##  <a name="setdefaultcharformat"></a>  CRichEditCtrl::SetDefaultCharFormat  
  これで新しいテキストの属性の書式設定文字`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1435,7 +1430,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
   
-##  <a name="seteventmask"></a>CRichEditCtrl::SetEventMask  
+##  <a name="seteventmask"></a>  CRichEditCtrl::SetEventMask  
  このイベント マスクを設定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1457,7 +1452,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#26](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
   
-##  <a name="setmodify"></a>CRichEditCtrl::SetModify  
+##  <a name="setmodify"></a>  CRichEditCtrl::SetModify  
  設定または編集コントロールの変更されたフラグをクリアします。  
   
 ```  
@@ -1476,7 +1471,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>例  
   例を参照して[この](#getmodify)です。  
   
-##  <a name="setolecallback"></a>CRichEditCtrl::SetOLECallback  
+##  <a name="setolecallback"></a>  CRichEditCtrl::SetOLECallback  
  これは、`CRichEditCtrl`オブジェクト、 **IRichEditOleCallback** OLE に関連するリソースと情報へのアクセスに使用するオブジェクト。  
   
 ```  
@@ -1495,7 +1490,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
   
  詳細については、次を参照してください。 [EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252)メッセージと[IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) Windows SDK のインターフェイスです。  
   
-##  <a name="setoptions"></a>CRichEditCtrl::SetOptions  
+##  <a name="setoptions"></a>  CRichEditCtrl::SetOptions  
  このオプションを設定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1508,13 +1503,13 @@ void SetOptions(
  *wOp*  
  操作の種類を示します。 次のいずれかの値です。  
   
-- `ECOOP_SET`によって指定されたオプションを設定`dwFlags`です。  
+- `ECOOP_SET` によって指定されたオプションを設定`dwFlags`です。  
   
-- `ECOOP_OR`現在のオプションを組み合わせてで指定されている`dwFlags`です。  
+- `ECOOP_OR` 現在のオプションを組み合わせてで指定されている`dwFlags`です。  
   
-- `ECOOP_AND`によっても指定されている現在のオプションのみを保持`dwFlags`です。  
+- `ECOOP_AND` によっても指定されている現在のオプションのみを保持`dwFlags`です。  
   
-- `ECOOP_XOR`排他的論理 OR で指定されていると、現在のオプション`dwFlags`です。  
+- `ECOOP_XOR` 排他的論理 OR で指定されていると、現在のオプション`dwFlags`です。  
   
  `dwFlags`  
  豊富な編集オプション。 フラグの値は、「解説」セクションに表示されます。  
@@ -1522,28 +1517,28 @@ void SetOptions(
 ### <a name="remarks"></a>コメント  
  オプションは、次の値の組み合わせにすることができます。  
   
-- `ECO_AUTOWORDSELECTION`単語の自動選択をダブルクリックします。  
+- `ECO_AUTOWORDSELECTION` 単語の自動選択をダブルクリックします。  
   
-- `ECO_AUTOVSCROLL`自動的に、ユーザーが、行の末尾に文字を入力したときは、10 文字で右側にテキストをスクロールします。 ユーザーは、ENTER キーを押すと、コントロールの位置 0 にすべてのテキストをスクロールします。  
+- `ECO_AUTOVSCROLL` 自動的に、ユーザーが、行の末尾に文字を入力したときは、10 文字で右側にテキストをスクロールします。 ユーザーは、ENTER キーを押すと、コントロールの位置 0 にすべてのテキストをスクロールします。  
   
-- `ECO_AUTOHSCROLL`自動的にユーザーが最後の行で ENTER キーを押したときに、1 ページ上のテキストをスクロールします。  
+- `ECO_AUTOHSCROLL` 自動的にユーザーが最後の行で ENTER キーを押したときに、1 ページ上のテキストをスクロールします。  
   
-- `ECO_NOHIDESEL`エディット コントロールの既定の動作を無効にします。 既定の動作には、コントロールが入力フォーカスを失うし、コントロールが入力フォーカスを受け取るときに、選択範囲を示して ときの選択範囲が非表示にします。 指定した場合`ECO_NOHIDESEL`コントロールがフォーカスを持っていない場合でも、選択したテキストが反転します。  
+- `ECO_NOHIDESEL` エディット コントロールの既定の動作を無効にします。 既定の動作には、コントロールが入力フォーカスを失うし、コントロールが入力フォーカスを受け取るときに、選択範囲を示して ときの選択範囲が非表示にします。 指定した場合`ECO_NOHIDESEL`コントロールがフォーカスを持っていない場合でも、選択したテキストが反転します。  
   
-- `ECO_READONLY`ユーザーが入力するか、編集コントロールでテキストを編集できなくなります。  
+- `ECO_READONLY` ユーザーが入力するか、編集コントロールでテキストを編集できなくなります。  
   
-- `ECO_WANTRETURN`ユーザーがダイアログ ボックス内の複数行のリッチ エディット コントロールにテキストを入力するときに、ENTER キーを押したときにキャリッジ リターンが挿入されるように指定します。 このスタイルを指定しない場合は、リッチ エディット コントロールの親ウィンドウは、親ウィンドウの既定のボタン (たとえば、ダイアログ ボックスで [ok] ボタン) をクリックするとを模倣するコマンドを送ります ENTER キーを押します。 このスタイルには影響しません、単一行エディット コントロール。  
+- `ECO_WANTRETURN` ユーザーがダイアログ ボックス内の複数行のリッチ エディット コントロールにテキストを入力するときに、ENTER キーを押したときにキャリッジ リターンが挿入されるように指定します。 このスタイルを指定しない場合は、リッチ エディット コントロールの親ウィンドウは、親ウィンドウの既定のボタン (たとえば、ダイアログ ボックスで [ok] ボタン) をクリックするとを模倣するコマンドを送ります ENTER キーを押します。 このスタイルには影響しません、単一行エディット コントロール。  
   
-- `ECO_SAVESEL`コントロールがフォーカスを失ったときに、選択を保存します。 既定では、そのフォーカスを得たときに、コントロールの内容全体が選択されます。  
+- `ECO_SAVESEL` コントロールがフォーカスを失ったときに、選択を保存します。 既定では、そのフォーカスを得たときに、コントロールの内容全体が選択されます。  
   
-- `ECO_VERTICAL`テキストおよびオブジェクトを垂直方向に描画します。 アジア言語のみで使用できます。  
+- `ECO_VERTICAL` テキストおよびオブジェクトを垂直方向に描画します。 アジア言語のみで使用できます。  
   
  詳細については、次を参照してください。 [EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
   
-##  <a name="setparaformat"></a>CRichEditCtrl::SetParaFormat  
+##  <a name="setparaformat"></a>  CRichEditCtrl::SetParaFormat  
  段落これの現在の選択の属性の書式設定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1568,7 +1563,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
   
-##  <a name="setpunctuation"></a>CRichEditCtrl::SetPunctuation  
+##  <a name="setpunctuation"></a>  CRichEditCtrl::SetPunctuation  
  リッチ エディット コントロールに区切り記号を設定します。  
   
 ```  
@@ -1590,7 +1585,7 @@ BOOL SetPunctuation(
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、オペレーティング システムのアジア系言語バージョンのみ使用できます。  
   
-##  <a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
+##  <a name="setreadonly"></a>  CRichEditCtrl::SetReadOnly  
  変更、`ECO_READONLY`このオプション`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1612,7 +1607,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
   
-##  <a name="setrect"></a>CRichEditCtrl::SetRect  
+##  <a name="setrect"></a>  CRichEditCtrl::SetRect  
  書式を設定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1631,7 +1626,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
   
-##  <a name="setsel"></a>CRichEditCtrl::SetSel  
+##  <a name="setsel"></a>  CRichEditCtrl::SetSel  
  この選択を設定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1655,9 +1650,9 @@ void SetSel(CHARRANGE& cr);
 ### <a name="remarks"></a>コメント  
  この関数の 2 つの形式は、選択範囲の境界を設定する代替方法を提供します。 これらの形式の簡単な説明に従ってください。  
   
-- **SetSel (** `cr` **)**このフォームを使用して、**上**構造体、 **cpMin**と**cpMax**メンバーが、境界を設定します。  
+- **SetSel (** `cr` **)** このフォームを使用して、**上**構造体、 **cpMin**と**cpMax**するメンバー境界を設定します。  
   
-- **SetSel (** `nStartChar` **、** `nEndChar` **)**このフォームは、パラメーターを使用して`nStartChar`と`nEndChar`境界を設定します。  
+- **SetSel (** `nStartChar` **、** `nEndChar` **)** このフォームは、パラメーターを使用して`nStartChar`と`nEndChar`境界を設定します。  
   
  キャレットは、開始の大きい方によって示される選択範囲の末尾に置かれます ( **cpMin**または`nStartChar`) と終了 ( **cpMax**または`nEndChar`) のインデックス。 この関数は、の内容をスクロール、`CRichEditCtrl`キャレットが表示されるようにします。  
   
@@ -1668,7 +1663,7 @@ void SetSel(CHARRANGE& cr);
 ### <a name="example"></a>例  
   例を参照して[GetSel](#getsel)です。  
   
-##  <a name="setselectioncharformat"></a>CRichEditCtrl::SetSelectionCharFormat  
+##  <a name="setselectioncharformat"></a>  CRichEditCtrl::SetSelectionCharFormat  
  この現在の選択範囲内のテキストの属性の書式設定文字`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1693,7 +1688,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#31](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
   
-##  <a name="settargetdevice"></a>CRichEditCtrl::SetTargetDevice  
+##  <a name="settargetdevice"></a>  CRichEditCtrl::SetTargetDevice  
  WYSIWYG を使用するターゲット デバイスと行の幅を設定 (表示される内容は、取得する) で書式設定`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1728,7 +1723,7 @@ BOOL SetTargetDevice(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
   
-##  <a name="settextmode"></a>CRichEditCtrl::SetTextMode  
+##  <a name="settextmode"></a>  CRichEditCtrl::SetTextMode  
  リッチ エディット コントロールのテキスト モードまたは元に戻す/やり直しのレベルを設定します。  
   
 ```  
@@ -1747,7 +1742,7 @@ BOOL SetTextMode(UINT fMode);
   
  このメンバー関数は、コントロールにテキストが含まれている場合に失敗します。 コントロールが空であることを確認するには、送信、[によって](http://msdn.microsoft.com/library/windows/desktop/ms632644)空の文字列でのメッセージ。  
   
-##  <a name="setundolimit"></a>CRichEditCtrl::SetUndoLimit  
+##  <a name="setundolimit"></a>  CRichEditCtrl::SetUndoLimit  
  元に戻すキューに格納できる操作の最大数を設定します。  
   
 ```  
@@ -1764,7 +1759,7 @@ UINT SetUndoLimit(UINT nLimit);
 ### <a name="remarks"></a>コメント  
  既定では、元に戻すキュー内のアクションの最大数は 100 です。 この数を増やす場合は、使用可能なメモリ不足のため、新しい番号に対応する必要があります。 パフォーマンス向上のためには、最小有効値に制限を設定します。  
   
-##  <a name="setwordcharformat"></a>CRichEditCtrl::SetWordCharFormat  
+##  <a name="setwordcharformat"></a>  CRichEditCtrl::SetWordCharFormat  
  これで、現在選択されている単語に対して属性の書式設定文字`CRichEditCtrl`オブジェクト。  
   
 ```  
@@ -1789,7 +1784,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
   
-##  <a name="setwordwrapmode"></a>CRichEditCtrl::SetWordWrapMode  
+##  <a name="setwordwrapmode"></a>  CRichEditCtrl::SetWordWrapMode  
  ワード ラップおよび単語区切り、豊富なオプションを設定では、コントロールを編集します。  
   
 ```  
@@ -1806,7 +1801,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ### <a name="remarks"></a>コメント  
  このメッセージは、オペレーティング システムのアジア言語のバージョンでのみ使用できます。  
   
-##  <a name="stopgrouptyping"></a>CRichEditCtrl::StopGroupTyping  
+##  <a name="stopgrouptyping"></a>  CRichEditCtrl::StopGroupTyping  
  収集から現在の元に戻す操作にアクションを入力するその他のコントロールを停止します。  
   
 ```  
@@ -1818,7 +1813,7 @@ void StopGroupTyping();
   
  詳細については、次を参照してください。 [EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) Windows SDK に含まれています。  
   
-##  <a name="streamin"></a>CRichEditCtrl::StreamIn  
+##  <a name="streamin"></a>  CRichEditCtrl::StreamIn  
  このテキストを置換`CRichEditCtrl`指定された入力ストリームからのテキストを持つオブジェクト。  
   
 ```  
@@ -1840,9 +1835,9 @@ long StreamIn(
 ### <a name="remarks"></a>コメント  
  値`nFormat`次のいずれかを指定する必要があります。  
   
-- `SF_TEXT`テキストだけを読み込むことを示します。  
+- `SF_TEXT` テキストだけを読み込むことを示します。  
   
-- `SF_RTF`読み取るテキストと書式設定を示します。  
+- `SF_RTF` 読み取るテキストと書式設定を示します。  
   
  これらの値のいずれかと組み合わせて使用できます`SFF_SELECTION`です。 場合`SFF_SELECTION`が指定されている`StreamIn`現在の選択範囲を入力ストリームの内容に置き換えます。 指定されていない場合`StreamIn`これの内容全体を置き換える`CRichEditCtrl`オブジェクト。  
   
@@ -1855,7 +1850,7 @@ long StreamIn(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl#35](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
   
-##  <a name="streamout"></a>CRichEditCtrl::StreamOut  
+##  <a name="streamout"></a>  CRichEditCtrl::StreamOut  
  このコンテンツを書き込みます`CRichEditCtrl`オブジェクトを指定された出力ストリームにします。  
   
 ```  
@@ -1877,13 +1872,13 @@ long StreamOut(
 ### <a name="remarks"></a>コメント  
  値`nFormat`次のいずれかを指定する必要があります。  
   
-- `SF_TEXT`テキストだけを書き込むことを示します。  
+- `SF_TEXT` テキストだけを書き込むことを示します。  
   
-- `SF_RTF`手書きテキストと書式設定を示します。  
+- `SF_RTF` 手書きテキストと書式設定を示します。  
   
-- `SF_RTFNOOBJS`OLE 項目をスペースに置き換えて手書きテキストと書式設定を示します。  
+- `SF_RTFNOOBJS` OLE 項目をスペースに置き換えて手書きテキストと書式設定を示します。  
   
-- `SF_TEXTIZED`テキストの書き込みと書式設定、OLE アイテムのテキスト表現を示します。  
+- `SF_TEXTIZED` テキストの書き込みと書式設定、OLE アイテムのテキスト表現を示します。  
   
  これらの値のいずれかと組み合わせて使用できます`SFF_SELECTION`です。 場合`SFF_SELECTION`が指定されている`StreamOut`出力ストリームに現在の選択範囲を書き込みます。 指定されていない場合`StreamOut`これの内容全体を書き込みます`CRichEditCtrl`オブジェクト。  
   
@@ -1896,7 +1891,7 @@ long StreamOut(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl#37](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
   
-##  <a name="undo"></a>CRichEditCtrl::Undo  
+##  <a name="undo"></a>  CRichEditCtrl::Undo  
  リッチ エディット コントロールの最後の操作を元に戻します。  
   
 ```  
@@ -1914,7 +1909,7 @@ BOOL Undo();
 ### <a name="example"></a>例  
   例を参照して[CanUndo](#canundo)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル ワードパッド](../../visual-cpp-samples.md)   
  [CWnd クラス](../../mfc/reference/cwnd-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

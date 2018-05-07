@@ -1,11 +1,8 @@
 ---
-title: "Platform::outofboundsexception クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::outofboundsexception クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::OutOfBoundsException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6feeaf4947de97ba75c1766b43931da5f6e55742
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9fc0eb412cad1ef7f971c6bc3ee9035a47889994
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException クラス
 操作が有効範囲外のデータにアクセスを試みるとスローされます。  
@@ -39,7 +34,7 @@ public ref class OutOfBoundsException : COMException,    IException,    IPrintab
 ### <a name="remarks"></a>コメント  
  詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -48,5 +43,5 @@ public ref class OutOfBoundsException : COMException,    IException,    IPrintab
   
  **メタデータ:** platform.winmd  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform::COMException クラス](../cppcx/platform-comexception-class.md)

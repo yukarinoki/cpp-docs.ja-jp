@@ -1,13 +1,10 @@
 ---
-title: "データ オブジェクトとデータ ソース (OLE) |Microsoft ドキュメント"
-ms.custom: 
+title: データ オブジェクトとデータ ソース (OLE) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04619ee7851d2e2d6ad569583dfbb2e619d37026
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 766148494c6b8693f8d9e65f27e157b58d8e8689
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-ole"></a>データ オブジェクトとデータ ソース (OLE)
 データ転送では、クリップボードまたはドラッグ アンド ドロップを使用して、いずれかを実行すると、データには、ソースおよび変換先があります。 1 つのアプリケーションは、コピーするため、データを提供し、別のアプリケーションでは、それを受け入れ貼り付けられるようにします。 転送のそれぞれの側では、同じデータを正常に転送するために別の操作を実行する必要があります。 Microsoft Foundation Class (MFC) ライブラリには、この転送のそれぞれの側を表す 2 つのクラスが用意されています。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [クリップボード](../mfc/clipboard.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleDataObject クラス](../mfc/reference/coledataobject-class.md)   
  [COleDataSource クラス](../mfc/reference/coledatasource-class.md)

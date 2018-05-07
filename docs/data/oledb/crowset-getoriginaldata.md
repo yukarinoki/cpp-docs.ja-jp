@@ -1,12 +1,9 @@
 ---
-title: CRowset::GetOriginalData | Microsoft Docs
-ms.custom: 
+title: Crowset::getoriginaldata |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>.GetOriginalData
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - GetOriginalData method
 ms.assetid: 5b69d30e-34f4-41a4-a82d-cd175be88d53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a80c43417244459d3cdb45a616995d742bd0df3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65c0966d60b2498117ac30dc137307a274911e54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetgetoriginaldata"></a>CRowset::GetOriginalData
 呼び出し**IRowsetUpdate::GetOriginalData**最近からフェッチまたはデータ ソースに送信されるデータを取得します。  
@@ -53,9 +48,9 @@ HRESULT GetOriginalData() throw();
   
  このメソッドには、省略可能なインターフェイスが必要とする`IRowsetUpdate`、する可能性がありますすべてのプロバイダーでサポートされていない以外の場合は、そうでは、返されます**E_NOINTERFACE**です。 設定する必要もあります**DBPROP_IRowsetUpdate**に`VARIANT_TRUE`呼び出す前に**開く**テーブルまたは行セットを含むコマンドをします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRowset クラス](../../data/oledb/crowset-class.md)   
  [IRowsetUpdate::GetOriginalData](https://msdn.microsoft.com/en-us/library/ms709947.aspx)

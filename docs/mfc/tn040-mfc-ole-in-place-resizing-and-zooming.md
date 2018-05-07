@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC OLE の埋め込み先サイズ変更とズーム |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN040: MFC OLE の埋め込み先サイズ変更とズーム |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>テクニカル ノート 40: MFC/OLE 埋め込み先サイズ変更とズーム
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  ズームを正しくの例については、MFC OLE サンプルを参照してください。 [HIERSVR](../visual-cpp-samples.md)です。 ズーム イン HIERSVR では複雑にという事実のテキストが、表示テキスト、一般に、スケールを設定しません直線的に (ヒント、表記規則、デザインの幅および高さすべての重要なは複雑になります)。 それでも、HIERSVR ズームを正しく実装するための適切な参照は、そのため、MFC のチュートリアル[SCRIBBLE](../visual-cpp-samples.md) (手順 7)。  
   
- `COleServerDoc::GetZoomFactor`実装からまたはコンテナーから別のメトリックの数に基づいてズームの倍率を決定して`COleServerItem`と`COleServerDoc`クラスです。 つまり、現在のズームは、次の数式によって決定されます。  
+ `COleServerDoc::GetZoomFactor` 実装からまたはコンテナーから別のメトリックの数に基づいてズームの倍率を決定して`COleServerItem`と`COleServerDoc`クラスです。 つまり、現在のズームは、次の数式によって決定されます。  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  コンテナーのエクステントを計算するやや複雑です。 コンテナーが呼び出された場合`COleServerItem::OnSetExtent`(への呼び出しに`COleClientItem::SetExtent`)、コンテナーの範囲はこの値をピクセル単位の論理インチあたりのピクセルの数に変換します。 コンテナーは (これは通常の大文字と小文字) SetExtent が呼び出されない場合は、コンテナー エクステントから返されるサイズ`COleServerItem::OnGetExtent`です。 そのため、コンテナーが SetExtent が呼び出されない場合、フレームワーク前提として こと場合は、コンテナーがその呼び出し元が 100% の自然なエクステントの (から返された値**COleServerItem::GetExtent**)。 別の方法を説明したように、フレームワークでは、コンテナーの項目の 100% (でない) が表示されている前提としています。  
   
- 重要な点がある`COleServerItem::OnSetExtent`と`COleServerItem::OnGetExtent`のような名前を持つ項目の同じ属性を操作しません。 `OnSetExtent`サーバーにオブジェクトの量が (ズーム倍数) に関係なく、コンテナーに表示されるかを認識させるために呼び出されると`OnGetExtent`はオブジェクトの理想的なサイズを決定するコンテナーによって呼び出されます。  
+ 重要な点がある`COleServerItem::OnSetExtent`と`COleServerItem::OnGetExtent`のような名前を持つ項目の同じ属性を操作しません。 `OnSetExtent` サーバーにオブジェクトの量が (ズーム倍数) に関係なく、コンテナーに表示されるかを認識させるために呼び出されると`OnGetExtent`はオブジェクトの理想的なサイズを決定するコンテナーによって呼び出されます。  
   
  各 Api に関連する問題を調べることで、わかりやすい画像を取得できます。  
   
@@ -91,7 +86,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  カスタムのサイズ変更を実装し、によって提供されるユーザー インターフェイスを活用することができます`COleResizeBar`オーバーライドすることで、 **WM_SIZECHILD**でメッセージ、`COleIPFrameWnd`クラスです。 仕様の詳細については**WM_SIZECHILD**を参照してください[テクニカル ノート 24](../mfc/tn024-mfc-defined-messages-and-resources.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

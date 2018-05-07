@@ -2,12 +2,9 @@
 title: 'MFC ActiveX コントロール: ActiveX コントロールにおけるピクチャの使用 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LPPICTUREDISP
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27e5ebb58056dfd14417adea211daf2c6ac2ddf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
 この記事では、ActiveX コントロールに共通する Picture 型と、その実装方法を説明します。 ここでは、次の内容について説明します。  
@@ -99,17 +94,17 @@ ms.lasthandoff: 12/21/2017
   
 3.  コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。  
   
-4.  ショートカット メニューから、 **[追加]** 、 **[プロパティの追加]**の順に選びます。  
+4.  ショートカット メニューから、 **[追加]** 、 **[プロパティの追加]** の順に選びます。  
   
 5.  **[プロパティ名]** ボックスに、プロパティ名を入力します。 例として、この手順では `ControlPicture` を使用します。  
   
 6.  **プロパティの型**ボックスで、 **IPictureDisp\*** プロパティの型。  
   
-7.  **[実装型]**として、 **[Get/Set メソッド]**をクリックします。  
+7.  **[実装型]** として、 **[Get/Set メソッド]** をクリックします。  
   
 8.  Get 関数と Set 関数に一意の名前を入力するか、既定の名前をそのまま使用します。 (この例では、既定の名前である `GetControlPicture` と `SetControlPicture` を使用します)。  
   
-9. **[完了]**をクリックします。  
+9. **[完了]** をクリックします。  
   
  プロパティ追加ウィザードにより、コントロール ヘッダー ファイル (.H) にあるディスパッチ マップのコメントの間に次のコードが追加されます。  
   
@@ -156,7 +151,7 @@ ms.lasthandoff: 12/21/2017
   
  変更が完了したら、プロジェクトをリビルドして、カスタム Picture プロパティの新しい機能を組み込みます。その後、Test Container を使用して新しいプロパティをテストします。 Test Container にアクセスする方法について詳しくは、「 [テスト コンテナーでのプロパティとイベントのテスト](../mfc/testing-properties-and-events-with-test-container.md) 」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX コントロール: フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)   
  [MFC ActiveX コントロール: プロパティ ページ](../mfc/mfc-activex-controls-property-pages.md)

@@ -2,11 +2,8 @@
 title: deque::reference (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::reference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reference member [STL/CLR]
 ms.assetid: 059f023b-f60c-451b-8944-162cc14ca862
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0fddae7da114b7505b3d5a46dba6fbc6387b7d3b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6912a642b547029987a3d21da38ee9457e616ab1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequereference-stlclr"></a>deque::reference (STL/CLR)
 要素への参照の型です。  
@@ -82,12 +77,12 @@ a b c
 A B C  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/deque >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque::const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)   
  [deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)

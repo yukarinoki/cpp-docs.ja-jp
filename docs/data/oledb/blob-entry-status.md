@@ -1,12 +1,9 @@
 ---
-title: "BLOB_ENTRY_STATUS |Microsoft ドキュメント"
-ms.custom: 
+title: BLOB_ENTRY_STATUS |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BLOB_ENTRY_STATUS
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BLOB_ENTRY_STATUS macro
 ms.assetid: 191007f4-dfcc-4ae2-a7fc-6f7899accc9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 207f42094ea62db103fb39a0057f595182a2ec9a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a6429a6b227cb7c06369d1a82d36e0ad513e6d0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blobentrystatus"></a>BLOB_ENTRY_STATUS
 と共に使用`BEGIN_COLUMN_MAP`または`BEGIN_ACCESSOR_MAP`バイナリ ラージ オブジェクトをバインドする ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)ただし、このマクロは、BLOB 列の状態も取得します。  
@@ -57,10 +52,10 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 ## <a name="example"></a>例  
  参照してください[BLOB を取得する方法ですか?](../../data/oledb/retrieving-a-blob.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロと OLE DB コンシューマー テンプレート用グローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
  [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   

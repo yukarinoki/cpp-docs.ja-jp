@@ -1,13 +1,10 @@
 ---
-title: "インターネット上の非同期モニカー |Microsoft ドキュメント"
-ms.custom: 
+title: インターネット上の非同期モニカー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - optimization [MFC], asynchronous downloading across Internet
 - Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7b6be66c3049c1d82aa549cf362a840fd6f265
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb9828734985c25996e7e2d1a6f390a0b629d998
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>インターネット上の非同期モニカー
 インターネットには、低速のネットワーク アクセスのためアプリケーション デザインに新しいアプローチが必要です。 アプリケーションでは、ユーザー インターフェイスを失速を避けるために非同期的にネットワーク アクセスを実行する必要があります。 MFC クラス[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)ファイルをダウンロードする非同期サポートを提供します。  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  ActiveX コントロールにおける非同期的にダウンロードについては、次を参照してください。 [、インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)   
  [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
 

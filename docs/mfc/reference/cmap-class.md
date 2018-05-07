@@ -2,11 +2,8 @@
 title: CMap クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMap
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmap-class"></a>CMap クラス
 一意なキーを値に割り当てる辞書コレクション クラスです。  
@@ -85,7 +80,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-structures"></a>パブリック構造体  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|キーの値と、関連オブジェクトの値を含む入れ子になった構造体。|  
   
@@ -127,7 +122,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  ほとんどの用途のグローバルのヘルパー関数をこのクラスの呼び出しの一部のメンバー関数をカスタマイズする必要があります、`CMap`クラスです。 参照してください[コレクション クラスのヘルパー](../../mfc/reference/collection-class-helpers.md)のマクロとグローバルのセクションで、`MFC Reference`です。  
   
- `CMap`オーバーライド[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)シリアル化とその要素のダンプをサポートするためにします。 使用して、アーカイブするマップが格納されている場合`Serialize`、各マップ要素がさらにシリアル化します。 既定の実装、`SerializeElements`ヘルパー関数ではビットごとの書き込み。 派生したポインター コレクション アイテムのシリアル化に関する情報の`CObject`またはその他のユーザー定義型を参照してください[する方法: タイプ セーフなコレクションを作成する](../../mfc/how-to-make-a-type-safe-collection.md)です。  
+ `CMap` オーバーライド[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)シリアル化とその要素のダンプをサポートするためにします。 使用して、アーカイブするマップが格納されている場合`Serialize`、各マップ要素がさらにシリアル化します。 既定の実装、`SerializeElements`ヘルパー関数ではビットごとの書き込み。 派生したポインター コレクション アイテムのシリアル化に関する情報の`CObject`またはその他のユーザー定義型を参照してください[する方法: タイプ セーフなコレクションを作成する](../../mfc/how-to-make-a-type-safe-collection.md)です。  
   
  (キーと値) のマップ内の個々 の要素の診断ダンプする場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
   
@@ -140,10 +135,10 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  `CMap`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>  CMap::CMap  
  空のマップを構築します。  
   
 ```  
@@ -160,7 +155,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>  CMap::CPair  
  キー値と関連付けられたオブジェクトの値が含まれています。  
   
 ### <a name="remarks"></a>コメント  
@@ -177,7 +172,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>例  
  使用状況の例は、の例を参照してください。[例](#plookup)です。  
   
-##  <a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>  CMap::GetCount  
  マップ内の要素の数を取得します。  
   
 ```  
@@ -190,7 +185,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>例  
  例を参照して[CMap::Lookup](#lookup)です。  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
  マップのハッシュ テーブル内の要素の数を決定します。  
   
 ```  
@@ -203,7 +198,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
  位置にあるマップ要素を取得`rNextPosition`、し、更新`rNextPosition`をマップ内の次の要素を参照してください。  
   
 ```  
@@ -237,7 +232,7 @@ void GetNextAssoc(
 ### <a name="example"></a>例  
  例を参照して[CMap::SetAt](#setat)です。  
   
-##  <a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>  CMap::GetSize  
  マップ要素の数を返します。  
   
 ```  
@@ -253,7 +248,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
  返すことによって、マップの反復処理を開始、**位置**値を渡すことができる、`GetNextAssoc`呼び出します。  
   
 ```  
@@ -269,7 +264,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>例  
  例を参照して[CMap::SetAt](#setat)です。  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
  ハッシュ テーブルを初期化します。  
   
 ```  
@@ -289,7 +284,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ### <a name="example"></a>例  
  例を参照して[CMap::Lookup](#lookup)です。  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>  CMap::IsEmpty  
  マップが空かどうかを判断します。  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>例  
  例を参照して[CMap::RemoveAll](#removeall)です。  
   
-##  <a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>  CMap::Lookup  
  指定されたキーにマップされている値を検索します。  
   
 ```  
@@ -326,12 +321,12 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
  要素が見つかった場合は 0 以外。それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>コメント  
- `Lookup`ハッシュ アルゴリズムを使用して、指定したキーと一致するキーを持つマップの要素をすばやく検索します。  
+ `Lookup` ハッシュ アルゴリズムを使用して、指定したキーと一致するキーを持つマップの要素をすばやく検索します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>CMap::operator  
+##  <a name="operator_at"></a>  CMap::operator  
  便利な代替には、`SetAt`メンバー関数。  
   
 ```  
@@ -356,7 +351,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>例  
  例を参照して[CMap::Lookup](#lookup)です。  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
  マップ オブジェクトの最初のエントリを返します。  
   
 ```  
@@ -373,7 +368,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
  によって示されるマップ要素を取得`pAssocRec`です。  
   
 ```  
@@ -395,7 +390,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>例  
  例を参照して[CMap::PGetFirstAssoc](#pgetfirstassoc)です。  
   
-##  <a name="plookup"></a>例  
+##  <a name="plookup"></a>  例  
  指定されたキーにマップされている値を検索します。  
   
 ```  
@@ -416,7 +411,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
+##  <a name="removeall"></a>  CMap::RemoveAll  
  グローバルなヘルパー関数を呼び出すことによって、このマップからすべての値を削除**DestructElements**です。  
   
 ```  
@@ -429,7 +424,7 @@ void RemoveAll();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
+##  <a name="removekey"></a>  CMap::RemoveKey  
  指定されたキーに対応するマップ エントリを検索します。次に、キーが見つかった場合は、エントリを削除します。  
   
 ```  
@@ -452,7 +447,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="example"></a>例  
  例を参照して[CMap::SetAt](#setat)です。  
   
-##  <a name="setat"></a>CMap::SetAt  
+##  <a name="setat"></a>  CMap::SetAt  
  プライマリは、マップの要素を挿入することを意味します。  
   
 ```  
@@ -478,7 +473,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプルの収集](../../visual-cpp-samples.md)   
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)  

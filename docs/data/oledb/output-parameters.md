@@ -1,12 +1,9 @@
 ---
-title: "出力パラメーター |Microsoft ドキュメント"
-ms.custom: 
+title: 出力パラメーター |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 663ff735eea34c53ea56c2cc4f24b4aedf2a3434
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="output-parameters"></a>出力パラメーター
 ストアド プロシージャの呼び出しは、SQL コマンドの呼び出しに似ています。 主な違いは、ストアド プロシージャが出力パラメーター (または「出力パラメーター」) を使用して、戻り値です。  
@@ -68,5 +63,5 @@ return 0
   
  @_rowcount行の数は、実際にテストのテーブルから返された出力パラメーターをレポートします。 ただし、このストアド プロシージャは、最大 50 個の行の数を制限します。 たとえば、テストで 100 行があった場合、行数は 50 になります (ため、このコードは、上位 50 行のみを取得します)。 発生した場合のみ 30 行の表に、行カウントが 30 になります。 呼び出す必要があります**閉じる**または**CloseAll**をその値をフェッチする前に、出力パラメーターを設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャの使用](../../data/oledb/using-stored-procedures.md)

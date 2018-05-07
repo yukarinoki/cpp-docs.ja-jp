@@ -1,12 +1,9 @@
 ---
-title: "hash_set::generic_iterator (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_set::generic_iterator (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::generic_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_iterator member [STL/CLR]
 ms.assetid: 9d6ac06d-d70c-4343-b959-553885a9cb53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cf3a241159eaa24cc313627d41839519097b2d27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c139776518a0a1d368845fb210541062c94866c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetgenericiterator-stlclr"></a>hash_set::generic_iterator (STL/CLR)
 コンテナーのジェネリック インターフェイスを使用するため、反復子の型。  
@@ -83,11 +78,11 @@ a b c
 a  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)

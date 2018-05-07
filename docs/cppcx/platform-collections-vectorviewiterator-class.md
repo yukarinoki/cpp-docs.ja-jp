@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::VectorViewIterator クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::Collections::VectorViewIterator クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
 Windows ランタイムの派生オブジェクトの標準テンプレート ライブラリ反復子を提供`IVectorView`インターフェイスです。  
@@ -68,7 +63,7 @@ class VectorViewIterator;
 |[VectorViewIterator::operator-- 演算子](#operator-decrement)|現在の VectorViewIterator をデクリメントします。|  
 |[VectorViewIterator::operator!= 演算子](#operator-inequality)|現在の VectorViewIterator が、指定された VectorViewIterator と等しくないかどうかを示します。|  
 |[VectorViewIterator::operator* 演算子](#operator-dereference)|現在の VectorViewIterator により指定された要素への参照を取得します。|  
-|[VectorViewIterator::operator\[\]](#operator-at)|現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。|  
+|[Vectorviewiterator::operator\[\]](#operator-at)|現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。|  
 |[VectorViewIterator::operator+ 演算子](#operator-plus)|指定された VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator を返します。|  
 |[VectorViewIterator::operator++ 演算子](#operator-increment)|現在の VectorViewIterator をインクリメントします。|  
 |[VectorViewIterator::operator+= 演算子](#operator-plus-assign)|指定された転置数だけ現在の VectorViewIterator をインクリメントします。|  
@@ -83,7 +78,7 @@ class VectorViewIterator;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `VectorViewIterator`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** collection.h  
   
  **名前空間:** Platform::Collections  
@@ -363,7 +358,7 @@ VectorViewIterator& operator-=(difference_type n);
   
 
 
-## <a name="operator-at"></a>  VectorViewIterator::operator\[\]
+## <a name="operator-at"></a>  Vectorviewiterator::operator\[\]
 現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -404,5 +399,5 @@ explicit VectorViewIterator(
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

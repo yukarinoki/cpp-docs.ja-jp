@@ -1,12 +1,9 @@
 ---
-title: "関数クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 関数クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>関数クラス
 データのストリームを表します ( `IStream`) OLE 構造化記憶の一部として、複合ファイルでします。  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>コメント  
  `IStorage`ストリームを開くか、メモリ ストリームである限り、作成する前にオブジェクトが存在する必要があります。  
   
- `COleStreamFile`同様にオブジェクトが操作される[CFile](../../mfc/reference/cfile-class.md)オブジェクト。  
+ `COleStreamFile` 同様にオブジェクトが操作される[CFile](../../mfc/reference/cfile-class.md)オブジェクト。  
   
  ストリームとストレージ操作の詳細については、記事を参照してください[コンテナー: 複合ファイル](../../mfc/containers-compound-files.md)..  
   
@@ -85,10 +80,10 @@ class COleStreamFile : public CFile
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  指定された OLE ストリームを関連付ける、`COleStreamFile`オブジェクト。  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  
           `COleStreamFile` オブジェクトを作成します。  
   
@@ -121,7 +116,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  安全に、通常は、失敗、グローバル共有メモリが不足して、新しいストリームを作成します。  
   
 ```  
@@ -140,7 +135,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  詳細については、次を参照してください。 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK に含まれています。  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  安全に、通常は、失敗、指定されたストレージ オブジェクトに新しいストリームを作成します。  
   
 ```  
@@ -172,7 +167,7 @@ BOOL CreateStream(
   
  詳細については、次を参照してください。 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK に含まれています。  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  ストリームを閉じることがなく、オブジェクトからストリームの関連付けを解除します。  
   
 ```  
@@ -187,7 +182,7 @@ LPSTREAM Detach();
   
  詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  この関数では、現在のストリームへのポインターを返します。  
   
 ```  
@@ -197,7 +192,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>戻り値  
  現在のストリーム インターフェイスへのポインター ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  既存のストリームを開きます。  
   
 ```  
@@ -229,7 +224,7 @@ BOOL OpenStream(
   
  詳細については、次を参照してください。 [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK に含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CFile クラス](../../mfc/reference/cfile-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

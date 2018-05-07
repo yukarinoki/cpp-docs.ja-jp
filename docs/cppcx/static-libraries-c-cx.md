@@ -1,24 +1,19 @@
 ---
-title: "スタティック ライブラリ (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: スタティック ライブラリ (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcd69fc00a44bdc0d8259a4a21d31c83ee5c6258
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: ffa905cbe0fd49489bd3634cb927cce57ea4ddbc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-libraries-ccx"></a>スタティック ライブラリ (C++/CX)
 ユニバーサル Windows プラットフォーム (UWP) アプリで使用されるスタティック ライブラリは、STL 型、および Windows ランタイム アプリのプラットフォームから除外されていない Win32 Api への呼び出しを含む、ISO 標準の C++ コードを含めることができます。 スタティック ライブラリは、Windows ランタイム コンポーネントを処理し、特定の制限の Windows ランタイム コンポーネントを作成します。  
@@ -27,9 +22,9 @@ ms.lasthandoff: 02/21/2018
   
 #### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>UWP アプリで使用するためのスタティック ライブラリを作成するには  
   
-1.  メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。 **Visual C** > **Windows ユニバーサル**選択**スタティック ライブラリ (ユニバーサル Windows)**です。  
+1.  メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。 **Visual C** > **Windows ユニバーサル**選択**スタティック ライブラリ (ユニバーサル Windows)** です。  
   
-2.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]**をクリックします。 **プロパティ** ダイアログ ボックスで、**構成プロパティ** > **C/C++**  ページで、設定**Windows ランタイム拡張機能**に**はい (/ZW)**です。  
+2.  **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **プロパティ** ダイアログ ボックスで、**構成プロパティ** > **C/C++**  ページで、設定**Windows ランタイム拡張機能**に**はい (/ZW)** です。  
   
  UWP アプリの除外されている Win32 API への呼び出しを行う場合に新規のスタティック ライブラリをコンパイルするときにコンパイラによってエラー C3861「識別子が見つかりませんでした」が発生 Windows ランタイムのサポートされている別の方法を探すを参照してください。 [UWP アプリでの Windows Api に代わる方法](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)です。  
   
@@ -37,9 +32,9 @@ ms.lasthandoff: 02/21/2018
   
  `ref` パブリック クラス、パブリック インターフェイス クラス、またはパブリック値クラスを作成するスタティック ライブラリを使用すると、リンクは次の警告を出します。  
   
-> **警告 LNK4264:**をスタティック ライブラリ; に/ZW でコンパイルされたオブジェクト ファイルをアーカイブには、Windows ランタイム型を作成するときに推奨されないことを Windows ランタイム メタデータを含むスタティック ライブラリとリンクに注意してください。  
+> **警告 LNK4264:** をスタティック ライブラリ; に/ZW でコンパイルされたオブジェクト ファイルをアーカイブには、Windows ランタイム型を作成するときに推奨されないことを Windows ランタイム メタデータを含むスタティック ライブラリとリンクに注意してください。  
   
  スタティック ライブラリは、ライブラリ自体の外部で使用される Windows ランタイム コンポーネントを生成しない場合のみに安全に、警告を無視できます。 ライブラリが、自らが定義したコンポーネントを利用していない場合、パブリック メタデータに型情報が含まれている状況でも、リンカーは実装を最適化できます。 このことは、スタティック ライブラリ内のパブリック コンポーネントはコンパイルされるが、実行時にアクティブにならないことを意味します。 このため、ダイナミック リンク ライブラリ (DLL) で他のコンポーネントまたはアプリケーションで消費される Windows ランタイム コンポーネントを実装しなければなりません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スレッドとマーシャ リング](../cppcx/threading-and-marshaling-c-cx.md)

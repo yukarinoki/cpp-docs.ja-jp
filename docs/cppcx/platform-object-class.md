@@ -1,11 +1,8 @@
 ---
-title: "Platform::object クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::object クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 Ref クラスと Windows ランタイム アプリで ref 構造体に対して共通の動作を提供します。 ref クラスと ref 構造体のインスタンスは、いずれも Platform::Object^ に暗黙的に変換可能で、仮想の ToString メソッドをオーバーライドできます。  
@@ -63,7 +58,7 @@ public ref class Object : Object
   
  `Object`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** vccorlib.h  
   
  **名前空間:** Platform  
@@ -131,10 +126,10 @@ Object::GetType()
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform::type クラス](../cppcx/platform-type-class.md)   
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)   
- [Type System](../cppcx/type-system-c-cx.md
+ [型のシステム](../cppcx/type-system-c-cx.md
   
 ## <a name="ctor"></a>  Object::object コンス トラクター
 Object クラスの新しいインスタンスを初期化します。  
@@ -188,5 +183,5 @@ public:
     };  
 };  
 ```  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

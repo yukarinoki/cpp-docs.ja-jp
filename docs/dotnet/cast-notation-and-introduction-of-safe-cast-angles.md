@@ -1,13 +1,10 @@
 ---
-title: "キャスト表記と safe_cast の導入&lt;&gt; |Microsoft ドキュメント"
-ms.custom: 
+title: キャスト表記と safe_cast の導入&lt;&gt; |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>キャスト表記と safe_cast の概要&lt;&gt;
 キャスト表記は、Visual C を c++ マネージ拡張から変更されました。  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  こうして、提案されたについてさらに検討し、いくつかの代替表記されたと見なされます、委員会に戻さだったフォームの (`?type`)、その何らかの示されている場合、これは、動的な性質です。 静的または動的、2 つの形式の間で切り替えるできるユーザーを付けたこれがすぎる満足でした。 描画ボードに戻るため、します。 成功、3 番目の表記は、今すぐ標準`dynamic_cast<type>`一連の 4 つの新しいスタイルのキャスト表記を汎用化されたします。  
   
- C++ では ISO-、`dynamic_cast`を返します`0`、不適切なポインター型に適用され、スロー、`std::bad_cast`参照型に適用されるときに例外です。 C++ のマネージ拡張で適用する`dynamic_cast`常に返されます (そのポインター表現) のために、マネージ参照型へ`0`です。 `__try_cast<type>`バリアント型をスローする例外にアナログとして導入された、`dynamic_cast`をスローする点を除いて、`System::InvalidCastException`キャストに失敗した場合。  
+ C++ では ISO-、`dynamic_cast`を返します`0`、不適切なポインター型に適用され、スロー、`std::bad_cast`参照型に適用されるときに例外です。 C++ のマネージ拡張で適用する`dynamic_cast`常に返されます (そのポインター表現) のために、マネージ参照型へ`0`です。 `__try_cast<type>` バリアント型をスローする例外にアナログとして導入された、`dynamic_cast`をスローする点を除いて、`System::InvalidCastException`キャストに失敗した場合。  
   
 ```  
 public __gc class ItemVerb;  
@@ -136,7 +131,7 @@ Matrix m( 2000, 2000 ), n( 2000, 2000 );
 if ( ! mumble ) return;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一般的な言語の変更 (C + + CLI)](../dotnet/general-language-changes-cpp-cli.md)   
  [C スタイル キャストと/clr (C + + CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)   
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)

@@ -1,13 +1,10 @@
 ---
-title: "メッセージ マップの範囲内のハンドラー |Microsoft ドキュメント"
-ms.custom: 
+title: メッセージ マップの範囲内のハンドラー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>範囲内のメッセージのハンドラー
 この記事では、メッセージの範囲を (1 つのメッセージを 1 つだけの関数にマッピング) ではなく 1 つのメッセージ ハンドラー関数にマップする方法について説明します。  
@@ -125,7 +120,7 @@ ms.lasthandoff: 03/16/2018
   
  更新ハンドラー関数の場合と同様より広範に使用できる可能性があります。 よく書き込む`ON_UPDATE_COMMAND_UI`コマンドの数のハンドラーを書き込み、またはコピーを同じコードを繰り返し、自分で検索します。 ソリューションは、さまざまなコマンド ハンドラー関数を使用して Id を 1 つの更新をマップする、`ON_UPDATE_COMMAND_UI_RANGE`マクロです。 コマンド Id は、連続する範囲を形成する必要があります。 例については、次を参照してください。、 **OnUpdateZoom**ハンドラーとその`ON_UPDATE_COMMAND_UI_RANGE`hiersvr のビュー クラスのメッセージ マップ エントリです。  
   
- 通常実行する 1 つのコマンドは、単一のパラメーターのハンドラー関数を更新する`pCmdUI`、型の**CCmdUI\***です。 ハンドラー関数とは異なりメッセージ マップの範囲の更新プログラム ハンドラー関数が不要で追加のパラメーター `nID`、型の**UINT**です。 ユーザーが実際に選択したコマンドを指定するため、コマンド ID がで見つかった、`CCmdUI`オブジェクト。  
+ 通常実行する 1 つのコマンドは、単一のパラメーターのハンドラー関数を更新する`pCmdUI`、型の**CCmdUI\*** です。 ハンドラー関数とは異なりメッセージ マップの範囲の更新プログラム ハンドラー関数が不要で追加のパラメーター `nID`、型の**UINT**です。 ユーザーが実際に選択したコマンドを指定するため、コマンド ID がで見つかった、`CCmdUI`オブジェクト。  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> 範囲のコントロール Id の例  
  もう 1 つの興味深い例では、コントロール Id の範囲に対するコントロール通知メッセージを 1 つのハンドラーにマップします。 たとえば、ユーザーが 10 個のボタンをクリックします。 10 のすべてのボタンを 1 つのハンドラーにマップするには、メッセージ マップ エントリは次のようになります。  

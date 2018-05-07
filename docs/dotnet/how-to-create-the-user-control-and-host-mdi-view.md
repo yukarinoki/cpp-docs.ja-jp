@@ -1,31 +1,26 @@
 ---
-title: "方法: ユーザー コントロールとホスト MDI ビューを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ユーザー コントロールとホスト MDI ビューを作成 |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 449f0026cd2d7603ceb190cc747138189313974f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>方法: ユーザー コントロールを作成し、MDI ビューをホストする
 次の手順では、.NET Framework ユーザー コントロールを作成し、そのユーザー コントロールをコントロール クラス ライブラリ (特に Windows コントロール ライブラリ プロジェクト) に作成し、プロジェクトをアセンブリにコンパイルする方法について説明します。 コントロールから派生したクラスを使用する MFC アプリケーションから使用できます[CView クラス](../mfc/reference/cview-class.md)と[CWinFormsView クラス](../mfc/reference/cwinformsview-class.md)です。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
      **ファイル**メニューの **新規**、クリックして**プロジェクト**です。 **Visual C**フォルダーを選択**MFC アプリケーション**です。  
   
-     **名前**ボックスに、入力`MFC02`を変更して、**ソリューション**設定**ソリューションに追加**です。 **[OK]**をクリックします。  
+     **名前**ボックスに、入力`MFC02`を変更して、**ソリューション**設定**ソリューションに追加**です。 **[OK]** をクリックします。  
   
      **MFC アプリケーション ウィザード**すべての既定値をそのまま使用し、クリックして**完了**です。 これにより、マルチ ドキュメント インターフェイスを持つ MFC アプリケーションが作成されます。  
   
@@ -51,11 +46,11 @@ ms.lasthandoff: 12/21/2017
   
      **ソリューション エクスプ ローラー**を右クリックし、`MFC01`プロジェクト ノード、および選択**プロパティ**コンテキスト メニュー。 **プロパティ ページ** ダイアログ ボックスが表示されます。  
   
-     **構成プロパティ****全般**です。 下にある、**プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)**です。  
+     **構成プロパティ****全般**です。 下にある、**プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)** です。  
   
-     [**構成プロパティ**、展開**C と C++** ] をクリックし、**全般**ノード。 設定**デバッグ情報の形式**に**プログラム データベース (/Zi)**です。  
+     [**構成プロパティ**、展開**C と C++** ] をクリックし、**全般**ノード。 設定**デバッグ情報の形式**に**プログラム データベース (/Zi)** です。  
   
-     クリックして、**コード生成**ノード。 設定**最小リビルドを有効にする**に**いいえ (/Gm-)**です。 設定**基本ランタイム チェック**に**既定**です。  
+     クリックして、**コード生成**ノード。 設定**最小リビルドを有効にする**に**いいえ (/Gm-)** です。 設定**基本ランタイム チェック**に**既定**です。  
   
      をクリックして**OK**して変更を適用します。  
   
@@ -110,9 +105,9 @@ ms.lasthandoff: 12/21/2017
   
      **ソリューション エクスプ ローラー**、MFC02 を右クリックし **スタートアップ プロジェクトとして設定**です。  
   
-     **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+     **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
      **デバッグ** メニューのをクリックして**デバッグなしで開始**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ビューとしての Windows フォーム ユーザー コントロールのホスト](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

@@ -1,12 +1,9 @@
 ---
-title: "CSliderCtrl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSliderCtrl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSliderCtrl
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2788777b9a5014790e094cf39871b3e4d40750fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e5b0fac11c2472bbaf0d5f4a3ede7d4f5658f9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl クラス
 Windows コモン スライダー コントロールの機能を提供します。  
@@ -172,10 +167,10 @@ class CSliderCtrl : public CWnd
   
  `CSliderCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmn.h  
   
-##  <a name="clearsel"></a>CSliderCtrl::ClearSel  
+##  <a name="clearsel"></a>  CSliderCtrl::ClearSel  
  スライダー コントロールの現在の選択をクリアします。  
   
 ```  
@@ -186,7 +181,7 @@ void ClearSel(BOOL bRedraw = FALSE);
  `bRedraw`  
  フラグを再描画します。 このパラメーターは場合**TRUE**スライダーが、選択が解除された後に再描画されます。 それ以外の場合、スライダーが再描画されません。  
   
-##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
+##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
  スライダー コントロールから現在の目盛りを削除します。  
   
 ```  
@@ -197,7 +192,7 @@ void ClearTics(BOOL bRedraw = FALSE);
  `bRedraw`  
  フラグを再描画します。 このパラメーターが場合**TRUE**スライダーが目盛りがクリアされた後に再描画されます。 それ以外の場合、スライダーが再描画されません。  
   
-##  <a name="create"></a>CSliderCtrl::Create  
+##  <a name="create"></a>  CSliderCtrl::Create  
  スライダー コントロールを作成し、それにアタッチ、`CSliderCtrl`オブジェクト。  
   
 ```  
@@ -231,7 +226,7 @@ virtual BOOL Create(
   
  スライダー コントロールに拡張ウィンドウ スタイルを適用するには、呼び出す[CreateEx](#createex)の代わりに**作成**です。  
   
-##  <a name="createex"></a>CSliderCtrl::CreateEx  
+##  <a name="createex"></a>  CSliderCtrl::CreateEx  
  コントロール (子ウィンドウ) を作成しに関連付けます、`CSliderCtrl`オブジェクト。  
   
 ```  
@@ -265,14 +260,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>コメント  
  使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。  
   
-##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
+##  <a name="csliderctrl"></a>  CSliderCtrl::CSliderCtrl  
  `CSliderCtrl` オブジェクトを構築します。  
   
 ```  
 CSliderCtrl();
 ```  
   
-##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
+##  <a name="getbuddy"></a>  CSliderCtrl::GetBuddy  
  特定の場所のスライダー コントロールの連動ウィンドウへのハンドルを取得します。  
   
 ```  
@@ -293,7 +288,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、Win32 メッセージの動作を実装して[TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178)Windows SDK で説明されている。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
   
-##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
+##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  スライダー コントロールのチャネルの外接する四角形の位置とサイズを取得します。  
   
 ```  
@@ -307,7 +302,7 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="remarks"></a>コメント  
  チャネルは、スライダーが移動すると、範囲を選択すると、強調表示を含む領域です。  
   
-##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
+##  <a name="getlinesize"></a>  CSliderCtrl::GetLineSize  
  スライダー コントロールの行のサイズを取得します。  
   
 ```  
@@ -320,7 +315,7 @@ int GetLineSize() const;
 ### <a name="remarks"></a>コメント  
  行サイズに影響をどの程度スライダーが移動、 **TB_LINEUP**と**TB_LINEDOWN**通知します。 行サイズの既定の設定は 1 です。  
   
-##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
+##  <a name="getnumtics"></a>  CSliderCtrl::GetNumTics  
  スライダー コントロールの目盛りの数を取得します。  
   
 ```  
@@ -330,7 +325,7 @@ UINT GetNumTics() const;
 ### <a name="return-value"></a>戻り値  
  スライダー コントロールでの目盛りの数。  
   
-##  <a name="getpagesize"></a>CSliderCtrl::GetPageSize  
+##  <a name="getpagesize"></a>  CSliderCtrl::GetPageSize  
  スライダー コントロールのページのサイズを取得します。  
   
 ```  
@@ -343,7 +338,7 @@ int GetPageSize() const;
 ### <a name="remarks"></a>コメント  
  ページ サイズに影響をどの程度スライダーが移動、 **TB_PAGEUP**と**TB_PAGEDOWN**通知します。  
   
-##  <a name="getpos"></a>CSliderCtrl::GetPos  
+##  <a name="getpos"></a>  CSliderCtrl::GetPos  
  スライダー コントロールのスライダーの現在位置を取得します。  
   
 ```  
@@ -353,7 +348,7 @@ int GetPos() const;
 ### <a name="return-value"></a>戻り値  
  現在位置を返します。  
   
-##  <a name="getrange"></a>CSliderCtrl::GetRange  
+##  <a name="getrange"></a>  CSliderCtrl::GetRange  
  スライダー コントロールのスライダーの最大と最小の位置を取得します。  
   
 ```  
@@ -372,7 +367,7 @@ void GetRange(
 ### <a name="remarks"></a>コメント  
  この関数によって参照される整数に値をコピーする`nMin`と`nMax`です。  
   
-##  <a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
+##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
  スライダー コントロールのスライダーの最大の位置を取得します。  
   
 ```  
@@ -382,7 +377,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>戻り値  
  コントロールの最大の位置。  
   
-##  <a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
+##  <a name="getrangemin"></a>  CSliderCtrl::GetRangeMin  
  スライダー コントロールのスライダーの最小位置を取得します。  
   
 ```  
@@ -392,7 +387,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>戻り値  
  コントロールの最小位置。  
   
-##  <a name="getselection"></a>CSliderCtrl::GetSelection  
+##  <a name="getselection"></a>  CSliderCtrl::GetSelection  
  スライダー コントロールの現在の選択範囲の開始と終了位置を取得します。  
   
 ```  
@@ -408,7 +403,7 @@ void GetSelection(
  `nMax`  
  現在の選択範囲の終了位置を受け取る整数への参照。  
   
-##  <a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
+##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
  現在の trackbar コントロールのスライダーの長さを取得します。  
   
 ```  
@@ -421,7 +416,7 @@ int GetThumbLength() const;
 ### <a name="remarks"></a>コメント  
  このメソッドは、送信、 [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) Windows SDK で説明するメッセージ。  
   
-##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
+##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  スライダー コントロールのスライダー (つまみ) に外接する四角形の位置とサイズを取得します。  
   
 ```  
@@ -432,7 +427,7 @@ void GetThumbRect(LPRECT lprc) const;
  `lprc`  
  ポインター、`CRect`関数が返す場合、スライダーの外接する四角形を格納しているオブジェクト。  
   
-##  <a name="gettic"></a>CSliderCtrl::GetTic  
+##  <a name="gettic"></a>  CSliderCtrl::GetTic  
  スライダー コントロールの目盛りの位置を取得します。  
   
 ```  
@@ -446,7 +441,7 @@ int GetTic(int nTic) const;
 ### <a name="return-value"></a>戻り値  
  指定された目盛りまたは場合は、1 の位置`nTic`有効なインデックスが指定されていません。  
   
-##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
+##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
  スライダー コントロールの目盛りの位置を格納する配列のアドレスを取得します。  
   
 ```  
@@ -456,7 +451,7 @@ DWORD* GetTicArray() const;
 ### <a name="return-value"></a>戻り値  
  スライダー コントロールの目盛りの位置を格納する配列のアドレス。  
   
-##  <a name="getticpos"></a>CSliderCtrl::GetTicPos  
+##  <a name="getticpos"></a>  CSliderCtrl::GetTicPos  
  ティックのスライダー コントロール内の物理の現在位置を取得します。  
   
 ```  
@@ -470,7 +465,7 @@ int GetTicPos(int nTic) const;
 ### <a name="return-value"></a>戻り値  
  指定された目盛りまたは場合は、1 のクライアント座標で物理的な位置。`nTic`有効なインデックスが指定されていません。  
   
-##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
  存在する場合は、スライダー コントロールに割り当てられているツールヒント コントロールへのハンドルを取得します。  
   
 ```  
@@ -485,7 +480,7 @@ CToolTipCtrl* GetToolTips() const;
   
  スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
   
-##  <a name="setbuddy"></a>CSliderCtrl::SetBuddy  
+##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  スライダー コントロールの連動ウィンドウとして、ウィンドウを割り当てます。  
   
 ```  
@@ -513,7 +508,7 @@ CWnd* SetBuddy(
   
  スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
   
-##  <a name="setlinesize"></a>CSliderCtrl::SetLineSize  
+##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  スライダー コントロールの行のサイズを設定します。  
   
 ```  
@@ -530,7 +525,7 @@ int SetLineSize(int nSize);
 ### <a name="remarks"></a>コメント  
  行サイズに影響をどの程度スライダーが移動、 **TB_LINEUP**と**TB_LINEDOWN**通知します。  
   
-##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
+##  <a name="setpagesize"></a>  CSliderCtrl::SetPageSize  
  スライダー コントロールのページのサイズを設定します。  
   
 ```  
@@ -547,7 +542,7 @@ int SetPageSize(int nSize);
 ### <a name="remarks"></a>コメント  
  ページ サイズに影響をどの程度スライダーが移動、 **TB_PAGEUP**と**TB_PAGEDOWN**通知します。  
   
-##  <a name="setpos"></a>CSliderCtrl::SetPos  
+##  <a name="setpos"></a>  CSliderCtrl::SetPos  
  スライダー コントロールのスライダーの現在の位置を設定します。  
   
 ```  
@@ -558,7 +553,7 @@ void SetPos(int nPos);
  `nPos`  
  新しいスライダー位置を指定します。  
   
-##  <a name="setrange"></a>CSliderCtrl::SetRange  
+##  <a name="setrange"></a>  CSliderCtrl::SetRange  
  スライダー コントロールのスライダーの範囲 (最小値と最大位置) を設定します。  
   
 ```  
@@ -578,7 +573,7 @@ void SetRange(
  `bRedraw`  
  再描画フラグ。 このパラメーターが場合**TRUE**スライダーが再描画される範囲を設定した後です。 それ以外の場合、スライダーが再描画されません。  
   
-##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
+##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
  スライダー コントロールのスライダーの最大範囲を設定します。  
   
 ```  
@@ -594,7 +589,7 @@ void SetRangeMax(
  `bRedraw`  
  再描画フラグ。 このパラメーターが場合**TRUE**スライダーが再描画される範囲を設定した後です。 それ以外の場合、スライダーが再描画されません。  
   
-##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
+##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
  スライダー コントロールのスライダーの最小の範囲を設定します。  
   
 ```  
@@ -610,7 +605,7 @@ void SetRangeMin(
  `bRedraw`  
  再描画フラグ。 このパラメーターが場合**TRUE**スライダーが再描画される範囲を設定した後です。 それ以外の場合、スライダーが再描画されません。  
   
-##  <a name="setselection"></a>CSliderCtrl::SetSelection  
+##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
  スライダー コントロールの現在の選択範囲の開始と終了位置を設定します。  
   
 ```  
@@ -626,7 +621,7 @@ void SetSelection(
  `nMax`  
  スライダーの位置を終了しています。  
   
-##  <a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
+##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
  現在の trackbar コントロールのスライダーの長さを設定します。  
   
 ```  
@@ -654,7 +649,7 @@ void SetThumbLength(int nLength);
   
  [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
-##  <a name="settic"></a>CSliderCtrl::SetTic  
+##  <a name="settic"></a>  CSliderCtrl::SetTic  
  スライダー コントロールの目盛りの位置を設定します。  
   
 ```  
@@ -668,7 +663,7 @@ BOOL SetTic(int nTic);
 ### <a name="return-value"></a>戻り値  
  目盛りが設定されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
+##  <a name="setticfreq"></a>  CSliderCtrl::SetTicFreq  
  スライダーの目盛りでマークの表示頻度を設定します。  
   
 ```  
@@ -684,7 +679,7 @@ void SetTicFreq(int nFreq);
   
  コントロールを作成する必要があります、`TBS_AUTOTICKS`この関数を使用するスタイルです。 詳細については、次を参照してください。 [CSliderCtrl::Create](#create)です。  
   
-##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
+##  <a name="settipside"></a>  CSliderCtrl::SetTipSide  
  Trackbar コントロールで使用するツール ヒント コントロールを位置。  
   
 ```  
@@ -701,7 +696,7 @@ int SetTipSide(int nLocation);
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、Win32 メッセージの動作を実装して**TBM_SETTIPSIDE**Windows SDK で説明されている。 スライダー コントロールを使用する、 **TBS_TOOLTIPS**ツールヒントの表示スタイルを設定します。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
   
-##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  スライダー コントロールにツールヒント コントロールを割り当てます。  
   
 ```  
@@ -715,7 +710,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、Win32 メッセージの動作を実装して[TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242)Windows SDK で説明されている。 スライダー コントロールを作成すると、 **TBS_TOOLTIPS**スタイル、スライダーの現在の位置を表示する、スライダーの横に表示される既定のツールヒント コントロールを作成します。 スライダー コントロールのスタイルの説明は、次を参照してください。 [Trackbar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK に含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル CMNCTRL2](../../visual-cpp-samples.md)   
  [CWnd クラス](../../mfc/reference/cwnd-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

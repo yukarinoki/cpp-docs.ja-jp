@@ -1,13 +1,10 @@
 ---
-title: "OLE の背景知識: 実装戦略 |Microsoft ドキュメント"
-ms.custom: 
+title: 'OLE の背景知識: 実装戦略 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7325cb5cb7be4750507d8694ba8bc5efc3ce8606
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe15690b50c9398d660ca53effbec23cc35f49e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE の背景知識 : 実装の方法
 アプリケーションによっては、OLE サポートを追加するための 4 つの可能な実装戦略があります。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  読み取りを行ってください戦略を決定した後、[コンテナー](../mfc/containers.md)または[サーバー](../mfc/servers.md)記事の種類に応じて作成するアプリケーションの) またはサンプル プログラムまたはその両方を確認します。 MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)コンテナーと、サーバーのさまざまな側面をそれぞれ実装方法について説明します。 これらの記事全体でさまざまな時点で説明されている手法の例として、これらのサンプルでの特定の関数に呼ばれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE の背景知識](../mfc/ole-background.md)   
  [コンテナー: コンテナーの実装](../mfc/containers-implementing-a-container.md)   
  [サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)   

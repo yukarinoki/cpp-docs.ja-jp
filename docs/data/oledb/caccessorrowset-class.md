@@ -1,12 +1,9 @@
 ---
-title: "CAccessorRowset クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CAccessorRowset クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CAccessorRowset
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CAccessorRowset class
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9da490873c14ea04f55f223e38009ac1952fe6d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27d2153c6f600c3a5c75c1218e8751baaabcf030
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 行セットと 1 つのクラスに関連付けられているそのアクセサーをカプセル化します。  
@@ -54,7 +49,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 |||  
 |-|-|  
-|[Bind](../../data/oledb/caccessorrowset-bind.md)|バインディングが作成 (際に使用される**bBind**で false として指定された[ccommand::open](../../data/oledb/ccommand-open.md))。|  
+|[バインド](../../data/oledb/caccessorrowset-bind.md)|バインディングが作成 (際に使用される**bBind**で false として指定された[ccommand::open](../../data/oledb/ccommand-open.md))。|  
 |[CAccessorRowset](../../data/oledb/caccessorrowset-caccessorrowset.md)|コンストラクターです。|  
 |[閉じる](../../data/oledb/caccessorrowset-close.md)|行セットとすべてのアクセサーを閉じます。|  
 |[FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)|現在のレコードを解放する必要があるすべての列を解放します。|  
@@ -63,9 +58,9 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ## <a name="remarks"></a>コメント  
  クラス`TAccessor`アクセサーを管理します。 クラス*TRowset*行セットを管理します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

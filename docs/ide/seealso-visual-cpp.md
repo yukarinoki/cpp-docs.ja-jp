@@ -1,13 +1,10 @@
 ---
-title: "&lt;seealso&gt; (Visual C) |Microsoft ドキュメント"
-ms.custom: 
+title: '&lt;seealso&gt; (Visual C) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - <seealso>
 - seealso
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e1d50162989e5148cd0755afb48f4413ce51269
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a726a2fa1694fd346a6632fdc5e40bd53547fc8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltseealsogt-visual-c"></a>&lt;seealso&gt; (Visual C)
 \<seealso > タグを使用して、「See Also」セクションに表示するテキストを指定することができます。 [\<see>](../ide/see-visual-cpp.md) タグを使用すると、テキスト内からリンクを指定できます。  
@@ -78,5 +73,5 @@ public ref struct B {
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

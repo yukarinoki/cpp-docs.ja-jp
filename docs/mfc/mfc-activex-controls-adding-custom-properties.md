@@ -1,30 +1,25 @@
 ---
-title: "MFC ActiveX コントロール: カスタム プロパティの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: カスタム プロパティの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX コントロール : カスタム プロパティの追加
 カスタム プロパティとは異なり、ストック プロパティのカスタム プロパティがによって既に実装されていない、`COleControl`クラスです。 カスタム プロパティを使用して、特定の状態やコントロールを使用してプログラマに ActiveX コントロールの外観を公開できます。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      パラメーター化されたプロパティの追加ウィザードによってサポートされています。 使用にアクセスする一連の値、コントロールの 1 つのプロパティ (プロパティ配列とも呼ばれます)、パラメーター化されたプロパティを使用できます。 この実装のディスパッチ マップ エントリ マクロは`DISP_PROPERTY_PARAM`します。 この型の実装の詳細については、次を参照してください。[パラメーター化されたプロパティを実装する](../mfc/mfc-activex-controls-advanced-topics.md)記事 ActiveX コントロール: 高度なトピックです。  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>使用して、プロパティの追加ウィザードのカスタム プロパティを追加するには  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用して、プロパティの追加ウィザードのカスタム プロパティを追加するには  
  次の手順では、CircleOffset で、Get と Set メソッドの実装を使用して、カスタム プロパティを追加することを示します。 CircleOffset のカスタム プロパティは、コントロールの外接する四角形の中心から円をオフセットするコントロールのユーザーを使用できます。 カスタム プロパティを Get/set メソッド以外の実装を追加する手順は、よく似ています。  
   
  これと同じ手順は、必要なその他のカスタム プロパティを追加するも使用できます。 CircleOffset プロパティの名前およびパラメーターについて、カスタム プロパティの名前に置き換えます。  
@@ -72,15 +67,15 @@ ms.lasthandoff: 12/21/2017
   
 5.  **プロパティ名**ボックスに、入力`CircleOffset`です。  
   
-6.  **[実装型]**として、 **[Get/Set メソッド]**をクリックします。  
+6.  **[実装型]** として、 **[Get/Set メソッド]** をクリックします。  
   
 7.  **プロパティの型**ボックスで、**短い**です。  
   
 8.  Get および Set 関数に一意の名前を入力するか、既定の名前を受け入れます。  
   
-9. **[完了]**をクリックします。  
+9. **[完了]** をクリックします。  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>カスタム プロパティのプロパティ ウィザードによる変更を追加します。  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> カスタム プロパティのプロパティ ウィザードによる変更を追加します。  
  プロパティの追加ウィザードがヘッダーに変更をによって CircleOffset のカスタム プロパティを追加する場合 (です。H) と実装 (です。コントロールのクラス CPP) ファイル。  
   
  次の行に追加します。H ファイルと呼ばれる 2 つの関数の宣言を`GetCircleOffset`と`SetCircleOffset`:  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
   
  プロパティの追加ウィザードに自動的にによって追加される、通話にメモ[SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag)、集合関数の本体にします。 この関数を呼び出すことでは、変更済みとしてにコントロールをマークします。 コントロールが変更された場合は、コンテナーを保存すると、新しい状態が保存されます。 コントロールの永続的な状態の一部として保存し、プロパティ値が変更されるたびに、この関数を呼び出す必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)   
  [MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)   

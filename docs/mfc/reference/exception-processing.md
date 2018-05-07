@@ -1,13 +1,10 @@
 ---
-title: "例外の処理 |Microsoft ドキュメント"
-ms.custom: 
+title: 例外の処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad6183d15b378feb7ec96aedff6a0013a2dd24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-processing"></a>例外処理
 プログラムを実行するとき、多くの異常な状態と「例外」というエラーが発生する可能性がします。 これらには、メモリ、リソース割り当てのエラー、およびファイルを検索する障害の不足が含まれます。  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[AfxAbort](#afxabort)|呼ばれるときに致命的なエラーにアプリケーションを終了するに発生します。|  
   
-##  <a name="try"></a>再試行してください。  
+##  <a name="try"></a>  再試行してください。  
  設定、**再試行**ブロックします。  
   
 ```   
@@ -116,10 +111,10 @@ TRY
 ### <a name="example"></a>例  
  例を参照して[キャッチ](#catch)です。  
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 ヘッダー: afx.h
 
-##  <a name="catch"></a>CATCH  
+##  <a name="catch"></a>  CATCH  
  最初に、上記でスローされた例外の種類をキャッチするコードのブロックを定義**再試行**ブロックします。  
   
 ```   
@@ -149,7 +144,7 @@ CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL  
+##  <a name="catch_all"></a>  CATCH_ALL  
  上記でスローされたすべての例外の種類をキャッチするコードのブロックを定義**再試行**ブロックします。  
   
 ```   
@@ -171,10 +166,10 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="example"></a>例  
  例を参照して[解放](../../mfc/reference/cfile-class.md#abort)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH  
+##  <a name="and_catch"></a>  AND_CATCH  
  直前に追加の例外型をキャッチするためのコードのブロックを定義**再試行**ブロックします。  
   
 ```   
@@ -191,7 +186,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="remarks"></a>コメント  
  使用して、**キャッチ**1 つの例外の種類をキャッチする、`AND_CATCH`マクロをキャッチします。 終了、**再試行**ブロックを`END_CATCH`マクロです。  
   
- 例外処理コードは、必要に応じて、例外の特定の原因に関する詳細情報を取得する例外オブジェクトを問い合わせることができます。 呼び出す、`THROW_LAST`内でのマクロ、 `AND_CATCH` shift キーを押し、[次へ] の外側の例外フレームを処理するブロックします。 `AND_CATCH`上記の末尾をマーク**キャッチ**または`AND_CATCH`ブロックします。  
+ 例外処理コードは、必要に応じて、例外の特定の原因に関する詳細情報を取得する例外オブジェクトを問い合わせることができます。 呼び出す、`THROW_LAST`内でのマクロ、 `AND_CATCH` shift キーを押し、[次へ] の外側の例外フレームを処理するブロックします。 `AND_CATCH` 上記の末尾をマーク**キャッチ**または`AND_CATCH`ブロックします。  
   
 > [!NOTE]
 >  `AND_CATCH`ブロックは、C++ のスコープ (中かっこで囲んで示して) として定義します。 このスコープ内の変数を宣言する場合は、そのスコープ内でのみアクセスされることに注意してください。 これにも当てはまります、*ことは*変数。  
@@ -199,9 +194,9 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>例  
  例を参照して[キャッチ](#catch)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
  直前に追加の例外型をキャッチするためのコードのブロックを定義**再試行**ブロックします。  
   
 ```   
@@ -215,15 +210,15 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="remarks"></a>コメント  
  使用して、**キャッチ**1 つの例外の種類をキャッチする、`AND_CATCH_ALL`マクロを他のすべての後続の種類をキャッチします。 使用する場合`AND_CATCH_ALL`、終了、**再試行**ブロックを`END_CATCH_ALL`マクロです。  
   
- 例外処理コードは、必要に応じて、例外の特定の原因に関する詳細情報を取得する例外オブジェクトを問い合わせることができます。 呼び出す、`THROW_LAST`内でのマクロ、 `AND_CATCH_ALL` shift キーを押し、[次へ] の外側の例外フレームを処理するブロックします。 `AND_CATCH_ALL`上記の末尾をマーク**キャッチ**または`AND_CATCH_ALL`ブロックします。  
+ 例外処理コードは、必要に応じて、例外の特定の原因に関する詳細情報を取得する例外オブジェクトを問い合わせることができます。 呼び出す、`THROW_LAST`内でのマクロ、 `AND_CATCH_ALL` shift キーを押し、[次へ] の外側の例外フレームを処理するブロックします。 `AND_CATCH_ALL` 上記の末尾をマーク**キャッチ**または`AND_CATCH_ALL`ブロックします。  
   
 > [!NOTE]
 >  `AND_CATCH_ALL`ブロックは、C++ のスコープ (中かっこで囲んで示して) として定義します。 このスコープ内の変数を宣言する場合は、そのスコープ内でのみアクセスされることに注意してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="end_catch"></a>END_CATCH  
+##  <a name="end_catch"></a>  END_CATCH  
  最後の終了をマーク**キャッチ**または`AND_CATCH`ブロックします。  
   
 ```   
@@ -233,20 +228,20 @@ END_CATCH
 ### <a name="remarks"></a>コメント  
  詳細については、`END_CATCH`マクロ、記事を参照して[例外](../../mfc/exception-handling-in-mfc.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL  
  最後の終了をマーク`CATCH_ALL`または`AND_CATCH_ALL`ブロックします。  
   
 ```   
 END_CATCH_ALL  
 ```  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="throw"></a>スロー (MFC)  
+##  <a name="throw"></a>  スロー (MFC)  
  指定された例外をスローします。  
   
 ```   
@@ -262,10 +257,10 @@ THROW(exception_object_pointer)
   
  詳細については、記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST  
+##  <a name="throw_last"></a>  THROW_LAST  
  例外を次にスローバック外部**キャッチ**ブロックします。  
   
 ```   
@@ -280,10 +275,10 @@ THROW_LAST()
 ### <a name="example"></a>例  
  例を参照して[解放](../../mfc/reference/cfile-class.md#abort)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
+##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
  アーカイブの例外をスローします。  
   
 ```   
@@ -297,10 +292,10 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
  `lpszArchiveName`  
  名前を含む文字列を指す、 `CArchive` (使用可能な場合)、例外の原因となったオブジェクトです。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
+##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
  ファイルの例外をスローします。  
   
 ```   
@@ -323,10 +318,10 @@ void AfxThrowFileException(
 ### <a name="remarks"></a>コメント  
  オペレーティング システム エラー コードに基づく原因を特定するを担当しています。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
 無効な引数の例外をスローします。  
    
 ### <a name="syntax"></a>構文    
@@ -337,16 +332,16 @@ void AfxThrowInvalidArgException( );
 ### <a name="remarks"></a>コメント  
  無効な引数を使用する場合は、この関数が呼び出されます。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [CInvalidArgException クラス](cinvalidargexception-class.md)   
  [スローします。](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
+##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException  
  メモリ不足の例外をスローします。  
   
 ```   
@@ -356,20 +351,20 @@ void AfxThrowMemoryException();
 ### <a name="remarks"></a>コメント  
  場合、この関数を呼び出す基になるシステム メモリ アロケーターへの呼び出し (など`malloc`と[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 関数) は失敗します。 呼び出す必要はありません**新しい**ため**新しい**メモリ割り当てに失敗した場合に自動的にメモリ不足例外がスローされます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
  サポートされていない機能を要求の結果である例外をスローします。  
   
 ```  
 void AfxThrowNotSupportedException(); 
 ```  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
  リソースの例外をスローします。  
   
 ```   
@@ -379,10 +374,10 @@ void  AfxThrowResourceException();
 ### <a name="remarks"></a>コメント  
  この関数は通常、Windows のリソースを読み込むことができないときに呼び出されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
  エンドユーザーの操作を停止する例外をスローします。  
   
 ```   
@@ -392,10 +387,10 @@ void AfxThrowUserException();
 ### <a name="remarks"></a>コメント  
  この関数は通常、直後に呼び出される`AfxMessageBox`をユーザーに、エラーが発生しました。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
  OLE オートメーション関数内で例外をスローするのにには、この関数を使用します。  
   
 ```   
@@ -429,10 +424,10 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
+##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
  型のオブジェクトを作成する`COleException`例外をスローします。  
   
 ``` 
@@ -450,10 +445,10 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ### <a name="remarks"></a>コメント  
  受け取るバージョンで、`HRESULT`引数に変換結果コード、対応するよう`SCODE`です。 詳細については`HRESULT`と`SCODE`を参照してください[COM エラー コードの構造体](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
  型の例外をスローするには、この関数を呼び出す[CDaoException](../../mfc/reference/cdaoexception-class.md)独自のコードからです。  
   
 ```   
@@ -474,10 +469,10 @@ void AFXAPI AfxThrowDaoException(
   
  MFC DAO クラスに関連する例外については、クラスを参照してください。`CDaoException`本書と、アーティクルで[例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
  型の例外をスローするには、この関数を呼び出す`CDBException`独自のコードからです。  
   
 ```  
@@ -502,10 +497,10 @@ void AfxThrowDBException(
   
  については、 **RETCODE** ODBC で定義されている値は、Windows SDK の第 8 章「を取得するステータスおよびエラーについては、」を参照してください。 これらのコードに MFC の拡張機能の概要については、クラスを参照してください。 [CDBException](../../mfc/reference/cdbexception-class.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h  
   
-##  <a name="afxabort"></a>AfxAbort  
+##  <a name="afxabort"></a>  AfxAbort  
  MFC によって提供される既定の終了関数。  
   
 ```   
@@ -513,14 +508,14 @@ void  AfxAbort();
 ```  
   
 ### <a name="remarks"></a>コメント  
- `AfxAbort`内部的に呼び出されます MFC メンバー関数によってキャッチされない例外は処理できないなどの致命的なエラーがある場合。 呼び出すことができます`AfxAbort`まれな場合は、回復することはできません、致命的なエラーが発生したときにします。  
+ `AfxAbort` 内部的に呼び出されます MFC メンバー関数によってキャッチされない例外は処理できないなどの致命的なエラーがある場合。 呼び出すことができます`AfxAbort`まれな場合は、回復することはできません、致命的なエラーが発生したときにします。  
   
 ### <a name="example"></a>例  
  例を参照して[キャッチ](#catch)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afx.h   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)   
  [CException クラス](../../mfc/reference/cexception-class.md)

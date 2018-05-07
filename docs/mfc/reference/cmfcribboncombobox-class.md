@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonComboBox クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCRibbonComboBox クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonComboBox
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f748630549c0a26a2818bc7c96e5162d7d36ed4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox クラス
 `CMFCRibbonComboBox`クラス リボン バー、リボン パネル、またはリボン ポップアップ メニューに追加できるコンボ ボックス コントロールを実装します。  
@@ -74,7 +69,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>コンストラクター  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|CMFCRibbonComboBox オブジェクトを構築します。|  
   
@@ -118,10 +113,10 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxribboncombobox.h  
   
-##  <a name="additem"></a>CMFCRibbonComboBox::AddItem  
+##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
  リスト ボックスに一意の項目を追加します。  
   
 ```  
@@ -140,7 +135,7 @@ virtual INT_PTR AddItem(
 ### <a name="return-value"></a>戻り値  
  追加する項目の 0 から始まるインデックス。  
   
-##  <a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox  
+##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox  
  `CMFCRibbonComboBox` オブジェクトを構築します。  
   
 ```  
@@ -161,7 +156,7 @@ CMFCRibbonComboBox();
  コンボ ボックスの ID。  
   
  [入力] `bHasEditBox`  
- `TRUE`コントロール内で、編集ボックスを使用する場合`FALSE`それ以外の場合。  
+ `TRUE` コントロール内で、編集ボックスを使用する場合`FALSE`それ以外の場合。  
   
  [入力] `nWidth`  
  (ピクセル単位) です。 コンボ ボックスの幅または、既定の幅の場合は-1。  
@@ -175,7 +170,7 @@ CMFCRibbonComboBox();
 ### <a name="remarks"></a>コメント  
  既定の幅は、108 ピクセルです。  
   
-##  <a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem  
+##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
  リスト ボックスから、指定した項目を削除します。  
   
 ```  
@@ -196,11 +191,11 @@ BOOL DeleteItem(LPCTSTR lpszText);
  削除するアイテムの文字列です。 同じ文字列での複数の項目がある場合は、最初の項目は削除されます。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`指定した項目が削除された場合それ以外の場合、`FALSE`です。  
+ `TRUE` 指定した項目が削除された場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize  
+##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
  リスト ボックスのドロップダウンしたときにサイズを変更できるかどうかを指定します。  
   
 ```  
@@ -209,12 +204,12 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`サイズ変更を有効にするには`FALSE`サイズ変更を無効にします。  
+ `TRUE` サイズ変更を有効にするには`FALSE`サイズ変更を無効にします。  
   
 ### <a name="remarks"></a>コメント  
  サイズ変更を有効にすると、リスト ボックスは表示する項目に合わせてサイズを変更します。  
   
-##  <a name="finditem"></a>CMFCRibbonComboBox::FindItem  
+##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
  指定した文字列と一致するリスト ボックス内の最初の項目のインデックスを返します。  
   
 ```  
@@ -230,7 +225,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getcount"></a>CMFCRibbonComboBox::GetCount  
+##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
  リスト ボックスで項目の数を返します。  
   
 ```  
@@ -242,7 +237,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel  
+##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
  リスト ボックスで現在選択されている項目のインデックスを取得します。  
   
 ```  
@@ -252,7 +247,7 @@ int GetCurSel() const;
 ### <a name="return-value"></a>戻り値  
  リスト ボックスで現在選択されている項目の 0 から始まるインデックスまたは、項目が選択されていない場合は-1。  
   
-##  <a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight  
+##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
  リスト ボックスがドロップダウン リスト ボックスの高さを取得します。  
   
 ```  
@@ -264,7 +259,7 @@ int GetDropDownHeight();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
  中間モードで表示されているコンボ ボックスのサイズを返します。  
   
 ```  
@@ -281,7 +276,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>コメント  
  サイズの小さい画像を表示するとき、返されるサイズは、コンボ ボックスのサイズに基づきます。  
   
-##  <a name="getitem"></a>CMFCRibbonComboBox::GetItem  
+##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
  リスト ボックスで指定したインデックス位置にある項目に関連付けられている文字列を返します。  
   
 ```  
@@ -297,7 +292,7 @@ LPCTSTR GetItem(int iIndex) const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData  
+##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData  
  リスト ボックスで指定したインデックス位置にある項目に関連付けられているデータを返します。  
   
 ```  
@@ -311,7 +306,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="return-value"></a>戻り値  
  項目に関連付けられたデータ0 または項目が存在しない場合、またはインデックス パラメーターが-1 とリスト ボックスで選択した項目がない場合。  
   
-##  <a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox  
+##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
  コントロールが編集ボックスに含まれるかどうかを示します。  
   
 ```  
@@ -319,11 +314,11 @@ BOOL HasEditBox() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`コントロールには、エディット ボックス; が含まれている場合それ以外の場合、`FALSE`です。  
+ `TRUE` コントロールには、エディット ボックス; が含まれている場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList  
+##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList  
  リスト ボックスのサイズを変更できるかどうかを示します。  
   
 ```  
@@ -331,12 +326,12 @@ BOOL IsResizeDropDownList() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`リスト ボックスのサイズを変更する場合それ以外の場合`FALSE`です。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+ `TRUE` リスト ボックスのサイズを変更する場合それ以外の場合`FALSE`です。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
 ### <a name="remarks"></a>コメント  
  使用してリスト ボックスのサイズ変更を有効にする、 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)メソッドです。  
   
-##  <a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem  
+##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem  
  ユーザーがリスト ボックスで項目を選択したときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -350,7 +345,7 @@ virtual void OnSelectItem(int nItem);
 ### <a name="remarks"></a>コメント  
  ユーザー入力の選択内容を処理する場合は、このメソッドをオーバーライドします。  
   
-##  <a name="removeallitems"></a>CMFCRibbonComboBox::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
  リスト ボックスからすべてのアイテムを削除し、編集ボックスをクリアします。  
   
 ```  
@@ -359,7 +354,7 @@ void RemoveAllItems();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="selectitem"></a>CMFCRibbonComboBox::SelectItem  
+##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem  
  リスト ボックスの項目を選択します。  
   
 ```  
@@ -380,11 +375,11 @@ BOOL SelectItem(LPCTSTR lpszText);
  リスト ボックス内の項目の文字列です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`メソッドが成功した場合それ以外の場合`FALSE`です。  
+ `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight  
  にドロップしたときに、リスト ボックスの高さを設定します。  
   
 ```  
@@ -398,7 +393,7 @@ void SetDropDownHeight(int nHeight);
 ### <a name="remarks"></a>コメント  
  既定の高さは、150 ピクセルです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonEdit クラス](../../mfc/reference/cmfcribbonedit-class.md)

@@ -2,11 +2,8 @@
 title: 関数インライン展開の問題 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97ffa56fc748eea8f65f5fe79c7a9defa7238f82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 670136a61d5991655a5d99e8257c6bcc907f2dfb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-inlining-problems"></a>関数インライン展開の問題
 関数のインライン展開を使用している必要があります。  
@@ -67,7 +62,7 @@ int main() {
 }  
 ```  
   
- 使用している場合、`#pragma inline_depth`コンパイラ ディレクティブを確認する値が 2 以上設定されています。 ゼロの値がオフにインライン展開されます。 使用しているかどうかを確認も、 **/Ob1**または**/Ob2**コンパイラ オプション。  
+ 使用している場合、`#pragma inline_depth`コンパイラ ディレクティブを確認する値が 2 以上設定されています。 ゼロの値がオフにインライン展開されます。 使用しているかどうかを確認も、 **/Ob1**または **/Ob2**コンパイラ オプション。  
   
  異なるモジュールでのインライン バージョンおよびインライン以外のコンパイル オプションが混在と、問題が発生することができる場合があります。 C++ ライブラリがオンになっている関数のインライン展開で作成されたかどうか ([/Ob1](../../build/reference/ob-inline-function-expansion.md)または[/Ob2](../../build/reference/ob-inline-function-expansion.md)) が、関数を記述する、対応するヘッダー ファイル (オプションではありません) を無効になっていると、エラー LNK2001 が発生します。 関数は、コードにインライン展開されてから取得、ヘッダー ファイルが、参照を解決するのにはアドレスがありませんので、ライブラリ ファイルではありません。  
   
@@ -104,5 +99,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンカー ツール エラー LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

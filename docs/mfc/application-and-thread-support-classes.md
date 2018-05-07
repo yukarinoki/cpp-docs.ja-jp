@@ -1,13 +1,10 @@
 ---
-title: "アプリケーションおよびスレッド サポート クラス |Microsoft ドキュメント"
-ms.custom: 
+title: アプリケーションおよびスレッド サポート クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>アプリケーションおよびスレッド サポート クラス
 各アプリケーションには、1 つのアプリケーション オブジェクトです。このオブジェクトは、実行中のプログラムの他のオブジェクトを調整しから派生した`CWinApp`です。  
   
  Microsoft Foundation Class (MFC) ライブラリには、複数のアプリケーション内での実行スレッドがサポートしています。 すべてのアプリケーションは、少なくとも 1 つのスレッドをいる必要があります。によって使用されるスレッド、`CWinApp`オブジェクトは、このプライマリ スレッドです。  
   
- `CWinThread`オペレーティング システムのスレッドの機能の一部をカプセル化します。 複数のスレッドをより簡単に使用するには、MFC クラスも用意されて同期オブジェクト Win32 の同期オブジェクトを C++ インターフェイスを提供します。  
+ `CWinThread` オペレーティング システムのスレッドの機能の一部をカプセル化します。 複数のスレッドをより簡単に使用するには、MFC クラスも用意されて同期オブジェクト Win32 の同期オブジェクトを C++ インターフェイスを提供します。  
   
 ## <a name="application-and-thread-classes"></a>アプリケーションおよびスレッド クラス  
  [CWinApp](../mfc/reference/cwinapp-class.md)  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
  すべてのスレッドの基本クラスです。 を直接使用するか、からクラスを派生`CWinThread`場合は、スレッドがユーザー インターフェイス機能を実行します。 `CWinApp` は、`CWinThread` から派生しています。  
   
 ## <a name="synchronization-object-classes"></a>同期オブジェクト クラス  
- [関数](../mfc/reference/csyncobject-class.md)  
+ [CSyncObject](../mfc/reference/csyncobject-class.md)  
  同期オブジェクト クラスの基本クラス。  
   
  [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
@@ -81,6 +76,6 @@ ms.lasthandoff: 12/21/2017
  [関数](../mfc/reference/crecentfilelist-class.md)  
  最近使用した (MRU) ファイルの一覧を保持します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

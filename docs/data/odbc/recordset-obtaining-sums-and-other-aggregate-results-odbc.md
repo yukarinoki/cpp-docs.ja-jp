@@ -1,13 +1,10 @@
 ---
-title: "レコード セット: 合計およびその他の集計の結果 (ODBC) を取得する |Microsoft ドキュメント"
-ms.custom: 
+title: 'レコード セット: 合計およびその他の集計の結果 (ODBC) を取得する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>レコードセット: 集計値の計算 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  これらの SQL 関数を使用するは、データ ソースからレコードを抽出するのではなく、データ ソース内のレコードに関する統計情報を取得します。 1 つの通常作成されるレコード セットで構成されます (すべての列が場合の集計) レコードを格納している値。 (を使用した場合、複数のレコードにすることがあります、 **GROUP BY**句)。この値は、計算または SQL 関数によって抽出の結果を示します。  
   
 > [!TIP]
->  SQL を追加する**GROUP BY**句 (および場合によって、 **HAVING**句)、SQL ステートメントの末尾に追加**か**です。 例:  
+>  SQL を追加する**GROUP BY**句 (および場合によって、 **HAVING**句)、SQL ステートメントの末尾に追加**か**です。 例えば:  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  
@@ -102,6 +97,6 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

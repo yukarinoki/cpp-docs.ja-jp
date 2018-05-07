@@ -1,13 +1,10 @@
 ---
-title: "Wm _ で始まるメッセージのハンドラー |Microsoft ドキュメント"
-ms.custom: 
+title: Wm _ で始まるメッセージのハンドラー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WM_
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WM_ messages [MFC]
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b36a8eaabec59b7e900cfffe03a1673e44198633
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f4c55eef55cb1258932f5e503c82c1ee824246
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-wm-messages"></a>WM_ で始まるメッセージのハンドラー
 次のトピックは、マップのエントリに対応します。  
@@ -41,6 +36,6 @@ ms.lasthandoff: 12/21/2017
 |[S](../../mfc/reference/wm-messages-s.md)|**ON_WM_SETCURSOR**を通じて**ON_WM_SYSKEYUP**|  
 |[T ~ Z](../../mfc/reference/wm-messages-t-z.md)|**ON_WM_TIMECHANGE**を通じて**ON_WM_WININICHANGE**|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)
 

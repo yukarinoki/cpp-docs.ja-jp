@@ -1,11 +1,8 @@
 ---
-title: "Platform::mtathreadattribute クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::mtathreadattribute クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::MTAThreadAttribute::Equals
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 626d80a40c24f81b8723c4e1b8d916f5a3ba2bd6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4dd035a3a11898230cb7f8a14db0b98ff1611120
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute クラス
 アプリケーションのスレッド モデルがマルチスレッド アパートメント (MTA) であることを示します。  
@@ -48,7 +43,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>パブリック メソッド  
  MTAThreadAttribute 属性が継承[platform::object クラス](../cppcx/platform-object-class.md)です。 また MTAThreadAttribute は次のメンバーをオーバーロードしたり、含んだりします。  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|指定したオブジェクトが、現在のオブジェクトと等しいかどうかを判断します。|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|  
@@ -57,7 +52,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Platform`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **メタデータ:** platform.winmd  
   
  **名前空間:** Platform  
@@ -119,5 +114,5 @@ public:String^ ToString()
 ### <a name="return-value"></a>戻り値  
  現在のオブジェクトを表す文字列。  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

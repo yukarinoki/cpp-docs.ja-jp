@@ -1,13 +1,10 @@
 ---
-title: "XML ドキュメント (Visual C) |Microsoft ドキュメント"
-ms.custom: 
+title: XML ドキュメント (Visual C) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17853a43d3a94be779b659b0da825467fa66f61c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ee19c51c04fa32ab3c2f1810bb963b22ec7e890
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-documentation-visual-c"></a>XML に関するドキュメント (Visual C++)
 Visual c では、.xml ファイルに処理される、ソース コードにコメントを追加できます。 このファイルは、コードでクラスのドキュメントを作成するプロセスへの入力にできます。  
@@ -55,5 +50,5 @@ Visual c では、.xml ファイルに処理される、ソース コードに�
   
  ドキュメント コメントのテキストの XML 特殊文字を配置する必要がある場合は、XML エンティティ内または CDATA セクションを使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

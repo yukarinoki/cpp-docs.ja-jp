@@ -1,12 +1,9 @@
 ---
-title: "Irowsetlocateimpl::getrowsbybookmark |Microsoft ドキュメント"
-ms.custom: 
+title: Irowsetlocateimpl::getrowsbybookmark |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl::GetRowsByBookmark
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetRowsByBookmark method
 ms.assetid: 07906e42-3582-427e-812a-aa19791e3c56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 68f546472e95147046b702a62be835ad64091d47
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84bfc1333729b9ed097f50ae98fca997b45e7da5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetlocateimplgetrowsbybookmark"></a>IRowsetLocateImpl::GetRowsByBookmark
 指定されたブックマークに一致する 1 つまたは複数の行をフェッチします。  
@@ -53,9 +48,9 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>コメント  
  ブックマークは、定義する値または OLE DB[標準ブックマーク](https://msdn.microsoft.com/en-us/library/ms712954.aspx)(**DBBMK_FIRST**または**DBBMK_LAST**)。 カーソル位置は変更されません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IRowsetLocateImpl クラス](../../data/oledb/irowsetlocateimpl-class.md)   
  [IRowsetLocateImpl::GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)

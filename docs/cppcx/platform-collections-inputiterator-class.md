@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::InputIterator クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::Collections::InputIterator クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator クラス
 Windows ランタイムから派生したコレクションの標準テンプレート ライブラリ InputIterator を提供します。  
@@ -71,7 +66,7 @@ class InputIterator;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `InputIterator`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** collection.h  
   
  **名前空間:** Platform::Collections  
@@ -92,7 +87,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
+## <a name="operator-arrow"></a>  Inputiterator::operator-&gt;演算子
 現在の InputIterator により指定される要素のアドレスを取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -175,5 +170,5 @@ bool operator!=(const InputIterator& other) const;
  現在の InputIterator が `true` と等しくない場合は `other`。それ以外の場合は `false`。   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

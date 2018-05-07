@@ -1,13 +1,10 @@
 ---
-title: "Windows 用のアプリケーションを作成するクラスを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: Windows 用のアプリケーションを作成するクラスを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a8edcabee2f835bd3a3acd0ff3789690764c397
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa126f2772e1672a1484453fdffdd487b6c45959
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>クラスを使用した Windows アプリケーションの作成
 まとめると、Microsoft Foundation Class (MFC) ライブラリのクラスには、「アプリケーション フレームワーク、」Windows オペレーティング システム用のアプリケーションをビルドするを構成します。 非常に一般的なレベルでは、フレームワークは、アプリケーションのスケルトンを定義し、スケルトンに配置可能な標準のユーザー インターフェイスの実装を提供します。 プログラマは、スケルトンの残りの部分を埋めるためには、アプリケーションに固有の作業です。 MFC アプリケーション ウィザードを使用して、詳細な情報のスターター アプリケーション ファイルを作成することによって簡単に開始を取得できます。 Microsoft Visual C リソース エディターをユーザー インターフェイス要素を視覚的に、デザイン コード、およびクラス ライブラリにそれらの要素を接続クラス ビューのコマンドを使用するには、アプリケーション固有のロジックを実装します。  
@@ -83,6 +78,6 @@ ms.lasthandoff: 12/21/2017
   
  MFC のドキュメントを一般的なガイドラインを参照してください。 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC の一般的なトピック](../mfc/general-mfc-topics.md)
 

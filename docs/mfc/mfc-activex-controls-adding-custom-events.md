@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール: カスタム イベントの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: カスタム イベントの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX コントロール : カスタム イベントの追加
 カスタム イベントとは異なりストック イベントからクラスによって自動的に起動しません`COleControl`です。 カスタム イベントは、特定のアクション、イベントとして、コントロールの開発者によって決定を認識します。 カスタム イベントのイベントのマップ エントリがによって表される、`EVENT_CUSTOM`マクロです。 次のセクションでは、ActiveX コントロール ウィザードを使用して作成された ActiveX コントロール プロジェクトのカスタム イベントを実装します。  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a>カスタム イベントを追加する、イベント追加ウィザード  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a> カスタム イベントを追加する、イベント追加ウィザード  
  次の手順では、特定のカスタム イベント ClickIn を追加します。 この手順を使用すると、その他のカスタム イベントを追加します。 カスタム イベントの名前と ClickIn イベントの名前およびパラメーターについては、そのパラメーターを置き換えてください。  
   
 #### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>イベントの追加ウィザードを使用して、ClickIn カスタム イベントを追加するには  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 8.  をクリックして**完了**イベントを作成します。  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a>カスタム イベントのイベント ウィザードによる変更を追加します。  
+##  <a name="_core_classwizard_changes_for_custom_events"></a> カスタム イベントのイベント ウィザードによる変更を追加します。  
  カスタム イベントを追加するときに、追加イベント ウィザードによって、コントロール クラスにします。H、します。CPP とします。IDL ファイル。 次のコード サンプルは、ClickIn イベントに固有です。  
   
  次の行がヘッダーに追加されます (です。H)、コントロールのクラス ファイル:  
@@ -83,7 +78,7 @@ ms.lasthandoff: 12/21/2017
   
  この行は、ClickIn イベント イベントのイベントの追加ウィザード ボックスの一覧で、イベントの位置から取得する、特定の ID 番号を割り当てます。 イベント一覧内のエントリは、イベントに対応するためのコンテナーを使用できます。 たとえば、イベントが発生したときに実行されるハンドラー コードを提供、可能性があります。  
   
-##  <a name="_core_calling_fireclickin"></a>FireClickIn を呼び出す  
+##  <a name="_core_calling_fireclickin"></a> FireClickIn を呼び出す  
  イベントの追加ウィザードを使用して、ClickIn カスタム イベントを追加すると、これで、このイベントが発生する場合を決定する必要があります。 呼び出すことによって、これを行う`FireClickIn`適切な操作が発生したとき。 ここでは、コントロールを使用して、`InCircle`関数、 `WM_LBUTTONDOWN` ClickIn イベントを円または楕円領域内に、ユーザーがクリックしたときに発生させるメッセージ ハンドラー。 次の手順を追加、`WM_LBUTTONDOWN`ハンドラー。  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>イベントの追加ウィザードでメッセージのハンドラーを追加するには  
@@ -117,7 +112,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a>ストックの名前のカスタム イベント  
+##  <a name="_core_custom_events_with_stock_names"></a> ストックの名前のカスタム イベント  
  ストック イベントとして同じ名前のカスタム イベントを作成するには、両方で同じコントロールを実装することができましていませんただしです。 たとえば、カスタム イベントは起動しませんストック イベントをクリックして通常に発生するという名前を作成することができます。 起動処理関数を呼び出すことによっていつでも Click イベントが発生する可能性があります。  
   
  次の手順の追加、カスタムのクリック イベント。  
@@ -140,7 +135,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  呼び出す`FireClick`コードの適切な場所にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)   
  [COleControl クラス](../mfc/reference/colecontrol-class.md)

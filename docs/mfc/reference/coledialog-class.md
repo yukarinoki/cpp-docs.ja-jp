@@ -1,12 +1,9 @@
 ---
-title: "関数クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 関数クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae60b9e5a0d2e79d2bf6d9cc06eebfa9df0c6e23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledialog-class"></a>関数クラス
 OLE のダイアログ ボックスに共通の機能が用意されています。  
@@ -49,23 +44,23 @@ class COleDialog : public CCommonDialog
 ## <a name="remarks"></a>コメント  
  Microsoft Foundation Class ライブラリは、いくつかのクラスから派生した`COleDialog`:  
   
-- [メンバー](../../mfc/reference/coleinsertdialog-class.md)  
+- [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
-- [メンバー](../../mfc/reference/coleconvertdialog-class.md)  
+- [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
   
-- [メンバー](../../mfc/reference/colechangeicondialog-class.md)  
+- [COleChangeIconDialog](../../mfc/reference/colechangeicondialog-class.md)  
   
-- [関数](../../mfc/reference/colelinksdialog-class.md)  
+- [COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)  
   
 - [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)  
   
-- [関数](../../mfc/reference/coleupdatedialog-class.md)  
+- [COleUpdateDialog](../../mfc/reference/coleupdatedialog-class.md)  
   
-- [関数](../../mfc/reference/colepastespecialdialog-class.md)  
+- [COlePasteSpecialDialog](../../mfc/reference/colepastespecialdialog-class.md)  
   
-- [メンバー](../../mfc/reference/colepropertiesdialog-class.md)  
+- [COlePropertiesDialog](../../mfc/reference/colepropertiesdialog-class.md)  
   
-- [メンバー](../../mfc/reference/colechangesourcedialog-class.md)  
+- [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)です。  
   
@@ -82,10 +77,10 @@ class COleDialog : public CCommonDialog
   
  `COleDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
-##  <a name="getlasterror"></a>COleDialog::GetLastError  
+##  <a name="getlasterror"></a>  COleDialog::GetLastError  
  呼び出す、`GetLastError`追加のエラー情報を取得するメンバー関数と`DoModal`返します**IDABORT**。  
   
 ```  
@@ -98,7 +93,7 @@ UINT GetLastError() const;
 ### <a name="remarks"></a>コメント  
  参照してください、`DoModal`固有のエラー メッセージについては、派生クラスでメンバー関数。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

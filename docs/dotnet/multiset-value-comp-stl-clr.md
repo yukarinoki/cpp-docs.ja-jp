@@ -1,12 +1,9 @@
 ---
-title: "multiset::value_comp (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: multiset::value_comp (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::value_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_comp member [STL/CLR]
 ms.assetid: 6b418e7a-9e82-4d35-a25d-f07b79a875a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c0b9fead0ea6a941b09a2a19c0c4fa526babe5b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9045c9dba510d83c79a75525c57351c71ddca1a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetvaluecomp-stlclr"></a>multiset::value_comp (STL/CLR)
 2 つの要素値の順序付けのデリゲートをコピーします。  
@@ -71,12 +66,12 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext と set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マルチセット (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)   
  [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

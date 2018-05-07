@@ -1,11 +1,8 @@
 ---
-title: "Platform::array クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::array クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e3d2964e1488e74e7a07f20c38ee4fbbcf6e387
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 アプリケーション バイナリ インターフェイス (ABI) を越えて受け渡しでき、変更もできる 1 次元配列を表します。  
@@ -56,7 +51,7 @@ private ref class Array<TArg, 1> :
   
 |||  
 |-|-|  
-|[Array::Value](#value)|現在の配列へのハンドルを取得します。|  
+|[Array::value](#value)|現在の配列へのハンドルを取得します。|  
   
 ### <a name="remarks"></a>コメント  
  この Array クラスはシール クラスであり、継承できません。  
@@ -69,7 +64,7 @@ private ref class Array<TArg, 1> :
   
  このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは platform.winmd で定義されているパブリック型ではないため、Intellisense では表示されますが、オブジェクト ブラウザーでは表示されません。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
 
  
@@ -124,6 +119,6 @@ property Array^ Value;
 ### <a name="return-value"></a>戻り値  
  現在の配列へのハンドル。  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)   
  [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

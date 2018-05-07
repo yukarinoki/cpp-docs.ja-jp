@@ -1,11 +1,8 @@
 ---
-title: "Platform::accessdeniedexception クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::accessdeniedexception クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::AccessDeniedException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccbadf13e7a4f4d82bce9c402a4816d31b0fdce6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a4be26bfc87be55d36954429c64094cabd6a6cf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException クラス
 リソースや機能へのアクセスが拒否されるとスローされます。  
@@ -39,7 +34,7 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 ### <a name="remarks"></a>コメント  
  この例外にヒットした場合は、適切な機能を要求したこと、およびアプリのパッケージ マニフェストで必要な宣言を行ったことを確認します。 詳細については、「 [COMException](../cppcx/platform-comexception-class.md) 」クラスを参照してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -48,5 +43,5 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
   
  **メタデータ:** platform.winmd  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform::COMException クラス](../cppcx/platform-comexception-class.md)

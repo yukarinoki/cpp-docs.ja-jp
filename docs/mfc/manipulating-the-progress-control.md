@@ -1,13 +1,10 @@
 ---
-title: "プログレス コントロールの操作 |Microsoft ドキュメント"
-ms.custom: 
+title: プログレス コントロールの操作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-the-progress-control"></a>プログレス コントロールの操作
 プログレス コントロールの現在位置を変更する方法を次の 3 つが ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md))。  
@@ -45,11 +40,11 @@ ms.lasthandoff: 12/21/2017
 2.  使用して、 [StepIt](../mfc/reference/cprogressctrl-class.md#stepit)の位置をインクリメントするメンバー関数。 これにより、自動的に再描画するコントロール。  
   
     > [!NOTE]
-    >  `StepIt`ラップする位置になります。 たとえば、20、ステップと 90 の場合、位置 1 の-100 の範囲を指定`StepIt`位置を 10 に設定されます。  
+    >  `StepIt` ラップする位置になります。 たとえば、20、ステップと 90 の場合、位置 1 の-100 の範囲を指定`StepIt`位置を 10 に設定されます。  
   
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>任意の大きさで位置を変更するには  
   
-1.  使用して、 [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos)位置を変更するメンバー関数。 `OffsetPos`負の値を受け入れます。  
+1.  使用して、 [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos)位置を変更するメンバー関数。 `OffsetPos` 負の値を受け入れます。  
   
     > [!NOTE]
     >  `OffsetPos`、とは異なり`StepIt`、位置は折り返されません。 新しい位置を調整して、範囲内で維持されます。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  通常、進行状況コントロールは、出力に対してのみ使用されます。 新しい値を指定せず、現在の位置を取得する[GetPos](../mfc/reference/cprogressctrl-class.md#getpos)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CProgressCtrl の使い方](../mfc/using-cprogressctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

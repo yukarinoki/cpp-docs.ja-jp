@@ -1,13 +1,10 @@
 ---
-title: "方法: ADO.NET の VARIANT をマーシャ リング (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ADO.NET の VARIANT をマーシャ リング (C + + CLI) |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - ADO.NET [C++], marshaling VARIANT types
 - VARIANT
 ms.assetid: 67a180a7-5691-48ab-8d85-7f75a68dde91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 504f9553b85acefa085a7a8d6c85768ff934bab7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b442dcce2cdde28de8db1610971dd72dba84ab52
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>方法: ADO.NET の VARIANT をマーシャリングする (C++/CLI)
 ネイティブを追加する方法を示します`VARIANT`をマーシャ リングする方法、およびデータベースを<xref:System.Object?displayProperty=fullName>をネイティブ データベースから`VARIANT`です。  
@@ -170,7 +165,7 @@ ObjectCol: 42
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ADO.NET に関連するセキュリティ問題については、次を参照してください。 [ADO.NET アプリケーションのセキュリティで保護する](/dotnet/framework/data/adonet/securing-ado-net-applications)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices>   
  [ADO.NET を使用してデータ アクセス (C + + CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   

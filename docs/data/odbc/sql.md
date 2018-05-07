@@ -1,13 +1,10 @@
 ---
-title: "SQL |Microsoft ドキュメント"
-ms.custom: 
+title: SQL |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL (構造化照会言語) は、クエリの定義、変更、およびデータを制御できるようにするリレーショナル データベースと通信する方法です。 SQL 構文を使用すると、指定した条件に従ってレコードを抽出するステートメントを構築できます。  
@@ -47,10 +42,10 @@ SQL (構造化照会言語) は、クエリの定義、変更、およびデー�
   
 -   [データベース クラスでの SQL の使用方法](#_core_how_the_database_classes_use_sql)です。  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity (ODBC)  
  データベース クラスは、odbc で、コード内の SQL コマンドを埋め込むのではなく、呼び出しレベルのインターフェイスでの SQL を使用して実装されます。 ODBC SQL を使用して通信するために、[データソース](../../data/odbc/data-source-odbc.md)ODBC ドライバーを通じてします。 これらのドライバーでは、SQL を解釈し、必要に応じて、Microsoft Access などの特定のデータベース形式で使用するためを変換します。 ODBC で SQL の使用方法の詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)と ODBC SDK*プログラマーズ リファレンス*MSDN ライブラリの CD にします。  
   
-##  <a name="_core_the_database_classes"></a>データベース クラス  
+##  <a name="_core_the_database_classes"></a> データベース クラス  
  データベース クラスが操作し、既存のデータを更新できるように設計[データソース](../../data/odbc/data-source-odbc.md)です。 [MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)、 [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)(を使用してアクセス**クラスの追加**)、データベース クラスでは、ほとんどの SQL ステートメントを構築するとします。  
   
  データベース クラスでは、既知のデータ操作言語 (DML) と SQL の一部を使用します。 これらのコマンドでは、データ ソースの一部またはすべてを使用、新しいレコードを追加、編集、およびレコードを削除できます。 次の表に、最も一般的な SQL キーワード方法は、データベース クラスを使用しています。  
@@ -79,7 +74,7 @@ SQL (構造化照会言語) は、クエリの定義、変更、およびデー�
   
  サポートされている SQL ステートメント、データ型、コアな SQL 文法、および SQL では、に関する推奨されるパブリケーションの閲覧リストの一覧を含む、SQL の詳細についてを見つけることができます、 *ODBC SDK* *プログラマーズ リファレンス* MSDN ライブラリの CD に収録されています。  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>データベース クラスでの SQL の使用方法  
+##  <a name="_core_how_the_database_classes_use_sql"></a> データベース クラスでの SQL の使用方法  
  データベース クラスから派生したレコード セットでは、ODBC を使用して、データ ソースと通信し、ODBC は、SQL ステートメントを送信することによって、データ ソースからレコードを取得します。 このトピックでは、データベース クラスと SQL の間の関係について説明します。  
   
  レコード セットに SQL ステートメントの要素を構築して、SQL ステートメントの構築、`CString`です。 として文字列は、**選択**ステートメントでは、一連のレコードが返されます。  
@@ -94,6 +89,6 @@ SQL (構造化照会言語) は、クエリの定義、変更、およびデー�
   
 -   [SQL: SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [ODBC の基礎](../../data/odbc/odbc-basics.md)

@@ -1,12 +1,9 @@
 ---
-title: "Crestrictions::open |Microsoft ドキュメント"
-ms.custom: 
+title: Crestrictions::open |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRestrictions.Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1cd31f50258303492cfb7ca92daa5cdfb526c44a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8039d55312687cc28be27f2ed7726b9bda1b44aa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crestrictionsopen"></a>CRestrictions::Open
 ユーザー指定の制限に従って、結果セットを返します。  
@@ -66,9 +61,9 @@ HRESULT Open(const CSession& session,
   
  参照してください[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)定義されている制限については、各スキーマ行セットにします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbsch.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRestrictions クラス](../../data/oledb/crestrictions-class.md)   
  [スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

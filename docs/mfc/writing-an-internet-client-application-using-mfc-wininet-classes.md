@@ -1,13 +1,10 @@
 ---
-title: "MFC WinInet クラスを使用してインターネット クライアント アプリケーションを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC WinInet クラスを使用してインターネット クライアント アプリケーションを作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法
 すべてのインターネット クライアント アプリケーションの基礎は、インターネット セッションです。 MFC クラスのオブジェクトとしてインターネット セッションを実装する[CInternetSession](../mfc/reference/cinternetsession-class.md)です。 このクラスを使用して、1 つのインターネット セッションまたは複数の同時セッションを作成できます。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   インターネット セッションの場合は、インスタンスを作成する必要があります[CInternetSession](../mfc/reference/cinternetsession-class.md)です。  
   
--   インスタンスを作成する場合は、インターネット セッション データ読み取りまたは書き込みをする必要があります`CInternetFile`(またはそのサブクラス[CHttpFile](../mfc/reference/chttpfile-class.md)または[CGopherFile](../mfc/reference/cgopherfile-class.md))。 呼び出してデータを読み取る最も簡単な方法は、[できます](../mfc/reference/cinternetsession-class.md#openurl)です。 この関数は、入力された Universal Resource Locator (URL) を解析し、URL で指定されたサーバーへの接続を開きます読み取り専用を返します`CInternetFile`オブジェクト。 `CInternetSession::OpenURL`1 つのプロトコルの種類に固有ではありません: 同じ呼び出しは、FTP、HTTP、または gopher URL に対して機能します。 `CInternetSession::OpenURL`ローカル ファイルにも使用 (を返す、`CStdioFile`の代わりに、 `CInternetFile`)。  
+-   インスタンスを作成する場合は、インターネット セッション データ読み取りまたは書き込みをする必要があります`CInternetFile`(またはそのサブクラス[CHttpFile](../mfc/reference/chttpfile-class.md)または[CGopherFile](../mfc/reference/cgopherfile-class.md))。 呼び出してデータを読み取る最も簡単な方法は、[できます](../mfc/reference/cinternetsession-class.md#openurl)です。 この関数は、入力された Universal Resource Locator (URL) を解析し、URL で指定されたサーバーへの接続を開きます読み取り専用を返します`CInternetFile`オブジェクト。 `CInternetSession::OpenURL` 1 つのプロトコルの種類に固有ではありません: 同じ呼び出しは、FTP、HTTP、または gopher URL に対して機能します。 `CInternetSession::OpenURL` ローカル ファイルにも使用 (を返す、`CStdioFile`の代わりに、 `CInternetFile`)。  
   
 -   セッションは読み書きデータ、インターネットが FTP ディレクトリ内のファイルを削除するなど、他のタスクを実行する場合のインスタンスを作成する必要がありますいない`CInternetFile`です。  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [HTTP クライアント アプリケーションを記述する方法](../mfc/steps-in-a-typical-http-client-application.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [インターネット クライアント アプリケーションの作成用の MFC クラス](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
  [インターネット クライアント クラスの必要条件](../mfc/prerequisites-for-internet-client-classes.md)

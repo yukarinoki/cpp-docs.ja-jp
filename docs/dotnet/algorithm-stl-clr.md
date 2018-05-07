@@ -1,12 +1,9 @@
 ---
-title: "アルゴリズム (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: アルゴリズム (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/algorithm>
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <algorithm> header [STL/CLR]
 - <cliext/algorithm> header [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7dac0e574122342c96b28a2f5ccbeb1ea5088ae9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30e347905c6802e544cb9f81c045f9cc881f29fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 アルゴリズムを実行する STL/CLR コンテナーのテンプレート関数を定義します。  
@@ -110,10 +105,10 @@ ms.lasthandoff: 12/21/2017
 |[unique_copy (STL/CLR)](../dotnet/unique-copy-stl-clr.md)|互いに隣接する重複要素を除き、ソース範囲の要素をターゲット範囲にコピーします。|  
 |[upper_bound (STL/CLR)](../dotnet/upper-bound-stl-clr.md)|順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値を超える値を持つ最初の要素の位置を検索します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext アルゴリズム/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)

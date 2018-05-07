@@ -1,13 +1,10 @@
 ---
-title: "配置の概念 |Microsoft ドキュメント"
-ms.custom: 
+title: 配置の概念 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b40865266548067e2dda3782e66802c0dbe2844e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4fa40373e268c76caca17f3466573bc3e830757
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deployment-concepts"></a>配置の概念
 このセクションでは、C++ アプリケーションの展開に関する主な考慮事項について説明します。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [トラブルシューティング C/C++ 分離アプリケーションおよびサイド バイ サイド アセンブリ](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [Visual C アプリケーションの依存関係を理解します。](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)   
  [Windows インストーラーの配置](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)

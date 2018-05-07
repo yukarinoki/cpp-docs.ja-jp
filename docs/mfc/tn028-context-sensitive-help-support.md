@@ -1,13 +1,10 @@
 ---
-title: "TN028: 状況依存のヘルプのサポート |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN028: 状況依存のヘルプのサポート |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>テクニカル ノート 28: 状況依存のヘルプのサポート
 ここでは、ヘルプ コンテキスト Id と MFC では、その他のヘルプ問題の割り当ての規則について説明します。 状況依存のヘルプのサポートには、Visual C で使用可能なヘルプ コンパイラが必要です。  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
  関係なく、どのように`ID_HELP`コマンドが生成され、コマンド ハンドラーに到達するまで、通常のコマンドとしてルーティングされます。 MFC のコマンド ルーティングのアーキテクチャの詳細についてを参照してください[テクニカル ノート 21](../mfc/tn021-command-and-message-routing.md)です。 アプリケーションが有効にすると、ヘルプにある場合、`ID_HELP`コマンドによって処理される[:onhelp](../mfc/reference/cwinapp-class.md#onhelp)です。 アプリケーション オブジェクトは、ヘルプ メッセージを受信し、コマンドを適切にルーティングします。 これは、機能は、既定のコマンド ルーティングが十分に具体的なコンテキストを判別できないため必要です。  
   
- `CWinApp::OnHelp`次の順序で WinHelp を起動しようとしています。  
+ `CWinApp::OnHelp` 次の順序で WinHelp を起動しようとしています。  
   
 1.  アクティブなチェック`AfxMessageBox`ヘルプ ID を呼び出す メッセージ ボックスが現在アクティブな場合は、そのメッセージ ボックスに適切なコンテキストを持つ WinHelp が起動します。  
   
@@ -99,7 +94,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
  ようは、ヘルプが要求されたときにアクティブなウィンドウによって受信されるプライベート Windows MFC メッセージです。 呼び出す必要があります、ウィンドウは、このメッセージを受信したときに`CWinApp::WinHelp`ウィンドウの内部状態と一致するコンテキストを使用します。  
   
  `lParam`  
- 現在使用可能なヘルプ コンテキストが含まれています。 `lParam`ヘルプ コンテキストが特定されていない場合は 0 です。 実装`OnCommandHelp`でコンテキスト ID を使用して`lParam`にさまざまなコンテキストを決定するかに渡すことができますのみ`CWinApp::WinHelp`です。  
+ 現在使用可能なヘルプ コンテキストが含まれています。 `lParam` ヘルプ コンテキストが特定されていない場合は 0 です。 実装`OnCommandHelp`でコンテキスト ID を使用して`lParam`にさまざまなコンテキストを決定するかに渡すことができますのみ`CWinApp::WinHelp`です。  
   
  `wParam`  
  使用されず、0 になります。  
@@ -115,7 +110,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
   
  翻訳または実行されているアクションが配置の特定がある場合、`PreTranslateMessage`関数はならない中に行われる shift キーを押しながら F1 ヘルプ モードを確認してください、`m_bHelpMode`のメンバー`CWinApp`これらの操作を実行する前にします。 `CDialog`の実装`PreTranslateMessage`これを呼び出す前にチェック`IsDialogMessage`、例を示します。 これには、shift キーを押しながら F1 モード中にモードレス ダイアログ ボックスの「ダイアログ ナビゲーション」キーが無効にします。 さらに、`CWinApp::OnIdle`はこのループの中に呼び出されます。  
   
- ユーザー選択した場合、コマンド、メニューから、そのコマンドに関するヘルプを参照として扱われます (を通じて**よう**、以下を参照)。 ユーザーには、アプリケーション ウィンドウの表示領域がクリックすると、非クライアント領域と、クライアントのクリックであるかについて判断が行われます。 `OnContextHelp`非クライアントのハンドルの割り当てを自動的にクライアントをクリックしてクリックします。 送信をクライアントがある場合、**領域**クリックされたウィンドウにします。 そのウィンドウが 0 以外の値を返す場合、その値はヘルプのコンテキストとして使用します。 0 を返した場合`OnContextHelp`親ウィンドウを試みます (とそれがない場合、その親、およびなど)。 既定値が送信するにはヘルプ コンテキストを特定できない場合、 **ID_DEFAULT_HELP**にマップされます (通常は) のメイン ウィンドウにコマンド`CWinApp::OnHelpIndex`です。  
+ ユーザー選択した場合、コマンド、メニューから、そのコマンドに関するヘルプを参照として扱われます (を通じて**よう**、以下を参照)。 ユーザーには、アプリケーション ウィンドウの表示領域がクリックすると、非クライアント領域と、クライアントのクリックであるかについて判断が行われます。 `OnContextHelp` 非クライアントのハンドルの割り当てを自動的にクライアントをクリックしてクリックします。 送信をクライアントがある場合、**領域**クリックされたウィンドウにします。 そのウィンドウが 0 以外の値を返す場合、その値はヘルプのコンテキストとして使用します。 0 を返した場合`OnContextHelp`親ウィンドウを試みます (とそれがない場合、その親、およびなど)。 既定値が送信するにはヘルプ コンテキストを特定できない場合、 **ID_DEFAULT_HELP**にマップされます (通常は) のメイン ウィンドウにコマンド`CWinApp::OnHelpIndex`です。  
   
 ## <a name="wmhelphittest"></a>領域  
   
@@ -141,7 +136,7 @@ WPARAM, LPARAM lParam)
 ## <a name="mfc-application-wizard-support-and-makehm"></a>MFC アプリケーション ウィザードでサポートおよび MAKEHM  
  MFC アプリケーション ウィザードでは、ヘルプ ファイル (.cnt および .hpj ファイル) をビルドするために必要なファイルを作成します。 Microsoft ヘルプ コンパイラによって受け入れられる構築済みの .rtf ファイルの数も含まれています。 完了したら、多くのトピックがいくつか、特定のアプリケーション用に変更する必要があります。  
   
- "マッピング help"のファイルの自動作成は、makehm ユーティリティでサポートされます。 MAKEHM ユーティリティは、アプリケーションのリソースを翻訳できます。ヘルプ マップ ファイルへのファイルを H します。 例:  
+ "マッピング help"のファイルの自動作成は、makehm ユーティリティでサポートされます。 MAKEHM ユーティリティは、アプリケーションのリソースを翻訳できます。ヘルプ マップ ファイルへのファイルを H します。 例えば:  
   
 ```  
 #define IDD_MY_DIALOG   2000  
@@ -183,7 +178,7 @@ int AFXAPI AfxMessageBox(UINT nIDPrompt,
   
  2 番目のケースでは、nIDHelp の既定値は、ヘルプ ID が nIDPrompt と同じことを示す-1 です。 ヘルプは機能のみ、アプリケーションのヘルプが有効な場合、当然のことながら)。 メッセージ ボックスにヘルプをサポートしていないことを希望する場合は、0 を nIDHelp の入力が必要です。 メッセージを有効になっているのヘルプが nIDPrompt よりヘルプ ID を必要に応じて、単に nIDHelp nIDPrompt のされるものと異なるは正の値を提供する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

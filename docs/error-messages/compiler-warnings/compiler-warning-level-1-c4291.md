@@ -1,12 +1,9 @@
 ---
-title: "コンパイラの警告 (レベル 1) C4291 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラの警告 (レベル 1) C4291 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4291
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1c03e12805c35ce04322a7ffb4d48499a9a9f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c10351be640dc142f224cb5583a980e396f086cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4291"></a>コンパイラの警告 (レベル 1) C4291
 'declaration': 対応する delete 演算子が見つかりませんでした。初期化は、例外をスローすると、メモリは解放されません。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  演算子を使用する場合**新しい**、余分な引数およびコンパイル無し[/GX](../../build/reference/gx-enable-exception-handling.md)、 [/EHs](../../build/reference/eh-exception-handling-model.md)、例外処理、コンパイラを有効にする/EHa オプションにするコードが生成または演算子を呼び出す**削除**場合は、コンス トラクターが例外をスローします。  
   
- 配置形式を使用する場合、**新しい**演算子 (、フォームだけでなく、サイズ引数を指定して、割り当ての) と、オブジェクトのコンス トラクターは例外をスロー、コンパイラは演算子を呼び出すコードを生成しても**削除**; が、それがだけ行わ場合演算子の仮引数付き**削除**演算子の仮引数付きの一致が存在する**新しい**メモリを割り当てられています。 例:  
+ 配置形式を使用する場合、**新しい**演算子 (、フォームだけでなく、サイズ引数を指定して、割り当ての) と、オブジェクトのコンス トラクターは例外をスロー、コンパイラは演算子を呼び出すコードを生成しても**削除**; が、それがだけ行わ場合演算子の仮引数付き**削除**演算子の仮引数付きの一致が存在する**新しい**メモリを割り当てられています。 例えば:  
   
 ```  
 // C4291.cpp  

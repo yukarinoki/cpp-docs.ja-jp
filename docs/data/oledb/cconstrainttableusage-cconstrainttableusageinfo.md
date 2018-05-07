@@ -1,12 +1,9 @@
 ---
-title: "CConstraintTableUsage、CConstraintTableUsageInfo |Microsoft ドキュメント"
-ms.custom: 
+title: CConstraintTableUsage、CConstraintTableUsageInfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CConstraintTableUsageInfo
@@ -40,18 +37,16 @@ helpviewer_keywords:
 - m_szTableName
 - m_szConstraintSchema
 ms.assetid: 666b44de-3922-4c5e-ad17-d5ea27120174
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 463feaa2507e4ba3dbed8de6106091d1ea02d74e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7662cc111101d63729b5cb37512988edd61ead14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconstrainttableusage-cconstrainttableusageinfo"></a>CConstraintTableUsage、CConstraintTableUsageInfo
 Typedef クラスを呼び出す**CConstraintTableUsage**そのパラメーター クラスを実装する**CConstraintTableUsageInfo**です。  
@@ -72,8 +67,8 @@ Typedef クラスを呼び出す**CConstraintTableUsage**そのパラメータ�
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|  
 |m_szConstraintName|CONSTRAINT_NAME|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbsch.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRestrictions クラス](../../data/oledb/crestrictions-class.md)

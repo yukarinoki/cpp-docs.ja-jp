@@ -2,11 +2,8 @@
 title: CDialogEx クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogEx
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogex-class"></a>CDialogEx クラス
 `CDialogEx` クラスは、ダイアログ ボックスの背景色と背景イメージを指定します。   
@@ -76,10 +71,10 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
  `CDialogEx` オブジェクトを構築します。  
   
 ```  
@@ -110,7 +105,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  ダイアログ ボックスの背景色を設定します。  
   
 ```  
@@ -124,11 +119,11 @@ void SetBackgroundColor(
  色の RGB 値。  
   
  [入力] `bRepaint`  
- `TRUE`画面をすぐに更新するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
+ `TRUE` 画面をすぐに更新するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  ダイアログ ボックスの背景イメージを設定します。  
   
 ```  
@@ -156,10 +151,10 @@ BOOL SetBackgroundImage(
  1 つ、`CDialogEx::BackgroundLocation`イメージの場所を指定する値。 有効な値には、BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT、および BACKGR_BOTTOMRIGHT が含まれます。 既定値は、BACKGR_TILE です。  
   
  [入力] `bAutoDestroy`  
- `TRUE`背景イメージを自動的に破棄するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` 背景イメージを自動的に破棄するにはそれ以外の場合、`FALSE`です。  
   
  [入力] `bRepaint`  
- `TRUE`ダイアログ ボックスをすぐに再描画するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` ダイアログ ボックスをすぐに再描画するにはそれ以外の場合、`FALSE`です。  
   
 ### <a name="return-value"></a>戻り値  
  2 番目のメソッド オーバー ロード構文、`TRUE`メソッドが成功した、それ以外の場合`FALSE`です。  
@@ -167,7 +162,7 @@ BOOL SetBackgroundImage(
 ### <a name="remarks"></a>コメント  
  指定したイメージは、ダイアログ ボックスのクライアント領域に合わせて伸縮されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)   

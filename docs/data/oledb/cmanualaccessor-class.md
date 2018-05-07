@@ -1,12 +1,9 @@
 ---
-title: "CManualAccessor クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CManualAccessor クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CManualAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CManualAccessor class
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ecb9f31c862f62ddc2422f201aa824a959e961a0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7b8efc46971b1aa72f8c5e572aa540bfed250d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor クラス
 高度な用途用に設計されたアクセサーの種類を表します。  
@@ -53,10 +48,10 @@ class CManualAccessor : public CAccessorBase
 ## <a name="remarks"></a>コメント  
  使用して`CManualAccessor`実行時の関数の呼び出しによって出力される列のバインドと、パラメーターを指定できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DBViewer](../../visual-cpp-samples.md)   
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   

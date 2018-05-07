@@ -1,12 +1,9 @@
 ---
-title: "Icommandimpl::m_bcancel |Microsoft ドキュメント"
-ms.custom: 
+title: Icommandimpl::m_bcancel |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandImpl::m_bCancel
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - m_bCancel
 ms.assetid: f3b6fb60-4de4-4d81-a5d2-4052c41be0de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7fda98bcc0429daffb6e3ad7540ea54373d31cb5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fad4adc0f2b19ee28f8349311f9242df97dd8fc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandimplmbcancel"></a>ICommandImpl::m_bCancel
 コマンドが取り消されたかどうかを示します。  
@@ -45,9 +40,9 @@ unsigned m_bCancel:1;
 ## <a name="remarks"></a>コメント  
  この変数を取得することができます、 **Execute**コマンド クラスと適切なキャンセルのメソッドです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ICommandImpl クラス](../../data/oledb/icommandimpl-class.md)   
  [ICommandImpl::m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)

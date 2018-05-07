@@ -1,12 +1,9 @@
 ---
-title: "CMyProviderSession (MyProviderSess.H) |Microsoft ドキュメント"
-ms.custom: 
+title: CMyProviderSession (MyProviderSess.H) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidersession
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - CMyProviderSession class in MyProviderSess.H
 - OLE DB providers, wizard-generated files
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c244d77a0e299f4a09de985e11c7537a9fb7e5ff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5f5243edcbc6ad7781eb13caf6ec72021fd83506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H には、宣言と OLE DB セッション オブジェクトの実装が含まれています。 データ ソース オブジェクトは、セッション オブジェクトを作成し、コンシューマーとプロバイダー間のメッセージ交換を表します。 複数の同時セッションは、1 つのデータ ソースを開くことができます。 継承リストに`CMyProviderSession`に従います。  
@@ -52,5 +47,5 @@ class ATL_NO_VTABLE CMyProviderSession :
   
  OLE DB 仕様では、する必要がありますを実装するプロバイダー、 **IDBSchemaRowset**インターフェイス サポート 3 つのスキーマ行セットの種類: **DBSCHEMA_COLUMNS**、 **DBSCHEMA_PROVIDER_TYPES**、および`DBSCHEMA_TABLES`です。 ウィザードでは、各スキーマ行セットの実装を生成します。 ウィザードによって生成された各クラスが含まれています、`Execute`メソッドです。 この`Execute`メソッドをサポートするどのテーブル、列、およびデータ型は、プロバイダーにデータを返すことができます。 通常、このデータは、コンパイル時に呼ばれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)

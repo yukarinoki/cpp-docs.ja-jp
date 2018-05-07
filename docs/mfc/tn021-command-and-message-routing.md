@@ -1,13 +1,10 @@
 ---
-title: "TN021: コマンドし、メッセージのルーティング |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN021: コマンドし、メッセージのルーティング |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>テクニカル ノート 21: コマンドとメッセージのルーティング
 > [!NOTE]
@@ -200,11 +195,11 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  側ノートでは、2 つ**CWnd**で指定されたスクロール バー スタイル作成時、派生クラスをトラップし、Windows には渡されません。 作成ルーチンに渡される**WS_HSCROLL**と**WS_VSCROLL**個別に設定できますは作成を変更することはできません。 もちろん、テストや、自分で作成した、ウィンドウの WS_SCROLL スタイルのビットを設定する必要があります直接。  
   
- **CMDIFrameWnd**スクロール バーのスタイルに渡す**作成**または**LoadFrame** MDICLIENT の作成に使用します。 スクロール バーのスタイルの両方で、スクロール可能な MDICLIENT 領域 (と同様に、Windows プログラム マネージャー) を設定することを確認する必要がある場合 (**WS_HSCROLL** &#124;です。**WS_VSCROLL**) の作成に使用されるスタイルに対して、 **CMDIFrameWnd**です。  
+ **CMDIFrameWnd**スクロール バーのスタイルに渡す**作成**または**LoadFrame** MDICLIENT の作成に使用します。 スクロール バーのスタイルの両方で、スクロール可能な MDICLIENT 領域 (と同様に、Windows プログラム マネージャー) を設定することを確認する必要がある場合 (**WS_HSCROLL** &#124; **WS_VSCROLL**)、を作成するために使用したスタイルの**CMDIFrameWnd**です。  
   
  **CSplitterWnd**スプリッター地域の特別な共有のスクロール バーにスクロール バーのスタイルを適用します。 静的分割ウィンドウでは、通常は、どちらのスクロール バー スタイルを設定します。 動的分割ウィンドウについては、スクロール バー スタイル設定、分割方向、つまり、通常必要が**WS_HSCROLL** 、行を分割することができる場合**WS_VSCROLL**列を分割する場合。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

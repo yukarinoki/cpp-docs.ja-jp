@@ -1,13 +1,10 @@
 ---
-title: "印刷プレビューのアーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
+title: 印刷プレビューのアーキテクチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffffa6c446487752974549f4a070cf8e86e91aea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26771ba3f5a79716a759327f485a92391fada8c7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="print-preview-architecture"></a>印刷プレビューのアーキテクチャ
 この記事では、MFC フレームワークが印刷プレビュー機能を実装する方法について説明します。 トピックは次のとおりです。  
@@ -38,14 +33,14 @@ ms.lasthandoff: 12/21/2017
   
  印刷プレビューとはやや異なります画面表示と印刷のため、直接デバイス上のイメージの描画、代わりに、アプリケーションが画面を使用してプリンターをシミュレートする必要があります。 派生する特殊な (ドキュメントに未記載) クラスを定義している Microsoft Foundation Class ライブラリこれに合わせて、 [CDC クラス](../mfc/reference/cdc-class.md)という**CPreviewDC**です。 すべて`CDC`オブジェクトは 2 つのデバイス コンテキストを含むが、通常は同一です。 **CPreviewDC**オブジェクトを互いに異なる: 最初のシミュレートされたプリンターを表し、次の出力が表示される実際に画面を表します。  
   
-##  <a name="_core_the_print_preview_process"></a>印刷プレビューの処理  
+##  <a name="_core_the_print_preview_process"></a> 印刷プレビューの処理  
  ユーザーが、印刷プレビュー を選択すると、**ファイル**メニュー、フレームワークによって作成、 **CPreviewDC**オブジェクト。 アプリケーションでは、プリンター デバイス コンテキストの特性を設定する操作を実行するたびに、フレームワークも画面デバイス コンテキストで同様の操作を実行します。 など、アプリケーションでは、印刷用のフォントを選択した場合、フレームワークは、プリンター フォントがシミュレートされる画面表示のフォントを選択します。 アプリケーションは出力をプリンターに送信されるたびに、フレームワークは、画面に出力を代わりに送信します。  
   
  印刷プレビューも異なります。 ドキュメントのページを描画それぞれの順序で印刷します。 印刷時に、フレームワークは、特定の範囲のページが表示されたまでに印刷ループを続行します。 印刷プレビューの期間中、いつでも 1 つまたは 2 つのページが表示され、し、アプリケーションが待機します。ユーザーが応答するまでは、さらにページは表示されません。 印刷のプレビュー時に、アプリケーションに応答もする必要があります`WM_PAINT`メッセージ、通常の画面表示の場合と同様です。  
   
  [き](../mfc/reference/cview-class.md#onprepareprinting)関数はプレビュー モードが呼び出されると、印刷ジョブの開始時と同様です。 [CPrintInfo 構造体](../mfc/reference/cprintinfo-structure.md)関数に渡された構造体には、印刷プレビュー操作の特定の特性を調整するために設定できる値を持つ複数のメンバーが含まれています。 たとえば、設定、 **m_nNumPreviewPages**メンバーを 1 ページまたは 2 ページのモードでドキュメントをプレビューするかどうかを指定します。  
   
-##  <a name="_core_modifying_print_preview"></a>印刷プレビューの変更  
+##  <a name="_core_modifying_print_preview"></a> 印刷プレビューの変更  
  さまざまな方法で印刷プレビューの外観と動作を簡単に変更できます。 たとえば、ことができます、特に。  
   
 -   ドキュメントの任意のページにアクセスしやすいようにスクロール バーを表示する印刷プレビュー ウィンドウがあります。  
@@ -64,9 +59,9 @@ ms.lasthandoff: 12/21/2017
   
  場合があります`OnPreparePrinting`印刷プレビュー、印刷ジョブの呼び出すかどうかに応じてさまざまな初期化を実行します。 確認するにはこれを判断できます、**されます**でメンバー変数、`CPrintInfo`構造体。 このメンバーに設定されている**TRUE**印刷プレビューが呼び出される場合。  
   
- `CPrintInfo`構造体は、という名前のメンバーも含まれています。**関数**、単一のページおよび複数のページのモードでの画面の下部に表示される文字列を書式設定に使用されます。 既定ではこれらの文字列形式は次の"ページ *n* "と"ページ *n*   -  *m*、"を変更できますが、 **m _strPageDesc**内から`OnPreparePrinting`複雑なものに文字列を設定します。 参照してください[CPrintInfo 構造体](../mfc/reference/cprintinfo-structure.md)で、 *『 MFC リファレンス*詳細についてはします。  
+ `CPrintInfo`構造体は、という名前のメンバーも含まれています。**関数**、単一のページおよび複数のページのモードでの画面の下部に表示される文字列を書式設定に使用されます。 既定ではこれらの文字列形式は次の"ページ*n*"と"ページ*n* - *m*、"を変更できますが、**関数**から内で`OnPreparePrinting`複雑なものに文字列を設定します。 参照してください[CPrintInfo 構造体](../mfc/reference/cprintinfo-structure.md)で、 *『 MFC リファレンス*詳細についてはします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [印刷および印刷プレビュー](../mfc/printing-and-print-preview.md)   
  [印刷](../mfc/printing.md)   
  [CView クラス](../mfc/reference/cview-class.md)   

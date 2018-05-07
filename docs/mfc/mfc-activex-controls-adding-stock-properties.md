@@ -2,12 +2,9 @@
 title: 'MFC ActiveX コントロール: ストック プロパティの追加 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6fec6c878fe505b18a39df1200117f4b426878
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX コントロール : ストック プロパティの追加
-ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`です。 `COleControl`コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 一部の共通プロパティには、コントロールのキャプションと、前景色と背景色が含まれます。 その他のストック プロパティについては、次を参照してください。[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述します。 ストック プロパティのディスパッチ マップ エントリが常に付けた**DISP_STOCKPROP**です。  
+ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`です。 `COleControl` コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 一部の共通プロパティには、コントロールのキャプションと、前景色と背景色が含まれます。 その他のストック プロパティについては、次を参照してください。[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述します。 ストック プロパティのディスパッチ マップ エントリが常に付けた**DISP_STOCKPROP**です。  
   
  この記事では、(ここで、キャプション) ストック プロパティのプロパティの追加ウィザードを使用して ActiveX コントロールを追加する方法について説明し、結果として得られるコードの変更について説明します。 ここでは、次の内容について説明します。  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  Visual Basic のカスタム コントロールには、通常、Top、Left、幅、高さ、配置、タグ、名、TabIndex、TabStop、および親などプロパティがあります。 ActiveX コントロール コンテナーがこれらのコントロール プロパティの実装を担当し、したがって ActiveX コントロールではこれらのプロパティをサポートしません。  
   
-##  <a name="_core_using_classwizard_to_add_a_stock_property"></a>使用して、プロパティの追加ウィザードのストック プロパティを追加するには  
+##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> 使用して、プロパティの追加ウィザードのストック プロパティを追加するには  
  ストック プロパティを追加するために、カスタム プロパティを追加するよりも少ないコードが必要です、プロパティがによって自動的に処理のサポートを`COleControl`です。 次の手順を使用して、ActiveX コントロール フレームワークへのストック キャプション プロパティの追加を示します、他のストック プロパティを追加するも使用できます。 キャプションのストック プロパティが選択されている名前に置き換えます。  
   
 #### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>プロパティの追加ウィザードを使用して在庫のキャプション プロパティを追加するには  
@@ -65,9 +60,9 @@ ms.lasthandoff: 12/21/2017
   
 5.  **プロパティ名**ボックスで、クリックして**キャプション**です。  
   
-6.  **[完了]**をクリックします。  
+6.  **[完了]** をクリックします。  
   
-##  <a name="_core_classwizard_changes_for_stock_properties"></a>ストック プロパティのプロパティ ウィザードによる変更を追加します。  
+##  <a name="_core_classwizard_changes_for_stock_properties"></a> ストック プロパティのプロパティ ウィザードによる変更を追加します。  
  `COleControl`サポートするストック プロパティ、プロパティの追加ウィザードには、任意の方法で、クラス宣言は変わりません。 ディスパッチ マップにプロパティを追加します。 プロパティの追加ウィザードでは、実装にあるコントロールのディスパッチ マップに次の行を追加 (です。Cpp):  
   
  [!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  利用 Caption プロパティをコントロールのユーザーにします。 ストック プロパティの値を使用して、メンバー変数またはのメンバー関数にアクセス、`COleControl`基本クラスです。 これらのメンバー変数とメンバー関数の詳細については、プロパティの追加ウィザードでサポートするストック プロパティの次のセクションを参照してください。  
   
-##  <a name="_core_stock_properties_supported_by_classwizard"></a>ストック プロパティでサポートされている、プロパティの追加ウィザード  
+##  <a name="_core_stock_properties_supported_by_classwizard"></a> ストック プロパティでサポートされている、プロパティの追加ウィザード  
  `COleControl`クラスには、9 つのストック プロパティが用意されています。 プロパティの追加ウィザードを使用して必要なプロパティを追加することができます。  
   
 |プロパティ|ディスパッチ マップ エントリ|値にアクセスする方法|  
@@ -94,12 +89,12 @@ ms.lasthandoff: 12/21/2017
 |`ForeColor`|**DISP_STOCKPROP_FORECOLOR に関するページ)**|呼び出すことによってアクセス可能な値`GetForeColor`です。|  
 |**hWnd**|**DISP_STOCKPROP_HWND に関するページ)**|値としてアクセスできる`m_hWnd`です。|  
 |**[テキスト]**|**DISP_STOCKPROP_TEXT に関するページ)**|呼び出すことによってアクセス可能な値`InternalGetText`です。 このプロパティは、同じ**キャプション**プロパティ名を除く。|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|M_lReadyState としてアクセス可能な値または`GetReadyState`|  
+|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|M_lReadyState としてアクセス可能な値または `GetReadyState`|  
   
-##  <a name="_core_stock_properties_and_notification"></a>ストック プロパティと通知  
+##  <a name="_core_stock_properties_and_notification"></a> ストック プロパティと通知  
  ほとんどのストック プロパティでは、オーバーライド可能な通知関数があります。 たとえば、ときに、`BackColor`プロパティを変更すると、`OnBackColorChanged`関数 (コントロールのクラス メンバー関数) が呼び出されます。 既定の実装 (で`COleControl`) 呼び出し`InvalidateControl`です。 このような状況への応答でその他のアクションを実行する場合は、この関数をオーバーライドします。  
   
-##  <a name="_core_color_properties"></a>色のプロパティ  
+##  <a name="_core_color_properties"></a> 色のプロパティ  
  素材を使用する`ForeColor`と`BackColor`プロパティ、または、独自のカスタムの色のプロパティ、コントロールを描画するときにします。 色のプロパティを使用するのには、呼び出し、 [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor)メンバー関数。 この関数のパラメーターは、カラー プロパティとオプションのパレット ハンドルの値です。 戻り値は、 **COLORREF** GDI に渡すことができる値などの関数、`SetTextColor`と`CreateSolidBrush`です。  
   
  株式のカラー値`ForeColor`と`BackColor`プロパティにアクセスするかを呼び出すことによって、`GetForeColor`または`GetBackColor`関数は、それぞれします。  
@@ -108,7 +103,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)   
  [MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)   

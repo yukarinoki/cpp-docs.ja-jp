@@ -1,30 +1,25 @@
 ---
-title: "MDI タブ付きグループ |Microsoft ドキュメント"
-ms.custom: 
+title: MDI タブ付きグループ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9606d28f6e2057072a0c9fc356e3bc7ca7cdc19b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a7cf6420a331d46f2a158c16a30d439f334a46b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdi-tabbed-groups"></a>MDI タブ付きグループ
 マルチ ドキュメント インターフェイス (MDI) タブ付きグループの機能により、複数のドキュメント インターフェイス (MDI) アプリケーションに 1 つまたは複数のタブ付きウィンドウを表示する (またはタブ付きウィンドウと呼ばれるグループ*タブ付きグループ*) MDI クライアント領域にします。 垂直または水平方向には、タブ付きウィンドウを整列することができます。 アプリケーションでは、1 つ以上の MDI タブ付きグループをホストしている場合、グループは分割線で区切られます。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 -   MDI タブ付きグループのレイアウトをアプリケーションを保存する`CMDIFrameWndEx::SaveMDIState`です。 タブ付きグループのプロファイルを以前に保存した MDI を読み込み、呼び出す`CMDIFrameWndEx::LoadMDIState`です。 読み込みまたは MDI アプリケーションで開いているドキュメントのリストを保存するこれらのメソッドを呼び出すこともできます。 保存と読み込み MDI 状態の詳細については、次を参照してください。 [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)   
  [CMDIFrameWndEx クラス](../mfc/reference/cmdiframewndex-class.md)   
  [CMDIChildWndEx クラス](../mfc/reference/cmdichildwndex-class.md)   

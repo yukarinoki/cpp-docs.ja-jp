@@ -1,13 +1,10 @@
 ---
-title: "MFC での例外処理 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC での例外処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>例外処理 (MFC)
 この記事では、MFC で使用できる例外処理メカニズムについて説明します。 2 つのメカニズムを使用できます。  
@@ -78,7 +73,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [例外についての詳細情報](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>例外を使用する場合  
+##  <a name="_core_when_to_use_exceptions"></a> 例外を使用する場合  
  結果の 3 つのカテゴリは、プログラムの実行中の関数が呼び出されたときに発生する可能性が: 通常の実行、誤った実行、または異常実行します。 各カテゴリのとおりです。  
   
 -   通常の実行  
@@ -95,7 +90,7 @@ ms.lasthandoff: 01/03/2018
   
  例外の使用は、異常実行に特に適しています。  
   
-##  <a name="_core_mfc_exception_support"></a>MFC 例外処理のサポート  
+##  <a name="_core_mfc_exception_support"></a> MFC 例外処理のサポート  
  使用するか、C++ 例外処理機構を直接使用するか、MFC 例外マクロを使用して、 [CException クラス](../mfc/reference/cexception-class.md)または`CException`-フレームワークによって、またはアプリケーションによってスローされる可能性がありますのあるオブジェクトを派生します。  
   
  次の表は、MFC によって提供される定義済みの例外を示します。  
@@ -116,7 +111,7 @@ ms.lasthandoff: 01/03/2018
 > [!NOTE]
 >  MFC には、C++ 例外と MFC 例外マクロの両方がサポートしています。 MFC によって直接サポートされない構造化された Windows NT 例外ハンドラー (SEH) で説明したよう[構造化例外処理](http://msdn.microsoft.com/library/windows/desktop/ms680657)です。  
   
-##  <a name="_core_further_reading_about_exceptions"></a>例外に関する詳細情報  
+##  <a name="_core_further_reading_about_exceptions"></a> 例外に関する詳細情報  
  次の記事では、例外処理機構の MFC ライブラリの使用について説明します。  
   
 -   [例外処理: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)  
@@ -139,7 +134,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [例外処理: MFC マクロと C++ 例外機構の使用](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 例外処理](../cpp/cpp-exception-handling.md)   
  [方法: 独自のカスタム例外クラスを作成します。](http://go.microsoft.com/fwlink/p/?linkid=128045)
 

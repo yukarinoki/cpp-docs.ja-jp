@@ -1,12 +1,9 @@
 ---
-title: "Caccessorbase::releaseaccessors |Microsoft ドキュメント"
-ms.custom: 
+title: Caccessorbase::releaseaccessors |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CAccessorBase::ReleaseAccessors
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - ReleaseAccessors method
 ms.assetid: f08bc88e-0552-4a9c-9c65-b4061094649a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e68556f39d256cd0173ec24d7a2310076b6eca42
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1c73035e27b1f896891630cd9b4d9a135b3c4758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caccessorbasereleaseaccessors"></a>CAccessorBase::ReleaseAccessors
 クラスで作成したアクセサーを解放します。  
@@ -49,8 +44,8 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 ## <a name="remarks"></a>コメント  
  呼び出される[caccessorrowset::close](../../data/oledb/caccessorrowset-close.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAccessorBase クラス](../../data/oledb/caccessorbase-class.md)

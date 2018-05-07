@@ -1,12 +1,9 @@
 ---
-title: "ベクター化と並行化メッセージ |Microsoft ドキュメント"
-ms.custom: 
+title: ベクター化と並行化メッセージ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C5011
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b5ae296c468ce132b4ddcebe8a8894c1ba53e751
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ 
 Visual C コンパイラ オプションを使用する[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)と[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)を設定する、[自動並行化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)出力理由コードとそのアクティビティに関する情報メッセージです。 この記事では、理由コードとメッセージについて説明します。  
@@ -48,7 +43,7 @@ Visual C コンパイラ オプションを使用する[/Qpar-report](../../buil
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="BKMK_InformationalMessages"></a>情報メッセージ  
+##  <a name="BKMK_InformationalMessages"></a> 情報メッセージ  
  指定したレポート レベルに応じて、次のいずれかの情報メッセージがループごとに表示されます。  
   
  理由コードの詳細については、この記事の次のパートを参照してください。  
@@ -64,7 +59,7 @@ Visual C コンパイラ オプションを使用する[/Qpar-report](../../buil
 ## <a name="reason-codes"></a>理由コード  
  以降のセクションでは、自動並列化と自動ベクター化について表示される可能性のある理由コードを示します。  
   
-###  <a name="BKMK_ReasonCode50x"></a>5 xx  
+###  <a name="BKMK_ReasonCode50x"></a> 5 xx  
  5*xx*理由コードは自動並列化と自動ベクター化の両方に適用します。  
   
 |理由コード|説明|  
@@ -227,7 +222,7 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="BKMK_ReasonCode100x"></a>10 xx 系  
+###  <a name="BKMK_ReasonCode100x"></a> 10 xx 系  
  10*xx*理由コードは自動並列化に適用します。  
   
 |理由コード|説明|  
@@ -436,7 +431,7 @@ void code_1010()
   
 ```  
   
-###  <a name="BKMK_ReasonCode110x"></a>11xx  
+###  <a name="BKMK_ReasonCode110x"></a> 11xx  
  11*xx*理由コードは自動ベクター化に適用します。  
   
 |理由コード|説明|  
@@ -584,7 +579,7 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode120x"></a>12xx  
+###  <a name="BKMK_ReasonCode120x"></a> 12xx  
  12*xx*理由コードは自動ベクター化に適用します。  
   
 |理由コード|説明|  
@@ -659,7 +654,7 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode130x"></a>13xx  
+###  <a name="BKMK_ReasonCode130x"></a> 13xx  
  13*xx*理由コードは自動ベクター化に適用します。  
   
 |理由コード|説明|  
@@ -791,16 +786,16 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="BKMK_ReasonCode140x"></a>14xx  
+###  <a name="BKMK_ReasonCode140x"></a> 14xx  
  14*xx*理由コードは自動ベクター化と互換性がない一部のオプションを指定します。  
   
 |理由コード|説明|  
 |-----------------|-----------------|  
-|1400|**#pragma loop (no_vector)**を指定します。|  
+|1400|**#pragma loop (no_vector)** を指定します。|  
 |1401|**/kernel** x86 または ARM を対象とする場合は、スイッチを指定します。|  
 |1402|**/arch:sse2 以上**または x86 を対象とする場合、以上のスイッチが指定されていません。|  
 |1403|**/arch:ATOM**スイッチを指定して、ループには、1 個の double に対する操作が含まれています。|  
-|1404|**/O1**または**/Os**スイッチを指定します。|  
+|1404|**/O1**または **/Os**スイッチを指定します。|  
 |1405|ベクター化が動的初期化子と静的初期化子との間の最適化用に無効になっています。|  
   
 ```cpp  
@@ -863,7 +858,7 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode150x"></a>15xx  
+###  <a name="BKMK_ReasonCode150x"></a> 15xx  
  15 のブロック*xx*理由コードはエイリアスに適用します。 メモリ内の同じ位置に 2 つの異なる名前でアクセスできるときにエイリアスが使用されます。  
   
 |理由コード|説明|  
@@ -991,7 +986,7 @@ void code_1505(int *A, int *B)
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [自動並行化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)   
  [ネイティブ コードでの並列プログラミング](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop()](../../preprocessor/loop.md)   

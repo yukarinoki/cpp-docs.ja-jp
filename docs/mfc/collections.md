@@ -1,13 +1,10 @@
 ---
-title: "コレクション |Microsoft ドキュメント"
-ms.custom: 
+title: コレクション |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections"></a>コレクション
 Microsoft Foundation Class ライブラリでは、オブジェクトのグループを管理するコレクション クラスを提供します。 これらのクラスは、次の 2 種類があります。  
@@ -48,7 +43,7 @@ Microsoft Foundation Class ライブラリでは、オブジェクトのグル�
 > [!NOTE]
 >  コードが既に非テンプレート コレクション クラスを使用する場合に使用する続行することができます。 独自のデータ型の新しいタイプ セーフなコレクション クラスを作成する場合は、新しいテンプレート ベースのクラスを使用することをお勧めします。  
   
-##  <a name="_core_collection_shapes"></a>コレクションの形状  
+##  <a name="_core_collection_shapes"></a> コレクションの形状  
  コレクション クラスは、その要素の種類とその"shape"で特徴付けられます。 図形は、オブジェクトが編成され、コレクションに格納する方法を参照します。 MFC には、次の 3 つの基本的なコレクションの形状が用意されています。 リスト、配列、および (ディクショナリとも呼ばれます) にマップします。 特定のプログラミングの問題に最も適していますコレクション形状を選択できます。  
   
  提供されたコレクションの 3 つの図形のそれぞれについては、このトピックの後半について簡単に説明します。 プログラムに最適な判断に役立つ図形の機能を比較するを参照してください。[コレクション クラスの選択に関する推奨事項](../mfc/recommendations-for-choosing-a-collection-class.md)です。  
@@ -65,7 +60,7 @@ Microsoft Foundation Class ライブラリでは、オブジェクトのグル�
   
      マップは、コレクション オブジェクトを関連付ける、キー値オブジェクトです。  
   
-##  <a name="_core_the_template_based_collection_classes"></a>テンプレート ベースのコレクション クラス  
+##  <a name="_core_the_template_based_collection_classes"></a> テンプレート ベースのコレクション クラス  
  任意の型のオブジェクトを格納するタイプ セーフなコレクションを実装する最も簡単な方法では、テンプレート ベースの MFC クラスのいずれかを使用します。 これらのクラスの例については、MFC のサンプルを参照してください。[収集](../visual-cpp-samples.md)です。  
   
  次の表は、MFC のテンプレートに基づくコレクション クラスを一覧表示します。  
@@ -77,7 +72,7 @@ Microsoft Foundation Class ライブラリでは、オブジェクトのグル�
 |任意の型のオブジェクトのコレクション|`CArray`|`CList`|`CMap`|  
 |任意の型のオブジェクトへのポインターのコレクション|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a>テンプレートに基づいていないコレクション クラス  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> テンプレートに基づいていないコレクション クラス  
  アプリケーションで既に MFC 非テンプレート クラスを使用する場合に使用する続行することができます。 ただし、新しいコレクションの場合は、テンプレート ベースのクラスを使用する勧めします。 次の表では、MFC コレクション クラスをテンプレートに基づいていないを一覧表示します。  
   
 ### <a name="nontemplate-collection-classes"></a>非テンプレート コレクション クラス  
@@ -124,7 +119,7 @@ Microsoft Foundation Class ライブラリでは、オブジェクトのグル�
   
 -   [CObject コレクションの全オブジェクトの削除](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [概念](../mfc/mfc-concepts.md)   
  [MFC の一般的なトピック](../mfc/general-mfc-topics.md)
 

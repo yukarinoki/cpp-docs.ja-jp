@@ -2,12 +2,9 @@
 title: 'レコード セット: スクロール (ODBC) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>レコードセット: スクロール (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [スクロールの状況を通知し、サポートされていません ](#_core_when_scrolling_is_supported)です。  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>別の 1 つのレコードからスクロール  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> 別の 1 つのレコードからスクロール  
  クラス`CRecordset`提供、**移動**レコード セット内のスクロールのためのメンバー関数。 これらの関数は、行セットによって、現在のレコードを移動します。 バルク行フェッチを実装している場合、**移動**操作は、行セットのサイズによって、レコード セットを再配置します。 バルク行フェッチへの呼び出しを実装していない場合、**移動**関数が再配置レコード セットによって 1 つのレコードごとにします。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)です。  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`過去の最後のレコードは、レコード セットが配置されている場合は、0 以外の値を返します。 `IsBOF`レコード セットが (すべてのレコード) の前に、最初のレコードの前に配置されている場合は、0 以外の値を返します。 どちらの場合は、操作するために現在のレコードはありません。 呼び出す場合`MovePrev`とき`IsBOF`は既に**TRUE**呼び出しまたは`MoveNext`ときに`IsEOF`は既に**TRUE**がスローされます、`CDBException`です。 使用することも`IsBOF`と`IsEOF`空のレコード セットを確認します。  
+ `IsEOF` 過去の最後のレコードは、レコード セットが配置されている場合は、0 以外の値を返します。 `IsBOF` レコード セットが (すべてのレコード) の前に、最初のレコードの前に配置されている場合は、0 以外の値を返します。 どちらの場合は、操作するために現在のレコードはありません。 呼び出す場合`MovePrev`とき`IsBOF`は既に**TRUE**呼び出しまたは`MoveNext`ときに`IsEOF`は既に**TRUE**がスローされます、`CDBException`です。 使用することも`IsBOF`と`IsEOF`空のレコード セットを確認します。  
   
  レコード セットの移動の詳細については、次を参照してください。[レコード セット: ブックマークと絶対位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)です。  
   
-##  <a name="_core_when_scrolling_is_supported"></a>スクロールがサポートされている場合  
+##  <a name="_core_when_scrolling_is_supported"></a> スクロールがサポートされている場合  
  最初にデザインされたとして SQL では、前方スクロールのみ、指定されたが、ODBC がスクロール機能を拡張できます。 スクロールするためのサポートの利用可能なレベルは、アプリケーションは、ドライバーの ODBC API への準拠レベルで動作する ODBC ドライバーに依存し、ODBC カーソル ライブラリがメモリに読み込まれるかどうか。 詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)と[ODBC: ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)です。  
   
 > [!TIP]
@@ -113,7 +108,7 @@ rsCustSet.MoveFirst( );
 > [!NOTE]
 >  MFC DAO クラスとは異なり、MFC ODBC クラスに渡さないように一連の**検索**条件を満たす次 (または前) のレコードを検索するために機能します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)   
  [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)   

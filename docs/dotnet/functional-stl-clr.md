@@ -1,12 +1,9 @@
 ---
-title: "機能 (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: 機能 (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/functional>
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/functional> header [STL/CLR]
 - functional functions [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8e731767401964045307635a428d7606d628aca8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38bfbe025c92aa54956a165367b367cecc6160b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 STL/CLR ヘッダーを含める`<cliext/functional>`を定義する、テンプレート クラスと関連するテンプレート デリゲート、および関数の数。  
@@ -77,10 +72,10 @@ STL/CLR ヘッダーを含める`<cliext/functional>`を定義する、テンプ
 |[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|ファンクタを unary_negate を生成します。|  
 |[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|ファンクタを binary_negate を生成します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/機能 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)

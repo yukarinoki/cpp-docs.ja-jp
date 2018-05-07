@@ -1,13 +1,10 @@
 ---
-title: "TN030: 印刷と印刷プレビューのカスタマイズ |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN030: 印刷と印刷プレビューのカスタマイズ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.print
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - printing views [MFC]
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa11c30fb41630a5b293698fe3e69a80509f3f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 342edd56ee279de0b854c8e8ceb177b797a03f3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn030-customizing-printing-and-print-preview"></a>テクニカル ノート 30: 印刷と印刷プレビューのカスタマイズ
 > [!NOTE]
@@ -132,7 +127,7 @@ CView::EndPrintPreview(pDC,
   
  内のページの説明文字列、`CPrintInfo`構造体は、1 ページあたり 1 つの数値として表現できる場合は、ユーザーにページ番号を表示する手段を提供 (「ページ 1」のように、または"ページ 1-2") です。 既定の実装では、この文字列を使用してください。 **CPreviewView::OnDisplayPageNumber**です。 別のディスプレイが必要な場合は、たとえば、"Sheet1 セクションでは A、B"を提供する仮想関数をオーバーライドいずれかの可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 
