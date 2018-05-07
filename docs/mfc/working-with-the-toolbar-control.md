@@ -1,13 +1,10 @@
 ---
-title: "ツール バー コントロールの操作 |Microsoft ドキュメント"
-ms.custom: 
+title: ツール バー コントロールの操作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>ToolBar コントロールの操作
 この記事では、アクセスする方法について説明します、 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクトの基になる、 [CToolBar](../mfc/reference/ctoolbar-class.md)ツールバーをより細かく制御できます。 これは、高度なトピックです。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  呼び出す[CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)です。  
   
- `GetToolBarCtrl`参照を返します、 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクト。 その参照を使用して、ツール バー コントロールのクラス メンバー関数を呼び出すことができます。  
+ `GetToolBarCtrl` 参照を返します、 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクト。 その参照を使用して、ツール バー コントロールのクラス メンバー関数を呼び出すことができます。  
   
 > [!CAUTION]
 >  呼び出し中に`CToolBarCtrl`**取得**を呼び出す場合に注意を使用して関数が安全な**設定**関数。 これは、高度なトピックです。 通常、基になるツール バー コントロールにアクセスする必要はありません。  
@@ -70,6 +65,6 @@ ms.lasthandoff: 12/21/2017
   
  Windows コモン コントロールの使い方に関する概要については、次を参照してください。[コモン コントロール](http://msdn.microsoft.com/library/windows/desktop/bb775493)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ツール バーの実装](../mfc/mfc-toolbar-implementation.md)
 

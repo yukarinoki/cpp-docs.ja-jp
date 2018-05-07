@@ -1,13 +1,10 @@
 ---
-title: "例外処理: 例外オブジェクトの解放 |Microsoft ドキュメント"
-ms.custom: 
+title: '例外処理: 例外オブジェクトの解放 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a422347e319fabbd91f20e0ebf7897865f1ca4c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21a63a55103cbefda2ba501c5609b772b2203166
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>例外処理 : 例外処理でのオブジェクトの解放
 この記事では、必要と例外が発生したときに、オブジェクトを解放する方法について説明します。 ここでは、次の内容について説明します。  
@@ -53,14 +48,14 @@ ms.lasthandoff: 12/21/2017
   
  上、書き込まれるにつれて`myPerson`によって例外がスローされた場合は削除されません`SomeFunc`です。 実行は、通常の関数の終了とオブジェクトを削除するコードをバイパスして、[次へ] の外側の例外ハンドラーに直接ジャンプします。 オブジェクトへのポインター スコープから外れたときにする場合、例外、関数、プログラムが実行されている限り、オブジェクトが占有するメモリは解放されません。 これは、メモリ リークが発生します。メモリ診断を使用して検出します。  
   
-##  <a name="_core_handling_the_exception_locally"></a>ローカルでの例外を処理します。  
+##  <a name="_core_handling_the_exception_locally"></a> ローカルでの例外を処理します。  
  **Try ブロックと catch**パラダイムがメモリ リークを回避し、例外が発生したときに、オブジェクトが破棄されることを確保するための防御プログラミング メソッドを提供します。 たとえば、この記事の前半に示した例書き換えるとおり。  
   
  [!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]  
   
  この新しい例は、例外をキャッチし、それをローカルで処理する例外ハンドラーを設定します。 関数を正常に終了し、オブジェクトを破棄します。 この例の重要な側面で例外をキャッチするときにコンテキストが確立されている、 **try ブロックと catch**ブロックします。 ローカル例外フレームせず、関数はわかりません例外がスローされた、正常終了して、オブジェクトを破棄する機会はありません。  
   
-##  <a name="_core_throwing_exceptions_after_destroying_objects"></a>オブジェクトの破棄後に例外のスロー  
+##  <a name="_core_throwing_exceptions_after_destroying_objects"></a> オブジェクトの破棄後に例外のスロー  
  例外を処理する別の方法では、[次へ] の外側の例外処理コンテキストに渡します。 **キャッチ**ブロックで、ローカルで割り当てられたオブジェクトの一部のクリーンアップを実行でき、さらに処理するため、例外をスローします。  
   
  スロー元の関数は可能性があります。 またはヒープ オブジェクトの割り当てを解除する必要はありません。 場合、関数が、通常のケースを返す前に常に、ヒープのオブジェクトの割り当てを解除し、関数は、必要がありますも割り当てを解除ヒープ オブジェクト、例外をスローする前にします。 その一方で、関数では、オブジェクトは通常は、通常のケースを返す前に解放されない場合する必要がありますで個別にヒープ オブジェクトの割り当てを解除するかどうか。  
@@ -75,6 +70,6 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、次を参照してください。[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外処理](../mfc/exception-handling-in-mfc.md)
 

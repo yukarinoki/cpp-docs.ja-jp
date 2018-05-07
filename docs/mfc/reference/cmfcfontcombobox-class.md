@@ -1,12 +1,9 @@
 ---
-title: "CMFCFontComboBox クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCFontComboBox クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox クラス
 `CMFCFontComboBox`クラスは、フォントの一覧を含むコンボ ボックス コントロールを作成します。  
@@ -69,7 +64,7 @@ class CMFCFontComboBox : public CComboBox
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|フレームワークの現在のフォント コンボ ボックス内の項目のラベルの描画に使用するフォントを示します。|  
   
@@ -87,10 +82,10 @@ class CMFCFontComboBox : public CComboBox
   
  [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxfontcombobox.h  
   
-##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
  `CMFCFontComboBox` オブジェクトを構築します。  
   
 ```  
@@ -101,7 +96,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  現在選択されているフォントに関する情報を取得します。  
   
 ```  
@@ -113,7 +108,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  フレームワークの現在のフォント コンボ ボックス内の項目のラベルの描画に使用するフォントを示します。  
   
 ```  
@@ -123,7 +118,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>コメント  
  このメンバーを設定`TRUE`同じフォントを使用して、各項目のラベルを描画するために、フレームワークを送信するためです。 このメンバーを設定`FALSE`フレームワークの名前は、ラベルと同じフォントで各項目のラベルの描画に指示します。 このメンバーの既定値は`FALSE`します。  
   
-##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
  フォント コンボ ボックスから、指定した条件に一致するフォントを選択します。  
   
 ```  
@@ -146,7 +141,7 @@ BOOL SelectFont(
  文字セットを指定します。 既定値は、DEFAULT_CHARSET です。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`説明オブジェクトの指定したフォントまたはフォント名と charset; フォント コンボ ボックス内の項目に一致する場合それ以外の場合、`FALSE`です。  
+ `TRUE` 説明オブジェクトの指定したフォントまたはフォント名と charset; フォント コンボ ボックス内の項目に一致する場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドを使用して、選択し、指定したフォントに対応するフォント コンボ ボックス内の項目にスクロールします。  
@@ -157,7 +152,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>  CMFCFontComboBox::Setup  
  フォント コンボ ボックス内の項目のリストを初期化します。  
   
 ```  
@@ -178,7 +173,7 @@ BOOL Setup(
  フォントのピッチとファミリを指定します。 既定値は、DEFAULT_PITCH です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`フォント コンボ ボックスが正常に初期化される場合それ以外の場合、`FALSE`です。  
+ `TRUE` フォント コンボ ボックスが正常に初期化される場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドは、指定したパラメーターに一致する現在インストールされているフォントを列挙する、フォント コンボ ボックスでそのフォント名を挿入してフォント コンボ ボックスを初期化します。  
@@ -189,7 +184,7 @@ BOOL Setup(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   

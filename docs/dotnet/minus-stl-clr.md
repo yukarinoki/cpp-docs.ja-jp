@@ -1,12 +1,9 @@
 ---
-title: "マイナス (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: マイナス (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::minus
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - minus function [STL/CLR]
 ms.assetid: 810ec6fd-ed0e-446b-b18e-1e612fb1fff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 950f0fb677094c368f580fff28dd920733b9ac93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 655dda0dc23b603e06870ff9f70941fb5156a1cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="minus-stlclr"></a>minus (STL/CLR)
 このテンプレート クラスは、ファンクタを記述するには、呼び出されると、最初の引数、2 つ目の負符号を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  
@@ -127,10 +122,10 @@ int main()
 2 2  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/機能 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [plus (STL/CLR)](../dotnet/plus-stl-clr.md)

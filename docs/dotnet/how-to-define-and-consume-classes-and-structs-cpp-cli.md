@@ -1,31 +1,26 @@
 ---
-title: "方法: を定義およびクラスと構造体を使用 (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: を定義およびクラスと構造体を使用 (C + + CLI) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a0a276854c9f2e27439c2c16e9299d4eaa9243d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8356d96b0193566814c0d52173a03a3a79d08d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体を定義および使用する (C++/CLI)
 この記事の定義し、ユーザー定義の参照型と C + での値の型を使用する方法を示しています。 + CLI です。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  [デストラクターとファイナライザー](#BKMK_Destructors_and_finalizers)  
   
-##  <a name="BKMK_Object_instantiation"></a>オブジェクトのインスタンス化  
+##  <a name="BKMK_Object_instantiation"></a> オブジェクトのインスタンス化  
  参照 (ref) 型と値型は、マネージ ヒープでのみインスタンス化できます。スタック ヒープまたはネイティブ ヒープではインスタンス化できません。  
   
 ```  
@@ -105,7 +100,7 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Implicitly_abstract_classes"></a>暗黙的な抽象クラス  
+##  <a name="BKMK_Implicitly_abstract_classes"></a> 暗黙的な抽象クラス  
  *暗黙的な抽象クラス*インスタンス化することはできません。 クラスの基本型がインターフェイスで、そのクラスによって一部のインターフェイスのメンバー関数が実装されていない場合、そのクラスは暗黙的な抽象クラスです。  
   
  インターフェイスから派生したクラスからオブジェクトを構築できない場合は、それが暗黙的な抽象クラスであることが原因の可能性があります。 抽象クラスの詳細については、次を参照してください。[抽象](../windows/abstract-cpp-component-extensions.md)です。  
@@ -132,10 +127,10 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Type_visibility"></a>型の可視性  
+##  <a name="BKMK_Type_visibility"></a> 型の可視性  
  共通言語ランタイム (CLR: Common Language Runtime) 型の可視性を制御できるため、アセンブリが参照された場合、アセンブリ内の型は、アセンブリ外で表示または非表示にできます。  
   
- `public`型が、ソース ファイルを含むに表示されていることを示します、`#using`ディレクティブを型を含むアセンブリです。  `private`型が存在するソース ファイルに表示されないことを示す、`#using`型を含むアセンブリのディレクティブ。 ただし、プライベート型は、同じアセンブリ内には表示されます。 既定では、クラスの可視性は `private` です。  
+ `public` 型が、ソース ファイルを含むに表示されていることを示します、`#using`ディレクティブを型を含むアセンブリです。  `private` 型が存在するソース ファイルに表示されないことを示す、`#using`型を含むアセンブリのディレクティブ。 ただし、プライベート型は、同じアセンブリ内には表示されます。 既定では、クラスの可視性は `private` です。  
   
  Visual C++ 2005 より前の既定では、ネイティブ型の場合、アセンブリ外にパブリック アクセシビリティがありました。 有効にする[コンパイラの警告 (レベル 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)見る場所プライベート ネイティブ型が正しく使用されていないのに役立ちます。 使用して、 [make_public](../preprocessor/make-public.md)プラグマを変更できないソース コード ファイルでネイティブ型にパブリック アクセシビリティを付与します。  
   
@@ -228,7 +223,7 @@ int main() {
 in Public_Class  
 ```  
   
-##  <a name="BKMK_Member_visibility"></a>メンバーの可視性  
+##  <a name="BKMK_Member_visibility"></a> メンバーの可視性  
  アセンブリ外からパブリック クラスのメンバーにアクセスするのとは別に、同じアセンブリからそのメンバーにアクセスするには、アクセス指定子のペア `public`、`protected`、および `private` を使用します  
   
  次の表は、さまざまなアクセス指定子の効果を示しています。  
@@ -418,7 +413,7 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="BKMK_Public_and_private_native_classes"></a>パブリックおよびプライベートなネイティブ クラス  
+##  <a name="BKMK_Public_and_private_native_classes"></a> パブリックおよびプライベートなネイティブ クラス  
  ネイティブ型はマネージ型から参照できます。  たとえば、マネージ型の関数は、型がネイティブ構造体であるパラメーターを受け取ることができます。  マネージ型と関数がアセンブリ内でパブリックの場合は、ネイティブ型もパブリックである必要があります。  
   
 ```  
@@ -505,7 +500,7 @@ in static constructor
 11  
 ```  
   
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>このセマンティクス ポインター  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a> このセマンティクス ポインター  
  Visual C++ を使用して型を定義する場合、参照型の `this` ポインターは "ハンドル" 型です。 値型の `this` ポインターは "内部ポインター" 型です。  
   
  `this` ポインターのセマンティクスが異なることで、既定のインデクサーが呼び出されるときに予期しない動作が発生する場合があります。 次の例は、参照型と値型の両方で既定のインデクサーに適切にアクセスする方法を示しています。  
@@ -560,10 +555,10 @@ int main() {
 10.89  
 ```  
   
-##  <a name="BKMK_Hide_by_signature_functions"></a>シグネチャによって隠ぺい関数  
+##  <a name="BKMK_Hide_by_signature_functions"></a> シグネチャによって隠ぺい関数  
  標準 C++ では、基底クラスの関数は、派生クラスで同じ名前を持つ関数によって、その派生クラス関数に同じ数または種類のパラメーターがない場合でも非表示になります。 これを呼びます*名前による隠ぺい*セマンティクスです。 参照型では、基底クラスの関数は、名前とパラメーター リストの両方が同じ場合に、派生クラスの関数によってのみ非表示にできます。 これは呼ば*シグネチャによって隠ぺい*セマンティクスです。  
   
- クラスの関数すべてがメタデータで `hidebysig` としてマークされていると、そのクラスはシグネチャによる隠ぺいクラスと見なされます。 既定では、下で作成されるすべてのクラス**/clr**が`hidebysig`関数。 クラスに `hidebysig` 関数が含まれる場合、コンパイラが、直接基底クラスで名前によって関数を隠ぺいすることはありませんが、継承チェーンで名前による隠ぺいクラスが見つかると、名前による隠ぺい動作が続行されます。  
+ クラスの関数すべてがメタデータで `hidebysig` としてマークされていると、そのクラスはシグネチャによる隠ぺいクラスと見なされます。 既定では、下で作成されるすべてのクラス **/clr**が`hidebysig`関数。 クラスに `hidebysig` 関数が含まれる場合、コンパイラが、直接基底クラスで名前によって関数を隠ぺいすることはありませんが、継承チェーンで名前による隠ぺいクラスが見つかると、名前による隠ぺい動作が続行されます。  
   
  シグネチャによる隠ぺいセマンティクスでは、関数がオブジェクトで呼び出されると、関数呼び出しを満たす関数を含む最派生クラスがコンパイラによって特定されます。 呼び出しを満たす関数がクラスに 1 つしかない場合は、その関数がコンパイラによって呼び出されます。 呼び出しを満たす関数がクラスに複数ある場合、呼び出される関数は、オーバーロードの解決規則によって決まります。 オーバー ロードの規則の詳細については、次を参照してください。[関数のオーバー ロード](../cpp/function-overloading.md)です。  
   
@@ -670,7 +665,7 @@ Derived::Test4
 97  
 ```  
   
-##  <a name="BKMK_Copy_constructors"></a>コピー コンス トラクター  
+##  <a name="BKMK_Copy_constructors"></a> コピー コンス トラクター  
  C++ 標準では、オブジェクトの移動時にコピー コンストラクターが呼び出されることを通知します。このため、オブジェクトの作成と破棄が同じアドレスで行われます。  
   
  ただし、 **/clr**をコンパイルし、コンパイルされる関数が MSIL 呼び出しのネイティブ関数がネイティブ クラスを使用する — または複数の — 値とに、ネイティブ クラスがコピー コンス トラクターやデストラクター、コピーなしで渡されるコンス トラクターが呼び出され、オブジェクトは、作成された、異なるアドレスで破棄されます。 これにより、クラスにそのクラス自身へのポインターが含まれる場合、またはコードがアドレスによってオブジェクトを追跡している場合に問題が発生する可能性があります。  
@@ -735,7 +730,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378  
 ```  
   
-##  <a name="BKMK_Destructors_and_finalizers"></a>デストラクターとファイナライザー  
+##  <a name="BKMK_Destructors_and_finalizers"></a> デストラクターとファイナライザー  
  参照型のデストラクターでは、リソースの確定的なクリーンアップを実行します。 ファイナライザーでは、アンマネージ リソースがクリーンアップされます。また、ファイナライザーはデストラクターが確定的に呼び出すか、ガベージ コレクターが非確定的に呼び出すことができます。 標準 C++ のデストラクターの概要については、次を参照してください。[デストラクター](../cpp/destructors-cpp.md)です。  
   
 ```  
@@ -805,7 +800,7 @@ ref struct A {
   
  デストラクターを呼び出すことでオブジェクトのリソースを確定的にクリーンアップすると、CLR で非確定的にオブジェクトを終了できるようにするのに比べてパフォーマンスが向上します。  
   
- Visual C で記述され、コンパイルを使用しているコードを**/clr**場合に、型のデストラクターが実行されます。  
+ Visual C で記述され、コンパイルを使用しているコードを **/clr**場合に、型のデストラクターが実行されます。  
   
 -   スタック セマンティクスを使用して作成されたオブジェクトがスコープから外れる。 詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../dotnet/cpp-stack-semantics-for-reference-types.md)です。  
   
@@ -930,6 +925,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)   
  [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)

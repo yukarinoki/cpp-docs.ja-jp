@@ -1,13 +1,10 @@
 ---
-title: "エディット コントロールのリッチからの通知 |Microsoft ドキュメント"
-ms.custom: 
+title: エディット コントロールのリッチからの通知 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfcb2e4fe333db1ed629489b405255d4ab050b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c678af3444ef408a0a9c50e972942d67e2d3cf1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>リッチ エディット コントロールからの通知メッセージ
 レポートの編集コントロールのリッチに影響するイベントの通知メッセージ ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 親ウィンドウにより処理可能または、メッセージ リフレクションを使用して、リッチで編集コントロール自体。 リッチ エディット コントロールでは、エディット コントロールに加えて、さらにいくつか使用する通知メッセージのすべてをサポートします。 通知メッセージ、リッチ エディット コントロール親ウィンドウに送る mask を設定して、"イベントです"を指定できます。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **EN_SELCHANGE**処理することで、現在の選択が変更されたときにアプリケーションを検出できます、 **EN_SELCHANGE**通知メッセージです。 通知メッセージを指定します、 [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952)新しい選択に関する情報を含む構造体。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRichEditCtrl の使い方](../mfc/using-cricheditctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

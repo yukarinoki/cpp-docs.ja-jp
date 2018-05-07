@@ -1,13 +1,10 @@
 ---
-title: "Visual C で CMake プロジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C で CMake プロジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C で CMake プロジェクト
 
@@ -197,10 +193,10 @@ JSON の IntelliSense を使用して、CMakeSettings.json ファイルを編集
 1. **ジェネレーター**: マップ、 **-g**切り替えを使用するコード ジェネレーターを指定します。 このプロパティは、マクロとしても使用できます`${generator}`、他のプロパティ値を指定したりします。 現在、visual Studio には、次の CMake ジェネレーターがサポートされています。
 
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
+    - 「忍者」
+    - "Visual Studio 2015 の 14"
+    - "Visual Studio 2015 の 14 ARM"
+    - "Visual Studio 2015 の 14 Win64"
     - "Visual Studio 15 2017"
     - "Visual Studio 15 2017 ARM"
     - "Visual Studio 15 2017 Win64"
@@ -209,8 +205,8 @@ JSON の IntelliSense を使用して、CMakeSettings.json ファイルを編集
 
 Visual Studio ジェネレーターを指定する、CMakeSettings.json メイン メニューからを選択して開きます**CMake |CMake 設定を変更する**です。 「忍者」を削除し、"V"を入力します。 これには、必要なジェネレーターを選択することができます、IntelliSense がアクティブにします。
 
-1. **buildRoot**: マップ**-DCMAKE_BINARY_DIR**スイッチし、CMake キャッシュを作成するを指定します。 フォルダーが存在しない場合は作成されます。
-1. **変数**: として受け渡される CMake 変数の名前と値のペアを含む**-d**_名前_**=**_値_ CMake にします。 CMake プロジェクトのビルド手順では、直接、CMake キャッシュ ファイルに任意の変数の追加を指定する場合は、追加することは、ここ代わりをお勧めします。
+1. **buildRoot**: マップ **-DCMAKE_BINARY_DIR**スイッチし、CMake キャッシュを作成するを指定します。 フォルダーが存在しない場合は作成されます。
+1. **変数**: として受け渡される CMake 変数の名前と値のペアを含む **-d**_名前_**=**_値_ CMake にします。 CMake プロジェクトのビルド手順では、直接、CMake キャッシュ ファイルに任意の変数の追加を指定する場合は、追加することは、ここ代わりをお勧めします。
 1. **cmakeCommandArgs**: CMake.exe に渡す追加のスイッチを指定します。
 1. **configurationType**: 選択したコード ジェネレーターのビルド構成の種類を定義します。 現在サポートされている値は、"Debug"、"MinSizeRel"、"Release"および"RelWithDebInfo"です。
 
@@ -248,8 +244,8 @@ usage: ninja [options] [targets...]
 |   -n      | 実行ドライ (コマンドを実行しないが、動作が成功したように)|
 |   -v       | ビルド中にすべてのコマンド ラインを表示します。|
 |   -d モード  | デバッグ (-d リストをモードを使用する) を有効にします。|
-|   -t TOOL  | subtool (使用するには、-t リストをサブツール) を実行します。 終了 toplevel オプションです。さらに、ツールに渡されるはフラグ| 
-|   -w FLAG  | 警告 (-w リストを警告を使用する) を調整します。|
+|   -t ツール  | subtool (使用するには、-t リストをサブツール) を実行します。 終了 toplevel オプションです。さらに、ツールに渡されるはフラグ| 
+|   -w フラグ  | 警告 (-w リストを警告を使用する) を調整します。|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>継承された環境 (Visual Studio 2017 年 1 バージョン 15.5)
 CMakeSettings.json は、継承された環境をサポートしています。 この機能を使用すると、(1) 既定の環境を継承し、(2) を実行するときに、CMake.exe に渡されるカスタムの環境変数を作成できます。

@@ -1,13 +1,10 @@
 ---
-title: "ダイアログ ボックス クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ダイアログ ボックス クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>ダイアログ ボックス クラス
 クラス`CDialog`し、その派生クラスがダイアログ ボックスの機能をカプセル化します。 ダイアログ ボックスはウィンドウの特殊なので`CDialog`から派生した`CWnd`です。 ダイアログ クラスを派生`CDialog`またはいずれかの標準のダイアログ ボックスで、開くファイルを保存したり、印刷、フォントや色を選択するなどのコモン ダイアログ クラスの検索と置換操作を開始するを実行するさまざまな OLE に関連します。操作です。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 02/09/2018
  OLE は、Windows に共通のいくつかのダイアログ ボックスを追加します。 これらのクラスは、OLE コモン ダイアログ ボックスをカプセル化します。  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- OLE ダイアログ ボックスをすべての一般的な実装を含むため、フレームワークで使用します。 ユーザー インターフェイスのカテゴリ内のすべてのダイアログ ボックス クラスは、この基本クラスから派生します。 `COleDialog`直接使用することはできません。  
+ OLE ダイアログ ボックスをすべての一般的な実装を含むため、フレームワークで使用します。 ユーザー インターフェイスのカテゴリ内のすべてのダイアログ ボックス クラスは、この基本クラスから派生します。 `COleDialog` 直接使用することはできません。  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  リンクまたは埋め込みアイテムの新しい OLE を挿入するは、オブジェクトの挿入 ダイアログ ボックスで、標準のユーザー インターフェイスを表示します。  
@@ -137,6 +132,6 @@ ms.lasthandoff: 02/09/2018
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
  印刷または印刷プレビュー ジョブに関する情報を含む構造体。 印刷のアーキテクチャで使用される[CView](../mfc/reference/cview-class.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

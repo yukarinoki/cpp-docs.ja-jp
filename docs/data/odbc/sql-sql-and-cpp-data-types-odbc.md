@@ -1,13 +1,10 @@
 ---
-title: "SQL: SQL と C++ のデータ型 (ODBC) |Microsoft ドキュメント"
-ms.custom: 
+title: 'SQL: SQL と C++ のデータ型 (ODBC) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 14afd27887368f07610fb1315d7b573c09382c49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a137c4f648f518420d06f5cbd98ea189a030aee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL と C++ のデータ型 (ODBC)
 > [!NOTE]
@@ -42,13 +37,13 @@ ms.lasthandoff: 12/21/2017
 |**DECIMAL**|`CString` 1|  
 |**SMALLINT**|`int`|  
 |`REAL`|**float**|  
-|**整数**|**long**|  
+|**INTEGER**|**long**|  
 |**FLOAT**|**double**|  
 |**DOUBLE**|**double**|  
-|**数値**|`CString` 1|  
+|**NUMERIC**|`CString` 1|  
 |**VARCHAR**|`CString`|  
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|  
-|**ビット**|**BOOL**|  
+|**BIT**|**BOOL**|  
 |**TINYINT**|**BYTE**|  
 |**BIGINT 型**|`CString` 1|  
 |**バイナリ**|`CByteArray`|  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|  
 |**DATE**|`CTime`, `CString`|  
 |**時間**|**CTime、CString**|  
-|**タイムスタンプ**|**CTime、CString**|  
+|**TIMESTAMP**|**CTime、CString**|  
   
  1. ANSI **DECIMAL**と**数値**マップ`CString`ため**SQL_C_CHAR** ODBC の既定の転送種類は、します。  
   
@@ -68,6 +63,6 @@ ms.lasthandoff: 12/21/2017
   
  MFC ODBC データベース クラスと、Microsoft SQL Server ODBC ドライバーの ODBC カーソル ライブラリを使用している場合、 **ASSERT**と共に発生する可能性があります、`CDBException`への呼び出し`CRecordset::Update`への呼び出しに依存して`CRecordset::Requery`です。 代わりに、`CRecordset::Close`と`CRecordset::Open`なく`CRecordset::Requery`です。 別のソリューションをいないと、ODBC カーソル ライブラリが不要なネイティブ サポートするために ODBC カーソル ライブラリを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL](../../data/odbc/sql.md)   
  [SQL: SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

@@ -1,13 +1,10 @@
 ---
-title: "ドッキングとフローティング ツールバー |Microsoft ドキュメント"
-ms.custom: 
+title: ドッキングとフローティング ツールバー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CBRS_SIZE_DYNAMIC
 - CBRS_SIZE_FIXED
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6646fa33c0a78e8194faa5d511e107febca6d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docking-and-floating-toolbars"></a>ツール バーのドッキングとフローティング
 Microsoft Foundation Class ライブラリでは、ドッキング可能ツールバーをサポートします。 ドッキング可能ツールバーをアタッチ、または、その親ウィンドウの任意の辺に、ドッキングされていることができます、またはデタッチ、または独自のミニフレーム ウィンドウで、フロートことができます。 この記事では、アプリケーションでドッキング可能ツールバーを使用する方法について説明します。  
@@ -65,27 +60,27 @@ Microsoft Foundation Class ライブラリでは、ドッキング可能ツー�
   
  MFC 標準サンプルを参照してください[DOCKTOOL](../visual-cpp-samples.md)例についてはします。  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a>フレーム ウィンドウのドッキング可能にします。  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> フレーム ウィンドウのドッキング可能にします。  
  フレーム ウィンドウにツールバーをドッキングするのにはフレーム ウィンドウ (または変換先) を有効にドッキング可能です。 これを使用して、 [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)関数で、1 つ取って`DWORD`スタイルのセットであるパラメーターのフレーム ウィンドウのどちらの側では、ドッキングが受け入れるを示すビットします。 渡されたパラメーターがツールバーをドッキングし、ドッキングする複数の辺に示された辺`EnableDocking`は次の順序で使用されます: top、bottom、left、right です。 ドッキング コントロール バーの任意の場所できる場合は、渡す`CBRS_ALIGN_ANY`に`EnableDocking`です。  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a>ツールバーのドッキング可能にします。  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> ツールバーのドッキング可能にします。  
  ドッキング先が準備できたら、同様の方法でツールバー (またはソース) を準備する必要があります。 呼び出す[CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking)ドッキングする各ツールバーのツールバーをドッキングする必要がある辺、変換先を指定します。 呼び出しで指定した辺の`CControlBar::EnableDocking`フレーム ウィンドウにドッキングできる辺が一致し、ツールバーをドッキングことはできません: に変化します。 フローティング状態されて、フローティング ツールバー、フレーム ウィンドウにドッキングするのにはできません。 そのままとなります。  
   
  目的の効果が完全にフローティング ツールバーの場合は、呼び出す`EnableDocking`0 のパラメーターを使用します。 呼び出す[切り離すには](../mfc/reference/cframewnd-class.md#floatcontrolbar)します。 ツールバーは、フローティング、任意の場所にドッキングするのにはできません。 完全には残ります。  
   
-##  <a name="_core_docking_the_toolbar"></a>ツールバーをドッキングします。  
+##  <a name="_core_docking_the_toolbar"></a> ツールバーをドッキングします。  
  フレームワークによって[CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar)ユーザーがツールバーがドッキングされるフレーム ウィンドウの一辺にドロップしようとしたときにします。  
   
  さらに、フレーム ウィンドウにコントロール バーをドッキングするには、いつでもこの関数を呼び出すことができます。 これは通常、初期化中に行います。 複数のツールバーは、フレーム ウィンドウの特定の辺にドッキングされることができます。  
   
-##  <a name="_core_floating_the_toolbar"></a>ツールバーのフローティング  
+##  <a name="_core_floating_the_toolbar"></a> ツールバーのフローティング  
  フレーム ウィンドウからドッキング可能ツールバーをデタッチすると、ツールバーのフローティング、呼び出されます。 呼び出す[切り離すには](../mfc/reference/cframewnd-class.md#floatcontrolbar)これを行う。 フロートするか、ツールバー、それを格納する場所、ポイントとフローティング ツールバーが水平または垂直方向かどうかを決定する配置スタイルを指定します。  
   
  フレームワークは、ユーザーがツールバーをドッキング位置からドラッグ ドッキングされていない有効になっている位置にドロップしたときに、この関数を呼び出します。 フレーム ウィンドウの内外どこでも指定できます。 同様に`DockControlBar`初期化中にもこの関数を呼び出すことができます。  
   
  ドッキング可能ツールバーの MFC 実装では、ドッキング可能ツールバーをサポートする一部のアプリケーションでの拡張機能のいくつか用意されていません。 カスタマイズ可能なツールバーなどの機能が指定されていません。  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a>ツールバーのサイズを動的に変更  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> ツールバーのサイズを動的に変更  
  Visual C バージョン 4.0 の時点で行うことが考えられるフローティング ツールバーのサイズを動的に変更するアプリケーションのユーザーのできます。 通常、ツールバーには、long、線形図形、水平方向に表示します。 ツールバーの向き、その図形を変更することができます。 たとえば、ユーザーは、フレーム ウィンドウの縦方向のいずれかのツールバーをドッキング、ときに、図形を垂直レイアウトに変更します。 ボタンの複数の行を含む四角形に、ツールバーの形状を変更することもできます。  
   
  次の操作を行うことができます。  
@@ -106,7 +101,7 @@ Microsoft Foundation Class ライブラリでは、ドッキング可能ツー�
   
  使用することも[CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle)をツールバーの状態とボタンのスタイルを返します。 ボタンのスタイルを決定ボタンの表示方法と、ユーザーの入力に応答する方法状態は、ボタンは、ラップされた状態にするかどうかを示します。  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>固定スタイルのツールバーの折り返しの場所を設定  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> 固定スタイルのツールバーの折り返しの場所を設定  
  スタイルの固定サイズで、ツールバーのツールバーにツールバーをラップするボタンのインデックスを指定します。 次のコードはこれを行う方法、メイン フレーム ウィンドウの `OnCreate`をオーバーライドします。  
   
  [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  
@@ -121,6 +116,6 @@ Microsoft Foundation Class ライブラリでは、ドッキング可能ツー�
   
 -   [古いツールバーの使用方法](../mfc/using-your-old-toolbars.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ツール バーの実装](../mfc/mfc-toolbar-implementation.md)
 

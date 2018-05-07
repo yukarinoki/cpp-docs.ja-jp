@@ -1,12 +1,9 @@
 ---
-title: "CInstantaneousTransition クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CInstantaneousTransition クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInstantaneousTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffd06fe8c9b6f10c853cbc407d6558b95934b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 894d782f0f896837474c24255703a60e228737ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition クラス
 即時遷移をカプセル化します。  
@@ -72,10 +67,10 @@ class CInstantaneousTransition : public CBaseTransition;
   
  [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
+##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition  
  移行のオブジェクトを構築し、最終的な値を初期化します。  
   
 ```  
@@ -86,7 +81,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  `dblFinalValue`  
  遷移の終了時、アニメーション変数の値。  
   
-##  <a name="create"></a>CInstantaneousTransition::Create  
+##  <a name="create"></a>  CInstantaneousTransition::Create  
  カプセル化された移行 COM オブジェクトを作成する遷移のライブラリを呼び出します。  
   
 ```  
@@ -103,12 +98,12 @@ virtual BOOL Create(
 ### <a name="return-value"></a>戻り値  
  移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
  遷移の終了時、アニメーション変数の値。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

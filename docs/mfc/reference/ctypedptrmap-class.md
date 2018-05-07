@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrMap クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CTypedPtrMap クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap クラス
 ポインター マップ クラス `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`、および `CMapStringToPtr`のオブジェクトに対してタイプ セーフな "ラップ" が用意されています。  
@@ -84,10 +79,10 @@ class CTypedPtrMap : public BASE_CLASS
   
  `CTypedPtrMap`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
  位置にあるマップ要素を取得`rNextPosition`、し、更新`rNextPosition`をマップ内の次の要素を参照してください。  
   
 ```  
@@ -120,8 +115,8 @@ void GetNextAssoc(
   
  このインライン関数が呼び出す`BASE_CLASS` **:: たどる**です。  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`ハッシュ アルゴリズムを使用して、すばやく正確に一致するキーを持つマップの要素を検索します。  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` ハッシュ アルゴリズムを使用して、すばやく正確に一致するキーを持つマップの要素を検索します。  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
@@ -146,7 +141,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>コメント  
  このインライン関数が呼び出す`BASE_CLASS` **:: ルックアップ**です。  
   
-##  <a name="operator_at"></a>CTypedPtrMap::operator  
+##  <a name="operator_at"></a>  CTypedPtrMap::operator  
  この演算子は、代入ステートメント (左辺値) の左側にのみ使用できます。  
   
 ```  
@@ -166,7 +161,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>コメント  
  指定されたキーにマップ要素がない場合は、新しい要素が作成されます。 ありません「右側にある」(右辺値) この演算子をキーがマップに見つからない可能性がある可能性があるためです。 使用して、`Lookup`要素を取得します。  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
  このメンバー関数が呼び出す`BASE_CLASS` **:: は**します。  
   
 ```  
@@ -186,7 +181,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>コメント  
  詳細についてを参照してください。 [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)です。  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
  このメンバー関数が呼び出す`BASE_CLASS` **:: SetAt**です。  
   
 ```  
@@ -206,7 +201,7 @@ void SetAt(KEY key, VALUE newValue);
 ### <a name="remarks"></a>コメント  
  詳細についてを参照してください。 [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプルの収集](../../visual-cpp-samples.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CMapPtrToPtr クラス](../../mfc/reference/cmapptrtoptr-class.md)   

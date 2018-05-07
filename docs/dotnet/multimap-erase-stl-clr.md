@@ -1,12 +1,9 @@
 ---
-title: "multimap::erase (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: multimap::erase (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::erase
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - erase member [STL/CLR]
 ms.assetid: 94623cfc-4464-44a6-afd4-90a36828ac2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 23682b9aea37b13fa399f045e22c6148ef384f9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9d57632c65c7140334869b6b2dbca71a3f25b2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimaperase-stlclr"></a>multimap::erase (STL/CLR)
 指定した位置にある要素を削除します。  
@@ -119,11 +114,11 @@ erase(L'x') = 0
 erase(L'e') = 1  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap::clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)

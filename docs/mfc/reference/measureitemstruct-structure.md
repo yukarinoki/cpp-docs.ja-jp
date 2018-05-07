@@ -1,13 +1,10 @@
 ---
-title: "MEASUREITEMSTRUCT 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: MEASUREITEMSTRUCT 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - MEASUREITEMSTRUCT
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MEASUREITEMSTRUCT structure [MFC]
 ms.assetid: d141ace4-47cb-46b5-a81c-ad2c5e5a8501
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5221943ba1591a01ddebe2c261e4197fa18501
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 構造体
 `MEASUREITEMSTRUCT`構造オーナー描画コントロールまたはメニュー項目のサイズのウィンドウに通知します。  
@@ -86,10 +81,10 @@ typedef struct tagMEASUREITEMSTRUCT {
   
  これにより、Windows がコントロールでのユーザー操作を正しく処理できます。 適切なメンバーに記入エラー、`MEASUREITEMSTRUCT`構造体には、コントロールの不適切な操作が発生します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** winuser.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)
 

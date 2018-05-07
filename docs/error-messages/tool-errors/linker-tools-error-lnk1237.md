@@ -1,12 +1,9 @@
 ---
-title: "リンカ ツール エラー LNK1237 |Microsoft ドキュメント"
-ms.custom: 
+title: リンカ ツール エラー LNK1237 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1237
@@ -15,29 +12,27 @@ dev_langs:
 helpviewer_keywords:
 - LNK1237
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee9ec0e197d51f76ff57ef06f5584c55df0a4746
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ffc337d6b1548db4717dc4b87ff8aa25ef92e93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1237"></a>リンカ ツール エラー LNK1237
 コード生成中には、コンパイラはシンボル 'symbol' は 'module'/GL でコンパイルされたモジュールで定義されているへの参照を導入しました。  
   
- コード生成中に、コンパイラは、後でコンパイルされた定義を解決するシンボル**/GL**です。 `symbol`導入され、後でコンパイルした定義に解決される記号**/GL**です。  
+ コード生成中に、コンパイラは、後でコンパイルされた定義を解決するシンボル **/GL**です。 `symbol` 導入され、後でコンパイルした定義に解決される記号 **/GL**です。  
   
  詳細については、「[/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)」を参照してください。  
   
- LNK1237 を解決するには、コンパイルしないで、シンボルの**/GL**使用または[/INCLUDE (シンボル参照の強制)](../../build/reference/include-force-symbol-references.md)シンボルへの参照を強制的にします。  
+ LNK1237 を解決するには、コンパイルしないで、シンボルの **/GL**使用または[/INCLUDE (シンボル参照の強制)](../../build/reference/include-force-symbol-references.md)シンボルへの参照を強制的にします。  
   
 ## <a name="example"></a>例  
- 次の例では、LNK1237 が生成されます。 このエラーを解決するのには LNK1237_a.cpp で配列を初期化されず、追加**/include: _chkstk**リンク コマンド。  
+ 次の例では、LNK1237 が生成されます。 このエラーを解決するのには LNK1237_a.cpp で配列を初期化されず、追加 **/include: _chkstk**リンク コマンド。  
   
 ```  
 // LNK1237_a.cpp  

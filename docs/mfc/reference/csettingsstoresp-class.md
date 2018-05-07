@@ -1,12 +1,9 @@
 ---
-title: "CSettingsStoreSP クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSettingsStoreSP クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP クラス
 `CSettingsStoreSP`クラスは、ヘルパー クラスのインスタンスの作成に使用できる、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)です。  
@@ -59,7 +54,7 @@ class CSettingsStoreSP
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |`m_dwUserData`|カスタム ユーザー データに格納されている、`CSettingsStoreSP`オブジェクト。 コンス トラクターでは、このデータを指定する、`CSettingsStoreSP`オブジェクト。|  
 |`m_pRegistry`|`CSettingsStore`-派生オブジェクトを`Create`メソッドを作成します。|  
@@ -77,12 +72,12 @@ class CSettingsStoreSP
   
  フレームワークは通常、レジストリにアクセスをするたびは動的にカスタム クラスをインスタンス化され読み取りまたは書き込みデータを使用します。  
   
- `CSettingsStoreSP::SetRuntimeClass`グローバルな静的変数を使用します。 したがって、1 つだけのカスタム ストアは、一度に使用します。  
+ `CSettingsStoreSP::SetRuntimeClass` グローバルな静的変数を使用します。 したがって、1 つだけのカスタム ストアは、一度に使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
  派生したオブジェクトの新しいインスタンスを作成、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)です。  
   
 ```  
@@ -113,7 +108,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
  構築、 [CSettingsStoreSP クラス](../../mfc/reference/csettingsstoresp-class.md)オブジェクト。  
   
 ```  
@@ -127,7 +122,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>コメント  
  `CSettingsStoreSP`オブジェクトからデータを格納する`dwUserData`プロテクト メンバー変数に`m_dwUserData`です。  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  ランタイム クラスを設定します。 メソッド[CSettingsStoreSP::Create](#create)ランタイム クラスを使用して作成するオブジェクトの種類を決定します。  
   
 ```  
@@ -139,12 +134,12 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
  派生したクラスのランタイム クラス情報へのポインター、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`成功した場合`FALSE`によってクラスが識別される場合`pRTI`から派生していない`CSettingsStore`です。  
+ `TRUE` 成功した場合`FALSE`によってクラスが識別される場合`pRTI`から派生していない`CSettingsStore`です。  
   
 ### <a name="remarks"></a>コメント  
  使用することができます、 [CSettingsStoreSP クラス](../../mfc/reference/csettingsstoresp-class.md)からクラスを派生させる`CSettingsStore`です。 メソッドを使用して`SetRuntimeClass`から派生したカスタム クラスのオブジェクトを作成するかどうかは`CSettingsStore`します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)

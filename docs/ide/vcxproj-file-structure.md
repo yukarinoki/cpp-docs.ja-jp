@@ -1,29 +1,24 @@
 ---
-title: ".vcxproj ファイルと .props ファイルの構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: .vcxproj ファイルと .props ファイルの構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj と .props ファイルの構造
 
@@ -59,7 +54,7 @@ MSBuild は Visual Studio は; で、既定のプロジェクト システムで
 
 テキスト エディターまたは XML エディターを使用して、.vcxproj ファイルの内容を検査することができます。 ソリューション エクスプ ローラーでプロジェクトを右クリックして Visual Studio で表示できます選択**プロジェクトのアンロード**選択し**編集 Foo.vcxproj**です。
 
-最初にことを確認することは、最上位要素が特定の順序で表示されることです。 例:
+最初にことを確認することは、最上位要素が特定の順序で表示されることです。 例えば:
 
 - ほとんどのプロパティ グループおよび項目定義グループは、Microsoft.Cpp.Default.props のインポート後に発生します。
 - すべてのターゲットは、ファイルの最後にインポートされます。
@@ -100,7 +95,7 @@ MSBuild は順次評価モデルに基づいているために、プロジェク
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`ルート ノードです。 使用する MSBuild のバージョンともこのファイルは、MSBuild.exe に渡されるときに実行される既定のターゲットを指定します。
+`Project` ルート ノードです。 使用する MSBuild のバージョンともこのファイルは、MSBuild.exe に渡されるときに実行される既定のターゲットを指定します。
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup 要素
 
@@ -108,7 +103,7 @@ MSBuild は順次評価モデルに基づいているために、プロジェク
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`プロジェクト構成の説明が含まれています。 例としては、デバッグ |Win32、リリース |Win32、デバッグ |ARM というようにします。 多くのプロジェクト設定は、特定の構成に固有です。 たとえば、可能性がありますする最適化プロパティが、リリース ビルド、デバッグ ビルドではないを設定します。
+`ProjectConfigurations` プロジェクト構成の説明が含まれています。 例としては、デバッグ |Win32、リリース |Win32、デバッグ |ARM というようにします。 多くのプロジェクト設定は、特定の構成に固有です。 たとえば、可能性がありますする最適化プロパティが、リリース ビルド、デバッグ ビルドではないを設定します。
 
 `ProjectConfigurations`項目グループは、ビルド時に使用されません。 Visual Studio IDE、プロジェクトを読み込むために必要があります。 次の項目グループの .props ファイルに移動し、.vcxproj ファイルにインポートできます。 ただし、その場合は、構成を追加または削除する場合は、する必要があります手動で編集する .props ファイルです。IDE を使用することはできません。
 
@@ -143,7 +138,7 @@ IDE は、すべてのプロジェクト構成アイテムで使用される構�
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`ProjectGuid、RootNamespace、ApplicationType などのプロジェクト レベルの設定が含まれています/ApplicationTypeRevision です。 最後の 2 つは、多くの場合、ターゲット OS を定義します。 プロジェクトのために参照とプロジェクト項目できない条件がある現在、1 つの OS をターゲットのみできます。 これらのプロパティは、通常でオーバーライドされない他の場所でプロジェクト ファイルです。 このグループは構成に依存するではありませんし、プロジェクト ファイルで 1 つのグローバル グループのみが存在する通常このためです。
+`Globals` ProjectGuid、RootNamespace、ApplicationType などのプロジェクト レベルの設定が含まれています/ApplicationTypeRevision です。 最後の 2 つは、多くの場合、ターゲット OS を定義します。 プロジェクトのために参照とプロジェクト項目できない条件がある現在、1 つの OS をターゲットのみできます。 これらのプロパティは、通常でオーバーライドされない他の場所でプロジェクト ファイルです。 このグループは構成に依存するではありませんし、プロジェクト ファイルで 1 つのグローバル グループのみが存在する通常このためです。
 
 ### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import 要素
 
@@ -191,7 +186,7 @@ A`Configuration`プロパティ グループには、接続されている構成
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`プロパティが含まれています、ビルド プロセスをカスタマイズするために使用できる変数として作成します。 たとえば、$(CustomOutputPath) として、カスタムの出力パスを定義し、その他の変数を定義するユーザー マクロを定義できます。 このプロパティ グループでは、このようなプロパティを格納します。 Visual Studio で、このグループが作成されないこと、プロジェクト ファイルで Visual C がユーザー マクロの構成をサポートしていないために注意してください。 ユーザー マクロは、プロパティ シートでサポートされます。
+`UserMacros` プロパティが含まれています、ビルド プロセスをカスタマイズするために使用できる変数として作成します。 たとえば、$(CustomOutputPath) として、カスタムの出力パスを定義し、その他の変数を定義するユーザー マクロを定義できます。 このプロパティ グループでは、このようなプロパティを格納します。 Visual Studio で、このグループが作成されないこと、プロジェクト ファイルで Visual C がユーザー マクロの構成をサポートしていないために注意してください。 ユーザー マクロは、プロパティ シートでサポートされます。
 
 ### <a name="per-configuration-propertygroup-elements"></a>PropertyGroup 要素の構成単位
 
@@ -219,7 +214,7 @@ A`Configuration`プロパティ グループには、接続されている構成
 
 プロジェクト内の項目 (ソース ファイルなど) が含まれています。 条件は、プロジェクト項目 (つまり、項目の種類ルールの定義によって、プロジェクト項目として扱われます) はサポートされません。
 
-メタデータは、それらがすべて同じ場合でも、各構成の構成の条件にすることが必要です。 例:
+メタデータは、それらがすべて同じ場合でも、各構成の構成の条件にすることが必要です。 例えば:
 
    ```xml
    <ItemGroup>

@@ -1,13 +1,10 @@
 ---
-title: "ActiveX コントロールの作成操作のシーケンス |Microsoft ドキュメント"
-ms.custom: 
+title: ActiveX コントロールの作成操作のシーケンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - OLE controls [MFC], MFC
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e16254d7be929596d1205fa22cb5d62323d077d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: caf4c74f2263505ad5d7112021003f92c85a4b84
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>ActiveX コントロールの作成手順
 次の表は、ActiveX コントロール (以前の OLE コントロール) を作成して、フレームワークの役割分担を示します。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 |コントロールのプロパティ ページまたはページを構築します。|コントロールのプロパティ ページのインターフェイスを視覚的に編集するのにには、Visual C リソース エディターを使用します。<br /><br /> -追加のプロパティ ページを作成します。<br />-作成し、ビットマップ、アイコン、カーソルを編集します。<br /><br /> ダイアログ エディターで、プロパティ ページをテストすることもできます。|MFC アプリケーション ウィザードによって作成された既定のリソース ファイルは、必要なリソースの多くを提供します。 Visual C では、既存のリソースを編集し、簡単かつ視覚的に、新しいリソースを追加することができます。|  
 |コントロールのイベント、メソッド、およびプロパティをテストします。|コントロールを再構築し、テスト コンテナーを使用してハンドラーが正しく動作するをテストします。|コントロールのメソッドを呼び出すし、プロパティ ページのインターフェイス、またはテスト コンテナーを通じてそのプロパティを操作できます。 さらに、コントロールで発生したイベントの追跡とコントロールのコンテナーが受信した通知をテスト コンテナーを使用します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フレームワークでのビルド](../mfc/building-on-the-framework.md)   
  [MFC アプリケーションの作成操作のシーケンス](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
  [OLE アプリケーションの作成操作のシーケンス](../mfc/sequence-of-operations-for-creating-ole-applications.md)   

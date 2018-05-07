@@ -1,13 +1,10 @@
 ---
-title: "CString の書式指定とメッセージ ボックスの表示 |Microsoft ドキュメント"
-ms.custom: 
+title: CString の書式指定とメッセージ ボックスの表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8074d84d739b59acfa0c6040bedf76f46b6ea9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString の書式指定とメッセージ ボックスの表示
 関数の数が書式設定および解析する指定された`CString`オブジェクト。 これらの関数を使用するには、操作する必要があるたびに`CString`オブジェクトではなくはメッセージ ボックスのテキストに表示される文字列を書式設定するために特に有用です。  
@@ -41,10 +36,10 @@ ms.lasthandoff: 12/21/2017
 |[AfxFormatString2](#afxformatstring2)|形式の 2 つの代替文字列は、「1%」と"%2"、文字列内の文字列テーブルに格納されている文字します。|  
 |[AfxMessageBox](#afxmessagebox)|メッセージ ボックスを表示します。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
  指定された文字列から部分文字列を抽出するため、このグローバル関数を使用できます。  
   
 ```   
@@ -79,10 +74,10 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
  指す文字列に置換されます`lpsz1`で識別されるテンプレート文字列リソースで文字"%1"のすべてのインスタンスの`nIDS`します。  
   
 ```  
@@ -110,10 +105,10 @@ void  AfxFormatString1(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
  指す文字列に置換されます`lpsz1`、文字"%1"、およびが指す文字列のすべてのインスタンスの`lpsz2`で識別されるテンプレート文字列リソースの"%2"の文字のすべてのインスタンスの`nIDS`します。  
   
 ```   
@@ -145,10 +140,10 @@ void AfxFormatString2(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
  画面にメッセージ ボックスを表示します。  
   
 ```  
@@ -205,6 +200,6 @@ int AFXAPI AfxMessageBox(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)   
  [CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)

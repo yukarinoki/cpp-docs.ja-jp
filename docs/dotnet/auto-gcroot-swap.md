@@ -1,12 +1,9 @@
 ---
-title: "auto_gcroot::swap |Microsoft ドキュメント"
-ms.custom: 
+title: auto_gcroot::swap |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr.auto_gcroot.swap
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_gcroot::swap
 ms.assetid: 4915c629-6a53-432c-8155-3a7511dc70cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b3da99d688f6ca60829860d91e3b7b819af4ab26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78ab5f8385f404a6db2c9919c39c17d1442b49a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
 他のオブジェクトを交換`auto_gcroot`です。  
@@ -73,11 +68,11 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\auto_gcroot.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [auto_gcroot メンバー](../dotnet/auto-gcroot-members.md)   
  [swap 関数 (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)

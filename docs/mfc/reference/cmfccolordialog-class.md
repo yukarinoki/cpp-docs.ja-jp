@@ -1,12 +1,9 @@
 ---
-title: "CMFCColorDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCColorDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog クラス
 `CMFCColorDialog`クラスは、色の選択 ダイアログ ボックスを表します。  
@@ -76,10 +71,10 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`色の選択 ダイアログ ボックスで、独自の色パレットを使用する場合または`FALSE` ダイアログ ボックスがで指定されているパレットを使用するかどうか、`CMFCColorDialog`コンス トラクターです。|  
-|`m_bPickerMode`|`TRUE`ユーザーが選択 ダイアログ ボックスから色を選択するときにそれ以外の場合、`FALSE`です。|  
+|`m_bIsMyPalette`|`TRUE` 色の選択 ダイアログ ボックスで、独自の色パレットを使用する場合または`FALSE` ダイアログ ボックスがで指定されているパレットを使用するかどうか、`CMFCColorDialog`コンス トラクターです。|  
+|`m_bPickerMode`|`TRUE` ユーザーが選択 ダイアログ ボックスから色を選択するときにそれ以外の場合、`FALSE`です。|  
 |`m_btnColorSelect`|色のボタンをユーザーが選択されています。|  
 |`m_CurrentColor`|現在選択されている色です。|  
 |`m_hcurPicker`|色の選択に使用されるカーソルです。|  
@@ -114,10 +109,10 @@ class CMFCColorDialog : public CDialogEx
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
  `CMFCColorDialog` オブジェクトを構築します。  
   
 ```  
@@ -145,7 +140,7 @@ CMFCColorDialog(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  色のダイアログで、ユーザーが選択した色を取得します。  
   
 ```  
@@ -158,7 +153,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>コメント  
  呼び出した後に、この関数を呼び出して、`DoModal`メソッドです。  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  現在の色のダイアログ ボックスで使用可能なカラー パレットを取得します。  
   
 ```  
@@ -171,14 +166,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>コメント  
  カラー パレットは、ユーザーが選択できる色を指定します。  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  システム パレットからパレットを取得します。  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
  ダイアログ ボックスの現在の色を設定します。  
   
 ```  
@@ -191,7 +186,7 @@ void SetCurrentColor(COLORREF rgb);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  最も類似したは、現在のパレットで色を現在の色を設定します。  
   
 ```  
@@ -204,7 +199,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  色 ダイアログ ボックスの最初のプロパティ ページで選択した色の赤、緑、および青の要素を明示的に指定します。  
   
 ```  
@@ -226,7 +221,7 @@ void SetPageOne(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  色のダイアログの 2 番目のプロパティ ページで選択した色の赤、緑、および青の要素を明示的に指定します。  
   
 ```  
@@ -248,7 +243,7 @@ void SetPageTwo(
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCColorPickerCtrl クラス](../../mfc/reference/cmfccolorpickerctrl-class.md)

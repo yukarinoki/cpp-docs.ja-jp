@@ -1,12 +1,9 @@
 ---
-title: "COleCmdUI クラス |Microsoft ドキュメント"
-ms.custom: 
+title: COleCmdUI クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9d26ce9e674168f3d3d1c67dc48bb16b1a87169
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecmdui-class"></a>COleCmdUI クラス
 アプリケーションの `IOleCommandTarget`ドリブンの機能に関連するユーザー インターフェイス オブジェクトの状態を更新するメソッドを MFC に提供します。  
@@ -63,7 +58,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="remarks"></a>コメント  
  有効になっていない DocObjects、ユーザーが、アプリケーションでは、MFC のプロセスで、メニューを表示すると、アプリケーションで**UPDATE_COMMAND_UI**通知します。 各通知、 [CCmdUI](../../mfc/reference/ccmdui-class.md)特定のコマンドの状態を反映するように操作できるオブジェクト。 ただし、アプリケーションは DocObjects の有効な場合、MFC 処理**UPDATE_OLE_COMMAND_UI**通知および割り当てます`COleCmdUI`オブジェクト。  
   
- `COleCmdUI`コマンド (など、という名前、開く、印刷、およびなど)、そのコンテナーのユーザー インターフェイスを受信する DocObject をでき、DocObject のユーザー インターフェイスに送られたコマンドを受信するためのコンテナーです。 `IDispatch` 、同じコマンドをディスパッチすることできます`IOleCommandTarget`クエリを実行し、標準的な一連の引数を指定せずに通常のコマンドに依存していると、型情報は必要ありませんので、実行する簡単な方法を提供します。 `COleCmdUI`有効にする、更新、および DocObject ユーザー インターフェイスのコマンドの他のプロパティを設定するために使用します。 コマンドを呼び出す場合は、呼び出す[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)です。  
+ `COleCmdUI` コマンド (など、という名前、開く、印刷、およびなど)、そのコンテナーのユーザー インターフェイスを受信する DocObject をでき、DocObject のユーザー インターフェイスに送られたコマンドを受信するためのコンテナーです。 `IDispatch` 、同じコマンドをディスパッチすることできます`IOleCommandTarget`クエリを実行し、標準的な一連の引数を指定せずに通常のコマンドに依存していると、型情報は必要ありませんので、実行する簡単な方法を提供します。 `COleCmdUI` 有効にする、更新、および DocObject ユーザー インターフェイスのコマンドの他のプロパティを設定するために使用します。 コマンドを呼び出す場合は、呼び出す[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)です。  
   
  DocObjects については、次を参照してください。[関数](../../mfc/reference/cdocobjectserver-class.md)と[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)です。 参照してください[インターネットの最初の手順: Active ドキュメント](../../mfc/active-documents-on-the-internet.md)と[アクティブ ドキュメント](../../mfc/active-documents-on-the-internet.md)です。  
   
@@ -72,10 +67,10 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdocobj.h  
   
-##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI  
  構築、`COleCmdUI`特定のユーザー インターフェイスのコマンドに関連付けられているオブジェクト。  
   
 ```  
@@ -98,7 +93,7 @@ COleCmdUI(
 ### <a name="remarks"></a>コメント  
  `COleCmdUI`オブジェクトは、メニュー項目またはコントロール バー ボタンなどのユーザー インターフェイス オブジェクトを DocObject を更新するためのプログラム インターフェイスを提供します。 ユーザー インターフェイス オブジェクトを有効になっている、無効になっている、チェック、およびをオフになって、`COleCmdUI`オブジェクト。  
   
-##  <a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>  COleCmdUI::Enable  
  コマンド フラグを設定するには、この関数を呼び出す、`COleCmdUI`オブジェクトを**OLECOMDF_ENABLED**、これによりは、インターフェイスのコマンドは、利用可能で、有効になっている、またはコマンド フラグをクリアします。  
   
 ```  
@@ -109,7 +104,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  コマンドに関連付けられているかどうかを示す、`COleCmdUI`オブジェクトを有効または無効にする必要があります。 0 以外を有効にコマンド。0 は、コマンドを無効にします。  
   
-##  <a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
  オン/オフ切り替えの状態を設定するには、この関数を呼び出すコマンド。  
   
 ```  
@@ -126,7 +121,7 @@ virtual void SetCheck(int nCheck);
 |**2**|不確定; コマンドを設定します。このコマンドの属性は、両方の内外で関連する選択項目の状態では、状態を特定できません。|  
 |その他の値|コマンドをオフに設定します。|  
   
-##  <a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>  COleCmdUI::SetText  
  この関数では、コマンドのテキストの名前または状態文字列を取得します。  
   
 ```  
@@ -137,7 +132,7 @@ virtual void SetText(LPCTSTR lpszText);
  `lpszText`  
  コマンドで使用されるテキストへのポインター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

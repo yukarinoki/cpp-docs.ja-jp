@@ -1,13 +1,10 @@
 ---
-title: "ステータス バー ペインのテキストの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: ステータス バー ペインのテキストの更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbb2f14f274be3c7282a897c271049fe46434f3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>ステータス バー ペインのテキストの更新
 この記事では、MFC ステータス バー ペインに表示されるテキストを変更する方法について説明します。 ステータス バー — クラスの window オブジェクト[CStatusBar](../mfc/reference/cstatusbar-class.md) — 複数「ペインです」が含まれています。 各ペインは、情報を表示する使用できるステータス バーの四角形の領域です。 たとえば、多くのアプリケーションは、一番右のペインに表示、CAPSLOCK、NUMLOCK、およびその他のキーの状態を表示します。 アプリケーションも多くの場合、テキストを表示役に立つ、一番左のウィンドウ (0)、「メッセージ ウィンドウ」とも呼ばれます。 たとえば、既定の MFC ステータス バーは、現在選択されているメニュー項目またはツール バー ボタンを説明する文字列を表示するのにメッセージ ウィンドウを使用します。 図に[ステータス バー](../mfc/status-bar-implementation-in-mfc.md)アプリケーション ウィザードで作成した MFC アプリケーションから、ステータス バーが表示されます。  
@@ -86,6 +81,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [ユーザー インターフェイス オブジェクト (プログラムの条件の変更として、ツールバーのボタンとメニュー項目を更新する方法) を更新します。](../mfc/how-to-update-user-interface-objects.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステータス バーの実装 (MFC の)](../mfc/status-bar-implementation-in-mfc.md)   
  [CStatusBar クラス](../mfc/reference/cstatusbar-class.md)

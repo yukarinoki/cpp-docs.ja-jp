@@ -1,12 +1,9 @@
 ---
-title: "_ _vmx_vmclear |Microsoft ドキュメント"
-ms.custom: 
+title: _ _vmx_vmclear |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmclear
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323fcf37ee9ecc9e62abe5d6fdc30944e58862f8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8da1e3d2c5b1a2018df0e46f085fede9b923fff8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft 固有の仕様**  
@@ -60,7 +55,7 @@ unsigned char __vmx_vmclear(
   
  `__vmx_vmclear`関数と同じ、`VMCLEAR`マシン語命令します。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「Intel 仮想化技術仕様の「ia-32 Intel アーキテクチャ」、ドキュメントの検索に番号 C97063 002 を文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -70,7 +65,7 @@ unsigned char __vmx_vmclear(
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
+ [_ _vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
  [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

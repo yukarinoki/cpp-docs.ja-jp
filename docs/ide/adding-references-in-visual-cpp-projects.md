@@ -1,13 +1,10 @@
 ---
-title: "Visual C プロジェクトで参照の追加 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C プロジェクトで参照の追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Visual C++ プロジェクトへの参照の追加
 プログラムでは、DLL、Windows ランタイム コンポーネント、拡張 SDK、COM コンポーネント、.NET アセンブリなど、他のバイナリの API を呼び出すことは非常に一般的です。 プログラムが他のバイナリを検索する方法は、プロジェクトの種類とバイナリの種類の両方に応じて決まります。  
@@ -35,14 +30,14 @@ ms.lasthandoff: 12/21/2017
   
  UWP プロジェクトまたは C++/CLI プロジェクトなど、他の種類プロジェクトの場合、またはバイナリがソリューション内の別のプロジェクトから生成された場合は、 *参照* をアセンブリ、コンポーネント、またはプロジェクトに追加します。   基本的に言って参照とは、プログラムがバイナリを見つけて、これと通信できるようにするデータ セットのことです。       参照を追加すると、Visual Studio が下位レベルの詳細を処理します。 C++ プロジェクトから .NET Frameworkassemblies への参照を設定します (C + +/CLI のみ) を右クリックし、他のプロジェクト含むソリューション内の COM コンポーネント、共有プロジェクト、または接続済みサービスの**参照**内のノード**ソリューション エクスプ ローラー**を呼び出すこと、**参照マネージャー**です。 参照マネージャーの表示内容は、プロジェクトの種類によって異なります。  
   
- ネイティブの C++ プロジェクト (ATL) では、 *参照* の概念が適用されるのはソリューション内の他のプロジェクト (共有プロジェクトを含む) だけであるため、 **[参照マネージャー]**にはそれしか表示されません。  
+ ネイティブの C++ プロジェクト (ATL) では、 *参照* の概念が適用されるのはソリューション内の他のプロジェクト (共有プロジェクトを含む) だけであるため、 **[参照マネージャー]** にはそれしか表示されません。  
   
- ![Visual C &#43; #43 です。参照マネージャー &#40;です。ATL プロジェクト&#41;] (../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C 参照マネージャー (ATL プロジェクト)")  
+ ![Visual C&#43; &#43;参照マネージャー &#40;ATL プロジェクト&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C 参照マネージャー (ATL プロジェクト)")  
   
- C++/CLI またはユニバーサル Windows プラットフォームのプロジェクトでは、ソリューション内の他のプロジェクトだけでなく、さらに多くの種類のバイナリに参照の概念が適用されます。  これらのものがすべて **[参照マネージャー]**を表示します。
+ C++/CLI またはユニバーサル Windows プラットフォームのプロジェクトでは、ソリューション内の他のプロジェクトだけでなく、さらに多くの種類のバイナリに参照の概念が適用されます。  これらのものがすべて **[参照マネージャー]** を表示します。
   
 ## <a name="reference-properties"></a>参照のプロパティ  
- 参照には種類に従ってそれぞれプロパティがあります。 プロパティを表示するには、ソリューション エクスプローラーで参照を選んで **Alt + Enter**キーを押すか、右クリックして **[プロパティ]**を選びます。 読み取り専用のプロパティと、変更できるプロパティがあります。 ただし、通常はこれらのプロパティを手動で変更する必要はありません。  
+ 参照には種類に従ってそれぞれプロパティがあります。 プロパティを表示するには、ソリューション エクスプローラーで参照を選んで **Alt + Enter**キーを押すか、右クリックして **[プロパティ]** を選びます。 読み取り専用のプロパティと、変更できるプロパティがあります。 ただし、通常はこれらのプロパティを手動で変更する必要はありません。  
   
 ### <a name="activex-reference-properties"></a>ActiveX 参照のプロパティ  
  ActiveX 参照のプロパティは、COM コンポーネントへの参照に対してのみ使用できます。 これらのプロパティは、 **[参照]** ウィンドウで COM コンポーネントが選択されている場合にのみ表示されます。 プロパティは修正できません。  
@@ -125,6 +120,6 @@ ms.lasthandoff: 12/21/2017
  **Version**  
  参照アセンブリのバージョンが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
  [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)

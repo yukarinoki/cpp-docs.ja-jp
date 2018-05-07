@@ -1,12 +1,9 @@
 ---
-title: "致命的なエラー C1017 |Microsoft ドキュメント"
-ms.custom: 
+title: 致命的なエラー C1017 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1017
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28a4b09ef4d62edd97d734e4a3ad64b8a0c2f86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08433109a959b324621e9c837e67cf529d9f6fdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1017"></a>致命的なエラー C1017
 整数定数式が無効です。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  `CONSTANT_NAME`に文字列と整数ではありません、評価、`#if`ディレクティブで致命的なエラー C1017 が生成されます。  
   
- それ以外の場合に、プリプロセッサは、0 として定数 undefined を評価します。 次の例に示すように意図しない結果は、原因になります。 `YES`0 に評価するためには、定義されません。 式`#if``CONSTANT_NAME`が false になり、コードで使用される`YES`はプリプロセッサによって削除されます。 `NO`定義されていない (ゼロ)。 このため`#elif``CONSTANT_NAME==NO`を true に評価 (`0 == 0`)、内のコードのままにするプリプロセッサの原因、 `#elif` 、ステートメントの部分 — 正反対が意図した動作です。  
+ それ以外の場合に、プリプロセッサは、0 として定数 undefined を評価します。 次の例に示すように意図しない結果は、原因になります。 `YES` 0 に評価するためには、定義されません。 式`#if``CONSTANT_NAME`が false になり、コードで使用される`YES`はプリプロセッサによって削除されます。 `NO` 定義されていない (ゼロ)。 このため`#elif``CONSTANT_NAME==NO`を true に評価 (`0 == 0`)、内のコードのままにするプリプロセッサの原因、 `#elif` 、ステートメントの部分 — 正反対が意図した動作です。  
   
 ```  
 // C1017c.cpp  

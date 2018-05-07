@@ -1,12 +1,9 @@
 ---
-title: "CAnimationVariableChangeHandler クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CAnimationVariableChangeHandler クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationVariableChangeHandler
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70e8d59e291362496ec2555cf2838bf2df41d3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler クラス
 アニメーション変数の値が変化したときに Animation API によって呼び出されるコールバックを実装します。  
@@ -66,10 +61,10 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
   
  `CAnimationVariableChangeHandler`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxanimationcontroller.h  
   
-##  <a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
+##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged  
  アニメーション変数の値が変更されたときに呼び出されます。  
   
 ```  
@@ -96,7 +91,7 @@ IFACEMETHOD(OnValueChanged) (
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-##  <a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController  
  イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。  
   
 ```  
@@ -107,5 +102,5 @@ void SetAnimationController(CAnimationController* pAnimationController);
  `pAnimationController`  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

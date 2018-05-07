@@ -1,13 +1,10 @@
 ---
-title: "CListCtrl の使い方 |Microsoft ドキュメント"
-ms.custom: 
+title: CListCtrl の使い方 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CListCtrl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc61b0bb9e1df702424c2e95d3d4ef3b2186dea0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-clistctrl"></a>CListCtrl の使い方
 リスト コントロールを使用すると、ファイル エクスプ ローラーで、またはテキスト、アイコンの有無の単票形式のリストと同様に、ラベルが付いたアイコンの形を表示できます。 リスト コントロールで持つことができます、4 つ考えられる「ビュー」(MFC ビューと混同しないで not) の詳細については — アイコンの表示、小さいアイコン ビュー、リスト ビュー、およびレポートの表示-内のビューを参照してください、 [CListCtrl](../mfc/reference/clistctrl-class.md)クラスの概要です。  
@@ -65,6 +60,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [リスト コントロールの破棄](../mfc/destroying-the-list-control.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コントロール](../mfc/controls-mfc.md)
 

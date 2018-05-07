@@ -1,24 +1,19 @@
 ---
-title: "CLR 統合 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 統合 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d832e3856d7df444663e0b99b759e2ea620b27ed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50b455bd3b6fd4a96c3181b60904cb7a3250e866
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-integration-ccx"></a>CLR 統合 (C++/CX)
 一部の Windows ランタイム型では、特別な処理を受信 C + + CX と共通言語ランタイム (CLR) に基づく言語です。 この記事では、1 つの言語のいくつかの型から別の言語へのマップの仕組みについて説明します。 たとえば、CLR は Windows.Foundation.IVector を System.Collections.IList へ、Windows.Foundation.IMap を System.Collections.IDictionary へ、というようにマップします。 同様に、C + + CX が platform::delegate や platform::string などの型を特別にマップします。  
@@ -77,5 +72,5 @@ ms.lasthandoff: 02/14/2018
   
  IReference\<T >、Windows ランタイムでは、null を許容するマップ\<T > を .NET でします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [その他の言語と相互運用](../cppcx/interoperating-with-other-languages-c-cx.md)

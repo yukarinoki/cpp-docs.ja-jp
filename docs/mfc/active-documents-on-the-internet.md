@@ -1,13 +1,10 @@
 ---
-title: "インターネット上の active ドキュメント |Microsoft ドキュメント"
-ms.custom: 
+title: インターネット上の active ドキュメント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - application wizards [MFC]
 - active documents [MFC], using application wizards
 ms.assetid: a46bd8a0-e27a-4116-b1bf-dacdb7ae78d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents-on-the-internet"></a>インターネット上の Active ドキュメント
 アクティブなドキュメントは、従来の埋め込みオブジェクトの拡張機能を提供します。 アクティブなドキュメントは、マルチページ可能性があり、全体のクライアント領域に表示されます。 従来のメニューのネゴシエーションを実行し、インプレースだけでなく、サーバー アプリケーションで開いているウィンドウで編集できます。 斜線の枠で囲まれた小さな四角形として表示する、代わりに、アクティブなドキュメントは、フル フレームと常に、インプレース アクティブです。  

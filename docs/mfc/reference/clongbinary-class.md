@@ -1,12 +1,9 @@
 ---
-title: "CLongBinary クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CLongBinary クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLongBinary
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clongbinary-class"></a>CLongBinary クラス
 データベース上の大きなバイナリ データ オブジェクト (BLOB または "バイナリ ラージ オブジェクト" と呼びます) を使った作業を単純にします。  
@@ -72,17 +67,17 @@ class CLongBinary : public CObject
   
  `CLongBinary`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb_.h  
   
-##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>  CLongBinary::CLongBinary  
  `CLongBinary` オブジェクトを構築します。  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
  格納されたデータのバイト単位の実際のサイズを格納、`HGLOBAL`で処理`m_hData`です。  
   
 ```  
@@ -92,14 +87,14 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>コメント  
  このサイズは、データに割り当てられたメモリ ブロックのサイズより小さくなる可能性があります。 Win32 を呼び出す[GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)割り当てサイズを取得します。  
   
-##  <a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>  CLongBinary::m_hData  
  Windows の格納`HGLOBAL`の実際のバイナリ ラージ オブジェクト データを処理します。  
   
 ```  
 HGLOBAL m_hData;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CRecordset クラス](../../mfc/reference/crecordset-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "TN071: MFC IOleCommandTarget の実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN071: MFC IOleCommandTarget の実装 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f97774036c42fa0f681a65e0a335f944daf09c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21745762fb6f6eb1eb324013db12207c4b3b81d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>テクニカル ノート 71: MFC IOleCommandTarget の実装
 > [!NOTE]
@@ -34,11 +29,11 @@ ms.lasthandoff: 12/21/2017
   
  `IOleCommandTarget`インターフェイス オブジェクトとそのコンテナーに他のコマンドは有効にします。 たとえば、オブジェクトのツールバーのボタンがあるコマンドのように**印刷**、**印刷プレビュー**、**保存**、 `New`、および**ズーム**. このようなオブジェクトをサポートするコンテナーに埋め込まれたかどうか`IOleCommandTarget`、オブジェクトでしたそのボタンを有効にして、コマンドに、ユーザーがクリックされたときに処理するためのコンテナーに転送します。 コンテナーが、埋め込みオブジェクト自体を印刷する場合、その行うことができるこの要求を介してコマンドを送信することによって、`IOleCommandTarget`埋め込みオブジェクトのインターフェイスです。  
   
- `IOleCommandTarget`サーバーでメソッドを呼び出すクライアントによって使用されることで、オートメーションのようなインターフェイスです。 ただしを使用して`IOleCommandTarget`通常高価なを使用するプログラマが必要ないために、オートメーション インターフェイスを使用して呼び出しを行うのオーバーヘッドを削減できます`Invoke`メソッドの`IDispatch`します。  
+ `IOleCommandTarget` サーバーでメソッドを呼び出すクライアントによって使用されることで、オートメーションのようなインターフェイスです。 ただしを使用して`IOleCommandTarget`通常高価なを使用するプログラマが必要ないために、オートメーション インターフェイスを使用して呼び出しを行うのオーバーヘッドを削減できます`Invoke`メソッドの`IDispatch`します。  
   
  MFC では、`IOleCommandTarget`インターフェイスは、Active ドキュメント コンテナーは、サーバーに使用できるように Active ドキュメント サーバーで使用します。 Active ドキュメント サーバー クラス`CDocObjectServerItem`、MFC インターフェイス マップを使用して (を参照してください[TN038: MFC/OLE IUnknown の実装](../mfc/tn038-mfc-ole-iunknown-implementation.md)) を実装する、`IOleCommandTarget`インターフェイスです。  
   
- `IOleCommandTarget`実装されても、 **COleFrameHook**クラスです。 **COleFrameHook**インプレースでのフレーム ウィンドウの機能を実装するドキュメントに未記載の MFC クラスのコンテナーを編集します。 **COleFrameHook**も MFC インターフェイス マップを使用して実装する、`IOleCommandTarget`インターフェイスです。 **COleFrameHook**の実装の`IOleCommandTarget`OLE コマンドは転送`COleDocObjectItem`-Active ドキュメント コンテナーを派生します。 これにより、Active ドキュメント サーバーからメッセージを受信するすべての MFC Active ドキュメント コンテナーです。  
+ `IOleCommandTarget` 実装されても、 **COleFrameHook**クラスです。 **COleFrameHook**インプレースでのフレーム ウィンドウの機能を実装するドキュメントに未記載の MFC クラスのコンテナーを編集します。 **COleFrameHook**も MFC インターフェイス マップを使用して実装する、`IOleCommandTarget`インターフェイスです。 **COleFrameHook**の実装の`IOleCommandTarget`OLE コマンドは転送`COleDocObjectItem`-Active ドキュメント コンテナーを派生します。 これにより、Active ドキュメント サーバーからメッセージを受信するすべての MFC Active ドキュメント コンテナーです。  
   
 ## <a name="mfc-ole-command-maps"></a>MFC OLE コマンド マップ  
  MFC 活かすことができますの`IOleCommandTarget`MFC OLE を使用してコマンドをマップします。 OLE コマンドではメッセージされる OLE コマンドをコマンド マップを含んでいるクラスのメンバー関数にマップするためのマップと同じようにします。 この作業をするためには、グループを指定する、OLE コマンドを処理するコマンドや OLE コマンドのコマンド ID のコマンド マップにマクロを配置、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) OLE コマンドが受信したときに送信されるメッセージ。 MFC には、標準の OLE コマンドのいくつかの定義済みマクロも用意されています。 一連の標準の OLE 用に設計された最初のコマンドを使用して Microsoft Office アプリケーションを参照してください docobj.h で定義されている OLECMDID 列挙します。  
@@ -172,7 +167,7 @@ void CContainerCntrItem::DoOleCmd()
 } 
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "_mm_cvtss_si64x |Microsoft ドキュメント"
-ms.custom: 
+title: _mm_cvtss_si64x |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_cvtss_si64x
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 247f7a452d350cc061f323b7889268e766288f4b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 665c52fc0dd0645e25d3014cc28f9fdfba344e2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Microsoft 固有の仕様**  
@@ -48,7 +43,7 @@ __int64 _mm_cvtss_si64x(
 ## <a name="return-value"></a>戻り値  
  64 ビット整数の場合、最初の浮動小数点値の整数への変換の結果。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -97,6 +92,6 @@ int main()
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [__m128d](../cpp/m128d.md)   
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

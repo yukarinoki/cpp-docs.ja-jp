@@ -1,12 +1,9 @@
 ---
-title: "hash_multiset::size_type (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_multiset::size_type (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::size_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - size_type member [STL/CLR]
 ms.assetid: cf4e2a5f-6d46-4ade-9bb4-407e12f310b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 23056cd9e9bb24c5b3ffe57052f90657dcf63d55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d117ac5d0a97e31ecd7304ace3eeaf561021d752
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetsizetype-stlclr"></a>hash_multiset::size_type (STL/CLR)
 2 つの要素の間の距離を符号付きの型。  
@@ -75,11 +70,11 @@ int main()
 end()-begin() = 3  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset::empty (STL/CLR)](../dotnet/hash-multiset-empty-stl-clr.md)

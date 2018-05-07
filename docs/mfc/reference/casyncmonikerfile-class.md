@@ -1,12 +1,9 @@
 ---
-title: "CAsyncMonikerFile クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CAsyncMonikerFile クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncMonikerFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile クラス
 ActiveX コントロール (以前の OLE コントロール) で非同期モニカーを使用するための機能が用意されています。  
@@ -114,10 +109,10 @@ class CAsyncMonikerFile : public CMonikerFile
   
  `CAsyncMonikerFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
+##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
  `CAsyncMonikerFile` オブジェクトを構築します。  
   
 ```  
@@ -125,11 +120,11 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>コメント  
- 作成されません、`IBindHost`インターフェイスです。 `IBindHost`指定した場合にのみに使用、**開く**メンバー関数。  
+ 作成されません、`IBindHost`インターフェイスです。 `IBindHost` 指定した場合にのみに使用、**開く**メンバー関数。  
   
  詳細については、`IBindHost`インターフェイスでは、Windows SDK を参照してください。  
   
-##  <a name="close"></a>CAsyncMonikerFile::Close  
+##  <a name="close"></a>  CAsyncMonikerFile::Close  
  この関数では、閉じ、すべてのリソースを解放します。  
   
 ```  
@@ -139,7 +134,7 @@ virtual void Close();
 ### <a name="remarks"></a>コメント  
  開かれていないか、既に閉じられているファイルに呼び出すことができます。  
   
-##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
+##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback  
  実装する COM オブジェクトを作成`IBindStatusCallback`です。  
   
 ```  
@@ -154,15 +149,15 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
  場合`pUnkControlling`は**NULL**、関数の内部にポインターを返します**IUnknown** 、新しい COM オブジェクトのサポートに`IBindStatusCallback`です。 場合`pUnkControlling`は**NULL**へのポインターを返します、 **IUnknown** 、新しい COM オブジェクトのサポートに`IBindStatusCallback`です。  
   
 ### <a name="remarks"></a>コメント  
- `CAsyncMonikerFile`実装する COM オブジェクトが必要です`IBindStatusCallback`です。 MFC は、このようなオブジェクトを実装し、集計可能であります。 オーバーライドできます`CreateBindStatusCallback`独自の COM オブジェクトを取得します。 呼び出すことによって、COM オブジェクトが MFC の実装を集計できる`CreateBindStatusCallback`COM オブジェクトの制御、不明なとします。 使用して実装されている COM オブジェクト、 `CCmdTarget` COM サポートを制御する不明なを使用して、取得できます**CCmdTarget::GetControllingUnknown**です。  
+ `CAsyncMonikerFile` 実装する COM オブジェクトが必要です`IBindStatusCallback`です。 MFC は、このようなオブジェクトを実装し、集計可能であります。 オーバーライドできます`CreateBindStatusCallback`独自の COM オブジェクトを取得します。 呼び出すことによって、COM オブジェクトが MFC の実装を集計できる`CreateBindStatusCallback`COM オブジェクトの制御、不明なとします。 使用して実装されている COM オブジェクト、 `CCmdTarget` COM サポートを制御する不明なを使用して、取得できます**CCmdTarget::GetControllingUnknown**です。  
   
- COM オブジェクトを呼び出すことで MFC の実装に委任できます代わりに、 **CreateBindStatusCallback (NULL)**です。  
+ COM オブジェクトを呼び出すことで MFC の実装に委任できます代わりに、 **CreateBindStatusCallback (NULL)** です。  
   
  [CAsyncMonikerFile::Open](#open)呼び出し`CreateBindStatusCallback`です。  
   
  非同期モニカーおよび非同期のバインドの詳細については、次を参照してください。、 [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060)インターフェイスと[非同期バインド方法と記憶域作業](http://msdn.microsoft.com/library/windows/desktop/aa379152)です。 集計の詳細については、次を参照してください。[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)です。 3 つすべてのトピックは、Windows SDK には。  
   
-##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
+##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  非同期モニカーをバインドする方法を確認する非同期モニカーのクライアントから呼び出されます。  
   
 ```  
@@ -177,7 +172,7 @@ virtual DWORD GetBindInfo() const;
   
  これを行うための 1 つの理由は、データ プッシュ モデルではなくデータ プル モデルを使用してバインドすることです。 データ プル モデルでは、クライアントがバインド操作を駆動し、モニカーのみデータをクライアントに提供が読み取られるとします。 データ プッシュ モデルでは、モニカーは、バインドの非同期操作を駆動し、継続的に新しいデータがあるたびにクライアントに通知します。  
   
-##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
+##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding  
  非同期転送バインドへのポインターを取得するには、この関数を呼び出します。  
   
 ```  
@@ -192,7 +187,7 @@ IBinding* GetBinding() const;
   
  詳細については、`IBinding`インターフェイスでは、Windows SDK を参照してください。  
   
-##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
+##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc  
  ストリーム内のデータの形式を取得するには、この関数を呼び出します。  
   
 ```  
@@ -202,7 +197,7 @@ FORMATETC* GetFormatEtc() const;
 ### <a name="return-value"></a>戻り値  
  Windows の構造体へのポインター [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)現在開いているストリーム。 返します**NULL**モニカーがバインドされていない場合、非同期ではない場合、または非同期操作が開始されていない場合。  
   
-##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
+##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  バインディング プロセスの開始を受け取るための優先順位のスレッドにバインド操作と非同期モニカーのクライアントから呼び出されます。  
   
 ```  
@@ -213,9 +208,9 @@ virtual LONG GetPriority() const;
  優先順位を非同期的に転送を行います。 標準スレッドの優先順位フラグのいずれかの: **THREAD_PRIORITY_ABOVE_NORMAL**、 **THREAD_PRIORITY_BELOW_NORMAL**、 **THREAD_PRIORITY_HIGHEST**、 **THREAD_PRIORITY_IDLE**、 **THREAD_PRIORITY_LOWEST**、 **THREAD_PRIORITY_NORMAL**、および**THREAD_PRIORITY_TIME_CRITICAL**です。 Windows の関数を参照してください[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)これらの値の詳細についてはします。  
   
 ### <a name="remarks"></a>コメント  
- `GetPriority`呼び出すことはできません直接です。 **THREAD_PRIORITY_NORMAL**が既定の実装によって返されます。  
+ `GetPriority` 呼び出すことはできません直接です。 **THREAD_PRIORITY_NORMAL**が既定の実装によって返されます。  
   
-##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
+##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
  非同期モニカーは`OnDataAvailable`を指定するデータをクライアントに使用可能になったら、非同期の中に、バインド操作します。  
   
 ```  
@@ -241,7 +236,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
+##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource  
  リソースが低いときに、モニカーによって呼び出されます。  
   
 ```  
@@ -251,7 +246,7 @@ virtual void OnLowResource();
 ### <a name="remarks"></a>コメント  
  既定の実装`GetBinding( )-> Abort( )`です。  
   
-##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
+##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress  
  モニカー バインド操作、時間のかかる操作中に適切な間隔で通常の現在の進行状況を示すために繰り返しによって呼び出されます。  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnProgress(
  **BINDSTATUS_CLASSIDAVAILABLE**  
  バインドされているオブジェクトのインスタンスが作成されるだけです。 `szStatusText`必要な場合は、クライアント、bind 操作を取り消す機会を許可する文字列の形式で、新しいオブジェクトの CLSID を提供します。  
   
-##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
+##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  バインドが開始されるときに、アクションを実行する派生クラスでは、この関数をオーバーライドします。  
   
 ```  
@@ -315,7 +310,7 @@ virtual void OnStartBinding();
 ### <a name="remarks"></a>コメント  
  この関数がモニカーによってコールバックされます。 既定の実装では、何も行われません。  
   
-##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
+##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding  
  モニカー バインド操作の最後にによって呼び出されます。  
   
 ```  
@@ -334,7 +329,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
   
  詳細については、`IBinding`インターフェイスでは、Windows SDK を参照してください。  
   
-##  <a name="open"></a>CAsyncMonikerFile::Open  
+##  <a name="open"></a>  CAsyncMonikerFile::Open  
  非同期的にファイルを開くには、このメンバー関数を呼び出します。  
   
 ```  
@@ -388,13 +383,13 @@ virtual BOOL Open(
  非同期モニカー インターフェイスへのポインター `IMoniker`、正確なモニカーで取得できる、ドキュメントのモニカーの組み合わせである**IOleClientSite::GetMoniker (** *OLEWHICHMK_コンテナー* **)**、およびパス名から作成されたモニカーです。 コントロールは、このモニカーを使用してをバインドすることができますが、これは、コントロールを保存する必要がありますモニカーではありません。  
   
  *pBindHost*  
- ポインター、`IBindHost`可能性のある相対パス名からモニカーを作成するために使用するインターフェイスです。 バインド ホストは、正しくないか、モニカーは提供されない場合、は、呼び出し既定**開く (** `lpszFileName` **、**`pError`**)**です。 詳細については、`IBindHost`インターフェイスでは、Windows SDK を参照してください。  
+ ポインター、`IBindHost`可能性のある相対パス名からモニカーを作成するために使用するインターフェイスです。 バインド ホストは、正しくないか、モニカーは提供されない場合、は、呼び出し既定**開く (** `lpszFileName` **、**`pError`**)** です。 詳細については、`IBindHost`インターフェイスでは、Windows SDK を参照してください。  
   
  `pServiceProvider`  
- `IServiceProvider` インターフェイスへのポインター。 サービス プロバイダーが正しくないか、サービスを提供する失敗したかどうかは`IBindHost`、呼び出しの既定値は**開く (** `lpszFileName` **、**`pError`**)**です。  
+ `IServiceProvider` インターフェイスへのポインター。 サービス プロバイダーが正しくないか、サービスを提供する失敗したかどうかは`IBindHost`、呼び出しの既定値は**開く (** `lpszFileName` **、**`pError`**)** です。  
   
  *pUnknown*  
- ポインター、 **IUnknown**インターフェイスです。 場合`IServiceProvider`が見つかると、関数を検索するクエリ`IBindHost`です。 サービス プロバイダーが正しくないか、サービスを提供する失敗したかどうかは`IBindHost`、呼び出しの既定値は**開く (** `lpszFileName` **、**`pError`**)**です。  
+ ポインター、 **IUnknown**インターフェイスです。 場合`IServiceProvider`が見つかると、関数を検索するクエリ`IBindHost`です。 サービス プロバイダーが正しくないか、サービスを提供する失敗したかどうかは`IBindHost`、呼び出しの既定値は**開く (** `lpszFileName` **、**`pError`**)** です。  
   
 ### <a name="return-value"></a>戻り値  
  ファイルが正常に開かれている場合は 0 以外。それ以外の場合 0 を返します。  
@@ -402,7 +397,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>コメント  
  この呼び出しでは、バインディング プロセスを開始します。  
   
- URL またはのファイル名を使用することができます、`lpszURL`パラメーター。 例:  
+ URL またはのファイル名を使用することができます、`lpszURL`パラメーター。 例えば:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   
@@ -410,7 +405,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CMonikerFile クラス](../../mfc/reference/cmonikerfile-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CMonikerFile クラス](../../mfc/reference/cmonikerfile-class.md)   

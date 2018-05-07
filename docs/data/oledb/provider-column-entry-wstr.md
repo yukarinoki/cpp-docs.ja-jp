@@ -1,12 +1,9 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_WSTR |Microsoft ドキュメント"
-ms.custom: 
+title: PROVIDER_COLUMN_ENTRY_WSTR |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROVIDER_COLUMN_ENTRY_WSTR
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROVIDER_COLUMN_ENTRY_WSTR macro
 ms.assetid: 70630bd5-d782-473b-9777-aebbbf5321c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd0f87bad4fbd758849e33ae18cdcfd6a8e72357
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: faa6630d8821065d056e922dbf4790265d2497f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providercolumnentrywstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 プロバイダーでサポートされている特定の列を表します。  
@@ -51,10 +46,10 @@ PROVIDER_COLUMN_ENTRY_WSTR(name
 ## <a name="remarks"></a>コメント  
  列のデータが null 終了の Unicode 文字の文字列の場合は、このマクロを使用して[DBTYPE_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート用マクロ](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)   

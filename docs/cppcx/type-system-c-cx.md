@@ -1,24 +1,19 @@
 ---
-title: "システム入力 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: システム入力 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>型システム (C++/CX)
 Windows ランタイムのアーキテクチャを使用するを使用することが C + + CX、Visual Basic、Visual c# および JavaScript アプリやコンポーネントを直接 Windows API にアクセスし、その他の Windows ランタイム アプリおよびコンポーネントと相互運用を書き込めません。 C++ で記述されているユニバーサル Windows プラットフォーム アプリは、CPU で直接実行するネイティブ コードにコンパイルされます。 C# または Visual Basic で記述されているユニバーサル Windows プラットフォーム アプリでは、Microsoft intermediate language (MSIL) にコンパイルされ、共通言語ランタイム (CLR) で実行します。 JavaScript で記述されているユニバーサル Windows プラットフォーム アプリは、実行時環境で実行します。 Windows ランタイムのオペレーティング システム コンポーネント自体では、C++ で記述され、ネイティブ コードとして実行することができます。 これらすべてのコンポーネントおよびユニバーサル Windows プラットフォーム アプリは、Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を通じて直接通信します。  
@@ -27,15 +22,15 @@ Windows ランタイムのアーキテクチャを使用するを使用するこ
   
  C++/CX 言語プロジェクションと内部動作の詳しい説明については、次のブログ記事を参照してください。  
   
-1.  [C + +/CX Part 0 of \[ n \]: 概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + +/CX Part 0 of \[n\]: 概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + +/CX パート 1 \[ n \]: 単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + +/CX パート 1 \[n\]: 単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + +/CX Part 2 of \[ n \]: ハット記号が付いた型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + +/CX Part 2 of \[n\]: ハット記号が付いた型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + +/CX Part 3 of \[ n \]: Under Construction](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + +/CX Part 3 of \[n\]: Under Construction](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + +/CX Part 4 of \[ n \]: 静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + +/CX Part 4 of \[n\]: 静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Windows メタデータ (.winmd) ファイル  
  コンパイラが、ネイティブのマシン語コードの実行可能ファイルを生成しもパブリックの Windows ランタイム型の記述を含む別の Windows メタデータ (.winmd) ファイルを生成 C++ で記述されているユニバーサル Windows プラットフォーム アプリをコンパイルするときにこれには、クラス、構造体、列挙体、インターフェイス、パラメーター化されたインターフェイス、およびデリゲートが含まれます。 メタデータの形式は、.NET Framework アセンブリで使用される形式に似ています。  C++ コンポーネントでは、.winmd ファイルにはメタデータのみ含まれています。実行可能コードは、別個のファイルに存在します。 これは、Windows に含まれている Windows ランタイム コンポーネントの場合です。 WinMD ファイルの名前はソース コードのルート名前空間のプレフィックスに一致またはそれ自体である必要があります。 (.NET Framework 言語の場合、.winmd ファイルには、.NET Framework アセンブリのようにコードとメタデータの両方が含まれます。)  
@@ -168,5 +163,5 @@ Windows ランタイムのアーキテクチャを使用するを使用するこ
   
  詳細については、次を参照してください。[型およびメンバーの非推奨化](../cppcx/deprecating-types-and-members-c-cx.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)

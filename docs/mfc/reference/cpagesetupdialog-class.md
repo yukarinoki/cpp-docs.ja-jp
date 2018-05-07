@@ -2,11 +2,8 @@
 title: コモン クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpagesetupdialog-class"></a>メンバー クラス
 印刷マージンの設定や変更の追加サポートと共に [OLE ページの設定] ダイアログ ボックスにより提供されるサービスをカプセル化します。  
@@ -350,7 +345,7 @@ virtual UINT PreDrawPage(
   
 ### <a name="parameters"></a>パラメーター  
  *wPaper*  
- 用紙サイズを示す値を指定します。 この値には、いずれかを指定できます、 **DMPAPER_**値の説明に一覧表示、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)構造体。  
+ 用紙サイズを示す値を指定します。 この値には、いずれかを指定できます、 **DMPAPER_** 値の説明に一覧表示、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)構造体。  
   
  `wFlags`  
  用紙または封筒の印刷の向きを示す、およびプリンターがドット マトリックスか HPPCL (Hewlett Packard Printer Control Language) デバイス。 このパラメーターには、次のいずれかの値を指定できます。  

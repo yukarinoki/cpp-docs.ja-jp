@@ -1,12 +1,9 @@
 ---
-title: "CPictureHolder クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CPictureHolder クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPictureHolder
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90bc58ce3d56852b983a673968df97b55f4bdeab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder クラス
 ユーザーがコントロールで画像を表示する Picture プロパティを実装します。  
@@ -87,7 +82,7 @@ class CPictureHolder
 |[CPictureHolder::m_pPict](#m_ppict)|画像オブジェクトへのポインター。|  
   
 ## <a name="remarks"></a>コメント  
- `CPictureHolder`基本クラスはありません。  
+ `CPictureHolder` 基本クラスはありません。  
   
  ストックの画像のプロパティを使用して、開発者は、ビットマップ、アイコン、または表示のメタファイルを指定できます。  
   
@@ -96,17 +91,17 @@ class CPictureHolder
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CPictureHolder`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
   
-##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder  
  `CPictureHolder` オブジェクトを構築します。  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>  CPictureHolder::CreateEmpty  
  空の作成`CPictureHolder`オブジェクトし、それに接続、`IPicture`インターフェイスです。  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>戻り値  
  オブジェクトが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>  CPictureHolder::CreateFromBitmap  
  内の画像オブジェクトを初期化するために、ビットマップを使用して、`CPictureHolder`です。  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>コメント  
  場合`bTransferOwnership`は**TRUE**呼び出し元は、ビットマップを使用しないで、またはこの呼び出しの後の任意の方法でパレット オブジェクトを返します。 場合`bTransferOwnership`は**FALSE**、呼び出し元がいるビットマップとパレット オブジェクトは有効なまま画像オブジェクトの有効期間を確保するためです。  
   
-##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  内の画像オブジェクトを初期化するためにアイコンを使用して、`CPictureHolder`です。  
   
 ```  
@@ -190,7 +185,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>コメント  
  場合`bTransferOwnership`は**TRUE**、呼び出し元は、いません、この呼び出しが戻った後任意の方法でアイコン オブジェクトを使用する必要があります。 場合`bTransferOwnership`は**FALSE**、呼び出し元がそのアイコン オブジェクトは有効な画像オブジェクトの有効期間を確保するためです。  
   
-##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  内の画像オブジェクトを初期化するために、メタファイルを使用して、`CPictureHolder`です。  
   
 ```  
@@ -220,7 +215,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>コメント  
  場合`bTransferOwnership`は**TRUE**、呼び出し元は、いません、この呼び出しが戻った後任意の方法でメタファイル オブジェクトを使用する必要があります。 場合`bTransferOwnership`は**FALSE**、呼び出し元がそのメタファイル オブジェクトは有効な画像オブジェクトの有効期間を確保するためです。  
   
-##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  コンテナーのプロパティ ブラウザーに表示される文字列を取得します。  
   
 ```  
@@ -234,7 +229,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>戻り値  
  文字列が取得できた場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>  CPictureHolder::GetPictureDispatch  
  この関数へのポインターを返します、`CPictureHolder`オブジェクトの`IPictureDisp`インターフェイスです。  
   
 ```  
@@ -247,7 +242,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>コメント  
  呼び出し元が呼び出す必要があります**リリース**を使い終わったら、このポインター。  
   
-##  <a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>  CPictureHolder::GetType  
  画像は、ビットマップ、メタファイル、またはアイコンかどうかを示します。  
   
 ```  
@@ -259,20 +254,20 @@ short GetType();
   
 |[値]|説明|  
 |-----------|-------------|  
-|**PICTYPE_UNINITIALIZED**|`CPictureHolder`オブジェクトが unititialized です。|  
-|**PICTYPE_NONE**|`CPictureHolder`オブジェクトが空です。|  
+|**PICTYPE_UNINITIALIZED**|`CPictureHolder` オブジェクトが unititialized です。|  
+|**PICTYPE_NONE**|`CPictureHolder` オブジェクトが空です。|  
 |**PICTYPE_BITMAP**|画像は、ビットマップです。|  
 |**PICTYPE_METAFILE**|画像は、メタファイルです。|  
 |**PICTYPE_ICON**|画像は、アイコンです。|  
   
-##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>  CPictureHolder::m_pPict  
  ポインター、`CPictureHolder`オブジェクトの`IPicture`インターフェイスです。  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="render"></a>Cpictureholder:  
+##  <a name="render"></a>  Cpictureholder:  
  によって参照される四角形に画像をレンダリング`rcRender`です。  
   
 ```  
@@ -292,7 +287,7 @@ void Render(
  *rcWBounds*  
  画像が描画されるオブジェクトの外接する四角形を表す四角形。 この四角形には、コントロールの`rcBounds`のオーバーライドに渡されたパラメーター[オーバライド](../../mfc/reference/colecontrol-class.md#ondraw)です。  
   
-##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  接続、`CPictureHolder`オブジェクトを`IPictureDisp`インターフェイスです。  
   
 ```  
@@ -303,6 +298,6 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
  `pDisp`  
  新しいポインター`IPictureDisp`インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CFontHolder クラス](../../mfc/reference/cfontholder-class.md)

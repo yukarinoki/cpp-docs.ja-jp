@@ -1,13 +1,10 @@
 ---
-title: "TN041: MFC ole 2 MFC OLE1 移行 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN041: MFC ole 2 MFC OLE1 移行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>テクニカル ノート 41: MFC/OLE1 から MFC/OLE 2 への移植
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>「ビジュアル編集」を追加します。  
  OLE の最も一般的な機能の 1 つは、インプレース アクティブ化 (「ビジュアル編集」) です。 この機能は、コンテナーのユーザー インターフェイスの一部のユーザーのシームレスな編集インターフェイスを提供する場合に、サーバー アプリケーションを使用します。 OCLIENT する、インプレース アクティブ化を実装するのには、特別なリソースをいくつか追加のコードだけでなく、追加する必要があります。 これらのリソースと、コードが通常提供されるに対して AppWizard によって、実際には、多くのコードをここでは「コンテナー」サポートを含む新しい AppWizard アプリケーションから直接借用しました。  
   
- まず、インプレース アクティブであるアイテムがある場合に使用するメニュー リソースを追加する必要があります。 IDR_OCLITYPE リソースをコピーしてファイルとウィンドウのポップアップを削除して、Visual C でこの追加のメニュー リソースを作成できます。 グループの分離を示すためにファイルとウィンドウのポップアップは 2 つの区分線に挿入 (のようになります: ファイルおよび #124; &#124;です。ウィンドウ)。 これらの区切り文字の意味し、サーバーとコンテナーのメニューにマージする方法の詳細についてを参照してください「メニューとリソース:: メニューのマージ」 *OLE 2 クラス*です。  
+ まず、インプレース アクティブであるアイテムがある場合に使用するメニュー リソースを追加する必要があります。 IDR_OCLITYPE リソースをコピーしてファイルとウィンドウのポップアップを削除して、Visual C でこの追加のメニュー リソースを作成できます。 グループの分離を示すためにファイルとウィンドウのポップアップは 2 つの区分線に挿入 (のようになります: ファイル&#124;&#124;ウィンドウ)。 これらの区切り文字の意味し、サーバーとコンテナーのメニューにマージする方法の詳細についてを参照してください「メニューとリソース:: メニューのマージ」 *OLE 2 クラス*です。  
   
  これらのメニューを作成した後は、フレームワークには、認識させる必要があります。 これは、呼び出すことで`CDocTemplate::SetContainerInfo`に対してドキュメント テンプレートの一覧に追加する前に、ドキュメント テンプレートのです。 ドキュメント テンプレートを登録する新しいコードは、次のようになります。  
   
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`'bIncludeNative' フラグをサポートしていません。 ネイティブのデータ (サーバー項目のシリアル化の関数によって書き込まれます) は、最初のパラメーターを削除するように常にコピーします。 さらに、 `CopyToClipboard` FALSE を返す代わりにエラーが発生時に例外がスローされます。 CServerView::OnEditCopy の以下のコードを変更します。  
+ `COleServerItem::CopyToClipboard` 'bIncludeNative' フラグをサポートしていません。 ネイティブのデータ (サーバー項目のシリアル化の関数によって書き込まれます) は、最初のパラメーターを削除するように常にコピーします。 さらに、 `CopyToClipboard` FALSE を返す代わりにエラーが発生時に例外がスローされます。 CServerView::OnEditCopy の以下のコードを変更します。  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -710,7 +705,7 @@ void CServerView::OnEditCopy()
   
 -   これらの特殊なリソースやクラスは、フレームワークに指示する必要があります。  
   
- メニュー リソースが簡単に作成します。 Visual C を実行、IDR_HIERSVRTYPE_SRVR_IP と呼ばれるメニュー リソースを IDR_HIERSVRTYPE メニュー リソースをコピーします。 メニューを変更して、編集およびヘルプ] メニューの [ポップアップのままにするようにします。 2 つの区切り記号 メニューを追加、編集およびヘルプ メニューの間 (のようになります: 編集 &#124; &#124;です。ヘルプ)。 これらの区切り文字の意味し、サーバーとコンテナーのメニューにマージする方法の詳細についてを参照してください「メニューとリソース:: メニューのマージ」 *OLE 2 クラス*です。  
+ メニュー リソースが簡単に作成します。 Visual C を実行、IDR_HIERSVRTYPE_SRVR_IP と呼ばれるメニュー リソースを IDR_HIERSVRTYPE メニュー リソースをコピーします。 メニューを変更して、編集およびヘルプ] メニューの [ポップアップのままにするようにします。 2 つの区切り記号 メニューを追加、編集およびヘルプ メニューの間 (のようになります: 編集&#124;&#124;役立ちます)。 これらの区切り文字の意味し、サーバーとコンテナーのメニューにマージする方法の詳細についてを参照してください「メニューとリソース:: メニューのマージ」 *OLE 2 クラス*です。  
   
  サブセットのツールバーのビットマップは、"Server"オプションがオンで新規生成 AppWizard アプリケーションから 1 つをコピーすることによって簡単に作成できます。 このビットマップは、Visual C にインポートすることができます。 必ず、ビットマップの ID の IDR_HIERSVRTYPE_SRVR_IP を付与してください。  
   
@@ -750,9 +745,9 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   選択範囲としてコンテナー ウィンドウのスクロールが変更されます。  
   
- また、MFC 3.0 で HIERSVR サンプルは、そのサーバーのアイテムのデザインが多少異なりますを使用します。 これは、メモリを節約でき、リンクより柔軟です。 HIERSVR の 2.0 バージョンで、ツリー内の各ノード*は a* `COleServerItem`です。 `COleServerItem`これらのノードごとに必ずしも必要ではよりもオーバーヘッドがもう少しが、`COleServerItem`のアクティブなリンクが必要です。 特定の時点で、非常にアクティブなリンクがあります、ほとんどの場合。 このバージョンの MFC で HIERSVR をより効率的に行うをするには、間のノードから、`COleServerItem`です。 両方 CServerNode と**よう**クラスです。 **よう**(から派生した`COleServerItem`) のみが必要に応じて作成します。 コンテナー (またはコンテナー) は、特定のノードをその特定のリンクを使用してを停止、CServerNode に関連付けられているようオブジェクトは削除されます。 この設計より効率的かつ柔軟です。 その柔軟性は、複数のリンクを選択範囲を処理する場合にします。 複数の選択をサポートして HIERSVR これら 2 つのバージョンのどちらが簡単に追加する (およびそのような選択項目にリンクをサポートする) ことが、MFC 3.0 のバージョンと HIERSVR、ので、`COleServerItem`はネイティブのデータから分離します。  
+ また、MFC 3.0 で HIERSVR サンプルは、そのサーバーのアイテムのデザインが多少異なりますを使用します。 これは、メモリを節約でき、リンクより柔軟です。 HIERSVR の 2.0 バージョンで、ツリー内の各ノード*は a* `COleServerItem`です。 `COleServerItem` これらのノードごとに必ずしも必要ではよりもオーバーヘッドがもう少しが、`COleServerItem`のアクティブなリンクが必要です。 特定の時点で、非常にアクティブなリンクがあります、ほとんどの場合。 このバージョンの MFC で HIERSVR をより効率的に行うをするには、間のノードから、`COleServerItem`です。 両方 CServerNode と**よう**クラスです。 **よう**(から派生した`COleServerItem`) のみが必要に応じて作成します。 コンテナー (またはコンテナー) は、特定のノードをその特定のリンクを使用してを停止、CServerNode に関連付けられているようオブジェクトは削除されます。 この設計より効率的かつ柔軟です。 その柔軟性は、複数のリンクを選択範囲を処理する場合にします。 複数の選択をサポートして HIERSVR これら 2 つのバージョンのどちらが簡単に追加する (およびそのような選択項目にリンクをサポートする) ことが、MFC 3.0 のバージョンと HIERSVR、ので、`COleServerItem`はネイティブのデータから分離します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

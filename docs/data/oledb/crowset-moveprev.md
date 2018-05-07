@@ -1,12 +1,9 @@
 ---
-title: CRowset::MovePrev | Microsoft Docs
-ms.custom: 
+title: Crowset::moveprev |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowset<TAccessor>.MovePrev
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MovePrev method
 ms.assetid: 7ced2bfb-f556-40fc-97ea-0d4e7213e114
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 272221d484beacbc856842ad70e588a91fa8ef07
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b86a5266faefaacb0df940f51985f1d31dd006b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetmoveprev"></a>CRowset::MovePrev
 前のレコードにカーソルを移動します。  
@@ -52,10 +47,10 @@ HRESULT MovePrev() throw();
 ## <a name="remarks"></a>コメント  
  このメソッドは、いずれかを設定することが必要です**DBPROP_CANFETCHBACKWARDS**または**DBPROP_CANSCROLLBACKWARDS**に`VARIANT_TRUE`呼び出す前に**開く**上の表に、または行セットを含むコマンド。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRowset クラス](../../data/oledb/crowset-class.md)   
  [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
  [CRowset::MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)   

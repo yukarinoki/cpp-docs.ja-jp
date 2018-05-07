@@ -1,13 +1,10 @@
 ---
-title: "デバイス コンテキスト |Microsoft ドキュメント"
-ms.custom: 
+title: デバイス コンテキスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45a2f99001d45de71ca3ea8a525152d53d67ee64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="device-contexts"></a>デバイス コンテキスト
 デバイス コンテキストは、ディスプレイやプリンターなどのデバイスの描画属性に関する情報を含む Windows のデータ構造です。 すべての描画呼び出しは、線、図形、およびテキストの描画の Windows Api をカプセル化されているデバイス コンテキスト オブジェクトを通じて行われます。 デバイス コンテキストでは、Windows のデバイスに依存しない描画できるようにします。 デバイス コンテキストを使用して、画面、プリンター、またはメタファイルを描画することです。  
@@ -85,6 +80,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [座標空間と変換](http://msdn.microsoft.com/library/windows/desktop/dd183475)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Window オブジェクト](../mfc/window-objects.md)
 

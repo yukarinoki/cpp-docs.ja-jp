@@ -1,13 +1,10 @@
 ---
-title: "クラス (アーキテクチャ) を参照 |Microsoft ドキュメント"
-ms.custom: 
+title: クラス (アーキテクチャ) を参照 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2761253da0907b1736754068fa196dda361a8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11bb3d9e551089a156d255f7b27fb55cbe87bdbe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-architecture"></a>ビュー クラス (アーキテクチャ)
-`CView`その派生クラスは、フレーム ウィンドウのクライアント領域を表す子ウィンドウ。 ビューは、データを表示し、ドキュメントの入力をそのまま使用します。  
+`CView` その派生クラスは、フレーム ウィンドウのクライアント領域を表す子ウィンドウ。 ビューは、データを表示し、ドキュメントの入力をそのまま使用します。  
   
  ビュー クラスは、ドキュメント クラスおよびドキュメント テンプレート オブジェクトを使用して、フレーム ウィンドウ クラスに関連付けられています。  
   
@@ -79,6 +74,6 @@ ms.lasthandoff: 12/21/2017
  [CTreeView](../mfc/reference/ctreeview-class.md)  
  Windows のツリー コントロールを含むビュー (を参照してください[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 ツリー コントロールには、このアイコンと、ファイル エクスプ ローラーの左側のウィンドウと同様の方法で階層内に配置する文字列が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

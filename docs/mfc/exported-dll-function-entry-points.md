@@ -1,13 +1,10 @@
 ---
-title: "DLL 関数のエントリ ポイントをエクスポート |Microsoft ドキュメント"
-ms.custom: 
+title: DLL 関数のエントリ ポイントをエクスポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28ded528d584e98b704b5f2d8e6e0a379a6a11a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exported-dll-function-entry-points"></a>DLL のエクスポート関数のエントリ ポイント
 DLL のエクスポート関数を使用して、 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL モジュールから呼び出し元のアプリケーションの DLL に切り替える際に、適切なグローバル状態を維持するためにマクロです。  
@@ -42,8 +37,8 @@ DLL のエクスポート関数を使用して、 [AFX_MANAGE_STATE](reference/e
   
  Dll のリソースに問題が発生する場合、`AFX_MANAGE_STATE`マクロは使用されません。 既定では、MFC では、メイン アプリケーションのリソース ハンドルを使用して、リソース テンプレートを読み込みます。 このテンプレートは、DLL に実際に格納されます。 根本原因がで MFC のモジュールの状態情報が切り替えられましたいないこと、`AFX_MANAGE_STATE`マクロです。 リソース ハンドルは、MFC のモジュールの状態から回復しました。 モジュールの状態が切り替えられていないすると、間違ったリソース ハンドルが使用されます。  
   
- `AFX_MANAGE_STATE`DLL 内の各関数に挿入する必要はありません。 たとえば、`InitInstance`せず、アプリケーションで MFC コードから呼び出すことが`AFX_MANAGE_STATE`MFC する前にモジュールの状態を自動的に移動するため`InitInstance`と後、再度スイッチ、`InitInstance`を返します。 すべてのメッセージ マップ ハンドラー同様です。 正規の MFC Dll には、実際には、すべてのメッセージをルーティングする前にモジュールの状態は自動的に切り替わりますマスターの特殊なウィンドウ プロシージャがあり。  
+ `AFX_MANAGE_STATE` DLL 内の各関数に挿入する必要はありません。 たとえば、`InitInstance`せず、アプリケーションで MFC コードから呼び出すことが`AFX_MANAGE_STATE`MFC する前にモジュールの状態を自動的に移動するため`InitInstance`と後、再度スイッチ、`InitInstance`を返します。 すべてのメッセージ マップ ハンドラー同様です。 正規の MFC Dll には、実際には、すべてのメッセージをルーティングする前にモジュールの状態は自動的に切り替わりますマスターの特殊なウィンドウ プロシージャがあり。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)
 

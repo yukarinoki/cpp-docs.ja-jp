@@ -1,13 +1,10 @@
 ---
-title: "ActiveX コントロール ウィザードからクラスを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: ActiveX コントロール ウィザードからクラスを追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>ActiveX コントロール クラス追加ウィザード
 このウィザードを使用すると、使用可能な ActiveX コントロールからの MFC クラスを追加します。 ウィザードでは、選択された ActiveX コントロールを追加する各インターフェイスのクラスを作成します。  
@@ -60,9 +55,9 @@ ms.lasthandoff: 12/21/2017
 |**<\<**|すべてのクラスを削除、**生成されたクラス** ボックスの一覧です。 使用できなくなった場合、**生成されたクラス**リストが空です。|  
   
  **生成されたクラス**  
- 使用して追加のインターフェイスから生成されるクラス名を指定します、  **>** または **>>** ボタンをクリックします。 各クラス名を表示する、クラスを選択しを使用してまたは下矢印キーを一覧をスクロールして、このボックスをクリックできます、`Class`でボックスとファイル名、 **.h ファイル**をクリックすると、ウィザードが生成されるボックス**[完了]**です。 このボックスで、一度に 1 つのクラスを選択できます。  
+ 使用して追加のインターフェイスから生成されるクラス名を指定します、 **>** または**>>** ボタンをクリックします。 各クラス名を表示する、クラスを選択しを使用してまたは下矢印キーを一覧をスクロールして、このボックスをクリックできます、`Class`でボックスとファイル名、 **.h ファイル**をクリックすると、ウィザードが生成されるボックス **[完了]** です。 このボックスで、一度に 1 つのクラスを選択できます。  
   
- クラスを削除するには、この一覧で選択し、  **<**です。 クラスを選択する必要はありません、**生成されたクラス**すべてのクラスを削除するボックス; をクリックする **<<**のすべてのクラスを削除する、**生成されたクラス**ボックスです。  
+ クラスを削除するには、この一覧で選択し、  **<** です。 クラスを選択する必要はありません、**生成されたクラス**すべてのクラスを削除するボックス; をクリックする **<<** のすべてのクラスを削除する、**生成されたクラス**ボックスです。  
   
  `Class`  
  選択されたクラスの名前を指定、**生成されたクラス**ボックスをクリックすると、ウィザードが追加されますを**完了**です。 内の名前を編集することができます、`Class`ボックス。  
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
   
  ウィザードでは、ファイルは上書きされません。 クリックすると、既存のファイルの名前を選択するかどうかは**完了**ウィザードの指示に従って、クラスの実装が、ファイルの内容に追加されるかどうかを指定するようにします。 をクリックして**はい**; ファイルを追加する をクリックして**なし**ウィザードに戻り、別のファイル名を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveX コントロールからのクラスの追加](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   
  [オートメーション クライアント: タイプ ライブラリの使用](../mfc/automation-clients-using-type-libraries.md)

@@ -1,12 +1,9 @@
 ---
-title: "マクロと OLE DB コンシューマー テンプレート用グローバル関数 |Microsoft ドキュメント"
-ms.custom: 
+title: マクロと OLE DB コンシューマー テンプレート用グローバル関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB consumer templates, macros
 - macros, OLE DB consumer template
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 755762e8b77cee9603074fdc8050d227fbd2eeb1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 57f61dd54855a2cf0196c0e269eda92295c818b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
 OLE DB コンシューマー テンプレートには、次のマクロとグローバル関数が含まれます。  
@@ -102,7 +97,7 @@ OLE DB コンシューマー テンプレートには、次のマクロとグロ
 |[END_PARAM_MAP](../../data/oledb/end-param-map.md)|パラメーターのマップ エントリの末尾をマークします。|  
 |[SET_PARAM_TYPE](../../data/oledb/set-param-type.md)|指定`COLUMN_ENTRY`マクロに続く、`SET_PARAM_TYPE`入力、出力、または入力/出力としてマクロです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

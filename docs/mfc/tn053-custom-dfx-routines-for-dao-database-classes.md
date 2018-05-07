@@ -1,13 +1,10 @@
 ---
-title: "TN053: DAO 用カスタム DFX ルーチン データベース クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN053: DAO 用カスタム DFX ルーチン データベース クラス |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>テクニカル ノート 53: DAO データベース クラス用カスタム DFX ルーチン
 > [!NOTE]
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  DFX と動的バインドされない相互に排他的な静的および動的なバインドのハイブリッドの使用を使用できるようにします。  
   
-## <a name="_mfcnotes_tn053_examples"></a>DAO レコード フィールド エクス チェンジのみの使用例 1:  
+## <a name="_mfcnotes_tn053_examples"></a> DAO レコード フィールド エクス チェンジのみの使用例 1:  
   
  (想定`CDaoRecordset`: 派生クラス`CMySet`既に開かれている)  
   
@@ -122,7 +117,7 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```  
   
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>DFX のしくみ  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> DFX のしくみ  
   
  DFX 機構は、同様に、レコード フィールド エクス (チェンジ RFX) メカニズムを使用して、MFC ODBC クラスに機能します。 DFX と RFX の原則は、同じが多数の内部的な相違があります。 DFX 関数の設計は、個々 の DFX ルーチンによってほとんどすべてのコードを共有するようでした。 最上位の DFX のみが、いくつか。  
   
@@ -164,12 +159,12 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 -   DAO も""を呼び出して、呼び出し元の可変長列のメモリを割り当て、呼び出し元を許可するためにします。 この 2 つ目の機能には、データのコピーの数を最小限に抑えるだけでなく、クラスのメンバーへのデータの格納を許可の利点は、(、`CDaoRecordset`派生クラス)。 この 2 番目のメカニズムは、MFC で使用するデータ メンバーにバインドする方法を`CDaoRecordset`クラスを派生します。  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>カスタム DFX ルーチンの実行内容  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> カスタム DFX ルーチンの実行内容  
  DFX 関数で実装される最も重要な操作が正常に呼び出すに必要なデータ構造を設定する機能をする必要があるの説明からは`GetRows`します。 DFX 関数が同様に、サポートが必要なその他の操作が、重要なまたは正しく準備として複合型として none の数が、`GetRows`呼び出します。  
   
  DFX の使用は、オンライン ドキュメントの説明です。 基本的には、2 つの要件があります。 最初に、メンバーを追加する必要があります、`CDaoRecordset`の各バインドされたフィールドとパラメーター クラスを派生します。 次のこの`CDaoRecordset::DoFieldExchange`オーバーライドする必要があります。 メンバーのデータ型は、重要なことに注意してください。 データベース内のフィールドからのデータと一致する必要があります、その型に変換できる型には、少なくともまたはことができます。 たとえば long 整数などのデータベース内の数値フィールドは常にテキストに変換されにバインドされている、`CString`メンバーがデータベース内のテキスト フィールドが必ずしも長整数型などの数値表現に変換され長い integ にバインドされています。er メンバー。 DAO および Microsoft Jet データベース エンジンは、変換 (なく MFC) を行います。  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>DFX_Text の詳細  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text の詳細  
  前述のように、DFX のしくみを説明する最善の方法、サンプルを使って作業を開始します。 このための内部を通過`DFX_Text`少なくとも DFX の基本的な知識を提供するのに役立つうまく動作する必要があります。  
   
  **AddToParameterList**  
@@ -188,7 +183,7 @@ PopUpEmployeeData(emp.m_strFirstName,
  入力、 **NULL**各フィールドの状態。  
   
  `SetFieldNull`  
- この操作を各フィールドの状態としてマークするだけ**NULL**メンバー変数の値を設定および**PSEUDO_**です。  
+ この操作を各フィールドの状態としてマークするだけ**NULL**メンバー変数の値を設定および**PSEUDO_** です。  
   
  **SetDirtyField**  
  呼び出し`SetFieldValue`各フィールドをダーティとマークします。  
@@ -216,7 +211,7 @@ PopUpEmployeeData(emp.m_strFirstName,
 > [!TIP]
 >  標準のデータ型の既存の DFX ルーチン、用カスタム DFX ルーチン モデルです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

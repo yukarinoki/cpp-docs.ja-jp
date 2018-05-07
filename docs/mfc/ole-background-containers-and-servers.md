@@ -1,13 +1,10 @@
 ---
-title: "OLE 概要: コンテナーとサーバー |Microsoft ドキュメント"
-ms.custom: 
+title: 'OLE 概要: コンテナーとサーバー |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3c6f3c15b0ea398ec621ba5f6e34a9fb6e0aae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f15ef532ba61a089f8adec9ed20f737c07eae2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE 概要 : コンテナーとサーバー
 コンテナー アプリケーションは、独自のドキュメントに埋め込みまたはリンクされた項目を組み込むことのできるアプリケーションです。 コンテナー アプリケーションで管理されているドキュメントを保存して OLE ドキュメント コンポーネントだけでなく、アプリケーション自体によって作成されたデータを表示できる必要があります。 コンテナー アプリケーションには、ユーザーが新しい項目を挿入または既存の項目を編集するには、必要な場合に、サーバー アプリケーションをアクティブ化することも必要があります。 コンテナー アプリケーションのユーザー インターフェイスの要件は、資料に記載されて[コンテナー: ユーザー インターフェイスの問題](../mfc/containers-user-interface-issues.md)です。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  この通信手段を使用して、サーバー アプリケーションの実装の詳細を知るコンテナーは必要ありません。 これにより、使用するサーバーの種類を定義することがなく、任意のサーバーで作成された項目をそのまま使用するためのコンテナーです。 結果として、コンテナー アプリケーションのユーザーには、将来のアプリケーションとデータ形式を活用がかかります。 これらの新しいアプリケーションが OLE コンポーネントの場合は、複合ドキュメントは、これらのアプリケーションによって作成された項目を組み込むためなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE の背景知識](../mfc/ole-background.md)   
  [OLE の背景知識: MFC における実装](../mfc/ole-background-mfc-implementation.md)   
  [コンテナー](../mfc/containers.md)   

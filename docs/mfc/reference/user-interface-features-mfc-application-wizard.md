@@ -1,13 +1,10 @@
 ---
-title: "ユーザー インターフェイスの機能、MFC アプリケーション ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー インターフェイスの機能、MFC アプリケーション ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.ui
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42196e437c8ff2ee43f733e1826b2a19c5dbb0a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>[ユーザー インターフェイスの機能] (MFC アプリケーション ウィザード)
 このトピックでは、アプリケーションの外観を指定するのに使用できるオプションについて説明します。 プロジェクトのユーザー インターフェイスの機能で指定したアプリケーションの種類によって異なります、[アプリケーションの種類、MFC アプリケーション ウィザード](../../mfc/reference/application-type-mfc-application-wizard.md)MFC アプリケーション ウィザードのページです。 たとえば、シングル ドキュメント インターフェイス アプリケーションを作成する場合は、子フレームのスタイルを追加できません。  
@@ -70,6 +65,6 @@ ms.lasthandoff: 12/21/2017
  **ダイアログのタイトル**  
  [CDialog クラス](../../mfc/reference/cdialog-class.md)-ベースのアプリケーションのみ、このタイトルが、ダイアログ ボックスのタイトル バーに表示されます。 このフィールドを編集する必要があります最初に選択する、**ダイアログ ベース**オプションで **アプリケーションの種類**です。 詳細については、次を参照してください。[アプリケーションの種類、MFC アプリケーション ウィザード](../../mfc/reference/application-type-mfc-application-wizard.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)
 

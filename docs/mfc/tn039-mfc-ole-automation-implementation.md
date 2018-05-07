@@ -1,13 +1,10 @@
 ---
-title: "TN039: MFC OLE オートメーションの実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN039: MFC OLE オートメーションの実装 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>テクニカル ノート 39: MFC/OLE オートメーションの実装
 > [!NOTE]
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  ただし、バック グラウンドで MFC の実行内容を理解する必要がある場合があります。 この注意はフレームワークを割り当てる方法を説明**DISPID**メンバー関数とプロパティにします。 MFC は、アルゴリズムの知識**DISPID**s は、アプリケーションのオブジェクトの「タイプ ライブラリ」を作成する場合など、Id がわかっている必要がある場合にのみ必要です。  
   
 ## <a name="mfc-dispid-assignment"></a>MFC の DISPID の割り当て  
- プロパティとメソッド (オブジェクトなど、コード内のオートメーション (Visual Basic のユーザー、たとえば)、エンドユーザーの実際の名前を表示するが、オートメーションが有効にShowWindow) の実装**idispatch::invoke**実際の名前を受信しません。 最適化のため、受信、 **DISPID**、これは、32 ビット"マジック"を cookie メソッドまたはプロパティへのアクセスをについて説明します。 これら**DISPID**から返される値、`IDispatch`と呼ばれる別の方法で実装**::getidsofnames**です。 オートメーション クライアント アプリケーションが呼び出す`GetIDsOfNames`アクセス、およびそれ以降の呼び出しのキャッシュが意図メンバーまたはプロパティごとに一度**idispatch::invoke**です。 これにより、高価な文字列の検索に一度だけ実行オブジェクトを使用して、ごとの代わりに 1 回あたり**idispatch::invoke**呼び出します。  
+ プロパティとメソッド (オブジェクトなど、コード内のオートメーション (Visual Basic のユーザー、たとえば)、エンドユーザーの実際の名前を表示するが、オートメーションが有効にShowWindow) の実装**idispatch::invoke**実際の名前を受信しません。 最適化のため、受信、 **DISPID**、これは、32 ビット"マジック"を cookie メソッドまたはプロパティへのアクセスをについて説明します。 これら**DISPID**から返される値、`IDispatch`と呼ばれる別の方法で実装 **::getidsofnames**です。 オートメーション クライアント アプリケーションが呼び出す`GetIDsOfNames`アクセス、およびそれ以降の呼び出しのキャッシュが意図メンバーまたはプロパティごとに一度**idispatch::invoke**です。 これにより、高価な文字列の検索に一度だけ実行オブジェクトを使用して、ごとの代わりに 1 回あたり**idispatch::invoke**呼び出します。  
   
  MFC の決定、 **DISPID**メソッドとプロパティに基づいて 2 つの操作。  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 -   最派生クラス (相対 0) からディスパッチ マップの距離は、  
   
- **DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **ください**最派生クラスからの距離が含まれています。 例:  
+ **DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **ください**最派生クラスからの距離が含まれています。 例えば:  
   
 ```  
 class CDispPoint : public CCmdTarget  
@@ -188,7 +183,7 @@ property Y    (DISPID)0x00010002
  領域の文字列には、各パラメーターの vts _ が区切られます。  
   
 ## <a name="remarks"></a>コメント  
- ほぼ同様に、`DISP_PROPERTY_EX`マクロ、このマクロは、個別の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロでは、プロパティのパラメーター リストを指定することができます。 これは、その他の何らかの方法でインデックスを作成またはパラメーター化されているプロパティを実装するために役立ちます。 パラメーターは常に配置されます最初に、その後にプロパティの新しい値。 例:  
+ ほぼ同様に、`DISP_PROPERTY_EX`マクロ、このマクロは、個別の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロでは、プロパティのパラメーター リストを指定することができます。 これは、その他の何らかの方法でインデックスを作成またはパラメーター化されているプロパティを実装するために役立ちます。 パラメーターは常に配置されます最初に、その後にプロパティの新しい値。 例えば:  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  領域の文字列には、各パラメーターの vts _ が区切られます。  
   
 ## <a name="remarks"></a>コメント  
- これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかに割り当てます。 マクロ名をその ID が追加される点を除いて、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) ID は、直後に指定されたパラメーターによって決定されます、`pszName`パラメーター。 子を参照してください。詳細については、これらのマクロ H します。 **_ID**ディスパッチ マップの最後にエントリを配置する必要があります。 自動が影響**DISPID**以外と同じ方法で生成**_ID**マクロのバージョンが (、 **DISPID**s は、位置によって決まります)。 例:  
+ これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかに割り当てます。 マクロ名をその ID が追加される点を除いて、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) ID は、直後に指定されたパラメーターによって決定されます、`pszName`パラメーター。 子を参照してください。詳細については、これらのマクロ H します。 **_ID**ディスパッチ マップの最後にエントリを配置する必要があります。 自動が影響**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンが (、 **DISPID**s は、位置によって決まります)。 例えば:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,
@@ -352,7 +347,7 @@ return NULL;
   
  返されたディスパッチ インターフェイスこの関数が直接使用またはにアタッチされているし、可能性がある、`COleDispatchDriver`のタイプ セーフ アクセスします。 直接使用する場合は、呼び出すことを確認してください、**リリース**メンバー使用するときに、ポインター (、`COleDispatchDriver`デストラクターは、既定で)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

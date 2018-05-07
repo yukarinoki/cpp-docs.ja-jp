@@ -1,12 +1,9 @@
 ---
-title: "CMFCDesktopAlertWndButton クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCDesktopAlertWndButton クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1153546851e6a34c14dacd33db04091de24557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efabaabdcc3f08a58cb7dc0a7845a56e5238548d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton クラス
 デスクトップ通知ダイアログ ボックスに追加するボタンを使用できます。  
@@ -62,7 +57,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 |||  
 |-|-|  
-|name|説明|  
+|名前|説明|  
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|キャプション領域のアラート ダイアログ ボックスで、ボタンが表示されるかどうかを指定するブール値。|  
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|ボタンが、[アラート] ダイアログ ボックスを閉じるかどうかを指定するブール値。|  
   
@@ -90,10 +85,10 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdesktopalertwnd.h  
   
-##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
  キャプション領域のアラート ダイアログ ボックスで、ボタンが表示されるかどうかを判断します。  
   
 ```  
@@ -103,7 +98,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>戻り値  
  警告のダイアログ ボックスの [キャプション] 領域で、ボタンが表示されている場合は 0 以外。それ以外の場合、0 を返します。  
   
-##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
  ボタンが、[アラート] ダイアログ ボックスを閉じるかどうかを判断します。  
   
 ```  
@@ -113,7 +108,7 @@ BOOL IsCloseButton() const;
 ### <a name="return-value"></a>戻り値  
  以外の場合は、ボタン、警告ダイアログ ボックスを閉じます。それ以外の場合、0 を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCDesktopAlertDialog クラス](../../mfc/reference/cmfcdesktopalertdialog-class.md)

@@ -1,30 +1,25 @@
 ---
-title: "ツリー コントロールの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: ツリー コントロールの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3b7e0348cb21aa4338293f7cc1119e380f92dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-tree-controls"></a>ツリー コントロールの使い方
 ツリー コントロールの一般的な使用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 次のパターンします。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ツリー コントロールのイメージを使用する場合は、イメージ リストを呼び出して設定[SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)です。 呼び出して、インデント設定を変更することも[SetIndent](../mfc/reference/ctreectrl-class.md#setindent)です。 これを行う適切な時刻が含まれる[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (でのコントロールのダイアログ ボックス) または[フィルターと並べ替え順序](../mfc/reference/cview-class.md#oninitialupdate)(views) 用です。  
   
--   呼び出して、コントロールにデータをまとめる、`CTreeCtrl`の[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)データ項目ごとに 1 回の関数。 `InsertItem`場合など、後でそれを参照する際の項目へのハンドルを返すは、子項目を追加します。 データを初期化するために適切な時刻が含まれる`OnInitDialog`(でのコントロールのダイアログ ボックス) または`OnInitialUpdate`(views) 用です。  
+-   呼び出して、コントロールにデータをまとめる、`CTreeCtrl`の[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)データ項目ごとに 1 回の関数。 `InsertItem` 場合など、後でそれを参照する際の項目へのハンドルを返すは、子項目を追加します。 データを初期化するために適切な時刻が含まれる`OnInitDialog`(でのコントロールのダイアログ ボックス) または`OnInitialUpdate`(views) 用です。  
   
 -   ユーザー対話するので、コントロールで、さまざまな通知メッセージが送信されます。 各追加することで処理するメッセージを処理する関数を指定することができます、 **ON_NOTIFY_REFLECT**マクロ コントロール ウィンドウのメッセージ マップに追加したりして、`ON_NOTIFY`を親ウィンドウのメッセージ マップ マクロです。 参照してください[ツリー コントロールの通知メッセージ](../mfc/tree-control-notification-messages.md)可能な通知の一覧については、このトピックで後述します。  
   
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   コントロールに完了したらが正常に破棄されることを確認します。 ツリー コントロール ダイアログ ボックスか場合は、ビュー、および`CTreeCtrl`オブジェクトは自動的に破棄されます。 かどうか、する必要はありません、両方のコントロールをことを確認して、`CTreeCtrl`オブジェクトが破棄されました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

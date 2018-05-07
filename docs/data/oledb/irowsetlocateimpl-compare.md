@@ -1,12 +1,9 @@
 ---
-title: "Irowsetlocateimpl::compare |Microsoft ドキュメント"
-ms.custom: 
+title: Irowsetlocateimpl::compare |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetLocateImpl.Compare
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Compare method
 ms.assetid: 6f84052c-c68c-480a-982f-03748faa7d5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 57cef167c76d3cfe2396684ddb4ba5959ef38e5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 208f912e92045daec36066e1dcc06fc38b5a8ed2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetlocateimplcompare"></a>IRowsetLocateImpl::Compare
 2 つのブックマークを比較します。  
@@ -61,8 +56,8 @@ ms.lasthandoff: 02/23/2018
   
 -   **DBCOMPARE_NOTCOMPARABLE** (ブックマークは比較できません)。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IRowsetLocateImpl クラス](../../data/oledb/irowsetlocateimpl-class.md)

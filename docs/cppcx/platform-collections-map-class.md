@@ -1,11 +1,8 @@
 ---
-title: "Platform::collections: クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 'Platform::collections: クラス |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -96,23 +91,23 @@ ref class Map sealed;
 |[Map::First](#first)|マップ内の最初の要素を指定する反復子を返します。|
 |[Map::GetView](#getview)|現在のマップの読み取り専用ビュー ( [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md)) を返します。|
 |[Map::HasKey](#haskey)|指定したキーが現在のマップに格納されているかどうかを判定します。|
-|[Map::Insert](#insert)|指定したキー/値ペアを現在のマップ オブジェクトに追加します。|
+|[Map::insert](#insert)|指定したキー/値ペアを現在のマップ オブジェクトに追加します。|
 |[Map::Lookup](#lookup)|現在のマップ オブジェクト内の指定されたキーの位置の要素を取得します。|
 |[Map::Remove](#remove)|指定したキー/値ペアを現在のマップ オブジェクトから削除します。|
-|[Map::Size](#size)|現在のマップ オブジェクト内の要素数を返します。|
+|[Map::size](#size)|現在のマップ オブジェクト内の要素数を返します。|
 
 ### <a name="events"></a>イベント
 
 |||
 |-|-|
-|name|説明|
-|[Map::MapChanged](#mapchanged-event.md) `event`|マップが変更されたときに発生します。|
+|名前|説明|
+|[Map::mapchanged](#mapchanged-event.md) `event`|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `Map`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -306,7 +301,7 @@ virtual property unsigned int Size;
 
 マップの要素数。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)  
 [C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

@@ -1,13 +1,10 @@
 ---
-title: "デリゲートとインターフェイス マップ マクロ (MFC) |Microsoft ドキュメント"
-ms.custom: 
+title: デリゲートとインターフェイス マップ マクロ (MFC) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 |||  
 |-|-|  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[MAKE_DELEGATE](#make_delegate)|マネージ コントロールをイベント ハンドラーをアタッチします。|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 デリゲートのマップを開始します。  
    
 ### <a name="syntax"></a>構文    
@@ -53,10 +48,10 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="remarks"></a>コメント  
  このマクロは、デリゲート マップを構成するデリゲート エントリの一覧の先頭をマークします。 このマクロの使用方法の例は、次を参照してください。 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** msclr\event.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
  
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
@@ -78,7 +73,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
   
  インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
  
 ##  <a name="commandhandler"></a>CommandHandler デリゲート
@@ -99,10 +94,10 @@ delegate void CommandHandler(  UINT^ cmdID  );
   
  Windows フォームを使用する方法については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [方法: Windows フォーム コントロールにコマンド ルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
  
 ##  <a name="commanduihandler"></a>CommandUIHandler
@@ -120,14 +115,14 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
  コマンド メッセージ id。  
    
 ### <a name="remarks"></a>コメント  
- このデリゲートは、ユーザー インターフェイス更新コマンドのメッセージをコールバック メソッドを登録します。 `CommandUIHandler`ような[CommandHandler](#commandhandler)このデリゲートは、ユーザー インターフェイス オブジェクトの更新コマンドを使用する点を除いて。 ユーザー インターフェイス更新コマンドをマップする一対一メッセージ ハンドラーのメソッド。  
+ このデリゲートは、ユーザー インターフェイス更新コマンドのメッセージをコールバック メソッドを登録します。 `CommandUIHandler` ような[CommandHandler](#commandhandler)このデリゲートは、ユーザー インターフェイス オブジェクトの更新コマンドを使用する点を除いて。 ユーザー インターフェイス更新コマンドをマップする一対一メッセージ ハンドラーのメソッド。  
   
  Windows フォームを使用する方法については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [方法: コマンドの追加にルーティングする Windows フォーム コントロール](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [CommandHandler](#commandhandler)
 
@@ -142,10 +137,10 @@ END_DELEGATE_MAP();
 ### <a name="remarks"></a>コメント  
  このマクロは、デリゲートのマップを構成するデリゲート エントリのリストの末尾をマークします。 このマクロの使用方法の例は、次を参照してください。 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** msclr\event.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
 
  [方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
@@ -161,10 +156,10 @@ END_INTERFACE_MAP( )
 ### <a name="remarks"></a>コメント  
  インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [BEGIN_INTERFACE_MAP](#begin_interface_map)
  
@@ -181,10 +176,10 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
  コントロールにアタッチされるイベント ハンドラー メソッドです。  
   
  `ARG0`  
- マネージ イベント ハンドラー メソッドの最初の引数など**オブジェクト ^**です。  
+ マネージ イベント ハンドラー メソッドの最初の引数など**オブジェクト ^** です。  
   
  `ARG1`  
- マネージ イベント ハンドラー メソッドの 2 番目の引数など**EventArgs ^**です。  
+ マネージ イベント ハンドラー メソッドの 2 番目の引数など**EventArgs ^** です。  
    
 ### <a name="remarks"></a>コメント  
  によって作成されたマネージ イベント ハンドラー デリゲートにデリゲート マップ内の各エントリが対応[MAKE_DELEGATE](#make_delegate)です。  
@@ -199,10 +194,10 @@ END_DELEGATE_MAP()
 
 ```  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** msclr\event.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [MAKE_DELEGATE](#make_delegate)   
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)
@@ -228,7 +223,7 @@ INTERFACE_PART( theClass, iid, localClass)
   
  インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
    
  
@@ -262,10 +257,10 @@ void CMyView::OnInitialUpdate()
 }
 ```
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** msclr\event.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)   
  [EVENT_DELEGATE_ENTRY](#event_delegate_entry)

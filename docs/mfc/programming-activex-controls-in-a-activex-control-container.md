@@ -1,13 +1,10 @@
 ---
-title: "ActiveX コントロール コンテナー: ActiveX コントロール コンテナーで ActiveX コントロールのプログラミング |Microsoft ドキュメント"
-ms.custom: 
+title: 'ActiveX コントロール コンテナー: ActiveX コントロール コンテナーで ActiveX コントロールのプログラミング |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a608d98b43e6daf340ab09c7adb275849f347a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX コントロール コンテナー : ActiveX コントロール コンテナーでの ActiveX コントロールのプログラミング
 ここで、公開された状態にアクセスする手順について説明[メソッド](../mfc/mfc-activex-controls-methods.md)と[プロパティ](../mfc/mfc-activex-controls-properties.md)埋め込みの ActiveX コントロールのです。 基本的には、これらの手順に従うされます。  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a>ラッパー クラスのヘッダー (です。H) ファイル  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> ラッパー クラスのヘッダー (です。H) ファイル  
  取得し、プロパティを設定する (メソッドの呼び出し) Circ コントロールに対して、`CCirc`ラッパー クラスが公開されているすべてのメソッドとプロパティの宣言を提供します。 例では、これらの宣言内にある可変範囲H. 次の例は、クラスの部分`CCirc`ActiveX コントロールの公開されているインターフェイスを定義します。  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  これらの関数は、通常の C++ 構文を使用して、アプリケーションのプロシージャの他の呼び出すことができます。 このメンバー関数へのアクセス制御のメソッドとプロパティ セットを使用する方法については、セクションを参照して[ActiveX コントロールをプログラミング](#_core_programming_the_activex_control)です。  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a>プロジェクトにメンバー変数の変更  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> プロジェクトにメンバー変数の変更  
  ActiveX コントロールは、プロジェクトに追加され、ダイアログ ボックスのコンテナーに埋め込まれているとは、プロジェクトの他の部分でアクセスできます。 コントロールにアクセスする最も簡単には[メンバー変数を作成](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)ダイアログ クラスの`CContainerDlg`(ステップ 2)、つまり Visual C によってプロジェクトに追加するラッパー クラスと同じ型です。 メンバー変数を使用して、いつでも埋め込まれたコントロールにアクセスすることができますし、します。  
   
  ときに、**メンバー変数の追加** ダイアログ ボックスを追加、`m_circctl`メンバー変数をプロジェクトも追加、次の行をヘッダー ファイル (です。H) の`CContainerDlg`クラス。  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a>ActiveX コントロールのプログラミング  
+##  <a name="_core_programming_the_activex_control"></a> ActiveX コントロールのプログラミング  
  この時点では、ダイアログ テンプレートに、ActiveX コントロールを挿入して、メンバー変数を作成します。 プロパティおよび埋め込みのコントロールのメソッドにアクセスするのに一般的な C++ 構文を使用できます。  
   
  前述の (で[ラッパー クラスのヘッダー (です。H) ファイルに](#_core_the_wrapper_class_header_28h29_file))、ヘッダー ファイル (です。H) の`CCirc`この case 可変範囲内のラッパー クラスH には、取得し、公開されたプロパティ値を設定に使用できるメンバー関数の一覧が含まれています。 公開されたメソッドのメンバー関数も使用できます。  
@@ -100,6 +95,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
 

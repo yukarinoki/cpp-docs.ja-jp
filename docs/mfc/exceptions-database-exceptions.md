@@ -1,13 +1,10 @@
 ---
-title: "例外処理: データベースの例外の |Microsoft ドキュメント"
-ms.custom: 
+title: '例外処理: データベースの例外の |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>例外処理 : データベースの例外
 この記事では、データベースの例外を処理する方法について説明します。 この記事の内容の大部分には、使用している MFC クラスのオープン データベース コネクティビティ (ODBC) または MFC クラスのデータ アクセス オブジェクト (DAO) かどうかが適用されます。 いずれかまたはその他のモデルに固有の情報が明示的にマークします。 ここでは、次の内容について説明します。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [データベースの例外処理の例](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>例外処理  
+##  <a name="_core_approaches_to_exception_handling"></a> 例外処理  
  DAO または ODBC を使用するかどうか、アプローチは、同じです。  
   
  常に、例外的な条件を処理する例外ハンドラーを記述する必要があります。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  DAO エラー、DAO エラー オブジェクトの種類、および DAO Errors コレクションに関する追加情報がクラスで使用可能な[CDaoException](../mfc/reference/cdaoexception-class.md)です。  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>データベースの例外処理の例  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> データベースの例外処理の例  
  次の例が、構築しようとしています。、 [CRecordset](../mfc/reference/crecordset-class.md)-派生、ヒープにオブジェクト、**新しい**演算子、および、レコード セット (ODBC データ ソース) を開きます。 DAO クラスの同様の例では、「DAO 例外次の例」を参照してください。  
   
 ### <a name="odbc-exception-example"></a>ODBC 例外の例  
@@ -81,6 +76,6 @@ ms.lasthandoff: 12/21/2017
   
  Microsoft Jet (.mdb) データベースを使用して、ほとんどの場合は、ODBC を使用しているときに、作業している、ときに、1 つだけのエラー オブジェクトがあります。 まれなケースで、ODBC データ ソースを使用しているし、複数のエラーがある場合をループできます DAO のエラーのコレクションから返されるエラーの数に基づいて[もあります](../mfc/reference/cdaoexception-class.md#geterrorcount)です。 ループで毎回呼び出す[CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo)を補充する、`m_pErrorInfo`データ メンバーです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外処理](../mfc/exception-handling-in-mfc.md)
 
