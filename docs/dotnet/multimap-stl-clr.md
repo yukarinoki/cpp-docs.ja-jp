@@ -1,12 +1,9 @@
 ---
-title: "multimap (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: multimap (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/map> header [STL/CLR]
 - multimap class [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168c6afec0f8f195d1315a54eff2794f7e3fd07e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`multimap`1 つの要素を格納する各ノードのバランスの取れた (ほとんど) の順序付けられたツリーとして要素のシーケンスを管理します。 要素は、シーケンスとよいに沿って移動する、マップされた値は、管理するためのキーで構成されます。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  それぞれの文字について以下に説明します。  
   
- `GKey`同じ`Key`ref 型を後者には、しない限り、どのケースでは`Key^`  
+ `GKey` 同じ`Key`ref 型を後者には、しない限り、どのケースでは `Key^`  
   
- `GMapped`同じ`Mapped`ref 型を後者には、しない限り、どのケースでは`Mapped^`  
+ `GMapped` 同じ`Mapped`ref 型を後者には、しない限り、どのケースでは `Mapped^`  
   
 ## <a name="syntax"></a>構文  
   
@@ -140,7 +135,7 @@ template<typename Key,
   
  このようなデリゲート オブジェクト必要があります、厳密弱順序強制型のキーで[multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)です。 つまり、任意の 2 つのキーの`X`と`Y`:  
   
- `key_comp()(X, Y)`すべての呼び出しでブール値を同じ結果を返します。  
+ `key_comp()(X, Y)` すべての呼び出しでブール値を同じ結果を返します。  
   
  場合`key_comp()(X, Y)`が true の場合、 `key_comp()(Y, X)` false である必要があります。  
   
@@ -160,12 +155,12 @@ template<typename Key,
   
  消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーは`not`その要素を破棄します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   

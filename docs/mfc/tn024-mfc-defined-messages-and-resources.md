@@ -1,13 +1,10 @@
 ---
-title: "TN024: MFC で定義されているメッセージおよびリソース |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN024: MFC で定義されているメッセージおよびリソース |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>テクニカル ノート 24: MFC で定義されているメッセージおよびリソース
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- によってこのメッセージは送信`COleResizeBar`、オーナー ウィンドウに (を介して`GetOwner`) ときに、ユーザーは、サイズ変更ハンドルにサイズ変更バーのサイズを変更します。 `COleIPFrameWnd`ユーザーが要求されるとおり、フレーム ウィンドウの位置を変更しようとしています。 このメッセージに応答します。  
+ によってこのメッセージは送信`COleResizeBar`、オーナー ウィンドウに (を介して`GetOwner`) ときに、ユーザーは、サイズ変更ハンドルにサイズ変更バーのサイズを変更します。 `COleIPFrameWnd` ユーザーが要求されるとおり、フレーム ウィンドウの位置を変更しようとしています。 このメッセージに応答します。  
   
  サイズ変更バーを含むフレーム ウィンドウと相対的にクライアント座標で指定された、新しい四角形が指して lParam です。  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|次の値のいずれかです。<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|(0) を使用できません。|  
   
- 戻り値が 0 以外にする必要がある場合**FS_SYNCACTIVE**が設定され、ウィンドウと、親フレームがアクティブにします。 `CMiniFrameWnd`スタイルを設定すると、0 以外を返します**返さです。**  
+ 戻り値が 0 以外にする必要がある場合**FS_SYNCACTIVE**が設定され、ウィンドウと、親フレームがアクティブにします。 `CMiniFrameWnd` スタイルを設定すると、0 以外を返します**返さです。**  
   
  詳細については、の実装を参照してください。`CMiniFrameWnd`です。  
   
@@ -207,7 +202,7 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
   
  これは、すべての Windows メッセージとデータの内容を許可する、非常に一般的な形式です。 Windows メッセージの限定されたサブセットのみをサポート、Visual C リソース エディターと MFC: CB_ADDSTRING (データはテキスト文字列) コンボ ボックスの一覧の初期選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

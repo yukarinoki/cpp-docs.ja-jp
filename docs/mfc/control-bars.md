@@ -1,13 +1,10 @@
 ---
-title: "コントロール バー |Microsoft ドキュメント"
-ms.custom: 
+title: コントロール バー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3550043e5b85247d4188c830873099c6ea9831a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bars"></a>コントロール バー
 「コントロール バー」は、ツールバー、ステータス バー、およびダイアログ バーの [全般] の名前です。 MFC クラス`CToolBar`、 `CStatusBar`、 `CDialogBar`、 `COleResizeBar`、および**CReBar**クラスから派生[CControlBar](../mfc/reference/ccontrolbar-class.md)、一般的な機能を実装します。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
  簡単な概要については、コントロール バーの種類に従ってください。 詳細については、以下のリンクを参照してください。  
   
 ## <a name="control-bars"></a>コントロール バー  
- コントロール バーは、クイック、ワンステップ コマンド操作を提供することにより、プログラムの使いやすさを大幅に向上します。 クラス`CControlBar`すべてのツールバー、ステータス バー、およびダイアログ バーの一般的な機能を提供します。 `CControlBar`親フレーム ウィンドウ内のコントロール バーの位置の機能を提供します。 コントロール バーは、親フレーム ウィンドウの子ウィンドウでは通常、ためにはクライアント ビューまたはフレーム ウィンドウの MDI クライアントへの「兄弟」です。 コントロール バー オブジェクトは、それ自体を配置、親ウィンドウのクライアントの四角形に関する情報を使用します。 クライアントの表示または MDI クライアント ウィンドウの残りの部分、クライアント ウィンドウを親の残りのクライアント ウィンドウ領域を変更します。  
+ コントロール バーは、クイック、ワンステップ コマンド操作を提供することにより、プログラムの使いやすさを大幅に向上します。 クラス`CControlBar`すべてのツールバー、ステータス バー、およびダイアログ バーの一般的な機能を提供します。 `CControlBar` 親フレーム ウィンドウ内のコントロール バーの位置の機能を提供します。 コントロール バーは、親フレーム ウィンドウの子ウィンドウでは通常、ためにはクライアント ビューまたはフレーム ウィンドウの MDI クライアントへの「兄弟」です。 コントロール バー オブジェクトは、それ自体を配置、親ウィンドウのクライアントの四角形に関する情報を使用します。 クライアントの表示または MDI クライアント ウィンドウの残りの部分、クライアント ウィンドウを親の残りのクライアント ウィンドウ領域を変更します。  
   
 > [!NOTE]
 >  コントロール バーのボタンを持っていない場合、**コマンド**または**UPDATE_COMMAND_UI**ハンドラー、フレームワークが自動的に、ボタンを無効にします。  
@@ -74,5 +69,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="rebars"></a>Rebars  
  A [rebar](../mfc/using-crebarctrl.md)が rebar コントロールのドッキング、レイアウト、state、および持続性の情報を提供するコントロール バーです。 Rebar オブジェクトは、子ウィンドウ、通常その他のコントロール、編集ボックス、ツールバー、リスト ボックスなどのさまざまなを含めることができます。 Rebar オブジェクトは、指定したビットマップをその子ウィンドウを表示できます。 自動または手動でサイズを変更できるをクリックするかのグリッパー バーをドラッグします。 クラスを参照して[CReBar](../mfc/reference/crebar-class.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)

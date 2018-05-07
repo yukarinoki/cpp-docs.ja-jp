@@ -2,11 +2,8 @@
 title: CDC クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC クラス
 デバイス コンテキスト オブジェクトのクラスを定義します。  
@@ -687,7 +682,7 @@ class CDC : public CObject
   
  `CDC`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="abortdoc"></a>  CDC::AbortDoc  
@@ -1943,7 +1938,7 @@ int EnumObjects(
   
  またがありません内の関数名をエクスポートする、**エクスポート**アプリケーションのモジュール定義ファイル内のステートメント。 代わりに使用することができます、**エクスポート**としての関数の修飾子  
   
- **コールバック エクスポート int**関数**(LPSTR**、 **LPSTR) です。**  
+ **コールバック エクスポート int**関数 **(LPSTR**、 **LPSTR) です。**  
   
  エイリアスの名前をエクスポートの適切なエクスポート レコードを生成するコンパイラは、します。 これは、ほとんどのニーズに対して機能します。 特殊な場合など、ordinal またはエイリアスをエクスポートして関数をエクスポートする必要がありますを使用する、**エクスポート**モジュール定義ファイル内のステートメント。  
   
@@ -5235,7 +5230,7 @@ int SetArcDirection(int nArcDirection);
 |---------|---------|  
 |`ArcTo`|**四角形**|  
 |`Chord`|`RoundRect`|  
-|**Ellipse**||  
+|**楕円**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
  属性デバイス コンテキストを設定するには、この関数を呼び出す`m_hAttribDC`です。  
@@ -5317,7 +5312,7 @@ UINT SetBoundsRect(
 - **DCB_ENABLE**境界が蓄積されるを有効にします。 (境界が蓄積される既定の設定は無効です。)  
   
 ### <a name="return-value"></a>戻り値  
- 四角形領域、関数が成功した場合の現在の状態。 同様に`flags`、戻り値の組み合わせが可能です**DCB_**値。  
+ 四角形領域、関数が成功した場合の現在の状態。 同様に`flags`、戻り値の組み合わせが可能です**DCB_** 値。  
   
 - **DCB_ACCUMULATE**外接する四角形は空ではありません。 この値を設定することが常になります。  
   
@@ -5442,7 +5437,7 @@ DWORD SetLayout(DWORD dwLayout);
   
 |[値]|説明|  
 |-----------|-------------|  
-|LAYOUT_BITMAPORIENTATIONPRESERVED|呼び出しのために、リフレクションを無効に[cdc::bitblt](#bitblt)と[CDC::StretchBlt](#stretchblt)です。|  
+|まず|呼び出しのために、リフレクションを無効に[cdc::bitblt](#bitblt)と[CDC::StretchBlt](#stretchblt)です。|  
 |LAYOUT_RTL|右から左にある既定の水平レイアウトを設定します。|  
 |LAYOUT_LTR|左右からに既定のレイアウトを設定します。|  
   
@@ -5710,7 +5705,7 @@ int SetStretchBltMode(int nStretchMode);
 |-----------|-----------------|  
 |**BLACKONWHITE**|排除し、既存のピクセルの色の値を使用して、論理 AND 演算を実行します。 モノクロ ビットマップは、このモードは、白いピクセルを犠牲にしてピクセルを黒を保持します。|  
 |**COLORONCOLOR**|ピクセルを削除します。 このモードでは、情報を保存しようとしないでピクセルの削除されたすべての行を削除します。|  
-|**HALFTONE**|元の四角形からピクセルを先の四角形のピクセルのブロックにマップします。 対象ブロックのピクセルの平均的な色は、元のピクセルの色を概算します。|  
+|**ハーフトーン**|元の四角形からピクセルを先の四角形のピクセルのブロックにマップします。 対象ブロックのピクセルの平均的な色は、元のピクセルの色を概算します。|  
 ||設定した後、**ハーフトーン**ストレッチ モード、アプリケーションは、Win32 関数を呼び出す必要があります[SetBrushOrgEx](http://msdn.microsoft.com/library/windows/desktop/dd162967)ブラシの原点を設定します。 これを行う場合は、ブラシのずれが発生します。|  
 |**STRETCH_ANDSCANS**|**Windows 95/98**: と同じ**BLACKONWHITE**|  
 |**STRETCH_DELETESCANS**|**Windows 95/98**: と同じ**COLORONCOLOR**|  
@@ -6364,7 +6359,7 @@ BOOL WidenPath();
 ### <a name="remarks"></a>コメント  
  この関数は現在のペンが幾何学的ペンの 2 つ目のバージョンで作成された場合にのみ成功`CreatePen`メンバー関数は、ペンが最初のバージョンで作成された場合または`CreatePen`デバイス単位、1 以上で、幅をします。 デバイス コンテキストでは、閉じているパスを含める必要があります。 任意のベジエ曲線のパスでは、直線のおおよその拡張の曲線のシーケンスに変換されます。 そのためのベジエ曲線が残っていない後のパスで`WidenPath`と呼びます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CPaintDC クラス](../../mfc/reference/cpaintdc-class.md)   

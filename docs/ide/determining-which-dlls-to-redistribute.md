@@ -1,13 +1,10 @@
 ---
-title: "再配布する Dll の決定 |Microsoft ドキュメント"
-ms.custom: 
+title: 再配布する Dll の決定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/13/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>再配布する DLL の決定
 
@@ -53,12 +48,12 @@ Visual Studio に含まれているすべてのファイルを再配布するこ
 
 |Visual C++ ライブラリ|説明|対象|
 |--------------------------|-----------------|----------------|
-|vcruntime*version*.dll|ネイティブ コード用のランタイム ライブラリ。|標準 C および C++ 言語の起動と終了サービスを使用するアプリケーション。|
+|vcruntime*バージョン*.dll|ネイティブ コード用のランタイム ライブラリ。|標準 C および C++ 言語の起動と終了サービスを使用するアプリケーション。|
 |vccorlib*version*.dll|マネージ コード用のランタイム ライブラリ。|C++ 言語サービスを使用するアプリケーションはマネージ コードです。|
 |msvcp*バージョン*.dll および msvcp*バージョン*_*dotnumber*.dll|ネイティブ コードの C++ 標準ライブラリです。|使用するアプリケーション、 [C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)です。|
-|concrt*version*.dll|ネイティブ コードの同時実行ランタイム ライブラリです。|使用するアプリケーション、[同時実行ランタイム](../parallel/concrt/concurrency-runtime.md)です。|
+|concrt*バージョン*.dll|ネイティブ コードの同時実行ランタイム ライブラリです。|使用するアプリケーション、[同時実行ランタイム](../parallel/concrt/concurrency-runtime.md)です。|
 |mfc*version*.dll|MFC (Microsoft Foundation Class) ライブラリ|使用するアプリケーション、 [MFC ライブラリ](../mfc/mfc-desktop-applications.md)です。|
-|mfc*version* *language*.dll|Microsoft Foundation はクラス (MFC) ライブラリ リソースです。|特定の言語リソースを MFC を使用するアプリケーション。|
+|mfc*バージョン**言語*.dll|Microsoft Foundation はクラス (MFC) ライブラリ リソースです。|特定の言語リソースを MFC を使用するアプリケーション。|
 |mfc*version*u.dll|Unicode をサポートする MFC ライブラリ|使用するアプリケーション、 [MFC ライブラリ](../mfc/mfc-desktop-applications.md)Unicode のサポートを必要とします。|
 |mfcmifc80.dll|MFC マネージ インターフェイス ライブラリ|使用するアプリケーション、 [MFC ライブラリ](../mfc/mfc-desktop-applications.md)で[Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)です。|
 |mfcm*version*.dll|MFC マネージ ライブラリ|使用するアプリケーション、 [MFC ライブラリ](../mfc/mfc-desktop-applications.md)で[Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)です。|

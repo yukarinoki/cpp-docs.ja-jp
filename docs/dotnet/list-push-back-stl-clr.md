@@ -1,12 +1,9 @@
 ---
-title: "list::push_back (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: list::push_back (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::push_back
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - push_back member [STL/CLR]
 ms.assetid: f2c70470-a899-4e5f-8f3e-b55d6a8bff0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 87908a4b0e54f764d52308b24ce5c78d41c6f3f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 669a83de8c904d9e129f6351c64cd7d6b11f77d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listpushback-stlclr"></a>list::push_back (STL/CLR)
 新しい最後の要素を追加します。  
@@ -67,12 +62,12 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/一覧 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一覧 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list::pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
  [list::pop_front (STL/CLR)](../dotnet/list-pop-front-stl-clr.md)   

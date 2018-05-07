@@ -1,12 +1,9 @@
 ---
-title: "ICommandPropertiesImpl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ICommandPropertiesImpl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandPropertiesImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36c524d8aae9223e47b39bfe6cbfdfafdaa006f6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 25be1548bd41f832a007f102c138fc01f8818774
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl クラス
 実装を提供、 [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx)インターフェイスです。  
@@ -60,9 +55,9 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ## <a name="remarks"></a>コメント  
  これは、コマンドでは必須です。 によって定義された静的関数によって提供される、実装、 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)マクロです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

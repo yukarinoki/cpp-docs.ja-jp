@@ -1,12 +1,9 @@
 ---
-title: "CInternetFile クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CInternetFile クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e4b05e2aceb8fb4c8a4abed0dd6038fff6cfee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetfile-class"></a>CInternetFile クラス
 インターネット プロトコルを使用するリモート システム上のファイルにアクセスをできます。  
@@ -94,7 +89,7 @@ class CInternetFile : public CStdioFile
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CInternetFile::m_hFile](#m_hfile)|ファイルへのハンドル。|  
   
@@ -114,10 +109,10 @@ class CInternetFile : public CStdioFile
   
  `CInternetFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
-##  <a name="abort"></a>CInternetFile::Abort  
+##  <a name="abort"></a>  CInternetFile::Abort  
  このオブジェクトに関連付けられているファイルを閉じ、ファイルを読み取りや書き込みに対して使用できなくなります。  
   
 ```  
@@ -129,7 +124,7 @@ virtual void Abort();
   
  例外を処理するときに**中止**とは異なります[閉じる](#close)2 つの重要な点でします。 最初に、**中止**障害を無視するため、関数がエラーに例外をスローしません。 2 番目、**中止**しない**ASSERT**ファイルが開かれていない、またはが以前に閉じられました。  
   
-##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
+##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  このメンバー関数が呼び出されます、`CInternetFile`オブジェクトを作成します。  
   
 ```  
@@ -174,7 +169,7 @@ CInternetFile(
 ### <a name="remarks"></a>コメント  
  作成することはありません、`CInternetFile`オブジェクトに直接できます。 代わりに、呼び出すことによってその派生クラスの 1 つのオブジェクトを作成[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)または[しないで](../../mfc/reference/chttpconnection-class.md#openrequest)です。 作成することも、`CInternetFile`呼び出して[CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)です。  
   
-##  <a name="close"></a>CInternetFile::Close  
+##  <a name="close"></a>  CInternetFile::Close  
  閉じる、`CInternetFile`のリソースを解放します。  
   
 ```  
@@ -184,7 +179,7 @@ virtual void Close();
 ### <a name="remarks"></a>コメント  
  書き込みのため、ファイルが開かれた場合は、暗黙的な呼び出しを[フラッシュ](#flush)バッファーされたデータを確実には、ホストに書き込まれます。 呼び出す必要があります**閉じる**ファイルの使用が終了したときにします。  
   
-##  <a name="flush"></a>CInternetFile::Flush  
+##  <a name="flush"></a>  CInternetFile::Flush  
  書き込みバッファーの内容をフラッシュするには、このメンバー関数を呼び出します。  
   
 ```  
@@ -192,30 +187,30 @@ virtual void Flush();
 ```  
   
 ### <a name="remarks"></a>コメント  
- 使用して`Flush`ターゲット マシンにメモリ内のすべてのデータが実際に書き込まれたことを保証して、ホスト コンピューターとのトランザクションの完了を保証します。 `Flush`有効になるのみ`CInternetFile`オブジェクトが書き込み用に開きます。  
+ 使用して`Flush`ターゲット マシンにメモリ内のすべてのデータが実際に書き込まれたことを保証して、ホスト コンピューターとのトランザクションの完了を保証します。 `Flush` 有効になるのみ`CInternetFile`オブジェクトが書き込み用に開きます。  
   
-##  <a name="getlength"></a>CInternetFile::GetLength  
+##  <a name="getlength"></a>  CInternetFile::GetLength  
  ファイルのサイズを返します。  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="m_hfile"></a>CInternetFile::m_hFile  
+##  <a name="m_hfile"></a>  CInternetFile::m_hFile  
  このオブジェクトに関連付けられているファイルへのハンドル。  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
  この演算子を使用して、現在のインターネット セッションの Windows ハンドルを取得します。  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="read"></a>細かい  
+##  <a name="read"></a>  細かい  
  このメンバー関数を呼び出して、指定されたメモリに読み込みます。`lpvBuf` を先頭として、`nCount` で指定されたバイト数を読み込みます。  
   
 ```  
@@ -239,7 +234,7 @@ virtual UINT Read(
   
  すべてのデータが取得されることを確認するには、アプリケーションする必要がありますを引き続き呼び出す、**細かい**メソッドまで、0 を返します。  
   
-##  <a name="readstring"></a>CInternetFile::ReadString  
+##  <a name="readstring"></a>  CInternetFile::ReadString  
  改行文字が見つかるまでの文字のストリームを読み取るには、このメンバー関数を呼び出します。  
   
 ```  
@@ -271,7 +266,7 @@ virtual LPTSTR ReadString(
   
  呼び出す場合`ReadString`最初呼び出さず[SetReadBufferSize](#setreadbuffersize)、4096 バイトまでのバッファーが表示されます。  
   
-##  <a name="seek"></a>CInternetFile::Seek  
+##  <a name="seek"></a>  CInternetFile::Seek  
  以前に開かれたファイルで、ポインターの位置を変更するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -291,7 +286,7 @@ virtual ULONGLONG Seek(
   
 - **CFile::current**ファイル ポインターを移動`lOff`ファイル内の現在位置からのバイト数。  
   
-- **CFile::end**ファイル ポインターを移動`lOff`ファイルの末尾からのバイト数。 `lOff`負の値を既存のファイルにする必要があります。ファイルの末尾を越えた正の値を求めます。  
+- **CFile::end**ファイル ポインターを移動`lOff`ファイルの末尾からのバイト数。 `lOff` 負の値を既存のファイルにする必要があります。ファイルの末尾を越えた正の値を求めます。  
   
 ### <a name="return-value"></a>戻り値  
  要求された位置が正しい; 場合、ファイルの先頭からのオフセットの新しいバイトそれ以外の場合、値は未定義と[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクトがスローされます。  
@@ -309,7 +304,7 @@ virtual ULONGLONG Seek(
 ### <a name="example"></a>例  
   基本クラスの実装の例を参照してください ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek))。  
   
-##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
  によって使用される一時的な読み取りバッファーのサイズを設定するには、このメンバー関数を呼び出す、 `CInternetFile`-派生オブジェクト。  
   
 ```  
@@ -330,7 +325,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
   
  いつでも、バッファー サイズを増やすことができますが、バッファーを縮小効果がありません。 呼び出す場合[ReadString](#readstring)最初呼び出さず`SetReadBufferSize`、4096 バイトまでのバッファーが表示されます。  
   
-##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
  によって使用される一時的な書き込みバッファーのサイズを設定するには、このメンバー関数を呼び出す、 `CInternetFile`-派生オブジェクト。  
   
 ```  
@@ -349,7 +344,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
   
  既定では、`CInternetFile`オブジェクトがすべての書き込みバッファーを提供していません。 このメンバー関数を呼び出す場合は、書き込みアクセス用のファイルが開かれたことを確認する必要があります。 書き込みバッファーのサイズを変更するには、いつでも、その場合、暗黙的な呼び出しを[フラッシュ](#flush)です。  
   
-##  <a name="write"></a>CInternetFile::Write  
+##  <a name="write"></a>  CInternetFile::Write  
  特定のメモリに書き込むには、このメンバー関数を呼び出す`lpvBuf`では、(バイト単位) の数を指定した`nCount`です。  
   
 ```  
@@ -368,7 +363,7 @@ virtual void Write(
 ### <a name="remarks"></a>コメント  
  データの書き込み中にエラーが発生した場合、関数、 [CInternetException](../../mfc/reference/cinternetexception-class.md)エラーを説明するオブジェクト。  
   
-##  <a name="writestring"></a>CInternetFile::WriteString  
+##  <a name="writestring"></a>  CInternetFile::WriteString  
  この関数は、null で終わる文字列を関連付けられたファイルに書き込みます。  
   
 ```  
@@ -382,7 +377,7 @@ virtual void WriteString(LPCTSTR pstr);
 ### <a name="remarks"></a>コメント  
  データの書き込み中にエラーが発生した場合、関数、 [CInternetException](../../mfc/reference/cinternetexception-class.md)エラーを説明するオブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CStdioFile クラス](../../mfc/reference/cstdiofile-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CInternetConnection クラス](../../mfc/reference/cinternetconnection-class.md)

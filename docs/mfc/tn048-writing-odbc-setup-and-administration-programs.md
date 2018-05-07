@@ -1,13 +1,10 @@
 ---
-title: "TN048: MFC データベース アプリケーション用の ODBC セットアップおよび管理プログラムの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN048: MFC データベース アプリケーション用の ODBC セットアップおよび管理プログラムの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>テクニカル ノート 48: MFC データベース アプリケーション用の ODBC セットアップおよび管理プログラムの作成
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  MFC データベース クラスを使用するアプリケーションでは、ODBC コンポーネントをインストールするセットアップ プログラムを必要があります。 既定のドライバーを指定してデータ ソースを構成するのには、使用可能なドライバーについての情報を取得する ODBC 管理者プログラムも必要です。 ここでは、これらのプログラムを作成する ODBC インストーラーの API の使用について説明します。  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>ODBC セットアップ プログラムの作成  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> ODBC セットアップ プログラムの作成  
  MFC データベース アプリケーション (ODBC ODBC ドライバー マネージャーが必要です。DLL) とデータ ソースを取得できる ODBC ドライバー。 多くの ODBC ドライバーでは、追加のネットワークとの通信の Dll も必要です。 ほとんどの ODBC ドライバーは、ODBC の必須コンポーネントをインストールするセットアップ プログラムに付属します。 MFC データベース クラスを使用するアプリケーション開発者が実行できます。  
   
 -   ODBC コンポーネントをインストールするドライバー固有のセットアップ プログラムに依存します。 これは、それ以上開発者の作業: ドライバーのセットアップ プログラムを再配布することだけです。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  ODBC の詳細についてはします。INF、ODBCINST です。INI およびインストーラーの API を使用して ODBC SDK を参照してください。*プログラマーズ リファレンス、* 19 章、ODBC のソフトウェアをインストールします。  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>Odbc データ ソース アドミニストレーターの書き込み  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Odbc データ ソース アドミニストレーターの書き込み  
  MFC データベース アプリケーションが 2 つの方法のいずれかで ODBC データ ソースを次のように構成を設定できます。  
   
 -   (プログラムまたはコントロール パネルのアイテムとして使用可能) の ODBC アドミニストレーターを使用します。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、ODBC SDK を参照してください。*プログラマーズ リファレンス、* 23 章、DLL 関数の参照をセットアップ、および章 24、インストーラー DLL 関数を参照します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

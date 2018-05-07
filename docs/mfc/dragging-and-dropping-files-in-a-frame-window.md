@@ -1,13 +1,10 @@
 ---
-title: "ドラッグ アンド ドロップ ファイルをフレーム ウィンドウを |Microsoft ドキュメント"
-ms.custom: 
+title: ドラッグ アンド ドロップ ファイルをフレーム ウィンドウを |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,23 +16,21 @@ helpviewer_keywords:
 - frame windows [MFC], dragging and dropping files in
 - drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 938640ed85e51d2b94b292bfe78a8d912b095188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa326dba7772ddcdccb304900df4460ce9754665
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>ファイルのフレーム ウィンドウへのドラッグ アンド ドロップ
 フレーム ウィンドウは、ファイル エクスプ ローラーまたはファイル マネージャーとの関係を管理します。  
   
  オーバーライドで呼び出し、いくつかの初期化を追加する、`CWinApp`メンバー関数は、 `InitInstance`」の説明に従って、 [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)、フレーム ウィンドウ ファイルからドラッグされたファイルを直接開くことができますエクスプ ローラーまたはファイル マネージャーおよびフレーム ウィンドウにドロップします。 参照してください[ファイル マネージャーでのドラッグ アンド ドロップ](../mfc/special-cwinapp-services.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
 

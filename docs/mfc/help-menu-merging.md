@@ -1,13 +1,10 @@
 ---
-title: "[ヘルプ] メニューのマージ |Microsoft ドキュメント"
-ms.custom: 
+title: '[ヘルプ] メニューのマージ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce8d5212f78546c08734aed6fd7e236fa4446007
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-menu-merging"></a>[ヘルプ] メニューのマージ
 OLE ドキュメントのプロトコルをマージするメニューがのオブジェクトの完全な制御を提供するオブジェクトがコンテナー内にあるアクティブなとき、**ヘルプ**メニュー。 その結果、ユーザーには、オブジェクトが非アクティブ化しない限り、コンテナーのヘルプ トピックは使用できません。 Active ドキュメント コンテインメントのアーキテクチャは、インプレースでメニューのコンテナーと、メニューを共有するアクティブになっているアクティブなドキュメントの両方を許可するマージの規則を展開します。 新しい規則ではどのようなコンポーネント メニューのどの部分を所有しているし、共有 メニューを構築する方法に関する規則を単に追加します。  
@@ -62,6 +57,6 @@ OLE ドキュメントのプロトコルをマージするメニューがのオ�
   
  最後に、メニューを逆アセンブルするときは、ときに、オブジェクトを削除、挿入された**ヘルプ**もう一方を削除するだけでなくメニューがメニューを挿入します。 コンテナーは、そのメニューを削除するときを削除、**ヘルプ**だけでなく、その他のメニューが挿入されるメニュー。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Active ドキュメント コンテナー](../mfc/active-document-containers.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "_ReturnAddress |Microsoft ドキュメント"
-ms.custom: 
+title: _ReturnAddress |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _ReturnAddress
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1437d6523b94071a5e7655bfa2e7094d89305a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0431302ae745a1e4a03da4b3fd660fda7d2cfa72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
@@ -38,7 +33,7 @@ ms.lasthandoff: 02/23/2018
   
  ときに`_ReturnAddress`でコンパイルされたプログラムで使用される[/clr](../build/reference/clr-common-language-runtime-compilation.md)、関数を含む、`_ReturnAddress`呼び出しはネイティブ関数としてコンパイルされます。 含む関数への呼び出しとして関数をコンパイルするときに管理されている`_ReturnAddress`、`_ReturnAddress`期待どおりに動作しない可能性があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<intrin.h >  
   
 ## <a name="example"></a>例  
@@ -74,7 +69,7 @@ int main(void)
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [キーワード](../cpp/keywords-cpp.md)

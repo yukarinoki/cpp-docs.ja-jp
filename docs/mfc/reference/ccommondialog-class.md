@@ -1,12 +1,9 @@
 ---
-title: "CCommonDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CCommonDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCommonDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a42acf9c4655868bcc078b3e40d3966587aeaaad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog クラス
 Windows コモン ダイアログの機能をカプセル化したクラスの基底クラスです。  
@@ -55,15 +50,15 @@ class CCommonDialog : public CDialog
   
 - [CColorDialog](../../mfc/reference/ccolordialog-class.md)  
   
-- [メンバー](../../mfc/reference/cpagesetupdialog-class.md)  
+- [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)  
   
 - [CPrintDialog](../../mfc/reference/cprintdialog-class.md)  
   
-- [メンバー](../../mfc/reference/cprintdialogex-class.md)  
+- [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)  
   
 - [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)  
   
-- [関数](../../mfc/reference/coledialog-class.md)  
+- [COleDialog](../../mfc/reference/coledialog-class.md)  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -76,10 +71,10 @@ class CCommonDialog : public CDialog
   
  `CCommonDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
-##  <a name="ccommondialog"></a>CCommonDialog::CCommonDialog  
+##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog  
  `CCommonDialog` オブジェクトを構築します。  
   
 ```  
@@ -93,7 +88,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ### <a name="remarks"></a>コメント  
  参照してください[詳細](../../mfc/reference/cdialog-class.md#cdialog)については完了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDialog クラス](../../mfc/reference/cdialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CFileDialog クラス](../../mfc/reference/cfiledialog-class.md)   

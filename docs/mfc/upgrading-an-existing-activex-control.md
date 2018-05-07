@@ -1,13 +1,10 @@
 ---
-title: "既存の ActiveX コントロールのアップグレード |Microsoft ドキュメント"
-ms.custom: 
+title: 既存の ActiveX コントロールのアップグレード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 既存の ActiveX コントロール (以前の OLE コントロール) 変更しなくても、インターネットで使用できます。 ただし、これらのパフォーマンスを向上させるためにコントロールを変更する可能性があります。 Web ページ上のコントロールを使用するときは、追加の考慮事項があります。 .Ocx ファイルとすべてのサポート ファイルは、対象のコンピューターである必要がありますか、インターネット経由でダウンロードします。 これにより、コードのサイズとダウンロードにかかる時間の重要な注意します。 ダウンロードは、署名済み .cab ファイルにパッケージ化することができます。 安全なスクリプト、および初期化の安全性として、コントロールをマークすることができます。  
@@ -52,11 +47,11 @@ ms.lasthandoff: 01/03/2018
   
  最適化を追加することも[ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)です。 プロパティのダウンロードにモニカーを使用することができ、大きな Blob を非同期で説明されている[、インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)です。  
   
-##  <a name="_core_packaging_code_for_downloading"></a>パッケージのコードをダウンロードします。  
- このトピックの詳細については、サポート技術情報の記事「パッケージング MFC コントロールを使用して経由でインターネット」(Q167158) を参照してください。 サポート技術情報を見つけることができます[http://support.microsoft.com/support](http://support.microsoft.com/support)です。  
+##  <a name="_core_packaging_code_for_downloading"></a> パッケージのコードをダウンロードします。  
+ このトピックの詳細については、サポート技術情報の記事「パッケージング MFC コントロールを使用して経由でインターネット」(Q167158) を参照してください。 サポート技術情報を見つけることができます[ http://support.microsoft.com/support](http://support.microsoft.com/support)です。  
   
 ### <a name="the-codebase-tag"></a>CODEBASE タグ  
- ActiveX コントロールが使用する Web ページに埋め込まれている、`<OBJECT>`タグ。 `CODEBASE`のパラメーター、`<OBJECT>`タグは、コントロールをダウンロードする元の場所を指定します。 `CODEBASE`ポイントで異なる種類のファイルの数が正常にされます。  
+ ActiveX コントロールが使用する Web ページに埋め込まれている、`<OBJECT>`タグ。 `CODEBASE`のパラメーター、`<OBJECT>`タグは、コントロールをダウンロードする元の場所を指定します。 `CODEBASE` ポイントで異なる種類のファイルの数が正常にされます。  
   
 ### <a name="using-the-codebase-tag-with-an-ocx-file"></a>OCX ファイルを使用して、CODEBASE タグを使用します。  
   
@@ -144,7 +139,7 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
   
  バージョンによっては、指定した、コントロールのダウンロードを強制することができます。 完全な仕様については、`OBJECT`タグを含む、`CODEBASE`パラメーターでは、参照を W3C を参照してください。  
   
-##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a>スクリプトと初期化の安全性をマークします。  
+##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> スクリプトと初期化の安全性をマークします。  
  Web ページで使用する ActiveX コントロールは、スクリプト作成と初期化実際には安全である場合の安全性としてマークする必要があります。 安全なコントロールはディスク IO を実行またはメモリやマシンのレジスタに直接アクセスされません。  
   
  コントロールは、スクリプトやレジストリを使用して初期化に対して安全としてマークできます。 変更`DllRegisterServer`コントロールをスクリプトと、レジストリに永続化の安全としてマークするには、次のようなエントリを追加します。 別の方法は、実装する`IObjectSafety`です。  
@@ -168,7 +163,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}   
 ```  
   
-##  <a name="_core_licensing_issues"></a>ライセンスの問題  
+##  <a name="_core_licensing_issues"></a> ライセンスの問題  
  Web ページでライセンスされたコントロールを使用する場合、使用許諾契約書が、インターネット上の使用が使用をそのライセンス パッケージ ファイル (LPK) を作成することを確認する必要があります。  
   
  ライセンスされた ActiveX コントロールは読み込まれません正しく HTML ページにコントロールを使用して Internet Explorer を実行しているコンピューターのライセンスがない場合。 たとえば、ライセンスされたコントロールは、Visual C を使用してビルドされていた場合、コントロールを使用して、HTML ページが正常に読み込まコントロールの作成は、ライセンス情報が含まれていない限り、別のコンピューターには読み込まれませんが、コンピューター上。  
@@ -181,7 +176,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
 -   コードベース パラメーターの使用  
   
- ライセンスのないコンピューター上の HTML ページでライセンスされたコントロールを使用するには、ライセンス パッケージ ファイル (LPK) を生成する必要があります。 LPK ファイルには、HTML ページでライセンスされたコントロールの実行時ライセンスが含まれています。 LPK_TOOL 経由でこのファイルが生成されます。ActiveX SDK に付属している EXE です。 詳細については、MSDN Web サイトを参照してください。 [http://msdn.microsoft.com](http://msdn.microsoft.com)です。  
+ ライセンスのないコンピューター上の HTML ページでライセンスされたコントロールを使用するには、ライセンス パッケージ ファイル (LPK) を生成する必要があります。 LPK ファイルには、HTML ページでライセンスされたコントロールの実行時ライセンスが含まれています。 LPK_TOOL 経由でこのファイルが生成されます。ActiveX SDK に付属している EXE です。 詳細については、MSDN Web サイトを参照してください。 [ http://msdn.microsoft.com](http://msdn.microsoft.com)です。  
   
 #### <a name="to-create-an-lpk-file"></a>LPK ファイルを作成するには  
   
@@ -222,7 +217,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  コントロールのライセンスの詳細については、次を参照してください。 [ActiveX コントロール: ActiveX コントロールのライセンス](../mfc/mfc-activex-controls-licensing-an-activex-control.md)です。  
   
-##  <a name="_core_signing_code"></a>コードの署名  
+##  <a name="_core_signing_code"></a> コードの署名  
  コードのソースを識別するように設計されたコード署名および署名された後に、コードが変更されていないことを保証するためにします。 ブラウザーの安全性の設定によって、コードをダウンロードする前に、ユーザーを警告可能性があります。 ユーザーが特定の証明書の所有者またはものによって署名されたケースのコードが警告なしにダウンロードは信頼された企業を信頼する選択可能性があります。 コードは、改ざんを回避するデジタル署名します。  
   
  信頼の警告メッセージを表示することがなく、コントロールを自動的にダウンロードできるように、最終的なコードが署名を確認します。 コード署名する方法の詳細については、Authenticode ActiveX sdk のマニュアルを確認しを参照してください[CAB ファイルへの署名](http://msdn.microsoft.com/en-us/04d8b47a-8f1c-4b54-ab90-730fcdc03747)です。  
@@ -231,7 +226,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  署名されているために、デジタル署名の保証のコードは変更されていません。 コードのハッシュが取得され、証明書に埋め込まれます。 このハッシュ コードをダウンロードした後は、実行前に実行されるコードのハッシュと比較します。 Verisign などの企業では、コードの署名に必要なプライベートとパブリックのキーを指定できます。 ActiveX SDK は、MakeCert、テスト証明書を作成するためのユーティリティに付属します。  
   
-##  <a name="_core_managing_the_palette"></a>パレットの管理  
+##  <a name="_core_managing_the_palette"></a> パレットの管理  
  コンテナーがパレットを決定しをアンビエント プロパティとして使用できるように**DISPID_AMBIENT_PALETTE**です。 コンテナー (たとえば、Internet Explorer) は、ページ上のすべての ActiveX コントロールで、独自のパレットを決定するために使用するパレットを選択します。 これは、ディスプレイのちらつきを防止し、一貫した外観を示します。  
   
  オーバーライドする`OnAmbientPropertyChange`パレットを変更の通知を処理します。  
@@ -242,7 +237,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  アンビエント palette プロパティを使用していない古いコンテナーは送信`WM_QUERYNEWPALETTE`と`WM_PALETTECHANGED`メッセージ。 オーバーライドする`OnQueryNewPalette`と`OnPaletteChanged`をこれらのメッセージを処理します。  
   
-##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a>Internet Explorer ブラウザーの安全性レベルとコントロールの動作  
+##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer ブラウザーの安全性レベルとコントロールの動作  
  ブラウザーでは、安全性レベルの場合、ユーザーによって構成可能なオプションがあります。 Web ページには、ユーザーのコンピューターに危害を及ぼす可能性がある可能性がありますのアクティブ コンテンツを含めることができます、ために、ブラウザーは安全性レベルのオプションを選択するユーザーを許可します。 ブラウザーには、安全性レベルが実装する方法、に応じて、コントロールは、ダウンロードできません可能性があります。 または証明書またはユーザーが実行時にコントロールをダウンロードするかどうか選択を許可する警告メッセージが表示されます。 高、中、低の安全性レベルの下にある Internet Explorer の ActiveX コントロールの動作は、以下に記載されています。  
   
 ### <a name="high-safety-mode"></a>高い安全性モード  
@@ -267,7 +262,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
 -   スクリプトの作成と永続化警告なしに発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)   
  [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)   
  [MFC ActiveX コントロール: ActiveX コントロールのライセンス](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

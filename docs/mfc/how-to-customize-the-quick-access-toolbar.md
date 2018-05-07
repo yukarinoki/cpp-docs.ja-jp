@@ -1,29 +1,24 @@
 ---
-title: "方法: クイック アクセス ツールバーをカスタマイズする |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: クイック アクセス ツールバーをカスタマイズする |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67d46640a1a4fadc6750ca34b05910902679440
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0faa3a0fb66c4379824a6be190175b10e0415474
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>方法: クイック アクセス ツール バーをカスタマイズする
 クイック アクセス ツールバー (QAT) は、アプリケーション ボタンの横にある、またはカテゴリ タブの下に表示されるコマンドのセットを含むカスタマイズ可能なツールバーです。 次の図は、一般的なクイック アクセス ツールバーを示しています。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>追加またはクイック アクセス ツールバーのコマンドを削除するには  
   
-1.  **プロパティ**ウィンドウで、をクリックして**QAT Items**、省略記号ボタンをクリックして**([...])**.  
+1.  **プロパティ**ウィンドウで、をクリックして**QAT Items**、省略記号ボタンをクリックして **([...])**.  
   
 2.  **QAT Items エディター**ダイアログ ボックスで、使用、**追加**と**削除**クイック アクセス ツールバーのコマンドの一覧を変更するボタンです。  
   
@@ -63,6 +58,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **Ribbon エディター ツールバー**をクリックして**Ribbon のテスト**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
 

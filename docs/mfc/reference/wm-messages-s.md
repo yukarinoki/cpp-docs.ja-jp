@@ -1,13 +1,10 @@
 ---
-title: "Wm _ で始まるメッセージのハンドラー: S |Microsoft ドキュメント"
-ms.custom: 
+title: 'Wm _ で始まるメッセージのハンドラー: S |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - ON_WM_SYSDEADCHAR
 - ON_WM_SYSKEYDOWN
@@ -46,17 +43,15 @@ helpviewer_keywords:
 - ON_WM_SYSKEYDOWN [MFC]
 - WM_ messages
 ms.assetid: 4b9aec79-a98f-4aa0-a3d9-110941b6dcbc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddc99b2aa360e35224f24920d6a8ae3de920c6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b3b7918b74db4e7720f935bcfdf3bf3ffd3d950
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wm-messages-s"></a>WM_ で始まるメッセージのハンドラー : S
 関数プロトタイプに対応するマップ エントリを次に示します。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
 |ON_WM_SYSKEYDOWN に関するページ)|afx_msg void[持つ](../../mfc/reference/cwnd-class.md#onsyskeydown)(UINT、UINT、UINT) です。|  
 |ON_WM_SYSKEYUP に関するページ)|afx_msg void [OnSysKeyUp](../../mfc/reference/cwnd-class.md#onsyskeyup)(UINT、UINT、UINT) です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)   
  [WM_ で始まるメッセージのハンドラー](../../mfc/reference/handlers-for-wm-messages.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "コンパイラの警告 (レベル 1 および 3) C4793 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラの警告 (レベル 1 および 3) C4793 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>コンパイラの警告 (レベル 1 および 3) C4793
 'function': 関数がネイティブ コードとしてコンパイルされます: 'reason'  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |理由メッセージ|コメント|  
 |--------------------|-------------|  
 |整列データ型はマネージ コードではサポートされていません|CLR できる必要があります、必要に応じて、データを割り当てる場合に、データがなどの宣言と一致しない可能性もある[_ _m128](../../cpp/m128.md)または[整列](../../cpp/align-cpp.md)です。|  
-|マネージ コードでは、'_ _imagebase' を使用する関数はサポートされていません|`__ImageBase`通常のみ使用する低レベル ネイティブ コード DLL を読み込む特別なリンカー記号です。|  
+|マネージ コードでは、'_ _imagebase' を使用する関数はサポートされていません|`__ImageBase` 通常のみ使用する低レベル ネイティブ コード DLL を読み込む特別なリンカー記号です。|  
 |varargs はではサポートされていない、'/clr' コンパイラ オプション|ネイティブ関数を持つマネージ関数を呼び出すことはできません[可変個引数リスト](../../cpp/functions-with-variable-argument-lists-cpp.md)(vararg) 関数が別のスタックのレイアウトの条件を持つためです。 ただし、指定した場合、`/clr:pure`コンパイラ オプションは、可変個引数が、アセンブリは、マネージ関数のみを含めることができますので、リストはサポートされています。 詳細については、次を参照してください。[純粋なコードと検証可能なコード (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)です。|  
 |64 ビット CLR では、_ _ptr32 修飾子で宣言されたデータはサポートされません。|ポインターは、現在のプラットフォームでネイティブ ポインターと同じサイズにする必要があります。 詳細については、次を参照してください。 [_ _ptr32、 \__ptr64](../../cpp/ptr32-ptr64.md)です。|  
 |32 ビット CLR では、_ _ptr64 修飾子で宣言されたデータはサポートされません。|ポインターは、現在のプラットフォームでネイティブ ポインターと同じサイズにする必要があります。 詳細については、次を参照してください。 [_ _ptr32、 \__ptr64](../../cpp/ptr32-ptr64.md)です。|  

@@ -1,12 +1,9 @@
 ---
-title: "コンパイラ エラー C2800 C2899 から |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C2800 C2899 から |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2816
@@ -51,17 +48,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00357e68e831e58057faac1b4609ac34fadc1c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc85ab15a262a5f4976fcdc7278401a0d9a128d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>コンパイラ エラー C2800 C2899 から
 
@@ -88,7 +83,7 @@ ms.lasthandoff: 12/21/2017
 |[コンパイラ エラー C2812](compiler-error-c2812.md)|#import は/clr でサポートされていません:/clr:pure および/clr:safe|
 |[コンパイラ エラー C2813](compiler-error-c2813.md)|#import は /MP でサポートされていません|
 |[コンパイラ エラー C2814](compiler-error-c2814.md)|'*メンバー*': ネイティブ型はマネージまたは WinRT 型の中で入れ子にすることはできません'*クラス*'|
-|[コンパイラ エラー C2815](compiler-error-c2815.md)|'operator delete': 仮引数の最初のパラメーターである必要があります 'void *' が、'*型 *' が使用されました|
+|[コンパイラ エラー C2815](compiler-error-c2815.md)|'operator delete': 仮引数の最初のパラメーターである必要があります 'void *' が、'* 型 *' が使用されました|
 |コンパイラ エラー C2816|互換性のために残されています。|
 |[コンパイラ エラー C2817](compiler-error-c2817.md)|'operator delete' の戻り値の型は 'void' である必要があります。|
 |[コンパイラ エラー C2818](compiler-error-c2818.md)|'operator ->' のアプリケーションが過負荷の種類を再帰的なは '*クラス*'|

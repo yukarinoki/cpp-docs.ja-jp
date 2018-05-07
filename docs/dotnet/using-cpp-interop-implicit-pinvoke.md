@@ -1,13 +1,10 @@
 ---
-title: "C++ Interop (暗黙の PInvoke) を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: C++ Interop (暗黙の PInvoke) を使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -29,18 +26,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a91c9833358744730b9ad9c63f5a14729d9d0968
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>C++ Interop (暗黙の PInvoke) の使用
 その他の .NET 言語とは異なり、Visual C には相互運用性サポートと同じファイル内でも、同じアプリケーション内に存在するマネージ コードとアンマネージ コードを許可する (で、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)プラグマ)。 これにより、Visual C++ 開発者は、他のアプリケーションの動作を妨げることなく、既存の Visual C++ アプリケーションに .NET 機能を統合できます。  
@@ -148,5 +143,5 @@ Done
   
  相互運用シナリオではデリゲートの使用方法の詳細については、次を参照してください。 [delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ コードからのネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)

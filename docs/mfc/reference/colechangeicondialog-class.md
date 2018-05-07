@@ -1,12 +1,9 @@
 ---
-title: "メンバー クラス |Microsoft ドキュメント"
-ms.custom: 
+title: メンバー クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>メンバー クラス
 OLE の [アイコンの変更] ダイアログ ボックスに使用します。  
@@ -86,14 +81,14 @@ class COleChangeIconDialog : public COleDialog
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
- [関数](../../mfc/reference/coledialog-class.md)  
+ [COleDialog](../../mfc/reference/coledialog-class.md)  
   
  `COleChangeIconDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  この関数はのみ、`COleChangeIconDialog`オブジェクト。  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  詳細については、次を参照してください。、 [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 内の構造。  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  後のダイアログ ボックスで選択されている 1 つに項目を表すアイコンを変更するには、この関数を呼び出す[DoModal](#domodal)返します**IDOK**です。  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>戻り値  
  変更が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  OLE の [アイコンの変更] ダイアログ ボックスを表示するには、この関数を呼び出します。  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  場合`DoModal`返します**IDOK**設定や、ダイアログ ボックスに、ユーザーが入力した情報を取得する関数の他のメンバーを呼び出すことができます。  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  この関数では、選択した項目のアイコンの外観を含むメタファイルへのハンドルを取得します。  
   
 ```  
@@ -171,9 +166,9 @@ HGLOBAL GetIconicMetafile() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ハンドルを選択して、ダイアログ ボックスが破棄された場合に、新しいアイコンのアイコンの外観を持つメタファイル**[ok]**以外の場合はアイコンが、ダイアログ ボックスが表示される前にします。  
+ ハンドルを選択して、ダイアログ ボックスが破棄された場合に、新しいアイコンのアイコンの外観を持つメタファイル **[ok]** 以外の場合はアイコンが、ダイアログ ボックスが表示される前にします。  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  型の構造体**OLEUICHANGEICON**アイコンの変更 ダイアログ ボックスの動作を制御するために使用します。  
   
 ```  
@@ -185,7 +180,7 @@ OLEUICHANGEICON m_ci;
   
  詳細については、次を参照してください。、 [OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 内の構造。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数クラス](../../mfc/reference/coledialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)

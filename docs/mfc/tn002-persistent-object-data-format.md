@@ -1,13 +1,10 @@
 ---
-title: "TN002: 永続オブジェクトのデータ形式 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN002: 永続オブジェクトのデータ形式 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>テクニカル ノート 2: 永続オブジェクトのデータ形式
 ここでは、ファイルに格納されるときに、永続的な C++ オブジェクトおよびオブジェクトのデータの形式をサポートする MFC ルーチンについて説明します。 これを持つクラスにのみ適用されます、 [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)マクロです。  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  2 つの可能性を考慮する必要がある場合は、オブジェクトが保存されていない: オブジェクトとオブジェクトの正確な型 (つまり、クラス) の両方がこのアーカイブ コンテキストへ新しいまたはオブジェクトが既に固定型のいずれか。 種類が表示されているかどうかを決定するコードのクエリ、`m_pStoreMap`の[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)と一致するオブジェクト、`CRuntimeClass`保存されているオブジェクトに関連付けられているオブジェクト。 場合は、一致がある`WriteObject`ビットであるタグを挿入`OR`の`wOldClassTag`し、このインデックス。 場合、`CRuntimeClass`はこのアーカイブ コンテキストへ新しい`WriteObject`そのクラスに新しい PID が割り当てられ、前にする、アーカイブに挿入、`wNewClassTag`値。  
   
- このクラスの記述子が、挿入を使用して、アーカイブ、`CRuntimeClass::Store`メソッドです。 `CRuntimeClass::Store`クラス (下記参照) のスキーマの数と、ASCII テキスト クラスの名前を挿入します。 ASCII テキスト名の使用によって、アプリケーション間でのアーカイブの一意性が保証されないことに注意してください。 そのため、破損を防ぐため、データ ファイルをタグ付けする必要があります。 次のクラス情報を挿入、アーカイブにオブジェクトを格納、`m_pStoreMap`しを呼び出して、`Serialize`クラスに固有のデータを挿入するメソッド。 オブジェクトを配置すること、`m_pStoreMap`呼び出す前に`Serialize`オブジェクトの複数のコピーがストアに保存されないようにします。  
+ このクラスの記述子が、挿入を使用して、アーカイブ、`CRuntimeClass::Store`メソッドです。 `CRuntimeClass::Store` クラス (下記参照) のスキーマの数と、ASCII テキスト クラスの名前を挿入します。 ASCII テキスト名の使用によって、アプリケーション間でのアーカイブの一意性が保証されないことに注意してください。 そのため、破損を防ぐため、データ ファイルをタグ付けする必要があります。 次のクラス情報を挿入、アーカイブにオブジェクトを格納、`m_pStoreMap`しを呼び出して、`Serialize`クラスに固有のデータを挿入するメソッド。 オブジェクトを配置すること、`m_pStoreMap`呼び出す前に`Serialize`オブジェクトの複数のコピーがストアに保存されないようにします。  
   
  最初の呼び出し元 (通常はオブジェクトのネットワークのルート) を返す、ときに呼び出す必要があります[CArchive::Close](../mfc/reference/carchive-class.md#close)です。 その他を実行する予定の場合[CFile](../mfc/reference/cfile-class.md)操作を呼び出す必要があります、`CArchive`メソッド[フラッシュ](../mfc/reference/carchive-class.md#flush)アーカイブの破損を回避します。  
   
@@ -115,7 +110,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  前述のようは、バージョンをエンコードし、クラス情報自分で呼び出すときにする必要があります`Serialize`直接、古いファイルとの下位互換性を維持しながら、形式を後で変更を有効にします。 `CArchive::SerializeClass`直接オブジェクトをシリアル化する前に、または基底クラスを呼び出す前に、関数を明示的に呼び出すことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

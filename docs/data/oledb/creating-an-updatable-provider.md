@@ -1,12 +1,9 @@
 ---
-title: "更新可能なプロバイダーの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 更新可能なプロバイダーの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e243c7198b479bed226d4bd035297a12fc877de6
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 317ccd043b3a69489f9cbd2737ad7741389863c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 Visual C には、更新可能なプロバイダーまたは更新できるプロバイダーがサポートしています (書き込む) データ ストアです。 このトピックでは、OLE DB テンプレートを使用して、更新可能なプロバイダーを作成する方法について説明します。  
@@ -131,15 +126,15 @@ Visual C には、更新可能なプロバイダーまたは更新できるプ�
   
     -   `DBPROP_IRowsetUpdate`。  
   
-    -   `DBPROP_OWNINSERT`: Must be READ_ONLY AND VARIANT_TRUE.  
+    -   `DBPROP_OWNINSERT`: READ_ONLY と VARIANT_TRUE をある必要があります。  
   
-    -   `DBPROP_OWNUPDATEDELETE`: Must be READ_ONLY AND VARIANT_TRUE.  
+    -   `DBPROP_OWNUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をある必要があります。  
   
-    -   `DBPROP_OTHERINSERT`: Must be READ_ONLY AND VARIANT_TRUE.  
+    -   `DBPROP_OTHERINSERT`: READ_ONLY と VARIANT_TRUE をある必要があります。  
   
-    -   `DBPROP_OTHERUPDATEDELETE`: Must be READ_ONLY AND VARIANT_TRUE.  
+    -   `DBPROP_OTHERUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をある必要があります。  
   
-    -   `DBPROP_REMOVEDELETED`: Must be READ_ONLY AND VARIANT_TRUE.  
+    -   `DBPROP_REMOVEDELETED`: READ_ONLY と VARIANT_TRUE をある必要があります。  
   
     -   `DBPROP_MAXPENDINGROWS`。  
   

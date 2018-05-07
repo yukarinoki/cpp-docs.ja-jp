@@ -1,13 +1,10 @@
 ---
-title: "Active ドキュメント コンテナー |Microsoft ドキュメント"
-ms.custom: 
+title: Active ドキュメント コンテナー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87546f3c02025438b3e60cd2038fdc885dfedf9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containers"></a>Active ドキュメント コンテナー
 Microsoft Office バインダーまたは Internet Explorer などの active ドキュメント コンテナーでは、さまざまな種類のアプリケーション (強制的に作成し、各アプリケーションの複数のフレームを使用することではなく 1 つのフレーム内で複数のドキュメントを操作することができます。ドキュメントの種類の場合)。  
@@ -49,7 +44,7 @@ Microsoft Office バインダーまたは Internet Explorer などの active ド
   
 -   [コマンド ターゲット](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a>コンテナーの要件  
+##  <a name="container_requirements"></a> コンテナーの要件  
  Active ドキュメント コンテナーでの作業中の文書のサポートが単インターフェイスの実装を意味します。 含まれているオブジェクトのインターフェイスを使用しての知識も必要です。 コンテナー ドキュメント自体ではアクティブでそれらの拡張機能インターフェイスを使用する方法の理解を必要がありますも、アクティブなドキュメントの拡張機能にも当てはまります。  
   
  Active ドキュメント コンテナー アクティブ ドキュメントを統合する必要があります。  
@@ -70,7 +65,7 @@ Microsoft Office バインダーまたは Internet Explorer などの active ド
   
  1 つのビューのみをサポートするドキュメントは、ビューとドキュメントの両方のコンポーネント (つまり、対応するインターフェイス) を 1 つの具象クラスに実装できます。 さらに、一度に 1 つのビューのみをサポートするコンテナーのサイトに結合できますドキュメント サイトとサイトの表示クラスを 1 つの具象サイト。 コンテナーのフレームのオブジェクト、ただし、必要がありますは引き続き、distinct、コンテナーのドキュメント コンポーネントだけが含まれているここ; アーキテクチャの全体像を与えるactive ドキュメント コンテインメント アーキテクチャによって影響はありません。  
   
-##  <a name="document_site_objects"></a>サイトのドキュメント オブジェクト  
+##  <a name="document_site_objects"></a> サイトのドキュメント オブジェクト  
  Active ドキュメント コンテインメント アーキテクチャのドキュメント サイトは、OLE ドキュメントに追加すると、クライアントのサイトのオブジェクトと同じ、`IOleDocument`インターフェイス。  
   
  `interface IOleDocumentSite : IUnknown`  
@@ -83,16 +78,16 @@ Microsoft Office バインダーまたは Internet Explorer などの active ド
   
  ドキュメント サイトは、概念的には、1 つ以上の「サイトの表示」オブジェクトのコンテナーです。 各ビューのサイト オブジェクトは、ドキュメント サイトによって管理されているドキュメントの各ビュー オブジェクトに関連付けられます。 コンテナーは、ドキュメント サイトごとに 1 つのビューのみをサポートする場合を実装できますドキュメント サイトと、サイトの 1 つの具象クラスとします。  
   
-##  <a name="view_site_objects"></a>サイト オブジェクトの表示  
+##  <a name="view_site_objects"></a> サイト オブジェクトの表示  
  コンテナーのビューのサイト オブジェクトは、ドキュメントの特定のビューの表示領域を管理します。 標準をサポートするだけでなく`IOleInPlaceSite`インターフェイス、サイトの表示を実装しても通常`IContinueCallback`のプログラムによる制御を印刷します。 (注ビュー オブジェクトが決してのクエリを実行する`IContinueCallback`で実際に実装できるようにコンテナー要望オブジェクトです)。  
   
  複数のビューをサポートするコンテナーは、複数のビューのドキュメント サイト内のサイト オブジェクトを作成できる必要があります。 これにより各ビューで別のアクティブ化と非アクティブ化サービスによって提供されるよう`IOleInPlaceSite`です。  
   
-##  <a name="frame_object"></a>オブジェクトの構築  
+##  <a name="frame_object"></a> オブジェクトの構築  
  コンテナーのフレーム オブジェクトは、ほとんどの場合、つまり OLE ドキュメントでは、インプレース アクティブ化に使用される同じフレーム、メニューとツールバーのネゴシエーションを処理する 1 つです。 ビュー オブジェクトからこのフレーム オブジェクトへのアクセスを持つ**IOleInPlaceSite::GetWindowContext**も、コンテナーのドキュメントを処理できるレベルのウィンドウのツールバーのネゴシエーションを表すコンテナー オブジェクトへのアクセスを提供します。含まれているオブジェクトの列挙型)。  
   
  Active ドキュメント コンテナーは、追加することで、フレームを補強できます`IOleCommandTarget`です。 これにより、このインターフェイスが同じコマンドを送信するためのコンテナーを許可できることと同じ方法で、アクティブなドキュメントのユーザー インターフェイスで発生するコマンドを受信 (など**ファイル新しい**、**開く**、 **名前を付けて**、**印刷**です。**コピーの編集**、**貼り付け**、**を元に戻す**、およびその他) をアクティブなドキュメントにします。 詳細については、次を参照してください。[コマンド ターゲット](../mfc/message-handling-and-command-targets.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
 

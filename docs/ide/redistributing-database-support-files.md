@@ -1,30 +1,25 @@
 ---
-title: "データベース サポート ファイルの再頒布 |Microsoft ドキュメント"
-ms.custom: 
+title: データベース サポート ファイルの再頒布 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - redistributing database support files
 - database support files [C++], redistributing
 ms.assetid: d80cffe0-177c-4515-9de7-fbf0517eb8d6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7517222b1dc2e61f45c23a9fc91709672f304768
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a51697367480569e2d27a4cb67791f5fe4d39a8f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-database-support-files"></a>データベース サポート ファイルの再頒布
 データ アクセス オブジェクト (DAO: Data Access Object) 用のサポート ファイルの再配布、および Microsoft Data Access SDK のデータベース テクノロジのサポート ファイルの再配布が可能です。  
@@ -37,5 +32,5 @@ ms.lasthandoff: 01/03/2018
   
  詳細については、上、 [MSDN](http://go.microsoft.com/fwlink/p/?linkid=198016) web サイト、"再頒布 MDAC 2.8 SP1"を検索します。 アプリケーションを配置する Visual Studio セットアップ プロジェクトを使用する場合は「[配置と依存関係](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)

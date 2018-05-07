@@ -1,12 +1,9 @@
 ---
-title: __readcr3 | Microsoft Docs
-ms.custom: 
+title: _ _readcr3 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __readcr3
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aef03e30f35b8721bc7290832eb7af51b3e99483
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3a632199dcc3318109a6b95f82d718ac3f26fa23
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="readcr3"></a>__readcr3
 **Microsoft 固有の仕様**  
@@ -41,11 +36,11 @@ unsigned __int64 __readcr3(void);
 ## <a name="return-value"></a>戻り値  
  CR3 レジスタの値。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
-|`__readcr3`|x86、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readcr3`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **ヘッダー ファイル** \<intrin.h >  
   
@@ -54,5 +49,5 @@ unsigned __int64 __readcr3(void);
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

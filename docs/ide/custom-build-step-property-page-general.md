@@ -1,13 +1,10 @@
 ---
-title: "カスタム ビルド ステップ プロパティ ページ: 全般 |Microsoft ドキュメント"
-ms.custom: 
+title: 'カスタム ビルド ステップ プロパティ ページ: 全般 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
 - VC.Project.VCCustomBuildStep.CustomBuildAfterTargets
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - project properties, custom build step
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e57d6cf00843cd6604ef269235602ea1b5b5e9b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5d88bd738711058794a525217ba2640e8d52356d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-build-step-property-page-general"></a>[カスタム ビルド ステップ] プロパティ ページ: 全般
 プロジェクトにおけるプロジェクト構成とターゲット プラットフォームの組み合わせごとに、プロジェクトをビルドするときに実行するカスタム ステップを指定できます。  
@@ -65,5 +60,5 @@ ms.lasthandoff: 02/14/2018
   
 3.  設定を変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)

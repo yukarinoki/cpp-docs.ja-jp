@@ -1,12 +1,9 @@
 ---
-title: "Cdatasource::openwithpromptfilename |Microsoft ドキュメント"
-ms.custom: 
+title: Cdatasource::openwithpromptfilename |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDataSource.OpenWithPromptFileName
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - OpenWithPromptFileName method
 ms.assetid: 89460504-1aaf-4412-aa7b-fa5a4b39ada3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32ced33ad4fd0cd7be99502594720949c4e08310
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 318ec8fbba3845fd3e7a15d2efea6ba658712cf0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopenwithpromptfilename"></a>CDataSource::OpenWithPromptFileName
 このメソッドは、ダイアログ ボックスをユーザーに表示し、ユーザーが指定したファイルを使用してデータ ソースを開きます。  
@@ -57,10 +52,10 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
  標準の `HRESULT`。  
   
 ## <a name="remarks"></a>コメント  
- このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、"の OLE DB サービスでの OLE DB プログラマーズ リファレンスを参照してください。 [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)です。  
+ このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、"の OLE DB サービスでの OLE DB プログラマーズ リファレンスを参照してください。 [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDataSource クラス](../../data/oledb/cdatasource-class.md)

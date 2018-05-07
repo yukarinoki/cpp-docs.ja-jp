@@ -1,12 +1,9 @@
 ---
-title: "CMFCButton クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCButton クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCButton
@@ -89,17 +86,15 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d496cf079cd56d8260c5fd8072809bc05559ef2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton クラス
 `CMFCButton`クラスを追加する機能、 [CButton](../../mfc/reference/cbutton-class.md)ボタン テキストの配置、ボタンのテキストとイメージの組み合わせ、カーソル、カーソルを選択すると、ツール ヒントを指定するなどのクラスです。  
@@ -167,7 +162,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|ボタンの周囲のフォーカスされた四角形を描画するかどうかを示します。|  
 |[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|上にカーソルを置くと、BS_CHECKBOX スタイルのボタンを強調表示するかどうかを示します。|  
@@ -204,17 +199,17 @@ class CMFCButton : public CButton
   
  [CMFCButton](../../mfc/reference/cmfcbutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxbutton.h  
   
-##  <a name="cleanup"></a>CMFCButton::CleanUp  
+##  <a name="cleanup"></a>  CMFCButton::CleanUp  
  内部変数をリセットし、イメージ、ビットマップ、アイコンなどの割り当てられたリソースを解放します。  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
+##  <a name="enablefulltexttooltip"></a>  CMFCButton::EnableFullTextTooltip  
  大きいツールヒント ウィンドウまたは切り詰め小さいツールヒント ウィンドウ内のテキストのツールヒントのテキスト全体を表示するかどうかを指定します。  
   
 ```  
@@ -223,11 +218,11 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bOn`  
- `TRUE`すべてのテキストを表示するには`FALSE`テキストを切り捨て表示します。  
+ `TRUE` すべてのテキストを表示するには`FALSE`テキストを切り捨て表示します。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
+##  <a name="enablemenufont"></a>  CMFCButton::EnableMenuFont  
  ボタン テキストのフォントは、アプリケーション メニューのフォントと同じかどうかを指定します。  
   
 ```  
@@ -238,15 +233,15 @@ void EnableMenuFont(
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bOn`  
- `TRUE`ボタン テキストのフォントとしてアプリケーション メニューのフォントを使用するには`FALSE`システム フォントを使用します。 既定値は、`TRUE` です。  
+ `TRUE` ボタン テキストのフォントとしてアプリケーション メニューのフォントを使用するには`FALSE`システム フォントを使用します。 既定値は、`TRUE` です。  
   
  [入力] `bRedraw`  
- `TRUE`画面をすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は、`TRUE` です。  
+ `TRUE` 画面をすぐに再描画するにはそれ以外の場合、`FALSE`です。 既定値は、`TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  ボタン テキストのフォントを指定するこのメソッドを使用しない場合のフォントを指定することができます、 [cwnd::setfont](../../mfc/reference/cwnd-class.md#setfont)メソッドです。 すべてのフォントを指定しないと、フレームワークは、既定のフォントを設定します。  
   
-##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
+##  <a name="enablewindowstheming"></a>  CMFCButton::EnableWindowsTheming  
  ボタンの境界線のスタイルが現在の Windows テーマに対応しているかどうかを指定します。  
   
 ```  
@@ -255,12 +250,12 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`現在の Windows テーマを使用してボタン枠線を描画するには`FALSE` Windows テーマを使用しないようにします。 既定値は、`TRUE` です。  
+ `TRUE` 現在の Windows テーマを使用してボタン枠線を描画するには`FALSE` Windows テーマを使用しないようにします。 既定値は、`TRUE` です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドは、アプリケーションから派生したすべてのボタン、影響、`CMFCButton`クラスです。  
   
-##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>  CMFCButton::GetToolTipCtrl  
  基になるツールヒント コントロールへの参照を返します。  
   
 ```  
@@ -272,7 +267,7 @@ CToolTipCtrl& GetToolTipCtrl();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
+##  <a name="isautocheck"></a>  CMFCButton::IsAutoCheck  
  チェック ボックスまたはラジオ ボタンが自動ボタンであるかどうかを示します。  
   
 ```  
@@ -280,11 +275,11 @@ BOOL IsAutoCheck() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合は、ボタンのスタイルを BS_AUTOCHECKBOX か BS_AUTORADIOBUTTON です。それ以外の場合、`FALSE`です。  
+ `TRUE` 場合は、ボタンのスタイルを BS_AUTOCHECKBOX か BS_AUTORADIOBUTTON です。それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
+##  <a name="isautorepeatcommandmode"></a>  CMFCButton::IsAutorepeatCommandMode  
  ボタンが自動繰り返しのモードに設定されているかどうかを示します。  
   
 ```  
@@ -297,7 +292,7 @@ BOOL IsAutorepeatCommandMode() const;
 ### <a name="remarks"></a>コメント  
  使用して、 [CMFCButton::SetAutorepeatMode](#setautorepeatmode)ボタンを自動繰り返しのモードに設定します。  
   
-##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
+##  <a name="ischeckbox"></a>  CMFCButton::IsCheckBox  
  ボタンがチェック ボックス ボタンであるかどうかを示します。  
   
 ```  
@@ -309,7 +304,7 @@ BOOL IsCheckBox() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="ischecked"></a>CMFCButton::IsChecked  
+##  <a name="ischecked"></a>  CMFCButton::IsChecked  
  現在のボタンがチェックするかどうかを示します。  
   
 ```  
@@ -317,12 +312,12 @@ BOOL IsChecked() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`現在のボタンがチェックされている場合それ以外の場合、`FALSE`です。  
+ `TRUE` 現在のボタンがチェックされている場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  フレームワークでは、さまざまな種類のボタンをチェックすることを示すためにさまざまな方法で使用します。 たとえば、ラジオ ボタンがオンになって; ドットが含まれている場合含まれている場合、チェック ボックスをオン、 **X**です。  
   
-##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCButton::IsHighlighted  
  ボタンが強調表示されているかどうかを示します。  
   
 ```  
@@ -335,7 +330,7 @@ BOOL IsHighlighted() const;
 ### <a name="remarks"></a>コメント  
  ボタンの上でマウス ボタンが強調表示されます。  
   
-##  <a name="ispressed"></a>CMFCButton::IsPressed  
+##  <a name="ispressed"></a>  CMFCButton::IsPressed  
  ボタンがプッシュされ、強調表示されているかどうかを示します。  
   
 ```  
@@ -347,7 +342,7 @@ BOOL IsPressed() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="ispushed"></a>CMFCButton::IsPushed  
+##  <a name="ispushed"></a>  CMFCButton::IsPushed  
  ボタンがプッシュされたかどうかを示します。  
   
 ```  
@@ -359,7 +354,7 @@ BOOL IsPushed() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
+##  <a name="isradiobutton"></a>  CMFCButton::IsRadioButton  
  ボタンがラジオ ボタンであるかどうかを示します。  
   
 ```  
@@ -371,7 +366,7 @@ BOOL IsRadioButton() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
+##  <a name="iswindowsthemingenabled"></a>  CMFCButton::IsWindowsThemingEnabled  
  ボタンの境界線のスタイルが現在の Windows テーマに対応しているかどうかを示します。  
   
 ```  
@@ -379,9 +374,9 @@ static BOOL IsWindowsThemingEnabled();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ボタンの境界線のスタイルが現在の Windows のテーマに対応している場合それ以外の場合、`FALSE`です。  
+ `TRUE` ボタンの境界線のスタイルが現在の Windows のテーマに対応している場合それ以外の場合、`FALSE`です。  
   
-##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
+##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  ボタンの周囲のフォーカスされた四角形を描画するかどうかを示します。  
   
 ```  
@@ -393,7 +388,7 @@ BOOL m_bDrawFocus;
   
  `CMFCButton`コンス トラクターにこのメンバーは初期化`TRUE`です。  
   
-##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
+##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  上にカーソルを置くと、BS_CHECKBOX スタイルのボタンを強調表示するかどうかを示します。  
   
 ```  
@@ -403,7 +398,7 @@ BOOL m_bHighlightChecked;
 ### <a name="remarks"></a>コメント  
  設定、`m_bHighlightChecked`メンバー`TRUE`上にマウスを置くと、フレームワークが BS_CHECKBOX スタイルのボタンを強調ことを指定します。  
   
-##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
+##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  ボタンの右側にあるイメージを表示するかどうかを示します。  
   
 ```  
@@ -413,7 +408,7 @@ BOOL m_bRightImage;
 ### <a name="remarks"></a>コメント  
  設定、`m_bRightImage`メンバー`TRUE`フレームワークがボタンのテキスト ラベルの右側に、ボタンの画像を表示するよう指定します。  
   
-##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
+##  <a name="m_btransparent"></a>  CMFCButton::m_bTransparent  
  ボタンが透明かどうかを示します。  
   
 ```  
@@ -423,7 +418,7 @@ BOOL m_bTransparent;
 ### <a name="remarks"></a>コメント  
  設定、`m_bTransparent`メンバー`TRUE`ことフレームワークは透明にする ボタンを指定します。 `CMFCButton`コンス トラクターにこのメンバーは初期化`FALSE`です。  
   
-##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
+##  <a name="m_nalignstyle"></a>  CMFCButton::m_nAlignStyle  
  ボタンのテキストの配置を指定します。  
   
 ```  
@@ -441,7 +436,7 @@ AlignStyle m_nAlignStyle;
   
  `CMFCButton`コンス トラクターが ALIGN_CENTER にこのメンバーを初期化します。  
   
-##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
+##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  ふちなし、フラット、セミコロンのフラットまたは 3D など、ボタンのスタイルを指定します。  
   
 ```  
@@ -466,7 +461,7 @@ FlatStyle  m_nFlatStyle;
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="ondraw"></a>CMFCButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCButton::OnDraw  
  ボタンを描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -489,7 +484,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>コメント  
  ボタンを描画する独自のコードを使用するには、このメソッドをオーバーライドします。  
   
-##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCButton::OnDrawBorder  
  ボタンの境界線を描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -512,7 +507,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>コメント  
  独自のコードを使用して境界線を描画するには、このメソッドをオーバーライドします。  
   
-##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCButton::OnDrawFocusRect  
  ボタンのフォーカスされた四角形を描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -531,7 +526,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>コメント  
  フォーカス四角形を描画する独自のコードを使用するには、このメソッドをオーバーライドします。  
   
-##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
+##  <a name="ondrawtext"></a>  CMFCButton::OnDrawText  
  ボタンのテキストを描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -562,7 +557,7 @@ virtual void OnDrawText(
 ### <a name="remarks"></a>コメント  
  独自のコードを使用して、ボタンのテキストを描画するには、このメソッドをオーバーライドします。  
   
-##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCButton::OnFillBackground  
  ボタンのテキストの背景を描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -581,7 +576,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>コメント  
  独自のコードを使用して、ボタンの背景を描画するには、このメソッドをオーバーライドします。  
   
-##  <a name="selectfont"></a>CMFCButton::SelectFont  
+##  <a name="selectfont"></a>  CMFCButton::SelectFont  
  指定したデバイス コンテキストに関連付けられているフォントを取得します。  
   
 ```  
@@ -597,7 +592,7 @@ virtual CFont* SelectFont(CDC* pDC);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
+##  <a name="setautorepeatmode"></a>  CMFCButton::SetAutorepeatMode  
  ボタンを自動繰り返しのモードに設定します。  
   
 ```  
@@ -611,7 +606,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ### <a name="remarks"></a>コメント  
  このメソッドは、常にメッセージを送信する WM_COMMAND を親ウィンドウに、ボタンが解放されるまで、ボタンまたは`nTimeDelay`パラメーターが 0 に設定します。  
   
-##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
+##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  チェック ボタンのイメージを設定します。  
   
 ```  
@@ -642,7 +637,7 @@ void SetCheckedImage(
  ビットマップと、新しいイメージのマスクを含むアイコンへのハンドルします。  
   
  [入力] `bAutoDestroy`  
- `TRUE`ビットマップのリソースを自動的に破棄することを指定するにはそれ以外の場合、`FALSE`です。 既定値は、`TRUE` です。  
+ `TRUE` ビットマップのリソースを自動的に破棄することを指定するにはそれ以外の場合、`FALSE`です。 既定値は、`TRUE` です。  
   
  [入力] `hIconHot`  
  選択した状態のイメージを含むアイコンへのハンドルします。  
@@ -654,7 +649,7 @@ void SetCheckedImage(
  選択した状態のイメージを含むビットマップへのハンドルします。  
   
  [入力] `bMap3dColors`  
- ボタンの背景の透明色を指定しますボタンの表面です。 `TRUE`カラー値 RGB (192、192、192) を使用するには`FALSE`によって定義された色の値を使用する`AFX_GLOBAL_DATA::clrBtnFace`です。  
+ ボタンの背景の透明色を指定しますボタンの表面です。 `TRUE` カラー値 RGB (192、192、192) を使用するには`FALSE`によって定義された色の値を使用する`AFX_GLOBAL_DATA::clrBtnFace`です。  
   
  [入力] `uiBmpResId`  
  選択されていないイメージのリソース ID です。  
@@ -672,11 +667,11 @@ void SetCheckedImage(
  無効になっているビットマップのリソース ID です。  
   
  [入力] `bAlphaBlend`  
- `TRUE`アルファ チャネルを使用してのみの 32 ビット イメージを使用するには`FALSE`、アルファ チャネル イメージのみを使用しないようにします。 既定値は、`FALSE` です。  
+ `TRUE` アルファ チャネルを使用してのみの 32 ビット イメージを使用するには`FALSE`、アルファ チャネル イメージのみを使用しないようにします。 既定値は、`FALSE` です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
+##  <a name="setfacecolor"></a>  CMFCButton::SetFaceColor  
  ボタンのテキストの背景色を設定します。  
   
 ```  
@@ -690,12 +685,12 @@ void SetFaceColor(
  色の RGB 値。  
   
  [入力] `bRedraw`  
- `TRUE`直ちに; 画面を再描画するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` 直ちに; 画面を再描画するにはそれ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドを使用すると、ボタンの背景 (フェイス) の新しい塗りつぶしの色を定義します。 バック グラウンドではない注入力時に、 [CMFCButton::m_bTransparent](#m_btransparent)メンバー変数が`TRUE`です。  
   
-##  <a name="setimage"></a>CMFCButton::SetImage  
+##  <a name="setimage"></a>  CMFCButton::SetImage  
  ボタンのイメージを設定します。  
   
 ```  
@@ -726,7 +721,7 @@ void SetImage(
  ビットマップと、新しいイメージのマスクを含むアイコンへのハンドルします。  
   
  [入力] `bAutoDestroy`  
- `TRUE`ビットマップのリソースを自動的に破棄することを指定するにはそれ以外の場合、`FALSE`です。 既定値は、`TRUE` です。  
+ `TRUE` ビットマップのリソースを自動的に破棄することを指定するにはそれ以外の場合、`FALSE`です。 既定値は、`TRUE` です。  
   
  [入力] `hIconHot`  
  選択した状態のイメージを含むアイコンへのハンドルします。  
@@ -744,7 +739,7 @@ void SetImage(
  選択したイメージのリソース ID。  
   
  [入力] `bMap3dColors`  
- ボタンの背景の透明色を指定しますボタンの表面です。 `TRUE`カラー値 RGB (192、192、192) を使用するには`FALSE`によって定義された色の値を使用する`AFX_GLOBAL_DATA::clrBtnFace`です。  
+ ボタンの背景の透明色を指定しますボタンの表面です。 `TRUE` カラー値 RGB (192、192、192) を使用するには`FALSE`によって定義された色の値を使用する`AFX_GLOBAL_DATA::clrBtnFace`です。  
   
  [入力] `hIconDisabled`  
  無効なイメージのアイコンへのハンドルします。  
@@ -756,7 +751,7 @@ void SetImage(
  無効になっているビットマップのリソース ID です。  
   
  [入力] `bAlphaBlend`  
- `TRUE`アルファ チャネルを使用してのみの 32 ビット イメージを使用するには`FALSE`、アルファ チャネル イメージのみを使用しないようにします。 既定値は、`FALSE` です。  
+ `TRUE` アルファ チャネルを使用してのみの 32 ビット イメージを使用するには`FALSE`、アルファ チャネル イメージのみを使用しないようにします。 既定値は、`FALSE` です。  
   
 ### <a name="remarks"></a>コメント  
   
@@ -766,7 +761,7 @@ void SetImage(
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
+##  <a name="setmousecursor"></a>  CMFCButton::SetMouseCursor  
  カーソルのイメージを設定します。  
   
 ```  
@@ -786,7 +781,7 @@ void SetMouseCursor(HCURSOR hcursor);
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
+##  <a name="setmousecursorhand"></a>  CMFCButton::SetMouseCursorHand  
  手の形の画像にカーソルを設定します。  
   
 ```  
@@ -796,7 +791,7 @@ void SetMouseCursorHand();
 ### <a name="remarks"></a>コメント  
  このメソッドを使用して、ボタンを手の形のカーソルのイメージを関連付けます。 カーソルは、アプリケーションのリソースから読み込まれます。  
   
-##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
+##  <a name="setstdimage"></a>  CMFCButton::SetStdImage  
  使用して、`CMenuImages`ボタンのイメージを設定するオブジェクト。  
   
 ```  
@@ -818,7 +813,7 @@ void SetStdImage(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
+##  <a name="settextcolor"></a>  CMFCButton::SetTextColor  
  選択されていないボタンのボタンのテキストの色を設定します。  
   
 ```  
@@ -831,7 +826,7 @@ void SetTextColor(COLORREF clrText);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
+##  <a name="settexthotcolor"></a>  CMFCButton::SetTextHotColor  
  選択されているボタンのボタンのテキストの色を設定します。  
   
 ```  
@@ -844,7 +839,7 @@ void SetTextHotColor(COLORREF clrTextHot);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="settooltip"></a>CMFCButton::SetTooltip  
+##  <a name="settooltip"></a>  CMFCButton::SetTooltip  
  ボタン、ツールヒントに関連付けます。  
   
 ```  
@@ -857,7 +852,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCButton::SizeToContent  
  ボタンのテキストおよびイメージを格納するためのボタンのサイズを変更します。  
   
 ```  
@@ -866,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bCalcOnly`  
- `TRUE`計算するが、変更を新しいボタンのサイズです。`FALSE`ボタンのサイズを変更します。 既定値は、`FALSE` です。  
+ `TRUE` 計算するが、変更を新しいボタンのサイズです。`FALSE`ボタンのサイズを変更します。 既定値は、`FALSE` です。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`ボタンの新しいサイズを含むオブジェクトです。  
@@ -874,7 +869,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ### <a name="remarks"></a>コメント  
  既定では、このメソッドは、10 ピクセルの左右の余白と 5 ピクセルの上下の余白を含む新しいサイズを計算します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCLinkCtrl クラス](../../mfc/reference/cmfclinkctrl-class.md)   

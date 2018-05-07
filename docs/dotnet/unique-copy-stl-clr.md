@@ -1,12 +1,9 @@
 ---
-title: "unique_copy (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: unique_copy (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::unique_copy
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - unique_copy function [STL/CLR]
 ms.assetid: 37aa5b06-42c5-420d-94c5-00f00ad26471
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ca88897a16a78dcb0f331f2ce56db29ab692a3c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab28fbf26151d1ffc1d1c6524b73f325fce94ff2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
 互いに隣接する重複要素を除き、ソース範囲の要素をターゲット範囲にコピーします。  
@@ -44,10 +39,10 @@ template<class _InIt, class _OutIt, class _Pr> inline
 ## <a name="remarks"></a>コメント  
  この関数の動作は、C++ 標準ライブラリ関数と同じ`unique_copy`です。 詳細については、次を参照してください。 [unique_copy](../standard-library/algorithm-functions.md#unique_copy)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext アルゴリズム/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

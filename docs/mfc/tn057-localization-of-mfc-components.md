@@ -1,13 +1,10 @@
 ---
-title: "TN057: MFC コンポーネントのローカライズ |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN057: MFC コンポーネントのローカライズ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.components
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DLLs [MFC], localizing MFC
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27b737a76b30e7193a9afb7797a20951294032e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 935f85f55db8ed0d01bce309aa598100002c0f4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn057-localization-of-mfc-components"></a>テクニカル ノート 57: MFC コンポーネントのローカライズ
 > [!NOTE]
@@ -67,7 +62,7 @@ CMyApp::InitInstance()
   
  MFC は myapp.exe からの代わりにその DLL からのリソースを読み込みます。 ただし、すべてのリソースがこの DLL に存在する必要があります。MFC では、特定のリソースをアプリケーションのインスタンスは検索されません。 この手法は、均等に対しても正規の MFC Dll と OLE コントロールを適用します。 セットアップ プログラムでは、MYRES の適切なバージョンをコピーします。DLL リソース ロケールに応じてユーザーと思います。  
   
- リソースを作成する比較的簡単 DLL だけです。 DLL プロジェクトの作成、追加する、します。RC ファイル、および必要なリソースを追加します。 この手法を使用していない既存のプロジェクトがある場合は、そのプロジェクトからリソースをコピーできます。 リソース ファイルをプロジェクトに追加すると、プロジェクトをビルドするほぼ準備ができたらです。 リンカーを含めるオプションの設定はだけ行う必要があります**/NOENTRY**です。 これは、リンカーは DLL にエントリ ポイント - が含まれていないことのエントリ ポイントを持たないコードを含まない、ためです。  
+ リソースを作成する比較的簡単 DLL だけです。 DLL プロジェクトの作成、追加する、します。RC ファイル、および必要なリソースを追加します。 この手法を使用していない既存のプロジェクトがある場合は、そのプロジェクトからリソースをコピーできます。 リソース ファイルをプロジェクトに追加すると、プロジェクトをビルドするほぼ準備ができたらです。 リンカーを含めるオプションの設定はだけ行う必要があります **/NOENTRY**です。 これは、リンカーは DLL にエントリ ポイント - が含まれていないことのエントリ ポイントを持たないコードを含まない、ためです。  
   
 > [!NOTE]
 >  Visual C 4.0 以降、リソース エディターでは、ごとの複数の言語をサポートします。RC ファイルです。 これは、ため、非常に容易に 1 つのプロジェクトでのローカライズを管理する、ことができます。 各言語のリソースは、リソース エディターによって生成されたプリプロセッサ ディレクティブによって制御されます。  
@@ -83,7 +78,7 @@ CMyApp::InitInstance()
   
  最も単純で安全な方法は、アプリケーションまたは DLL 自体 (またはそのサテライト DLL のいずれかを使用している場合) にローカライズされた MFC リソースを含めるにです。 MFC7xLOC.DLL を正しくインストールの問題を回避できます。 ように、(ローカライズされたリソースを指す正しく RC のコマンドラインの設定) 上記の静的な場合、同じ手順に従ってするには、except も削除する必要があること、`/D_AFXDLL`定義 AppWizard によって追加されました。 ときに`/D_AFXDLL`はコマを定義します。H (およびその他の MFC RC ファイル) 実際には定義しませんのすべてのリソース (ため、それらからプルされ、MFC Dll 代わりに)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

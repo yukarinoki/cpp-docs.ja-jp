@@ -1,13 +1,10 @@
 ---
-title: "クラス ファクトリとライセンス |Microsoft ドキュメント"
-ms.custom: 
+title: クラス ファクトリとライセンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>クラス ファクトリとライセンス
 OLE コントロールのインスタンスを作成するには、コンテナー アプリケーションは、コントロールのクラス ファクトリのメンバー関数を呼び出します。 コントロールは、実際の OLE オブジェクトであるため、クラス ファクトリが、コントロールのインスタンスを作成します。 すべての OLE コントロール クラスには、クラス ファクトリをいる必要があります。  
@@ -44,7 +39,7 @@ OLE コントロールのインスタンスを作成するには、コンテナ�
 |[END_OLEFACTORY](#end_olefactory)|ライセンス関数の宣言を終了します。|  
 |[AfxVerifyLicFile](#afxverifylicfile)|コントロールが特定のコンピューターで使用するライセンスされているかどうかを確認します。|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
  クラス ファクトリを宣言し、`GetClassID`コントロール クラスのメンバー関数。  
   
 ```   
@@ -62,10 +57,10 @@ DECLARE_OLECREATE_EX(class_name)
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
  コントロールのクラス ファクトリを実装し、 [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid)コントロール クラスのメンバー関数。  
   
 ```   
@@ -98,10 +93,10 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="remarks"></a>コメント  
  このマクロを使用して任意のコントロール クラスの実装ファイルに表示する必要があります、`DECLARE_OLECREATE_EX`マクロまたは`BEGIN_OLEFACTORY`と`END_OLEFACTORY`マクロです。 外部名は、他のアプリケーションに公開されている OLE コントロールの識別子です。 コンテナーでは、この名前を使用して、このコントロール クラスのオブジェクトを要求します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
  コントロール クラスのヘッダー ファイルでクラス ファクトリの宣言を開始します。  
   
 ``` 
@@ -115,10 +110,10 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="remarks"></a>コメント  
  クラス ファクトリ ライセンス関数の宣言後すぐに開始`BEGIN_OLEFACTORY`です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
  コントロールのクラス ファクトリの宣言を終了します。  
   
 ```  
@@ -129,10 +124,10 @@ END_OLEFACTORY(class_name)
  *それ以外*  
  これは、クラス ファクトリを持つコントロール クラスの名前。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
  ライセンス ファイルが付けたことを確認するには、この関数を呼び出す`pszLicFileName`OLE コントロールに対して有効です。  
   
 ```   
@@ -164,8 +159,8 @@ BOOL AFXAPI AfxVerifyLicFile(
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxctl.h  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

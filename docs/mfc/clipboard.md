@@ -1,13 +1,10 @@
 ---
-title: "クリップボード |Microsoft ドキュメント"
-ms.custom: 
+title: クリップボード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 304f20f94880b0bd8cb671788c5c06b69d25d377
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2ad21bcbff31335f6ec79a4527ef7d99e07e547
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard"></a>クリップボードのトピック
 この一連のトピックでは、MFC アプリケーションの Windows クリップボードのサポートを実装する方法について説明します。 Windows のクリップボードは、2 つの方法で使用されます。  
@@ -56,5 +51,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [ドラッグ アンド ドロップ (OLE) を実装します。](../mfc/drag-and-drop-ole.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)

@@ -1,13 +1,10 @@
 ---
-title: "Rebar コントロールでダイアログ バーを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: Rebar コントロールでダイアログ バーを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - WM_EX_TRANSPARENT
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4eb47da7c3866e01ee563b9f6b42fa21ada109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47894c14e3b3d694847f94e7f981c9397383e598
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Rebar コントロールでのダイアログ バーの使い方
 説明したよう[Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)、各バンドは、1 つだけの子ウィンドウ (またはコントロール) を含めることができます。 帯域外あたり 1 つ以上の子ウィンドウがある場合、制限があります。 便利な回避策では、複数のコントロールにダイアログ バー リソースを作成し、rebar コントロールに rebar バンド (ダイアログ バーを含む) を追加します。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  新しいハンドラーは、転送によってダイアログ バーの透明度をシミュレート、`WM_ERASEBKGND`親ウィンドウに表示するメッセージし、ダイアログ バー オブジェクトを移動するたびに強制的に再描画します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

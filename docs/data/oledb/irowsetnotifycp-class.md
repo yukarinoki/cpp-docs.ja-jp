@@ -1,12 +1,9 @@
 ---
-title: "IRowsetNotifyCP クラス |Microsoft ドキュメント"
-ms.custom: 
+title: IRowsetNotifyCP クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetNotifyCP
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a43825ee3fa676ce07dcd3bc4e121abd400ef322
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 19147710ce8965222eed998e1a7ab4baa1e32caf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP クラス
 プロバイダー サイト ポイントの接続インターフェイスを実装する[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)です。  
@@ -51,7 +46,7 @@ class IRowsetNotifyCP :
  再入をサポートする相互排他クラス (既定値は**CComSharedMutex**)。 ミュー テックスは、リソースへの 1 つのスレッド相互に排他的アクセスを許可する同期オブジェクトです。  
   
  `piid`  
- インターフェイス ID のポインター (**IID\***) の**IRowsetNotify**コネクション ポイント インターフェイスです。 既定値は**& __uuidof(IRowsetNotify)**です。  
+ インターフェイス ID のポインター (**IID\***) の**IRowsetNotify**コネクション ポイント インターフェイスです。 既定値は **& __uuidof(IRowsetNotify)** です。  
   
  `DynamicUnkArray`  
  型の配列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)、これは、動的に割り当てられた配列の**IUnknown**シンク インターフェイスのクライアントへのポインター。  
@@ -73,10 +68,10 @@ class IRowsetNotifyCP :
   
  通知の実装の詳細については、「通知のサポート」を参照してください[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)   
  [通知 (COM)](http://msdn.microsoft.com/library/windows/desktop/ms678433)   

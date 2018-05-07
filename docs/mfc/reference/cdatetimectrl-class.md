@@ -1,12 +1,9 @@
 ---
-title: "CDateTimeCtrl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDateTimeCtrl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDateTimeCtrl
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3359b506217d2828207e06341fbf1fe53b3c0719
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80b63c6bd44b6d3606b7807913f1e3ae1b4e33f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 日時指定コントロールの機能がカプセル化されています。  
@@ -115,17 +110,17 @@ class CDateTimeCtrl : public CWnd
   
  `CDateTimeCtrl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdtctl.h  
   
-##  <a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl  
+##  <a name="cdatetimectrl"></a>  CDateTimeCtrl::CDateTimeCtrl  
  `CDateTimeCtrl` オブジェクトを構築します。  
   
 ```  
 CDateTimeCtrl();
 ```  
   
-##  <a name="closemonthcal"></a>CDateTimeCtrl::CloseMonthCal  
+##  <a name="closemonthcal"></a>  CDateTimeCtrl::CloseMonthCal  
  現在の日付と時刻の選択コントロールを閉じます。  
   
 ```  
@@ -145,7 +140,7 @@ void CloseMonthCal() const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]  
   
-##  <a name="create"></a>CDateTimeCtrl::Create  
+##  <a name="create"></a>  CDateTimeCtrl::Create  
  日付と時刻の選択コントロールを作成しにアタッチ、`CDateTimeCtrl`オブジェクト。  
   
 ```  
@@ -185,7 +180,7 @@ virtual BOOL Create(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]  
   
-##  <a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo  
+##  <a name="getdatetimepickerinfo"></a>  CDateTimeCtrl::GetDateTimePickerInfo  
  現在の日付と時刻の選択コントロールに関する情報を取得します。  
   
 ```   
@@ -199,7 +194,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 |[出力] `pDateTimePickerInfo`|ポインター、 [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729)を現在の日付と時刻の選択コントロールの説明を受け取る構造体。<br /><br /> 呼び出し元がこの構造体を割り当てます。 ただし、このメソッドは、初期化、`cbSize`構造体のメンバーです。|  
   
 ### <a name="return-value"></a>戻り値  
- `true`このメソッドが成功した場合それ以外の場合、`false`です。  
+ `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドは、送信、 [DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755) Windows SDK で説明するメッセージ。  
@@ -214,7 +209,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]  
   
-##  <a name="getmonthcalcolor"></a>CDateTimeCtrl::GetMonthCalColor  
+##  <a name="getmonthcalcolor"></a>  CDateTimeCtrl::GetMonthCalColor  
  月間予定表、日付と時刻の選択コントロール内の特定部分の色を取得します。  
   
 ```  
@@ -234,7 +229,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
   
-##  <a name="getmonthcalctrl"></a>CDateTimeCtrl::GetMonthCalCtrl  
+##  <a name="getmonthcalctrl"></a>  CDateTimeCtrl::GetMonthCalCtrl  
  取得、`CMonthCalCtrl`日付と時刻の選択コントロールに関連付けられているオブジェクト。  
   
 ```  
@@ -250,7 +245,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]  
   
-##  <a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont  
+##  <a name="getmonthcalfont"></a>  CDateTimeCtrl::GetMonthCalFont  
  現在の日付と時刻の選択コントロールの月間予定表コントロールで使用するフォントを取得します。  
   
 ```  
@@ -263,7 +258,7 @@ CFont* GetMonthCalFont() const;
 ### <a name="remarks"></a>コメント  
  `CFont`戻り値によって指されるオブジェクトは一時オブジェクトであり、[次へ] のアイドル状態の処理時に破棄します。  
   
-##  <a name="getmonthcalstyle"></a>CDateTimeCtrl::GetMonthCalStyle  
+##  <a name="getmonthcalstyle"></a>  CDateTimeCtrl::GetMonthCalStyle  
  現在の日付と時刻の選択コントロールに関連付けられているドロップダウン月間予定表コントロールのスタイルを取得します。  
   
 ```  
@@ -276,7 +271,7 @@ DWORD GetMonthCalStyle() const;
 ### <a name="remarks"></a>コメント  
  このメソッドは、送信、 [DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763) Windows SDK で説明するメッセージ。  
   
-##  <a name="getrange"></a>CDateTimeCtrl::GetRange  
+##  <a name="getrange"></a>  CDateTimeCtrl::GetRange  
  日付と時刻の選択コントロールのシステム時刻が許可されている現在の最小値と最大を取得します。  
   
 ```  
@@ -313,7 +308,7 @@ DWORD GetRange(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
   
-##  <a name="gettime"></a>CDateTimeCtrl::GetTime  
+##  <a name="gettime"></a>  CDateTimeCtrl::GetTime  
  日付と時刻の選択コントロールから現在選択されている時刻を取得し、指定した配置`SYSTEMTIME`構造体。  
   
 ```  
@@ -340,7 +335,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
   
-##  <a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize  
+##  <a name="getidealsize"></a>  CDateTimeCtrl::GetIdealSize  
  現在の日付または時刻を表示するために必要な日付と時刻選択コントロールの適切なサイズを返します。  
   
 ```  
@@ -369,7 +364,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]  
   
-##  <a name="setformat"></a>CDateTimeCtrl::SetFormat  
+##  <a name="setformat"></a>  CDateTimeCtrl::SetFormat  
  指定した書式設定文字列に従って日付と時刻の選択コントロールの表示を設定します。  
   
 ```  
@@ -392,7 +387,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
   
-##  <a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor  
+##  <a name="setmonthcalcolor"></a>  CDateTimeCtrl::SetMonthCalColor  
  月間予定表、日付と時刻ピッカー コントロール内の特定部分の色を設定します。  
   
 ```  
@@ -403,7 +398,7 @@ COLORREF SetMonthCalColor(
   
 ### <a name="parameters"></a>パラメーター  
  `iColor`  
- `int`月間予定表コントロールの設定の領域を指定する値。 この値は、次のいずれかを指定できます。  
+ `int` 月間予定表コントロールの設定の領域を指定する値。 この値は、次のいずれかを指定できます。  
   
 |[値]|説明|  
 |-----------|-------------|  
@@ -426,7 +421,7 @@ COLORREF SetMonthCalColor(
 ### <a name="example"></a>例  
   例を参照して[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)です。  
   
-##  <a name="setmonthcalfont"></a>CDateTimeCtrl::SetMonthCalFont  
+##  <a name="setmonthcalfont"></a>  CDateTimeCtrl::SetMonthCalFont  
  日付と時刻の選択コントロールの子月間予定表コントロールで使用するフォントを設定します。  
   
 ```  
@@ -451,7 +446,7 @@ void SetMonthCalFont(
 > [!NOTE]
 >  このコードを使用する場合のメンバにする、 `CDialog`-と呼ばれるクラスを派生`m_MonthFont`型の**CFont**です。  
   
-##  <a name="setmonthcalstyle"></a>CDateTimeCtrl::SetMonthCalStyle  
+##  <a name="setmonthcalstyle"></a>  CDateTimeCtrl::SetMonthCalStyle  
  現在の日付と時刻の選択コントロールに関連付けられているドロップダウン月間予定表コントロールのスタイルを設定します。  
   
 ```  
@@ -480,7 +475,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]  
   
-##  <a name="setrange"></a>CDateTimeCtrl::SetRange  
+##  <a name="setrange"></a>  CDateTimeCtrl::SetRange  
  日付と時刻の選択コントロールの最小値と最大の許可されているシステム時刻を設定します。  
   
 ```  
@@ -510,7 +505,7 @@ BOOL SetRange(
 ### <a name="example"></a>例  
   例を参照して[CDateTimeCtrl::GetRange](#getrange)です。  
   
-##  <a name="settime"></a>CDateTimeCtrl::SetTime  
+##  <a name="settime"></a>  CDateTimeCtrl::SetTime  
  日付と時刻の選択コントロールの時間を設定します。  
   
 ```  
@@ -535,7 +530,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)   
  [CWnd クラス](../../mfc/reference/cwnd-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

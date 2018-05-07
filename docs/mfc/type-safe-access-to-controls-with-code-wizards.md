@@ -1,13 +1,10 @@
 ---
-title: "コード ウィザードを使用したコントロールにタイプ セーフ アクセス |Microsoft ドキュメント"
-ms.custom: 
+title: コード ウィザードを使用したコントロールにタイプ セーフ アクセス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a431061704bf2affa8a343487ff20f8b55b9e6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 025fd280dc6bf0947dae59cf77abe141bc312df8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス
 DDX 機能を使い慣れている場合でコントロール プロパティを使用することができます、[変数の追加メンバー ウィザード](../ide/add-member-variable-wizard.md): タイプ セーフなアクセスを作成します。 この方法は、コード ウィザードを使用しないコントロールを作成するよりも簡単です。  
@@ -46,7 +41,7 @@ DDX 機能を使い慣れている場合でコントロール プロパティを
   
  コントロールの詳細については、次を参照してください。[コントロール](../mfc/controls-mfc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
  [ダイアログ ボックスのライフ サイクル](../mfc/life-cycle-of-a-dialog-box.md)   
  [コード ウィザードを使用しない、コントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-without-code-wizards.md)

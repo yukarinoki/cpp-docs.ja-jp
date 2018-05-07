@@ -1,12 +1,9 @@
 ---
-title: "C ランタイム エラー R6008 |Microsoft ドキュメント"
-ms.custom: 
+title: C ランタイム エラー R6008 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6008
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6008
 ms.assetid: f0f304fc-709a-4843-bc7e-bad1ae0d1649
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b64f97768359b95d2c5e2003cfb5b95a2aac71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d32734850c58b64694e96c3a27b759131e6c5ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6008"></a>C ランタイム エラー R6008
 引数に必要な領域が足りません。  
@@ -37,8 +32,8 @@ ms.lasthandoff: 12/21/2017
 >   
 >  -   その他の実行中のアプリケーションを閉じるか、メモリを解放する、コンピューターを再起動します。  
 > -   アプリにコマンドライン引数のサイズと数を削減します。  
-> -   使用して、**アプリおよび機能**または**プログラムと機能**] ページで、**コントロール パネルの [**を修復またはプログラムを再インストールします。  
-> -   確認**Windows Update**で、**コントロール パネルの** ソフトウェアの更新。  
+> -   使用して、**アプリおよび機能**または**プログラムと機能**] ページで、**コントロール パネルの [** を修復またはプログラムを再インストールします。  
+> -   確認**Windows Update**で、**コントロール パネルの **ソフトウェアの更新。  
 > -   アプリの更新バージョンを確認します。 問題が解決しない場合は、アプリ ベンダーにお問い合わせください。  
   
  **プログラマのための情報**  

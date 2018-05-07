@@ -1,29 +1,24 @@
 ---
-title: "チュートリアル: 新しい MFC を使用してコントロールをシェル |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 新しい MFC を使用してコントロールをシェル |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>チュートリアル : 新しい MFC シェル コントロールの使用
 このチュートリアルでは、ファイル エクスプローラーのような外観のアプリケーションを作成します。 ここでは、2 つのペインのあるウィンドウを作成します。 左側のウィンドウには、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)を階層ビューで、デスクトップを表示するオブジェクト。 右側のペインには、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)左側のペインで選択されているフォルダー内のファイルを表示します。  
@@ -200,6 +195,6 @@ ms.lasthandoff: 12/21/2017
   
 -   `CMFCShellListCtrl`などさまざまなモードでファイルを表示をサポート**大きいアイコン**、**小さいアイコン**、**リスト**、および**詳細**です。 アプリケーションを更新して、この機能を実装します。 ヒント: を参照してください[Visual C のサンプル](../visual-cpp-samples.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル](../mfc/walkthroughs-mfc.md)
 

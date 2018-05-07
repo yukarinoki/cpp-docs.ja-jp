@@ -1,13 +1,10 @@
 ---
-title: "SYSTEMTIME Structure1 |Microsoft ドキュメント"
-ms.custom: 
+title: SYSTEMTIME Structure1 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - SYSTEMTIME
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SYSTEMTIME structure [MFC]
 ms.assetid: 9aaef4d6-de79-4fa1-8158-86b245ef5bff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07af222a3d51ff1cc71076d5bbcc3513a3d6cad4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97a0042adaa223fc5898c057f191f7b750fa230f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemtime-structure1"></a>SYSTEMTIME Structure1
 `SYSTEMTIME` 構造体は、月、日、年、曜日、時間、分、秒、およびミリ秒の各メンバーを使用して日付と時刻を表します。  
@@ -73,10 +68,10 @@ typedef struct _SYSTEMTIME {
 ## <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#39](../../mfc/codesnippet/cpp/systemtime-structure1_1.cpp)]  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** winbase.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CTime::CTime](../../atl-mfc-shared/reference/ctime-class.md#ctime)
 

@@ -1,29 +1,24 @@
 ---
-title: "マウスとの対話中にアクティブでない |Microsoft ドキュメント"
-ms.custom: 
+title: マウスとの対話中にアクティブでない |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f8991b6cc827c35c94b0989ef82e32422fd5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faf1ea1958d6a6381bbe1c6e7d3db26f5f5b7c17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>コントロールがアクティブでないときのマウスとの対話
 場合は、コントロールがすぐにアクティブでない可能性がありますかを処理するよう`WM_SETCURSOR`と`WM_MOUSEMOVE`メッセージ、コントロールに、独自のウィンドウがあるない場合でもです。 これには、有効にすると`COleControl`の実装、`IPointerInactive`インターフェイスで、既定で無効にします。 (を参照してください、 *ActiveX SDK*このインターフェイスの詳細についてはします)。有効にするには、`pointerInactive`によって返されるフラグのセットでフラグ[オン](../mfc/reference/colecontrol-class.md#getcontrolflags):  
@@ -44,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)
 

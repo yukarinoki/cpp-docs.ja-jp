@@ -1,13 +1,10 @@
 ---
-title: "ADO.NET を使用してデータ アクセス (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: ADO.NET を使用してデータ アクセス (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data access [C++], ADO.NET
 - data [C++], ADO.NET
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21d19955e19931a573836baa6e0e0fee841e3548
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET によるデータ アクセス (C++/CLI)
 ADO.NET はデータ アクセス用の .NET Framework API であり、電源と以前のデータ アクセス ソリューションで優れた使いやすさを提供します。 このセクションでは、いくつかのネイティブ型をマーシャ リングなどの Visual C のユーザーに固有の ADO.NET に関する問題について説明します。  
@@ -52,6 +47,6 @@ ADO.NET はデータ アクセス用の .NET Framework API であり、電源と
 |-------------|-----------------|  
 |[ADO.NET](/dotnet/framework/data/adonet/index)|ADO.NET、一連の .NET プログラマにデータ アクセス サービスを公開するクラスの概要を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET プログラミング C + +/CLI (Visual C)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)

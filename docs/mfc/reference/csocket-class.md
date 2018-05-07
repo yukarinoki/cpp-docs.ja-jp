@@ -1,12 +1,9 @@
 ---
-title: "CSocket クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSocket クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket クラス
 派生した`CAsyncSocket`、Windows ソケット API のをカプセル化を継承しよりも高い抽象化レベルを表す、`CAsyncSocket`オブジェクト。  
@@ -75,7 +70,7 @@ class CSocket : public CAsyncSocket
 |[種類](#onmessagepending)|ブロッキング呼び出しが完了の待機中にメッセージを保留中の処理に呼び出されます。|  
   
 ## <a name="remarks"></a>コメント  
- `CSocket`クラスと連携`CSocketFile`と`CArchive`データの送受信を管理します。  
+ `CSocket` クラスと連携`CSocketFile`と`CArchive`データの送受信を管理します。  
   
  A`CSocket`オブジェクトも用意されています、ブロックの同期の動作に不可欠である`CArchive`です。 など、機能をブロックして`Receive`、 `Send`、 `ReceiveFrom`、 `SendTo`、および`Accept`(から継承されたすべて`CAsyncSocket`)、戻ることはありません、`WSAEWOULDBLOCK`でエラー`CSocket`です。 代わりに、これらの関数は、操作が完了するまで待機します。 元の呼び出しが中止され、エラー、さらに、`WSAEINTR`場合`CancelBlockingCall`これらの関数の 1 つのブロックは中に呼び出されます。  
   
@@ -101,10 +96,10 @@ class CSocket : public CAsyncSocket
   
  `CSocket`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxsock.h  
   
-##  <a name="attach"></a>Csocket::attach  
+##  <a name="attach"></a>  Csocket::attach  
  アタッチするには、このメンバー関数を呼び出す、`hSocket`へのハンドル、`CSocket`オブジェクト。  
   
 ```  
@@ -130,7 +125,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  現在実行中のブロッキング呼び出しをキャンセルするには、このメンバー関数を呼び出します。  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  詳細については、次を参照してください。 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)です。  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  呼び出す、**作成**メンバー関数は、Windows ソケットを作成し、アタッチするソケット オブジェクトを構築した後です。  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  ストリームとデータグラム ソケットの詳細については、記事を参照してください[Windows ソケット: バック グラウンド](../../mfc/windows-sockets-background.md)、 [Windows ソケット: ポートとソケット アドレス](../../mfc/windows-sockets-ports-and-socket-addresses.md)、および[Windows ソケット: を使用する。アーカイブ付きソケットの](../../mfc/windows-sockets-using-sockets-with-archives.md)します。  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  `CSocket` オブジェクトを構築します。  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  詳細については、次を参照してください。 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)です。  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  ポインターを返します、`CSocket`オブジェクト。  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  詳細については、次を参照してください。 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)です。  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  ブロッキング呼び出しが進行中のかどうかを確認するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)です。  
   
-##  <a name="onmessagepending"></a>種類  
+##  <a name="onmessagepending"></a>  種類  
  Windows からの特定のメッセージを確認して、ソケットに対応するには、この関数をオーバーライドします。  
   
 ```  
@@ -242,7 +237,7 @@ virtual BOOL OnMessagePending();
   
  詳細については、次を参照してください。 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CAsyncSocket クラス](../../mfc/reference/casyncsocket-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CAsyncSocket クラス](../../mfc/reference/casyncsocket-class.md)   

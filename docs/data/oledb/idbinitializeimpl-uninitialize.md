@@ -1,12 +1,9 @@
 ---
-title: "Idbinitializeimpl::uninitialize |Microsoft ドキュメント"
-ms.custom: 
+title: Idbinitializeimpl::uninitialize |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBInitializeImpl.Uninitialize
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Uninitialize method
 ms.assetid: ba37fc74-f84e-40b0-abb6-41bddd505269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8641fa149eb63a356969a581eef117f34ff05d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e8df7c178687959ba0f568650d3d6130f21fc2cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
 データは、プロパティのサポートなどの内部リソースを解放することによって初期化されていない状態のオブジェクトをソースします。  
@@ -42,9 +37,9 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>コメント  
  参照してください[:uninitialize](https://msdn.microsoft.com/en-us/library/ms719648.aspx)で、 *OLE DB プログラマーズ リファレンス*です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDBInitializeImpl クラス](../../data/oledb/idbinitializeimpl-class.md)   
  [IDBInitializeImpl::Initialize](../../data/oledb/idbinitializeimpl-initialize.md)

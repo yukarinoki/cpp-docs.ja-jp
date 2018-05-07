@@ -1,12 +1,9 @@
 ---
-title: "セッション オブジェクト インターフェイス |Microsoft ドキュメント"
-ms.custom: 
+title: セッション オブジェクト インターフェイス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71ac196508fc5b5054015bdc161476b75af2a598
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f591e62874bd6924dd60077b921bbfc67600af1c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="session-object-interfaces"></a>セッション オブジェクト インターフェイス
 次の表は、セッション オブジェクトの OLE DB で定義されている必須およびオプションのインターフェイスを示します。  
@@ -58,5 +53,5 @@ ms.lasthandoff: 02/23/2018
   
  ![プロバイダー コンセプチュアル ダイアグラム](../../data/oledb/media/vc4u551.gif "vc4u551")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

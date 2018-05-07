@@ -1,13 +1,10 @@
 ---
-title: "標準 Windows メッセージのハンドラー |Microsoft ドキュメント"
-ms.custom: 
+title: 標準 Windows メッセージのハンドラー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - afx_msg
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91df3462297c2a45a8938d815cc3b6a3b8ca6edb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4ed4e022326d650b1012ad5244d8b18e9c789cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows メッセージのハンドラー
 既定の標準の Windows メッセージのハンドラー (**wm _ で始まる**) クラスで定義済み`CWnd`です。 クラス ライブラリは、メッセージ名に基づいて、これらのハンドラーの名前を行います。 たとえばのハンドラーを`WM_PAINT`でメッセージが宣言されている`CWnd`として。  
@@ -51,5 +46,5 @@ ms.lasthandoff: 12/21/2017
   
  慣例により、これらのハンドラーの名前プレフィックスで始まる、"On" これらのハンドラーの引数を受け取らず、いくつかあればです。 ある戻り値の型以外の`void`します。 すべての既定のハンドラー **wm _ で始まる**メッセージについては、『、 *『 MFC リファレンス*クラスのメンバー関数として`CWnd`名前が「オン」で始まる メンバー関数の宣言で`CWnd`が付きます。 **afx_msg**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メッセージ ハンドラー関数の宣言](../mfc/declaring-message-handler-functions.md)

@@ -1,13 +1,10 @@
 ---
-title: "TN061: ON_NOTIFY メッセージと WM_NOTIFY メッセージ |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN061: ON_NOTIFY メッセージと WM_NOTIFY メッセージ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>テクニカル ノート 61: ON_NOTIFY メッセージと WM_NOTIFY メッセージ
 > [!NOTE]
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  **Win32 での通知メッセージ**  
   
- Win32 API、Windows 3.1 に存在していたコントロールの Windows で使用された通知メッセージのほとんどを使用して 3.x です。 ただし、Win32 もいくつかの追加、高度で複雑なコントロールを Windows でサポートされている 3.x です。 多くの場合、これらのコントロールは、通知メッセージと共に追加のデータを送信する必要があります。 新しいを追加するのではなく**wm _ で始まる\***追加データ、Win32 API の設計が必要な新しい通知が 1 つのメッセージを追加したメッセージ**WM_NOTIFY**、いずれかを通過することができます標準化された方法で追加のデータの量。  
+ Win32 API、Windows 3.1 に存在していたコントロールの Windows で使用された通知メッセージのほとんどを使用して 3.x です。 ただし、Win32 もいくつかの追加、高度で複雑なコントロールを Windows でサポートされている 3.x です。 多くの場合、これらのコントロールは、通知メッセージと共に追加のデータを送信する必要があります。 新しいを追加するのではなく**wm _ で始まる\*** 追加データ、Win32 API の設計が必要な新しい通知が 1 つのメッセージを追加したメッセージ**WM_NOTIFY**、いずれかを通過することができます標準化された方法で追加のデータの量。  
   
  **WM_NOTIFY**メッセージにはメッセージを送信するコントロールの ID が含まれて`wParam`と内の構造体へのポインター`lParam`です。 この構造体は、いずれか、 **NMHDR**構造体またはいくつかの大きな構造を持つ、 **NMHDR**構造体を最初のメンバーです。 以降を**NMHDR**メンバーが最初は、この構造体へのポインターへのポインターとして使用できます、 **NMHDR**またはキャストの方法によってはより大きな構造体へのポインターとして。  
   
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|コントロールが入力フォーカスを失った|  
 |**NM_OUTOFMEMORY**|十分なメモリがないために、コントロールは、操作を完了できませんでした。|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: MFC アプリケーションで WM_NOTIFY メッセージの処理  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: MFC アプリケーションで WM_NOTIFY メッセージの処理  
  関数は、`CWnd::OnNotify`通知メッセージを処理します。 既定の実装では、通知のハンドラーを呼び出すのメッセージ マップを確認します。 一般に、オーバーライドしていない`OnNotify`です。 代わりに、ハンドラー関数を提供し、そのハンドラーのメッセージ マップ エントリをオーナー ウィンドウのクラスのメッセージ マップに追加します。  
   
  ClassWizard、ClassWizard プロパティ シートを使用して作成できます、`ON_NOTIFY`メッセージ マップ エントリとスケルトン ハンドラー関数を提供します。 ClassWizard を使って簡単に作成する方法の詳細については、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)です。  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  ClassWizard が自動的に適切な型のポインターを提供することに注意してください。 いずれかから通知の構造体にアクセスできます`pNMHDR`または`pLVKeyDow`です。  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  同じを処理する必要がある場合**WM_NOTIFY**メッセージ、コントロールのセットを使用できます**ON_NOTIFY_RANGE**なく`ON_NOTIFY`です。 たとえば、一連の特定の通知メッセージに対して同じ操作を実行するボタンがあります。  
   
  使用すると**ON_NOTIFY_RANGE**、連続した範囲の先頭を指定して、範囲の子の識別子を終了して、通知メッセージを処理する対象の子の識別子を指定します。  
@@ -223,7 +218,7 @@ pNotifyStruct  ,
  *結果*  
  結果コードへのポインターを返す前に設定します。  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX、ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX、ON_NOTIFY_EX_RANGE  
  場合の通知で 1 つ以上のオブジェクトにルーティングするメッセージを処理は、使用することができます**ON_NOTIFY_EX** (または**ON_NOTIFY_EX_RANGE**) ではなく`ON_NOTIFY`(または**ON_NOTIFY_RANGE**). 唯一の違い、 **EX**バージョンと普通のバージョンは、メンバー関数は、という名前の**EX**バージョンを返します、 **BOOL**を示すかどうかメッセージ処理を継続する必要があります。 返す**FALSE**この関数からを使用する 1 つ以上のオブジェクトに同じメッセージを処理します。  
   
  ClassWizard が処理しない**ON_NOTIFY_EX**または**ON_NOTIFY_EX_RANGE**以外の場合は、それらのいずれかを使用する場合、メッセージ マップを編集する必要があります。  
@@ -263,7 +258,7 @@ pNotifyStruct  ,
   
  関数が返す必要があります**TRUE**通知メッセージが完全に処理された場合または**FALSE**かどうかのコマンド ルーティングの他のオブジェクトは、メッセージを処理する機会です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

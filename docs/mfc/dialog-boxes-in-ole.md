@@ -1,13 +1,10 @@
 ---
-title: "OLE のダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: OLE のダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dfe1828ae3451411adf3ab57c1ec67db24c34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE のダイアログ ボックス
 ユーザーは、OLE 対応アプリケーションを実行するときに、操作を実行するために、アプリケーションがユーザーからの情報をしなければならない場合があります。 MFC OLE クラスは、いくつかの必要な情報を収集するダイアログ ボックスを提供します。 このトピックでは、OLE のダイアログ ボックスで処理されるタスクと対応するダイアログ ボックスを表示するために必要なクラスを示します。 OLE ダイアログ ボックスとその動作をカスタマイズするために使用する構造体の詳細については、次を参照してください。 [『 MFC リファレンス](../mfc/mfc-desktop-applications.md)です。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
  *サーバーがビジー状態または応答していないサーバー*  
  ユーザーが項目をアクティブ化しようとして、サーバーが要求を処理、通常、サーバーが別のユーザーによって使用中か、またはタスクに現在できないときに、サーバーがビジー状態のダイアログ ボックスが表示されます。 サーバーがすべてのアクティブ化要求に応答しない場合は、サーバーが応答しません ダイアログ ボックスが表示されます。 使用してこれらのダイアログ ボックスが表示される`COleMessageFilter`OLE インターフェイスの実装に基づいて、 **IMessageFilter**ユーザーは、アクティブ化要求を再試行するかどうかを決定できます。 使用して、 [COleBusyDialog](../mfc/reference/colebusydialog-class.md)をこのダイアログ ボックスを表示するクラス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ダイアログ ボックス](../mfc/dialog-boxes.md)   
  [ダイアログ ボックスのライフ サイクル](../mfc/life-cycle-of-a-dialog-box.md)   
  [OLE](../mfc/ole-in-mfc.md)

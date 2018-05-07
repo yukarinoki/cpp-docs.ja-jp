@@ -1,13 +1,10 @@
 ---
-title: "CArchive オブジェクトを作成する方法は 2 |Microsoft ドキュメント"
-ms.custom: 
+title: CArchive オブジェクトを作成する方法は 2 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>CArchive オブジェクトを作成する 2 つの方法
 作成する方法を次の 2 つが、`CArchive`オブジェクト。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [CArchive オブジェクトの明示的な作成](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>フレームワークによって CArchive オブジェクトの暗黙的な作成  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> フレームワークによって CArchive オブジェクトの暗黙的な作成  
  最も一般的では、簡単な方法は、フレームワークには、`CArchive`保存、名前を付けて保存および開くコマンド ファイル メニューで、ドキュメントのオブジェクト。  
   
  フレームワークが、アプリケーションのユーザーがファイル メニューから 名前を付けて保存 コマンドを発行するときに次に示します。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  したがって、フレームワークに作成できるようにする場合、`CArchive`オブジェクトをドキュメントのドキュメントの実装が行う必要があるすべて`Serialize`とアーカイブの間を読み書きする関数。 実装しなければ`Serialize`のいずれか`CObject`-派生オブジェクトをドキュメントの`Serialize`関数は、直接的または間接的にさらにシリアル化します。  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>CArchive オブジェクトの明示的な作成  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> CArchive オブジェクトの明示的な作成  
  フレームワークを使用してドキュメントをシリアル化する以外にもする必要があります、`CArchive`オブジェクト。 によって表される、クリップボードからデータをシリアル化するなど、`CSharedFile`オブジェクト。 または、フレームワークによって提供されるものとは異なるファイルの保存用ユーザー インターフェイスを使用することがあります。 この例では、明示的に作成できます、`CArchive`オブジェクト。 これを行うために、フレームワークは、同じ方法、次の手順を使用します。  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>CArchive オブジェクトを明示的に作成するには  
@@ -79,6 +74,6 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
 

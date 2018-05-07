@@ -1,12 +1,9 @@
 ---
-title: "CDWordArray クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDWordArray クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDWordArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37400e889f32ab01e187388be94b391402958fa8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6dd3f38a5bd54a2a79d002ff8c533d17c2426b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdwordarray-class"></a>CDWordArray クラス
 32 ビットのダブルワードの配列をサポートします。  
@@ -116,7 +111,7 @@ class CDWordArray : public CObject
 |[CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
 ## <a name="remarks"></a>コメント  
- `CDWordArray` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 オーバー ロードされた挿入するか、アーカイブのダブルワードの配列が格納されている場合 (  **<<** ) 演算子、または、`Serialize`メンバー関数は、各要素は、逆に、シリアル化します。  
+ `CDWordArray` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 オーバー ロードされた挿入するか、アーカイブのダブルワードの配列が格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数は、各要素は、逆に、シリアル化します。  
   
 > [!NOTE]
 >  配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。  
@@ -125,10 +120,10 @@ class CDWordArray : public CObject
   
  使用する方法についての`CDWordArray`、記事を参照して[コレクション](../../mfc/collections.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CObArray クラス](../../mfc/reference/cobarray-class.md)

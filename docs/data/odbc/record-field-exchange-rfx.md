@@ -1,13 +1,10 @@
 ---
-title: "レコード フィールド エクス (チェンジ RFX) |Microsoft ドキュメント"
-ms.custom: 
+title: レコード フィールド エクス (チェンジ RFX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [MFC]
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 50fc0aea1ef50124cd98b0d0498b767d1f00e5c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b214cf05115056efc96c4a078dedd4b7f9a3a1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-rfx"></a>レコード フィールド エクスチェンジ (RFX)
 MFC ODBC データベース クラスが、データ ソースの間でデータの移動を自動化し、[レコード セット](../../data/odbc/recordset-odbc.md)オブジェクト。 クラスを派生する[CRecordset](../../mfc/reference/crecordset-class.md)バルク行フェッチを使用しないと、レコード フィールド エクス (チェンジ RFX) メカニズムによってデータを転送します。  
@@ -36,7 +31,7 @@ MFC ODBC データベース クラスが、データ ソースの間でデータ
 > [!NOTE]
 >  派生にバルク行フェッチを実装している場合`CRecordset`クラス、フレームワーク バルク レコード フィールド エクス チェンジ (Bulk RFX) 機構を使ってデータを転送します。 詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)です。  
   
- Rfx 関数は、ダイアログ データ エクス (チェンジ DDX) に似ています。 レコード セットの複数の呼び出しデータ ソースとレコード セットのフィールド データ メンバーの間でデータ移動が必要です[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)関数かなりの相互作用、framework 間および[ODBC](../../data/odbc/odbc-basics.md). RFX メカニズムがタイプ セーフし、などの ODBC 関数を呼び出すことの作業を保存する**:: SQLBindCol**です。 DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
+ Rfx 関数は、ダイアログ データ エクス (チェンジ DDX) に似ています。 レコード セットの複数の呼び出しデータ ソースとレコード セットのフィールド データ メンバーの間でデータ移動が必要です[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)関数かなりの相互作用、framework 間および[ODBC](../../data/odbc/odbc-basics.md). RFX メカニズムがタイプ セーフし、などの ODBC 関数を呼び出すことの作業を保存する **:: SQLBindCol**です。 DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
  RFX は意識する必要はほとんどの場合です。 MFC アプリケーション ウィザードを使用して、レコード セット クラスを宣言するかどうかまたは**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md))、RFX がそれらに自動的に組み込まれています。 レコード セット クラスは基底クラスから派生する必要があります`CRecordset`フレームワークによって提供されます。 MFC アプリケーション ウィザードでは、最初のレコード セット クラスを作成できます。 **クラスの追加**したり、必要に応じて、他のレコード セット クラスを追加することができます。 詳細と例については、次を参照してください。 [MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)です。  
   
@@ -58,7 +53,7 @@ MFC ODBC データベース クラスが、データ ソースの間でデータ
   
 -   [レコード フィールド エクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [MFC ODBC コンシューマーします。](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   

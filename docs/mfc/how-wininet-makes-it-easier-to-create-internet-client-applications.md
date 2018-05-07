@@ -1,13 +1,10 @@
 ---
-title: "どの wininet を使って簡単をインターネット クライアント アプリケーションを作成する |Microsoft ドキュメント"
-ms.custom: 
+title: どの wininet を使って簡単をインターネット クライアント アプリケーションを作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c79404f296df09afb177930897064b8455217d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09a7427374de085de9bd2872c8b1368a6b961b35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet を使ってインターネット クライアント アプリケーションを簡単に作成する方法
 Win32 インターネット拡張機能または WinInet、gopher、FTP、HTTP など、共通のインターネット プロトコルへのアクセスを提供します。 WinInet を使用すると、WinSock、TCP/IP、または特定のインターネット プロトコルの詳細に対処しなくてもより高度なプログラミングでは、インターネット クライアント アプリケーションを記述できます。 WinInet では、Win32 API に使い慣れたインターフェイスをすべての 3 つのプロトコルの一貫性のある一連の関数を提供します。 この整合性には、場合 (たとえば、FTP から HTTP へ) プロトコルを変更する必要があるコードの変更が最小限に抑えます。  
@@ -58,7 +53,7 @@ Win32 インターネット拡張機能または WinInet、gopher、FTP、HTTP �
   
  さまざまな操作として、インターネット上の他のコンピューターにクライアント コンピューターで実行できる時間がかかることができます。 通常、これらの操作の速度は、ネットワーク接続の速度によって制限が、他のネットワーク トラフィックと、操作の複雑さによっても影響されます。 リモート FTP サーバーへの接続などの必要があります、コンピューターがそのアドレスを検索するには、そのサーバーの名前を最初に表示されます。 アプリケーションは、そのアドレスでサーバーに接続を試みます。 接続が開かれた後、コンピューターとリモート サーバーが開始されますファイル転送プロトコルとのメッセージ交換前に、ファイルを取得する接続を実際に使用することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [MFC を使ってインターネット クライアント アプリケーションを簡単に作成する方法](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
 

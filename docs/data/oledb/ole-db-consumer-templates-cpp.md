@@ -1,12 +1,9 @@
 ---
-title: "OLE DB コンシューマー テンプレート (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB コンシューマー テンプレート (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 953711a6fd026c0b5409392393d854917c650cbf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB コンシューマー テンプレート (C++)
 OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様をサポートしています (OLE DB コンシューマー テンプレートは OLE DB 2.6 に対してテストされますが、仕様ですべてのインターフェイスをサポートしません)。コンシューマー テンプレートを使用すると、OLE DB コンシューマーを実装するために記述するコードの量を最小限に抑えられます。 テンプレートには、次に示す機能があります。  
@@ -69,7 +64,7 @@ OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様�
   
 -   [OLE DB コンシューマーの一般的なシナリオ (使用例)](../../data/oledb/working-with-ole-db-consumer-templates.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)   
  [データ アクセス](../data-access-in-cpp.md)   
  [OLE DB SDK のドキュメント](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   

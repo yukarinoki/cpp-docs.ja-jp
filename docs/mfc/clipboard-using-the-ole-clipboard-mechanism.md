@@ -1,13 +1,10 @@
 ---
-title: "クリップボード: OLE クリップボード機構の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 'クリップボード: OLE クリップボード機構の使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4996c6559ad20141fb84ed37e87fd1551e89a77b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4940c614046e3ca407887e05e84c811a156d9c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>クリップボード : OLE クリップボード機構の使用方法
 OLE は、クリップボードを使用してデータを転送するための標準形式といくつかの特定の OLE 形式を使用します。  
@@ -56,6 +51,6 @@ OLE は、クリップボードを使用してデータを転送するための�
   
 -   [OLE データ オブジェクトとデータ ソースと統一されたデータの転送します。](../mfc/data-objects-and-data-sources-ole.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クリップボード](../mfc/clipboard.md)
 

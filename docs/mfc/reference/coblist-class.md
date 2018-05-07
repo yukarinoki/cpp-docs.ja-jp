@@ -1,12 +1,9 @@
 ---
-title: "CObList クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CObList クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcd79377eebbf36ec4dd4688dff8b33c112e451
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coblist-class"></a>CObList クラス
 一意の順序付きリスト fSupports`CObject`アクセス可能なポインター値の順番、またはポインターでします。  
@@ -115,7 +110,7 @@ class CObList : public CObject
 |[CObList::SetAt](#setat)|指定された位置に要素を設定します。|  
   
 ## <a name="remarks"></a>コメント  
- `CObList`リストは、二重リンク リストのように動作します。  
+ `CObList` リストは、二重リンク リストのように動作します。  
   
  型の変数**位置**はリストのキーです。 使用することができます、**位置**順番にリストを走査する反復子、および位置を保持するためのブックマークとして変数です。 位置は、インデックスと同じただしです。  
   
@@ -139,10 +134,10 @@ class CObList : public CObject
   
  `CObList`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
-##  <a name="addhead"></a>CObList::AddHead  
+##  <a name="addhead"></a>  CObList::AddHead  
  このリストの先頭に新しい要素または要素の一覧を追加します。  
   
 ```  
@@ -183,7 +178,7 @@ void AddHead(CObList* pNewList);
   
  `a CAge at $442A 21`  
   
-##  <a name="addtail"></a>CObList::AddTail  
+##  <a name="addtail"></a>  CObList::AddTail  
  このリストの末尾に新しい要素または要素の一覧を追加します。  
   
 ```  
@@ -224,7 +219,7 @@ void AddTail(CObList* pNewList);
   
  `a CAge at $4526 40`  
   
-##  <a name="coblist"></a>使われて  
+##  <a name="coblist"></a>  使われて  
  空の構築`CObject`ポインターのリスト。  
   
 ```  
@@ -254,7 +249,7 @@ CObList(INT_PTR nBlockSize = 10);
   
  [!code-cpp[NVC_MFCCollections#92](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]  
   
-##  <a name="find"></a>CObList::Find  
+##  <a name="find"></a>  CObList::Find  
  最初に順番にリストから検索`CObject`ポインター、指定した照合`CObject`ポインター。  
   
 ```  
@@ -288,7 +283,7 @@ POSITION Find(
   
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CObList::FindIndex  
+##  <a name="findindex"></a>  CObList::FindIndex  
  値を使用して`nIndex`一覧のインデックス。  
   
 ```  
@@ -303,7 +298,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
  A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**場合`nIndex`が大きすぎます。 (場合に、フレームワークがアサーションを生成`nIndex`が負の値です)。  
   
 ### <a name="remarks"></a>コメント  
- 停止する、リストの先頭から順次スキャンを開始、  *n*番目の要素。  
+ 停止する、リストの先頭から順次スキャンを開始、 *n*番目の要素。  
   
  次の表はその他のメンバー関数に似ています`CObList::FindIndex`です。  
   
@@ -317,7 +312,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
   
-##  <a name="getat"></a>CObList::GetAt  
+##  <a name="getat"></a>  CObList::GetAt  
  型の変数**位置**はリストのキーです。  
   
 ```  
@@ -333,7 +328,7 @@ const CObject*& GetAt(POSITION position) const;
  戻り値の説明を参照してください[gethead 関数](#gethead)です。  
   
 ### <a name="remarks"></a>コメント  
- インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `GetAt`取得、`CObject`指定した位置に関連付けられたポインター。  
+ インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `GetAt` 取得、`CObject`指定した位置に関連付けられたポインター。  
   
  確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
@@ -347,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 ### <a name="example"></a>例  
   例を参照して[FindIndex](#findindex)です。  
   
-##  <a name="getcount"></a>CObList::GetCount  
+##  <a name="getcount"></a>  CObList::GetCount  
  この一覧内の要素の数を取得します。  
   
 ```  
@@ -369,7 +364,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
   
-##  <a name="gethead"></a>CObList::GetHead  
+##  <a name="gethead"></a>  CObList::GetHead  
  取得、`CObject`ポインターがこの一覧の先頭の要素を表します。  
   
 ```  
@@ -399,7 +394,7 @@ const CObject*& GetHead() const;
   
  [!code-cpp[NVC_MFCCollections#96](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]  
   
-##  <a name="getheadposition"></a>CObList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CObList::GetHeadPosition  
  この一覧の先頭の要素の位置を取得します。  
   
 ```  
@@ -421,7 +416,7 @@ POSITION GetHeadPosition() const;
   
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CObList::GetNext  
+##  <a name="getnext"></a>  CObList::GetNext  
  によって識別される要素を取得`rPosition`を設定し、`rPosition`を`POSITION`一覧の次のエントリの値。  
   
 ```  
@@ -466,7 +461,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  `a CAge at $46C0 21`  
   
-##  <a name="getprev"></a>CObList::GetPrev  
+##  <a name="getprev"></a>  CObList::GetPrev  
  要素を取得します ボックスの一覧によって識別される`rPosition`を設定し、`rPosition`を`POSITION`一覧の前のエントリの値。  
   
 ```  
@@ -509,7 +504,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
   
  `a CAge at $421C 40`  
   
-##  <a name="getsize"></a>CObList::GetSize  
+##  <a name="getsize"></a>  CObList::GetSize  
  リストの要素の数を返します。  
   
 ```  
@@ -534,7 +529,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
   
-##  <a name="gettail"></a>CObList::GetTail  
+##  <a name="gettail"></a>  CObList::GetTail  
  取得、`CObject`ポインターがこのリストの末尾の要素を表します。  
   
 ```  
@@ -560,7 +555,7 @@ const CObject*& GetTail() const;
   
  [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
   
-##  <a name="gettailposition"></a>CObList::GetTailPosition  
+##  <a name="gettailposition"></a>  CObList::GetTailPosition  
  このリストの末尾の要素の位置を取得します。**NULL**リストが空の場合。  
   
 ```  
@@ -582,7 +577,7 @@ POSITION GetTailPosition() const;
   
  [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
   
-##  <a name="insertafter"></a>CObList::InsertAfter  
+##  <a name="insertafter"></a>  CObList::InsertAfter  
  指定位置にある要素の後に、このリストに要素を追加します。  
   
 ```  
@@ -623,7 +618,7 @@ POSITION InsertAfter(
   
  `a CAge at $4968 21`  
   
-##  <a name="insertbefore"></a>CObList::InsertBefore  
+##  <a name="insertbefore"></a>  CObList::InsertBefore  
  一覧の指定した位置にある要素の前に要素を追加します。  
   
 ```  
@@ -664,7 +659,7 @@ POSITION InsertBefore(
   
  `a CAge at $49E6 21`  
   
-##  <a name="isempty"></a>CObList::IsEmpty  
+##  <a name="isempty"></a>  CObList::IsEmpty  
  このリストに要素が含まれないかどうかを示します。  
   
 ```  
@@ -684,7 +679,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>例  
   例を参照して[RemoveAll](#removeall)です。  
   
-##  <a name="removeall"></a>CObList::RemoveAll  
+##  <a name="removeall"></a>  CObList::RemoveAll  
  この一覧からすべての要素を削除し、関連付けられている解放`CObList`メモリです。  
   
 ```  
@@ -700,15 +695,15 @@ void RemoveAll();
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll ();**|  
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll ();**|  
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll( );**|  
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll( );**|  
   
 ### <a name="example"></a>例  
  参照してください[使われて](#coblist)の一覧については、`CAge`クラスです。  
   
  [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CObList::RemoveAt  
+##  <a name="removeat"></a>  CObList::RemoveAt  
  この一覧から、指定した要素を削除します。  
   
 ```  
@@ -746,7 +741,7 @@ void RemoveAt(POSITION position);
   
  `a CAge at $4B22 21`  
   
-##  <a name="removehead"></a>CObList::RemoveHead  
+##  <a name="removehead"></a>  CObList::RemoveHead  
  リストの先頭から要素を削除し、ポインターを返します。  
   
 ```  
@@ -771,7 +766,7 @@ CObject* RemoveHead();
   
  [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CObList::RemoveTail  
+##  <a name="removetail"></a>  CObList::RemoveTail  
  リストの末尾から要素を削除し、ポインターを返します。  
   
 ```  
@@ -796,7 +791,7 @@ CObject* RemoveTail();
   
  [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
   
-##  <a name="setat"></a>CObList::SetAt  
+##  <a name="setat"></a>  CObList::SetAt  
  指定された位置に要素を設定します。  
   
 ```  
@@ -813,7 +808,7 @@ void SetAt(
  `CObject`一覧に書き込まれるへのポインター。  
   
 ### <a name="remarks"></a>コメント  
- 型の変数**位置**はリストのキーです。 インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `SetAt`書き込みます、`CObject`リスト内の指定位置へのポインター。  
+ 型の変数**位置**はリストのキーです。 インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `SetAt` 書き込みます、`CObject`リスト内の指定位置へのポインター。  
   
  確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
@@ -837,7 +832,7 @@ void SetAt(
   
  `a CAge at $4DB8 65`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CStringList クラス](../../mfc/reference/cstringlist-class.md)   

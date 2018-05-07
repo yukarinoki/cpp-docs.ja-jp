@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール: ActiveX コントロールへのストック イベントの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: ActiveX コントロールへのストック イベントの追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - EVENT__STOCK_ERROR
 - EVENT__STOCK_READYSTATECHANGE
@@ -51,22 +48,20 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加
-ストック イベントは、クラスによって自動的に呼び出される点で、カスタム イベントとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 `COleControl`定義済みのメンバー関数の一般的なアクションの結果として得られるイベントを発生させることがあります。 いくつかの一般的なアクションによって実装される`COleControl`に含める 1 つのシングル クリックやダブルクリック コントロール、キーボード イベント、および変更のマウス ボタンの状態。 ストック イベントのイベント マップ エントリには、必ず、 **EVENT_STOCK**プレフィックス。  
+ストック イベントは、クラスによって自動的に呼び出される点で、カスタム イベントとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 `COleControl` 定義済みのメンバー関数の一般的なアクションの結果として得られるイベントを発生させることがあります。 いくつかの一般的なアクションによって実装される`COleControl`に含める 1 つのシングル クリックやダブルクリック コントロール、キーボード イベント、および変更のマウス ボタンの状態。 ストック イベントのイベント マップ エントリには、必ず、 **EVENT_STOCK**プレフィックス。  
   
-##  <a name="_core_stock_events_supported_by_classwizard"></a>ストック イベントでサポートされている、イベント追加ウィザード  
+##  <a name="_core_stock_events_supported_by_classwizard"></a> ストック イベントでサポートされている、イベント追加ウィザード  
  `COleControl`クラスには、次の表に、10 個のストック イベントが用意されています。 使用して、コントロールの対象とするイベントを指定することができます、[イベント追加ウィザード](../ide/add-event-wizard.md)です。  
   
 ### <a name="stock-events"></a>ストック イベント  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 |MouseUp|**FireMouseUp を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |存在する場合に発生した**BUTTONUP** (左、中央、または右) を受信します。 このイベントが発生する前に、マウスのキャプチャが解放されます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEUP に関するページ)**|  
 |ReadyStateChange|**FireReadyStateChange に関するページ () を無効にします。**|受信データの量のため次の準備完了状態に移行するコントロールのときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_READYSTATECHANGE に関するページ)**|  
   
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a>ストック イベントを使用して、追加する、イベント追加ウィザード  
+##  <a name="_core_adding_a_stock_event_using_classwizard"></a> ストック イベントを使用して、追加する、イベント追加ウィザード  
  実際のイベントの発生は、基底クラスによって自動的に処理されるため、カスタム イベントを追加するよりも処理量が少ないストック イベントを追加する必要があります`COleControl`です。 次の手順を使用して開発されたコントロールへのストック イベントの追加[MFC ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)です。 KeyPress と呼ばれる、イベントは、キーが押され、コントロールがアクティブなときに発生します。 この手順は、その他のストック イベントを追加するも使用できます。 KeyPress のストック イベントの選択した名前に置き換えます。  
   
 #### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>イベントの追加ウィザードを使用して、KeyPress ストック イベントを追加するには  
@@ -99,9 +94,9 @@ ms.lasthandoff: 12/21/2017
   
 4.  **イベント名**ドロップダウン リストで、`KeyPress`です。  
   
-5.  **[完了]**をクリックします。  
+5.  **[完了]** をクリックします。  
   
-##  <a name="_core_classwizard_changes_for_stock_events"></a>ストック イベントのイベント ウィザードによる変更を追加します。  
+##  <a name="_core_classwizard_changes_for_stock_events"></a> ストック イベントのイベント ウィザードによる変更を追加します。  
  ストック イベントが処理されるため、コントロールの基底クラスによって、イベントの追加ウィザードに任意の方法でクラスの宣言は変更されません。 コントロールのイベントのマップにイベントを追加し、内のエントリは、そのします。IDL ファイルです。 次の行が、コントロール クラスの実装にある、コントロールのイベントのマップに追加 (です。Cpp):  
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
  この行 KeyPress イベントと関連付けて、標準のディスパッチ ID とコンテナーの KeyPress イベントに対応します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)   
  [COleControl クラス](../mfc/reference/colecontrol-class.md)

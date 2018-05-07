@@ -1,13 +1,10 @@
 ---
-title: "ランタイム オブジェクト モデル サービス |Microsoft ドキュメント"
-ms.custom: 
+title: ランタイム オブジェクト モデル サービス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986657681dabf1136b072f65b2df76b63f216504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff506d559ab44ba4034e982bb909db763917594
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 クラスは、 [CObject](../../mfc/reference/cobject-class.md)と[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)ランタイム クラス情報、シリアル化、および動的なオブジェクトの作成へのアクセスなど、いくつかのオブジェクトのサービスをカプセル化します。 すべてのクラスから派生した`CObject`この機能を継承します。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 |[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|実装して、 **GetUserTypeNameID**と`GetMiscStatus`コントロール クラスのメンバー関数。|  
 |[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|このいずれかのマクロまたは[IMPLEMENT_OLECREATE](#implement_olecreate)が任意のクラスを使用する実装ファイル内で出現`DECLARE_OLECREATE`です。 |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
 コモン コントロール ライブラリが、指定された API を実装するかどうかを判断します。  
    
 ### <a name="syntax"></a>構文  
@@ -93,13 +88,13 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 ### <a name="remarks"></a>コメント  
  指定された関数をコモン コントロール ライブラリかどうかを決定するこのマクロを使用して`proc`(呼び出し元ではなく[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  afxcomctl32.h、afxcomctl32.inl  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [MFC の一般的な分離コントロール ライブラリ](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 コモン コントロール ライブラリが、指定された API を実装するかどうかを判断 (これは、Unicode バージョンの[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists))。  
    
 ### <a name="syntax"></a>構文    
@@ -113,15 +108,15 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 ### <a name="remarks"></a>コメント  
  指定された関数をコモン コントロール ライブラリかどうかを決定するこのマクロを使用して`proc`(呼び出し元ではなく[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)です。 このマクロは、Unicode バージョンの`AFX_COMCTL32_IF_EXISTS`します。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  afxcomctl32.h、afxcomctl32.inl  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [MFC の一般的な分離コントロール ライブラリ](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC  
  クラスを派生している場合、オブジェクトのクラスに関する実行時情報にアクセスする機能が追加`CObject`です。  
   
 ```
@@ -144,10 +139,10 @@ DECLARE_DYNAMIC(class_name)
 ### <a name="example"></a>例  
  例を参照して[IMPLEMENT_DYNAMIC](#implement_dynamic)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
  オブジェクト`CObject`-実行時に動的に作成するクラスを派生します。  
   
 ```
@@ -173,7 +168,7 @@ DECLARE_DYNCREATE(class_name)
 ### <a name="example"></a>例  
  例を参照して[IMPLEMENT_DYNCREATE](#implement_dyncreate)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
  
@@ -191,10 +186,10 @@ DECLARE_OLECTLTYPE( class_name )
 ### <a name="remarks"></a>コメント  
  **GetUserTypeNameID**と`GetMiscStatus`で宣言されている、純粋仮想関数は、`COleControl`です。 これらの関数は純粋なため、仮想する必要があるクラスでオーバーライドされる、コントロール。 加え**DECLARE_OLECTLTYPE**、追加する必要があります、`IMPLEMENT_OLECTLTYPE`コントロール クラスの宣言にマクロです。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
  
 
@@ -214,14 +209,14 @@ DECLARE_PROPPAGEIDS( class_name )
   
  プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール: プロパティ ページ](../mfc-activex-controls-property-pages.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
    
-### <a name="see-also"></a>参照   
+### <a name="see-also"></a>関連項目   
  [BEGIN_PROPPAGEIDS](#begin_proppageids)   
  [END_PROPPAGEIDS](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL  
  コードを生成、C++ ヘッダーに必要な`CObject`-派生クラスでは、シリアル化することができます。  
   
 ```
@@ -250,10 +245,10 @@ DECLARE_SERIAL(class_name)
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
-##  <a name="implement_dynamic"></a>新規クラス  
+##  <a name="implement_dynamic"></a>  新規クラス  
  動的なのために必要な C++ コードを生成`CObject`-クラス名と、階層内の位置に実行時アクセス権を持つクラスを派生します。  
   
 ```
@@ -277,10 +272,10 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
  オブジェクト`CObject`-実行時に動的に作成するクラスを派生と共に使用すると、`DECLARE_DYNCREATE`マクロです。  
   
 ```
@@ -308,10 +303,10 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
   
  [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
 このいずれかのマクロまたは[IMPLEMENT_OLECREATE](#implement_olecreate)が任意のクラスを使用する実装ファイル内で出現`DECLARE_OLECREATE`です。  
    
 ### <a name="syntax"></a>構文    
@@ -330,8 +325,8 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  `nFlags`  
  次のフラグの 1 つ以上含まれています。  
   
--   `afxRegInsertable`OLE オブジェクトのオブジェクトの挿入 ダイアログ ボックスに表示するには、制御できます。    
--   `afxRegApartmentThreading`スレッド処理モデルを ThreadingModel をレジストリに設定アパートメントを = です。    
+-   `afxRegInsertable` OLE オブジェクトのオブジェクトの挿入 ダイアログ ボックスに表示するには、制御できます。    
+-   `afxRegApartmentThreading` スレッド処理モデルを ThreadingModel をレジストリに設定アパートメントを = です。    
 -   **afxRegFreeThreading** ThreadingModel をレジストリで、スレッディング モデルを設定空きを = です。  
   
      2 つのフラグを組み合わせることができます`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both です。 参照してください[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)スレッド処理モデルの登録の詳細について Windows SDK に含まれています。    
@@ -347,16 +342,16 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
   
  OLE クラス ID は、オブジェクトの一意な 128 ビット識別子です。 いずれかで構成されます**長い**、2 つ**WORD**秒、および 8**バイト**s で表される*l*、 *w1*、 *w2*、および*b1*を通じて*b8*構文の説明にします。 アプリケーション ウィザードとコードのウィザードでは、必要に応じての一意の OLE クラス Id を作成します。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー :** afxdisp.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
  [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 実装して、 **GetUserTypeNameID**と`GetMiscStatus`コントロール クラスのメンバー関数。  
    
 ### <a name="syntax"></a>構文    
@@ -376,19 +371,19 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ### <a name="remarks"></a>コメント  
  加え`IMPLEMENT_OLECTLTYPE`、追加する必要があります、 **DECLARE_OLECTLTYPE**コントロール クラスの宣言にマクロです。  
   
- **GetUserTypeNameID**メンバー関数が、コントロール クラスを識別する、リソース文字列を返します。 `GetMiscStatus`返します、**入ります**コントロールのビットです。 この列挙体には、コントロールの他の特性を説明する設定のコレクションを指定します。 詳細については、**入ります**設定を参照してください[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK に含まれています。  
+ **GetUserTypeNameID**メンバー関数が、コントロール クラスを識別する、リソース文字列を返します。 `GetMiscStatus` 返します、**入ります**コントロールのビットです。 この列挙体には、コントロールの他の特性を説明する設定のコレクションを指定します。 詳細については、**入ります**設定を参照してください[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK に含まれています。  
   
 > [!NOTE]
 >  ActiveX ControlWizard によって使用される既定の設定:**されて**、 **OLEMISC_SETCLIENTSITEFIRST**、 **OLEMISC_INSIDEOUT**、 **OLEMISC_CANTLINKINSIDE**、および**OLEMISC_RECOMPOSEONRESIZE**です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL  
  動的なのために必要な C++ コードを生成`CObject`-クラス名と、階層内の位置に実行時アクセス権を持つクラスを派生します。  
   
 ```
@@ -417,10 +412,10 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
  C++ のクラスの名前から、実行時のクラス構造体を取得します。  
   
 ```
@@ -432,17 +427,17 @@ RUNTIME_CLASS(class_name)
  (引用符で囲まれていない) クラスの実際の名前。  
   
 ### <a name="remarks"></a>コメント  
- `RUNTIME_CLASS`ポインターを返します、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)で指定されたクラスの構造体*class_name*です。 のみ`CObject`-派生クラスで宣言された`DECLARE_DYNAMIC`、 `DECLARE_DYNCREATE`、または`DECLARE_SERIAL`へのポインターを返す、`CRuntimeClass`構造体。  
+ `RUNTIME_CLASS` ポインターを返します、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)で指定されたクラスの構造体*class_name*です。 のみ`CObject`-派生クラスで宣言された`DECLARE_DYNAMIC`、 `DECLARE_DYNCREATE`、または`DECLARE_SERIAL`へのポインターを返す、`CRuntimeClass`構造体。  
   
  詳細については、次を参照してください。 [CObject クラスのトピック](../../mfc/using-cobject.md)です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
  オブジェクト`CCmdTarget`-OLE オートメーションを通じて作成されるクラスを派生します。  
   
 ```
@@ -460,10 +455,10 @@ DECLARE_OLECREATE(class_name)
   
  場合`DECLARE_OLECREATE`し、クラス宣言に含まれる`IMPLEMENT_OLECREATE`クラスの実装に含める必要があります。 クラスの宣言を使用して、`DECLARE_OLECREATE`も使用する必要があります`DECLARE_DYNCREATE`または`DECLARE_SERIAL`です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
  このいずれかのマクロまたは[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)が任意のクラスを使用する実装ファイル内で出現`DECLARE_OLECREATE`です。  
   
 ```
@@ -489,9 +484,9 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
   
  OLE クラス ID は、オブジェクトの一意な 128 ビット識別子です。 いずれかで構成されます**長い**、2 つ**WORD**秒、および 8**バイト**s で表される*l*、 *w1*、 *w2*、および*b1*を通じて*b8*構文の説明にします。 アプリケーション ウィザードとコードのウィザードでは、必要に応じての一意の OLE クラス Id を作成します。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー**: afxdisp.h 
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
 

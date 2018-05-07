@@ -1,12 +1,9 @@
 ---
-title: "CMFCCmdUsageCount クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCCmdUsageCount クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCmdUsageCount
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db24894777170d2860ba8d1639fd44e3893732a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount クラス
 など、ユーザーがメニューから項目を選択すると、Windows メッセージの使用率カウントを追跡します。  
@@ -77,14 +72,14 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|name|説明|  
+|名前|説明|  
 |`m_CmdUsage`|A`CMap`コマンドを使用状況カウントをマップするオブジェクト。|  
 |`m_nMinUsagePercentage`|頻繁に使用するコマンドの最小使用率。|  
 |`m_nStartCount`|このオブジェクトが追跡データの最小量を収集するかどうかを決定するために使用開始カウンターです。|  
 |`m_nTotalUsage`|追跡されているすべてのコマンド数。|  
   
 ### <a name="remarks"></a>コメント  
- `CMFCCmdUsageCount`クラスは、32 ビット符号なし整数のカウンターに各数値の Windows メッセージ識別子をマップします。 `CMFCToolBar`頻繁に使用するツールバー項目を表示するのにには、このクラスを使用します。 詳細については`CMFCToolBar`を参照してください[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)です。  
+ `CMFCCmdUsageCount`クラスは、32 ビット符号なし整数のカウンターに各数値の Windows メッセージ識別子をマップします。 `CMFCToolBar` 頻繁に使用するツールバー項目を表示するのにには、このクラスを使用します。 詳細については`CMFCToolBar`を参照してください[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)です。  
   
  永続化できる`CMFCCmdUsageCount`プログラムの実行の間のデータのクラスです。 使用して、 [CMFCCmdUsageCount::Serialize](#serialize)クラス メンバー データをシリアル化するメソッドと[CMFCCmdUsageCount::SetOptions](#setoptions)共有メンバー データを設定します。  
   
@@ -93,10 +88,10 @@ class CMFCCmdUsageCount : public CObject
   
  [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcmdusagecount.h  
   
-##  <a name="addcmd"></a>CMFCCmdUsageCount::AddCmd  
+##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd  
  指定されたコマンドに関連付けられているカウンターを 1 つずつインクリメントされます。  
   
 ```  
@@ -119,9 +114,9 @@ void AddCmd(UINT uiCmd);
   
 -   コマンドはサブメニューまたはメニュー区分線を指します ( `uiCmd` equals 0 または-1)。  
   
-- `uiCmd`標準のコマンドを表します (グローバル`IsStandardCommand`関数は 0 以外の値を返します)。  
+- `uiCmd` 標準のコマンドを表します (グローバル`IsStandardCommand`関数は 0 以外の値を返します)。  
   
-##  <a name="getcount"></a>CMFCCmdUsageCount::GetCount  
+##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  指定されたコマンド ID に関連付けられている使用率カウントを取得します  
   
 ```  
@@ -138,7 +133,7 @@ UINT GetCount(UINT uiCmd) const;
 ### <a name="return-value"></a>戻り値  
  指定されたコマンド ID に関連付けられている使用率カウント  
   
-##  <a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation  
+##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation  
  このオブジェクトが追跡データの最小量を受信したかどうかを判断します。  
   
 ```  
@@ -153,7 +148,7 @@ BOOL HasEnoughInformation() const;
   
  このメソッドを使用して[CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands)を利用可能なメニュー コマンドをすべて表示するかどうかを判断します。  
   
-##  <a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd  
  指定されたコマンドが頻繁に使用するかどうかを判断します。  
   
 ```  
@@ -175,7 +170,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
  [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused)このメソッドを使用して、コマンドはほとんど使用されているかどうかを判断します。  
   
-##  <a name="reset"></a>CMFCCmdUsageCount::Reset  
+##  <a name="reset"></a>  CMFCCmdUsageCount::Reset  
  すべてのコマンドの使用率カウントをクリアします。  
   
 ```  
@@ -185,7 +180,7 @@ void Reset();
 ### <a name="remarks"></a>コメント  
  コマンドの数のマップの構造からすべてのエントリをクリアするには、このメソッドを呼び出す`m_CmdUsage`、および合計のコマンドの使用法をリセットするため`m_nTotalUsage`、カウンターを 0 にします。  
   
-##  <a name="serialize"></a>CMFCCmdUsageCount::Serialize  
+##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize  
  アーカイブからこのオブジェクトを読み取りまたはアーカイブを書き込みます。  
   
 ```  
@@ -204,7 +199,7 @@ virtual void Serialize(CArchive& ar);
   
  シリアル化の例については、次を参照してください。[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)です。  
   
-##  <a name="setoptions"></a>CMFCCmdUsageCount::SetOptions  
+##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions  
  セットの値は共有`CMFCCmdUsageCount`クラスのデータ メンバーです。  
   
 ```  
@@ -222,14 +217,14 @@ static BOOL __stdcall SetOptions(
 |[入力] `nMinUsagePercentage`|新しいの最小使用率。|  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`メソッドが成功すると、`FALSE`場合、`nMinUsagePercentage`パラメーターがより大きいか、または 100 です。  
+ `TRUE` メソッドが成功すると、`FALSE`場合、`nMinUsagePercentage`パラメーターがより大きいか、または 100 です。  
   
 ### <a name="remarks"></a>コメント  
- このメソッドは、共有設定`CMFCCmdUsageCount`クラスのデータ メンバー`m_nStartCount`と`m_nMinUsagePercentage`に`nStartCount`と`nMinUsagePercentage`、それぞれします。 `m_nStartCount`によって使用される、 [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)メソッドをこのオブジェクトが追跡データの最小量を収集するかどうかを決定します。 `m_nMinUsagePercentage`によって使用される、 [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)指定されたコマンドが頻繁に使用するかどうかを調べます。  
+ このメソッドは、共有設定`CMFCCmdUsageCount`クラスのデータ メンバー`m_nStartCount`と`m_nMinUsagePercentage`に`nStartCount`と`nMinUsagePercentage`、それぞれします。 `m_nStartCount` によって使用される、 [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)メソッドをこのオブジェクトが追跡データの最小量を収集するかどうかを決定します。 `m_nMinUsagePercentage` によって使用される、 [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)指定されたコマンドが頻繁に使用するかどうかを調べます。  
   
  場合はデバッグ ビルドでこのメソッドが、アサーションの失敗を生成、`nMinUsagePercentage`パラメーターがより大きいか、または 100 です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)

@@ -1,30 +1,25 @@
 ---
-title: "参照型の C++ スタック セマンティクス |Microsoft ドキュメント"
-ms.custom: 
+title: 参照型の C++ スタック セマンティクス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3ed886d1bdeb4972122049854b5d288767aa5b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参照型の C++ スタック セマンティクス
 Visual C 2005 では、前に、参照型のインスタンスのみ作成でしたを使用して、`new`ガベージにオブジェクトを作成してこの演算子は、ヒープを収集します。 ただし、スタックにネイティブ型のインスタンスの作成に使用する同じ構文を使用して、参照型のインスタンスを作成することができますようになりました。 そのため、使用する必要はありません[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)は参照型のオブジェクトを作成します。 オブジェクトがスコープ外になる場合、コンパイラはこのオブジェクトのデストラクターを呼び出します。  
@@ -123,5 +118,5 @@ int main() {
 13  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
