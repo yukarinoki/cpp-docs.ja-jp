@@ -2,29 +2,24 @@
 title: フレンド アセンブリ (C++) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc39fa66a73f16f800f0c7f0e4bbc49730d4b9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
 適用可能なランタイムは、の*フレンド アセンブリ*言語機能を使用する名前空間のスコープまたは 1 つまたは複数のクライアント アセンブリまたは .netmodule にアクセスできるアセンブリ コンポーネント内のグローバル スコープにある型です。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  (この言語機能はサポートされていません、Windows ランタイムでします。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
  フレンド アセンブリの機能を使用する代わりに、使用することができます<xref:System.Security.Permissions.StrongNameIdentityPermission>個々 の型にアクセスを制限します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -102,7 +97,7 @@ Class1::Test_Public
   
  次のコード例では、コンポーネントを定義していますが、コンポーネントの種類にアクセスがあるクライアント アセンブリが指定されていません。  
   
- 使用して、コンポーネントがリンクされていることを確認**/opt: noref**です。 これによりは不要な場合に、コンポーネントのメタデータでプライベート型が出力されること、`InternalsVisibleTo`属性が存在します。 詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)です。  
+ 使用して、コンポーネントがリンクされていることを確認 **/opt: noref**です。 これによりは不要な場合に、コンポーネントのメタデータでプライベート型が出力されること、`InternalsVisibleTo`属性が存在します。 詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)です。  
   
 ```cpp  
 // friend_assemblies_3.cpp  
@@ -192,5 +187,5 @@ int main() {
 Class1::Test_Public  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

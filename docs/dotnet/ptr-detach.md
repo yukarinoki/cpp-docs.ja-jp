@@ -1,12 +1,9 @@
 ---
-title: "ptr::Detach |Microsoft ドキュメント"
-ms.custom: 
+title: ptr::Detach |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 オブジェクトへのポインターを返す COM オブジェクトの所有権を放棄します。  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>です。  
   
 ## <a name="remarks"></a>コメント  
- `Detach`所有するすべての参照を解放、まず呼び出し元の代わりの COM オブジェクトへの参照を追加し、`com::ptr`です。  呼び出し元には、返されたオブジェクトを破棄して最終的に解放する必要があります。  
+ `Detach` 所有するすべての参照を解放、まず呼び出し元の代わりの COM オブジェクトへの参照を追加し、`com::ptr`です。  呼び出し元には、返されたオブジェクトを破棄して最終的に解放する必要があります。  
   
 ## <a name="example"></a>例  
  この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。  `DetachDocument`メンバー関数の呼び出し`Detach`を COM オブジェクトの所有権を放棄し、呼び出し元へのポインターを返します。  
@@ -133,12 +128,12 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ptr メンバー](../dotnet/ptr-members.md)   
  [ptr::Release](../dotnet/ptr-release.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)
