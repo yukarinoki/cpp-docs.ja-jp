@@ -1,13 +1,10 @@
 ---
-title: "ジェネリック関数 (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: ジェネリック関数 (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 ジェネリック関数は、型パラメーターで宣言された関数です。 呼び出されると、実際の型が型パラメーターの代わりに使用されます。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  この機能は、Windows ランタイムでサポートされていません。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -66,7 +61,7 @@ return-type identifier<type-parameter identifier(s)>
  追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。  
   
  *修飾子*(省略可能)  
- 静的など、関数の修飾子です。  `virtual`仮想メソッドをジェネリックにすることはできないためには許可されません。  
+ 静的など、関数の修飾子です。  `virtual` 仮想メソッドをジェネリックにすることはできないためには許可されません。  
   
  *戻り値の型*  
  メソッドによって返される型。 戻り値の型が void の場合は、戻り値は必要ありません。  
@@ -94,7 +89,7 @@ return-type identifier<type-parameter identifier(s)>
   
  呼び出されると、そのジェネリック型パラメーターと、実際の型が置き換えられます。 山かっことテンプレート関数の呼び出しに似た構文を使用するのには、実際の型を明示的に指定する可能性があります。 型パラメーターを指定しないで呼び出されると、コンパイラは関数呼び出しで指定されたパラメーターから実際の型を推測しようとします。 目的の型引数は、使用されるパラメーターから推測できない、コンパイラでエラーが報告されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **例**  
   
- 次の例では、ジェネリック関数を使用して、配列内の最初の要素を検索します。 宣言して`MyClass`、基本クラスから継承される`MyBaseClass`です。 `MyClass`ジェネリック関数を含む`MyFunction`、別のジェネリック関数を呼び出している`MyBaseClassFunction`、基底クラス内で。 **メイン**、ジェネリック関数`MyFunction`、異なる型引数を使用して呼び出されました。  
+ 次の例では、ジェネリック関数を使用して、配列内の最初の要素を検索します。 宣言して`MyClass`、基本クラスから継承される`MyBaseClass`です。 `MyClass` ジェネリック関数を含む`MyFunction`、別のジェネリック関数を呼び出している`MyBaseClassFunction`、基底クラス内で。 **メイン**、ジェネリック関数`MyFunction`、異なる型引数を使用して呼び出されました。  
   
 ```  
 // generics_generic_function_3.cpp  
@@ -196,6 +191,6 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
  [ジェネリック](../windows/generics-cpp-component-extensions.md)

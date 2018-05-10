@@ -1,12 +1,9 @@
 ---
-title: "Simpleclassfactory::createinstance メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: Simpleclassfactory::createinstance メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory::CreateInstance
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateInstance method
 ms.assetid: 17b7947a-2608-49d9-b730-fef76501c9bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68778eb1b5421cfcf22261d8b1c1efd99bc32c50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance メソッド
 
@@ -61,14 +56,14 @@ SimpleClassFactory には、集計をサポートしていません。 集計が
 
 ## <a name="remarks"></a>コメント
 
-場合 &#95; &#95;です。WRL_STRICT &#95; #95定義されている、assert エラーが発生、クラス テンプレート パラメーターに指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、ClassicCom または WinRtClassicComMix で構成されていない、または[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
+場合&#95; &#95;WRL_STRICT&#95; &#95;が定義されている、assert エラーが発生、クラス テンプレート パラメーターに指定された基本クラスから派生していない場合[RuntimeClass](../windows/runtimeclass-class.md)、または、ClassicCom で構成されていないまたはWinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** module.h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SimpleClassFactory クラス](../windows/simpleclassfactory-class.md)

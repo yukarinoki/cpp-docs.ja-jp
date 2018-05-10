@@ -1,28 +1,23 @@
 ---
-title: "方法: WRL を使用して従来の COM コンポーネントを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: WRL を使用して従来の COM コンポーネントを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>方法: WRL を使用して従来の COM コンポーネントを作成する
 Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用すると、ユニバーサル Windows プラットフォーム (UWP) アプリを使用することだけでなく、デスクトップ アプリで使用するための基本的な従来の COM コンポーネントを作成します。 Windows ランタイム C++ テンプレート ライブラリの COM コンポーネントの作成、ATL よりも少ないコードを必要があります。 Windows ランタイム C++ テンプレート ライブラリをサポートする COM のサブセットについては、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)です。  
@@ -35,13 +30,13 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
 2.  追加、 **Win32 プロジェクト**をソリューションにします。 など、プロジェクトの名前`CalculatorComponent`です。 **アプリケーション設定**] タブで [ **DLL**です。  
   
-3.  追加、 **Midl ファイル (.idl)**ファイルをプロジェクト。 など、ファイルの名前`CalculatorComponent.idl`です。  
+3.  追加、 **Midl ファイル (.idl)** ファイルをプロジェクト。 など、ファイルの名前`CalculatorComponent.idl`です。  
   
 4.  CalculatorComponent.idl に次のコードを追加します。  
   
      [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]  
   
-5.  CalculatorComponent.cpp で、`CalculatorComponent` クラスを定義します。 `CalculatorComponent`クラスから継承[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)です。 [Microsoft::WRL::RuntimeClassFlags\<ClassicCom>](../windows/runtimeclassflags-structure.md) specifies that the class derives from [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx) and not [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable`は Windows ランタイム アプリのコンポーネントでのみ使用できます)。`CoCreatableClass`など関数と共に使用することができます、クラスのファクトリを作成[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx)です。  
+5.  CalculatorComponent.cpp で、`CalculatorComponent` クラスを定義します。 `CalculatorComponent`クラスから継承[Microsoft::WRL::RuntimeClass](../windows/runtimeclass-class.md)です。 [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](../windows/runtimeclassflags-structure.md)クラスの派生元を示す[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509\(v=vs.85\).aspx)および not [IInspectable](http://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx)です。 (`IInspectable`は Windows ランタイム アプリのコンポーネントでのみ使用できます)。`CoCreatableClass`など関数と共に使用することができます、クラスのファクトリを作成[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615\(v=vs.85\).aspx)です。  
   
      [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]  
   
@@ -49,7 +44,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
      [!code-cpp[wrl-classic-com-component#3](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_3.cpp)]  
   
-7.  追加、**モジュール定義ファイル (.def)**ファイルをプロジェクト。 など、ファイルの名前`CalculatorComponent.def`です。 このファイルによって、エクスポートされる関数の名前がリンカーに設定されます。  
+7.  追加、**モジュール定義ファイル (.def)** ファイルをプロジェクト。 など、ファイルの名前`CalculatorComponent.def`です。 このファイルによって、エクスポートされる関数の名前がリンカーに設定されます。  
   
 8.  CalculatorComponent.def に次のコードを追加します。  
   
@@ -100,5 +95,5 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
  [!code-cpp[wrl-classic-com-component#7](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

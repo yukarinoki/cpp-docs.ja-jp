@@ -1,12 +1,9 @@
 ---
-title: "#インポート ディレクティブ (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: '#インポート ディレクティブ (C++) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#import'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e649e458a6275ea369031416c379721c3f9af0e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="import-directive-c"></a>#import ディレクティブ (C++)
 **C 固有の仕様**  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/23/2018
   
 -   .olb、.tlb、.dll ファイルなど、タイプ ライブラリを含むファイルの名前。 キーワードを**ファイル:**、各ファイル名の前に記述できます。  
   
--   タイプ ライブラリのコントロールの progid。 キーワードを**progid:**、各 progid 前に記述できます。 例:  
+-   タイプ ライブラリのコントロールの progid。 キーワードを**progid:**、各 progid 前に記述できます。 例えば:  
   
     ```  
     #import "progid:my.prog.id.1.5"  
@@ -61,13 +56,13 @@ ms.lasthandoff: 02/23/2018
   
      64 ビット オペレーティング システム上でクロス コンパイラによりコンパイルを実行した場合、コンパイラは 32 ビット レジストリ ハイブのみ読み取り可能になることに注意してください。 ネイティブ 64 ビット コンパイラを使用して、64 ビットのタイプ ライブラリをビルドおよび登録した方がよい場合があります。  
   
--   タイプ ライブラリのライブラリ ID。 キーワードを**libid:**、各ライブラリ ID の前に記述できます 例:  
+-   タイプ ライブラリのライブラリ ID。 キーワードを**libid:**、各ライブラリ ID の前に記述できます 例えば:  
   
     ```  
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")  
     ```  
   
-     バージョンまたは lcid を指定しない場合、[ルール](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)に適用される**progid:**にも適用されます**libid:**です。  
+     バージョンまたは lcid を指定しない場合、[ルール](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)に適用される**progid:** にも適用されます**libid:** です。  
   
 -   実行可能 (.exe) ファイル。  
   
@@ -78,7 +73,7 @@ ms.lasthandoff: 02/23/2018
 -   によって認識できる他のファイル形式、 **LoadTypeLib** API です。  
   
  `attributes`  
- 1 つまたは複数[#import 属性](#_predir_the_23import_directive_import_attributes)です。 複数の属性を指定するときは、空白またはコンマで区切ります。 例:  
+ 1 つまたは複数[#import 属性](#_predir_the_23import_directive_import_attributes)です。 複数の属性を指定するときは、空白またはコンマで区切ります。 例えば:  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only  
@@ -101,7 +96,7 @@ ms.lasthandoff: 02/23/2018
 |山かっこ形式|プリプロセッサに次のパスに従ってタイプ ライブラリ ファイルを検索するように指示します。<br /><br /> 1.**パス**環境変数パス リスト<br />2.**LIB**環境変数パス リスト<br />3./I によって指定されたパス (追加インクルード ディレクトリ) コンパイラ オプションは、コンパイラが別のタイプ ライブラリから参照されたタイプ ライブラリを検索ことを除けば、 [no_registry](../preprocessor/no-registry.md)属性。|  
   
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> ローカリゼーション ID とバージョン番号を指定します。  
- progid を指定するときに、progid のローカリゼーション ID とバージョン番号も指定できます。 例:  
+ progid を指定するときに、progid のローカリゼーション ID とバージョン番号も指定できます。 例えば:  
   
 ```  
 #import "progid:my.prog.id" lcid("0") version("4.0)  
@@ -139,7 +134,7 @@ ms.lasthandoff: 02/23/2018
   
 -   前方参照と typedef: `struct IMyInterface` や typedef のような構造体の宣言で構成されます。  
   
--   スマート ポインター宣言: このテンプレート クラスは`_com_ptr_t`インターフェイス ポインターをカプセル化して呼び出す必要性を排除、するスマート ポインターの実装は、 `AddRef`、**リリース**、`QueryInterface`関数。 また、新しい COM オブジェクトの作成時に `CoCreateInstance` 呼び出しを隠します。 このセクションでは、マクロ ステートメントを使用して**_COM_SMARTPTR_TYPEDEF**のテンプレートの特殊化である COM インターフェイスの typedef を確立するために、 [_com_ptr_t](../cpp/com-ptr-t-class.md)テンプレート クラス。 たとえば、インターフェイス**メソッド**、します。TLH ファイルが含まれます。  
+-   スマート ポインター宣言: このテンプレート クラスは`_com_ptr_t`インターフェイス ポインターをカプセル化して呼び出す必要性を排除、するスマート ポインターの実装は、 `AddRef`、**リリース**、`QueryInterface`関数。 また、新しい COM オブジェクトの作成時に `CoCreateInstance` 呼び出しを隠します。 このセクションでは、マクロ ステートメントを使用して **_COM_SMARTPTR_TYPEDEF**のテンプレートの特殊化である COM インターフェイスの typedef を確立するために、 [_com_ptr_t](../cpp/com-ptr-t-class.md)テンプレート クラス。 たとえば、インターフェイス**メソッド**、します。TLH ファイルが含まれます。  
   
     ```  
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
@@ -190,7 +185,7 @@ using namespace MyLib;
  詳細については、サポート技術情報の「#import Wrapper Methods May Cause Access Violation (Q242527)」または「Compiler Errors When You Use #import with XML (Q269194)」を参照してください。 MSDN ライブラリのメディア、またはには、サポート技術情報の記事を検索できます[Microsoft サポート](https://support.microsoft.com/)です。  
   
 ##  <a name="_predir_the_23import_directive_import_attributes"></a> #import の属性  
- `#import` には 1 つ以上の属性を含めることができます (省略可能)。 これらの属性は、コンパイラにタイプ ライブラリ ヘッダーの内容を変更するように指示します。 円記号 (**\\**) を 1 つの追加の行を含めるシンボルを使用することができます`#import`ステートメントです。 例:  
+ `#import` には 1 つ以上の属性を含めることができます (省略可能)。 これらの属性は、コンパイラにタイプ ライブラリ ヘッダーの内容を変更するように指示します。 円記号 (**\\**) を 1 つの追加の行を含めるシンボルを使用することができます`#import`ステートメントです。 例えば:  
   
 ```  
 #import "test.lib" no_namespace \  
@@ -201,6 +196,6 @@ using namespace MyLib;
   
  **END C 固有の仕様**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)   
  [コンパイラ COM サポート](../cpp/compiler-com-support.md)

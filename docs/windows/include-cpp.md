@@ -1,13 +1,10 @@
 ---
-title: "(C++) を含める |Microsoft ドキュメント"
-ms.custom: 
+title: (C++) を含める |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.include
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31d56b56b104473ffe3edbcf8672aa8b5a92243d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2c88dd610c1a0b8a8fee4e23da1b5ad844e989c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="include-c"></a>include (C++)
 生成された .idl ファイルに含まれる 1 つまたは複数のヘッダー ファイルを指定します。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 [include(cpp_attr_ref_include.h)];  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [スタンドアロン属性](../windows/stand-alone-attributes.md)   
  [インポート](../windows/import.md)   

@@ -1,13 +1,10 @@
 ---
-title: "ダイアログ エディターのタブ、ツールボックス |Microsoft ドキュメント"
-ms.custom: 
+title: ダイアログ エディターのタブ、ツールボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor-tab-toolbox"></a>[ダイアログ エディター] タブ ([ツールボックス])
 ダイアログ エディターのタブに表示されます、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)ダイアログ エディターで作業する場合。 新しいダイアログ ボックスにコントロールを追加するを作成する ダイアログ ボックスに、ツールボックスからコントロールをドラッグします。 (詳細については、次を参照してください。 [ ダイアログ ボックスにコントロールを追加する](adding-a-control-to-a-dialog-box.md))。 次いでコントロールの移動、またはサイズと形状の変更ができます。  
@@ -97,10 +92,10 @@ ms.lasthandoff: 12/21/2017
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コントロール](../mfc/controls-mfc.md)   
  [コントロール クラス](../mfc/control-classes.md)   
  [ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)   

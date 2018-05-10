@@ -1,12 +1,9 @@
 ---
-title: "choice クラス |Microsoft ドキュメント"
-ms.custom: 
+title: choice クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - choice
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 56b936e1ecb3864b7a7bb95f3e552c16d2ce81d0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choice-class"></a>choice クラス
 `choice` メッセージング ブロックは、複数のソースと単一のターゲットを持つブロックであり、一連のソースとの制御フローの相互作用を表します。 choice ブロックは、複数のソースのいずれかがメッセージを生成するのを待ち、そのメッセージを生成したソースのインデックスを伝達します。  
@@ -69,7 +64,7 @@ class choice: public ISource<size_t>;
   
 |名前|説明|  
 |----------|-----------------|  
-|[choice](#ctor)|オーバーロードされます。 `choice` メッセージング ブロックを構築します。|  
+|[選択肢](#ctor)|オーバーロードされます。 `choice` メッセージング ブロックを構築します。|  
 |[~ choice デストラクター](#dtor)|破棄、`choice`メッセージング ブロックです。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
@@ -78,7 +73,7 @@ class choice: public ISource<size_t>;
 |----------|-----------------|  
 |[accept](#accept)|これによって提供されたメッセージを受け入れる`choice`ブロック、呼び出し元に所有権を転送します。|  
 |[acquire_ref](#acquire_ref)|この参照カウントを獲得`choice`メッセージング ブロックを削除されないようにします。|  
-|[consume](#consume)|これによって以前に提供メッセージを使用して`choice`ブロックのメッセージングおよび呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
+|[使用します。](#consume)|これによって以前に提供メッセージを使用して`choice`ブロックのメッセージングおよび呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
 |[has_value](#has_value)|チェックするかどうかこの`choice`メッセージング ブロックはまだ初期化されて、値を使用します。|  
 |[index](#index)|インデックスを返します、`tuple`によって選択された要素を表す、`choice`メッセージング ブロックです。|  
 |[link_target](#link_target)|これをターゲット ブロックをリンク`choice`メッセージング ブロックです。|  
@@ -99,7 +94,7 @@ class choice: public ISource<size_t>;
   
  `choice`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -349,7 +344,7 @@ _Payload_type const& value();
 ### <a name="remarks"></a>コメント  
  `choice`メッセージング ブロックは、さまざまなペイロードの種類の入力を行うことができます、取得時点で、ペイロードの種類を指定する必要があります。 結果に基づいて、種類を指定できます、`index`メソッドです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [クラスを結合します。](join-class.md)   
  [single_assignment クラス](single-assignment-class.md)

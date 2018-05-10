@@ -1,30 +1,25 @@
 ---
-title: "方法: 並列ループから処理を中断する例外を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 並列ループから処理を中断する例外を使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29140c339614e572733988bd7ca5e14561cee5dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bacb9ea6a451026f7a515878cb649090ed9cbf4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>方法: 例外処理を使用して並列ループを中断する
 このトピックでは、基本的なツリー構造の検索アルゴリズムを記述する方法を示します。  
@@ -76,7 +71,7 @@ Did not find node with value 17522.
   
  **cl.exe/EHsc タスクのツリーの search.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PPL における取り消し処理](cancellation-in-the-ppl.md)   
  [例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   

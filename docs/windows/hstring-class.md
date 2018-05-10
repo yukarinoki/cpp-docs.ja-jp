@@ -1,30 +1,25 @@
 ---
-title: "HString クラス |Microsoft ドキュメント"
-ms.custom: 
+title: HString クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
 dev_langs:
 - C++
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e8d66f134eef5f2ecb75b30fd68874418dbc49d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8544a78fdbdab19f44081853f5f5878f980cec01
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstring-class"></a>HString クラス
 RAII パターンを使用して HSTRING の有効期間を管理するためのヘルパー クラス。
@@ -71,10 +66,10 @@ class HString;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `HString`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)

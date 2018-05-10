@@ -1,13 +1,10 @@
 ---
-title: "ロケールとコード ページ |Microsoft ドキュメント"
-ms.custom: 
+title: ロケールとコード ページ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="locales-and-code-pages"></a>ロケールとコード ページ
 ロケール ID は、特定の地域の規則や言語を反映します。 1 つの言語が複数の国や地域で使用されることもあります。たとえば、ポルトガル語は、ポルトガルだけでなくブラジルでも使用されています。 逆に、1 つの国や地域に複数の公用語が存在する場合もあります。 たとえば、カナダでは、公用語として英語とフランス語の 2 つの言語が使用されています。 そこでカナダには、カナダ英語とカナダ フランス語の 2 つの異なったロケールが存在します。 ロケールに依存するカテゴリとしては、日付の形式や通貨値の表示形式などがあります。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 02/09/2018
   
  C のランタイム関数 `setlocale` は、現在のプログラムのロケール情報の一部または全部の設定、変更、および問い合わせが可能です。 [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)ルーチンは、ワイド文字バージョンの`setlocale`; 引数と戻り値の`_wsetlocale`ワイド文字列です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Unicode と MBCS](../text/unicode-and-mbcs.md)   
  [文字セットにおける移植性の利点](../text/benefits-of-character-set-portability.md)

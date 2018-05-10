@@ -1,30 +1,25 @@
 ---
-title: "属性の対象 (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: 属性の対象 (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>属性の対象 (C++ コンポーネント拡張)
 属性の使用量指定子では、属性の対象を指定できます。  各属性を定義して、特定の言語要素に適用されます。 たとえば、クラスと構造体にのみ適用する属性を定義する場合があります。  カスタム属性を使用できます可能性のある構文要素を次に示します。 これらの値の組み合わせ (論理を使用してまたは) 使用することがあります。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
  有効な属性ターゲットの一覧を次に示します。  
   
--   `All`(すべての構成要素に適用されます)  
+-   `All` (すべての構成要素に適用されます)  
   
     ```  
   
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Assembly`(アセンブリ全体に適用されます)  
+-   `Assembly` (アセンブリ全体に適用されます)  
   
     ```  
   
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Module`(全体をモジュールに適用されます)  
+-   `Module` (全体をモジュールに適用されます)  
   
     ```  
   
@@ -315,5 +310,5 @@ ref class MyClass {};
 value struct MyStruct {};  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)

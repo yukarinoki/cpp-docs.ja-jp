@@ -1,13 +1,10 @@
 ---
-title: "アクセラレータのプロパティを設定 |Microsoft ドキュメント"
-ms.custom: 
+title: アクセラレータのプロパティを設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Key property
 - Modifier property
 ms.assetid: 0fce9156-3025-4e18-b034-e219a4c65812
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83eea84c89a9f9873b687333b7454d9f3c9c41b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5198fc1958863d3b5ad560ffeb8c5576506e9e46
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-accelerator-properties"></a>アクセラレータのプロパティの設定
 アクセラレータのプロパティを設定することができます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)いつでもできます。 また、アクセラレータ エディターを使用して、アクセラレータ テーブルでアクセラレータのプロパティを変更することもできます。 プロパティ ウィンドウを使用しても、アクセラレータ エディターを使用しても、変更の結果は同じです。編集はすぐにアクセラレータ テーブルに反映されます。  
@@ -46,10 +41,10 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [定義済みのアクセラレータ キー](../windows/predefined-accelerator-keys.md)   
  [リソース エディター](../windows/resource-editors.md)   
  [アクセラレータ エディター](../windows/accelerator-editor.md)

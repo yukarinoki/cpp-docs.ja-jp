@@ -1,13 +1,10 @@
 ---
-title: "(C++ コンポーネント拡張) の型の特徴のコンパイラ サポート |Microsoft ドキュメント"
-ms.custom: 
+title: (C++ コンポーネント拡張) の型の特徴のコンパイラ サポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
 - __has_trivial_destructor
@@ -69,18 +66,16 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>型の特徴のコンパイラ サポート (C++ コンポーネント拡張)
 コンパイラ サポート*特徴 (traits) を入力*コンパイル時に、型のさまざまな特性をかを示すです。  
@@ -591,7 +586,7 @@ ms.lasthandoff: 12/21/2017
   
  `__has_finalizer(`*型*`)`このプラットフォームがファイナライザーをサポートしていないために、型の特徴がサポートされていません。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -599,7 +594,7 @@ ms.lasthandoff: 12/21/2017
   
  (この機能のプラットフォーム固有の解説はありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -633,5 +628,5 @@ int main () {
 R is a ref class  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

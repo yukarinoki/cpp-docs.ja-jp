@@ -1,12 +1,9 @@
 ---
-title: "SyncLockT クラス |Microsoft ドキュメント"
-ms.custom: 
+title: SyncLockT クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SyncLockT class
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f3a9794f7b00a2029f6706db3a846ba127a4d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e05a1be5d84db52573d3c3235936ecf82dde5894
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="synclockt-class"></a>SyncLockT クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -73,18 +68,18 @@ class SyncLockT;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[SyncLockT::sync_ データ メンバー](../windows/synclockt-sync-data-member.md)|SyncLockT クラスによって表される、基になるリソースを保持します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SyncLockT`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Wrappers::Details Namespace](../windows/microsoft-wrl-wrappers-details-namespace.md)   
  [SRWLock クラス](../windows/srwlock-class.md)

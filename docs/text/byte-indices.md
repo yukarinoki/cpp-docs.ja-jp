@@ -1,30 +1,25 @@
 ---
-title: "バイト インデックス |Microsoft ドキュメント"
-ms.custom: 
+title: バイト インデックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MBCS [C++], byte indices
 - byte indices [C++]
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 594acadeedad06e9720180c38bd0bcd657391879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 509e66c7ea458519eaa9dc4f52c8a6b65c789d0f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="byte-indices"></a>バイト インデックス
 次のヒントを使用します。  
@@ -47,6 +42,6 @@ ms.lasthandoff: 12/21/2017
   
      これは、正しくため先行バイトにインデックスを作成する、`character`です。 `_mbclen`関数 (1 つまたは 2 バイト) 文字のサイズが決まります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MBCS のプログラミングについて](../text/mbcs-programming-tips.md)   
  [文字列の最後の文字](../text/last-character-in-a-string.md)

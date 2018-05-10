@@ -1,12 +1,9 @@
 ---
-title: "pointers_to_members |Microsoft ドキュメント"
-ms.custom: 
+title: pointers_to_members |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - pointers_to_members_CPP
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4313aaa38d410b8e6f46594cd9ce11269b523073
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 499649e94dbe549deb091291b197c80ff404bc33
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 **C 固有の仕様**  
@@ -59,7 +54,7 @@ ms.lasthandoff: 03/16/2018
 |--------------|--------------|  
 |**single_inheritance**|最も一般的な表現は、単一継承、メンバー関数へのポインターです。 メンバーへのポインターが宣言されているクラス定義の継承モデルが多重継承モデルまたは仮想モデルの場合、エラーが発生します。|  
 |**multiple_inheritance**|最も一般的な表現は、多重継承、メンバー関数へのポインターです。 メンバーへのポインターが宣言されているクラス定義の継承モデルが仮想モデルの場合、エラーが発生します。|  
-|**virtual_inheritance**|最も一般的な表現は、仮想継承、メンバー関数へのポインターです。 エラーが発生することはありません。 これは、既定の引数と**#pragma pointers_to_members (full_generality)**を使用します。|  
+|**virtual_inheritance**|最も一般的な表現は、仮想継承、メンバー関数へのポインターです。 エラーが発生することはありません。 これは、既定の引数と **#pragma pointers_to_members (full_generality)** を使用します。|  
   
 > [!CAUTION]
 >  `pointers_to_members` プラグマは、影響を与えるソース コード ファイル内のみに指定し、必ず `#include` ディレクティブの後に配置することをお勧めします。 これにより、プラグマが他のファイルに影響を与えるリスクが減少すると共に、同じ変数、関数、またはクラス名に誤って複数の定義を指定するリスクが減少します。  

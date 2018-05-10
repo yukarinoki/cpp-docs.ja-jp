@@ -1,13 +1,10 @@
 ---
-title: "リソースのプレビュー |Microsoft ドキュメント"
-ms.custom: 
+title: リソースのプレビュー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.previewing
 - vs.resvw.resource.previewing
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource previews
 - code, viewing
 ms.assetid: d6abda66-0e2b-4ac3-a59a-a57b8c6fb70b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0eca56e607c916e28afc7bf513d853bcf6d94b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d0082d050ceb391a4346e2a4a38ff71c3cf2a3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="previewing-resources"></a>リソースのプレビュー
 リソースをプレビューするには、グラフィカルなリソースを開かずに表示することができます。 プレビューは、リソース識別子を数値に変更されるため、コンパイルした後にも実行可能ファイルに役立ちます。 多くの場合、これらの数値識別子は、十分な情報を提供しない、ため、リソースのプレビューがすばやく識別できます。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)をクリックして、**プロパティ ページ**ボタンをクリックします。  
   
-     \- または  
+     \- または -  
   
 3.  **ビュー**  メニューのをクリックして**プロパティ ページ**です。  
   
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: プロジェクト (スタンドアロン) の外側でリソース スクリプト ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
  [リソース エディター](../windows/resource-editors.md)
 

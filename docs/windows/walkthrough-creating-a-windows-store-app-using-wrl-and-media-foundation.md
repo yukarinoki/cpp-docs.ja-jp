@@ -1,28 +1,23 @@
 ---
-title: "チュートリアル: WRL および Media Foundation を使用して、UWP アプリの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: WRL および Media Foundation を使用して、UWP アプリの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1c9e3f678a65b3dacfc5bba012656118b6fe2fa1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して、UWP アプリの作成
 Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、使用するユニバーサル Windows プラットフォーム (UWP) アプリを作成する方法を学習[Microsoft メディア ファンデーション](http://msdn.microsoft.com/library/windows/apps/ms694197)です。  
@@ -67,9 +62,9 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
 1.  Visual Studio で、作成、**空のソリューション**プロジェクト。 など、プロジェクトの名前`MediaCapture`です。  
   
-2.  追加、 **DLL (ユニバーサル Windows)**プロジェクトがソリューションにします。 など、プロジェクトの名前`GrayscaleTransform`です。  
+2.  追加、 **DLL (ユニバーサル Windows)** プロジェクトがソリューションにします。 など、プロジェクトの名前`GrayscaleTransform`です。  
   
-3.  追加、 **Midl ファイル (.idl)**ファイルをプロジェクト。 など、ファイルの名前`GrayscaleTransform.idl`です。  
+3.  追加、 **Midl ファイル (.idl)** ファイルをプロジェクト。 など、ファイルの名前`GrayscaleTransform.idl`です。  
   
 4.  次のコードを GrayscaleTransform.idl に追加します。  
   
@@ -108,11 +103,11 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
   
     2.  でも**入力**、追加`runtimeobject.lib`、 `mfuuid.lib`、および`mfplatf.lib`を**追加の依存関係**プロパティです。  
   
-    3.  **Windows メタデータ**設定、 **Windows メタデータの生成**に**はい (/WINMD)**です。  
+    3.  **Windows メタデータ**設定、 **Windows メタデータの生成**に**はい (/WINMD)** です。  
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL c# アプリからカスタム メディア ファンデーション コンポーネントを使用するには  
   
-1.  新しい**c# 新しいアプリケーション (XAML)**プロジェクトを`MediaCapture`ソリューションです。 など、プロジェクトの名前`MediaCapture`です。  
+1.  新しい**c# 新しいアプリケーション (XAML)** プロジェクトを`MediaCapture`ソリューションです。 など、プロジェクトの名前`MediaCapture`です。  
   
 2.  **MediaCapture**プロジェクトへの参照を追加、`GrayscaleTransform`プロジェクト。 学習する方法についてを参照してください[する方法: 追加または参照マネージャーを使用して参照を削除する](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)です。  
   
@@ -133,7 +128,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 ## <a name="next-steps"></a>次の手順  
  例では、既定の Web カメラから写真を 1 枚ずつキャプチャする方法を示します。 [メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)は以上です。 そのサンプルでは、Web カメラ デバイスを列挙し、ローカル スキーム ハンドラーを使用する方法や、個別の写真とビデオ ストリームの両方で機能する追加のメディア効果について示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [Microsoft メディア ファンデーション](http://msdn.microsoft.com/library/windows/apps/ms694197)   
  [メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

@@ -1,13 +1,10 @@
 ---
-title: "配列 (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: 配列 (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>配列 (C++ コンポーネント拡張)
 `Platform::Array<T>`型に C + + CX、または`array`c++ のキーワード + CLI は、指定した型と初期値の配列を宣言しています。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  `array-type`  
  配列変数の型。 有効な種類は Windows ランタイム クラスと基本型、ref クラスと構造体、値クラスと構造体、およびネイティブ ポインター (`type*`)。  
   
- `rank`[オプション]  
+ `rank` [オプション]  
  配列の次元の数。 1 にする必要があります。  
   
  `identifier`  
@@ -79,14 +74,14 @@ ms.lasthandoff: 12/21/2017
  `initialization-type`  
  配列を初期化する値の型。 通常、`array-type`と`initialization-type`は同じ型です。 ただし、指定できる型からの変換がある場合は、異なる`initialization-type`に`array-type`— たとえば場合、`initialization-type`から派生した`array-type`です。  
   
- `initialization-list`[オプション]  
+ `initialization-list` [オプション]  
  配列の要素の初期化は中かっこ内の値のコンマ区切りのリスト。 たとえば場合、`rank-size-list`された`(3)`、3 つの要素の 1 次元配列を宣言しています`initialization list`可能性があります`{1,2,3}`です。  
   
 ### <a name="remarks"></a>コメント  
   
  型がで参照カウントの配列であるかどうかをコンパイル時に検出できます`__is_ref_array(type)`です。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ### <a name="examples"></a>使用例  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  配列変数の型。 有効な種類は Windows ランタイム クラスと基本型、ref クラスと構造体、値クラスと構造体、ネイティブ ポインター (`type*`)、およびネイティブ POD (プレーンな古いデータ) の型。  
   
- `rank`[オプション]  
+ `rank` [オプション]  
  配列の次元の数。 既定値は 1 です。最大値は 32 です。 配列の各次元では、配列自体です。  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  配列内の各次元のサイズのコンマ区切りの一覧。 また場合、`initialization-list`パラメーターが指定されている場合、コンパイラは、各次元のサイズを推測できますと`rank-size-list`を省略できます。 
   
- `initialization-list`[オプション]  
+ `initialization-list` [オプション]  
  配列の要素の初期化は中かっこ内の値のコンマ区切りのリスト。 コンマ区切りの一覧が入れ子になったまたは*初期化リスト*多次元配列内の要素を初期化する項目。  
   
  たとえば場合、`rank-size-list`された`(3)`、3 つの要素の 1 次元配列を宣言しています`initialization list`可能性があります`{1,2,3}`です。 If`rank-size-list`された`(3,2,4)`、最初の次元、2 つの要素の 1 秒間、および 3 番目、4 つの要素の 3 つの要素の 3 次元の配列を宣言しています`initialization-list`可能性があります`{{1,2,3},{0,0},{-5,10,-21,99}}`)。  
   
 ### <a name="remarks"></a>コメント  
   
- `array`[プラットフォーム、既定値、および cli 名前空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)名前空間。  
+ `array` [プラットフォーム、既定値、および cli 名前空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)名前空間。  
   
  標準の C++ と同様に、配列のインデックスは 0 から始まる、および角かっこ () を使用して、配列が添字です。 標準の C++ とは異なり、多次元配列のインデックスは、一連の各ディメンションの角かっこ ([) 演算子ではなく各次元のインデックスの一覧で指定されます。 たとえば、*識別子*[*index1*、 *index2*] の代わりに*識別子*[*index1*] [ *index2*] です。  
   
@@ -155,7 +150,7 @@ int main() {
   
  コンパイル時に、型との共通言語ランタイム (CLR) 配列かどうかを検出できます`__is_ref_array(type)`です。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -176,5 +171,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

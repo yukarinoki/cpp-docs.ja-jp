@@ -1,33 +1,28 @@
 ---
-title: "8 進文字と 16 進文字の仕様 | Microsoft Docs"
-ms.custom: 
+title: 8 進文字と 16 進文字の仕様 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf3a27dc61543482d1d6484d0edd4b5e1bb04373
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8 進文字と 16 進文字の仕様
-シーケンス **\\***ooo* は、3 桁の 8 進数コードで ASCII 文字セットの任意の数を指定できることを意味します。 8 進数の数値は、目的の文字またはワイド文字の値を指定します。  
+シーケンス **\\***ooo* は、3 桁の 8 進数コードで ASCII 文字セットの任意の文字を指定できることを意味します。 8 進数の数値は、目的の文字またはワイド文字の値を指定します。  
   
  同様に、シーケンス **\x***hhh* を使用すると、ASCII 文字を 16 進文字コードとして指定できます。 たとえば、通常の C エスケープ シーケンス (**\b**) として ASCII バックスペース文字を指定するか、**\010** (8 進数) または **\x008** (16 進数) としてその文字をコード化できます。  
   

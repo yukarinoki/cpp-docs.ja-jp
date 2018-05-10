@@ -1,13 +1,10 @@
 ---
-title: "Tchar.h における汎用テキスト マッピング |Microsoft ドキュメント"
-ms.custom: 
+title: Tchar.h における汎用テキスト マッピング |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキストのマッピング
 コードを簡単に国際対応にできるように、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] のランタイム ライブラリには、多くのデータ型やルーチンなどのオブジェクトに対して、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の汎用テキストのマッピングが用意されています。 Tchar.h で定義されているこれらのマッピングを使用すると、[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] ステートメントで定義したマニフェスト定数に応じて、1 バイト、マルチバイト、`#define` のどの文字セットにも対応できるジェネリック コードを記述できます。 汎用テキスト マッピングは [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の拡張機能であり、[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] とは互換性がありません。  
@@ -104,6 +99,6 @@ RetVal = strrev(szString);
   
  このように、1 つのソース コード ファイルを記述、保守、およびコンパイルすることで、3 種類のそれぞれの文字セットに固有のルーチンを実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テキストと文字列](../text/text-and-strings-in-visual-cpp.md)   
  [_MBCS コードでの TCHAR.H データ型の使用](../text/using-tchar-h-data-types-with-mbcs-code.md)

@@ -1,13 +1,10 @@
 ---
-title: "インターフェイス クラス (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: インターフェイス クラス (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - interface_CPP
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abe4173dabd20442b96c8e5536b040483df4f150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03c081abc457d025ca2818c887deeb5baf4c4de7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-class--c-component-extensions"></a>インターフェイス クラス (C++ コンポーネント拡張)
 インターフェイスを宣言します。  ネイティブ インターフェイスについては、次を参照してください。 [_ _interface](../cpp/interface.md)です。  
@@ -83,7 +78,7 @@ interface class
   
  (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -91,7 +86,7 @@ interface class
   
  (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -232,5 +227,5 @@ ref struct R : I, J {
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

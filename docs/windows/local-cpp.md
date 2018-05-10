@@ -1,13 +1,10 @@
 ---
-title: "ローカル (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: ローカル (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.local
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3543adfe0cb25f7946e6ed6c81c4bd66a7b60324
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17a57ad56402b345aa64e4e4fd02bc57dd7f0321
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="local-c"></a>local (C++)
 インターフェイスのヘッダーで使用する場合を使用すると、ヘッダー ジェネレーターとして MIDL コンパイラを使用できます。 個々 の関数で使用する場合は、対象のスタブが生成されないローカル プロシージャを指定します。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>例  
  参照してください[call_as](../windows/call-as.md)の使用方法の例については`local`します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [インターフェイス属性](../windows/interface-attributes.md)   
  [メソッドの属性](../windows/method-attributes.md)   

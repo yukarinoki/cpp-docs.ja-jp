@@ -1,31 +1,26 @@
 ---
-title: "nullptr (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: nullptr (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33a276c383618531103a76b1f20c6ad478d57c10
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (C++ コンポーネント拡張)
 `nullptr`キーワードを表す、 *null ポインター値*です。 Null ポインター値を使用して、あるオブジェクトのハンドル、内部ポインター、またはネイティブ ポインター型を指していないオブジェクトを示します。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr`(ただし`throw (Object^)nullptr;`は機能)  
+-   `throw nullptr` (ただし`throw (Object^)nullptr;`は機能)  
   
  `nullptr`キーワードは、次のポインター型の初期化で使用することができます。  
   
@@ -231,7 +226,7 @@ NULL
 ## <a name="example"></a>例  
  **例**  
   
- 次のコード例に示しますを`nullptr`をコンパイルすると、ネイティブ ポインターに割り当てることが**/clr**です。  
+ 次のコード例に示しますを`nullptr`をコンパイルすると、ネイティブ ポインターに割り当てることが **/clr**です。  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -242,9 +237,9 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
- コンパイラ オプション: (必要な; を含むすべてのコード生成オプションでサポートされていない**/ZW**と**/clr**)  
+## <a name="requirements"></a>要件  
+ コンパイラ オプション: (必要な; を含むすべてのコード生成オプションでサポートされていない **/ZW**と **/clr**)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

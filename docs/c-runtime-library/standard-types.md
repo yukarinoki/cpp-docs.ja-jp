@@ -1,13 +1,10 @@
 ---
-title: "基本データ型 | Microsoft Docs"
-ms.custom: 
+title: 基本データ型 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - __time64_t
 - _diskfree_t
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-types"></a>基本データ型
 Microsoft ランタイム ライブラリには、次の基本データ型および Typedefs が用意されています。  
@@ -211,7 +206,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`_CrtMemState` 構造体|C ランタイム デバッグ ヒープの現在の状態に関する情報を提供します。|CRTDBG.H|  
 |`_CRT_REPORT_HOOK`、<br /><br /> `_CRT_REPORT_HOOKW`、<br /><br /> `_CRT_REPORT_HOOKW_M`|[_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) で呼び出されるコールバック関数の型定義。<br /><br /> この関数のパラメーターは、レポートの種類、出力メッセージ、およびコールバック関数の戻り値です。|CRTDBG.H|  
 |`dev_t`、`_dev_t` の短整数または符号なし整数|デバイス ハンドルを表します。|SYS\TYPES.H|  
-|`_diskfree_t` 構造体|ディスク ドライブに関する情報を格納します。 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**** で使用します。|DOS.H および DIRECT.H|  
+|`_diskfree_t` 構造体|ディスク ドライブに関する情報を格納します。 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) で使用します**。**|DOS.H および DIRECT.H|  
 |`div_t`、`ldiv_t`、および `lldiv_t` の各構造体|それぞれ [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md)、および [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) によって返される値を格納します。|STDLIB.H|  
 |`errno_t` 整数|`errno` のエラー コードを処理する関数の戻り値の型またはパラメーターに使用されます。|STDDEF.H、<br /><br /> CRTDEFS.H|  
 |`_exception` 構造体|[_matherr](../c-runtime-library/reference/matherr.md) のエラー情報を格納します。|MATH.H|  

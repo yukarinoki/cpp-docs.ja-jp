@@ -1,30 +1,25 @@
 ---
-title: "Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張)
 テンプレートは、使用すると、Windows ランタイムまたは共通言語ランタイムの型のプロトタイプを定義し、別のテンプレート型パラメーターを使用してその型のバリエーションをインスタンス化しできます。  
@@ -37,13 +32,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-runtime"></a>Windows ランタイム  
  (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
  マネージ型は、次のコード例に示されている場合は、クラス テンプレートを作成するのには、制限があります。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -146,5 +141,5 @@ class A <int> {};
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

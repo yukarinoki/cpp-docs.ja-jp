@@ -1,13 +1,10 @@
 ---
-title: "構造体の格納とアラインメント | Microsoft Docs"
-ms.custom: 
+title: 構造体の格納とアラインメント | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>構造体の格納とアラインメント
 **Microsoft 固有の仕様**  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  隣接するビット フィールドは、同じサイズの整数型で、次のビット フィールドがビット フィールドの共通のアラインメント要件によって課される境界を越えずに現在の割り当て単位に収まる場合は、同じ 1、2、または 4 バイトの割り当て単位にパックされます。  
   
- 領域を節約したり、既存のデータ構造に合わせたりするために、コンパクト化の程度を調整して構造体を格納できます。 [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] コンパイラ オプションと [#pragma pack](../preprocessor/pack.md) は、構造体データがメモリに "パック" される方法を制御します。 /Zp[*n*] オプション (*n* は 1、2、4、8、16) を使用すると、2 番目以降の各構造体メンバーは、バイト境界に合わせて格納されます。バイト境界は、フィールドのアラインメント要件とパッキング サイズ (*n*) のいずれか小さい方です。 バイト境界を数式として表現すると、次のようになります。  
+ 領域を節約したり、既存のデータ構造に合わせたりするために、コンパクト化の程度を調整して構造体を格納できます。 [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] コンパイラ オプションおよび [#pragma pack](../preprocessor/pack.md) は、構造体データがメモリに "パック" される方法を制御します。 /Zp[*n*] オプション (*n* は 1、2、4、8、または 16) を使用すると、2 番目以降の各構造体メンバーは、バイト境界に合わせて格納されます。バイト境界は、フィールドのアラインメント要件とパッキング サイズ (*n*) のいずれか小さい方です。 バイト境界を数式として表現すると、次のようになります。  
   
 ```  
 min( n, sizeof( item ) )  

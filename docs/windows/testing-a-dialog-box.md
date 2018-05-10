@@ -1,13 +1,10 @@
 ---
-title: "ダイアログ ボックスのテスト |Microsoft ドキュメント"
-ms.custom: 
+title: ダイアログ ボックスのテスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - testing, dialog boxes
 - dialog boxes, testing
 ms.assetid: 45034ee9-c554-4f4b-8c46-6ddefdee8951
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d81d288453e56acfb02a123075692b907d371578
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57bb9e827caae0e328971077d902673f2428c80b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="testing-a-dialog-box"></a>ダイアログ ボックスのテスト
 ダイアログ ボックスを設計する際には、プログラムをコンパイルせずに実行時の動作をシミュレートし、テストできます。 このモードでは、次を行うことができます。  
@@ -46,17 +41,17 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-test-a-dialog-box"></a>ダイアログ ボックスをテストするには  
   
-1.  ダイアログ エディターがアクティブなウィンドウである場合は、メニュー バーの **[書式]**、 **[ダイアログのテスト]**をクリックします。  
+1.  ダイアログ エディターがアクティブなウィンドウである場合は、メニュー バーの **[書式]**、 **[ダイアログのテスト]** をクリックします。  
   
 2.  シミュレーションを終了するには、Esc キーを押すか、またはテストしているダイアログ ボックスの **[閉じる]** をクリックします。  
   
  マネージ プロジェクトにリソースを追加する方法については、次を参照してください。[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)です。  
   
- 必要条件  
+ 要件  
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)   
  [[ダイアログ エディター] ツール バーの表示と非表示](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

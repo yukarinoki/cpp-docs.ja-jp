@@ -1,12 +1,9 @@
 ---
-title: "Microsoft::WRL::Wrappers Namespace |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft::WRL::Wrappers Namespace |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f7633bcd784fa7b9b5f7255e25e8ddc52c5b93db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa666c1a5de2962a4479b355966c1e8282f2989b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers 名前空間
 オブジェクト、文字列、およびハンドルの有効期間の管理を簡素化するリソースの取得は初期化 (RAII) ラッパー型を定義します。  
@@ -59,10 +54,10 @@ namespace Microsoft::WRL::Wrappers;
 |[Semaphore クラス](../windows/semaphore-class.md)|ユーザー数に制限をサポートできる共有リソースを制御する同期オブジェクトを表します。|  
 |[SRWLock クラス](../windows/srwlock-class.md)|スリム リーダー/ライター ロックに相当します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)

@@ -1,12 +1,9 @@
 ---
-title: "Module::registercomobject メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: Module::registercomobject メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::RegisterCOMObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RegisterCOMObject method
 ms.assetid: 59f223dc-03c6-429d-95da-b74b3f73b702
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2984d5950464385ea47301db356b7364707e667
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c002dd64049006c8ee74c709c585a3a9d0f253a5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moduleregistercomobject-method"></a>Module::RegisterCOMObject メソッド
 他のアプリケーションがそれらに接続できるように、1 つまたは複数の COM オブジェクトを登録します。  
@@ -67,10 +62,10 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
   
  登録済みのオブジェクトへの接続の種類が、現在の組み合わせで指定された`comflag`テンプレート パラメーターと REGCLS 列挙体の REGCLS_SUSPENDED 列挙子。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  
   
  **名前空間:** Microsoft::WRL
  
- ## <a name="see-also"></a>参照
+ ## <a name="see-also"></a>関連項目
  [Module クラス](../windows/module-class.md)

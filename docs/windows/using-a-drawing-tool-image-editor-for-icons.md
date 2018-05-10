@@ -1,13 +1,10 @@
 ---
-title: "描画ツール (アイコン用イメージ エディター) の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 描画ツール (アイコン用イメージ エディター) の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.drawing
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Image editor [C++], toolbar
 - drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2f6d310bedd3a2a523112d57ece2dcc54fb3fd1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17211518789113c11194314b57b741ab2b274ddc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>描画ツールの使用 (アイコン用イメージ エディター)
 イメージ エディターの手描きツールと同じ方法ですべての作業のツールを消去: ツールを選択して、必要に応じて、[前景色と背景色を選択](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)およびサイズと図形のオプションです。 イメージにポインターを移動しをクリックするかをドラッグして描画し、消去します。  
@@ -73,11 +68,11 @@ ms.lasthandoff: 12/21/2017
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
   
- 必要条件  
+ 要件  
   
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
  [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)   

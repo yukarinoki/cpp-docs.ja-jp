@@ -1,13 +1,10 @@
 ---
-title: "[全般] プロパティ ページ (プロジェクト) |Microsoft ドキュメント"
-ms.custom: 
+title: '[全般] プロパティ ページ (プロジェクト) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -36,14 +33,13 @@ helpviewer_keywords:
 - Unicode, creating C++ build configuration
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-property-page-project"></a>[全般] プロパティ ページ (プロジェクト)
 
@@ -65,11 +61,11 @@ ms.lasthandoff: 02/14/2018
 **Windows SDK のバージョン**  
 Windows ターゲット プラットフォームは、プロジェクトを必要とする Windows SDK のバージョンを指定します。 Visual Studio インストーラーを使用して C++ ワークロードをインストールすると、Windows SDK の必要な部分がインストールされます。 をコンピューターに他の Windows SDK バージョンがある場合、ドロップダウン リストにインストールされている SDK ツールの各バージョンが表示されます。
 
-Windows 7 または Windows Vista を対象とする値を使用**8.1**Windows SDK 8.1 はこれらのプラットフォームとの下位互換性のあるのため、します。 さらに、適切な値を定義する必要があります**_WIN32_WINNT** targetver.h にします。 Windows 7 では、これは 0x0601 になります。 参照してください[WINVER および _WIN32_WINNT の変更](../porting/modifying-winver-and-win32-winnt.md)です。
+Windows 7 または Windows Vista を対象とする値を使用**8.1**Windows SDK 8.1 はこれらのプラットフォームとの下位互換性のあるのため、します。 さらに、適切な値を定義する必要があります **_WIN32_WINNT** targetver.h にします。 Windows 7 では、これは 0x0601 になります。 参照してください[WINVER および _WIN32_WINNT の変更](../porting/modifying-winver-and-win32-winnt.md)です。
 
 Windows XP および Windows 2003 Server のプロジェクトをビルドし、ライブラリの現在のバージョンを使用する Visual Studio に含まれる Windows XP プラットフォーム ツールセットをインストールすることができます。 詳細を取得して、このプラットフォーム ツールセットを使用する方法については、次を参照してください。 [Windows XP 用プログラムを構成する](../build/configuring-programs-for-windows-xp.md)です。 プラットフォーム ツールセットの変更に関する詳細については、「[方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../build/how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
-**ターゲット プラットフォームの最小値。バージョン  
+**ターゲット プラットフォームの最小値。バージョン**  
 プロジェクトを実行できるプラットフォームの最小バージョンを指定します。 このプロパティは、Windows ユニバーサル プロジェクトなどのプロジェクトの種類がサポートしている場合のみ表示されます。 アプリが最新の Windows SDK バージョンの機能を利用できるにもかかわらず、おそらく機能の一部が失われているためこれらの機能を使用せずに以前のバージョンで実行している場合、これら 2 つのプロパティの値は異なる可能性があります。 このような場合は、コードで実行時に実行しているプラットフォームのバージョンを確認する必要があります。古いバージョンのプラットフォームでは使用できない機能は使用しないでください。
 
 Visual C++ ではこのオプションを適用しないことに注意してください。 これは、C# や JavaScript など、他の言語との一貫性のため、およびプロジェクトを使用する他のユーザーのガイドとして含められています。  最小バージョンで使用できない機能を使用する場合、Visual C++ ではエラーは生成されません。
@@ -113,13 +109,13 @@ Visual C++ ではこのオプションを適用しないことに注意してく
 **構成の種類**  
 選択できる構成ファイルの種類は以下のとおりです。
 
-- **アプリケーション (.exe)**リンカーのツールセット (C/C++ コンパイラ、MIDL、リソース コンパイラ、リンカー、BSCMake、XML Web サービス プロキシ ジェネレーター、カスタム ビルド、ビルド、リンク、ビルド後イベント) が表示されます。
+- **アプリケーション (.exe)** リンカーのツールセット (C/C++ コンパイラ、MIDL、リソース コンパイラ、リンカー、BSCMake、XML Web サービス プロキシ ジェネレーター、カスタム ビルド、ビルド、リンク、ビルド後イベント) が表示されます。
 
-- **ダイナミック ライブラリ (.dll)**リンカーのツールセットを表示、/DLL リンカー オプションを指定し、_WINDLL 定義を CL に追加します。
+- **ダイナミック ライブラリ (.dll)** リンカーのツールセットを表示、/DLL リンカー オプションを指定し、_WINDLL 定義を CL に追加します。
 
 - **メイクファイル**メイクファイルのツールセット (NMake) を表示します。
 
-- **スタティック ライブラリ (.lib)**ライブラリアンのツールセット (リンカーのライブラリアンを置き換えるし、XML Web サービス プロキシ ジェネレーター以外はリンカーのツールセットと同じ) を表示します。
+- **スタティック ライブラリ (.lib)** ライブラリアンのツールセット (リンカーのライブラリアンを置き換えるし、XML Web サービス プロキシ ジェネレーター以外はリンカーのツールセットと同じ) を表示します。
 
 - **ユーティリティ**ユーティリティのツールセット (MIDL、カスタム ビルド、ビルド、ビルド後イベント) を表示します。
 

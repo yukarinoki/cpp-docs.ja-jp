@@ -1,13 +1,10 @@
 ---
-title: "シンボル名の制限 |Microsoft ドキュメント"
-ms.custom: 
+title: シンボル名の制限 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.name
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - symbols, names
 - restrictions, symbol names
 ms.assetid: 4ae7f695-ca86-4f4b-989a-fe6f89650ff7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d82720142517468fffd4388f000f3830e8edb4ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59ee6ce257609c4761e43630a66de9cb9b996269
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="symbol-name-restrictions"></a>シンボル名の制限
 シンボル名に関する制限は、次のとおりです。  
@@ -59,10 +54,10 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シンボルまたはシンボル名 (ID) を変更します。](../windows/changing-a-symbol-or-symbol-name-id.md)   
  [シンボル値の制限](../windows/symbol-value-restrictions.md)   
  [定義済みシンボル ID](../windows/predefined-symbol-ids.md)

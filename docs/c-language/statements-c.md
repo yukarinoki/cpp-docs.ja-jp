@@ -1,13 +1,10 @@
 ---
-title: "ステートメント (C) | Microsoft Docs"
-ms.custom: 
+title: ステートメント (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Visual C, statements
 - statements
 ms.assetid: df3891cd-6195-4663-aecf-7fe7dc3ed9c3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c855dfd8ce8db503e47864e574e9d433ab00e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24eec5b9420d8a9eaf643b42e29fabd803c8a8a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statements-c"></a>ステートメント (C)
 C プログラムのステートメントは、プログラムの実行フローを制御します。 他のプログラミング言語と同様に C では、複数種類のステートメントでループを実行し、実行する他のステートメントを選択して、制御を移すことができます。 このセクションでは、簡単な[ステートメントの構文の概要](../c-language/overview-of-c-statements.md)の後に、C ステートメントをアルファベット順に説明します。  

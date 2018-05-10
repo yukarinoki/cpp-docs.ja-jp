@@ -1,12 +1,9 @@
 ---
-title: "MakeAllocator:: ~ MakeAllocator デストラクター |Microsoft ドキュメント"
-ms.custom: 
+title: 'MakeAllocator:: ~ MakeAllocator デストラクター |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAllocator::~MakeAllocator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ~MakeAllocator, destructor
 ms.assetid: f1299c5f-cc6b-4d4e-85d4-aee1be0e2b0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b56dd9c45aee094d32acb654e32cf5f24a3beb10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0734f895315f1c8ba7577d531c54a9dc11381e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="makeallocatormakeallocator-destructor"></a>MakeAllocator::~MakeAllocator デストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -42,11 +37,11 @@ WRL インフラストラクチャをサポートし、コードから直接使�
   
  このデストラクターは、必要な場合も、基になる割り当てられたメモリを削除します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MakeAllocator クラス](../windows/makeallocator-class.md)   
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

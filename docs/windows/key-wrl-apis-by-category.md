@@ -1,35 +1,30 @@
 ---
-title: "キーのカテゴリ別な WRL Api |Microsoft ドキュメント"
-ms.custom: 
+title: キーのカテゴリ別な WRL Api |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>カテゴリ別の主要な WRL API
 次の表には、主要な Windows ランタイム C++ テンプレート ライブラリのクラス、構造体、関数、およびマクロが一覧表示します。 ヘルパーの名前空間とクラスのコンス トラクターが省略されています。 これらのリストは、名前空間ごとに整理して、API のドキュメントが補強されます。  
   
 ### <a name="classes"></a>クラス  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[ActivationFactory クラス](../windows/activationfactory-class.md)|1 つ以上のクラスを Windows ランタイムによってアクティブ化できるようにします。|  
 |[AsyncBase クラス](../windows/asyncbase-class.md)|Windows ランタイムの非同期ステート マシンを実装します。|  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="structures"></a>構造体  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[ChainInterfaces 構造体](../windows/chaininterfaces-structure.md)|一連のインターフェイス ID に適用できる検証および初期化関数を指定します。|  
 |[CloakedIid 構造体](../windows/cloakediid-structure.md)|示す、 `RuntimeClass`、`Implements`と`ChainInterfaces`いる指定されたインターフェイスではアクセスできない IID リスト テンプレート。|  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="functions"></a>関数  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[ActivateInstance 関数](../windows/activateinstance-function.md)|登録し、指定したクラス ID で定義されている、指定した型のインスタンスを取得します|  
 |[AsWeak 関数](../windows/asweak-function.md)|指定されたインスタンスへの弱い参照を取得します。|  
@@ -74,10 +69,10 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="macros"></a>[マクロ]  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[ActivatableClass マクロ](../windows/activatableclass-macros.md)|指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを追加します。|  
 |[InspectableClass マクロ](../windows/inspectableclass-macro.md)|ランタイム クラス名と信頼レベルを設定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

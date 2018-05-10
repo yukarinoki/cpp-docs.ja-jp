@@ -1,13 +1,10 @@
 ---
-title: "ソース (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: ソース (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.source
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bfc79a76ece278c62b4895cdeb2e10d6df42aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11ee58fb2d500a7194fb08ee18b1af5cc7897830
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="source-c"></a>source (C++)
 クラスでは、接続ポイント用の COM オブジェクトのソース インターフェイスを指定します。 プロパティまたはメソッドでは、メンバーがオブジェクトまたはイベントのソースであるバリアント型を返すことを示します。  
@@ -83,20 +78,20 @@ class NN : public b
 };  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
 |||  
 |-|-|  
-|**対象**|**クラス**、 `struct`、`interface`|  
+|**対象**|**クラス**、 `struct`、 `interface`|  
 |**反復可能**|×|  
 |**必要な属性**|**コクラス**(ときにクラスまたは構造体に適用)|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [クラス属性](../windows/class-attributes.md)   
  [メソッドの属性](../windows/method-attributes.md)   

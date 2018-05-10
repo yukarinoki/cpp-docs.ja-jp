@@ -1,30 +1,25 @@
 ---
-title: "typeid (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: typeid (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (C++ コンポーネント拡張)
 オブジェクトの型を示す値を取得します。  
@@ -59,7 +54,7 @@ Platform::Type^ type = T::typeid;
 ### <a name="remarks"></a>コメント  
  C + + CX、typeid を返します、 [platform::type](../cppcx/platform-type-class.md)ランタイム型情報から構築します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -83,11 +78,11 @@ type::typeid
   
  `typeid` はコンパイル時に型名 (型) を評価できる必要がありますが、GetType は実行時に返す型を評価します。  
   
- `typeid`ネイティブ型の名前またはネイティブ型の名前です。 共通言語ランタイムの別名がかかることができます。参照してください[C++ ネイティブ型と等価な .NET Framework (C + + CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)詳細についてはします。  
+ `typeid` ネイティブ型の名前またはネイティブ型の名前です。 共通言語ランタイムの別名がかかることができます。参照してください[C++ ネイティブ型と等価な .NET Framework (C + + CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)詳細についてはします。  
   
  `typeid` ではネイティブ型も扱えますが、その場合でも System::Type を返します。  Type_info 構造体を取得する[typeid 演算子](../cpp/typeid-operator.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -204,5 +199,5 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

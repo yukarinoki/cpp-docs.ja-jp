@@ -1,13 +1,10 @@
 ---
-title: "バッファー オーバーフローが発生 |Microsoft ドキュメント"
-ms.custom: 
+title: バッファー オーバーフローが発生 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="buffer-overflow"></a>バッファー オーバーフロー
 文字のサイズを変更すると、バッファーに文字を配置するときに問題が発生することができます。 次のコードは、文字列から文字をコピー、 `sz`、バッファーに`rgch`:  
@@ -60,11 +55,11 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- このコードは、ループでバッファーのオーバーフローのテストを使用してテスト`_mbclen`によって示される現在の文字のサイズをテストする`sz`です。 呼び出すことによって、`_mbsnbcpy`関数内のコードを置き換えることができます、`while`コードの 1 つの行をループします。 例:  
+ このコードは、ループでバッファーのオーバーフローのテストを使用してテスト`_mbclen`によって示される現在の文字のサイズをテストする`sz`です。 呼び出すことによって、`_mbsnbcpy`関数内のコードを置き換えることができます、`while`コードの 1 つの行をループします。 例えば:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MBCS のプログラミングについて](../text/mbcs-programming-tips.md)

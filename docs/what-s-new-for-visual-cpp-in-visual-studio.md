@@ -1,22 +1,21 @@
 ---
-title: "Visual Studio での Visual C++ の新機能 | Microsoft Docs"
+title: Visual Studio での Visual C++ の新機能 | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
-- vs-ide-general
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] での Visual C++ の新機能
+# <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] での Visual C# の新機能
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] には、Visual C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの、250 以上のバグおよびレポートされた問題を修正してきました。その多くは、**[フィードバックの送信]** の [[問題の報告]](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) オプションおよび [[提案の送信]](https://visualstudio.uservoice.com/) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] の新機能](https://go.microsoft.com/fwlink/p/?linkid=834481)」を参照してください。
 
@@ -173,7 +172,7 @@ C++17 の追加機能がいくつか実装されました。 詳細について�
 
 ### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
-標準ライブラリの機能がいくつか、C++17 標準に合わせて追加、非推奨化、削除されました。 詳しくは、「[C++ Conformance Improvements in Visual Studio](cpp-conformance-improvements-2017.md#improvements_155)」 (Visual Studio での C++ 準拠の強化) をご覧ください。
+標準ライブラリの機能がいくつか、C++17 標準に合わせて追加、非推奨、削除されました。 詳しくは、「[C++ Conformance Improvements in Visual Studio](cpp-conformance-improvements-2017.md#improvements_155)」 (Visual Studio での C++ 準拠の強化) をご覧ください。
 
 #### <a name="new-experimental-features"></a>新しい試験的機能
 
@@ -420,7 +419,7 @@ Visual Studio のグラフィックス診断は、Direct3D アプリのレンダ
 
   ![リソース履歴の変更](media/resource-history-change.png)
 
-  完全な呼び出し履歴のキャプチャを有効にしてフレームをキャプチャした場合 (**[グラフィックス診断]** で **[Visual Studio]、[ツール]、[オプション]**の順に選択)、Visual Studio プロジェクト内の各変更イベントのコンテキストを簡単に推測および検査できます。
+  完全な呼び出し履歴のキャプチャを有効にしてフレームをキャプチャした場合 (**[グラフィックス診断]** で **[Visual Studio]、[ツール]、[オプション]** の順に選択)、Visual Studio プロジェクト内の各変更イベントのコンテキストを簡単に推測および検査できます。
 
 - **API 統計情報:** フレームでの API の使用の概要を表示します。 行っていることにまったく気付いていない呼び出しまたは多すぎる呼び出しを発見するのに便利です。 このウィンドウは、Visual Studio Graphics Analyzer の **[表示] > [API 統計情報]** から表示できます。
 

@@ -1,13 +1,10 @@
 ---
-title: "scanf 関数の文字幅指定 | Microsoft Docs"
-ms.custom: 
+title: scanf 関数の文字幅指定 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>scanf 関数の文字幅指定
 この情報は、`scanf_s` など、安全なバージョンを含む `scanf` 関数ファミリの書式指定文字列の解釈に適用されます。 これらの関数は通常、入力ストリームが一連のトークンに分割されていることを前提とします。 トークンは空白 (スペース、タブ、または改行文字) で区切られるか、数値型の場合は数値テキストに変換できない最初の文字による、数値データ型の自然な終了で区切られます。 ただし、幅指定を使用すると、トークンの自然な終了の前に入力の解析が停止することがあります。  

@@ -1,13 +1,10 @@
 ---
-title: "属性付きプログラミングの概念 |Microsoft ドキュメント"
-ms.custom: 
+title: 属性付きプログラミングの概念 |Microsoft ドキュメント
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++]
 - programming [C++], attributed programming
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6498659865ae3cad536cdc8e446c04cdd731a67e
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 8ba7084ea10cc502eea0e0e0f62709467750a99d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributed-programming-concepts"></a>属性付きプログラミングの概念
 Visual C には、さまざまなプログラム内で属性を使用するための情報が含まれています。 Visual C の新機能の属性は、COM プログラミングと .NET Framework 共通言語ランタイムによる開発を容易に設計されています。 ソース ファイルで属性を追加するときに、コンパイラは、プロバイダーのダイナミック リンク ライブラリ (DLL) または生成されたオブジェクト ファイル内のコードを変更するコードを挿入で動作します。 .Idl ファイル、インターフェイス、タイプ ライブラリ、およびその他の COM 要素の作成をサポートする属性があります。 統合開発環境 (IDE) と [プロパティ] ウィンドウ、ウィザードによって属性はサポートされます。  

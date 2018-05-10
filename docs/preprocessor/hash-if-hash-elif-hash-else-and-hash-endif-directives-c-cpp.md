@@ -1,12 +1,9 @@
 ---
-title: "#場合、#elif、#else、および #endif ディレクティブ (C/C++) |Microsoft ドキュメント"
-ms.custom: 
+title: '#場合、#elif、#else、および #endif ディレクティブ (C/C++) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else、および #endif ディレクティブ (C/C++)
 `#if` ディレクティブは、`#elif`、`#else`、および `#endif` ディレクティブと共にソース ファイルの各部分のコンパイルを制御します。 `#if` の後に記述した式がゼロ以外の値になる場合、`#if` ディレクティブの直後の一連の行が翻訳単位として保持されます。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 02/23/2018
  *条件付き*:  
  *if 部分 elif パーツ*opt*else 部分*opt*endif 行*  
   
- *if-part* :  
+ *if 部分*:  
  *場合に行のテキスト*  
   
  *if 行*:  
@@ -59,7 +54,7 @@ ms.lasthandoff: 02/23/2018
   
  **#ifndef**  *identifier*  
   
- *elif-parts* :  
+ *elif パーツ*:  
  *elif 行のテキスト*  
   
  *elif パーツ elif 行テキスト*  
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/23/2018
  *elif 行*:  
  **#elif**  *constant-expression*  
   
- *else-part* :  
+ *他の部分から成る*:  
  *else 行のテキスト*  
   
  *else 行*:  
@@ -80,7 +75,7 @@ ms.lasthandoff: 02/23/2018
   
  `#if`、`#elif`、`#else`、および `#endif` ディレクティブは、他の `#if` ディレクティブのテキスト部分に入れ子にできます。 入れ子になった `#else`、`#elif`、または `#endif` ディレクティブは、最も近い先行する `#if` ディレクティブに属します。  
   
- すべての条件付きコンパイル ディレクティブなど`#if`と**#ifdef**、終了と一致する必要があります`#endif`ディレクティブ ファイルの末尾です。 前に、エラー メッセージを生成するそれ以外の場合。 条件付きコンパイル ディレクティブがインクルード ファイルに含まれている場合も同じ条件を満たす必要があります。つまり、インクルード ファイルの終わりに対になる条件付きコンパイル ディレクティブが必要です。  
+ すべての条件付きコンパイル ディレクティブなど`#if`と **#ifdef**、終了と一致する必要があります`#endif`ディレクティブ ファイルの末尾です。 前に、エラー メッセージを生成するそれ以外の場合。 条件付きコンパイル ディレクティブがインクルード ファイルに含まれている場合も同じ条件を満たす必要があります。つまり、インクルード ファイルの終わりに対になる条件付きコンパイル ディレクティブが必要です。  
   
  次のコマンド行の一部内でマクロ置換は実行、`#elif`コマンド、マクロの呼び出しで使用できるように、*定数式*です。  
   
@@ -88,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
  プリプロセッサは、選択した処理*テキスト*コンパイラに渡します。 場合*テキスト*プリプロセッサ ディレクティブ、プリプロセッサはそれらのディレクティブが含まれています。 プリプロセッサによって選択されたテキスト ブロックだけがコンパイルされます。  
   
- プリプロセッサは、1 つを選択*テキスト*各定数式を評価することによって項目`#if`または`#elif`ディレクティブ true (ゼロ以外) の定数式が見つかるまでです。 すべてのテキストを選択 (以降での他のプリプロセッサ ディレクティブを含む **#** )、関連するまで`#elif`、 `#else`、または`#endif`です。  
+ プリプロセッサは、1 つを選択*テキスト*各定数式を評価することによって項目`#if`または`#elif`ディレクティブ true (ゼロ以外) の定数式が見つかるまでです。 すべてのテキストを選択 (以降での他のプリプロセッサ ディレクティブを含む**#**)、関連するまで`#elif`、 `#else`、または`#endif`です。  
   
  場合のすべての出現*定数式*が false の場合、いない場合、または`#elif`ディレクティブが表示されて、プリプロセッサは、後のテキスト ブロックを選択、`#else`句。 場合、`#else`句を省略するのすべてのインスタンス*定数式*で、`#if`ブロックは、false、テキスト ブロックが選択されていません。  
   
@@ -204,5 +199,5 @@ class Example
 #endif
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

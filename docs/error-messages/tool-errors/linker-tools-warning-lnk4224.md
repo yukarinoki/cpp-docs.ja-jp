@@ -27,7 +27,7 @@ ms.lasthandoff: 05/04/2018
   
  無効な古いリンカー オプションが指定され、無視されます。  
   
- たとえば、LNK4224 発生する可能性が/comment ディレクティブが表示される場合 obj.。使用して追加されて、/comment ディレクティブ、[コメント (C/C++)](../../preprocessor/comment-c-cpp.md)プラグマによって、非推奨 exestr オプションを使用します。 Dumpbin を使用して[/all](../../build/reference/all.md)を .obj ファイル内のリンカー ディレクティブを表示します。  
+ たとえば、LNK4224 発生する可能性が/comment ディレクティブが表示される場合 .obj。使用して追加されて、/comment ディレクティブ、[コメント (C/C++)](../../preprocessor/comment-c-cpp.md)プラグマによって、非推奨 exestr オプションを使用します。 Dumpbin を使用して[/all](../../build/reference/all.md)を .obj ファイル内のリンカー ディレクティブを表示します。  
   
  可能であれば、.obj ファイルのソースを変更し、このプラグマを削除します。 この警告を無視すると場合、.executable コンパイルされている可能性が **/clr: 純粋な**期待どおりに実行されません。  
   

@@ -1,13 +1,10 @@
 ---
-title: "トライグラフ | Microsoft Docs"
-ms.custom: 
+title: トライグラフ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d96088102cafe1b3bbdb7222cec33fc313774f41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3c83fc3feecc1b79f28c1b00b94469d30b93d8b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trigraphs"></a>トライグラフ
 C ソース プログラムのソース文字セットは 7 ビットの ASCII 文字セット内に含まれますが、ISO 646-1983 Invariant Code Set のスーパーセットです。 トライグラフ シーケンスでは、ISO (国際標準化機構) の Invariant Code Set のみを使用して C プログラムを記述できます。 トライグラフは、2 つの連続する疑問符で始まる 3 文字のシーケンスで、これがコンパイラにより対応する区切り文字に置き換えられます。 トライグラフは、一部の区切り文字に対応する適切なグラフィック表示がない文字セットを含む C ソース ファイルで使用できます。  
