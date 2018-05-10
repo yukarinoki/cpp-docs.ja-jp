@@ -1,27 +1,22 @@
 ---
-title: "1.4 コンプライアンス |Microsoft ドキュメント"
-ms.custom: 
+title: 1.4 コンプライアンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 662ad260-b9a1-43b7-b269-ef6ff0714e05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3fca67cb50cf91195d7edfb1e5e2fccfc9f8c5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c1bde41491f456ff99b0cd0d1ccc8ab98508412
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="14-compliance"></a>1.4 準拠
 OpenMP C と C++ API の実装は*OpenMP 準拠*かどうかを認識し、章 1、2、3、4、レイアウトとは、この仕様のすべての要素のセマンティクスを保持および付録 C A、B、D、E、および F情報は、目的でのみと仕様の一部ではないです。 API のサブセットのみを含む実装は、OpenMP 準拠ではありません。  

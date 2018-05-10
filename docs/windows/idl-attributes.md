@@ -1,13 +1,10 @@
 ---
-title: "IDL 属性 |Microsoft ドキュメント"
-ms.custom: 
+title: IDL 属性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>IDL 属性
 従来、.idl ファイルを管理することを意図したをする必要があります。  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 |[lcid](../windows/lcid.md)|ロケール識別子を関数に渡すことができます。|  
 |[length_is](../windows/length-is.md)|転送する配列要素の数を指定します。|  
 |[licensed](../windows/licensed.md)|使用してインスタンス化する必要がありますに適用すると、コクラスはライセンスされていることを示します**IClassFactory2**です。|  
-|[地元の](../windows/local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして MIDL コンパイラを使用できます。 個々 の関数で使用する場合は、対象のスタブが生成されないローカル プロシージャを指定します。|  
+|[local](../windows/local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして MIDL コンパイラを使用できます。 個々 の関数で使用する場合は、対象のスタブが生成されないローカル プロシージャを指定します。|  
 |[max_is](../windows/max-is.md)|有効な配列インデックスの最大値を指定します。|  
 |[モジュール](../windows/module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|  
 |[ms_union](../windows/ms-union.md)|カプセル化されていない共用体のネットワーク データ表現のアラインメントを制御します。|  
@@ -105,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |[propput](../windows/propput.md)|プロパティ設定関数を指定します。|  
 |[ptr](../windows/ptr.md)|すべてのポインターとしてのポインターを指定します。|  
 |[public](../windows/public-cpp-attributes.md)|.Idl ファイル内で参照されていない場合でも、typedef がタイプ ライブラリに送られることを確認します。|  
-|[範囲](../windows/range-cpp.md)|引数または値が設定される実行時にフィールドに使用できる値の範囲を指定します。|  
+|[range](../windows/range-cpp.md)|引数または値が設定される実行時にフィールドに使用できる値の範囲を指定します。|  
 |[readonly](../windows/readonly-cpp.md)|変数への代入を禁止します。|  
 |[ref](../windows/ref-cpp.md)|参照ポインターを識別します。|  
 |[requestedit](../windows/requestedit.md)|プロパティをサポートしていることを示します、 **OnRequestEdit**通知します。|  
@@ -126,6 +121,6 @@ ms.lasthandoff: 12/21/2017
 |[vi_progid](../windows/vi-progid.md)|ProgID のバージョンに依存しない形式を指定します。|  
 |[wire_marshal](../windows/wire-marshal.md)|送信アプリケーションに固有のデータ型の代わりに使用されるデータ型を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グループ別の属性](../windows/attributes-by-group.md)   
  [属性に関する制限事項](http://msdn.microsoft.com/en-us/6e6c4329-f667-4869-b991-cbe9cb7a8f61)

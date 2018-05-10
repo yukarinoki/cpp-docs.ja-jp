@@ -1,32 +1,27 @@
 ---
-title: "C.2 規則 |Microsoft ドキュメント"
-ms.custom: 
+title: C.2 規則 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 規則
 表記法は、C 規格の 6.1 で説明します。 この文法付録では、OpenMP C および C++ のディレクティブの基本言語の文法に拡張機能を示します。  
   
- **/\*C++ (ISO/IEC 14882:1998)\*/**  
+ **/\* C++ (ISO/IEC 14882:1998) \*/**  
   
  *ステートメント seq*:  
   
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  *ステートメント seq openmp ディレクティブ*  
   
- **/\*C90 で (ISO/IEC 9899: 1990)\*/**  
+ **/\* C90 で (ISO/IEC 9899: 1990) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  *ステートメントの一覧の openmp ディレクティブ*  
   
- **/\*C99 (ISO/IEC 9899:1999)\*/**  
+ **/\* C99 (ISO/IEC 9899:1999) \*/**  
   
  *ブロック アイテム*:  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  *statement*:  
   
- **/\*標準的なステートメント\*/**  
+ **/\* 標準的なステートメント \*/**  
   
  *openmp コンストラクト*  
   
@@ -274,7 +269,7 @@ ms.lasthandoff: 12/21/2017
   
  *宣言*:  
   
- **/\*標準的な宣言\*/**  
+ **/\* 標準的な宣言 \*/**  
   
  *threadprivate ディレクティブ*  
   
@@ -304,9 +299,9 @@ ms.lasthandoff: 12/21/2017
   
  *減少演算子*:  
   
- *いずれかの*:  **+  \* -(& a) ^ (& a) #124; (& a) (& a) (& m); #124 &#124;です。**  
+ *いずれかの*:  **+  \* -(& a) ^ &#124; (& a) (& a)&#124;&#124;**  
   
- **/\*C では\*/**  
+ **/\* C では \*/**  
   
  *変数リスト*:  
   
@@ -314,7 +309,7 @@ ms.lasthandoff: 12/21/2017
   
  *変数リスト* **、** *識別子*  
   
- **/\*C++ では\*/**  
+ **/\* C++ では \*/**  
   
  *変数リスト*:  
   

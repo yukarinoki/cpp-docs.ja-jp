@@ -1,13 +1,10 @@
 ---
-title: "同時実行ランタイムの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: 同時実行ランタイムの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>同時実行ランタイムの概要
 このドキュメントでは、同時実行ランタイムの概要について説明します。 また、同時実行ランタイムの利点、使用する状況、コンポーネントどうしの対話方法、コンポーネントとオペレーティング システムやアプリケーションとの対話方法について説明します。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 02/14/2018
   
 -   [Requirements](#requirements)  
   
-##  <a name="runtime">同時実行ランタイムは、重要な理由</a>  
+##  <a name="runtime"></a> 同時実行ランタイムは、重要な理由  
  同時実行用のランタイムでは、同時に実行されるアプリケーションおよびアプリケーション コンポーネントに統一性と予測可能性が提供されます。 同時実行ランタイムの利点の 2 つの例としては*協調タスク スケジューリング*と*協調ブロッキング*です。  
   
  同時実行ランタイムで使用される協調タスク スケジューラには、ワーク スティーリング アルゴリズムが実装されており、作業がコンピューティング リソース間に効率的に分散されます。 たとえば、同じランタイムによって管理される 2 つのスレッドを持つアプリケーションがあるとします。 一方のスレッドがスケジュールされたタスクを完了したら、他方のスレッドから作業をオフロードできます。 このメカニズムにより、アプリケーションの全体的な作業負荷のバランスが保たれます。  
@@ -98,7 +93,7 @@ ms.lasthandoff: 02/14/2018
   
  [[トップ](#top)]  
   
-##  <a name="lambda">C++ ラムダ式</a>  
+##  <a name="lambda"></a> C++ ラムダ式  
  同時実行ランタイムで定義されている型やアルゴリズムの多くは、C++ テンプレートとして実装されています。 こうした型やアルゴリズムの中には、処理を実行するためのルーチンをパラメーターとして受け取るものがあります。 このパラメーターには、ラムダ関数、関数オブジェクト、または関数ポインターを使用できます。 これらのエンティティとも呼びます*作業関数*または*処理ルーチン*です。  
   
  ラムダ式は、Visual C++ 言語の重要な新機能の 1 つです。ラムダ式を使用すると、並列処理用の処理関数を簡潔に定義できます。 関数オブジェクトおよび関数ポインターを使用すると、既存のコードで同時実行ランタイムを使用できます。 ただし、新しいコードを記述するときには、安全性や生産性の面で優れたラムダ式を使用することをお勧めします。  

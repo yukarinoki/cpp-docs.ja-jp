@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 676601259e7f1a682a57430198d24bdbc744a360
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fd9f665f77ca5ae5311b034ee7afef6241ac489
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用
 このドキュメントでは、コンポーネント オブジェクト モデル (COM) を使用するアプリケーションで同時実行ランタイムを使用する方法について説明します。  
@@ -160,7 +155,7 @@ fib(12) = 144
   
  **cl.exe/EHsc parallel-scripts.cpp/link ole32.lib**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)   

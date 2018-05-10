@@ -1,12 +1,9 @@
 ---
-title: "single_link_registry クラス |Microsoft ドキュメント"
-ms.custom: 
+title: single_link_registry クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - single_link_registry
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74167dcc03754c7f25d83058ec814798d40931a2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3220156d201a4dcb7edb6281298d3f248f38fc83
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry クラス
 `single_link_registry` オブジェクトは、単一のソース ブロックまたはターゲット ブロックのみを管理する `network_link_registry` です。  
@@ -72,7 +67,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
  `single_link_registry`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -166,6 +161,6 @@ virtual ~single_link_registry();
 ### <a name="remarks"></a>コメント  
  メソッドをスロー、 [invalid_operation](invalid-operation-class.md)リンクが削除される前に呼び出された場合に例外です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [multi_link_registry クラス](multi-link-registry-class.md)

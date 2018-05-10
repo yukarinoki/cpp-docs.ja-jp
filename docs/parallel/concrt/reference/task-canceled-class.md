@@ -1,12 +1,9 @@
 ---
-title: "task_canceled クラス |Microsoft ドキュメント"
-ms.custom: 
+title: task_canceled クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_canceled
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b349bdd1a4bc646e513d69c9c9297e313eacd94d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1f535a4cce75d388437025967b9c0c9b1ae0fd7a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskcanceled-class"></a>task_canceled クラス
 このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 によってもスローされます、`get()`メソッド[タスク](/visualstudio/extensibility/debugger/task-class-internal-members)、取り消されたタスクに対してです。  
@@ -51,7 +46,7 @@ class task_canceled : public std::exception;
   
  `task_canceled`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
@@ -70,5 +65,5 @@ task_canceled() throw();
  `_Message`  
  エラーの説明メッセージ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

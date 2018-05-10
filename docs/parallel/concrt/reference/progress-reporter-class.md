@@ -1,12 +1,9 @@
 ---
-title: "progress_reporter クラス |Microsoft ドキュメント"
-ms.custom: 
+title: progress_reporter クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - progress_reporter
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a5b5c402e356863c40e2fb7d461dbe3f0b7b9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="progressreporter-class"></a>progress_reporter クラス
 progress reporter クラスは、特定の型の進行状況の通知をレポートできます。 各 progress_reporter オブジェクトが、特定の非同期アクションまたは操作にバインドされます。  
@@ -64,7 +59,7 @@ class progress_reporter;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `progress_reporter`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** ppltasks.h  
   
  **名前空間:** concurrency  
@@ -87,5 +82,5 @@ void report(const _ProgressType& val) const;
  `val`  
  進行状況を示す通知によって報告されるペイロード。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

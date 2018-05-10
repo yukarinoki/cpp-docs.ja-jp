@@ -1,12 +1,9 @@
 ---
-title: "multi_link_registry クラス |Microsoft ドキュメント"
-ms.custom: 
+title: multi_link_registry クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multi_link_registry
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry クラス
 `multi_link_registry` オブジェクトは、複数のソース ブロックまたは複数のターゲット ブロックを管理する `network_link_registry` です。  
@@ -74,7 +69,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
  `multi_link_registry`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -183,6 +178,6 @@ void set_bound(size_t _MaxLinks);
 ### <a name="remarks"></a>コメント  
  制限を設定すると、エントリのリンクを解除するとが、`multi_link_registry`オブジェクト不変の状態を入力する場所への呼び出しをさらに`add`がスローされます、`invalid_link_target`例外。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [single_link_registry クラス](single-link-registry-class.md)

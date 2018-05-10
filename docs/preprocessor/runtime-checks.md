@@ -1,12 +1,9 @@
 ---
-title: "runtime_checks |Microsoft ドキュメント"
-ms.custom: 
+title: runtime_checks |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.runtime_checks
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c91d04c145435b2570963cac38463061598e805
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 817afaff738b2528bd165e814517c8399cd8a151
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="runtimechecks"></a>runtime_checks
 [/RTC](../build/reference/rtc-run-time-error-checks.md) 設定を無効化または復元します。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/23/2018
 |**c**|より小さいデータ型に値が代入されてデータが失われる場合に報告します。|  
 |**u**|定義する前に変数が使用された場合に報告します。|  
   
- これらは /RTC コンパイラ オプションで使用される同じ文字です。 例:  
+ これらは /RTC コンパイラ オプションで使用される同じ文字です。 例えば:  
   
 ```  
 #pragma runtime_checks( "sc", restore )  
@@ -74,5 +69,5 @@ ms.lasthandoff: 02/23/2018
 #pragma runtime_checks( "", restore )   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   

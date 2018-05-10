@@ -1,13 +1,10 @@
 ---
-title: "ユーザー グループのメンバーとして実行されている |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー グループのメンバーとして実行されている |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PRJ0050
 - VCD0047
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2a33cd113b631ab6c17cdb02fb29e27d663c1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>ユーザー グループのメンバーとしての実行
 Windows ユーザー アカウントを (Administrators グループではなく) Users グループのメンバーとして構成すると、悪意のあるコードに感染する可能性が低くなるため、セキュリティが強化されます。このトピックでは、そのしくみについて説明します。  
@@ -59,5 +54,5 @@ Windows ユーザー アカウントを (Administrators グループではなく
 ## <a name="debugging"></a>デバッグ  
  Debugging グループのメンバーになると、Visual Studio (ネイティブおよびアンマネージ) 内で起動した任意のアプリケーションを非管理者としてデバッグできます。 また、[プロセスにアタッチ] コマンドを使用して、実行中のアプリケーションにアタッチすることもできます。 ただし、別のユーザーが起動したネイティブまたはマネージ アプリケーションをデバッグするには、Administrator グループのメンバーである必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ推奨事項](security-best-practices-for-cpp.md)

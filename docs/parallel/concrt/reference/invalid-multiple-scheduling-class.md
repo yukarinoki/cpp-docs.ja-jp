@@ -1,12 +1,9 @@
 ---
-title: "invalid_multiple_scheduling クラス |Microsoft ドキュメント"
-ms.custom: 
+title: invalid_multiple_scheduling クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - invalid_multiple_scheduling
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7aed5586f58560e01b1a22f973ab7defadf49432
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 73f693c884542b93431a77e914d210f76721c5a0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling クラス
 このクラスは、`task_handle` オブジェクトまたは `run` オブジェクトの `task_group` メソッドを使用して `structured_task_group` オブジェクトが複数回スケジュールされた場合、間に `wait` メソッドまたは `run_and_wait` メソッドを呼び出さなかったときにスローされる例外を表します。  
@@ -51,7 +46,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  `invalid_multiple_scheduling`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
@@ -70,7 +65,7 @@ invalid_multiple_scheduling() throw();
  `_Message`  
  エラーの説明メッセージ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [task_handle クラス](task-handle-class.md)   
  [task_group クラス](task-group-class.md)   

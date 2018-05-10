@@ -1,12 +1,9 @@
 ---
-title: "IUMSUnblockNotification 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: IUMSUnblockNotification 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSUnblockNotification
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9058b2f16532f99e1beea8133fd5187ac296920e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bda4f6e2b0565d39fd604767f3a89bcdd9a6df2c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification 構造体
 ブロックされ、スケジューラの指定されたスケジュール コンテキストに制御を戻すことをトリガーされたスレッド プロキシが、ブロック解除され、スケジュールできる状態であることを示す、リソース マネージャーからの通知を表します。 このインターフェイスは、`GetContext` メソッドから返される、スレッド プロキシの関連付けられた実行コンテキストが再スケジュールされると無効になります。  
@@ -51,7 +46,7 @@ struct IUMSUnblockNotification;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IUMSUnblockNotification`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h  
   
  **名前空間:** concurrency  
@@ -66,7 +61,7 @@ virtual IExecutionContext* GetContext() = 0;
 ### <a name="return-value"></a>戻り値  
  `IExecutionContext`スレッド プロキシがブロック解除する実行コンテキストのインターフェイスです。  
   
-##  <a name="getnextunblocknotification"></a>  IUMSUnblockNotification::GetNextUnblockNotification Method  
+##  <a name="getnextunblocknotification"></a>  Iumsunblocknotification::getnextunblocknotification メソッド  
  次を返します`IUMSUnblockNotification`メソッドから返されたチェーン内のインターフェイス`IUMSCompletionList::GetUnblockNotifications`です。  
   
 ```
@@ -76,7 +71,7 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 ### <a name="return-value"></a>戻り値  
  次`IUMSUnblockNotification`メソッドから返されたチェーン内のインターフェイス`IUMSCompletionList::GetUnblockNotifications`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [IUMSScheduler 構造体](iumsscheduler-structure.md)   
  [IUMSCompletionList 構造体](iumscompletionlist-structure.md)

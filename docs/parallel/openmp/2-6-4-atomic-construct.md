@@ -1,27 +1,22 @@
 ---
-title: "2.6.4 atomic コンストラクト |Microsoft ドキュメント"
-ms.custom: 
+title: 2.6.4 atomic コンストラクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629fff5b0bef507b775fbe1b5bfabadd50b790be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66f0dc8469d1d70b2697df1fe120f10142d90dbe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic コンストラクト
 `atomic`ディレクティブは、複数の可能性を公開することではなく特定のメモリ位置がアトミックに、更新されたことにより、同時スレッドを作成します。 構文、`atomic`ディレクティブは、次のようにします。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   *expr*スカラー型の式は、によって指定されたオブジェクトを参照していない*x*です。  
   
--   `binop`オーバー ロードされた演算子ではないの 1 つ +、*、-、/、&、^、&#124;以外の場合は、<\<、または >> です。  
+-   `binop` オーバー ロードされた演算子ではないとの 1 つは、+、*、-、/、&、^、 &#124;、<\<、または >> です。  
   
  実装定義されているかどうか、実装をすべて置き換えます`atomic`ディレクティブを**重要な**と同じ一意であるディレクティブ*名前*、`atomic`ディレクティブでは、最適化の向上です。 多くの場合、ハードウェアの手順については、最小限のオーバーヘッドでアトミックな更新プログラムを実行することができます。  
   

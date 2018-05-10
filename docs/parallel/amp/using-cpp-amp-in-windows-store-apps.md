@@ -1,27 +1,22 @@
 ---
-title: "UWP アプリで C++ AMP を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: UWP アプリで C++ AMP を使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5736c84f21535222de5659780968efd98e1467da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>UWP アプリで C++ AMP の使用
 ユニバーサル Windows プラットフォーム (UWP) アプリで C++ AMP (C++ Accelerated Massive Parallelism) を使用するには、GPU (グラフィックス処理装置) またはその他の計算アクセラレータで計算を実行します。 ただし C++ AMP では、Windows ランタイムの型を直接操作するための API が提供されておらず、Windows ランタイムでは C++ AMP のラッパーが提供されません。 Windows ランタイムの型を (独自に作成したコードも含めて) コード内で使用するときは、C++ AMP と互換性のある型に変換する必要があります。  
@@ -122,7 +117,7 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
     });
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ を使用して最初の UWP アプリを作成します。](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
  [C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

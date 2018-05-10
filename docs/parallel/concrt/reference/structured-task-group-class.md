@@ -1,12 +1,9 @@
 ---
-title: "structured_task_group クラス |Microsoft ドキュメント"
-ms.custom: 
+title: structured_task_group クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - structured_task_group
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cca5d20b89df97e27529d656e9a6553fd8a1820
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group クラス
 `structured_task_group` クラスは、並列処理の高度に構造化されたコレクションを表します。 `structured_task_group` オブジェクトを使用して個々の並列タスクを `task_handle` のキューに配置し、それらのタスクが完了するまで待機するか、実行が完了する前にタスク グループを取り消すことができます。取り消すと、実行が開始されていないタスクはすべて中止されます。  
@@ -56,7 +51,7 @@ class structured_task_group;
   
 |名前|説明|  
 |----------|-----------------|  
-|[cancel](#cancel)|このタスク グループをルートとする作業のサブツリーをキャンセルしようとしています。 最大限の努力をによりします。 タスク グループでスケジュールされているすべてのタスクが取り消さ推移的に可能な場合です。|  
+|[キャンセル](#cancel)|このタスク グループをルートとする作業のサブツリーをキャンセルしようとしています。 最大限の努力をによりします。 タスク グループでスケジュールされているすべてのタスクが取り消さ推移的に可能な場合です。|  
 |[is_canceling](#is_canceling)|かどうか、タスク グループは現在、取り消し中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出されました、`structured_task_group`オブジェクト (確かに戻るには、このメソッドを修飾などが`true`)。 大文字と小文字がある可能性がある、`structured_task_group`オブジェクトはインラインで実行し、さらに、タスク グループのツリーで、作業が取り消されました。 キャンセルがこれを経由して流れます前もってを判断できますランタイムこれらの場所などの場合`structured_task_group`オブジェクト、`true`も返されます。|  
 |[run](#run)|オーバーロードされます。 タスクがスケジュール、`structured_task_group`オブジェクト。 呼び出し元の有効期間を管理する、`task_handle`に渡されたオブジェクト、`_Task_handle`パラメーター。 パラメーターを受け取るバージョンで`_Placement`タスクがそのパラメーターで指定された場所で実行する方向にバイアスされます。|  
 |[run_and_wait](#run_and_wait)|オーバーロードされます。 呼び出し元のコンテキストでの支援を受けてインラインを実行するタスクをスケジュール、`structured_task_group`完全キャンセルのサポートのオブジェクト。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run_and_wait`の有効期間を管理するため、呼び出し元が、`task_handle`オブジェクト。 関数が処理されるまでにし、待機、`structured_task_group`オブジェクトが完了したか取り消されました。|  
@@ -78,7 +73,7 @@ class structured_task_group;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `structured_task_group`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** ppl.h  
   
  **名前空間:** concurrency  
@@ -222,7 +217,7 @@ task_group_status wait();
   
  このいずれかのメソッドを呼び出すことを義務付けてがある場合に、例外的ではない実行のパス、または`run_and_wait`メソッドのデストラクターの前に、`structured_task_group`を実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [task_group クラス](task-group-class.md)   
  [task_handle クラス](task-handle-class.md)

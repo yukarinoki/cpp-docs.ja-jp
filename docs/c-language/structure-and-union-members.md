@@ -1,13 +1,10 @@
 ---
-title: "構造体と共用体のメンバー | Microsoft Docs"
-ms.custom: 
+title: 構造体と共用体のメンバー | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183aead53ee02f36bc982e4f33ad174346da5f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 7cf98987323b96c8b3977e9a6d2bc590e0b612b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-union-members"></a>構造体と共用体のメンバー
 "メンバー選択式" は構造体と共用体のメンバーを参照します。 このような式には、選択したメンバーの値と型が割り当てられます。  
@@ -109,5 +104,5 @@ list[8].b = 12;
   
  このステートメントは、構造体の配列から個々の構造体メンバーを選択する方法を示しています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンバー アクセス演算子: . および ->](../cpp/member-access-operators-dot-and.md)

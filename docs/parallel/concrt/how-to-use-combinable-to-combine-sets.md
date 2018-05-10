@@ -1,30 +1,25 @@
 ---
-title: "方法: combinable セットの結合を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: combinable セットの結合を使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bbd36e9536707bc639e8f80cc019b7fda18f793
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 689dacb98bc9f8053686a02414151b4982edca67
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>方法: combinable を使用して集合を結合する
 このトピックの内容を使用する方法を示しています、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスに含まれる素数の集合を計算します。  
@@ -50,7 +45,7 @@ parallel time: 78 ms
   
  **cl.exe/EHsc 並列-結合-primes.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)   
  [combinable クラス](../../parallel/concrt/reference/combinable-class.md)   
  [combinable::combine_each メソッド](reference/combinable-class.md#combine_each)

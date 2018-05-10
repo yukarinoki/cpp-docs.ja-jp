@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: join デッドロックの防止に使用した |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: join デッドロックの防止に使用した |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>チュートリアル: join を使用したデッドロックの防止
-このトピックでは、食事する哲学者の問題を使用して、使用する方法を説明するために、 [concurrency::join](../../parallel/concrt/reference/join-class.md)アプリケーションでデッドロックを防止するクラス。 ソフトウェア アプリケーションで*デッドロック*2 つ以上のプロセスの各リソースを保持して、その他のリソースを解放する別のプロセスをお互いに待機するときに発生します。  
+このトピックでは、食事する哲学者の問題を使用して、使用する方法を説明するために、 [concurrency::join](../../parallel/concrt/reference/join-class.md)アプリケーションでデッドロックを防止するクラス。 ソフトウェア アプリケーションで、2 つ以上のプロセスがそれぞれリソースを確保し、別のプロセスがリソースを解放するのをお互いに待機すると、*デッドロック*が発生します。  
   
  "食事する哲学者の問題" は、リソース セットが複数の同時実行プロセス間で共有される場合に発生する可能性のある一般的な問題の特定の例です。  
   
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 - [デッドロックの防止に結合を使用](#solution)  
   
-##  <a name="problem"></a>食事する哲学者の問題  
+##  <a name="problem"></a> 食事する哲学者の問題  
  "食事する哲学者の問題" は、アプリケーションでどのようにデッドロックが発生するかを示します。 この問題では、5 人の哲学者が丸いテーブルを囲んで座っています。 どの哲学者も思索と食事を交互に行っています。 どの哲学者も左隣の哲学者と 1 本の箸を共有する必要があり、また右隣の哲学者とも別の 1 本の箸を共有する必要があります。 次の図は、この配置を表しています。  
   
  ![食事する哲学者問題](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="deadlock"></a>単純な実装  
+##  <a name="deadlock"></a> 単純な実装  
  次の例は、"食事する哲学者の問題" を考慮していない実装を示しています。 `philosopher`から派生するクラス[concurrency::agent](../../parallel/concrt/reference/agent-class.md)、各哲学者は独立して行動を有効にします。 例は、一連の共有を使用して[concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)オブジェクトに、それぞれ`philosopher`オブジェクトの 2 本の箸への排他アクセスします。  
   
  この実装を図に関連付けて説明すると、`philosopher` クラスは 1 人の哲学者を表します。 `int` 変数は、それぞれの箸を表します。 `critical_section` オブジェクトは、箸が置かれる箸置きとして機能します。 `run` メソッドは、哲学者の生命をシミュレートしています。 `think` メソッドは、考える行為をシミュレートしており、`eat` メソッドは、食事する行為をシミュレートしています。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="solution"></a>デッドロックの防止に結合を使用  
+##  <a name="solution"></a> デッドロックの防止に結合を使用  
  このセクションでは、メッセージ バッファーおよびメッセージ パッシング関数を使用して、デッドロックを発生させないようにする方法について説明します。  
   
  前に、この例を関連付ける、`philosopher`各クラスが置き換えられます`critical_section`オブジェクトを使用して、 [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクトおよび`join`オブジェクト。 `join` オブジェクトは、哲学者に箸を与える決定者として機能します。  
@@ -154,7 +149,7 @@ plato ate 50 times.
   
  [[トップ](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)   

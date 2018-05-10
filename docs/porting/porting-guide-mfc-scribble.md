@@ -1,27 +1,22 @@
 ---
-title: "移植のガイド: MFC Scribble | Microsoft ドキュメント"
-ms.custom: 
+title: '移植のガイド: MFC Scribble | Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88be2baf2c2ce11be4594501ef12c2e339dec4dd
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fe0ae0580be4ab062e3ff7ee0cedfb42e201272d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植のガイド: MFC Scribble
 このトピックは、古いバージョンの Visual Studio で作成された Visual C++ プロジェクトを Visual Studio 2017 にアップグレードする手順を紹介する複数のトピックの 1 つ目です。 これらのトピックでは、例によってアップグレード プロセスを照会し、とてもシンプルなプロジェクトから始めて、少し複雑なものに進みます。 このトピックでは、特定のプロジェクト (MFC Scribble) についてのアップグレード プロセスの作業を行います。 これは、C++ プロジェクトのアップグレード プロセスに関する基本的な紹介として適しています。  
@@ -62,7 +57,7 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 ### <a name="step-2-getting-it-to-build"></a>手順 2. ビルドできる状態にする  
  ビルド前に、プロジェクト システムがどのコンパイラのバージョンを使用しているのかを知るため、プラットフォーム ツールセットを確認します。 [プロジェクトのプロパティ] ダイアログの **[構成プロパティ]** にある **[全般]** カテゴリで、**[プラットフォーム ツールセット]** プロパティを確認します。 それには、Visual Studio のバージョンとプラットフォームのツールのバージョン番号が含まれ、このケースではツールの Visual Studio 2017 のバージョンは v141 です。 もともと Visual C++ 2010、2012、2013、または 2015 を使用してコンパイルされているプロジェクトを変換する場合、ツールセットは Visual Studio 2017 ツールセットに自動的に更新されません。   
   
-  Unicode に切り替えるには、プロジェクトのプロパティを開き、**[構成プロパティ]** で**[全般]** セクションを選択して、**[文字セット]** プロパティを探します。 これを **[マルチ バイト文字セットを使用する]** から **[Unicode 文字セットを使用する]** に変更します。 この変更の影響として、_UNICODE と UNICODE のマクロが定義されて、_MBCS が定義されなくなります。このことは、**[コマンド ライン]** プロパティの **[C/C++]** カテゴリで確認できます。  
+  Unicode に切り替えるには、プロジェクトのプロパティを開き、**[構成プロパティ]** で **[全般]** セクションを選択して、**[文字セット]** プロパティを探します。 これを **[マルチ バイト文字セットを使用する]** から **[Unicode 文字セットを使用する]** に変更します。 この変更の影響として、_UNICODE と UNICODE のマクロが定義されて、_MBCS が定義されなくなります。このことは、**[コマンド ライン]** プロパティの **[C/C++]** カテゴリで確認できます。  
   
 ```Output  
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic 

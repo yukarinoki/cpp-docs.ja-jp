@@ -1,12 +1,9 @@
 ---
-title: "unorm クラス |Microsoft ドキュメント"
-ms.custom: 
+title: unorm クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - unorm
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfd4ed2b4aad398e1206d0e3b786742841aa189b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unorm-class"></a>unorm クラス
 Unorm 数を表します。 各要素は、浮動小数点 [0.0 f, 1.0f] の範囲の数。  
@@ -50,9 +45,9 @@ class unorm;
 |----------|-----------------|  
 |unorm::operator--||  
 |unorm::operator float|変換演算子です。 Unorm 数、浮動小数点に変換する値をポイントします。|  
-|unorm::operator*=||  
+|unorm::operator * =||  
 |unorm::operator/=||  
-|unorm::operator++||  
+|+ + unorm::operator||  
 |unorm::operator+=||  
 |unorm::operator=||  
 |unorm::operator-=||  
@@ -60,7 +55,7 @@ class unorm;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `unorm`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp_short_vectors.h  
   
  **Namespace:** concurrency::graphics  
@@ -112,5 +107,5 @@ inline explicit unorm(
  `_Other`  
  初期化するために使用される norm オブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

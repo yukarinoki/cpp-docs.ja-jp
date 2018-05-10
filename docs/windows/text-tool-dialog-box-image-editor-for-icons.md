@@ -1,13 +1,10 @@
 ---
-title: "テキスト ツール ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント"
-ms.custom: 
+title: テキスト ツール ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.texttool
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - text, adding to an image
 - Text Tool dialog box
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed1a15dbe8947bc52c8a91d94ca12fee6badcf77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 039158b65664a24280fa8ebac0938892c3fdeb08
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>[テキスト ツール] ダイアログ ボックス (アイコン用イメージ エディター)
 使用して、**テキスト ツール**テキスト カーソル、ビットマップ、またはアイコン リソースを追加する ダイアログ ボックス。  
@@ -45,9 +40,9 @@ ms.lasthandoff: 12/21/2017
   
  右クリック、**テキスト ツール** ダイアログ ボックスは、Windows の標準コマンドの一覧を含む既定のショートカット メニューにアクセスします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)
 

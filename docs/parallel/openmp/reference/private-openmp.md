@@ -1,12 +1,9 @@
 ---
-title: "プライベート (OpenMP) |Microsoft ドキュメント"
-ms.custom: 
+title: プライベート (OpenMP) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - private
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - private OpenMP clause
 ms.assetid: 772904a2-1345-4562-90e6-eb4dc85aea1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91be79ddda664ffea2bc06dfb5f4cede7c4e8880
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 各スレッドは、変数の独自のインスタンスである必要がありますを指定します。  
@@ -233,5 +228,5 @@ nThreadPrivate = 0 (The last value in the master thread)
        nShared = 1 (The value assigned, from the delayed thread, 1)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [句](../../../parallel/openmp/reference/openmp-clauses.md)

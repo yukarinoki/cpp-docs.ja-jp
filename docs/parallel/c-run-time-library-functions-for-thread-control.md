@@ -1,13 +1,10 @@
 ---
-title: "スレッド コントロールのための C ランタイム ライブラリ関数 |Microsoft ドキュメント"
-ms.custom: 
+title: スレッド コントロールのための C ランタイム ライブラリ関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _beginthreadex function
 - _endthreadex function
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d3d9029f85a8a80da6a7cd38bb26b887223d35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a505bae156edba6798812b807d7ab5c6ea9e396
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>スレッド コントロールのための C ランタイム ライブラリ関数
 Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っています。 どのスレッドでも新しいスレッドを作成できます。 スレッドには、作業をすばやく完了して終了するものもあれば、プログラムの実行中アクティブ状態を続けるものもあります。  
@@ -40,10 +35,10 @@ Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っ�
 > [!NOTE]
 >  Libcmt.lib を使用してビルドしたプログラムから C ランタイム ルーチンを呼び出す場合は、`_beginthread` 関数または `_beginthreadex` 関数でスレッドを起動する必要があります。 Win32 の `ExitThread` 関数および `CreateThread` 関数は使用しないでください。 また、C ランタイム ライブラリのデータ構造体へアクセス中のスレッドがあって、その完了を待っている複数のスレッドが存在する場合に `SuspendThread` を使うと、デッドロック状態になります。  
   
-##  <a name="_core_the__beginthread_function"></a>_Beginthread および _beginthreadex 関数  
+##  <a name="_core_the__beginthread_function"></a> _Beginthread および _beginthreadex 関数  
  `_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成します。 スレッドは、プロセスのコードやデータ セグメントをプロセス内の他のスレッドと共有しますが、各スレッドには、独自のレジスタ値、スタック領域、および現在の命令アドレスがあります。 それぞれのスレッドに CPU 時間が与えられるので、プロセス中のすべてのスレッドを同時に実行できます。  
   
- `_beginthread`および`_beginthreadex`に似ていますが、 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 API の関数が、これらの相違点。  
+ `_beginthread` および`_beginthreadex`に似ていますが、 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Win32 API の関数が、これらの相違点。  
   
 -   これらの関数は、特定の C ランタイム ライブラリ変数を初期化します。 これは、スレッドで C ランタイム ライブラリを使う場合に重要です。  
   
@@ -51,8 +46,8 @@ Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っ�
   
  `_beginthread` および `_beginthreadex` は、正常に終了した場合は新しいスレッドのハンドルを、エラーが発生した場合はエラー コードをそれぞれ返します。  
   
-##  <a name="_core_the__endthread_function"></a>_Endthread、_endthreadex 関数  
+##  <a name="_core_the__endthread_function"></a> _Endthread、_endthreadex 関数  
  [_Endthread](../c-runtime-library/reference/endthread-endthreadex.md)関数によって作成されたスレッドの終了`_beginthread`(と同様に、`_endthreadex`によって作成されたスレッドが終了`_beginthreadex`)。 これらの関数が終了すると、スレッドは自動的に終了します。 `_endthread` および `_endthreadex` は、スレッドの内部条件に基づいて終了させる場合に便利です。 たとえば、通信ポートを制御できないときに、通信処理専用のスレッドを終了する場合があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)

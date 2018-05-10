@@ -1,13 +1,10 @@
 ---
-title: "スコープと可視性 | Microsoft Docs"
-ms.custom: 
+title: スコープと可視性 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b85f0ca180fc60b1281440845289d2f2a39d71af
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-and-visibility"></a>スコープおよび可視性
 識別子の "可視性" は、参照できるプログラムの部分、つまり "スコープ" を決定します。 識別子は、"スコープ" に含まれているプログラムの部分にのみ表示されます (つまり、使用可能)。表示されるファイル、関数、ブロック、または関数プロトタイプに制限される可能性があります (制限の昇順)。 識別子のスコープは、その名前が使用できるプログラムの一部です。 これは、"構文のスコープ" と呼ばれることもあります。 スコープには、関数、ファイル、ブロック、および関数プロトタイプの 4 種類があります。  

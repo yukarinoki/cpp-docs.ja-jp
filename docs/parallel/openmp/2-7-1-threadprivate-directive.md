@@ -1,27 +1,22 @@
 ---
-title: "2.7.1 threadprivate ディレクティブ |Microsoft ドキュメント"
-ms.custom: 
+title: 2.7.1 threadprivate ディレクティブ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb7f477be397f01ee4bd82f472ff26a26ce811
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9912ccbfa6f5773ec1e523245f75e675bb82244
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate ディレクティブ
 `threadprivate`ディレクティブによって、ファイルの名前付きスコープ、名前空間スコープ、または静的ブロック スコープ変数で指定された、*変数一覧*スレッドに対してプライベートです。 *変数リスト*不完全な型を持たない変数のコンマ区切り一覧を示します。 構文、`threadprivate`ディレクティブは、次のようにします。  
@@ -82,4 +77,4 @@ void f(int n) {
   
 -   動的なスレッドを参照してください[セクション 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)ページ 39 にします。  
   
--   `OMP_DYNAMIC`環境変数を参照してください[セクション 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 49 ページにします。
+-   `OMP_DYNAMIC` 環境変数を参照してください[セクション 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 49 ページにします。

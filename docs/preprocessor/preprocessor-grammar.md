@@ -1,12 +1,9 @@
 ---
-title: "プリプロセッサの文法 |Microsoft ドキュメント"
-ms.custom: 
+title: プリプロセッサの文法 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>プリプロセッサの文法
 **#define**  *identifier* *token-string*opt  
   
- *#* **define**  *identifier*[**(** *identifier*opt**,** *...* **,** *identifier*opt **)**] *token-string*opt  
+ *#* **define**  *identifier*[**(** *identifier*opt **,** *...* **,** *identifier*opt **)**] *token-string*opt  
   
  **defined(**  *identifier* **)**  
   
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
   
  `#include` **\<***path-spec***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"**opt  
+ **#line**  *digit-sequence*  **"** *filename* **"** opt  
   
  *#* **undef**  *identifier*  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/23/2018
  *条件付き*:  
  *if 部分 elif パーツ*opt*else 部分*opt*endif 行*  
   
- *if-part* :  
+ *if 部分*:  
  *if-linetext*  
   
  *if 行*:  
@@ -61,7 +56,7 @@ ms.lasthandoff: 02/23/2018
   
  **#ifndef**  *identifier*  
   
- *elif-parts* :  
+ *elif パーツ*:  
  *elif 行のテキスト*  
   
  *elif パーツ elif 行テキスト*  
@@ -69,7 +64,7 @@ ms.lasthandoff: 02/23/2018
  *elif 行*:  
  **#elif**  *constant-expression*  
   
- *else-part* :  
+ *他の部分から成る*:  
  *else-linetext*  
   
  *else 行*:  
@@ -78,7 +73,7 @@ ms.lasthandoff: 02/23/2018
  *endif 行*:  
  `#endif`  
   
- *digit-sequence* :  
+ *桁シーケンス*:  
  *digit*  
   
  *digit-sequence digit*  
@@ -86,7 +81,7 @@ ms.lasthandoff: 02/23/2018
  *桁*: のいずれか  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *token-string* :  
+ *トークン文字列*:  
  トークンの文字列  
   
  *トークン*:  
@@ -103,7 +98,7 @@ ms.lasthandoff: 02/23/2018
  *filename* :  
  有効なオペレーティング システム ファイル名  
   
- *path-spec* :  
+ *パス spec* :  
  有効なファイル パス  
   
  *テキスト*:  
@@ -112,5 +107,5 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  次の非終端はでは展開、[構文規則](../cpp/lexical-conventions.md)のセクションで、 *C++ 言語リファレンス*: `constant`、 `constant` -*式*、*識別子*、*キーワード*、 `operator`、および`punctuator`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [文法の概要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

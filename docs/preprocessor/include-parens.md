@@ -1,12 +1,9 @@
 ---
-title: "include() |Microsoft ドキュメント"
-ms.custom: 
+title: include() |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - include()
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - include() attribute
 ms.assetid: 86c9dcb2-d9e0-4fd5-97d7-0bb3e23d6ecc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6a8bfc67f63caa8ee1f2699c8bb8675dbae775
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 756aea4400d98b2bf061a54955b3df4b4eddd993
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="include"></a>include()
 **C 固有の仕様**  
@@ -50,6 +45,6 @@ include("Name1"[,"Name2", ...])
   
  **END C 固有の仕様**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [#import の属性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

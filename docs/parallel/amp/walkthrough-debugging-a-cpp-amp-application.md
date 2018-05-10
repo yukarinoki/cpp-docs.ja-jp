@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: C++ AMP アプリケーションのデバッグ |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: C++ AMP アプリケーションのデバッグ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル : C++ AMP アプリケーションのデバッグ
 このトピックでは、C++ Accelerated Massive Parallelism (C++ AMP) を使用して、グラフィックス処理装置 (GPU) を利用するアプリケーションをデバッグする方法を示します。 整数の大きな配列を合計する並列リダクション プログラムを使用します。 このチュートリアルでは、次の作業について説明します。  
@@ -58,11 +53,11 @@ ms.lasthandoff: 01/03/2018
   
 1.  Visual Studio を起動します。  
   
-2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]**の順にクリックします。  
+2.  メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
   
 3.  [**インストール**テンプレート] ペインで選択**Visual C**です。  
   
-4.  選択**Win32 コンソール アプリケーション**、型`AMPMapReduce`で、**名前**ボックスをクリックして、 **[ok]**ボタンをクリックします。  
+4.  選択**Win32 コンソール アプリケーション**、型`AMPMapReduce`で、**名前**ボックスをクリックして、 **[ok]** ボタンをクリックします。  
   
 5.  **[次へ]** ボタンをクリックします。  
   
@@ -198,7 +193,7 @@ ms.lasthandoff: 01/03/2018
   
 12. **プリコンパイル済みヘッダーの**プロパティを選択**プリコンパイル済みヘッダーを使用しない**を選択し、 **OK**ボタンをクリックします。  
   
-13. メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+13. メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
 ## <a name="debugging-the-cpu-code"></a>CPU コードのデバッグ  
  この手順では、ローカル Windows デバッガーを使用してこのアプリケーションの CPU コードが正しいことを確認します。 特に興味深いは、このアプリケーションでの CPU コードのセグメントは、`for`ループ、`reduction_sum_gpu_kernel`関数。 GPU 上で実行されるツリーに基づく並列リダクションを制御します。  
@@ -305,7 +300,7 @@ GPU スレッド データヒント
   
      指定された式で並べ替えるには、対応する列のヘッダーを選択します。  
   
-     選択、 **localA [localIdx [0]**列見出し、列の並べ替えにします。 次の図での並べ替えの結果**localA [localIdx [0]**です。  
+     選択、 **localA [localIdx [0]** 列見出し、列の並べ替えにします。 次の図での並べ替えの結果**localA [localIdx [0]** です。  
   
      ![結果が並べ替えられて並列ウォッチ ウィンドウ](../../parallel/amp/media/campf.png "campf")  
  並べ替えの結果  
@@ -321,7 +316,7 @@ GPU スレッド データヒント
   
 ### <a name="to-flag-gpu-threads"></a>GPU スレッドにフラグを設定するには  
   
-1.  選択、 **[スレッド]**タイル インデックスとスレッドのインデックスを並べ替えるには [並列ウォッチ 1] ウィンドウで列のヘッダー。  
+1.  選択、 **[スレッド]** タイル インデックスとスレッドのインデックスを並べ替えるには [並列ウォッチ 1] ウィンドウで列のヘッダー。  
   
 2.  メニュー バーで、次のように選択します。**デバッグ**、**続行**、進行状況を (AMPMapReduce.cpp の 32 行目で定義されている)、[次へ] のバリアにアクティブだった 4 つのスレッドを停止します。  
   
@@ -392,7 +387,7 @@ GPU スレッド ウィンドウでグループ化されたスレッド
   
      21 行目にあるバリアでブロックされていた 24 のスレッドが 32 の行になるまでの進行します。 これに示されて、 **GPU スレッド**ウィンドウです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ AMP の概要](../../parallel/amp/cpp-amp-overview.md)   
  [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)   
  [方法: GPU スレッド ウィンドウを使用します。](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   

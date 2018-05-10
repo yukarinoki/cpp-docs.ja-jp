@@ -1,29 +1,24 @@
 ---
-title: "メッセージ パッシング関数 |Microsoft ドキュメント"
-ms.custom: 
+title: メッセージ パッシング関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>メッセージ パッシング関数
 非同期エージェント ライブラリは、コンポーネント間でメッセージを渡すことが許可される複数の機能を提供します。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [例](#examples)  
   
-##  <a name="send"></a>送信および asend  
+##  <a name="send"></a> 送信および asend  
 
  [Concurrency::send](reference/concurrency-namespace-functions.md#send)関数にメッセージを送信、指定したターゲット同期的に、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)関数のメッセージから、指定された対象への非同期的に送信します。 両方の`send`と`asend`関数を待ってターゲットするには最終的に同意または拒否メッセージを示します。  
   
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="receive"></a>受信および try_receive  
+##  <a name="receive"></a> 受信および try_receive  
 
  [Concurrency::receive](reference/concurrency-namespace-functions.md#receive)と[:try_receive](reference/concurrency-namespace-functions.md#try_receive)関数は、特定のソースからデータを読み取ります。 `receive`関数が、使用可能になるデータを待って一方、`try_receive`関数が直ちに返されます。  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)   
  [send 関数](reference/concurrency-namespace-functions.md#send)   

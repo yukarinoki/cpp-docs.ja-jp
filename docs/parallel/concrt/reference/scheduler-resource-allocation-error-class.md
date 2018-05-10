@@ -1,12 +1,9 @@
 ---
-title: "scheduler_resource_allocation_error クラス |Microsoft ドキュメント"
-ms.custom: 
+title: scheduler_resource_allocation_error クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - scheduler_resource_allocation_error
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b84533fb578ed0e2988f88420d46aeb2ed7c9657
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c3b11a548bc98c44697de45c628205dc3e720971
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error クラス
 このクラスは、同時実行ランタイムでクリティカル リソースを取得できないためにスローされる例外を表します。  
@@ -61,7 +56,7 @@ class scheduler_resource_allocation_error : public std::exception;
   
  `scheduler_resource_allocation_error`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
@@ -97,5 +92,5 @@ explicit _CRTIMP scheduler_resource_allocation_error(
  `_Hresult`  
  `HRESULT`例外の原因となったエラーの値。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)
