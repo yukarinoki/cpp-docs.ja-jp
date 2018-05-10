@@ -2,11 +2,8 @@
 title: completion_future クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6b6aa7e9c160a7bedc6eed58a63c07ae7bb65913
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="completionfuture-class"></a>completion_future クラス
 C ++. AMP の非同期操作に対応するフューチャを表します。  
@@ -57,7 +52,7 @@ class completion_future;
 |名前|説明|  
 |----------|-----------------|  
 |[get](#get)|関連する非同期操作が完了するまで待機します。|  
-|[then](#then)|関連する非同期操作の実行が終了するときに、実行される `completion_future` オブジェクトにコールバック関数オブジェクトを継承します。|  
+|[そうしたら](#then)|関連する非同期操作の実行が終了するときに、実行される `completion_future` オブジェクトにコールバック関数オブジェクトを継承します。|  
 |[to_task](#to_task)|関連する非同期操作に対応する `task` オブジェクトを返します。|  
 |[valid](#valid)|オブジェクトが非同期操作に関連するかどうかを示すブール値を取得します。|  
 |[wait](#wait)|関連する非同期操作が完了するまでブロックします。|  
@@ -108,7 +103,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|新しいインスタンスを初期化、`completion_future`クラス コンス トラクターをコピーしています。|  
 |`completion_future(completion_future&& _Other);`|新しいインスタンスを初期化、`completion_future`コンス トラクターを移動することによってクラスです。|  
   
-## <a name="get"></a> get 
+## <a name="get"></a> 取得 
 
 関連する非同期操作が完了するまで待機します。 非同期操作中にいずれかが発生した場合は、ストアドの例外をスローします。  
   
@@ -131,7 +126,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>戻り値  
  `std::shared_future` オブジェクト。  
   
-## <a name="operator_eq"></a> operator= 
+## <a name="operator_eq"></a> 演算子 = 
 
 指定された `completion_future` オブジェクトの内容をこのオブジェクトにコピーします。  
   

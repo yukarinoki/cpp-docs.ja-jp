@@ -1,12 +1,9 @@
 ---
-title: "array_view クラス |Microsoft ドキュメント"
-ms.custom: 
+title: array_view クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>array_view クラス
 別のコンテナーに保持されるデータの N 次元のビューを表します。  
@@ -111,13 +106,13 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[rank 定数](#rank)|`array_view` オブジェクトのランクを格納します。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[extent](#extent)|`extent` オブジェクトの形状を定義する `array_view` オブジェクトを取得します。|  
 |[source_accelerator_view](#source_accelerator_view)|取得、 [accelerator_view](accelerator-view-class.md)場所のデータ ソース、`array_view`があります。|  
@@ -157,12 +152,12 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  `array_view`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp.h  
   
  **名前空間:** Concurrency  
   
-##  <a name="dtor"></a> ~array_view 
+##  <a name="dtor"></a> ~ array_view 
 
  `array_view` オブジェクトを破棄します。  
   
@@ -829,5 +824,5 @@ array_view<const value_type,_New_rank> view_as(
 ### <a name="return-value"></a>戻り値  
  `array_view`構築されたオブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

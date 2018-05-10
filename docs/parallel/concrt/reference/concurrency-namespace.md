@@ -2,11 +2,8 @@
 title: 同時実行 Namespace |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 37
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79a6334dae9835901198387d58316ef34e81ce50
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace"></a>concurrency 名前空間
 `Concurrency` 名前空間には、C++ 向けの並列プログラミング フレームワークである同時実行ランタイムにアクセスするためのクラスおよび関数が用意されています。 詳細については、「[同時実行ランタイム](../../../parallel/concrt/concurrency-runtime.md)」を参照してください。  
@@ -200,8 +195,8 @@ namespace concurrency;
 |[create_async 関数](concurrency-namespace-functions.md#create_async)|ユーザーが指定したラムダまたは関数オブジェクトに基づいて Windows ランタイムの非同期構造を作成します。 `create_async` の戻り値の型は、`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^`、`IAsyncOperationWithProgress<TResult, TProgress>^` のいずれかで、メソッドに渡されるラムダのシグネチャに基づいています。|  
 |[create_task 関数](concurrency-namespace-functions.md#create_task)|オーバーロードされます。 作成、PPL[タスク](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)オブジェクト。 `create_task` は、タスク コンストラクターを使用した任意の場所で使用できます。 タスクの作成中に `auto` キーワードが使用できるようになるため、これは参考用として用意されています。|  
 |[CreateResourceManager 関数](concurrency-namespace-functions.md#createresourcemanager)|同時実行ランタイムのリソース マネージャーのシングルトン インスタンスを表すインターフェイスを返します。 リソース マネージャーは、相互の連携を必要とするスケジューラにリソースを割り当てます。|  
-|[DisableTracing 関数](concurrency-namespace-functions.md#disabletracing)|同時実行ランタイムでのトレースを無効にします。 この関数は、ETW トレースが既定で未登録であるため推奨されません。|  
-|[EnableTracing 関数](concurrency-namespace-functions.md#enabletracing)|同時実行ランタイムでトレースを有効にします。 この関数は、ETW トレースが既定でオンであるため推奨されません。|  
+|[DisableTracing 関数](concurrency-namespace-functions.md#disabletracing)|同時実行ランタイムでのトレースを無効にします。 この関数は、ETW トレースが既定で未登録であるため非推奨とされます。|  
+|[EnableTracing 関数](concurrency-namespace-functions.md#enabletracing)|同時実行ランタイムでトレースを有効にします。 この関数は、ETW トレースが既定でオンであるため非推奨とされます。|  
 |[Free 関数](concurrency-namespace-functions.md#free)|以前に `Alloc` メソッドによって同時実行ランタイムのキャッシュ サブアロケータに割り当てられたメモリ ブロックを解放します。|  
 |[get_ambient_scheduler 関数 (同時実行ランタイム)](concurrency-namespace-functions.md#get_ambient_scheduler)||  
 |[GetExecutionContextId 関数](concurrency-namespace-functions.md#getexecutioncontextid)|`IExecutionContext` インターフェイスを実装する実行コンテキストに割り当てることのできる一意識別子を返します。|  

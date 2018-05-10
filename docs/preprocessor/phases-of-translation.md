@@ -1,12 +1,9 @@
 ---
-title: "変換フェーズ |Microsoft ドキュメント"
-ms.custom: 
+title: 変換フェーズ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21cf6efeba83758bed8abe45aba36f025ace16f4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27e8e3a84d425966908bc1be37268c91cbbd34d8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="phases-of-translation"></a>変換フェーズ
 C および C++ プログラムは、それぞれがプログラムのテキストの一部を含む 1 つ以上のソース ファイルで構成されます。 ソース ファイルは、インクルード ファイル (`#include` プリプロセッサ ディレクティブを使用して含まれたファイル) と共に、`#if` などの条件付きコンパイル ディレクティブによって削除されたコードのセクションを除き、"翻訳単位" と呼ばれます。  
@@ -55,7 +50,7 @@ C および C++ プログラムは、それぞれがプログラムのテキス�
  *行スプライス*  
  バック スラッシュで終わるすべての行 (**\\**) の直後に、改行を配置して、文字が、物理行から論理行を形成するソース ファイルの次の行と結合されます。 これが空でない場合、ソース ファイルは前に円記号が付いていない改行文字で終了する必要があります。  
   
- トークン化  
+ *トークン化*  
  ソース ファイルはプリプロセッサ トークンと空白文字に分割されます。 ソース ファイル内のコメントは、それぞれ 1 個の空白文字と置き換えられます。 改行文字は保持されます。  
   
  *前処理*  
@@ -77,5 +72,5 @@ C および C++ プログラムは、それぞれがプログラムのテキス�
   
  リンカーは、すべての外部参照を解決し、1 つ以上の個別に処理された翻訳単位を結合して、標準ライブラリと共に実行可能プログラムまたは DLL を作成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ](../preprocessor/preprocessor.md)

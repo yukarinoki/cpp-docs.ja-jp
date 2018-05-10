@@ -1,12 +1,9 @@
 ---
-title: "concurrent_queue クラス |Microsoft ドキュメント"
-ms.custom: 
+title: concurrent_queue クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_queue
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9a3ee82b8b81532b4e63f080ad321a93725ce41
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue クラス
 `concurrent_queue` クラスは、キューの要素に先入れ先出し方式でアクセスできるようにするシーケンス コンテナー クラスです。 これを使用すると、`push`、`try_pop` などの特定の同時実行セーフな操作を実行できます。  
@@ -95,7 +90,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `concurrent_queue`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concurrent_queue.h  
   
  **名前空間:** concurrency  
@@ -272,5 +267,5 @@ size_type unsafe_size() const;
 ### <a name="remarks"></a>コメント  
  `unsafe_size` 同時実行セーフではないと、メソッドを呼び出したのと同時に呼び出された場合、正しくない結果を生じることができます`push`、 `try_pop`、および`empty`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

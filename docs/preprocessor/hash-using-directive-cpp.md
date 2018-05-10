@@ -1,12 +1,9 @@
 ---
-title: "#using ディレクティブ (C + + CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: '#using ディレクティブ (C + + CLR) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - friend_as_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1c43acde6e4f755c6757fc933c80091ba05927c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-directive-cclr"></a>#using ディレクティブ (C + + CLR)
 コンパイルされたプログラムにメタデータをインポート[/clr](../build/reference/clr-common-language-runtime-compilation.md)です。  
@@ -65,11 +60,11 @@ ms.lasthandoff: 02/23/2018
   
  モジュールではなくアセンブリ内の型をコンパイラで認識するには、型の解決を強制する必要があります。型の解決を実行するには、たとえば、型のインスタンスを定義します。 アセンブリの型名を解決する方法は他にもあります。たとえば、アセンブリの型を継承すると、コンパイラで型名が認識されます。  
   
- 使用するソース コードでビルドしたメタデータをインポートするときに[_declspec](../cpp/thread.md)メタデータでは、スレッドのセマンティクスは保持されません。 たとえば、変数を使用して宣言**_declspec**、.NET Framework 共通言語ランタイム用にビルドし、経由でインポートするプログラムでコンパイルされた`#using`がなくなる**_ _declspec (スレッド)**セマンティクス、変数にします。  
+ 使用するソース コードでビルドしたメタデータをインポートするときに[_declspec](../cpp/thread.md)メタデータでは、スレッドのセマンティクスは保持されません。 たとえば、変数を使用して宣言 **_declspec**、.NET Framework 共通言語ランタイム用にビルドし、経由でインポートするプログラムでコンパイルされた`#using`がなくなる **_ _declspec (スレッド)** セマンティクス、変数にします。  
   
  `#using` によって参照されるファイル内のインポートされるすべての型 (マネージとネイティブの両方) を使用できますが、コンパイラはネイティブ型を定義ではなく宣言として扱います。  
   
- コンパイルすると、mscorlib.dll が自動的に参照**/clr**です。  
+ コンパイルすると、mscorlib.dll が自動的に参照 **/clr**です。  
   
  LIBPATH 環境変数は、`#using` に渡されたファイル名をコンパイラが解決しようとするときに検索されるディレクトリを指定します。  
   
@@ -121,5 +116,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

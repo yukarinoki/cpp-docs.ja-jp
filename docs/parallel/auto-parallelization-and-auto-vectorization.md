@@ -1,27 +1,22 @@
 ---
-title: "自動並行化と自動ベクター化 |Microsoft ドキュメント"
-ms.custom: 
+title: 自動並行化と自動ベクター化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0b1ec19065647f78b4d9b2665003c0aa3a2795ba
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動並行化と自動ベクター化
 自動並行化と自動ベクター化は、コード内のループのパフォーマンスが自動的に向上するように設計されています。  
@@ -99,7 +94,7 @@ void test() {
 ## <a name="auto-vectorizer"></a>自動ベクター化  
  自動ベクター化機能は、コード内のループを分析し、可能な場合は、ターゲット コンピューター上のベクター レジスタとベクター命令を使用してそれらのループを実行します。 この方法により、コードのパフォーマンスが向上する可能性があります。 コンパイラは、Intel または AMD プロセッサの SSE2、AVX、AVX2 命令または ARM プロセッサの NEON 命令をターゲットによると、 [/arch](../build/reference/arch-minimum-cpu-architecture.md)スイッチします。  
   
- 指定されたよりも、自動ベクター化が命令を生成する可能性があります、 **/arch**スイッチします。 これらの命令は、実行時チェックによって保護され、引き続きコードが正しく実行されることが確認されます。 たとえば、コンパイル**/arch:sse2 以上**、SSE4.2 命令を生成する可能性があります。 実行時チェックによって、ターゲット プロセッサで SSE4.2 を使用できるかが確認され、プロセッサがそれらの命令をサポートしていない場合は SSE4.2 でないバージョンのループにジャンプします。  
+ 指定されたよりも、自動ベクター化が命令を生成する可能性があります、 **/arch**スイッチします。 これらの命令は、実行時チェックによって保護され、引き続きコードが正しく実行されることが確認されます。 たとえば、コンパイル **/arch:sse2 以上**、SSE4.2 命令を生成する可能性があります。 実行時チェックによって、ターゲット プロセッサで SSE4.2 を使用できるかが確認され、プロセッサがそれらの命令をサポートしていない場合は SSE4.2 でないバージョンのループにジャンプします。  
   
  既定では、自動ベクター化が有効になります。 ベクター化対象のコードのパフォーマンスを比較する場合は、使用[#pragma loop (no_vector)](../preprocessor/loop.md)を指定されたループのベクター化を無効にします。  
   
@@ -119,7 +114,7 @@ for (int i = 0; i < 1000; ++i)
   
  実際にはベクター化のしくみを示す例は、次を参照してください[Project Austin Part 2 of 6: Page Curling。](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ループ](../preprocessor/loop.md)   
  [ネイティブ コードでの並列プログラミング](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [/Qpar (自動並行化)](../build/reference/qpar-auto-parallelizer.md)   

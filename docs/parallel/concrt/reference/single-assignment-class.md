@@ -1,12 +1,9 @@
 ---
-title: "single_assignment クラス |Microsoft ドキュメント"
-ms.custom: 
+title: single_assignment クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - single_assignment
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4bf3effde2c7012a3ed901c9279bcc161cd670
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4bacbdaa4af141101863b4d6d81d114d43aced9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="singleassignment-class"></a>single_assignment クラス
 `single_assignment` メッセージング ブロックは、一度だけ書き込むことができる `propagator_block` を 1 つ格納できる、複数のターゲットと複数のソースを持つ順序付けられた `message` です。  
@@ -100,7 +95,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
  `single_assignment`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -316,7 +311,7 @@ T const& value();
 ### <a name="remarks"></a>コメント  
  このメソッドは、メッセージが現在格納されていない場合、メッセージが到着するまでに待機、`single_assignment`メッセージング ブロックです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [overwrite_buffer クラス](overwrite-buffer-class.md)   
  [unbounded_buffer クラス](unbounded-buffer-class.md)

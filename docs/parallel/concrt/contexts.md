@@ -1,29 +1,24 @@
 ---
-title: "コンテキスト |Microsoft ドキュメント"
-ms.custom: 
+title: コンテキスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ec145de3c41aeb30bdd308794d9f8d90a3f3e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a8297c8a7a779140f6464f39491e73950ddaeeb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contexts"></a>コンテキスト
 
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 ###### <a name="example"></a>例  
  例については、ネットワーク接続からデータを読み取るが原因で発生する待機時間のオフセットにオーバー サブスクリプションを使用する、次を参照してください。[する方法: を使用して、オーバー サブスクリプション待機時間のオフセットを](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [方法: スケジュール グループを使用して、実行の順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)   
  [方法: Context クラスを使用して協調セマフォを実装するには](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)   

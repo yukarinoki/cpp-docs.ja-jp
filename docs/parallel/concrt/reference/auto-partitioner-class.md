@@ -1,12 +1,9 @@
 ---
-title: "auto_partitioner クラス |Microsoft ドキュメント"
-ms.custom: 
+title: auto_partitioner クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - auto_partitioner
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1cdb2cf5dcb149879be44c59714c5af6008c4b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 05232aa954a9ded7d2ab3a26ae4e1524610c3d04
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="autopartitioner-class"></a>auto_partitioner クラス
 `auto_partitioner` クラスは、反復処理する範囲を分割するために、既定のメソッド `parallel_for`、`parallel_for_each`、および `parallel_transform` の使用を表します。 このパーティション分割のメソッドでは、負荷分散および反復ごとの取り消しで範囲スティーリングが使用されます。  
@@ -50,7 +45,7 @@ class auto_partitioner;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `auto_partitioner`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** ppl.h  
   
  **名前空間:** concurrency  
@@ -71,5 +66,5 @@ class auto_partitioner;
 auto_partitioner();
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

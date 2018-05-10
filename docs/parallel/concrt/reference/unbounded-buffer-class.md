@@ -1,12 +1,9 @@
 ---
-title: "unbounded_buffer クラス |Microsoft ドキュメント"
-ms.custom: 
+title: unbounded_buffer クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 `unbounded_buffer` メッセージング ブロックは、メッセージを無制限に格納することができる、複数のターゲットと複数のソースを持つ順序付けられた `propagator_block` です。  
   
@@ -100,7 +95,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
  `unbounded_buffer`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -348,7 +343,7 @@ unbounded_buffer(
   
  型`filter_method`シグネチャを持つファンクターは、`bool (_Type const &)`これは、これによって呼び出されます。`unbounded_buffer`メッセージング ブロックを、提供されたメッセージを受け入れる必要がありますかどうかを判断します。  
   
-##  <a name="dtor"></a> ~unbounded_buffer 
+##  <a name="dtor"></a> ~ unbounded_buffer 
 
  破棄、`unbounded_buffer`メッセージング ブロックです。  
   
@@ -356,7 +351,7 @@ unbounded_buffer(
 ~unbounded_buffer();  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [overwrite_buffer クラス](overwrite-buffer-class.md)   
  [single_assignment クラス](single-assignment-class.md)

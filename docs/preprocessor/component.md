@@ -1,12 +1,9 @@
 ---
-title: "コンポーネント |Microsoft ドキュメント"
-ms.custom: 
+title: コンポーネント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.component
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3edb2f68b479eeadca777e0707dd96e148d13fe8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5bb453e8fe9d21c25292c4e5f94de90dcc67676a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="component"></a>コンポーネント
 ブラウザー情報または依存関係情報の収集をソース ファイル内から制御します。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="browser"></a>ブラウザー  
  情報収集のオン/オフを切り替えます。また特定の名前を指定して情報収集の際に無視できます。  
   
- on または off を使用して、このプラグマ以降のブラウザー情報の収集を制御します。 例:  
+ on または off を使用して、このプラグマ以降のブラウザー情報の収集を制御します。 例えば:  
   
 ```  
 #pragma component(browser, off)  
@@ -57,7 +52,7 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  このプラグマを使用してブラウザー情報の収集を有効にする[ブラウザー情報を最初に有効にする](../build/reference/building-browse-information-files-overview.md)です。  
   
- **参照**有無にかかわらず、オプションを使用できます、*名前*引数。 使用して**参照**せず*名前*オンまたはオフの収集の (ただし、収集するその他の参照情報が続行されます)。 例:  
+ **参照**有無にかかわらず、オプションを使用できます、*名前*引数。 使用して**参照**せず*名前*オンまたはオフの収集の (ただし、収集するその他の参照情報が続行されます)。 例えば:  
   
 ```  
 #pragma component(browser, off, references)  
@@ -65,7 +60,7 @@ ms.lasthandoff: 02/23/2018
   
  このプラグマは、コンパイラによる参照情報の収集を停止します。  
   
- 使用して**参照**で*名前*と**オフ**への参照を防止*名前*ブラウズ情報ウィンドウに表示されないようにします。 この構文を使用して必要のない名前と型を無視することで、ブラウザー情報ファイルのサイズを縮小できます。 例:  
+ 使用して**参照**で*名前*と**オフ**への参照を防止*名前*ブラウズ情報ウィンドウに表示されないようにします。 この構文を使用して必要のない名前と型を無視することで、ブラウザー情報ファイルのサイズを縮小できます。 例えば:  
   
 ```  
 #pragma component(browser, off, references, DWORD)  
@@ -97,5 +92,5 @@ LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subs
   
  詳細については、次を参照してください。、[最小リビルドを有効にする](../build/reference/gm-enable-minimal-rebuild.md)(/Gm) コンパイラ オプション。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

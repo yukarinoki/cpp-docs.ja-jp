@@ -1,13 +1,10 @@
 ---
-title: "C 列挙型の宣言 | Microsoft Docs"
-ms.custom: 
+title: C 列挙型の宣言 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 697e4f37c8a59c40df80e29ff89f2021f61fb468
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-enumeration-declarations"></a>C 列挙体の宣言
 列挙体は、名前が付いた一連の整数定数で構成されます。 列挙型の宣言では、列挙タグ (省略可能) の名前を指定し、名前が付いた一連の整数識別子を定義します (これらの識別子は、"列挙セット"、"列挙定数"、"列挙子"、または "メンバー" と呼ばれます)。 列挙型の変数には、その型で定義された列挙セットの 1 つの値が格納されます。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="syntax"></a>構文  
  *enum-specifier*:  
- **enum**  *identifier* opt**{** *enumerator-list* **}**  
+ **enum**  *identifier* opt **{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   

@@ -1,12 +1,9 @@
 ---
-title: "propagator_block クラス |Microsoft ドキュメント"
-ms.custom: 
+title: propagator_block クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - propagator_block
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eb908bf108bb3ddff375506225b9be97b2898ca5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagatorblock-class"></a>propagator_block クラス
 `propagator_block` クラスは、ソースでもありターゲットでもあるメッセージ ブロックの抽象基底クラスです。 `source_block` クラスと `target_block` クラスの両方の機能が組み合わされています。  
@@ -82,7 +77,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
 |名前|説明|  
 |----------|-----------------|  
-|[propagate](#propagate)|このターゲット ブロックにソース ブロックからメッセージを非同期的に渡します。|  
+|[伝達](#propagate)|このターゲット ブロックにソース ブロックからメッセージを非同期的に渡します。|  
 |[send](#send)|このブロックにメッセージを同期的に処理を開始します。 によって呼び出される、`ISource`ブロックします。 この関数が完了したら、メッセージは既にブロックに伝達がします。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
@@ -112,7 +107,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
  `propagator_block`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -308,7 +303,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
 virtual void unlink_sources();
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [source_block クラス](source-block-class.md)   
  [ITarget クラス](itarget-class.md)

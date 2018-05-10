@@ -1,10 +1,7 @@
 ---
-title: "concurrency 名前空間の列挙型 |Microsoft ドキュメント"
-ms.custom: 
+title: concurrency 名前空間の列挙型 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency 名前空間の列挙型
 ||||  
@@ -59,7 +54,7 @@ enum agent_status;
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。[非同期エージェント](../../../parallel/concrt/asynchronous-agents.md)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h
 
 ##  <a name="agents_eventtype"></a>  Agents_EventType 列挙型  
@@ -82,7 +77,7 @@ enum Agents_EventType;
 |`AGENTS_EVENT_START`|いくつかの開始を表すイベントの種類の処理|  
 |`AGENTS_EVENT_UNLINK`|イベントの種類を表すメッセージ ブロックのリンクを解除します。|  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h
 
 ##  <a name="concrt_eventtype"></a>  ConcRT_EventType 列挙体  
@@ -105,8 +100,8 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_UNBLOCK`|コンテキストのブロック解除の動作を表すイベントの種類。|  
 |`CONCRT_EVENT_YIELD`|コンテキスト応答の動作を表すイベントの種類。|  
   
-### <a name="requirements"></a>必要条件  
- **ヘッダー:** concrt.h **Namespace:**同時実行
+### <a name="requirements"></a>要件  
+ **ヘッダー:** concrt.h **Namespace:** 同時実行
 
 ##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags 列挙型  
  イベントの種類のトレース フラグ。  
@@ -126,7 +121,7 @@ enum Concrt_TraceFlags;
 |`SchedulerEventFlag`||  
 |`VirtualProcessorEventFlag`||
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h
 
 ##  <a name="criticalregiontype"></a>  CriticalRegionType 列挙型  
@@ -143,10 +138,10 @@ enum CriticalRegionType;
 |`InsideHyperCriticalRegion`|コンテキストがハイパー クリティカル領域の内側にあることを示します。 ハイパー クリティカル領域の内部同期および非同期の中断は、スケジューラから表示されません。 このような中断、またはブロックが発生すると、リソース マネージャーが実行可能になるし、スケジューラをもう一度呼び出すのではなくそれを再開するスレッドの待機します。 このような領域内に取得されるロックは、このような領域の外側で実行されているコードと共有することはありません必要があります。 そうと、予測不可能なデッドロックが発生します。|  
 |`OutsideCriticalRegion`|コンテキストがクリティカル領域の外部にあることを示します。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
+##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType 列挙体  
  `DynamicProgressFeedback` ポリシーによって使用され、スケジューラのリソースのバランスを再調整する際の判断基準として、スケジューラから収集された統計情報に従うか、または `Activate` インターフェイスの `Deactivate` メソッドおよび `IVirtualProcessorRoot` メソッドの呼び出しによってアイドル状態との間で状態が変化する仮想プロセッサのみに基づくかを示します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md)です。  
   
 ```
@@ -158,7 +153,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|スケジューラでは、進行状況に関する情報は収集しません。 再均衡化はのみに基づいて行わ基になるハードウェア スレッドのサブスクリプション レベル。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)です。<br /><br /> この値は、使用するため、ランタイムによって予約されています。|  
 |`ProgressFeedbackEnabled`|スケジューラは、進行状況に関する情報を収集し、リソース マネージャーに渡します。 リソース マネージャーでは、この統計情報を基になるハードウェア スレッドのサブスクリプション レベルだけでなく、スケジューラの代わりにリソースを再度均衡化を利用します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)です。|  
-##  <a name="join_type"></a>  join_type Enumeration  
+##  <a name="join_type"></a>  join_type 列挙体  
  `join` メッセージング ブロックの種類。  
   
 ```
@@ -171,7 +166,7 @@ enum join_type;
 |`greedy`|最長一致`join`メッセージング ブロックはすぐに伝達時にメッセージを受信します。 これがより効率的ですが、ライブのロックをネットワークの構成によって発生する可能性です。|  
 |`non_greedy`|最短`join`メッセージング ブロックのメッセージを延期し、すべてに到着した後、それらを使用します。 これらは確実に動作が、速度が低下します。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
 
 ##  <a name="message_status"></a>  message_status 列挙体  
@@ -189,7 +184,7 @@ enum message_status;
 |`missed`|ターゲットは、メッセージを受信しようとしていますが、使用できませんでした。|  
 |`postponed`|ターゲットは、メッセージを延期します。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
 
 ##  <a name="policyelementkey"></a>  PolicyElementKey 列挙体  
@@ -214,7 +209,7 @@ enum PolicyElementKey;
 |`TargetOversubscriptionFactor`|暫定的なハードウェア スレッドあたりの仮想プロセッサ数です。 ターゲット オーバー サブスクリプション係数増やすことができます、リソース マネージャーで、必要に応じてに対応する`MaxConcurrency`コンピューター上のハードウェア スレッドにします。<br /><br /> 有効な値: 正の整数<br /><br /> 既定値: `1`|  
 |`WinRTInitialization`||  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
 
 ##  <a name="schedulertype"></a>  SchedulerType 列挙体  
@@ -231,7 +226,7 @@ enum SchedulerType;
 |`ThreadScheduler`|通常の Win32 スレッドの明示的な要求を示します。|  
 |`UmsThreadDefault`|Visual Studio 2013 での同時実行ランタイムでは、ユーザー モード スケジュール可能 (UMS) スレッドはサポートされていません。 `UmsThreadDefault` ポリシーの値として `SchedulerType` を使用しても、エラーは発生しません。 ただし、そのポリシーで作成されたスケジューラでは、既定で Win32 スレッドが使用されます。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
 ##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType 列挙体  
@@ -247,7 +242,7 @@ enum SchedulingProtocolType;
 |`EnhanceForwardProgress`|スケジューラは、スケジュール グループ間のラウンド ロビンを各タスクを実行した後です。 ブロックされていないコンテキストは一般的最初先出し (FIFO) 方式でスケジュールを設定します。 仮想プロセッサは、ブロックされていないコンテキストをキャッシュしません。|  
 |`EnhanceScheduleGroupLocality`|スケジューラは、別のスケジュール グループに移動する前に、現在のスケジュール グループ内のタスクの作業を続行します。 ブロックされていないコンテキストでは、仮想プロセッサあたりはキャッシュされ、それらのブロックを解除した仮想プロセッサでは通常最後先出し (LIFO) 方式でスケジュールされています。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
  
 ##  <a name="switchingproxystate"></a>  SwitchingProxyState 列挙体  
@@ -283,7 +278,7 @@ enum task_group_status;
 |`completed`|`task_group` オブジェクトまたは `structured_task_group` オブジェクトのキューに格納されたタスクは、正常に完了しました。|  
 |`not_complete`|`task_group` オブジェクトのキューに格納されたタスクは完了していません。 この値は、同時実行ランタイムによって現在返されていないことに注意してください。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** pplinterface.h  
 
 ##  <a name="winrtinitializationtype"></a>  WinRTInitializationType 列挙型  
@@ -299,8 +294,8 @@ enum WinRTInitializationType;
 |`DoNotInitializeWinRT`|アプリケーションが Windows 8 またはそれ以降のバージョンのオペレーティング システムで実行される場合、スケジューラ内のスレッドは、Windows ランタイムを初期化しません。|  
 |`InitializeWinRTAsMTA`|アプリケーションが Windows 8 またはそれ以降のバージョンのオペレーティング システムで実行される場合、スケジューラ内の各スレッドは、Windows ランタイムを初期化し、マルチスレッド アパートメントの一部であることを宣言します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

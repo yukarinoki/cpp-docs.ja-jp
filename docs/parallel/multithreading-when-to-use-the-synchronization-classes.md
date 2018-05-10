@@ -1,13 +1,10 @@
 ---
-title: "マルチ スレッド: 同期クラスを使用する場合 |Microsoft ドキュメント"
-ms.custom: 
+title: 'マルチ スレッド: 同期クラスを使用する場合 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - threading [C++], synchronization
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38437983552dfdf2cf6708ec5fd067e06387ea5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b05922b826de81b5192b183e1c0afdfcda189f03
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-when-to-use-the-synchronization-classes"></a>マルチスレッド : 同期クラスの使い分け
 MFC で提供されるマルチ スレッドのクラスは 2 つのカテゴリに分類されます同期オブジェクト ([関数](../mfc/reference/csyncobject-class.md)、 [CSemaphore](../mfc/reference/csemaphore-class.md)、 [CMutex](../mfc/reference/cmutex-class.md)、 [ 。CCriticalSection](../mfc/reference/ccriticalsection-class.md)、および[CEvent](../mfc/reference/cevent-class.md)) と同期アクセス オブジェクト ([CMultiLock](../mfc/reference/cmultilock-class.md)と[CSingleLock](../mfc/reference/csinglelock-class.md))。  
@@ -65,5 +60,5 @@ MFC で提供されるマルチ スレッドのクラスは 2 つのカテゴリ
   
  同期クラスの使用方法については、次を参照してください。[マルチ スレッド: 同期クラスを使用する方法](../parallel/multithreading-how-to-use-the-synchronization-classes.md)です。 同期については、次を参照してください。[同期](http://msdn.microsoft.com/library/windows/desktop/ms686353)で、[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]です。 MFC でマルチ スレッド処理のサポートについては、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](../parallel/multithreading-with-cpp-and-mfc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)

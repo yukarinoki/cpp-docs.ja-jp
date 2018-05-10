@@ -1,12 +1,9 @@
 ---
-title: "ループ |Microsoft ドキュメント"
-ms.custom: 
+title: ループ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - loop_CPP
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e076c48b512c6059a2f574a07f6e77acfaca22
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9af0e01cd29d6fe89e0cd0d6c5ff4a7030909799
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="loop"></a>ループ
 ループのコードを自動並列化によって処理する方法を制御します。また、ループを自動ベクター化の対象から除外します。  
@@ -61,6 +56,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>コメント  
  `loop` プラグマを使用するには、ループ定義の中ではなく直前にプラグマを置きます。 プラグマは後続のループのスコープ内で有効です。 1 つのループに複数のプラグマを任意の順序で適用できますが、プラグマを 1 つずつ個別のステートメントで指定する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [自動並行化と自動ベクター化](../parallel/auto-parallelization-and-auto-vectorization.md)   
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

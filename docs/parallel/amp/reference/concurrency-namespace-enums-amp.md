@@ -1,10 +1,7 @@
 ---
-title: "Concurrency 名前空間の列挙型 (AMP) |Microsoft ドキュメント"
-ms.custom: 
+title: Concurrency 名前空間の列挙型 (AMP) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::access_type
@@ -12,24 +9,22 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17378a34698cc80d356983898e0023b76877140
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a67b5e77b8ab8c52e55dea96e64a3f16a4d70e39
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Concurrency 名前空間の列挙型 (AMP)
 |||  
 |-|-|  
-|[access_type Enumeration](#access_type)|[queuing_mode 列挙型](#queuing_mode)|  
+|[access_type 列挙型](#access_type)|[queuing_mode 列挙型](#queuing_mode)|  
   
-##  <a name="access_type"></a>  access_type Enumeration  
+##  <a name="access_type"></a>  access_type 列挙型  
  データへのさまざまな種類のアクセスを示すために使用される列挙型。  
   
 ```  
@@ -46,7 +41,7 @@ enum access_type;
 |`access_type_write`|共有。 割り当ては、アクセラレータ上でアクセスでき、CPU 上では読み取りおよび書き込みの両方ができます。|  
 
   
-##  <a name="queuing_mode">queuing_mode 列挙型</a>  
+##  <a name="queuing_mode"></a>  queuing_mode 列挙型  
  アクセラレータでサポートされているキュー モードを指定します。  
   
 ```  
@@ -59,5 +54,5 @@ enum queuing_mode;
 |`queuing_mode_immediate`|キュー モードを指定するコマンドなど、 [parallel_for_each 関数 (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)、呼び出し元に返されるとすぐに、対応するアクセラレータ デバイスに送信されます。|  
 |`queuing_mode_automatic`|キュー モードに対応するコマンド キューに入れするコマンドを指定する、 [accelerator_view](accelerator-view-class.md)オブジェクト。 コマンドは、デバイスに送信されるときに[accelerator_view::flush](accelerator-view-class.md#flush)と呼びます。|   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

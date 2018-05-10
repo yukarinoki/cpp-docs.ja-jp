@@ -1,12 +1,9 @@
 ---
-title: "トークン連結演算子 (#) |Microsoft ドキュメント"
-ms.custom: 
+title: トークン連結演算子 (#) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '##'
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3a8c2cef3560a6823314a4edb2cba78994864ce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c6e224c0327a7ba50c3e13ca78d749f41ad4641f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-pasting-operator-"></a>トークン連結演算子 (##)
 二重シャープ記号つまり"トークン連結演算子 (**##**)、両方のオブジェクトのようなと関数に似たマクロで使用されて、「マージ」演算子と呼ばれることがあります。 この演算子を使用すると、別々のトークンを 1 つのトークンに結合できます。そのため、これをマクロ定義の最初または最後のトークンにすることはできません。  
@@ -78,5 +73,5 @@ int main()
 token9 = 9  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)

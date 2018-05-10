@@ -1,27 +1,22 @@
 ---
-title: "3.1.1 omp_set_num_threads 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: 3.1.1 omp_set_num_threads 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b94cf2b5-8011-4a3b-ba56-676982642857
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2510c2ed49f7b46f2ca3d853c9b78ff3c09cb62a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99c82ff324cbf21612d2459511877d152e2757f5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads 関数
 `omp_set_num_threads`関数が指定されていない後続の並列領域で使用するスレッド数の既定の設定、`num_threads`句。 形式は次のとおりです。  
@@ -39,10 +34,10 @@ void omp_set_num_threads(int num_threads);
   
 ## <a name="cross-references"></a>クロス リファレンス  
   
--   `omp_set_dynamic`関数を参照してください[セクション 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)ページ 39 にします。  
+-   `omp_set_dynamic` 関数を参照してください[セクション 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)ページ 39 にします。  
   
--   `omp_get_dynamic`関数を参照してください[セクション 3.1.8](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) 40 ページのです。  
+-   `omp_get_dynamic` 関数を参照してください[セクション 3.1.8](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md) 40 ページのです。  
   
--   `OMP_NUM_THREADS`環境変数を参照してください[セクション 4.2](../../parallel/openmp/4-2-omp-num-threads.md) 48、ページと 8 ページのセクション 2.3 にします。  
+-   `OMP_NUM_THREADS` 環境変数を参照してください[セクション 4.2](../../parallel/openmp/4-2-omp-num-threads.md) 48、ページと 8 ページのセクション 2.3 にします。  
   
--   `num_threads`句を参照してください[セクション 2.3](../../parallel/openmp/2-3-parallel-construct.md) 8 ページの
+-   `num_threads` 句を参照してください[セクション 2.3](../../parallel/openmp/2-3-parallel-construct.md) 8 ページの

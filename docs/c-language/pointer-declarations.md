@@ -1,13 +1,10 @@
 ---
-title: "ポインター宣言 | Microsoft Docs"
-ms.custom: 
+title: ポインター宣言 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointer-declarations"></a>ポインター宣言
 "ポインター宣言" はポインター変数に名前を付け、変数が指すオブジェクトの型を指定します。 ポインターとして宣言された変数は、メモリ アドレスを保持します。  
@@ -131,5 +126,5 @@ struct id
   
  変数 *record* には *id* という構造体型があります。*pname* が、*name* という別の構造体型へのポインターとして宣言されていることに注意してください。 この宣言は、*name* 型を定義する前に指定できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)

@@ -1,13 +1,10 @@
 ---
-title: "TN035: Visual C での複数のリソース ファイルとヘッダー ファイルの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN035: Visual C での複数のリソース ファイルとヘッダー ファイルの使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.resources
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用
 > [!NOTE]
@@ -276,9 +271,9 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ は、新しい .RC ファイルを作成するときに、最小の有効な値より少し大きい値を使用して割り当てを開始します。 AppWizard も、これらの値を、MFC アプリケーションに適切な値より少し大きい値に初期化します。 ID 値の範囲の詳細については、次を参照してください。[テクニカル ノート 20](../mfc/tn020-id-naming-and-numbering-conventions.md)です。  
   
- これで、同じ Visual C を定義、同じプロジェクトであっても、新しいリソース ファイルを作成するたびに**_APS_NEXT\_** 値。 これは、たとえば 2 つの異なる .RC ファイルの中で複数のダイアログを追加する場合に、異なるダイアログに対して #define の同じ値が割り当てられる可能性が非常に高いことを意味します。 たとえば、最初の .RC ファイル内の IDD_MY_DLG1 は、2 番目の .RC ファイル内にあるIDD_MY_DLG2 と同じ番号 101 を割り当てられる可能性があります。  
+ これで、同じ Visual C を定義、同じプロジェクトであっても、新しいリソース ファイルを作成するたびに **_APS_NEXT\_** 値。 これは、たとえば 2 つの異なる .RC ファイルの中で複数のダイアログを追加する場合に、異なるダイアログに対して #define の同じ値が割り当てられる可能性が非常に高いことを意味します。 たとえば、最初の .RC ファイル内の IDD_MY_DLG1 は、2 番目の .RC ファイル内にあるIDD_MY_DLG2 と同じ番号 101 を割り当てられる可能性があります。  
   
- これを回避するには、各 .RC ファイル内の 4 つの ID ドメインのそれぞれで、個別の数値範囲を予約する必要があります。 これには、手動で更新する、 **_APS_NEXT**の各内の値、します。RC ファイル`before`リソースの追加を開始します。 たとえば場合、最初。RC ファイルが既定値を使用して**_APS_NEXT**値は、以下の割り当てをすることもできますし、 **_APS_NEXT**が 2 番目の値。RC ファイル:  
+ これを回避するには、各 .RC ファイル内の 4 つの ID ドメインのそれぞれで、個別の数値範囲を予約する必要があります。 これには、手動で更新する、 **_APS_NEXT**の各内の値、します。RC ファイル`before`リソースの追加を開始します。 たとえば場合、最初。RC ファイルが既定値を使用して **_APS_NEXT**値は、以下の割り当てをすることもできますし、 **_APS_NEXT**が 2 番目の値。RC ファイル:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

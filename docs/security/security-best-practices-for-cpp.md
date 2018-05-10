@@ -1,13 +1,10 @@
 ---
-title: "C++ のセキュリティのベスト プラクティス |Microsoft ドキュメント"
-ms.custom: 
+title: C++ のセキュリティのベスト プラクティス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 ここでは、セキュリティ ツールおよびセキュリティ対策について説明します。 これらを使用しても、アプリケーションを攻撃から完全に防御できるわけではありませんが、攻撃が成功する可能性を低減できます。  
@@ -35,13 +30,13 @@ ms.lasthandoff: 01/03/2018
 ## <a name="visual-c-security-features"></a>Visual C++ セキュリティ機能  
  Visual C++ コンパイラおよびリンカーには、次のセキュリティ機能が組み込まれています。  
   
- [/guard (有効にする制御フロー ガードを)](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard (制御フロー ガードを有効にする)](../build/reference/guard-enable-control-flow-guard.md)  
  コンパイラは、コンパイル時に間接的な呼び出しのターゲットに関する制御フローを分析し、実行時に、ターゲットを確認するコードを挿入します。  
   
- [/GS (バッファー セキュリティ チェック)](../build/reference/gs-buffer-security-check.md)  
+ [/GS (バッファーのセキュリティ チェック)](../build/reference/gs-buffer-security-check.md)  
  利用される危険性がある関数に、オーバーラン検出コードがコンパイラによって挿入されます。 オーバーランが検出されると、実行が停止します。 このオプションの既定値はオンです。  
   
- [/SAFESEH (安全な例外ハンドラーを持つイメージ)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH (安全な例外ハンドラーがあるイメージ)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  各例外ハンドラーのアドレスを格納したテーブルが、リンカーによって出力イメージに含められます。 実行時に、オペレーティング システムはこのテーブルを使用して適切な例外ハンドラーのみが実行されるようにします。 これにより、実行時に悪意のある攻撃を受けて例外ハンドラーが実行されることを回避できます。 このオプションの既定値はオフです。  
   
  [/NXCOMPAT](../build/reference/nxcompat.md)、 [/NXCOMPAT (データ実行防止と互換性のある)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
@@ -50,7 +45,7 @@ ms.lasthandoff: 01/03/2018
  [/analyze (コード分析)](../build/reference/analyze-code-analysis.md)  
  このコンパイラ オプションを使用すると、潜在的なセキュリティ上の問題 (バッファー オーバーラン、非初期化メモリ、null ポインターの逆参照、メモリ リークなど) を報告するコード解析がアクティブになります。 このオプションの既定値はオフです。 詳細については、次を参照してください。 [C と C++ の概要のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)です。  
   
- [/DYNAMICBASE (使用するアドレス領域のレイアウトのランダム化)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE (ASLR (Address Space Layout Randomization) の使用)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  このリンカー オプションにより、実行開始時にメモリ内の個別の場所で読み込むことができる実行可能イメージをビルドできます。 また、このオプションを使用すると、メモリ内のスタックの位置を予測することが非常に難しくなります。  
   
 ## <a name="security-enhanced-crt"></a>セキュリティが拡張された CRT  
@@ -98,7 +93,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="windows-user-accounts"></a>Windows ユーザー アカウント  
  Administrators グループに属する Windows ユーザー アカウントを使用すると、開発者とユーザー (機能拡張により) がセキュリティ上の危険にさらされます。 詳細については、次を参照してください。 [Users グループのメンバーとして実行されている](running-as-a-member-of-the-users-group.md)と[アプリケーションのどのユーザー アカウント制御 (UAC) に影響を与える](how-user-account-control-uac-affects-your-application.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Security>   
  [セキュリティ](/dotnet/standard/security/index)   
  [ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響](how-user-account-control-uac-affects-your-application.md)

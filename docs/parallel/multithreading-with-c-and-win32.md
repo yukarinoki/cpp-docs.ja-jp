@@ -1,13 +1,10 @@
 ---
-title: "C と Win32 を使用するマルチ スレッド |Microsoft ドキュメント"
-ms.custom: 
+title: C と Win32 を使用するマルチ スレッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16353937046384f9dc130048c510197697fb678f
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 993bee92c9dacc831a8bbc8fc000ec982025a399
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-with-c-and-win32"></a>C と Win32 を使用するマルチスレッド
 Microsoft Visual C では、マルチ スレッド アプリケーションを作成するためのサポートを提供します。 複数のスレッドを使用して、アプリケーションが応答しなくなるユーザー インターフェイスを原因となる高価な操作を実行する必要がある場合を検討してください。  
@@ -58,5 +53,5 @@ Microsoft Visual C では、マルチ スレッド アプリケーションを�
   
 -   [スレッド ローカル ストレージ (TLS)](../parallel/thread-local-storage-tls.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [旧形式のコードのためのマルチスレッド サポート (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

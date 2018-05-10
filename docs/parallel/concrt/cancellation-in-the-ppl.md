@@ -1,13 +1,10 @@
 ---
-title: "PPL における取り消し処理 |Microsoft ドキュメント"
-ms.custom: 
+title: PPL における取り消し処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL における取り消し処理
 このドキュメントでは、並列パターン ライブラリ (PPL: Parallel Patterns Library) での取り消し処理の役割、並列処理を取り消す方法、および並列処理の取り消しを判定する方法について説明します。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 
 
   
-##  <a name="top"></a>このドキュメントで  
+##  <a name="top"></a> このドキュメントで  
   
 - [並列処理ツリー](#trees)  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
 - [取り消しを使用しない場合](#when)  
   
-##  <a name="trees"></a>並列処理ツリー  
+##  <a name="trees"></a> 並列処理ツリー  
  PPL は、細かく分類されたタスクおよび計算を管理するためにタスクとタスク グループを使用します。 フォームにタスク グループを入れ子にすることができます*ツリー*並列処理します。 並列処理ツリーの図を次に示します。 この図では、`tg1` と `tg2` はタスク グループを表し、`t1`、`t2`、`t3`、`t4`、および `t5` はタスク グループによって実行される処理を表しています。  
   
  ![並列処理ツリー](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
@@ -82,14 +77,14 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="tasks"></a>並列タスクの取り消し  
+##  <a name="tasks"></a> 並列タスクの取り消し  
 
  並列処理を取り消すには複数の方法があります。 推奨する方法は、キャンセル トークンを使用する方法です。 タスク グループのサポートでも、 [concurrency::task_group::cancel](reference/task-group-class.md#cancel)メソッドおよび[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)メソッドです。 最後の方法は、タスクの処理関数の本体で例外をスローする方法です。 どの方法を選択した場合でも、取り消し処理はすぐに実行されません。 タスクまたはタスク グループが取り消される場合、新しい処理は開始されませんが、アクティブな処理は取り消し状態をチェックし、取り消し処理に応答する必要があります。  
 
   
  並列タスクの取り消しの詳細については、次を参照してください[チュートリアル: 接続を使用してタスクおよび XML HTTP 要求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)、[する方法: 並列ループを中断するのを使用してキャンセル](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)、および[する方法: 使用する。並列ループから処理を中断する例外](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)です。  
   
-###  <a name="tokens"></a>並列処理を取り消すキャンセル トークンを使用します。  
+###  <a name="tokens"></a> 並列処理を取り消すキャンセル トークンを使用します。  
  `task`、`task_group`、および `structured_task_group` の各クラスでは、キャンセル トークンを使用した取り消し処理をサポートしています。 PPL の定義、 [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)と[concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)この目的のためのクラスです。 作業を取り消すためにキャンセル トークンを使用すると、ランタイムはそのトークンをサブスクライブする新しい作業を開始しません。 既にアクティブな作業が使用できる、 [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)メンバー関数をキャンセル トークンを監視できる場合は停止します。  
   
 
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="cancellation-tokens-and-task-composition"></a>キャンセル トークンとタスク構成  
 
- [Concurrency:: ハイパーリンク"http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)と[concurrency::when_any](reference/concurrency-namespace-functions.md#when_all)関数を使用して、作成できます一般的なパターンを実装する複数のタスクです。 このセクションでは、キャンセル トークンを使用した場合のこれらの関数の動作について説明します。  
+ [Concurrency:: ハイパーリンク"http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)と[concurrency::when_any](reference/concurrency-namespace-functions.md#when_all)関数を使用して、一般的なパターンを実装する複数のタスクを構成できます。 このセクションでは、キャンセル トークンを使用した場合のこれらの関数の動作について説明します。  
   
  キャンセル トークンを `when_all` 関数または `when_any` 関数に指定すると、その関数は、そのキャンセル トークンが取り消されたとき、または参加タスクの 1 つが取り消し状態になるか例外をスローしたときにのみ取り消します。  
   
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-###  <a name="cancel"></a>Cancel メソッドを並列処理の取り消しを使用します。  
+###  <a name="cancel"></a> Cancel メソッドを並列処理の取り消しを使用します。  
 
  [Concurrency::task_group::cancel](reference/task-group-class.md#cancel)と[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)メソッドが取り消された状態に、タスク グループを設定します。 `cancel` を呼び出すと、それ以降はタスク グループでタスクが開始されなくなります。 `cancel` メソッドは、複数の子タスクから呼び出すことができます。 取り消されたタスクにより、 [concurrency::task_group::wait](reference/task-group-class.md#wait)と[concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)を返すメソッド[:canceled](reference/concurrency-namespace-enums.md#task_group_status)です。  
 
@@ -200,7 +195,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-###  <a name="exceptions"></a>例外を使用した並列処理の取り消し  
+###  <a name="exceptions"></a> 例外を使用した並列処理の取り消し  
  並列処理ツリーを取り消す場合は、例外処理を行うよりもキャンセル トークンと `cancel` メソッドを使用する方が効率的です。 キャンセル トークンと `cancel` メソッドは、タスクとすべての子タスクを上位から順に取り消します。 反対に、例外処理では下位から順に処理されるため、例外が上位へ移動するたびに、子タスク グループを個別に取り消す必要があります。 トピック[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)同時実行ランタイムが例外を使用して、エラーを通知する方法について説明します。 しかし、すべての例外がエラーの発生を示す訳ではありません。 たとえば、検索アルゴリズムでは、結果の検出時に関連付けられたタスクが取り消される場合があります。 しかし、前述したように、並列処理の取り消しを行う場合、例外処理は `cancel` メソッドを使用するよりも効率の点で劣ります。  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="algorithms"></a>並列アルゴリズムの取り消し  
+##  <a name="algorithms"></a> 並列アルゴリズムの取り消し  
  PPL の並列アルゴリズム (`parallel_for` など) は、タスク グループを基準として構築されています。 このため、これまで説明した方法のうちの多くを使用して、並列アルゴリズムを取り消すことができます。  
   
  以降の例では、並列アルゴリズムを取り消すためのいくつかの方法を示します。  
@@ -258,7 +253,7 @@ Caught 50
   
  [[トップ](#top)]  
   
-##  <a name="when"></a>取り消しを使用しない場合  
+##  <a name="when"></a> 取り消しを使用しない場合  
  取り消し処理は、関連するタスク グループの各メンバーが適時に終了できる場合には適しています。 しかし、取り消し処理がアプリケーションに適さないケースもあります。 たとえば、タスクの取り消しは他の処理と連携して行われるため、個別のタスクがブロックされている場合は、一連のタスク全体を取り消すことができなくなります。 また、あるタスクがまだ開始されていないが、他の実行中のタスクのブロックを解除する場合、タスク グループが取り消されると、そのタスクは開始されません。 これにより、アプリケーションでデッドロックが発生する場合があります。 また、取り消し対象のタスクの子タスクで重要な操作 (リソースの解放など) が実行されるような状況でも、取り消し処理の使用はふさわしくありません。 親タスクを取り消すと一連のタスクがすべて取り消されるため、その操作は実行されなくなります。 この点について説明する例を参照してください、[理解する方法のキャンセル機能と例外処理に影響を与えるオブジェクトが破棄ついて](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)「並列パターン ライブラリに関するベスト プラクティス」セクション。  
   
  [[トップ](#top)]  

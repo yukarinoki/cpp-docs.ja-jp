@@ -1,30 +1,25 @@
 ---
-title: "方法: 同時実行ランタイムを使用する例外処理を使用する OpenMP ループを変換 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 同時実行ランタイムを使用する例外処理を使用する OpenMP ループを変換 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2964c629ce8a3a83799278ac822b589992b4995
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b96273589fb4e7d7e73e7bc72da03a92d5587de8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>方法: 例外処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する
 OpenMP を変換する方法を示します[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを例外処理、同時実行ランタイムの例外処理メカニズムを使用して実行します。  
@@ -72,7 +67,7 @@ An error of type 'class std::bad_alloc' occurred.
   
  **cl.exe/EHsc/openmp concrt-omp-exceptions.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OpenMP から同時実行ランタイムへの移行](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
  [例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)

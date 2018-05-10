@@ -1,12 +1,9 @@
 ---
-title: "IExecutionResource 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: IExecutionResource 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IExecutionResource
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dc69c30f30d25179427ee8e59c536bb7cb5b483d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 構造体
 ハードウェア スレッドの抽象化です。  
@@ -58,7 +53,7 @@ struct IExecutionResource;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IExecutionResource`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h  
   
  **名前空間:** concurrency  
@@ -82,7 +77,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  リソース マネージャーは、スケジューラ間でリソースを移動するかを判断するための方法の 1 つとして、サブスクリプション レベルの情報を使用します。  
   
-##  <a name="getexecutionresourceid"></a>  IExecutionResource::GetExecutionResourceId Method  
+##  <a name="getexecutionresourceid"></a>  Iexecutionresource::getexecutionresourceid メソッド  
  この実行リソースを表すハードウェア スレッドの一意の識別子を返します。  
   
 ```
@@ -132,6 +127,6 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  `invalid_operation` スローされる場合、パラメーター`pScheduler`現在のスレッドがスレッドのサブスクリプションを作成したスレッドと異なる場合は、スケジューラ、または、スタンドアロンの実行リソースでは、この実行リソースが作成されたことを異なる。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [IVirtualProcessorRoot 構造体](ivirtualprocessorroot-structure.md)

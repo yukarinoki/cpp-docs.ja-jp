@@ -1,12 +1,9 @@
 ---
-title: "multitype_join クラス |Microsoft ドキュメント"
-ms.custom: 
+title: multitype_join クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multitype_join
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e91080621fbaec089079cad6e2a3c8d32e6cfacb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multitypejoin-class"></a>multitype_join クラス
 `multitype_join` メッセージング ブロックは、複数のソースと単一のターゲットを持つメッセージング ブロックで、それぞれのソースから受け取った異なる種類のメッセージを 1 つに結合してターゲットに渡します。  
@@ -79,7 +74,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |----------|-----------------|  
 |[accept](#accept)|これによって提供されたメッセージを受け入れる`multitype_join`ブロック、呼び出し元に所有権を転送します。|  
 |[acquire_ref](#acquire_ref)|この参照カウントを獲得`multitype_join`メッセージング ブロックを削除されないようにします。|  
-|[consume](#consume)|によって以前に提供メッセージを使用して、`multitype_join`ブロックのメッセージングおよび呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
+|[使用します。](#consume)|によって以前に提供メッセージを使用して、`multitype_join`ブロックのメッセージングおよび呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
 |[link_target](#link_target)|これをターゲット ブロックをリンク`multitype_join`メッセージング ブロックです。|  
 |[release](#release)|以前に成功したメッセージの予約を解放します。|  
 |[release_ref](#release_ref)|この参照カウントを解放`multiple_join`メッセージング ブロックです。|  
@@ -95,7 +90,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
  `multitype_join`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -294,7 +289,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 virtual void unlink_targets();
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [choice クラス](choice-class.md)   
  [join クラス](join-class.md)

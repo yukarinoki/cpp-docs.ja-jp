@@ -1,12 +1,9 @@
 ---
-title: "uninitialized_object クラス |Microsoft ドキュメント"
-ms.custom: 
+title: uninitialized_object クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - uninitialized_object
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6c602ffa6cb444ce2245a655d47ffc9b548276
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9b9b10af535b0739d480326d616ee7587318bb5a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object クラス
 初期化されていないオブジェクトが使用される場合にスローされる例外です。  
@@ -54,7 +49,7 @@ class uninitialized_object : public runtime_exception;
   
  `uninitialized_object`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amprt.h  
   
  **名前空間:** Concurrency  
@@ -78,5 +73,5 @@ unsupported_feature() throw();
 ### <a name="return-value"></a>戻り値  
  `unsupported_feature` オブジェクト。 
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

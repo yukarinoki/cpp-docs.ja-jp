@@ -1,29 +1,24 @@
 ---
-title: "並列アルゴリズム |Microsoft ドキュメント"
-ms.custom: 
+title: 並列アルゴリズム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-algorithms"></a>並列アルゴリズム
 並列パターン ライブラリ (PPL) では、データのコレクションに同時に作業を実行するアルゴリズムを提供します。 これらのアルゴリズムでは、C++ 標準ライブラリで提供されるようになります。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     - [並べ替えアルゴリズムの選択](#choose_sort)  
   
-##  <a name="parallel_for"></a>Parallel_for アルゴリズム  
+##  <a name="parallel_for"></a> Parallel_for アルゴリズム  
 
  [Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムが、同じタスクを並列で繰り返し実行します。 これらの各タスクは、イテレーション値によってパラメーター化されます。 このアルゴリズムは、そのループのイテレーション間でリソースを共有しないループの本体がある場合に便利です。  
   
@@ -96,7 +91,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="parallel_for_each"></a>Parallel_for_each アルゴリズム  
+##  <a name="parallel_for_each"></a> Parallel_for_each アルゴリズム  
 
  [Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムは並列での C++ 標準ライブラリで提供されるものなどの反復的なコンテナーでのタスクを実行します。 このアルゴリズムでは、`parallel_for` アルゴリズムで使用されるのと同じ分割ロジックが使用されます。  
   
@@ -121,7 +116,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="parallel_invoke"></a>Parallel_invoke アルゴリズム  
+##  <a name="parallel_invoke"></a> Parallel_invoke アルゴリズム  
 
  [Concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムは、一連のタスクを並列で実行します。 各タスクが終了するまでは返しません。 このアルゴリズムは、同時に実行する独立したタスクが複数ある場合に便利です。  
   
@@ -144,14 +139,14 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="parallel_transform_reduce"></a>Parallel_transform アルゴリズムと parallel_reduce アルゴリズム  
+##  <a name="parallel_transform_reduce"></a> Parallel_transform アルゴリズムと parallel_reduce アルゴリズム  
 
  [Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)と[concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)アルゴリズムは、C++ 標準ライブラリのアルゴリズムの並列バージョン[std::transform](../../standard-library/algorithm-functions.md#transform)と[std::accumulate](../../standard-library/numeric-functions.md#accumulate)、それぞれします。 同時実行ランタイムのバージョンは、並列で実行することもあるために、操作の順序が決定されないことを除き、C++ 標準ライブラリのバージョンと同様に動作します。 並列に処理されてからのパフォーマンスとスケーラビリティのメリットを活用するのに十分な大きさであるセットを使用する場合は、これらのアルゴリズムを使用します。  
   
 > [!IMPORTANT]
 >  `parallel_transform`と`parallel_reduce`アルゴリズムは、これらの反復子の安定したメモリ アドレスを生成するためにのみランダム アクセス、双方向、および前方反復子をサポートします。 また、これらの反復子を生成する必要があります以外`const`左辺値です。  
   
-###  <a name="parallel_transform"></a>Parallel_transform アルゴリズム  
+###  <a name="parallel_transform"></a> Parallel_transform アルゴリズム  
  使用することができます、`parallel transform`さまざまなデータ並列処理操作を実行するアルゴリズム。 たとえば、次のように操作できます。  
   
 -   画像の明るさを調整し、その他のイメージの処理操作を実行します。  
@@ -174,7 +169,7 @@ ms.lasthandoff: 12/21/2017
 > [!IMPORTANT]
 >  出力に対して指定する反復子`parallel_transform`入力反復子を完全に重なるかまったくと重複しない必要があります。 入力と出力反復子が部分的に重なっている場合、このアルゴリズムの動作は指定されません。  
   
-###  <a name="parallel_reduce"></a>Parallel_reduce アルゴリズム  
+###  <a name="parallel_reduce"></a> Parallel_reduce アルゴリズム  
  `parallel_reduce`アルゴリズムは、結合型のプロパティを満たす操作のシーケンスがある場合に便利です。 (このアルゴリズムは不要可換プロパティです。)ここでは、いくつかの操作を実行できる`parallel_reduce`:  
   
 -   マトリックスを生成するマトリックスのシーケンスを乗算します。  
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
   
  多くの場合は、考えることができます`parallel_reduce`を使用するための短縮形として、`parallel_for_each`アルゴリズムと共に、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスです。  
   
-###  <a name="map_reduce_example"></a>例: を実行するマップし、縮小を並行  
+###  <a name="map_reduce_example"></a> 例: を実行するマップし、縮小を並行  
 
  A*マップ*操作は、シーケンス内の各値に関数を適用します。 A*削減*操作が 1 つの値をシーケンスの要素を連結します。 C++ 標準ライブラリを使用する[std::transform](../../standard-library/algorithm-functions.md#transform)と[std::accumulate](../../standard-library/numeric-functions.md#accumulate)マップを実行し、操作を減らすために機能します。 ただし、多くの問題では、使用できます、`parallel_transform`アルゴリズムを並列マップ操作を実行して、`parallel_reduce`アルゴリズムは並列で reduce 操作を実行します。  
 
@@ -204,7 +199,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="partitions"></a>パーティション分割作業  
+##  <a name="partitions"></a> パーティション分割作業  
  重要な手順では、データ ソースに対して操作を並列化*パーティション*ソースを複数のセクションでは複数のスレッドで同時にアクセスできます。 パーティショナーは、並列アルゴリズムがスレッド間での範囲を分割する方法を指定します。 このドキュメントで先に説明した、PPL は、既定値は最初のワークロードを作成し、ワーク スティー リング アルゴリズムとワークロードが分散ではないときにこれらのパーティションのバランスをとるスティー リング範囲を使用するメカニズムをパーティション分割を使用します。 たとえば、1 つのループの反復処理には、一連のイテレーションが完了すると、ランタイムはそのスレッドに他のスレッドから作業を再分配します。 ただし、一部のシナリオについて、問題に適している別のパーティション分割メカニズムを指定する場合があります。  
   
  `parallel_for`、 `parallel_for_each`、および`parallel_transform`アルゴリズムにより、追加のパラメーターを受け取るオーバー ロードされたバージョン`_Partitioner`します。 このパラメーターは、作業を分割するパーティショナー型を定義します。 PPL を定義するパーティショナーの種類を次に示します。  
@@ -235,11 +230,11 @@ ms.lasthandoff: 12/21/2017
 > [!CAUTION]
 >  使用する協調的ブロッキング セマンティクスに依存する既存のコードを変更するときに警告を使用して`static_partitioner`または`affinity_partitioner`です。 これらのパーティショナー型では、負荷分散するか、または範囲スティー リングを使用しないと、アプリケーションの動作を変更できます。  
   
- パーティショナーを特定のシナリオで使用するかどうかを判断する最良の方法では、実験し、代表的な負荷とコンピューターの構成を完了する操作に要する時間を測定します。 たとえば、静的パーティション分割が飛躍的に向上するいくつかのコアだけをあるマルチコア コンピューター上でが速度低下を比較的多くのコアを持つコンピューター上になることがあります。  
+ パーティショナーを特定のシナリオで使用するかどうかを判断する最良の方法では、実験し、代表的な負荷とコンピューターの構成を完了する操作に要する時間を測定します。 たとえば、静的パーティション分割は、少数のコアしか持たないマルチコア コンピューターでは速度が飛躍的に向上することがありますが、比較的多くのコアを持つコンピューターでは速度が低下することがあります。  
   
  [[トップ](#top)]  
   
-##  <a name="parallel_sorting"></a>並列並べ替え  
+##  <a name="parallel_sorting"></a> 並列並べ替え  
 
  PPL には、次の 3 つの並べ替えアルゴリズムが用意されて: [:parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)、 [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)、および[concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)です。 並べ替えアルゴリズムこれらは、並列で並べ替えられているから利点を活用できるデータ セットがある場合に便利です。 具体的には、並列並べ替えまたは便利です、大規模なデータセットがある場合、計算コストが高い比較操作を使用してデータを並べ替えます。 これらのアルゴリズムの各は、配置内の要素を並べ替えます。  
 
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
  ハッシュ関数は、整数型を返す必要があります ([std::is_integral::value](../../standard-library/is-integral-class.md)する必要があります`true`)。 この整数型を型に変換できる必要があります`size_t`です。  
   
-###  <a name="choose_sort"></a>並べ替えアルゴリズムの選択  
+###  <a name="choose_sort"></a> 並べ替えアルゴリズムの選択  
  多くの場合、`parallel_sort`速度とメモリのパフォーマンスの最適なバランスを提供します。 ただし、すると、データ セットやで利用可能なプロセッサの数、比較関数の複雑さのサイズを増やす`parallel_buffered_sort`または`parallel_radixsort`パフォーマンスが向上することができます。 最善の方法を特定のシナリオで使用する並べ替えアルゴリズムを決定するのには実験し、代表的なコンピューター構成での一般的なデータの並べ替えにかかる時間を測定します。 並べ替え方法を選択するときに、次のガイドラインに留意してください。  
   
 -   データ セットのサイズ。 このドキュメントで、*小さな*データセットには、数は 1,000 未満の要素が含まれている、*中*10,000 と 100,000 の要素の間でデータセットが含まれていると*大きな*データセットが含まれています100,000 以上の要素です。  
@@ -302,11 +297,11 @@ ms.lasthandoff: 12/21/2017
   
  使用可能なコンピューティング リソースの数が多いことも、比較関数やハッシュ関数は、比較的大量の作業を実行する際にも並列に小さいデータセットを並べ替えに価値があります。 使用することができます[std::sort](../../standard-library/algorithm-functions.md#sort)小規模なデータセットを並べ替えます。 (`parallel_sort`と`parallel_buffered_sort`呼び出す`sort`データセット; よりも大きいチャンク サイズを指定するときにただし、`parallel_buffered_sort`ロックの競合やメモリの割り当てによりさらに時間がかかる場合があります、o (n) 領域を割り当てる必要があります)。  
   
- メモリを節約する必要があります、またはメモリ アロケーターがロックの競合が対象になりますが、使用`parallel_sort`規模のデータセットの並べ替えにします。 `parallel_sort`追加の領域は必要ありません。その他のアルゴリズムでは、o (n) の領域が必要です。  
+ メモリを節約する必要があります、またはメモリ アロケーターがロックの競合が対象になりますが、使用`parallel_sort`規模のデータセットの並べ替えにします。 `parallel_sort` 追加の領域は必要ありません。その他のアルゴリズムでは、o (n) の領域が必要です。  
   
- 使用して`parallel_buffered_sort`規模のデータセットとアプリケーションが、追加の o (n) 領域の要件を満たしているときの並べ替えにします。 `parallel_buffered_sort`大量のコンピューティング リソースまたは高価な比較関数またはハッシュ関数がある場合に特に役に立ちます。  
+ 使用して`parallel_buffered_sort`規模のデータセットとアプリケーションが、追加の o (n) 領域の要件を満たしているときの並べ替えにします。 `parallel_buffered_sort` 大量のコンピューティング リソースまたは高価な比較関数またはハッシュ関数がある場合に特に役に立ちます。  
   
- 使用して`parallel_radixsort`大規模なデータセットおよびアプリケーションが、追加の o (n) 領域の要件を満たしているときの並べ替えにします。 `parallel_radixsort`等価の比較操作がより高価な場合や、両方の操作と高価なは、特に役に立ちます。  
+ 使用して`parallel_radixsort`大規模なデータセットおよびアプリケーションが、追加の o (n) 領域の要件を満たしているときの並べ替えにします。 `parallel_radixsort` 等価の比較操作がより高価な場合や、両方の操作と高価なは、特に役に立ちます。  
   
 > [!CAUTION]
 >  優れたハッシュ関数を実装するには、データセットの範囲と、データセット内の各要素は対応する符号なしの値に変換される方法がわかっている必要があります。 ハッシュ操作は、符号なしの値で機能するため、符号なしのハッシュ値を生成できません。 場合に、さまざまな並べ替え方法を検討します。  

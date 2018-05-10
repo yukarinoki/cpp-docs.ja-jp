@@ -1,29 +1,24 @@
 ---
-title: "Concurrency::graphics Namespace |Microsoft ドキュメント"
-ms.custom: 
+title: Concurrency::graphics Namespace |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0469406d4a4efa4b7241c5561bbfb20e1d08a710
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2da450ca30ee780f0e493f0b120de33a939a4cd7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 名前空間
 graphics 名前空間は、グラフィックス プログラミング用に設計された型と関数を提供します。  
@@ -50,7 +45,7 @@ namespace graphics;
   
 ### <a name="enumerations"></a>列挙  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[address_mode 列挙型](concurrency-graphics-namespace-enums.md#address_mode)です。|テクスチャ サンプリングでサポートされているアドレス モードを指定します。|  
 |[filter_mode 列挙型](concurrency-graphics-namespace-enums.md#filter_mode)|テクスチャ サンプリングでサポートされているフィルター モードを指定します。|  
@@ -91,10 +86,10 @@ namespace graphics;
 |[copy](concurrency-graphics-namespace-functions.md#copy)|オーバーロードされます。 ソース テクスチャの内容をターゲット ホスト バッファーにコピーします。|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|オーバーロードされます。 ソース テクスチャの内容をターゲット ホスト バッファーに非同期にコピーします。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp_graphics.h  
   
  **名前空間:** Concurrency  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

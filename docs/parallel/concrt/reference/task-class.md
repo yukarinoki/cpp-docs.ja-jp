@@ -2,11 +2,8 @@
 title: task クラス (同時実行ランタイム) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task クラス (同時実行ランタイム)
 並列パターン ライブラリ (PPL) `task` クラス。 `task` オブジェクトは、非同期的に、他のタスクと同時に実行できる処理、および同時実行ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 継続を使用して他のタスクと共に構成することもできます ( `then`)、および結合 ( `when_all`) と choice ( `when_any`) パターン。  
@@ -79,7 +74,7 @@ class task;
 |[is_apartment_aware](#is_apartment_aware)|タスクが Windows ランタイム `IAsyncInfo` インターフェイスをラップ解除するか、こうしたタスクの子であるかを決定します。|  
 |[is_done](#is_done)|タスクが完了したかどうかを決定します。|  
 |[scheduler](#scheduler)|このタスクのスケジューラを返します|  
-|[then](#then)|オーバーロードされます。 継続タスクをこのタスクに追加します。|  
+|[そうしたら](#then)|オーバーロードされます。 継続タスクをこのタスクに追加します。|  
 |[wait](#wait)|このタスクが終了状態になるまで待機します。 タスクの依存関係すべてが満たされ、バックグラウンド ワーカーによって実行用にまだ検出されていない場合、`wait` はタスクをインラインで実行できます。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
@@ -101,7 +96,7 @@ class task;
   
  **名前空間:** concurrency  
   
-##  <a name="get"></a> get 
+##  <a name="get"></a> 取得 
 
  このタスクによって生成された結果を返します。 タスクが終了状態にない場合、`get` への呼び出しは、そのタスクが完了するまで待機します。 このメソッドは、`result_type` が `void` に指定されたタスクで呼び出された場合は値を返しません。  
   
@@ -160,7 +155,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>戻り値  
  オブジェクトが異なる基本タスクを参照する場合は `true` を返します。それ以外の場合は `false` を返します。  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> 演算子 = 
 
  ある `task` オブジェクトの内容を別のオブジェクトの内容で置き換えます。  
   
@@ -179,7 +174,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>コメント  
  `task` がスマート ポインターのように動作すると、コピーの代入の後では、この `task` オブジェクトは `_Other` が実行する実際のタスクと同じタスクを表します。  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 演算子 = = 
 
  2 つの `task` オブジェクトが同じ内部タスクを表すかどうかを決定します。  
   

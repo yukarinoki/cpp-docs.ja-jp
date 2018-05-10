@@ -1,12 +1,9 @@
 ---
-title: "extent クラス (C++ AMP) |Microsoft ドキュメント"
-ms.custom: 
+title: extent クラス (C++ AMP) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent クラス (C++ AMP)
 ベクターを表します*N*の境界を指定する整数値、 *N*-0 の原点が次元の空間です。 ベクターの値は最上位から最下位へ順に並べ替えられます。  
@@ -47,7 +42,7 @@ class extent;
  `_Rank`  
  `extent` オブジェクトのランク。  
 
- ## <a name="requirements"></a>必要条件  
+ ## <a name="requirements"></a>要件  
  **ヘッダー:** amp.h  
   
  **名前空間:** Concurrency  
@@ -87,7 +82,7 @@ class extent;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[rank 定数](#rank)|`extent` オブジェクトのランクを取得します。|  
   
@@ -216,7 +211,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>戻り値  
  前置演算子の場合は、`extent` オブジェクト (`*this`) です。 後置演算子の場合は、新しい `extent` オブジェクトです。  
   
-##  <a name="operator_add_eq"></a> operator+= 
+##  <a name="operator_add_eq"></a> 演算子 + = 
 
 '範囲' オブジェクトの各要素に指定された数を追加します。  
   
@@ -377,5 +372,5 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

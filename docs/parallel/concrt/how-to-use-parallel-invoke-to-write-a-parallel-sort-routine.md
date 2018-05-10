@@ -1,13 +1,10 @@
 ---
-title: "方法: parallel.invoke を使用して並列並べ替えルーチンを記述する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: parallel.invoke を使用して並列並べ替えルーチンを記述する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>方法: 並列呼び出しを使用して並列並べ替えルーチンを記述する
 このドキュメントを使用する方法について説明、 [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke)バイトニック ソート アルゴリズムのパフォーマンスを向上するためのアルゴリズムです。 バイトニック ソート アルゴリズムでは、入力シーケンスを、より小さな並べ替え済みのパーティションへと再帰的に分割します。 各パーティションの操作は他のすべての操作から独立しているため、バイトニック ソート アルゴリズムは並列的に実行することができます。  
@@ -44,14 +39,14 @@ ms.lasthandoff: 12/21/2017
   
 - [並列バイトニック ソートを実行する parallel_invoke を使用します。](#parallel)  
   
-##  <a name="serial"></a>バイトニック ソートを逐次的に実行します。  
+##  <a name="serial"></a> バイトニック ソートを逐次的に実行します。  
  次の例は、逐次的なバイトニック ソート アルゴリズムを示しています。 `bitonic_sort` 関数は、シーケンスを 2 つのパーティションに分割し、一方のパーティションは昇順に、もう一方のパーティションは降順に並べ替えた後、その結果をマージします。 この関数は、自分自身を 2 回再帰的に呼び出して、それぞれのパーティションを並べ替えます。  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[トップ](#top)]  
   
-##  <a name="parallel"></a>並列バイトニック ソートを実行する parallel_invoke を使用します。  
+##  <a name="parallel"></a> 並列バイトニック ソートを実行する parallel_invoke を使用します。  
  ここでは、`parallel_invoke` アルゴリズムを使用して、バイトニック ソート アルゴリズムを並列に実行する方法について説明します。  
   
 ### <a name="procedures"></a>手順  
@@ -109,7 +104,7 @@ parallel time: 1248
   
  他の並列アルゴリズムと同様に、必要に応じてコードのプロファイリングおよびチューニングを行うことをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [parallel_invoke 関数](reference/concurrency-namespace-functions.md#parallel_invoke)
 

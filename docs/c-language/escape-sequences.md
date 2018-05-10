@@ -1,13 +1,10 @@
 ---
-title: "エスケープ シーケンス | Microsoft Docs"
-ms.custom: 
+title: エスケープ シーケンス | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341aa5af2b16d1a29bc4e3dfe2f97a68b73d6ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cd58f7418e2e6a2ca7592c345c5d71729cf8324
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="escape-sequences"></a>エスケープ シーケンス
 先頭に円記号 (**\\**) が指定されている、アルファベットや数字で構成される文字の組み合わせは、"エスケープ シーケンス" と呼ばれます。 改行文字や単一引用符など、文字定数内の特定の文字を表すには、エスケープ シーケンスを使用する必要があります。 エスケープ シーケンスは 1 つの文字と見なされるため、文字定数として有効です。  

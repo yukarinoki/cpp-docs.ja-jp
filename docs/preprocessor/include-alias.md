@@ -1,12 +1,9 @@
 ---
-title: "include_alias |Microsoft ドキュメント"
-ms.custom: 
+title: include_alias |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 
 ## <a name="remarks"></a>コメント
 
-一部のファイル システムでは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名が許可されます。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 コンパイラが検出されるたびに、 *long_filename* 、文字列を置き換える*short_filename*、ヘッダー ファイルを検索し、 *short_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例:
+一部のファイル システムでは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名が許可されます。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 コンパイラが検出されるたびに、 *long_filename* 、文字列を置き換える*short_filename*、ヘッダー ファイルを検索し、 *short_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例えば:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -72,7 +67,7 @@ ms.lasthandoff: 02/23/2018
 
 > /YcAppleSystemHeaderStop.h
 
-使用することができます、 **include_alias**プラグマを任意のヘッダー ファイル名を別にマップします。 例:
+使用することができます、 **include_alias**プラグマを任意のヘッダー ファイル名を別にマップします。 例えば:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -81,7 +76,7 @@ ms.lasthandoff: 02/23/2018
 #include <stdio.h>
 ```
 
-二重引用符で囲んだファイル名と山かっこで囲んだファイル名を混同しないでください。 たとえば、前の 2 つを指定**#pragma include_alias**ディレクティブ、コンパイラ、次を置換実行しない`#include`ディレクティブ。
+二重引用符で囲んだファイル名と山かっこで囲んだファイル名を混同しないでください。 たとえば、前の 2 つを指定 **#pragma include_alias**ディレクティブ、コンパイラ、次を置換実行しない`#include`ディレクティブ。
 
 ```cpp
 #include <api.h>
@@ -94,7 +89,7 @@ ms.lasthandoff: 02/23/2018
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-ファイル名がエラー メッセージ、または、定義済みの値として報告されることに注意してください**&#95; &#95;です。ファイル &#95; #95**置換が実行された後、マクロは、ファイルの名前。 たとえば、次のディレクティブの後に、出力を参照してください。
+ファイル名がエラー メッセージ、または、定義済みの値として報告されることに注意してください **&#95;&#95;ファイル&#95;&#95;** 置換が実行された後、マクロは、ファイルの名前。 たとえば、次のディレクティブの後に、出力を参照してください。
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )
@@ -117,6 +112,6 @@ myfile.h(15) : error C2059 : syntax error
 
 コンパイラは、THREE.H. ではなく、TWO.H ファイルを探します。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

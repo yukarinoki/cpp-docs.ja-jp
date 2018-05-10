@@ -1,12 +1,9 @@
 ---
-title: "Scheduler クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Scheduler クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Scheduler クラス
 同時実行ランタイム スケジューラの抽象化を表します。  
@@ -86,7 +81,7 @@ class Scheduler;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Scheduler`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
@@ -174,7 +169,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>戻り値  
  スケジューラの作成に使用されたポリシーのコピー。  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> id 
 
  スケジューラの一意の識別子を返します。  
   
@@ -317,7 +312,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ### <a name="remarks"></a>コメント  
  場合、`SetDefaultSchedulerPolicy`メソッドは、プロセス内で、既定のスケジューラが既に存在する場合、ランタイムがスローされます、 [default_scheduler_exists](default-scheduler-exists-class.md)例外。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [Scheduler クラス](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   

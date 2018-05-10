@@ -1,27 +1,22 @@
 ---
-title: "タイルの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: タイルの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>タイルの使用
 タイルを使用して、アプリのアクセラレーションを最大化することができます。 タイル スレッドを等しい四角形のサブセットに分割するか、*タイル*です。 適切なタイルのサイズとタイル アルゴリズムを使用している場合、C++ AMP コードによるアクセラレーションがさらに向上します。 タイルの基本コンポーネントは次のとおりです。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example-of-global-tile-and-local-indices"></a>グローバル、タイル、およびローカル インデックスの例  
  次の図は、2 × 3 のタイルに配置された 8 × 9 のデータ行列を示しています。  
   
- ![8 &#45; によって &#45; 9 のマトリックスに 2 &#45; で割った値 &#45; 3 タイル](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;によって&#45;2 に分割された 9 行列&#45;によって&#45;3 タイル](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  次の例では、このタイル化された行列のグローバル、タイル、およびローカル インデックスを表示します。 `array_view` オブジェクトは、`Description` 型の要素を使用して作成されます。 `Description` は、行列の要素のグローバル、タイル、およびローカル インデックスを保持します。 `parallel_for_each` の呼び出しのコードは、各要素のグローバル、タイル、およびローカル インデックスの値を設定します。 出力は `Description` 構造体の値を表示します。  
   
@@ -339,7 +334,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [tile_static キーワード](../../cpp/tile-static-keyword.md)
 

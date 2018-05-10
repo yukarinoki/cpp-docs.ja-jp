@@ -1,12 +1,9 @@
 ---
-title: "プリプロセッサ ディレクティブ |Microsoft ドキュメント"
-ms.custom: 
+title: プリプロセッサ ディレクティブ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,20 +11,18 @@ helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2763107b8ca787c6711f1f7d4966c7c530f147af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b73f6ce579f94d38621820a63888dc0aa5a75863
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-directives"></a>プリプロセッサ ディレクティブ
-プリプロセッサ ディレクティブなど`#define`と**#ifdef**、ソース プログラムを簡単に変更し、異なる実行環境でコンパイルを容易に用いられます。 ソース ファイルのディレクティブはプリプロセッサに特定のアクションを実行するよう通知します。 たとえば、プリプロセッサは、テキストのトークンを置き換えたり、ソース ファイルに他のファイルの内容を挿入したり、テキストのセクションの削除によりファイルの一部のコンパイルを中止したりできます。 プリプロセッサ行は、マクロの展開の前に認識され、実行されます。 したがって、マクロがプリプロセッサ コマンドのように見えるコマンドに展開されても、そのコマンドはプリプロセッサによって認識されません。  
+プリプロセッサ ディレクティブなど`#define`と **#ifdef**、ソース プログラムを簡単に変更し、異なる実行環境でコンパイルを容易に用いられます。 ソース ファイルのディレクティブはプリプロセッサに特定のアクションを実行するよう通知します。 たとえば、プリプロセッサは、テキストのトークンを置き換えたり、ソース ファイルに他のファイルの内容を挿入したり、テキストのセクションの削除によりファイルの一部のコンパイルを中止したりできます。 プリプロセッサ行は、マクロの展開の前に認識され、実行されます。 したがって、マクロがプリプロセッサ コマンドのように見えるコマンドに展開されても、そのコマンドはプリプロセッサによって認識されません。  
   
  プリプロセッサ ステートメントは、ソース ファイル ステートメントと同じ文字セットを使用しますが、エスケープ シーケンスはサポートされていません。 プリプロセッサ ステートメントで使用した文字セットと同じ、[実行文字セット](http://msdn.microsoft.com/en-us/a7901c61-524d-47c6-beb6-d9dacc2e72ed)です。 プリプロセッサは、負の文字値も認識します。  
   
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/23/2018
   
  プリプロセッサ ディレクティブはソース ファイル内の任意の場所で使用できますが、ソース ファイルの残りの部分だけに適用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)   
  [定義済みマクロ](../preprocessor/predefined-macros.md)   
  [C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)
