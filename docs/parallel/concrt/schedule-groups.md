@@ -1,29 +1,24 @@
 ---
-title: "スケジュール グループ |Microsoft ドキュメント"
-ms.custom: 
+title: スケジュール グループ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1395fbc58d8a4d1d06cd93eea21c0f3d2dec8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedule-groups"></a>スケジュール グループ
 このドキュメントでは、同時実行ランタイムのスケジュール グループの役割について説明します。 A*スケジュール グループ*アフィニティ化、または、関連するタスク グループ化します。 すべてのスケジューラは、1 つまたは複数のスケジュール グループがします。 スケジュール グループは、タスク間で高いレベルの局所性が求められる場合 (たとえば、関連するタスクのグループが同一プロセッサ ノードでの実行によって恩恵を受ける場合) に使用します。 逆に、アプリケーションが特定の品質要件など、一連のタスクに割り当てられている処理リソースの量を制限する場合は、スケジューラ インスタンスを使用します。 スケジューラ インスタンスの詳細については、次を参照してください。[スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)です。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>例  
  例については使用がタスクの実行順序を制御するグループをスケジュールする、次を参照してください。[する方法: スケジュール グループの順序の実行に影響を使用する](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)   
  [方法: スケジュール グループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)

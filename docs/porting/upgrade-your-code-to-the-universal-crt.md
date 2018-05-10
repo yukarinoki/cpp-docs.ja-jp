@@ -2,22 +2,17 @@
 title: Universal CRT へのコードのアップグレード | Microsoft Docs
 ms.custom: ''
 ms.date: 03/31/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c2057f3dc8abc3f661010300671b67ad5c37a87d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Universal CRT へのコードのアップグレード
 
@@ -33,7 +28,7 @@ Windows コンポーネントと同じように、UCRT ライブラリのファ�
   
 標準 C ライブラリ ヘッダー ファイルが、Windows SDK に含まれるようになり、SDK バージョン固有のディレクトリのインクルード フォルダーに置かれます。 ヘッダー ファイルの標準的な場所は、Program Files または Program Files (x86) ディレクトリにある Windows Kits\\10\\Include\\_sdk-version_\\ucrt です。ここで _sdk-version_ は、Windows のバージョンまたは更新プログラムに対応します。たとえば、Windows 10 Anniversary Update の場合は 10.0.14393.0 です。   
   
-UCRT スタティック ライブラリとダイナミック リンク スタブ ライブラリは、Program Files または Program Files (x86) ディレクトリにある Windows Kits\\10\\Lib\\_sdk-version_\\ucrt\\_architecture_ にあります。ここで、_architecture_ は、ARM、x86、または X64 です。 製品版およびデバッグのスタティック ライブラリは、libucrt.lib と libucrtd.lib であり、UCRT DLL のライブラリは、ucrt.lib と ucrtd.lib です。  
+UCRT スタティック ライブラリとダイナミック リンク スタブ ライブラリは、 Windows Kits\\10\\Lib\\_sdk-version_\\ucrt\\_architecture_ の下にある Program Files または Program Files (x86) ディレクトリにあります。ここで、_architecture_ は、ARM、x86、または X64 です。 製品版およびデバッグのスタティック ライブラリは、libucrt.lib と libucrtd.lib であり、UCRT DLL のライブラリは、ucrt.lib と ucrtd.lib です。  
   
 製品版およびデバッグの UCRT DLL は、別々の場所にあります。 製品版 DLL は再頒布可能であり、Program Files または Program Files (x86) ディレクトリの Windows Kits\\10\\Redist\\ucrt\\DLLs\\_architecture_\. の下にあります。 デバッグ DLL は再頒布可能ではありません。プログラム ファイルまたはプログラム ファイル (x86) ディレクトリの Windows Kits\\10\\bin\\_architecture_\\ucrt フォルダーの下にあります。   
 

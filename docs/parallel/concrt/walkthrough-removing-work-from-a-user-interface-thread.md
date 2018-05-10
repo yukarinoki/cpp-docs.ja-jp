@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: ユーザー インターフェイス スレッドからの処理の除去 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: ユーザー インターフェイス スレッドからの処理の除去 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>チュートリアル: ユーザー インターフェイス スレッドからの処理の除去
 このドキュメントでは、同時実行ランタイムを使用して、Microsoft Foundation Classes (MFC) アプリケーションをワーカー スレッドのユーザー インターフェイス (UI) スレッドで実行される作業を移動する方法を示します。 このドキュメントでは、時間のかかる描画操作のパフォーマンスを向上させる方法も示します。  
@@ -59,14 +54,14 @@ ms.lasthandoff: 12/21/2017
   
 -   [キャンセルのサポートの追加](#cancellation)  
   
-##  <a name="application"></a>MFC アプリケーションの作成  
+##  <a name="application"></a> MFC アプリケーションの作成  
  このセクションでは、基本の MFC アプリケーションを作成する方法について説明します。  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Visual C MFC アプリケーションを作成するには  
   
-1.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト**] ダイアログ ボックスで、**インストールされたテンプレート**ペインで、 **Visual C**、[、**テンプレート**ペインで、**MFC アプリケーション**です。 たとえば、プロジェクトの名前を入力`Mandelbrot`、順にクリック**[ok]**を表示する、 **MFC アプリケーション ウィザード**です。  
+2.  **新しいプロジェクト**] ダイアログ ボックスで、**インストールされたテンプレート**ペインで、 **Visual C**、[、**テンプレート**ペインで、**MFC アプリケーション**です。 たとえば、プロジェクトの名前を入力`Mandelbrot`、順にクリック **[ok]** を表示する、 **MFC アプリケーション ウィザード**です。  
   
 3.  **アプリケーションの種類**ペインで、 **1 つのドキュメント**です。 いることを確認、**ドキュメント/ビュー アーキテクチャ サポート** チェック ボックスがオフになっています。  
   
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
      アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションを構築する、**ビルド** メニューのをクリックして**ソリューションのビルド**です。 アプリケーションが正常にビルドされたアプリケーションを実行 をクリックして**デバッグの開始**上、**デバッグ**メニュー。  
   
-##  <a name="serial"></a>マンデルブロ アプリケーションの逐次バージョンを実装します。  
+##  <a name="serial"></a> マンデルブロ アプリケーションの逐次バージョンを実装します。  
  このセクションでは、マンデルブロ フラクタルを描画する方法について説明します。 このバージョンを描画するマンデルブロ フラクタル、 [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [ビットマップ](https://msdn.microsoft.com/library/ms534420.aspx)オブジェクトし、クライアント ウィンドウにそのビットマップの内容をコピーします。  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>マンデルブロ アプリケーションの逐次バージョンを実装するには  
@@ -123,7 +118,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="removing-work"></a>UI スレッドからの処理の除去  
+##  <a name="removing-work"></a> UI スレッドからの処理の除去  
  このセクションでは、マンデルブロ アプリケーションの UI スレッドから描画処理を削除する方法を示します。 UI スレッドから描画処理をワーカー スレッドに移動して、UI スレッドはワーカー スレッドがバック グラウンドで、イメージを生成するようにメッセージを処理できます。  
   
  同時実行ランタイムには、タスクを実行する 3 つの方法が用意されています:[タスク グループ](../../parallel/concrt/task-parallelism-concurrency-runtime.md)、[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)、および[軽量タスク](../../parallel/concrt/task-scheduler-concurrency-runtime.md)です。 UI スレッドから作業を削除するこれらのメカニズムのいずれかを使用できますが、この例では、 [concurrency::task_group](reference/task-group-class.md)オブジェクトをタスク グループは、キャンセルをサポートします。 このチュートリアルは、後に、クライアント ウィンドウをサイズ変更するとときに、実行される作業の量を削減して、ウィンドウが破棄されるときにクリーンアップを実行するキャンセルの機能を使用します。  
@@ -162,7 +157,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="performance"></a>描画パフォーマンスの向上  
+##  <a name="performance"></a> 描画パフォーマンスの向上  
 
  マンデルブロ フラクタルの生成では、並列化の候補は各ピクセルの計算が他のすべての計算に依存しないためです。 描画のプロシージャを並列化する変換、外側`for`ループ、`CChildView::DrawMandelbrot`メソッドへの呼び出しに、 [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムは、次のようにします。  
 
@@ -173,7 +168,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="cancellation"></a>キャンセルのサポートの追加  
+##  <a name="cancellation"></a> キャンセルのサポートの追加  
  このセクションでは、ウィンドウ サイズの変更を処理する方法と、ウィンドウが破棄されるときに、アクティブな描画タスクをキャンセルする方法について説明します。  
   
  ドキュメント[PPL における取り消し処理](cancellation-in-the-ppl.md)ランタイムでのキャンセルのしくみについて説明します。 キャンセルは協調的です。そのため、これは直ちに行われません。 取り消されたタスクを停止するには、ランタイムは、ランタイムにタスクからの後続の呼び出し中に内部例外をスローします。 前のセクションを使用する方法を示しています、`parallel_for`描画タスクのパフォーマンスを向上するためのアルゴリズムです。 呼び出し`parallel_for`タスクを中止するランタイムを有効にでき、したがって作業をキャンセルします。  
@@ -230,7 +225,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)   

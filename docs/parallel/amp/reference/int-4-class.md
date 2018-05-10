@@ -1,12 +1,9 @@
 ---
-title: "int_4 クラス |Microsoft ドキュメント"
-ms.custom: 
+title: int_4 クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::get_ywxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 947ed0a89e4b940a9c35e2b87eeeb860f71a7ab9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9aca5b2b68daffac59ad77e5b2a4c4fb81e756a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="int4-class"></a>int_4 クラス
 4 個の整数の short ベクターを表します。  
@@ -475,7 +470,7 @@ class int_4;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[定数のサイズ](#int_4__size)||  
   
@@ -615,7 +610,7 @@ class int_4;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `int_4`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp_short_vectors.h  
   
  **Namespace:** concurrency::graphics  
@@ -697,5 +692,5 @@ explicit inline int_4(
 static const int size = 4;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

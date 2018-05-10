@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: カスタム メッセージ ブロックの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: カスタム メッセージ ブロックの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>チュートリアル: カスタム メッセージ ブロックの作成
 ここでは、受信メッセージを優先順位に従って並べるカスタム メッセージ ブロックの型を作成する方法について説明します。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 - [コード例全体](#complete)  
   
-##  <a name="design"></a>カスタム メッセージ ブロックのデザイン  
+##  <a name="design"></a> カスタム メッセージ ブロックのデザイン  
  メッセージ ブロックは、メッセージの送受信処理に参加します。 メッセージを送信するメッセージ ブロックと呼ばれる、*ソース ブロック*です。 メッセージを受信するメッセージ ブロックと呼ばれる、*ターゲット ブロック*です。 メッセージを送受信するメッセージ ブロックと呼ばれる、*伝達子ブロック*です。 エージェント ライブラリは、抽象クラスを使用して[concurrency::isource](../../parallel/concrt/reference/isource-class.md)ソース ブロックと抽象クラスを表す[concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)ターゲット ブロックを表します。 ソースとして機能するメッセージ ブロックの型は `ISource` から派生します。ターゲットとして機能するメッセージ ブロックの型は `ITarget` から派生します。  
   
  メッセージ ブロックの型は `ISource` および `ITarget` から直接派生させることもできますが、エージェント ライブラリには、メッセージ ブロックのすべての型に共通の大部分の機能を実行する 3 つの基底クラスが定義されています。これらの基底クラスによって、エラーの処理やメッセージ ブロックの接続などの操作が同時実行セーフに行われます。 [Concurrency::source_block](../../parallel/concrt/reference/source-block-class.md)クラスから派生`ISource`し、他のブロックにメッセージを送信します。 [Concurrency::target_block](../../parallel/concrt/reference/target-block-class.md)クラスから派生`ITarget`他のブロックからメッセージを受信します。 [Concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md)クラスから派生`ISource`と`ITarget`し、送信メッセージを他のブロックとそれには、他のブロックからメッセージを受信します。 メッセージ ブロックの動作に焦点を合わせることができるように、インフラストラクチャの細部の処理にはこれらの 3 つの基底クラスを使用することをお勧めします。  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="class"></a>Priority_buffer クラスの定義  
+##  <a name="class"></a> Priority_buffer クラスの定義  
  `priority_buffer` クラスは、受信メッセージを優先順位に従って並べてから、メッセージの受信順に並べるカスタム メッセージ ブロックの型です。 `priority_buffer`クラスに似ています、 [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)クラス、メッセージのキューを保持しているため、さらにためには、ソースとターゲット メッセージ ブロックの両方として機能し、複数のソースと複数の両方を持つことができますターゲット。 ただし、`unbounded_buffer` でのメッセージの伝達順は、必ずソースからのメッセージの受信順になります。  
   
  `priority_buffer`クラス型のメッセージを受信する std::[組](../../standard-library/tuple-class.md)が含まれている`PriorityType`と`Type`要素。 `PriorityType` は各メッセージの優先順位を保持する型を表し、`Type` はメッセージのデータ部分を表します。 `priority_buffer` クラスは、`Type` 型のメッセージを送信します。 `priority_buffer`クラスは、2 つのメッセージ キューをまた管理: [:priority_queue](../../standard-library/priority-queue-class.md)受信メッセージをオブジェクトおよび std::[キュー](../../standard-library/queue-class.md)送信メッセージのオブジェクト。 `priority_buffer` オブジェクトが複数のメッセージを同時に受信する場合、またはコンシューマーがまだメッセージを読み取っていないときに複数のメッセージを受信する場合、メッセージを優先順位に従って並べ替えると便利です。  
@@ -193,7 +188,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="complete"></a>完全な例  
+##  <a name="complete"></a> 完全な例  
  次の例では、`priority_buffer` クラスの完全な定義を示します。  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  
@@ -220,7 +215,7 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe/EHsc priority_buffer.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)   
  [メッセージ パッシング関数](../../parallel/concrt/message-passing-functions.md)

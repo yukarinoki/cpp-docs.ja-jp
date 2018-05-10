@@ -1,27 +1,22 @@
 ---
-title: "アクセラレータおよび accelerator_view オブジェクトを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: アクセラレータおよび accelerator_view オブジェクトを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>アクセラレータおよび accelerator_view オブジェクトの使用
 使用することができます、[アクセラレータ](../../parallel/amp/reference/accelerator-class.md)と[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)デバイスまたはエミュレーターで、C++ AMP コードを実行するを指定するクラス。 システムには、メモリの量、共有メモリ サポート、デバッグ サポート、または倍精度サポートによって異なる複数のデバイスまたはエミュレーターがある場合があります。 C++ Accelerated Massive Parallelism (C++ AMP) には、使用できるアクセラレータの調査、既定としての設定、parallel_for_each の複数の呼び出しのための複数の accelerator_views の指定、特別なデバッグ タスクの実行のために使用できる API が用意されています。  
@@ -184,7 +179,7 @@ bool pick_accelerator()
 ## <a name="interoperability"></a>相互運用性  
  C++ AMP ランタイムは、相互運用性をサポートしている、`accelerator_view`クラスと、Direct3D [ID3D11Device インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=248488)です。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)メソッドは、`IUnknown`インターフェイスを返す、`accelerator_view`オブジェクト。 [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439)メソッドは、`accelerator_view`オブジェクトを返す、`IUknown`インターフェイスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)   
  [accelerator_view クラス](../../parallel/amp/reference/accelerator-view-class.md)

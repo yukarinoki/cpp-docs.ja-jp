@@ -1,12 +1,9 @@
 ---
-title: "firstprivate |Microsoft ドキュメント"
-ms.custom: 
+title: firstprivate |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - firstprivate
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - firstprivate OpenMP clause
 ms.assetid: db479766-6d3b-4bbd-b28e-b192d826788c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0438d98467b7843b6f70e0d075dc3b61375c48ca
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 10b5a270feb638a98c060b58e90af8146ff97325
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="firstprivate"></a>firstprivate
 Parallel コンストラクトの前に存在するために、各スレッドは、変数の独自のインスタンスである必要があり、変数の値を持つ変数を初期化する必要がありますを指定します。  
@@ -60,5 +55,5 @@ firstprivate(var)
 ## <a name="example"></a>例  
  使用する例については`firstprivate`、例を参照してください[プライベート](../../../parallel/openmp/reference/private-openmp.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [句](../../../parallel/openmp/reference/openmp-clauses.md)

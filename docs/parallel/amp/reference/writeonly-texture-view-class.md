@@ -1,12 +1,9 @@
 ---
-title: "writeonly_texture_view クラス |Microsoft ドキュメント"
-ms.custom: 
+title: writeonly_texture_view クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - writeonly_texture_view
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3ab115301a6d7063ba443cf528b382ae955360f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view クラス
 テクスチャへの書き込み専用アクセスを提供します。  
@@ -85,7 +80,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[rank 定数](#rank)|`writeonly_texture_view` オブジェクトのランクを取得します。|  
   
@@ -94,7 +89,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
  `writeonly_texture_view`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp_graphics.h  
   
  **Namespace:** concurrency::graphics  
@@ -173,5 +168,5 @@ writeonly_texture_view(
  `_Src`  
  作成に使用されるテクスチャ、`writeonly_texture_view`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

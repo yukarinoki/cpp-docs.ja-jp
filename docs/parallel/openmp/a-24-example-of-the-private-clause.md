@@ -1,27 +1,22 @@
 ---
-title: "プライベートの句の例を A.24 |Microsoft ドキュメント"
-ms.custom: 
+title: プライベートの句の例を A.24 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f90a5b49-81ff-4746-ae03-37bbd33f6c08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0abd7aa296a16e54e2ec5e5ce7b2c49a93c45e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f8d07f2d95b565077f5dfd78fdc4ff6edf30216
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24 private 句の例
 `private`句 ([セクション 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) [25] ページ) の並行領域のみが有効になって、領域の動的範囲ではなく、地域の構文の範囲に対するです。  そのため、変数の使用を次の例で*、*内で、`for`ルーチンでループ*f*のプライベート コピーを指します*、*、一方で、使用方法ルーチン*g*グローバル*、*です。  

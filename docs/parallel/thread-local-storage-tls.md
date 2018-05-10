@@ -2,12 +2,9 @@
 title: スレッド ローカル ストレージ (TLS) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4cd0897a04ec2e07f1f8f3b660d092e0075ac0b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="thread-local-storage-tls"></a>スレッド ローカル ストレージ (TLS: Thread Local Storage)
 スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納する場所を割り当てるための手段です。 TLS API を使用してバインド (実行時) のスレッドに固有のデータを動的にサポート ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801)、 [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812)、 [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818)、および[TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Windows にスレッド ローカル ストレージを実装する方法の詳細については、次を参照してください。[スレッド ローカル ストレージ (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx)です。  Win32 および Visual C コンパイラでは、現在、既存の API の実装に加えて、(読み込み時に) スレッドごとに静的にバインドされるデータをサポートしています。  

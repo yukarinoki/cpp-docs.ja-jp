@@ -1,13 +1,10 @@
 ---
-title: "方法: さまざまな文字列型の間で変換 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: さまざまな文字列型の間で変換 |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間で変換する
 このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 対象となっている文字列型を含める`char *`、 `wchar_t*`、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および<xref:System.String?displayProperty=fullName>です。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。  
@@ -823,7 +818,7 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ATL と MFC 文字列変換マクロ](../atl/reference/string-conversion-macros.md)   
  [C スタイルの文字列に関連する CString の操作](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
  [方法: system::string を標準文字列に変換](../dotnet/how-to-convert-standard-string-to-system-string.md)   

@@ -1,13 +1,10 @@
 ---
-title: "vprintf 系関数 | Microsoft Docs"
-ms.custom: 
+title: vprintf 系関数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110.dll
 - msvcr120.dll
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vprintf-functions"></a>vprintf 系関数
 `vprintf` の各関数は引数リストへのポインターを受け取り、指定されたデータを書式設定して特定の出力先に書き込みます。 各関数のパラメーターの検証内容は、ワイド文字列と 1 バイト文字列のどちらを使用するか、出力先がどこか、書式設定文字列でのパラメーターの使用順序を指定できるか、などの点が異なります。  

@@ -1,14 +1,11 @@
 ---
-title: "廃止された関数 | Microsoft Docs"
-ms.custom: 
+title: 廃止された関数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -35,22 +32,20 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 195dc17d41c2c089600958976d37dd59f2d60232
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6fcb14a91aadb01d3962758b19ce636fddfbe13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="obsolete-functions"></a>廃止された関数
-ライブラリの機能の中には古くなって、新しい同等物で置き換えられているものがあります。 これらを、更新されたバージョンに変更することをお勧めします。 他の古くなった関数は CRT から削除されています。 このトピックでは、古くなったために使用されていない関数と、Visual Studio の特定のバージョンで削除された関数を示します。  
+ライブラリの機能の中には古くなって、新しい同等物で置き換えられているものがあります。 これらを、更新されたバージョンに変更することをお勧めします。 他の古くなった関数は CRT から削除されています。 このトピックでは、非推奨の関数と、Visual Studio の特定のバージョンで削除された関数を示します。  
   
-## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Visual Studio 2015 で古くなったために使用されていない  
+## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Visual Studio 2015 で非推奨とされるため使用されていない  
   
 |古い関数|代替|  
 |-----------------------|-----------------|  

@@ -1,13 +1,10 @@
 ---
-title: "コンパイルとマルチ スレッド プログラムのリンク |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイルとマルチ スレッド プログラムのリンク |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - compiling source code [C++], multithread programs
 - linking [C++], multithread programs
 ms.assetid: 27589afc-daf2-4f26-b868-a99de5c9dfec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0145c480d74cb1978c1b6caef65489eae96501c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c77cb217fe841e15f4c7470340bd3fbb502f6a9
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>マルチスレッド プログラムのコンパイルとリンク
 Bounce.c プログラムがで導入された[マルチ スレッドの C サンプル プログラム](../parallel/sample-multithread-c-program.md)です。  
@@ -38,7 +33,7 @@ Bounce.c プログラムがで導入された[マルチ スレッドの C サン
   
 #### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>コンパイルおよびリンク Bounce.c 開発環境内でマルチ スレッド プログラム  
   
-1.  **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
 2.  **プロジェクトの種類** ウィンドウで、をクリックして**Win32**です。  
   
@@ -56,5 +51,5 @@ Bounce.c プログラムがで導入された[マルチ スレッドの C サン
     CL BOUNCE.C  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)

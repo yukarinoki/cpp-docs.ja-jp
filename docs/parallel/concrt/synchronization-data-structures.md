@@ -1,29 +1,24 @@
 ---
-title: "同期データ構造 |Microsoft ドキュメント"
-ms.custom: 
+title: 同期データ構造 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f64acda5fe11cae3a40e4affc403ebb61d876de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronization-data-structures"></a>同期データ構造
 同時実行ランタイムでは、複数のスレッドから共有データへのアクセスを同期するために、いくつかのデータ構造体を提供します。 これらのデータ構造は、頻繁に変更するデータを共有している場合に便利です。 たとえば、重要なセクションの同期オブジェクトは、共有リソースが利用するまで待機するには、他のスレッドをによりします。 そのため、このようなオブジェクトを頻繁に使用されるデータへのアクセスを同期するために使用する場合をスケーラビリティ、アプリケーションで失います。 [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)提供、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスは、複数のスレッドまたは同期の必要としないタスクにリソースを共有することができます。 詳細については、`combinable`クラスを参照してください[並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)です。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [event](#event)  
   
-##  <a name="critical_section"></a>critical_section  
+##  <a name="critical_section"></a> critical_section  
  [Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)クラスにプリエンプトではなく、その他のタスクを生成する協調相互排他オブジェクトを表します。 重要なセクションは、複数のスレッドには、排他的な読み取りおよび共有データへの書き込みアクセスが必要とする場合に便利です。  
 
  `critical_section`クラスは、再入不可能なです。 [Concurrency::critical_section::lock](reference/critical-section-class.md#lock)メソッド型の例外をスロー [concurrency::improper_lock](../../parallel/concrt/reference/improper-lock-class.md)既にロックを所有するスレッドで呼び出された場合。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="reader_writer_lock"></a>reader_writer_lock  
+##  <a name="reader_writer_lock"></a> reader_writer_lock  
  [:Reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)クラスには、共有データへのスレッド セーフの読み取り/書き込み操作が用意されています。 リーダー/ライター ロックを使用して、複数のスレッドは共有リソースへの同時の読み取りアクセスを必要としますが、その共有リソースに書き込むことはほとんどありません。 このクラスは、オブジェクトを 1 つのスレッドの書き込みアクセスをいつでも、します。  
   
  `reader_writer_lock`クラスが実行できるよりも高く、`critical_section`クラスため、`critical_section`オブジェクトは、同時実行の読み取りアクセスを禁止する共有リソースへの排他アクセスを取得します。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="scoped_lock"></a>scoped_lock と scoped_lock_read  
+##  <a name="scoped_lock"></a> scoped_lock と scoped_lock_read  
  `critical_section`と`reader_writer_lock`クラスは、相互排他オブジェクトを操作する方法を簡単にする入れ子になったヘルパー クラスを提供します。 これらのヘルパー クラスと呼ばれる*スコープ ロック*です。  
   
  `critical_section`クラスに含まれる、 [concurrency::critical_section::scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class)クラスです。 コンス トラクターを指定されたアクセスを取得する`critical_section`オブジェクト以外のオブジェクトへのアクセス権をデストラクター解放します。 `reader_writer_lock`クラスに含まれる、 [concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class)クラスに似た`critical_section::scoped_lock`、提供されたへの書き込みアクセスを管理することを除いて、`reader_writer_lock`オブジェクト。 `reader_writer_lock`クラスも含まれています、 [concurrency::reader_writer_lock::scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class)クラスです。 このクラスは、指定したへの読み取りアクセスを管理`reader_writer_lock`オブジェクト。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  使用すると、 `critical_section::scoped_lock`、 `reader_writer_lock::scoped_lock`、および`reader_writer_lock::scoped_lock_read`クラスが、基になる相互排他オブジェクトへのアクセスを手動で解放しません。 ランタイムは、無効な状態にこのことができます。  
   
-##  <a name="event"></a>イベント  
+##  <a name="event"></a> イベント  
  [Concurrency::event](../../parallel/concrt/reference/event-class.md)クラス状態をシグナル状態にしたり非シグナル状態の同期オブジェクトを表します。 を共有データへのアクセスを保護する目的とするには、クリティカル セクションなどの同期オブジェクトとは異なりは、イベントは、実行のフローを同期します。  
   
  `event`クラスは、1 つのタスクが別のタスクの作業を完了したときに便利です。 たとえば、1 つのタスク可能性があります通知別のタスク、ネットワーク接続とは、ファイルからデータを読み取ることができます。  
@@ -107,7 +102,7 @@ ms.lasthandoff: 12/21/2017
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[待機](reference/event-class.md#wait)|イベントがシグナル状態になるのを待機します。|  
+|[wait](reference/event-class.md#wait)|イベントがシグナル状態になるのを待機します。|  
 |[set](reference/event-class.md#set)|イベントをシグナル状態に設定します。|  
 |[reset](reference/event-class.md#reset)|イベントを非シグナル状態に設定します。|  
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|複数のイベントがシグナル状態になるのを待機します。|  

@@ -1,12 +1,9 @@
 ---
-title: "index クラス |Microsoft ドキュメント"
-ms.custom: 
+title: index クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/index
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 594ee94bbbfc19bc6fcceb9ae7f0760d9ec877dc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="index-class"></a>index クラス
 定義、 *N*-次元インデックス pographics cpp amp.md です。  
@@ -68,7 +63,7 @@ class index;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[rank 定数](#rank)|`index` オブジェクトのランクを格納します。|  
   
@@ -78,13 +73,13 @@ class index;
 ## <a name="remarks"></a>コメント  
  `index`構造体の座標ベクターを表します*N*で一意の位置を示す整数、 *N*-次元空間です。 ベクターの値は最上位から最下位へ順に並べ替えられます。 使用して、コンポーネントの値を取得する[演算子 =](#operator_eq)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp.h  
   
  **名前空間:** Concurrency  
 
 
-## <a name="index_ctor">インデックスのコンス トラクター</a>
+## <a name="index_ctor"></a> インデックスのコンス トラクター
 Index クラスの新しいインスタンスを初期化します。
 
 ```  
@@ -204,7 +199,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  operator++   
+## <a name="operator_add_add"></a>  + + 演算子   
 インデックス オブジェクトの各要素をインクリメントします。
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -268,5 +263,5 @@ _Rhs 減算する数。
 ```
 static const int rank = _Rank;
 ``` 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

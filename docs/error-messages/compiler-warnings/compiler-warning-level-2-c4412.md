@@ -1,12 +1,9 @@
 ---
-title: "コンパイラの警告 (レベル 2) C4412 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラの警告 (レベル 2) C4412 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4412
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d186a237c7eb21cdcdc51a896d58d11bc19c5b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>コンパイラの警告 (レベル 2) C4412
 'function': 関数のシグネチャには、型 'type' が含まれています。C++ オブジェクトは、純粋なコードの間で受け渡すに安全でないと混合またはネイティブです。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 02/14/2018
   
  ランタイム エラーの原因になる可能性のある安全でない状況が検出されました: 呼び出しはから行われていますが、 **/clr: 純粋な**dllimport と関数のシグネチャを使用してインポートされている関数をコンパイル単位には、安全でない型が含まれています. メンバー関数を含むまたはデータ メンバーが安全でない型または安全でない型への間接参照がある場合、型は安全ではありません。  
   
- これは、既定の呼び出し規約と純粋なネイティブ コードの間の違いのための安全ではありません (またはネイティブおよびマネージの混合)。 インポートするときに (を介して`dllimport`) 関数を**/clr: 純粋な**コンパイル単位、署名の各型の宣言が (特にように注意しての関数をエクスポートするコンパイル単位内と同じであることを確認相違暗黙の呼び出し規約)。  
+ これは、既定の呼び出し規約と純粋なネイティブ コードの間の違いのための安全ではありません (またはネイティブおよびマネージの混合)。 インポートするときに (を介して`dllimport`) 関数を **/clr: 純粋な**コンパイル単位、署名の各型の宣言が (特にように注意しての関数をエクスポートするコンパイル単位内と同じであることを確認相違暗黙の呼び出し規約)。  
   
  仮想メンバー関数は、傾向が予期しない結果が得られます。  ただし、非仮想関数でもは正しい結果が得られるようにテストしてください。 正しい結果を取得している場合は、この警告は無視できます。  
   
@@ -106,7 +101,7 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```  
   
 ## <a name="example"></a>例  
- 既定呼び出し規約、 **/clr: 純粋な**コンパイルとは異なるネイティブ コンパイルします。  C4412.h が含まれる、`Test`の既定値は`__clrcall`します。 コンパイルして、このプログラムを実行する場合 (使用しない**/c**)、プログラムは例外をスローします。  
+ 既定呼び出し規約、 **/clr: 純粋な**コンパイルとは異なるネイティブ コンパイルします。  C4412.h が含まれる、`Test`の既定値は`__clrcall`します。 コンパイルして、このプログラムを実行する場合 (使用しない **/c**)、プログラムは例外をスローします。  
   
  次の例では、C4412 が生成されます。  
   

@@ -1,29 +1,24 @@
 ---
-title: "スケジューラ インスタンス |Microsoft ドキュメント"
-ms.custom: 
+title: スケジューラ インスタンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>スケジューラ インスタンス
 このドキュメントで使用する方法と、同時実行ランタイム スケジューラ インスタンスの役割の説明、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)と[concurrency::currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)クラスを作成および管理するにはスケジューラ インスタンス。 スケジューラ インスタンスは、特定の種類のワークロードに明示的なスケジューリング ポリシーを関連付ける場合に便利です。 たとえば、昇格したスレッド優先順位で一部のタスクを実行するようにスケジューラ インスタンスを 1 つ作成し、他のタスクについては既定のスケジューラを使用して通常のスレッド優先順位で実行することができます。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [例](#example)  
   
-##  <a name="classes"></a>スケジューラと CurrentScheduler クラス  
+##  <a name="classes"></a> スケジューラと CurrentScheduler クラス  
  タスク スケジューラにより、1 つまたは複数を使用するアプリケーション*スケジューラ インスタンス*作業をスケジュールします。 [Concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)クラスが、スケジューラ インスタンスを表し、タスクのスケジュール設定に関連する機能をカプセル化します。  
   
  スケジューラにアタッチされているスレッドと呼ばれる、*実行コンテキスト*、または単*コンテキスト*です。 1 つのスケジューラは、いつでも、現在のコンテキストでアクティブにできます。 アクティブなスケジューラとも呼ばれます、*現在のスケジューラ*です。 同時実行ランタイムを使用して、 [concurrency::currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)アクセスを現在のスケジューラに提供するクラス。 1 つのコンテキストの現在のスケジューラは、別のコンテキストの現在のスケジューラと異なることができます。 ランタイムは、現在のスケジューラのプロセス レベルの表現を提供しません。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="creating"></a>スケジューラ インスタンスを作成します。  
+##  <a name="creating"></a> スケジューラ インスタンスを作成します。  
  これら 3 つの方法を作成する、`Scheduler`オブジェクト。  
   
 -   スケジューラが存在しない場合、ランタイムは、共通言語ランタイムの機能、たとえば、並列アルゴリズムを使用して作業を実行するときに、既定のスケジューラを作成します。 既定のスケジューラでは、並列処理を開始するコンテキストの現在のスケジューラになります。  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="managing"></a>スケジューラ インスタンスの有効期間を管理します。  
+##  <a name="managing"></a> スケジューラ インスタンスの有効期間を管理します。  
  ランタイム機構を使用して、参照カウントの有効期間を制御する`Scheduler`オブジェクト。  
   
 
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="features"></a>メソッドと機能  
+##  <a name="features"></a> メソッドと機能  
  このセクションでは、の重要なメソッドをまとめたもの、`CurrentScheduler`と`Scheduler`クラスです。  
   
  考えること、`CurrentScheduler`として現在のコンテキストで使用するためのスケジューラを作成するためのヘルパー クラス。 `Scheduler`クラスを使用して、別のコンテキストに属しているスケジューラを制御できます。  
@@ -136,7 +131,7 @@ ms.lasthandoff: 12/21/2017
 ##  <a name="example"></a> 「例」  
  作成してスケジューラ インスタンスを管理する方法の基本的な例については、次を参照してください。[する方法: スケジューラ インスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [方法: スケジューラ インスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
  [スケジューラ ポリシー](../../parallel/concrt/scheduler-policies.md)   

@@ -1,13 +1,10 @@
 ---
-title: "ジェネリック クラス (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: ジェネリック クラス (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>ジェネリック クラス (C++/CLI)
 ジェネリック クラスは、次の形式を使用して宣言されます。  
@@ -53,7 +48,7 @@ class-body
  追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。  
   
  *クラス キー*  
- いずれか`class`または`typename`  
+ いずれか`class`または `typename`  
   
  *型のパラメーターの識別子*、  
  型パラメーターの名前を指定する識別子のコンマで区切って指定します。  
@@ -84,7 +79,7 @@ class-body
  *宣言子*  
  この型の任意の変数の宣言。 例: `^`*識別子*[`,` ...]  
   
- このようなジェネリック クラスを宣言することができます (ことに注意してください、キーワード**クラス**の代わりに使用することがあります**typename**)。 この例では`ItemType`、`KeyType`と`ValueType`位置で指定されている不明な種類は、ここで、型です。 `HashTable<int, int>`ジェネリック型の構築された型は、`HashTable<KeyType, ValueType>`です。 異なる型の構築型の数は、単一のジェネリック型から作成できます。 構築された型のジェネリック クラスから構築された型は、その他の ref クラス型と同様に扱われます。  
+ このようなジェネリック クラスを宣言することができます (ことに注意してください、キーワード**クラス**の代わりに使用することがあります**typename**)。 この例では`ItemType`、`KeyType`と`ValueType`位置で指定されている不明な種類は、ここで、型です。 `HashTable<int, int>` ジェネリック型の構築された型は、`HashTable<KeyType, ValueType>`です。 異なる型の構築型の数は、単一のジェネリック型から作成できます。 構築された型のジェネリック クラスから構築された型は、その他の ref クラス型と同様に扱われます。  
   
 ```  
 // generic_classes_1.cpp  
@@ -108,7 +103,7 @@ int main() {
 }  
 ```  
   
- 両方の値の型 (などのいずれかの組み込み型`int`または`double`、またはユーザー定義の値の型) と、参照型をジェネリック型引数として使用することがあります。 ジェネリックの定義内での構文は、同じかに関係なくです。 構文的に、不明な型は参照型の場合と同様に扱われます。 ただし、ランタイムはいるかどうかを実際に使用される型は、値型とメンバーに直接アクセスするための適切な生成されたコードに置き換えることです。 ジェネリック型引数として使用される値型では、ボックス化されていないと、ためボックス化に関連付けられているパフォーマンスの低下は発生しません。 ジェネリックの本体内で使用される構文にする必要があります**T ^**と '**->**' の代わりに '**.**' です。 使用されるすべての[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)型のパラメーターは適切として解釈されます、ランタイムによって、単純な値の型の作成、型引数が値型の場合。  
+ 両方の値の型 (などのいずれかの組み込み型`int`または`double`、またはユーザー定義の値の型) と、参照型をジェネリック型引数として使用することがあります。 ジェネリックの定義内での構文は、同じかに関係なくです。 構文的に、不明な型は参照型の場合と同様に扱われます。 ただし、ランタイムはいるかどうかを実際に使用される型は、値型とメンバーに直接アクセスするための適切な生成されたコードに置き換えることです。 ジェネリック型引数として使用される値型では、ボックス化されていないと、ためボックス化に関連付けられているパフォーマンスの低下は発生しません。 ジェネリックの本体内で使用される構文にする必要があります**T ^** と '**->**' の代わりに '**.**' です。 使用されるすべての[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)型のパラメーターは適切として解釈されます、ランタイムによって、単純な値の型の作成、型引数が値型の場合。  
   
  ジェネリック クラスを宣言することもできます。[ジェネリック型パラメーターの制約 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 、型パラメーターに対して使用できる型にします。 次の例では任意の型の使用の`ItemType`実装する必要があります、`IItem`インターフェイスです。 使用しようとしています。 `int`、たとえば、これはを実装しません`IItem`、型引数は、制約を満たしていないため、コンパイル時エラーが生成されます。  
   
@@ -282,7 +277,7 @@ Test1
 ### <a name="non-generic-methods-in-generic-classes"></a>ジェネリック クラスの非ジェネリック メソッド  
  追加の型パラメーターを持たないジェネリック クラスのメソッドは通常と呼ばれるを非ジェネリックが、外側のジェネリック クラスが暗黙的にパラメーター化されました。  
   
- 非ジェネリック メソッドのシグネチャは、直接、またはオープン構築型で外側のクラスの 1 つまたは複数の型パラメーターを含めることができます。 例:  
+ 非ジェネリック メソッドのシグネチャは、直接、またはオープン構築型で外側のクラスの 1 つまたは複数の型パラメーターを含めることができます。 例えば:  
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
@@ -345,7 +340,7 @@ Amount: $123.00**
 ```  
   
 ## <a name="generic-methods-in-generic-classes"></a>ジェネリック クラスのジェネリック メソッド  
- ジェネリックと非ジェネリックのクラスのジェネリック メソッドを宣言することができます。 例:  
+ ジェネリックと非ジェネリックのクラスのジェネリック メソッドを宣言することができます。 例えば:  
   
 ## <a name="example"></a>例  
   
@@ -708,5 +703,5 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジェネリック](../windows/generics-cpp-component-extensions.md)

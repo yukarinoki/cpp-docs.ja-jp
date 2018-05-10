@@ -1,13 +1,10 @@
 ---
-title: "CRT のセキュリティ機能 | Microsoft Docs"
-ms.custom: 
+title: CRT のセキュリティ機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
@@ -33,22 +30,20 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d32a69e179acee501c17d96218cc4ef2e10f0c3
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-features-in-the-crt"></a>CRT のセキュリティ機能
-多くの古い CRT 関数には、セキュリティが強化された新しいバージョンがあります。 セキュリティで保護された関数が存在する場合、低いセキュリティ レベルの古いバージョンは使用されていないバージョンとしてマークされ、新しいバージョンには `_s` ("secure") のサフィックスが付いています。  
+多くの古い CRT 関数には、セキュリティが強化された新しいバージョンがあります。 セキュリティで保護された関数が存在する場合、低いセキュリティ レベルの古いバージョンは非推奨としてマークされ、新しいバージョンには `_s` ("secure") のサフィックスが付いています。  
   
- ここでの "使用されていない" とは、関数の使用が推奨されないというだけであり、その関数が CRT から削除される予定であるということを示しているわけではありません。  
+ ここでの "非推奨" とは、関数の使用が推奨されないというだけであり、その関数が CRT から削除される予定であるということを示しているわけではありません。  
   
  また、セキュリティで保護された関数は、セキュリティ エラーを防いだり修正したりするのではなく、エラー発生時にそのエラーをキャッチします。 これらの関数はエラー条件に対して追加のチェックを行い、エラーが発生した場合に、エラー ハンドラーを呼び出します (「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」を参照)。  
   
@@ -57,7 +52,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="eliminating-deprecation-warnings"></a>非推奨に関する警告を除去する  
  低いセキュリティ レベルの古い関数に対する非推奨警告を除去するには、いくつかの方法があります。 `_CRT_SECURE_NO_WARNINGS` を定義するか、[warning](../preprocessor/warning.md) プラグマを使用するのが、最も簡単な方法です。 どちらの方法でも警告は無効になりますが、その警告の原因になったセキュリティの問題はもちろんそのまま存在します。 非推奨に関する警告を有効にしたまま、新しい CRT セキュリティ機能を利用することを推奨します。  
   
- C++ では、[セキュリティ保護されたテンプレート オーバーロード](../c-runtime-library/secure-template-overloads.md)を使用するのが、最も簡単な方法です。多くの場合、この方法では、使用されていない関数の呼び出しが、それらの関数のセキュリティで保護された新しいバージョンの呼び出しに置き換えられるので、非推奨に関する警告は除去されます。 たとえば、この使用されていない `strcpy` の呼び出しについて考えます。  
+ C++ では、[セキュリティ保護されたテンプレート オーバーロード](../c-runtime-library/secure-template-overloads.md)を使用するのが、最も簡単な方法です。多くの場合、この方法では、使用されていない関数の呼び出しが、それらの関数のセキュリティで保護された新しいバージョンの呼び出しに置き換えられるので、非推奨に関する警告は除去されます。 たとえば、この非推奨とされている `strcpy` の呼び出しについて考えます：  
   
 ```  
 char szBuf[10];   
@@ -66,7 +61,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
  `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` を 1 として定義すると、`strcpy` の呼び出しが、バッファー オーバーランを防ぐ `strcpy_s` の呼び出しに変更され、警告は除去されます。 詳細については、「 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)」を参照してください。  
   
- セキュリティで保護されたテンプレート オーバーロードのない、使用されていない関数の場合、セキュリティで保護されたバージョンを使用するように手動でコードを更新することを強くお勧めします。  
+ セキュリティで保護されたテンプレート オーバーロードのない、非推奨の関数の場合、セキュリティで保護されたバージョンを使用するように手動でコードを更新することを強くお勧めします。  
   
  セキュリティには関連しませんが、非推奨に関する警告が発生する別の要因として、POSIX 関数があります。 POSIX の関数名を標準に沿った名前に置き換えるか ([access](../c-runtime-library/reference/access-crt.md) を [_access](../c-runtime-library/reference/access-waccess.md) にするなど)、`_CRT_NONSTDC_NO_WARNINGS` を定義して、POSIX 関連の非推奨に関する警告を無効にします。 詳細については、「[互換性](compatibility.md)」をご覧ください。  
   

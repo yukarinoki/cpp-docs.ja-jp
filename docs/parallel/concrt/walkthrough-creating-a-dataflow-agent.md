@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: データフロー エージェントの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: データフロー エージェントの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>チュートリアル: データフロー エージェントの作成
 ここでは、制御フローではなくデータ フローに基づくエージェント ベースのアプリケーションを作成する方法について説明します。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 - [メッセージ ログ エージェントの作成](#logging)  
   
-##  <a name="control-flow"></a>基本的な制御フロー エージェントの作成  
+##  <a name="control-flow"></a> 基本的な制御フロー エージェントの作成  
  `control_flow_agent` クラスを定義する次の例について考えます。 `control_flow_agent` クラスは、1 つの入力バッファーと 2 つの出力バッファーの合計 3 つのメッセージ バッファーに対して作用します。 `run` メソッドは、ループ内でソース メッセージ バッファーから読み取り、条件付きステートメントを使用してプログラムの実行フローを調整します。 エージェントは、ゼロ以外の負の値に対してカウンターの 1 つをインクリメントし、ゼロ以外の正の値に対して別のカウンターをインクリメントします。 エージェントは、sentinel 値のゼロを受信すると、カウンターの値を出力メッセージ バッファーに送信します。 `negatives` メソッドと `positives` メソッドは、アプリケーションがエージェントから負の値と正の値のカウントを読み取ることができるようにします。  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="dataflow"></a>基本的なデータ フロー エージェントの作成  
+##  <a name="dataflow"></a> 基本的なデータ フロー エージェントの作成  
  ここでは、`control_flow_agent` クラスからデータ フロー モデルに切り替えて、同じタスクを実行する方法について説明します。  
   
  データ フロー エージェントを使用するには、メッセージ バッファーのネットワークを作成し、それぞれのメッセージ バッファーが特定の用途で機能するようにします。 一部のメッセージ ブロックでは、フィルター関数を使用して、メッセージの受け入れまたは拒否をメッセージ ペイロードに基づいて行います。 フィルター関数を使用すると、メッセージ ブロックが特定の値のみを受信するようになります。  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[トップ](#top)]  
   
-##  <a name="logging"></a>メッセージ ログ エージェントの作成  
+##  <a name="logging"></a> メッセージ ログ エージェントの作成  
  次の例では、`log_agent` クラスに似た `dataflow_agent` クラスを示します。 `log_agent` クラスは、ログ メッセージをファイルおよびコンソールに書き込む非同期ログ エージェントを実装します。 `log_agent` クラスは、アプリケーションがメッセージを情報、警告、またはエラーとして分類できるようにします。 また、アプリケーションが各ログ カテゴリをファイルとコンソールのどちらに書き込むか、または両方に書き込むかを指定できるようにします。 この例では、ファイルにすべてのログ メッセージが書き込まれ、コンソールにはエラー メッセージのみが書き込まれます。  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  
@@ -157,6 +152,6 @@ info: ===Logging finished.===
   
  [[トップ](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 

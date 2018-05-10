@@ -1,10 +1,7 @@
 ---
-title: "Concurrency::precise_math 名前空間の関数 |Microsoft ドキュメント"
-ms.custom: 
+title: Concurrency::precise_math 名前空間の関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency::precise_math 名前空間の関数
 ||||  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>パラメーター  
  `exponent`  
- 指数用語 *n* 算術式の`e` <sup> n</sup>ここで、`e`自然対数の底です。  
+ 指数用語*n*算術式の`e` <sup>n</sup>ここで、`e`自然対数の底です。  
   
 ### <a name="return-value"></a>戻り値  
  e を底とする引数のべき乗マイナス 1 を返します。  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>パラメーター  
  `exponent`  
- 指数用語 *n* 算術式の`e` <sup> n</sup>ここで、`e`自然対数の底です。  
+ 指数用語*n*算術式の`e` <sup>n</sup>ここで、`e`自然対数の底です。  
   
 ### <a name="return-value"></a>戻り値  
  e を底とする引数のべき乗マイナス 1 を返します。  
@@ -1076,7 +1071,7 @@ inline double fmod(
  2 番目の浮動小数点引数。  
   
 ### <a name="return-value"></a>戻り値  
- 残りの部分`_X`で割った値`_Y`; の値である、 `_X`  -  `_Y`  *n*ここで、  *n* は、整数になるようの大きさ`_X`  -  `_Y`  *n* がの絶対値よりも小さい`_Y`です。  
+ 残りの部分`_X`で割った値`_Y`; の値である、 `_X`  -  `_Y` *n*ここで、 *n*は整数になるようの大きさ`_X`  -  `_Y` *n*がの絶対値よりも小さい`_Y`です。  
   
 ##  <a name="fmodf"></a>  fmodf  
  2 番目の指定された引数で除算した 1 番目の指定された引数の剰余を計算します。  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  2 番目の浮動小数点引数。  
   
 ### <a name="return-value"></a>戻り値  
- 残りの部分`_X`で割った値`_Y`; の値である、 `_X`  -  `_Y`  *n*ここで、  *n* は、整数になるようの大きさ`_X`  -  `_Y`  *n* がの絶対値よりも小さい`_Y`です。  
+ 残りの部分`_X`で割った値`_Y`; の値である、 `_X`  -  `_Y` *n*ここで、 *n*は整数になるようの大きさ`_X`  -  `_Y` *n*がの絶対値よりも小さい`_Y`です。  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  引数の値に NaN、無限、通常のある、0 として分類します。  
@@ -1819,7 +1814,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>戻り値  
  キューブのルート、引数の逆数を返します。  
   
-##  <a name="remainder"></a>  remainder  
+##  <a name="remainder"></a>  残りの部分  
  剰余を計算します _X REM _Y。  
   
 ```  
@@ -2418,5 +2413,5 @@ inline float truncf(float _X) restrict(amp);
 ### <a name="return-value"></a>戻り値  
  引数の整数部分を返します  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency::precise_math 名前空間](concurrency-precise-math-namespace.md)

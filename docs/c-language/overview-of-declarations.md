@@ -1,37 +1,32 @@
 ---
-title: "宣言の概要 | Microsoft Docs"
-ms.custom: 
+title: 宣言の概要 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarations"></a>宣言の概要
 "宣言" は、一連の識別子の解釈と属性を指定します。 識別子に指定されたオブジェクトまたは関数のためにストレージを予約する宣言は "定義" と呼ばれます。 C における変数、関数、および型の宣言では、次の構文に従います。  
   
 ## <a name="syntax"></a>構文  
  `declaration`:  
- *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt**;**  
+ *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt **;**  
   
  /\* *attribute-seq*opt は Microsoft 仕様です */  
   
@@ -81,7 +76,7 @@ int const *fp;
   
  *type-qualifier* 終端要素は、**const** と `volatile` の 2 つがあります。 これらの修飾子は、関連する型の追加のプロパティを指定します (その型のオブジェクトに左辺値を通じてアクセスする場合のみ)。 **const** および `volatile` の詳細については、「[型修飾子](../c-language/type-qualifiers.md)」を参照してください。 左辺値の定義については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C 言語の構文概要](../c-language/c-language-syntax-summary.md)   
  [宣言と型](../c-language/declarations-and-types.md)   
  [宣言の概要](../c-language/summary-of-declarations.md)

@@ -1,30 +1,25 @@
 ---
-title: "マルチ スレッド プログラム |Microsoft ドキュメント"
-ms.custom: 
+title: マルチ スレッド プログラム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - threading [C++], about threading
 - multithreading [C++], about threads
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff73b4d3a1c8ee6971fbd3f88f491c2a5c76311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ece834bd6bf85daacbbaf50110e6e278da1ae099
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithread-programs"></a>マルチスレッド プログラム
 スレッドは、基本的には、プログラム実行のパスです。 Win32 のスケジュール実行の最小単位です。 スレッドは、スタック、CPU レジスタとシステムのスケジューラの実行のリスト内のエントリの状態で構成されます。 各スレッドは、プロセスのすべてのリソースを共有します。  
@@ -33,5 +28,5 @@ ms.lasthandoff: 12/21/2017
   
  プロセス内の各スレッドは独立して動作します。 表示されるように互いにしない限り、スレッドは個別に実行し、プロセスの他のスレッドに対応していないです。 ただし、共通のリソースを共有するスレッドは、セマフォまたはプロセス間通信の別のメソッドを使用して、作業を調整する必要があります。 スレッドの同期の詳細については、次を参照してください。[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C と Win32 を使用するマルチスレッド](../parallel/multithreading-with-c-and-win32.md)

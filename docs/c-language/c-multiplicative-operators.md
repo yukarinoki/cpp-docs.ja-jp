@@ -1,13 +1,10 @@
 ---
-title: "C 乗算演算子 | Microsoft Docs"
-ms.custom: 
+title: C 乗算演算子 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 1810cc9dd7a991e302e0e9e2db69f65aebebc613
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-multiplicative-operators"></a>C 乗算演算子
 乗算演算子は、乗算 (**\***)、除算 (**/**)、および剰余 (`%`) 演算を実行します。  
@@ -105,7 +100,7 @@ n = i % j;
   
  **Microsoft 固有の仕様**  
   
- 剰余の符号は、被除数の符号と同じです。 例えば:  
+ 剰余の符号は、被除数の符号と同じです。 例:  
   
 ```  
 50 % -6 = 2  
@@ -116,5 +111,5 @@ n = i % j;
   
  **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [乗算演算子と剰余演算子](../cpp/multiplicative-operators-and-the-modulus-operator.md)

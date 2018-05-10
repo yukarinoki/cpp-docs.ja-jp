@@ -1,12 +1,9 @@
 ---
-title: "IExecutionContext 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: IExecutionContext 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IExecutionContext
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8b00f24970e6bbc7f582f795c26ccb96461028
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c194dc7ecd4af0092dd304b17a8230cda6a8598
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 構造体
 特定の仮想プロセッサで実行でき、協調的にコンテキストを切り替えることができる実行コンテキストへのインターフェイスです。  
@@ -60,7 +55,7 @@ struct IExecutionContext;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IExecutionContext`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h  
   
  **名前空間:** concurrency  
@@ -131,7 +126,7 @@ virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
 ### <a name="remarks"></a>コメント  
  パラメーターを保存することが求め`pThreadProxy`への呼び出しで返すと、`GetProxy`メソッドです。 リソース マネージャーは、実行コンテキストに関連付けられているスレッド プロキシは、スレッド プロキシが実行中に変更しないという、`Dispatch`メソッドです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [IScheduler 構造体](ischeduler-structure.md)   
  [IThreadProxy 構造体](ithreadproxy-structure.md)

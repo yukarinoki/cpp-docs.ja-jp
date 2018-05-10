@@ -1,12 +1,9 @@
 ---
-title: "IThreadProxy 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: IThreadProxy 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IThreadProxy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbf59302a73374f08f1c226c1e7e56202654dcfb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 構造体
 実行スレッドの抽象化です。 作成するスケジューラの `SchedulerType` ポリシー キーに応じて、リソース マネージャーは、通常の Win32 スレッドまたはユーザー モード スケジュール可能 (UMS: User-Mode Schedulable) スレッドによってサポートされるスレッド プロキシを許可します。 UMS スレッドは、Windows 7 以上のバージョンの 64 ビット オペレーティング システムでサポートされます。  
@@ -49,7 +44,7 @@ struct IThreadProxy;
 |----------|-----------------|  
 |[IThreadProxy::GetId](#getid)|スレッド プロキシの一意識別子を返します。|  
 |[IThreadProxy::SwitchOut](#switchout)|基になる仮想プロセッサ ルートからコンテキストの関連付けを解除します。|  
-|[IThreadProxy::SwitchTo](#switchto)|現在実行中のコンテキストから別の名前への協調的なコンテキスト スイッチを実行します。|  
+|[Ithreadproxy::switchto](#switchto)|現在実行中のコンテキストから別の名前への協調的なコンテキスト スイッチを実行します。|  
 |[IThreadProxy::YieldToSystem](#yieldtosystem)|呼び出し元のスレッドから、現在のプロセッサ上で実行する準備が整っている別のスレッドに実行を切り替えます。 オペレーティング システムでは、[次へ] を実行するスレッドを選択します。|  
   
 ## <a name="remarks"></a>コメント  
@@ -58,7 +53,7 @@ struct IThreadProxy;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IThreadProxy`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h  
   
  **名前空間:** concurrency  
@@ -136,7 +131,7 @@ virtual void YieldToSystem() = 0;
   
  `YieldToSystem` は、現在実行中のスレッドを表す `IThreadProxy` インターフェイスで呼び出す必要があります。それ以外の場合、結果は保証されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [IExecutionContext 構造体](iexecutioncontext-structure.md)   
  [IScheduler 構造体](ischeduler-structure.md)   

@@ -1,27 +1,22 @@
 ---
-title: "ロックを使用して A.16 |Microsoft ドキュメント"
-ms.custom: 
+title: ロックを使用して A.16 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db55a8e562e0b1ae72038128a035d2cdabcd3e86
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a16---using-locks"></a>A.16 ロックの使用
 次の例では、(の[セクション 3.2](../../parallel/openmp/3-2-lock-functions.md) 41 ページの) 注ロック関数の引数は型である必要があります`omp_lock_t`、それをフラッシュする必要はありません。  ロック関数により、スレッドは最初のクリティカル セクション エントリの待機中にアイドル状態であるが 2 番目のエントリの待機中に他の作業を行います。  `omp_set_lock`関数ブロックが、`omp_test_lock`関数は、実行する skip() で作業を許可します。  

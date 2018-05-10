@@ -1,30 +1,25 @@
 ---
-title: "UWP アプリの C++ で非同期操作の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: UWP アプリの C++ で非同期操作の作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>UWP アプリの C++ で非同期操作の作成
 このドキュメントでは、ユニバーサル Windows Runtime (UWP) アプリを Windows ThreadPool ベースの非同期操作を生成する、タスク クラスを使用するときに注意する重要な点について説明します。  
@@ -71,10 +66,10 @@ ms.lasthandoff: 02/14/2018
  [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  進行状況を報告する非同期アクションを表します。  
   
- [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [:Iasyncoperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  結果を返す非同期操作を表します。  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [:Iasyncoperationwithprogress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  結果を返し、進行状況を報告する、非同期操作を表します。  
   
  *アクション* の概念は、非同期タスクが値を生成しないことを意味します ( `void`を返す関数を考えてみてください)。 *操作* の概念は、非同期タスクが値を生成することを意味します。 *進行状況* の概念は、タスクが呼び出し元に進行状況を報告できることを意味します。 JavaScript、.NET Framework および Visual C++ はそれぞれ、ABI の境界を越えて使用するため、これらのインターフェイスのインスタンスを作成する独自の方法を提供します。 Visual C++ では、PPL は [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 関数を提供します。 この関数は、Windows ランタイムの非同期アクションまたはタスクの完了を表す操作を作成します。 `create_async`関数の処理関数 (通常はラムダ式) を受け取り、内部的に作成、`task`オブジェクト、およびその次の 4 つの非同期 Windows ランタイム インターフェイスの 1 つのタスクをラップします。  
@@ -168,8 +163,8 @@ ms.lasthandoff: 02/14/2018
 
 >  STA で実行される継続の本体で [concurrency::task::wait](reference/task-class.md#wait) を呼び出さないでください。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](reference/task-class.md#get) のメソッドを呼び出すことができます。  
   
-##  <a name="example-app">例: C++ および XAML を使用する Windows ランタイム アプリでの実行の制御</a>  
- ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示する C++ XAML アプリケーションを考えてみます。 このアプリを作成する、Visual Studio で開始、作成することで、**空のアプリケーション (ユニバーサル Windows)**プロジェクトおよび名前`CommonWords`です。 アプリケーション マニフェストで、 **[ドキュメント ライブラリ]** の機能を指定して、アプリケーションがドキュメント フォルダーにアクセスできるようにします。 また、アプリケーション マニフェストの宣言セクションにテキスト (.txt) ファイルの種類を追加します。 アプリケーションの機能および宣言に関する詳細については、「 [アプリ パッケージと展開](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx)」を参照してください。  
+##  <a name="example-app"></a> 例: C++ および XAML を使用する Windows ランタイム アプリでの実行の制御  
+ ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示する C++ XAML アプリケーションを考えてみます。 このアプリを作成する、Visual Studio で開始、作成することで、**空のアプリケーション (ユニバーサル Windows)** プロジェクトおよび名前`CommonWords`です。 アプリケーション マニフェストで、 **[ドキュメント ライブラリ]** の機能を指定して、アプリケーションがドキュメント フォルダーにアクセスできるようにします。 また、アプリケーション マニフェストの宣言セクションにテキスト (.txt) ファイルの種類を追加します。 アプリケーションの機能および宣言に関する詳細については、「 [アプリ パッケージと展開](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx)」を参照してください。  
   
  `Grid` 要素と `ProgressRing` 要素を含めるように、MainPage.xaml の `TextBlock` 要素を更新します。 `ProgressRing` は操作が進行中であることを示し、 `TextBlock` は計算の結果を示します。  
   
@@ -204,5 +199,5 @@ ms.lasthandoff: 02/14/2018
   
  この例では、 `task` をサポートする `create_async` オブジェクトが暗黙的なキャンセル トークンを使用しているため、取り消しをサポートできます。 タスクが協調的に取り消しに応答する必要がある場合には、 `cancellation_token` オブジェクトを受け取るように処理関数を定義します。 PPL での取り消し処理の詳細については、「 [Cancellation in the PPL](cancellation-in-the-ppl.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイム](../../parallel/concrt/concurrency-runtime.md)

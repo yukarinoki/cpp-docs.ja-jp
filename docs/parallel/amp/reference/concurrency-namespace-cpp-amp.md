@@ -1,12 +1,9 @@
 ---
-title: "同時実行 Namespace (C++ AMP) |Microsoft ドキュメント"
-ms.custom: 
+title: 同時実行 Namespace (C++ AMP) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 名前空間 (C++ AMP)
 データ並列ハードウェアでの C++ コードの実行を高速化するクラスと関数を提供します。 詳細については、次を参照してください[C++ AMP の概要。](../cpp-amp-overview.md)  
@@ -70,9 +65,9 @@ namespace Concurrency;
   
 ### <a name="enumerations"></a>列挙  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
-|[access_type Enumeration](concurrency-namespace-enums-amp.md#access_type)|データ アクセスの種類を指定します。|  
+|[access_type 列挙型](concurrency-namespace-enums-amp.md#access_type)|データ アクセスの種類を指定します。|  
 |[queuing_mode 列挙型](concurrency-namespace-enums-amp.md#queuing_mode)|アクセラレータでサポートされているキュー モードを指定します。|  
   
 ### <a name="operators"></a>演算子  
@@ -120,10 +115,10 @@ namespace Concurrency;
 |[HLSL_MAX_NUM_BUFFERS 定数](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|DirectX で許容される最大バッファー数。|  
 |[MODULENAME_MAX_LENGTH 定数](concurrency-namespace-constants-amp.md#modulename_max_length)|モジュール名の最大長を格納します。 この値は、コンパイラとランタイムで同じにする必要があります。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リファレンス (C++ AMP)](reference-cpp-amp.md)
 
 

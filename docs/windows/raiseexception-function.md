@@ -1,12 +1,9 @@
 ---
-title: "RaiseException 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: RaiseException 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::RaiseException
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 380e3792c5b2b9504bec841965e70bd47ec619d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2af97ac13386db450318f4d1f384517a8dd77baf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="raiseexception-function"></a>RaiseException 関数
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -51,10 +46,10 @@ inline void __declspec(noreturn)   RaiseException(
   
  詳細については、Windows を参照してください。 **RaiseException**関数。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** internal.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

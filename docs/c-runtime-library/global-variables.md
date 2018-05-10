@@ -1,13 +1,10 @@
 ---
-title: "グローバル変数 | Microsoft Docs"
-ms.custom: 
+title: グローバル変数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.variables
 dev_langs:
@@ -17,31 +14,29 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fec44138379e3510f353f0fdd99f7a6a1905f9cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2da3dd07c7088bee4be750b764b4a467bfebeae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-variables"></a>グローバル変数
-Microsoft C ランタイム ライブラリには、次のグローバル変数またはマクロが用意されています。 これらのグローバル変数またはマクロの一部は、より安全かつ機能的なバージョンが優先されるため、推奨されていません。グローバル変数の代わりにそれらを使用することをお勧めします。  
+Microsoft C ランタイム ライブラリには、次のグローバル変数またはマクロが用意されています。 これらのグローバル変数またはマクロの一部は、より安全かつ機能的なバージョンが優先されるため、非推奨とされました。グローバル変数の代わりにそれらを使用することをお勧めします。  
   
 |変数|説明|  
 |--------------|-----------------|  
 |[__argc、\__argv、\__wargv](../c-runtime-library/argc-argv-wargv.md)|コマンド ライン引数を格納します。|  
-|[_daylight、_dstbias、_timezone、and _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|使用しないでください。 代わりに、`_get_daylight`、`_get_dstbias`、`_get_timezone`、および `_get_tzname` を使用します。<br /><br /> 現地時刻に合わせます。一部の日付関数および時刻関数で使用されます。|  
-|[errno、_doserrno、_sys_errlist、_sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)|使用しないでください。 代わりに、`_get_errno`、`_set_errno`、`_get_doserrno`、`_set_doserrno`、`perror`、および `strerror` を使用します。<br /><br /> エラー コードと関連情報を格納します。|  
-|[_environ、_wenviron](../c-runtime-library/environ-wenviron.md)|使用しないでください。 代わりに、`getenv_s`、`_wgetenv_s`、`_dupenv_s`、`_wdupenv_s`、`_putenv_s`、および `_wputenv_s` を使用します。<br /><br /> プロセス環境文字列へのポインターの配列へのポインター。起動時に初期化されます。|  
-|[_fmode](../c-runtime-library/fmode.md)|使用しないでください。 代わりに、`_get_fmode` または `_set_fmode` を使用します。<br /><br /> 既定のファイルの変換モードを設定します。|  
+|[_daylight、_dstbias、_timezone、and _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|非推奨。 代わりに、`_get_daylight`、`_get_dstbias`、`_get_timezone`、および `_get_tzname` を使用します。<br /><br /> 現地時刻に合わせます。一部の日付関数および時刻関数で使用されます。|  
+|[errno、_doserrno、_sys_errlist、_sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)|非推奨。 代わりに、`_get_errno`、`_set_errno`、`_get_doserrno`、`_set_doserrno`、`perror`、および `strerror` を使用します。<br /><br /> エラー コードと関連情報を格納します。|  
+|[_environ、_wenviron](../c-runtime-library/environ-wenviron.md)|非推奨。 代わりに、`getenv_s`、`_wgetenv_s`、`_dupenv_s`、`_wdupenv_s`、`_putenv_s`、および `_wputenv_s` を使用します。<br /><br /> プロセス環境文字列へのポインターの配列へのポインター。起動時に初期化されます。|  
+|[_fmode](../c-runtime-library/fmode.md)|非推奨。 代わりに、`_get_fmode` または `_set_fmode` を使用します。<br /><br /> 既定のファイルの変換モードを設定します。|  
 |[_iob](../c-runtime-library/iob.md)|コンソール、ファイル、およびデバイスの I/O 制御構造の配列。|  
 |[_pctype、_pwctype、_wctype、_mbctype、_mbcasemap](../c-runtime-library/pctype-pwctype-wctype-mbctype-mbcasemap.md)|文字分類関数によって使用される情報を格納します。|  
-|[_pgmptr、_wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|使用しないでください。 代わりに、`_get_pgmptr` または `_get_wpgmptr` を使用します。<br /><br /> プログラムの起動時に、プログラムの呼び出し方法に応じて、プログラムの完全修飾パスまたは相対パス、完全なプログラム名、またはファイル名拡張子の付かないプログラム名に初期化されます。|  
+|[_pgmptr、_wpgmptr](../c-runtime-library/pgmptr-wpgmptr.md)|非推奨。 代わりに、`_get_pgmptr` または `_get_wpgmptr` を使用します。<br /><br /> プログラムの起動時に、プログラムの呼び出し方法に応じて、プログラムの完全修飾パスまたは相対パス、完全なプログラム名、またはファイル名拡張子の付かないプログラム名に初期化されます。|  
   
 ## <a name="see-also"></a>参照  
  [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)   

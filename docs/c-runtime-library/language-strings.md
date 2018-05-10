@@ -1,13 +1,10 @@
 ---
-title: "言語識別文字列| Microsoft Docs"
-ms.custom: 
+title: 言語識別文字列| Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92ad129a5703f509cfd9543497cceffae3a6e7b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-strings"></a>Language Strings
 `setlocale` 関数と `_create_locale` 関数は、Unicode コード ページを使用しない、オペレーティング システムの Windows NLS API によってサポートされている言語を使用できます。 オペレーティング システムのバージョンによってサポートされている言語の一覧については、[各国語サポートの (NLS) の API リファレンス](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)に関するページをご覧ください。 言語識別文字列は、サポート対象の言語の一覧の **[Language]** と **[Language name abbreviation]** の列の値のいずれかです。 オペレーティング システムのバージョンごとの言語サポートに関する詳細については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「[Appendix A: Product Behavior (付録 A: 製品の動作)](http://msdn.microsoft.com/goglobal/bb896001.aspx)」をご覧ください。   

@@ -2,11 +2,8 @@
 title: 非推奨 (C/C++) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vc-pragma.deprecated
@@ -17,19 +14,17 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65333f72f71ded1338956ab1a3c51c2be980cb1a
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 2280d5245292625bfc29815475eaca63d4d500bd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="deprecated-cc"></a>deprecated (C/C++)
+# <a name="deprecated-cc"></a>非推奨 (C/C++)
 **廃止**プラグマを指定すること、関数、型、またはその他の識別子は不要になったではサポート、将来のリリースまたは使用できなくします。  
 > [!NOTE]
 > C++ 14 に関する情報の`[[deprecated]]`属性では、Microsoft declspec またはプラグマを vs 属性、およびそれを使用する場合のガイダンスを参照してください[C++ の標準属性](../cpp/attributes.md)属性。

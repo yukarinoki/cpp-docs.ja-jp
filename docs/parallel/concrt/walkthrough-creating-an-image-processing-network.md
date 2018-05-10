@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: イメージ処理ネットワークの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: イメージ処理ネットワークの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>チュートリアル: イメージ処理ネットワークの作成
 このドキュメントでは、イメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法を示します。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [コード例全体](#complete)  
   
-##  <a name="functionality"></a>イメージの処理機能を定義します。  
+##  <a name="functionality"></a> イメージの処理機能を定義します。  
  このセクションでは、ディスクから読み取られるイメージが使用する画像処理ネットワークの使用をサポート関数を示します。  
   
  次の関数では、`GetRGB`と`MakeColor`の抽出、およびそれぞれ特定の色の個々 のコンポーネントを結合します。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="network"></a>イメージ処理ネットワークの作成  
+##  <a name="network"></a> イメージ処理ネットワークの作成  
  このセクションでイメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法について説明すべて[!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)]特定のディレクトリ内の (.jpg) イメージ。 ネットワークでは、次のようなイメージ処理操作を実行します。  
   
 1.  Tom で作成したすべてのイメージをグレースケールに変換します。  
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
 |`colormask`|A`transformer`支配色として赤が設定されたイメージから緑、青の色要素を削除するオブジェクト。|  
 |`darken`|A`transformer`支配色として赤が設定されたイメージが暗くなりますオブジェクト。|  
 |`sepiatone`|A `transformer` Tom が作成していない、主に赤いではないイメージをセピア トーンを適用するオブジェクト。|  
-|`save_bitmap`|A`transformer`保存、処理するオブジェクト`image`ビットマップとしてディスクにします。 `save_bitmap`元のファイル名を取得、`map`オブジェクトおよび .bmp にそのファイル名拡張子を変更します。|  
+|`save_bitmap`|A`transformer`保存、処理するオブジェクト`image`ビットマップとしてディスクにします。 `save_bitmap` 元のファイル名を取得、`map`オブジェクトおよび .bmp にそのファイル名拡張子を変更します。|  
 |`delete_bitmap`|A`transformer`イメージのメモリを解放するオブジェクト。|  
 |`decrement`|A [concurrency::call](../../parallel/concrt/reference/call-class.md)ネットワーク内のターミナル ノードとして機能するオブジェクト。 これをデクリメント、`countdown_event`イメージが処理されたことをメインのアプリケーションに通知するオブジェクト。|  
   
@@ -155,7 +150,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="complete"></a>完全な例  
+##  <a name="complete"></a> 完全な例  
  コード例全体を次に示します。 `wmain`関数を管理、[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]ライブラリとの呼び出し、`ProcessImages`関数プロセスを[!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)]内のファイル、`Sample Pictures`ディレクトリ。  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  ![例の出力のサンプル](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`Tom Alphin で作成したし、したがってはグレースケールに変換します。 `Chrysanthemum`、 `Desert`、 `Koala`、および`Tulips`がある主要な色として赤青と緑の色のコンポーネントが削除され暗くなります。 `Hydrangeas`、 `Jellyfish`、および`Penguins`既定条件に一致し、したがって toned セピア は、します。  
+ `Lighthouse` Tom Alphin で作成したし、したがってはグレースケールに変換します。 `Chrysanthemum`、 `Desert`、 `Koala`、および`Tulips`がある主要な色として赤青と緑の色のコンポーネントが削除され暗くなります。 `Hydrangeas`、 `Jellyfish`、および`Penguins`既定条件に一致し、したがって toned セピア は、します。  
   
  [[トップ](#top)]  
   
@@ -173,5 +168,5 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe/DUNICODE/EHsc イメージの処理-network.cpp/link gdiplus.lib**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

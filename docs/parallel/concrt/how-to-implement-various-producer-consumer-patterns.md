@@ -1,30 +1,25 @@
 ---
-title: "方法: さまざまなプロデューサー/コンシューマー パターンを実装する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: さまざまなプロデューサー/コンシューマー パターンを実装する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0efafe17cd524c241e709d3c3c59233a130cdf95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50a6683db37fb6e994c1957a8df3ab6469acff6d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>方法: さまざまなプロデューサー/コンシューマー パターンを実装する
 ここでは、アプリケーションにプロデューサー/コンシューマー パターンを実装する方法について説明します。 このパターンでは、"*プロデューサー*" がメッセージをメッセージ ブロックに送信し、"*コンシューマー*" がそのブロックからメッセージを読み取ります。  
@@ -74,7 +69,7 @@ Current quote is 25.89.
   
  **cl.exe/EHsc producer-consumer.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)   
  [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)   

@@ -1,12 +1,9 @@
 ---
-title: "IResourceManager 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: IResourceManager 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IResourceManager
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 構造体
 同時実行ランタイムのリソース マネージャーに対するインターフェイスです。 これは、スケジューラがリソース マネージャーと通信する際に使用されるインターフェイスです。  
@@ -50,7 +45,7 @@ struct IResourceManager;
   
 |名前|説明|  
 |----------|-----------------|  
-|[IResourceManager::OSVersion](#osversion)|オペレーティング システムのバージョンを表す列挙型。|  
+|[Iresourcemanager::osversion](#osversion)|オペレーティング システムのバージョンを表す列挙型。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
@@ -69,7 +64,7 @@ struct IResourceManager;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IResourceManager`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h  
   
  **名前空間:** concurrency  
@@ -103,7 +98,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md)が、他のスケジューラが、プロセスに存在していて、このメソッドが呼び出された場合にスローされます。  
   
-##  <a name="getavailablenodecount"></a>  IResourceManager::GetAvailableNodeCount Method  
+##  <a name="getavailablenodecount"></a>  Iresourcemanager::getavailablenodecount メソッド  
  リソース マネージャーを使用可能なノードの数を返します。  
   
 ```
@@ -174,7 +169,7 @@ virtual unsigned int Release() = 0;
 ### <a name="return-value"></a>戻り値  
  結果として得られる、参照カウントします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [ISchedulerProxy 構造体](ischedulerproxy-structure.md)   
  [IScheduler 構造体](ischeduler-structure.md)

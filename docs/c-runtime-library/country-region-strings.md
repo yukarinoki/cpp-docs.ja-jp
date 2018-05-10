@@ -1,13 +1,10 @@
 ---
-title: "国/地域別文字列 | Microsoft Docs"
-ms.custom: 
+title: 国/地域別文字列 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94ad99ebd05fa9e37a56f2e12818f30f1f4b1212
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffa2ac8d08e28cac4f5798868013fe9883fac5d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 国/地域識別文字列を言語識別文字列と組み合わせて、 `setlocale`、 `_wsetlocale`、 `_create_locale`、および `_wcreate_locale` の関数のロケール指定を作成できます。 さまざまなバージョンの Windows オペレーティング システムでサポートされている国/地域名の一覧については、「[National Language Support (NLS) API Reference (各国語サポート (NLS) API リファレンス)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)」をご覧ください。 一覧では、国/地域の文字列は **Locale - Language Country/Region** 列のいずれかの国の値、または **Country or Region name abbreviation** 列の省略形のいずれかとなります。 Windows オペレーティング システムのバージョンごとの言語サポートに関する詳細については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「[Appendix A: Product Behavior (付録 A: 製品の動作)](http://msdn.microsoft.com/goglobal/bb896001.aspx)」をご覧ください。  

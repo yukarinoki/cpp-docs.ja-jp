@@ -1,13 +1,10 @@
 ---
-title: "ブロック | Microsoft Docs"
-ms.custom: 
+title: ブロック | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: be231a92-c712-464e-ae25-a4becb20f7f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60126db8e2a8f7fe9e56041c4f5b119df828958c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 309e6c017587a2dd3cdc80cd55ffec82751dedd3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="blocks"></a>ブロック
 中かっこ (**{ }**) で囲まれた一連の宣言、定義、ステートメントを "ブロック" といいます。 その 1 つは、1 つ以上のステートメントで構成される "複合ステートメント" です (「[複合ステートメント](../c-language/compound-statement-c.md)」を参照)。 もう 1 つの "関数定義" は、複合ステートメント (関数本体) とその関数のヘッダー (関数名、戻り値の型、仮パラメーター) で構成されます。 ブロック内に他のブロックが挿入された状態を "入れ子" といいます。  

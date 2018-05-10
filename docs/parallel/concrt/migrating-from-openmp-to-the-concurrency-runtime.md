@@ -1,30 +1,25 @@
 ---
-title: "OpenMP から同時実行ランタイムへの移行 |Microsoft ドキュメント"
-ms.custom: 
+title: OpenMP から同時実行ランタイムへの移行 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65359e76e036a0d8d33de2de9f6c96c6425d2152
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16e10287526e6b815ba56183a8e3d590102507aa
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムへの移行
 同時実行ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このドキュメントのセクション比較[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)同時実行ランタイムにし、同時実行ランタイムを使用する既存の OpenMP コードを移行する方法について例を示します。  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
  [方法: 減少変数を使用する OpenMP ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)  
  OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを使用する、[削減](../../parallel/openmp/reference/reduction.md)句は、同時実行ランタイムを使用するように変換する方法を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイム](../../parallel/concrt/concurrency-runtime.md)   
  [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)   
  [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   

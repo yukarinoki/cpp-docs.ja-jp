@@ -1,13 +1,10 @@
 ---
-title: "マルチ スレッド: ワーカー スレッドの生成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'マルチ スレッド: ワーカー スレッドの生成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-worker-threads"></a>マルチスレッド : ワーカー スレッドの生成
 ワーカー スレッドでは、主にバックグラウンド タスクを処理します。アプリケーション処理の中で、ユーザーがその終了を待つ必要がない処理はバックグラウンド タスクにできます。 再計算やバックグラウンド印刷などはワーカー スレッドの良い例です。 このトピックでは、ワーカー スレッドの作成手順について詳しく説明します。 ここでは、次の内容について説明します。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  ワーカー スレッドの作成は比較的簡単なタスクです。 スレッドを実行するために必要な手順は、(1) 制御関数の作成、(2) スレッドの起動の 2 つだけです。 クラスを派生する必要はありません[CWinThread](../mfc/reference/cwinthread-class.md)です。 `CWinThread` の専用の派生クラスが必要な場合は派生できますが、通常、単純なワーカー スレッドを実行する場合は必要ありません。 `CWinThread` をそのまま使用できます。  
   
-##  <a name="_core_starting_the_thread"></a>スレッドの起動  
+##  <a name="_core_starting_the_thread"></a> スレッドの起動  
  `AfxBeginThread` には、2 つのオーバーロード バージョンがあります。1 つはワーカー スレッドのみを作成でき、もう 1 つは、ユーザー インターフェイス スレッドとワーカー スレッドの両方を作成できます。 最初のオーバー ロードを使用して、ワーカー スレッドの実行を開始する[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)、次の情報を提供します。  
   
 -   制御関数のアドレス。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  `AfxBeginThread` 関数は、`CWinThread` オブジェクトを生成、初期化、および起動し、生成した CWinThread オブジェクトのアドレスを返します。このアドレスは後でプログラムから参照できます。 なんらかの原因でスレッド生成に失敗すると、スレッド生成処理全体をチェックし、すべてのオブジェクトを確実に解放します。  
   
-##  <a name="_core_implementing_the_controlling_function"></a>制御関数の実装  
+##  <a name="_core_implementing_the_controlling_function"></a> 制御関数の実装  
  制御関数によってスレッドを定義します。 この関数に入ると、スレッドが起動され、この関数が終了すると、スレッドも終了します。 次に、この関数のプロトタイプを示します。  
   
 ```  
@@ -72,7 +67,7 @@ UINT MyControllingFunction( LPVOID pParam );
   
  MFC ライブラリで作成されたマルチスレッド プログラムで実行できることには、いくつかの制約があります。 これらの制限事項とスレッドの使用に関するその他のヒントの詳細については、次を参照してください。[マルチ スレッド: プログラミングのヒント](../parallel/multithreading-programming-tips.md)です。  
   
-##  <a name="_core_controlling_function_example"></a>制御関数の例  
+##  <a name="_core_controlling_function_example"></a> 制御関数の例  
  制御関数を定義し、プログラムの別の部分からこの関数を使用する方法の例を次に示します。  
   
 ```  
@@ -104,5 +99,5 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 -   [マルチスレッド: ユーザー インターフェイス スレッドの生成](../parallel/multithreading-creating-user-interface-threads.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ と MFC を使用するマルチスレッド](../parallel/multithreading-with-cpp-and-mfc.md)

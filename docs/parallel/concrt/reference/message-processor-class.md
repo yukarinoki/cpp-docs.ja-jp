@@ -1,12 +1,9 @@
 ---
-title: "message_processor クラス |Microsoft ドキュメント"
-ms.custom: 
+title: message_processor クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - message_processor
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7646020bd30b817957cea87dad8ec5c7f3aa8ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="messageprocessor-class"></a>message_processor クラス
 `message_processor` クラスは、`message` オブジェクトを処理するための抽象基底クラスです。 メッセージの順序は保証されません。  
@@ -71,7 +66,7 @@ class message_processor;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `message_processor`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -128,6 +123,6 @@ virtual void wait() = 0;
 ### <a name="remarks"></a>コメント  
  プロセッサの実装では、このメソッドをオーバーライドする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [ordered_message_processor クラス](ordered-message-processor-class.md)

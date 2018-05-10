@@ -1,13 +1,10 @@
 ---
-title: "非同期メッセージ ブロック |Microsoft ドキュメント"
-ms.custom: 
+title: 非同期メッセージ ブロック |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5de4a9ed20e20c03f44f8b8d421a628f220099f7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-message-blocks"></a>非同期メッセージ ブロック
 
@@ -60,14 +55,14 @@ ms.lasthandoff: 12/21/2017
   
 - [メッセージの予約](#reservation)  
   
-##  <a name="sources_and_targets"></a>ソースとターゲット  
+##  <a name="sources_and_targets"></a> ソースとターゲット  
  ソースとターゲットは、メッセージ パッシングの 2 つの重要な参加要素です。 A*ソース*はメッセージを送信する通信のエンドポイントを参照します。 A*ターゲット*はメッセージを受信する通信のエンドポイントを参照します。 ソースは読み取るエンドポイントであり、ターゲットは書き込むエンドポイントであると考えることができます。 アプリケーションがフォームにソースとターゲットをまとめて接続*メッセージング ネットワーク*です。  
   
  エージェント ライブラリでは、次の 2 つの抽象クラスを使用して、ソースとターゲットを表す: [concurrency::isource](../../parallel/concrt/reference/isource-class.md)と[concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)です。 ソースとして機能するメッセージ ブロックの型は `ISource` から派生します。ターゲットとして機能するメッセージ ブロックの型は `ITarget` から派生します。 ソースおよびターゲットとして機能するメッセージ ブロックの型は、それぞれ `ISource` および `ITarget` から派生します。  
   
  [[トップ](#top)]  
   
-##  <a name="propagation"></a>メッセージの伝達  
+##  <a name="propagation"></a> メッセージの伝達  
  *メッセージの伝達*は、動作は、1 つのコンポーネント間でメッセージを送信します。 メッセージ ブロックにメッセージが提供されると、そのメッセージ ブロックはメッセージを受け入れるか、拒否するか、または延期します。 各メッセージ ブロックの型は、さまざまな方法でメッセージを格納および送信します。 たとえば、`unbounded_buffer` クラスはメッセージを無制限に格納し、`overwrite_buffer` クラスは一度に 1 つのメッセージを格納し、transformer クラスは各メッセージの変更後のバージョンを格納します。 これらのメッセージ ブロックの型については、このドキュメントの後半で詳しく説明します。  
   
  メッセージ ブロックは、メッセージを受け入れるとき、必要に応じて処理を実行できます。メッセージ ブロックがソースである場合は、結果のメッセージをネットワークの別のメンバーに渡します。 メッセージ ブロックは、フィルター関数を使用して、不要なメッセージを拒否できます。 フィルターの詳細セクションで、このトピックの後半で説明されている[メッセージ フィルター](#filtering)です。 メッセージを延期するメッセージ ブロックは、そのメッセージを予約しておいて後で処理できます。 メッセージの予約の詳細セクションで、このトピックの後半で説明されている[メッセージの予約](#reservation)です。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="overview"></a>メッセージ ブロックの型の概要  
+##  <a name="overview"></a> メッセージ ブロックの型の概要  
  次の表では、重要なメッセージ ブロックの型の役割について簡単に説明しています。  
   
  [unbounded_buffer](#unbounded_buffer)  
@@ -91,10 +86,10 @@ ms.lasthandoff: 12/21/2017
  [single_assignment](#single_assignment)  
  1 回の書き込みと複数回の読み取りを行うことができるメッセージを 1 つ格納します。  
   
- [呼び出し](#call)  
+ [call](#call)  
  メッセージを受信するときに処理を実行します。  
   
- [(トランスフォーマーを)](#transformer)  
+ [transformer](#transformer)  
  データを受け取り、その処理の結果を別のターゲット ブロックに送信するときに処理を実行します。 `transformer` クラスでは、異なる入力と出力の種類を操作できます。  
   
  [選択肢](#choice)  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
  [join と multitype join](#join)  
  一連のソースからすべてのメッセージを受信するまで待機し、別のメッセージ ブロックのために、複数のメッセージを結合して 1 つのメッセージにします。  
   
- [タイマー](#timer)  
+ [timer](#timer)  
  メッセージを定期的にターゲット ブロックに送信します。  
   
  これらのメッセージ ブロックの型には、それぞれ異なる状況で役立つ特性があります。 その特性のいくつかを次に示します。  
@@ -134,7 +129,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="unbounded_buffer"></a>unbounded_buffer クラス  
+##  <a name="unbounded_buffer"></a> unbounded_buffer クラス  
  [Concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)クラスは、汎用的な非同期メッセージング構造を表します。 このクラスでは、複数のソースが書き込むことができるメッセージ、または複数のターゲットが読み取ることができるメッセージの先入れ先出し (FIFO) のキューを格納します。 ターゲットが `unbounded_buffer` オブジェクトからメッセージを受信すると、そのメッセージはメッセージ キューから削除されます。 そのため、`unbounded_buffer` オブジェクトには複数のターゲットを設定できますが、各メッセージを受信するターゲットは 1 つだけです。 `unbounded_buffer` クラスは、複数のメッセージを別のコンポーネントに渡し、そのコンポーネントで各メッセージを受信する必要がある場合に便利です。  
   
 ### <a name="example"></a>例  
@@ -152,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="overwrite_buffer"></a>overwrite_buffer クラス  
+##  <a name="overwrite_buffer"></a> overwrite_buffer クラス  
  [Concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラスに似ています、`unbounded_buffer`点を除いて、クラス、`overwrite_buffer`オブジェクトが 1 つのメッセージを格納します。 また、ターゲットが `overwrite_buffer` オブジェクトからメッセージを受信しても、そのメッセージはバッファーから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。  
   
  `overwrite_buffer` クラスは、複数のメッセージを別のコンポーネントに渡すときに、そのコンポーネントで必要になるのが最新の値のみである場合に便利です。 また、このクラスは、メッセージを複数のコンポーネントにブロードキャストする場合にも便利です。  
@@ -172,7 +167,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="single_assignment"></a>single_assignment クラス  
+##  <a name="single_assignment"></a> single_assignment クラス  
  [Concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md)クラスに似ています、`overwrite_buffer`点を除いて、クラス、`single_assignment`オブジェクトは、1 回のみに書き込むことができます。 `overwrite_buffer` クラスと同様に、ターゲットが `single_assignment` オブジェクトからメッセージを受信しても、そのメッセージはそのオブジェクトから削除されません。 そのため、複数のターゲットがメッセージのコピーを受信します。 また、`single_assignment` クラスは、1 つのメッセージを複数のコンポーネントにブロードキャストする場合にも便利です。  
   
 ### <a name="example"></a>例  
@@ -190,7 +185,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="call"></a>クラスを呼び出します。  
+##  <a name="call"></a> クラスを呼び出します。  
  [Concurrency::call](../../parallel/concrt/reference/call-class.md)クラスはデータを受け取ると、処理関数で実行されるメッセージの受信側として機能します。 この処理関数には、ラムダ式、関数オブジェクト、または関数ポインターを使用できます。 `call` オブジェクトは、メッセージを送信する他のコンポーネントに対して並列に動作するため、通常の関数呼び出しとは動作が異なります。 `call` オブジェクトがメッセージを受信したときに処理を実行していると、そのメッセージはキューに追加されます。 各 `call` オブジェクトでは、キューに配置されたメッセージを受信した順序で処理します。  
   
 ### <a name="example"></a>例  
@@ -208,7 +203,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="transformer"></a>transformer クラス  
+##  <a name="transformer"></a> transformer クラス  
  [Concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)クラスは、両方のメッセージの受信者、およびメッセージの送信者として機能します。 `transformer` クラスは、データを受信するとユーザー定義の処理関数を実行するため、`call` クラスに似ています。 ただし、`transformer` クラスも処理関数の結果を受信側のオブジェクトに送信します。 `call` オブジェクトと同様に、`transformer` オブジェクトはメッセージを送信する他のコンポーネントに対して並列に動作します。 `transformer` オブジェクトがメッセージを受信したときに処理を実行していると、そのメッセージはキューに追加されます。 各 `transformer` オブジェクトでは、キューに配置されたメッセージを受信した順序で処理します。  
   
  `transformer` クラスでは、メッセージを 1 つのターゲットに送信します。 設定した場合、`_PTarget`コンス トラクターのパラメーター `NULL`、後で呼び出すことによって、ターゲットを指定できます、 [concurrency::link_target](reference/source-block-class.md#link_target)メソッドです。  
@@ -230,7 +225,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="choice"></a>choice クラス  
+##  <a name="choice"></a> choice クラス  
  [Concurrency::choice](../../parallel/concrt/reference/choice-class.md)クラスは、一連のソースから最初の使用可能なメッセージを選択します。 `choice`クラスは、データ フローのメカニズムではなく、フロー制御メカニズムを表します (トピック[非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)データ フローと制御フローの違いについて説明します)。  
   
  choice オブジェクトからの読み取りは、`WaitForMultipleObjects` パラメーターが `bWaitAll` に設定されている場合の Windows API 関数 `FALSE` の呼び出しに似ています。 ただし、`choice` クラスでは、外部同期オブジェクトではなく、イベント自体にデータをバインドします。  
@@ -263,7 +258,7 @@ fib35 received its value first. Result = 9227465
   
  [[トップ](#top)]  
   
-##  <a name="join"></a>join クラスと multitype_join クラス  
+##  <a name="join"></a> join クラスと multitype_join クラス  
  [Concurrency::join](../../parallel/concrt/reference/join-class.md)と[concurrency::multitype_join](../../parallel/concrt/reference/multitype-join-class.md)クラスを使用して、メッセージを受信する、一連のソースの各メンバーのまで待機できます。 `join` クラスでは、共通のメッセージ型を持つソース オブジェクトを処理します。 `multitype_join` クラスでは、異なるメッセージ型を持つことができるソース オブジェクトを処理します。  
   
  `join` オブジェクトまたは `multitype_join` オブジェクトからの読み取りは、`WaitForMultipleObjects` パラメーターが `bWaitAll` に設定されている場合の Windows API 関数 `TRUE` の呼び出しに似ています。 ただし、`choice` オブジェクトと同様に、`join` オブジェクトおよび `multitype_join` オブジェクトでは、外部同期オブジェクトではなく、イベント自体にデータをバインドするイベント機構を使用します。  
@@ -293,7 +288,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  [[トップ](#top)]  
   
-##  <a name="timer"></a>timer クラス  
+##  <a name="timer"></a> timer クラス  
  同時実行性::[timer クラス](../../parallel/concrt/reference/timer-class.md)メッセージ ソースとして機能します。 `timer` オブジェクトでは、指定された時間が経過するとメッセージをターゲットに送信します。 `timer` クラスは、メッセージの送信を遅延させる必要がある場合や、定期的にメッセージを送信する場合に便利です。  
   
 
@@ -319,7 +314,7 @@ Computing fib(42)..................................................result is 267
   
  [[トップ](#top)]  
   
-##  <a name="filtering"></a>メッセージのフィルター処理  
+##  <a name="filtering"></a> メッセージのフィルター処理  
  メッセージ ブロック オブジェクトを作成するときは、指定、 *filter 関数*メッセージ ブロックが受け入れるか、メッセージを拒否するかどうかを決定します。 フィルター関数は、メッセージ ブロックが特定の値のみを受信するようにする便利な方法です。  
   
  次の例では、フィルター関数を使用して偶数のみを受け入れる `unbounded_buffer` オブジェクトを作成する方法を示します。 `unbounded_buffer` オブジェクトは奇数を拒否するため、奇数はターゲット ブロックに伝達されません。  
@@ -345,7 +340,7 @@ bool (T const &)
   
  [[トップ](#top)]  
   
-##  <a name="reservation"></a>メッセージの予約  
+##  <a name="reservation"></a> メッセージの予約  
  *メッセージの予約*後で使用できるメッセージの予約をメッセージ ブロックを有効にします。 通常、メッセージの予約を直接使用することはありません。 ただし、メッセージの予約について理解しておくと、定義済みのいくつかのメッセージ ブロックの型の動作を理解しやすくなります。  
   
  最短一致の結合と最長一致の結合について考えてみてください。 どちらの場合も、メッセージの予約によって、後で使用できるようにメッセージを予約します。 前に述べたとおり、最短一致の結合では、2 つの段階でメッセージを受信します。 最初の段階で、最短一致の `join` オブジェクトは各ソースがメッセージを受信するまで待機します。 次に、各メッセージの予約を試みます。 各メッセージを予約できる場合、すべてのメッセージを処理し、ターゲットに伝達します。 それ以外の場合、メッセージの予約を解除し (取り消し)、再び各ソースがメッセージを受信するまで待機します。  
@@ -356,6 +351,6 @@ bool (T const &)
   
  [[トップ](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)
 

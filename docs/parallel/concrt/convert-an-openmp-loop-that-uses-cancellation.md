@@ -1,30 +1,25 @@
 ---
-title: "方法: 同時実行ランタイムを使用する取り消し処理を使用する OpenMP ループを変換 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 同時実行ランタイムを使用する取り消し処理を使用する OpenMP ループを変換 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dae22a46d6570d7ef7abbdfc08cb2c6d76d0c08
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>方法: キャンセル処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する
 並列ループによっては、すべての反復を必ずしも実行する必要はありません。 たとえば、値を検索するアルゴリズムは、値が見つかれば終了できます。 OpenMP には、並列ループを抜けるための機構は用意されていません。 ただし、ブール値 (フラグ) を使用して、ループの反復処理時に、解決策が見つかったことを通知できます。 同時実行ランタイムの場合、先行のタスクによって、まだ開始されていない他のタスクを取り消すことができます。  
@@ -60,7 +55,7 @@ Using the Concurrency Runtime...
   
  **cl.exe/EHsc/openmp concrt-omp-並列-任意-of.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OpenMP から同時実行ランタイムへの移行](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
  [PPL における取り消し処理](cancellation-in-the-ppl.md)   
  [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)

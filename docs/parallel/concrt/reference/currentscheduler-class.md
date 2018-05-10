@@ -1,12 +1,9 @@
 ---
-title: "CurrentScheduler クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CurrentScheduler クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler クラス
 呼び出し元コンテキストに関連付けられている現在のスケジューラの抽象化を表します。  
@@ -70,12 +65,12 @@ class CurrentScheduler;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CurrentScheduler`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
   
-##  <a name="create">作成します。</a> 
+##  <a name="create"></a> 作成します。 
 
  動作が説明されている、新しいスケジューラを作成、`_Policy`パラメーターを呼び出し元のコンテキストにアタッチします。 新しく作成されたスケジューラは、呼び出し元のコンテキストの現在のスケジューラになります。  
   
@@ -179,7 +174,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>コメント  
  呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。  
   
-##  <a name="id"></a> Id 
+##  <a name="id"></a> id 
 
  現在のスケジューラの一意の識別子を返します。  
   
@@ -256,7 +251,7 @@ static void __cdecl ScheduleTask(
 ### <a name="remarks"></a>コメント  
  呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [Scheduler クラス](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
