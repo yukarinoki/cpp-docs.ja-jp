@@ -1,12 +1,9 @@
 ---
-title: "CDockablePaneAdapter クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDockablePaneAdapter クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0e10490a381784e40167e16d1c7ec4e7e1a19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter クラス
 `CWnd`の派生ペインのドッキングをサポートします。  
@@ -67,10 +62,10 @@ class CDockablePaneAdapter : public CDockablePane
   
  [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxDockablePaneAdapter.h  
   
-##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
  ウィンドウのドッキング可能なアダプターの基になるウィンドウを返します。  
   
 ```  
@@ -83,7 +78,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>コメント  
  ラップされたウィンドウにアクセスするのにには、この関数を使用します。  
   
-##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
  レジストリからペインの状態を読み込みます。  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
  レジストリにペインの状態を保存します。  
   
 ```  
@@ -131,7 +126,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
  ウィンドウのドッキング可能なアダプターの基になるウィンドウを設定します。  
   
 ```  
@@ -146,7 +141,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)

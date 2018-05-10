@@ -1,13 +1,10 @@
 ---
-title: "ASSERT に代わる VERIFY の使用 |Microsoft ドキュメント"
-ms.custom: 
+title: ASSERT に代わる VERIFY の使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - assert
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 712c22bec1d6ce2d67208de9a139dff7621ad4cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-verify-instead-of-assert"></a>ASSERT に代わる VERIFY の使用
 MFC アプリケーションのデバッグ バージョンを実行するときに問題がないとします。 ただし、同じアプリケーションのリリース バージョンがクラッシュした不適切な結果を返しますやは他のいくつかの異常な動作を示します。  
@@ -57,9 +52,9 @@ free( buf );
   
 -   呼び出し`calloc( )`は決して行われず、まま`buf`初期化されていない、または  
   
--   `strcpy_s( )`コピー"`Hello, World`"ランダムなメモリ、場合によってはアプリケーションがクラッシュまたは原因でシステムが応答を停止するにまたは  
+-   `strcpy_s( )` コピー"`Hello, World`"ランダムなメモリ、場合によってはアプリケーションがクラッシュまたは原因でシステムが応答を停止するにまたは  
   
--   `free()`割り当てられていないメモリを解放しようとしています。  
+-   `free()` 割り当てられていないメモリを解放しようとしています。  
   
  ASSERT を正しく使用するには、次のコード サンプルを変更する必要があります。  
   
@@ -86,5 +81,5 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リリース ビルドの問題の解決](../../build/reference/fixing-release-build-problems.md)

@@ -2,29 +2,24 @@
 title: 'トランザクション: レコード セット (ODBC) からのトランザクションの実行 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bd412549c86c3ca8ddc004016183b64248bdf292
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d7cae3b05c20736a2e271b574569bcac4d5cdc7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>トランザクション: レコードセットからのトランザクション実行 (ODBC)
 このトピックでは、レコード セットで、トランザクションを実行する方法について説明します。  
@@ -95,7 +90,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 > [!NOTE]
 >  呼び出す**BeginTrans**呼び出さずにもう一度**CommitTrans**または**ロールバック**エラーが発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)   
  [トランザクション: トランザクションに与える影響 (ODBC) の更新](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
  [CDatabase クラス](../../mfc/reference/cdatabase-class.md)   

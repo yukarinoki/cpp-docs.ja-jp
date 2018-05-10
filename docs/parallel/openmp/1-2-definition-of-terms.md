@@ -1,27 +1,22 @@
 ---
-title: "1.2 用語の定義 |Microsoft ドキュメント"
-ms.custom: 
+title: 1.2 用語の定義 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab188c32c633092efc562d0432ebb7c5662b5ff8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8563bb757ad8d30f1639f017769bfd6c4084efa0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="12-definition-of-terms"></a>1.2 用語の定義
 次の用語は、このドキュメントで使用されます。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
  共有変数は、単一ブロック記憶域の名前します。 この変数にアクセスする、チーム内のすべてのスレッドは、この 1 つのブロック記憶域にアクセスします。  
   
  構造化ブロック  
- 構造化ブロックは、1 つのエントリと 1 つの終了を持つステートメント (単一または複合) です。 ステートメントには、構造化ブロックはありませんが、そのステートメントの内外にジャンプ場合 (の呼び出しを含む**longjmp**(3 C) の使用、または**スロー**への呼び出し**終了**は許可されて)。 開くときに常に実行が開始された場合、複合ステートメントは、構造化ブロック**{**と常に終わりの終了**}**です。 式ステートメント、選択ステートメント、反復ステートメント、または**再試行**ブロックは、構造化ブロックで囲まれた対応する複合ステートメントが取得された場合**{**と**}**構造化ブロックになります。 ジャンプ ステートメント、ラベル付きステートメント、または宣言ステートメントは、構造化ブロックではないです。  
+ 構造化ブロックは、1 つのエントリと 1 つの終了を持つステートメント (単一または複合) です。 ステートメントには、構造化ブロックはありませんが、そのステートメントの内外にジャンプ場合 (の呼び出しを含む**longjmp**(3 C) の使用、または**スロー**への呼び出し**終了**は許可されて)。 開くときに常に実行が開始された場合、複合ステートメントは、構造化ブロック **{** と常に終わりの終了 **}** です。 式ステートメント、選択ステートメント、反復ステートメント、または**再試行**ブロックは、構造化ブロックで囲まれた対応する複合ステートメントが取得された場合 **{** と **}** 構造化ブロックになります。 ジャンプ ステートメント、ラベル付きステートメント、または宣言ステートメントは、構造化ブロックではないです。  
   
  チーム  
  1 つ以上のスレッド構成の実行時に協力します。  

@@ -1,12 +1,9 @@
 ---
-title: "CMemFile クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMemFile クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemFile
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411d89c7796ea9ab48c013d4efd53aedd9225aba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemfile-class"></a>CMemFile クラス
 [CFile](../../mfc/reference/cfile-class.md)-メモリ ファイルをサポートするクラスを派生します。  
@@ -80,7 +75,7 @@ class CMemFile : public CFile
 ## <a name="remarks"></a>コメント  
  これらのメモリ ファイルは、ファイルはディスクではなく RAM に保存する点を除いて、ディスク ファイルと同様に動作します。 メモリ ファイルは高速に一時的なストレージまたは生バイトを転送するために役立ちます。 または、独立したプロセス間でオブジェクトをシリアル化します。  
   
- `CMemFile`オブジェクトは、独自のメモリを自動的に割り当てることができますか、独自のメモリ ブロックを割り当てることができます、`CMemFile`呼び出して[アタッチ](#attach)です。 いずれの場合、メモリ ファイルを自動的に拡張にメモリが割り当てられます`nGrowBytes`-場合分ずつ`nGrowBytes`が 0 でないです。  
+ `CMemFile` オブジェクトは、独自のメモリを自動的に割り当てることができますか、独自のメモリ ブロックを割り当てることができます、`CMemFile`呼び出して[アタッチ](#attach)です。 いずれの場合、メモリ ファイルを自動的に拡張にメモリが割り当てられます`nGrowBytes`-場合分ずつ`nGrowBytes`が 0 でないです。  
   
  メモリ ブロックの破棄後に自動的に削除されます、`CMemFile`オブジェクトで最初にメモリが割り当てられたかどうか、`CMemFile`オブジェクトです。 それ以外の場合、オブジェクトに関連付けられているメモリを解放する責任があります。  
   
@@ -90,7 +85,7 @@ class CMemFile : public CFile
   
  `CFile`メンバー関数[複製](../../mfc/reference/cfile-class.md#duplicate)、 [LockRange](../../mfc/reference/cfile-class.md#lockrange)、および[UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)は適用されていない`CMemFile`です。 これらの関数を呼び出す場合、`CMemFile`オブジェクトを取得するが、[行わない](../../mfc/reference/cnotsupportedexception-class.md)です。  
   
- `CMemFile`ランタイム ライブラリ関数を使用して[malloc](../../c-runtime-library/reference/malloc.md)、 [realloc](../../c-runtime-library/reference/realloc.md)、および[空き](../../c-runtime-library/reference/free.md)割り当てるには、再割り当て、およびメモリと、組み込みの割り当てを解除[memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)ブロックの読み取りまたは書き込み時に、メモリをコピーします。 この動作または動作を変更するかかどうかとき`CMemFile`、ファイルが拡張から独自のクラスを派生させる`CMemFile`し、適切な関数をオーバーライドします。  
+ `CMemFile` ランタイム ライブラリ関数を使用して[malloc](../../c-runtime-library/reference/malloc.md)、 [realloc](../../c-runtime-library/reference/realloc.md)、および[空き](../../c-runtime-library/reference/free.md)割り当てるには、再割り当て、およびメモリと、組み込みの割り当てを解除[memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)ブロックの読み取りまたは書き込み時に、メモリをコピーします。 この動作または動作を変更するかかどうかとき`CMemFile`、ファイルが拡張から独自のクラスを派生させる`CMemFile`し、適切な関数をオーバーライドします。  
   
  詳細については`CMemFile`、記事を参照して[MFC のファイル](../../mfc/files-in-mfc.md)と[メモリ管理 (MFC)](../../mfc/memory-management.md)しを参照してください[ファイル処理](../../c-runtime-library/file-handling.md)で、*ランタイムライブラリ リファレンス*です。  
   
@@ -101,10 +96,10 @@ class CMemFile : public CFile
   
  `CMemFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
-##  <a name="alloc"></a>CMemFile::Alloc  
+##  <a name="alloc"></a>  CMemFile::Alloc  
  この関数は`CMemFile`メンバー関数。  
   
 ```  
@@ -123,7 +118,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
   
  既定の実装は、ランタイム ライブラリ関数を使用して[malloc](../../c-runtime-library/reference/malloc.md)メモリを割り当てられません。  
   
-##  <a name="attach"></a>CMemFile::Attach  
+##  <a name="attach"></a>  CMemFile::Attach  
  メモリ ブロックをアタッチするには、この関数を呼び出す`CMemFile`です。  
   
 ```  
@@ -152,7 +147,7 @@ void Attach(
   
  場合`nGrowBytes`は 0 より大きく、`CMemFile`添付したメモリ ブロックの内容は無視されます。 スクラッチを使用してから、メモリ ファイルの内容を記述する必要があります、`CMemFile`のオーバーライド`CFile::Write`です。 ファイルの末尾を越えて書き込みまたは呼び出すことによって、ファイルを拡張しようとすると、`CMemFile`のオーバーライド`CFile::SetLength`、`CMemFile`単位でメモリの割り当てが大きくなり`nGrowBytes`です。 メモリ ブロックを渡す場合は失敗、メモリ割り当てを拡大して**アタッチ**と互換性のあるメソッドで割り当てられていない[アロケーション](#alloc)します。 既定の実装との互換性を`Alloc`、ランタイム ライブラリ関数でメモリを割り当てる必要があります[malloc](../../c-runtime-library/reference/malloc.md)または[calloc](../../c-runtime-library/reference/calloc.md)です。  
   
-##  <a name="cmemfile"></a>CMemFile::CMemFile  
+##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  最初のオーバー ロードは、空のメモリ ファイルを開きます。  
   
 ```  
@@ -183,7 +178,7 @@ CMemFile(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="detach"></a>CMemFile::Detach  
+##  <a name="detach"></a>  CMemFile::Detach  
  によって使用されているメモリ ブロックへのポインターを取得するには、この関数を呼び出す`CMemFile`です。  
   
 ```  
@@ -196,7 +191,7 @@ BYTE* Detach();
 ### <a name="remarks"></a>コメント  
  閉じますでこの関数を呼び出す、`CMemFile`です。 メモリ ブロックを再アタッチできます`CMemFile`を呼び出して[アタッチ](#attach)です。 ファイルを再アタッチし、データを使用する場合を呼び出す必要があります[結び付けてその中](../../mfc/reference/cfile-class.md#getlength)を呼び出す前にファイルの長さを取得する**デタッチ**です。 メモリ ブロックをアタッチする場合は、`CMemFile`そのデータを使用できるように ( `nGrowBytes` = = 0)、メモリ ファイルを拡張することはできませんし、します。  
   
-##  <a name="free"></a>CMemFile::Free  
+##  <a name="free"></a>  CMemFile::Free  
  この関数は`CMemFile`メンバー関数。  
   
 ```  
@@ -210,7 +205,7 @@ virtual void Free(BYTE* lpMem);
 ### <a name="remarks"></a>コメント  
  カスタムのメモリの解放を実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくにしておくオーバーライド[アロケーション](#alloc)と[Realloc](#realloc)もします。  
   
-##  <a name="growfile"></a>CMemFile::GrowFile  
+##  <a name="growfile"></a>  CMemFile::GrowFile  
  この関数は、いくつかの`CMemFile`メンバー関数。  
   
 ```  
@@ -224,7 +219,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="remarks"></a>コメント  
  変更する場合に上書きできる方法`CMemFile`そのファイルが拡張されます。 既定の実装[Realloc](#realloc)を既存のブロックを拡張する (または[アロケーション](#alloc)メモリ ブロックを作成する) の倍数でメモリを割り当て、`nGrowBytes`コンス トラクターで指定された値または[アタッチ](#attach)呼び出します。  
   
-##  <a name="memcpy"></a>CMemFile::Memcpy  
+##  <a name="memcpy"></a>  CMemFile::Memcpy  
  この関数は、`CMemFile`の上書きが[:read](../../mfc/reference/cfile-class.md#read)と[CFile::Write](../../mfc/reference/cfile-class.md#write)とメモリ ファイルからデータを転送します。  
   
 ```  
@@ -250,7 +245,7 @@ virtual BYTE* Memcpy(
 ### <a name="remarks"></a>コメント  
  方法を変更する場合は、この関数をオーバーライドする`CMemFile`はメモリをコピーします。  
   
-##  <a name="realloc"></a>CMemFile::Realloc  
+##  <a name="realloc"></a>  CMemFile::Realloc  
  この関数は`CMemFile`メンバー関数。  
   
 ```  
@@ -272,7 +267,7 @@ virtual BYTE* Realloc(
 ### <a name="remarks"></a>コメント  
  カスタムのメモリ割り当ての変更を実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくにしておくオーバーライド[アロケーション](#alloc)と[空き](#free)もします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CFile クラス](../../mfc/reference/cfile-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

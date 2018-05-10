@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicparameteraccessor::getparamlength |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicparameteraccessor::getparamlength |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDynamicParameterAccessor::GetParamLength
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetParamLength method
 ms.assetid: 04d76931-911a-4915-9c2c-ad585a9f3854
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1610dd8bc3c077b2e56787fee3e9ad43bdec5c4b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ee19c694fa267630419857c3a81bd9e61d044939
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamlength"></a>CDynamicParameterAccessor::GetParamLength
 バッファーに格納され、指定されたパラメーターの長さを取得します。  
@@ -54,8 +49,8 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 ## <a name="remarks"></a>コメント  
  最初の形式**true**成功した場合または**false**エラー発生時にします。 2 つ目は、パラメーターの長さを表すメモリへのポインターをオーバーライドします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)

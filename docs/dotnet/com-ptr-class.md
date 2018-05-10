@@ -1,12 +1,9 @@
 ---
-title: ":ptr クラス |Microsoft ドキュメント"
-ms.custom: 
+title: :ptr クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - com::ptr
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae02518b60190dd129443f00d82b377317c816b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comptr-class"></a>com::ptr Class
 CLR クラスのメンバーとして使用できる COM オブジェクトのラッパーです。  ラッパーは、またそのデストラクターが呼び出されたときに、オブジェクトを所有しているすべての参照を解放し、COM オブジェクトの有効期間の管理を自動化します。 に似て[CComPtr クラス](../atl/reference/ccomptr-class.md)です。  
@@ -167,11 +162,11 @@ int main() {
 <word>persnickety</word>  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)   
  [ptr のメンバー](../dotnet/ptr-members.md)

@@ -1,13 +1,10 @@
 ---
-title: "方法: ネイティブ型のハンドルを宣言 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ネイティブ型のハンドルを宣言 |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 f1_keywords:
 - gcroot
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4573aac37eedecceab861eb41a70fc858b409fec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>方法: ネイティブ型のハンドルを宣言する
 ネイティブ型のハンドル型を宣言することはできません。 vcclr.h の提供、タイプ セーフ ラッパー テンプレート`gcroot`C++ ヒープから CLR オブジェクトを参照します。 このテンプレートでは、ネイティブ型に仮想のハンドルを埋め込むし、基になる型の場合と同様に扱うことできます。 ほとんどの場合、使用することができます、`gcroot`キャストなし埋め込み型としてオブジェクト。 は、[ごとで](../dotnet/for-each-in.md)を使用する必要がある`static_cast`を基になるマネージ参照を取得します。  
@@ -123,5 +118,5 @@ int main() {
 String in V: Hello  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,13 +1,10 @@
 ---
-title: "手動でコントロールを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 手動でコントロールを追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b13f6fdfb3c11819eb8d8838e5617e7a349d1023
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efe510c4376255c24470a799b5dde17021894bf0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-controls-by-hand"></a>手動でコントロールを追加する方法
 か[ダイアログ エディター ダイアログ ボックスにコントロールを追加](../mfc/using-the-dialog-editor-to-add-controls.md)コードで、自分で追加することです。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  エディット オブジェクトを作成すると、設定することできますも入力フォーカス コントロールを呼び出すことによって、`SetFocus`メンバー関数。 0 を返す最後に、`OnInitDialog`フォーカスを設定することを表示します。 0 以外の値を返す場合ダイアログ マネージャーは、ダイアログ ボックスの項目一覧の最初のコントロールの項目にフォーカスを設定します。 ほとんどの場合は、コントロールを追加するダイアログ ボックスにダイアログ エディターを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [作成方法とコントロールの使用](../mfc/making-and-using-controls.md)   
  [コントロール](../mfc/controls-mfc.md)   
  [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)

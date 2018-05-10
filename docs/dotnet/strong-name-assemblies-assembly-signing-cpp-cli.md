@@ -2,12 +2,9 @@
 title: 厳密名アセンブリ (アセンブリ署名) (C + + CLI) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2099389131145838a70b579053c65698dbc3a857
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d7ae911d2572a35ee8dbb21d5484b4679b64c4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>厳密名アセンブリ (アセンブリ署名) (C++/CLI)
 このトピックでは、アセンブリに厳密な名前を付けるとも呼ば、アセンブリに署名する方法について説明します。  
@@ -53,11 +48,11 @@ ms.lasthandoff: 12/21/2017
   
 -   [/DELAYSIGN (アセンブリの部分署名)](../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [/KEYFILE (アセンブリに署名するには、キーまたはキー ペアの指定)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE (アセンブリに署名するためのキーまたはキー ペアの指定)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [/KEYCONTAINER (アセンブリに署名するキー コンテナーの指定)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER (アセンブリに署名するためのキー コンテナーの指定)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
  厳密なアセンブリの詳細については、次を参照してください。[作成と使用](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

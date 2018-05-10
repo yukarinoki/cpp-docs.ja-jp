@@ -1,12 +1,9 @@
 ---
-title: "CMonikerFile クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMonikerFile クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dfdf86a4375521d7db084b60c549b08a54dc992
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 431e743396cfc22d49c13a2a9e2f50c88c5ee036
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile クラス
 データのストリームを表します ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) によって指定された、 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)です。  
@@ -76,7 +71,7 @@ class CMonikerFile : public COleStreamFile
   
  派生`COleStreamFile`、`CMonikerFile`モニカーまたはモニカーに文字列の形式は、モニカーは名前のストリームにバインドします。 読み取るし、そのストリームに書き込むことができます。 本来の目的`CMonikerFile`に簡単にアクセスを提供することです`IStream`s が付けた`IMoniker`s ので、自分でストリームにバインドする必要はありませんまだある`CFile`ストリームに機能します。  
   
- `CMonikerFile`ストリーム以外のすべてにバインドを使用できません。 記憶域またはオブジェクトにバインドする場合は、行う必要があります、`IMoniker`インターフェイスを直接です。  
+ `CMonikerFile` ストリーム以外のすべてにバインドを使用できません。 記憶域またはオブジェクトにバインドする場合は、行う必要があります、`IMoniker`インターフェイスを直接です。  
   
  ストリームとモニカーの詳細については、次を参照してください[関数](../../mfc/reference/colestreamfile-class.md)で、 *『 MFC リファレンス*と[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)と[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)で、。Windows SDK。  
   
@@ -89,10 +84,10 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>  CMonikerFile::Close  
  この関数をデタッチし、ストリームを解放し、モニカーを解放します。  
   
 ```  
@@ -102,14 +97,14 @@ virtual void Close();
 ### <a name="remarks"></a>コメント  
  開かれていないか、既に閉じられているストリームに対して呼び出すことができます。  
   
-##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
  `CMonikerFile` オブジェクトを構築します。  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
  既定値に初期化バインド コンテキストを作成するには、この関数を呼び出します。  
   
 ```  
@@ -126,7 +121,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>コメント  
  バインド コンテキストは、特定のモニカー バインド操作に関する情報を格納するオブジェクトです。 カスタム バインドのコンテキストを提供するには、この関数をオーバーライドすることができます。  
   
-##  <a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>  CMonikerFile::Detach  
  この関数では、ストリームを閉じます。  
   
 ```  
@@ -140,7 +135,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
  現在のモニカーを指すポインターを取得するには、この関数を呼び出します。  
   
 ```  
@@ -153,7 +148,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>コメント  
  `CMonikerFile` 、インターフェイスではない返されるポインターは、参照カウントをインクリメントしない (を通じて[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))、モニカーがリリースされるとときに、`CMonikerFile`オブジェクトを解放します。 モニカーの保持またはそれを解放する場合は、する必要があります`AddRef`ことです。  
   
-##  <a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>  CMonikerFile::Open  
  ファイルまたはモニカー オブジェクトを開くには、このメンバー関数を呼び出します。  
   
 ```  
@@ -183,7 +178,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>コメント  
  `lpszURL` Macintosh でパラメーターを使用することはできません。 のみ、`pMoniker`形式の**開く**Macintosh で使用できます。  
   
- URL またはのファイル名を使用することができます、`lpszURL`パラメーター。 例:  
+ URL またはのファイル名を使用することができます、`lpszURL`パラメーター。 例えば:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   
@@ -191,7 +186,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数クラス](../../mfc/reference/colestreamfile-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CAsyncMonikerFile クラス](../../mfc/reference/casyncmonikerfile-class.md)

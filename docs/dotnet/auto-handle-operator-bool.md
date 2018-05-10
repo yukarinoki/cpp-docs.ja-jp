@@ -1,12 +1,9 @@
 ---
-title: "auto_handle::operator bool |Microsoft ドキュメント"
-ms.custom: 
+title: auto_handle::operator bool |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - auto_handle.operator bool
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_handle::operator bool
 ms.assetid: 2e535e99-cf87-4008-b588-02c587d77453
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4108baa84028c4168d2c08557b9837fa845facb8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 562aefc72a8ce2738a78527dcdc6a73f606a7627
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 使用するための演算子`auto_handle`条件式でします。  
@@ -42,7 +37,7 @@ operator bool();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- `true`ラップされたオブジェクトが無効である場合`false`それ以外の場合。  
+ `true` ラップされたオブジェクトが無効である場合`false`それ以外の場合。  
   
 ## <a name="remarks"></a>コメント  
  この演算子は実際に変換`_detail_class::_safe_bool`よりも安全である`bool`整数型に変換できないためです。  
@@ -76,11 +71,11 @@ s2 is valid
 s2 is now invalid  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\auto_handle.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [auto_handle メンバー](../dotnet/auto-handle-members.md)   
  [auto_handle::operator!](../dotnet/auto-handle-operator-logical-not.md)

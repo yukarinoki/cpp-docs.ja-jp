@@ -1,13 +1,10 @@
 ---
-title: "Web ブラウザー スタイルの MFC アプリケーションの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: Web ブラウザー スタイルの MFC アプリケーションの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Web ブラウザー形式の MFC アプリケーションの作成
 ネットワークとローカル ファイル システムで Web ブラウザー形式のアプリケーション (HTML またはアクティブ ドキュメント) など、インターネットまたはイントラネットでは、フォルダーから情報にアクセスできます。 アプリケーションのビュー クラスから派生することによって[CHtmlView](../../mfc/reference/chtmlview-class.md)、効果的に WebBrowser コントロールと、ビューを提供することで Web ブラウザー アプリケーションを作成します。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  その他のオプションをスケルトン アプリケーションに組み込まれているを選択します。  
   
-5.  **[完了]**をクリックします。  
+5.  **[完了]** をクリックします。  
   
  WebBrowser コントロールは、ハイパーリンクと Uniform Resource Locator (URL) ナビゲーションを通じて Web サイトの参照をサポートします。 コントロールがユーザーが前後に参照できる履歴一覧を保持しを旧バージョンと以前に参照したサイト、フォルダー、およびドキュメント。 コントロールは、ナビゲーション、ハイパーリンク、履歴の一覧、お気に入り、およびセキュリティに直接処理します。 アプリケーションは、ホストのアクティブなドキュメントもへの active ドキュメント コンテナーとして WebBrowser コントロールを使用できます。 したがって、表現力豊かな書式設定された Microsoft Excel スプレッドシートなどまたは Word のドキュメントを開くおよび編集できますから WebBrowser コントロール内で。 WebBrowser コントロールが ActiveX コントロールをホストできる ActiveX コントロール コンテナーもできます。  
   
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  `CHtmlView`だけ印刷が他のマイクロソフトの Web ブラウザー コントロールのサポートを実装[CView](../../mfc/reference/cview-class.md)-クラスを派生します。 代わりに、WebBrowser コントロールは、印刷、プリンターのユーザー インターフェイスを実装します。 その結果、`CHtmlView`は印刷プレビューをサポートしていないと、フレームワークは他の印刷のサポート機能を提供しません: たとえば、[き](../../mfc/reference/cview-class.md#onprepareprinting)、[値](../../mfc/reference/cview-class.md#onbeginprinting)、および[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)、他の MFC アプリケーションで使用可能な。  
   
- `CHtmlView`で、アプリケーションを Web または HTML ページに表示する、Web ブラウザー コントロール用のラッパーとして機能します。 ウィザードでの上書きを作成、[フィルターと並べ替え順序](../../mfc/reference/cview-class.md#oninitialupdate)Microsoft Visual C の Web サイトへのナビゲーション リンクを提供するビュー クラスの関数。  
+ `CHtmlView` で、アプリケーションを Web または HTML ページに表示する、Web ブラウザー コントロール用のラッパーとして機能します。 ウィザードでの上書きを作成、[フィルターと並べ替え順序](../../mfc/reference/cview-class.md#oninitialupdate)Microsoft Visual C の Web サイトへのナビゲーション リンクを提供するビュー クラスの関数。  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -67,7 +62,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
- このサイトは、独自のいずれかで置き換えることができますか、使用して、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数、ビューの既定のコンテンツとして、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例:  
+ このサイトは、独自のいずれかで置き換えることができますか、使用して、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数、ビューの既定のコンテンツとして、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例えば:  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -80,7 +75,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル MFCIE](http://msdn.microsoft.com/en-us/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)   
  [プロジェクトのプロパティの使用](../../ide/working-with-project-properties.md)   

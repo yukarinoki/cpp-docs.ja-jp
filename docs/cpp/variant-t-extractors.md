@@ -1,12 +1,9 @@
 ---
-title: "_variant_t 抽出 |Microsoft ドキュメント"
-ms.custom: 
+title: _variant_t 抽出 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-extractors"></a>_variant_t 抽出
 **Microsoft 固有の仕様**  
@@ -101,29 +96,29 @@ operator unsigned __int64() const;
 ## <a name="remarks"></a>コメント  
  カプセル化されたから生データを抽出**バリアント**です。 場合、**バリアント**されませんが、適切な型に既に**VariantChangeType**変換を実行するために使用し、エラー発生時にエラーが生成します。  
   
--   **operator short ()**抽出、**短い**整数値。  
+-   **operator short ()** 抽出、**短い**整数値。  
   
--   **operator long ()**抽出、**長い**整数値。  
+-   **operator long ()** 抽出、**長い**整数値。  
   
--   **operator float ()**抽出、 **float**数値を指定します。  
+-   **operator float ()** 抽出、 **float**数値を指定します。  
   
--   **operator double ()**抽出、**二重**整数値。  
+-   **operator double ()** 抽出、**二重**整数値。  
   
--   **operator CY ()**抽出、 **CY**オブジェクト。  
+-   **operator CY ()** 抽出、 **CY**オブジェクト。  
   
--   **operator bool ()**抽出、`bool`値。  
+-   **operator bool ()** 抽出、`bool`値。  
   
--   **operator DECIMAL ()**抽出、 **DECIMAL**値。  
+-   **operator DECIMAL ()** 抽出、 **DECIMAL**値。  
   
--   **operator BYTE ()**抽出、**バイト**値。  
+-   **operator BYTE ()** 抽出、**バイト**値。  
   
--   **operator _bstr_t ()**にカプセル化された文字列を抽出、`_bstr_t`オブジェクト。  
+-   **operator _bstr_t ()** にカプセル化された文字列を抽出、`_bstr_t`オブジェクト。  
   
--   **演算子 IDispatch\*に関するページ ()**カプセル化されたからディスパッチ インターフェイス ポインターを抽出**バリアント**です。 `AddRef`呼び出される結果のポインターのために呼び出すかどうかは**リリース**解放します。  
+-   **演算子 IDispatch\*に関するページ ()** カプセル化されたからディスパッチ インターフェイス ポインターを抽出**バリアント**です。 `AddRef` 呼び出される結果のポインターのために呼び出すかどうかは**リリース**解放します。  
   
--   **演算子 IUnknown\*に関するページ ()**からカプセル化された COM インターフェイス ポインターを抽出**バリアント**です。 `AddRef`呼び出される結果のポインターのために呼び出すかどうかは**リリース**解放します。  
+-   **演算子 IUnknown\*に関するページ ()** からカプセル化された COM インターフェイス ポインターを抽出**バリアント**です。 `AddRef` 呼び出される結果のポインターのために呼び出すかどうかは**リリース**解放します。  
   
  **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [_variant_t クラス](../cpp/variant-t-class.md)

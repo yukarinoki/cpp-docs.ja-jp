@@ -1,12 +1,9 @@
 ---
-title: "関数クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 関数クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>関数クラス
 Active ドキュメント コンテインメントを実装します。  
@@ -101,10 +96,10 @@ class COleDocObjectItem : public COleClientItem
   
  `COleDocObjectItem`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  初期化するためにこのメンバー関数を呼び出す、`COleDocObjectItem`オブジェクト。  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  ポインター、 `COleDocument` active ドキュメント コンテナーとして機能するオブジェクト。 このパラメーターを指定する必要があります**NULL**を有効にする**IMPLEMENT_SERIALIZE**です。 以外の OLE 項目を構築する通常**NULL**ドキュメント ポインター。  
   
-##  <a name="dodefaultprinting"></a>:Dodefaultprinting  
+##  <a name="dodefaultprinting"></a>  :Dodefaultprinting  
  既定の設定を使用してドキュメントに、フレームワークによって呼び出されます。  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  ポインター、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)を印刷するジョブを記述するオブジェクト。  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  ユーザーによって指定されたコマンドを実行するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -159,8 +154,8 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|予期しないエラーが発生しました。|  
 |**E_FAIL**|エラーが発生しました。|  
 |**E_NOTIMPL**|MFC を示す自体が変換およびコマンドのディスパッチを試行します。|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`非**NULL**認識されているコマンド グループが指定されていません。|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`グループ pGroup で有効なコマンドとして認識されません。|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 非**NULL**認識されているコマンド グループが指定されていません。|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` グループ pGroup で有効なコマンドとして認識されません。|  
 |**OLECMDERR_DISABLED**|によって識別されるコマンド`nCmdID`は無効になり、実行することはできません。|  
 |**OLECMDERR_NOHELP**|呼び出し元によって識別されるコマンドのヘルプの要望`nCmdID`しますが、利用可能なヘルプはありません。|  
 |**OLECMDERR_CANCELLED**|ユーザーには、実行が取り消されました。|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>コメント  
  `pguidCmdGroup`と`nCmdID`パラメーターを一緒に呼び出すコマンドを一意に識別します。 `nCmdExecOpt`パラメーターを実行する正確なアクションを指定します。  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  ポインターを取得するには、このメンバー関数を呼び出す、`IOleDocumentView`現在アクティブなビューのインターフェイスです。  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>コメント  
  参照カウントを返された`IOleDocumentView`ポインターは、この関数によって返される前に加算されません。  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  ドキュメントのページの数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  このメンバー関数は、印刷用のドキュメントを用意するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-##  <a name="onprint"></a>前述  
+##  <a name="onprint"></a>  前述  
  このメンバー関数は、ドキュメントを印刷するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  ドキュメント全体を印刷するかどうかを指定します。  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  ユーザー インターフェイスのイベントによって生成された 1 つ以上のコマンドの状態を調べるためにクエリを実行します。  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>コメント  
  このメンバー関数の機能をエミュレートする、 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)メソッドを Windows SDK で説明します。  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  OLE 項目にリンクへの接続を解放しが開いていた場合に終了します。 クライアント アイテムは破棄されません。  
   
 ```  
@@ -287,7 +282,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="remarks"></a>コメント  
  クライアント アイテムは破棄されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル MFCBIND](../../visual-cpp-samples.md)   
  [COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

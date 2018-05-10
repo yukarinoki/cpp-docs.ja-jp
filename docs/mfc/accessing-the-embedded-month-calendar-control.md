@@ -1,13 +1,10 @@
 ---
-title: "予定表コントロールの埋め込み月間にアクセスする |Microsoft ドキュメント"
-ms.custom: 
+title: 予定表コントロールの埋め込み月間にアクセスする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37d23a7d5d860d55e18f709c873a40d8f24f1c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfbc9ce7b99efc1f8d99f5735c16c252ff613c59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>埋め込み月間予定表コントロールへのアクセス
 埋め込み月間予定表コントロール オブジェクトからアクセスできる、`CDateTimeCtrl`オブジェクトへの呼び出しを[GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)メンバー関数。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  フォントが変更された後を呼び出して`CDateTimeCtrl::SetMonthCalFont`、新しいフォントが格納され、次回、月間予定表が表示されることを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDateTimeCtrl の使い方](../mfc/using-cdatetimectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

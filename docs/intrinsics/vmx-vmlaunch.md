@@ -1,12 +1,9 @@
 ---
-title: "_ _vmx_vmlaunch |Microsoft ドキュメント"
-ms.custom: 
+title: _ _vmx_vmlaunch |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmlaunch
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VMLAUNCH instruction
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14b7328ad2d9cfebb7416241bad3ca1e5081f2cf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 926195aa8dc612d3972634f8140ce3fff753a48f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 **Microsoft 固有の仕様**  
@@ -53,7 +48,7 @@ unsigned char __vmx_vmlaunch(
   
  `__vmx_vmlaunch`関数と同じ、`VMLAUNCH`マシン語命令します。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「Intel 仮想化技術仕様の「ia-32 Intel アーキテクチャ」、ドキュメントの検索に番号 C97063 002 を文書化、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -63,7 +58,7 @@ unsigned char __vmx_vmlaunch(
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmresume](../intrinsics/vmx-vmresume.md)   
  [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

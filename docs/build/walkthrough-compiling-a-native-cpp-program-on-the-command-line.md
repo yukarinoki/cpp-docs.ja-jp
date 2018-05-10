@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル |Microsoft ドキュメント'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル
 Visual C には、ユニバーサル Windows プラットフォーム アプリを基本的なコンソール アプリ、デスクトップ アプリ、デバイス ドライバー、および .NET コンポーネントからのすべての作成に使用できるコマンドライン C++ コンパイラが含まれています。  
@@ -96,7 +91,7 @@ Visual C には、ユニバーサル Windows プラットフォーム アプリ�
   
      これは、画面上で 1 行のテキストを書き出して終了する、非常に単純なプログラムです。 エラーを最小限に抑えるには、このコードをコピーし、メモ帳に貼り付けます。  
   
-4.  作業内容を保存します。 メモ帳で、 **[ファイル]** メニューの **[保存]**を選びます。  
+4.  作業内容を保存します。 メモ帳で、 **[ファイル]** メニューの **[保存]** を選びます。  
   
      これで、Visual C ソース ファイルをコンパイルする準備が整っている hello.cpp を作成しました。  
   
@@ -179,7 +174,7 @@ Visual C には、ユニバーサル Windows プラットフォーム アプリ�
   
  Visual C コンパイラには、一般に、ISO C99 標準と互換性が厳密に準拠していないは、C ランタイム ライブラリ (CRT) が含まれています。 ほとんどの場合、移植可能なコードがコンパイルされ、期待どおりを実行します。 Visual C は ISO C11 の CRT の変更の一部をサポートしていません。 Visual C コンパイラでは、特定のライブラリ関数と POSIX 関数名が使用されなくなりました。 関数がサポートされますが、優先名が変更されました。 詳細については、次を参照してください。 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)と[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   
  [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)   
  [コンパイラ オプション](../build/reference/compiler-options.md)

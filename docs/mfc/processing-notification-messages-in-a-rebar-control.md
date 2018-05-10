@@ -1,13 +1,10 @@
 ---
-title: "Rebar コントロールの通知メッセージの処理 |Microsoft ドキュメント"
-ms.custom: 
+title: Rebar コントロールの通知メッセージの処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22a8b584c309cd6698ddd73449fcbba866111190
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a06df0bdfe8d1b81b4285fc86378f3da99882698
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Rebar コントロールでの通知メッセージの処理
 Rebar コントロールの親クラスの作成、 `OnChildNotify` rebar コントロールすべてに、switch ステートメントを持つハンドラー関数 (`CReBarCtrl`) 通知メッセージを処理します。 ユーザーが rebar コントロール、変更したり、rebar コントロールから、削除、rebar バンドのレイアウトがバンド上のオブジェクトをドラッグしたときに、親ウィンドウへ通知が送信されます。  
@@ -53,7 +48,7 @@ Rebar コントロールの親クラスの作成、 `OnChildNotify` rebar コン
   
  これらの通知の詳細については、次を参照してください。 [Rebar コントロールの参照](http://msdn.microsoft.com/library/windows/desktop/bb774375)Windows SDK に含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CReBarCtrl の使い方](../mfc/using-crebarctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

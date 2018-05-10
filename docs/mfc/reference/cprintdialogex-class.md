@@ -1,12 +1,9 @@
 ---
-title: "メンバー クラス |Microsoft ドキュメント"
-ms.custom: 
+title: メンバー クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>メンバー クラス
 Windows の 印刷のプロパティ シートによって提供されるサービスをカプセル化します。  
@@ -137,7 +132,7 @@ class CPrintDialogEx : public CCommonDialog
   
  `CPrintDialogEx`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cprintdialogex"></a>  CPrintDialogEx::CPrintDialogEx  
@@ -214,7 +209,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>コメント  
  プリンター デバイス コンテキスト (DC) を作成、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。  
   
- `GetDefaults`印刷 プロパティ シートを表示しません。 代わりに、設定、**と**と**hDevMode**のメンバー [m_pdex](#m_pdex)へのハンドルへ、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)と[DEVNAMES](../../mfc/reference/devnames-structure.md)システムの既定のプリンターを初期化します。 両方**と**と**hDevMode**が NULL の場合または`GetDefaults`は失敗します。  
+ `GetDefaults` 印刷 プロパティ シートを表示しません。 代わりに、設定、**と**と**hDevMode**のメンバー [m_pdex](#m_pdex)へのハンドルへ、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)と[DEVNAMES](../../mfc/reference/devnames-structure.md)システムの既定のプリンターを初期化します。 両方**と**と**hDevMode**が NULL の場合または`GetDefaults`は失敗します。  
   
  場合、 **PD_RETURNDC**フラグを設定すると、この関数はしか返しません**と**と**hDevMode** (内にある**m_pdex.hDevNames**と**m_pdex.hDevMode**)、呼び出し元にはプリンター DC で返すことも**m_pdex.hDC**です。 プリンター DC を削除して、Windows を呼び出す呼び出し元の責任[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)関数が完了すると、ハンドルを`CPrintDialogEx`オブジェクト。  
   
@@ -342,7 +337,7 @@ BOOL PrintSelection() const;
 ### <a name="return-value"></a>戻り値  
  **TRUE**場合のみ、選択した項目はそれ以外の印刷**FALSE**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CPrintInfo 構造体](../../mfc/reference/cprintinfo-structure.md)

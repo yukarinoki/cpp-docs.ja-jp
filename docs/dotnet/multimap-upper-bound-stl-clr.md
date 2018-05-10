@@ -1,12 +1,9 @@
 ---
-title: "multimap::upper_bound (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: multimap::upper_bound (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::upper_bound
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - upper_bound member [STL/CLR]
 ms.assetid: bfb8cf64-cecf-4685-8ac9-e7228ecee809
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: adcfb64d4bea21e2adf0dab781664e8c05104cbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 730dab60d3fbe376af660a2cbd2c041621e2ab0f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapupperbound-stlclr"></a>multimap::upper_bound (STL/CLR)
 指定したキーに一致する範囲の末尾を検索します。  
@@ -85,12 +80,12 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap::count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
  [multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   

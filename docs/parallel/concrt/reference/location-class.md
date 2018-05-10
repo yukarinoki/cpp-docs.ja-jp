@@ -1,12 +1,9 @@
 ---
-title: "location クラス |Microsoft ドキュメント"
-ms.custom: 
+title: location クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - location
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16362cb8cecff32db1802dd6dea187d047d59294
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb555375df4b9f791db25fa2dee47222f79063
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="location-class"></a>location クラス
 ハードウェアの物理位置の抽象化です。  
@@ -67,7 +62,7 @@ class location;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `location`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
@@ -175,5 +170,5 @@ bool operator== (const location& _Rhs) const;
 ### <a name="return-value"></a>戻り値  
  `true` 2 つの場所が一致する場合と`false`それ以外の場合。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

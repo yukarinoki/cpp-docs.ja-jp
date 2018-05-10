@@ -1,12 +1,9 @@
 ---
-title: "行セットの更新 |Microsoft ドキュメント"
-ms.custom: 
+title: 行セットの更新 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fcb5794de2e0358e5c17cde5ac8e69fa9e3c08f6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8ca0ef94ba6c60bd43e24672fe7db669a3930fd7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-rowsets"></a>更新 (行セットを)
 データベースの基本の操作は、データ ストアの更新、つまりデータの書き込みです。 OLE DB の更新機構は単純です。コンシューマー アプリケーションは、バインドされたデータ メンバーの値を設定し、これらの値を行セットに書き込みます。その後、コンシューマーはプロバイダーにデータ ストアの更新を要求します。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 02/23/2018
 -   [Delete](../../data/oledb/crowset-delete.md) は行を行セットから削除します。これは SQL の DELETE コマンドに相当します。  
   
 ## <a name="supporting-update-operations"></a>更新操作のサポート  
- ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを作成する場合、 **[変更]**、 **[挿入]**、 **[削除]**の 3 つのチェック ボックスのうちの 1 つ以上をオンにすれば、更新操作をサポートできます。 これらのチェック ボックスをオンにすると、ウィザードによってコードが適宜変更され、選んだ変更の種類がサポートされます。 ただし、ウィザードを使用しない場合、更新をサポートするには次の行セット プロパティを `VARIANT_TRUE` に設定する必要があります。  
+ ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを作成する場合、 **[変更]**、 **[挿入]**、 **[削除]** の 3 つのチェック ボックスのうちの 1 つ以上をオンにすれば、更新操作をサポートできます。 これらのチェック ボックスをオンにすると、ウィザードによってコードが適宜変更され、選んだ変更の種類がサポートされます。 ただし、ウィザードを使用しない場合、更新をサポートするには次の行セット プロパティを `VARIANT_TRUE` に設定する必要があります。  
   
 -   **DBPROPVAL_UP_CHANGE** は行のデータ値を変更できます。  
   
@@ -217,7 +212,7 @@ product.Update();                 // Update row 101 now
   
  変更を遅延させる主な理由は、変更を元に戻すことができるようにするためです。 [CRowset::Undo](../../data/oledb/crowset-undo.md) を呼び出すと、ローカル変更キャッシュの状態が、保留中の変更が作成される前のデータ ストアの状態にロールバックされます。 **Undo** は、ローカル キャッシュの状態を 1 ステップだけ (最後の変更の直前の状態に) ロールバックするのではないことにご注意ください。この処理を実行すると、その行のローカル キャッシュがクリアされます。 また、 **Undo** は現在の行のみに影響します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレートの使用](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [CRowset クラス](../../data/oledb/crowset-class.md)   
  [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)

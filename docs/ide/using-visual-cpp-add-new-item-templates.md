@@ -2,12 +2,9 @@
 title: Visual C を使用して新しい項目の追加テンプレート |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Visual C++ の新しい項目の追加テンプレートの使用方法
 使用して Visual C プロジェクトに共通している項目を簡単に追加することができます、**新しい項目の追加**コマンド。 使用する場合、**新しい項目の追加**コマンド、`Add New Item`項目テンプレートは、適切なファイルをプロジェクトに追加の一覧 ダイアログ ボックスが表示されます。  
@@ -58,14 +53,14 @@ ms.lasthandoff: 04/10/2018
 |リソース テンプレート ファイル (.rct)|リソース テンプレート ファイルを作成します。|  
 |リボン (.mfcribbon ミリ秒)|リボン ファイルを作成します。|  
 |サーバー応答ファイル (.srf)|ATL Server で使用されるサーバー応答ファイルを作成します。|  
-|SQL Script File (.sql)|SQL スクリプト ファイルを作成します。 **注:**このテンプレートは、Professional Edition 機能ではありません。|  
+|SQL スクリプト ファイル (.sql)|SQL スクリプト ファイルを作成します。 **注:** このテンプレートは、Professional Edition 機能ではありません。|  
 |スタイル シート (.css)|リッチ HTML スタイル定義に使われるカスケード スタイル シートを追加します。|  
 |テキスト ファイル (.txt)|空のテキスト ファイルを追加します。|  
 |ユーザー コントロール|CLR 機能を使用してユーザー コントロールを追加します。|  
 |Windows フォーム|CLR 機能を使用した Windows フォームを追加します。|  
 |XML ファイル (.xml)|空の XML ファイルを追加します。|  
 |XML スキーマ ファイル (.xsd)|XML ドキュメントのスキーマを定義するために使用するファイルを作成します。|  
-|XSLT File (.xslt)|XML ドキュメントの変換に使用されるファイルを作成します。|  
+|XSLT ファイル (.xslt)|XML ドキュメントの変換に使用されるファイルを作成します。|  
   
 ## <a name="see-also"></a>関連項目  
  [コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)

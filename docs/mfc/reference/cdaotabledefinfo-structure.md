@@ -2,12 +2,9 @@
 title: CDaoTableDefInfo 構造体 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoTableDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e949cb0348cb55fcee5a940b5753a5a8197e600b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 構造体
 `CDaoTableDefInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているテーブル定義のオブジェクトに関する情報が含まれています。  
@@ -54,7 +49,7 @@ struct CDaoTableDefInfo
  テーブル定義オブジェクトの一意名です。 このプロパティの値を直接取得する呼び出し定義オブジェクトの[GetName](../../mfc/reference/cdaotabledef-class.md#getname)メンバー関数。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
  `m_bUpdatable`  
- 変更をテーブルにできるかどうかを示します。 テーブルが更新可能かどうかを決定するすばやく開くには、`CDaoTableDef`テーブルのオブジェクトし、オブジェクトの[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)メンバー関数。 `CanUpdate`常に 0 以外を返します (**TRUE**) の新しく作成されたテーブル定義オブジェクトおよび 0 (**FALSE**) のアタッチされたテーブル定義オブジェクト。 新しいテーブル定義オブジェクトは、現在のユーザーが書き込みアクセス許可を持っているデータベースにのみ追加できます。 テーブルには、更新できないフィールドのみが含まれている場合`CanUpdate`0 を返します。 1 つまたは複数のフィールドが更新可能な`CanUpdate`0 以外を返します。 更新可能なフィールドのみを編集することができます。 詳細については、DAO ヘルプの「更新可能なプロパティ」を参照してください。  
+ 変更をテーブルにできるかどうかを示します。 テーブルが更新可能かどうかを決定するすばやく開くには、`CDaoTableDef`テーブルのオブジェクトし、オブジェクトの[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)メンバー関数。 `CanUpdate` 常に 0 以外を返します (**TRUE**) の新しく作成されたテーブル定義オブジェクトおよび 0 (**FALSE**) のアタッチされたテーブル定義オブジェクト。 新しいテーブル定義オブジェクトは、現在のユーザーが書き込みアクセス許可を持っているデータベースにのみ追加できます。 テーブルには、更新できないフィールドのみが含まれている場合`CanUpdate`0 を返します。 1 つまたは複数のフィールドが更新可能な`CanUpdate`0 以外を返します。 更新可能なフィールドのみを編集することができます。 詳細については、DAO ヘルプの「更新可能なプロパティ」を参照してください。  
   
  `m_lAttributes`  
  テーブル定義オブジェクトによって表されるテーブルの特性を指定します。 テーブル定義の現在の属性を取得するその[GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes)メンバー関数。 返される値の長さの定数の組み合わせが可能です (ビットごとの OR を使用して (**&#124;**) 演算子)。  
@@ -95,14 +90,14 @@ struct CDaoTableDefInfo
 ## <a name="remarks"></a>コメント  
  クラスのオブジェクトは、テーブル定義[どちら](../../mfc/reference/cdaotabledef-class.md)です。 プライマリ、セカンダリ、および上記のすべての参照は、情報がによって返される方法を示します、[プライマリ](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)クラスのメンバー関数`CDaoDatabase`です。  
   
- によって取得される情報、 [cdaodatabase::gettabledefinfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)メンバー関数は、`CDaoTableDefInfo`構造体。 呼び出す、`GetTableDefInfo`のメンバー関数、 `CDaoDatabase` TableDefs コレクションでのテーブル定義オブジェクトが格納されているオブジェクト。 `CDaoTableDefInfo`定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoTableDefInfo`オブジェクト。  
+ によって取得される情報、 [cdaodatabase::gettabledefinfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)メンバー関数は、`CDaoTableDefInfo`構造体。 呼び出す、`GetTableDefInfo`のメンバー関数、 `CDaoDatabase` TableDefs コレクションでのテーブル定義オブジェクトが格納されているオブジェクト。 `CDaoTableDefInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoTableDefInfo`オブジェクト。  
   
  日付と時刻の設定は、ベース テーブルが作成または最後に更新されたコンピューターから派生します。 マルチ ユーザー環境では、ユーザーはこれらのファイル サーバーから直接、DateCreated で不一致を避けるための設定と LastUpdated のプロパティの設定を取得する必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdao.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [どちらのクラス](../../mfc/reference/cdaotabledef-class.md)   
  [CDaoDatabase クラス](../../mfc/reference/cdaodatabase-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "リンカ ツール エラー LNK1104 |Microsoft ドキュメント"
-ms.custom: 
+title: リンカ ツール エラー LNK1104 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>リンカ ツール エラー LNK1104
 
@@ -101,4 +96,4 @@ IDE でこの問題を解決するには確認、**ライブラリ ディレク�
 
 エラーは、ディスク領域が不足していないときに発生します。 リンカーが一時ファイルを使用するケースはいくつかあります。 場合でも、十分なディスク領域がある場合は、非常に大規模なリンクが消費されますしたり、使用可能なディスク領域をフラグメント化できます。 使用を検討して、 [/OPT (最適化)](../../build/reference/opt-optimizations.md)オプション; 行って推移的な COMDAT 除去読み取り、すべてのオブジェクト ファイル複数回です。
 
-場合、 *filename* LNK の名前は*nnn*、一時ファイルのリンカーによって生成されるファイル名は、TMP 環境変数で指定されたディレクトリが存在しない、または 1 つ以上のTMP 環境変数のディレクトリを指定することがあります。 TMP 環境変数の 1 つだけのディレクトリ パスを指定する必要があります。
+場合、 *filename* LNK の名前は*nnn*、一時ファイルのリンカーによって生成されるファイル名は、TMP 環境変数で指定されたディレクトリが存在しない、または 1 つ以上のディレクトリにすることがありますTMP 環境変数を指定します。 TMP 環境変数の 1 つだけのディレクトリ パスを指定する必要があります。

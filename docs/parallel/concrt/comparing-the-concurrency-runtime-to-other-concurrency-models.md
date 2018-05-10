@@ -1,29 +1,24 @@
 ---
-title: "その他の同時実行モデルの同時実行ランタイムとの比較 |Microsoft ドキュメント"
-ms.custom: 
+title: その他の同時実行モデルの同時実行ランタイムとの比較 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>同時実行ランタイムとその他の同時実行モデルの比較
 このドキュメントでは、同時実行ランタイムとその他のテクノロジの機能やプログラミング モデルの違いについて説明します。 同時実行ランタイムのメリットと他のプログラミング モデルのメリットの違いを理解しておくことによって、アプリケーションの要件に最も適したテクノロジを選択できます。  
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイム](../../parallel/concrt/concurrency-runtime.md)     
  [概要](../../parallel/concrt/asynchronous-message-blocks.md)   
  [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   

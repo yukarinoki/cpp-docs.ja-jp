@@ -1,12 +1,9 @@
 ---
-title: "CMFCToolBarButton クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCToolBarButton クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarButton
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aaf355d15679bdb30b7561fe28dd6f927688ede
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c0827bea8669743f8e0512ce2c6b1f82d978c46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton クラス
 ツールバーのボタン機能を提供します。  
@@ -273,7 +268,7 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CMFCToolBarButton::m_bImage](#m_bimage)|ボタンにイメージを表示するかどうかを指定します。|  
 |[CMFCToolBarButton::m_bText](#m_btext)|ボタンにテキスト ラベルを表示するかどうかを指定します。|  
@@ -291,7 +286,7 @@ class CMFCToolBarButton : public CObject
   
  通常、ツールバーのボタンをカスタマイズできます。 ユーザーことができます間、1 つのツールバーからボタンをドラッグし、コピー、貼り付け、削除、およびテキスト ラベルや画像を編集します。 ユーザーがツールバーをカスタマイズすることを防ぐためには、2 つの方法のいずれかで、ツールバーをロックできます。 設定するか、`bLocked`フラグを`TRUE`を呼び出すと[CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)、またはを使用して保護されているコマンドのグローバル リストを各ボタンのコマンド ID を追加、 [CMFCToolBarButton:。SetProtectedCommands](#setprotectedcommands)メソッドです。  
   
- `CMFCToolBarButton`オブジェクトでは、アプリケーションのツール バー イメージのグローバル コレクション内のイメージを表示します。 親ツールバーによってこれらのコレクションが保持されます[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)です。 詳細については、次を参照してください。 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)です。  
+ `CMFCToolBarButton` オブジェクトでは、アプリケーションのツール バー イメージのグローバル コレクション内のイメージを表示します。 親ツールバーによってこれらのコレクションが保持されます[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)です。 詳細については、次を参照してください。 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)です。  
   
  ユーザーには、ツールバーのボタンがクリックすると、その親ツールバーはマウス メッセージを処理し、ボタンの適切なアクションを通信します。 親ツールバーが送信する場合は、ボタンは、有効なコマンド ID を持つ、`WM_COMMAND`親フレームへのメッセージ。  
   
@@ -308,10 +303,10 @@ class CMFCToolBarButton : public CObject
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtoolbarbutton.h  
   
-##  <a name="canbedropped"></a>CMFCToolBarButton::CanBeDropped  
+##  <a name="canbedropped"></a>  CMFCToolBarButton::CanBeDropped  
  ユーザーがカスタマイズ中にツールバーまたはメニューにボタンを配置できるかどうかを指定します。  
   
 ```  
@@ -330,7 +325,7 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
   
  このメソッドの既定の実装を返します`TRUE`です。 このメソッドをオーバーライドし、返す`FALSE`をユーザーがボタンの位置を変更することを防ぐために必要な場合です。  
   
-##  <a name="canbestored"></a>CMFCToolBarButton::CanBeStored  
+##  <a name="canbestored"></a>  CMFCToolBarButton::CanBeStored  
  ボタンを格納できるかどうかを判断します。  
   
 ```  
@@ -345,7 +340,7 @@ virtual BOOL CanBeStored() const;
   
  既定の実装では、`TRUE` が返されます。 ドラッグ アンド ドロップ操作の一環として、ボタンに格納できない場合は、このメソッドをオーバーライドします。 ドラッグ アンド ドロップ操作の詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)です。  
   
-##  <a name="canbestretched"></a>CMFCToolBarButton::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCToolBarButton::CanBeStretched  
  ユーザーがカスタマイズ中に、ボタンをストレッチできるかどうかを指定します。  
   
 ```  
@@ -362,7 +357,7 @@ virtual BOOL CanBeStretched() const;
   
  カスタマイズ モードの詳細については、次を参照してください。 [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)です。  
   
-##  <a name="cmfctoolbarbutton"></a>CMFCToolBarButton::CMFCToolBarButton  
+##  <a name="cmfctoolbarbutton"></a>  CMFCToolBarButton::CMFCToolBarButton  
  `CMFCToolBarButton` オブジェクトを構築して初期化します。  
   
 ```  
@@ -390,7 +385,7 @@ CMFCToolBarButton(
  [入力] `bLocked`  
  ボタンをカスタマイズできるかどうかを決定するブール値。 このパラメーターが場合`TRUE`ボタンをカスタマイズすることはできません。 それ以外の場合、ボタンをカスタマイズできます。  
   
-##  <a name="comparewith"></a>CMFCToolBarButton::CompareWith  
+##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
  このインスタンスと指定された`CMFCToolBarButton`オブジェクト。  
   
 ```  
@@ -407,7 +402,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ### <a name="remarks"></a>コメント  
  既定の実装では、指定されたオブジェクトのコマンド ID がこのインスタンスのコマンド ID を等しいかどうかを判断します。 このメソッドをオーバーライドして、2 つあるかどうかを判断する追加処理を実行する必要がある場合`CMFCToolBarButton`オブジェクトが等しい。  
   
-##  <a name="copyfrom"></a>CMFCToolBarButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCToolBarButton::CopyFrom  
  現在のボタンに別のツール バー ボタンのプロパティをコピーします。  
   
 ```  
@@ -421,7 +416,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>コメント  
  このツール バー ボタンに別のツール バー ボタンをコピーするには、このメソッドを呼び出します。  
   
-##  <a name="createfromoledata"></a>CMFCToolBarButton::CreateFromOleData  
+##  <a name="createfromoledata"></a>  CMFCToolBarButton::CreateFromOleData  
  作成、`CMFCToolBarButton`オブジェクトから提供されている`COleDataObject`オブジェクト。  
   
 ```  
@@ -438,7 +433,7 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ### <a name="remarks"></a>コメント  
  フレームワークはこのメソッドを使用して、さまざまな形式でデータの転送を実行します。 たとえば、`CMFCOutlookBarPane::OnDragOver`メソッドでは、このメソッドを使用して、ドラッグ アンド ドロップ操作を実行します。  
   
-##  <a name="enablewindow"></a>CMFCToolBarButton::EnableWindow  
+##  <a name="enablewindow"></a>  CMFCToolBarButton::EnableWindow  
  マウス入力およびキーボード入力を有効または無効にします。  
   
 ```  
@@ -452,7 +447,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>コメント  
  このメソッドは、`EnableWindow`を有効にするにまたは、入力を無効にします。 詳細については、次を参照してください。 [EnableWindow](http://msdn.microsoft.com/library/windows/desktop/ms646291) Windows SDK に含まれています。  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton  
  メニュー、ツールバーのボタンのテキストをコピーします。  
   
 ```  
@@ -471,7 +466,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
   
  このメソッドの既定の実装を返します`TRUE`です。 フレームワークがから派生したオブジェクトに変換するときに、多くのアクションを実行する場合は、このメソッドをオーバーライド[CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)メニュー ボタンにします。  
   
-##  <a name="getclipboardformat"></a>CMFCToolBarButton::GetClipboardFormat  
+##  <a name="getclipboardformat"></a>  CMFCToolBarButton::GetClipboardFormat  
  アプリケーションのグローバルのクリップボード形式を取得します。  
   
 ```  
@@ -490,7 +485,7 @@ static CLIPFORMAT __stdcall GetClipboardFormat();
   
  MFC でのクリップボードの詳細については、次を参照してください。[クリップボード](../../mfc/clipboard.md)です。  
   
-##  <a name="gethwnd"></a>CMFCToolBarButton::GetHwnd  
+##  <a name="gethwnd"></a>  CMFCToolBarButton::GetHwnd  
  ツール バー ボタンに関連付けられているウィンドウ ハンドルを取得します。  
   
 ```  
@@ -503,7 +498,7 @@ virtual HWND GetHwnd();
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装を返します`NULL`です。 特定のコントロールのウィンドウ ハンドルを返すには、このメソッドをオーバーライドします。  
   
-##  <a name="getimage"></a>CMFCToolBarButton::GetImage  
+##  <a name="getimage"></a>  CMFCToolBarButton::GetImage  
  ボタンのイメージのインデックスを取得します。  
   
 ```  
@@ -516,7 +511,7 @@ int GetImage() const;
 ### <a name="remarks"></a>コメント  
  ボタンにユーザー定義のイメージがある場合 (場合は、`bUserButton`が`TRUE`コンス トラクターで)、返されるインデックスは、イメージをイメージのユーザー定義のコレクションを指定します (を参照してください[CMFCToolBar::GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages))。 インデックスがそれ以外の場合、リソース ファイルから読み込まれているイメージのコレクション内のイメージを指定 (を参照してください[CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages))。 リソース ファイルの詳細については、次を参照してください。[リソース ファイルの操作](../../windows/working-with-resource-files.md)です。  
   
-##  <a name="getinvalidaterect"></a>CMFCToolBarButton::GetInvalidateRect  
+##  <a name="getinvalidaterect"></a>  CMFCToolBarButton::GetInvalidateRect  
  再描画する必要があります、ボタンのクライアント領域の領域を取得します。  
   
 ```  
@@ -529,7 +524,7 @@ virtual const CRect GetInvalidateRect() const;
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、クライアント領域全体を返します。 別の領域を再描画する場合は、このメソッドをオーバーライドします。  
   
-##  <a name="getparentwnd"></a>CMFCToolBarButton::GetParentWnd  
+##  <a name="getparentwnd"></a>  CMFCToolBarButton::GetParentWnd  
  ボタンの親ウィンドウを取得します。  
   
 ```  
@@ -539,7 +534,7 @@ CWnd* GetParentWnd() const;
 ### <a name="return-value"></a>戻り値  
  ボタンの親ウィンドウです。  
   
-##  <a name="getprotectedcommands"></a>CMFCToolBarButton::GetProtectedCommands  
+##  <a name="getprotectedcommands"></a>  CMFCToolBarButton::GetProtectedCommands  
  ユーザーがカスタマイズできないコマンドの一覧を取得します。  
   
 ```  
@@ -554,7 +549,7 @@ static const CList<UINT,UINT>& GetProtectedCommands();
   
  使用して、 [CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)メソッドの一覧を定義するには、コマンドが保護されています。  
   
-##  <a name="gettextsize"></a>CMFCToolBarButton::GetTextSize  
+##  <a name="gettextsize"></a>  CMFCToolBarButton::GetTextSize  
  ボタンのテキストのサイズを取得します。  
   
 ```  
@@ -564,7 +559,7 @@ SIZE GetTextSize() const;
 ### <a name="return-value"></a>戻り値  
  A `SIZE` (ピクセル単位)、ボタンのテキストのサイズを含むオブジェクト。  
   
-##  <a name="hasfocus"></a>CMFCToolBarButton::HasFocus  
+##  <a name="hasfocus"></a>  CMFCToolBarButton::HasFocus  
  ボタンに現在入力フォーカスがあるかどうかを判断します。  
   
 ```  
@@ -577,7 +572,7 @@ virtual BOOL HasFocus() const;
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装は、ボタンが入力フォーカスがある、または入力フォーカスがあるウィンドウの子または子孫ウィンドウは、場合に 0 以外を返します。 この動作をカスタマイズするには、この関数をオーバーライドすることができます。  
   
-##  <a name="havehotborder"></a>CMFCToolBarButton::HaveHotBorder  
+##  <a name="havehotborder"></a>  CMFCToolBarButton::HaveHotBorder  
  ユーザーがボタンを選択したときに、ボタンの境界線を表示するかどうかを判断します。  
   
 ```  
@@ -592,7 +587,7 @@ virtual BOOL HaveHotBorder() const;
   
  既定の実装では、`TRUE` が返されます。 この動作をカスタマイズするには、このメソッドをオーバーライドすることができます。  
   
-##  <a name="isdrawimage"></a>CMFCToolBarButton::IsDrawImage  
+##  <a name="isdrawimage"></a>  CMFCToolBarButton::IsDrawImage  
  ボタンにイメージを表示するかどうかを判断します。  
   
 ```  
@@ -605,7 +600,7 @@ BOOL IsDrawImage() const;
 ### <a name="remarks"></a>コメント  
  このメソッドが戻る`FALSE`、ツール バー ボタンに関連付けられているイメージがあるない場合 ( [CMFCToolBarButton::GetImage](#getimage) -1 が返されます) または[CMFCToolBarButton::m_bImage](#m_bimage)に設定されている`FALSE`です。  
   
-##  <a name="isdrawtext"></a>CMFCToolBarButton::IsDrawText  
+##  <a name="isdrawtext"></a>  CMFCToolBarButton::IsDrawText  
  ボタンにテキスト ラベルを表示するかどうかを判断します。  
   
 ```  
@@ -618,7 +613,7 @@ BOOL IsDrawText() const;
 ### <a name="remarks"></a>コメント  
  このメソッドが戻る`FALSE`、ツール バー ボタンに関連付けられているテキスト ラベルがあるない場合 ( [CMFCToolBarButton::m_strText](#m_strtext)空) または[CMFCToolBarButton::m_bText](#m_btext)に設定されている`FALSE`です。  
   
-##  <a name="isdroppeddown"></a>CMFCToolBarButton::IsDroppedDown  
+##  <a name="isdroppeddown"></a>  CMFCToolBarButton::IsDroppedDown  
  ボタンが、サブメニューを表示するかどうかを判断します。  
   
 ```  
@@ -631,7 +626,7 @@ virtual BOOL IsDroppedDown() const;
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装を返します`FALSE`です。 返すには、このメソッドをオーバーライド`TRUE`場合は、コントロールにサブメニューが表示されます。  
   
-##  <a name="iseditable"></a>CMFCToolBarButton::IsEditable  
+##  <a name="iseditable"></a>  CMFCToolBarButton::IsEditable  
  ボタンをカスタマイズできるかどうかを判断します。  
   
 ```  
@@ -648,7 +643,7 @@ virtual BOOL IsEditable() const;
   
  その動作をカスタマイズするには、このメソッドをオーバーライドします。  
   
-##  <a name="isextrasize"></a>CMFCToolBarButton::IsExtraSize  
+##  <a name="isextrasize"></a>  CMFCToolBarButton::IsExtraSize  
  拡張された境界で、ボタンを表示できるかどうかを判断します。  
   
 ```  
@@ -663,7 +658,7 @@ virtual BOOL IsExtraSize() const;
   
  場合は、ユーザーは、1 つのツールバーからこのボタンを移動する、フレームワーク、 [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)メソッドです。 [CMFCToolBarButton::OnChangeParentWnd](#onchangeparentwnd)メソッドは、新しい親ツールバーの追加サイズ フラグを設定 (詳細については、次を参照してください。 [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable))。  
   
-##  <a name="isfirstingroup"></a>CMFCToolBarButton::IsFirstInGroup  
+##  <a name="isfirstingroup"></a>  CMFCToolBarButton::IsFirstInGroup  
  ボタンはそのボタン グループの最初の位置にあるかどうかを判断します。  
   
 ```  
@@ -671,14 +666,14 @@ virtual BOOL IsFirstInGroup() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ボタンがそのボタン グループの最初のボタンである場合それ以外の場合`FALSE`です。  
+ `TRUE` ボタンがそのボタン グループの最初のボタンである場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドを定義、*ボタン グループ*隣接する一連のボタンは、同じ行に配置し、区切り記号または、ツールバーの境界線で囲まれているとします。 このメソッドが戻る`FALSE`、ツール バー ボタンを参照する場合、**カスタマイズ**ボタンをクリックします。 詳細については、**カスタマイズ**ボタンをクリックしを参照してください[CMFCToolBar::GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)です。  
   
  呼び出す、 [CMFCToolBarButton::IsLastInGroup](#islastingroup)ボタンはそのボタン グループの最後の位置にあるかどうかを調べます。  
   
-##  <a name="ishidden"></a>CMFCToolBarButton::IsHidden  
+##  <a name="ishidden"></a>  CMFCToolBarButton::IsHidden  
  ボタンが非表示になっているかどうかを判断します。  
   
 ```  
@@ -695,7 +690,7 @@ BOOL IsHidden() const;
   
  既定では、すべてのツール バー ボタンが表示されます。 使用して、 [CMFCToolBarButton::Show](#show)メソッド ツール バー ボタンを表示または非表示にします。  
   
-##  <a name="ishorizontal"></a>CMFCToolBarButton::IsHorizontal  
+##  <a name="ishorizontal"></a>  CMFCToolBarButton::IsHorizontal  
  水平ツールバーで、ボタンがあるかどうかを判断します。  
   
 ```  
@@ -710,7 +705,7 @@ BOOL IsHorizontal() const;
   
  このメソッドが戻る、`m_bHorz`データ メンバーです。 既定値、`m_bHorz`データ メンバーは`TRUE`; を呼び出すたびにリセットされます、 [CMFCToolBarButton::OnDraw](#ondraw)メソッドです。  
   
-##  <a name="islastingroup"></a>CMFCToolBarButton::IsLastInGroup  
+##  <a name="islastingroup"></a>  CMFCToolBarButton::IsLastInGroup  
  ボタンはそのボタン グループの最後の位置にあるかどうかを指定します。  
   
 ```  
@@ -718,14 +713,14 @@ virtual BOOL IsLastInGroup() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ボタンがそのボタン グループ内の最後のボタンである場合それ以外の場合`FALSE`です。  
+ `TRUE` ボタンがそのボタン グループ内の最後のボタンである場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドを定義、*ボタン グループ*は、同じ行に配置し、区切り記号またはこのメソッドが戻る、ツールバーの境界線で囲まれているボタンの隣接するセットとして`FALSE`ツール バー ボタンに親があるない場合ツールバーまたはツール バー ボタンを指す、**カスタマイズ**ボタンをクリックします。 詳細については、**カスタマイズ**ボタンをクリックしを参照してください[CMFCToolBar::GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)です。  
   
  呼び出す、 [CMFCToolBarButton::IsFirstInGroup](#isfirstingroup)ボタンはそのボタン グループの最初の位置にあるかどうかを調べます。  
   
-##  <a name="islocked"></a>CMFCToolBarButton::IsLocked  
+##  <a name="islocked"></a>  CMFCToolBarButton::IsLocked  
  ボタンがツールバーにあるロック (カスタマイズ) するかどうかを判断します。  
   
 ```  
@@ -738,7 +733,7 @@ BOOL IsLocked() const;
 ### <a name="remarks"></a>コメント  
  フレームワークは、ユーザーがドラッグ アンド ドロップを使用して、ツール バー ボタンをカスタマイズするか、操作を編集するかどうかを判断するには、このメソッドを呼び出します。 親ツールバーを使用してロックされている属性を設定、 [CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)メソッドです。 フレームワークは、各ツール バー ボタンのコンス トラクターにこの属性の値を渡します ( [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)) 親ツールバーに挿入します。  
   
-##  <a name="isownerof"></a>CMFCToolBarButton::IsOwnerOf  
+##  <a name="isownerof"></a>  CMFCToolBarButton::IsOwnerOf  
  ボタンが、指定されたウィンドウのハンドルの所有者であるかどうかを判断します。  
   
 ```  
@@ -755,7 +750,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ### <a name="remarks"></a>コメント  
  このメソッドを返します。 0 以外の場合`hwnd`が直接ウィンドウ ハンドルを指すか、ボタンに関連付けられているウィンドウ ハンドルの子です。 このメソッドは、場合に 0 を返します`hwnd`は`NULL`します。  
   
-##  <a name="isvisible"></a>CMFCToolBarButton::IsVisible  
+##  <a name="isvisible"></a>  CMFCToolBarButton::IsVisible  
  ツール バー ボタンが表示されているかどうかを判断します。  
   
 ```  
@@ -768,7 +763,7 @@ BOOL IsVisible() const;
 ### <a name="remarks"></a>コメント  
  表示またはを使用して、ツール バー ボタンを非表示にすることができます、 [CMFCToolBarButton::SetVisible](#setvisible)メソッドです。 呼び出す、 [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)メソッドを呼び出した後、親ツールバーを[CMFCToolBarButton::SetVisible](#setvisible)親ツールバーのレイアウトを再計算します。  
   
-##  <a name="iswindowvisible"></a>CMFCToolBarButton::IsWindowVisible  
+##  <a name="iswindowvisible"></a>  CMFCToolBarButton::IsWindowVisible  
  ボタンの基になるウィンドウ ハンドルが表示されているかどうかを判断します。  
   
 ```  
@@ -781,7 +776,7 @@ virtual BOOL IsWindowVisible();
 ### <a name="remarks"></a>コメント  
  このメソッドは基になるウィンドウ ハンドルのスタイル属性が含まれる場合は 0 以外を返します、`WS_VISIBLE`スタイル。 このメソッドが戻る`FALSE`場合は、ボタンの基になるウィンドウ ハンドル`NULL`です。  
   
-##  <a name="m_bimage"></a>CMFCToolBarButton::m_bImage  
+##  <a name="m_bimage"></a>  CMFCToolBarButton::m_bImage  
  ボタンにイメージを表示するかどうかを指定します。  
   
 ```  
@@ -791,7 +786,7 @@ BOOL m_bImage;
 ### <a name="remarks"></a>コメント  
  このデータ メンバーに設定されている場合`TRUE`フレームワーク、ツール バー ボタンに関連付けられているイメージが表示されます。 それ以外の場合、フレームワークにイメージを表示しません。 このメンバーの戻り値に影響を与える、 [CMFCToolBarButton::m_bImage](#m_bimage)メソッドです。  
   
-##  <a name="m_btext"></a>CMFCToolBarButton::m_bText  
+##  <a name="m_btext"></a>  CMFCToolBarButton::m_bText  
  ボタンにテキスト ラベルを表示するかどうかを指定します。  
   
 ```  
@@ -801,7 +796,7 @@ BOOL m_bText;
 ### <a name="remarks"></a>コメント  
  このデータ メンバーに設定されている場合`TRUE`フレームワーク、ツール バー ボタンのテキスト ラベルが表示されます。 それ以外の場合、フレームワークにテキスト ラベルを表示しません。 このメンバーの戻り値に影響を与える、 [CMFCToolBarButton::m_bText](#m_btext)メソッドです。  
   
-##  <a name="m_btextbelow"></a>CMFCToolBarButton::m_bTextBelow  
+##  <a name="m_btextbelow"></a>  CMFCToolBarButton::m_bTextBelow  
  ボタン イメージの下にテキスト ラベルを表示するかどうかを指定します。  
   
 ```  
@@ -811,7 +806,7 @@ BOOL m_bTextBelow;
 ### <a name="remarks"></a>コメント  
  このメンバー変数に設定されている場合`TRUE`フレームワークは、イメージの下のボタンのテキストを表示します。 このメンバーの既定値は`FALSE`します。  
   
-##  <a name="m_buserbutton"></a>CMFCToolBarButton::m_bUserButton  
+##  <a name="m_buserbutton"></a>  CMFCToolBarButton::m_bUserButton  
  ボタンがユーザー定義のイメージを持つかどうかを指定します  
   
 ```  
@@ -821,7 +816,7 @@ BOOL m_bUserButton;
 ### <a name="remarks"></a>コメント  
  このデータ メンバーに設定されている`TRUE`ときにこのボタンはそれに関連付けられているユーザー定義のイメージです。  
   
-##  <a name="m_bwholetext"></a>CMFCToolBarButton::m_bWholeText  
+##  <a name="m_bwholetext"></a>  CMFCToolBarButton::m_bWholeText  
  外接する四角形に収まりきらない場合でも、ボタンが、完全なテキスト ラベルを表示するかどうかを指定します。  
   
 ```  
@@ -831,7 +826,7 @@ BOOL m_bWholeText;
 ### <a name="remarks"></a>コメント  
  このデータ メンバーに設定されている場合`TRUE`フレームワークは、ボタンを拡大すると、完全なテキスト ラベルを表示します。 それ以外の場合、フレームワークはによって切り捨てられ、末尾に省略記号 ( **.**) テキストのラベルにします。  
   
-##  <a name="m_bwrap"></a>CMFCToolBarButton::m_bWrap  
+##  <a name="m_bwrap"></a>  CMFCToolBarButton::m_bWrap  
  次の行の区切り記号の横にあるボタンが配置されるかどうかを指定します。  
   
 ```  
@@ -845,7 +840,7 @@ BOOL m_bWrap;
   
  このデータ メンバーの既定値は`FALSE`します。  
   
-##  <a name="m_bwraptext"></a>CMFCToolBarButton::m_bWrapText  
+##  <a name="m_bwraptext"></a>  CMFCToolBarButton::m_bWrapText  
  複数行テキスト ラベルを有効にするかどうかを指定します。  
   
 ```  
@@ -857,7 +852,7 @@ AFX_IMPORT_DATA static BOOL m_bWrapText;
   
  このデータ メンバーの既定値は`FALSE`します。  
   
-##  <a name="m_nid"></a>CMFCToolBarButton::m_nID  
+##  <a name="m_nid"></a>  CMFCToolBarButton::m_nID  
  ボタンのコマンド ID。  
   
 ```  
@@ -867,7 +862,7 @@ UINT m_nID;
 ### <a name="remarks"></a>コメント  
  -1 のコマンド ID、ボタンが、区切り記号であることを示します。 すべてのボタンの区切り記号が、`TBBS_SEPARATOR`スタイル。 参照してください[CMFCToolBarButton::m_nStyle](#m_nstyle)ボタンのスタイルの詳細についてはします。  
   
-##  <a name="m_nstyle"></a>CMFCToolBarButton::m_nStyle  
+##  <a name="m_nstyle"></a>  CMFCToolBarButton::m_nStyle  
  ボタンのスタイルです。  
   
 ```  
@@ -877,7 +872,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>コメント  
  参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)利用できるツール バー ボタンのスタイルの一覧についてはします。  
   
-##  <a name="m_strtext"></a>CMFCToolBarButton::m_strText  
+##  <a name="m_strtext"></a>  CMFCToolBarButton::m_strText  
  ボタンのテキスト ラベル。  
   
 ```  
@@ -887,7 +882,7 @@ CString m_strText;
 ### <a name="remarks"></a>コメント  
  このデータ メンバーには、ボタンのテキスト ラベルが含まれています。 テキスト ラベルを空にすることができます。  
   
-##  <a name="notifycommand"></a>CMFCToolBarButton::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCToolBarButton::NotifyCommand  
  ボタンを処理するかどうかを指定します、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージ。  
   
 ```  
@@ -906,7 +901,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
   
  既定では、このメソッドが戻る`FALSE`です。 返すには、このメソッドをオーバーライド`TRUE`を処理する場合、`WM_COMMAND`メッセージまたは`FALSE`親ツールバーがメッセージを処理することを示すためにします。  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarButton::OnAddToCustomizePage  
  ボタンが追加されたときに、フレームワークによって呼び出されます、**カスタマイズ** ダイアログ ボックス。  
   
 ```  
@@ -916,7 +911,7 @@ virtual void OnAddToCustomizePage();
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。 このメソッドをオーバーライドして、ボタンを追加するときに何らかのアクションを実行する場合、**カスタマイズ** ダイアログ ボックス。  
   
-##  <a name="onbeforedrag"></a>CMFCToolBarButton::OnBeforeDrag  
+##  <a name="onbeforedrag"></a>  CMFCToolBarButton::OnBeforeDrag  
  ボタンをドラッグすることがあるかどうかを指定します。  
   
 ```  
@@ -924,14 +919,14 @@ virtual BOOL OnBeforeDrag() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ボタンをドラッグできます。 場合、それ以外の場合`FALSE`です。  
+ `TRUE` ボタンをドラッグできます。 場合、それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  フレームワークは、ユーザーがボタンのドラッグを開始する前に、このメソッドを呼び出します。  
   
  このメソッドの既定の実装を返します`TRUE`です。 返すには、このメソッドをオーバーライド`FALSE`ボタンのドラッグを無効にします。  
   
-##  <a name="onbeforedrop"></a>CMFCToolBarButton::OnBeforeDrop  
+##  <a name="onbeforedrop"></a>  CMFCToolBarButton::OnBeforeDrop  
  ユーザーがターゲットのツールバーにボタンを削除できるかどうかを指定します。  
   
 ```  
@@ -943,14 +938,14 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
  ドラッグ アンド ドロップ操作の対象。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合は、ボタンは、指定されたターゲットのツールバー上にドロップできます。それ以外の場合`FALSE`です。  
+ `TRUE` 場合は、ボタンは、指定されたターゲットのツールバー上にドロップできます。それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  フレームワークは、ボタンをツールバー上にドロップする前に、このメソッドを呼び出します。  
   
  このメソッドの既定の実装を返します`TRUE`です。 返すには、このメソッドをオーバーライド`FALSE`を指定したターゲットのドロップ操作を無効にします。  
   
-##  <a name="oncalculatesize"></a>CMFCToolBarButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCToolBarButton::OnCalculateSize  
  指定したデバイス コンテキストとドッキングの状態のボタンのサイズを計算するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -980,7 +975,7 @@ virtual SIZE OnCalculateSize(
   
  非標準のボタン (エディット ボックス ボタンなど) のサイズを指定する場合は、このメソッドをオーバーライドします。  
   
-##  <a name="oncancelmode"></a>CMFCToolBarButton::OnCancelMode  
+##  <a name="oncancelmode"></a>  CMFCToolBarButton::OnCancelMode  
  処理するためにフレームワークによって呼び出される、 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)メッセージ。  
   
 ```  
@@ -990,7 +985,7 @@ virtual void OnCancelMode();
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。 このメソッドをオーバーライドして、処理する場合、 [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)メッセージ。  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarButton::OnChangeParentWnd  
  新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1006,7 +1001,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
   
  このメソッドの既定の実装では、何も行われません。  
   
-##  <a name="onclick"></a>CMFCToolBarButton::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarButton::OnClick  
  ユーザーがマウス ボタンをクリックしたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1020,7 +1015,7 @@ virtual BOOL OnClick(
  ツール バー ボタンの親ウィンドウです。  
   
  [入力] `bDelay`  
- `TRUE`場合は、メッセージは、遅延で処理する必要があります。  
+ `TRUE` 場合は、メッセージは、遅延で処理する必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは `FALSE` を返します。  
@@ -1030,7 +1025,7 @@ virtual BOOL OnClick(
   
  既定の実装は何もしませんし、返します`FALSE`です。 ボタンをクリックしてメッセージを処理する場合は、0 以外の値を返すには、このメソッドをオーバーライドします。  
   
-##  <a name="onclickup"></a>CMFCToolBarButton::OnClickUp  
+##  <a name="onclickup"></a>  CMFCToolBarButton::OnClickUp  
  ユーザーがマウス ボタンを離したときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1045,7 +1040,7 @@ virtual BOOL OnClickUp();
   
  既定の実装は何もしませんし、返します`FALSE`です。 ボタンをクリックしてメッセージを処理する場合は、0 以外の値を返すには、このメソッドをオーバーライドします。  
   
-##  <a name="oncontexthelp"></a>CMFCToolBarButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CMFCToolBarButton::OnContextHelp  
  親ツールバーを処理するときに、フレームワークによって呼び出されます、`WM_HELPHITTEST`メッセージ。  
   
 ```  
@@ -1064,7 +1059,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
  詳細については、`WM_HELPHITTEST`メッセージを参照してください[TN028: 状況依存ヘルプ サポート](../../mfc/tn028-context-sensitive-help-support.md)です。  
   
-##  <a name="onctlcolor"></a>CMFCToolBarButton::OnCtlColor  
+##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor  
  親ツールバーを処理するときに、フレームワークによって呼び出されます、`WM_CTLCOLOR`メッセージ。  
   
 ```  
@@ -1090,7 +1085,7 @@ virtual HBRUSH OnCtlColor(
   
  既定の実装は何もしませんし、返します`NULL`です。  
   
-##  <a name="oncustomizemenu"></a>CMFCToolBarButton::OnCustomizeMenu  
+##  <a name="oncustomizemenu"></a>  CMFCToolBarButton::OnCustomizeMenu  
  アプリケーションは、親ツールバーのショートカット メニューを表示するときに指定されたメニューを変更する ボタンを使用できます。  
   
 ```  
@@ -1107,7 +1102,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ### <a name="remarks"></a>コメント  
  既定の実装は何もしませんし、返します`FALSE`です。 このメソッドをオーバーライドし、指定されたメニューの内容を変更する場合は、0 以外の値を返します。  
   
-##  <a name="ondblclk"></a>CMFCToolBarButton::OnDblClk  
+##  <a name="ondblclk"></a>  CMFCToolBarButton::OnDblClk  
  親ツールバーを処理するときに、フレームワークによって呼び出されます、[した](http://msdn.microsoft.com/library/windows/desktop/ms645606)メッセージ。  
   
 ```  
@@ -1123,7 +1118,7 @@ virtual void OnDblClk(CWnd* pWnd);
   
  このメソッドの既定の実装では、何も行われません。  
   
-##  <a name="ondraw"></a>CMFCToolBarButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCToolBarButton::OnDraw  
  指定したスタイルとオプションを使用して、ボタンを描画するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1166,7 +1161,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>コメント  
  ツールバーのボタンの描画をカスタマイズするには、このメソッドをオーバーライドします。  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCToolBarButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarButton::OnDrawOnCustomizeList  
  ボタンを描画するためにフレームワークによって呼び出される、**コマンド**のペイン、**カスタマイズ** ダイアログ ボックス。  
   
 ```  
@@ -1196,7 +1191,7 @@ virtual int OnDrawOnCustomizeList(
   
  カスタム描画を実行するには、このメソッドをオーバーライドします。  
   
-##  <a name="ongetcustomtooltiptext"></a>CMFCToolBarButton::OnGetCustomToolTipText  
+##  <a name="ongetcustomtooltiptext"></a>  CMFCToolBarButton::OnGetCustomToolTipText  
  ボタンのカスタム ツールヒント テキストを取得するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -1215,7 +1210,7 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
   
  既定の実装は何もしませんし、返します`FALSE`です。 このメソッドをオーバーライドし、ツール バー ボタンにカスタム ツールヒント テキストを提供する 0 以外の値を返します。  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarButton::OnGlobalFontsChanged  
  グローバルのフォントが変更されたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1225,7 +1220,7 @@ virtual void OnGlobalFontsChanged();
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。 ボタンのテキスト表示に使用されるフォントを更新するには、このメソッドをオーバーライドします。  
   
-##  <a name="onmove"></a>CMFCToolBarButton::OnMove  
+##  <a name="onmove"></a>  CMFCToolBarButton::OnMove  
  親ツールバーに移動すると、フレームワークによって呼び出されます。  
   
 ```  
@@ -1235,7 +1230,7 @@ virtual void OnMove();
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。 親ツールバーに移動すると、ボタンの位置を変更するには、このメソッドをオーバーライドします。  
   
-##  <a name="onshow"></a>CMFCToolBarButton::OnShow  
+##  <a name="onshow"></a>  CMFCToolBarButton::OnShow  
  フレームワークによって呼び出されます、ボタンが表示または非表示します。  
   
 ```  
@@ -1249,7 +1244,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。 ボタンの表示を更新するには、このメソッドをオーバーライドします。  
   
-##  <a name="onsize"></a>CMFCToolBarButton::OnSize  
+##  <a name="onsize"></a>  CMFCToolBarButton::OnSize  
  親ツールバーのサイズまたは位置が変更されに伴ってボタンのサイズを変更するときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1263,7 +1258,7 @@ virtual void OnSize(int iSize);
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。 親ツールバーの位置、サイズが変更されたときに、ボタンのサイズを変更するには、このメソッドをオーバーライドします。  
   
-##  <a name="ontoolhittest"></a>CMFCToolBarButton::OnToolHitTest  
+##  <a name="ontoolhittest"></a>  CMFCToolBarButton::OnToolHitTest  
  親ツールバーがポイントのボタンの外接する四角形がかどうかを決定する必要があるときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1291,7 +1286,7 @@ virtual BOOL OnToolHitTest(
   
 - [COleIPFrameWndEx::OnMenuButtonToolHitTest](../../mfc/reference/coleipframewndex-class.md#onmenubuttontoolhittest)  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarButton::OnUpdateToolTip  
  親ツールバーは、そのツールヒント テキストを更新するときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1321,7 +1316,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では nothing を返します`FALSE`です。 ツールヒントのテキスト文字列を指定する場合は、0 以外の値を返すには、このメソッドをオーバーライドします。  
   
-##  <a name="preparedrag"></a>CMFCToolBarButton::PrepareDrag  
+##  <a name="preparedrag"></a>  CMFCToolBarButton::PrepareDrag  
  ボタンがドラッグ アンド ドロップ操作を実行するときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1333,7 +1328,7 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
  A`COleDataSource`ドラッグ アンド ドロップ操作に関する状態情報を格納するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`操作が成功した場合それ以外の場合`FALSE`です。  
+ `TRUE` 操作が成功した場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  フレームワークを指定した状態を格納する、ツール バー ボタンを準備するには、このメソッドを呼び出します`COleDataSource`オブジェクト。 このメソッドは、共有ファイルにシリアル化自体とし、そのファイルを渡すことによって、状態を格納、 [COleDataSource::CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata)メソッドです。 ツール バー ボタンのシリアル化の詳細については、次を参照してください。 [CMFCToolBarButton::Serialize](#serialize)です。  
@@ -1342,7 +1337,7 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
   
  OLE のドラッグ アンド ドロップ操作の詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)です。  
   
-##  <a name="rect"></a>CMFCToolBarButton::Rect  
+##  <a name="rect"></a>  CMFCToolBarButton::Rect  
  ボタンの外接する四角形を取得します。  
   
 ```  
@@ -1352,7 +1347,7 @@ const CRect& Rect() const;
 ### <a name="return-value"></a>戻り値  
  A`CRect`ボタンの外接する四角形を格納しているオブジェクト。  
   
-##  <a name="resetimagetodefault"></a>CMFCToolBarButton::ResetImageToDefault  
+##  <a name="resetimagetodefault"></a>  CMFCToolBarButton::ResetImageToDefault  
  ボタンに関連付けられているイメージを既定値を設定します。  
   
 ```  
@@ -1364,7 +1359,7 @@ virtual void ResetImageToDefault();
   
  ボタンにユーザー定義のイメージがある場合は、何も行われません。  
   
-##  <a name="savebarstate"></a>CMFCToolBarButton::SaveBarState  
+##  <a name="savebarstate"></a>  CMFCToolBarButton::SaveBarState  
  ツール バー ボタンの状態を保存します。  
   
 ```  
@@ -1376,7 +1371,7 @@ virtual void SaveBarState();
   
  このメソッドの既定の実装では、何も行われません。 ツール バー ボタンの状態を外部データ ソースに保存するには、このメソッドをオーバーライドします。  
   
-##  <a name="serialize"></a>CMFCToolBarButton::Serialize  
+##  <a name="serialize"></a>  CMFCToolBarButton::Serialize  
  アーカイブからこのオブジェクトを読み取りまたはアーカイブを書き込みます。  
   
 ```  
@@ -1392,7 +1387,7 @@ virtual void Serialize(CArchive& ar);
   
  シリアル化の例については、次を参照してください。[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)です。  
   
-##  <a name="setaccdata"></a>CMFCToolBarButton::SetACCData  
+##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData  
  指定された設定`CAccessibilityData`ツール バー ボタンのアクセシビリティ データを持つオブジェクト。  
   
 ```  
@@ -1414,7 +1409,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>コメント  
  返すには、このメソッドをオーバーライド`FALSE`ツール バー ボタンがユーザー補助データを提供していない場合。  
   
-##  <a name="setclipboardformatname"></a>CMFCToolBarButton::SetClipboardFormatName  
+##  <a name="setclipboardformatname"></a>  CMFCToolBarButton::SetClipboardFormatName  
  グローバルのクリップボード形式の名前を変更します。  
   
 ```  
@@ -1430,7 +1425,7 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
   
  フレームワークの呼び出し前にこのメソッドを呼び出す必要があります[CMFCToolBarButton::GetClipboardFormat](#getclipboardformat)です。  
   
-##  <a name="setimage"></a>CMFCToolBarButton::SetImage  
+##  <a name="setimage"></a>  CMFCToolBarButton::SetImage  
  ボタンのイメージのインデックスを設定します。  
   
 ```  
@@ -1446,7 +1441,7 @@ virtual void SetImage(int iImage);
   
  場合`iImage`が小さい以上では、このメソッドはイメージの描画を無効にし、ボタンのテキスト ラベルの描画を有効します。  
   
-##  <a name="setprotectedcommands"></a>CMFCToolBarButton::SetProtectedCommands  
+##  <a name="setprotectedcommands"></a>  CMFCToolBarButton::SetProtectedCommands  
  ユーザーがカスタマイズできないコマンドの一覧を設定します。  
   
 ```  
@@ -1462,7 +1457,7 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
   
  使用して、 [CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands)メソッドの一覧を取得するには、コマンドが保護されています。  
   
-##  <a name="setradio"></a>CMFCToolBarButton::SetRadio  
+##  <a name="setradio"></a>  CMFCToolBarButton::SetRadio  
  ボタンがチェック状態が変更されたときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1472,7 +1467,7 @@ virtual void SetRadio();
 ### <a name="remarks"></a>コメント  
  このメソッドの既定の実装では、何も行われません。 ボタンがチェック状態が変更されたときに、カスタム アクションを実行するには、このメソッドをオーバーライドします。  
   
-##  <a name="setrect"></a>CMFCToolBarButton::SetRect  
+##  <a name="setrect"></a>  CMFCToolBarButton::SetRect  
  ボタンの外接する四角形を設定します。  
   
 ```  
@@ -1486,7 +1481,7 @@ void SetRect(const CRect rect);
 ### <a name="remarks"></a>コメント  
  このメソッドは、 [CMFCToolBarButton::OnMove](#onmove)新しい外接する四角形を設定した後のメソッドです。  
   
-##  <a name="setstyle"></a>CMFCToolBarButton::SetStyle  
+##  <a name="setstyle"></a>  CMFCToolBarButton::SetStyle  
  ボタンのスタイルを設定します。  
   
 ```  
@@ -1500,7 +1495,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>コメント  
  既定の実装設定、 [CMFCToolBarButton::m_nStyle](#m_nstyle)データ メンバーを`nStyle`です。 スタイルの変更を処理する追加処理を実行する場合は、このメソッドをオーバーライドします。 参照してください[ツール バー コントロールのスタイル](toolbar-control-styles.md)有効なスタイル フラグの一覧についてはします。  
   
-##  <a name="setvisible"></a>CMFCToolBarButton::SetVisible  
+##  <a name="setvisible"></a>  CMFCToolBarButton::SetVisible  
  ボタンが表示されているかどうかを指定します。  
   
 ```  
@@ -1514,7 +1509,7 @@ void SetVisible(BOOL bShow=TRUE);
 ### <a name="remarks"></a>コメント  
  この関数を使用して、特定のツール バー ボタンを表示または非表示にします。 呼び出す、 [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)後、このメソッドを呼び出すメソッド。  
   
-##  <a name="show"></a>CMFCToolBarButton::Show  
+##  <a name="show"></a>  CMFCToolBarButton::Show  
  ボタンの表示と非表示を切り替えます。  
   
 ```  
@@ -1532,7 +1527,7 @@ void Show(BOOL bShow);
   
  このメソッドは、 [CMFCToolBarButton::OnShow](#onshow)メソッド ボタンの可視性の状態の更新後にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)   

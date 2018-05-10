@@ -1,12 +1,9 @@
 ---
-title: "リンカ ツール エラー LNK2005 |Microsoft ドキュメント"
-ms.custom: 
+title: リンカ ツール エラー LNK2005 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2005
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f853bec220c7d46ed2a0c44ac1e1d45fbca8318f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2005"></a>リンカ ツール エラー LNK2005
 *シンボル*オブジェクトで既に定義されています。  
@@ -115,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
 -   場合に、このエラーが発生することができます、`extern const`変数が 2 回、定義されているし、それぞれの定義で別の値を持ちます。 この問題を修正するには、一度だけ定数を定義または名前空間を使用または`enum class`定数を区別するために定義します。  
   
--   Uuid.lib を Guid (oledb.lib や adsiid.lib など) を定義するその他の .lib ファイルと組み合わせて使用する場合、このエラーが発生することができます。 例:  
+-   Uuid.lib を Guid (oledb.lib や adsiid.lib など) を定義するその他の .lib ファイルと組み合わせて使用する場合、このエラーが発生することができます。 例えば:  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  

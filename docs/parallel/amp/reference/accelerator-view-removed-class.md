@@ -1,12 +1,9 @@
 ---
-title: "accelerator_view_removed クラス |Microsoft ドキュメント"
-ms.custom: 
+title: accelerator_view_removed クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view_removed
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1bc6784dd4f5ce9ee6b887b16a27f3a0126a9f5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed クラス
 基になる DirectX の呼び出しが Windows のタイムアウトの検出と回復機構が原因で失敗した場合にスローされる例外。  
@@ -60,7 +55,7 @@ class accelerator_view_removed : public runtime_exception;
   
  `out_of_memory`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amprt.h  
   
  **名前空間:** Concurrency  
@@ -101,5 +96,5 @@ HRESULT get_view_removed_reason() const throw();
 ```  
   
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

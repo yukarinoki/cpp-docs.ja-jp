@@ -2,11 +2,8 @@
 title: レジストリ データ交換マクロ |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlplus/ATL::BEGIN_RDX_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bc12c48ef628a42c309c44ce0fc37abda9b6690
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62a26e8d602010ce637114464a844d2f95e635c9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-data-exchange-macros"></a>レジストリ データ交換マクロ
 これらのマクロは、レジストリ データの交換操作を実行します。  
@@ -44,10 +39,10 @@ ms.lasthandoff: 12/21/2017
 |[RDX_DWORD](#rdx_dword)|指定したレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。|  
 |[RDX_TEXT](#rdx_text)|TCHAR 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlplus.h  
    
-##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
  レジストリ データ エクス チェンジ マップの開始位置をマークします。  
   
 ```
@@ -66,14 +61,14 @@ BEGIN_RDX_MAP
   
  グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`コードがシステム レジストリの間でデータを交換する必要があるたびに、マクロを使用する必要があります、RDX マップで指定された変数です。  
   
-##  <a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>  END_RDX_MAP  
  レジストリ データ エクス チェンジ マップの最後をマークします。  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>  RDX_BINARY  
  BYTE 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。  
   
 ```
@@ -104,7 +99,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>コメント  
  組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
   
-##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
  指定したレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。  
   
 ```
@@ -135,7 +130,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>コメント  
  組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
   
-##  <a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>  RDX_DWORD  
  指定したレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。  
   
 ```
@@ -166,7 +161,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>コメント  
  組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
   
-##  <a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>  RDX_TEXT  
  TCHAR 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。  
   
 ```
@@ -197,7 +192,7 @@ RDX_TEXT(
 ### <a name="remarks"></a>コメント  
  組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロ](../../atl/reference/atl-macros.md)   
  [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

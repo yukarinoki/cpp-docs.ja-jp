@@ -1,11 +1,8 @@
 ---
-title: "Platform::outofmemoryexception クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::outofmemoryexception クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::OutOfMemoryException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::OutOfMemoryException
 ms.assetid: 49c19f6b-f66c-4448-b861-91dcbf32de2c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 609220fb92d936fcb400cabc0cca21b497e202f5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f80424026d903127bfd4eb9e29faa0a4001ce938
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformoutofmemoryexception-class"></a>Platform::OutOfMemoryException クラス
 メモリが不足して操作を完了できないときにスローされます。  
@@ -39,7 +34,7 @@ public ref class OutOfMemoryException : COMException,    IException,    IPrintab
 ### <a name="remarks"></a>コメント  
  詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -48,5 +43,5 @@ public ref class OutOfMemoryException : COMException,    IException,    IPrintab
   
  **メタデータ:** platform.winmd  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform::COMException クラス](../cppcx/platform-comexception-class.md)

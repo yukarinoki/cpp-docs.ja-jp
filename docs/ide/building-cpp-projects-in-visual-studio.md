@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio での C++ プロジェクトのビルド |Microsoft ドキュメント"
-ms.custom: 
+title: Visual Studio での C++ プロジェクトのビルド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 074b43619d307d4d6ffeec1a057c9c27a4f9d05f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Visual Studio での C++ プロジェクトのビルド
 Visual Studio 統合開発環境 (IDE) では、ソリューション全体または 1 つのプロジェクトのみをビルドする複数の方法があります。 また、ビルド設定を変更し、カスタム ビルド ステップを指定して、開発プロセスを効率的にすることもできます。  
   
  Visual Studio で開いて、選択された状態では、ソリューションを構築する**ソリューション エクスプ ローラー**、することができます。  
   
--   メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+-   メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
 -   または、**ソリューション エクスプ ローラー**ソリューションのショートカット メニューを開きを選択し、**ソリューションのビルド**です。  
   
@@ -44,7 +39,7 @@ Visual Studio 統合開発環境 (IDE) では、ソリューション全体ま�
   
  選択されているプロジェクトをビルドする**ソリューション エクスプ ローラー**、することができます。  
   
--   メニュー バーで、次のように選択します。**ビルド**、**ビルド\<プロジェクト名 >**です。  
+-   メニュー バーで、次のように選択します。**ビルド**、**ビルド\<プロジェクト名 >** です。  
   
 -   または、**ソリューション エクスプ ローラー**プロジェクトのショートカット メニューを開きを選択し、**ビルド**です。  
   
@@ -90,5 +85,5 @@ Visual Studio 統合開発環境 (IDE) では、ソリューション全体ま�
 [Visual C++ 移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)  
   Visual Studio 以外のツールを使用して作成されたアプリケーションを移行する方法と、Visual Studio の以前のバージョンで作成された C++ アプリケーションをアップグレードする方法の詳細についてはします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユニバーサル Windows アプリ (C++)](../windows/universal-windows-apps-cpp.md)

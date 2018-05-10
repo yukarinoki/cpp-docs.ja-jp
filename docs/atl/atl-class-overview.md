@@ -1,13 +1,10 @@
 ---
-title: "ATL クラスの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: ATL クラスの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - vc.atl.classes
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef95bb108f6d38f6196b324360b60635b1a9b64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-class-overview"></a>ATL クラスの概要
 クラス アクティブ テンプレート ライブラリ (ATL) では、次のように分類できます。  
@@ -53,12 +48,12 @@ ms.lasthandoff: 12/21/2017
   
  ATL プロジェクトで使用できる他のクラスでは、次を参照してください。[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../atl/reference/atl-classes.md)   
  [ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)   
  [関数](../atl/reference/atl-functions.md)   
  [グローバル変数](../atl/reference/atl-global-variables.md)   
  [マクロ](../atl/reference/atl-macros.md)   
  [構造体](../atl/reference/atl-structures.md)   
- [Typedef](../atl/reference/atl-typedefs.md)
+ [Typedefs](../atl/reference/atl-typedefs.md)
 

@@ -2,11 +2,8 @@
 title: lock::try_acquire |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - try_acquire
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 指定された時間まで待機し、返すオブジェクトのロックを取得、`bool`例外をスローする代わりに取得の成功を報告します。  
@@ -51,7 +46,7 @@ bool try_acquire(
  タイムアウト値 (ミリ秒単位) として、<xref:System.TimeSpan>です。  
   
 ## <a name="return-value"></a>戻り値  
- `true`ロックが取得された場合`false`それ以外の場合。  
+ `true` ロックが取得された場合`false`それ以外の場合。  
   
 ## <a name="remarks"></a>コメント  
  場合は、ロックは既に取得されて、この関数は何も行いません。  
@@ -145,11 +140,11 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [lock のメンバー](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

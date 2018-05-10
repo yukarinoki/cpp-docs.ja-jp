@@ -1,13 +1,10 @@
 ---
-title: "Dll の種類 |Microsoft ドキュメント"
-ms.custom: 
+title: Dll の種類 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>DLL の種類
 ここで説明する情報は、ビルドする DLL の種類を決定するときの参考になります。  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>使用できる Dll の種類  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 使用できる Dll の種類  
  Visual C++ を使うと、C または C++ で MFC ライブラリを使わない Win32 DLL をビルドできます。 Win32 アプリケーション ウィザードでは、非 MFC DLL プロジェクトを作成できます。  
   
  MFC DLL ウィザードでは、スタティック リンク ライブラリでも、多くの DLL でも、MFC ライブラリ自体を利用できます。 MFC を利用する DLL は、Visual C++ では次の 3 とおりの方法で開発できます。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [使用する DLL の種類](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>使用する DLL の決定  
+##  <a name="_core_which_kind_of_dll_to_use"></a> 使用する DLL の決定  
  DLL で MFC を使用しない場合、Visual C++ を使って非 MFC Win32 DLL をビルドします。 リンクの形態が静的か動的かにかかわらず、MFC とリンクする DLL は、ディスク領域とメモリをかなり使用します。 実際に MFC を使わない DLL は、MFC とリンクしないでください。  
   
  DLL が MFC を使用する MFC または非 MFC アプリケーションで使用される場合は、MFC と動的にリンクされるレギュラー MFC DLL または MFC と静的にリンクされるレギュラー MFC DLL のいずれかをビルドする必要があります。 ほとんどの場合、おそらく使用する DLL のファイル サイズが大幅に小さくして、MFC の共有バージョンを使用するとメモリの削減量はかなり大きくなるために、MFC と動的にリンクされるレギュラー MFC DLL です。 MFC と静的にリンクする場合は、MFC ライブラリ コードの専用コピーを読み込むために、DLL のファイル サイズは大きくなり、余分なメモリを使用する可能性があります。  
@@ -78,5 +73,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [MFC 拡張 DLL: 概要](../build/extension-dlls-overview.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C++ の DLL](../build/dlls-in-visual-cpp.md)

@@ -1,12 +1,9 @@
 ---
-title: "CFtpFileFind クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CFtpFileFind クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpFileFind
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4fe3b188d5b03c9e727349b9e30982cf52006c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind クラス
 FTP サーバーのインターネット ファイル検索を支援します。  
@@ -61,7 +56,7 @@ class CFtpFileFind : public CFileFind
 |[CFtpFileFind::GetFileURL](#getfileurl)|見つかったファイルのパスを含む URL を取得します。|  
   
 ## <a name="remarks"></a>コメント  
- `CFtpFileFind`検索を開始し、ファイルを検索し、URL またはファイルに関するその他のわかりやすい情報を返すメンバー関数が含まれます。  
+ `CFtpFileFind` 検索を開始し、ファイルを検索し、URL またはファイルに関するその他のわかりやすい情報を返すメンバー関数が含まれます。  
   
  インターネットとローカル ファイルの検索を含めるために設計されて他の MFC クラス[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)と[CFileFind](../../mfc/reference/cfilefind-class.md)です。 と共に`CFtpFileFind`、これらのクラスは、クライアント プロトコルまたはファイルの種類 (ローカル コンピューターまたはリモート サーバー)、サーバーに関係なく、特定のファイルを検索するためのシームレスなメカニズムを提供します。 HTTP は検索に必要なファイルを直接操作をサポートしていないために、HTTP サーバーで検索するための MFC クラスがないことに注意してください。  
   
@@ -79,10 +74,10 @@ class CFtpFileFind : public CFileFind
   
  `CFtpFileFind`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
-##  <a name="cftpfilefind"></a>CFtpFileFind::CFtpFileFind  
+##  <a name="cftpfilefind"></a>  CFtpFileFind::CFtpFileFind  
  このメンバー関数は構築するために、`CFtpFileFind`オブジェクト。  
   
 ```  
@@ -104,7 +99,7 @@ explicit CFtpFileFind(
 ### <a name="example"></a>例  
   このトピックの「クラスの概要の例を参照してください。  
   
-##  <a name="findfile"></a>CFtpFileFind::FindFile  
+##  <a name="findfile"></a>  CFtpFileFind::FindFile  
  FTP ファイルを検索するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -118,7 +113,7 @@ virtual BOOL FindFile(
  検索するファイルの名前を含む文字列へのポインター。 場合**NULL**呼び出しは (*) ワイルドカード検索を実行します。  
   
  `dwFlags`  
- このセッションを処理する方法を示すフラグ。 これらのフラグは、ビットごとの OR 演算子 (&#124;) と組み合わせて使用でき、次に示します。  
+ このセッションを処理する方法を示すフラグ。 これらのフラグは、ビットごとの OR 演算子と組み合わせることができます (&#124;) し、次に示します。  
   
 -   INTERNET_FLAG_RELOAD がローカルにキャッシュされている場合でも、通信回線からデータを取得します。 これは、既定のフラグです。  
   
@@ -139,7 +134,7 @@ virtual BOOL FindFile(
 ### <a name="example"></a>例  
   このトピックで前の例を参照してください。  
   
-##  <a name="findnextfile"></a>CFtpFileFind::FindNextFile  
+##  <a name="findnextfile"></a>  CFtpFileFind::FindNextFile  
  呼び出しで開始されたファイルの検索を続行するには、このメンバー関数を呼び出す、 [FindFile](#findfile)メンバー関数。  
   
 ```  
@@ -152,12 +147,12 @@ virtual BOOL FindNextFile();
 ### <a name="remarks"></a>コメント  
  任意の属性の関数を呼び出す前に少なくとも 1 回この関数を呼び出す必要があります (を参照してください[呼び出しておく](../../mfc/reference/cfilefind-class.md#findnextfile))。  
   
- `FindNextFile`Win32 関数をラップ[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)です。  
+ `FindNextFile` Win32 関数をラップ[FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)です。  
   
 ### <a name="example"></a>例  
   このトピックの前半の例を参照してください。  
   
-##  <a name="getfileurl"></a>CFtpFileFind::GetFileURL  
+##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  
  指定されたファイルの URL を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -168,9 +163,9 @@ CString GetFileURL() const;
  ファイル名とパスの Universal Resource Locator (URL)。  
   
 ### <a name="remarks"></a>コメント  
- `GetFileURL`このメンバー関数に似ています[CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)形式で URL を返します点を除き、`ftp://moose/dir/file.txt`です。  
+ `GetFileURL` このメンバー関数に似ています[CFileFind::GetFilePath](../../mfc/reference/cfilefind-class.md#getfilepath)形式で URL を返します点を除き、`ftp://moose/dir/file.txt`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CFileFind クラス](../../mfc/reference/cfilefind-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)   

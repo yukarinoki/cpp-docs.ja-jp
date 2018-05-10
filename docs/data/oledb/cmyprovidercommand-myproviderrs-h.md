@@ -1,12 +1,9 @@
 ---
-title: "CMyProviderCommand (MyProviderRS.H) |Microsoft ドキュメント"
-ms.custom: 
+title: CMyProviderCommand (MyProviderRS.H) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidercommand
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe0852b619dc89df4ab9a04f2e7dcbac5d308fce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8c18742d9b3b1039033ad8d42939e0f5a4578fbb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand`クラスは、プロバイダー コマンド オブジェクトの実装です。 実装を提供、 `IAccessor`、 `ICommandText`、および**ICommandProperties**インターフェイスです。 `IAccessor`インターフェイスは、行セット内の 1 つと同じです。 コマンド オブジェクトでは、アクセサーを使用して、バインド パラメーターを指定します。 行セット オブジェクトでは、出力列のバインドを指定するのに、それらを使用します。 `ICommandText`インターフェイスは、テキスト コマンドを指定する便利な方法です。 この例では、`ICommandText`インターフェイスの後でカスタム コードを追加する場合以外もオーバーライドの場合は、`ICommand::Execute`メソッドです。 **ICommandProperties**インターフェイスは、すべてのコマンドや行セット オブジェクトのプロパティを処理します。  
@@ -52,5 +47,5 @@ class ATL_NO_VTABLE CMyProviderCommand :
   
  プロバイダーと呼ばれるインターフェイスも含まれています。`IObjectWithSite`です。 `IObjectWithSite`インターフェイスは、ATL 2.0 が実装されていたでき、その子にそれ自体に関する情報を渡すインプリメンタです。 コマンド オブジェクトを使用して、`IObjectWithSite`いずれかを通知する情報が行セット オブジェクトが作成したかの概要を生成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)

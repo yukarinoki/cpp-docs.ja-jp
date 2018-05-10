@@ -1,12 +1,9 @@
 ---
-title: "Cxmlaccessor::getxmlcolumndata |Microsoft ドキュメント"
-ms.custom: 
+title: Cxmlaccessor::getxmlcolumndata |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CXMLAccessor.GetXMLColumnData
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetXMLColumnData method
 ms.assetid: 719e8efe-8758-4af7-a855-0e44ea196546
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 52b968dac5efbc4ceb41499a55c6be12d51dd0da
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ad3921a25e01f3269fe50f37fbc227a60e12cb43
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cxmlaccessorgetxmlcolumndata"></a>CXMLAccessor::GetXMLColumnData
 列で、XML 形式の文字列データとして、テーブルの列の型情報を取得します。  
@@ -57,8 +52,8 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
   
  `</columninfo>`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CXMLAccessor クラス](../../data/oledb/cxmlaccessor-class.md)

@@ -1,31 +1,26 @@
 ---
-title: "ネイティブ型に入れ子になった値の型のバージョンの問題 (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: ネイティブ型に入れ子になった値の型のバージョンの問題 (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - __nogc type declarations
 - __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c4f2598594930f49c1217c937c9142b3f84a47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>ネイティブ型に入れ子になっている値型のバージョンの問題 (C++/CLI)
 署名 (厳密な名前) アセンブリ コンポーネントがクライアント アセンブリをビルドするために使用を検討してください。 コンポーネントには、ネイティブの共用体、クラス、または配列のメンバーの種類として、クライアントで使用される値の型が含まれています。 コンポーネントの将来のバージョンでは、サイズまたは値型のレイアウトを変更する場合、クライアントを再コンパイルする必要があります。  
@@ -88,5 +83,5 @@ S.i = 11
 ### <a name="comments"></a>コメント  
  ただし、する別のメンバーを追加する場合`struct S`nested_value_types.cpp で (たとえば、 `double d;`) クライアントを再コンパイルしなくても、コンポーネントを再コンパイルし、結果は、未処理の例外 (型の<xref:System.IO.FileLoadException?displayProperty=fullName>)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

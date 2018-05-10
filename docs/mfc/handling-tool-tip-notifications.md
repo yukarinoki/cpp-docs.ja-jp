@@ -1,13 +1,10 @@
 ---
-title: "ツール ヒントの通知の処理 |Microsoft ドキュメント"
-ms.custom: 
+title: ツール ヒントの通知の処理 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7668420b849dc08215a4fc309edf86e9171462
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-tool-tip-notifications"></a>ツール ヒントの通知の処理
 指定すると、`TBSTYLE_TOOLTIPS`スタイル、ツールバーを作成し、ツール ヒント コントロールを管理します。 ツール ヒントは、ツールバーのボタンを説明するテキストの行を含む小さなポップアップ ウィンドウです。 ツール ヒントが非表示、および表示されるだけと、ユーザー ツール バー ボタン上にカーソルを置きます 2 つ目の約半分ままにします。 ツール ヒントは、カーソルの近くに表示されます。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  ハンドラー関数の例とツール ヒントを有効にする方法の詳細については、次を参照してください。[ツール ヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

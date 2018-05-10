@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: プロジェクトの構築 (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: プロジェクトの構築 (C++) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d7a4bf7e4b3fd519911a2a127ec0ac2723b630
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-building-a-project-c"></a>チュートリアル: プロジェクトの構築 (C++)
 このチュートリアルでは、コードに意図的に Visual C++ 構文のエラーを挿入し、コンパイル エラーがどのように表示されるかを確認し、その修正方法について説明します。 プロジェクトをコンパイルすると、エラー メッセージによって問題の内容と発生した場所が示されます。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
      `return 0`  
   
-2.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+2.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
 3.  内のメッセージ、**エラー一覧**ウィンドウは、プロジェクトのビルドでエラーがあったことを示します。 たとえば、エラーの説明は次のようになります。  
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
      `return 0;`  
   
-5.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]**の順にクリックします。  
+5.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
      内のメッセージ、**出力**ウィンドウは、プロジェクトが正常にコンパイルされることを示します。  
   
@@ -66,8 +61,8 @@ ms.lasthandoff: 12/21/2017
     ```  
   
 ## <a name="next-steps"></a>次の手順  
- **前:** [チュートリアル: プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124;です。**次:**[チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
+ **前:** [チュートリアル: プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **次:**[チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   
  [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)

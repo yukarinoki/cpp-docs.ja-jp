@@ -1,12 +1,9 @@
 ---
-title: "コンパイラの警告 s C4200 C4399 Through |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラの警告 s C4200 C4399 Through |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>コンパイラの警告 s C4200 C4399 Through
 
@@ -125,7 +120,7 @@ ms.lasthandoff: 02/14/2018
 |[コンパイラの警告 (レベル 3) C4278](../../error-messages/compiler-warnings/compiler-warning-level-3-c4278.md)|'*識別子*': タイプ ライブラリの識別子'*ライブラリ*' は既にマクロです 'rename' 修飾子を使用する。|
 |コンパイラの警告 (レベル 3 および 4) C4279|'*識別子*': タイプ ライブラリの識別子'*ライブラリ*' キーワードです 'rename' 修飾子を使用する。|
 |[コンパイラの警告 (レベル 3) C4280](../../error-messages/compiler-warnings/compiler-warning-level-3-c4280.md)|型を使って自己再帰的な 'operator ->' が '*型*'|
-|[コンパイラの警告 (レベル 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|'operator ->' recursion occurred through type '*type1*'|
+|[コンパイラの警告 (レベル 3) C4281](../../error-messages/compiler-warnings/compiler-warning-level-3-c4281.md)|型を使って 'operator ->' の再帰が発生しました '*type1*'|
 |[コンパイラの警告 (レベル 3) C4282](../../error-messages/compiler-warnings/compiler-warning-level-3-c4282.md)|型を使って、'*type2*'|
 |[コンパイラの警告 (レベル 3) C4283](../../error-messages/compiler-warnings/compiler-warning-level-3-c4283.md)|型で '*typeN*'|
 |[コンパイラの警告 (レベル 2) C4285](../../error-messages/compiler-warnings/compiler-warning-level-2-c4285.md)|型を返す '*識別子*:: operator ->' は再帰的な挿入辞表記を使用して適用されている場合|
@@ -175,7 +170,7 @@ ms.lasthandoff: 02/14/2018
 |[コンパイラの警告 (レベル 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|クロスレファレンスしたタイプ ライブラリ '*library1*'をインポートする前に'*library2*'|
 |[コンパイラの警告 (レベル 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|クロスレファレンスしたタイプ ライブラリ '*library1*'in'*library2*' 自動的にインポートしています|
 |コンパイラの警告 (レベル 4) C4338|#pragma*ディレクティブ*: 標準セクション '*セクション*' を使用|
-|[コンパイラの警告 (レベル 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*型*': 認識できない型がで検出された' WinRT &#124;です。CLR' メタデータ - この型の使用は、ランタイム例外する可能性があります|
+|[コンパイラの警告 (レベル 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*型*': 未定義の型がで検出されたを使用して' WinRT&#124;CLR' メタデータ - この型の使用は、ランタイム例外する可能性があります|
 |[コンパイラの警告 (レベル 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*値*': 値が正の値から負の値へラップしました|
 |[コンパイラの警告 (レベル 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|動作変更: '*関数*' 呼び出されると、メンバー演算子が以前のバージョンで呼び出されましたが、|
 |コンパイラの警告 (レベル 4) C4343|#pragma optimize("g",off) は /Og オプションをオーバーライドします|

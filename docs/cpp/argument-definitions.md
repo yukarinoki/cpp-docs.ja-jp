@@ -2,11 +2,8 @@
 title: 引数の定義 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30dd0c58cd4967065ee3e3c3c4df9538ea194a0
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ca012d7b391e011d9658b0b74e0f4433d5dc9fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argument-definitions"></a>引数定義
 次のプロトタイプで引数を指定します。  
@@ -44,16 +39,16 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  これに続いて `argv` で渡される引数の数を格納した整数。 `argc` パラメーターは、必ず 1 以上になります。  
   
  `argv`  
- プログラムのユーザーが入力したコマンド ライン引数を表す、null で終了する文字列配列。 慣例により、 `argv` **[0]** 、プログラムが呼び出されますコマンドは、 `argv` **[1]**までは、最初のコマンドライン引数と、 `argv` **[**`argc`**]**、常に**NULL**です。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)コマンドライン処理の抑制についてです。  
+ プログラムのユーザーが入力したコマンド ライン引数を表す、null で終了する文字列配列。 慣例により、 `argv` **[0]** 、プログラムが呼び出されますコマンドは、 `argv` **[1]** までは、最初のコマンドライン引数と、 `argv` **[**`argc`**]**、常に**NULL**です。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)コマンドライン処理の抑制についてです。  
   
- 最初のコマンドライン引数は、常に`argv` **[1]** 、最後の 1 つは`argv` **[** `argc` - 1**]**です。  
+ 最初のコマンドライン引数は、常に`argv` **[1]** 、最後の 1 つは`argv` **[** `argc` - 1 **]** です。  
   
 > [!NOTE]
->  慣例では、`argv`**[0]** は、プログラムが起動されるコマンドです。  ただし、可能であればを使用して、プロセスの起動に[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)かつ両方の最初と 2 番目の引数を使用する場合 (`lpApplicationName`と`lpCommandLine`)、 `argv` **[0]**できない可能性があります、実行可能ファイル名です。使用して[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)実行可能ファイルの名前とその完全修飾パスを取得します。  
+>  慣例では、`argv`**[0]** は、プログラムが起動されるコマンドです。  ただし、可能であればを使用して、プロセスの起動に[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)かつ両方の最初と 2 番目の引数を使用する場合 (`lpApplicationName`と`lpCommandLine`)、 `argv` **[0]** できない可能性があります、実行可能ファイル名です。使用して[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)実行可能ファイルの名前とその完全修飾パスを取得します。  
   
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
  `envp`  
- 多くの Unix システムに共通の拡張機能である `envp` 配列は、Microsoft C++ で使用されます。 これは、ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は終了、 **NULL**エントリです。 ポインターの配列として宣言されている**char (char** \*envp**)**またはへのポインターへのポインターとして**char (char** \* \*envp**)**です。 プログラムで使用する場合**wmain**の代わりに**メイン**を使用して、`wchar_t`データ型の代わりに`char`です。 渡される環境ブロック**メイン**と**wmain** "凍結された"現在の環境のコピーです。 呼び出しによって環境を後で変更する場合**putenv**または`_wputenv`、現在の環境 (によって返される`getenv` / `_wgetenv`と`_environ` /  `_wenviron`変数) は変わりますが、envp がポイントするブロックは変更されません。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)環境処理の抑制についてです。 この引数は、C では ANSI 互換ですが、C++ では非互換です。  
+ 多くの Unix システムに共通の拡張機能である `envp` 配列は、Microsoft C++ で使用されます。 これは、ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は終了、 **NULL**エントリです。 ポインターの配列として宣言されている**char (char** \*envp **)** またはへのポインターへのポインターとして**char (char** \* \*envp **)** です。 プログラムで使用する場合**wmain**の代わりに**メイン**を使用して、`wchar_t`データ型の代わりに`char`です。 渡される環境ブロック**メイン**と**wmain** "凍結された"現在の環境のコピーです。 呼び出しによって環境を後で変更する場合**putenv**または`_wputenv`、現在の環境 (によって返される`getenv` / `_wgetenv`と`_environ` /  `_wenviron`変数) は変わりますが、envp がポイントするブロックは変更されません。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)環境処理の抑制についてです。 この引数は、C では ANSI 互換ですが、C++ では非互換です。  
   
 **Microsoft 固有の仕様はここまで**  
   

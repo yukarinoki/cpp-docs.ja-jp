@@ -1,12 +1,9 @@
 ---
-title: BOOKMARK_ENTRY | Microsoft Docs
-ms.custom: 
+title: BOOKMARK_ENTRY |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BOOKMARK_ENTRY
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BOOKMARK_ENTRY macro
 ms.assetid: ec8222f5-9d90-46cb-989e-23f24465083f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f303714d94ab83df247674a5b7caa55c2861062d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ac128e20afc6e3b596a05357a9d961547aacb701
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bookmarkentry"></a>BOOKMARK_ENTRY
 ブックマーク列をバインドします。  
@@ -91,10 +86,10 @@ END_COLUMN_MAP()
 };
 ```
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロと OLE DB コンシューマー テンプレート用グローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [CBookmark クラス](../../data/oledb/cbookmark-class.md)   
  [DBPROP_BOOKMARKS](https://msdn.microsoft.com/en-us/library/ms709728.aspx)

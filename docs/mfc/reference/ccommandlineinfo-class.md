@@ -1,12 +1,9 @@
 ---
-title: "メンバー クラス |Microsoft ドキュメント"
-ms.custom: 
+title: メンバー クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5f24ccf18f39ef231f19aa5b837914104b57c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandlineinfo-class"></a>メンバー クラス
 アプリケーション起動時のコマンド ライン解析を補助します。  
@@ -97,11 +92,11 @@ class CCommandLineInfo : public CObject
 |*アプリ*ファイル名|ファイルを開く。|  
 |*アプリ*`/p`ファイル名|既定のプリンターにファイルを印刷します。|  
 |*アプリ* `/pt` filename プリンター ドライバーのポート|指定されたプリンターにファイルを印刷します。|  
-|*アプリ*`/dde`|起動し、DDE コマンドを待機します。|  
-|*アプリ*`/Automation`|OLE オートメーション サーバーとして起動します。|  
-|*アプリ*`/Embedding`|OLE 埋め込みアイテムを編集するのを起動します。|  
-|*アプリ*`/Register`<br /><br /> *アプリ*`/Regserver`|登録タスクを実行するアプリケーションに通知します。|  
-|*アプリ*`/Unregister`<br /><br /> *アプリ*`/Unregserver`|任意の登録を解除したタスクを実行するアプリケーションに通知します。|  
+|*アプリ* `/dde`|起動し、DDE コマンドを待機します。|  
+|*アプリ* `/Automation`|OLE オートメーション サーバーとして起動します。|  
+|*アプリ* `/Embedding`|OLE 埋め込みアイテムを編集するのを起動します。|  
+|*アプリ* `/Register`<br /><br /> *アプリ* `/Regserver`|登録タスクを実行するアプリケーションに通知します。|  
+|*アプリ* `/Unregister`<br /><br /> *アプリ* `/Unregserver`|任意の登録を解除したタスクを実行するアプリケーションに通知します。|  
   
  新しいクラスを派生`CCommandLineInfo`を他のフラグとパラメーターの値を処理します。 オーバーライド[ParseParam](#parseparam)を新しいフラグを処理します。  
   
@@ -110,10 +105,10 @@ class CCommandLineInfo : public CObject
   
  `CCommandLineInfo`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo  
  このコンス トラクターを作成、`CCommandLineInfo`既定値を持つオブジェクト。  
   
 ```  
@@ -128,7 +123,7 @@ CCommandLineInfo();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated  
  示します、`/Automation`コマンドラインにフラグが見つかりました。  
   
 ```  
@@ -138,7 +133,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>コメント  
  場合`TRUE`、つまり、OLE オートメーション サーバーとして起動します。  
   
-##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded  
  示します、`/Embedding`コマンドラインにフラグが見つかりました。  
   
 ```  
@@ -148,7 +143,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>コメント  
  場合`TRUE`、つまり OLE 埋め込みアイテムの編集開始します。  
   
-##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash  
  スプラッシュ画面を表示することを示します。  
   
 ```  
@@ -158,7 +153,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>コメント  
  場合`TRUE`、これは、意味、スプラッシュ スクリーンの起動中にこのアプリケーションを表示する必要があります。 既定の実装[ParseParam](#parseparam)このデータ メンバーを設定`TRUE`場合[m_nShellCommand](#m_nshellcommand)と等しい`CCommandLineInfo::FileNew`です。  
   
-##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand  
  アプリケーションのこのインスタンスのシェル コマンドを示します。  
   
 ```  
@@ -184,28 +179,28 @@ enum {
   
  これらの値の簡単な説明は、次の一覧を参照してください。  
   
-- `CCommandLineInfo::FileNew`ファイル名が見つからなかったというコマンドラインを示します。  
+- `CCommandLineInfo::FileNew` ファイル名が見つからなかったというコマンドラインを示します。  
   
-- `CCommandLineInfo::FileOpen`コマンドラインでファイル名が存在して、次のフラグのいずれも、コマンドラインで検出されたことを示す: `/p`、 `/pt`、`/dde`です。  
+- `CCommandLineInfo::FileOpen` コマンドラインでファイル名が存在して、次のフラグのいずれも、コマンドラインで検出されたことを示す: `/p`、 `/pt`、`/dde`です。  
   
-- `CCommandLineInfo::FilePrint`示します、`/p`コマンドラインにフラグが見つかりました。  
+- `CCommandLineInfo::FilePrint` 示します、`/p`コマンドラインにフラグが見つかりました。  
   
-- `CCommandLineInfo::FilePrintTo`示します、`/pt`コマンドラインにフラグが見つかりました。  
+- `CCommandLineInfo::FilePrintTo` 示します、`/pt`コマンドラインにフラグが見つかりました。  
   
-- `CCommandLineInfo::FileDDE`示します、`/dde`コマンドラインにフラグが見つかりました。  
+- `CCommandLineInfo::FileDDE` 示します、`/dde`コマンドラインにフラグが見つかりました。  
   
-- `CCommandLineInfo::AppRegister`示します、`/Register`または`/Regserver`フラグがコマンドラインで検出されたため、アプリケーションを登録するように要求されました。  
+- `CCommandLineInfo::AppRegister` 示します、`/Register`または`/Regserver`フラグがコマンドラインで検出されたため、アプリケーションを登録するように要求されました。  
   
-- `CCommandLineInfo::AppUnregister`示します、`/Unregister`または`/Unregserver`アプリケーションは、登録を解除するように要求されました。  
+- `CCommandLineInfo::AppUnregister` 示します、`/Unregister`または`/Unregserver`アプリケーションは、登録を解除するように要求されました。  
   
-- `CCommandLineInfo::RestartByRestartManager`再起動マネージャーによって、アプリケーションが再起動されたことを示します。  
+- `CCommandLineInfo::RestartByRestartManager` 再起動マネージャーによって、アプリケーションが再起動されたことを示します。  
   
-- `CCommandLineInfo::FileNothing`スタートアップ時に新しい MDI 子ウィンドウの表示をオフにします。 仕様では、アプリケーションのウィザードで生成された MDI アプリケーションは起動時に新しい子ウィンドウを表示します。 この機能を無効にするアプリケーションで使用できます`CCommandLineInfo::FileNothing`呼び出したときにシェル コマンドとして[ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)です。 `ProcessShellCommand`によって呼び出される、`InitInstance( )`すべて`CWinApp`クラスを派生します。  
+- `CCommandLineInfo::FileNothing` スタートアップ時に新しい MDI 子ウィンドウの表示をオフにします。 仕様では、アプリケーションのウィザードで生成された MDI アプリケーションは起動時に新しい子ウィンドウを表示します。 この機能を無効にするアプリケーションで使用できます`CCommandLineInfo::FileNothing`呼び出したときにシェル コマンドとして[ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)です。 `ProcessShellCommand` によって呼び出される、`InitInstance( )`すべて`CWinApp`クラスを派生します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName  
  コマンドラインで 3 番目のフラグではないパラメーターの値を格納します。  
   
 ```  
@@ -215,7 +210,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>コメント  
  このパラメーターは、通常、印刷シェル コマンドのプリンタ ドライバの名前です。 既定の実装[ParseParam](#parseparam)データ メンバー場合のみ、この設定は`/pt`コマンドラインにフラグが見つかりました。  
   
-##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName  
  コマンドラインで最初のフラグではないパラメーターの値を格納します。  
   
 ```  
@@ -225,7 +220,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>コメント  
  このパラメーターは、通常に開かれるファイルの名前です。  
   
-##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName  
  コマンドラインでは、4 番目のフラグではないパラメーターの値を格納します。  
   
 ```  
@@ -235,7 +230,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>コメント  
  このパラメーターは、通常、印刷シェル コマンドのプリンター ポートの名前です。 既定の実装[ParseParam](#parseparam)データ メンバー場合のみ、この設定は`/pt`コマンドラインにフラグが見つかりました。  
   
-##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName  
  コマンドラインで 2 つ目の非フラグ パラメーターの値を格納します。  
   
 ```  
@@ -245,7 +240,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>コメント  
  このパラメーターは、通常、印刷シェル コマンドのプリンターの名前です。 既定の実装[ParseParam](#parseparam)データ メンバー場合のみ、この設定は`/pt`コマンドラインにフラグが見つかりました。  
   
-##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier  
  一意の識別子は、コマンドラインでを再起動します。  
   
 ```  
@@ -257,7 +252,7 @@ CString m_strRestartIdentifier;
   
  再起動マネージャーが、アプリケーションを終了、再起動するように構成された場合は、再起動マネージャーは、省略可能なパラメーターとして再起動識別子をコマンドラインからアプリケーションを実行します。 再起動マネージャーは、再起動の識別子を使用する場合、アプリケーションで開いていたドキュメントを閉じて再度開きますおよび自動保存されたファイルを回復します。  
   
-##  <a name="parseparam"></a>後  
+##  <a name="parseparam"></a>  後  
  フレームワークは、コマンドラインからの個別のパラメーターの解析と解釈するには、この関数を呼び出します。 最初の 2 つ目のバージョンと一致しない Unicode プロジェクトでのみです。  
   
 ```  
@@ -284,7 +279,7 @@ virtual void ParseParam(
  これは最後のパラメーターまたはコマンド ラインでフラグを示します。  
   
 ### <a name="remarks"></a>コメント  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼び出し`ParseParam`1 回ごとのパラメーターまたはコマンド ラインでフラグを使用して、引数を渡す`pszParam`です。 パラメーターの最初の文字がある場合、'  **-** 'または'  **/** ' が削除および*bFlag*に設定されている`TRUE`です。 最後のパラメーターを解析するときに`bLast`に設定されている`TRUE`です。  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼び出し`ParseParam`1 回ごとのパラメーターまたはコマンド ラインでフラグを使用して、引数を渡す`pszParam`です。 パラメーターの最初の文字がある場合、' **-**'または' **/**' が削除および*bFlag*に設定されている`TRUE`です。 最後のパラメーターを解析するときに`bLast`に設定されている`TRUE`です。  
   
  この関数の既定の実装は、次のフラグを認識: `/p`、 `/pt`、 `/dde`、 `/Automation`、および`/Embedding`次の表に示すように、します。  
   
@@ -294,13 +289,13 @@ virtual void ParseParam(
 |*アプリ*ファイル名|ファイルを開く。|  
 |*アプリ*`/p`ファイル名|既定のプリンターにファイルを印刷します。|  
 |*アプリ* `/pt` filename プリンター ドライバーのポート|指定されたプリンターにファイルを印刷します。|  
-|*アプリ*`/dde`|起動し、DDE コマンドを待機します。|  
-|*アプリ*`/Automation`|OLE オートメーション サーバーとして起動します。|  
-|*アプリ*`/Embedding`|OLE 埋め込みアイテムを編集するのを起動します。|  
-|*アプリ*`/Register`<br /><br /> *アプリ*`/Regserver`|登録タスクを実行するアプリケーションに通知します。|  
-|*アプリ*`/Unregister`<br /><br /> *アプリ*`/Unregserver`|任意の登録を解除したタスクを実行するアプリケーションに通知します。|  
+|*アプリ* `/dde`|起動し、DDE コマンドを待機します。|  
+|*アプリ* `/Automation`|OLE オートメーション サーバーとして起動します。|  
+|*アプリ* `/Embedding`|OLE 埋め込みアイテムを編集するのを起動します。|  
+|*アプリ* `/Register`<br /><br /> *アプリ* `/Regserver`|登録タスクを実行するアプリケーションに通知します。|  
+|*アプリ* `/Unregister`<br /><br /> *アプリ* `/Unregserver`|任意の登録を解除したタスクを実行するアプリケーションに通知します。|  
   
- この情報が格納されている[m_bRunAutomated](#m_brunautomated)、 [m_bRunEmbedded](#m_brunembedded)、および[m_nShellCommand](#m_nshellcommand)です。 フラグがマークされているいずれかでスラッシュ '  **/**またはハイフン'  **-** ' です。  
+ この情報が格納されている[m_bRunAutomated](#m_brunautomated)、 [m_bRunEmbedded](#m_brunembedded)、および[m_nShellCommand](#m_nshellcommand)です。 フラグがマークされているいずれかでスラッシュ '  **/** またはハイフン' **-**' です。  
   
  既定の実装には、最初のフラグではないパラメーターを格納する[m_strFileName](#m_strfilename)です。 場合、`/pt`フラグは、既定の実装は、2 番目、3 番目、および 4 番目のフラグではないパラメーターを[m_strPrinterName](#m_strprintername)、 [m_strDriverName](#m_strdrivername)、および[m _strPortName](#m_strportname)、それぞれします。  
   
@@ -308,7 +303,7 @@ virtual void ParseParam(
   
  その他のフラグとパラメーターの値を処理する派生クラスでは、この関数をオーバーライドします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)   

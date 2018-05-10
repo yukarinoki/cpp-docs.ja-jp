@@ -1,13 +1,10 @@
 ---
-title: "-ERRORREPORT (内部リンカー エラーの報告) |Microsoft ドキュメント"
-ms.custom: 
+title: -ERRORREPORT (内部リンカー エラーの報告) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ddf65ed2a17dae2d86b0dc4582f1d3158328898
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 72e620e5347d422a8de66cba3ea9cfd601bb3f29
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (内部リンカー エラーの報告)
 
@@ -52,7 +47,7 @@ ms.lasthandoff: 01/03/2018
 
 **/ERRORREPORT**オプションでは、Microsoft に直接内部コンパイラ エラー (ICE) 情報を提供することができます。
 
-オプション**/errorreport:send** Windows エラー報告サービスの設定で有効になっている場合は、Microsoft にエラー情報を自動的に送信します。
+オプション **/errorreport:send** Windows エラー報告サービスの設定で有効になっている場合は、Microsoft にエラー情報を自動的に送信します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 

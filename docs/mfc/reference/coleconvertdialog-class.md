@@ -1,12 +1,9 @@
 ---
-title: "メンバー クラス |Microsoft ドキュメント"
-ms.custom: 
+title: メンバー クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f93c17416c81d4c152608f4d8a8b78f48e5422c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleconvertdialog-class"></a>メンバー クラス
 詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 内の構造。  
@@ -95,14 +90,14 @@ class COleConvertDialog : public COleDialog
   
  [CCommonDialog](../../mfc/reference/ccommondialog-class.md)  
   
- [関数](../../mfc/reference/coledialog-class.md)  
+ [COleDialog](../../mfc/reference/coledialog-class.md)  
   
  `COleConvertDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxodlgs.h  
   
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
  のみを構築、`COleConvertDialog`オブジェクト。  
   
 ```  
@@ -124,7 +119,7 @@ explicit COleConvertDialog (
   
 - **CF_SELECTACTIVATEAS**  ダイアログ ボックスが呼び出されたときに、オプション ボタンを最初に選択することを指定します。  
   
-- **CF_SETCONVERTDEFAULT**を指定するクラスが**CLSID**で指定された、 **clsidConvertDefault**のメンバー、`m_cv`構造体は、既定値として使用されます変換するラジオ ボタンを選択すると、クラスのリスト ボックスで選択します。  
+- **CF_SETCONVERTDEFAULT**を指定するクラスが**CLSID**で指定された、 **clsidConvertDefault**のメンバー、`m_cv`構造体は、既定の選択として使用されますクラスのリストに変換するには、オプション ボタンとボックスが選択されます。  
   
 - **CF_SETACTIVATEDEFAULT**を指定するクラスが**CLSID**で指定された、 **clsidActivateDefault**のメンバー、`m_cv`構造体は、既定値として使用されますオプション ボタンを選択すると、クラスのリスト ボックスで選択します。  
   
@@ -141,7 +136,7 @@ explicit COleConvertDialog (
   
  詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424)と[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)構造体。  
   
-##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  正常に復帰した後、この関数を呼び出す[DoModal](#domodal)に変換または型のオブジェクトをアクティブ化するか、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)です。  
   
 ```  
@@ -158,7 +153,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>コメント  
  項目を変換または変換 ダイアログ ボックスでユーザーが選択されている情報に従ってアクティブにします。  
   
-##  <a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>  COleConvertDialog::DoModal  
  OLE 変換 ダイアログ ボックスを表示するには、この関数を呼び出します。  
   
 ```  
@@ -179,7 +174,7 @@ virtual INT_PTR DoModal();
   
  場合`DoModal`返します**IDOK**設定や、ダイアログ ボックスに、ユーザーが入力した情報を取得する関数の他のメンバーを呼び出すことができます。  
   
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
  取得するには、この関数を呼び出して、 **CLSID**変換 ダイアログ ボックスで選択された項目に関連付けられています。  
   
 ```  
@@ -194,7 +189,7 @@ REFCLSID GetClassID() const;
   
  詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
   
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  ユーザーがアイコンとして選択した項目を表示する選択したかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -204,16 +199,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>戻り値  
  メソッドは、オブジェクトを表示するために必要です。  
   
-- `DVASPECT_CONTENT`アイコンで表示 チェック ボックスがオフかどうかに返されます。  
+- `DVASPECT_CONTENT` アイコンで表示 チェック ボックスがオフかどうかに返されます。  
   
-- `DVASPECT_ICON`アイコンで表示 チェック ボックスがオンになっているかどうかに返されます。  
+- `DVASPECT_ICON` アイコンで表示 チェック ボックスがオンになっているかどうかに返されます。  
   
 ### <a name="remarks"></a>コメント  
  後にこの関数の呼び出し[DoModal](#domodal)返します**IDOK**です。  
   
  アスペクトの描画の詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内のデータ構造です。  
   
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  この関数では、選択した項目のアイコンの外観を含むメタファイルへのハンドルを取得します。  
   
 ```  
@@ -223,7 +218,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>戻り値  
  選択して、ダイアログ ボックスが破棄されたときにオンの場合はアイコンで表示 チェック ボックスが選択した項目のアイコンの外観を持つメタファイル ハンドル**OK**それ以外の**NULL**です。  
   
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
  [変換] ダイアログ ボックスで選択した変換の種類を確認するには、この関数を呼び出します。  
   
 ```  
@@ -252,7 +247,7 @@ enum Selection {
   
 - **COleConvertDialog::activateAs**をアクティブ化すると、別のアイテムをユーザーが選択したオプション ボタンが選択した場合、返されると`DoModal`返される**IDOK**です。  
   
-##  <a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
  型の構造体**OLEUICONVERT**変換 ダイアログ ボックスの動作を制御するために使用します。  
   
 ```  
@@ -264,7 +259,7 @@ OLEUICONVERT m_cv;
   
  詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 内の構造。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数クラス](../../mfc/reference/coledialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)

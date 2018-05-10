@@ -2,11 +2,8 @@
 title: deque::generic_container (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::generic_container
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_container member [STL/CLR]
 ms.assetid: 5003a9a8-c207-4074-be2b-36cb9887f9d4
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c70a2ab68493a8bd32d37e4b76a0af9b142a35fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e54dd918e1f0c9ff263375efec2aceb79ebf438d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequegenericcontainer-stlclr"></a>deque::generic_container (STL/CLR)
 コンテナーのジェネリック インターフェイスの型。  
@@ -93,12 +88,12 @@ a b c d
 a b c d e  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/deque >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.VisualC.StlClr.IDeque%601>   
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque::generic_iterator (STL/CLR)](../dotnet/deque-generic-iterator-stl-clr.md)   

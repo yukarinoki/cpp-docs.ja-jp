@@ -1,13 +1,10 @@
 ---
-title: "C 文字定数 | Microsoft Docs"
-ms.custom: 
+title: C 文字定数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - constants, character
 - single quotation mark
 ms.assetid: 388ae7d7-2c3a-44d6-a507-63f541ecd2da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 374870a385e12d301731c0f9232d09895d8906c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0009f795936da7eb0c2ff69aa192e8f609638d2f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-character-constants"></a>C 文字定数
 "文字定数" は、表現できる文字セットの 1 文字を単一引用符 (**' '**) で囲むことによって作成されます。 文字定数は、[実行文字セット](../c-language/execution-character-set.md)の文字を表すために使用されます。  

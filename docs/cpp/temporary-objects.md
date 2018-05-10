@@ -1,12 +1,9 @@
 ---
-title: "一時オブジェクト |Microsoft ドキュメント"
-ms.custom: 
+title: 一時オブジェクト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,24 +11,22 @@ helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5523abd0142b8b6dc3a25beb8ca8d113cf5463bc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="temporary-objects"></a>一時オブジェクト
 場合によっては、コンパイラが一時オブジェクトを作成する必要があります。 このような一時オブジェクトが作成される理由として、次のことがあります。  
   
 -   初期化する対象の参照の基になる型とは異なる型の初期化子を使用して `const` 参照を初期化するため。  
   
--   ユーザー定義型を返す関数の戻り値を格納するため。 これらの一時要素は、プログラムがオブジェクトに戻り値をコピーしない場合にのみ作成されます。 例:  
+-   ユーザー定義型を返す関数の戻り値を格納するため。 これらの一時要素は、プログラムがオブジェクトに戻り値をコピーしない場合にのみ作成されます。 例えば:  
   
     ```  
     UDT Func1();    //  Declare a function that returns a user-defined  

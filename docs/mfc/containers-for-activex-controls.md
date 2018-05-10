@@ -1,29 +1,24 @@
 ---
-title: "ActiveX コントロールのコンテナー |Microsoft ドキュメント"
-ms.custom: 
+title: ActiveX コントロールのコンテナー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9da47cd7fe5c69a7506bcb339cb1ad09d22c3984
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 008cf9ea24958cad0866e180d74a43fb031416c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX コントロールのコンテナー
 ActiveX コントロール コンテインメントをサポートしている限り、他のアプリケーションで Visual C で開発された ActiveX コントロールを使用できます。 以降で、表示されているバージョンの Microsoft アプリケーションの数は、ActiveX コントロール コンテインメントをサポートします。  
@@ -63,6 +58,6 @@ ActiveX コントロール コンテインメントをサポートしている�
   
 -   NCompass for Netscape Navigator プラグイン  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
 

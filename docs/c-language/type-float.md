@@ -1,13 +1,10 @@
 ---
-title: "float 型 | Microsoft Docs"
-ms.custom: 
+title: float 型 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e218f7b5025de10dc06bf20fc759aed93189ec53
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-float"></a>float 型
 浮動小数点数が IEEE (米国電気電子技術者協会) 形式を使用します。 Float 型の単精度値は、符号ビット、余分な 127 形式 (8 ビット) 2 進指数、および 23 ビットの仮数から成る 4 バイトを持ちます。 仮数は、1.0 と 2.0 の間の数字を表します。 仮数の上位ビットは常に 1 であるため、数に格納されません。 この表現は、float 型のために、約 3.4E-38 から 3.4E+38 の範囲を提供します。  

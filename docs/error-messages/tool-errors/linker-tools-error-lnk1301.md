@@ -1,12 +1,9 @@
 ---
-title: "リンカ ツール エラー LNK1301 |Microsoft ドキュメント"
-ms.custom: 
+title: リンカ ツール エラー LNK1301 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1301
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfcdb90b967ce5f0e9eda8dded9b93db5bdcc268
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b4e298ad3815c741ff6c901ac39bf7838ed135d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1301"></a>リンカ ツール エラー LNK1301
 LTCG clr モジュールが見つかると、/LTCG:parameter と互換性がありません。  
@@ -38,7 +33,7 @@ LTCG clr モジュールが見つかると、/LTCG:parameter と互換性があ�
   
 -   [/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)  
   
--   [/LTCG (リンク時コード生成)](../../build/reference/ltcg-link-time-code-generation.md)  
+-   [/LTCG (リンク時のコード生成)](../../build/reference/ltcg-link-time-code-generation.md)  
   
 -   [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)  
   

@@ -1,12 +1,9 @@
 ---
-title: "IVirtualProcessorRoot 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: IVirtualProcessorRoot 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9620ee391b525356bfdb50b00d7e76c03b480815
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 構造体
 スレッド プロキシが実行できるハードウェア スレッドの抽象化です。  
@@ -62,7 +57,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  `IVirtualProcessorRoot`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h  
   
  **名前空間:** concurrency  
@@ -120,7 +115,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  仮想プロセッサ ルートを非アクティブ化の動作は、サブスクリプション レベルの基になるハードウェア スレッドの 1 つ減少します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)です。  
   
-##  <a name="ensurealltasksvisible"></a>  IVirtualProcessorRoot::EnsureAllTasksVisible Method  
+##  <a name="ensurealltasksvisible"></a>  Ivirtualprocessorroot::ensurealltasksvisible メソッド  
  システム上のすべてのプロセッサに対して可視になる個々 のプロセッサのメモリ階層内に格納されているデータが発生します。 メソッドが戻る前に、完全なメモリ フェンスがすべてのプロセッサで実行されたことを保証します。  
   
 ```
@@ -150,5 +145,5 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>戻り値  
  整数の識別子。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

@@ -1,12 +1,9 @@
 ---
-title: "lock::lock |Microsoft ドキュメント"
-ms.custom: 
+title: lock::lock |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 構築、`lock`オブジェクト、必要に応じて、指定された時間、またはまったく恒久的に、ロックの取得を待機しています。  
@@ -67,7 +62,7 @@ template<class T> lock(
 ## <a name="remarks"></a>コメント  
  コンス トラクターの最初の 3 つのフォームに対するロックの取得しようとしました。 `_object` 、指定されたタイムアウト期間内 (または<xref:System.Threading.Timeout.Infinite>が指定されない場合)。  
   
- コンス トラクターの 4 番目の形式でのロックを取得しない`_object`です。 `lock_later`メンバーである、 [lock_when 列挙](../dotnet/lock-when-enum.md)です。 使用して[lock::acquire](../dotnet/lock-acquire.md)または[lock::try_acquire](../dotnet/lock-try-acquire.md)ここでは、ロックを取得します。  
+ コンス トラクターの 4 番目の形式でのロックを取得しない`_object`です。 `lock_later` メンバーである、 [lock_when 列挙](../dotnet/lock-when-enum.md)です。 使用して[lock::acquire](../dotnet/lock-acquire.md)または[lock::try_acquire](../dotnet/lock-try-acquire.md)ここでは、ロックを取得します。  
   
  デストラクターが呼び出されたときに、ロックが自動的に解放されます。  
   
@@ -162,12 +157,12 @@ In thread 6, Counter = 10
 All threads completed.  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\lock.h >  
   
  **Namespace** msclr  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [lock のメンバー](../dotnet/lock-members.md)   
  [ロック:: ~ ロック](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   

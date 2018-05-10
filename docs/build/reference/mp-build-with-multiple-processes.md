@@ -1,6 +1,6 @@
 ---
-title: "/MP (複数のプロセスでビルド) |Microsoft ドキュメント"
-ms.custom: 
+title: /MP (複数のプロセスでビルド) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (複数のプロセスを使用したビルド)
 
@@ -123,11 +122,11 @@ ms.lasthandoff: 02/28/2018
 
 #### <a name="the-msbuildexe-tool"></a>MSBUILD.exe ツール
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 使用して、 [MSBuild.exe](/visualstudio/msbuild/msbuild-reference)ソリューションとプロジェクトをビルドするツールです。 **/Maxcpucount:**_数_(または**/m:**_数_) MSBuild.exe ツールのコマンド ライン オプションに複数のプロジェクトをビルドできます、同時にします。 また、 **/MP** コンパイラ オプションによって、同時に複数のコンパイル ユニットをビルドすることができます。 アプリケーションで適切である場合は、 **/MP** と **/maxcpucount**のいずれかまたは両方を使用して、ソリューションのビルド時間を向上させてください。
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] は、 [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) ツールを使用してソリューションとプロジェクトをビルドします。 **/Maxcpucount:**_数_(または **/m:**_数_) MSBuild.exe ツールのコマンド ライン オプションに複数のプロジェクトをビルドできます、同時にします。 また、 **/MP** コンパイラ オプションによって、同時に複数のコンパイル ユニットをビルドすることができます。 アプリケーションで適切である場合は、 **/MP** と **/maxcpucount**のいずれかまたは両方を使用して、ソリューションのビルド時間を向上させてください。
 
-ソリューションのビルド時間は、部分的に、ビルドを実行するプロセスの数に依存しています。 *数*の引数、 [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild オプションを同時にビルドするプロジェクトの最大数を指定します。 同様に、 *processMax*の引数、 **/MP**コンパイラ オプションを同時にビルドをコンパイル単位の最大数を指定します。 場合、 **/maxcpucount**オプションを指定*P*プロジェクトおよび**/MP**オプションを指定*C*を処理する最大*P* x *C*プロセスを同時に実行します。
+ソリューションのビルド時間は、部分的に、ビルドを実行するプロセスの数に依存しています。 *数*の引数、 [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild オプションを同時にビルドするプロジェクトの最大数を指定します。 同様に、 *processMax*の引数、 **/MP**コンパイラ オプションを同時にビルドをコンパイル単位の最大数を指定します。 場合、 **/maxcpucount**オプションを指定*P*プロジェクトおよび **/MP**オプションを指定*C*を処理する最大*P* x *C*プロセスを同時に実行します。
 
- MSBuild を使用するかどうかを決定するためのガイドラインや**/MP**テクノロジは次のようにします。
+ MSBuild を使用するかどうかを決定するためのガイドラインや **/MP**テクノロジは次のようにします。
 
 - ファイル数が少ないプロジェクトごとに多数のプロジェクトがある場合は、MSBuild ツールを使用します。
 
@@ -143,4 +142,4 @@ ms.lasthandoff: 02/28/2018
 
 [#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Command-Line Reference (コマンド ライン リファレンス)](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (高速 PDB 生成を)](zf.md)<br/>
+[/Zf (PDB 生成の高速化)](zf.md)<br/>

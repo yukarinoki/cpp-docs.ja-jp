@@ -2,11 +2,8 @@
 title: コンパイラ エラー C3409 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3409
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b179a74701cb79100285aeb426bb28531730b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1964cffd0593e87a790befd8a76ae13847f2058d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3409"></a>コンパイラ エラー C3409
 空の属性ブロックは許可されていません  
@@ -80,7 +75,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性](../../windows/cpp-attributes-reference.md)   
  [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)   
  [ラムダ式の構文](../../cpp/lambda-expression-syntax.md)

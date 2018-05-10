@@ -1,13 +1,10 @@
 ---
-title: "外部レベル宣言のストレージ クラス指定子 | Microsoft Docs"
-ms.custom: 
+title: 外部レベル宣言のストレージ クラス指定子 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfdae4791b89ffd78661a983fdc8c1beec77edea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部レベル宣言のストレージ クラス指定子
 外部変数はファイル スコープの変数です。 これらは、関数の外部で定義され、多くの関数に使用できる可能性があります。 関数は外部レベルでのみ定義できるため、入れ子にできません。 既定では、同じ名前の外部変数と関数へのすべての参照は、同じオブジェクトへの参照であり、"外部リンケージ" が含まれていることを意味します  (**static** キーワードを使用して、これをオーバーライドできます。 **static** の詳細については、このセクションで後述する情報をご覧ください)。  

@@ -1,12 +1,9 @@
 ---
-title: "ユーザー定義型変換 (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザー定義型変換 (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>ユーザー定義型の変換 (C++)
 A*変換*値、別の種類のいくつかの型の新しい値を生成します。 *標準変換*、組み込み型できますを作成して、C++ 言語とサポートに組み込まれて*ユーザー定義の変換*から、またはユーザー定義型の間で変換を実行します。  
@@ -83,7 +78,7 @@ A*変換*値、別の種類のいくつかの型の新しい値を生成しま�
   
  `explicit` キーワードは、C++98 以降の変換コンストラクターと C++11 以降の変換関数に適用できます。 次のセクションでは `explicit` キーワードの使用方法についてさらに詳しく説明します。  
   
-##  <a name="ConvCTOR"></a>変換コンス トラクター  
+##  <a name="ConvCTOR"></a> 変換コンス トラクター  
  変換コンストラクターはユーザー定義型または組み込み型からユーザー定義型への変換を定義します。 次の例は組み込み型 `double` からユーザー定義型 `Money` への変換を行う変換コンストラクターを示します。  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  暗黙的な変換を許すことによる利便性は魅力的ですが、そうすると発見困難なバグを誘発する恐れがあります。 経験則では、特定の変換を暗黙的に発生させたいことが確かである場合を除き、すべての変換コンストラクターを明示的にすることです。  
   
-##  <a name="ConvFunc"></a>変換関数  
+##  <a name="ConvFunc"></a> 変換関数  
  変換関数はユーザー定義型から他の型への変換を定義します。 これらの関数は、値が異なる型にキャストされるときに、変換コンストラクターと共に呼び出されるため、「キャスト演算子」と呼ばれることがあります。 次の例はユーザー定義型 `Money` から組み込み型 `double` への変換を行う変換関数を示します。  
   
 ```  

@@ -2,12 +2,9 @@
 title: ツリー コントロール項目の状態の概要 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6311169c0c8f9ee59f3582559f07ba85f997beff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3bc62308642492aa00a139fb15cc9e6cdcfc3247
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-item-states-overview"></a>ツリー コントロール項目の状態の概要
 ツリー コントロール内の各項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) が現在の状態。 たとえば、項目選択できます、無効になっている、展開、およびなど。 ほとんどの場合、ツリー コントロール項目の選択などのユーザー操作を反映するように、アイテムの状態が自動的に設定します。 ただし、設定することも、アイテムの状態を使用して、 [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate)メンバー関数を使用して、アイテムの現在の状態の取得、 [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)メンバー関数。 項目の状態の一覧については、次を参照してください。[ツリー ビュー コントロール定数](http://msdn.microsoft.com/library/windows/desktop/bb759985)Windows SDK に含まれています。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  項目の状態の画像を設定する`nStateMask`含める必要があります、`TVIS_STATEIMAGEMASK`値、および`nState`1 から始まるインデックスのシフト状態の画像を使用して 12 ビットを左に含める必要があります、 [INDEXTOSTATEIMAGEMASK](http://msdn.microsoft.com/library/windows/desktop/bb775597)マクロです。 インデックスは、イメージを指定していない状態 0 にすることができます。 オーバーレイと状態のイメージの詳細については、次を参照してください。[ツリー コントロールのイメージ リスト](../mfc/tree-control-image-lists.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

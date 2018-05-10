@@ -1,12 +1,9 @@
 ---
-title: "_ _restrict |Microsoft ドキュメント"
-ms.custom: 
+title: _ _restrict |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c21872c5d6fe6000038a3a2f4fe39451b566dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d96abd70990f1c01229004e9be000ec4e35a8595
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrict"></a>__restrict
-同様に、 **_ _declspec ([制限](../cpp/restrict.md))**修飾子、`__restrict`キーワードは、シンボルは、現在のスコープで別名を指定ではないことを示します。 `__restrict` キーワードは、`__declspec ( restrict )` 修飾子とは次の点で相違があります。  
+同様に、 **_ _declspec ([制限](../cpp/restrict.md))** 修飾子、`__restrict`キーワードは、シンボルは、現在のスコープで別名を指定ではないことを示します。 `__restrict` キーワードは、`__declspec ( restrict )` 修飾子とは次の点で相違があります。  
   
 -   `__restrict` キーワードは変数に対してのみ有効です。`__declspec ( restrict )` は関数の宣言と定義内でのみ有効です。  
   
@@ -67,5 +62,5 @@ union z {
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キーワード](../cpp/keywords-cpp.md)

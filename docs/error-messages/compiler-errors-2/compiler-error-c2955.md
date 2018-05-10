@@ -1,12 +1,9 @@
 ---
-title: "コンパイラ エラー C2955 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C2955 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2955
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccb8eabf42fdc47b58261633ceb61cf9bc0b15d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 686fb51d1e72f0835a673d00c05ade21a7580515
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2955"></a>コンパイラ エラー C2955
 'identifier' : クラス テンプレートまたは別名ジェネリックを使用するには、テンプレートまたは汎用引数リストが必要です。  
@@ -83,7 +78,7 @@ int main() {
 ```
 
 ## <a name="example"></a>例
-**2017 およびそれ以降の visual Studio:**コンパイラは、テンプレートがテンプレート パラメーター リストに (たとえばとして既定のテンプレート引数または非型テンプレート パラメーターの一部) が表示されたら正しくないテンプレート引数リストを診断します。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
+**2017 およびそれ以降の visual Studio:** コンパイラは、テンプレートがテンプレート パラメーター リストに (たとえばとして既定のテンプレート引数または非型テンプレート パラメーターの一部) が表示されたら正しくないテンプレート引数リストを診断します。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
 
 ```
 template <class T> class ListNode;

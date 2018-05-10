@@ -1,13 +1,10 @@
 ---
-title: "MFC アプリケーション ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: MFC アプリケーション ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4cbdc5e6db53fd4eacf9154bc356a1a64c77391
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-application-wizard"></a>MFC アプリケーション ウィザード
 MFC アプリケーション ウィザードでは、コンパイル時に Windows 実行可能アプリケーション (.exe) の基本機能が実装されるアプリケーションが生成されます。 MFC の初期アプリケーションには、C++ ソース (.cpp) ファイル、リソース (.rc) ファイル、ヘッダー (.h) ファイル、およびプロジェクト (.vcxproj) ファイルが含まれます。 これらの初期ファイルで生成されるコードは、MFC に基づいています。  
@@ -91,7 +86,7 @@ MFC アプリケーション ウィザードでは、コンパイル時に Windo
   
  MFC アプリケーション プロジェクトを作成した後する Visual C を使用して、プロジェクトにオブジェクトやコントロールを追加できます[コード ウィザード](../../ide/adding-functionality-with-code-wizards-cpp.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC アプリケーションの作成](../../mfc/reference/creating-an-mfc-application.md)   
  [MFC デスクトップ アプリケーション](../../mfc/mfc-desktop-applications.md)   
  [クラスを使用した Windows アプリケーションの作成](../../mfc/using-the-classes-to-write-applications-for-windows.md)

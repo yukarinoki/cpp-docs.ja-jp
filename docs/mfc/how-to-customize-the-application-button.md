@@ -1,29 +1,24 @@
 ---
-title: "方法: アプリケーション ボタンをカスタマイズ |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: アプリケーション ボタンをカスタマイズ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4a150985bd5c552b361620df87e34511ef8027
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 828886e6a5c4891e1fd7e1d820ee00542e052cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-application-button"></a>方法: アプリケーション ボタンをカスタマイズする
 アプリケーション ボタンをクリックすると、コマンドのメニューが表示されます。 通常、メニューに含まれるファイルに関連するコマンドなど**開く**、**保存**、**印刷**、および**終了**です。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |**MRU Caption**|最近使用した一覧のパネルに表示されるテキストを指定します。|  
 |**小さいイメージ**|一連の 16 x 16 のアイコンを格納する、イメージの識別子を指定します。 アイコンはボタン コレクション内のボタンで使用されます。|  
 |**使用します。**|有効または最近のリスト を無効にします。 最近使用した一覧パネルは、[アプリケーション] メニューが表示されます。|  
-|**幅**|最近使用した一覧パネルのピクセル単位の幅を指定します。|  
+|**Width**|最近使用した一覧パネルのピクセル単位の幅を指定します。|  
   
  アプリケーションのメニューは、デザイン サーフェイスは表示されません。 これを表示するには、リボンをプレビューかアプリケーションを実行する必要があります。  
   
@@ -66,6 +61,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **Ribbon エディター ツールバー**をクリックして**Ribbon のテスト**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
 

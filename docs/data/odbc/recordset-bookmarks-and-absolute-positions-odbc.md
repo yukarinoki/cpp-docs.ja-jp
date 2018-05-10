@@ -2,12 +2,9 @@
 title: 'レコード セット: ブックマークと絶対位置 (ODBC) |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SetAbsolutePosition
 dev_langs:
@@ -30,18 +27,16 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>レコードセット: ブックマークと絶対位置 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [絶対位置を使用して現在のレコードを設定する方法](#_core_absolute_positions_in_mfc_odbc)です。  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a>MFC ODBC 内のブックマーク  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> MFC ODBC 内のブックマーク  
  ブックマークは、レコードを一意に識別します。 レコード セット内を移動するときに常に依存できない絶対位置をレコードのレコード セットからレコードを削除できるためです。 レコードの位置を追跡する信頼性の高い方法は、そのブックマークを使用します。 クラス`CRecordset`メンバー関数を提供します。  
   
 -   変数に保存できるように現在のレコードのブックマークの取得 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark))。  
@@ -81,7 +76,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  ODBC ドライバーとレコード セットの種類に応じてブックマークはサポートされません。 ブックマークは呼び出すことによってサポートされているかどうかを容易に判別[値](../../mfc/reference/crecordset-class.md#canbookmark)です。 さらに、ブックマークはサポートされている場合を明示的に選択してくださいを指定することによって機能を実装、 **crecordset::usebookmarks**オプション、 [:open](../../mfc/reference/crecordset-class.md#open)メンバー関数。 レコード セットの特定の操作の後、ブックマークの永続性を確認することも必要があります。 たとえば場合、する**Requery** 、レコード セットのブックマークが無効になります。 呼び出す[CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)を安全に呼び出すことができるかどうかを確認する`SetBookmark`です。  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a>MFC ODBC の絶対位置  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> MFC ODBC の絶対位置  
  クラスのブックマークのほか`CRecordset`序数の位置を指定して現在のレコードを設定することができます。 これには、絶対位置は呼び出されます。  
   
 > [!NOTE]
@@ -94,5 +89,5 @@ rs.SetBookmark( varRecordToReturnTo );
   
  レコード セットの移動の詳細については、次を参照してください。[レコード セット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)

@@ -1,31 +1,26 @@
 ---
-title: "既存のコードから新しいプロジェクトのデバッグ設定 (Visual C) |Microsoft ドキュメント"
-ms.custom: 
+title: 既存のコードから新しいプロジェクトのデバッグ設定 (Visual C) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 dev_langs:
 - C++
 ms.assetid: 607339a8-9d33-458b-8095-dc73f374e29d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b40bafe817ebf1dd25cc40115635b895502e0df8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>[デバッグ構成の設定の指定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)
+# <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>[デバッグ構成の設定の指定] \(既存コード ファイルからの新しいプロジェクトの作成ウィザード)
 既存コード ファイルからの新しいプロジェクトの作成ウィザードのこのページを使用すると、デバッグ構成のプロジェクト設定を指定できます。  
   
 ## <a name="task-list"></a>タスク一覧  
@@ -59,5 +54,5 @@ ms.lasthandoff: 12/21/2017
  **.NET アセンブリを使用して強制的に (/FU)**  
  新しいプロジェクトをビルド時に .NET アセンブリを指定します。 詳細については、「[/FU (強制 #using ファイルの名前の指定)](../build/reference/fu-name-forced-hash-using-file.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[プロジェクト設定の指定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

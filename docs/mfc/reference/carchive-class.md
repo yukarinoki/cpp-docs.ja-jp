@@ -1,12 +1,9 @@
 ---
-title: "CArchive クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CArchive クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchive
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cc94e78656c53156b8696b927780f46e939861a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f11edef585e699d90d8d33839e0e446cb5a726db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchive-class"></a>CArchive クラス
 使用すると、それらのオブジェクトを削除した後が引き続き発生する永続的なバイナリ形式 (通常はディスク ストレージ) にオブジェクトの複雑なネットワークを保存できます。  
@@ -88,8 +83,7 @@ class CArchive
   
 |名前|説明|  
 |----------|-----------------|  
-|[CArchive::CArchive](#carchive)|
-          `CArchive` オブジェクトを作成します。|  
+|[CArchive::CArchive](#carchive)|`CArchive` オブジェクトを作成します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
@@ -121,8 +115,8 @@ class CArchive
   
 |名前|説明|  
 |----------|-----------------|  
-|[CArchive::operator&lt;&lt;](#operator_lt_lt)|オブジェクトとアーカイブをするプリミティブ型を格納します。|  
-|[CArchive::operator&gt;&gt;](#operator_gt_gt)|アーカイブからオブジェクトとのプリミティブ型を読み込みます。|  
+|[CArchive::operator &lt;&lt;](#operator_lt_lt)|オブジェクトとアーカイブをするプリミティブ型を格納します。|  
+|[CArchive::operator &gt;&gt;](#operator_gt_gt)|アーカイブからオブジェクトとのプリミティブ型を読み込みます。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -131,7 +125,7 @@ class CArchive
 |[CArchive::m_pDocument](#m_pdocument)||  
   
 ## <a name="remarks"></a>コメント  
- `CArchive`基本クラスはありません。  
+ `CArchive` 基本クラスはありません。  
   
  後でメモリに保持して再構築、永続的な記憶領域からオブジェクトを読み込むことができます。 データを永続的に行うには、このプロセスは「シリアル化します」と呼ばれる  
   
@@ -141,19 +135,19 @@ class CArchive
   
  構築する場合、`CArchive`オブジェクト、クラスのオブジェクトにアタッチする`CFile`(または派生クラス) を表す、開いているファイル。 また、アーカイブを読み込み、または格納用に使用するかどうかも指定します。 A`CArchive`プリミティブ型だけでなく、オブジェクトのオブジェクトを処理できる[CObject](../../mfc/reference/cobject-class.md)-派生クラスがシリアル化のために設計されています。 シリアル化可能なクラスには通常、`Serialize`メンバー関数は、通常パラメーターを使用して、 [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)マクロ、クラスの下の説明に従って`CObject`です。  
   
- オーバー ロードされた抽出 (  **>>** ) と挿入 (  **<<** ) 演算子は、両方のプリミティブ型をサポートする便利なアーカイブ プログラミング インターフェイスと`CObject`派生クラス。  
+ オーバー ロードされた抽出 ( **>>**) と挿入 ( **<<**) 演算子は、両方のプリミティブ型をサポートする便利なアーカイブ プログラミング インターフェイスと`CObject`派生クラス。  
   
- `CArchive`MFC Windows ソケット クラスを使用したプログラミングをサポートも[CSocket](../../mfc/reference/csocket-class.md)と[CSocketFile](../../mfc/reference/csocketfile-class.md)です。 [時](#isbufferempty)メンバー関数は、その使用をサポートしています。  
+ `CArchive` MFC Windows ソケット クラスを使用したプログラミングをサポートも[CSocket](../../mfc/reference/csocket-class.md)と[CSocketFile](../../mfc/reference/csocketfile-class.md)です。 [時](#isbufferempty)メンバー関数は、その使用をサポートしています。  
   
  詳細については`CArchive`、記事を参照して[シリアル化](../../mfc/serialization-in-mfc.md)と[Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CArchive`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
-##  <a name="abort"></a>CArchive::Abort  
+##  <a name="abort"></a>  CArchive::Abort  
  この関数では、例外をスローせず、アーカイブを閉じます。  
   
 ```  
@@ -170,7 +164,7 @@ void Abort ();
 ### <a name="example"></a>例  
   例を参照して[CArchive::WriteClass](#writeclass)です。  
   
-##  <a name="carchive"></a>CArchive::CArchive  
+##  <a name="carchive"></a>  CArchive::CArchive  
  構築、`CArchive`オブジェクトを読み込み、またはオブジェクトの格納に使用するかどうかを指定します。  
   
 ```  
@@ -208,7 +202,7 @@ CArchive(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#12](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
   
-##  <a name="close"></a>CArchive::Close  
+##  <a name="close"></a>  CArchive::Close  
  バッファーに残っているデータをフラッシュ アーカイブを閉じ、アーカイブ ファイルから接続を切断します。  
   
 ```  
@@ -223,7 +217,7 @@ void Close();
 ### <a name="example"></a>例  
   例を参照して[CArchive::WriteString](#writestring)です。  
   
-##  <a name="flush"></a>ときは  
+##  <a name="flush"></a>  ときは  
  ファイルに書き込まれるアーカイブ バッファーに残っているデータを強制します。  
   
 ```  
@@ -236,7 +230,7 @@ void Flush();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#13](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
   
-##  <a name="getfile"></a>CArchive::GetFile  
+##  <a name="getfile"></a>  CArchive::GetFile  
  取得、`CFile`このアーカイブのオブジェクトのポインター。  
   
 ```  
@@ -252,7 +246,7 @@ CFile* GetFile() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#14](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
   
-##  <a name="getobjectschema"></a>CArchive::GetObjectSchema  
+##  <a name="getobjectschema"></a>  CArchive::GetObjectSchema  
  この関数から呼び出す、`Serialize`現在逆シリアル化されるオブジェクトのバージョンを判断する関数。  
   
 ```  
@@ -270,7 +264,7 @@ UINT GetObjectSchema();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
   
-##  <a name="isbufferempty"></a>CArchive::IsBufferEmpty  
+##  <a name="isbufferempty"></a>  CArchive::IsBufferEmpty  
  アーカイブ オブジェクトの内部バッファーが空かどうかを判断するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -287,7 +281,7 @@ BOOL IsBufferEmpty() const;
   
  詳細については、次を参照してください。 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)です。  
   
-##  <a name="isloading"></a>場合  
+##  <a name="isloading"></a>  場合  
  アーカイブのデータの読み込みがあるかどうかを判断します。  
   
 ```  
@@ -303,7 +297,7 @@ BOOL IsLoading() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#16](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
   
-##  <a name="isstoring"></a>用  
+##  <a name="isstoring"></a>  用  
  アーカイブがデータを格納するかどうかを判断します。  
   
 ```  
@@ -321,7 +315,7 @@ BOOL IsStoring() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#17](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
   
-##  <a name="mapobject"></a>CArchive::MapObject  
+##  <a name="mapobject"></a>  CArchive::MapObject  
  参照のサブオブジェクトとして提供される、ファイルを実際にシリアル化されませんをマップにオブジェクトを配置するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -335,7 +329,7 @@ void MapObject(const CObject* pOb);
 ### <a name="remarks"></a>コメント  
  たとえば、ドキュメントをシリアル化する可能性がありますいないが、ドキュメントの一部である項目をシリアル化します。 呼び出して`MapObject`、それらのアイテム、またはドキュメントを参照する、サブオブジェクトを許可します。 また、シリアル化されたサブ項目をシリアル化できる、`m_pDocument`バック ポインター。  
   
- 呼び出すことができます`MapObject`に格納しからの読み込み、`CArchive`オブジェクト。 `MapObject`管理されている内部データ構造を指定したオブジェクトを追加、`CArchive`オブジェクトとは異なりが、シリアル化および逆シリアル化中に[ReadObject](#readobject)と[WriteObject](#writeobject) **、**呼び出しませんオブジェクトのシリアル化します。  
+ 呼び出すことができます`MapObject`に格納しからの読み込み、`CArchive`オブジェクト。 `MapObject` 管理されている内部データ構造を指定したオブジェクトを追加、`CArchive`オブジェクトとは異なりが、シリアル化および逆シリアル化中に[ReadObject](#readobject)と[WriteObject](#writeobject) **、**呼び出しませんオブジェクトのシリアル化します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#18](../../mfc/codesnippet/cpp/carchive-class_7.h)]  
@@ -346,7 +340,7 @@ void MapObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization#21](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
-##  <a name="m_pdocument"></a>CArchive::m_pDocument  
+##  <a name="m_pdocument"></a>  CArchive::m_pDocument  
  設定**NULL**既定では、このポインターを**CDocument**のユーザーに何かに設定できる、`CArchive`要望をインスタンス化します。  
   
 ```  
@@ -361,7 +355,7 @@ CDocument* m_pDocument;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
   
-##  <a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>  CArchive::operator &lt;&lt;  
  指定したオブジェクトまたはプリミティブ型、アーカイブを格納します。  
   
 ```  
@@ -431,7 +425,7 @@ CArchive& operator<<(LONGLONG dwdw);
   
  [!code-cpp[NVC_MFCSerialization#32](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
   
-##  <a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
+##  <a name="operator_gt_gt"></a>  CArchive::operator &gt;&gt;  
  アーカイブから指定したオブジェクトまたはプリミティブ型を読み込みます。  
   
 ```  
@@ -513,7 +507,7 @@ CArchive& operator>>(LONGLONG& dwdw);
   
  [!code-cpp[NVC_MFCSerialization#34](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
   
-##  <a name="read"></a>読み書きするとき  
+##  <a name="read"></a>  読み書きするとき  
  アーカイブから指定したバイト数を読み取ります。  
   
 ```  
@@ -538,7 +532,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
   
-##  <a name="readclass"></a>場合  
+##  <a name="readclass"></a>  場合  
  このメンバー関数で格納されていたクラスへの参照を読み取る[WriteClass](#writeclass)です。  
   
 ```  
@@ -566,14 +560,14 @@ CRuntimeClass* ReadClass(
   
  ランタイム クラスを使用する必要があります[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)、それ以外の`ReadClass`がスローされます、[行わない](../../mfc/reference/cnotsupportedexception-class.md)です。  
   
- 場合`pSchema`は**NULL**を呼び出してストアド クラスのスキーマを取得できる[CArchive::GetObjectSchema](#getobjectschema)、それ以外の **\***  `pSchema`は保存されていたランタイム クラスのスキーマが含まれます。  
+ 場合`pSchema`は**NULL**を呼び出してストアド クラスのスキーマを取得できる[CArchive::GetObjectSchema](#getobjectschema)、それ以外の**\*** `pSchema`は保存されていたランタイム クラスのスキーマが含まれます。  
   
  使用することができます[SerializeClass](#serializeclass)の代わりに`ReadClass`、両方の読み取りと書き込みクラスの参照を処理します。  
   
 ### <a name="example"></a>例  
   例を参照して[CArchive::WriteClass](#writeclass)です。  
   
-##  <a name="readobject"></a>CArchive::ReadObject  
+##  <a name="readobject"></a>  CArchive::ReadObject  
  アーカイブからオブジェクト データを読み込んで、適切な型のオブジェクトを構築します。  
   
 ```  
@@ -588,14 +582,14 @@ CObject* ReadObject(const CRuntimeClass* pClass);
  A [CObject](../../mfc/reference/cobject-class.md)を使用して派生クラスを適切に安全にキャストする必要がありますポインター[使うため](../../mfc/reference/cobject-class.md#iskindof)です。  
   
 ### <a name="remarks"></a>コメント  
- この関数は通常、呼び出される、`CArchive`抽出 (  **>>** ) のオーバー ロードされた演算子、 [CObject](../../mfc/reference/cobject-class.md)ポインター。 **ReadObject**、さらに、呼び出し、`Serialize`アーカイブ済みのクラスの関数。  
+ この関数は通常、呼び出される、`CArchive`抽出 ( **>>**) のオーバー ロードされた演算子、 [CObject](../../mfc/reference/cobject-class.md)ポインター。 **ReadObject**、さらに、呼び出し、`Serialize`アーカイブ済みのクラスの関数。  
   
  0 以外を指定する場合`pClass`ことによって取得されるパラメーター、 [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)マクロ、関数は、アーカイブ済みのオブジェクトのランタイム クラスをことを確認します。 これは、使用している前提としています。、`IMPLEMENT_SERIAL`マクロでクラスの実装です。  
   
 ### <a name="example"></a>例  
   例を参照して[CArchive::WriteObject](#writeobject)です。  
   
-##  <a name="readstring"></a>CArchive::ReadString  
+##  <a name="readstring"></a>  CArchive::ReadString  
  関連付けられているファイルからバッファーにテキスト データを読み取るには、このメンバー関数を呼び出す、`CArchive`オブジェクト。  
   
 ```  
@@ -626,7 +620,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ### <a name="example"></a>例  
   例を参照して[CArchive::WriteString](#writestring)です。  
   
-##  <a name="serializeclass"></a>CArchive::SerializeClass  
+##  <a name="serializeclass"></a>  CArchive::SerializeClass  
  格納し、基本クラスのバージョン情報を読み込む場合は、このメンバー関数を呼び出します。  
   
 ```  
@@ -638,7 +632,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
  基本クラスのランタイム クラス オブジェクトへのポインター。  
   
 ### <a name="remarks"></a>コメント  
- `SerializeClass`読み取りまたは書き込みをクラスへの参照、`CArchive`の方向に応じて、オブジェクト、`CArchive`です。 使用して`SerializeClass`の代わりに[ReadClass](#readclass)と[WriteClass](#writeclass)基底クラスのオブジェクトをシリアル化する便利な手段として`SerializeClass`少ないコードと数のパラメーターが必要です。  
+ `SerializeClass` 読み取りまたは書き込みをクラスへの参照、`CArchive`の方向に応じて、オブジェクト、`CArchive`です。 使用して`SerializeClass`の代わりに[ReadClass](#readclass)と[WriteClass](#writeclass)基底クラスのオブジェクトをシリアル化する便利な手段として`SerializeClass`少ないコードと数のパラメーターが必要です。  
   
  同様に`ReadClass`、`SerializeClass`アーカイブされたクラスの情報がランタイム クラスに互換性があることを確認します。 場合は、互換性がありません`SerializeClass`がスローされます、 [CArchiveException](../../mfc/reference/carchiveexception-class.md)です。  
   
@@ -649,7 +643,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#25](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
   
-##  <a name="setloadparams"></a>CArchive::SetLoadParams  
+##  <a name="setloadparams"></a>  CArchive::SetLoadParams  
  呼び出す`SetLoadParams`ときしようとする読み取りの数が多い`CObject`-アーカイブから派生したオブジェクト。  
   
 ```  
@@ -661,14 +655,14 @@ void SetLoadParams(UINT nGrowBy = 1024);
  サイズの増加が必要な場合を確保する要素のスロットの最小数。  
   
 ### <a name="remarks"></a>コメント  
- `CArchive`アーカイブに格納されているオブジェクトへの参照を解決するのには、負荷の配列を使用します。 `SetLoadParams`使用すると、ロード配列を拡張するサイズを設定できます。  
+ `CArchive` アーカイブに格納されているオブジェクトへの参照を解決するのには、負荷の配列を使用します。 `SetLoadParams` 使用すると、ロード配列を拡張するサイズを設定できます。  
   
  呼び出す必要はありません`SetLoadParams`任意のオブジェクトが読み込まれた後、または後[MapObject](#mapobject)または[ReadObject](#readobject)と呼びます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="setobjectschema"></a>CArchive::SetObjectSchema  
+##  <a name="setobjectschema"></a>  CArchive::SetObjectSchema  
  アーカイブ オブジェクトに格納されているオブジェクトのスキーマを設定するには、このメンバー関数を呼び出す`nSchema`です。  
   
 ```  
@@ -687,7 +681,7 @@ void SetObjectSchema(UINT nSchema);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#27](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
   
-##  <a name="setstoreparams"></a>CArchive::SetStoreParams  
+##  <a name="setstoreparams"></a>  CArchive::SetStoreParams  
  使用して`SetStoreParams`大きな数を格納するときに`CObject`-アーカイブ内のオブジェクトを派生します。  
   
 ```  
@@ -702,14 +696,14 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
  パラメーターを拡張するためのメモリ割り当ての粒度を指定します。 最適なパフォーマンスを 2 の累乗にする必要があります。  
   
 ### <a name="remarks"></a>コメント  
- `SetStoreParams`ハッシュ テーブルのサイズと、シリアル化プロセス中に一意のオブジェクトを識別するために使用するマップのブロック サイズを設定できます。  
+ `SetStoreParams` ハッシュ テーブルのサイズと、シリアル化プロセス中に一意のオブジェクトを識別するために使用するマップのブロック サイズを設定できます。  
   
  呼び出す必要はありません`SetStoreParams`任意のオブジェクトが格納された、または後[MapObject](#mapobject)または[WriteObject](#writeobject)と呼びます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="write"></a>CArchive::Write  
+##  <a name="write"></a>  CArchive::Write  
  指定したバイト数をアーカイブに書き込みます。  
   
 ```  
@@ -731,7 +725,7 @@ void Write(const void* lpBuf, INT nMax);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
   
-##  <a name="writeclass"></a>CArchive::WriteClass  
+##  <a name="writeclass"></a>  CArchive::WriteClass  
  使用して`WriteClass`派生クラスのシリアル化中に基底クラスのバージョンとクラスの情報を格納します。  
   
 ```  
@@ -743,9 +737,9 @@ void WriteClass(const CRuntimeClass* pClassRef);
  ポインター、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)要求クラスの参照に対応する構造体。  
   
 ### <a name="remarks"></a>コメント  
- `WriteClass`参照を書き込みます、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 、基本クラスに対する、`CArchive`です。 使用して[場合](#readclass)への参照を取得します。  
+ `WriteClass` 参照を書き込みます、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 、基本クラスに対する、`CArchive`です。 使用して[場合](#readclass)への参照を取得します。  
   
- `WriteClass`アーカイブ済みのクラス情報にランタイム クラスに互換性があることを確認します。 場合は、互換性がありません`WriteClass`がスローされます、 [CArchiveException](../../mfc/reference/carchiveexception-class.md)です。  
+ `WriteClass` アーカイブ済みのクラス情報にランタイム クラスに互換性があることを確認します。 場合は、互換性がありません`WriteClass`がスローされます、 [CArchiveException](../../mfc/reference/carchiveexception-class.md)です。  
   
  ランタイム クラスを使用する必要があります[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)、それ以外の`WriteClass`がスローされます、[行わない](../../mfc/reference/cnotsupportedexception-class.md)です。  
   
@@ -754,7 +748,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#28](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
   
-##  <a name="writeobject"></a>CArchive::WriteObject  
+##  <a name="writeobject"></a>  CArchive::WriteObject  
  指定した格納`CObject`アーカイブにします。  
   
 ```  
@@ -766,7 +760,7 @@ void WriteObject(const CObject* pOb);
  格納されているオブジェクトへの定数ポインター。  
   
 ### <a name="remarks"></a>コメント  
- この関数は通常、呼び出される、`CArchive`挿入 (  **<<** ) の演算子はオーバー ロード`CObject`です。 **WriteObject**、さらに、呼び出し、`Serialize`アーカイブ済みのクラスの関数。  
+ この関数は通常、呼び出される、`CArchive`挿入 ( **<<**) の演算子はオーバー ロード`CObject`です。 **WriteObject**、さらに、呼び出し、`Serialize`アーカイブ済みのクラスの関数。  
   
  使用する必要があります、`IMPLEMENT_SERIAL`マクロ アーカイブを有効にします。 **WriteObject** ASCII クラス名をアーカイブに書き込みます。 このクラス名が、読み込みプロセス中に後で検証されます。 特殊なエンコード スキームでは、クラスの複数のオブジェクトのクラス名の不要な重複しないようにします。 このスキームでは、1 つ以上のポインターの対象になっているオブジェクトの冗長ストレージを防ぐことができます。  
   
@@ -780,7 +774,7 @@ void WriteObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization#29](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
   
-##  <a name="writestring"></a>CArchive::WriteString  
+##  <a name="writestring"></a>  CArchive::WriteString  
  このメンバー関数を使用してバッファーからデータを関連付けられたファイルを書き込む、`CArchive`オブジェクト。  
   
 ```  
@@ -794,14 +788,14 @@ void WriteString(LPCTSTR lpsz);
 ### <a name="remarks"></a>コメント  
  終端の null 文字 ('\0') は、ファイルに書き込まれませんまた、改行を配置に自動的に書き込まれます。  
   
- `WriteString`ディスクの空き容量の条件を含む、いくつかの条件への応答で例外をスローします。  
+ `WriteString` ディスクの空き容量の条件を含む、いくつかの条件への応答で例外をスローします。  
   
  **書き込む**も利用できますが、null 文字で終了してではなく、要求されたバイト数に書き込むファイルが、します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CFile クラス](../../mfc/reference/cfile-class.md)   
  [CObject クラス](../../mfc/reference/cobject-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "C ランタイム エラー R6019 |Microsoft ドキュメント"
-ms.custom: 
+title: C ランタイム エラー R6019 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6019
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ab7054bdce76aa1dd0b443993cfac8eeb8ecc7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 95950254d4a0611d9690b8636eb50f2fc1f0f264
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6019"></a>C ランタイム エラー R6019
 コンソール デバイスを開けません。  
@@ -36,8 +31,8 @@ ms.lasthandoff: 02/14/2018
 >  このエラーを解決するには、次の手順を試してみます。  
 >   
 >  -   管理者としてプログラムを実行します。  
-> -   使用して、**アプリおよび機能**または**プログラムと機能**] ページで、**コントロール パネルの [**を修復またはプログラムを再インストールします。  
-> -   確認**Windows Update**で、**コントロール パネルの** ソフトウェアの更新。  
+> -   使用して、**アプリおよび機能**または**プログラムと機能**] ページで、**コントロール パネルの [** を修復またはプログラムを再インストールします。  
+> -   確認**Windows Update**で、**コントロール パネルの **ソフトウェアの更新。  
 > -   アプリの更新バージョンを確認します。 問題が解決しない場合は、アプリ ベンダーにお問い合わせください。  
   
  **プログラマのための情報**  

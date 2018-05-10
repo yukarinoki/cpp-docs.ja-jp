@@ -1,12 +1,9 @@
 ---
-title: "tiled_index クラス |Microsoft ドキュメント"
-ms.custom: 
+title: tiled_index クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index クラス
 インデックスを提供する[tiled_extent](tiled-extent-class.md)オブジェクト。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。 並べて表示されたスペースの詳細については、次を参照してください。[を使用してタイル](../../../parallel/amp/using-tiles.md)です。  
@@ -94,7 +89,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[barrier 定数](#tiled_index__barrier)|ストア、 [tile_barrier](tile-barrier-class.md)のスレッドの現在のタイルのバリアを表すオブジェクト。|  
 |||  
@@ -120,13 +115,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
  `tiled_index`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp.h  
   
  **名前空間:** Concurrency  
 
 
-## <a name="tiled_index__ctor">tiled_index コンス トラクター</a>  
+## <a name="tiled_index__ctor"></a>  tiled_index コンス トラクター  
 `tiled_index` クラスの新しいインスタンスを初期化します。  
   
 ## <a name="syntax"></a>構文  
@@ -166,7 +161,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|name|説明|  
+|名前|説明|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|グローバル座標のタイルのインデックスおよびローカル座標のタイルの相対位置から `tile_index` クラスの新しいインスタンスを初期化します。 `_Global` パラメーターおよび `_Tile_origin` パラメーターが計算されます。|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|指定した `tile_index` オブジェクトをコピーして、`tiled_index` クラスの新しいインスタンスを初期化します。|  
 
@@ -201,7 +196,7 @@ const tile_barrier barrier;
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>  local   
+## <a name="tiled_index__local"></a>  地元の   
 ストア、[インデックス](index-class.md)オブジェクトの現在のタイルの相対を表すランク 1、2、または 3 のインデックス、 [tiled_extent](tiled-extent-class.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
@@ -210,7 +205,7 @@ const index<rank> global;
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>  rank   
+## <a name="tiled_index__rank"></a>  ランク   
 `tiled_index` オブジェクトのランクを格納します。  
   
 ## <a name="syntax"></a>構文  
@@ -219,7 +214,7 @@ const index<rank> local;
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>  tile   
+## <a name="tiled_index__tile"></a>  並べて表示します。   
 ストア、[インデックス](index-class.md)ランク 1、2、または 3 の現在のタイルの座標を表すオブジェクト、 [tiled_extent](tiled-extent-class.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
@@ -270,5 +265,5 @@ const index<rank> tile_origin
 __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

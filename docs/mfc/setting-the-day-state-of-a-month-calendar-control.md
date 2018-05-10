@@ -1,13 +1,10 @@
 ---
-title: "予定表コントロールの月の日付状態の設定 |Microsoft ドキュメント"
-ms.custom: 
+title: 予定表コントロールの月の日付状態の設定 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MCN_GETDAYSTATE
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c634815065c68cceb3c528222c0fd60e19b6827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 611397a329e177689a7bd8386963ea1c29ce9e5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>月間予定表コントロールの日付状態の設定
 月間予定表コントロールの属性の 1 つは、月の日付ごとに、コントロールの日付状態と呼ばれます情報を格納する機能です。 この情報は、現在表示されている月の特定の日付を強調する使用されます。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
      例では、変換、 `pNMHDR` 、適切な型へのポインターが要求されている情報の月の数を決定し (`pDayState->cDayState`)。 毎月、現在のビット フィールドの (`pDayState->prgDayState[i]`)、し、必要とゼロに初期化されます (ここでは、各月の 15 日) の日付が設定されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CMonthCalCtrl の使い方](../mfc/using-cmonthcalctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

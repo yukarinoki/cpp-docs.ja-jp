@@ -1,12 +1,9 @@
 ---
-title: "queue::push (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: queue::push (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::queue::push
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - push member [STL/CLR]
 ms.assetid: 97cf1f98-d4c4-417f-b57a-89cdd351ef65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 24a3617a355aaaba5b2dfe375ac7a139a4f8da44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf0456daa738d63fef55737715fe377266ddd368
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuepush-stlclr"></a>queue::push (STL/CLR)
 新しい最後の要素を追加します。  
@@ -68,11 +63,11 @@ int main()
 a b c  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/キュー >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キュー (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [queue::pop (STL/CLR)](../dotnet/queue-pop-stl-clr.md)

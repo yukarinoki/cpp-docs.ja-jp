@@ -1,13 +1,10 @@
 ---
-title: "機能レベルを指定する |Microsoft ドキュメント"
-ms.custom: 
+title: 機能レベルを指定する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a2897d5e442794198870e7f6bed36196744888
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-levels-of-functionality"></a>継承機能のレベルの指定
 この記事は、次の機能レベルに追加する方法を説明します、 [CObject](../mfc/reference/cobject-class.md)-派生クラス。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  全般の詳細については`CObject`機能、記事を参照して[CObject からクラスを派生する](../mfc/deriving-a-class-from-cobject.md)です。  
   
 -   [ランタイム クラス情報](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a>ランタイム クラス情報を追加するには  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> ランタイム クラス情報を追加するには  
   
 1.  クラスを派生`CObject`で説明されている、 [CObject からクラスを派生する](../mfc/deriving-a-class-from-cobject.md)資料です。  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  常に put`IMPLEMENT_DYNAMIC`実装ファイル (です。CPP) クラス。 `IMPLEMENT_DYNAMIC`マクロは、コンパイル時に 1 回だけ評価される必要があり、そのため、インターフェイス ファイルでは使用できません (です。複数のファイルに H) を含めること可能性があります。  
   
-#### <a name="_core_to_add_dynamic_creation_support"></a>動的な作成のサポートを追加するには  
+#### <a name="_core_to_add_dynamic_creation_support"></a> 動的な作成のサポートを追加するには  
   
 1.  クラスを派生`CObject`です。  
   
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  使用して、`IMPLEMENT_DYNCREATE`クラス実装ファイル内のマクロです。  
   
-#### <a name="_core_to_add_serialization_support"></a>シリアル化のサポートを追加するには  
+#### <a name="_core_to_add_serialization_support"></a> シリアル化のサポートを追加するには  
   
 1.  クラスを派生`CObject`です。  
   
@@ -88,5 +83,5 @@ ms.lasthandoff: 12/21/2017
   
  クラスを派生させる場合は、シリアル化を有効にする方法の詳細については`CObject`、記事を参照して[MFC のファイル](../mfc/files-in-mfc.md)と[シリアル化](../mfc/serialization-in-mfc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject からのクラスの派生](../mfc/deriving-a-class-from-cobject.md)

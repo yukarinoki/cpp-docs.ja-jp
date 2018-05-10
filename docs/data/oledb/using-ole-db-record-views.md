@@ -1,12 +1,9 @@
 ---
-title: "OLE DB レコード ビューの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB レコード ビューの使用 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa7cfd6fba45c3d221d22fc7b8938addeef09d1a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6cebf8a1c1130a33ffd07e2d23d65c55a2a67b34
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ole-db-record-views"></a>OLE DB レコード ビューの使用
 MFC アプリケーションで OLE DB 行セットのデータを表示する場合は、MFC クラスを使用する必要があります[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)です。 レコード ビュー オブジェクトから作成`COleDBRecordView`MFC コントロールのデータベース レコードを表示することができます。 レコード ビューから作成された OLE DB 行セット オブジェクトに直接接続して、ダイアログ フォーム ビューとは、`CRowset`テンプレート クラス。 行セット オブジェクトへのハンドルを取得するは単純です。  
@@ -45,6 +40,6 @@ CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();
   
  DDX 関数を使用することができます**COleDbRecordView**データベース レコード セットから直接データを取得し、ダイアログ コントロールで表示します。 使用する必要があります、 **ddx _\*** メソッド (など`DDX_Text`) ではなく、 **DDX_Field\*** 関数 (など`DDX_FieldText`) と**COleDbRecordView**.  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセサーの使用](../../data/oledb/using-accessors.md)   
  [COleDBRecordView クラス](../../mfc/reference/coledbrecordview-class.md)

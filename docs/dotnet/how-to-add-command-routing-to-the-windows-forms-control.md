@@ -1,31 +1,26 @@
 ---
-title: "方法: コマンドの追加にルーティングする Windows フォーム コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: コマンドの追加にルーティングする Windows フォーム コントロール |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>方法: Windows フォーム コントロールにコマンド ルーティングを追加する
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) MFC コマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理することを許可するユーザー コントロールにコマンドおよび更新コマンド UI メッセージをルーティングします。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
 8.  `singleMenuHandler` を呼び出すメニュー オプションを追加します。  
   
-     移動して**リソース ビュー** (Ctrl + Shift + E)、展開、**メニュー**フォルダー、およびをダブルクリック**[idr_mfc02type]**です。 これにより、メニュー エディターが表示されます。  
+     移動して**リソース ビュー** (Ctrl + Shift + E)、展開、**メニュー**フォルダー、およびをダブルクリック **[idr_mfc02type]** です。 これにより、メニュー エディターが表示されます。  
   
      下部にあるメニューのオプションを追加、**ビュー**メニュー。 メニュー オプションの ID を確認、**プロパティ**ウィンドウです。 ファイルを保存します。  
   
@@ -95,13 +90,13 @@ ms.lasthandoff: 12/21/2017
   
 9. プロジェクトをビルドして実行します。  
   
-     **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+     **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
      **デバッグ** メニューのをクリックして**デバッグなしで開始**です。  
   
      追加したメニュー オプションを選択します。 .dll 内のメソッドが呼び出されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ビューとして Windows フォーム ユーザー コントロールをホストしています。](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
  [関数のインターフェイス](../mfc/reference/icommandsource-interface.md)   
  [ICommandTarget インターフェイス](../mfc/reference/icommandtarget-interface.md)   

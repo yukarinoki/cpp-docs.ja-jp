@@ -1,12 +1,9 @@
 ---
-title: "クラスを含む CRect |Microsoft ドキュメント"
-ms.custom: 
+title: クラスを含む CRect |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRect
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a819cfc95588dc9225570a82b8a359d90a8f6b9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crect-class"></a>CRect クラス
 Windows のような[RECT](../../mfc/reference/rect-structure1.md)構造体。  
@@ -84,7 +79,7 @@ class CRect : public tagRECT
 |[CRect::Height](#height)|高さを計算`CRect`です。|  
 |[CRect::InflateRect](#inflaterect)|幅と高さの増加`CRect`です。|  
 |[CRect::IntersectRect](#intersectrect)|セット`CRect`の 2 つの四角形の交差部分に等しい。|  
-|[CRect::IsRectEmpty](#isrectempty)|指定するかどうか`CRect`が空です。 `CRect`空の場合は幅または高さは 0 です。|  
+|[CRect::IsRectEmpty](#isrectempty)|指定するかどうか`CRect`が空です。 `CRect` 空の場合は幅または高さは 0 です。|  
 |[CRect::IsRectNull](#isrectnull)|決定するかどうか、**上部**、**下部**、**左**、および**右**メンバー変数が 0 に等しいすべて。|  
 |[CRect::MoveToX](#movetox)|移動`CRect`に指定した x 座標を指定します。|  
 |[CRect::MoveToXY](#movetoxy)|移動`CRect`を指定した x 座標と y 座標。|  
@@ -107,8 +102,8 @@ class CRect : public tagRECT
 |[CRect::operator LPCRECT](#operator_lpcrect)|変換、`CRect`を**LPCRECT**です。|  
 |[CRect::operator LPRECT](#operator_lprect)|`CRect` を `LPRECT` に変換します。|  
 |[CRect::operator! =](#operator_neq)|指定するかどうか`CRect`が四角形と等しくないです。|  
-|[CRect::operator&amp;](#operator_amp)|交差部分を作成`CRect`四角形は、その結果を返しますと`CRect`です。|  
-|[CRect::operator&amp;=](#operator_amp_eq)|セット`CRect`の交差部分に等しい`CRect`と四角形。|  
+|[CRect::operator &amp;](#operator_amp)|交差部分を作成`CRect`四角形は、その結果を返しますと`CRect`です。|  
+|[CRect::operator &amp;=](#operator_amp_eq)|セット`CRect`の交差部分に等しい`CRect`と四角形。|  
 |[CRect::operator |](#operator_or)|和集合を作成`CRect`四角形は、その結果を返しますと`CRect`です。|  
 |[CRect::operator |=](#operator_or_eq)|セット`CRect`の共用体に等しい`CRect`と四角形。|  
 |[CRect::operator +](#operator_add)|指定したオフセットを追加`CRect`拡張または`CRect`し、その結果を返します`CRect`です。|  
@@ -118,7 +113,7 @@ class CRect : public tagRECT
 |[CRect::operator = =](#operator_eq_eq)|指定するかどうか`CRect`と等しい四角形をします。|  
   
 ## <a name="remarks"></a>コメント  
- `CRect`操作するメンバーの機能も含まれます`CRect`オブジェクトと Windows`RECT`構造体。  
+ `CRect` 操作するメンバーの機能も含まれます`CRect`オブジェクトと Windows`RECT`構造体。  
   
  A`CRect`オブジェクトは、関数のパラメーターとして渡すことができます限り、`RECT`構造体、 **LPCRECT**、または`LPRECT`渡すことができます。  
   
@@ -139,10 +134,10 @@ class CRect : public tagRECT
   
  `CRect`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atltypes.h  
   
-##  <a name="bottomright"></a>CRect::BottomRight  
+##  <a name="bottomright"></a>  CRect::BottomRight  
  座標はへの参照として返されます、 [CPoint](cpoint-class.md)オブジェクトに含まれている`CRect`です。  
   
 ```  
@@ -181,7 +176,7 @@ rect2.BottomRight() = ptLow;
    ASSERT(rect2 == CRect(10, 10, 180, 180));   
 ```
   
-##  <a name="centerpoint"></a>CRect::CenterPoint 
+##  <a name="centerpoint"></a>  CRect::CenterPoint 
  中心点を計算`CRect`左と右の値を追加して、2 つで除算し、上部と下部の値を追加する 2 で除算しています。  
   
 ```  
@@ -242,7 +237,7 @@ void CMyDlg::OnPaint()
 }
 ```
   
-##  <a name="copyrect"></a>CRect::CopyRect  
+##  <a name="copyrect"></a>  CRect::CopyRect  
  コピー、`lpSrcRect`に四角形`CRect`です。  
   
 ```  
@@ -275,7 +270,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
   
-##  <a name="crect"></a>CRect::CRect  
+##  <a name="crect"></a>  CRect::CRect  
  `CRect` オブジェクトを構築します。  
   
 ```  
@@ -315,7 +310,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  *左上端*  
  左上の位置を示す`CRect`です。  
   
- *bottomRight*  
+ *BottomRight*  
  右下の位置を示す`CRect`です。  
   
 ### <a name="remarks"></a>コメント  
@@ -361,8 +356,8 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  ASSERT(rect5 == rect4);  
 ```
   
-##  <a name="deflaterect"></a>CRect::DeflateRect  
- `DeflateRect`縮小`CRect`中心の方向、両側に移動しています。  
+##  <a name="deflaterect"></a>  CRect::DeflateRect  
+ `DeflateRect` 縮小`CRect`中心の方向、両側に移動しています。  
   
 ```  
 void DeflateRect(int x, int y) throw();
@@ -415,7 +410,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
    ASSERT(rect2.top == 12 && rect2.bottom == 46);   
 ```
   
-##  <a name="equalrect"></a>CRect::EqualRect  
+##  <a name="equalrect"></a>  CRect::EqualRect  
  指定するかどうか`CRect`が指定された四角形と等しい。  
   
 ```  
@@ -450,7 +445,7 @@ ASSERT(rect1.EqualRect(rect2));
  ASSERT(rect1.EqualRect(&test));  
 ```
 
-##  <a name="height"></a>CRect::Height  
+##  <a name="height"></a>  CRect::Height  
  高さを計算`CRect`下の値から最上位の値を減算します。  
   
 ```  
@@ -480,8 +475,8 @@ int nHt = rect.Height();
 ```
 
   
-##  <a name="inflaterect"></a>CRect::InflateRect  
- `InflateRect`拡張`CRect`中心から離れて、両側を移動することによってです。  
+##  <a name="inflaterect"></a>  CRect::InflateRect  
+ `InflateRect` 拡張`CRect`中心から離れて、両側を移動することによってです。  
   
 ```  
 void InflateRect(int x, int y) throw();
@@ -529,7 +524,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  ASSERT(rect == CRect(-50, -200, 350, 500));  
 ```
   
-##  <a name="intersectrect"></a>CRect::IntersectRect  
+##  <a name="intersectrect"></a>  CRect::IntersectRect  
  により、 `CRect` 2 つの既存の四角形の交差部分に等しい。  
   
 ```  
@@ -572,7 +567,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
  ASSERT(rectInter2 == CRect(125, 75, 150, 95));  
 ```
   
-##  <a name="isrectempty"></a>CRect::IsRectEmpty  
+##  <a name="isrectempty"></a>  CRect::IsRectEmpty  
  指定するかどうか`CRect`が空です。  
   
 ```  
@@ -603,7 +598,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ```
 
   
-##  <a name="isrectnull"></a>CRect::IsRectNull  
+##  <a name="isrectnull"></a>  CRect::IsRectNull  
  上、左、下かどうかを判断し、右の値`CRect`すべてが 0 です。  
   
 ```  
@@ -632,7 +627,7 @@ ASSERT(rectNone.IsRectNull());
  ASSERT(!rectNotNull.IsRectNull());  
 ```
   
-##  <a name="movetox"></a>CRect::MoveToX  
+##  <a name="movetox"></a>  CRect::MoveToX  
  指定された絶対 x 座標を四角形を移動するには、この関数を呼び出す*x*です。  
   
 ```  
@@ -656,7 +651,7 @@ rect.MoveToX(10);
    ASSERT(rect == CRect(10, 0, 110, 100));   
 ```
   
-##  <a name="movetoxy"></a>CRect::MoveToXY  
+##  <a name="movetoxy"></a>  CRect::MoveToXY  
  この関数では、四角形を移動するを絶対 x 座標と y 座標を指定します。  
   
 ```  
@@ -687,7 +682,7 @@ void MoveToXY(POINT point) throw();
 ```
 
   
-##  <a name="movetoy"></a>CRect::MoveToY  
+##  <a name="movetoy"></a>  CRect::MoveToY  
  絶対座標の y 座標で指定された四角形を移動するには、この関数を呼び出す*y*です。  
   
 ```  
@@ -711,7 +706,7 @@ void MoveToY(int y) throw();
 ```
 
   
-##  <a name="normalizerect"></a>CRect::NormalizeRect  
+##  <a name="normalizerect"></a>  CRect::NormalizeRect  
  正規化`CRect`高さと幅の両方に正の値ができるようにします。  
   
 ```  
@@ -719,10 +714,10 @@ void NormalizeRect() throw();
 ```  
   
 ### <a name="remarks"></a>コメント  
- 四角形は正規化の第 4 象限配置に、座標の Windows を通常使用されます。 `NormalizeRect`上位および下位の値を比較し、最上位は最下部より大きい場合は、それらをスワップします。 同様に、左が右側のより大きい場合、左と右の値を交換します。 この関数は、別のマッピング モードで処理する場合に便利ですし、反転された四角形。  
+ 四角形は正規化の第 4 象限配置に、座標の Windows を通常使用されます。 `NormalizeRect` 上位および下位の値を比較し、最上位は最下部より大きい場合は、それらをスワップします。 同様に、左が右側のより大きい場合、左と右の値を交換します。 この関数は、別のマッピング モードで処理する場合に便利ですし、反転された四角形。  
   
 > [!NOTE]
->  次`CRect`メンバー関数が正常に動作するために正規化された四角形を必要とします[高さ](#height)、[幅](#width)、[サイズ](#size)、 [ 。IsRectEmpty](#isrectempty)、 [PtInRect](#ptinrect)、 [EqualRect](#equalrect)、 [UnionRect](#unionrect)、[示します](#intersectrect)、 [SubtractRect](#subtractrect)、[演算子 = =](#operator_eq_eq)、[演算子! =](#operator_neq)、[演算子 &#124;](#operator_or)、[演算子 &#124; =](#operator_or_eq)、[演算子 (& a)](#operator_amp)、および[演算子 (& a) =](#operator_amp_eq)です。  
+>  次`CRect`メンバー関数が正常に動作するために正規化された四角形を必要とします[高さ](#height)、[幅](#width)、[サイズ](#size)、 [ 。IsRectEmpty](#isrectempty)、 [PtInRect](#ptinrect)、 [EqualRect](#equalrect)、 [UnionRect](#unionrect)、[示します](#intersectrect)、 [SubtractRect](#subtractrect)、[演算子 = =](#operator_eq_eq)、[演算子! =](#operator_neq)、[演算子&#124; ](#operator_or)、[演算子&#124;=](#operator_or_eq)、[演算子 (& a)](#operator_amp)、および[演算子 (& a) =](#operator_amp_eq)です。  
   
 ### <a name="example"></a>例  
 ```cpp  
@@ -737,7 +732,7 @@ rect1.NormalizeRect();
  ASSERT(rect1 == rect2);  
 ```
   
-##  <a name="offsetrect"></a>CRect::OffsetRect  
+##  <a name="offsetrect"></a>  CRect::OffsetRect  
  移動`CRect`指定されたオフセットします。  
   
 ```  
@@ -776,7 +771,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="operator_lpcrect"></a>CRect::operator LPCRECT 変換、`CRect`を[LPCRECT](../../mfc/reference/data-types-mfc.md)です。  
+##  <a name="operator_lpcrect"></a>  CRect::operator LPCRECT 変換、`CRect`を[LPCRECT](../../mfc/reference/data-types-mfc.md)です。  
 
   
 ```  
@@ -787,7 +782,7 @@ operator LPCRECT() const throw();
  この関数を使用する場合のアドレスが必要ありません (**&**) 演算子。 この演算子は渡す際に自動的に使用する`CRect`オブジェクトを要求する関数を**LPCRECT**です。  
   
 
-##  <a name="operator_lprect"></a>CRect::operator LPRECT  
+##  <a name="operator_lprect"></a>  CRect::operator LPRECT  
  変換、`CRect`を[LPRECT](../../mfc/reference/data-types-mfc.md)です。  
 
   
@@ -801,7 +796,7 @@ operator LPRECT() throw();
 ### <a name="example"></a>例  
  例を参照して[CRect::operator LPCRECT](#operator_lpcrect)です。  
   
-##  <a name="operator_eq"></a>CRect::operator =  
+##  <a name="operator_eq"></a>  CRect::operator =  
  割り当てます*srcRect*に`CRect`です。  
   
 ```  
@@ -826,7 +821,7 @@ void operator=(const RECT& srcRect) throw();
 ```
 
   
-##  <a name="operator_eq_eq"></a>CRect::operator = =  
+##  <a name="operator_eq_eq"></a>  CRect::operator = =  
  決定するかどうか`rect`と等しい`CRect`左と右下隅の座標を比較することによってです。  
   
 ```  
@@ -868,7 +863,7 @@ ASSERT(rect1 == rect2);
 ```
 
   
-##  <a name="operator_neq"></a>CRect::operator! =  
+##  <a name="operator_neq"></a>  CRect::operator! =  
  決定するかどうか`rect`は等しくありません`CRect`左と右下隅の座標を比較することによってです。  
   
 ```  
@@ -909,7 +904,7 @@ ASSERT(rect1 != rect3);
  ASSERT(rect3 != test);  
 ```
   
-##  <a name="operator_add_eq"></a>CRect::operator + =  
+##  <a name="operator_add_eq"></a>  CRect::operator + =  
  最初の 2 つのオーバー ロードは、移動`CRect`指定されたオフセットします。  
   
 ```  
@@ -948,7 +943,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);   
 ```
   
-##  <a name="operator_-_eq"></a>CRect::operator =  
+##  <a name="operator_-_eq"></a>  CRect::operator =  
  最初の 2 つのオーバー ロードは、移動`CRect`指定されたオフセットします。  
   
 ```  
@@ -987,7 +982,7 @@ void operator-=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rectResult);   
 ```
   
-##  <a name="operator_amp_eq"></a>CRect::operator&amp;=  
+##  <a name="operator_amp_eq"></a>  CRect::operator &amp;=  
  セット`CRect`の交差部分に等しい`CRect`と`rect`です。  
   
 ```  
@@ -1007,7 +1002,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="example"></a>例  
  例を参照して[CRect::IntersectRect](#intersectrect)です。  
   
-##  <a name="operator_or_eq"></a>CRect::operator &#124; =  
+##  <a name="operator_or_eq"></a>  CRect::operator &#124;=  
  セット`CRect`の共用体に等しい`CRect`と`rect`です。  
   
 ```  
@@ -1040,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 ```
 
   
-##  <a name="operator_add"></a>CRect::operator +  
+##  <a name="operator_add"></a>  CRect::operator +  
  最初の 2 つのオーバー ロードを返す、`CRect`と等しいオブジェクト`CRect`指定したオフセット位置によって転置。  
   
 ```  
@@ -1079,7 +1074,7 @@ CRect operator+(SIZE size) const throw();
 ```
 
   
-##  <a name="operator_-"></a>CRect::operator-  
+##  <a name="operator_-"></a>  CRect::operator-  
  最初の 2 つのオーバー ロードを返す、`CRect`と等しいオブジェクト`CRect`指定したオフセット位置によって転置。  
   
 ```  
@@ -1118,7 +1113,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```
 
   
-##  <a name="operator_amp"></a>CRect::operator&amp;  
+##  <a name="operator_amp"></a>  CRect::operator &amp;  
  返します、`CRect`の積集合は`CRect`と*rect2*です。  
   
 ```  
@@ -1150,7 +1145,7 @@ CRect operator&(const RECT& rect2) const throw();
 ```
 
   
-##  <a name="operator_or"></a>CRect::operator &#124;です。  
+##  <a name="operator_or"></a>  CRect::operator&#124;  
  返します、`CRect`の和集合である`CRect`と*rect2*です。  
   
 ```   
@@ -1188,7 +1183,7 @@ rect2) const throw();
 ```
 
   
-##  <a name="ptinrect"></a>CRect::PtInRect  
+##  <a name="ptinrect"></a>  CRect::PtInRect  
  内で指定したポイントがあるかどうかを判断`CRect`です。  
   
 ```   
@@ -1235,7 +1230,7 @@ BOOL PtInRect(POINT point) const throw();
  ASSERT(rect.PtInRect(pt));  
 ```
   
-##  <a name="setrect"></a>CRect::SetRect  
+##  <a name="setrect"></a>  CRect::SetRect  
  寸法を設定`CRect`指定された座標。  
   
 ```   
@@ -1267,7 +1262,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
   
-##  <a name="setrectempty"></a>CRect::SetRectEmpty  
+##  <a name="setrectempty"></a>  CRect::SetRectEmpty  
  により、 `CRect` null 四角形によってすべての座標をゼロに設定します。  
   
 ```  
@@ -1283,7 +1278,7 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());  
 ```
   
-##  <a name="size"></a>CRect::SIZE 
+##  <a name="size"></a>  CRect::SIZE 
  `cx`と`cy`の幅と高さに戻り値のメンバーが含まれて`CRect`です。  
   
 ```  
@@ -1306,7 +1301,7 @@ CSize Size() const throw();
  ASSERT(sz.cx == 40 && sz.cy == 40);  
 ```
 
-##  <a name="subtractrect"></a>CRect::SubtractRect  
+##  <a name="subtractrect"></a>  CRect::SubtractRect  
  ディメンションは、 **CRect**の減算に等しい`lpRectSrc2`から`lpRectSrc1`です。  
   
 ```  
@@ -1330,7 +1325,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
   
  たとえば場合、`lpRectSrc1`された (10,10、100,100) および`lpRectSrc2`された (50,50、150,150)、四角形を指す`lpRectSrc1`は変更されず、関数が返されるときにします。 場合`lpRectSrc1`されました (10,10、100,100) と`lpRectSrc2`された (50,10、150,150)、ただし、四角形によって示される`lpRectSrc1`座標 (10, 10, 50,100) が含まれます関数が返されます。  
   
- `SubtractRect`同じではありません[演算子 -](#operator_-)も[演算子-=](#operator_-_eq)です。 これまでに呼び出してこれらの演算子のどちらも`SubtractRect`します。  
+ `SubtractRect` 同じではありません[演算子 -](#operator_-)も[演算子-=](#operator_-_eq)です。 これまでに呼び出してこれらの演算子のどちらも`SubtractRect`します。  
   
 > [!NOTE]
 >  四角形の両方を正規化する必要がありますか、この関数が失敗する可能性があります。 呼び出すことができます[NormalizeRect](#normalizerect)をこの関数を呼び出す前に、四角形を正規化します。  
@@ -1368,7 +1363,7 @@ CRect   rectResult(10, 10, 50, 100);
    ASSERT(rectResult == rectOut);   
 ```
   
-##  <a name="topleft"></a>CRect::TopLeft  
+##  <a name="topleft"></a>  CRect::TopLeft  
  座標はへの参照として返されます、 [CPoint](cpoint-class.md)オブジェクトに含まれている`CRect`です。  
   
 ```  
@@ -1385,7 +1380,7 @@ const CPoint& TopLeft() const throw();
 ### <a name="example"></a>例  
  例を参照して[CRect::CenterPoint](#centerpoint)です。  
   
-##  <a name="unionrect"></a>CRect::UnionRect  
+##  <a name="unionrect"></a>  CRect::UnionRect  
  ディメンションは、 `CRect` 2 つのソース四角形の和集合に等しい。  
   
 ```  
@@ -1421,7 +1416,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
    ASSERT(rectResult == rect3);   
 ```
  
-##  <a name="width"></a>CRect::Width  
+##  <a name="width"></a>  CRect::Width  
  幅を計算`CRect`右の値から左の値を減算します。  
   
 ```  
@@ -1445,7 +1440,7 @@ int nWid = rect.Width();
    // nWid is now 60
    ASSERT(nWid == 60);   
 ```
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CPoint クラス](cpoint-class.md)   
  [CSize クラス](csize-class.md)   
  [RECT](../../mfc/reference/rect-structure1.md)

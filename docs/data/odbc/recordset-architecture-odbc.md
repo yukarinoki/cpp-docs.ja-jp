@@ -1,13 +1,10 @@
 ---
-title: "レコード セット: 構造 (ODBC) |Microsoft ドキュメント"
-ms.custom: 
+title: 'レコード セット: 構造 (ODBC) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 169d371327137cf4f51ed10429eb5e9708a0e088
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5be3ec16ec01a6c6db2e24b1b6a6260f3a44bfec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-architecture-odbc"></a>レコードセット: レコードセットの構造 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチが実装されている場合は、アーキテクチャは似ています。 相違点を理解するのを参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)です。  
   
-##  <a name="_core_a_sample_class"></a>サンプル クラス  
+##  <a name="_core_a_sample_class"></a> サンプル クラス  
  使用すると、 [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)から**クラスの追加**から派生したレコード セット クラスを宣言するウィザード`CRecordset`、結果として得られるクラスには、次に示す単純な一般的な構造クラス:  
   
 ```  
@@ -66,14 +61,14 @@ public:
   
  クラスの先頭には、ウィザードの書き込みます[フィールド データ メンバーの](#_core_field_data_members)します。 クラスを作成する場合は、1 つまたは複数のフィールド データ メンバーを指定する必要があります。 クラスは、パラメーター化のサンプルとクラスが (データ メンバーと`m_strIDParam`)、手動で追加する必要があります[パラメーター データ メンバー](#_core_parameter_data_members)です。 ウィザードでは、クラスにパラメーターを追加することはできません。  
   
-##  <a name="_core_field_data_members"></a>フィールド データ メンバー  
+##  <a name="_core_field_data_members"></a> フィールド データ メンバー  
  レコード セット クラスの最も重要なメンバーは、フィールド データ メンバーです。 データ ソースから選択する列ごとには、クラスには、その列の適切なデータ型のデータ メンバーが含まれています。 たとえば、[クラスのサンプル](#_core_a_sample_class)これの先頭に表示されるトピックの内容は次の 2 つのフィールド データ メンバーは、両方の種類の`CString`という`m_strCourseID`と`m_strCourseTitle`です。  
   
  フレームワークが自動的に現在のレコードの列をバインド レコード セットを選択すると、一連のレコード、(後、**開く**呼び出し、最初のレコードが現在) オブジェクトのフィールド データ メンバーにします。 つまり、フレームワークは、レコードの列の内容を格納するバッファーとして適切なフィールド データ メンバーを使用します。  
   
  ユーザーは、新しいレコードをスクロールすると、フレームワークは、現在のレコードを表すフィールド データ メンバーを使用します。 フレームワークは、前のレコードの値を置換、フィールド データ メンバーを更新します。 フィールド データ メンバーは、現在のレコードを更新し、新しいレコードを追加するためにも使われます。 レコードを更新するプロセスの一環として、適切なフィールド データ メンバーまたはメンバーに直接値を割り当てることによって更新値を指定します。  
   
-##  <a name="_core_parameter_data_members"></a>パラメーター データ メンバー  
+##  <a name="_core_parameter_data_members"></a> パラメーター データ メンバー  
  クラスがパラメーター化された場合は、1 つまたは複数のパラメーター データ メンバーがあります。 パラメーター化されたクラスでは、基にレコード セットのクエリ情報を取得または実行時に計算できます。  
   
  通常、パラメーターでは、次の例のように、選択範囲を絞り込むことができます。 に基づいて、[クラスのサンプル](#_core_a_sample_class)このトピックの冒頭には、レコード セット オブジェクトは、次の SQL ステートメントを実行します。  
@@ -96,13 +91,13 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 > [!NOTE]
 >  パラメーターの順序が重要です。 これに関する情報とパラメーターの詳細については、次を参照してください。[レコード セット: レコード セット (ODBC) のパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)です。  
   
-##  <a name="_core_using_m_nfields_and_m_nparams"></a>M_nFields および m_nParams を使用してください。  
+##  <a name="_core_using_m_nfields_and_m_nparams"></a> M_nFields および m_nParams を使用してください。  
 
  初期化ウィザードでは、クラスのコンス トラクターを書き込み、ときに、 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)の数を指定するデータ メンバー[フィールド データ メンバーの](#_core_field_data_members)クラス。 追加する場合[パラメーター](#_core_parameter_data_members) 、クラスに、初期化を追加する必要がありますも、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)データ メンバーは、パラメーター データ メンバーの数を指定します。 フレームワークは、データ メンバーが使用するこれらの値を使用します。  
   
  詳細と例については、次を参照してください。[レコード フィールド エクス チェンジ: RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
  [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

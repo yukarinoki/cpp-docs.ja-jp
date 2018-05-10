@@ -1,13 +1,10 @@
 ---
-title: "CObject からクラスを派生する |Microsoft ドキュメント"
-ms.custom: 
+title: CObject からクラスを派生する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CObject
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e151d8c3ec44286807baf5e68d4e4eac17e306
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d0b629617c1592387f3f959996fd3e9837242ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-a-class-from-cobject"></a>CObject からのクラスの派生
 この記事からクラスを派生する最小手順を説明する[CObject](../mfc/reference/cobject-class.md)です。 その他の`CObject`クラス アーティクル固有の仕様を活用するために必要な手順を説明する`CObject`シリアル化および診断のデバッグのサポートなどの機能です。  
@@ -76,6 +71,6 @@ ms.lasthandoff: 12/21/2017
   
  アーティクル[機能のレベルを指定する](../mfc/specifying-levels-of-functionality.md)ランタイム クラス情報、動的なオブジェクトの作成、およびシリアル化など、機能の他のレベルを指定する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject の使い方](../mfc/using-cobject.md)
 

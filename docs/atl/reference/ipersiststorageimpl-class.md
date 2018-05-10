@@ -1,12 +1,9 @@
 ---
-title: "IPersistStorageImpl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: IPersistStorageImpl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistStorageImpl
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - storage, ATL
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bb02425c906a9d468d53691469dd7e418afcad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18f03ba235fdfc14dba22f1759240bd5fb72bafd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl クラス
 このクラスは、実装、[すること](http://msdn.microsoft.com/library/windows/desktop/ms679731)インターフェイスです。  
@@ -68,7 +63,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 |[IPersistStorageImpl::SaveCompleted](#savecompleted)|そのストレージ オブジェクトへの書き込みを通常モードに戻ることはできますをオブジェクトに通知します。 ATL の実装を返します`S_OK`です。|  
   
 ## <a name="remarks"></a>コメント  
- `IPersistStorageImpl`実装する、[すること](http://msdn.microsoft.com/library/windows/desktop/ms679731)インターフェイス、これにより、クライアントは要求をオブジェクトの負荷と記憶域を使用して、永続的なデータを保存します。  
+ `IPersistStorageImpl` 実装する、[すること](http://msdn.microsoft.com/library/windows/desktop/ms679731)インターフェイス、これにより、クライアントは要求をオブジェクトの負荷と記憶域を使用して、永続的なデータを保存します。  
   
  このクラスの実装には、クラスが必要です。`T`の実装する、`IPersistStreamInit`インターフェイスを介して使用できる`QueryInterface`です。 つまり、通常そのクラス`T`から派生する必要があります[IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)のエントリを提供`IPersistStreamInit`で、 [COM マップ](http://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)、使用して、 [のプロパティマップ](http://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427)クラスの永続的なデータを記述します。  
   
@@ -79,10 +74,10 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
   
  `IPersistStorageImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
-##  <a name="getclassid"></a>IPersistStorageImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistStorageImpl::GetClassID  
  オブジェクトの CLSID を取得します。  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>コメント  
  参照してください[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK にします。  
   
-##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
+##  <a name="handsoffstorage"></a>  IPersistStorageImpl::HandsOffStorage  
  オブジェクトのすべての記憶域オブジェクトを解放し、HandsOff モードに入るように指示します。  
   
 ```
@@ -105,7 +100,7 @@ STDMETHOD(HandsOffStorage)(void);
 ### <a name="remarks"></a>コメント  
  参照してください[IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742) Windows SDK にします。  
   
-##  <a name="initnew"></a>IPersistStorageImpl::InitNew  
+##  <a name="initnew"></a>  IPersistStorageImpl::InitNew  
  新しい記憶域を初期化します。  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(InitNew)(IStorage*);
   
  参照してください[IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194) Windows SDK にします。  
   
-##  <a name="isdirty"></a>IPersistStorageImpl::IsDirty  
+##  <a name="isdirty"></a>  IPersistStorageImpl::IsDirty  
  最後に保存してから、オブジェクトのデータが変更されたかどうかを確認します。  
   
 ```
@@ -129,7 +124,7 @@ STDMETHOD(IsDirty)(void);
   
  参照してください[IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) Windows SDK にします。  
   
-##  <a name="load"></a>IPersistStorageImpl::Load  
+##  <a name="load"></a>  IPersistStorageImpl::Load  
  指定された記憶域からオブジェクトのプロパティを読み込みます。  
   
 ```
@@ -141,7 +136,7 @@ STDMETHOD(Load)(IStorage* pStorage);
   
  参照してください[IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557) Windows SDK にします。  
   
-##  <a name="save"></a>IPersistStorageImpl::Save  
+##  <a name="save"></a>  IPersistStorageImpl::Save  
  オブジェクトのプロパティを指定された記憶域に保存します。  
   
 ```
@@ -153,7 +148,7 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
   
  参照してください[IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680) Windows SDK にします。  
   
-##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
+##  <a name="savecompleted"></a>  IPersistStorageImpl::SaveCompleted  
  そのストレージ オブジェクトへの書き込みを通常モードに戻ることはできますをオブジェクトに通知します。  
   
 ```
@@ -166,7 +161,7 @@ STDMETHOD(SaveCompleted)(IStorage*);
 ### <a name="remarks"></a>コメント  
  参照してください[IPersistStorage:SaveCompleted](http://msdn.microsoft.com/library/windows/desktop/ms679713) Windows SDK にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [記憶域とストリーム](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
  [IPersistStreamInitImpl クラス](../../atl/reference/ipersiststreaminitimpl-class.md)   
  [IPersistPropertyBagImpl クラス](../../atl/reference/ipersistpropertybagimpl-class.md)   

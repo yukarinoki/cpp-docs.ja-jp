@@ -1,12 +1,9 @@
 ---
-title: "cancellation_token_source クラス |Microsoft ドキュメント"
-ms.custom: 
+title: cancellation_token_source クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token_source
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8512ee42a86ec706626dac765a725dfb994eb3d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source クラス
 `cancellation_token_source` クラスは、取り消し可能な操作を取り消す機能を表します。  
@@ -54,7 +49,7 @@ class cancellation_token_source;
   
 |名前|説明|  
 |----------|-----------------|  
-|[cancel](#cancel)|トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。|  
+|[キャンセル](#cancel)|トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。|  
 |[create_linked_source](#create_linked_source)|オーバーロードされます。 指定されたトークンが取り消されたときに取り消される `cancellation_token_source` を作成します。|  
 |[get_token](#get_token)|このソースに関連付けられたキャンセル トークンを返します。 返されたトークンは、取り消すためにポーリングしたり、取り消しが発生した場合にコールバックを指定したりできます。|  
   
@@ -69,12 +64,12 @@ class cancellation_token_source;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `cancellation_token_source`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** pplcancellation_token.h  
   
  **名前空間:** concurrency  
   
-##  <a name="dtor"></a> ~cancellation_token_source 
+##  <a name="dtor"></a> ~ cancellation_token_source 
 
 ```
 ~cancellation_token_source();
@@ -175,5 +170,5 @@ bool operator== (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>戻り値  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

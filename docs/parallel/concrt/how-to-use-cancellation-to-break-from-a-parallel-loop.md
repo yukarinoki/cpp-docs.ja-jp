@@ -1,30 +1,25 @@
 ---
-title: "方法: キャンセルを使用して並列ループを中断する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: キャンセルを使用して並列ループを中断する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6b4a216609c788978e4b857b5996587f899f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1b5153c225c3bb3a67be4265cf8303da2121c2b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>方法: キャンセル処理を使用して並列ループを中断する
 この例では、キャンセルを使用して基本的な並列検索アルゴリズムを実装する方法を示します。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe/EHsc 並列-配列-search.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PPL における取り消し処理](cancellation-in-the-ppl.md)   
  [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_for 関数](reference/concurrency-namespace-functions.md#parallel_for)   

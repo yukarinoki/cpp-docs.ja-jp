@@ -1,12 +1,9 @@
 ---
-title: "COleDataSource クラス |Microsoft ドキュメント"
-ms.custom: 
+title: COleDataSource クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataSource
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce9abdccba549e0b0fd3c55bfb7fbaee6a11e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledatasource-class"></a>COleDataSource クラス
 OLE アプリケーションが、クリップボード操作やドラッグ アンド ドロップ操作のようなデータ転送操作中に用意するデータを置くキャッシュの役目をします。  
@@ -107,10 +102,10 @@ class COleDataSource : public CCmdTarget
   
  `COleDataSource`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="cachedata"></a>取得  
+##  <a name="cachedata"></a>  取得  
  この関数では、データが提供するデータの中に転送操作の形式を指定します。  
   
 ```  
@@ -143,7 +138,7 @@ void CacheData(
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  この関数では、データが提供するデータの中に転送操作の形式を指定します。  
   
 ```  
@@ -172,14 +167,14 @@ void CacheGlobalData(
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  `COleDataSource` オブジェクトを構築します。  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
  この関数では、データが提供するデータの中に転送操作の形式を指定します。  
   
 ```  
@@ -206,7 +201,7 @@ void DelayRenderData(
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  この関数では、データが提供するデータの中に転送操作の形式を指定します。  
   
 ```  
@@ -233,7 +228,7 @@ void DelayRenderFileData(
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  データ ソースの内容の変更をサポートするためには、この関数を呼び出します。  
   
 ```  
@@ -250,13 +245,13 @@ void DelaySetData(
  指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)置き換えられるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定`cfFormat`です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
   
 ### <a name="remarks"></a>コメント  
- [データ変更](#onsetdata)このような場合に、フレームワークによって呼び出されますが。 フレームワークからのデータ ソースが返されるときにだけ使用[は](../../mfc/reference/coleserveritem-class.md#getdatasource)します。 場合`DelaySetData`は呼び出されません、`OnSetData`関数は呼び出されません。 `DelaySetData`クリップボードの内容がそれぞれ呼び出す必要がありますまたは**FORMATETC**をサポートする形式。  
+ [データ変更](#onsetdata)このような場合に、フレームワークによって呼び出されますが。 フレームワークからのデータ ソースが返されるときにだけ使用[は](../../mfc/reference/coleserveritem-class.md#getdatasource)します。 場合`DelaySetData`は呼び出されません、`OnSetData`関数は呼び出されません。 `DelaySetData` クリップボードの内容がそれぞれ呼び出す必要がありますまたは**FORMATETC**をサポートする形式。  
   
  詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内の構造。  
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="dodragdrop"></a>された  
+##  <a name="dodragdrop"></a>  された  
  呼び出す、`DoDragDrop`で通常、このデータ ソースのドラッグ アンド ドロップ操作を実行するメンバー関数、 [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)ハンドラー。  
   
 ```  
@@ -270,13 +265,13 @@ DROPEFFECT DoDragDrop(
  `dwEffects`  
  ドラッグ アンド ドロップ操作ができるこのデータ ソース。 次の 1 つ以上を指定できます。  
   
-- `DROPEFFECT_COPY`コピー操作を実行する可能性があります。  
+- `DROPEFFECT_COPY` コピー操作を実行する可能性があります。  
   
-- `DROPEFFECT_MOVE`移動操作を実行できませんでした。  
+- `DROPEFFECT_MOVE` 移動操作を実行できませんでした。  
   
-- `DROPEFFECT_LINK`ドロップされたデータから、元のデータへのリンクを確立できませんでした。  
+- `DROPEFFECT_LINK` ドロップされたデータから、元のデータへのリンクを確立できませんでした。  
   
-- `DROPEFFECT_SCROLL`ドラッグ スクロール操作が行われる可能性を示します。  
+- `DROPEFFECT_SCROLL` ドラッグ スクロール操作が行われる可能性を示します。  
   
  `lpRectStartDrag`  
  実際には、ドラッグの開始位置を定義する四角形を指すポインター。 詳細については、「解説」を参照してください。  
@@ -302,7 +297,7 @@ DROPEFFECT DoDragDrop(
   
  詳細については、記事を参照してください。[ドラッグ アンド ドロップ: ドロップ ソースの実装](../../mfc/drag-and-drop-implementing-a-drop-source.md)です。  
   
-##  <a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>  COleDataSource::Empty  
  空には、この関数を呼び出して、`COleDataSource`データのオブジェクト。  
   
 ```  
@@ -314,7 +309,7 @@ void Empty();
   
  詳細については、次を参照してください。 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK に含まれています。  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  データをクリップボードにし、アプリケーションのシャット ダウン後に、クリップボードからデータを貼り付けすることができますをレンダリングします。  
   
 ```  
@@ -324,7 +319,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>コメント  
  使用して[SetClipboard](#setclipboard)をクリップボードにデータを格納します。  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
  以降、クリップボードのデータが変更されたかどうかを判断[SetClipboard](#setclipboard)と、最後に呼び出された場合は、現在の所有者を識別します。  
   
 ```  
@@ -334,7 +329,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>戻り値  
  現在、クリップボードにデータ ソースまたは**NULL**クリップボードにコピーがない場合、またはクリップボードが呼び出し元アプリケーションによって所有されていません。  
   
-##  <a name="onrenderdata"></a>と  
+##  <a name="onrenderdata"></a>  と  
  指定された形式でデータを取得するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -362,7 +357,7 @@ virtual BOOL OnRenderData(
   
  詳細については、次を参照してください、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)と[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)構造体、 [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列挙型、および[IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) 。windows SDK。  
   
-##  <a name="onrenderfiledata"></a>と  
+##  <a name="onrenderfiledata"></a>  と  
  指定されたストレージ メディア ファイルは、ときに、指定された形式でデータを取得するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -388,7 +383,7 @@ virtual BOOL OnRenderFileData(
   
  詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)構造と[IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK に含まれています。  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  指定されたストレージ メディアが使用するグローバル メモリに指定された形式でデータを取得するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -416,7 +411,7 @@ virtual BOOL OnRenderGlobalData(
   
  詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)構造と[IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK に含まれています。  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  設定または内のデータを置換するためにフレームワークによって呼び出される、`COleDataSource`指定された形式でのオブジェクト。  
   
 ```  
@@ -446,14 +441,14 @@ virtual BOOL OnSetData(
   
  詳細については、次を参照してください、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)と[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)構造体および[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)と[IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) 。Windows SDK で機能します。  
   
-##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  含まれるデータを格納、 `COleDataSource` 、次の関数の 1 つを呼び出した後に、クリップボード上のオブジェクト: [CacheData](#cachedata)、[使う](#cacheglobaldata)、[に](#delayrenderdata)、または[DelayRenderFileData](#delayrenderfiledata)です。  
   
 ```  
 void SetClipboard();
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   
  [MFC サンプル OCLIENT](../../visual-cpp-samples.md)   
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   

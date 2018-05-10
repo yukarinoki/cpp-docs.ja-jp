@@ -1,13 +1,10 @@
 ---
-title: "プロパティ シートを使用して、アプリケーションで |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ シートを使用して、アプリケーションで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>アプリケーションでのプロパティ シートの使用
 プロパティ シートをアプリケーションで使用するには、次の手順を実行します。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
     -   呼び出す[が](../mfc/reference/cpropertysheet-class.md#addpage)ページごとにします。  
   
-     通常、オブジェクトを作成する、`CPropertySheet`も作成、`CPropertyPage`このステップでのオブジェクト。 ただし、実装する場合、 `CPropertySheet`-派生クラスに埋め込むことができます、`CPropertyPage`内のオブジェクト、`CPropertySheet`オブジェクトと呼び出し`AddPage`からページごとに、 `CPropertySheet`-派生したクラスのコンス トラクターです。 `AddPage`追加、`CPropertyPage`オブジェクトのページのプロパティ シートの一覧には、そのページは、ウィンドウを実際には作成されません。 そのため、ウィンドウの作成、プロパティ シートを呼び出すまで待機する必要はありません`AddPage`; 呼び出せます`AddPage`プロパティ シートのコンス トラクターからです。  
+     通常、オブジェクトを作成する、`CPropertySheet`も作成、`CPropertyPage`このステップでのオブジェクト。 ただし、実装する場合、 `CPropertySheet`-派生クラスに埋め込むことができます、`CPropertyPage`内のオブジェクト、`CPropertySheet`オブジェクトと呼び出し`AddPage`からページごとに、 `CPropertySheet`-派生したクラスのコンス トラクターです。 `AddPage` 追加、`CPropertyPage`オブジェクトのページのプロパティ シートの一覧には、そのページは、ウィンドウを実際には作成されません。 そのため、ウィンドウの作成、プロパティ シートを呼び出すまで待機する必要はありません`AddPage`; 呼び出せます`AddPage`プロパティ シートのコンス トラクターからです。  
   
      既定では、プロパティ シート、プロパティ シートの 1 つの行に収まらないのタブがある場合、タブは複数の行に積み重ねられます。 重なりを無効にするを呼び出す[CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)パラメーターを設定した**FALSE**です。 呼び出す必要があります`EnableStackedTabs`プロパティ シートを作成する場合。  
   
@@ -73,6 +68,6 @@ ms.lasthandoff: 12/21/2017
   
  プロパティ シートを使用する方法の例は、MFC 標準サンプルを参照してください。 [PROPDLG](../visual-cpp-samples.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティ シート](../mfc/property-sheets-mfc.md)
 

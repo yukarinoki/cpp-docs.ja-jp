@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicaccessor::getcolumninfo |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicaccessor::getcolumninfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetColumnInfo
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetColumnInfo method
 ms.assetid: 7f2102ea-b7cc-4714-812f-3ca2857f4b9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9f311e9fc5330a68edba4fd5029e97b75033406
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0c9fe862f08fc9ecfa280dcbb55f48e14427d6ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetcolumninfo"></a>CDynamicAccessor::GetColumnInfo
 ほとんどのコンシューマーが必要な列のメタデータを返します。  
@@ -63,8 +58,8 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 ## <a name="remarks"></a>コメント  
  参照してください[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)で、 *OLE DB プログラマーズ リファレンス*については、データ型に**DBORDINAL**、 **DBCOLUMNINFO**、および**OLECHAR**です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)

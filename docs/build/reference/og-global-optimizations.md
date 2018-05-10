@@ -2,12 +2,9 @@
 title: -Og (グローバルの最適化) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 09/22/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GlobalOptimizations
 - /og
@@ -22,21 +19,19 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 196e89a958ce49bf5e0087d98d2f40ada210cc87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="og-global-optimizations"></a>/Og (グローバルの最適化)
 
-使用しないでください。 ローカルおよびグローバルの最適化は、自動レジスタ割り当て、およびループ最適化します。 いずれかを使用することをお勧め[/O1 (サイズを最小限に抑える)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/O2 (速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)代わりにします。
+非推奨。 ローカルおよびグローバルの最適化は、自動レジスタ割り当て、およびループ最適化します。 いずれかを使用することをお勧め[/O1 (サイズを最小限に抑える)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/O2 (速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)代わりにします。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 
 **/Og**は推奨されなくなりました。 これらの最適化は既定では一般に有効になりました。 最適化の詳細については、次を参照してください。 [/O1、/O2 (サイズの最小化、最大速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最も速度の最適化)](../../build/reference/ox-full-optimization.md)です。
 
-次の最適化が 利用可能な**/Og**:
+次の最適化が 利用可能な **/Og**:
 
 - ローカルおよびグローバルの共通部分式の削除
 
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
 
 - 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)
 

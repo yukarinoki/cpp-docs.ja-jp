@@ -1,12 +1,9 @@
 ---
-title: "配列 (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: 配列 (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>配列 (C++)
 配列は同様なオブジェクトのコレクションです。 配列の最も簡単な例は、次のシーケンスで宣言できるベクターです。  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. 初期化子 (省略可能)。  参照してください[初期化子](../cpp/initializers.md)です。  
   
- 配列の要素の数は、定数式によって取得できます。 配列の最初の要素は、ゼロ番目の要素と、最後の要素は、(*n*-1) 要素、場所 *n* 配列が格納できる要素の数です。 *定数式*整数型でなければなりませんし、0 より大きくなければなりません。 サイズが 0 の配列は配列の最後のフィールドが場合にのみ、`struct`または**共用体**Microsoft 拡張機能 (/Ze) が有効になっているとします。  
+ 配列の要素の数は、定数式によって取得できます。 配列の最初の要素は、ゼロ番目の要素と、最後の要素は、(*n*-1) 要素、場所*n*配列が格納できる要素の数です。 *定数式*整数型でなければなりませんし、0 より大きくなければなりません。 サイズが 0 の配列は配列の最後のフィールドが場合にのみ、`struct`または**共用体**Microsoft 拡張機能 (/Ze) が有効になっているとします。  
   
  次の例では、実行時に配列を定義する方法を示します。  
   
@@ -92,10 +87,10 @@ int i2[5][7];
   
  これは、5 行 7 列の 2 次元行列に概念的に並べられる `int` 型の配列を指定します。  
   
- ![マルチ &#45;の概念レイアウト; 次元配列](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![複数の概念レイアウト&#45;次元配列](../cpp/media/vc38rc1.gif "vc38RC1")  
 多次元配列の概念レイアウト  
   
- 初期化子リストを持つ多次元配列の宣言で (」の説明に従って[初期化子](../cpp/initializers.md))、最初の次元の境界を指定する定数式を省略することができます。 例:  
+ 初期化子リストを持つ多次元配列の宣言で (」の説明に従って[初期化子](../cpp/initializers.md))、最初の次元の境界を指定する定数式を省略することができます。 例えば:  
   
 ```  
 // arrays2.cpp  
@@ -180,5 +175,5 @@ The minimum cost to Market 3 is: 17.29
 ## <a name="comments"></a>コメント  
  `FindMinToMkt` 関数は、新しいファクトリを追加してもコード変更の必要はなく、再コンパイルだけすればいいように書かれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  

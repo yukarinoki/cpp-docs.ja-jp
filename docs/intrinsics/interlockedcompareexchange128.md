@@ -1,12 +1,9 @@
 ---
-title: _InterlockedCompareExchange128 | Microsoft Docs
-ms.custom: 
+title: _InterlockedCompareExchange128 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2850be4b93738c61e22c5ca841e07f1901ec01e2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 **Microsoft 固有の仕様**  
@@ -63,7 +58,7 @@ unsigned char _InterlockedCompareExchange128(
   
  比較対照値が、移行先の元の値と等しくない場合は 0 を返します。 変換先の値は変更されず、比較対照値の値が変換先の値で上書きされます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -133,9 +128,9 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```  
   
 **Microsoft 固有の仕様はここまで**  
- Copyright 2007 by Advanced Micro Devices, Inc.All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
+ 高度なマイクロ デバイス, Inc. によって copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. のアクセス許可を持つ再現  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [_InterlockedCompareExchange の組み込み関数](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

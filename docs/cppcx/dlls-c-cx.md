@@ -1,24 +1,19 @@
 ---
-title: "Dll (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: Dll (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/06/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16b7ed16ec128f1fbf67d1b62e974ccd7ea5213b
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 39c334c659980dccdca670ab91501f0e30c4e6d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -32,7 +27,7 @@ Visual Studio を使用して、標準の Win32 DLL または Windows ランタ�
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>サードパーティの Windows ランタイム コンポーネント プロジェクトのバイナリを参照するには
 
-1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]**をクリックします。 **[共通プロパティ]** ページで、 **[新しい参照の追加]** をクリックします。
+1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **[共通プロパティ]** ページで、 **[新しい参照の追加]** をクリックします。
 
 1. Windows ランタイム コンポーネントは、DLL ファイルとメタデータを含む .winmd ファイルで構成されます。 通常、これらのファイルは同じフォルダーにあります。 **[参照の追加]** ダイアログ ボックスの左ペインで、 **[参照]** をクリックし、DLL とその .winmd ファイルの場所に移動します。 詳細については、次を参照してください。[拡張機能 Sdk](/visualstudio/extensibility/creating-a-software-development-kit#ExtensionSDKs)です。
 
@@ -42,7 +37,7 @@ Visual Studio を使用して、標準の Win32 DLL または Windows ランタ�
 
 ### <a name="to-create-a-standard-dll-in-visual-studio"></a>Visual Studio で、標準 DLL を作成するには
 
-1. メニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**、クリックして、**ダイナミック リンク ライブラリ (DLL)**テンプレート。
+1. メニュー バーで、次のように選択します。**ファイル**、**新規**、**プロジェクト**、クリックして、**ダイナミック リンク ライブラリ (DLL)** テンプレート。
 
 1. プロジェクトの名前を入力し、 **[OK]** をクリックします。
 
@@ -52,9 +47,9 @@ Visual Studio を使用して、標準の Win32 DLL または Windows ランタ�
 
 ### <a name="to-reference-a-standard-dll-project-from-the-same-solution"></a>同じソリューションから標準 DLL プロジェクトを参照するには
 
-1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]**をクリックします。 **[共通プロパティ]** ページで、 **[新しい参照の追加]** をクリックします。
+1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **[共通プロパティ]** ページで、 **[新しい参照の追加]** をクリックします。
 
-1. 左ペインで **[ソリューション]**をクリックし、右ペインの対応するチェック ボックスをオンにします。
+1. 左ペインで **[ソリューション]** をクリックし、右ペインの対応するチェック ボックスをオンにします。
 
 1. ソース コード ファイルで、必要に応じて DLL のヘッダー ファイルの `#include` ステートメントを追加します。
 
@@ -62,7 +57,7 @@ Visual Studio を使用して、標準の Win32 DLL または Windows ランタ�
 
 1. DLL ファイル、.lib ファイル、およびヘッダー ファイルをコピーし、既知の場所 (現在のプロジェクト フォルダーなど) に貼り付けます。
 
-1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]**をクリックします。 **[構成プロパティ]**、 **[リンカー]**の順にクリックし、 **[入力]** ページで、依存関係として .lib ファイルを追加します。
+1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **[構成プロパティ]**、 **[リンカー]** の順にクリックし、 **[入力]** ページで、依存関係として .lib ファイルを追加します。
 
 1. ソース コード ファイルで、必要に応じて DLL のヘッダー ファイルの `#include` ステートメントを追加します。
 

@@ -1,13 +1,10 @@
 ---
-title: "TN045: Long Varchar、Varbinary の MFC データベース サポート |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN045: Long Varchar、Varbinary の MFC データベース サポート |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.data
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c9b64ef3b164c45a1633281bbaebd6525df659
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd5201661afcdf6f4ae9676323f3f644817bcf7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>テクニカル ノート 45: MFC/データベースの Long Varchar/Varbinary 型のサポート
 > [!NOTE]
@@ -76,7 +71,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
  長い形式のデータ列に挿入を取得する場合、`CString`または`CByteArray`最大のデータの量は、既定では、255 バイトが返されます。 これを超えるものは無視されます。 ここでは、例外がスローされます**AFX_SQL_ERROR_DATA_TRUNCATED**です。 さいわい、増やすことができますに明示的に大きい値に、格納まで**MAXINT**です。  
   
 > [!NOTE]
->  MFC でのローカル バッファーを設定する格納の値が使用する、 **SQLBindColumn**関数。 これは、データの記憶域用のローカル バッファーであり、ODBC ドライバーによって返されるデータの量を実際には影響しません。 `RFX_Text`および`RFX_Binary`加えるを使用して呼び出す 1 つだけ**SQLFetch**バック エンド データベースからデータを取得します。 各 ODBC ドライバーでは、1 回のフェッチで返すことがデータの量にさまざまな制限があります。 この制限は場合、例外の場合は、格納に設定された値よりも大幅に小さくなる可能性があります**AFX_SQL_ERROR_DATA_TRUNCATED**がスローされます。 このような状況下での使用に切り替える`RFX_LongBinary`の代わりに`RFX_Text`または`RFX_Binary`すべてのデータを取得できるようにします。  
+>  MFC でのローカル バッファーを設定する格納の値が使用する、 **SQLBindColumn**関数。 これは、データの記憶域用のローカル バッファーであり、ODBC ドライバーによって返されるデータの量を実際には影響しません。 `RFX_Text` および`RFX_Binary`加えるを使用して呼び出す 1 つだけ**SQLFetch**バック エンド データベースからデータを取得します。 各 ODBC ドライバーでは、1 回のフェッチで返すことがデータの量にさまざまな制限があります。 この制限は場合、例外の場合は、格納に設定された値よりも大幅に小さくなる可能性があります**AFX_SQL_ERROR_DATA_TRUNCATED**がスローされます。 このような状況下での使用に切り替える`RFX_LongBinary`の代わりに`RFX_Text`または`RFX_Binary`すべてのデータを取得できるようにします。  
   
  ClassWizard は、バインド、 **SQL_LONGVARCHAR**を`CString`、または**SQL_LONGVARBINARY**を`CByteArray`をします。 255 バイトより大きく、長い形式のデータ列を取得する先を割り当てる場合は、格納の明示的な値を指定することができます。  
   
@@ -99,7 +94,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
   
  ClassWizard は、バインド、 **SQL_LONGVARCHAR**または**SQL_LONGVARBINARY**を`CLongBinary`します。 選択`CLongBinary`メンバー変数の追加のダイアログ ボックスで変数の型として。 ClassWizard は追加して、`RFX_LongBinary`への呼び出し、`DoFieldExchange`を呼び出すし、バインドされたフィールドの合計数をインクリメントします。  
   
- 長いデータ列値を更新するには、最初に確認、割り当てられた`HGLOBAL`を呼び出すことによって、新しいデータを保持するのに十分な大きさが**:: GlobalSize**上、`m_hData`のメンバー、`CLongBinary`です。 小さすぎる場合は、リリース、`HGLOBAL`し、1 つに、適切なサイズを割り当てます。 `m_dwDataLength`新しいサイズを反映するようにします。  
+ 長いデータ列値を更新するには、最初に確認、割り当てられた`HGLOBAL`を呼び出すことによって、新しいデータを保持するのに十分な大きさが **:: GlobalSize**上、`m_hData`のメンバー、`CLongBinary`です。 小さすぎる場合は、リリース、`HGLOBAL`し、1 つに、適切なサイズを割り当てます。 `m_dwDataLength`新しいサイズを反映するようにします。  
   
  それ以外の場合`m_dwDataLength`サイズよりも大きい、置換するデータのいずれかを解放して再割り当て、 `HGLOBAL`、か、割り当てられたままにします。 実際に使用されているバイト数を示す確認`m_dwDataLength`です。  
   
@@ -127,7 +122,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
 > [!NOTE]
 >  フレームワークによって、長い形式のデータ列がバインドされていないために変更するは処理されない`CRecordset::Update`呼び出しです。 作成して、必要な SQL を送信する必要があります**挿入**と**更新**ステートメント自分でします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CArchiveException クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CArchiveException クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchiveException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2ca798bf3cac50e00627fc3986072af7b2ff94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchiveexception-class"></a>CArchiveException クラス
 シリアル化の例外条件を表します  
@@ -60,7 +55,7 @@ class CArchiveException : public CException
 ## <a name="remarks"></a>コメント  
  `CArchiveException`クラスには、例外の原因を示すパブリック データ メンバーが含まれています。  
   
- `CArchiveException`オブジェクトが構築され、内でスロー [CArchive](../../mfc/reference/carchive-class.md)メンバー関数。 これらのオブジェクトのスコープ内にアクセスすることができます、**キャッチ**式。 原因のコードは、オペレーティング システムの依存しません。 例外の処理の詳細については、次を参照してください。[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)です。  
+ `CArchiveException` オブジェクトが構築され、内でスロー [CArchive](../../mfc/reference/carchive-class.md)メンバー関数。 これらのオブジェクトのスコープ内にアクセスすることができます、**キャッチ**式。 原因のコードは、オペレーティング システムの依存しません。 例外の処理の詳細については、次を参照してください。[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,10 +64,10 @@ class CArchiveException : public CException
   
  `CArchiveException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
  構築、`CArchiveException`の値を格納するオブジェクト`cause`オブジェクトにします。  
   
 ```  
@@ -93,7 +88,7 @@ CArchiveException(
   
  このコンス トラクターを直接使用しないでください。代わりに、グローバル関数を呼び出して`AfxThrowArchiveException`です。  
   
-##  <a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>  CArchiveException::m_cause  
  例外の原因を指定します。  
   
 ```  
@@ -125,14 +120,14 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic**は推奨されなくなりました。 使用して**代わり**代わりにします。 場合**ジェネリック**アプリケーションで使用され、ビルドは/clr ではエラーが発生する構文を解読する簡単ではありません。  
   
-##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  この例外条件については、ファイルの名前を指定します。  
   
 ```  
 CString m_strFileName;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CException クラス](../../mfc/reference/cexception-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CArchive クラス](../../mfc/reference/carchive-class.md)   

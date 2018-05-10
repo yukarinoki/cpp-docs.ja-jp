@@ -1,13 +1,10 @@
 ---
-title: "-GF (文字列の削除) |Microsoft ドキュメント"
-ms.custom: 
+title: -GF (文字列の削除) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.StringPooling
 - VC.Project.VCCLWCECompilerTool.StringPooling
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d69e892fb9487b66da4dfa2a801bab302e962af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e2710fe8c5cc444d9e2681620f6813312a1d65a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (同一文字列の削除)
 実行中に、プログラム イメージおよびメモリ内と同じ文字列の 1 つのコピーを作成するコンパイラを有効にします。 これは、最適化と呼ばれる*文字列プール*小さいプログラムを作成することができます。  
@@ -45,9 +40,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>コメント  
- 使用する場合**/GF**、オペレーティング システムのメモリの文字列部分が交換されていないと、文字列は、イメージ ファイルからバックアップを読み取ることができます。  
+ 使用する場合 **/GF**、オペレーティング システムのメモリの文字列部分が交換されていないと、文字列は、イメージ ファイルからバックアップを読み取ることができます。  
   
- **/GF**読み取り専用として文字列をプールします。 文字列を変更しようとする場合**/GF**、アプリケーション エラーが発生します。  
+ **/GF**読み取り専用として文字列をプールします。 文字列を変更しようとする場合 **/GF**、アプリケーション エラーが発生します。  
   
  文字列プールにより、1 つのバッファーに複数のポインターである場合に複数のバッファーを複数のポインターとして用意されてされています。 次のコードに`s`と`t`同じ文字列で初期化されます。 文字列プールが同じメモリを指すように発生します。  
   
@@ -62,7 +57,7 @@ char *t = "This is a character buffer";
 > [!NOTE]
 >  **/GF**コンパイラ オプションは、各一意の文字列のアドレス指定可能なセクションを作成します。 既定では、オブジェクト ファイルが最大で 65,536 個のアドレス指定可能なセクションを含めることができます。 場合は、プログラムには、65,536 個を超える文字列が含まれているを使用して、 [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)コンパイラ オプションをさらにセクションを作成します。  
   
- **/GF**が効果的とき[/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または**/O2**を使用します。  
+ **/GF**が効果的とき[/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または **/O2**を使用します。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -78,6 +73,6 @@ char *t = "This is a character buffer";
   
 -   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
  [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

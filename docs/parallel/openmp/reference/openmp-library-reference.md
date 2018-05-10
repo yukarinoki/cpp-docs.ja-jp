@@ -1,27 +1,22 @@
 ---
-title: "OpenMP ライブラリ リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: OpenMP ライブラリ リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1166e2563aeef8d1e95093f4a371238379790e34
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 45f6206960b023bac7b99b867966703a210d7b1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-library-reference"></a>OpenMP ライブラリ リファレンス
 OpenMP API で使用されるコンス トラクターへのリンクを提供します。  
@@ -35,5 +30,5 @@ OpenMP API で使用されるコンス トラクターへのリンクを提供�
 |[環境変数](../../../parallel/openmp/reference/openmp-environment-variables.md)|OpenMP API で使用される環境変数へのリンクを提供します。|  
 |[関数](../../../parallel/openmp/reference/openmp-functions.md)|OpenMP API で使用される関数へのリンクを提供します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

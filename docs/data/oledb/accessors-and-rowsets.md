@@ -1,12 +1,9 @@
 ---
-title: "アクセサーと行セット |Microsoft ドキュメント"
-ms.custom: 
+title: アクセサーと行セット |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 49f5415f6c75984f968b25fb709c20d80dde554f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessors-and-rowsets"></a>アクセサーと行セット
 アクセサーと行を設定し、データの取得、OLE DB テンプレートを使用して、 [CAccessorRowset](../../data/oledb/caccessorrowset-class.md)クラスです。 このクラスは、さまざまな種類の複数のアクセサーを処理できます。  
@@ -80,5 +75,5 @@ ms.lasthandoff: 02/23/2018
   
  [スキーマ行セット](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)データのデータにアクセスできませんを保存せずにメタデータと呼ばれる、データ ストアに関する情報にアクセスします。 スキーマ行セットが、データベースの構造がコンパイル時に不明を実行時に取得する必要がある状況に用いられます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

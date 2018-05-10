@@ -1,13 +1,10 @@
 ---
-title: "新しいコントロール クラスに基づいた変数の宣言 |Microsoft ドキュメント"
-ms.custom: 
+title: 新しいコントロール クラスに基づいた変数の宣言 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.control.variable
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa98f815d9f9322c11d4256c13c0c7a42b4ab66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>新しいコントロール クラスに基づいた変数の宣言
 MFC コントロール クラスを作成した後は、それに基づく変数を宣言することができます。 新しい変数のコンテキストを提供するには、は、ダイアログ エディターを開き、編集 ダイアログ ボックスが再利用可能なコントロールを使用する必要があります。 また、ダイアログ ボックスは、関連付けられているクラスを既にが必要です。 ダイアログ エディターの使用方法の詳細については、次を参照してください。[ダイアログ エディター](../../windows/dialog-editor.md)です。  
@@ -54,9 +49,9 @@ MFC コントロール クラスを作成した後は、それに基づく変数
   
 9. **コメント**ボックスで、コード内に表示する任意のコメントを追加します。  
   
-10. **[OK]**をクリックします。  
+10. **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数へのメッセージの割り当てください。](../../mfc/reference/mapping-messages-to-functions.md)   
  [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   

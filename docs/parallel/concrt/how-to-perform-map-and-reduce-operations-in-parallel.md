@@ -1,13 +1,10 @@
 ---
-title: "方法: マップを実行し、縮小操作を並列 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: マップを実行し、縮小操作を並列 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e38dd845f3503512f48c19e226d56d9978cc21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda761da013e966f91848fed01a4f96f5d373021
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>方法: マップ操作と縮小操作を並列実行する
 
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  通常、外側または内側のループのみ並列化します。 比較的ファイル数が少なく、各ファイルに含まれる単語が多い場合は、内側のループを並列化します。 比較的ファイル数が多く、各ファイルに含まれる単語が少ない場合は、外側のループを並列化します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_transform 関数](reference/concurrency-namespace-functions.md#parallel_transform)   
  [parallel_reduce 関数](reference/concurrency-namespace-functions.md#parallel_reduce)   

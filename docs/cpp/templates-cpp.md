@@ -1,12 +1,9 @@
 ---
-title: "テンプレート (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: テンプレート (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>テンプレート (C++)
 テンプレートは、C++ では汎用のプログラミングの基礎です。 C++ では厳密に型指定された言語では、すべての変数を明示的にプログラマが宣言されている、またはコンパイラによって推測された特定の型を持つ必要があります。 ただし、多くのデータ構造やアルゴリズムの種類に関係なく同じに見えます。 これらの操作の種類のクラスや関数の操作を定義し、ユーザーがどのような具象型を指定できるテンプレートの有効化で動作する必要があります。  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- 上記のコードには、1 つの型パラメーターを持つジェネリック関数のテンプレートがについて説明します`T`、戻り値、およびパラメーター (lhs と rhs) の呼び出しはすべてこの種類のです。 できる任意の名前を型パラメーターと同様が規則 1 つの大文字で入力して、最も一般的に使用します。 `T`テンプレート パラメーターです。`typename`キーワードは、このパラメーターは、型のプレース ホルダーを表示します。 コンパイラでのすべてのインスタンスが置き換えられます、関数が呼び出されると、`T`具象型引数では、ユーザーが指定した値またはコンパイラによって推測されたとします。 コンパイラには、クラスが生成されます。 または、テンプレートからの関数と呼びますプロセス*テンプレートのインスタンス化*です。  `minimum<int>`テンプレートのインスタンス化は、`minimum<T>`です。  
+ 上記のコードには、1 つの型パラメーターを持つジェネリック関数のテンプレートがについて説明します`T`、戻り値、およびパラメーター (lhs と rhs) の呼び出しはすべてこの種類のです。 できる任意の名前を型パラメーターと同様が規則 1 つの大文字で入力して、最も一般的に使用します。 `T` テンプレート パラメーターです。`typename`キーワードは、このパラメーターは、型のプレース ホルダーを表示します。 コンパイラでのすべてのインスタンスが置き換えられます、関数が呼び出されると、`T`具象型引数では、ユーザーが指定した値またはコンパイラによって推測されたとします。 コンパイラには、クラスが生成されます。 または、テンプレートからの関数と呼びますプロセス*テンプレートのインスタンス化*です。  `minimum<int>`テンプレートのインスタンス化は、`minimum<T>`です。  
   
  他の場所で、ユーザーが int の特化したテンプレートのインスタンスを宣言できます。Get_a() と get_b() が int を返す関数であると仮定します。  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  関数テンプレートにおいて、コンパイラが型の推論を実行するための規則は、通常の関数の規則に基づきます。 詳細については、次を参照してください。[オーバー ロードの解決の関数テンプレート呼び出し](../cpp/overload-resolution-of-function-template-calls.md)です。  
   
-## <a id="type_parameters"></a>型パラメーター  
+## <a id="type_parameters"></a> 型パラメーター  
  `minimum`テンプレート上、注意してください、型パラメーター`T`が使用されると関数の関数のパラメーターに const と参照修飾子が追加された任意の方法では修飾されません。  
   
  型パラメーターの数に事実上制限はありません。 複数のパラメーターをコンマで区切ります。  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  その他のポインターと参照を含む値は、非型パラメーターとしてで渡すことができます。 たとえば、ポインターに関数または関数オブジェクト、テンプレート コード内でいくつかの操作をカスタマイズするに渡すことができます。  
   
-## <a id="template_parameters"></a>テンプレート パラメーターとしてテンプレート  
+## <a id="template_parameters"></a> テンプレート パラメーターとしてテンプレート  
  テンプレートには、テンプレート パラメーターを指定できます。 この例では、MyClass2 は 2 つのテンプレート パラメーターを持ちます: typename パラメーター`T`とテンプレート パラメーター `Arr`:。  
   
 ```cpp  

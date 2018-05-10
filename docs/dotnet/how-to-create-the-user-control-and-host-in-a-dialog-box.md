@@ -1,31 +1,26 @@
 ---
-title: "方法: ダイアログ ボックスで、ユーザー コントロールとホストを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ダイアログ ボックスで、ユーザー コントロールとホストを作成 |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20472a80b35318fa4c6d34221a61345de9e40f9e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>方法: ダイアログ ボックスにユーザー コントロールおよびホストを作成する
 この記事の手順は、ダイアログ ベースを作成することを想定しています ([CDialog クラス](../mfc/reference/cdialog-class.md)) が、Microsoft Foundation Classes (MFC) プロジェクトもサポートを追加できます Windows フォーム コントロールの既存の MFC ダイアログ ボックスにします。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  という名前の Visual c# Windows フォーム コントロール ライブラリ プロジェクトを作成する`WindowsFormsControlLibrary1`です。  
   
-     **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。 **Visual c#**フォルダーを選択**Windows フォーム コントロール ライブラリ**です。  
+     **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **Visual c#** フォルダーを選択**Windows フォーム コントロール ライブラリ**です。  
   
      受け入れる、`WindowsFormsControlLibrary1`プロジェクト名をクリックして**OK**です。  
   
@@ -50,15 +45,15 @@ ms.lasthandoff: 12/21/2017
   
 4.  プロジェクトをビルドします。  
   
-     **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+     **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには  
   
 1.  MFC アプリケーション プロジェクトを作成します。  
   
-     **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]**をクリックします。 **Visual C**フォルダーを選択**MFC アプリケーション**です。  
+     **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **Visual C**フォルダーを選択**MFC アプリケーション**です。  
   
-     **[名前]** ボックスに「`MFC01`」と入力します。 ソリューションの設定を変更して**ソリューションに追加**です。 **[OK]**をクリックします。  
+     **[名前]** ボックスに「`MFC01`」と入力します。 ソリューションの設定を変更して**ソリューションに追加**です。 **[OK]** をクリックします。  
   
      **MFC アプリケーション ウィザード**、アプリケーションの種類を選択**ダイアログ ベース**です。 残りの既定の設定をそのまま使用し、をクリックして**完了**です。 これにより、MFC ダイアログ ボックスを伴った MFC アプリケーションが作成されます。  
   
@@ -74,11 +69,11 @@ ms.lasthandoff: 12/21/2017
   
      **ソリューション エクスプ ローラー**mfc01] プロジェクト ノードを右クリックし、[クリックして**プロパティ**です。  
   
-     **プロパティ ページ**ダイアログ ボックスで、**構成プロパティ****全般**です。 **プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)**です。  
+     **プロパティ ページ**ダイアログ ボックスで、**構成プロパティ****全般**です。 **プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)** です。  
   
-     **構成プロパティ**、展開**C/C++**を選択し、**全般**ノード。 設定**デバッグ情報の形式**に**プログラム データベース (/Zi)**です。  
+     **構成プロパティ**、展開**C/C++** を選択し、**全般**ノード。 設定**デバッグ情報の形式**に**プログラム データベース (/Zi)** です。  
   
-     選択、**コード生成**ノード。 設定**最小リビルドを有効にする**に**いいえ (/Gm-)**です。 設定**基本ランタイム チェック**に**既定**です。  
+     選択、**コード生成**ノード。 設定**最小リビルドを有効にする**に**いいえ (/Gm-)** です。 設定**基本ランタイム チェック**に**既定**です。  
   
      をクリックして**OK**変更を適用します。  
   
@@ -124,9 +119,9 @@ ms.lasthandoff: 12/21/2017
   
      **ソリューション エクスプ ローラー**を右クリックして**MFC01**  をクリックし、**スタートアップ プロジェクトとして設定**です。  
   
-     **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+     **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
      **デバッグ** メニューのをクリックして**デバッグなしで開始**です。 MFC ダイアログ ボックスに Windows フォーム コントロールが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ダイアログ ボックスにおける Windows フォーム ユーザー コントロールのホスト](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

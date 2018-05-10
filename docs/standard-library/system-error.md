@@ -55,10 +55,8 @@ ms.lasthandoff: 04/26/2018
 
 |関数|説明|
 |-|-|
-|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|
-          `error_code` オブジェクトを作成します。|
-|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|
-          `error_condition` オブジェクトを作成します。|
+|[make_error_code](../standard-library/system-error-functions.md#make_error_code)|`error_code` オブジェクトを作成します。|
+|[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|`error_condition` オブジェクトを作成します。|
 
 ### <a name="operators"></a>演算子
 

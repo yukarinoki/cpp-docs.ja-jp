@@ -1,12 +1,9 @@
 ---
-title: "ITarget クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ITarget クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITarget
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c0750c6a33756ca2fe207c4c4066a5b5b8da96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9780e4b9ff8950511601b03e8423764c3def77a1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itarget-class"></a>ITarget クラス
 `ITarget` クラスは、すべてのターゲット ブロックのインターフェイスです。 ターゲット ブロックは、`ISource` ブロックから提供されたメッセージを処理します。  
@@ -67,7 +62,7 @@ class ITarget;
   
 |名前|説明|  
 |----------|-----------------|  
-|[propagate](#propagate)|派生クラスでオーバーライドされると、非同期的にメッセージ ソース ブロックからこのターゲット ブロックに渡します。|  
+|[伝達](#propagate)|派生クラスでオーバーライドされると、非同期的にメッセージ ソース ブロックからこのターゲット ブロックに渡します。|  
 |[send](#send)|派生クラスでオーバーライドされると、ターゲット ブロックにメッセージを同期的に渡します。|  
 |[supports_anonymous_source](#supports_anonymous_source)|派生クラスでオーバーライドされると、true またはメッセージ ブロックがそれにリンクされていないソースによって提供されるメッセージを受け付けるかどうかに応じて false を返します。 オーバーライドされたメソッドが返された場合`true`ターゲットは、提供されたメッセージを延期できないように後で、延期されたメッセージの消費量がそのソース リンク レジストリで特定するのには、ソースが必要です。|  
   
@@ -85,12 +80,12 @@ class ITarget;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ITarget`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
   
-##  <a name="dtor"></a> ~ITarget 
+##  <a name="dtor"></a> ~ ITarget 
 
  `ITarget` オブジェクトを破棄します。  
   
@@ -197,6 +192,6 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 virtual void unlink_sources() = 0;
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [ISource クラス](isource-class.md)

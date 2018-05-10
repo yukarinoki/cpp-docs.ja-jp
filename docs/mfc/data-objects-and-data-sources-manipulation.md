@@ -1,13 +1,10 @@
 ---
-title: "データ オブジェクトとデータ ソース: 操作 |Microsoft ドキュメント"
-ms.custom: 
+title: 'データ オブジェクトとデータ ソース: 操作 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>データ オブジェクトとデータ ソース : 操作
 データ オブジェクトまたはデータ ソースを作成した後、多数の挿入や削除、データが、形式を列挙する、データなど、データの一般的な操作を実行できます。 この記事では、最も一般的な操作を完了するために必要な手法について説明します。 ここでは、次の内容について説明します。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [データ オブジェクトからのデータの取得](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>データ ソースにデータを挿入します。  
+##  <a name="_core_inserting_data_into_a_data_source"></a> データ ソースにデータを挿入します。  
  データ ソースにデータを挿入する方法でデータがすぐに提供されているかどうかによって異なります。 またはオンデマンドでと、どの中ことを指定しません。 可能性は次のとおりです。  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>データをすぐに (直接レンダリング) を指定します。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用する場合、 `CFile` 、データを提供するオブジェクトを呼び出す`COleDataSource::DelayRenderFileData`の代わりに`COleDataSource::DelayRenderData`前のオプションでします。 データが要求されると、フレームワークが呼び出す`COleDataSource::OnRenderFileData`、オーバーライドする必要があります。  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>データ オブジェクトで使用できる形式を決定します。  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> データ オブジェクトで使用できる形式を決定します。  
  アプリケーションでは、ユーザーがデータを貼り付けるでできますが、あるかどうかの形式を処理できることをクリップボードにコピーする必要があります。 これを行うには、アプリケーションは、次の操作を行います必要があります。  
   
 1.  作成、`COleDataObject`オブジェクトおよび**FORMATETC**構造体。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  使用している場合`ON_UPDATE_COMMAND_UI`、貼り付けや、場合によっては、[編集] メニュー項目を貼り付けを有効にできます。 これを行うには、いずれかを呼び出す`CMenu::EnableMenuItem`または`CCmdUI::Enable`です。 どのようなコンテナーの詳細についてはアプリケーションする必要がありますのメニュー項目と共に実行し、するを参照してください[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)です。  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>データ オブジェクトからのデータの取得  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> データ オブジェクトからのデータの取得  
  データ形式を決定した後は、データ オブジェクトからデータを取得します。 これを行うには、ユーザーは、データを配置する場所を決定し、アプリケーションが適切な関数を呼び出します。 データは次のメディアのいずれかで使用できます。  
   
 |Medium|呼び出す関数|  
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [クリップボード](../mfc/clipboard.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject クラス](../mfc/reference/coledataobject-class.md)   
  [COleDataSource クラス](../mfc/reference/coledatasource-class.md)

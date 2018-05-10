@@ -1,12 +1,9 @@
 ---
-title: "_ _alignof 演算子 |Microsoft ドキュメント"
-ms.custom: 
+title: _ _alignof 演算子 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - alignas_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignof-operator"></a>__alignof 演算子
 C++11 では、指定した型の配置をバイト単位で返す `alignof` 演算子が導入されています。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。  
@@ -47,7 +42,7 @@ C++11 では、指定した型の配置をバイト単位で返す `alignof` 演
 ```  
   
 ## <a name="remarks"></a>コメント  
- 例:  
+ 例えば:  
   
 |正規表現|[値]|  
 |----------------|-----------|  
@@ -102,6 +97,6 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
  [キーワード](../cpp/keywords-cpp.md)

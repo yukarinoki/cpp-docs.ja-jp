@@ -1,29 +1,24 @@
 ---
-title: "セットアップ プロジェクトを使用して Visual C アプリケーションの配置 |Microsoft ドキュメント"
-ms.custom: 
+title: セットアップ プロジェクトを使用して Visual C アプリケーションの配置 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe75f1fd3ceb037e44716156556882f3f6d1cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置
 セットアップ プロジェクトを使用して、Visual C アプリケーションを展開する方法について説明します。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  F7 キーを押してアプリケーションをビルドします。 か、または、**ビルド** メニューをクリックして**ソリューションのビルド**です。 これにより、セットアップ プロジェクトをこの MFC アプリケーション プロジェクトの出力を使用できます。  
   
-4.  完了していない場合は、InstallShield Limited Edition (ISLE)、これは Visual Studio の開発者向けの無料で、セットアップと配置の Visual Studio でプロジェクト テンプレートの機能に代わるものをダウンロードします。 インターネットに接続しているときに開く、**新しいプロジェクト** ダイアログ ボックスを選択して**ファイル**、**新規**、**プロジェクト**横棒グラフ、またはメニューソリューションを右クリックして**ソリューション エクスプ ローラー**を選択して**追加**、**新しいプロジェクト**です。 展開、**その他のプロジェクトの種類**] ノードを選択**[InstallShield Limited Edition**で、**セットアップと配置**ノード、し表示される指示に従います。 ダウンロードしてインストールされている、InstallShield Limited Edition をアクティブ化は、Visual Studio を閉じて再び開きます。  
+4.  完了していない場合は、InstallShield Limited Edition (ISLE)、これは Visual Studio の開発者向けの無料で、セットアップと配置の Visual Studio でプロジェクト テンプレートの機能に代わるものをダウンロードします。 インターネットに接続しているときに開く、**新しいプロジェクト** ダイアログ ボックスを選択して**ファイル**、**新規**、**プロジェクト**横棒グラフ、またはメニューソリューションを右クリックして**ソリューション エクスプ ローラー**を選択して**追加**、**新しいプロジェクト**です。 展開、**その他のプロジェクトの種類**] ノードを選択 **[InstallShield Limited Edition**で、**セットアップと配置**ノード、し表示される指示に従います。 ダウンロードしてインストールされている、InstallShield Limited Edition をアクティブ化は、Visual Studio を閉じて再び開きます。  
   
 5.  開いている、**新しいプロジェクト** ダイアログ ボックス、展開、**その他のプロジェクトの種類** ノードを選択**InstallShield Limited Edition プロジェクト**で、 **InstallShield Limited Edition**ノード。  
   
@@ -55,5 +50,5 @@ ms.lasthandoff: 12/21/2017
   
 8.  Visual C ライブラリがない 2 つ目のコンピューターでセットアップ プログラムを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [配置例](../ide/deployment-examples.md)

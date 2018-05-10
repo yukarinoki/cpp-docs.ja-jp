@@ -1,29 +1,24 @@
 ---
-title: "IDL 属性、プロパティの追加ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: IDL 属性、プロパティの追加ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.idlattributes
 dev_langs:
 - C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec158c117161c5a5c2ffd23cef0d5c79c312ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idl-attributes-add-property-wizard"></a>[IDL 属性] (プロパティの追加ウィザード)
 プロパティの追加ウィザードのこのページを使用すると、プロパティの任意のインターフェイス定義言語 (IDL) の設定を指定できます。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |**restricted**|プロパティを任意に呼び出すことができませんを指定します。 参照してください[制限](http://msdn.microsoft.com/library/windows/desktop/aa367157)で、 *MIDL 参照*です。|  
 |`local`|MIDL コンパイラにプロパティがリモートでないことを指定します。 参照してください[ローカル](http://msdn.microsoft.com/library/windows/desktop/aa367071)で、 *MIDL 参照*です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティを追加します。](../ide/adding-a-property-visual-cpp.md)   
  [名前、プロパティの追加ウィザード](../ide/names-add-property-wizard.md)   
  [インターフェイスを実装します。](../ide/implementing-an-interface-visual-cpp.md)   

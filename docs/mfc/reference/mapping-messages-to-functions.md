@@ -1,13 +1,10 @@
 ---
-title: "関数へのメッセージの割り当て |Microsoft ドキュメント"
-ms.custom: 
+title: 関数へのメッセージの割り当て |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.mapping.msg.function
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad36b249e601e15e25f32ef1ef7e6d5a28874cf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3388cd8e9a52ef9aacb427d66b027d793b08ca75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-messages-to-functions"></a>関数へのメッセージの割り当て
 プロパティ ウィンドウでは、アプリケーションのリソースによって生成されたメッセージをメッセージ ハンドラー (MFC のユーザー インターフェイス クラスのメンバー関数) をバインドします。 使用する[MFC メッセージ マップ](../../mfc/messages-and-commands-in-the-framework.md)バインドを作成します。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  メッセージ ハンドラーを削除するには、右側の列のハンドラをダブルクリックしを選択\<削除 >*HandlerName*です。 関数のコードをコメント アウトします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)   
  [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   

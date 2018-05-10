@@ -1,13 +1,10 @@
 ---
-title: "1 つのドキュメントへの複数のビューの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 1 つのドキュメントへの複数のビューの追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b30ac7b4c8910e92d14274f1224c25e7f74d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>シングル ドキュメントへのマルチ ビューの追加
 Microsoft Foundation Class (MFC) ライブラリで作成したシングル ドキュメント インターフェイス (SDI) アプリケーション、各ドキュメントの種類は、1 つのビューの種類に関連付けられています。 場合によってを新しいビューを持つドキュメントの現在のビューを切り替えることがあることをお勧めします。  
@@ -52,9 +47,9 @@ Microsoft Foundation Class (MFC) ライブラリで作成したシングル ド�
   
 -   名前、 `CWinApp`-派生オブジェクトが`CMyWinApp`、および`CMyWinApp`が宣言され、MYWINAPP で定義されています。H と MYWINAPP です。CPP です。  
   
--   `CNewView`新しい名前を指定`CView`-派生オブジェクト、および`CNewView`が宣言され、NEWVIEW で定義されています。H と NEWVIEW です。CPP です。  
+-   `CNewView` 新しい名前を指定`CView`-派生オブジェクト、および`CNewView`が宣言され、NEWVIEW で定義されています。H と NEWVIEW です。CPP です。  
   
-##  <a name="vcconmodifyexistingapplicationa1"></a>既存のアプリケーション クラスを変更します。  
+##  <a name="vcconmodifyexistingapplicationa1"></a> 既存のアプリケーション クラスを変更します。  
  ビューの間で切り替えるには、アプリケーション、ビュー、およびそれらを切り替えるにはメソッドを格納するためのメンバー変数を追加することで、アプリケーション クラスを変更する必要があります。  
   
  宣言を次のコードを追加`CMyWinApp`MYWINAPP にします。H:  
@@ -71,7 +66,7 @@ Microsoft Foundation Class (MFC) ライブラリで作成したシングル ド�
   
  変更を保存し、次の手順に進みます。  
   
-##  <a name="vcconnewviewclassa2"></a>作成および変更、新しいビュー クラス  
+##  <a name="vcconnewviewclassa2"></a> 作成および変更、新しいビュー クラス  
  新しいビュー クラスの作成が簡単に作成を使用して、**クラスの新しい**クラス ビューで使用できるコマンド。 このクラスの唯一の要件はから派生して`CView`です。 この新しいクラスをアプリケーションに追加します。 新しいクラスをプロジェクトに追加する方法の詳細については、次を参照してください。[クラスの追加](../ide/adding-a-class-visual-cpp.md)です。  
   
  クラスをプロジェクトに追加した後は、いくつかのビュー クラスのメンバーのアクセシビリティを変更する必要があります。  
@@ -80,7 +75,7 @@ Microsoft Foundation Class (MFC) ライブラリで作成したシングル ド�
   
  変更を保存し、次の手順に進みます。  
   
-##  <a name="vcconattachnewviewa3"></a>作成し、新しいビューを添付  
+##  <a name="vcconattachnewviewa3"></a> 作成し、新しいビューを添付  
  作成して、新しいビューをアタッチ、変更する必要があります、`InitInstance`アプリケーション クラスの関数。 変更は、新しいビュー オブジェクトを初期化両方を作成する新しいコードを追加`m_pOldView`と`m_pNewView`2 つの既存のビュー オブジェクトを使用します。  
   
  内で、新しいビューが作成されるため、`InitInstance`関数の場合、アプリケーションの有効期間、新規および既存の両方のビューを保持します。 ただし、アプリケーションでは、新しいビューが動的に作成と同様の簡単さでした。  
@@ -91,7 +86,7 @@ Microsoft Foundation Class (MFC) ライブラリで作成したシングル ド�
   
  変更を保存し、次の手順に進みます。  
   
-##  <a name="vcconswitchingfunctiona4"></a>切り替え関数を実装します。  
+##  <a name="vcconswitchingfunctiona4"></a> 切り替え関数を実装します。  
  前の手順で作成され、新しいビュー オブジェクトを初期化するコードを追加します。 最後の主要な部分は、切り替えのメソッドを実装する`SwitchView`です。  
   
  アプリケーションの実装ファイルの最後にクラス (MYWINAPP です。CPP)、次のメソッド定義を追加します。  
@@ -100,11 +95,11 @@ Microsoft Foundation Class (MFC) ライブラリで作成したシングル ド�
   
  変更を保存し、次の手順に進みます。  
   
-##  <a name="vcconswitchingtheviewa5"></a>ビューの切り替えのサポートを追加します。  
+##  <a name="vcconswitchingtheviewa5"></a> ビューの切り替えのサポートを追加します。  
  最後の手順を呼び出すコードを追加、`SwitchView`メソッドは、アプリケーションは、ビューに切り替える必要があるとします。 これは、いくつかの方法で行うことができます。 ユーザーを選択するための新しいメニュー項目を追加するか、または特定の条件が満たされたときに内部的には、ビューの切り替えでします。  
   
  新しいメニュー項目とコマンド ハンドラー関数を追加する方法については、次を参照してください。[コマンドとコントロール通知のハンドラー](../mfc/handlers-for-commands-and-control-notifications.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
 

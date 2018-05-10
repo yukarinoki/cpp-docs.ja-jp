@@ -1,27 +1,22 @@
 ---
-title: "D: スケジュール句を使用して |Microsoft ドキュメント"
-ms.custom: 
+title: 'D: スケジュール句を使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D: スケジュール句を使用します。
 並列領域には、少なくとも 1 つのバリア、末端で持ち内の別の障壁を必要があります。 各バリアで、チームの他のメンバーは到着する最後のスレッドを待つ必要があります。 すべてのスレッドがほぼ同時にバリアに到達できるようにこの待機時間を最小限に抑えるには、共有の作業を分散します。 作業が含まれている場合は、一部の共有**の**構築では、`schedule`句は、この目的で使用できます。  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- 同様に**動的**、**ガイド付き**スケジュールをその最後の反復処理を実行する別のスレッドがよりも長いまたは最後のバリアでスレッドが待機しないことを保証*k*イテレーション場合のチャンク サイズ*k*を指定します。 このようなスケジュールの間で、**ガイド付き**スケジュールの特徴は、プロパティの数が最も少ない同期が必要とすることです。 チャンク サイズの*k*、一般的な実装が割り当てられます*q = ceiling (n/p)*最初に使用できるスレッドのイテレーションの設定 *n* 大きい方にの*n-q*と*p\*k*、すべてのイテレーションが割り当てられるまでを繰り返します。  
+ 同様に**動的**、**ガイド付き**スケジュールをその最後の反復処理を実行する別のスレッドがよりも長いまたは最後のバリアでスレッドが待機しないことを保証*k*イテレーション場合のチャンク サイズ*k*を指定します。 このようなスケジュールの間で、**ガイド付き**スケジュールの特徴は、プロパティの数が最も少ない同期が必要とすることです。 チャンク サイズの*k*、一般的な実装が割り当てられます*q = ceiling (n/p)* 最初に使用できるスレッドのイテレーションの設定*n*大きい方の*n-q*と*p\*k*、すべてのイテレーションが割り当てられるまでを繰り返します。  
   
  最適なスケジュールの選択がこれらの例では、明確ではないときに、**ランタイム**スケジュールは、さまざまなスケジュールとチャンクのサイズを変更してプログラムを再コンパイルしなくても試す場合に便利です。 最適なスケジュールがプログラムを適用する入力データに (予測可能な方法はいくつか) に依存する場合に役立ちますできます。  
   

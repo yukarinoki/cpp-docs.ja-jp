@@ -1,13 +1,10 @@
 ---
-title: "メンバー変数 (Visual C) の追加 |Microsoft ドキュメント"
-ms.custom: 
+title: メンバー変数 (Visual C) の追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.member.variable
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3f5327568b1ad8380ce905987a570541e8f44f
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-member-variable--visual-c"></a>メンバー変数の追加 (Visual C++)
 クラス ビューを使用してクラスにメンバー変数を追加することができます。 メンバー変数には、いずれかを指定できる[データ交換とデータの検証](../mfc/dialog-data-exchange-and-validation.md)、汎用的な可能性があるか。 データ メンバー変数のウィザードは具体的には関連の情報を取得し、要素を挿入する適切な場所にあるソース ファイルで使用するよう設計されています。 メンバー変数を追加することができます、[ダイアログ エディター](../windows/dialog-editor.md)で[リソース ビュー](../windows/resource-view-window.md)、またはから[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)です。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 02/03/2018
   
 5.  をクリックして**完了**をプロジェクトに定義と実装コードを追加し、ウィザードを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [クラスの追加](../ide/adding-a-class-visual-cpp.md)   
  [メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)   

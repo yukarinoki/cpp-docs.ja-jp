@@ -1,12 +1,9 @@
 ---
-title: "vector::reserve (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: vector::reserve (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::reserve
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reserve member [STL/CLR]
 ms.assetid: d1d5ede9-9628-4b55-95ec-f087a57205f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2c8c5ac474cc2b94baedab64854fec3ca3e0a78a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c9c8bbf48d9727ff726ccfb0acde286535aa454
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorreserve-stlclr"></a>vector::reserve (STL/CLR)
 コンテナーの容量の最小の増加のことを確認します。  
@@ -84,12 +79,12 @@ capacity() = 9, ok = True
 ## <a name="description"></a>説明  
  実際の容量がここに示した長いと、すべての値からによって異なることに注意してください`ok`テストは true を報告します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/vector >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ベクトル (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector::capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)   
  [vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)

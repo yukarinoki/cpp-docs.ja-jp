@@ -1,10 +1,9 @@
 ---
-title: "リンカ ツール エラー LNK2038 |Microsoft ドキュメント"
-ms.custom: 
+title: リンカ ツール エラー LNK2038 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2038
@@ -14,18 +13,17 @@ helpviewer_keywords:
 - LNK2038
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f65f403cac43551b787abab15713fb9ffab618
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: f97f65bbe31e51e5083b34949b47a6963696ee37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2038"></a>リンカ ツール エラー LNK2038
 
-> 不一致が検出された '*名前*': 値'*value_1*'値と一致しません'*value_2*' で*<filename.obj>*
+> 不一致が検出された '*名前*': 値'*value_1*'値と一致しません'*value_2*' で *<filename.obj>*
 
 シンボルの不一致がリンカーによって検出されました。 このエラーは、アプリへのリンクが競合するシンボル定義を使用して、ライブラリまたはその他のオブジェクトを含む、アプリのさまざまな部分のコードを示します。 [の不一致を検出](../../preprocessor/detect-mismatch.md)プラグマはこのようなシンボルを定義して、競合する値を検出するために使用します。
 
@@ -47,7 +45,7 @@ Visual Studio は、実行時エラーまたはその他の予測できない動
    アプリまたはライブラリで使用する C++ 標準ライブラリおよび C ランタイムのバージョンを示します。 C++ 標準ライブラリまたは C ランタイムの 1 種類のバージョンを使用するコードは、異なるバージョンを使用するコードと互換性がありません。 詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)」を参照してください。
 
 - `_PPLTASKS_WITH_WINRT`  
-   使用するコードを示す、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)に対して別の設定を使用してコンパイルされたオブジェクトにリンクされて、 [/ZW](../../build/reference/zw-windows-runtime-compilation.md)コンパイラ オプション。 (**/ZW**サポート C + + CX)。同じを使用して使用したり、PPL に依存するコードをコンパイルする必要があります**/ZW**アプリの残りの部分で使用されている設定です。
+   使用するコードを示す、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)に対して別の設定を使用してコンパイルされたオブジェクトにリンクされて、 [/ZW](../../build/reference/zw-windows-runtime-compilation.md)コンパイラ オプション。 (**/ZW**サポート C + + CX)。同じを使用して使用したり、PPL に依存するコードをコンパイルする必要があります **/ZW**アプリの残りの部分で使用されている設定です。
 
 これらのシンボルの値が、Visual Studio ソリューションのプロジェクト全体で一貫していることと、使用中のアプリがリンクしているコードとライブラリに一致していることを確認してください。
 

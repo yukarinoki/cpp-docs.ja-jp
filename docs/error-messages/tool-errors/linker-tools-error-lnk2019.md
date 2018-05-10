@@ -1,10 +1,9 @@
 ---
-title: "リンカ ツール エラー LNK2019 |Microsoft ドキュメント"
-ms.custom: 
+title: リンカ ツール エラー LNK2019 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2019
@@ -16,14 +15,13 @@ helpviewer_keywords:
 - _check_commonlanguageruntime_version
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f6fdad0d26d04c6e8022f7b29dbdd7f13ac874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4323e5f8357da046db7a9403d7c575dfdde566b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2019"></a>リンカ ツール エラー LNK2019
 
@@ -77,7 +75,7 @@ Visual Studio の以前のバージョンでは、このレベルの依存関係
 
 ### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Windows アプリケーションの設定を使用して、コンソール アプリケーションをビルドします。
 
-エラー メッセージがような場合**WinMain が関数で参照されている未解決の外部シンボル** *function_name*を使用してリンク**/SUBSYSTEM:CONSOLE** ではなく**/SUBSYSTEM:WINDOWS**です。 この設定の詳細と、Visual Studio でこのプロパティを設定する手順の詳細については、「 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)」を参照してください。
+エラー メッセージがような場合**WinMain が関数で参照されている未解決の外部シンボル** *function_name*を使用してリンク **/SUBSYSTEM:CONSOLE** ではなく **/SUBSYSTEM:WINDOWS**です。 この設定の詳細と、Visual Studio でこのプロパティを設定する手順の詳細については、「 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)」を参照してください。
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>64 ビット ライブラリを 32 ビット コード、または 64 ビット コードを 32 ビット ライブラリにリンクしようとしています。
 
@@ -97,7 +95,7 @@ Visual Studio の以前のバージョンでは、このレベルの依存関係
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>ネイティブ wchar を使用するコードが混在する\_しないコードと t
 
-Visual C++ 2005 で行われた C++ 言語への準拠作業により、 `wchar_t` は既定でネイティブ型になりました。 それより前のバージョンの Visual C++ を使用してコンパイルされたライブラリ ファイルおよびオブジェクト ファイルと互換性のあるコードを生成するには、 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) コンパイラ オプションを使用する必要があります。 すべてのファイルは、同じを使用してコンパイルされている場合**/Zc:wchar\_t**設定、型の参照が互換性のある型に解決されない場合があります。 すべてのライブラリ ファイルとオブジェクト ファイル内の `wchar_t` の型に互換性があることを検証し、使用する型を更新するか、コンパイル時に使用する **/Zc:wchar_t** の設定を一貫させるようにしてください。
+Visual C++ 2005 で行われた C++ 言語への準拠作業により、 `wchar_t` は既定でネイティブ型になりました。 それより前のバージョンの Visual C++ を使用してコンパイルされたライブラリ ファイルおよびオブジェクト ファイルと互換性のあるコードを生成するには、 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) コンパイラ オプションを使用する必要があります。 すべてのファイルは、同じを使用してコンパイルされている場合 **/Zc:wchar\_t**設定、型の参照が互換性のある型に解決されない場合があります。 すべてのライブラリ ファイルとオブジェクト ファイル内の `wchar_t` の型に互換性があることを検証し、使用する型を更新するか、コンパイル時に使用する **/Zc:wchar_t** の設定を一貫させるようにしてください。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>サード パーティ製のライブラリの問題と Vcpkg
 
@@ -224,7 +222,7 @@ int main() {
 }
 ```
 
- このエラーを解決するには、次のように変更します。`unsigned short`に`wchar_t`または`WCHAR`、を使用して、LNK2019g.cpp をコンパイルまたは**/Zc:wchar_t-**です。
+ このエラーを解決するには、次のように変更します。`unsigned short`に`wchar_t`または`WCHAR`、を使用して、LNK2019g.cpp をコンパイルまたは **/Zc:wchar_t-** です。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

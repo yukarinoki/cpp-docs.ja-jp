@@ -1,12 +1,9 @@
 ---
-title: "CCmdUI クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CCmdUI クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCmdUI
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32413fe7939b5e5d5d3d41bf32a923dd308f0395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccmdui-class"></a>CCmdUI クラス
 内でのみ使用されて、`ON_UPDATE_COMMAND_UI`ハンドラー、 `CCmdTarget`-クラスを派生します。  
@@ -79,7 +74,7 @@ class CCmdUI
 |[CCmdUI::m_pSubMenu](#m_psubmenu)|によって表される包含のサブメニューを指す、`CCmdUI`オブジェクト。|  
   
 ## <a name="remarks"></a>コメント  
- `CCmdUI`基本クラスはありません。  
+ `CCmdUI` 基本クラスはありません。  
   
  ときに、アプリケーションのユーザーをプル ダウン メニューの各メニュー項目いる必要があるかどうかを表示することが有効になっている、または無効になっています。 メニュー コマンドのターゲットが実装することでこの情報を提供する`ON_UPDATE_COMMAND_UI`ハンドラー。 アプリケーション内のコマンドのユーザー インターフェイス オブジェクトごとに、各ハンドラーのメッセージ マップ エントリと関数プロトタイプを作成するのに [プロパティ] ウィンドウを使用します。  
   
@@ -94,18 +89,18 @@ class CCmdUI
 |メニュー項目|有効または無効|オンまたはオフに|ドットを使用してチェック|項目テキストの設定|  
 |ツール バー ボタン|有効または無効|選択し、この選択を解除すると、または不確定|`SetCheck` と同じ|(適用なし)|  
 |ステータス バー ペイン|表示または非表示テキストは、します。|セットのポップアウトまたは通常の境界線|`SetCheck` と同じ|ウィンドウのテキストを設定します。|  
-|[標準] ボタン`CDialogBar`|有効または無効|オンまたはオフにチェック ボックス|`SetCheck` と同じ|ボタン テキストの設定|  
-|通常の制御`CDialogBar`|有効または無効|(適用なし)|(適用なし)|ウィンドウのテキストを設定します。|  
+|[標準] ボタン `CDialogBar`|有効または無効|オンまたはオフにチェック ボックス|`SetCheck` と同じ|ボタン テキストの設定|  
+|通常の制御 `CDialogBar`|有効または無効|(適用なし)|(適用なし)|ウィンドウのテキストを設定します。|  
   
  このクラスの使用に関する詳細は、次を参照してください。[ユーザー インターフェイス オブジェクトの更新方法](../../mfc/how-to-update-user-interface-objects.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CCmdUI`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting  
  ハンドラーのチェーンに現在のメッセージのルーティングを続行するコマンド ルーティング メカニズムを確認するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -115,7 +110,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>コメント  
  これは、高度なメンバー関数と組み合わせて使用する、`ON_COMMAND_EX`返すハンドラー **FALSE**です。 詳細については、次を参照してください。[テクニカル ノート 6](../../mfc/tn006-message-maps.md)です。  
   
-##  <a name="enable"></a>関数  
+##  <a name="enable"></a>  関数  
  有効にするにまたは、このコマンドのユーザー インターフェイスの項目を無効にするには、このメンバー関数を呼び出します。  
   
 ```  
@@ -131,21 +126,21 @@ virtual void Enable(BOOL bOn = TRUE);
   
  [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>  CCmdUI::m_nID  
  メニュー項目、ツール バー ボタンまたはによって表されるその他のユーザー インターフェイス オブジェクトの ID、`CCmdUI`オブジェクト。  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>  CCmdUI::m_nIndex  
  メニュー項目、ツール バー ボタンまたはによって表されるその他のユーザー インターフェイス オブジェクトのインデックス、`CCmdUI`オブジェクト。  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu  
  ポインター (の`CMenu`型) で表されるメニューに、`CCmdUI`オブジェクト。  
   
 ```  
@@ -155,7 +150,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>コメント  
  **NULL**場合は、アイテムは、メニューではありません。  
   
-##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu  
  ポインター (の`CMenu`型) で表される包含サブメニュー、`CCmdUI`オブジェクト。  
   
 ```  
@@ -165,7 +160,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>コメント  
  **NULL**場合は、アイテムは、メニューではありません。 Sub メニュー場合は、ポップアップ`m_nID`ポップアップ メニューの最初の項目の ID が含まれています。 詳細については、次を参照してください。[テクニカル ノート 21](../../mfc/tn021-command-and-message-routing.md)です。  
   
-##  <a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  ポインター (型の`CWnd`)、ツールバーやステータス バーなど、ウィンドウ オブジェクトへの通知を送信しました。  
   
 ```  
@@ -175,7 +170,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>コメント  
  **NULL** 、項目がメニューや以外`CWnd`オブジェクト。  
   
-##  <a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>  CCmdUI::SetCheck  
  このコマンドのユーザー インターフェイスの項目を適切なチェックの状態に設定するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -189,7 +184,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、メニュー項目とツール バー ボタンの動作します。 中間の状態は、ツール バー ボタンにのみ適用されます。  
   
-##  <a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>  CCmdUI::SetRadio  
  このコマンドのユーザー インターフェイスの項目を適切なチェックの状態に設定するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -203,7 +198,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>コメント  
  このメンバー関数のように動作する`SetCheck`オプション グループの一部として機能しているユーザー インターフェイス項目上で動作する点を除いて、します。 項目自体、オプション ボタン グループの動作を維持する場合、グループ内の他の項目をオフにする自動はありません。  
   
-##  <a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>  CCmdUI::SetText  
  このコマンドのユーザー インターフェイスの項目のテキストを設定するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -217,7 +212,7 @@ virtual void SetText(LPCTSTR lpszText);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル MDI](../../visual-cpp-samples.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)

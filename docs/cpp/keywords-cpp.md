@@ -1,13 +1,10 @@
 ---
-title: "キーワード (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: キーワード (C++) |Microsoft ドキュメント
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keywords-c"></a>キーワード (C++)
 キーワードは、特別な意味を持つ定義済みおよび予約済みの識別子です。 プログラムでは、キーワードを識別子として使用することはできません。 次のキーワードは Microsoft C++ 用に予約されています。 先頭にアンダースコアが付いているキーワードは Microsoft の拡張機能です。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
  拡張属性を 1、`__declspec`キーワード。  
   
- 2 C++ のみのマネージ拡張に適用します。 この構文は現在使用されていません。  
+ 2 C++ のみのマネージ拡張に適用します。 この構文は現在非推奨とされます。  
   
  イベント処理で使用される 3 つの組み込み関数。  
   
@@ -106,6 +101,6 @@ ms.lasthandoff: 12/21/2017
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構文規則](../cpp/lexical-conventions.md)   
  [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

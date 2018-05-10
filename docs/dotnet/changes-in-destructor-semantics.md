@@ -1,31 +1,26 @@
 ---
-title: "デストラクターのセマンティクスの変更 |Microsoft ドキュメント"
-ms.custom: 
+title: デストラクターのセマンティクスの変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - finalizers [C++]
 - destructors, C++
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a3d078300ca0e51ba8eb035d5428d300b0413a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-in-destructor-semantics"></a>デストラクターのセマンティクスの変更
 クラスのデストラクターのセマンティクスは大幅に変更マネージ拡張から C++ の Visual C にします。  
@@ -168,7 +163,7 @@ void f() {
  実際には、新しい構文では、もう一度としてデストラクターと組み合わせコンス トラクター自動取得/解放メカニズムは、ローカル オブジェクトの有効期間に関連付けられています。  
   
 ## <a name="declaring-an-explicit-finalize"></a>明示的な Finalize を宣言します。  
- 新しい構文ではこれまで見てきたよう、デストラクター、`Dispose`メソッドです。 この、デストラクターが明示的に呼び出されないときに、ガベージ コレクター終了処理中には見つけることを以前と関連付けられている`Finalize`オブジェクトのメソッドです。 破棄、および終了処理の両方をサポートするために、ファイナライザーを提供するための特別な構文が導入されています。 例:  
+ 新しい構文ではこれまで見てきたよう、デストラクター、`Dispose`メソッドです。 この、デストラクターが明示的に呼び出されないときに、ガベージ コレクター終了処理中には見つけることを以前と関連付けられている`Finalize`オブジェクトのメソッドです。 破棄、および終了処理の両方をサポートするために、ファイナライザーを提供するための特別な構文が導入されています。 例えば:  
   
 ```  
 public ref class R {  
@@ -200,6 +195,6 @@ public:
   
  マネージ拡張からコードを移行するには、新しい構文に、この変換の実行を見逃す可能性がします。 アプリケーション依存関係のある何らかの方法で関連付けられている終了処理メソッドの実行時に、アプリケーションの動作はサイレント モードでからが異なる場合、意図したものとします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [デストラクターとファイナライザーを使用する方法: を定義およびクラスと構造体を使用 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)

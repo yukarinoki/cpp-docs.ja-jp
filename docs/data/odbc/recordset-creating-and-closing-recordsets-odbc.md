@@ -1,13 +1,10 @@
 ---
-title: "レコード セット: を作成するレコード セットと破棄 (ODBC) |Microsoft ドキュメント"
-ms.custom: 
+title: 'レコード セット: を作成するレコード セットと破棄 (ODBC) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコードセット: レコードセットの生成と破棄 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [レコード セット オブジェクトをクローズする方法とタイミング](#_core_closing_a_recordset)です。  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>実行時にレコード セットの作成  
+##  <a name="_core_creating_recordsets_at_run_time"></a> 実行時にレコード セットの作成  
  レコード セット オブジェクトを作成するには、プログラムで、前に通常アプリケーション固有のレコード セット クラスを作成します。 この手順の詳細については、次を参照してください。 [MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)です。  
   
  データ ソースからレコードを選択する必要がある場合は、ダイナセットまたはスナップショットのオブジェクトを開きます。 作成するオブジェクトの種類を行う必要がありますに依存アプリケーションではどのような ODBC ドライバーをサポートしているデータを使用します。 詳細については、次を参照してください。[ダイナセット](../../data/odbc/dynaset.md)と[スナップショット](../../data/odbc/snapshot.md)です。  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  開発時に使用する接続文字列は、ユーザーが実際に必要な接続文字列をできない可能性があります。 この点で、アプリケーションを汎用化する方法については、次を参照してください。[データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)です。  
   
-##  <a name="_core_setting_recordset_options"></a>レコード セットのオプションの設定  
+##  <a name="_core_setting_recordset_options"></a> レコード セットのオプションの設定  
  呼び出す前に、レコード セット オブジェクトを構築した後、**開く**レコードを選択するには、レコード セットの動作を制御するいくつかのオプションを設定する可能性があります。 すべてのレコード セットの次の操作を実行できます。  
   
 -   指定して、[フィルター](../../data/odbc/recordset-filtering-records-odbc.md)レコードの選択を制限します。  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  レコードの選択に影響する可能性を呼び出す前に、これらのオプションを設定する必要があります、**開く**メンバー関数。  
   
-##  <a name="_core_closing_a_recordset"></a>レコード セットを閉じる  
+##  <a name="_core_closing_a_recordset"></a> レコード セットを閉じる  
  Recordset を完了したら、破棄してから、メモリを解放します。  
   
 #### <a name="to-close-a-recordset"></a>レコード セットを閉じる  
@@ -118,7 +113,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
   
  **閉じる**レコード セットの解放**HSTMT**を処理します。 C++ オブジェクトは破棄しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)   
  [レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

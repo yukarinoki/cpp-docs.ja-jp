@@ -1,12 +1,9 @@
 ---
-title: "agent クラス |Microsoft ドキュメント"
-ms.custom: 
+title: agent クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent クラス
 すべての独立エージェントの基底クラスとして使用されるクラスです。 他のエージェントに状態が表示されないようにしたり、メッセージ渡しでやり取りしたりする目的で使用されます。  
@@ -60,7 +55,7 @@ class agent;
   
 |名前|説明|  
 |----------|-----------------|  
-|[cancel](#cancel)|いずれかからのエージェントの移動、`agent_created`または`agent_runnable`状態を`agent_canceled`状態です。|  
+|[キャンセル](#cancel)|いずれかからのエージェントの移動、`agent_created`または`agent_runnable`状態を`agent_canceled`状態です。|  
 |[start](#start)|エージェントに移動、`agent_created`状態、`agent_runnable`状態、および実行をスケジュールします。|  
 |[status](#status)|エージェントからのステータス情報の同期ソースです。|  
 |[status_port](#status_port)|エージェントからのステータス情報の非同期のソースです。|  
@@ -81,7 +76,7 @@ class agent;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `agent`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -277,5 +272,5 @@ static void __cdecl wait_for_one(
   
  場合、パラメーター`_Timeout`定数以外の値を持つ`COOPERATIVE_TIMEOUT_INFINITE`、例外[operation_timed_out](operation-timed-out-class.md)が、一定の時間では、エージェントがそのタスクを完了する前に有効期限が切れる場合にスローされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

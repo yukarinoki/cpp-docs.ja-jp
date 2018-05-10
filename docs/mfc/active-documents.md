@@ -1,13 +1,10 @@
 ---
-title: "アクティブ ドキュメント |Microsoft ドキュメント"
-ms.custom: 
+title: アクティブ ドキュメント |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>Active ドキュメント
 アクティブなドキュメントは、OLE の複合ドキュメント テクノロジを拡張します。 これらの拡張機能は、オブジェクトがコンテナー内で機能をまだ保持の表示および印刷機能を制御できるように、ビューを管理する追加のインターフェイスの形式で提供されます。 この処理できるようになります (Microsoft Office バインダーや Microsoft Internet Explorer の場合) などの外部のフレームとネイティブ フレーム (、製品のビュー ポートなど) の両方にドキュメントを表示します。  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  アクティブ ドキュメントの 1 つまたは複数の種類を作成できます[ビュー](#requirements_for_view_objects)のデータ (例では、通常、アウトライン、ページのレイアウト、およびなど)。 ビューは、フィルターを使用する、データを表示できるように機能します。 場合でも、ドキュメントでは、ビューの 1 つだけの型を持つ、可能性がありますか新しいウィンドウの機能をサポートするための手段として複数のビューをサポートするために (たとえば、**新しいウィンドウ**上の品目、**ウィンドウ**Office のメニューアプリケーションの場合)。  
   
-##  <a name="requirements_for_active_documents"></a>アクティブ ドキュメントの要件  
+##  <a name="requirements_for_active_documents"></a> アクティブ ドキュメントの要件  
  Active ドキュメント コンテナーに表示できるアクティブなドキュメントが必要です。  
   
 -   そのストレージ メカニズムとして OLE の複合ファイルを使用して実装することによって`IPersistStorage`です。  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  場合の知識とコンテナー側のインターフェイスを使用する方法については、これらの要件で暗黙的です。  
   
-##  <a name="requirements_for_view_objects"></a>オブジェクトを表示するための要件  
+##  <a name="requirements_for_view_objects"></a> オブジェクトを表示するための要件  
  アクティブなドキュメントには、そのデータの 1 つまたは複数のビューを作成できます。 機能的には、これらのビューは、データを表示するための特定のメソッドへのポートです。 アクティブなドキュメントは、1 つのビューのみをサポートする場合、アクティブなドキュメントとビューを実装する 1 つのクラスです。 **この**、同じオブジェクトを返します`IOleDocumentView`インターフェイス ポインター。  
   
  Active ドキュメント コンテナー内で表現されているビュー コンポーネントをサポートする必要があります**IOleInPlaceObject**と**IOleInPlaceActiveObject**に加えて`IOleDocumentView`:  
@@ -109,6 +104,6 @@ interface IOleDocumentView : IUnknown
   
  ビュー オブジェクトには、コマンド ターゲットことができます。 実装することによって`IOleCommandTarget`ビューは、コンテナーのユーザー インターフェイスで発生するコマンドを受け取ることができます (など**新規**、**開く**、**名前を付けて保存**、 **印刷**上、**ファイル**メニューおよび**コピー**、**貼り付け**、**を元に戻す**上、 **を編集**メニュー)。 詳細については、次を参照してください。[メッセージの処理とコマンド ターゲット](../mfc/message-handling-and-command-targets.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Active ドキュメント コンテインメント](../mfc/active-document-containment.md)
 

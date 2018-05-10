@@ -1,13 +1,10 @@
 ---
-title: "ツール バー コントロールの外観のカスタマイズ |Microsoft ドキュメント"
-ms.custom: 
+title: ツール バー コントロールの外観のカスタマイズ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBSTYLE_
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>ツール バー コントロールの外観のカスタマイズ
 クラス`CToolBarCtrl`外観 (および場合によっては、動作) のツールバー オブジェクトに影響する多くのスタイルを提供します。 設定してツール バー オブジェクトを変更、`dwCtrlStyle`のパラメーター、 `CToolBarCtrl::Create` (または`CToolBar::CreateEx`) メンバー関数は、ツール バー コントロールを作成します。  
@@ -57,15 +52,15 @@ ms.lasthandoff: 12/21/2017
   
  残りのスタイルでは、ツールバーのオブジェクトのビジュアルとビジュアルの側面に影響します。  
   
--   `TBSTYLE_WRAPABLE`ボタンの複数の行を持つことができるツールバーを作成します。 ツール バー ボタン「ラップできます」次の行に、ツールバーが狭いが同じ直線上のすべてのボタンを含めるためになったとき。 分離と折り返されます境界での折り返しが発生します。  
+-   `TBSTYLE_WRAPABLE` ボタンの複数の行を持つことができるツールバーを作成します。 ツール バー ボタン「ラップできます」次の行に、ツールバーが狭いが同じ直線上のすべてのボタンを含めるためになったとき。 分離と折り返されます境界での折り返しが発生します。  
   
 -   **TBSTYLE_CUSTOMERASE**生成**NM_CUSTOMDRAW**の通知メッセージを処理するとき`WM_ERASEBKGND`メッセージ。  
   
--   `TBSTYLE_TOOLTIPS`ツールバーのボタンの説明テキストを表示するアプリケーションで使用できる、ツール ヒント コントロールを作成します。  
+-   `TBSTYLE_TOOLTIPS` ツールバーのボタンの説明テキストを表示するアプリケーションで使用できる、ツール ヒント コントロールを作成します。  
   
  ツール バー スタイルや拡張スタイルの完全な一覧については、次を参照してください。[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)と[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

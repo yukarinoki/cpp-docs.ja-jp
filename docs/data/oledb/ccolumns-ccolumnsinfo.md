@@ -1,12 +1,9 @@
 ---
-title: "CColumns、CColumnsInfo |Microsoft ドキュメント"
-ms.custom: 
+title: CColumns、CColumnsInfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szDomainSchema
@@ -121,18 +118,16 @@ helpviewer_keywords:
 - m_szCharSetSchema
 - COLUMN_DEFAULT
 ms.assetid: 7a4ca8e8-e041-4def-8c1a-00c211f7da0b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 712bfbbcd3fd5440e3e27cdf7d21709c914d7b74
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 913b065411cd5710e0e842708575bc5c8464a1b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccolumns-ccolumnsinfo"></a>CColumns、CColumnsInfo
 Typedef クラスを呼び出す**CColumns**そのパラメーター クラスを実装する**CColumnsInfo**です。  
@@ -175,9 +170,9 @@ Typedef クラスを呼び出す**CColumns**そのパラメーター クラス�
 |m_szDomainName|DOMAIN_NAME|  
 |m_szDescription|説明|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbsch.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CatDB](../../visual-cpp-samples.md)   
  [CRestrictions クラス](../../data/oledb/crestrictions-class.md)

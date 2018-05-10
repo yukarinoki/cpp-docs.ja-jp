@@ -1,12 +1,9 @@
 ---
-title: "直接クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 直接クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinkingdoc-class"></a>直接クラス
 OLE コンテナー ドキュメントの基底クラスです。OLE コンテナー ドキュメントは、ドキュメントが保持する埋め込みアイテムへのリンクをサポートします。  
@@ -102,10 +97,10 @@ class COleLinkingDoc : public COleDocument
   
  `COleLinkingDoc`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
  構築、 `COleLinkingDoc` OLE システム Dll との通信を開始せずオブジェクト。  
   
 ```  
@@ -115,7 +110,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>コメント  
  呼び出す必要があります、 `Register` OLE ドキュメントが開いていることを通知するメンバー関数。  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
  ドキュメントに指定した名前 OLE 埋め込みアイテムが含まれるかどうかを判断するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -132,7 +127,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>コメント  
  既定の実装では、指定した名前 (名前の比較では大文字小文字を区別) を持つ項目の埋め込まれた項目の一覧を検索します。 独自のメソッドの格納や埋め込み OLE アイテムの名前を付ける必要がある場合は、この関数をオーバーライドします。  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
  ドキュメントに指定した名前のリンク サーバー項目が含まれているかどうか確認するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -149,7 +144,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>コメント  
  既定値`COleLinkingDoc`実装は常に返します**NULL**です。 この関数は、派生クラスでオーバーライドされる`COleServerDoc`のリンクされた項目の指定した名前 (名前の比較では大文字小文字を区別) OLE サーバー項目のリストを検索します。 格納や、リンク サーバーのアイテムを取得する独自のメソッドを実装している場合は、この関数をオーバーライドします。  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>  COleLinkingDoc::Register  
  ドキュメントが開かれている OLE システム Dll に通知します。  
   
 ```  
@@ -173,7 +168,7 @@ BOOL Register(
   
  使用している場合`COleTemplateServer`、アプリケーションで`Register`によって呼び出されます`COleLinkingDoc`の実装の`OnNewDocument`、 `OnOpenDocument`、および`OnSaveDocument`です。  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
  OLE システム Dll にドキュメントが開いていないことが通知されます。  
   
 ```  
@@ -183,9 +178,9 @@ void Revoke();
 ### <a name="remarks"></a>コメント  
  OLE システム Dll のドキュメントの登録を取り消すには、この関数を呼び出します。  
   
- 名前付きのファイルを閉じるときに、この関数を呼び出す必要がありますが、通常必要はありませんメソッドを直接呼び出す。 `Revoke`によって呼び出されます`COleLinkingDoc`の実装の`OnCloseDocument`、 `OnNewDocument`、 `OnOpenDocument`、および`OnSaveDocument`です。  
+ 名前付きのファイルを閉じるときに、この関数を呼び出す必要がありますが、通常必要はありませんメソッドを直接呼び出す。 `Revoke` によって呼び出されます`COleLinkingDoc`の実装の`OnCloseDocument`、 `OnNewDocument`、 `OnOpenDocument`、および`OnSaveDocument`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル OCLIENT](../../visual-cpp-samples.md)   
  [COleDocument クラス](../../mfc/reference/coledocument-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

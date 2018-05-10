@@ -1,12 +1,9 @@
 ---
-title: "CRestrictions クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CRestrictions クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CRestrictions
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CRestrictions class
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e68234f3a93cacf22c3abb0c4181a938b3f1dd6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b0b174a8e53f72b0077d10fd1728c4e726e0f218
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 ジェネリック クラスには、スキーマ行セットの制限を指定することができます。  
@@ -59,9 +54,9 @@ class CRestrictions :
 |-|-|  
 |[開く](../../data/oledb/crestrictions-open.md)|ユーザー指定の制限に従って、結果セットを返します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbsch.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

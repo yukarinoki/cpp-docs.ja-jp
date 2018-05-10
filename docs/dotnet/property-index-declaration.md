@@ -1,13 +1,10 @@
 ---
-title: "プロパティ インデックスの宣言 |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ インデックスの宣言 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - defaults, indexers
 - indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76473ce04cdf5860476b7612ddcbf00b40a0fae1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-index-declaration"></a>プロパティ インデックスの宣言
 インデックス付きプロパティを宣言する構文は、Visual C を c++ マネージ拡張から変更されました。  
   
- インデックス付きプロパティのマネージ拡張言語のサポートの 2 つの主な欠点は、クラス レベルの添字演算子; を提供することができません。つまり、すべてのインデックス付きプロパティは、名前を指定するために必要、したがって方法はありません、たとえば、直接に適用する管理対象の添字演算子を提供する、`Vector`または`Matrix`クラス オブジェクト。 重大な欠点を以下の 2 番目を視覚的に、インデックス付きプロパティからプロパティを識別するが困難であるパラメーターの数がだけが示されますです。 最後に、インデックス付きプロパティのプロパティのインデックス付きでないものと同じ問題 - アクセサーがない、アトミック単位として扱われますが、個々 のメソッドに分割します。  例:  
+ インデックス付きプロパティのマネージ拡張言語のサポートの 2 つの主な欠点は、クラス レベルの添字演算子; を提供することができません。つまり、すべてのインデックス付きプロパティは、名前を指定するために必要、したがって方法はありません、たとえば、直接に適用する管理対象の添字演算子を提供する、`Vector`または`Matrix`クラス オブジェクト。 重大な欠点を以下の 2 番目を視覚的に、インデックス付きプロパティからプロパティを識別するが困難であるパラメーターの数がだけが示されますです。 最後に、インデックス付きプロパティのプロパティのインデックス付きでないものと同じ問題 - アクセサーがない、アトミック単位として扱われますが、個々 のメソッドに分割します。  例えば:  
   
 ```  
 public __gc class Vector;  
@@ -69,7 +64,7 @@ public:
 };  
 ```  
   
- 新しい構文では、クラスのオブジェクトに直接適用できるクラス レベルのインデクサーを示すために、`default`キーワードは、明示的な名前の代わりに再利用します。 例:  
+ 新しい構文では、クラスのオブジェクトに直接適用できるクラス レベルのインデクサーを示すために、`default`キーワードは、明示的な名前の代わりに再利用します。 例えば:  
   
 ```  
 public ref class Matrix {  
@@ -100,6 +95,6 @@ public:
   
  ない単純なインデックスの構文、単純なプロパティの構文に似ていますに注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスまたはインターフェイス内でのメンバー宣言 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  

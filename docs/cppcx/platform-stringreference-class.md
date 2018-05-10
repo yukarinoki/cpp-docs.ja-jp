@@ -1,11 +1,8 @@
 ---
-title: "Platform::stringreference クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::stringreference クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference クラス
 最小のコピー操作で `Platform::String^` 入力パラメーターから他のメソッドに文字列データを渡すために使用できる最適化の手法です。  
@@ -51,7 +46,7 @@ class StringReference
   
 |名前|説明|  
 |----------|-----------------|  
-|[StringReference::Data](#data)|文字列データを char16 値の配列として返します。|  
+|[Stringreference::data](#data)|文字列データを char16 値の配列として返します。|  
 |[StringReference::Length](#length)|文字列内の文字数を返します。|  
 |[StringReference::GetHSTRING](#gethstring)|文字列データを HSTRING として返します。|  
 |[StringReference::GetString](#getstring)|文字列データを `Platform::String^`として返します。|  
@@ -61,9 +56,9 @@ class StringReference
 |名前|説明|  
 |----------|-----------------|  
 |[StringReference::operator=](#operator-assign)|`StringReference` を新しい `StringReference` インスタンスに割り当てます。|  
-|[StringReference::operator()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|  
+|[Stringreference::operator()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -204,5 +199,5 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
 
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform::StringReference クラス](../cppcx/platform-stringreference-class.md)

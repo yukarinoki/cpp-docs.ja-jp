@@ -1,11 +1,8 @@
 ---
-title: "Platform::agile クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::agile クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile クラス
 アジャイル オブジェクトとして MashalingBehavior=Standard を含むオブジェクトを表します。これはランタイム スレッドの例外の頻度を大幅に減らします。 `Agile<T>` を使うと、非アジャイル オブジェクトによる同じスレッドや別のスレッドの呼び出しや、同じスレッドや別のスレッドによる非アジャイル オブジェクトの呼び出しができるようになります。 詳細については、次を参照してください。[スレッドとマーシャ リング](../cppcx/threading-and-marshaling-c-cx.md)です。  
@@ -56,7 +51,7 @@ class Agile;
   
 |名前|説明|  
 |----------|-----------------|  
-|[Agile::Agile](#ctor)|アジャイル クラスの新しいインスタンスを初期化します。|  
+|[Agile::agile](#ctor)|アジャイル クラスの新しいインスタンスを初期化します。|  
 |[Agile::~Agile デストラクター](#dtor)|Agile クラスの現在のインスタンスを破棄します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
@@ -80,7 +75,7 @@ class Agile;
   
  `Agile`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -258,5 +253,5 @@ const throw();
   
  代入演算は、現在のアジャイル オブジェクトのコンテキストを自動的に保持します。 
        
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

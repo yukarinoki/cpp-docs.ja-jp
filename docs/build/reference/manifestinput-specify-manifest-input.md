@@ -1,27 +1,22 @@
 ---
-title: "-MANIFESTINPUT (マニフェストの入力を指定してください) |Microsoft ドキュメント"
-ms.custom: 
+title: -MANIFESTINPUT (マニフェストの入力を指定してください) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1eec78675845e3f738bb0b6b440b3a71f1fd572
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eecf1740855c2feef0d7cac4bbcc85ad95eade6f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (マニフェスト入力の指定)
 マニフェスト入力ファイルをイメージに埋め込まれたマニフェストに含めるように指定します。  
@@ -41,6 +36,6 @@ ms.lasthandoff: 12/21/2017
   
  このオプションは [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] で直接設定することはできません。 代わりに、使用、**追加のマニフェスト ファイル**に含める追加のマニフェスト ファイルを指定するプロジェクトのプロパティです。 詳細については、次を参照してください。[入力と出力、マニフェスト ツール、構成プロパティ、\<プロジェクト名 > プロパティ ページ ダイアログ ボックス](../../ide/input-and-output-manifest-tool.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
  [リンカー オプション](../../build/reference/linker-options.md)

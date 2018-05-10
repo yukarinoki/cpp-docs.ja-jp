@@ -2,12 +2,9 @@
 title: アプリケーションの種類、MFC アプリケーション ウィザード |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.apptype
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45253eed40e9a79dbcb372f63cc44aaeb99edbe0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5708e823c57ecdb8470a398c4192cba1a5b6e411
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-type-mfc-application-wizard"></a>[アプリケーションの種類] \(MFC アプリケーション ウィザード)
 このページを使用して、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)を設計して新しい MFC アプリケーションへの基本的な機能を追加します。  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
 |**共有 DLL で MFC を使用します。**|MFC ライブラリを共有 DLL としてアプリケーションにリンクします。 アプリケーションは、実行時に、MFC ライブラリへの呼び出しをによりします。 このオプションは、MFC ライブラリを使用する複数の実行可能ファイルで構成されるアプリケーションのディスクとメモリの量を削減します。 Win32 と MFC の両方のアプリケーションが DLL (既定値) の関数を呼び出すことができます。|  
 |**スタティック ライブラリで MFC を使用します。**|ビルド時に、MFC のスタティック ライブラリをアプリケーションにリンクします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)   
  [Visual C++ プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)
 

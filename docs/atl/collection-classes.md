@@ -1,29 +1,24 @@
 ---
-title: "ATL コレクション クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ATL コレクション クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 840a9132991942dac9f083796c1a56e80654cb6e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5aa8bf42d255cfb582989d1376aa3479559e9309
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collection-classes"></a>コレクション クラス
 次のクラスは、配列、リスト、マップ、およびも比較や要素へのアクセスの特徴 (traits) メソッドのサポートを提供します。  
@@ -99,7 +94,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="related-articles"></a>関連トピック  
  [ATL コレクション クラス](../atl/atl-collection-classes.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../atl/atl-class-overview.md)   
  [コレクション クラス](../atl/atl-collection-classes.md)
 

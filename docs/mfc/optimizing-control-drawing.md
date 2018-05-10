@@ -1,29 +1,24 @@
 ---
-title: "コントロールの描画の最適化 |Microsoft ドキュメント"
-ms.custom: 
+title: コントロールの描画の最適化 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e79a7b8e539198844c106a9c41408f04d69186
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8103e1e342756f9b715c1a0959ed256403e130bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-control-drawing"></a>コントロールの描画の最適化
 コントロールは、コンテナーが指定したデバイス コンテキストに自身で描画するように指示されますが通常デバイス コンテキストに (ペン、ブラシ、フォントなど) の GDI オブジェクトを選択、その図面の操作を実行し、以前の GDI オブジェクトが復元されます。 場合は、コンテナーは、同じデバイス コンテキストに描画するのには、複数のコントロールを持ち、各コントロールが必要な GDI オブジェクトを選択、コントロールが以前に選択したオブジェクトを個別に復元しないでください場合に、時間を保存することができます。 すべてのコントロールが描画されると、コンテナーによって元のオブジェクトが自動的に復元します。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)   
  [COleControl クラス](../mfc/reference/colecontrol-class.md)   
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   

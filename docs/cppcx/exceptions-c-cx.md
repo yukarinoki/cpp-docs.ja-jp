@@ -1,24 +1,19 @@
 ---
-title: "例外 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: 例外 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5e58ad68f4cfc7d514c4d8434cf52f6d348640c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-ccx"></a>例外 (C++/CX)
 
@@ -38,20 +33,20 @@ C + + CX を一般的な HRESULT エラーを表す標準の例外のセット�
 
 次の表は、標準の例外の一覧を示しています。
 
-|name|基になる HRESULT|説明|
+|名前|基になる HRESULT|説明|
 |----------|------------------------|-----------------|
 |COMException|*ユーザー定義の hresult*|COM メソッドの呼び出しから認識されない HRESULT が返されるとスローされます。|
 |AccessDeniedException|E\_ACCESSDENIED|リソースや機能へのアクセスが拒否されるとスローされます。|
 |ChangedStateException|E\_CHANGED\_状態|コレクション反復子またはコレクション ビューのメソッドが、親コレクションの変更後に呼び出さたときにスローされます。これにより、メソッドの結果は無効になります。|
 |ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|COM クラスが登録されていないときにスローされます。|
-|DisconnectedException|RPC\_E\_DISCONNECTED|オブジェクトがクライアントから接続を切断されるとスローされます。|
-|FailureException|E\_FAIL|操作が失敗したときにスローされます。|
+|DisconnectedException|RPC\_E\_切断|オブジェクトがクライアントから接続を切断されるとスローされます。|
+|FailureException|E\_失敗|操作が失敗したときにスローされます。|
 |InvalidArgumentException|E\_INVALIDARG|メソッドに提供された引数のいずれかが有効でない場合にスローされます。|
 |InvalidCastException|E\_NOINTERFACE|型が別の型にキャストできないときにスローされます。|
 |NotImplementedException|E\_NOTIMPL|インターフェイス メソッドがクラスに実装されていないときにスローされます。|
 |NullReferenceException|E\_ポインター|null オブジェクト参照を逆参照しようするとスローされます。|
 |ObjectDisposedException|RO\_E\_終了|破棄されたオブジェクトで操作が実行されるとスローされます。|
-|OperationCanceledException|E\_ABORT|操作が中止されるとスローされます。|
+|OperationCanceledException|E\_中止|操作が中止されるとスローされます。|
 |OutOfBoundsException|E\_境界|操作が有効範囲外のデータにアクセスを試みるとスローされます。|
 |OutOfMemoryException|E\_OUTOFMEMORY|メモリが不足して操作を完了できないときにスローされます。|
 |WrongThreadException|RPC\_E\_間違った\_スレッド|スレッドが、スレッドのアパートメントに属さないプロキシ オブジェクト用のインターフェイス ポインターを通じて呼び出すときにスローされます。|

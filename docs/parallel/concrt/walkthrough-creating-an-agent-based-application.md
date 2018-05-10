@@ -1,30 +1,25 @@
 ---
-title: "チュートリアル: エージェント ベースのアプリケーションの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: エージェント ベースのアプリケーションの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションの作成
 ここでは、基本的なエージェント ベースのアプリケーションの作成方法について説明します。 このチュートリアルでは、テキスト ファイルから非同期的にデータを読み取るエージェントを作成できます。 このアプリケーションでは、Adler-32 チェックサム アルゴリズムを使用して、そのファイルの内容のチェックサムを計算します。  
@@ -49,14 +44,14 @@ ms.lasthandoff: 12/21/2017
   
 - [アプリケーションで file_reader クラスの使用](#useagentclass)  
   
-##  <a name="createapplication"></a>コンソール アプリケーションの作成  
+##  <a name="createapplication"></a> コンソール アプリケーションの作成  
  ここでは、プログラムで使用されるヘッダー ファイルを参照する Visual C++ コンソール アプリケーションの作成方法について説明します。  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Win32 コンソール アプリケーション ウィザードを使用して Visual C++ アプリケーションを作成するには  
   
 1.  **ファイル** メニューのをクリックして**新規**、クリックして**プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、 **Visual C**内のノード、**プロジェクトの種類**クリックしてウィンドウ**Win32 コンソール アプリケーション****テンプレート**ウィンドウです。 たとえば、プロジェクトの名前を入力`BasicAgent`、順にクリック**[ok]**を表示する、 **Win32 コンソール アプリケーション ウィザード**です。  
+2.  **新しいプロジェクト**ダイアログ ボックスで、 **Visual C**内のノード、**プロジェクトの種類**クリックしてウィンドウ**Win32 コンソール アプリケーション****テンプレート**ウィンドウです。 たとえば、プロジェクトの名前を入力`BasicAgent`、順にクリック **[ok]** を表示する、 **Win32 コンソール アプリケーション ウィザード**です。  
   
 3.  **Win32 コンソール アプリケーション ウィザード**ダイアログ ボックスで、をクリックして**完了**です。  
   
@@ -70,12 +65,12 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="createagentclass"></a>File_reader クラスの作成  
+##  <a name="createagentclass"></a> File_reader クラスの作成  
  ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。  
   
 #### <a name="to-create-the-filereader-class"></a>file_reader クラスを作成するには  
   
-1.  新しい C++ ヘッダー ファイルをプロジェクトに追加します。 これを行うを右クリックし、**ヘッダー ファイル**内のノード**ソリューション エクスプ ローラー**、 をクリックして**追加**、順にクリック**新しい項目の**します。 **テンプレート**ペインで、**ヘッダー ファイル (.h)**です。 **新しい項目の追加** ダイアログ ボックスで、「`file_reader.h`で、**名前**ボックスと  をクリック**追加**です。  
+1.  新しい C++ ヘッダー ファイルをプロジェクトに追加します。 これを行うを右クリックし、**ヘッダー ファイル**内のノード**ソリューション エクスプ ローラー**、 をクリックして**追加**、順にクリック**新しい項目の**します。 **テンプレート**ペインで、**ヘッダー ファイル (.h)** です。 **新しい項目の追加** ダイアログ ボックスで、「`file_reader.h`で、**名前**ボックスと  をクリック**追加**です。  
   
 2.  file_reader.h に、次のコードを追加します。  
   
@@ -120,7 +115,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="useagentclass"></a>アプリケーションで file_reader クラスの使用  
+##  <a name="useagentclass"></a> アプリケーションで file_reader クラスの使用  
  ここでは、`file_reader` クラスを使用して、テキスト ファイルの内容を読み取る方法について説明します。 作成する方法も示しています、 [concurrency::call](../../parallel/concrt/reference/call-class.md)このファイルのデータを受信し、その adler-32 チェックサムを計算するオブジェクト。  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>アプリケーションで file_reader クラスを使用するには  
@@ -191,7 +186,7 @@ Adler-32 sum is fefb0d75
 ## <a name="next-steps"></a>次の手順  
  エージェント ベースのアプリケーションの別の例を参照してください。[チュートリアル: join デッドロックの防止を使用した](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)   
  [メッセージ パッシング関数](../../parallel/concrt/message-passing-functions.md)   

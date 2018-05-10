@@ -1,12 +1,9 @@
 ---
-title: "CMFCDragFrameImpl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCDragFrameImpl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDragFrameImpl
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe293a8fa64cb323771db4f0f2929204790d210
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f743c074bc956181e8b62a02062ac2f22cdfb6e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl クラス
 `CMFCDragFrameImpl`クラスは、ユーザーが標準ドッキング モードのペインをドラッグしたときに表示されるドラッグ四角形を描画します。  
@@ -45,7 +40,7 @@ class CMFCDragFrameImpl
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdragframeimpl.h  
   
 ##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame  
@@ -123,7 +118,7 @@ void ResetState();
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CPane クラス](../../mfc/reference/cpane-class.md)

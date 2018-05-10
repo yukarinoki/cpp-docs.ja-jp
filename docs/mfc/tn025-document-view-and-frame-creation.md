@@ -1,13 +1,10 @@
 ---
-title: "TN025: ドキュメント、表示、およびフレームの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN025: ドキュメント、表示、およびフレームの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>テクニカル ノート 25: ドキュメント、ビュー、フレームの作成
 > [!NOTE]
@@ -47,18 +42,18 @@ pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 AddDocTemplate(pTemplate);
 ```  
   
- 1 つ`CWinApp`オブジェクトには、アプリケーション内のすべてのフレーム ウィンドウを所有しています。 アプリケーションのメイン フレーム ウィンドウに保存するか**:m_pmainwnd**; 通常設定`m_pMainWnd`で、`InitInstance`実装が AppWizard でそれを行う場合。 シングル ドキュメント インターフェイス (SDI) に対してこれは 1 つ`CFrameWnd`のみドキュメント フレーム ウィンドウと同様に、アプリケーションのメイン フレーム ウィンドウとして機能します。 MDI フレームは、マルチ ドキュメント インターフェイス (MDI) (クラス`CMDIFrameWnd`) アプリケーションのメイン フレーム ウィンドウを含むすべての子として機能する`CFrameWnd`s。 クラスの各子ウィンドウは、 `CMDIChildWnd` (から派生した`CFrameWnd`) し、場合によっては多数のドキュメント フレーム ウィンドウのいずれかとして機能します。  
+ 1 つ`CWinApp`オブジェクトには、アプリケーション内のすべてのフレーム ウィンドウを所有しています。 アプリケーションのメイン フレーム ウィンドウに保存するか **:m_pmainwnd**; 通常設定`m_pMainWnd`で、`InitInstance`実装が AppWizard でそれを行う場合。 シングル ドキュメント インターフェイス (SDI) に対してこれは 1 つ`CFrameWnd`のみドキュメント フレーム ウィンドウと同様に、アプリケーションのメイン フレーム ウィンドウとして機能します。 MDI フレームは、マルチ ドキュメント インターフェイス (MDI) (クラス`CMDIFrameWnd`) アプリケーションのメイン フレーム ウィンドウを含むすべての子として機能する`CFrameWnd`s。 クラスの各子ウィンドウは、 `CMDIChildWnd` (から派生した`CFrameWnd`) し、場合によっては多数のドキュメント フレーム ウィンドウのいずれかとして機能します。  
   
 ## <a name="doctemplates"></a>ウィンドウ  
  `CDocTemplate`作成者とドキュメントの管理者は、します。 作成したドキュメントが所有しています。 派生する必要はありません、アプリケーションでは、次に示すリソース ベースのアプローチを使用する場合`CDocTemplate`です。  
   
- SDI アプリケーションは、クラス`CSingleDocTemplate`の 1 つ開いているドキュメントを追跡します。 MDI アプリケーションは、クラス`CMultiDocTemplate`リストを保持 (、 `CPtrList`) そのテンプレートから作成されたすべての現在開いているドキュメントのです。 `CDocTemplate::AddDocument`および`CDocTemplate::RemoveDocument`を追加またはテンプレートからドキュメントを削除するため、仮想メンバー関数を提供します。 `CDocTemplate`フレンド**CDocument**プロテクト セットアップできるように**CDocument::m_pDocTemplate**バック ポインターの元のドキュメントを作成したドキュメント テンプレートにポイントします。  
+ SDI アプリケーションは、クラス`CSingleDocTemplate`の 1 つ開いているドキュメントを追跡します。 MDI アプリケーションは、クラス`CMultiDocTemplate`リストを保持 (、 `CPtrList`) そのテンプレートから作成されたすべての現在開いているドキュメントのです。 `CDocTemplate::AddDocument` および`CDocTemplate::RemoveDocument`を追加またはテンプレートからドキュメントを削除するため、仮想メンバー関数を提供します。 `CDocTemplate` フレンド**CDocument**プロテクト セットアップできるように**CDocument::m_pDocTemplate**バック ポインターの元のドキュメントを作成したドキュメント テンプレートにポイントします。  
   
- `CWinApp`既定値を処理する`OnFileOpen`実装で、すべてのドキュメント テンプレートはさらにクエリを実行します。 実装には、既に開いているドキュメントを検索し、どの形式で新しいドキュメントを開くの決定が含まれています。  
+ `CWinApp` 既定値を処理する`OnFileOpen`実装で、すべてのドキュメント テンプレートはさらにクエリを実行します。 実装には、既に開いているドキュメントを検索し、どの形式で新しいドキュメントを開くの決定が含まれています。  
   
- `CDocTemplate`ドキュメントおよびフレームの UI のバインドを管理します。  
+ `CDocTemplate` ドキュメントおよびフレームの UI のバインドを管理します。  
   
- `CDocTemplate`名前のないドキュメントの数のカウントを保持します。  
+ `CDocTemplate` 名前のないドキュメントの数のカウントを保持します。  
   
 ## <a name="cdocument"></a>CDocument  
  A **CDocument**によって所有されて、`CDocTemplate`です。  
@@ -76,7 +71,7 @@ AddDocTemplate(pTemplate);
   
  MDI フレーム ウィンドウのクライアント領域はすべての MDI 子フレーム ウィンドウの親である MDICLIENT コントロールが入力されます。 SDI フレーム ウィンドウまたは MDI 子フレーム ウィンドウは、クライアント領域は通常で埋め、 `CView`-window オブジェクトを派生します。 場合`CSplitterWnd`、ビューのクライアント領域はで埋め、`CSplitterWnd`ウィンドウ オブジェクトおよび`CView`-派生ウィンドウ オブジェクト (各分割ウィンドウ枠の 1 つ) の子ウィンドウとして作成されます、`CSplitterWnd`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

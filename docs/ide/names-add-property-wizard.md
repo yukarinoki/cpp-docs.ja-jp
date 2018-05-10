@@ -1,31 +1,26 @@
 ---
-title: "名前、プロパティの追加ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: 名前、プロパティの追加ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="names-add-property-wizard"></a>[名前] (プロパティの追加ウィザード)
+# <a name="names-add-property-wizard"></a>[名前] \(プロパティの追加ウィザード)
 このウィザードを使用すると、インターフェイスにプロパティを追加します。  
   
  **プロパティの型**  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |MFC ディスパッチ インターフェイス、MFC ActiveX コントロールのディスパッチ インターフェイス|プロパティ名を指定するか、一覧からストック プロパティを選択します。 プロパティを一覧から選択する場合に適切な値が表示されます、**プロパティの型**ボックス。 この型を変更するには 選択内容に応じて**実装型**です。|  
   
  **戻り値の型**  
- ATL インターフェイスのみです。 プロパティの戻り値の型を設定します。 デュアル インターフェイス`HRESULT`戻り値の型は、常に、このボックスは使用できません。 カスタムのインターフェイスでは、一覧から戻り値の型を選択できます。 `HRESULT`まだをお勧め、標準的なエラーを返す方法を提供するためです。  
+ ATL インターフェイスのみです。 プロパティの戻り値の型を設定します。 デュアル インターフェイス`HRESULT`戻り値の型は、常に、このボックスは使用できません。 カスタムのインターフェイスでは、一覧から戻り値の型を選択できます。 `HRESULT` まだをお勧め、標準的なエラーを返す方法を提供するためです。  
   
  **変数名**  
  MFC のディスパッチ インターフェイスにのみ使用します。 指定する場合にのみ使用可能な**メンバー変数****実装型**です。 プロパティが関連付けられているメンバー変数の名前を設定します。 既定では、変数名は m _ に設定*PropertyName*です。 この名前を編集することができます。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  **Get 関数**  
  MFC ディスパッチ インターフェイスです。 指定する場合にのみ使用可能な**Get/set メソッド****実装型**です。 プロパティを取得する関数の名前を設定します。 既定では、Get 関数の名前は Get に設定*PropertyName*です。 この名前を編集することができます。 名前、関数を削除する場合[GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)インターフェイス ディスパッチ マップに挿入されます。 Get*PropertyName*関数を指定すると読み取り可能なプロパティです。  
   
- **Set 関数**  
+ **set 関数**  
  MFC のディスパッチ インターフェイスにのみ使用します。 指定する場合にのみ使用可能な**Get/set メソッド****実装型**です。 プロパティを設定する関数の名前を設定します。 既定では、セット関数の名前がセットに設定*PropertyName*です。 この名前を編集することができます。 名前、関数を削除する場合[SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)インターフェイス ディスパッチ マップに挿入されます。 セット*PropertyName*関数は、プロパティが書き込み可能なことを指定します。  
   
  **実装の種類**  
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
  **既定のプロパティ**  
  MFC のディスパッチ インターフェイスにのみ使用します。 インターフェイスの既定値としてこのプロパティを設定します。 インターフェイスは、1 つだけの既定のプロパティを持つことができます。インターフェイスに追加するその他のプロパティの既定のプロパティを指定するとこのボックスは使用されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティを追加します。](../ide/adding-a-property-visual-cpp.md)   
  [IDL 属性、プロパティの追加ウィザード](../ide/idl-attributes-add-property-wizard.md)   
  [インターフェイスを実装します。](../ide/implementing-an-interface-visual-cpp.md)

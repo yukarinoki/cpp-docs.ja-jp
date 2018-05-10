@@ -1,27 +1,22 @@
 ---
-title: "グラフィックス (C++ AMP) |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィックス (C++ AMP) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: daff070700c37734e6239514d196f02ee1351c00
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 C++ AMP にはでいくつかの Api が含まれています、 [concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)名前空間の gpu のテクスチャのサポートのアクセスに使用することができます。 一般的なシナリオを次に示します。  
@@ -58,9 +53,9 @@ C++ AMP にはでいくつかの Api が含まれています、 [concurrency::g
   
 |演算子の型|有効な型|  
 |-------------------|-----------------|  
-|バイナリ演算子|すべての型で有効: +、-、*、/<br /><br /> 整数型で有効: %、^、&#124;、&、<\<、>><br /><br /> 2 つのベクターは同じサイズである必要があり、結果は同じサイズの 1 つのベクターになる。|  
+|バイナリ演算子|すべての型で有効: +、-、*、/<br /><br /> 整数型で有効: %、^、 &#124;、&、<\<、>><br /><br /> 2 つのベクターは同じサイズである必要があり、結果は同じサイズの 1 つのベクターになる。|  
 |関係演算子|すべての型で有効: ==、!=|  
-|複合代入演算子|すべての型で有効: +=、-=、*=、/=<br /><br /> 整数型で有効: % =、^ =、&#124; =、&、=、<\<=、>> =|  
+|複合代入演算子|すべての型で有効: +=、-=、*=、/=<br /><br /> 整数型で有効: % =、^ =、 &#124;=、&、=、<\<=、>> =|  
 |インクリメント演算子およびデクリメント演算子|すべての型で有効: ++、--<br /><br /> 前置と後置の両方が有効。|  
 |ビットごとの NOT 演算子 (~)|整数型で有効。|  
 |単項 - 演算子|`unorm` と `uint` を除くすべての型で有効。|  
@@ -129,12 +124,12 @@ texture<int_4, 2> aTexture(768, 1024, texels.begin(), texels.end());
  また、ソース データ、バイト単位のソース データのサイズ、およびスカラー要素ごとのビットへのポインターを受け取るコンストラクター オーバーロードを使用して `texture` オブジェクトを宣言および初期化することもできます。  
   
 ```cpp  
-void createTextureWithBPC() { *// Create the source data.  
+void createTextureWithBPC() { // Create the source data.  
     float source[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     source[i] = (float)i;  
  }  
- *// Initialize the texture by using the size of source in bytes *// and bits per scalar element.  
+ // Initialize the texture by using the size of source in bytes // and bits per scalar element.  
     texture<float_2, 1> floatTexture(1024, source, (unsigned int)sizeof(source), 32U);
 
 }  
@@ -144,11 +139,11 @@ void createTextureWithBPC() { *// Create the source data.
   
  次の表に示すように、`texture` オブジェクトの各次元のサイズには制限があります。 制限を超えるとランタイム エラーが生成されます。  
   
-|テクスチャ|サイズの制限|  
+|テクスチャ|各次元のサイズの制限|  
 |-------------|---------------------|  
 |テクスチャ\<T、1 >|16384|  
 |テクスチャ\<T、2 >|16384|  
-|テクスチャ\<T、2 >|2048|  
+|テクスチャ\<T、3 >|2048|  
   
 ### <a name="reading-from-texture-objects"></a>テクスチャ オブジェクトからの読み取り  
  読み取ることができます、`texture`オブジェクトを使用して[texture:\[\]](reference/texture-class.md#operator_at)、 [texture::operator() 演算子](reference/texture-class.md#operator_call)、または[texture::get メソッド](reference/texture-class.md#get). 2 つの演算子は、参照ではなく、値を返します。 したがって、`texture` を使用して `texture::operator\[\]` オブジェクトに書き込むことはできません。  
@@ -172,10 +167,10 @@ void readTexture() {
  
     const texture<int_2, 2> tex9(16, 32, src.begin(), src.end());
 
-    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { *// Use the subscript operator.        
-    arr[idx].x += tex9[idx].x; *// Use the function () operator.        
-    arr[idx].x += tex9(idx).x; *// Use the get method.  
-    arr[idx].y += tex9.get(idx).y; *// Use the function () operator.    
+    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { // Use the subscript operator.        
+    arr[idx].x += tex9[idx].x; // Use the function () operator.        
+    arr[idx].x += tex9(idx).x; // Use the get method.  
+    arr[idx].y += tex9.get(idx).y; // Use the function () operator.    
     arr[idx].y += tex9(idx[0], idx[1]).y;   
  });
 
@@ -189,7 +184,7 @@ void readTexture() {
  次のコード例では、short ベクターにテクスチャ チャネルを格納し、short ベクターのプロパティとして個々のスカラー要素にアクセスする方法を説明します。  
   
 ```cpp  
-void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
+void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
     const int image_height = 16;  
     const int image_width = 16;  
     std::vector<unsigned int> image(image_height* image_width);
@@ -197,13 +192,13 @@ void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned in
  
     extent<2> image_extent(image_height, image_width);
 
- *// By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is *// stored in one 32-bit component of a uint_4.  
+ // By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is // stored in one 32-bit component of a uint_4.  
     texture<uint_4, 2> image_texture(image_extent, image.data(), image_extent.size()* 4U,  8U);
 
- *// Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
+ // Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
     parallel_for_each(image_extent, 
  [&image_texture](index<2> idx) restrict(amp)   
- { *// 4 bytes are automatically extracted when reading.  
+ { // 4 bytes are automatically extracted when reading.  
     uint_4 color = image_texture[idx];   
     unsigned int r = color.r;   
     unsigned int g = color.g;   
@@ -258,7 +253,7 @@ void writeTexture() {
  使用してテクスチャ オブジェクト間でコピーすることができます、[コピー](reference/concurrency-namespace-functions-amp.md#copy)関数または[copy_async](reference/concurrency-namespace-functions-amp.md#copy_async)関数は、次のコード例に示すようにします。  
   
 ```cpp  
-void copyHostArrayToTexture() { *// Copy from source array to texture object by using the copy function.  
+void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.  
     float floatSource[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     floatSource[i] = (float)i;  
@@ -267,7 +262,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
 
     copy(floatSource, (unsigned int)sizeof(floatSource), floatTexture);
 
- *// Copy from source array to texture object by using the copy function.  
+ // Copy from source array to texture object by using the copy function.  
     char charSource[16* 16];   
     for (int i = 0; i <16* 16; i++) {  
     charSource[i] = (char)i;  
@@ -275,7 +270,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
     texture<int, 2> charTexture(16, 16, 8U);
 
     copy(charSource, (unsigned int)sizeof(charSource), charTexture);
-*// Copy from texture object to source array by using the copy function.  
+// Copy from texture object to source array by using the copy function.  
     copy(charTexture, charSource, (unsigned int)sizeof(charSource));
 
 }  
@@ -296,8 +291,8 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
   
  テクスチャ ビューは、配列のビューに似ていますが得られませんデータの自動管理と移動機能を[array_view クラス](../../parallel/amp/reference/array-view-class.md)経由で提供、 [array クラス](../../parallel/amp/reference/array-class.md)です。 `texture_view` は、基になるテクスチャ データが存在するアクセラレータ ビューにのみアクセスできます。  
   
-### <a name="writeonlytextureview-deprecated"></a>使用されない writeonly_texture_view  
- [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]、サンプリングおよび mipmap をサポートしていないなどのハードウェア テクスチャ機能の向上がサポートされ、C++ AMP、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)です。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は使用されません。  
+### <a name="writeonlytextureview-deprecated"></a>非推奨とされる writeonly_texture_view  
+ [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]、サンプリングおよび mipmap をサポートしていないなどのハードウェア テクスチャ機能の向上がサポートされ、C++ AMP、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)です。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は非推奨とされます。  
   
  少なくとも新しいコードについては、以前は `texture_view` によって提供された機能へのアクセスに `writeonly_texture_view` を使用することをお勧めします。 2 つのコンポーネント (int_2) を持つテクスチャ オブジェクトに書き込む、次の 2 つのコード例を比較します。 どちらのケースでも、ビュー `wo_tv4` はラムダ式の値でキャプチャされる必要があることに注意してください。 新しい `texture_view` クラスを使用する例を次に示します。  
   
@@ -315,7 +310,7 @@ void write2ComponentTexture() {
 }  
 ```  
   
- 使用されていない `writeonly_texture_view` クラスを次に示します。  
+ 非推奨とされる `writeonly_texture_view` クラスを次に示します：  
   
 ```  
 void write2ComponentTexture() {  
@@ -435,7 +430,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
  C++ AMP ランタイムは、相互運用性をサポートしている`texture<T,1>`と[ID3D11Texture1D インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=248503)、between`texture<T,2>`と[ID3D11Texture2D インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=255317)間および`texture<T,3>`と[ID3D11Texture3D インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=255377)です。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)メソッドは、`texture`オブジェクトを返す、`IUnknown`インターフェイスです。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)メソッドは、`IUnknown`インターフェイスおよび`accelerator_view`オブジェクトを返す、`texture`オブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [double_2 クラス](../../parallel/amp/reference/double-2-class.md)   
  [double_3 クラス](../../parallel/amp/reference/double-3-class.md)   
  [double_4 クラス](../../parallel/amp/reference/double-4-class.md)   

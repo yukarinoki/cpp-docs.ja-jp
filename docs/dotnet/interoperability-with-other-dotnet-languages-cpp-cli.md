@@ -1,28 +1,23 @@
 ---
-title: "他の .NET 言語と相互運用性 (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: 他の .NET 言語と相互運用性 (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a2d3ec38f4c5607b2dbb1739af9449df0f427e93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f7c99cf4b4127a1b4862aae64cc604ae3e0f69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>他の .NET 言語との相互運用性 (C++/CLI)
 このセクションのトピックでは、Visual C から使用するか、機能を c# または Visual Basic で記述されたアセンブリのアセンブリを作成する方法を示します。  
@@ -34,5 +29,5 @@ ms.lasthandoff: 12/21/2017
   
  [方法: C# インデクサーを使用する (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

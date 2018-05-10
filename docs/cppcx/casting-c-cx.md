@@ -1,24 +1,19 @@
 ---
-title: "キャスト (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: キャスト (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f71be537ecc0dc0cb58a3ada13612dbe8cbd7d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-ccx"></a>キャスト (C++/CX)
 次の 4 つの異なるキャスト演算子は、Windows ランタイム型へ適用: [static_cast 演算子](../cpp/static-cast-operator.md)、 [dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)、 **safe_cast Operator**、および[reinterpret_cast 演算子](../cpp/reinterpret-cast-operator.md)です。 `safe_cast` と `static_cast` は、変換を実行できない場合に例外をスローします。 [static_cast 演算子](../cpp/static-cast-operator.md) は、コンパイル時の型チェックも実行します。 `dynamic_cast` は、型を変換できない場合 `nullptr` を返します。 `reinterpret_cast` は NULL 以外の値を返しますが、その値が無効な場合があります。 この理由で、キャストが成功することがわかっている場合を除き、 `reinterpret_cast` を使用しないことをお勧めします。 さらに、ことをお勧め、C + C スタイルのキャストを使用しないこと + CX コードと同じであるため`reinterpret_cast`です。  
@@ -62,7 +57,7 @@ Windows ランタイムは、例外の代わりに HRESULT エラー コード�
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- 使用して`dynamic_cast`オブジェクトをキャストするとき (hat では具体的には、 `^`) をより強い派生型にする期待いるか、ターゲット オブジェクトで生じる可能性もあります`nullptr`すなわち、キャストが失敗して通常のコードとその状況を処理します。例外の代わりにパスします。 たとえば、**空のアプリケーション (ユニバーサル Windows)**プロジェクト テンプレートを`OnLaunched`メソッドで`app.xamp.cpp`を使用して`dynamic_cast`アプリ ウィンドウにコンテンツがあるかどうかをテストします。 コンテンツが含まれていなくても、エラーではありません。これは予期された状態です。 `Windows::Current::Content` は `Windows::UI::XAML::UIElement` であり、継承階層内のより強い派生型である `Windows::UI.XAML::Controls::Frame`への変換が実行されます。  
+ 使用して`dynamic_cast`オブジェクトをキャストするとき (hat では具体的には、 `^`) をより強い派生型にする期待いるか、ターゲット オブジェクトで生じる可能性もあります`nullptr`すなわち、キャストが失敗して通常のコードとその状況を処理します。例外の代わりにパスします。 たとえば、**空のアプリケーション (ユニバーサル Windows)** プロジェクト テンプレートを`OnLaunched`メソッドで`app.xamp.cpp`を使用して`dynamic_cast`アプリ ウィンドウにコンテンツがあるかどうかをテストします。 コンテンツが含まれていなくても、エラーではありません。これは予期された状態です。 `Windows::Current::Content` は `Windows::UI::XAML::UIElement` であり、継承階層内のより強い派生型である `Windows::UI.XAML::Controls::Frame`への変換が実行されます。  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  
@@ -121,7 +116,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 |IDefault-interface-of-RuntimeClass*|same-RefClass-from-winmd^|  
 |IDefault-interface-of-RuntimeClass**|same-RefClass-from-winmd^*|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   
  [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

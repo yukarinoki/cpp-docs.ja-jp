@@ -1,12 +1,9 @@
 ---
-title: "CDataSource クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDataSource クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDataSource
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDataSource class
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 508bbfc7551383fe1d4517d274031faef590fdb9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7835cd7401c13ab167a9236db4f7e2fc98f3e175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasource-class"></a>CDataSource クラス
 データ ソースにプロバイダーを経由して接続を表す OLE DB データ ソース オブジェクトに対応しています。  
@@ -60,9 +55,9 @@ class CDataSource
   
  使用する方法の例については`CDataSource`を参照してください、 [CatDB](../../visual-cpp-samples.md)サンプルです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,27 +1,22 @@
 ---
-title: "チュートリアル: 行列乗算 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 行列乗算 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>チュートリアル : 行列乗算
 このチュートリアルでは、C++ AMP を使用して行列乗算の実行を高速化する方法を示します。 タイルを使用する場合と使用しない場合の 2 つのアルゴリズムを紹介します。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  [**インストール**テンプレート] ペインで選択**Visual C**です。  
   
-3.  選択**空のプロジェクト**、入力`MatrixMultiply`で、**名前**ボックスをクリックして、 **[ok]**ボタンをクリックします。  
+3.  選択**空のプロジェクト**、入力`MatrixMultiply`で、**名前**ボックスをクリックして、 **[ok]** ボタンをクリックします。  
   
 4.  **[次へ]** ボタンをクリックします。  
   
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="multiplication-without-tiling"></a>タイルを使用しない乗算  
  ここでは、次のように定義されている 2 つの行列 A と B の乗算を考えます。  
   
- ![3 &#45; によって &#45; 2. マトリックス](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;によって&#45;2 マトリックス](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 &#45; によって &#45; 3 マトリックス](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;によって&#45;3 マトリックス](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  A は、3 × 2 の行列であり、B は 2 × 3 の行列です。 A と B を乗算した積は、次のような 3 × 3 の行列になります。 この積は、要素ごとに A の行と B の列を乗算することによって計算されます。  
   
- ![3 &#45; によって &#45; 3 マトリックス](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;によって&#45;3 マトリックス](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>C++ AMP を使用せずに乗算するには  
   
@@ -172,21 +167,21 @@ void main() {
   
  行列乗算でタイルを活用するには、アルゴリズムによって、行列をタイルに分割し、すばやくアクセスできるようにタイルのデータを `tile_static` 変数にコピーする必要があります。 この例では、行列は同じサイズのサブ行列に分割されます。 積はサブ行列を乗算することによって得られます。 この例の 2 つの行列とその積は次のとおりです。  
   
- ![4 &#45; によって &#45; 4 マトリックス](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;によって&#45;4 マトリックス](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; によって &#45; 4 マトリックス](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;によって&#45;4 マトリックス](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; によって &#45; 4 マトリックス](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;によって&#45;4 マトリックス](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  この行列は、次のように定義された 4 個の 2 × 2 の行列に分割されます。  
   
- ![4 &#45; によって &#45; 2 &#45;に以外の場合は、パーティション分割されている 4 つの行列 &#45; 2 sub &#45; マトリックス](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;によって&#45;2 に分割された 4 つの行列&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; によって &#45; 2 &#45;に以外の場合は、パーティション分割されている 4 つの行列 &#45; 2 sub &#45; マトリックス](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;によって&#45;2 に分割された 4 つの行列&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  A と B の積は、次のように記述し、計算できます:  
   
- ![4 &#45; によって &#45; 2 &#45;に以外の場合は、パーティション分割されている 4 つの行列 &#45; 2 sub &#45; マトリックス](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;によって&#45;2 に分割された 4 つの行列&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  行列 `a` ～ `h` は 2 × 2 の行列であるため、すべての積とその合計も 2 × 2 の行列になります。 また、期待どおり、A*B は 4 × 4 の行列になります。 アルゴリズムをすばやく確認するには、積の最初の行、最初の列の要素の値を計算します。 この例では、`ae + bg` の最初の行と最初の列の要素の値です。 各項について、`ae` と `bg` の最初の列と最初の行のみ計算する必要があります。 `ae` の値は `1*1 + 2*5 = 11` です。 `bg` の値は `3*1 + 4*5 = 23` です。 最終的な値は `11 + 23 = 34` となり、正しい値です。  
   
@@ -306,7 +301,7 @@ void main() {
   
 4.  Space キーを押してアプリケーションを終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [チュートリアル: C++ AMP アプリケーションのデバッグ](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
 

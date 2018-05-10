@@ -2,12 +2,9 @@
 title: 'レコード セット: 定義済みクエリ (ODBC) クラスの宣言 |Microsoft ドキュメント'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8ecdc146610fe20dcc007d6b1223d7108e1ee595
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cbbb9202aaf56681a792e1acf2a0c02eff5636d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  レコード セット クラスのコンス トラクターで、新しいフィールド データ メンバーの初期化を手動で追加します。  
   
-     初期化値を増やす必要がありますも、 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)データ メンバーです。 初期化が書き込まれますが、する追加のフィールド データ メンバーだけが対象です。 例:  
+     初期化値を増やす必要がありますも、 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)データ メンバーです。 初期化が書き込まれますが、する追加のフィールド データ メンバーだけが対象です。 例えば:  
   
     ```  
     m_nFields += 6;  
@@ -164,7 +159,7 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 > [!TIP]
 >  ストアド プロシージャからの戻り値 (出力パラメーター) を処理する可能性があります。 例および詳細については、次を参照してください。[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
  [レコード セット: テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   

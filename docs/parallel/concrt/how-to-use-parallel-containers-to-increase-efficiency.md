@@ -1,13 +1,10 @@
 ---
-title: "方法: 並列コンテナーを使用して効率を高める. |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: 並列コンテナーを使用して効率を高める. |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b191b97bcf4b5f1607cde56fac8fefd1505c7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0e0d79693bef358a582e878ec2d6d138387752c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>方法: 並列コンテナーを使用して効率を向上させる
 ここでは、並列コンテナーを使用して、データの格納とアクセスを並行して効率的に行う方法について説明します。  
@@ -76,7 +71,7 @@ Prime factors of 1050985 are: 5 13 19 23 37.
   
  **cl.exe/EHsc carmichael-primes.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)   
  [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [concurrent_vector クラス](../../parallel/concrt/reference/concurrent-vector-class.md)   

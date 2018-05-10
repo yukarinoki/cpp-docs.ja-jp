@@ -1,13 +1,10 @@
 ---
-title: "レコード セット: レコード セット (ODBC) のパラメーター化 |Microsoft ドキュメント"
-ms.custom: 
+title: 'レコード セット: レコード セット (ODBC) のパラメーター化 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>レコードセット: パラメーターを利用したレコードセット (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [実行時に、レコード セット オブジェクトにパラメーター情報を渡す方法](#_core_passing_parameter_values_at_run_time)です。  
   
-##  <a name="_core_parameterized_recordsets"></a>パラメーター化されたレコード セット  
+##  <a name="_core_parameterized_recordsets"></a> パラメーター化されたレコード セット  
  パラメーター化されたレコード セットを使用して、実行時にパラメーター情報を渡すことができます。 これにより、2 つの重要な影響があります。  
   
 -   実行速度を向上させることがあります。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  呼び出すと**開く**クエリを実行するには、レコード セット情報を使用してパラメーター完了その**SQL SELECT**ステートメントです。 すべてのレコード セットをパラメーター化できます。  
   
-##  <a name="_core_when_to_use_parameters"></a>パラメーターを使用する場合  
+##  <a name="_core_when_to_use_parameters"></a> パラメーターを使用する場合  
  パラメーターの一般的な用途は次のとおりです。  
   
 -   定義済みクエリを実行時引数を渡します。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
  フィルターの詳細については、次を参照してください。[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)です。  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>レコード セット クラスのパラメーター化  
+##  <a name="_core_parameterizing_your_recordset_class"></a> レコード セット クラスのパラメーター化  
   
 > [!NOTE]
 >  このセクションから派生したオブジェクトに適用されます`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチ、パラメーターを実装を使用している場合は、同様のプロセスです。 詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)です。  
@@ -149,7 +144,7 @@ ms.lasthandoff: 12/21/2017
 
 >  使用する最も可能性の高い文字列は、指定した文字列 (存在する場合) のクラスの[か](../../mfc/reference/crecordset-class.md#m_strfilter)データ メンバーが、一部の ODBC ドライバーは、他の SQL 句内のパラメーターをすることができます。  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>実行時にパラメーター値の受け渡し  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> 実行時にパラメーター値の受け渡し  
  呼び出す前に、パラメーター値を指定する必要があります**開く**(新しいレコード セット オブジェクト) のまたは**Requery** (の既存のもの)。  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>実行時に、レコード セット オブジェクトにパラメーター値を渡す  
@@ -186,7 +181,7 @@ if( !rsStudents.Requery( ) )
 > [!NOTE]
 >  Null の場合にパラメーター データ メンバーの値を設定するには、必要な場合を使用して[SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull)です。 パラメーター データ メンバーが Null の場合であるかどうかをチェックすることが同様を使用して[調べる](../../mfc/reference/crecordset-class.md#isfieldnull)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: 追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
  [レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactory2 クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CComClassFactory2 クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory2
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 クラス
 このクラスは、実装、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)インターフェイスです。  
@@ -68,9 +63,9 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|作成し、ライセンス キーを返します。|  
   
 ## <a name="remarks"></a>コメント  
- `CComClassFactory2`実装する、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)拡張機能であるインターフェイスの[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)です。 **IClassFactory2**コントロール オブジェクトを介して、ライセンスを作成します。 ライセンスされたコンピューターで実行するクラス ファクトリと、実行時ライセンス キーを入力できます。 このライセンス キーには、コンピューターのフル ライセンスが存在しないときに、オブジェクトをインスタンス化するアプリケーションができます。  
+ `CComClassFactory2` 実装する、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)拡張機能であるインターフェイスの[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)です。 **IClassFactory2**コントロール オブジェクトを介して、ライセンスを作成します。 ライセンスされたコンピューターで実行するクラス ファクトリと、実行時ライセンス キーを入力できます。 このライセンス キーには、コンピューターのフル ライセンスが存在しないときに、オブジェクトをインスタンス化するアプリケーションができます。  
   
- ATL オブジェクトから派生することで、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)です。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactory2`を指定して、 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)オブジェクトのクラス定義でマクロです。 例:  
+ ATL オブジェクトから派生することで、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)です。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactory2`を指定して、 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)オブジェクトのクラス定義でマクロです。 例えば:  
   
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
@@ -78,7 +73,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`両方の派生**CComClassFactory2Base**と*ライセンス*です。 **CComClassFactory2Base**から派生、 **IClassFactory2**と**CComObjectRootEx\< CComGlobalsThreadModel >**です。  
+ `CComClassFactory2` 両方の派生**CComClassFactory2Base**と*ライセンス*です。 **CComClassFactory2Base**から派生、 **IClassFactory2**と**CComObjectRootEx\< CComGlobalsThreadModel >** です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CComObjectRootBase`  
@@ -91,10 +86,10 @@ class CComClassFactory2 : public IClassFactory2,
   
  `CComClassFactory2`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
  指定された CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイス ポインターを取得します。  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>コメント  
  完全にライセンスを取得するマシンが必要です。 フル マシン ライセンスが存在しない場合は、呼び出し[取得していない](#createinstancelic)です。  
   
-##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
  ような[CreateInstance](#createinstance)する点を除いて、`CreateInstanceLic`ライセンス キーが必要です。  
   
 ```
@@ -152,7 +147,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>コメント  
  ライセンス キーを使用して、取得することができます[RequestLicKey](#requestlickey)です。 ライセンス許諾されていないコンピューターでオブジェクトを作成するために呼び出す必要があります`CreateInstanceLic`です。  
   
-##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
  入力、 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)クラス ファクトリを記述する情報を含む構造体の機能のライセンスします。  
   
 ```
@@ -169,8 +164,8 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>コメント  
  `fRuntimeKeyAvail`この構造体のメンバーができるかどうか、ライセンス キーを指定するには、クラス ファクトリ オブジェクトをライセンス許諾されていないコンピューターで作成できることを示します。 *FLicVerified*メンバーは、コンピューターのフル ライセンスが存在するかどうかを示します。  
   
-##  <a name="lockserver"></a>CComClassFactory2::LockServer  
- インクリメントおよびデクリメントはモジュールのロックを呼び出すことによってカウント**_Module::Lock**と**_Module::Unlock**、それぞれします。  
+##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
+ インクリメントおよびデクリメントはモジュールのロックを呼び出すことによってカウント **_Module::Lock**と **_Module::Unlock**、それぞれします。  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -188,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  呼び出す`LockServer`クライアントを複数のオブジェクトをすばやく作成できるように、クラス ファクトリを保持できます。  
   
-##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
  作成している、ライセンス キーを返します、`fRuntimeKeyAvail`のメンバー、 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)構造体は、 **TRUE**です。  
   
 ```
@@ -210,7 +205,7 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
   
  呼び出す[GetLicInfo](#getlicinfo)の値を取得する`fRuntimeKeyAvail`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CComClassFactoryAutoThread クラス](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComClassFactorySingleton クラス](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   

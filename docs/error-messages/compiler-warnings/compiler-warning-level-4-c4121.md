@@ -1,12 +1,9 @@
 ---
-title: "コンパイラの警告 (レベル 4) C4121 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラの警告 (レベル 4) C4121 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4121
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4121
 ms.assetid: 8c5b85c9-2543-426b-88bc-319c50158c7e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4886f8274ed8813cf556529efe657dca786f0e36
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c1cda66d120278034fc8c19ba0221be047a75eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4121"></a>コンパイラの警告 (レベル 4) C4121
 'symbol' : メンバーのアラインメントは過剰にパッキングされています  
@@ -52,4 +47,4 @@ struct s
   
  この警告は、コンパイラがデータ メンバーの前に埋め込みを追加した場合にのみ発生します。 パッキングによってデータ型用にアラインされていないメモリ位置にデータが配置されたが、データ メンバーの前に埋め込みが追加されなかったときは発生しません。 データのサイズの倍数となる境界でデータがアラインされていないと、パフォーマンスが低下する可能性があります。 アラインされていないデータの読み取りおよび書き込みにより、一部のアーキテクチャでプロセッサ障害が発生した場合は、その障害の解決に桁違いの時間がかかる場合があります。 アラインされていないデータのアクセスは、一部の RISC アーキテクチャには移植できません。  
   
- 使用することができます[#pragma pack](../../preprocessor/pack.md)または[/Zp](../../build/reference/zp-struct-member-alignment.md)構造体の配置を指定します。 (コンパイラでは、この警告は生成しません**/Zp1**が指定されている)。
+ 使用することができます[#pragma pack](../../preprocessor/pack.md)または[/Zp](../../build/reference/zp-struct-member-alignment.md)構造体の配置を指定します。 (コンパイラでは、この警告は生成しません **/Zp1**が指定されている)。

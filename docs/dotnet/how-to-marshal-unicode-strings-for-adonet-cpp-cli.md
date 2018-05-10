@@ -1,13 +1,10 @@
 ---
-title: "方法: ADO.NET の Unicode 文字列をマーシャ リング (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ADO.NET の Unicode 文字列をマーシャ リング (C + + CLI) |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Unicode [C++], strings
 - strings [C++], Unicode
 ms.assetid: 1da090ff-6b53-40be-841f-dc79dfe8ba10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf6078217218a85289602e30c1002ba861db76d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15cf9e9806c0820ea5a410a93419016c2f678c65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-unicode-strings-for-adonet-ccli"></a>方法: ADO.NET の Unicode 文字列をマーシャリングする (C++/CLI)
 ネイティブの Unicode 文字列を追加する方法を示します (`wchar_t *`) をマーシャ リングする方法、およびデータベースを<xref:System.String?displayProperty=fullName>ネイティブの Unicode 文字列をデータベースからです。  
@@ -155,7 +150,7 @@ StringCol: This is string 2.
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ADO.NET に関連するセキュリティ問題については、次を参照してください。 [ADO.NET アプリケーションのセキュリティで保護する](/dotnet/framework/data/adonet/securing-ado-net-applications)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:System.Runtime.InteropServices>   
  [ADO.NET を使用してデータ アクセス (C + + CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   

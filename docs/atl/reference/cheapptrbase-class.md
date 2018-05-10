@@ -1,12 +1,9 @@
 ---
-title: "CHeapPtrBase クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CHeapPtrBase クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CHeapPtrBase
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59520211ae577c4ca4358874ef1d8ff71de59921
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ca18054509ab069722e632308b4d8f57706e548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase クラス
 このクラスは、いくつかのヒープのスマート ポインター クラスの基礎を形成します。  
@@ -90,10 +85,10 @@ class CHeapPtrBase
 ## <a name="remarks"></a>コメント  
  このクラスは、いくつかのヒープのスマート ポインター クラスの基礎を形成します。 たとえば、派生クラス[CHeapPtr](../../atl/reference/cheapptr-class.md)と[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)、コンス トラクターと演算子を追加します。 これらのクラスの実装例を参照してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcore.h  
   
-##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes  
  メモリを割り当てるには、このメソッドを呼び出します。  
   
 ```
@@ -110,7 +105,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>コメント  
  デバッグ ビルドで、アサーション場合にエラーが発生、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数は、現在、既存の値を指します。 つまり、null はありません。  
   
-##  <a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>  CHeapPtrBase::Attach  
  このメソッドを呼び出して既存のポインターの所有権を取得します。  
   
 ```
@@ -126,7 +121,7 @@ void Attach(T* pData) throw();
   
  デバッグ ビルドで、アサーション場合にエラーが発生、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数は、現在、既存の値を指します。 つまり、null はありません。  
   
-##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase  
  デストラクターです。  
   
 ```
@@ -136,7 +131,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>コメント  
  割り当てられているすべてのリソースを解放します。  
   
-##  <a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>  CHeapPtrBase::Detach  
  ポインターの所有権を解放するには、このメソッドを呼び出します。  
   
 ```
@@ -149,7 +144,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>コメント  
  ポインターの所有権を解放、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数に NULL の場合、ポインターのコピーを返します。  
   
-##  <a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>  CHeapPtrBase::Free  
  指すオブジェクトを削除するには、このメソッドを呼び出して、`CHeapPtrBase`です。  
   
 ```
@@ -159,7 +154,7 @@ void Free() throw();
 ### <a name="remarks"></a>コメント  
  によって指されるオブジェクト、`CHeapPtrBase`が解放され、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数が NULL に設定します。  
   
-##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData  
  ポインターのデータ メンバー変数です。  
   
 ```
@@ -169,7 +164,7 @@ T* m_pData;
 ### <a name="remarks"></a>コメント  
  このメンバー変数は、ポインターの情報を保持します。  
   
-##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;  
  (& A) 演算子。  
   
 ```
@@ -180,7 +175,7 @@ T** operator&() throw();
  によって指されるオブジェクトのアドレスを返します、`CHeapPtrBase`オブジェクト。  
   
 
-##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;  
 
  メンバーへのポインター演算子です。  
   
@@ -194,7 +189,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>コメント  
  この演算子によって示されるクラスのメソッドを呼び出すを使用して、`CHeapPtrBase`オブジェクト。 デバッグ ビルドで、アサーション場合にエラーが発生、 `CHeapPtrBase` NULL を指します。  
   
-##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *  
  キャスト演算子です。  
   
 ```  
@@ -204,7 +199,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>コメント  
  返します[CHeapPtrBase::m_pData](#m_pdata)です。  
   
-##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes  
  このメソッドを呼び出してメモリを再割り当てください。  
   
 ```
@@ -218,7 +213,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 ### <a name="return-value"></a>戻り値  
  True を返しますが、正常にメモリ割り当て、false それ以外の場合。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CHeapPtr クラス](../../atl/reference/cheapptr-class.md)   
  [CComHeapPtr クラス](../../atl/reference/ccomheapptr-class.md)   
  [クラスの概要](../../atl/atl-class-overview.md)

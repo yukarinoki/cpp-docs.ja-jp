@@ -1,12 +1,9 @@
 ---
-title: "CObArray クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CObArray クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobarray-class"></a>CObArray クラス
 `CObject` ポインターの配列をサポートします。  
@@ -136,10 +131,10 @@ class CObArray : public CObject
   
  `CObArray`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxcoll.h  
   
-##  <a name="add"></a>CObArray::Add  
+##  <a name="add"></a>  CObArray::Add  
  新しい要素を配列の 1 つずつ拡張、配列の末尾に追加します。  
   
 ```  
@@ -180,7 +175,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="append"></a>CObArray::Append  
+##  <a name="append"></a>  CObArray::Append  
  別の配列の内容を渡された配列の末尾に追加するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -215,7 +210,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>  CObArray::Copy  
  同じ型の別の配列の要素で指定された配列の要素を上書きするには、このメンバー関数を呼び出します。  
   
 ```  
@@ -245,7 +240,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>  CObArray::CObArray  
  空の構築`CObject`ポインターの配列。  
   
 ```  
@@ -269,7 +264,7 @@ CObArray();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>  CObArray::ElementAt  
  配列内の要素ポインターへの一時的な参照を返します。  
   
 ```  
@@ -300,7 +295,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>例  
   例を参照して[CObArray::GetSize](#getsize)です。  
   
-##  <a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>  CObArray::FreeExtra  
  配列が拡張されたときに割り当てられたすべての余分なメモリを解放します。  
   
 ```  
@@ -324,7 +319,7 @@ void FreeExtra();
 ### <a name="example"></a>例  
   例を参照して[CObArray::GetData](#getdata)です。  
   
-##  <a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>  CObArray::GetAt  
  指定したインデックスにある配列要素を返します。  
   
 ```  
@@ -359,7 +354,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>  CObArray::GetCount  
  配列要素の数を返します。  
   
 ```  
@@ -388,7 +383,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>  CObArray::GetData  
  このメンバー関数を配列内の要素に直接アクセスするために使用します。  
   
 ```  
@@ -421,7 +416,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>  CObArray::GetSize  
  配列のサイズを返します。  
   
 ```  
@@ -447,7 +442,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
  この配列の現在の上限を返します。  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>  CObArray::InsertAt  
  指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。  
   
 ```  
@@ -542,7 +537,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>  CObArray::IsEmpty  
  配列が空かどうかを判別します。  
   
 ```  
@@ -552,7 +547,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>戻り値  
  配列が空である場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="operator_at"></a>CObArray::operator  
+##  <a name="operator_at"></a>  CObArray::operator  
  これらの添字演算子は便利な代替には、`SetAt`と`GetAt`関数。  
   
 ```  
@@ -565,7 +560,7 @@ CObject* operator[](int_ptr nindex) const;
   
  ライブラリのデバッグ バージョンでは、(いずれかで、左または代入ステートメントの右側にある)、添字が範囲外かどうかをアサートします。  
   
- 次の表に、その他の演算子に類似する**CObArray::operator:operator[]**です。  
+ 次の表に、その他の演算子に類似する**CObArray::operator:operator[]** です。  
   
 |クラス|演算子|  
 |-----------|--------------|  
@@ -581,7 +576,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>  CObArray::RemoveAll  
  この配列からすべてのポインターが削除されますが、実際には削除されません、`CObject`オブジェクト。  
   
 ```  
@@ -597,19 +592,19 @@ void RemoveAll();
   
 |クラス|メンバー関数|  
 |-----------|---------------------|  
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAll ();**|  
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAll ();**|  
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAll ();**|  
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAll ();**|  
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAll ();**|  
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll ();**|  
+|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAll( );**|  
+|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAll( );**|  
+|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAll( );**|  
+|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAll( );**|  
+|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAll( );**|  
+|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll( );**|  
   
 ### <a name="example"></a>例  
  参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`コレクションのすべての例で使用されるクラスです。  
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>  CObArray::RemoveAt  
  配列内の指定したインデックスから始まる 1 つまたは複数の要素を削除します。  
   
 ```  
@@ -654,7 +649,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>  CObArray::SetAt  
  指定したインデックス位置にある配列要素を設定します。  
   
 ```  
@@ -671,7 +666,7 @@ void SetAt(
  この配列に挿入されるオブジェクトのポインター。 A **NULL**値は許可します。  
   
 ### <a name="remarks"></a>コメント  
- `SetAt`拡張する配列は発生しません。 使用して`SetAtGrow`する場合は自動的に拡張する配列。  
+ `SetAt` 拡張する配列は発生しません。 使用して`SetAtGrow`する場合は自動的に拡張する配列。  
   
  インデックスの値が配列内の有効な位置を表すことを確認する必要があります。 範囲外の場合は、ライブラリのデバッグ バージョンはアサートします。  
   
@@ -699,7 +694,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CObArray::SetAtGrow  
  指定したインデックス位置にある配列要素を設定します。  
   
 ```  
@@ -746,7 +741,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>  CObArray::SetSize  
  空であるか既存の配列のサイズを設定します必要な場合は、メモリを割り当てます。  
   
 ```  
@@ -783,7 +778,7 @@ void SetSize(
 ### <a name="example"></a>例  
   例を参照して[CObArray::GetData](#getdata)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CStringArray クラス](../../mfc/reference/cstringarray-class.md)   

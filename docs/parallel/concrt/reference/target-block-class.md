@@ -1,12 +1,9 @@
 ---
-title: "target_block クラス |Microsoft ドキュメント"
-ms.custom: 
+title: target_block クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - target_block
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2827e7bbb9a2c23804d90ccb729e990b84f3a442
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 754bc6add99974ff204c977e47f35486cc830d95
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="targetblock-class"></a>target_block クラス
 `target_block` クラスは、基本的なリンク管理機能と、ターゲットのみのブロックのエラー チェック機能を実現する抽象基底クラスです。  
@@ -82,7 +77,7 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
   
 |名前|説明|  
 |----------|-----------------|  
-|[propagate](#propagate)|このターゲット ブロックにソース ブロックからメッセージを非同期的に渡します。|  
+|[伝達](#propagate)|このターゲット ブロックにソース ブロックからメッセージを非同期的に渡します。|  
 |[send](#send)|このターゲット ブロックにソース ブロックからメッセージを同期的に渡します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
@@ -110,7 +105,7 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
   
  `target_block`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -365,6 +360,6 @@ void wait_for_async_sends();
 ### <a name="remarks"></a>コメント  
  メッセージ ブロックのデストラクターはこのメソッドを使用して、すべての非同期操作がブロックを破棄する前に完了する時間を確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [ITarget クラス](itarget-class.md)

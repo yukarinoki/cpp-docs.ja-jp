@@ -1,11 +1,8 @@
 ---
-title: "Platform::string Class |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::string Class |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String クラス
 テキストを表現するために使用される Unicode 文字のシーケンシャル コレクションを表します。 詳細と例については、次を参照してください。[文字列](../cppcx/strings-c-cx.md)です。  
@@ -76,10 +71,10 @@ public ref class String sealed : Object,
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[String::Begin](#begin)|現在の文字列の先頭へのポインターを返します。|  
+|[String::begin](#begin)|現在の文字列の先頭へのポインターを返します。|  
 |[String::CompareOrdinal](#compareordinal)|オブジェクトによって表される 2 つの文字列値に含まれる、対応する文字列の数値を評価することにより、2 つの `String` オブジェクトを比較します。|  
 |[String::Concat](#concat)|指定された 2 つの String オブジェクトの値を連結します。|  
-|[String::Data](#data)|現在の文字列の先頭へのポインターを返します。|  
+|[String::data](#data)|現在の文字列の先頭へのポインターを返します。|  
 |[String::dispose](#dispose)|リソースを解放またはリソースします。|  
 |[String::End](#end)|現在の文字列の末尾を越えたポインターを返します。|  
 |[String::Equals](#equals)|指定されたオブジェクトが現在のオブジェクトと等しいかどうかを示します。|  
@@ -102,7 +97,7 @@ public ref class String sealed : Object,
 |[String::operator! = 演算子](#operator-inequality)|指定された 2 つの String オブジェクトの値が異なるかどうかを示します。|  
 |[String::operator < 演算子](#operator-less-than)|1 つの String オブジェクトの値が、2 番目の String オブジェクトの値より小さいかどうかを示します。|  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **クライアントがサポートされる最小:** Windows 8  
   
  **サポートされているサーバーの最小値:** Windows Server 2012  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>コメント  
  この演算子は、2 種類のオペランドのデータを含む `String^` オブジェクトを作成します。 パフォーマンスを極端に高める必要がない場合には、便宜上、この演算子を使用します。 関数で "`+`" を数回呼び出しても目立つことはないと思われますが、サイズの大きなオブジェクトまたはテキスト データを頻繁に操作するときには、標準的な C++ の機構と型を使用してください。  
   
-##  <a name="operator-equality">String::operator = = 演算子</a>
+##  <a name="operator-equality"></a> String::operator = = 演算子
 指定された 2 つの String オブジェクトのテキスト値が同じかどうかを示します。  
   
 ### <a name="syntax"></a>構文  
@@ -411,7 +406,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a> String::operator!= 
+## <a name="operator-inequality"></a> String::operator! = 
 指定された 2 つの String オブジェクトの値が異なるかどうかを示します。  
   
 ### <a name="syntax"></a>構文  
@@ -476,7 +471,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a> String::ToString
+## <a name="tostring"></a> String::tostring
 値が現在の文字列と同じである String オブジェクトを返します。  
   
 ### <a name="syntax"></a>構文  
@@ -488,5 +483,5 @@ String^ String::ToString()
 ### <a name="return-value"></a>戻り値  
  値が現在の文字列と同じである文字列オブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Platform 名前空間](../cppcx/platform-namespace-c-cx.md)

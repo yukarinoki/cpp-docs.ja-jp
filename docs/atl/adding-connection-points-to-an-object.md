@@ -1,30 +1,25 @@
 ---
-title: "オブジェクトへの接続ポイントの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: オブジェクトへの接続ポイントの追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f63ec5bd9029302192e640e42a3d012df347219d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71f9d136ccdeded02303894195c7b8126acafd9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-connection-points-to-an-object"></a>オブジェクトへの接続ポイントの追加
 [ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)コネクション ポイントのサポートでコントロールを作成する方法、イベントを追加する方法と、接続ポイントを実装する方法を示しています。 ATL 接続ポイントでは、 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)クラスです。  
@@ -73,6 +68,6 @@ ms.lasthandoff: 12/21/2017
   
     -   使用して、 **importlib**そのタイプ ライブラリに命令します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続ポイント](../atl/atl-connection-points.md)
 

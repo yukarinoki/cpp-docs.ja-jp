@@ -2,12 +2,9 @@
 title: -GS (バッファー セキュリティ チェック) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-caps.latest.revision: 40
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS (バッファーのセキュリティ チェック)  
   
@@ -47,7 +42,7 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="remarks"></a>コメント  
   
-**/GS**は既定でオンです。 使用して、アプリケーションにセキュリティ リスクがない場合は、 **/GS-**です。 詳細については**/GS**を参照してください[コンパイラ セキュリティ チェックで深さ](http://go.microsoft.com/fwlink/p/?linkid=7260)です。 詳細については、バッファー オーバーランの検出を抑制する、次を参照してください。 [safebuffers](../../cpp/safebuffers.md)です。  
+**/GS**は既定でオンです。 使用して、アプリケーションにセキュリティ リスクがない場合は、 **/GS-** です。 詳細については **/GS**を参照してください[コンパイラ セキュリティ チェックで深さ](http://go.microsoft.com/fwlink/p/?linkid=7260)です。 詳細については、バッファー オーバーランの検出を抑制する、次を参照してください。 [safebuffers](../../cpp/safebuffers.md)です。  
   
 ## <a name="security-checks"></a>セキュリティ チェック  
   
@@ -98,7 +93,7 @@ struct { int a; int b; };
   
 -   Vulnerable 関数パラメーター。  
   
-すべてのプラットフォームで**/GS**リターン アドレスへのバッファー オーバーランの検出を試みます。 バッファー オーバーランは、関数呼び出しのリターン アドレスをスタックに格納する呼び出し規則を使用する、x86、x64 などのプラットフォームでの方が簡単に攻撃されます。  
+すべてのプラットフォームで **/GS**リターン アドレスへのバッファー オーバーランの検出を試みます。 バッファー オーバーランは、関数呼び出しのリターン アドレスをスタックに格納する呼び出し規則を使用する、x86、x64 などのプラットフォームでの方が簡単に攻撃されます。  
   
 x86 で、関数が例外ハンドラーを使用する場合、コンパイラはセキュリティ クッキーを挿入して、例外ハンドラーのアドレスを保護します。 このクッキーは、フレームのアンワインド時にチェックされます。  
   
@@ -124,7 +119,7 @@ x86 で、関数が例外ハンドラーを使用する場合、コンパイラ�
   
 **/GS**コンパイラ オプションはすべてのバッファー オーバーラン セキュリティ攻撃から保護されません。 たとえば、バッファーと vtable が同じオブジェクトにある場合、バッファー オーバーランによって vtable が破損する可能性があります。  
   
-使用する場合でも**/GS**、バッファー オーバーランを持たない安全なコードを記述しようとするは常にします。  
+使用する場合でも **/GS**、バッファー オーバーランを持たない安全なコードを記述しようとするは常にします。  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには  
   
@@ -132,7 +127,7 @@ x86 で、関数が例外ハンドラーを使用する場合、コンパイラ�
   
      詳細については、次を参照してください。[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
   
-2.  **プロパティ ページ**ダイアログ ボックスで、をクリックして、 **C/C++**フォルダーです。  
+2.  **プロパティ ページ**ダイアログ ボックスで、をクリックして、 **C/C++** フォルダーです。  
   
 3.  クリックして、**コード生成**プロパティ ページ。  
   

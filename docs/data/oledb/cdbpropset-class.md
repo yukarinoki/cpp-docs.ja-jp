@@ -1,12 +1,9 @@
 ---
-title: "CDBPropSet クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDBPropSet クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBPropSet
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBPropSet class
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 716b0785ba4f785063709d989eb95c5c4f390f4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8d75715ed0dc65fbbf5b581bfea48816e5bd00ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
 継承、 **DBPROPSET**構造体し、キー フィールドを初期化するコンス トラクターを追加するだけでなく`AddProperty`メソッドにアクセスします。  
@@ -53,15 +48,15 @@ class CDBPropSet : public tagDBPROPSET
   
 |||  
 |-|-|  
-|[operator =](../../data/oledb/cdbpropset-operator-equal.md)|1 つのプロパティ セットを他の内容を割り当てます。|  
+|[演算子 =](../../data/oledb/cdbpropset-operator-equal.md)|1 つのプロパティ セットを他の内容を割り当てます。|  
   
 ## <a name="remarks"></a>コメント  
  OLE DB プロバイダーとコンシューマーの使用**DBPROPSET**構造体の配列を渡す`DBPROP`構造体。 各`DBPROP`構造体を設定できる 1 つのプロパティを表します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CDBPropIDSet クラス](../../data/oledb/cdbpropidset-class.md)   

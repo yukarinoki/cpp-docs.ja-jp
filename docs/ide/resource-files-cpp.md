@@ -1,13 +1,10 @@
 ---
-title: "リソース ファイル (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: リソース ファイル (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 097ae6d1486292d7dcc62dd4191e16f57e6f0a3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-files-c"></a>リソース ファイル (C++)
 リソースは、ユーザーに情報を提供するインターフェイス要素を示します。 ビットマップ、アイコン、ツールバー、およびカーソルは、すべてのリソースです。 メニューから選択 ダイアログ ボックスでデータを入力するなどの操作を実行する一部のリソースを操作できます。  
@@ -43,5 +38,5 @@ ms.lasthandoff: 12/21/2017
 |Toolbar.bmp|*Projname*\res|リソース ファイル (Visual Studio)|アプリケーションまたはツール バーまたはパレット内のコントロールを表すビットマップ ファイルです。 このビットマップは、プロジェクトのリソース ファイルに含まれます。 初期のツールバーとステータス バーがで構築された、 **CMainFrame**クラスです。|  
 |ribbon.mfcribbon ms|*Projname*\res|リソース ファイル (Visual Studio)|リボンのボタン、コントロール、および属性を定義する XML コードを含むリソース ファイル。 詳細については、「 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)

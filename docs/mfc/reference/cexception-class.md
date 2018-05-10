@@ -1,12 +1,9 @@
 ---
-title: "CException クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CException クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cexception-class"></a>CException クラス
 MFC (Microsoft Foundation Class) ライブラリ内のすべての例外に関する基底クラスです。  
@@ -91,7 +86,7 @@ class AFX_NOVTABLE CException : public CObject
   
  `CException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
 ##  <a name="cexception"></a>  CException::CException  
@@ -226,7 +221,7 @@ else
 }
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](cobject-class.md)   
  [階層図](../hierarchy-chart.md)   
  [例外の処理](exception-processing.md)   

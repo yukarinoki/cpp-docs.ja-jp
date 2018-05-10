@@ -1,30 +1,25 @@
 ---
-title: "[適用] ボタンの処理 |Microsoft ドキュメント"
-ms.custom: 
+title: '[適用] ボタンの処理 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d72186d3b3d29613007291396aa07ba4060a726a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d80dc3d02a7530ee54c9ff26cd0a03465bd77cdd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-the-apply-button"></a>[適用] ボタンの処理
 プロパティ シートの標準的なダイアログ ボックスがない機能があります: プロパティ シートを閉じる前に行った変更を適用するユーザーを許可します。 これは、[適用] ボタンを使用します。 この記事では、この機能を正しく実装に使用できるメソッドについて説明します。  
@@ -37,14 +32,14 @@ ms.lasthandoff: 12/21/2017
   
  ユーザーに適用機能を提供しない場合、[適用] ボタンを削除する必要はありません。 使用できなくなり、将来のバージョンの Windows で使用できる標準のプロパティ シートのサポートを使用してアプリケーションに共通するはそのままでかまいません。  
   
- 変更されると、ページのレポートを [適用] ボタンを有効にするには、呼び出す**CPropertyPage::SetModified (TRUE)**です。 変更されているページのレポートのいずれか場合、[適用] ボタンは引き続き現在のページが変更されたかどうかに関係なく、有効です。  
+ 変更されると、ページのレポートを [適用] ボタンを有効にするには、呼び出す**CPropertyPage::SetModified (TRUE)** です。 変更されているページのレポートのいずれか場合、[適用] ボタンは引き続き現在のページが変更されたかどうかに関係なく、有効です。  
   
  呼び出す必要があります[CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified)ユーザーが任意のページで設定が変更されるたびにします。 ページで設定を変更するときを検出する方法の 1 つなどのプロパティ ページで、コントロールの変更通知のハンドラーを実装する**EN_CHANGE**または**BN_CLICKED**です。  
   
- [適用] ボタンの効果を実装するのにプロパティ シートは、アプリケーションで、プロパティ ページで、現在の設定を適用する、所有者、またはその他の外部オブジェクトを伝えます必要があります。 同時に、プロパティ シートを無効に適用 ボタンを呼び出して**CPropertyPage::SetModified (FALSE)**すべてのページの外部のオブジェクトに、その変更を適用します。  
+ [適用] ボタンの効果を実装するのにプロパティ シートは、アプリケーションで、プロパティ ページで、現在の設定を適用する、所有者、またはその他の外部オブジェクトを伝えます必要があります。 同時に、プロパティ シートを無効に適用 ボタンを呼び出して**CPropertyPage::SetModified (FALSE)** すべてのページの外部のオブジェクトに、その変更を適用します。  
   
  このプロセスの例は、MFC 標準サンプルを参照してください。 [PROPDLG](../visual-cpp-samples.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティ シート](../mfc/property-sheets-mfc.md)
 

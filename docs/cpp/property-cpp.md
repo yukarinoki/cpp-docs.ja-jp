@@ -1,12 +1,9 @@
 ---
-title: "プロパティ (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: プロパティ (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - property_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313123a75c2fbcf295d1c1d87aa423e76154091e
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-c"></a>property (C++)
 **Microsoft 固有の仕様**  
@@ -45,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="remarks"></a>コメント  
  コンパイラがメンバー選択演算子の右側にこの属性で宣言されたデータ メンバーを表示する場合 ("**.**「または」**->**") に変換する操作、 **の取得**または**put**関数は、このような式は、左辺値または右辺値かどうかによって異なります。 複雑なコンテキストなど"`+=`"、両方の手順を実行して書き換えが行わ**取得**と**put**です。  
   
- この属性は、クラスまたは構造体の定義の空の配列の宣言でも使用できます。 例:  
+ この属性は、クラスまたは構造体の定義の空の配列の宣言でも使用できます。 例えば:  
   
 ```  
 __declspec(property(get=GetX, put=PutX)) int x[];  
@@ -79,6 +74,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [__declspec](../cpp/declspec.md)   
  [キーワード](../cpp/keywords-cpp.md)

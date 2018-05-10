@@ -1,12 +1,9 @@
 ---
-title: "XML データにアクセスする |Microsoft ドキュメント"
-ms.custom: 
+title: XML データにアクセスする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c25e5019ebe930cec1dc5cf7c547e9bc03a3ffa8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f3abe00adee2a88d0414d688984232422a5bcfc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-xml-data"></a>XML データへのアクセス
 データ ソースから XML データを取得する 2 つの異なるメソッドがある: いずれかを使用して[CStreamRowset](../../data/oledb/cstreamrowset-class.md)およびその他の用途[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)です。  
@@ -57,7 +52,7 @@ CCommand<CNoAccessor, CStreamRowset> myCmd;
   
  通常どおり呼び出す`CCommand::Open`(指定すると、たとえば、`CRowset`として、`TRowset`クラス)、取得、`IRowset`ポインター。 `ICommand::Execute` 返します、`IRowset`に格納されているポインター、`m_spRowset`のメンバー、`CRowset`オブジェクト。 などのメソッド`MoveFirst`、 `MoveNext`、および`GetData`ポインターを使用してデータを取得します。  
   
- これに対し、呼び出す`CCommand::Open`(指定しますが、`CStreamRowset`として、`TRowset`クラス)、`ICommand::Execute`を返します、`ISequentialStream`に格納されているポインター、`m_spStream`データ メンバーの[CStreamRowset](../../data/oledb/cstreamrowset-class.md). 使用して、`Read`の XML 形式 (Unicode 文字列) のデータを取得します。 例:  
+ これに対し、呼び出す`CCommand::Open`(指定しますが、`CStreamRowset`として、`TRowset`クラス)、`ICommand::Execute`を返します、`ISequentialStream`に格納されているポインター、`m_spStream`データ メンバーの[CStreamRowset](../../data/oledb/cstreamrowset-class.md). 使用して、`Read`の XML 形式 (Unicode 文字列) のデータを取得します。 例えば:  
   
 ```  
 myCmd.m_spStream->Read()  
@@ -98,5 +93,5 @@ while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
   
  使用することができます[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) XML 形式の文字列データとして列 (データ型) の情報を取得します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセサーの使用](../../data/oledb/using-accessors.md)

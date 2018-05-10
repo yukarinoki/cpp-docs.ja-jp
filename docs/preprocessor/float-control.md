@@ -1,12 +1,9 @@
 ---
-title: "float_control |Microsoft ドキュメント"
-ms.custom: 
+title: float_control |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.float_control
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5c9d4e410c74957fad3816c6ba07ddcc724f37
-ms.sourcegitcommit: b597ef49b5b12fe2e54dc3d54619442879eca5a9
+ms.openlocfilehash: a7ac671c938b80fc69b8214456efecf798e1e5f6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="floatcontrol"></a>float_control
 関数の浮動小数点動作を指定します。  
@@ -39,7 +34,7 @@ float_control( value,setting [push] | push | pop )
 ```  
   
 ## <a name="flags"></a>フラグ  
- `value`, `setting` **[push]**  
+ `value`、 `setting` **[プッシュ]**  
  浮動小数点の動作を指定します。 `value` 指定できます**正確な**または**を除く**です。 詳細については、「[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。 `setting` いずれかを指定できます**で**または**オフ**です。  
   
  場合`value`は**正確な**の設定**正確な**と**を除く**が指定されています。 **除く**にのみ設定できます**で**とき**正確な**にも設定されている**で**です。  
@@ -116,5 +111,5 @@ int main( ) {
 Pass  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,13 +1,10 @@
 ---
-title: "ビューの描画 |Microsoft ドキュメント"
-ms.custom: 
+title: ビューの描画 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc716800c35aa922f7912f586d6e5b8429593615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-in-a-view"></a>ビューの描画
 ビューは、アプリケーションのほぼすべての描画`OnDraw`メンバー関数は、ビュー クラスでオーバーライドする必要があります。 (例外は、マウスの描画、後ほど[を解釈するユーザー入力ビューを経由した](../mfc/interpreting-user-input-through-a-view.md))。`OnDraw`をオーバーライドします。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
 2.  フレームワークが渡されるデバイス コンテキスト オブジェクトのメンバー関数を呼び出すことによってデータが表示されます`OnDraw`です。  
   
- ドキュメントのデータは、何らかの方法で変更された、ときに、変更を反映するように、ビューが再描画される必要があります。 通常はユーザーがドキュメントのビューから変更を行ったときに発生します。 この場合、ビューがドキュメントを呼び出す[UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)に自分自身を更新する、同じドキュメントのすべてのビューを通知するメンバー関数。 `UpdateAllViews`それぞれのビューを呼び出す[OnUpdate](../mfc/reference/cview-class.md#onupdate)メンバー関数。 既定の実装`OnUpdate`ビューのクライアント領域全体を無効にします。 ドキュメントの変更後の部分に割り当てられたクライアント領域の領域のみを無効化するメソッドをオーバーライドすることができます。  
+ ドキュメントのデータは、何らかの方法で変更された、ときに、変更を反映するように、ビューが再描画される必要があります。 通常はユーザーがドキュメントのビューから変更を行ったときに発生します。 この場合、ビューがドキュメントを呼び出す[UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)に自分自身を更新する、同じドキュメントのすべてのビューを通知するメンバー関数。 `UpdateAllViews` それぞれのビューを呼び出す[OnUpdate](../mfc/reference/cview-class.md#onupdate)メンバー関数。 既定の実装`OnUpdate`ビューのクライアント領域全体を無効にします。 ドキュメントの変更後の部分に割り当てられたクライアント領域の領域のみを無効化するメソッドをオーバーライドすることができます。  
   
- `UpdateAllViews`クラスのメンバー関数**CDocument**と`OnUpdate`クラスのメンバー関数`CView`ドキュメントのどの部分が変更されたを説明する情報を渡すことができます。 この「ヒント」メカニズムでは、ビューの再描画する領域を制限できます。 `OnUpdate`2 つの「ヒント」引数を受け取ります。 最初、 `lHint`、型の**LPARAM**、必要な場合、2 番目の中に、データの受け渡しすることができます`pHint`、型の`CObject`* から派生した任意のオブジェクトへのポインターを渡すことができます`CObject`です。  
+ `UpdateAllViews`クラスのメンバー関数**CDocument**と`OnUpdate`クラスのメンバー関数`CView`ドキュメントのどの部分が変更されたを説明する情報を渡すことができます。 この「ヒント」メカニズムでは、ビューの再描画する領域を制限できます。 `OnUpdate` 2 つの「ヒント」引数を受け取ります。 最初、 `lHint`、型の**LPARAM**、必要な場合、2 番目の中に、データの受け渡しすることができます`pHint`、型の`CObject`* から派生した任意のオブジェクトへのポインターを渡すことができます`CObject`です。  
   
  Windows がそれを送信すると表示が無効になったとき、`WM_PAINT`メッセージ。 ビューの[OnPaint](../mfc/reference/cwnd-class.md#onpaint)ハンドラー関数がクラスのデバイス コンテキスト オブジェクトを作成することで、メッセージに応答[CPaintDC](../mfc/reference/cpaintdc-class.md)呼び出しビューのおよび`OnDraw`メンバー関数。 通常はできません、オーバーライドを書き込む`OnPaint`ハンドラー関数。  
   
@@ -57,6 +52,6 @@ ms.lasthandoff: 12/21/2017
   
  記述する方法の例について`OnDraw`を参照してください、 [MFC サンプル](../visual-cpp-samples.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビューの使い方](../mfc/using-views.md)
 

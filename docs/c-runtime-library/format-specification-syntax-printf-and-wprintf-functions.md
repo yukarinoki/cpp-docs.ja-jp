@@ -2,12 +2,9 @@
 title: '書式指定構文: printf 関数と wprintf 関数 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
-ms.translationtype: MT
+ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>書式指定構文: printf 関数と wprintf 関数
 
@@ -219,7 +214,7 @@ Visual C++ では、`long double` は別個の型ですが、これには `doubl
 > **Microsoft 固有の仕様**  
 > 引数サイズ修飾子 **I** (小文字の i)、**I32**、**I64**、および **w** は Microsoft の拡張機能で、ISO C とは互換性がありません。 プレフィックス **h** (`char` 型のデータと共に使用する場合)、および **l** (L の小文字) プレフィックス (`double` 型のデータと共に使用する場合) は Microsoft の拡張機能です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  

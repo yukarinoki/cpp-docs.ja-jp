@@ -1,12 +1,9 @@
 ---
-title: "コンパイラ エラー C2712 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C2712 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2712
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee098890bac40c0c376c7623578c4e95e551a75b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26c5d7a24c022cacf4c20687b2d8c58f7e9e342
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2712"></a>コンパイラ エラー C2712
 オブジェクト アンワインディングが必要な関数内で __try を使用できません。  
@@ -43,9 +38,9 @@ ms.lasthandoff: 12/21/2017
  使用して宣言されたメソッドを呼び出す場合もエラー C2712 が発生、 [_ _event](../../cpp/event.md)キーワード。 コンパイラが、基になるイベント オブジェクトの操作を防止し、SEH で生成されたコードを囲むコードを生成するイベントは、マルチ スレッド環境で使用される可能性があります、ため[try-finally ステートメント](../../cpp/try-finally-statement.md)です。 その結果、イベント メソッドを呼び出し、型にデストラクターが含まれる引数を値渡しで渡すと、エラー C2712 が発生します。 このような場合の解決策の 1 つとして、引数を定数参照として渡します。  
   
 ## <a name="example"></a>例  
- コンパイルする場合も C2712 が発生**/clr: 純粋な**内から関数へのポインターの静的配列を宣言し、`__try`ブロックします。 静的メンバーには、動的な初期化を使用するコンパイラが必要です。 **/clr: 純粋な**、C++ 例外処理が含まれています。 しかし、`__try` ブロックでは C++ の例外処理を実行できません。  
+ コンパイルする場合も C2712 が発生 **/clr: 純粋な**内から関数へのポインターの静的配列を宣言し、`__try`ブロックします。 静的メンバーには、動的な初期化を使用するコンパイラが必要です。 **/clr: 純粋な**、C++ 例外処理が含まれています。 しかし、`__try` ブロックでは C++ の例外処理を実行できません。  
   
- コンパイラ オプションの **/clr:pure** と **/clr:safe** は Visual Studio 2015 で使用されていません。  
+ コンパイラ オプションの **/clr:pure** と **/clr:safe** は Visual Studio 2015 で非推奨とされています。  
   
  次の例では、C2712 を生成し、その修正方法を示しています。  
   

@@ -1,12 +1,9 @@
 ---
-title: "IDBPropertiesImpl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: IDBPropertiesImpl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1b1486d5eff73b4f868f5990ceb628cfb7dd20a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3685e6a77e4293ef65b5ee98a0aa326500cfdb2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl クラス
 実装を提供、`IDBProperties`インターフェイスです。  
@@ -60,9 +55,9 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ## <a name="remarks"></a>コメント  
  [IDBProperties](https://msdn.microsoft.com/en-us/library/ms719607.aspx)はデータ ソース オブジェクトに必要なインターフェイスと列挙子のオプションのインターフェイスです。 ただし、列挙子を公開する場合[IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx)、公開している`IDBProperties`です。 `IDBPropertiesImpl` 実装する`IDBProperties`によって定義された静的関数を使用して[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

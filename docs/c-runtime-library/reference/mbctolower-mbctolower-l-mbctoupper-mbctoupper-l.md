@@ -2,11 +2,8 @@
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctolower_l
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbe370fa5443ade72d352768d299fd6ac697288d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -110,7 +105,7 @@ unsigned int _mbctoupper_l(
 |**_mbctolower**、 **_mbctolower_l**|大文字を小文字に変換します。|
 |**_mbctoupper**、 **_mbctoupper_l**|小文字を大文字に変換します。|
 
-出力値の設定の影響を受けた、 **LC_CTYPE** 、ロケールのカテゴリの設定; 参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 この関数のバージョン、 **_l**サフィックスがこのロケールに依存する動作に現在のロケールを使用のバージョン、 **_l**ロケール パラメーターを使用する点を除いて、サフィックスは同じ代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数のバージョン、 **_l**サフィックスがこのロケールに依存する動作に現在のロケールを使用のバージョン、 **_l**ロケール パラメーターを使用する点を除いて、サフィックスは同じ代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 以前のバージョンで **_mbctolower**が呼び出された**jtolower**、および **_mbctoupper**が呼び出された**jtoupper**です。 新しいコードでは、代わりに新しい名前を使用します。
 

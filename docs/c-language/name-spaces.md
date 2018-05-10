@@ -1,13 +1,10 @@
 ---
-title: "名前空間 | Microsoft Docs"
-ms.custom: 
+title: 名前空間 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b0fe8a097da3de67d149665928524395988c730
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-spaces"></a>名前空間
 コンパイラは、異なる種類の項目に使用されている識別子を区別するために "名前空間" を設定します。 競合を回避するために、それぞれの名前空間の中では名前は一意である必要がありますが、複数の名前空間では同一の名前を使うことができます。 これは、複数の項目が異なる名前空間にあれば、それらに同じ識別子を使用できることを意味しています。 コンパイラは、プログラム内の識別子の構文コンテキストに基づいて参照を解決できます。  

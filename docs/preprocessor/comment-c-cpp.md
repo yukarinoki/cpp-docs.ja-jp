@@ -1,12 +1,9 @@
 ---
-title: "コメント (C/C++) |Microsoft ドキュメント"
-ms.custom: 
+title: コメント (C/C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 30683bb76ce674becb81321607bc95fefdb78ac1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comment-cc"></a>コメント (C/C++)
 オブジェクト ファイルまたは実行可能ファイル内にコメント レコードを配置します。  
@@ -50,7 +45,8 @@ ms.lasthandoff: 02/23/2018
  **exestr**  
  オブジェクト ファイル内に `commentstring` を配置します。 リンク時に、この文字列は実行可能ファイルに配置されます。 実行可能ファイルが読み込まれるとき、この文字列はメモリには読み込まれません。ただし、ファイル内の出力可能文字列を検出するプログラムで検出できます。 このコメント レコードの種類の使用方法の 1 つは、実行可能ファイルにバージョン番号や同様の情報を埋め込むことです。  
   
- `exestr` の使用は推奨されておらず、将来のリリースで削除されます。リンカーは、このコメント レコードを処理しません。  
+ 
+  `exestr` の使用は非推奨とされており、将来のリリースで削除されます。リンカーは、このコメント レコードを処理しません。  
   
  **lib**  
  オブジェクト ファイル内にライブラリ検索レコードを配置します。 このコメントの種類では、リンカーで検索するライブラリの名前 (および場合によってはパス) を含む `commentstring` パラメーターを指定する必要があります。 オブジェクト ファイルにある既定のライブラリ検索レコードに依存して、ライブラリの名前必要があるという名前が、コマンドラインでことで、ライブラリを指定しない場合と同様に、リンカーがこのライブラリの検索[/nodefaultlib](../build/reference/nodefaultlib-ignore-libraries.md)です。 同じソース ファイルに複数のライブラリ検索レコードを配置できます。各レコードは、ソース ファイルで見つかった順序と同じ順序でオブジェクト ファイルに出現します。  
@@ -100,5 +96,5 @@ ms.lasthandoff: 02/23/2018
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

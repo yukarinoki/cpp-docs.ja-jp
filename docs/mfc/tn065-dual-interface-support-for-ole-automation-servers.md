@@ -1,13 +1,10 @@
 ---
-title: "TN065: OLE オートメーション サーバー用デュアル インターフェイス サポート |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN065: OLE オートメーション サーバー用デュアル インターフェイス サポート |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>テクニカル ノート 65: OLE オートメーション サーバー用デュアル インターフェイス サポート
 > [!NOTE]
@@ -305,7 +300,7 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
   
 -   アプリケーションの`InitInstance`関数への呼び出しを探し、`COleObjectFactory::UpdateRegistryAll`です。 この呼び出しでは、次の呼び出しを追加して`AfxOleRegisterTypeLib`を指定して、 **LIBID**タイプ ライブラリの名前と共に、タイプ ライブラリに対応します。  
   
- ``` *// When a server application is launched stand-alone, it is a good idea *// to update the system registry in case it has been damaged.  
+ '' */ことをお勧めはサーバー アプリケーションが起動すると、スタンドアロン/*//が破損した場合に、システム レジストリを更新します。  
     m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll() です。*//DUAL_SUPPORT_START */、タイプ ライブラリが登録されているか、デュアル インターフェイスは動作しないかどうかを確認します。  
@@ -328,9 +323,9 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle()、LIBID_ACDual、_T("AutoClik.TLB")
  ```  
     initIIDs.c: デュアル インターフェイスの Iid を定義します。  
     プリコンパイル済みヘッダーとこれに構築する必要がありません。  
-      #<a name="include-ole2h"></a>include <ole2.h>  
+      #<a name="include-ole2h"></a>< ole2.h > が含まれます  
       #<a name="include-initguidh"></a>include <initguid.h>  
-      #<a name="include-acdualh"></a>include "acdual.h"  
+      #<a name="include-acdualh"></a>"acdual.h"を含める  
  ```  
   
 3.  On the **Build** menu, click **Settings**, and then select INITIIDS.CPP from the file list for each configuration.  
@@ -352,7 +347,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 {  
     METHOD_PROLOGUE (CAutoClickDoc、DualAClick)  
     TRY_DUAL(IID_IDualAClick) {*/MFC が自動的に変換する Unicode BSTR から/*//Ansi CString、必要に応じて.  
-    pThis->m_str = newText;  
+    pThis m_str]-> [= 新しいテキストを入力します。  
     NOERROR; を返す  
  }  
     発生時}  
@@ -390,25 +385,25 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE (CAutoClickDoc、SupportErrorInfo)   
     戻り値の pThis ExternalAddRef();]-> [します。
 
 }   
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE (CAutoClickDoc、SupportErrorInfo)   
     戻り値の pThis ExternalRelease();]-> [します。
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid、LPVOID * ppvObj)   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE (CAutoClickDoc、SupportErrorInfo)   
     戻り値の pThis は ExternalQueryInterface (& iid、ppvObj); -> します。
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (REFIID iid)   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE (CAutoClickDoc、SupportErrorInfo)   
     return (iid == IID_IDualAClick) S_OK : S_FALSE;   
 }  
 ```  

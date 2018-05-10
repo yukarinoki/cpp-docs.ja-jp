@@ -1,29 +1,24 @@
 ---
-title: "標準的なダイアログ データ バリデーション ルーチン |Microsoft ドキュメント"
-ms.custom: 
+title: 標準的なダイアログ データ バリデーション ルーチン |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準的なダイアログ データ検証ルーチン
 このトピックでは、共通の MFC ダイアログ コントロールの使用される標準的なダイアログ データ バリデーション (DDV) ルーチンを示します。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-##  <a name="ddv_maxchars"></a>DDV_MaxChars  
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
  呼び出す`DDV_MaxChars`コントロール内の文字の量に関連付けられていることを確認する*値*を超えない*文字数*です。  
   
 ```   
@@ -76,10 +71,10 @@ void AFXAPI DDV_MaxChars(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
  呼び出す`DDV_MinMaxByte`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -106,10 +101,10 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
  呼び出す`DDV_MinMaxDateTime`日付と時刻の選択で日付/時刻値を制御することを確認する ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) に関連付けられている*refValue*間`refMinRange`と`refMaxRange`です。  
   
 ```   
@@ -142,10 +137,10 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
  呼び出す`DDV_MinMaxDouble`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -172,10 +167,10 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
  呼び出す`DDV_MinMaxDWord`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -202,10 +197,10 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
+##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
  呼び出す`DDV_MinMaxFloat`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -232,10 +227,10 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
  呼び出す`DDV_MinMaxInt`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -262,10 +257,10 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
  呼び出す`DDV_MinMaxLong`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -292,10 +287,10 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  呼び出す`DDV_MinMaxLongLong`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -322,10 +317,10 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
  呼び出す`DDV_MinMaxMonth`月間予定表で日付/時刻値を制御することを確認する ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) に関連付けられている*refValue*間`refMinRange`と`refMaxRange`です。  
   
 ```   
@@ -358,10 +353,10 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  呼び出す`DDV_MinMaxShort`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -388,10 +383,10 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
  呼び出す`DDV_MinMaxSlider`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -418,10 +413,10 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../../mfc/using-csliderctrl.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  呼び出す`DDV_MinMaxUInt`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -448,10 +443,10 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  呼び出す`DDV_MinMaxULongLong`コントロールの値に関連付けられていることを確認する*値*間`minVal`と`maxVal`です。  
   
 ```   
@@ -478,10 +473,10 @@ void AFXAPI DDV_MinMaxULongLong(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdd_.h  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [標準的なダイアログ データ エクス チェンジ ルーチン](../../mfc/reference/standard-dialog-data-exchange-routines.md)   
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
 
@@ -512,10 +507,10 @@ void AFXAPI DDV_MinMaxULongLong(
 ### <a name="remarks"></a>コメント  
  DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../dialog-data-exchange-and-validation.md)です。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdd_.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [DDX_Slider](#ddx_slider)   
  [DDX_FieldSlider](#ddx_fieldslider)

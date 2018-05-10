@@ -1,12 +1,9 @@
 ---
-title: "_ _vmx_vmresume |Microsoft ドキュメント"
-ms.custom: 
+title: _ _vmx_vmresume |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmresume
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f7c35842c0e51b519e474378436c66a406ff80b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8809489a71410af21e47d8771ec208340fc893a7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 **Microsoft 固有の仕様**  
@@ -53,7 +48,7 @@ unsigned char __vmx_vmresume(
   
  `__vmx_vmresume` 関数は `VMRESUME` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 ドキュメント番号 C97063-002 の詳細については、「Intel 仮想化技術仕様の「ia-32 Intel アーキテクチャ」、PDF ドキュメントの検索、 [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)サイトです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -63,7 +58,7 @@ unsigned char __vmx_vmresume(
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
+ [_ _vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
  [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

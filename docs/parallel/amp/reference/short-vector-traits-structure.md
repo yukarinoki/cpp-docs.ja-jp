@@ -1,12 +1,9 @@
 ---
-title: "short_vector_traits 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: short_vector_traits 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - short_vector_traits
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21f249a464cd9f55d8cbb4aea79bcb705104306b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 54ab4120fa4eb6393c25a7ea77377bd0a2b04258
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 構造体
 short_vector_traits により、基になるベクトルの長さと short ベクター型のスカラー型、またはスカラー型の取得  
@@ -107,29 +102,29 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[short_vector_traits::size 定数](#size)||  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `short_vector_traits`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amp_short_vectors.h  
   
  **Namespace:** concurrency::graphics  
   
-##  <a name="ctor"></a>  short_vector_traits::short_vector_traits Constructor  
+##  <a name="ctor"></a>  short_vector_traits::short_vector_traits コンス トラクター  
   
 ```  
 short_vector_traits();
 ```  
   
-##  <a name="size">short_vector_traits::size 定数</a>  
+##  <a name="size"></a>  short_vector_traits::size 定数  
   
 ```  
 static int const size = 1;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

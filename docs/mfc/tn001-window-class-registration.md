@@ -1,13 +1,10 @@
 ---
-title: "TN001: ウィンドウ クラスの登録 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN001: ウィンドウ クラスの登録 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.registration
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn001-window-class-registration"></a>テクニカル ノート 1: ウィンドウ クラスの登録
 このメモには、特別なを登録する MFC ルーチンがについて説明[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es Microsoft Windows で必要とします。 特定`WNDCLASS`MFC と Windows で使用される属性がについて説明します。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 |フィールド|説明|  
 |-----------|-----------------|  
-|`lpfnWndProc`|ウィンドウ プロシージャがある必要があります、`AfxWndProc`|  
+|`lpfnWndProc`|ウィンドウ プロシージャがある必要があります、 `AfxWndProc`|  
 |`cbClsExtra`|使用されません (0 にする必要があります)|  
 |`cbWndExtra`|使用されません (0 にする必要があります)|  
 |`hInstance`|自動的に入力[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
@@ -67,9 +62,9 @@ ms.lasthandoff: 12/21/2017
   
  2 つのアイコンが 1 つのドキュメントの種類の MDI アプリケーションをサポートします。 メイン アプリケーションの 1 つのアイコン、あります windows の他のアイコン。 アイコンが異なる複数のドキュメントの種類を追加する必要があります登録`WNDCLASS`es またはを使用して、 [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)関数。  
   
- `CFrameWnd::LoadFrame`登録は、`WNDCLASS`最初のパラメーターと、次の標準的な属性として指定したアイコン ID を使用します。  
+ `CFrameWnd::LoadFrame` 登録は、`WNDCLASS`最初のパラメーターと、次の標準的な属性として指定したアイコン ID を使用します。  
   
--   クラスのスタイル: CS_DBLCLKS &#124;です。CS_HREDRAW &#124;です。CS_VREDRAW です。  
+-   クラスのスタイル: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW です。  
   
 -   AFX_IDI_STD_FRAME アイコン  
   
@@ -106,14 +101,14 @@ pWnd->Create(strWndClass, ...);
 ...  
 ```  
   
- `AfxRegisterWndClass`スローされます、[関数](../mfc/reference/cresourceexception-class.md)(により無効なパラメーターは、または Windows のメモリ不足) を登録する、ウィンドウ クラスが失敗したかどうか。  
+ `AfxRegisterWndClass` スローされます、[関数](../mfc/reference/cresourceexception-class.md)(により無効なパラメーターは、または Windows のメモリ不足) を登録する、ウィンドウ クラスが失敗したかどうか。  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass および AfxRegisterClass 関数  
  実行する場合は、何もより高度なより`AfxRegisterWndClass`を提供する Windows API を呼び出すことができます`RegisterClass`または MFC 関数`AfxRegisterClass`です。 `CWnd`、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`関数、`lpszClassName`ウィンドウ クラスを最初のパラメーターとしての文字列名。 登録時に使用する方法に関係なく、すべての登録済みのウィンドウ クラス名を使用することができます。  
   
- 使用することが重要`AfxRegisterClass`(または`AfxRegisterWndClass`) で Win32 DLL にします。 Win32 は自動的に登録解除されないため、DLL が終了した場合に、明示的に登録を解除する必要があります、DLL によって登録されたクラスです。 使用して`AfxRegisterClass`の代わりに`RegisterClass`これは自動的に処理するためです。 `AfxRegisterClass`一意のクラスの一覧は、DLL に登録されているしは自動的に解除して、DLL が終了するときは保持します。 使用すると`RegisterClass`DLL で DLL が終了した場合には、すべてのクラスが登録されているないことを確認する必要があります (で、 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)関数)。 そのためにはエラーが発生する可能性があります`RegisterClass`別のクライアント アプリケーションが DLL を使用しようとしたときに予期せず失敗します。  
+ 使用することが重要`AfxRegisterClass`(または`AfxRegisterWndClass`) で Win32 DLL にします。 Win32 は自動的に登録解除されないため、DLL が終了した場合に、明示的に登録を解除する必要があります、DLL によって登録されたクラスです。 使用して`AfxRegisterClass`の代わりに`RegisterClass`これは自動的に処理するためです。 `AfxRegisterClass` 一意のクラスの一覧は、DLL に登録されているしは自動的に解除して、DLL が終了するときは保持します。 使用すると`RegisterClass`DLL で DLL が終了した場合には、すべてのクラスが登録されているないことを確認する必要があります (で、 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)関数)。 そのためにはエラーが発生する可能性があります`RegisterClass`別のクライアント アプリケーションが DLL を使用しようとしたときに予期せず失敗します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

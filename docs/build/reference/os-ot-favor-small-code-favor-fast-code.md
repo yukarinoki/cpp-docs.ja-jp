@@ -1,13 +1,10 @@
 ---
-title: "-Os、-ot (コードは、高速コードの実行速度の優先) |Microsoft ドキュメント"
-ms.custom: 
+title: -Os、-ot (コードは、高速コードの実行速度の優先) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ce4b7d5c9617a88450fd90b4ac6c75d41148ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9f97ab0a53eb82b65149ea0f27139743e065f7ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os、/Ot (実行可能ファイルのサイズの優先、実行速度の優先)
 最小化または Exe および Dll のサイズを最大化します。  
@@ -49,21 +44,21 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>コメント  
- **/Os** (コード) 速度よりサイズを優先するように、コンパイラ、Exe および Dll のサイズを最小化します。 コンパイラは、機能的に同等のマシン語コードの多くの C および C++ コンストラクトを減らすことができます。 場合によってはこれらの相違点は、サイズの速度とのトレードオフを提供します。 **/Os**と**/Ot**オプションを使用すると、他の中の 1 つの基本設定を指定します。  
+ **/Os** (コード) 速度よりサイズを優先するように、コンパイラ、Exe および Dll のサイズを最小化します。 コンパイラは、機能的に同等のマシン語コードの多くの C および C++ コンストラクトを減らすことができます。 場合によってはこれらの相違点は、サイズの速度とのトレードオフを提供します。 **/Os**と **/Ot**オプションを使用すると、他の中の 1 つの基本設定を指定します。  
   
  **/Ot** (優先高速コード) のサイズを超える速度を優先するようにコンパイラに指示して Exe および Dll の速度を最大化します。 (これは、既定値です)。コンパイラは、機能的に同等のマシン語コードの多くの C および C++ コンストラクトを減らすことができます。 場合によっては、これらの相違点は、サイズの速度とのトレードオフを提供します。 /Ot オプションは、最大速度で暗黙的に指定 ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) オプション。 **/O2**オプション非常に高速のコードを生成するためにいくつかのオプションを組み合わせています。  
   
- 使用する場合**/Os**または**/Ot**も指定する必要があります、 [/Og](../../build/reference/og-global-optimizations.md)コードを最適化します。  
+ 使用する場合 **/Os**または **/Ot**も指定する必要があります、 [/Og](../../build/reference/og-global-optimizations.md)コードを最適化します。  
   
 > [!NOTE]
->  プロファイリングのテスト実行から収集される情報を指定する場合に有効なそれ以外の場合になる最適化がオーバーライドされます**/Ob**、 **/Os**、または**/Ot**です。 詳細については、[ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)します。  
+>  プロファイリングのテスト実行から収集される情報を指定する場合に有効なそれ以外の場合になる最適化がオーバーライドされます **/Ob**、 **/Os**、または **/Ot**です。 詳細については、[ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)します。  
   
  **x86 固有**  
   
  次のコード例は、コードは、違いを示します (**/Os**) オプションと、/os (**/Ot**) オプション。  
   
 > [!NOTE]
->  使用する場合、次に、予想される動作について説明します**/Os**または**/Ot**です。 ただし、コンパイラの動作リリースごとに次のコードにさまざまな最適化されない可能性があります。  
+>  使用する場合、次に、予想される動作について説明します **/Os**または **/Ot**です。 ただし、コンパイラの動作リリースごとに次のコードにさまざまな最適化されない可能性があります。  
   
 ```  
 /* differ.c  
@@ -110,7 +105,7 @@ sub    eax, ecx
   
 -   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)   
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
  [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

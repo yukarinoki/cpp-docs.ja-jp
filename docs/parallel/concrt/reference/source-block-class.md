@@ -1,12 +1,9 @@
 ---
-title: "source_block クラス |Microsoft ドキュメント"
-ms.custom: 
+title: source_block クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_block
@@ -42,17 +39,15 @@ dev_langs:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64b9873ef6da00b4ef0fb03e43f61fa704484389
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourceblock-class"></a>source_block クラス
 `source_block` クラスは、ソースのみのブロックの抽象基底クラスです。 このクラスには、基本的なリンク管理機能および一般的なエラー チェック機能が用意されています。  
@@ -92,7 +87,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |----------|-----------------|  
 |[accept](#accept)|これによって提供されたメッセージを受け入れる`source_block`呼び出し元に所有権を転送するオブジェクト。|  
 |[acquire_ref](#acquire_ref)|この参照カウントを取得`source_block`オブジェクト、削除を禁止します。|  
-|[consume](#consume)|これによって以前に提供メッセージを使用して`source_block`オブジェクトし、呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
+|[使用します。](#consume)|これによって以前に提供メッセージを使用して`source_block`オブジェクトし、呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
 |[link_target](#link_target)|これをターゲット ブロックをリンク`source_block`オブジェクト。|  
 |[release](#release)|以前に成功したメッセージの予約を解放します。|  
 |[release_ref](#release_ref)|この参照カウントを解放`source_block`オブジェクト。|  
@@ -129,7 +124,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
  `source_block`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -503,6 +498,6 @@ virtual void unlink_targets();
 void wait_for_outstanding_async_sends();
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [ISource クラス](isource-class.md)

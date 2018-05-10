@@ -1,13 +1,10 @@
 ---
-title: "Visual C でフォルダーのプロジェクトを開く |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C でフォルダーのプロジェクトを開く |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C でフォルダーのプロジェクトを開く
 Visual Studio 2017 を使用すると、ソース ファイルのフォルダーを開いてすぐに、参照、リファクタリング、デバッグ、IntelliSense のサポートとコーディングを開始し、「フォルダーを開く」機能が導入されています。 .Sln または .vcxproj ファイルが読み込まれていません。必要な場合、カスタム タスクをビルドし、単純な .json ファイルを起動してパラメーターを指定できます。 開いているフォルダーでの電源を Visual C サポートできますだけでなく、ファイルの厳密でないコレクションも事実上、ビルド システム、CMake、忍者、QMake (カタール プロジェクト) に対して、gyp、SCons、Gradle、Buck、make をなどです。 
 
-開いているフォルダーを使用するメイン メニューから選択*ファイル |開いている |フォルダー*またはキーを押して*Ctrl + Shift + Alt + O*です。ソリューション エクスプ ローラーでは、フォルダー内のすべてのファイルがすぐが表示されます。 編集を開始するすべてのファイルをクリックすることができます。 バック グラウンドでは、Visual Studio は、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にするファイルのインデックス作成を開始します。 ように編集し、作成、移動、またはファイルを削除しても、Visual Studio は自動的に変更を追跡し、継続的に、IntelliSense のインデックスを更新します。 
+開いているフォルダーを使用するメイン メニューから選択*ファイル |開いている |フォルダー*またはキーを押して*Ctrl + Shift + Alt + O*です。ソリューション エクスプ ローラーでは、フォルダー内のすべてのファイルがすぐが表示されます。 任意のファイルをクリックして、編集を開始できます。 バックグラウンドでは、Visual Studio は、ファイルのインデックス作成を開始して、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にします。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 
   
 ## <a name="cmake-projects"></a>CMake プロジェクト
 CMake は、Visual C、C++ デスクトップ ワークロードのコンポーネントの CMake ツールとして、Visual Studio IDE に統合されています。 詳細については、「[CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。
@@ -43,8 +39,8 @@ Visual C では、ビルド システムを使用して Visual C の IDE とデ�
 |||
 |-|-|
 |CppProperties.json|参照するためのカスタム構成情報を指定します。 ルート プロジェクト フォルダーに必要な場合は、このファイルを作成します。|
-|launch.vs.json|コマンドライン引数を指定します。 経由でアクセスされる、**ソリューション エクスプ ローラー**コンテキスト メニュー項目**デバッグ構成と起動設定**です。|
-|tasks.vs.json|カスタム ビルド コマンドやコンパイラ スイッチを指定します。 経由でアクセスされる、**ソリューション エクスプ ローラー**コンテキスト メニュー項目**構成タスク**です。|
+|launch.vs.json|コマンドライン引数を指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[デバッグ設定と起動設定]** を使用します。|
+|tasks.vs.json|カスタム ビルド コマンドやコンパイラ スイッチを指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[タスクの構成]** を使用します。|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>CppProperties.json と IntelliSense を構成します。
 IntelliSense および動作を部分的に参照を定義するアクティブなビルド構成に依存 #include のパス、コンパイラ スイッチ、およびその他のパラメーターです。 既定では、Visual Studio はデバッグ構成とリリース構成を提供します。 プロジェクトでは、IntelliSense および参照機能を完全にコードを理解するために、カスタム構成を作成する必要があります。 新しい構成を定義するのには、ルート フォルダーに CppProperties.json という名前のファイルを作成します。 次に例を示します。
@@ -75,7 +71,7 @@ IntelliSense および動作を部分的に参照を定義するアクティブ�
 |`forcedInclude`|コンパイル単位ごとに自動的に含まれるヘッダー (MSVC の/FI にマップまたは - clang を含む)|
 |`undefines`|未定義 (MSVC の/U にマッピング) にするマクロの一覧|
 |`intelliSenseMode`|使用する IntelliSense エンジン。 MSVC、gcc または Clang アーキテクチャの特定のバリエーションを指定できます。
-- msvc-x86 (default)
+- msvc x86 (既定値)
 - msvc-x64
 - msvc-arm
 - windows-clang-x86
@@ -83,7 +79,7 @@ IntelliSense および動作を部分的に参照を定義するアクティブ�
 - windows-clang-arm
 - Linux-x64
 - Linux-x86
-- Linux-arm
+- Linux arm
 - gccarm
 
 #### <a name="environment-variables"></a>環境変数
@@ -248,12 +244,12 @@ CppProperties.json で任意の数の構成を作成できます。 それぞれ
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Tasks.vs.json を使用してタスクを定義します。
-ビルド スクリプトや、IDE 内で直接タスクとして実行することにより、現在のワークスペースにあるファイルの他の外部の操作を自動化することができます。 新しいタスクを構成するには、ファイルまたはフォルダーを右クリックしを選択すると**構成タスク**です。 
+### <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.json でタスクを定義する
+IDE でタスクとして直接実行することで、現在のワークスペースにあるファイルに対してビルド スクリプトやその他の外部操作を自動化できます。 ファイルまたはフォルダーを右クリックし、**[タスクの構成]** を選択すると、新しいタスクを構成できます。 
 
 ![フォルダーを開くタスクを構成します。](media/open-folder-config-tasks.png)
 
-これを作成 (またはが表示されます)、`tasks.vs.json`ファイル .vs フォルダーに Visual Studio がルート プロジェクト フォルダーに作成します。 このファイル内の任意のタスクを定義して、呼び出すことから、**ソリューション エクスプ ローラー**コンテキスト メニュー。 次の例では、1 つのタスクを定義する tasks.vs.json ファイルを示します。 `taskName`コンテキスト メニューに表示される名前を定義します。 `appliesTo`コマンドを実行できるファイルを定義します。 `command`プロパティは、コンソール (cmd.exe Windows 上) のパスを識別する文字列環境変数を参照します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args`プロパティが呼び出されるコマンドラインを指定します。 `${file}`マクロで選択したファイルを取得する**ソリューション エクスプ ローラー**です。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
+これを作成 (またはが表示されます)、`tasks.vs.json`ファイル .vs フォルダーに Visual Studio がルート プロジェクト フォルダーに作成します。 このファイル内の任意のタスクを定義して、呼び出すことから、**ソリューション エクスプ ローラー**コンテキスト メニュー。 次の例では、1 つのタスクを定義する tasks.vs.json ファイルを示します。 `taskName` コンテキスト メニューに表示される名前を定義します。 `appliesTo` コマンドを実行できるファイルを定義します。 `command`プロパティは、コンソール (cmd.exe Windows 上) のパスを識別する文字列環境変数を参照します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args`プロパティが呼び出されるコマンドラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
 
 ```json
 {
@@ -274,29 +270,29 @@ Tasks.vs.json を保存した後、フォルダー内の .cpp ファイルを右
 
 
 #### <a name="appliesto"></a>AppliesTo
-その名前を指定することで任意のファイルまたはフォルダーのタスクを作成することができます、`appliesTo`フィールド、たとえば`"appliesTo" : "hello.cpp"`します。 次のファイル マスクは、値として使用できます。
+任意のファイルまたはフォルダーのタスクを作成するには、`appliesTo` フィールドに名前を指定します (例:`"appliesTo" : "hello.cpp"`)。 次のファイル マスクを値として使用できます。
 |||
 |-|-|
-|`"*"`| タスクがすべてのファイルおよびフォルダー ワークスペースで、利用可能|
-|`"*/"`| タスクがワークスペース内のすべてのフォルダーに利用可能|
+|`"*"`| タスクは、ワークスペース内のすべてのファイルとフォルダーで使用できます|
+|`"*/"`| タスクは、ワークスペース内のすべてのフォルダーで使用できます|
 |`"*.cpp"`| タスクが ワークスペースで、拡張子 .cpp を持つすべてのファイルに利用可能|
 |`"/*.cpp"`| タスクは、ワークスペースのルートに拡張子 .cpp を持つすべてのファイルに利用できます。|
-|`"src/*/"`| タスクは、"src"フォルダーのすべてのサブフォルダーを利用できます。|
-|`"makefile"`| タスクは、ワークスペース内のすべてのメイクファイル ファイルを利用できます。|
-|`"/makefile"`| タスクは、ワークスペースのルートにメイクファイルでのみ使用できます。|
+|`"src/*/"`| タスクは、"src" フォルダーのすべてのサブフォルダーで使用できます|
+|`"makefile"`| タスクは、ワークスペース内のすべての makefile ファイルで使用できます|
+|`"/makefile"`| タスクは、ワークスペースのルートにある makefile にのみ使用できます|
 
 #### <a name="output"></a>出力
-使用して、`output`プロパティをキーを押したときに起動する実行可能ファイルを指定する**f5 キーを押して**です。 例:
+使用して、`output`プロパティをキーを押したときに起動する実行可能ファイルを指定する**f5 キーを押して**です。 例えば:
 
 ```json
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
 ```
 
-#### <a name="macros-for-tasksvsjson"></a>Tasks.vs.json 用マクロ
+#### <a name="macros-for-tasksvsjson"></a>tasks.vs.json のマクロ
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| 任意の環境変数 (たとえば、${env を指定します。パス} ${env.COMSPEC} というように) 開発者コマンド プロンプトに設定されています。 詳細については、次を参照してください。 [Visual Studio 用開発者コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)です。|
+|`${env.<VARIABLE>}`| 任意の環境変数 (たとえば、${env を指定します。パス} ${env.COMSPEC} というように) 開発者コマンド プロンプトに設定されています。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)」を参照してください。|
 |`${workspaceRoot}`| ワークスペース フォルダー (たとえば、"C:\sources\hello") への完全パス|
 |`${file}`| ファイルまたは (たとえば、"C:\sources\hello\src\hello.cpp") に対してこのタスクの実行を選択したフォルダーの完全なパス|
 |`${relativeFile}`| ファイルまたはフォルダー (たとえば、"src\hello.cpp"など) への相対パス|
@@ -346,6 +342,6 @@ Tasks.vs.json でカスタムのマクロを定義するには、タスクのブ
 
 このファイルを保存して、デバッグ ターゲット ドロップダウン リストに、新しい構成が表示されます、デバッガーを開始するように選択できます。 実行可能ファイルの任意の数を好きなように、多くのデバッグ構成を作成できます。 キーを押す場合**f5 キーを押して**ここで、デバッガーが起動し、既に設定したすべてのブレークポイントがヒットされます。 使い慣れたデバッガーのすべての windows およびそれらの機能では、使用できるようになりました。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [IDE と Visual C++ 開発用ツール](ide-and-tools-for-visual-cpp-development.md)
 

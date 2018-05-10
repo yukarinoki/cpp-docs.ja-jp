@@ -1,29 +1,24 @@
 ---
-title: "MFC アプリケーションの作成操作のシーケンス |Microsoft ドキュメント"
-ms.custom: 
+title: MFC アプリケーションの作成操作のシーケンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>MFC アプリケーションの作成手順
 次の表では、MFC アプリケーションを開発する際に従うことがあります通常全般的な順序について説明します。  
@@ -50,11 +45,11 @@ ms.lasthandoff: 12/21/2017
 |スクロール機能を追加します。|スクロールをサポートする必要がある場合は、またはから複数のビュー クラスを派生させる[CScrollView](../mfc/reference/cscrollview-class.md)です。|ビューは、[ビュー] ウィンドウが小さすぎる場合に自動的にスクロール バーを追加します。|  
 |フォーム ビューを作成します。|ダイアログ テンプレート リソースで、ビューの基にする場合は、またはから複数のビュー クラスを派生させる[CFormView](../mfc/reference/cformview-class.md)です。|ビューは、コントロールを表示するのにダイアログ テンプレート リソースを使用します。 ユーザーは、ビュー内のコントロールにコントロールからタブことができます。|  
 |データベースのフォームを作成します。|フォーム ベースのデータ アクセス アプリケーションを実行する場合に、派生ビュー クラスから[CRecordView](../mfc/reference/crecordview-class.md) (ODBC プログラミング) 用です。|フォーム ビューと同様に機能するビューが、そのコントロールがのフィールドに接続している、 [CRecordset](../mfc/reference/crecordset-class.md)データベース テーブルを表すオブジェクト。 MFC は、コントロールとレコード セットの間のデータを移動します。|  
-|単純なテキスト エディターを作成します。|単純なテキスト エディターに表示する場合は、派生ビュー クラスまたはクラスから[CEditView](../mfc/reference/ceditview-class.md)または[CRichEditView](../mfc/reference/cricheditview-class.md)です。|ビューでは、関数、クリップボードのサポート、および入力/出力ファイルを編集します。 `CRichEditView`書式付きテキストを提供します。|  
+|単純なテキスト エディターを作成します。|単純なテキスト エディターに表示する場合は、派生ビュー クラスまたはクラスから[CEditView](../mfc/reference/ceditview-class.md)または[CRichEditView](../mfc/reference/cricheditview-class.md)です。|ビューでは、関数、クリップボードのサポート、および入力/出力ファイルを編集します。 `CRichEditView` 書式付きテキストを提供します。|  
 |分割ウィンドウを追加します。|ウィンドウの分割をサポートする場合は、追加、 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) SDI フレーム ウィンドウまたは MDI 子ウィンドウにオブジェクトをウィンドウの フック[OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient)メンバー関数。|フレームワークは、スクロール バーの横にある分割ボックス コントロールを提供し、複数のペインに、ビューの分割を管理します。 ウィンドウを分割すると、フレームワークは作成し、ドキュメントに追加のビュー オブジェクトをアタッチします。|  
 |ビルド、テスト、およびアプリケーションをデバッグします。|ビルド、テスト、およびアプリケーションをデバッグするには、Visual C の機能を使用します。|Visual C では、コンパイル、リンク、およびその他のオプションを調整できます。 ソース コードとクラス構造体を参照することもできます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE アプリケーションの作成操作のシーケンス](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
  [ActiveX コントロールの作成操作のシーケンス](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
  [データベース アプリケーションの作成操作のシーケンス](../mfc/sequence-of-operations-for-creating-database-applications.md)   

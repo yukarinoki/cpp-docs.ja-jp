@@ -1,12 +1,9 @@
 ---
-title: "OLE DB プロバイダー テンプレート用マクロ |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB プロバイダー テンプレート用マクロ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - Provider Template macros (OLE DB)
 - OLE DB Provider Template macros
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d8b6153f746a835724f224f924a2c05ac450121
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ab7611c49f625a36023b4e31bf6aff47ab16f156
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 OLE DB プロバイダー テンプレートのマクロは、次のカテゴリで機能を提供します。  
@@ -70,7 +65,7 @@ OLE DB プロバイダー テンプレートのマクロは、次のカテゴリ
 |[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|GUID をクラスに関連付けます。|  
 |[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|スキーマ マップの最後をマークします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)   
  [OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)   

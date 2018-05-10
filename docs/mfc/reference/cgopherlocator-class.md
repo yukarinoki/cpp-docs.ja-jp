@@ -1,12 +1,9 @@
 ---
-title: "関数クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 関数クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffe833195e665fad37c6638c83170a1913197d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherlocator-class"></a>関数クラス
 Gopher「ロケーター」を gopher サーバーから取得、ロケーターの種類を決定し、ロケーターを可能に[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)です。  
@@ -77,10 +72,10 @@ class CGopherLocator : public CObject
   
  `CGopherLocator`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
-##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
  このメンバー関数を作成する、`CGopherLocator`オブジェクト。  
   
 ```  
@@ -94,7 +89,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>コメント  
  作成することはありません、`CGopherLocator`オブジェクトに直接できます。 代わりに、 [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator)を作成してへのポインターを返す、`CGopherLocator`オブジェクト。  
   
-##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
  ロケーターの種類を取得するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -138,7 +133,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|Ask + アイテムです。|  
 |GOPHER_TYPE_GOPHER_PLUS|Gopher + アイテムです。|  
   
-##  <a name="operator_lpctstr"></a>CGopherLocator::operator lpctstr を使用します。  
+##  <a name="operator_lpctstr"></a>  CGopherLocator::operator lpctstr を使用します。  
  このキャスト演算子に含まれる、null で終わる C 文字列にアクセスする効率的なメソッドを提供する、`CGopherLocator`オブジェクト。  
   
 ```  
@@ -151,7 +146,7 @@ operator LPCTSTR () const;
 ### <a name="remarks"></a>コメント  
  文字はコピーされません。ポインターのみが返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CObject クラス](../../mfc/reference/cobject-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)

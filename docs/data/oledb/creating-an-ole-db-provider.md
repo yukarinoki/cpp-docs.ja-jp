@@ -1,12 +1,9 @@
 ---
-title: "OLE DB プロバイダーの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB プロバイダーの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bd59e8e9456cac830e6e86faf404c76816e45349
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f649b5b4c79c4148d0aed026b044485ca2b1eaa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-ole-db-provider"></a>OLE DB プロバイダーの作成
 ウィザードを使用して ATL COM プロジェクトとプロバイダーを作成し、OLE DB テンプレートを使用してファイルを変更するは、OLE DB プロバイダーを作成することをお勧めします。 プロバイダーをカスタマイズするには、不要なプロパティをコメントおよび省略可能なインターフェイスを追加できます。  
@@ -47,6 +42,6 @@ ms.lasthandoff: 02/23/2018
     > [!NOTE]
     >  既定では、ウィザードは、OLE DB レベル 0 に準拠したコードを生成します。 レベル 0 の準拠は、アプリケーションが確実に、削除しないでウィザードで生成されたインターフェイスのいずれかのコードから。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
  [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)

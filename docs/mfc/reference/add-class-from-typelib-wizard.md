@@ -1,13 +1,10 @@
 ---
-title: "Typelib ウィザードからクラスを追加 |Microsoft ドキュメント"
-ms.custom: 
+title: Typelib ウィザードからクラスを追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Typelib クラス追加ウィザード
 このウィザードを使用すると、利用可能なタイプ ライブラリからの MFC クラスを追加します。 ウィザードでは、選択したタイプ ライブラリから追加する各インターフェイスのクラスを作成します。  
@@ -58,9 +53,9 @@ ms.lasthandoff: 12/21/2017
 |**<\<**|すべてのクラスを削除、**生成されたクラス** ボックスの一覧です。 淡色表示されている場合、**生成されたクラス**リストが空です。|  
   
  **生成されたクラス**  
- 使用して追加のインターフェイスから生成されるクラス名を指定します、  **>** または **>>** ボタンをクリックします。 各クラス名を表示する、クラスを選択しを使用してまたは下矢印キーを一覧をスクロールして、このボックスをクリックできます、`Class`でボックスとファイル名、**ファイル**をクリックすると、ウィザードが生成されるボックス**[完了]**です。 このボックスで、一度に 1 つのクラスを選択できます。  
+ 使用して追加のインターフェイスから生成されるクラス名を指定します、 **>** または**>>** ボタンをクリックします。 各クラス名を表示する、クラスを選択しを使用してまたは下矢印キーを一覧をスクロールして、このボックスをクリックできます、`Class`でボックスとファイル名、**ファイル**をクリックすると、ウィザードが生成されるボックス **[完了]** です。 このボックスで、一度に 1 つのクラスを選択できます。  
   
- クラスを削除するには、この一覧で選択し、  **<**です。 クラスのすべてのクラスを削除する [生成されたクラス] ボックスで選択する必要はありません。クリックして **<<**のすべてのクラスを削除する、**生成されたクラス**ボックス。  
+ クラスを削除するには、この一覧で選択し、  **<** です。 クラスのすべてのクラスを削除する [生成されたクラス] ボックスで選択する必要はありません。クリックして **<<** のすべてのクラスを削除する、**生成されたクラス**ボックス。  
   
  `Class`  
  選択されたクラスの名前を指定、**生成されたクラス**ボックスをクリックすると、ウィザードが追加されますを**完了**です。 内の名前を編集することができます、`Class`ボックス。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  ウィザードでは、ファイルは上書きされません。 クリックすると、既存のファイルの名前を選択するかどうかは**完了**ウィザードの指示に従って、クラス宣言が、ファイルの内容に追加されるかどうかを指定するようにします。 をクリックして**はい**; ファイルを追加する をクリックして**なし**ウィザードに戻り、別のファイル名を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タイプ ライブラリからの MFC クラス](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
  [オートメーション クライアント: タイプ ライブラリの使用](../../mfc/automation-clients-using-type-libraries.md)
 

@@ -1,30 +1,25 @@
 ---
-title: "C ビット フィールド | Microsoft Docs"
-ms.custom: 
+title: C ビット フィールド | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>C ビット フィールド
 構造体または共用体のメンバーの宣言子に加えて、構造体の宣言子も "ビット フィールド" と呼ばれる指定のビット数になります。 その長さは、フィールド名の宣言子からコロンによって区切られます。 ビット フィールドは整数型として解釈されます。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
  *struct-declarator*:  
  *declarator*  
   
- *type-specifier declarator* opt**:** *constant-expression*  
+ *type-specifier declarator* opt **:** *constant-expression*  
   
  *constant-expression* は、フィールドの幅 (ビット単位) を指定します。 `declarator` の *type-specifier* は、`unsigned int`、**signed int**、または `int` である必要があります。*constant-expression* は負ではない整数値である必要があります。 値がゼロの場合、宣言には `declarator` がありません。 ビット フィールド、ビット フィールドへのポインター、およびビット フィールドを返す関数の配列は使用できません。 省略可能な `declarator` はビット フィールドの名前を指定します。 ビット フィールドは構造体の一部としてしか宣言できません。 アドレス演算子 (**&**) は、ビット フィールド コンポーネントに適用できません。  
   

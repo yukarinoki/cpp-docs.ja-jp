@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicparameteraccessor::getparamstatus |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicparameteraccessor::getparamstatus |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicParameterAccessor::GetParamStatus
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetParamStatus method
 ms.assetid: 9300225a-616c-4a7d-82d0-8c2ecd4d8185
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 89c4e97617018645dfea347f9a5f5e6155506f7b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5be2b663dfc1fedf9dffdf1d3acb34e58de23269
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamstatus"></a>CDynamicParameterAccessor::GetParamStatus
 バッファーに格納され、指定されたパラメーターのステータスを取得します。  
@@ -54,8 +49,8 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 ## <a name="remarks"></a>コメント  
  最初の形式**true**成功した場合または**false**エラー発生時にします。 2 つ目は、指定されたパラメーターの状態を表すメモリへのポインターをオーバーライドします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)

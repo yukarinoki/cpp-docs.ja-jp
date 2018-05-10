@@ -1,30 +1,25 @@
 ---
-title: "Odbc と ODBC ドライバーの動作 |Microsoft ドキュメント"
-ms.custom: 
+title: Odbc と ODBC ドライバーの動作 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ODBC drivers, using
 ms.assetid: ae1bf357-4ca4-4748-9336-8fc317f294ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 842a09224a9ea61e6c53a6d700435f05176cee55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d49fa24c6cb27bc54e8cc3dc6bba674cb12ae57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-odbc-and-drivers"></a>ODBC と ODBC ドライバーの使用
 ODBC では、1 つのデータベース管理システム (DBMS) に依存していないアプリケーションを作成することができます。 ユーザーは、適切な DBMS に固有の ODBC ドライバーがある複数の Dbms に操作できる 1 つのアプリケーションを記述できます。  
@@ -41,5 +36,5 @@ ODBC では、1 つのデータベース管理システム (DBMS) に依存し�
   
 -   [MFC 内で直接 ODBC API 関数を呼び出す](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

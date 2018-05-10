@@ -1,12 +1,9 @@
 ---
-title: "ISessionPropertiesImpl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ISessionPropertiesImpl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ISessionPropertiesImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ISessionPropertiesImpl class
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd7dde152b2ca122deefd3b7e8d8de24a254519a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 62b1321c9d7d50ff2cd459b395efa1e8147a06ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl クラス
 実装を提供、 [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)インターフェイスです。  
@@ -59,9 +54,9 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ## <a name="remarks"></a>コメント  
  セッションの必須インターフェイス。 このクラスでは、セッションのプロパティを実装によって定義された静的関数を呼び出すことによって、[プロパティ セット マップ](../../data/oledb/begin-propset-map.md)です。 セッション クラスでは、プロパティ セットのマップを指定してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

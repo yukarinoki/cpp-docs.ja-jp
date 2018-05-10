@@ -1,13 +1,10 @@
 ---
-title: "コンパイラ エラー C3415 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C3415 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3415
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3415
 ms.assetid: fa2db8ab-2820-4ec3-a740-fb5e2adcfb29
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1237db7e705d12115b4bb1ab18d23b516c40d6a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 599e2bb9e46e4a0971fc5a6f528a884da0a93cd9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3415"></a>コンパイラ エラー C3415
 異なる属性 ('value') を持つ、複数の 'section_name' セクションが見つかりました  
   
  競合する値が [section](../../preprocessor/section.md) プラグマで指定されました。  
   
- `value` は、ntimage.h で指定された、セクションの現在の設定です。 例:  
+ `value` は、ntimage.h で指定された、セクションの現在の設定です。 例えば:  
   
 ```  
 // Section contains extended relocations.  

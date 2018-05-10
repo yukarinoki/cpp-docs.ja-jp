@@ -1,13 +1,10 @@
 ---
-title: "フォーム ビュー (MFC) |Microsoft ドキュメント"
-ms.custom: 
+title: フォーム ビュー (MFC) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="form-views-mfc"></a>フォーム ビュー (MFC)
 フォームを追加するには、MFC ライブラリを含むをサポートする任意の Visual C アプリケーションを[フォーム ベースのアプリケーション](../mfc/reference/creating-a-forms-based-mfc-application.md)(1 つのビュー クラスから派生して`CFormView`)。 フォームをサポートするために、アプリケーションを最初に作成しなかった場合、Visual C は新しいフォームを挿入するときにこのサポートを追加します。 SDI または MDI アプリケーションは、既定値を実装する[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)を選択すると、`New`コマンド (既定では、上、**ファイル**メニュー)、Visual C は、ユーザーに求めます使用可能なフォームを選択します。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
  ユーザーが選択すると、SDI アプリケーションでは、`New`コマンドでは、フォームの現在のインスタンスは引き続き実行が見つからない場合、選択されたフォームを使用してアプリケーションの新しいインスタンスを作成します。 MDI アプリケーションでは、フォームの現在のインスタンスは、ユーザーが選択したときに実行が続行されます、`New`コマンド。  
   
 > [!NOTE]
->  フォームをダイアログ ベースのアプリケーションに挿入することができます (ダイアログ クラスがに基づいて 1 つずつ`CDialog`と 1 つのクラスの実装にも)。 ただし、ドキュメント/ビュー アーキテクチャを備えていない Visual C は自動的に実装しません、**ファイル**&#124;**新しい**機能します。 さまざまなプロパティ ページ で、タブ付きダイアログ ボックスを実装することによって、その他のフォームを表示するのには、ユーザーの方法を作成する必要があります。  
+>  フォームをダイアログ ベースのアプリケーションに挿入することができます (ダイアログ クラスがに基づいて 1 つずつ`CDialog`と 1 つのクラスの実装にも)。 ただし、ドキュメント/ビュー アーキテクチャを備えていない Visual C は自動的に実装しません、**ファイル**&#124;**新規**機能します。 さまざまなプロパティ ページ で、タブ付きダイアログ ボックスを実装することによって、その他のフォームを表示するのには、ユーザーの方法を作成する必要があります。  
   
  アプリケーションに新しいフォームを挿入するときに Visual C は、次を行います。  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
      **WS_VISIBLE**= Off  
   
-     **WS_CAPTION =**オフ  
+     **WS_CAPTION =** オフ  
   
  ドキュメント/ビュー アーキテクチャに基づくアプリケーションの**新しいフォーム**コマンド (クラス ビューで右クリックして) も。  
   
@@ -75,5 +70,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [プロジェクトへのフォームの挿入](../mfc/inserting-a-form-into-a-project.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)

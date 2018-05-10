@@ -1,25 +1,21 @@
 ---
-title: "/Qsafe_fp_loads |Microsoft ドキュメント"
-ms.custom: 
+title: /Qsafe_fp_loads |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e079e084c641318c9bec0820263487139b4d5076
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 1462303f9e178c70a845066bc7a0a3ce78a99e15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -35,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 
 **/Qsafe_fp_loads**力を浮動小数点移動命令ではなく整数移動命令を使用して、メモリと MMX 間でデータを移動するコンパイラを登録します。 また、このオプションを指定すると、値の読み込み時に例外が発生する可能性がある場合 (NaN 値の読み込み時など)、複数のコントロール パスに読み込める浮動小数点値に対してレジスタ読み込み最適化が無効になります。
 
-このオプションは、によってオーバーライド[/fp: を除く](../../build/reference/fp-specify-floating-point-behavior.md)です。 **/Qsafe_fp_loads**で指定されているコンパイラの動作のサブセットを指定**/fp: 除く**です。
+このオプションは、によってオーバーライド[/fp: を除く](../../build/reference/fp-specify-floating-point-behavior.md)です。 **/Qsafe_fp_loads**で指定されているコンパイラの動作のサブセットを指定 **/fp: 除く**です。
 
 **/Qsafe_fp_loads**と互換性がありません[/clr](../../build/reference/clr-common-language-runtime-compilation.md)と[/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md)です。 浮動小数点のポイント コンパイラ オプションの詳細については、次を参照してください。 [/fp (浮動小数点の動作を指定)](../../build/reference/fp-specify-floating-point-behavior.md)です。
 

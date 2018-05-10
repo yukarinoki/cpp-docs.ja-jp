@@ -1,12 +1,9 @@
 ---
-title: "CD2DGeometry クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CD2DGeometry クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGeometry
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9d8373bdf1cba1c57936dfb4d98c5401c80476
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry クラス
 ID2D1Geometry のラッパーです。  
@@ -116,7 +111,7 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|ID2D1Geometry へのポインター。|  
   
@@ -127,17 +122,17 @@ class CD2DGeometry : public CD2DResource;
   
  `CD2DGeometry`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometry"></a>CD2DGeometry:: ~ CD2DGeometry  
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry  
  デストラクターです。 D2D geometry オブジェクトが破棄されるときに呼び出されます。  
   
 ```  
 virtual ~CD2DGeometry();
 ```  
   
-##  <a name="attach"></a>CD2DGeometry::Attach  
+##  <a name="attach"></a>  CD2DGeometry::Attach  
  既存のリソースのインターフェイス オブジェクトへの接続  
   
 ```  
@@ -148,7 +143,7 @@ void Attach(ID2D1Geometry* pResource);
  `pResource`  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
-##  <a name="cd2dgeometry"></a>CD2DGeometry::CD2DGeometry  
+##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
  CD2DGeometry オブジェクトを構築します。  
   
 ```  
@@ -164,7 +159,7 @@ CD2DGeometry(
  `bAutoDestroy`  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
-##  <a name="combinewithgeometry"></a>CD2DGeometry::CombineWithGeometry  
+##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
  指定されたジオメトリを使用してこのジオメトリを結合し、その結果、ID2D1SimplifiedGeometrySink に格納します。  
   
 ```  
@@ -195,7 +190,7 @@ BOOL CombineWithGeometry(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="comparewithgeometry"></a>CD2DGeometry::CompareWithGeometry  
+##  <a name="comparewithgeometry"></a>  CD2DGeometry::CompareWithGeometry  
  この geometry と指定した geometry の交差部分をについて説明します。 比較は、フラット化の指定された許容範囲を使用して実行します。  
   
 ```  
@@ -218,7 +213,7 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="computearea"></a>CD2DGeometry::ComputeArea  
+##  <a name="computearea"></a>  CD2DGeometry::ComputeArea  
  ジオメトリの領域が計算された後に、指定したマトリックスで変換を使用してフラット許容範囲を指定します。  
   
 ```  
@@ -241,7 +236,7 @@ BOOL ComputeArea(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="computelength"></a>CD2DGeometry::ComputeLength  
+##  <a name="computelength"></a>  CD2DGeometry::ComputeLength  
  各セグメントは 1 行にロールバックされたかのように、ジオメトリの長さを計算します。  
   
 ```  
@@ -264,7 +259,7 @@ BOOL ComputeLength(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="computepointatlength"></a>CD2DGeometry::ComputePointAtLength  
+##  <a name="computepointatlength"></a>  CD2DGeometry::ComputePointAtLength  
  ジオメトリに沿って指定された距離にあるポイントおよびタンジェント ベクターが計算された後に、指定したマトリックスで変換を使用してフラット許容範囲を指定します。  
   
 ```  
@@ -295,14 +290,14 @@ BOOL ComputePointAtLength(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="destroy"></a>CD2DGeometry::Destroy  
+##  <a name="destroy"></a>  CD2DGeometry::Destroy  
  CD2DGeometry オブジェクトを破棄します。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DGeometry::Detach  
+##  <a name="detach"></a>  CD2DGeometry::Detach  
  オブジェクトからリソースのインターフェイスの関連付けを解除します。  
   
 ```  
@@ -312,7 +307,7 @@ ID2D1Geometry* Detach();
 ### <a name="return-value"></a>戻り値  
  デタッチされたリソースのインターフェイスへのポインター。  
   
-##  <a name="fillcontainspoint"></a>CD2DGeometry::FillContainsPoint  
+##  <a name="fillcontainspoint"></a>  CD2DGeometry::FillContainsPoint  
  ジオメトリで埋められた領域はフラット化の指定された許容範囲を指定した指定したポイントを含めるかどうかを示します。  
   
 ```  
@@ -339,7 +334,7 @@ BOOL FillContainsPoint(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="get"></a>CD2DGeometry::Get  
+##  <a name="get"></a>  CD2DGeometry::Get  
  返します ID2D1Geometry インターフェイス  
   
 ```  
@@ -349,7 +344,7 @@ ID2D1Geometry* Get();
 ### <a name="return-value"></a>戻り値  
  ID2D1Geometry インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="getbounds"></a>CD2DGeometry::GetBounds  
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds  
   
 ```   
 BOOL GetBounds(
@@ -363,7 +358,7 @@ CD2DRectF& bounds) const;
   
 ### <a name="return-value"></a>戻り値  
   
-##  <a name="getwidenedbounds"></a>CD2DGeometry::GetWidenedBounds  
+##  <a name="getwidenedbounds"></a>  CD2DGeometry::GetWidenedBounds  
  指定した線の幅とスタイルで拡大変換し、指定した行列によって変換された後は、ジオメトリの境界を取得します。  
   
 ```  
@@ -394,7 +389,7 @@ BOOL GetWidenedBounds(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="isvalid"></a>CD2DGeometry::IsValid  
+##  <a name="isvalid"></a>  CD2DGeometry::IsValid  
  リソースの有効性のチェック  
   
 ```  
@@ -404,14 +399,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>戻り値  
  リソースが無効である場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="m_pgeometry"></a>CD2DGeometry::m_pGeometry  
+##  <a name="m_pgeometry"></a>  CD2DGeometry::m_pGeometry  
  ID2D1Geometry へのポインター。  
   
 ```  
 ID2D1Geometry* m_pGeometry;  
 ```  
   
-##  <a name="operator_id2d1geometry_star"></a>CD2DGeometry::operator ID2D1Geometry *  
+##  <a name="operator_id2d1geometry_star"></a>  CD2DGeometry::operator ID2D1Geometry *  
  返します ID2D1Geometry インターフェイス  
   
 ```  
@@ -421,7 +416,7 @@ operator ID2D1Geometry*();
 ### <a name="return-value"></a>戻り値  
  ID2D1Geometry インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="outline"></a>CD2DGeometry::Outline  
+##  <a name="outline"></a>  CD2DGeometry::Outline  
  ジオメトリのアウトラインを計算し、ID2D1SimplifiedGeometrySink に結果を書き込みます。  
   
 ```  
@@ -444,7 +439,7 @@ BOOL Outline(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="simplify"></a>CD2DGeometry::Simplify  
+##  <a name="simplify"></a>  CD2DGeometry::Simplify  
  行と (必要に応じて) 3 次ベジエ曲線のみを含み、その結果を ID2D1SimplifiedGeometrySink に書き込みますジオメトリの簡素化されたバージョンを作成します。  
   
 ```  
@@ -471,7 +466,7 @@ BOOL Simplify(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="strokecontainspoint"></a>CD2DGeometry::StrokeContainsPoint  
+##  <a name="strokecontainspoint"></a>  CD2DGeometry::StrokeContainsPoint  
  ジオメトリの線が指定したストロークの太さ、スタイル、および変換を指定した指定したポイントを含むかどうかを判断します。  
   
 ```  
@@ -506,7 +501,7 @@ BOOL StrokeContainsPoint(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="tessellate"></a>CD2DGeometry::Tessellate  
+##  <a name="tessellate"></a>  CD2DGeometry::Tessellate  
  指定した行列を使用して変換された後に、geometry をカバーし、指定された許容範囲を使用してフラット化された時計回りの三角形のセットを作成します。  
   
 ```  
@@ -529,7 +524,7 @@ BOOL Tessellate(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-##  <a name="widen"></a>CD2DGeometry::Widen  
+##  <a name="widen"></a>  CD2DGeometry::Widen  
  指定した線によって、ジオメトリを拡大し、結果、ID2D1SimplifiedGeometrySink にされた後に、指定したマトリックスで変換を使用してフラット許容範囲を指定します。  
   
 ```  
@@ -560,5 +555,5 @@ BOOL Widen(
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE を返します。 それ以外の場合、FALSE を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

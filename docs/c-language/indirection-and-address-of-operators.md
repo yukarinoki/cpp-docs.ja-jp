@@ -1,13 +1,10 @@
 ---
-title: "間接演算子とアドレス演算子 | Microsoft Docs"
-ms.custom: 
+title: 間接演算子とアドレス演算子 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d65a380194e5634d5873e9b060c49096197e48f2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-and-address-of-operators"></a>間接演算子とアドレス演算子
 
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/21/2018
 
 単項アドレス演算子 (**&**) は、オペランドのアドレスを与えます。 オペランドは__レジスタ__を宣言していなく、ビット フィールドでないオブジェクトを指定する左辺値か、単項 __&#42;__ 演算子または配列逆参照 (__&#91;&#93;__) 演算子、または関数指定子の結果のどちらかである必要があります。 結果は、型 *type* のオペランドに対する型 *pointer to type* です。
 
-オペランドが単項 __&#42;__ 演算子の結果である場合、演算子は評価されず、両方が省略されたかのような結果になります。 結果は左辺値ではなく、演算子の制約が引き続き適用されます。 オペランドが __&#91;&#93;__ の結果である場合、 __&__ 演算子も、__&#91;&#93;__ 演算子によって暗黙的に指定される単項 __&#42;__ も評価されません。 結果は __&__ 演算子を削除して __&#91;&#93;__ 演算子を __+__ 演算子に変更する場合と同じ効果があります。 それ以外の場合、結果はオブジェクトへのポインターまたは演算子によって指定された関数になります。
+オペランドが単項 __& #42;__ 演算子の結果である場合、演算子は評価されず、両方が省略されたかのような結果になります。 結果は左辺値ではなく、演算子の制約が引き続き適用されます。 オペランドが __&#91;&#93;__ の結果である場合、 __&__ 演算子も、__&#91;&#93;__ 演算子によって暗黙的に指定される単項 __&#42;__ も評価されません。 結果は __&__ 演算子を削除して __&#91;&#93;__ 演算子を __+__ 演算子に変更する場合と同じ効果があります。 それ以外の場合、結果はオブジェクトへのポインターまたは演算子によって指定された関数になります。
 
 
 ## <a name="examples"></a>使用例

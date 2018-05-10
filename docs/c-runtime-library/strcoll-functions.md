@@ -1,13 +1,10 @@
 ---
-title: "strcoll 系関数 | Microsoft Docs"
-ms.custom: 
+title: strcoll 系関数 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>strcoll 系関数
 各 `strcoll` 関数と各 `wcscoll` 関数は、現在使用されているロケールのコード ページの `LC_COLLATE` カテゴリ設定に基づいて 2 つの文字列を比較します。 各 `_mbscoll` 関数は、現在使用されているマルチバイトのコード ページに基づいて、2 つの文字列を比較します。 文字列を比較する `coll` 関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが比較に関係がある場合にのみ使用します。 対応する `cmp` 関数は、文字列が等しいかをテストする目的でのみ使用します。  

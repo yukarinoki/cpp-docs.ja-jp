@@ -1,24 +1,19 @@
 ---
-title: "Array と WriteOnlyArray (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: Array と WriteOnlyArray (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f06e63996024b3fade734a74acdfedf9ece5fba5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 47c26ef4058cc3116d964740a93f7395c300b92b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array と WriteOnlyArray (C++/CX)
 正規の C スタイルの配列を自由に使用できるまたは[std::array](../standard-library/array-class-stl.md) C + +/CX プログラム (が[std::vector](../standard-library/vector-class.md)方が適切では多くの場合)、メタデータでパブリッシュされている api では、C スタイル配列を変換する必要がありますが、またはにベクター、 [platform::array](../cppcx/platform-array-class.md)または[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)によってどのように使用されている型。 [Platform::Array](../cppcx/platform-array-class.md) 型は、 [std::vector](../standard-library/vector-class.md)ほどには効率的でも強力でもありません。そのため、一般的なガイドラインとして、配列要素で多くの操作を実行する内部コードでは使用を避ける必要があります。  
@@ -93,7 +88,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="avoid-exposing-an-array-as-a-property"></a>配列をプロパティとして公開することを回避する方法  
  一般に、ref クラスで `Platform::Array` 型をプロパティとして公開することは避ける必要があります。これは、クライアント コードが単一要素にアクセスしようとしている場合でも、配列全体が返されるためです。 パブリック ref クラスでシーケンス コンテナーをプロパティとして公開する必要があるときは、 [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) の方が適切です。 プライベートまたは内部 API (メタデータに発行されません) では、 [std::vector](../standard-library/vector-class.md)などの標準 C++ コンテナーの使用を検討してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   
  [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

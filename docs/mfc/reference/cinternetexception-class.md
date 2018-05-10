@@ -1,12 +1,9 @@
 ---
-title: "CInternetException クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CInternetException クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8caa275af4469d45672125677d960b71212fe3de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6908b72f30b3a2561f7091b912e8144f2b763cc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetexception-class"></a>CInternetException クラス
 インターネット操作に関する例外条件を表します。  
@@ -69,10 +64,10 @@ class CInternetException : public CException
   
  `CInternetException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
-##  <a name="cinternetexception"></a>CInternetException::CInternetException  
+##  <a name="cinternetexception"></a>  CInternetException::CInternetException  
  このメンバー関数が呼び出されます、`CInternetException`オブジェクトを作成します。  
   
 ```  
@@ -86,7 +81,7 @@ CInternetException(DWORD dwError);
 ### <a name="remarks"></a>コメント  
  MFC のグローバル関数を呼び出して、CInternetException をスローする[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)です。  
   
-##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
+##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext  
  関連するインターネット操作に関連付けられているコンテキストの値です。  
   
 ```  
@@ -94,9 +89,9 @@ DWORD_PTR m_dwContext;
 ```  
   
 ### <a name="remarks"></a>コメント  
- コンテキスト識別子が指定した[CInternetSession](../../mfc/reference/cinternetsession-class.md)に MFC によって渡されると[関数](../../mfc/reference/cinternetconnection-class.md)- と[CInternetFile](../../mfc/reference/cinternetfile-class.md)-クラスを派生します。 この既定の動作をオーバーライドして割り当てられた`dwContext`パラメーター独自の値。 `dwContext`指定したオブジェクトのすべての操作に関連付けられます。 `dwContext`によって返される操作のステータス情報を識別する[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)です。  
+ コンテキスト識別子が指定した[CInternetSession](../../mfc/reference/cinternetsession-class.md)に MFC によって渡されると[関数](../../mfc/reference/cinternetconnection-class.md)- と[CInternetFile](../../mfc/reference/cinternetfile-class.md)-クラスを派生します。 この既定の動作をオーバーライドして割り当てられた`dwContext`パラメーター独自の値。 `dwContext` 指定したオブジェクトのすべての操作に関連付けられます。 `dwContext` によって返される操作のステータス情報を識別する[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)です。  
   
-##  <a name="m_dwerror"></a>CInternetException::m_dwError  
+##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
  例外の原因となったエラー。  
   
 ```  
@@ -108,7 +103,7 @@ DWORD m_dwError;
   
  Win32 エラー コードの一覧は、次を参照してください。[エラーコード](http://msdn.microsoft.com/library/windows/desktop/ms681381)です。 インターネットに固有のエラー メッセージの一覧を参照してください。 どちらのトピックには、Windows SDK でです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CException クラス](../../mfc/reference/cexception-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CException クラス](../../mfc/reference/cexception-class.md)

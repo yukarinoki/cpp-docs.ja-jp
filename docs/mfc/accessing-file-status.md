@@ -1,13 +1,10 @@
 ---
-title: "ファイルの状態 |Microsoft ドキュメント"
-ms.custom: 
+title: ファイルの状態 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff93028c192a735ec75721d3dfdb9929a35edad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d424502e991ea355a6e31bba8fedccb6d5ad2fcf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-file-status"></a>ファイルの状態の操作
-`CFile`サポートしているファイルの状態のファイルが存在するかどうかなど、作成と変更の日付と時間、論理サイズ、およびパスを取得します。  
+`CFile` サポートしているファイルの状態のファイルが存在するかどうかなど、作成と変更の日付と時間、論理サイズ、およびパスを取得します。  
   
 ### <a name="to-get-file-status"></a>ファイルの状態を取得するには  
   
@@ -42,6 +37,6 @@ ms.lasthandoff: 12/21/2017
   
  関連情報については、次を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ファイル](../mfc/files-in-mfc.md)
 

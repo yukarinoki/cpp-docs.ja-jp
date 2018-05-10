@@ -1,13 +1,10 @@
 ---
-title: "クリップボード: その他の形式の追加 |Microsoft ドキュメント"
-ms.custom: 
+title: 'クリップボード: その他の形式の追加 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,25 +15,23 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e6f7f21a64c062e2f210be9f13ce04428c397f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-adding-other-formats"></a>クリップボード : その他のデータ形式の追加
 このトピックでは、特に OLE サポートの場合、サポートされている形式の一覧を展開する方法について説明します。 トピック[クリップボード: データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)コピーと、クリップボードから貼り付けをサポートするために必要な最低限の実装について説明します。 クリップボードにコピーのみの形式は、すべてを実装する場合は、 `CF_METAFILEPICT`、 **CF_EMBEDSOURCE**、 **CF_OBJECTDESCRIPTOR**、および可能性のある`CF_LINKSOURCE`です。 ほとんどのアプリケーションでは、これら 3 つよりも、クリップボードにその他の形式を必要があります。  
   
-##  <a name="_core_registering_custom_formats"></a>登録するカスタム書式設定します。  
+##  <a name="_core_registering_custom_formats"></a> 登録するカスタム書式設定します。  
  独自のカスタム形式を作成するには、独自のクリップボード形式を登録するときに使用する同じ手順を実行: する形式の名前を渡す、**独自のデータ**関数および形式 ID としてその戻り値を使用します。  
   
-##  <a name="_core_placing_formats_on_the_clipboard"></a>形式をクリップボードにコピーします。  
+##  <a name="_core_placing_formats_on_the_clipboard"></a> 形式をクリップボードにコピーします。  
  オーバーライドする必要がありますにクリップボードに格納されたものをその他の形式を追加する、`OnGetClipboardData`いずれかから派生するクラスの関数と`COleClientItem`または`COleServerItem`(コピーするデータがネイティブかどうか) に応じて。 この関数では、次の手順を使用する必要があります。  
   
 #### <a name="to-place-formats-on-the-clipboard"></a>クリップボードの形式を配置するには  
@@ -57,6 +52,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [OLE](../mfc/ole-background.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クリップボード: OLE クリップボード機構の使用方法](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

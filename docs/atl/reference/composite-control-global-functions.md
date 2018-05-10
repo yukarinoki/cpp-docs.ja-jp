@@ -2,11 +2,8 @@
 title: 複合コントロールのグローバル関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールのグローバル関数
 これらの関数は、ダイアログ ボックスを作成および作成、ホスト、および ActiveX コントロールのサポートを提供します。  
@@ -103,7 +98,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- リソース スクリプトの編集の詳細については、次を参照してください。[する方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)です。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](http://msdn.microsoft.com/library/windows/desktop/aa380902) Windows SDK で*: SDK ツール*です。  
+ リソース スクリプトの編集の詳細については、次を参照してください。[する方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)です。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](http://msdn.microsoft.com/library/windows/desktop/aa380902) Windows SDK で *: SDK ツール*です。  
   
  [全般] ダイアログ ボックスの詳細についてを参照してください[ ダイアログ ボックス](http://msdn.microsoft.com/library/windows/desktop/ms645452)と[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK に含まれています。  
   
@@ -436,7 +431,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
  標準の HRESULT 値。  
   
 ##  <a name="atlaxwininit"></a>  AtlAxWinInit  
- この関数は、ホスティング コードを登録することにより、ATL のコントロールを初期化、 **"AtlAxWin80"**と**AtlAxWinLic80**ウィンドウがいくつかのカスタム ウィンドウ メッセージのクラスです。  
+ この関数は、ホスティング コードを登録することにより、ATL のコントロールを初期化、 **"AtlAxWin80"** と**AtlAxWinLic80**ウィンドウがいくつかのカスタム ウィンドウ メッセージのクラスです。  
   
 ```
 ATLAPI_(BOOL) AtlAxWinInit();
@@ -446,10 +441,10 @@ ATLAPI_(BOOL) AtlAxWinInit();
  コードをホストしているコントロールの初期化が成功した場合は 0 以外。それ以外の場合**FALSE**です。  
   
 ### <a name="remarks"></a>コメント  
- この関数は、ATL コントロール ホスト API を使用する前に呼び出される必要があります。 この関数に対する呼び出しの後、 **"AtlAxWin"**への呼び出しでウィンドウ クラスを使用することができます[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)または[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK で説明されている。  
+ この関数は、ATL コントロール ホスト API を使用する前に呼び出される必要があります。 この関数に対する呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用することができます[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)または[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK で説明されている。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
- この関数には、ATL のコントロールの登録を解除してコードをホストが初期化されません、 **"AtlAxWin80"**と**AtlAxWinLic80**ウィンドウ クラスです。  
+ この関数には、ATL のコントロールの登録を解除してコードをホストが初期化されません、 **"AtlAxWin80"** と**AtlAxWinLic80**ウィンドウ クラスです。  
   
 ```
 inline BOOL AtlAxWinTerm();

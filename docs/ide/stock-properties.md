@@ -1,30 +1,25 @@
 ---
-title: "ストック プロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: ストック プロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbc721669d51860c01c760a8d1f9fb899e019e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stock-properties"></a>ストック プロパティ
 MFC ディスパッチ インターフェイスを使用して、プロパティを追加しているかどうか、[プロパティの追加ウィザード](../ide/idl-attributes-add-property-wizard.md)からのストック プロパティを選択することができます、**プロパティ名**一覧に、[名](../ide/names-add-property-wizard.md)のページ、ウィザード。 選択できるプロパティは次のとおりです。  
@@ -42,6 +37,6 @@ MFC ディスパッチ インターフェイスを使用して、プロパティ
 |**ReadyState**|コントロールの設定を取得または**ReadyState**プロパティです。 コントロールは、初期化されていない、初期化、読み込み、対話型、または完了できます。 参照してください[READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx)で、*インターネット SDK*詳細についてはします。|  
 |**[テキスト]**|返します。 または、コントロール内のテキストを設定します。 **テキスト**持たない**メンバー変数**実装の型。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティを追加します。](../ide/adding-a-property-visual-cpp.md)   
  [[IDL 属性] (プロパティの追加ウィザード)](../ide/idl-attributes-add-property-wizard.md)

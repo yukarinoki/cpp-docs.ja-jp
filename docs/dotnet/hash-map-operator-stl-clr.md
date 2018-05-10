@@ -1,12 +1,9 @@
 ---
-title: "hash_map::operator(STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_map::operator(STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::operator[]
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator[] member [STL/CLR]
 ms.assetid: b0b8c1bd-4250-447d-9c69-3f8c34e9b6af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1bb6b9a9a1a3fbdeb3c8efc572c81cdef7876957
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98644343e942940f86b1f41bcfef88145f93f4aa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapoperatorstlclr"></a>hash_map::operator(STL/CLR)
 関連するマップされた値をキーにマップします。  
@@ -93,12 +88,12 @@ c1[b] = 2
  [a 1] [A 10] [b 2] [c 13]  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map::find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
  [hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)

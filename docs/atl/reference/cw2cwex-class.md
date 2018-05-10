@@ -2,11 +2,8 @@
 title: CW2CWEX クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a83f0fefed5e2393c303038346e3b84ec1a3d570
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX クラス
 このクラスは、文字列変換マクロによって使用`CW2CTEX`と`CT2CWEX`、および typedef`CW2W`です。  
@@ -88,10 +83,10 @@ class CW2CWEX
 ## <a name="example"></a>例  
  参照してください[ATL および MFC 文字列変換マクロ](string-conversion-macros.md)をこれらの文字列変換マクロを使用する例についてはします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlconv.h  
   
-##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX  
  コンストラクターです。  
   
 ```
@@ -109,7 +104,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>コメント  
  変換プロセスで使用するバッファーを割り当てます。  
   
-##  <a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  デストラクターです。  
   
 ```
@@ -119,14 +114,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>コメント  
  割り当てられたバッファーを解放します。  
   
-##  <a name="m_psz"></a>CW2CWEX::m_psz  
+##  <a name="m_psz"></a>  CW2CWEX::m_psz  
  ソース文字列を格納するデータ メンバーです。  
   
 ```
 LPCWSTR m_psz;
 ```  
   
-##  <a name="operator_lpcwstr"></a>CW2CWEX::operator LPCWSTR  
+##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator LPCWSTR  
  変換演算子です。  
   
 ```  
@@ -136,7 +131,7 @@ operator LPCWSTR() const throw();
 ### <a name="return-value"></a>戻り値  
  種類としてテキスト文字列を返す**LPCWSTR です。**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CA2AEX クラス](../../atl/reference/ca2aex-class.md)   
  [CA2CAEX クラス](../../atl/reference/ca2caex-class.md)   
  [CA2WEX クラス](../../atl/reference/ca2wex-class.md)   

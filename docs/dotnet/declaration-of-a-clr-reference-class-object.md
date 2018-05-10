@@ -1,31 +1,26 @@
 ---
-title: "CLR 参照クラス オブジェクトの宣言 |Microsoft ドキュメント"
-ms.custom: 
+title: CLR 参照クラス オブジェクトの宣言 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - types [C++], reference types
 - reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12cead3a142c69da56390ca6f5bf32cecc3b0075
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 参照クラスのオブジェクトの宣言
 宣言や参照クラス型のオブジェクトのインスタンスを作成する構文は、Visual C を c++ マネージ拡張から変更されました。  
@@ -131,7 +126,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 新しい構文の初期化や値の割り当てへの入力、`Object`その値型の暗黙のボックス化が発生します。 新しい構文では両方とも`obj`と`obj2`アドレス指定それぞれ 0 と 1 の値を保持するボックス化された Int32 オブジェクトに初期化されます。 例:  
+ 新しい構文の初期化や値の割り当てへの入力、`Object`その値型の暗黙のボックス化が発生します。 新しい構文では両方とも`obj`と`obj2`アドレス指定それぞれ 0 と 1 の値を保持するボックス化された Int32 オブジェクトに初期化されます。 例えば:  
   
 ```  
 // causes the implicit boxing of both 0 and 1  
@@ -269,7 +264,7 @@ f( 0 );
   
  `0`が整数型。 された`f(int)`、存在していない呼び出しが明確に一致する`f(char*)`標準変換です。 照合ルールでは、標準変換と完全に一致の優先順位を付けます。 厳密な一致がない場合は、標準の変換よりも優先、値の型の暗黙的なボックス化します。 あいまいでないためにです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)   
  [オブジェクト演算子 (^) へのハンドルします。](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   

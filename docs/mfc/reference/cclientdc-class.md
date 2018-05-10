@@ -1,12 +1,9 @@
 ---
-title: "CClientDC クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CClientDC クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CClientDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92fb471ee30e725cd97bff6cbda8d551c0bc859
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cclientdc-class"></a>CClientDC クラス
 Windows 関数の呼び出しを行います[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)構築時に、 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)破棄時にします。  
@@ -50,7 +45,7 @@ class CClientDC : public CDC
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CClientDC::m_hWnd](#m_hwnd)|`HWND`対象のウィンドウの`CClientDC`は無効です。|  
   
@@ -66,10 +61,10 @@ class CClientDC : public CDC
   
  `CClientDC`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="cclientdc"></a>CClientDC::CClientDC  
+##  <a name="cclientdc"></a>  CClientDC::CClientDC  
  構築、`CClientDC`のクライアント領域にアクセスするオブジェクト、 [CWnd](../../mfc/reference/cwnd-class.md)によって示される`pWnd`です。  
   
 ```  
@@ -88,7 +83,7 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
  `HWND`の`CWnd`ポインターを構築するために使用、`CClientDC`オブジェクト。  
   
 ```  
@@ -96,12 +91,12 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>コメント  
- `m_hWnd`保護された変数です。  
+ `m_hWnd` 保護された変数です。  
   
 ### <a name="example"></a>例  
   例を参照して[CClientDC::CClientDC](#cclientdc)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル MDI](../../visual-cpp-samples.md)   
  [CDC クラス](../../mfc/reference/cdc-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

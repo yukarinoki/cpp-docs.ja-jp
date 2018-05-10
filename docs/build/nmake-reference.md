@@ -1,13 +1,10 @@
 ---
-title: "NMAKE リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: NMAKE リファレンス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - program execution [C++]
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nmake-reference"></a>NMAKE リファレンス
 Microsoft Program Maintenance Utility (NMAKE.EXE) は [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] に含まれているコマンドライン ツールで、記述ファイルに含まれているコマンドに基づいてプロジェクトをビルドします。  
@@ -50,7 +45,7 @@ Microsoft Program Maintenance Utility (NMAKE.EXE) は [!INCLUDE[vsprvs](../assem
   
  [メイクファイルのプリプロセス](../build/makefile-preprocessing.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンドラインで C/C++ コードをビルドします。](../build/building-on-the-command-line.md)   
  [C/C++ ビルド ツール](../build/reference/c-cpp-build-tools.md)   
  [Visual C++ プロジェクトの作成および管理](../ide/creating-and-managing-visual-cpp-projects.md)   

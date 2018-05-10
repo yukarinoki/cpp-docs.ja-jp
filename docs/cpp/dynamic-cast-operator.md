@@ -1,12 +1,9 @@
 ---
-title: "dynamic_cast 演算子 |Microsoft ドキュメント"
-ms.custom: 
+title: dynamic_cast 演算子 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - dynamic_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29add795c7adeca67fc85c7cf3b1b90d17f804fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 演算子
 オペランド `expression` を `type-id` 型のオブジェクトに変換します。  
@@ -48,7 +43,7 @@ dynamic_cast < type-id > ( expression )
   
 -   `dynamic_cast` は、`type-id` が値型への内部ポインターであり、キャストが実行時に失敗した場合に、例外をスローしなくなりました。  キャストは、スローする代わりに、ポインター値 0 を返します。  
   
- `type-id` が `expression` の明確でアクセス可能な直接または間接的な基底クラスへのポインターである場合、結果は `type-id` 型の一意のサブオブジェクトへのポインターになります。 例:  
+ `type-id` が `expression` の明確でアクセス可能な直接または間接的な基底クラスへのポインターである場合、結果は `type-id` 型の一意のサブオブジェクトへのポインターになります。 例えば:  
   
 ```  
 // dynamic_cast_1.cpp  
@@ -67,7 +62,7 @@ void f(D* pd) {
   
  このような変換は "アップキャスト" と呼ばれます。理由は、クラスの階層構造で、派生したクラスから上位に (つまり、そのクラスの派生元のクラスに) ポインターを移動するためです。 アップキャストは暗黙の変換です。  
   
- `type-id` が void* の場合、`expression` の実際の型を確認するためにランタイム チェックが行われます。 結果は `expression` によってポイントされた完全なオブジェクトへのポインターです。 例:  
+ `type-id` が void* の場合、`expression` の実際の型を確認するためにランタイム チェックが行われます。 結果は `expression` によってポイントされた完全なオブジェクトへのポインターです。 例えば:  
   
 ```  
 // dynamic_cast_2.cpp  
@@ -88,7 +83,7 @@ void f() {
   
  `type-id` が void* でない場合は、`expression` によって指し示されるオブジェクトが `type-id` 型によって指し示される型に変換できるかどうかを確認するランタイム チェックが行われます。  
   
- `expression` の型が `type-id` の型の基底クラスである場合は、ランタイム チェックが実行されて、`expression` が `type-id` の型の完全なオブジェクトを実際に指し示しているかどうかが確認されます。 実際に指し示している場合、結果は `type-id` の型の完全なオブジェクトへのポインターになります。 例:  
+ `expression` の型が `type-id` の型の基底クラスである場合は、ランタイム チェックが実行されて、`expression` が `type-id` の型の完全なオブジェクトを実際に指し示しているかどうかが確認されます。 実際に指し示している場合、結果は `type-id` の型の完全なオブジェクトへのポインターになります。 例えば:  
   
 ```  
 // dynamic_cast_3.cpp  
@@ -137,7 +132,7 @@ int main() {
  ![クラスの複数の継承を示す階層](../cpp/media/vc39011.gif "vc39011")  
 複数の継承を示すクラスの階層構造  
   
- `D` 型のオブジェクトへのポインターは、`B` または `C` に安全にキャストできます。 しかし、`D` が `A` オブジェクトを指し示すようにキャストされる場合、結果は `A` のどのインスタンスになるでしょうか。 このような場合に、あいまいなキャスト エラーが発生します。 この問題を回避するには、2 種類の明確なキャストを実行します。 例:  
+ `D` 型のオブジェクトへのポインターは、`B` または `C` に安全にキャストできます。 しかし、`D` が `A` オブジェクトを指し示すようにキャストされる場合、結果は `A` のどのインスタンスになるでしょうか。 このような場合に、あいまいなキャスト エラーが発生します。 この問題を回避するには、2 種類の明確なキャストを実行します。 例えば:  
   
 ```  
 // dynamic_cast_4.cpp  
@@ -165,7 +160,7 @@ void f() {
  ![クラスの重複する基底クラスを示す階層](../cpp/media/vc39013.gif "vc39013")  
 基底クラスの複製を示すクラスの階層構造  
   
- `E` 型のオブジェクトと `D` サブオブジェクトへのポインターがあるとして、`D` サブオブジェクトから左端の `A` サブオブジェクトに移動するには、変換を 3 回行います。 `dynamic_cast` ポインターから `D` ポインターへの `E` 変換を実行してから、`dynamic_cast` から `E` への変換 (`B` または暗黙の型変換) を実行し、最後に `B` から `A` への暗黙の型変換を実行することができます。 例:  
+ `E` 型のオブジェクトと `D` サブオブジェクトへのポインターがあるとして、`D` サブオブジェクトから左端の `A` サブオブジェクトに移動するには、変換を 3 回行います。 `dynamic_cast` ポインターから `D` ポインターへの `E` 変換を実行してから、`dynamic_cast` から `E` への変換 (`B` または暗黙の型変換) を実行し、最後に `B` から `A` への暗黙の型変換を実行することができます。 例えば:  
   
 ```  
 // dynamic_cast_5.cpp  
@@ -185,7 +180,7 @@ void f(D* pd) {
   
  `dynamic_cast` 演算子を使用して、"クロス キャスト" を実行することもできます。 同じクラス階層を使用すると、完全なオブジェクトが `B` 型であれば、たとえば `D` サブオブジェクトから `E` サブオブジェクトへのように、ポインターをキャストできます。  
   
- クロス キャストを考慮すると、`D` へのポインターから左端の `A` サブオブジェクトへのポインターへの変換は、実際には 2 ステップで行うことができます。 `D` から `B` にクロス キャストを実行してから、`B` から `A` への暗黙の型変換を実行できます。 例:  
+ クロス キャストを考慮すると、`D` へのポインターから左端の `A` サブオブジェクトへのポインターへの変換は、実際には 2 ステップで行うことができます。 `D` から `B` にクロス キャストを実行してから、`B` から `A` への暗黙の型変換を実行できます。 例えば:  
   
 ```  
 // dynamic_cast_6.cpp  
@@ -204,7 +199,7 @@ void f(D* pd) {
   
  null ポインター値は、`dynamic_cast` によって変換先の型の null ポインター値に変換されます。  
   
- `dynamic_cast < type-id > ( expression )` を使用するときに、`expression` を型 `type-id` に安全に変換できない場合、ランタイム チェックにより、キャストは失敗します。 例:  
+ `dynamic_cast < type-id > ( expression )` を使用するときに、`expression` を型 `type-id` に安全に変換できない場合、ランタイム チェックにより、キャストは失敗します。 例えば:  
   
 ```  
 // dynamic_cast_7.cpp  
@@ -300,6 +295,6 @@ in GlobalTest
 Can't cast to C  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キャスト演算子](../cpp/casting-operators.md)   
  [キーワード](../cpp/keywords-cpp.md)

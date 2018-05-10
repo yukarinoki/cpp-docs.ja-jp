@@ -1,12 +1,9 @@
 ---
-title: "CSmartDockingInfo クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSmartDockingInfo クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSmartDockingInfo
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2954e3fc6a0a8ee7265c5b2baa29d391aa52329c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo クラス
 スマート ドッキング マーカーの外観を定義します。  
@@ -72,7 +67,7 @@ class CSmartDockingInfo : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|フレームワーク スマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|スマート ドッキング マーカーの基本の背景色を指定します。|  
@@ -112,10 +107,10 @@ class CSmartDockingInfo : public CObject
   
  [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxDockingManager.h  
   
-##  <a name="copyto"></a>CSmartDockingInfo::CopyTo  
+##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
  スマート ドッキングの現在のパラメーターに指定されたコピー [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)オブジェクト。  
   
 ```  
@@ -126,7 +121,7 @@ void CopyTo(CSmartDockingInfo& params);
  [出力] `params`  
  型のオブジェクト`CSmartDockingInfo`現在スマート ドッキングのパラメーターに設定されます。  
   
-##  <a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading  
+##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  フレームワーク スマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。  
   
 ```  
@@ -138,14 +133,14 @@ BOOL m_bUseThemeColorInShading;
   
  既定値は `FALSE` です。  
   
-##  <a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground  
+##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
  スマート ドッキング マーカーの基本の背景色を指定します。  
   
 ```  
 COLORREF m_clrBaseBackground;  
 ```  
   
-##  <a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest  
+##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
  置換される色を指定`m_clrToneSrc`スマート ドッキング マーカー ビットマップにします。  
   
 ```  
@@ -157,7 +152,7 @@ COLORREF m_clrToneDest;
   
  カスタム マーカーの色を変更する、両方を指定する必要があります`m_clrToneDest`と`m_clrToneSrc`です。  
   
-##  <a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc  
+##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
  スマート ドッキング マーカー ビットマップの色を指定します。  
   
 ```  
@@ -169,7 +164,7 @@ COLORREF m_clrToneSrc;
   
  使用して`(COLORREF)-1`スマート ドッキングのグループのメンバーは空のままにします。  
   
-##  <a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent  
+##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
  透過的な場合は、スマート ドッキング マーカー ビットマップの色を指定します。  
   
 ```  
@@ -179,7 +174,7 @@ COLORREF m_clrTransparent;
 ### <a name="remarks"></a>コメント  
  ドッキングのグループにカスタム マーカーとカスタムのビットマップを表示する場合は、この値を設定する必要があります。  
   
-##  <a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset  
+##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset  
  スマート ドッキング マーカーの中央のグループとサーバーの全体のグループの四角形の境界間のオフセットを指定します。  
   
 ```  
@@ -189,7 +184,7 @@ int m_nCentralGroupOffset;
 ### <a name="remarks"></a>コメント  
  カスタム マーカーとスマート ドッキング マーカーの中央のグループの境界間の既定オフセットを変更する場合は、この値を指定します。 既定のオフセットは、5 ピクセルです。  
   
-##  <a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal  
+##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
  中央のグループ内のすべてのスマート ドッキング マーカーを囲む外接する四角形の合計サイズを指定します。  
   
 ```  
@@ -199,7 +194,7 @@ CSize m_sizeTotal;
 ### <a name="remarks"></a>コメント  
  設定`m_sizeTotal`サーバーの全体のグループのマーカーの外接する四角形のサイズにします。 マーカーのカスタム ビットマップを使用している場合は、この値を指定する必要があります。  
   
-##  <a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID  
+##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
  強調表示されている非カスタム スマート ドッキング マーカーに使用されるビットマップのリソース Id を定義します。  
   
 ```  
@@ -207,7 +202,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>コメント  
- スマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 `AFX_SD_MARKERS_NUM`現在 5 と定義されます。 配列は次のように入力します。  
+ スマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 `AFX_SD_MARKERS_NUM` 現在 5 と定義されます。 配列は次のように入力します。  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -219,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;`  
   
-##  <a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID  
+##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID  
  強調表示されているカスタム スマート ドッキング マーカーに使用されるビットマップのリソース Id を定義します。  
   
 ```  
@@ -227,7 +222,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>コメント  
- 強調表示されたスマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 `AFX_SD_MARKERS_NUM`現在 5 と定義されます。 配列は次のように入力します。  
+ 強調表示されたスマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 `AFX_SD_MARKERS_NUM` 現在 5 と定義されます。 配列は次のように入力します。  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   
@@ -239,7 +234,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
   
  `params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CObject クラス](../../mfc/reference/cobject-class.md)

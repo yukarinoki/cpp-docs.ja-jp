@@ -1,13 +1,10 @@
 ---
-title: "ウィンドウ メッセージの Id を反映 |Microsoft ドキュメント"
-ms.custom: 
+title: ウィンドウ メッセージの Id を反映 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OCM_CTLCOLORBTN
 - OCM_PARENTNOTIFY
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b8f0fc8c58ea70a1499104e28a0e0a09bd4fee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa6935c0fb9838c63c73e725da9f7b4e0fde4df4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflected-window-message-ids"></a>返送されたウィンドウ メッセージの ID
 ActiveX コントロール、またはその他の特殊なコントロールを作成する簡単な方法では、ウィンドウをサブクラス化です。 詳細については、次を参照してください。 [MFC ActiveX コントロール: Windows コントロールのサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)です。  
@@ -97,7 +92,7 @@ ActiveX コントロール、またはその他の特殊なコントロールを
 > [!NOTE]
 >  いくつかの種類がある場合、コントロールは、Win32 システムで実行される、 **WM_CTLCOLOR\*** メッセージがあります。 詳細については、次を参照してください**WM_CTLCOLORBTN**、 **WM_CTLCOLORDLG**、 **WM_CTLCOLOREDIT**、 **WM_CTLCOLORLISTBOX**、  **。WM_CTLCOLORMSGBOX**、 **WM_CTLCOLORSCROLLBAR**、 **WM_CTLCOLORSTATIC**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール: Windows コントロールのサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   
  [テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)](../mfc/tn062-message-reflection-for-windows-controls.md)
 

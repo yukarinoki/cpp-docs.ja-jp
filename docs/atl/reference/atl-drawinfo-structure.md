@@ -1,12 +1,9 @@
 ---
-title: "ATL_DRAWINFO 構造 |Microsoft ドキュメント"
-ms.custom: 
+title: ATL_DRAWINFO 構造 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL::ATL_DRAWINFO
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a10932fd43e89af6d98d3d931d43810c710000
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0e04f5efae261a151489309e876298b56ec696db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 構造体
 プリンター、メタファイル、ActiveX コントロールなど、さまざまな対象に表示するために使用する情報が含まれています。  
@@ -97,10 +92,10 @@ struct ATL_DRAWINFO {
   
  この構造体は、ターゲット デバイスに対してオブジェクトの外観を表示するために使用される適切な情報を格納します。 提供された情報は、画面、プリンター、またはメタファイルに描画で使用できます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体](../../atl/reference/atl-structures.md)   
  [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
  [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

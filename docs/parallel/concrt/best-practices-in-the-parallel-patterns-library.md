@@ -1,13 +1,10 @@
 ---
-title: "ベスト プラクティス、並列パターン ライブラリで |Microsoft ドキュメント"
-ms.custom: 
+title: ベスト プラクティス、並列パターン ライブラリで |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>並列パターン ライブラリに関するベスト プラクティス
 ここでは、並列パターン ライブラリ (PPL) を効果的に使用する方法について説明します。 PPL は、粒度の細かい並列化を実行するための汎用的なコンテナー、オブジェクト、およびアルゴリズムを提供します。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 - [変数がタスクの有効期間を通じて有効であることを確認します。](#lifetime)  
   
-##  <a name="small-loops"></a>小さなループ本体は並列化しません。  
+##  <a name="small-loops"></a> 小さなループ本体は並列化しません。  
  比較的小さなループ本体を並列化すると、関連するスケジューリング オーバーヘッドが並列処理のメリットを上回る可能性があります。 次の例について考えます。この例では、2 つの配列に各要素ペアを追加しています。  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="highest"></a>最高レベルで並列化を表現します。  
+##  <a name="highest"></a> 最高レベルで並列化を表現します。  
  低いレベルでのみコードを並列化する場合は、プロセッサの数が増えても拡張されない fork-join コンストラクトを導入できます。 A*分岐結合*コンストラクトでは、1 つのタスクがその作業を小さな並列サブタスクに分割し、それらのサブタスクが終了するまで待機します。 サブタスクの場合も、それぞれの処理を再帰的に別のサブタスクに分割できます。  
   
  fork-join モデルはさまざまな問題を解決するのに役立ちますが、同期のオーバーヘッドに伴ってスケーラビリティが下がるような状況もあります。 たとえば、イメージ データを逐次的に処理する次のコードについて考えます。  
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="divide-and-conquer"></a>分割と整理の問題を解決する parallel.invoke を使用してください。  
+##  <a name="divide-and-conquer"></a> 分割と整理の問題を解決する parallel.invoke を使用してください。  
 
  A*分割と整理*問題は再帰を使用してタスクをサブタスクに分割する fork-join コンストラクトの一種です。 加え、 [concurrency::task_group](reference/task-group-class.md)と[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)クラスを使用することも、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズム分割と整理の問題を解決します。 `parallel_invoke` アルゴリズムでは、タスク グループ オブジェクトよりも簡単な構文を使用できます。このアルゴリズムは、並列タスクの数が固定されている場合に役立ちます。  
   
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="breaking-loops"></a>キャンセルまたは処理を並列ループを中断する例外を使用します。  
+##  <a name="breaking-loops"></a> キャンセルまたは処理を並列ループを中断する例外を使用します。  
  PPL では、2 とおりの方法を使用して、タスク グループまたは並列アルゴリズムによって実行される並列処理を取り消すことができます。 提供する取り消し機構を使用する 1 つの方法は、 [concurrency::task_group](reference/task-group-class.md)と[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)クラスです。 もう 1 つは、タスクの処理関数の本体で例外をスローする方法です。 並列処理ツリーを取り消す場合は、例外処理を行うよりも取り消し機構を使用する方が効率的です。 A*並列処理ツリー*は、グループの関連するタスク グループの一部のタスク グループに他のタスク グループが含まれています。 取り消し機構では、タスク グループとその子タスク グループを上位から順に取り消します。 反対に、例外処理では下位から順に処理されるため、例外が上位へ移動するたびに、子タスク グループを個別に取り消す必要があります。  
   
 
@@ -132,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  [[トップ](#top)]  
   
-##  <a name="object-destruction"></a>理解取り消しおよび例外処理に与えるオブジェクトの破棄  
+##  <a name="object-destruction"></a> 理解取り消しおよび例外処理に与えるオブジェクトの破棄  
  並列処理ツリーでタスクを取り消すと、子タスクも実行されなくなります。 そのため、アプリケーションで重要となる操作 (リソースの解放など) が子タスクのいずれかで実行されるような場合に問題となります。 また、タスクを取り消すと、例外がオブジェクトのデストラクターを通じて反映され、アプリケーションで未定義の動作が発生する可能性があります。  
   
  次の例では、`Resource` クラスはリソースを表し、`Container` クラスはリソースを保持するコンテナーを表します。 そのデストラクターで、`Container` クラスは `Resource` メンバーの 2 つに対して `cleanup` メソッドを並列に呼び出し、3 つ目の `Resource` メンバーに対して `cleanup` メソッドを呼び出します。  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[トップ](#top)]  
   
-##  <a name="repeated-blocking"></a>並列ループの繰り返しブロックされません。  
+##  <a name="repeated-blocking"></a> 並列ループの繰り返しブロックされません。  
 
  などの並列ループ[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)または[concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)ブロックすることで制御される操作を短時間で多数のスレッドを作成するランタイムが発生する可能性があります。  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[トップ](#top)]  
   
-##  <a name="blocking"></a>並列処理を取り消すときにブロッキング操作を実行できません。  
+##  <a name="blocking"></a> 並列処理を取り消すときにブロッキング操作を実行できません。  
 
  可能であれば、操作を実行しないブロックを呼び出す前に、 [concurrency::task_group::cancel](reference/task-group-class.md#cancel)または[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)並列処理を取り消す方法です。  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[トップ](#top)]  
   
-##  <a name="shared-writes"></a>並列ループでは共有データを書き込めません  
+##  <a name="shared-writes"></a> 並列ループでは共有データを書き込めません  
  たとえば、同時実行ランタイムにいくつかのデータ構造体が用意されています[concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)、共有データへの同時アクセスを同期します。 これらのデータ構造体は、複数のタスクでリソースへの共有アクセスがまれに必要になる場合など、さまざまな状況で役立ちます。  
   
  使用する次の例を検討してください、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムと`critical_section`オブジェクトに含まれる素数の数を計算する、 [std::array](../../standard-library/array-class-stl.md)オブジェクト。 この例では、各スレッドが共有変数 `prime_sum` にアクセスするのを待つ必要があるため、効率は改善されません。  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[トップ](#top)]  
   
-##  <a name="false-sharing"></a>可能であれば、偽共有を避ける  
+##  <a name="false-sharing"></a> 可能であれば、偽共有を避ける  
  *偽共有*別々 のプロセッサで実行されている複数の同時実行タスクが同じキャッシュ ラインに配置されている変数に書き込むときに発生します。 1 つのタスクが変数のいずれかに書き込みを行うと、両方の変数のキャッシュ ラインが無効化されます。 キャッシュ ラインが無効化されるたびに、各プロセッサでキャッシュ ラインの再読み込みを行う必要があります。 したがって、偽共有が発生すると、アプリケーションでパフォーマンスが低下する可能性があります。  
   
  次の基本的な例では、2 つの同時実行タスクがそれぞれ共有カウンター変数をインクリメントする場合を示します。  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[トップ](#top)]  
   
-##  <a name="lifetime"></a>変数がタスクの有効期間を通じて有効であることを確認します。  
+##  <a name="lifetime"></a> 変数がタスクの有効期間を通じて有効であることを確認します。  
  タスク グループまたは並列アルゴリズムにラムダ式を渡す場合、ラムダ式の本体で外側のスコープ内の変数を値でアクセスするのか参照でアクセスするのかは、capture 句で指定します。 ラムダ式に変数を渡すときに参照渡しを使用する場合、タスクが終了するまでその変数の有効期間が続くようにする必要があります。  
   
  次の例について考えます。この例では、`object` クラスと `perform_action` 関数を定義します。 `perform_action` 関数は、`object` 変数を作成し、その変数に対していくつかのアクションを非同期的に実行します。 `perform_action` 関数から制御が戻される前にタスクが終了するとは限らないため、タスクの実行中に `object` 変数が破棄されると、プログラムのクラッシュや未定義の動作が発生します。  
@@ -278,7 +273,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[トップ](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行ランタイムに関するベスト プラクティスします。](../../parallel/concrt/concurrency-runtime-best-practices.md)   
  [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)   

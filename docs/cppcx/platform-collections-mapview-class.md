@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::MapView クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::Collections::MapView クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView クラス
 キーと値のペアのコレクションである、 *マップ*への読み取り専用ビューを表します。  
@@ -78,7 +73,7 @@ ref class MapView sealed;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `MapView`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** collection.h  
   
  **名前空間:** Platform::Collections  
@@ -220,5 +215,5 @@ void Split(
 ### <a name="remarks"></a>コメント  
  このメソッドは操作可能ではありません。これは何も実行しません。  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

@@ -2,12 +2,9 @@
 title: MFC で使用されるコールバック関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,31 +15,29 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC で使われているコールバック関数
 次の 3 つのコールバック関数は、Microsoft Foundation Class ライブラリに表示されます。 これらのコールバック関数に渡される[cdc::enumobjects](../../mfc/reference/cdc-class.md#enumobjects)、 [cdc::graystring](../../mfc/reference/cdc-class.md#graystring)、および[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)です。 すべてのコールバック関数がコールバックの境界を越えて例外をスローすることはできませんので、Windows に返す前に MFC 例外をトラップする必要がありますに注意してください。 例外の詳細については、記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)です。  
 
-|name||  
+|名前||  
 |----------|-----------------|  
 |[CDC::EnumObjects 用コールバック関数](#enum_objects)||  
 |[CDC::GrayString 用コールバック関数](#graystring)||
 |[CDC::SetAbortProc 用コールバック関数](#setabortproc)|| 
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h 
 
-## <a name="enum_objects"></a>Cdc::enumobjects 用コールバック関数
+## <a name="enum_objects"></a> Cdc::enumobjects 用コールバック関数
 *ObjectFunc*名は、アプリケーションによって提供される関数名のプレース ホルダーです。  
   
 ### <a name="syntax"></a>構文  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>コメント  
  実際の名前をエクスポートする必要があります。  
   
-## <a name="graystring"></a>Cdc::graystring 用コールバック関数
+## <a name="graystring"></a>  Cdc::graystring 用コールバック関数
 *OutputFunc*アプリケーションによって提供されるコールバック関数名のプレース ホルダーです。  
   
 ### <a name="syntax"></a>構文  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>コメント  
  コールバック関数 (*OutputFunc*) 座標 (0, 0) を基準としたイメージを描画する必要がなく (*x*、 *y*)。  
 
-## <a name="setabortproc"></a>Cdc::setabortproc 用コールバック関数
+## <a name="setabortproc"></a>  Cdc::setabortproc 用コールバック関数
 名前*AbortFunc*アプリケーションによって提供される関数名のプレース ホルダーです。  
   
 ### <a name="syntax"></a>構文  
@@ -119,6 +114,6 @@ BOOL CALLBACK EXPORT AbortFunc(
  」の「解説」セクションの説明に従って実際名前をエクスポートする必要があります[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)です。  
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](structures-styles-callbacks-and-message-maps.md) [cdc::enumobjects](../../mfc/reference/cdc-class.md#enumobjects) [cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc) [cdc::graystring](../../mfc/reference/cdc-class.md#graystring)
 

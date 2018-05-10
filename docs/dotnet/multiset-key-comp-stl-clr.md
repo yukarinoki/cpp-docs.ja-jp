@@ -1,12 +1,9 @@
 ---
-title: "multiset::key_comp (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: multiset::key_comp (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::key_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_comp member [STL/CLR]
 ms.assetid: 79ea90d1-b9b0-4b32-a4cf-c04242b8e42f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 23e28735614e1469aa2e9e33490403813b00560e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c60ecad50a3674e37af59d3b4e6858275408724b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetkeycomp-stlclr"></a>multiset::key_comp (STL/CLR)
 2 つのキーの順序付けのデリゲートをコピーします。  
@@ -86,12 +81,12 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext と set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マルチセット (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)   
  [multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)

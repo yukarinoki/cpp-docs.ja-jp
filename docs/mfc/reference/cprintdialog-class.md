@@ -1,12 +1,9 @@
 ---
-title: "CPrintDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CPrintDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog クラス
 Windows のコモン ダイアログ ボックスである [印刷] ダイアログで提供されるサービスをカプセル化したものです。  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  独自のハンドルを指定しない場合`m_pd`の**hDevMode**と**と**メンバー、Windows の関数を呼び出してください**GlobalFree**これらのハンドルを完了したら、ダイアログ ボックスでします。 によって提供されるフレームワークの印刷設定の実装を使用するときに`CWinApp::OnFilePrintSetup`、これらのハンドルを解放する必要はありません。 によって、ハンドルが保持されます`CWinApp`で解放されると`CWinApp`のデストラクターです。 のみを使用する場合は、これらのハンドルを解放する必要が`CPrintDialog`スタンドアロンです。  
   
- ダイアログ ボックス コントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、印刷オプションを選択するユーザーを許可するメンバー関数。 `DoModal`ユーザーが、[ok] を選択するかどうかを返します ( **IDOK**) か、またはキャンセル ( **IDCANCEL**) ボタンをクリックします。  
+ ダイアログ ボックス コントロールを初期化した後、 `DoModal`  ダイアログ ボックスが表示され、印刷オプションを選択するユーザーを許可するメンバー関数。 `DoModal` ユーザーが、[ok] を選択するかどうかを返します ( **IDOK**) か、またはキャンセル ( **IDCANCEL**) ボタンをクリックします。  
   
  場合`DoModal`返します**IDOK**のいずれかを使用することができます`CPrintDialog`のユーザーが入力情報を取得するメンバー関数。  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Windows を使用する**情報を得る**関数およびエラーに関する詳細については、ダイアログ ボックスの初期化中にエラーが発生するかどうかを決定します。 この関数の詳細については、Windows SDK を参照してください。  
   
- `CPrintDialog`COMMDLG に依存します。Windows 3.1 以降のバージョンに付属している DLL ファイルです。  
+ `CPrintDialog` COMMDLG に依存します。Windows 3.1 以降のバージョンに付属している DLL ファイルです。  
   
  ダイアログ ボックスをカスタマイズするからクラスを派生`CPrintDialog`拡張コントロールから通知メッセージを処理するメッセージ マップの追加を独自のダイアログ テンプレートを提供します。 処理されないメッセージは、基底クラスへ渡されます。 フック関数をカスタマイズする必要はありません。  
   
@@ -149,10 +144,10 @@ class CPrintDialog : public CCommonDialog
   
  `CPrintDialog`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdlgs.h  
   
-##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
+##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  
  Windows 印刷または印刷のセットアップのダイアログ オブジェクトを構築します。  
   
 ```  
@@ -196,7 +191,7 @@ HDC CreatePrinterDC();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#106](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
-##  <a name="domodal"></a>CPrintDialog::DoModal  
+##  <a name="domodal"></a>  CPrintDialog::DoModal  
  Windows の一般的な印刷ダイアログ ボックスを表示でき、ユーザーをコピー、ページ範囲の数などのさまざまな印刷オプションを選択し、コピーを照合するかどうか。  
   
 ```  
@@ -385,7 +380,7 @@ PRINTDLG& m_pd;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#111](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
-##  <a name="printall"></a>CPrintDialog::PrintAll  
+##  <a name="printall"></a>  CPrintDialog::PrintAll  
  ドキュメントのすべてのページを印刷するかどうかを判断します。  
   
 ```  
@@ -417,7 +412,7 @@ BOOL PrintCollate() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#110](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
-##  <a name="printrange"></a>CPrintDialog::PrintRange  
+##  <a name="printrange"></a>  CPrintDialog::PrintRange  
  ページの指定した範囲のみを印刷するかどうかを判断します。  
   
 ```  
@@ -433,7 +428,7 @@ BOOL PrintRange() const;
 ### <a name="example"></a>例  
   例を参照して[CPrintDialog::m_pd](#m_pd)です。  
   
-##  <a name="printselection"></a>CPrintDialog::PrintSelection  
+##  <a name="printselection"></a>  CPrintDialog::PrintSelection  
  現在選択されている項目のみを印刷するかどうかを判断します。  
   
 ```  
@@ -449,7 +444,7 @@ BOOL PrintSelection() const;
 ### <a name="example"></a>例  
   例を参照して[CPrintDialog::m_pd](#m_pd)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル DIBLOOK](../../visual-cpp-samples.md)   
  [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

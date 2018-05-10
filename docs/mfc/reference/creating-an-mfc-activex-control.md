@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロールの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC ActiveX コントロールの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.activex.project
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47207d80fc36b8f80fafbb495fa9592312bde09c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 616aa79f41fd3c7abadbd45a020caa9e58d7b56d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-mfc-activex-control"></a>MFC ActiveX コントロールの作成
 ActiveX コントロール プログラムは、親アプリケーションに特定の機能を提供するモジュール プログラムです。 たとえば、ダイアログ ボックスのボタンや Web ページのツール バーなどのコントロールを作成できます。  
@@ -50,7 +45,7 @@ ActiveX コントロール プログラムは、親アプリケーションに�
   
  追加するコード ウィザードを使用するには、プロジェクトを作成した後[関数](../../ide/add-member-function-wizard.md)、[変数](../../ide/add-member-variable-wizard.md)、[イベント](../../ide/add-event-wizard.md)、[プロパティ](../../ide/names-add-property-wizard.md)、および[メソッド](../../ide/add-method-wizard.md)です。 ActiveX コントロールのカスタマイズの詳細については、次を参照してください。 [MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
  [アプリケーションを展開します。](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsView クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CWinFormsView クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView クラス
 Windows フォーム コントロールのホスティング用の汎用機能を MFC ビューとして提供します。  
@@ -56,7 +51,7 @@ class CWinFormsView : public CView;
   
 ### <a name="public-operators"></a>パブリック演算子  
   
-|name||  
+|名前||  
 |----------|-|  
 |[CWinFormsView::operator コントロール ^](#operator_control)|Windows フォーム コントロールへのポインターとして型をキャストします。|  
   
@@ -71,10 +66,10 @@ class CWinFormsView : public CView;
 > [!NOTE]
 >  CWinFormsView は MFC 分割ウィンドウをサポートしていません ( [CSplitterWnd クラス](../../mfc/reference/csplitterwnd-class.md))。 現在のみ、Windows フォームのスプリッター コントロールはサポートされています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwinforms.h  
   
-##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
  `CWinFormsView` オブジェクトを構築します。  
   
 ```  
@@ -86,13 +81,13 @@ CWinFormsView(System::Type^ pManagedViewType);
  Windows フォーム ユーザー コントロールのデータ型へのポインター。   
   
 ### <a name="example"></a>例  
- 次の例で、`CUserView`クラスから継承`CWinFormsView`の型を渡すと`UserControl1`を`CWinFormsView`コンス トラクターです。 `UserControl1`ControlLibrary1.dll でカスタム コントロールです。  
+ 次の例で、`CUserView`クラスから継承`CWinFormsView`の型を渡すと`UserControl1`を`CWinFormsView`コンス トラクターです。 `UserControl1` ControlLibrary1.dll でカスタム コントロールです。  
   
  [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
   
  [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="getcontrol"></a>CWinFormsView::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsView::GetControl  
  Windows フォーム コントロールへのポインターを取得します。  
   
 ```  
@@ -105,7 +100,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>コメント  
  Windows フォームを使用する方法の例は、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
   
-##  <a name="operator_control"></a>CWinFormsView::operator コントロール ^  
+##  <a name="operator_control"></a>  CWinFormsView::operator コントロール ^  
  Windows フォーム コントロールへのポインターとして型をキャストします。  
   
 ```  
@@ -118,7 +113,7 @@ operator System::Windows::Forms::Control^() const;
 ### <a name="example"></a>例  
   参照してください[CWinFormsView::GetControl](#getcontrol)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [関数クラス](../../mfc/reference/cwinformscontrol-class.md)   
  [CWinFormsDialog クラス](../../mfc/reference/cwinformsdialog-class.md)   

@@ -1,13 +1,10 @@
 ---
-title: "クラス (Windows) の表示 |Microsoft ドキュメント"
-ms.custom: 
+title: クラス (Windows) の表示 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>ビュー クラス (Windows)
-`CView`その派生クラスは、フレーム ウィンドウのクライアント領域を表す子ウィンドウ。 ビューは、データを表示し、ドキュメントの入力をそのまま使用します。  
+`CView` その派生クラスは、フレーム ウィンドウのクライアント領域を表す子ウィンドウ。 ビューは、データを表示し、ドキュメントの入力をそのまま使用します。  
   
  ビュー クラスは、ドキュメント クラスおよびドキュメント テンプレート オブジェクトを使用して、フレーム ウィンドウ クラスに関連付けられています。  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Windows のツリー コントロールを含むビュー (を参照してください[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 ツリー コントロールでは、ファイル エクスプ ローラーの左側のウィンドウと同様の方法で配置されたラベルとアイコンの階層リストを表示します。  
   
 ## <a name="related-classes"></a>関連するクラス  
- `CSplitterWnd`1 つのフレーム ウィンドウ内で複数のビューであることができます。 `CPrintDialog`および`CPrintInfo`ビューの印刷と印刷プレビュー機能をサポートします。 `CRichEditDoc`および`CRichEditCntrItem`で使用される`CRichEditView`OLE コンテナーの機能を実装します。  
+ `CSplitterWnd` 1 つのフレーム ウィンドウ内で複数のビューであることができます。 `CPrintDialog` および`CPrintInfo`ビューの印刷と印刷プレビュー機能をサポートします。 `CRichEditDoc` および`CRichEditCntrItem`で使用される`CRichEditView`OLE コンテナーの機能を実装します。  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  ユーザーが複数のペインに分割できるウィンドウです。 これらのウィンドウのユーザーまたは固定サイズでサイズ変更できることができます。  
@@ -93,6 +88,6 @@ ms.lasthandoff: 12/21/2017
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
  項目に格納されている ole クライアント側のアクセスを提供する`CRichEditView`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

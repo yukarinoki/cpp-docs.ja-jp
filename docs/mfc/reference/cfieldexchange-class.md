@@ -2,11 +2,8 @@
 title: CFieldExchange クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange クラス
 データベース クラスで使うレコード フィールド エクスチェンジ (RFX) ルーチンとバルク レコード フィールド エクスチェンジ (Bulk RFX) ルーチンをサポートします。  
@@ -50,14 +45,14 @@ class CFieldExchange
 |[つ](#setfieldtype)|レコード セットのデータ メンバーの種類を指定します: 列またはパラメーター: 次の呼び出しまで RFX 関数に以下のすべての呼び出しによって表される`SetFieldType`です。|  
   
 ## <a name="remarks"></a>コメント  
- `CFieldExchange`基本クラスはありません。  
+ `CFieldExchange` 基本クラスはありません。  
   
  バルク行フェッチを実装するカスタム データ型のデータ エクス チェンジ ルーチンを記述する場合は、このクラスを使用してください。それ以外の場合、していない直接このクラスを使用します。 バルク RFX データ ソースの現在のレコードの対応するフィールドとレコード セット オブジェクトのフィールド データ メンバーのデータを交換します。  
   
 > [!NOTE]
 >  オープン データベース コネクティビティ (ODBC) クラスではなく、データ アクセス オブジェクト (DAO) クラスで作業している場合は、クラスを使用して[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)代わりにします。 詳細については、記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)です。  
   
- A`CFieldExchange`オブジェクトを提供するコンテキスト情報を必要なレコード フィールド エクス チェンジまたはバルク レコード フィールド エクスを配置します。 `CFieldExchange`オブジェクトは、バインディング パラメーターのフィールド データ メンバーなど、現在のレコードのフィールドでさまざまなフラグを設定するときに、操作の数をサポートします。 バルク RFX 操作によって定義された型のレコード セット クラスのデータ メンバーに対して実行され、 `enum` **FieldType**で`CFieldExchange`です。 考えられる**FieldType**値は。  
+ A`CFieldExchange`オブジェクトを提供するコンテキスト情報を必要なレコード フィールド エクス チェンジまたはバルク レコード フィールド エクスを配置します。 `CFieldExchange` オブジェクトは、バインディング パラメーターのフィールド データ メンバーなど、現在のレコードのフィールドでさまざまなフラグを設定するときに、操作の数をサポートします。 バルク RFX 操作によって定義された型のレコード セット クラスのデータ メンバーに対して実行され、 `enum` **FieldType**で`CFieldExchange`です。 考えられる**FieldType**値は。  
   
 - **CFieldExchange::outputColumn**フィールド データ メンバーにします。  
   
@@ -72,10 +67,10 @@ class CFieldExchange
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CFieldExchange`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
  RFX 関数を記述する場合は、呼び出す`IsFieldType`特定フィールドまたはパラメーターのデータ メンバー型に現在の操作を実行できるかどうかを決定する、関数の先頭 (、 **CFieldExchange::outputColumn**、 **CFieldExchange::inputParam**、 **CFieldExchange::param**、 **CFieldExchange::outputParam**、または**CFieldExchange::inoutParam**).  
   
 ```  
@@ -92,7 +87,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>コメント  
  既存の RFX 関数のモデルに従います。  
   
-##  <a name="setfieldtype"></a>つ  
+##  <a name="setfieldtype"></a>  つ  
  呼び出す必要がある`SetFieldType`レコード セット クラスの[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)をオーバーライドします。  
   
 ```  
@@ -134,6 +129,6 @@ void SetFieldType(UINT nFieldType);
   
  [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CRecordset クラス](../../mfc/reference/crecordset-class.md)

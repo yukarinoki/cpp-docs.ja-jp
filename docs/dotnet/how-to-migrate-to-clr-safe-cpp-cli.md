@@ -1,13 +1,10 @@
 ---
-title: "方法: clr への移行: セーフ (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: clr への移行: セーフ (C + + CLI) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,21 +13,19 @@ helpviewer_keywords:
 - verifiable assemblies [C++], migrating to
 - /clr compiler option [C++], migrating to /clr:safe
 ms.assetid: 75f9aae9-1dcc-448a-aa11-2d96f972f9d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4c9d28d64b450d14ba1579597f0276cfe3a0cf39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b12efce8d3566c4fa8824c70e0a6c7ae9d486dc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clrsafe-ccli"></a>方法: /clr:safe に移行する (C++/CLI)
-Visual C は検証可能なコンポーネントを使用して生成できます**/clr:safe**、各検証不能なコード構成体のエラーを生成するコンパイラを実行します。  
+Visual C は検証可能なコンポーネントを使用して生成できます **/clr:safe**、各検証不能なコード構成体のエラーを生成するコンパイラを実行します。  
   
 ## <a name="remarks"></a>コメント  
  次の問題は、検証エラーを生成します。  
@@ -55,7 +50,7 @@ Visual C は検証可能なコンポーネントを使用して生成できま�
   
 -   ため、パラメーターを宣言できません main 関数に EXE をビルドするには場合、<xref:System.Environment.GetCommandLineArgs%2A>コマンドライン引数を取得するために使用する必要があります。  
   
--   仮想関数への非仮想呼び出しを行います。 例:  
+-   仮想関数への非仮想呼び出しを行います。 例えば:  
   
     ```  
     // not_verifiable.cpp  
@@ -82,7 +77,7 @@ Visual C は検証可能なコンポーネントを使用して生成できま�
   
 -   [__based](../cpp/based-grammar.md)  
   
--   [_ _try](../cpp/try-except-statement.md)と`__except`  
+-   [_ _try](../cpp/try-except-statement.md)と `__except`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [純粋なコードと検証可能なコード (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

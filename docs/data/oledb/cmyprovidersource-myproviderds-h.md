@@ -1,12 +1,9 @@
 ---
-title: "CMyProviderSource (MyProviderDS.H) |Microsoft ドキュメント"
-ms.custom: 
+title: CMyProviderSource (MyProviderDS.H) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - myproviderds.h
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0bdb766abd034868fe12fc0913fbdd99287b9e4f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f141ad7565a78ff4e7a02b3847287879b81ccd6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 プロバイダー クラスは、複数の継承を使用します。 次のコードは、データ ソース オブジェクトの継承チェーンを示しています。  
@@ -165,7 +160,7 @@ struct UPROPINFO
 ## <a name="user-defined-property-sets"></a>ユーザー定義のプロパティ セット  
  Visual C には、ユーザー定義のプロパティ セットがサポートしています。 オーバーライドする必要はありません**GetProperties**または`GetPropertyInfo`です。 代わりに、テンプレートは、任意のユーザー定義のプロパティ セットを検出し、適切なオブジェクトに追加します。  
   
- 初期化時に使用する必要があるユーザー定義のプロパティ セットがある場合 (コンシューマーを呼び出す前に、 **idbinitialize::initialize**) を使用してこれを指定することができます、 **UPROPSET_USERINIT** BEGIN_PROPERTY_SET_EX マクロと組み合わせてフラグ。 プロパティ セットは、これは、OLE DB 仕様が必要です) のデータ ソース オブジェクトでなければなりません。 例:  
+ 初期化時に使用する必要があるユーザー定義のプロパティ セットがある場合 (コンシューマーを呼び出す前に、 **idbinitialize::initialize**) を使用してこれを指定することができます、 **UPROPSET_USERINIT** BEGIN_PROPERTY_SET_EX マクロと組み合わせてフラグ。 プロパティ セットは、これは、OLE DB 仕様が必要です) のデータ ソース オブジェクトでなければなりません。 例えば:  
   
 ```  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
@@ -173,5 +168,5 @@ BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)

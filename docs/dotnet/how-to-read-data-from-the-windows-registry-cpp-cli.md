@@ -1,31 +1,26 @@
 ---
-title: "方法: Windows レジストリからデータを読み取る (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: Windows レジストリからデータを読み取る (C + + CLI) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, reading from Windows Registry
 - registry, reading
 ms.assetid: aebf52c0-acc7-40e2-adbc-d34e0a1e467e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dfb654ba2cce069086713322624e947e14bc26f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87c882bcf2a7900e1f95ea968407c159333c6cb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>方法: Windows レジストリからデータを読み込む (C++/CLI)
 <xref:Microsoft.Win32.Registry.CurrentUser> キーを使用して、Windows レジストリからデータを読み込む方法を次のコード例に示します。 最初に、サブキーが列挙を使用して、<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>メソッドし Identities サブキーを使用してを開くが、<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>メソッドです。 ルート キー同様、各サブキーは <xref:Microsoft.Win32.RegistryKey> クラスで表されます。 最後に、新しい <xref:Microsoft.Win32.RegistryKey> オブジェクトを使用してキーと値のペアが一覧表示されます。  
@@ -78,7 +73,7 @@ int main( )
   
  <xref:Microsoft.Win32.Registry> クラスには、さらに <xref:Microsoft.Win32.Registry.DynData> と <xref:Microsoft.Win32.Registry.PerformanceData> の 2 つのオブジェクトがあります。 この 2 つのオブジェクトは両方とも <xref:Microsoft.Win32.RegistryKey> クラスのインスタンスです。 <xref:Microsoft.Win32.Registry.DynData>オブジェクトには、Windows 98 や Windows me でのみサポートされている動的レジストリ情報が含まれています。 <xref:Microsoft.Win32.Registry.PerformanceData> オブジェクトを使用すると、Windows パフォーマンス モニター システムを使用するアプリケーションのパフォーマンス カウンター情報にアクセスできます。 <xref:Microsoft.Win32.Registry.PerformanceData>ノードが表す情報をレジストリに実際に格納されていないと、そのため、Regedit.exe を使用すると表示することはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: Windows レジストリにデータを書き込む (C + + CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
  [Windows の操作 (C + + CLI)](../dotnet/windows-operations-cpp-cli.md)   
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

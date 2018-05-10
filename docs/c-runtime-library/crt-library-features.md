@@ -1,10 +1,10 @@
 ---
-title: "CRT ライブラリの機能 | Microsoft Docs"
-ms.custom: 
+title: CRT ライブラリの機能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2018
 ms.technology:
 - cpp-standard-libraries
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.runtime
 dev_langs:
@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33e3e5f63aebfd1b169210eaa3748feb761e0422
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crt-library-features"></a>CRT ライブラリの機能
 
@@ -77,8 +76,10 @@ CRT を初期化するコードは、CRT ライブラリが静的にリンクさ
 |msvcrtd.lib|DLL UCRT および vcruntime で使用するためのネイティブ CRT スタートアップのデバッグ バージョン用のスタティック ライブラリ。 再頒布可能パッケージではありません。|**/MDd**|_DEBUG、_MT、_DLL|
 |msvcmrt.lib|DLL UCRT および vcruntime で使用するためのネイティブとマネージの混合 CRT スタートアップ用のスタティック ライブラリ。|**/clr**||
 |msvcmrtd.lib|DLL UCRT および vcruntime で使用するためのネイティブとマネージの混合 CRT スタートアップのデバッグ バージョン用のスタティック ライブラリ。 再頒布可能パッケージではありません。|**/clr**||
-|msvcurt.lib|**廃止** 純粋マネージ CRT 用のスタティック ライブラリ。|**/clr:pure**||
-|msvcurtd.lib|**廃止** 純粋マネージ CRT のデバッグ バージョン用のスタティック ライブラリ。 再頒布可能パッケージではありません。|**/clr:pure**||
+|msvcurt.lib|
+  **非推奨** 純粋マネージ CRT 用のスタティック ライブラリ。|**/clr:pure**||
+|msvcurtd.lib|
+  **非推奨** 純粋マネージ CRT のデバッグ バージョン用のスタティック ライブラリ。 再頒布可能パッケージではありません。|**/clr:pure**||
 
 C ランタイム ライブラリを指定するコンパイラ オプションを使用せずにコマンド ラインからプログラムをリンクした場合、リンカーは静的にリンクされた CRT ライブラリ (libcmt.lib、libvcruntime.lib、libucrt.lib) を使用します。
 

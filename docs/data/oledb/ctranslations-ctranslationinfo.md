@@ -1,12 +1,9 @@
 ---
-title: "CTranslations、CTranslationInfo |Microsoft ドキュメント"
-ms.custom: 
+title: CTranslations、CTranslationInfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szCatalog
@@ -35,18 +32,16 @@ helpviewer_keywords:
 - CTranslationInfo parameter class
 - m_szTargetSchema
 ms.assetid: 19a64828-2d4c-42a0-8bfb-b010e334a9b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8cab795bfd4f620877f86aa8425c617172ae7c5e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95bcede95c8d5de4f2c0e529a16e06277ac3240d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctranslations-ctranslationinfo"></a>CTranslations、CTranslationInfo
 Typedef クラスを呼び出す**CTranslations**そのパラメーター クラスを実装する**CTranslationInfo**です。  
@@ -70,9 +65,9 @@ Typedef クラスを呼び出す**CTranslations**そのパラメーター クラ
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|  
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbsch.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CatDB](../../visual-cpp-samples.md)   
  [CRestrictions クラス](../../data/oledb/crestrictions-class.md)

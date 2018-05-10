@@ -1,12 +1,9 @@
 ---
-title: "hash_multiset::equal_range (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_multiset::equal_range (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::equal_range
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - equal_range member [STL/CLR]
 ms.assetid: a4141d7e-4964-4c78-8989-ae1d1258b50a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8ed032b448410fd6d0ee90ae659f02cde521ad4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8eaacdf74fb9906dd6fc9b88878c4814185bc341
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetequalrange-stlclr"></a>hash_multiset::equal_range (STL/CLR)
 指定したキーに一致する範囲を検索します。  
@@ -86,12 +81,12 @@ equal_range(L'x') empty = True
  b  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset::count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)   
  [hash_multiset::find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)   

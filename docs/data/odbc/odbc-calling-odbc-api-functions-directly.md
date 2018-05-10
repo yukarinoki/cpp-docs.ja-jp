@@ -1,13 +1,10 @@
 ---
-title: "ODBC: ODBC API を呼び出す関数を直接 |Microsoft ドキュメント"
-ms.custom: 
+title: 'ODBC: ODBC API を呼び出す関数を直接 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55b95c5dd48631f9c724aebd163ce948c3469850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: ODBC API 関数の直接呼び出し
 データベース クラスを提供するシンプルなインターフェイス、[データソース](../../data/odbc/data-source-odbc.md)ODBC よりもします。 その結果、クラスには、すべての ODBC API はカプセル化されません。 クラスの機能の外側にあるすべての機能を直接 ODBC API 関数を呼び出す必要があります。 たとえば、ODBC カタログ関数を呼び出す必要があります (**:: SQLColumns**、 **:: SQLProcedures**、 **:: SQLTables**、およびその他) 直接です。  
@@ -57,5 +52,5 @@ ms.lasthandoff: 12/21/2017
  この手順に加えて、関数の戻り値を確認して、プログラムが完了するために非同期呼び出しの待機していないことを確認する追加の手順を実行する必要があります。 使用して最後の手順を簡略化できます、`AFX_SQL_ASYNC`と`AFX_SQL_SYNC`マクロです。 詳細については、次を参照してください。[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)で、 *『 MFC リファレンス*です。  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の基礎](../../data/odbc/odbc-basics.md)

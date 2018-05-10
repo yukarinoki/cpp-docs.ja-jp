@@ -1,13 +1,10 @@
 ---
-title: "ヘッダー コントロールでのリストのイメージを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: ヘッダー コントロールでのリストのイメージを使用して |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-with-header-controls"></a>ヘッダー コントロールでのイメージ リストの使い方
 ヘッダー項目には、ヘッダー項目内のイメージを表示する機能があります。 関連付けられているイメージ リストに格納された、このイメージは、16 x 16 ピクセルをなり、リスト ビュー コントロールで使用するアイコンの画像と同じ特性を持ちます。 この動作を正常に実装するためにする必要があります最初に作成およびイメージ リストの初期化、リスト コントロールに関連付ける、ヘッダー、およびイメージを表示するヘッダー項目の属性を変更します。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  同じイメージのリストを使用して複数のコントロールを設定することができます。 たとえば、標準のリスト ビュー コントロールでは、可能性があります (16 x 16 ピクセルの画像) のリスト ビュー コントロールの小さいアイコン ビューとリスト ビュー コントロールのヘッダー項目で使用されるイメージ リスト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)
 

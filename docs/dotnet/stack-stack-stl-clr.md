@@ -2,11 +2,8 @@
 title: stack::stack (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack::stack
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - stack member [STL/CLR]
 ms.assetid: f1cfb3fe-4d22-41e5-906b-e8faa0bcde9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a59b353bb6ca1dc55933234c68f39f4b76dd16a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1ed49049a04f41e5a82ba7d25a52ce19c9a4898
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stackstack-stlclr"></a>stack::stack (STL/CLR)
 コンテナー アダプター オブジェクトを構築します。  
@@ -119,12 +114,12 @@ size() = 0
  x x x x x  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/stack >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スタック (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)   
  [stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   

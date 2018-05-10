@@ -1,13 +1,10 @@
 ---
-title: "シリアル化: シリアル化可能なクラスの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'シリアル化: シリアル化可能なクラスの作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb8144f3c83ca98bffa2f95e73eff31ddb89be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-making-a-serializable-class"></a>シリアル化 : シリアル化可能なクラスの作成
 5 つの主要な手順は、クラスをシリアル化可能にする必要があります。 以下に示すされ、次のセクションで説明します。  
@@ -52,10 +47,10 @@ ms.lasthandoff: 12/21/2017
   
  呼び出す場合`Serialize`直接ではなくを通じて、>> と << の演算子[CArchive](../mfc/reference/carchive-class.md)、最後の 3 つの手順はシリアル化に必要ではありません。  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a>CObject からクラスを派生します。  
+##  <a name="_core_deriving_your_class_from_cobject"></a> CObject からクラスを派生します。  
  基本的なシリアル化と機能が定義されて、`CObject`クラスです。 クラスを派生させることにより`CObject`(またはから派生したクラスから`CObject`) クラスの次の宣言に示すように、 `CPerson`、シリアル化のプロトコルとの機能にアクセスできます。`CObject`です。  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a>オーバーライドする、メンバー関数をシリアル化  
+##  <a name="_core_overriding_the_serialize_member_function"></a> オーバーライドする、メンバー関数をシリアル化  
  `Serialize`で定義されているメンバー関数、`CObject`クラス、オブジェクトの現在の状態をキャプチャするために必要なデータを実際にシリアル化します。 `Serialize`関数には、`CArchive`オブジェクトのデータの読み書きに使用される引数。 [CArchive](../mfc/reference/carchive-class.md)オブジェクトがメンバー関数の場合、`IsStoring`を示すかどうか`Serialize`が (データの書き込み) を格納するか、読み込み (データの読み取り)。 結果を使用して`IsStoring`をガイドとしていずれかのデータを挿入するオブジェクトので、`CArchive`挿入演算子を持つオブジェクト (**<\<**) または抽出演算子 (でデータを抽出**>>**).  
   
  派生したクラスを考えます`CObject`型の新しい 2 つのメンバー変数は、`CString`と**WORD**です。 次クラス宣言を示して、新しいメンバー変数とオーバーライドの宣言`Serialize`メンバー関数。  
@@ -74,12 +69,12 @@ ms.lasthandoff: 12/21/2017
   
  使用することも、[読み書きするとき](../mfc/reference/carchive-class.md#read)と[CArchive::Write](../mfc/reference/carchive-class.md#write)大量の型指定されていないデータを読み書きするメンバー関数。  
   
-##  <a name="_core_using_the_declare_serial_macro"></a>DECLARE_SERIAL マクロを使用します。  
+##  <a name="_core_using_the_declare_serial_macro"></a> DECLARE_SERIAL マクロを使用します。  
  `DECLARE_SERIAL`次のように、シリアル化をサポートするクラスの宣言にマクロが必要があります。  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a>引数なしのコンス トラクターを定義します。  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> 引数なしのコンス トラクターを定義します。  
  MFC では、それらが逆シリアル化 (ディスクから読み込まれる) と、オブジェクトを再作成時に既定のコンス トラクターが必要です。 逆シリアル化プロセスは、オブジェクトを再作成に必要な値を持つすべてのメンバー変数を入力します。  
   
  このコンス トラクターは、パブリック、プロテクト、またはプライベートに宣言できます。 加えた場合、プライベート、保護されたまたは、それがのみ使用されることによってシリアル化の関数を確認できます。 コンス トラクターは、必要に応じて削除することを許可する状態オブジェクトを配置する必要があります。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  引数なしのコンス トラクターを使用するクラスを定義するを忘れた場合、`DECLARE_SERIAL`と`IMPLEMENT_SERIAL`マクロ、行に「既定コンス トラクターがない使用可能な」コンパイラの警告が表示されます、`IMPLEMENT_SERIAL`マクロを使用します。  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a>IMPLEMENT_SERIAL マクロを使用して、実装ファイル  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> IMPLEMENT_SERIAL マクロを使用して、実装ファイル  
  `IMPLEMENT_SERIAL`マクロを使用して、さまざまな関数を定義するために必要なときに、シリアル化可能なからクラスを派生`CObject`です。 実装ファイルでこのマクロを使用する (です。CPP) クラス。 マクロの最初の 2 つの引数は、クラスの名前とその直接の基本クラスの名前です。  
   
  このマクロの 3 番目の引数は、スキーマの数です。 スキーマ番号は、本質的に、クラスのオブジェクトのバージョン番号です。 スキーマの数を 0 以上の整数を使用します。 (と混同しないでデータベース用語では、このスキーマ数です。)  
@@ -102,6 +97,6 @@ ms.lasthandoff: 12/21/2017
   
  シリアル化可能なクラスを作成したら、記事に説明したように、クラスのオブジェクトがシリアル化できる[シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シリアル化](../mfc/serialization-in-mfc.md)
 

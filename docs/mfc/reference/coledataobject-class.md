@@ -1,12 +1,9 @@
 ---
-title: "COleDataObject クラス |Microsoft ドキュメント"
-ms.custom: 
+title: COleDataObject クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataObject
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f85a1e6992e8d679401f4e0f97080efcf991446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledataobject-class"></a>COleDataObject クラス
 クリップボードや OLE 埋め込みアイテムからさまざまなフォーマットのデータを取得するときのデータ転送に使用します。クリップボードからデータを取得するときは、ドラッグ アンド ドロップを使用します。  
@@ -82,7 +77,7 @@ class COleDataObject
 |[COleDataObject::Release](#release)|関連付けを解除し、関連付けられた解放`IDataObject`オブジェクト。|  
   
 ## <a name="remarks"></a>コメント  
- `COleDataObject`基本クラスはありません。  
+ `COleDataObject` 基本クラスはありません。  
   
  これらのデータ転送には、ソースおよび変換先が含まれます。 オブジェクトとしてデータ ソースが実装されている、 [COleDataSource](../../mfc/reference/coledatasource-class.md)クラスです。 転送先アプリケーションがドロップされるデータが含まれてまたはのオブジェクト、クリップボードから貼り付け操作の実行を促すメッセージが表示されるたびに、`COleDataObject`クラスを作成する必要があります。  
   
@@ -95,10 +90,10 @@ class COleDataObject
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `COleDataObject`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>  COleDataObject::Attach  
  この関数に関連付けるには、 `COleDataObject` OLE データ オブジェクトを持つオブジェクト。  
   
 ```  
@@ -117,7 +112,7 @@ void Attach(
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Windows SDK に含まれています。  
   
-##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>  COleDataObject::AttachClipboard  
  現在クリップボードにあるデータ オブジェクトをアタッチするには、この関数を呼び出して、`COleDataObject`オブジェクト。  
   
 ```  
@@ -132,7 +127,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  この関数を呼び出すことでは、このデータ オブジェクトが解放されるまでに、クリップボードをロックします。 デストラクターではデータ オブジェクトの解放、`COleDataObject`です。 詳細については、次を参照してください。 [OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048)と[CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Win32 ドキュメントにします。  
   
-##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
+##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats  
  後続の呼び出しを準備するには、この関数を呼び出す`GetNextFormat`項目からのデータ形式の一覧を取得するためです。  
   
 ```  
@@ -146,7 +141,7 @@ void BeginEnumFormats();
   
  詳細については、次を参照してください。 [IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979) Windows SDK に含まれています。  
   
-##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>  COleDataObject::COleDataObject  
  `COleDataObject` オブジェクトを構築します。  
   
 ```  
@@ -159,7 +154,7 @@ COleDataObject();
 > [!NOTE]
 >  ポインターをドラッグ アンド ドロップのハンドラーに渡すパラメーターの 1 つは、 `COleDataObject`、ドラッグ アンド ドロップをサポートするためにこのコンス トラクターを呼び出す必要はありません。  
   
-##  <a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>  COleDataObject::Detach  
  デタッチするには、この関数を呼び出して、`COleDataObject`オブジェクトからのデータ オブジェクトを解放せず、その関連付けられた OLE データ オブジェクト。  
   
 ```  
@@ -171,7 +166,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>  COleDataObject::GetData  
  この関数では、指定された形式で項目からデータを取得します。  
   
 ```  
@@ -199,7 +194,7 @@ BOOL GetData(
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>  COleDataObject::GetFileData  
  作成するには、この関数を呼び出して、`CFile`または`CFile`-派生オブジェクトに指定された形式でデータを取得して、`CFile`ポインター。  
   
 ```  
@@ -228,7 +223,7 @@ CFile* GetFileData(
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>  COleDataObject::GetGlobalData  
  この関数に指定された形式でデータを取得してグローバル メモリ ブロックを割り当てる、`HGLOBAL`です。  
   
 ```  
@@ -252,7 +247,7 @@ HGLOBAL GetGlobalData(
   
  詳細については、次を参照してください。[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)Windows SDK に含まれています。  
   
-##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>  COleDataObject::GetNextFormat  
  この関数では、繰り返しを項目からデータを取得するために使用可能なすべての形式を取得します。  
   
 ```  
@@ -273,7 +268,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  詳細については、次を参照してください。 [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) Windows SDK に含まれています。  
   
-##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
+##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable  
  この関数では、特定の形式が OLE 項目からデータを取得するために使用できるかを判断します。  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)です。  
   
-##  <a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>  COleDataObject::Release  
  所有権を解放するには、この関数を呼び出して、 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)が以前関連付けられているオブジェクト、`COleDataObject`オブジェクト。  
   
 ```  
@@ -312,7 +307,7 @@ void Release();
 ### <a name="remarks"></a>コメント  
  `IDataObject`が関連付けられて、`COleDataObject`を呼び出して**アタッチ**または`AttachClipboard`明示的にまたは framework。 場合、`bAutoRelease`のパラメーター**アタッチ**は**FALSE**、`IDataObject`オブジェクトは解放されません。 この場合、呼び出し元が解放を担当する、`IDataObject`を呼び出して[iunknown::release](http://msdn.microsoft.com/library/windows/desktop/ms682317)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   
  [MFC サンプル OCLIENT](../../visual-cpp-samples.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

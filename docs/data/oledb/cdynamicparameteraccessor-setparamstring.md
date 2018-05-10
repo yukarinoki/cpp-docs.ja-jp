@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicparameteraccessor::setparamstring |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicparameteraccessor::setparamstring |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicParameterAccessor.SetParamString
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - SetParamString method
 ms.assetid: 77a38d23-7e33-4e5a-bda6-c12c4c3fe2e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 11a9436c2e42c9c5f08533f7bfae45e8945575d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0b8c435fea707317c1f8de798796f49cb8b048ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorsetparamstring"></a>CDynamicParameterAccessor::SetParamString
 バッファーに格納され、指定されたパラメーターの文字列データを設定します。  
@@ -62,8 +57,8 @@ bool SetParamString(DBORDINAL nParam,
   
  使用して`SetParamString`をバッファーに文字列パラメーターのデータを設定します。 使用して[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)をバッファーに文字列以外のパラメーターのデータを設定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)

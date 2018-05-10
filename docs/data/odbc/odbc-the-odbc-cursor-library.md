@@ -1,13 +1,10 @@
 ---
-title: "ODBC: ODBC カーソル ライブラリ |Microsoft ドキュメント"
-ms.custom: 
+title: 'ODBC: ODBC カーソル ライブラリ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e57251263738d534b7e7e22ff287607fbc5159a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: ODBC カーソル ライブラリ
 このトピックでは、ODBC カーソル ライブラリについて説明し、その使用方法について説明します。 詳細については次を参照してください:  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  ODBC カーソル ライブラリは、ODBC ドライバー マネージャーとドライバーの間にあるダイナミック リンク ライブラリ (DLL) です。 Odbc では、ドライバーは、レコード セットの位置を追跡するためのカーソルを保持します。 カーソルがスクロール既にレコード セット内の位置をマーク: 現在のレコードです。  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>カーソル ライブラリ、レベル 1 の ODBC ドライバー  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> カーソル ライブラリ、レベル 1 の ODBC ドライバー  
  ODBC カーソル ライブラリは、次の新機能をレベル 1 のドライバーには。  
   
 -   前方と後方スクロールします。 レベル 2 のドライバーでは、スクロール可能なそれらが存在するので、カーソル ライブラリは必要ありません。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  カーソル ライブラリを使用するスナップショット (静的カーソル)、ドライバーによって通常どおりサポートされていない場合でもです。 ドライバーは、既に静的カーソルをサポートする場合は、スナップショットのサポートを受けるカーソル ライブラリを読み込む必要はありません。 カーソル ライブラリを使用する場合は、スナップショットおよび前方スクロール専用レコードのみを使用できます。 場合は、ドライバーは、ダイナセットを使う場合 (KEYSET_DRIVEN カーソル) をサポートし、それらを使用する場合、カーソル ライブラリを使用しないでください。 スナップショットとダイナセットを使う場合の両方を使用する場合は、する必要があります基づかせる 2 つの異なる`CDatabase`オブジェクト (2 つの異なる接続) をドライバーは、両方をサポートしない限り、します。  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a>位置指定更新とタイムスタンプ列  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a> 位置指定更新とタイムスタンプ列  
   
 > [!NOTE]
 >  ODBC データ ソースには、ここで説明するように、MFC ODBC クラス経由でアクセスできます。また、MFC DAO (Data Access Object) クラス経由でもアクセスできます。  
@@ -75,8 +70,8 @@ ms.lasthandoff: 12/21/2017
  2 つ目の問題は、クラスの制限事項[CTime](../../atl-mfc-shared/reference/ctime-class.md)と共に使用すると、`RFX_Date`にまたはテーブルから、日付と時刻の情報を転送する関数。 処理、`CTime`オブジェクトのオーバーヘッドはいくつかのデータ転送中に余分な中間処理の形式でします。 日付の範囲`CTime`オブジェクト可能性がありますも小さすぎる一部のアプリケーションです。 新しいバージョンの`RFX_Date`関数には、ODBC **TIMESTAMP_STRUCT**パラメーターの代わりに、`CTime`オブジェクト。 詳細については、次を参照してください。`RFX_Date`で[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)で、 *『 MFC リファレンス*です。  
 
   
-##  <a name="_core_using_the_cursor_library"></a>カーソル ライブラリを使用します。  
+##  <a name="_core_using_the_cursor_library"></a> カーソル ライブラリを使用します。  
  データ ソースに接続する場合: を呼び出して[cdatabase::openex](../../mfc/reference/cdatabase-class.md#openex)または[cdatabase::open](../../mfc/reference/cdatabase-class.md#open) — データ ソースで、カーソル ライブラリを使用するかどうかを指定できます。 そのデータ ソースでのスナップショットを作成する場合は、指定、**読み込む**オプション、`dwOptions`パラメーターを`OpenEx`指定または**TRUE**の**データ**パラメーターを**開く**(既定値は**TRUE**)。 ODBC ドライバーは、ダイナセットをサポートしている場合を開くには、データ ソースでダイナセットを使う場合は、(ダイナセットを使う場合に必要ないくつかのドライバーの機能を使用)、カーソル ライブラリを使わないでください。 その場合は、指定しない**読み込む**で`OpenEx`かを指定**FALSE**の**データ**パラメーター **を開く**.  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の基礎](../../data/odbc/odbc-basics.md)

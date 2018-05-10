@@ -1,12 +1,9 @@
 ---
-title: "unary_negate (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: unary_negate (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::unary_negate
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 83bbdd86-199c-4451-9f70-72f9ade2264a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 60e7a38ede07a3cf3b1c21b1c5fe26e9f588f2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70ce2872e3e941df11402ccde0cb7a94b132b51c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
 このテンプレート クラスは、ファンクタを記述、呼び出されると、論理を返しますストアドの引数が 1 つファンクタのではありません。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  
@@ -127,10 +122,10 @@ int main()
 1 0  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/機能 >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [not1 (STL/CLR)](../dotnet/not1-stl-clr.md)

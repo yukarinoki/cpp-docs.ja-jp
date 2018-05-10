@@ -1,12 +1,9 @@
 ---
-title: "CDBException クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDBException クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbexception-class"></a>CDBException クラス
 データベース クラスから発生する例外状態を表現します。  
@@ -53,7 +48,7 @@ class CDBException : public CException
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|ODBC が返すエラー コードの観点からエラーを説明する文字列が含まれています。|  
   
 ## <a name="remarks"></a>コメント  
- クラスには、例外の原因を確認または例外を説明するテキスト メッセージを表示するに使用できる 2 つのパブリック データ メンバーが含まれています。 `CDBException`オブジェクトが構築し、データベース クラスのメンバー関数によってスローされます。  
+ クラスには、例外の原因を確認または例外を説明するテキスト メッセージを表示するに使用できる 2 つのパブリック データ メンバーが含まれています。 `CDBException` オブジェクトが構築し、データベース クラスのメンバー関数によってスローされます。  
   
 > [!NOTE]
 >  このクラスは、MFC のオープン データベース コネクティビティ (ODBC) クラスの 1 つです。 代わりに、データ アクセス オブジェクト (DAO) のクラスを使用する場合を使用して[CDaoException](../../mfc/reference/cdaoexception-class.md)代わりにします。 DAO クラスの名前では、プレフィックスとして"CDao"があります。 詳細については、記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)です。  
@@ -71,10 +66,10 @@ class CDBException : public CException
   
  `CDBException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  型の ODBC エラー コードを含む**RETCODE** ODBC アプリケーション プログラミング インターフェイス (API) 関数によって返されます。  
   
 ### <a name="remarks"></a>コメント  
@@ -124,13 +119,13 @@ class CDBException : public CException
   
  SQL プレフィックスが付いたコードは、ODBC によって定義されます。 AFX プレフィックスが付いたコードは、AFXDB で定義されます。H に定義してください。  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
  例外の原因となったエラーを説明する文字列が含まれています。  
   
 ### <a name="remarks"></a>コメント  
  文字列は、英数字の用語でエラーを説明します。 詳細な情報と例についてを参照してください。 **m_strStateNativeOrigin**です。  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  例外の原因となったエラーを説明する文字列が含まれています。  
   
 ### <a name="remarks"></a>コメント  
@@ -153,7 +148,7 @@ class CDBException : public CException
   
  **M_strError**:「無効な列名 'ColName'」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CException クラス](../../mfc/reference/cexception-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CDatabase クラス](../../mfc/reference/cdatabase-class.md)   

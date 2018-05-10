@@ -1,13 +1,10 @@
 ---
-title: "純粋な中間言語へのモードを混在からプロジェクトを変換する |Microsoft ドキュメント"
-ms.custom: 
+title: 純粋な中間言語へのモードを混在からプロジェクトを変換する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>混合モードから純粋な中間言語へのプロジェクトの変換
 すべてのビジュアルの C++ CLR プロジェクトは、既定で C ランタイム ライブラリにリンクします。 その結果、これらのプロジェクトは、ネイティブ コードと、共通言語ランタイム (マネージ コード) を対象とするコードを結合するために、混合モード アプリケーションとして分類されます。 コンパイル時に、中間言語 (IL) とも呼ばれる Microsoft intermediate language (MSIL) にコンパイルします。  
@@ -40,12 +35,12 @@ ms.lasthandoff: 12/21/2017
   
     2.  ソリューション エクスプ ローラーで、プロジェクトを右クリックし、**プロパティ**ショートカット メニューを開くには、アプリケーションのプロパティ ページ。  
   
-    3.  **[詳細設定]**のプロジェクト プロパティ ページ、**リンカー**を選択、**エントリ ポイント**し、入力**Main**このフィールドにします。  
+    3.  **[詳細設定]** のプロジェクト プロパティ ページ、**リンカー**を選択、**エントリ ポイント**し、入力**Main**このフィールドにします。  
   
-    4.  コンソール アプリケーションの場合に、**システム**のプロジェクト プロパティ ページ、**リンカー**を選択、**サブシステム**フィールドし、これを変更**(/コンソールSUBSYSTEM:CONSOLE)**です。  
+    4.  コンソール アプリケーションの場合に、**システム**のプロジェクト プロパティ ページ、**リンカー**を選択、**サブシステム**フィールドし、これを変更 **(/コンソールSUBSYSTEM:CONSOLE)** です。  
   
         > [!NOTE]
-        >  の Windows フォーム アプリケーションには、このプロパティを設定する必要はありません、**サブシステム**にフィールドが設定されている**Windows (/サブシステム: WINDOWS)**既定です。  
+        >  の Windows フォーム アプリケーションには、このプロパティを設定する必要はありません、**サブシステム**にフィールドが設定されている**Windows (/サブシステム: WINDOWS)** 既定です。  
   
     5.  Stdafx.h でコメント アウトすべて、`#include`ステートメントです。 たとえば、コンソール アプリケーションの場合: で  
   
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
         // #include <tchar.h>  
         ```  
   
-    6.  Windows フォーム アプリケーションは、Form1.cpp、コメント アウト用、 `#include` windows.h を参照するステートメント。 例:  
+    6.  Windows フォーム アプリケーションは、Form1.cpp、コメント アウト用、 `#include` windows.h を参照するステートメント。 例えば:  
   
         ```  
         // #include <windows.h>  

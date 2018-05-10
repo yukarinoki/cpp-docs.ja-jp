@@ -1,11 +1,8 @@
 ---
-title: "Platform::details Namespace |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::details Namespace |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Details
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dd178e539da57d0df05440eeb896112d2ce3aa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: aa3de0d0f21c1155e550528287c03ae707f44ea2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details 名前空間
 この名前空間は内部使用のみを意図しており、開発で使用するためのものではありません。  
@@ -41,7 +36,7 @@ namespace Platform {
 ### <a name="members"></a>メンバー  
  この名前空間は内部使用のためのものですが、ブラウザーでこの名前空間の次のメンバーを表示できます。  
   
-|name|コメント|  
+|名前|コメント|  
 |----------|------------|  
 |Console|クラス。 単体テストの出力を表示します。|  
 |_GUID|構造体|  
@@ -59,10 +54,10 @@ namespace Platform {
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Platform`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **メタデータ:** platform.winmd  
   
  **名前空間:** Platform::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)

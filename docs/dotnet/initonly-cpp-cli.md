@@ -1,13 +1,10 @@
 ---
-title: "initonly (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: initonly (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 f1_keywords:
 - initonly_cpp
 - initonly
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a238453c7879cab29f0fa058b654841f0c4786cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49c52c4c17c3e54bfba0ac7188b3300b132213cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 **initonly**をその変数の代入を示す状況依存のキーワードが、同じクラスの静的コンス トラクターまたは宣言の一部としてのみ実行します。  
@@ -50,5 +45,5 @@ ref struct Y1 {
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)

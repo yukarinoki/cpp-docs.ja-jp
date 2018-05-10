@@ -1,13 +1,10 @@
 ---
-title: "WSADATA 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: WSADATA 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WSADATA
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WSADATA structure [MFC]
 ms.assetid: 80cc60e5-f9ae-4290-8ed5-07003136627d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24cfbeb0e917914881587cb70fd345a903a08ecc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93c98f792e1d72d3e6d4a8e15b8347c653b32f46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsadata-structure"></a>WSADATA 構造体
 `WSADATA`への呼び出しによって返される Windows ソケットの初期化情報を格納する構造体が使用される、`AfxSocketInit`グローバル関数。  
@@ -69,10 +64,10 @@ struct WSAData {
 > [!NOTE]
 >  MFC では、`WSADATA`構造がによって返される、`AfxSocketInit`で呼び出すことが、関数、`InitInstance`関数。 構造体を取得でき、そこから後で情報を使用する必要がある場合、プログラムで保存することができます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** winsock2.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)
 

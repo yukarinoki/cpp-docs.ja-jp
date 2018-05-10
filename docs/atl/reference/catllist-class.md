@@ -1,12 +1,9 @@
 ---
-title: "CAtlList クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CAtlList クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlList
@@ -46,17 +43,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d26ba7107e21e64ad65ec53264b4f3740fd13a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bfe961ef3ac02a0ed068b8cc2b74f2a6cce22ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catllist-class"></a>CAtlList クラス
 このクラスは、作成して、リスト オブジェクトを管理するためのメソッドを提供します。  
@@ -124,16 +119,16 @@ class CAtlList
 |[CAtlList::SwapElements](#swapelements)|リスト内の要素をスワップするには、このメソッドを呼び出します。|  
   
 ## <a name="remarks"></a>コメント  
- `CAtlList`クラス順番、または値によってアクセス可能な一意でないオブジェクトの一覧を順序付けがサポートされます。 `CAtlList`リストは、二重リンク リストのように動作します。 各リストには、先頭と末尾、および新しい要素 (または場合によってはリスト) を一覧の先頭または末尾に追加または特定の要素の前後に挿入します。  
+ `CAtlList`クラス順番、または値によってアクセス可能な一意でないオブジェクトの一覧を順序付けがサポートされます。 `CAtlList` リストは、二重リンク リストのように動作します。 各リストには、先頭と末尾、および新しい要素 (または場合によってはリスト) を一覧の先頭または末尾に追加または特定の要素の前後に挿入します。  
   
- ほとんどの`CAtlList`メソッドを使用する位置の値を使用します。 この値は、ここで、要素が格納されていると計算したりしないで直接予測の実際のメモリ位置を参照するメソッドによって使用されます。 アクセスする必要がある場合、  *n*番目の要素の一覧で、メソッド[CAtlList::FindIndex](#findindex)は指定されたインデックスの対応する位置の値を返します。 メソッド[CAtlList::GetNext](#getnext)と[CAtlList::GetPrev](#getprev)リスト内のオブジェクトを反復処理するために使用できます。  
+ ほとんどの`CAtlList`メソッドを使用する位置の値を使用します。 この値は、ここで、要素が格納されていると計算したりしないで直接予測の実際のメモリ位置を参照するメソッドによって使用されます。 アクセスする必要がある場合、 *n*番目の要素の一覧で、メソッド[CAtlList::FindIndex](#findindex)は指定されたインデックスの対応する位置の値を返します。 メソッド[CAtlList::GetNext](#getnext)と[CAtlList::GetPrev](#getprev)リスト内のオブジェクトを反復処理するために使用できます。  
   
  ATL で利用可能なコレクション クラスの詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcoll.h  
   
-##  <a name="addhead"></a>CAtlList::AddHead  
+##  <a name="addhead"></a>  CAtlList::AddHead  
  リストの先頭に要素を追加するには、このメソッドを呼び出します。  
   
 ```
@@ -154,7 +149,7 @@ POSITION AddHead(INARGTYPE element);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
   
-##  <a name="addheadlist"></a>CAtlList::AddHeadList  
+##  <a name="addheadlist"></a>  CAtlList::AddHeadList  
  既存のリストをリストの先頭に追加するには、このメソッドを呼び出します。  
   
 ```
@@ -171,7 +166,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
   
-##  <a name="addtail"></a>CAtlList::AddTail  
+##  <a name="addtail"></a>  CAtlList::AddTail  
  このリストの末尾に要素を追加するには、このメソッドを呼び出します。  
   
 ```
@@ -192,7 +187,7 @@ POSITION AddTail(INARGTYPE element);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
   
-##  <a name="addtaillist"></a>CAtlList::AddTailList  
+##  <a name="addtaillist"></a>  CAtlList::AddTailList  
  このリストの末尾に既存のリストを追加するには、このメソッドを呼び出します。  
   
 ```
@@ -209,7 +204,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
   
-##  <a name="assertvalid"></a>CAtlList::AssertValid  
+##  <a name="assertvalid"></a>  CAtlList::AssertValid  
  このメソッドを呼び出して、一覧が有効であることを確認します。  
   
 ```
@@ -222,7 +217,7 @@ void AssertValid() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
   
-##  <a name="catllist"></a>CAtlList::CAtlList  
+##  <a name="catllist"></a>  CAtlList::CAtlList  
  コンストラクターです。  
   
 ```
@@ -239,7 +234,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
   
-##  <a name="dtor"></a>CAtlList:: ~ CAtlList  
+##  <a name="dtor"></a>  CAtlList:: ~ CAtlList  
  デストラクターです。  
   
 ```
@@ -251,7 +246,7 @@ CAtlList(UINT nBlockSize = 10) throw();
   
  一覧では、呼び出しの後にいくつかの要素もが含まれている場合に、デバッグ ビルドでアサーション エラーが発生`RemoveAll`です。  
   
-##  <a name="find"></a>CAtlList::Find  
+##  <a name="find"></a>  CAtlList::Find  
  指定した要素の一覧を検索するには、このメソッドを呼び出します。  
   
 ```
@@ -274,7 +269,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
   
-##  <a name="findindex"></a>CAtlList::FindIndex  
+##  <a name="findindex"></a>  CAtlList::FindIndex  
  特定のインデックス値、要素の位置を取得するには、このメソッドを呼び出します。  
   
 ```
@@ -289,14 +284,14 @@ POSITION FindIndex(size_t iElement) const throw();
  場合に、対応する位置の値、または NULL を返します`iElement`が範囲外です。  
   
 ### <a name="remarks"></a>コメント  
- このメソッドにアクセスできるように、指定されたインデックス値に対応する位置を返します、  *n*リスト内の th 要素。  
+ このメソッドにアクセスできるように、指定されたインデックス値に対応する位置を返します、 *n*リスト内の th 要素。  
   
  デバッグ ビルドでは、リスト オブジェクトが有効でない場合、アサーションの失敗が発生します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]  
   
-##  <a name="getat"></a>CAtlList::GetAt  
+##  <a name="getat"></a>  CAtlList::GetAt  
  このメソッドを呼び出して、リスト内の指定位置にある要素を返します。  
   
 ```
@@ -321,7 +316,7 @@ const E& GetAt(POSITION pos) const throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::FindIndex](#findindex)です。  
   
-##  <a name="getcount"></a>CAtlList::GetCount  
+##  <a name="getcount"></a>  CAtlList::GetCount  
  このメソッドを呼び出して、一覧にオブジェクトの数を返します。  
   
 ```
@@ -334,7 +329,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::Find](#find)です。  
   
-##  <a name="gethead"></a>CAtlList::GetHead  
+##  <a name="gethead"></a>  CAtlList::GetHead  
  このメソッドを呼び出して、一覧の先頭の要素を返します。  
   
 ```
@@ -355,7 +350,7 @@ const E& GetHead() const throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::AddHead](#addhead)です。  
   
-##  <a name="getheadposition"></a>CAtlList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CAtlList::GetHeadPosition  
  リストの先頭の位置を取得するには、このメソッドを呼び出します。  
   
 ```
@@ -371,7 +366,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CAtlList::GetNext  
+##  <a name="getnext"></a>  CAtlList::GetNext  
  このメソッドを呼び出して、一覧から次の要素を返します。  
   
 ```
@@ -394,7 +389,7 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::GetHeadPosition](#getheadposition)です。  
   
-##  <a name="getprev"></a>CAtlList::GetPrev  
+##  <a name="getprev"></a>  CAtlList::GetPrev  
  このメソッドを呼び出して、リストから直前の要素を返します。  
   
 ```
@@ -417,7 +412,7 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::GetTailPosition](#gettailposition)です。  
   
-##  <a name="gettail"></a>CAtlList::GetTail  
+##  <a name="gettail"></a>  CAtlList::GetTail  
  このメソッドを呼び出して、リストの末尾にある要素を返します。  
   
 ```
@@ -438,7 +433,7 @@ const E& GetTail() const throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::AddTail](#addtail)です。  
   
-##  <a name="gettailposition"></a>CAtlList::GetTailPosition  
+##  <a name="gettailposition"></a>  CAtlList::GetTailPosition  
  リストの末尾の位置を取得するには、このメソッドを呼び出します。  
   
 ```
@@ -454,14 +449,14 @@ POSITION GetTailPosition() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
   
-##  <a name="inargtype"></a>CAtlList::INARGTYPE  
+##  <a name="inargtype"></a>  CAtlList::INARGTYPE  
  要素は入力引数として渡されるときに使用される型。  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="insertafter"></a>CAtlList::InsertAfter  
+##  <a name="insertafter"></a>  CAtlList::InsertAfter  
  指定した位置の後に、リストに新しい要素を挿入するには、このメソッドを呼び出します。  
   
 ```
@@ -484,7 +479,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]  
   
-##  <a name="insertbefore"></a>CAtlList::InsertBefore  
+##  <a name="insertbefore"></a>  CAtlList::InsertBefore  
  指定した位置の前に、の一覧に新しい要素を挿入するには、このメソッドを呼び出します。  
   
 ```
@@ -507,7 +502,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
   
-##  <a name="isempty"></a>CAtlList::IsEmpty  
+##  <a name="isempty"></a>  CAtlList::IsEmpty  
  リストが空であるかを判断するには、このメソッドを呼び出します。  
   
 ```
@@ -520,7 +515,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
   
-##  <a name="movetohead"></a>CAtlList::MoveToHead  
+##  <a name="movetohead"></a>  CAtlList::MoveToHead  
  指定した要素をリストの先頭に移動するには、このメソッドを呼び出します。  
   
 ```
@@ -537,7 +532,7 @@ void MoveToHead(POSITION pos) throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
   
-##  <a name="movetotail"></a>CAtlList::MoveToTail  
+##  <a name="movetotail"></a>  CAtlList::MoveToTail  
  指定した要素をリストの末尾に移動するには、このメソッドを呼び出します。  
   
 ```
@@ -554,7 +549,7 @@ void MoveToTail(POSITION pos) throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::MoveToHead](#movetohead)です。  
   
-##  <a name="removeall"></a>CAtlList::RemoveAll  
+##  <a name="removeall"></a>  CAtlList::RemoveAll  
  一覧からすべての要素を削除するには、このメソッドを呼び出します。  
   
 ```
@@ -567,7 +562,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::IsEmpty](#isempty)です。  
   
-##  <a name="removeat"></a>CAtlList::RemoveAt  
+##  <a name="removeat"></a>  CAtlList::RemoveAt  
  一覧から 1 つの要素を削除するには、このメソッドを呼び出します。  
   
 ```
@@ -586,7 +581,7 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
   
-##  <a name="removehead"></a>CAtlList::RemoveHead  
+##  <a name="removehead"></a>  CAtlList::RemoveHead  
  一覧の先頭の要素を削除するには、このメソッドを呼び出します。  
   
 ```
@@ -602,7 +597,7 @@ E RemoveHead();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]  
   
-##  <a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
+##  <a name="removeheadnoreturn"></a>  CAtlList::RemoveHeadNoReturn  
  値を返さずに、リストの先頭にある要素を削除するには、このメソッドを呼び出します。  
   
 ```
@@ -615,7 +610,7 @@ void RemoveHeadNoReturn() throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::IsEmpty](#isempty)です。  
   
-##  <a name="removetail"></a>CAtlList::RemoveTail  
+##  <a name="removetail"></a>  CAtlList::RemoveTail  
  リストの末尾にある要素を削除するには、このメソッドを呼び出します。  
   
 ```
@@ -631,7 +626,7 @@ E RemoveTail();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
   
-##  <a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
+##  <a name="removetailnoreturn"></a>  CAtlList::RemoveTailNoReturn  
  値を返さずに、リストの末尾にある要素を削除するには、このメソッドを呼び出します。  
   
 ```
@@ -644,7 +639,7 @@ void RemoveTailNoReturn() throw();
 ### <a name="example"></a>例  
  例を参照して[CAtlList::IsEmpty](#isempty)です。  
   
-##  <a name="setat"></a>CAtlList::SetAt  
+##  <a name="setat"></a>  CAtlList::SetAt  
  リスト内の指定位置に要素の値を設定するには、このメソッドを呼び出します。  
   
 ```
@@ -664,7 +659,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
   
-##  <a name="swapelements"></a>CAtlList::SwapElements  
+##  <a name="swapelements"></a>  CAtlList::SwapElements  
  リスト内の要素をスワップするには、このメソッドを呼び出します。  
   
 ```
@@ -684,6 +679,6 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CList クラス](../../mfc/reference/clist-class.md)   
  [クラスの概要](../../atl/atl-class-overview.md)

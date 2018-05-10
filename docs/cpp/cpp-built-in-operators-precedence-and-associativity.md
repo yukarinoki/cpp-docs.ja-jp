@@ -2,11 +2,8 @@
 title: C++ 組み込み演算子、優先順位と結合 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ 組み込み演算子、優先順位と結合規則
 
@@ -70,7 +65,7 @@ C++ 言語には、C のすべての演算子が含まれており、いくつ�
 |[オブジェクトを破棄します。](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[キャスト](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**左から右方向に 4 つの優先順位をグループ化します。**|
-|[ポインター メンバーへの (オブジェクトまたはポインター)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[。 &#42;です。または -> &#42;です。](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[ポインター メンバーへの (オブジェクトまたはポインター)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[.&#42;または ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**左から右方向に 5 つの優先順位をグループ化します。**|
 |[乗算](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[除算](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
@@ -118,7 +113,7 @@ C++ 言語には、C のすべての演算子が含まれており、いくつ�
 |**左から右方向に 18 の優先順位をグループ化します。**|
 |[コンマ](../cpp/comma-operator.md)|[、](../cpp/comma-operator.md)|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [演算子のオーバーロード](operator-overloading.md)
 

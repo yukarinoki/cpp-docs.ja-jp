@@ -1,12 +1,9 @@
 ---
-title: "collection_adapter::key_type (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: collection_adapter::key_type (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::collection_adapter::key_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_type member [STL/CLR]
 ms.assetid: 71ed32b0-af5b-4bac-ae09-2f5d08f0a79b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ef47469e549c262b7c35cac1a8b8e7e7fb6208ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5f5e06b94c2dd81e84f9c02fc91da1d7aab2caf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collectionadapterkeytype-stlclr"></a>collection_adapter::key_type (STL/CLR)
 ディクショナリのキーの型。  
@@ -77,11 +72,11 @@ int main()
 [a 1] [b 2] [c 3]  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext アダプター/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
  [collection_adapter::mapped_type (STL/CLR)](../dotnet/collection-adapter-mapped-type-stl-clr.md)

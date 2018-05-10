@@ -1,12 +1,9 @@
 ---
-title: "関数クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 関数クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleMessageFilter
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea5972a46d6e8d5ff106ddcc1c8692a3cdd8ff3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colemessagefilter-class"></a>関数クラス
 OLE アプリケーション間の相互の要求を同時に管理します。  
@@ -99,10 +94,10 @@ class COleMessageFilter : public CCmdTarget
   
  `COleMessageFilter`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxole.h  
   
-##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
+##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
  この関数では、ビジー状態を開始します。  
   
 ```  
@@ -116,7 +111,7 @@ virtual void BeginBusyState();
   
  既定では、フレームワークの状態にビジー状態で実行される、アイドル状態の処理中に[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)です。 アプリケーションの処理中に**ON_COMMANDUPDATEUI**アイドル処理が完了したら、通知、着信呼び出しが後で、処理されます。  
   
-##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
+##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  
           `COleMessageFilter` オブジェクトを作成します。  
   
@@ -124,7 +119,7 @@ virtual void BeginBusyState();
 COleMessageFilter();
 ```  
   
-##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
+##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog  
  有効にし、保留中のメッセージの遅延時間の有効期限が切れるときに表示されるダイアログ ボックスが無効になります (を参照してください[ビジー](#setretryreply)) OLE 呼び出し中にします。  
   
 ```  
@@ -135,7 +130,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  *bEnableBusy*  
  「ビジー」のダイアログ ボックスを有効または無効になっているかどうかを指定します。  
   
-##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
+##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog  
  有効にし、キーボードまたはマウスのメッセージが保留されている場合に表示される「応答していない」の ダイアログ ボックスを無効にする OLE 中の呼び出しと呼び出しがタイムアウトしました。  
   
 ```  
@@ -146,7 +141,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
  *bEnableNotResponding*  
  「応答していない」のダイアログ ボックスを有効または無効になっているかどうかを指定します。  
   
-##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
+##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState  
  この関数では、ビジー状態を終了します。  
   
 ```  
@@ -160,7 +155,7 @@ virtual void EndBusyState();
   
  既定では、フレームワークの状態にビジー状態で実行される、アイドル状態の処理中に[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)です。 アプリケーションの処理中に`ON_UPDATE_COMMAND_UI`アイドル処理が完了したら、通知の受信呼び出しが処理されます。  
   
-##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
+##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  OLE 呼び出しが進行中は、メッセージを処理するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -179,7 +174,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
   
  呼び出しを使用して、メッセージ フィルターを登録する必要があります[登録](#register)前に、アクティブになることができます。  
   
-##  <a name="register"></a>COleMessageFilter::Register  
+##  <a name="register"></a>  COleMessageFilter::Register  
  OLE システム Dll をメッセージ フィルターを登録します。  
   
 ```  
@@ -194,7 +189,7 @@ BOOL Register();
   
  フレームワークの既定のメッセージ フィルターは自動的に初期化中に登録され、終了時に失効します。  
   
-##  <a name="revoke"></a>COleMessageFilter::Revoke  
+##  <a name="revoke"></a>  COleMessageFilter::Revoke  
  呼び出しによって実行される前の登録では失効[登録](#register)です。  
   
 ```  
@@ -206,7 +201,7 @@ void Revoke();
   
  作成され、フレームワークによって自動的に登録されている、既定のメッセージ フィルターが自動的に失効します。  
   
-##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
+##  <a name="setbusyreply"></a>  COleMessageFilter::SetBusyReply  
  この関数は、アプリケーションの"ビジー状態の応答です。"を設定します。  
   
 ```  
@@ -230,7 +225,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
  ビジー状態の応答は、既定では、 **SERVERCALL_RETRYLATER**です。 この応答は、できるだけ早く呼び出しを再試行する呼び出し側アプリケーションです。  
   
-##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
+##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay  
  これ以上の操作を実行する前に呼び出されたアプリケーションからの応答の呼び出し元のアプリケーションの待機を決定します。  
   
 ```  
@@ -244,7 +239,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ### <a name="remarks"></a>コメント  
  この関数と連携して動作[ビジー](#setretryreply)です。  
   
-##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
+##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply  
  呼び出し先のアプリケーションがビジー状態の応答を受け取ると、呼び出し元のアプリケーションのアクションを決定します。  
   
 ```  
@@ -258,7 +253,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ### <a name="remarks"></a>コメント  
  呼び出し先のアプリケーションでは、ビジー状態であることを示します、ときに、呼び出し元アプリケーションは、サーバーがビジー状態、すぐを再試行するか、指定した時間後に再試行するされなくなるまで待つことができます。 呼び出しをキャンセルすることもできます。  
   
- 呼び出し元の応答は、関数によって制御されます`SetRetryReply`と[SetMessagePendingDelay](#setmessagependingdelay)です。 `SetRetryReply`呼び出し元のアプリケーションが待機、特定の呼び出しの再試行の間隔を決定します。 `SetMessagePendingDelay`さらに操作を実行する前にサーバーからの応答を呼び出し元のアプリケーション待機時間を決定します。  
+ 呼び出し元の応答は、関数によって制御されます`SetRetryReply`と[SetMessagePendingDelay](#setmessagependingdelay)です。 `SetRetryReply` 呼び出し元のアプリケーションが待機、特定の呼び出しの再試行の間隔を決定します。 `SetMessagePendingDelay` さらに操作を実行する前にサーバーからの応答を呼び出し元のアプリケーション待機時間を決定します。  
   
  通常の既定値は許容され、変更する必要はありません。 フレームワークは、呼び出しを再試行すべて`nRetryReply`呼び出しがまたは保留中のメッセージの遅延時間が経過するまで、ミリ秒です。 値 0 を`nRetryReply`を指定、呼び出しのキャンセルの即時再試行、および 1 を指定します。  
   
@@ -268,7 +263,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  ダイアログ ボックスが無効な場合、現在「再試行」の応答は常に使用ビジー状態のアプリケーションへの呼び出し。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)

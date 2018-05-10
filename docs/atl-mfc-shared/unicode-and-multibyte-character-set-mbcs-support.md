@@ -1,12 +1,9 @@
 ---
-title: "Unicode およびマルチバイト文字セット (MBCS) のサポート |Microsoft ドキュメント"
-ms.custom: 
+title: Unicode およびマルチバイト文字セット (MBCS) のサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,14 +18,13 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート
 
@@ -52,7 +48,7 @@ MFC クラス ライブラリ全体は、Unicode 文字とワイド文字に utf
 |MFC*バージョン*U.LIB|MFC*バージョン*U.PDB|MFC*バージョン*U.DLL|MFC*バージョン*UD です。LIB|
 |MFC*バージョン*UD です。PDB ファイル|MFC*バージョン*UD です。DLL|MFCS*バージョン*U.LIB|MFCS*バージョン*U.PDB|
 |MFCS*バージョン*UD です。LIB|MFCS*バージョン*UD です。PDB ファイル|MFCM*バージョン*U.LIB|MFCM*バージョン*U.PDB|
-|MFCM*バージョン*U.DLL|MFCM*バージョン*UD です。LIB|MFCM*バージョン*UD です。PDB ファイル|MFCM*バージョン*UD です。DLL|
+|MFCM*バージョン*U.DLL|MFCM*バージョン*UD です。LIB|MFCM*バージョン*UD です。PDB ファイル|MFCM*version*UD.DLL|
 
 (*バージョン*ファイルのバージョン番号を表す例えば '140' は、バージョン 14.0)。
 
@@ -106,7 +102,7 @@ DBCS では、文字列の中に任意の ANSI の 1 バイト文字と 2 バイ
 
 同様に、`CString`メソッドは、汎用的なデータ型マッピングを使用して実装します。 MFC を使用するには MBCS と Unicode の両方を有効にする、`TCHAR`の`char`または`wchar_t`、`LPTSTR`の`char*`または`wchar_t*`、および`LPCTSTR`の`const char*`または`const wchar_t*`です。 これによって、MBCS または Unicode への正しいマッピングが確保されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
 [文字列操作](../c-runtime-library/string-manipulation-crt.md)  

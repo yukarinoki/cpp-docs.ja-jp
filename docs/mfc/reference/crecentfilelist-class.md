@@ -2,11 +2,8 @@
 title: 関数クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecentfilelist-class"></a>関数クラス
 MRU ファイル リストのコントロールをサポートします。  
@@ -88,10 +83,10 @@ class CRecentFileList
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CRecentFileList`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxadv.h  
   
-##  <a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>  CRecentFileList::Add  
  最近使用した (MRU) ファイルの一覧にファイルを追加します。  
   
 ```  
@@ -137,7 +132,7 @@ void Add(
 ### <a name="remarks"></a>コメント  
  ファイル名を MRU 一覧の先頭に追加されます。 MRU 一覧にファイル名が既に存在する場合は、最上位に移動されます。  
   
-##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList  
  `CRecentFileList` オブジェクトを構築します。  
   
 ```  
@@ -168,7 +163,7 @@ CRecentFileList(
 ### <a name="remarks"></a>コメント  
  書式指定文字列を指す`lpszEntryFormat`"%d"MRU の各項目のインデックスの置換に使用されるを含める必要があります。 たとえば、書式指定文字列は`"file%d"`このという名前を付けると、エントリは`file0`、`file1`のようにします。  
   
-##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  MRU 一覧のメニューの表示で使用するため、MRU ファイル リスト内のファイルの表示名を取得します。  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>コメント  
  ファイルが現在のディレクトリ内にある場合は、関数は、ままディレクトリ表示をオフにします。 ファイル名が長すぎる場合、ディレクトリと拡張機能が削除されています。 しない限り、空の文字列に表示名を設定するファイル名が長すぎても場合、`bAtLeastName`は 0 以外。  
   
-##  <a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>  CRecentFileList::GetSize  
  MRU ファイル リスト内のファイルの数を取得します。  
   
 ```  
@@ -212,7 +207,7 @@ int GetSize() const;
 ### <a name="return-value"></a>戻り値  
  現在のファイルの数は、MRU ファイル リストを最も最近使用します。  
   
-##  <a name="operator_at"></a>CRecentFileList::operator  
+##  <a name="operator_at"></a>  CRecentFileList::operator  
  オーバー ロードされた、添字 ( `[]`) 演算子は、1 つを返します`CString`内の 0 から始まるインデックスによって指定された`nIndex`です。  
   
 ```  
@@ -223,14 +218,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  0 から始まるインデックス、`CString`一連の`CString`s。  
   
-##  <a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>  CRecentFileList::ReadList  
  最近使用した (MRU) からレジストリまたはアプリケーションのファイルの一覧を読み取ります。INI ファイルです。  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>  CRecentFileList::Remove  
  MRU ファイル リストからファイルを削除します。  
   
 ```  
@@ -241,7 +236,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  最近使用した (MRU) ファイルの一覧から削除するファイルの 0 から始まるインデックス。  
   
-##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
  MRU ファイル リストのメニューの表示を更新します。  
   
 ```  
@@ -252,14 +247,14 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)最近使用した (MRU) ファイルのリスト メニューのオブジェクト。  
   
-##  <a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>  CRecentFileList::WriteList  
  最近使用した (MRU) ファイルの一覧に、レジストリまたはアプリケーションを書き込みます。INI ファイルです。  
   
 ```  
 virtual void WriteList();
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)
 
 

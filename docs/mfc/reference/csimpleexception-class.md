@@ -1,12 +1,9 @@
 ---
-title: "CSimpleException クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSimpleException クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimpleexception-class"></a>CSimpleException クラス
 このクラスは、リソース クリティカルな MFC 例外の基底クラスです。  
@@ -55,7 +50,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[CSimpleException::GetErrorMessage](#geterrormessage)|発生したエラーに関するテキストを提供します。|  
   
 ## <a name="remarks"></a>コメント  
- `CSimpleException`リソース クリティカルな MFC 例外の基底クラスと所有権とエラー メッセージの初期化を処理します。 次のクラスを使用して`CSimpleException`その基本クラスとして。  
+ `CSimpleException` リソース クリティカルな MFC 例外の基底クラスと所有権とエラー メッセージの初期化を処理します。 次のクラスを使用して`CSimpleException`その基本クラスとして。  
   
 |||  
 |-|-|  
@@ -76,10 +71,10 @@ class AFX_NOVTABLE CSimpleException : public CException
   
  `CSimpleException`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
  コンストラクターです。  
   
 ```  
@@ -94,7 +89,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>コメント  
  このコンス トラクターを直接呼び出す必要は通常ありません。 例外をスローした関数がのインスタンスを作成する必要があります、 `CException`-クラスを派生し、そのコンス トラクター、または呼び出しが、MFC のいずれかを使用スローすることは、関数など[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、定義済みの型をスローします。  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  発生したエラーに関するテキストを提供するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -120,7 +115,7 @@ virtual BOOL GetErrorMessage(
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CException クラス](../../mfc/reference/cexception-class.md)   
  [例外処理](../../mfc/exception-handling-in-mfc.md)

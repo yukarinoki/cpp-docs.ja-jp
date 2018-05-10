@@ -1,13 +1,10 @@
 ---
-title: "正規の MFC Dll が MFC と動的にリンク |Microsoft ドキュメント"
-ms.custom: 
+title: 正規の MFC Dll が MFC と動的にリンク |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930d56f7bc296225e6fefcf92e49087a2aed99cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e20a3937786d65945256eeadcf0bf08b0314470
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされている標準 MFC Dll
 MFC DLL が MFC と動的にリンク、通常は内部的には、MFC を使用する DLL と、MFC または非 MFC の実行可能ファイルによって、DLL からエクスポートされた関数を呼び出すことができます。 名前について説明します、MFC (MFC の共有バージョンとも呼ばれます) のダイナミック リンク ライブラリのバージョンを使ってこの種の DLL がビルドされます。 通常、関数は、通常、標準の C インターフェイスを使用して MFC DLL からエクスポートします。  
@@ -50,7 +45,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
   
  MFC と動的にリンクされている標準 MFC DLL には、次の要件があります。  
   
--   これらの Dll がコンパイルされる**_AFXDLL** MFC DLL に動的にリンクされている実行可能ファイルと同じように定義されています。 しかし、 **_USRDLL** MFC と静的にリンクされている標準 MFC DLL と同じようにも定義します。  
+-   これらの Dll がコンパイルされる **_AFXDLL** MFC DLL に動的にリンクされている実行可能ファイルと同じように定義されています。 しかし、 **_USRDLL** MFC と静的にリンクされている標準 MFC DLL と同じようにも定義します。  
   
 -   この種類の DLL のインスタンスを作成する必要があります、 `CWinApp`-クラスを派生します。  
   
@@ -108,5 +103,5 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
   
 -   [DLL の一部としての MFC を使用します。](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DLL の種類](../build/kinds-of-dlls.md)

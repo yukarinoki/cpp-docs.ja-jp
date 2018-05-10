@@ -1,12 +1,9 @@
 ---
-title: "|Microsoft ドキュメント"
-ms.custom: 
+title: '|Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDateTimeSpan
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 173ae35f49379bcccf552a105b5615378e7a42cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1941984093879ba22921d19580618ce8caa04b38
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coledatetimespan-class"></a>しかしクラス
 相対的な時間、時間間隔を表します。  
@@ -99,18 +94,18 @@ class COleDateTimeSpan
 |[COleDateTimeSpan::m_status](#m_status)|この状態を含む`COleDateTimeSpan`オブジェクト。|  
   
 ## <a name="remarks"></a>コメント  
- `COleDateTimeSpan`基本クラスはありません。  
+ `COleDateTimeSpan` 基本クラスはありません。  
   
  A`COleDateTimeSpan`日で時間を保持します。  
   
- `COleDateTimeSpan`そのコンパニオン クラスで使用される[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)です。 `COleDateTime`カプセル化、**日付**OLE オートメーションのデータ型。 `COleDateTime`絶対時刻の値を表します。 すべて`COleDateTime`計算が関係`COleDateTimeSpan`値。 これらのクラス間の関係、間に似ています[CTime](../../atl-mfc-shared/reference/ctime-class.md)と[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)です。  
+ `COleDateTimeSpan` そのコンパニオン クラスで使用される[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)です。 `COleDateTime` カプセル化、**日付**OLE オートメーションのデータ型。 `COleDateTime` 絶対時刻の値を表します。 すべて`COleDateTime`計算が関係`COleDateTimeSpan`値。 これらのクラス間の関係、間に似ています[CTime](../../atl-mfc-shared/reference/ctime-class.md)と[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)です。  
   
  詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事を参照して[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** ATLComTime.h  
   
-##  <a name="coledatetimespan_relational_operators"></a>メンバーの関係演算子  
+##  <a name="coledatetimespan_relational_operators"></a>  メンバーの関係演算子  
  比較演算子です。  
   
 ```
@@ -139,7 +134,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]  
   
-##  <a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
+##  <a name="coledatetimespan"></a>  COleDateTimeSpan::COleDateTimeSpan  
  `COleDateTimeSpan` オブジェクトを構築します。  
   
 ```
@@ -158,9 +153,9 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="remarks"></a>コメント  
  新規作成すべてこれらのコンス トラクターの`COleDateTimeSpan`オブジェクトが、指定した値に初期化します。 これらのコンス トラクターのそれぞれの簡単な説明に従います。  
   
-- **メンバーに関するページ ()**構築、`COleDateTimeSpan`を 0 に初期化されるオブジェクト。  
+- **メンバーに関するページ ()** 構築、`COleDateTimeSpan`を 0 に初期化されるオブジェクト。  
   
-- **メンバー (** `dblSpanSrc` **)**構築、`COleDateTimeSpan`浮動小数点値からのオブジェクト。  
+- **メンバー (** `dblSpanSrc` **)** 構築、`COleDateTimeSpan`浮動小数点値からのオブジェクト。  
   
 - **メンバー (** `lDays` **、** `nHours` **、** `nMins` **、** `nSecs` **)** 構築、`COleDateTimeSpan`指定された数値の値に初期化されるオブジェクト。  
   
@@ -171,7 +166,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]  
   
-##  <a name="format"></a>COleDateTimeSpan::Format  
+##  <a name="format"></a>  COleDateTimeSpan::Format  
  書式設定された文字列表現を生成、`COleDateTimeSpan`オブジェクト。  
   
 ```
@@ -189,7 +184,7 @@ CString Format(UINT nID) const;
   
 - **%S**現在の時間 (秒)  
   
-- **%%**パーセント記号  
+- **%%** パーセント記号  
   
  上に示した 4 つの形式のコードは、形式が許容する唯一のコードです。  
   
@@ -215,7 +210,7 @@ CString Format(UINT nID) const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]  
   
-##  <a name="getdays"></a>COleDateTimeSpan::GetDays  
+##  <a name="getdays"></a>  COleDateTimeSpan::GetDays  
  この日付、期間値の日の部分を取得します。  
   
 ```
@@ -247,7 +242,7 @@ LONG GetDays() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]  
   
-##  <a name="gethours"></a>COleDateTimeSpan::GetHours  
+##  <a name="gethours"></a>  COleDateTimeSpan::GetHours  
  この日付、期間値の時間部分を取得します。  
   
 ```
@@ -279,7 +274,7 @@ LONG GetHours() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]  
   
-##  <a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
+##  <a name="getminutes"></a>  COleDateTimeSpan::GetMinutes  
  この日付、期間値の分の部分を取得します。  
   
 ```
@@ -311,7 +306,7 @@ LONG GetMinutes() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]  
   
-##  <a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
+##  <a name="getseconds"></a>  COleDateTimeSpan::GetSeconds  
  この日付、期間値の 2 番目の部分を取得します。  
   
 ```
@@ -343,7 +338,7 @@ LONG GetSeconds() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]  
   
-##  <a name="getstatus"></a>COleDateTimeSpan::GetStatus  
+##  <a name="getstatus"></a>  COleDateTimeSpan::GetStatus  
  状態を取得します (有効) この`COleDateTimeSpan`オブジェクト。  
   
 ```
@@ -384,7 +379,7 @@ enum DateTimeSpanStatus{
   
  境界の詳細については`COleDateTimeSpan`、値は、記事を参照して[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)です。  
   
-##  <a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays  
+##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays  
  日数で表されるこの日付、期間値を取得します。  
   
 ```
@@ -416,7 +411,7 @@ double GetTotalDays() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]  
   
-##  <a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
+##  <a name="gettotalhours"></a>  COleDateTimeSpan::GetTotalHours  
  時間単位で表すこの日付、期間値を取得します。  
   
 ```
@@ -448,7 +443,7 @@ double GetTotalHours() const throw();
 ### <a name="example"></a>例  
  例を参照して[誤差](#gettotaldays)です。  
   
-##  <a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes  
+##  <a name="gettotalminutes"></a>  COleDateTimeSpan::GetTotalMinutes  
  分数で表されるこの日付、期間値を取得します。  
   
 ```
@@ -480,7 +475,7 @@ double GetTotalMinutes() const throw();
 ### <a name="example"></a>例  
  例を参照して[誤差](#gettotaldays)です。  
   
-##  <a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds  
+##  <a name="gettotalseconds"></a>  COleDateTimeSpan::GetTotalSeconds  
  この日付、期間値 (秒) を取得します。  
   
 ```
@@ -512,7 +507,7 @@ double GetTotalSeconds() const throw();
 ### <a name="example"></a>例  
  例を参照して[誤差](#gettotaldays)です。  
   
-##  <a name="m_span"></a>COleDateTimeSpan::m_span  
+##  <a name="m_span"></a>  COleDateTimeSpan::m_span  
  基になる**二重**値`COleDateTime`オブジェクト。  
   
 ```
@@ -525,7 +520,7 @@ double m_span;
 > [!CAUTION]
 >  値を変更、**二重**データ メンバーがこの値を変更`COleDateTimeSpan`オブジェクト。 この状態は変更されません`COleDateTimeSpan`オブジェクト。  
   
-##  <a name="m_status"></a>COleDateTimeSpan::m_status  
+##  <a name="m_status"></a>  COleDateTimeSpan::m_status  
  このデータ メンバーの型は列挙型**DateTimeSpanStatus**、内で定義されている、`COleDateTimeSpan`クラスです。  
   
 ```
@@ -565,7 +560,7 @@ enum DateTimeSpanStatus{
   
  境界の詳細については`COleDateTimeSpan`、値は、記事を参照して[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)です。  
   
-##  <a name="operator_eq"></a>COleDateTimeSpan::operator =  
+##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =  
  コピー、`COleDateTimeSpan`値。  
   
 ```
@@ -575,7 +570,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 ### <a name="remarks"></a>コメント  
  このオーバー ロードされた代入演算子は、これにソースの日付、期間値をコピー`COleDateTimeSpan`オブジェクト。  
   
-##  <a name="operator_add_-"></a>COleDateTimeSpan::operator +、-  
+##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +、-  
  追加、減算、および符号を変更`COleDateTimeSpan`値。  
   
 ```
@@ -596,7 +591,7 @@ COleDateTimeSpan operator-() const throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]  
   
-##  <a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operator + =、=  
+##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator + =、=  
  加算および減算、`COleDateTimeSpan`値からこの`COleDateTimeSpan`値。  
   
 ```
@@ -614,7 +609,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]  
   
-##  <a name="operator_double"></a>二重 COleDateTimeSpan::operator  
+##  <a name="operator_double"></a>  二重 COleDateTimeSpan::operator  
  この変換`COleDateTimeSpan`値を**二重**です。  
   
 ```
@@ -624,7 +619,7 @@ operator double() const throw();
 ### <a name="remarks"></a>コメント  
  この演算子は、この値を返します`COleDateTimeSpan`日数の浮動小数点数としての値。  
   
-##  <a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan  
+##  <a name="setdatetimespan"></a>  COleDateTimeSpan::SetDateTimeSpan  
  この日付、期間値の値を設定します。  
   
 ```
@@ -657,7 +652,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]  
   
-##  <a name="setstatus"></a>COleDateTimeSpan::SetStatus  
+##  <a name="setstatus"></a>  COleDateTimeSpan::SetStatus  
  これの状態 (有効) に設定`COleDateTimeSpan`オブジェクト。  
   
 ```
@@ -693,7 +688,7 @@ enum DateTimeSpanStatus{
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)   
  [CTime クラス](../../atl-mfc-shared/reference/ctime-class.md)   
  [CTimeSpan クラス](../../atl-mfc-shared/reference/ctimespan-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsDialog クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CWinFormsDialog クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog クラス
 Windows フォーム ユーザー コントロールをホストする MFC ダイアログ クラスのラッパーです。  
@@ -68,20 +63,20 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>パブリック演算子  
   
-|name||  
+|名前||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|置換[CWinFormsDialog::GetControl](#getcontrol)式でします。|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows フォーム ユーザー コントロールへの参照として型をキャストします。|  
   
 ## <a name="remarks"></a>コメント  
- `CWinFormsDialog`MFC ダイアログ クラスのラッパーです ( [CDialog](../../mfc/reference/cdialog-class.md))、Windows フォーム ユーザー コントロールをホストします。 これにより、モーダルまたはモードレスの MFC ダイアログ ボックスで .NET Framework のコントロールを表示できます。  
+ `CWinFormsDialog` MFC ダイアログ クラスのラッパーです ( [CDialog](../../mfc/reference/cdialog-class.md))、Windows フォーム ユーザー コントロールをホストします。 これにより、モーダルまたはモードレスの MFC ダイアログ ボックスで .NET Framework のコントロールを表示できます。  
   
  Windows フォームを使用する方法については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)と[MFC ダイアログ ボックスとして Windows フォーム ユーザー コントロールをホストしている](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwinforms.h  
   
-##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
  `CWinFormsDialog` オブジェクトを構築します。  
   
 ```  
@@ -92,7 +87,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  ダイアログ ボックスのテンプレート リソースの ID が含まれています。 ダイアログ テンプレートを作成し、アプリケーションのリソース スクリプト ファイルに保存するには、ダイアログ エディターを使用します。 ダイアログ テンプレートの詳細については、次を参照してください。 [CDialog クラス](../../mfc/reference/cdialog-class.md)です。  
   
-##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  Windows フォーム ユーザー コントロールへの参照を取得します。  
   
 ```  
@@ -102,7 +97,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>戻り値  
  MFC ダイアログ ボックスで、Windows フォーム コントロールへの参照を返します。  
   
-##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
  Windows フォーム ユーザー コントロールのウィンドウ ハンドルを取得します。  
   
 ```  
@@ -112,7 +107,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>戻り値  
  Windows フォーム ユーザー コントロールには、ウィンドウ ハンドルを返します。  
   
-##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  Windows フォーム ユーザー コントロールのホストを作成して、MFC ダイアログ ボックスを初期化します。  
   
 ```  
@@ -127,7 +122,7 @@ virtual BOOL OnInitDialog();
   
  ダイアログ ボックスが初期化されたときに、特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 このメソッドを使用する方法については、次を参照してください。 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)です。  
   
-##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  置換[CWinFormsDialog::GetControl](#getcontrol)式でします。  
   
 ```  
@@ -139,7 +134,7 @@ inline TManagedControl^  operator->() const throw();
   
  Windows フォームの使用方法の詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
   
-##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  Windows フォーム ユーザー コントロールへの参照として型をキャストします。  
   
 ```  
@@ -149,7 +144,7 @@ inline operator TManagedControl^() const throw();
 ### <a name="remarks"></a>コメント  
  この演算子は、Windows フォーム コントロールへの参照として型をキャストします。 渡すために使用されます、`CWinFormsDialog<TManagedControl>`ダイアログ ボックスで、Windows フォーム ユーザー コントロールのオブジェクトへのポインターを受け取る関数をします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CWnd クラス](../../mfc/reference/cwnd-class.md)   
  [CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)   
  [CDialog クラス](../../mfc/reference/cdialog-class.md)

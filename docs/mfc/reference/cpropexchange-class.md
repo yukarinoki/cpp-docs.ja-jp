@@ -1,12 +1,9 @@
 ---
-title: "CPropExchange クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CPropExchange クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>CPropExchange クラス
 OLE コントロールの永続性の実装をサポートします。  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|プロパティがされているかどうかを示すから保存またはコントロールに読み込まれます。|  
   
 ## <a name="remarks"></a>コメント  
- `CPropExchange`基本クラスはありません。  
+ `CPropExchange` 基本クラスはありません。  
   
  プロパティの exchange の方向とコンテキストを確立します。  
   
@@ -78,17 +73,17 @@ class AFX_NOVTABLE CPropExchange
   
  フレームワークがこれにポインターを渡します`CPropExchange`オブジェクトをコントロールの`DoPropExchange`関数。 目的のコントロールのコントロールのスターター ファイルを作成するウィザードを使用した場合`DoPropExchange`関数呼び出し`COleControl::DoPropExchange`です。 基本クラスのバージョンを交換コントロールのストック プロパティです。コントロールに追加した exchange プロパティに、派生クラスのバージョンを変更します。  
   
- `CPropExchange`コントロールのプロパティをシリアル化または負荷またはコントロールの作成時にコントロールのプロパティを初期化するために使用します。 `ExchangeProp`と`ExchangeFontProp`のメンバー関数は`CPropExchange`にプロパティを格納し、別のメディアからそれらを読み込むことができます。  
+ `CPropExchange` コントロールのプロパティをシリアル化または負荷またはコントロールの作成時にコントロールのプロパティを初期化するために使用します。 `ExchangeProp`と`ExchangeFontProp`のメンバー関数は`CPropExchange`にプロパティを格納し、別のメディアからそれらを読み込むことができます。  
   
  使用する方法についての`CPropExchange`、記事を参照して[MFC ActiveX コントロール: プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CPropExchange`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  バイナリ ラージ オブジェクト (BLOB) データを格納するプロパティをシリアル化します。  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  関数は、 **CArchivePropExchange::ExchangeBlobProp**、 **CResetPropExchange::ExchangeBlobProp**、および**CPropsetPropExchange::ExchangeBlobProp**オーバーライドこの純粋仮想関数。  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  記憶域メディアとコントロールの間でのフォント プロパティを交換します。  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  関数は、 **CArchivePropExchange::ExchangeFontProp**、 **CResetPropExchange::ExchangeFontProp**、および**CPropsetPropExchange::ExchangeFontProp**オーバーライドこの純粋仮想関数。  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  コントロールとファイルのプロパティを交換します。  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  関数は、 **CArchivePropExchange::ExchangePersistentProp**、 **CResetPropExchange::ExchangePersistentProp**、および**CPropsetPropExchange::ExchangePersistentProp**純粋仮想関数をオーバーライドします。  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  記憶域メディアとコントロールの間でプロパティを交換します。  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  関数は、 **CArchivePropExchange::ExchangeProp**、 **CResetPropExchange::ExchangeProp**、および**CPropsetPropExchange::ExchangeProp**この純粋なオーバーライド仮想関数。  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  バージョン番号の永続化を処理するためにフレームワークによって呼び出されます。  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合は 0 以外。それ以外の場合は 0 です。  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  コントロールのバージョン番号を取得するには、この関数を呼び出します。  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>戻り値  
  コントロールのバージョン番号。  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  プロパティの交換が非同期的に行うかどうかを判断します。  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>戻り値  
  プロパティは TRUE を返しますが FALSE では非同期、交換されます。  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  プロパティがされているかどうかを判断するには、この関数を呼び出すコントロールに読み込みまたはそこから保存します。  
   
 ```  
@@ -275,9 +270,9 @@ BOOL IsLoading();
 ### <a name="return-value"></a>戻り値  
  プロパティが読み込まれる場合は 0 以外。それ以外の場合 0 を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
- [使って](../../mfc/reference/colecontrol-class.md#dopropexchange)
+ [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
 
 
 

@@ -2,11 +2,8 @@
 title: map::begin (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::begin
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - begin member [STL/CLR]
 ms.assetid: a909d278-6214-4e11-984d-509fa528bfa3
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 77113ca16dd2c3676162c7e5f7ed12991cc7f5fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1af211b6909b8ff42caf46084a6d00f49bdf8240
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapbegin-stlclr"></a>map::begin (STL/CLR)
 被制御シーケンスの先頭を指定します。  
@@ -78,11 +73,11 @@ int main()
 *++begin() = [b 2]  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップ (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)

@@ -1,12 +1,9 @@
 ---
-title: "CEnumeratorAccessor クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CEnumeratorAccessor クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CEnumeratorAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CEnumeratorAccessor class
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b3efe610e53d591f17d3ce227c6dbc09f0e23ce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bb071f47eb7079c8de63da47ee0d837f44442c1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor クラス
 によって使用される[CEnumerator](../../data/oledb/cenumerator-class.md)列挙子の行セットからデータにアクセスします。  
@@ -54,9 +49,9 @@ class CEnumeratorAccessor
 ## <a name="remarks"></a>コメント  
  この行セットは、データ ソースと現在の列挙子から見えるの列挙子で構成されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

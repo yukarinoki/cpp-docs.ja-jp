@@ -1,29 +1,24 @@
 ---
-title: "スケジューラ ポリシー |Microsoft ドキュメント"
-ms.custom: 
+title: スケジューラ ポリシー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>スケジューラ ポリシー
 このドキュメントでは、同時実行ランタイム スケジューラ ポリシーの役割について説明します。 A*スケジューラ ポリシー*スケジューラがタスクを管理するときに使用する方法を制御します。 たとえば、一部のタスクで実行を必要とするアプリケーション`THREAD_PRIORITY_NORMAL`およびその他のタスクで実行する`THREAD_PRIORITY_HIGHEST`です。  2 つのスケジューラ インスタンスを作成することができます: いずれかを指定する、`ContextPriority`ポリシーが`THREAD_PRIORITY_NORMAL`もう 1 つを同じポリシーを指定する`THREAD_PRIORITY_HIGHEST`です。  
@@ -43,12 +38,12 @@ ms.lasthandoff: 12/21/2017
   
 |ポリシー キー|説明|既定値|  
 |----------------|-----------------|-------------------|  
-|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype)タスクのスケジュール設定に使用するスレッドの種類を指定する値。|`ThreadScheduler`(通常のスレッドを使用)。 これは、このキーの唯一の有効な値です。|  
+|`SchedulerKind`|A [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype)タスクのスケジュール設定に使用するスレッドの種類を指定する値。|`ThreadScheduler` (通常のスレッドを使用)。 これは、このキーの唯一の有効な値です。|  
 |`MaxConcurrency`|`unsigned int`スケジューラが使用する同時実行リソースの最大数を指定する値。|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
 |`MinConcurrency`|`unsigned int`スケジューラが使用する同時実行リソースの最小数を指定する値。|`1`|  
 |`TargetOversubscriptionFactor`|`unsigned int`処理の各リソースに割り当てるスレッドの数を指定する値。|`1`|  
 |`LocalContextCacheSize`|`unsigned int`各仮想プロセッサのローカル キューでキャッシュできるコンテキストの最大数を指定する値。|`8`|  
-|`ContextStackSize`|`unsigned int` (キロバイト単位)、各コンテキスト用に予約するスタックのサイズを指定する値。|`0`(既定のスタック サイズを使用)|  
+|`ContextStackSize`|`unsigned int` (キロバイト単位)、各コンテキスト用に予約するスタックのサイズを指定する値。|`0` (既定のスタック サイズを使用)|  
 |`ContextPriority`|`int`各コンテキストのスレッドの優先度を指定する値。 これに渡すことができる任意の値を指定できます[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)または`INHERIT_THREAD_PRIORITY`です。|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`|A [concurrency::SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype)を使用するスケジューリング アルゴリズムを指定する値です |。`EnhanceScheduleGroupLocality`|  
@@ -65,9 +60,9 @@ ms.lasthandoff: 12/21/2017
  使用して、 [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-class.md#getpolicy)と[concurrency::Scheduler::GetPolicy](reference/scheduler-class.md#getpolicy)スケジューラ ポリシーのコピーを取得するメソッド。 これらのメソッドから受信したポリシー値スケジューラを作成するときに指定するポリシー値と異なることができます。  
   
 ## <a name="example"></a>例  
- スケジューラの動作を制御する特定のスケジューラ ポリシーを使用する例を検証するを参照してください[する方法: 特定のスケジューラ ポリシーの指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)と[する方法: エージェントを使用して特定のスケジューラ ポリシーを作成します。](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
+ スケジューラの動作を制御する特定のスケジューラ ポリシーを使用する例を検証するを参照してください[する方法: 特定のスケジューラ ポリシーの指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)と[する方法: エージェントを使用して特定のスケジューラ ポリシーを作成します](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [方法: 特定のスケジューラ ポリシーを指定します。](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
  [方法: 特定のスケジューラ ポリシーを使用するエージェントを作成する](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

@@ -1,13 +1,10 @@
 ---
-title: "ActiveX コントロール コンテナー: ダイアログではないコンテナーでコントロールの使用 |Microsoft ドキュメント"
-ms.custom: 
+title: 'ActiveX コントロール コンテナー: ダイアログではないコンテナーでコントロールの使用 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c380d0a525c2f026054ebae1812450c4d4634c1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16264e9b072d27349d4375bd7c04d5bbac1be597
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX コントロール コンテナー : ダイアログ ベースではないコンテナーでのコントロールの使用
 一部の SDI などのアプリケーションまたは MDI アプリケーションでは、アプリケーションのウィンドウにコントロールを埋め込むされます。 **作成**、Visual C によって挿入された、ラッパー クラスのメンバー関数はダイアログ ボックスがなくても、コントロールのインスタンスを動的に作成できます。  
@@ -74,6 +69,6 @@ ms.lasthandoff: 12/21/2017
   
 5.  プロジェクトをリビルドします。 Circ コントロールは、アプリケーションのビューが作成されるたびに動的に作成されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
 

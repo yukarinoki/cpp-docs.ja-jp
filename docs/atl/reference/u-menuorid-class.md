@@ -1,12 +1,9 @@
 ---
-title: "_U_MENUorID クラス |Microsoft ドキュメント"
-ms.custom: 
+title: _U_MENUorID クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID クラス
 このクラスのラッパーを提供する**CreateWindow**と**について**です。  
@@ -64,17 +59,17 @@ class _U_MENUorID
   
  2 つのコンス トラクター オーバー ロードがクラスで定義: 1 つを受け入れる、 **UINT**引数で、もう一方を受け入れる、`HMENU`引数。 **UINT**引数にキャスト、`HMENU`コンス トラクターと、クラスの 1 つのデータ メンバーに格納されている結果[m_hMenu](#_u_menuorid__m_hmenu)です。 引数、`HMENU`コンス トラクターは変換せずに直接格納します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlwin.h  
   
-##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
  クラスでは、渡された値をそのコンス トラクターのいずれかとしてパブリック`HMENU`データ メンバーです。  
   
 ```
 HMENU m_hMenu;
 ```  
   
-##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
  **UINT**引数にキャスト、`HMENU`コンス トラクターと、クラスの 1 つのデータ メンバーに格納されている結果[m_hMenu](#_u_menuorid__m_hmenu)です。  
   
 ```
@@ -92,5 +87,5 @@ _U_MENUorID(HMENU hMenu);
 ### <a name="remarks"></a>コメント  
  引数、`HMENU`コンス トラクターは変換せずに直接格納します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

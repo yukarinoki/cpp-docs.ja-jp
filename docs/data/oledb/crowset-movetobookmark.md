@@ -1,12 +1,9 @@
 ---
-title: "Crowset::movetobookmark |Microsoft ドキュメント"
-ms.custom: 
+title: Crowset::movetobookmark |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CRowset::MoveToBookmark
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - MoveToBookmark method
 ms.assetid: 90124723-8daf-4692-ae2f-0db26b5db920
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 81109bf910f24ab2d0cc4d49023537baafdf70c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f638f928c9fee0383e5ed50cd4b3dd547ad4939
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
 ブックマークまたは指定されたオフセット位置の行でマークされた行がフェッチされます (`lSkip`) そのブックマークからです。  
@@ -60,10 +55,10 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
  コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[を使用してブックマーク](../../data/oledb/using-bookmarks.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRowset クラス](../../data/oledb/crowset-class.md)   
  [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
  [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   

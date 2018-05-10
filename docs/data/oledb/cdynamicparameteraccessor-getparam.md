@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicparameteraccessor::getparam |Microsoft ドキュメント"
-ms.custom: 
+title: Cdynamicparameteraccessor::getparam |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDynamicParameterAccessor::GetParam
@@ -21,18 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - GetParam method
 ms.assetid: 893a6bf8-7b55-4f6d-8a10-a43b13be7f56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 61d1a15cd148120914e22a566da45f579fdd72ae
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3596cf8fc445a5607c008be687c44cafb713049b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorgetparam"></a>CDynamicParameterAccessor::GetParam
 パラメーターのバッファーから、指定したパラメーターに文字列以外のデータを取得します。  
@@ -69,8 +64,8 @@ void* GetParam(TCHAR* pParamName) const throw();
   
  使用して`GetParam`バッファーから文字列以外のパラメーターのデータを取得します。 使用して[GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)バッファーから文字列パラメーターのデータを取得します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)

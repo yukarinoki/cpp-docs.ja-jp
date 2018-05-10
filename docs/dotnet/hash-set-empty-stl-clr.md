@@ -1,12 +1,9 @@
 ---
-title: "hash_set::empty (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_set::empty (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::empty
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - empty member [STL/CLR]
 ms.assetid: 7843eb9a-067b-4339-8637-5401b637c6d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 55a4e11157d6dab79a9d1feddd2d03deec32e281
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c94ce396ffaadb2374c34cb224ecbe6d0692a735
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetempty-stlclr"></a>hash_set::empty (STL/CLR)
 要素が存在しないかどうかをテストします。  
@@ -79,11 +74,11 @@ size() = 0
 empty() = True  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)

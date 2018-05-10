@@ -1,12 +1,9 @@
 ---
-title: "Cmanualaccessor::createaccessor |Microsoft ドキュメント"
-ms.custom: 
+title: Cmanualaccessor::createaccessor |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CManualAccessor::CreateAccessor
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateAccessor method
 ms.assetid: 594c8d6d-b49a-4818-a9a5-81c8115d4e42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 44b9edf987baf9ff2470ed536a1c657025766f23
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 93f3094c28efe519903fcc2418d26e0111d945a4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmanualaccessorcreateaccessor"></a>CManualAccessor::CreateAccessor
 列バインド構造体のメモリを割り当て、列のデータ メンバーを初期化します。  
@@ -59,9 +54,9 @@ HRESULT CreateAccessor(int nBindEntries,
 ## <a name="remarks"></a>コメント  
  呼び出す前に、この関数を呼び出して、`CManualAccessor::AddBindEntry`関数。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CManualAccessor クラス](../../data/oledb/cmanualaccessor-class.md)   
  [DBViewer サンプル](../../visual-cpp-samples.md)

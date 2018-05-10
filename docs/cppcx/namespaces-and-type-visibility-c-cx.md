@@ -1,24 +1,19 @@
 ---
-title: "名前空間と型の可視性 (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: 名前空間と型の可視性 (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 07b48d0464dfc36f671f6566ce45894aca76cbc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 名前空間は、関連する機能を持つ型をグループ化し、ライブラリ内での名前の衝突を回避するための、標準の C++ 構造体です。 Windows ランタイムの型システムでは、独自のコードも含み、すべてのパブリックの Windows ランタイム型を名前空間スコープで名前空間で宣言する必要がある必要があります。 パブリック型をグローバル スコープで宣言したり、別のクラスの中に入れ子にしたりすると、コンパイル時エラーが発生します。  
@@ -60,5 +55,5 @@ ms.lasthandoff: 02/14/2018
 |Platform::Collections|Windows ランタイム コレクションのインターフェイスを実装する具体的なコレクション クラスが含まれます`IVector`、`IMap`のようにします。 これらの型は、platform.winmd ではなく、ヘッダー ファイル、collection.h で定義されます。|  
 |Platform::Details|コンパイラによって使用され、パブリックでの使用を意図されていない型を格納します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム (C++/CX)](../cppcx/type-system-c-cx.md)

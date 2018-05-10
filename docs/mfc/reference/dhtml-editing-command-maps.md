@@ -1,27 +1,22 @@
 ---
-title: "DHTML 編集コマンド マップ |Microsoft ドキュメント"
-ms.custom: 
+title: DHTML 編集コマンド マップ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7eba41005864e2389997a75855eaf955ad18b557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69630d00b09534d97d5e46a8400b73f0e9d85b24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 DHTML 編集コマンドをマップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 それらの使用例は、次を参照してください。 [HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
@@ -38,7 +33,7 @@ DHTML 編集コマンドをマップに次のマクロを使用できる[CHtmlEd
 |[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|HTML 編集コマンドとユーザー インターフェイス要素にコマンド ID を割り当てます。|  
 |[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|HTML コマンド、メッセージ ハンドラー、およびユーザー インターフェイス要素を編集するには、コマンド ID を割り当てます。|  
   
-##  <a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP  
+##  <a name="declare_dhtmlediting_cmdmap"></a>  DECLARE_DHTMLEDITING_CMDMAP  
  クラスで DHTML 編集コマンド マップを宣言します。  
   
 ```  
@@ -57,10 +52,10 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxhtml.h  
   
-##  <a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP  
+##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP  
  DHTML 編集コマンド マップ、クラス内での定義を開始します。  
   
 ```  
@@ -76,10 +71,10 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
   
  場所、`BEGIN_DHTMLEDITING_CMDMAP`クラスの実装 (.cpp) ファイル内のマクロが続く[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)にマップするクラスは、コマンドのマクロ (からの変更など、 **ID_EDIT_CUT** に**IDM_CUT**)。 使用して、 [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)マクロ イベント マップの終わりをマークします。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxhtml.h  
   
-##  <a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP  
+##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP  
  DHTML 編集コマンド マップの最後をマークします。  
   
 ```  
@@ -92,10 +87,10 @@ END_DHTMLEDITING_CMDMAP()
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY  
+##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY  
  HTML 編集コマンドをコマンド ID を割り当てます。  
   
 ```  
@@ -112,10 +107,10 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC  
+##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC  
  コマンド ID を HTML 編集コマンドとメッセージ ハンドラーにマップします。  
   
 ```  
@@ -135,10 +130,10 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE  
+##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE  
  HTML 編集コマンドとユーザー インターフェイス要素にコマンド ID を割り当てます。  
   
 ```  
@@ -158,10 +153,10 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxhtml.h  
   
-##  <a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
+##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
  HTML コマンド、メッセージ ハンドラー、およびユーザー インターフェイス要素を編集するには、コマンド ID を割り当てます。  
   
 ```  
@@ -184,8 +179,8 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxhtml.h  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

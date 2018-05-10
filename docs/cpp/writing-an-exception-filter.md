@@ -1,29 +1,24 @@
 ---
-title: "例外フィルターの記述 |Microsoft ドキュメント"
-ms.custom: 
+title: 例外フィルターの記述 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>例外フィルターの記述
 例外は、例外ハンドラーのレベルにジャンプするか、実行を続けるかのいずれかにより、処理できます。 例外とフォール スルーを処理する例外ハンドラーのコードを使用する代わりに使用することができます*フィルター*問題をクリーンアップし、-1 を返すことによってスタックを消去しないで標準フローを再開します。  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  内の関数呼び出しを使用することをお勧め、*フィルター*式されるたびに*フィルター*複雑な何もする必要があります。 式を評価すると、関数 (この場合、`Eval_Exception`) が実行されます。  
   
- 使用に注意してください[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)例外を確認します。 この関数は、フィルター自体の内部で呼び出す必要があります。 `Eval_Exception`呼び出すことはできません**GetExceptionCode**、例外コードを渡す必要がありますが、します。  
+ 使用に注意してください[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)例外を確認します。 この関数は、フィルター自体の内部で呼び出す必要があります。 `Eval_Exception` 呼び出すことはできません**GetExceptionCode**、例外コードを渡す必要がありますが、します。  
   
  このハンドラーは、例外が整数または浮動小数点数のオーバーフローでなければ、他のハンドラーに制御を渡します。 オーバーフローがあった場合、ハンドラーは関数 (`ResetVars` は一例で、API 関数ではありません) を呼び出して、いくつかのグローバル関数をリセットします。 *ステートメント ブロック 2*、ために、この例では空を実行しないことができます`Eval_Exception`exception_execute_handler (1)。  
   
@@ -90,6 +85,6 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外ハンドラーの記述](../cpp/writing-an-exception-handler.md)   
  [構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

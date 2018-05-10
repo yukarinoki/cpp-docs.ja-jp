@@ -1,25 +1,23 @@
 ---
-title: "コンパイラ オプションをアルファベット順 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ オプションをアルファベット順 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -60,13 +58,14 @@ ms.lasthandoff: 02/28/2018
 |[/Fo](fo-object-file-name.md)|オブジェクト ファイルを作成します。|
 |[/fp](fp-specify-floating-point-behavior.md)|浮動小数点の動作を指定します。|
 |[/Fp](fp-name-dot-pch-file.md)|プリコンパイル済みヘッダー ファイルの名前を指定します。|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|ブラウザー ファイルを生成します。 **/Fr** は使用されなくなりました。|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|ブラウザー ファイルを生成します。 
+  **/Fr** は非推奨とされました。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|プログラム データベース (PDB) ファイルへの書き込みを MSPDBSRV.EXE によりシリアル化します。|
 |[/FU](fu-name-forced-hash-using-file.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡された場合と同じ方法でファイル名の使用を強制します。|
 |[/Fx](fx-merge-injected-code.md)|挿入されたコードをソース ファイルとマージします。|
 |[/GA](ga-optimize-for-windows-application.md)|Windows アプリケーション用にコードを最適化します。|
 |[/Gd](gd-gr-gv-gz-calling-convention.md)|`__cdecl` 呼び出し規約を使用します (x86 のみ)。|
-|[/Ge](ge-enable-stack-probes.md)|使用しないでください。 スタック プローブをアクティブにします。|
+|[/Ge](ge-enable-stack-probes.md)|非推奨。 スタック プローブをアクティブにします。|
 |[/GF](gf-eliminate-duplicate-strings.md)|文字列プールを有効にします。|
 |[/GH](gh-enable-pexit-hook-function.md)|フック関数 `_pexit`を呼び出します。|
 |[/Gh](gh-enable-penter-hook-function.md)|フック関数 `_penter`を呼び出します。|
@@ -80,11 +79,11 @@ ms.lasthandoff: 02/28/2018
 |[/guard:cf](guard-enable-control-flow-guard.md)|制御フロー ガードのセキュリティ チェックを追加します。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 呼び出し規約を使用します。 (x86 と x64 のみ)。|
 |[/Gw](gw-optimize-global-data.md)|プログラム全体のグローバル データの最適化を有効にします。|
-|[/GX](gx-enable-exception-handling.md)|使用しないでください。 同期例外処理を有効にします。 使用して[/EH](eh-exception-handling-model.md)代わりにします。|
+|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用して[/EH](eh-exception-handling-model.md)代わりにします。|
 |[/Gy](gy-enable-function-level-linking.md)|関数レベルのリンクを有効にします。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|使用しないでください。 同じ[/RTC1](rtc-run-time-error-checks.md)です。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 同じ[/RTC1](rtc-run-time-error-checks.md)です。|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 呼び出し規約を使用します (x86 のみ)。|
-|[/H](h-restrict-length-of-external-names.md)|使用しないでください。 外部名 (パブリック名) の長さを制限します。|
+|[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
 |[/HELP](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 これは、 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] コンパイラ (ネイティブ コンパイルおよびクロス コンパイル) だけで使用されるコンパイラ オプションです。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|ホットパッチ可能なイメージを作成します。|
@@ -105,7 +104,7 @@ ms.lasthandoff: 02/28/2018
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|コードを最速化します。|
 |[/Ob](ob-inline-function-expansion.md)|関数のインライン展開を制御します。|
 |[/Od](od-disable-debug.md)|最適化を無効にします。|
-|[/Og](og-global-optimizations.md)|使用しないでください。 グローバル最適化を使用します。|
+|[/Og](og-global-optimizations.md)|非推奨。 グローバル最適化を使用します。|
 |[/Oi](oi-generate-intrinsic-functions.md)|組み込み関数を生成します。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|ソース コードで [#pragma omp](../../preprocessor/omp.md) を有効にします。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|実行可能ファイルで、サイズの小ささを優先させます。|
@@ -115,7 +114,7 @@ ms.lasthandoff: 02/28/2018
 |[/P](p-preprocess-to-a-file.md)|プリプロセッサ出力をファイルに書き込みます。|
 |[/permissive-](permissive-standards-conformance.md)|標準準拠モードを設定します。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|高速超越関数を生成します。|
-|[/QIfist](qifist-suppress-ftol.md)|使用しないでください。 浮動小数点型から整数型への変換が必要なときに、 `_ftol` を呼び出しません (x86 のみ)。|
+|[/QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型への変換が必要なときに、 `_ftol` を呼び出しません (x86 のみ)。|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|`fwait` ブロックの中にある `try` コマンドを削除します。|
 |[/Qpar (自動並行化)](qpar-auto-parallelizer.md)|[#pragma loop()](../../preprocessor/loop.md) ディレクティブでマークされているループの自動並列化を有効にします。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|浮動小数点値の整数移動命令を使用し、特定の浮動小数点読み込み最適化を無効にします。|
@@ -132,7 +131,7 @@ ms.lasthandoff: 02/28/2018
 |[/U](u-u-undefine-symbols.md)|1 つの定義済みマクロを削除します。|
 |[/u](u-u-undefine-symbols.md)|すべての定義済みマクロを削除します。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|セットのソースおよび実行の文字は、utf-8 を設定します。|
-|[/V](v-version-number.md)|使用しないでください。 .obj ファイル バージョン文字列を設定します。|
+|[/V](v-version-number.md)|非推奨。 .obj ファイル バージョン文字列を設定します。|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|互換性のある文字のみ utf-8 ファイルを検証します。|
 |[/vd](vd-disable-construction-displacements.md)|隠し vtordisp クラス メンバーの無効と有効を切り替えます。|
 |[/vmb](vmb-vmg-representation-method.md)|メンバーへのポインターに対して、最適なクラスを使用します。|
@@ -143,7 +142,7 @@ ms.lasthandoff: 02/28/2018
 |[/volatile](volatile-volatile-keyword-interpretation.md)|volatile キーワードの解釈方法を選択します。|
 |[/w](compiler-option-warning-level.md)|すべての警告を無効にします。|
 |[/W0、/W1、/W2、/W3、/W4](compiler-option-warning-level.md)|出力する警告レベルを設定します。|
-|[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|指定した警告の警告レベルを設定します。|
+|[/w1、/w2、/w3、/w4](compiler-option-warning-level.md)|指定した警告の警告レベルを設定します。|
 |[/Wall](compiler-option-warning-level.md)|既定で無効にされた警告も含めてすべての警告を有効にします。|
 |[/wd](compiler-option-warning-level.md)|指定した警告を無効にします。|
 |[/we](compiler-option-warning-level.md)|指定した警告をエラーとして扱います。|
@@ -155,13 +154,13 @@ ms.lasthandoff: 02/28/2018
 |[/X](x-ignore-standard-include-paths.md)|標準のインクルード ディレクトリを無視します。|
 |[/Y-](y-ignore-precompiled-header-options.md)|現在のビルドで、他のすべてのプリコンパイル済みヘッダー コンパイラ オプションを無視します。|
 |[/Yc](yc-create-precompiled-header-file.md)|プリコンパイル済みヘッダー ファイルを作成します。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|使用しないでください。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用して[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用して[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|デバッグ ライブラリの作成時に PCH の参照を挿入します。|
 |[/Yu](yu-use-precompiled-header-file.md)|ビルド時にプリコンパイル済みヘッダー ファイルを使用します。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|C 7.0 互換のデバッグ情報を生成します。|
 |[/Za](za-ze-disable-language-extensions.md)|言語拡張機能を無効にします。|
 |[/Zc](zc-conformance.md)|標準的な動作を指定[/Ze](za-ze-disable-language-extensions.md).[/Za、/Ze (言語拡張を無効にする)](za-ze-disable-language-extensions.md)|
-|[/Ze](za-ze-disable-language-extensions.md)|使用しないでください。 言語拡張機能を有効にします。|
+|[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
 |[/Zf](zf.md)|並行ビルドで生成時刻 PDB が向上します。|
 |[/Zg](zg-generate-function-prototypes.md)|Visual C++ 2015 では削除されています。 関数プロトタイプを生成します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。|
@@ -172,5 +171,5 @@ ms.lasthandoff: 02/28/2018
 |[/Zs](zs-syntax-check-only.md)|構文だけをチェックします。|
 |[/ZW](zw-windows-runtime-compilation.md)|Windows ランタイムで実行する出力ファイルを作成します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [C/C++ ビルドのリファレンス](c-cpp-building-reference.md)[コンパイラ オプション](compiler-options.md)[コンパイラ オプションの設定](setting-compiler-options.md)

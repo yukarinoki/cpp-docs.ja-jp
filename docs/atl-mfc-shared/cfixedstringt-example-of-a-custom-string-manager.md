@@ -1,40 +1,35 @@
 ---
-title: "CFixedStringT: 例、カスタム文字列マネージャーの |Microsoft ドキュメント"
-ms.custom: 
+title: 'CFixedStringT: 例、カスタム文字列マネージャーの |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7164d2313f5610d1d7e56f5449c81ea9e2282981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f841124fd12497fdb4dd4b813de2d803e43ff60b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: 例のカスタム文字列マネージャー
-クラスによって使用されるカスタム文字列マネージャーの一例を実装する、ATL ライブラリ[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)という**CFixedStringMgr**です。 `CFixedStringT`派生した[CStringT](../atl-mfc-shared/reference/cstringt-class.md)の一部としてその文字データを割り当てる文字列を実装して、`CFixedStringT`オブジェクト自体が、文字列で指定された長さよりも小さい場合に限り、 **t_nChars**テンプレート パラメーター`CFixedStringT`です。 この方法で、文字列必要はありませんヒープ、文字列の長さが固定バッファーのサイズを超えない限り、します。 `CFixedStringT`限りませんを使用して、文字列データを割り当てるヒープを使用できません**CAtlStringMgr**その文字列マネージャーとして。 カスタム文字列マネージャーを使用して (**CFixedStringMgr**)、実装、 [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)インターフェイスです。 このインターフェイスは、後ほど[マネージャーの実装、カスタム文字列 (高度な方法)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)です。  
+クラスによって使用されるカスタム文字列マネージャーの一例を実装する、ATL ライブラリ[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)という**CFixedStringMgr**です。 `CFixedStringT` 派生した[CStringT](../atl-mfc-shared/reference/cstringt-class.md)の一部としてその文字データを割り当てる文字列を実装して、`CFixedStringT`オブジェクト自体が、文字列で指定された長さよりも小さい場合に限り、 **t_nChars**テンプレート パラメーター`CFixedStringT`です。 この方法で、文字列必要はありませんヒープ、文字列の長さが固定バッファーのサイズを超えない限り、します。 `CFixedStringT`限りませんを使用して、文字列データを割り当てるヒープを使用できません**CAtlStringMgr**その文字列マネージャーとして。 カスタム文字列マネージャーを使用して (**CFixedStringMgr**)、実装、 [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)インターフェイスです。 このインターフェイスは、後ほど[マネージャーの実装、カスタム文字列 (高度な方法)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)です。  
   
  コンス トラクター **CFixedStringMgr**は 3 つのパラメーターを受け取ります。  
   
--   **pData:**固定へのポインター`CStringData`構造を使用します。  
+-   **pData:** 固定へのポインター`CStringData`構造を使用します。  
   
--   **文字数:**文字の最大数、`CStringData`構造体に格納できます。  
+-   **文字数:** 文字の最大数、`CStringData`構造体に格納できます。  
   
--   **pMgr:**へのポインター、 `IAtlStringMgr` 「バックアップ文字列マネージャー」のインターフェイス  
+-   **pMgr:** へのポインター、 `IAtlStringMgr` 「バックアップ文字列マネージャー」のインターフェイス  
   
  コンス トラクターの値を格納する`pData`と**pMgr**内の各メンバー変数 (`m_pData`と**m_pMgr**)。 値がゼロに固定バッファーと、参照カウントを-1 の最大サイズに等しい長さの使用可能なバッファーの長さを設定します。 参照カウントの値は、バッファーがロックされていることを示しますのこのインスタンスを使用して**CFixedStringMgr**文字列マネージャーとして。  
   
@@ -65,9 +60,9 @@ ms.lasthandoff: 12/21/2017
   
  固定バッファーが、使用されていないときに**CFixedStringMgr**長さが 0 でそれが初期化されていることを確認します。 これにより、nil の文字列として使用することができます。 追加の利点として、`nAllocLength`固定バッファーのメンバーは常に固定バッファー全体のサイズに設定します。 つまり、`CStringT`呼び出さずに文字列を拡大できる[IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate)nil の文字列の場合でも、します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** cstringt.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CStringT によるメモリ管理](../atl-mfc-shared/memory-management-with-cstringt.md)
 

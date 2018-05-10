@@ -2,12 +2,9 @@
 title: 混合、純粋、および検証可能な機能の比較 (C + + CLI) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4ac2356fbe12af53890e8159484b89150b60945
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 201f2eb0979857713848a8c381ef0a31ba179c41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>混合、純粋、および確認可能の各機能の比較 (C++/CLI)
 このトピックは、別の機能を比較 **/clr**コンパイル モード。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 04/20/2018
   
 |機能|混合 (/clr)|純粋 (/clr:pure)|安全な (//clr:safe)|関連情報|  
 |-------------|---------------------|-------------------------|-------------------------|-------------------------|  
-|CRT ライブラリ|サポートされています。|非推奨||[カテゴリ別の universal C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)|  
+|CRT ライブラリ|サポートされています。|非推奨||[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)|  
 |MFC/ATL|サポートされています。|||[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md) &#124; [クラスの概要](../atl/atl-class-overview.md)|  
 |アンマネージ関数|サポートされています。|||[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)|  
 |アンマネージ データ|サポートされています。|非推奨||[純粋なコードと検証可能なコード (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  

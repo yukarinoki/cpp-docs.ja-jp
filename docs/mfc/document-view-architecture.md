@@ -1,13 +1,10 @@
 ---
-title: "ドキュメント/ビュー アーキテクチャ |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメント/ビュー アーキテクチャ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c595b78b17ed00691533369ec4837345fcce03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9554af9443bbd6a6394789343294630104c96f1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documentview-architecture"></a>ドキュメント/ビュー アーキテクチャ
 既定では、MFC アプリケーション ウィザードは、アプリケーションのスケルトンをドキュメント クラスとビュー クラスを作成します。 MFC には、これら 2 つのクラスにデータの管理が分離されます。 ドキュメントは、データを格納およびデータ印刷の管理および、データの複数のビューの更新を調整します。 ビューは、データを表示し、選択や編集でのユーザー操作を管理します。  
@@ -95,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [サンプル](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)   
  [Windows](../mfc/windows.md)   
  [フレーム ウィンドウ](../mfc/frame-windows.md)   

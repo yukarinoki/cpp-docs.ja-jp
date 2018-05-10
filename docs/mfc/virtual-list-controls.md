@@ -1,13 +1,10 @@
 ---
-title: "仮想リスト コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: 仮想リスト コントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>仮想リスト コントロール
 仮想リスト コントロールがリスト ビュー コントロールを持つ、 **LVS_OWNERDATA**スタイル。 このスタイルに最大項目数をサポートするために制御を有効にする`DWORD`(既定のアイテム数だけまでの`int`)。 ただし、このスタイルで指定された最大の利点は、任意の時点で、メモリ内のデータ項目のサブセットをのみが機能です。 これにより、場所データにアクセスする方法が既に定められて貸与すること自体については、大規模なデータベースで使用するために仮想のリスト ビュー コントロール。  
@@ -43,15 +38,15 @@ ms.lasthandoff: 12/21/2017
   
  ハンドラーで、 **LVN_GETDISPINFO**通知メッセージをどのような種類の情報が要求されているかを確認する必要があります。 次の値を指定できます。  
   
--   `LVIF_TEXT``pszText`メンバーを入力する必要があります。  
+-   `LVIF_TEXT` `pszText`メンバーを入力する必要があります。  
   
--   `LVIF_IMAGE``iImage`メンバーを入力する必要があります。  
+-   `LVIF_IMAGE` `iImage`メンバーを入力する必要があります。  
   
 -   **LVIF_INDENT** 、 *iIndent*メンバーを入力する必要があります。  
   
--   `LVIF_PARAM`*LParam*メンバーを入力する必要があります。 (存在しないのサブ項目です。)  
+-   `LVIF_PARAM` *LParam*メンバーを入力する必要があります。 (存在しないのサブ項目です。)  
   
--   `LVIF_STATE`*状態*メンバーを入力する必要があります。  
+-   `LVIF_STATE` *状態*メンバーを入力する必要があります。  
   
  どのような情報をフレームワークに戻す要求を指定する必要があります。  
   
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  リスト ビュー コントロールから提供された情報に一致する項目の検索を準備する必要があります。 一致する項目が見つからない場合は、成功した場合、項目のインデックスを返す必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CListCtrl の使い方](../mfc/using-clistctrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

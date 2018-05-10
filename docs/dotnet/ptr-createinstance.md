@@ -2,11 +2,8 @@
 title: ptr::CreateInstance |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.CreateInstance
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::CreateInstance
 ms.assetid: 9e8e4c4c-1651-4839-8829-5857d74470fe
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d764d18f3148dba663e1e6796c44a0add6aa8109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd4ba56b92150046b986f2b101f6a004c114bf28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 内の COM オブジェクトのインスタンスを作成、`com::ptr`です。  
@@ -86,7 +81,7 @@ void CreateInstance(
  新しく作成されたオブジェクトを管理するコードを実行するコンテキスト。 値がから取得されます、`CLSCTX`列挙します。 場合`cls_context`が指定されていない値 CLSCTX_ALL が使用されます。  
   
  `rclsid`  
- `CLSID`データとオブジェクトの作成に使用されるコードに関連付けられています。  
+ `CLSID` データとオブジェクトの作成に使用されるコードに関連付けられています。  
   
 ## <a name="exceptions"></a>例外  
  場合、 `com::ptr` COM オブジェクトへの参照が既に所有して`CreateInstance`スロー<xref:System.InvalidOperationException>です。  
@@ -94,7 +89,7 @@ void CreateInstance(
  この関数が呼び出す`CoCreateInstance`を使用して<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>エラーに変換する`HRESULT`適切な例外にします。  
   
 ## <a name="remarks"></a>コメント  
- `CreateInstance`使用して`CoCreateInstance`ProgID または CLSID のいずれかを識別する、指定したオブジェクトの新しいインスタンスを作成します。 `com::ptr`新しく作成されたオブジェクトを参照し、自動的に破棄後に所有しているすべての参照を解放します。  
+ `CreateInstance` 使用して`CoCreateInstance`ProgID または CLSID のいずれかを識別する、指定したオブジェクトの新しいインスタンスを作成します。 `com::ptr`新しく作成されたオブジェクトを参照し、自動的に破棄後に所有しているすべての参照を解放します。  
   
 ## <a name="example"></a>例  
  この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 クラスのコンス トラクターの 2 つの異なる形式を使用して`CreateInstance`ProgID または CLSID に加えて、CLSCTX からドキュメント オブジェクトを作成します。  
@@ -146,10 +141,10 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー ファイル** \<msclr\com\ptr.h >  
   
  **Namespace** msclr::com  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ptr のメンバー](../dotnet/ptr-members.md)

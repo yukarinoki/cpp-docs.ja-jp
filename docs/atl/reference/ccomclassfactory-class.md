@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactory クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CComClassFactory クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af57c666cf2ee452d2707045d259ada695a2848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a144f4ff9902a633933ae556df872a9d55a5409
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory クラス
 このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイスです。  
@@ -51,7 +46,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|メモリ内のクラス ファクトリをロックします。|  
   
 ## <a name="remarks"></a>コメント  
- `CComClassFactory`実装する、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイスで、特定の CLSID のオブジェクトを作成するだけでなく、クラス ファクトリをより迅速に作成する新しいオブジェクトを許可するメモリ内のロックのメソッドが含まれます。 **IClassFactory** CLSID 割り当てるして、システム レジストリを登録するすべてのクラスに実装する必要があります。  
+ `CComClassFactory` 実装する、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイスで、特定の CLSID のオブジェクトを作成するだけでなく、クラス ファクトリをより迅速に作成する新しいオブジェクトを許可するメモリ内のロックのメソッドが含まれます。 **IClassFactory** CLSID 割り当てるして、システム レジストリを登録するすべてのクラスに実装する必要があります。  
   
  ATL オブジェクトから派生することで、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)です。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言`CComClassFactory`既定のクラス ファクトリとして。 この既定をオーバーライドするには、いずれかを指定、 `DECLARE_CLASSFACTORY` *XXX*クラスの定義でマクロです。 たとえば、 [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)マクロは、クラス ファクトリの指定したクラスを使用します。  
   
@@ -67,10 +62,10 @@ class CComClassFactory
   
 - [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)使用[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)を構築する 1 つ[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)オブジェクト。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory::CreateInstance  
  指定された CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイス ポインターを取得します。  
   
 ```
@@ -90,8 +85,8 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>戻り値  
  標準の `HRESULT` 値。  
   
-##  <a name="lockserver"></a>CComClassFactory::LockServer  
- インクリメントおよびデクリメントはモジュールのロックを呼び出すことによってカウント**_Module::Lock**と**_Module::Unlock**、それぞれします。  
+##  <a name="lockserver"></a>  CComClassFactory::LockServer  
+ インクリメントおよびデクリメントはモジュールのロックを呼び出すことによってカウント **_Module::Lock**と **_Module::Unlock**、それぞれします。  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -109,7 +104,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  呼び出す`LockServer`クライアントを複数のオブジェクトをすばやく作成できるように、クラス ファクトリを保持できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [クラスの概要](../../atl/atl-class-overview.md)

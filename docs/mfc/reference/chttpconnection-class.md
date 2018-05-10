@@ -1,12 +1,9 @@
 ---
-title: "CHttpConnection クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CHttpConnection クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection クラス
 HTTP サーバーへの接続を管理します。  
@@ -46,8 +41,7 @@ class CHttpConnection : public CInternetConnection
   
 |名前|説明|  
 |----------|-----------------|  
-|[CHttpConnection::CHttpConnection](#chttpconnection)|
-          `CHttpConnection` オブジェクトを作成します。|  
+|[CHttpConnection::CHttpConnection](#chttpconnection)|`CHttpConnection` オブジェクトを作成します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
@@ -67,14 +61,14 @@ class CHttpConnection : public CInternetConnection
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
- [関数](../../mfc/reference/cinternetconnection-class.md)  
+ [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
  このメンバー関数は構築するために、`CHttpConnection`オブジェクト。  
   
 ```  
@@ -139,7 +133,7 @@ CHttpConnection(
 ### <a name="remarks"></a>コメント  
  作成することはありません、`CHttpConnection`直接です。 呼び出してオブジェクトを作成する代わりに、[代わりに](../../mfc/reference/cinternetsession-class.md#gethttpconnection)です。  
   
-##  <a name="openrequest"></a>しないで  
+##  <a name="openrequest"></a>  しないで  
  このメンバー関数を呼び出して HTTP 接続を開きます。  
   
 ```  
@@ -216,7 +210,7 @@ CHttpFile* OpenRequest(
   
  この関数では例外がスローされる場合があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数クラス](../../mfc/reference/cinternetconnection-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [関数クラス](../../mfc/reference/cinternetconnection-class.md)   

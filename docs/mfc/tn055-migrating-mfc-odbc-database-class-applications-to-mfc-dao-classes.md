@@ -1,13 +1,10 @@
 ---
-title: "TN055: MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN055: MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>テクニカル ノート 55: MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-ベース)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-ベース)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*`RFX_Date`関数がに基づいて`CTime`と**TIMESTAMP_STRUCT**です。  
+ \*    `RFX_Date`関数がに基づいて`CTime`と**TIMESTAMP_STRUCT**です。  
   
  可能性があります、アプリケーションに影響し、複数の単純な名前の変更を必要とする機能に大きな変更は次のとおりです。  
   
@@ -114,12 +109,12 @@ ms.lasthandoff: 12/21/2017
   
 -   例外クラスが変更されました。 **CDBExceptions** ODBC クラス内でスローされると**CDaoExceptions** DAO クラスでします。  
   
--   `RFX_Date`使用して`CTime`と**TIMESTAMP_STRUCT**オブジェクトを少し**DFX_Date**使用`COleDateTime`です。 `COleDateTime`とほぼ同じ`CTime`、8 バイト OLE に基づきますが、**日付**4 バイトではなく`time_t`データのはるかに大きい範囲を保持できるようにします。  
+-   `RFX_Date` 使用して`CTime`と**TIMESTAMP_STRUCT**オブジェクトを少し**DFX_Date**使用`COleDateTime`です。 `COleDateTime`とほぼ同じ`CTime`、8 バイト OLE に基づきますが、**日付**4 バイトではなく`time_t`データのはるかに大きい範囲を保持できるようにします。  
   
     > [!NOTE]
     >  DAO (`CDaoRecordset`) スナップショットは、ODBC の中に読み取り専用 (`CRecordset`) スナップショットが、ドライバーと ODBC カーソル ライブラリの使用によって更新可能な可能性があります。 カーソル ライブラリを使用している場合`CRecordset`スナップショットは更新可能です。 ODBC カーソル ライブラリが、デスクトップ ドライバー パック 3.0 から Microsoft ドライバーのいずれかを使用している場合、`CRecordset`スナップショットは読み取り専用です。 別のドライバーを使用している場合は、かどうかをドライバーのドキュメントを確認します。 スナップショット (**STATIC_CURSORS**) は読み取り専用です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

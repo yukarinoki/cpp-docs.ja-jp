@@ -1,13 +1,10 @@
 ---
-title: "-Fp (名前です。Pch ファイル) |Microsoft ドキュメント"
-ms.custom: 
+title: -Fp (名前です。Pch ファイル) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-name-pch-file"></a>/Fp (.pch ファイルの名前の指定)
 プリコンパイル済みヘッダーの既定のパス名を使用する代わりに、パス名を提供します。  
@@ -44,11 +39,11 @@ ms.lasthandoff: 12/21/2017
 > **/Fp**_パス名_  
   
 ## <a name="remarks"></a>コメント  
- このオプションを使用して[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)または[/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)プリコンパイル済みヘッダーの既定のパス名を使用する代わりに、パス名を指定します。 使用することも**/Fp**で**/Yc**とは異なるプリコンパイル済みヘッダー ファイルの使用を指定する、 **/Yc***filename*引数とソース ファイルの基本名です。  
+ このオプションを使用して[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)または[/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)プリコンパイル済みヘッダーの既定のパス名を使用する代わりに、パス名を指定します。 使用することも **/Fp**で **/Yc**とは異なるプリコンパイル済みヘッダー ファイルの使用を指定する、**/Yc * * * ファイル名*引数とソース ファイルのベース名から。  
   
  パス名の一部として、拡張機能を指定しないと、拡張子を .pch と見なされます。 ファイル名のないディレクトリを指定すると、既定のファイル名が VC*x*0. pch 場所*x*メジャー バージョンの Visual C の使用中です。  
   
- 使用することも、 **/Fp**オプションは**/Yu**です。  
+ 使用することも、 **/Fp**オプションは **/Yu**です。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -78,7 +73,7 @@ CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)   
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
  [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   

@@ -2,26 +2,21 @@
 title: スマート ポインター (Modern C) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 7d532a693414fee7845c45fd548b7513ed99b38d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="smart-pointers-modern-c"></a>スマート ポインター (Modern C++)
 標準ライブラリに含まれる最新の C++ プログラミングで*スマート ポインター*メモリの解放は確実にプログラムを使用する、およびリソースのリークし例外セーフです。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 04/06/2018
  これらのスマート ポインターは、Plain Old C++ Object (POCO) にポインターをカプセル化する最初のオプションとして使用します。  
   
 -   `unique_ptr`   
-     基になるポインターの所有者は、厳密に 1 人許可されます。 `shared_ptr` が必要であることがわかっている場合を除き、POCO の既定のオプションとして使用します。 新しい所有者に移動できますが、コピーおよび共有することはできません。 廃止された `auto_ptr` を置き換えます。 `boost::scoped_ptr` に相当します。 `unique_ptr` 小さく効率的です。サイズが 1 つのポインターと高速な挿入および C++ 標準ライブラリ コレクションから取得するために右辺値参照をサポートします。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[する方法: unique_ptr インスタンスを作成して](../cpp/how-to-create-and-use-unique-ptr-instances.md)と[unique_ptr クラス](../standard-library/unique-ptr-class.md)です。  
+     基になるポインターの所有者は、厳密に 1 人許可されます。 `shared_ptr` が必要であることがわかっている場合を除き、POCO の既定のオプションとして使用します。 新しい所有者に移動できますが、コピーおよび共有することはできません。 非推奨とされた `auto_ptr` を置き換えます。 `boost::scoped_ptr` に相当します。 `unique_ptr` 小さく効率的です。サイズが 1 つのポインターと高速な挿入および C++ 標準ライブラリ コレクションから取得するために右辺値参照をサポートします。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[する方法: unique_ptr インスタンスを作成して](../cpp/how-to-create-and-use-unique-ptr-instances.md)と[unique_ptr クラス](../standard-library/unique-ptr-class.md)です。  
   
 -   `shared_ptr`   
      参照カウント スマート ポインターです。 複数の所有者に 1 個の生のポインターなどを割り当てる場合に使用します。たとえば、コンテナーからポインターのコピーを返し、元のポインターを維持する場合などです。 生のポインターは、`shared_ptr` のすべての所有者がスコープ外になるか、所有権を放棄するまで削除されません。 サイズはポインター 2 個です。1 個はオブジェクト用で、もう 1 個は参照カウントを含む共有コントロール ブロック用です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[する方法: shared_ptr インスタンスを作成して](../cpp/how-to-create-and-use-shared-ptr-instances.md)と[shared_ptr クラス](../standard-library/shared-ptr-class.md)です。  
@@ -107,7 +102,7 @@ ms.lasthandoff: 04/06/2018
  COM オブジェクト用のスマート ポインターに加えて、ATL は Plain Old C++ Object 用のスマート ポインター、およびスマート ポインター コレクションも定義します。 従来の Windows プログラミングでは、これらの型は C++ 標準ライブラリのコレクションの代わりとして役立ちますコードの移植性が必要な場合に特にや場合に、C++ 標準ライブラリと ATL のプログラミング モデルを混在させたくないです。  
   
  [CAutoPtr クラス](../atl/reference/cautoptr-class.md)  
- コピー時に所有権を移動することで一意の所有権を強制するスマート ポインターです。 廃止された `std::auto_ptr` クラスに相当します。  
+ コピー時に所有権を移動することで一意の所有権を強制するスマート ポインターです。 非推奨とされた `std::auto_ptr` クラスに相当します。  
   
  [CHeapPtr クラス](../atl/reference/cheapptr-class.md)  
  C を使用して、割り当てられているオブジェクトのスマート ポインター [malloc](../c-runtime-library/reference/malloc.md)関数。  

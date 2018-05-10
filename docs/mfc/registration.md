@@ -1,13 +1,10 @@
 ---
-title: "登録 |Microsoft ドキュメント"
-ms.custom: 
+title: 登録 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>登録
 ユーザーがアプリケーションに OLE 項目を挿入しようとすると、OLE から選択するオブジェクトの種類の一覧が表示されます。 OLE は、すべてのサーバー アプリケーションによって提供される情報を含むシステムの登録情報データベースからこの一覧を取得します。 登録すると、サーバー自体、システムの登録データベース (レジストリ) にエントリを提供するオブジェクトの種類ごとの説明、ファイルの拡張機能、およびその他の情報をそれ自体にパス  
@@ -41,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   
  システムの登録データベースおよび更新に使用される .reg ファイルの形式の詳細については、次を参照してください。、 *OLE プログラマーズ リファレンス*です。  
   
-##  <a name="_core_server_installation"></a>サーバーのインストール  
+##  <a name="_core_server_installation"></a> サーバーのインストール  
  最初に、サーバー アプリケーションをインストールする場合はサポートしている OLE 項目のすべての種類を登録する必要があります。 サーバーのスタンドアロン アプリケーションとして起動するたびに、システムの登録データベースを更新することもできます。 これにより、登録情報データベース最新の状態、サーバーの実行可能ファイルが移動された場合。  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/09/2018
   
  レジストリ エディターでは、登録情報データベースに .reg テキスト ファイルの内容をマージします。 データベースを確認するか、それを修復するには、レジストリ エディターを使用します。 OLE の基本エントリを削除しないように注意してください。  
   
-##  <a name="_core_server_initialization"></a>サーバーの初期化  
+##  <a name="_core_server_initialization"></a> サーバーの初期化  
  アプリケーション ウィザードを使用して、サーバー アプリケーションを作成するときにウィザードが完了すべての初期化タスクを自動的にします。 このセクションでは、必要なこと、サーバー アプリケーションを手動で作成する場合について説明します。  
   
  コンテナー アプリケーションでサーバー アプリケーションを開始すると、OLE システム Dll は、サーバーのコマンドラインに「/埋め込み」オプションを追加します。 サーバー アプリケーションの動作はため実行を開始すると、アプリケーションで行う必要があります最初に、チェックをコンテナーによって起動されたかどうかによって異なります、「/埋め込み」または"-Embedding"、コマンドラインでオプションです。 このスイッチが存在する場合は、一連の異なるサーバーか、インプレース アクティブなリソースを読み込むか、完全を開きます。 詳細については、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)です。  
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
  定義上は常に、コンテナーによって起動されますミニサーバーを記述する場合。 まだ「/埋め込み」オプションを確認するためのコマンドラインを解析する必要があります。 コマンドラインでこのオプションがない場合は、ユーザーがスタンドアロン アプリケーションとしてミニサーバーを起動しようとしたことを意味します。 これが発生した場合、サーバー システムの登録データベースを登録およびミニサーバーはコンテナー アプリケーションからを起動するユーザーに通知するメッセージ ボックスを表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE](../mfc/ole-in-mfc.md)   
  [サーバー](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   

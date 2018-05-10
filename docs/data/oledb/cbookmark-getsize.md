@@ -1,12 +1,9 @@
 ---
-title: "Cbookmark::getsize |Microsoft ドキュメント"
-ms.custom: 
+title: Cbookmark::getsize |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBookmark::GetSize
@@ -26,18 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - GetSize method
 ms.assetid: 78ea6021-2033-48f5-8ce8-040ae30f30c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eb6c78619c303e206ba5e2a3b85a2e0ee66724e5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 120557e53d2e6e868d905cbc35e3da51fdf17017
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbookmarkgetsize"></a>CBookmark::GetSize
 ブックマークのバッファーのサイズを取得します。  
@@ -52,8 +47,8 @@ virtual DBLENGTH GetSize() const throw();
 ## <a name="return-value"></a>戻り値  
  バッファーのサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CBookmark クラス](../../data/oledb/cbookmark-class.md)

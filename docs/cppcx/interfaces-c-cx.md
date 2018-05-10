@@ -1,24 +1,19 @@
 ---
-title: "インターフェイス (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: インターフェイス (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa87713b49fe41dbdb7eb8f9e6382c8f78b51d0c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-ccx"></a>インターフェイス (C++/CX)
 ref クラスは多くても 1 つの具象基底クラスからしか継承できませんが、任意の数のインターフェイス クラスを実装できます。 インターフェイス クラス (インターフェイス構造体) 自体は、複数のインターフェイス クラスを継承 (または要求) でき、メンバー関数をオーバーロードすることができ、型パラメーターを持つことができます。  
@@ -93,13 +88,13 @@ ref クラスは多くても 1 つの具象基底クラスからしか継承で�
   
 -   クローズ ジェネリック インターフェイスには、暗黙的に生成される UUID があります。 ユーザーは UUID を指定できません。  
   
--   インターフェイスでは、メソッド パラメーター、戻り値、またはプロパティでの現在のインターフェイスへの参照は、現在のインスタンス化への参照と見なされます。 たとえば、 *IMyIntf*意味*IMyIntf\<T >*です。  
+-   インターフェイスでは、メソッド パラメーター、戻り値、またはプロパティでの現在のインターフェイスへの参照は、現在のインスタンス化への参照と見なされます。 たとえば、 *IMyIntf*意味*IMyIntf\<T >* です。  
   
 -   メソッド パラメーターの型が型パラメーターのとき、そのパラメーターまたは変数の宣言では、ポインター、ネイティブ参照、またはハンドル宣言子なしで型パラメーターの名前を使用します。 つまり、"T^" を作成することはありません。  
   
 -   template 宣言された ref クラスは、プライベートである必要があります。 ジェネリック インターフェイスを実装でき、テンプレート パラメーターを渡すことができます*T*を汎用引数*T*です。テンプレート化された ref クラスの各インスタンス化は、それ自体が ref クラスです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   
  [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

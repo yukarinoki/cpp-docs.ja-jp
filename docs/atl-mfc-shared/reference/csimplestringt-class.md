@@ -1,12 +1,9 @@
 ---
-title: "CSimpleStringT クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSimpleStringT クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleStringT
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acbf4753bb29b8f28cac9fe4fb6ceff72ceda8a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7dc68cd1d91cb7b651dbeb68422f6a89fb9f2f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT クラス
 このクラスを表します、`CSimpleStringT`オブジェクト。  
@@ -71,9 +66,9 @@ class CSimpleStringT
  `BaseType`  
  String クラスの文字型。 次のいずれかの値を指定します。  
   
-- `char`(ANSI 文字列を)。  
+- `char` (ANSI 文字列を)。  
   
-- `wchar_t`(の Unicode 文字列)。  
+- `wchar_t` (の Unicode 文字列)。  
   
 - **TCHAR** (用、ANSI と Unicode 文字の文字列)。  
 
@@ -133,13 +128,13 @@ class CSimpleStringT
 |[CSimpleStringT::operator =](#operator_eq)|新しい値を割り当てます、`CSimpleStringT`オブジェクト。|  
   
 ### <a name="remarks"></a>コメント  
- `CSimpleStringT`Visual C でサポートされているさまざまな文字列クラスの基本クラスです。 基本的なバッファー操作、文字列オブジェクトのメモリ管理の最小限のサポートを提供します。 高度な文字列オブジェクトでは、次を参照してください。 [CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)です。  
+ `CSimpleStringT` Visual C でサポートされているさまざまな文字列クラスの基本クラスです。 基本的なバッファー操作、文字列オブジェクトのメモリ管理の最小限のサポートを提供します。 高度な文字列オブジェクトでは、次を参照してください。 [CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** atlsimpstr.h  
 
 
-## <a name="append"></a>CSimpleStringT::Append
+## <a name="append"></a> CSimpleStringT::Append
 追加、`CSimpleStringT`を既存のオブジェクト`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -173,7 +168,7 @@ str1.Append(str2);
 ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 ```
   
-##  <a name="appendchar"></a>CSimpleStringT::AppendChar
+##  <a name="appendchar"></a> CSimpleStringT::AppendChar
 文字を追加すると、既存`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -188,7 +183,7 @@ void AppendChar(XCHAR ch);
 ### <a name="remarks"></a>コメント  
  既存の末尾に指定した文字を追加するには、この関数を呼び出す`CSimpleStringT`オブジェクト。  
   
-##  <a name="copychars"></a>CSimpleStringT::CopyChars  
+##  <a name="copychars"></a> CSimpleStringT::CopyChars  
  文字または文字のコピー、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -223,7 +218,7 @@ str.CopyChars(str.GetBuffer(), pszSrc, 12);
 _tprintf_s(_T("%s\n"), str);
 ```
   
-##  <a name="copycharsoverlapped"></a>CSimpleStringT::CopyCharsOverlapped
+##  <a name="copycharsoverlapped"></a>  CSimpleStringT::CopyCharsOverlapped
 文字または文字のコピー、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -250,7 +245,7 @@ static void CopyCharsOverlapped(
 ### <a name="example"></a>例  
  例を参照して[CSimpleStringT::CopyChars](#copychars)、またはソース コードを`CSimpleStringT::SetString`(atlsimpstr.h にあります)。  
   
-##  <a name="ctor"></a>CSimpleStringT::CSimpleStringT  
+##  <a name="ctor"></a>  CSimpleStringT::CSimpleStringT  
  `CSimpleStringT` オブジェクトを構築します。  
   
 ### <a name="syntax"></a>構文  
@@ -281,7 +276,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  新しい `CSimpleStringT` オブジェクトを構築します。 コンス トラクターは、新しい割り当てられている記憶域に入力データをコピーするために、メモリ不足例外があります。  
   
 ### <a name="example"></a>例  
- 次の例で使用する`CSimpleStringT::CSimpleStringT`ATL を使用して、 `typedef` `CSimpleString`です。 `CSimpleString`一般的に使用される特殊クラス テンプレートの`CSimpleStringT`します。  
+ 次の例で使用する`CSimpleStringT::CSimpleStringT`ATL を使用して、 `typedef` `CSimpleString`です。 `CSimpleString` 一般的に使用される特殊クラス テンプレートの`CSimpleStringT`します。  
   
 ```cpp  
 CSimpleString s1(pMgr);
@@ -299,7 +294,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 ```
 
   
-##  <a name="empty"></a>CSimpleStringT::Empty
+##  <a name="empty"></a>  CSimpleStringT::Empty
 これにより、`CSimpleStringT`オブジェクトの空の文字列と、必要に応じてメモリを解放します。  
   
 ### <a name="syntax"></a>構文  
@@ -318,7 +313,7 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());  
 ```  
   
-##  <a name="freeextra"></a>CSimpleStringT::FreeExtra
+##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
 文字列が割り当てられていたが、不要になったすべての余分なメモリを解放します。  
   
 ### <a name="syntax"></a>構文  
@@ -364,7 +359,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
   
  `Alloc length is 15, String length is 15`  
   
-##  <a name="getalloclength"></a>CSimpleStringT::GetAllocLength  
+##  <a name="getalloclength"></a>  CSimpleStringT::GetAllocLength  
 割り当て済みの長さを取得、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -378,7 +373,7 @@ int GetAllocLength() const throw();
 ### <a name="remarks"></a>コメント  
  これに割り当てられた文字の数を決定するには、このメソッドを呼び出す`CSimpleStringT`オブジェクト。 参照してください[FreeExtra](#freeextra)この関数の呼び出しの例についてはします。  
   
-##  <a name="getat"></a>CSimpleStringT::GetAt  
+##  <a name="getat"></a>  CSimpleStringT::GetAt  
 1 つの文字を返します、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -404,7 +399,7 @@ CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(s.GetAt(2) == _T('c'));
 ```
   
-##  <a name="getbuffer"></a>CSimpleStringT::GetBuffer  
+##  <a name="getbuffer"></a>  CSimpleStringT::GetBuffer  
 内部文字バッファーへのポインターを返します、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -431,7 +426,7 @@ PXSTR GetBuffer();
   
  バッファーのメモリが自動的に解放されるときに、`CSimpleStringT`オブジェクトが破棄されます。  
   
- 場合の追跡は文字列の長さ自分で、終端の null 文字を付けないでください。 含むバッファーを解放するときに、最終的な文字列の長さを指定する必要がありますただし、`ReleaseBuffer`です。 終端の null 文字を追加する場合は、長さの場合は-1 (既定値) を渡す必要があります。 `ReleaseBuffer`バッファーの長さを決定します。  
+ 場合の追跡は文字列の長さ自分で、終端の null 文字を付けないでください。 含むバッファーを解放するときに、最終的な文字列の長さを指定する必要がありますただし、`ReleaseBuffer`です。 終端の null 文字を追加する場合は、長さの場合は-1 (既定値) を渡す必要があります。 `ReleaseBuffer` バッファーの長さを決定します。  
   
  対応する十分なメモリがある場合、`GetBuffer`要求と、このメソッドはスロー CMemoryException * です。  
   
@@ -447,7 +442,7 @@ ASSERT(_tcscmp(s, _T("Hello")) == 0);
 s.ReleaseBuffer();   
 ```
   
-##  <a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength  
+##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength  
 内部文字バッファーへのポインターを返します、`CSimpleStringT`オブジェクト、切り捨てまたはで指定された長さと正確に一致する必要がある場合は、その長さを拡大して`nLength`です。  
   
 ### <a name="syntax"></a>構文  
@@ -498,7 +493,7 @@ str += _T(" soccer is best!");
 ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 ```
   
-##  <a name="getlength"></a>CSimpleStringT::GetLength  
+##  <a name="getlength"></a>  CSimpleStringT::GetLength  
 内の文字の数を返します、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -514,7 +509,7 @@ int GetLength() const throw();
   
  マルチバイト文字セット (MBCS) の`GetLength`カウントが 1 つのマルチバイト文字内の各 8 ビット文字です。 つまり、、潜在顧客と後続バイトが 2 バイトとしてカウントされます。 参照してください[FreeExtra](#freeextra)この関数の呼び出しの例についてはします。  
   
-##  <a name="getmanager"></a>CSimpleStringT::GetManager  
+##  <a name="getmanager"></a>  CSimpleStringT::GetManager  
 メモリ マネージャーの取得、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -528,7 +523,7 @@ IAtlStringMgr* GetManager() const throw();
 ### <a name="remarks"></a>コメント  
  マネージャーによって使用されるメモリを取得するには、このメソッドを呼び出して、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、次を参照してください。[メモリ管理と CStringT](../memory-management-with-cstringt.md)です。  
   
-##  <a name="getstring"></a>CSimpleStringT::GetString
+##  <a name="getstring"></a>  CSimpleStringT::GetString
 文字の文字列を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -554,7 +549,7 @@ str += _T("Cup soccer is best!");
 _tprintf_s(_T("%s"), str.GetString());
 ```
   
-##  <a name="isempty"></a>CSimpleStringT::IsEmpty  
+##  <a name="isempty"></a>  CSimpleStringT::IsEmpty  
 テスト、`CSimpleStringT`空の状態のオブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -576,7 +571,7 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
   
-##  <a name="lockbuffer"></a>CSimpleStringT::LockBuffer  
+##  <a name="lockbuffer"></a>  CSimpleStringT::LockBuffer  
 参照カウントを無効にし、バッファー内の文字列を保護できます。  
   
 ### <a name="syntax"></a>構文  
@@ -622,7 +617,7 @@ _tprintf_s(_T("%c"), ch);
 str.UnlockBuffer();
 ```
   
-##  <a name="operator_at"></a>CSimpleStringT::operator\[\]  
+##  <a name="operator_at"></a>  CSimpleStringT::operator\[\]  
 文字配列の 1 つの文字にアクセスするには、この関数を呼び出します。  
   
 ### <a name="syntax"></a>構文  
@@ -641,14 +636,14 @@ XCHAR operator[](int iChar) const;
 >  下付き文字を使用することができます (`[]`) 内の文字の値を取得する演算子を`CSimpleStringT`、内の文字の値を変更するのには使用できませんが、`CSimpleStringT`です。  
   
 ### <a name="example"></a>例  
- 次の例で使用する**CSimpleStringT::operator:operator[]**です。  
+ 次の例で使用する**CSimpleStringT::operator:operator[]** です。  
   
 ```cpp  
 CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
   
-## <a name="operator_at"></a>CSimpleStringT::operator\[\]
+## <a name="operator_at"></a>  CSimpleStringT::operator \[\]
 文字配列の 1 つの文字にアクセスするには、この関数を呼び出します。  
   
 ### <a name="syntax"></a>構文  
@@ -668,7 +663,7 @@ XCHAR operator[](int iChar) const;
 >  下付き文字を使用することができます (`[]`) 内の文字の値を取得する演算子を`CSimpleStringT`、内の文字の値を変更するのには使用できませんが、`CSimpleStringT`です。  
   
   
-##  <a name="operator_add_eq"></a>CSimpleStringT::operator + =  
+##  <a name="operator_add_eq"></a>  CSimpleStringT::operator + =  
 既存の文字列の末尾に新しい文字列または文字を結合します。  
   
 ### <a name="syntax"></a>構文  
@@ -696,14 +691,14 @@ CSimpleStringT& operator +=(wchar_t ch);
  この演算子は別`CSimpleStringT`オブジェクトまたは文字。 メモリ不足にこの追加の文字を新しい記憶域が割り当てられるために、連結演算子を使用するたびに、例外が発生する可能性があります`CSimpleStringT`オブジェクト。  
   
 ### <a name="example"></a>例  
- 次の例で使用する**CSimpleStringT::operator + =**です。  
+ 次の例で使用する**CSimpleStringT::operator + =** です。  
   
 ```cpp  
 CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
   
-##  <a name="operator_eq"></a>CSimpleStringT::operator =  
+##  <a name="operator_eq"></a>  CSimpleStringT::operator =  
 新しい値を割り当てます、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -723,7 +718,7 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
  コピー先の文字列 (左側) は、新しいデータを格納するのに十分な大きさでは既に、新しいメモリ割り当ては実行されません。 メモリ不足、代入演算子を使用すると、新しい記憶域は多くの場合、その結果を保持するために割り当てられているために、例外が発生する可能性があります`CSimpleStringT`オブジェクト。  
   
 ### <a name="example"></a>例  
- 次の例で使用する**CSimpleStringT::operator =**です。  
+ 次の例で使用する**CSimpleStringT::operator =** です。  
   
 ```cpp  
 CSimpleString s1(pMgr), s2(pMgr);
@@ -745,7 +740,7 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
   
-##  <a name="operator_pcxstr"></a>CSimpleStringT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR  
 
  格納された文字に直接アクセスする、`CSimpleStringT`オブジェクトを C スタイルの文字列として。  
   
@@ -793,7 +788,7 @@ wcout << strSports;
 wcout << (PCWSTR)strSports;   
 ``` 
   
-##  <a name="pcxstr"></a>CSimpleStringT::PCXSTR
+##  <a name="pcxstr"></a>  CSimpleStringT::PCXSTR
 定数文字列へのポインター。  
   
 ### <a name="syntax"></a>構文  
@@ -801,7 +796,7 @@ wcout << (PCWSTR)strSports;
 ```  
 typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;    
 ```  
-##  <a name="preallocate"></a>CSimpleStringT::Preallocate  
+##  <a name="preallocate"></a>  CSimpleStringT::Preallocate  
 特定の容量 (バイト) の割り当て、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -816,7 +811,7 @@ void Preallocate( int nLength);
 ### <a name="remarks"></a>コメント  
  特定のバッファー サイズを割り当てることは、このメソッドを呼び出して、`CSimpleStringT`オブジェクト。  
   
- `CSimpleStringT`生成、`STATUS_NO_MEMORY`文字バッファーに領域を割り当てることがない場合は例外です。 既定では、メモリの割り当ては WIN32 API 関数により実行`HeapAlloc`または`HeapReAlloc`です。  
+ `CSimpleStringT` 生成、`STATUS_NO_MEMORY`文字バッファーに領域を割り当てることがない場合は例外です。 既定では、メモリの割り当ては WIN32 API 関数により実行`HeapAlloc`または`HeapReAlloc`です。  
   
 ### <a name="example"></a>例  
  次の例は、`CSimpleStringT::Preallocate` の使い方を示しています。  
@@ -828,7 +823,7 @@ str.Preallocate(100);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ```
   
-##  <a name="pxstr"></a>CSimpleStringT::PXSTR  
+##  <a name="pxstr"></a>  CSimpleStringT::PXSTR  
 文字列へのポインター。  
   
 ### <a name="syntax"></a>構文  
@@ -836,7 +831,7 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ```  
 typedef ChTraitsBase< BaseType >::PXSTR PXSTR;  
 ```  
-##  <a name="releasebuffer"></a>CSimpleStringT::ReleaseBuffer  
+##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer  
 によって割り当てられるバッファーの制御を解放[GetBuffer](#getbuffer)です。  
   
 ### <a name="syntax"></a>構文  
@@ -872,7 +867,7 @@ ASSERT(s.GetLength() == 3);
 // Length still 3
 ```
   
-##  <a name="releasebuffersetlength"></a>CSimpleStringT::ReleaseBufferSetLength
+##  <a name="releasebuffersetlength"></a>  CSimpleStringT::ReleaseBufferSetLength
 
 によって割り当てられるバッファーの制御を解放[GetBuffer](#getbuffer)です。  
   
@@ -888,7 +883,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ### <a name="remarks"></a>コメント  
  この関数に機能的によく似た[ReleaseBuffer](#releasebuffer)が、有効な長さの文字列オブジェクトを渡す必要があります。  
   
-##  <a name="setat"></a>CSimpleStringT::SetAt  
+##  <a name="setat"></a>  CSimpleStringT::SetAt  
 1 つの文字を設定、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -915,7 +910,7 @@ s.SetAt(1, _T('a'));
 ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 ``` 
   
-##  <a name="setmanager"></a>CSimpleStringT::SetManager  
+##  <a name="setmanager"></a>  CSimpleStringT::SetManager  
 メモリ マネージャーを指定します、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -938,7 +933,7 @@ CSimpleString s(pMgr);
 s.SetManager(pCustomMgr);
 ```
   
-##  <a name="setstring"></a>CSimpleStringT::SetString  
+##  <a name="setstring"></a>  CSimpleStringT::SetString  
 文字列を設定、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -955,7 +950,7 @@ void SetString(PCXSTR pszSrc);
  文字数のカウント`pszSrc`です。  
   
 ### <a name="remarks"></a>コメント  
- 文字列をコピー、`CSimpleStringT`オブジェクト。 `SetString`バッファー内の古い文字列データを上書きします。  
+ 文字列をコピー、`CSimpleStringT`オブジェクト。 `SetString` バッファー内の古い文字列データを上書きします。  
   
  両方のバージョンの`SetString`を確認するかどうか`pszSrc`null ポインターでは、スローする場合は、 **E_INVALIDARG**エラーです。  
   
@@ -975,7 +970,7 @@ s.SetString(_T("Soccer"), 6);
 ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ```
   
-##  <a name="stringlength"></a>CSimpleStringT::StringLength  
+##  <a name="stringlength"></a>  CSimpleStringT::StringLength  
 指定された文字列の文字数を返します。  
   
 ### <a name="syntax"></a>構文  
@@ -1000,7 +995,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ``` 
   
-##  <a name="truncate"></a>CSimpleStringT::Truncate
+##  <a name="truncate"></a>  CSimpleStringT::Truncate
 文字列を新しい長さに切り捨てます。  
   
 ### <a name="syntax"></a>構文  
@@ -1030,7 +1025,7 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetLength());
 _tprintf_s(_T("Contents: %s\n"), str);
 ``` 
   
-##  <a name="unlockbuffer"></a>CSimpleStringT::UnlockBuffer
+##  <a name="unlockbuffer"></a>  CSimpleStringT::UnlockBuffer
  バッファーのロックを解除、`CSimpleStringT`オブジェクト。  
   
 ### <a name="syntax"></a>構文  
@@ -1043,7 +1038,7 @@ void UnlockBuffer() throw();
   
  `CSimpleStringT`デストラクターを自動的に呼び出します`UnlockBuffer`をデストラクターが呼び出されたときに、バッファーはロックされないことを確認します。 このメソッドの例は、次を参照してください。 [LockBuffer](#lockbuffer)です。  
   
-##  <a name="dtor"></a>CSimpleStringT:: ~ CSimpleStringT
+##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
 `CSimpleStringT` オブジェクトを破棄します。  
   
 ### <a name="syntax"></a>構文  
@@ -1054,6 +1049,6 @@ void UnlockBuffer() throw();
 ### <a name="remarks"></a>コメント  
  破棄するには、このメソッドを呼び出して、`CSimpleStringT`オブジェクト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

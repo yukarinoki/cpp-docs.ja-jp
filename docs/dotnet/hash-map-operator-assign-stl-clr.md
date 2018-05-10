@@ -1,12 +1,9 @@
 ---
-title: "hash_map: = (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: 'hash_map: = (STL/CLR) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::operator=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator= member [STL/CLR]
 ms.assetid: fbcbae4c-c8f8-431e-831b-a40cce00a88c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 94fe53c70e6f11af31f40822e4a66b3fc77ea833
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deef602bbbab5c24406a67f67478fb900d4e106
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapoperator-stlclr"></a>hash_map::operator= (STL/CLR)
 被制御シーケンスを置き換えます。  
@@ -81,10 +76,10 @@ int main()
 [a 1] [b 2] [c 3]  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)

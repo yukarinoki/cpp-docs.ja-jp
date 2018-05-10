@@ -1,12 +1,9 @@
 ---
-title: "上記のクラス |Microsoft ドキュメント"
-ms.custom: 
+title: 上記のクラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnum
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792c5ff95858936d38d9a87350dd3ca405c5ec66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenum-class"></a>上記のクラス
 このクラスは、配列に基づいた COM 列挙子オブジェクトを定義します。  
@@ -59,11 +54,11 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
  クラスのスレッド モデルです。 このパラメーターの既定値は、プロジェクトで使用されるグローバル オブジェクト スレッド モデルです。  
   
 ## <a name="remarks"></a>コメント  
- `CComEnum`配列に基づいた COM 列挙子オブジェクトを定義します。 このクラスと似ています[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) C++ 標準ライブラリのコンテナーに基づく列挙子を実装します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)です。  
+ `CComEnum` 配列に基づいた COM 列挙子オブジェクトを定義します。 このクラスと似ています[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) C++ 標準ライブラリのコンテナーに基づく列挙子を実装します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)です。  
   
 ## <a name="to-use-this-class"></a>このクラスを使用します。  
   
-- `typedef`このクラスの特殊化です。  
+- `typedef` このクラスの特殊化です。  
   
 -   使用して、`typedef`の特殊化のテンプレート引数として`CComObject`です。  
   
@@ -84,7 +79,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  `CComEnum`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlcom.h  
   
 ## <a name="example"></a>例  
@@ -98,7 +93,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  このコードを作成、`typedef`の`CComEnum`のベクターを公開する**バリアント**を通じて s、 **IEnumVariant**インターフェイスです。 **CVariantArrayCollection**クラスを特化するだけ**CreateEnumerator**この型と、必要な引数のパスの列挙子オブジェクトを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)   
  [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
  [CComEnumImpl クラス](../../atl/reference/ccomenumimpl-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "ATL プロジェクトのコンパイラの最適化を指定する |Microsoft ドキュメント"
-ms.custom: 
+title: ATL プロジェクトのコンパイラの最適化を指定する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.optimization
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e60f22b7b91567948dfc2efc90935fce266d7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0060437613bcdd6281ce5cceb112f5fd7f470bf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>ATL プロジェクトのコンパイラの最適化を指定します。
 既定では、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)ATL_NO_VTABLE マクロを持つ新しいクラスを次のように生成されます。  
@@ -65,7 +60,7 @@ class ATL_NO_VTABLE CProjName
   
  stdafx.h でその他のすべての ATL の前にヘッダー ファイルが含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)   
  [Visual C プロジェクトの種類](../../ide/visual-cpp-project-types.md)   
  [アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)   

@@ -1,13 +1,10 @@
 ---
-title: "コントロール クラス |Microsoft ドキュメント"
-ms.custom: 
+title: コントロール クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.control
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376fb3836d92a1fae348929a7faa49b44dfd866e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffd7b3b7d2eb9db68fd61ac693c65d87b2ee62d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-classes"></a>コントロール クラス
 コントロール クラスには、さまざまな標準の Windows コントロールのツリー コントロールに静的テキスト コントロールの範囲がカプセル化します。 さらに、MFC には、いくつかの新しいコントロールのビットマップとコントロール バーのボタンが用意されています。  
@@ -150,6 +145,6 @@ ms.lasthandoff: 12/21/2017
  [CTreeView](../mfc/reference/ctreeview-class.md)  
  Windows のツリー コントロールを含むビュー。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../mfc/class-library-overview.md)
 

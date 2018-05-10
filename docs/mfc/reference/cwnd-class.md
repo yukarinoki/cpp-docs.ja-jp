@@ -2,11 +2,8 @@
 title: CWnd クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 Microsoft Foundation Class ライブラリにあるすべてのウィンドウ クラスの基本機能が用意されています。  
@@ -871,7 +866,7 @@ class CWnd : public CCmdTarget
 |[CWnd::BeginModalState](#beginmodalstate)|フレーム ウィンドウをモーダルにします。|  
 |[CWnd::BeginPaint](#beginpaint)|描画用の `CWnd` を準備します。|  
 |[CWnd::BindDefaultProperty](#binddefaultproperty)|タイプ ライブラリに示されているように、呼び出し元オブジェクトの既定の単純バインド プロパティを、データ ソース コントロールに関連付けられているカーソルにバインドします。|  
-|[CWnd::BindProperty](#bindproperty)|データ バインディング コントロールのカーソル バインド プロパティをデータ ソース コントロールにバインドし、そのリレーションシップを MFC バインド マネージャーに登録します。|  
+|[Cwnd::bindproperty](#bindproperty)|データ バインディング コントロールのカーソル バインド プロパティをデータ ソース コントロールにバインドし、そのリレーションシップを MFC バインド マネージャーに登録します。|  
 |[CWnd::BringWindowToTop](#bringwindowtotop)|`CWnd` を重なったウィンドウのスタックの最上位に移動します。|  
 |[CWnd::CalcWindowRect](#calcwindowrect)|クライアントの四角形からウィンドウ四角形を計算するために呼び出されます。|  
 |[CWnd::CancelToolTips](#canceltooltips)|ツール ヒント コントロールを無効にします。|  
@@ -1306,7 +1301,7 @@ class CWnd : public CCmdTarget
   
  `CWnd`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="accdodefaultaction"></a>  CWnd::accDoDefaultAction  
@@ -1520,7 +1515,7 @@ BOOL Attach(HWND hWndNew);
 virtual void BeginModalState();
 ```  
   
-##  <a name="beginpaint"></a>  CWnd::BeginPaint  
+##  <a name="beginpaint"></a>  Cwnd::beginpaint  
  準備`CWnd`描画およびがいっぱいになったのため、`PAINTSTRUCT`描画に関する情報を含むデータ構造体。  
   
 ```  
@@ -2241,7 +2236,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]  
   
-##  <a name="destroywindow"></a>  CWnd::DestroyWindow  
+##  <a name="destroywindow"></a>  に  
  接続されている Windows のウィンドウを破棄、`CWnd`オブジェクト。  
   
 ```  
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- この例では`drive`、ドライブ文字は、`directory`は有効なディレクトリ名、および*ファイル名*に少なくとも 1 つのワイルドカードを含める必要がある有効なファイル名は、します。 ワイルドカードはありと一致して、任意の文字とアスタリスク (*)、疑問符 (  **\*** )、任意の文字数が一致を意味します。  
+ この例では`drive`、ドライブ文字は、`directory`は有効なディレクトリ名、および*ファイル名*に少なくとも 1 つのワイルドカードを含める必要がある有効なファイル名は、します。 ワイルドカードはありと一致して、任意の文字とアスタリスク (*)、疑問符 ( **\***)、任意の文字数が一致を意味します。  
   
  長さが 0 の文字列を指定する場合`lpPathSpec`にディレクトリ名のみを指定する任意のファイルの仕様を含めない場合は、変更するは、文字列または"*.\*"です。  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- この例では`drive`、ドライブ文字は、`directory`は有効なディレクトリ名、および*ファイル名*に少なくとも 1 つのワイルドカードを含める必要がある有効なファイル名は、します。 ワイルドカードはありと一致して、任意の文字とアスタリスク (*)、疑問符 () (  **\*** )、つまり、任意の文字数に一致します。  
+ この例では`drive`、ドライブ文字は、`directory`は有効なディレクトリ名、および*ファイル名*に少なくとも 1 つのワイルドカードを含める必要がある有効なファイル名は、します。 ワイルドカードはありと一致して、任意の文字とアスタリスク (*)、疑問符 () ( **\***)、つまり、任意の文字数に一致します。  
   
  長さ 0 の文字列を指定する場合`lpPathSpec`、現在のディレクトリが使用して`lpPathSpec`は変更されません。 ディレクトリ名のみを指定する任意のファイルの仕様を含めない場合は、変更するは、文字列"*"です。  
   
@@ -2573,7 +2568,7 @@ BOOL DrawCaption(
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、関数の機能をエミュレート[DrawCaption](http://msdn.microsoft.com/library/windows/desktop/dd162476)Windows SDK で説明されている。  
   
-##  <a name="drawmenubar"></a>  CWnd::DrawMenuBar  
+##  <a name="drawmenubar"></a>  かかわらず  
  メニュー バーを再描画します。  
   
 ```  
@@ -2833,7 +2828,7 @@ void FilterToolTipMessage(MSG* pMsg);
   
  ただし、一部の ActiveX コントロールなど、特定のアプリケーションでこれらのメソッドは、フレームワークによって呼び出さいない可能性があるし、を FilterToolTipMessage を呼び出す必要があります。 詳細については、次を参照してください。[を作成するツール ヒントのメソッド](../../mfc/methods-of-creating-tool-tips.md)です。  
   
-##  <a name="findwindow"></a>  CWnd::FindWindow  
+##  <a name="findwindow"></a>  :Findwindow  
  最上位を返します`CWnd`でウィンドウ クラスを指定した`lpszClassName`がウィンドウの名前、または タイトル別であると`lpszWindowName`です。  
   
 ```  
@@ -3576,7 +3571,7 @@ CWnd* GetDescendantWindow(
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、直接の子は、windows だけでなく、子ウィンドウのツリー全体を検索します。  
   
-##  <a name="getdesktopwindow"></a>  CWnd::GetDesktopWindow  
+##  <a name="getdesktopwindow"></a>  揃える  
  Windows デスクトップ ウィンドウを返します。  
   
 ```  
@@ -3841,7 +3836,7 @@ BOOL GetLayeredWindowAttributes(
 ### <a name="remarks"></a>コメント  
  このメンバー関数は、関数の機能をエミュレート[GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508)Windows SDK で説明されている。  
   
-##  <a name="getmenu"></a>  CWnd::GetMenu  
+##  <a name="getmenu"></a>  とき  
  このウィンドウのメニューへのポインターを取得します。  
   
 ```  
@@ -4130,7 +4125,7 @@ static CWnd* GetSafeOwner(
 > [!NOTE]
 >  Framework 自体では、この関数を使用して、所有者が指定されていません ダイアログ ボックスやプロパティ シートの正しいオーナー ウィンドウを確認します。  
   
-##  <a name="getscrollbarctrl"></a>  CWnd::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  Cwnd::getscrollbarctrl  
  指定した兄弟スクロール バーまたは分割へのポインターを取得するには、このメンバー関数を呼び出すウィンドウです。  
   
 ```  
@@ -4751,7 +4746,7 @@ void Invalidate(BOOL bErase = TRUE);
 ### <a name="example"></a>例  
   例を参照して[CWnd::UpdateWindow](#updatewindow)です。  
   
-##  <a name="invalidaterect"></a>  CWnd::InvalidateRect  
+##  <a name="invalidaterect"></a>  エディット  
  その四角形を追加することによって指定された四角形内のクライアント領域を無効になります、`CWnd`更新領域。  
   
 ```  
@@ -4832,7 +4827,7 @@ void AFX_CDECL InvokeHelper(
  パラメーターで指定された型の変数一覧`pbParamInfo`です。  
   
 ### <a name="remarks"></a>コメント  
- `pbParamInfo` パラメーターは、メソッドまたはプロパティに渡されるパラメーターの型を指定します。 可変個引数リストとして表されます*しています.*構文宣言でします。  
+ `pbParamInfo` パラメーターは、メソッドまたはプロパティに渡されるパラメーターの型を指定します。 可変個引数リストとして表されます*しています.* 構文宣言でします。  
   
  この関数のパラメーターの変換**VARIANTARG**値、し、起動、 **idispatch::invoke** ActiveX コントロールのメソッドです。 場合に呼び出し**idispatch::invoke**失敗した場合、この関数には、例外がスローされます。 場合、 `SCODE` (状態コード) がによって返される**idispatch::invoke**は`DISP_E_EXCEPTION`、この関数のスロー、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクトがスローされますが、それ以外の場合、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)です。  
   
@@ -4984,7 +4979,7 @@ BOOL IsZoomed() const;
 ### <a name="return-value"></a>戻り値  
  0 以外の値`CWnd`が最大化します。 それ以外の場合に 0 です。  
   
-##  <a name="killtimer"></a>  CWnd::KillTimer  
+##  <a name="killtimer"></a>  メイン フレーム ウィンドウ  
  によって識別されるタイマー イベントを強制終了`nIDEvent`以前の呼び出しから`SetTimer`です。  
   
 ```  
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![停止 &#40;x&#41;アイコン](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**、 **MB_ICONSTOP**、および**MB_ICONERROR**|  
-|![ヘルプ &#40; &#41;アイコン](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
-|![重要な &#40; #33 &#41;アイコン](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION**と**MB_ICONWARNING**|  
-|![情報 &#40; i&#41;アイコン](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK**と**MB_ICONINFORMATION**|  
+|![停止&#40;x&#41;アイコン](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**、 **MB_ICONSTOP**、および**MB_ICONERROR**|  
+|![ヘルプ&#40;&#41;アイコン](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
+|![重要な&#40; &#33; &#41;アイコン](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION**と**MB_ICONWARNING**|  
+|![情報&#40;すれば&#41;アイコン](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK**と**MB_ICONINFORMATION**|  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -5139,7 +5134,7 @@ BOOL ModifyStyle(
  スタイルの変更が成功した場合は 0 以外。それ以外の場合、0 を返します。  
   
 ### <a name="remarks"></a>コメント  
- ビットごとの OR (&#124;) を使用して結合できますスタイルを追加または削除する演算子です。 トピックを参照して[ウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/ms632600)と[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)について使用可能なウィンドウのスタイルは Windows SDK に含まれています。  
+ ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます (&#124;) 演算子。 トピックを参照して[ウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/ms632600)と[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)について使用可能なウィンドウのスタイルは Windows SDK に含まれています。  
   
  場合`nFlags`がゼロ以外、 `ModifyStyle` Windows API 関数を呼び出す[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)し、結合することで、ウィンドウを再描画`nFlags`の次の 4 つの事前設定されたフラグを使用。  
   
@@ -5183,7 +5178,7 @@ BOOL ModifyStyleEx(
  スタイルの変更が成功した場合は 0 以外。それ以外の場合、0 を返します。  
   
 ### <a name="remarks"></a>コメント  
- ビットごとの OR (&#124;) を使用して結合できますスタイルを追加または削除する演算子です。 トピックを参照して[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)本書でと[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)については、使用可能な Windows SDK では、拡張スタイル  
+ ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます (&#124;) 演算子。 トピックを参照して[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)本書でと[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)については、使用可能な Windows SDK では、拡張スタイル  
   
  場合`nFlags`がゼロ以外、 `ModifyStyleEx` Windows API 関数を呼び出す[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)し、結合することで、ウィンドウを再描画`nFlags`の次の 4 つの事前設定されたフラグを使用。  
   
@@ -5477,7 +5472,7 @@ afx_msg void OnChangeUIState(
   
 - **UISF_HIDEFOCUS**インジケーターに注目します。  
   
-- **UISF_ACTIVE Windows XP:**コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。  
+- **UISF_ACTIVE Windows XP:** コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。  
   
 ### <a name="remarks"></a>コメント  
  このメンバー関数の機能をエミュレートする、 [WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342)メッセージ、Windows SDK で説明します。  
@@ -7372,9 +7367,9 @@ afx_msg void OnNcCalcSize(
 ### <a name="remarks"></a>コメント  
  このメッセージを処理することで、アプリケーションは、サイズまたはウィンドウの位置が変更されたときに、ウィンドウのクライアント領域の内容を制御できます。  
   
- 値に関係なく`bCalcValidRects`、によって指定された配列内の最初の四角形、 **rgrc**の構造体のメンバー、`NCCALCSIZE_PARAMS`構造には、ウィンドウの座標が含まれています。 子ウィンドウの座標は、親ウィンドウのクライアント領域と相対的はします。 最上位のウィンドウの座標は、画面の座標です。 アプリケーションを変更する必要があります、 **rgrc [0]**クライアント領域の位置とサイズを反映するように四角形。  
+ 値に関係なく`bCalcValidRects`、によって指定された配列内の最初の四角形、 **rgrc**の構造体のメンバー、`NCCALCSIZE_PARAMS`構造には、ウィンドウの座標が含まれています。 子ウィンドウの座標は、親ウィンドウのクライアント領域と相対的はします。 最上位のウィンドウの座標は、画面の座標です。 アプリケーションを変更する必要があります、 **rgrc [0]** クライアント領域の位置とサイズを反映するように四角形。  
   
- **Rgrc [1]**と**rgrc [2]**四角形は有効な場合にのみ、`bCalcValidRects`は**TRUE**です。 ここで、 **rgrc [1]**が移動またはサイズを変更する前に、四角形は、ウィンドウの座標を格納します。 **Rgrc [2]**ウィンドウが移動する前に、四角形がウィンドウのクライアント領域の座標を格納します。 すべての座標は、親ウィンドウまたは画面です。  
+ **Rgrc [1]** と**rgrc [2]** 四角形は有効な場合にのみ、`bCalcValidRects`は**TRUE**です。 ここで、 **rgrc [1]** が移動またはサイズを変更する前に、四角形は、ウィンドウの座標を格納します。 **Rgrc [2]** ウィンドウが移動する前に、四角形がウィンドウのクライアント領域の座標を格納します。 すべての座標は、親ウィンドウまたは画面です。  
   
  既定の実装 (スクロール バー、メニューのおよびなどの立ち会いの下)、ウィンドウの特性に基づくクライアント領域のサイズが計算され、結果`lpncsp`です。  
   
@@ -8074,7 +8069,7 @@ afx_msg UINT OnQueryUIState();
   
 - **UISF_HIDEACCEL**キーボード アクセラレータは非表示にします。  
   
-- **UISF_ACTIVE Windows XP:**コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。  
+- **UISF_ACTIVE Windows XP:** コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。  
   
 ### <a name="remarks"></a>コメント  
  このメンバー関数の機能をエミュレートする、 [WM_QUERYUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646355)メッセージ、Windows SDK で説明します。  
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **(UINT) hWndChild**子ウィンドウへのハンドル  
   
-- `uFlags` &#124; = **TTF_IDISHWND**ツールのハンドル  
+- `uFlags` &#124;= **TTF_IDISHWND**ツールのハンドル  
   
 - `lpszText` = **保持するようにする**指定されたウィンドウで表示される文字列へのポインター  
   
@@ -8956,7 +8951,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|  
 |[入力] `nChar`|押されたキーの文字コードを指定します。|  
 |[入力] `nRepCnt`|現在のメッセージの繰り返し回数を指定します。 値は、キーストロークが、キーを押しながら、ユーザーの結果として autorepeated 回数です。 キーストロークが保持される十分に長い場合は、複数のメッセージが送信されます。 ただし、繰り返し回数は、累積的ではありません。|  
-|[入力] `nFlags`|次の表に示すように、スキャン コード、拡張キー、コンテキストのコード、前のキーの状態および遷移の状態を指定するフラグ。<br /><br /> **0-7:**スキャン コードを指定します。 値は、製造元 (OEM) に依存します。<br /><br /> **8:**拡張 101 または 102 key キーボードに表示される右 alt キーや CTRL キーなどの拡張キーを指定します。 キーが拡張キー以外の場合、フラグは 1それ以外の場合は 0 です。<br /><br /> **9 ~ 12:** Windows によって内部的に使用します。<br /><br /> **13:**コンテキストのコードを指定します。 ALT キーを押した状態でキーを押した場合、このフラグは 1それ以外の場合、値は 0 です。<br /><br /> **14:**前のキーの状態を指定します。 フラグは、キーがの場合は、メッセージを送信する前に、キーが押されている場合は 1 または 0 です。<br /><br /> **15:**遷移の状態を指定します。 フラグは、押されている場合は、キーが解放されている場合は 1 または 0 です。|  
+|[入力] `nFlags`|次の表に示すように、スキャン コード、拡張キー、コンテキストのコード、前のキーの状態および遷移の状態を指定するフラグ。<br /><br /> **0-7:** スキャン コードを指定します。 値は、製造元 (OEM) に依存します。<br /><br /> **8:** 拡張 101 または 102 key キーボードに表示される右 alt キーや CTRL キーなどの拡張キーを指定します。 キーが拡張キー以外の場合、フラグは 1それ以外の場合は 0 です。<br /><br /> **9 ~ 12:** Windows によって内部的に使用します。<br /><br /> **13:** コンテキストのコードを指定します。 ALT キーを押した状態でキーを押した場合、このフラグは 1それ以外の場合、値は 0 です。<br /><br /> **14:** 前のキーの状態を指定します。 フラグは、キーがの場合は、メッセージを送信する前に、キーが押されている場合は 1 または 0 です。<br /><br /> **15:** 遷移の状態を指定します。 フラグは、押されている場合は、キーが解放されている場合は 1 または 0 です。|  
   
 ### <a name="remarks"></a>コメント  
  このメソッドは受信、 [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)通知で、Windows SDK に記載されています。 [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)メッセージが送信または Unicode 文字を ANSI windows にポストするように設計されています。 等価である、 [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276) 、メッセージしますが、Unicode 変換形式 32 エンコード (utf-32) を使用する一方、 [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)メッセージで utf-16 を使用します。  
@@ -9012,7 +9007,7 @@ afx_msg void OnUpdateUIState(
   
 - **UISF_HIDEFOCUS**インジケーターに注目します。  
   
-- **UISF_ACTIVE Windows XP:**コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。  
+- **UISF_ACTIVE Windows XP:** コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。  
   
 ### <a name="remarks"></a>コメント  
  このメンバー関数の機能をエミュレートする、 [WM_UPDATEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361)メッセージ、Windows SDK で説明します。  
@@ -9404,7 +9399,7 @@ BOOL operator!=(const CWnd& wnd) const;
 ### <a name="return-value"></a>戻り値  
  等しい場合は 0 以外。それ以外の場合 0 を返します。  
   
-##  <a name="operator_eq_eq"></a>  CWnd::operator ==  
+##  <a name="operator_eq_eq"></a>  CWnd::operator = =  
  比較する 2 つ`CWnd`オブジェクトを同じが存在するか[m_hWnd](#m_hwnd)です。  
   
 ```  
@@ -10014,7 +10009,7 @@ LRESULT SendMessage(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
-##  <a name="sendmessagetodescendants"></a>  CWnd::SendMessageToDescendants  
+##  <a name="sendmessagetodescendants"></a>  ハンドラー  
  すべての子孫ウィンドウに指定された Windows メッセージを送信するには、このメンバー関数を呼び出します。  
   
 ```  
@@ -10668,13 +10663,13 @@ BOOL SetWindowPos(
   
  子ウィンドウのすべての座標は、(親ウィンドウのクライアント領域の左上隅) への相対クライアント座標です。  
   
- Z オーダーの最上部にウィンドウを移動できる設定するか、`pWndInsertAfter`パラメーターを**& wndTopMost**ことを確認して、`SWP_NOZORDER`フラグがありません設定かを設定して、ウィンドウの Z オーダーできるように、既存のすべてを超えていること最上位のウィンドウ。 非最上位のウィンドウは、最上位で行われたが、ときに、所有しているウィンドウは最上位でも行われます。 その所有者は変更されません。  
+ Z オーダーの最上部にウィンドウを移動できる設定するか、`pWndInsertAfter`パラメーターを **& wndTopMost**ことを確認して、`SWP_NOZORDER`フラグがありません設定かを設定して、ウィンドウの Z オーダーできるように、既存のすべてを超えていること最上位のウィンドウ。 非最上位のウィンドウは、最上位で行われたが、ときに、所有しているウィンドウは最上位でも行われます。 その所有者は変更されません。  
   
  最上位のウィンドウが最上位は、一番下に再配置される場合不要になった ( **& wndBottom**) Z オーダーの以降の任意の非最上位ウィンドウです。 最上位のウィンドウが行われる非最上位とすべての所有者に、および所有されるウィンドウも行われます非最上位ウィンドウです。  
   
  どちらの場合`SWP_NOACTIVATE`も`SWP_NOZORDER`を指定 (つまり、要求すると、アプリケーション ウィンドウで同時にアクティブ化され、配置される指定の Z オーダーで) で指定された値`pWndInsertAfter`は、次の状況でのみ使用します。  
   
--   どちらも**& wndTopMost**も**& wndNoTopMost**で指定された、`pWndInsertAfter`パラメーター。  
+-   どちらも **& wndTopMost**も **& wndNoTopMost**で指定された、`pWndInsertAfter`パラメーター。  
   
 -   このウィンドウは、作業中のウィンドウではありません。  
   
@@ -10684,11 +10679,11 @@ BOOL SetWindowPos(
   
  バージョン 3.1 以降では、Windows と共に windows Z オーダーの先頭に移動してそこでロックを設定して、 **WS_EX_TOPMOST**スタイル。 このような最上位ウィンドウは、非アクティブ化する場合でも最上位の位置を保持します。 たとえば、WinHelp Always On Top コマンドを選択することにより、最上位の [ヘルプ] ウィンドウやそのですし、アプリケーションに返す場合に表示されたままします。  
   
- 最上位のウィンドウを作成するには`SetWindowPos`で、`pWndInsertAfter`パラメーターと等しい**& wndTopMost**、設定または、 **WS_EX_TOPMOST**ウィンドウを作成するときにスタイルを設定します。  
+ 最上位のウィンドウを作成するには`SetWindowPos`で、`pWndInsertAfter`パラメーターと等しい **& wndTopMost**、設定または、 **WS_EX_TOPMOST**ウィンドウを作成するときにスタイルを設定します。  
   
  Z オーダーで任意の windows に含まれる場合、 **WS_EX_TOPMOST**スタイル、と一緒に移動ウィンドウ、 **& wndTopMost**のすべての非最上位ウィンドウですが、最上位の上部にある値が格納されます。 アプリケーションがなしの非アクティブなウィンドウをアクティブにすると、 **WS_EX_TOPMOST** bit で、ウィンドウは移動上すべての非最上位のウィンドウが、最上位です。  
   
- 場合`SetWindowPos`時に呼び出される、`pWndInsertAfter`パラメーターは**(& a) wndBottom**と`CWnd`最上位のウィンドウは、ウィンドウが最上位の状態を失った ( **WS_EX_TOPMOST**がオフになって)、およびシステムは、ウィンドウを Z オーダーの一番下に配置されます。  
+ 場合`SetWindowPos`時に呼び出される、`pWndInsertAfter`パラメーターは **(& a) wndBottom**と`CWnd`最上位のウィンドウは、ウィンドウが最上位の状態を失った ( **WS_EX_TOPMOST**がオフになって)、およびシステムは、ウィンドウを Z オーダーの一番下に配置されます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  
@@ -10794,7 +10789,7 @@ void ShowScrollBar(
 ### <a name="remarks"></a>コメント  
  アプリケーションを呼び出す必要がありますいない`ShowScrollBar`スクロール バーの通知メッセージの処理中に、スクロール バーを非表示にします。  
   
-##  <a name="showwindow"></a>  CWnd::ShowWindow  
+##  <a name="showwindow"></a>  また  
  ウィンドウの可視性の状態を設定します。  
   
 ```  
@@ -10909,7 +10904,7 @@ HWND UnsubclassWindow();
 ### <a name="example"></a>例  
   例を参照して[CWnd::SubclassWindow](#subclasswindow)です。  
   
-##  <a name="updatedata"></a>  CWnd::UpdateData  
+##  <a name="updatedata"></a>  :Updatedata  
  このメンバー関数 ダイアログ ボックスでは、データの初期化または取得し、ダイアログ データ検証を呼び出します。  
   
 ```  
@@ -10926,7 +10921,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 ### <a name="remarks"></a>コメント  
  フレームワークが自動的に呼び出します`UpdateData`で`bSaveAndValidate`'éý' **FALSE**の既定の実装でモーダル ダイアログ ボックスを作成するときに[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)です。 呼び出しは、ダイアログ ボックスが表示される前に発生します。 既定の実装[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)でこのメンバー関数が呼び出さ`bSaveAndValidate`に設定**TRUE**データの取得に成功した場合は、ダイアログ ボックスを閉じます。 (ダイアログ ボックスで [キャンセル] ボタンをクリックすると、ダイアログ ボックスがされずに閉じ取得されるデータです。)  
   
-##  <a name="updatedialogcontrols"></a>  CWnd::UpdateDialogControls  
+##  <a name="updatedialogcontrols"></a>  ダイアログ  
  ダイアログ ボックスまたはを使用するウィンドウの他のコントロールやダイアログ ボタンの状態を更新するには、このメンバー関数を呼び出す、 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)コールバック機構です。  
   
 ```  
@@ -11136,7 +11131,7 @@ virtual void ResizeDynamicLayout();
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)   

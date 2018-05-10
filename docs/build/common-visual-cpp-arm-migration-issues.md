@@ -1,27 +1,22 @@
 ---
-title: "一般的な Visual C の ARM 移行問題 |Microsoft ドキュメント"
-ms.custom: 
+title: 一般的な Visual C の ARM 移行問題 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc34d472fb6db02eb902001ad5aac77dea5baf0
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 04253b5d71de75f6a06f2934dae24df2e6d4e3e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ の ARM への移行に関する一般的な問題
 
@@ -108,9 +103,9 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 MSVC コンパイラの 2 つの異なる意味をサポートしている、`volatile`記憶域の修飾子をコンパイラ スイッチを使用して指定することができます。 [/Volatile:ms](../build/reference/volatile-volatile-keyword-interpretation.md)スイッチは、Microsoft がそれらのアーキテクチャで強力なメモリ モデルにより、x86 と x64 用の従来のケースが済みとして、強力な順序は保証揮発性のセマンティクスを拡張を選択します。 [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)スイッチは、厳密な C++ 標準揮発性セマンティクスを厳密な順序を保証しないものを選択します。
 
-既定では、ARM アーキテクチャ**/volatile:iso**メモリ モデルを順序付け ARM プロセッサがある十分ではないため、および ARM のソフトウェアは、従来の拡張のセマンティクスに依存するがあるないため**/volatile:ms**および持っていない通常はソフトウェアとやり取りします。 ただし、場合もあります不便または拡張のセマンティクスを使用する、ARM プログラムをコンパイルする必須です。 たとえば、ISO C のセマンティクスを使用するプログラムに移植するコストが高くなる可能性があるまたはドライバー ソフトウェアが正常に機能する従来のセマンティクスに準拠する必要があります。 このような場合は、使用することができます、 **/volatile:ms**スイッチですただし、ARM を対象の従来の揮発性のセマンティクスを再作成には、コンパイラ挿入必要がありますごとの読み取りまたは書き込みの周囲のメモリ バリア、`volatile`変数を適用するには。強力な順序では、パフォーマンスにマイナスの影響であることができます。
+既定では、ARM アーキテクチャ **/volatile:iso**メモリ モデルを順序付け ARM プロセッサがある十分ではないため、および ARM のソフトウェアは、従来の拡張のセマンティクスに依存するがあるないため **/volatile:ms**および持っていない通常はソフトウェアとやり取りします。 ただし、場合もあります不便または拡張のセマンティクスを使用する、ARM プログラムをコンパイルする必須です。 たとえば、ISO C のセマンティクスを使用するプログラムに移植するコストが高くなる可能性があるまたはドライバー ソフトウェアが正常に機能する従来のセマンティクスに準拠する必要があります。 このような場合は、使用することができます、 **/volatile:ms**スイッチですただし、ARM を対象の従来の揮発性のセマンティクスを再作成には、コンパイラ挿入必要がありますごとの読み取りまたは書き込みの周囲のメモリ バリア、`volatile`変数を適用するには。強力な順序では、パフォーマンスにマイナスの影響であることができます。
 
-既定では、x86 および x64 のアーキテクチャで**/volatile:ms** MSVC を使用して、それらのアーキテクチャを既に作成されているソフトウェアのほとんどが依存しているためです。 X86 と x64 のプログラムをコンパイルするときに指定できます、 **/volatile:iso**スイッチの不要な従来の揮発性のセマンティクスに依存していることを回避して、移植性を昇格します。
+既定では、x86 および x64 のアーキテクチャで **/volatile:ms** MSVC を使用して、それらのアーキテクチャを既に作成されているソフトウェアのほとんどが依存しているためです。 X86 と x64 のプログラムをコンパイルするときに指定できます、 **/volatile:iso**スイッチの不要な従来の揮発性のセマンティクスに依存していることを回避して、移植性を昇格します。
 
 ## <a name="see-also"></a>関連項目
 

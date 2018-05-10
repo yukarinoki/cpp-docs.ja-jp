@@ -1,13 +1,10 @@
 ---
-title: "TN042: ODBC ドライバーの開発に関する推奨事項 |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN042: ODBC ドライバーの開発に関する推奨事項 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.odbc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6361266ebf2f09b8f34d150de835b25c55720b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35c75f5c5bae3a1b56abe91340de00f373663792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>テクニカル ノート 42: ODBC ドライバーの開発に関する推奨事項
 > [!NOTE]
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  **SQLGetInfo SQL_DATABASE_NAME**が呼び出されます。  
   
 ## <a name="begintrans-committrans-rollback"></a>BeginTrans、CommitTrans、ロールバック  
- **SQLSetConnectOption SQL_AUTOCOMMIT**と**SQLTransact 指定して**、 **SQL_ROLLBACK**と**SQL_AUTOCOMMIT**ときに呼び出されるトランザクション要求が行われます。  
+ **SQLSetConnectOption SQL_AUTOCOMMIT**と**SQLTransact 指定して**、 **SQL_ROLLBACK**と**SQL_AUTOCOMMIT**がトランザクションを要求する場合に呼び出されます行われます。  
   
 ## <a name="crecordsets"></a>CRecordsets  
  **SQLAllocStmt**、 **SQLPrepare**、 **SQLExecute** (の**開く**と**Requery**)、 **SQLExecDirect** (の update 操作の場合)、 **SQLFreeStmt**サポートする必要があります。 **SQLNumResultCols**と**SQLDescribeCol**はさまざまなタイミングで設定の結果で呼び出されます。  
@@ -119,7 +114,7 @@ ms.lasthandoff: 12/21/2017
   
  さらに、排他ロックが要求された場合に呼び出し**SQLSetPos** irow 1、fRefresh FALSE fLock と**SQL_LCK_EXCLUSIVE**になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

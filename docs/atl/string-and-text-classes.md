@@ -1,12 +1,9 @@
 ---
-title: "ATL 文字列クラスと Text |Microsoft ドキュメント"
-ms.custom: 
+title: ATL 文字列クラスと Text |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - string conversion, ATL
 - string classes [ATL]
 ms.assetid: aa0cdc41-c953-4b17-82b6-59b908545571
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33d78f8ed42724a0fe4af404f1e65a67fb604bc3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4bd20b017109cd91bcfcb25020178c1296cadf24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-text-classes"></a>文字列とテキスト クラス
 これらのクラスは、文字列およびテキスト文字列の変換のサポートを提供します。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 02/14/2018
   
 -   [_U_STRINGorID](../atl/reference/u-stringorid-class.md)この引数のアダプター クラスは、いずれかのリソース名を使用できます (`LPCTSTR`s) またはリソース Id (**UINT**s)、ID、を使用して文字列を変換、呼び出し元を必要とせず、関数に渡される**されるときは**マクロです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../atl/atl-class-overview.md)   
  [ATL と MFC 文字列変換マクロ](reference/string-conversion-macros.md)
 

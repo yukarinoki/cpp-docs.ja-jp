@@ -1,12 +1,9 @@
 ---
-title: "event クラス |Microsoft ドキュメント"
-ms.custom: 
+title: event クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - event
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-class"></a>event クラス
 同時実行ランタイムを明示的に認識する手動リセット イベントです。  
@@ -61,7 +56,7 @@ class event;
   
 ### <a name="public-constants"></a>パブリック定数  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[timeout_infinite](#timeout_infinite)|待機がタイムアウトしないことを示す値。|  
   
@@ -71,7 +66,7 @@ class event;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `event`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
@@ -176,5 +171,5 @@ static size_t __cdecl wait_for_multiple(
 > [!IMPORTANT]
 >  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出すことはありません`wait_for_multiple`ASTA のスレッドのため、この呼び出しで、現在のスレッドをブロックすることができ、アプリが応答しなくなる可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

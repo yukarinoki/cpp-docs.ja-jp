@@ -1,30 +1,25 @@
 ---
-title: "ドキュメント/ビュー アーキテクチャの利点 |Microsoft ドキュメント"
-ms.custom: 
+title: ドキュメント/ビュー アーキテクチャの利点 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aad0ed0df5eb25ccc0dd896a5a032cd190b6c3b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45065b38128a2e3239b1fd10ded490fdcbcb3eac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの利点
 MFC ドキュメント/ビュー アーキテクチャを使用する主な利点は、アーキテクチャが同一のドキュメントの複数のビューを特にもサポートしています。 (複数のビューの必要はありません、ドキュメント/ビューの少量のオーバーヘッドは、アプリケーションで過剰な場合を回避できますアーキテクチャ。 [ドキュメント/ビュー アーキテクチャの代替手段](../mfc/alternatives-to-the-document-view-architecture.md))。  
@@ -49,6 +44,6 @@ MFC ドキュメント/ビュー アーキテクチャを使用する主な利�
   
 -   [CView::GetDocument](../mfc/reference/cview-class.md#getdocument)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
 

@@ -2,29 +2,24 @@
 title: CLR 配列の宣言 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - array keyword [C++]
 ms.assetid: 36a8883c-2663-43f0-a90c-28f27035e036
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3f263227d437ddafb65ac3da0829414e4af05855
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d8b2a5d348887d56a1221a5a9125449e5356b9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-array"></a>CLR 配列の宣言
 宣言の構文、インスタンス化、およびマネージ配列の初期化がマネージ拡張から変更 C++ の Visual C にします。  
@@ -43,7 +38,7 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
- 参照型はオブジェクトではなく追跡ハンドルであるため、CLR 配列を関数の戻り値の型として指定できます  (これに対し、ネイティブ配列は関数の戻り値の型として指定できません)。マネージ拡張でこれを行うと、少し直感的でない構文になります。 例:  
+ 参照型はオブジェクトではなく追跡ハンドルであるため、CLR 配列を関数の戻り値の型として指定できます  (これに対し、ネイティブ配列は関数の戻り値の型として指定できません)。マネージ拡張でこれを行うと、少し直感的でない構文になります。 例えば:  
   
 ```  
 Int32 f() [];  
@@ -57,7 +52,7 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
- どちらの言語でも、ローカルなマネージ配列を簡単に初期化できます。 例:  
+ どちらの言語でも、ローカルなマネージ配列を簡単に初期化できます。 例えば:  
   
 ```  
 int GetArray() __gc[] {  
@@ -93,7 +88,7 @@ array<Object^>^ myArray = gcnew array<Object^>(2);
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- 新しい構文では、`gcnew` 式の後に明示的な初期化リストを含めることができます。これは、マネージ拡張ではサポートされていませんでした。 例:  
+ 新しい構文では、`gcnew` 式の後に明示的な初期化リストを含めることができます。これは、マネージ拡張ではサポートされていませんでした。 例えば:  
   
 ```  
 // explicit initialization list following gcnew   
@@ -102,6 +97,6 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マネージ型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [配列](../windows/arrays-cpp-component-extensions.md)

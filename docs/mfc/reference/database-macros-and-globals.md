@@ -1,13 +1,10 @@
 ---
-title: "データベースのマクロとグローバル |Microsoft ドキュメント"
-ms.custom: 
+title: データベースのマクロとグローバル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/AFX_ODBC_CALL
 - AFXDB/AFX_SQL_ASYNC
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f43135678c54ed2f837934c19a8543c86a65fdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcafff20ad79f68f2bb5d4195c38603da63b9d17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-macros-and-globals"></a>データベース マクロとデータベース グローバル関数
 マクロとグローバル変数を以下に示す ODBC ベースのデータベース アプリケーションに適用されます。 DAO ベースのアプリケーションでは使用されません。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[AFX_ODBC_CALL](#afx_odbc_call)|返す ODBC API 関数を呼び出す`SQL_STILL_EXECUTING`です。 `AFX_ODBC_CALL`繰り返し関数を呼び出すまで不要になった返します`SQL_STILL_EXECUTING`です。|  
+|[AFX_ODBC_CALL](#afx_odbc_call)|返す ODBC API 関数を呼び出す`SQL_STILL_EXECUTING`です。 `AFX_ODBC_CALL` 繰り返し関数を呼び出すまで不要になった返します`SQL_STILL_EXECUTING`です。|  
 |[AFX_SQL_ASYNC](#afx_sql_async)|`AFX_ODBC_CALL`.|  
 |[AFX_SQL_SYNC](#afx_sql_sync)|返されない ODBC API 関数を呼び出す`SQL_STILL_EXECUTING`です。|  
   
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxGetHENV](#afxgethenv)|MFC で使用されている ODBC 環境ハンドルを取得します。 このハンドルは、ODBC の直接の呼び出しで使用できます。|  
 
 
-## <a name="afxdbinitmodule"></a>AfxDbInitModule
+## <a name="afxdbinitmodule"></a> AfxDbInitModule
 MFC データベース (または DAO) は、MFC と動的にリンクされている標準 MFC DLL からサポート、標準 MFC dll のこの関数に対する呼び出しを追加**場合は**MFC を初期化する関数を DLL のデータベースです。  
    
 ### <a name="syntax"></a>構文    
@@ -64,17 +59,17 @@ void AFXAPI AfxDbInitModule( );
 ```  
    
 ### <a name="remarks"></a>コメント  
- この呼び出しは、基底クラスを呼び出す前に発生または追加の MFC DLL をデータベースにアクセスするコードを確認してください。 MFC データベース DLL が MFC 拡張 DLL です。MFC 拡張 DLL にワイヤード (有線) を取得するため、 **CDynLinkLibrary**チェーンを作成する必要があります、 **CDynLinkLibrary**を利用することのすべてのモジュールのコンテキスト内のオブジェクト。 `AfxDbInitModule`作成、 **CDynLinkLibrary**にワイヤード (有線) を取得できるように、正規の MFC DLL のコンテキストでオブジェクト、 **CDynLinkLibrary**オブジェクトの標準の MFC DLL のチェーン。  
+ この呼び出しは、基底クラスを呼び出す前に発生または追加の MFC DLL をデータベースにアクセスするコードを確認してください。 MFC データベース DLL が MFC 拡張 DLL です。MFC 拡張 DLL にワイヤード (有線) を取得するため、 **CDynLinkLibrary**チェーンを作成する必要があります、 **CDynLinkLibrary**を利用することのすべてのモジュールのコンテキスト内のオブジェクト。 `AfxDbInitModule` 作成、 **CDynLinkLibrary**にワイヤード (有線) を取得できるように、正規の MFC DLL のコンテキストでオブジェクト、 **CDynLinkLibrary**オブジェクトの標準の MFC DLL のチェーン。  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** < afxdll_.h >  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)
  
   
 
-##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL  
  このマクロが返される任意の ODBC API 関数の呼び出しを使用して`SQL_STILL_EXECUTING`です。  
   
 ```  
@@ -86,7 +81,7 @@ AFX_ODBC_CALL(SQLFunc)
  ODBC API 関数。 ODBC API 関数の詳細については、Windows SDK を参照してください。  
   
 ### <a name="remarks"></a>コメント  
- `AFX_ODBC_CALL`繰り返し関数を呼び出すまで不要になった返します`SQL_STILL_EXECUTING`です。  
+ `AFX_ODBC_CALL` 繰り返し関数を呼び出すまで不要になった返します`SQL_STILL_EXECUTING`です。  
   
  呼び出す前に`AFX_ODBC_CALL`、変数を宣言する必要があります`nRetCode`、型の**RETCODE**です。  
   
@@ -98,10 +93,10 @@ AFX_ODBC_CALL(SQLFunc)
   
  [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxdb.h  
 
-##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC  
  このマクロを MFC 4.2 で変更の実装です。  
   
 ```   
@@ -116,15 +111,15 @@ AFX_SQL_ASYNC(prs, SQLFunc)
  ODBC API 関数。 ODBC API 関数の詳細については、Windows SDK を参照してください。  
   
 ### <a name="remarks"></a>コメント  
- `AFX_SQL_ASYNC`マクロを呼び出すだけ[AFX_ODBC_CALL](#afx_odbc_call)を無視し、`prs`パラメーター。 MFC の 4.2、以前のバージョンで`AFX_SQL_ASYNC`返す可能性のある ODBC API 関数の呼び出しに使用された`SQL_STILL_EXECUTING`です。 ODBC API 関数が返さ場合`SQL_STILL_EXECUTING`、し、`AFX_SQL_ASYNC`呼び出して`prs->OnWaitForDataSource`です。  
+ `AFX_SQL_ASYNC` マクロを呼び出すだけ[AFX_ODBC_CALL](#afx_odbc_call)を無視し、`prs`パラメーター。 MFC の 4.2、以前のバージョンで`AFX_SQL_ASYNC`返す可能性のある ODBC API 関数の呼び出しに使用された`SQL_STILL_EXECUTING`です。 ODBC API 関数が返さ場合`SQL_STILL_EXECUTING`、し、`AFX_SQL_ASYNC`呼び出して`prs->OnWaitForDataSource`です。  
   
 > [!NOTE]
 >  MFC ODBC クラスは、唯一の同期処理を使用するようになりました。 非同期操作を実行するのには、ODBC API 関数を呼び出す必要があります**SQLSetConnectOption**です。 詳細については、「を実行する関数に非同期的に」Windows SDK のトピックを参照してください。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdb.h  
   
-##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC  
  `AFX_SQL_SYNC`マクロ、関数を呼び出すだけ`SQLFunc`です。  
   
 ```   
@@ -148,10 +143,10 @@ AFX_SQL_SYNC(SQLFunc)
   
  [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdb.h  
   
-##  <a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>  AfxGetHENV  
  ODBC の直接の呼び出しで返されるハンドルを使用することができますが、ハンドルを終了またはハンドルが有効であり、使用可能な既存のすべての後にあるとする必要がありますしない`CDatabase`- または`CRecordset`-派生オブジェクトが破棄されました。  
   
 ```   
@@ -161,8 +156,8 @@ HENV AFXAPI AfxGetHENV();
 ### <a name="return-value"></a>戻り値  
  MFC で使用されている ODBC 環境ハンドルです。 指定できます`SQL_HENV_NULL`がある場合ありません[CDatabase](../../mfc/reference/cdatabase-class.md)オブジェクトおよびいいえ[CRecordset](../../mfc/reference/crecordset-class.md)使用中のオブジェクト。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxdb.h  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,10 +1,7 @@
 ---
-title: "ATL テキストエンコーディング関数 |Microsoft ドキュメント"
-ms.custom: 
+title: ATL テキストエンコーディング関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキストエンコーディング関数
 これらの関数は、テキスト エンコードとデコードをサポートします。
@@ -69,7 +65,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>要件  
  **ヘッダー:** atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 16 進数の数値を取得します。  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>戻り値  
  入力文字の数値の値は、16 進数として解釈されます。 たとえば、'0' の入力が 0 の値を返し、'A' の入力が 10 の値を返します。 入力文字が 16 進数でない場合は、この関数は-1 を返します。  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 使用している ATL ライブラリのバージョンを取得するには、この関数を呼び出します。  
   
 ```  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>要件  
  **ヘッダー:** atlbase.h  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 前の呼び出しによって 16 進テキストとしてエンコードされているデータの文字列をデコード[AtlHexEncode](#atlhexencode)です。  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 指定した長さの 16 進エンコードされた文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>戻り値  
  デコードされた文字列を格納するバッファーの必要なバイト数`nSrcLen`文字です。  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 一部のデータを 16 進テキストの文字列としてエンコードします。  
   
 ```  
@@ -176,7 +172,7 @@ int * pnDestLen) throw();
 ### <a name="remarks"></a>コメント  
  ソース データの各バイトは、2 つの 16 進文字としてエンコードされます。  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>戻り値  
  文字のエンコードされたデータを格納するバッファーのために必要な数`nSrcLen`バイトです。  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 16 進数の数値を取得します。  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>戻り値  
  入力文字の数値の値は、16 進数として解釈されます。 たとえば、'0' の入力が 0 の値を返し、'A' の入力が 10 の値を返します。 入力文字が 16 進数でない場合は、この関数は-1 を返します。  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 Unicode 文字列を UTF-8 に変換します。  
   
 ```  
@@ -234,7 +230,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="remarks"></a>コメント  
  変換後の文字列に必要なバッファーのサイズを調べるには、この関数 0 を渡す`szDest`と`nDest`です。  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 "B" エンコーディングを使用して一部のデータを変換します。  
   
 ```  
@@ -268,7 +264,7 @@ inline BOOL BEncode(
 ### <a name="remarks"></a>コメント  
  "B"エンコーディング方式については、「RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。  
   
 ```  
@@ -288,7 +284,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>コメント  
  "B"エンコーディング方式については、「RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 XML での使用には安全でない文字を安全な文字に変換します。  
   
 ```  
@@ -316,8 +312,8 @@ inline int EscapeXML(
  `dwFlags`  
  変換の実行方法を記述する ATL_ESC フラグ。 
 
-- `ATL_ESC_FLAG_NONE`既定の動作です。 引用符記号とアポストロフィは変換されません。
-- `ATL_ESC_FLAG_ATTR`記号とアポストロフィに変換されます見積もり`&quot;`と`&apos;`それぞれします。
+- `ATL_ESC_FLAG_NONE` 既定の動作です。 引用符記号とアポストロフィは変換されません。
+- `ATL_ESC_FLAG_ATTR` 記号とアポストロフィに変換されます見積もり`&quot;`と`&apos;`それぞれします。
 
 
   
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 文字列に含まれる拡張文字の数を取得します。  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>戻り値  
  によって決定される、文字列内で見つかった拡張文字の数を返します[IsExtendedChar](#isextendedchar)です。  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 指定された文字が拡張文字 (文字コードが 31 以下または 127 以上で、タブ、ラインフィード、キャリッジ リターン以外の文字) かどうかを判断します。  
   
 ```  
@@ -366,7 +362,7 @@ inline int IsExtendedChar(char ch) throw();
 ### <a name="return-value"></a>戻り値  
  **TRUE**文字を拡張すると場合、 **FALSE**それ以外の場合。  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 "Q" エンコーディングを使用して一部のデータを変換します。  
   
 ```  
@@ -404,7 +400,7 @@ inline BOOL QEncode(
 ### <a name="remarks"></a>コメント  
  "Q"エンコーディング方式については、「RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。  
   
 ```  
@@ -424,7 +420,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>コメント  
  "Q"エンコーディング方式については、「RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 前の呼び出しによってなど quoted-printable 形式にエンコードされたデータの文字列をデコード[QPEncode](#qpencode)です。  
   
 ```  
@@ -458,7 +454,7 @@ inline BOOL QPDecode(
 ### <a name="remarks"></a>コメント  
  引用符で囲まれた印刷可能なエンコード体系が RFC 2045 で説明されている ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 quoted-printable にエンコードされた指定長の文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。  
   
 ```  
@@ -475,7 +471,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="remarks"></a>コメント  
  引用符で囲まれた印刷可能なエンコード体系が RFC 2045 で説明されている ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 一部のデータを quoted-printable 形式にエンコードします。  
   
 ```  
@@ -502,8 +498,8 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。 
-- `ATLSMTP_QPENCODE_DOT`行の先頭にピリオドが表示されている場合に、出力に追加だけでなくエンコードします。
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`追加`=\r\n`エンコードされた文字列にします。
+- `ATLSMTP_QPENCODE_DOT` 行の先頭にピリオドが表示されている場合に、出力に追加だけでなくエンコードします。
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` 追加`=\r\n`エンコードされた文字列にします。
 
 引用符で囲まれた印刷可能なエンコーディング方式については、「 [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt)です。
   
@@ -513,7 +509,7 @@ inline BOOL QPEncode(
 ### <a name="remarks"></a>コメント  
  引用符で囲まれた印刷可能なエンコード体系が RFC 2045 で説明されている ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。  
   
 ```  
@@ -530,7 +526,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>コメント  
  引用符で囲まれた印刷可能なエンコード体系が RFC 2045 で説明されている ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 など、以前の呼び出しによって uuencode されているデータの文字列をデコード[UUEncode](#uuencode)です。  
   
 ```  
@@ -560,7 +556,7 @@ inline BOOL UUDecode(
 ### <a name="remarks"></a>コメント  
  この実装は uuencoding POSIX P1003.2b/D11 仕様に従っています。  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 指定した長さの uuencode された文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。  
   
 ```  
@@ -577,7 +573,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>コメント  
  この実装は uuencoding POSIX P1003.2b/D11 仕様に従っています。  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 データを uuencode します。  
   
 ```  
@@ -608,9 +604,9 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  この関数の動作を制御するフラグ。 
-- `ATLSMTP_UUENCODE_HEADE`ヘッダーがエンコードされます。
-- `ATLSMTP_UUENCODE_END`末尾がエンコードされます。
-- `ATLSMTP_UUENCODE_DOT`データの埋め込みが行われます。  
+- `ATLSMTP_UUENCODE_HEADE` ヘッダーがエンコードされます。
+- `ATLSMTP_UUENCODE_END` 末尾がエンコードされます。
+- `ATLSMTP_UUENCODE_DOT` データの埋め込みが行われます。  
   
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
@@ -618,7 +614,7 @@ inline BOOL UUEncode(
 ### <a name="remarks"></a>コメント  
  この実装は uuencoding POSIX P1003.2b/D11 仕様に従っています。  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。  
   
 ```  

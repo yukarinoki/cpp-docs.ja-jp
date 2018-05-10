@@ -1,13 +1,10 @@
 ---
-title: "MFC クラス オブジェクトのキャストの型 |Microsoft ドキュメント"
-ms.custom: 
+title: MFC クラス オブジェクトのキャストの型 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc887ad855b00b525c74b66bfc70f2adb3312e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 217be53a78a65a0f617438127b922b20c950853d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC クラス オブジェクトの型キャスト
 型キャストのマクロは、指定されたポインター、キャストは有効なことを確認せず、特定のクラスのオブジェクトを指すポインターをキャストする方法を提供します。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|キャストが有効かどうかを確認中に、クラス オブジェクトへのポインターへのポインターをキャストします。|  
 |[STATIC_DOWNCAST](#static_downcast)|関連する型のポインターに 1 つのクラスからオブジェクトへのポインターをキャストします。 デバッグ ビルドにより、 **ASSERT**オブジェクトがない場合、ターゲットの種類「の種類」です。|  
   
-##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST  
  キャストが有効かどうかを確認中に、クラスのオブジェクトへのポインターへのポインターをキャストする便利な方法を提供します。  
   
 ```   
@@ -62,7 +57,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  ポインターによって参照されるオブジェクトがある場合、識別されたクラス「の種類」マクロは、適切なポインターを返します。 マクロを返しますのかどうかはそうでない有効なキャスト**NULL**です。  
   
-##  <a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>  STATIC_DOWNCAST  
  キャスト*pobject*へのポインター、 *class_name*オブジェクト。  
   
 ```   
@@ -77,7 +72,7 @@ STATIC_DOWNCAST(class_name, pobject)
  ポインターにキャストするへのポインター、 *class_name*オブジェクト。  
   
 ### <a name="remarks"></a>コメント  
- *pobject*どちらかでなければなりません**NULL**、直接、派生クラスからまたは間接的に、オブジェクトを指すまたは*class_name*です。 使用してアプリケーションのビルドでは、 **_DEBUG**プリプロセッサ シンボルが定義されている、マクロは**ASSERT**場合*pobject*は**NULL**、またははないオブジェクトを指している場合で指定されたクラス「の種類」、 *class_name*パラメーター (を参照してください[使うため](../../mfc/reference/cobject-class.md#iskindof))。 以外の**_DEBUG**ビルド、マクロは、型チェックなしのキャストを実行します。  
+ *pobject*どちらかでなければなりません**NULL**、直接、派生クラスからまたは間接的に、オブジェクトを指すまたは*class_name*です。 使用してアプリケーションのビルドでは、 **_DEBUG**プリプロセッサ シンボルが定義されている、マクロは**ASSERT**場合*pobject*は**NULL**、またははないオブジェクトを指している場合で指定されたクラス「の種類」、 *class_name*パラメーター (を参照してください[使うため](../../mfc/reference/cobject-class.md#iskindof))。 以外の **_DEBUG**ビルド、マクロは、型チェックなしのキャストを実行します。  
   
  指定されたクラス、 *class_name*からパラメーターを派生する必要があります`CObject`および使用する必要があります、`DECLARE_DYNAMIC`と`IMPLEMENT_DYNAMIC`、`DECLARE_DYNCREATE`と`IMPLEMENT_DYNCREATE`、または`DECLARE_SERIAL`と`IMPLEMENT_SERIAL`マクロ、アーティクルの説明に従って[CObject クラス: CObject からクラスを派生する](../../mfc/deriving-a-class-from-cobject.md)です。  
   
@@ -87,5 +82,5 @@ STATIC_DOWNCAST(class_name, pobject)
   
  場合`pMyDoc`から直接または間接的に派生したオブジェクトを指していない**CDocument**、マクロは**ASSERT**です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

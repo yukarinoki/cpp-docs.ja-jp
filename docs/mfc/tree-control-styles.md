@@ -1,13 +1,10 @@
 ---
-title: "コントロールのスタイルのツリー |Microsoft ドキュメント"
-ms.custom: 
+title: コントロールのスタイルのツリー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TVS_SINGLEEXPAND
 - TVS_LINESATROOT
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141a2b0db673f8d3c5f2c116de5b5d2ec81a8ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-styles"></a>ツリー コントロールのスタイル
 ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) スタイルのツリー コントロールの外観の側面を制御します。 ツリー コントロールを作成するときに、初期のスタイルを設定します。 取得してを使用してツリーのコントロールを作成した後、スタイルを変更することができます、 [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)と[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 関数を指定する**GWL_STYLE**の`nIndex`パラメーター。 スタイルの一覧については、次を参照してください。[ツリー ビュー コントロールのウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK に含まれています。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  **TVS_NOTOOLTIPS**スタイルのツリー ビュー コントロールの自動ツール ヒント機能を無効にします。 この機能は、全体のタイトルに現在表示されていない場合は、マウス カーソルの下にある項目のタイトルを含む、ツール ヒントを自動的に表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

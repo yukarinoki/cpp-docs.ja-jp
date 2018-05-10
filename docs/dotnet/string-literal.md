@@ -2,35 +2,30 @@
 title: リテラル文字列 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - string literals
 - strings [C++], string literals
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ac847f67421802fe4d31f2d66b34128e4b24794
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-literal"></a>リテラル文字列
 リテラル文字列の処理は、Visual C を c++ マネージ拡張から変更されました。  
   
- C++ 言語のデザインのマネージ拡張で、管理対象の文字列リテラルとリテラル文字列の先頭で指定された、`S`です。 例:  
+ C++ 言語のデザインのマネージ拡張で、管理対象の文字列リテラルとリテラル文字列の先頭で指定された、`S`です。 例えば:  
   
 ```  
 String *ps1 = "hello";  
@@ -55,13 +50,13 @@ stloc.0
   
  れている助かりますだけ記憶 (学習) とプレフィックスのリテラル文字列の`S`です。 新しい構文ではリテラル文字列の処理が行われますに透明で、使用のコンテキストによって決まります。 `S`を指定する必要がなくなった。  
   
- についておが必要になる明示的にケースは、1 つの解釈または別のコンパイラを直接しますか。 このような場合は、明示的なキャストを適用します。 例:  
+ についておが必要になる明示的にケースは、1 つの解釈または別のコンパイラを直接しますか。 このような場合は、明示的なキャストを適用します。 例えば:  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- さらに、文字列リテラル対応、`String`標準変換ではなく、単純な変換とします。 このことがありますしないように思えるはるかを含むオーバー ロードされた関数のセットの解像度を変更中に、`String`と`const char*`競合する仮パラメーターとして。 1 回に解決する解像度、`const char*`インスタンスがあいまいとフラグが立てようになりました。 例:  
+ さらに、文字列リテラル対応、`String`標準変換ではなく、単純な変換とします。 このことがありますしないように思えるはるかを含むオーバー ロードされた関数のセットの解像度を変更中に、`String`と`const char*`競合する仮パラメーターとして。 1 回に解決する解像度、`const char*`インスタンスがあいまいとフラグが立てようになりました。 例えば:  
   
 ```  
 ref struct R {  
@@ -115,6 +110,6 @@ int main () {
   
  コンパイラ フラグとして、あいまいな呼び出しをそのため、いる必要がありますの変換、`const char[4]`を`String^`単純変換を完全に一致があります。 これは、変更を新しい言語バージョンが導入されました。 これとは、呼び出しは、フラグが理由としてあいまいです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一般的な言語の変更 (C + + CLI)](../dotnet/general-language-changes-cpp-cli.md)   
  [String](../windows/string-cpp-component-extensions.md)

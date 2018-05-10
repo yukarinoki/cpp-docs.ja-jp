@@ -1,27 +1,22 @@
 ---
-title: "2.6.5 flush ディレクティブ |Microsoft ドキュメント"
-ms.custom: 
+title: 2.6.5 flush ディレクティブ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad3b34195015f57955c5be685807ec43f0a8f8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush ディレクティブ
 **フラッシュ**ディレクティブについては、明示的または黙示に関わらず、かどうかは実装が現在チーム内のすべてのスレッドに、一貫性 (以下で指定) で特定のオブジェクトのビューがあることを確認してくださいに必要な場合は、「スレッド間」シーケンス ポイントを指定しますメモリです。 これは、前のこれらのオブジェクトを参照する式の評価が完了し、以降の評価がまだ開始されていないことを意味します。 たとえば、コンパイラは、メモリにレジスタからのオブジェクトの値を復元する必要があります、ハードウェアは、メモリへの書き込みバッファーをフラッシュし、メモリからオブジェクトの値を再読み込みする必要があります。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   開始および終了をからに**重大**  
   
--   エントリとからの終了`ordered`  
+-   エントリとからの終了 `ordered`  
   
 -   開始および終了をからに**並列**  
   

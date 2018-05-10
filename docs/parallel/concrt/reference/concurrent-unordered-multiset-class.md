@@ -1,12 +1,9 @@
 ---
-title: "concurrent_unordered_multiset クラス |Microsoft ドキュメント"
-ms.custom: 
+title: concurrent_unordered_multiset クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multiset
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48b73be3a16fd42da097ed402588df988415c8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb187e49302f9d885c8810636f1ed638257675
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset クラス
 `concurrent_unordered_multiset`クラス型 K. の要素の可変長シーケンスを制御する同時実行セーフ コンテナーがシーケンスが同時実行セーフな形で表される要素アクセス、反復子アクセス、反復子走査の各操作を追加します。  
@@ -121,7 +116,7 @@ template <typename K,
   
  `concurrent_unordered_multiset`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concurrent_unordered_set.h  
   
  **名前空間:** concurrency  
@@ -664,7 +659,7 @@ size_type unsafe_max_bucket_count() const;
 ### <a name="return-value"></a>戻り値  
  このコンテナー内のバケットの最大数。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [並列コンテナーと並列オブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)
 

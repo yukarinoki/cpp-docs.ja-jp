@@ -1,12 +1,9 @@
 ---
-title: "CD2DRectU クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CD2DRectU クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DRectU
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bf261f31f470862a506466a8815daef796743f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU クラス
 `D2D1_RECT_U`のラッパー。  
@@ -65,10 +60,10 @@ class CD2DRectU : public D2D1_RECT_U;
   
  `CD2DRectU`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrendertarget.h  
   
-##  <a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
+##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
  CRect オブジェクトから CD2DRectU オブジェクトを構築します。  
   
 ```  
@@ -100,7 +95,7 @@ CD2DRectU(
  `uBottom`  
  ソースの下の座標  
   
-##  <a name="isnull"></a>CD2DRectU::IsNull  
+##  <a name="isnull"></a>  CD2DRectU::IsNull  
  式に有効なデータ (Null) がないかどうかを示すブール値を返します。  
   
 ```  
@@ -110,7 +105,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>戻り値  
  四角形の上、左、下、および適切な値はすべて 0 に等しい場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="operator_crect"></a>CD2DRectU::operator CRect  
+##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
  CD2DRectU を含む CRect オブジェクトに変換します。  
   
 ```  
@@ -120,5 +115,5 @@ operator CRect();
 ### <a name="return-value"></a>戻り値  
  D2D の四角形の現在の値。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

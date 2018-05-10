@@ -1,12 +1,9 @@
 ---
-title: "CD2DLayer クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CD2DLayer クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DLayer
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94345f4784254addce0deaf8bdb5061dbde6a8cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 197fc5ecb1b9676dd1ff11327c62950992f6f06d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer クラス
 ID2D1Layer のラッパーです。  
@@ -83,7 +78,7 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CD2DLayer::m_pLayer](#m_player)|ID2D1Layer オブジェクトへのポインターを格納します。|  
   
@@ -94,17 +89,17 @@ class CD2DLayer : public CD2DResource;
   
  `CD2DLayer`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+##  <a name="_dtorcd2dlayer"></a>  CD2DLayer:: ~ CD2DLayer  
  デストラクターです。 D2D レイヤー オブジェクトが破棄されるときに呼び出されます。  
   
 ```  
 virtual ~CD2DLayer();
 ```  
   
-##  <a name="attach"></a>CD2DLayer::Attach  
+##  <a name="attach"></a>  CD2DLayer::Attach  
  既存のリソースのインターフェイス オブジェクトへの接続  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(ID2D1Layer* pResource);
  `pResource`  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
-##  <a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+##  <a name="cd2dlayer"></a>  CD2DLayer::CD2DLayer  
  CD2DLayer オブジェクトを構築します。  
   
 ```  
@@ -131,7 +126,7 @@ CD2DLayer(
  `bAutoDestroy`  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
-##  <a name="create"></a>CD2DLayer::Create  
+##  <a name="create"></a>  CD2DLayer::Create  
  CD2DLayer を作成します。  
   
 ```  
@@ -145,14 +140,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
   
-##  <a name="destroy"></a>CD2DLayer::Destroy  
+##  <a name="destroy"></a>  CD2DLayer::Destroy  
  CD2DLayer オブジェクトを破棄します。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DLayer::Detach  
+##  <a name="detach"></a>  CD2DLayer::Detach  
  オブジェクトからリソースのインターフェイスの関連付けを解除します。  
   
 ```  
@@ -162,7 +157,7 @@ ID2D1Layer* Detach();
 ### <a name="return-value"></a>戻り値  
  デタッチされたリソースのインターフェイスへのポインター。  
   
-##  <a name="get"></a>CD2DLayer::Get  
+##  <a name="get"></a>  CD2DLayer::Get  
  返します ID2D1Layer インターフェイス  
   
 ```  
@@ -172,7 +167,7 @@ ID2D1Layer* Get();
 ### <a name="return-value"></a>戻り値  
  ID2D1Layer インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-##  <a name="getsize"></a>CD2DLayer::GetSize  
+##  <a name="getsize"></a>  CD2DLayer::GetSize  
  デバイスに依存しないピクセル単位で、レンダー ターゲットのサイズを返します  
   
 ```  
@@ -182,7 +177,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>戻り値  
  デバイス非依存ピクセルで、レンダー ターゲットの現在のサイズ  
   
-##  <a name="isvalid"></a>CD2DLayer::IsValid  
+##  <a name="isvalid"></a>  CD2DLayer::IsValid  
  リソースの有効性のチェック  
   
 ```  
@@ -192,14 +187,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>戻り値  
  リソースが無効である場合は TRUE。それ以外の場合は FALSE。  
   
-##  <a name="m_player"></a>CD2DLayer::m_pLayer  
+##  <a name="m_player"></a>  CD2DLayer::m_pLayer  
  ID2D1Layer オブジェクトへのポインターを格納します。  
   
 ```  
 ID2D1Layer* m_pLayer;  
 ```  
   
-##  <a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer *  
  返します ID2D1Layer インターフェイス  
   
 ```  
@@ -209,5 +204,5 @@ operator ID2D1Layer* ();
 ### <a name="return-value"></a>戻り値  
  ID2D1Layer インターフェイスまたはオブジェクトがまだ初期化されていない場合は、NULL へのポインター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

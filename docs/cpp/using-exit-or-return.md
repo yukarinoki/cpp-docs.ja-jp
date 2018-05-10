@@ -1,12 +1,9 @@
 ---
-title: "使用して終了するかを返す |Microsoft ドキュメント"
-ms.custom: 
+title: 使用して終了するかを返す |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Exit
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - exit function
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5c9fdb17811206732811db4e27006dc5e0ed84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-exit-or-return"></a>exit または return の使用
 呼び出すと**終了**またはを実行、`return`ステートメントから**メイン**、静的オブジェクトは、初期化の逆の順序で破棄されます。 次の例は、こうした初期化やクリーンアップがどのように機能するのかを示します。  
@@ -82,5 +77,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [終了に関するその他の考慮事項](../cpp/additional-termination-considerations.md)

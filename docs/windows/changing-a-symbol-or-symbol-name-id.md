@@ -1,13 +1,10 @@
 ---
-title: "シンボルまたはシンボル名 (ID) の変更 |Microsoft ドキュメント"
-ms.custom: 
+title: シンボルまたはシンボル名 (ID) の変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - symbol names
 - symbols, names
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0ed56fc3663b99af311c52e463bd2f16fcef0a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28d31fc27fdc51a3a5b05dba96ab9decf4fc7e00
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>シンボルまたはシンボル名 (ID) の変更
 リソースまたはリソース オブジェクトを新規作成すると、IDD_DIALOG1 などの既定のシンボル名が開発環境によって割り当てられます。 使用することができます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)を既定のシンボル名を変更する、またはリソースに関連付けられているシンボルの名前を変更します。  
@@ -47,10 +42,10 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 必要条件  
+ 要件  
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シンボル名の制限](../windows/symbol-name-restrictions.md)   
  [定義済みシンボル ID](../windows/predefined-symbol-ids.md)

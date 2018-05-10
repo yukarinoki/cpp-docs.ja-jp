@@ -1,12 +1,9 @@
 ---
-title: IDBSchemaRowsetImpl::CreateSchemaRowset | Microsoft Docs
-ms.custom: 
+title: Idbschemarowsetimpl::createschemarowset |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBSchemaRowsetImpl::CreateSchemaRowset
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateSchemaRowset method
 ms.assetid: ad3e3e4d-45b9-461c-b7b8-3af6843631b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e819805f9c73b2f8622b21b999b0db5f6771ecbe
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 90a942fc92faf3066669b46fd825ad2eae393f43
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimplcreateschemarowset"></a>IDBSchemaRowsetImpl::CreateSchemaRowset
 テンプレート パラメーターで指定されたオブジェクトの COM オブジェクトの作成関数を実装します。  
@@ -80,10 +75,10 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 ## <a name="remarks"></a>コメント  
  この関数は、あらゆる種類のスキーマ行セットに対する汎用作成関数を実装します。 通常、この関数は、ユーザーからは呼び出されません。 これはスキーマ マップの実装によって呼び出されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)   
  [IDBSchemaRowsetImpl クラス メンバー](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   

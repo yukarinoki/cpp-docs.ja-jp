@@ -1,13 +1,10 @@
 ---
-title: "/FA、/Fa (リスティング ファイル) |Microsoft ドキュメント"
-ms.custom: 
+title: /FA、/Fa (リスティング ファイル) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (リスティング ファイル)
 アセンブラー コードを含むリスティング ファイルを作成します。  
@@ -60,7 +55,7 @@ none
 `s`  
 任意。 一覧には、ソース コードが含まれています。  
   
-`u`省略可能です。 Utf-8 形式でリスティング ファイルをエンコードし、バイト オーダー マーカーが含まれています。 既定では、ファイルは ANSI としてエンコードされます。 使用して`u`任意のシステムに正しく表示されるリスト ファイルを作成するコンパイラへの入力としてのソース コード ファイルのかどうかは、Unicode を使用していますか。  
+`u` 省略可能。 Utf-8 形式でリスティング ファイルをエンコードし、バイト オーダー マーカーが含まれています。 既定では、ファイルは ANSI としてエンコードされます。 使用して`u`任意のシステムに正しく表示されるリスト ファイルを作成するコンパイラへの入力としてのソース コード ファイルのかどうかは、Unicode を使用していますか。  
   
 両方`s`と`u`を指定し、ソース コード ファイルの場合、Unicode エンコードを使用し、utf-8、.asm ファイル内のコード行が正しく表示されない場合があります以外です。  
   
@@ -85,7 +80,7 @@ none
   
 1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。  
   
-2.  開く、 **C/C++**フォルダーを選択、**出力ファイル**プロパティ ページ。  
+2.  開く、 **C/C++** フォルダーを選択、**出力ファイル**プロパティ ページ。  
   
 3.  変更、**アセンブラーの出力**プロパティを設定、`/FAc`と`/FAs`アセンブラー、コンピューター、およびソース コードのオプションです。 変更、**アセンブラー リストを使用して Unicode**プロパティを設定、 `/FAu` ANSI または utf-8 の出力オプション。 変更、 **ASM リストの場所**を設定する、`/Fa`ファイルの名前と場所を一覧表示するためのオプションです。  
   
@@ -102,7 +97,7 @@ none
 CL /FAcs HELLO.CPP  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)   
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
  [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   

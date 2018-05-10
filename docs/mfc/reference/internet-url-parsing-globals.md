@@ -1,13 +1,10 @@
 ---
-title: "インターネット URL 解析用グローバル関数とヘルパー |Microsoft ドキュメント"
-ms.custom: 
+title: インターネット URL 解析用グローバル関数とヘルパー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.isapi
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29ae754e7f5b078c23f0cdf27c0a280cd28b40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02b7ea1a6d22d3e16230acafa25c53f8748a825a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>インターネット URL 解析用グローバル関数とヘルパー
 クライアントはインターネット サーバーにクエリを送信するときは、クライアントに関する情報を抽出するのに URL 解析用グローバルのいずれかを使用できます。 ヘルパー関数では、その他のインターネット機能を提供します。
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxThrowInternetException](#afxthrowinternetexception)|インターネット接続に関連する例外をスローします。|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|インターネット ハンドルの種類を決定します。|
   
-##  <a name="afxparseurl"></a>AfxParseURL  
+##  <a name="afxparseurl"></a>  AfxParseURL  
  このグローバル[できます](../../mfc/reference/cinternetsession-class.md#openurl)です。  
   
 ```   
@@ -110,21 +105,21 @@ BOOL AFXAPI AfxParseURL(
   
  たとえば、`AfxParseURL`フォームの Url を解析して**service://server/dir/dir/object.ext:port**し、次のように格納されているそのコンポーネントを返します。  
   
- `strServer`"server"= =  
+ `strServer` "server"= =  
   
- `strObject`= ="/dir/dir/object/object.ext"  
+ `strObject` = ="/dir/dir/object/object.ext"  
   
- `nPort`#port を = =  
+ `nPort` #port を = =  
   
- `dwServiceType`#service を = =  
+ `dwServiceType` #service を = =  
   
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxinet.h  
   
-##  <a name="afxparseurlex"></a>AfxParseURLEx  
+##  <a name="afxparseurlex"></a>  AfxParseURLEx  
  このグローバル関数は、拡張のバージョン[AfxParseURL](#afxparseurl)で使用されると[できます](../../mfc/reference/cinternetsession-class.md#openurl)です。  
   
 ```   
@@ -213,13 +208,13 @@ BOOL AFXAPI AfxParseURLEx(
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
   **ヘッダー** afxinet.h  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
  
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 インターネット ハンドルの種類を確認するのにには、この関数を使用します。  
    
 ### <a name="syntax"></a>構文  
@@ -265,14 +260,14 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 > [!NOTE]
 >  この関数を呼び出すために、プロジェクトは AFXINET を含める必要があります。H.  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
  
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 インターネットの例外をスローします。  
    
 ### <a name="syntax"></a>構文    
@@ -292,10 +287,10 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.  
    
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** afxinet.h  
    
-### <a name="see-also"></a>参照  
+### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
  [CInternetException クラス](cinternetexception-class.md)   
  [スローします。](#throw)

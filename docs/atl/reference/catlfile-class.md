@@ -2,11 +2,8 @@
 title: CAtlFile クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFile
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43ee71aae842ca7100f70af67cd8845d31e39a96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfile-class"></a>CAtlFile クラス
 このクラスは、ファイル処理 API、Windows の周囲に thin ラッパーを提供します。  
@@ -79,7 +74,7 @@ class CAtlFile : public CHandle
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|ポインター`CAtlTransactionManager`オブジェクト|  
   
@@ -91,10 +86,10 @@ class CAtlFile : public CHandle
   
  `CAtlFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlfile.h  
   
-##  <a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>  CAtlFile::CAtlFile  
  コンストラクターです。  
   
 ```
@@ -117,7 +112,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>コメント  
  コピー コンス トラクターは、元のファイル ハンドルの所有権を譲渡`CAtlFile`オブジェクトを新しく構築されたオブジェクト。  
   
-##  <a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>  CAtlFile::Create  
  このメソッドを呼び出して作成するか、ファイルを開きます。  
   
 ```
@@ -159,7 +154,7 @@ HRESULT Create(
 ### <a name="remarks"></a>コメント  
  呼び出し[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)を作成またはファイルを開きます。  
   
-##  <a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>  CAtlFile::Flush  
  このメソッドを呼び出してファイルに書き込まれるバッファー内のすべてのデータになり、ファイルのバッファーをクリアします。  
   
 ```
@@ -172,7 +167,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>コメント  
  呼び出し[FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439)バッファー内のデータをファイルにフラッシュします。  
   
-##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult  
  このメソッドを呼び出してファイルに重複した操作の結果を取得します。  
   
 ```
@@ -198,7 +193,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>コメント  
  呼び出し[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209)ファイルに重複した操作の結果を取得します。  
   
-##  <a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>  CAtlFile::GetPosition  
  このメソッドを呼び出して、現在のファイル ポインターの位置を取得します。  
   
 ```
@@ -215,7 +210,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>コメント  
  呼び出し[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)を現在のファイル ポインターの位置を取得します。  
   
-##  <a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>  CAtlFile::GetSize  
  ファイルのバイト単位のサイズを取得するには、このメソッドを呼び出します。  
   
 ```
@@ -232,7 +227,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>コメント  
  呼び出し[GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955)ファイルのバイト単位でサイズを取得します。  
   
-##  <a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>  CAtlFile::LockRange  
  ファイル内の他のプロセスがアクセスできないようにする領域をロックするには、このメソッドを呼び出します。  
   
 ```
@@ -250,9 +245,9 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
  返します`S_OK`成功した場合、またはエラー`HRESULT`エラー発生時にします。  
   
 ### <a name="remarks"></a>コメント  
- 呼び出し[ロック ファイル](http://msdn.microsoft.com/library/windows/desktop/aa365202)ファイルに領域をロックします。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの 1 つ以上の領域をロックすることができますが、重なり合う領域は許可されていません。 使用して、領域のロックを解除するときに[CAtlFile::UnlockRange](#unlockrange)、バイト範囲は、以前にロックされている領域に正確に対応する必要があります。 `LockRange`隣接する領域をマージしませんロックされている 2 つの領域が隣接している場合は、する必要がありますロックを解除する各とは別にします。  
+ 呼び出し[ロック ファイル](http://msdn.microsoft.com/library/windows/desktop/aa365202)ファイルに領域をロックします。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの 1 つ以上の領域をロックすることができますが、重なり合う領域は許可されていません。 使用して、領域のロックを解除するときに[CAtlFile::UnlockRange](#unlockrange)、バイト範囲は、以前にロックされている領域に正確に対応する必要があります。 `LockRange` 隣接する領域をマージしませんロックされている 2 つの領域が隣接している場合は、する必要がありますロックを解除する各とは別にします。  
   
-##  <a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>  CAtlFile::m_pTM  
  ポインター、`CAtlTransactionManager`オブジェクト。  
   
 ```
@@ -261,7 +256,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>  CAtlFile::Read  
  ファイル ポインターによって示される位置以降にあるファイルからデータを読み取るには、このメソッドを呼び出します。  
   
 ```
@@ -308,7 +303,7 @@ HRESULT Read(
 ### <a name="remarks"></a>コメント  
  最初の 3 つを呼び出す[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)、最後の[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)ファイルからデータを読み取る。 使用して[CAtlFile::Seek](#seek)ファイル ポインターを移動します。  
   
-##  <a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>  CAtlFile::Seek  
  ファイルのファイル ポインターを移動するには、このメソッドを呼び出します。  
   
 ```
@@ -330,7 +325,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>コメント  
  呼び出し[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)ファイル ポインターを移動します。  
   
-##  <a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>  CAtlFile::SetSize  
  ファイルのサイズを設定するには、このメソッドを呼び出します。  
   
 ```
@@ -347,7 +342,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>コメント  
  呼び出し[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)と[SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531)ファイルのサイズを設定します。 返された場合は、ファイル ポインターは、ファイルの末尾に配置されます。  
   
-##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>  CAtlFile::UnlockRange  
  ファイルの領域のロックを解除するには、このメソッドを呼び出します。  
   
 ```
@@ -367,7 +362,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>コメント  
  呼び出し[UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715)ファイルの領域のロックを解除します。  
   
-##  <a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>  CAtlFile::Write  
  ファイル ポインターによって示される位置以降にあるファイルにデータを書き込むには、このメソッドを呼び出します。  
   
 ```
@@ -410,7 +405,7 @@ HRESULT Write(
 ### <a name="remarks"></a>コメント  
  最初の 3 つを呼び出す[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747)、最後の呼び出し[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748)データ ファイルを書き込めません。 使用して[CAtlFile::Seek](#seek)ファイル ポインターを移動します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マーキーのサンプル](../../visual-cpp-samples.md)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [CHandle クラス](../../atl/reference/chandle-class.md)

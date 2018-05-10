@@ -2,12 +2,9 @@
 title: 標準の MFC Dll でのデータベース、OLE、およびソケットの MFC 拡張 Dll の使用 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>標準の MFC Dll でのデータベース、OLE、およびソケットの MFC 拡張 Dll の使用
 MFC 拡張 DLL がないワイヤード (有線) にする場合は、MFC 拡張 DLL を正規の MFC DLL からを使用する場合、 **CDynLinkLibrary**オブジェクトのチェーンの正規の MFC DLL の一連の関連する問題の 1 つ以上に実行する可能性があります。 MFC データベース、OLE、およびソケットのデバッグ バージョンをサポートしているため、Dll が MFC 拡張 Dll として実装されてを明示的に使用していない、独自の MFC 拡張 Dll のいずれかのいなくても、機能をこれらの MFC を使用している場合と同様の問題が発生する可能性があります。 いくつかの現象は次のとおりです。  
@@ -38,7 +33,7 @@ MFC 拡張 DLL がないワイヤード (有線) にする場合は、MFC 拡張
   
 -   `DllGetClassObject`、 `DllCanUnloadNow`、および`UpdateRegistry`、 `Revoke`、 `RevokeAll`、および`RegisterAll`のメンバー関数は`COleObjectFactory`MFC 拡張 DLL で定義されているクラス ファクトリの検索に失敗します。  
   
--   `AfxDoForAllClasses`MFC 拡張 DLL 内のすべてのクラスに対しては機能しません。  
+-   `AfxDoForAllClasses` MFC 拡張 DLL 内のすべてのクラスに対しては機能しません。  
   
 -   標準の MFC データベース、ソケットの場合、または OLE リソースを読み込めませんでした。 たとえば、 **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) 標準の MFC DLL が MFC データベース クラスを使用して正しく場合でも、空の文字列を返します。  
   
@@ -158,5 +153,5 @@ BOOL CYourRegularDLL::InitInstance()
   
 -   [MFC の DLL バージョン](../mfc/tn033-dll-version-of-mfc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC 拡張 DLL](../build/extension-dlls.md)

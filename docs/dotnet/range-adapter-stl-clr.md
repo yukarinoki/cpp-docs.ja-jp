@@ -1,12 +1,9 @@
 ---
-title: "range_adapter (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: range_adapter (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::range_adapter
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - range_adapter class [STL/CLR]
 ms.assetid: 3fbe2a65-1216-46a0-a182-422816b80cfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a5b8a02856d7739867e3cf9f76f866a1e84efca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 いくつかの基本クラス ライブラリ (BCL) インターフェイスを実装するために使用する反復子のペアをラップするテンプレート クラス。 使用する、range_adapter 操作 STL/CLR 範囲 BCL コレクションの場合と同様です。  
@@ -70,11 +65,11 @@ template<typename Iter>
 ## <a name="remarks"></a>コメント  
  Range_adapter は、さらに要素のシーケンスを区切る反復子のペアを格納します。 オブジェクトは、順序内の要素を反復処理するのに便利な次の 4 つの BCL インターフェイスを実装します。 BCL コンテナーと同様に STL/CLR 範囲を操作するのにには、このテンプレート クラスを使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext アダプター/>  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
  [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

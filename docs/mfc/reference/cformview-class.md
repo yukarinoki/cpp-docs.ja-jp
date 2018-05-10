@@ -1,12 +1,9 @@
 ---
-title: "CFormView クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CFormView クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFormView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 386e28631d20721f22eb2b778ffbe2e1d4b1824d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cformview-class"></a>CFormView クラス
 フォーム ビューの基底クラスです。  
@@ -76,10 +71,10 @@ class CFormView : public CScrollView
   
  `CFormView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
-##  <a name="cformview"></a>CFormView::CFormView  
+##  <a name="cformview"></a>  CFormView::CFormView  
  `CFormView` オブジェクトを構築します。  
   
 ```  
@@ -97,7 +92,7 @@ CFormView(UINT nIDTemplate);
 ### <a name="remarks"></a>コメント  
  派生した型のオブジェクトを作成するときに`CFormView`、ビュー オブジェクトを作成し、ビューの基になるダイアログ リソースを識別するコンス トラクターの 1 つを呼び出します。 名前 (コンス トラクターの引数として文字列を渡す) で、または ID (パスを符号なし整数の引数として) では、リソースを識別できます。  
   
- まで、フォーム ビュー ウィンドウおよび子コントロールを作成しない`CWnd::Create`と呼びます。 `CWnd::Create`ドキュメント テンプレートによりドキュメントとビューの作成プロセスの一環としてフレームワークによって呼び出されます。  
+ まで、フォーム ビュー ウィンドウおよび子コントロールを作成しない`CWnd::Create`と呼びます。 `CWnd::Create` ドキュメント テンプレートによりドキュメントとビューの作成プロセスの一環としてフレームワークによって呼び出されます。  
   
 > [!NOTE]
 >  派生クラス*必要があります*独自のコンス トラクターを指定します。 コンス トラクターを呼び出すのコンス トラクターで`CFormView::CFormView`リソース名または ID を上記のクラスの概要で示すように引数として使用します。  
@@ -107,7 +102,7 @@ CFormView(UINT nIDTemplate);
   
  [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]  
   
-##  <a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted  
+##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted  
  他の操作が実行される前に初期化が完了したことを確認するために MFC によって使用されます。  
   
 ```  
@@ -117,7 +112,7 @@ BOOL IsInitDlgCompleted() const;
 ### <a name="return-value"></a>戻り値  
  このダイアログの初期化関数が完了している場合は true。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル SNAPVW](../../visual-cpp-samples.md)   
  [MFC サンプル VIEWEX](../../visual-cpp-samples.md)   
  [CScrollView クラス](../../mfc/reference/cscrollview-class.md)   

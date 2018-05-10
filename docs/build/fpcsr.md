@@ -2,26 +2,21 @@
 title: FpCsr |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: dff95d5d-7589-4432-82db-64b459c24352
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b7caebc99c4724c0e28b7812da8ef224184385
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9defb41a026b32acb4375185f14c903788b91a23
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fpcsr"></a>FpCsr
 レジスタの状態も含まれますは x87 FPU 制御ワードです。 呼び出し規約では、このレジスタを不揮発性によって決まります。  
@@ -44,5 +39,5 @@ FPCSR[12]: Infinity control - 0 (not used)
   
 2.  おそらくである場合は、プログラムが動作/手段でこれらの規則に違反しない、たとえば、プログラム全体の分析によって、プログラムと同じ結果をこれらの規則に違反するを修正します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [呼び出し規則](../build/calling-convention.md)

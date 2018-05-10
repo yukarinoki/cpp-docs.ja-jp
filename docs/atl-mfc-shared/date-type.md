@@ -1,12 +1,9 @@
 ---
-title: "日付型 |Microsoft ドキュメント"
-ms.custom: 
+title: 日付型 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - DATE
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5aafed046fa5724442e30014aa5634542de0f4aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-type"></a>日付型
 **日付**8 バイト浮動小数点数を使用して型を実装します。 日付は 1899 年 12 月 30 日午前 0 時 0 時から始まる整数値の増分で表されます。 時間の値は、数値の小数部の絶対値として表されます。 次に示すいくつかの日付と共に、**日付**数値と同等の型。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  関連する問題の詳細について、**日付**と`COleDateTime`型見つかります[COleDateTime クラス](../atl-mfc-shared/reference/coledatetime-class.md)と[日付と時刻: オートメーションのサポート](../atl-mfc-shared/date-and-time-automation-support.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [日付と時刻](../atl-mfc-shared/date-and-time.md)   
  [COleDateTime クラス](../atl-mfc-shared/reference/coledatetime-class.md)
 

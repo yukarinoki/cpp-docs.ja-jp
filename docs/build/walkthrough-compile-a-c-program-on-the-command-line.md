@@ -1,28 +1,25 @@
 ---
-title: "チュートリアル: コマンドラインでの C プログラムのコンパイル |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: コマンドラインでの C プログラムのコンパイル |Microsoft ドキュメント'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology:
+- cpp-tools
+ms.topic: conceptual
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-caps.latest.revision: "46"
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7520e2d78c924ee21c489d2e8327c4bda9b973aa
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 033c29ff9871a427222b59fbf5c8350794a9bbe2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>チュートリアル: コマンドラインでの C プログラムをコンパイルします。
 Visual C には、完全な Windows デスクトップ アプリケーション、モバイル アプリは、基本的なコンソール プログラムから作成するすべてのものを使用できる C コンパイラが含まれています。  
@@ -166,7 +163,7 @@ Visual C には、完全な Windows デスクトップ アプリケーション�
   
  C++ の Visual C コンパイラは、ISO C99 標準と互換性のある一般的に厳密に準拠していません。 ほとんどの場合、C コードの移植性がコンパイルされ、期待どおりを実行します。 Visual C は、ISO C11 のほとんどの変更をサポートしていません。 Visual C コンパイラでは、特定のライブラリ関数と POSIX 関数名が使用されなくなりました。 関数がサポートされますが、優先名が変更されました。 詳細については、次を参照してください。 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)と[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル: 標準の C++ プログラム (C++) の作成](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)   
  [C 言語リファレンス](../c-language/c-language-reference.md)   
  [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)   

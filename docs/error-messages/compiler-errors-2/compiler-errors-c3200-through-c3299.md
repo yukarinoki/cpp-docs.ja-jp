@@ -1,12 +1,9 @@
 ---
-title: "コンパイラ エラー C3200 C3299 を通じて |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C3200 C3299 を通じて |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>コンパイラ エラー C3200 C3299 経由
 
@@ -139,9 +134,9 @@ ms.lasthandoff: 12/21/2017
 |[コンパイラ エラー C3271](compiler-error-c3271.md)|'*フィールド*': 無効な値'*数*':fieldoffset 属性に対する|
 |[コンパイラ エラー C3272](compiler-error-c3272.md)|'*シンボル*': クラス/構造体のメンバーであると、シンボルには FieldOffset が必要な*type_name* :explicit で定義されています。|
 |[コンパイラ エラー C3273](compiler-error-c3273.md)|'*キーワード*': C++ try ブロックでは使用できません|
-|[コンパイラ エラー C3274](compiler-error-c3274.md)|最後に/(& m); #95 &#95; 最後に一致することがなく次のように再試行します。|
+|[コンパイラ エラー C3274](compiler-error-c3274.md)|最後に/&#95;&#95;最後に一致することがなく次のように再試行します。|
 |[コンパイラ エラー C3275](compiler-error-c3275.md)|'*識別子*': 修飾子なしには、この記号は使用できません|
-|[コンパイラ エラー C3276](compiler-error-c3276.md)|'*キーワード*': からの最後にジャンプ/(& m); #95 &#95; finally ブロック未定義の動作に終了処理時に|
+|[コンパイラ エラー C3276](compiler-error-c3276.md)|'*キーワード*': からの最後にジャンプ/&#95;&#95;finally ブロック未定義の動作に終了処理時に|
 |[コンパイラ エラー C3277](compiler-error-c3277.md)|アンマネージ列挙体を定義できません '*列挙*'内部マネージ'*型*'。|
 |[コンパイラ エラー C3278](compiler-error-c3278.md)|インターフェイス メソッドまたはピュア メソッドの呼び出しを直接 '*関数*' は、実行時に失敗|
 |[コンパイラ エラー C3279](compiler-error-c3279.md)|cli 名前空間で宣言されたクラス テンプレートの明示的なインスタンス生成と同様に、部分的または明示的な特殊化は許可されていません|

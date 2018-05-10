@@ -1,30 +1,25 @@
 ---
-title: "ActiveX コントロール コンテナー |Microsoft ドキュメント"
-ms.custom: 
+title: ActiveX コントロール コンテナー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee24d39c8769eaf2216ca4f64b9856b778a51ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73496f892cc55ef59b2d84228ae9ae0416d3e8a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers"></a>ActiveX コントロール コンテナー
 ActiveX コントロール コンテナーは完全に ActiveX コントロールをサポートするコンテナーであり、独自のウィンドウまたはダイアログに組み込むことができます。 ActiveX コントロールは、多くの開発プロジェクトで使用できる再利用可能なソフトウェア要素です。 コントロールをできるように、アプリケーションのデータベースへのアクセス、データを監視し、アプリケーション内でさまざまな選択を行います。 ActiveX コントロールの詳細については、記事を参照してください。 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)です。  
@@ -61,6 +56,6 @@ ActiveX コントロール コンテナーは完全に ActiveX コントロー�
   
  Visual C と MFC ActiveX コントロールのクラスを使用して ActiveX コントロールの開発の詳細を説明する記事の一覧は、次を参照してください。 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)です。 アーティクルは、機能カテゴリでグループ化されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 

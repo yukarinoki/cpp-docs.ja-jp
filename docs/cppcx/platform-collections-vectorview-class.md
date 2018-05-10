@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::VectorView クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Platform::Collections::VectorView クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorView::VectorView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f196a1f58e5c480ef09d13a72f1c8ac3a0a50db
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 937342c340b085f2e2bdeef8ed7df21dae826152
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView クラス
 インデックスによって個別にアクセスできるオブジェクトのシーケンシャル コレクションの読み取り専用ビューを表します。 コレクション内の各オブジェクトの型は、テンプレート パラメーターによって指定されます。  
@@ -65,14 +60,14 @@ template <typename T, typename E>
 |----------|-----------------|  
 |[VectorView::First](#first)|VectorView 内の最初の要素を指定する反復子を返します。|  
 |[VectorView::GetAt](#getat)|指定されたインデックスで示される現在の VectorView の要素を取得します。|  
-|[VectorView::GetMany](#getmany)|指定されたインデックスを開始位置として、現在の VectorView から項目のシーケンスを取得します。|  
+|[Vectorview::getmany](#getmany)|指定されたインデックスを開始位置として、現在の VectorView から項目のシーケンスを取得します。|  
 |[VectorView::IndexOf](#indexof)|現在の VectorView 内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|  
 |[VectorView::Size](#size)|現在の VectorView オブジェクトの要素数を返します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `VectorView`  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  **ヘッダー:** collection.h  
   
  **名前空間:** Platform::Collections  
@@ -278,6 +273,6 @@ VectorView(
 
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラットフォーム Namespace](platform-namespace-c-cx.md)   
  [C++ での Windows ランタイム コンポーネントを作成します。](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

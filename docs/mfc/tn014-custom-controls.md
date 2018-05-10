@@ -1,13 +1,10 @@
 ---
-title: "TN014: カスタム コントロール |Microsoft ドキュメント"
-ms.custom: 
+title: 'TN014: カスタム コントロール |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn014-custom-controls"></a>テクニカル ノート 14: カスタム コントロール
 ここでは、カスタムおよび自己描画コントロールの MFC サポートについて説明します。 動的なサブクラス化をについて説明し、関係について説明[CWnd](../mfc/reference/cwnd-class.md)オブジェクトおよび`HWND`s。  
@@ -38,13 +33,13 @@ ms.lasthandoff: 12/21/2017
   
  MFC は、オーナー描画直接サポートしています。 次の関数で。  
   
-- [体](../mfc/reference/cwnd-class.md#ondrawitem)  
+- [CWnd::OnDrawItem](../mfc/reference/cwnd-class.md#ondrawitem)  
   
 - [CWnd::OnMeasureItem](../mfc/reference/cwnd-class.md#onmeasureitem)  
   
 - [CWnd::OnCompareItem](../mfc/reference/cwnd-class.md#oncompareitem)  
   
-- [構造体](../mfc/reference/cwnd-class.md#ondeleteitem)  
+- [CWnd::OnDeleteItem](../mfc/reference/cwnd-class.md#ondeleteitem)  
   
  これらの関数をオーバーライドすることができます、`CWnd`カスタム描画の動作を実装するクラスを派生します。  
   
@@ -128,19 +123,19 @@ ms.lasthandoff: 12/21/2017
   
  これらの関係は次の 3 つの一般的な方法があります。  
   
-- `CWnd`作成、`HWND`です。 派生するクラスを作成することで、派生クラスで動作を変更することができます`CWnd`です。 `HWND`アプリケーションが呼び出すときに作成される[cwnd::create](../mfc/reference/cwnd-class.md#create)です。  
+- `CWnd` 作成、`HWND`です。 派生するクラスを作成することで、派生クラスで動作を変更することができます`CWnd`です。 `HWND`アプリケーションが呼び出すときに作成される[cwnd::create](../mfc/reference/cwnd-class.md#create)です。  
   
 -   アプリケーションのアタッチ、`CWnd`既存`HWND`です。 既存のウィンドウの動作は変更されません。 これは、委任のケースであり、呼び出すことによって可能になりますが[CWnd::Attach](../mfc/reference/cwnd-class.md#attach)既存エイリアス`HWND`を`CWnd`オブジェクト。  
   
-- `CWnd`既存にアタッチされて`HWND`および派生クラスでの動作を変更できます。 これは、動的なサブクラス化動作とそのため、実行時に Windows のオブジェクトのクラスを変更しているために呼び出されます。  
+- `CWnd` 既存にアタッチされて`HWND`および派生クラスでの動作を変更できます。 これは、動的なサブクラス化動作とそのため、実行時に Windows のオブジェクトのクラスを変更しているために呼び出されます。  
   
  動的なサブクラス化を行うには、メソッドを使用して[CWnd::SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow)と[CWnd::SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)です。  
   
- 2 つのルーチンのアタッチ、`CWnd`を既存のオブジェクト`HWND`です。 `SubclassWindow``HWND`直接です。 `SubclassDlgItem`コントロールの ID と親ウィンドウを受け取るヘルパー関数です。 `SubclassDlgItem`ダイアログ コントロールにダイアログ テンプレートから作成された C++ オブジェクトのアタッチされています。  
+ 2 つのルーチンのアタッチ、`CWnd`を既存のオブジェクト`HWND`です。 `SubclassWindow` `HWND`直接です。 `SubclassDlgItem` コントロールの ID と親ウィンドウを受け取るヘルパー関数です。 `SubclassDlgItem` ダイアログ コントロールにダイアログ テンプレートから作成された C++ オブジェクトのアタッチされています。  
   
  参照してください、 [CTRLTEST](../visual-cpp-samples.md)を使用する場合の例をいくつかの例を`SubclassWindow`と`SubclassDlgItem`です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
  [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

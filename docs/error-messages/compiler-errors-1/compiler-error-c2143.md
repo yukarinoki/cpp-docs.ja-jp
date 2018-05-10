@@ -1,12 +1,9 @@
 ---
-title: "コンパイラ エラー C2143 |Microsoft ドキュメント"
-ms.custom: 
+title: コンパイラ エラー C2143 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2143
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7560b3b7d13beb416c2f500c0ab692e9f0d717
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 076f2ccb594edd5d9e627d8a4dcea2d9bb928890
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2143"></a>コンパイラ エラー C2143
 構文エラー: 'token2 'が見つかりましたする前に ' token1' がありません  
@@ -64,7 +59,7 @@ class MyClass
   
 ```  
   
- C2143 エラーが発生することがときに**/clr**を使用し、`using`ディレクティブは、構文エラー。  
+ C2143 エラーが発生することがときに **/clr**を使用し、`using`ディレクティブは、構文エラー。  
   
 ```cpp  
 // C2143a.cpp  
@@ -73,7 +68,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- 使用せず、CLR の構文を使用して、ソース コード ファイルをコンパイルしようとしているときにも発生**/clr**:  
+ 使用せず、CLR の構文を使用して、ソース コード ファイルをコンパイルしようとしているときにも発生 **/clr**:  
   
 ```cpp  
 // C2143b.cpp  

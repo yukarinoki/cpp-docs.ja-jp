@@ -2,12 +2,9 @@
 title: MFC ActiveX コントロール ウィザード、アプリケーションの設定 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.appset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b63507ba50f5f9d7dfb0fe5487e2758ced02cdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ffa17d484d6f35d04547dca58a9b8753c15b272
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>[アプリケーションの設定] \(MFC ActiveX コントロール ウィザード)
 MFC ActiveX コントロール ウィザードのこのページを使用して、基本的な機能を設計して新しい MFC ActiveX プロジェクトに追加します。 これらの設定は、アプリケーション自体に適用され、コントロールの特定の機能や要素には適用されません。  
@@ -49,7 +44,7 @@ MFC ActiveX コントロール ウィザードのこのページを使用して�
   
 -   プロジェクトには、プロジェクトのヘルプのビットマップ ファイルおよびヘルプ トピック ファイルを格納する HLP ディレクトリが含まれています (*projname*.rtf)。 このヘルプ トピック ファイルには、多くの ActiveX コントロールでサポートされるプロパティ、イベント、およびメソッドに関する標準的なヘルプ トピックが含まれています。 .rtf ファイルを編集して、特定のヘルプ トピックを追加または削除できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)   
  [MFC ActiveX コントロール ウィザード、コントロール名](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
  [[コントロールの設定] (MFC ActiveX コントロール ウィザード)](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)

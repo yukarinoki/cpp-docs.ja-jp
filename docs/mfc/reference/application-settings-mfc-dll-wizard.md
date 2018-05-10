@@ -2,12 +2,9 @@
 title: アプリケーションの設定、MFC DLL ウィザード |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.appset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1851460d5cf9deb8a803b13ec75d92c45c03e607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.openlocfilehash: 1a243b790881452a983c43fb92d8ebea18c26bcc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>[アプリケーションの設定] \(MFC DLL ウィザード)
 MFC DLL ウィザードのこのページを使用して、設計して新しい MFC DLL プロジェクトに基本的な機能を追加します。  
@@ -53,7 +48,7 @@ MFC DLL ウィザードのこのページを使用して、設計して新しい
   
  Windows で、MFC DLL のソケットのサポートが作成、[場合は](../../mfc/reference/cwinapp-class.md#initinstance)ソケットの初期化をサポートし、MFC ヘッダー ファイル StdAfx.h AfxSock.h が含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC DLL ウィザード](../../mfc/reference/mfc-dll-wizard.md)   
  [MFC DLL プロジェクトの作成](../../mfc/reference/creating-an-mfc-dll-project.md)
 

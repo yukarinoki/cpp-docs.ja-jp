@@ -1,13 +1,10 @@
 ---
-title: "フレーム ウィンドウ クラスがアプリケーションのウィザードによって作成された |Microsoft ドキュメント"
-ms.custom: 
+title: フレーム ウィンドウ クラスがアプリケーションのウィザードによって作成された |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CMainFrame
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 497dd21bba3e807349b793e3b37e774c833ccb40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3446de072266fdf7661d2e8d8ca0fc968279646
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス
 使用すると、[アプリケーション ウィザード](../ide/creating-desktop-projects-by-using-application-wizards.md)アプリケーション、ドキュメント、およびビューのクラスだけでなく、スケルトン アプリケーションを作成するアプリケーションのウィザードが、アプリケーションのメイン フレーム ウィンドウのフレーム ウィンドウの派生クラスを作成します。 クラスが呼び出されます`CMainFrame`既定値、およびそれを含むファイルという名前がします。H とします。CPP です。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  作成されると、これらのフレーム ウィンドウ クラスが動作しますが、機能強化のため、メンバー変数とメンバー関数を追加する必要があります。 ウィンドウ クラスを他の Windows メッセージを処理することもできます。 詳細については、次を参照してください。 [MFC で作成したウィンドウのスタイルを変更する](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フレーム ウィンドウ クラス](../mfc/frame-window-classes.md)   
  [MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル](../ide/mfc-program-or-control-source-and-header-files.md)
 

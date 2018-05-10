@@ -1,24 +1,19 @@
 ---
-title: "イベント (C + + CX) |Microsoft ドキュメント"
-ms.custom: 
+title: イベント (C + + CX) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef32e8310454005fa01a3e23dcd8739dcdbaa647
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-ccx"></a>イベント (C++/CX)
 Windows ランタイム型を宣言できます (つまり、発行) イベント、および同じコンポーネント内または他のコンポーネントでのクライアント コードで呼び出されるメソッドを関連付けることによってそれらのイベントにサブスクライブできます*イベント ハンドラー*イベントにします。 複数のイベント ハンドラーを単一のイベントに関連付けることもできます。 発行オブジェクトがイベントを発生させた時点で、すべてのイベント ハンドラーが呼び出される結果になります。 この方法で、発行側がイベントを発生させたときに、サブスクライブ側クラスはあらゆる適切なカスタム アクションを実行できます。 各イベントには、そのイベントにサブスクライブしようとするすべてのイベント ハンドラーが所有している必要があるシグネチャを指定するデリゲート型があります。  
@@ -62,7 +57,7 @@ Windows ランタイム型を宣言できます (つまり、発行) イベン�
   
  イベント ソースがイベント レシーバーのイベント ハンドラーを呼び出す順序は保証されず、呼び出しごとに異なる可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型システム](../cppcx/type-system-c-cx.md)   
  [デリゲート](../cppcx/delegates-c-cx.md)   
  [Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)   

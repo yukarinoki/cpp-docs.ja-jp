@@ -1,12 +1,9 @@
 ---
-title: "CRuntimeClass 構造 |Microsoft ドキュメント"
-ms.custom: 
+title: CRuntimeClass 構造 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRuntimeClass
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 構造体
 各クラスから派生した`CObject`に関連付けられている、`CRuntimeClass`実行時に、オブジェクトまたはその基本クラスについての情報を取得するときに使用できる構造。  
@@ -61,21 +56,21 @@ struct CRuntimeClass
 |[CRuntimeClass::m_wSchema](#m_wschema)|クラスのスキーマの数。|  
   
 ## <a name="remarks"></a>コメント  
- `CRuntimeClass`構造体は、そのため、基底クラスはありません。  
+ `CRuntimeClass` 構造体は、そのため、基底クラスはありません。  
   
  実行時にオブジェクトのクラスを判断することは、オブジェクトのクラスに基づく特殊なコードを記述する必要がありますまたは特別な型チェック関数の引数が必要な場合に便利です。 ランタイム クラス情報は、C++ 言語によって直接サポートされていません。  
   
- `CRuntimeClass`ポインターなどの C++ オブジェクトの関連情報を提供、`CRuntimeClass`基底クラスと関連するクラスの ASCII クラス名。 この構造体を使用して、既知の名前を関連するクラスが特定のクラスから派生したかどうかを決定するオブジェクトの種類を指定するオブジェクトを動的に作成するために使用できるさまざまな機能も実装します。  
+ `CRuntimeClass` ポインターなどの C++ オブジェクトの関連情報を提供、`CRuntimeClass`基底クラスと関連するクラスの ASCII クラス名。 この構造体を使用して、既知の名前を関連するクラスが特定のクラスから派生したかどうかを決定するオブジェクトの種類を指定するオブジェクトを動的に作成するために使用できるさまざまな機能も実装します。  
   
  使用する方法についての`CRuntimeClass`、記事を参照して[クラス情報にアクセスする](../../mfc/accessing-run-time-class-information.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CRuntimeClass`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afx.h  
   
-##  <a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
  実行時に動的に指定したクラスを作成するには、この関数を呼び出します。  
   
 ```  
@@ -99,7 +94,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="example"></a>例  
   例を参照して[IsDerivedFrom](#isderivedfrom)です。  
   
-##  <a name="fromname"></a>で  
+##  <a name="fromname"></a>  で  
  取得するには、この関数を呼び出して、`CRuntimeClass`既知の名前に関連付けられている構造体。  
   
 ```  
@@ -118,7 +113,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
  かどうか、呼び出し元がから派生したクラスに指定されたクラスを判断するには、この関数を呼び出して、*側*パラメーター。  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  ASCII クラス名を含む null で終わる文字列。  
   
 ### <a name="remarks"></a>コメント  
@@ -154,7 +149,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>例  
   例を参照して[IsDerivedFrom](#isderivedfrom)です。  
   
-##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  (バイト単位)、オブジェクトのサイズ。  
   
 ### <a name="remarks"></a>コメント  
@@ -163,7 +158,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>例  
   例を参照して[IsDerivedFrom](#isderivedfrom)です。  
   
-##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  このデータ メンバーがへのポインターを含む、アプリケーションは、MFC と静的にリンクすることが場合、`CRuntimeClass`基底クラスの構造体。  
   
 ### <a name="remarks"></a>コメント  
@@ -172,13 +167,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>例  
   例を参照して[IsDerivedFrom](#isderivedfrom)です。  
   
-##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  クラスのオブジェクトを作成する既定のコンス トラクターへの関数ポインター。  
   
 ### <a name="remarks"></a>コメント  
  このポインターが有効なは、クラスは、動的な作成をサポートしている場合のみ関数を返しますそれ以外の場合、 **NULL**です。  
   
-##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  アプリケーションは、共有 DLL としての MFC ライブラリを使用する場合は、このデータへのポインターを返す関数、`CRuntimeClass`基底クラスの構造体。  
   
 ### <a name="remarks"></a>コメント  
@@ -187,7 +182,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>例  
   例を参照して[IsDerivedFrom](#isderivedfrom)です。  
   
-##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  スキーマの数 (シリアル化できないクラスの場合は-1)。  
   
 ### <a name="remarks"></a>コメント  
@@ -196,7 +191,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>例  
   例を参照して[IsDerivedFrom](#isderivedfrom)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)   
  [使うため](../../mfc/reference/cobject-class.md#iskindof)   

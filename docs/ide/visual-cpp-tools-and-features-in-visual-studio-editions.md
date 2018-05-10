@@ -1,10 +1,10 @@
 ---
-title: "Visual C ツールおよび Visual Studio のエディションで機能 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C ツールおよび Visual Studio のエディションで機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,15 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bab6eda1c5c0d2d852d3a678f588f0539495001
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual C ツールおよび Visual Studio のエディションの機能
 
@@ -183,7 +181,7 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 |コード マップと依存関係グラフ|||読み取り専用|x|
 |コード マップ デバッグ||||x|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio の新機能](/visualstudio/ide/whats-new-in-visual-studio)<br/>

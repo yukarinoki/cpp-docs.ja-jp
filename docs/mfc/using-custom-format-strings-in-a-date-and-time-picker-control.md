@@ -1,13 +1,10 @@
 ---
-title: "日付と時刻の選択でカスタム書式指定文字列を使用してコントロール |Microsoft ドキュメント"
-ms.custom: 
+title: 日付と時刻の選択でカスタム書式指定文字列を使用してコントロール |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], display styles
 - DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfaad06571a8648db24497c46d55cb2eb1ce2157
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2b365439f1681cf72bd58218ea4f55fbb2f44c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>日時指定コントロールでのカスタム書式指定文字列の使い方
 既定では、日付と時刻の選択コントロールは、現在の日付または時刻を表示するための種類 (形式は一意のスタイルに対応する各) を書式設定 3 つ提供します。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  カスタム書式指定文字列だけでなく制御もサポートに日付と時刻のピッカー[コールバック フィールド](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDateTimeCtrl の使い方](../mfc/using-cdatetimectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

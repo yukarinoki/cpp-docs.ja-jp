@@ -1,12 +1,9 @@
 ---
-title: "CRichEditView クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CRichEditView クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditView
@@ -109,17 +106,15 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9062e9cf781363b482c5ee77238d315044be7df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 353a45cad513e9c862b6ae6c15ab5383d3d65d48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditview-class"></a>CRichEditView クラス
 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)と[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)MFC のドキュメント ビュー アーキテクチャのコンテキストでリッチ エディット コントロールの機能を提供します。  
@@ -202,7 +197,7 @@ class CRichEditView : public CCtrlView
 ## <a name="remarks"></a>コメント  
  「リッチ エディット コントロール」は、ユーザーを入力し、テキストを編集するウィンドウです。 テキストは、文字と段落の書式に割り当てることができるし、埋め込み OLE オブジェクトを含めることができます。 リッチ エディット コントロールでは、テキストの書式設定のプログラミング インターフェイスを提供します。 ただし、アプリケーションでは、書式設定操作をユーザーに使用できるようにするために必要なすべてのユーザー インターフェイス コンポーネントを実装する必要があります。  
   
- `CRichEditView`テキストとテキストの書式設定特性を保持します。 `CRichEditDoc`ビューでは OLE クライアント アイテムの一覧を保持します。 `CRichEditCntrItem`コンテナー側 OLE クライアント アイテムへのアクセスを提供します。  
+ `CRichEditView` テキストとテキストの書式設定特性を保持します。 `CRichEditDoc` ビューでは OLE クライアント アイテムの一覧を保持します。 `CRichEditCntrItem` コンテナー側 OLE クライアント アイテムへのアクセスを提供します。  
   
  この Windows コモン コントロール (および、 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)および関連クラス) は、Windows 95/98 および Windows NT version 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
   
@@ -221,10 +216,10 @@ class CRichEditView : public CCtrlView
   
  `CRichEditView`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxrich.h  
   
-##  <a name="adjustdialogposition"></a>CRichEditView::AdjustDialogPosition  
+##  <a name="adjustdialogposition"></a>  CRichEditView::AdjustDialogPosition  
  現在の選択範囲が見えにくくならないように、指定されたダイアログ ボックスを移動するには、この関数を呼び出します。  
   
 ```  
@@ -235,7 +230,7 @@ void AdjustDialogPosition(CDialog* pDlg);
  *pDlg*  
  ポインター、`CDialog`オブジェクト。  
   
-##  <a name="canpaste"></a>CRichEditView::CanPaste  
+##  <a name="canpaste"></a>  CRichEditView::CanPaste  
  この関数では、クリップボードにリッチ エディット ビューに貼り付けることができる情報が含まれるかどうかを決定します。  
   
 ```  
@@ -245,14 +240,14 @@ BOOL CanPaste() const;
 ### <a name="return-value"></a>戻り値  
  クリップボードにリッチ エディット ビューの意向; 形式でデータが含まれている場合は 0 以外。それ以外の場合、0 を返します。  
   
-##  <a name="cricheditview"></a>CRichEditView::CRichEditView  
+##  <a name="cricheditview"></a>  CRichEditView::CRichEditView  
  作成するには、この関数を呼び出して、`CRichEditView`オブジェクト。  
   
 ```  
 CRichEditView();
 ```  
   
-##  <a name="dopaste"></a>CRichEditView::DoPaste  
+##  <a name="dopaste"></a>  CRichEditView::DoPaste  
  OLE 項目を貼り付けるには、この関数を呼び出す`dataobj`リッチはこれにドキュメント/ビューを編集します。  
   
 ```  
@@ -277,7 +272,7 @@ void DoPaste(
   
  この関数は、貼り付け のハンドラーの結果に基づく貼り付けの種類を決定します。 場合`cf`が 0 の場合、新しい項目が、現在のアイコン表現を使用します。 場合`cf`は 0 以外と`hMetaPict`は**NULL**、新しい項目を使用して`hMetaPict`形式のです。  
   
-##  <a name="findtext"></a>CRichEditView::FindText  
+##  <a name="findtext"></a>  CRichEditView::FindText  
  指定したテキストを検索し、現在の選択範囲に設定するには、この関数を呼び出します。  
   
 ```  
@@ -310,7 +305,7 @@ BOOL FindText(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#151](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]  
   
-##  <a name="findtextsimple"></a>CRichEditView::FindTextSimple  
+##  <a name="findtextsimple"></a>  CRichEditView::FindTextSimple  
  指定したテキストを検索し、現在の選択範囲に設定するには、この関数を呼び出します。  
   
 ```  
@@ -340,7 +335,7 @@ BOOL FindTextSimple(
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::FindText](#findtext)です。  
   
-##  <a name="getcharformatselection"></a>CRichEditView::GetCharFormatSelection  
+##  <a name="getcharformatselection"></a>  CRichEditView::GetCharFormatSelection  
  この関数では、現在の選択範囲の書式属性の文字を取得します。  
   
 ```  
@@ -356,7 +351,7 @@ CHARFORMAT2& GetCharFormatSelection();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
-##  <a name="getclipboarddata"></a>CRichEditView::GetClipboardData  
+##  <a name="getclipboarddata"></a>  CRichEditView::GetClipboardData  
  フレームワークの処理の一部としてこの関数が呼び出さ[IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315)です。  
   
 ```  
@@ -400,7 +395,7 @@ virtual HRESULT GetClipboardData(
   
  詳細については、次を参照してください[IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)、 [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315)、および[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)Windows SDK および参照[。IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Windows SDK にします。  
   
-##  <a name="getcontextmenu"></a>CRichEditView::GetContextMenu  
+##  <a name="getcontextmenu"></a>  CRichEditView::GetContextMenu  
  フレームワークの処理の一部としてこの関数が呼び出さ[IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317)です。  
   
 ```  
@@ -428,15 +423,15 @@ virtual HMENU GetContextMenu(
   
  選択の種類は、次のフラグの組み合わせにすることができます。  
   
-- `SEL_EMPTY`現在選択されていないことを示します。  
+- `SEL_EMPTY` 現在選択されていないことを示します。  
   
-- `SEL_TEXT`現在の選択範囲にテキストが含まれていることを示します。  
+- `SEL_TEXT` 現在の選択範囲にテキストが含まれていることを示します。  
   
-- `SEL_OBJECT`現在の選択範囲に少なくとも 1 つの OLE 項目が含まれていることを示します。  
+- `SEL_OBJECT` 現在の選択範囲に少なくとも 1 つの OLE 項目が含まれていることを示します。  
   
-- `SEL_MULTICHAR`現在の選択範囲にテキストの 2 つ以上の文字が含まれていることを示します。  
+- `SEL_MULTICHAR` 現在の選択範囲にテキストの 2 つ以上の文字が含まれていることを示します。  
   
-- `SEL_MULTIOBJECT`現在の選択範囲が 1 つ以上の OLE オブジェクトが含まれていることを示します。  
+- `SEL_MULTIOBJECT` 現在の選択範囲が 1 つ以上の OLE オブジェクトが含まれていることを示します。  
   
  既定の実装を返します**NULL**です。 これは、高度なオーバーライド可能です。  
   
@@ -444,7 +439,7 @@ virtual HMENU GetContextMenu(
   
  詳細については、 **OLEOBJECT** OLE データ構造体と構造の割り当ての記事を参照して、入力、 *OLE サポート技術情報*です。  
   
-##  <a name="getdocument"></a>CRichEditView::GetDocument  
+##  <a name="getdocument"></a>  CRichEditView::GetDocument  
  ポインターを取得するには、この関数を呼び出して、`CRichEditDoc`このビューに関連付けられています。  
   
 ```  
@@ -454,7 +449,7 @@ CRichEditDoc* GetDocument() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)オブジェクトに関連付けられている、`CRichEditView`オブジェクト。  
   
-##  <a name="getinplaceactiveitem"></a>CRichEditView::GetInPlaceActiveItem  
+##  <a name="getinplaceactiveitem"></a>  CRichEditView::GetInPlaceActiveItem  
  項目の OLE を取得するには、この関数の呼び出しは、現在この内の場所にアクティブ化されて`CRichEditView`オブジェクト。  
   
 ```  
@@ -464,7 +459,7 @@ CRichEditCntrItem* GetInPlaceActiveItem() const;
 ### <a name="return-value"></a>戻り値  
  1 つ、インプレース アクティブへのポインター [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)リッチ エディット ビュー; 内のオブジェクト**NULL**がない場合 OLE アイテム現在、インプレース アクティブな状態です。  
   
-##  <a name="getmargins"></a>CRichEditView::GetMargins  
+##  <a name="getmargins"></a>  CRichEditView::GetMargins  
  この関数では、印刷に使用される現在のマージンを取得します。  
   
 ```  
@@ -474,7 +469,7 @@ CRect GetMargins() const;
 ### <a name="return-value"></a>戻り値  
  単位は、印刷で使用されている余白`MM_TWIPS`です。  
   
-##  <a name="getpagerect"></a>CRichEditView::GetPageRect  
+##  <a name="getpagerect"></a>  CRichEditView::GetPageRect  
  この関数では、印刷で使用されるページの寸法を取得します。  
   
 ```  
@@ -487,7 +482,7 @@ CRect GetPageRect() const;
 ### <a name="remarks"></a>コメント  
  この値は、用紙サイズに基づきます。  
   
-##  <a name="getpapersize"></a>CRichEditView::GetPaperSize  
+##  <a name="getpapersize"></a>  CRichEditView::GetPaperSize  
  現在の用紙サイズを取得するには、この関数を呼び出します。  
   
 ```  
@@ -500,7 +495,7 @@ CSize GetPaperSize() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#153](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]  
   
-##  <a name="getparaformatselection"></a>CRichEditView::GetParaFormatSelection  
+##  <a name="getparaformatselection"></a>  CRichEditView::GetParaFormatSelection  
  段落の現在の選択の属性を取得するには、この関数を呼び出します。  
   
 ```  
@@ -513,7 +508,7 @@ PARAFORMAT2& GetParaFormatSelection();
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。 [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182)メッセージと[PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Windows SDK 内の構造。  
   
-##  <a name="getprintrect"></a>CRichEditView::GetPrintRect  
+##  <a name="getprintrect"></a>  CRichEditView::GetPrintRect  
  ページの四角形内の印刷領域の境界を取得するには、この関数を呼び出します。  
   
 ```  
@@ -526,7 +521,7 @@ CRect GetPrintRect() const;
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#154](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]  
   
-##  <a name="getprintwidth"></a>CRichEditView::GetPrintWidth  
+##  <a name="getprintwidth"></a>  CRichEditView::GetPrintWidth  
  印刷領域の幅を決定するには、この関数を呼び出します。  
   
 ```  
@@ -536,7 +531,7 @@ int GetPrintWidth() const;
 ### <a name="return-value"></a>戻り値  
  印刷の領域の幅を単位で`MM_TWIPS`です。  
   
-##  <a name="getricheditctrl"></a>CRichEditView::GetRichEditCtrl  
+##  <a name="getricheditctrl"></a>  CRichEditView::GetRichEditCtrl  
  取得するには、この関数を呼び出して、 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)オブジェクトに関連付けられている、`CRichEditView`オブジェクト。  
   
 ```  
@@ -549,7 +544,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::FindText](#findtext)です。  
   
-##  <a name="getselecteditem"></a>CRichEditView::GetSelectedItem  
+##  <a name="getselecteditem"></a>  CRichEditView::GetSelectedItem  
  OLE 項目を取得するには、この関数を呼び出します (、`CRichEditCntrItem`オブジェクト) で現在選択されている`CRichEditView`オブジェクト。  
   
 ```  
@@ -559,7 +554,7 @@ CRichEditCntrItem* GetSelectedItem() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)で選択したオブジェクト、`CRichEditView`オブジェクトです。**NULL**このビューで項目が選択されていない場合。  
   
-##  <a name="gettextlength"></a>CRichEditView::GetTextLength  
+##  <a name="gettextlength"></a>  CRichEditView::GetTextLength  
  このテキストの長さを取得するには、この関数を呼び出す`CRichEditView`オブジェクト。  
   
 ```  
@@ -569,7 +564,7 @@ long GetTextLength() const;
 ### <a name="return-value"></a>戻り値  
  このテキストの長さ`CRichEditView`オブジェクト。  
   
-##  <a name="gettextlengthex"></a>CRichEditView::GetTextLengthEx  
+##  <a name="gettextlengthex"></a>  CRichEditView::GetTextLengthEx  
  このテキストの長さを計算するには、このメンバー関数を呼び出す`CRichEditView`オブジェクト。  
   
 ```  
@@ -589,9 +584,9 @@ long GetTextLengthEx(
  文字またはエディット コントロールでのバイト数。 互換性のないフラグが設定されている場合`dwFlags`、このメンバー関数を返します`E_INVALIDARG`です。  
   
 ### <a name="remarks"></a>コメント  
- `GetTextLengthEx`テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 詳細については、次を参照してください。[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDK に含まれています。  
+ `GetTextLengthEx` テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 詳細については、次を参照してください。[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDK に含まれています。  
   
-##  <a name="insertfileasobject"></a>CRichEditView::InsertFileAsObject  
+##  <a name="insertfileasobject"></a>  CRichEditView::InsertFileAsObject  
  指定したファイルを挿入するには、この関数を呼び出します (として、 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)オブジェクト) リッチにビューを編集します。  
   
 ```  
@@ -602,7 +597,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
  `lpszFileName`  
  挿入するファイルの名前を含む文字列です。  
   
-##  <a name="insertitem"></a>CRichEditView::InsertItem  
+##  <a name="insertitem"></a>  CRichEditView::InsertItem  
  挿入するには、この関数を呼び出して、 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)にリッチ エディット ビューのオブジェクト。  
   
 ```  
@@ -619,7 +614,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ### <a name="remarks"></a>コメント  
  詳細については`HRESULT`を参照してください[COM エラー コードの構造体](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
   
-##  <a name="isricheditformat"></a>CRichEditView::IsRichEditFormat  
+##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
  かどうかをこの関数を呼び出す`cf`テキスト、リッチ テキスト、または OLE 項目を含む、リッチ テキストはクリップボード形式です。  
   
 ```  
@@ -633,7 +628,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ### <a name="return-value"></a>戻り値  
  0 以外の値`cf`リッチ テキストの編集またはクリップボードの形式です。  
   
-##  <a name="isselected"></a>CRichEditView::IsSelected  
+##  <a name="isselected"></a>  CRichEditView::IsSelected  
  指定した OLE 項目がこのビューで現在選択されているかどうかを判断するには、この関数を呼び出します。  
   
 ```  
@@ -650,14 +645,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>コメント  
  派生ビュー クラス OLE 項目の選択を処理するための別の方法がある場合は、この関数をオーバーライドします。  
   
-##  <a name="m_nbulletindent"></a>CRichEditView::m_nBulletIndent  
+##  <a name="m_nbulletindent"></a>  CRichEditView::m_nBulletIndent  
  リスト内の項目のインデント既定では、720 単位、1/2 インチであります。  
   
 ```  
 int m_nBulletIndent;  
 ```  
   
-##  <a name="m_nwordwrap"></a>CRichEditView::m_nWordWrap  
+##  <a name="m_nwordwrap"></a>  CRichEditView::m_nWordWrap  
  リッチ エディット ビューのワード ラップの種類を示します。  
   
 ```  
@@ -667,16 +662,16 @@ int m_nWordWrap;
 ### <a name="remarks"></a>コメント  
  次のいずれかの値です。  
   
-- `WrapNone`自動折り返しがないことを示します。  
+- `WrapNone` 自動折り返しがないことを示します。  
   
-- `WrapToWindow`テキストの折り返し、ウィンドウの幅に基づくことを示します。  
+- `WrapToWindow` テキストの折り返し、ウィンドウの幅に基づくことを示します。  
   
-- `WrapToTargetDevice`ワード ラップをターゲット デバイスの特性に基づくことを示します。  
+- `WrapToTargetDevice` ワード ラップをターゲット デバイスの特性に基づくことを示します。  
   
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::WrapChanged](#wrapchanged)です。  
   
-##  <a name="onchareffect"></a>CRichEditView::OnCharEffect  
+##  <a name="onchareffect"></a>  CRichEditView::OnCharEffect  
  文字書式の現在の選択の効果を切り替えるには、この関数を呼び出します。  
   
 ```  
@@ -700,7 +695,7 @@ void OnCharEffect(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
   
-##  <a name="onfindnext"></a>CRichEditView::OnFindNext  
+##  <a name="onfindnext"></a>  CRichEditView::OnFindNext  
  検索と置換 ダイアログ ボックスからコマンドを処理するときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -727,7 +722,7 @@ virtual void OnFindNext(
 ### <a name="remarks"></a>コメント  
  内のテキストを検索するには、この関数を呼び出して、`CRichEditView`です。 派生ビュー クラスの検索項目の特性を変更するには、この関数をオーバーライドします。  
   
-##  <a name="oninitialupdate"></a>CRichEditView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>  CRichEditView::OnInitialUpdate  
  ビューが最初に表示される前に、ビューが最初に、ドキュメントにアタッチされている後に、フレームワークによって呼び出されます。  
   
 ```  
@@ -740,7 +735,7 @@ virtual void OnInitialUpdate();
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::m_nWordWrap](#m_nwordwrap)です。  
   
-##  <a name="onpastenativeobject"></a>CRichEditView::OnPasteNativeObject  
+##  <a name="onpastenativeobject"></a>  CRichEditView::OnPasteNativeObject  
  この関数を使用して、埋め込みアイテムからネイティブ データを読み込みます。  
   
 ```  
@@ -761,7 +756,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
  詳細については、次を参照してください。 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) Windows SDK に含まれています。  
   
-##  <a name="onparaalign"></a>CRichEditView::OnParaAlign  
+##  <a name="onparaalign"></a>  CRichEditView::OnParaAlign  
  選択した段落の段落の配置を変更するには、この関数を呼び出します。  
   
 ```  
@@ -772,16 +767,16 @@ void OnParaAlign(WORD wAlign);
  `wAlign`  
  目的の段落の配置です。 次のいずれかの値です。  
   
-- `PFA_LEFT`左の余白を使用して段落を整列します。  
+- `PFA_LEFT` 左の余白を使用して段落を整列します。  
   
-- `PFA_RIGHT`右余白を使用して段落を整列します。  
+- `PFA_RIGHT` 右余白を使用して段落を整列します。  
   
-- `PFA_CENTER`余白の間での段落を中心にします。  
+- `PFA_CENTER` 余白の間での段落を中心にします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#156](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]  
   
-##  <a name="onprinterchanged"></a>CRichEditView::OnPrinterChanged  
+##  <a name="onprinterchanged"></a>  CRichEditView::OnPrinterChanged  
  プリンターが変更されたときに、リッチ エディット ビューの項目の特性を変更するには、この関数をオーバーライドします。  
   
 ```  
@@ -795,7 +790,7 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ### <a name="remarks"></a>コメント  
  既定の実装では、用紙サイズを物理の高さと幅出力デバイス (プリンター) に設定します。 ある場合は、デバイス コンテキストに関連付けられた`dcPrinter`既定の実装が用紙サイズを 8.5 によって 11 インチに設定します。  
   
-##  <a name="onreplaceall"></a>CRichEditView::OnReplaceAll  
+##  <a name="onreplaceall"></a>  CRichEditView::OnReplaceAll  
  すべて置換、置換 ダイアログ ボックスからコマンドを処理するときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -825,7 +820,7 @@ virtual void OnReplaceAll(
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::FindText](#findtext)です。  
   
-##  <a name="onreplacesel"></a>CRichEditView::OnReplaceSel  
+##  <a name="onreplacesel"></a>  CRichEditView::OnReplaceSel  
  [置換] ダイアログ ボックス [置換] コマンドを処理するときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -856,7 +851,7 @@ virtual void OnReplaceSel(
 ### <a name="remarks"></a>コメント  
  この関数では、別の文字列で指定された文字列の 1 つの出現箇所を置き換えます。 このビューの検索項目の特性を変更するには、この関数をオーバーライドします。  
   
-##  <a name="ontextnotfound"></a>CRichEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>  CRichEditView::OnTextNotFound  
  検索が失敗したときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -875,7 +870,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]  
   
-##  <a name="onupdatechareffect"></a>CRichEditView::OnUpdateCharEffect  
+##  <a name="onupdatechareffect"></a>  CRichEditView::OnUpdateCharEffect  
  フレームワークは、文字の効果のコマンドのコマンド UI を更新するには、この関数を呼び出します。  
   
 ```  
@@ -903,7 +898,7 @@ void OnUpdateCharEffect(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
   
-##  <a name="onupdateparaalign"></a>CRichEditView::OnUpdateParaAlign  
+##  <a name="onupdateparaalign"></a>  CRichEditView::OnUpdateParaAlign  
  フレームワークは、段落効果コマンドのコマンド UI を更新するには、この関数を呼び出します。  
   
 ```  
@@ -919,16 +914,16 @@ void OnUpdateParaAlign(
  `wAlign`  
  段落の配置を確認します。 次のいずれかの値です。  
   
-- `PFA_LEFT`左の余白を使用して段落を整列します。  
+- `PFA_LEFT` 左の余白を使用して段落を整列します。  
   
-- `PFA_RIGHT`右余白を使用して段落を整列します。  
+- `PFA_RIGHT` 右余白を使用して段落を整列します。  
   
-- `PFA_CENTER`余白の間での段落を中心にします。  
+- `PFA_CENTER` 余白の間での段落を中心にします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]  
   
-##  <a name="printinsiderect"></a>CRichEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>  CRichEditView::PrintInsideRect  
  範囲内に収まるリッチ エディット コントロール内のテキストの書式設定するには、この関数を呼び出す*rectLayout*で指定されたデバイスの`pDC`します。  
   
 ```  
@@ -965,7 +960,7 @@ long PrintInsideRect(
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::GetPaperSize](#getpapersize)です。  
   
-##  <a name="printpage"></a>CRichEditView::PrintPage  
+##  <a name="printpage"></a>  CRichEditView::PrintPage  
  指定された出力デバイスのリッチ エディット コントロールでテキストの範囲の書式を設定するには、この関数を呼び出す`pDC`です。  
   
 ```  
@@ -993,7 +988,7 @@ long PrintPage(
   
  余白は、論理ページではなく、物理ページの基準としたことに注意してください。 したがって、多くのプリンターがあるページの一部に印刷できないために、0 の余白はテキストをクリップ多くの場合。 テキストを避けるためを呼び出す必要があります[SetMargins](#setmargins)し、印刷する前に適切な余白を設定します。  
   
-##  <a name="queryacceptdata"></a>CRichEditView::QueryAcceptData  
+##  <a name="queryacceptdata"></a>  CRichEditView::QueryAcceptData  
  リッチ エディットにオブジェクトを貼り付けるために、フレームワークによって呼び出されます。  
   
 ```  
@@ -1032,7 +1027,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]  
   
-##  <a name="setcharformat"></a>CRichEditView::SetCharFormat  
+##  <a name="setcharformat"></a>  CRichEditView::SetCharFormat  
  これで新しいテキストの属性の書式設定文字を設定するには、この関数を呼び出す`CRichEditView`オブジェクト。  
   
 ```  
@@ -1051,7 +1046,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
-##  <a name="setmargins"></a>CRichEditView::SetMargins  
+##  <a name="setmargins"></a>  CRichEditView::SetMargins  
  リッチ エディット ビューの印刷の余白を設定するには、この関数を呼び出します。  
   
 ```  
@@ -1070,7 +1065,7 @@ void SetMargins(const CRect& rectMargin);
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::GetPaperSize](#getpapersize)です。  
   
-##  <a name="setpapersize"></a>CRichEditView::SetPaperSize  
+##  <a name="setpapersize"></a>  CRichEditView::SetPaperSize  
  リッチ エディット ビューの印刷の用紙サイズを設定するには、この関数を呼び出します。  
   
 ```  
@@ -1087,7 +1082,7 @@ void SetPaperSize(CSize sizePaper);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#161](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]  
   
-##  <a name="setparaformat"></a>CRichEditView::SetParaFormat  
+##  <a name="setparaformat"></a>  CRichEditView::SetParaFormat  
  段落の現在の選択の属性を設定するには、この関数を呼び出す`CRichEditView`オブジェクト。  
   
 ```  
@@ -1109,7 +1104,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]  
   
-##  <a name="textnotfound"></a>CRichEditView::TextNotFound  
+##  <a name="textnotfound"></a>  CRichEditView::TextNotFound  
  内部検索状態をリセットするには、この関数を呼び出して、 [CRichEditView](../../mfc/reference/cricheditview-class.md)に失敗した呼び出しの後にコントロール[FindText](#findtext)です。  
   
 ```  
@@ -1128,7 +1123,7 @@ void TextNotFound(LPCTSTR lpszFind);
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::FindText](#findtext)です。  
   
-##  <a name="wrapchanged"></a>CRichEditView::WrapChanged  
+##  <a name="wrapchanged"></a>  CRichEditView::WrapChanged  
  印刷の特性が変化したときに、この関数を呼び出します ( [SetMargins](#setmargins)または[SetPaperSize](#setpapersize))。  
   
 ```  
@@ -1141,7 +1136,7 @@ virtual void WrapChanged();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#163](../../mfc/codesnippet/cpp/cricheditview-class_13.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル ワードパッド](../../visual-cpp-samples.md)   
  [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

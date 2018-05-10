@@ -1,12 +1,9 @@
 ---
-title: "CSocketFile クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CSocketFile クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocketFile
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48ab1428d2c02e51b02977c8457d28e20597cbb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e3bf8d9ee58143e7a96b85174e4533b3c2e50ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocketfile-class"></a>CSocketFile クラス
 Windows ソケットを使ったネットワーク間でのデータの送受信に使われる `CFile` オブジェクトです。  
@@ -56,7 +51,7 @@ class CSocketFile : public CFile
   
  使用すると`CArchive`で`CSocketFile`と`CSocket`、状況が発生する可能性があります、 **CSocket::Receive**ループに入る (によって**PumpMessages(FD_READ)**) を待って、要求されたバイト数。 これは、Windows ソケット FD_READ 通知ごとに 1 つだけの受信呼び出しを許可するため、`CSocketFile`と`CSocket`FD_READ ごとの複数の受信呼び出しができるようにします。 表示された場合、FD_READ 読み取るデータがない場合に、アプリケーションがハングします。 別の FD_READ を取得しない場合、アプリケーションは、ソケット上で通信を停止します。  
   
- 次のようにこの問題を解決できます。 `OnReceive`ソケット クラス、呼び出しのメソッド**CAsyncSocket::IOCtl (FIONREAD、...)**を呼び出す前に、`Serialize`ソケットから読み取る必要なデータが 1 つの TCP パケット (ネットワークの中、通常、少なくとも 1096 バイトの最大転送単位) のサイズを超える場合、メッセージ クラスのメソッドです。 使用可能なデータのサイズが必要なよりも小さい場合は、すべてのデータを受信して、読み取り操作を開始して待機します。  
+ 次のようにこの問題を解決できます。 `OnReceive`ソケット クラス、呼び出しのメソッド**CAsyncSocket::IOCtl (FIONREAD、...)** を呼び出す前に、`Serialize`ソケットから読み取る必要なデータが 1 つの TCP パケット (ネットワークの中、通常、少なくとも 1096 バイトの最大転送単位) のサイズを超える場合、メッセージ クラスのメソッドです。 使用可能なデータのサイズが必要なよりも小さい場合は、すべてのデータを受信して、読み取り操作を開始して待機します。  
   
  次の例では、`m_dwExpected`ユーザーが受信されるバイトのおおよその数です。 宣言している他の場所で、コード内と見なされます。  
   
@@ -71,10 +66,10 @@ class CSocketFile : public CFile
   
  `CSocketFile`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxsock.h  
   
-##  <a name="csocketfile"></a>CSocketFile::CSocketFile  
+##  <a name="csocketfile"></a>  CSocketFile::CSocketFile  
  `CSocketFile` オブジェクトを構築します。  
   
 ```  
@@ -102,7 +97,7 @@ explicit CSocketFile(
   
  使用の詳細については`CSocketFile`、記事を参照して[Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)と[Windows ソケット: 例のソケットを使用してアーカイブ](../../mfc/windows-sockets-example-of-sockets-using-archives.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CFile クラス](../../mfc/reference/cfile-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [CAsyncSocket クラス](../../mfc/reference/casyncsocket-class.md)   

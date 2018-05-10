@@ -1,12 +1,9 @@
 ---
-title: "CDialogBar クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDialogBar クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>CDialogBar クラス
 コントロール バー内の Windows のモードレス ダイアログ ボックスの機能を提供します。  
@@ -75,17 +70,17 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  `CDialogBar` オブジェクトを構築します。  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  指定されたダイアログ ボックス リソース テンプレートを読み込みます`lpszTemplateName`または`nIDTemplate`、ダイアログ バーのウィンドウを作成、そのスタイルを設定およびに関連付けます、`CDialogBar`オブジェクト。  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  ツールバーのスタイル。 追加のスタイルは次のとおりです。  
   
-- `CBRS_TOP`フレーム ウィンドウの上部には、コントロール バーです。  
+- `CBRS_TOP` フレーム ウィンドウの上部には、コントロール バーです。  
   
-- `CBRS_BOTTOM`フレーム ウィンドウの下部には、コントロール バーです。  
+- `CBRS_BOTTOM` フレーム ウィンドウの下部には、コントロール バーです。  
   
-- `CBRS_NOALIGN`親のサイズが変更されるときにコントロール バーの位置を変更できません。  
+- `CBRS_NOALIGN` 親のサイズが変更されるときにコントロール バーの位置を変更できません。  
   
-- `CBRS_TOOLTIPS`コントロール バーには、ツール ヒントが表示されます。  
+- `CBRS_TOOLTIPS` コントロール バーには、ツール ヒントが表示されます。  
   
 - **CBRS_SIZE_DYNAMIC**コントロール バーは動的です。  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING**コントロール バーがフローティング状態です。  
   
-- `CBRS_FLYBY`ステータス バーには、ボタンについての情報が表示されます。  
+- `CBRS_FLYBY` ステータス バーには、ボタンについての情報が表示されます。  
   
 - **CBRS_HIDE_INPLACE**コントロール バーは、ユーザーに表示されません。  
   
@@ -146,7 +141,7 @@ virtual BOOL Create(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル CTRLBARS](../../visual-cpp-samples.md)   
  [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   

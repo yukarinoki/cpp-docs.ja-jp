@@ -1,31 +1,26 @@
 ---
-title: "レコード セット: テーブル (ODBC) クラスの宣言 |Microsoft ドキュメント"
-ms.custom: 
+title: 'レコード セット: テーブル (ODBC) クラスの宣言 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 309d32e5cd92d37942f4267bbd7c7cc5a1bf1805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 460b09d32b46bb9f15a95bcb976afa63519b8263
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 -   定義済みクエリの結果を含むです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [レコード セット: を作成するレコード セットと破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
  [レコード セット: 定義済みクエリ (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   

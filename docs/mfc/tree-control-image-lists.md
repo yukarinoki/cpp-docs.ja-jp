@@ -1,13 +1,10 @@
 ---
-title: "ツリーのコントロールのイメージ リスト |Microsoft ドキュメント"
-ms.custom: 
+title: ツリーのコントロールのイメージ リスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5015a001bf2c15f3144303ba5e19b2a9ea8c34f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-image-lists"></a>ツリー コントロールのイメージ リスト
 ツリー コントロール内の各項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 関連付けられているビットマップ イメージのペアを持つことができます。 項目のラベルの左側にある、画像が表示されます。 項目が選択されているし、項目が選択されていないときに表示されたら、他の 1 つのイメージが表示されます。 たとえば、項目が選択されていないときに、開いているフォルダーを選択すると閉じたフォルダーを表示できます。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)メンバー関数は、ツリー コントロールのイメージ リストのハンドルを取得します。 この関数は、イメージを一覧に追加する必要がある場合に便利です。 イメージ リストの詳細については、次を参照してください[を使用して CImageList](../mfc/using-cimagelist.md)、 [CImageList](../mfc/reference/cimagelist-class.md)で、 *『 MFC リファレンス*、および[イメージ リスト](http://msdn.microsoft.com/library/windows/desktop/bb761389)で、。Windows SDK。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
  [コントロール](../mfc/controls-mfc.md)
 

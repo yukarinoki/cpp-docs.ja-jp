@@ -1,12 +1,9 @@
 ---
-title: "align (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: align (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - align_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10c83ebb195cf4ee75c7be15b4d2ab9607f46743
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: ae88262724dfec5702e2769eb10e076502c09342
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -44,7 +39,7 @@ Visual Studio 2015 以降では、c++ 11 標準を使用して`alignas`配置を
 
 最新のプロセッサ命令を使用するアプリケーションの記述では、いくつかの新しい制約や問題があります。 特に、多くの新しい命令では、データを 16 バイト境界にアラインする必要があります。 また、頻繁に使用されるデータを特定のプロセッサのキャッシュ ラインのサイズにアラインすることで、キャッシュ パフォーマンスが向上します。 たとえば、サイズが 32 バイト未満の構造体を定義する場合、その構造体型のオブジェクトが効率的にキャッシュされるように、その構造体を 32 バイトにアラインできます。
 
-\#アラインメント値です。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator` は、aligned として宣言するデータです。
+\# アラインメント値です。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator` は、aligned として宣言するデータです。
 
 型の値を返す方法については`size_t`を参照してください、型のアラインメント要件である[_ _alignof](../cpp/alignof-operator.md)です。 64 ビット プロセッサを対象とする場合は、アラインされていないポインターを宣言する方法については、次を参照してください。 [_ _unaligned](../cpp/unaligned.md)です。
 
@@ -54,7 +49,7 @@ Visual Studio 2015 以降では、c++ 11 標準を使用して`alignas`配置を
 
 関数パラメーターのアラインメントは指定できません。 アラインメント属性を持つデータがスタック上で値によって渡されるときに、そのアラインメントは呼び出し規約によって制御されます。 呼び出された関数でデータのアラインメントが重要な場合は、使用する前にパラメーターを正常にアラインされたメモリにコピーします。
 
-せず`__declspec(align(#))`コンパイラでは、ターゲット プロセッサと最大で 32 ビット プロセッサ上の 4 バイト境界、データのサイズに基づいて、自然な境界と 64 ビット プロセッサ、8 バイト境界上のデータを一般に揃えて配置します。 クラスまたは構造体のデータは、クラスまたは構造体には、少なくとも、自然なアラインメントと現在のパッキング設定の配置 (#pragma から`pack`または**/Zp**コンパイラ オプション)。
+せず`__declspec(align(#))`コンパイラでは、ターゲット プロセッサと最大で 32 ビット プロセッサ上の 4 バイト境界、データのサイズに基づいて、自然な境界と 64 ビット プロセッサ、8 バイト境界上のデータを一般に揃えて配置します。 クラスまたは構造体のデータは、クラスまたは構造体には、少なくとも、自然なアラインメントと現在のパッキング設定の配置 (#pragma から`pack`または **/Zp**コンパイラ オプション)。
 
 `__declspec(align(#))` を使用する例を次に示します。
 
@@ -94,7 +89,7 @@ __declspec(align(32)) struct Str1{
 
 - [構造体の配置例](../build/examples-of-structure-alignment.md)(x64 固有)
 
-##  <a name="vclrfalignexamples"></a>align の例
+##  <a name="vclrfalignexamples"></a> align の例
 
 次の例では、`__declspec(align(#))` がデータ構造体のサイズとアラインメントにどのような影響を与えるかを示します。 この例では、次の定義を前提とします。
 
@@ -185,7 +180,7 @@ void fn() {
 
 メモリがヒープ上に割り当てられる場合のアラインメントは、どの割り当て関数が呼び出されるかによって異なります。  たとえば、`malloc` を使用する場合、結果はオペランドのサイズによって決まります。 場合*arg* > = 8、返されるメモリは 8 バイトでアラインメントされます。 場合*arg* < 8、返されるメモリのアラインメントは、最初の 2 の累乗より小さい*arg*です。 たとえば、malloc(7) を使用すると、アラインメントは 4 バイトになります。
 
-##  <a name="vclrf_declspecaligntypedef"></a>__Declspec(align(#)) と新しい型を定義します。
+##  <a name="vclrf_declspecaligntypedef"></a> __Declspec(align(#)) と新しい型を定義します。
 
 型のアラインメントを定義できます。
 
@@ -198,7 +193,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 ここで、`aType`と`bType`は同じサイズ (8 バイト) が型の変数`bType`32 バイトでアラインされます。
 
-##  <a name="vclrfthreadlocalstorageallocation"></a>スレッド ローカル ストレージにデータの整列
+##  <a name="vclrfthreadlocalstorageallocation"></a> スレッド ローカル ストレージにデータの整列
 
 `__declspec(thread)` 属性を使用して作成され、イメージ内の TLS セクションに配置された静的なスレッド ローカル ストレージ (TLS: Thread-Local Storage) は、通常の静的データとまったく同じようにアラインメントされます。 TLS データを作成するために、オペレーティング システムは、TLS セクションのサイズのメモリを割り当て、TLS セクションのアラインメント属性に従います。
 
@@ -221,9 +216,9 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a>Align のデータのパッキングでの動作
+##  <a name="vclrfhowalignworkswithdatapacking"></a> Align のデータのパッキングでの動作
 
-**/Zp**コンパイラ オプションおよび`pack`プラグマ構造体と共用体のメンバーのデータを梱包の効果があります。この例ではどのように**/Zp**と`__declspec(align(#))`共同作業します。
+**/Zp**コンパイラ オプションおよび`pack`プラグマ構造体と共用体のメンバーのデータを梱包の効果があります。この例ではどのように **/Zp**と`__declspec(align(#))`共同作業します。
 
 ```c[[]]
 struct S {
@@ -236,7 +231,7 @@ struct S {
 };
 ```
 
-次の表に、各種の下にある各メンバーのオフセット**/Zp** (または #pragma `pack`)、2 つの相互作用を示す値。
+次の表に、各種の下にある各メンバーのオフセット **/Zp** (または #pragma `pack`)、2 つの相互作用を示す値。
 
 |変数|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|

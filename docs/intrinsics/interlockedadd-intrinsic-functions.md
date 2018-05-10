@@ -1,12 +1,9 @@
 ---
-title: "_InterlockedAdd の組み込み関数 |Microsoft ドキュメント"
-ms.custom: 
+title: _InterlockedAdd の組み込み関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f1798f3c9d4c5121aa48b33aee568d17fe755d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd の組み込み関数
 **Microsoft 固有の仕様**  
@@ -99,7 +94,7 @@ __int64 _InterlockedAdd64_rel(
 ## <a name="return-value"></a>戻り値  
  どちらの関数も加算の結果を返します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 |組み込み|アーキテクチャ|  
 |---------------|------------------|  
@@ -179,6 +174,6 @@ Return value: ffff00ffffffff
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ組み込み関数](../intrinsics/compiler-intrinsics.md)   
  [x86 コンパイラとの競合](../build/conflicts-with-the-x86-compiler.md)

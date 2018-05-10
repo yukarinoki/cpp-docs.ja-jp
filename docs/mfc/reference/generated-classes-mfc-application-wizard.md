@@ -1,13 +1,10 @@
 ---
-title: "生成されたクラス、MFC アプリケーション ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: 生成されたクラス、MFC アプリケーション ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0a5962909c15d881214969c177cad234b2950a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 764a87459df719903f5653c59422ed492db9a077
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>[生成されたクラス] (MFC アプリケーション ウィザード)
 このトピックでは、基本クラスと、プロジェクトで生成されるファイルの名前が一覧表示します。 既定では、名前は、プロジェクト名に基づいてで指定した、**新しいプロジェクト ダイアログ ボックス**です。 前述のように、これらの名前のほとんどを変更できます。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
  **.cpp ファイル**  
  選択したクラスに関連付けられているソース コード ファイルの名前。 テキスト ボックスがアクティブである場合は、実装ファイルの名前を変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [高度な機能、MFC アプリケーション ウィザード](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
  [Visual C++ プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)
 

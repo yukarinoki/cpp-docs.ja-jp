@@ -1,29 +1,24 @@
 ---
-title: "ウィザードとしてのプロパティ シート |Microsoft ドキュメント"
-ms.custom: 
+title: ウィザードとしてのプロパティ シート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65aedc5dbeb8a740d5713983f66eefe693864937
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 634359763f24e02987664fe3de1094e3e7fec64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-as-wizards"></a>ウィザードとしてのプロパティ シート
 ウィザードのプロパティ シートの主な特徴は、タブの代わりに、[次へ] または [完了]、バックアップ、および [キャンセル] ボタンでナビゲーションが提供されることです。 呼び出す必要がある[CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode)呼び出す前に[する](../mfc/reference/cpropertysheet-class.md#domodal)プロパティ シート オブジェクトでこの機能を活用するためにします。  
@@ -35,6 +30,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティ シート](../mfc/property-sheets-mfc.md)
 

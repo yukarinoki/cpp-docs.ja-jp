@@ -1,31 +1,26 @@
 ---
-title: "クラスまたはインターフェイス内でメンバーの宣言 (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: クラスまたはインターフェイス内でメンバーの宣言 (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - members, declaration syntax
 - class members, declaration syntax
 ms.assetid: 95d312a4-198b-46f0-b8f5-15253807c55e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d42ef381d175512fc9e1173a2187d5f77b408cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>クラスまたはインターフェイス内でのメンバー宣言 (C++/CLI)
 プロパティおよび演算子の宣言が広範な見直され、マネージ拡張から C++ の Visual C、マネージ拡張のデザインで公開されている基になる実装の詳細を非表示にします。 イベントの宣言は、同様に変更されています。  
@@ -60,5 +55,5 @@ ms.lasthandoff: 12/21/2017
  [静的整数型定数リンケージの非リテラル化](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
  方法の変更について取り上げて`static const`整数メンバーがリンクされている、new を使用して定数を明示的に宣言する方法と`literal`キーワード。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++/CLI 移行ガイド](../dotnet/cpp-cli-migration-primer.md)

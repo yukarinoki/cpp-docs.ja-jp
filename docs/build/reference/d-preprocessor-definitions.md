@@ -2,12 +2,9 @@
 title: -D (プリプロセッサの定義) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D (プリプロセッサの定義)
 ソース ファイルのプリプロセッサ シンボルを定義します。  
@@ -46,11 +41,11 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>コメント  
  このシンボルを `#if` または `#ifdef` と一緒に使用すると、ソース コードを条件付きでコンパイルできます。 シンボル定義は、コードで再定義されるまで、または `#undef` ディレクティブによってコードで未定義になるまで有効です。  
   
- **/D**と同じ効果を持つ、`#define`点を除いて、ソース コード ファイルの先頭にディレクティブ**/D**コマンドラインの引用符が削除および`#define`は保持されます。  
+ **/D**と同じ効果を持つ、`#define`点を除いて、ソース コード ファイルの先頭にディレクティブ **/D**コマンドラインの引用符が削除および`#define`は保持されます。  
   
- 既定では、シンボルに関連付けられる値は 1 です。 たとえば、 **/D** `name`は等価**/D**`name`**= 1**です。 例では、この記事では、定義の最後**テスト**を印刷する表示`1`です。  
+ 既定では、シンボルに関連付けられる値は 1 です。 たとえば、 **/D** `name`は等価 **/D**`name`**= 1**です。 例では、この記事では、定義の最後**テスト**を印刷する表示`1`です。  
   
- 使用してコンパイルする**/D** `name`  **=** により、シンボルに関連付けられた値がないようにします。 シンボルは引き続きコードの条件コンパイルに使用できますが、何も指定されていないものとして評価されます。 使用してコンパイルする場合の例で**/DTEST =**エラーが発生します。 この動作は、値を指定して、または値を指定せずに `#define` を使用する場合と似ています。  
+ 使用してコンパイルする **/D** `name` **=** により、シンボルに関連付けられた値がないようにします。 シンボルは引き続きコードの条件コンパイルに使用できますが、何も指定されていないものとして評価されます。 使用してコンパイルする場合の例で **/DTEST =** エラーが発生します。 この動作は、値を指定して、または値を指定せずに `#define` を使用する場合と似ています。  
   
  次のコマンドを実行すると、TEST.c で DEBUG シンボルが定義されます。  
   
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  **CL/D__far テストを = です。C**  
   
- **CL**環境変数は、等号 (=) を含む文字列に設定することはできません。 使用する**/D**と共に、 **CL**環境変数である必要がありますを指定する等号 (=) ではなくシャープ記号。  
+ **CL**環境変数は、等号 (=) を含む文字列に設定することはできません。 使用する **/D**と共に、 **CL**環境変数である必要がありますを指定する等号 (=) ではなくシャープ記号。  
   
 ```  
 SET CL=/DTEST#0  
@@ -107,7 +102,7 @@ int main( )
 TEST defined 1  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
  [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)   
  [/U、/u (シンボルを未定義)](../../build/reference/u-u-undefine-symbols.md)   

@@ -1,12 +1,9 @@
 ---
-title: "CCatalogs、CCatalogInfo |Microsoft ドキュメント"
-ms.custom: 
+title: CCatalogs、CCatalogInfo |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CCatalogs
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - m_szName
 - m_szDescription
 ms.assetid: 8362cbbd-2f00-4272-8518-fc235c4de193
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d08f384e29399e1f244595088c5b1cbda249138
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a62c0a95e057d3ffa96f59fc1c460de78c031550
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccatalogs-ccataloginfo"></a>CCatalogs、CCatalogInfo
 Typedef クラスを呼び出す**CCatalogs**そのパラメーター クラスを実装する**CCatalogInfo**です。  
@@ -49,8 +44,8 @@ Typedef クラスを呼び出す**CCatalogs**そのパラメーター クラス�
 |m_szName|CATALOG_NAME|  
 |m_szDescription|説明|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbsch.h  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CRestrictions クラス](../../data/oledb/crestrictions-class.md)

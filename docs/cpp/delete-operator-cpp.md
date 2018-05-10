@@ -1,12 +1,9 @@
 ---
-title: "delete 演算子 (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: delete 演算子 (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - delete_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36da346329341221d43af2ec96aa17be4f819bf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b523f5c10cbd28dfb2d584ea8241bc1518cf925
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-operator-c"></a>delete 演算子 (C++)
 メモリのブロックを解放します。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>コメント  
- *キャスト式*引数は以前に作成されたオブジェクトに割り当てられたメモリ ブロックへのポインターである必要があります、 [new 演算子](../cpp/new-operator-cpp.md)です。 **削除**演算子は型の結果`void`をそのため、値は返しません。 例:  
+ *キャスト式*引数は以前に作成されたオブジェクトに割り当てられたメモリ ブロックへのポインターである必要があります、 [new 演算子](../cpp/new-operator-cpp.md)です。 **削除**演算子は型の結果`void`をそのため、値は返しません。 例えば:  
   
 ```  
 CDialog* MyDialog = new CDialog;  
@@ -101,7 +96,7 @@ int main()
   
  クラスの種類のオブジェクト ([クラス](../cpp/class-cpp.md)、[構造体](../cpp/struct-cpp.md)、または[共用体](../cpp/unions.md))、グローバルな delete 演算子が呼び出されます。 クラス型のオブジェクトでは、delete 式の先頭が単項スコープ解決演算子 (::) である場合に、deallocation 関数の名前がグローバル スコープで解決されます。 それ以外の場合、delete 演算子は、メモリ (ポインターが null でない場合) の割り当てを解除する前に、オブジェクトのデストラクターを呼び出します。 delete 演算子は、クラス単位で定義できます。指定のクラスの定義がない場合、グローバル delete 演算子が呼び出されます。 静的な型に仮想デストラクターが含まれるクラス オブジェクトの割り当ての解放に delete 式を使用した場合、deallocation 関数は動的な型のオブジェクトの仮想デストラクターを通じて解決されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
  [キーワード](../cpp/keywords-cpp.md)   
  [new および delete 演算子](../cpp/new-and-delete-operators.md)   

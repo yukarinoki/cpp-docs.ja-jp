@@ -1,12 +1,9 @@
 ---
-title: "CComControl クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CComControl クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControl
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrol-class"></a>CComControl クラス
 このクラスは、作成して、ATL コントロールを管理するためのメソッドを提供します。  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::MessageBox](#messagebox)|作成、表示、およびメッセージ ボックスを操作するには、このメソッドを呼び出します。|  
   
 ## <a name="remarks"></a>コメント  
- `CComControl`便利コントロール ヘルパー関数と ATL のコントロールの重要なデータ メンバーのセットです。 標準コントロールまたは ATL コントロール ウィザードを使用して、DHTML コントロールを作成するときに、ウィザードは自動的に派生クラスから`CComControl`です。 `CComControl`メソッドのほとんどの派生[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)です。  
+ `CComControl` 便利コントロール ヘルパー関数と ATL のコントロールの重要なデータ メンバーのセットです。 標準コントロールまたは ATL コントロール ウィザードを使用して、DHTML コントロールを作成するときに、ウィザードは自動的に派生クラスから`CComControl`です。 `CComControl` メソッドのほとんどの派生[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)です。  
   
  コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)です。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトを作成する](../../atl/reference/creating-an-atl-project.md)です。  
   
@@ -93,10 +88,10 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
   
  `CComControl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlctl.h  
   
-##  <a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>  CComControl::CComControl  
  コンストラクターです。  
   
 ```
@@ -106,7 +101,7 @@ CComControl();
 ### <a name="remarks"></a>コメント  
  呼び出し、 [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase)コンス トラクターを渡して、`m_hWnd`を通じてデータ メンバーが継承[CWindowImpl](../../atl/reference/cwindowimpl-class.md)です。  
   
-##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  要求されたインターフェイスへのポインターを取得します。  
   
 ```
@@ -126,7 +121,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
  既定では、呼び出すことによって、コントロールのウィンドウを作成`CWindowImpl::Create`です。  
   
 ```
@@ -146,7 +141,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
  コントロール プロパティが変更されたコンテナーのシンクに通知します。  
   
 ```
@@ -168,7 +163,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
  コントロールのプロパティが変更しようとするオブジェクトが要求している、シンクの続行方法は、コンテナーのシンクを通知します。  
   
 ```
@@ -191,7 +186,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>  CComControl::MessageBox  
  作成、表示、およびメッセージ ボックスを操作するには、このメソッドを呼び出します。  
   
 ```
@@ -215,9 +210,9 @@ int MessageBox(
  下に表示 メニュー項目の値のいずれかを示す整数値を返します[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK のドキュメントです。  
   
 ### <a name="remarks"></a>コメント  
- `MessageBox`開発時とユーザーに、エラーまたは警告メッセージを表示する簡単な方法としては役立ちます。  
+ `MessageBox` 開発時とユーザーに、エラーまたは警告メッセージを表示する簡単な方法としては役立ちます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [CComControlBase クラス](../../atl/reference/ccomcontrolbase-class.md)   

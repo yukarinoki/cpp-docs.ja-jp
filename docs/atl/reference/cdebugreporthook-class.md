@@ -1,12 +1,9 @@
 ---
-title: "CDebugReportHook クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CDebugReportHook クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDebugReportHook
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df098ee80bcd8fa81b5503cc21b08ded86945a72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d84b2da8a347833513e0725695bb9d2bacd2951d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook クラス
 このクラスを使用すると、名前付きパイプにデバッグ レポートを送信します。  
@@ -69,10 +64,10 @@ class CDebugReportHook
   
  スレッドの基になるセキュリティ コンテキストを使用してデバッグ レポートを送信することに注意してください。 ここで低い特権のユーザーの権限の借用が行われてなどの web アプリケーションでの状況でデバッグ レポートを表示するように、権限借用が一時的に無効にします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlutil.h  
   
-##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
+##  <a name="cdebugreporthook"></a>  CDebugReportHook::CDebugReportHook  
  呼び出し[SetPipeName](#setpipename)、 [SetTimeout](#settimeout)、および[SetHook](#sethook)です。  
   
 ```
@@ -92,14 +87,14 @@ CDebugReportHook(
  `dwTimeout`  
  このクラスが使用可能になる名前付きパイプの待機するミリ秒単位の時間。  
   
-##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
+##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook  
  呼び出し[CDebugReportHook::RemoveHook](#removehook)です。  
   
 ```
 ~CDebugReportHook() throw();
 ```  
   
-##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
+##  <a name="cdebugreporthookproc"></a>  CDebugReportHook::CDebugReportHookProc  
  C ランタイム デバッグ レポート プロセスにフックされているカスタム レポート関数。  
   
 ```
@@ -127,7 +122,7 @@ static int __cdecl CDebugReportHookProc(
   
  呼び出し元のスレッドの基になるセキュリティ コンテキストでこの関数のコードが実行され、この関数の実行中、権限借用は、無効になっています。  
   
-##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
+##  <a name="removehook"></a>  CDebugReportHook::RemoveHook  
  名前付きパイプへデバッグ レポートの送信を停止するには、このメソッドを呼び出すし、以前のレポート用のフックを復元します。  
   
 ```
@@ -137,7 +132,7 @@ void RemoveHook() throw();
 ### <a name="remarks"></a>コメント  
  呼び出し[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)を以前のレポート用のフックを復元します。  
   
-##  <a name="sethook"></a>CDebugReportHook::SetHook  
+##  <a name="sethook"></a>  CDebugReportHook::SetHook  
  名前付きパイプにデバッグ レポートを送信を開始するには、このメソッドを呼び出します。  
   
 ```
@@ -147,7 +142,7 @@ void SetHook() throw();
 ### <a name="remarks"></a>コメント  
  呼び出し[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)デバッグ レポートを経由してルーティング[CDebugReportHookProc](#cdebugreporthookproc)名前付きパイプにします。 このクラスの追跡、前のレポート用のフックできるように、復元時に[RemoveHook](#removehook)と呼びます。  
   
-##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
+##  <a name="setpipename"></a>  CDebugReportHook::SetPipeName  
  このメソッドを呼び出してデバッグ レポートを送信するパイプの名前とコンピューターを設定します。  
   
 ```
@@ -166,7 +161,7 @@ BOOL SetPipeName(
 ### <a name="return-value"></a>戻り値  
  成功した場合、TRUE を返しますエラー発生時に false を指定します。  
   
-##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
+##  <a name="settimeout"></a>  CDebugReportHook::SetTimeout  
  このクラスが使用可能になる名前付きパイプの待機するミリ秒単位で時間を設定するには、このメソッドを呼び出します。  
   
 ```
@@ -177,5 +172,5 @@ void SetTimeout(DWORD dwTimeout);
  `dwTimeout`  
  このクラスが使用可能になる名前付きパイプの待機するミリ秒単位の時間。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラス](../../atl/reference/atl-classes.md)

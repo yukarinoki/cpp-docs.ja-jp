@@ -1,12 +1,9 @@
 ---
-title: "CMFCToolBarFontComboBox クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCToolBarFontComboBox クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f499c5593460b10957c7d09e01c0f458529df0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox クラス
 ユーザーがシステム フォントの一覧からフォントを選択できるコンボ ボックス コントロールを含むツール バー ボタンです。  
@@ -85,10 +80,10 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  構築、 [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)オブジェクト。  
   
 ```  
@@ -152,7 +147,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
  ポインターを返します、`CMFCFontInfo`コンボ ボックスで指定したインデックスのオブジェクト。  
   
 ```  
@@ -166,7 +161,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>戻り値  
  ポインター、`CMFCFontInfo`オブジェクト。 場合`iIndex`、有効な項目のインデックスが指定されていません、戻り値は`NULL`します。  
   
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  コンボ ボックスがオーナー描画スタイルを持つ場合のフォント コンボ ボックス内の文字のピクセル単位の高さを指定します。  
   
 ```  
@@ -176,7 +171,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>コメント  
  場合、`m_nFontHeight`変数が 0 の場合に応じて既定のフォント コンボ ボックスの高さが自動的に計算されます。 高さには、ベースラインより上の文字の上昇とベースラインの下にある文字のディセントの両方が含まれています。  
   
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
  フォントの名前と文字に従ってフォント コンボ ボックスのフォント設定を選択しますが、パラメーターで指定されます。  
   
 ```  
@@ -202,7 +197,7 @@ BOOL SetFont(
 ### <a name="remarks"></a>コメント  
  場合`bExact`は`TRUE`、このメソッドは、として指定した名前と一致するフォントを選択`lpszName`です。 場合`bExact`は`FALSE`、このメソッドの選択として指定されたテキストで始まるフォント`lpszName`として指定した文字セットを使用して`nCharSet`です。 場合`nCharSet`設定されている DEFAULT_CHARSET に、文字セットはされ、無視されたのみ`lpszName`フォントを選択するために使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)   

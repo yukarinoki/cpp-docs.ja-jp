@@ -1,30 +1,25 @@
 ---
-title: "プロバイダーへのインターフェイスの追加 |Microsoft ドキュメント"
-ms.custom: 
+title: プロバイダーへのインターフェイスの追加 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>プロバイダーへのインターフェイスの追加
 (通常のデータ ソース、行セット、コマンド、またはセッション オブジェクトに OLE DB プロバイダー ウィザードによって作成された) インターフェイスを追加するオブジェクトを決定します。 オブジェクトのインターフェイスを追加する必要がありますが、プロバイダーは現在サポートしていない 1 つである可能性がします。 その場合は、ATL OLE DB プロバイダー ウィザード、オブジェクトを作成するを実行します。 クラス ビュー でプロジェクトを右クリックし、をクリックして**クラスの追加**から、**追加** メニューをクリックして**ATL OLE DB プロバイダー**です。 別のディレクトリにインターフェイスのコードを配置し、プロバイダー プロジェクトにファイルをコピーする可能性があります。  
@@ -38,7 +33,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- インターフェイスを追加**COM_MAP** COM_INTERFACE_ENTRY マクロを使用してオブジェクトにします。 マップがない場合は、1 つを作成します。 例:  
+ インターフェイスを追加**COM_MAP** COM_INTERFACE_ENTRY マクロを使用してオブジェクトにします。 マップがない場合は、1 つを作成します。 例えば:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -55,5 +50,5 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)

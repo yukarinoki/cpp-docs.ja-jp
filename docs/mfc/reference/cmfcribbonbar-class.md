@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonBar クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMFCRibbonBar クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonBar
@@ -197,17 +194,15 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ea33fbd2f9517734c2dcb15fd434e8ddcc36b41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar クラス
 `CMFCRibbonBar` クラスは、Office 2007 で使用されているものに似たリボン バーを実装します。  
@@ -346,10 +341,10 @@ class CMFCRibbonBar : public CPane
   
  [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー :** afxribbonbar.h  
   
-##  <a name="activatecontextcategory"></a>CMFCRibbonBar::ActivateContextCategory  
+##  <a name="activatecontextcategory"></a>  CMFCRibbonBar::ActivateContextCategory  
  既に表示されているコンテキスト カテゴリをアクティブにします。  
   
 ```  
@@ -361,9 +356,9 @@ BOOL ActivateContextCategory(UINT uiContextID);
  コンテキスト カテゴリ id です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合にコンテキスト カテゴリ`uiContextID`とアクティブ化された以外のそれ以外の場合は、`FALSE`です。  
+ `TRUE` 場合にコンテキスト カテゴリ`uiContextID`とアクティブ化された以外のそれ以外の場合は、`FALSE`です。  
   
-##  <a name="addcategory"></a>CMFCRibbonBar::AddCategory  
+##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  作成し、リボン バーに新しいリボン カテゴリを初期化します。  
   
 ```  
@@ -412,7 +407,7 @@ CMFCRibbonCategory* AddCategory(
   
  [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]  
   
-##  <a name="addcontextcategory"></a>Cmfcribbonbar::addcontextcategory  
+##  <a name="addcontextcategory"></a>  Cmfcribbonbar::addcontextcategory  
  作成し、リボン バーの新しいコンテキスト カテゴリを初期化します。  
   
 ```  
@@ -482,7 +477,7 @@ CMFCRibbonCategory* AddContextCategory(
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="addmaincategory"></a>CMFCRibbonBar::AddMainCategory  
+##  <a name="addmaincategory"></a>  CMFCRibbonBar::AddMainCategory  
  リボン バーの新しいメイン リボン カテゴリを作成します。  
   
 ```  
@@ -523,7 +518,7 @@ CMFCRibbonMainPanel* AddMainCategory(
   
  [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]  
   
-##  <a name="addprintpreviewcategory"></a>CMFCRibbonBar::AddPrintPreviewCategory  
+##  <a name="addprintpreviewcategory"></a>  CMFCRibbonBar::AddPrintPreviewCategory  
  リボン バーを印刷プレビューのカテゴリを作成します。  
   
 ```  
@@ -536,7 +531,7 @@ CMFCRibbonCategory* AddPrintPreviewCategory();
 ### <a name="remarks"></a>コメント  
  このメソッドは、リボンのカテゴリと印刷プレビューを提供するために必要なコントロールを作成します。  
   
-##  <a name="addqatonlycategory"></a>CMFCRibbonBar::AddQATOnlyCategory  
+##  <a name="addqatonlycategory"></a>  CMFCRibbonBar::AddQATOnlyCategory  
  クイック アクセス ツールバー リボン カテゴリを作成します。  
   
 ```  
@@ -563,7 +558,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ### <a name="remarks"></a>コメント  
  クイック アクセス ツールバー リボン カテゴリは、クイック アクセス ツールバーのカスタマイズ ダイアログ ボックスでのみ使用されます。  
   
-##  <a name="addtotabs"></a>CMFCRibbonBar::AddToTabs  
+##  <a name="addtotabs"></a>  CMFCRibbonBar::AddToTabs  
  リボン バーのタブ行に指定されたリボン要素を追加します。  
   
 ```  
@@ -577,7 +572,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ### <a name="remarks"></a>コメント  
  リボン要素は、システム ボタンの前に置かれます。  
   
-##  <a name="cmfcribbonbar"></a>CMFCRibbonBar::CMFCRibbonBar  
+##  <a name="cmfcribbonbar"></a>  CMFCRibbonBar::CMFCRibbonBar  
  構築して初期化、 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)オブジェクト。  
   
 ```  
@@ -586,11 +581,11 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bReplaceFrameCaption`  
- `TRUE`メイン フレーム ウィンドウのキャプションを置換するリボン バーの`FALSE`をメイン フレーム ウィンドウのキャプションの下にあるリボン バーを検索します。  
+ `TRUE` メイン フレーム ウィンドウのキャプションを置換するリボン バーの`FALSE`をメイン フレーム ウィンドウのキャプションの下にあるリボン バーを検索します。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="create"></a>CMFCRibbonBar::Create  
+##  <a name="create"></a>  CMFCRibbonBar::Create  
  リボン バーのウィンドウを作成します。  
   
 ```  
@@ -611,7 +606,7 @@ BOOL Create(
  新しいウィンドウの ID です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ウィンドウが作成された場合それ以外の場合`FALSE`です。  
+ `TRUE` ウィンドウが作成された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
@@ -620,7 +615,7 @@ BOOL Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]  
   
-##  <a name="createex"></a>CMFCRibbonBar::CreateEx  
+##  <a name="createex"></a>  CMFCRibbonBar::CreateEx  
  リボン バーのウィンドウを作成します。  
   
 ```  
@@ -645,11 +640,11 @@ BOOL CreateEx(
  新しいウィンドウの ID です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ウィンドウが作成された場合それ以外の場合`FALSE`です。  
+ `TRUE` ウィンドウが作成された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::DeactivateKeyboardFocus  
+##  <a name="deactivatekeyboardfocus"></a>  CMFCRibbonBar::DeactivateKeyboardFocus  
  リボン バー上のすべてのキー ヒント コントロールを閉じます。  
   
 ```  
@@ -658,11 +653,11 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bSetFocus`  
- `TRUE`リボン バーの親ウィンドウにフォーカスを設定します。  
+ `TRUE` リボン バーの親ウィンドウにフォーカスを設定します。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="drawmenuimage"></a>CMFCRibbonBar::DrawMenuImage  
+##  <a name="drawmenuimage"></a>  CMFCRibbonBar::DrawMenuImage  
  メニュー ボタンのイメージを描画します。  
   
 ```  
@@ -683,11 +678,11 @@ BOOL DrawMenuImage(
  メニュー ボタンを表示する四角形。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`イメージが描画された場合それ以外の場合`FALSE`です。  
+ `TRUE` イメージが描画された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="dwmcompositionchanged"></a>CMFCRibbonBar::DWMCompositionChanged  
+##  <a name="dwmcompositionchanged"></a>  CMFCRibbonBar::DWMCompositionChanged  
  デスクトップ ウィンドウ マネージャー (DWM) コンポジションを有効または無効になっているときは、リボン バーの表示を調整します。  
   
 ```  
@@ -696,7 +691,7 @@ virtual void DWMCompositionChanged();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="enablekeytips"></a>CMFCRibbonBar::EnableKeyTips  
+##  <a name="enablekeytips"></a>  CMFCRibbonBar::EnableKeyTips  
  有効またはリボン バーの keytip 機能を無効にします。  
   
 ```  
@@ -705,12 +700,12 @@ void EnableKeyTips(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`キー ヒント機能を有効にするには`FALSE`キー ヒント機能を無効にします。  
+ `TRUE` キー ヒント機能を有効にするには`FALSE`キー ヒント機能を無効にします。  
   
 ### <a name="remarks"></a>コメント  
  この機能を有効にすると、ユーザーは、alt キーか F10 ボタンを押したときにキー ヒントが表示されます。 ユーザーは、ALT キーを押すと、キー ヒントが 200 ミリ秒の遅延で表示されます。 この遅延にショートカットを押したときは、ALT キーを含むその他の組み合わせに干渉しないように実行できます。  
   
-##  <a name="enableprintpreview"></a>CMFCRibbonBar::EnablePrintPreview  
+##  <a name="enableprintpreview"></a>  CMFCRibbonBar::EnablePrintPreview  
  有効または無効にします**印刷プレビュー**機能します。  
   
 ```  
@@ -719,14 +714,14 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`有効にする、**印刷プレビュー**機能です。`FALSE`を無効にする、**印刷プレビュー**機能します。  
+ `TRUE` 有効にする、**印刷プレビュー**機能です。`FALSE`を無効にする、**印刷プレビュー**機能します。  
   
 ### <a name="remarks"></a>コメント  
  場合`bEnable`は`FALSE`印刷プレビューのカテゴリが存在して、削除されます。  
   
  既定では、**印刷プレビュー**機能を有効にします。  
   
-##  <a name="enabletooltips"></a>CMFCRibbonBar::EnableToolTips  
+##  <a name="enabletooltips"></a>  CMFCRibbonBar::EnableToolTips  
  有効またはツールヒントと省略可能なツールヒント リボン バーの説明を無効にします。  
   
 ```  
@@ -737,15 +732,15 @@ void EnableToolTips(
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bEnable`  
- `TRUE`リボン バーのツールヒントを有効にするには`FALSE`リボン バーのツールヒントを無効にします。  
+ `TRUE` リボン バーのツールヒントを有効にするには`FALSE`リボン バーのツールヒントを無効にします。  
   
  [入力] `bEnableDescr`  
- `TRUE`ツールヒント; ツールヒントの説明を有効にするには`FALSE`ツールヒント ツールヒントの説明を無効にします。  
+ `TRUE` ツールヒント; ツールヒントの説明を有効にするには`FALSE`ツールヒント ツールヒントの説明を無効にします。  
   
 ### <a name="remarks"></a>コメント  
  `bEnable`パラメーターは、リボン要素上でマウスを置くとツールヒントが表示されるかどうかを決定します。 `bEnableDescr`パラメーターは、ツールヒントのテキストの説明テキストを追加が表示されるかどうかを決定します。  
   
-##  <a name="findbydata"></a>CMFCRibbonBar::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  指定されたデータと可視性がある場合は、リボン要素へのポインターを取得します。  
   
 ```  
@@ -759,7 +754,7 @@ CMFCRibbonBaseElement* FindByData(
  リボン要素に関連付けられたデータ。  
   
  [入力] `bVisibleOnly`  
- `TRUE`表示されるリボン要素のみを検索するには`FALSE`のすべてのリボン要素を検索します。  
+ `TRUE` 表示されるリボン要素のみを検索するには`FALSE`のすべてのリボン要素を検索します。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたデータと表示状態がある場合は、リボン要素へのポインターそれ以外の場合`NULL`です。  
@@ -767,7 +762,7 @@ CMFCRibbonBaseElement* FindByData(
 ### <a name="remarks"></a>コメント  
  リボン要素は、リボンのボタンやリボン カテゴリ、またはリボン スライダーなど、リボンに追加できるコントロールです。  
   
-##  <a name="findbyid"></a>CMFCRibbonBar::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonBar::FindByID  
  指定されたコマンドの ID と検索の値を持つリボン要素へのポインターを取得します。  
   
 ```  
@@ -782,10 +777,10 @@ CMFCRibbonBaseElement* FindByID(
  リボン要素のコマンド ID。  
   
  [入力] `bVisibleOnly`  
- `TRUE`表示されるリボン要素のみを検索するには`FALSE`のすべてのリボン要素を検索します。  
+ `TRUE` 表示されるリボン要素のみを検索するには`FALSE`のすべてのリボン要素を検索します。  
   
  [入力] `bExcludeQAT`  
- `TRUE`クイック アクセス ツールバーの要素を検索から除外するにはそれ以外の場合、`FALSE`です。  
+ `TRUE` クイック アクセス ツールバーの要素を検索から除外するにはそれ以外の場合、`FALSE`です。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたコマンド ID と検索値がある場合は、リボン要素へのポインターそれ以外の場合、`NULL`です。  
@@ -795,7 +790,7 @@ CMFCRibbonBaseElement* FindByID(
   
  一般があります、同じコマンド ID を持つ 2 つ以上のリボン要素 指定されたコマンド ID を使用して、使用するすべてのリボン要素へのポインターを取得する場合、 [CMFCRibbonBar::GetElementsByID](#getelementsbyid)メソッドです。  
   
-##  <a name="findcategoryindexbydata"></a>CMFCRibbonBar::FindCategoryIndexByData  
+##  <a name="findcategoryindexbydata"></a>  CMFCRibbonBar::FindCategoryIndexByData  
  指定されたデータを含むリボン カテゴリのインデックスを取得します。  
   
 ```  
@@ -809,7 +804,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は、リボン カテゴリの 0 から始まるインデックスそれ以外の場合は-1。  
   
-##  <a name="forcerecalclayout"></a>CMFCRibbonBar::ForceRecalcLayout  
+##  <a name="forcerecalclayout"></a>  CMFCRibbonBar::ForceRecalcLayout  
  リボン バー、親ウィンドウ、および再描画ですべての項目のレイアウトを調整ウィンドウ全体です。  
   
 ```  
@@ -818,7 +813,7 @@ void ForceRecalcLayout();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getactivecategory"></a>CMFCRibbonBar::GetActiveCategory  
+##  <a name="getactivecategory"></a>  CMFCRibbonBar::GetActiveCategory  
  アクティブなリボン カテゴリへのポインターを取得します。  
   
 ```  
@@ -833,7 +828,7 @@ CMFCRibbonCategory* GetActiveCategory() const;
   
  アプリケーション ボタンを押すし、アクティブなカテゴリをすることはできませんのメイン カテゴリが表示されます。  
   
-##  <a name="getapplicationbutton"></a>CMFCRibbonBar::GetApplicationButton  
+##  <a name="getapplicationbutton"></a>  CMFCRibbonBar::GetApplicationButton  
  アプリケーション ボタンへのポインターを取得します。  
   
 ```  
@@ -843,7 +838,7 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 ### <a name="return-value"></a>戻り値  
  アプリケーション ボタン; へのポインターまたは`NULL`ボタンが設定されていない場合。  
   
-##  <a name="getcaptionheight"></a>CMFCRibbonBar::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CMFCRibbonBar::GetCaptionHeight  
  リボン バーのキャプション領域の高さを取得します。  
   
 ```  
@@ -855,7 +850,7 @@ int GetCaptionHeight() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getcategory"></a>CMFCRibbonBar::GetCategory  
+##  <a name="getcategory"></a>  CMFCRibbonBar::GetCategory  
  指定したインデックスにあるリボン カテゴリへのポインターを取得します。  
   
 ```  
@@ -869,7 +864,7 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ### <a name="return-value"></a>戻り値  
  指定したインデックスにあるリボン カテゴリへのポインターそれ以外の場合、`NULL`場合`nIndex`が範囲外です。  
   
-##  <a name="getcategorycount"></a>CMFCRibbonBar::GetCategoryCount  
+##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  リボン バーのリボン カテゴリの数を取得します。  
   
 ```  
@@ -879,7 +874,7 @@ int GetCategoryCount() const;
 ### <a name="return-value"></a>戻り値  
  リボン バーのリボン カテゴリの数。  
   
-##  <a name="getcategoryheight"></a>CMFCRibbonBar::GetCategoryHeight  
+##  <a name="getcategoryheight"></a>  CMFCRibbonBar::GetCategoryHeight  
  カテゴリの高さを取得します。  
   
 ```  
@@ -892,7 +887,7 @@ int GetCategoryHeight() const;
 ### <a name="remarks"></a>コメント  
  カテゴリの高さには、[カテゴリ] タブの高さが含まれています。  
   
-##  <a name="getcategoryindex"></a>CMFCRibbonBar::GetCategoryIndex  
+##  <a name="getcategoryindex"></a>  CMFCRibbonBar::GetCategoryIndex  
  指定されたリボン カテゴリのインデックスを取得します。  
   
 ```  
@@ -906,7 +901,7 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ### <a name="return-value"></a>戻り値  
  指定されたリボン カテゴリの 0 から始まるインデックス`pCategory`; リボン カテゴリが見つからない場合は-1。  
   
-##  <a name="getcontextname"></a>CMFCRibbonBar::GetContextName  
+##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  コンテキスト ID で指定されたコンテキスト カテゴリ キャプションの名前を取得します  
   
 ```  
@@ -923,9 +918,9 @@ BOOL GetContextName(
  コンテキスト カテゴリ キャプションの名前。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`メソッドが成功した場合それ以外の場合、`FALSE`場合`uiContextID`は 0 でしたまたはコンテキスト カテゴリ キャプションが見つかりませんでした。  
+ `TRUE` メソッドが成功した場合それ以外の場合、`FALSE`場合`uiContextID`は 0 でしたまたはコンテキスト カテゴリ キャプションが見つかりませんでした。  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBar::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  現在ドロップダウンしてリボン要素を取得します。  
   
 ```  
@@ -937,7 +932,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBar::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBar::GetElementsByID  
  特定のコマンド ID を持つすべてのリボン要素へのポインターの配列を取得します  
   
 ```  
@@ -956,7 +951,7 @@ void GetElementsByID(
 ### <a name="remarks"></a>コメント  
  クイック アクセス ツールバーにいくつかのリボン要素をコピーすることができますので、複数のリボン要素は、同じコマンド ID を持つことができます。  
   
-##  <a name="gethideflags"></a>CMFCRibbonBar::GetHideFlags  
+##  <a name="gethideflags"></a>  CMFCRibbonBar::GetHideFlags  
  リボン バーの量が表示されるかを示すフラグを取得します。  
   
 ```  
@@ -975,7 +970,7 @@ DWORD GetHideFlags() const;
  `AFX_RIBBONBAR_HIDE_ALL`  
  リボン バーの幅は、幅の最小値よりも小さいしが完全に非表示。  
   
-##  <a name="getitemidslist"></a>CMFCRibbonBar::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonBar::GetItemIDsList  
  指定されたリボン バーにあるリボン要素のコレクションのコマンド Id を取得します。  
   
 ```  
@@ -988,11 +983,11 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
  リボン バーに含まれているリボン要素のコマンド Id の一覧。  
   
  [入力] `bHiddenOnly`  
- `TRUE`表示されているリボン要素を除外するには`FALSE`リボン バーにすべてのリボン要素を含める。  
+ `TRUE` 表示されているリボン要素を除外するには`FALSE`リボン バーにすべてのリボン要素を含める。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar::GetKeyboardNavigationLevel  
+##  <a name="getkeyboardnavigationlevel"></a>  CMFCRibbonBar::GetKeyboardNavigationLevel  
  リボン バーに含まれる keytip を押すと、現在のナビゲーション レベルを取得します。  
   
 ```  
@@ -1013,7 +1008,7 @@ int GetKeyboardNavigationLevel() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar::GetKeyboardNavLevelCurrent  
+##  <a name="getkeyboardnavlevelcurrent"></a>  CMFCRibbonBar::GetKeyboardNavLevelCurrent  
  リボン バーの現在のキーボード ナビゲーションのオブジェクトを取得します。  
   
 ```  
@@ -1026,7 +1021,7 @@ CObject* GetKeyboardNavLevelCurrent() const;
 ### <a name="remarks"></a>コメント  
  Keytip が現在表示されているオブジェクトは、現在のキーボード ナビゲーション オブジェクトです。  
   
-##  <a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar::GetKeyboardNavLevelParent  
+##  <a name="getkeyboardnavlevelparent"></a>  CMFCRibbonBar::GetKeyboardNavLevelParent  
  リボン バー上の親のキーボード ナビゲーション オブジェクトを取得します。  
   
 ```  
@@ -1039,7 +1034,7 @@ CObject* GetKeyboardNavLevelParent() const;
 ### <a name="remarks"></a>コメント  
  ユーザーは、リボン バー keytip を押すと、現在のキーボード ナビゲーション オブジェクトは親のキーボード ナビゲーションのオブジェクトになります。  
   
-##  <a name="getmaincategory"></a>CMFCRibbonBar::GetMainCategory  
+##  <a name="getmaincategory"></a>  CMFCRibbonBar::GetMainCategory  
  メイン リボン カテゴリへのポインターを取得します。  
   
 ```  
@@ -1052,7 +1047,7 @@ CMFCRibbonCategory* GetMainCategory() const;
 ### <a name="remarks"></a>コメント  
  メイン リボン カテゴリには、メイン リボン パネルが含まれています。  
   
-##  <a name="getqatcommandslocation"></a>CMFCRibbonBar::GetQATCommandsLocation  
+##  <a name="getqatcommandslocation"></a>  CMFCRibbonBar::GetQATCommandsLocation  
  クイック アクセス ツールバーのコマンド セクションを表示する四角形を取得します。  
   
 ```  
@@ -1065,7 +1060,7 @@ CRect GetQATCommandsLocation() const;
 ### <a name="remarks"></a>コメント  
  表示する四角形のコマンド セクションでは、[カスタマイズ] ボタンは含まれません。  
   
-##  <a name="getqatdroppeddown"></a>CMFCRibbonBar::GetQATDroppedDown  
+##  <a name="getqatdroppeddown"></a>  CMFCRibbonBar::GetQATDroppedDown  
  ドロップダウン メニューがポップアップされているクイック アクセス ツールバー上のリボン要素へのポインターを取得します。  
   
 ```  
@@ -1077,7 +1072,7 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="getquickaccesscommands"></a>CMFCRibbonBar::GetQuickAccessCommands  
+##  <a name="getquickaccesscommands"></a>  CMFCRibbonBar::GetQuickAccessCommands  
  クイック アクセス ツールバーにあるリボン要素のコマンド Id の一覧を取得します。  
   
 ```  
@@ -1091,7 +1086,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ### <a name="remarks"></a>コメント  
  一覧には、コントロールの区切り記号のリボン要素がありません。  
   
-##  <a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar::GetQuickAccessToolbarLocation  
+##  <a name="getquickaccesstoolbarlocation"></a>  CMFCRibbonBar::GetQuickAccessToolbarLocation  
  クイック アクセス ツールバーを表示する四角形を取得します。  
   
 ```  
@@ -1103,7 +1098,7 @@ CRect GetQuickAccessToolbarLocation() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="gettabtrancateratio"></a>CMFCRibbonBar::GetTabTrancateRatio  
+##  <a name="gettabtrancateratio"></a>  CMFCRibbonBar::GetTabTrancateRatio  
  カテゴリ タブの表示幅の割合のサイズの縮小を取得します。  
   
 ```  
@@ -1116,7 +1111,7 @@ int GetTabTrancateRatio() const;
 ### <a name="remarks"></a>コメント  
  リボン バーに十分な幅がない場合、カテゴリ タブが幅の削減されます。  
   
-##  <a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
+##  <a name="gettooltipfixedwidthlargeimage"></a>  CMFCRibbonBar::GetTooltipFixedWidthLargeImage  
  リボン バーのツールヒントの幅のサイズを取得します。  
   
 ```  
@@ -1129,7 +1124,7 @@ int GetTooltipFixedWidthLargeImage() const;
 ### <a name="remarks"></a>コメント  
  ツールヒントの幅のサイズが 0 の場合、幅が異なります。  
   
-##  <a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar::GetTooltipFixedWidthRegular  
+##  <a name="gettooltipfixedwidthregular"></a>  CMFCRibbonBar::GetTooltipFixedWidthRegular  
  リボン バーのツールヒントの幅の標準サイズを取得します。  
   
 ```  
@@ -1142,7 +1137,7 @@ int GetTooltipFixedWidthRegular() const;
 ### <a name="remarks"></a>コメント  
  ツールヒントの幅の標準サイズが 0 の場合、幅が異なります。  
   
-##  <a name="getvisiblecategorycount"></a>CMFCRibbonBar::GetVisibleCategoryCount  
+##  <a name="getvisiblecategorycount"></a>  CMFCRibbonBar::GetVisibleCategoryCount  
  リボン バーに表示されているカテゴリの数を取得します。  
   
 ```  
@@ -1154,7 +1149,7 @@ int GetVisibleCategoryCount() const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="hideallcontextcategories"></a>CMFCRibbonBar::HideAllContextCategories  
+##  <a name="hideallcontextcategories"></a>  CMFCRibbonBar::HideAllContextCategories  
  リボン バー上のすべてのコンテキスト カテゴリを非表示にします。  
   
 ```  
@@ -1162,12 +1157,12 @@ BOOL HideAllContextCategories();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`少なくとも 1 つのコンテキスト項目が非表示の場合それ以外の場合、`FALSE`です。  
+ `TRUE` 少なくとも 1 つのコンテキスト項目が非表示の場合それ以外の場合、`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  コンテキスト カテゴリがアクティブである場合は、アクティブなカテゴリがカテゴリの一覧に表示される最初のカテゴリにリセットされます。  
   
-##  <a name="hidekeytips"></a>CMFCRibbonBar::HideKeyTips  
+##  <a name="hidekeytips"></a>  CMFCRibbonBar::HideKeyTips  
  リボン バー上のすべてのキー ヒントを非表示にします。  
   
 ```  
@@ -1176,7 +1171,7 @@ void HideKeyTips();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="hittest"></a>CMFCRibbonBar::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonBar::HitTest  
  ポイントの場所で指定されたリボン要素へのポインターを取得します。  
   
 ```  
@@ -1191,10 +1186,10 @@ virtual CMFCRibbonBaseElement* HitTest(
  リボン バー内のポイントの場所を調整します。  
   
  [入力] `bCheckActiveCategory`  
- `TRUE`アクティブなカテゴリを検索するには`FALSE`がアクティブなカテゴリを検索します。  
+ `TRUE` アクティブなカテゴリを検索するには`FALSE`がアクティブなカテゴリを検索します。  
   
  [入力] `bCheckPanelCaption`  
- `TRUE`含まれている; ポイントを使用して、リボン パネルのキャプションをテストするには`FALSE`に含まれているポイントと、リボン パネルのキャプションをテストします。 詳細については、次の「解説」を参照してください。  
+ `TRUE` 含まれている; ポイントを使用して、リボン パネルのキャプションをテストするには`FALSE`に含まれているポイントと、リボン パネルのキャプションをテストします。 詳細については、次の「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  指定した位置にあるリボン要素へのポインターそれ以外の場合`NULL`リボン要素に、ポイントがない場合。  
@@ -1202,7 +1197,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 ### <a name="remarks"></a>コメント  
  しない限り、リボン パネルに含まれているポイントとのキャプションがテストされていない、`bCheckActiveCategory`パラメーターは`TRUE`します。  
   
-##  <a name="iskeytipenabled"></a>CMFCRibbonBar::IsKeyTipEnabled  
+##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  Keytip 機能が有効になっているかどうかを示します。  
   
 ```  
@@ -1210,9 +1205,9 @@ BOOL IsKeyTipEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`keytip 機能が有効である場合それ以外の場合`FALSE`です。  
+ `TRUE` keytip 機能が有効である場合それ以外の場合`FALSE`です。  
   
-##  <a name="ismainribbonbar"></a>CMFCRibbonBar::IsMainRibbonBar  
+##  <a name="ismainribbonbar"></a>  CMFCRibbonBar::IsMainRibbonBar  
  リボン バーがプライマリ リボン バーであるかどうかを示します。  
   
 ```  
@@ -1225,7 +1220,7 @@ virtual BOOL IsMainRibbonBar() const;
 ### <a name="remarks"></a>コメント  
  既定ではこのメソッドは常`TRUE`です。 リボン バーがプライマリ リボン バーであるかどうかを示すためにこのメソッドをオーバーライドします。  
   
-##  <a name="isprintpreviewenabled"></a>CMFCRibbonBar::IsPrintPreviewEnabled  
+##  <a name="isprintpreviewenabled"></a>  CMFCRibbonBar::IsPrintPreviewEnabled  
  示すかどうか、**印刷プレビュー**機能を有効にします。  
   
 ```  
@@ -1233,9 +1228,9 @@ BOOL IsPrintPreviewEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合、**印刷プレビュー**機能は、それ以外の有効な`FALSE`します。  
+ `TRUE` 場合、**印刷プレビュー**機能は、それ以外の有効な`FALSE`します。  
   
-##  <a name="isqatempty"></a>CMFCRibbonBar::IsQATEmpty  
+##  <a name="isqatempty"></a>  CMFCRibbonBar::IsQATEmpty  
  クイック アクセス ツールバーにコマンド ボタンが含まれるかどうかを示します。  
   
 ```  
@@ -1243,11 +1238,11 @@ BOOL IsQATEmpty() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`クイック アクセス ツールバーには、コマンド ボタンが含まれている場合それ以外の場合`FALSE`です。  
+ `TRUE` クイック アクセス ツールバーには、コマンド ボタンが含まれている場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="isquickaccesstoolbarontop"></a>CMFCRibbonBar::IsQuickAccessToolbarOnTop  
+##  <a name="isquickaccesstoolbarontop"></a>  CMFCRibbonBar::IsQuickAccessToolbarOnTop  
  クイック アクセス ツールバーが経由で、またはリボン バーの下にあるかどうかを示します。  
   
 ```  
@@ -1255,9 +1250,9 @@ BOOL IsQuickAccessToolbarOnTop() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`クイック アクセス ツールバーがリボン バーの上にある場合`FALSE`クイック アクセス ツールバーがリボン バーの下にある場合。  
+ `TRUE` クイック アクセス ツールバーがリボン バーの上にある場合`FALSE`クイック アクセス ツールバーがリボン バーの下にある場合。  
   
-##  <a name="isreplaceframecaption"></a>CMFCRibbonBar::IsReplaceFrameCaption  
+##  <a name="isreplaceframecaption"></a>  CMFCRibbonBar::IsReplaceFrameCaption  
  リボン バーが置き換えるか、メイン フレーム ウィンドウのキャプションがあるかどうかを示します。  
   
 ```  
@@ -1265,9 +1260,9 @@ BOOL IsReplaceFrameCaption() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`リボン バーは、メイン フレーム ウィンドウのキャプションを置き換える場合`FALSE`リボン バーがメイン フレーム ウィンドウのキャプションの下にある場合。  
+ `TRUE` リボン バーは、メイン フレーム ウィンドウのキャプションを置き換える場合`FALSE`リボン バーがメイン フレーム ウィンドウのキャプションの下にある場合。  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBar::IsShowGroupBorder  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBar::IsShowGroupBorder  
  リボン バー上にあるボタンのグループがグループの境界線を表示するかどうかを示します。  
   
 ```  
@@ -1284,7 +1279,7 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 ### <a name="remarks"></a>コメント  
  既定ではこのメソッドは常`FALSE`です。 リボン バー上にあるボタンのグループがグループの境界線を表示するかどうかを示すためにこのメソッドをオーバーライドします。  
   
-##  <a name="istooltipdescrenabled"></a>CMFCRibbonBar::IsToolTipDescrEnabled  
+##  <a name="istooltipdescrenabled"></a>  CMFCRibbonBar::IsToolTipDescrEnabled  
  ツールヒントの説明が有効になっているかどうかを示します。  
   
 ```  
@@ -1292,12 +1287,12 @@ BOOL IsToolTipDescrEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ツールヒントの説明が有効な場合`FALSE`ツールヒントの説明が無効になっている場合。  
+ `TRUE` ツールヒントの説明が有効な場合`FALSE`ツールヒントの説明が無効になっている場合。  
   
 ### <a name="remarks"></a>コメント  
  ツールヒントの説明は、ツールヒントのテキストで表示される説明テキストを追加します。  
   
-##  <a name="istooltipenabled"></a>CMFCRibbonBar::IsToolTipEnabled  
+##  <a name="istooltipenabled"></a>  CMFCRibbonBar::IsToolTipEnabled  
  ツールヒントが有効になっているか、リボン バーを無効になっているかどうかを示します。  
   
 ```  
@@ -1305,9 +1300,9 @@ BOOL IsToolTipEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`ツールヒントが有効な場合`FALSE`ツールヒントが無効になっている場合。  
+ `TRUE` ツールヒントが有効な場合`FALSE`ツールヒントが無効になっている場合。  
   
-##  <a name="istransparentcaption"></a>CMFCRibbonBar::IsTransparentCaption  
+##  <a name="istransparentcaption"></a>  CMFCRibbonBar::IsTransparentCaption  
  Windows Aero 画面の配色の表示を設定するかどうかを示します。  
   
 ```  
@@ -1315,11 +1310,11 @@ BOOL IsTransparentCaption() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`画面の配色が Windows Aero 以外の場合それ以外の場合`FALSE`です。  
+ `TRUE` 画面の配色が Windows Aero 以外の場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onclickbutton"></a>CMFCRibbonBar::OnClickButton  
+##  <a name="onclickbutton"></a>  CMFCRibbonBar::OnClickButton  
  このメソッドは、既存のアプリケーションとの下位互換性を保持し、新規の開発は使用できません。  
   
 ```  
@@ -1337,7 +1332,7 @@ virtual void OnClickButton(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextMenu  
+##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu  
 
   
 ```  
@@ -1352,7 +1347,7 @@ virtual void OnEditContextMenu(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBar::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBar::OnRTLChanged  
  レイアウトの方向を変更するときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1361,12 +1356,12 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bIsRTL`  
- `TRUE`レイアウトが右から左の場合`FALSE`レイアウトが左から右への場合。  
+ `TRUE` レイアウトが右から左の場合`FALSE`レイアウトが左から右への場合。  
   
 ### <a name="remarks"></a>コメント  
  このメソッドは、新しいレイアウトの方向のリボン バー上のすべてのコントロールのレイアウトを調整します。  
   
-##  <a name="onsetaccdata"></a>CMFCRibbonBar::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCRibbonBar::OnSetAccData  
  このメソッドは、フレームワーク内部で使用され、ユーザー コードから呼び出すようには設計されていません。  
   
 ```  
@@ -1374,7 +1369,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- 長い`lVal`  
+ 長い `lVal`  
  ユーザー補助オブジェクトのインデックス。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1382,7 +1377,7 @@ BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnShowRibbonContextMenu  
+##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu  
 
   
 ```  
@@ -1403,7 +1398,7 @@ virtual BOOL OnShowRibbonContextMenu(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onshowribbonqatmenu"></a>CMFCRibbonBar::OnShowRibbonQATMenu  
+##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu  
 
   
 ```  
@@ -1424,7 +1419,7 @@ virtual BOOL OnShowRibbonQATMenu(
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onsyskeydown"></a>CMFCRibbonBar::OnSysKeyDown  
+##  <a name="onsyskeydown"></a>  CMFCRibbonBar::OnSysKeyDown  
  ユーザーは、F10 キーを押すし、または ALT キーを押したまま、別のキーを押して、フレームワークによって呼び出されます。  
   
 ```  
@@ -1445,11 +1440,11 @@ BOOL OnSysKeyDown(
  キーが押されたときに、キーボードの状態フラグ。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`キーストローク イベントが処理された場合それ以外の場合`FALSE`です。  
+ `TRUE` キーストローク イベントが処理された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="onsyskeyup"></a>CMFCRibbonBar::OnSysKeyUp  
+##  <a name="onsyskeyup"></a>  CMFCRibbonBar::OnSysKeyUp  
  F10 キー、ALT キー、または ALT キーが押し続けたときに押されたキーを離したときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -1470,11 +1465,11 @@ BOOL OnSysKeyUp(
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`キーストローク イベントが処理された場合それ以外の場合`FALSE`です。  
+ `TRUE` キーストローク イベントが処理された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="poptooltip"></a>CMFCRibbonBar::PopTooltip  
+##  <a name="poptooltip"></a>  CMFCRibbonBar::PopTooltip  
  ツールヒントをビューから削除します。  
   
 ```  
@@ -1483,7 +1478,7 @@ void PopTooltip();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="pretranslatemessage"></a>CMFCRibbonBar::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCRibbonBar::PreTranslateMessage  
  リボン バーで、指定したメッセージが処理されるかどうかを判断します。  
   
 ```  
@@ -1495,11 +1490,11 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
  メッセージへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`リボン バーによってメッセージが処理された場合それ以外の場合`FALSE`です。  
+ `TRUE` リボン バーによってメッセージが処理された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="recalclayout"></a>CMFCRibbonBar::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonBar::RecalcLayout  
  リボン バー上のすべてのコントロールのレイアウトを調整します。  
   
 ```  
@@ -1509,7 +1504,7 @@ virtual void RecalcLayout();
 ### <a name="remarks"></a>コメント  
  レイアウト調整した後は、リボン バーの表示が更新されます。  
   
-##  <a name="removeallcategories"></a>CMFCRibbonBar::RemoveAllCategories  
+##  <a name="removeallcategories"></a>  CMFCRibbonBar::RemoveAllCategories  
  リボン バーからすべてのリボン カテゴリを削除します。  
   
 ```  
@@ -1519,7 +1514,7 @@ void RemoveAllCategories();
 ### <a name="remarks"></a>コメント  
  このメソッドは、メモリとカテゴリの一覧から、すべてのリボン カテゴリを削除します。  
   
-##  <a name="removeallfromtabs"></a>CMFCRibbonBar::RemoveAllFromTabs  
+##  <a name="removeallfromtabs"></a>  CMFCRibbonBar::RemoveAllFromTabs  
  タブ領域からすべてのリボン要素を削除します。  
   
 ```  
@@ -1529,7 +1524,7 @@ void RemoveAllFromTabs();
 ### <a name="remarks"></a>コメント  
  使用してタブ領域に追加したすべての要素を削除する場合は、この関数を使用して[CMFCRibbonBar::AddToTabs](#addtotabs)メソッドです。  
   
-##  <a name="removecategory"></a>CMFCRibbonBar::RemoveCategory  
+##  <a name="removecategory"></a>  CMFCRibbonBar::RemoveCategory  
  リボン バーから、指定されたリボン カテゴリを削除します。  
   
 ```  
@@ -1541,12 +1536,12 @@ BOOL RemoveCategory(int nIndex);
  リボン バーに含まれているリボン カテゴリの一覧でカテゴリの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`指定されたリボン カテゴリが削除された場合それ以外の場合`FALSE`です。  
+ `TRUE` 指定されたリボン カテゴリが削除された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  指定されたリボン カテゴリは、メモリとカテゴリの一覧から削除されます。  
   
-##  <a name="setactivecategory"></a>CMFCRibbonBar::SetActiveCategory  
+##  <a name="setactivecategory"></a>  CMFCRibbonBar::SetActiveCategory  
  アクティブなカテゴリとして指定されたリボン カテゴリを設定します。  
   
 ```  
@@ -1560,17 +1555,17 @@ BOOL SetActiveCategory(
  リボン バーに含まれているリボン カテゴリです。  
   
  [入力] `bForceRestore`  
- `TRUE`最小化された; 場合に、リボン バーを最大化するには`FALSE`リボン バーが最小化された場合、ポップアップ ウィンドウにアクティブなカテゴリを表示します。  
+ `TRUE` 最小化された; 場合に、リボン バーを最大化するには`FALSE`リボン バーが最小化された場合、ポップアップ ウィンドウにアクティブなカテゴリを表示します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`指定したカテゴリは、アクティブなカテゴリとして設定されている場合それ以外の場合`FALSE`です。  
+ `TRUE` 指定したカテゴリは、アクティブなカテゴリとして設定されている場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  メイン リボン カテゴリには、アクティブなカテゴリをすることはできません。  
   
  カテゴリを指定して場合`pCategory`は表示されませんが、そのとして設定できません有効なカテゴリ。  
   
-##  <a name="setactivemdichild"></a>CMFCRibbonBar::SetActiveMDIChild  
+##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  指定の MDI 子ウィンドウへのマルチ ドキュメント インターフェイス (MDI) 子ウィンドウに属しているリボン バー上のシステム ボタンを関連付けます。  
   
 ```  
@@ -1583,7 +1578,7 @@ void SetActiveMDIChild(CWnd* pWnd);
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setapplicationbutton"></a>CMFCRibbonBar::SetApplicationButton  
+##  <a name="setapplicationbutton"></a>  CMFCRibbonBar::SetApplicationButton  
  リボン バーにアプリケーション リボン ボタンを割り当てます。  
   
 ```  
@@ -1607,7 +1602,7 @@ void SetApplicationButton(
   
  [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]  
   
-##  <a name="setelementkeys"></a>CMFCRibbonBar::SetElementKeys  
+##  <a name="setelementkeys"></a>  CMFCRibbonBar::SetElementKeys  
  指定されたコマンド ID を持つすべてのリボン要素のキー ヒントを設定します。  
   
 ```  
@@ -1628,12 +1623,12 @@ BOOL SetElementKeys(
  メニューの keytip です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`少なくとも 1 つのリボン要素のキー ヒントが設定されている場合それ以外の場合`FALSE`です。  
+ `TRUE` 少なくとも 1 つのリボン要素のキー ヒントが設定されている場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  ポップアップ メニューを開く、分割ボタンを持つリボン要素は省略可能なメニュー keytip です。  
   
-##  <a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar::SetKeyboardNavigationLevel  
+##  <a name="setkeyboardnavigationlevel"></a>  CMFCRibbonBar::SetKeyboardNavigationLevel  
  セット、キーボード ナビゲーションとレベル、ユーザーは、リボン バーに含まれる keytip を押したとき。  
   
 ```  
@@ -1647,12 +1642,12 @@ void SetKeyboardNavigationLevel(
  現在のキーボード ナビゲーション オブジェクトへのポインター。  
   
  [入力] `bSetFocus`  
- `TRUE`リボン バーにキーボード フォーカスを設定します。  
+ `TRUE` リボン バーにキーボード フォーカスを設定します。  
   
 ### <a name="remarks"></a>コメント  
  リボン バーのキーボード ナビゲーションは、alt キーか F10 キーを押したときに開始します。 ユーザーは、リボン バー keytip を押すことで、[次へ] のナビゲーション レベルを選択します。 ユーザーは、esc キーを押して前のナビゲーション レベルを返すことができます。  
   
-##  <a name="setmaximizemode"></a>CMFCRibbonBar::SetMaximizeMode  
+##  <a name="setmaximizemode"></a>  CMFCRibbonBar::SetMaximizeMode  
  リボン バーのマルチ ドキュメント インターフェイス (MDI) 子ウィンドウのウィンドウのサイズが入力または最大化された状態を調整します。  
   
 ```  
@@ -1663,7 +1658,7 @@ void SetMaximizeMode(
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bMax`  
- `TRUE`リボン バーを MDI 子ウィンドウのシステム ボタンを表示するには`FALSE` MDI 子ウィンドウのシステム ボタンをリボン バーから削除します。  
+ `TRUE` リボン バーを MDI 子ウィンドウのシステム ボタンを表示するには`FALSE` MDI 子ウィンドウのシステム ボタンをリボン バーから削除します。  
   
  [入力] `pWnd`  
  リボン バーのメイン フレーム ウィンドウへのポインター。  
@@ -1671,7 +1666,7 @@ void SetMaximizeMode(
 ### <a name="remarks"></a>コメント  
  リボン バーは、MDI 子ウィンドウを最大化されたとき、タブ行に MDI 子ウィンドウのシステム ボタンを表示します。  
   
-##  <a name="setquickaccesscommands"></a>CMFCRibbonBar::SetQuickAccessCommands  
+##  <a name="setquickaccesscommands"></a>  CMFCRibbonBar::SetQuickAccessCommands  
  クイック アクセス ツール バーに 1 つ以上のリボン要素を追加します。  
   
 ```  
@@ -1685,14 +1680,14 @@ void SetQuickAccessCommands(
  クイック アクセス ツールバーに表示するコマンドの一覧。  
   
  [入力] `bRecalcLayout`  
- `TRUE`場合、リボン要素を追加した後、リボンを再描画します。`FALSE`それ以外の場合。  
+ `TRUE` 場合、リボン要素を追加した後、リボンを再描画します。`FALSE`それ以外の場合。  
   
 ### <a name="example"></a>例  
  次の例で使用する方法、`SetQuickAccessCommands`メソッドで、`CMFCRibbonBar`クラスです。  
   
  [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]  
   
-##  <a name="setquickaccessdefaultstate"></a>CMFCRibbonBar::SetQuickAccessDefaultState  
+##  <a name="setquickaccessdefaultstate"></a>  CMFCRibbonBar::SetQuickAccessDefaultState  
  クイック アクセス ツールバーを既定の状態に設定します。  
   
 ```  
@@ -1711,7 +1706,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
   
  [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]  
   
-##  <a name="setquickaccesstoolbarontop"></a>CMFCRibbonBar::SetQuickAccessToolbarOnTop  
+##  <a name="setquickaccesstoolbarontop"></a>  CMFCRibbonBar::SetQuickAccessToolbarOnTop  
  リボン バーの上またはクイック アクセス ツールバーを配置します。  
   
 ```  
@@ -1720,9 +1715,9 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
   
 ### <a name="parameters"></a>パラメーター  
  [入力] `bOnTop`  
- `TRUE`リボン バーの上にあるクイック アクセス ツールバーを配置するには`FALSE`クイック アクセス ツールバー リボン バーの下に配置します。  
+ `TRUE` リボン バーの上にあるクイック アクセス ツールバーを配置するには`FALSE`クイック アクセス ツールバー リボン バーの下に配置します。  
   
-##  <a name="settooltipfixedwidth"></a>CMFCRibbonBar::SetTooltipFixedWidth  
+##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
  リボン バーの固定幅ツールヒントの通常および大規模なサイズを設定します。  
   
 ```  
@@ -1741,7 +1736,7 @@ void SetTooltipFixedWidth(
 ### <a name="remarks"></a>コメント  
  パラメーターを 0 に設定すると、対応する幅を変化します。  
   
-##  <a name="showcategory"></a>CMFCRibbonBar::ShowCategory  
+##  <a name="showcategory"></a>  CMFCRibbonBar::ShowCategory  
  指定されたリボン カテゴリを表示または非表示にします。  
   
 ```  
@@ -1757,7 +1752,7 @@ void ShowCategory(
  [入力] `bShow`  
  場合`TRUE`、それ以外の場合、リボン カテゴリを非表示ではリボン カテゴリを表示します。  
   
-##  <a name="showcontextcategories"></a>CMFCRibbonBar::ShowContextCategories  
+##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
  指定された ID を持つコンテキスト カテゴリを表示または非表示にします。  
   
 ```  
@@ -1773,7 +1768,7 @@ void ShowContextCategories(
  [入力] `bShow`  
  場合`TRUE`、指定した ID を持つカテゴリを表示するそれ以外の場合、指定した id を持つカテゴリを非表示。  
   
-##  <a name="showkeytips"></a>CMFCRibbonBar::ShowKeyTips  
+##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
  リボン バーで、リボンの各要素のキー ヒントを示しています。  
   
 ```  
@@ -1782,7 +1777,7 @@ void ShowKeyTips();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="togglemimimizestate"></a>CMFCRibbonBar::ToggleMimimizeState  
+##  <a name="togglemimimizestate"></a>  CMFCRibbonBar::ToggleMimimizeState  
  リボン バーの最小化された状態と最大化された状態を切り替えます。  
   
 ```  
@@ -1794,7 +1789,7 @@ void ToggleMimimizeState();
   
  最小化された状態の場合、リボン コントロールは非表示になり、タブだけが表示されます。 ユーザーがタブをクリックすると、リボン コントロールがポップアップ ウィンドウとして表示されます。 ユーザーがポップアップ ウィンドウの外側をクリックするか、コマンドを実行すると、ポップアップ ウィンドウが閉じます。  
   
-##  <a name="translatechar"></a>CMFCRibbonBar::TranslateChar  
+##  <a name="translatechar"></a>  CMFCRibbonBar::TranslateChar  
  指定したキーを入力文字のコードは、リボン バーによって処理されるかどうかを判断します。  
   
 ```  
@@ -1806,12 +1801,12 @@ virtual BOOL TranslateChar(UINT nChar);
  ユーザー キーを入力文字のコード。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`文字コードがリボン バーによって処理された場合それ以外の場合`FALSE`です。  
+ `TRUE` 文字コードがリボン バーによって処理された場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
  Keytip 機能では、キーボードを使用して、リボン バーを移動することができます。  
   
-##  <a name="getfocused"></a>CMFCRibbonBar::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonBar::GetFocused  
  フォーカスされた要素を返します。  
   
 ```  
@@ -1823,7 +1818,7 @@ virtual CMFCRibbonBaseElement* GetFocused();
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="iswindows7look"></a>CMFCRibbonBar::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonBar::IsWindows7Look  
  リボンが Windows 7 (小さな四角形のアプリケーション ボタン) の形式を持つかどうかを示します。  
   
 ```  
@@ -1831,11 +1826,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`場合は、リボンがある Windows 7 を検索します。それ以外の場合`FALSE`です。  
+ `TRUE` 場合は、リボンがある Windows 7 を検索します。それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="loadfromresource"></a>Cmfcribbonbar::loadfromresource  
+##  <a name="loadfromresource"></a>  Cmfcribbonbar::loadfromresource  
  オーバーロードされます。 アプリケーション リソースからリボン バーを読み込みます。  
   
 ```  
@@ -1865,11 +1860,11 @@ virtual BOOL LoadFromResource(
  リボン バーの情報とリソース ID (文字列の形式) を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE`読み込みが成功した場合それ以外の場合`FALSE`です。  
+ `TRUE` 読み込みが成功した場合それ以外の場合`FALSE`です。  
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="savetoxmlbuffer"></a>CMFCRibbonBar::SaveToXMLBuffer  
+##  <a name="savetoxmlbuffer"></a>  CMFCRibbonBar::SaveToXMLBuffer  
  リボン バーをバッファーに保存します。  
   
 ```  
@@ -1885,7 +1880,7 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="savetoxmlfile"></a>CMFCRibbonBar::SaveToXMLFile  
+##  <a name="savetoxmlfile"></a>  CMFCRibbonBar::SaveToXMLFile  
  リボン バーを XML ファイルに保存します。  
   
 ```  
@@ -1901,7 +1896,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
   
 ### <a name="remarks"></a>コメント  
   
-##  <a name="setwindows7look"></a>CMFCRibbonBar::SetWindows7Look  
+##  <a name="setwindows7look"></a>  CMFCRibbonBar::SetWindows7Look  
  有効またはリボンの Windows 7 の外観 (小さな四角形のアプリケーション ボタン) を無効にします。  
   
 ```  
@@ -1912,14 +1907,14 @@ void SetWindows7Look(
   
 ### <a name="parameters"></a>パラメーター  
  `bWindows7Look`  
- `TRUE`Windows 7 の外観を設定します。`FALSE`それ以外の場合。  
+ `TRUE` Windows 7 の外観を設定します。`FALSE`それ以外の場合。  
   
  `bRecalc`  
- `TRUE`リボンのレイアウトを再計算します。`FALSE`それ以外の場合。  
+ `TRUE` リボンのレイアウトを再計算します。`FALSE`それ以外の場合。  
   
 ### <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
  [クラス](../../mfc/reference/mfc-classes.md)   
  [CPane クラス](../../mfc/reference/cpane-class.md)   

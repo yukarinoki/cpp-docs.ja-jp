@@ -1,13 +1,10 @@
 ---
-title: "CLR を対象とする C++ プログラムのコンパイル |Microsoft ドキュメント"
-ms.custom: 
+title: CLR を対象とする C++ プログラムのコンパイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>チュートリアル: Visual Studio で CLR をターゲットにした C++ プログラムのコンパイル
 .NET クラスを使用し、Visual Studio 開発環境を使用してコンパイルする Visual C プログラムを作成することができます。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Visual Studio で新しいプロジェクトを作成し、新しいソース ファイルを追加するには  
   
-1.  新しいプロジェクトを作成します。 **[ファイル]** メニューの **[新規作成]**をポイントし、 **[プロジェクト]**をクリックします。  
+1.  新しいプロジェクトを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
 2.  Visual C プロジェクトの種類をクリックして**CLR**、順にクリック**CLR 空プロジェクト**です。  
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     -   右クリックし、**ソース ファイル**フォルダー ソリューション エクスプローラで、指す**追加** をクリック**新しい項目の**します。  
   
-    -   をクリックして**C++ ファイル (.cpp)**ファイル名を入力し、をクリックして**追加**です。  
+    -   をクリックして**C++ ファイル (.cpp)** ファイル名を入力し、をクリックして**追加**です。  
   
      **.Cpp**ファイルに表示されます、**ソース ファイル**ソリューション エクスプ ローラーおよびタブ付きウィンドウ内のフォルダーは、コードを入力する場所が表示されますそのファイルに必要です。  
   
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
      新しい Visual C 構文の詳細については、次を参照してください。[ランタイム プラットフォームのコンポーネント拡張](../windows/component-extensions-for-runtime-platforms.md)です。  
   
-7.  **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+7.  **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
      **出力**ウィンドウは、ログの場所、ビルドとビルドの状態を示すメッセージなど、コンパイルの進行状況に関する情報を表示します。  
   
@@ -84,8 +79,8 @@ ms.lasthandoff: 12/21/2017
     >  空の CLR を選択するプロジェクト テンプレートに自動的に設定されて、 **/clr**コンパイラ オプション。 これを確認するでプロジェクトを右クリックして**ソリューション エクスプ ローラー**をクリックすると、**プロパティ**、し、確認、**共通言語ランタイム サポート**オプション**一般的な**のノード**構成プロパティ**です。  
   
 ## <a name="whats-next"></a>次の内容  
- **前:** [チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)&#124;です。**次:**[チュートリアル: コマンドラインでの C プログラムのコンパイル](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+ **前:** [チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **次:**[チュートリアル: コマンドラインで C プログラムをコンパイル](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   
  [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)

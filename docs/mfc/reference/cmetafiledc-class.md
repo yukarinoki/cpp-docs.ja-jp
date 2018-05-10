@@ -1,12 +1,9 @@
 ---
-title: "CMetaFileDC クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMetaFileDC クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC クラス
 イメージやテキストを自由に作成するための一連のグラフィック デバイス インターフェイス (GDI) コマンドを含む Windows のメタファイルを実装します。  
@@ -87,10 +82,10 @@ class CMetaFileDC : public CDC
   
  `CMetaFileDC`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  メタファイル デバイス コンテキストを閉じ、メタファイルを使用して、再生に使用できる Windows メタファイル ハンドルを作成、 [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)メンバー関数。  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  使用後に、Windows を呼び出すことによって、メタファイルは削除[DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)関数。  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  拡張メタファイル デバイス コンテキストを閉じて、拡張メタファイルを識別するハンドルを返します。  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  アプリケーションには、拡張メタファイルのハンドルが必要がなくなりには、win32 ハンドルを解除する必要が**DeleteEnhMetaFile**関数。  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  構築、 `CMetaFileDC` 2 つのステップ内のオブジェクト。  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>コメント  
  最初に、呼び出す`CMetaFileDC`を呼び出す**作成**、Windows のメタファイル デバイス コンテキストを作成およびにアタッチする、`CMetaFileDC`オブジェクト。  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  構築、 `CMetaFileDC` 2 つのステップ内のオブジェクト。  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>コメント  
  最初に、コンス トラクターを呼び出す`CMetaFileDC`を呼び出す**作成**、Windows のメタファイル デバイス コンテキストを作成およびにアタッチする、`CMetaFileDC`オブジェクト。  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  拡張形式メタファイルのデバイス コンテキストを作成します。  
   
 ```  
@@ -207,7 +202,7 @@ BOOL CreateEnhanced(
   
  拡張メタファイルのファイル名を使用する必要があります、します。EMF 拡張機能です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC クラス](../../mfc/reference/cdc-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)
 

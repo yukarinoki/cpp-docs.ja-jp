@@ -1,13 +1,10 @@
 ---
-title: "-TSAWARE (ターミナル サーバーの対応するアプリケーションの作成) |Microsoft ドキュメント"
-ms.custom: 
+title: -TSAWARE (ターミナル サーバーの対応するアプリケーションの作成) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /tsaware
 - VC.Project.VCLinkerTool.TerminalServerAware
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2956bd2ed8aa0c36e730468a15856cecfaf7e23f
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: e386c9024ea7736adb2766488c1c51c80ff7177b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (ターミナル サーバーに対応したアプリケーションの作成)
 ```  
@@ -66,7 +61,7 @@ ms.lasthandoff: 02/09/2018
   
 -   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
  [リンカー オプション](../../build/reference/linker-options.md)   
  [ユーザーに固有の情報を格納します。](http://msdn.microsoft.com/library/aa383452)   

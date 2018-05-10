@@ -2,9 +2,6 @@
 title: concurrency 名前空間の関数 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,22 +37,20 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 名前空間の関数
 ||||  
 |-|-|-|  
-|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
+|[アロケーション](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
 |[EnableTracing](#enabletracing)|[無料](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|  
@@ -65,7 +60,7 @@ ms.lasthandoff: 04/10/2018
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|  
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|  
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|  
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[受信](#receive)|  
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|  
@@ -223,7 +218,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
  UWP アプリで場合`_Param`型:iasyncoperation\<T > ^ または::iasyncoperationwithprogress\<T, P > ^、またはそれらの型のいずれかを返すファンクタの場合、作成されたタスクになります型`task<T>`です。 場合`_Param`型 Windows::Foundation::IAsyncAction ^ または Windows::Foundation::IAsyncActionWithProgress\<P > ^、それらの型のいずれかを返すファンクタの場合、作成したタスクの型はまたは`task<void>`です。  
   
 ##  <a name="disabletracing"></a>  DisableTracing  
- 同時実行ランタイムでのトレースを無効にします。 この関数は、ETW トレースが既定で未登録であるため推奨されません。  
+ 同時実行ランタイムでのトレースを無効にします。 この関数は、ETW トレースが既定で未登録であるため非推奨とされます。  
   
 ```
 __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl DisableTracing();
@@ -233,7 +228,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
  トレースが正しく無効になっている場合`S_OK`が返されます。 トレースが開始されていませんが場合、`E_NOT_STARTED`が返されます  
   
 ##  <a name="enabletracing"></a>  EnableTracing  
- 同時実行ランタイムでトレースを有効にします。 この関数は、ETW トレースが既定でオンであるため推奨されません。  
+ 同時実行ランタイムでトレースを有効にします。 この関数は、ETW トレースが既定でオンであるため非推奨とされます。  
   
 ```
 __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl EnableTracing();
@@ -1423,7 +1418,7 @@ inline void swap(
  同時実行ベクターを交換する要素を提供する、または要素と交換される、同時実行ベクターのベクトル`_A`です。  
   
 ### <a name="remarks"></a>コメント  
- コンテナー クラスに特化したアルゴリズムは、テンプレート関数は`concurrent_vector`メンバー関数を実行する`_A`です。 [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). これらは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン`template <class T> void swap(T&, T&)`アルゴリズムでクラスでは、割り当て、低速な処理です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。  
+ コンテナー クラスに特化したアルゴリズムは、テンプレート関数は`concurrent_vector`メンバー関数を実行する`_A`です。 [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`)。 これらは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン`template <class T> void swap(T&, T&)`アルゴリズムでクラスでは、割り当て、低速な処理です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。  
   
  このメソッドは同時実行セーフではありません。 他のスレッドが実行されるありません操作の同時実行ベクターをこのメソッドを呼び出すとを確認する必要があります。  
   

@@ -1,13 +1,10 @@
 ---
-title: "Windows ソケット: バック グラウンド |Microsoft ドキュメント"
-ms.custom: 
+title: 'Windows ソケット: バック グラウンド |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows ソケット : 予備知識
 この記事では、Windows ソケットの特性と目的について説明します。 以下の内容についても説明します。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  ソケットはインターネット プロトコル スイートを使用するため、"情報ハイウェイ" でのインターネット通信をサポートするアプリケーションにとって最適な手段です。  
   
-##  <a name="_core_definition_of_a_socket"></a>ソケットの定義  
+##  <a name="_core_definition_of_a_socket"></a> ソケットの定義  
  ソケットは通信のエンドポイントです。つまり、Windows ソケット アプリケーションがネットワーク経由でデータ パケットを送受信するために使用するオブジェクトです。 ソケットには型があり、実行中のプロセスと関連付けられます。名前を持つ場合もあります。 現在、ソケットは同一の "通信ドメイン" 内にあり、インターネット プロトコル スイートを使用する他のソケットとのみデータを交換するのが普通です。  
   
  2 種類のソケットはどちらも双方向で、両方向に同時に通信できるデータ フローです (全二重)。  
@@ -84,12 +79,12 @@ ms.lasthandoff: 12/21/2017
   
  これらの型に関する情報をするにはどのような状況で使用して、参照してくださいソケットの種類および[Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)と[Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)です。  
   
-##  <a name="_core_the_socket_data_type"></a>SOCKET データ型  
+##  <a name="_core_the_socket_data_type"></a> SOCKET データ型  
  各 MFC ソケット オブジェクトは、Windows ソケット オブジェクトへのハンドルをカプセル化します。 このハンドルのデータ型は**ソケット**です。 A**ソケット**ハンドルと似ています、`HWND`ウィンドウです。 MFC ソケット クラスは、カプセル化されたハンドルでの操作を提供します。  
   
  **ソケット**データ型は、Windows SDK で詳しく説明します。 「Windows Sockets (Windows ソケット)」の「Socket Data Type and Error Values (ソケット データ型とエラー値)」を参照してください。  
   
-##  <a name="_core_uses_for_sockets"></a>ソケットの使用  
+##  <a name="_core_uses_for_sockets"></a> ソケットの使用  
  ソケットは、少なくとも次の 3 つの通信コンテキストで非常に有用です。  
   
 -   クライアント/サーバー モデル。  
@@ -109,6 +104,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
 

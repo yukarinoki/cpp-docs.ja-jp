@@ -1,13 +1,10 @@
 ---
-title: "プログレス コントロールのスタイル |Microsoft ドキュメント"
-ms.custom: 
+title: プログレス コントロールのスタイル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6186372dc3ac8bc1000a71706971c9ff72078c5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c1044c82c2864d71047e4fe3c7461d03a17d9d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styles-for-the-progress-control"></a>プログレス コントロールのスタイル
 プログレス コントロールを最初に作成する場合 ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create))、使用、`dwStyle`パラメーターを進行状況コントロールの目的のウィンドウ スタイルを指定します。 次の一覧では、適用できるウィンドウ スタイルについて説明します。 コントロールには、ここに一覧にない任意のウィンドウ スタイルが無視されます。 常に ダイアログ ボックスの親の通常の子ウィンドウとして、コントロールを作成します。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、次を参照してください。[ウィンドウ スタイル](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc)で、 *『 MFC リファレンス*です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CProgressCtrl の使い方](../mfc/using-cprogressctrl.md)
 

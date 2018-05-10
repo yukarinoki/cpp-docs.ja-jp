@@ -1,13 +1,10 @@
 ---
-title: "方法: ファイル システムの変更を監視 (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: ファイル システムの変更を監視 (C + + CLI) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - events [C++], monitoring
 - file system events [C++]
 ms.assetid: 207a3069-e63d-417e-8b56-00ab44f29c52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e35f8c79267a031b2728b0a9b8b59e7d63987aa3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>方法: ファイル システムの変更を監視する (C++/CLI)
 次のコード例では<xref:System.IO.FileSystemWatcher>作成、変更、削除、または名前が変更されたファイルに対応するイベントを登録します。 ディレクトリのファイルへの変更を定期的にポーリングするには、代わりに使用することができます、<xref:System.IO.FileSystemWatcher>変更が検出されたときにイベントを発生させるクラスです。  
@@ -95,7 +90,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [System.IO 名前空間](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
  [ファイルおよびストリーム入出力](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

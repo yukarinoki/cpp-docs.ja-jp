@@ -1,12 +1,9 @@
 ---
-title: "スレッド間の例外転送 |Microsoft ドキュメント"
-ms.custom: 
+title: スレッド間の例外転送 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61847500e9e4fbcfc0912e51afe599ed31601ec2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transporting-exceptions-between-threads"></a>スレッド間の例外転送
 Visual C がサポート*例外の転送*を別の 1 つのスレッドからです。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 Visual C では、例外の転送を実装する、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型および[current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)、および[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)関数。  
@@ -92,12 +87,12 @@ namespace std
   
 -   **/EHa**コンパイラ オプションおよび`catch`ステートメントは、SEH と C++ の例外を転送できます。  
   
--   **/EHa**、 **/EHs**、および**/EHsc**コンパイラ オプションおよび`catch`ステートメントは、C++ 例外を転送できます。  
+-   **/EHa**、 **/EHs**、および **/EHsc**コンパイラ オプションおよび`catch`ステートメントは、C++ 例外を転送できます。  
   
--   **/CLR**または**/CLR: 純粋な**コンパイラ オプションおよび`catch`ステートメントは、C++ 例外を転送できます。 **/CLR**コンパイラ オプションではの仕様、 **/EHa**オプション。 コンパイラがマネージ例外の転送をサポートしないことに注意してください。 これは、マネージ例外から派生するため、 [System.Exception クラス](../standard-library/exception-class.md)は既に、共通言語ランタイムの機能を使用してスレッド間で移動できるオブジェクト。  
+-   **/CLR**または **/CLR: 純粋な**コンパイラ オプションおよび`catch`ステートメントは、C++ 例外を転送できます。 **/CLR**コンパイラ オプションではの仕様、 **/EHa**オプション。 コンパイラがマネージ例外の転送をサポートしないことに注意してください。 これは、マネージ例外から派生するため、 [System.Exception クラス](../standard-library/exception-class.md)は既に、共通言語ランタイムの機能を使用してスレッド間で移動できるオブジェクト。  
   
     > [!IMPORTANT]
-    >  指定することをお勧め、 **/EHsc**コンパイラ オプションとのみの C++ 例外をキャッチします。 公開する自分でセキュリティの脅威を使用する場合、 **/EHa**または**/CLR**コンパイラ オプションおよび**キャッチ**省略記号を含むステートメント*例外宣言*(`catch(...)`)。 `catch` ステートメントを使用して、いくつかの特定の例外をキャプチャしようとする場合があるかもしれません。 しかし、`catch(...)` ステートメントは、致命的な例外を含むすべての C++ 例外と SEH 例外をキャプチャします。 予期しない例外を無視するか、誤って操作すると、悪意あるコードが、プログラムのセキュリティを侵す機会が生じます。  
+    >  指定することをお勧め、 **/EHsc**コンパイラ オプションとのみの C++ 例外をキャッチします。 公開する自分でセキュリティの脅威を使用する場合、 **/EHa**または **/CLR**コンパイラ オプションおよび**キャッチ**省略記号を含むステートメント*例外宣言*(`catch(...)`)。 `catch` ステートメントを使用して、いくつかの特定の例外をキャプチャしようとする場合があるかもしれません。 しかし、`catch(...)` ステートメントは、致命的な例外を含むすべての C++ 例外と SEH 例外をキャプチャします。 予期しない例外を無視するか、誤って操作すると、悪意あるコードが、プログラムのセキュリティを侵す機会が生じます。  
   
 ## <a name="usage"></a>使用法  
  次のセクションを使用して例外を転送する方法について説明、`exception_ptr`型、および`current_exception`、 `rethrow_exception`、および`make_exception_ptr`関数。  
@@ -253,10 +248,10 @@ exception_ptr 0: Caught an invalid_argument exception.
 exception_ptr 1: Caught a  myException exception.  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<exception>  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [例外処理](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)   
  [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)
