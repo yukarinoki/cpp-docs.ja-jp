@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: 標準の C++ プログラム (C++) の作成 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 標準の C++ プログラム (C++) の作成 |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vcfirstapp
 - vccreatefirst
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>チュートリアル: 標準の C++ プログラム (C++) の作成
 Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development Environment) を使用して、標準 C++ プログラムを作成できます。 このチュートリアルの手順に従って、プロジェクトを作成し、プロジェクトに新しいファイルを追加してから、ファイルを変更して C++ コードを追加できます。次に、[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] を使用してプログラムをコンパイルし、実行できます。  
@@ -53,9 +48,9 @@ Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development 
   
      既定では、プロジェクトを含むソリューションはプロジェクトと同じ名前になりますが、別の名前を入力してもかまいません。 プロジェクトの場所として別の場所を入力することもできます。  
   
-     をクリックして**OK**プロジェクトを作成します。  
+     **[OK]** をクリックして、プロジェクトを作成します。  
   
-4.  **Win32 アプリケーション ウィザード**、] をクリックして**[次へ]**[**空のプロジェクト**、順にクリック**完了**。  
+4.  **Win32 アプリケーション ウィザード**、] をクリックして **[次へ]**[**空のプロジェクト**、順にクリック**完了**。  
   
 5.  場合**ソリューション エクスプ ローラー**が表示されない、**ビュー**  メニューのをクリックして**ソリューション エクスプ ローラー**です。  
   
@@ -71,7 +66,7 @@ Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development 
   
 8.  ファイルを保存します。  
   
-9. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。  
+9. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。  
   
      **出力**ウィンドウには、コンパイルの進行状況、ビルド ログおよびビルドの状態を示すメッセージの場所などに関する情報が表示されます。  
   
@@ -82,6 +77,6 @@ Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development 
 ## <a name="next-steps"></a>次の手順  
  **前:** [Visual C のアプリケーションをコンソール](../windows/console-applications-in-visual-cpp.md)です。 **次へ:**[チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   
  [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

@@ -1,13 +1,10 @@
 ---
-title: "文字列の検索 |Microsoft ドキュメント"
-ms.custom: 
+title: 文字列の検索 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - strings [C++], searching
 - strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a66b5dd34aa21a2a0791ecbc71bfd4abcc90c4fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3763baf0f085dc72040ab22c9efd38e8aa8068f7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="finding-a-string"></a>文字列の検索
 文字列テーブルに 1 つまたは複数の文字列を検索して使用することができます[正規表現](/visualstudio/ide/using-regular-expressions-in-visual-studio)で、**ファイル内の検索**コマンド (**編集**メニュー) の文字列のすべてのインスタンスを検索するにはパターンに一致します。  
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストリング エディター](../windows/string-editor.md)   
 

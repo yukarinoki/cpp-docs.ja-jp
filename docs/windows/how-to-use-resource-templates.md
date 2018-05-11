@@ -1,13 +1,10 @@
 ---
-title: "方法: リソース テンプレートを使用して |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: リソース テンプレートを使用して |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>方法: リソース テンプレートを使用する
 リソース テンプレートは、.rct ファイルとして保存したカスタマイズされたリソースです。 リソース テンプレートは、他のリソースを作成するための出発点として使用できます。 リソース テンプレートを使用すると、標準のコントロールやその他の繰り返される要素などの、機能を共有する他のリソースやリソースのグループを開発する時間を節約できます。 たとえば、複数のダイアログ ボックスで、[ヘルプ] ボタンと会社のロゴのアイコンを使用することが必要になる場合があります。 これを簡単に実現するには、新しいダイアログ ボックスのテンプレートを作成して、ロゴと [ヘルプ] ボタンでカスタマイズします。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  ショートカット メニューから選択**追加**をクリックし、**新しい項目の追加**です。  
   
-3.  **新しい項目の追加** ダイアログ ボックスで、**テンプレート:**  ウィンドウで、選択**リソース テンプレート ファイル (.rct)**です。  
+3.  **新しい項目の追加** ダイアログ ボックスで、**テンプレート:**  ウィンドウで、選択**リソース テンプレート ファイル (.rct)** です。  
   
 4.  新しい .rct ファイルの場所と名前を提供し、をクリックして**開く**です。  
   
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  [スタンドアロン ファイルとして .rc ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)です。  
   
-2.  **ファイル** メニューのをクリックして**保存\<* 、filename*> として * *。  
+2.  **ファイル** メニューのをクリックして**保存\< *、filename*> として**です。  
   
 3.  場所を指定し、をクリックして**OK**です。  
   
@@ -79,10 +74,10 @@ ms.lasthandoff: 12/21/2017
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
   
- 必要条件  
+ 要件  
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [リソース エディター](../windows/resource-editors.md)

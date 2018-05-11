@@ -1,13 +1,10 @@
 ---
-title: "uuid (C++ 属性) |Microsoft ドキュメント"
-ms.custom: 
+title: uuid (C++ 属性) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.uuid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 属性)
 クラスまたはインターフェイスの一意の ID を指定します。  
@@ -56,20 +51,20 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>例  
  参照してください、[バインド可能な](../windows/bindable.md)のサンプルの使用例`uuid`です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
 |||  
 |-|-|  
-|**対象**|**クラス**、 `struct`、 `interface`、**共用体**、`enum`|  
+|**対象**|**クラス**、 `struct`、 `interface`、**共用体**、 `enum`|  
 |**反復可能**|×|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [インターフェイス属性](../windows/interface-attributes.md)   
  [クラス属性](../windows/class-attributes.md)   

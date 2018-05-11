@@ -1,13 +1,10 @@
 ---
-title: "方法: リソース スクリプト ファイルを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: リソース スクリプト ファイルを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - .rc files, creating
 - resource script files, creating
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d5198dcb3581fee460c2005ecc7f544e93a448c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a15352640a39ff6adc3b5a956a1f32c9fd414272
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-resource-script-file"></a>方法: リソース スクリプト ファイルを作成する
 > [!NOTE]
@@ -41,11 +36,11 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  プロジェクト フォルダーをソリューション エクスプローラーの [ソリューション] フォルダーと混同しないでください。 [ソリューション] フォルダーにフォーカスを移すと、**[新しい項目の追加]** ダイアログ ボックスで選択した項目 (手順 3) とは異なった項目になります。  
   
-2.  **[プロジェクト]** メニューの **[新しい項目の追加]**をクリックします。  
+2.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
 3.  **[新しい項目の追加]** ダイアログ ボックスで、 **[Visual C++]** フォルダーをクリックし、右側のペインの **[リソース ファイル (.rc)]** を選択します。  
   
-4.  **[プロジェクト名]** ボックスにリソース スクリプト ファイルの名前を入力し、 **[開く]**をクリックします。  
+4.  **[プロジェクト名]** ボックスにリソース スクリプト ファイルの名前を入力し、 **[開く]** をクリックします。  
   
  これで、新しいリソースを [作成](../windows/how-to-create-a-resource.md) して .rc ファイルに追加できます。  
   
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [リソース エディター](../windows/resource-editors.md)

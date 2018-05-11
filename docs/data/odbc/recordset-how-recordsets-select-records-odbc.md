@@ -1,13 +1,10 @@
 ---
-title: ": レコード選択レコードのしくみ (ODBC) |Microsoft ドキュメント"
-ms.custom: 
+title: ': レコード選択レコードのしくみ (ODBC) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>レコードセット: レコード選択のしくみ (ODBC)
 このトピックの内容は、MFC ODBC クラスに該当します。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  レコード セットは、ドライバーに SQL ステートメントを送信することによって、ODBC ドライバーを通じてデータ ソースからレコードを選択します。 送信された SQL は、設計方法と、レコード セット クラスを開くかによって異なります。  
   
-##  <a name="_core_your_options_in_selecting_records"></a>オプションのレコードを選択します。  
+##  <a name="_core_your_options_in_selecting_records"></a> オプションのレコードを選択します。  
  次の表は、レコードを選択するオプションを示します。  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>方法とタイミング レコード セットに影響することができます。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 
 |呼び出す**Requery**をデータ ソースの最新の値を持つレコード セットを再実行 |新しいパラメーター、フィルター、または並べ替えを指定します。 参照してください[レコード セット: レコード セット (ODBC) のクエリを再実行](../../data/odbc/recordset-requerying-a-recordset-odbc.md)|。  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>レコード セットが、SQL ステートメントを構築する方法  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> レコード セットが、SQL ステートメントを構築する方法  
  レコード セット オブジェクトを呼び出すと[開く](../../mfc/reference/crecordset-class.md#open)メンバー関数は、**開く**以下のデータの一部またはすべてを使用して SQL ステートメントを作成します。  
   
 -   **LpszSQL**に渡されたパラメーター**開く**です。 ない場合**NULL**、このパラメーターは、カスタムの SQL 文字列型またはいずれかの一部を指定します。 フレームワークでは、文字列を解析します。 文字列が SQL の場合**選択**ステートメントまたは ODBC**呼び出す**ステートメントでは、フレームワークは、レコード セットの SQL ステートメントとして文字列を使用します。 SQL を構築するために供給されるフレームワークを使用して、文字列が"SELECT"または「{呼び出し」で始まっていない場合**FROM**句。  
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
  開くには、これらの手法の組み合わせを使用することができます[テーブル](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)に基づいてクエリを作成して、[結合](../../data/odbc/recordset-performing-a-join-odbc.md)複数のテーブルです。 その他のカスタマイズを呼び出すことができます[の定義済みクエリ](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)(ストアド プロシージャ) を選択テーブルのデザイン時に認識されない列と[バインド](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)他の大半を実行すると、レコード セット フィールドまたはデータ アクセス タスク。 レコード セットをカスタマイズすることで実現できないタスクを引き続き行うことができます[ODBC API 関数を呼び出して](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)を持つ SQL ステートメントを直接実行または[:executesql](../../mfc/reference/cdatabase-class.md#executesql)です。  
   
-##  <a name="_core_customizing_the_selection"></a>選択範囲をカスタマイズします。  
+##  <a name="_core_customizing_the_selection"></a> 選択範囲をカスタマイズします。  
  以外にも、フィルター、並べ替え順、またはパラメーター、レコード セットの選択をカスタマイズするのには、次の操作を実行できます。  
   
 -   カスタム SQL 文字列を渡す**lpszSQL**を呼び出すと[開く](../../mfc/reference/crecordset-class.md#open)レコード セットのです。 渡すもの**lpsqSQL**ものよりも優先、 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)メンバー関数を返します。  
@@ -108,7 +103,7 @@ ms.lasthandoff: 12/21/2017
   
  複雑な SQL ステートメントをレコード セットを基にする場合は、これらのカスタマイズ手法のいくつかの組み合わせを使用する必要があります。 たとえば、SQL 句を使用したい場合と、直接サポートされていないレコード セットしたりキーワードは、複数のテーブルを結合します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)   
  [: レコード更新レコードのしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
  [ODBC の基礎](../../data/odbc/odbc-basics.md)   

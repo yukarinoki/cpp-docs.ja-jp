@@ -1,12 +1,9 @@
 ---
-title: "message クラス |Microsoft ドキュメント"
-ms.custom: 
+title: message クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - message
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b3d376b26afb077edd765d338b4c5d1b0841f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-class"></a>message クラス
 メッセージング ブロック間で渡されるデータ ペイロードが格納される、基本的なメッセージ エンベロープ。  
@@ -74,7 +69,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名前|説明|  
 |----------|-----------------|  
-|[payload](#payload)|ペイロード、`message`オブジェクト。|  
+|[ペイロード](#payload)|ペイロード、`message`オブジェクト。|  
   
 ## <a name="remarks"></a>コメント  
  詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)です。  
@@ -82,7 +77,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `message`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -130,7 +125,7 @@ message(
 ### <a name="remarks"></a>コメント  
  ポインターを受け取るコンス トラクター、`message`オブジェクト引数のスローされて、 [invalid_argument](../../../standard-library/invalid-argument-class.md)例外場合、パラメーター`_Msg`は`NULL`します。  
   
-##  <a name="dtor"></a> ~message 
+##  <a name="dtor"></a> ~ メッセージ 
 
  `message` オブジェクトを破棄します。  
   
@@ -168,5 +163,5 @@ long remove_ref();
 ### <a name="return-value"></a>戻り値  
  参照カウントの新しい値。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [concurrency 名前空間](concurrency-namespace.md)

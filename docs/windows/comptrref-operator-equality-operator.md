@@ -1,30 +1,25 @@
 ---
-title: "Comptrref::operator = = 演算子 |Microsoft ドキュメント"
-ms.custom: 
+title: Comptrref::operator = = 演算子 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef::operator==
 dev_langs:
 - C++
 ms.assetid: 95fcf781-b473-4317-88cd-e938778d3c3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea2fd557c9ae7da6c696ab8f8174ad8610a9174b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -75,11 +70,11 @@ bool operator==(
 ## <a name="remarks"></a>コメント  
  2 つの ComPtrRef オブジェクトが等しいかどうかを示します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Details Namespace](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef クラス](../windows/comptrref-class.md)

@@ -2,12 +2,9 @@
 title: 実装 (C++) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.implements
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implements-c"></a>implements (C++)
 IDL coclass のメンバーであることを強制するディスパッチ インターフェイスを指定します。  
@@ -43,10 +38,10 @@ IDL coclass のメンバーであることを強制するディスパッチ イ�
   
 #### <a name="parameters"></a>パラメーター  
  **interfaces**  
- コンマ区切りの IDL coclass のメンバーとなるインターフェイスのリスト。 1 つのインターフェイスを指定するための短縮形メソッドは**実装 (***interface_name***)**です。  
+ コンマ区切りの IDL coclass のメンバーとなるインターフェイスのリスト。 1 つのインターフェイスを指定するための短縮形メソッドは**実装 (***interface_name***)** です。  
   
  **dispinterfaces**  
- コンマ区切りの IDL coclass のメンバーとなるディスパッチ インターフェイスのリスト。 1 つのディスパッチ インターフェイスを指定するための短縮形メソッドは**を実装する (ディスパッチ インターフェイス*** = 場合 ***)**です。  
+ コンマ区切りの IDL coclass のメンバーとなるディスパッチ インターフェイスのリスト。 1 つのディスパッチ インターフェイスを指定するための短縮形メソッドは**を実装する (ディスパッチ インターフェイス*** = 場合 ***)** です。  
   
 ## <a name="remarks"></a>コメント  
  既定では、のみである COM インターフェイス、コクラスの基本クラスは、IDL コクラスに追加されます。 **実装する**IDL coclass のメンバーにするには、他のインターフェイスを強制することができます。  

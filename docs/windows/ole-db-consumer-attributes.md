@@ -1,13 +1,10 @@
 ---
-title: "OLE DB コンシューマー属性 |Microsoft ドキュメント"
-ms.custom: 
+title: OLE DB コンシューマー属性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - database attributes [C++]
 - attributes [C++], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a42ce4f1d8f3a9f61840433ef83470882e42e647
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e9afcf3850d047452b201d9d1d84f1e0cf6cb4b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB コンシューマー属性
 OLE DB コンシューマー属性に基づいて、コードを挿入する、 [OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行し、データにアクセスします。  
@@ -43,5 +38,5 @@ OLE DB コンシューマー属性に基づいて、コードを挿入する、 
 |[db_source](../windows/db-source.md)|作成し、データ ソースへのプロバイダーを経由して接続をカプセル化します。|  
 |[db_table](../windows/db-table.md)|OLE DB テーブルを開きます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グループ別の属性](../windows/attributes-by-group.md)

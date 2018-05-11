@@ -1,12 +1,9 @@
 ---
-title: "文字列化演算子 (#) |Microsoft ドキュメント"
-ms.custom: 
+title: 文字列化演算子 (#) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61a50b9522c6631ca0b5f32d5c438369632d01
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7891b03fe80b5ad91ad52cf4577d237350d4584c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stringizing-operator-"></a>文字列化演算子 (#)
 シャープ記号つまり「文字列化」演算子 (**#**)、パラメーターの定義を展開することがなくマクロのパラメーターを文字列リテラルに変換します。 これは、引数を受け取るマクロでのみ使用されます。 マクロ定義の仮パラメーターの前に指定すると、マクロの呼び出し時に渡される実際の引数は一重引用符で囲まれ、文字列リテラルとして扱われます。 文字列リテラルは、マクロ定義内の文字列化演算子と仮パラメーターの組み合わせをすべて置き換えます。  
@@ -89,5 +84,5 @@ FB(F B)
 FB1(F B)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)

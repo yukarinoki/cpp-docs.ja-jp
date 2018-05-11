@@ -1,13 +1,10 @@
 ---
-title: "event_source |Microsoft ドキュメント"
-ms.custom: 
+title: event_source |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.event_source
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 05371b5c2d9acd091adcbdf81d2994f205e36ef7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7e7e287d68bac0fe69417fe21df27ed3231cce6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventsource"></a>event_source
 イベント ソースを作成します。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  テンプレート クラスまたは構造体にイベントを含めることはできません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -88,7 +83,7 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ属性](../windows/compiler-attributes.md)   
  [event_receiver](../windows/event-receiver.md)   
  [_ _event](../cpp/event.md)   

@@ -1,12 +1,9 @@
 ---
-title: "Module::releasenotifier クラス |Microsoft ドキュメント"
-ms.custom: 
+title: Module::releasenotifier クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::ReleaseNotifier
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ReleaseNotifier class
 ms.assetid: 17249cd1-4d88-42e3-8146-da9e942d12bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb640f146109363a8025818b3ec560c250029914
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76edb403fae12dd8b6221d8bd6ec82424bc5a4f7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier クラス
 モジュール内の最後のオブジェクトを解放すると、イベント ハンドラーを呼び出します。  
@@ -56,10 +51,10 @@ class ReleaseNotifier;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ReleaseNotifier`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  
   
  **名前空間:** Microsoft::WRL
  
- ## <a name="see-also"></a>参照
+ ## <a name="see-also"></a>関連項目
  [Module クラス](../windows/module-class.md)

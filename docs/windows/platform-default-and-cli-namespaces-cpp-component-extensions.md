@@ -1,13 +1,10 @@
 ---
-title: "プラットフォーム、既定値、および cli 名前空間 (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: プラットフォーム、既定値、および cli 名前空間 (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - lang
 - cli
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5fa26b46a110fd59f7568a9101270766928f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>プラットフォーム、既定、および cli 名前空間 (C++ コンポーネント拡張)
 言語要素の名前は名前空間によって修飾されるため、それ以外は同じである名前と、ソース コードの別の部分で競合することはありません。 たとえば、名前の衝突されない可能性があります、コンパイラを認識し[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。 名前空間はコンパイラによって使用されますが、コンパイルされたアセンブリでは保持されません。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-runtime"></a>Windows ランタイム  
  詳細については、次を参照してください。[名前空間と型の可視性 (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969551.aspx)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -51,7 +46,7 @@ using namespace cli;
   
  **解説**  
   
- C + + CLI をサポートしている、`cli`名前空間。 コンパイルするときに**/clr**、 `using` 「構文」セクション内ステートメント暗黙的に指定します。  
+ C + + CLI をサポートしている、`cli`名前空間。 コンパイルするときに **/clr**、 `using` 「構文」セクション内ステートメント暗黙的に指定します。  
   
  次の言語機能は、`cli` 名前空間に含まれます。  
   
@@ -63,7 +58,7 @@ using namespace cli;
   
 -   [safe_cast](../windows/safe-cast-cpp-component-extensions.md)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -87,5 +82,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

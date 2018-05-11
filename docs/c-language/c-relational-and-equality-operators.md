@@ -1,13 +1,10 @@
 ---
-title: "C 関係演算子と等値演算子 | Microsoft Docs"
-ms.custom: 
+title: C 関係演算子と等値演算子 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac6503b2c684b5acb921fe13ebf0b0ca11adbf04
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-relational-and-equality-operators"></a>C 関係演算子と等値演算子
 二項関係演算子および二項等値演算子は、最初のオペランドと 2 番目のオペランドを比較して、指定された関係の有効性をテストします。 テストした関係が true の場合、その式の結果は 1 になり、false の場合は 0 になります。 結果の型は `int` です。  

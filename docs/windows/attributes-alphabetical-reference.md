@@ -1,13 +1,10 @@
 ---
-title: "属性のアルファベット順リファレンス |Microsoft ドキュメント"
-ms.custom: 
+title: 属性のアルファベット順リファレンス |Microsoft ドキュメント
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>属性リファレンス (アルファベット順)
 次の属性は、Visual C で使用できます。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|インターフェイスのエントリを COM マップに追加します。|  
 |[control](../windows/control.md)|ユーザー定義型がコントロールであることを指定します。|  
 |[cpp_quote](../windows/cpp-quote.md)|生成されるヘッダー ファイルに、引用符なしの指定した文字列を出力します。|  
-|[カスタム](../windows/custom-cpp.md)|独自の属性を定義できます。|  
+|[custom](../windows/custom-cpp.md)|独自の属性を定義できます。|  
 |[db_accessor](../windows/db-accessor.md)|行セット内の列をバインドして、対応するアクセサー マップにバインドします。|  
 |[db_column](../windows/db-column.md)|行セットに指定された列をバインドします。|  
 |[db_command](../windows/db-command.md)|OLE DB コマンドを実行します。|  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 |[idl_quote](../windows/idl-quote.md)|属性を使用することができます。 または IDL コンストラクトは、現在のバージョンの Visual C ではサポートされていません。|  
 |[iid_is](../windows/iid-is.md)|インターフェイス ポインターによって指さ COM インターフェイスの IID を指定します。|  
 |[immediatebind](../windows/immediatebind.md)|データ バインドされたオブジェクトのプロパティに対するすべての変更のデータベースに直ちに通知されることを示します。|  
-|[実装します。](../windows/implements-cpp.md)|IDL coclass のメンバーであることを強制するディスパッチ インターフェイスを指定します。|  
+|[実装](../windows/implements-cpp.md)|IDL coclass のメンバーであることを強制するディスパッチ インターフェイスを指定します。|  
 |[implements_category](../windows/implements-category.md)|クラスの実装済みのコンポーネントのカテゴリを指定します。|  
 |[import](../windows/import.md)|メイン .idl ファイルから参照する定義を含む .idl、.odl ファイル、またはヘッダーの別のファイルを指定します。|  
 |[importidl](../windows/importidl.md)|指定された .idl ファイルを生成された .idl ファイルに挿入します。|  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[length_is](../windows/length-is.md)|転送する配列要素の数を指定します。|  
 |[library_block](../windows/library-block.md)|.Idl ファイルのライブラリ ブロックの内部構造を配置します。|  
 |[licensed](../windows/licensed.md)|使用してインスタンス化する必要がありますに適用すると、コクラスはライセンスされていることを示します**IClassFactory2**です。|  
-|[地元の](../windows/local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして MIDL コンパイラを使用できます。 個々 の関数で使用する場合は、対象のスタブが生成されないローカル プロシージャを指定します。|  
+|[local](../windows/local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして MIDL コンパイラを使用できます。 個々 の関数で使用する場合は、対象のスタブが生成されないローカル プロシージャを指定します。|  
 |[max_is](../windows/max-is.md)|有効な配列インデックスの最大値を指定します。|  
 |[モジュール](../windows/module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|  
 |[ms_union](../windows/ms-union.md)|カプセル化されていない共用体のネットワーク データ表現のアラインメントを制御します。|  
@@ -110,7 +105,7 @@ ms.lasthandoff: 12/21/2017
 |[propputref](../windows/propputref.md)|値の代わりに参照を使用するプロパティ設定関数を指定します。|  
 |[ptr](../windows/ptr.md)|すべてのポインターとしてのポインターを指定します。|  
 |[public](../windows/public-cpp-attributes.md)|.Idl ファイル内で参照されていない場合でも、typedef がタイプ ライブラリに送られることを確認します。|  
-|[範囲](../windows/range-cpp.md)|引数または値が設定される実行時にフィールドに使用できる値の範囲を指定します。|  
+|[range](../windows/range-cpp.md)|引数または値が設定される実行時にフィールドに使用できる値の範囲を指定します。|  
 |[rdx](../windows/rdx.md)|作成するか、レジストリ キーを変更します。|  
 |[readonly](../windows/readonly-cpp.md)|変数への代入を禁止します。|  
 |[ref](../windows/ref-cpp.md)|参照ポインターを識別します。|  
@@ -139,7 +134,7 @@ ms.lasthandoff: 12/21/2017
 |[vi_progid](../windows/vi-progid.md)|ProgID のバージョンに依存しない形式を指定します。|  
 |[wire_marshal](../windows/wire-marshal.md)|送信アプリケーションに固有のデータ型の代わりに使用されるデータ型を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 属性リファレンス](../windows/cpp-attributes-reference.md)   
  [概念](../windows/attributed-programming-concepts.md)   
  [グループ別の属性](../windows/attributes-by-group.md)   

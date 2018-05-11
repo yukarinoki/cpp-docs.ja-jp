@@ -1,12 +1,9 @@
 ---
-title: "いったん |Microsoft ドキュメント"
-ms.custom: 
+title: いったん |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.once
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0aea1700feaad1c286386f17a5008514282d52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="once"></a>once
 ソース コード ファイルをコンパイルする際、コンパイラによってファイルが 1 回だけ取り込まれる (開かれる) ようにします。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>コメント  
  `#pragma once` を使用すると、翻訳単位でファイルの最初の #include の実行後にコンパイラで同じファイルを開いて読み込むことがないので、ビルド時間を短縮できます。 これを呼びます*複数インクルードの最適化*です。 同様の効果がある、 *#include guard の include*表現形式は、プリプロセッサ マクロの定義を使用して、ファイルの内容が複数回インクルードを防ぐためです。 違反を防ぐためには、*単一定義規則*— すべてのテンプレート、型、関数、およびオブジェクトがある 2 つ以上の定義、コード内の要件です。  
   
- 例:  
+ 例えば:  
   
 ```  
 // header.h  
@@ -71,5 +66,5 @@ ms.lasthandoff: 02/23/2018
   
  プリプロセッサ シンボルを使用してその効果を制御する、複数回のインクルードが発生するように設計されているヘッダー ファイルに、`#pragma once` または #include guard の表現形式を使用しないようにします。 この設計の例は、次を参照してください。、 \<assert.h > ヘッダー ファイルです。 また、インクルード ファイルに複数のパスを作成すると、#include guard と `#pragma once` の両方で複数インクルードの最適化が損なわれるため、インクルード パスを慎重に管理し、それを回避してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,34 +1,29 @@
 ---
-title: "ラムダ式の例を示します |Microsoft ドキュメント"
-ms.custom: 
+title: ラムダ式の例を示します |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>ラムダ式の例
 この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)です。 ラムダ式の構造に関する詳細については、次を参照してください。[ラムダ式の構文](../cpp/lambda-expression-syntax.md)です。  
   
-##  <a name="declaringLambdaExpressions"></a>ラムダ式の宣言  
+##  <a name="declaringLambdaExpressions"></a> ラムダ式の宣言  
   
 ### <a name="example-1"></a>例 1  
  ラムダ式が入力されているためにを割り当てることができます、`auto`変数や、[関数](../standard-library/function-class.md)オブジェクト、次のように。  
@@ -109,7 +104,7 @@ int main()
   
  [[この記事の内容](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>ラムダ式の呼び出し  
+##  <a name="callingLambdaExpressions"></a> ラムダ式の呼び出し  
  次のコード スニペットに示しているように、ラムダ式は直接呼び出すことができます。 2 番目のスニペットは、C++ 標準ライブラリのアルゴリズムに引数としてラムダをなど渡す方法を示します`find_if`です。  
   
 ### <a name="example-1"></a>例 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[この記事の内容](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>ラムダ式の入れ子  
+##  <a name="nestingLambdaExpressions"></a> ラムダ式の入れ子  
   
 ### <a name="example"></a>例  
  この例に示しているように、ラムダ式を別のラムダ式の入れ子にすることができます。 内側のラムダ式は、その引数を 2 倍し、その結果を返します。 外側のラムダ式は、引数を持つ内側のラムダ式を呼び出し、結果に 3 を追加します。  
@@ -222,7 +217,7 @@ int main()
   
  [[この記事の内容](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>高階ラムダ関数  
+##  <a name="higherOrderLambdaExpressions"></a> 高階ラムダ関数  
   
 ### <a name="example"></a>例  
  多くのプログラミング言語の概念をサポートする、*高階関数です。* 高階関数は、引数として別のラムダ式を受け取るか、ラムダ式を返すラムダ式です。 使用することができます、[関数](../standard-library/function-class.md)など高階関数の動作を C++ ラムダ式を有効にするクラス。 この例は、`function` オブジェクトを返すラムダ式と、`function` オブジェクトを引数として受け取るラムダ式を示しています。  
@@ -271,7 +266,7 @@ int main()
   
  [[この記事の内容](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>関数でのラムダ式の使用  
+##  <a name="methodLambdaExpressions"></a> 関数でのラムダ式の使用  
   
 ### <a name="example"></a>例  
  関数の本体でラムダ式を使用できます。 ラムダ式は、外側の関数がアクセスできる任意の関数またはデータ メンバーにアクセスできます。 `this` ポインターを明示的または暗黙的にキャプチャして、外側のクラスの関数とデータ メンバーへのアクセスを提供できます。  
@@ -366,7 +361,7 @@ int main()
   
  [[この記事の内容](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>テンプレートでのラムダ式の使用  
+##  <a name="templateLambdaExpressions"></a> テンプレートでのラムダ式の使用  
   
 ### <a name="example"></a>例  
  ラムダ式は型指定されているため、それらを C++ テンプレートで使用できます。 `negate_all` 関数および `print_all` 関数の例を次に示します。 `negate_all` 関数は、単項 `operator-` を `vector` オブジェクトの各要素に適用します。 `print_all` 関数は、`vector` オブジェクトの各要素をコンソールに出力します。  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[この記事の内容](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>例外の処理  
+##  <a name="ehLambdaExpressions"></a> 例外の処理  
   
 ### <a name="example"></a>例  
  ラムダ式の本体は、構造化例外処理 (SEH: Structured Exception Handling) および C++ 例外処理の規則に従います。 発生した例外をラムダ式の本体で処理するか、または例外処理を外側のスコープに延期することができます。 この例は、`for_each` 関数とラムダ式を使用して、`vector` オブジェクトに別の vector オブジェクトの値を挿入します。 使用して、 `try` / `catch`処理の最初のベクトルに無効なアクセスをブロックします。  
@@ -484,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[この記事の内容](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>マネージ型でのラムダ式の使用 (C + + CLI)  
+##  <a name="managedLambdaExpressions"></a> マネージ型でのラムダ式の使用 (C + + CLI)  
   
 ### <a name="example"></a>例  
  ラムダ式の capture 句には、マネージ型の変数を含めることができません。 ただし、ラムダ式のパラメーター リストにマネージ型の引数を渡すことができます。 この例に示しているラムダ式は、ローカル非マネージ型変数 `ch` を値でキャプチャし、<xref:System.String?displayProperty=fullName> オブジェクトをパラメーターとして受け取ります。  
@@ -523,7 +518,7 @@ Hello!
   
  [[この記事の内容](#top)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ラムダ式](../cpp/lambda-expressions-in-cpp.md)   
  [ラムダ式の構文](../cpp/lambda-expression-syntax.md)   
  [自動](../cpp/auto-cpp.md)   

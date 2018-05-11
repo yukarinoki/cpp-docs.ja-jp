@@ -1,8 +1,8 @@
 ---
-title: "コンパイラの警告 C4600 C4799 から |Microsoft ドキュメント"
+title: コンパイラの警告 C4600 C4799 から |Microsoft ドキュメント
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>コンパイラの警告 C4600 C4799 から
 
@@ -164,12 +163,12 @@ ms.lasthandoff: 12/21/2017
 |[コンパイラの警告 (エラー) C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': シールされた抽象クラスはインターフェイス 'interface' を実装できません|
 |コンパイラの警告 (レベル 1) C4688|'constraint': 制約リストはアセンブリ プライベート型 'type' を含んでいます|
 |コンパイラの警告 (レベル 1) C4689|'%c': #pragma detect_mismatch; 内の文字がサポートされていません#pragma は無視されました|
-|コンパイラの警告 (レベル 4) C4690|[emitidl (pop)]: ポップがプッシュ|
+|コンパイラの警告 (レベル 4) C4690|[ emitidl ( pop ) ]: ポップがプッシュ|
 |[コンパイラの警告 (レベル 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': 参照されていないアセンブリ 'file'、代わりに使用される現在の翻訳単位で定義された型で参照される型が見つかりました|
 |[コンパイラの警告 (レベル 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'関数': 公開されたメンバーのシグネチャはアセンブリ プライベート ネイティブ型 'native_type' を含んでいます|
 |[コンパイラの警告 (レベル 1、エラー) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': シールされた抽象クラスは任意のインスタンス メンバー 'インスタンス メンバー' できません|
 |[コンパイラの警告 (レベル 1、エラー) C4694](../../error-messages/compiler-warnings/compiler-warning-c4694.md)|'class': シールされた抽象クラスは基底クラス 'base_class' を持つことはできません|
-|コンパイラの警告 (レベル 1) C4695|#pragma execution_character_set: '文字セット' はサポートされている引数ではありません現在は 'utf-8' がサポートされています。|
+|コンパイラの警告 (レベル 1) C4695|#pragma execution_character_set: '文字セット' はサポートされている引数ではありません現在は 'utf-8' がサポートされています|
 |コンパイラの警告 (レベル 1) C4696|/ZBvalue1 オプションは範囲です。'value2' と仮定した場合|
 |[コンパイラの警告 (レベル 1 およびレベル 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|初期化されていないローカル変数 'name' の使用|
 |[コンパイラの警告 (レベル 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)|初期化されていない可能性があるローカル変数 'name' の使用|
@@ -204,7 +203,7 @@ ms.lasthandoff: 12/21/2017
 |[コンパイラの警告 (レベル 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' が 'file1' および 'file2' 内で異なるアラインメント: 番号と番号|
 |[コンパイラの警告 (レベル 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' が 'file1' および 'file2' で別のサイズ: 数とバイト数です。|
 |[コンパイラの警告 (レベル 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' が 'file1' および 'file2' で別の種類: 'type1' および 'type2'|
-|[コンパイラの警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|揮発性アクセス '*式*' は/volatile:\<iso (& a) #124; ms > 設定; _iso_volatile_load/store 組み込み関数の使用を検討してください|
+|[コンパイラの警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|揮発性アクセス '*式*' は/volatile:\<iso&#124;ms > 設定; _iso_volatile_load/store 組み込み関数の使用を検討してください|
 |[コンパイラの警告 (レベル 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|呼び出すマネージ 'entrypoint': マネージ コード DLL エントリ ポイントおよび DLL エントリ ポイントから到達した呼び出しを含むローダー ロック下で実行できません|
 |コンパイラの警告 (レベル 4) C4749|条件付きでサポートされる: non standard レイアウトの種類に適用される offsetof '*型*'|
 |コンパイラの警告 (レベル 1) C4750|'identifier': ループにインライン展開されている _alloca() を含む関数です|

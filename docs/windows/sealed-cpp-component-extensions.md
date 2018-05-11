@@ -1,13 +1,10 @@
 ---
-title: "sealed (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: sealed (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ コンポーネント拡張)
 `sealed` は ref クラスの状況依存のキーワードであり、仮想メンバーがオーバーライドできないこと、または型を基本型として使用できないことを示します。  
@@ -65,13 +60,13 @@ virtual return-type identifier() sealed {...};
 ## <a name="windows-runtime"></a>Windows ランタイム  
  参照してください[Ref クラスと構造体](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
  (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -146,5 +141,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,12 +1,9 @@
 ---
-title: "#エラー ディレクティブ (C/C++) |Microsoft ドキュメント"
-ms.custom: 
+title: '#エラー ディレクティブ (C/C++) |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#error'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - preprocessor, directives
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e449da64b5221ccddee34dd850a987b28a2f39df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="error-directive-cc"></a>#error ディレクティブ (C/C++)
 `#error` ディレクティブは、コンパイル時にユーザー指定のエラー メッセージを出力して、コンパイルを終了します。  
@@ -47,5 +42,5 @@ ms.lasthandoff: 02/23/2018
 #endif  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

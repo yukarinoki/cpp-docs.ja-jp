@@ -1,27 +1,22 @@
 ---
-title: "OpenMP 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: OpenMP 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1578adbd0689e6f011ce52266c4d8e0eef9947b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a39fe44ff053a2e49a1067d0af071353e0a50ece
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-functions"></a>OpenMP の関数
 OpenMP API で使用される関数へのリンクを提供します。  
@@ -53,5 +48,5 @@ OpenMP API で使用される関数へのリンクを提供します。
 |[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|ロックを解放します。|  
 |[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|入れ子にできるロックを解放します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ライブラリ リファレンス](../../../parallel/openmp/reference/openmp-library-reference.md)

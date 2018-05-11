@@ -1,23 +1,18 @@
 ---
-title: "アップグレード時の潜在的な問題の概要 (Visual C++) | Microsoft ドキュメント"
-ms.custom: 
+title: アップグレード時の潜在的な問題の概要 (Visual C++) | Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e5cdded022a495b85570ba7f1ad86179b6210356
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>アップグレード時の潜在的な問題の概要 (Visual C++)
 
@@ -116,7 +111,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 Microsoft Visual C++ コンパイラは、長年にわたり、C++ 標準への適合性を強化し続けててきました。 以前のバージョンでコンパイルされたコードは、Visual Studio 2017 でコンパイルできない場合があります。これは、以前は無視または明示的に許容されていたエラーに適切にエラー フラグが付けられるようになったことによります。
 
-たとえば、**/Zc:forScope** スイッチは、MSVC の歴史の早い段階で導入されました。 このスイッチでは、ループ変数に対する非準拠の動作が許可されます。 このスイッチは使用されなくなりました。将来のバージョンでは削除される可能性があります。 コードをアップグレードする際は、このスイッチを使用しないことを強く推奨します。 詳細については、「[/Zc:forScope- is deprecated](porting-guide-spy-increment.md#deprecated_forscope)」 (/Zc:forScope- は使用しないでください) を参照してください。
+たとえば、**/Zc:forScope** スイッチは、MSVC の歴史の早い段階で導入されました。 このスイッチでは、ループ変数に対する非準拠の動作が許可されます。 このスイッチは非推奨となりました。将来のバージョンでは削除される可能性があります。 コードをアップグレードする際は、このスイッチを使用しないことを強く推奨します。 詳細については、「[/Zc:forScope- is deprecated](porting-guide-spy-increment.md#deprecated_forscope)」 (/Zc:forScope- は使用しないでください) を参照してください。
 
 アップグレード時によく発生するコンパイラ エラーの例として、非 const 引数が const パラメーターに渡された場合に発生するエラーが挙げられます。 コンパイラの以前のバージョンでは、これに対して常にエラー フラグが付けられるわけではありませんでした。 詳細については、「[コンパイラのより厳密な変換](porting-guide-spy-increment.md#stricter_conversions)」を参照してください。
 
@@ -146,7 +141,7 @@ C ランタイムには、長年にわたり、多くの変更が加えられて
 
 C++ 標準自体、進化の過程で常に下位互換性が保たれていたわけではありませんでした。 C++11 での移動セマンティクス、新しいキーワード、および言語および標準ライブラリに関するその他の機能の導入は、コンパイラのエラーや異なるランタイム動作を引き起こす可能性があります。
 
-たとえば、以前の C++ プログラムには、iostream.h ヘッダーが含まれている場合があります。 このヘッダーは、C++ の歴史の早い段階で使用されなくなり、最終的には Visual Studio から完全に削除されました。 前述の状況に該当する場合は、\<iostream> を使用してコードを書き直す必要があります。 詳細については、「[古い iostreams コードを更新する](porting-guide-spy-increment.md#updating_iostreams_code)」を参照してください。
+たとえば、以前の C++ プログラムには、iostream.h ヘッダーが含まれている場合があります。 このヘッダーは、C++ の歴史の早い段階で非推奨となり、最終的には Visual Studio から完全に削除されました。 前述の状況に該当する場合は、\<iostream> を使用してコードを書き直す必要があります。 詳細については、「[古い iostreams コードを更新する](porting-guide-spy-increment.md#updating_iostreams_code)」を参照してください。
 
 ### <a name="c4838-narrowing-conversion-warning"></a>C4838: 縮小変換に関する警告
 

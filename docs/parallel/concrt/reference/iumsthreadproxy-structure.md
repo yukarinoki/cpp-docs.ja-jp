@@ -1,12 +1,9 @@
 ---
-title: "IUMSThreadProxy 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: IUMSThreadProxy 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 構造体
 実行スレッドの抽象化です。 ユーザー モード スケジュール可能 (UMS) スレッドをスケジューラに付与するには、スケジューラ ポリシー要素 `SchedulerKind` の値を `UmsThreadDefault` に設定し、さらに `IUMSScheduler` インターフェイスを実装する必要があります。 UMS スレッドは、Windows 7 以上のバージョンの 64 ビット オペレーティング システムでのみサポートされます。  
@@ -49,7 +44,7 @@ struct IUMSThreadProxy : public IThreadProxy;
 |名前|説明|  
 |----------|-----------------|  
 |[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|重要な地域を入力するために呼び出されます。 重要な領域の内部スケジューラでは、領域の中に発生するブロッキング操作を非同期は見られません。 これは、スケジューラがページ フォールトやスレッドの中断、カーネル非同期プロシージャ呼び出し (Apc) など、UMS スレッドでの再入力されませんはことを意味します。|  
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|ハイパー クリティカル地域を入力するために呼び出されます。 ハイパー クリティカル領域の場合は、内部スケジューラでは、領域の中に発生するブロッキング操作は見られません。 これは、スケジューラが関数呼び出し、スレッドの中断、カーネル非同期プロシージャ呼び出し (Apc)、およびなど、UMS スレッドがブロックをページ フォールトのロック取得の試行をブロックするため再入力するはないことを意味します。|  
+|[Iumsthreadproxy::enterhypercriticalregion](#enterhypercriticalregion)|ハイパー クリティカル地域を入力するために呼び出されます。 ハイパー クリティカル領域の場合は、内部スケジューラでは、領域の中に発生するブロッキング操作は見られません。 これは、スケジューラが関数呼び出し、スレッドの中断、カーネル非同期プロシージャ呼び出し (Apc)、およびなど、UMS スレッドがブロックをページ フォールトのロック取得の試行をブロックするため再入力するはないことを意味します。|  
 |[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|重要な領域を終了するために呼び出されます。|  
 |[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|ハイパー重要な領域を終了するために呼び出されます。|  
 |[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|スレッド プロキシが内で重要な領域の種類を返します。 ハイパー クリティカル領域と重要な領域とし、ハイパー クリティカル領域の場合は、コードを入力した場合は、重要な地域のスーパー セットであるのため`InsideHyperCriticalRegion`が返されます。|  
@@ -59,7 +54,7 @@ struct IUMSThreadProxy : public IThreadProxy;
   
  `IUMSThreadProxy`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrtrm.h  
   
  **名前空間:** concurrency  
@@ -97,7 +92,7 @@ virtual int ExitCriticalRegion() = 0;
 ### <a name="return-value"></a>戻り値  
  重要な領域の新しい深度。 重要な領域は再入可能です。  
   
-##  <a name="exithypercriticalregion"></a>  IUMSThreadProxy::ExitHyperCriticalRegion Method  
+##  <a name="exithypercriticalregion"></a>  Iumsthreadproxy::exithypercriticalregion メソッド  
  ハイパー重要な領域を終了するために呼び出されます。  
   
 ```
@@ -117,6 +112,6 @@ virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ### <a name="return-value"></a>戻り値  
  内では、重要な領域、スレッド プロキシの種類です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [IUMSScheduler 構造体](iumsscheduler-structure.md)

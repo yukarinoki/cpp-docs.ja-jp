@@ -1,13 +1,10 @@
 ---
-title: "同時実行ランタイム |Microsoft ドキュメント"
-ms.custom: 
+title: 同時実行ランタイム |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-runtime"></a>同時実行ランタイム
 C++ の同時実行ランタイムにより、信頼性が高く、スケーラブルで、応答性の高い並行アプリケーションを作成できます。 このフレームワークでは抽象のレベルが引き上げられるので、同時実行に関連するインフラストラクチャの詳細を管理する必要はありません。 また、アプリケーションのサービスの品質への要求を満たすスケジューリング ポリシーを指定するためにも使用できます。 同時実行ランタイムを初めて使用する場合に役立つ情報が記載されている次の各ドキュメントを活用してください。  
@@ -74,7 +69,7 @@ C++ の同時実行ランタイムにより、信頼性が高く、スケーラ�
   
 |||  
 |-|-|  
-|[UWP アプリの C++ で非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|同時実行ランタイムを使用して、UWP アプリでの非同期操作を生成するときに注意する重要な点について説明します。|  
+|[C++ における UWP アプリ用の非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|同時実行ランタイムを使用して、UWP アプリでの非同期操作を生成するときに注意する重要な点について説明します。|  
 |[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|PPL タスクを結合する方法を示しています、`IXMLHTTPRequest2`と`IXMLHTTPRequest2Callback`インターフェイス UWP アプリでの web サービスに HTTP GET および POST 要求を送信します。|  
 |[Windows ランタイム アプリのサンプル](http://code.msdn.microsoft.com/windowsapps)|ダウンロード可能なコード サンプルおよびデモを含む Windows のアプリ 8.x です。 C++ のサンプルでは、UX の応答性を保つためにバックグラウンドでデータを処理する PPL のタスクなど、同時実行ランタイムの機能を使用します。|  
   
@@ -117,7 +112,7 @@ C++ の同時実行ランタイムにより、信頼性が高く、スケーラ�
 |[C++ とネイティブ コードのフォーラムでの並列コンピューティング](http://go.microsoft.com/fwlink/p/?linkid=183874)|同時実行ランタイムに関するコミュニティ ディスカッションに参加できます。|  
 |[並列プログラミング](/dotnet/standard/parallel-programming/index)|[!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)]に用意されている並列プログラミング モデルについて説明しています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)
 
 

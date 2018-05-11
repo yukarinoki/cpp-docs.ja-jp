@@ -1,30 +1,25 @@
 ---
-title: "SafeInt 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: SafeInt 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions, SafeInt
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ae482b7f58d64a46b82b32c6c6d62d7f69f0dce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97edd25abca3c9e80a35745165eedc93cc13a9b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeint-functions"></a>SafeInt 関数
 SafeInt ライブラリには、インスタンスを作成せずに使用できるいくつかの関数が用意されています、 [SafeInt クラス](../windows/safeint-class.md)です。 整数オーバーフローから単一の数値演算を保護する場合は、これらの関数を使用することができます。 作成する必要があります複数の数値演算を保護する場合は、`SafeInt`オブジェクト。 作成する方が効率的である`SafeInt`にこれらの関数を複数回使用よりもオブジェクトです。  
@@ -40,7 +35,7 @@ SafeInt ライブラリには、インスタンスを作成せずに使用でき
 |[SafeAdd](../windows/safeadd.md)|2 つの数値を追加し、オーバーフローが生じないようにします。|  
 |[SafeCast](../windows/safecast.md)|別の型パラメーターの型にキャストします。|  
 |[SafeDivide](../windows/safedivide.md)|2 つの数値を除算し、ゼロ除算から保護します。|  
-|[SafeEquals](../windows/safeequals.md)、 [SafeGreaterThan](../windows/safegreaterthan.md)、 [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)、 [SafeLessThan](../windows/safelessthan.md)、 [SafeLessThanEquals](../windows/safelessthanequals.md)、[SafeNotEquals](../windows/safenotequals.md)|2 つの数値を比較します。 これらの関数を使用すると、その型を変更することがなく 2 つの異なる型の数値を比較できます。|  
+|[SafeEquals](../windows/safeequals.md)、 [SafeGreaterThan](../windows/safegreaterthan.md)、 [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)、 [SafeLessThan](../windows/safelessthan.md)、 [SafeLessThanEquals](../windows/safelessthanequals.md)、 [SafeNotEquals](../windows/safenotequals.md)|2 つの数値を比較します。 これらの関数を使用すると、その型を変更することがなく 2 つの異なる型の数値を比較できます。|  
 |[SafeModulus](../windows/safemodulus.md)|2 つの数値に対して剰余演算を実行します。|  
 |[SafeMultiply](../windows/safemultiply.md)|2 つの数値を乗算し、オーバーフローを保護できます。|  
 |[SafeSubtract](../windows/safesubtract.md)|2 つの数値を減算し、オーバーフローが生じないようにします。|  

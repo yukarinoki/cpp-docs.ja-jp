@@ -1,13 +1,10 @@
 ---
-title: "Visual C のジェネリックの概要 |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C のジェネリックの概要 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++ のジェネリックの概要
 ジェネリックは、共通言語ランタイムでサポートされているパラメーター化された型です。 パラメーター化された型は、ジェネリックを使用する場合に指定されている不明な型パラメーターで定義されている型です。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
  制約とは、型パラメーターとして使用できる型に制限します。 たとえば、指定されたジェネリック クラスは、指定したクラスから継承するクラスのみを受け入れるまたは指定されたインターフェイスを実装します。 詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)です。  
   
 ## <a name="reference-types-and-value-types"></a>参照型と値の型  
- ハンドル型と値型は、型引数として使用可能性があります。 入力するかを使用することがあります、ジェネリックの定義構文では参照型のことです。 たとえば、  **->** 演算子を使用して、最終的に使用された型が参照型または値型かどうか、型パラメーターの型のメンバーにアクセスします。 値の型は、型引数として使用すると、ランタイムは値の型をボックス化せずに直接値の型を使用するコードを生成します。  
+ ハンドル型と値型は、型引数として使用可能性があります。 入力するかを使用することがあります、ジェネリックの定義構文では参照型のことです。 たとえば、 **->** 演算子を使用して、最終的に使用された型が参照型または値型かどうか、型パラメーターの型のメンバーにアクセスします。 値の型は、型引数として使用すると、ランタイムは値の型をボックス化せずに直接値の型を使用するコードを生成します。  
   
  参照型をジェネリック型引数として使用する場合は、ハンドルの構文を使用します。 値の型をジェネリック型引数として使用する場合は、型の名前を直接使用します。  
   
@@ -135,11 +130,11 @@ int main() {
   
  これらの制限は、同様の演算子に適用されます。 制約のないジェネリック型パラメーターを使用することはできません、`==`と`!=`型がこれらの演算子をサポートしていない場合は、型パラメーターの 2 つのインスタンスを比較する演算子です。 これらのチェックは、ジェネリックのために必要ですが、テンプレートではなく実行時のすべてのクラスを使用、ジェネリックを特殊化することがありますのでを満たす、制約とは遅すぎますの無効なメンバーの使用を確認します。  
   
- 使用して、型パラメーターの既定のインスタンスを作成する場合があります、`()`演算子。 例:  
+ 使用して、型パラメーターの既定のインスタンスを作成する場合があります、`()`演算子。 例えば:  
   
  `T t = T();`  
   
  ここで`T`ジェネリック クラスまたはメソッドの定義の型パラメーターは、既定値に変数を初期化します。 場合`T`場合は null ポインターがなります、ref クラスは、`T`値クラス、オブジェクトは、ゼロに初期化します。 これと呼ばれる、*既定の初期化子*です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジェネリック](../windows/generics-cpp-component-extensions.md)

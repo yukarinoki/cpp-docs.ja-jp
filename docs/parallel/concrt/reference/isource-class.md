@@ -1,12 +1,9 @@
 ---
-title: "ISource クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ISource クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>ISource クラス
 `ISource` クラスは、すべてのソース ブロック用のインターフェイスです。 ソース ブロックは、メッセージを `ITarget` ブロックに伝達します。  
@@ -71,7 +66,7 @@ class ISource;
 |----------|-----------------|  
 |[accept](#accept)|派生クラスでオーバーライドされると、これによって提供されたメッセージを受け入れる`ISource`ブロック、呼び出し元に所有権を転送します。|  
 |[acquire_ref](#acquire_ref)|派生クラスでオーバーライドされると、この参照カウントを獲得`ISource`ブロックを削除されないようにします。|  
-|[consume](#consume)|派生クラスでオーバーライドされると、これによって以前に提供メッセージを使用して`ISource`をブロックし、呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
+|[使用します。](#consume)|派生クラスでオーバーライドされると、これによって以前に提供メッセージを使用して`ISource`をブロックし、呼び出し元に所有権を転送する、ターゲットが正常に予約されています。|  
 |[link_target](#link_target)|派生クラスでオーバーライドされると、これをターゲット ブロックをリンク`ISource`ブロックします。|  
 |[release](#release)|派生クラスでオーバーライドされると、以前に成功したメッセージの予約を解放します。|  
 |[release_ref](#release_ref)|派生クラスでオーバーライドされると、この参照カウントを解放`ISource`ブロックします。|  
@@ -85,7 +80,7 @@ class ISource;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ISource`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** agents.h  
   
  **名前空間:** concurrency  
@@ -246,6 +241,6 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 virtual void unlink_targets() = 0;
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [ITarget クラス](itarget-class.md)

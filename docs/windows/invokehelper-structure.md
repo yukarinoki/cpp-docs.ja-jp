@@ -1,12 +1,9 @@
 ---
-title: "InvokeHelper 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: InvokeHelper 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::InvokeHelper
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - InvokeHelper structure
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acabc6833e23c4f17bc337b67a89578bc95bbd6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b612530c1a29588cd837b2cdbeef37faf84c8b4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 構造体
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -132,10 +127,10 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `InvokeHelper`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

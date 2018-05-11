@@ -1,13 +1,10 @@
 ---
-title: "属性 |Microsoft ドキュメント"
-ms.custom: 
+title: 属性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.attribute
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42ea9049fdd97691bd139599705856baa8acfee1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute"></a>属性
 カスタム属性を作成できます。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  `attribute`属性は推奨されなくなりました。  共通言語ランタイム属性 System.Attribute に直接を使用すると、子のユーザー定義属性を作成できます。  詳細については、次を参照してください。[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)です。  
   
- 定義する、[カスタム属性](../windows/custom-attributes-cpp.md)配置することによって、`attribute`マネージ クラスまたは構造体定義の属性です。 クラスの名前は、カスタム属性です。 例:  
+ 定義する、[カスタム属性](../windows/custom-attributes-cpp.md)配置することによって、`attribute`マネージ クラスまたは構造体定義の属性です。 クラスの名前は、カスタム属性です。 例えば:  
   
 ```  
 [ attribute(Parameter) ]  
@@ -149,15 +144,15 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute`エイリアス<xref:System.AttributeUsageAttribute?displayProperty=fullName>(AttributeAttribute されません。 これは、属性の名前付け規則の例外)。  
+ `attribute` エイリアス<xref:System.AttributeUsageAttribute?displayProperty=fullName>(AttributeAttribute されません。 これは、属性の名前付け規則の例外)。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
 |||  
 |-|-|  
-|**対象**|`ref`**クラス**、 **ref 構造体**|  
+|**対象**|`ref` **クラス**、 **ref 構造体**|  
 |**反復可能**|×|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
@@ -220,6 +215,6 @@ int main() {
 2  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性のアルファベット順リファレンス](../windows/attributes-alphabetical-reference.md)   
  [カスタム属性](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -1,30 +1,25 @@
 ---
-title: "新しい (新しい vtable のスロット) (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: 新しい (新しい vtable のスロット) (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7189909f3cff84d2bb1a767e4ddeda817bcd6128
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (vtable の新しいスロット) (C++ コンポーネント拡張)
 `new` キーワードは、仮想メンバーが vtable の新しいスロットを取得することを示します。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [MethodAttributes 列挙体](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -115,6 +110,6 @@ D::g() called
 E::f() called  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
  [オーバーライド指定子](../windows/override-specifiers-cpp-component-extensions.md)

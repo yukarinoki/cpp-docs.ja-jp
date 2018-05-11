@@ -1,12 +1,9 @@
 ---
-title: "hdrstop |Microsoft ドキュメント"
-ms.custom: 
+title: hdrstop |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - hdrstop_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18216663524c48e4ec4ee327ff096c8b3dbd391c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f1c628efaf45be87dcfc046cf1774c762c157f4f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hdrstop"></a>hdrstop
 プリコンパイル ファイル名およびコンパイル状態が保存される場所に対する追加の制御を指定します。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/23/2018
   
  C または C++ ファイルが含まれている場合、 **hdrstop**プラグマ/Yc でコンパイルした場合、コンパイラは、プラグマの位置までコンパイルの状態を保存します。 プラグマの後ろにあるコードのコンパイル状態は保存されません。  
   
- 使用して*filename*コンパイル済みの状態が保存されるプリコンパイル済みヘッダー ファイルの名前。 間にスペース**hdrstop**と*filename*は省略可能です。 指定されたファイル名、 **hdrstop**プラグマ文字列は、そのため、C または C++ の文字列の制約を受けます。 具体的には、文字列を引用符で囲み、エスケープ文字 (円記号) を使用してディレクトリ名を指定する必要があります。 例:  
+ 使用して*filename*コンパイル済みの状態が保存されるプリコンパイル済みヘッダー ファイルの名前。 間にスペース**hdrstop**と*filename*は省略可能です。 指定されたファイル名、 **hdrstop**プラグマ文字列は、そのため、C または C++ の文字列の制約を受けます。 具体的には、文字列を引用符で囲み、エスケープ文字 (円記号) を使用してディレクトリ名を指定する必要があります。 例えば:  
   
 ```  
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )  
@@ -92,5 +87,5 @@ __inline Disp( char *szToDisplay )   // Define an inline function
   
  この例では、 **hdrstop**プラグマは、2 つのファイルが含まれています、インライン関数が定義されている後に表示されます。 初めは、プラグマの位置が不自然に見えるかもしれません。 、ただし、その使用を検討して、手動プリコンパイル オプション/Yc および/Yu、で、 **hdrstop**プラグマにより、ソース ファイル全体をプリコンパイルする — インライン コードも含みます。 Microsoft コンパイラでは、データ宣言以外のプリコンパイルも実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

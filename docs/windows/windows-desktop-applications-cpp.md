@@ -1,13 +1,10 @@
 ---
-title: "Windows デスクトップ アプリケーション (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: Windows デスクトップ アプリケーション (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vcplatformsdk
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - Visual C++, Windows applications
 - Windows applications [C++], about creating Windows applications
 ms.assetid: be15855a-fa3f-41e9-89cd-41b9484ebfdb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 142019b10f7108934e5cd7d6de9e987eaab5a5dc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f9e24921a2a33ab31a9a5e6b7c3a33dbfec6c47e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="windows-desktop-applications-c"></a>Windows デスクトップ アプリケーション (C++)
 このセクションでは、ウィンドウで実行する C++ デスクトップ アプリケーションを作成する方法について説明します。  
@@ -49,6 +44,6 @@ ms.lasthandoff: 02/14/2018
   
 -   [リソース ファイルの操作](../windows/working-with-resource-files.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Studio での visual C](../visual-cpp-in-visual-studio.md)
 

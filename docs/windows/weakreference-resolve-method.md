@@ -1,12 +1,9 @@
 ---
-title: "Weakreference::resolve メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: Weakreference::resolve メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::WeakReference::Resolve
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Resolve method
 ms.assetid: fc65a4b7-48a0-4d64-a793-37f566fdd8e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4da4689ffd8fa0a633b3f481b0292d060e57345
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dccdf7554f8d102230bedc18231feb74625d621b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="weakreferenceresolve-method"></a>WeakReference::Resolve メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -59,11 +54,11 @@ STDMETHOD(Resolve)
 ## <a name="remarks"></a>コメント  
  強力な参照カウントが 0 以外の場合は、現在の強い参照値に指定されたポインターを設定します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WeakReference Class1](../windows/weakreference-class1.md)   
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

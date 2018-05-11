@@ -2,11 +2,8 @@
 title: basic_string クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xstring/std::basic_string
@@ -125,17 +122,15 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b51687c3584b371ab71bb3d4cca2e0b4bf9c7d0
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 32cd9dc76954b7b4dc5d38081ed39bc42511ab0e
+ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="basicstring-class"></a>basic_string クラス
 
@@ -474,7 +469,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 `ptr` 対象の文字列に割り当てられる C 文字列の文字へのポインター。
 
-`count` 追加する、最大では、ソース文字列から文字の数。
+`count` ソース文字列から割り当てられる文字数。
 
 `str` 対象の文字列に割り当てられる文字は、元の文字列。
 

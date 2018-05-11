@@ -1,13 +1,10 @@
 ---
-title: "イベント (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: イベント (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>event (C++ コンポーネント拡張)
 `event`キーワードで宣言した、*イベント*、登録されているサブスクライバーに通知される (*イベント ハンドラー*) 関心のある問題が発生したことです。  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  `operators+=` および `operator-=` を使用して、イベント ハンドラーの追加と削除を行うことも、`add()` メソッドおよび `remove()` メソッドを明示的に呼び出すこともできます。  
   
- `event`状況依存のキーワードです。参照してください[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)詳細についてはします。  
+ `event` 状況依存のキーワードです。参照してください[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)詳細についてはします。  
   
 ## <a name="windows-runtime"></a>Windows ランタイム  
   
@@ -91,7 +86,7 @@ modifiereventdelegate^ event_name
   
  イベント ハンドラーを追加した後で削除する場合は、追加操作で返される EventRegistrationToken 構造体を保存する必要があります。 その後の削除操作で、削除するイベント ハンドラーを識別するために、保存しておいた EventRegistrationToken 構造体を使用します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -176,7 +171,7 @@ modifiereventdelegate^ event_name
   
 -   [インターフェイス内のイベント](../dotnet/how-to-use-events-in-cpp-cli.md)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -287,5 +282,5 @@ int main() {
 688  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

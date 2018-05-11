@@ -1,13 +1,10 @@
 ---
-title: "ユーザーが終了できないダイアログ ボックスの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ユーザーが終了できないダイアログ ボックスの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,25 +12,23 @@ helpviewer_keywords:
 - modal dialog boxes, logon screens
 - logon screens
 ms.assetid: 54823c27-1658-4388-bd12-0a1ce8f3899e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b53c233c13ed53f4cf2ccf489da9af90ae15796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc04c9ccfb0fdc74e57142bf746681411bbba495
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-dialog-box-that-users-cannot-exit"></a>ユーザーが終了できないダイアログ ボックスの作成
 ユーザーには終了できない実行時ダイアログ ボックスを作成できます。 この種のダイアログ ボックスはログオンの場合や、アプリケーションやドキュメントをロックする場合に便利です。  
   
 ### <a name="to-create-a-dialog-box-that-a-user-cannot-exit"></a>ユーザーには終了できないダイアログ ボックスを作成するには  
   
-1.  ダイアログ ボックスの **[プロパティ]** ウィンドウで、 **[システム メニュー]** プロパティを **[false]**に設定します。  
+1.  ダイアログ ボックスの **[プロパティ]** ウィンドウで、 **[システム メニュー]** プロパティを **[false]** に設定します。  
   
      これによって、ダイアログ ボックスのシステム メニューと **[閉じる]** ボタンが無効になります。  
   
@@ -48,10 +43,10 @@ ms.lasthandoff: 12/21/2017
   
  マネージ プロジェクトにリソースを追加する方法については、次を参照してください。[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: リソースの作成](../windows/how-to-create-a-resource.md)   
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)

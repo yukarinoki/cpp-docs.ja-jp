@@ -1,13 +1,10 @@
 ---
-title: "テキスト ツール フォント ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント"
-ms.custom: 
+title: テキスト ツール フォント ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - fonts, changing on an image
 - text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2f5df3215f2d3487b919c2c89215dab17d288d4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa7f1a88627cc3547e6d6f4028de4abef73bf181
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>[テキスト ツール フォント] ダイアログ ボックス (アイコン用イメージ エディター)
 使用する場合、フォントの設定を指定、[テキスト ツール ダイアログ ボックス](../windows/text-tool-dialog-box-image-editor-for-icons.md)の[イメージ エディター](../windows/image-editor-for-icons.md)です。  
@@ -52,9 +47,9 @@ ms.lasthandoff: 12/21/2017
  **スクリプト**  
  指定したフォントの使用可能な言語のスクリプトを一覧表示します。 別の言語のスクリプトを選択すると、文字セットの多言語のドキュメントを作成するために使用可能な言語になります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)
 

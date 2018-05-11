@@ -1,13 +1,10 @@
 ---
-title: "方法: リソースを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: リソースを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - resource toolbars
 - resources [Visual Studio], creating
 ms.assetid: aad44914-9145-45a3-a7d8-9de89b366716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbf538940bab76559e7cec5a5737ab7661dac1f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-resource"></a>方法: リソースを作成する
 > [!NOTE]
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-create-a-new-resource-from-the-project-menu"></a>[プロジェクト] メニューからリソースを新規作成するには  
   
-1.  **[プロジェクト]** メニューの **[リソースの追加]**を選択します。  
+1.  **[プロジェクト]** メニューの **[リソースの追加]** を選択します。  
   
  リソースを新規作成すると、Visual C++ により IDD_Dialog1 などの一意の名前が割り当てられます。 関連するリソース エディターまたは [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)でリソースのプロパティを編集することによって、このリソース ID をカスタマイズできます。  
   
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [リソース エディター](../windows/resource-editors.md)   
  [[リソースの追加] ダイアログ ボックス](../windows/add-resource-dialog-box.md)

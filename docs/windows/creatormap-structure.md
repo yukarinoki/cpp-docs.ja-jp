@@ -1,12 +1,9 @@
 ---
-title: "CreatorMap 構造体 |Microsoft ドキュメント"
-ms.custom: 
+title: CreatorMap 構造体 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreatorMap
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - CreatorMap structure
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a941f052527b3617772bcb18b2092fdc35ea3a22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a6113737d7463354ffa273ced61b190246f63a83
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creatormap-structure"></a>CreatorMap 構造体
 Windows ランタイム C++ テンプレート ライブラリのインフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -63,10 +58,10 @@ struct CreatorMap;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CreatorMap`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

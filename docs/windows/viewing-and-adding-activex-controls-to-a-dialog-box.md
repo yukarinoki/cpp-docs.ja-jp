@@ -1,13 +1,10 @@
 ---
-title: "表示して、ダイアログ ボックスに ActiveX コントロールを追加する |Microsoft ドキュメント"
-ms.custom: 
+title: 表示して、ダイアログ ボックスに ActiveX コントロールを追加する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.activex
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Insert ActiveX Control command
 - ActiveX controls [C++], adding to dialog boxes
 ms.assetid: e1c2e3ae-e1b0-40d3-9766-623007073856
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1c316feefc622acd992778f10a98af80c3b5301
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61448cba890c03feaf2d9fcbda5cdb93478f4c04
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>ActiveX コントロールの表示およびダイアログ ボックスへの ActiveX コントロールの追加
 Visual Studio では、ActiveX コントロールをダイアログ ボックスに挿入することができます。  
@@ -39,13 +34,13 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
   
 2.  ダイアログ ボックスの本体の任意の場所を右クリックします。  
   
-3.  ショートカット メニューで、 **[ActiveX コントロールの挿入]**をクリックします。  
+3.  ショートカット メニューで、 **[ActiveX コントロールの挿入]** をクリックします。  
   
      [[ActiveX コントロールの挿入] ダイアログ ボックス](../windows/insert-activex-control-dialog-box.md) が表示され、システム上のすべての ActiveX コントロールが表示されます。 ダイアログ ボックスの下部には、ActiveX コントロール ファイルへのパスが表示されます。  
   
 ### <a name="to-add-an-activex-control-to-a-dialog-box"></a>ダイアログ ボックスに ActiveX コントロールを追加するには  
   
-1.  [[ActiveX コントロールの挿入] ダイアログ ボックス](../windows/insert-activex-control-dialog-box.md)で、ダイアログ ボックスに追加するコントロールを選択し、 **[OK]**をクリックします。  
+1.  [[ActiveX コントロールの挿入] ダイアログ ボックス](../windows/insert-activex-control-dialog-box.md)で、ダイアログ ボックスに追加するコントロールを選択し、 **[OK]** をクリックします。  
   
      コントロールがダイアログ ボックスに表示されます。このダイアログ ボックスで、他のコントロールでするのと同じように、コントロールの編集またはそのハンドラーの作成を行います。  
   
@@ -63,7 +58,7 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)   
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)   
  [ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)

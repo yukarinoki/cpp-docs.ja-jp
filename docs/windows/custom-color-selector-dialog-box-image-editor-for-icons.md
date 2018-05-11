@@ -1,13 +1,10 @@
 ---
-title: "カスタム カラー セレクター ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント"
-ms.custom: 
+title: カスタム カラー セレクター ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.customcolorselector
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Custom Color Selector dialog box
 - colors, image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b85b6b650fcff46371e86e61ab96e9d864c4c53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>[色の調整] ダイアログ ボックス (アイコン用イメージ エディター)
 このダイアログ ボックスでは、イメージを使用する色をカスタマイズすることができます。 詳細については、次を参照してください。[のカスタマイズまたは変更する色](../windows/customizing-or-changing-colors-image-editor-for-icons.md)です。  
@@ -56,13 +51,13 @@ ms.lasthandoff: 12/21/2017
  **緑**  
  定義した色の緑の値を指定します。 値の範囲は 0 ~ 255 です。  
   
- **青い**  
+ **青**  
  定義した色の青の値を指定します。 値の範囲は 0 ~ 255 です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[イメージ] メニュー](../windows/image-menu-image-editor-for-icons.md)   
  [カスタマイズや色を変更します。](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
  [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)

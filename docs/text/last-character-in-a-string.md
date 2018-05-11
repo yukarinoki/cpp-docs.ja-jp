@@ -1,30 +1,25 @@
 ---
-title: "最後の文字列の文字 |Microsoft ドキュメント"
-ms.custom: 
+title: 最後の文字列の文字 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - last character in string
 - MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b766bec977f35f9f346723cbaf3f62e48c8c878
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88cde1d2eb30103462f7ae8f8c06274a2977fc36
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="last-character-in-a-string"></a>文字列の最後の文字
 次のヒントを使用します。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
   
      このコードは、MBCS の関数を使用して`_mbsrchr`と`_mbsinc`です。 これらの関数が MBCS に対応するため、それらを区別できる、'\\'文字と末尾バイト'\\' です。 コードは、文字列の最後の文字が null ('\0') の場合に、何らかのアクションを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MBCS のプログラミングについて](../text/mbcs-programming-tips.md)   
  [文字の代入](../text/character-assignment.md)

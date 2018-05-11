@@ -1,12 +1,9 @@
 ---
-title: "Comptr::internalrelease メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: Comptr::internalrelease メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr::InternalRelease
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - InternalRelease method
 ms.assetid: a5554f37-b32b-48a7-8443-847f84cd43ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b35469375221b9e6f3e1ec464ae7f8e46a7451ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 375a44d3f541e5eb5e01c328093d831cfe158717
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease メソッド
 この ComPtr に関連付けられたインターフェイスに対して COM 解放操作を実行します。  
@@ -40,10 +35,10 @@ void InternalRelease();
 ## <a name="remarks"></a>コメント  
  このメソッドは保護されています。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
   
  **名前空間:** Microsoft::WRL  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ComPtr クラス](../windows/comptr-class.md)

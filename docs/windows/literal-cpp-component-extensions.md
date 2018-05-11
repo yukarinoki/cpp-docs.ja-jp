@@ -1,13 +1,10 @@
 ---
-title: "リテラル (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: リテラル (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="literal-c-component-extensions"></a>リテラル (C++ コンポーネント拡張)
 としてマークされている変数 (データ メンバー)`literal`で、 **/clr**コンパイルに等しいネイティブな`static const`変数。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
@@ -127,8 +122,8 @@ class B {
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

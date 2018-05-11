@@ -1,13 +1,10 @@
 ---
-title: "abstract (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: abstract (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - abstract
 - abstract_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b935aabeb048d955941a41f6a50735897a53009
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dcaef98df96b54025cd44a52a2e27a7bc5a83545
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (C++ コンポーネント拡張)
 `abstract` キーワードは、次のいずれかを宣言します。  
@@ -50,11 +45,11 @@ virtualreturn-typemember-function-identifier() abstract ;
   
  **解説**  
   
- 最初の例の構文では、abstract (抽象) にするクラスを宣言します。 *クラス宣言*コンポーネントは、ネイティブ C++ の宣言を指定できます (`class`または`struct`)、または C++ の拡張宣言 (`ref class`または`ref struct`) 場合、 **/ZW**または**/clr**コンパイラ オプションを指定します。  
+ 最初の例の構文では、abstract (抽象) にするクラスを宣言します。 *クラス宣言*コンポーネントは、ネイティブ C++ の宣言を指定できます (`class`または`struct`)、または C++ の拡張宣言 (`ref class`または`ref struct`) 場合、 **/ZW**または **/clr**コンパイラ オプションを指定します。  
   
  2 つ目の例の構文では、仮想メンバー関数を抽象として宣言します。 関数を抽象として宣言することは、純粋仮想関数として宣言することと同じです。 メンバー関数を抽象として宣言すると、外側のクラスも抽象として宣言されます。  
   
- `abstract`キーワードがネイティブ コンパイルおよびプラットフォーム固有のコードでサポートされていません。 つまり、コンパイルの有無、 **/ZW**または**/clr**コンパイラ オプション。  
+ `abstract`キーワードがネイティブ コンパイルおよびプラットフォーム固有のコードでサポートされていません。 つまり、コンパイルの有無、 **/ZW**または **/clr**コンパイラ オプション。  
   
  型である抽象場合コンパイル時に検出できます、`__is_abstract(type)`型の特徴です。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)です。  
   
@@ -63,12 +58,12 @@ virtualreturn-typemember-function-identifier() abstract ;
 ## <a name="windows-runtime"></a>Windows ランタイム  
  詳細については、次を参照してください。 [Ref クラスと構造体](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -120,5 +115,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
