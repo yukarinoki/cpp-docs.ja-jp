@@ -1,7 +1,7 @@
 ---
 title: C++ のセキュリティのベスト プラクティス |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -14,20 +14,22 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
-ms.translationtype: HT
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
+
 ここでは、セキュリティ ツールおよびセキュリティ対策について説明します。 これらを使用しても、アプリケーションを攻撃から完全に防御できるわけではありませんが、攻撃が成功する可能性を低減できます。  
   
-## <a name="visual-c-security-features"></a>Visual C++ セキュリティ機能  
+## <a name="visual-c-security-features"></a>Visual C++ セキュリティ機能
+
  Visual C++ コンパイラおよびリンカーには、次のセキュリティ機能が組み込まれています。  
   
  [/guard (制御フロー ガードを有効にする)](../build/reference/guard-enable-control-flow-guard.md)  
@@ -84,14 +86,19 @@ ms.lasthandoff: 05/07/2018
 -   一般的なプログラミング上の誤りが原因で発生する潜在的なアプリケーションの互換性エラーがないかどうかをテストします。  
   
 -   アプリケーションにメモリ関連の問題がないかどうかを調べます。  
-  s
+
 -   アプリケーションの潜在的なセキュリティ上の問題を特定します。  
   
  AppVerifier は、Application Compatibility Toolkit の一部である、[アプリケーションの互換性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet web サイトでします。  
   
 
 ## <a name="windows-user-accounts"></a>Windows ユーザー アカウント  
- Administrators グループに属する Windows ユーザー アカウントを使用すると、開発者とユーザー (機能拡張により) がセキュリティ上の危険にさらされます。 詳細については、次を参照してください。 [Users グループのメンバーとして実行されている](running-as-a-member-of-the-users-group.md)と[アプリケーションのどのユーザー アカウント制御 (UAC) に影響を与える](how-user-account-control-uac-affects-your-application.md)です。  
+ Administrators グループに属する Windows ユーザー アカウントを使用すると、開発者とユーザー (機能拡張により) がセキュリティ上の危険にさらされます。 詳細については、次を参照してください。 [Users グループのメンバーとして実行されている](running-as-a-member-of-the-users-group.md)と[アプリケーションのどのユーザー アカウント制御 (UAC) に影響を与える](how-user-account-control-uac-affects-your-application.md)です。
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>予測の実行側チャネルのガイダンス
+
+識別し、C++ のソフトウェアの予測の実行側チャネルのハードウェア脆弱性を防ぐ方法については、次を参照してください。[予測実行側のチャネルの C++ 開発者ガイド](developer-guidance-speculative-execution.md)です。
+
   
 ## <a name="see-also"></a>関連項目  
  <xref:System.Security>   
