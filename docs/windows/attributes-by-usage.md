@@ -1,30 +1,25 @@
 ---
-title: "使用して属性 |Microsoft ドキュメント"
-ms.custom: 
+title: 使用して属性 |Microsoft ドキュメント
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 682412beda59552edf7fb7929213ef1e6b8e500e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94ac32d1eac8a22603d31e23695540fe23cdd26b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-by-usage"></a>使用法別の属性
 このトピックでは、C++ 言語要素を適用するに従って属性を示します。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[スタンドアロン属性](../windows/stand-alone-attributes.md)|コードの行と同様に動作をしますが、C++ のキーワードについては動作しません。 スタンドアロン属性ステートメントでは、行の終わりにセミコロンが必要です。|  
 |[カスタム属性](../windows/custom-attributes-cpp.md)|メタデータを拡張することができます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 属性リファレンス](../windows/cpp-attributes-reference.md)   
  [概念](../windows/attributed-programming-concepts.md)   
  [グループ別の属性](../windows/attributes-by-group.md)   

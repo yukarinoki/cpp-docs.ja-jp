@@ -1,12 +1,9 @@
 ---
-title: "Module::registerwinrtobject メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: Module::registerwinrtobject メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::RegisterWinRTObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RegisterWinRTObject method
 ms.assetid: a2782c9c-b9c5-4e4b-9c8d-ef513aea20c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 279a661fae0def63443c9a42d2f290b8d23fa2a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 097bf70ebd280d9494ff70ea1d80f53615f3d898
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject メソッド
 他のアプリケーションがそれらに接続できるように、1 つまたは複数の Windows ランタイム オブジェクトを登録します。  
@@ -56,10 +51,10 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 ## <a name="return-value"></a>戻り値  
  正常終了した場合は S_OK、それ以外の場合、エラーの理由を示す CO_E_OBJISREG など hresult 値の操作に失敗しました。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  
   
  **名前空間:** Microsoft::WRL
  
- ## <a name="see-also"></a>参照
+ ## <a name="see-also"></a>関連項目
  [Module クラス](../windows/module-class.md)

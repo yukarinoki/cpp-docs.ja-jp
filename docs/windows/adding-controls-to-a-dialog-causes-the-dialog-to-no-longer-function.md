@@ -1,13 +1,10 @@
 ---
-title: "不要になった関数に、ダイアログ ボックス コントロールをダイアログ ボックスに追加すると、|Microsoft ドキュメント"
-ms.custom: 
+title: 不要になった関数に、ダイアログ ボックス コントロールをダイアログ ボックスに追加すると、|Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - dialog box controls, troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0ec4825419c7a9d3c9bc35151b84c327a03325b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b10c24955e74d08ab570b5b694628f42bb394268
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>コントロールを追加してもダイアログ ボックスに表示されない
 ダイアログ ボックスに、コモン コントロールまたはリッチ エディット コントロールを追加すると、これは表示されません ダイアログ ボックスをテストするとダイアログ ボックス自体は表示されません。  
@@ -68,10 +63,10 @@ ms.lasthandoff: 12/21/2017
 ## <a name="the-fix-for-richedit-controls"></a>リッチ エディット コントロールの修正方法  
  呼び出す必要があります**LoadLibrary**リッチ エディット コントロールのです。 詳細については、次を参照してください。 [MFC での RichEdit 1.0 コントロールの使用](../windows/using-the-richedit-1-0-control-with-mfc.md)、[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)で、 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]、および[リッチ エディット コントロールの概要](../mfc/overview-of-the-rich-edit-control.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ダイアログ エディターのトラブルシューティング](../windows/troubleshooting-the-dialog-editor.md)   
  [ダイアログ エディター](../windows/dialog-editor.md)
 

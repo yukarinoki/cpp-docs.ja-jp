@@ -1,13 +1,10 @@
 ---
-title: "Typedef、Enum、Union、および struct 型の属性 |Microsoft ドキュメント"
-ms.custom: 
+title: Typedef、Enum、Union、および struct 型の属性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union、および Struct 型の属性
 次の属性に適用、 [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)、[構造体](../cpp/struct-cpp.md)、および[enum](../cpp/enumerations-cpp.md) C++ のキーワードです。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |属性|説明|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|使用される、 [switch_type](../windows/switch-type.md)属性、**共用体**です。|  
-|[カスタム](../windows/custom-cpp.md)|独自の属性を定義できます。|  
+|[custom](../windows/custom-cpp.md)|独自の属性を定義できます。|  
 |[export](../windows/export.md)|.Idl ファイルに配置するデータ構造が発生します。|  
 |[first_is](../windows/first-is.md)|転送する最初の配列要素のインデックスを指定します。|  
 |[helpcontext](../windows/helpcontext.md)|コンテキスト ID をユーザーに関する情報を表示、ヘルプ ファイル内のこの要素を指定します。|  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|[カスタム](../windows/custom-cpp.md)|独自の属性を定義できます。|  
+|[custom](../windows/custom-cpp.md)|独自の属性を定義できます。|  
 |[export](../windows/export.md)|.Idl ファイルに配置するデータ構造が発生します。|  
 |[uuid](../windows/uuid-cpp-attributes.md)|クラスまたはインターフェイスの一意の ID を指定します。|  
 |[v1_enum](../windows/v1-enum.md)|指定した列挙型は、既定の 16 ビットではなく、32 ビットのエンティティとして送信するように指示します。|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |属性|説明|  
 |---------------|-----------------|  
-|[カスタム](../windows/custom-cpp.md)|独自の属性を定義できます。|  
+|[custom](../windows/custom-cpp.md)|独自の属性を定義できます。|  
 |[export](../windows/export.md)|.Idl ファイルに配置するデータ構造が発生します。|  
 |[first_is](../windows/first-is.md)|転送する最初の配列要素のインデックスを指定します。|  
 |[last_is](../windows/last-is.md)|転送する最後の配列要素のインデックスを指定します。|  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|ActiveX コントロールを作成します。|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|インターフェイスのエントリを COM マップに追加します。|  
 |[control](../windows/control.md)|ユーザー定義型がコントロールであることを指定します。|  
-|[カスタム](../windows/custom-cpp.md)|独自の属性を定義できます。|  
+|[custom](../windows/custom-cpp.md)|独自の属性を定義できます。|  
 |[db_column](../windows/db-column.md)|行セットに指定された列をバインドします。|  
 |[db_command](../windows/db-command.md)|OLE DB コマンドを作成します。|  
 |[db_param](../windows/db-param.md)|入力または出力パラメーターを持つ指定したメンバー変数を関連付けるし、変数を区切ります。|  
@@ -119,5 +114,5 @@ ms.lasthandoff: 12/21/2017
 |[version](../windows/version-cpp.md)|クラスの複数のバージョン間で特定のバージョンを識別します。|  
 |[vi_progid](../windows/vi-progid.md)|ProgID のバージョンに依存しない形式を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [使用法別の属性](../windows/attributes-by-usage.md)

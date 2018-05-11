@@ -1,13 +1,10 @@
 ---
-title: "定義済みのアクセラレータ キー |Microsoft ドキュメント"
-ms.custom: 
+title: 定義済みのアクセラレータ キー |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - keyboard shortcuts, predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="predefined-accelerator-keys"></a>定義済みのアクセラレータ キー
 Windows アプリケーション プロジェクトの一部として使用できるいくつかの定義済みのアクセラレータ キーがあります。 これらの仮想キーの一部は、Windows 環境用です。 その他の仮想キーは、ブラウザーや Unicode アプリケーションで使用できます。 どのアクセラレータでもこれらのキーを使用できます。  
@@ -89,9 +84,9 @@ Windows アプリケーション プロジェクトの一部として使用で�
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。*  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセラレータ エディター](../windows/accelerator-editor.md)   
  [リソース エディター](../windows/resource-editors.md)

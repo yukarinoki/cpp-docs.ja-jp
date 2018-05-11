@@ -1,13 +1,10 @@
 ---
-title: "safe_cast (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: safe_cast (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ コンポーネント拡張)
 `safe_cast` 操作は、指定された式を指定した型で返します (成功した場合)。失敗した場合は、`InvalidCastException` をスローします。  
@@ -73,9 +68,9 @@ expression
  参照型または値型へのハンドル、値型、参照型または値型への追跡参照として評価される式。  
   
 ### <a name="remarks"></a>コメント  
- `safe_cast`スロー`InvalidCastException`変換できない場合*式*で指定された型に*タイプ id*です。キャッチする`InvalidCastException`を指定して、 [/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)コンパイラ オプション、および try ブロックと catch ステートメントを使用します。  
+ `safe_cast` スロー`InvalidCastException`変換できない場合*式*で指定された型に*タイプ id*です。キャッチする`InvalidCastException`を指定して、 [/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)コンパイラ オプション、および try ブロックと catch ステートメントを使用します。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ### <a name="examples"></a>使用例  
@@ -145,7 +140,7 @@ expression
   
  キャストの詳細については、次を参照してください。[キャスト演算子](../cpp/casting-operators.md)です。  
   
- `safe_cast`該当なし、 **const_cast** (キャスト**const**)。  
+ `safe_cast` 該当なし、 **const_cast** (キャスト**const**)。  
   
  `safe_cast` は cli 名前空間に存在します。  参照してください[プラットフォーム、既定値、および cli 名前空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)詳細についてはします。  
   
@@ -155,7 +150,7 @@ expression
   
 -   [方法: C++/CLI で safe_cast を使用する](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
 
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -193,5 +188,5 @@ int main() {
 Caught expected exception  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

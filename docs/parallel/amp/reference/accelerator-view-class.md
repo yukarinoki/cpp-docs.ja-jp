@@ -1,12 +1,9 @@
 ---
-title: "accelerator_view クラス |Microsoft ドキュメント"
-ms.custom: 
+title: accelerator_view クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view クラス
 C ++. AMP のデータ並列アクセラレータでの仮想デバイスの抽象化を表します。  
@@ -101,7 +96,7 @@ class accelerator_view;
   
  `accelerator_view`オブジェクトは、2 つのいずれかを持つことができます[queuing_mode 列挙](concurrency-namespace-enums-amp.md#queuing_mode)状態です。 キュー モードが `immediate` である場合、`copy` および `parallel_for_each` のようなコマンドが呼び出し元に戻るとすぐに対応するアクセラレータ デバイスに送信されます。 キュー モードが `deferred` の場合、このようなコマンドは `accelerator_view` オブジェクトに対応するコマンド キューに置かれます。 コマンドは、`flush()` が呼び出されるまでデバイスに実際に送信されません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** amprt.h  
   
  **名前空間:** Concurrency  
@@ -338,5 +333,5 @@ void wait();
 ### <a name="return-value"></a>戻り値  
   
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

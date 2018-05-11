@@ -1,24 +1,22 @@
 ---
-title: "Visual Studio で C++ Linux プロジェクトを構成する | Microsoft Docs"
-ms.custom: 
+title: Visual Studio で C++ Linux プロジェクトを構成する | Microsoft Docs
+ms.custom: ''
 ms.date: 11/15/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: Linux
+ms.topic: conceptual
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 893194b3e08b56e4abe892033193b167b46dab27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトの構成
 このトピックでは、Visual Studio Linux プロジェクトを構成する方法について説明します。 CMake Linux プロジェクトに関する詳細については、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。

@@ -1,13 +1,10 @@
 ---
-title: "SafeNotEquals |Microsoft ドキュメント"
-ms.custom: 
+title: SafeNotEquals |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeNotEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeNotEquals function
 ms.assetid: 032e45a8-4159-4b55-b7cc-ecd27f4e4788
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1d4449d66f82db73b39c7b3be3ce85ba92ab88d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61104cd55ed349131fc884951da77455aa9ca978
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safenotequals"></a>SafeNotEquals
 2 つの数値が等しくないかどうかを判断します。  
@@ -49,7 +44,7 @@ inline bool SafeNotEquals (
  比較する 2 番目の数値。 U 型です。 これでなければなりません  
   
 ## <a name="return-value"></a>戻り値  
- `true`場合`t`と`u`が等しくない。 それ以外の場合`false`です。  
+ `true` 場合`t`と`u`が等しくない。 それ以外の場合`false`です。  
   
 ## <a name="remarks"></a>コメント  
  メソッドは強化`!=`ため`SafeNotEquals`2 つの異なる型の数値を比較することができます。  
@@ -61,12 +56,12 @@ inline bool SafeNotEquals (
   
  テンプレート型 T および U の詳細については、次を参照してください。 [SafeInt 関数](../windows/safeint-functions.md)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** safeint.h  
   
  **Namespace:** Microsoft::Utilities  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SafeInt 関数](../windows/safeint-functions.md)   
  [SafeInt ライブラリ](../windows/safeint-library.md)   
  [SafeInt クラス](../windows/safeint-class.md)   

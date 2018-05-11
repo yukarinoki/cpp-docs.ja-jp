@@ -1,12 +1,9 @@
 ---
-title: "マクロ (C/C++) |Microsoft ドキュメント"
-ms.custom: 
+title: マクロ (C/C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>マクロ (C/C++)
-プリプロセッサ ディレクティブではないすべての行でマクロを展開の前処理 (がない行、  **#** 最初の空白以外の文字として) の一部としてがスキップされない一部のディレクティブの部分で、条件付きコンパイルします。 "条件付きコンパイル" ディレクティブは、定数式または識別子をテストすることによってソース ファイルの一部のコンパイルを抑制して、コンパイラに渡されたテキスト ブロックおよびプリプロセス時にソース ファイルから削除されたテキスト ブロックを判断できるようにします。  
+プリプロセッサ ディレクティブではないすべての行でマクロを展開の前処理 (がない行、 **#** 最初の空白以外の文字として) の一部としてがスキップされない一部のディレクティブの部分で、条件付きコンパイルします。 "条件付きコンパイル" ディレクティブは、定数式または識別子をテストすることによってソース ファイルの一部のコンパイルを抑制して、コンパイラに渡されたテキスト ブロックおよびプリプロセス時にソース ファイルから削除されたテキスト ブロックを判断できるようにします。  
   
  `#define` ディレクティブは、通常、有意な識別子を定数、キーワード、および一般的に使用されるステートメントや式に関連付けるために使用されます。 定数を表す識別子は、"記号定数" または "マニフェスト定数" と呼ばれることがあります。 ステートメントまたは式を表す識別子は "マクロ" と呼ばれます。 このプリプロセッサのドキュメントでは、"マクロ" という用語のみ使用されます。  
   
@@ -48,5 +43,5 @@ ms.lasthandoff: 02/23/2018
   
 -   [定義済みマクロ](../preprocessor/predefined-macros.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)

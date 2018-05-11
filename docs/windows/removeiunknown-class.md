@@ -1,30 +1,25 @@
 ---
-title: "RemoveIUnknown クラス |Microsoft ドキュメント"
-ms.custom: 
+title: RemoveIUnknown クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 dev_langs:
 - C++
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b62362004f0528b16ef3dac7cbe601b8b85ce3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -50,7 +45,7 @@ class RemoveIUnknown : public T;
 ## <a name="remarks"></a>コメント  
  等価の型を作成、 `IUnknown`-ベースの型が、非仮想`QueryInterface`、 `AddRef`、および`Release`メンバー関数。  
   
- 既定では、COM メソッドを提供仮想`QueryInterface`、 `AddRef`、およびメソッドをリリースします。 ただし、`ComPtr`仮想メソッドのオーバーヘッドは必要ありません。 `RemoveIUnknown`プライベートな非仮想を提供することでそのオーバーヘッドを排除`QueryInterface`、 `AddRef`、および`Release`メソッドです。  
+ 既定では、COM メソッドを提供仮想`QueryInterface`、 `AddRef`、およびメソッドをリリースします。 ただし、`ComPtr`仮想メソッドのオーバーヘッドは必要ありません。 `RemoveIUnknown` プライベートな非仮想を提供することでそのオーバーヘッドを排除`QueryInterface`、 `AddRef`、および`Release`メソッドです。  
   
 ## <a name="members"></a>メンバー  
   
@@ -65,10 +60,10 @@ class RemoveIUnknown : public T;
   
  `RemoveIUnknown`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

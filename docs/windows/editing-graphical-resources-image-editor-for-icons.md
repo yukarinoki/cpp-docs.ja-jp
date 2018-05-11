@@ -1,13 +1,10 @@
 ---
-title: "グラフィカル リソース (アイコン用イメージ エディター) の編集 |Microsoft ドキュメント"
-ms.custom: 
+title: グラフィカル リソース (アイコン用イメージ エディター) の編集 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ffdc026c53a9f26e68d9f0e8626ebb03fac6ffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>グラフィカル リソースの編集 (アイコン用イメージ エディター)
 グラフィカル リソース、アプリケーション用に定義した画像が表示されます。 フリーハンドの描画または図形を使用して描画できます。 編集、反転、またはサイズ変更、イメージの一部を選択またはイメージの選択した一部のカスタム ブラシを作成してそのブラシで描画します。 イメージのプロパティを定義する、異なる形式で画像を保存し、イメージを別の 1 つの形式に変換できます。  
@@ -73,10 +68,10 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  イメージ エディターを使用すると、32 ビット イメージを表示できます。ただし、編集はできません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)   
 

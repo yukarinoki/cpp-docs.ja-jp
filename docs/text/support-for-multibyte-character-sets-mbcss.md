@@ -1,13 +1,10 @@
 ---
-title: "マルチバイト文字セット (Mbcs) のサポート |Microsoft ドキュメント"
-ms.custom: 
+title: マルチバイト文字セット (Mbcs) のサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0381b570cbf9e900d44ac075876e63b6be14a8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>マルチバイト文字セット (MBCS) のサポート
 マルチバイト文字セット (MBCS: Multibyte Character Set) は、日本語や中国語など、1 バイト文字では表現できない文字セットをサポートするニーズに対する古いアプローチです。 新規開発を行う場合は、エンド ユーザーに対して表示されることのないシステム文字列を除き、すべてのテキスト文字列で Unicode 文字列を使用する必要があります。 MBCS は、レガシ テクノロジであり、新規開発にはお勧めしません。  
@@ -56,10 +51,10 @@ ms.lasthandoff: 12/21/2017
  C のランタイム ライブラリおよび MFC は、1 バイト文字、MBCS、および Unicode でのプログラミングをそれぞれサポートしています。 1 バイトの文字列に処理できる、`str`と対応するファミリのランタイム関数、MBCS 文字列に処理できる`_mbs`関数、および Unicode 文字列が対応するを持つ処理*wcs*関数。 MFC クラスのメンバー関数では、状況に応じて、通常の `str` ファミリの関数、MBCS の関数、または Unicode の関数に割り当てる移植性の高いランタイム関数を使用しています。  
   
  MBCS と Unicode の移植性  
- Tchar.h ヘッダー ファイルを使用することにより、同じソースから 1 バイト、MBCS、および Unicode の各アプリケーションをビルドできます。 Tchar.h の付いたマクロが定義されて*_tcs*にマップする`str`、 `_mbs`、または*wcs*機能を必要に応じて、します。 MBCS をビルドするシンボルを定義する**_MBCS**です。 Unicode をビルドするシンボルを定義する**_UNICODE**です。 既定では、 **_MBCS** MFC アプリケーションに対して定義されています。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)です。  
+ Tchar.h ヘッダー ファイルを使用することにより、同じソースから 1 バイト、MBCS、および Unicode の各アプリケーションをビルドできます。 Tchar.h の付いたマクロが定義されて *_tcs*にマップする`str`、 `_mbs`、または*wcs*機能を必要に応じて、します。 MBCS をビルドするシンボルを定義する **_MBCS**です。 Unicode をビルドするシンボルを定義する **_UNICODE**です。 既定では、 **_MBCS** MFC アプリケーションに対して定義されています。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)です。  
   
 > [!NOTE]
->  両方を定義する場合の動作が定義されていない**_UNICODE**と**_MBCS**です。  
+>  両方を定義する場合の動作が定義されていない **_UNICODE**と **_MBCS**です。  
   
  Mbctype.h ヘッダー ファイルおよび Mbstring.h ヘッダー ファイルでは、MBCS 固有の関数とマクロが定義されています。この関数とマクロは状況に応じて必要になります。 たとえば `_ismbblead` は、文字列の特定のバイトが先行バイトかどうかを示します。  
   
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [バイト幅の移植性に対する汎用テキスト マップの詳細します。](../text/generic-text-mappings-in-tchar-h.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テキストと文字列](../text/text-and-strings-in-visual-cpp.md)   
  [Visual C++ における MBCS のサポート](../text/mbcs-support-in-visual-cpp.md)

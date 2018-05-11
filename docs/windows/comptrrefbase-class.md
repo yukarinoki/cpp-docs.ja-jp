@@ -1,12 +1,9 @@
 ---
-title: "ComPtrRefBase クラス |Microsoft ドキュメント"
-ms.custom: 
+title: ComPtrRefBase クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ComPtrRefBase class
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 071598c83086afe12e1d19ef541dbfb3d0dbc55a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13744a1629ede5575dc992ea15b90e22961a8570
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase クラス
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -64,17 +59,17 @@ class ComPtrRefBase;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[ComPtrRefBase::ptr_ データ メンバー](../windows/comptrrefbase-ptr-data-member.md)|現在のテンプレート パラメーターで指定された型へのポインター。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `ComPtrRefBase`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

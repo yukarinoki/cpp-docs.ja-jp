@@ -1,12 +1,9 @@
 ---
-title: "data_seg |Microsoft ドキュメント"
-ms.custom: 
+title: data_seg |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - data_seg_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - data_seg pragma
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23598ba98d35e2a32832437111ebf9f852e1259
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dataseg"></a>data_seg
 初期化された変数が格納される、.obj ファイルのデータ セグメントを指定します。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 02/23/2018
  *"segment-name"*(optional)  
  引数の名前。 使用すると**pop**、スタックがポップされますと*セグメント名*アクティブなセグメント名になります。  
   
- *"segment-class"* (optional)  
+ *「セグメント クラス」* (省略可能)  
  Version 2.0 未満の C++ との互換性のために残されています。 これは無視されます。  
   
 ## <a name="example"></a>例  
@@ -88,5 +83,5 @@ int main() {
   
  Const 変数のセクションを指定することもできます ([const_seg](../preprocessor/const-seg.md))、初期化されていないデータ ([bss_seg](../preprocessor/bss-seg.md))、および関数 ([code_seg](../preprocessor/code-seg.md))。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

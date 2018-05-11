@@ -1,31 +1,26 @@
 ---
-title: "スタンドアロン属性 |Microsoft ドキュメント"
-ms.custom: 
+title: スタンドアロン属性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standalone attributes
 - attributes [C++], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3098fec700a498f73a86f8e1fd40609628a77d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59846b1ca031cc02c85cb6ace23f96e8c5cc9f37
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="stand-alone-attributes"></a>スタンドアロン属性
 スタンドアロン属性は C++ キーワードについては動作しませんが、行のコードのようにします。 スタンドアロン属性ステートメントでは、行の終わりにセミコロンが必要です。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 |属性|説明|  
 |---------------|-----------------|  
 |[cpp_quote](../windows/cpp-quote.md)|生成されるヘッダー ファイルに、引用符なしの指定した文字列を出力します。|  
-|[カスタム](../windows/custom-cpp.md)|独自の属性を定義できます。|  
+|[custom](../windows/custom-cpp.md)|独自の属性を定義できます。|  
 |[db_command](../windows/db-command.md)|OLE DB コマンドを作成します。|  
 |[emitidl](../windows/emitidl.md)|すべての後続の IDL 属性が処理して生成された .idl ファイル内に配置するかどうかを判断します。|  
 |[idl_module](../windows/idl-module.md)|DLL のエントリ ポイントを指定します。|  
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/21/2017
 |[no_injected_text](../windows/no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|  
 |[pragma](../windows/pragma.md)|生成された .idl ファイルに、引用符なしの指定した文字列を出力します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [使用法別の属性](../windows/attributes-by-usage.md)

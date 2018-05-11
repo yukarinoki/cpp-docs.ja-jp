@@ -1,30 +1,25 @@
 ---
-title: "メニュー コマンドのプロパティ |Microsoft ドキュメント"
-ms.custom: 
+title: メニュー コマンドのプロパティ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="menu-command-properties"></a>メニュー コマンドのプロパティ
 次の表は、メニュー コマンドを選択したときに [[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window) に表示されるメニュー プロパティに従って編成されています。 リストはアルファベット順になっていますが、[プロパティ] ウィンドウではプロパティをカテゴリ別に表示することもできます。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 |**Break**|次のいずれかの値を指定します。<br /><br /> -   **None** (既定): 区切りはありません。<br />-   **[列]**: 静的なメニューの場合は、この値を選択するとメニュー コマンドが新しい行に置かれます。 ショートカット メニューの場合は、この値を選択すると、列の区切りがない新しい列にメニュー コマンドが置かれます。 このプロパティを設定した場合に影響を受けるのは、メニュー エディター内のメニューの外観ではなく、実行時のメニューの外観だけです。<br />-   **[バー]**: [列] と同じですが、ショートカット メニューの場合は、この値を選択すると新しい列と古い列が縦線で区切られます。 このプロパティを設定した場合に影響を受けるのは、メニュー エディター内のメニューの外観ではなく、実行時のメニューの外観だけです。|  
 |**[キャプション]**|メニュー コマンドのラベルとなるテキスト (メニュー名)。 メニュー コマンドのキャプションのうちの 1 文字をニーモニック キーにするには、その文字の前にアンパサンド (&) を付けます。|  
 |**チェック済み**|[True] を選択すると、メニュー コマンドが既定でオンになります。 ブール型です。 既定値は False です。|  
-|**有効**|**[False]**を選択すると、メニュー項目が無効になります。|  
+|**有効**|**[False]** を選択すると、メニュー項目が無効になります。|  
 |**淡色表示**|[True] を選択すると、メニュー コマンドが既定で淡色表示され、無効になります。 ブール型です。 既定値は False です。|  
 |**[Help]**|メニュー項目が右寄せになります。 たとえば、どの Windows アプリケーションでも、 **[ヘルプ]** メニュー コマンドは常に右端に表示されます。 このプロパティを設定したメニュー項目は、メニューの最後の右端に表示されます。 このプロパティはトップレベルの項目に適用されます。 既定値は **False**です。|  
 |**ID**|ヘッダー ファイルに定義されているシンボル。 値は、シンボル、整数、または二重引用符で囲まれた文字列です。 [[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window) に選択用のドロップダウン リストが用意されていなくても、すべてのエディターで利用可能なシンボルを使用できます。|  
@@ -46,8 +41,8 @@ ms.lasthandoff: 12/21/2017
   
 
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニュー エディター](../windows/menu-editor.md)

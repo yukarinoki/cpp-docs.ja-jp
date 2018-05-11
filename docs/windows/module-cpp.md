@@ -1,13 +1,10 @@
 ---
-title: "モジュール (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: モジュール (C++) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>module (C++)
 .idl ファイルのライブラリ ブロックを定義します。  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  ライブラリ ブロックに割り当てるバージョン番号です。 既定値は 1.0 です。  
   
  `uuid`  
- ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 識別子 *__uuidof(* libraryname **)***を使用して、ライブラリ ブロックの***uuid**を取得する必要がある場合があります。  
+ ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 取得する必要があります、 *uuid* 、識別子を使用して行うことができます、ライブラリ ブロックの **_ _uuidof (***libraryname***)** です。  
   
  **lcid**  
  ローカリゼーション パラメーターです。 詳細については、「 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 」を参照してください。  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
  ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) 」の MIDL 属性に関する説明を参照してください。  
   
  ***custom***  (省略可能)  
- 1 つ以上の属性です。これは、 [custom](../windows/custom-cpp.md) 属性と似ています。 `custom` の最初のパラメーターがこの属性の GUID です。 例:  
+ 1 つ以上の属性です。これは、 [custom](../windows/custom-cpp.md) 属性と似ています。 `custom` の最初のパラメーターがこの属性の GUID です。 例えば:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
@@ -174,7 +169,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -187,7 +182,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [クラス属性](../windows/class-attributes.md)   
  [スタンドアロン属性](../windows/stand-alone-attributes.md)   

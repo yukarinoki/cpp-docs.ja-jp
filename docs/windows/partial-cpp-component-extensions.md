@@ -1,13 +1,10 @@
 ---
-title: "partial (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: partial (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - partial_CPP
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd2debe47b0c60907c1a75f4e8b96d227468a345
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71c0fc9739e7ef8e1e68c5678ce56fcec4a250c1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="partial--c-component-extensions"></a>Partial (C++ コンポーネント拡張)
 `partial`キーワードとは独立して、および異なるファイル内に作成される同じ ref クラスのさまざまな部分を有効にします。  
@@ -78,11 +73,11 @@ class-key identifier {
   
  使用する方法についての詳細、`partial`キーワードを参照してください[部分クラス (C + + CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
  (この言語機能は適用されませんを共通言語ランタイム。)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [部分クラス (C + + CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)

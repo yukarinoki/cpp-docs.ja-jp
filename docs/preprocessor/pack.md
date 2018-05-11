@@ -1,12 +1,9 @@
 ---
-title: "パック |Microsoft ドキュメント"
-ms.custom: 
+title: パック |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - pack_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6c29c31cae2b7de59d4db5ed6546ad4eda6baecf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pack"></a>pack
 構造体メンバー、共用体メンバー、およびクラス メンバーのパッキング アラインメントを指定します。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 ```  
   
 ## <a name="remarks"></a>コメント  
- クラスをパッキングすると、そのメンバーはメモリ内で互いの直後に配置されます。そのため、一部またはすべてのメンバーがターゲット アーキテクチャの既定のアラインメントより小さい境界内にアラインされる場合があります。 `pack` では、データ宣言レベルで制御できます。 これは、コンパイラ オプションは異なります[/Zp](../build/reference/zp-struct-member-alignment.md)、モジュール レベルの制御のみを提供します。 `pack` は、プラグマが参照された後の最初の `struct`、`union`、または `class` 宣言で有効になります。 `pack` は、定義への影響はありません。 呼び出す`pack`引数セットなしで`n`コンパイラ オプションで設定された値に**/Zp**です。 コンパイラ オプションを設定しない場合、既定値は 8 になります。  
+ クラスをパッキングすると、そのメンバーはメモリ内で互いの直後に配置されます。そのため、一部またはすべてのメンバーがターゲット アーキテクチャの既定のアラインメントより小さい境界内にアラインされる場合があります。 `pack` では、データ宣言レベルで制御できます。 これは、コンパイラ オプションは異なります[/Zp](../build/reference/zp-struct-member-alignment.md)、モジュール レベルの制御のみを提供します。 `pack` は、プラグマが参照された後の最初の `struct`、`union`、または `class` 宣言で有効になります。 `pack` は、定義への影響はありません。 呼び出す`pack`引数セットなしで`n`コンパイラ オプションで設定された値に **/Zp**です。 コンパイラ オプションを設定しない場合、既定値は 8 になります。  
   
  構造体の配置を変更すると、メモリの領域はそれほど使用されていなくても、パフォーマンスが低下したり、アラインメントされていないアクセスについてハードウェアで生成された例外を受け取る場合があります。  使用してこの例外の動作を変更することができます[SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621)です。  
   
@@ -127,5 +122,5 @@ int main() {
 #pragma pack(show)   // C4810  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

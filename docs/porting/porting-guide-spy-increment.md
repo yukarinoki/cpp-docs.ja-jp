@@ -1,27 +1,22 @@
 ---
-title: "移植のガイド: Spy++ | Microsoft ドキュメント"
-ms.custom: 
+title: '移植のガイド: Spy++ | Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 この移植のケース スタディは、一般的な移植プロジェクトのアイデア、発生する可能性がある問題の種類、および移植の問題に対応するための一般的なヒントとコツを理解できるように設計されています。 プロジェクトの移植に関するエクスペリエンスは、コードの仕様により大きく依存するため、移植をわかりやすく案内するためのものではありません。  
@@ -401,7 +396,7 @@ __pragma(warning(default : 4456))
   
 ```  
   
- 次の警告には、いくらかのコードの変更が必要です。 Win32 API GetVersion (および GetVersionEx) は廃止されました。  
+ 次の警告には、いくらかのコードの変更が必要です。 Win32 API GetVersion (および GetVersionEx) は非推奨とされます。  
   
 ```Output  
 warning C4996: 'GetVersion': was declared deprecated  
@@ -654,7 +649,7 @@ strFace.ReleaseBuffer();
   
  これらのテクニックを使用して、Secure CRT 関数を使用するようコードを変換するのに、約半日かかりました。 テンプレートのオーバー ロードではなく、サイズのパラメーターを手動で追加するよう選択した場合は、おそらく時間が 2 ～ 3 倍多くかかります。  
   
-##  <a name="deprecated_forscope"></a> 手順 13. /Zc:forScope- が非推奨になる  
+##  <a name="deprecated_forscope"></a> 手順 13. /Zc:forScope- が非推奨とされます  
  Visual C++ 6.0 以降、コンパイラは現在の標準に準拠し、ループで宣言される変数のスコープがループのスコープに制限されています。 コンパイラ オプション [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**プロジェクトのプロパティのループのスコープの強制準拠**) は、これがエラーとして報告されるかどうかを制御します。 準拠するようコードを更新して、ループのすぐ外側に宣言を追加する必要があります。 コードを変更しなくて済むように、C++ プロジェクトのプロパティの [言語] セクションで、設定を **[いいえ (/Zc:forScope-)]** に変更できます。 ただし、**/Zc:forScope-** はこれ以降の Visual C++ のリリースで削除される可能性があるため、最終的には標準に準拠するようにコードを変更する必要があります。  
   
  これらの問題は、比較的簡単に解決できますが、コードによっては、大量のコードに影響する可能性があります。 一般的な問題を次に示します。  

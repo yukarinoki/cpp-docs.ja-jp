@@ -1,13 +1,10 @@
 ---
-title: "ランタイム プラットフォームのコンポーネントの拡張機能 |Microsoft ドキュメント"
-ms.custom: 
+title: ランタイム プラットフォームのコンポーネントの拡張機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>ランタイム プラットフォームのコンポーネントの拡張機能
 Visual C++ には、ランタイム プラットフォームに対するプログラミングに役立つ言語拡張が用意されています。 使用する C + + CX、ユニバーサル Windows プラットフォーム アプリとネイティブ コードにコンパイルされるコンポーネントをプログラミングできます。 C + を使用して、Windows ランタイムの COM インターフェイスに対して直接プログラミングしてユニバーサル Windows プラットフォーム アプリを作成できますが、+ CX、コンス トラクター、例外、およびその他の最新の C++ プログラミングの表現方法で操作することができます。 .NET プラットフォームでマネージ実行環境での C++ プログラミングを有効にするを使用することが C + + CLI です。  
@@ -135,6 +130,6 @@ Visual C++ には、ランタイム プラットフォームに対するプロ�
 |[#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md)|外部アセンブリをインポートします。|  
 |[XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)|使用して XML ベースのコード ドキュメントについて説明します[/doc (ドキュメント コメントの処理) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET プログラミング C + +/CLI (Visual C)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)

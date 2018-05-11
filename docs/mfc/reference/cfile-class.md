@@ -556,8 +556,8 @@ virtual BOOL Open(
   
 |`pError`|エラーが発生しました|戻り値|CFileException コンテンツ|  
 |--------------|------------------------|------------------|----------------------------|  
-|**NULL**|×|**場合は TRUE。**|N/A|  
-|ポインター `CFileException`|×|**場合は TRUE。**|変更なし|  
+|**NULL**|いいえ|**場合は TRUE。**|N/A|  
+|ポインター `CFileException`|いいえ|**場合は TRUE。**|変更なし|  
 |**NULL**|[はい]|**FALSE**|N/A|  
 |ポインター `CFileException`|[はい]|**FALSE**|エラーを記述する初期化|  
   

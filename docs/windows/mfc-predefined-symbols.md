@@ -1,31 +1,26 @@
 ---
-title: "MFC の定義済みシンボル |Microsoft ドキュメント"
-ms.custom: 
+title: MFC の定義済みシンボル |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC symbols
 - symbols, MFC
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fcee2cff1867fc57cc15914c304cd121954d9b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mfc-predefined-symbols"></a>MFC の定義済みシンボル
 MFC プロジェクトは、常に windows をサポートするいくつかのヘッダー ファイルをインクルードします。 使用して追加するには # StdAfx.h ファイルの include ステートメント。  
@@ -221,9 +216,9 @@ MFC プロジェクトは、常に windows をサポートするいくつかの�
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|  
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  MFC  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [定義済みシンボル Id](../windows/predefined-symbol-ids.md)   
  [シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)

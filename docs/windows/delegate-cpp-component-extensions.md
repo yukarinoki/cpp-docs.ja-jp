@@ -1,13 +1,10 @@
 ---
-title: "delegate (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: delegate (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73d40bb33509f89273b37f7704cd1922a8d5adc2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ コンポーネント拡張)
 関数ポインターを表す型を宣言します。  
@@ -72,7 +67,7 @@ delegate-type-identifier
 ### <a name="remarks"></a>コメント  
  使用して、*デリゲート型識別子*デリゲートと同じプロトタイプを持つイベントを宣言します。 詳細については、次を参照してください。[デリゲート (C + + CX)](../cppcx/delegates-c-cx.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
@@ -129,7 +124,7 @@ function_declaration
   
 -   [汎用デリゲート (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -208,5 +203,5 @@ in func2 10
 in static func3 11  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

@@ -2,27 +2,22 @@
 title: デスクトップ アプリケーション (Visual C) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C)
 A*デスクトップ アプリケーション*C++ では、Windows Api といずれかの実行ウィンドウまたはシステム コンソールの完全なセットにアクセスできる、ネイティブ アプリケーションです。 C++ ではデスクトップ アプリケーションは、(ただし、Windows XP が不要になった公式にサポートされていて、それ以降に導入された多くの Windows Api) から Windows 10 の Windows XP で実行できます。   デスクトップ アプリケーションとは異なります、ユニバーサル Windows プラットフォーム (UWP) アプリ、Windows 10 を実行している pc と XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できます。 詳細についてはデスクトップとします。UWP アプリケーションを参照してください[、テクノロジの選択](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)です。  

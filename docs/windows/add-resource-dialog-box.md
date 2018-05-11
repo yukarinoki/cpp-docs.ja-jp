@@ -1,13 +1,10 @@
 ---
-title: "リソースの追加 ダイアログ ボックス |Microsoft ドキュメント"
-ms.custom: 
+title: リソースの追加 ダイアログ ボックス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.insertresource
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c420a1d72aa4ceca7d71840fcccb451b6e0aba0f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="add-resource-dialog-box"></a>[リソースの追加] ダイアログ ボックス
 このダイアログ ボックスは、C++ Windows デスクトップ アプリケーション プロジェクトにリソースを追加するときに使用します。  
@@ -51,8 +46,8 @@ ms.lasthandoff: 02/14/2018
  **カスタム**  
  開く、[新規カスタム リソース ダイアログ ボックス](../windows/new-custom-resource-dialog-box.md)カスタム リソースを作成できます。 カスタム リソースを編集するには、バイナリ エディターを使用する必要があります。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: リソースを作成する](../windows/how-to-create-a-resource.md)

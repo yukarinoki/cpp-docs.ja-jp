@@ -1,12 +1,9 @@
 ---
-title: "RuntimeClass クラス |Microsoft ドキュメント"
-ms.custom: 
+title: RuntimeClass クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass クラス
 指定されたインターフェイスを継承し、指定した Windows ランタイム、クラシック COM、および弱い参照のサポートを提供する WinRT または COM クラスを表します。  
@@ -48,7 +43,7 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 IUnknown、IInspectable またはその他のインターフェイスによって制御されるを超えてインターフェイスのリスト オブジェクトに実装されて[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)です。 オブジェクトをアジャイルにして、IMarshal を実装するために、特に Microsoft::WRL::FtmBase から派生させるのには、他のクラスを一覧に可能性がありますもします。
   
 ## <a name="members"></a>メンバー  
-`RuntimeClassInitialize`MakeAndInitialize テンプレート関数は、オブジェクトを構築するために使用する場合は、オブジェクトを初期化する関数。 初期化に失敗した場合、オブジェクトが正常に初期化されている場合は S_OK、または COM エラー コードを返します。 COM エラー コードは、MakeAndInitialize の戻り値として伝達されます。 Make テンプレート関数が、オブジェクトを構築するために使用する場合に、RuntimeClassInitialize メソッドが呼び出されないことに注意してください。
+`RuntimeClassInitialize` MakeAndInitialize テンプレート関数は、オブジェクトを構築するために使用する場合は、オブジェクトを初期化する関数。 初期化に失敗した場合、オブジェクトが正常に初期化されている場合は S_OK、または COM エラー コードを返します。 COM エラー コードは、MakeAndInitialize の戻り値として伝達されます。 Make テンプレート関数が、オブジェクトを構築するために使用する場合に、RuntimeClassInitialize メソッドが呼び出されないことに注意してください。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター  
   
@@ -60,10 +55,10 @@ IUnknown、IInspectable またはその他のインターフェイスによっ�
 ## <a name="inheritance-hierarchy"></a>継承階層  
 これは、実装の詳細です。
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
 **ヘッダー:** implements.h  
   
 **名前空間:** Microsoft::WRL  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)

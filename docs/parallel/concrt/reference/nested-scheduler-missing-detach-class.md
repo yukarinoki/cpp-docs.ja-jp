@@ -1,12 +1,9 @@
 ---
-title: "nested_scheduler_missing_detach クラス |Microsoft ドキュメント"
-ms.custom: 
+title: nested_scheduler_missing_detach クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - nested_scheduler_missing_detach
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fdcc96de9e691d71a2ceaf36c87f843e5b4276
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 26027693209bc5b4687686efeae5d190ed374607
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach クラス
 このクラスは、`CurrentScheduler::Detach` オブジェクトの `Attach` メソッドによって別のスケジューラにアタッチされているコンテキストで `Scheduler` メソッドが呼び出されなかったことを、同時実行ランタイムが検出した場合にスローされる例外を表します。  
@@ -54,7 +49,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
  `nested_scheduler_missing_detach`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** concrt.h  
   
  **名前空間:** concurrency  
@@ -73,6 +68,6 @@ nested_scheduler_missing_detach() throw();
  `_Message`  
  エラーの説明メッセージ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [Scheduler クラス](scheduler-class.md)

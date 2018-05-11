@@ -1,13 +1,10 @@
 ---
-title: "線または閉じた図形 (アイコン用イメージ エディター) を描画 |Microsoft ドキュメント"
-ms.custom: 
+title: 線または閉じた図形 (アイコン用イメージ エディター) を描画 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Image editor [C++], drawing lines
 - shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c2f5169c6340b756c31e1986e46b52f48b4edd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e2defbde7963c6e58cdfe3f4a25ea550ad88e5f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>線または閉じた図形の描画 (アイコン用イメージ エディター)
 線を描画用イメージ エディターのツールし、閉じた図形のすべてが同じ方法で作業します。 1 つの時点でカーソルを配置し、別にドラッグします。 線、これらのポイントは、エンドポイントです。 閉じた図形は、これらのポイントは、図を囲む四角形の角を反対です。  
@@ -63,11 +58,11 @@ ms.lasthandoff: 12/21/2017
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
   
- 必要条件  
+ 要件  
   
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
  [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)   

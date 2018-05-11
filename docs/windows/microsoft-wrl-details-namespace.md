@@ -1,28 +1,23 @@
 ---
-title: "Microsoft::WRL::Details Namespace |Microsoft ドキュメント"
-ms.custom: 
+title: Microsoft::WRL::Details Namespace |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a038509912c659cc820b73f16210ce874427112
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 名前空間
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -76,7 +71,7 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="enumerations"></a>列挙  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[AsyncStatusInternal 列挙型](../windows/asyncstatusinternal-enumeration.md)|非同期操作の状態の内部列挙値の間のマッピングを指定し、 **Windows::Foundation::AsyncStatus**列挙します。|  
   
@@ -90,11 +85,11 @@ namespace Microsoft::WRL::Details;
 |[Swap 関数 (Windows ランタイム C++ テンプレート ライブラリ)](../windows/swap-function-windows-runtime-cpp-template-library.md)|指定された 2 つの引数の値を交換します。|  
 |[TerminateMap 関数](../windows/terminatemap-function.md)|指定されたモジュールでクラス ファクトリを終了します。|  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** async.h、client.h、corewrappers.h、event.h、ftm.h、implements.h、internal.h、module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::wrl Namespace](../windows/microsoft-wrl-namespace.md)   
  [Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)

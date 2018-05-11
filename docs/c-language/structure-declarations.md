@@ -1,13 +1,10 @@
 ---
-title: "構造体宣言 | Microsoft Docs"
-ms.custom: 
+title: 構造体宣言 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-declarations"></a>構造体宣言
 "構造体宣言" では、型に名前を付け、異なる型を持つことのできる変数値のシーケンス (構造体の "メンバー" または "フィールド" と呼びます) を指定します。 "タグ" と呼ばれる省略可能な識別子で構造体の型に名前を付けると、その後はタグを使用してその構造体型を参照できます。 構造体型の変数は、その型で定義されているシーケンス全体を保持します。 C の構造体は、他の言語で "レコード" と呼ばれる型に似ています。  
   
 ## <a name="syntax"></a>構文  
  *struct-or-union-specifier*:  
- *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
+ *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
   
  *struct-or-union identifier*  
   

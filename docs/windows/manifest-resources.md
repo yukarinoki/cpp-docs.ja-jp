@@ -1,31 +1,26 @@
 ---
-title: "マニフェスト リソース |Microsoft ドキュメント"
-ms.custom: 
+title: マニフェスト リソース |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifest resources
 - resources [Visual Studio], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 56a41a7901e41f4c76fbb9fcbf5930ec97c3b866
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8df7bf266bae25bd6b898012a6bad10a3d10f81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="manifest-resources"></a>マニフェスト リソース
 マニフェスト リソースは、アプリケーションで使用される依存関係を記述する XML ファイルです。 たとえば Visual Studio では、MFC ウィザードで生成されたマニフェスト ファイルで、アプリケーションがバージョン 5.0 と 6.0 のどちらの Windows コモン コントロール DLL を使用するかを定義します。  
@@ -55,9 +50,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="limitations"></a>制限事項  
  使用できるマニフェスト リソースは 1 つのモジュールにつき 1 つだけです。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コントロール](../mfc/controls-mfc.md)   
  [リソース ファイルの操作](../windows/working-with-resource-files.md)

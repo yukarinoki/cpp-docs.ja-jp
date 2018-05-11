@@ -1,13 +1,10 @@
 ---
-title: "方法: コピー中に、言語またはリソースの条件を変更する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: コピー中に、言語またはリソースの条件を変更する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.changing
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Language property
 - condition property of resource
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3655366e8851494482e628b9c260c796df3f64bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>方法: コピー時におけるリソースの言語または条件を変更する
 リソースのコピー時に、リソースの言語プロパティ、条件プロパティ、またはその両方を変更できます。  
@@ -48,7 +43,7 @@ IDD_AboutBox (Finnish - XX33)
   
 2.  選択**コピーの挿入**ショートカット メニューからです。  
   
-3.  **リソース コピーの挿入**] ダイアログ ボックス。  
+3.  **リソース コピーの挿入** ダイアログ ボックス。  
   
     -   **言語**ボックスの一覧で、言語を選択します。  
   
@@ -56,11 +51,11 @@ IDD_AboutBox (Finnish - XX33)
   
 
   
- 必要条件  
+ 要件  
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [方法: リソースをコピー](../windows/how-to-copy-resources.md)   
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [リソース エディター](../windows/resource-editors.md)

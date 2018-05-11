@@ -1,30 +1,25 @@
 ---
-title: "方法: メッセージを定期的に送信する |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: メッセージを定期的に送信する |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - timer class, example
 - sending messages at regular intervals [Concurrency Runtime]
 ms.assetid: 4b60ea6c-97c8-4d69-9f7b-ad79f3548026
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f12d9f8af028d1e2e1fc149eeb77181c2f6b1730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6903a7ec6b833f7591afe79dc91d453b3905cc79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-send-a-message-at-a-regular-interval"></a>方法: メッセージを定期的に送信する
 この例は、同時実行性を使用する方法を示しています。::[timer クラス](../../parallel/concrt/reference/timer-class.md)を定期的にメッセージを送信します。  
@@ -47,7 +42,7 @@ Performing a lengthy operation..........done.
   
  **cl.exe/EHsc report-progress.cpp**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)   
  [メッセージ パッシング関数](../../parallel/concrt/message-passing-functions.md)

@@ -1,13 +1,10 @@
 ---
-title: "id |Microsoft ドキュメント"
-ms.custom: 
+title: id |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.id
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9225a87f32c3c7bf42ca5fc7de98dd0ab8f12639
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c674765a0dfc06648d64a2b3b4e820bb467e700
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="id"></a>ID
 指定します、 `dispid` (プロパティまたはメソッド、インターフェイスまたはディスパッチ インターフェイス) のメンバー関数のパラメーターです。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>例  
  例を参照して[バインド可能な](../windows/bindable.md)の使用方法の例については**id**です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [メソッドの属性](../windows/method-attributes.md)   
  [データ メンバー属性](../windows/data-member-attributes.md)   

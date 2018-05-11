@@ -1,13 +1,10 @@
 ---
-title: "Windows ソケット: Casyncsocket クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 'Windows ソケット: Casyncsocket クラス |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CAsyncSocket
 dev_langs:
@@ -20,32 +17,30 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a1bf9e7b162ecfe9724f22996f8883d95cce72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows ソケット: CAsyncSocket クラスの使い方
-この記事は、クラスを使用する方法を説明します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)です。 このクラスが非常に低いレベルで Windows ソケット API をカプセル化ことに注意してください。 `CAsyncSocket`ネットワーク通信がネットワーク イベントの通知のコールバックをするプログラマによって使用されます。 この想定に基づいて、この記事は、基本的な命令のみを提供します。 使用を検討する必要がありますおそらく`CAsyncSocket`Windows ソケットの MFC アプリケーションで複数のネットワーク プロトコルを処理する簡単なは柔軟性を犠牲にしたくない場合。 複数の通信をよりでしたモデルを使用して、一般的な代替クラスの直接プログラミングの効率向上を取得できることが多いとも`CSocket`します。  
+この記事は、クラスを使用する方法を説明します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)です。 このクラスが非常に低いレベルで Windows ソケット API をカプセル化ことに注意してください。 `CAsyncSocket` ネットワーク通信がネットワーク イベントの通知のコールバックをするプログラマによって使用されます。 この想定に基づいて、この記事は、基本的な命令のみを提供します。 使用を検討する必要がありますおそらく`CAsyncSocket`Windows ソケットの MFC アプリケーションで複数のネットワーク プロトコルを処理する簡単なは柔軟性を犠牲にしたくない場合。 複数の通信をよりでしたモデルを使用して、一般的な代替クラスの直接プログラミングの効率向上を取得できることが多いとも`CSocket`します。  
   
- `CAsyncSocket`記載されて、 *『 MFC リファレンス*です。 Visual C では、Windows SDK には、Windows ソケット仕様も提供します。 詳細についてに残されます。 Visual C のサンプル アプリケーションを指定していません`CAsyncSocket`です。  
+ `CAsyncSocket` 記載されて、 *『 MFC リファレンス*です。 Visual C では、Windows SDK には、Windows ソケット仕様も提供します。 詳細についてに残されます。 Visual C のサンプル アプリケーションを指定していません`CAsyncSocket`です。  
   
  ネットワーク通信についてあまり知識がなく、簡単な方法するときは、クラスを使用して[CSocket](../mfc/reference/csocket-class.md)で、`CArchive`オブジェクト。 参照してください[Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)詳細についてはします。  
   
- この記事の内容について説明します。  
+ この記事では次の内容について説明します。  
   
 -   作成と使用、`CAsyncSocket`オブジェクト。  
   
 -   [お客様の責任で CAsyncSocket](#_core_your_responsibilities_with_casyncsocket)です。  
   
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a>CAsyncSocket オブジェクトの作成と  
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> CAsyncSocket オブジェクトの作成と  
   
 #### <a name="to-use-casyncsocket"></a>CAsyncSocket を使用するには  
   
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      ソケットの作成は、2 段階の構築の MFC パターンに従います。  
   
-     例:  
+     例えば:  
   
      [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]  
   
@@ -100,8 +95,8 @@ ms.lasthandoff: 12/21/2017
   
  コードでは、このシーケンスの例については (を実際には、`CSocket`オブジェクト) を参照してください[Windows ソケット: 動作シーケンス](../mfc/windows-sockets-sequence-of-operations.md)です。  
   
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a>CAsyncSocket でお客様の責任  
- クラスのオブジェクトを作成するときに[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、オブジェクトは、Windows をカプセル化**ソケット**を処理し、そのハンドルに対する操作を提供します。 使用すると`CAsyncSocket`API を直接使用する場合に考慮しなければならないすべての問題に対処する必要があります。 例:  
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a> CAsyncSocket でお客様の責任  
+ クラスのオブジェクトを作成するときに[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、オブジェクトは、Windows をカプセル化**ソケット**を処理し、そのハンドルに対する操作を提供します。 使用すると`CAsyncSocket`API を直接使用する場合に考慮しなければならないすべての問題に対処する必要があります。 例えば:  
   
 -   「ブロック」シナリオです。  
   
@@ -111,7 +106,7 @@ ms.lasthandoff: 12/21/2017
   
  これらの条項と追加情報の定義は、次を参照してください[Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)、 [Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)、 [Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md).  
   
- クラスのこれらの問題に関係なく**CAsycnSocket**場合があります、最適な選択肢をアプリケーションで必要なすべての柔軟性と制御を取得できます。 クラスを使用してを考慮する必要があります、場合`CSocket`代わりにします。 `CSocket`多くのお客様からの詳細を非表示にします。 Windows ブロッキング呼び出し中にメッセージと、ポンプへのアクセスを it `CArchive`、バイト順序の違いと文字列の変換を行うを管理します。  
+ クラスのこれらの問題に関係なく**CAsycnSocket**場合があります、最適な選択肢をアプリケーションで必要なすべての柔軟性と制御を取得できます。 クラスを使用してを考慮する必要があります、場合`CSocket`代わりにします。 `CSocket` 多くのお客様からの詳細を非表示にします。 Windows ブロッキング呼び出し中にメッセージと、ポンプへのアクセスを it `CArchive`、バイト順序の違いと文字列の変換を行うを管理します。  
   
  詳細については次を参照してください:  
   
@@ -121,6 +116,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
 

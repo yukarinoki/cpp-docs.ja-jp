@@ -1,27 +1,22 @@
 ---
-title: "ユニバーサル Windows プラットフォームへの移植 (C++) | Microsoft ドキュメント"
-ms.custom: 
+title: ユニバーサル Windows プラットフォームへの移植 (C++) | Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f2f94e54a8525d8d633374b3a23bafdfd93fee56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>ユニバーサル Windows プラットフォームへの移植 (C++)
 このトピックでは、既存の C++ コードを Windows 10 アプリ プラットフォームであるユニバーサル Windows プラットフォームに移植する方法を説明します。 *ユニバーサル* という用語は、Windows 10 を実行するどのデバイスでもコードを実行できることを意味します。これには、デスクトップ、電話、タブレット、Windows 10 を実行する将来のデバイスが含まれます。 単一のプロジェクトを作成し、Windows 10 を実行している任意のデバイス上で適切に機能する単一の XAML ベースのユーザー インターフェイスも作成します。 XAML で動的なレイアウト機能を使用することで、アプリの UI をさまざまな表示サイズに適合させることができます。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 02/14/2018
   
 1.  まだ実行していない場合は、Visual Studio 2017 で Windows 8.1 アプリ プロジェクトを開き、指示に従ってプロジェクト ファイルをアップグレードします。  
   
-     Visual Studio のセットアップで、Windows 8.1 ツールをインストールしておく必要があります。 これらのツールがインストールされていない場合は、[プログラムと機能] ウィンドウから Visual Studio のセットアップを開始し、[Visual Studio 2017] を選択してから、セットアップ ウィンドウで **[変更]**を選択します。 Windows 8.1 ツールを見つけて、それが選択されていることを確認してから [OK] をクリックします。  
+     Visual Studio のセットアップで、Windows 8.1 ツールをインストールしておく必要があります。 これらのツールがインストールされていない場合は、[プログラムと機能] ウィンドウから Visual Studio のセットアップを開始し、[Visual Studio 2017] を選択してから、セットアップ ウィンドウで **[変更]** を選択します。 Windows 8.1 ツールを見つけて、それが選択されていることを確認してから [OK] をクリックします。  
   
 2.  [プロジェクトのプロパティ] ウィンドウを開き、[C++] の [全般] でプラットフォーム ツールセットを Visual Studio 2017 のビルド ツールである v141 に設定します。  
   
