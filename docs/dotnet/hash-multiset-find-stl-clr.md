@@ -2,11 +2,8 @@
 title: hash_multiset::find (STL/CLR) |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::find
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - find member [STL/CLR]
 ms.assetid: fbedeb37-242e-4c2a-b1f8-234bcfd9cd25
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b2635ad3ad0b5c1573d7691bf1ad17028c19c315
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b133889df92205366cf2005315e6761c7eb6617b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetfind-stlclr"></a>hash_multiset::find (STL/CLR)
 指定したキーに一致する要素を検索します。  
@@ -42,7 +37,7 @@ iterator find(key_type key);
  検索対象のキー値。  
   
 ## <a name="remarks"></a>コメント  
- 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) 。`()`. 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
+ 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[hash_multiset::end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
   
 ## <a name="example"></a>例  
   
@@ -85,12 +80,12 @@ find C = False
 ## <a name="description"></a>説明  
  なお`find`をいくつかの要素が見つかったは保証されません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset::equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)   
  [hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)   

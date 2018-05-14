@@ -1,12 +1,9 @@
 ---
-title: "hash_multimap::find (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_multimap::find (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::find
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - find member [STL/CLR]
 ms.assetid: ce839c5e-b8c5-434e-9cc0-e4c6ee6a6bb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c0c49ccfad44c7504990068ffa70953b672e5e99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82766ef6a7ef739173decd7c9b194a6bf13028ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimapfind-stlclr"></a>hash_multimap::find (STL/CLR)
 指定したキーに一致する要素を検索します。  
@@ -42,7 +37,7 @@ iterator find(key_type key);
  検索対象のキー値。  
   
 ## <a name="remarks"></a>コメント  
- 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) 。`()`. 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
+ 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
   
 ## <a name="example"></a>例  
   
@@ -88,12 +83,12 @@ find C = False
 ## <a name="description"></a>説明  
  なお`find`をいくつかの要素が見つかったは保証されません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_map >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)   
  [hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)   
