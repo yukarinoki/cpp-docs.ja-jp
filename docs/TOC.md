@@ -26,6 +26,7 @@
 # [C++ のセキュリティ推奨事項](security/security-best-practices-for-cpp.md)
 ## [ユーザー グループのメンバーとしての実行](security/running-as-a-member-of-the-users-group.md)
 ## [ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響](security/how-user-account-control-uac-affects-your-application.md)
+## [予測実行のサイド チャネルの C++ 開発者向けガイダンス](security/developer-guidance-speculative-execution.md)
 # [Visual C++ のサンプル](visual-cpp-samples.md)
 # [Visual C++ のヘルプおよびコミュニティ](visual-cpp-help-and-community.md)
 # [Visual C++ ツールセットで問題を報告する方法](how-to-report-a-problem-with-the-visual-cpp-toolset.md)

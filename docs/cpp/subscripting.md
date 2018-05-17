@@ -2,11 +2,8 @@
 title: 添字演算子 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51199a2276246b047916e0c5c1ced12fd0ee0bf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscripting"></a>添字演算子 
 添字演算子 (**[]**) と同様、関数呼び出し演算子は二項演算子と見なされます。 添字演算子は 1 つの引数を受け取る非静的メンバー関数である必要があります。 この引数は任意の型にでき、目的の配列の添字を指定します。  
@@ -106,5 +101,5 @@ Element: [10] = 10
   
  関数 `operator[]` は参照型を返すことに注意してください。 これにより、これが左辺値になり、代入演算子の両側で添字式を使用できるようになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子のオーバーロード](../cpp/operator-overloading.md)
