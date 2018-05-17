@@ -46,7 +46,7 @@ ms.lasthandoff: 05/08/2018
   
  Uuidgen.exe または Guidgen.exe を使用すると、独自の一意の Id を生成します。 (これらのツールのいずれかを実行する をクリックして**開始** をクリック**実行**メニュー。 Enter、必要なツールの名前です。)  
   
- ATL にも使用しないプロジェクトで使用されている場合を指定して、`uuid`属性を指定することと同じ、 [uuid](../cpp/uuid-cpp.md) _ _declspec 修飾子です。 取得する、`uuid`を使用できる、クラスの[_ _uuidof](../cpp/uuidof-operator.md)  
+ ATL にも使用しないプロジェクトで使用されている場合を指定して、`uuid`属性を指定することと同じ、 [uuid](../cpp/uuid-cpp.md) _ _declspec 修飾子です。 取得する、`uuid`を使用できる、クラスの [__uuidof](../cpp/uuidof-operator.md)  
   
 ## <a name="example"></a>例  
  参照してください、[バインド可能な](../windows/bindable.md)のサンプルの使用例`uuid`です。  

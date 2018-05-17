@@ -1,12 +1,10 @@
 ---
-title: "チュートリアル: 作成、従来の Windows デスクトップ アプリケーション (C++) |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: 作成、従来の Windows デスクトップ アプリケーション (C++) |Microsoft ドキュメント'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 作成、従来の Windows デスクトップ アプリケーション (C++)
 
@@ -56,11 +53,11 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
 
 1. **新しいプロジェクト**ダイアログ ボックスで、左側のウィンドウで展開**インストール**、 **Visual C**選択してから、 **Windows デスクトップ**です。 中央のペインで選択**Windows デスクトップ ウィザード**です。
 
-   **名前**ボックスに、たとえば、プロジェクトの名前を入力*DesktopApp*です。 **[OK]**をクリックします。
+   **名前**ボックスに、たとえば、プロジェクトの名前を入力*DesktopApp*です。 **[OK]** をクリックします。
 
    ![DesktopApp プロジェクト](../build/media/desktop-app-new-project-name-153.png "DesktopApp プロジェクトの名前")
 
-1. **Windows デスクトップ プロジェクト**] ダイアログで、**アプリケーションの種類**[ **Windows アプリケーション (.exe)**です。 **[追加のオプション]**の **[空のプロジェクト]**を選択します。 選択**OK**プロジェクトを作成します。
+1. **Windows デスクトップ プロジェクト**] ダイアログで、**アプリケーションの種類**[ **Windows アプリケーション (.exe)** です。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 選択**OK**プロジェクトを作成します。
 
    ![Windows デスクトップ プロジェクト ウィザードで DesktopApp を作成](../build/media/desktop-app-new-project-wizard-153.png "DesktopApp を Windows デスクトップ プロジェクト ウィザードで作成します。")
 
@@ -68,19 +65,19 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
 
    ![DesktopApp プロジェクトへ新しい項目の追加](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp プロジェクトへ新しい項目の追加")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]**をクリックします。 **名前**ボックスに、たとえば、ファイルの名前を入力*HelloWindowsDesktop.cpp*です。 **[追加]** をクリックします。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 **名前**ボックスに、たとえば、ファイルの名前を入力*HelloWindowsDesktop.cpp*です。 **[追加]** をクリックします。
 
    ![DesktopApp プロジェクトに追加の .cpp ファイル](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp プロジェクトへの .cpp ファイルの追加")
 
 プロジェクトを作成するようになりましたし、ソース ファイルがエディターで開いています。 続行するにはへ進んで[コード作成](#create-the-code)です。
 
-### <a id="create-in-vs2017-rtm"></a>Visual Studio 2017 RTM では、Windows のデスクトップ プロジェクトを作成するには
+### <a id="create-in-vs2017-rtm"></a> Visual Studio 2017 RTM では、Windows のデスクトップ プロジェクトを作成するには
 
 1. **[ファイル]** メニューの **[新規作成]** を選択し、**[プロジェクト]** を選択します。
 
-1. **新しいプロジェクト**ダイアログ ボックスで、左側のウィンドウで展開**インストール**、**テンプレート**、 **Visual C**、し、 **Win32**です。 中央のペインで、 **[Win32 プロジェクト]**を選択します。
+1. **新しいプロジェクト**ダイアログ ボックスで、左側のウィンドウで展開**インストール**、**テンプレート**、 **Visual C**、し、 **Win32**です。 中央のペインで、 **[Win32 プロジェクト]** を選択します。
 
-   **名前**ボックスに、たとえば、プロジェクトの名前を入力*DesktopApp*です。 **[OK]**をクリックします。
+   **名前**ボックスに、たとえば、プロジェクトの名前を入力*DesktopApp*です。 **[OK]** をクリックします。
 
    ![DesktopApp プロジェクト](../build/media/desktop-app-new-project-name-150.png "DesktopApp プロジェクトの名前")
 
@@ -88,7 +85,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
 
    ![Win32 アプリケーション ウィザード の概要作成 DesktopApp](../build/media/desktop-app-win32-wizard-overview-150.png "DesktopApp を Win32 アプリケーション ウィザード の概要の作成")
 
-1. **アプリケーション設定** ページの **アプリケーションの種類** **Windows アプリケーション**です。 **[追加のオプション]**の **[空のプロジェクト]**を選択します。 選択**完了**プロジェクトを作成します。
+1. **アプリケーション設定** ページの **アプリケーションの種類** **Windows アプリケーション**です。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 選択**完了**プロジェクトを作成します。
 
    ![Win32 アプリケーション ウィザードの設定で DesktopApp を作成する](../build/media/desktop-app-win32-wizard-settings-150.png "DesktopApp の Win32 アプリケーション ウィザードの設定の作成")
 
@@ -96,7 +93,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
 
    ![DesktopApp プロジェクトへ新しい項目の追加](../build/media/desktop-app-project-add-new-item-150.gif "DesktopApp プロジェクトへ新しい項目の追加")
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]**をクリックします。 **名前**ボックスに、たとえば、ファイルの名前を入力*HelloWindowsDesktop.cpp*です。 **[追加]** をクリックします。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 **名前**ボックスに、たとえば、ファイルの名前を入力*HelloWindowsDesktop.cpp*です。 **[追加]** をクリックします。
 
    ![DesktopApp プロジェクトに追加の .cpp ファイル](../build/media/desktop-app-add-cpp-file-150.png "DesktopApp プロジェクトへの .cpp ファイルの追加")
 
@@ -122,7 +119,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
    この関数の戻り値とパラメーターについては、次を参照してください。 [WinMain エントリ ポイント](https://msdn.microsoft.com/library/windows/desktop/ms633559)です。
 
    > [!NOTE]
-   > どのようななどは、そのすべての余分な単語**コールバック**、または**HINSTANCE**、または**\_で\_**しますか? 従来の Windows API が typedef を使用し、プリプロセッサ マクロを抽象化して広範な型およびプラットフォーム固有の詳細情報の一部のコード、呼び出し規約など**_ _declspec**宣言、およびコンパイラ プラグマ。 Visual Studio での IntelliSense を使用することができます[クイック ヒント](/visualstudio/ide/using-intellisense#quick-info)これら typedef とマクロをどのような定義を表示する機能。 、目的の単語の上にマウスを置くか、選択して ctrl キーを押し K、ctrl キーを押す--i は定義を格納する小さなポップアップ ウィンドウです。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 パラメーターと戻り値の型が多くの場合、使用して*SAL 注釈*に役立つプログラミング エラーをキャッチします。 詳細については、次を参照してください。 [c/c++ コードの不具合の削減に SAL 注釈を使用して](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)です。
+   > どのようななどは、そのすべての余分な単語**コールバック**、または**HINSTANCE**、または**\_で\_** しますか? 従来の Windows API が typedef を使用し、プリプロセッサ マクロを抽象化して広範な型およびプラットフォーム固有の詳細情報の一部のコード、呼び出し規約など **_ _declspec**宣言、およびコンパイラ プラグマ。 Visual Studio での IntelliSense を使用することができます[クイック ヒント](/visualstudio/ide/using-intellisense#quick-info)これら typedef とマクロをどのような定義を表示する機能。 、目的の単語の上にマウスを置くか、選択して ctrl キーを押し K、ctrl キーを押す--i は定義を格納する小さなポップアップ ウィンドウです。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 パラメーターと戻り値の型が多くの場合、使用して*SAL 注釈*に役立つプログラミング エラーをキャッチします。 詳細については、次を参照してください。 [c/c++ コードの不具合の削減に SAL 注釈を使用して](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)です。
 
 1. Windows デスクトップ プログラムを必要と&lt;windows.h >。 &lt;tchar.h > を定義、`TCHAR`最終的に解決するには、マクロに`wchar_t`UNICODE シンボルが、プロジェクトで定義されている場合は、それ以外の場合に解決される`char`です。  常に有効になっている unicode をビルドする場合、TCHAR 必要はありませんし、wchar_t を直接使用できます。
 
@@ -369,7 +366,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
    }
    ```
 
-   `HDC`このコードでは、グラフィックス サブシステムと通信するアプリケーションを有効にするために使用されるデータ構造体であるデバイス コンテキストへのハンドルです。 `BeginPaint`と`EndPaint`関数では、アプリケーションが良き市民ように動作し、必要以上に長くなりますデバイス コンテキストを使用しないことを確認してください。 これにより、グラフィックス サブシステムが他のアプリケーションで使用できることを確認します。
+   `HDC` このコードでは、グラフィックス サブシステムと通信するアプリケーションを有効にするために使用されるデータ構造体であるデバイス コンテキストへのハンドルです。 `BeginPaint`と`EndPaint`関数では、アプリケーションが良き市民ように動作し、必要以上に長くなりますデバイス コンテキストを使用しないことを確認してください。 これにより、グラフィックス サブシステムが他のアプリケーションで使用できることを確認します。
 
 1. アプリケーションで他の多くのメッセージをたとえば、処理通常[WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)ウィンドウが作成されると、および[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)ウィンドウが閉じているときにします。 単純でも完成した `WndProc` 関数のコードを次に示します。
 
@@ -561,7 +558,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
    }
    ```
 
-1. **[ビルド]** メニューの **[ソリューションのビルド]**をクリックします。 コンパイルの結果が表示されます、**出力**Visual Studio のウィンドウ。
+1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。 コンパイルの結果が表示されます、**出力**Visual Studio のウィンドウ。
 
    ![プロジェクトをビルドします DesktopApp](../build/media/desktop-app-project-build-150.gif "DesktopApp プロジェクトのビルド")
 
@@ -571,6 +568,6 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップの API�
 
 おめでとうございます!  このチュートリアルを完了して、従来 Windows デスクトップ アプリケーションを構築することがあります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)

@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
 ---
-# <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>[リリースの構成の設定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)
+# <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>[リリースの構成の設定] \(既存コード ファイルからの新しいプロジェクトの作成ウィザード)
 既存コード ファイルからの新しいプロジェクトの作成ウィザードのこのページを使用すると、リリース構成のプロジェクト設定を指定できます。  
   
 ## <a name="task-list"></a>タスク一覧  
