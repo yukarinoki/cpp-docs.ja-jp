@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1125f9a66a471b664e42ddbd5164611a4cb2ae69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 513bfe5baa16c9cae5052da084c65f580aad7f2e
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s、_localtime32_s、_localtime64_s
 
@@ -56,16 +56,16 @@ ms.lasthandoff: 05/03/2018
 
 ```C
 errno_t localtime_s(
-   struct tm* tmDest,
-   const time_t *sourceTime
+   struct tm* const tmDest,
+   time_t const* const sourceTime
 );
 errno_t _localtime32_s(
    struct tm* tmDest,
-   const time32_t *sourceTime
+   __time32_t const* sourceTime
 );
 errno_t _localtime64_s(
    struct tm* tmDest,
-   const _time64_t *sourceTime
+   __time64_t const* sourceTime
 );
 ```
 
@@ -87,7 +87,7 @@ errno_t _localtime64_s(
 |-----------|------------|------------------|--------------------|---------------------------------------|
 |**NULL**|任意|**EINVAL**|変更されない|[はい]|
 |いない**NULL** (有効なメモリが指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|[はい]|
-|いない**NULL** (有効なメモリが指す)|0 より小さいかより大きい **_MAX__TIME64_T**|**EINVAL**|すべてのフィールドが -1 に設定される|×|
+|いない**NULL** (有効なメモリが指す)|0 より小さいかより大きい **_MAX__TIME64_T**|**EINVAL**|すべてのフィールドが -1 に設定される|いいえ|
 
 最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**返す**EINVAL**です。
 

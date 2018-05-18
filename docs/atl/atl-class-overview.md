@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-class-overview"></a>ATL クラスの概要
 クラス アクティブ テンプレート ライブラリ (ATL) では、次のように分類できます。  
@@ -49,11 +49,10 @@ ms.lasthandoff: 05/03/2018
  ATL プロジェクトで使用できる他のクラスでは、次を参照してください。[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)です。  
   
 ## <a name="see-also"></a>関連項目  
- [クラス](../atl/reference/atl-classes.md)   
- [ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)   
+ [クラスと構造体](../atl/reference/atl-classes.md)   
+ [ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)  
  [関数](../atl/reference/atl-functions.md)   
  [グローバル変数](../atl/reference/atl-global-variables.md)   
  [マクロ](../atl/reference/atl-macros.md)   
- [構造体](../atl/reference/atl-structures.md)   
  [Typedefs](../atl/reference/atl-typedefs.md)
 

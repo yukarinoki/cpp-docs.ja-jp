@@ -1,7 +1,7 @@
 ---
 title: Visual C での展開 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ での配置
 
 開発コンピューター以外のコンピューター上のアプリケーションのインストールと呼ばれる*展開*です。 別のコンピューターに Visual C アプリケーションを展開するときに、アプリケーションとに依存しているすべてのライブラリ ファイルの両方をインストールする必要があります。 Visual Studio では、アプリケーションと共に Visual C ライブラリを導入する 3 つの方法:*集中配置*、*ローカル配置*、および*静的リンク*です。 ここでは、Windows Update サービスが自動的に更新である Windows ディレクトリの下のライブラリ ファイルを配置しますする集中配置。 ローカル配置では、ライブラリ ファイルをアプリケーションと同じディレクトリに配置します。 すべてのローカル配置されたライブラリを再展開する必要がありますに更新を自分でします。 ライブラリ コードをアプリケーションにバインドする静的にリンクします。 再コンパイルして活用するために、更新プログラム、ライブラリに静的にリンクを使用すると、アプリケーションを再配置する必要があります。
+
+Visual Studio 2015 では、Microsoft C ランタイム ライブラリは、ローカル ライブラリのバージョンに固有のコンポーネント、および現在の Windows の一部である新しいユニバーサル C ランタイム ライブラリにリファクタリングされました。 ユニバーサル CRT の配置の詳細については、「[ユニバーサル CRT 展開](universal-crt-deployment.md)です。
 
 ## <a name="central-deployment"></a>集中配置
 
@@ -59,4 +61,5 @@ Visual C ライブラリの読み込み順序は、システムによって異�
 
 ## <a name="see-also"></a>関連項目
 
-[デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [ユニバーサル CRT の配置](universal-crt-deployment.md)

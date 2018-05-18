@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d50ca37b90251a797f70129e4b8ce1778b4d73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
 ATL リファレンスでは、アクティブ テンプレート ライブラリ (ATL)、コンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスのセットを説明します。 完全に活用するために ATL、COM を熟知して作業を強くお勧めします。  
@@ -28,8 +28,8 @@ ATL リファレンスでは、アクティブ テンプレート ライブラ�
  [ATL のクラスの概要](../atl/atl-class-overview.md)  
  カテゴリにより分類 ATL クラスの簡単な説明とへのリンクを提供します。  
   
- [ATL クラス](../atl/reference/atl-classes.md)  
- アルファベット順クラスに関する参考資料を提供します。  
+ [ATL クラスと構造体](../atl/reference/atl-classes.md)  
+ クラスと構造体のアルファベット順での参考資料を提供します。  
   
  [ATL 関数](../atl/reference/atl-functions.md)  
  アルファベット順グローバル関数に関するリファレンス情報を提供します。 カテゴリに関数のトピックが含まれます。  
@@ -40,14 +40,11 @@ ATL リファレンスでは、アクティブ テンプレート ライブラ�
  [ATL マクロ](../atl/reference/atl-macros.md)  
  アルファベット順のマクロの参考資料を提供します。 マクロのカテゴリにトピックが含まれます。  
   
- [構造体](../atl/reference/atl-structures.md)  
- 構造体のアルファベット順での参考資料を提供します。  
-  
  [ATL Typedef](../atl/reference/atl-typedefs.md)  
  Typedef のアルファベット順での参考資料を提供します。  
   
- [原型](../atl/reference/atl-archetypes.md)  
- メソッド、データ メンバー、静的関数、typedef、またはその他の機能は、アルファベット順のコレクションを提供するクラスの理論上は、ATL 原型へのリンクを提供します。  
+ [ワーカーのアーキタイプ](../atl/reference/worker-archetype.md)  
+ ATL ワーカー原型へのリンクを提供します。  
   
  [古い ATL トピック](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
  クラス、マクロ、およびいる旧式の関数に関するリファレンス情報を提供します。  
