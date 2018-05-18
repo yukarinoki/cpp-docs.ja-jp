@@ -1,4 +1,4 @@
-`task_group`クラスが、待機または取り消しできる並列処理のコレクションを表します。  
+`task_group` クラスは、待機または取り消しができる並列処理のコレクションを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,22 +23,22 @@ class task_group;
 |[is_canceling](#is_canceling)|かどうか、タスク グループは現在、取り消し中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出されました、`task_group`オブジェクト (確かに戻るには、このメソッドを修飾などが`true`)。 大文字と小文字がある可能性がある、`task_group`オブジェクトはインラインで実行し、さらに、タスク グループのツリーで、作業が取り消されました。 キャンセルがこれを経由して流れます前もってを判断できますランタイムこれらの場所などの場合`task_group`オブジェクト、`true`も返されます。|  
 |[run](#run)|オーバーロードされます。 タスクがスケジュール、`task_group`オブジェクト。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run`の有効期間を管理するため、呼び出し元が、`task_handle`オブジェクト。 バージョンをでパラメーターは、可能性のあるランタイム内でヒープ割り当て関数のオブジェクトへの参照を受け取るメソッドへの参照を受け取るバージョンで使用するよりも適切に機能を実行する、`task_handle`オブジェクト。 パラメーターを使用するバージョン`_Placement`タスクがそのパラメーターで指定された場所で実行する方向にバイアスされます。|  
 |[run_and_wait](#run_and_wait)|オーバーロードされます。 呼び出し元のコンテキストでの支援を受けてインラインを実行するタスクをスケジュール、`task_group`完全キャンセルのサポートのオブジェクト。 関数が処理されるまでにし、待機、`task_group`オブジェクトが完了したか取り消されました。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run_and_wait`の有効期間を管理するため、呼び出し元が、`task_handle`オブジェクト。|  
-|[待機](#wait)|すべての作業になるまで待機します`task_group`オブジェクトが完了したか取り消されました。|  
+|[wait](#wait)|すべての作業になるまで待機します`task_group`オブジェクトが完了したか取り消されました。|  
   
 ## <a name="remarks"></a>コメント  
- 頻度の高い制限とは異なり`structured_task_group`クラス、`task_group`クラスより一般的な構成要素。 によって説明されている制限のない[structured_task_group](structured-task-group-class.md)です。 `task_group`オブジェクトをスレッド間で使用される安全かつ自由形式の方法で使用される可能性があります。 欠点は、`task_group`コンストラクトでは行うことがありますいないだけでなく`structured_task_group`の少量の作業を実行するタスクを作成します。  
+ 頻度の高い制限とは異なり`structured_task_group`クラス、`task_group`クラスより一般的な構成要素。 によって説明されている制限のない[structured_task_group](structured-task-group-class.md)です。 `task_group` オブジェクトをスレッド間で使用される安全かつ自由形式の方法で使用される可能性があります。 欠点は、`task_group`コンストラクトでは行うことがありますいないだけでなく`structured_task_group`の少量の作業を実行するタスクを作成します。  
   
  詳細については、次を参照してください。[タスクの並列化](../task-parallelism-concurrency-runtime.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `task_group`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** ppl.h  
   
  **名前空間:** concurrency  
   
-##  <a name="cancel"></a>キャンセル 
+##  <a name="cancel"></a> キャンセル 
 
  このタスク グループをルートとする作業のサブツリーをキャンセルしようとしています。 最大限の努力をによりします。 タスク グループでスケジュールされているすべてのタスクが取り消さ推移的に可能な場合です。  
   
@@ -49,7 +49,7 @@ void cancel();
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。[キャンセル](../cancellation-in-the-ppl.md)です。  
   
-##  <a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a> is_canceling 
 
  かどうか、タスク グループは現在、取り消し中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出されました、`task_group`オブジェクト (確かに戻るには、このメソッドを修飾などが`true`)。 大文字と小文字がある可能性がある、`task_group`オブジェクトはインラインで実行し、さらに、タスク グループのツリーで、作業が取り消されました。 キャンセルがこれを経由して流れます前もってを判断できますランタイムこれらの場所などの場合`task_group`オブジェクト、`true`も返されます。  
   
@@ -63,7 +63,7 @@ bool is_canceling();
 ### <a name="remarks"></a>コメント  
  詳細については、次を参照してください。[キャンセル](../cancellation-in-the-ppl.md)です。  
   
-##  <a name="run"></a>実行します。 
+##  <a name="run"></a> 実行します。 
 
  タスクがスケジュール、`task_group`オブジェクト。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run`の有効期間を管理するため、呼び出し元が、`task_handle`オブジェクト。 バージョンをでパラメーターは、可能性のあるランタイム内でヒープ割り当て関数のオブジェクトへの参照を受け取るメソッドへの参照を受け取るバージョンで使用するよりも適切に機能を実行する、`task_handle`オブジェクト。 パラメーターを使用するバージョン`_Placement`タスクがそのパラメーターで指定された場所で実行する方向にバイアスされます。  
   
@@ -119,7 +119,7 @@ void run(
   
  メソッドをスロー、 [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)タスク処理する場合に例外によって指定された、`_Task_handle`パラメーターは既にによってタスク グループ オブジェクトにスケジュールされている、`run`メソッドがあったとなし介在するを呼び出すいずれかに、`wait`または`run_and_wait`そのタスク グループのメソッドです。  
   
-##  <a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a> run_and_wait 
 
  呼び出し元のコンテキストでの支援を受けてインラインを実行するタスクをスケジュール、`task_group`完全キャンセルのサポートのオブジェクト。 関数が処理されるまでにし、待機、`task_group`オブジェクトが完了したか取り消されました。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run_and_wait`の有効期間を管理するため、呼び出し元が、`task_handle`オブジェクト。  
   
@@ -162,7 +162,7 @@ task_group_status run_and_wait(
   
  このいずれかのメソッドを呼び出すことを義務付けてがある場合に、例外的ではない実行のパス、または`wait`メソッドのデストラクターの前に、`task_group`を実行します。  
   
-##  <a name="ctor"></a>task_group 
+##  <a name="ctor"></a> task_group 
 
  新しい `task_group` オブジェクトを構築します。  
   
@@ -181,7 +181,7 @@ task_group(
 ### <a name="remarks"></a>コメント  
  キャンセル トークンを受け取るコンス トラクターを作成、`task_group`をトークンに関連付けられているソースが取り消されたときに取り消されます。 別のトークンまたはトークンを設定せずに、親グループからの暗黙的な取り消しに参加している場合は、このタスク グループを分離も、明示的なキャンセル トークンを提供します。  
   
-##  <a name="dtor"></a>~ task_group 
+##  <a name="dtor"></a> ~ task_group 
 
  `task_group` オブジェクトを破棄します。 いずれかを呼び出している必要が、`wait`または`run_and_wait`実行する前に、デストラクター、デストラクターがスタックの例外のためのアンワインドの結果として実行する場合を除き、オブジェクトのメソッドです。  
   
@@ -192,7 +192,7 @@ task_group(
 ### <a name="remarks"></a>コメント  
  通常の実行 (たとえば、いないスタック アンワインド例外のため) とも、結果として、デストラクターが実行する場合、`wait`も`run_and_wait`メソッドが呼び出されて、デストラクターがスローする可能性があります、 [missing_wait](missing-wait-class.md)例外。  
   
-##  <a name="wait"></a>待機 
+##  <a name="wait"></a> 待機 
 
  すべての作業になるまで待機します`task_group`オブジェクトが完了したか取り消されました。  
   
@@ -213,7 +213,7 @@ task_group_status wait();
   
  このいずれかのメソッドを呼び出すことを義務付けてがある場合に、例外的ではない実行のパス、または`run_and_wait`メソッドのデストラクターの前に、`task_group`を実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同時実行 Namespace](concurrency-namespace.md)   
  [structured_task_group クラス](structured-task-group-class.md)   
  [task_handle クラス](task-handle-class.md)
