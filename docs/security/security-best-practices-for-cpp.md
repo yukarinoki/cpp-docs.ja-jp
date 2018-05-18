@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -99,8 +99,7 @@ ms.lasthandoff: 05/10/2018
 
 識別し、C++ のソフトウェアの予測の実行側チャネルのハードウェア脆弱性を防ぐ方法については、次を参照してください。[予測実行側のチャネルの C++ 開発者ガイド](developer-guidance-speculative-execution.md)です。
 
-  
 ## <a name="see-also"></a>関連項目  
- <xref:System.Security>   
- [セキュリティ](/dotnet/standard/security/index)   
- [ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響](how-user-account-control-uac-affects-your-application.md)
+- <xref:System.Security>   
+- [セキュリティ](/dotnet/standard/security/index)   
+- [ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響](how-user-account-control-uac-affects-your-application.md)

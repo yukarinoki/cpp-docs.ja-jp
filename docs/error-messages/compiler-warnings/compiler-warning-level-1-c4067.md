@@ -16,42 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eccec985e6a9e652f18c6513542942351ff6efc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-warning-level-1-c4067"></a>コンパイラの警告 (レベル 1) C4067
-予期しないトークン プリプロセッサ ディレクティブの後に改行が必要です  
-  
- コンパイラが見つかりプリプロセッサ ディレクティブに続く余分な文字を無視します。 ANSI 互換の下でのみこの警告が表示されます ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。  
-  
-```  
-// C4067a.cpp  
-// compile with: /DX /Za /W1  
-#pragma warning(default:4067)  
-#if defined(X)  
-#else  
-#endif v   // C4067  
-int main()  
-{  
-}  
-```  
-  
-### <a name="to-resolve-this-warning-try-the-following"></a>この警告を解決するのには、次を試してください。  
-  
-1.  コンパイル時に **/Ze**です。  
-  
-2.  コメントの区切り記号を使用します。  
-  
-```  
-// C4067b.cpp  
-// compile with: /DX /Za /W1  
-#if defined(X)  
-#else  
-#endif  
-int main()  
-{  
-}  
+
+> 予期しないトークン プリプロセッサ ディレクティブの後に改行が必要です
+
+## <a name="remarks"></a>コメント
+
+コンパイラが見つかりプリプロセッサ ディレクティブに続く余分な文字を無視します。 可能性があります、任意の予期しない文字では一般的な原因は無効なセミコロン ディレクティブの後です。 コメントでは、この警告は発生しません。 **/Za**コンパイラ オプションの既定の設定よりも詳細のプリプロセッサ ディレクティブには、この警告を有効にします。
+
+## <a name="example"></a>例
+
+```cpp
+// C4067a.cpp
+// compile with: cl /EHsc /DX /W1 /Za C4067a.cpp
+#include <iostream>
+#include <string> s     // C4067
+#if defined(X);         // C4067
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif;                 // C4067 only under /Za
+int main()
+{
+    std::cout << s << std::endl;
+}
+```
+
+この警告を解決するのには、無効な文字を削除またはコメント ブロック内に移動します。 削除することで、特定 C4067 警告を無効にすることがあります、 **/Za**コンパイラ オプション。
+
+```cpp
+// C4067b.cpp
+// compile with: cl /EHsc /DX /W1 C4067b.cpp
+#include <iostream>
+#include <string>
+#if defined(X)
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif
+int main()
+{
+    std::cout << s << std::endl;
+}
 ```
