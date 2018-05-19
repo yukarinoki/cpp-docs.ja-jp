@@ -1,12 +1,9 @@
 ---
-title: "CMenu クラス |Microsoft ドキュメント"
-ms.custom: 
+title: CMenu クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMenu
@@ -93,17 +90,15 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64682066a93618c8646973c76df395883dddf053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmenu-class"></a>CMenu クラス
 Windows の `HMENU`をカプセル化したものです。  
@@ -190,10 +185,10 @@ class CMenu : public CObject
   
  `CMenu`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** afxwin.h  
   
-##  <a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>  CMenu::AppendMenu  
  メニューの末尾に新しい項目を追加します。  
   
 ```  
@@ -236,13 +231,13 @@ BOOL AppendMenu(
   
  次のとおりに設定できるフラグ`nFlags`:  
   
-- ****で切り替えを果たします**MF_UNCHECKED**アイテムの横にある既定のチェック ボックスをオンにします。 アプリケーションでチェック マークのビットマップを提供する場合 (を参照してください、 [SetMenuItemBitmaps](#setmenuitembitmaps)メンバー関数)、「にチェック マーク」ビットマップが表示されます。  
+- **MF_CHECKED** で切り替えを果たします**MF_UNCHECKED**アイテムの横にある既定のチェック ボックスをオンにします。 アプリケーションでチェック マークのビットマップを提供する場合 (を参照してください、 [SetMenuItemBitmaps](#setmenuitembitmaps)メンバー関数)、「にチェック マーク」ビットマップが表示されます。  
   
 - **MF_UNCHECKED**で切り替えを果たします**を**項目の横にチェック ボックスをオフにします。 アプリケーションでチェック マークのビットマップを提供する場合 (を参照してください、`SetMenuItemBitmaps`メンバー関数)、「チェック マークをオフ」ビットマップが表示されます。  
   
 - **MF_DISABLED**が無効になり、メニュー項目は選択できませんが、淡色表示にしません。  
   
-- `MF_ENABLED`選択することができ、グレーの状態から復元できるようには、メニュー項目を有効にします。  
+- `MF_ENABLED` 選択することができ、グレーの状態から復元できるようには、メニュー項目を有効にします。  
   
 - **MF_GRAYED**選択することはできませんし、淡色表示にするように、メニュー項目を無効にします。  
   
@@ -250,7 +245,7 @@ BOOL AppendMenu(
   
 - **MF_MENUBREAK**静的なメニューまたはポップアップ メニューに新しい列に新しい行にアイテムを配置します。 列の間の区切り線は配置されません。  
   
-- `MF_OWNERDRAW`項目がオーナー描画項目であることを指定します。 メニューを所有するウィンドウを受け取りますが最初に、メニューが表示されたら、`WM_MEASUREITEM`メニュー項目の幅と高さを取得するメッセージ。 `WM_DRAWITEM`メッセージが 1 つの所有者は、メニュー項目の表示を更新する必要がありますたびに送信されます。 このオプションは、トップレベルのメニュー項目に対して有効ではできません。  
+- `MF_OWNERDRAW` 項目がオーナー描画項目であることを指定します。 メニューを所有するウィンドウを受け取りますが最初に、メニューが表示されたら、`WM_MEASUREITEM`メニュー項目の幅と高さを取得するメッセージ。 `WM_DRAWITEM`メッセージが 1 つの所有者は、メニュー項目の表示を更新する必要がありますたびに送信されます。 このオプションは、トップレベルのメニュー項目に対して有効ではできません。  
   
 - **ならば**メニュー項目に関連付けられているポップアップ メニューがあることを指定します。 ID パラメーターは、ポップアップ メニュー項目に関連付けられるへのハンドルを指定します。 ポップアップ メニュー項目に、トップレベルのポップアップ メニューまたは階層的なポップアップ メニューを追加するために使用されます。  
   
@@ -266,14 +261,14 @@ BOOL AppendMenu(
   
 - **MF_MENUBARBREAK**と**MF_MENUBREAK**  
   
-- ****と**MF_UNCHECKED**  
+- **MF_CHECKED** と**MF_UNCHECKED**  
   
  (ウィンドウが表示されます) かどうか、ウィンドウが変更された、アプリケーションを呼び出す必要があります内に存在するメニューたびに[かかわらず](../../mfc/reference/cwnd-class.md#drawmenubar)です。  
   
 ### <a name="example"></a>例  
   例を参照して[CMenu::CreateMenu](#createmenu)です。  
   
-##  <a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>  CMenu::Attach  
  アタッチに既存の Windows メニュー、`CMenu`オブジェクト。  
   
 ```  
@@ -295,7 +290,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem  
  チェック マークを追加またはポップアップ メニューのメニュー項目からチェック マークを削除します。  
   
 ```  
@@ -315,7 +310,7 @@ UINT CheckMenuItem(
   
 - **MF_BYPOSITION**パラメーターは、既存のメニュー項目の位置を指定します。 最初の項目は、位置 0 です。  
   
-- ****で切り替えを果たします**MF_UNCHECKED**アイテムの横にある既定のチェック ボックスをオンにします。  
+- **MF_CHECKED** で切り替えを果たします**MF_UNCHECKED**アイテムの横にある既定のチェック ボックスをオンにします。  
   
 - **MF_UNCHECKED**で切り替えを果たします**を**項目の横にチェック ボックスをオフにします。  
   
@@ -330,7 +325,7 @@ UINT CheckMenuItem(
 ### <a name="example"></a>例  
   例を参照して[CMenu::GetMenuState](#getmenustate)です。  
   
-##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem  
  指定されたメニュー項目をチェックし、オプションの項目を使用します。  
   
 ```  
@@ -368,7 +363,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="example"></a>例  
   例を参照して[ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range)です。  
   
-##  <a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>  CMenu::CMenu  
  空のメニューを作成し、それにアタッチ、`CMenu`オブジェクト。  
   
 ```  
@@ -388,7 +383,7 @@ CMenu();
   
 - [添付](#attach)  
   
-##  <a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>  CMenu::CreateMenu  
  メニューを作成し、それにアタッチ、`CMenu`オブジェクト。  
   
 ```  
@@ -408,7 +403,7 @@ BOOL CreateMenu();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu  
  ポップアップ メニューを作成し、それにアタッチ、`CMenu`オブジェクト。  
   
 ```  
@@ -428,7 +423,7 @@ BOOL CreatePopupMenu();
 ### <a name="example"></a>例  
   例を参照して[CMenu::CreateMenu](#createmenu)です。  
   
-##  <a name="deletemenu"></a>なる  
+##  <a name="deletemenu"></a>  なる  
  メニュー項目を削除します。  
   
 ```  
@@ -460,7 +455,7 @@ BOOL DeleteMenu(
 ### <a name="example"></a>例  
   例を参照して[とき](../../mfc/reference/cwnd-class.md#getmenu)です。  
   
-##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap  
  によって自動的に呼び出されます、`CWinApp`アイドル処理ハンドラーを削除、一時`CMenu`によって作成されたオブジェクト、 [FromHandle](#fromhandle)メンバー関数。  
   
 ```  
@@ -468,12 +463,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>コメント  
- `DeleteTempMap`一時的に接続されている Windows メニュー オブジェクトをデタッチ`CMenu`オブジェクトを削除する前に、`CMenu`オブジェクト。  
+ `DeleteTempMap` 一時的に接続されている Windows メニュー オブジェクトをデタッチ`CMenu`オブジェクトを削除する前に、`CMenu`オブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="destroymenu"></a>メニューを破棄  
+##  <a name="destroymenu"></a>  メニューを破棄  
  メニューと使用されている Windows のシステム リソースを破棄します。  
   
 ```  
@@ -489,7 +484,7 @@ BOOL DestroyMenu();
 ### <a name="example"></a>例  
   例を参照して[CMenu::CreateMenu](#createmenu)です。  
   
-##  <a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>  CMenu::Detach  
  Windows メニューからのデタッチ、`CMenu`オブジェクトおよびハンドルを返します。  
   
 ```  
@@ -505,7 +500,7 @@ HMENU Detach();
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>  CMenu::DrawItem  
  オーナー描画メニュー変更のビジュアルな部分のときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -526,7 +521,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem  
  有効、無効化、またはメニュー項目を使用できなくなります。  
   
 ```  
@@ -548,7 +543,7 @@ UINT EnableMenuItem(
   
 - **MF_DISABLED**が無効になり、メニュー項目は選択できませんが、淡色表示にしません。  
   
-- `MF_ENABLED`選択することができ、グレーの状態から復元できるようには、メニュー項目を有効にします。  
+- `MF_ENABLED` 選択することができ、グレーの状態から復元できるようには、メニュー項目を有効にします。  
   
 - **MF_GRAYED**選択することはできませんし、淡色表示にするように、メニュー項目を無効にします。  
   
@@ -565,7 +560,7 @@ UINT EnableMenuItem(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>  CMenu::FromHandle  
  ポインターを返します、`CMenu`メニューへの Windows ハンドルを指定するオブジェクト。  
   
 ```  
@@ -587,7 +582,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="example"></a>例  
   例を参照して[CMenu::CreateMenu](#createmenu)です。  
   
-##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem  
  指定されたメニューの既定のメニュー項目を決定します。  
   
 ```  
@@ -617,7 +612,7 @@ UINT GetDefaultItem(
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId  
  ID に関連付けられているコンテキスト ヘルプを取得`CMenu`です。  
   
 ```  
@@ -630,7 +625,7 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo  
  メニューの情報を取得します。  
   
 ```  
@@ -647,7 +642,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>コメント  
  この関数では、メニューに関する情報を取得します。  
   
-##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount  
  ポップアップまたはトップレベルのメニュー内の項目数を決定します。  
   
 ```  
@@ -660,7 +655,7 @@ UINT GetMenuItemCount() const;
 ### <a name="example"></a>例  
   例を参照して[とき](../../mfc/reference/cwnd-class.md#getmenu)です。  
   
-##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
  によって定義される位置にあるメニュー項目のメニュー項目の識別子を取得`nPos`です。  
   
 ```  
@@ -677,7 +672,7 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo  
  メニュー項目に関する情報を取得します。  
   
 ```  
@@ -706,7 +701,7 @@ BOOL GetMenuItemInfo(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>  CMenu::GetMenuState  
  ポップアップ メニューで、指定されたメニュー項目または項目の数の状態を返します。  
   
 ```  
@@ -729,11 +724,11 @@ UINT GetMenuState(
 ### <a name="return-value"></a>戻り値  
  値が指定した項目が存在しない場合に 0 xffffffff です。 場合*nId*識別ポップアップ メニューでは、高位バイトは、ポップアップ メニューの項目の数を表すし、下位バイトがポップアップ メニューに関連付けられたメニュー フラグを格納します。 戻り値は次の一覧から値のマスク (論理 OR) をそれ以外の場合 (このマスクは、メニューの状態を説明する項目*nId*を識別)。  
   
-- ****で切り替えを果たします**MF_UNCHECKED**アイテムの横にある既定のチェック ボックスをオンにします。 アプリケーションでチェック マークのビットマップを提供する場合 (を参照してください、`SetMenuItemBitmaps`メンバー関数)、「にチェック マーク」ビットマップが表示されます。  
+- **MF_CHECKED** で切り替えを果たします**MF_UNCHECKED**アイテムの横にある既定のチェック ボックスをオンにします。 アプリケーションでチェック マークのビットマップを提供する場合 (を参照してください、`SetMenuItemBitmaps`メンバー関数)、「にチェック マーク」ビットマップが表示されます。  
   
 - **MF_DISABLED**が無効になり、メニュー項目は選択できませんが、淡色表示にしません。  
   
-- `MF_ENABLED`選択することができ、グレーの状態から復元できるようには、メニュー項目を有効にします。 この定数の値は 0 になります。この値を使用する場合、アプリケーションのテストは 0 を返します対象いない必要があります。  
+- `MF_ENABLED` 選択することができ、グレーの状態から復元できるようには、メニュー項目を有効にします。 この定数の値は 0 になります。この値を使用する場合、アプリケーションのテストは 0 を返します対象いない必要があります。  
   
 - **MF_GRAYED**選択することはできませんし、淡色表示にするように、メニュー項目を無効にします。  
   
@@ -748,7 +743,7 @@ UINT GetMenuState(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>  CMenu::GetMenuString  
  指定されたメニュー項目のラベルを指定したバッファーにコピーします。  
   
 ```  
@@ -794,7 +789,7 @@ int GetMenuString(
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu  
  返します、`HMENU`これによってラップされた`CMenu`オブジェクト、または**NULL** `CMenu`ポインター。  
   
 ```  
@@ -804,7 +799,7 @@ HMENU GetSafeHmenu() const;
 ### <a name="example"></a>例  
   例を参照して[CMenu::LoadMenu](#loadmenu)です。  
   
-##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>  CMenu::GetSubMenu  
  取得、`CMenu`ポップアップ メニューのオブジェクト。  
   
 ```  
@@ -821,7 +816,7 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="example"></a>例  
   例を参照して[CMenu::TrackPopupMenu](#trackpopupmenu)です。  
   
-##  <a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>  CMenu::InsertMenu  
  指定された位置に新しいメニュー項目を挿入`nPosition`し、メニューの他の項目を移動します。  
   
 ```  
@@ -855,7 +850,7 @@ BOOL InsertMenu(
  新しいメニュー項目のコマンド ID を指定または、`nFlags`に設定されている**ならば**、メニューのハンドル ( `HMENU`) ポップアップ メニューのです。 `nIDNewItem`パラメーターは無視されます (必要ではない) 場合`nFlags`に設定されている**MF_SEPARATOR**です。  
   
  `lpszNewItem`  
- 新しいメニュー項目の内容を指定します。 `nFlags`解釈に使用できる`lpszNewItem`次のようにします。  
+ 新しいメニュー項目の内容を指定します。 `nFlags` 解釈に使用できる`lpszNewItem`次のようにします。  
   
 |nFlags|LpszNewItem の解釈|  
 |------------|-----------------------------------|  
@@ -881,7 +876,7 @@ BOOL InsertMenu(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem  
  メニュー内の指定位置に新しいメニュー項目を挿入します。  
   
 ```  
@@ -904,7 +899,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>コメント  
  この関数をラップ[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)Windows SDK に記述されている。  
   
-##  <a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  メニュー リソースをアプリケーションの実行可能ファイルから読み込んでにアタッチ、`CMenu`オブジェクト。  
   
 ```  
@@ -928,7 +923,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect  
  メモリ内のメニュー テンプレートからリソースを読み込みにアタッチ、`CMenu`オブジェクト。  
   
 ```  
@@ -956,7 +951,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>  CMenu::m_hMenu  
  指定します、`HMENU`にアタッチされている Windows メニューのハンドル、`CMenu`オブジェクト。  
   
 ```  
@@ -966,7 +961,7 @@ HMENU m_hMenu;
 ### <a name="example"></a>例  
   例を参照して[CMenu::LoadMenu](#loadmenu)です。  
   
-##  <a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>  CMenu::MeasureItem  
  オーナー描画スタイルを持つメニューが作成されるときに、フレームワークによって呼び出されます。  
   
 ```  
@@ -987,7 +982,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
  指定された位置にある既存のメニュー項目を変更`nPosition`です。  
   
 ```  
@@ -1045,7 +1040,7 @@ BOOL ModifyMenu(
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
+##  <a name="operator_hmenu"></a>  CMenu::operator HMENU  
  この演算子のハンドルの取得を使用して、`CMenu`オブジェクト。  
   
 ```  
@@ -1058,7 +1053,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>コメント  
  Windows Api を直接呼び出すために、ハンドルを使用することができます。  
   
-##  <a name="operator_neq"></a>CMenu::operator! =  
+##  <a name="operator_neq"></a>  CMenu::operator! =  
  2 つのメニューが等しく論理的にないかどうかを判断します。  
   
 ```  
@@ -1072,7 +1067,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>コメント  
  左側のメニュー オブジェクトが右側にあるメニュー オブジェクトと等しくないかどうか。  
   
-##  <a name="operator_eq_eq"></a>CMenu::operator = =  
+##  <a name="operator_eq_eq"></a>  CMenu::operator = =  
  2 つのメニューが論理的に等しいかどうかを決定します。  
   
 ```  
@@ -1086,7 +1081,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>コメント  
  左側のメニュー オブジェクトが等しいかどうか (の観点で、`HMENU`値) の右側にあるメニュー オブジェクトにします。  
   
-##  <a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>  CMenu::RemoveMenu  
  メニューから、関連付けられたポップアップ メニューにメニュー項目を削除します。  
   
 ```  
@@ -1118,7 +1113,7 @@ BOOL RemoveMenu(
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem  
  指定されたメニューの既定のメニュー項目を設定します。  
   
 ```  
@@ -1143,7 +1138,7 @@ BOOL SetDefaultItem(
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId  
  コンテキスト ヘルプ ID に関連付けます`CMenu`です。  
   
 ```  
@@ -1163,7 +1158,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>例  
   例を参照して[CMenu::InsertMenu](#insertmenu)です。  
   
-##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo  
  メニューの情報を設定します。  
   
 ```  
@@ -1180,7 +1175,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>コメント  
  特定のメニューに関する情報を設定するには、この関数を呼び出します。  
   
-##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps  
  指定されたビットマップをメニュー項目に関連付けます。  
   
 ```  
@@ -1226,7 +1221,7 @@ BOOL SetMenuItemBitmaps(
   
  [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo  
  メニュー項目に関する情報を変更します。  
   
 ```  
@@ -1249,7 +1244,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>コメント  
  この関数をラップ[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)Windows SDK に記述されている。  
   
-##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  指定した位置に浮動小数点のポップアップ メニューを表示し、ポップアップ メニュー項目の選択肢を追跡します。  
   
 ```  
@@ -1286,7 +1281,7 @@ BOOL TrackPopupMenu(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx  
  指定した位置に浮動小数点のポップアップ メニューを表示し、ポップアップ メニュー項目の選択肢を追跡します。  
   
 ```  
@@ -1322,7 +1317,7 @@ BOOL TrackPopupMenuEx(
 ### <a name="remarks"></a>コメント  
  浮動小数点のポップアップ メニュー画面のどこでも表示できます。 ポップアップ メニューを作成するときにエラーの処理の詳細については、次を参照してください。[バインド](http://msdn.microsoft.com/library/windows/desktop/ms648003)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC サンプル CTRLTEST](../../visual-cpp-samples.md)   
  [MFC サンプル DYNAMENU](../../visual-cpp-samples.md)   
  [CObject クラス](../../mfc/reference/cobject-class.md)   

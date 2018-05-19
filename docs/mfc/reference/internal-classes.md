@@ -1,13 +1,10 @@
 ---
-title: "内部クラス |Microsoft ドキュメント"
-ms.custom: 
+title: 内部クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CPreviewViewEx
 - m_bPreMultiplyCheck
@@ -316,17 +313,15 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8848bb9d8599fcff5ed24d3bccf82ef581a0eb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f7d1ef39a80ce8a06cef14ad227c7de54163644
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internal-classes"></a>内部クラス
 次のクラスは、MFC で内部的に使用されます。 完全を期すために、このセクションではこれらの内部クラスについて説明しますが、コードで直接使用するためのものではありません。  
@@ -338,7 +333,7 @@ ms.lasthandoff: 12/21/2017
 |`CCommandManager Class`|`CCommandManager`クラスは、コマンドとイメージとの関連付けを管理します。|  
 |`CDialogImpl Class (MFC)`|など、ダイアログ ボックスを使用したクラスに実装の詳細を提供`CDialogEx`です。|  
 |`CDocumentAdapter Class`|IDocument インターフェイスを実装するために必要な検索と整理のハンドラー。|  
-|`CFrameImpl Class`|`CFrameImpl`クラスは、次のフレーム ウィンドウ クラスにツールバーのカスタマイズを処理します[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)、および[COleIPFrameWndEx クラス。](../../mfc/reference/coleipframewndex-class.md).|  
+|`CFrameImpl Class`|`CFrameImpl`クラスは、次のフレーム ウィンドウ クラスにツールバーのカスタマイズを処理します[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)、および[COleIPFrameWndEx クラス](../../mfc/reference/coleipframewndex-class.md)。|  
 |`CFullScreenImpl Class`|全画面表示機能を実装 SDI と MDI アプリケーションに共通します。|  
 |`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd`クラスは、ヘルパー クラスを MDI タブおよび MDI タブ付きグループの実装を簡略化します。|  
 |`CMemDC Class`|メモリ デバイス コンテキストのヘルパー クラスです。 メモリ デバイス コンテキストでは、画面外の描画をサポートします。|  
@@ -350,7 +345,7 @@ ms.lasthandoff: 12/21/2017
 |`CMFCControlBarImpl Class`|コントロール バー ベースのクラスをなどに実装の詳細を提供`CMFCReBar`と`CMFCToolBar`です。|  
 |`CMFCControlRenderer Class`|イメージの表示を処理するヘルパー クラスです。|  
 |`CMFCControlRendererInfo Class`|パラメーターを渡すためのヘルパー クラス`CMFCControlRenderer`クラスです。|  
-|`CMFCCustomizeButton Class`|メニュー コマンドまたはツールバーのボタンのカスタマイズ ダイアログ ボックスを起動をサポートしています。|  
+|`CMFCCustomizeButton Class`|メニュー コマンドまたはツールバーのボタンのカスタマイズダイアログ ボックスを起動をサポートしています。|  
 |`CMFCCustomizeMenuButton Class`|[カスタマイズ] メニューの 1 つのボタンを表します。|  
 |`CMFCDropDownListBox Class`|リボンのコンボ ボックスにドロップダウン リスト ボックスの機能を提供します。|  
 |`CMFCMousePropertyPage Class`|プロパティのページで、マウスの動作をカスタマイズすることができます。|  
@@ -422,6 +417,6 @@ ms.lasthandoff: 12/21/2017
 |`CVSListBoxEditCtrl Class`|ダイアログ ボックスが表示される小さなボタンを表示することによって、標準のリスト ボックス編集コントロールを拡張します。|  
 |`CVSToolsListBox Class`|追加のボタンを追加、削除、およびリスト ボックスでアイテムを移動することにより、標準のリスト ボックス コントロールを拡張します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC デスクトップ アプリケーション](../../mfc/mfc-desktop-applications.md)
 
