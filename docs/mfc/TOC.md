@@ -43,7 +43,8 @@
 ### [MFC モジュール状態でのアクティベーション コンテキストのサポート](support-for-activation-contexts-in-the-mfc-module-state.md)
 ### [MFC コモン コントロール ライブラリの分離](isolation-of-the-mfc-common-controls-library.md)
 ### [Windows Vista コモン コントロールの作成要件](build-requirements-for-windows-vista-common-controls.md)
-#### [サポートされなくなった ANSI API](deprecated-ansi-apis.md)
+#### 
+  [非推奨の ANSI API](deprecated-ansi-apis.md)
 ### [方法: 再起動マネージャーのサポートを追加する](how-to-add-restart-manager-support.md)
 ### [動的レイアウト](dynamic-layout.md)
 ## [CObject の使い方](using-cobject.md)
@@ -136,7 +137,6 @@
 ### [インターネット上の Active テクノロジ](active-technology-on-the-internet.md)
 ### [WinInet の基礎](wininet-basics.md)
 ### [HTML の基礎](html-basics.md)
-### [HTTP の基礎](http-basics.md)
 ## [MFC インターネット プログラミングの作業](mfc-internet-programming-tasks.md)
 ### [アプリケーションのデザイン上の検討事項](application-design-choices.md)
 ### [MFC アプリケーションの作成](writing-mfc-applications.md)
