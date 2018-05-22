@@ -1,6 +1,6 @@
 ---
-title: Visual C++ ツールセットで問題を報告する方法 | Microsoft Docs
-ms.date: 1/11/2018
+title: Visual C++ ツールセットの問題を報告する方法 | Microsoft Docs
+ms.date: 5/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,27 +10,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
+ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Visual C++ ツールセットで問題を報告する方法
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ ツールセットまたはドキュメントの問題を報告する方法
 
-Microsoft Visual C++ のコンパイラ、リンカー、その他のツールとライブラリを使っていて問題が発生した場合は、Microsoft にお知らせください。
+Microsoft Visual C++ のコンパイラ、リンカー、その他のツールとライブラリを使っていて問題が発生した場合は、Microsoft にお知らせください。 ドキュメントに問題がある場合は、そちらもお知らせください。
+
+## <a name="how-to-report-a-c-documentation-issue"></a>C++ ドキュメントの問題を報告する方法
+
+Microsoft では、GitHub の問題を使用して、報告されているドキュメントの問題を追跡しています。 現在 GitHub の問題は、コンテンツ ページから直接作成できます。これでは、ライターや製品チームとさまざまな方法で問題に関して直接やり取りできます。 ドキュメントに問題がある場合、コード サンプルが不適切な場合、説明が不明瞭な場合、重要な欠落がある場合、または単に記述間違いがある場合、簡単にご連絡いただけます。 ページの一番下までスクロールし、**[Sign in to give documentation feedback]** \(サインインしてドキュメントのフィードバックを送信する\) を選択します。 GitHub アカウントをお持ちでない場合は作成する必要がありますが、作成すれば、すべてのドキュメントに関する問題やそれらの状態を参照できます。また、お客様が報告してくださった問題が変更された場合、通知を受け取ることができます。 詳細については、「[A New Feedback System Is Coming to docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs)」(docs.microsoft.com に導入される新しいフィードバック システム) を参照してください。
+
+ドキュメントのフィードバック ボタンを使用して、ドキュメントの問題を GitHub で作成すると、Microsoft で問題がどこにあるか知ることができるよう、問題を作成したページに関するいくつかの情報が自動的に記入されます。 この情報は編集しないでください。 問題の箇所の詳細のみを添付し、必要に応じて、修正方法の提案をお知らせください。 [Microsoft のドキュメントはオープン ソースなので](https://github.com/MicrosoftDocs/cpp-docs/)、お客様で修正プログラムを作成してご提案いただくことも可能です。 弊社のドキュメントにご協力いただく方法の詳細については、GitHub の「[Contributing guide](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md)」 (寄稿ガイド) を参照してください。
+
+## <a name="how-to-report-a-c-product-issue"></a>C++ 製品の問題を報告する方法
 
 問題についてのご連絡に最適な方法は、発生した問題の説明、プログラムの作成方法の詳細、および Microsoft のコンピューターで問題を再現するために使うことができる*再現コード*、完全なテスト ケースを含む、レポートをお送りいただくことです。 この情報があると、短時間で、Microsoft のコードに問題が存在していて、報告者の環境だけの問題ではないことを確認すること、また、コンパイラの他のバージョンに影響があるかどうかを特定して、原因を診断することができます。
 
-このドキュメントでは、次のことについて説明します。
-
-- [レポートを準備する方法](#how-to-prepare-your-report)、および優れたレポートの内容。
-
-- [再現コードを生成する方法](#how-to-generate-a-repro)、および再現コードのさまざまな種類。
-
-- [レポートを送信する方法](#ways-to-send-your-report)、およびそれぞれの違い。
-
-レポートは、Microsoft にとっても他の開発者にとっても重要です。 Visual C++ の向上にご協力いただきありがとうございます。
+以下のセクションでは、よいレポートの特長、発見した問題の再現方法、製品チームへのレポートの送信方法について説明します。 レポートは、Microsoft にとっても他の開発者にとっても重要です。 Visual C++ の向上にご協力いただきありがとうございます。
 
 ## <a name="how-to-prepare-your-report"></a>レポートを準備する方法
 
@@ -291,7 +291,7 @@ Microsoft での問題の原因究明には、[適切な再現コード](#what-m
 
 ## <a name="ways-to-send-your-report"></a>レポートを送信する方法
 
-レポートを提出するには複数の方法があります。 Visual Studio に組み込まれている[問題の報告ツール](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)、または [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) (Visual Studio 開発者コミュニティ) ページを使用できます。 電子メールでレポートを送信することもできますが、最初の 2 つの方法をお勧めします。 どれを選択するかは、レポートを調査するエンジニアとの連絡方法、および進捗状況を追跡するかどうか、コミュニティとレポートを共有するかどうかによって異なります。
+レポートを提出するには複数の方法があります。 Visual Studio に組み込まれている[問題の報告ツール](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)、または [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) (Visual Studio 開発者コミュニティ) ページを使用できます。 また、このページ下部の **[製品のフィードバック]** ボタンを選択すると、直接開発者コミュニティのページに進むことができます。 電子メールでレポートを送信することもできますが、最初の 2 つの方法をお勧めします。 どれを選択するかは、レポートを調査するエンジニアとの連絡方法、および進捗状況を追跡するかどうか、コミュニティとレポートを共有するかどうかによって異なります。
 
 > [!NOTE]
 > レポートの送信方法に関係なく、Microsoft はお客様のプライバシーを尊重します。 お客様から送信していただいたデータの扱いについて詳しくは、「[Microsoft Visual Studio 製品ファミリのプライバシーに関する声明](https://www.visualstudio.com/dn948229)」をご覧ください。
@@ -334,4 +334,4 @@ Source code and repro steps:
 ```
 
 > [!TIP]
-> Visual Studio で発生する可能性がある、ツールセットに関係しない他の種類の問題 (たとえば、UI の問題、IDE の機能の不具合、一般的なクラッシュなど) の場合は、問題の報告ツールを使うのが特に適しています。このツールのスクリーンショット機能や、発生した問題をもたらした UI 操作を記録する機能が役に立ちます。 これらの他の種類のエラーの報告には、compilercrash@microsoft.com へのメール送信は使わないでください。
+> Visual Studio で発生する可能性がある、ツールセットに関係しない他の種類の問題 (たとえば、UI の問題、IDE の機能の不具合、一般的なクラッシュなど) の場合は、**問題の報告ツール**を使うのが特に適しています。このツールのスクリーンショット機能や、発生した問題をもたらした UI 操作を記録する機能が役に立ちます。 このようなエラーは、[開発者コミュニティ](https://developercommunity.visualstudio.com/) サイトから報告していただくことも可能です。 これらの他の種類のエラーの報告には、compilercrash@microsoft.com へのメール送信は使わないでください。

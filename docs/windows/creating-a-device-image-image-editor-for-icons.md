@@ -1,13 +1,10 @@
 ---
-title: "デバイス イメージ (アイコン用イメージ エディター) を作成する |Microsoft ドキュメント"
-ms.custom: 
+title: デバイス イメージ (アイコン用イメージ エディター) を作成する |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - images [C++], creating for display devices
 - icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d68a9d35471e43296cade829700fc6c5b311ce2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fc1ce4bd5a6e125ece7461d100950f255dee44
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>デバイス イメージの作成 (アイコン用イメージ エディター)
 特定のスタイル (32 × 32 の 16 色のアイコンと 32 × 32 のカーソルのモノクロ) でイメージをまず作成とリソースを作成する新しいアイコンまたはカーソル、イメージ エディターします。 初期のアイコンまたはカーソルをさまざまなサイズとスタイルのイメージを追加し、別のディスプレイ デバイスの場合、必要に応じて、追加したイメージを編集できます。 既存のイメージの種類とは、グラフィック プログラムで作成されたビットマップからカット アンド ペースト操作を実行してイメージを編集することもできます。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-create-a-new-icon-or-cursor"></a>新しいアイコンやカーソルを作成するには  
   
-1.  [リソース ビュー](../windows/resource-view-window.md)、.rc ファイルを右クリックし **リソースの挿入**ショートカット メニューからです。 (を単に右クリック、カーソルなど、.rc ファイルに既存のイメージ リソースがある場合、**カーソル**フォルダーを選択**挿入カーソル**ショートカット メニューからです)。  
+1.  [リソース ビュー](../windows/resource-view-window.md)、.rc ファイルを右クリックし**リソースの挿入**ショートカット メニューからです。 (を単に右クリック、カーソルなど、.rc ファイルに既存のイメージ リソースがある場合、**カーソル**フォルダーを選択**挿入カーソル**ショートカット メニューからです)。  
   
     > [!NOTE]
     >  プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
  [アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

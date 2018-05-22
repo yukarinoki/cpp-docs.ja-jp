@@ -1,3 +1,4 @@
+
 # [ATL クラスと構造体](atl-classes.md)
 ## [_ATL_BASE_MODULE70 構造体](atl-base-module70-structure.md)
 ## [_ATL_COM_MODULE70 構造体](atl-com-module70-structure.md)
@@ -204,6 +205,7 @@
 ## [IWorkerThreadClient インターフェイス](iworkerthreadclient-interface.md)
 ## [Win32ThreadTraits クラス](win32threadtraits-class.md)
 ## [ワーカーのアーキタイプ](worker-archetype.md)
+# [ATL_URL_SCHEME](atl-url-scheme-enum.md)
 # [ATL 関数](atl-functions.md)
 ## [ATL HTTP ユーティリティ関数](atl-http-utility-functions.md)
 ## [ATL テキスト エンコード関数](atl-text-encoding-functions.md)
@@ -242,7 +244,9 @@
 ## [文字列変換に関するマクロ](string-conversion-macros.md)
 ## [Windows クラスに関するマクロ](window-class-macros.md)
 ## [Windows メッセージに関するマクロ](windows-messages-macros.md)
+# [ATL 演算子](atl-operators.md)
 # [ATL グローバル変数](atl-global-variables.md)
+# [ATL Typedefs](atl-typedefs.md)
 # [ATL ウィザードとダイアログ ボックス](atl-wizards-and-dialog-boxes.md)
 ## [アプリケーションの設定、ATL プロジェクト ウィザード](application-settings-atl-project-wizard.md)
 ## [ATL Active Server Page コンポーネント ウィザード、ASP](asp-atl-active-server-page-component-wizard.md)
