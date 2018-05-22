@@ -43,8 +43,7 @@
 ### [MFC モジュール状態でのアクティベーション コンテキストのサポート](support-for-activation-contexts-in-the-mfc-module-state.md)
 ### [MFC コモン コントロール ライブラリの分離](isolation-of-the-mfc-common-controls-library.md)
 ### [Windows Vista コモン コントロールの作成要件](build-requirements-for-windows-vista-common-controls.md)
-#### 
-  [非推奨の ANSI API](deprecated-ansi-apis.md)
+#### [非推奨の ANSI API](deprecated-ansi-apis.md)
 ### [方法: 再起動マネージャーのサポートを追加する](how-to-add-restart-manager-support.md)
 ### [動的レイアウト](dynamic-layout.md)
 ## [CObject の使い方](using-cobject.md)
