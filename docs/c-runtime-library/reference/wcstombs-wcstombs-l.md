@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
 
@@ -94,11 +94,11 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合**wcstombs** 、マルチバイト文字列を正常に変換を除く、終了、マルチバイト出力文字列に書き込まれたバイト数を返します**NULL** (存在する場合)。 場合、 *mbstr*引数は**NULL**、 **wcstombs**変換先の文字列のバイト単位で必要なサイズを返します。 場合**wcstombs** 、マルチバイト文字に変換できないワイド文字を検出した型にキャストする-1 を返します**size_t**設定と**errno**に**EILSEQ**.
+場合**wcstombs**が正常にマルチバイト文字列を変換します (存在する場合)、終端の null を除く、マルチバイト出力文字列に書き込まれたバイト数を返します。 場合、 *mbstr*引数は**NULL**、 **wcstombs**変換先の文字列のバイト単位で必要なサイズを返します。 場合**wcstombs** 、マルチバイト文字に変換できないワイド文字を検出した型にキャストする-1 を返します**size_t**設定と**errno**に**EILSEQ**.
 
 ## <a name="remarks"></a>コメント
 
-**Wcstombs**関数によって示されるワイド文字の文字列に変換*wcstr*に対応するマルチバイト文字し、で結果を格納、 *mbstr*配列。 *カウント*パラメーターは、マルチバイト出力文字列に格納できるバイトの最大数を示します (のサイズは、 *mbstr*)。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 入力文字列内のそれぞれのワイド文字をマルチバイト出力文字列に 2 バイトがある場合 (ワイド文字を含む**NULL**)、結果は、それに合わせて保証します。
+**Wcstombs**関数によって示されるワイド文字の文字列に変換*wcstr*に対応するマルチバイト文字し、で結果を格納、 *mbstr*配列。 *カウント*パラメーターは、マルチバイト出力文字列に格納できるバイトの最大数を示します (のサイズは、 *mbstr*)。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 (ワイド文字の null を含む)、入力文字列内のそれぞれのワイド文字をマルチバイト出力文字列に 2 バイトがある場合に合わせて結果が保証されます。
 
 場合**wcstombs**前に、またはとワイド文字の null 文字 (L '\0') が発生した*カウント*に変換する 8 ビット 0 と停止が発生しました。 したがって、マルチバイト文字の文字列で*mbstr*が null で終わる場合にのみ**wcstombs**ワイド null 文字を変換中に発生します。 シーケンスを指す場合*wcstr*と*mbstr*などの動作の重複**wcstombs**が定義されていません。
 

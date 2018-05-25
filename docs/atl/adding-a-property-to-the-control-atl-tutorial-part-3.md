@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>コントロールへのプロパティの追加 (ATL チュートリアル、パート 3)
 `IPolyCtl` コントロールのカスタム プロパティとメソッドを格納しているインターフェイスは、プロパティを追加します。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- `get_Sides`の現在の値を返します、`Sides`プロパティを介して、`pVal`ポインター。 `put_Sides`メソッド、コードにより、ユーザーが設定、`Sides`プロパティに許容される値。 最小値は 2 である必要があり、100 は、最大値の妥当な制限は、点の配列のそれぞれの側を使用することがあるためです。  
+ `get_Sides`の現在の値を返します、`Sides`プロパティを介して、`pVal`ポインター。 `put_Sides`メソッド、コードにより、ユーザーが設定、`Sides`プロパティに許容される値。 最小値は 3 である必要があり、100 は、最大値の妥当な制限は、点の配列のそれぞれの側を使用することがあるためです。  
   
  今すぐというプロパティがある`Sides`です。 次の手順では、それを使用する描画コードを変更します。  
   

@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969de605ca02959d64795a6c8b09b80d4b6b6695
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ee9dec91e8e5173d3933b8637ec767bd160cc225
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -70,10 +70,10 @@ void * _aligned_offset_realloc_dbg(
 アラインメントを強制するためのメモリ割り当てへのオフセット。
 
 *ファイル名*<br/>
-要求したソース ファイルの名前へのポインター、 **aligned_offset_realloc**操作または NULL。
+要求したソース ファイルの名前へのポインター、 **aligned_offset_realloc**操作または**NULL**です。
 
 *行番号*<br/>
-ソース ファイルの数の行で、 **aligned_offset_realloc**操作が要求されているか NULL です。
+ソース ファイルの数の行で、 **aligned_offset_realloc**操作が要求されましたまたは**NULL**です。
 
 ## <a name="return-value"></a>戻り値
 

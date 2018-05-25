@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1bf80276b5434804651bcc4507397e9479f6e494
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル : C++ AMP アプリケーションのデバッグ
 このトピックでは、C++ Accelerated Massive Parallelism (C++ AMP) を使用して、グラフィックス処理装置 (GPU) を利用するアプリケーションをデバッグする方法を示します。 整数の大きな配列を合計する並列リダクション プログラムを使用します。 このチュートリアルでは、次の作業について説明します。  
@@ -228,7 +228,9 @@ CPU ブレークポイント
   
 3.  **起動するデバッガー**一覧で、**ローカル Windows デバッガー**です。  
   
-4.  **デバッガーの種類**一覧で、 **GPU のみ**です。  
+4.  **デバッガーの種類**ボックスの一覧であることを確認**自動**が選択されています。
+
+    **自動**既定値です。 Windows 10 より前**GPU のみ**の代わりに必要な値は、**自動**です。
   
 5.  **[OK]** を選択します。  
   

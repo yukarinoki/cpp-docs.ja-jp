@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ char *_ecvt(
 
 ## <a name="return-value"></a>戻り値
 
-**_ecvt**桁の文字列へのポインターを返しますエラーが発生した場合は NULL です。
+**_ecvt**桁の文字列へのポインターを返します**NULL**場合はエラーが発生しました。
 
 ## <a name="remarks"></a>コメント
 
@@ -85,7 +85,7 @@ char *_ecvt(
 
 **_ecvt**と **_fcvt**変換に 1 つの静的に割り当てられたバッファーを使用します。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-この関数は、パラメーターを検証します。 場合*dec*または*記号*が NULL の場合、または*カウント*が 0 の無効なパラメーター ハンドラーが呼び出されます」の説明に従って場合、[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と NULL が返されます。
+この関数は、パラメーターを検証します。 場合*dec*または*記号*は**NULL**、または*カウント*が 0 の無効なパラメーター ハンドラーが呼び出されます」の説明に従って場合、[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**NULL**が返されます。
 
 ## <a name="requirements"></a>要件
 

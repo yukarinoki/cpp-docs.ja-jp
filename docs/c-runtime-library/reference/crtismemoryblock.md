@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,9 +77,9 @@ int _CrtIsMemoryBlock(
 
 ## <a name="remarks"></a>コメント
 
-**_CrtIsMemoryBlock**関数は、指定されたメモリ ブロックがアプリケーションのローカル ヒープ内にあることと、有効なブロック型識別子があることを確認します。 また、この関数を使用すると、オブジェクト割り当て順序番号と、メモリ ブロックの割り当て要求を行ったソース ファイル名および行番号を取得できます。 NULL 以外の値を渡す、 *requestNumber*、 *filename*、または*linenumber*パラメーター原因 **_CrtIsMemoryBlock**を設定するにはこれらのパラメーターのメモリ ブロックの値には、ブロックがローカル ヒープ内が見つかった場合、ヘッダーをデバッグします。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtIsMemoryBlock**プリプロセス時に削除されます。
+**_CrtIsMemoryBlock**関数は、指定されたメモリ ブロックがアプリケーションのローカル ヒープ内にあることと、有効なブロック型識別子があることを確認します。 また、この関数を使用すると、オブジェクト割り当て順序番号と、メモリ ブロックの割り当て要求を行ったソース ファイル名および行番号を取得できます。 渡す以外**NULL**の値を*requestNumber*、 *filename*、または*linenumber*パラメーター原因 **_CrtIsMemoryBlock**ブロックがローカル ヒープ内が見つかった場合、メモリ ブロックのデバッグ ヘッダーの値にこれらのパラメーターを設定します。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtIsMemoryBlock**プリプロセス時に削除されます。
 
-場合 **_CrtIsMemoryBlock**失敗すると、それを返します**FALSE**出力パラメーターは、既定値に初期化されます*requestNumber*と**lineNumber。**を 0 に設定し、 *filename*に設定されている**NULL**です。
+場合 **_CrtIsMemoryBlock**失敗すると、それを返します**FALSE**出力パラメーターは、既定値に初期化されます*requestNumber*と**lineNumber。** を 0 に設定し、 *filename*に設定されている**NULL**です。
 
 この関数は **TRUE** または **FALSE** を返すため、[_ASSERT](assert-asserte-assert-expr-macros.md) 系マクロに渡すことによって、デバッグ用の単純なエラー処理機構を作成できます。 指定されたアドレスがローカル ヒープ内にない場合に、アサーションの失敗を発生させるには、次のように記述します。
 

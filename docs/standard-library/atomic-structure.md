@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic 構造体
 
@@ -63,7 +63,7 @@ struct atomic;
 
 型*Ty*する必要があります*普通にコピー可能*です。 使用して、 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)そのバイトのコピーは、有効な生成する必要があります*Ty*元のオブジェクトと等しいを比較するオブジェクト。 [Compare_exchange_weak](#compare_exchange_weak)と[compare_exchange_strong](#compare_exchange_strong)メンバー関数を使用して[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)を 2 つあるかどうかを判断*Ty*値等価です。 これらの関数は使用しない、 *Ty*-定義**演算子 = =** です。 メンバー関数は、**アトミック**使用**memcpy**型の値をコピーする*Ty*です。
 
-部分的特殊化では、* * アトミック\<Ty * > * *、すべてのポインター型に存在します。 特殊化により、マネージ ポインター値のオフセットの加算またはマネージ ポインター値からのオフセットの減算が可能になります。 算術演算型の引数として受け取ります**ptrdiff_t**のサイズに従ってその引数を調整および*Ty*通常のアドレス算術と一致するようにします。
+部分的特殊化では、**アトミック\<Ty \* >** 、すべてのポインター型に存在します。 特殊化により、マネージ ポインター値のオフセットの加算またはマネージ ポインター値からのオフセットの減算が可能になります。 算術演算型の引数として受け取ります**ptrdiff_t**のサイズに従ってその引数を調整および*Ty*通常のアドレス算術と一致するようにします。
 
 すべての整数型を除く、特殊化が存在する**bool**です。 それぞれの特殊化には、分割不可能な算術演算および論理演算のための豊富な一連のメソッドが用意されています。
 
