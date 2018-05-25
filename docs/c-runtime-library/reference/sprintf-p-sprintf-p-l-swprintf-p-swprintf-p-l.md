@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 
@@ -118,11 +118,11 @@ int _swprintf_p_l(
 
 ## <a name="remarks"></a>コメント
 
-**_Sprintf_p**関数は、書式化して、一連の文字と内の値を格納*バッファー*です。 各引数は、 *argument_list* (存在する場合) は変換され、対応する書式指定に従って*形式*です。 *形式*引数は、 [printf 関数と wprintf 関数の指定の構文を書式設定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)です。 A **NULL**最後に書き込まれた文字の後に文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 違い **_sprintf_p**と**sprintf_s**される **_sprintf_p**引数には、順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+**_Sprintf_p**関数は、書式化して、一連の文字と内の値を格納*バッファー*です。 各引数は、 *argument_list* (存在する場合) は変換され、対応する書式指定に従って*形式*です。 *形式*引数は、 [printf 関数と wprintf 関数の指定の構文を書式設定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)です。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 違い **_sprintf_p**と**sprintf_s**される **_sprintf_p**引数には、順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
 **_swprintf_p**のワイド文字バージョンは、 **_sprintf_p**; ポインター引数 **_swprintf_p**ワイド文字列です。 エンコーディング エラーの検出 **_swprintf_p**が異なる場合が **_sprintf_p**です。 **_swprintf_p**と**fwprintf_p**という点以外の動作は同じ **_swprintf_p**型の出力先ではなく文字列に出力を書き込みます**ファイル**、および **_swprintf_p**が必要です、*カウント*パラメーターを書き込む文字の最大数を指定します。 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-**_sprintf_p**に格納されるバイト数を返します*バッファー*、終端をカウントせず**NULL**文字です。 **_swprintf_p**で格納されるワイド文字の数を返します*バッファー*、終端をカウントせず**NULL**ワイド文字。 場合*バッファー*または*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+**_sprintf_p**に格納されるバイト数を返します*バッファー*、終端の null 文字を含みません。 **_swprintf_p**で格納されるワイド文字の数を返します*バッファー*、終端の null ワイド文字を含みません。 場合*バッファー*または*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

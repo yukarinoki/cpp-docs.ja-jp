@@ -41,11 +41,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e4a4791092b93d04b06432a5294a11200ed879
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg、_wcsdup_dbg
 
@@ -77,10 +77,10 @@ NULL で終わる元の文字列。
 要求されたメモリ ブロックの型: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**です。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイル名へのポインターまたは NULL。
+割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**です。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の行番号または NULL。
+割り当て操作が要求されたソース ファイルの数の行または**NULL**です。
 
 ## <a name="return-value"></a>戻り値
 

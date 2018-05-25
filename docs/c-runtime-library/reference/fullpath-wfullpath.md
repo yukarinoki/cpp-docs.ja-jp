@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>パラメーター
 
 *absPath*<br/>
-絶対または完全パス名を格納するバッファーへのポインター、または null。
+絶対または完全パス名を格納するバッファーへのポインターまたは**NULL**です。
 
 *relPath*<br/>
 相対パス名。
@@ -82,7 +82,7 @@ wchar_t *_wfullpath(
 
 ## <a name="remarks"></a>コメント
 
-**_Fullpath**関数は、相対パス名で、展開*relPath*を完全修飾パスまたは絶対パスとストアの名前をこの*absPath*です。 場合*absPath* null、 **malloc**パス名を保持するために十分な長さのバッファーを割り当てるために使用します。 このバッファーを解放するのは、呼び出し元の役目です。 相対パス名は、現在の場所から別の場所 (現在の作業ディレクトリ "." など) にパスを指定します。 絶対パス名は、ファイル システムのルートから目的の位置に到達するために必要なパス全体を示す相対パス名の拡張です。 異なり **_makepath**、 **_fullpath**相対パスの絶対パス名を取得するために使用できます (*relPath*) が含まれる"./「または」../"、名前にします。
+**_Fullpath**関数は、相対パス名で、展開*relPath*を完全修飾パスまたは絶対パスとストアの名前をこの*absPath*です。 場合*absPath*は**NULL**、 **malloc**パス名を保持するために十分な長さのバッファーを割り当てるために使用します。 このバッファーを解放するのは、呼び出し元の役目です。 相対パス名は、現在の場所から別の場所 (現在の作業ディレクトリ "." など) にパスを指定します。 絶対パス名は、ファイル システムのルートから目的の位置に到達するために必要なパス全体を示す相対パス名の拡張です。 異なり **_makepath**、 **_fullpath**相対パスの絶対パス名を取得するために使用できます (*relPath*) が含まれる"./「または」../"、名前にします。
 
 たとえば、C ランタイム ルーチンを使用するには、アプリケーションに、ルーチンの宣言を含むヘッダー ファイルを含める必要があります。 各ヘッダー ファイルは、(アプリケーションの作業ディレクトリから) 相対的な方法でファイルの場所を参照するステートメントを含んでいます。
 

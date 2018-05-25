@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
 
@@ -120,7 +120,7 @@ en-US
 
 `setlocale( LC_ALL, "C" );`
 
-*ロケール*引数は、ロケール名、言語識別文字列、言語識別文字列と国/地域コード、コード ページ、または、言語識別文字列、国/地域コード、およびコード ページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコード ページのセットには、1 文字に 2 バイトを超えるデータを必要とする (UTF-7、UTF-8 など) コード ページを除き、Windows の NLS API でサポートされるすべてが含まれています。 Utf-7 または utf-8 のコード ページ値を指定した場合**setlocale、_wsetlocale**が失敗すると、NULL が返されます。 サポートされているロケール名のセット**setlocale、_wsetlocale**に記載されて[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)です。 サポートされている言語と国/地域の文字列のセット**setlocale、_wsetlocale**に挙げます[言語識別文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)です。 パフォーマンス上の理由と、コードに埋め込まれた、またはストレージに対してシリアル化されたロケール文字列の保守容易性の理由により、ロケール名形式を使用することをお勧めします。 オペレーティング システムの更新によってロケール名の文字列が変更される可能性は、言語および国/地域名の形式よりも低くなっています。
+*ロケール*引数は、ロケール名、言語識別文字列、言語識別文字列と国/地域コード、コード ページ、または、言語識別文字列、国/地域コード、およびコード ページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコード ページのセットには、1 文字に 2 バイトを超えるデータを必要とする (UTF-7、UTF-8 など) コード ページを除き、Windows の NLS API でサポートされるすべてが含まれています。 Utf-7 または utf-8 のコード ページ値を指定した場合**setlocale、_wsetlocale**が失敗すると、返す**NULL**です。 サポートされているロケール名のセット**setlocale、_wsetlocale**に記載されて[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)です。 サポートされている言語と国/地域の文字列のセット**setlocale、_wsetlocale**に挙げます[言語識別文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)です。 パフォーマンス上の理由と、コードに埋め込まれた、またはストレージに対してシリアル化されたロケール文字列の保守容易性の理由により、ロケール名形式を使用することをお勧めします。 オペレーティング システムの更新によってロケール名の文字列が変更される可能性は、言語および国/地域名の形式よりも低くなっています。
 
 Null ポインターとして渡されますが、*ロケール*引数**setlocale、_wsetlocale**国際的な環境を設定する代わりに照会します。 場合、*ロケール*引数が null ポインターでは、プログラムの現在のロケール設定は変更されません。 代わりに、 **setlocale、_wsetlocale**に関連付けられている文字列へのポインターを返します、*カテゴリ*スレッドの現在のロケールです。 場合、*カテゴリ*引数は**LC_ALL**セミコロンで区切られた、各カテゴリの現在の設定を示す文字列を返します。 たとえば、呼び出しのシーケンス 
 

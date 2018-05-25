@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd31bed09088a73d40fd797da650e70c7f1e6784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: deb23d856fc0ec5aecfdb726256394d5135a18d4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol、_atol_l、_wtol、_wtol_l
 
@@ -100,7 +100,7 @@ long _wtol_l(
 
 これらの関数が文字の文字列を long 整数値に変換 (**atol**)。
 
-入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字にすることがあります、 **NULL**文字 ('\0' または L '\0')、文字列を終了します。
+入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
 *Str*引数**atol**は次の形式があります。
 

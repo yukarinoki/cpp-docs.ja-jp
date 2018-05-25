@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock 構造体
 
@@ -42,8 +42,6 @@ struct system_clock;
 `now()` への最初の呼び出しによって返される値が、`now()` への以降の呼び出しによって返される値以下である場合、クロックは常に*単調*になります。
 
 *単調*で、クロックのティック間の時間が一定のクロックは*安定しています*。
-
-この実装では、`system_clock` は `high_resolution_clock` と同じ意味です。
 
 ## <a name="members"></a>メンバー
 

@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017ea9d96cef9065ff82e7f3428e725b816c9319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -56,7 +56,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="return-value"></a>戻り値
 
-によって登録前の関数のポインターを返します**set_terminate**前の関数を後で復元できるようにします。 前の関数が設定されていない場合には、戻り値を使用して既定の動作を復元することができます。この値は NULL になります。
+によって登録前の関数のポインターを返します**set_terminate**前の関数を後で復元できるようにします。 戻り値を既定の動作を復元する使用可能性がありますの前の関数が設定されていない場合この値は、 **NULL**です。
 
 ## <a name="remarks"></a>コメント
 

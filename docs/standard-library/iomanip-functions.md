@@ -28,11 +28,11 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 5e491b9dc5035435fce16b704d28a71a1b0644de
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 12840a7b48be897573e2041aa06fc7fdc8d15297
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -125,7 +125,7 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="remarks"></a>コメント
 
-マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`str` に関連付けられているロケール ファセット `time_put` のメンバー関数 `put` を呼び出します。 出力関数は、`_Tptr` を使用して時間構造体を示し、`_Fmt` を使用して NUL で終わる書式文字列の先頭を示します。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
+マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`str` に関連付けられているロケール ファセット `time_put` のメンバー関数 `put` を呼び出します。 出力関数を使用して`_Tptr`時間構造体を示すために、`_Fmt`形式の null で終わる文字列の先頭を示すためにします。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
 
 ## <a name="quoted"></a>  quoted
 

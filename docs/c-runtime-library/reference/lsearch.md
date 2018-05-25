@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cfcb5b3182b4d8a30c6bee65bc6efd3199fd3c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -87,7 +87,7 @@ void *_lsearch(
 
 *比較*引数は、ルーチンへのポインター、ユーザーが指定した 2 つの配列要素を比較し、それらの関係を示す値を返します。 **_lsearch**呼び出し、*比較*ルーチンの 1 つまたは複数回呼び出しごとに 2 つの配列要素へのポインターを渡す、検索中にします。 *比較*要素を比較し、いずれかを返す必要があります (つまり、要素が異なります) 0 以外の値または 0 (つまり、要素は同じ)。
 
-この関数は、パラメーターを検証します。 場合*比較*、*キー*または*数*は**NULL**、または*基本*null と **数* 0 以外の場合、または*幅*が小さい以上では、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**です。
+この関数は、パラメーターを検証します。 場合*比較*、*キー*または*数*は**NULL**、または*基本*は**NULL**と*数*0 以外の場合、または*幅*が小さい以上では、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**です。
 
 ## <a name="requirements"></a>要件
 

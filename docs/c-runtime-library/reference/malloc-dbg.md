@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ void *_malloc_dbg(
 要求されたメモリ ブロックの型: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**です。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイル名へのポインターまたは NULL。
+割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**です。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の行番号または NULL。
+割り当て操作が要求されたソース ファイルの数の行または**NULL**です。
 
 *Filename*と*linenumber*パラメーターは、のみ使用可能な場合に **_malloc_dbg**が明示的に呼び出された、または[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されています。
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、この関数は割り当てられたメモリ ブロックのユーザー部分へのポインターを返すか、新しいハンドラー関数を呼び出すか、NULL を返します。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[malloc](malloc.md) 関数を参照してください。
+正常終了した場合、この関数、割り当てられたメモリ ブロックのユーザー部分へのポインターを返します、新しいハンドラー関数を呼び出し、またはを返します**NULL**です。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[malloc](malloc.md) 関数を参照してください。
 
 ## <a name="remarks"></a>コメント
 

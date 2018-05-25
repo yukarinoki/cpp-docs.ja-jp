@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
 
@@ -102,7 +102,7 @@ errno_t _wctomb_s_l(
 
 **Wctomb_s**関数に変換、 *wchar*を対応するマルチバイト文字の引数で結果を格納および*mbchar*です。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。
 
-場合**wctomb_s**ワイド文字に変換しますをマルチバイト文字のバイト数を配置 (より大きいは決して**MB_CUR_MAX**)を指す整数にワイド文字*pRetValue*です。 場合*wchar*ワイド null 文字 (L '\0') は、 **wctomb_s**塗りつぶします*pRetValue* 1 です。 場合、ターゲット ポインター *mbchar* null、 **wctomb_s**に 0 を格納*pRetValue*です。 現在のロケールで変換が不可能な場合**wctomb_s**に-1 を配置*pRetValue*です。
+場合**wctomb_s**ワイド文字に変換しますをマルチバイト文字のバイト数を配置 (より大きいは決して**MB_CUR_MAX**)を指す整数にワイド文字*pRetValue*です。 場合*wchar*ワイド null 文字 (L '\0') は、 **wctomb_s**塗りつぶします*pRetValue* 1 です。 場合、ターゲット ポインター *mbchar*は**NULL**、 **wctomb_s**に 0 を格納*pRetValue*です。 現在のロケールで変換が不可能な場合**wctomb_s**に-1 を配置*pRetValue*です。
 
 **wctomb_s**ロケールに依存する詳細については、現在のロケールを使用 **_wctomb_s_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
