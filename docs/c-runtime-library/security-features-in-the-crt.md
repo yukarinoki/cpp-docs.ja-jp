@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>CRT のセキュリティ機能
 多くの古い CRT 関数には、セキュリティが強化された新しいバージョンがあります。 セキュリティで保護された関数が存在する場合、低いセキュリティ レベルの古いバージョンは非推奨としてマークされ、新しいバージョンには `_s` ("secure") のサフィックスが付いています。  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`。 セキュリティで保護された関数、および多くの以前から存在するバージョンの関数の両方で、CRT 関数に渡されるパラメーターが検証されます。 次のような検証が行われます。  
   
-    -   関数に渡された `NULL` 値のチェック。  
+    -   関数に渡された **NULL** 値のチェック。  
   
     -   列挙値が有効であるかどうかのチェック。  
   

@@ -1,10 +1,10 @@
 ---
-title: vcpkg-- Windows 用の C++ パッケージ マネージャー | Microsoft Docs
+title: vcpkg-- Windows、Linux、および MacOS 用の C++ パッケージ マネージャー | Microsoft Docs
 description: vcpkg はコマンド ライン パッケージ マネージャーであり、Windows でのオープン ソースの C++ ライブラリの取得およびインストール作業を大幅に簡素化できます。
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 04/06/2018
+ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -14,15 +14,15 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
-# <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Windows 用の C++ パッケージ マネージャー
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
-vcpkg はコマンドライン パッケージ マネージャーであり、Windows でのサードパーティ ライブラリの取得とインストール作業を大幅に簡素化できます。 プロジェクトでサードパーティ ライブラリを使用する場合は、vcpkg を使用して、それらをインストールすることをお勧めします。 vcpkg では、オープン ソース ライブラリと専用ライブラリの両方がサポートされています。 vcpkg パブリック カタログ内のすべてのライブラリは、Visual Studio 2015 および Visual Studio 2017 との互換性がテストされています。 2018 年 1 月の時点で、カタログには 600 個を超えるライブラリが存在しており、C++ コミュニティでは継続的にライブラリをさらに追加しています。
+vcpkg はコマンドライン パッケージ マネージャーであり、Windows、Linux、および MacOS でのサードパーティ ライブラリの取得とインストール作業を大幅に簡素化できます。 プロジェクトでサードパーティ ライブラリを使用する場合は、vcpkg を使用して、それらをインストールすることをお勧めします。 vcpkg では、オープン ソース ライブラリと専用ライブラリの両方がサポートされています。 vcpkg Windows カタログ内のすべてのライブラリは、Visual Studio 2015 および Visual Studio 2017 との互換性がテストされています。 2018 年 5 月の時点で、Windows カタログには 900 超、Linux/MacOS カタログには 350 超のライブラリがあります。 C++ コミュニティでは、両方のカタログに継続的にライブラリが追加されています。
 
 ## <a name="simple-yet-flexible"></a>簡単かつ柔軟
 
@@ -30,19 +30,20 @@ vcpkg はコマンドライン パッケージ マネージャーであり、Win
 
 ## <a name="sources-not-binaries"></a>バイナリではなくソース
 
-パブリック カタログ内のライブラリの場合、vcpkg はバイナリ[1] ではなく、ソースをダウンロードします。 これらのソースは Visual Studio 2017 (2017 がインストールされていない場合は Visual Studio 2015) を使用してコンパイルされます。 C++ では、使用するすべてのライブラリが、リンクされているアプリケーション コードと同じコンパイラ、およびコンパイラ バージョンでコンパイルされることが重要です。 vcpkg を使用すると、一致しないバイナリとそれが原因による問題が発生する可能性がなくなるか、あるいは大幅に減少します。 特定のバージョンの Visual C++ コンパイラで標準化されているチームでは、1 人のチーム メンバーが vcpkg を使用してソースをダウンロードし、一連のバイナリをコンパイルしてからエクスポート コマンドを使用して、他のチーム メンバー用にバイナリとヘッダーを圧縮できます。 詳細については、以下のコンパイルされたバイナリとヘッダーのエクスポートに関する記述を参照してください。
+Windows カタログ内のライブラリの場合、vcpkg はバイナリ[1] ではなく、ソースをダウンロードします。 これらのソースは Visual Studio 2017 (2017 がインストールされていない場合は Visual Studio 2015) を使用してコンパイルされます。 C++ では、使用するすべてのライブラリが、リンクされているアプリケーション コードと同じコンパイラ、およびコンパイラ バージョンでコンパイルされることが重要です。 vcpkg を使用すると、一致しないバイナリとそれが原因による問題が発生する可能性がなくなるか、あるいは大幅に減少します。 特定のバージョンのコンパイラで標準化されているチームでは、1 人のチーム メンバーが vcpkg を使用してソースをダウンロードし、一連のバイナリをコンパイルしてからエクスポート コマンドを使用して、他のチーム メンバー用にバイナリとヘッダーを圧縮できます。 詳細については、以下の「[コンパイル済みのバイナリとヘッダーをエクスポートする](#export_binaries_per_project)」を参照してください。
 
 ポート コレクション内のプライベート ライブラリを使用して vcpkg クローンを作成する場合は、ビルド済みのバイナリとヘッダーをダウンロードするポートを追加し、目的の場所に単にコピーする portfile.cmake ファイルを書き込みます。
 
 [1] *注: 一部の独自のライブラリでは、ソースは入手できません。vcpkg では、このような場合に互換性のあるビルド済みのバイナリをダウンロードします。*
 
-## <a name="installation"></a>インストール
+## <a name="installation"></a>インストール 
 
 GitHub から vcpkg リポジトリを複製する: https://github.com/Microsoft/vcpkg 任意のフォルダー場所にダウンロードすることができます。
 
-ルート フォルダーのブートストラップ (**bootstrap-vcpkg.bat**) を実行します。
+ルート フォルダーのブートストラップを実行します。 
 
-## <a name="basic-tasks"></a>基本的なタスク
+- **bootstrap-vcpkg.bat** (Windows)
+- **./bootstrap-vcpkg.sh** (Linux、MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>入手可能なライブラリのリストを検索する
 
@@ -72,7 +73,11 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 ### <a name="install-a-library-on-your-local-machine"></a>ローカル コンピューターにライブラリをインストールする
 
-**vcpkg search** を使用してライブラリの名前を取得したら、**vcpkg install** を使用してライブラリをダウンロードしてからコンパイルします。 vcpkg では、ports ディレクトリのライブラリの portfile を使用します。 トリプレットが指定されていない場合、vcpkg は x86 Windows 用にインストールしてコンパイルします。 portfile で依存関係が指定されている場合、vcpkg はそれもダウンロードしてインストールします。 ダウンロードの後、vcpkg はライブラリで使用される任意のビルド システムを使用して、ライブラリをビルドします。 CMake および MSBuild プロジェクト ファイルが優先されますが、他のビルド システムと共に MAKE がサポートされます。 vcpkg がローカル コンピューターで指定されたビルド システムを見つけられない場合、そのビルド システムがダウンロードされ、インストールされます。
+**vcpkg search** を使用してライブラリの名前を取得したら、**vcpkg install** を使用してライブラリをダウンロードしてからコンパイルします。 vcpkg では、ports ディレクトリのライブラリの portfile を使用します。 トリプレットが指定されていない場合、vcpkg はターゲット プラットフォームの既定のトリプレット (x86-windows、x64-linux.cmake、または x64-osx.cmake) をインストールしてコンパイルします。
+
+Linux ライブラリの場合、vcpkg はローカル コンピューターにインストールされている gcc に依存します。 MacOS では、vcpkg は Clang を使用します。 
+
+portfile で依存関係が指定されている場合、vcpkg はそれもダウンロードしてインストールします。 ダウンロードの後、vcpkg はライブラリで使用される任意のビルド システムを使用して、ライブラリをビルドします。 CMake および (Windows 上の) MSBuild プロジェクト ファイルが優先されますが、MAKE は他のビルド システムと共にサポートされます。 vcpkg がローカル コンピューターで指定されたビルド システムを見つけられない場合、そのビルド システムがダウンロードされ、インストールされます。
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -82,6 +87,14 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
+
+```
+
+CMAKE プロジェクトの場合、CMAKE_TOOLCHAIN_FILE を使用してライブラリを `find_package()` で使用できるようにします。 例:  
+
+```cmd
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>既にインストールされているライブラリをリストする
@@ -99,7 +112,7 @@ websocketpp:x86-windows 0.7.0    Library that implements RFC6455 The WebSocket P
 zlib:x86-windows        1.2.11   A compression library
 ```
 
-## <a name="integrate-with-visual-studio"></a>Visual Studio と統合する
+## <a name="integrate-with-visual-studio-windows"></a>Visual Studio (Windows) との統合
 
 ### <a name="per-user"></a>ユーザーごと
 
@@ -118,41 +131,18 @@ zlib:x86-windows        1.2.11   A compression library
 1. **vcpkg install \<library>** を実行します。
 1. その後、**vcpkg integrate project** を使用して、プロジェクトごとにそのライブラリを参照する NuGet パッケージを作成できます。
 
-## <a name="export-compiled-binaries-and-headers"></a>コンパイル済みのバイナリとヘッダーをエクスポートする
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Visual Studio Code (Linux/MacOS) との統合 
 
-チームのすべてのメンバーにライブラリをダウンロードしてビルドするよう求めることは非効率な場合があります。 1 人のチーム メンバーがその作業を行ってから、**vcpkg export** を使用して、他のチーム メンバーと簡単に共有できる、バイナリとヘッダーの zip ファイルを作成できます。
+**vcpkg integrate install** を実行して、Linux/MacOS 上で vcpkg を登録する場所に Visual Studio Code を構成し、ソース ファイルで IntelliSense を有効にします。
 
-## <a name="updateupgrade-installed-libraries"></a>インストールされているライブラリを更新/アップグレードする
+## <a name="target-linux-from-windows-via-wsl"></a>WSL 経由で Windows から Linux をターゲットにする
 
-パブリック カタログは、最新バージョンのライブラリで最新の状態が保たれます。 古いローカル ライブラリを判別するには、**vcpkg update** を使用します。 ポート コレクションをパブリック カタログの最新バージョンに更新する準備ができたら、**vcpkg upgrade** コマンドを実行します。これによりインストールされているライブラリのうち、古くなったライブラリのすべてまたは一部が自動的にダウンロードされリビルドされます。
+Windows Subsystem for Linux (WSL) を使用して、Windows コンピューターから Linux バイナリを生成できます。 指示に従って、[Windows 10 で WSL を設定](https://docs.microsoft.com/en-us/windows/wsl/install-win10)し、[Linux 用の Visual Studio 拡張機能](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)を使って構成します。 Windows と Linux の両方にビルドされたすべてのライブラリを同じフォルダーに配置すると、Windows と WSL の両方からアクセスできます。
 
-既定では、**upgrade** コマンドは、古くなったライブラリをリストするだけで、アップグレードは行いません。 アップグレードを実行するには、**--no-dry-run** オプションを使用します。
 
-```cmd
-  vcpkg upgrade --no-dry-run
-```
+## <a name="export_binaries_per_project"></a> コンパイル済みのバイナリとヘッダーをエクスポートする
 
-### <a name="upgrade-options"></a>アップグレード オプション
-
-- **--no-dry-run**  アップグレードを実行します。このオプションが指定されていない場合、コマンドは古くなったパッケージをリストするのみとなります。
-- **--keep-going**  いずれかが失敗した場合でも、パッケージのインストールを続行します。
-- **--triplet \<t>**  修飾されていないパッケージに既定のトリプレットを設定します。
-- **--vcpkg-root \<path>**  現在のディレクトリまたはツール ディレクトリではなく、使用する vcpkg ディレクトリを指定します。
-
-### <a name="upgrade-example"></a>アップグレードの例
-
-### <a name="per-project"></a>プロジェクトごと
-
-アクティブになっている vcpkg インスタンスのバージョンとは異なる特定のバージョンのライブラリを使用する必要がある場合は、次の手順に従います。
-
-1. vcpkg の新しいクローンを作成します。
-1. ライブラリの portfile を変更して、必要なバージョンを取得します。
-1. **vcpkg install \<library>** を実行します。
-1. その後、**vcpkg integrate project** を使用して、プロジェクトごとにそのライブラリを参照する NuGet パッケージを作成できます。
-
-## <a name="export-compiled-binaries-and-headers"></a>コンパイル済みのバイナリとヘッダーをエクスポートする
-
-チームのすべてのメンバーにライブラリをダウンロードしてビルドするよう求めることは非効率な場合があります。 1 人のチーム メンバーがその作業を行ってから、**vcpkg export** を使用して、他のチーム メンバーと簡単に共有できる、バイナリとヘッダーの zip ファイルを作成できます。
+チームのすべてのメンバーにライブラリをダウンロードしてビルドするよう求めることは非効率な場合があります。 1 人のチーム メンバーがその作業を行ってから、**vcpkg export** を使用して、他のチーム メンバーと簡単に共有できる、バイナリとヘッダーの zip ファイル、または NuGet パッケージ (さまざまな形式が可能) を作成できます。
 
 ## <a name="updateupgrade-installed-libraries"></a>インストールされているライブラリを更新/アップグレードする
 
@@ -206,7 +196,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="send-feedback-about-vcpkg"></a>vcpkg のフィードバックを送信する
 
-機能に関するバグ レポートや提案事項など vcpkg のフィードバックを Microsoft に送信するには **--survey** コマンドを使用します。
+機能に関するバグ レポートや提案事項など vcpkg のフィードバックを Microsoft に送信するには、**vcpkg contact --survey** コマンドを使用します。
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg のフォルダー階層
 
@@ -241,12 +231,10 @@ vcpkg インスタンスの内容は次のとおりです。
 |**vcpkg integrate project**|個々の VS プロジェクト使用のために参照する NuGet パッケージを生成します|
 |**vcpkg export \<pkg>... [opt]...**|パッケージをエクスポートします|
 |**vcpkg edit \<pkg>**|編集対象のポートを開きます (既定の 'コード' %EDITOR% を使用)|
-|**vcpkg import \<pkg>**|ビルド済みのライブラリをインポートします|
 |**vcpkg create \<pkg> \<url> [archivename]**|新しいパッケージを作成します|
-|**vcpkg owns \<pat>**|インストールされているパッケージでファイルを検索します|
 |**vcpkg cache**|キャッシュされたコンパイル済みのパッケージをリストします|
 |**vcpkg version**|バージョン情報を表示します|
-|**vcpkg contact**|フィードバックを送信する連絡先の情報を表示します|
+|**vcpkg contact --survey**|フィードバックを送信する連絡先の情報を表示します。|
 
 ### <a name="options"></a>オプション
 
@@ -254,3 +242,4 @@ vcpkg インスタンスの内容は次のとおりです。
 |---------|---------|
 |**--triplet \<t>**|ターゲット アーキテクチャのトリプレットを指定します。 (既定値: `%VCPKG_DEFAULT_TRIPLET%`。**vcpkg help triplet** も参照してください)|
 |**--vcpkg-root \<path>**|vcpkg ルート ディレクトリを指定します (既定値: `%VCPKG_ROOT%`)|
+

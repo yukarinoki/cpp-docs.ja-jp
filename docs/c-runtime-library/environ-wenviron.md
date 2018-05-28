@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 `_environ` 変数は、プロセスの環境を構成するマルチバイト文字列へのポインターの配列を指すポインターです。 このグローバル変数は非推奨となりました。セキュリティを強化したバージョンである [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) および[_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md) を、グローバル変数の代わりに使用する必要があります。 `_environ` は Stdlib.h で宣言されています。  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  この関数は、`_environ` 関数のワイド文字バージョンです。 `wmain` 関数を使用するプログラムでは、`_wenviron` は、オペレーティング システムの環境から取られる設定に従って、プログラムの起動時に初期化されます。  
   
- `main` を使用するプログラムでは、環境がマルチバイト文字の文字列で構成されるため、`_wenviron` の初期値は `NULL` です。 `_wgetenv` または `_wputenv` の最初の呼び出し時に、対応するワイド文字の文字列環境が作成され、`_wenviron` がその環境をポイントするようになります。  
+ `main` を使用するプログラムでは、環境がマルチバイト文字の文字列で構成されるため、`_wenviron` の初期値は **NULL** です。 `_wgetenv` または `_wputenv` の最初の呼び出し時に、対応するワイド文字の文字列環境が作成され、`_wenviron` がその環境をポイントするようになります。  
   
- 同様に、`wmain` を使用するプログラムでは、環境がワイド文字の文字列で構成されるため、`_environ` の初期値は `NULL` です。 `_getenv` または `_putenv` の最初の呼び出し時に、対応するマルチバイト文字の文字列環境が作成され、`_environ` がその環境をポイントするようになります。  
+ 同様に、`wmain` を使用するプログラムでは、環境がワイド文字の文字列で構成されるため、`_environ` の初期値は **NULL** です。 `_getenv` または `_putenv` の最初の呼び出し時に、対応するマルチバイト文字の文字列環境が作成され、`_environ` がその環境をポイントするようになります。  
   
  2 つの環境のコピー (MBCS および Unicode) がプログラムに同時に存在する場合、ランタイム システムは、両方のコピーを保持する必要があるため、実行時間が長くなります。 たとえば、`_putenv` を呼び出す場合は、2 つの環境文字列が対応するように `_wputenv` も自動的に呼び出されます。  
   
