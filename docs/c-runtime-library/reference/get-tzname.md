@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 182bad39b461efc18b120875432d6ce07be2a884
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -58,7 +58,7 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>パラメーター
 
 *pReturnValue*<br/>
-文字列の長さ*timeZoneName* NULL 終端文字を含むです。
+文字列の長さ*timeZoneName* null 終端文字を含むです。
 
 *timeZoneName*<br/>
 文字列のタイム ゾーンの名前または夏時間標準タイム ゾーン名 (DST) の表現によってアドレス*インデックス*です。

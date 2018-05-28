@@ -2,11 +2,8 @@
 title: CSnapInItemImpl クラス |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl クラス
 このクラスは、スナップイン ノード オブジェクトを実装するためのメソッドを提供します。  
@@ -103,17 +98,17 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM**構造で使用される、`CSnapInItemImpl`オブジェクト。|  
   
 ## <a name="remarks"></a>コメント  
- `CSnapInItemImpl`メニュー項目やツールバーを追加して、適切なハンドラー関数にスナップイン ノード用のコマンドの転送などのスナップインでノード オブジェクトの基本的な実装を提供します。 これらの機能は、複数のインターフェイスを使用して実装し、型をマップします。 既定の実装では、派生クラスの適切なインスタンスを特定し、適切なインスタンスにメッセージを転送して、ノード オブジェクトに送信する通知を処理します。  
+ `CSnapInItemImpl` メニュー項目やツールバーを追加して、適切なハンドラー関数にスナップイン ノード用のコマンドの転送などのスナップインでノード オブジェクトの基本的な実装を提供します。 これらの機能は、複数のインターフェイスを使用して実装し、型をマップします。 既定の実装では、派生クラスの適切なインスタンスを特定し、適切なインスタンスにメッセージを転送して、ノード オブジェクトに送信する通知を処理します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CSnapInItem`  
   
  `CSnapInItemImpl`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)です。  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED**データ オブジェクトには型が無効です。  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)です。  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED**データ オブジェクトには型が無効です。  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  このメソッドは、Win32 関数を実装します。 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)です。  
   
 ```
@@ -186,7 +181,7 @@ CreatePropertyPages(
  *lpProvider*  
  [in]ポインター、**プロパティ シート フレーム**インターフェイスです。  
   
- *ハンドル*  
+ *handle*  
  [in]使用するハンドルを指定ルートに、 **MMCN_PROPERTY_CHANGE**適切なデータ クラスに通知メッセージです。  
   
  *pUnk*  
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED**データ オブジェクトには型が無効です。  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  `CSnapInItemImpl` オブジェクトを構築します。  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  この関数は、項目に関する情報を取得します。  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>コメント  
  この関数を正しく実装するのには、ストリームに、正しい情報をコピー ( `pStream`) によって示されるクリップボードの形式に応じて、`cf`です。  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  この関数では、スナップイン オブジェクトの結果ペインのビューの型を取得します。  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** 0 が既定の表示オプションを = です。  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  取得するには、この関数を呼び出して、 **SCOPEDATAITEM**スナップインの構造。  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out]ポインター、 **SCOPEDATAITEM**の構造、`CSnapInItemImpl`オブジェクト。  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  取得するには、この関数を呼び出して、 **RESULTDATAITEM**スナップインの構造。  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out]ポインター、 **RESULTDATAITEM**の構造、`CSnapInItemImpl`オブジェクト。  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  ノードのアイテムに表示される文字列が含まれています。  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  `SCOPEDATAITEM`スナップイン データ オブジェクトの構造体。  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)スナップイン データ オブジェクトの構造体。  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  ユーザーによって、スナップイン オブジェクトを操作したときに呼び出されます。  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED**データ オブジェクトには型が無効です。  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  スナップインでノードにプロパティ ページでサポートされているかどうかに呼び出されます。  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  指定された メニューの挿入のフラグを変更するには、この関数を呼び出す`pInsertionAllowed`、スナップイン オブジェクト。  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  のビットを設定しないで`pInsertionAllowed`を最初に消去されました。 MMC の将来のバージョンでは、bits が定義されていない現在が変わらないようにするために定義されていない bits を使用できます。  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  この関数では、ツールバーを作成する前に、スナップイン オブジェクトのツール バー ボタンのスタイルを変更します。  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in]ボタンの状態フラグ。 次の 1 つ以上を指定できます。  
   
-- `TBSTATE_CHECKED`このボタンは、**スタイル**スタイルを設定して、押されました。  
+- `TBSTATE_CHECKED` このボタンは、**スタイル**スタイルを設定して、押されました。  
   
-- `TBSTATE_ENABLED`ボタンは、ユーザー入力を受け入れます。 この状態がないボタンは、ユーザー入力は受け付けられません、淡色表示にします。  
+- `TBSTATE_ENABLED` ボタンは、ユーザー入力を受け入れます。 この状態がないボタンは、ユーザー入力は受け付けられません、淡色表示にします。  
   
-- `TBSTATE_HIDDEN`ボタンが表示されていないと、ユーザー入力を受け取ることはできません。  
+- `TBSTATE_HIDDEN` ボタンが表示されていないと、ユーザー入力を受け取ることはできません。  
   
-- `TBSTATE_INDETERMINATE`ボタンは淡色表示にします。  
+- `TBSTATE_INDETERMINATE` ボタンは淡色表示にします。  
   
-- `TBSTATE_PRESSED`ボタンが押されたされています。  
+- `TBSTATE_PRESSED` ボタンが押されたされています。  
   
-- `TBSTATE_WRAP`行の区切りには、ボタンが次に示します。 ボタンが必要、`TBSTATE_ENABLED`です。  
+- `TBSTATE_WRAP` 行の区切りには、ボタンが次に示します。 ボタンが必要、`TBSTATE_ENABLED`です。  
   
  *すれば*  
  [in]ボタンの状態フラグ。 次の 1 つ以上を指定できます。  
   
-- `TBSTYLE_BUTTON`標準プッシュ ボタンを作成します。  
+- `TBSTYLE_BUTTON` 標準プッシュ ボタンを作成します。  
   
-- `TBSTYLE_CHECK`押された状態と not 押された状態、ユーザーがクリックするたびを切り替えるボタンを作成します。 ボタンには、別の背景色は、押された状態にあるときです。  
+- `TBSTYLE_CHECK` 押された状態と not 押された状態、ユーザーがクリックするたびを切り替えるボタンを作成します。 ボタンには、別の背景色は、押された状態にあるときです。  
   
-- `TBSTYLE_CHECKGROUP`グループ内の別のボタンが押されるまで押されたチェック ボタンを作成します。  
+- `TBSTYLE_CHECKGROUP` グループ内の別のボタンが押されるまで押されたチェック ボタンを作成します。  
   
-- `TBSTYLE_GROUP`グループ内の別のボタンが押されるまで押されたボタンを作成します。  
+- `TBSTYLE_GROUP` グループ内の別のボタンが押されるまで押されたボタンを作成します。  
   
-- `TBSTYLE_SEP`ボタンのグループ間で小さなギャップを提供する、区切り記号を作成します。 このスタイルを持つボタンは、ユーザー入力を受け取りません。  
+- `TBSTYLE_SEP` ボタンのグループ間で小さなギャップを提供する、区切り記号を作成します。 このスタイルを持つボタンは、ユーザー入力を受け取りません。  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  この関数では、スナップイン オブジェクトのコンテキスト メニューに挿入される前に、メニュー項目を変更します。  
   
 ```
@@ -462,11 +457,11 @@ void UpdateMenuState(
   
 - **MF_SEPARATOR**水平分割線を描画します。 のみ**IContextMenuProvider**でメニュー項目の追加が許可された**MF_SEPARATOR**を設定します。  
   
-- ****メニュー項目の横にあるチェック マークを挿入します。  
+- **MF_CHECKED**メニュー項目の横にチェックマークを付けます。  
   
 - **MF_DISABLED**のため、これを選択することはできませんが、このフラグは灰色ではないことに、メニュー項目を無効にします。  
   
-- `MF_ENABLED`メニュー項目は、選択できるように、灰色表示されている状態から復元するために使用できます。  
+- `MF_ENABLED` メニュー項目は、選択できるように、灰色表示されている状態から復元するために使用できます。  
   
 - **MF_GRAYED**選択することはできませんので灰色表示に、メニュー項目を無効にします。  
   
@@ -482,9 +477,9 @@ void UpdateMenuState(
   
 - **MF_MENUBARBREAK**と**MF_MENUBREAK**です。  
   
-- ****と**MF_UNCHECKED**です。  
+- **MF_CHECKED**と**MF_UNCHECKED**です。  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  表示される前に、スナップイン オブジェクトのツールバーのボタンを変更するには、この関数を呼び出します。  
   
 ```
@@ -508,5 +503,5 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
   
 - **BUTTONPRESSED**ボタンが押されました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

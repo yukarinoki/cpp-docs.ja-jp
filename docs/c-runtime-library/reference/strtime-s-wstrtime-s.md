@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
 
@@ -96,7 +96,7 @@ errno_t _wstrtime_s(
 
 ## <a name="security-issues"></a>セキュリティ上の問題
 
-無効な NULL 値で渡すバッファーになります、アクセス違反、 *numberOfElements*パラメーターは、9 よりも大きいです。
+無効なを渡して非**NULL**値の場合、バッファーが、アクセス違反になるが、 *numberOfElements*パラメーターは、9 よりも大きいです。
 
 値を渡す*numberOfElements*バッファー オーバーランが発生、バッファーの実際のサイズよりも大きいです。
 

@@ -71,6 +71,7 @@
 ## [Visual C++ アプリケーションの依存関係の理解](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [再配布する DLL の決定](determining-which-dlls-to-redistribute.md)
 ## [配置方法の選択](choosing-a-deployment-method.md)
+## [ユニバーサル CRT の配置](universal-crt-deployment.md)
 ## [Visual C++ ファイルの再配布](redistributing-visual-cpp-files.md)
 ### [マージ モジュールを使用したコンポーネントの再配布](redistributing-components-by-using-merge-modules.md)
 ### [Visual C++ ActiveX コントロールの再頒布](redistributing-visual-cpp-activex-controls.md)

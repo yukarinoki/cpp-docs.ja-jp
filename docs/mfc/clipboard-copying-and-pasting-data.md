@@ -1,37 +1,32 @@
 ---
-title: "クリップボード: コピーと貼り付けデータ |Microsoft ドキュメント"
-ms.custom: 
+title: 'クリップボード: コピーと貼り付けデータ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>クリップボード : データのコピーと貼り付け
 このトピックでは、コピーと OLE アプリケーションでクリップボードから貼り付ける実装に必要な最小限の作業について説明します。 参照することをお勧め、[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)続行する前にトピックです。  
   
  コピーまたは貼り付けのいずれかを実装することができます、前に、[編集] メニュー、コピー、切り取り、および貼り付けのオプションを処理する関数を指定してください。  
   
-##  <a name="_core_copying_or_cutting_data"></a>コピーまたは切り取りデータ  
+##  <a name="_core_copying_or_cutting_data"></a> コピーまたは切り取りデータ  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>データをクリップボードにコピーするには  
   
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  このシーケンスの例を参照してください、 **OnEditCut**と**OnEditCopy**関数、MFC OLE サンプル プログラム[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md). 手順 1 が既に完了しているために、これらのサンプルが、現在選択されているデータへのポインターを維持できるに注意してください。  
   
-##  <a name="_core_pasting_data"></a>データを貼り付ける  
+##  <a name="_core_pasting_data"></a> データを貼り付ける  
  データの貼り付けは、アプリケーションに、データの貼り付けで使用される形式を選択する必要があるため、コピーよりも複雑です。  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>クリップボードからデータを貼り付ける  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  貼り付け操作を独自の関数を分離することの主な利点は、ドラッグ アンド ドロップ操作中に、アプリケーションでデータが削除されるときに、同じコードで貼り付けを使用できることです。 OCLIENT および HIERSVR と同様に、`OnDrop`関数が呼び出すことができますも**受け取り**、貼り付け操作を実装する記述されたコードを再利用します。  
   
- [編集] メニューの貼り付けコマンドを処理するには、トピックを参照してください。 [OLE のダイアログ ボックス](../mfc/dialog-boxes-in-ole.md)です。  
+ [編集] メニューの貼り付け コマンドを処理するには、トピックを参照してください。 [OLE のダイアログ ボックス](../mfc/dialog-boxes-in-ole.md)です。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
   
@@ -79,6 +74,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [OLE](../mfc/ole-background.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クリップボード: OLE クリップボード機構の使用方法](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

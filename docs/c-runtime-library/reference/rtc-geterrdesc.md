@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a176aa258f805a516bf36c982ba63e531a74478
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7154f6de192ee6b681ed0419126f3d4b682abb8c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 
@@ -58,7 +58,7 @@ const char * _RTC_GetErrDesc(
 
 ## <a name="return-value"></a>戻り値
 
-実行時エラー チェック システムによって検出されたエラーの 1 つの種類に関する簡単な説明が含まれている文字列。 エラーは、ゼロ未満かより大きいかによって返される値と等しい場合[_RTC_NumErrors](rtc-numerrors.md)、 **_RTC_GetErrDesc**は NULL を返します。
+実行時エラー チェック システムによって検出されたエラーの 1 つの種類に関する簡単な説明が含まれている文字列。 エラーは、ゼロ未満かより大きいかによって返される値と等しい場合[_RTC_NumErrors](rtc-numerrors.md)、 **_RTC_GetErrDesc**返します**NULL**です。
 
 ## <a name="requirements"></a>要件
 

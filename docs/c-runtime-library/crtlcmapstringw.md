@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12bdb89a038ccd420748c1b855f21e1b9e4d93a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 1 つの文字列を別の文字列にマップして、指定したロケールに依存する変換を実行します。 この関数を使用して入力文字列の並べ替えキーを生成することもできます。  
@@ -59,7 +59,7 @@ int __crtLCMapStringW(
  関数によってマップされるソース文字列か、関数によって並べ替えキーの生成に使用されるソース文字列へのポインター。 このパラメーターでは、Unicode 文字列が想定されます。  
   
  `cchSrc`  
- `lpSrcStr` パラメーターによって示される文字列の文字のサイズ。 この数には、NULL 終端文字を含めることも除外することもできます。  
+ `lpSrcStr` パラメーターによって示される文字列の文字のサイズ。 この数には、null 終端文字を含めることも除外することもできます。  
   
  `cchSrc` に値 -1 を設定した場合、`lpSrcStr` で指し示される文字列は null で終端します。 この指定と共にこの関数を文字列マッピング モードで使用した場合、この関数は文字列の長さをそれ自体で計算し、 `*lpDestStr`に格納されるマッピングされた文字列を null で終端します。  
   
@@ -70,9 +70,9 @@ int __crtLCMapStringW(
  `lpDestStr`で指し示されるバッファーのサイズ (文字単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `cchDest` の値が 0 以外の場合、バッファーに書き込まれた文字数 (または `LCMAP_SORTKEY` が指定された場合はバイト数) は成功を示します。 この数には、NULL 終端文字の分が含まれています。  
+ `cchDest` の値が 0 以外の場合、バッファーに書き込まれた文字数 (または `LCMAP_SORTKEY` が指定された場合はバイト数) は成功を示します。 この数には、null 終端文字の分が含まれています。  
   
- `cchDest` の値が 0 の場合、翻訳された文字列または並べ替えキーを受け取るのに必要なバッファーのサイズ (文字数。 `LCMAP_SORTKEY` が指定された場合はバイト数) は成功を示します。 このサイズには、NULL 終端文字の分が含まれています。  
+ `cchDest` の値が 0 の場合、翻訳された文字列または並べ替えキーを受け取るのに必要なバッファーのサイズ (文字数。 `LCMAP_SORTKEY` が指定された場合はバイト数) は成功を示します。 このサイズには、null 終端文字の分が含まれています。  
   
  0 は失敗を示します。 拡張されたエラー情報を取得するには、 `GetLastError` 関数を呼び出します。  
   

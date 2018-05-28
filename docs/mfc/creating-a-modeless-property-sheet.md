@@ -1,13 +1,10 @@
 ---
-title: "モードレス プロパティ シートの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: モードレス プロパティ シートの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4686caf6c414952cd86dfe0c69fcc3be8ee09af9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10dbef813d922bd01a5f9215b6d6e642349d2b75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-modeless-property-sheet"></a>モードレス プロパティ シートの作成
 通常、作成するプロパティ シートはモーダルになります。 モーダル プロパティ シートを使用する場合、アプリケーションの他の部分を使用する前に、プロパティ シートを閉じる必要があります。 この記事では、ユーザーがアプリケーションの他の部分を使用しているときに、プロパティ シートを開いたままにできるモードレス プロパティ シートの作成に使用できる方法について説明します。  
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
   
  プロパティ シート内のプロパティ ページへのアクセスを提供する最も簡単な方法は、埋め込む、`CPropertyPage`内のオブジェクト、 `CPropertySheet`-派生オブジェクト。 埋め込み`CPropertyPage`内のオブジェクト、 `CPropertySheet`-派生オブジェクトはモーダル ダイアログ ボックスで、プロパティ シートの所有者を作成する、一般的なデザインとは異なる、`CPropertyPage`オブジェクトを使用して、プロパティ シートに渡す、 [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage)です。  
   
- モードレス プロパティ シートの設定を適用して、外部のオブジェクトにときを判断するための多くのユーザー インターフェイス選択肢があります。 1 つの代替手段は、ユーザーが任意の値を変更するたびに、現在のプロパティ ページの設定を適用するは。 別の方法としては、外部のオブジェクトにコミットする前に、プロパティ ページで変更を蓄積することができます、[適用] ボタンを提供します。 [適用] ボタンを処理する方法については、記事を参照してください。[適用 ボタンの処理](../mfc/handling-the-apply-button.md)です。  
+ モードレス プロパティ シートの設定を適用して、外部のオブジェクトにときを判断するための多くのユーザー インターフェイス選択肢があります。 1 つの代替手段は、ユーザーが任意の値を変更するたびに、現在のプロパティ ページの設定を適用するは。 別の方法としては、外部のオブジェクトにコミットする前に、プロパティ ページで変更を蓄積することができます、[適用] ボタンを提供します。 [適用] ボタンを処理する方法については、記事を参照してください。[適用ボタンの処理](../mfc/handling-the-apply-button.md)です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティ シート](../mfc/property-sheets-mfc.md)   
  [データを交換します。](../mfc/exchanging-data.md)   
  [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)

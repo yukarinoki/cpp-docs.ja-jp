@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d227d329a426a2008044d47d126d063db4a15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,10 +62,10 @@ void * _aligned_malloc_dbg(
 アラインメント値。2 の整数乗である必要があります。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイル名へのポインターまたは NULL。
+割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**です。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイル内の行番号または NULL。
+割り当て操作が要求されたソース ファイルの数の行または**NULL**です。
 
 ## <a name="return-value"></a>戻り値
 

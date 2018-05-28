@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
 
@@ -96,7 +96,7 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="remarks"></a>コメント
 
-**_Fullpath_dbg**と **_wfullpath_dbg**関数と同じ **_fullpath**と **_wfullpath**する点を除いて、 **_DEBUG**が定義されている場合、これらの関数を使用してデバッグ バージョンの**malloc**、 **_malloc_dbg**、最初のパラメーターとして NULL を渡す場合にメモリを割り当てられません。 デバッグ機能について **_malloc_dbg**を参照してください[_malloc_dbg](malloc-dbg.md)です。
+**_Fullpath_dbg**と **_wfullpath_dbg**関数と同じ **_fullpath**と **_wfullpath**する点を除いて、 **_DEBUG**が定義されている場合、これらの関数を使用してデバッグ バージョンの**malloc**、 **_malloc_dbg**、メモリを割り当てる場合**NULL**が渡されます最初のパラメーターです。 デバッグ機能について **_malloc_dbg**を参照してください[_malloc_dbg](malloc-dbg.md)です。
 
 多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、定義することができます、 **_CRTDBG_MAP_ALLOC**フラグ。 ときに **_CRTDBG_MAP_ALLOC**が定義されているを呼び出す **_fullpath**と **_wfullpath**に再マップ **_fullpath_dbg**と **_wfullpath_dbg**をそれぞれに、 *blockType* 'éý' **_NORMAL_BLOCK**です。 したがって、必要はありません、ヒープ ブロックとしてマークする場合を除き、これらの関数を明示的に呼び出す **_CLIENT_BLOCK**です。 詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
 

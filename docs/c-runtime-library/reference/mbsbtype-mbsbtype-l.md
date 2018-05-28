@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype、_mbsbtype_l
 
@@ -85,7 +85,7 @@ int _mbsbtype_l(
 |**_MBC_SINGLE** (0)|1 バイト文字。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイト範囲は、0x20-0x7E または 0xA1 - 0 xdf 場合 0 を返します。|
 |**_MBC_LEAD** (1)|マルチバイト文字の先行バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイト範囲は、0x81 から 0x9F または 0xE0 - - 0 xfc 場合 1 を返します。|
 |**_MBC_TRAIL** (2)|マルチバイト文字の後続バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイト範囲は、0x40 ~ 0x7E または 0x80 ~ 0 xfc 2 を返します。|
-|**継続**(-1)|**NULL**文字列、無効な文字または**NULL**バイト オフセット位置にバイトの前に見つかった*カウント*で*mbstr*です。|
+|**継続**(-1)|**NULL**文字列、無効な文字、または null のバイト オフセット位置にバイトの前に見つかった*カウント*で*mbstr*です。|
 
 ## <a name="remarks"></a>コメント
 

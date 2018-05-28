@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa20222a4d64afa9fcb8d0c1a91e63db989dae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 [dynamic_cast](../cpp/dynamic-cast-operator.md) 演算子のランタイム実装です。  
@@ -65,7 +65,7 @@ PVOID __RTDynamicCast (
  入力が参照の場合は `true`、ポインターの場合は `false`。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合は適切なサブオブジェクトへのポインター、それ以外の場合は NULL。  
+ 成功した場合は適切なサブオブジェクトへのポインター、それ以外の場合は **NULL**。  
   
 ## <a name="exceptions"></a>例外  
  `dynamic_cast<>` への入力が参照でありキャストに失敗した場合は `bad_cast()`。  

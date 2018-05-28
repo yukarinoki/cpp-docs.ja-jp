@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 Microsoft Foundation Class ライブラリにあるすべてのウィンドウ クラスの基本機能が用意されています。  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|指定されたウィンドウがチェインから削除されようとしていることを通知します。|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|ユーザー インターフェイス (UI) 状態を変更する必要があるときに呼び出されます。|  
 |[CWnd::OnChar](#onchar)|キーストロークが非システム文字に変換されるときに呼び出されます。|  
-|[CWnd::OnCharToItem](#onchartoitem)|子リスト ボックスによって呼び出される、 [LBS_WANTKEYBOARDINPUT](list-box-styles.md)への応答のスタイル、 [WM_CHAR](#onchar)メッセージ。|  
+|[CWnd::OnCharToItem](#onchartoitem)|子リスト ボックスによって呼び出される、 [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)への応答のスタイル、 [WM_CHAR](#onchar)メッセージ。|  
 |[CWnd::OnChildActivate](#onchildactivate)|`CWnd` のサイズや位置が変更されたり、`CWnd` がアクティブになったりした場合に、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに対して呼び出されます。|  
 |[CWnd::OnChildNotify](#onchildnotify)|親ウィンドウによって呼び出されます。親ウィンドウにメッセージを送るコントロールが、コントロール通知に対応できるようにします。|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|クリップボードの内容が変更されたときに呼び出されます。|  
@@ -3563,7 +3563,7 @@ CWnd* GetDescendantWindow(
  取得するコントロールまたは子ウィンドウの識別子を指定します。  
   
  `bOnlyPerm`  
- 返されるウィンドウが一時的なできるかどうかを指定します。 場合**TRUE**場合、; 永続的なウィンドウのみを返すことが**false の場合、**関数は、一時的なウィンドウを返すことができます。 一時的なウィンドウの詳細については、次を参照してください。[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)です。  
+ 返されるウィンドウが一時的なできるかどうかを指定します。 場合**TRUE**場合、; 永続的なウィンドウのみを返すことが**false の場合、** 関数は、一時的なウィンドウを返すことができます。 一時的なウィンドウの詳細については、次を参照してください。[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)です。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CWnd`オブジェクト、または**NULL**子ウィンドウが見つからない場合。  
@@ -9493,7 +9493,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
  この関数の既定の実装、 **NULL**ウィンドウ クラス名を適切な既定値を置き換えます。 変更するには、このメンバー関数をオーバーライドします`CREATESTRUCT`ウィンドウが作成される前に構造体します。  
   
- 各クラスから派生した`CWnd`そのオーバーライドの独自の機能が追加`PreCreateWindow`です。 仕様では、これらの派生`PreCreateWindow`記載されていません。 各クラスとスタイルの間の相互依存関係に適切なスタイルを決定するには、アプリケーションの基本クラスの MFC ソース コードを調べることができます。 オーバーライドする場合**PreCreateWindow、**アプリケーションの基本クラスで使用するスタイルが MFC のソース コードから収集された情報を使用して、必要な機能を提供するかどうかを判断できます。  
+ 各クラスから派生した`CWnd`そのオーバーライドの独自の機能が追加`PreCreateWindow`です。 仕様では、これらの派生`PreCreateWindow`記載されていません。 各クラスとスタイルの間の相互依存関係に適切なスタイルを決定するには、アプリケーションの基本クラスの MFC ソース コードを調べることができます。 オーバーライドする場合**PreCreateWindow、** アプリケーションの基本クラスで使用するスタイルが MFC のソース コードから収集された情報を使用して、必要な機能を提供するかどうかを判断できます。  
   
  ウィンドウ スタイルを変更する方法の詳細については、次を参照してください。、 [MFC で作成したウィンドウのスタイルを変更する](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)です。  
   
@@ -10851,7 +10851,7 @@ BOOL SubclassDlgItem(
 ### <a name="remarks"></a>コメント  
  を通じて windows メッセージをルーティングはコントロールが動的にサブクラス化されたとき、`CWnd`のマップをメッセージし、メッセージのハンドラーを呼び出します、 `CWnd`'s クラスの最初。 基本クラスに渡されるメッセージは、コントロールの既定のメッセージ ハンドラーに渡されます。  
   
- このメンバー関数をアタッチする Windows のコントロール、`CWnd`オブジェクトを置き換えるコントロールの**WndProc**と**プロシージャ。**関数。 関数は、古いを格納**WndProc**によって返される場所に、`GetSuperWndProcAddr`メンバー関数。  
+ このメンバー関数をアタッチする Windows のコントロール、`CWnd`オブジェクトを置き換えるコントロールの**WndProc**と**プロシージャ。** 関数。 関数は、古いを格納**WndProc**によって返される場所に、`GetSuperWndProcAddr`メンバー関数。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#122](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]  
@@ -10873,7 +10873,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="remarks"></a>コメント  
  Windows メッセージのルーティングでウィンドウが動的にサブクラス化されたとき、`CWnd`のマップをメッセージし、メッセージのハンドラーを呼び出します、 `CWnd`'s クラスの最初。 基本クラスに渡されるメッセージは、ウィンドウの既定のメッセージ ハンドラーに渡されます。  
   
- このメンバー関数をアタッチする Windows のコントロール、`CWnd`オブジェクトし、ウィンドウ**WndProc**と**プロシージャ。**関数。 関数は、古いへのポインターを格納**WndProc**で、`CWnd`オブジェクト。  
+ このメンバー関数をアタッチする Windows のコントロール、`CWnd`オブジェクトし、ウィンドウ**WndProc**と**プロシージャ。** 関数。 関数は、古いへのポインターを格納**WndProc**で、`CWnd`オブジェクト。  
   
 > [!NOTE]
 >  ウィンドウ必要があります既に接続できません、MFC オブジェクトをこの関数が呼び出されたとき。  

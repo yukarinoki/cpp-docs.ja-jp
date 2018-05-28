@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -89,22 +89,22 @@ uintptr_t _beginthreadex( // MANAGED CODE
 新しいスレッドのスタック サイズまたは 0。
 
 *arglist*<br/>
-新しいスレッドに渡される引数リストまたは NULL。
+新しいスレッドに渡される引数リストまたは**NULL**です。
 
 *セキュリティ*<br/>
-[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 場合*セキュリティ*が NULL の場合、ハンドルは継承できません。 Windows 95 アプリケーションの場合は、NULL を指定する必要があります。
+[SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 場合*セキュリティ*は**NULL**ハンドルは継承できません。 必要があります**NULL** Windows 95 アプリケーションです。
 
 *initflag*<br/>
 新しいスレッドの初期状態を制御するフラグ。 設定*initflag*をすぐに実行する場合は 0 をまたはに**CREATE_SUSPENDED** ; 中断状態のスレッドを作成するを使用して[ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx)スレッドを実行します。 設定*initflag*に**STACK_SIZE_PARAM_IS_A_RESERVATION**フラグを使用する*stack_size*初期予約サイズ (バイト単位)、スタックのですこのフラグが指定されていないので、 。*stack_size*によってコミット サイズを指定します。
 
 *thrdaddr*<br/>
-スレッド識別子を受け取る 32 ビット変数へのポインター。 NULL の場合は使用されません。
+スレッド識別子を受け取る 32 ビット変数へのポインター。 場合は**NULL**は使用されません。
 
 ## <a name="return-value"></a>戻り値
 
 新しく作成されたスレッド; ハンドルを返します成功した場合、これらの各関数ただし、新しく作成されたスレッドの終了が早すぎる場合 **_beginthread**有効なハンドルを返さない可能性があります。 (「解説」の説明を参照)。エラーが発生した、 **_beginthread** -1 L を返しますと**errno**に設定されている**EAGAIN**スレッドが多すぎるにある場合**EINVAL**引数の場合無効であるかスタック サイズが正しくない、または**EACCES**が不足しているリソース (メモリなど) がある場合。 エラーが発生した、 **_beginthreadex** 0 を返しますと**errno**と **_doserrno**設定されます。
 
-場合*start_address* NULL の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+場合*start_address*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
 
 これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
@@ -137,7 +137,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 オペレーティング システムがスタックの割り当てを処理時にいずれか **_beginthread**または **_beginthreadex**が呼び出されます。 これらの関数のいずれかに、スレッド スタックのアドレスを通過する必要はありません。 さらに、 *stack_size*引数が 0 の場合、オペレーティング システムによって使用される同じ値が指定されているスタックと、メイン スレッドを指定できます。
 
-*arglist*新しく作成されたスレッドに渡されるパラメーターです。 通常、文字列などのデータ項目のアドレスを指定します。 *arglist*必要でない場合、NULL を指定できますが、 **_beginthread**と **_beginthreadex**に新しいスレッドに渡すためのいくつかの値を指定する必要があります。 いずれかのスレッドの呼び出しのすべてのスレッドが終了[中止](abort.md)、**終了**、 **_exit**、または**ExitProcess**です。
+*arglist*新しく作成されたスレッドに渡されるパラメーターです。 通常、文字列などのデータ項目のアドレスを指定します。 *arglist*できます**NULL**必要でない場合は **_beginthread**と **_beginthreadex**に新しいスレッドに渡すためのいくつかの値を指定する必要があります。 いずれかのスレッドの呼び出しのすべてのスレッドが終了[中止](abort.md)、**終了**、 **_exit**、または**ExitProcess**です。
 
 新しいスレッドのロケールは、プロセスあたりのグローバル現在のロケール情報を使用して初期化されます。 呼び出しによってスレッドごとのロケールが有効になっているかどうかは[_configthreadlocale](configthreadlocale.md) (グローバルまたは新しいスレッドのみ)、スレッドなく変更できますロケール別々 に他のスレッドから呼び出すことによって**setlocale、_wsetlocale**または **_wsetlocale**です。 スレッドごとのロケールのフラグが設定がないスレッドは、設定すると、スレッドごとのロケールのフラグはその他のすべてのスレッドだけでなくすべての新しく作成されたスレッドのロケール情報に影響を与えます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 

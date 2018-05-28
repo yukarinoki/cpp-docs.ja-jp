@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 
@@ -116,7 +116,7 @@ Null で終わる比較対象の文字列。
 |0|*string1*と同じ*string2*|
 |> 0|*string1*より大きい*string2*|
 
-これらの関数を返します**すると**エラーが発生します。 使用する**すると**、いずれかの文字列が含まれます。H または MBSTRING します。H. **wcscoll**失敗する場合は、いずれか*string1*または*string2*が NULL または照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生するときに**wcscoll**設定**errno**に**EINVAL**です。 呼び出しでエラーを確認する**wcscoll**設定、 **errno**を 0 にし、確認**errno**呼び出した後**wcscoll**です。
+これらの関数を返します**すると**エラーが発生します。 使用する**すると**、いずれかの文字列が含まれます。H または MBSTRING します。H. **wcscoll**失敗する場合は、いずれか*string1*または*string2*は**NULL**または照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生するときに**wcscoll**設定**errno**に**EINVAL**です。 呼び出しでエラーを確認する**wcscoll**設定、 **errno**を 0 にし、確認**errno**呼び出した後**wcscoll**です。
 
 ## <a name="remarks"></a>コメント
 

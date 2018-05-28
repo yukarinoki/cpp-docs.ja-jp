@@ -1,7 +1,7 @@
 ---
 title: MFC で使用するスタイル |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル  
   
 次のスタイル フラグを使用して、対応する MFC オブジェクトを作成するときに、ウィンドウまたはコントロールの外観と動作を指定します。 ほとんどの場合、これらのスタイルを設定して、`dwStyle`クラスのパラメーター`Create`関数。  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>ボタン スタイル  
+## <a name="button-styles"></a> ボタン スタイル  
   
 ボタンのスタイルを適用する[CButton クラス](../../mfc/reference/cbutton-class.md)ラジオ ボタンなどのオブジェクトのチェック ボックス、プッシュ ボタン。 スタイルの組み合わせを指定、`dwStyle`のパラメーター [CButton::Create](../../mfc/reference/cbutton-class.md#create)です。 Windows でのボタンのスタイルの詳細については、次を参照してください。[ボタンのスタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)です。  
   
@@ -287,9 +285,7 @@ ms.lasthandoff: 05/04/2018
 |`BS_MULTILINE`|文字列が長すぎてボタンの四角形の内部に 1 行で収まらない場合は、ボタン テキストを複数行に折り返します。|  
 |`BS_NOTIFY`|ボタンが `BN_DBLCLK`、`BN_KILLFOCUS`、`BN_SETFOCUS` の各通知メッセージを親ウィンドウに送信できるようになります。 ボタンは、このスタイルが指定されているかどうかに関係なく、`BN_CLICKED` 通知を送信します。|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>コンボ ボックス スタイル  
+## <a name="combo-box-styles"></a>  コンボ ボックス スタイル  
   
 MFC では、次のコンボ ボックス スタイルを使用できます。 Windows のコンボ ボックス スタイルの詳細については、次を参照してください。[コンボ ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)です。  
   
@@ -309,9 +305,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`CBS_SORT`|リスト ボックスに入力された文字列を自動的に並べ替えます。|  
 |`CBS_UPPERCASE`|選択フィールドとリストの両方のすべてのテキストを大文字に変換します。|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>エディット スタイル  
+## <a name="edit-styles"></a>  エディット スタイル  
   
 編集スタイルを適用する[CEdit クラス](../../mfc/reference/cedit-class.md)オブジェクト。 スタイルの組み合わせを指定、`dwStyle`のパラメーター [CEdit::Create](../../mfc/reference/cedit-class.md#create)です。 Windows のエディット コントロールのスタイルの詳細については、次を参照してください。[コントロールのスタイルを編集する (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)です。  
   
@@ -332,9 +326,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`ES_UPPERCASE`|大文字のエディット コントロールに入力されたすべての文字に変換します。|  
 |`ES_WANTRETURN`|ユーザーがダイアログ ボックスで複数行エディット コントロールにテキストを入力するときに、ENTER キーを押したときにキャリッジ リターンが挿入されるように指定します。 このスタイルがない場合は、ダイアログ ボックスの既定のプッシュ ボタンを押すのと同じ効果は ENTER キーを押します。 このスタイルには影響しません、単一行エディット コントロール。|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>フレーム ウィンドウ スタイル  
+## <a name="frame-window-styles-mfc"></a> フレーム ウィンドウ スタイル  
   
 フレーム ウィンドウ スタイルを適用する[CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)オブジェクト。 スタイルの組み合わせを指定、`dwStyle`のパラメーター [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)です。  
   
@@ -342,11 +334,9 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|フレーム ウィンドウのタイトルの末尾に追加する情報を指定します。 たとえば、"Microsoft 描画-図面に Document1"です。 アプリケーション ウィザードで、[ドキュメント テンプレート文字列] タブに表示される文字列を指定することができます。 このオプションをオフにする必要がある場合は、上書き、`CWnd::PreCreateWindow`メンバー関数。|  
 |`FWS_PREFIXTITLE`|フレーム ウィンドウのタイトルでは、アプリケーション名の前にドキュメントの名前を示します。 たとえば、「ドキュメント-ワードパッド」です。 アプリケーション ウィザードで、[ドキュメント テンプレート文字列] タブに表示される文字列を指定することができます。 このオプションをオフにする必要がある場合は、上書き、`CWnd::PreCreateWindow`メンバー関数。|  
-|`FWS_SNAPTOBARS`|コントロール バーとフローティング ウィンドウではなくされますフレーム ウィンドウにドッキングされているコントロールを囲むフレーム ウィンドウのサイズ変更します。 このスタイルのコントロール バーをウィンドウのサイズを設定します。|  
+|`FWS_SNAPTOBARS`|コントロール バーとフローティング ウィンドウではなくされますフレーム ウィンドウにドッキングされているコントロールを囲むフレーム ウィンドウのサイズ変更します。 このスタイルのコントロール バーをウィンドウのサイズを設定します。|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>リスト ボックス スタイル  
+## <a name="list-box-styles"></a> リスト ボックス スタイル  
   
 リスト ボックス スタイルを適用する[CListBox クラス](../../mfc/reference/clistbox-class.md)オブジェクト。 スタイルの組み合わせを指定、`dwStyle`のパラメーター [CListBox::Create](../../mfc/reference/clistbox-class.md#create)です。 Windows のリスト ボックス スタイルの詳細については、次を参照してください。[リスト ボックス スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149)です。  
   
@@ -369,9 +359,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`LBS_USETABSTOPS`|認識し、その文字列を描画するときに、タブ文字を展開し、リスト ボックスを使用できます。 既定のタブ位置は、32 のダイアログ単位です。 (ダイアログ単位は、水平または垂直距離です。 1 つの水平ダイアログ単位は、現在のダイアログ ベースの幅の単位の 4 分の 1 と同じです。 ダイアログの基本単位は、現在のシステム フォントの幅と高さに基づいて計算されます。 `GetDialogBaseUnits` Windows の機能はピクセル単位で現在のダイアログ ボックスの基本単位を返します)。このスタイルを使用しないで`LBS_OWNERDRAWFIXED`です。|  
 |`LBS_WANTKEYBOARDINPUT`|リスト ボックスの所有者は受信`WM_VKEYTOITEM`または`WM_CHARTOITEM`メッセージをリスト ボックスに入力フォーカスがある状態でキーを押したときにします。 これにより、キーボード入力に対して特別な処理を実行するアプリケーション。|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>メッセージ ボックス スタイル  
+##<a name="message-box-styles"></a>  メッセージ ボックス スタイル  
   
 メッセージ ボックス スタイルを適用する[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)項目。 スタイルの組み合わせを指定、`nType`のパラメーター`AfxMessageBox`です。 Windows メッセージ ボックス スタイルの詳細については、次を参照してください。 [MessageBox 関数 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505)です。  
   
@@ -412,9 +400,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`MB_DEFBUTTON2`|2 番目のボタンは、既定値です。|  
 |`MB_DEFBUTTON3`|3 番目のボタンは、既定値です。|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>スクロール バー スタイル  
+## <a name="scroll-bar-styles"></a> スクロール バー スタイル  
   
 スクロール バーのスタイルを適用する[関数クラス](../../mfc/reference/cscrollbar-class.md)オブジェクト。 スタイルの組み合わせを指定、`dwStyle`のパラメーター [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)です。 スクロール バーの Windows でのコントロールのスタイルの詳細については、次を参照してください。[スクロール バー コントロールのスタイル (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)です。  
   
@@ -431,9 +417,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`SBS_TOPALIGN`|使用される、`SBS_HORZ`スタイル。 スクロール バーの上端がで指定された四角形の上部エッジに揃えられます、`Create`メンバー関数。 スクロール バーは、システムのスクロール バーの既定の高さがします。|  
 |`SBS_VERT`|垂直スクロール バーを指定します。 どちらの場合、`SBS_RIGHTALIGN`も`SBS_LEFTALIGN`スタイルを指定すると、スクロール バーは高さ、幅、およびで指定された位置、`Create`メンバー関数。|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>静的コントロール スタイル  
+## <a name="static-styles"></a> 静的コントロール スタイル  
   
 静的なスタイルを適用する[CStatic クラス](../../mfc/reference/cstatic-class.md)オブジェクト。 スタイルの組み合わせを指定、`dwStyle`のパラメーター [CStatic::Create](../../mfc/reference/cstatic-class.md#create)です。 Windows で静的コントロール スタイルの詳細については、次を参照してください。[静的コントロール スタイル (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)です。  
   
@@ -467,9 +451,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`SS_WHITERECT`|ウィンドウの背景の塗りつぶしに使用する色で塗りつぶされた四角形を指定します。 既定の色は白です。|  
 |`SS_WORDELLIPSIS`|一致しないと、省略記号ボタンを追加するテキストが切り捨てられます。|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>ウィンドウ スタイル  
+## <a name="window-styles"></a> ウィンドウ スタイル  
   
 ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、`dwStyle`のパラメーター [cwnd::create](../../mfc/reference/cwnd-class.md#create)または[とき](../../mfc/reference/cwnd-class.md#createex)です。 Windows のウィンドウ スタイルの詳細については、次を参照してください。[ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)です。  
   
@@ -503,9 +485,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`WS_VISIBLE`|最初に表示されているウィンドウを作成します。|  
 |`WS_VSCROLL`|垂直スクロール バーを持つウィンドウを作成します。|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>拡張ウィンドウ スタイル  
+## <a name="extended-window-styles"></a> 拡張ウィンドウ スタイル  
   
 拡張ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、`dwExStyle`のパラメーター[とき](../../mfc/reference/cwnd-class.md#createex)です。 Windows で拡張ウィンドウ スタイルの詳細については、次を参照してください。[拡張ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)です。  
   

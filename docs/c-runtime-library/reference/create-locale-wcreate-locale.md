@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be41a2d156a522c74349c3457295502ae6d4f43
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale、_wcreate_locale
 
@@ -94,7 +94,7 @@ _locale_t _wcreate_locale(
 
 *ロケール*引数は、ロケールを指定する文字列へのポインター。 形式については、*ロケール*引数を参照してください[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)です。
 
-*ロケール*引数は、ロケール名、言語識別文字列、言語識別文字列と国/地域コード、コード ページ、または、言語識別文字列、国/地域コード、およびコード ページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコード ページのセットには、1 文字に 2 バイトを超えるデータを必要とする (UTF-7、UTF-8 など) コード ページを除き、Windows の NLS API でサポートされるすべてが含まれています。 Utf-7 または utf-8 などのコード ページを提供する場合 **_create_locale**は失敗し、NULL が返されます。 サポートされているロケール名のセット **_create_locale**に記載されて[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)です。 サポートされている言語と国/地域の文字列のセット **_create_locale**に挙げます[言語識別文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)です。
+*ロケール*引数は、ロケール名、言語識別文字列、言語識別文字列と国/地域コード、コード ページ、または、言語識別文字列、国/地域コード、およびコード ページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコード ページのセットには、1 文字に 2 バイトを超えるデータを必要とする (UTF-7、UTF-8 など) コード ページを除き、Windows の NLS API でサポートされるすべてが含まれています。 Utf-7 または utf-8 などのコード ページを提供する場合 **_create_locale**は失敗し、返す**NULL**です。 サポートされているロケール名のセット **_create_locale**に記載されて[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)です。 サポートされている言語と国/地域の文字列のセット **_create_locale**に挙げます[言語識別文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)です。
 
 ロケール設定の詳細については、「[setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。
 

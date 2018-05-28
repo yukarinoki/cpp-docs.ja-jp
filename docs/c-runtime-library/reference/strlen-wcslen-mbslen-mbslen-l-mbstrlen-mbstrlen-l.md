@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
@@ -106,7 +106,7 @@ NULL で終わる文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数の文字数を返しますで*str*、端末を除く**NULL**です。 エラーを示す、以外の戻り値は予約されていません **_mbstrlen**と **_mbstrlen_l**、返す`((size_t)(-1))`文字列に無効なマルチバイト文字が含まれている場合。
+これらの各関数の文字数を返しますで*str*、端末の null を除外します。 エラーを示す、以外の戻り値は予約されていません **_mbstrlen**と **_mbstrlen_l**、返す`((size_t)(-1))`文字列に無効なマルチバイト文字が含まれている場合。
 
 ## <a name="remarks"></a>コメント
 

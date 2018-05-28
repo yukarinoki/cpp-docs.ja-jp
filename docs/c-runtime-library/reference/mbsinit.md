@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14034c598c3f7e77bc6bc650b275ee1e035d084c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -55,7 +55,7 @@ int mbsinit(
 
 ## <a name="return-value"></a>戻り値
 
-0 以外の値*ps*が NULL か、変換の途中でない場合。
+0 以外の値*ps*は**NULL**変換の途中でない場合。
 
 ## <a name="remarks"></a>コメント
 

@@ -1,7 +1,7 @@
 ---
 title: COMM |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/22/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,28 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 111dac47089fea13febe787e5b73557b287beea8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1df6c729ab130a7ff38d7f7cf83224e7425e7dba
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="comm"></a>COMM
-指定された属性を持つ土台変数を作成`definition`です。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-  
-COMM definition [[, definition]] ...  
-```  
-  
-## <a name="remarks"></a>コメント  
- 各`definition`は次の形式があります。  
-  
- [[*langtype*]] [[**NEAR** &#124; **FAR**]] *label ***:**`type`[[**:*** count*]]  
-  
- *ラベル*変数の名前を指定します。 `type`任意の型指定子を指定できます ([バイト](../../assembler/masm/byte-masm.md)、 [WORD](../../assembler/masm/word.md)など) またはバイト数を指定する整数。 *カウント*(1 つは、既定値) のデータ オブジェクトの数を指定します。  
-  
-## <a name="see-also"></a>関連項目  
- [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+
+指定された属性を持つ土台変数を作成*定義*です。
+
+## <a name="syntax"></a>構文
+
+> **COMM** *定義*[、*定義*].
+
+## <a name="remarks"></a>コメント
+
+土台変数は、リンカーによって割り当てられているし、初期化できません。 つまり、場所またはそのような変数の順序に依存していることはできません。
+
+各*定義*は次の形式があります。
+
+[*langtype*] [**NEAR** &#124; **FAR**]_ラベル_**:**_型_[**:**_カウント_]
+
+省略可能な*langtype*に続く名前の命名規則を設定します。 指定された任意の言語をオーバーライドし、**です。モデル**ディレクティブです。 省略可能な**NEAR**または**FAR**メモリの現在のモデルをオーバーライドします。 *ラベル*変数の名前を指定します。 *型*任意の型指定子を指定できます ([バイト](../../assembler/masm/byte-masm.md)、 [WORD](../../assembler/masm/word.md)など) またはバイト数を指定する整数。 省略可能な*カウント*宣言されたデータ オブジェクトの要素の数を指定します。 既定値は 1 つです。
+
+## <a name="example"></a>例
+
+この例では、512 バイトの要素の配列を作成します。
+
+```masm
+COMM FAR ByteArray:BYTE:512
+```
+
+## <a name="see-also"></a>関連項目
+
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

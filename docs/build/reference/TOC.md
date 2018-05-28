@@ -53,6 +53,7 @@
 #### [/favor (アーキテクチャ固有の最適化)](favor-optimize-for-architecture-specifics.md)
 #### [/FC (診断時のソース コード ファイルの完全パス)](fc-full-path-of-source-code-file-in-diagnostics.md)
 #### [/fp (浮動小数点の動作の指定)](fp-specify-floating-point-behavior.md)
+##### [Microsoft Visual C++ Floating Point Optimization (Microsoft Visual C++ 浮動小数点の最適化)](floating-point-optimization.md)
 #### [/FS (同期 PDB 書き込みの強制)](fs-force-synchronous-pdb-writes.md)
 #### [/GA (Windows アプリケーションの最適化)](ga-optimize-for-windows-application.md)
 #### [/Gd、/Gr、/Gv、/Gz (呼び出し規則)](gd-gr-gv-gz-calling-convention.md)
