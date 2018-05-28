@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime、_wstrtime
 
@@ -85,7 +85,7 @@ wchar_t *_wstrtime(
 
 **_Strtime**関数が指すバッファーに現在の現地時刻をコピー*で*です。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間制で時間を表す 2 桁の数字は、 **mm**過去の時間、および分を表す2桁の数字は、**ss**は秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは 9 バイト以上の長さである必要があります。
 
-**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**ワイド文字列です。 それ以外の場合、これらの関数の動作は同じです。場合*で*は**NULL**ポインターまたは*で*形式が正しくありません、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 例外の続行には、これらの関数の戻り値は NULL セットが許可された場合**errno**に**EINVAL**場合*で*が NULL か、設定**errno**に**ERANGE**場合*で*形式が正しくありません。
+**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**ワイド文字列です。 それ以外では、これらの関数の動作は同じです。 場合*で*は、 **NULL**ポインターまたは*で*形式が正しくありません、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 例外は継続許可されたかどうか、これらの関数を返す、 **NULL**設定と**errno**に**EINVAL**場合*で*されました、 **NULL**設定または**errno**に**ERANGE**場合*で*形式が正しくありません。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

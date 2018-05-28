@@ -2,11 +2,8 @@
 title: multimap クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - map/std::multimap
@@ -95,17 +92,15 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b7a4f41a4667dc3a8c14a3c1a1765f9a6b5ad68
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 25dffabfe01bb68af180d67b5b47dfee44ce30ff
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="multimap-class"></a>multimap クラス
 
@@ -129,7 +124,7 @@ class multimap;
 
 `Traits` Multimap 内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 二項述語 `less<Key>` が既定値です。
 
-C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
+C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)」をご覧ください。
 
 `Allocator` マップの割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type> >` です。
 

@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ errno_t clearerr_s(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 します。**EINVAL**場合*ストリーム*は NULL です。
+正常終了した場合は 0 します。**EINVAL**場合*ストリーム*は**NULL**です。
 
 ## <a name="remarks"></a>コメント
 
 **Clearerr_s**関数は、エラー インジケーターとのファイルの終端のインジケーターをリセット*ストリーム*です。 エラー インジケーターは自動的にクリアされません。このストリームでの操作が引き続きまでエラー値を返します、指定したストリームのエラー インジケーターを設定すると、 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻し](rewind.md)と呼びます。
 
-場合*ストリーム*NULL の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
 
 ## <a name="requirements"></a>要件
 

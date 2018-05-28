@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f288a54f6260584fb30a52d427396f583afacdbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
@@ -57,7 +57,7 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ## <a name="return-value"></a>戻り値
 
-以前に定義されたエラーの関数。 以前に定義された関数がない場合は、NULL が返されます。
+以前に定義されたエラーの関数。 以前に定義された関数がない場合を返します**NULL**です。
 
 ## <a name="remarks"></a>コメント
 

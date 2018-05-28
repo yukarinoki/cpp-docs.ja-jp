@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c97f46a66a26f107061676dba313b068e9aebf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7af5cce0b17747beb8c136f75489025d741f864a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -55,7 +55,7 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ## <a name="return-value"></a>戻り値
 
-によって登録されている以前の終了関数へのポインターを返します **_set_unexpected**前の関数を後で復元できるようにします。 前の関数が設定されていない場合には、戻り値を使用して既定の動作を復元することができます。この値は NULL になります。
+によって登録されている以前の終了関数へのポインターを返します **_set_unexpected**前の関数を後で復元できるようにします。 戻り値を既定の動作を復元する使用可能性がありますの前の関数が設定されていない場合この値は、 **NULL**です。
 
 ## <a name="remarks"></a>コメント
 

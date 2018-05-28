@@ -1,13 +1,10 @@
 ---
-title: "国際化対応について |Microsoft ドキュメント"
-ms.custom: 
+title: 国際化対応について |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,22 +14,20 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce0210546dafd354d0d62225c97df8b36a8d84e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f4edcae610f17409c319c7b4bd39dc137e1211e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="international-enabling"></a>国際化対応について
 従来のほとんどの C および C++ コードによって、国際対応のアプリケーションに対して適切に動作しない文字と文字列の操作に関する仮定を行います。 MFC とランタイム ライブラリの両方は、Unicode や MBCS をサポートしてが、まだ作業を行うには このセクションで Visual C の「国際化対応」の意味について説明します。  
   
--   両方の Unicode と MBCS MFC 関数のパラメーター リストでの移植性のデータ型を使用して有効にし、型を返します。 これらの型が、ビルドがシンボルを定義するかどうかに応じて、適切な方法で条件付きで定義されている**_UNICODE**または記号**_MBCS** (つまり、DBCS)。 MFC ライブラリの別のバリエーションは、アプリケーションを使用して、ビルドの定義によってこれら 2 つの記号のうち自動的にリンクします。  
+-   両方の Unicode と MBCS MFC 関数のパラメーター リストでの移植性のデータ型を使用して有効にし、型を返します。 これらの型が、ビルドがシンボルを定義するかどうかに応じて、適切な方法で条件付きで定義されている **_UNICODE**または記号 **_MBCS** (つまり、DBCS)。 MFC ライブラリの別のバリエーションは、アプリケーションを使用して、ビルドの定義によってこれら 2 つの記号のうち自動的にリンクします。  
   
 -   クラス ライブラリのコードでは、ポータブルのランタイム関数とその他の手段を使用して Unicode や MBCS が正常に動作します。  
   
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  ヨーロッパと MBCS 文字セットでは、文字コードが 0x80 より大きい、アクセント付き文字など、一部の文字があります。 ほとんどのコードは、符号付き文字を使用しているためこれらの文字 0x80 よりも大きい値は符号拡張に変換される`int`です。 これは、配列の外側、符号拡張文字の文字列、負の場合、インデックスを作成するための配列のインデックスの問題です。 日本語などの MBCS を使用する言語も一意です。 文字は、1 つまたは 2 バイトで構成されている可能性があります、ため常に同時に両方のバイトを操作する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Unicode と MBCS](../text/unicode-and-mbcs.md)   
  [国際化のアプローチ](../text/internationalization-strategies.md)

@@ -1,29 +1,24 @@
 ---
-title: "プリプロセッサ |Microsoft ドキュメント"
-ms.custom: 
+title: プリプロセッサ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caab67343e7806e1dd97fb673114949c68a94c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3bb5a9740bab3f69ff66a51cd58e6e1378e178f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor"></a>プリプロセッサ
 プリプロセッサは、変換の第 1 段階としてソース ファイルのテキストを操作するテキスト プロセッサです。 プリプロセッサは、ソース テキストを解析しませんが、マクロの呼び出しを特定する目的でトークンに分割します。 コンパイラは通常、最初のパスでプリプロセッサを呼び出しますが、コンパイルすることなくテキストを処理するために個別にプリプロセッサを呼び出すことができます。  
@@ -49,6 +44,6 @@ ms.lasthandoff: 02/23/2018
   
  "変数" という用語は、簡単な C 型のデータ オブジェクトを意味します。 "オブジェクト" は、C++ オブジェクトおよび変数の両方を意味する包括的な用語です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)   
  [変換フェーズ](../preprocessor/phases-of-translation.md)

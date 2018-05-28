@@ -1,31 +1,26 @@
 ---
-title: "属性の基本的なしくみ |Microsoft ドキュメント"
-ms.custom: 
+title: 属性の基本的なしくみ |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], inserting in code
 - attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="basic-mechanics-of-attributes"></a>属性の基本的なしくみ
 プロジェクトに属性を挿入する次の 3 つの方法はあります。 最初に、挿入できますに手動でソース コードです。 次に、プロジェクト内のオブジェクトのプロパティ グリッドを使用してそれらを挿入できます。 最後に、さまざまなウィザードを使用してそれらを挿入できます。 [プロパティ] ウィンドウとさまざまなウィザードの使用に関する詳細については、次を参照してください。 [Visual c プロジェクトの管理の作成と](../ide/creating-and-managing-visual-cpp-projects.md)です。  
@@ -41,5 +36,5 @@ ms.lasthandoff: 12/21/2017
   
  ほとんどの C++ コンストラクトのような属性は、適切な使用方法を定義する一連の特性があります。 これし、呼ばれ属性のコンテキスト属性コンテキストのテーブルの各属性のリファレンス トピックで説明されています。 たとえば、[コクラス](../windows/coclass.md)属性のみ適用できます既存のクラスまたは構造体にはなく、 [cpp_quote](../windows/cpp-quote.md)属性は、C++ ソース ファイル内のどこにでも挿入できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [概念](../windows/attributed-programming-concepts.md)

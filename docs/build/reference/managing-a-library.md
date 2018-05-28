@@ -2,12 +2,9 @@
 title: ライブラリの管理 |Microsoft ドキュメント
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-library"></a>ライブラリの管理
 LIB の既定のモードは、ビルドまたは COFF オブジェクトのライブラリの変更があります。 LIB は、/EXTRACT (オブジェクトをファイルにコピー) または/DEF (インポート ライブラリのビルド) を指定しないと、このモードで実行されます。  
@@ -76,7 +71,7 @@ LIB [options...] files...
   
  次のオプションは、ビルドとライブラリの変更に適用されます。  
   
- /LIBPATH:`dir`  
+ /LIBPATH: `dir`  
  環境ライブラリ パスをオーバーライドします。 詳細については、リンクの説明を参照してください。 [/LIBPATH](../../build/reference/libpath-additional-libpath.md)オプション。  
   
  /一覧表示  
@@ -94,7 +89,7 @@ LIB [options...] files...
  削除:*オブジェクト*  
  指定した*オブジェクト*出力ライブラリからです。 LIB、出力ライブラリを作成 (オブジェクト ファイルまたはライブラリでは問わず)、すべてのオブジェクトを結合して/REMOVE で指定されたオブジェクトが削除されます。  
   
- /SUBSYSTEM: {コンソール &#124;です。EFI_APPLICATION &#124;です。EFI_BOOT_SERVICE_DRIVER &#124;です。EFI_ROM &#124;です。EFI_RUNTIME_DRIVER &#124;です。ネイティブ &#124;です。POSIX &#124;です。WINDOWS &#124;です。WINDOWSCE} [、#[. ##]  
+ /SUBSYSTEM: {コンソール&AMP;#124;EFI_APPLICATION &AMP;#124; EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER&AMP;#124;ネイティブ&AMP;#124;POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [、#[. ##]  
  オペレーティング システムに出力ライブラリにリンクすることによって作成されたプログラムを実行する方法を説明します。 詳細については、リンクの説明を参照してください。 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)オプション。  
   
  コマンドラインで指定された LIB オプションは、大文字と小文字ではありません。  
@@ -112,5 +107,5 @@ LIB [options...] files...
 > [!NOTE]
 >  メンバーを削除両方と同じ手順でファイルを抽出できません。 /EXTRACT を使用して、メンバー オブジェクトを抽出しを使用して再び/REMOVE LIB を実行する必要があります最初。 この動作は、他の Microsoft 製品で提供される (OMF ライブラリ) の 16 ビット LIB の動作とは異なります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LIB リファレンス](../../build/reference/lib-reference.md)

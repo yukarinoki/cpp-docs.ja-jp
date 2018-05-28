@@ -1,29 +1,24 @@
 ---
-title: "Visual C++ 2003 ～ 2015 の変更履歴 | Microsoft Docs"
-ms.custom: 
+title: Visual C++ 2003 ～ 2015 の変更履歴 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -97,7 +92,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
   
 -   **new と delete** 以前のバージョンのライブラリでは、実装定義演算子の new 関数と delete 関数は、ランタイム ライブラリ DLL (たとえば、msvcr120.dll) からエクスポートされていました。 現在、これらの演算子関数は常に (ランタイム ライブラリ DLL を使用する場合でも) 静的にバイナリにリンクされています。  
   
-     これはネイティブ コードまたは混合コード (/clr) の互換性に影響する変更点ではありませんが、[/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) としてコンパイルされるコードでは、これによってコードのコンパイルが失敗する可能性があります。 コードを /clr:pure としてコンパイルする場合、#include \<new> または #include \<new.h> を追加してこの変更によるビルド エラーを回避する必要があります。 Visual Studio 2015 では /clr:pure は推奨されておらず、将来のリリースでは削除される可能性があります。 "ピュア" でなければならないコードは C# に移植する必要があります。  
+     これはネイティブ コードまたは混合コード (/clr) の互換性に影響する変更点ではありませんが、[/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) としてコンパイルされるコードでは、これによってコードのコンパイルが失敗する可能性があります。 コードを /clr:pure としてコンパイルする場合、#include \<new> または #include \<new.h> を追加してこの変更によるビルド エラーを回避する必要があります。 Visual Studio 2015 では /clr:pure は非推奨とされており、将来のリリースでは削除される可能性があります。 "ピュア" でなければならないコードは C# に移植する必要があります。  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -267,7 +262,8 @@ Visual Studio の新しいバージョンにアップグレードすると、以
   
 -   **std::allocator::deallocate** Visual Studio 2013 以前では、std::allocator::deallocate(p, n) は、n に対して渡されていた引数が無視されていました。  C++ 標準では常に、p を返した割り当ての呼び出しに最初の引数として渡される値と n が同等である必要がありました。 しかし、現在のバージョンでは、n の値は検査されます。 標準で必要なものとは異なる引数を n に渡すコードは、ランタイムにクラッシュする可能性があります。  
   
--   **hash_map および hash_set** 非標準ヘッダー ファイルの hash_map と hash_set は Visual Studio 2015 では推奨されておらず、将来のリリースでは削除されます。 代わりに unordered_map と unordered_set を使用してください。  
+-   
+  **hash_map および hash_set** 非標準ヘッダー ファイルの hash_map と hash_set は Visual Studio 2015 では非推奨とされており、将来のリリースでは削除されます。 代わりに unordered_map と unordered_set を使用してください。  
   
 -   **comparators and operator()** 現在、関連コンテナー (\<map> ファミリ) では、比較子に const を呼び出せる関数呼び出し演算子がある必要があります。 比較子クラス宣言の次のコードは現在、コンパイルに失敗します。  
   
@@ -342,7 +338,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
   
 -   /Zc:forScope - オプション  
   
-     コンパイラ オプション **/Zc:forScope-** は使用できなくなりました。今後のリリースからは削除されます。  
+     コンパイラ オプション **/Zc:forScope-** は非推奨となりました。今後のリリースからは削除されます。  
   
     ```cpp  
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release  
@@ -363,7 +359,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
   
 -   **/Zg コンパイラ オプション**  
   
-     /Zg コンパイラ オプション (関数プロトタイプの生成) は使用できなくなりました。 前バージョンで、このコンパイラ オプションは使用できなくなりました。  
+     /Zg コンパイラ オプション (関数プロトタイプの生成) は使用できなくなりました。 前バージョンで、このコンパイラ オプションは非推奨とされました。  
   
 -   mstest.exe のコマンド ラインから C++/CLI で単体テストを実行できなくなりました。 代わりに、vstest.console.exe を使用します。 「[VSTest.Console.exe のコマンド ライン オプション](/devops-test-docs/test/vstest-console-exe-command-line-options)」を参照してください。  
   
@@ -2510,7 +2506,8 @@ C c;
   
 -   **属性が指定された ATL コードのサポートの非推奨化** (デフォルトでレベル 1 (/W1))  
   
-     以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual Studio 2008 から始まった](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。  
+     以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 
+  [Visual Studio 2008 から始まった](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
@@ -2533,7 +2530,7 @@ C c;
   
     ```  
   
-     非推奨になった ATL 属性の使用を防ぐために、次のコード例のように、IDL ファイルを作成する場合があります。  
+     非推奨になった ATL 属性の使用を防ぐために、次のコード例のように、IDL ファイルを作成する場合があります  
   
      例 2 (変更後)  
   
@@ -3042,7 +3039,7 @@ C c;
 -   C++/CLI で Windows フォーム アプリケーションを作成しないことをお勧めしますが、既存の C++/CLI UI アプリケーションの保守はサポートされます。 Windows フォーム アプリケーションやその他の .NET UI アプリケーションを作成する必要がある場合は、C# または Visual Basic を使用してください。 C++/CLI は、相互運用性の目的でのみ使用してください。  
   
 ### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>並列パターン ライブラリと同時実行ランタイム ライブラリ  
- UmsThreadDefault の SchedulerType 列挙型は非推奨になりました。 UmsThreadDefault を指定すると、非推奨の警告が生成され、内部的に ThreadScheduler にマップされます。  
+ UmsThreadDefault の SchedulerType 列挙型は非推奨とされます。 UmsThreadDefault を指定すると、非推奨の警告が生成され、内部的に ThreadScheduler にマップされます。  
   
 ### <a name="standard-library"></a>標準ライブラリ  
   
@@ -3443,7 +3440,7 @@ C c;
   
 -   sprintf は、符号付きゼロの負の符号を出力するようになりました。  
   
--   標準への準拠のために swprintf は変更され、size パラメーターが必須になりました。 size パラメーターを指定しない swprintf の形式は非推奨になりました。  
+-   標準への準拠のために swprintf は変更され、size パラメーターが必須になりました。 size パラメーターを指定しない swprintf の形式は非推奨とされました。  
   
 -   _set_security_error_handler は削除されました。 その関数の呼び出しは削除してください。既定のハンドラーの方がはるかに安全にセキュリティ エラーを処理できます。  
   

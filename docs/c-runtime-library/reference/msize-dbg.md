@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36524cc2b7794c14a6262503095b5c52f631b653
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -62,7 +62,7 @@ size_t _msize_dbg(
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了、 **_msize_dbg** ; 指定されたメモリ ブロックのバイト単位でサイズを返しますそれ以外の場合は NULL を返します。
+正常に終了、 **_msize_dbg**サイズを返します (バイト単位) です。 指定されたメモリ ブロックのを返しますそれ以外の場合**NULL**です。
 
 ## <a name="remarks"></a>コメント
 

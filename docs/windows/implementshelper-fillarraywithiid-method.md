@@ -1,12 +1,9 @@
 ---
-title: "Implementshelper::fillarraywithiid メソッド |Microsoft ドキュメント"
-ms.custom: 
+title: Implementshelper::fillarraywithiid メソッド |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - FillArrayWithIid method
 ms.assetid: f60035ee-b7d6-4a08-966d-f88c646944c3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eeb2254933dc0f9f5e4b99ba4e010dbe3afbb7cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9313ade1f5731319732a2ee3efc0af191af14f05
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>ImplementsHelper::FillArrayWithIid メソッド
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -49,11 +44,11 @@ void FillArrayWithIid(
 ## <a name="remarks"></a>コメント  
  指定した配列の要素に現在の 0 番目のテンプレート パラメーターで指定されたインターフェイス ID を挿入します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ImplementsHelper 構造体](../windows/implementshelper-structure.md)   
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

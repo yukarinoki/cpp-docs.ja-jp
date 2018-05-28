@@ -2,11 +2,8 @@
 title: regex_traits クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_traits
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b38fc49d91521d66b480842d09117fb5550cc17
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="regextraits-class"></a>regex_traits クラス
 
@@ -537,7 +532,7 @@ hex C == 12
 
 ## <a name="length"></a>  regex_traits::length
 
-nul で終わるシーケンスの長さを返します。
+Null で終わるシーケンスの長さを返します。
 
 ```cpp
 static size_type length(const char_type *str);
@@ -545,7 +540,9 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` Nul 終端シーケンス。
+`str`
+
+Null で終わるシーケンス。
 
 ### <a name="remarks"></a>コメント
 

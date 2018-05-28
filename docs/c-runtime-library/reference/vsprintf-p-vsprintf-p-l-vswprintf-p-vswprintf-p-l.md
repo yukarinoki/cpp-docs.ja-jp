@@ -50,11 +50,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f04031bd0d21ab0a4520820d433016497072e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 
@@ -123,7 +123,7 @@ int _vswprintf_p_l(
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-場合、*バッファー*または*形式*パラメーターが NULL ポインターの数が 0、または書式指定文字列に無効な書式指定文字が含まれている場合は、無効なパラメーター ハンドラーが呼び出される、 」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合、*バッファー*または*形式*パラメーターは**NULL**カウントが 0 の場合のポインター、または書式指定文字列に無効な書式設定が含まれているかどうかの文字で、無効なパラメーターハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

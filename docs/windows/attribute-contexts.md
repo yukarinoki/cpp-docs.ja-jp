@@ -1,30 +1,25 @@
 ---
-title: "属性コンテキスト |Microsoft ドキュメント"
-ms.custom: 
+title: 属性コンテキスト |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e220eb0e7eb80d01d70aed82e773c46fe6704c7d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-contexts"></a>属性コンテキスト
 C++ 属性は、次の 4 つの基本的なフィールドを使用して記述できます: ターゲットに適用できます (**適用先**) 場合は、反復可能かどう (**Repeatable**) では、その他の属性 (の存在が必要**必要な属性**)、およびその他の属性を持つ非互換性 (**無効な属性**)。 これらのフィールドは、各属性の参照トピックの表に表示されます。 これらの各フィールドは、以下について説明します。  
@@ -43,5 +38,5 @@ C++ 属性は、次の 4 つの基本的なフィールドを使用して記述�
 ## <a name="invalid-attributes"></a>無効な属性  
  このフィールドは、指定した属性と互換性がないその他の属性を一覧表示します。 このフィールドのすべてのエントリが存在する属性の一般的なことはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [C++ 属性リファレンス](../windows/cpp-attributes-reference.md)

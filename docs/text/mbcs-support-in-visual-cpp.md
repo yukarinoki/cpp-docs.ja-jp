@@ -1,13 +1,10 @@
 ---
-title: "Visual C における MBCS のサポート |Microsoft ドキュメント"
-ms.custom: 
+title: Visual C における MBCS のサポート |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 41d075edb01fc139660d8e72a7fe53f03ee9e80b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ における MBCS のサポート
 実行すると、mbcs バージョンの Windows で、Visual C 開発システムの (統合ソース コード エディター、デバッガー、およびコマンド ライン ツールを含む) が mbcs、[メモリ] ウィンドウを除く。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 02/09/2018
   
  Visual C は、これを行うには適切である限り、2 バイト文字を受け入れます。 ダイアログ ボックスと、Visual C リソース エディター (たとえば、ダイアログ エディターで静的なテキスト) とアイコン エディターでの静的なテキスト エントリ内のエントリのテキストのパス名とファイル名が含まれます。 プリプロセッサはさらに、一部の 2 バイト ディレクティブを認識する — たとえば、ファイル名`#include`ステートメント、およびへの引数として、 **code_seg**と**data_seg**プラグマ。 ソース コード エディターでコメントや文字列リテラル内の 2 バイト文字が受け入れられたら、C と C++ 言語要素 (変数名など) にします。  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>サポート用の入力方式エディター (IME)  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> サポート用の入力方式エディター (IME)  
  MBCS (たとえば、日本語) を使用して通常東アジアの市場向け両方の 1 つと 2 バイト文字を入力するための Windows IME のサポート用に記述されたアプリケーション。 Visual C 開発環境には、IME の完全なサポートが含まれています。 詳細については、次を参照してください。 [IME サンプル: コントロールの IME モードと IME レベル 3 の実装方法を示します](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14)です。  
   
  日本語キーボードの漢字が直接サポートしていません。 IME では、その漢字表記、日本語のアルファベット (ローマ字やカタカナをひらがな) のいずれかで入力した、ルビの文字列に変換します。 あいまいさがある場合は、いくつかの選択肢からを選択することができます。 目的の漢字を選択すると、2 つを渡します IME`WM_CHAR`メッセージを制御するアプリケーション。  
@@ -70,6 +65,6 @@ ms.lasthandoff: 02/09/2018
 ## <a name="graphical-tools"></a>グラフィカルなツール  
  Visual C の Windows ベースのツール、spy++ と編集ツール、リソースなどは、IME の文字列を完全にサポートします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マルチバイト文字セット (Mbcs) のサポート](../text/support-for-multibyte-character-sets-mbcss.md)   
  [MBCS のプログラミングについて](../text/mbcs-programming-tips.md)

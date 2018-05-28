@@ -1,13 +1,10 @@
 ---
-title: "C コメント | Microsoft Docs"
-ms.custom: 
+title: C コメント | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2962669c6d925931d0e8ff0cbf3796dbbd1b430
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-comments"></a>C コメント
 "コメント" は、コンパイラによって 1 個の空白文字として扱われる、スラッシュとアスタリスクの組み合わせ (<b>/\*</b>) で始まる文字シーケンスです。それ以外の場合は無視されます。 コメントには、"コメント終了" 区切り記号 (<b>\*/</b>) を除いて、改行文字も含む、表現できる文字セットの文字の任意の組み合わせを含めることができます。 コメントは複数行にわたって記述できますが、入れ子にすることはできません。  

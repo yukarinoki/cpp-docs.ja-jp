@@ -1,31 +1,26 @@
 ---
-title: "文字列 (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: 文字列 (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
 Visual C コンパイラ サポート*文字列*、これは、文字のシーケンスとしてテキストを表すオブジェクト。 Visual C++ では、文字列の変数 (暗黙的な値) とリテラル (文字列が引用符で囲まれた明示的な値) をサポートしています。  
@@ -51,13 +46,13 @@ using namespace default;
 ### <a name="remarks"></a>コメント  
  詳細と文字列の例については、次を参照してください[platform::string、std::wstring、およびリテラル (プラットフォーム)。](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム  
- このトピックを使用して実行する場合に、Visual C コンパイラがリテラル文字列を処理する方法について説明します、 **/clr**コンパイラ オプション。 使用する**/clr**、共通言語ランタイム (CLR)、C + を使用することも必要があります。 +/CLI 構文とマネージ オブジェクトです。 詳細については**/clr**を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)です。  
+ このトピックを使用して実行する場合に、Visual C コンパイラがリテラル文字列を処理する方法について説明します、 **/clr**コンパイラ オプション。 使用する **/clr**、共通言語ランタイム (CLR)、C + を使用することも必要があります。 +/CLI 構文とマネージ オブジェクトです。 詳細については **/clr**を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)です。  
   
- コンパイルするときに**/clr**、コンパイラは型の文字列にリテラル文字列を変換<xref:System.String>です。 これには、既存のコードとの下位互換性を維持するために 2 つの例外があります。  
+ コンパイルするときに **/clr**、コンパイラは型の文字列にリテラル文字列を変換<xref:System.String>です。 これには、既存のコードとの下位互換性を維持するために 2 つの例外があります。  
   
 -   例外処理。 文字列リテラルがスローされた場合は文字列リテラルとしてキャッチされます。  
   
@@ -78,7 +73,7 @@ using namespace default;
   
  詳細については、次を参照してください。[文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -288,7 +283,7 @@ System.SByte*
 System.String  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)   
  [文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)   
  [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)

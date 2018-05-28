@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92becad93e1d0375f3ecf1ec587daa877a4c8485
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir、_wchdir
 
@@ -70,7 +70,7 @@ int _wchdir(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、成功した場合、値 0 を返します。 戻り値-1 はエラーを示します。 指定されたパスが見つからない場合、 **errno**に設定されている**ENOENT**です。 場合*dirname* NULL の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
+これらの関数は、成功した場合、値 0 を返します。 戻り値-1 はエラーを示します。 指定されたパスが見つからない場合、 **errno**に設定されている**ENOENT**です。 場合*dirname*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
 
 ## <a name="remarks"></a>コメント
 

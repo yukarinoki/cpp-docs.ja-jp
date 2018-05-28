@@ -1,13 +1,10 @@
 ---
-title: "ref new、gcnew (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: ref new、gcnew (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - gcnew
 - ref new
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 616117f7274d6f68456aa23614fb354a71982fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew (C++ コンポーネント拡張)
 `ref new`集計キーワードは、ガベージ コレクトされるオブジェクトにアクセスできなくなったし、のハンドルを返すときに、型のインスタンスを割り当てます ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) に割り当てられたオブジェクト。  
@@ -44,13 +39,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-runtime"></a>Windows ランタイム  
  有効期間が自動的に管理される Windows ランタイム オブジェクトのメモリを割り当てるには、`ref new` を使用します。 オブジェクトは、参照の最後のコピーがスコープ外になった後で参照カウントが 0 になると、自動的に解放されます。 詳細については、次を参照してください。 [Ref クラスと構造体](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)です。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
  マネージ型 (参照型または値型) のメモリは `gcnew` によって割り当てられ、ガベージ コレクションによって解放されます。  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -100,5 +95,5 @@ int main()
 32  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

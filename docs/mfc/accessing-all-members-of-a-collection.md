@@ -1,13 +1,10 @@
 ---
-title: "コレクションのすべてのメンバーにアクセスする |Microsoft ドキュメント"
-ms.custom: 
+title: コレクションのすべてのメンバーにアクセスする |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-all-members-of-a-collection"></a>コレクションの全メンバーへのアクセス
 MFC の配列コレクション クラスでは、テンプレート クラスでも非テンプレート クラスでも、インデックスを使って要素にアクセスします。 MFC のリスト コレクション クラスおよびマップ コレクション クラスでは、テンプレート クラスでも非テンプレート クラスでも、 **POSITION** 型のインジケーターを使ってコレクション内の位置を指定します。 そのコレクションの 1 つ以上のメンバーにアクセスするには、まず、ポジション インジケーターを初期化し、次にそのポジションを繰り返しコレクションに渡して、次の要素の位置を問い合わせます。 コレクションは、反復の進行に関する状態情報を保持していません。 この情報は、ポジション インジケーターで保持されます。 ただし、特定のポジションについては、コレクションはそのポジションの次の要素を返します。  
@@ -55,7 +50,7 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
   
      この例では、 `CPerson` オブジェクトへのポインターを格納する型付きポインター配列を使っています。 この配列は、定義済みの非テンプレート クラスである `CObArray`クラスから派生しています。 `GetAt` は `CPerson` オブジェクトへのポインターを返します。 型付きポインター コレクション クラスの場合は、配列でもリストでも、最初のパラメーターで基本クラスを指定し、2 番目のパラメーターで格納するデータの型を指定します。  
   
-     `CTypedPtrArray`クラスのオーバー ロードではまた、 ****演算子、配列の要素にアクセスする一般的な配列サブスクリプト構文を使用できるようにします。 上記の `for` ループ本体のステートメントは、次のように書き換えることができます。  
+     `CTypedPtrArray`クラスのオーバー ロードではまた、 **[ ]** 演算子、配列の要素にアクセスする一般的な配列サブスクリプト構文を使用できるようにします。 上記の `for` ループ本体のステートメントは、次のように書き換えることができます。  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   
@@ -86,6 +81,6 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
   
  詳細については、「 [CObject コレクションの全オブジェクトの削除](../mfc/deleting-all-objects-in-a-cobject-collection.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コレクション](../mfc/collections.md)
 

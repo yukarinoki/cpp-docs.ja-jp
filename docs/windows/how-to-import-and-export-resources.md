@@ -1,13 +1,10 @@
 ---
-title: "方法: インポートおよびエクスポートのリソース |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: インポートおよびエクスポートのリソース |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.importing
 - vc.resvw.resource.importing
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 3c9329dc-dcb8-4edd-a600-78e3e572bd89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a01269928d0e5b52cca6e2301ad681db61289f80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e526ab335436730f4132b5b7127ec9079432a4a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-import-and-export-resources"></a>方法: リソースをインポートおよびエクスポートする
 グラフィカル リソース (ビットマップ、アイコン、カーソル、ツール バー)、HTML ファイル、および Visual C++ で使用するためのカスタム リソースをインポートすることができます。 Visual C++ プロジェクトから、同じ種類のファイルを別のファイルにエクスポートして、開発環境の外部で使用することができます。  
@@ -69,10 +64,10 @@ ms.lasthandoff: 12/21/2017
   
 
   
- 必要条件  
+ 要件  
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)   
  [リソース エディター](../windows/resource-editors.md)

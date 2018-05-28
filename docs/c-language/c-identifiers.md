@@ -1,13 +1,10 @@
 ---
-title: "C 識別子 | Microsoft Docs"
-ms.custom: 
+title: C 識別子 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe8ab231d6bf4051cc730ff1beb23f93a8f301d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cca0381392a1f7c2f227c3296597dc3c614ae0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-identifiers"></a>C 識別子
 "識別子" または "シンボル" は、プログラム内の変数、型、関数、およびラベルに対して指定する名前です。 識別子名は、どのキーワードともスペル (大文字小文字の区別を含む) が異なっている必要があります。 キーワード (C または Microsoft) は識別子として使用できません。これらは特別な用途のために予約されています。 識別子を作成するには、変数、型、または関数を定義する際に指定します。 この例では、`result` は整数変数の識別子で、`main` と `printf` は関数の識別子名です。  

@@ -1,13 +1,10 @@
 ---
-title: "イメージ (アイコン用イメージ エディター) のサイズ変更 |Microsoft ドキュメント"
-ms.custom: 
+title: イメージ (アイコン用イメージ エディター) のサイズ変更 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - images [C++], resizing
 - resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f856c5cf825fd9032ce64afbd09d3bed83ea40f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6636e1f92907c301c6e66abd63f744375bffeb8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>イメージのサイズ変更 (アイコン用イメージ エディター)
 イメージのサイズ変更中に、イメージ エディターの動作は異なりますか[選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)イメージ全体または一部だけです。  
@@ -56,10 +51,10 @@ ms.lasthandoff: 12/21/2017
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)   
  [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)

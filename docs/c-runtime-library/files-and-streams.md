@@ -1,30 +1,25 @@
 ---
-title: "ファイルとストリーム | Microsoft Docs"
-ms.custom: 
+title: ファイルとストリーム | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0285d8395b5a135ac75c40914232ad820f36f00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a93fc1aa0f3108d4897a45b9014970afab220439
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="files-and-streams"></a>ファイルとストリーム
 プログラムは、ファイルを読み書きすることによって対象の環境と通信します。 ファイルには次のものがあります。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  ファイルで多くの操作を実行する前に、ファイルを開く必要があります。 ファイルを開くことによって、各種ファイル間の多くの違いが無視される標準 C ライブラリ内のデータ構造であるストリームと、ファイルが関連付けられます。 ライブラリでは、各ストリームの状態が FILE 型のオブジェクトで維持されます。  
   
- 対象の環境では、プログラムの起動前に 3 つのファイルを開きます。 2 つの引数を使用してライブラリ関数 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) を呼び出すことによってファイルを開くことができます。 (`fopen` 関数は使用されていません。代わりに [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) を使用してください)。1 つ目の引数は、ファイル名です。 2 つ目の引数は、次を指定する C 文字列です。  
+ 対象の環境では、プログラムの起動前に 3 つのファイルを開きます。 2 つの引数を使用してライブラリ関数 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) を呼び出すことによってファイルを開くことができます。 (`fopen` 関数は非推奨とされます。代わりに [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) を使用してください。)1 つ目の引数は、ファイル名です。 2 つ目の引数は、次を指定する C 文字列です。  
   
 -   ファイルからデータを読み込む、ファイルにデータを書き込む、または両方を行うかどうか。  
   

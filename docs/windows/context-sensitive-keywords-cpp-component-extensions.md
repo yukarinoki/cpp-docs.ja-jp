@@ -1,13 +1,10 @@
 ---
-title: "状況依存のキーワード (C++ コンポーネント拡張) |Microsoft ドキュメント"
-ms.custom: 
+title: 状況依存のキーワード (C++ コンポーネント拡張) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - internal_CPP
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>状況依存のキーワード (C++ コンポーネント拡張)
 *状況依存のキーワード*は特定のコンテキストでのみ認識される言語要素です。 特定のコンテキスト以外では、状況依存のキーワードをユーザー定義の記号として使用することができます。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where`(一部の[ジェネリック](../windows/generics-cpp-component-extensions.md))  
+-   `where` (一部の[ジェネリック](../windows/generics-cpp-component-extensions.md))  
   
  読みやすくするため、ユーザー定義シンボルとしての状況依存のキーワードの使用を制限することがあります。  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
  (この機能のプラットフォーム固有の解説はありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/ZW**  
   
 ## <a name="common-language-runtime"></a>共通言語ランタイム 
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  (この機能のプラットフォーム固有の解説はありません。)  
   
-### <a name="requirements"></a>必要条件  
+### <a name="requirements"></a>要件  
  コンパイラ オプション: **/clr**  
   
 ### <a name="examples"></a>使用例  
@@ -110,5 +105,5 @@ int main() {
 100  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)

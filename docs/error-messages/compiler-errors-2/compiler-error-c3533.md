@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiler-error-c3533"></a>コンパイラ エラー C3533
 'type': パラメーターは 'auto' を含む型を持つことはできません  
@@ -32,21 +32,21 @@ ms.lasthandoff: 05/04/2018
 1.  削除、`auto`パラメーターの宣言からキーワード。  
   
 ## <a name="example"></a>例  
- 関数パラメーターを宣言しているために、次の例で C3535、`auto`キーワードとそれをコンパイルした **/Zc:auto**です。  
+ 関数パラメーターを宣言しているために、次の例で C3533、`auto`キーワードとそれをコンパイルした **/Zc:auto**です。  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>例  
- テンプレート パラメーターを宣言しているために、次の例で C3535、`auto`キーワードとそれをコンパイルした **/Zc:auto**です。  
+ 次の例では C3533 c++ 14 モードでのテンプレート パラメーターを宣言しているため、`auto`キーワードとそれをコンパイルした **/Zc:auto**です。(C++ 17、これは推測される型の 1 つの非型テンプレート パラメーターを持つクラス テンプレートの有効な定義です。)
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>関連項目  

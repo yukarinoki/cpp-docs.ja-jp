@@ -2,11 +2,8 @@
 title: system_clock 構造体 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::system_clock
@@ -18,17 +15,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432109ae0c05cb864fe92da405bbaa1e0a9c225f
-ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock 構造体
 
@@ -47,8 +42,6 @@ struct system_clock;
 `now()` への最初の呼び出しによって返される値が、`now()` への以降の呼び出しによって返される値以下である場合、クロックは常に*単調*になります。
 
 *単調*で、クロックのティック間の時間が一定のクロックは*安定しています*。
-
-この実装では、`system_clock` は `high_resolution_clock` と同じ意味です。
 
 ## <a name="members"></a>メンバー
 

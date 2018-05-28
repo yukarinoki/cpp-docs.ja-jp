@@ -370,8 +370,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::CanFocus](#canfocus)|ウィンドウがフォーカスを受け取るかどうかを指定します。 (上書き[CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus))。|  
 |[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|ツール バーとその兄弟が同じウィンドウに配置されているかどうかを判定します。|  
 |[CMFCToolBar::CommandToIndex](#commandtoindex)|指定されたコマンド ID を持つ、ツールバーのボタンのインデックスを返します|  
-|[CMFCToolBar::Create](#create)|
-          `CMFCToolBar` オブジェクトを作成します。|  
+|[CMFCToolBar::Create](#create)|`CMFCToolBar` オブジェクトを作成します。|  
 |[CMFCToolBar::CreateEx](#createex)|作成、`CMFCToolBar`を大きいアイコンなどの他のスタイル オプションを使用するオブジェクト。|  
 |[CMFCToolBar::Deactivate](#deactivate)|ツールバーを非アクティブ化します。|  
 |[Cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)|有効または無効にします**の追加と削除 ボタン**ツールバーの右端に表示されるボタンをクリックします。|  
@@ -902,8 +901,7 @@ int CommandToIndex(
  場合`iIndex`、0 より大きい値は、このメソッドは、ツールバーのインデックスを持つ任意のボタンを無視より小さい`iIndex`です。  
   
 ##  <a name="create"></a>  CMFCToolBar::Create  
- 
-          `CMFCToolBar` オブジェクトを作成します。  
+ `CMFCToolBar` オブジェクトを作成します。  
   
 ```  
 virtual BOOL Create(

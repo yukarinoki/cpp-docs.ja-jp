@@ -1,12 +1,9 @@
 ---
-title: "hash_set::find (STL/CLR) |Microsoft ドキュメント"
-ms.custom: 
+title: hash_set::find (STL/CLR) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::find
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - find member [STL/CLR]
 ms.assetid: 758b7438-ef15-4af0-8001-a1126d5e9a9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7d666824a5269eef901716dcb47d7cd2f9cf134a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63a8be1bc59d6c2b9cc2128295a9e39dea14cf84
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetfind-stlclr"></a>hash_set::find (STL/CLR)
 指定したキーに一致する要素を検索します。  
@@ -85,12 +80,12 @@ find C = False
 ## <a name="description"></a>説明  
  なお`find`をいくつかの要素が見つかったは保証されません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
  [hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)   

@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX コントロール: ActiveX コントロールのローカライズ |Microsoft ドキュメント"
-ms.custom: 
+title: 'MFC ActiveX コントロール: ActiveX コントロールのローカライズ |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのローカライズ
 この記事では、ActiveX コントロールのインターフェイスをローカライズするための手順について説明します。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  この記事の残りの部分では、次の 2 つのローカライズ方法について説明します。 第 1 の戦略[コントロールのプログラミング インターフェイスをローカライズ](#_core_localizing_your_control.92.s_programmability_interface)(プロパティ、メソッド、およびイベントの名前)。 第 2 の戦略[コントロールのユーザー インターフェイスをローカライズ](#_core_localizing_the_control.92.s_user_interface)コンテナーの LocaleID アンビエント プロパティを使用します。 コントロールのローカリゼーションのデモについては、MFC ActiveX コントロールのサンプルを参照してください。 [LOCALIZE](../visual-cpp-samples.md)です。  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>コントロールのプログラミング インターフェイスのローカライズ  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> コントロールのプログラミング インターフェイスのローカライズ  
  コントロールのプログラミング インターフェイス (コントロールを使用するアプリケーションを記述するプログラマによって使用されるインターフェイス) をローカライズするときに、コントロールの変更済みバージョンを作成する必要があります。IDL をサポートする言語ごとに (コントロール タイプ ライブラリを構築するためのスクリプト) をファイルです。 これは、コントロールのプロパティ名をローカライズする必要がある唯一の場所です。  
   
  ローカライズされたコントロールを開発する場合は、タイプ ライブラリのレベルにある属性としてロケール ID を含めます。 たとえば、フランス語のローカライズされたプロパティ名を持つタイプ ライブラリを提供する場合は、サンプルのコピーを作成します。IDL ファイル、および SAMPLEFR を呼び出します。IDL です。 ロケール ID 属性 (フランス語のロケール ID は 0x040c)、ファイルを追加するのには、次のような。  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  コントロールを登録すると、`AfxOleRegisterTypeLib`関数は、指定されたを自動的に検索します。コントロールと同じディレクトリに TLB ファイル、Windows レジストリ データベースに登録します。 場合、します。TLB ファイルが見つからない場合は、関数が影響を与えません。  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>コントロールのユーザー インターフェイスのローカライズ  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> コントロールのユーザー インターフェイスのローカライズ  
  コントロールのユーザー インターフェイスをローカライズするには、言語固有のリソース Dll にすべてのプロパティ ページおよびエラー メッセージ) などのコントロールのユーザーに表示されるリソースを配置します。 コンテナーの LocaleID アンビエント プロパティを使用して、ユーザーのロケールに該当する DLL を選択することができますし、します。  
   
  次のコード例では、検索して特定のロケールのリソース DLL を読み込む方法の 1 つを示します。 このメンバー関数を呼び出す`GetLocalizedResourceHandle`この例では、ActiveX コントロール クラスのメンバー関数を指定できます。  
@@ -108,6 +103,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxLoc#5](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_5.cpp)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 

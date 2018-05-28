@@ -1,13 +1,10 @@
 ---
-title: "チュートリアル: タスクおよび XML HTTP 要求を使用しての接続 |Microsoft ドキュメント"
-ms.custom: 
+title: 'チュートリアル: タスクおよび XML HTTP 要求を使用しての接続 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e778c03368a634c349ec7c3ef241a29314cac4ea
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 411d52201aad69a94267615cd0a2acbe6376f64d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>チュートリアル: タスクおよび XML HTTP 要求を使用した接続
 この例を使用する方法を示しています、 [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)と[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)インターフェイスを web サービスで、ユニバーサル Windows プラットフォーム (UWP に HTTP GET および POST 要求を送信するタスクと) アプリ。 タスクと `IXMLHTTPRequest2` を組み合わせることによって、他のタスクと共に構成するコードを記述できます。 たとえば、タスクのチェーンの一部としてダウンロード タスクを使用できます。 ダウンロード タスクは、処理が取り消された場合にも応答できます。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 02/14/2018
   
 #### <a name="to-define-the-httprequest-class"></a>HttpRequest クラスを定義するには  
   
-1.  Visual C を使用して**新しいアプリケーション (XAML)**新しい XAML アプリケーション プロジェクトを作成するテンプレートです。 この例では、プロジェクトの名前を `UsingIXMLHTTPRequest2` とします。  
+1.  Visual C を使用して**新しいアプリケーション (XAML)** 新しい XAML アプリケーション プロジェクトを作成するテンプレートです。 この例では、プロジェクトの名前を `UsingIXMLHTTPRequest2` とします。  
   
 2.  プロジェクトに HttpRequest.h という名前のヘッダー ファイルと HttpRequest.cpp という名前のソース ファイルを追加します。  
   
@@ -120,7 +115,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="next-steps"></a>次の手順  
  [同時実行ランタイムのチュートリアル](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [PPL における取り消し処理](cancellation-in-the-ppl.md)   
  [C++ で非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   

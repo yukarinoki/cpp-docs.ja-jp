@@ -1,13 +1,10 @@
 ---
-title: "ジェネリック型制約パラメーター (C + + CLI) |Microsoft ドキュメント"
-ms.custom: 
+title: ジェネリック型制約パラメーター (C + + CLI) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - where
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>ジェネリック型パラメーターの制約 (C++/CLI)
 ジェネリック型またはメソッドの宣言では、制約と型パラメーターを修飾することができます。 制約は、型引数として使用される型が満たす必要がある要件です。 たとえば、型引数が特定のインターフェイスを実装するか、特定のクラスから継承する必要があります、制約があります。  
@@ -61,7 +56,7 @@ where type-parameter: constraint list
   
  クラスとインターフェイスの制約は、引数の型必要があるまたは指定したクラスから継承するかを指定したインターフェイスを実装を指定します。  
   
- 制約のジェネリック型またはメソッドへのアプリケーションでは、制約付きの型の既知の機能を活用するためにその型またはメソッドでコードを許可します。 型パラメーターを実装するように、ジェネリック クラスを宣言するなど、 **IComparable\<T >**インターフェイス。  
+ 制約のジェネリック型またはメソッドへのアプリケーションでは、制約付きの型の既知の機能を活用するためにその型またはメソッドでコードを許可します。 型パラメーターを実装するように、ジェネリック クラスを宣言するなど、 **IComparable\<T >** インターフェイス。  
   
 ```  
 // generics_constraints_1.cpp  
@@ -92,7 +87,7 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- 複数の型パラメーターを持つ 1 つを使用して**場所**それぞれの型パラメーターの句。 例:  
+ 複数の型パラメーターを持つ 1 つを使用して**場所**それぞれの型パラメーターの句。 例えば:  
   
 ```  
 // generics_constraints_3.cpp  
@@ -112,7 +107,7 @@ ref class Dictionary {};
   
 -   制約では、抽象基本クラスなどのクラス型もあります。 ただし、制約は、値の型またはシール クラスにすることはできません。  
   
--   自身の制約が、型パラメーターをすることはできませんが、オープン構築型の型パラメーターが含まれることができます。 例:  
+-   自身の制約が、型パラメーターをすることはできませんが、オープン構築型の型パラメーターが含まれることができます。 例えば:  
   
     ```  
     // generics_constraints_4.cpp  
@@ -208,5 +203,5 @@ where A : C
 ref struct SampleClass {};  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジェネリック](../windows/generics-cpp-component-extensions.md)

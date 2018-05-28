@@ -1,13 +1,10 @@
 ---
-title: "C 関数定義 | Microsoft Docs"
-ms.custom: 
+title: C 関数定義 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>C 関数定義
 関数定義は、関数の名前、受け取ることを想定するパラメーターの種類と数、および戻り値の型を指定します。 関数定義には、ローカル変数の宣言を持つ関数本体と、関数の処理を決定するステートメントも含まれます。  
@@ -72,7 +67,7 @@ ms.lasthandoff: 03/16/2018
  *direct-declarator*: /\* 関数宣言子 \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* 新しい形式の宣言子 \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* 古い形式の宣言子 \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* 古い形式の宣言子 \*/  
   
  定義のパラメーター リストは、この構文を使用します。  
   
@@ -101,7 +96,7 @@ ms.lasthandoff: 03/16/2018
  関数本体の構文は次のとおりです。  
   
  *compound-statement*: /\* 関数本体 \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  関数宣言を変更できるストレージ クラスの指定子は `extern` と **static** だけです。 `extern` 指定子は、関数が他のファイルから参照できること、つまり、関数名はリンカーにエクスポートされることを指定します。 **static** 指定子は、関数が他のファイルから参照できないこと、つまり、名前がリンカーによってエクスポートされないことを示します。 ストレージ クラスが関数定義に表示されない場合、`extern` と見なされます。 いずれの場合も、関数は定義位置からファイルの末尾まで常に参照可能です。  
   
@@ -115,5 +110,5 @@ ms.lasthandoff: 03/16/2018
   
  「[関数の属性](../c-language/function-attributes.md)」、「[ストレージ クラス](../c-language/storage-class.md)」、「[戻り値の型](../c-language/return-type.md)」、「[パラメーター](../c-language/parameters.md)」、および「[関数本体](../c-language/function-body.md)」の各セクションでは、関数定義のコンポーネントについて詳しく説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [関数](../c-language/functions-c.md)

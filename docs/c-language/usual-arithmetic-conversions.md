@@ -1,13 +1,10 @@
 ---
-title: "通常の算術変換 | Microsoft Docs"
-ms.custom: 
+title: 通常の算術変換 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73da6d96b0dc03fa3f4c4807d6a2dff4fef2879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e17540d8d1e45ace69e45c3eac3444f70c6f343
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usual-arithmetic-conversions"></a>通常の算術変換
 ほとんどの C 演算子は、式のオペランドを共通型に取り込むか、コンピューター操作に使用される整数のサイズに short 値を拡張する型変換を実行します。 C 演算子によって実行される変換は、特定の演算子およびオペランドの型によって異なります。 ただし、多くの演算子は、整数型および浮動小数点型のオペランドに対して同様の変換を実行します。 これらの変換は "算術変換" と呼ばれます。 オペランド値を互換性のある型に変換しても、その値は変更されません。  

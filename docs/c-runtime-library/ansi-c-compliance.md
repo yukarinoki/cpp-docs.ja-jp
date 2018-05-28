@@ -1,13 +1,10 @@
 ---
-title: "ANSI C 準拠 | Microsoft Docs"
-ms.custom: 
+title: ANSI C 準拠 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Ansi
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9c8831ef19e14d5d65ae39abde9af8ed669bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 452c6803ea05f051727a1417aee49c3a56759141
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 準拠
 ランタイム システムのすべての Microsoft 固有の識別子 (関数、マクロ、定数、変数、型の定義など) の名前付け規則は、ANSI に準拠しています。 このドキュメントでは、ANSI/ISO C 標準に従うランタイム関数は、いずれも ANSI 互換であることが記載されています。 ANSI 準拠アプリケーションでは、これらの ANSI 互換の関数だけを使用してください。  

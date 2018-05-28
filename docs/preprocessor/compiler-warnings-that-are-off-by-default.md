@@ -1,5 +1,5 @@
 ---
-title: "既定で無効になっているコンパイラ警告 |Microsoft ドキュメント"
+title: 既定で無効になっているコンパイラ警告 |Microsoft ドキュメント
 ms.date: 11/04/2016
 ms.technology:
 - cpp-tools
@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラの警告
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 03/16/2018
 
 これらの警告を有効にするには、次のオプションのいずれかを使用します。
 
-- **#pragma warning(default :** *warning_number* **)**  
+- **#pragma 警告 (既定:** *warning_number* **)**  
    指定された警告 (*warning_number*) が既定のレベルで有効になっています。 警告に関するドキュメントには、既定のレベルの警告が記載されています。
 
 - **#pragma warning(** *warning_level* **:** *warning_number* **)**  

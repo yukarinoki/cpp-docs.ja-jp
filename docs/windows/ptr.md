@@ -1,13 +1,10 @@
 ---
-title: "ptr |Microsoft ドキュメント"
-ms.custom: 
+title: ptr |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.ptr
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 183671fd4a2a0cb783a5f4644411f5d3ac5faf5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ptr"></a>ptr
 すべてのポインターとしてのポインターを指定します。  
@@ -45,20 +40,20 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>例  
  例を参照して[defaultvalue](../windows/defaultvalue.md)の使用例の**ptr**です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
 |||  
 |-|-|  
-|**対象**|インターフェイスのパラメーター、インターフェイス メソッド`typedef`|  
+|**対象**|インターフェイスのパラメーター、インターフェイス メソッド `typedef`|  
 |**反復可能**|×|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [インターフェイス属性](../windows/interface-attributes.md)   
  [メソッドの属性](../windows/method-attributes.md)   

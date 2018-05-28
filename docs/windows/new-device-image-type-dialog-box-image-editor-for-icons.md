@@ -1,13 +1,10 @@
 ---
-title: "新しい&lt;デバイス&gt;画像の種類 ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント"
-ms.custom: 
+title: 新しい&lt;デバイス&gt;画像の種類 ダイアログ ボックス (アイコン用イメージ エディター) |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.newimagetype
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - New <Device> Image Type dialog box
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 966066be4dbbce5586860dd3bb6c99893094b6ef
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>新しい&lt;デバイス&gt;画像の種類 ダイアログ ボックス (アイコン用イメージ エディター)
 指定した型の新しいデバイス イメージを作成できます。 開くには、**新規\<デバイス > イメージ**ダイアログ ボックスで、をクリックして**イメージ タイプの新規**上、**イメージ**メニュー。  
@@ -49,10 +44,10 @@ ms.lasthandoff: 12/21/2017
  **カスタム**  
  開き、[カスタム イメージ ダイアログ ボックス](custom-image-dialog-box-image-editor-for-icons.md)ができるイメージを作成する新しいカスタムのサイズと色の数とでします。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  なし  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アイコンとカーソル: ディスプレイ デバイスのイメージ リソース](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [[イメージ] メニュー](../windows/image-menu-image-editor-for-icons.md)   
  [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)

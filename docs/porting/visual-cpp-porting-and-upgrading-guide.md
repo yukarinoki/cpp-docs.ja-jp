@@ -1,27 +1,22 @@
 ---
-title: "Visual C++ 移植とアップグレードのガイド | Microsoft Docs"
-ms.custom: 
+title: Visual C++ 移植とアップグレードのガイド | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5751899dc064da4b17e240411878187a80acbdc
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 084c689ad7720e36670130d552522aa2f593218e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++  移植とアップグレードのガイド
 このトピックは、Visual C++ コードをアップグレードするためのガイドを提供します。 これには、新しいリリースのツールでコードを適切にコンパイルして実行し、新しい言語と Visual Studio の機能を利用する方法も含まれます。 このトピックには、最新のプラットフォームへのレガシー アプリケーションの移行に関する情報も含まれています。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 02/03/2018
   
 4.  Visual Studio または Windows の利用できなくなった機能に依存するコードや、Visual Studio の既定のインストールに含まれなくなった、または製品から削除されたヘッダー ファイルに依存するコード  
   
-5.  API の名前変更、関数シグネチャの変更、関数の廃止など、API の変更によってコンパイルされなくなったコード  
+5.  API の名前変更、関数シグネチャの変更、非推奨の関数など、API の変更によってコンパイルされなくなったコード  
   
 6.  警告がエラーになるなど、診断の変更によってコンパイルされなくなったコード  
   

@@ -1,13 +1,10 @@
 ---
-title: "switch_is |Microsoft ドキュメント"
-ms.custom: 
+title: switch_is |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.switch_is
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcf2345774b6df2453dcc4be3c0022e61792b716
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="switchis"></a>switch_is
 式または共用体の判別共用体のメンバーが選択した役割を果たす識別子を指定します。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>例  
  参照してください、[ケース](../windows/case-cpp.md)のサンプルの使用例**switch_is**です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [Typedef、Enum、Union、および struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [switch_type](../windows/switch-type.md)   

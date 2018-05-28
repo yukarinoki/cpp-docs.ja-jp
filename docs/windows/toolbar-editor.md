@@ -1,13 +1,10 @@
 ---
-title: "ツール バー エディターの |Microsoft ドキュメント"
-ms.custom: 
+title: ツール バー エディターの |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - toolbars [C++], editing
 - Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4358e01575ec7d4dfb2dea48499466f1cc0a4766
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="toolbar-editor"></a>ツール バー エディター
 ツール バー エディターを使用すると、ツール バー リソースを作成し、ビットマップをツール バー リソースに変換できます。 ツールバー エディターはグラフィカルな表示を使用して、完成したアプリケーションの外観と非常によく似たツールバーとボタンを示します。  
@@ -53,10 +48,10 @@ ms.lasthandoff: 12/21/2017
   
  マネージ プロジェクトにリソースを追加する方法についてを参照してください[デスクトップ アプリでのリソース](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド 』。* マネージ プロジェクトにリソース ファイルを手動で追加する、リソースにアクセスする、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 詳細については、管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションは、次を参照してください。[グローバライズと .NET Framework アプリケーションのローカライズ](/dotnet/standard/globalization-localization/index)です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  MFC または ATL  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース エディター](../windows/resource-editors.md)   
  [メニューとその他のリソース](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
 

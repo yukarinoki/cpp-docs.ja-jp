@@ -1,28 +1,23 @@
 ---
-title: "方法: winmdidl.exe と midlrt.exe を使用して windows メタデータから .h ファイルを作成 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: winmdidl.exe と midlrt.exe を使用して windows メタデータから .h ファイルを作成 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する
 winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Windows ランタイム コンポーネントの間の COM レベルの相互作用が可能になります。 winmdidl.exe は、入力として Windows ランタイム コンポーネントのメタデータが含まれる .winmd ファイル受け取り、IDL ファイルを出力します。 midlrt.exe は、IDL ファイルを C++ コードで使用できるヘッダー ファイルに変換します。 両方のツールはコマンド ラインで実行されます。  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  コンソール出力に総実行時間を表示します。  
   
  /outdir:\<dir >  
- 出力ディレクトリを指定します。 パスに空白が含まれる場合は、引用符を使用します。 既定の出力ディレクトリは*\<ドライブ >*: \Users\\*\<ユーザー名 >*\AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\です。  
+ 出力ディレクトリを指定します。 パスに空白が含まれる場合は、引用符を使用します。 既定の出力ディレクトリは*\<ドライブ >*: \Users\\*\<ユーザー名 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\です。  
   
  `/banner:<file>`  
  生成された .idl ファイルの先頭にある既定の著作権メッセージと winmdidl のバージョン番号に付加するカスタム テキストを含むファイルを指定します。 パスに空白が含まれる場合は、引用符を使用します。  

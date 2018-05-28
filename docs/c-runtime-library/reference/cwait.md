@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>パラメーター
 
 *返し、termstat*<br/>
-指定されたプロセスの結果コードを格納するバッファーへのポインターまたは NULL。
+指定されたプロセスの結果コードを格納するバッファーへのポインターまたは**NULL**です。
 
 *procHandle*<br/>
 待機するプロセスを識別するハンドル (前に終了する必要のあるプロセスは、 **_cwait**返すことができます)。
@@ -81,7 +81,7 @@ Windows オペレーティング システムのアプリケーションです�
 
 **_Cwait**関数によって提供される、指定されたプロセスのプロセス ID の終了を待機*procHandle*です。 値*procHandle*に渡される **_cwait**への呼び出しによって返される値にする必要があります、 [_spawn](../../c-runtime-library/spawn-wspawn-functions.md)関数を指定されたプロセスを作成します。 前にプロセス ID が終了した場合 **_cwait**が呼び出されると、 **_cwait**が直ちに返されます。 **_cwait**すべてのプロセスでその他の既知のプロセスを待機するために使用する有効なハンドル (*procHandle*) が存在します。
 
-*返し、termstat*指定されたプロセスのリターン コードを格納するバッファーを指します。 値*返し、termstat* 、Windows を呼び出すことによって、指定されたプロセスが正常に終了しているかどうかを示す[ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API です。 **ExitProcess**が、指定されたプロセスを呼び出した場合、内部的に呼び出されます**終了**または **_exit**から返します**メイン**、やの末尾に達した**メイン**. を通じて渡される値の詳細については*返し、termstat*を参照してください[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)です。 場合 **_cwait**の NULL 値を使用して呼び出されます*返し、termstat*、指定されたプロセスのリターン コードは格納されません。
+*返し、termstat*指定されたプロセスのリターン コードを格納するバッファーを指します。 値*返し、termstat* 、Windows を呼び出すことによって、指定されたプロセスが正常に終了しているかどうかを示す[ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API です。 **ExitProcess**が、指定されたプロセスを呼び出した場合、内部的に呼び出されます**終了**または **_exit**から返します**メイン**、やの末尾に達した**メイン**. を通じて渡される値の詳細については*返し、termstat*を参照してください[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)です。 場合 **_cwait**を使用して呼び出す、 **NULL**値*返し、termstat*、指定されたプロセスのリターン コードは格納されません。
 
 *アクション*の親子関係は、これらの環境で実装されていないため、Windows オペレーティング システムによってパラメーターが無視されます。
 

@@ -1,12 +1,9 @@
 ---
-title: "Eventtargetarray::eventtargetarray コンス トラクター |Microsoft ドキュメント"
-ms.custom: 
+title: Eventtargetarray::eventtargetarray コンス トラクター |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - EventTargetArray, constructor
 ms.assetid: 6c6d3737-3cd3-4515-a8f6-d27901bb8ed2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e8c8ada61a18437ed159452355e8286bc9d190f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fbfd12ea513044f1062e60f5c73f5089683f043d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray コンストラクター
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
@@ -61,11 +56,11 @@ EventTargetArray(
   
  EventTargetArray は EventSource オブジェクトでイベント ハンドラーの配列を保持するために使用します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [EventTargetArray クラス](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

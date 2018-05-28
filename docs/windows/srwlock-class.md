@@ -1,12 +1,9 @@
 ---
-title: "SRWLock クラス |Microsoft ドキュメント"
-ms.custom: 
+title: SRWLock クラス |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::SRWLock
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SRWLock class
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1325a089739b3820009aa239f56805264dbb6b83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec31b1469f437ff2776ed9da52fbcd7557fca8e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="srwlock-class"></a>SRWLock クラス
 スリム リーダー/ライター ロックに相当します。  
@@ -67,17 +62,17 @@ class SRWLock;
   
 ### <a name="protected-data-member"></a>プロテクト データ メンバー  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[SRWLock::SRWLock_ データ メンバー](../windows/srwlock-srwlock-data-member.md)|現在の SRWLock オブジェクトの基になるロック変数が含まれています。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SRWLock`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)

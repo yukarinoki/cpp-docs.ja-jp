@@ -1,12 +1,9 @@
 ---
-title: "CreateClassFactory 関数 |Microsoft ドキュメント"
-ms.custom: 
+title: CreateClassFactory 関数 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreateClassFactory
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ac522c2997f6c170e76c462626bb98a290a7dc4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95d08573515bee89fd86d6b37e3982dde2b29978
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 関数
 指定されたクラスのインスタンスを生成するファクトリを作成します。  
@@ -63,10 +58,10 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ## <a name="remarks"></a>コメント  
  場合、アサーション エラーが発生テンプレート パラメーター `Factory` IClassFactory インターフェイスから派生していません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** module.h  
   
  **名前空間:** Microsoft::WRL  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL::Wrappers::Details 名前空間](../windows/microsoft-wrl-wrappers-details-namespace.md)

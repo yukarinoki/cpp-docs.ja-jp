@@ -1,13 +1,10 @@
 ---
-title: "event_receiver |Microsoft ドキュメント"
-ms.custom: 
+title: event_receiver |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.event_receiver
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50ea26172e2f5112e760aa02d9247d07afbead2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 01ab5aeee7d706da7016cb1ea1f01ff7367de888
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventreceiver"></a>event_receiver
 イベント レシーバー (シンク) を作成します。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  `type`  
  次の値のいずれかの列挙です。  
   
--   `native`アンマネージ コードと C/C++ コード (ネイティブ クラスの既定値)。  
+-   `native` アンマネージ コードと C/C++ コード (ネイティブ クラスの既定値)。  
   
 -   COM コード用の`com` 。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。  
   
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  テンプレート クラスまたは構造体にイベントを含めることはできません。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -91,7 +86,7 @@ ms.lasthandoff: 12/21/2017
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンパイラ属性](../windows/compiler-attributes.md)   
  [event_source](../windows/event-source.md)   
  [_ _event](../cpp/event.md)   

@@ -1,13 +1,10 @@
 ---
-title: "db_command |Microsoft ドキュメント"
-ms.custom: 
+title: db_command |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_command
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87209d673da47827723198697a26300d4056d3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0fe3f712566345bb069b798207cfdb10a0aa636
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbcommand"></a>db_command
 OLE DB コマンドを作成します。  
@@ -76,7 +71,7 @@ binding parameter block 3
   
 -   **[db_column]** は、各メンバー変数を行セットの列にバインドします。  
   
--   **[bindto]** ( **[db_column]**と同じ)。  
+-   **[bindto]** ( **[db_column]** と同じ)。  
   
 -   **[in]** は、入力パラメーターとしてメンバー変数をバインドします。  
   
@@ -124,7 +119,7 @@ TCHAR m_state[3] = 'CA';
  *bindings* (省略可能)  
  OLE DB コマンドからバインディング パラメーターを分離できます。  
   
- `bindings`の値を指定すると、 **db_command** は関連付けられている値を解析し、[`bindtype`] パラメーターを解析しません。 これにより、OLE DB プロバイダーの構文を使用できます。 解析を無効にするには、バインディング パラメーターのない **Bindings=""**を指定します。  
+ `bindings`の値を指定すると、 **db_command** は関連付けられている値を解析し、[`bindtype`] パラメーターを解析しません。 これにより、OLE DB プロバイダーの構文を使用できます。 解析を無効にするには、バインディング パラメーターのない **Bindings=""** を指定します。  
   
  `bindings`の値を指定しないと、 **db_command** はバインディング パラメーター ブロックを解析し、"**(**"、角かっこで囲まれた **[**`bindtype`**]** 、前に宣言されている 1 つ以上の C++ メンバー変数、"**)**" という順番の記述を探します。 かっこで囲まれたすべてのテキストが最終的なコマンドから削除され、これらのパラメーターを使用してこのコマンドの列とパラメーターのバインディングが作成されます。  
   
@@ -140,7 +135,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="remarks"></a>コメント  
  OLE DB コンシューマーは、**db_command** によって作成された [CCommand](../data/oledb/ccommand-class.md) オブジェクトを使用して、コマンドを実行します。  
   
- **db_command** はクラス スコープまたは関数スコープで使用できます。主な違いは、 `CCommand` オブジェクトのスコープです。 関数スコープでは、バインディングなどのデータは関数の終了時に終了します。 クラスと関数の両方のスコープの使用法は、OLE DB コンシューマー テンプレートのクラスを伴う**CCommand <>**関数やクラスの場合、テンプレート引数の点が異なります。 関数スコープではバインディングはローカル変数を構成する **Accessor** に対して行われますが、クラス スコープでは引数として `CAccessor`派生クラスを予期します。 クラス属性として使用すると、 **db_command** は **db_column**と共に動作します。  
+ **db_command** はクラス スコープまたは関数スコープで使用できます。主な違いは、 `CCommand` オブジェクトのスコープです。 関数スコープでは、バインディングなどのデータは関数の終了時に終了します。 クラスと関数の両方のスコープの使用法は、OLE DB コンシューマー テンプレートのクラスを伴う**CCommand <>** 関数やクラスの場合、テンプレート引数の点が異なります。 関数スコープではバインディングはローカル変数を構成する **Accessor** に対して行われますが、クラス スコープでは引数として `CAccessor`派生クラスを予期します。 クラス属性として使用すると、 **db_command** は **db_column**と共に動作します。  
   
  **db_command** を使用して、結果セットを返さないコマンドを実行できます。  
   
@@ -259,7 +254,7 @@ int main() {
 }  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -272,6 +267,6 @@ int main() {
   
  属性コンテキストの詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー属性します。](../windows/ole-db-consumer-attributes.md)   
  [スタンドアロン属性](../windows/stand-alone-attributes.md)   

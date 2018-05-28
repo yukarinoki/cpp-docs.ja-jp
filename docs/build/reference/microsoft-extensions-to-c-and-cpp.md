@@ -1,13 +1,10 @@
 ---
-title: "C および C++ の Microsoft 拡張機能 |Microsoft ドキュメント"
-ms.custom: 
+title: C および C++ の Microsoft 拡張機能 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft C/C++ の拡張機能
 Visual C++ は、ANSI C および ANSI C++ 標準を次のように拡張します。  
@@ -71,7 +66,7 @@ const int CMyClass::max;   // out of class definition
   
  **/Ze**クラスの定義は静的で定数の整数、および列挙データ メンバーの省略可能です。 クラス内に初期化子を持つことができるのは、静的で定数型の整数と列挙だけです。初期化式には、定数型の式を使用する必要があります。  
   
- エラーを避けるためには、クラスの定義がヘッダーでファイルとヘッダー ファイルが含まれている複数のソース ファイルで提供される場合に、次のように使用します。 [selectany](../../cpp/selectany.md)です。 例:  
+ エラーを避けるためには、クラスの定義がヘッダーでファイルとヘッダー ファイルが含まれている複数のソース ファイルで提供される場合に、次のように使用します。 [selectany](../../cpp/selectany.md)です。 例えば:  
   
 ```  
 __declspec(selectany) const int CMyClass::max = 5;  
@@ -80,7 +75,7 @@ __declspec(selectany) const int CMyClass::max = 5;
 ## <a name="casts"></a>キャスト  
  C++ コンパイラおよび C コンパイラは、次の種類の非 ANSI キャストをサポートします。  
   
--   左辺値を生成するための非 ANSI キャスト。 例:  
+-   左辺値を生成するための非 ANSI キャスト。 例えば:  
   
     ```  
     char *p;  
@@ -96,7 +91,7 @@ __declspec(selectany) const int CMyClass::max = 5;
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   関数ポインターからデータ ポインターへの非 ANSI キャスト。 例:  
+-   関数ポインターからデータ ポインターへの非 ANSI キャスト。 例えば:  
   
     ```  
     int ( * pfunc ) ();   
@@ -238,10 +233,10 @@ void myfunc( int x, char * c )
     ```  
   
 ## <a name="intrinsic-floating-point-functions"></a>浮動小数点組み込み型の関数  
- C++ コンパイラおよび C コンパイラの両方がインラインの生成をサポート**x86 特定 >**の`atan`、 `atan2`、 `cos`、 `exp`、 `log`、 `log10`、 `sin`、 `sqrt`、および`tan`関数**END x86 固有**とき**/Oi**が指定されています。 C コンパイラの場合、これらの組み込みでは `errno` 変数が設定されないため、ANSI に準拠しなくなります。  
+ C++ コンパイラおよび C コンパイラの両方がインラインの生成をサポート**x86 特定 >** の`atan`、 `atan2`、 `cos`、 `exp`、 `log`、 `log10`、 `sin`、 `sqrt`、および`tan`関数**END x86 固有**とき **/Oi**が指定されています。 C コンパイラの場合、これらの組み込みでは `errno` 変数が設定されないため、ANSI に準拠しなくなります。  
   
 ## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>const ポインター パラメーターの参照を予測している関数に非 const ポインター パラメーターを渡す  
- これは C++ の拡張機能です。 このコードはコンパイル時に**/Ze**:  
+ これは C++ の拡張機能です。 このコードはコンパイル時に **/Ze**:  
   
 ```  
 typedef   int   T;  
@@ -272,7 +267,7 @@ void func ()
   
 -   & (bitand)  
   
--   &#124;です。(bitor)  
+-   &#124;(bitor)  
   
 -   ~ (compl)  
   
@@ -280,9 +275,9 @@ void func ()
   
 -   != (not_eq)  
   
--   &#124; &#124;です。(または)  
+-   &#124;&#124;(または)  
   
--   &#124; = (or_eq)  
+-   &#124;(or_eq) を =  
   
 -   ^ (xor)  
   
@@ -301,7 +296,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [/Za、/Ze (言語拡張を無効にする)](../../build/reference/za-ze-disable-language-extensions.md)   
  [コンパイラ オプション](../../build/reference/compiler-options.md)   
  [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

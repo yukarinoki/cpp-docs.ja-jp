@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ void *_realloc_dbg(
 再割り当てされるブロックの型を要求しました: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**です。
 
 *ファイル名*<br/>
-要求したソース ファイルの名前へのポインター、 **realloc**操作または NULL。
+要求したソース ファイルの名前へのポインター、 **realloc**操作または**NULL**です。
 
 *行番号*<br/>
-ソース ファイルの数の行で、 **realloc**操作が要求されているか NULL です。
+ソース ファイルの数の行で、 **realloc**操作が要求されましたまたは**NULL**です。
 
 *Filename*と*linenumber*パラメーターは、のみ使用可能な場合に **_realloc_dbg**が明示的に呼び出された、または[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されています。
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、この関数は再割り当てされたメモリ ブロックのユーザー部分へのポインターを返すか、新しいハンドラー関数を呼び出すか、NULL を返します。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[realloc](realloc.md) 関数を参照してください。
+正常終了した場合、この関数は、再割り当てされたメモリ ブロックのユーザー部分へのポインターを返します、新しいハンドラー関数を呼び出すか、返すか**NULL**です。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[realloc](realloc.md) 関数を参照してください。
 
 ## <a name="remarks"></a>コメント
 

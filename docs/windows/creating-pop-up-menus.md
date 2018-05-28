@@ -1,13 +1,10 @@
 ---
-title: "ショートカット メニューの作成 |Microsoft ドキュメント"
-ms.custom: 
+title: ショートカット メニューの作成 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - shortcut menus, creating
 - pop-up menus, displaying
 ms.assetid: dff4dddf-2e8d-4c34-b755-90baae426b58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6185f52eeaf56ac0d31cb8e9f22715db36514725
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-pop-up-menus"></a>ショートカット メニューの作成
 [ポップアップ メニュー](../mfc/menus-mfc.md) には、頻繁に使用するコマンドが表示されます。 これらは状況依存となっていて、マウス ポインターの場所に応じて表示できます。 アプリケーションでポップアップ メニューを使用には、メニュー自体をビルドし、アプリケーション コードに接続する必要があります。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポップアップ メニューをアプリケーションに接続します。](../windows/connecting-a-pop-up-menu-to-your-application.md)   
  [メニュー エディター](../windows/menu-editor.md)

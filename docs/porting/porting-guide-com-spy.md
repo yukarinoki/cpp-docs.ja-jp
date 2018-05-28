@@ -1,27 +1,22 @@
 ---
-title: "移植のガイド: COM Spy | Microsoft ドキュメント"
-ms.custom: 
+title: '移植のガイド: COM Spy | Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3473d7cd4ec23749f95bd06a1d993abc3209df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f284d41532d9b57f794d056863536b057bb6b3dd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-com-spy"></a>移植のガイド: COM Spy
 このトピックは、旧バージョンの Visual C++ プロジェクトを Visual Studio の最新バージョンにアップグレードするプロセスについて説明する一連の記事の 2 番目です。 このトピックのコード例は、前回 Visual Studio 2005 でコンパイルされています。  
@@ -88,7 +83,7 @@ warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   
  /SAFESEH コンパイラ オプションはデバッグ モード (/EDITANDCONTINUE が有効なとき) では役に立たないので、ここでは、デバッグの構成でのみ、/SAFESEH を無効にします。 [プロパティ] ダイアログでこれを行うには、このエラーを生成するプロジェクトの [プロパティ] ダイアログを開き、まず [構成] を [デバッグ] に設定して (実際は Unicode のデバッグ)、[リンカー高度クラス] セクションで、[安全な例外ハンドラーを含むイメージ] プロパティを [いいえ] に設定 (/SAFESEH:NO) します。  
   
- コンパイラからはほかにも、PROP_ENTRY_EX が非推奨であることが警告されています。 これは安全でなく、推奨される代替手段は PROP_ENTRY_TYPE_EX です。  
+ コンパイラからはほかにも、PROP_ENTRY_EX が非推奨とされていることが警告されています。 これは安全でなく、推奨される代替手段は PROP_ENTRY_TYPE_EX です。  
   
 ```cpp  
 BEGIN_PROPERTY_MAP(CComSpy)  

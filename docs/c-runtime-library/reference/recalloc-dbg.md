@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8ce4941dcad2a9b02b853640076b71a97f68cbe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de6adddc4e7d95f3212c80666816d4855897388
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -81,7 +81,7 @@ void *_recalloc_dbg(
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、この関数は再割り当てされたメモリ ブロックのユーザー部分へのポインターを返すか、新しいハンドラー関数を呼び出すか、NULL を返します。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[_recalloc](recalloc.md) 関数を参照してください。
+正常終了した場合、この関数は、再割り当てされたメモリ ブロックのユーザー部分へのポインターを返します、新しいハンドラー関数を呼び出すか、返すか**NULL**です。 戻る動作の詳細については、後の「解説」のセクションを参照してください。 新しいハンドラー関数がどのように使用されるかの詳細については、[_recalloc](recalloc.md) 関数を参照してください。
 
 ## <a name="remarks"></a>コメント
 

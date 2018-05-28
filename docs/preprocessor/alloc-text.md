@@ -1,12 +1,9 @@
 ---
-title: alloc_text | Microsoft Docs
-ms.custom: 
+title: alloc_text |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.alloc_text
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b93885663a3d8e037ded97fb7fd16eb5fed9bff8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a1e07b630254d7691321443a74973e06ed50ae2d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="alloctext"></a>alloc_text
 指定した関数定義が存在するコード セクションに名前を付けます。 このプラグマは、名前付き関数の関数宣言子と関数定義との間で指定する必要があります。  
@@ -42,7 +37,7 @@ textsection
 ```  
   
 ## <a name="remarks"></a>コメント  
- **Alloc_text**プラグマでは、C++ メンバー関数またはオーバー ロードされた関数は処理しません。 これは C リンケージで宣言された関数にのみ適用: で宣言された関数、 **extern"C"**リンケージ指定します。 C++ リンケージを持つ関数でこのプラグマを使用しようとすると、コンパイラ エラーが生成されます。  
+ **Alloc_text**プラグマでは、C++ メンバー関数またはオーバー ロードされた関数は処理しません。 これは C リンケージで宣言された関数にのみ適用: で宣言された関数、 **extern"C"** リンケージ指定します。 C++ リンケージを持つ関数でこのプラグマを使用しようとすると、コンパイラ エラーが生成されます。  
   
  アドレス指定を使用して関数から`__based`はサポートされていません、セクションの場所の使用を要求を指定する、 **alloc_text**プラグマ。 指定した名前*textsection*二重引用符で囲む必要があります。  
   
@@ -56,5 +51,5 @@ textsection
   
 -   関数が宣言された後で、関数が定義される前に使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

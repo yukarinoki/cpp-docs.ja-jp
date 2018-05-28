@@ -1,37 +1,32 @@
 ---
-title: "Unicode プログラミングの要約 |Microsoft ドキュメント"
-ms.custom: 
+title: Unicode プログラミングの要約 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ee8a4032b054eb670de160aea9ec54dcf80f4d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2a378d46c517dfc0fbb5857ad54bc31f4c34287b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unicode-programming-summary"></a>Unicode プログラミングの要約
 Unicode に対する MFC や C のランタイム機能のサポートを有効にするには、次のようにします。  
   
--   定義**_UNICODE**です。  
+-   定義 **_UNICODE**です。  
   
-     シンボルを定義する**_UNICODE**プログラムをビルドする前にします。  
+     シンボルを定義する **_UNICODE**プログラムをビルドする前にします。  
   
 -   エントリ ポイントを指定する。  
   
@@ -39,9 +34,9 @@ Unicode に対する MFC や C のランタイム機能のサポートを有効�
   
 -   移植性の高いランタイム関数と型を使用する。  
   
-     Unicode 文字列を取り扱う際は、必ず適切な C ランタイム関数を使います。 使用することができます、 **wcs**関数のファミリを使用しても、完全に移植可能な (国際対応の) **_TCHAR**マクロです。 これらのマクロは、すべて先頭に付きます**_tcs**;、置き換えると、1 つのいずれかの**str**ファミリの関数。 これらの関数がで詳しく説明されている、[国際化](../c-runtime-library/internationalization.md)のセクションで、*ランタイム ライブラリ リファレンス*です。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)です。  
+     Unicode 文字列を取り扱う際は、必ず適切な C ランタイム関数を使います。 使用することができます、 **wcs**関数のファミリを使用しても、完全に移植可能な (国際対応の) **_TCHAR**マクロです。 これらのマクロは、すべて先頭に付きます **_tcs**;、置き換えると、1 つのいずれかの**str**ファミリの関数。 これらの関数がで詳しく説明されている、[国際化](../c-runtime-library/internationalization.md)のセクションで、*ランタイム ライブラリ リファレンス*です。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)です。  
   
-     使用して**_TCHAR**しで説明されているポータブル関連のデータ型[Unicode のサポート](../text/support-for-unicode.md)です。  
+     使用して **_TCHAR**しで説明されているポータブル関連のデータ型[Unicode のサポート](../text/support-for-unicode.md)です。  
   
 -   リテラル文字列を正しく処理する。  
   
@@ -100,9 +95,9 @@ Unicode に対する MFC や C のランタイム機能のサポートを有効�
   
 -   ランタイム ライブラリには、すべての文字列操作関数の Unicode バージョンが用意されています。 (また、Unicode や MBCS に適した移植性の高いバージョンとして、 これらは、 **_tcs**マクロです)。  
   
--   Tchar.h には、ポータブル データ型および**_T**マクロ リテラル文字列と文字を変換するためです。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)です。  
+-   Tchar.h には、ポータブル データ型および **_T**マクロ リテラル文字列と文字を変換するためです。 詳細については、次を参照してください。 [Tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)です。  
   
 -   ランタイム ライブラリのワイド文字バージョンを提供する**メイン**です。 使用して**wmain** Unicode 対応アプリケーションにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Unicode のサポート](../text/support-for-unicode.md)

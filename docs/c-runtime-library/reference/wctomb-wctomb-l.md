@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e756ea23e32ffc9b164ccbe1a68b9fc987fe7b59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
 
@@ -72,7 +72,7 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合**wctomb**ワイド文字に変換しますをマルチバイト文字のバイト数を返します (より大きいは決して**MB_CUR_MAX**) ワイド文字。 場合*wchar*ワイド null 文字 (L '\0') は、 **wctomb** 1 を返します。 場合、ターゲット ポインター *mbchar*が NULL の場合、 **wctomb** 0 を返します。 現在のロケールで変換が不可能な場合**wctomb** -1 を返しますと**errno**に設定されている**EILSEQ**です。
+場合**wctomb**ワイド文字に変換しますをマルチバイト文字のバイト数を返します (より大きいは決して**MB_CUR_MAX**) ワイド文字。 場合*wchar*ワイド null 文字 (L '\0') は、 **wctomb** 1 を返します。 場合、ターゲット ポインター *mbchar*は**NULL**、 **wctomb** 0 を返します。 現在のロケールで変換が不可能な場合**wctomb** -1 を返しますと**errno**に設定されている**EILSEQ**です。
 
 ## <a name="remarks"></a>コメント
 

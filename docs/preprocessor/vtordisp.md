@@ -1,12 +1,9 @@
 ---
-title: "vtordisp |Microsoft ドキュメント"
-ms.custom: 
+title: vtordisp |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.vtordisp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cdb90de659dfe0f366d6501bc18c18e0cf39fff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 502425728fcd97d2ae8d2efe406dc73370de1272
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="vtordisp"></a>vtordisp
 **C 固有の仕様**  
@@ -78,5 +73,5 @@ class GetReal : virtual public VBase { ... };
   
  **END C 固有の仕様**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

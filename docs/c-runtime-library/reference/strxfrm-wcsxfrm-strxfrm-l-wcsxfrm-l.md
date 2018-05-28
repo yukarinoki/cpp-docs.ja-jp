@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
@@ -108,7 +108,7 @@ size_t wcsxfrm_l(
 
 **wcsxfrm**のワイド文字バージョンは、 **strxfrm**; の文字列引数**wcsxfrm**ワイド文字のポインターです。 **Wcsxfrm**の後に文字列変換への呼び出し**wcscmp**で 2 つの変換された文字列への呼び出しのものと同じ結果が得られます**wcscoll**に適用します元の 2 つの文字列。 **wcsxfrm**と**strxfrm**それ以外の場合の動作は同じです。 **wcsxfrm** ; そのロケールに依存する動作に現在のロケールを使用 **_wcsxfrm_l**現在のロケールの代わりに渡されたロケールを使用します。
 
-これらの関数では、パラメーターの検証が行われます。 場合*strSource* null ポインターでは、または*追加される文字*(カウントが 0 の場合) は、NULL ポインターである、または*カウント*がより大きい**INT_MAX**では、説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**返す**INT_MAX**です。
+これらの関数では、パラメーターの検証が行われます。 場合*strSource* null ポインターでは、または*追加される文字*は、 **NULL**ポインター (カウントが 0 の場合)、または*カウント*より大きい**INT_MAX**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**返す**INT_MAX**です。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

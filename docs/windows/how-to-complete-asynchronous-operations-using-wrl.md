@@ -1,28 +1,23 @@
 ---
-title: "方法: WRL を使用して非同期操作を完了 |Microsoft ドキュメント"
-ms.custom: 
+title: '方法: WRL を使用して非同期操作を完了 |Microsoft ドキュメント'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fff0a6e98dd6fdd28b1fbc2e9146d5b68975e0f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>方法: WRL を使用して非同期操作を完了する
 このドキュメントは、Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、非同期操作を開始し、操作が完了した時点に作業を実行する方法を示しています。  
@@ -130,5 +125,5 @@ ms.lasthandoff: 02/14/2018
   
  **cl.exe wrl 消費 asyncOp.cpp runtimeobject.lib**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -75,11 +75,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fff41a079d64f5416942dcb1fb3c9395b73e5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
@@ -150,7 +150,7 @@ unsigned char *_mbsnset_l(
 
 **_wcsnset**と **_mbsnset**のワイド文字とマルチバイト文字バージョンは、 **_strnset**です。 文字列引数と戻り値の **_wcsnset**ワイド文字は、文字列以外の **_mbsnset**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsnset**はそのパラメーターを検証する場合は*str* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsnset** NULL が返され、設定**errno**に**EINVAL**です。 **_strnset**と **_wcsnset**はそのパラメーターを検証しません。
+**_mbsnset**はそのパラメーターを検証する場合は*str* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsnset**返します**NULL**設定と**errno**に**EINVAL**です。 **_strnset**と **_wcsnset**はそのパラメーターを検証しません。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 

@@ -1,13 +1,10 @@
 ---
-title: "ms_union |Microsoft ドキュメント"
-ms.custom: 
+title: ms_union |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.ms_union
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2b187c23c60c7294170a66a819f78bebfd5e5f8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a377995149fda8efd565c30caff9b7791748ed79
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="msunion"></a>ms_union
 カプセル化されていない共用体のネットワーク データ表現のアラインメントを制御します。  
@@ -68,7 +63,7 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
   
 ### <a name="attribute-context"></a>属性コンテキスト  
   
@@ -81,6 +76,6 @@ __interface IFireTabCtrl {
   
  詳細については、「 [属性コンテキスト](../windows/attribute-contexts.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IDL 属性](../windows/idl-attributes.md)   
  [Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)   

@@ -1,13 +1,10 @@
 ---
-title: "Win32 アプリケーション ウィザード |Microsoft ドキュメント"
-ms.custom: 
+title: Win32 アプリケーション ウィザード |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.overview
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c97caee74e1ae918924632802c155b23fffe0527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-application-wizard"></a>Win32 アプリケーション ウィザード
 Visual C++ の Win32 アプリケーション ウィザードを使用すると、以下の表の見出しに示す 4 種類のプロジェクトを作成できます。 いずれの場合でも、開くプロジェクトの種類に応じて追加のオプションを指定できます。 次の表では、使用できるオプションをアプリケーション タイプ別に示します。  
@@ -62,6 +57,6 @@ Visual C++ の Win32 アプリケーション ウィザードを使用すると�
   
  ウィザードでプロジェクト用に作成されるファイルは、 **ソリューション エクスプローラー**で表示できます。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、「 [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空の Windows デスクトップ アプリケーションを作成します。](../windows/creating-an-empty-windows-desktop-application.md)   
  [Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)

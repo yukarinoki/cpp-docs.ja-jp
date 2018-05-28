@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft 固有の仕様**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |引数を渡す順序|左から右への引数リストで見つかる最初の 2 つの DWORD またはこれより小さい引数は、ECX および EDX レジスタに渡されます。他の引数はすべてスタック上で右から左へ渡されます。|  
 |スタック メンテナンスの役割|呼び出された関数によって、スタックから引数がポップされます。|  
-|名前装飾規約|アット マーク (@) が名前の先頭に付きます。パラメーター リストでバイト数 (10 進数) が後続するアット マークは、名前にサフィックスとして付けられます。|  
+|名前装飾規約|アット マーク (\@) は、名前の先頭には、名前に、バイト数 (10 進数)、パラメーターに続くアット リストが付加されたものです。|  
 |大文字と小文字の変換規約|大文字小文字は変換されません。|  
   
 > [!NOTE]

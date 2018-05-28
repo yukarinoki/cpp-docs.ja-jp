@@ -1,31 +1,26 @@
 ---
-title: "クラスの属性 |Microsoft ドキュメント"
-ms.custom: 
+title: クラスの属性 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], class attributes
 - class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc3f277170dbbdf92f280d341bffb042ab70af2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a932fdb1ef1d9e2af2acace901feaa95b6216d1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="class-attributes"></a>クラス属性
 次の属性に適用される、[クラス](../cpp/class-cpp.md)C++ のキーワードです。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|ActiveX コントロールを作成します。|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|インターフェイスのエントリを COM マップに追加します。|  
 |[control](../windows/control.md)|ユーザー定義型がコントロールであることを指定します。|  
-|[カスタム](../windows/custom-cpp.md)|独自の属性を定義できます。|  
+|[custom](../windows/custom-cpp.md)|独自の属性を定義できます。|  
 |[db_command](../windows/db-command.md)|OLE DB コマンドを作成します。|  
 |[db_param](../windows/db-param.md)|入力または出力パラメーターを持つ指定したメンバー変数を関連付けるし、変数を区切ります。|  
 |[db_source](../windows/db-source.md)|データ ソースへの接続を作成します。|  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 |[helpstringcontext](../windows/helpstringcontext.md)|.Hlp または .chm ファイルには、ヘルプ トピックの ID を指定します。|  
 |[helpstring](../windows/helpstring.md)|適用すると、要素の記述に使用される文字の文字列を指定します。|  
 |[hidden](../windows/hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|  
-|[実装します。](../windows/implements-cpp.md)|IDL coclass のメンバーであることを強制するディスパッチ インターフェイスを指定します。|  
+|[実装](../windows/implements-cpp.md)|IDL coclass のメンバーであることを強制するディスパッチ インターフェイスを指定します。|  
 |[implements_category](../windows/implements-category.md)|クラスの実装済みのコンポーネントのカテゴリを指定します。|  
 |[モジュール](../windows/module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|  
 |[noncreatable](../windows/noncreatable.md)|単独でインスタンス化できないオブジェクトを定義します。|  
@@ -67,5 +62,5 @@ ms.lasthandoff: 12/21/2017
 |[version](../windows/version-cpp.md)|クラスの複数のバージョン間で特定のバージョンを識別します。|  
 |[vi_progid](../windows/vi-progid.md)|ProgID のバージョンに依存しない形式を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [使用法別の属性](../windows/attributes-by-usage.md)

@@ -1,12 +1,9 @@
 ---
-title: "構造体を実装 |Microsoft ドキュメント"
-ms.custom: 
+title: 構造体を実装 |Microsoft ドキュメント
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Implements structure
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63da9ea650c34b7b1ed75d351587c39e52a88098
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ecbf0b77feef7abeb67f8d0dc300da067d1f2da
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implements-structure"></a>Implements 構造体
 指定されたインターフェイスの QueryInterface と GetIid を実装します。  
@@ -119,7 +114,7 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
 ### <a name="protected-constants"></a>プロテクト コンス トラクター  
   
-|name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |[Implements::IidCount 定数](../windows/implements-iidcount-constant.md)|実装されたインターフェイス Id の数を保持します。|  
   
@@ -136,10 +131,10 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
  `Implements`  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** implements.h  
   
  **名前空間:** Microsoft::WRL  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)
