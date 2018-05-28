@@ -1,7 +1,9 @@
 ---
 title: Visual Studio で C++ Linux プロジェクトを構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 799eb17ec5cb34cdd0e266f389ad77cb427c7577
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fc0c15f4e6ff7a9969c31c4d474bb42a9797b30
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトの構成
 このトピックでは、Visual Studio Linux プロジェクトを構成する方法について説明します。 CMake Linux プロジェクトに関する詳細については、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。
@@ -40,8 +42,10 @@ Visual Studio で Linux プロジェクトに対して、さまざまなオプ�
 > [!NOTE]
 > 既定の C および C++ コンパイラ、またはプロジェクトのビルドに使用したリンカーとアーカイバーを変更する場合は、**[C/C++]、[全般]** セクションと **[リンカー]、[全般]** セクションで適切なエントリを使用します。  これらは特定のバージョンの GCC (Clang コンパイラなど) を使用する際に設定する場合があります。
 
-## <a name="vc-directories"></a>VC++ ディレクトリ
-既定では、Visual Studio に Linux コンピューターのシステム レベルのインクルード ファイルは含まれません。  たとえば、**/usr/include** ディレクトリの項目は Visual Studio には存在しません。  完全に [IntelliSense](/visualstudio/ide/using-intellisense) をサポートするには、これらのファイルを、開発用コンピューターの任意の場所にコピーし、Visual Studio でこの場所を指定する必要があります。  scp (セキュア コピー) を使用して、ファイルをコピーすることもできます。  Windows 10 では、[Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) を使用して scp を実行することができます。  以前のバージョンの Windows では、[PSCP (PuTTY セキュア コピー)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) などを使用できました。
+## <a name="include-directories-and-intellisense-support"></a>ディレクトリと IntelliSense サポートを含める
+
+**Visual Studio 2017 バージョン 15.6 以前:** 既定では、Visual Studio に Linux コンピューターのシステム レベルのインクルード ファイルは含まれません。  たとえば、**/usr/include** ディレクトリの項目は Visual Studio には存在しません。
+完全に [IntelliSense](/visualstudio/ide/using-intellisense) をサポートするには、これらのファイルを、開発用コンピューターの任意の場所にコピーし、Visual Studio でこの場所を指定する必要があります。  scp (セキュア コピー) を使用して、ファイルをコピーすることもできます。  Windows 10 では、[Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) を使用して scp を実行することができます。  以前のバージョンの Windows では、[PSCP (PuTTY セキュア コピー)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) などを使用できました。
 
 次のようなコマンドを使用して、ファイルをコピーすることができます。
 
@@ -52,6 +56,8 @@ Visual Studio で Linux プロジェクトに対して、さまざまなオプ�
 ファイルがコピーされたら、プロジェクト プロパティの **[VC++ ディレクトリ]** 項目を使用して、コピーされた追加のインクルード ファイルがある場所を Visual Studio に示します。
 
 ![VC++ ディレクトリ](media/settings_directories.png)
+
+**Visual Studio 2017 バージョン 15.7 以降:** [IntelliSense のリモート ヘッダーの管理](#remote_intellisense)に関するセクションを参照してください。
 
 ## <a name="copy-sources"></a>ソースのコピー
 ビルド時に、開発用 PC 上のソース ファイルは、Linux コンピューターにコピーされ、そこでコンパイルされます。  既定では、Visual Studio プロジェクトのすべてのソースは、上記の設定で指定された場所にコピーされます。  ただし、リストにさらにソースを追加するこもできます。あるいは、ソースのコピーを完全にオフ (メイクファイル プロジェクトではこれが既定) にすることもできます。
@@ -68,6 +74,20 @@ Visual Studio で Linux プロジェクトに対して、さまざまなオプ�
 すべてのコンパイルはリモート コンピューターで実行されるため、プロジェクト プロパティの [ビルド イベント] セクションにいくつかのビルド イベントが追加されています。  追加されたのは **[リモートのビルド前イベント]**、**[リモートのリンク前イベント]**、**[リモートのビルド後イベント]** で、リモート コンピューターでプロセスの個々のステップの前後に発生します。
 
 ![ビルド イベント](media/settings_buildevents.png)
+
+## <a name="remote_intellisense"></a> リモート ヘッダーの IntelliSense (Visual Studio 2017 バージョン 15.7 以降)
+
+**接続マネージャー**で新しい接続を追加すると、Visual Studio によってリモート システム上のコンパイラのインクルード ディレクトリが自動的に検出されます。 Visual Studio によってこれらのファイルが圧縮されて、お使いのローカル Windows コンピューター上のディレクトリにコピーされます。 その後、Visual Studio または CMake プロジェクトでその接続を使用するたびに、IntelliSense を提供するためにこれらのディレクトリ内のヘッダーが使用されます。
+
+この機能は、Linux コンピューターにインストールされている zip に依存します。 この apt-get コマンドを使用して、zip をインストールできます。
+
+```cmd
+apt install zip
+```
+
+ヘッダーのキャッシュを管理するには、**[ツール] > [オプション]、[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー]** の順に移動します。 Linux コンピューターに変更を行った後にヘッダー キャッシュ更新するには、リモート接続を選択してから、**[更新]** を選択します。 接続自体を削除せずにヘッダーを削除するには、**[削除]** を選択します。 **ファイル エクスプローラー**でローカル ディレクトリを開くには、**[探索]** を選択します。 このフォルダーを読み取り専用として扱います。 15.3 より前のバージョンで作成された既存の接続用にヘッダーをダウンロードするには、その接続を選択し、**[ダウンロード]** を選択します。
+
+![リモート ヘッダー IntelliSense](media/remote-header-intellisense.png)
 
 ## <a name="see-also"></a>参照
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)  

@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>パラメーターの検証
-ほとんどのセキュリティ強化 CRT 関数および多くの既存の関数は個々のパラメーターを検証します。 これには、NULL のポインターの確認、整数が有効範囲に入ることの確認、または列挙値が有効であるかどうかの確認が含まれる場合があります。 無効なパラメーターが見つかると、無効なパラメーター ハンドラーが実行されます。  
+ほとんどのセキュリティ強化 CRT 関数および多くの既存の関数は個々のパラメーターを検証します。 これには、**NULL** のポインターの確認、整数が有効範囲に入ることの確認、または列挙値が有効であるかどうかの確認が含まれる場合があります。 無効なパラメーターが見つかると、無効なパラメーター ハンドラーが実行されます。  
   
 ## <a name="invalid-parameter-handler-routine"></a>無効なパラメーター ハンドラー ルーチン  
  C ランタイム ライブラリ関数は、無効なパラメーターを検出すると、エラーに関する特定の情報をキャプチャし、無効なパラメーター ハンドラー ディスパッチ関数 [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md)、[_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md)、または [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md) のいずれかをラップするマクロを呼び出します。 これらのディスパッチ関数は、コードがデバッグ ビルドの場合、製品ビルドの場合、エラーが回復可能とは見なされない場合にそれぞれ呼び出されます。 

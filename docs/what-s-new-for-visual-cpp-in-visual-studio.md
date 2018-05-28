@@ -9,11 +9,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] での Visual C# の新機能
 
@@ -26,30 +26,29 @@ ms.lasthandoff: 05/08/2018
 ### <a name="c-conformance-improvements"></a>C++ 準拠の強化
 
 このリリースでは、C++ コンパイラと標準ライブラリを更新して C++11 と C++14 機能のサポートを強化し、C++17 標準に組み込まれると予想される特定の機能について予備的なサポートを追加しました。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md)」(Visual Studio 2017 での C++ 準拠の強化) をご覧ください。
-
-### <a name="new-compiler-options"></a>新しいコンパイラ オプション
-
-- **/std:c++14** と **/std:c++latest**: これらのコンパイラ オプションを使用すると、プロジェクトで ISO C++ プログラミング言語の特定のバージョンにオプトインできます。 詳細については、「[/std (言語標準バージョンの指定)](build/reference/std-specify-language-standard-version.md)」をご覧ください。 ほとんどの新しいドラフト標準機能は、**/std:c++latest** オプションによって保護されています。
-
-   **Visual Studio 2017 バージョン 15.3**:
-
-   **/std:c++17** オプションを使用すると、コンパイラによって実装された C++17 機能セットが有効になります。 このオプションによって、C++17 後の C++ 標準のワーキング ドラフトおよび不具合の更新のバージョンで変更または更新された機能に対するコンパイラと標準ライブラリのサポートが無効になります。 これらの機能を有効にするには、**/std:c++latest** を使用します。
-
-   **Visual Studio 2017 バージョン 15.5**:
+**Visual Studio 2017 バージョン 15.5**:  
 
    コンパイラは C++17 の新機能の約 75% をサポートしています。その中には構造化バインド、`constexpr` ラムダ、`if constexpr`、インライン変数、フォールド式、型システムへの `noexcept` の追加が含まれます。 これらは **/std:c++17** オプションの下にあります。 詳細については、[Visual Studio 2017 での C++ 準拠の強化](cpp-conformance-improvements-2017.md)に関するページをご覧ください。
 
-- [/permissive-](build/reference/permissive-standards-conformance.md): すべての厳密な標準準拠コンパイラ オプションを有効にして、ほとんどの Microsoft 固有コンパイラ拡張機能 (ただし、たとえば `__declspec(dllimport)` は除きます) を無効にします。 このオプションは現在は既定でオフですが、将来のある時点において既定でオンになります。
+**Visual Studio 2017 バージョン 15.7**:  
 
-   **Visual Studio 2017 バージョン 15.5**:
+Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセットが、C++ 標準に準拠となりました。 詳細については、「[Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)」 (発表: MSVC の C++ への準拠) および「[Visual C++ 言語への準拠](visual-cpp-language-conformance.md)」を参照してください。
 
-   **/permissive-** 準拠モードは、2 フェーズの名前参照に一部対応しています。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 準拠の強化) をご覧ください。
+### <a name="new-compiler-options"></a>新しいコンパイラ オプション
+
+- [/permissive-](build/reference/permissive-standards-conformance.md): すべての厳密な標準準拠コンパイラ オプションを有効にして、ほとんどの Microsoft 固有コンパイラ拡張機能 (ただし、たとえば `__declspec(dllimport)` は除きます) を無効にします。 このオプションは、Visual Studio 2017 バージョン 15.5 では既定でオンになっています。  **/permissive-** 準拠モードは、2 フェーズの名前参照に対応しています。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 準拠の強化) をご覧ください。
 
 - [/diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md): 診断エラーまたは警告が検出された場所の、行番号、行番号と列、または行番号、列、コード行の下のカレットを表示できるようにします。
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): すべてのデバッグ情報を PDB ファイルにコピーしないことで、インクリメンタル リンク時間を最大で 30% 高速化します (Visual Studio 2015 と比較した場合)。 代わりに、PDB ファイルは実行可能ファイルの作成に使われたオブジェクトとライブラリ ファイルのデバッグ情報を参照します。 「[Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)」 (VS "15" での /Debug:fastlink による C++ ビルド サイクルの高速化) および「[Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)」(Visual Studio で C++ のビルドを高速化するための推奨事項) をご覧ください。
 
 - [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] では、[/sdl](build/reference/sdl-enable-additional-security-checks.md) を [/await](build/reference/await-enable-coroutine-support.md) と一緒に使うことができます。 コルーチンでの [/RTC](build/reference/rtc-run-time-error-checks.md) の制限がなくなりました。
+
+   **Visual Studio 2017 バージョン 15.3**:  
+- [/std:c++14 と /std:c++latest](build/reference/std-specify-language-standard-version.md): これらのコンパイラ オプションを使用すると、プロジェクトで ISO C++ プログラミング言語の特定のバージョンにオプトインできます。 ほとんどの新しいドラフト標準機能は、**/std:c++latest** オプションによって保護されています。
+
+- [/std:c++17](build/reference/std-specify-language-standard-version.md) を使用すると、コンパイラによって実装された C++17 機能セットが有効になります。 このオプションによって、C++17 後の C++ 標準のワーキング ドラフトおよび不具合の更新のバージョンで変更または更新された機能に対するコンパイラと標準ライブラリのサポートが無効になります。 これらの機能を有効にするには、**/std:c++latest** を使用します。
+
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>コード生成、セキュリティ、診断、バージョン管理
 
@@ -73,6 +72,12 @@ Visual C++ ランタイムの性能が継続的に上がります。生成され
 Visual C++ は Intel の AVX-512 に対応しています。これに含まれるベクトルの長さ命令は AVX-512 の新しい関数を 128 ビット長と 256 ビット長のレジスタに与えます。
 
 [/Zc:noexceptTypes-](build/reference/zc-noexcepttypes.md) オプションを利用すれば、全般的に C++17 モードを使用しながら、C++14 バージョンの `noexcept` に戻すことができます。 これでソース コードを更新し、C++17 に準拠できます。すべての `throw()` コードを同時に書き直す必要がありません。 詳細については、「[動的例外指定の削除と noexcept](cpp-conformance-improvements-2017.md#noexcept_removal)」を参照してください。
+
+**Visual Studio 2017 バージョン 15.7**:
+
+- 予測実行サイドチャネルからの攻撃を緩和する、新しいコンパイラ スイッチの [/Qspectre](build/reference/qspectre.md)。 詳細については、「[Spectre mitigations in MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc/)」 (MSVC の Spectre 軽減策) を参照してください。
+- Spectre 軽減策用の新しい診断警告。 詳細については、「[Spectre diagnostic in Visual Studio 2017 Version 15.7 Preview 4](https://blogs.msdn.microsoft.com/vcblog/2018/04/20/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/)」 (Visual Studio 2017 バージョン 15.7 プレビュー 4 での Spectre 診断) を参照してください。
+- C++ 標準のサポートの正しい報告を有効にする、/Zc の新しい値の **/Zc:__cplusplus**。 たとえば、スイッチが設定され、コンパイラが /std:c++17 モードである場合、値は **201703L** に拡張されます。 詳細については、「[MSVC now correctly reports __cplusplus](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/)」 (__cplusplus の MSVC での正しい報告) を参照してください。
 
 ## <a name="c-standard-library-improvements"></a>C++ 標準ライブラリの機能強化
 
@@ -220,6 +225,28 @@ C++17 の追加機能がいくつか実装されました。 詳細について�
 - `basic_string::npos` は今後、コンパイル時間定数として利用できます。
 - C++17 モードの `std::allocator` は、アラインメントが `max_align_t` を超える、オーバーアラインされている型の割り当てを適切に処理するようになりました (**/Zc:alignedNew-** によって無効にされていない限り)。  たとえば、SSE および AVX 命令で、アラインメントが 16 バイトまたは 32 バイトのオブジェクトのベクトルが正しく調整されるようになりました。
 
+### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 バージョン 15.6
+
+- \<memory_resource>
+- ライブラリ基礎 V1
+- polymorphic_allocator 割り当ての削除
+- クラス テンプレート引数の推論の機能強化
+
+### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 バージョン 15.7
+
+- 並列アルゴリズムのサポートが試験段階ではなくなった
+- \<filesystem> の新しい実装
+- 基本文字列変換 (部分的)
+- std::launder()
+- std::byte
+- hypot(x,y,z)
+- 不要な decay の回避
+- 数学的特殊関数
+- constexpr char_traits
+- STL の推論ガイド
+
+詳細については、「[Visual C++ 言語への準拠](visual-cpp-language-conformance.md)」を参照してください。
+
 ## <a name="other-libraries"></a>他のライブラリ
 
 ### <a name="open-source-library-support"></a>オープン ソース ライブラリのサポート
@@ -269,7 +296,7 @@ C++ では、Ctrl を押しながら **[定義へ移動]** をクリックでき
 
 ## <a name="intellisense"></a>IntelliSense
 
-SQLite ベースの新しいデータベース エンジンが、既定で使用されるようになりました。 これにより、**[定義に移動]** や **[すべての参照を検索]** などのデータベース操作が高速化され、ソリューションの初期解析時間も大幅に短縮されます。 設定は、**[ツール]、[オプション]、[テキスト エディター]、[C/C++]、[詳細設定]** に移動しました (以前は、... [C/C++]、[試験的] の下)。
+- SQLite ベースの新しいデータベース エンジンが、既定で使用されるようになりました。 これにより、**[定義に移動]** や **[すべての参照を検索]** などのデータベース操作が高速化され、ソリューションの初期解析時間も大幅に短縮されます。 設定は、**[ツール]、[オプション]、[テキスト エディター]、[C/C++]、[詳細設定]** に移動しました (以前は、... [C/C++]、[試験的] の下)。
 
 - プリコンパイル済みヘッダーを使用していないプロジェクトやファイルでの IntelliSense のパフォーマンスが向上しました。現在のファイルのヘッダーに対して自動プリコンパイル済みヘッダーが作成されます。
 
@@ -284,16 +311,13 @@ SQLite ベースの新しいデータベース エンジンが、既定で使用
   ![メンバー リストのフィルター処理](media/mlfiltering.png "Member List Filtering")
 
 - メンバー リストの表示項目のコンテキストに応じたフィルター処理を提供する新しい実験的な予測 IntelliSense 機能が追加されました。 「[C++ IntelliSense Improvements - Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)」 (C++ IntelliSense の機能改善 - 予測 IntelliSense とフィルター処理) を参照してください。
-
 - **[すべての参照の検索]** (Shift + F12) を使って、複雑なコードベースでも簡単に参照できるようになりました。 高度なグループ化、フィルター処理、並べ替え、結果内の検索と色づけ (一部の言語) が提供され、参照を明確に理解できます。 C++ では、新しい UI に、変数から読み取っているのか、または変数に書き込んでいるのかに関する情報が含まれます。
-
 - Dot-to-Arrow IntelliSense 機能が試験段階から進んだ段階に移り、既定で有効になっています。 エディターの **[Expand Scopes]\(スコープの展開\)** および **[Expand Precedence]\(優先順位の展開\)** 機能が試験段階から進んだ段階に移ります。
-
 - 試験的なリファクタリング機能である **署名の変更** および **関数の抽出** が既定で使用可能になりました。
-
 - C++ プロジェクトの "迅速なプロジェクトの読み込み" の試験的機能。 C++ プロジェクトを次回に開いた際に、読み込みが速くなり、またそれ以降、読み込みが非常に速くなります。
+- 他の言語と共通の機能と、C++ に固有の機能があります。 これらの新機能について詳しくは、「[Announcing Visual Studio “15”](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)」(Visual Studio "15" のご案内) をご覧ください。
 
-他の言語と共通の機能と、C++ に固有の機能があります。 これらの新機能について詳しくは、「[Announcing Visual Studio “15”](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)」(Visual Studio "15" のご案内) をご覧ください。
+**Visual Studio 2017 バージョン 15.7**: ClangFormat のサポートが追加されました。 詳細については、「[ClangFormat Support in Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/clangformat-support-in-visual-studio-2017-15-7-preview-1/)」 (Visual Studio 2017 での ClangFormat のサポート) を参照してください。
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>非 MSBuild プロジェクトと [フォルダーを開く]
 
@@ -320,9 +344,11 @@ Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) �
 
   ![Cmake の [フォルダーを開く]](media/cmake_cpp.png "CMake Open Folder")
 
-**Visual Studio 2017 バージョン 15.3**: CMake Ninja generator のサポートが追加されました。 詳細については、「[CMake projects in Visual C++ (Visual C++ の CMake プロジェクト)](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
+**Visual Studio 2017 バージョン 15.3**: CMake Ninja generator のサポートが追加されました。 
 
-**Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュをインポートするためのサポートが追加されました。 詳細については、「[CMake projects in Visual C++ (Visual C++ の CMake プロジェクト)](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
+**Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュをインポートするためのサポートが追加されました。 
+
+**Visual Studio 2017 バージョン 15.7**: CMake 3.11、CMake プロジェクトでのコード分析、ソリューション エクスプローラーのターゲット ビュー、キャッシュ生成用のオプション、および単一ファイルのコンパイルのためのサポートが追加されました。 詳細については、「[CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)」 (Visual Studio での CMake のサポート) および「[Visual C++ で CMake プロジェクト](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
 
 ## <a name="windows-desktop-development-with-c"></a>C++ による Windows デスクトップ開発
 
@@ -348,6 +374,12 @@ Visual C++ Build ツール (以前はスタンドアロン製品として入手�
 - ARM マイクロコントローラーを対象とするクロス コンパイルのサポートが追加されました。 インストールでこれを有効にするには、**C++ による Linux 開発**ワークロードを選び、**埋め込みおよび IoT 開発**のオプションを選びます。 これで ARM GCC クロス コンパイル ツールと Make がインストールに追加されます。 詳細については、「[ARM GCC Cross Compilation in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2017/10/23/arm-gcc-cross-compilation-in-visual-studio/)」 (Visual Studio の ARM GCC クロス コンパイル) を参照してください。
 - CMake のサポートが追加されました。 Visual Studio プロジェクトに変換しなくても、既存の CMake コード ベースで作業できるようになりました。 詳細については、「[Configure a Linux CMake Project](linux/cmake-linux-project.md)」 (Linux CMake プロジェクトを構成する) を参照してください。
 - リモート タスクを実行するためのサポートが追加されました。 この機能により、Visual Studio の接続マネージャーに定義されているリモート システムであらゆるコマンドを実行できます。 リモート タスクでは、リモート システムにファイルをコピーすることもできます。
+詳細については、「[Configure a Linux CMake Project](linux/cmake-linux-project.md)」 (Linux CMake プロジェクトを構成する) を参照してください。
+
+**Visual Studio 2017 バージョン 15.7**:
+
+- Linux ワークロードのシナリオへのさまざまな機能強化。 詳細については、「[Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/)」(プロジェクト システム、Linux コンソール ウィンドウ、rsync およびプロセスへのアタッチに対する Linux C++ ワークロードの機能改善) を参照してください。
+- リモート Linux 接続のヘッダーでの IntelliSense。 詳細については、「[IntelliSense for Remote Linux Headers](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/intellisense-for-remote-linux-headers/)」 (リモート Linux ヘッダーでの IntelliSense) および「[Linux CMake プロジェクトを構成する](linux/cmake-linux-project.md)」を参照してください。
 
 ## <a name="game-development-with-c"></a>C++ によるゲーム開発
 
@@ -383,21 +415,36 @@ Android および iOS を対象とするモバイル アプリを、Visual Studi
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck properties page")
 
-**Visual Studio 2017 バージョン 15.3**:
+**Visual Studio 2017 バージョン 15.3**: リソース管理に関連するルールのサポートが追加されました。
 
-リソース管理に関連するルールのサポートが追加されました。
-
-**Visual Studio 2017 バージョン 15.5**:
-
-新しい C++ Core Guidelines チェックでは、スマート ポインターが正しいこと、グローバル初期化子の使い方が正しいこと、コンストラクトのフラグ使用 (`goto` や不良キャストなど) が確認されます。
+**Visual Studio 2017 バージョン 15.5**: 新しい C++ Core Guidelines チェックでは、スマート ポインターが正しいこと、グローバル初期化子の使い方が正しいこと、コンストラクトのフラグ使用 (`goto` や不良キャストなど) が確認されます。
 
 15.3 で使われていた警告番号の一部は 15.5 では使われなくなりました。 より具体的なチェックに置換されました。
+
+**Visual Studio 2017 バージョン 15.6**:  
+単一ファイルの分析、および分析実行時のパフォーマンス向上のサポートの追加。 詳細については、「[C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)」 (Visual Studio 2017 15.6 プレビュー 2 での C++ スタティック分析の改善) を参照してください。
+
+**Visual Studio 2017 バージョン 15.7**:  
+
+- どのコード分析ルールを実行するかを指定できる [/analyze: ruleset](build/reference/analyze-code-analysis.md)のサポートの追加。
+- 追加の C++ Core Guidelines ルールのサポートの追加。  詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
 
 ## <a name="unit-testing"></a>単体テスト
 
 **Visual Studio 2017 バージョン 15.5**:
 
 Google Test Adapter と Boost.Test Adapter は **C++ ワークロードによるデスクトップ開発**のコンポーネントとして入手できるようになりました。**テスト エクスプローラー**と統合されています。 Cmake プロジェクト ([フォルダーを開く] を使用) のための CTest サポートが追加されました。ただし、**テスト エクスプローラー**との完全統合はまだ利用できません。 詳細については、「[C/C++ 用の単体テストの記述](/visualstudio/test/writing-unit-tests-for-c-cpp)」を参照してください。
+
+**Visual Studio 2017 バージョン 15.6**:
+
+- Boost.Test ダイナミック ライブラリのサポートの追加。
+- 現在、Boost.Test 項目テンプレートは IDE にあります。
+
+詳細については、「[Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)」 (Boost.Test 単体テスト: 動的なライブラリのサポートと新しい項目テンプレート) を参照してください。 
+
+**Visual Studio 2017 バージョン 15.7**:
+
+C++ 単体テスト プロジェクトへの [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) のサポートの追加。 詳細については、「[Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)」 (C++ 単体テスト用の CodeLens の発表) を参照してください。
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断
 

@@ -28,11 +28,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68de7c3ab3b823c1e3d08a13a9d7363232e9712e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c0105ccc5a40c4e5fe789814adfabe6c9749650
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="dllonexit"></a>__dllonexit
 終了時に呼び出されるルーチンを登録します。  
@@ -57,7 +57,7 @@ _onexit_t __dllonexit(   _onexit_t func,
  デタッチ時に実行する関数のリストの末尾を示す変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- 成功した場合、ユーザーの関数へのポインター。 失敗した場合、null ポインター。  
+ 成功した場合、ユーザーの関数へのポインター。 失敗した場合、**NULL** ポインター。  
   
 ## <a name="remarks"></a>コメント  
  `__dllonexit` 関数は [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) 関数に似ていますが、_onexit 関数で使われるグローバル変数をこのルーチンでは参照できない点が異なります。 グローバル変数の代わりに、この関数は `pbegin` および `pend` パラメーターを使います。  

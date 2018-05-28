@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets、_cgetws
 コンソールから文字列を取得します。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)」を参照してください。  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  データの格納場所。  
   
 ## <a name="return-value"></a>戻り値  
- `_cgets` と `_cgetws` は文字列の先頭である `buffer[2]` へのポインターを返します。 `buffer` が `NULL` の場合は、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効パラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらは `NULL` を返し、 `errno` を `EINVAL`に設定します。  
+ `_cgets` と `_cgetws` は文字列の先頭である `buffer[2]`へのポインターを返します。 `buffer` が **NULL** の場合は、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらは **NULL** を返し、`errno` を `EINVAL` に設定します。  
   
 ## <a name="remarks"></a>コメント  
  これらの関数は、コンソールから文字列を読み込み、 `buffer`が指す位置に文字列とその長さを格納します。 `buffer` パラメーターは文字配列へのポインターである必要があります。 配列の最初の要素 ( `buffer[0]`) には、読み取る文字列の最大長 (文字数) を格納します。 配列は、文字列、終端の null 文字 ('\0')、およびその他の 2 バイト分を格納するのに十分な要素を持つ必要があります。 関数は、文字をキャリッジ リターンとラインフィード (CR-LF) の組み合わせが現れるか、指定した文字数を読み取るまで文字を読み取ります。 文字列は `buffer[2]`を先頭として格納されます。 関数が CR-LF を読み取ると、null 文字 ('\0') を格納します。 次に、関数は 2 番目の配列要素である `buffer[1]`に文字列の実際の長さを格納します。  
