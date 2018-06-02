@@ -1,6 +1,6 @@
 ---
 title: コンパイラの警告 C4400 C4599 を通じて |Microsoft ドキュメント
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704686"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>コンパイラの警告 C4400 C4599 経由
 
@@ -319,7 +320,8 @@ ms.lasthandoff: 05/04/2018
 |コンパイラの警告 (レベル 4) C4574|'*識別子*'として定義されている' 0': '#if identifier' を使用するつもりでしたか?|
 |コンパイラの警告 (レベル 1) C4575|'_ _vectorcall' と互換性のない、'/clr' オプション: '_ _stdcall' に変換します。|
 |コンパイラの警告 (レベル 1、エラー) C4576|初期化子リストに続くかっこで囲まれた型は非標準の明示的な型変換の構文|
-|コンパイラの警告 (レベル 1、エラー) C4578|'abs': から変換 '*type1*'to'*type2*'、データ損失の可能性 (を呼び出すもしかすると次の間'*関数*' または #include <cmath>?)|
+|コンパイラの警告 (レベル 1、Off) C4577|' noexcept' がない例外です。 指定されたモードを処理で使用例外で終了処理は保証されません。 /EHsc を指定してください。|
+|コンパイラの警告 (レベル 1、エラー) C4578|'abs': から変換 '*type1*'to'*type2*'、データ損失の可能性 (を呼び出すもしかすると次の間'*関数*' または #include \<cmath >?)|
 |[コンパイラの警告 (レベル 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] は非推奨とされます。System::Attribute または Platform::Metadata を基底クラスとして指定してください|
 |[コンパイラの警告 (レベル 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|動作が使用されていません: '"*文字列*"' に置き換えられます '*文字列*' 属性を処理|
 |コンパイラの警告 (レベル 4) C4582|'*型*': コンス トラクターは暗黙的に呼び出されません|

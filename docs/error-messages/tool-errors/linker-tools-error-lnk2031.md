@@ -16,51 +16,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179702b3e162ad9f22fd887d60c5a5c2d0bc8559
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d86ea6da8a73d9ba2427e9455c4fca87cd32dd2b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703666"
 ---
 # <a name="linker-tools-error-lnk2031"></a>リンカ ツール エラー LNK2031
-"function_declaration"decorated_name; の p/invoke を生成できません。呼び出し規約がメタデータに見つかりません。  
-  
- ネイティブ関数を純粋なイメージにインポートするは、ネイティブと純粋なコンパイルの間で暗黙の呼び出し規約が異なることに注意してください。 純粋なイメージの詳細については、次を参照してください。[純粋なコードと検証可能なコード (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)です。  
-  
-## <a name="example"></a>例  
- このコード サンプルは、ネイティブ、エクスポートされた関数の呼び出し規約は暗黙的に持つコンポーネントを生成[_ _cdecl](../../cpp/cdecl.md)です。  
-  
-```  
-// LNK2031.cpp  
-// compile with: /LD  
-extern "C" {  
-   __declspec(dllexport) int func() { return 3; }  
-};  
-```  
-  
-## <a name="example"></a>例  
- 次の例では、純粋なネイティブ関数を使用するクライアントを作成します。 ただし、下にある呼び出し規約 **/clr: 純粋な**は[_ _clrcall](../../cpp/clrcall.md)です。 次の例では、LNK2031 が生成されます。  
-  
-```  
-// LNK2031_b.cpp  
-// compile with: /clr:pure LNK2031.lib  
-// LNK2031 expected  
-extern "C" int func();  
-  
-int main() {  
-   return func();  
-}  
-```  
-  
-## <a name="example"></a>例  
- 次の例では、純粋なイメージからネイティブ関数を使用する方法を示します。 明示的に注意してください **_ _cdecl**呼び出し規約の指定子。  
-  
-```  
-// LNK2031_c.cpp  
-// compile with: /clr:pure LNK2031.lib  
-extern "C" int __cdecl func();  
-  
-int main() {  
-   return func();  
-}  
+
+> p/invoke を生成できません"*function_declaration*" *decorated_name*; 呼び出し規約がメタデータに見つかりません。
+
+## <a name="remarks"></a>コメント
+
+ネイティブ関数を純粋なイメージにインポートするは、ネイティブと純粋なコンパイルの間で暗黙の呼び出し規約が異なることに注意してください。 純粋なイメージの詳細については、次を参照してください。[純粋なコードと検証可能なコード (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)です。
+
+**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+
+## <a name="example"></a>例
+
+このコード サンプルは、ネイティブ、エクスポートされた関数の呼び出し規約は暗黙的に持つコンポーネントを生成[_ _cdecl](../../cpp/cdecl.md)です。
+
+```cpp
+// LNK2031.cpp
+// compile with: /LD
+extern "C" {
+   __declspec(dllexport) int func() { return 3; }
+};
+```
+
+## <a name="example"></a>例
+
+次の例では、純粋なネイティブ関数を使用するクライアントを作成します。 ただし、下にある呼び出し規約 **/clr: 純粋な**は[_ _clrcall](../../cpp/clrcall.md)です。 次の例では、LNK2031 が生成されます。
+
+```cpp
+// LNK2031_b.cpp
+// compile with: /clr:pure LNK2031.lib
+// LNK2031 expected
+extern "C" int func();
+
+int main() {
+   return func();
+}
+```
+
+## <a name="example"></a>例
+
+次の例では、純粋なイメージからネイティブ関数を使用する方法を示します。 明示的に注意してください **_ _cdecl**呼び出し規約の指定子。
+
+```cpp
+// LNK2031_c.cpp
+// compile with: /clr:pure LNK2031.lib
+extern "C" int __cdecl func();
+
+int main() {
+   return func();
+}
 ```
