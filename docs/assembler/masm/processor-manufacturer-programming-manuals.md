@@ -12,22 +12,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09da159d982c0a286af36c9345299656772d1b50
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a280d4dfe19d4f8c31e282a8138fc41152f9786a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704920"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>プロセッサの製造元のプログラミング マニュアル
 この記事では、製造、販売、されたりしない Microsoft によってサポートされているプロセッサについてのプログラミング情報を含む可能性のある web サイトへのリンクを提供します。 Microsoft が所有またはいない web サイト、またはそれらのコンテンツを制御します。  
   
 ## <a name="processor-manufacturer-websites"></a>プロセッサの製造元の web サイト  
   
--   [AMD64 命令セットのリファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
-  
--   [インテル 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
-  
--   [Advanced Vector Extensions (AVX) Intel](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
+- [AMD64 命令セットのリファレンス マニュアル](https://developer.amd.com/resources/developer-guides-manuals/)  
+
+- [インテル 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://software.intel.com/en-us/documentation)  
+
+- [Advanced Vector Extensions (AVX) Intel](https://software.intel.com/en-us/articles/introduction-to-intel-advanced-vector-extensions)  
   
 ## <a name="remarks"></a>コメント  
  どちらも[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]。 また、Microsoft マクロ アセンブラーは、すべてのプロセッサをサポートします。  

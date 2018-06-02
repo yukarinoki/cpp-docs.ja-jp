@@ -1,7 +1,7 @@
 ---
 title: RoInitializeWrapper クラス |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/20/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a4479686d3ca591a9fdd1c0659549a2e0db6e1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705593"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper クラス
 Windows ランタイムを初期化します。  
@@ -31,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>コメント  
- RoInitializeWrapper は、利便性のための Windows ランタイムを初期化し、操作が成功したかどうかを示す HRESULT を返します。  
+ RoInitializeWrapper は、利便性のための Windows ランタイムを初期化し、操作が成功したかどうかを示す HRESULT を返します。 クラスのデストラクターを呼び出すため`::Windows::Foundation::Uninitialize`のインスタンス`RoInitializeWrapper`グローバルまたは最上位のスコープで宣言する必要があります。  
   
 ## <a name="members"></a>メンバー  
   
@@ -51,7 +52,7 @@ class RoInitializeWrapper
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `RoInitializeWrapper`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** corewrappers.h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
