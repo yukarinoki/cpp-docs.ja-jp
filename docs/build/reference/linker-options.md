@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753631"
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -67,6 +68,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|DLL の遅延読み込みを制御します。|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|指定した DLL に遅延読み込みを発生させます。|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|アセンブリに部分署名します。|
+|[/DEPENDENTLOADFLAG](dependentloadflag.md)|DLL に依存する負荷の既定のフラグを設定します。|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|DLL をビルドします。|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|カーネル モード ドライバーを作成します。|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|ASLR (Address Space Layout Randomization) 機能を使用してロード時にランダムに再ベースできる実行可能イメージを生成するかどうかを指定します。|
