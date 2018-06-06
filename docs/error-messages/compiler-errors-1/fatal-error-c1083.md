@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569811"
 ---
 # <a name="fatal-error-c1083"></a>致命的なエラー C1083
 
@@ -106,6 +107,8 @@ C1083 エラーは、誤ったバージョンのファイルがインクルー�
 
 - 異なるを使用して、ファイルをコンパイル **/analyze**コンパイラ オプションの設定よりもヘッダーをプリコンパイルします。 プロジェクトのヘッダーがプリコンパイルされると、すべてを使用する場合、同じ **/analyze**設定します。 詳細については、「[/analyze (コード分析)](../../build/reference/analyze-code-analysis.md)」を参照してください。
 
+- ファイルまたはディレクトリが作成された Windows サブシステムによって linux、ディレクトリあたり大文字小文字の区別が有効になっていると、およびパスまたはファイルの指定した場合は、パスまたはディスク上のファイルの場合と一致しません。
+
 - ファイル、ディレクトリ、またはディスクが読み取り専用です。
 
 - Visual Studio またはコマンド ライン ツールには、ファイルまたはディレクトリを読み取るための十分なアクセス許可がありません。 これは、たとえば、プロジェクト ファイルがある Visual Studio またはコマンド ライン ツールを実行中のプロセスよりも所有権が異なるときに発生します。 Visual Studio または開発者コマンド プロンプトを管理者として実行して、この問題を修正できる場合もします。
@@ -127,4 +130,4 @@ IDE またはコマンドラインで C/C++ プロジェクトを構築する方
 
 ## <a name="see-also"></a>関連項目
 
-[MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)
+- [MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)

@@ -1,7 +1,7 @@
 ---
 title: steady_clock 構造体 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1dbfac1eb8c67c5306bded6e6fd9ee8dacf54b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5445379597c4fefcd657303a05c33b6509d54d2e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569899"
 ---
 # <a name="steadyclock-struct"></a>steady_clock 構造体
 
-`steady` クロックを表します。
+表す、*定常*クロック。
 
 ## <a name="syntax"></a>構文
 
@@ -32,27 +33,34 @@ struct steady_clock;
 
 ## <a name="remarks"></a>コメント
 
-Windows では、steady_clock は QueryPerformanceCounter 関数をラップします。
+Windows では、`steady_clock`ラップ、`QueryPerformanceCounter`関数。
 
-`now()` の最初の呼び出しによって返される値が、常に `now()` の以降の呼び出しによって返される値以下である場合、クロックは*単調*になります。
+`now` への最初の呼び出しによって返される値が、`now` への以降の呼び出しによって返される値以下である場合、クロックは常に*単調*になります。 *単調*で、クロックのティック間の時間が一定のクロックは*安定しています*。
 
-*単調*であり、かつクロック ティックの間隔が一定のクロックは*安定*しています。
+`high_resolution_clock` typedef`steady_clock`です。
 
-High_resolution_clock は、steady_clock の typdef です。
+### <a name="public-typedefs"></a>パブリック typedef
+
+|name|説明|
+|----------|-----------------|
+|`steady_clock::duration`|シノニム`nanoseconds`で定義されている\<chrono >。|
+|`steady_clock::period`|シノニム`nano`で定義されている\<比 >。|
+|`steady_clock::rep`|シノニム**長い****長い**、包含をインスタンス化のクロック ティック数を表すために使用する型`duration`です。|
+|`steady_clock::time_point`|`chrono::time_point<steady_clock>` と同義。|
 
 ## <a name="public-functions"></a>パブリック関数
 
 |関数|説明|
 |--------------|-----------------|
-|now|現在の時刻を time_point 値として返します。|
+|`now`|現在の時刻としてを返します、`time_point`値。|
 
 ## <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
-|`system_clock::is_steady`|`true` を保持します。 `steady_clock` は*安定*しています。|
+|`steady_clock::is_steady`|`true` を保持します。 `steady_clock` は*安定*しています。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<chrono >
 
@@ -60,6 +68,6 @@ High_resolution_clock は、steady_clock の typdef です。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[system_clock 構造体](../standard-library/system-clock-structure.md)<br/>
+- [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)
+- [\<chrono>](../standard-library/chrono.md)
+- [system_clock 構造体](../standard-library/system-clock-structure.md)

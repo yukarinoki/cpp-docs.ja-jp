@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569795"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C)
-A*デスクトップ アプリケーション*C++ では、Windows Api といずれかの実行ウィンドウまたはシステム コンソールの完全なセットにアクセスできる、ネイティブ アプリケーションです。 C++ ではデスクトップ アプリケーションは、(ただし、Windows XP が不要になった公式にサポートされていて、それ以降に導入された多くの Windows Api) から Windows 10 の Windows XP で実行できます。   デスクトップ アプリケーションとは異なります、ユニバーサル Windows プラットフォーム (UWP) アプリ、Windows 10 を実行している pc と XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できます。 詳細についてはデスクトップとします。UWP アプリケーションを参照してください[、テクノロジの選択](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)です。  
+A*デスクトップ アプリケーション*C++ では、Windows Api といずれかの実行ウィンドウまたはシステム コンソールの完全なセットにアクセスできる、ネイティブ アプリケーションです。 C++ ではデスクトップ アプリケーションは、(ただし、Windows XP が不要になった公式にサポートされていて、それ以降に導入された多くの Windows Api) から Windows 10 の Windows XP で実行できます。
+
+デスクトップ アプリケーションとは異なります、ユニバーサル Windows プラットフォーム (UWP) アプリ、Windows 10 を実行している pc と XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できます。 詳細についてはデスクトップとします。UWP アプリケーションを参照してください[、テクノロジの選択](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)です。  
+
+
+**デスクトップ ブリッジ**Windows API 設定を Windows 10 に、既存のデスクトップ アプリケーションまたは COM オブジェクトとして、UWP アプリをパッケージ化して touch、または、モダンから Api を呼び出すなど UWP の機能を追加することができます。 UWP アプリは Visual Studio、およびパッケージのパッケージ化し、それらの間で通信する Windows Api を使用して、1 つにまとめることで、デスクトップのソリューションに追加することもできます。  
+   
+Visual Studio 2017 15.4 およびそれ以降のバージョンでは、既存のデスクトップ アプリケーションをパッケージ化の作業を大幅に簡素化するには、Windows アプリケーション パッケージ プロジェクトを作成できます。 どのようなレジストリの呼び出しに関していくつかの制限を適用またはデスクトップ アプリケーションの Api を使用して、多くの場合は、アプリ パッケージの実行中に同様の機能を実現するために別のコード パスを作成することができます。 詳細については、次を参照してください。[デスクトップ ブリッジ](/windows-uwp/porting/desktop-to-uwp-root)です。  
   
  **用語集**  
   
