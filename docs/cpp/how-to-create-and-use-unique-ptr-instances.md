@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
+ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34755772"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>方法: unique_ptr インスタンスを作成して使用する
 A [unique_ptr](../standard-library/unique-ptr-class.md)がそのポインターを共有していません。 別コピーできない`unique_ptr`関数に値渡しまたは作成するコピーを必要とするすべての C++ 標準ライブラリ アルゴリズムで使用されます。 `unique_ptr` ができるのは移動だけです。 この場合、メモリ リソースの所有権は別の `unique_ptr` に移動し、元の `unique_ptr` はそれ以降、所有権を失います。 複数の所有者がオブジェクトを所有するとプログラム ロジックが複雑になるため、所有者を 1 人に制限することをお勧めします。 したがって、プレーンな C++ オブジェクトにスマート ポインターが必要なときに使用`unique_ptr`、構築する場合と、`unique_ptr`を使用して、 [make_unique](../standard-library/memory-functions.md#make_unique)ヘルパー関数。  
@@ -25,7 +26,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)がそのポインター�
   
  ![一意の所有権の移動&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` 定義された、 `<memory>` C++ 標準ライブラリのヘッダー。 正確には、生のポインターとして効率的なは、C++ 標準ライブラリのコンテナーで使用できます。 追加`unique_ptr`C++ 標準ライブラリのコンテナーにインスタンスが効率的なのでの移動コンス トラクター、`unique_ptr`コピー操作の必要性を排除します。  
+ `unique_ptr` 定義された、 `<memory>` C++ 標準ライブラリのヘッダー。 生のポインターと同じくらい効率的と、C++ 標準ライブラリのコンテナーで使用できます。 追加`unique_ptr`C++ 標準ライブラリのコンテナーにインスタンスが効率的なのでの移動コンス トラクター、`unique_ptr`コピー操作の必要性を排除します。  
   
 ## <a name="example"></a>例  
  次の例では、`unique_ptr` インスタンスを作成し、関数間で渡す方法を示します。  

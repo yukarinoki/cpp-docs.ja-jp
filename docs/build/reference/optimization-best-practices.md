@@ -19,7 +19,7 @@ ms.openlocfilehash: 63d3437a08e3c8b69b564176e0f377566ab491e6
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704241"
 ---
 # <a name="optimization-best-practices"></a>最適化の推奨事項

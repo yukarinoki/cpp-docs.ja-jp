@@ -1,7 +1,7 @@
 ---
 title: x86 組み込み一覧 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 06/01/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458cd924e071c92ea4f02ee486b43300c3675b95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad931eb1c62c4ee9ed8213704cc4be8d1f2aeecd
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753670"
 ---
 # <a name="x86-intrinsics-list"></a>x86 組み込み一覧
 
@@ -30,13 +31,13 @@ ms.lasthandoff: 05/04/2018
 
 - [Intel Intrinsics Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)です。 検索ボックスを使って特定の組み込みを見つけてください。
 
-- [インテル 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://software.intel.com/articles/intel-sdm)
+- [インテル 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](https://software.intel.com/en-us/isa-extensions)
+- [Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
-- [Intel AVX](https://www.intel.com/content/www/us/en/architecture-and-technology/avx-512-overview.html)
+- [Advanced Vector Extensions Intel の概要](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [AMD 開発者ガイド、マニュアルおよび ISA ドキュメント](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD 開発者ガイド、マニュアルおよび ISA ドキュメント](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
 次の表は、x86 プロセッサで利用可能な組み込みの一覧です。 [テクノロジ] 列に、必要な命令セットのサポートを示します。 [__cpuid](../intrinsics/cpuid-cpuidex.md) 組み込みを使用して、実行時に命令セットのサポートを確認します。 1 つの行に 2 つのエントリがある場合は、同じ組み込みに対する異なるエントリ ポイントを表しています。 [1] は、組み込みが AMD プロセッサでのみ利用可能であることを示します。 [2] は、組み込みが Intel プロセッサでのみ利用可能であることを示します。 [3] は、プロトタイプがマクロであることを示します。 関数プロトタイプに必要なヘッダーが "ヘッダー" 列に示されています。 分かりやすくするために、Intrin.h ヘッダーには immintrin.h と ammintrin.h の両方を含めています。
 

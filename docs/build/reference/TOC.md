@@ -204,7 +204,7 @@
 ### [/DELAY (遅延読み込みのインポート設定)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD (遅延読み込みのインポート)](delayload-delay-load-import.md)
 ### [/DELAYSIGN (アセンブリの部分署名)](delaysign-partially-sign-an-assembly.md)
-### [/DEPENDENTLOADFLAGS (既定値依存読み込みフラグを設定します)](dependentloadflags.md)
+### [/DEPENDENTLOADFLAG (既定値依存読み込みフラグを設定します)](dependentloadflag.md)
 ### [/DLL (DLL のビルド)](dll-build-a-dll.md)
 ### [/DRIVER (Windows NT カーネル モード ドライバー)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE (ASLR (Address Space Layout Randomization) の使用)](dynamicbase-use-address-space-layout-randomization.md)
