@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705427"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814340"
 ---
 # <a name="general-rules-for-operator-overloading"></a>演算子のオーバーロードに関する一般的な規則
 次の規則は、オーバーロードした演算子の実装のされ方を抑制します。 ただし、これらには適用されません、[新しい](../cpp/new-operator-cpp.md)と[削除](../cpp/delete-operator-cpp.md)演算子は、個別にについて説明しています。  
@@ -55,7 +55,7 @@ ms.locfileid: "34705427"
   
 -   メンバー関数として宣言された二項演算子は引数を 1 つ受け取ります。グローバル関数として宣言された場合は、引数を 2 つ受け取ります。  
   
--   かどうか、演算子は、単項演算子または二項演算子として使用できます (**&**、 **\***、 **+**、および**-**)、各使用とは別にオーバー ロードできます。  
+-   かどうか、演算子は、単項演算子または二項演算子として使用できます (__&__、 __*__、 __+__、および__-__)、各使用とは別にオーバー ロードできます。  
   
 -   オーバーロードされた演算子は、既定の引数を持つことができません。  
   
