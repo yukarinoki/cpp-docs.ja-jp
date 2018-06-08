@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843076"
 ---
 # <a name="building-browse-information-files-overview"></a>ブラウザー情報ファイルのビルド : 概要
 シンボル参照の参照情報を作成するには、コンパイラは、BSCMAKE のプロジェクトでソース ファイルごとに .sbr ファイルを作成します。Exe ファイルは、1 つの .bsc ファイル .sbr ファイルを連結します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  いずれかが、プロジェクト レベルで .bsc ファイルをビルドしたり/n スイッチを使用して、.sbr ファイルが切り詰められていることを防ぐしないでください。  
   
-2.  すべてのプロジェクトが構築された後に、入力としてのすべての .sbr ファイルで BSCMAKE を実行します。 ワイルドカードを使用します。 インスタンスの場合、それらのツールやすべて .bsc ファイルを 1 つに結合したいの .sbr ファイルをプロジェクト ディレクトリ C:\X、C:\Y、および C:\Z していたを使用して BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*です。結合された .bsc ファイルをビルドする sbr/o c:\whatever_directory\combined.bsc です。  
+2.  すべてのプロジェクトが構築された後に、入力としてのすべての .sbr ファイルで BSCMAKE を実行します。 ワイルドカードを使用します。 インスタンスの場合、それらのツールやすべて .bsc ファイルを 1 つに結合したいの .sbr ファイルをプロジェクト ディレクトリ C:\X、C:\Y、および C:\Z していたを使用して BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\\*.sbr/o c:\whatever_directory\combined.bsc 結合された .bsc ファイルを構築します。  
   
 ## <a name="see-also"></a>関連項目  
  [C/C++ ビルド ツール](../../build/reference/c-cpp-build-tools.md)   
