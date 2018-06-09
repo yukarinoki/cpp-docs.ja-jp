@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239425"
 ---
 # <a name="cmap-class"></a>CMap クラス
 一意なキーを値に割り当てる辞書コレクション クラスです。  
@@ -67,20 +68,20 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  マップのキーとして使用されるオブジェクトのクラスです。  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  データ型`KEY`引数です。 通常はへの参照を`KEY`です。  
   
  `VALUE`  
  マップに格納されているオブジェクトのクラスです。  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  データ型`VALUE`引数です。 通常はへの参照を`VALUE`です。  
   
 ## <a name="members"></a>メンバー  
   
 ### <a name="public-structures"></a>パブリック構造体  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|キーの値と、関連オブジェクトの値を含む入れ子になった構造体。|  
   
@@ -115,7 +116,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 |----------|-----------------|  
 |[CMap::operator](#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  マップにキー/値ペア (要素) を挿入すると効率的に取得したりへのアクセス キーを使用してペアリングが削除することができます。 マップ内のすべての要素を繰り返すこともできます。  
   
  型の変数**位置**エントリに代替のアクセスに使用します。 使用することができます、**位置**「に注意してください」のエントリをマップを反復処理します。 このイテレーションが順のキー値であると思われる場合があります。そうじゃないです。 取得された要素の順序が不定になります。  
@@ -135,7 +136,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  `CMap`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtempl.h  
   
 ##  <a name="cmap"></a>  CMap::CMap  
@@ -149,7 +150,7 @@ CMap(INT_PTR nBlockSize = 10);
  `nBlockSize`  
  マップを拡張するためのメモリ割り当ての粒度を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  単位でメモリが割り当てられているマップするにつれて、`nBlockSize`エントリです。  
   
 ### <a name="example"></a>例  
@@ -158,7 +159,7 @@ CMap(INT_PTR nBlockSize = 10);
 ##  <a name="cpair"></a>  CMap::CPair  
  キー値と関連付けられたオブジェクトの値が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、クラス内で入れ子になった構造体[CMap](../../mfc/reference/cmap-class.md)です。  
   
  構造体は、2 つのフィールドで構成されます。  
@@ -224,7 +225,7 @@ void GetNextAssoc(
  `rValue`  
  取得される要素の戻り値を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、マップ内のすべての要素の反復処理に最も役立ちます。 位置シーケンスがないとは限りませんキーの値のシーケンスと同じに注意してください。  
   
  場合は、取得した最後の要素をマップではの新しい値`rNextPosition`に設定されている**NULL**です。  
@@ -242,7 +243,7 @@ INT_PTR GetSize() const;
 ### <a name="return-value"></a>戻り値  
  マップ内のアイテムの数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  マップ内の要素の数を取得するには、このメソッドを呼び出します。  
   
 ### <a name="example"></a>例  
@@ -258,7 +259,7 @@ POSITION GetStartPosition() const;
 ### <a name="return-value"></a>戻り値  
  A**位置**マップを反復処理するための開始位置を表す値または**NULL**マップが空の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イテレーションのシーケンスが予測可能です。したがって、マップの最初の要素""には、特別な意味はありません。  
   
 ### <a name="example"></a>例  
@@ -278,7 +279,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
  `bAllocNow`  
  場合**TRUE**初期化時にハッシュ テーブルを割り当てる必要なときにそれ以外の場合、テーブルが割り当てられます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最適なパフォーマンスをハッシュ テーブルのサイズは、素数をする必要があります。 競合を最小限に抑えるには、サイズする必要があります約 20%、最大の予想されるデータ セットよりも大きいです。  
   
 ### <a name="example"></a>例  
@@ -320,7 +321,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="return-value"></a>戻り値  
  要素が見つかった場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `Lookup` ハッシュ アルゴリズムを使用して、指定したキーと一致するキーを持つマップの要素をすばやく検索します。  
   
 ### <a name="example"></a>例  
@@ -343,7 +344,7 @@ VALUE& operator[](arg_key key);
  `key`  
  マップの値を取得するために使用するキー。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  したがって、代入ステートメント (左辺値) の左側にのみ使用できます。 指定されたキーにマップ要素がない場合は、新しい要素が作成されます。  
   
  ありません「右側にある」(右辺値) この演算子をキーがマップに見つからない可能性がある可能性があるためです。 使用して、`Lookup`要素を取得します。  
@@ -362,7 +363,7 @@ CPair* PGetFirstAssoc();
 ### <a name="return-value"></a>戻り値  
  マップ内の最初のエントリへのポインター参照してください[CMap::CPair](#cpair)です。 マップにエントリが含まれていない場合、値は**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ポインターを返す最初の要素のマップ オブジェクト内には、この関数を呼び出します。  
   
 ### <a name="example"></a>例  
@@ -384,7 +385,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="return-value"></a>戻り値  
  マップ内の次のエントリへのポインター参照してください[CMap::CPair](#cpair)です。 値は、要素がマップ内の最後の場合は、 **NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  マップ内のすべての要素を反復処理するには、このメソッドを呼び出します。 呼び出しの最初の要素を取得`PGetFirstAssoc`を連続する呼び出すと、マップを反復処理し、`PGetNextAssoc`です。  
   
 ### <a name="example"></a>例  
@@ -405,7 +406,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="return-value"></a>戻り値  
  キーの構造体へのポインター参照してください[CMap::CPair](#cpair)です。 一致するものが見つからない場合`CMap::PLookup`返します`NULL`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定したキーと一致するキーを使用して、マップ要素を検索するには、このメソッドを呼び出します。  
   
 ### <a name="example"></a>例  
@@ -418,7 +419,7 @@ CPair* PLookup(ARG_KEY key);
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数は、マップがまだ空の場合、正常に動作します。  
   
 ### <a name="example"></a>例  
@@ -441,7 +442,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="return-value"></a>戻り値  
  項目が見つかり、正常に削除された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **DestructElements**ヘルパー関数を使用して、エントリを削除します。  
   
 ### <a name="example"></a>例  
@@ -467,7 +468,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
  `newValue`  
  新しい要素の値を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初に、キーが検索されます。 キーが見つかった場合、対応する値を変更するとします。それ以外の場合、新しいキー値のペアが作成されます。  
   
 ### <a name="example"></a>例  
