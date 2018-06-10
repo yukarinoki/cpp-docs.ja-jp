@@ -1,5 +1,5 @@
 ---
-title: Visual C でフォルダーのプロジェクトを開く |Microsoft ドキュメント
+title: Visual C++ での "フォルダーを開く" プロジェクト | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2017
 ms.technology:
@@ -15,35 +15,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33337286"
 ---
-# <a name="open-folder-projects-in-visual-c"></a>Visual C でフォルダーのプロジェクトを開く
-Visual Studio 2017 を使用すると、ソース ファイルのフォルダーを開いてすぐに、参照、リファクタリング、デバッグ、IntelliSense のサポートとコーディングを開始し、「フォルダーを開く」機能が導入されています。 .Sln または .vcxproj ファイルが読み込まれていません。必要な場合、カスタム タスクをビルドし、単純な .json ファイルを起動してパラメーターを指定できます。 開いているフォルダーでの電源を Visual C サポートできますだけでなく、ファイルの厳密でないコレクションも事実上、ビルド システム、CMake、忍者、QMake (カタール プロジェクト) に対して、gyp、SCons、Gradle、Buck、make をなどです。 
+# <a name="open-folder-projects-in-visual-c"></a>Visual C++ での "フォルダーを開く" プロジェクト
+Visual Studio 2017 で導入された "フォルダーを開く" 機能を使うと、ソース ファイルのフォルダーを開き、IntelliSense、参照、リファクタリング、デバッグなどのサポートを利用してコーディングをすぐに始めることができます。 .sln または .vcxproj ファイルは読み込まれません。必要な場合は、カスタム タスクを指定し、簡単な .json ファイルを使ってパラメーターをビルドして起動できます。 "フォルダーを開く" を利用することで、Visual C++ は、ファイルの厳密でないコレクションだけでなく、CMake、Ninja、QMake (Qt プロジェクトの場合)、gyp、SCons、Gradle、Buck、make などのほとんどすべてのビルド システムもサポートできるようになります。 
 
-開いているフォルダーを使用するメイン メニューから選択*ファイル |開いている |フォルダー*またはキーを押して*Ctrl + Shift + Alt + O*です。ソリューション エクスプ ローラーでは、フォルダー内のすべてのファイルがすぐが表示されます。 任意のファイルをクリックして、編集を開始できます。 バックグラウンドでは、Visual Studio は、ファイルのインデックス作成を開始して、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にします。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 
+"フォルダーを開く" を使うには、メイン メニューから *[ファイル] > [開く] > [フォルダー]* を選ぶか、*Ctrl + Shift + Alt + O* キーを押します。フォルダー内のすべてのファイルがソリューション エクスプローラーにすぐに表示されます。 任意のファイルをクリックして、編集を開始できます。 バックグラウンドでは、Visual Studio は、ファイルのインデックス作成を開始して、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にします。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 
   
 ## <a name="cmake-projects"></a>CMake プロジェクト
-CMake は、Visual C、C++ デスクトップ ワークロードのコンポーネントの CMake ツールとして、Visual Studio IDE に統合されています。 詳細については、「[CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。
+CMake は、C++ デスクトップ ワークロードのコンポーネントである CMake Tools for Visual C++ として Visual Studio IDE に統合されています。 詳細については、「[CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。
  
-## <a name="qmake-projects-that-target-the-qt-framework"></a>Qt framework を対象とする QMake プロジェクト
-CMake ツールを使用して Visual C のターゲット Qt Qt プロジェクトをビルドまたは Qt Visual Studio 拡張機能を使用することができます。 注: 2017 年 8 月時点で、 [Qt Visual Studio 拡張機能のサポートの Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/)はベータ版として使用できます。
+## <a name="qmake-projects-that-target-the-qt-framework"></a>Qt フレームワークを対象とする QMake プロジェクト
+CMake Tools for Visual C++ を使って Qt を対象に Qt プロジェクトをビルドするか、または Qt Visual Studio 拡張機能を使うことができます。 注: 2017 年 8 月現在、[Visual Studio 2017 に対する Qt Visual Studio 拡張機能のサポート](https://download.qt.io/development_releases/vsaddin/)はベータ版として使用できます。
 
-## <a name="gyp-cons-scons-buck-etc"></a>gyp、短所、SCons、Buck など
-Visual C では、ビルド システムを使用して Visual C の IDE とデバッガーの利点を利用できます。 プロジェクトのルート フォルダーを開くと、Visual C はヒューリスティックを使用して、IntelliSense および参照するため、ソース ファイルのインデックスを作成します。 CppProperties.json ファイルを編集して、コードの構造についてのヒントを提供できます。 同様の方法では、launch.vs.json ファイルを編集して、ビルドのプログラムを構成できます。 
+## <a name="gyp-cons-scons-buck-etc"></a>gyp、Cons、SCons、Buck など
+任意のビルド システムを Visual C++ で使いながら、Visual C++ IDE とデバッガーの利点を利用することもできます。 プロジェクトのルート フォルダーを開くと、Visual C++ はヒューリスティックを使って IntelliSense と参照のためにソース ファイルにインデックスを付けます。 CppProperties.json ファイルを編集することにより、コードの構造についてのヒントを提供できます。 同様の方法で、launch.vs.json ファイルを編集することにより、ビルド プログラムを構成できます。 
 
-## <a name="configuring-open-folder-projects"></a>フォルダーを開くプロジェクトの構成
-フォルダーを開くプロジェクトは、次の 3 つの JSON ファイルをカスタマイズできます。
+## <a name="configuring-open-folder-projects"></a>"フォルダーを開く" プロジェクトの構成
+次の 3 つの JSON ファイルを使って、"フォルダーを開く" プロジェクトをカスタマイズできます。
 |||
 |-|-|
-|CppProperties.json|参照するためのカスタム構成情報を指定します。 ルート プロジェクト フォルダーに必要な場合は、このファイルを作成します。|
-|launch.vs.json|コマンドライン引数を指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[デバッグ設定と起動設定]** を使用します。|
-|tasks.vs.json|カスタム ビルド コマンドやコンパイラ スイッチを指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[タスクの構成]** を使用します。|
+|CppProperties.json|参照のためのカスタム構成情報を指定します。 必要な場合は、ルート プロジェクト フォルダーにこのファイルを作成します。|
+|launch.vs.json|コマンド ライン引数を指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[デバッグ設定と起動設定]** を使用します。|
+|tasks.vs.json|カスタム ビルド コマンドとコンパイラ スイッチを指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[タスクの構成]** を使用します。|
 
-### <a name="configure-intellisense-with-cpppropertiesjson"></a>CppProperties.json と IntelliSense を構成します。
-IntelliSense および動作を部分的に参照を定義するアクティブなビルド構成に依存 #include のパス、コンパイラ スイッチ、およびその他のパラメーターです。 既定では、Visual Studio はデバッグ構成とリリース構成を提供します。 プロジェクトでは、IntelliSense および参照機能を完全にコードを理解するために、カスタム構成を作成する必要があります。 新しい構成を定義するのには、ルート フォルダーに CppProperties.json という名前のファイルを作成します。 次に例を示します。
+### <a name="configure-intellisense-with-cpppropertiesjson"></a>CppProperties.json を使って IntelliSense を構成する
+IntelliSense と参照の動作は、#include のパス、コンパイラ スイッチ、およびその他のパラメーターを定義するアクティブなビルド構成に部分的に依存します。 既定では、Visual Studio はデバッグ構成とリリース構成を提供します。 一部のプロジェクトでは、IntelliSense と参照の機能がコードを完全に理解するために、カスタム構成の作成が必要な場合があります。 新しい構成を定義するには、CppProperties.json という名前のファイルをルート フォルダーに作成します。 次に例を示します。
 
 ```json
 {
@@ -60,18 +61,18 @@ IntelliSense および動作を部分的に参照を定義するアクティブ�
   ]
 }
 ```
-構成は、次のプロパティのいずれかのがあります。
+構成には、次のどのプロパティでも含めることができます。
 
 |||  
 |-|-| 
-|`name`|C++ の構成のドロップダウン リストに表示される構成名|
-|`includePath`|(ほとんどのコンパイラの maps/I に) インクルード パスで指定するフォルダーの一覧|
-|`defines`|定義されている (のマップを/D にほとんどのコンパイラ) をする必要のあるマクロの一覧|
-|`compilerSwitches`|IntelliSense の動作に影響を与える 1 つ以上の追加スイッチ|
-|`forcedInclude`|コンパイル単位ごとに自動的に含まれるヘッダー (MSVC の/FI にマップまたは - clang を含む)|
-|`undefines`|未定義 (MSVC の/U にマッピング) にするマクロの一覧|
-|`intelliSenseMode`|使用する IntelliSense エンジン。 MSVC、gcc または Clang アーキテクチャの特定のバリエーションを指定できます。
-- msvc x86 (既定値)
+|`name`|C++ の構成ドロップダウンに表示される構成の名前です|
+|`includePath`|インクルード パスで指定する必要があるフォルダーのリストです (ほとんどのコンパイラで /I に対応します)|
+|`defines`|定義する必要のあるマクロのリストです (ほとんどのコンパイラで /D に対応します)|
+|`compilerSwitches`|IntelliSense の動作に影響を与えることができる 1 つ以上の追加スイッチです|
+|`forcedInclude`|すべてのコンパイル単位に自動的にインクルードされるヘッダーです (MSVC の /FI または clang の -include に対応します)|
+|`undefines`|未定義にするマクロのリストです (MSVC の /U に対応します)|
+|`intelliSenseMode`|使用する IntelliSense エンジンです。 MSVC、gcc、または Clang に対するアーキテクチャ固有のバリエーションを指定できます。
+- msvc-x86 (既定)
 - msvc-x64
 - msvc-arm
 - windows-clang-x86
@@ -79,32 +80,32 @@ IntelliSense および動作を部分的に参照を定義するアクティブ�
 - windows-clang-arm
 - Linux-x64
 - Linux-x86
-- Linux arm
+- Linux-arm
 - gccarm
 
 #### <a name="environment-variables"></a>環境変数
-CppProperties.json サポート システム環境変数の展開には、パスとその他のプロパティ値が含まれます。 構文は`${env.FOODIR}`環境変数を展開する`%FOODIR%`です。 次のシステム定義の変数もサポートします。
+CppProperties.json は、インクルード パスと他のプロパティ値に対するシステム環境変数の展開をサポートします。 環境変数 `%FOODIR%` を展開する場合の構文は `${env.FOODIR}` です。 次のシステム定義変数もサポートされます。
 
 |変数名|説明|  
 |-----------|-----------------|
 |vsdev|既定の Visual Studio 環境|
-|msvc_x86|X86 を使用して x86 用にコンパイル ツール|
-|msvc_arm|X86 を使用して arm コンパイル ツール|
-|msvc_arm64|X86 を使用して for ARM64 コンパイル ツール|
-|msvc_x86_x64|X86 を使用して AMD64 用にコンパイル ツール|
-|msvc_x64_x64|64 ビット ツールを使用して AMD64 のコンパイル|
-|msvc_arm_x64|64 ビット ツールを使用して ARM をコンパイルします。|
-|msvc_arm64_x64|64 ビット ツールを使用して for ARM64 コンパイル|
+|msvc_x86|x86 ツールを使って、x86 用にコンパイルします|
+|msvc_arm|x86 ツールを使って、ARM 用にコンパイルします|
+|msvc_arm64|x86 ツールを使って、ARM64 用にコンパイルします|
+|msvc_x86_x64|x86 ツールを使って、AMD64 用にコンパイルします|
+|msvc_x64_x64|64 ビット ツールを使って、AMD64 用にコンパイルします|
+|msvc_arm_x64|64 ビット ツールを使って、ARM 用にコンパイルします|
+|msvc_arm64_x64|64 ビット ツールを使って、ARM64 用にコンパイルします|
 
-Linux ワークロードがインストールされているときに、次の環境は Linux および WSL をリモートから指定できます。
+Linux ワークロードがインストールされている場合、Linux および WSL をリモートでターゲットにするために次の環境変数を使用できます。
 
 |変数名|説明|  
 |-----------|-----------------|
-|linux_x86|X86 を対象と Linux でのリモート|
-|linux_x64|X64 を対象と Linux でのリモート|
-|linux_arm|リモート ARM Linux を対象します。|
+|linux_x86|x86 Linux をリモートでターゲットにします|
+|linux_x64|x64 Linux をリモートでターゲットにします|
+|linux_arm|ARM Linux をリモートでターゲットにします|
 
-カスタム環境変数を定義できます CppProperties.json にするか、グローバルまたは構成単位です。 次の例は、どのように既定およびカスタムの環境変数を宣言して使用できます。 グローバル**環境**プロパティという名前の変数を宣言して**INCLUDE**任意の構成で使用できます。
+CppProperties.json では、カスタム環境変数をグローバルに、または構成単位で定義できます。 次の例では、既定の環境変数およびカスタム環境変数を宣言して使う方法を示します。 グローバルな **environments** プロパティでは、任意の構成で使用できる **INCLUDE** という名前の変数が宣言されています。
 
 ```json
 {
@@ -146,7 +147,7 @@ Linux ワークロードがインストールされているときに、次の�
   ]
 }
 ```
-定義することも、**環境**構成では、その構成にのみ適用して、同じ名前のグローバル変数を上書きするように内部プロパティです。 次の例では、x64 の構成で定義するローカル**INCLUDE**グローバル値をオーバーライドする変数。
+構成の内部で **environments** プロパティを定義することで、その構成のみにプロパティを適用して、同じ名前のグローバル変数をオーバーライドすることもできます。 次の例の x64 構成で定義されているローカルな **INCLUDE** 変数は、グローバルな値をオーバーライドします。
 
 ```json
 {
@@ -192,17 +193,17 @@ Linux ワークロードがインストールされているときに、次の�
 }
 ```
 
-すべてのカスタムし、既定の環境変数も tasks.vs.json および launch.vs.json で使用できます。
+すべてのカスタム環境変数と既定の環境変数は、tasks.vs.json および launch.vs.json でも使うことができます。
 
 #### <a name="macros"></a>[マクロ]
-次の組み込みのマクロ CppProperties.json 内へのアクセスがあります。
+CppProperties.json 内の次の組み込みマクロにアクセスできます。
 |||
 |-|-|
-|`${workspaceRoot}`| ワークスペースのフォルダーへの完全パス|
-|`${projectRoot}`| CppProperties.json が配置されているフォルダーへの完全パス|
-|`${vsInstallDir}`| VS 2017 の実行中のインスタンスがインストールされているフォルダーへの完全パス|
+|`${workspaceRoot}`| ワークスペース フォルダーへの完全なパスです|
+|`${projectRoot}`| CppProperties.json が配置されているフォルダーへの完全なパスです|
+|`${vsInstallDir}`| VS 2017 の実行中のインスタンスがインストールされているフォルダーへの完全なパスです|
 
-たとえば、プロジェクトには、含めるフォルダーがあり、windows.h と Windows SDK から他の一般的なヘッダーも含まれます、場合をこれらの構成ファイルが含まれています、CppProperties.json を更新します。
+たとえば、プロジェクトにインクルード フォルダーがあるだけでなく、windows.h および他の共通ヘッダーも Windows SDK からインクルードしている場合、CppProperties.json の構成ファイルをこれらのインクルードで更新したい場合があります。
 
 ```json
 {
@@ -224,11 +225,11 @@ Linux ワークロードがインストールされているときに、次の�
 }
 ```
 
-**注:** `%WindowsSdkDir%`と`%VCToolsInstallDir%`グローバル環境変数になるように、"開発者コマンド プロンプトから VS 2017 の"これらの変数を定義する devenv.exe を起動することを確認するように設定されていません。
+**注:** `%WindowsSdkDir%` と `%VCToolsInstallDir%` はグローバル環境変数として設定されていないため、これらの変数を定義する devenv.exe は "開発者コマンド プロンプト for VS 2017" から起動してください。
 
-IntelliSense のトラブルシューティングを行うにされていない場合に発生したエラーは、パスを含めるを開く、**エラー一覧**"IntelliSense のみ"の出力をフィルター処理し、エラー コード E1696「を開けませんソース ファイル」です。 
+インクルード パスがないことにより発生する IntelliSense のエラーをトラブルシューティングするには、**[エラー一覧]** を開き、出力を "IntelliSense のみ" およびエラー コード E1696 "ソース ファイル ... を開くことができません" でフィルター処理します。 
 
-CppProperties.json で任意の数の構成を作成できます。 それぞれが、構成のドロップダウン リストに表示されます。
+CppProperties.json では任意の数の構成を作成できます。 それぞれが、構成ドロップダウンに表示されます。
 
 ```json
 {
@@ -247,9 +248,9 @@ CppProperties.json で任意の数の構成を作成できます。 それぞれ
 ### <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.json でタスクを定義する
 IDE でタスクとして直接実行することで、現在のワークスペースにあるファイルに対してビルド スクリプトやその他の外部操作を自動化できます。 ファイルまたはフォルダーを右クリックし、**[タスクの構成]** を選択すると、新しいタスクを構成できます。 
 
-![フォルダーを開くタスクを構成します。](media/open-folder-config-tasks.png)
+!["フォルダーを開く" のタスクの構成](media/open-folder-config-tasks.png)
 
-これを作成 (またはが表示されます)、`tasks.vs.json`ファイル .vs フォルダーに Visual Studio がルート プロジェクト フォルダーに作成します。 このファイル内の任意のタスクを定義して、呼び出すことから、**ソリューション エクスプ ローラー**コンテキスト メニュー。 次の例では、1 つのタスクを定義する tasks.vs.json ファイルを示します。 `taskName` コンテキスト メニューに表示される名前を定義します。 `appliesTo` コマンドを実行できるファイルを定義します。 `command`プロパティは、コンソール (cmd.exe Windows 上) のパスを識別する文字列環境変数を参照します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args`プロパティが呼び出されるコマンドラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
+これにより、Visual Studio がルート プロジェクト フォルダーに作成する .vs フォルダー内の `tasks.vs.json` ファイルが作成されます (または開かれます)。 このファイルで任意のタスクを定義し、**ソリューション エクスプローラー**のコンテキスト メニューから呼び出すことができます。 単一のタスクを定義する tasks.vs.json ファイルの例を次に示します。 `taskName` では、コンテキスト メニューに表示される名前を定義します。 `appliesTo` では、コマンドを実行できるファイルを定義します。 `command` プロパティは、コンソール (Windows では cmd.exe) のパスを示す COMSPEC 環境変数を参照します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args` プロパティでは、呼び出すコマンド ラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
 
 ```json
 {
@@ -265,7 +266,7 @@ IDE でタスクとして直接実行することで、現在のワークスペ�
   ]
 }
 ```
-Tasks.vs.json を保存した後、フォルダー内の .cpp ファイルを右クリックし、選択**エコー filename**からコンテキスト メニューとは、出力ウィンドウに表示されるファイル名を参照してください。
+tasks.vs.json を保存した後、フォルダー内の任意の .cpp ファイルを右クリックし、コンテキスト メニューから **[Echo filename]** を選んで、[出力] ウィンドウにファイル名が表示されることを確認します。
 
 
 
@@ -275,14 +276,14 @@ Tasks.vs.json を保存した後、フォルダー内の .cpp ファイルを右
 |-|-|
 |`"*"`| タスクは、ワークスペース内のすべてのファイルとフォルダーで使用できます|
 |`"*/"`| タスクは、ワークスペース内のすべてのフォルダーで使用できます|
-|`"*.cpp"`| タスクが ワークスペースで、拡張子 .cpp を持つすべてのファイルに利用可能|
-|`"/*.cpp"`| タスクは、ワークスペースのルートに拡張子 .cpp を持つすべてのファイルに利用できます。|
+|`"*.cpp"`| タスクは、ワークスペース内の拡張子が .cpp のすべてのファイルで使用できます|
+|`"/*.cpp"`| タスクは、ワークスペースのルートにある拡張子が .cpp のすべてのファイルで使用できます|
 |`"src/*/"`| タスクは、"src" フォルダーのすべてのサブフォルダーで使用できます|
 |`"makefile"`| タスクは、ワークスペース内のすべての makefile ファイルで使用できます|
 |`"/makefile"`| タスクは、ワークスペースのルートにある makefile にのみ使用できます|
 
 #### <a name="output"></a>出力
-使用して、`output`プロパティをキーを押したときに起動する実行可能ファイルを指定する**f5 キーを押して**です。 例えば:
+`output` プロパティを使って、**F5** キーを押すと起動する実行可能ファイルを指定します。 例:
 
 ```json
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
@@ -292,16 +293,16 @@ Tasks.vs.json を保存した後、フォルダー内の .cpp ファイルを右
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| 任意の環境変数 (たとえば、${env を指定します。パス} ${env.COMSPEC} というように) 開発者コマンド プロンプトに設定されています。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)」を参照してください。|
-|`${workspaceRoot}`| ワークスペース フォルダー (たとえば、"C:\sources\hello") への完全パス|
-|`${file}`| ファイルまたは (たとえば、"C:\sources\hello\src\hello.cpp") に対してこのタスクの実行を選択したフォルダーの完全なパス|
-|`${relativeFile}`| ファイルまたはフォルダー (たとえば、"src\hello.cpp"など) への相対パス|
-|`${fileBasename}`| パスまたは拡張機能 (たとえば、「こんにちは」) のないファイルの名前|
-|`${fileDirname}`| ファイル名 (たとえば、"C:\sources\hello\src") を除く、ファイルへの完全パス|
-|`${fileExtname}`| 選択したファイル (たとえば、".cpp") の拡張機能|
+|`${env.<VARIABLE>}`| 開発者コマンド プロンプトに設定されている環境変数 (${env.PATH}、${env.COMSPEC} など) を指定します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](/dotnet/framework/tools/developer-command-prompt-for-vs)」を参照してください。|
+|`${workspaceRoot}`| ワークスペース フォルダーの完全なパスです (例: "C:\sources\hello")|
+|`${file}`| このタスクの実行対象として選択されたファイルまたはフォルダーの完全なパスです (例: "C:\sources\hello\src\hello.cpp")|
+|`${relativeFile}`| ファイルまたはフォルダーの相対パスです (例: "src\hello.cpp")|
+|`${fileBasename}`| パスまたは拡張子のないファイル名です (例: "hello")|
+|`${fileDirname}`| ファイル名を除いたファイルの完全なパスです (例: "C:\sources\hello\src")|
+|`${fileExtname}`| 選択したファイルの拡張子です (例: ".cpp")|
 
 #### <a name="custom-macros"></a>カスタム マクロ
-Tasks.vs.json でカスタムのマクロを定義するには、タスクのブロックの前に名前と値のペアを追加します。 次の例は、という名前のマクロを定義`outDir`で消費する、`args`プロパティ。
+tasks.vs.json でカスタム マクロを定義するには、タスク ブロックの前に名前と値のペアを追加します。 次の例では、`args` プロパティで使用される `outDir` という名前のマクロを定義しています。
 
 ```json
 {
@@ -320,10 +321,10 @@ Tasks.vs.json でカスタムのマクロを定義するには、タスクのブ
   ]
 ```
 
-### <a name="configure-debugging-parameters-with-launchvsjson"></a>Launch.vs.json とデバッグのパラメーターを構成します。
-実行可能ファイルを右クリックし、プログラムのコマンドライン引数をカスタマイズする**ソリューション エクスプ ローラー**選択**デバッグ構成と起動設定**です。 開き、既存`launch.vs.json`ファイル、または存在しない場合、選択したプログラムに関する情報があらかじめ設定された新しいファイルが作成されます。 
+### <a name="configure-debugging-parameters-with-launchvsjson"></a>launch.vs.json でデバッグ パラメーターを構成する
+プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、**[デバッグ設定と起動設定]** を選びます。 これにより、既存の `launch.vs.json` ファイルが開きます。または、存在しない場合は、新しいファイルが作成されて、選んだプログラムに関する情報が設定されます。 
 
-追加の引数を指定するだけで追加、`args`次の例で示すように、JSON 配列。
+追加の引数を指定するには、次の例で示すように、`args` JSON 配列に追加するだけです。
 
 ```json
 {
@@ -340,8 +341,8 @@ Tasks.vs.json でカスタムのマクロを定義するには、タスクのブ
 }
 ```
 
-このファイルを保存して、デバッグ ターゲット ドロップダウン リストに、新しい構成が表示されます、デバッガーを開始するように選択できます。 実行可能ファイルの任意の数を好きなように、多くのデバッグ構成を作成できます。 キーを押す場合**f5 キーを押して**ここで、デバッガーが起動し、既に設定したすべてのブレークポイントがヒットされます。 使い慣れたデバッガーのすべての windows およびそれらの機能では、使用できるようになりました。
+このファイルを保存すると、[デバッグ ターゲット] ドロップダウンに新しい構成が表示され、名前を選択してデバッガーを起動できるようになります。 必要に応じて、任意の数の実行可能ファイルに対し、デバッグ構成をいくつでも作成できます。 ここで **F5** キーを押すと、デバッガーが起動し、既に設定してあるブレークポイントにヒットします。 使い慣れたすべてのデバッガー ウィンドウとそれらの機能を使用できるようになりました。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [IDE と Visual C++ 開発用ツール](ide-and-tools-for-visual-cpp-development.md)
 

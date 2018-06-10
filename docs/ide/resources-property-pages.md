@@ -1,5 +1,5 @@
 ---
-title: '[リソース] プロパティ ページ |Microsoft ドキュメント'
+title: リソース プロパティ ページ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,17 +22,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33322875"
 ---
 # <a name="resources-property-pages"></a>リソース プロパティ ページ
-リソース コンパイラの使用に関する詳細については、次を参照してください。 [(RC コマンドライン) を使用して RC](http://msdn.microsoft.com/library/windows/desktop/aa381055)です。  
+リソース コンパイラの使用の詳細については、「[Using RC (The RC Command Line)](http://msdn.microsoft.com/library/windows/desktop/aa381055)」 (RC の使用 (RC コマンド ライン)) を参照してください。  
   
- アクセスする方法については、**リソース**プロパティ ページを参照してください[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+ **[リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
- これらのプロパティをプログラムでアクセスするを参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>です。  
+ プログラムを使用してこれらのプロパティにアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)

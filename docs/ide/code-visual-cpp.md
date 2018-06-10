@@ -1,5 +1,5 @@
 ---
-title: '&lt;コード&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;code&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330120"
 ---
-# <a name="ltcodegt-visual-c"></a>&lt;コード&gt;(Visual C)
-\<コード > タグは、コードとして 1 つまたは複数の行を指定する方法を使用します。  
+# <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
+\<code> タグを使用すると、1 行または複数行をコードとして指定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,12 +39,12 @@ ms.lasthandoff: 05/04/2018
  コードとしてマークするテキストです。  
   
 ## <a name="remarks"></a>コメント  
- 使用して[ \<c >](../ide/c-visual-cpp.md)を示すテキストの一部は、コードとしてマークする必要があります。  
+ テキストの一部をコードとしてマークすることを示すには、[\<c>](../ide/c-visual-cpp.md) を使用します。  
   
  コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
  \<code> タグの使用例については、「[\<example](../ide/example-visual-cpp.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

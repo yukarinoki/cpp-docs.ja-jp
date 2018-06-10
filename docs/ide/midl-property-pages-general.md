@@ -1,5 +1,5 @@
 ---
-title: '[Midl] プロパティ ページ: 全般 |Microsoft ドキュメント'
+title: '[全般] ([MIDL] プロパティ ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,19 +26,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33329983"
 ---
 # <a name="midl-property-pages-general"></a>[全般] ([MIDL] プロパティ ページ)
-**全般**プロパティ ページで、 **MIDL**フォルダーは、次の MIDL コンパイラ オプションを指定します。  
+**MIDL** フォルダーの **[全般]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。  
   
--   プリプロセッサの定義[(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   プリプロセッサの定義 [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
 -   追加のインクルード ディレクトリ ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   標準インクルード パスを無視する ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   標準インクルード パスの無視 ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
 -   MkTypLib 互換 ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
@@ -46,17 +47,17 @@ ms.lasthandoff: 05/04/2018
   
 -   エラーとして警告 ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   著作権情報を抑制する ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   著作権情報の非表示 ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
 -   MIDL Char 型 ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   ターゲット環境 ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   対象の環境 ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   スタブレス プロキシ ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   スタブレス プロキシの生成 ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- アクセスする方法については、**全般**プロパティ ページで、 **MIDL**フォルダーを参照してください[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+ **MIDL** フォルダーの **[全般]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
- C++ プロジェクト用の MIDL オプションにアクセスする方法については、次を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>オブジェクト。  
+ C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> オブジェクトに関するページを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[MIDL] プロパティ ページ](../ide/midl-property-pages.md)

@@ -1,5 +1,5 @@
 ---
-title: ファイルの種類の Visual C プロジェクトに対して作成される |Microsoft ドキュメント
+title: Visual C++ プロジェクトに対して作成されるファイルの種類 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,10 +25,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336018"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Visual C++ プロジェクトに対して作成されるファイルの種類
 このトピックでは、従来のデスクトップ アプリケーションの Visual C++ プロジェクトに関連付けられているすべての種類のファイルについて説明します。 実際にプロジェクトにインクルードされるファイルは、プロジェクトの種類、およびウィザードで選択したオプションによって異なります。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/04/2018
 |.HxC|プロジェクト|ヘルプ プロジェクト ファイル。|  
 |.ico|リソース|アイコンのビットマップ グラフィック ファイル。|  
 |.idb|コンパイル|ソース ファイルとクラス定義との依存関係情報が含まれているステート ファイル。最小リビルドとインクリメンタル コンパイルのときにコンパイラで使用します。 .idb ファイルの名前は [/Fd](../build/reference/fd-program-database-file-name.md) コンパイラ オプションで指定します。 詳細については、「 [/Gm (簡易リビルドの有効化)](../build/reference/gm-enable-minimal-rebuild.md) 」を参照してください。|  
-|.idl|コンパイル|インターフェイス定義言語ファイル。 参照してください[インターフェイス定義 (IDL) ファイル](http://msdn.microsoft.com/library/windows/desktop/aa378712)詳細については、Windows SDK に含まれています。|  
+|.idl|コンパイル|インターフェイス定義言語ファイル。 詳細については、Windows SDK の「[インターフェイス定義 (IDL) ファイル](http://msdn.microsoft.com/library/windows/desktop/aa378712)」を参照してください。|  
 |.ilk|リンク|インクリメンタル リンク ファイル。 詳しくは、「 [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) 」をご覧ください。|  
 |.map|リンク|リンカー情報を含むテキスト ファイル。 マップ ファイルの名前は、 [/Fm](../build/reference/fm-name-mapfile.md) コンパイラ オプションで指定します。 詳細については、「 [/MAP](../build/reference/map-generate-mapfile.md) 」を参照してください。|  
 |.mfcribbon-ms|リソース|リボンのボタン、コントロール、および属性を定義する XML コードを含むリソース ファイル。 詳細については、「 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)」を参照してください。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/04/2018
 |.vap|プロジェクト|Visual Studio Analyzer プロジェクト ファイル。|  
 |.vbg|ソリューション|互換性のあるプロジェクト グループ ファイル。|  
 |.vbp、.vip、.vbproj|プロジェクト|Visual Basic プロジェクト ファイル。|  
-|.vcxitems|プロジェクト|共有アイテム プロジェクトと、複数の C++ プロジェクトのコード ファイルを共有するためです。 詳細については、「 [プロジェクト ファイルとメイクファイル](../ide/project-and-solution-files.md) 」を参照してください。|
+|.vcxitems|プロジェクト|複数の C++ プロジェクト間でコード ファイルを共有するための共有アイテム プロジェクト。 詳細については、「 [プロジェクト ファイルとメイクファイル](../ide/project-and-solution-files.md) 」を参照してください。|
 |.vcxproj|プロジェクト|Visual C++ プロジェクト ファイル。 詳細については、「 [プロジェクト ファイルとメイクファイル](../ide/project-and-solution-files.md) 」を参照してください。|  
 |.vcxproj.filters|プロジェクト|filters ファイルは、ソリューション エクスプローラーを使用してプロジェクトにファイルを追加するときに、ファイル名拡張子に基づいてソリューション エクスプローラーのツリー ビューでファイルを追加する場所を定義します。|  
 |.vdproj|プロジェクト|Visual Studio 配置プロジェクト ファイル。|  
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/04/2018
   
  プロジェクトに項目を追加すると、その項目をビルドできるかどうかにかかわらず、プロジェクトのすべての構成にその項目が追加されます。 たとえば、MyProject というプロジェクトに項目を追加すると、プロジェクトのデバッグ構成とリリース構成の両方にその項目が追加されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual C++ プロジェクトの作成および管理](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C プロジェクトの種類](../ide/visual-cpp-project-types.md)   
+ [Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)   
  [ウィザードでサポートされるその他の言語](../ide/wizard-support-for-other-languages.md)

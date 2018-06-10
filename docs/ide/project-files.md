@@ -1,5 +1,5 @@
 ---
-title: プロジェクト ファイル |Microsoft ドキュメント
+title: プロジェクト ファイル | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327230"
 ---
 # <a name="project-files"></a>プロジェクト ファイル
-Visual C プロジェクト ファイルは、XML ベースのファイルを .vcxproj ファイル名拡張子を持ち、Visual C プロジェクトをビルドするために必要な情報が含まれています。  
+Visual C++ プロジェクト ファイルは、.vcxproj ファイル名拡張子を持つ XML ベースのファイルで、Visual C++ プロジェクトをビルドするために必要な情報が含まれます。  
   
 ## <a name="example"></a>例  
- 指定することによって、次のサンプル .vcxproj ファイルが生成されて、 **Win32 コンソール アプリケーション**で、**新しいプロジェクト** ダイアログ ボックス。 プロジェクトを処理する、ファイルは、コマンドラインで msbuild.exe ツールを使用して、または**ビルド**コマンドを[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]です。 (このサンプルを処理できませんので、必要なソース ファイルとヘッダー ファイルが指定されていません。)プロジェクト ファイル内の XML 要素の詳細については、次を参照してください。[プロジェクト ファイル スキーマ リファレンス](/visualstudio/msbuild/msbuild-project-file-schema-reference)です。  
+ 次のサンプルの .vcxproj ファイルは、**[新しいプロジェクト]** ダイアログ ボックスで **[Win32 コンソール アプリケーション]** を指定して生成されました。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -127,6 +128,6 @@ Visual C プロジェクト ファイルは、XML ベースのファイルを .v
 </Project>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での C++ プロジェクトのビルド](../ide/building-cpp-projects-in-visual-studio.md)   
  [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)

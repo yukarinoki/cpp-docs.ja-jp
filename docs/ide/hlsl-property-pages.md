@@ -1,5 +1,5 @@
 ---
-title: '[HLSL] プロパティ ページ |Microsoft ドキュメント'
+title: '[HLSL] プロパティ ページ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86bbd23f1c9fcfcc0a19d7a2c1b66f3500d84361
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323132"
 ---
 # <a name="hlsl-property-pages"></a>[HLSL] プロパティ ページ
-コンパイラ (fxc.exe) の HLSL プロパティ ページを使用して、ファイルがビルドされた個別の HLSL シェーダーを構成することができます。 プロパティは、3 つのカテゴリに分けられます。  
+HLSL コンパイラ (fxc.exe) プロパティ ページを使用すると、個々の HLSL シェーダー ファイルがどのようにビルドされるのかを構成することができます。 プロパティは、次のカテゴリに分けられています。  
   
 -   [[全般] ([HLSL] プロパティ ページ)](../ide/hlsl-property-pages-general.md)  
   
-     HLSL コンパイラのための一般的なオプションを指定するプロパティを提供します。  
+     HLSL コンパイラでよく使用されるオプションを指定するプロパティです。  
   
 -   [[詳細] ([HLSL] プロパティ ページ)](../ide/hlsl-property-pages-advanced.md)  
   
-     HLSL コンパイラ オプションを指定するプロパティを提供します。  
+     HLSL コンパイラの追加のオプションを指定するプロパティです。  
   
 -   [[HLSL] プロパティ ページ: 出力ファイル](../ide/hlsl-property-pages-output-files.md)  
   
-     ファイルの HLSL コンパイラによって出力される方法を指定するプロパティを提供します。  
+     HLSL コンパイラで出力されるファイルの出力方法を指定するプロパティです。  
   
- 使用して、HLSL コンパイラに対するコマンドライン引数を指定することができます、**追加オプション**のプロパティ、**コマンド ライン**プロパティ ページを使用して構成することはできませんの引数が含まれます[HLSL] プロパティ ページのプロパティです。 HLSL コンパイラの概要については、次を参照してください[エフェクト コンパイラ ツール。](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
+ **[コマンド ライン]** プロパティ ページの **[追加オプション]** プロパティを使用して、HLSL コンパイラにコマンドライン引数を指定することができます。これには、[HLSL] プロパティ ページのその他のプロパティを使用して構成できる引数が含まれます。 HLSL コンパイラの情報については、「[エフェクト コンパイラ ツール](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
- [コマンド ライン プロパティ ページ](../ide/command-line-property-pages.md)   
- [シェーダーをコンパイルします。](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+ [[コマンド ライン] プロパティ ページ](../ide/command-line-property-pages.md)   
+ [シェーダーのコンパイル](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

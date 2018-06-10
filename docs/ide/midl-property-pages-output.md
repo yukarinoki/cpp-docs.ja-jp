@@ -1,5 +1,5 @@
 ---
-title: '[Midl] プロパティ ページ: 出力 |Microsoft ドキュメント'
+title: '[出力] ([MIDL] プロパティ ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,13 +23,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0ff30460ad68e6efb1abc3d84925b362cf03f551
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325774"
 ---
 # <a name="midl-property-pages-output"></a>[出力] ([MIDL] プロパティ ページ)
-**出力**プロパティ ページで、 **MIDL**フォルダーは、次の MIDL コンパイラ オプションを指定します。  
+**MIDL** フォルダーの **[出力]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。  
   
 -   出力ディレクトリ ([/out](http://msdn.microsoft.com/library/windows/desktop/aa367358))  
   
@@ -39,15 +40,15 @@ ms.lasthandoff: 05/04/2018
   
 -   IID ファイル ([/iid](http://msdn.microsoft.com/library/windows/desktop/aa367329))  
   
--   プロキシ ファイル ([/プロキシ](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
+-   プロキシ ファイル ([/proxy](http://msdn.microsoft.com/library/windows/desktop/aa367362))  
   
--   タイプ ライブラリを生成 ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
+-   タイプ ライブラリの生成 ([/notlb](http://msdn.microsoft.com/library/windows/desktop/aa367343))  
   
 -   タイプ ライブラリ ([/tlb](http://msdn.microsoft.com/library/windows/desktop/aa367372))  
   
- アクセスする方法については、**出力**プロパティ ページで、 **MIDL**フォルダーを参照してください[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+ **MIDL** フォルダーの **[出力]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
- C++ プロジェクト用の MIDL オプションにアクセスする方法については、次を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>です。  
+ C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[MIDL] プロパティ ページ](../ide/midl-property-pages.md)

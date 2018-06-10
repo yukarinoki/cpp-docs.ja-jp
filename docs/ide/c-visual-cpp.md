@@ -1,5 +1,5 @@
 ---
-title: '&lt;c&gt; (Visual C) |Microsoft ドキュメント'
+title: '&lt;c&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,13 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33329259"
 ---
-# <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C)
-\<C > タグでは、コードと説明内のテキストを指定する必要があることを示します。 複数行をコードとして指定する場合は、[\<code>](../ide/code-visual-cpp.md) タグを使用します。  
+# <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
+\<c> タグは、説明内のテキストをコードとしてマークすることを示します。 複数行をコードとして指定する場合は、[\<code>](../ide/code-visual-cpp.md) タグを使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="parameters"></a>パラメーター  
  `text`  
- コードとして指定する文字列。  
+ コードとして示すテキストです。  
   
 ## <a name="remarks"></a>コメント  
  コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
@@ -60,5 +61,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

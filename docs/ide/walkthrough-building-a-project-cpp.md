@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: プロジェクトの構築 (C++) |Microsoft ドキュメント'
+title: 'チュートリアル: プロジェクトの構築 (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,9 +18,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332456"
 ---
 # <a name="walkthrough-building-a-project-c"></a>チュートリアル: プロジェクトの構築 (C++)
 このチュートリアルでは、コードに意図的に Visual C++ 構文のエラーを挿入し、コンパイル エラーがどのように表示されるかを確認し、その修正方法について説明します。 プロジェクトをコンパイルすると、エラー メッセージによって問題の内容と発生した場所が示されます。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 -   このチュートリアルは、C++ 言語の基本を理解していることを前提としています。  
   
--   以前関連チュートリアルに記載されているが完了したことも想定[C++ デスクトップ開発用 Visual Studio IDE を使用して](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)です。  
+-   また、これまでの関連チュートリアル (「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照) を完了していることも必要です。  
   
 ### <a name="to-fix-compilation-errors"></a>コンパイル エラーを修正するには  
   
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/04/2018
   
 2.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
-3.  内のメッセージ、**エラー一覧**ウィンドウは、プロジェクトのビルドでエラーがあったことを示します。 たとえば、エラーの説明は次のようになります。  
+3.  **[エラー一覧]** ウィンドウに、プロジェクトのビルド中にエラーが発生したことを示すメッセージが表示されます。 たとえば、エラーの説明は次のようになります。  
   
      `error C2143: syntax error : missing ';' before '}'`  
   
-     このエラーに関するヘルプ情報を表示することで強調表示、**エラー一覧**ウィンドウし、F1 キーを押します。  
+     このエラーに関するヘルプ情報を表示するには、**[エラー一覧]** ウィンドウでそのエラーを強調表示し、F1 キーを押します。  
   
 4.  構文エラーのある行の最後に、セミコロンを戻します。  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
-     内のメッセージ、**出力**ウィンドウは、プロジェクトが正常にコンパイルされることを示します。  
+     **[出力]** ウィンドウに、プロジェクトが正常にコンパイルされたことを示すメッセージが表示されます。  
   
     ```Output  
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------  
@@ -61,8 +62,8 @@ ms.lasthandoff: 05/04/2018
     ```  
   
 ## <a name="next-steps"></a>次の手順  
- **前:** [チュートリアル: プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **次:**[チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
+ **前へ:** [チュートリアル: プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **次へ:**[チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [C++ 言語リファレンス](../cpp/cpp-language-reference.md)   
  [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)

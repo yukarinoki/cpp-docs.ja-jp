@@ -1,5 +1,5 @@
 ---
-title: マニフェスト ツールのプロパティ ページ |Microsoft ドキュメント
+title: マニフェスト ツールのプロパティ ページ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33321988"
 ---
 # <a name="manifest-tool-property-pages"></a>マニフェスト ツールのプロパティ ページ
-使用して、**マニフェスト ツール**を設定するプロパティ ページ mt.exe のビルド オプション。  
+**[マニフェスト ツール]** プロパティ ページを使用して、mt.exe のビルド オプションを設定します。  
   
- マニフェスト ツールの詳細については、次を参照してください。 [Mt.exe](http://msdn.microsoft.com/library/aa375649)です。  
+ マニフェスト ツールの詳細については、「[Mt.exe](http://msdn.microsoft.com/library/aa375649)」を参照してください。  
   
- [一般に、マニフェスト ツール、構成プロパティ、\<プロジェクト名 > プロパティ ページ ダイアログ ボックス](../ide/general-manifest-tool-configuration-properties.md)  
+ [[全般] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](../ide/general-manifest-tool-configuration-properties.md)  
   
- [入力と出力、ツール、構成プロパティをマニフェスト\<プロジェクト名 > プロパティ ページ ダイアログ ボックス](../ide/input-and-output-manifest-tool.md)  
+ [[入力と出力] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](../ide/input-and-output-manifest-tool.md)  
   
- [COM、マニフェスト ツールは、[構成プロパティを分離\<プロジェクト名 > プロパティ ページ] ダイアログ ボックス](../ide/isolated-com-manifest-tool.md)  
+ [[分離された COM] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](../ide/isolated-com-manifest-tool.md)  
   
- [詳細、マニフェスト ツールは、構成プロパティ、\<プロジェクト名 > プロパティ ページ ダイアログ ボックス](../ide/advanced-manifest-tool.md)  
+ [[詳細] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](../ide/advanced-manifest-tool.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;参照してください&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;see&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33335505"
 ---
-# <a name="ltseegt-visual-c"></a>&lt;参照してください&gt;(Visual C)
-\<see> タグを使用すると、テキスト内でリンクを指定できます。 使用して[ \<seealso >](../ide/seealso-visual-cpp.md) 「参照」セクションに表示するテキストを示すためにします。  
+# <a name="ltseegt-visual-c"></a>&lt;see&gt; (Visual C++)
+\<see> タグを使用すると、テキスト内でリンクを指定できます。 [\<seealso>](../ide/seealso-visual-cpp.md) を使用し、「関連項目」セクションに表示するテキストを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +38,17 @@ ms.lasthandoff: 05/04/2018
  `member`  
  現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。  名前は、一重引用符または二重引用符で囲みます。  
   
- コンパイラは、指定されたコード要素が存在し、解決されることを確認`member`出力 XML 内の要素名にします。  コンパイラは、`member` が見つからない場合に警告を発行します。  
+ コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に解決します。  コンパイラは、`member` が見つからない場合に警告を発行します。  
   
 ## <a name="remarks"></a>コメント  
  コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
- 参照してください[\<概要 >](../ide/summary-visual-cpp.md)の使用例については\<を参照してください >。  
+ \<see> の使用例については、[\<summary>](../ide/summary-visual-cpp.md) を参照してください。  
   
- Visual C++ コンパイラは、ドキュメント コメントを通じて 1 回渡すことで cref 参照の解決を試みます。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 参照してください[ \<seealso >](../ide/seealso-visual-cpp.md)詳細についてはします。  
+ Visual C++ コンパイラは、ドキュメント コメントを通じて 1 回渡すことで cref 参照の解決を試みます。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 詳細については、「[\<seealso>](../ide/seealso-visual-cpp.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- コンパイラは、参照を解決するように、次の例は、ジェネリック型に cref 参照を作成する方法を示します。  
+ 次のサンプルでは、コンパイラで参照が解決されるよう、ジェネリック型の cref 参照が作られるしくみを確認できます。  
   
 ```  
 // xml_see_cref_example.cpp  
@@ -74,5 +75,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

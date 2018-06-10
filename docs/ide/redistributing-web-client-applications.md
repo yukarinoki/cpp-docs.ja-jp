@@ -1,5 +1,5 @@
 ---
-title: Web クライアント アプリケーションの再頒布 |Microsoft ドキュメント
+title: Web クライアント アプリケーションの再頒布 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,21 +18,22 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 92bd843b24ee13b3d606ba8bb4f4f1cc265e8e5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323197"
 ---
 # <a name="redistributing-web-client-applications"></a>Web クライアント アプリケーションの再頒布
-アプリケーションで WebBrowser コントロールを実装する MFC クラスを使用するかどうか (たとえば、`CHtmlView`または`CHtmlEditView`)、Microsoft Internet Explorer 4.0 またはそれ以降はターゲット コンピューターには最低限インストールには、少なくともする必要があります。  
+アプリケーションで WebBrowser コントロールが実装された MFC クラスを使用している場合 (たとえば、`CHtmlView` または `CHtmlEditView`)、ターゲット コンピューターに最低でも Microsoft Internet Explorer 4.0 以降がインストールされている必要があります。  
   
- Internet Explorer の最新バージョンのインストールもにより、ターゲット コンピューターは最新の共通のコントロール ファイル。  
+ Internet Explorer の最新バージョンがインストールされていると、ターゲット コンピューターには最新の共通コントロール ファイルが含まれていることも保証されます。  
   
- 最小限の Internet Explorer コンポーネントのインストールについては、次のサポート技術情報の記事で使用可能なです。  
+ Internet Explorer の最小限のコンポーネントのインストールについては、次のサポート技術情報の記事を参照してください。  
   
--   Q185375、HOWTO: 作成、Internet Explorer の 1 つの exe ファイルのインストール ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))  
+-   Q185375, HOWTO: Create a Single EXE Install of Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp)) (方法: Internet Explorer の単一の EXE インストールを作成する)  
   
- MSDN ライブラリまたはでは、サポート技術情報の記事を検索できます[ http://support.microsoft.com](http://support.microsoft.com)です。  
+ サポート技術情報の記事は、MSDN ライブラリまたは [http://support.microsoft.com](http://support.microsoft.com) で参照できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)

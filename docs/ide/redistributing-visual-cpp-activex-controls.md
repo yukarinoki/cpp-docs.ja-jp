@@ -1,5 +1,5 @@
 ---
-title: Visual C ActiveX コントロールを再配布 |Microsoft ドキュメント
+title: Visual C++ ActiveX コントロールの再頒布 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33331020"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Visual C++ ActiveX コントロールの再配布
-Visual C 6.0 では、再配布するアプリケーションで使用できる ActiveX コントロールが用意されています。 Visual C では、これらのコントロールは含まれていません。 Visual C 6.0 のライセンス契約、あたり Visual C で開発されたアプリケーションでこれらのコントロールを再配布することができます。  
+Visual C++ 6.0 には、アプリケーションで使用できてその後再配布する ActiveX コントロールが用意されています。 このようなコントロールは Visual C++ には含まれなくなりました。 Visual C++ 6.0 のライセンス契約に基づき、Visual C++ で開発されたアプリケーションでこれらのコントロールを再配布できます。  
   
 > [!NOTE]
->  Visual C 6.0 は Microsoft によってサポートされていません。  
+>  Microsoft では、Visual C++ 6.0 のサポートを終了しています。  
   
- 再頒布可能パッケージの Visual C 6.0 の ActiveX コントロールの一覧は、ディスクの 1 つの Visual C 6.0 製品 CD に Common\Redist\Redist.txt を参照してください。  
+ 再配布可能な Visual C++ 6.0 ActiveX コントロールの一覧については、Visual C++ 6.0 プロダクト CD のディスク 1 に含まれる Common\Redist\Redist.txt を参照してください。  
   
- アプリケーションを配布するときにインストールし、(Regsvr32.exe を使用)、ActiveX コントロールの .ocx ファイルを登録する必要があります。 さらに、対象のコンピュータが、次のシステム ファイル (アスタリスクは、ファイルを登録する必要があることを示します) の現在のバージョンを確認する必要があります。  
+ アプリケーションを配布するとき、ActiveX コントロールの .ocx をインストールし、登録する必要があります (Regsvr32.exe を使用)。 また、対象のコンピューターに次のシステム ファイルの最新版が含まれている必要があります (アスタリスクはファイルを登録する必要があることを示します)。  
   
--   asycfilt.dll  
+-   Asycfilt.dll  
   
 -   Comcat.dll *  
   
@@ -39,15 +40,15 @@ Visual C 6.0 では、再配布するアプリケーションで使用できる 
   
 -   Olepro32.dll *  
   
--   stdole2.tlb  
+-   Stdole2.tlb  
   
- これらの Dll が、ターゲット システムで利用できない場合は、対応するオペレーティング システムを更新するため、所定のメカニズムを使用して更新を取得する必要があります。 Windows オペレーティング システムからの最新の service pack をダウンロードする[ http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com)です。  
+ 対象のシステムでこれらの DLL が利用できない場合、該当オペレーティング システムを更新するための所定のメカニズムを利用して更新する必要があります。 Windows オペレーティング システムの最新サービス パックは [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com) からダウンロードできます。  
   
- アプリケーションでは、データベースに接続する ActiveX コントロールのいずれかを使用する場合は、Microsoft Data Access Components (MDAC) が、ターゲット システムにインストールされているが必要です。 詳細については、次を参照してください。[データベース サポート ファイルの再配布](../ide/redistributing-database-support-files.md)です。  
+ データベースに接続する ActiveX コントロールのいずれかがアプリケーションで使用される場合、Microsoft Data Access Components (MDAC) を対象のシステムにインストールする必要があります。 詳細については、「[データベース サポート ファイルの再配布](../ide/redistributing-database-support-files.md)」を参照してください。  
   
- データベースに接続する ActiveX コントロールを使用する場合は、ターゲット コンピューターのデータ ソース名をレプリケートする必要があります。 これを行うプログラムで関数をなど`ConfigDSN`です。  
+ データベースに接続する ActiveX コントロールを使用するとき、対象のコンピューターでデータ ソース名を複製する必要もあります。 複製は、`ConfigDSN` などの関数を使用してプログラムで行うことができます。  
   
- 再頒布可能パッケージの一部の ActiveX コントロールでは、追加の依存関係があります。 上の各 .ocx ファイル Os\System フォルダーに、Visual C 6.0 製品 CD、.dep ファイルもあります。 再配布する .ocx ファイルごとに対応する .dep ファイル内の 1 つまたは複数の用途エントリを探します。 ファイルが表示されている場合は、ファイルが、ターゲット コンピューター上であることを確認する必要があります。 すべての Dll を登録する必要がある .ocx ファイルを直接サポートします。 (を成功させるのには、Regsvr32.exe を対象となるコンピューター含める必要がありますまずすべてのコントロールを静的に読み込む Dll です。)さらに、依存関係として記載されている DLL もある場合、.dep ファイル、Os\System CD のフォルダーに、Visual C 6.0、.dep のファイルを使用してエントリも調査する必要があります。  
+ 一部の再配布可能 ActiveX コントロールでは、依存関係がさらに増えます。 Visual C++ 6.0 プロダクト CD の OS\システム フォルダーにある .ocx ファイルごとに .dep ファイルもあります。 再配布する .ocx ファイルごとに、それに対応する .dep ファイルで 1 つまたは複数の USES エントリを探してください。 ファイルが一覧表示されている場合、ファイルが対象のコンピューターにあることを確認する必要があります。 .ocx ファイルを直接サポートする DLL はすべて登録する必要があります。 (Regsvr32.exe を正常に実行するには、コントロールによって静的に読み込まれるすべての DLL が対象のコンピューターに含まれている必要があります。)さらに、依存関係として一覧表示されている DLL に Visual C++ 6.0 CD の OS/システム フォルダーの .dep ファイルも含まれている場合、その .dep ファイルでも USES エントリを探す必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;概要&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;summary&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33322290"
 ---
-# <a name="ltsummarygt-visual-c"></a>&lt;概要&gt;(Visual C)
+# <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 \<summary> タグは、型または型のメンバーの説明に使用します。 型の説明に補足情報を追加するには、[\<remarks>](../ide/remarks-visual-cpp.md) タグを使用します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
  オブジェクトの概要。  
   
 ## <a name="remarks"></a>コメント  
- テキスト、\<概要 > タグは、IntelliSense の入力に関する情報の唯一のソースでありにも表示されます、[オブジェクト ブラウザー](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)とコード コメントの Web レポート。  
+ \<summary> タグのテキストは、IntelliSense の型に関する唯一のソースで、[オブジェクト ブラウザー](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)とコード コメント Web レポートにも表示されます。  
   
  コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
@@ -63,5 +64,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

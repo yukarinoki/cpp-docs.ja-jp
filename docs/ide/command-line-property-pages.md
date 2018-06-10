@@ -1,5 +1,5 @@
 ---
-title: コマンド ライン プロパティのページ |Microsoft ドキュメント
+title: '[コマンド ライン] プロパティ ページ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327812"
 ---
 # <a name="command-line-property-pages"></a>[コマンド ライン] プロパティ ページ
-ほとんどのプロパティ ページのフォルダーを含む、**コマンドライン**プロパティ ページ。 このページは、フォルダーに設定するプロパティを表示します。 **コマンドライン**プロパティ ページにも含まれています、**追加オプション**ボックスで、ツールで有効なプロパティを指定できますが、対象のプロパティがないフォルダーにします。  
+ほとんどのプロパティ ページ フォルダーに、**[コマンド ライン]** プロパティ ページが含まれます。 このページには、フォルダーに設定されるプロパティが表示されます。 また、**[コマンド ライン]** プロパティ ページには、ツールに対して有効であるが、フォルダーにプロパティがないプロパティを指定できる **[追加のオプション]** も含まれます。  
   
- 編集ボックスに入力した任意のコマンドは、フォルダーのツールにを介して渡されます。 検査やチェック、入力時に行われますもなるは、依存関係のチェックします。  
+ 編集ボックスに入力するコマンドは、フォルダーのツールに渡されます。 入力で検証やチェックが行われることはなく、依存関係のチェックもありません。  
   
- アクセスする方法については、**コマンドライン**プロパティ ページを参照してください[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+ **[コマンド ライン]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
  [.lib ファイル (リンカー入力)](../build/reference/dot-lib-files-as-linker-input.md)
