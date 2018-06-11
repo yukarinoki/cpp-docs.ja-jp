@@ -2,7 +2,7 @@
 title: Visual Studio での C++ のサポートのインストール |Microsoft ドキュメント
 description: Visual Studio の Visual C サポートをインストールします。
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 06/08/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253757"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストールします。
 
@@ -32,17 +33,17 @@ ms.lasthandoff: 05/03/2018
 
 - 十分な空きディスク領域。 Visual Studio では、7 GB 以上のディスク領域が必要ですし、多くの一般的なオプションがインストールされている場合、50 GB 以上かかることができます。 C: ドライブにインストールすることをお勧めします。
 
-ディスク容量とオペレーティング システムの要件の詳細については、「 [Visual Studio 2017 のシステム要件](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs)です。 インストーラーにより、選択したオプションに必要なディスク領域の量が報告されます。
+ディスク容量とオペレーティング システムの要件の詳細については、「 [Visual Studio 製品ファミリのシステム要件](/visualstudio/productinfo/vs2017-system-requirements-vs)です。 インストーラーにより、選択したオプションに必要なディスク領域の量が報告されます。
 
 ## <a name="installation"></a>インストール
 
 1. Windows の最新の Visual Studio 2017 インストーラーをダウンロードします。
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 のインストールに関するコミュニティ</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 のインストールに関するコミュニティ</a>
 
    >[!Tip]
-   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、<a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> または <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a> を使用してください。
+   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、<a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> または <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a> を使用してください。
 
 1. インストーラー ファイルをダウンロードして実行を検索します。 ブラウザーに表示される可能性や、ダウンロード フォルダーで検索することがあります。 インストーラーでは、管理者特権を実行する必要があります。 表示される、**ユーザー アカウント制御**インストーラーは、システムに変更を加える; を選択できるようにするアクセス許可を付与するように求めるダイアログ**はい**です。 ファイル エクスプ ローラーで、ダウンロードしたファイルを検索に問題が発生した場合、インストーラーのアイコンを右クリックし、選択**管理者として実行**コンテキスト メニュー。
 

@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: コマンドラインでの C プログラムのコンパイル |Microsoft ドキュメント'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -15,28 +15,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033c29ff9871a427222b59fbf5c8350794a9bbe2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e303a9e1618c73d173e9d23c614cfc506ec68a
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253790"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>チュートリアル: コマンドラインでの C プログラムをコンパイルします。
 Visual C には、完全な Windows デスクトップ アプリケーション、モバイル アプリは、基本的なコンソール プログラムから作成するすべてのものを使用できる C コンパイラが含まれています。  
   
  このチュートリアルでは、基本的な「こんにちは, World」を作成する方法のエディター、テキストを使用して、C プログラムをスタイルし、コマンドラインでコンパイルします。 作業する場合とではなく C++ では、コマンドラインを参照してください。[チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)です。 コマンドラインを使用する代わりに、Visual Studio IDE の再試行を確認したい場合[チュートリアル: プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)または[C++ デスクトップ開発用 Visual Studio IDE を使用して](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)です。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを完了するには、必要がありますがインストールした Visual Studio と省略可能な Visual C コンポーネント、または Microsoft Visual C ビルド ツール。  
+## <a name="prerequisites"></a>必須コンポーネント
+
+このチュートリアルを完了するには、必要がありますがインストールされました Visual Studio と省略可能な Visual C コンポーネント、または Build Tools for Visual Studio。  
   
- Visual Studio は、多くの言語とプラットフォームの全機能を備えたエディター、リソース マネージャー、デバッガー、およびコンパイラをサポートする強力な統合開発環境です。 これらの機能とをダウンロードして無料の Visual Studio Community エディションをなど、Visual Studio をインストールする方法についてを参照してください。 [VisualStudio.com](https://www.visualstudio.com/)です。  
+Visual Studio は、多くの言語とプラットフォームの全機能を備えたエディター、リソース マネージャー、デバッガー、およびコンパイラをサポートする強力な統合開発環境です。 これらの機能とをダウンロードして無料の Visual Studio Community エディションをなど、Visual Studio をインストールする方法についてを参照してください。 [Visual Studio インストール](/visualstudio/install/install-visual-studio)です。  
   
- Visual Studio ビルド ツールは、コマンド ライン コンパイラ、ツール、および C および C++ プログラムのビルドに必要なライブラリのみをインストールします。 ビルド ラボに最適ですや教室行使比較的迅速にインストールします。 コマンド ライン ツールのみをインストールするには、ダウンロード[Visual Studio ビルド ツール](https://go.microsoft.com/fwlink/p/?linkid=840931)installer を実行します。 詳細については、次を参照してください。 [Visual c ビルド ツール](http://landinghub.visualstudio.com/visual-cpp-build-tools)です。  
+Visual Studio のバージョンの Visual Studio のビルド ツール、インストールするのみコマンド ライン ツールセット、コンパイラ ツール、ライブラリの C および C++ プログラムをビルドする必要があります。 ビルド ラボに最適ですや教室行使比較的迅速にインストールします。 コマンド ライン ツールセットのみをインストールするには、ダウンロード[Tools for Visual Studio ビルド](https://go.microsoft.com/fwlink/p/?linkid=840931)installer を実行します。  
   
- C または C++ プログラムをビルドするには、コマンドラインで、前に、ツールがインストールされていると、コマンドラインからアクセスできることを確認する必要があります。 Visual C では、ツール、ヘッダー、および使用するライブラリを検索するためにコマンドライン環境の複雑な要件がします。 **標準のコマンド プロンプト ウィンドウで、Visual C を使用することはできません**です。 必要があります、*開発者コマンド プロンプト*は通常のコマンド プロンプト ウィンドウを設定されているすべての必要な環境変数を持つウィンドウです。 幸いにも、Visual C は、コマンド ライン ビルド用に設定する環境がある開発者コマンド プロンプトを起動するためのショートカットをインストールします。 残念ながら、開発者コマンド プロンプトのショートカットと配置されている場所の名前は、異なるバージョンの Windows で Visual C のほぼすべてのバージョンで異なります。 最初のチュートリアル タスクを使用する右側のショートカットの検索を開始します。  
+C または C++ プログラムをビルドするには、コマンドラインで、前に、ツールがインストールされていると、コマンドラインからアクセスできることを確認する必要があります。 Visual C では、ツール、ヘッダー、および使用するライブラリを検索するためにコマンドライン環境の複雑な要件がします。 **標準のコマンド プロンプト ウィンドウで、Visual C を使用することはできません**です。 必要があります、*開発者コマンド プロンプト*は通常のコマンド プロンプト ウィンドウを設定されているすべての必要な環境変数を持つウィンドウです。 幸いにも、Visual C は、コマンド ライン ビルド用に設定する環境がある開発者コマンド プロンプトを起動するためのショートカットをインストールします。 残念ながら、開発者コマンド プロンプトのショートカットと配置されている場所の名前は、異なるバージョンの Windows で Visual C のほぼすべてのバージョンで異なります。 最初のチュートリアル タスクを使用する右側のショートカットの検索を開始します。  
   
 > [!NOTE]
->  開発者コマンド プロンプト ショートカットでは、コンパイラおよびツール、および、必要なヘッダーとライブラリによって正しいパスが自動的に設定します。 これらの値の一部は、ビルド構成ごとに異なります。 必要がありますこれらの環境値自分で設定する場合は、ショートカットのいずれかを使用しません。 詳細については、次を参照してください。[コマンド ライン ビルドのパスと環境変数を設定](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)です。 ビルド環境は複雑であるため、開発者コマンド プロンプト ショートカットを使用して、独自のビルドではなくを強くお勧めします。  
+> 開発者コマンド プロンプト ショートカットでは、コンパイラおよびツール、および、必要なヘッダーとライブラリによって正しいパスが自動的に設定します。 これらの値の一部は、ビルド構成ごとに異なります。 必要がありますこれらの環境値自分で設定する場合は、ショートカットのいずれかを使用しません。 詳細については、次を参照してください。[コマンド ライン ビルドのパスと環境変数を設定](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)です。 ビルド環境は複雑であるため、開発者コマンド プロンプト ショートカットを使用して、独自のビルドではなくを強くお勧めします。  
   
 ## <a name="open-a-developer-command-prompt"></a>開発者コマンド プロンプトを開きます  
   
@@ -63,7 +65,7 @@ Visual C には、完全な Windows デスクトップ アプリケーション�
     > [!NOTE]
     >  「'Cl' は、内部または外部コマンド、操作可能なプログラムまたはバッチ ファイルとしては認識されません"など、エラーが発生した場合エラー C1034 またはエラー LNK1104 を実行すると、 **cl**コマンドを使用するか、開発者コマンド プロンプトでは、使用しない、またはVisual C のインストールの問題がします。 続行するには、この問題を解決する必要があります。  
   
-     見つからない場合、開発者コマンド プロンプト ショートカット、または入力すると、エラー メッセージが表示された場合`cl`、Visual C インストールの問題があるし、します。 Visual Studio で、Visual C コンポーネントを再インストールを実行するか、Visual Studio ビルド ツールを再インストールします。 入りません次のセクションにこれが機能するまでです。 インストールして、Visual C のトラブルシューティングに関する詳細については、次を参照してください。 [Visual Studio インストール](/visualstudio/install/install-visual-studio)です。  
+     見つからない場合、開発者コマンド プロンプト ショートカット、または入力すると、エラー メッセージが表示された場合`cl`、Visual C インストールの問題があるし、します。 Visual Studio で、Visual C コンポーネントを再インストールしてくださいまたは Visual Studio のビルド ツールを再インストールします。 入りません次のセクションにこれが機能するまでです。 インストールして、Visual Studio のトラブルシューティングに関する詳細については、次を参照してください。 [Visual Studio インストール](/visualstudio/install/install-visual-studio)です。  
   
     > [!NOTE]
     >  Windows のバージョンに応じて、コンピューターと、システム セキュリティ構成で、右クリックすると、開発者コマンド プロンプト ショートカットのショートカット メニューを開き、選択する必要があります**管理者として実行**に正常にビルドして、このチュートリアルで作成するプログラムを実行します。  
