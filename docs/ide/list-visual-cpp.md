@@ -1,5 +1,5 @@
 ---
-title: '&lt;リスト&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;list&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323980"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;リスト&gt;(Visual C)
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 \< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。 テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。  
   
 ## <a name="syntax"></a>構文  
@@ -75,5 +76,5 @@ ms.lasthandoff: 05/04/2018
 class MyClass {};  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

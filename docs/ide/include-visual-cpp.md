@@ -1,5 +1,5 @@
 ---
-title: '&lt;含める&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;include&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330428"
 ---
-# <a name="ltincludegt-visual-c"></a>&lt;含める&gt;(Visual C)
-\<include> タグを使用して、ソース コード内の型とメンバーを記述する別のファイル内のコメントを参照することができます。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  たとえば、使用することができます\<含める > は、チームや会社で使用する標準的な「定型」コメントを挿入しますします。  
+# <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
+\<include> タグを使用して、ソース コード内の型とメンバーを記述する別のファイル内のコメントを参照することができます。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  たとえば、\<include> を使用し、チームまたは会社全体で使用する標準の "定型" コメントを挿入できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,10 +36,10 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="parameters"></a>パラメーター  
  `filename`  
- ドキュメントを含むファイルの名前。 ファイル名をパスで修飾することができます。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`filename` が見つからない場合に警告を発行します。  
+ 文書を含むファイルの名前。 ファイル名をパスで修飾することができます。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`filename` が見つからない場合に警告を発行します。  
   
  `tagpath`  
- ファイルに含まれている必要なノード セットを選択する有効な XPath 式です。  
+ ファイルに含まれている目的のノードセットを選択する有効な XPath 式。  
   
  `name`  
  コメントの前に配置するタグの名前指定子。`name` には `id` が指定されます。  
@@ -47,12 +48,12 @@ ms.lasthandoff: 05/04/2018
  コメントの前に配置するタグの ID。  名前は、一重引用符または二重引用符で囲みます。  
   
 ## <a name="remarks"></a>コメント  
- \<include> タグは XML XPath 構文を使用します。 使用してカスタマイズする方法については、XPath に関するドキュメントを参照してください\<含める >。  
+ \<include> タグは XML XPath 構文を使用します。 \<include> の使用をカスタマイズする方法については、XPath に関するドキュメントを参照してください。  
   
  コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- これは、複数ファイルの例です。 最初のファイルを使用して\<含める >、次のドキュメントのコメントが含まれています。  
+ これは、複数ファイルの例です。 \<include> を使用する最初のファイルには、次のドキュメント コメントが含まれています。  
   
 ```  
 // xml_include_tag.cpp  
@@ -115,5 +116,5 @@ The summary for this other type.
 </doc>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

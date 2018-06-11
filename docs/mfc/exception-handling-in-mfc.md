@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239438"
 ---
 # <a name="exception-handling-in-mfc"></a>例外処理 (MFC)
 この記事では、MFC で使用できる例外処理メカニズムについて説明します。 2 つのメカニズムを使用できます。  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
  既に MFC 例外マクロを使用してアプリケーションを開発した場合、新しいコードで C++ 例外処理を使用しているときに、既存のコードでこれらのマクロの使用を続行できます。 アーティクル[例外: Version 3.0 での例外処理マクロを変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)これを行うためのガイドラインを提供します。  
   
 > [!NOTE]
->  コードの C++ 例外処理を有効にするコードの生成 ページで、C と C++ のフォルダー、プロジェクトの C++ の例外を有効にするを選択[プロパティ ページ](../ide/property-pages-visual-cpp.md) ダイアログ ボックス、または/GX コンパイラ オプションを使用します。 既定ではでは/GX-、例外処理を無効になります。  
+>  コードの C++ 例外処理を有効にするコードの生成 ページで、C と C++ のフォルダー、プロジェクトの C++ の例外を有効にするを選択[プロパティ ページ](../ide/property-pages-visual-cpp.md) ダイアログ ボックス、またはを使用して、 [/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション。  
   
  ここでは、次のトピックについて説明します。  
   

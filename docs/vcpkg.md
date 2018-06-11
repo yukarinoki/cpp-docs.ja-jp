@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705439"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -120,7 +121,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 これで、フォルダー/ヘッダーを入力するだけでヘッダーを #include でインクルードできるようになりました。オートコンプリートは便利な機能です。 ライブラリにリンクする場合や、プロジェクト参照を追加する場合は、追加の手順が必要になります。 次の図は、Visual Studio が azure-storage-cpp ヘッダーをどのように検索するかを示しています。 vcpkg は、ターゲット プラットフォームでパーティション分割される、**/installed** サブフォルダーにそのヘッダーを配置します。 以下の図は、ライブラリの **/was** サブフォルダーにあるインクルード ファイルのリストを示しています。
 
-![vcpkg Intellisense 統合](media/vcpkg-intellisense.png "vcpkg と Intellisense")
+![vcpkg IntelliSense 統合](media/vcpkg-intellisense.png "vcpkg と IntelliSense")
 
 ### <a name="per-project"></a>プロジェクトごと
 

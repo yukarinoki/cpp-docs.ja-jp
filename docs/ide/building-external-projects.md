@@ -1,5 +1,5 @@
 ---
-title: 外部プロジェクトのビルド |Microsoft ドキュメント
+title: 外部プロジェクトのビルド | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,18 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 97b6aa1e5939afe55644df6529bf75ba043f20bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330347"
 ---
 # <a name="building-external-projects"></a>外部プロジェクトのビルド
-外部プロジェクトとメイクファイルまたは (外部または外部に) 外部にあるその他の機能を使用する Visual C プロジェクトは Visual C 開発環境です。  
+外部プロジェクトには、メイクファイルまたは Visual C++ 開発環境の外にあるその他の機能を使用する Visual C++ プロジェクトがあります。  
   
- Visual C 開発環境でビルド、メイクファイル プロジェクトを作成し、プロジェクトを指定する外部プロジェクト (たとえば、メイクファイル プロジェクト) がある場合は、コマンドとメイクファイル アプリケーション ウィザードで出力をビルドします。 詳細については、次を参照してください。[メイクファイル プロジェクトの作成](../ide/creating-a-makefile-project.md)です。  
+ Visual C++ 開発環境でビルドする外部プロジェクト (メイクファイル プロジェクトなど) がある場合、メイクファイル プロジェクトを作成し、メイクファイル アプリケーション ウィザードでプロジェクトのビルド コマンドと出力を指定します。 詳細については、「[メイクファイル プロジェクトの作成](../ide/creating-a-makefile-project.md)」を参照してください。  
   
- Visual C 開発環境から、アクティブなプロジェクトのメイクファイルをエクスポートする機能をサポートしなくに注意してください。 使用して[Devenv コマンド ライン スイッチ](/visualstudio/ide/reference/devenv-command-line-switches)コマンドラインで Visual Studio プロジェクトをビルドします。  
+ Visual C++ では、開発環境からアクティブ プロジェクトのメイクファイルをエクスポートできなくなったことにご注意ください。 コマンド ラインで Visual Studio プロジェクトをビルドするには、[Devenv コマンド ライン スイッチ](/visualstudio/ide/reference/devenv-command-line-switches)を使用してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual Studio での C++ プロジェクトのビルド](../ide/building-cpp-projects-in-visual-studio.md)

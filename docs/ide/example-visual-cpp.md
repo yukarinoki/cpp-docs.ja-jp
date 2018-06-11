@@ -1,5 +1,5 @@
 ---
-title: '&lt;例&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;example&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33321432"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;例&gt;(Visual C)
-\<example> タグでは、メソッドまたはその他のライブラリ メンバーの使用例を指定できます。 一般的には、これも含まれるを使用して、 [\<コード >](../ide/code-visual-cpp.md)タグ。  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
+\<example> タグでは、メソッドまたはその他のライブラリ メンバーの使用例を指定できます。 この場合、通常は [\<code>](../ide/code-visual-cpp.md) タグも使用する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,5 +68,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

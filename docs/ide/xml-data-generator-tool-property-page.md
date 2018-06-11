@@ -1,5 +1,5 @@
 ---
-title: XML データ ジェネレーター ツール プロパティ ページ |Microsoft ドキュメント
+title: '[XML データ ジェネレーター ツール] プロパティ ページ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e13d56891c5df2c17234a434da9890842bfc54ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33329944"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>[XML データ ジェネレーター ツール] プロパティ ページ
-**XML データ ジェネレーター ツール**プロジェクトにデータセットを追加するときに、プロパティ ページができるようになります。  
+プロジェクトにデータセットを追加すると、**[XML データ ジェネレーター ツール]** プロパティ ページが利用できるようになります。  
   
- **XML データ ジェネレーター ツール**プロパティ ページには、次のプロパティが含まれています。  
+ **[XML データ ジェネレーター ツール]** プロパティ ページには、以下のプロパティがあります。  
   
  **出力ファイル**  
  使用する出力ファイル名を指定します。  
   
- **著作権情報を抑制します。**  
- 著作権情報と情報メッセージの表示を抑制します。  
+ **著作権情報の非表示**  
+ 著作権情報と情報メッセージを表示しません。  
   
- **生成されたプロキシ言語**  
- マネージ コードを出力するかどうかを判断します。  
+ **生成するプロキシ言語**  
+ マネージド コードを生成するかどうかを決定します。  
   
- アクセスする方法については、 **XML データ ジェネレーター ツール**プロパティ ページを参照してください[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+ **[XML データ ジェネレーター ツール]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
- このオブジェクトのメンバーにアクセスする方法については、次を参照してください。 <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
+ このプロジェクトのメンバーにプログラムを使ってアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)

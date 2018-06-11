@@ -1,5 +1,5 @@
 ---
-title: クラス (Visual C) の追加 |Microsoft ドキュメント
+title: クラスの追加 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33333285"
 ---
 # <a name="adding-a-class-visual-c"></a>クラスの追加 (Visual C++)
-Visual C プロジェクトでクラスを追加する**ソリューション エクスプ ローラー**プロジェクトを右クリックしをクリックして**追加**、クリックして**クラス**です。 開き、[クラスの追加 ダイアログ ボックス](../ide/add-class-dialog-box.md) ダイアログ ボックス。  
+Visual C++ プロジェクトでクラスを追加するには、**ソリューション エクスプローラー**でプロジェクトを右クリックし、**[追加]**、**[クラス]** の順にクリックします。 [[クラスの追加]](../ide/add-class-dialog-box.md) ダイアログ ボックスが開きます。  
   
- クラスを追加する場合は、MFC または ATL に既に存在するクラスとは異なる名前を指定する必要があります。 ライブラリに既に存在する名前を指定する場合、IDE は、エラー メッセージを示します。  
+ クラスを追加するとき、MFC または ATL に既に存在するクラスのものとは異なる名前を指定する必要があります。 いずれかのライブラリに既に存在する名前を指定すると、IDE はエラー メッセージを表示します。  
   
- プロジェクトの名前付け規則では、既存の名前を使用する必要がある場合だけ変更できます、名前の文字は 1 つ以上の大文字と小文字 C は大文字小文字を区別するためです。 たとえば、クラスの名前を付けられませんが`CDocument`、」と入力`cdocument`です。  
+ プロジェクト命名規則によって既存名の使用が要求される場合、名前の 1 つ以上の大文字を小文字に (あるいは小文字を大文字に) 変更できます。C++ では大文字と小文字が区別されるためです。 たとえば、クラスに `CDocument` という名前を付けることはできませんが、`cdocument` という名前を付けることができます。  
   
-## <a name="what-kind-of-class-do-you-want-to-add"></a>追加するクラスの種類  
- **クラスの追加**ダイアログ ボックスで、展開すると、 **Visual C**インストールされたテンプレートのいくつかのグループが表示される左側のウィンドウ内のノードです。 グループを含める**CLR**、 **ATL**、 **MFC**、および**C++** です。 グループを選択すると、中央のペインでそのグループ内の使用可能なテンプレートの一覧が表示されます。 各テンプレートには、ファイルとクラスに必要なソース コードが含まれています。  
+## <a name="what-kind-of-class-do-you-want-to-add"></a>どのような種類のクラスを追加しますか。  
+ **[クラスの追加]** ダイアログ ボックスで、左のウィンドウの **[Visual C++]** ノードを展開すると、インストールされているテンプレートがいくつかのグループになって表示されます。 グループには、**CLR**、**ATL**、**MFC**、**C++** があります。 グループを選択すると、そのグループで利用できるテンプレートの一覧が真ん中のウィンドウに表示されます。 各テンプレートには、クラスに必要なファイルとソース コードが含まれています。  
   
- 新しいクラスを生成する、中央のペインで、テンプレートを選択、内のクラスの名前を入力、**名前**ボックスし、をクリックして**追加**です。 開き、**クラス追加ウィザード**クラスのオプションを指定できるようにします。  
+ 新しいクラスを生成するには、真ん中のウィンドウでテンプレートを選択し、**[名前]** ボックスにクラスの名前を入力し、**[追加]** をクリックします。 **クラスの追加ウィザード**が開くので、クラスのオプションを指定できます。  
   
--   MFC クラスを作成する方法の詳細については、次を参照してください。 [MFC クラス](../mfc/reference/adding-an-mfc-class.md)です。  
+-   MFC クラスを作成する方法の詳細については、[MFC クラス](../mfc/reference/adding-an-mfc-class.md)に関するページを参照してください。  
   
--   ATL クラスを作成する方法の詳細については、次を参照してください。 [ATL シンプル オブジェクト](../atl/reference/adding-an-atl-simple-object.md)です。  
+-   ATL クラスを作成する方法の詳細については、[ATL シンプル オブジェクト](../atl/reference/adding-an-atl-simple-object.md)に関するページを参照してください。  
   
 > [!NOTE]
->  テンプレート**MFC に ATL サポートを追加**クラスを作成できませんが、代わりに ATL を使用するプロジェクトを構成 詳細については、次を参照してください。 [MFC プロジェクトに ATL サポート](../mfc/reference/adding-atl-support-to-your-mfc-project.md)です。  
+>  **[MFC に ATL サポートを追加]** テンプレートの場合、クラスは作成されませんが、ATL を使用するようにプロジェクトが構成されます。 詳細については、[MFC プロジェクトの ATL サポート](../mfc/reference/adding-atl-support-to-your-mfc-project.md)に関するページを参照してください。  
   
- MFC や ATL、CLR を使用しない C++ クラスを作成するを使用して、 **C++ クラス**でテンプレート、 **C++** インストールされたテンプレートのグループ化します。 詳細については、次を参照してください。[一般 C++ クラスを追加する](../ide/adding-a-generic-cpp-class.md)です。  
+ MFC、ATL、CLR を使用しない C++ クラスを作るには、インストールされているテンプレートの **C++** グループの **C++ クラス** テンプレートを使用します。 詳細については、「[一般 C++ クラスの追加](../ide/adding-a-generic-cpp-class.md)」を参照してください。  
   
- フォーム ベースの C++ クラスの 2 つの種類ができます。 最初の 1 つ[CFormView クラス](../mfc/reference/cformview-class.md)MFC クラスを作成します。 2 番目の例では、Windows フォームの CLR クラスを作成します。  
+ 2 種類のフォームベース C++ クラスを利用できます。 最初の [CFormView クラス](../mfc/reference/cformview-class.md)では、MFC クラスが作成されます。 2 番目のクラスでは、CLR Windows フォーム クラスが作成されます。  
   
-## <a name="see-also"></a>関連項目  
- [フォーム ベースの MFC アプリケーションを作成します。](../mfc/reference/creating-a-forms-based-mfc-application.md)   
- [クラスのダイアログ ボックスを追加します。](../ide/add-class-dialog-box.md)   
+## <a name="see-also"></a>参照  
+ [フォームベースの MFC アプリケーションの作成](../mfc/reference/creating-a-forms-based-mfc-application.md)   
+ [[クラスの追加] ダイアログ ボックス](../ide/add-class-dialog-box.md)   
  [アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)
+ [コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)

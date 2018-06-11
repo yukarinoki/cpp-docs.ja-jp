@@ -1,5 +1,5 @@
 ---
-title: 配置例 |Microsoft ドキュメント
+title: 配置例 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327412"
 ---
 # <a name="deployment-examples"></a>配置例
-このセクションには、Visual C アプリケーションを展開する方法を示す例が含まれています。  
+このセクションには、Visual C++ アプリケーションを配置する方法を示す例が含まれています。  
   
 ## <a name="examples"></a>使用例  
  [チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  
@@ -34,6 +35,6 @@ ms.lasthandoff: 05/04/2018
   
  [デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル : ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
  [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)

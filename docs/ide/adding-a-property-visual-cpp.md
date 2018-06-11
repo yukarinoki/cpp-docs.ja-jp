@@ -1,5 +1,5 @@
 ---
-title: プロパティ (Visual C) を追加する |Microsoft ドキュメント
+title: プロパティの追加 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327581"
 ---
 # <a name="adding-a-property-visual-c"></a>プロパティの追加 (Visual C++)
-使用することができます、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)プロジェクト内のインターフェイスにメソッドを追加します。  
+[プロパティ追加ウィザード](../ide/names-add-property-wizard.md)を使用して、プロジェクトのインターフェイスにメソッドを追加することができます。  
   
 ### <a name="to-add-a-property-to-your-object"></a>オブジェクトにプロパティを追加するには  
   
-1.  [クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)プロパティを追加するインターフェイスの名前を右クリックします。  
+1.  [クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)で、プロパティを追加するインターフェイスを右クリックします。  
   
     > [!NOTE]
-    >  ディスパッチ インターフェイスは、プロジェクトに属性が、しない限りが、[ライブラリ] ノード内に入れ子にするプロパティを追加することもできます。  
+    >  プロジェクトに属性が設定されていない限り、ライブラリ ノード内で入れ子にされるディスパッチ インターフェイスに、プロパティを追加することもできます。  
   
-2.  ショートカット メニューをクリックして**追加**、クリックして**プロパティの追加**です。  
+2.  ショートカット メニューから、**[追加]**、**[プロパティの追加]** の順にクリックします。  
   
-3.  [プロパティの追加ウィザード](../ide/names-add-property-wizard.md)プロパティの作成に情報を提供します。  
+3.  [プロパティ追加ウィザード](../ide/names-add-property-wizard.md)で、情報を指定してプロパティを作成します。  
   
-4.  内のプロパティの任意のインターフェイス定義言語 (IDL) の設定を指定、 [IDL 属性](../ide/idl-attributes-add-property-wizard.md)ウィザードのページです。  
+4.  ウィザードの [[IDL 属性]](../ide/idl-attributes-add-property-wizard.md) ページで、プロパティのインターフェイス定義言語 (IDL) 設定を指定します。  
   
-5.  をクリックして**完了**プロパティを追加します。  
+5.  **[完了]** をクリックしてプロパティを追加します。  
   
- **取得**と`Put`プロパティのメソッドがクラス ビューで定義されているインターフェイスの下の 2 つのアイコンとして表示されます。 .Idl ファイルのプロパティの宣言を表示するいずれかのアイコンをダブルクリックすることができます。  
+ プロパティの **Get** メソッドと `Put` メソッドは、定義されているインターフェイスの下のクラス ビューに 2 つのアイコンとして表示されます。 いずれかのアイコンをダブルクリックして、.idl ファイルのプロパティ宣言を表示できます。  
   
--   ATL のインターフェイスで、**取得**と**Put**関数は、.cpp ファイルに追加され、これらの関数への参照は、.h ファイルに追加されます。  
+-   ATL インターフェイスについては、**Get** 関数と **Put** 関数が .cpp ファイルに追加され、これらの関数への参照が .h ファイルに追加されます。  
   
--   選択した場合は、MFC ディスパッチ インターフェイス**メンバー変数**実装の型としては、それを実装するクラスにメソッドと変数を追加します。 します。 選択した場合**Get/set メソッド**実装の種類として、2 つのメソッドが実装するクラスに追加されます。  
+-   MFC ディスパッチ インターフェイスについては、実装型として**メンバー変数**を選択した場合、メソッドと変数が実装するクラスに追加されます。 実装型として **Get/Set メソッド**を選択した場合、2 つのメソッドが実装するクラスに追加されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [COM インターフェイスの作成](../ide/creating-a-com-interface-visual-cpp.md)   
  [COM インターフェイスの編集](../ide/editing-a-com-interface.md)   
  [コンポーネント オブジェクト モデル](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
