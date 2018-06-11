@@ -1,5 +1,5 @@
 ---
-title: メイクファイル プロジェクト ウィザード |Microsoft ドキュメント
+title: メイクファイル アプリケーション ウィザード | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b4ea6619804c4215ecb53fa0e92a2b12bbdc5e31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33334400"
 ---
 # <a name="makefile-project-wizard"></a>メイクファイル アプリケーション ウィザード
-このウィザードを使用するのコマンドラインを実行するのにビルド エンジンを作成できます。 プロジェクトを作成すると、表示して、プロジェクトのプロジェクトのプロパティを編集[プロパティ ページ](../ide/working-with-project-properties.md)です。  
+このウィザードを使用し、ビルド エンジンで実行するコマンド ラインを作成します。 プロジェクトを作成すると、プロジェクトの[プロパティ ページ](../ide/working-with-project-properties.md)でプロジェクトのプロパティを表示し、編集できます。  
   
 ## <a name="overview"></a>概要  
- このウィザード ページでは、作成しているプロジェクトの現在のプロジェクト設定について説明します。 既定では、プロジェクトがセットアップに両方のデバッグ ビルドし、リリース構成の*ProjName*.exe です。  
+ このウィザード ページでは、作成するプロジェクトの現在のプロジェクト設定が示されます。 既定では、*ProjName*.exe のデバッグ構成とリリース構成を両方ビルドするようにプロジェクトが設定されます。  
   
- これらの既定値を変更するには、クリックして、[アプリケーション設定](../ide/application-settings-makefile-project-wizard.md) タブで、ウィザードの左の列を必要な変更を行います。  
+ これらの既定値を変更するには、ウィザードの左の列にある [[アプリケーションの設定]](../ide/application-settings-makefile-project-wizard.md) タブを使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メイクファイル プロジェクトの作成](../ide/creating-a-makefile-project.md)   
  [NMAKE リファレンス](../build/nmake-reference.md)   
  [メイクファイルの特殊文字](../build/special-characters-in-a-makefile.md)   

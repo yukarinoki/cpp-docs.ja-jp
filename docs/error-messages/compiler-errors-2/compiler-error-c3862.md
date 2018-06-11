@@ -16,27 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25b0a344eaafedc2f7c0eb60141e3a07fd86c6af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b21e457feb6d090e4abaf531293987eb3504457
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704972"
 ---
 # <a name="compiler-error-c3862"></a>コンパイラ エラー C3862
-'function':/clr でアンマネージ関数をコンパイルできません:/clr:pure または/clr:safe  
-  
- コンパイラ オプションの **/clr:pure** と **/clr:safe** は Visual Studio 2015 で非推奨とされています。  
-  
- 使用してコンパイル **/clr: 純粋な**または **/clr:safe**はイメージとネイティブ (アンマネージ) コードを含まない、MSIL のみイメージを生成します。  したがって、使用することはできません、`unmanaged`プラグマ、 **/clr: 純粋な**または **/clr:safe**コンパイルします。  
-  
- 詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C3862 が生成されます。  
-  
-```  
-// C3862.cpp  
-// compile with: /clr:pure /c  
-#pragma unmanaged  
-void f() {}   // C3862  
+
+> '*関数*':/clr でアンマネージ関数をコンパイルできません:/clr:pure または/clr:safe
+
+## <a name="remarks"></a>コメント
+
+**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+
+使用してコンパイル **/clr: 純粋な**または **/clr:safe**はイメージとネイティブ (アンマネージ) コードを含まない、MSIL のみイメージを生成します。  したがって、使用することはできません、`unmanaged`プラグマ、 **/clr: 純粋な**または **/clr:safe**コンパイルします。
+
+詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)です。
+
+## <a name="example"></a>例
+
+次の例では、C3862 が生成されます。
+
+```cpp
+// C3862.cpp
+// compile with: /clr:pure /c
+#pragma unmanaged
+void f() {}   // C3862
 ```

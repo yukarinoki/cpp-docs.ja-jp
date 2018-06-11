@@ -1,5 +1,5 @@
 ---
-title: 以前のランタイム バージョンで C++ と clr アプリケーションの実行 |Microsoft ドキュメント
+title: 以前のランタイム バージョンでの C++ /clr アプリケーションの実行 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,23 +22,24 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323616"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>以前のランタイム バージョンでの C++ /clr アプリケーションの実行
-未指定のそれ以外の場合、コンパイラが、アプリケーションをビルドに使用するバージョンの共通言語ランタイム (CLR) で実行する、C++ の .NET Framework のアプリケーションが作成されています。 ただし、1 つのバージョンの必要な機能を提供するその他のバージョンで実行するランタイムの構築された .exe アプリケーションです。  
+特に指定されていない限り、C++ .NET Framework アプリケーションは、コンパイラがアプリケーションをビルドするのに使用した共通言語ランタイム (CLR) バージョン上で実行されるようビルドされています。 ただし、ランタイムの 1 つのバージョン用にビルドされた .exe アプリケーションを、必要な機能がある他の任意のバージョン上で実行することは可能です。  
   
- これを実現するには、ランタイム バージョン情報を含む app.config ファイルを提供、`supportedRuntime`タグ。  
+ これを行うには、ランタイムのバージョン情報を含む app.config ファイルを `supportedRuntime` タグに指定します。  
   
- 実行時に、app.config ファイルが、フォームの名前をいる必要があります *.ext という*.config を場所 *.ext という*アプリケーションを開始した実行可能ファイルの名前を指定し、これと同じディレクトリに存在する必要があります実行可能ファイルです。 たとえば、アプリケーションが TestApp.exe をという名前の場合、app.config ファイルの名前は TestApp.exe.config します。  
+ 実行時の app.config ファイルは、*filename.ext*.config という名前形式である必要があります。ここで、*filename.ext* は、アプリケーションを開始する実行可能ファイルであり、実行可能ファイルと同じディレクトリに存在している必要があります。 たとえば、アプリケーション名が TestApp.exe である場合、app.config ファイルの名前は TestApp.exe.config になります。  
   
- 1 つ以上のランタイム バージョンを指定して、1 つ以上インストールされているランタイム バージョンをあるコンピューターでアプリケーションを実行する場合、アプリケーションがインストールされている構成ファイルで指定されている最初のバージョンを使用します。  
+ 2 つ以上ランタイム バージョンを指定し、複数のランタイム バージョンがインストールされているコンピューターでアプリケーションを実行した場合、アプリケーションでは、config ファイルで指定されてインストールされている最初のバージョンが使用されます。  
   
- 詳細については、次を参照してください。[する方法: .NET Framework のバージョンを対象とするアプリを構成する](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717)です。  
+ 詳細については、「[方法: アプリを構成して、対象となる .NET Framework のバージョンを指定する](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717)」を参照してください。  
   
- Version 1.0 または CLR では、Visual C でビルドしたアプリケーションのバージョン 1.1 で実行するのには、コンパイラを使用してコンパイルする必要があります[/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md)です。  
+ CLR のバージョン 1.0 またはバージョン 1.1 で実行する場合、Visual C++ コンパイラでビルドしたアプリケーションは、[/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) を使用してコンパイルされている必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)

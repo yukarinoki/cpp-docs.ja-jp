@@ -1,5 +1,5 @@
 ---
-title: 追加する方法 (Visual C) |Microsoft ドキュメント
+title: メソッドの追加 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b247b0e21112d6a2be2384fafbf43fc295b22c71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33324435"
 ---
 # <a name="adding-a-method--visual-c"></a>メソッドの追加 (Visual C++)
-使用することができます、[メソッド追加ウィザード](../ide/add-method-wizard.md)プロジェクト内のインターフェイスにメソッドを追加します。 プロジェクトに、インターフェイスに関連付けられたクラスが含まれている場合、ウィザードは、クラスをすぎるを変更します。  
+[メソッド追加ウィザード](../ide/add-method-wizard.md)を使用して、プロジェクトのインターフェイスにメソッドを追加できます。 インターフェイスに関連付けられたクラスがプロジェクトに含まれている場合、ウィザードではクラスも変更します。  
   
 ### <a name="to-add-a-method-to-your-object"></a>オブジェクトにメソッドを追加するには  
   
-1.  クラス ビュー で、メソッドを追加するインターフェイスを表示するプロジェクト ノードを展開します。  
+1.  [クラス ビュー] でプロジェクト ノードを展開し、メソッドを追加するインターフェイスを表示します。  
   
     > [!NOTE]
-    >  ディスパッチ インターフェイスは、プロジェクトに属性がない限りはライブラリ ノードの下にあるにメソッドを追加することもできます。  
+    >  プロジェクトに属性が設定されていない限り、ライブラリ ノード下にあるディスパッチ インターフェイスに、メソッドを追加することもできます。  
   
-2.  インターフェイスの名前を右クリックします。  
+2.  インターフェイス名を右クリックします。  
   
-3.  ショートカット メニューをクリックして**追加**、クリックして**メソッドの追加**です。  
+3.  ショートカット メニューの **[追加]**、**[メソッドの追加]** を順にクリックします。  
   
-4.  メソッドの追加ウィザードでは、メソッドを作成する情報を指定します。  
+4.  メソッド追加ウィザードで、メソッドを作成する情報を指定します。  
   
-5.  このメソッドの任意のインターフェイス定義言語の設定を指定、 [IDL 属性](../ide/idl-attributes-add-method-wizard.md)ウィザードのページです。  
+5.  ウィザードの [[IDL 属性]](../ide/idl-attributes-add-method-wizard.md) ページで、このメソッドのインターフェイス定義言語設定を指定します。  
   
-6.  をクリックして**完了**メソッドを追加します。  
+6.  **[完了]** をクリックしてメソッドを追加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [COM インターフェイスの作成](../ide/creating-a-com-interface-visual-cpp.md)   
  [COM インターフェイスの編集](../ide/editing-a-com-interface.md)

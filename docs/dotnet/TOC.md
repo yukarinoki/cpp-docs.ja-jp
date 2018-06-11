@@ -104,7 +104,6 @@
 #### [初期化子リスト](initializer-lists.md)
 #### [キャスト表記と safe_cast<> の導入](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [純粋なコードと検証可能なコード (C++/CLI)](pure-and-verifiable-code-cpp-cli.md)
-### [混合、純粋、および確認可能の各機能の比較 (C++/CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
 ### [方法: 確認可能な C++ プロジェクトを作成する (C++/CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [方法: -clr:safe に移行する (C++/CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [SQL Server での確認可能なアセンブリの使用 (C++/CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)

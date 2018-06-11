@@ -1,5 +1,5 @@
 ---
-title: '&lt;para&gt; (Visual C) |Microsoft ドキュメント'
+title: '&lt;para&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325118"
 ---
-# <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C)
+# <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 \<para> タグは、[\<summary>](../ide/summary-visual-cpp.md)、[\<remarks>](../ide/remarks-visual-cpp.md)、または [\<returns>](../ide/returns-visual-cpp.md) などのタグ内で使用し、テキストに構造を追加することができます。  
   
 ## <a name="syntax"></a>構文  
@@ -43,5 +44,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="example"></a>例  
  \<para> の使用例については、「[\<summary>](../ide/summary-visual-cpp.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

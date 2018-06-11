@@ -16,26 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 543884392698a7a713dbc4c0bfd10dd19fcb0b1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45f9ccdef84713883c53dab0e7caf3b1519628de
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704228"
 ---
 # <a name="compiler-error-c2434"></a>コンパイラ エラー C2434
-'symbol': __declspec(process) と共に宣言されたシンボルは/clr で動的に初期化できません: 純粋モード  
-  
- コンパイラ オプションの **/clr:pure** と **/clr:safe** は Visual Studio 2015 で非推奨とされています。  
-  
- プロセスごとの変数を動的に初期化することはできません **/clr: 純粋な**します。 詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[プロセス](../../cpp/process.md)です。  
-  
-## <a name="example"></a>例  
- 次の例では、C2434 を生成します。  
-  
-```  
-// C2434.cpp  
-// compile with: /clr:pure /c  
-int f() { return 0; }  
-__declspec(process) int i = f();   // C2434  
-__declspec(process) int i2 = 0;   // OK  
+
+> '*シンボル*': __declspec(process) と共に宣言されたシンボルは/clr で動的に初期化できません: 純粋モード
+
+## <a name="remarks"></a>コメント
+
+**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+
+プロセスごとの変数を動的に初期化することはできません **/clr: 純粋な**します。 詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[プロセス](../../cpp/process.md)です。
+
+## <a name="example"></a>例
+
+次の例では、C2434 を生成します。 この問題を解決する定数を使用して初期化`process`変数。
+
+```cpp
+// C2434.cpp
+// compile with: /clr:pure /c
+int f() { return 0; }
+__declspec(process) int i = f();   // C2434
+__declspec(process) int i2 = 0;   // OK
 ```

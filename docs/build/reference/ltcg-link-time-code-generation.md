@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703734"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (リンク時のコード生成)
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/03/2018
 
 [/GL](../../build/reference/gl-whole-program-optimization.md) と [/clr](../../build/reference/clr-common-language-runtime-compilation.md) を使用してコンパイルされたモジュールは、 **/LTCG** が指定されている場合にリンカーへの入力として使用できます。
 
-- **/LTCG**ネイティブ オブジェクト ファイルを受け入れることができるし、混合ネイティブ/マネージ オブジェクト ファイル (を使用してコンパイル **/clr**)。 コンパイラ オプションの **/clr:pure** と **/clr:safe** は Visual Studio 2015 で非推奨とされています。
+- **/LTCG**ネイティブ オブジェクト ファイルを受け入れることができるし、混合ネイティブ/マネージ オブジェクト ファイル (を使用してコンパイル **/clr**)。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
 
 - **/LTCG:PGI**を使用してコンパイルしたネイティブ モジュールを受け付けない **/GL**と **/clr**
 
@@ -161,5 +162,5 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)<br/>
+- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)
+- [リンカー オプション](../../build/reference/linker-options.md)

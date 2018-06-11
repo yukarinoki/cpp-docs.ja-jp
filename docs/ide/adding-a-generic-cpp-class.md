@@ -1,5 +1,5 @@
 ---
-title: 一般 C++ クラスを追加する |Microsoft ドキュメント
+title: 汎用 C++ クラスの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33326473"
 ---
 # <a name="adding-a-generic-c-class"></a>一般 C++ クラスの追加
-使用して汎用 C++ クラスを追加することができます**クラス ビュー**です。 一般 C++ クラスは、定義または定義したクラスから派生するクラスです。  
+**クラス ビュー**を使用して、汎用 C++ クラスを追加することができます。 汎用 C++ クラスは、定義するクラス、または定義するクラスから派生したクラスです。  
   
-### <a name="to-add-a-generic-c-class-to-a-project"></a>一般 C++ クラスをプロジェクトに追加するには  
+### <a name="to-add-a-generic-c-class-to-a-project"></a>汎用 C++ クラスをプロジェクトに追加するには  
   
-1.  **クラス ビュー**は、新しいクラスを追加するプロジェクトを右クリックして**追加**、クリックして**クラス**です。  
+1.  **クラス ビュー**で、新しいクラスを追加するプロジェクトを右クリックし、**[追加]**、**[クラス]** の順にクリックします。  
   
-2.  [クラスの追加](../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**C++ クラス**です。 をクリックして**追加**を表示する、[汎用 C++ クラス ウィザード](../ide/generic-cpp-class-wizard.md)です。  
+2.  [[クラスの追加]](../ide/add-class-dialog-box.md) ダイアログ ボックスのテンプレート ウィンドウで **[C++ クラス]** をクリックします。 **[追加]** をクリックして、[[汎用 C++ クラス ウィザード]](../ide/generic-cpp-class-wizard.md) を表示します。  
   
-3.  ウィザードで、クラスの名前を指定する設定を定義したり、既定値です。  
+3.  ウィザードでクラス名を指定し、設定を定義するか、既定値を受け入れます。  
   
-4.  クリックして、ウィザードを終了し、プロジェクトで、新しい汎用 C++ クラスを表示、**完了**です。  
+4.  ウィザードを閉じてプロジェクトに新しい汎用 C++ クラスを表示するには、**[完了]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [クラスの追加](../ide/adding-a-class-visual-cpp.md)   
  [MFC クラス](../mfc/reference/adding-an-mfc-class.md)   
  [ATL シンプル オブジェクト](../atl/reference/adding-an-atl-simple-object.md)

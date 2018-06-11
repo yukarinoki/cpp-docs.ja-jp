@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705700"
 ---
 # <a name="makefile-project-properties-linux-c"></a>メイクファイル プロジェクトのプロパティ (Linux C++)
 
@@ -92,7 +93,7 @@ IntelliSense プロパティはプロジェクトまたはファイル レベル
 強制インクルード | 必ずインクルードされるファイルを指定します。
 プリプロセッサの定義 | ソース ファイルで使用されるプリプロセッサの定義を指定します。
 指定したプリプロセッサ定義の無効化 | 1 つ以上のプリプロセッサ定義の無効化を指定します。     (/U[macro])
-その他のオプション | C++ ファイルの解析時に Intellisense によって使用される追加のコンパイラ スイッチを指定します。
+その他のオプション | C++ ファイルの解析時に IntelliSense によって使用される追加のコンパイラ スイッチを指定します。
 
 ### <a name="build"></a>ビルド
 

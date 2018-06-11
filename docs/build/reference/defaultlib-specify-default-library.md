@@ -1,7 +1,7 @@
 ---
-title: -DEFAULTLIB (既定のライブラリの指定) |Microsoft ドキュメント
+title: /DEFAULTLIB (既定のライブラリの指定) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,36 +20,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48db05ea50917a09e618c782d86dace73a1bf7e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9afcaa0e229ec34ba91b4d60a7a4fa9acec2d7e3
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569782"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (既定のライブラリの指定)
-```  
-/DEFAULTLIB:library  
-```  
-  
-## <a name="remarks"></a>コメント  
- それぞれの文字について以下に説明します。  
-  
- *ライブラリ*  
- 外部参照を解決するときに検索するライブラリの名前。  
-  
-## <a name="remarks"></a>コメント  
- /DEFAULTLIB オプションは、1 を加算*ライブラリ*リンク参照の解決時に検索するライブラリの一覧にします。 /DEFAULTLIB で指定したライブラリは、.obj ファイル内の既定のライブラリの前に、コマンドラインで指定したライブラリ後が検索されます。  
-  
- [すべて既定のライブラリの無視](../../build/reference/nodefaultlib-ignore-libraries.md)(/NODEFAULTLIB) オプションをオーバーライド/DEFAULTLIB:*ライブラリ*です。 [ライブラリの無視](../../build/reference/nodefaultlib-ignore-libraries.md)(/NODEFAULTLIB:*ライブラリ*) オプションをオーバーライド/DEFAULTLIB:*ライブラリ*とき同じ*ライブラリ*名は両方で指定します。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには  
-  
--   このリンカー オプションでは、Visual Studio 開発環境から使用できません。 リンク時にライブラリを追加するには、使用、**追加の依存関係**プロパティから、**入力**プロパティ ページ。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには  
-  
--   「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。  
-  
-## <a name="see-also"></a>関連項目  
- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)   
- [リンカー オプション](../../build/reference/linker-options.md)
+
+外部参照を解決するのには検索する既定のライブラリを指定します。
+
+## <a name="syntax"></a>構文
+
+> **/DEFAULTLIB**:_ライブラリ_
+
+### <a name="arguments"></a>引数
+
+|引数|説明|
+|-|-|
+*ライブラリ*|外部参照を解決するときに検索するライブラリの名前。
+
+## <a name="remarks"></a>コメント
+
+**/DEFAULTLIB**オプションでは、1 つ追加*ライブラリ*リンク参照の解決時に検索するライブラリの一覧にします。 指定されたライブラリ **/DEFAULTLIB**後、コマンドラインでと .obj ファイル内の既定のライブラリの前に明示的に指定されたライブラリを検索します。
+
+引数を指定せずに使用する場合、 [/NODEFAULTLIB (すべて既定のライブラリの無視)](../../build/reference/nodefaultlib-ignore-libraries.md)オプションはすべて、オーバーライド **/DEFAULTLIB**:*ライブラリ*オプション。 **/NODEFAULTLIB**:*ライブラリ*オプションにより **/DEFAULTLIB**:*ライブラリ*とき同じ*ライブラリ*両方の名前を指定します。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+
+1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+
+1. **追加オプション**、入力、 **/DEFAULTLIB**:*ライブラリ*を検索するには、各ライブラリのオプションです。 選択**OK**して変更を保存します。
+
+### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
+
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。
+
+## <a name="see-also"></a>関連項目
+
+- [リンカー オプションの設定](../../build/reference/setting-linker-options.md)
+- [リンカー オプション](../../build/reference/linker-options.md)

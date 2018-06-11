@@ -1,5 +1,5 @@
 ---
-title: '&lt;値&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;value&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325397"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;値&gt;(Visual C)
-\<値 > タグでは、プロパティおよびプロパティ アクセサー メソッドについて説明することができます。 Visual Studio 統合開発環境でコード ウィザードを使用して、プロパティを追加する場合に追加、 [\<概要 >](../ide/summary-visual-cpp.md)新しいプロパティのタグ。 その後、手動で \<value> タグを追加してプロパティが表す値を記述する必要があります。  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+\<value> タグでは、プロパティとプロパティ アクセサー メソッドを記述することができます。 Visual Studio 統合開発環境では、コード ウィザードを使用してプロパティを追加するときに、新しいプロパティの [\<summary>](../ide/summary-visual-cpp.md) タグが追加されることに注意してください。 その後、手動で \<value> タグを追加してプロパティが表す値を記述する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,5 +65,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

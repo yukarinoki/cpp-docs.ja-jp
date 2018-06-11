@@ -1,5 +1,5 @@
 ---
-title: ATL アプリケーションの再配布 |Microsoft ドキュメント
+title: ATL アプリケーションの再配布 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,10 +18,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33326385"
 ---
 # <a name="redistributing-an-atl-application"></a>ATL アプリケーションの再配布
 Visual Studio 2012 以降の Active Template Library (ATL) はヘッダーのみのライブラリです。 ATL プロジェクトには、ATL オプションへの動的リンクはありません。 再配布可能 ATL ライブラリは必要ありません。  
@@ -34,11 +35,11 @@ filename /regserver
   
  `filename` は実行可能ファイルの名前です。  
   
- Visual Studio 2010 では、MinDependency または MinSize 構成用に ATL プロジェクトをビルドできます。 MinDependency 構成では、設定するときに取得、 **ATL の使用**プロパティを**ATL に静的にリンク**上、**全般**プロパティ ページとセット、 **ランタイム ライブラリ**プロパティを**マルチ スレッド (/MT)** 上、**コード生成**プロパティ ページ ([C/C++] フォルダー)。  
+ Visual Studio 2010 では、MinDependency または MinSize 構成用に ATL プロジェクトをビルドできます。 MinDependency 構成は、**[全般]** プロパティ ページの **[ATL の使用]** プロパティを **[ATL に静的にリンク]** に設定し、**[コード生成]** プロパティ ページ ([C/C++] フォルダー) の **[ランタイム タイブラリ]** プロパティを **[マルチスレッド (/MT)]** に設定した場合です。  
   
- MinSize 構成では、設定するときに取得、 **ATL の使用**プロパティを**ATL に動的にリンク**上、**全般**プロパティ ページ、またはセット、**ランタイムライブラリ**プロパティを**マルチ スレッド DLL (/MD)** 上、**コード生成**プロパティ ページ ([C/C++] フォルダー)。  
+ MinSize 構成は、**[全般]** プロパティ ページの **[ATL の使用]** プロパティを **[ATL に動的にリンク]** に設定し、**[コード生成]** プロパティ ページ ([C/C++] フォルダー) の **[ランタイム タイブラリ]** プロパティを **[マルチスレッド DLL (/MD)]** に設定した場合です。  
   
- MinSize により、出力ファイルは小さいことが必要 ATL100.dll と Msvcr100.dll (選択した場合、**マルチ スレッド DLL (/MD)** オプション) は、ターゲット コンピューターにします。 すべての ATL 機能を使用できるようにするために、ATL100.dll をターゲット コンピューターに登録する必要があります。 ATL100.dll には ANSI および Unicode エクスポートが含まれています。  
+ MinSize を使用すると、出力ファイルは可能な範囲で最小になりますが、ターゲット コンピューターに ATL100.dll と Msvcr100.dll (**[マルチスレッド DLL (/MD)]** オプションを選択した場合) が必要になります。 すべての ATL 機能を使用できるようにするために、ATL100.dll をターゲット コンピューターに登録する必要があります。 ATL100.dll には ANSI および Unicode エクスポートが含まれています。  
   
  ATL または OLE DB テンプレート プロジェクトを MinDependency ターゲット用にビルドした場合、ターゲット コンピューターへの ATL100.dll のインストールと登録は不要ですが、プログラム イメージが大きくなります。  
   
@@ -50,7 +51,7 @@ filename /regserver
   
  `filename` は実行可能ファイルの名前です。  
   
- OLE DB テンプレート アプリケーションを再配布する場合は、ターゲット コンピューターに最新バージョンの Microsoft Data Access Components (MDAC) ファイルが必要です。 詳細については、次を参照してください。[データベース サポート ファイルの再配布](../ide/redistributing-database-support-files.md)です。  
+ OLE DB テンプレート アプリケーションを再配布する場合は、ターゲット コンピューターに最新バージョンの Microsoft Data Access Components (MDAC) ファイルが必要です。 詳細については、「[Redistributing Database Support Files](../ide/redistributing-database-support-files.md)」 (データベース サポート ファイルの再配布) を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)

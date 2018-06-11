@@ -1,5 +1,5 @@
 ---
-title: 純粋仮想を実装して |Microsoft ドキュメント
+title: 純粋仮想の実装 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -11,30 +11,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33328027"
 ---
-# <a name="implement-pure-virtuals"></a>純粋仮想を実装します。
-**新機能:** 直ちにクラスですべての純粋仮想メソッドを実装するために必要なコードを生成することができます。 
+# <a name="implement-pure-virtuals"></a>純粋仮想の実装
+**機能:** クラスですべての純粋仮想を実装するために必要なコードをすぐに生成できます。 
 
-**条件:** 純粋仮想関数を持つクラスから継承します。  
+**条件:** 純粋仮想関数のクラスからの継承が望まれるとき。  
 
-**理由:** すべて純粋仮想関数を 1 つずつを手動で実装でしたが、この機能では、すべてのメソッド署名を自動的に作成されます。
+**理由:** すべての純粋仮想関数は 1 つずつ手動で実装できますが、この機能ではすべてのメソッド シグネチャが自動的に生成されます。
 
 **方法:**
 
-1. 基本クラスの純粋仮想関数を実装するクラスにテキストまたはマウス カーソルを置きます。
+1. 基底クラスの純粋仮想関数を実装するクラスにテキストまたはマウス カーソルを置きます。
 
    ![強調表示されたコード](images/virtuals_highlight.png)
 
 1. 次に、以下のいずれかを実行します。
    * **キーボード**
-     * **Ctrl + .** キーを押して、 トリガーに、**クイック アクションとリファクタリング**メニュー**クラスのすべての純粋仮想を実装する*ClassName*'** 、コンテキスト メニューから場所*ClassName*選択したクラスの名前を指定します。
+     * **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、コンテキスト メニューから **[Implement all Pure Virtuals for class '*ClassName*’]\(クラス 'ClassName' のすべての純粋仮想を実装\)** を選択します。*ClassName* は、選択されたクラスの名前になります。
    * **マウス**
-     * 右クリックし、選択、**クイック アクションとリファクタリング**メニュー**クラスのすべての純粋仮想を実装する*ClassName*'** コンテキスト メニューから場所*ClassName*選択したクラスの名前を指定します。
+     * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、コンテキスト メニューから **[Implement all Pure Virtuals for class '*ClassName*']\(クラス 'ClassName' のすべての純粋仮想を実装\)** を選択します。*ClassName* は、選択されたクラスの名前になります。
 
-1. 純粋仮想メソッドのシグネチャは、自動的に作成された、実装する準備完了になります。
+1. 純粋仮想メソッドのシグネチャが自動的に作成され、実装する準備が整います。
 
-   ![純粋仮想の実装結果します。](images/virtuals_result.png)
+   ![純粋仮想の実装の結果](images/virtuals_result.png)

@@ -39,33 +39,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7cccd76f428ea2e1234a0e2da54452c051e683d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704887"
 ---
 # <a name="link-options"></a>リンク オプション
-CRT lib ディレクトリには、コード変更を加えずに特定の CRT 機能を有効にする複数のオブジェクト ファイルが含まれます。 これらは、リンカー コマンド ラインに追加するだけで使用することができるため、「リンク オプション」と呼ばれます。  
-  
- ピュア モード バージョンは、Visual Studio 2015 から非推奨とされます。 ネイティブおよび /clr コードに標準のバージョンを使用してください。  
-  
-|ネイティブおよび /clr|ピュア モード|説明|  
-|----------------------|---------------|-----------------|  
-|binmode.obj|pbinmode.obj|既定のファイルの変換モードをバイナリに設定します。 [_fmode](../c-runtime-library/fmode.md) をご覧ください。|  
-|chkstk.obj|N/A|CRT を使用していない場合にスタック チェックと alloca サポートを提供します。|  
-|commode.obj|pcommode.obj|グローバル コミット フラグを "コミット" に設定します。 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) および [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) をご覧ください。|  
-|fp10.obj|N/A|既定の精度制御を 64 ビットに変更します。 「[浮動小数点サポート](../c-runtime-library/floating-point-support.md)」をご覧ください。|  
-|invalidcontinue.obj|pinvalidcontinue.obj|何もしない既定の無効なパラメーター ハンドラーを設定します。つまり、CRT 関数に渡される無効なパラメーターによってエラー番号が設定され、エラーの結果が返されます。|  
-|loosefpmath.obj|N/A|浮動小数点コードが非正規化値を許容するようにします。|  
-|newmode.obj|pnewmode.obj|失敗時に [malloc](../c-runtime-library/reference/malloc.md) が新しいハンドラーを呼び出すようにします。 [_set_new_mode](../c-runtime-library/reference/set-new-mode.md)、[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)、[calloc](../c-runtime-library/reference/calloc.md)、[realloc](../c-runtime-library/reference/realloc.md) をご覧ください。|  
-|noarg.obj|pnoarg.obj|argc および argv のすべてのプロセスを無効にします。|  
-|nochkclr.obj|N/A|処理を行いません。 プロジェクトから削除してください。|  
-|noenv.obj|pnoenv.obj|CRT のキャッシュ済み環境の作成を無効にします。|  
-|nothrownew.obj|pnothrownew.obj|CRT で new のスローしないバージョンを有効にします。 「[new および delete 演算子](../cpp/new-and-delete-operators.md)」をご覧ください。|  
-|setargv.obj|psetargv.obj|コマンド ライン引数のワイルドカードの展開を有効にします。 「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」をご覧ください。|  
-|threadlocale.obj|pthreadlocale.obj|既定ですべての新しいスレッドに対してスレッド単位のロケールを有効にします。|  
-|wsetargv.obj|pwsetargv.obj|コマンド ライン引数のワイルドカードの展開を有効にします。 「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」をご覧ください。|  
-  
-## <a name="see-also"></a>参照  
- [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+
+CRT lib ディレクトリには、コード変更を加えずに特定の CRT 機能を有効にする複数のオブジェクト ファイルが含まれます。 これらは、リンカー コマンド ラインに追加するだけで使用することができるため、「リンク オプション」と呼ばれます。
+
+これらのオブジェクトの CLR ピュア モード バージョンは、Visual Studio 2015 で非推奨となり、Visual Studio 2017 ではサポートされていません。 ネイティブおよび /clr コードに標準のバージョンを使用してください。
+
+|ネイティブおよび /clr|ピュア モード|説明|
+|----------------------|---------------|-----------------|
+|binmode.obj|pbinmode.obj|既定のファイルの変換モードをバイナリに設定します。 [_fmode](../c-runtime-library/fmode.md) をご覧ください。|
+|chkstk.obj|N/A|CRT を使用していない場合にスタック チェックと alloca サポートを提供します。|
+|commode.obj|pcommode.obj|グローバル コミット フラグを "コミット" に設定します。 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) および [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) をご覧ください。|
+|fp10.obj|N/A|既定の精度制御を 64 ビットに変更します。 「[浮動小数点サポート](../c-runtime-library/floating-point-support.md)」をご覧ください。|
+|invalidcontinue.obj|pinvalidcontinue.obj|何もしない既定の無効なパラメーター ハンドラーを設定します。つまり、CRT 関数に渡される無効なパラメーターによってエラー番号が設定され、エラーの結果が返されます。|
+|loosefpmath.obj|N/A|浮動小数点コードが非正規化値を許容するようにします。|
+|newmode.obj|pnewmode.obj|失敗時に [malloc](../c-runtime-library/reference/malloc.md) が新しいハンドラーを呼び出すようにします。 [_set_new_mode](../c-runtime-library/reference/set-new-mode.md)、[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)、[calloc](../c-runtime-library/reference/calloc.md)、[realloc](../c-runtime-library/reference/realloc.md) をご覧ください。|
+|noarg.obj|pnoarg.obj|argc および argv のすべてのプロセスを無効にします。|
+|nochkclr.obj|N/A|処理を行いません。 プロジェクトから削除してください。|
+|noenv.obj|pnoenv.obj|CRT のキャッシュ済み環境の作成を無効にします。|
+|nothrownew.obj|pnothrownew.obj|CRT で new のスローしないバージョンを有効にします。 「[new および delete 演算子](../cpp/new-and-delete-operators.md)」をご覧ください。|
+|setargv.obj|psetargv.obj|コマンド ライン引数のワイルドカードの展開を有効にします。 「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」をご覧ください。|
+|threadlocale.obj|pthreadlocale.obj|既定ですべての新しいスレッドに対してスレッド単位のロケールを有効にします。|
+|wsetargv.obj|pwsetargv.obj|コマンド ライン引数のワイルドカードの展開を有効にします。 「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」をご覧ください。|
+
+## <a name="see-also"></a>関連項目
+
+- [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)

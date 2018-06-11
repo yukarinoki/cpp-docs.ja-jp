@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref&gt; (Visual C) |Microsoft ドキュメント'
+title: '&lt;paramref&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33326584"
 ---
-# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C)
-\<Paramref > タグを使用する単語がパラメーターであることを示します。 .Xml ファイルを処理することで、このパラメーターに対して異なる書式を設定します。  
+# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
+\<paramref> タグは、単語がパラメーターであることを示す方法を提供します。 .xml ファイルを処理することで、いくつかの独自の方法でこのパラメーターの書式設定を行うことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,5 +56,5 @@ public ref class MyClass {
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

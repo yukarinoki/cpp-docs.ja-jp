@@ -1,5 +1,5 @@
 ---
-title: ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル |Microsoft ドキュメント
+title: ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3e8e5065cebab002e9c48aef560eb9f2feab67e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33321627"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル
-作成するプロジェクトに対して選択したオプションによって、Visual Studio で、ATL プロジェクトを作成するときに、次のファイルが作成されます。  
+Visual Studio で ATL プロジェクトを作成する場合、作成するプロジェクト用に選択したオプションに応じて、次のファイルが作成されます。  
   
- これらすべてのファイル内にある、 *Projname*ディレクトリ、およびヘッダー ファイル (.h) フォルダーまたはソリューション エクスプ ローラーでフォルダーをソース ファイル (.cpp ファイル) のいずれか。  
+ これらのファイルはすべて、*Projname* ディレクトリ、およびソリューション エクスプローラーのヘッダー ファイル (.h ファイル) フォルダーまたはソース ファイル (.cpp ファイル) フォルダーにあります。  
   
 |ファイル名|説明|  
 |---------------|-----------------|  
-|*Projname*.h|C++ のインターフェイスの定義となインクルードで定義された項目の GUID の宣言を含むメインのインクルード ファイル。 MIDL によってコンパイル時に再生成されます。|  
-|*Projname*.cpp|メイン プログラムのソース ファイルです。 実装と、インプロセス サーバー DLL のエクスポートの実装が含まれている`WinMain`ローカル サーバーです。 サービスの場合はこのさらに、すべてのサービス管理機能を実装します。|  
-|Resource.h|リソース ファイルのヘッダー ファイル。|  
-|StdAfx.cpp|StdAfx.h と Atlimpl.cpp ファイルが含まれます。|  
-|StdAfx.h|ATL ヘッダー ファイルが含まれます。|  
+|*Projname*.h|ATLSample.idl に定義されている項目の C++ インターフェイスの定義および GUID の宣言が含まれた主要なインクルード ファイルです。 これは、コンパイル時に MIDL によって再生成されます。|  
+|*Projname*.cpp|プログラムの主要なソース ファイルです。 これには、インプロセス サーバーの DLL のエクスポートの実装と、ローカル サーバーの `WinMain` の実装が含まれています。 サービス用に、追加ですべてのサービス管理機能が実装されています。|  
+|Resource.h|リソース ファイルのヘッダー ファイルです。|  
+|StdAfx.cpp|StdAfx.h および Atlimpl.cpp ファイルが含まれています。|  
+|StdAfx.h|ATL ヘッダー ファイルを含みます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)   
  [MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル](../ide/mfc-program-or-control-source-and-header-files.md)   
  [CLR プロジェクト](../ide/files-created-for-clr-projects.md)

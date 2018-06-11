@@ -1,5 +1,5 @@
 ---
-title: クラス各部へ (Visual C) |Microsoft ドキュメント
+title: クラス各部へのジャンプ (Visual C++) | Microsoft Doc
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,18 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c6612d215902657aed9869e66be93b8b2ea2da25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330234"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>クラス各部へのジャンプ (Visual C++)
-関数、継承を使用していずれかのインターフェイスなど、プロジェクトのクラス構造を移動する[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)または[オブジェクト ブラウザー](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)です。  
+[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)か[オブジェクト ブラウザー](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)を利用し、関数、継承、インターフェイスなど、プロジェクト クラス各部にジャンプできます。  
   
- クラス ビュー内の関数名をダブルクリックすると、関数の宣言に移動することができます。 クラス ビュー でクラス名をダブルクリックすると、クラス定義に移動することができます。  
+ クラス ビューで関数名をダブルクリックすることで、関数の宣言にジャンプできます。 クラス ビューでクラス名をダブルクリックすることで、クラスの定義にジャンプできます。  
   
-## <a name="see-also"></a>関連項目  
- [コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)   
+## <a name="see-also"></a>参照  
+ [コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [クラスの追加](../ide/adding-a-class-visual-cpp.md)   
  [メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)   
  [メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)   

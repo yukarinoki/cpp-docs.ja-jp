@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704660"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -141,11 +142,11 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 新しいスレッドのロケールは、プロセスあたりのグローバル現在のロケール情報を使用して初期化されます。 呼び出しによってスレッドごとのロケールが有効になっているかどうかは[_configthreadlocale](configthreadlocale.md) (グローバルまたは新しいスレッドのみ)、スレッドなく変更できますロケール別々 に他のスレッドから呼び出すことによって**setlocale、_wsetlocale**または **_wsetlocale**です。 スレッドごとのロケールのフラグが設定がないスレッドは、設定すると、スレッドごとのロケールのフラグはその他のすべてのスレッドだけでなくすべての新しく作成されたスレッドのロケール情報に影響を与えます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-混合コードと純粋なコード、 **_beginthread**と **_beginthreadex**それぞれ 2 つのオーバー ロードがあります。 1 つはネイティブの呼び出し規約関数ポインターと受け取り、もう一方が、 **_ _clrcall**関数ポインター。 最初のオーバーロードは、アプリケーション ドメインセーフではなく、以降もそうなることはありません。 混合コードまたは純粋なコードを記述する場合、新しいスレッドがマネージ リソースにアクセスする前に確実に正しいアプリケーション ドメインに入るようにする必要があります。 そのためには、[call_in_appdomain 関数](../../dotnet/call-in-appdomain-function.md)などを使用します。 2 番目のオーバー ロードはアプリケーション ドメイン セーフです。呼び出し元のアプリケーション ドメイン内に新しく作成されたスレッド、最終的に必ず **_beginthread**または **_beginthreadex**です。
+**/Clr**コード、 **_beginthread**と **_beginthreadex**それぞれ 2 つのオーバー ロードがあります。 1 つはネイティブの呼び出し規約関数ポインターと受け取り、もう一方が、 **_ _clrcall**関数ポインター。 最初のオーバーロードは、アプリケーション ドメインセーフではなく、以降もそうなることはありません。 作成している場合 **/clr**マネージ リソースもコードにアクセスする前には、新しいスレッドが正しいアプリケーション ドメインに入ることを確認する必要があります。 そのためには、[call_in_appdomain 関数](../../dotnet/call-in-appdomain-function.md)などを使用します。 2 番目のオーバー ロードはアプリケーション ドメイン セーフです。呼び出し元のアプリケーション ドメイン内に新しく作成されたスレッド、最終的に必ず **_beginthread**または **_beginthreadex**です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread、_endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread、_endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit、_Exit、_exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

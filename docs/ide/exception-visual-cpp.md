@@ -1,5 +1,5 @@
 ---
-title: '&lt;例外&gt;(Visual C) |Microsoft ドキュメント'
+title: '&lt;exception&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323941"
 ---
-# <a name="ltexceptiongt-visual-c"></a>&lt;例外&gt;(Visual C)
+# <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 \<exception> タグを使用すると、スローできる例外を指定できます。 このタグは、メソッドの定義に適用されます。  
   
 ## <a name="syntax"></a>構文  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="parameters"></a>パラメーター  
  `member`  
- 現在のコンパイル環境から使用できる例外の参照。 名前のルックアップ規則を使用するには、コンパイラをチェックする特定の例外が存在し、変換`member`出力 XML 内の標準要素名にします。  コンパイラは、`member` が見つからない場合に警告を発行します。  
+ 現在のコンパイル環境から使用できる例外の参照。 名前参照ルールを使用し、コンパイラは、指定された例外が存在し、出力の XML で `member` が正規要素名に変換されることを確認します。  コンパイラは、`member` が見つからない場合に警告を発行します。  
   
  名前は、一重引用符または二重引用符で囲みます。  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>コメント  
  コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
- Visual C++ コンパイラは、ドキュメント コメントを通じて 1 回渡すことで cref 参照の解決を試みます。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 参照してください[ \<seealso >](../ide/seealso-visual-cpp.md)詳細についてはします。  
+ Visual C++ コンパイラは、ドキュメント コメントを通じて 1 回渡すことで cref 参照の解決を試みます。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 詳細については、「[\<seealso>](../ide/seealso-visual-cpp.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -73,5 +74,5 @@ public ref class TestClass {
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

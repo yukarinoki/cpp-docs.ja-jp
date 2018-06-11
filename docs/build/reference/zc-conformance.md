@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704894"
 ---
 # <a name="zc-conformance"></a>/Zc (準拠)
 
@@ -43,6 +44,7 @@ Visual Studio には、C または C++ 規格と互換性がない拡張機能�
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|C++ 17 オーバーア ラインされている動的割り当てを有効にする (既定で有効にで c++ 17)。|
 |[自動\[-\]](zc-auto-deduce-variable-type.md)|新しい標準 C++ の解釈を強制`auto`(で既定で)。|
+|[_ _cplusplus\[-\]](zc-cplusplus.md)|有効にする、 **_ _cplusplus**マクロ、サポートされている標準のレポートを (既定でオフ)。|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|外部リンケージを有効にする`constexpr`変数 (既定でオフ)。|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|標準 C++ を適用する`for`スコープの規則 (で既定で)。|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|有効にする暗黙的な`noexcept`に必要な関数 (で既定で)。|
