@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705687"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -92,7 +93,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
   
 -   **new と delete** 以前のバージョンのライブラリでは、実装定義演算子の new 関数と delete 関数は、ランタイム ライブラリ DLL (たとえば、msvcr120.dll) からエクスポートされていました。 現在、これらの演算子関数は常に (ランタイム ライブラリ DLL を使用する場合でも) 静的にバイナリにリンクされています。  
   
-     これはネイティブ コードまたは混合コード (/clr) の互換性に影響する変更点ではありませんが、[/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) としてコンパイルされるコードでは、これによってコードのコンパイルが失敗する可能性があります。 コードを /clr:pure としてコンパイルする場合、#include \<new> または #include \<new.h> を追加してこの変更によるビルド エラーを回避する必要があります。 Visual Studio 2015 では /clr:pure は非推奨とされており、将来のリリースでは削除される可能性があります。 "ピュア" でなければならないコードは C# に移植する必要があります。  
+     これはネイティブ コードまたは混合コード (/clr) の互換性に影響する変更点ではありませんが、[/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) としてコンパイルされるコードでは、これによってコードのコンパイルが失敗する可能性があります。 コードを /clr:pure としてコンパイルする場合、#include \<new> または #include \<new.h> を追加してこの変更によるビルド エラーを回避する必要があります。 Visual Studio 2015 では /clr:pure は非推奨とされており、Visual Studio 2017 ではサポートされていません。 "ピュア" でなければならないコードは C# に移植する必要があります。  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -225,7 +226,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
   
 -   **clock** 以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) によって clock 関数が再実装されたため、単調になっています。  
   
--   **fstat と _utime** 以前のバージョンでは、[_stat](../c-runtime-library/reference/stat-functions.md) 関数、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) 関数、および [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 関数での夏時間の処理が正しくありませんでした。 Visual Studio 2013 より前では、これらの関数はすべて、標準時刻をあたかも夏時間にあるかのように調整していましたが、これは正しい処理ではありませんでした。  
+-   **fstat と _utime** 以前のバージョンでは、[_stat](../c-runtime-library/reference/stat-functions.md) 関数、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) 関数、および [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 関数での夏時間の処理が正しくありませんでした。 Visual Studio 2013 より前では、これらの関数はすべて、標準時刻をあたかも夏時間にあるかのようにに調整していましたが、これは正しい処理ではありませんでした。  
   
      Visual Studio 2013 では、_stat 関数ファミリでは問題が解決されましたが、fstat 関数ファミリと _utime 関数ファミリでは修正されていませんでした。 これは、関数間の不整合による問題につながっていました。 fstat および _utime の関数ファミリは現在修正され、これらすべての関数が、正確かつ一貫して夏時間を処理できるようになりました。  
   

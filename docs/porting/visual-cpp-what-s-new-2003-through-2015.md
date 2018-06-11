@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705606"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -1939,7 +1940,7 @@ __sptr、__uptr
 - 64 ビットのネイティブ コンパイラとクロス コンパイラ。
 - /analyze (エンタープライズ コード分析) コンパイラ オプションが追加されました。
 - /bigobj コンパイラ オプションが追加されました。
-- /clr:pure、/clr:safe、/clr:oldSyntax が追加されました。 (のちに、Visual Studio 2015 で非推奨になりました。)
+- /clr:pure、/clr:safe、/clr:oldSyntax が追加されました。 (のちに、Visual Studio 2015 で非推奨になり、Visual Studio 2017 で削除されました。)
 - 非推奨のコンパイラ オプション: このリリースでは、多くのコンパイラ オプションが使われなくなりました。詳しくは、「Deprecated Compiler Options」(非推奨のコンパイラ オプション) をご覧ください。
 - /clr コードのダブル サンキングが減りました。詳しくは、「ダブル サンキング (C++)」をご覧ください。
 - /EH (例外処理モデル) または /EHs は、スロー以外の手段で発生した例外のキャッチに使用できなくなりました。/EHa を使用してください。

@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569696"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] での Visual C# の新機能
 
@@ -394,12 +395,10 @@ Android および iOS を対象とするモバイル アプリを、Visual Studi
 ユニバーサル Windows アプリ ワークロードのオプション コンポーネントとして、C++ が提供されます。  C++ プロジェクトのアップグレードは、現在のところ、手動で行う必要があります。 v140 をターゲットとする UWP プロジェクトを Visual Studio 2017 で開くときに、Visual Studio 2015 がインストールされていない場合はプロジェクト プロパティ ページで v141 プラットフォーム ツールセットを選択する必要があります。
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) での C++ の新しいオプション
+ユニバーサル Windows プラットフォームおよび Windows ストア用の C++ アプリケーションを記述およびパッケージ化するための新しいオプションが追加されました。デスクトップ ブリッジ インフラストラクチャを使うと、Windows ストアまたはサイドローディングを経由した既存のチャネルを通してデプロイできるように、既存のデスクトップ アプリケーションまたは COM オブジェクトをパッケージ化できます。 Windows 10 の新機能を使用すると、さまざまな方法で、デスクトップ アプリケーションに UWP 機能を追加できます。 詳細については、[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。
 
-ユニバーサル Windows プラットフォームおよび Microsoft Store 用の C++ アプリケーションを記述およびパッケージ化するための新しいオプションが追加されました。 Desktop App Converter を使うと、Microsoft Store を通して配置できるように既存のデスクトップ アプリケーションをパッケージ化できます。 詳しくは、「[Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)」(Centennial プロジェクトでの Visual C++ ランタイムの使用) および「[Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](/windows/uwp/porting/desktop-to-uwp-root)」(Desktop Bridge でデスクトップ アプリをユニバーサル Windows プラットフォーム (UWP) 対応にする) をご覧ください。
-
-**Visual Studio 2017 バージョン 15.5**:
-
-**Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジを利用し、デスクトップ アプリケーションをパッケージ化できます。 これは、ユニバーサル Windows アプリ ワークロードがインストールされている場合、**[ファイル]、[新規作成]、[プロジェクト]**、**[インストール済み]、[Visual C++]、[ユニバーサル Windows プラットフォーム]** の下にあります。
+**Visual Studio 2017 バージョン 15.5**  
+**Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジを使用してデスクトップ アプリケーションをパッケージ化する作業が、大幅に簡略化されます。 **[ファイル]、[新規]、[プロジェクト]、[インストール]、[Visual C++]、[ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
 
 新しいコードを作成するときに、ヘッダー ファイルだけに実装される Windows ランタイム向けの標準 C++ 言語プロジェクションである C++/WinRT を使うことができるようになりました。 これにより、標準準拠の任意の C++ コンパイラを使って、Windows ランタイム API を作成および使用できます。 C++/WinRT は、C++ の開発者が最新の Windows API に最適にアクセスできるように設計されています。 詳しくは、「[C++/WinRT Available on GitHub](https://moderncpp.com/)」 (C++/WinRT が GitHub で入手可能) をご覧ください。
 

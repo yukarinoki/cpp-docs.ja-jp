@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762062"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) での C++ 準拠の改善
 
@@ -1584,6 +1585,46 @@ D<int> d;
 ```
 
 このエラーを解決するには、B() 式を B\<T>() に変更します。
+
+### <a name="constexpr-aggregate-initialization"></a>constexpr の集約の初期化
+
+C++ コンパイラの以前のバージョンでは、constexpr の集約の初期化を正しく処理することができませんでした。集約初期化リストの要素が多すぎる無効なコードを受け入れ、不適切な codegen を生成しました。 次にそのようなコードの例を示します。 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+Visual Studio 2017 バージョン 15.7 Update 3 以降では、前の例に対して "*C2078 初期化子の数が多すぎます*" が生成されます。 次に、コードを修正する方法の例を示します。 入れ子になった中かっこの初期化リストを使用して `std::array` を初期化する場合、内側の配列に独自の中かっこのリストを指定します。
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
 
 ## <a name="see-also"></a>関連項目
 
