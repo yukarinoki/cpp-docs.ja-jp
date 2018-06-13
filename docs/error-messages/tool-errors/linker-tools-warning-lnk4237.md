@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302868"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>リンカー ツールの警告 LNK4237
 中に/subsystem:native が 'dll'; からインポートするときの指定/SUBSYSTEM:CONSOLE か/SUBSYSTEM:WINDOWS を使用します。  

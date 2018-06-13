@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090958"
 ---
 # <a name="casting-ccx"></a>キャスト (C++/CX)
 次の 4 つの異なるキャスト演算子は、Windows ランタイム型へ適用: [static_cast 演算子](../cpp/static-cast-operator.md)、 [dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)、 **safe_cast Operator**、および[reinterpret_cast 演算子](../cpp/reinterpret-cast-operator.md)です。 `safe_cast` と `static_cast` は、変換を実行できない場合に例外をスローします。 [static_cast 演算子](../cpp/static-cast-operator.md) は、コンパイル時の型チェックも実行します。 `dynamic_cast` は、型を変換できない場合 `nullptr` を返します。 `reinterpret_cast` は NULL 以外の値を返しますが、その値が無効な場合があります。 この理由で、キャストが成功することがわかっている場合を除き、 `reinterpret_cast` を使用しないことをお勧めします。 さらに、ことをお勧め、C + C スタイルのキャストを使用しないこと + CX コードと同じであるため`reinterpret_cast`です。  
