@@ -1,5 +1,5 @@
 ---
-title: ネイティブ デスクトップ アプリケーション (Visual C) の配置 |Microsoft ドキュメント
+title: ネイティブ デスクトップ アプリケーションの配置 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -21,17 +21,18 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259245"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>ネイティブ デスクトップ アプリケーションの配置 (Visual C++)
 
 配置とは、完成したアプリケーションやコンポーネントを他のコンピューターにインストールできるように配布するためのプロセスです。 配置計画は、開発者のコンピューターでアプリケーションが作成されたときから始まります。 そのアプリケーションがユーザーのコンピューターにインストールされ、使用できるようになったときに、配置は終了します。
 
-Visual Studio は、Windows アプリケーションを配置するためのさまざまなテクノロジを提供しています。 ClickOnce 配置と Windows インストーラーの展開が含まれます。
+Visual Studio は、Windows アプリケーションを配置するためのさまざまなテクノロジを提供しています。 これには、ClickOnce による配置と Windows インストーラーによる配置が含まれます。
 
-- 共通言語ランタイム (CLR) を対象とする C++ アプリケーションの配置に ClickOnce を使用できる、混合、純粋、および検証可能なアセンブリ。 マネージ アプリケーションを展開する Windows インストーラーを使用できますが、マニフェスト署名などの .NET Framework のセキュリティ機能の活用しているために、ClickOnce を使用することをお勧めします。 ClickOnce では、ネイティブ C++ アプリケーションの展開はサポートされません。 詳細については、「 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。
+- ClickOnce は、共通言語ランタイム (CLR) を対象とする C++ アプリケーションの配置に使用できます (混合アセンブリ、純粋アセンブリおよび検証可能アセンブリ)。 マネージド アプリケーションの配置には Windows インストーラーを使用できますが、マニフェスト署名などの .NET Framework のセキュリティ機能が利用できる ClickOnce の使用をお勧めします。 ClickOnce では、ネイティブ C++ アプリケーションの配置はサポートされていません。 詳細については、「 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。
 
 - Windows インストーラー テクノロジは、ネイティブ C++ アプリケーションに使用することも、CLR を対象とする C++ アプリケーションに使用することもできます。
 
@@ -49,7 +50,7 @@ Visual Studio は、Windows アプリケーションを配置するためのさ�
 
 - [配置方法の選択](../ide/choosing-a-deployment-method.md)
 
-- [ユニバーサル CRT 展開](universal-crt-deployment.md)です。
+- [ユニバーサル CRT の配置](universal-crt-deployment.md)。
 
 - [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)
 
@@ -59,7 +60,7 @@ Visual Studio は、Windows アプリケーションを配置するためのさ�
 
 - [Visual C++ アプリケーションの ClickOnce 配置](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [以前のランタイム バージョンでの C++/clr アプリケーションを実行しています。](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [以前のランタイム バージョンでの C++ /clr アプリケーションの実行](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>関連項目
 

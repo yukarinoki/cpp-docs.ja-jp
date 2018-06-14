@@ -1,5 +1,5 @@
 ---
-title: IDL 属性、プロパティの追加ウィザード |Microsoft ドキュメント
+title: '[IDL 属性] (プロパティの追加ウィザード) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340191"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>[IDL 属性] (プロパティの追加ウィザード)
-プロパティの追加ウィザードのこのページを使用すると、プロパティの任意のインターフェイス定義言語 (IDL) の設定を指定できます。  
+プロパティの追加ウィザードのこのページでは、プロパティのインターフェイス定義言語 (IDL) の設定を指定します。  
   
  **ID**  
- プロパティを識別する数値 ID を設定します。 このオプションでは、カスタム インターフェイスのプロパティを使用できません。 参照してください[id](http://msdn.microsoft.com/library/windows/desktop/aa367040)で、 *MIDL 参照*です。  
+ プロパティを識別する数値 ID を設定します。 このオプションは、カスタム インターフェイスのプロパティでは使用できません。 *MIDL リファレンス*の [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) に関するページを参照してください。  
   
  **helpcontext**  
- コンテキスト ID をユーザーに関する情報を表示、ヘルプ ファイルでこのプロパティを指定します。 参照してください[helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851)で、 *MIDL 参照*です。  
+ コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのプロパティに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) に関するページを参照してください。  
   
  **helpstring**  
- 適用すると、要素の記述に使用される文字の文字列を指定します。 既定では、その設定が"プロパティ*プロパティ名*"。 参照してください[helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856)で、 *MIDL 参照*です。  
+ 適用先となる要素を記述するために使用される文字列を指定します。 既定では、"プロパティ <*プロパティ名*>" に設定されます。 *MIDL リファレンス*の [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) に関するページを参照してください。  
   
 ## <a name="other-options"></a>その他のオプション  
- すべてのオプションすべてのプロパティ タイプを利用できます。  
+ すべてのオプションをすべてのプロパティの種類で使用できるわけではありません。  
   
 |オプション|説明|  
 |------------|-----------------|  
-|**bindable**|プロパティがデータ バインディングをサポートしていることを示します。 参照してください[バインド可能な](http://msdn.microsoft.com/library/windows/desktop/aa366738)で、 *MIDL 参照*です。 プロパティのストックの実装には、このオプションは、既定で設定され、変更不可能なです。|  
-|**defaultbind**|このベスト、単一のバインド可能なプロパティを表すことを示すオブジェクト。 参照してください[defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790)で、 *MIDL 参照*です。|  
-|**displaybind**|このプロパティをバインド可能なとしてユーザーに表示することを示します。 参照してください[displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804)で、 *MIDL 参照*です。|  
-|**immediatebind**|データ バインドされたオブジェクトのプロパティに対する変更をすべてのデータベースに直ちに通知されることを示します。 参照してください[immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045)で、 *MIDL 参照*です。|  
-|**defaultcollelem**|プロパティが既定のコレクションの要素のアクセサー関数であることを示します。 参照してください[defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792)で、 *MIDL 参照*です。|  
-|**nonbrowsable**|タグでインターフェイスまたはディスパッチ インターフェイスのメンバーは、プロパティ ブラウザーでは表示されません。 参照してください[nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117)で、 *MIDL 参照*です。|  
-|**requestedit**|プロパティをサポートしていることを示します、 **OnRequestEdit**通知を参照してください[requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155)で、 *MIDL 参照*です。 プロパティのストックの実装には、このオプションは、既定で設定され、変更不可能なです。|  
-|**ソース**|プロパティのメンバーは、イベントの発生元であることを示します。 参照してください[ソース](http://msdn.microsoft.com/library/windows/desktop/aa367166)で、 *MIDL 参照*です。|  
-|**hidden**|プロパティが存在するが、ユーザー指向ブラウザーに表示されます必要がありますいないことを示します。 参照してください[隠し](http://msdn.microsoft.com/library/windows/desktop/aa366861)で、 *MIDL 参照*です。|  
-|**restricted**|プロパティを任意に呼び出すことができませんを指定します。 参照してください[制限](http://msdn.microsoft.com/library/windows/desktop/aa367157)で、 *MIDL 参照*です。|  
-|`local`|MIDL コンパイラにプロパティがリモートでないことを指定します。 参照してください[ローカル](http://msdn.microsoft.com/library/windows/desktop/aa367071)で、 *MIDL 参照*です。|  
+|**bindable**|プロパティがデータ バインディングをサポートすることを示します。 *MIDL リファレンス*の [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|  
+|**defaultbind**|これがオブジェクトを最もよく表す 1 つのバインド可能なプロパティであることを示します。 *MIDL リファレンス*の [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) に関するページを参照してください。|  
+|**displaybind**|このプロパティをユーザーにバインド可能として表示する必要があることを示します。 *MIDL リファレンス*の [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) に関するページを参照してください。|  
+|**immediatebind**|データ バインディング オブジェクトのこのプロパティに対するすべての変更が、すぐにデータベースに通知されることを示します。 *MIDL リファレンス*の [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) に関するページを参照してください。|  
+|**defaultcollelem**|プロパティが既定コレクションの要素に対するアクセサー関数であることを示します。 *MIDL リファレンス*の [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) に関するページを参照してください。|  
+|**nonbrowsable**|プロパティ ブラウザーに表示してはならない interface または dispinterface メンバーにタグを付けます。 *MIDL リファレンス*の [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) に関するページを参照してください。|  
+|**requestedit**|プロパティが **OnRequestEdit** 通知をサポートすることを示します。*MIDL リファレンス*の [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|  
+|**source**|プロパティのメンバーがイベントのソースであることを示します。 *MIDL リファレンス* の [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) に関するページを参照してください。|  
+|**hidden**|プロパティは存在しますが、ユーザー指向ブラウザーでは表示されないことを示します。 *MIDL リファレンス*の [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) に関するページを参照してください。|  
+|**restricted**|プロパティを任意に呼び出せないことを指定します。 *MIDL リファレンス* の [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) に関するページを参照してください。|  
+|`local`|プロパティがリモートでないことを MIDL コンパイラに対して指定します。 *MIDL リファレンス* の [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) に関するページを参照してください。|  
   
-## <a name="see-also"></a>関連項目  
- [プロパティを追加します。](../ide/adding-a-property-visual-cpp.md)   
- [名前、プロパティの追加ウィザード](../ide/names-add-property-wizard.md)   
- [インターフェイスを実装します。](../ide/implementing-an-interface-visual-cpp.md)   
+## <a name="see-also"></a>参照  
+ [プロパティの追加](../ide/adding-a-property-visual-cpp.md)   
+ [[名前] (プロパティの追加ウィザード)](../ide/names-add-property-wizard.md)   
+ [インターフェイスの実装](../ide/implementing-an-interface-visual-cpp.md)   
  [ストック プロパティ](../ide/stock-properties.md)

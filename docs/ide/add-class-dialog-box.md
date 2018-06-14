@@ -1,5 +1,5 @@
 ---
-title: クラスのダイアログ ボックスを追加 |Microsoft ドキュメント
+title: '[クラスの追加] ダイアログ ボックス | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339775"
 ---
 # <a name="add-class-dialog-box"></a>[クラスの追加] ダイアログ ボックス
 **[クラスの追加]** ダイアログ ボックスのテンプレートを使用すると、次の操作を実行できます。  
   
--   対応するコード ウィザードを開始する (使用できる場合)。 詳細については、次を参照してください。[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)です。  
+-   対応するコード ウィザードを開始する (使用できる場合)。 詳しくは、「[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)」をご覧ください。  
   
- \- または -  
+ \- または  
   
 -   適したファイルおよびソース コードをプロジェクトに追加して、新しいクラスを自動作成する。  
   
- アクセスすることができます、**クラスの追加**からダイアログ ボックス、**プロジェクト**] メニューの [**ソリューション エクスプ ローラー**、または[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)です。  
+ **[クラスの追加]** ダイアログ ボックスには、**[プロジェクト]** メニュー、**ソリューション エクスプローラー**、[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)からアクセスできます。  
   
 > [!NOTE]
 >  現在のプロジェクトに対応しないクラスを追加しようとすると、エラー メッセージが表示されます。 **[OK]** をクリックすると、 **[クラスの追加]** ダイアログ ボックスに戻ります。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/04/2018
 |--------------|------------|  
 |MFC クラス|[MFC クラス追加ウィザード](../mfc/reference/mfc-add-class-wizard.md)|  
 |ActiveX コントロールの MFC クラス|[ActiveX コントロール クラス追加ウィザード](../ide/add-class-from-activex-control-wizard.md)|  
-|TypeLib からの MFC クラス|[Typelib ウィザードからクラスを追加します。](../mfc/reference/add-class-from-typelib-wizard.md)|  
+|TypeLib からの MFC クラス|[Typelib クラス追加ウィザード](../mfc/reference/add-class-from-typelib-wizard.md)|  
 |MFC ODBC コンシューマー|[MFC ODBC コンシューマー ウィザード](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>汎用クラス  
@@ -80,9 +81,9 @@ ms.lasthandoff: 05/04/2018
 |--------------|------------|  
 |汎用 C++ クラス|[汎用 C++ クラス ウィザード](../ide/generic-cpp-class-wizard.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)   
  [メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)   
  [仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [MFC メッセージ ハンドラー](../mfc/reference/adding-an-mfc-message-handler.md)   
- [クラス各部へ](../ide/navigating-the-class-structure-visual-cpp.md)
+ [クラス各部へのジャンプ](../ide/navigating-the-class-structure-visual-cpp.md)
