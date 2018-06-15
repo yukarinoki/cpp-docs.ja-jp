@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338696"
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>[プロジェクトの場所とソース ファイルの指定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)
