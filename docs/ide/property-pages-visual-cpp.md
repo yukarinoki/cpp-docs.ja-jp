@@ -25,10 +25,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339710"
 ---
 # <a name="property-pages-visual-c"></a>プロパティ ページ (Visual C++)
@@ -39,7 +39,7 @@ ms.locfileid: "33339710"
 
 すべての利用可能なページが、**[プロパティ ページ]** ダイアログ ボックスに表示されるとは限りません。 表示されるページは、プロジェクト内のファイルの種類によって異なります。
 
-詳しくは、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」をご覧ください。
+詳細については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。
 
 Windows 以外のプロジェクトについては、「[Linux C++ Property Page Reference](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->」(Linux C++ プロパティ ページのリファレンス) をご覧ください。
 
@@ -67,7 +67,7 @@ Windows 以外のプロジェクトについては、「[Linux C++ Property Page
 > [!TIP]
 > 最新の選択状態が表示されるように **[プロパティ ページ]** ダイアログ ボックスを更新するには、**[適用]** を選びます。
 
-プロジェクトの既定値の大部分は、システム (プラットフォーム) の既定値です。 プロジェクトの既定値の一部は、プロジェクトの **[全般]** 構成プロパティ ページの **[プロジェクトの既定値]** セクション内のプロパティが更新されたときに適用されるスタイル シートから派生しています。 詳しくは、「[[全般] プロパティ ページ (プロジェクト)](../ide/general-property-page-project.md)」をご覧ください。
+プロジェクトの既定値の大部分は、システム (プラットフォーム) の既定値です。 プロジェクトの既定値の一部は、プロジェクトの **[全般]** 構成プロパティ ページの **[プロジェクトの既定値]** セクション内のプロパティが更新されたときに適用されるスタイル シートから派生しています。 詳細については、「[[全般] プロパティ ページ (プロジェクト)](../ide/general-property-page-project.md)」を参照してください。
 
 ## <a name="specifying-user-defined-values"></a>ユーザー定義の値の指定
 
