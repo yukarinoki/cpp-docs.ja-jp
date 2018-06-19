@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847417"
 ---
 # <a name="setlocale"></a>setlocale
 ワイド文字定数、リテラル文字列を変換するときに使用するロケール (国/地域および言語) を定義します。  

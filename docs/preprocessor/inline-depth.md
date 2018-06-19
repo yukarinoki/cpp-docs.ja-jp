@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849874"
 ---
 # <a name="inlinedepth"></a>inline_depth
 (呼び出し先で) `n` を超える深度になる場合に関数がインライン展開されないようにインライン ヒューリスティック検索の深さを指定します。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375064"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX コントロール ウィザード
 ActiveX コントロールは、特定の種類の[オートメーション サーバー](../../mfc/automation-servers.md); が再利用可能なコンポーネントです。 ActiveX コントロールをホストしているアプリケーションは、[オートメーション クライアント](../../mfc/automation-clients.md)を制御するのです。 目標は、このような再利用可能なコンポーネントを作成するの場合は、コントロールを作成するこのウィザードを使用します。 参照してください[MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)詳細についてはします。  

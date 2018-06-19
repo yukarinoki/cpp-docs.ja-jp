@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857572"
 ---
 # <a name="adding-version-information-for-another-language"></a>他言語のバージョン情報の追加
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>別の言語のバージョン情報 (新しい情報ブロック) を追加するには  

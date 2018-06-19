@@ -326,6 +326,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378888"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 `CMFCToolBar`クラスに似ています[CToolBar クラス](../../mfc/reference/ctoolbar-class.md)が、ユーザー インターフェイス機能に対する追加サポートを提供します。 フラット ツール バー、ホット イメージのツール バー、大きいアイコン、ページャー ボタン、ロックされたツール バー、rebar コントロール、イメージの下のテキスト、背景イメージ、およびタブ付きのツール バーなどがサポートされます。 `CMFCToolBar` クラスには、ツール バーおよびメニューに対するユーザーのカスタマイズ、ツール バーとメニューの間のドラッグ アンド ドロップ、コンボ ボックス ボタン、エディット ボックス ボタン、カラー ピッカー、およびロールアップ ボタンのサポートも組み込まれています。

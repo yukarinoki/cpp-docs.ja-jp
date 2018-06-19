@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299995"
 ---
 # <a name="c-runtime-error-r6033"></a>C ランタイム エラー r6033 が発生
 ネイティブ コードの初期化中にこのアセンブリから MSIL コードを使用しようとしてください。 これは、アプリケーションでバグを示します。 MSIL でコンパイルの呼び出しの結果である可能性があります (/clr) 関数は、ネイティブのコンス トラクターから、または Dll からエクスポートします。  

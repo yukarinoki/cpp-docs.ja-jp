@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849666"
 ---
 # <a name="noregistry"></a>no_registry
 `no_registry` は、`#import` でインポートされたタイプ ライブラリをレジストリで検索しないようコンパイラに指示します。  

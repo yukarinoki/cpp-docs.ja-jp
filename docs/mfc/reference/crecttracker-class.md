@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375909"
 ---
 # <a name="crecttracker-class"></a>CRectTracker クラス
 項目を表示、移動、または異なる方法でサイズ変更を許可します。  
@@ -426,7 +427,7 @@ BOOL TrackRubberBand(
  クライアント領域と相対的現在、マウスの位置のデバイスの座標。  
   
  `bAllowInvert`  
- 場合**true の場合、**四角形は、それ以外の x 軸または y 軸に沿って反転**FALSE**です。  
+ 場合**true の場合、** 四角形は、それ以外の x 軸または y 軸に沿って反転**FALSE**です。  
   
 ### <a name="return-value"></a>戻り値  
  マウスが移動、および四角形は空以外ではない場合は 0 以外。それ以外の場合 0 を返します。  

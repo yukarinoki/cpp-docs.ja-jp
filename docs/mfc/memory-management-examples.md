@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347192"
 ---
 # <a name="memory-management-examples"></a>メモリ管理 : 例
 この記事では、メモリ割り当ての 3 つの一般的な種類の各、MFC がフレーム割り当てとヒープの割り当てを実行する方法について説明します。  

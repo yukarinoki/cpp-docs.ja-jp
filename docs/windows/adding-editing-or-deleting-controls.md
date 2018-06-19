@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856714"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>コントロールの追加、編集、または削除
 ダイアログ エディターを使用して、することができますを追加、サイズを変更する、編集、およびダイアログ ボックスのコントロールを削除します。 その ID などのコントロールのプロパティを編集することもできます。 かどうか、最初に表示される実行時にします。  

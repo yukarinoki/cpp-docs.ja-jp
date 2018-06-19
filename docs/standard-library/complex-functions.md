@@ -49,6 +49,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848610"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 関数
 
@@ -849,7 +850,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="remarks"></a>コメント
 
-複素数の極座標グラフの形式では、剰余*r*と引数*p*これらのパラメーターが実数部と虚数部のデカルト コンポーネントに関連する場所、 *、*と*b*式によって*、* r = \* cos *p*と*b* = *r* \* sin *p*です。
+複素数の極座標グラフの形式では、剰余*r*と引数*p*これらのパラメーターが実数部と虚数部のデカルト コンポーネントに関連する場所、 *、* と*b*式によって *、* r = \* cos *p*と*b* = *r* \* sin *p*です。
 
 ### <a name="example"></a>例
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378296"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 クラスは、 [CObject](../../mfc/reference/cobject-class.md)と[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)ランタイム クラス情報、シリアル化、および動的なオブジェクトの作成へのアクセスなど、いくつかのオブジェクトのサービスをカプセル化します。 すべてのクラスから派生した`CObject`この機能を継承します。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692991"
 ---
 # <a name="using-tiles"></a>タイルの使用
 タイルを使用して、アプリのアクセラレーションを最大化することができます。 タイル スレッドを等しい四角形のサブセットに分割するか、*タイル*です。 適切なタイルのサイズとタイル アルゴリズムを使用している場合、C++ AMP コードによるアクセラレーションがさらに向上します。 タイルの基本コンポーネントは次のとおりです。  

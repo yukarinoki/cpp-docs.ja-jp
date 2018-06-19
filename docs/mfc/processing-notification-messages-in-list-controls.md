@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347677"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>リスト コントロールでの通知メッセージの処理
 ユーザーは、列ヘッダーをクリックして、アイコンをドラッグして、ラベルというように、リスト コントロールの編集 ([CListCtrl](../mfc/reference/clistctrl-class.md))、親ウィンドウに通知メッセージを送信します。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーには、列ヘッダーがクリックすると、ことができますを Microsoft Outlook のように、クリックした列の内容に基づいて項目を並べ替えます。  

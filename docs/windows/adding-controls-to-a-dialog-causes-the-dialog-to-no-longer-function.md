@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858995"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>コントロールを追加してもダイアログ ボックスに表示されない
 ダイアログ ボックスに、コモン コントロールまたはリッチ エディット コントロールを追加すると、これは表示されません ダイアログ ボックスをテストするとダイアログ ボックス自体は表示されません。  

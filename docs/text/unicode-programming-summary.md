@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859678"
 ---
 # <a name="unicode-programming-summary"></a>Unicode プログラミングの要約
 Unicode に対する MFC や C のランタイム機能のサポートを有効にするには、次のようにします。  

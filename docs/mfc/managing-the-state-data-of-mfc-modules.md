@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347696"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC モジュールの状態データの管理
 この記事では、MFC のモジュールと (パス コードは、アプリケーションの実行時に) 実行のフロー モジュールに出入りする場合にこの状態を更新する方法の状態データについて説明します。 モジュールの状態を切り替える、`AFX_MANAGE_STATE`と`METHOD_PROLOGUE`マクロについても説明します。  

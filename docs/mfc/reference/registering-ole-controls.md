@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378058"
 ---
 # <a name="registering-ole-controls"></a>OLE コントロールの登録
 その他の OLE サーバー オブジェクトと同様に、OLE コントロールは、他の OLE に対応するアプリケーションでアクセスできます。 これは、コントロールのタイプ ライブラリとクラスを登録することによって実現されます。  

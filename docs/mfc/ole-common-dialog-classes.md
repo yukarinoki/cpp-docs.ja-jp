@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348105"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE コモン ダイアログ クラス
 これらのクラスは、いくつかの標準の OLE ダイアログ ボックスを実装することで、OLE の一般的なタスクを処理します。 OLE の機能の一貫性のあるユーザー インターフェイスも提供します。  

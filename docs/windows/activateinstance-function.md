@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855576"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 関数
 登録し、指定したクラス ID で定義されている、指定した型のインスタンスを取得します  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695367"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 C++ AMP にはでいくつかの Api が含まれています、 [concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)名前空間の gpu のテクスチャのサポートのアクセスに使用することができます。 一般的なシナリオを次に示します。  
