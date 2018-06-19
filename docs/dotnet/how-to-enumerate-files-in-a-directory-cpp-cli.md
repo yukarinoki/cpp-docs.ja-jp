@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127891"
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>方法: ディレクトリ内のファイルを列挙する (C++/CLI)
 ディレクトリ内のファイル リストを取得する方法を次のコード例に示します。 また、サブディレクトリも列挙します。 <xref:System.IO.Directory.GetFiles%2A><xref:System.IO.Directory.GetFiles%2A> メソッドと <xref:System.IO.Directory.GetDirectories%2A> メソッドを使用して、C:\Windows ディレクトリの内容を表示する方法を次のコード例に示します。  

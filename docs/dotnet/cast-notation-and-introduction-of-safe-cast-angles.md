@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111641"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>キャスト表記と safe_cast の概要&lt;&gt;
 キャスト表記は、Visual C を c++ マネージ拡張から変更されました。  

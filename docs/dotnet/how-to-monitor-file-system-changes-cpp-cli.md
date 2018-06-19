@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130706"
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>方法: ファイル システムの変更を監視する (C++/CLI)
 次のコード例では<xref:System.IO.FileSystemWatcher>作成、変更、削除、または名前が変更されたファイルに対応するイベントを登録します。 ディレクトリのファイルへの変更を定期的にポーリングするには、代わりに使用することができます、<xref:System.IO.FileSystemWatcher>変更が検出されたときにイベントを発生させるクラスです。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137703"
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>方法: シャットダウンが開始されたかどうかを確認する (C++/CLI)
 次のコード例では、アプリケーションまたは .NET Framework が終了して現在あるかどうかを確認する方法を示します。 これは、ため、シャット ダウン中、これらの構造がシステムによって完了し、確実に使用することはできません、.NET Framework での静的な要素にアクセスするため便利です。 チェックして、<xref:System.Environment.HasShutdownStarted%2A>プロパティ最初に、これらの要素にアクセスするいないと、潜在的な障害を回避できます。  

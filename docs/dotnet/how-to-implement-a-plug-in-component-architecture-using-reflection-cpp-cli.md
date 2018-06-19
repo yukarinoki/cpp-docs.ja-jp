@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135214"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>方法: リフレクションを使用してプラグイン コンポーネント アーキテクチャを実装する (C++/CLI)
 次のコード例では、単純な「プラグイン」アーキテクチャを実装するためにリフレクションをデモンストレーションします。 最初のリストは、アプリケーションを 2 番目のプラグイン。 アプリケーションは、コマンドライン引数として提供されるプラグイン DLL 内のフォーム ベースのクラスを使用してそれ自体のメンバーを追加する複数のドキュメント形式です。  

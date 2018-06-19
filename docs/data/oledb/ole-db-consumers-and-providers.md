@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111391"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB コンシューマーとプロバイダー
 OLE DB アーキテクチャでは、コンシューマーとプロバイダーのモデルを使用します。 コンシューマーは、データの要求を行います。 プロバイダーは、表形式でデータを配置して、コンシューマーに返すによってこれらの要求に応答します。 コンシューマーが行う任意の呼び出しは、プロバイダーに実装する必要があります。  

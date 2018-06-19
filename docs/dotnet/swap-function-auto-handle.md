@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163960"
 ---
 # <a name="swap-function-autohandle"></a>swap 関数 (auto_handle)
 1 つの間でオブジェクトを交換`auto_handle`別とします。  

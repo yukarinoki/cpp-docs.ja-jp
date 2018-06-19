@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127823"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>方法: 現在のユーザー名を取得する (C++/CLI)
 次のコード例では、現在のユーザー名 (Windows にログオンしたユーザーの名前) の取得を示します。 格納されて、名前、<xref:System.Environment.UserName%2A>で定義されている文字列を<xref:System.Environment>名前空間。  

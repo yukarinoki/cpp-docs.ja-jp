@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167838"
 ---
 # <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn (STL/CLR)
 Genereic クラスの説明を返す 1 つの引数を持つデリゲート`void`です。 使用する、引数の型の観点からデリゲートを指定します。  

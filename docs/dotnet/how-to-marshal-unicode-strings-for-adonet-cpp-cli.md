@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137375"
 ---
 # <a name="how-to-marshal-unicode-strings-for-adonet-ccli"></a>方法: ADO.NET の Unicode 文字列をマーシャリングする (C++/CLI)
 ネイティブの Unicode 文字列を追加する方法を示します (`wchar_t *`) をマーシャ リングする方法、およびデータベースを<xref:System.String?displayProperty=fullName>ネイティブの Unicode 文字列をデータベースからです。  

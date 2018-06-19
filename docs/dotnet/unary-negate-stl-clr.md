@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169450"
 ---
 # <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
 このテンプレート クラスは、ファンクタを記述、呼び出されると、論理を返しますストアドの引数が 1 つファンクタのではありません。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  

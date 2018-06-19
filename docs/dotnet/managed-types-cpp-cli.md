@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137679"
 ---
 # <a name="managed-types-ccli"></a>マネージ型 (C++/CLI)
 Visual C では、共通言語ランタイムの機能サポートを提供され、利点、およびランタイムの制限の対象とするマネージ型をによる .NET 機能へのアクセスを許可します。  

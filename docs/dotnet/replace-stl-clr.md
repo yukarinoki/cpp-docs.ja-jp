@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163489"
 ---
 # <a name="replace-stlclr"></a>置換 (STL/CLR)
 範囲内の各要素が指定された値に一致するかどうかを調べ、一致する場合は置き換えます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250877"
 ---
 # <a name="compiler-error-c3298"></a>コンパイラ エラー C3298
 'constraint_1': 'constraint_2' を制約として使用できません。'constraint_2' は ref 制約を含んでおり、'constraint_1' は値の制約を含んでいるためです  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137135"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ におけるマーシャリングの概要
 混合モードでは、ネイティブ型とマネージ型の間でデータをマーシャリングすることが必要な場合があります。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] は、単純な方法でデータをマーシャリングして変換できるようにするためのマーシャリング ライブラリを導入しました。  

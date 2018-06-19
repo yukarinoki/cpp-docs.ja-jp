@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110406"
 ---
 # <a name="hashmaphashdelegate-stlclr"></a>hash_map::hash_delegate (STL/CLR)
 指定したキーに一致する要素を検索します。  

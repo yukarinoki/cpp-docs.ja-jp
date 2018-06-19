@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110342"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>OLE DB でのトランザクションのサポート
 A[トランザクション](../../data/transactions-mfc-data-access.md)グループ、またはバッチの場合は、すべて成功が 1 回にコミットされるか (存在する任意の 1 つには失敗) は一切コミットされませんように一連のデータ ソースを更新する方法は、トランザクション全体がロールバックされます。 このプロセスは、データ ソースの結果の整合性を確保します。  

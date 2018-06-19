@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131596"
 ---
 # <a name="less-stlclr"></a>less (STL/CLR)
 このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します、最初の引数が小さい場合にのみ 2 番目よりです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135509"
 ---
 # <a name="operatorlt-stack-stlclr"></a>演算子&lt;= (スタック) (STL/CLR)
 以下のスタックの比較できます。  

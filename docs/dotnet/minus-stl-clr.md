@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134518"
 ---
 # <a name="minus-stlclr"></a>minus (STL/CLR)
 このテンプレート クラスは、ファンクタを記述するには、呼び出されると、最初の引数、2 つ目の負符号を返します。 使用する、引数の型の観点から、関数オブジェクトを指定します。  

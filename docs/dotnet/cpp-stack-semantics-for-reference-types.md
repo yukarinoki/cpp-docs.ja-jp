@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111355"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参照型の C++ スタック セマンティクス
 Visual C 2005 では、前に、参照型のインスタンスのみ作成でしたを使用して、`new`ガベージにオブジェクトを作成してこの演算子は、ヒープを収集します。 ただし、スタックにネイティブ型のインスタンスの作成に使用する同じ構文を使用して、参照型のインスタンスを作成することができますようになりました。 そのため、使用する必要はありません[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)は参照型のオブジェクトを作成します。 オブジェクトがスコープ外になる場合、コンパイラはこのオブジェクトのデストラクターを呼び出します。  

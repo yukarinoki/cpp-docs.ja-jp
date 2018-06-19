@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172745"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 このテンプレート クラスでは、先入れ先出しのアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`queue`キューとしてを基になるコンテナーを管理します。  

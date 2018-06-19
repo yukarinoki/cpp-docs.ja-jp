@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137511"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 指定された時間まで待機し、返すオブジェクトのロックを取得、`bool`例外をスローする代わりに取得の成功を報告します。  

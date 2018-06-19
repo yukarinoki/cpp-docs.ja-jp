@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130115"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>方法: Windows パフォーマンス カウンターを読み取る (C++/CLI)
 一部のアプリケーションおよび Windows サブシステムは、Windows のパフォーマンス システムからパフォーマンス データを公開します。 これらのカウンターを使用してアクセスできる、<xref:System.Diagnostics.PerformanceCounterCategory>と<xref:System.Diagnostics.PerformanceCounter>内に存在するクラス、<xref:System.Diagnostics?displayProperty=fullName>名前空間。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129812"
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 二項述語によって順序の基準を指定することがあります、指定した値以下のと同じ値を持つ順序付けられた範囲内の最初の要素の位置を検索します。  

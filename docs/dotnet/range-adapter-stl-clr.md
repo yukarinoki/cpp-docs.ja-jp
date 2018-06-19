@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162326"
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 いくつかの基本クラス ライブラリ (BCL) インターフェイスを実装するために使用する反復子のペアをラップするテンプレート クラス。 使用する、range_adapter 操作 STL/CLR 範囲 BCL コレクションの場合と同様です。  

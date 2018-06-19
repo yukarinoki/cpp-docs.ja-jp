@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129328"
 ---
 # <a name="listconstreverseiterator-stlclr"></a>list::const_reverse_iterator (STL/CLR)
 被制御シーケンスの定数反転反復子の型。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164162"
 ---
 # <a name="unique-stlclr"></a>unique (STL/CLR)
 指定された範囲内の互いに隣接する重複要素を削除します。  

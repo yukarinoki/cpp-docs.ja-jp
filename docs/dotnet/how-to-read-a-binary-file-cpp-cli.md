@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129370"
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>方法: バイナリ ファイルを読み込む (C++/CLI)
 次のコード例では、<xref:System.IO?displayProperty=fullName> の名前空間の 2 つのクラス <xref:System.IO.FileStream> と <xref:System.IO.BinaryReader> を使用して、ファイルからバイナリ データを読み取る方法を示します。 <xref:System.IO.FileStream> は実際のファイルを表し、 <xref:System.IO.BinaryReader> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。  

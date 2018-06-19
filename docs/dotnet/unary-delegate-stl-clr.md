@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167334"
 ---
 # <a name="unarydelegate-stlclr"></a>unary_delegate (STL/CLR)
 Genereic クラスでは、引数が 1 つのデリゲートについて説明します。 使用するデリゲートの引数と戻り値の型を指定します。  

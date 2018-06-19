@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112057"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB コンシューマー テンプレート リファレンス
 OLE DB コンシューマー テンプレートには、次のクラスが含まれています。 参考資料には、上のトピックにはもが含まれています、 [OLE DB コンシューマー テンプレート用マクロ](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)です。  

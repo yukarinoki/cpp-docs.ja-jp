@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132415"
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>方法: 正規表現を使用して検索と置換を行う (C++/CLI)
 次のコード例を示す方法、正規表現クラス<xref:System.Text.RegularExpressions.Regex>検索と置換を実行するために使用できます。 これは、<xref:System.Text.RegularExpressions.Regex.Replace%2A>メソッドです。 使用されているバージョンは 2 つの文字列を入力として受け取ります: 変更するには、文字列と (もしあれば) セクションでは、代わりに挿入する文字列に指定されたパターンに一致する、<xref:System.Text.RegularExpressions.Regex>オブジェクト。  

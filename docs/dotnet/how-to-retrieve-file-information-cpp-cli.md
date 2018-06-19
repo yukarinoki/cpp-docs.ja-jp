@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127852"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>方法: ファイル情報を取得する (C++/CLI)
 <xref:System.IO.FileInfo> クラスのコード例を次に示します。 ファイル名がわかっている場合、このクラスを使用して、ファイル サイズ、ディレクトリ、完全名、ファイルの作成日時や最終更新日時などのファイル情報を取得できます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136354"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>方法: ダイアログ ボックスにユーザー コントロールおよびホストを作成する
 この記事の手順は、ダイアログ ベースを作成することを想定しています ([CDialog クラス](../mfc/reference/cdialog-class.md)) が、Microsoft Foundation Classes (MFC) プロジェクトもサポートを追加できます Windows フォーム コントロールの既存の MFC ダイアログ ボックスにします。  

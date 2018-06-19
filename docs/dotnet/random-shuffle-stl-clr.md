@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163011"
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
 シーケンスを並べ替えます`N`のいずれかに範囲内の要素`N`! 個の可能な配置の 1 つに再配置します。  

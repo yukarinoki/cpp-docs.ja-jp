@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129617"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>方法: 正規表現を使用してデータ書式設定を検証する (C++/CLI)
 次のコード例では、文字列の書式設定を検証する正規表現の使用を示します。 次のコード例では、文字列は有効な電話番号を含める必要があります。 次のコード例は、文字列を使用して"\d{3}-\d{3}-\d{4}"の各フィールドが有効な電話番号を表すことを示すためにします。 文字列に"d"は、数字を示し、"d"の後の引数が存在する必要がある数字の数を示します。 ここでは、数はダッシュで区切られているために必要です。  

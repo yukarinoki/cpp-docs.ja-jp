@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127407"
 ---
 # <a name="how-to-consume-a-c-indexer-ccli"></a>方法: C# インデクサーを使用する (C++/CLI)
 Visual C にインデクサー; が含まれていませんこれには、プロパティがインデックス付けします。 インデックス付きプロパティの場合と同様に c# インデクサーを使用するには、インデクサーにアクセスします。  

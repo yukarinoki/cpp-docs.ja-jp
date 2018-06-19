@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132779"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>方法: C++ Interop を使用してコールバックおよびデリゲートをマーシャリングする
 このトピックでは、コールバックのマーシャ リングする方法を示していて、Visual C を使用してマネージ コードとアンマネージ コード間でのデリゲート (コールバックの管理対象のバージョン)。  

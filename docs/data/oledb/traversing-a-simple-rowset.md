@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102952"
 ---
 # <a name="traversing-a-simple-rowset"></a>単純な行セットの走査
 次の例は、迅速かつ簡単なデータベース アクセス コマンドを使用しないことを示しています。 ATL プロジェクトでは、次のコンシューマー コードは、という名前のテーブルからレコードを取得*アーティスト*Microsoft access データベース ODBC 用の Microsoft OLE DB Provider を使用します。 このコードを作成、 [CTable](../../data/oledb/ctable-class.md)アクセサーを使用してテーブル オブジェクトは、ユーザー レコード クラスに基づく`CArtists`です。 接続を開き、接続でセッションを開くとし、セッションでテーブルを開きます。  

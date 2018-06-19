@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247202"
 ---
 # <a name="compiler-error-c3120"></a>コンパイラ エラー C3120
 'メソッド名が': インターフェイス メソッドは、可変個引数リストを取得できません。  

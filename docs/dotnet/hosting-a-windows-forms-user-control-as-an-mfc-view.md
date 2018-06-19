@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137628"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
 MFC では、CWinFormsView クラスを使用して、Windows フォーム ユーザー コントロールを MFC ビューでホストします。 MFC Windows フォーム ビューは、ActiveX コントロールです。 ユーザー コントロールは、ネイティブのビューの子としてホストされ、ネイティブ ビューの全体のクライアント領域を占有します。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112681"
 ---
 # <a name="testing-the-read-only-provider"></a>読み取り専用プロバイダーのテスト
 プロバイダーをテストするには、コンシューマーが必要です。 コンシューマーはプロバイダーと一致させる場合に役立ちます。 OLE DB コンシューマー テンプレートは、OLE DB の thin ラッパーでプロバイダーの COM オブジェクトと一致します。 これらのプロバイダーのデバッグが容易には、ソースは、コンシューマー テンプレートに含まれる、ためです。 コンシューマー テンプレートは、コンシューマー アプリケーションを開発する非常に小さく、高速の方法ではもです。  

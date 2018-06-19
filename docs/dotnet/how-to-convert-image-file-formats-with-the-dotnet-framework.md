@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130059"
 ---
 # <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>方法: .NET Framework を使用してイメージ ファイル形式を変換する
 次のコード例を示しています、<xref:System.Drawing.Image?displayProperty=fullName>クラスおよび<xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName>列挙型に変換し、イメージ ファイルを保存するために使用します。 次のコードは、.jpg ファイルからイメージを読み込み、.gif、.bmp の両方のファイル形式で保存されます。  
