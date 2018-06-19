@@ -124,7 +124,7 @@ Visual Studio 2015 で MFC をユーザーがダイアログを作成してサ�
   
      名前付きのリソースは、次の例のように、リソース ファイル内の AFX_DIALOG_LAYOUT エントリの形式のレイアウト情報が含まれているダイアログを参照する必要があります。  
   
- '' *///*//*//AFX_DIALOG_LAYOUT *//  
+ '' \*///\*//\*//AFX_DIALOG_LAYOUT \*//  
  
     IDD_MFCAPPLICATION1_DIALOG AFX_DIALOG_LAYOUT  
     0X0000、0X6400、0X0028、0X643C、0X0028 を開始します。  
