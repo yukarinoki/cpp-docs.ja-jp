@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356779"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL のコレクションと列挙子
 A `collection` (生データやその他のオブジェクト) のデータ項目のグループにアクセスできるようにするインターフェイスを提供する COM オブジェクトです。 一定の基準に従ってと呼ばれますが、オブジェクトのグループへのアクセスを提供するインターフェイス、*コレクション インターフェイス*です。  

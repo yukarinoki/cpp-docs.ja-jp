@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423497"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>オブジェクトの有効期間とリソースの管理 (Modern C++)
 管理対象の言語とは異なり、C++ はプログラムを実行すると自動的にいいえで長く-使用メモリ リソースを解放するガベージ コレクション (GC) がありません。 C++ では、リソース管理は、オブジェクトの有効期間に直接関連付けします。 このドキュメントでは、C++ では、オブジェクトの有効期間およびそれを管理する方法に影響する要因について説明します。  

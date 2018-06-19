@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365101"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel クラス
 このクラスは、変数の値、インクリメントおよびデクリメントするためのメソッドを提供します。  

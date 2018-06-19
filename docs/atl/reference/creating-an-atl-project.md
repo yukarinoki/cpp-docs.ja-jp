@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359004"
 ---
 # <a name="creating-an-atl-project"></a>ATL プロジェクトの作成
 ATL プロジェクトを作成する最も簡単な方法は、の Win32 プロジェクト フォルダーにある、ATL プロジェクト ウィザードを使用して、**新しいプロジェクト ダイアログ ボックス**です。  

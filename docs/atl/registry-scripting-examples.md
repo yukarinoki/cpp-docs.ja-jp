@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361890"
 ---
 # <a name="registry-scripting-examples"></a>レジストリ スクリプトの例
 このトピックでは、スクリプトの例では、システム レジストリにキーを追加、レジストラー COM サーバーを登録および複数のパース ツリーを指定する方法を示します。  

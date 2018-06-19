@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355634"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible 属性
 かどうかは、デュアル インターフェイスは実行時に拡張できません (つまり、メソッドまたはプロパティ経由で提供されません**idispatch::invoke**を利用できない、vtable を使用して)、適用する必要があります、 **nonextensible**インターフェイス定義する属性します。 この属性は、コンパイル時に完全なコードの検証を有効にするために使用する (Visual Basic の場合) などのクライアント言語に情報を提供します。 この属性が指定されていない場合バグが非表示のままクライアント コードで実行時までです。  

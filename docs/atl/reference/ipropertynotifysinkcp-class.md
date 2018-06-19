@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361627"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP クラス
 このクラスは、公開[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)接続可能なオブジェクトに対する発信インターフェイスとしてインターフェイスです。  

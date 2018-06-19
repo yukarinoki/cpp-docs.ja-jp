@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422782"
 ---
 # <a name="statements-c"></a>ステートメント (C++)
 C++ ステートメントは、オブジェクトをどのような順序でどのように操作するかを制御するプログラム要素です。 ここでは、以下の内容について説明します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420296"
 ---
 # <a name="nonstandard-behavior"></a>非標準動作
 ここからのセクションでは、C++ の Visual C++ 実装が C++ 規格に準拠しない部分をいくつか示します。 ここで示している節番号は C++ 11 規格 (ISO/IEC 14882:2011(E)) の節番号に対応しています。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364951"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB コンシューマー ウィザード
 このウィザードを設定、OLE DB コンシューマー クラス、データ バインディングで、指定した OLE DB プロバイダーを介して指定されたデータ ソースにアクセスするために必要です。  

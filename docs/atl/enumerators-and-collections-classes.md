@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355647"
 ---
 # <a name="enumerators-and-collections-classes"></a>列挙子とコレクション クラス
 次のクラスでは、COM コレクションと列挙をサポートを提供します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356397"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>CStringT を使用して文字列のクラスをエクスポートします。
 派生した MFC 開発者まで、`CString`独自文字列クラスを特化します。 Microsoft Visual C .net (MFC 8.0)、 [CString](../atl-mfc-shared/using-cstring.md)と呼ばれるテンプレート クラスによってクラスが置き換えられました[CStringT](../atl-mfc-shared/reference/cstringt-class.md)です。 これには、いくつかの利点が提供されています。  

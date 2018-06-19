@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357719"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>プロジェクトの作成 (ATL チュートリアル、パート 1)
 このチュートリアルでは、属性なしの ATL プロジェクトを多角形を表示する ActiveX オブジェクトを作成する手順について説明します。 オブジェクトには、辺の多角形、およびコードの表示を更新数を変更するユーザーを許可するためのオプションが含まれています。  

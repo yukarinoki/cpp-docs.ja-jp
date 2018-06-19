@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357816"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>マネージャーの実装、カスタム文字列 (高度な方法)
 特殊な状況では、メモリの割り当てに使用されるヒープを変更する以上の処理をカスタム文字列マネージャーを実装することができます。 この場合、手動で実装する必要あります、 [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)カスタム文字列マネージャーとインターフェイスします。  

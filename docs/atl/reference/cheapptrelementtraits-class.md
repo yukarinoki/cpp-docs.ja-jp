@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360078"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits クラス
 このクラスは、ヒープのポインターのコレクションを作成するときに、メソッド、静的関数、および typedef に役立ちますを提供します。  

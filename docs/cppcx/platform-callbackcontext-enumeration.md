@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086951"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 列挙型
 コールバック関数 (イベント ハンドラー) が実行するスレッド コンテキストを指定します。  

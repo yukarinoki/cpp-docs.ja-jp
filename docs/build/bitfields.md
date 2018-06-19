@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360781"
 ---
 # <a name="bitfields"></a>ビット フィールド
 構造体のビット フィールドは 64 ビットに制限されており、型は int、unsigned int 型、int64、または符号なしの int64 の署名します。 型の境界を越えることがビット フィールドでは、[次へ] の型のアラインメントをビット フィールドを配置するをスキップします。 たとえば、整数のビット フィールドを超えることは 32 ビットの境界。  

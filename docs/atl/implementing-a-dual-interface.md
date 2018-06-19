@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356733"
 ---
 # <a name="implementing-a-dual-interface"></a>デュアル インターフェイスの実装
 使用して、デュアル インターフェイスを実装することができます、 [IDispatchImpl](../atl/reference/idispatchimpl-class.md)の既定の実装を提供するクラス、`IDispatch`デュアル インターフェイスのメソッドです。 詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。  

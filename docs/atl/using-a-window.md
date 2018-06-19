@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358395"
 ---
 # <a name="using-a-window"></a>ウィンドウを使用します。
 クラス[CWindow](../atl/reference/cwindow-class.md)ウィンドウを使用することができます。 ウィンドウをアタッチすると、`CWindow`オブジェクトを呼び出すことができますし、`CWindow`ウィンドウを操作するメソッド。 `CWindow` 含まれています、`HWND`に変換する演算子、`CWindow`オブジェクトを`HWND`です。 そのために渡すことができます、`CWindow`ウィンドウへのハンドルを必要とするすべての関数オブジェクト。 簡単に組み合わせることができます`CWindow`メソッド呼び出しと、一時オブジェクトを作成しなくても、Win32 関数の呼び出しです。  

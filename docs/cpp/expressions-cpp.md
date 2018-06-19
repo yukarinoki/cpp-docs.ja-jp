@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414595"
 ---
 # <a name="expressions-c"></a>式 (C++)
 このセクションでは、C++ 式について説明します。 式は、次の 1 つ以上の目的で使用されるオペランドと演算子のシーケンスです。  

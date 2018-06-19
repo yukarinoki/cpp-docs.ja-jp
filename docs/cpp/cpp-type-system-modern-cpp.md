@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418511"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 型システム (Modern C++)
 概念*型*は C++ では非常に重要です。 変数、関数の引数、関数の戻り値をコンパイルするには、それぞれに型が必要です。 さらに、すべての式 (リテラル値を含む) には、評価前にコンパイラーにより暗黙的に型が指定されます。 いくつかの種類の例`int`、整数値を格納する`double`浮動小数点値を格納する (とも呼ばれる*スカラー*データ型)、または標準ライブラリ クラス[:basic_string](../standard-library/basic-string-class.md)テキストを格納します。 `class` や `struct` を定義することで、独自の型を作成できます。 型は、変数 (または式の結果) に割り当てられるメモリの量、その変数に格納される値の種類、それらの値の解釈方法 (ビット パターンとして)、その型で実行可能な操作を指定します。 ここでは、C++ の型システムの主な機能の概要を示します。  

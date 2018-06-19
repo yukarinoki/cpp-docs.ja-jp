@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420583"
 ---
 # <a name="restrictions-on-termination-handlers"></a>終了ハンドラーに関する制約
 `goto` ステートメントを使用して、`__try` ステートメント ブロックまたは `__finally` ステートメント ブロックにジャンプすることはできません。 代わりに、制御の標準フローに従ってステートメント ブロックに入る必要があります。 (ただし、`__try` ステートメント ブロックの外部にジャンプすることもできます)。また、`__finally` ブロック内の例外ハンドラーまたは終了ハンドラーは入れ子にできません。  

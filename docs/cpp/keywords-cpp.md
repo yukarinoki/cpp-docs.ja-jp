@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424764"
 ---
 # <a name="keywords-c"></a>キーワード (C++)
 キーワードは、特別な意味を持つ定義済みおよび予約済みの識別子です。 プログラムでは、キーワードを識別子として使用することはできません。 次のキーワードは Microsoft C++ 用に予約されています。 先頭にアンダースコアが付いているキーワードは Microsoft の拡張機能です。  

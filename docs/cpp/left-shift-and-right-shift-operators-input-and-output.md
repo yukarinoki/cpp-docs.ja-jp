@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422398"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左 shift キーおよび右シフト演算子 (&gt; &gt;と&lt; &lt;)
 ビット処理シフト演算子は右シフト演算子 (>>) のビットを移動する*shift 式*、右に、左シフト演算子 (<<) のビットを移動する*shift 式*左側にします。 <sup>1</sup>  

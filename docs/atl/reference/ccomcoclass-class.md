@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365463"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass クラス
 このクラスは、クラスのインスタンスを作成して、そのプロパティを取得するためのメソッドを提供します。  

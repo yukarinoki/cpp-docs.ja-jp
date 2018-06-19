@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422385"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>文字列および I/O の書式設定 (Modern C++)
 C++ [iostreams](../standard-library/iostream.md)の I/O の書式設定された文字列に対応します。 たとえば、次のコードは、整数を書式設定して 16 進数で出力するための cout を設定する方法を示します。まず現在の状態を保存し、後で再度設定します。これは、状態の書式設定が一度 cout に渡されると、1 行のコードの間だけでなく、変更されるまでその状態を保つためです。  

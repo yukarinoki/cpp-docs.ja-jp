@@ -22,9 +22,10 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417204"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
-このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 組織がに基づいて*、注解 C++ リファレンス マニュアル*Margaret Ellis と Bjarne stroustrup 共著者や、ANSI/ISO C 国際規格 (ISO/IEC FDIS 14882)。 C++ 言語機能の Microsoft 固有実装が含まれます。  
+このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 組織がに基づいて *、注解 C++ リファレンス マニュアル*Margaret Ellis と Bjarne stroustrup 共著者や、ANSI/ISO C 国際規格 (ISO/IEC FDIS 14882)。 C++ 言語機能の Microsoft 固有実装が含まれます。  
 
 最新の C++ プログラミングの概要については、次を参照してください。[ようこそ戻る C++](welcome-back-to-cpp-modern-cpp.md)です。
   

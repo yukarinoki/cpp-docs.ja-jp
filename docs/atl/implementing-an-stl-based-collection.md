@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359676"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>C++ 標準ライブラリに基づくコレクションを実装します。
 ATL には、`ICollectionOnSTLImpl`に迅速に、オブジェクトに C++ 標準ライブラリに基づくコレクション インターフェイスを実装するインターフェイスです。 このクラスのしくみを理解するのには、簡単な例 (下記) はこのクラスを使用して、オートメーション クライアントを目的と読み取り専用のコレクションを実装する機能します。  

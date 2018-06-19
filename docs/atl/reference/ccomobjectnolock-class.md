@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361480"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock クラス
 このクラスは実装**IUnknown**の非集約オブジェクトは、コンス トラクターでのモジュールのロック カウント インクリメントされません。  

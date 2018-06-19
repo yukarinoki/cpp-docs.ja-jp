@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420182"
 ---
 # <a name="override-specifier"></a>override 指定子
 `override` キーワードを使用して、基底クラスの仮想関数をオーバーライドするメンバー関数を指定できます。  

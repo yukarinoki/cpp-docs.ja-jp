@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362864"
 ---
 # <a name="ccomenum-class"></a>上記のクラス
 このクラスは、配列に基づいた COM 列挙子オブジェクトを定義します。  

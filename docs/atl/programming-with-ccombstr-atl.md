@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357858"
 ---
 # <a name="programming-with-ccombstr-atl"></a>CComBSTR を使用したプログラミング (ATL)
 ATL クラス[CComBSTR](../atl/reference/ccombstr-class.md)をラップするラッパーを提供、`BSTR`データ型。 中に`CComBSTR`便利なツールは、注意を必要とするいくつかの状況があります。  

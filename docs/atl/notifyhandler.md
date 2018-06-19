@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356454"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 3 番目のパラメーターで識別される関数の名前、`NOTIFY_HANDLER`メッセージ マップ マクロです。  

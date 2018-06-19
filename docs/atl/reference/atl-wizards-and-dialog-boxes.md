@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356674"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL ウィザードとダイアログ ボックス
 アクティブ テンプレート ライブラリ (ATL) ウィザードでは、COM オブジェクトのさまざまな種類の定型コードを生成します。 プロジェクトのショートカット メニューを開き、ウィザードを実行することができます**ソリューション エクスプ ローラー**を選択して**追加**、**クラス**です。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358770"
 ---
 # <a name="options-atl-property-page-wizard"></a>オプション、ATL プロパティ ページ ウィザード
 ウィザードのこのページを使用すると、作成する プロパティ ページのスレッド モデルと集計レベルを定義します。  

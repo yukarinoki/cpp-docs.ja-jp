@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364771"
 ---
 # <a name="cdacl-class"></a>CDacl クラス
 このクラスは、DACL (随意アクセス制御リスト) 構造体のラッパーです。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367886"
 ---
 # <a name="how-to-build-isolated-applications-to-consume-com-components"></a>方法 : COM コンポーネントを使用する分離アプリケーションをビルドする
 分離アプリケーションは、プログラムに組み込まれたマニフェストがあるアプリケーションです。 COM コンポーネントを使用する分離アプリケーションを作成することができます。  

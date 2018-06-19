@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356254"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>ATL AXHost を使用して ActiveX コントロールをホストしています。
 このトピックのサンプルでは、AXHost を作成する方法と ATL のさまざまな機能を使用して ActiveX コントロールをホストする方法を示します。 コントロールとシンク イベントにアクセスする方法も示しています (を使用して[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) でホストされるコントロールからです。 このサンプルでは、メイン ウィンドウ、または子ウィンドウで、カレンダー コントロールをホストします。  

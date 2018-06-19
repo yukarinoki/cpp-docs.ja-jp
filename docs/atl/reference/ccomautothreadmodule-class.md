@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363758"
 ---
 # <a name="ccomautothreadmodule-class"></a>設定クラス
 ATL 7.0 の時点で`CComAutoThreadModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)詳細についてはします。  

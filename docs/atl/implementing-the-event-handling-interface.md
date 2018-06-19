@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356309"
 ---
 # <a name="implementing-the-event-handling-interface"></a>イベント処理インターフェイスを実装します。
 ATL を支援するイベントを処理するために必要なすべての 3 つの要素: イベント インターフェイスを実装する、イベント ソースのことを通知するイベント ソースをアドバイズとします。 実行する必要があります具体的な手順は、イベント インターフェイスと、アプリケーションのパフォーマンス要件の種類によって異なります。  

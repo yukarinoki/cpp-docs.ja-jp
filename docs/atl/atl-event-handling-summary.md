@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356523"
 ---
 # <a name="atl-event-handling-summary"></a>ATL イベント処理の概要
 一般に、COM イベントの処理は、比較的単純なプロセスです。 次の 3 つの主要なステップがあります。  

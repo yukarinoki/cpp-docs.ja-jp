@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354956"
 ---
 # <a name="formatting-time-automation-classes"></a>書式指定の時刻: オートメーション クラス
 #### <a name="to-format-a-time"></a>時刻の書式を設定するには  

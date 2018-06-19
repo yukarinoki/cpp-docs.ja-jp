@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423871"
 ---
 # <a name="summary-of-scope-rules"></a>スコープ規則の概要
 名前の使用はスコープ内で明確である必要があります (オーバーロードが決定される段階まで)。 名前が関数を表している場合、関数はパラメーターの数と型に対し明確でなければなりません。 名前があいまいでない、残っている場合[メンバー アクセス](../cpp/member-access-control-cpp.md)規則が適用されます。  

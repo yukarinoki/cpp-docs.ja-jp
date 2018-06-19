@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419644"
 ---
 # <a name="nullptr"></a>nullptr
 任意の生ポインター型に変換可能な `std::nullptr_t` 型の null ポインター定数を指定します。  ヘッダーを含めずに `nullptr` キーワードを使用できますが、コードで `std::nullptr_t` 型を使用する場合、`<cstddef>` ヘッダーを含めることにより定義を行う必要があります。  

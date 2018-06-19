@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415408"
 ---
 # <a name="identifiers-c"></a>識別子 (C++)
 識別子は、次のいずれかを示すために使用される文字のシーケンスです。  

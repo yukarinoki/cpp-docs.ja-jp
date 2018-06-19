@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357922"
 ---
 # <a name="using-contained-windows"></a>コンテナー内のウィンドウを使用します。
 ATL の実装に含まれている windows [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)です。 コンテナー内のウィンドウでは、そのメッセージを独自のクラスで扱い、コンテナー オブジェクトをデリゲートするウィンドウを表します。  

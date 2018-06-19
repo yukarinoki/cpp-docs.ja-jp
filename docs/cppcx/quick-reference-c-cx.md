@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092559"
 ---
 # <a name="quick-reference-ccx"></a>クイック リファレンス (C++/CX)
 Windows ランタイムでは、信頼できるオペレーティング システム環境のみで実行、承認済みの関数、データ型、およびデバイスを使用および Microsoft ストアで配布されているユニバーサル Windows プラットフォーム (UWP) アプリをサポートします。 C + + CX Windows ランタイム アプリの作成を簡略化します。 この記事では、クイック リファレンスです。詳細なドキュメントは、次を参照してください。[型システム](../cppcx/type-system-c-cx.md)と[ランタイム プラットフォームのコンポーネント拡張](http://go.microsoft.com/fwlink/p/?linkid=228720)です。  

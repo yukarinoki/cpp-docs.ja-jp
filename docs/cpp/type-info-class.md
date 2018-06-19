@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422437"
 ---
 # <a name="typeinfo-class"></a>type_info Class
 **Type_info**クラスは、コンパイラによって、プログラム内で生成される型情報を表します。 このクラスのオブジェクトは、実質的には型の名前へのポインターを格納します。 **Type_info**クラスもまたは照合順序の 2 つの型の等価性を比較するのに適したエンコードした値を格納します。 型のエンコーディング規則と照合順序については指定されていないため、プログラムによって異なる場合があります。  

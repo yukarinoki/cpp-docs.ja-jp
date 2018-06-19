@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363572"
 ---
 # <a name="cstringdata-class"></a>CStringData クラス
 このクラスは、文字列オブジェクトのデータを表します。  

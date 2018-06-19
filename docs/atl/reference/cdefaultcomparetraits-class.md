@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361640"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits クラス
 このクラスは、既定の要素の比較関数を提供します。  

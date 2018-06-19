@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357246"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG** Windows NT 4.0 ユーティリティで、レジストリで DCOM に固有のさまざまな設定を構成することができます。 **DCOMCNFG**ウィンドウが 3 つのページ: 既定のセキュリティ、既定のプロパティ、およびアプリケーションです。 Windows 2000 では、4 番目のページであり、既定のプロトコルが存在します。  

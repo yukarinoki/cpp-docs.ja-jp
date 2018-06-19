@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356467"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>ATL Active Server Page コンポーネントを追加します。
 アクティブ テンプレート ライブラリ (ATL) オブジェクトをプロジェクトに追加するには、プロジェクト必要がありますが作成されて、ATL COM アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 使用することができます、 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)ATL アプリケーションを作成するには [ **MFC に ATL サポートを追加**から、[クラスの追加] ダイアログ ボックス](../../ide/add-class-dialog-box.md)ダイアログ ボックスで、こともできます[ATL オブジェクトを MFC アプリケーションに追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)MFC アプリケーション用の ATL サポートを実装します。  

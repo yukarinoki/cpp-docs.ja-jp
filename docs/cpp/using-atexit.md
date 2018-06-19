@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420968"
 ---
 # <a name="using-atexit"></a>atexit の使用
 [Atexit](../c-runtime-library/reference/atexit.md)関数の場合、プログラムが終了する前に実行される終了処理関数を指定することができます。 `atexit` を呼び出す前に初期化されたグローバルな静的オブジェクトは、終了処理関数を実行するまでは破棄されません。  

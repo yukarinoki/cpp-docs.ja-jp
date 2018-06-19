@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355523"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>DHTML コントロールに対する ATL のサポート
 ATL を使用してダイナミック HTML (DHTML) 機能を持つコントロールを作成できます。 ATL DHTML コントロール。  

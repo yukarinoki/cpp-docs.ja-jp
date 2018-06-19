@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359463"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray クラス
 このクラスは、COM インターフェイス ポインターの配列を構築するときに役立つメソッドを提供します。  

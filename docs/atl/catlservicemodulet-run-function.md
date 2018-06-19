@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355126"
 ---
 # <a name="catlservicemoduletrun-function"></a>主要な関数
 **実行**の呼び出しを含む`PreMessageLoop`、 `RunMessageLoop`、および`PostMessageLoop`です。 呼び出される後`PreMessageLoop`最初に、サービスのスレッドの ID を格納します サービスは、この ID を使用して送信することでそれ自体を閉じるには、 **WM_QUIT** Win32 API 関数を使用してメッセージ[次](http://msdn.microsoft.com/library/windows/desktop/ms644946)です。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418817"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists ステートメント
 `__if_not_exists` ステートメントは、指定された識別子があるかどうかをテストします。 ID が存在しない場合、指定されたステートメント ブロックが実行されます。  

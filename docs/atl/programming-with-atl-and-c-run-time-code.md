@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355876"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>ATL および C ランタイム コードによるプログラミング
 このセクションでは、静的または動的リンクと C ランタイム ライブラリ (CRT) を使用する利点について説明します。  

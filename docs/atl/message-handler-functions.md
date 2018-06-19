@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355608"
 ---
 # <a name="message-handler-functions"></a>メッセージ ハンドラー関数
 ATL には、次の 3 つの種類のメッセージ ハンドラー関数が用意されています。  

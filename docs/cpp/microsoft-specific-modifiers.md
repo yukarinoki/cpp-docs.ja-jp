@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420224"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 固有の修飾子
 このセクションでは、次の領域での C++ への Microsoft 固有の拡張について説明します。  

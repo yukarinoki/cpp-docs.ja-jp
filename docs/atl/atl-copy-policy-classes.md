@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358528"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL コピー ポリシー クラス
 ポリシー クラスのコピーは[ユーティリティ クラス](../atl/utility-classes.md)初期化するために、コピー、および使用データを削除します。 ポリシー クラスのコピーでは、任意の種類、データのコピーのセマンティクスを定義し、別のデータ型の間で変換を定義することができます。  

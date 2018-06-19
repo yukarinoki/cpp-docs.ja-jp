@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424471"
 ---
 # <a name="using-declaration"></a>using 宣言
 あるスコープ内で名前の宣言を使用して、using 宣言が表示されます。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355726"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>実装のカスタム文字列マネージャー (基本的な方法)
 文字列データは、ATL 指定を使用するは、メモリの割り当て方法をカスタマイズする最も簡単な方法**CAtlStringMgr**クラスが、独自のメモリ割り当てルーチンを提供します。 コンス トラクター **CAtlStringMgr** 1 つのパラメーターを受け取る: へのポインター、`IAtlMemMgr`オブジェクト。 `IAtlMemMgr` ヒープへの汎用インターフェイスを提供する抽象基本クラス。 使用して、 `IAtlMemMgr` 、インターフェイス、 **CAtlStringMgr** 、再割り当てすると、メモリ割り当てし、解放、文字列データを格納するために使用します。 いずれかを実装することができます、`IAtlMemMgr`インターフェイスを自分で、または 5 つの ATL に用意されているメモリ マネージャー クラスのいずれかを使用します。 ATL に用意されているメモリ マネージャーは、単に既存のメモリ割り当て機能をラップします。  

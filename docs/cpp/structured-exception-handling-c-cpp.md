@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424271"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Windows および Visual C++ は構造化例外処理 (SEH) をサポートしていますが、コードの移植性と柔軟性が高くなる ISO 標準の C++ 例外処理を使用することをお勧めします。 ただし、既存のコードや特定の種類のプログラムでは、SEH を使用する必要がある場合もあります。  

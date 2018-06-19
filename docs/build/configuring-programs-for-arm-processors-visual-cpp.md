@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366901"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>ARM プロセッサ用の Visual C を構成します。
 

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360744"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack クラス
 このクラスは、一時的な COM オブジェクトを作成しのスケルトンの実装を提供**IUnknown**です。  

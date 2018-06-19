@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356368"
 ---
 # <a name="messagehandler"></a>MessageHandler
 **メッセージ ハンドラ**の 2 番目のパラメーターで識別される関数の名前を指定、`MESSAGE_HANDLER`メッセージ マップ マクロです。  

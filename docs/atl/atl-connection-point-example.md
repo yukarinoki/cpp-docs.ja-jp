@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355182"
 ---
 # <a name="atl-connection-point-example"></a>ATL 接続ポイントの例
 この例は、サポートするオブジェクトを示しています。 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)アウトゴーイング インターフェイスとして。  

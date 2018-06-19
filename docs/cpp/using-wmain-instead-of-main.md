@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422204"
 ---
 # <a name="using-wmain-instead-of-main"></a>main に代わる wmain の使用
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  

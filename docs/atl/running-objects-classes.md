@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358939"
 ---
 # <a name="running-objects-classes"></a>実行中のオブジェクト クラス
 次のクラスは、オブジェクトを実行するためサポートを提供します。  

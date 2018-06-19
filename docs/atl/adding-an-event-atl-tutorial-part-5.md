@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361266"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>イベントの追加 (ATL チュートリアル、パート 5)
 この手順では、追加、`ClickIn`と`ClickOut`ATL コントロールにイベント。 起動、`ClickIn`多角形および火災内でクリックすると、ユーザー イベント`ClickOut`の外側をクリックした場合。 イベントを追加するタスクは次のとおりです。  

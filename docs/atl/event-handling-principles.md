@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355449"
 ---
 # <a name="event-handling-principles"></a>イベント処理の原則
 3 つの手順はすべてのイベント処理に共通です。 する必要があります。  

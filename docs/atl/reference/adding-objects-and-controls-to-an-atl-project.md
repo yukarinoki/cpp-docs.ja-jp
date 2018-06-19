@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357774"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL プロジェクトへのオブジェクトやコントロールの追加
 ATL または MFC ベースでのプロジェクトにオブジェクトやコントロールを追加するのにには、ATL コード ウィザードのいずれかを使用します。 COM オブジェクトやコントロールを追加すると、.cpp、.h ファイルだけでなく .rgs ファイル スクリプト ベースのレジストリのサポートについては、ウィザードが生成されます。 Visual Studio で、次の ATL コード ウィザードを紹介します。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363824"
 ---
 # <a name="atl-utilities-reference"></a>ATL ユーティリティのリファレンス
 ATL の形式でパスと Url を操作するためのコードには、 [CPathT](../atl/reference/cpatht-class.md)と[CUrl](../atl/reference/curl-class.md)です。 スレッド プール、 [CThreadPool](../atl/reference/cthreadpool-class.md)アプリケーションで使用できます。 このコードは、atlpath.h と atlutil.h 含まれています。  

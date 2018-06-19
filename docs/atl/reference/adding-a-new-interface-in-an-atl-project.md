@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356746"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL プロジェクトで新しいインターフェイスの追加
 インターフェイスをオブジェクトやコントロールを追加する場合は、そのインターフェイスで各メソッドのスタブ関数を作成します。 オブジェクトやコントロールでは、既存のタイプ ライブラリ内にあるインターフェイスのみを追加できます。 また、インターフェイスを追加するクラスを実装する必要があります、 [BEGIN_COM_MAP](com-map-macros.md#begin_com_map)マクロまたは、プロジェクトが考えられる場合があります、`coclass`属性。  

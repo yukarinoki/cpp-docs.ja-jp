@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356831"
 ---
 # <a name="cstring-argument-passing"></a>CString 引数の渡し方
 この記事に渡す方法を説明します[CString](../atl-mfc-shared/reference/cstringt-class.md)関数のオブジェクトを返す方法`CString`関数からのオブジェクト。  

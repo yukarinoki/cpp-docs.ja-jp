@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413961"
 ---
 # <a name="hardware-exceptions"></a>ハードウェア例外
 オペレーティング システムによって認識される標準例外のほとんどは、ハードウェア定義された例外です。 Windows はいくつかの低レベルのソフトウェア例外を認識しますが、それらは通常、オペレーティング システムで処理するのが適しています。  

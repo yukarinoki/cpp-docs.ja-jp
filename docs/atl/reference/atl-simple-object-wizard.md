@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363970"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL シンプル オブジェクト ウィザード
 このウィザードは、最小限の COM オブジェクトをプロジェクトに挿入します。 ウィザードのこのページを使用すると、C++ のクラスと、オブジェクトとその COM 機能のファイルを識別する名前を指定できます。  

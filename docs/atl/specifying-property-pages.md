@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358926"
 ---
 # <a name="specifying-property-pages"></a>プロパティ ページを指定します。
 ActiveX コントロールを作成するときに多くの場合に、コントロールのプロパティを設定するために使用するプロパティ ページに関連付けます。 コンテナーの使用を制御する、 **ISpecifyPropertyPages**インターフェイスについては、コントロールのプロパティを設定するプロパティ ページを使用できます。 コントロールにこのインターフェイスを実装する必要があります。  

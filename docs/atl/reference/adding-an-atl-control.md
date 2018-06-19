@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356936"
 ---
 # <a name="adding-an-atl-control"></a>ATL コントロールを追加します。
 このウィザードを使用すると、すべてのコンテナー インターフェイスをサポートするプロジェクトにユーザー インターフェイス オブジェクトを追加します。 これらのインターフェイスをサポートするために、必要がありますが作成されたプロジェクト、ATL アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 使用することができます、 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)ATL アプリケーションを作成するか、 [ATL オブジェクトを MFC アプリケーションに追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)MFC アプリケーションに対する ATL のサポートを実装します。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363986"
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits クラス
 このクラスに格納するコレクション クラスで使用する静的関数が用意されています`CString`オブジェクト。  

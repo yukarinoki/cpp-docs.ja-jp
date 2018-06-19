@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367096"
 ---
 # <a name="exit-codes-from-nmake"></a>NMAKE で返される終了コード
 (Nmake の) には、次の終了コードが返されます。  

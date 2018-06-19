@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359663"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID クラス
 この引数のアダプター クラスは、いずれかのリソース名を使用できます ( `LPCTSTR`s) またはリソース Id ( **UINT**s)、呼び出し元の ID を使用して文字列を変換を必要とせず、関数に渡される、 **されるときは**マクロです。  

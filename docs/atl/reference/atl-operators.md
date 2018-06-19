@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360937"
 ---
 # <a name="atl-operators"></a>ATL 演算子
 このセクションには、ATL グローバル演算子のリファレンス トピックが含まれています。  

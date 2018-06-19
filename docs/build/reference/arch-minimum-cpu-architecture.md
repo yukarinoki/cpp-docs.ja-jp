@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368991"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (最小限の CPU アーキテクチャ)
 アーキテクチャのオプションは、コード生成のアーキテクチャを指定します。 参照してください/arch、そのターゲット プラットフォーム用のオプションを使用している基本のハードウェア アーキテクチャを選択します。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415495"
 ---
 # <a name="routine-mappings"></a>ルーチンのマップ
 汎用テキスト ルーチンのマップは TCHAR.H で定義されます。 `_tccpy` と `_tclen` は MBCS モデルの関数にマップされます。これらは完全を期すために SBCS モデルまたは Unicode モデルのマクロまたはインライン関数にマップされます。 汎用テキスト ルーチンの詳細については、`SBCS`、`_MBCS`、または `_UNICODE` に関連するルーチンのヘルプ トピックを参照してください。  

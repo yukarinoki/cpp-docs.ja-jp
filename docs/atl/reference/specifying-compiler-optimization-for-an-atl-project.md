@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361971"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>ATL プロジェクトのコンパイラの最適化を指定します。
 既定では、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)ATL_NO_VTABLE マクロを持つ新しいクラスを次のように生成されます。  

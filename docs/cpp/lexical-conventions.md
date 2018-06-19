@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419129"
 ---
 # <a name="lexical-conventions"></a>構文規則
 このセクションでは、C++ プログラムの基本要素について説明します。 "構文の要素" または "トークン" と呼ばれるこれらの要素を使用して、ステートメント、定義、宣言などを作成し、これらを使用して完全なプログラムを作成します。 このセクションでは、次のような構文の要素について説明します。

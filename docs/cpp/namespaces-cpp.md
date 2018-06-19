@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423677"
 ---
 # <a name="namespaces-c"></a>名前空間 (C++)
 名前空間は、その内部にある識別子 (型、関数、変数などの名前) のスコープを定める宣言領域です。 名前空間は、コードを論理グループにまとめるため、およびコード ベースに複数のライブラリが含まれる場合に特に発生する名前の競合を回避するために使用されます。 名前空間スコープのすべての識別子は互いどうしを修飾なしで参照できます。 名前空間の外部識別子は、たとえば、各識別子の完全修飾名を使用してメンバーにアクセスできます`std::vector<std::string> vec;`、または else によって、[宣言を使用して](../cpp/using-declaration.md)、単一の識別子の (`using std::string`)、または、 [ディレクティブを使用して](../cpp/namespaces-cpp.md#using_directives)、名前空間内のすべての識別子 (`using namespace std;`)。 ヘッダー ファイル内のコードは、常に完全修飾された名前空間の名前を使用する必要があります。  

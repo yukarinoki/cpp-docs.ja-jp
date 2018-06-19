@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356548"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>CWindowImpl のウィンドウの実装
 ウィンドウを実装するのには、派生クラスを`CWindowImpl`です。 派生クラスでは、メッセージ マップとメッセージ ハンドラー関数を宣言します。 これで、3 つの方法で、クラスを使用することができます。  

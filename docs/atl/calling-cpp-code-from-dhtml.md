@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355462"
 ---
 # <a name="calling-c-code-from-dhtml"></a>DHTML から C++ コードを呼び出す
 DHTML コントロールは、テスト コンテナーまたは Internet Explorer などのコンテナーでホストすることができます。 参照してください[プロパティのテストおよびテスト コンテナーでイベント](../mfc/testing-properties-and-events-with-test-container.md)テスト コンテナーにアクセスする方法についてはします。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359033"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot クラス
 この typedef の[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)は既定のサーバーのモデルのスレッドでテンプレート化されます。  

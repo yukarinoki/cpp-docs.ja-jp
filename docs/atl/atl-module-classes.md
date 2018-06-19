@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356606"
 ---
 # <a name="atl-module-classes"></a>ATL モジュール クラス
 このトピックでは、ATL 7.0 で新規に追加されたモジュールのクラスについて説明します。  

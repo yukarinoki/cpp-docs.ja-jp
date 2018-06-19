@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358326"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>BSTR 用のメモリの割り当てと解放
 作成するときに`BSTR`s それらの COM オブジェクトの間で渡すと、メモリ リークを回避するために使用するメモリを扱うことに注意する必要があります。 ときに、`BSTR`インターフェイスの中で状態を維持するには、それに完了したらそのメモリを解放する必要があります。 ただし、ときに、`BSTR`インターフェイスでは、パスは、受信側のオブジェクトは、メモリ管理を担当します。  

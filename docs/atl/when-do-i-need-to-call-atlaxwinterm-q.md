@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360163"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>ときに AtlAxWinTerm を呼び出す必要があるのですか。
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)の登録を解除、 **"AtlAxWin80"** ウィンドウ クラスです。 既存のすべてのホスト ウィンドウが破棄された後に、(不要になった、ホスト ウィンドウを作成する必要がある) 場合に、この関数を呼び出す必要があります。 この関数が呼び出されない場合、ウィンドウ クラスが登録解除する自動的にプロセスが終了したときにします。  
