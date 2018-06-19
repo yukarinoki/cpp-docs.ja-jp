@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349714"
 ---
 # <a name="receiving-notification-from-common-controls"></a>コモン コントロールからの通知の受信
 コモン コントロールは、コントロール、ユーザー入力のなどのイベントが発生した場合、親ウィンドウへ通知メッセージを送信する子ウィンドウです。  

@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374964"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl クラス
 `CMFCShellListCtrl`クラスは、Windows のリスト コントロールの機能を提供し、シェル項目の一覧を表示する機能などを展開します。  

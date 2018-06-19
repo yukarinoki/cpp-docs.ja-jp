@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370097"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>メッセージ マップ クロス リファレンスの使い方
 ラベル付きのエントリで\<memberFxn >、派生クラス用の独自のメンバー関数を記述[CWnd](../../mfc/reference/cwnd-class.md)クラスです。 関数の任意の名前を付けます。 などの他の関数`OnActivate`、クラスのメンバー関数は、`CWnd`です。 メッセージを通過するときに呼び出されると、 `DefWindowProc` Windows の機能です。 Windows の通知メッセージを処理するには、上書き、対応する`CWnd`派生クラスで関数。 関数は、基本クラスを基本クラスでオーバーライドされた関数を呼び出す必要があり、Windows がメッセージに応答します。  

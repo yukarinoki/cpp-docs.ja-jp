@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374537"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection クラス
 FTP サーバーへの接続、インターネットを管理し、そのサーバー上のディレクトリおよびファイルの直接の操作を実行できます。  

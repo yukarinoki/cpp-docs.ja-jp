@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382129"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets クラス
 Windows ソケットは、2 台のコンピューター間の通信にネットワーク プロトコルに依存しない方法を提供します。 これらのソケットは同期していることができます (プログラムは、通信が終了するまで待機する) または非同期 (プログラムは、通信が起こっている間に実行が続行されます)。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380842"
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>テクニカル ノート 32: MFC 例外処理機構
 Visual C の以前のバージョンが、標準の C++ 例外機構をサポートしていませんし、MFC に提供されるマクロ**TRY または CATCH/THROW**代わりに使用していた。 このバージョンの Visual C には、C++ の例外を完全にサポートしています。 このノートでは、従来のマクロの高度な実装の詳細の一部について説明スタック ベースのオブジェクトを自動的にクリーンアップする方法などです。 C++ 例外のスタック アンワインド既定ではサポートされているために、このテクニカル ノートは必要ではありません。  

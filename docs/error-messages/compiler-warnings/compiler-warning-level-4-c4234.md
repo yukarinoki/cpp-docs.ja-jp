@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293518"
 ---
 # <a name="compiler-warning-level-4-c4234"></a>コンパイラの警告 (レベル 4) C4234
 標準の拡張機能を使用します将来使用するために予約されています 'keyword' キーワード。  

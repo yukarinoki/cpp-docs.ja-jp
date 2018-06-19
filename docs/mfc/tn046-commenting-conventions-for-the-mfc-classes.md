@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380826"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>テクニカル ノート 46: MFC クラスのコメント規約
 このテクニカル ノートは、最初の MFC クラスをコメントに使用する規則を説明します。 この情報については、今すぐ[MFC: MFC ソース ファイルを使用して](../mfc/using-the-mfc-source-files.md)です。  
