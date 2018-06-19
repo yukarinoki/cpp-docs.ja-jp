@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226351"
 ---
 # <a name="fatal-error-c1093"></a>致命的なエラー C1093
 API 呼び出し '関数の name' には、'の呼び出しの位置' が失敗しました: 'ランタイムからテキスト'  

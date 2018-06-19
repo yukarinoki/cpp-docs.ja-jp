@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382767"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>ツリー コントロールのドラッグ アンド ドロップ操作
 ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))、ユーザーが項目のドラッグを開始すると、通知を送信します。 コントロールが送信、 [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) 、ユーザーがマウスの左ボタンを持つ項目のドラッグを始めたときに通知メッセージと[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)ユーザーがのドラッグを始めたときに通知メッセージ右ボタンをクリックします。 ツリー コントロールのツリー コントロールを付けることでこれらの通知を送信されないようにできます、 **TVS_DISABLEDRAGDROP**スタイル。  

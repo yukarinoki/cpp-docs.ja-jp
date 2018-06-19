@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890191"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>GIF 形式または JPEG 形式でのビットマップの保存 (アイコン用イメージ エディター)
 ビットマップを作成するときに、イメージはビットマップ (.bmp) の形式で作成されます。 ただし、gif 形式または JPEG として、またはその他のグラフィック形式でイメージを保存することができます。  

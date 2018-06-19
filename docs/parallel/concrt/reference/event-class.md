@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692868"
 ---
 # <a name="event-class"></a>event クラス
 同時実行ランタイムを明示的に認識する手動リセット イベントです。  

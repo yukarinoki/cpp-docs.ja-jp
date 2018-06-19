@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385737"
 ---
 # <a name="tree-control-notification-messages"></a>ツリー コントロールの通知メッセージ
 ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) として、次の通知メッセージを送信**WM_NOTIFY**メッセージ。  

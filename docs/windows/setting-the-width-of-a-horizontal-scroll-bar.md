@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892795"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>水平スクロール バーの幅の設定
 MFC クラスを使用してダイアログ ボックスに水平スクロール バーをリスト ボックスを追加すると、スクロール バーは、アプリケーションでは自動的に表示されません。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236293"
 ---
 # <a name="compiler-error-c2793"></a>コンパイラ エラー C2793
 'token': 予期しないトークン次 ':: '、識別子またはキーワード 'operator' が必要です  

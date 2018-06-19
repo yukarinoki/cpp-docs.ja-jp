@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381125"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>典型的な FTP クライアント アプリケーションの作成手順
 典型的な FTP クライアント アプリケーションを作成、 [CInternetSession](../mfc/reference/cinternetsession-class.md)と[CFtpConnection](../mfc/reference/cftpconnection-class.md)オブジェクト。 これらの MFC WinInet クラスによって、プロキシの種類の設定; は実際に制御しないように注意してください。IIS では。  

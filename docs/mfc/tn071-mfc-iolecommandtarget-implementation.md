@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385019"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>テクニカル ノート 71: MFC IOleCommandTarget の実装
 > [!NOTE]
@@ -134,9 +135,9 @@ DECLARE_DYNCREATE(CMyServerView)
     END_OLECMD_MAP() 
  ```  
   
- Afxdocob.h で定義されている標準の OLE コマンド マクロのいずれかの代わりに使用できることに注意してください、`ON_OLECMD`マクロのため**います。**標準 OLE コマンド id です。 `ON_OLECMD_PRINT`マクロと同じタスクを実施、`ON_OLECMD`上に示したマクロです。  
+ Afxdocob.h で定義されている標準の OLE コマンド マクロのいずれかの代わりに使用できることに注意してください、`ON_OLECMD`マクロのため**います。** 標準 OLE コマンド id です。 `ON_OLECMD_PRINT`マクロと同じタスクを実施、`ON_OLECMD`上に示したマクロです。  
   
- コンテナー アプリケーションがこのサーバーに送信すると、**います。**を通じてサーバーのコマンド`IOleCommandTarget`により、サーバー アプリケーションを印刷する、サーバーでインターフェイス、MFC の印刷コマンド ハンドラーが呼び出されます。 Active ドキュメント コンテナーの前述の手順で追加された印刷コマンドを呼び出すコードは、次のようになります。  
+ コンテナー アプリケーションがこのサーバーに送信すると、**います。** を通じてサーバーのコマンド`IOleCommandTarget`により、サーバー アプリケーションを印刷する、サーバーでインターフェイス、MFC の印刷コマンド ハンドラーが呼び出されます。 Active ドキュメント コンテナーの前述の手順で追加された印刷コマンドを呼び出すコードは、次のようになります。  
   
 ```  
 void CContainerCntrItem::DoOleCmd()  

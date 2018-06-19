@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383683"
 ---
 # <a name="using-ctabctrl"></a>CTabCtrl の使い方
 [タブ コントロール] は、ノートの仕切りやファイル キャビネットのラベルの付いたフォルダーに似ています。 タブ コントロールは、クラスによって表される[CTabCtrl](../mfc/reference/ctabctrl-class.md)、一度に 1 つずつ、ピアまたは各ページの間の論理リレーションシップを示す形式でユーザーに情報またはコントロールの複数のページを表示します。  

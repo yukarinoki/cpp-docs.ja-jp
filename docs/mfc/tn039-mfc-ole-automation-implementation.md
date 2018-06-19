@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385340"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>テクニカル ノート 39: MFC/OLE オートメーションの実装
 > [!NOTE]
@@ -146,7 +147,7 @@ property Y    (DISPID)0x00010002
  プロパティの型を指定する値。  
   
 ## <a name="remarks"></a>コメント  
- このマクロは、非常によく似た`DISP_PROPERTY`追加の引数を受け入れることを除いて、します。 追加の引数*pfnAfterSet、*が何も返され、'void OnPropertyNotify()'、パラメーターはメンバー関数である必要があります。 呼び出される**後**メンバー変数が変更されました。  
+ このマクロは、非常によく似た`DISP_PROPERTY`追加の引数を受け入れることを除いて、します。 追加の引数*pfnAfterSet、* が何も返され、'void OnPropertyNotify()'、パラメーターはメンバー関数である必要があります。 呼び出される**後**メンバー変数が変更されました。  
   
 ## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM-マクロの説明  
   

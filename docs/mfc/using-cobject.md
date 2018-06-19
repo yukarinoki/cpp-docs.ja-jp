@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382299"
 ---
 # <a name="using-cobject"></a>CObject の使い方
 [CObject](../mfc/reference/cobject-class.md)ルート基本クラスが、ほとんどの Microsoft Foundation Class ライブラリ (MFC)。 `CObject`クラスには、シリアル化のサポート、ランタイム クラス情報、およびオブジェクトの診断出力を含む独自のプログラム オブジェクトに組み込むことが多くの便利な機能が含まれています。 クラスを派生する場合`CObject`、クラスは、これらを悪用できる`CObject`機能します。  

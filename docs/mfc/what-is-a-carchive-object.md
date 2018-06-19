@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383834"
 ---
 # <a name="what-is-a-carchive-object"></a>CArchive オブジェクトとは
 A`CArchive`オブジェクトをシリアル化可能なオブジェクトの読み取りまたは書き込み用タイプ セーフ バッファリング メカニズムを提供する、`CFile`オブジェクト。 通常、`CFile`オブジェクトは、ディスク ファイルを表します。 ただし、メモリ ファイルにすることができますも (`CSharedFile`オブジェクト)、おそらく、クリップボードを表すです。  

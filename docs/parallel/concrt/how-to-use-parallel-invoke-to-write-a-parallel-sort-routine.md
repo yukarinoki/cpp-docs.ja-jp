@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689169"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>方法: 並列呼び出しを使用して並列並べ替えルーチンを記述する
 このドキュメントを使用する方法について説明、 [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke)バイトニック ソート アルゴリズムのパフォーマンスを向上するためのアルゴリズムです。 バイトニック ソート アルゴリズムでは、入力シーケンスを、より小さな並べ替え済みのパーティションへと再帰的に分割します。 各パーティションの操作は他のすべての操作から独立しているため、バイトニック ソート アルゴリズムは並列的に実行することができます。  

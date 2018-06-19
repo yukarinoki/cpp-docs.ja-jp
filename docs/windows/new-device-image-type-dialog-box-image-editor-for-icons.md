@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879621"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>新しい&lt;デバイス&gt;画像の種類 ダイアログ ボックス (アイコン用イメージ エディター)
 指定した型の新しいデバイス イメージを作成できます。 開くには、**新規\<デバイス > イメージ**ダイアログ ボックスで、をクリックして**イメージ タイプの新規**上、**イメージ**メニュー。  

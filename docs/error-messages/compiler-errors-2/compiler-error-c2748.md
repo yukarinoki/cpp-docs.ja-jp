@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236132"
 ---
 # <a name="compiler-error-c2748"></a>コンパイラ エラー C2748
 マネージ配列または WinRT 配列を作成するには、配列のサイズまたは配列の初期化子を指定する必要があります。  

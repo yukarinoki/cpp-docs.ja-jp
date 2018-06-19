@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381011"
 ---
 # <a name="using-an-unclipped-device-context"></a>クリッピングを行わないデバイス コンテキストの使用
 コントロールは、そのクライアントの四角形の外側は描画されませんがわかっている場合への呼び出しを無効にして小さくても、検知できる程度の速度の向上を実感できます`IntersectClipRect`によってになる`COleControl`です。 これを行うには、削除、 **clipPaintDC**によって返されるフラグのセットからフラグ[オン](../mfc/reference/colecontrol-class.md#getcontrolflags)です。 例えば:  

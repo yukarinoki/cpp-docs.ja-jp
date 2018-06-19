@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380566"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>ファイルを削除する典型的な FTP クライアント アプリケーションの作成手順
 次の表は、ファイルを削除する典型的な FTP クライアント アプリケーションで必要な手順を示します。  

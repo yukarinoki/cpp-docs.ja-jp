@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384583"
 ---
 # <a name="tn014-custom-controls"></a>テクニカル ノート 14: カスタム コントロール
 ここでは、カスタムおよび自己描画コントロールの MFC サポートについて説明します。 動的なサブクラス化をについて説明し、関係について説明[CWnd](../mfc/reference/cwnd-class.md)オブジェクトおよび`HWND`s。  

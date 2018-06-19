@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382503"
 ---
 # <a name="servers-server-items"></a>サーバー : サーバー アイテム
 コンテナーは、ユーザーは埋め込みまたはリンクされている OLE 項目を編集できるようにサーバーを起動したときに、サーバー アプリケーション項目を作成、"サーバーです" 派生したクラスのオブジェクトをあるサーバーのアイテムに`COleServerItem`サーバーのドキュメントとコンテナー アプリケーション間のインターフェイスを提供します。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> サーバー アイテムのアーキテクチャのヒント  
  説明したとおり[サーバー アイテムの実装](#_core_implementing_server_items)、サーバー アプリケーションは、サーバーのビューでは、コンテナー アプリケーションで使われるメタファイルの両方の項目をレンダリングする必要があります。 Microsoft Foundation Class ライブラリ アプリケーション アーキテクチャでは、ビュー クラスの`OnDraw`が編集されているときに、メンバー関数は、項目を表示 (を参照してください[詳細](../mfc/reference/cview-class.md#ondraw)で、*クラス ライブラリ リファレンス*). サーバー アイテムの`OnDraw`メタファイル以外の場合に、項目を表示 (を参照してください[:ondraw](../mfc/reference/coleserveritem-class.md#ondraw))。  
   
- サーバー ドキュメント クラスのヘルパー関数を記述してからそれらを呼び出すことのコードの重複を回避することができます、`OnDraw`クラス ビューとサーバー項目クラス内の関数。 MFC OLE サンプル[HIERSVR](../visual-cpp-samples.md)はこの方法を使用します関数は、 **CServerView::OnDraw**と**修正**両方を呼び出す**CServerDoc::DrawTree。**アイテムを表示するためにします。  
+ サーバー ドキュメント クラスのヘルパー関数を記述してからそれらを呼び出すことのコードの重複を回避することができます、`OnDraw`クラス ビューとサーバー項目クラス内の関数。 MFC OLE サンプル[HIERSVR](../visual-cpp-samples.md)はこの方法を使用します関数は、 **CServerView::OnDraw**と**修正**両方を呼び出す**CServerDoc::DrawTree。** アイテムを表示するためにします。  
   
  ビューと項目の両方がある`OnDraw`メンバー関数のさまざまな条件で描画されるためです。 ビューは、ズーム、選択範囲のサイズとエクステント、領域、およびスクロール バーなどのユーザー インターフェイス要素としてなどの条件を考慮する必要があります。 サーバー アイテム、その一方で、常に描画全体の OLE オブジェクト。  
   

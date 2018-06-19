@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381089"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC でのステータス バーの実装
 A [CStatusBar](../mfc/reference/cstatusbar-class.md)オブジェクトは、テキスト出力ペインの行を持つコントロール バーです。 出力ウィンドウは、状態インジケーター、およびメッセージ行としてよく使用されます。 例としては、選択されたメニュー コマンドを簡単に説明するメニュー ヘルプ メッセージ行や SCROLL LOCK、NUM LOCK、およびその他のキーの状態を示すインジケーターです。  

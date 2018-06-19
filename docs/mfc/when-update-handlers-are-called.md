@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384135"
 ---
 # <a name="when-update-handlers-are-called"></a>更新ハンドラーが呼び出されるタイミング
 ユーザーを生成するファイル メニューにマウスをクリックすると、`WM_INITMENUPOPUP`メッセージ。 ドロップダウン メニュー、ユーザーが確認できるようにする前に、フレームワークの更新の機構は総称して [ファイル] メニューのすべての項目を更新します。  

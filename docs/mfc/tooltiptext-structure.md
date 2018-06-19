@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383433"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 構造体
 書き込みで、[ツール ヒントの通知ハンドラー](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)を使用する必要があります、`TOOLTIPTEXT`構造体。 メンバー、`TOOLTIPTEXT`構造は。  

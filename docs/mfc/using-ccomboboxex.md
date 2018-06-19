@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381762"
 ---
 # <a name="using-ccomboboxex"></a>CComboBoxEx の使い方
 拡張コンボ ボックス コントロールは、項目のイメージのネイティブ サポートを提供する標準のコンボ ボックス コントロールの拡張です。 これらのイメージは、現在選択されていると、選択されていない項目など、コンボ ボックス内の各項目の状態を示すために使用できます。 項目のイメージを簡単にアクセスするには、コントロールには、イメージ リストのサポートが用意されています。  

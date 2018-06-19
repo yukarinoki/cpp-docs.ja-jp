@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383943"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows ソケット : データグラム ソケット
 この記事では、データグラム ソケットでは、使用可能な 2 つの Windows ソケット型の 1 つについて説明します。 (他の型が、[ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md))。  

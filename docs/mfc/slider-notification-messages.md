@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381980"
 ---
 # <a name="slider-notification-messages"></a>スライダー コントロールの通知メッセージ
 スライダー コントロールの親を送信することによってユーザーの操作の親ウィンドウに通知`WM_HSCROLL`または`WM_VSCROLL`スライダー コントロールの向きに応じて、メッセージ。 これらのメッセージを処理するためのハンドラーを追加、`WM_HSCROLL`と`WM_VSCROLL`メッセージを親ウィンドウ。 [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll)と[OnVScroll](../mfc/reference/cwnd-class.md#onvscroll)メンバー関数は、スライダーとへのポインターの位置で、通知コードに渡される、 [CSliderCtrl](../mfc/reference/csliderctrl-class.md)オブジェクト。 ポインター型の**関数\*** を指しているにもかかわらず、`CSliderCtrl`オブジェクト。 スライダー コントロールを操作する必要がある場合は、このポインターをキャストする必要があります。  

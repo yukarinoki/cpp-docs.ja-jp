@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690612"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>アクセラレータおよび accelerator_view オブジェクトの使用
 使用することができます、[アクセラレータ](../../parallel/amp/reference/accelerator-class.md)と[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)デバイスまたはエミュレーターで、C++ AMP コードを実行するを指定するクラス。 システムには、メモリの量、共有メモリ サポート、デバッグ サポート、または倍精度サポートによって異なる複数のデバイスまたはエミュレーターがある場合があります。 C++ Accelerated Massive Parallelism (C++ AMP) には、使用できるアクセラレータの調査、既定としての設定、parallel_for_each の複数の呼び出しのための複数の accelerator_views の指定、特別なデバッグ タスクの実行のために使用できる API が用意されています。  

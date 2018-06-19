@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384089"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>テクニカル ノート 16: MFC における C++ の多重継承
 ここでは、Microsoft Foundation Classes で複数継承 (MI) を使用する方法について説明します。 多重継承の使用は、MFC で必要はありません。 MI は、すべての MFC クラスでは使用されませんし、クラス ライブラリを作成する必要はありません。  

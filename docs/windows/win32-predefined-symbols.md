@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891738"
 ---
 # <a name="win32-predefined-symbols"></a>Win32 の定義済みシンボル
 Win32 ヘッダー ファイルでこれらのシンボルが定義されているし、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、共通の UI 要素で主に使用されます。 リソース エディターでのコントロールを使用してこれらのシンボルに表示されます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)コモン コントロールに関連付けられています。 たとえば、アプリケーションのアイコンがツールバーに表示する場合、アイコンは、[プロパティ] ウィンドウのシンボル IDI_SMALL に関連付けられてのようになります。  

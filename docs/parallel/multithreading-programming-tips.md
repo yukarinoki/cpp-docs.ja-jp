@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689988"
 ---
 # <a name="multithreading-programming-tips"></a>マルチスレッド : プログラミングのヒント
 マルチスレッド アプリケーションでデータにアクセスするときは、シングルスレッドの場合より慎重に行う必要があります。 マルチスレッド アプリケーションでは、複数のスレッドがそれぞれ個別に同時に実行されるので、アルゴリズムやデータに関して、複数のスレッドで同じデータが使われることを考慮する必要があります。 このトピックでは、MFC (Microsoft Foundation Class) ライブラリを使用してマルチスレッド アプリケーションを開発する場合にこのような問題を回避する手法について説明します。  

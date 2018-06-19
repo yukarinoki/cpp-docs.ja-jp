@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226219"
 ---
 # <a name="fatal-error-c1091"></a>致命的なエラー C1091
 コンパイラの制限: 文字列が長さ 'length' バイトを超えています  

@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379861"
 ---
 # <a name="variant-parameter-type-constants"></a>Variant パラメーター型の定数
 このトピックでは、Microsoft Foundation Class ライブラリの OLE コントロール クラスで使用するために設計された variant パラメーター型を示す新しい定数を示します。  

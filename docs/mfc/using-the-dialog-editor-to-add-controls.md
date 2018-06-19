@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381952"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>ダイアログ エディターを使用したコントロールの追加
 ダイアログ テンプレート リソースを作成する場合、[ダイアログ エディター](../windows/dialog-editor.md)、コントロール パレットからコントロールをドラッグし、ダイアログ ボックスにドロップします。 これは、ダイアログ テンプレート リソースにそのコントロール型の仕様を追加します。 ダイアログ オブジェクトと呼び出しを構築するときにその**作成**または`DoModal`メンバー関数は、フレームワークは、Windows コントロールを作成し、画面のダイアログ ウィンドウに配置します。  

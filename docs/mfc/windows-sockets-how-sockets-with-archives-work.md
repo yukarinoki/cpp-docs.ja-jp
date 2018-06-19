@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385217"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows ソケット : アーカイブ付きソケットの動作
 この記事で説明する方法、 [CSocket](../mfc/reference/csocket-class.md)オブジェクト、 [CSocketFile](../mfc/reference/csocketfile-class.md)オブジェクト、および[CArchive](../mfc/reference/carchive-class.md)オブジェクトが結合され、Windows を使用してデータの送受信を簡略化ソケットします。  

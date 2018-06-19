@@ -119,6 +119,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377772"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 `CMFCTabCtrl`クラス タブ コントロールの機能を提供します。 タブ コントロールは、上または下にフラットまたは 3D のタブを持つ、ドッキング可能なウィンドウを表示します。 タブにはテキストとイメージを表示でき、アクティブな状態のときに色を変更することもできます。  

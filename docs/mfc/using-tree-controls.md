@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384870"
 ---
 # <a name="using-tree-controls"></a>ツリー コントロールの使い方
 ツリー コントロールの一般的な使用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 次のパターンします。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379897"
 ---
 # <a name="run-member-function"></a>Run メンバー関数
 ほとんどの時間内に費やすフレームワーク アプリケーション、[実行](../mfc/reference/cwinapp-class.md#run)クラスのメンバー関数[CWinApp](../mfc/reference/cwinapp-class.md)です。 初期化後は、`WinMain`呼び出し**実行**メッセージ ループを処理します。  

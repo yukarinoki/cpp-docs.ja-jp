@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227148"
 ---
 # <a name="fatal-error-c1305"></a>致命的なエラー C1305
 プロファイル データベース 'pgd_fil' は異なるアーキテクチャ用です。  

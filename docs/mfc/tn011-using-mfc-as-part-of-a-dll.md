@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384711"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>テクニカル ノート 11: DLL の構成要素としての MFC
 ここでは、標準 MFC Dll では、MFC ライブラリを Windows ダイナミック リンク ライブラリ (DLL) の一部として使用することについて説明します。 これは、Windows の Dll およびそれらをビルドする方法を理解するいると仮定します。 MFC 拡張 Dll の概要については、作成するために、MFC ライブラリの拡張機能を参照してください[MFC の DLL バージョン](../mfc/tn033-dll-version-of-mfc.md)します。  

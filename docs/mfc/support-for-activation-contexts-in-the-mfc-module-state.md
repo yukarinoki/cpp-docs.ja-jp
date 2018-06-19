@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380710"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>MFC モジュール状態でのアクティベーション コンテキストのサポート
 MFC では、ユーザー モジュールによって指定されたマニフェスト リソースを使用してアクティブ化コンテキストを作成します。 アクティベーションのコンテキストを作成する方法の詳細については、次のトピックを参照してください。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198613"
 ---
 # <a name="compiler-error-c2474"></a>コンパイラ エラー C2474
 'keyword' : 隣接するセミコロンがありません。キーワードまたは識別子のどちらかである可能性があります。  

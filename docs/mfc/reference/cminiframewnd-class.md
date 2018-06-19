@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378383"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd クラス
 フローティング ツール バーの周りなどで使用される、半分の高さのフレーム ウィンドウを表します。  

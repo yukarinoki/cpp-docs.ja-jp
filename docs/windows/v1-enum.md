@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890662"
 ---
 # <a name="v1enum"></a>v1_enum
 指定した列挙型は、既定の 16 ビットではなく、32 ビットのエンティティとして送信するように指示します。  

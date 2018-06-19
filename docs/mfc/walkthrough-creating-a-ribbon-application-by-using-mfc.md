@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385230"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>チュートリアル: MFC によるリボン アプリケーションの作成
 このチュートリアルで使用する方法、 **MFC アプリケーション ウィザード**を既定では、リボンを持つアプリケーションを作成します。 追加することで、リボンを拡張することができます、**カスタム**を持つリボン カテゴリ、**お気に入り**リボン パネル、およびし、頻繁に使用するいくつかのパネルにコマンドを追加します。  

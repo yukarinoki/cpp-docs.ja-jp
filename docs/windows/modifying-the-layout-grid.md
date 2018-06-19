@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880320"
 ---
 # <a name="modifying-the-layout-grid"></a>レイアウト グリッドの変更
 配置することであるか、ダイアログ ボックスでコントロールの配置、ときに、正確に配置レイアウト グリッドを使用できます。 グリッドをオンにすると、「に合わせる」のグリッドの点線帯びた場合と同様にコントロールが表示されます。 この「グリッドに合わせる」機能を有効または無効にし、レイアウトのグリッド セルのサイズを変更できます。  

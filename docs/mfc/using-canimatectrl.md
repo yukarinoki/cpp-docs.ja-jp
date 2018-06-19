@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381619"
 ---
 # <a name="using-canimatectrl"></a>CAnimateCtrl の使い方
 クラスによって表される、アニメーション コントロール[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)、オーディオ Video Interleaved (AVI) 形式でクリップを表示するウィンドウは、-、標準の Windows ビデオ/オーディオ形式です。 AVI クリップは、一連の映画のように、ビットマップ フレームです。  

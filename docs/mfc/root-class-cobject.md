@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385071"
 ---
 # <a name="root-class-cobject"></a>ルート クラス: CObject
 Microsoft Foundation Class (MFC) ライブラリ内のクラスのほとんどは、クラス階層のルートにある 1 つの基本クラスから派生します。 `CObject` さまざまなオーバーヘッドが少なく、そこから派生したすべてのクラスに便利な機能を提供します。 詳細については`CObject`し、その機能を参照してください[を使用して CObject](../mfc/using-cobject.md)です。  

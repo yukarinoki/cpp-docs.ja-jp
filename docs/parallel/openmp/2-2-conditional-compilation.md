@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685906"
 ---
 # <a name="22-conditional-compilation"></a>2.2 条件付きコンパイル
 _**OPENMP**マクロ名が 10 進定数として OpenMP 準拠の実装によって定義された*yyyymm*、承認済みの仕様の月と年になる予定です。 このマクロのサブジェクトをすることはできません、 **#define**または **#undef**プリプロセッサ ディレクティブです。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687388"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 名前空間
 `direct3d` 名前空間は、D3D の相互運用性をサポートする関数を提供します。 これにより、AMP コードでの計算に D3D のリソースをシームレスに使用できるようになると共に、AMP で作成したリソースを D3D コードで使用することができ、冗長な中間コピーを作成する必要がありません。 C++ AMP を使用することによって、DirectX アプリケーションの計算中心のセクションの処理を加速し、AMP の計算から生成されるデータに対して D3D API を使用できます。  

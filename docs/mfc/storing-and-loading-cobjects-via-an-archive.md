@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380729"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>アーカイブを通じた CObject の格納と読み込み
 格納と読み込み`CObject`アーカイブを通じた s は注意が必要です。 場合によってを呼び出す必要があります、`Serialize`関数、オブジェクトの場所、`CArchive`オブジェクトがパラメーターでの`Serialize`を使用してではなく、呼び出し、 **< \<** または**>>** の演算子、`CArchive`です。 注意する重要な実際には、 `CArchive` **>>** 演算子コンストラクト、`CObject`に基づいて、メモリ内`CRuntimeClass`以前格納アーカイブして、ファイルに書き込む情報。  

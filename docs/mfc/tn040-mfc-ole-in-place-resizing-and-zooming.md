@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385006"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>テクニカル ノート 40: MFC/OLE 埋め込み先サイズ変更とズーム
 > [!NOTE]
