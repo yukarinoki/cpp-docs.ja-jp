@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349618"
 ---
 # <a name="general-mfc-topics"></a>MFC の一般的なトピック
 ここでは、MFC (Microsoft Foundation Class) ライブラリについて説明します。また、MFC フレームワークとその主要なコンポーネント、およびサブシステムの概要を示します。  

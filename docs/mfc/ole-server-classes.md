@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350430"
 ---
 # <a name="ole-server-classes"></a>OLE サーバー クラス
 これらのクラスは、サーバー アプリケーションによって使用されます。 サーバー ドキュメントがから派生した`COleServerDoc`からではなく**CDocument**です。 ため`COleServerDoc`から派生した`COleLinkingDoc`サーバーのドキュメントには、リンクをサポートするコンテナーがすることもできます。  

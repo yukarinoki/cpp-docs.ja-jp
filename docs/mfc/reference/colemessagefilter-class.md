@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371365"
 ---
 # <a name="colemessagefilter-class"></a>関数クラス
 OLE アプリケーション間の相互の要求を同時に管理します。  

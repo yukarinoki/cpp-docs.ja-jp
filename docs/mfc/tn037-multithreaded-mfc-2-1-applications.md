@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382016"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>テクニカル ノート 37: MFC 2.1 のマルチスレッド アプリケーション
 このテクニカル ノートでは、と共に提供されている Visual C++ 1.0 (Windows NT の)、MFC 2.1 のマルチ スレッド プログラムの制限が記載されています。 マルチ スレッド MFC 3.0 サポート直接が記載されているとします。 詳細については、その参照を参照してください。  

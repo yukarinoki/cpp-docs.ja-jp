@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352413"
 ---
 # <a name="memory-management-heap-allocation"></a>メモリ管理 : ヒープ割り当て
 ヒープは、プログラムの必要なメモリ割り当てに予約されています。 これとは別に、プログラム コードおよびスタック領域です。 一般的な C プログラム関数を使用して`malloc`と**空き**割り当てヒープ メモリの割り当てを解除したりします。 MFC のデバッグ バージョンは、C++ の組み込み演算子の改訂版**新しい**と**削除**割り当て、ヒープのメモリ内のオブジェクトを解放します。  

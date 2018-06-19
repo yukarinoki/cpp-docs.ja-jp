@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349468"
 ---
 # <a name="message-handling-and-command-targets"></a>メッセージ処理とコマンド ターゲット
 コマンドのディスパッチ インターフェイス`IOleCommandTarget`クエリおよびコマンドを実行する単純で拡張可能なメカニズムを定義します。 このメカニズムは、Automation のよりも簡単`IDispatch`コマンドの引数を持つことはほとんどありませんコマンドの標準セットに完全に依存しているためと、型情報は必要ありません (タイプ セーフはコマンドの引数も低下)。  

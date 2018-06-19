@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246699"
 ---
 # <a name="compiler-error-c2893"></a>コンパイラ エラー C2893
 関数テンプレート 'テンプレート名' の特定に失敗しました  

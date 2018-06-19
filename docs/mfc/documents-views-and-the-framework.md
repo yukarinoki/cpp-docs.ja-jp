@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349520"
 ---
 # <a name="documents-views-and-the-framework"></a>ドキュメント、ビュー、フレームワーク
 MFC フレームワークの中核にドキュメントとビューの概念があります。 ドキュメントは、ユーザーが編集セッションでやり取りするデータ オブジェクトです。 によって作成されて、`New`または**開く**コマンドを**ファイル**メニューし、通常、ファイルに保存します。 (MFC の標準ドキュメントでは、クラスから派生した**CDocument**はアクティブなドキュメント、および OLE 複合ドキュメントによって異なります)。ビューは、使用するユーザーは、ドキュメントを操作ウィンドウ オブジェクトです。  

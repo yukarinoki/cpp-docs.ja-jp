@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380306"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>テクニカル ノート 44: MFC の DBCS サポート
 このテクニカル ノートでは、「2 バイト文字セット」または DBCS の MFC でのサポートについて説明します。 この情報だけでなくについては MFC の UNICODE をで使用できるようになりました、*クラス ライブラリ リファレンス*です。  

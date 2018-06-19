@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351746"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX コントロール : プロパティ ページ
 プロパティ ページでは、ActiveX コントロールのユーザーを表示および ActiveX コントロールのプロパティを変更できるようにします。 これらのプロパティは、表示およびコントロールのプロパティを編集用にカスタマイズされた、グラフィカル インターフェイスを提供する 1 つまたは複数のプロパティ ページが含まれているコントロールのプロパティのダイアログ ボックスを呼び出すことによってアクセスします。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348362"
 ---
 # <a name="processing-tab-control-notification-messages"></a>タブ コントロールの通知メッセージの処理
 ユーザーは、タブまたはボタン、タブ コントロールをクリックして、([CTabCtrl](../mfc/reference/ctabctrl-class.md))、親ウィンドウに通知メッセージを送信します。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーは、タブをクリックすると、可能性がある表示する前に、ページ上のコントロール データを事前設定します。  

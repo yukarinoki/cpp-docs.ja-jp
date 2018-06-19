@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695877"
 ---
 # <a name="2725-default"></a>2.7.2.5 default
 **既定**句は、ユーザーに影響を与える変数のデータ共有属性を使用できます。 構文、**既定**句を次に示します。  

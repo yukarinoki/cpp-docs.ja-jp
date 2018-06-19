@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353440"
 ---
 # <a name="application-type-mfc-application-wizard"></a>[アプリケーションの種類] \(MFC アプリケーション ウィザード)
 このページを使用して、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)を設計して新しい MFC アプリケーションへの基本的な機能を追加します。  

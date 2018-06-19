@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350000"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE の背景知識 : MFC における実装
 によりのサイズと複雑さ生 OLE API、OLE アプリケーションを作成するには、直接呼び出すなる可能性が非常に時間がかかります。 OLE の Microsoft Foundation Class ライブラリの実装の目的は、全機能を備えた、OLE 対応のアプリケーションを作成するために必要な作業の量を削減します。  

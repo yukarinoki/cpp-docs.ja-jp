@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353703"
 ---
 # <a name="handling-customization-notifications"></a>カスタマイズ通知の処理
 Windows ツール バー コモン コントロールには、システム定義のカスタマイズ ダイアログ ボックスなどのカスタマイズ機能が組み込まれています。この機能を使用して、ユーザーはツール バー ボタンを挿入、削除、または再配置できます。 アプリケーションは、カスタマイズ機能が使用できるかどうかを判断し、ユーザーがツール バーをどの程度までカスタマイズできるかを制御します。  

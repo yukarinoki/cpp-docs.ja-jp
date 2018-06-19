@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862037"
 ---
 # <a name="numput-class"></a>num_put クラス
 
@@ -254,7 +255,7 @@ virtual iter_type do_put(iter_type next,
     const void* val) const;
 ```
 
-この関数の動作は 1 番目と同じですが、変換仕様が `p` と**、**埋め込みを指定するために必要なすべての修飾子である点が異なります。
+この関数の動作は 1 番目と同じですが、変換仕様が `p` と **、** 埋め込みを指定するために必要なすべての修飾子である点が異なります。
 
 6 番目のプロテクト仮想メンバー関数:
 

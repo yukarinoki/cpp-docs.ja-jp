@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354136"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize クラス
 サイズをアニメーション化できるサイズ オブジェクトの機能を実装します。  

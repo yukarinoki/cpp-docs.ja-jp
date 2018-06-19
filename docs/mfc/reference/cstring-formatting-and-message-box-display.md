@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375041"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString の書式指定とメッセージ ボックスの表示
 関数の数が書式設定および解析する指定された`CString`オブジェクト。 これらの関数を使用するには、操作する必要があるたびに`CString`オブジェクトではなくはメッセージ ボックスのテキストに表示される文字列を書式設定するために特に有用です。  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349312"
 ---
 # <a name="memory-management-frame-allocation"></a>メモリ管理 : フレーム割り当て
 フレーム割り当てが設定されている「スタック フレーム」から名前を取得する関数が呼び出されるときに、必ずです。 スタック フレームは、一時的を保持する引数に定義されている任意の変数だけでなく、関数、関数に対してローカルなメモリの領域です。 フレーム変数は、コンパイラは自動的にそれらの領域を割り当てるために、多くの場合、「自動」の変数と呼ばれます。  

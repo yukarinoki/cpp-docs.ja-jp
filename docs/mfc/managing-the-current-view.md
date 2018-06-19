@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349592"
 ---
 # <a name="managing-the-current-view"></a>現在のビューの管理
 フレーム ウィンドウの既定の実装の一部として、フレーム ウィンドウを現在アクティブなビューの追跡を保持します。 フレーム ウィンドウには、分割ウィンドウなど、複数のビューが含まれている場合、現在のビューは、使用中で最新のビューがします。 アクティブなビューは、Windows または現在の入力フォーカスのアクティブ ウィンドウの依存しません。  

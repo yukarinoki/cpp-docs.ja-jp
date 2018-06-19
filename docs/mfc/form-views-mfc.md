@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349049"
 ---
 # <a name="form-views-mfc"></a>フォーム ビュー (MFC)
 フォームを追加するには、MFC ライブラリを含むをサポートする任意の Visual C アプリケーションを[フォーム ベースのアプリケーション](../mfc/reference/creating-a-forms-based-mfc-application.md)(1 つのビュー クラスから派生して`CFormView`)。 フォームをサポートするために、アプリケーションを最初に作成しなかった場合、Visual C は新しいフォームを挿入するときにこのサポートを追加します。 SDI または MDI アプリケーションは、既定値を実装する[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)を選択すると、`New`コマンド (既定では、上、**ファイル**メニュー)、Visual C は、ユーザーに求めます使用可能なフォームを選択します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380602"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>各項目のイメージの設定
 拡張コンボ ボックス項目を使用するイメージのさまざまな種類は内の値によって決まります、 `iImage`、 **iSelectedImage**、および**iOverlay**のメンバー、[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb775746)構造体。 各値は、関連付けられているイメージ リストには、コントロールのイメージのインデックスです。 既定では、これらのメンバーを項目のイメージを表示しない、コントロールの原因を 0 に設定されます。 特定の項目のイメージを使用する場合、コンボ ボックス項目を挿入するときにまたは既存のコンボ ボックス項目を変更することで同様に、構造を変更することができます。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691197"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>方法: スケジュール グループを使用して実行順序に影響を与える
 同時実行ランタイムでは、タスクをスケジュールする順序は非確定的です。 ただし、スケジューリング ポリシーを使用して、タスクの実行順序に影響を与えることができます。 このトピックの内容と共にスケジュール グループを使用する方法を示しています、 [concurrency::schedulingprotocol](reference/concurrency-namespace-enums.md#policyelementkey)タスクの実行順序に影響を与えるスケジューラ ポリシー。  

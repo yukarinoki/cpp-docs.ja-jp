@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350782"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX コントロール : カスタム プロパティ ページの追加
 場合によっては、ActiveX コントロールは、1 つのプロパティ ページに収まることにかなり多くのプロパティがあります。 この場合、これらのプロパティを表示する ActiveX コントロールにプロパティ ページを追加できます。  

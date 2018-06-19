@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379997"
 ---
 # <a name="reflected-window-message-ids"></a>返送されたウィンドウ メッセージの ID
 ActiveX コントロール、またはその他の特殊なコントロールを作成する簡単な方法では、ウィンドウをサブクラス化です。 詳細については、次を参照してください。 [MFC ActiveX コントロール: Windows コントロールのサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)です。  

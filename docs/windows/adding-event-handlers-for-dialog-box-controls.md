@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863700"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>ダイアログ ボックス コントロールへのイベント ハンドラーの追加
 既にクラスに関連付けられているプロジェクト ダイアログ ボックスでイベント ハンドラーを作成するときに、いくつかのショートカット利用できます。 既定のコントロールの通知イベントまたは該当する Windows メッセージのハンドラーをすばやく作成できます。  

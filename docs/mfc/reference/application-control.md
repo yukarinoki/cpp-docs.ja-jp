@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355913"
 ---
 # <a name="application-control"></a>アプリケーションの制御
 OLE には、アプリケーションとそれらのオブジェクトを十分に制御が必要です。 OLE システム Dll は、起動アプリケーションのリリースを自動的に、その運用環境と、オブジェクトの変更を調整し、できる必要があります。 このトピック内の関数は、それらの要件を満たしています。 に加えて、OLE システム Dll によって呼び出されるは、アプリケーションもによって、これらの関数を呼び出される場合がありますする必要があります。 

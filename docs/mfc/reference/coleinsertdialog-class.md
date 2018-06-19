@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374882"
 ---
 # <a name="coleinsertdialog-class"></a>メンバー クラス
 OLE の [オブジェクトの挿入] ダイアログ ボックスで使用されます。  

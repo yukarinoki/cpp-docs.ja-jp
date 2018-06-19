@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348927"
 ---
 # <a name="dao-classes"></a>DAO クラス
 これらのクラスは、データ アクセス オブジェクト (DAO) のデータベースは、同じデータベース エンジンを使用して Microsoft Visual Basic および Microsoft Access に簡単にアクセスを提供するその他のアプリケーション フレームワーク クラスによって使用します。 DAO クラスは、さまざまなオープン データベース コネクティビティ (ODBC) ドライバーが利用可能なデータベースにもアクセスできます。  

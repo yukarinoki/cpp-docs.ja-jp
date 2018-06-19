@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348391"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX コントロール : イベント
 ActiveX コントロールは、コントロールに問題が発生しましたが、コンテナーに通知するのにイベントを使用します。 イベントの一般的な例には、コントロール、コントロールの状態で、キーボード、および変更を使用して入力データのクリックが含まれます。 これらのアクションが発生すると、コントロールは、コンテナーのアラートを生成するイベントを発生させます。  

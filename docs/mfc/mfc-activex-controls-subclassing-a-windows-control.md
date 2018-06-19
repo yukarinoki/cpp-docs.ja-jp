@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355438"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX コントロール : Windows コントロールのサブクラス化
 この記事では、ActiveX コントロールを作成する一般的な Windows コントロールのサブクラス化するプロセスについて説明します。 既存のウィンドウをサブクラス化コントロールは、ActiveX コントロールを開発する簡単な方法です。 新しいコントロールの描画とマウスのクリックに応答してなどのサブクラス化された Windows コントロールの機能があります。 MFC ActiveX コントロールをサンプル[ボタン](../visual-cpp-samples.md)サブクラス化して、Windows コントロールの例に示します。  

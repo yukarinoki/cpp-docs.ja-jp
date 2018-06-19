@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349159"
 ---
 # <a name="manipulating-image-lists"></a>イメージ リストの操作
 [置換](../mfc/reference/cimagelist-class.md#replace)メンバー関数にはイメージ リスト内のイメージが置き換えられます ([CImageList](../mfc/reference/cimagelist-class.md)) 新しいイメージを含むです。 この関数は、イメージ リスト オブジェクト内のイメージの数を動的に増やす必要がある場合に役立ちます。 もできます。 [呼び出す前](../mfc/reference/cimagelist-class.md#setimagecount)関数がイメージ リストに格納されているイメージの数を動的に変更します。 イメージ リストのサイズを大きくした場合は、呼び出す**置換**イメージをイメージの新しいスロットに追加します。 イメージ リストのサイズを小さくと、新しいサイズを超えたイメージが解放されます。  

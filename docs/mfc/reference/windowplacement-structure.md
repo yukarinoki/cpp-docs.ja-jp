@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379474"
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT 構造体
 `WINDOWPLACEMENT`構造体には、画面上のウィンドウの配置に関する情報が含まれています。**です。**  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691002"
 ---
 # <a name="4-environment-variables"></a>4.環境変数
 OpenMP C および C++ API の環境変数 (または同等のプラットフォーム固有のメカニズム) を説明並列コードの実行を制御します。  環境変数の名前を大文字にする必要があります。 割り当てられている値は大文字と小文字であり、先頭および末尾の空白文字があります。  プログラムが開始した後の値に変更は無視されます。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348486"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI マクロ
 使用して、**プロパティ**コマンド ターゲット オブジェクトにコマンド更新ハンドラーへのユーザー インターフェイス オブジェクトを接続するウィンドウです。 ユーザー インターフェイス オブジェクトの ID を自動的に接続、`ON_UPDATE_COMMAND_UI`マクロを更新プログラムを処理するオブジェクトでのハンドラーを作成します。 参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)詳細についてはします。  

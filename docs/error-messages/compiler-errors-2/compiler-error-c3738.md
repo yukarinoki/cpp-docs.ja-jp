@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265675"
 ---
 # <a name="compiler-error-c3738"></a>コンパイラ エラー C3738
 'calling_convention': 明示的なインスタンス化の呼び出し規約には、インスタンス化されているテンプレートの一致する必要があります  

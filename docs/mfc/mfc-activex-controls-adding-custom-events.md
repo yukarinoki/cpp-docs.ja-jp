@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352532"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX コントロール : カスタム イベントの追加
 カスタム イベントとは異なりストック イベントからクラスによって自動的に起動しません`COleControl`です。 カスタム イベントは、特定のアクション、イベントとして、コントロールの開発者によって決定を認識します。 カスタム イベントのイベントのマップ エントリがによって表される、`EVENT_CUSTOM`マクロです。 次のセクションでは、ActiveX コントロール ウィザードを使用して作成された ActiveX コントロール プロジェクトのカスタム イベントを実装します。  

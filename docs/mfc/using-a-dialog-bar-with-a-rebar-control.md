@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382907"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Rebar コントロールでのダイアログ バーの使い方
 説明したよう[Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)、各バンドは、1 つだけの子ウィンドウ (またはコントロール) を含めることができます。 帯域外あたり 1 つ以上の子ウィンドウがある場合、制限があります。 便利な回避策では、複数のコントロールにダイアログ バー リソースを作成し、rebar コントロールに rebar バンド (ダイアログ バーを含む) を追加します。  

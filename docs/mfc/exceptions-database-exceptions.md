@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354303"
 ---
 # <a name="exceptions-database-exceptions"></a>例外処理 : データベースの例外
 この記事では、データベースの例外を処理する方法について説明します。 この記事の内容の大部分には、使用している MFC クラスのオープン データベース コネクティビティ (ODBC) または MFC クラスのデータ アクセス オブジェクト (DAO) かどうかが適用されます。 いずれかまたはその他のモデルに固有の情報が明示的にマークします。 ここでは、次の内容について説明します。  

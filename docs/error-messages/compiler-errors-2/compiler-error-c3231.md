@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257997"
 ---
 # <a name="compiler-error-c3231"></a>コンパイラ エラー C3231
 'arg': テンプレート型引数はジェネリック型パラメーターを使用できません  

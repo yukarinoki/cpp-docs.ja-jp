@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245297"
 ---
 # <a name="compiler-error-c2842"></a>コンパイラ エラー C2842
 'class' : マネージ型または WinRT 型はそれ自体の 'operator new' または 'operator delete' を定義できません  

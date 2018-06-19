@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349676"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>コントロールがアクティブでないときのマウスとの対話
 場合は、コントロールがすぐにアクティブでない可能性がありますかを処理するよう`WM_SETCURSOR`と`WM_MOUSEMOVE`メッセージ、コントロールに、独自のウィンドウがあるない場合でもです。 これには、有効にすると`COleControl`の実装、`IPointerInactive`インターフェイスで、既定で無効にします。 (を参照してください、 *ActiveX SDK*このインターフェイスの詳細についてはします)。有効にするには、`pointerInactive`によって返されるフラグのセットでフラグ[オン](../mfc/reference/colecontrol-class.md#getcontrolflags):  

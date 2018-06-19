@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863407"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>ダイアログ エディターのアクセラレータ キー
 次のとおり、デフォルト、ダイアログ エディターのアクセラレータ キー。 ショートカット キーを変更する をクリックして**オプション**で、**ツール** メニューを選択し**キーボード**下にある、**環境**フォルダーです。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)」をご覧ください。  

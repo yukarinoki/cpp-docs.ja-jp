@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246540"
 ---
 # <a name="compiler-error-c2970"></a>コンパイラ エラー C2970
 'class': テンプレート パラメーター 'param': 'arg': 非型引数として内部リンケージを持つオブジェクトを含む式を使用することはできません  

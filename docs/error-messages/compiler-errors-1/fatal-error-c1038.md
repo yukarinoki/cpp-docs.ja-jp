@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196689"
 ---
 # <a name="fatal-error-c1038"></a>致命的なエラー C1038
 コンパイラの制限: function: 制御フローが複雑すぎます。関数を単純化してください  

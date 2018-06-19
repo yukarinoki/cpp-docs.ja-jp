@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351811"
 ---
 # <a name="providing-windowless-activation"></a>ウィンドウなしのアクティベーション
 ウィンドウを作成するコード (つまり、すべてのものを呼び出すときに発生する**CreateWindow**) を実行するコストがかかります。 保持するコントロール、ウィンドウがウィンドウのメッセージを管理するにが画面に表示されます。 ウィンドウなしのコントロールはウィンドウを持つコントロールよりも高速ではこのためです。  

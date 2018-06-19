@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237154"
 ---
 # <a name="compiler-error-c2814"></a>コンパイラ エラー C2814
 'member' : ネイティブ型をマネージ型または WinRT 型の 'type' の中に入れ子にすることはできません  

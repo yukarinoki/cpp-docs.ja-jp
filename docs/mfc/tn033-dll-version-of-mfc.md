@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385243"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>テクニカル ノート 33: MFC の DLL バージョン
 ここでは、MFCxx.DLL を使用することができ、MFCxxD.DLL (x は MFC のバージョン番号) は、MFC アプリケーションおよび MFC 拡張 Dll とダイナミック リンク ライブラリを共有する方法について説明します。 正規の MFC Dll の詳細については、次を参照してください。 [DLL の一部としての MFC](../mfc/tn011-using-mfc-as-part-of-a-dll.md)です。  

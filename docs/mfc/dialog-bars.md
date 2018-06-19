@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348808"
 ---
 # <a name="dialog-bars"></a>ダイアログ バー
 ダイアログ バーとは、ツールバー、一種の[コントロール バー](../mfc/control-bars.md)あらゆる種類のコントロールを含めることができます。 モードレス ダイアログ ボックスの特性があるため、 [CDialogBar](../mfc/reference/cdialogbar-class.md)オブジェクトより強力なツールバーを使用します。  

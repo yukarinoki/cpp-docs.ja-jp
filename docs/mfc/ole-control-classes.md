@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355358"
 ---
 # <a name="ole-control-classes"></a>OLE コントロール クラス
 これらは、OLE コントロールを作成するときに使用する主なクラスです。 `COleControlModule` OLE コントロール モジュール内のクラスと同様に、 [CWinApp](../mfc/reference/cwinapp-class.md)アプリケーション内のクラスです。 各モジュールが 1 つまたは複数の OLE コントロールを実装します。これらのコントロールがによって表される`COleControl`オブジェクト。 これらのコントロールを使用して、コンテナーとの通信`CConnectionPoint`オブジェクト。  

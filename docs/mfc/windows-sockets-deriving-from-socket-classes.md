@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384076"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows ソケット : ソケット クラスからの派生
 この記事では、いくつかのいずれかのソケット クラスから独自のクラスを派生させることによって利用できる機能について説明します。  

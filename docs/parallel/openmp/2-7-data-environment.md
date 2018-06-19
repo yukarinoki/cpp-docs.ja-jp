@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690066"
 ---
 # <a name="27-data-environment"></a>2.7 データ環境
 このセクションでは、ディレクティブと次のように、並行領域の実行中に、データの環境を制御するためのいくつかの句が表示されます。  

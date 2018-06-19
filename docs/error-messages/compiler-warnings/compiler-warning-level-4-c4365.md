@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293388"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>コンパイラの警告 (レベル 4) C4365
 'action': 'type_1' から 'type_2'、符号付き/符号なしの不一致への変換  

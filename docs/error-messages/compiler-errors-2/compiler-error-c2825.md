@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237238"
 ---
 # <a name="compiler-error-c2825"></a>コンパイラ エラー C2825
 var: クラスまたは名前空間が続くと必要があります ':: '  

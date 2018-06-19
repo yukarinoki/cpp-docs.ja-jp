@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352578"
 ---
 # <a name="interface-elements"></a>インターフェイス要素
 導入されたインターフェイス要素について説明[!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]SP1、およびライブラリの以前のバージョンとの違いについても説明します。  

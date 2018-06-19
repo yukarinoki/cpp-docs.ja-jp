@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864230"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>シンボル ヘッダー ファイル名の変更
 通常は、すべてのシンボル定義が Resource.h に保存されます。 ただし、同じディレクトリ内の複数のリソース ファイルを使用する場合などに、このインクルード ファイル名の変更が必要になることがあります。  

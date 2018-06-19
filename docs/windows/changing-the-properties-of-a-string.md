@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860604"
 ---
 # <a name="changing-the-properties-of-a-string"></a>文字列のプロパティの変更
 ### <a name="to-change-a-string-or-its-identifier"></a>文字列またはその識別子を変更するには  

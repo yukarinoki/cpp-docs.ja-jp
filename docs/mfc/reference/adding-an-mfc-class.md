@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355393"
 ---
 # <a name="adding-an-mfc-class"></a>MFC クラスの追加
 プロジェクトに Microsoft Foundation Class (MFC) ライブラリ クラスから派生したクラスを追加するには、使用、**クラスの追加**で使用できるコマンド[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)です。 新しいクラスの名前を指定、基本クラスを選択し、それが関連付けられている (該当する場合) ダイアログ ボックスの ID を選択します。 コード ウィザードでは、ヘッダー ファイルと実装ファイルを作成し、それらをプロジェクトに追加します。  

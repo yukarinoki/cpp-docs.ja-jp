@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294561"
 ---
 # <a name="compiler-warning-level-4-c4266"></a>コンパイラの警告 (レベル 4) C4266
 'function': 基本 'type' からの仮想メンバー関数の使用可能なオーバーライドはありません関数は隠されます  

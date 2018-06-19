@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352314"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 ActiveX コントロールは、更新されたバージョンの OLE コントロールの仕様です。 コントロールは、さまざまなインターネット上の COM 対応の Web ブラウザーも含めて、別のコンテナーで使用できるプログラミング可能なソフトウェア コンポーネントを開発するための基本的なアーキテクチャです。 ActiveX コントロール インターネット制御とできます作業中の文書にその機能を追加したり、Web ページの一部にします。 Web ページ上のコントロールは、スクリプトを使用して相互に通信できます。  

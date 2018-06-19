@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371346"
 ---
 # <a name="structures-used-by-mfc"></a>MFC が使用する構造体
 次の表は、さまざまなメンバー関数から呼び出される構造体を一覧表示します。 個別の構造体の使用方法については、クラスおよび各構造体の「参照」に記載されているメンバー関数を参照してください。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264104"
 ---
 # <a name="compiler-error-c3722"></a>コンパイラ エラー C3722
 一般的なイベントが許可されていません  

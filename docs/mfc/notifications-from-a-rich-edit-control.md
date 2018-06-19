@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353854"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>リッチ エディット コントロールからの通知メッセージ
 レポートの編集コントロールのリッチに影響するイベントの通知メッセージ ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 親ウィンドウにより処理可能または、メッセージ リフレクションを使用して、リッチで編集コントロール自体。 リッチ エディット コントロールでは、エディット コントロールに加えて、さらにいくつか使用する通知メッセージのすべてをサポートします。 通知メッセージ、リッチ エディット コントロール親ウィンドウに送る mask を設定して、"イベントです"を指定できます。  

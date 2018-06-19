@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355683"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>入出力処理の推奨事項
 ファイル ベースの I/O を使用するかどうかは、次のデシジョン ツリーの質問に応答する方法によって異なります。  

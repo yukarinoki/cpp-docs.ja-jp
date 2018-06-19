@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349050"
 ---
 # <a name="ole-container-classes"></a>OLE コンテナー クラス
 これらのクラスは、コンテナー アプリケーションによって使用されます。 両方`COleLinkingDoc`と`COleDocument`のコレクションを管理`COleClientItem`オブジェクト。 ドキュメント クラスの派生ではなく**CDocument**から派生します`COleLinkingDoc`または`COleDocument`文書に埋め込まれているオブジェクトへのリンクでサポートが必要かどうかによって異なります。  

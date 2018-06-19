@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352836"
 ---
 # <a name="programmatic-printing"></a>プログラムによる印刷
 OLE が永続的なドキュメントを一意に識別するための手段を提供 (**GetClassFile**) と、関連付けられているコードへのロード (`CoCreateInstance`、 **QueryInterface(IID_IPersistFile)**、 **QueryInterface(IID_IPersistStorage)**、 **:load**、および**機能として**)。 Active ドキュメント コンテインメント (OLE 2.0 に付属していない既存の OLE デザインを使用して) ドキュメントの印刷をさらに有効にするにはベースの標準の印刷インターフェイスが導入されています`IPrint`、読み込むことができる任意のオブジェクトで一般的に使用できる、ドキュメントの種類の永続的な状態です。 アクティブ ドキュメントの各ビューをサポートできます必要に応じて、 **IPrint**これらの機能を提供するインターフェイスです。  

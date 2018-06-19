@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263828"
 ---
 # <a name="compiler-error-c3645"></a>コンパイラ エラー C3645
 'function': _ _clrcall は、ネイティブ コードにコンパイルされた関数では使用できません  

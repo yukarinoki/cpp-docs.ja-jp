@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386107"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows ソケット : ストリーム ソケット
 この記事では、ストリーム ソケットの場合、使用可能な 2 つの Windows ソケット型の 1 つについて説明します。 (他の型が、[データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md))。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348216"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows メッセージのハンドラー
 既定の標準の Windows メッセージのハンドラー (**wm _ で始まる**) クラスで定義済み`CWnd`です。 クラス ライブラリは、メッセージ名に基づいて、これらのハンドラーの名前を行います。 たとえばのハンドラーを`WM_PAINT`でメッセージが宣言されている`CWnd`として。  

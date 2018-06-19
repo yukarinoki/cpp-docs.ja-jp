@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687284"
 ---
 # <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested 関数
 **Omp_set_nested**関数を有効または入れ子になった並列処理を無効にします。 形式は次のとおりです。  

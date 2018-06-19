@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241805"
 ---
 # <a name="compiler-error-c2928"></a>コンパイラ エラー C2928
 明示的なインスタンス生成。'identifier' はテンプレート クラス 'class' の関数または静的なデータ メンバーのいずれでもありません  

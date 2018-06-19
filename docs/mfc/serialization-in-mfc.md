@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381024"
 ---
 # <a name="serialization-in-mfc"></a>MFC におけるシリアル化
 この記事では、間で永続化するオブジェクトを許可する Microsoft Foundation Class ライブラリ (MFC) でのシリアル化機構が、プログラムの実行について説明します。  

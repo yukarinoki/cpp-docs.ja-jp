@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352790"
 ---
 # <a name="docking-and-floating-toolbars"></a>ツール バーのドッキングとフローティング
 Microsoft Foundation Class ライブラリでは、ドッキング可能ツールバーをサポートします。 ドッキング可能ツールバーをアタッチ、または、その親ウィンドウの任意の辺に、ドッキングされていることができます、またはデタッチ、または独自のミニフレーム ウィンドウで、フロートことができます。 この記事では、アプリケーションでドッキング可能ツールバーを使用する方法について説明します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348529"
 ---
 # <a name="message-handling-and-mapping"></a>メッセージの処理とマップ
 ここでは、MFC フレームワークがメッセージとコマンドの処理方法とハンドラー関数への接続方法を説明します。  
