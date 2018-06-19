@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343351"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>クリップボード : データのコピーと貼り付け
 このトピックでは、コピーと OLE アプリケーションでクリップボードから貼り付ける実装に必要な最小限の作業について説明します。 参照することをお勧め、[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)続行する前にトピックです。  

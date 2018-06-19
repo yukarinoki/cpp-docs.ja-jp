@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285718"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>コンパイラの警告 (レベル 1) C4490
 'override': オーバーライド指定子の不適切な使用'function' が、基本 ref クラスのメソッドと一致しません  

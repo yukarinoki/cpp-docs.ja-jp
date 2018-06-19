@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248111"
 ---
 # <a name="compiler-error-c3130"></a>コンパイラ エラー C3130
 内部コンパイラ エラー: が pdb ファイルに挿入されたコード ブロックを書き込みに失敗しました  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241900"
 ---
 # <a name="compiler-error-c2969"></a>コンパイラ エラー C2969
 構文エラー: 'symbol': メンバー関数の定義を終了するための '}' がありません。  

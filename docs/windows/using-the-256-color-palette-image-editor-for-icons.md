@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890906"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>256 色カラー パレットの使用 (アイコン用イメージ エディター)
 選択範囲を使用して描画 256 色カラー パレットから、色パレットから色を選択する必要があります、 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)します。  

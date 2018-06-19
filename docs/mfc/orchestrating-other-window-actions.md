@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345642"
 ---
 # <a name="orchestrating-other-window-actions"></a>ほかのウィンドウの動作の調整
 フレーム ウィンドウは、状況依存のヘルプなどのセミモーダル状態し、印刷プレビューします。 印刷プレビューでのフレーム ウィンドウの役割の説明は、次を参照してください。[印刷および印刷プレビュー](../mfc/printing-and-print-preview.md)です。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878074"
 ---
 # <a name="make-function"></a>Make 関数
 指定した Windows ランタイム クラスを初期化します。 同じモジュールで定義されているコンポーネントのインスタンスを作成するのにには、この関数を使用します。  
