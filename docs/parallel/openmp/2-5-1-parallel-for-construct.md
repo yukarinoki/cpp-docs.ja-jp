@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687154"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for コンストラクト
 **の並列**ディレクティブは、ショートカットを**並列**が 1 つのみが含まれる領域**の**ディレクティブです。 構文、**の並列**ディレクティブは、次のようにします。  

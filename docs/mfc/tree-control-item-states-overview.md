@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383150"
 ---
 # <a name="tree-control-item-states-overview"></a>ツリー コントロール項目の状態の概要
 ツリー コントロール内の各項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) が現在の状態。 たとえば、項目選択できます、無効になっている、展開、およびなど。 ほとんどの場合、ツリー コントロール項目の選択などのユーザー操作を反映するように、アイテムの状態が自動的に設定します。 ただし、設定することも、アイテムの状態を使用して、 [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate)メンバー関数を使用して、アイテムの現在の状態の取得、 [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)メンバー関数。 項目の状態の一覧については、次を参照してください。[ツリー ビュー コントロール定数](http://msdn.microsoft.com/library/windows/desktop/bb759985)Windows SDK に含まれています。  

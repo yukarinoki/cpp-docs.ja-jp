@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233818"
 ---
 # <a name="compiler-error-c2698"></a>コンパイラ エラー C2698
 using 宣言の '1' の宣言と共存できません既存 using 宣言の' 2' の宣言。  

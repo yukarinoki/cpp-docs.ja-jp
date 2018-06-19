@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383787"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>日時指定コントロールでのコールバック フィールドの使い方
 日付と時刻の選択フィールドを定義する標準書式文字、に加えてコールバック フィールドとして、カスタム書式指定文字列の特定の部分を指定することによって、出力をカスタマイズできます。 コールバック フィールドを宣言するには、1 つまたは複数の"X"文字 (ASCII コード 88) を書式指定文字列の本文に任意の場所含めます。 たとえば、次の文字列"' は現在: 'yy '/' MM '/' dd' (日 'X')'"により、年、月、日、および最後に、年の日付を続けてとして現在の値を表示する日付と時刻のピッカー コントロール。  

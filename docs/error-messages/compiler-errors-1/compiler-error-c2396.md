@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197456"
 ---
 # <a name="compiler-error-c2396"></a>コンパイラ エラー C2396
 ' your_type::operator'type ': 無効な CLR または WinRT のユーザー定義の変換の functionnot します。 変換元または変換先が次の値でなければなりません: 'T^'、'T^%'、'T^&' (ここで T = 'your_type')  

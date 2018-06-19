@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344231"
 ---
 # <a name="global-hot-keys"></a>グローバル ホット キー
 グローバル ホット キーは、特定の子ウィンドウ以外のウィンドウに関連付けられます。 ユーザーは、システムの任意の部分からウィンドウをアクティブにできます。 アプリケーションが送信することによって特定のウィンドウでグローバル ホット キーを設定、 [WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284)そのウィンドウにメッセージ。 たとえば場合、`m_HotKeyCtrl`は、 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)オブジェクトおよび`pMainWnd`へのポインターは、ホット キーが押されたときにアクティブ化されるウィンドウにあるコントロールに指定されたホット キーを関連付けるには、次のコードを使用する可能性がありますウィンドウを指す`pMainWnd`です。  

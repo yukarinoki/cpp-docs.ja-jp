@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385272"
 ---
 # <a name="window-objects"></a>ウィンドウ オブジェクト
 MFC クラスを提供する[CWnd](../mfc/reference/cwnd-class.md)をカプセル化する、`HWND`ウィンドウのハンドル。 `CWnd`オブジェクトが C++ ウィンドウ オブジェクト、別個のもの、`HWND`を表す Windows ウィンドウが、それを含むです。 使用して`CWnd`子ウィンドウを派生するクラス、または多数の MFC クラスのいずれかから派生した`CWnd`です。 クラス`CWnd`フレーム ウィンドウ、ダイアログ ボックス、子ウィンドウ、コントロール、およびツールバーなどのコントロール バーを含む、すべての windows の基本クラスです。 よく理解[C++ ウィンドウ オブジェクトと HWND の関係](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)MFC で効果的なプログラミングは特に重要です。  

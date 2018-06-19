@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379282"
 ---
 # <a name="rich-edit-control-examples"></a>リッチ エディット コントロールの例
 MFC OLE サンプル[ワードパッド](../visual-cpp-samples.md)を使用して、 `CRichEditView`、 `CRichEditDoc`、および`CRichEditCntrItem`クラスです。 使用して、拡張機能によって、 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)です。 これら 3 つのクラスの簡単な説明を参照してください。[リッチ エディット コントロールに関連するクラス](../mfc/classes-related-to-rich-edit-controls.md)です。  

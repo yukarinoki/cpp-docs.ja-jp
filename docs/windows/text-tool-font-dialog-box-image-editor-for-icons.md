@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890434"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>[テキスト ツール フォント] ダイアログ ボックス (アイコン用イメージ エディター)
 使用する場合、フォントの設定を指定、[テキスト ツール ダイアログ ボックス](../windows/text-tool-dialog-box-image-editor-for-icons.md)の[イメージ エディター](../windows/image-editor-for-icons.md)です。  

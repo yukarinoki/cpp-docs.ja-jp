@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339892"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX コントロール コンテナー : ActiveX コントロール サポートの手動による有効化
 MFC アプリケーション ウィザードを使用してアプリケーションを作成すると ActiveX コントロールのサポートを有効にしなかった場合、は、このサポートを手動で追加する必要があります。 この記事では、既存の OLE コンテナー アプリケーションに ActiveX コントロール コンテナーを手動で追加するためのプロセスについて説明します。 記事を参照している場合は事前に、OLE コンテナーで ActiveX コントロールをサポートする、 [MFC ActiveX コントロール コンテナーの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)です。  

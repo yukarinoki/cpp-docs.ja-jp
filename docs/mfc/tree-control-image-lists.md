@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382194"
 ---
 # <a name="tree-control-image-lists"></a>ツリー コントロールのイメージ リスト
 ツリー コントロール内の各項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 関連付けられているビットマップ イメージのペアを持つことができます。 項目のラベルの左側にある、画像が表示されます。 項目が選択されているし、項目が選択されていないときに表示されたら、他の 1 つのイメージが表示されます。 たとえば、項目が選択されていないときに、開いているフォルダーを選択すると閉じたフォルダーを表示できます。  

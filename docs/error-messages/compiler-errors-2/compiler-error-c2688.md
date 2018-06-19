@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236015"
 ---
 # <a name="compiler-error-c2688"></a>コンパイラ エラー C2688
 'C2::fgrv': covariant の戻りを複数、または仮想継承が varargs 関数はサポートされていません  

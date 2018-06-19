@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230905"
 ---
 # <a name="compiler-error-c2561"></a>コンパイラ エラー C2561
 'identifier': 関数が値を返す必要があります  

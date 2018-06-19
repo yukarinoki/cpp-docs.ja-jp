@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383333"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用して、CArchive &lt; &lt;と&gt;&gt;演算子
 `CArchive` 提供 <\<と >> 単純なデータ型の読み書きの演算子だけでなく`CObject`ファイルとの間の秒。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382152"
 ---
 # <a name="tree-control-item-position"></a>ツリー コントロールの項目位置
 ツリー コントロールに項目が追加されたときに、最初の項目の位置に設定されている ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) を使用して、`InsertItem`メンバー関数。 メンバー関数の呼び出しは、親アイテムのハンドルと、その後、新しい項目を挿入する項目のハンドルを指定します。 2 番目のハンドルは、指定した親の子項目を識別する必要がありますか、これらのいずれかの値: `TVI_FIRST`、 `TVI_LAST`、または`TVI_SORT`です。  

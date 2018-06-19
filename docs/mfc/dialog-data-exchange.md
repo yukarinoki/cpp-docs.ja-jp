@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345141"
 ---
 # <a name="dialog-data-exchange"></a>ダイアログ データ エクスチェンジ
 DDX 機構を使用する場合に設定した、ダイアログ ボックスの初期値オブジェクトのメンバー変数では、通常、`OnInitDialog`ハンドラーまたはダイアログ コンス トラクターです。 ダイアログ ボックスが表示される前に、フレームワークの DDX 機構によって転送メンバー変数の値 ダイアログ ボックスで、表示されるコントロールの直前にダイアログ ボックスが表示されたらへの応答`DoModal`または**作成**. 既定の実装`OnInitDialog`で`CDialog`呼び出し、`UpdateData`クラスのメンバー関数`CWnd` ダイアログ ボックスのコントロールを初期化します。  

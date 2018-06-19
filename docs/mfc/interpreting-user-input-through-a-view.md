@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349430"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>ビューを経由したユーザー入力の解釈
 ビューの他のメンバー関数は、処理し、すべてのユーザー入力を解釈します。 通常、処理するビュー クラスのメッセージ ハンドラー メンバー関数を定義します。  

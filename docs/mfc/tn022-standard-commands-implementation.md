@@ -74,6 +74,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385526"
 ---
 # <a name="tn022-standard-commands-implementation"></a>テクニカル ノート 22: 標準コマンドの実装
 > [!NOTE]
@@ -180,7 +181,7 @@ ms.lasthandoff: 05/04/2018
   
      `CWinApp::OnFilePrintSetup` 非常に単純な実装を作成する、`CPrintDialog`オブジェクトと呼び出し元、**高める**関数を実装します。 これは、アプリケーションの既定のプリンター設定を設定します。  
   
-     このコマンドをカスタマイズするための一般的な必要性は、ドキュメントの保存時に保存するか、ドキュメントごとプリンター設定できるようにするのにです。 これを行うには、メッセージ マップのハンドラーを追加する必要があります、 **CDocument**を作成するクラス、`CPrintDialog`オブジェクト、適切なプリンターの属性を持つ初期化 (通常**hDevMode**と**と**)、呼び出す、 **CPrintDialog::DoModal、**し、変更されたプリンターの設定を保存します。 堅牢に実装する必要があります見ての実装**高める**エラーを検出するのと**CWinApp::UpdatePrinterSelection**実用的な既定値を処理するため、システム全体のプリンターの変更を追跡します。  
+     このコマンドをカスタマイズするための一般的な必要性は、ドキュメントの保存時に保存するか、ドキュメントごとプリンター設定できるようにするのにです。 これを行うには、メッセージ マップのハンドラーを追加する必要があります、 **CDocument**を作成するクラス、`CPrintDialog`オブジェクト、適切なプリンターの属性を持つ初期化 (通常**hDevMode**と**と**)、呼び出す、 **CPrintDialog::DoModal、** し、変更されたプリンターの設定を保存します。 堅牢に実装する必要があります見ての実装**高める**エラーを検出するのと**CWinApp::UpdatePrinterSelection**実用的な既定値を処理するため、システム全体のプリンターの変更を追跡します。  
   
 -   現在のドキュメントの ID_FILE_PRINT 標準の印刷  
   

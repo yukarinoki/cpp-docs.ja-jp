@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385539"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows ソケット: アーカイブ付きソケットの使用
 この記事の内容について説明します、 [CSocket プログラミング モデル](#_core_the_csocket_programming_model)です。 クラス[CSocket](../mfc/reference/csocket-class.md)クラスよりも高い抽象化レベルでのソケットのサポートを提供[CAsyncSocket](../mfc/reference/casyncsocket-class.md)です。 `CSocket` MFC のシリアル化プロトコルのバージョンを介して MFC ソケット オブジェクトからデータを受け渡すを使用して[CArchive](../mfc/reference/carchive-class.md)オブジェクト。 `CSocket` ブロックしているときに Windows メッセージのバック グラウンド処理の管理) を提供し、により利用できる`CArchive`、raw API またはクラスのいずれかを使用して自分で行う必要があります、通信の多くの側面を管理する`CAsyncSocket`です。  

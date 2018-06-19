@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383163"
 ---
 # <a name="working-with-a-tab-control"></a>タブ コントロールの使い方
 タブ コントロールを使用する最も簡単な方法 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) によってダイアログ エディターでダイアログ テンプレート リソースに追加することができます。 タブ コントロールは単独で使用することもできます。 MFC 呼び出し**InitCommonControls**します。 主要なタスクは次のとおりです。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689117"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28 num_threads 句の使用
 次の例で、`num_threads`句 ([セクション 2.3](../../parallel/openmp/2-3-parallel-construct.md) 8 ページの)。 並列領域は、最大 10 個のスレッドで実行されます。  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380878"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>テクニカル ノート 56: ローカライズされた MFC コンポーネントのインストール
 ローカライズされた MFC コンポーネントのインストールを説明するには、このテクニカル ノートでは廃止されました。  

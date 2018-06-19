@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350056"
 ---
 # <a name="documentview-architecture"></a>ドキュメント/ビュー アーキテクチャ
 既定では、MFC アプリケーション ウィザードは、アプリケーションのスケルトンをドキュメント クラスとビュー クラスを作成します。 MFC には、これら 2 つのクラスにデータの管理が分離されます。 ドキュメントは、データを格納およびデータ印刷の管理および、データの複数のビューの更新を調整します。 ビューは、データを表示し、選択や編集でのユーザー操作を管理します。  

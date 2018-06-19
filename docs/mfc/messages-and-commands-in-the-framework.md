@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348880"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>フレームワークのメッセージとコマンド
 Microsoft Windows 用に記述されたアプリケーションは、「メッセージ駆動型です」 マウスのクリック、キーストローク、ウィンドウの移動などのイベントに応答してでは、Windows は、該当するウィンドウにメッセージを送信します。 Framework アプリケーションでは、Windows の他のアプリケーションと同様に Windows メッセージを処理します。 フレームワークには、カプセル化されたを簡単に、保守性の向上、およびより優れたメッセージの処理を構成するいくつかの機能強化も用意されています。  

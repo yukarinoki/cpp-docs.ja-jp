@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380111"
 ---
 # <a name="styles-for-the-progress-control"></a>プログレス コントロールのスタイル
 プログレス コントロールを最初に作成する場合 ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create))、使用、`dwStyle`パラメーターを進行状況コントロールの目的のウィンドウ スタイルを指定します。 次の一覧では、適用できるウィンドウ スタイルについて説明します。 コントロールには、ここに一覧にない任意のウィンドウ スタイルが無視されます。 常に ダイアログ ボックスの親の通常の子ウィンドウとして、コントロールを作成します。  

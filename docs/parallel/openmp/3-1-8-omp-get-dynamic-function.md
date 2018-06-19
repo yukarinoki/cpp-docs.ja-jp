@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686192"
 ---
 # <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic 関数
 **Omp_get_dynamic**場合は、スレッドを動的に調整が有効であり、それ以外の場合は 0 を返します関数は 0 以外の値を返します。 形式は次のとおりです。  

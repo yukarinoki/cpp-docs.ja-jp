@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230997"
 ---
 # <a name="compiler-error-c2692"></a>コンパイラ エラー C2692
 'function_name': 完全なプロトタイプ関数が C コンパイラで必要な '/clr' オプション  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686722"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 関数
 `omp_get_nested`関数 0 を返します入れ子になった並列処理が有効になっている場合は 0 以外の値が無効な場合です。 入れ子になった並列処理の詳細については、40 ページの 3.1.9 セクションを参照してください。 形式は次のとおりです。  

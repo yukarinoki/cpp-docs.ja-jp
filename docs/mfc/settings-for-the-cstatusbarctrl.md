@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380163"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl の設定値
 既定の位置、 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)ステータス ウィンドウが、親ウィンドウの下部では、指定することが、`CCS_TOP`スタイルを親ウィンドウのクライアント領域の上部に表示します。  

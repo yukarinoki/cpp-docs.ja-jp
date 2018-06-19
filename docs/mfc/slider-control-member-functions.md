@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383446"
 ---
 # <a name="slider-control-member-functions"></a>スライダー コントロールのメンバー関数
 アプリケーションをスライダー コントロールのメンバー関数を呼び出すスライダー コントロールの概要情報を取得する ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) とその特性を変更します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235364"
 ---
 # <a name="compiler-error-c2753"></a>コンパイラ エラー C2753
 '*テンプレート*': 部分的特殊化はプライマリ テンプレートの引数リストと一致ことはできません  

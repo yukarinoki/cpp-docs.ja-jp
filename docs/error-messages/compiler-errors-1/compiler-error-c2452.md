@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197222"
 ---
 # <a name="compiler-error-c2452"></a>コンパイラ エラー C2452
 'type': safe_cast に対する無効なソースの種類  

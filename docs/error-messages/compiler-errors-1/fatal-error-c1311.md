@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226679"
 ---
 # <a name="fatal-error-c1311"></a>致命的なエラー C1311
 COFF 形式は、'var' をアドレスの数バイトと共に静的に初期化できません。  

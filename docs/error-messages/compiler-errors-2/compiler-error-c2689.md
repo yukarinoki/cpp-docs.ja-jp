@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231638"
 ---
 # <a name="compiler-error-c2689"></a>コンパイラ エラー C2689
 'function': ローカル クラス内でフレンド関数を定義することはできません  

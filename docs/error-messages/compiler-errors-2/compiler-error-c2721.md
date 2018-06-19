@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231925"
 ---
 # <a name="compiler-error-c2721"></a>コンパイラ エラー C2721
 'specifier': 演算子のキーワードと型の間に無効なストレージ クラス指定子  

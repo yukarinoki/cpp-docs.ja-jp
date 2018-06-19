@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379708"
 ---
 # <a name="settings-for-the-toolbar-control"></a>ツール バー コントロールの設定値
 ツールバーのボタンには、ビットマップ、文字列、またはその両方を表示できます。 既定では、イメージのサイズは 16 x 15 ピクセルの大きさに設定します。 すべてのボタンは、同じ幅に既定の 24 で 22 ピクセルです。 ツールバーの高さは、ボタンの高さによって決まります、ツールバーの幅はまた、既定では、親ウィンドウのクライアント領域の幅と同じです。  

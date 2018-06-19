@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380635"
 ---
 # <a name="wm-message-handlers-a---c"></a>WM_ で始まるメッセージのハンドラー : A - C
 左側の次のマップ エントリは、右側の関数プロトタイプに対応します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348310"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX コントロール : メソッド
 ActiveX コントロールは、それ自体とそのコントロールのコンテナー間の通信にイベントを発生させます。 コンテナーは、メソッドとプロパティを使用して、コントロールとも通信できます。 メソッドは、関数とも呼ばれます。  

@@ -349,6 +349,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378944"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 OLE コントロールを開発するための強力な基底クラスです。  
@@ -3339,7 +3340,7 @@ CFont* SelectFontObject(
  参照、 [CFontHolder](../../mfc/reference/cfontholder-class.md)選択されるフォントを表すオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- 以前に選択したフォントへのポインター。 呼び出し元が使用するすべての描画操作を完了すると*fontHolder、*へのパラメーターとして渡すことによって、以前に選択したフォントがもう一度選択する必要があります[cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject)です。  
+ 以前に選択したフォントへのポインター。 呼び出し元が使用するすべての描画操作を完了すると*fontHolder、* へのパラメーターとして渡すことによって、以前に選択したフォントがもう一度選択する必要があります[cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject)です。  
   
 ##  <a name="selectstockfont"></a>  COleControl::SelectStockFont  
  デバイス コンテキストにストック フォント プロパティを選択します。  

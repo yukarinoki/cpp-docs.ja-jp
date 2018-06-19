@@ -148,6 +148,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378442"
 ---
 # <a name="cpane-class"></a>CPane Class
 `CPane`クラスは、の機能強化、 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)です。 既存の MFC プロジェクトをアップグレードする場合は、すべての出現を置換`CControlBar`で`CPane`です。  

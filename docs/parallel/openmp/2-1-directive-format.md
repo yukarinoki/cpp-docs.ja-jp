@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687273"
 ---
 # <a name="21-directive-format"></a>2.1 ディレクティブの書式
 文法では、OpenMP ディレクティブの構文は指定された正式に[付録 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)、および次のように非公式。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385613"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>テクニカル ノート 24: MFC で定義されているメッセージおよびリソース
 > [!NOTE]
