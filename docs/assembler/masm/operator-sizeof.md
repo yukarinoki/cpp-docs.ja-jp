@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051210"
 ---
 # <a name="operator-sizeof"></a>SIZEOF 演算子
 内のバイト数を返します*変数*または`type`です。  

@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409385"
 ---
 # <a name="sal-annotations"></a>SAL 注釈
 ライブラリ ヘッダー ファイルを調べると、`_In_z` や `_Out_z_cap_(_Size)` など、通常とは異なる注釈がいくつかあることに気付く場合があります。 これらは、Microsoft のソース コード注釈言語 (SAL) の例です。SAL は、関数が自身のパラメーターをどのように使用するかを記述する注釈のセットを提供します。つまり、これらの注釈は、たとえば関数がそのパラメーターについて何を前提としているか、または関数が終了時に何を保証するかを示します。 これらの注釈はヘッダー ファイル \<sal.h> で定義されています。  

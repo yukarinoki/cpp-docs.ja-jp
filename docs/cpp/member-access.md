@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420088"
 ---
 # <a name="member-access"></a>メンバー アクセス
 メンバー アクセス演算子をオーバー ロードがクラス メンバーへのアクセスを制御できます (**->**)。 この演算子は、この使用方法では単項演算子と見なされ、オーバーロードされる演算子関数は、クラス メンバー関数である必要があります。 したがって、このような関数の宣言は次のとおりです。  

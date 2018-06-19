@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354656"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>時刻値の書式設定: 汎用クラス
 次の手順では、時刻の値を書式設定する方法を示します。  

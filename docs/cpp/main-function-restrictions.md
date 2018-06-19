@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419686"
 ---
 # <a name="main-function-restrictions"></a>main 関数に関する制約
 いくつかの制限を適用する、**メイン**関数を他の C++ 関数には適用されません。 **メイン**関数。  

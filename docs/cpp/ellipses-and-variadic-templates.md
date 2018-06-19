@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416659"
 ---
 # <a name="ellipses-and-variadic-templates"></a>楕円および可変値引数テンプレート
 ここでは、C++ の可変個引数テンプレートを使用して省略記号 (`...`) を指定する方法を示します。 省略記号は、C および C++ でさまざまな用途で発生しました。 たとえば、関数の可変個引数リストなどです。 C ランタイム ライブラリの `printf()` 関数は、最も一般的な例の 1 つです。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>構文  
  可変個引数テンプレートでは、省略記号が 2 とおりの方法で使用されます。 パラメーター名の左を省略、*パラメーター パック*パラメーター名の右に別個の名前に、パラメーター パックを展開します。  
   
- 基本的な例を次に示します*可変個引数テンプレート クラスは、*定義の構文。  
+ 基本的な例を次に示します*可変個引数テンプレート クラスは、* 定義の構文。  
   
 ```cpp  
 template<typename... Arguments> class classname;  

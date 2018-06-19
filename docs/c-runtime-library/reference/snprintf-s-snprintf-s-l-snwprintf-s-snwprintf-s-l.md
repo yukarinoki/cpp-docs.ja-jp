@@ -61,6 +61,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416440"
 ---
 # <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 
@@ -149,7 +150,7 @@ int _snwprintf_s(
 
 **_Snprintf_s**関数形式とストア*カウント*で以下の文字*バッファー*終端の null を追加します。 引数 (ある場合) はそれぞれが変換されに対応する書式指定に応じて*形式*です。 整合性が書式設定、 **printf**関数のファミリ; 参照してください[書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)です。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-場合*カウント*は[_TRUNCATE](../../c-runtime-library/truncate.md)、し **_snprintf_s**にできるだけ多くだけでなく、文字列の書き込みが収まるよう*バッファー*の領域を確保したまま、null 終了しています。 文字列全体 (終端の null) に収まる場合*バッファー*、し **_snprintf_s** 、文字数を返します (終端の null は含まない) 書き込まれますそれ以外の場合、 **_snprintf_s。**場合、-1 をその切り捨てが発生したを返します。
+場合*カウント*は[_TRUNCATE](../../c-runtime-library/truncate.md)、し **_snprintf_s**にできるだけ多くだけでなく、文字列の書き込みが収まるよう*バッファー*の領域を確保したまま、null 終了しています。 文字列全体 (終端の null) に収まる場合*バッファー*、し **_snprintf_s** 、文字数を返します (終端の null は含まない) 書き込まれますそれ以外の場合、 **_snprintf_s。** 場合、-1 をその切り捨てが発生したを返します。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。

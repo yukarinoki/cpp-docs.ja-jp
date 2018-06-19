@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356342"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>CComObject と実装すると、および CComPolyObject
 テンプレート クラス[CComObject](../atl/reference/ccomobject-class.md)、[すると](../atl/reference/ccomaggobject-class.md)、および[CComPolyObject](../atl/reference/ccompolyobject-class.md)継承チェーン内の最も派生クラスでは常にします。 すべてのメソッドは、処理する責任は**IUnknown**: `QueryInterface`、 `AddRef`、および**リリース**です。 さらに、`CComAggObject`と`CComPolyObject`(集約オブジェクトの使用) する場合、特別な参照カウントを提供および`QueryInterface`内部の不明なのために必要なセマンティクスです。  

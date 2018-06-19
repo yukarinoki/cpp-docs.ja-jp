@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355034"
 ---
 # <a name="modifying-the-atl-project"></a>ATL プロジェクトを変更します。
 この時点で、複合コントロール プロジェクトでは、複合コントロールに必要なオブジェクトを実装します。 次の手順では、複合コントロールが含まれてし、必要なイベントを処理のコントロールを追加します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412125"
 ---
 # <a name="function-template-instantiation"></a>関数テンプレートのインスタンス化
 関数テンプレートが各型に対して最初に呼び出されるときに、コンパイラはインスタンス化を作成します。 各インスタンス化は、型に特殊化したテンプレート関数の 1 つのバージョンです。 このインスタンス化は、関数がこの型に対して使用されるたびに呼び出されます。 複数の同一のインスタンス化が存在する場合、それらが存在するのが別々のモジュール内であっても、実行可能ファイルには、1 つのインスタンス化のコピーのみが含まれます。  

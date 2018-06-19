@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423523"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>均一な初期化とコンストラクターのデリゲート
 最新の C++ で使用できます*かっこ初期化*等号せず、任意の種類。 また、同様の作業を実行するコンストラクターが複数あるときに、デリゲート コンストラクターを使用してコードを簡単にすることもできます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051944"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 ごとに 1 回繰り返されるブロックをマーク`argument`、現在の`argument`交換`parameter`繰り返されるたびにします。  

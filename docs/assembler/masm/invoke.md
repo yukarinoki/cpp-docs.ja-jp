@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055171"
 ---
 # <a name="invoke"></a>INVOKE
 によって指定されたアドレスでプロシージャが呼び出される*式*、スタックまたは言語の種類の標準的な呼び出し規約に従ってレジスタで引数を渡すことです。  

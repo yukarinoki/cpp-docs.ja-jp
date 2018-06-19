@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418914"
 ---
 # <a name="iteration-statements-c"></a>繰り返しステートメント (C++)
 繰り返しステートメントにより、ループ終了条件に応じて、ステートメント (または複合ステートメント) が複数回実行されます。 これらのステートメントが複合ステートメントの場合は、場合を除き、順序どおりに実行されますか、 [break](../cpp/break-statement-cpp.md)ステートメントまたは[続行](../cpp/continue-statement-cpp.md)ステートメントが見つかりました。  

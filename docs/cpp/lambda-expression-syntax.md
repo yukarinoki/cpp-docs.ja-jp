@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421043"
 ---
 # <a name="lambda-expression-syntax"></a>ラムダ式の構文
 この記事では、ラムダ式の構文と構造体要素を説明します。 ラムダ式の説明は、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)です。  

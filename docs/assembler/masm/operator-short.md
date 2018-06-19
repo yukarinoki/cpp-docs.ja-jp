@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056328"
 ---
 # <a name="operator-short"></a>SHORT 演算子
 型を設定*ラベル*を短くします。 ジャンプはすべて*ラベル*短い必要があります (範囲ジャンプ命令から + 127 バイトに-128 を*ラベル*)。  

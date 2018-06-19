@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361728"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits クラス
 このクラスは、大文字と小文字を変換するための 2 つの静的関数を提供します。  

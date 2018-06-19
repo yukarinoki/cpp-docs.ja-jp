@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418394"
 ---
 # <a name="data-type-ranges"></a>データ型の範囲
 Visual C++ の 32 ビットおよび 64 ビット コンパイラは、この記事の次の表に示す型を認識します。  

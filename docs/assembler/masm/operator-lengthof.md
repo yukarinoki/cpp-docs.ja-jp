@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052851"
 ---
 # <a name="operator-lengthof"></a>LENGTHOF 演算子
 内のデータ オブジェクトの数を返します*変数*です。  

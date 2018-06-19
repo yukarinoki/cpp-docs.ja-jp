@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415453"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: CComPtr および CComQIPtr インスタンスを作成して使用する
 従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の詳細については、「 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)」を参照してください。  

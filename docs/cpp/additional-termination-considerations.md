@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408147"
 ---
 # <a name="additional-termination-considerations"></a>終了に関するその他の考慮事項
 使用して、C++ プログラムを終了する**終了**、 `return`、または**中止**です。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。  

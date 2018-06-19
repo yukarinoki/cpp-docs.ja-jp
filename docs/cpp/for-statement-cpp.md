@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417185"
 ---
 # <a name="for-statement-c"></a>for ステートメント (C++)
 条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントについては、次を参照してください。[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)です。  

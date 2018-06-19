@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418430"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ 組み込み演算子、優先順位と結合規則
 

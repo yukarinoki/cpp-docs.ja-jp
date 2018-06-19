@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412466"
 ---
 # <a name="secure-template-overloads"></a>セキュリティ保護されたテンプレート オーバーロード
 Microsoft は、セキュリティが強化されたバージョンを優先するため、多くの C ランタイム ライブラリ (CRT) 関数を非推奨とされます。 たとえば、`strcpy_s` は `strcpy` の代わりになるセキュリティ強化版です。 非推奨の関数は、メモリを上書きできる操作を禁止しないので、セキュリティ バグの一般的な原因になります。 既定では、このような関数を使うと、コンパイラは非推奨の警告を生成します。 CRT では、セキュリティが強化されたバリアントに簡単に遷移するため、これらの関数の C++ テンプレート オーバーロードが用意されています。  

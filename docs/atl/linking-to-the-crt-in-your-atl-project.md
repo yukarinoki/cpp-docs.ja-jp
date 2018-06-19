@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356384"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>ATL プロジェクトで CRT にリンク
 [C ランタイム ライブラリ](../c-runtime-library/crt-library-features.md)(CRT) できるようにするプログラミングはるかに簡単 ATL 開発時に多くの便利な関数を提供します。 すべての ATL プロジェクトは、CRT ライブラリにリンクします。 長所と短所のメソッドのリンクを確認できます[CRT へのリンクに使用されるメソッドの利点とトレードオフ](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)です。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359783"
 ---
 # <a name="atl-property-page-wizard"></a>ATL プロパティ ページ ウィザード
 このウィザード[ATL プロジェクトにプロパティ ページを追加](../../atl/reference/adding-an-atl-property-page.md)または ATL サポートを MFC プロジェクトにします。 ATL プロパティ ページでは、ユーザー インターフェイスを提供、プロパティを設定する (またはメソッドの呼び出し) の 1 つまたは複数の COM オブジェクトです。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051747"
 ---
 # <a name="df"></a>DF
 割り当て、ごとに 6 バイトの記憶領域を必要に応じて初期化`initializer`です。 `DF` シノニムは、 [FWORD](../../assembler/masm/fword.md)です。  

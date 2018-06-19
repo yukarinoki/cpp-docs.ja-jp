@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417276"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外的なコードと非例外的なコードをインターフェイスで連結する
 ここでは、C++ モジュールで一貫した例外処理を実装する方法と、例外の境界でエラー コードとの間でそれらの例外を変換する方法を説明します。  

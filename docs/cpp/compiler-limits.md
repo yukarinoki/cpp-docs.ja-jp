@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412138"
 ---
 # <a name="compiler-limits"></a>コンパイラの制限
 C++ 標準は、さまざまな言語構成体の制限を勧告しています。 以下は、Visual C++ コンパイラが推奨される制限を実装しない場合のリストです。 最初の数字は ISO C++ 11 標準 (INCITS/ISO/IEC 14882-2011[2012], Annex B) で規定されている制限であり、2 番目の数字は Visual C++ で実装されている制限です。  
