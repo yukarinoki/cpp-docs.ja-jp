@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258635"
 ---
 # <a name="compiler-error-c3482"></a>コンパイラ エラー C3482
 'this' は非静的メンバー関数内でのラムダ キャプチャとしてのみ使用できます  

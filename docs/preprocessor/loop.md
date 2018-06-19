@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846533"
 ---
 # <a name="loop"></a>ループ
 ループのコードを自動並列化によって処理する方法を制御します。また、ループを自動ベクター化の対象から除外します。  

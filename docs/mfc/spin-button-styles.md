@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380098"
 ---
 # <a name="spin-button-styles"></a>スピン ボタンのスタイル
 スピン ボタンの設定の多く ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) スタイルによって制御されます。 使用して、次のスタイルを設定することができます、**プロパティ**ダイアログ エディターのウィンドウ。  

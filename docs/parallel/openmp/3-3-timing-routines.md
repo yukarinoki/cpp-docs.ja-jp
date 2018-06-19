@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694912"
 ---
 # <a name="33-timing-routines"></a>3.3 タイミング ルーチン
 このセクションで説明されている関数は、ポータブル ウォール クロック時間をサポートします。  

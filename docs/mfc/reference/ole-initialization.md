@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374725"
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 アプリケーションでは、OLE システム サービスを使用できます、前に OLE システム Dll の初期化する必要があり、Dll が適切なバージョンであることを確認します。 **AfxOleInit**関数を OLE システム Dll を初期化します。  

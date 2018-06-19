@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373799"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>[ユーザー インターフェイスの機能] (MFC アプリケーション ウィザード)
 このトピックでは、アプリケーションの外観を指定するのに使用できるオプションについて説明します。 プロジェクトのユーザー インターフェイスの機能で指定したアプリケーションの種類によって異なります、[アプリケーションの種類、MFC アプリケーション ウィザード](../../mfc/reference/application-type-mfc-application-wizard.md)MFC アプリケーション ウィザードのページです。 たとえば、シングル ドキュメント インターフェイス アプリケーションを作成する場合は、子フレームのスタイルを追加できません。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380010"
 ---
 # <a name="settings-for-the-progress-control"></a>プログレス コントロールの設定
 プログレス コントロールの基本設定 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) は、範囲と現在の位置。 範囲は、操作の全体の時間を表します。 現在の位置では、アプリケーションが加えた操作の完了に向けた進行状況を表します。 範囲または位置への変更が発生する進行状況コントロール自体を再描画をします。  

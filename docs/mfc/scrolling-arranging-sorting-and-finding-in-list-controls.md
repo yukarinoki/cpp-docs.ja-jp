@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379191"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>リスト コントロールのスクロール、整列、並べ替え、検索
 リスト コントロール ([CListCtrl](../mfc/reference/clistctrl-class.md)) が既定ではスクロール可能です。 詳細については、次を参照してください。[スクロール位置](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows sdk と[スクロール](../mfc/reference/clistctrl-class.md#scroll)メンバー関数。  

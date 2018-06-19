@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358652"
 ---
 # <a name="control-classes"></a>コントロール クラス
 コントロール クラスには、さまざまな標準の Windows コントロールのツリー コントロールに静的テキスト コントロールの範囲がカプセル化します。 さらに、MFC には、いくつかの新しいコントロールのビットマップとコントロール バーのボタンが用意されています。  

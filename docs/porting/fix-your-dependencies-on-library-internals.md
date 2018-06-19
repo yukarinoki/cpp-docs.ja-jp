@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839061"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>ライブラリ内部の依存関係を修正する
 

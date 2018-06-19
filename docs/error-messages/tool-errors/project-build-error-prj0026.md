@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318442"
 ---
 # <a name="project-build-error-prj0026"></a>プロジェクト ビルド エラー PRJ0026
 応答ファイル 'file' には、ユーザーの ANSI コード ページに変換できない Unicode の内容が含まれています。  

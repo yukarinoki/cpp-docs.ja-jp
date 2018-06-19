@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302098"
 ---
 # <a name="linker-tools-error-lnk2039"></a>リンカ ツール エラー LNK2039
 ref クラスをインポートする\<型 >' another.obj で定義されている以外の場合は、インポートまたは定義されており、両方は使用できませんである必要があります  

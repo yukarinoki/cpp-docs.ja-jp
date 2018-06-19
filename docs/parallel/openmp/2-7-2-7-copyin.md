@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689377"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
 **Copyin**句に同じ値を代入するメカニズムを提供する**threadprivate**並列領域を実行する、チーム内の各スレッドの変数です。 指定された各変数に対して、 **copyin**並列領域の先頭に、スレッド プライベートなコピーへの代入した場合と同じ句、チームのマスター スレッド内の変数の値をコピーします。 構文、 **copyin**句を次に示します。  

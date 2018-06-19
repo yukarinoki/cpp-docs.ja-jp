@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379520"
 ---
 # <a name="relationships-among-mfc-objects"></a>各種 MFC オブジェクト間の関係
 パースペクティブにドキュメント/ビューの作成プロセスを配置するには、実行中のプログラムを検討してください: ドキュメント、ビューの格納に使用されるフレーム ウィンドウおよびドキュメントに関連付けられたビュー。  

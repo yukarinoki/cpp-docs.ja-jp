@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353499"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX コントロール : シリアル化
 この記事では、ActiveX コントロールをシリアル化する方法について説明します。 シリアル化は、読み取りまたは書き込みをディスク ファイルなどの永続的なストレージ メディアへのプロセスです。 Microsoft Foundation Class (MFC) ライブラリでは、クラスでシリアル化のサポートが組み込まれて`CObject`です。 `COleControl` プロパティの交換機構を使用して ActiveX コントロールにこのサポートを拡張します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349663"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC での MAPI サポート
 MFC での Microsoft メッセージング アプリケーション プログラム インターフェイス (MAPI) クラスのサブセットのサポートに提供**CDocument**です。 具体的には、 **CDocument**メール サポートがエンドユーザーのコンピューター上に存在するかどうかを決定するメンバー関数があり、必要な場合は、標準コマンド id を持つメール送信コマンドを有効にする**判定**. このコマンドの MFC ハンドラー関数により、ユーザーに電子メールでドキュメントを送信します。  

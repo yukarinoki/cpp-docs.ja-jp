@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360967"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC ツール バーの実装
 ツールバーは、[コントロール バー](../mfc/control-bars.md)コントロールのビットマップ イメージを格納しています。 これらのイメージはプッシュ ボタン、チェック ボックス、オプション ボタンに似た動作をすることができます。 MFC クラスを提供する[CToolbar](../mfc/reference/ctoolbar-class.md)ツールバーを管理します。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376052"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP クラス
 `CSettingsStoreSP`クラスは、ヘルパー クラスのインスタンスの作成に使用できる、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)です。  

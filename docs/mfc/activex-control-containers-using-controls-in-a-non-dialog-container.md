@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324903"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX コントロール コンテナー : ダイアログ ベースではないコンテナーでのコントロールの使用
 一部の SDI などのアプリケーションまたは MDI アプリケーションでは、アプリケーションのウィンドウにコントロールを埋め込むされます。 **作成**、Visual C によって挿入された、ラッパー クラスのメンバー関数はダイアログ ボックスがなくても、コントロールのインスタンスを動的に作成できます。  

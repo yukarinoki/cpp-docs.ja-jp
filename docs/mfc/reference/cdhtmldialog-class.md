@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377008"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 HTML を使用するダイアログ ボックスの作成に使用されるユーザー インターフェイスの実装にダイアログ リソースではなくです。  

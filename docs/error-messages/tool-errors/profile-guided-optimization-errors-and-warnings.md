@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317321"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>ガイド付き最適化のプロファイルのエラーと警告
 ここでは、ビルド ツールによって生成されるエラーについて説明します。 特定のエラー メッセージについては、するか、出力ウィンドウにはエラー番号をクリックし、F1 キーを押して入力内のエラー番号、**探します**ボックスに、インデックス、または適切なリンクをクリックします。  

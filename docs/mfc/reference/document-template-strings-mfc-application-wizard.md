@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373541"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>[ドキュメント テンプレート文字列] (MFC アプリケーション ウィザード)
 MFC アプリケーション ウィザードのこのページではドキュメント管理とローカライズ化のために次のオプションを指定または変更します。 ドキュメント テンプレート文字列が含むアプリケーションの使用可能な**ドキュメント/ビュー アーキテクチャ サポート**で、[アプリケーションの種類](../../mfc/reference/application-type-mfc-application-wizard.md)です。 これらはダイアログ ボックスを使用できません。 ドキュメント テンプレート文字列のほとんどは表示されているアプリケーションのユーザーによって使用されるためにローカライズされます、**リソース言語**に示されている、**アプリケーションの種類**ウィザードのページです。  

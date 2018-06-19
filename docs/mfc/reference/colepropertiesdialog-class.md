@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371687"
 ---
 # <a name="colepropertiesdialog-class"></a>メンバー クラス
 Windows に共通の [OLE プロジェクト プロパティ] ダイアログ ボックスをカプセル化します。  

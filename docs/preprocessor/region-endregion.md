@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839448"
 ---
 # <a name="region-endregion"></a>region、endregion
 **#pragma region** 、コードのブロックを展開したり折りたたんだりを使用する場合を指定することができます、[アウトライン機能](/visualstudio/ide/outlining)の Visual Studio コード エディター。  

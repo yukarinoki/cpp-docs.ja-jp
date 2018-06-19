@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369623"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl クラス
 `CMFCListCtrl`クラスの機能を拡張する[CListCtrl クラス](../../mfc/reference/clistctrl-class.md)クラス、高度なヘッダー コントロールの機能をサポートすることにより、 [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)です。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379746"
 ---
 # <a name="registering-window-classes"></a>ウィンドウ クラスの登録
 Windows の従来のプログラミングでは"ウィンドウ"クラスは、windows の任意の数を作成できるから「クラス」(C++ クラスではなく) の特性を定義します。 この種類のクラスは、テンプレート、または windows を作成するためのモデルです。  

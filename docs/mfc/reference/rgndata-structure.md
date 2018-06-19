@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373509"
 ---
 # <a name="rgndata-structure"></a>RGNDATA 構造体
 `RGNDATA`構造には、ヘッダーと領域を構成する四角形の配列が含まれています。 これらの四角形、並べ替えられた上から下、左右からへは重複しません。  

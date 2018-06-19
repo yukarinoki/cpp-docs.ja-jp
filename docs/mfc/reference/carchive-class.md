@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357538"
 ---
 # <a name="carchive-class"></a>CArchive クラス
 使用すると、それらのオブジェクトを削除した後が引き続き発生する永続的なバイナリ形式 (通常はディスク ストレージ) にオブジェクトの複雑なネットワークを保存できます。  
@@ -329,7 +330,7 @@ void MapObject(const CObject* pOb);
 ### <a name="remarks"></a>コメント  
  たとえば、ドキュメントをシリアル化する可能性がありますいないが、ドキュメントの一部である項目をシリアル化します。 呼び出して`MapObject`、それらのアイテム、またはドキュメントを参照する、サブオブジェクトを許可します。 また、シリアル化されたサブ項目をシリアル化できる、`m_pDocument`バック ポインター。  
   
- 呼び出すことができます`MapObject`に格納しからの読み込み、`CArchive`オブジェクト。 `MapObject` 管理されている内部データ構造を指定したオブジェクトを追加、`CArchive`オブジェクトとは異なりが、シリアル化および逆シリアル化中に[ReadObject](#readobject)と[WriteObject](#writeobject) **、**呼び出しませんオブジェクトのシリアル化します。  
+ 呼び出すことができます`MapObject`に格納しからの読み込み、`CArchive`オブジェクト。 `MapObject` 管理されている内部データ構造を指定したオブジェクトを追加、`CArchive`オブジェクトとは異なりが、シリアル化および逆シリアル化中に[ReadObject](#readobject)と[WriteObject](#writeobject) **、** 呼び出しませんオブジェクトのシリアル化します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#18](../../mfc/codesnippet/cpp/carchive-class_7.h)]  

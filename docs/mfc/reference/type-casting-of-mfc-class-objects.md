@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371162"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC クラス オブジェクトの型キャスト
 型キャストのマクロは、指定されたポインター、キャストは有効なことを確認せず、特定のクラスのオブジェクトを指すポインターをキャストする方法を提供します。  

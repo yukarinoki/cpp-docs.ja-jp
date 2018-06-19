@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695760"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>UWP アプリの C++ で非同期操作の作成
 このドキュメントでは、ユニバーサル Windows Runtime (UWP) アプリを Windows ThreadPool ベースの非同期操作を生成する、タスク クラスを使用するときに注意する重要な点について説明します。  

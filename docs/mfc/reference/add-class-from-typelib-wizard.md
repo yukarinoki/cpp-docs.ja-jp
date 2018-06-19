@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351954"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Typelib クラス追加ウィザード
 このウィザードを使用すると、利用可能なタイプ ライブラリからの MFC クラスを追加します。 ウィザードでは、選択したタイプ ライブラリから追加する各インターフェイスのクラスを作成します。  

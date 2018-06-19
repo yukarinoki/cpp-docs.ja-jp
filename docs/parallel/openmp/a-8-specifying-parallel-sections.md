@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694057"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8 並行セクションの指定
 次の例では、(の[2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) [14] ページ) 関数*xaxis*、 *yaxis*、および*zaxis*同時に実行することができます。 最初の`section`ディレクティブは省略可能です。  なおすべて`section`ディレクティブの構文の範囲で表示する必要は、`parallel sections`を構築します。  

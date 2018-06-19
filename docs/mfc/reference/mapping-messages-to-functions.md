@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371635"
 ---
 # <a name="mapping-messages-to-functions"></a>関数へのメッセージの割り当て
 プロパティ ウィンドウでは、アプリケーションのリソースによって生成されたメッセージをメッセージ ハンドラー (MFC のユーザー インターフェイス クラスのメンバー関数) をバインドします。 使用する[MFC メッセージ マップ](../../mfc/messages-and-commands-in-the-framework.md)バインドを作成します。  

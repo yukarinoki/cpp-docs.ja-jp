@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345756"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC データベース アプリケーションの [ファイル] メニュー
 MFC データベース アプリケーションを作成してシリアル化を使用しない場合どのようにする必要がある、オープン、クローズを解釈、保存、および名前を付けてコマンドを使ってファイル] メニューの [この質問のスタイル ガイドラインはありませんが、ここでは、いくつか提案します。  

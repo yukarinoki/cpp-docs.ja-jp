@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374436"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo クラス
 `CRecentDockSiteInfo`クラスは、最新の状態情報を格納するヘルパー クラス、 [CPane クラス](../../mfc/reference/cpane-class.md)です。  

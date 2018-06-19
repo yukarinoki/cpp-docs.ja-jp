@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344283"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>プログラム実行時のメニューの操作
 クラスを使用して`CMenu`メニューと、実行時にメニュー項目を操作します。 `CMenu` Windows をカプセル化`HMENU`を処理し、メニューを操作するためのメンバー関数を提供します。  

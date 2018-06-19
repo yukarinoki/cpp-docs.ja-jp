@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378169"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer クラス
 `CPaneContainer`クラスは、MFC によって実装されるドッキング モデルの基本的なコンポーネントです。 このクラスのオブジェクトは、2 つのドッキング ペイン、または `CPaneContainer.` の 2 つのインスタンスへのポインターを格納します。また、ペイン (またはコンテナー) を分割している区分線へのポインターも格納します。 コンテナー内にコンテナーを入れ子にすると、フレームワークは複雑なドッキング レイアウトを表すバイナリ ツリーを構築します。 バイナリ ツリーのルートが格納されている、 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)オブジェクト。  

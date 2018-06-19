@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354440"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>方法: タイプ セーフなコレクションを作成する
 この記事では、独自のデータ型のタイプ セーフなコレクションを作成する方法について説明します。 ここでは、次の内容について説明します。  

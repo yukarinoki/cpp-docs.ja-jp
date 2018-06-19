@@ -21,10 +21,11 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843393"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-型のオブジェクトの順序付けされたペアを格納するオブジェクトについて説明します **float * * *、*まず、2 つ目、複素数の実数部を表す虚数部を表すです。
+型のオブジェクトの順序付けされたペアを格納するオブジェクトについて説明します **float * * *、* まず、2 つ目、複素数の実数部を表す虚数部を表すです。
 
 ## <a name="syntax"></a>構文
 

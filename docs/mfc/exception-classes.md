@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344897"
 ---
 # <a name="exception-classes"></a>例外クラス
 クラス ライブラリには、クラスに基づく例外処理機構が用意されています`CException`です。 アプリケーション フレームワークでは、そのコードの例外独自のコードにも使用できます。 詳細については、記事を参照してください。[例外](../mfc/exception-handling-in-mfc.md)です。 独自の例外型を派生できます`CException`です。  

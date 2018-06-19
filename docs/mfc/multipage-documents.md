@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355273"
 ---
 # <a name="multipage-documents"></a>マルチページ ドキュメント
 この記事では、Windows 印刷プロトコルについて説明し、複数のページを含むドキュメントを印刷する方法について説明します。 アーティクルでは、次のトピックについて説明します。  

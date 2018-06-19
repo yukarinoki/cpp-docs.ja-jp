@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686114"
 ---
 # <a name="16-organization"></a>1.6 階層
 -   ランタイム ライブラリ関数 ([第 3 章を参照してください](../../parallel/openmp/3-run-time-library-functions.md))。  

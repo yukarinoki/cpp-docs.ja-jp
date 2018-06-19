@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371391"
 ---
 # <a name="colestreamfile-class"></a>関数クラス
 データのストリームを表します ( `IStream`) OLE 構造化記憶の一部として、複合ファイルでします。  

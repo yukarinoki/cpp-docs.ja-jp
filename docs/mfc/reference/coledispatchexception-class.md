@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373387"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException クラス
 OLE オートメーションの主要部分である OLE `IDispatch` インターフェイス固有の例外を処理します。  

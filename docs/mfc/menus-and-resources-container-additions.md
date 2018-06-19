@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350654"
 ---
 # <a name="menus-and-resources-container-additions"></a>メニューとリソース : コンテナーの変更点
 この記事では、メニューやその他のビジュアル編集コンテナー アプリケーションのリソースに必要な変更について説明します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381570"
 ---
 # <a name="using-cprogressctrl"></a>CProgressCtrl の使い方
 プログレス コントロールは、時間のかかる操作の進行状況を示すために使用できます。 操作の進行に合わせてシステムの強調表示色で塗りつぶされていく四角形です。  

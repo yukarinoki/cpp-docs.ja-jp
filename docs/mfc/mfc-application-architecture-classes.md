@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351431"
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC アプリケーション アーキテクチャ クラス
 このカテゴリのクラスは、framework アプリケーションのアーキテクチャに貢献します。 ほとんどのアプリケーションに共通の機能を指定します。 アプリケーション固有の機能を追加するためにフレームワークに入力します。 通常、これを行うアーキテクチャ クラスから新しいクラスの派生とし、新しいメンバーの追加または既存のメンバー関数をオーバーライドします。  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354902"
 ---
 # <a name="idle-loop-processing"></a>アイドリング ループ処理
 多くのアプリケーションを実行時間のかかる処理"、"バック グラウンドします。 場合によってパフォーマンスに関する考慮事項では、このような作業のマルチ スレッドを使用してによって決まります。 MFC では、アイドル時間作業などの単純なタスクには推奨されませんので、スレッドが開発に余分なオーバーヘッドを含む、 [OnIdle](../mfc/reference/cwinthread-class.md#onidle)関数。 この記事は、アイドル状態の処理について説明します。 マルチ スレッド処理、参照の詳細については[マルチ スレッド トピック](../parallel/multithreading-support-for-older-code-visual-cpp.md)です。  

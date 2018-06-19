@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347280"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 概要 : リンクと埋め込み
 コンテナー アプリケーションで [貼り付け] コマンドを使用すると、埋め込まれたコンポーネント、または埋め込みアイテムが作成できます。 埋め込みアイテムのソース データはそれを格納する OLE ドキュメントの一部として格納されます。 この方法では、ワード プロセッサのドキュメントのドキュメント ファイルは、テキストを含めることができ、ビットマップ、グラフ、式、またはその他の種類のデータも含めることができます。  

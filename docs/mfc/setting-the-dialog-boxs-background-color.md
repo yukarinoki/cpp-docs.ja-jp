@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379984"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>ダイアログ ボックスの背景色の設定
 処理することにより、ダイアログ ボックスの背景色を設定することができます`WM_CTLCOLOR` ダイアログ ボックスのウィンドウのメッセージ。 指定されたダイアログ ボックスのみを設定する色が使用されます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339021"
 ---
 # <a name="compiler-intrinsics"></a>コンパイラ組み込み
 ほとんどの関数はライブラリに含まれますが、関数によっては、コンパイラに組み込まれているものもあります。 これらは、組み込み関数または組み込みと呼ばれます。  

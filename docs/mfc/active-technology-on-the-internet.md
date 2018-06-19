@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338589"
 ---
 # <a name="active-technology-on-the-internet"></a>インターネット上の Active テクノロジ
 Active テクノロジは、オープン プラットフォームにより、開発者は魅力的な動的コンテンツおよびアプリケーションのグローバル インターネットまたはイントラネットと呼ばれる、会社の内部ネットワークを作成します。 インターネットのプログラミング用に Microsoft によって提供される主要なテクノロジは次のとおりです。  

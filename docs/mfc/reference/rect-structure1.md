@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372594"
 ---
 # <a name="rect-structure1"></a>RECT Structure1
 `RECT` 構造体は、四角形の左上隅および右下隅の座標を定義します。  

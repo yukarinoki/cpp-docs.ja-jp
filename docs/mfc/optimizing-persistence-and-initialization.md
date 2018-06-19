@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355662"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>永続化と初期化の最適化
 既定では、によって永続化とコントロールの初期化を処理します。、`DoPropExchange`メンバー関数。 この関数がいくつかの呼び出しを含む、一般的なコントロール**px _** 関数 (`PX_Color`、`PX_Font`など) の各プロパティのいずれか。  

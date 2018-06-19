@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839820"
 ---
 # <a name="deprecated-cc"></a>非推奨 (C/C++)
 **廃止**プラグマを指定すること、関数、型、またはその他の識別子は不要になったではサポート、将来のリリースまたは使用できなくします。  

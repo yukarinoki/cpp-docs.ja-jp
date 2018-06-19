@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357560"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX コントロール : ストック プロパティの追加
 ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`です。 `COleControl` コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 一部の共通プロパティには、コントロールのキャプションと、前景色と背景色が含まれます。 その他のストック プロパティについては、次を参照してください。[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述します。 ストック プロパティのディスパッチ マップ エントリが常に付けた**DISP_STOCKPROP**です。  

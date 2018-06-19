@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354918"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
 この記事では、ActiveX コントロールに共通する Picture 型と、その実装方法を説明します。 ここでは、次の内容について説明します。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341672"
 ---
 # <a name="application-framework"></a>アプリケーション フレームワーク
 Microsoft Foundation Class (MFC) ライブラリのコアは、C++ の形式で Windows API の大部分をカプセル化します。 ライブラリのクラスは、ブラシ、ペン、コントロール、およびその他の標準の Windows 項目などの共通の GDI オブジェクト ウィンドウ、ダイアログ ボックス、デバイス コンテキストを表します。 これらのクラスを提供する便利なカプセル化された Windows の構造体の C++ メンバー関数のインターフェイスです。 これらのクラスの使用に関する詳細は、次を参照してください。[ウィンドウ オブジェクトについてのトピック](../mfc/window-objects.md)です。  

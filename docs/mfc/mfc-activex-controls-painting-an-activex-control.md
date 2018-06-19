@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354090"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールの描画
 この記事では、ActiveX コントロールの描画プロセスとプロセスを最適化する描画コードを変更する方法について説明します。 (を参照してください[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)ないコントロールを個別に描画を最適化する方法の手法が以前に選択した GDI オブジェクトを復元します。 すべてのコントロールの描画されたが、コンテナーが自動的に復元元のオブジェクトです。)  

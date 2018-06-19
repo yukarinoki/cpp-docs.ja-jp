@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375354"
 ---
 # <a name="data-types-mfc"></a>データ型 (MFC)
 このトピックでは、Microsoft Foundation Class ライブラリで最もよく使用されるデータ型を示します。 データ型のほとんどは、他のユーザーは MFC 固有プラットフォーム ソフトウェア開発キット (SDK) のと同じです。  

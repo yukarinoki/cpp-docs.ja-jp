@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371919"
 ---
 # <a name="handlers-for-wm-messages"></a>WM_ で始まるメッセージのハンドラー
 次のトピックは、マップのエントリに対応します。  

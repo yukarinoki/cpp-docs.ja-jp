@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373929"
 ---
 # <a name="event-sink-maps"></a>イベント シンク マップ
 埋め込み OLE コントロールは、イベントを発生させる、コントロールのコンテナーは、マップと呼ばれる、"イベント シンク、"MFC によって提供される機構を使用して、イベントを受信します。 このイベント シンク マップは、それぞれ特定のイベントと、これらのイベントのパラメーターのハンドラー関数を指定します。 イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)です。  

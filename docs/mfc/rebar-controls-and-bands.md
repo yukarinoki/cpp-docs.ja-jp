@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349852"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar コントロールとバンド
 Rebar コントロールの主な目的は、子ウィンドウ、ダイアログのコモン コントロール、メニューのツールバー、およびなどのコンテナーとして動作することです。 このコンテインメントが「バンド」の概念によってサポートされています。 各 rebar バンド グリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを含めることができます。  

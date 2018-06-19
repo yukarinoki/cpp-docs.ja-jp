@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354149"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor クラス
 赤、緑、および青の各色要素をアニメーション化できる機能を実装します。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358259"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler クラス
 アニメーション マネージャーのステータスの変更時に Animation API によって呼び出されるコールバックを実装します。  

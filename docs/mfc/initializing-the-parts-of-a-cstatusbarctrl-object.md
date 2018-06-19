@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344345"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>CStatusBarCtrl オブジェクトの区画の初期化
 既定では、ステータス バーには、個別のペインを使用してステータス情報が表示されます。 これらのペイン (パーツとも呼ばれます) には、文字列、アイコン、またはその両方を含めることができます。  

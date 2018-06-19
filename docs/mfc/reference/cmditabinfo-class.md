@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368096"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo クラス
 `CMDITabInfo`クラスを使用するパラメーターを渡すを[cmdiframewndex::enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups)メソッドです。 MDI タブ付きグループの動作を制御するために、このクラスのメンバーを設定します。  

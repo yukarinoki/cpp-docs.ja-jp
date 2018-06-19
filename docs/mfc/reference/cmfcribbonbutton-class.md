@@ -129,6 +129,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376419"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton クラス
 `CMFCRibbonButton` クラスは、パネル、クイック アクセス ツール バー、ポップアップ メニューなど、リボン バー要素に配置できるボタンを実装します。  

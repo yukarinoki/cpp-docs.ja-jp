@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687466"
 ---
 # <a name="2721-private"></a>2.7.2.1 private
 `private`句は、チーム内の各スレッドに対してプライベートである変数の一覧で変数を宣言します。 構文、`private`句を次に示します。  

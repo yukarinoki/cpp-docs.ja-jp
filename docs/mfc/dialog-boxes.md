@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346676"
 ---
 # <a name="dialog-boxes"></a>ダイアログ ボックス
 Windows アプリケーションの頻繁にユーザーとの通信ダイアログ ボックスを使用します。 クラス[CDialog](../mfc/reference/cdialog-class.md)  ダイアログ ボックスを管理するには、Visual C ダイアログ エディター簡単にダイアログ ボックスを設計およびそのダイアログ テンプレート リソースを作成して、コード ウィザードの初期化処理を簡略化のインターフェイスを提供し、検証コントロール ダイアログ ボックスでは、ユーザーが入力した値を収集しています。  

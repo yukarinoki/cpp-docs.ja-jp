@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348908"
 ---
 # <a name="cclientdc-class"></a>CClientDC クラス
 Windows 関数の呼び出しを行います[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)構築時に、 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)破棄時にします。  

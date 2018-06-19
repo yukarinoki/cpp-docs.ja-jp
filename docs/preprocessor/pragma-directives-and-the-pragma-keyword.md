@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846234"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>プラグマ ディレクティブと __Pragma キーワード
 プラグマ ディレクティブは、コンピューター固有またはオペレーティング システム固有のコンパイラ機能を指定します。 Microsoft コンパイラに固有の `__pragma` キーワードにより、マクロ定義内のプラグマ ディレクティブをコーディングできます。  

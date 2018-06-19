@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373916"
 ---
 # <a name="icommandsource-interface"></a>関数のインターフェイス
 ユーザー コントロールにコマンド ソース オブジェクトから送信されたコマンドを管理します。  

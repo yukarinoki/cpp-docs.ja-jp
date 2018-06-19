@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375136"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 DHTML 編集コマンドをマップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 それらの使用例は、次を参照してください。 [HTMLEdit サンプル](../../visual-cpp-samples.md)です。  

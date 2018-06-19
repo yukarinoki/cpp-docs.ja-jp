@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366126"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL ウィザードによって生成されるクラスと関数
 MFC DLL ウィザードによって生成されるコードは、DLL を作成し、選択したオプションの種類によって異なります。 MFC DLL ウィザードでは、標準の MFC Dll の両方の形式を同じコードを生成します。  

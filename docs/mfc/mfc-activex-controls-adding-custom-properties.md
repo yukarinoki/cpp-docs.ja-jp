@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352426"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX コントロール : カスタム プロパティの追加
 カスタム プロパティとは異なり、ストック プロパティのカスタム プロパティがによって既に実装されていない、`COleControl`クラスです。 カスタム プロパティを使用して、特定の状態やコントロールを使用してプログラマに ActiveX コントロールの外観を公開できます。  

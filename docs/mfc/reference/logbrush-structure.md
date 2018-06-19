@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375211"
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH 構造体
 `LOGBRUSH`構造体は、スタイル、色、および物理的なブラシのパターンを定義します。 これは、Windows によって使用[CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487)と[構造体](http://msdn.microsoft.com/library/windows/desktop/dd162705)関数。  

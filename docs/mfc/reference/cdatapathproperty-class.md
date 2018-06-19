@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367309"
 ---
 # <a name="cdatapathproperty-class"></a>関数クラス
 非同期で読み込める OLE コントロール プロパティを実装します。  
