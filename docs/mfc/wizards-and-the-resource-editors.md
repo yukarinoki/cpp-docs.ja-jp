@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383842"
 ---
 # <a name="wizards-and-the-resource-editors"></a>ウィザードおよびリソース エディター
 Visual C には、多くの統合リソース エディターと共に、MFC プログラミングに使用するためのいくつかのウィザードが含まれます。 ActiveX コントロールをプログラミングでは、 [ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)MFC アプリケーション ウィザードのとまったく同様に、目的を果たします。 これらのツールのほとんどの MFC アプリケーションを記述するときに、ツールは大幅に簡略化し、作業内容を高速化します。  

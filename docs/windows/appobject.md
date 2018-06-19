@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856974"
 ---
 # <a name="appobject"></a>appobject
 完全 .exe アプリケーションに関連付けられ、関数と、コクラスのプロパティがこのグローバルに使用できることを示しますアプリケーション オブジェクトとしてコクラスを識別[タイプ ライブラリ](../mfc/automation-clients-using-type-libraries.md)です。  

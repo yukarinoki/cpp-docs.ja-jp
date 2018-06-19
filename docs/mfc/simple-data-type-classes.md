@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382477"
 ---
 # <a name="simple-data-type-classes"></a>単純データ型クラス
 描画の座標、文字列、および時間に、次のクラスがカプセル化し、C++ 構文の日付について、便利な許可を使用します。 これらのオブジェクトは、クラス ライブラリの Windows クラスのメンバー関数をパラメーターとして広く使用されます。 `CPoint`、 `CSize`、および`CRect`に対応している、**ポイント**、**サイズ**、および`RECT`構造体をそれぞれ、Windows sdk には、これらのオブジェクトを使用できますC++ クラスのこれらの C 言語構造体を使用する場合。 クラスは、そのメンバー関数を使用して便利インターフェイスを提供します。 `CStringT` 非常に柔軟な動的文字の文字列を提供します。 `CTime`、 `COleDateTime`、 `CTimeSpan`、および**COleTimeSpan**日付と時刻の値を表します。 これらのクラスの詳細については、記事を参照してください。[日付と時刻](../atl-mfc-shared/date-and-time.md)です。  

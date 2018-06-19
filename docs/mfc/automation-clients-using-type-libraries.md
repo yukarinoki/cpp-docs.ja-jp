@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342590"
 ---
 # <a name="automation-clients-using-type-libraries"></a>オートメーション クライアント : タイプ ライブラリの使用
 オートメーション クライアントは、クライアントがサーバーのオブジェクトを操作する場合、サーバー オブジェクトのプロパティとメソッドに関する情報にすることが必要です。 プロパティがあるデータ型です。メソッドは、多くの場合、戻り値とパラメーターを受け取る。 クライアントでは、サーバー オブジェクトの型に静的にバインドするためにこれらのすべてのデータ型に関する情報が必要です。  

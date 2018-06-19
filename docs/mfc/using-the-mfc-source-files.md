@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384336"
 ---
 # <a name="using-the-mfc-source-files"></a>MFC ソース ファイルの利用
 Microsoft Foundation Class (MFC) ライブラリでは、完全なソース コードを提供します。 ヘッダー ファイル (.h) が \atlmfc\include ディレクトリです。実装ファイル (.cpp) は、\atlmfc\src\mfc ディレクトリにします。  

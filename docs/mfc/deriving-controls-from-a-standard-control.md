@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344501"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>標準コントロールからのコントロールの派生
 同じよう[CWnd](../mfc/reference/cwnd-class.md)-派生クラスでは、既存のコントロール クラスから新しいクラスを派生させることによってコントロールの動作を変更することができます。  

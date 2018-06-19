@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383346"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>拡張コンボ ボックス コントロールでのイメージ リストの使い方
 拡張コンボ ボックス コントロールの主な機能は、コンボ ボックス コントロール内の各項目にはイメージ リストのイメージを関連付ける機能です。 各項目は次の 3 つのさまざまなイメージを表示できません: 選択した状態、その選択解除状態、およびオーバーレイを表す 3 番目に 1 つのいずれか。  

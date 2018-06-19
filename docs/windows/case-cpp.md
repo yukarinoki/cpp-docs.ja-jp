@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860958"
 ---
 # <a name="case-c"></a>case (C++)
 使用される、 [switch_type](../windows/switch-type.md)属性、**共用体**です。  

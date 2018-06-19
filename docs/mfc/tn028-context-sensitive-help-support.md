@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385145"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>テクニカル ノート 28: 状況依存のヘルプのサポート
 ここでは、ヘルプ コンテキスト Id と MFC では、その他のヘルプ問題の割り当ての規則について説明します。 状況依存のヘルプのサポートには、Visual C で使用可能なヘルプ コンパイラが必要です。  

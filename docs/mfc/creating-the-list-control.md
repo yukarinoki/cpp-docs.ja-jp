@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342047"
 ---
 # <a name="creating-the-list-control"></a>リスト コントロールの作成
 一覧を制御する方法 ([CListCtrl](../mfc/reference/clistctrl-class.md)) が作成されるクラスを使用してまたはコントロールを直接使用するしているかどうかによって異なります[CListView](../mfc/reference/clistview-class.md)代わりにします。 使用する場合`CListView`フレームワークは、そのドキュメント/ビューの作成のシーケンスの一部として、ビューを構築します。 リスト ビューを作成するには、リスト コントロールにも (この 2 つは同じもの) が作成されます。 ビューので、コントロールが作成された[OnCreate](../mfc/reference/cwnd-class.md#oncreate)ハンドラー関数。 この場合、コントロールが呼び出しを使用して、項目を追加するための準備ができて[GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)です。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342831"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー : コンテナーの実装
 ここでは、コンテナーを実装する手順を概説し、詳細な説明については、コンテナーの実装を提供する他の記事を紹介します。 実装することもいくつかのオプションの OLE 機能やこれらの機能を説明する記事も一覧表示されます。  

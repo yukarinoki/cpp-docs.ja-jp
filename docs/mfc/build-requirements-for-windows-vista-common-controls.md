@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342161"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista コモン コントロールの作成要件
 Microsoft Foundation Class (MFC) ライブラリには、Windows のコモン コントロール バージョン 6.1 がサポートしています。 一般的なコントロールが含まれている[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]にライブラリが含まれています、[!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]です。 ライブラリをサポートするメソッドと、既存のクラス、および新しいクラスを強化する新しいメソッドを提供する[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]コモン コントロールです。 アプリケーションをビルドすると、次のセクションで説明されている、コンパイルと移行の要件に従ってください。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343019"
 ---
 # <a name="documentview-sample-list"></a>ドキュメント/ビューのサンプル リスト
 興味深い方法で MFC のドキュメント/ビュー アーキテクチャを使用するかを示す次のサンプル プログラムを参照してください。  

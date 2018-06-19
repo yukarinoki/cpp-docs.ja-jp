@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303070"
 ---
 # <a name="compiler-warning-level-3-c4310"></a>コンパイラの警告 (レベル 3) C4310
 キャストには、定数値が切り捨てられました。  

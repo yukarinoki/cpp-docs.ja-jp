@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329817"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの全体像
 ドキュメントとビューは一般的な MFC アプリケーション内の組で使用します。 ドキュメントでデータが格納されますが、ビューのデータにアクセスする権限がします。 ドキュメントのビューからの分離は、その表示から、記憶域とデータのメンテナンスを区切ります。  

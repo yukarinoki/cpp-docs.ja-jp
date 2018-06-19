@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384401"
 ---
 # <a name="using-cspinbuttonctrl"></a>CSpinButtonCtrl の使い方
 *スピン ボタン*コントロール (とも呼ばれる、*アップダウン*コントロール)、値を調整するユーザーがクリックして表示する矢印のペアを提供します。 この値と呼ばれる、*現在位置*です。 スピン ボタンの範囲内の位置が維持されます。 位置が最大に向かって移動、ユーザーは、上向きの矢印をクリックすると、最小に向かって、ユーザーは、下向きの矢印をクリックすると、位置が移動します。  

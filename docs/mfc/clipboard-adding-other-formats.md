@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342148"
 ---
 # <a name="clipboard-adding-other-formats"></a>クリップボード : その他のデータ形式の追加
 このトピックでは、特に OLE サポートの場合、サポートされている形式の一覧を展開する方法について説明します。 トピック[クリップボード: データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)コピーと、クリップボードから貼り付けをサポートするために必要な最低限の実装について説明します。 クリップボードにコピーのみの形式は、すべてを実装する場合は、 `CF_METAFILEPICT`、 **CF_EMBEDSOURCE**、 **CF_OBJECTDESCRIPTOR**、および可能性のある`CF_LINKSOURCE`です。 ほとんどのアプリケーションでは、これら 3 つよりも、クリップボードにその他の形式を必要があります。  

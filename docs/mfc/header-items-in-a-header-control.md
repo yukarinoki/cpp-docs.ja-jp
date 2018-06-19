@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344923"
 ---
 # <a name="header-items-in-a-header-control"></a>ヘッダー コントロールのヘッダー項目
 ヘッダー コントロールを構成するヘッダー項目の動作と外観を細かく制御がある ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md))。 各ヘッダー項目には、文字列、ビットマップ イメージ、関連付けられているイメージ リスト、またはそれに関連付けられているアプリケーションで定義された 32 ビット値からイメージを持つことができます。 ヘッダー項目には、文字列、ビットマップ、またはイメージが表示されます。  

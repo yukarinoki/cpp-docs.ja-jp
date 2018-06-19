@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860308"
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>属性パラメーターの型 (C++ コンポーネント拡張)
 属性に渡される値は、コンパイル時にコンパイラに認識されている必要があります。  次の種類の属性のパラメーターになります。  

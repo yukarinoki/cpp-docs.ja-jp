@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342775"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>コールバック項目とコールバック マスク
 その項目のそれぞれについて、リスト ビュー コントロールが通常、ラベルのテキスト項目のアイコンのイメージ リスト インデックスを格納および項目の状態に対するフラグのビットのセット。 アプリケーションで既にがいくつかのアイテムの情報を保存する場合に便利ですが、コールバック項目として、個々 のアイテムを定義できます。  

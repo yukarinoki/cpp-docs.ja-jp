@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385581"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows ソケット : ソケット通知
 この記事では、ソケット クラス内の通知関数について説明します。 これらのメンバー関数は、重要なイベントのソケット オブジェクトに通知するフレームワークから呼び出されるコールバック関数です。 通知機能は次のとおりです。  
