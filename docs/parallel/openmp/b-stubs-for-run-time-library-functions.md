@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687583"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B:  ランタイム ライブラリ関数のスタブ
 このセクションでは、OpenMP C および C++ API で定義されているランタイム ライブラリ関数のスタブを提供します。 OpenMP C および C++ API をサポートしていないプラットフォームに移植性を有効にする、スタブが提供されます。 これらのプラットフォームでは、OpenMP プログラムは、これらのスタブ関数を含むライブラリにリンクする必要があります。 スタブ関数では、OpenMP プログラム内のディレクティブを無視することを前提としています。 そのため、シリアル セマンティクスがエミュレートします。  

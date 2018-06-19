@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345253"
 ---
 # <a name="making-owner-drawn-header-controls"></a>オーナー描画ヘッダー コントロールの作成
 ヘッダー コントロールの個々 の項目を定義することができます ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) オーナー描画項目となるようです。 詳細については、次を参照してください。[ヘッダー コントロールのオーナー](http://msdn.microsoft.com/library/windows/desktop/bb775238) Windows SDK に含まれています。  

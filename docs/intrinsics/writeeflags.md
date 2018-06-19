@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340529"
 ---
 # <a name="writeeflags"></a>__writeeflags
 指定した値をプログラムに書き込みます状態とコントロール (空文) を登録します。  

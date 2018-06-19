@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318728"
 ---
 # <a name="resource-compiler-error-rc2113"></a>リソース コンパイラ エラー RC2113
 END ダイアログ ボックスが必要です。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342606"
 ---
 # <a name="debugging-support-classes"></a>デバッグ サポート クラス
 MFC には、動的メモリの割り当てに関する問題のデバッグに役立つ次のクラスが用意されています。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301035"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>リンカー ツールの警告 LNK4075
 により「・ オプション 2」仕様「オプション 1」を無視しています  

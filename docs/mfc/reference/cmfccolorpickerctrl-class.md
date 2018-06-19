@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374816"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl クラス
 `CMFCColorPickerCtrl`クラスは、色の選択に使用されるコントロールの機能を提供します。  

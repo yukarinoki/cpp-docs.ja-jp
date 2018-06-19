@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347937"
 ---
 # <a name="reading-and-writing-files"></a>ファイルの読み書き
 C ランタイム ライブラリのファイル処理関数を使用している場合は、MFC の読み取りと書き込み操作が使い慣れた表示されます。 この説明から直接読み取りや書き込みに直接、`CFile`オブジェクト。 ことができますもはバッファー内のファイル I/O を[CArchive](../mfc/reference/carchive-class.md)クラスです。  

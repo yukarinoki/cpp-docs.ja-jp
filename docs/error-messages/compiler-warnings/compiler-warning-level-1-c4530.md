@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283326"
 ---
 # <a name="compiler-warning-level-1-c4530"></a>コンパイラの警告 (レベル 1) C4530
 C++ 例外処理を使っていますが、アンワインド セマンティクスが有効になっていません。 /EHsc を指定してください。  

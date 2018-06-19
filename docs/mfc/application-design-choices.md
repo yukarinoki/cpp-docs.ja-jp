@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347761"
 ---
 # <a name="application-design-choices"></a>アプリケーションのデザイン上の検討事項
 この記事では、インターネットのプログラミング時に考慮する設計上の問題について説明します。  

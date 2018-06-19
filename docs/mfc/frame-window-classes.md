@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347887"
 ---
 # <a name="frame-window-classes"></a>フレーム ウィンドウ クラス
 各アプリケーションには 1 つの「メイン フレーム ウィンドウ」、通常、アプリケーション名がある、キャプションのするデスクトップ ウィンドウです。 各ドキュメントが通常は 1 つは「ドキュメント フレーム ウィンドウです」 ドキュメント フレーム ウィンドウには、ドキュメントのデータを表示するには、少なくとも 1 つのビューが含まれています。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858488"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>ダイアログ ボックスのコントロールの配置
 ダイアログ エディターでは、整列やコントロールを自動的にサイズ調整されるレイアウト ツールを提供します。 ほとんどのタスクを使用できます、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)です。 [書式] メニューで、使用可能なすべてのダイアログ エディター ツールバーのコマンドも、ほとんどが[ショートカット キー](../windows/accelerator-keys-for-the-dialog-editor.md)です。  

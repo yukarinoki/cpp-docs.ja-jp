@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345987"
 ---
 # <a name="mapping-messages"></a>メッセージ マップ
 メッセージまたはコマンドを受信できるフレームワーク クラスごとに独自「メッセージ マップです」 フレームワークでは、メッセージ マップを使用して、メッセージとコマンドをハンドラー関数に接続します。 クラスから派生した任意のクラス`CCmdTarget`メッセージ マップを持つことができます。 他の記事では、メッセージ マップの詳細を説明し、それらを使用する方法について説明します。  

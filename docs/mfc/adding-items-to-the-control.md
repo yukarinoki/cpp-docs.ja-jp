@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341366"
 ---
 # <a name="adding-items-to-the-control"></a>コントロールへの項目の追加
 リスト コントロールに項目を追加する ([CListCtrl](../mfc/reference/clistctrl-class.md))、いくつかのバージョンの 1 つを呼び出して、 [InsertItem](../mfc/reference/clistctrl-class.md#insertitem)際にどのような情報に応じて、メンバー関数。 1 つのバージョンは、 [LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)を準備する構造。 `LV_ITEM`構造には、多数のメンバーが含まれていますが、リスト コントロール項目の属性をより細かく制御できます。  

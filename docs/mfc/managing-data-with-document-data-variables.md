@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344962"
 ---
 # <a name="managing-data-with-document-data-variables"></a>ドキュメント データ変数を使ったデータ管理
 ドキュメント クラスのメンバー変数として、ドキュメントのデータを実装します。 たとえば、この Scribble プログラムが型のデータ メンバーを宣言して`CObList`— へのポインターを格納するリンクされたリスト`CObject`オブジェクト。 この一覧を使用して、フリーハンド線画を構成する点の配列を格納します。  

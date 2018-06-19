@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344712"
 ---
 # <a name="initializing-the-dialog-box"></a>ダイアログ ボックスの初期化
 作成した後、ダイアログ ボックスとそのすべてのコントロールは、直前に、ダイアログ ボックスのいずれかの種類) ボックス、画面に表示されるダイアログ オブジェクトの[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)メンバー関数が呼び出されます。 モーダル ダイアログ ボックスの中にこれが発生した、`DoModal`呼び出します。 モードレス ダイアログ ボックスの`OnInitDialog`時に呼び出される**作成**と呼びます。 通常、オーバーライドする`OnInitDialog`エディット ボックスの最初のテキストを設定するなど、ダイアログ ボックスのコントロールを初期化します。 呼び出す必要があります、 `OnInitDialog` 、基底クラスのメンバー関数`CDialog`から、`OnInitDialog`をオーバーライドします。  

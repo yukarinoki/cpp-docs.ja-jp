@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339028"
 ---
 # <a name="active-document-containers"></a>Active ドキュメント コンテナー
 Microsoft Office バインダーまたは Internet Explorer などの active ドキュメント コンテナーでは、さまざまな種類のアプリケーション (強制的に作成し、各アプリケーションの複数のフレームを使用することではなく 1 つのフレーム内で複数のドキュメントを操作することができます。ドキュメントの種類の場合)。  

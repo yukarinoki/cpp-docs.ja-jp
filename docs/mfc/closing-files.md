@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341027"
 ---
 # <a name="closing-files"></a>ファイルを閉じる
 通常どおり I/O 操作で、ファイルを終了すると、閉じてください。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383034"
 ---
 # <a name="working-with-a-header-control"></a>ヘッダー コントロールの操作
 ヘッダー コントロールを使用する簡単な方法 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) リスト コントロールと併用される; を参照してください[使い方](../mfc/using-clistctrl.md)ここのトピックで後述します。 ヘッダー コントロールは単独で使用することもできます。 MFC 呼び出し**InitCommonControls**します。 主要なタスクは次のとおりです。  

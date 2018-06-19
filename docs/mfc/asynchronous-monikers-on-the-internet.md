@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343364"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>インターネット上の非同期モニカー
 インターネットには、低速のネットワーク アクセスのためアプリケーション デザインに新しいアプローチが必要です。 アプリケーションでは、ユーザー インターフェイスを失速を避けるために非同期的にネットワーク アクセスを実行する必要があります。 MFC クラス[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)ファイルをダウンロードする非同期サポートを提供します。  

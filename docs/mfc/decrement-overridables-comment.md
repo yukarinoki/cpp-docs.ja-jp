@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345389"
 ---
 # <a name="-overridables-comment"></a>// Overridables コメント
 `// Overridables`の MFC クラス宣言のセクションには、基本クラスの動作を変更する必要がある場合、派生クラスでオーバーライドできる仮想関数が含まれています。 これらの名前は通常"On"で始まる必ずしも必要はありません。 オーバーライドして多くの場合、実装したり、何らかの"callback"または「フック」を提供する関数が設計されています 通常、これらのメンバーは保護されます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384724"
 ---
 # <a name="tn029-splitter-windows"></a>テクニカル ノート 29: 分割ウィンドウ
 この注の説明、MFC [CSplitterWnd クラス](../mfc/reference/csplitterwnd-class.md)ウィンドウを分割し、その他のウィンドウのウィンドウのサイズ変更の管理を提供します。  

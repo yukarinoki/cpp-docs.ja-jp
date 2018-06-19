@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340849"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの利点
 MFC ドキュメント/ビュー アーキテクチャを使用する主な利点は、アーキテクチャが同一のドキュメントの複数のビューを特にもサポートしています。 (複数のビューの必要はありません、ドキュメント/ビューの少量のオーバーヘッドは、アプリケーションで過剰な場合を回避できますアーキテクチャ。 [ドキュメント/ビュー アーキテクチャの代替手段](../mfc/alternatives-to-the-document-view-architecture.md))。  

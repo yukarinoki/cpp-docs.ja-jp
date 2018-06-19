@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342272"
 ---
 # <a name="-operations-comment"></a>// Operations コメント
 `// Operations`の MFC クラス宣言のセクションには、操作を実行したり、(操作を実行する) アクションを実行するオブジェクトで呼び出すことができるメンバー関数が含まれています。 これらの関数は通常**const**副作用があるためです。 仮想またはクラスのニーズに応じて、非仮想があります。 通常、これらのメンバーはパブリックです。  

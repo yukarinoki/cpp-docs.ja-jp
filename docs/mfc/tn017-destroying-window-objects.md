@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384304"
 ---
 # <a name="tn017-destroying-window-objects"></a>テクニカル ノート 17: ウィンドウ オブジェクトの破棄
 このノートの使用法を説明する、 [:postncdestroy](../mfc/reference/cwnd-class.md#postncdestroy)メソッドです。 カスタマイズされた割り当てを実行する場合は、このメソッドを使用して`CWnd`-派生オブジェクト。 このノートで使用する理由について説明も[に](../mfc/reference/cwnd-class.md#destroywindow)の代わりに、C++ Windows オブジェクトを破棄する、`delete`演算子。  

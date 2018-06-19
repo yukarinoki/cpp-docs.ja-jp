@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694119"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>同時実行ランタイムに関する全般的なベスト プラクティス
 ここでは、同時実行ランタイムの複数の領域に適用されるベスト プラクティスについて説明します。  

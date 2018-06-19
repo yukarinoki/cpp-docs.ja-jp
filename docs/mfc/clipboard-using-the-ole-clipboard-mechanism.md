@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342538"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>クリップボード : OLE クリップボード機構の使用方法
 OLE は、クリップボードを使用してデータを転送するための標準形式といくつかの特定の OLE 形式を使用します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342021"
 ---
 # <a name="control-bar-classes"></a>コントロール バー クラス
 コントロール バーは、フレーム ウィンドウにアタッチされます。 ボタン、ステータス ウィンドウまたはダイアログ テンプレートが含まれます。 添付してフローティング コントロール バー, ツール パレットとも呼ばれますが実装されている、 [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)オブジェクト。  

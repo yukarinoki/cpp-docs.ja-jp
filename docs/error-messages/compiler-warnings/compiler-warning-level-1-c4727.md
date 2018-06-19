@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282783"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>コンパイラの警告 (レベル 1) C4727
 "PCH の obj_file_1 および obj_file_2 で検出された同じタイムスタンプを持つ pch_file という名前です。  最初の PCH を使用します。  

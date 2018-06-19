@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343929"
 ---
 # <a name="destroying-the-dialog-box"></a>ダイアログ ボックスの破棄
 モーダル ダイアログ ボックスは通常、スタック フレーム上に作成し、それを作成した関数が終了すると破棄します。 ダイアログ オブジェクトのデストラクターは、オブジェクトがスコープ外に出るときに呼び出されます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278035"
 ---
 # <a name="compiler-warning-level-1-c4353"></a>コンパイラの警告 (レベル 1) C4353
 標準の拡張機能を使用します。 関数式として定数 0 です。 組み込みの '_ _noop' 関数を使用します。  

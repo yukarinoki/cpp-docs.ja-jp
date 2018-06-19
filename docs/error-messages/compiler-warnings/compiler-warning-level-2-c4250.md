@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291360"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>コンパイラの警告 (レベル 2) C4250
 'class1': 'class2::member' 支配経由での継承  

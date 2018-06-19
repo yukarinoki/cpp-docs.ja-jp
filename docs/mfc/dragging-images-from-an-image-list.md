@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347166"
 ---
 # <a name="dragging-images-from-an-image-list"></a>イメージ リストのイメージのドラッグ
 [CImageList](../mfc/reference/cimagelist-class.md)画面にイメージをドラッグするための関数が含まれています。 ドラッグ関数は、色、およびカーソルの点滅なしスムーズに、イメージを移動します。 マスクとマスク解除の両方のイメージをドラッグすることができます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342174"
 ---
 # <a name="containers-client-item-states"></a>コンテナー : クライアント アイテムの状態
 この記事では、クライアント アイテムがその有効期間に通過するさまざまな状態について説明します。  

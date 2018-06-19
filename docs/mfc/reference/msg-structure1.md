@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372258"
 ---
 # <a name="msg-structure1"></a>MSG Structure1
 `MSG`構造体には、スレッドのメッセージ キューからメッセージの情報が含まれています。  

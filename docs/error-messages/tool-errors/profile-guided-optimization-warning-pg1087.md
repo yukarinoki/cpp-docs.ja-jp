@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323148"
 ---
 # <a name="profile-guided-optimization-warning-pg1087"></a>ガイド付き最適化のプロファイルの警告 PG1087
 PGC ファイル 'file' は無効です。  

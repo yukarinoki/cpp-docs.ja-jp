@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346439"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>ツール ヒント コントロールの操作
 クラス`CToolTipCtrl`メンバーのグループのさまざまな属性を制御する関数を提供、`CToolTipCtrl`オブジェクトとツール ヒントのウィンドウ。  

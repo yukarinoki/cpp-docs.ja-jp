@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342879"
 ---
 # <a name="ole-automation-classes"></a>OLE オートメーション クラス
 これらのクラスは、オートメーション クライアント (その他のアプリケーションを制御するアプリケーション) をサポートします。 オートメーション サーバー (アプリケーションの他のアプリケーションで制御できる) に対応.[ディスパッチ マップ](../mfc/reference/dispatch-maps.md)です。  

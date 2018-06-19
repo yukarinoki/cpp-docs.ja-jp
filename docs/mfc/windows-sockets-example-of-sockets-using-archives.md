@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384372"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows ソケット: アーカイブを使用するソケットの例
 この記事は、クラスを使用する例を示します[CSocket](../mfc/reference/csocket-class.md)です。 この例では`CArchive`ソケットを使用してデータをシリアル化されるオブジェクト。 このドキュメントのシリアル化する、またはファイルからではないことに注意してください。  

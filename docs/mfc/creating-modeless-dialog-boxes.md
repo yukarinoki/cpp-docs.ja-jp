@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340994"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>モードレス ダイアログ ボックスの作成
 モードレス ダイアログ ボックスのダイアログ クラスに、独自のパブリック コンス トラクターを提供する必要があります。 モードレス ダイアログ ボックスを作成する、パブリック コンス トラクターを呼び出すし、ダイアログ オブジェクトを呼び出す[作成](../mfc/reference/cdialog-class.md#create)ダイアログ リソースを読み込むためのメンバー関数。 呼び出すことができます**作成**中またはコンス トラクターの呼び出し後です。 ダイアログ リソースに、プロパティが設定されている場合**WS_VISIBLE**、ダイアログ ボックスがすぐに表示されます。 場合は、呼び出す必要があります、 [ShowWindow](../mfc/reference/cwnd-class.md#showwindow)メンバー関数。  

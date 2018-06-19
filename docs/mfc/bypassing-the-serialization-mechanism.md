@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343646"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>シリアル化機構のバイパス
 きたように、フレームワークは、ファイルからデータを読み書きする既定の方法を提供します。 ほとんどのアプリケーションのニーズに適したアーカイブ オブジェクトをシリアル化します。 このようなアプリケーションは、ファイルを読み込み、メモリに完全に、によりユーザーは、ファイルを更新でき、し、再度ディスクに更新されたバージョンを書き込みます。  

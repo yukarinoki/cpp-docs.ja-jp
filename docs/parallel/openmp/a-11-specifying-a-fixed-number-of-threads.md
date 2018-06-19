@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686540"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11 固定数のスレッドの指定
 一部のプログラムは、正常に実行するスレッドの固定、事前に指定された数に依存します。  スレッドの数を動的に調整の既定の設定は、実装定義であるために、このようなプログラムは、動的なスレッド機能をオフにして、移植性を保証するには、明示的にスレッドの数を設定を選択できます。 次の例では、これを行う方法を使用して`omp_set_dynamic`([セクション 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39 ページで)、および`omp_set_num_threads`([セクション 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) 36 ページ上)。  

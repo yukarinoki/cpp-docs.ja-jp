@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342921"
 ---
 # <a name="-attributes-comment"></a>// Attributes コメント
 `// Attributes`の MFC クラス宣言のセクションには、オブジェクトのパブリックの属性 (またはプロパティ) が含まれています。 通常これらは、メンバー変数、または関数を取得または設定します。 "Get"および"Set"関数は、仮想できない可能性があります。 "Get"関数は、通常**const**ほとんどの場合ではありません副作用が生じるのため、します。 これらのメンバーは通常はパブリックです。protected および private の属性は、通常、implementation セクションであります。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347923"
 ---
 # <a name="containers-advanced-features"></a>コンテナー : 高度な機能
 この記事では、既存のコンテナー アプリケーションに省略可能な高度な機能を組み込む必要な手順について説明します。 これらの機能は次のとおりです。  

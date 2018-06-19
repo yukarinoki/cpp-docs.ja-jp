@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373412"
 ---
 # <a name="mfc-add-class-wizard"></a>MFC クラス追加ウィザード
 このコード ウィザードを使用して、既存の MFC プロジェクトにクラスを追加または MFC をサポートする ATL プロジェクトにクラスを追加します。 MFC がサポートされている Win32 プロジェクトに MFC クラスを追加することもできます。 プロジェクトの作成時に指定した機能は、このダイアログ ボックスで使用可能なオプションを決定します。  

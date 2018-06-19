@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384349"
 ---
 # <a name="user-defined-tools"></a>ユーザー定義のツール
 MFC には、ユーザー定義のツールがサポートしています。 ユーザー定義のツールは、外部のユーザーが指定したプログラムを実行する特別なコマンドです。 カスタマイズ プロセスを使用して、ユーザー定義のツールを管理することができます。 アプリケーション オブジェクトを派生していない場合にこのプロセスを使用することはできませんただし、 [CWinAppEx クラス](../mfc/reference/cwinappex-class.md)です。 カスタマイズの詳細については、次を参照してください。 [MFC のカスタマイズ](../mfc/customization-for-mfc.md)です。  

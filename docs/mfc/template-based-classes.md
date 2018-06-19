@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385474"
 ---
 # <a name="template-based-classes"></a>テンプレート ベースのクラス
 この記事では、MFC バージョン 3.0 以降ではタイプ セーフなテンプレート ベースのコレクション クラスについて説明します。 これらのテンプレートを使用して、タイプ セーフなコレクションを作成する方が便利なタイプ セーフをテンプレートに基づいていないコレクション クラスを使用するよりも効率的に実現します。  

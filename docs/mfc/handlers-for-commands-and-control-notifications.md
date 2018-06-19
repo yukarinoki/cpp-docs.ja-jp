@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347234"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>コマンドとコントロール通知のハンドラー
 コマンドまたはコントロール通知メッセージの既定のハンドラーはありません。 したがって、これらのカテゴリのメッセージのハンドラーの名前付け規則でのみバインドされます。 コマンドまたはコントロールの通知をハンドラーにマップするときに、[プロパティ] ウィンドウは、コマンドの ID またはコントロール通知のコードに基づく名前を提案します。 提案された名前を受け入れる、変更するか、または置換できます。  

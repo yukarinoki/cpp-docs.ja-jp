@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346101"
 ---
 # <a name="header-control-and-list-control"></a>ヘッダー コントロールおよびリスト コントロール
 ほとんどの場合に埋め込まれているヘッダー コントロールを使用して、 [CListCtrl](../mfc/reference/clistctrl-class.md)または[CListView](../mfc/reference/clistview-class.md)オブジェクト。 ただし、別のヘッダー コントロール オブジェクトが内の行または列に配置されたデータを操作するなど、望ましい場合がある、 [CView](../mfc/reference/cview-class.md)-派生オブジェクト。 このような場合は、埋め込みヘッダー コントロールの既定の動作と外観を細かく制御する必要があります。  

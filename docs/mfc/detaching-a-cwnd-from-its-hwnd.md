@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342681"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>CWnd と HWND の分離
 オブジェクトを回避する必要がある場合`HWND`リレーションシップを MFC には、別`CWnd`メンバー関数は、[デタッチ](../mfc/reference/cwnd-class.md#detach)Windows のウィンドウから C++ ウィンドウ オブジェクトを切断します。 これは、デストラクターが、オブジェクトが破棄されるときに、Windows のウィンドウを破棄することを防ぎます。  

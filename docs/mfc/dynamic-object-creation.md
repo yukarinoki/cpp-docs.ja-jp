@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346647"
 ---
 # <a name="dynamic-object-creation"></a>オブジェクトの動的生成
 この記事では、実行時に動的にオブジェクトを作成する方法について説明します。 プロシージャは、記事で説明したようにランタイム クラス情報を使用して[クラス情報にアクセスする](../mfc/accessing-run-time-class-information.md)です。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344936"
 ---
 # <a name="managing-mdi-child-windows"></a>MDI 子ウィンドウの管理
 MDI メイン フレーム ウィンドウ (アプリケーションごとに 1 つ) と呼ばれる特殊な子ウィンドウが含まれて、 **MDICLIENT**ウィンドウです。 **MDICLIENT**ウィンドウがメイン フレーム ウィンドウのクライアント領域を管理し、それ自体の子ウィンドウを持つ: から派生して、ドキュメント ウィンドウ`CMDIChildWnd`します。 ドキュメント ウィンドウは、フレーム ウィンドウ自体 (MDI 子ウィンドウ) であるため、独自の子こともできます。 これらすべての場合は、親ウィンドウは、その子ウィンドウを管理し、いくつかのコマンドを転送します。  

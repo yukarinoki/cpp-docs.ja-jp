@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344166"
 ---
 # <a name="-constructors-comment"></a>// Constructors コメント
 `// Constructors`の MFC クラス宣言のセクションでは、実際にオブジェクトを使用するために必要なすべての初期化関数と同様に (C++ の) コンス トラクターを宣言しています。 たとえば、`CWnd::Create`使用する前にあるために、コンス トラクターに記載されて、`CWnd`オブジェクト、その必要があります「を完全に構築」まず C++ コンス トラクターを呼び出すし、呼び出すことによって、**作成**関数。 通常、これらのメンバーはパブリックです。  

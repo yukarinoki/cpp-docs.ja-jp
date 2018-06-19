@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345210"
 ---
 # <a name="drawing-images-from-an-image-list"></a>イメージ リストのイメージの描画
 イメージを描画するには、 [:draw](../mfc/reference/cimagelist-class.md#draw)メンバー関数。 デバイス コンテキスト オブジェクトを描画するイメージを描画するためにデバイス コンテキスト内の場所にイメージのインデックスおよび描画スタイルを示すフラグのセットへのポインターを指定します。  

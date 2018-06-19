@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382516"
 ---
 # <a name="tree-control-parent-and-child-items"></a>ツリー コントロールの親項目と子項目
 ツリー コントロールの項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 関連付けられている子項目と呼ばれる、サブ項目の一覧を持つことができます。 1 つまたは複数の子項目をあるアイテムには、親項目が呼び出されます。 子項目は、親項目下に表示され、親のサブことを示すためにインデントされます。 親を持たない項目は、階層の最上部となりますルート項目は呼び出されます。  

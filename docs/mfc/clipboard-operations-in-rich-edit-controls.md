@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341285"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>リッチ エディット コントロールでのクリップボード操作
 アプリケーションは、リッチ エディット コントロールに、クリップボードの内容を貼り付けることができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 最適使用可能なクリップボード形式または特定のクリップボード形式を使用します。 リッチ エディット コントロールがクリップボードの形式を貼り付けることのできるかどうかを確認することもできます。  

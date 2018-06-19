@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344625"
 ---
 # <a name="containers-client-item-notifications"></a>コンテナー : クライアント アイテムへの通知
 この記事では、オーバーライド可能なサーバー アプリケーションがクライアント アプリケーションのドキュメント内の項目を変更、MFC フレームワークによって呼び出される関数について説明します。  

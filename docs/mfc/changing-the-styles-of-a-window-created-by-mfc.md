@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345730"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>MFC で作成したウィンドウのスタイル変更
 そのバージョンので、`WinMain`関数、MFC では、いくつかの標準のウィンドウ クラスを登録します。 通常、MFC を編集していないため`WinMain`、いる関数を使用する MFC の既定のウィンドウ スタイルを変更する機会はありません。 この記事では、既存のアプリケーションでこのような登録済みのウィンドウ クラスのスタイルを変更する方法について説明します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341801"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>オートメーション サーバー : オブジェクトの生成と破棄
 オートメーション クライアントは、作成または OLE 項目をアクティブ化、ときに、サーバー、クライアントにポインターを渡しますそのオブジェクト。 クライアントが OLE 関数を呼び出すことによって、オブジェクトへの参照を確立[:addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)です。 この参照が有効でクライアントの呼び出しまで[iunknown::release](http://msdn.microsoft.com/library/windows/desktop/ms682317)です。 (Microsoft Foundation Class ライブラリの OLE クラスで記述されたクライアント アプリケーションでは、これらの呼び出しをする必要がなくなります。 は、フレームワークです。)OLE システムと、サーバー自体は、オブジェクトへの参照を確立可能性があります。 オブジェクトへの外部参照が有効に残っている限り、サーバーはオブジェクトを破棄できません。  

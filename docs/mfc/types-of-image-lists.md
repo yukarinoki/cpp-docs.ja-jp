@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385886"
 ---
 # <a name="types-of-image-lists"></a>イメージ リストの種類
 イメージ リストの 2 種類があります ([CImageList](../mfc/reference/cimagelist-class.md)): マスクとマスク。 「マスクされていないイメージ リスト」は、1 つまたは複数のイメージを含むカラー ビットマップで構成されます。 「マスクされたイメージ リスト」は、等しいサイズの 2 つのビットマップで構成されます。 1 つは、イメージを含むカラー ビットマップ、2 番目の一連のマスクを含むモノクロ ビットマップ-最初のビットマップのイメージごとに 1 つです。  

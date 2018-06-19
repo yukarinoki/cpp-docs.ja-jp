@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348050"
 ---
 # <a name="initializing-documents-and-views"></a>ドキュメントとビューの初期化
 ドキュメント クラスは、両方の方法をサポートする必要がありますので、2 つの異なる方法でドキュメントが作成されます。 最初に、ユーザーは、ファイルの新しいコマンドを使用して新しい空のドキュメントを作成することができます。 その場合は、オーバーライドでドキュメントの初期化、[でも実質的](../mfc/reference/cdocument-class.md#onnewdocument)クラスのメンバー関数[CDocument](../mfc/reference/cdocument-class.md)です。 第二に、ユーザーは、ファイルから内容の読み取りが新しいドキュメントを作成するのに、[ファイル] メニュー、開いているコマンドを使用できます。 その場合は、オーバーライドでドキュメントの初期化、[かまいません](../mfc/reference/cdocument-class.md#onopendocument)クラスのメンバー関数**CDocument**です。 両方の初期化が同じ場合は、両方のオーバーライドから共通のメンバー関数を呼び出すことができますか`OnOpenDocument`呼び出すことができます`OnNewDocument`をクリーンなドキュメントを初期化して開く操作を完了します。  

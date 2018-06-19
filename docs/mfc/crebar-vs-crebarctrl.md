@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344975"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs です。CReBarCtrl
 MFC には、rebars を作成する 2 つのクラスが用意されています: [CReBar](../mfc/reference/crebar-class.md)と[CReBarCtrl](../mfc/reference/crebarctrl-class.md) (をラップする Windows のコモン コントロール API)。 **CReBar**のすべての共通の rebar コントロールの機能を提供するため、必要な共通コントロールの設定と構造の多くを処理します。  

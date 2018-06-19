@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343312"
 ---
 # <a name="bottomless-rich-edit-controls"></a>自動的にサイズ調整されるリッチ エディット コントロール
 リッチ エディット コントロールのサイズを変更できる、アプリケーション ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) の内容と同じサイズでは常にするために必要とします。 リッチ エディット コントロールがその親ウィンドウを送信することによっていわゆる「ボトムレス」機能をサポートする、 [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983)通知メッセージの内容のサイズが変更されるたびにします。  

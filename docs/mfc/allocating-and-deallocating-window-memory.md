@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341460"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>ウィンドウ メモリの割り当てと解放
 C++ を使用しないでください**削除**フレーム ウィンドウまたはビューを破棄する演算子です。 代わりを呼び出して、`CWnd`メンバー関数は、`DestroyWindow`です。 フレーム ウィンドウ、そのため、割り当てる必要がある演算子でヒープに**新しい**です。 フレーム ウィンドウのスタック フレームにまたはグローバルを割り当てるときに注意します。 他のウィンドウは、可能な限りのスタック フレームに割り当てる必要があります。  

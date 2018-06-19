@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344843"
 ---
 # <a name="changing-list-control-styles"></a>リスト コントロール スタイルの変更
 リスト コントロールのウィンドウ スタイルを変更することができます ([CListCtrl](../mfc/reference/clistctrl-class.md)) 作成した後、いつでもできます。 ウィンドウ スタイルを変更すると、コントロールを使用してビューの種類を変更します。 たとえば、エクスプ ローラー、エミュレートする可能性があります指定する必要がメニュー項目またはコントロールの異なるビュー間を切り替えるためのツール バー ボタン: アイコン ビューや一覧表示します。  

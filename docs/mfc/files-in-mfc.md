@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347082"
 ---
 # <a name="files-in-mfc"></a>MFC のファイル
 Microsoft Foundation Class ライブラリ (MFC) でクラス[CFile](../mfc/reference/cfile-class.md)通常のファイル I/O 操作を処理します。 この一連のトピックでは、開くファイルを閉じるだけでなくしそれらのファイルにデータを書き込む方法を説明します。 ファイルの状態の操作についても説明します。 データ読み取りおよび書き込みファイル内の別の方法としての MFC オブジェクト ベースのシリアル化機能を使用する方法については、記事を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)です。  

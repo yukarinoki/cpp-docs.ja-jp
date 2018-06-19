@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346423"
 ---
 # <a name="connection-points"></a>コネクション ポイント
 この記事は、接続ポイント (以前は OLE コネクション ポイントと呼ばれます) を実装する方法を説明します。 MFC クラスを使用して`CCmdTarget`と`CConnectionPoint`です。  

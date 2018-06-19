@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343416"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>新しいドキュメント、ウィンドウ、ビューの作成
 次の図は、ドキュメント、ビュー、およびフレーム ウィンドウの作成プロセスの概要を説明します。 参加しているオブジェクトに集中する他の記事の詳細ではさらに説明します。  

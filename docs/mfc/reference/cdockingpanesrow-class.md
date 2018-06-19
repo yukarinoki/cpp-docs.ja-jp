@@ -105,6 +105,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370004"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow クラス
 ドッキング サイトの同じ水平または垂直の行 (列) に配置されるペインの一覧を管理します。  

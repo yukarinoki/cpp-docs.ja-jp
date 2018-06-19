@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347361"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>リスト コントロールの作業領域の実装
 既定では、リスト コントロールは、標準的なグリッドのすべてのアイテムを配置します。 ただし、別の方法がサポートされて、作業領域、四角形のグループに、リスト項目を配置します。 作業領域を実装するリスト コントロールのイメージは、Windows SDK でリスト ビュー コントロールの使用を参照してください。  

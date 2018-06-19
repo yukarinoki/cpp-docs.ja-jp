@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344150"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>シングル ドキュメントへのマルチ ビューの追加
 Microsoft Foundation Class (MFC) ライブラリで作成したシングル ドキュメント インターフェイス (SDI) アプリケーション、各ドキュメントの種類は、1 つのビューの種類に関連付けられています。 場合によってを新しいビューを持つドキュメントの現在のビューを切り替えることがあることをお勧めします。  

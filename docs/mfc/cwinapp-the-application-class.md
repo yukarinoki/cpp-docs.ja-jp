@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343006"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp : アプリケーション クラス
 MFC では、アプリケーションのメイン クラスには、初期化、実行、および Windows オペレーティング システム用のアプリケーションの終了がカプセル化します。 フレームワーク上に構築されたアプリケーションには、いずれかが必要し、から派生したクラスのオブジェクトを 1 つだけ[CWinApp](../mfc/reference/cwinapp-class.md)です。 Windows が作成される前に、このオブジェクトが構築されます。  

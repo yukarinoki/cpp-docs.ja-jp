@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345795"
 ---
 # <a name="document-template-creation"></a>ドキュメント テンプレートの作成
 応答で、新しいドキュメントを作成するときに、`New`または**開く**コマンドを**ファイル**] メニューの [ドキュメント テンプレートも新しいフレーム ウィンドウを作成したドキュメントを表示します。  

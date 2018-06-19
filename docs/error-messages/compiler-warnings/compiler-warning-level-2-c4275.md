@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292072"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>コンパイラの警告 (レベル 2) C4275
 非 DLL インターフェイスした 'identifier' ベースとして使用される DLL インターフェイスした 'identifier' の  

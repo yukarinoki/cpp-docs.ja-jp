@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342895"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>ヘッダー項目のカスタマイズ&#39;s 外観
 設定して、 *dwStyle*パラメーター最初をヘッダー コントロールを作成するとき ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)) 外観を定義することができます、およびヘッダーの動作の項目またはヘッダーの自体を制御します。  

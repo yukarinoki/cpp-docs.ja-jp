@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345066"
 ---
 # <a name="frame-window-classes-windows"></a>フレーム ウィンドウ クラス (Windows)
 フレーム ウィンドウは、アプリケーションまたはアプリケーションの一部のフレーム ウィンドウです。 通常、フレーム ウィンドウには、ビュー、ツール バー、およびステータス バーなど、他のウィンドウが含まれます。 場合、`CMDIFrameWnd`を含めることは`CMDIChildWnd`オブジェクトを直接です。  

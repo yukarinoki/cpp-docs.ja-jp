@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345187"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外処理 : 例外のキャッチと削除
 次の手順と例についてをキャッチして例外を削除する方法を示します。 詳細については、**再試行**、**キャッチ**と`throw`キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)です。  

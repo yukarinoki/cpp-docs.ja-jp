@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343854"
 ---
 # <a name="exported-dll-function-entry-points"></a>DLL のエクスポート関数のエントリ ポイント
 DLL のエクスポート関数を使用して、 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL モジュールから呼び出し元のアプリケーションの DLL に切り替える際に、適切なグローバル状態を維持するためにマクロです。  

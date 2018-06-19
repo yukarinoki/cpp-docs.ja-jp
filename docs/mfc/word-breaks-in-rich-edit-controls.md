@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382961"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>リッチ エディット コントロールでのワード区切り
 リッチ エディット コントロール ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) という「単語区切りプロシージャ」関数を呼び出します単語の区切り記号を検索し、行を壊すことを決定します。 コントロールは、テキストの折り返しの操作を実行して、ctrl キーを押しながら左および ctrl キーを押しながら右キーの組み合わせを処理するときに、この情報を使用します。 アプリケーションでは、メッセージ、リッチ エディット コントロールが既定単語区切りプロシージャ、単語区切りの情報を取得し、指定された文字がある行を決定するに当たるを送信できます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385925"
 ---
 # <a name="wininet-basics"></a>WinInet の基礎
 WinInet を使用して、ダウンロードしてから、アプリケーション内のファイルをアップロードする FTP サポートを追加することができます。 オーバーライドできます[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)を使用して、`dwContext`を検索して、ファイルをダウンロードすると、ユーザーに進行状況に関する情報を提供するパラメーターです。  

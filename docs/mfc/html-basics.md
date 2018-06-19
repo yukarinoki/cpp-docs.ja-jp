@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347218"
 ---
 # <a name="html-basics"></a>HTML の基礎
 ほとんどのブラウザーを参照するページの HTML ソースを調べる機能があります。 (ハイパー テキスト マークアップ言語) の HTML タグの数が表示されます、ソースを表示するときに、角度っこ、テキストが混在してで囲まれます。  

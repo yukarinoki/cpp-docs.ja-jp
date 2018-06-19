@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283063"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>コンパイラの警告 (レベル 1) C4540
 dynamic_cast がアクセスできないか、あいまいなベース; に変換するために使用実行時のテストは失敗し ('type2' への ' type1')  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346195"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>例外処理 : 独自関数からの例外のスロー
 MFC またはその他のライブラリ内の関数によってスローされる例外をキャッチするだけの MFC 例外処理のパラダイムを使用して行うことができます。 ライブラリ コードによってスローされる例外をキャッチするだけでなく例外条件を発生する可能性がある関数を作成している場合に、独自のコードから例外をスローできます。  

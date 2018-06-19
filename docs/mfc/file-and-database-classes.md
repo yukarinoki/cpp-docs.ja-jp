@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344949"
 ---
 # <a name="file-and-database-classes"></a>ファイルおよびデータベース クラス
 これらのクラスを使用するデータベースやディスク ファイルに情報を格納します。 データベース クラスの次の 3 つのセットがあります: OLE DB、ODBC、および DAO — 同様の機能を提供します。 OLE DB グループは、OLE DB を使用は実装され、OLE DB コンシューマー テンプレートの機能は、DAO グループは、データ アクセス オブジェクトを使用して実装されます、および ODBC グループは、Open Database Connectivity を使用して実装されます。 一連の標準的なファイル、Active ストリーム、および HTML ストリームを操作するためのクラスもします。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345743"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>メニュー、コントロール バー、およびアクセラレータの管理
 フレーム ウィンドウは、メニューのツールバー、ステータス バー、およびアクセラレータを含め、更新のユーザー インターフェイス オブジェクトを管理します。 また、MDI アプリケーションでメニュー バーの共有を管理します。  

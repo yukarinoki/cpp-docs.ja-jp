@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346377"
 ---
 # <a name="handling-tool-tip-notifications"></a>ツール ヒントの通知の処理
 指定すると、`TBSTYLE_TOOLTIPS`スタイル、ツールバーを作成し、ツール ヒント コントロールを管理します。 ツール ヒントは、ツールバーのボタンを説明するテキストの行を含む小さなポップアップ ウィンドウです。 ツール ヒントが非表示、および表示されるだけと、ユーザー ツール バー ボタン上にカーソルを置きます 2 つ目の約半分ままにします。 ツール ヒントは、カーソルの近くに表示されます。  

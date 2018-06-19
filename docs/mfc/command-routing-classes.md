@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341963"
 ---
 # <a name="command-routing-classes"></a>コマンド ルーティング クラス
 ように、ユーザーは、メニューまたはマウスでコントロール バーのボタンを選択して、アプリケーションと対話する、アプリケーションは、適切なコマンド ターゲット オブジェクトに影響を受けるユーザー インターフェイス オブジェクトからメッセージを送信します。 コマンド ターゲット クラスから派生した`CCmdTarget`含める[CWinApp](../mfc/reference/cwinapp-class.md)、 [CWnd](../mfc/reference/cwnd-class.md)、 [CDocTemplate](../mfc/reference/cdoctemplate-class.md)、 [CDocument](../mfc/reference/cdocument-class.md)、 [CView](../mfc/reference/cview-class.md)、およびそれらから派生したクラスです。 フレームワークでは、コマンドの自動ルーティング コマンドは、アプリケーションで現在アクティブな最も適切なオブジェクトで処理できるようにサポートしています。  

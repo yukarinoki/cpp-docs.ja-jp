@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860282"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>複数の文字列の Caption プロパティの変更
 次の手順では、複数の文字列の caption プロパティを変更する方法を示します。  

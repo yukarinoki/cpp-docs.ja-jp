@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345053"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス
 使用すると、[アプリケーション ウィザード](../ide/creating-desktop-projects-by-using-application-wizards.md)アプリケーション、ドキュメント、およびビューのクラスだけでなく、スケルトン アプリケーションを作成するアプリケーションのウィザードが、アプリケーションのメイン フレーム ウィンドウのフレーム ウィンドウの派生クラスを作成します。 クラスが呼び出されます`CMainFrame`既定値、およびそれを含むファイルという名前がします。H とします。CPP です。  

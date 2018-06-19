@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344781"
 ---
 # <a name="drawing-and-printing-classes"></a>描画および印刷クラス
 Windows では、すべてのグラフィカルな出力はデバイス コンテキスト (DC) と呼ばれる仮想描画領域に描画されます。 MFC では、さまざまな種類のビットマップ、ブラシ、パレット、およびペンなどの Windows 描画ツールのカプセル化できるだけでなく、Dc をカプセル化するクラスを提供します。  

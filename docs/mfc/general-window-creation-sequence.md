@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346517"
 ---
 # <a name="general-window-creation-sequence"></a>一般的なウィンドウ作成順序
 フレームワークがで説明したものと同じプロセスよりを使用して子などの独自のウィンドウのウィンドウを作成するときに[ドキュメント/ビューの作成](../mfc/document-view-creation.md)です。  

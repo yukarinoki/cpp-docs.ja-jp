@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382003"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>日時指定コントロールでのカスタム書式指定文字列の使い方
 既定では、日付と時刻の選択コントロールは、現在の日付または時刻を表示するための種類 (形式は一意のスタイルに対応する各) を書式設定 3 つ提供します。  

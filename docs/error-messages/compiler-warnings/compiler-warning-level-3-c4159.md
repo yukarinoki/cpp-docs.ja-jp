@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291672"
 ---
 # <a name="compiler-warning-level-3-c4159"></a>コンパイラの警告 (レベル 3) C4159
 \#プラグマ pragma(pop,...): 以前にプッシュされた識別子 'identifier' がポップされます。  

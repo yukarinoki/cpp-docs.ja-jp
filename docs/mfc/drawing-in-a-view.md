@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346166"
 ---
 # <a name="drawing-in-a-view"></a>ビューの描画
 ビューは、アプリケーションのほぼすべての描画`OnDraw`メンバー関数は、ビュー クラスでオーバーライドする必要があります。 (例外は、マウスの描画、後ほど[を解釈するユーザー入力ビューを経由した](../mfc/interpreting-user-input-through-a-view.md))。`OnDraw`をオーバーライドします。  
