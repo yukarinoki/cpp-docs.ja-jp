@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267715"
 ---
 # <a name="compiler-error-c3834"></a>コンパイラ エラー C3834
 無効な明示的なキャスト ピンされたポインターへピンされたローカル変数を代わりに使用します。  

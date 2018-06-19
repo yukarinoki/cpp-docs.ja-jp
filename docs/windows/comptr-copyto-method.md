@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870872"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo メソッド
 指すポインターを指定するには、この ComPtr に関連付けられている現在または指定されたインターフェイスをコピーします。  

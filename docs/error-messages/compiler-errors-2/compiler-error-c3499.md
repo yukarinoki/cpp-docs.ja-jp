@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257459"
 ---
 # <a name="compiler-error-c3499"></a>コンパイラ エラー C3499
 void の戻り値の型を持つように指定されているラムダは、値を返すことができません  

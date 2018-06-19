@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875293"
 ---
 # <a name="hstringrelease-method"></a>HString::Release メソッド
 基になる文字列値を削除し、現在の HString オブジェクトを空の値に初期化します。  

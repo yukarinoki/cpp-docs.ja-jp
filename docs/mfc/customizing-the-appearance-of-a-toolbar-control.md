@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343695"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>ツール バー コントロールの外観のカスタマイズ
 クラス`CToolBarCtrl`外観 (および場合によっては、動作) のツールバー オブジェクトに影響する多くのスタイルを提供します。 設定してツール バー オブジェクトを変更、`dwCtrlStyle`のパラメーター、 `CToolBarCtrl::Create` (または`CToolBar::CreateEx`) メンバー関数は、ツール バー コントロールを作成します。  

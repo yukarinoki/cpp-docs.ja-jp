@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128281"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>方法: 正規表現を使用して単純検索を行う (C++/CLI)
 次のコード例では、正規表現を使用して部分文字列の完全一致の検索対象にします。 検索は、静的な<xref:System.Text.RegularExpressions.Regex.IsMatch%2A>メソッドで、2 つの文字列を入力として取得します。 1 つは、検索対象文字列と 2 つ目は、パターンを検索します。  

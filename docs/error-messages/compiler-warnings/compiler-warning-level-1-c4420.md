@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279111"
 ---
 # <a name="compiler-warning-level-1-c4420"></a>コンパイラの警告 (レベル 1) C4420
 'operator': 演算子は使用できません代わりに 'operator' を使用する。実行時のチェックは中途終了される可能性があります。  

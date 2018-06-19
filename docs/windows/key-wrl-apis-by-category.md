@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881459"
 ---
 # <a name="key-wrl-apis-by-category"></a>カテゴリ別の主要な WRL API
 次の表には、主要な Windows ランタイム C++ テンプレート ライブラリのクラス、構造体、関数、およびマクロが一覧表示します。 ヘルパーの名前空間とクラスのコンス トラクターが省略されています。 これらのリストは、名前空間ごとに整理して、API のドキュメントが補強されます。  

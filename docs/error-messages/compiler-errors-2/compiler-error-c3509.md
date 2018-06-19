@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257416"
 ---
 # <a name="compiler-error-c3509"></a>コンパイラ エラー C3509
 'type': 無効な Automation 戻り値の型です。パラメーターがマークされている 'retval'、戻り値の型の場合、'void'、'HRESULT' または 'SCODE' する必要があります。  

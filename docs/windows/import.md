@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877268"
 ---
 # <a name="import"></a>import
 メイン IDL から参照する定義を含む .idl、.odl ファイル、またはヘッダーの別のファイルを指定します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872522"
 ---
 # <a name="handletattach-method"></a>HandleT::Attach メソッド
 指定したハンドルを現在の HandleT オブジェクトに関連付けます。  

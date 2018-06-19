@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870104"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach メソッド
 この ComPtr と、現在のテンプレート型パラメーターで指定されたインターフェイスの種類を関連付けます。  

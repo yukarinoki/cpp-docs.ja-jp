@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236786"
 ---
 # <a name="compiler-error-c2664"></a>コンパイラ エラー c2664 を生成
 'function': 引数 n を 'type1' から 'type2' へ変換できません。  

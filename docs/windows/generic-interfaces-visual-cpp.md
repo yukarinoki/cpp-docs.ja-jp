@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878698"
 ---
 # <a name="generic-interfaces-visual-c"></a>ジェネリック インターフェイス (Visual C++)
 クラスの型パラメーターに適用される制限は、インターフェイスの型パラメーターに適用されるものと同じです (を参照してください[ジェネリック クラス (C + + CLI)](../windows/generic-classes-cpp-cli.md))。  

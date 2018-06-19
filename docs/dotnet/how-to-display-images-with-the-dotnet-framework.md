@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128580"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>方法: .NET Framework を使用してイメージを表示する
 次のコード例へのポインターを取得する OnPaint イベント ハンドラーを変更する、<xref:System.Drawing.Graphics>メイン フォームのオブジェクト。 <xref:System.Windows.Forms.Form.OnPaint%2A>関数が Visual Studio のアプリケーション ウィザードで作成されたほとんどの場合、Windows フォーム アプリケーションの目的としています。  

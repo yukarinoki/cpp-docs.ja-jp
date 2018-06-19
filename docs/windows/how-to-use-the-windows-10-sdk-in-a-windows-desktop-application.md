@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882825"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用
 Visual Studio 2017 でクラシック Windows デスクトップ プロジェクトを作成する場合は設定して既定では、C++ デスクトップ ワークロードがインストールまたは最後に更新されたときにインストールされている Windows 10 SDK のバージョンでビルドします。 このバージョンの Windows SDK は、最近のすべての Windows リリースと互換性が。 SDK の以前のバージョンを対象とする場合は、プロジェクトを開くことができます |プロパティの Windows SDK のバージョンのドロップダウン内で使用可能なその他の SDK バージョンを選択します。  

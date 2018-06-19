@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879634"
 ---
 # <a name="dbcolumn"></a>db_column
 指定された列を行セット内の変数にバインドします。  

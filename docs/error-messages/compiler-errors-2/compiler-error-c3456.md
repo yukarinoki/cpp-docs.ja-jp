@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256497"
 ---
 # <a name="compiler-error-c3456"></a>コンパイラ エラー C3456
 [source_annotation_attribute] はマネージまたは WinRT クラス宣言では使用できません  

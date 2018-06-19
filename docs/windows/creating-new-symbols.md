@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872297"
 ---
 # <a name="creating-new-symbols"></a>シンボルの新規作成
 新しいプロジェクトを開始するときは、必要なシンボル名を、シンボル名を割り当てるリソースを作成する前に決めておくと便利です。  

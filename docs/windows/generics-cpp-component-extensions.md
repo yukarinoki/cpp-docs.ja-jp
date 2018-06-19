@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878113"
 ---
 # <a name="generics--c-component-extensions"></a>ジェネリック (C++ コンポーネント拡張)
 ジェネリックは、パラメーター化された型およびメソッドです。 このセクションで、Windows ランタイムと、共通言語ランタイムの両方でサポートされているジェネリック機能と調べるは共通言語ランタイムのみでサポートされています。 また、Visual C の .NET Framework 言語で作成されたジェネリック型を使用する方法と、独自のジェネリック メソッドおよび Visual c での型を作成する方法を確認します。 最後に、このセクションでは、ジェネリックおよび C++ テンプレートの比較を提供します。  

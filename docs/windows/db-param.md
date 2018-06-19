@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880713"
 ---
 # <a name="dbparam"></a>db_param
 入力または出力パラメーターを持つ指定したメンバー変数を関連付けるし、変数を区切ります。  

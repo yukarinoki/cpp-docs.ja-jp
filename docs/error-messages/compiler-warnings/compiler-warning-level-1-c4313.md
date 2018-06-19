@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283940"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>コンパイラの警告 (レベル 1) C4313
 'function': 書式指定文字列内の 'format specifier' が引数 ('type' 型) と競合しています。  

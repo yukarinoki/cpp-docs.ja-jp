@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912928"
 ---
 # <a name="once"></a>once
 ソース コード ファイルをコンパイルする際、コンパイラによってファイルが 1 回だけ取り込まれる (開かれる) ようにします。  

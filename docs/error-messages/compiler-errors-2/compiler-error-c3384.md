@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251407"
 ---
 # <a name="compiler-error-c3384"></a>コンパイラ エラー C3384
 'type_parameter': 値の制約および ref 制約を同時に使用することはできません  

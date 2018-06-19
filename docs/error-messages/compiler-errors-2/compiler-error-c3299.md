@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249902"
 ---
 # <a name="compiler-error-c3299"></a>コンパイラ エラー C3299
 'member_function': 制約を指定できません。それらは基本メソッドから継承されています  

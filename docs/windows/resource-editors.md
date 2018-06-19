@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879595"
 ---
 # <a name="resource-editors"></a>リソース エディター
 リソース エディターとは、Visual Studio プロジェクトに含まれているリソースを作成または変更するための特殊な環境です。 Visual Studio のリソース エディターでは、アプリケーションのリソースをすばやく簡単に作成して変更できるようにする技術とインターフェイスを共有します。 リソース エディターを使用すると、 [リソースを適切なエディターで表示して編集](../windows/viewing-and-editing-resources-in-a-resource-editor.md) でき、 [リソースをプレビュー](../windows/previewing-resources.md)することができます。  

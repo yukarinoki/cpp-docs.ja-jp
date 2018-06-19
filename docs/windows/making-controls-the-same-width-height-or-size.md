@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874799"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>複数のコントロールに対する同一の幅、高さ、またはサイズの設定
 主要なコントロールのサイズに基づいてコントロールのグループのサイズを変更することができます。 こともできます[キャプション テキストのサイズに基づいて、コントロールのサイズを変更する](../windows/sizing-individual-controls.md)です。  

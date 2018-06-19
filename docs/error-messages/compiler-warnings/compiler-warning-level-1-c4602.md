@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279528"
 ---
 # <a name="compiler-warning-level-1-c4602"></a>コンパイラの警告 (レベル 1) C4602
 \#プラグマ pop_macro: 'macro name' この識別子の前の #pragma push_macro がありません  

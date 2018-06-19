@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251957"
 ---
 # <a name="compiler-error-c3484"></a>コンパイラ エラー C3484
 戻り値の型の前に '->' が必要です  

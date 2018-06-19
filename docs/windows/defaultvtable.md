@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882538"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 COM オブジェクトの既定の vtable インターフェイスとしてインターフェイスを定義します。  

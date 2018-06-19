@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871768"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>ツール バー ボタンのツール ヒントの作成
 ### <a name="to-create-a-tool-tip"></a>ツール ヒントを作成するには  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/08/2018
   
  手順 3 で '印刷'「ツール ヒントの名前、」であり、' アクティブ文書を印刷' 手順 4 から「の説明、ステータス バーのボタンをクリックします」。  
   
- この効果を使用する場合、**ツールバー**エディター、設定、**プロンプト**プロパティを **\n を印刷**です。  
+ この効果を使用する場合、**ツールバー**エディター、設定、**プロンプト**プロパティを**\n を印刷**です。  
   
 > [!NOTE]
 >  プロンプト テキストを使用して行うことができます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。  

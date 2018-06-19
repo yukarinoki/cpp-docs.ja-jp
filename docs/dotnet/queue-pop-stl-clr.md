@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162654"
 ---
 # <a name="queuepop-stlclr"></a>queue::pop (STL/CLR)
 最後の要素を削除します。  

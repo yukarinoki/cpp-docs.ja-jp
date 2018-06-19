@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880570"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>イメージ内側の塗りつぶし (アイコン用イメージ エディター)
 イメージ エディターでは、**塗りつぶし**いずれかを埋めるためのツールが現在の描画の色または現在の背景色とイメージの領域を囲みます。  

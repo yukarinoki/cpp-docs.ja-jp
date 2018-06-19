@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343257"
 ---
 # <a name="exceptions-examining-exception-contents"></a>例外処理 : 例外の内容の調査
 ただし、**キャッチ**ブロックの引数は、ほとんどのデータ型であることができます、MFC 関数がクラスから派生した型の例外をスロー`CException`です。 MFC 関数によってスローされる例外をキャッチするには、次に、記述する、**キャッチ**ブロックが、引数がポインターを`CException`オブジェクト (から派生したオブジェクトまたは`CException`など`CMemoryException`)。 例外の正確な型によっては、例外の原因を特定の情報を収集する例外オブジェクトのデータ メンバーを確認できます。  

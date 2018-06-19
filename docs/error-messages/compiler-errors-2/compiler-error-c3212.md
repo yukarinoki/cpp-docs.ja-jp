@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256165"
 ---
 # <a name="compiler-error-c3212"></a>コンパイラ エラー C3212
 'specialization': テンプレート メンバーの明示的特殊化は、明示的特殊化のメンバーである必要があります  

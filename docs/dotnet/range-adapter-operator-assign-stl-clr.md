@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161968"
 ---
 # <a name="rangeadapteroperator-stlclr"></a>range_adapter::operator= (STL/CLR)
 格納された反復子のペアを置き換えます。  

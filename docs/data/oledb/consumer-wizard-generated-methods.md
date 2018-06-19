@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098603"
 ---
 # <a name="consumer-wizard-generated-methods"></a>コンシューマー ウィザードで生成されたメソッド
 ATL OLE DB コンシューマー ウィザードおよび MFC アプリケーション ウィザード、うち注意すべき特定の関数を生成します。 一部のメソッドが実装される異なる方法で、属性付きプロジェクトで; いくつかの注意事項があるので注意してください。各ケースは、以下について説明します。 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。  

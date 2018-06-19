@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871326"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock メソッド
 指定されたクリティカル セクション オブジェクトの所有権を待機します。 この関数は、呼び出し元のスレッドには、所有権が付与されるを返します。  

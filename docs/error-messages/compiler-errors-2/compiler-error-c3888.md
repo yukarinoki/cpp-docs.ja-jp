@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270665"
 ---
 # <a name="compiler-error-c3888"></a>コンパイラ エラー C3888
 'name': このリテラル データ メンバーと関連付けられた const 式は C++/CLI でサポートされていません  

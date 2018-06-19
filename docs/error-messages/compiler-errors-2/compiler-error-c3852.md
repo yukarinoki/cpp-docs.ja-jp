@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272267"
 ---
 # <a name="compiler-error-c3852"></a>コンパイラ エラー C3852
 'member' は型 'type' を持つ: 集約の初期化では、このメンバーは初期化できませんでした。  

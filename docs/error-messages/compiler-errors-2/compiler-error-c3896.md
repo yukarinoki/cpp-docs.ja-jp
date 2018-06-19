@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269739"
 ---
 # <a name="compiler-error-c3896"></a>コンパイラ エラー C3896
 'member': 正しくない初期化子: このリテラル データ メンバーは 'nullptr' と共にのみ初期化できます  
