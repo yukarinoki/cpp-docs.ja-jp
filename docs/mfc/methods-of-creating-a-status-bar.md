@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346930"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>ステータス バーの作成方法
 MFC には、ステータス バーを作成する 2 つのクラスが用意されています: [CStatusBar](../mfc/reference/cstatusbar-class.md)と[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (をラップする Windows のコモン コントロール API)。 `CStatusBar` すべての機能を提供バー コモン コントロールの状態の自動的にメニューとツールバーと通信できません必要な共通コントロールの設定と構造の多くを処理。ただし、実行可能ファイル、通常はより大きくするを使用して作成`CStatusBarCtrl`です。  

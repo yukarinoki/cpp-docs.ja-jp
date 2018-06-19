@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842289"
 ---
 # <a name="import-attributes-c"></a>#import の属性 (C++)
 #import ディレクティブと共に使用される属性のリンクを示します。  

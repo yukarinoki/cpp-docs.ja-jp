@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385366"
 ---
 # <a name="tree-control-item-information"></a>ツリー コントロールの項目の情報
 ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) コントロール内の項目に関する情報を取得するメンバー関数の数が必要です。 [GetItem](../mfc/reference/ctreectrl-class.md#getitem)メンバー関数は、一部またはすべての項目に関連付けられているデータを取得します。 このデータには、項目のテキスト、状態、イメージ、子項目の数およびアプリケーション定義の 32 ビット データ値を含めることができます。 [SetItem](../mfc/reference/ctreectrl-class.md#setitem)一部またはすべての項目に関連付けられているデータを設定する関数。  

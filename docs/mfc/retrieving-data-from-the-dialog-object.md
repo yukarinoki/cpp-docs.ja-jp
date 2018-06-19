@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380209"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>ダイアログ オブジェクトからのデータの取得
 フレームワークは、ダイアログ ボックスのコントロールの値を初期化して、コントロールから値を取得する簡単な方法を提供します。 関数を呼び出すなどの手間がかかりより手動的な方法は、`SetDlgItemText`と`GetDlgItemText`クラスのメンバー関数`CWnd`windows のコントロールに適用されます。 これらの関数でアクセスする各コントロールを設定またはその値を取得する個別に関数を呼び出す`SetWindowText`と`GetWindowText`です。 フレームワークのアプローチでは、初期化と取得の両方を自動化します。  

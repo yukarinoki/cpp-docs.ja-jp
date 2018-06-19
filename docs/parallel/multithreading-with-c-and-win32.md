@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687544"
 ---
 # <a name="multithreading-with-c-and-win32"></a>C と Win32 を使用するマルチスレッド
 Microsoft Visual C では、マルチ スレッド アプリケーションを作成するためのサポートを提供します。 複数のスレッドを使用して、アプリケーションが応答しなくなるユーザー インターフェイスを原因となる高価な操作を実行する必要がある場合を検討してください。  

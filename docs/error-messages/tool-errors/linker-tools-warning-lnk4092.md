@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302582"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>リンカー ツールの警告 LNK4092
 共有書き込みセクション 'section' には、再配置; が含まれています。イメージは正しく動作しない可能性があります。  

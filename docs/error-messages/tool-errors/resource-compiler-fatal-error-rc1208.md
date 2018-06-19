@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318299"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>リソース コンパイラの致命的なエラー RC1208
 入力ファイルにあります。RES 拡張機能  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303947"
 ---
 # <a name="c-runtime-error-r6031"></a>C ランタイム エラー R6031
 CRT を複数回初期化しようとしてください。 これは、アプリケーションでバグを示します。  

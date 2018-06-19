@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849146"
 ---
 # <a name="grammar-summary-cc"></a>文法の概要 (C/C++)
 このセクションでは、プリプロセッサの正式な文法について説明します。 プリプロセッサ ディレクティブの構文を対象し、演算子は、後ほど[、プリプロセッサ](../preprocessor/preprocessor.md)し、[プラグマ ディレクティブ](../preprocessor/pragma-directives-and-the-pragma-keyword.md)です。  

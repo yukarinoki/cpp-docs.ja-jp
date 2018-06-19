@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320106"
 ---
 # <a name="resource-compiler-errors-rw1004-through-rw4004"></a>リソース コンパイラ エラーs RW1004 through RW4004
 ここでは、ビルド ツールによって生成されるエラーについて説明します。 特定のエラー メッセージに関するヘルプを表示するエラー番号は、出力ウィンドウの上にマウス ポインターをクリックして f1 キーを押すかでエラー番号を入力、**探します**ボックス インデックスにします。

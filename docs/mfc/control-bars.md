@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347900"
 ---
 # <a name="control-bars"></a>コントロール バー
 「コントロール バー」は、ツールバー、ステータス バー、およびダイアログ バーの [全般] の名前です。 MFC クラス`CToolBar`、 `CStatusBar`、 `CDialogBar`、 `COleResizeBar`、および**CReBar**クラスから派生[CControlBar](../mfc/reference/ccontrolbar-class.md)、一般的な機能を実装します。  

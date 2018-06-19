@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333132"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX コントロール コンテナー : ActiveX コントロールとメンバー変数の関連付け
 コントロール コンテナー アプリケーション内での ActiveX コントロールにアクセスする最も簡単な方法は、ActiveX コントロールにコントロールを含むダイアログ クラスのメンバー変数を関連付けるにです。  
