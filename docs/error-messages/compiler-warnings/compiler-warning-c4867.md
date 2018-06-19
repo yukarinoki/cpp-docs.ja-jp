@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270886"
 ---
 # <a name="compiler-warning-c4867"></a>コンパイラの警告 C4867
 'function': 関数呼び出しの引数リストがありません。'call' を使用して、メンバーへのポインターを作成するには  

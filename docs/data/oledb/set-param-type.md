@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107416"
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 `COLUMN_ENTRY` マクロの後に続く `SET_PARAM_TYPE` マクロが入力、出力、入出力のいずれであるかを指定します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111537"
 ---
 # <a name="equal-stlclr"></a>equal (STL/CLR)
 二項述語によって指定された等値または等価について、2 つの範囲を要素ごとに比較します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129640"
 ---
 # <a name="iterswap-stlclr"></a>iter_swap (STL/CLR)
 指定された反復子のペアで参照される 2 個の値を交換します。  

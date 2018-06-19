@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138520"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>方法: クリップボード内にテキストを格納する (C++/CLI)
 次のコード例では、<xref:System.Windows.Forms.Clipboard>で定義されているオブジェクト、<xref:System.Windows.Forms>文字列を格納する名前空間。 このオブジェクトは、次の 2 つのメンバー関数を提供します。<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>と<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>です。 派生した任意のオブジェクトを送信することによってデータがクリップボードに格納されている<xref:System.Object>に<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>です。  

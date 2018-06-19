@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172639"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 このテンプレート クラスでは、ランダム アクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`vector`ストレージの連続ブロックとして要素のシーケンスを管理します。 ブロックは、必要に応じて大きくを配列として実装されます。  

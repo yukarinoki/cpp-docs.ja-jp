@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256338"
 ---
 # <a name="compiler-error-c3487"></a>コンパイル エラー C3487
 'return type': すべての return 式で同じ型を推測する必要があります: 以前は 'return type' でした。  

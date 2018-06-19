@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108278"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレートの操作
 次のトピックでは、一般的なシナリオで、OLE DB コンシューマー テンプレートを使用する方法の例をいくつかを説明します。  

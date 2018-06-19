@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105921"
 ---
 # <a name="foreach-stlclr"></a>for_each (STL/CLR)
 範囲内で順方向順序で各要素に対して指定された関数を適用し、関数オブジェクトを返します。  

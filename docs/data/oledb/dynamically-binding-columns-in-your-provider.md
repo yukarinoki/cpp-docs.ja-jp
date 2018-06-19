@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101693"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>プロバイダーでの列の動的な連結
 動的な列バインディングが必要なことを確認してください。 必要があります。  

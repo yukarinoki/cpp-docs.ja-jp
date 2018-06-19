@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127982"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>方法: 等価性をテストする (C++/CLI)
 次の例では、c++ マネージ拡張を使用する等値のテストはハンドルの参照先に基づいています。  

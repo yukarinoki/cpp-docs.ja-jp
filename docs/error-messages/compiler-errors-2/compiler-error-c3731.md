@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275305"
 ---
 # <a name="compiler-error-c3731"></a>コンパイラ エラー C3731
 互換性のないイベント 'function1' とハンドラー 'function2';イベント ソースとイベント ハンドラーが同じ型にする必要があります。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270965"
 ---
 # <a name="compiler-error-c3849"></a>コンパイラ エラー C3849
 型 'type' の式における関数スタイルの呼び出しはすべての数値の使用可能な演算子のオーバー ロードの const または volatile 修飾子を失います。  
