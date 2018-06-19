@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270818"
 ---
 # <a name="compiler-error-c3909"></a>コンパイラ エラー C3909
 aWinRT またはマネージ イベント宣言は WinRT またはマネージ型で行う必要があります。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380920"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>CStatusBarCtrl オブジェクトのモードの設定
 2 つのモードがある、`CStatusBarCtrl`オブジェクト: 単純なと標準です。 ほとんどの場合、ステータス バー コントロールはテキストとアイコン、またはアイコンと共に、1 つ以上の部分があります。 これは標準モードと呼ばれます。 このモードの詳細については、次を参照してください。 [CStatusBarCtrl オブジェクトの区画の初期化](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)です。  

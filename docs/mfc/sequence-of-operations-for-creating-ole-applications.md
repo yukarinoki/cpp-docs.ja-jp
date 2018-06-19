@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381211"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>OLE アプリケーションの作成手順
 次の表は、OLE をリンクして、埋め込みアプリケーションを作成して、フレームワークの役割分担を示します。 これらを実行する手順のシーケンスではなく使用可能なオプションを表します。  

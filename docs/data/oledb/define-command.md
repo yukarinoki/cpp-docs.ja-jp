@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101472"
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 使用する場合、行セットの作成に使用されるコマンドを指定、 [CCommand](../../data/oledb/ccommand-class.md)クラスです。 指定したアプリケーションの種類 (ANSI または Unicode) に対応する文字列型のみを受け入れます。  

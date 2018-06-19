@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368814"
 ---
 # <a name="creating-an-mfc-application"></a>MFC アプリケーションの作成
 MFC アプリケーションは、MFC (Microsoft Foundation Class) ライブラリに基づく Windows 対応の実行可能なアプリケーションです。 MFC アプリケーションを作成する最も簡単な方法は、MFC アプリケーション ウィザードを使用する方法です。  

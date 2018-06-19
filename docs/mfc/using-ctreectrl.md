@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382220"
 ---
 # <a name="using-ctreectrl"></a>CTreeCtrl の使い方
 ツリー コントロールは、クラスによって表される[CTreeCtrl](../mfc/reference/ctreectrl-class.md)ディスク上の文書の見出し、インデックス、または、ファイルおよびディレクトリ内のエントリなどのアイテムの階層リストを表示するウィンドウです。 各項目がラベルとオプションのビットマップ イメージで構成され、各項目に関連付けられているサブ項目のリストを持つことができます。 項目をクリックすると、ユーザーは展開したり、サブ項目の関連付けられているリストを折りたたむできます。 ファイル エクスプ ローラーの左側のペインで、ディレクトリ ツリーは、ツリー コントロールの例を示します。  

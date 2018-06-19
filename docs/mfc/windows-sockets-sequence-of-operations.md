@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385259"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows ソケット : 動作シーケンス
 この記事には、サイド バイ サイドで、サーバー ソケットと、クライアント ソケットの操作のシーケンスが示しています。 ソケットを使用するため`CArchive`オブジェクト、必ずしもは[ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)です。  

@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357185"
 ---
 # <a name="carray-class"></a>CArray クラス
 C 言語の配列に似ていますが動的を減らし、必要に応じて大きくなる配列をサポートします。  

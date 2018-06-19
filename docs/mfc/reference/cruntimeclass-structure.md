@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376292"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 構造体
 各クラスから派生した`CObject`に関連付けられている、`CRuntimeClass`実行時に、オブジェクトまたはその基本クラスについての情報を取得するときに使用できる構造。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381148"
 ---
 # <a name="specifying-levels-of-functionality"></a>継承機能のレベルの指定
 この記事は、次の機能レベルに追加する方法を説明します、 [CObject](../mfc/reference/cobject-class.md)-派生クラス。  

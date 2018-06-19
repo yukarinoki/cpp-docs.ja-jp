@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383855"
 ---
 # <a name="tn001-window-class-registration"></a>テクニカル ノート 1: ウィンドウ クラスの登録
 このメモには、特別なを登録する MFC ルーチンがについて説明[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es Microsoft Windows で必要とします。 特定`WNDCLASS`MFC と Windows で使用される属性がについて説明します。  

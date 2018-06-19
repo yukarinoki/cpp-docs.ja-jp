@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371651"
 ---
 # <a name="standard-command-and-window-ids"></a>標準コマンド ID とウィンドウ ID
 Microsoft Foundation Class ライブラリでは、afxres.h 内でさまざまな標準のコマンドとウィンドウ Id を定義します。 これらの Id は、メッセージ ハンドラー関数をマッピングするリソース エディターと [プロパティ] ウィンドウ内で最もよく使用されます。 すべての標準コマンドが、 **id _** プレフィックス。 たとえば、メニュー エディターを使用して、通常にバインドするファイルを開くメニュー項目、標準`ID_FILE_OPEN`コマンド ID  

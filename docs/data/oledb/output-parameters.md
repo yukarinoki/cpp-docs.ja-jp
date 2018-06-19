@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104387"
 ---
 # <a name="output-parameters"></a>出力パラメーター
 ストアド プロシージャの呼び出しは、SQL コマンドの呼び出しに似ています。 主な違いは、ストアド プロシージャが出力パラメーター (または「出力パラメーター」) を使用して、戻り値です。  

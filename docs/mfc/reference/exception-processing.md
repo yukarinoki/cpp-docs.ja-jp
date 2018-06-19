@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376989"
 ---
 # <a name="exception-processing"></a>例外処理
 プログラムを実行するとき、多くの異常な状態と「例外」というエラーが発生する可能性がします。 これらには、メモリ、リソース割り当てのエラー、およびファイルを検索する障害の不足が含まれます。  

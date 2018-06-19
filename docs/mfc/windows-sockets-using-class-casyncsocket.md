@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385182"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows ソケット: CAsyncSocket クラスの使い方
 この記事は、クラスを使用する方法を説明します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)です。 このクラスが非常に低いレベルで Windows ソケット API をカプセル化ことに注意してください。 `CAsyncSocket` ネットワーク通信がネットワーク イベントの通知のコールバックをするプログラマによって使用されます。 この想定に基づいて、この記事は、基本的な命令のみを提供します。 使用を検討する必要がありますおそらく`CAsyncSocket`Windows ソケットの MFC アプリケーションで複数のネットワーク プロトコルを処理する簡単なは柔軟性を犠牲にしたくない場合。 複数の通信をよりでしたモデルを使用して、一般的な代替クラスの直接プログラミングの効率向上を取得できることが多いとも`CSocket`します。  

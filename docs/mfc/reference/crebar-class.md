@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371147"
 ---
 # <a name="crebar-class"></a>CReBar クラス
 Rebar コントロールのレイアウト、永続性、および状態に関する情報を提供するコントロール バーです。  

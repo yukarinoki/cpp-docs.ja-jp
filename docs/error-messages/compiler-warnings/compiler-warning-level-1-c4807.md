@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282364"
 ---
 # <a name="compiler-warning-level-1-c4807"></a>コンパイラの警告 (レベル 1) C4807
 'operation': 'type' 型と 'type' 型の符号付きビットフィールドの混用は安全ではありません。  

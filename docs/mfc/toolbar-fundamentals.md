@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383975"
 ---
 # <a name="toolbar-fundamentals"></a>ツール バーに関する基本事項
 この記事では、アプリケーションのウィザードでオプションを選択して、アプリケーションに既定のツールバーを追加できる基本的な MFC 実装について説明します。 トピックは次のとおりです。  

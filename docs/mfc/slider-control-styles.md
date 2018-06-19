@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380547"
 ---
 # <a name="slider-control-styles"></a>スライダー コントロールのスタイル
 スライダー コントロール ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 垂直または水平方向の方向を持つことができます。 いずれかの側では、目盛りはことができます、側またはどちらもします。 また、連続する値の範囲を指定するも使用できます。 これらのプロパティは、スライダー コントロールを作成する場合を指定するスライダー コントロールのスタイルを使用して制御されます。  

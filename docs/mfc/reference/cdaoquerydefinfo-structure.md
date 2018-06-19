@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367231"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 構造体
 `CDaoQueryDefInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているクエリ定義のオブジェクトに関する情報が含まれています。  

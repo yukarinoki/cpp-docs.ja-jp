@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108294"
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET によるデータ アクセス (C++/CLI)
 ADO.NET はデータ アクセス用の .NET Framework API であり、電源と以前のデータ アクセス ソリューションで優れた使いやすさを提供します。 このセクションでは、いくつかのネイティブ型をマーシャ リングなどの Visual C のユーザーに固有の ADO.NET に関する問題について説明します。  

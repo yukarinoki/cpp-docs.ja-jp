@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162239"
 ---
 # <a name="rotatecopy-stlclr"></a>rotate_copy (STL/CLR)
 ソース範囲内の 2 つの隣接する範囲の要素を交換し、結果をターゲット範囲にコピーします。  

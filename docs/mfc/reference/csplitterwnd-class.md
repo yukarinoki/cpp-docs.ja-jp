@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377850"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd クラス
 分割ウィンドウの機能が用意されています。分割ウィンドウとは複数のペインを持つウィンドウです。  
