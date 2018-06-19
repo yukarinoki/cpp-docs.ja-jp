@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359550"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: 例のカスタム文字列マネージャー
 クラスによって使用されるカスタム文字列マネージャーの一例を実装する、ATL ライブラリ[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)という**CFixedStringMgr**です。 `CFixedStringT` 派生した[CStringT](../atl-mfc-shared/reference/cstringt-class.md)の一部としてその文字データを割り当てる文字列を実装して、`CFixedStringT`オブジェクト自体が、文字列で指定された長さよりも小さい場合に限り、 **t_nChars**テンプレート パラメーター`CFixedStringT`です。 この方法で、文字列必要はありませんヒープ、文字列の長さが固定バッファーのサイズを超えない限り、します。 `CFixedStringT`限りませんを使用して、文字列データを割り当てるヒープを使用できません**CAtlStringMgr**その文字列マネージャーとして。 カスタム文字列マネージャーを使用して (**CFixedStringMgr**)、実装、 [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)インターフェイスです。 このインターフェイスは、後ほど[マネージャーの実装、カスタム文字列 (高度な方法)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)です。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890276"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 呼び出し元に通知する関数を呼び出すときにエラーがある場合、呼び出し元は、ことができますし、`GetLastError`エラー コードを取得します。  

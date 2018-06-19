@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871124"
 ---
 # <a name="eventoperator-operator"></a>Event::operator= 演算子
 指定された Event 参照を現在の Event インスタンスに割り当てます。  

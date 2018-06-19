@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168842"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>ネイティブ型に入れ子になっている値型のバージョンの問題 (C++/CLI)
 署名 (厳密な名前) アセンブリ コンポーネントがクライアント アセンブリをビルドするために使用を検討してください。 コンポーネントには、ネイティブの共用体、クラス、または配列のメンバーの種類として、クライアントで使用される値の型が含まれています。 コンポーネントの将来のバージョンでは、サイズまたは値型のレイアウトを変更する場合、クライアントを再コンパイルする必要があります。  

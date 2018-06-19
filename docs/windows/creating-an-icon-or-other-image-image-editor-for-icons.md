@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874734"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>アイコンまたはその他のイメージの作成 (アイコン用イメージ エディター)
 (ビットマップ、アイコン、カーソル、またはツールバー)、新しいイメージを作成し、その外観をカスタマイズする、イメージ エディターを使用することができます。 後でパターン化新しいビットマップを作成することも、[テンプレート](../windows/how-to-use-resource-templates.md)です。  

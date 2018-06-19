@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879784"
 ---
 # <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (vtable の新しいスロット) (C++ コンポーネント拡張)
 `new` キーワードは、仮想メンバーが vtable の新しいスロットを取得することを示します。  

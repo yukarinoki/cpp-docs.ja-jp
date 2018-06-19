@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243164"
 ---
 # <a name="compiler-error-c2879"></a>コンパイラ エラー C2879
 'symbol': 既存の名前空間を指定できます代替名名前空間のエイリアス定義によってのみ  

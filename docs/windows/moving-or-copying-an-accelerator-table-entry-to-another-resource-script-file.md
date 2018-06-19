@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877905"
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルから別のリソース スクリプト ファイルへのエントリの移動またはコピー
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルのエントリを別のリソース スクリプト ファイルに移動またはコピーするには  

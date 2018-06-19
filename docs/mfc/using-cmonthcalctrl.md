@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382380"
 ---
 # <a name="using-cmonthcalctrl"></a>CMonthCalCtrl の使い方
 月間予定表コントロール ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) 予定表のようなユーザー インターフェイスを実装します。 これにより、ユーザーが入力するか、日付の選択の非常に直感的で認識可能なメソッドを使用します。 コントロールは、アプリケーションを取得し、既存のデータ型を使用して、コントロールで日付情報を設定するための手段にも提供します。 既定では、月間予定表コントロールには、現在の日と月が表示されます。 ただし、ユーザーは、前後の月にスクロールし、特定の月または年を選択することができます。  

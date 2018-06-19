@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877736"
 ---
 # <a name="exception-handling--c-component-extensions"></a>例外処理 (C++ コンポーネント拡張)
 コンパイルされたアプリケーション、 **/ZW**コンパイラ オプションまたは **/clr**コンパイラ オプションの両方を使用して*例外*プログラムの実行中に予期しないエラーを処理します。 次のトピックは、C + での例外処理を説明 +/CX または C + + CLI アプリケーションです。  

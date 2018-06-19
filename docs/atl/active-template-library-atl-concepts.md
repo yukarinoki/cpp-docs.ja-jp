@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358115"
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL (Active Template Library) の概念
 アクティブ テンプレート ライブラリ (ATL) は、小規模で高速のコンポーネント オブジェクト モデル (COM) オブジェクトを作成するのに便利なテンプレート ベースの C++ クラスのセットです。 ストックの実装、デュアル インターフェイス、標準の COM 列挙子インターフェイス、接続ポイント、ティアオフ インターフェイス、および ActiveX コントロールを含むキーの COM 機能用の特別なサポートしています。  

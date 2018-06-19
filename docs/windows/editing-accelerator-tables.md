@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872940"
 ---
 # <a name="editing-accelerator-tables"></a>アクセラレータ テーブルの編集
 Visual c では、アクセラレータ エディターでのインプレース編集を直接アクセラレータ テーブルを編集できます。  

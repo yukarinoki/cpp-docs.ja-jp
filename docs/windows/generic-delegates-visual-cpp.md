@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875599"
 ---
 # <a name="generic-delegates-visual-c"></a>汎用デリゲート (Visual C++)
 デリゲートでは、ジェネリック型パラメーターを使用できます。 デリゲートの詳細については、次を参照してください。 [delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)です。  

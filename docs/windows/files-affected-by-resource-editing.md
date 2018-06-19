@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874357"
 ---
 # <a name="files-affected-by-resource-editing"></a>リソース編集の影響を受けるファイル
 Visual Studio 環境では、次の表に示すファイルがリソース編集セッション中に使用されます。  

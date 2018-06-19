@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873122"
 ---
 # <a name="controls-in-dialog-boxes"></a>ダイアログ ボックスのコントロール
 コントロールを追加すると、ダイアログ ボックスを使用して、[ダイアログ エディターのタブ](../windows/dialog-editor-tab-toolbox.md)で、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)を使用すると、ダイアログ ボックスにドラッグしてコントロールを選択します。 既定では、[ツールボックス] ウィンドウは自動非表示に設定されます。 ダイアログ エディターが開いているときに、ソリューションの左余白のタブとして表示されます。 ただし、ピン留めできる [ツールボックス] ウィンドウの位置をクリックして、**自動的に隠す**ウィンドウの右上隅のボタンをクリックします。 このウィンドウの動作を制御する方法の詳細については、次を参照してください。[ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)です。  

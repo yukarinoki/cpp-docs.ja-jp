@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686072"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 関数
 `omp_get_thread_num`関数、スレッドの数を返します、そのチーム内で関数を実行するスレッド。 0 との間のスレッドの番号にあると**omp_get_num_threads()**-1、包括的です。 チームのマスター スレッドはスレッド 0 です。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255623"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 構造体
 ディスパッチ インターフェイスでメソッドまたはプロパティを記述するために使用する型情報が含まれています。  

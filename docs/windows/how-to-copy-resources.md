@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879849"
 ---
 # <a name="how-to-copy-resources"></a>方法: リソースをコピーする
 それらを変更することがなく別の 1 つのファイルからのリソースをコピーすることがでくこともできます[コピー中に、言語またはリソースの条件を変更する](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)です。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199733"
 ---
 # <a name="compiler-error-c2551"></a>コンパイラ エラーC2551
 'void *' 型には明示的なキャストが必要です  

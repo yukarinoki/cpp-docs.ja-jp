@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878149"
 ---
 # <a name="pragma"></a>pragma
 生成された .idl ファイルの引用符を使用せずに、指定した文字列を出力します。 である必要があります。  

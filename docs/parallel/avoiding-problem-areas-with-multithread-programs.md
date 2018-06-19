@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686615"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>マルチスレッド プログラムの問題を回避する方法
 作成する、リンク、またはマルチ スレッドの C プログラムの実行で発生する可能性がいくつかの問題があります。 いくつかの一般的な問題については、次の表で説明します。 (MFC の観点から説明については、次を参照してください[マルチ スレッド: プログラミングのヒント](../parallel/multithreading-programming-tips.md)。)。  

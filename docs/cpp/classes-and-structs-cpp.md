@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413246"
 ---
 # <a name="classes-and-structs-c"></a>クラスと構造体 (C++)
 このセクションでは、C++ のクラスおよび構造体について説明します。 C++ においてこれらの 2 つのコンストラクトは、構造体では既定のアクセシビリティが "public" であるのに対してクラスでは "private" である点を除けば同じです。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172672"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows フォームと MFC のプログラミング上の違い
 トピックでは、 [MFC における Windows フォーム ユーザー コントロールを使用して](../dotnet/using-a-windows-form-user-control-in-mfc.md)MFC Windows フォームのサポートについて説明します。 .NET Framework または MFC でのプログラミングにあまり慣れていない場合は、このトピックで、.NET Framework と MFC のプログラミング上の違いに関する背景情報を参照してください。  

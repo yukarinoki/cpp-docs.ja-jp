@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880180"
 ---
 # <a name="partial--c-component-extensions"></a>Partial (C++ コンポーネント拡張)
 `partial`キーワードとは独立して、および異なるファイル内に作成される同じ ref クラスのさまざまな部分を有効にします。  

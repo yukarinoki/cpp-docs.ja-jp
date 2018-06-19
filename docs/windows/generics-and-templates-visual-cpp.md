@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878906"
 ---
 # <a name="generics-and-templates-visual-c"></a>ジェネリックとテンプレート (Visual C++)
 ジェネリックとテンプレートは、両方のパラメーター化された型をサポートする言語の機能です。 ただし、それらが異なり、さまざまな用途があります。 このトピックでは、多くの違いの概要を示します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159406"
 ---
 # <a name="pushheap-stlclr"></a>push_heap (STL/CLR)
 範囲の末尾にある要素を、範囲内の以前の要素で構成される既存のヒープに追加します。  

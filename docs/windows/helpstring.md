@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879007"
 ---
 # <a name="helpstring"></a>helpstring
 適用すると、要素の記述に使用される文字の文字列を指定します。  

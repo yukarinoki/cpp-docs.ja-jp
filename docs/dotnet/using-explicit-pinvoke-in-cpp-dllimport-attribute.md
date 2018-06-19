@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169505"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>C++ での明示的な PInvoke (DllImport 属性) の使用方法 
 .NET Framework では、明示的なプラットフォーム呼び出し (PInvoke) 機能に、マネージ アプリケーションが DLL 内部にパッケージ化されているアンマネージ関数を呼び出すことができるようにする `Dllimport` 属性を備えています。 明示的な PInvoke は、アンマネージ API が DLL としてパッケージ化され、ソース コードが利用できない場合に必要です。 たとえば、Win32 関数の呼び出しには、PInvoke が必要です。 それ以外の場合、暗黙的な P を使用して {Invoke; 参照してください[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)詳細についてはします。  

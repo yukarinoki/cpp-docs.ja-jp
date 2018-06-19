@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876515"
 ---
 # <a name="eventsource-class"></a>EventSource クラス
 非アジャイルのイベントを表します。 EventSource メンバー関数は、追加、削除、およびイベント ハンドラーを呼び出します。 アジャイルのイベントを使用して[AgileEventSource](agileeventsource-class.md)です。 

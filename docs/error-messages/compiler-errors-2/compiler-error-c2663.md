@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235860"
 ---
 # <a name="compiler-error-c2663"></a>コンパイラ エラー C2663
 'function': 'this' ポインターの有効な変換がある番号のオーバー ロードがありません  

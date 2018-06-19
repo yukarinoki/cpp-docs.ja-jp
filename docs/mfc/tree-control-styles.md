@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382038"
 ---
 # <a name="tree-control-styles"></a>ツリー コントロールのスタイル
 ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) スタイルのツリー コントロールの外観の側面を制御します。 ツリー コントロールを作成するときに、初期のスタイルを設定します。 取得してを使用してツリーのコントロールを作成した後、スタイルを変更することができます、 [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)と[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 関数を指定する**GWL_STYLE**の`nIndex`パラメーター。 スタイルの一覧については、次を参照してください。[ツリー ビュー コントロールのウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK に含まれています。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230587"
 ---
 # <a name="compiler-error-c2555"></a>コンパイラ エラー C2555
 'class1::function1': 仮想関数をオーバーライドする型の戻り値は異なる 'class2::function2' の covariant ではありません  

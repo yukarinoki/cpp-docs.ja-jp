@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879673"
 ---
 # <a name="resource-includes-dialog-box"></a>[リソース インクルード] ダイアログ ボックス
 使用することができます、**リソースが含まれています**を通常の動作形態プロジェクトの .rc ファイル内のすべてのリソースを格納する環境の変更 ダイアログ ボックス[シンボル](../windows/symbols-resource-identifiers.md)Resource.h にします。  

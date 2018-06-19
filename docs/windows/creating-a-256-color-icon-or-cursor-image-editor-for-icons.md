@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872362"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>256 色のアイコンまたはカーソルの作成 (アイコン用イメージ エディター)
 イメージ エディターを使用して、アイコンとカーソルは、サイズ設定された大規模な (64 × 64) から選択する 256 色カラー パレットを指定できます。 リソースを作成すると、デバイス イメージのスタイルが選択されます。  

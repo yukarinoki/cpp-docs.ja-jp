@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162339"
 ---
 # <a name="private-virtual-functions"></a>プライベート仮想関数
 派生クラスでプライベート仮想関数の処理方法は、Visual C を c++ マネージ拡張から変更されました。  

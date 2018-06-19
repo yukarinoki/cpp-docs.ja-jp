@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891364"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張)
 テンプレートは、使用すると、Windows ランタイムまたは共通言語ランタイムの型のプロトタイプを定義し、別のテンプレート型パラメーターを使用してその型のバリエーションをインスタンス化しできます。  

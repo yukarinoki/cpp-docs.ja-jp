@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877152"
 ---
 # <a name="insert-activex-control-dialog-box"></a>[ActiveX コントロールの挿入] ダイアログ ボックス
 このダイアログ ボックスを有効にすると、 [、ダイアログ ボックスに ActiveX コントロールを挿入](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)を使用しているときに、[ダイアログ エディター](../windows/dialog-editor.md)です。  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383417"
 ---
 # <a name="serialization-making-a-serializable-class"></a>シリアル化 : シリアル化可能なクラスの作成
 5 つの主要な手順は、クラスをシリアル化可能にする必要があります。 以下に示すされ、次のセクションで説明します。  

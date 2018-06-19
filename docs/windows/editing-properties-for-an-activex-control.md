@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885153"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>ActiveX コントロールのプロパティの編集
 独立系ベンダーから提供された ActiveX コントロールは、独自のプロパティと特性が搭載可能性があります。 ActiveX コントロールのプロパティは、[プロパティ] ウィンドウに表示されます。 ActiveX コントロールの作成者によって作成されたすべてのプロパティ ページをさらに、表示、**プロパティ ページ** ダイアログ ボックス (特定の ActiveX コントロールのプロパティ ページを表示する、プロパティページボタンをクリックして[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window))。  

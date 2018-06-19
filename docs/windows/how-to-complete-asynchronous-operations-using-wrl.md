@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881526"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>方法: WRL を使用して非同期操作を完了する
 このドキュメントは、Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、非同期操作を開始し、操作が完了した時点に作業を実行する方法を示しています。  

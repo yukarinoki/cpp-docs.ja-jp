@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383254"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>ツール バー コントロールでのドロップダウン ボタンの使い方
 標準のプッシュ ボタンに加えてでは、ツールバーは、ドロップダウン ボタンもあります。 ドロップダウン ボタンは通常の下向きの矢印によって示されます。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880258"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>[色の調整] ダイアログ ボックス (アイコン用イメージ エディター)
 このダイアログ ボックスでは、イメージを使用する色をカスタマイズすることができます。 詳細については、次を参照してください。[のカスタマイズまたは変更する色](../windows/customizing-or-changing-colors-image-editor-for-icons.md)です。  

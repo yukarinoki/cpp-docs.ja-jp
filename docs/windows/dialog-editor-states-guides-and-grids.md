@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872836"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>ダイアログ エディターの状態 (ガイドとグリッド)
 エディターでは、ダイアログの 3 つの異なる状態のいずれかでは、ダイアログ ボックスのコントロールを配置できます。  

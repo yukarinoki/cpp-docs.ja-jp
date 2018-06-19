@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882090"
 ---
 # <a name="disabling-guides"></a>ガイドの無効化
 特別なキーは、ガイド、スナップに効果を無効にするのに、マウスと組み合わせて使用できます。 ALT キーを使用して、選択したガイドに合わせる効果が無効にします。 移動 SHIFT キーを持つガイド、スナップしたコントロールは、ガイドに移動できなくなります。  
