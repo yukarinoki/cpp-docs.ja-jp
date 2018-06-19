@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093244"
 ---
 # <a name="sql"></a>SQL
 SQL (構造化照会言語) は、クエリの定義、変更、およびデータを制御できるようにするリレーショナル データベースと通信する方法です。 SQL 構文を使用すると、指定した条件に従ってレコードを抽出するステートメントを構築できます。  

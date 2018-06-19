@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107940"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>コンシューマーに返される列の動的な判断
 PROVIDER_COLUMN_ENTRY マクロの通常の処理、 **icolumnsinfo::getcolumnsinfo**呼び出します。 ただし、ため、コンシューマーは、ブックマークを選ぶことも、プロバイダーは、コンシューマーが、ブックマークを要求するかどうかによって返される列を変更することでする必要があります。  

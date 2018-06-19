@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098642"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 Visual C には、更新可能なプロバイダーまたは更新できるプロバイダーがサポートしています (書き込む) データ ストアです。 このトピックでは、OLE DB テンプレートを使用して、更新可能なプロバイダーを作成する方法について説明します。  

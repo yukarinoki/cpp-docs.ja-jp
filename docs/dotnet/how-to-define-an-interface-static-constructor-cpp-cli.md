@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127456"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>方法: インターフェイス静的コンストラクターを定義する (C++/CLI)
 インターフェイスは、静的データ メンバーの初期化に使用できる静的コンス トラクターを持つことができます。  静的コンス トラクターは、最大でも 1 回呼び出されが初めての静的なインターフェイス メンバーにアクセスする前に呼び出されます。  

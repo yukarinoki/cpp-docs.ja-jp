@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369852"
 ---
 # <a name="checking-for-memory-overwrites"></a>メモリ上書きのチェック
 ヒープ操作関数への呼び出しでアクセス違反が発生する場合は、可能であれば、プログラムによって、ヒープが破損していること。 このような状況の一般的な症状は次のようになります。  

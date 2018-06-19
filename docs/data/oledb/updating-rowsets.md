@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112382"
 ---
 # <a name="updating-rowsets"></a>更新 (行セットを)
 データベースの基本の操作は、データ ストアの更新、つまりデータの書き込みです。 OLE DB の更新機構は単純です。コンシューマー アプリケーションは、バインドされたデータ メンバーの値を設定し、これらの値を行セットに書き込みます。その後、コンシューマーはプロバイダーにデータ ストアの更新を要求します。  

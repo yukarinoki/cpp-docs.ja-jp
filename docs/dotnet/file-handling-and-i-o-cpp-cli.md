@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108313"
 ---
 # <a name="file-handling-and-io-ccli"></a>ファイル処理と I/O (C++/CLI)
 .NET Framework を使ったさまざまなファイル操作について説明します。  

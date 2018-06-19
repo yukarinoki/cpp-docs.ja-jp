@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365003"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl クラス
 このクラスは実装**IUnknown**ウィンドウなしのコントロールを使用しているウィンドウ メッセージを受信して、ドラッグ アンド ドロップ操作に参加できるようにするためのメソッドを提供します。  

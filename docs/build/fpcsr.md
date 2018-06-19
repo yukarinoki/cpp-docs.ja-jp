@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367447"
 ---
 # <a name="fpcsr"></a>FpCsr
 レジスタの状態も含まれますは x87 FPU 制御ワードです。 呼び出し規約では、このレジスタを不揮発性によって決まります。  

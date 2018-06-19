@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087817"
 ---
 # <a name="access-to-odbc-and-sql"></a>ODBC や SQL へのアクセス
 Microsoft Foundation Class ライブラリでは、Windows API 呼び出しの多くをカプセル化し、まだすべての Windows API 関数を直接呼び出すことができます。 データベース クラスでは、ODBC API に関しては高い柔軟性を付けます。 データベース クラスを使用すると、ODBC の複雑さの多くをシールド、中には、任意の場所から直接 ODBC API 関数を呼び出すことができます、プログラムでします。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091856"
 ---
 # <a name="partial-classes-ccx"></a>部分クラス (C++/CX)
 部分クラスは、ユーザーがクラス定義の一部を変更するのと同時に、XAML デザイナーなどの自動コード生成ソフトウェアも同じクラスのコードを変更するようなシナリオをサポートする構造体です。 部分クラスを使用することにより、デザイナーがコードを上書きすることを防ぐことができます。 Visual Studio プロジェクトでは、生成されたファイルに `partial` 修飾子が自動的に適用されます。  

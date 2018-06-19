@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372810"
 ---
 # <a name="order-of-cl-options"></a>CL オプションの指定順序
 オプションはことができます、/link オプション、最後に発生する必要がありますを除く、CL のコマンド ラインで任意の場所が表示されます。 コンパイラがで指定されたオプションで始まる、[環境変数 CL](../../build/reference/cl-environment-variables.md)し、コマンドラインを左から右に読むと — 検出される順序でコマンド ファイルを処理します。 各オプションは、コマンドラインですべてのファイルに適用されます。 CL では、競合するオプションが発生すると、右端のオプションを使用します。  

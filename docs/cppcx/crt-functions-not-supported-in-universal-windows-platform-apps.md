@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090869"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数
 多くの C ランタイム (CRT) 関数はユニバーサル Windows プラットフォーム (UWP) アプリをビルドする時に使用できません。 場合によっては、回避策を利用できます:-たとえば、Windows ランタイムまたは Win32 Api を使用できます。 しかし、回避策が利用できない場合には、CRT 関数は禁止されています。CRT 関数に相当する機能やサポートする API を UWP アプリに使用できないためです。 Windows ランタイムのサポートされている別の方法を探すを参照してください。 [UWP アプリでの Windows Api に代わる方法](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)です。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110170"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の読み込み
 `RMyProviderRowset::Execute`関数は、ファイルを開き、文字列を読み取ります。 コンシューマーが、プロバイダーを呼び出すことによってファイルの名前を渡します[icommandtext::setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)です。 プロバイダーは、ファイル名を受け取るし、メンバー変数に格納`m_szCommandText`です。 `Execute` ファイル名を読み取って`m_szCommandText`です。 ファイル名が正しくないか、ファイルが使用できない場合`Execute`はエラーを返します。 ファイル、および呼び出しを開きます、それ以外の場合、`fgets`文字列を取得します。 各セットの文字列の読み取り、`Execute`ユーザー レコードのインスタンスを作成 (`CAgentMan`) と配列に配置します。  

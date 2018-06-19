@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107488"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB アプリケーションでのリソース プール
 アプリケーションでのプールを活用するには、OLE DB サービスが使用して、データ ソースを取得することによって呼び出されることを確認してください**IDataInitialize**または**IDBPromptInitialize**です。 直接使用する場合`CoCreateInstance`呼び出すには、プロバイダーの CLSID に基づく、プロバイダー、OLE DB サービスは呼び出されません。  

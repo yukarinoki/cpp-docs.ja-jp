@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108375"
 ---
 # <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
 このテンプレート クラスは、引数が 1 つファンクタを記述、呼び出されると、そのストアドの 2 つの引数ファンクタ ストアド最初の引数と 2 番目の指定された引数で呼び出されますが返されます。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  

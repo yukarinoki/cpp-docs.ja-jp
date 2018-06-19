@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366485"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 このクラスは、別のオブジェクト内に含まれるウィンドウを実装します。  

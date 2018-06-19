@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111716"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>データベース属性によるデータ アクセスの簡略化
 このトピックでは、データベース操作を簡素化するデータベースの属性の使用を示します。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102073"
 ---
 # <a name="irowsetidentityimplissamerow"></a>IRowsetIdentityImpl::IsSameRow
 同じ行を参照しているかどうかを次の 2 つの行ハンドルを比較します。  

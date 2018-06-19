@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129396"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>方法: C++ Interop を使用して ANSI 文字列をマーシャリングする
 このトピックでは、ANSI 文字列をする方法を示していますが、C++ Interop、.NET Framework を使用して渡す<xref:System.String>ANSI への変換は余分な手順が Unicode 形式で文字列を表します。 その他の文字列型との相互運用、次のトピックを参照してください。  

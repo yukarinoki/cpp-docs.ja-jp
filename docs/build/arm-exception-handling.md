@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366264"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外処理
 ARM 版 Windows は、ハードウェアで生成される非同期例外とソフトウェアで生成される同期例外に対して、同じ構造化例外処理メカニズムを使用します。 言語固有の例外ハンドラーは、言語ヘルパー関数を使用することで、Windows 構造化例外処理に付加して構築します。 このドキュメントでは、ARM 版 Windows における例外処理、MASM および Visual C++ コンパイラによって生成されたコードが使用する言語ヘルパーについて説明します。  

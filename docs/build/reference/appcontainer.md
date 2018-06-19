@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368435"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 アプリ コンテナー内で実行しなければならない実行可能ファイルをマーク — たとえば、Microsoft Store またはユニバーサル Windows アプリ。  

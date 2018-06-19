@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367174"
 ---
 # <a name="command-modifiers"></a>コマンド修飾子
 前に、コマンドを必要に応じてスペースまたはタブで区切られた 1 つまたは複数のコマンド修飾子を指定することができます。 同様に、コマンドは、修飾子をインデントする必要があります。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108489"
 ---
 # <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
 このテンプレート クラスは、ファンクタを記述、呼び出されると、論理を返しますストアドの 2 つの引数ファンクタのではありません。 使用するそのストアド ファンクタの観点から、関数オブジェクトを指定します。  

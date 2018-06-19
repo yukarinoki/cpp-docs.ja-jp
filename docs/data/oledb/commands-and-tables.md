@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098681"
 ---
 # <a name="commands-and-tables"></a>コマンドとテーブル
 コマンドとテーブル行セットにアクセスすることを許可します。つまり、行セットを開き、コマンドを実行し、列をバインドします。 [CCommand](../../data/oledb/ccommand-class.md)と[CTable](../../data/oledb/ctable-class.md)クラスがそれぞれのコマンドとテーブルのオブジェクトをインスタンス化します。 これらのクラスから派生して[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)次の図に示すようにします。  

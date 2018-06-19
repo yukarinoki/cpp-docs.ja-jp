@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105609"
 ---
 # <a name="irowsetnotifyimplonrowchange"></a>IRowsetNotifyImpl::OnRowChange
 行に対する最初の変更や行全体に影響する変更のコンシューマーに通知します。  

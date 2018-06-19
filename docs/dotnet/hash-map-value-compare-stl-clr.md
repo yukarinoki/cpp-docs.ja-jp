@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110221"
 ---
 # <a name="hashmapvaluecompare-stlclr"></a>hash_map::value_compare (STL/CLR)
 2 つの要素値の順序付けのデリゲート。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099733"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>プロバイダーのサービスの有効化と無効化
 各 OLE DB サービスを有効になっているまたは 1 つのプロバイダーにアクセスするすべてのアプリケーションに対して既定で無効になっていることができます。 これは、追加することで、 **OLEDB_SERVICES**プロバイダーは、下にレジストリ エントリで、CLSID の`DWORD`次の表に示すように、有効または無効にすると、サービスを指定する値。  

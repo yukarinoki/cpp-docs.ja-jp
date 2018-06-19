@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090511"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>データ ソース: プログラムにおける ODBC データ ソースのテーブルの作成
 このトピックのデータ テーブルを作成する方法について説明を使用して、ソース、`ExecuteSQL`クラスのメンバー関数`CDatabase`、関数を含む文字列に渡すこと、 **CREATE TABLE** SQL ステートメント。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089153"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: ODBC データ ソースの設定
 使用する、[データソース](../../data/odbc/data-source-odbc.md)を開発したアプリケーションには、それを構成する ODBC アドミニストレーターを使用する必要があります。 Odbc データ ソース アドミニストレーターの使用可能なデータ ソースと追跡、Windows レジストリに接続情報です。 ODBC アドミニストレーターを使用して追加、変更、および内のデータ ソースを削除して、**データソース** ダイアログ ボックスを追加および ODBC ドライバーを削除します。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129100"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>他の .NET 言語との相互運用性 (C++/CLI)
 このセクションのトピックでは、Visual C から使用するか、機能を c# または Visual Basic で記述されたアセンブリのアセンブリを作成する方法を示します。  

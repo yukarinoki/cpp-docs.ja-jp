@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367694"
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>名前ではなく序数値による DLL 関数のエクスポート
 DLL から関数をエクスポートする最も簡単な方法では、名前によるエクスポートです。 これは、使用するときに起こる**方式**、例を示します。 代わりに序数で関数をエクスポートすることができます。 この手法を使用する必要がありますの代わりに .def ファイルを使用して**方式**です。 関数の序数値を指定するには、.def ファイル内の関数名をその序数を追加します。 序数値の指定方法の詳細については、次を参照してください。 [.def ファイルを使った DLL からエクスポートする](../build/exporting-from-a-dll-using-def-files.md)です。  

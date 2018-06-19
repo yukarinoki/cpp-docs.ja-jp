@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101303"
 ---
 # <a name="defining-stored-procedures"></a>ストアド プロシージャの定義
 ストアド プロシージャを呼び出す前にする必要があります最初にそれを定義してを使用して、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロです。 コマンドを定義するときに、パラメーター マーカーとして疑問符 (?) でパラメーターを表します。  

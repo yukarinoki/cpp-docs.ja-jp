@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091655"
 ---
 # <a name="record-field-exchange-rfx"></a>レコード フィールド エクスチェンジ (RFX)
 MFC ODBC データベース クラスが、データ ソースの間でデータの移動を自動化し、[レコード セット](../../data/odbc/recordset-odbc.md)オブジェクト。 クラスを派生する[CRecordset](../../mfc/reference/crecordset-class.md)バルク行フェッチを使用しないと、レコード フィールド エクス (チェンジ RFX) メカニズムによってデータを転送します。  

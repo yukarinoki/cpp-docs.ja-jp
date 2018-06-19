@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098590"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: レコードセットの SQL ステートメントのカスタマイズ (ODBC)
 このトピックでは、次の内容について説明します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368962"
 ---
 # <a name="recursion-macros"></a>再帰マクロ
 再帰マクロを使用すると、NMAKE を再帰的に呼び出します。 再帰的なセッションは、コマンドラインと環境変数マクロと Tools.ini の情報を継承します。 メイクファイルで定義された推論規則を引き継がないまたは**です。サフィックス**と**です。貴重な**仕様です。 再帰 (nmake の) セッションにマクロを渡すに再帰呼び出しの前に設定された環境変数を設定、再帰呼び出し用のコマンドでマクロを定義または Tools.ini でマクロを定義します。  

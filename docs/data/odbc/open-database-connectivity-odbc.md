@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090449"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Connectivity) を使用したプログラミング用のクラスが用意されています。 Visual Studio 2015 と SQL Server 2012 の ODBC の時点では、SQL データ ソースに接続することをお勧めします。

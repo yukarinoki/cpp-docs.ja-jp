@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105011"
 ---
 # <a name="count-stlclr"></a>count (STL/CLR)
 範囲内で値が指定された値と一致する要素の数を返します。  

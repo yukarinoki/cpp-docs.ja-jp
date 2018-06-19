@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135240"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>方法: System::String を標準文字列に変換する
 Vcclr.h の <xref:System.String> を使用せずに、`std::string` を `std::wstring` または `PtrToStringChars` に変換できます。  

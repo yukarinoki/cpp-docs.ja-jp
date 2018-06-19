@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110443"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>インターフェイス メンバーの明示的なオーバーライド
 クラス内で、インターフェイス メンバーの明示的なオーバーライドを宣言する構文は、Visual C を c++ マネージ拡張から変更されました。  

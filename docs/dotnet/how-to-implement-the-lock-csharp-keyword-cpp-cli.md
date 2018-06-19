@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127917"
 ---
 # <a name="how-to-implement-the-lock-c-keyword-ccli"></a>方法: C# lock キーワードを実装する (C++/CLI)
 このトピックは、c# を実装する方法を示しています。 `lock` Visual c でキーワード。 

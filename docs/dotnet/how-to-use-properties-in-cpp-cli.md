@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134341"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>方法: C++/CLI でプロパティを使用する
 この記事は、C + でのプロパティを使用する方法を示しています。 + CLI です。  

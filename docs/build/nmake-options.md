@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373037"
 ---
 # <a name="nmake-options"></a>NMAKE のオプション
 NMAKE のオプションは、次の表で説明します。 オプションで始まり、スラッシュ (/) またはダッシュ (-)、大文字小文字は区別されません。 使用して[!CMDSWITCHES](../build/makefile-preprocessing-directives.md) tools.ini またはメイクファイルでオプション設定を変更します。  

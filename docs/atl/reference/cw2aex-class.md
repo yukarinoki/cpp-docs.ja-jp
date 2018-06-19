@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363999"
 ---
 # <a name="cw2aex-class"></a>CW2AEX クラス
 このクラスは、文字列変換マクロによって使用`CT2AEX`、 `CW2TEX`、 `CW2CTEX`、および`CT2CAEX`、および typedef **CW2A**です。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098499"
 ---
 # <a name="crowsetimplvalidatecommandid"></a>CRowsetImpl::ValidateCommandID
 いずれかを参照またはその両方をチェック**DBID**s が、文字列値を含めるし、場合は、そのデータ メンバーにコピー [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[その](../../data/oledb/crowsetimpl-m-strindextext.md)です。  

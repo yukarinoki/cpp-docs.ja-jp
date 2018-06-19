@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098148"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand`クラスは、プロバイダー コマンド オブジェクトの実装です。 実装を提供、 `IAccessor`、 `ICommandText`、および**ICommandProperties**インターフェイスです。 `IAccessor`インターフェイスは、行セット内の 1 つと同じです。 コマンド オブジェクトでは、アクセサーを使用して、バインド パラメーターを指定します。 行セット オブジェクトでは、出力列のバインドを指定するのに、それらを使用します。 `ICommandText`インターフェイスは、テキスト コマンドを指定する便利な方法です。 この例では、`ICommandText`インターフェイスの後でカスタム コードを追加する場合以外もオーバーライドの場合は、`ICommand::Execute`メソッドです。 **ICommandProperties**インターフェイスは、すべてのコマンドや行セット オブジェクトのプロパティを処理します。  

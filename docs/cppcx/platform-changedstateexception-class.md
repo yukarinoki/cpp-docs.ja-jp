@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087950"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException クラス
 オブジェクトの内部状態が変化したときにスローされ、メソッドの結果を無効にします。  

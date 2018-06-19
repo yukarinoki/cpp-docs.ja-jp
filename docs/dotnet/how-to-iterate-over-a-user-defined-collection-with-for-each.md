@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128655"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>方法: for each を使用してユーサー定義のコレクションを反復処理する
 マネージ コレクションであることのクラス、列挙子クラスまたはインターフェイスへのハンドルを返す非プライベート GetEnumerator 関数が必要です。  列挙子クラスには、非静的 MoveNext 関数と現在のプロパティの宣言を含める必要があります。  

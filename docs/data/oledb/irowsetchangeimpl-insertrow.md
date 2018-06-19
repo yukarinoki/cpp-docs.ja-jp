@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101813"
 ---
 # <a name="irowsetchangeimplinsertrow"></a>IRowsetChangeImpl::InsertRow
 作成し、行セットに新しい行を初期化します。  

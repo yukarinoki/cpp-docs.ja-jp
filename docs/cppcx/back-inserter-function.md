@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087706"
 ---
 # <a name="backinserter-function"></a>back_inserter 関数
 指定されたコレクションの末尾に要素を挿入するために使用される反復子を返します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369566"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE コマンド ファイル (応答ファイル)
 コマンド ファイル内のコマンド ライン入力の一部またはすべてを指定することができます。 次の構文を使用してコマンド ファイルを指定します。  

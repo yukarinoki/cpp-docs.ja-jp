@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089913"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>レコード ビューのデザインと作成 (MFC データ アクセス)
 使用してレコード ビュー クラスを作成することができます、 [MFC アプリケーション ウィザード](../mfc/reference/database-support-mfc-application-wizard.md)です。 アプリケーション ウィザードを使用すると、レコード ビュー クラスと、それに対応するダイアログ テンプレート リソース (コントロールは含まれません) が作成されます。 ダイアログ テンプレート リソースにコントロールを追加するには、Visual C++ ダイアログ エディターを使用する必要があります。 その一方で、使用する場合**クラスの追加**、最初にダイアログ テンプレート リソースを作成 ダイアログ ボックス エディターし、レコード ビュー クラスを作成する必要があります。  

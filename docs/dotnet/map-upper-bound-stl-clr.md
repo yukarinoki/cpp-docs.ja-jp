@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133806"
 ---
 # <a name="mapupperbound-stlclr"></a>map::upper_bound (STL/CLR)
 指定したキーに一致する範囲の末尾を検索します。  

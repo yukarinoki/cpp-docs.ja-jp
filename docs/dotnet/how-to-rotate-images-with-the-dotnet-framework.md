@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129035"
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>方法: .NET Framework を使用してイメージを回転する
 使用を次のコード例に示します、<xref:System.Drawing.Image?displayProperty=fullName>クラスをディスクからイメージを読み込んで、90 度回転、および新しい .jpg ファイルとして保存します。  

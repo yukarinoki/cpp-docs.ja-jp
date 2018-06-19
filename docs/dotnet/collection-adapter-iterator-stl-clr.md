@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105037"
 ---
 # <a name="collectionadapteriterator-stlclr"></a>collection_adapter::iterator (STL/CLR)
 被制御シーケンスの反復子の型です。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097355"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor クラス
 テンプレート引数として使用できます (`TAccessor`) テンプレート クラスのなど`CCommand`と`CTable`、アクセサー クラスの引数を必要とします。  

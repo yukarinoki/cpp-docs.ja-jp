@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105674"
 ---
 # <a name="filln-stlclr"></a>fill_n (STL/CLR)
 特定の要素で始まる要素範囲で、指定された数の要素に新しい値を割り当てます。  

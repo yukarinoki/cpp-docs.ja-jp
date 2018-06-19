@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089833"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 名前空間は、関連する機能を持つ型をグループ化し、ライブラリ内での名前の衝突を回避するための、標準の C++ 構造体です。 Windows ランタイムの型システムでは、独自のコードも含み、すべてのパブリックの Windows ランタイム型を名前空間スコープで名前空間で宣言する必要がある必要があります。 パブリック型をグローバル スコープで宣言したり、別のクラスの中に入れ子にしたりすると、コンパイル時エラーが発生します。  

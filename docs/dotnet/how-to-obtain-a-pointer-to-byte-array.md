@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127969"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>方法 : バイト配列へのポインターを取得する
 配列のブロックにポインターを取得することができます、<xref:System.Byte>配列の最初の要素のアドレスを取得し、ポインターに代入することです。  

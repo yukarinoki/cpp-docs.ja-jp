@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131099"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>方法: 正規表現を使用して文字列を解析する (C++/CLI)
 <xref:System.Text.RegularExpressions.Regex> 名前空間の <xref:System.Text.RegularExpressions?displayProperty=fullName> クラスを使用して単純な文字列を解析する方法を次のコード例に示します。 複数のワード デリニエイタの型を含む文字列が構成されます。 次に、<xref:System.Text.RegularExpressions.Regex> クラスを <xref:System.Text.RegularExpressions.Match> クラスと共に使用して文字列が解析されます。 さらに、センテンス内の各単語を個別に表示します。  

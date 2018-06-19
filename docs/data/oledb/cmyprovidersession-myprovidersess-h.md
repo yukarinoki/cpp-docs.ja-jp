@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096536"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H には、宣言と OLE DB セッション オブジェクトの実装が含まれています。 データ ソース オブジェクトは、セッション オブジェクトを作成し、コンシューマーとプロバイダー間のメッセージ交換を表します。 複数の同時セッションは、1 つのデータ ソースを開くことができます。 継承リストに`CMyProviderSession`に従います。  

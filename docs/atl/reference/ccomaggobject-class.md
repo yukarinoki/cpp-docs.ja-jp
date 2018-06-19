@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364220"
 ---
 # <a name="ccomaggobject-class"></a>クラス
 このクラスは、実装、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)集約オブジェクトのインターフェイスです。 定義上、外部オブジェクトに集約オブジェクトが含まれています。 `CComAggObject`クラスがに似ていますが、 [CComObject クラス](../../atl/reference/ccomobject-class.md)は外部クライアントに直接アクセスできるインターフェイスを公開する点を除いて、します。  

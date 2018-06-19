@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112109"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB コンシューマー テンプレート (C++)
 OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様をサポートしています (OLE DB コンシューマー テンプレートは OLE DB 2.6 に対してテストされますが、仕様ですべてのインターフェイスをサポートしません)。コンシューマー テンプレートを使用すると、OLE DB コンシューマーを実装するために記述するコードの量を最小限に抑えられます。 テンプレートには、次に示す機能があります。  

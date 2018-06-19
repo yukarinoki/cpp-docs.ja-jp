@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368549"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
 導入された Microsoft **_ _export**コンパイラは、エクスポート名を自動的に生成し、.lib ファイルに配置するために Visual C の 16 ビットのコンパイラのバージョンにします。 この .lib ファイルは、DLL とリンクするスタティック ライブラリと同じように使用できます。  

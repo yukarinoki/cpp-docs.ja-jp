@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096939"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>単純な読み取り専用プロバイダーの作成
 ATL プロジェクト ウィザードと ATL OLE DB プロバイダー ウィザードを使用して、OLE DB プロバイダーを作成した場合は、サポートするその他の機能を追加できます。 コンシューマーにし、どのような条件を送信するデータの種類を確認するには、プロバイダーのデザインを開始します。 これは、コマンド、トランザクション、およびその他の省略可能なオブジェクトをサポートするために必要かどうかを判断するのには特に重要です。 優れた設計では、事前には、実装とテストに高速化されます。  

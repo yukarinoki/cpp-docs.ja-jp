@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105752"
 ---
 # <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn (STL/CLR)
 Genereic クラスの説明を返す 2 つの引数のデリゲート`void`です。 使用する引数の観点からデリゲートを指定します。  

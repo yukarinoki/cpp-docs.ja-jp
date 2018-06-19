@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366433"
 ---
 # <a name="catllist-class"></a>CAtlList クラス
 このクラスは、作成して、リスト オブジェクトを管理するためのメソッドを提供します。  

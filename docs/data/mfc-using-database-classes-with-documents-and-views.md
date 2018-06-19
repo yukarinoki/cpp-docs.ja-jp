@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091869"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC : ドキュメントとビューを用いたデータベース クラスの使用
 ドキュメント/ビュー アーキテクチャの有無は、MFC データベース クラスを使用することができます。 このトピックでは、ドキュメントとビューの操作を強調します。 これを説明します。  

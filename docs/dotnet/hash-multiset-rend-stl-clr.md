@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134079"
 ---
 # <a name="hashmultisetrend-stlclr"></a>hash_multiset::rend (STL/CLR)
 反転被制御シーケンスの末尾を指定します。  

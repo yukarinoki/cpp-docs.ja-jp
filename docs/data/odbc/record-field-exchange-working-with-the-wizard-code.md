@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092510"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>レコード フィールド エクスチェンジ: ウィザード コードの操作
 このトピックのコードを MFC アプリケーション ウィザードと**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) RFX とそのコードを変更する方法をサポートするために記述します。  

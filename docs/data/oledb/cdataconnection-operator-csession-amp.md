@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095422"
 ---
 # <a name="cdataconnectionoperator-csessionamp"></a>Cdataconnection::operator CSession&amp;
 格納されている参照を返します`CSession`オブジェクト。  

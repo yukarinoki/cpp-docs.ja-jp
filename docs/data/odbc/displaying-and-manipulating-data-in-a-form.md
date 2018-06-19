@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089367"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>フォームでのデータの表示と操作
 多くのデータ アクセス アプリケーションは、データを選択し、フォームのフィールドに表示します。 データベース クラス[CRecordView](../../mfc/reference/crecordview-class.md)できます、 [CFormView](../../mfc/reference/cformview-class.md)レコード セット オブジェクトに直接接続されているオブジェクト。 レコード ビューを使用して[ダイアログ データ エクス (チェンジ DDX)](../../mfc/dialog-data-exchange-and-validation.md)レコード セットから現在のレコードのフィールドの値をフォーム上のコントロールに移動して更新された情報をレコード セットに移動します。 さらに、レコード セットは、データ ソースでそのフィールドのデータ メンバーと、テーブル内の対応する列の間でデータを移動するのにレコード フィールド エクス (チェンジ RFX) を使用します。  

@@ -68,9 +68,10 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097550"
 ---
 # <a name="cprocedureparameters-cprocedureparaminfo"></a>CProcedureParameters、CProcedureParamInfo
-Typedef クラスを呼び出す**CProcedureParameters**そのパラメーター クラスを実装する**、CProcedureParamInfo**です。  
+Typedef クラスを呼び出す**CProcedureParameters**そのパラメーター クラスを実装する **、CProcedureParamInfo**です。  
   
 ## <a name="remarks"></a>コメント  
  参照してください[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)typedef クラスの使用に関する詳細についてはします。  
