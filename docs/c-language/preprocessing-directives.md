@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385612"
 ---
 # <a name="preprocessing-directives"></a>プリプロセス ディレクティブ
 -   [文字定数と条件付きの包含](../c-language/character-constants-and-conditional-inclusion.md)  

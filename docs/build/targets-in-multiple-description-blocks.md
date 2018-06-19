@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380289"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>複数の記述ブロックのターゲット
 別のコマンドを使用して 1 つ以上の記述ブロック内のターゲットを更新するには、ターゲットとの依存オブジェクト間の 2 つの連続するコロン (:) を指定します。  

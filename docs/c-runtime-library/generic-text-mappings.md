@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388576"
 ---
 # <a name="generic-text-mappings"></a>汎用テキスト マップ
 国際市場向けにコードの記述を簡略化するため、汎用テキスト マッピングは、次のものに関して TCHAR.H で定義されます。  

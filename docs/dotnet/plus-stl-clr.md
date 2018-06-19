@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160056"
 ---
 # <a name="plus-stlclr"></a>plus (STL/CLR)
 このテンプレート クラスは、ファンクタを記述、呼び出されると、返される最初の引数および 2 番目です。 使用する、引数の型の観点から、関数オブジェクトを指定します。  

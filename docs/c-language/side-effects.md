@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387012"
 ---
 # <a name="side-effects"></a>副作用
 式の評価の順序は、言語が特定の評価順序を保証する場合を除き、特定の実装によって定義されます (「[評価の優先順位と順序](../c-language/precedence-and-order-of-evaluation.md)」で説明)。 たとえば、次の関数呼び出しでは副作用が起きます。  

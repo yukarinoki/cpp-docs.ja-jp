@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392362"
 ---
 # <a name="initializing-scalar-types"></a>スカラー型の初期化
 スカラー型を初期化すると、*assignment-expression* の値が変数に代入されます。 代入の変換規則が適用されます  (変換規則については、「[型変換](../c-language/type-conversions-c.md)」を参照)。  

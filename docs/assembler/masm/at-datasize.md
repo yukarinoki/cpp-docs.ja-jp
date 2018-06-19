@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049116"
 ---
 # <a name="datasize"></a>@DataSize
 場合は 0**極小**、**小さな**、**中**、および**フラット**の場合は 1 をモデル化**COMPACT**と**大規模な**モデル、および 2 を**莫大**モデル (数値と等価なります)。  

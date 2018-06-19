@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384282"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>関数の宣言と定義の廃止された形式
 旧形式の関数宣言と関数定義では、ANSI C 標準で推奨される構文とは若干異なる規則を使用してパラメーターが宣言されます。 まず、旧形式の宣言にはパラメーター リストがありません。 次に、関数定義では、パラメーターはリストされますが、その型はパラメーター リストで宣言されません。 型宣言は、関数本体を構成する複合ステートメントの前に置かれます。 旧形式の構文は廃止されているため、新しいコードでは使用しないでください。 ただし、旧形式の構文を使用したコードも、引き続きサポートされます。 この例は、旧形式の宣言と定義を示しています。  

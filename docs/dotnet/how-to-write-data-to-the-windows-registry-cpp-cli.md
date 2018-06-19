@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130803"
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>方法: Windows レジストリにデータを書き込む (C++/CLI)
 次のコード例では、<xref:Microsoft.Win32.Registry.CurrentUser>の書き込み可能インスタンスを作成するキー、<xref:Microsoft.Win32.RegistryKey>に対応するクラス、**ソフトウェア**キー。 その後、<xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> メソッドを使用して、新しいキーを作成し、キーと値のペアを追加します。  

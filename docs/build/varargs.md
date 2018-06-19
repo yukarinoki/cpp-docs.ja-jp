@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380509"
 ---
 # <a name="varargs"></a>vararg
 パラメーターが varargs (たとえば、省略記号引数) を使用して指定された場合、基本的には、通常のパラメーターを渡すでは以降の 5 番目の引数に書き込むときに含めが適用されます。 再度、アドレスを与えるダンプ引数に、呼び出し先の責任です。 浮動小数点値の場合にのみ、整数と浮動小数点レジスタの両方値が含まれます、float 場合に、呼び出し先は、整数レジスタに値が必要です。  

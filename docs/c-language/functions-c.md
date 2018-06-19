@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385417"
 ---
 # <a name="functions-c"></a>関数 (C)
 関数は C の基本的なモジュール単位です。関数は、通常、特定のタスクを実行するように設計されており、名前はそのタスクが反映されます。 関数には、宣言とステートメントが含まれます。 このセクションでは、C 関数の宣言、定義、および呼び出しの方法について説明します。 説明されているその他のトピックは、次のとおりです。  

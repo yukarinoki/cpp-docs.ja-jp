@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383730"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされている標準 MFC Dll
 MFC DLL が MFC と動的にリンク、通常は内部的には、MFC を使用する DLL と、MFC または非 MFC の実行可能ファイルによって、DLL からエクスポートされた関数を呼び出すことができます。 名前について説明します、MFC (MFC の共有バージョンとも呼ばれます) のダイナミック リンク ライブラリのバージョンを使ってこの種の DLL がビルドされます。 通常、関数は、通常、標準の C インターフェイスを使用して MFC DLL からエクスポートします。  

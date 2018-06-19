@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381708"
 ---
 # <a name="c-tokens"></a>C トークン
 C ソース プログラムでは、コンパイラで認識される基本要素が "トークン" です。 トークンは、コンパイラがそれ以上、構成要素に分割しないソース プログラム テキストです。  

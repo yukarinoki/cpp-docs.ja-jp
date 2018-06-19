@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392147"
 ---
 # <a name="data-type-constants"></a>データ型定数
 データ型定数は、整数データ型に許可される実装依存の値範囲です。 下の一覧の定数は整数データ型の範囲を与えるものであり、LIMITS.H で定義されています。  

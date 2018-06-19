@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391315"
 ---
 # <a name="printfp-positional-parameters"></a>printf_p の位置指定パラメーター
 位置指定パラメータを使用すると、書式指定文字列のフィールドに代入する引数を番号で指定することができます。 次の位置指定パラメーター `printf` 関数を使用できます。  

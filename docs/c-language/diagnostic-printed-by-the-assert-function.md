@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382878"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>assert 関数によって出力される診断
 **ANSI 4.2** **assert** 関数が印刷する診断と関数の終了動作  

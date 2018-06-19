@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386853"
 ---
 # <a name="storage-of-arrays"></a>配列の格納
 配列型に関連付けられたストレージは、そのすべての要素に必要なストレージです。 配列の要素は、最初の要素から最後の要素まで、連続した増加メモリ位置に保存されます。  

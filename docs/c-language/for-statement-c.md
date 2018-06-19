@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389282"
 ---
 # <a name="for-statement-c"></a>for ステートメント (C)
 **for** ステートメントを使用すると、指定したステートメントまたは複合ステートメントを、指定した回数だけ繰り返すことができます。 **for** ステートメントの本体は、省略可能な条件が false になるまで、ゼロ回以上実行されます。 **for** ステートメント内で省略可能な式を使用して、値を初期化し、**for** ステートメントの実行中に値を変更することができます。  

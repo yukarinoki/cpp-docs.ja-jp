@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385791"
 ---
 # <a name="truncation-of-floating-point-values"></a>浮動小数点値の切り捨て
 **ANSI 3.2.1.4** 浮動小数点数をより狭い浮動小数点数に変換するときの切り捨てまたは丸めの方向  

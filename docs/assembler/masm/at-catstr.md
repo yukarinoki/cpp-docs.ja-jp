@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050975"
 ---
 # <a name="catstr"></a>@CatStr
 1 つまたは複数の文字列を連結するマクロ関数です。 文字列を返します。  

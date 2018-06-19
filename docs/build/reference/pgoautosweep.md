@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379498"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
@@ -47,7 +48,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 最適化のビルド中を使用して、リンカーにマージされた .pgd ファイルの名前を渡すことができます、 **PGD =**_filename_への引数、 [/USEPROFILE](useprofile.md)リンカー オプション、または使用して、非推奨 **/PGD**リンカー オプション。 という名前のファイルには、.pgc ファイルをマージするかどうかは*base_name*.pgd、する必要はありません、コマンドラインのファイル名を指定するため、リンカーが既定でこのファイル名を取得します。
 
-`PgoAutoSweep`機能は、スレッドの安全性設定は、インストルメント化されたビルドを作成するときに指定します。 既定の設定を使用するかを指定する場合、 **noexact は、**への引数、 [/GENPROFILE または/FASTGENPROFILE]()呼び出しをリンカー オプション、`PgoAutoSweep`スレッド セーフではありません。 **EXACT**引数作成スレッド セーフであるより精度がより低速でインストルメント化された実行可能ファイルです。
+`PgoAutoSweep`機能は、スレッドの安全性設定は、インストルメント化されたビルドを作成するときに指定します。 既定の設定を使用するかを指定する場合、 **noexact は、** への引数、 [/GENPROFILE または/FASTGENPROFILE]()呼び出しをリンカー オプション、`PgoAutoSweep`スレッド セーフではありません。 **EXACT**引数作成スレッド セーフであるより精度がより低速でインストルメント化された実行可能ファイルです。
 
 ## <a name="requirements"></a>要件
 

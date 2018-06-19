@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380941"
 ---
 # <a name="blocks"></a>ブロック
 中かっこ (**{ }**) で囲まれた一連の宣言、定義、ステートメントを "ブロック" といいます。 その 1 つは、1 つ以上のステートメントで構成される "複合ステートメント" です (「[複合ステートメント](../c-language/compound-statement-c.md)」を参照)。 もう 1 つの "関数定義" は、複合ステートメント (関数本体) とその関数のヘッダー (関数名、戻り値の型、仮パラメーター) で構成されます。 ブロック内に他のブロックが挿入された状態を "入れ子" といいます。  

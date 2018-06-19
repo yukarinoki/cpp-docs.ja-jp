@@ -23,6 +23,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255965"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 構造体
 プリンター、メタファイル、ActiveX コントロールなど、さまざまな対象に表示するために使用する情報が含まれています。  

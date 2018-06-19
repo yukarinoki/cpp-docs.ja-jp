@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379563"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv (通常の最適化)
 際に使用される[/vmb、/vmg () を処理形式](../../build/reference/vmb-vmg-representation-method.md)として選択されて、[表現メソッド](../../build/reference/vmb-vmg-representation-method.md)です。 これらのオプションでは、not まだ検出クラス定義の継承モデルを示しています。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 |**/vms**|ありません継承または単一継承のいずれかを使用するいずれかを指定するには、クラスのメンバーへのポインターの最も一般的な表現を指定します。<br /><br /> 対応する[継承キーワード](../../cpp/inheritance-keywords.md)とする引数[#pragma pointers_to_members](../../preprocessor/pointers-to-members.md)は**single_inheritance**です。<br /><br /> これは、クラスのメンバーへのポインターの最小サイズの表現です。<br /><br /> メンバーへのポインターが宣言されているクラス定義の継承モデルが複数ある場合または仮想、コンパイラ エラーが発生します。|  
 |**/vmv**|仮想継承を使用するいずれかを指定するには、クラスのメンバーへのポインターの最も一般的な表現を指定します。 ありません、エラーが発生し、既定値です。<br /><br /> 対応する[継承キーワード](../../cpp/inheritance-keywords.md)とする引数[#pragma pointers_to_members](../../preprocessor/pointers-to-members.md)は**virtual_inheritance**です。<br /><br /> このオプションは、大きいサイズのポインターと他のオプションよりもポインターを解釈する追加のコードが必要です。|  
   
- これらの継承モデル オプションのいずれかを指定すると、そのモデルが、クラス後の継承の種類や前に、またはにポインターを宣言するかどうかに関係なく、クラス メンバーへのすべてのポインターに対して使用されます。 そのため、常に単一継承のクラスを使用する場合は、コードのサイズを小さくでコンパイルする **/vms**ただし、最も一般的なケース (を犠牲にして、最大のデータ表現) を使用する場合は、コンパイル時に**。/vmv**です。  
+ これらの継承モデル オプションのいずれかを指定すると、そのモデルが、クラス後の継承の種類や前に、またはにポインターを宣言するかどうかに関係なく、クラス メンバーへのすべてのポインターに対して使用されます。 そのため、常に単一継承のクラスを使用する場合は、コードのサイズを小さくでコンパイルする **/vms**ただし、最も一般的なケース (を犠牲にして、最大のデータ表現) を使用する場合は、コンパイル時に **。/vmv**です。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   

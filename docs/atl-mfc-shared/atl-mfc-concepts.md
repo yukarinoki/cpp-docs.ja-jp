@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354542"
 ---
 # <a name="atlmfc-concepts"></a>ATL と MFC の概念
 このセクションでは概念とタスク ベースのトピックを参考アクティブ テンプレート ライブラリ (ATL) と Microsoft Foundation Class (MFC) ライブラリの間で共有されるクラスを使用してプログラミングされます。  

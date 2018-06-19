@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383980"
 ---
 # <a name="initializing-strings"></a>文字列の初期化
 文字列リテラル (またはワイド文字列リテラル) で、文字 (またはワイド文字) の配列を初期化できます。 例:  

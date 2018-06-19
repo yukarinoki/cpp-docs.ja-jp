@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388858"
 ---
 # <a name="usual-arithmetic-conversions"></a>通常の算術変換
 ほとんどの C 演算子は、式のオペランドを共通型に取り込むか、コンピューター操作に使用される整数のサイズに short 値を拡張する型変換を実行します。 C 演算子によって実行される変換は、特定の演算子およびオペランドの型によって異なります。 ただし、多くの演算子は、整数型および浮動小数点型のオペランドに対して同様の変換を実行します。 これらの変換は "算術変換" と呼ばれます。 オペランド値を互換性のある型に変換しても、その値は変更されません。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387178"
 ---
 # <a name="overview-of-c-statements"></a>C ステートメントの概要
 C ステートメントは、トークン、式、および他のステートメントで構成されます。 別のステートメントの構成要素となるステートメントは、外側のステートメントの "本体" と呼ばれます。 このセクションでは、次の構文で示されたステートメントの種類それぞれについて説明します。  

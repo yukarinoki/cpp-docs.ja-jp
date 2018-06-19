@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382891"
 ---
 # <a name="default-signals"></a>既定のシグナル
 **ANSI 4.7.1.1** シグナル ハンドラーの呼び出しの前に**シグナル (***sig***、SIG_DFL)** の等価の実行が行われない場合、実行中のシグナルがブロッキングされます  

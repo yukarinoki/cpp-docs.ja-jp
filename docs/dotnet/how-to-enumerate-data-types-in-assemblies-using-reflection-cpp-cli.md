@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135080"
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>方法: リフレクションを使用してアセンブリ内のデータ型を列挙する (C++/CLI)
 次の例では、パブリック型とメンバーを使用しての列挙体<xref:System.Reflection>です。  

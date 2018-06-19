@@ -109,6 +109,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463080"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows のエディット コントロールの機能が用意されています。  

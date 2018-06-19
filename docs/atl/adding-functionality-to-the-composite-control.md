@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354183"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>複合コントロールへの機能の追加
 複合コントロールに必要なコントロールを挿入した後、次の手順には、新しい機能の追加が含まれます。 この新しい機能は、通常、2 つのカテゴリに分類されます。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385677"
 ---
 # <a name="c-bit-fields"></a>C ビット フィールド
 構造体または共用体のメンバーの宣言子に加えて、構造体の宣言子も "ビット フィールド" と呼ばれる指定のビット数になります。 その長さは、フィールド名の宣言子からコロンによって区切られます。 ビット フィールドは整数型として解釈されます。  

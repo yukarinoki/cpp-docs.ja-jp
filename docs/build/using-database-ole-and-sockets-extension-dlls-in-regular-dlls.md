@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391406"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>標準の MFC Dll でのデータベース、OLE、およびソケットの MFC 拡張 Dll の使用
 MFC 拡張 DLL がないワイヤード (有線) にする場合は、MFC 拡張 DLL を正規の MFC DLL からを使用する場合、 **CDynLinkLibrary**オブジェクトのチェーンの正規の MFC DLL の一連の関連する問題の 1 つ以上に実行する可能性があります。 MFC データベース、OLE、およびソケットのデバッグ バージョンをサポートしているため、Dll が MFC 拡張 Dll として実装されてを明示的に使用していない、独自の MFC 拡張 Dll のいずれかのいなくても、機能をこれらの MFC を使用している場合と同様の問題が発生する可能性があります。 いくつかの現象は次のとおりです。  

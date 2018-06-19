@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353964"
 ---
 # <a name="aggregation"></a>集約
 ときにオブジェクトを実装には、構築済みの別のオブジェクトによって提供されるサービスの利用もあります。 さらに、この 2 番目のオブジェクトが最初の一部として表示されることと思います。 COM ではどちらも包含構造と集計をこれらの目標のです。  

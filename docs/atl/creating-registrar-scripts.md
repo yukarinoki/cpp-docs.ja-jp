@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354434"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 レジストラー スクリプトは、システム レジストリへの API に基づくのではなく、データ ドリブンのアクセスを提供します。 データ ドリブンのアクセスは、レジストリ キーを追加するスクリプト内で 1 つまたは 2 つの行がかかるのでに通常より効率的です。  

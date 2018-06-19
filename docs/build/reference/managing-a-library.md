@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379641"
 ---
 # <a name="managing-a-library"></a>ライブラリの管理
 LIB の既定のモードは、ビルドまたは COFF オブジェクトのライブラリの変更があります。 LIB は、/EXTRACT (オブジェクトをファイルにコピー) または/DEF (インポート ライブラリのビルド) を指定しないと、このモードで実行されます。  

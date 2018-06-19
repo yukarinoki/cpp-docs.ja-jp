@@ -19,6 +19,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255979"
 ---
 # <a name="worker-archetype"></a>ワーカー原型
 準拠するクラス、*ワーカー*原型がスレッド プールのキューに作業アイテムを処理するコードを提供します。  

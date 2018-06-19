@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137420"
 ---
 # <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>方法: ADO.NET の SAFEARRAY をマーシャリングする (C++/CLI)
 ネイティブを追加する方法を示します`SAFEARRAY`データベースからネイティブへのマネージ配列にマーシャ リングする方法、およびデータベースに`SAFEARRAY`です。  

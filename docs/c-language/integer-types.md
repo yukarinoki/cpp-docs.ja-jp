@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386804"
 ---
 # <a name="integer-types"></a>整数型
 各整数定数には、その値と表現方法に基づいて型が割り当てられます。 整数定数を **long** 型にするには、その定数の末尾に文字 **l** または **L** を追加します。整数定数を `unsigned` 型にするには、その値に **u** または **U** を追加します。 小文字の **l** は数字の 1 と区別しにくいので、使用しないでください。 次に、**long** 整数定数の形式をいくつか示します。  

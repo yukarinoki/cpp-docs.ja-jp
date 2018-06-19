@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381172"
 ---
 # <a name="scalar-types"></a>スカラー型
 データへのアクセスは、どのように配置されてによって生じることができます、データが、パフォーマンスが失われる (やさまざまな理由) を回避する自然な境界に合わせて調整することをお勧めします。 列挙型が定数の整数であり、32 ビット整数値として扱われます。 次の表の種類の定義と推奨される記憶域を次のアラインメント値を使用して配置に関連します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132555"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>方法: Windows レジストリからデータを読み込む (C++/CLI)
 <xref:Microsoft.Win32.Registry.CurrentUser> キーを使用して、Windows レジストリからデータを読み込む方法を次のコード例に示します。 最初に、サブキーが列挙を使用して、<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>メソッドし Identities サブキーを使用してを開くが、<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>メソッドです。 ルート キー同様、各サブキーは <xref:Microsoft.Win32.RegistryKey> クラスで表されます。 最後に、新しい <xref:Microsoft.Win32.RegistryKey> オブジェクトを使用してキーと値のペアが一覧表示されます。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379303"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE、/FASTGENPROFILE (プロファイル インストルメント ビルドの生成)
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 使用して**COUNTER32** 32 ビットのプローブのカウンターの使用を指定して**COUNTER64**を 64 ビットのプローブのカウンターを指定します。 指定すると **/GENPROFILE**、既定値は**COUNTER64**です。 指定すると **/FASTGENPROFILE**、既定値は**COUNTER32**です。
 
 **正確な** &AMP;#124; **NOEXACT は、**<br/>
-使用して**EXACT**プローブのスレッド セーフであるインタロックされた増分値を指定します。 **Noexact は、**プローブの保護されていないインクリメント操作を指定します。 既定値は**、NOEXACT**です。
+使用して**EXACT**プローブのスレッド セーフであるインタロックされた増分値を指定します。 **Noexact は、** プローブの保護されていないインクリメント操作を指定します。 既定値は **、NOEXACT**です。
 
 **MEMMAX**=*値*、 **MEMMIN**=*値*<br/>
 使用して**MEMMAX**と**MEMMIN**をメモリ内のトレーニング データの最大値と最小の予約サイズを指定します。 値は、予約するメモリ量 (バイト単位) です。 既定では、これらの値は内部ヒューリスティックによって決定されます。

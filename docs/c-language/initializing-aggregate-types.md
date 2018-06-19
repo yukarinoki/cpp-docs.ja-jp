@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391679"
 ---
 # <a name="initializing-aggregate-types"></a>集約型の初期化
 "集約" 型は、構造体、共用体、または配列型です。 集約型に集約型のメンバーが含まれる場合、初期化の規則が再帰的に適用されます。  

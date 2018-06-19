@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381786"
 ---
 # <a name="converting-multibyte-characters"></a>Converting Multibyte Characters (マルチバイト文字の変換)
 **ANSI 3.1.3.4** マルチバイト文字を、ワイド文字定数の対応するワイド文字 (コード) に変換するときに使用する現在のロケール  

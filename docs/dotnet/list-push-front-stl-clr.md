@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131453"
 ---
 # <a name="listpushfront-stlclr"></a>list::push_front (STL/CLR)
 新しい最初の要素を追加します。  

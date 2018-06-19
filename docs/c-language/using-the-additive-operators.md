@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385921"
 ---
 # <a name="using-the-additive-operators"></a>加法演算子の使用
 加算演算子と減算演算子を示す次の例は、これらの宣言を使用します。  

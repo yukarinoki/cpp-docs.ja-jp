@@ -26,6 +26,7 @@ ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/21/2018
+ms.locfileid: "34422694"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (浮動小数点の動作の指定)
 

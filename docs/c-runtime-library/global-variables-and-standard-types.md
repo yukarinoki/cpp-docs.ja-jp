@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388995"
 ---
 # <a name="global-variables-and-standard-types"></a>グローバル変数および基本データ型
 Microsoft ランタイム ライブラリには、ライブラリ ルーチンで使用される[グローバル変数](../c-runtime-library/global-variables.md)、[制御フラグ](../c-runtime-library/control-flags.md)、[基本データ型](../c-runtime-library/standard-types.md)の定義が含まれています。 プログラムで宣言するか適切なヘッダー ファイルをインクルードして、これらの変数、フラグ、型にアクセスしてください。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391445"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 国/地域識別文字列を言語識別文字列と組み合わせて、 `setlocale`、 `_wsetlocale`、 `_create_locale`、および `_wcreate_locale` の関数のロケール指定を作成できます。 さまざまなバージョンの Windows オペレーティング システムでサポートされている国/地域名の一覧については、「[National Language Support (NLS) API Reference (各国語サポート (NLS) API リファレンス)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)」をご覧ください。 一覧では、国/地域の文字列は **Locale - Language Country/Region** 列のいずれかの国の値、または **Country or Region name abbreviation** 列の省略形のいずれかとなります。 Windows オペレーティング システムのバージョンごとの言語サポートに関する詳細については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「[Appendix A: Product Behavior (付録 A: 製品の動作)](http://msdn.microsoft.com/goglobal/bb896001.aspx)」をご覧ください。  

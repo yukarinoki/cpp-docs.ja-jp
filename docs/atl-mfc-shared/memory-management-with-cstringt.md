@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354708"
 ---
 # <a name="memory-management-with-cstringt"></a>CStringT によるメモリ管理
 クラス[CStringT](../atl-mfc-shared/reference/cstringt-class.md)は可変長文字列の操作に使用されるテンプレート クラス。 これらの文字列を保持するためにメモリが割り当てられの各インスタンスに関連付けられている文字列マネージャー オブジェクトを介してリリース`CStringT`です。 MFC と ATL の既定のインスタンス化を提供します。`CStringT`という`CString`、 `CStringA`、および`CStringW`、別の文字型の文字列を操作します。 これらの文字型は型**TCHAR**、 `char`、および`wchar_t`、それぞれします。 これらの既定の文字列型では、(ATL) でプロセス ヒープまたは (MFC) では、CRT ヒープからメモリを割り当てる文字列マネージャーを使用します。 一般的なアプリケーションは、このメモリの割り当て方法で十分です。 ただし、処理を要するを行うコードの文字列 (マルチ スレッド コード) の既定のメモリ マネージャーが適切に機能しない可能性がありますを使用します。 このトピックの既定のメモリ管理動作をオーバーライドする方法について説明`CStringT`、当面のタスク用に最適化されたアロケーターを具体的に作成します。  

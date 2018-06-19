@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353951"
 ---
 # <a name="file-handling-classes"></a>ファイル処理クラス
 これらのクラスは、ファイル、一時ファイル、およびメモリ マップト ファイルを処理するためのメソッドを提供します。  

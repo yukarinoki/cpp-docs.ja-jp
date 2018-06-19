@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33141751"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`list`1 つの要素を格納する各ノードの双方向リンク リストとして要素のシーケンスを管理します。  

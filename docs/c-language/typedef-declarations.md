@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391653"
 ---
 # <a name="typedef-declarations"></a>typedef 宣言
 typedef 宣言は、ストレージ クラスとしての typedef による宣言です。 宣言子は、新しい型になります。 typedef 宣言を使用して、既に C で定義されている型や、宣言した型に対して、より短い、またはわかりやすい名前を作成できます。 Typedef 名を使用して、変更可能な実装の詳細をカプセル化できます。  
