@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255994"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
 ATL リファレンスでは、アクティブ テンプレート ライブラリ (ATL)、コンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスのセットを説明します。 完全に活用するために ATL、COM を熟知して作業を強くお勧めします。  

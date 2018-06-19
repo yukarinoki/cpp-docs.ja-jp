@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392118"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部レベル宣言のストレージ クラス指定子
 外部変数はファイル スコープの変数です。 これらは、関数の外部で定義され、多くの関数に使用できる可能性があります。 関数は外部レベルでのみ定義できるため、入れ子にできません。 既定では、同じ名前の外部変数と関数へのすべての参照は、同じオブジェクトへの参照であり、"外部リンケージ" が含まれていることを意味します  (**static** キーワードを使用して、これをオーバーライドできます。 **static** の詳細については、このセクションで後述する情報をご覧ください)。  

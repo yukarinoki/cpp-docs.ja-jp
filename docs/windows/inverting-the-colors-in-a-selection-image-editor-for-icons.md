@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874081"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>選択領域の色の反転 (アイコン用イメージ エディター)
 イメージ エディターを使用すると、イメージの選択部分の色を簡単に反転できます。これにより、反転色を使用したイメージの外観を確認できます。  

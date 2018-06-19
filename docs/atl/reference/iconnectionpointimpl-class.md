@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362641"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl クラス
 このクラスは、接続ポイントを実装します。  

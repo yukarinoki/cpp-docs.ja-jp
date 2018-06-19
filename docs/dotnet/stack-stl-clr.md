@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172445"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 このテンプレート クラスでは、後入れ先出しのアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`stack`プッシュ ダウン スタックとの基になるコンテナーを管理します。  

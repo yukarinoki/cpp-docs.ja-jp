@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195205"
 ---
 # <a name="compiler-error-c2356"></a>コンパイラ エラー C2356
 初期化セグメントは翻訳単位の間で変更する必要があります。  

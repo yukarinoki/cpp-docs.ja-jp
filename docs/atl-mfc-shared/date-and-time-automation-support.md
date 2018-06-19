@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357595"
 ---
 # <a name="date-and-time-automation-support"></a>日付と時刻: オートメーションのサポート
 この記事では、日付と時刻の管理に関連するクラス ライブラリのサービスを活用する方法について説明します。 説明する手順は次のとおりです。  

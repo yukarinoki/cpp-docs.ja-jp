@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097108"
 ---
 # <a name="creating-an-ole-db-provider"></a>OLE DB プロバイダーの作成
 ウィザードを使用して ATL COM プロジェクトとプロバイダーを作成し、OLE DB テンプレートを使用してファイルを変更するは、OLE DB プロバイダーを作成することをお勧めします。 プロバイダーをカスタマイズするには、不要なプロパティをコメントおよび省略可能なインターフェイスを追加できます。  

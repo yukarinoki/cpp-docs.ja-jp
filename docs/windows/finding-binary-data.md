@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873564"
 ---
 # <a name="finding-binary-data"></a>バイナリ データの検索
 ASCII 文字列や 16 進数のバイト数を検索することができます。 たとえば、「こんにちは」を検索することができますまたは検索するいずれかの文字列「こんにちは」"48 65 6C 6 C 6 f"(16 進数に相当)。  

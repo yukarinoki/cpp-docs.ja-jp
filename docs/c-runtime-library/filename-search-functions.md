@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391803"
 ---
 # <a name="filename-search-functions"></a>ファイル名検索関数
 これらの関数は指定されたファイル名を検索し、検索を閉じます:  

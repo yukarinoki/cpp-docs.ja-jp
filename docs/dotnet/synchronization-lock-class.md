@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166687"
 ---
 # <a name="synchronization-lock-class"></a>同期 (lock クラス)
 オブジェクトへのアクセスを同期するロックの取得を自動化するためのメカニズムを提供します。  

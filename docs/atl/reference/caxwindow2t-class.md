@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360759"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T クラス
 このクラスは、ActiveX コントロールをホストし、ライセンスされた ActiveX コントロールをホストするためのサポートがウィンドウを操作するためのメソッドを提供します。  

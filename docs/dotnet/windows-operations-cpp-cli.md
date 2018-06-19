@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169112"
 ---
 # <a name="windows-operations-ccli"></a>Windows の操作 (C++/CLI)
 使用して Windows に固有のさまざまなタスクを示しています、[!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]です。  

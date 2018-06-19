@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373723"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>遅延読み込みする DLL の指定
 遅延読み込みする Dll を指定することができます、 [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname`リンカー オプション。 独自のバージョンのヘルパー関数を使う計画がない場合は、プログラムを delayimp.lib (デスクトップ アプリケーションの場合) または dloadhelper.lib (ストア アプリの場合) とリンクする必要もあります。  

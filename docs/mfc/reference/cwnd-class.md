@@ -833,6 +833,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34256337"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 Microsoft Foundation Class ライブラリにあるすべてのウィンドウ クラスの基本機能が用意されています。  

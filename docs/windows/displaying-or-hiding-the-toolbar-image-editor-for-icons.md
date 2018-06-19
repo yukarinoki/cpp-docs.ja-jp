@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872989"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>ツール バーの表示と非表示 (アイコン用イメージ エディター)
 描画ツールの多くはから利用できるため、[キーボード](../windows/accelerator-keys-image-editor-for-icons.md)、イメージ エディター ツールバーを非表示にすると便利な場合があります。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357217"
 ---
 # <a name="iunknown-implementation-classes"></a>IUnknown の実装クラス
 次のクラスを実装**IUnknown**とメソッドの関連。  

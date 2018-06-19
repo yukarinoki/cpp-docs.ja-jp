@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358167"
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits クラス
 このクラスは、CRT のスレッドの作成機能を提供します。 スレッドが CRT 関数を使用する場合は、このクラスを使用します。  

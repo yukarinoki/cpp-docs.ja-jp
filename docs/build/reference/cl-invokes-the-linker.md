@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371916"
 ---
 # <a name="cl-invokes-the-linker"></a>リンカーを呼び出す CL
 CL/c オプションを使用しない場合にコンパイルした後、リンカーによって自動的に起動します。 CL は、コンパイル時に作成された .obj ファイルの名前と、コマンドラインで指定したその他のファイルの名前をリンカーに渡します。 リンカーは、環境変数 LINK に示すオプションを使用します。 /Link オプションを使用すると、CL のコマンド ラインでリンカー オプションを指定します。 環境変数 LINK に/link オプションを次のオプションをオーバーライドします。 次の表に、オプションでは、リンクを抑制します。  

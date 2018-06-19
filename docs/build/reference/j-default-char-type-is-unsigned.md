@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374467"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (既定の char 型の unsigned への変更)
 既定値が変更`char`から入力`signed char`に`unsigned char`、および`char`型は、ゼロ拡張に上位変換することは、`int`型です。  

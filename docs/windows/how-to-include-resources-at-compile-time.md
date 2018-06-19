@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880152"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>方法: コンパイル時にリソースをインクルードする
 一般的に、1 つのリソース スクリプト (.rc) ファイルですべてのリソースの既定の設定を操作することは、簡単かつ便利なやり方です。 ただし、追加できますリソース他のファイルに現在のプロジェクトにコンパイル時にそれらを一覧表示して、**コンパイル時ディレクティブ**ボックスに、 [] ダイアログ ボックスの [リソース インクルード](../windows/resource-includes-dialog-box.md)です。  

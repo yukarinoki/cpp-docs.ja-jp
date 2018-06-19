@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255754"
 ---
 # <a name="atl-classes-and-structs"></a>ATL クラスと構造体
 アクティブ テンプレート ライブラリ (ATL) には、次のクラスと構造体が含まれています。 特定のクラスをカテゴリ別を参照してください、 [ATL クラスの概要](../../atl/atl-class-overview.md)です。  

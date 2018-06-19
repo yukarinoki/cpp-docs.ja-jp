@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362285"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>置き換え可能パラメーターを使用して (レジストラー&#39;s プリプロセッサ)
 置き換え可能パラメーターを使用すると、レジストラーのクライアントを実行時のデータを指定します。 これを行うには、レジストラーが先は、スクリプトで置き換え可能パラメーターに関連付けられている値が入った置換マップを保持します。 レジストラーでは、実行時にこれらのエントリを作成します。  

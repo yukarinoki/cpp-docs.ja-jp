@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872628"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>ビットマップからツール バーへの変換
 新しいツールバーを作成するには、ビットマップを変換します。 グラフィック ビットマップからツールバーのボタンのイメージに変換します。 通常、ビットマップには、1 つのビットマップのボタンごとに 1 つのイメージのいくつかのボタン イメージが含まれています。 イメージのサイズにすることができます。既定では 16 ピクセルとイメージの高さです。 ボタンのイメージのサイズを指定することができます、[新規ツールバー ダイアログ ボックス](../windows/new-toolbar-resource-dialog-box.md)からツール バー エディターを選択すると、**イメージ**イメージ エディターでのメニュー。  

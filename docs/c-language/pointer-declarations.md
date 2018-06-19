@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391914"
 ---
 # <a name="pointer-declarations"></a>ポインター宣言
 "ポインター宣言" はポインター変数に名前を付け、変数が指すオブジェクトの型を指定します。 ポインターとして宣言された変数は、メモリ アドレスを保持します。  

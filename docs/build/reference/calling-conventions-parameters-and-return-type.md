@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372202"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼び出し規則、パラメーター、および戻り値の型
 ヘルパー ルーチンのプロトタイプ:   

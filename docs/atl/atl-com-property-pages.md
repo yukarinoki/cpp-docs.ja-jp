@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357533"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM プロパティ ページ
 COM プロパティ ページでは、ユーザー インターフェイスを提供、プロパティを設定する (またはメソッドの呼び出し) の 1 つまたは複数の COM オブジェクトです。 プロパティ ページが、デザイン時に設定するコントロールのプロパティをできる豊富なユーザー インターフェイスを提供するための ActiveX コントロールで広く使用されます。  

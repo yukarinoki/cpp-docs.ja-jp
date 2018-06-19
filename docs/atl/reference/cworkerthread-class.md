@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365521"
 ---
 # <a name="cworkerthread-class"></a>クラスの使用
 このクラスは、ワーカー スレッドを作成または既存のものを使用して化し、1 つまたは複数のカーネル オブジェクトのハンドルを待機がシグナルを受け取るハンドルのいずれかに指定されたクライアント関数を実行します。  

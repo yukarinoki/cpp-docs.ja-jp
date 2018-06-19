@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879836"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>ツール バーのボタン間の空白の挿入
 一般に、ボタンの間のスペースを挿入するには、単にドラッグ反対方向ツールバーのします。 スペースを削除するには、互いの方向にドラッグします。  

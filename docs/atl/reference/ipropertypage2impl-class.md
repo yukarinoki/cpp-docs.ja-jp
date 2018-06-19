@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361903"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl クラス
 このクラスは実装**IUnknown**の既定の実装の継承と[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)です。  
