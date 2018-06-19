@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357735"
 ---
 # <a name="what-is-a-host-object"></a>ホスト オブジェクトとは何ですか。
 ホスト オブジェクトは、ATL で特定のウィンドウに指定された ActiveX コントロール コンテナーを表す COM オブジェクトです。 ホスト オブジェクトはサブクラス コンテナー ウィンドウ コントロールにメッセージを反映したものをようにコントロールで使用するために必要なコンテナー インターフェイスを提供し、公開、 [IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md)と[IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md)コントロールの環境を構成できるようにするインターフェイスです。  

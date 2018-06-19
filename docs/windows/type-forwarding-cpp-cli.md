@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891095"
 ---
 # <a name="type-forwarding-ccli"></a>型の転送 (C++/CLI)
 *転送先の入力*アセンブリ A を使用するクライアントを再コンパイルする必要がないようにに、1 つのアセンブリ (アセンブリ A) から型を別のアセンブリ (アセンブリ B) に移動することができます  

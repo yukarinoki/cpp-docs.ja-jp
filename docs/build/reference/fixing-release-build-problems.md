@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372153"
 ---
 # <a name="fixing-release-build-problems"></a>リリース ビルドの問題の解決
 コードは、リリース ビルドへのデバッグ ビルドからの切り替え後、コンパイル エラーを生成する場合は、一部の領域を確認してください。  

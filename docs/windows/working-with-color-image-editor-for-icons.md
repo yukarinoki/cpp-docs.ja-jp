@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891660"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>色の調整 (アイコン用イメージ エディター)
 イメージ エディターには、具体的には処理され、色をカスタマイズする多くの機能が含まれています。 前景色または背景色を設定する、境界のある領域を塗りつぶす色、または現在の前景色または背景色として使用するイメージの色を選択できます。 ツールを使用することができます、[イメージ エディター ツールバー](../windows/toolbar-image-editor-for-icons.md)のカラー パレットをと共に、 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)イメージを作成します。  

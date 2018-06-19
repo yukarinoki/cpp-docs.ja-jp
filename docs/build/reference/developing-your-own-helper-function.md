@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371399"
 ---
 # <a name="developing-your-own-helper-function"></a>独自のヘルパー関数の作成
 DLL またはインポートの名前に基づく特定の処理を実行するルーチンのバージョンを独自に提供することがあります。 これを 2 つの方法はあります。 可能性のある、指定されたコードに基づくのコーディング独自、または以前に詳細な通知フックを使用して指定されたバージョンにフックするだけでします。  

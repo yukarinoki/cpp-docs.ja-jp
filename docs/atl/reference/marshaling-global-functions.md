@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362828"
 ---
 # <a name="marshaling-global-functions"></a>マーシャ リングのグローバル関数
 これらの関数は、マーシャ リングとのインターフェイス ポインターにマーシャ リング データを変換するためのサポートを提供します。  

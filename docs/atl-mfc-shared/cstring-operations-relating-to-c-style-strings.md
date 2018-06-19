@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361815"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>C スタイルの文字列に関連する CString の操作方法
 A [CString](../atl-mfc-shared/using-cstring.md)オブジェクトには、文字列データが含まれています。 `CString` セットを継承、[メソッドと演算子](../atl-mfc-shared/reference/cstringt-class.md)クラス テンプレートで定義されている[CStringT](../atl-mfc-shared/reference/cstringt-class.md)文字列データを操作します。 (`CString`は、`typedef`を専門と`CStringT`文字データの種類を使用するを`CString`をサポートしています)。  

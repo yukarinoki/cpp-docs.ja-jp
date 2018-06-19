@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365055"
 ---
 # <a name="security-global-functions"></a>セキュリティのグローバル関数
 これらの関数は、オブジェクトの SID と ACL オブジェクトを変更するためのサポートを提供します。  

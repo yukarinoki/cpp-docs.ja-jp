@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380915"
 ---
 # <a name="where-to-define-macros"></a>マクロを定義する場所
 コマンドライン、コマンド ファイル、メイクファイルでも tools.ini マクロを定義します。  

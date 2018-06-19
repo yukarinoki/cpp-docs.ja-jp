@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370177"
 ---
 # <a name="pdb-files-as-linker-input"></a>リンカー入力としての .pdb ファイル
 /Zi オプションを使用してコンパイルされる (.obj) ファイルは、プログラム データベース (PDB) の名前を含むオブジェクトです。 リンカー; に、オブジェクトの PDB ファイル名を指定しません。リンクでは、埋め込み名を使用して、必要な場合は、pdb ファイルを探します。 これはライブラリに含まれるデバッグ可能なオブジェクトにも適用されます。デバッグ可能なライブラリの PDB は、ライブラリと共にリンカーを使用できなければなりません。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377562"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (外部名の長さの制限)
 非推奨。 外部名の長さを制限します。  

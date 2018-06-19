@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357906"
 ---
 # <a name="atl-project-wizard"></a>ATL プロジェクト ウィザード
 アクティブ テンプレート ライブラリ (ATL) は、簡単に小規模で高速な COM オブジェクトを記述するテンプレート ベースの C++ クラスのセットです。 ATL プロジェクト ウィザードでは、COM オブジェクトを格納する構造体を持つプロジェクトを作成します。  

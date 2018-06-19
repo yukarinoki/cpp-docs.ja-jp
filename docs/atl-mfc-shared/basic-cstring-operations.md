@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359095"
 ---
 # <a name="basic-cstring-operations"></a>CString の基本操作
 このトピックの次の基本的な[CString](../atl-mfc-shared/reference/cstringt-class.md)操作。  

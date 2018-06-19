@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374285"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (マップ ファイルの名前の指定)
 対応する .exe ファイルまたは DLL 内に出現する順序でセグメントの一覧を含むマップ ファイルを生成するようにリンカーに指示します。  

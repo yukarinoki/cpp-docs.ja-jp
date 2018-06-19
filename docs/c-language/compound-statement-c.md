@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385726"
 ---
 # <a name="compound-statement-c"></a>複合ステートメント (C)
 複合ステートメント ("ブロック" ともいう) は通常、**if** ステートメントなどの別のステートメントの本体として現れます。 「[宣言および型](../c-language/declarations-and-types.md)」では、複合ステートメントの先頭に記述できる宣言の形式とその意味について説明しています。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370877"
 ---
 # <a name="how-to-create-a-release-build"></a>方法 : リリース ビルドを作成する
 ### <a name="to-generate-a-release-build-of-your-program"></a>プログラムのリリース ビルドを生成するには  

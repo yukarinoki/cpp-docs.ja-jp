@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367269"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>メイクファイル プリプロセスの式
 **!IF**または **!ELSE IF** `constantexpression` 10 進数または C 言語表記で整数の定数、文字列定数、またはコマンドで構成されます。 グループ式にかっこを使用します。 式は、C スタイル付き長整数算術; を使用します。数値、32 ビット 2 の補数形式、範囲 - 2147483648 ~ 2147483647 です。  

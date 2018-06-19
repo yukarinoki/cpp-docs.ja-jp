@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365016"
 ---
 # <a name="property-map-macros"></a>プロパティ マップ マクロ
 これらのマクロは、プロパティ マップとエントリを定義します。  

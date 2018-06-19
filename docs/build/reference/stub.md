@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375202"
 ---
 # <a name="stub"></a>STUB
 仮想デバイス ドライバー (VxD) を構築するモジュール定義ファイルで使用されているときにすることができます (WINNT で定義されている IMAGE_DOS_HEADER 構造体を含むファイル名を指定します。H) をクリックし、既定のヘッダーではなく、仮想デバイス ドライバー (VxD) で使用します。  

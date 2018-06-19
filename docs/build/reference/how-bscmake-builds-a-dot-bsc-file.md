@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373489"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE による .bsc ファイルのビルド方法
 BSCMAKE では、ビルドまたは .bsc ファイルが、最も効率的な方法で再構築します。 潜在的な問題を回避するのには、ビルド プロセスを理解する必要があります。  

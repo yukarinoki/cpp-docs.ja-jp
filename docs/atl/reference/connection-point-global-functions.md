@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362792"
 ---
 # <a name="connection-point-global-functions"></a>接続ポイントのグローバル関数
 これらの関数は、接続ポイントのサポートを提供し、シンク マップ。  

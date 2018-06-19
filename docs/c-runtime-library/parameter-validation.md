@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450252"
 ---
 # <a name="parameter-validation"></a>パラメーターの検証
 ほとんどのセキュリティ強化 CRT 関数および多くの既存の関数は個々のパラメーターを検証します。 これには、**NULL** のポインターの確認、整数が有効範囲に入ることの確認、または列挙値が有効であるかどうかの確認が含まれる場合があります。 無効なパラメーターが見つかると、無効なパラメーター ハンドラーが実行されます。  

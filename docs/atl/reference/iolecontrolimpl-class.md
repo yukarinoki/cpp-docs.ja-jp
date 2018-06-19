@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361799"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl クラス
 このクラスの既定の実装を提供する、 **IOleControl**インターフェイスと実装**IUnknown**です。  

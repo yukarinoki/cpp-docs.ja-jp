@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132896"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 パーティションの範囲の要素を正しく検索、`n`番目の要素範囲のシーケンスの前にすべての要素が、シーケンス内にあるすべての要素から、以下になるようより大きいか等しいことにします。  

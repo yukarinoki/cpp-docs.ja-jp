@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369118"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC アプリケーションのローカライズされたリソース: サテライト DLL
 MFC version 7.0 以降では、サテライト Dll の場合、複数の言語にローカライズされるアプリケーションを作成するときに役立つ機能のサポートの強化を提供します。 DLL は、サテライト、[リソース専用 DLL](../build/creating-a-resource-only-dll.md)特定の言語のローカライズされたアプリケーションのリソースを格納しています。 アプリケーションでは、実行を開始、MFC は自動的に、環境に最適なローカライズされたリソースを読み込みます。 たとえば、2 つのサテライト Dll、リソースとドイツ語の翻訳を含むその他のフランス語翻訳が含まれていると英語の言語リソースを持つアプリケーションことができます。 英語のシステムでは、アプリケーションが実行されるときに、英語のリソースを使用します。 フランス語のリソースを使用して、フランス語のシステムで実行される場合ドイツ語のシステムで実行される場合は、ドイツ語のリソースを使用します。  

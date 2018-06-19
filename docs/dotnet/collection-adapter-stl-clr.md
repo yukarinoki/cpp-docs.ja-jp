@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114446"
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 STL/CLR コンテナーとして使用するための .NET コレクションをラップします。 A`collection_adapter`単純 STL/CLR コンテナー オブジェクトを表すテンプレート クラスです。 メソッドは、基本クラス ライブラリ (BCL) インターフェイスをラップし、被制御シーケンスの操作に使用する反復子のペアを返します。  

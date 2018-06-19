@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359046"
 ---
 # <a name="default-atl-project-configurations"></a>ATL プロジェクトの既定の構成
 ATL プロジェクト ウィザードでは、既定では 2 つのプロジェクト構成を作成します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363247"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>ATL コントロール ホスト API しますか?
 ATL のコントロール ホスト API は、ActiveX コントロール コンテナーとして機能する任意のウィンドウを許可する一連の関数。 これらの関数は静的または動的にソース コードとして使用されるので、プロジェクトにリンクを ATL90.dll によって公開されています。 コントロール ホスト関数は、次の表に表示されます。  

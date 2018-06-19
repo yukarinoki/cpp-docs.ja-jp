@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365218"
 ---
 # <a name="registry-macros"></a>レジストリ マクロ
 これらのマクロでは、便利タイプ ライブラリとレジストリの機能を定義します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136566"
 ---
 # <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
 このテンプレート クラスは、ファンクタを記述、呼び出されると、true を返します、最初の引数と 2 番目のテストとしての両方が true の場合のみです。 使用する、引数の型の観点から、関数オブジェクトを指定します。  

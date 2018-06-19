@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362739"
 ---
 # <a name="cfiletimespan-class"></a>持つクラス
 このクラスは、相対的な日付と時刻の値がファイルへの関連付けを管理するためのメソッドを提供します。  

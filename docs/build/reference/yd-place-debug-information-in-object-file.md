@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378234"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (デバッグ情報のオブジェクト ファイルへの取り込み)
 使用する場合は、プリコンパイル済みヘッダー (.pch) ファイルから作成されたデバッグ情報をすべてのオブジェクト ファイルの完全なペース、 [/Yc](../../build/reference/yc-create-precompiled-header-file.md)と[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)オプション。 非推奨。  

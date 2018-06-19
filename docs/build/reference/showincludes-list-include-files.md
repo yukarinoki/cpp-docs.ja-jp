@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378341"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (インクルード ファイル一覧)
 コンパイラでインクルード ファイルの一覧を出力します。 入れ子になった含めるファイルも表示されている (含まれているファイルからファイルをインクルードする)。  

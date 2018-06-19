@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365192"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap クラス
 このクラスは、各キーは、赤、黒のバイナリ ツリーを使用して、1 つ以上の値を関連付けることができますをできるマップ構造体を表します。  

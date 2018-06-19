@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383083"
 ---
 # <a name="elements-of-c"></a>C の要素
 このセクションでは、C プログラムの構築に使用される名前、数、文字など、C プログラミング言語の要素について説明します。 ANSI C 構文では、これらのコンポーネント トークンにラベルが付けられます。  

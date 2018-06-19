@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358590"
 ---
 # <a name="device-context-global-functions"></a>デバイス コンテキストのグローバル関数
 この関数は、特定のデバイスのデバイス コンテキストを作成します。  

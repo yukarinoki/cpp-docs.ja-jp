@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374009"
 ---
 # <a name="fo-object-file-name"></a>/Fo (オブジェクト ファイルの名前の指定)
 既定値の代わりに使用する、オブジェクト (.obj) ファイルの名前またはディレクトリを指定します。  

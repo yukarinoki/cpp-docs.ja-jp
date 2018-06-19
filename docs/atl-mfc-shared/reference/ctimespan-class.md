@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365319"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan クラス
 時間間隔の秒数として内部的に格納されている時間の量。  
@@ -147,9 +148,9 @@ CTimeSpan(
   
 - **CTimeSpan ();** 構築、初期化されていない`CTimeSpan`オブジェクト。  
   
-- **CTimeSpan (const CTimeSpan (& a)) です。**構築、`CTimeSpan`から別のオブジェクト`CTimeSpan`値。  
+- **CTimeSpan (const CTimeSpan (& a)) です。** 構築、`CTimeSpan`から別のオブジェクト`CTimeSpan`値。  
   
-- **CTimeSpan (_ _time64_t) です。**構築、`CTimeSpan`オブジェクトから、 **_ _time64_t**型です。  
+- **CTimeSpan (_ _time64_t) です。** 構築、`CTimeSpan`オブジェクトから、 **_ _time64_t**型です。  
   
 - **CTimeSpan (長い**、 **int, int, int);** 構築、`CTimeSpan`オブジェクトの各構成要素からは、次の範囲に制限します。  
   

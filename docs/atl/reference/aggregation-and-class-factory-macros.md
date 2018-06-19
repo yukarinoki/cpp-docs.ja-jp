@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366420"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>集計とクラス ファクトリ マクロ
 これらのマクロは、クラス ファクトリを宣言および集計を制御する方法を提供します。  

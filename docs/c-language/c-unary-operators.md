@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381240"
 ---
 # <a name="c-unary-operators"></a>C 単項演算子
 単項演算子はオペランドの前に置かれ、右から左に関連付けられます。  

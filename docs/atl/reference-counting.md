@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358249"
 ---
 # <a name="reference-counting"></a>参照カウント
 COM 自体は自動的に試みませんオブジェクトが使用されていないと思われるときに、メモリからオブジェクトを削除します。 代わりに、オブジェクトのプログラマが使用されていないオブジェクトを削除する必要があります。 プログラマは、オブジェクトを参照カウントに基づいて削除されることができるかどうかを判断します。  

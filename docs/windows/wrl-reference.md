@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890945"
 ---
 # <a name="wrl-reference"></a>WRL リファレンス
 このセクションには、Windows ランタイム C++ テンプレート ライブラリ (WRL) 用の参照情報が含まれています。  

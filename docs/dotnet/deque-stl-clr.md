@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111147"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 このテンプレート クラスでは、ランダム アクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`deque`ストレージの連続したブロックのようですが、拡大したり、一方の端を残りの要素をコピーする必要がない縮小することができますの要素のシーケンスを管理します。 効率的に、実装できるため、`double-ended queue`です。 (したがって名前です)。  

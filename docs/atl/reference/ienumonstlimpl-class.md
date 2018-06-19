@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365257"
 ---
 # <a name="ienumonstlimpl-class"></a>つまりクラス
 このクラスは、C++ 標準ライブラリ コレクションに基づく列挙子インターフェイスを定義します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127904"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>方法: クリップボードからテキストを取得する (C++/CLI)
 次のコード例では、<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>メンバーを返す関数へのポインター、<xref:System.Windows.Forms.IDataObject>インターフェイスです。 このインターフェイスをデータの形式のクエリを実行し、実際のデータを取得するために使用します。  

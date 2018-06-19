@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110939"
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>C++ ネイティブ型と等価な .NET Framework ネイティブ型 (C++/CLI)
 次の表は、定義済みの型のエイリアスは、組み込みの Visual C 型のキーワードで、**システム**名前空間。  

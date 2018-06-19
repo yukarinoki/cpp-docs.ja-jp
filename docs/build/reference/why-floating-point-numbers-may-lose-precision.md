@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376138"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>浮動小数点数の精度の低下
 一般に、浮動小数点の 10 進値には正確なバイナリ表現がありません。 これは、CPU が浮動小数点データを表す方法の副作用です。 このため、有効桁数の一部が失われるが発生する可能性があり、浮動小数点演算が予期しない結果を生成可能性があります。  

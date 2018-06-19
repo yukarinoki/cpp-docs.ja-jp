@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381058"
 ---
 # <a name="bits-per-character"></a>Bits per Character (文字あたりのビット数)
 **ANSI 2.2.4.2.1** 文のビット数  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377145"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (プリプロセス出力のファイルへの書き込み)
 C および C++ ソース ファイルを前処理し、ファイルをプリプロセス済みの出力を書き込みます。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379238"
 ---
 # <a name="understanding-the-helper-function"></a>ヘルパー関数について
 リンカーでサポートされているに遅延読み込み用のヘルパー関数は、実行時に DLL を実際に読み込むです。 独自の関数を作成し、Delayimp.lib で提供されているヘルパー関数を使用する代わりに、プログラムにリンクすることでその動作をカスタマイズするヘルパー関数を変更できます。 1 つのヘルパー関数では、すべての遅延読み込み Dll は機能します。  

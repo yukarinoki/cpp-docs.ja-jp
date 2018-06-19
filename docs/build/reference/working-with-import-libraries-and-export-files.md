@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377933"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>インポート ライブラリとエクスポート ファイル
 /DEF オプションを使用して LIB を使用して、インポート ライブラリとエクスポート ファイルを作成することができます。 リンクの使用を含むプログラムをビルドするファイルのエクスポートが (通常、ダイナミック リンク ライブラリ (DLL)) をエクスポートし、他のプログラムでこれらのエクスポートへの参照を解決するのには、インポート ライブラリを使用します。  

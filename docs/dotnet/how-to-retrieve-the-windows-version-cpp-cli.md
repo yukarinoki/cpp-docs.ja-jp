@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128268"
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>方法: Windows のバージョンを取得する (C++/CLI)
 次のコード例では、現在のオペレーティング システムのプラットフォームおよびバージョン情報を取得する方法を示します。 この情報が格納されている、<xref:System.Environment.OSVersion%2A?displayProperty=fullName>プロパティ広い意味での Windows のバージョンを表す列挙体で構成されると<xref:System.Environment.Version%2A>オペレーティング システムの正確なビルドを含むオブジェクトです。  

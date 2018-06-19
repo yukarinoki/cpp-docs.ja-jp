@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892658"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive メソッド
 現在または指定した SRWLock オブジェクトの排他モードで SRWLock オブジェクトを取得しようとしています。 呼び出しが成功した場合、呼び出し元スレッドは、ロックの所有権を取得します。  

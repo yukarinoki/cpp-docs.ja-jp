@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376300"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (関数レベルのリンクの有効化)
 コンパイラが個々の関数をパッケージ関数 (COMDAT) の形式でパッケージ化できるようになります。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384994"
 ---
 # <a name="function-declarations-and-definitions"></a>関数の宣言と定義
 関数プロトタイプは、関数の名前、戻り値の型、および仮パラメーターの型と数を設定します。 関数定義には、関数本体が含まれます。  

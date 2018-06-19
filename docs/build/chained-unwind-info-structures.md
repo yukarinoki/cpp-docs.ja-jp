@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366953"
 ---
 # <a name="chained-unwind-info-structures"></a>チェーン アンワインド情報の構造
 UNW_FLAG_CHAININFO フラグ設定されている場合、アンワインド情報の構造体は、セカンダリのいずれかと共有の例外のハンドラー/チェーン情報アドレス フィールドには、プライマリ アンワインド情報が含まれています。 次のコードを取得しますプライマリ アンワインドについては、あると仮定して`unwindInfo`構造を持つ、UNW_FLAG_CHAININFO フラグが設定されます。  

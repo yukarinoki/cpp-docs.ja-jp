@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392563"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成
 このチュートリアルを使用する方法を示します[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]コマンド プロンプトでの Visual C プロジェクトをビルドします。 C++ ソース ファイルと Visual C コンソール アプリケーション用の XML ベースのプロジェクト ファイルを作成する方法を学習します。 次に、プロジェクトをビルドしてから、ビルド処理をカスタマイズする方法を学習します。  

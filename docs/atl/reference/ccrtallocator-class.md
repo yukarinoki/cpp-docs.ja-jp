@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363448"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator クラス
 このクラスは、CRT メモリ ルーチンを使用しているメモリを管理するためのメソッドを提供します。  

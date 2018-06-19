@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369748"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>DEF ファイルを使った DLL からのエクスポート
 モジュール定義ファイル (.def) は、テキスト ファイルです。DLL のさまざまな属性を記述する 1 つ以上のモジュール文が含まれています。 使用していない場合、**方式**キーワード、DLL の関数をエクスポートする DLL に .def ファイルが必要です。  

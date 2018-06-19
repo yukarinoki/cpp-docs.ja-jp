@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366550"
 ---
 # <a name="ctime-class"></a>CTime クラス
 絶対時刻と日付を表します。  
@@ -181,13 +182,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>コメント  
  各コンス トラクターは、次に示します。  
   
-- **CTime() です。**構築、初期化されていない`CTime`オブジェクト。 このコンス トラクターを定義できます。`CTime`オブジェクトの配列。 使用する前に有効な値では、そのような配列を初期化する必要があります。  
+- **CTime() です。** 構築、初期化されていない`CTime`オブジェクト。 このコンス トラクターを定義できます。`CTime`オブジェクトの配列。 使用する前に有効な値では、そのような配列を初期化する必要があります。  
   
-- **CTime (const CTime (& a)) です。**構築、`CTime`から別のオブジェクト`CTime`値。  
+- **CTime (const CTime (& a)) です。** 構築、`CTime`から別のオブジェクト`CTime`値。  
   
-- **CTime (_ _time64_t) です。**構築、`CTime`オブジェクトから、 **_ _time64_t**型です。 このコンス トラクターは、UTC 時刻が必要ですし、結果を格納する前にローカル時刻に結果を変換します。  
+- **CTime (_ _time64_t) です。** 構築、`CTime`オブジェクトから、 **_ _time64_t**型です。 このコンス トラクターは、UTC 時刻が必要ですし、結果を格納する前にローカル時刻に結果を変換します。  
   
-- **CTime (int, int,...)。**構築、`CTime`各コンポーネントのローカル時刻要素オブジェクトは、次の範囲に制限します。  
+- **CTime (int, int,...)。** 構築、`CTime`各コンポーネントのローカル時刻要素オブジェクトは、次の範囲に制限します。  
   
     |コンポーネント|範囲|  
     |---------------|-----------|  
@@ -202,9 +203,9 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
 - **CTime (WORD, 単語);** 構築、 `CTime` MS-DOS 日付と時刻の値は、指定したオブジェクト。 このコンス トラクターには、現地時刻が必要です。  
   
-- **CTime (const SYSTEMTIME (& a)) です。**構築、`CTime`オブジェクトから、`SYSTEMTIME`構造体。 このコンス トラクターには、現地時刻が必要です。  
+- **CTime (const SYSTEMTIME (& a)) です。** 構築、`CTime`オブジェクトから、`SYSTEMTIME`構造体。 このコンス トラクターには、現地時刻が必要です。  
   
-- **CTime (const FILETIME (& a)) です。**構築、`CTime`オブジェクトから、`FILETIME`構造体。 多くの場合は使用しません`CTime FILETIME`直接の初期化します。 使用する場合、`CFile`ファイルを操作するオブジェクト`CFile::GetStatus`経由のファイルのタイムスタンプを取得、`CTime`オブジェクトを初期化して、`FILETIME`構造体。 このコンス トラクターは、UTC に基づく、時間と想定し、結果を格納する前にローカル時刻に自動的に値に変換します。  
+- **CTime (const FILETIME (& a)) です。** 構築、`CTime`オブジェクトから、`FILETIME`構造体。 多くの場合は使用しません`CTime FILETIME`直接の初期化します。 使用する場合、`CFile`ファイルを操作するオブジェクト`CFile::GetStatus`経由のファイルのタイムスタンプを取得、`CTime`オブジェクトを初期化して、`FILETIME`構造体。 このコンス トラクターは、UTC に基づく、時間と想定し、結果を格納する前にローカル時刻に自動的に値に変換します。  
   
     > [!NOTE]
     >  コンス トラクターを使用して、 **DBTIMESTAMP**パラメーターは、OLEDB.h が含まれる場合にのみ使用できます。  

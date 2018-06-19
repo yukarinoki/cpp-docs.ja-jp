@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381864"
 ---
 # <a name="c-sized-integer-types"></a>C サイズ設定された整数型
 **Microsoft 固有の仕様**  

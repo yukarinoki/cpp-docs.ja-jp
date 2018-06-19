@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359608"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker クラス
 スレッド プールからの要求を受信し、各要求の作成し、破棄がワーカー オブジェクトに渡されます。  

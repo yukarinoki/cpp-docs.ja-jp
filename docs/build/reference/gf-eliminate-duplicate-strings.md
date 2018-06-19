@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375894"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (同一文字列の削除)
 実行中に、プログラム イメージおよびメモリ内と同じ文字列の 1 つのコピーを作成するコンパイラを有効にします。 これは、最適化と呼ばれる*文字列プール*小さいプログラムを作成することができます。  

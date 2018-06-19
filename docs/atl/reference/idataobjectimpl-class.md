@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365482"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl クラス
 このクラスは、汎用データ転送をサポートして、接続を管理するためのメソッドを提供します。  

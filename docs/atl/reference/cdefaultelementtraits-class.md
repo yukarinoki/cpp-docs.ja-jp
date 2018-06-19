@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360963"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits クラス
 このクラスは、コレクション クラスの既定のメソッドおよび関数を提供します。  

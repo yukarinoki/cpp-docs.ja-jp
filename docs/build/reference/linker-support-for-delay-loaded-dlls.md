@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375585"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>リンカーによる DLL の遅延読み込み
 Visual C リンカーは、Dll の遅延読み込みをサポートします。 Windows SDK の機能を使用する必要がなくなるこの**LoadLibrary**と**GetProcAddress** DLL 遅延読み込みを実装します。  

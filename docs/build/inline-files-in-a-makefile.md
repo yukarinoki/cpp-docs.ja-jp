@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368123"
 ---
 # <a name="inline-files-in-a-makefile"></a>メイクファイルのインライン ファイル
 インライン ファイルには、メイクファイルで指定したテキストが含まれています。 その名前は、(たとえば、リンク コマンド ファイル)、入力としてのコマンドで使用できますか、これには、オペレーティング システムにコマンドを渡すことができます。 ファイルを作成するコマンドを実行すると、ディスクにファイルが作成されます。  

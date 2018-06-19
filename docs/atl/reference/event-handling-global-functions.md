@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358339"
 ---
 # <a name="event-handling-global-functions"></a>イベント処理のグローバル関数
 この関数は、イベント ハンドラーを提供します。  

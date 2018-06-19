@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375078"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (プリコンパイル済みヘッダー オプションの無視)
 他のすべての原因`/Y`コンパイラ オプションを無視する (および自体はオーバーライドできません)。  

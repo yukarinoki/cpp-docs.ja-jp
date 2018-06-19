@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374373"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>遅延読み込みされた DLL に対するすべてのインポートの読み込み
 **_ _Hrloadallimportsfordll** delayhlp.cpp で定義されて、関数で指定された DLL からすべてのインポートを読み込むようにリンカーに指示、 [/delayload](../../build/reference/delayload-delay-load-import.md)リンカー オプション。  

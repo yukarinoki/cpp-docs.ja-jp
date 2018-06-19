@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373401"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (IDE の簡易リビルド)
 **/FD**以外のユーザーには公開されません、[コマンドライン](../../ide/command-line-property-pages.md)の C++ プロジェクトのプロパティ ページ**プロパティ ページ** ダイアログ ボックスの場合にのみ、 [/Gm (簡易リビルドの有効)](../../build/reference/gm-enable-minimal-rebuild.md)も選択されていません。 **/FD**以外の開発環境からの影響を与えません。 **/FD**の出力で公開されていない**cl/?** です。  

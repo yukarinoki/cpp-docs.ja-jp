@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358128"
 ---
 # <a name="date-type"></a>日付型
 **日付**8 バイト浮動小数点数を使用して型を実装します。 日付は 1899 年 12 月 30 日午前 0 時 0 時から始まる整数値の増分で表されます。 時間の値は、数値の小数部の絶対値として表されます。 次に示すいくつかの日付と共に、**日付**数値と同等の型。  

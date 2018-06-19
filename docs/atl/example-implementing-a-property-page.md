@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363714"
 ---
 # <a name="example-implementing-a-property-page"></a>例: プロパティ ページの実装
 この例では、ビルドを表示し、変更することができます) のプロパティのプロパティ ページ、[ドキュメント クラス](../mfc/document-classes.md)インターフェイスです。  

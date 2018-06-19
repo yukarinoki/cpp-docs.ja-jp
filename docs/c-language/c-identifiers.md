@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388670"
 ---
 # <a name="c-identifiers"></a>C 識別子
 "識別子" または "シンボル" は、プログラム内の変数、型、関数、およびラベルに対して指定する名前です。 識別子名は、どのキーワードともスペル (大文字小文字の区別を含む) が異なっている必要があります。 キーワード (C または Microsoft) は識別子として使用できません。これらは特別な用途のために予約されています。 識別子を作成するには、変数、型、または関数を定義する際に指定します。 この例では、`result` は整数変数の識別子で、`main` と `printf` は関数の識別子名です。  

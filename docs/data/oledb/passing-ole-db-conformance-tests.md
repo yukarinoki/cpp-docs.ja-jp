@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110465"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>OLE DB 準拠合致テスト
 プロバイダーを一貫したものにするには、Data Access SDK は、OLE DB 準拠合致テストのセットを提供します。 テストは、プロバイダーのすべての側面を確認し、妥当なという保証は正常に、プロバイダーの機能を提供します。 Microsoft Data Access SDK では、OLE DB 準拠合致テストを検索できます。 このセクションでは、準拠テストに合格する必要があることについて説明します。 OLE DB 準拠合致テストの実行方法の詳細については、SDK を参照してください。  

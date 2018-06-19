@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133428"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>方法: アセンブリの互換性の問題を診断し修復する (C++/CLI)
 このトピックでは、コンパイル時に参照されるアセンブリのバージョン、実行時に参照されるアセンブリのバージョンが一致しない場合の動作について説明しますと、問題を回避する方法です。  

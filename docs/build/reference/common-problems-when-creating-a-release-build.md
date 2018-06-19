@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373167"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>リリース ビルド作成時によくある問題
 開発中は、通常ビルドし、プロジェクトのデバッグ ビルドをテストします。 リリース ビルド用にアプリケーションをビルドする場合アクセス違反が発生する可能性があります。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362369"
 ---
 # <a name="understanding-window-traits"></a>ウィンドウの特徴を理解します。
 ウィンドウの特徴 (traits) クラスは、ATL ウィンドウ オブジェクトを作成するために使用するスタイルを標準化するための単純なメソッドを提供します。 ウィンドウの特徴は、別のテンプレート パラメーターとして受け入れられます[CWindowImpl](../atl/reference/cwindowimpl-class.md)および既定のクラス レベルのウィンドウ スタイルを指定するための手段として他の ATL ウィンドウ クラスです。  

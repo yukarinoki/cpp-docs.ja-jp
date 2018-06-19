@@ -26,6 +26,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954090"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef および #ifndef ディレクティブ (C/C++)
 **#Ifdef**と **#ifndef**ディレクティブと同じタスクを実行する、`#if`ディレクティブと共に使用したときに**定義**( *の識別子* ).  

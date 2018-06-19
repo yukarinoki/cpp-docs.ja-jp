@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375624"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (プログラム データベース ファイル名)
 によって作成されたプログラム データベース (PDB) ファイルのファイル名を指定[/Z7、/Zi、/ZI (デバッグ情報の形式)](../../build/reference/z7-zi-zi-debug-information-format.md)です。  

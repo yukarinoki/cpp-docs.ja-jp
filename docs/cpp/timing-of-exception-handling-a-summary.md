@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422177"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>例外処理のタイミング: 概要
 終了ハンドラーは、`__try` ステートメント ブロックがどのように終了された場合も常に実行されます。 終了の原因としては、`__try` ブロックからのジャンプ、制御がブロックの外に移動する `longjmp` ステートメント、例外処理によるスタックのアンワインドなどが考えられます。  

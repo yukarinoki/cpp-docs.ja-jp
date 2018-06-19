@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356580"
 ---
 # <a name="cstring-semantics"></a>CString の評価
 にもかかわらず[CString](../atl-mfc-shared/reference/cstringt-class.md)オブジェクトを拡張できる動的オブジェクトは、組み込みのプリミティブ型と単純なクラスのように動作します。 各`CString`オブジェクトを一意の値を表します。 `CString` オブジェクトは、文字列へのポインターではなく実際の文字列としての考える必要があります。  

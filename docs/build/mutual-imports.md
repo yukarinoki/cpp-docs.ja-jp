@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377758"
 ---
 # <a name="mutual-imports"></a>相互インポート
 エクスポートまたは別の実行可能ファイルをインポートするインポートは、相互 (または循環) ときに、複雑さの一部を表示します。 たとえば、2 つの Dll は、その他の相互再帰関数のようなシンボルをインポートします。  

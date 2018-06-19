@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387484"
 ---
 # <a name="lifetime"></a>有効期間
 「有効期間」は、変数または関数が存在するプログラムが実行中である期間です。 識別子のストレージ存続期間でその有効期間が決まります。  

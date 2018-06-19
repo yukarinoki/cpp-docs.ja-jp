@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365029"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl クラス
 このクラスは、配列内に列挙されている項目が格納 COM 列挙子インターフェイスの実装を提供します。  

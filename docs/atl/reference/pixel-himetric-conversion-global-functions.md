@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359427"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>ピクセル/HIMETRIC 変換のグローバル関数
 これらの関数は、ピクセルと HIMETRIC 単位に変換するためのサポートを提供します。  

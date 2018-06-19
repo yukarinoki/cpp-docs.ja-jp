@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379095"
 ---
 # <a name="overview-of-arm-abi-conventions"></a>ARM ABI 規則の概要
 ARM プロセッサ上の Windows 用にコンパイルされたコードのアプリケーション バイナリ インターフェイス (ABI) は、標準の ARM EABI に基づいています。 この記事では、ARM 上の Windows と標準との主な相違点を取り上げています。 標準の ARM EABI の詳細については、次を参照してください。[用のアプリケーション バイナリ インターフェイス (ABI)、ARM アーキテクチャ](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)です。  

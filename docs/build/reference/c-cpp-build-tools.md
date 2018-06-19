@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369891"
 ---
 # <a name="cc-build-tools"></a>C と C++ のビルド ツール
 Visual C には、表示またはビルド出力を操作するための次のコマンド ライン ツールが用意されています。  

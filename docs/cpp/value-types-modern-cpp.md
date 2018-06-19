@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423419"
 ---
 # <a name="value-types-modern-c"></a>値型 (Modern C++)
 C++ のクラスは、既定値の型ではします。 このトピックでは、値の型とその使用に関連する問題の概要を説明します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132831"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>方法: 起動からの経過時間を取得する (C++/CLI)
 ティック数を確認する方法を次のコード例に示します。 または Windows からの経過時間 (ミリ秒) を開始します。 この値は、<xref:System.Environment.TickCount%2A?displayProperty=fullName>メンバーと、32 ビット値になっているためをゼロにリセットすべて続けたです。  

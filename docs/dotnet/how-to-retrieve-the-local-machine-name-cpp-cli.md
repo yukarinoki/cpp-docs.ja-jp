@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128642"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>方法: ローカル コンピューター名を取得する (C++/CLI)
 次のコード例は、ローカル コンピューター名の取得を示します (ネットワークにコンピューターの名前が表示されます)。 これを行うに取得することによって、<xref:System.Environment.MachineName%2A>で定義されている文字列を<xref:System.Environment>名前空間。  

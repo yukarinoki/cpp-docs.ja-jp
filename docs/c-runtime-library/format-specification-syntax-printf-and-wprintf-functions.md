@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392537"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>書式指定構文: printf 関数と wprintf 関数
 

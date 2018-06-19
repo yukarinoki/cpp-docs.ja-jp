@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362509"
 ---
 # <a name="cwintraits-class"></a>CWinTraits クラス
 このクラスは、window オブジェクトを作成するときに使用するスタイルを標準化するためのメソッドを提供します。  

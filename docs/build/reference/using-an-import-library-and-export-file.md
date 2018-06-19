@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378598"
 ---
 # <a name="using-an-import-library-and-export-file"></a>インポート ライブラリとエクスポート ファイルの使用
 プログラム (実行可能ファイルまたは DLL) にエクスポート、インポートする別のプログラムまたはプログラムの 3 つ以上の両方をエクスポートおよびインポートから他の場合は、これらのプログラムをリンクするコマンドが循環エクスポートを対応する必要があります。  

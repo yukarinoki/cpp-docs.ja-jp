@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129669"
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>方法: 正規表現を使用してデータ フィールドを抽出する (C++/CLI)
 次のコード例では、書式設定された文字列からデータを抽出する正規表現の使用を示します。 次のコード例では、<xref:System.Text.RegularExpressions.Regex>クラスが電子メール アドレスに対応するパターンを指定します。 このパターンには、ユーザーおよび各電子メール アドレスのホスト名の部分を取得するために使用するフィールドの識別子が含まれています。 <xref:System.Text.RegularExpressions.Match>クラスは、実際のパターン照合を実行するために使用します。 指定された電子メール アドレスが有効である場合、ユーザー名とホスト名が抽出され、表示されます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368903"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>方法: カスタム ツールをプロジェクト プロパティに統合する
 カスタム ツールのオプションを追加するには、Visual Studio に**プロパティ ページ**ウィンドウでは、基になる XML スキーマ ファイルを作成します。  

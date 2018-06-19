@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362272"
 ---
 # <a name="invoking-scripts"></a>スクリプトの呼び出し
 [置き換え可能パラメーター (レジストラーのプリプロセッサ) を使用して](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)置換マップをについて説明し、特記レジストラー メソッド**AddReplacement**です。 レジストラーは、スクリプトに固有の他の 8 つのメソッドを持ち、すべては、次の表で説明します。  

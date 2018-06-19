@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392160"
 ---
 # <a name="switch-statement-c"></a>switch ステートメント (C)
 `switch` および **case** ステートメントを使用すると、複雑な条件付き処理や分岐処理を制御しやすくなります。 `switch` ステートメントは、本体内のステートメントに制御を移します。  

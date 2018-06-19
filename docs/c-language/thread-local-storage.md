@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390025"
 ---
 # <a name="thread-local-storage"></a>スレッド ローカル ストレージ
 **Microsoft 固有の仕様**  
@@ -94,7 +95,7 @@ __declspec( thread ) int tls_i = 1;
   
      初期化される変数が含まれている sizeof 式は、式自体の参照が発生しないので、有効になります。  
   
--   **__declspec(thread)** の属性の使用は、DLL のインポートの[遅延読み込み](../build/reference/linker-support-for-delay-loaded-dlls.md)に干渉する可能性があります**。**  
+-   **__declspec(thread)** の属性の使用は、DLL のインポートの[遅延読み込み](../build/reference/linker-support-for-delay-loaded-dlls.md)に干渉する可能性があります **。**  
   
  スレッド属性の使用の詳細については、[マルチスレッドのトピック](../parallel/multithreading-support-for-older-code-visual-cpp.md)に関するページをご覧ください。  
   

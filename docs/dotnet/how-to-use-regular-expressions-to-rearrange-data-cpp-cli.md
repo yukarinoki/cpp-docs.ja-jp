@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130865"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>方法: 正規表現を使用してデータを再配置する (C++/CLI)
 次のコード例では、.NET Framework 正規表現のサポートを使用して、再配置、またはデータの書式設定を変更する方法を示します。 次のコード例では、<xref:System.Text.RegularExpressions.Regex>と<xref:System.Text.RegularExpressions.Match>クラスを文字列からの姓と名を抽出し、逆の順序でこれらの要素の名前を表示します。  

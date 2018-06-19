@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366589"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY マクロ  
  アクセスできるように、これらのマクロがその COM マップにオブジェクトのインターフェイスを入力`QueryInterface`です。 COM マップ エントリの順序は、対応する注文インターフェイスがチェックされます**IID**中に`QueryInterface`です。  

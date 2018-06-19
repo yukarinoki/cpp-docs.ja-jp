@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890152"
 ---
 # <a name="uidefault"></a>uidefault
 型情報のメンバーがユーザー インターフェイスに表示する既定のメンバーであることを示します。  

@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413607"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf、_sscanf_l、swscanf、_swscanf_l
 
@@ -114,7 +115,7 @@ int _swscanf_l(
 **Sscanf**関数からデータを読み取る*バッファー*各によって指定された場所に*引数*です。 各*引数*に型指定子に対応する型の変数へのポインターにする必要があります*形式*です。 *形式*引数コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*の引数、 **scanf**関数。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 含む文字列を読み取るとき**sscanf**、向けに幅を必ず指定します、 **%s**形式 (たとえば、 **「% 男女」**の代わりに **"%s"**) 以外の場合、適切な形式で入力バッファー オーバーランが発生しやすくします。
+> 含む文字列を読み取るとき**sscanf**、向けに幅を必ず指定します、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**) 以外の場合、適切な形式で入力バッファー オーバーランが発生しやすくします。
 
 **swscanf**のワイド文字バージョンは、 **sscanf**; 引数**swscanf**ワイド文字列です。 **sscanf**マルチバイトの 16 進数文字を処理しません。 **swscanf** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **swscanf**と**sscanf**動作は同じです。
 
