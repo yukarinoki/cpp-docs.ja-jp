@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385084"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>チュートリアル: ツール バーへのコントロールの追加
 このトピックでは、Windows コントロールを含むツール バー ボタンをツール バーに追加する方法を説明します。 MFC では、ツールバーのボタンがある必要があります、 [CMFCToolBarButton クラス](../mfc/reference/cmfctoolbarbutton-class.md)-たとえば、クラスを派生[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)、 [CMFCToolBarEditBoxButton クラス](../mfc/reference/cmfctoolbareditboxbutton-class.md)、[CMFCDropDownToolbarButton クラス](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)、または[CMFCToolBarMenuButton クラス](../mfc/reference/cmfctoolbarmenubutton-class.md)です。  

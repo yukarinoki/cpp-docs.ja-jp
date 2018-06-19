@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379926"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>リッチ エディット コントロールでのストリーム操作
 リッチ エディット コントロールの内外にデータを転送するストリームを使用することができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 ストリームがによって定義された、 [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891)構造体は、バッファーと、アプリケーション定義のコールバック関数を指定します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335512"
 ---
 # <a name="active-documents"></a>Active ドキュメント
 アクティブなドキュメントは、OLE の複合ドキュメント テクノロジを拡張します。 これらの拡張機能は、オブジェクトがコンテナー内で機能をまだ保持の表示および印刷機能を制御できるように、ビューを管理する追加のインターフェイスの形式で提供されます。 この処理できるようになります (Microsoft Office バインダーや Microsoft Internet Explorer の場合) などの外部のフレームとネイティブ フレーム (、製品のビュー ポートなど) の両方にドキュメントを表示します。  

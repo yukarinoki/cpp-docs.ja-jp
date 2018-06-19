@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375925"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd クラス
 `CMultiPaneFrameWnd`クラスを拡張[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)です。 複数のペインをサポートします。 コントロール バーに埋め込まれたハンドルは 1 つではなく`CMultiPaneFrameWnd`が含まれています、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)いずれかをドッキングするのには、ユーザーを有効にするオブジェクト`CMultiPaneFrameWnd`別に、動的に複数の浮動小数点の作成、タブ付きwindows です。  

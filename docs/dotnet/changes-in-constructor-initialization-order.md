@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110355"
 ---
 # <a name="changes-in-constructor-initialization-order"></a>コンストラクターの初期化処理の順序における変更
 クラスのコンス トラクターの初期化の順序は、Visual C を c++ マネージ拡張から変更されました。  

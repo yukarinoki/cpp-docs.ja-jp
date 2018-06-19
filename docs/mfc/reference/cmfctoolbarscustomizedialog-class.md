@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378182"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog クラス
 モードレス タブ ダイアログ ボックス ( [CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md)) を使用して、ツールバー、メニューのキーボード ショートカット、ユーザー定義のツールおよびアプリケーションで visual スタイルをカスタマイズします。 通常、このダイアログ ボックスを表示するには、 **[ツール]** メニューの **[ユーザー設定]** をクリックします。  

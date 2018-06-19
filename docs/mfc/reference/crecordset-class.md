@@ -145,6 +145,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378736"
 ---
 # <a name="crecordset-class"></a>CRecordset クラス
 データ ソースから選択された 1 組のレコードセットを表現します。  
@@ -450,7 +451,7 @@ CRecordset(CDatabase* pDatabase = NULL);
   
 ### <a name="parameters"></a>パラメーター  
  `pDatabase`  
- ポインターが含まれています、`CDatabase`オブジェクトまたは値**NULL**です。 ない場合**NULL**と`CDatabase`オブジェクトの**開く**データ ソースに接続するメンバー関数が呼び出されていない、レコード セットが、ファイルを開いて、それ自体の中にしようとしています**を開く。**呼び出します。 渡す場合**NULL**、`CDatabase`オブジェクトが構築され、ClassWizard でレコード セット クラスの派生を指定したデータ ソース情報を使用するために接続します。  
+ ポインターが含まれています、`CDatabase`オブジェクトまたは値**NULL**です。 ない場合**NULL**と`CDatabase`オブジェクトの**開く**データ ソースに接続するメンバー関数が呼び出されていない、レコード セットが、ファイルを開いて、それ自体の中にしようとしています**を開く。** 呼び出します。 渡す場合**NULL**、`CDatabase`オブジェクトが構築され、ClassWizard でレコード セット クラスの派生を指定したデータ ソース情報を使用するために接続します。  
   
 ### <a name="remarks"></a>コメント  
  使用するか`CRecordset`直接からアプリケーションに固有のクラスを派生または`CRecordset`です。 ClassWizard を使用するには、レコード セット クラスを派生します。  
@@ -1417,7 +1418,7 @@ virtual BOOL Open(
   
 - **Crecordset::optimizebulkadd**同時に多数のレコードを追加する方法を最適化するために準備された SQL ステートメントを使用します。 ODBC API 関数を使用していない場合にのみ適用**SQLSetPos**をレコード セットを更新します。 最新の更新で、ダーティとマークされるフィールドが決まります。 このオプションは `CRecordset::useMultiRowFetch` と同時に指定できません。  
   
-- `CRecordset::useMultiRowFetch` 複数の行を 1 回のフェッチ操作で取得するようにするバルク行フェッチを実装します。 これは、パフォーマンスを向上するために設計された拡張機能です。ただし、バルク レコード フィールド エクスチェンジは ClassWizard ではサポートされていません。 このオプションで相互に排他的**crecordset::optimizebulkadd**です。 指定した場合`CRecordset::useMultiRowFetch`、オプションでは、 **crecordset::nodirtyfieldcheck**自動的に有効 (ダブル バッファリングは使用できません) 前方スクロール専用レコード セットをオプションで**。Crecordset::useextendedfetch**自動的に有効です。 バルク行フェッチの詳細については、「 [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。  
+- `CRecordset::useMultiRowFetch` 複数の行を 1 回のフェッチ操作で取得するようにするバルク行フェッチを実装します。 これは、パフォーマンスを向上するために設計された拡張機能です。ただし、バルク レコード フィールド エクスチェンジは ClassWizard ではサポートされていません。 このオプションで相互に排他的**crecordset::optimizebulkadd**です。 指定した場合`CRecordset::useMultiRowFetch`、オプションでは、 **crecordset::nodirtyfieldcheck**自動的に有効 (ダブル バッファリングは使用できません) 前方スクロール専用レコード セットをオプションで **。Crecordset::useextendedfetch**自動的に有効です。 バルク行フェッチの詳細については、「 [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。  
   
 - **Crecordset::skipdeletedrecords**レコード セット内を移動するときに削除されたすべてのレコードをスキップします。 これにより、特定の相対フェッチでパフォーマンスが低下します。 このオプションは前方スクロール専用レコードセットでは無効です。 呼び出す場合[移動](#move)で、`nRows`パラメーターを 0 に設定され、 **crecordset::skipdeletedrecords**オプションを設定、**移動**アサートされます。 注意してください**crecordset::skipdeletedrecords**に似ていますが*ドライバーによるパック*、削除された行を示しますが、レコード セットから削除されます。 ただし、ドライバーによってレコードがパックされる場合、ユーザー自身が削除するレコードだけがスキップされます。レコードセットを開いている間に他のユーザーによって削除されたレコードはスキップされません。 **Crecordset::skipdeletedrecords**は他のユーザーによって削除された行をスキップします。  
   

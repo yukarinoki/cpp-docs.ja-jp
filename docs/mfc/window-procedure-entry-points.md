@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382074"
 ---
 # <a name="window-procedure-entry-points"></a>ウィンドウ プロシージャのエントリ ポイント
 MFC のウィンドウ プロシージャ、特殊なウィンドウ プロシージャの実装とモジュールの静的リンクを保護します。 リンケージは、MFC とリンクすると、モジュールと自動的に発生します。 このウィンドウ プロシージャを使用して、`AFX_MANAGE_STATE`マクロを呼び出し、有効なモジュールの状態を正しく設定**プロシージャ**、順番にデリゲートを、`WindowProc`メンバー関数は、適切な`CWnd`-派生。オブジェクト。  

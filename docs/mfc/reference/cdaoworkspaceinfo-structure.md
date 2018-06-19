@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366292"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 構造体
 `CDaoWorkspaceInfo`構造体には、データ アクセス オブジェクト (DAO) データベースへのアクセスに対して定義されているワークスペースについての情報が含まれています。  

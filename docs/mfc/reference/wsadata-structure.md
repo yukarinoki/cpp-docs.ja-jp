@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380085"
 ---
 # <a name="wsadata-structure"></a>WSADATA 構造体
 `WSADATA`への呼び出しによって返される Windows ソケットの初期化情報を格納する構造体が使用される、`AfxSocketInit`グローバル関数。  

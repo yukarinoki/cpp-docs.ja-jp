@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378370"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows クラス
 `CMFCVisualManagerWindows` ユーザーが Windows XP または Vista テーマを選択したときに、Microsoft Windows XP または Microsoft Vista の外観を模倣します。  

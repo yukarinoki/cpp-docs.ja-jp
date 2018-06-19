@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169544"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>値型とその動作 (C++/CLI)
 値の型は、Visual C に C++ のマネージ拡張からのさまざまな方法で変更されました。 このセクションで見て CLR 列挙型とボックス化と、CLR ヒープ上のボックス化されたインスタンスへのアクセスを見てと内部ポインターと固定ポインターを見ると、値クラス型。 この領域に広範な言語に変更しました。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376559"
 ---
 # <a name="property-pages-mfc"></a>プロパティ ページ (MFC)
 プロパティ ページでは、表示およびダイアログ データ エクス (チェンジ DDX) に基づくデータ マッピング メカニズムをサポートすることによって編集用のカスタマイズ可能なグラフィカル インターフェイスで特定の OLE コントロール プロパティの現在の値が表示されます。  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382932"
 ---
 # <a name="special-cwinapp-services"></a>CWinApp のその他のサービス
 メッセージ ループの実行をアプリケーションを初期化し、その後をクリーンアップする機会を提供することだけでなく[CWinApp](../mfc/reference/cwinapp-class.md)他のいくつかのサービスを提供します。  

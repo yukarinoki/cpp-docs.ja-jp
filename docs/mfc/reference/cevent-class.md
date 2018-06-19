@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367504"
 ---
 # <a name="cevent-class"></a>CEvent クラス
 これは 1 つのスレッドに別のイベントが発生したことを通知できるようにする同期オブジェクト、イベントを表します。  

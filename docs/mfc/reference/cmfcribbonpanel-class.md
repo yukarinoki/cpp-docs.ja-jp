@@ -129,6 +129,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378044"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel クラス
 一連のリボン要素を含むパネルを実装します。 このパネルが描画されると、そのパネルに指定されたサイズに対して可能な限り多くの要素が表示されます。  

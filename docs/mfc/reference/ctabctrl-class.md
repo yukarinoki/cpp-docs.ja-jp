@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378557"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl クラス
 Windows のコモン タブ コントロールの機能が用意されています。  
@@ -660,7 +661,7 @@ int SetCurSel(int nItem);
  成功した場合、以前に選択したタブの 0 から始まるインデックスそれ以外の場合 - 1。  
   
 ### <a name="remarks"></a>コメント  
- タブ コントロールを送信しません、**は、**または**TCN_SELCHANGE**この関数を使用して、タブを選択すると、通知メッセージです。 使用して、これらの通知が送信**WM_NOTIFY**ユーザーがクリックするか、キーボードを使用して、タブを変更するときに、します。  
+ タブ コントロールを送信しません、**は、** または**TCN_SELCHANGE**この関数を使用して、タブを選択すると、通知メッセージです。 使用して、これらの通知が送信**WM_NOTIFY**ユーザーがクリックするか、キーボードを使用して、タブを変更するときに、します。  
   
 ##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
  タブ コントロールの拡張スタイルを設定します。  

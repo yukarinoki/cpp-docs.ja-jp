@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373196"
 ---
 # <a name="toolbar-control-styles"></a>ツール バー コントロールのスタイル
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)外観を決定するスタイル フラグのセットと、ボタンの動作を持ちます。 これらのフラグの組み合わせを設定するには呼び出すことによって[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)です。 このトピックでは、スタイル フラグの値とその意味を示します。  

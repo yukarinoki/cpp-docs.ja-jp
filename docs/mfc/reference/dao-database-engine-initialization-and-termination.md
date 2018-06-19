@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369903"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO データベース エンジンの初期化と終了
 DAO データベース エンジンの有効期限がありますまず MFC DAO オブジェクトを使用するときに初期化され、終了、アプリケーションまたは DLL が終了する前にします。 2 つの関数、`AfxDaoInit`と`AfxDaoTerm`、これらのタスクを実行します。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380800"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>月間予定表コントロールの日付状態の設定
 月間予定表コントロールの属性の 1 つは、月の日付ごとに、コントロールの日付状態と呼ばれます情報を格納する機能です。 この情報は、現在表示されている月の特定の日付を強調する使用されます。  

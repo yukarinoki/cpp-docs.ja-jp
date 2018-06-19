@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127306"
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>方法: ユーザー インタラクティブな状態を確認する (C++/CLI)
 次のコード例では、コードがユーザー対話型のコンテキストで実行されているかどうかを確認する方法を示します。 場合<xref:System.Environment.UserInteractive%2A>が false の場合、サービスのプロセスとして実行しているコードまたはから Web アプリケーションでは、内部場合必要がありますいないしようとするユーザーと対話します。  

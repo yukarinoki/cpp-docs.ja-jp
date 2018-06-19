@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376279"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC ウィザードとダイアログ ボックス
 Microsoft Foundation Class (MFC) ウィザードでは、さまざまな種類のコンポーネントとオブジェクトの定型コードを生成します。 プロジェクトのショートカット メニューを開き、ウィザードを実行することができます**ソリューション エクスプ ローラー**を選択して**追加**、**クラス**です。  

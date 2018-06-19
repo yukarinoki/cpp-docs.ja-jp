@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379204"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>ダイナミック データ エクスチェンジ (DDE) への応答
 フレーム ウィンドウは、ファイルから、ファイル マネージャーを開く (ファイル拡張子が登録されているか、アプリケーションに関連付けられている) 場合ダイナミック データ エクス (チェンジ DDE) 要求に応答できます。 参照してください[シェル登録](../mfc/special-cwinapp-services.md)です。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358483"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 1 つを作成するアプリケーションを作成するときに[CWinApp](../../mfc/reference/cwinapp-class.md)-派生オブジェクト。 ときに、外部からこのオブジェクトに関する情報を取得することがあります、 `CWinApp`-派生オブジェクト。 または、他のグローバル「マネージャー」のオブジェクトにアクセスする必要があります。

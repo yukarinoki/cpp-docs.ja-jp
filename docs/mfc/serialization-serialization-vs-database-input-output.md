@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379578"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>シリアル化: シリアル化とします。データベースの入力/出力
 この記事では、入力/出力 (I/O) ファイルをベースと他の I/O の手法が適切な場合に、ドキュメント オブジェクトおよびシリアル化を使用する場合について説明します: ため、アプリケーションは、読み取りし、データベース アプリケーションと同様に、トランザクションごとにデータを書き込みます。 シリアル化を使用しない場合もしないし、必要とするファイルを開く、保存、コマンドとして保存します。 トピックは次のとおりです。  

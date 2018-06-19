@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169437"
 ---
 # <a name="compiler-error-c2191"></a>コンパイラ エラー C2191
 最初よりも長い 2 番目のパラメーター リスト  

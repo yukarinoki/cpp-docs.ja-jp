@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366263"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 構造体
 `CDaoRelationInfo`構造体には、2 つのテーブルのフィールドの間で定義されている関係に関する情報が含まれています、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。  

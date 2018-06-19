@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129698"
 ---
 # <a name="lock-class"></a>lock クラス
 このクラスは、複数のスレッドからオブジェクトへのアクセスを同期するロックの取得を自動化します。  構築時にロックを取得し、リリースを破棄時ロックします。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131242"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>方法: テキスト ファイルを記述する (C++/CLI)
 テキスト ファイルを作成し、<xref:System.IO.StreamWriter> クラスを使用してそのファイルにテキストを書き込む方法を次の例に示します。このクラスは、<xref:System.IO> 名前空間で定義されています。 <xref:System.IO.StreamWriter> コンストラクターは、作成されるファイル名を受け取ります。 ファイルが存在する場合、そのファイルに上書きされます (ただし、2 番目の <xref:System.IO.StringWriter> コンストラクター引数として True を渡す場合は例外です)。  

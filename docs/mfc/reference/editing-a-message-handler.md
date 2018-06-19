@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375630"
 ---
 # <a name="editing-a-message-handler"></a>メッセージ ハンドラーの編集
 メッセージ ハンドラーを定義するは、コードを追加するメンバー関数の定義に移動することができます。  

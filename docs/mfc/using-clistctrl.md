@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382987"
 ---
 # <a name="using-clistctrl"></a>CListCtrl の使い方
 リスト コントロールを使用すると、ファイル エクスプ ローラーで、またはテキスト、アイコンの有無の単票形式のリストと同様に、ラベルが付いたアイコンの形を表示できます。 リスト コントロールで持つことができます、4 つ考えられる「ビュー」(MFC ビューと混同しないで not) の詳細については — アイコンの表示、小さいアイコン ビュー、リスト ビュー、およびレポートの表示-内のビューを参照してください、 [CListCtrl](../mfc/reference/clistctrl-class.md)クラスの概要です。  

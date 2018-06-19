@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381583"
 ---
 # <a name="using-cdatetimectrl"></a>CDateTimeCtrl の使い方
 日付と時刻の選択コントロール ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) を入力するか、特定の日付を選択すること、直感的で認識可能なメソッドを実装します。 コントロールのメイン インターフェイスは、コンボ ボックスの機能と似ています。 ただし、ユーザー コントロールを展開する (既定)、月間予定表コントロールが表示される場合は、特定の日付を指定するユーザーを許可します。 日付を選択すると、月間予定表コントロールでは、自動的に表示されなくなります。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385194"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス
 DDX 機能を使い慣れている場合でコントロール プロパティを使用することができます、[変数の追加メンバー ウィザード](../ide/add-member-variable-wizard.md): タイプ セーフなアクセスを作成します。 この方法は、コード ウィザードを使用しないコントロールを作成するよりも簡単です。  

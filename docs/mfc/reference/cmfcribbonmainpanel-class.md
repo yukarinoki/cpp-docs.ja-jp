@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367959"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel クラス
 クリックしたときに表示されるリボン パネルを実装、 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)です。  

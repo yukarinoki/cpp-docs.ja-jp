@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382874"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>CWnd オブジェクトの初期化のタイミング
 独自の子ウィンドウを作成またはのコンス トラクターで、Windows API 関数を呼び出すことはできません、 `CWnd`-派生オブジェクト。 これは、ため、`HWND`の`CWnd`オブジェクトがまだ作成されていません。 子ウィンドウを追加するなど、最も Windows 固有の初期化を行う必要があります、 [OnCreate](../mfc/reference/cwnd-class.md#oncreate)メッセージ ハンドラー。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372158"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL ウィザード
 MFC DLL ウィザードを使用して MFC DLL プロジェクトを作成するときにと一緒に取得した作業のスターター アプリケーション組み込みの機能をコンパイルされたときの基本的な機能を実装する[DLL](../../build/dlls-in-visual-cpp.md)です。 MFC スターター プログラムには、C++ ソース (.cpp) ファイル、リソース (.rc) ファイル、およびプロジェクト (.vcxproj) ファイルが含まれています。 これらの初期ファイルで生成されたコードは、MFC に基づいています。 詳細については、Visual Studio でプロジェクト用に生成する Readme.txt 内のファイルの詳細を参照してくださいおよび[クラスと MFC DLL ウィザードによって生成される関数。](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

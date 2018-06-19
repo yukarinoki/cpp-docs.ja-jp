@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374151"
 ---
 # <a name="logpen-structure"></a>LOGPEN 構造体
 `LOGPEN`構造体は、スタイル、幅、およびペンの色を定義、描画に使用する描画オブジェクトの直線し罫線します。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)関数は、`LOGPEN`構造体。  

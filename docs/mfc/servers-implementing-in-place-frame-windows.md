@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380865"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>サーバー : 埋め込み先フレーム ウィンドウの実装
 この記事では、サーバー アプリケーションを作成するアプリケーションのウィザードを使用しない場合、ビジュアル編集サーバー アプリケーションに埋め込み先フレーム ウィンドウを実装する必要な操作について説明します。 この記事で説明した手順に従うと、代わりに、アプリケーション ウィザードで生成されたアプリケーションまたは Visual C で提供されたサンプルのいずれかから既存の埋め込み先フレーム ウィンドウ クラスを使用する可能性があります。  

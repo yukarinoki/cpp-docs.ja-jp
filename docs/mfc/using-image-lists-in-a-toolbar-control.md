@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382851"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>ツール バー コントロールでのイメージ リストの使い方
 既定では、ツール バー コントロールのボタンが使用するイメージは、1 つのビットマップとして格納されます。 ただし、一連のイメージ リストのボタンのイメージを保存することもできます。 ツール バー コントロール オブジェクトは、最大 3 つの別々 のイメージ リストを使用できます。  

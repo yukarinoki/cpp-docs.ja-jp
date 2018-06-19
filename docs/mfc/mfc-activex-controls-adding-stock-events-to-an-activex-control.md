@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359339"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加
 ストック イベントは、クラスによって自動的に呼び出される点で、カスタム イベントとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 `COleControl` 定義済みのメンバー関数の一般的なアクションの結果として得られるイベントを発生させることがあります。 いくつかの一般的なアクションによって実装される`COleControl`に含める 1 つのシングル クリックやダブルクリック コントロール、キーボード イベント、および変更のマウス ボタンの状態。 ストック イベントのイベント マップ エントリには、必ず、 **EVENT_STOCK**プレフィックス。  

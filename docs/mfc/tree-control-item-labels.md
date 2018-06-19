@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381512"
 ---
 # <a name="tree-control-item-labels"></a>ツリー コントロールの項目のラベル
 ツリー コントロールに項目を追加するときに通常、項目のラベルのテキストを指定する ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 `InsertItem`メンバー関数に渡すことができます、 [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456)ラベルのテキストを含む文字列を含む、アイテムのプロパティを定義する構造体。 `InsertItem` パラメーターのさまざまな組み合わせで呼び出すことができるいくつかのオーバー ロードがあります。  

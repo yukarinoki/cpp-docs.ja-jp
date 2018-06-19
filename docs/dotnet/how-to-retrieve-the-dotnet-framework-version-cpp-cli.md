@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128772"
 ---
 # <a name="how-to-retrieve-the-net-framework-version-ccli"></a>方法: .NET Framework のバージョンを取得する (C++/CLI)
 次のコード例を使用して、現在インストールされている .NET Framework のバージョンを確認する方法を示しています、<xref:System.Environment.Version%2A>ポインターであるプロパティを<xref:System.Version>バージョン情報を含むオブジェクト。  

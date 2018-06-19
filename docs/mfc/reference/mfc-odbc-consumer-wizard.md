@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371425"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC コンシューマー ウィザード
 「検索結果」の概要をここに挿入します。  

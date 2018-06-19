@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131307"
 ---
 # <a name="managed-types-and-the-main-function-ccli"></a>マネージ型と main 関数 (C++/CLI)
 使用して、アプリケーションの書き込み時に **/clr**の引数、 **main()** 関数をマネージ型にすることはできません。  

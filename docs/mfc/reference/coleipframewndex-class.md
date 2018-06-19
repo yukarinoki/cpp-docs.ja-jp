@@ -109,6 +109,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377572"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx クラス
 `COleIPFrameWndEx` クラスは、MFC をサポートする OLE コンテナーを実装します。 アプリケーションの埋め込み先フレーム ウィンドウ クラスを、 `COleIPFrameWndEx` COleIPFrameWnd [クラスからではなく、](../../mfc/reference/coleipframewnd-class.md)クラスから派生させる必要があります 

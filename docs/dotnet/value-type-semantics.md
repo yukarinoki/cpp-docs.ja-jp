@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171854"
 ---
 # <a name="value-type-semantics"></a>値型セマンティクス
 値型のセマンティクスは、Visual C に C++ のマネージ拡張から変更されました。  

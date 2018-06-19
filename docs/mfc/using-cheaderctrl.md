@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382451"
 ---
 # <a name="using-cheaderctrl"></a>CHeaderCtrl の使い方
 クラスによって表される、ヘッダー コントロールを使用して[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)、単票形式の一覧については、列ヘッダーを表示します。 たとえば、ヘッダー コントロールは、スプレッドシートで列のコントロールを実装するために役立ちますになります。  

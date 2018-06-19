@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366923"
 ---
 # <a name="cgopherlocator-class"></a>関数クラス
 Gopher「ロケーター」を gopher サーバーから取得、ロケーターの種類を決定し、ロケーターを可能に[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)です。  
