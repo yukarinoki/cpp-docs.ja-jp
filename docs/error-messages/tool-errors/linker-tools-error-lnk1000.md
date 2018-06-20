@@ -1,7 +1,7 @@
 ---
 title: リンカ ツール エラー LNK1000 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f67df9c53b79fabfc9559380b5b57a72e64cb8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a01db36200995813ec4b6862e9ddd04c6f069ba
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298237"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238683"
 ---
 # <a name="linker-tools-error-lnk1000"></a>リンカ ツール エラー LNK1000
-不明なエラーです。テクニカル サポート オプションのドキュメントを参照してください。  
-  
- エラーの状況を再現しようとして問題を特定し、再現可能なテスト_ケースを作成しにお問い合わせください`Microsoft Product Support Services`です。 詳細を調査し、これらのエラーを報告する方法については、次を参照してください。 [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650)です。  
-  
- 標準ヘッダー ファイル (たとえば、dos.h) と、自分のファイルが混在する場合、このエラーが発生する可能性があります。 `#include` 標準ヘッダー、後に、独自のヘッダー ファイルです。
+
+> 不明なエラーです。テクニカル サポート オプションのドキュメントを参照してください。
+
+エラーの状況を記録してから、問題を特定し、再現可能なテスト_ケースの作成やり直してください。 詳細を調査し、これらのエラーを報告する方法については、次を参照してください。 [Visual c ツールセットまたはドキュメントで問題を報告する方法](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md)です。
+
+標準ヘッダー ファイル (たとえば、Windows.h) と、自分のファイルが混在する場合、このエラーが発生する可能性があります。 いずれか、最初に、次に、標準ヘッダーは、独自のヘッダー ファイルに続く場合は、プリコンパイル済みヘッダーが含まれます。

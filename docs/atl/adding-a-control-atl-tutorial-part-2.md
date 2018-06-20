@@ -1,7 +1,7 @@
 ---
 title: コントロール (ATL チュートリアル、パート 2) の追加 |Microsoft ドキュメント
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358577"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238709"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>コントロールの追加 (ATL チュートリアル、パート 2)
 このステップでは、コントロールをプロジェクトに追加し、ビルドして、Web ページでテストします。  
@@ -26,7 +26,7 @@ ms.locfileid: "32358577"
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>オブジェクトを ATL プロジェクトに追加するには  
   
-1.  クラス ビューで、Polygon プロジェクトを右クリックします。  
+1.  **ソリューション エクスプ ローラー**、Polygon プロジェクトを右クリックします。  
   
 2.  をポイント**追加**クリックしてショートカット メニューの **新しい項目の**サブメニューにします。  
   

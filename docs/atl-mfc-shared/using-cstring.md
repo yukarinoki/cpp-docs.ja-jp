@@ -1,7 +1,7 @@
 ---
 title: CString の使用 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361702"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238722"
 ---
 # <a name="using-cstring"></a>CString の使用
 このセクションのトピックでは、`CString` を使用したプログラミング方法について説明します。 に関するリファレンス ドキュメント、`CString`クラス、ドキュメントを参照して[CStringT](../atl-mfc-shared/reference/cstringt-class.md)です。  
@@ -32,7 +32,7 @@ ms.locfileid: "32361702"
   
  `CStringW` オブジェクトには `wchar_t` 型が格納され、Unicode 文字列がサポートされます。 `CStringA` オブジェクトには `char` 型が格納され、1 バイト文字列とマルチバイト (MBCS) 文字列がサポートされます。 `CString` オブジェクトでは、コンパイル時に `char` シンボルと `wchar_t` シンボルのどちらが定義されているかに従って、`MBCS` 型または `UNICODE` 型のいずれかがサポートされます。  
   
- `CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` は `null` で終わる C スタイルの文字列を受け入れますが、格納されている文字データでは `null` 文字は保持されません。 代わりに、`CString` は文字列の長さを追跡します。 `CString` は、C スタイルの文字列をエクスポートするときに null 終端文字を付与します。 `null` に `CString` を挿入できますが、予期しない結果になる場合があります。  
+ `CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` 受け付ける`null`-C スタイルの文字列を終了します。 `CString` パフォーマンスを向上させることが、文字列の長さも保持トラック、 `null` LPCWSTR への変換をサポートするために格納されている文字データの文字です。 `CString` C スタイルの文字列をエクスポートする際に、null 終端文字が含まれます。 挿入することができます、`null`内の他の場所で、 `CString`、予期しない結果が生じる。  
   
  文字列クラス `CAtlString`、`CAtlStringA`、および `CAtlStringW` は、CRT サポートがある場合もない場合も、MFC ライブラリにリンクせずに使用できます。  
   
