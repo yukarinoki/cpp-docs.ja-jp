@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283341"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271371"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル  
   
@@ -321,7 +321,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`ES_NOHIDESEL`|通常、エディット コントロールには、選択が非表示とコントロールが入力フォーカスを失ったコントロールが入力フォーカスを受け取ると、選択範囲を反転します。 指定する`ES_NOHIDESEL`この既定のアクションを削除します。|  
 |`ES_NUMBER`|エディット コントロールに入力する数字のみを使用できます。|  
 |`ES_OEMCONVERT`|エディット コントロールに入力されたテキストは、ANSI 文字セットから OEM 文字セットと ANSI 戻りますに変換されます。 これにより、アプリケーションを呼び出すと、文字変換が適切、`AnsiToOem`エディット コントロール内の ANSI 文字列を OEM 文字に変換する Windows の機能です。 このスタイルは、ファイル名を格納している編集コントロールに最も役立ちます。|  
-|`ES_PASSWORD`|すべての文字をアスタリスクが表示されます (**\***) エディット コントロールに入力されます。 アプリケーションで使用できます、`SetPasswordChar`表示されている文字を変更するメンバー関数。|  
+|`ES_PASSWORD`|すべての文字をアスタリスクが表示されます (**\\\***) エディット コントロールに入力されます。 アプリケーションで使用できます、`SetPasswordChar`表示されている文字を変更するメンバー関数。|  
 |`ES_READONLY`|ユーザーが入力するか、エディット コントロールでテキストを編集できなくなります。|  
 |`ES_RIGHT`|単一行または複数行エディット コントロールで右揃えのテキストです。|  
 |`ES_UPPERCASE`|大文字のエディット コントロールに入力されたすべての文字に変換します。|  

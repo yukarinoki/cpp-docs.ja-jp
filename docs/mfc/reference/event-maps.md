@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e7ab64af82e2f37104f82778d4c6f5eb12bd032
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377889"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271306"
 ---
 # <a name="event-maps"></a>イベント マップ
 コントロール コンテナー (キーストローク、マウスのクリック、コントロールの状態の変更など) 何らかのアクション (コントロールの開発者によって決まります) が発生したに通知することを希望するたびにイベントを発生させる関数を呼び出します。 この関数は、コントロール コンテナー、関連するイベントを発生させることによっていくつかの重要なアクションが発生したことを通知します。  
@@ -65,12 +65,12 @@ ms.locfileid: "33377889"
 DECLARE_EVENT_MAP()   
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、`DECLARE_EVENT_MAP`クラスの宣言の最後にマクロです。 クラスのメンバー関数を定義する .cpp ファイルを使用して、`BEGIN_EVENT_MAP`マクロ、コントロールのイベントの各マクロ エントリと`END_EVENT_MAP`イベント リストの末尾を宣言するマクロです。  
   
  イベント マップの詳細については、記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
@@ -87,12 +87,12 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
  `baseClass`  
  基本クラスの名前を指定`theClass`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  実装 (.cpp) ファイルで、クラスのメンバー関数を定義するを持つイベント マップを開始、`BEGIN_EVENT_MAP`マクロ、イベントの各マクロ エントリを追加しを持つイベント マップの完了、`END_EVENT_MAP`マクロです。  
   
  イベントの詳細については次のようにマップします。 および`BEGIN_EVENT_MAP`マクロ、記事を参照して[ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="end_event_map"></a>  END_EVENT_MAP  
@@ -102,7 +102,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 END_EVENT_MAP()   
 ```  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="event_custom"></a>  EVENT_CUSTOM  
@@ -122,7 +122,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
  `vtsParams`  
  関数のパラメーター リストを指定する 1 つまたは複数の定数のスペースで区切られた一覧です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `vtsParams`パラメーターはスペースで区切られた一連の値から、 **vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
@@ -140,17 +140,17 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_CY**|**通貨**|  
 |**VTS_DATE**|**DATE**|  
-|**VTS_BSTR**|**const char\***|  
+|**VTS_BSTR**|**const char\\\***|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
-|**VTS_FONT**|**IFontDispatch\***|  
+|**VTS_FONT**|**IFontDispatch\\\***|  
 |**VTS_HANDLE**|`HANDLE`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const バリアント\***|  
-|**VTS_PVARIANT**|**バリアント\***|  
+|**VTS_VARIANT**|**const バリアント\\\***|  
+|**VTS_PVARIANT**|**バリアント\\\***|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE**|  
-|**VTS_PICTURE**|**IPictureDisp\***|  
+|**VTS_PICTURE**|**IPictureDisp\\\***|  
 |**VTS_TRISTATE**|**OLE_TRISTATE**|  
 |**VTS_XPOS_PIXELS**|**OLE_XPOS_PIXELS**|  
 |**VTS_YPOS_PIXELS**|**OLE_YPOS_PIXELS**|  
@@ -164,7 +164,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 > [!NOTE]
 >  追加のバリアント定数が定義されて、すべてのバリアント型の例外を除いて**VTS_FONT**と**VTS_PICTURE**、variant データ定数へのポインターを提供します。 これらの定数の名前、**付け**`constantname`規則。 たとえば、 **VTS_PCOLOR**へのポインター、 **VTS_COLOR**定数。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
@@ -192,7 +192,7 @@ EVENT_CUSTOM_ID(
  `vtsParams`  
  パラメーターの変数の一覧は、イベントが発生したときに、コントロールのコンテナーに渡されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `vtsParams`引数がスペースで区切られた一連の値から、 **vts _** 定数。 これらの値のないコンマ、スペースで区切られた 1 つ以上の関数のパラメーター リストを指定します。 例えば:  
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
@@ -201,7 +201,7 @@ EVENT_CUSTOM_ID(
   
  一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](#event_custom)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="on_oleverb"></a>  ON_OLEVERB  
@@ -218,7 +218,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
  `memberFxn`  
  動詞が呼び出されたときに、フレームワークによって呼び出される関数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リソース エディターは、文字列テーブルに追加されるカスタム動詞名を作成して使用できます。  
   
  関数のプロトタイプ`memberFxn`は。  
@@ -230,7 +230,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
   
  値、 `lpMsg`、 `hWndParent`、および`lpRect`パラメーターは、対応するパラメーターから取得、 **IOleObject::DoVerb**メンバー関数。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxole.h  
   
 ##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
@@ -247,13 +247,13 @@ ON_STDOLEVERB(iVerb,   memberFxn)
  `memberFxn`  
  動詞が呼び出されたときに、フレームワークによって呼び出される関数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  形式は、標準の動詞インデックス**OLEIVERB_** アクションと、その後です。 `OLEIVERB_SHOW`、 `OLEIVERB_HIDE`、および`OLEIVERB_UIACTIVATE`標準的な動詞の例を示します。  
   
  参照してください[ON_OLEVERB](#on_oleverb)として使用する関数のプロトタイプの詳細については、`memberFxn`パラメーター。  
 
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxole.h  
     
 ## <a name="see-also"></a>関連項目  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0f885ad5ef8202e7826a8f53dc5df832eecc372
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374566"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271335"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 単一のインターネット セッションまたは複数の同時インターネット セッションを作成し、初期化します。必要な場合は、プロキシ サーバーへの接続も記述します。  
@@ -89,7 +89,7 @@ class CInternetSession : public CObject
 |----------|-----------------|  
 |[CInternetSession::operator HINTERNET](#operator_hinternet)|現在のインターネット セッションへのハンドル。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アプリケーションの実行中には、インターネット接続を保持する必要が場合、は、作成、`CInternetSession`クラスのメンバー [CWinApp](../../mfc/reference/cwinapp-class.md)です。  
   
  インターネット セッションを確立すると呼び出す[OpenURL](#openurl)です。 `CInternetSession` グローバル関数を呼び出すことによって、URL を解析[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)です。 そのプロトコルの種類に関係なく`CInternetSession`URL を解釈しを管理します。 URL リソース file:// で識別されるローカル ファイルへの要求を処理できます。 `OpenURL` ポインターを返す、 [CStdioFile](../../mfc/reference/cstdiofile-class.md)オブジェクト名を渡す場合に、ローカル ファイルです。  
@@ -116,7 +116,7 @@ class CInternetSession : public CObject
   
  `CInternetSession`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cinternetsession"></a>  CInternetSession::CInternetSession  
@@ -163,7 +163,7 @@ CInternetSession(
   
 - `INTERNET_FLAG_OFFLINE` ダウンロード操作がなければ、永続的なキャッシュのみを使用します。 項目がキャッシュに存在しない場合は、該当するエラー コードが返されます。 このフラグは、ビットごとと組み合わせること`OR`( **&#124;**) 演算子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **CInternetSession**は、最初のインターネット関数は、アプリケーションによって呼び出されます。 内部データ構造体を初期化し、アプリケーションからの以降の呼び出しを準備します。  
   
  インターネット接続を開くことができる場合`CInternetSession`スロー、 [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)です。  
@@ -195,7 +195,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ステータス コールバックを処理する場合は、アプリケーションのステータス バーに (名前の解決、サーバーに接続する) などの操作の進行状況に関するステータスを提供できます。 操作のステータスの表示は、長期的な操作中に特にです。  
   
  コールバックは、要求の処理中に発生する、アプリケーションは、ネットワークにデータ スループットの低下を防ぐために、コールバックでできるだけ時間を節約する必要があります。 たとえば、コールバックでは、ダイアログ ボックスを配置するには、時間のかかる操作、サーバーは要求を終了する可能性があります。  
@@ -214,7 +214,7 @@ DWORD_PTR GetContext() const;
 ### <a name="return-value"></a>戻り値  
  アプリケーションで定義されたコンテキスト識別子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [OnStatusCallback](#onstatuscallback)によって返されるコンテキスト ID を使用して**GetContext**特定のアプリケーションの状態を報告します。 たとえば、ステータス情報を返すを含むインターネット要求をアクティブにしても、ときにステータス コールバックはその特定の要求の状態をレポートのコンテキスト ID を使用します。 2 つの異なるをアクティブ化した場合は、インターネットの両方が含まれる状態情報を返すことが要求`OnStatusCallback`コンテキスト識別子を使用して、対応する要求の状態を返します。 そのため、コンテキスト識別子は、状態のすべてのコールバック操作の使用され、セッションが終了するまで、セッションに関連付けられています。  
   
  非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)です。  
@@ -256,7 +256,7 @@ static BOOL GetCookie(
   
 - **ERROR_INSUFFICIENT_BUFFER**に渡された値`dwBufLen`cookie のすべてのデータをコピーするのに十分ではありません。 返される値`dwBufLen`バッファーのサイズをすべてのデータを取得するために必要です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  2 番目のオーバー ロードでは、MFC、cookie にデータを取得、指定された`CString`オブジェクト。  
   
 ##  <a name="getcookielength"></a>  CInternetSession::GetCookieLength  
@@ -278,7 +278,7 @@ static DWORD GetCookieLength(
 ### <a name="return-value"></a>戻り値  
  A`DWORD`バッファーに格納されている、cookie の長さを示す値。 によって示される名前のない cookie の場合は 0`pstrCookieName`が存在します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この値を使用して[GetCookie](#getcookie)です。  
   
 ##  <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection  
@@ -319,7 +319,7 @@ CFtpConnection* GetFtpConnection(
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CFtpConnection](../../mfc/reference/cftpconnection-class.md)オブジェクト。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `GetFtpConnection` FTP サーバーに接続しを作成してへのポインターを返します、 **CFTPConnection**オブジェクト。 サーバー上の特定の操作は行われません。 ファイルに対する読み取りまたは書き込みする場合は、たとえば、別の手順としてこれらの操作を実行する必要があります。 クラスを参照してください[CFtpConnection](../../mfc/reference/cftpconnection-class.md)と[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)ファイルの検索方法については、のファイルを開くの読み取りや書き込みをファイルにします。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)FTP 接続の一般的なタスクを実行する手順についてです。  
   
 ### <a name="example"></a>例  
@@ -352,7 +352,7 @@ CGopherConnection* GetGopherConnection(
 ### <a name="return-value"></a>戻り値  
  ポインター、[関数](../../mfc/reference/cgopherconnection-class.md)オブジェクト。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `GetGopherConnection` gopher サーバーに接続しを作成してへのポインターを返します、`CGopherConnection`オブジェクト。 サーバー上の特定の操作は行われません。 データを読み取ったり書き込んだりする場合は、たとえば、別の手順としてこれらの操作を実行する必要があります。 クラスを参照してください[関数](../../mfc/reference/cgopherconnection-class.md)、 [CGopherFile](../../mfc/reference/cgopherfile-class.md)、および[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)ファイルの検索方法については、のファイルを開くの読み取りや書き込みをファイルにします。 FTP サイトを参照する方法については、このメンバー関数を参照してください。 [OpenURL](#openurl)です。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)gopher 接続の一般的なタスクを実行する手順についてです。  
   
 ##  <a name="gethttpconnection"></a>  代わりに  
@@ -393,7 +393,7 @@ CHttpConnection* GetHttpConnection(
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CHttpConnection](../../mfc/reference/chttpconnection-class.md)オブジェクト。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `GetHttpConnection` HTTP サーバーに接続しを作成してへのポインターを返します、`CHttpConnection`オブジェクト。 サーバー上の特定の操作は行われません。 たとえば、HTTP ヘッダーを照会する場合は、別のステップとしてこの操作を実行する必要があります。 クラスを参照してください[CHttpConnection](../../mfc/reference/chttpconnection-class.md)と[CHttpFile](../../mfc/reference/chttpfile-class.md)操作については、HTTP サーバーへの接続を使用して実行することができます。 HTTP サイトを参照する方法については、このメンバー関数を参照してください。 [OpenURL](#openurl)です。 記事を参照して[wininet の基礎を使用したプログラミング インターネット](../../mfc/win32-internet-extensions-wininet.md)HTTP 接続の一般的なタスクを実行する手順についてです。  
   
 ##  <a name="onstatuscallback"></a>  :Onstatuscallback  
@@ -420,7 +420,7 @@ virtual void OnStatusCallback(
  `dwStatusInformationLength`  
  `lpvStatusInformation` のサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初に呼び出す必要があります[使用](#enablestatuscallback)ステータス コールバックを活用するためにします。  
   
  `dwInternetStatus`パラメーターは、実行中の操作を示すしの内容を決定`lpvStatusInformation`になります。 `dwStatusInformationLength` 含まれるデータの長さを示す`lpvStatusInformation`です。 次の状態の値を`dwInternetStatus`次のように定義されます。  
@@ -498,12 +498,12 @@ CStdioFile* OpenURL(
   
 |URL の種類|戻り値|  
 |--------------|-------------|  
-|file://|**CStdioFile\***|  
-|http://|**CHttpFile\***|  
-|gopher://|**CGopherFile\***|  
-|ftp://|**CInternetFile\***|  
+|file://|**CStdioFile\\\***|  
+|http://|**CHttpFile\\\***|  
+|gopher://|**CGopherFile\\\***|  
+|ftp://|**CInternetFile\\\***|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  パラメーター`dwFlags`いずれかを含める必要があります**INTERNET_FLAG_TRANSFER_ASCII**または**INTERNET_FLAG_TRANSFER_BINARY**、両方は使用しません。 その他のフラグは、演算と組み合わせることができます`OR`演算子 ( **&#124;**)。  
   
  `OpenURL`、Win32 関数をラップする**アクセス**、のみをダウンロード、取得、およびインターネット サーバーからのデータの読み取りを許可します。 `OpenURL` により、なし、リモートの場所にファイルの操作に必要のないように[関数](../../mfc/reference/cinternetconnection-class.md)オブジェクト。  
@@ -540,7 +540,7 @@ static BOOL SetCookie(
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、または**FALSE**それ以外の場合。 特定のエラー コードを取得するには、呼び出す**GetLastError です。**  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)Windows SDK で説明されている。  
   
 ##  <a name="setoption"></a>  CInternetSession::SetOption  
