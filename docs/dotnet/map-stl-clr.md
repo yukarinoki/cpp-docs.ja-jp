@@ -7,24 +7,114 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - cliext::map
+- cliext::map::begin
+- cliext::map::clear
+- cliext::map::const_iterator
+- cliext::map::const_reference
+- cliext::map::const_reverse_iterator
+- cliext::map::count
+- cliext::map::difference_type
+- cliext::map::empty
+- cliext::map::end
+- cliext::map::equal_range
+- cliext::map::erase
+- cliext::map::find
+- cliext::map::generic_container
+- cliext::map::generic_iterator
+- cliext::map::generic_reverse_iterator
+- cliext::map::generic_value
+- cliext::map::insert
+- cliext::map::iterator
+- cliext::map::key_comp
+- cliext::map::key_compare
+- cliext::map::key_type
+- cliext::map::lower_bound
+- cliext::map::make_value
+- cliext::map::map
+- cliext::map::mapped_type
+- cliext::map::operator=
+- cliext::map::operator
+- cliext::map::rbegin
+- cliext::map::reference
+- cliext::map::rend
+- cliext::map::reverse_iterator
+- cliext::map::size
+- cliext::map::size_type
+- cliext::map::swap
+- cliext::map::to_array
+- cliext::map::upper_bound
+- cliext::map::value_comp
+- cliext::map::value_compare
+- cliext::map::value_type
+- cliext::operator!= (map)
+- cliext::operator< (map)
+- cliext::operator<= (map)
+- cliext::operator== (map)
+- cliext::operator> (map)
+- cliext::operator>= (map)
 dev_langs:
 - C++
 helpviewer_keywords:
 - <map> header [STL/CLR]
 - map class [STL/CLR]
 - <cliext/map> header [STL/CLR]
+- begin member [STL/CLR]
+- clear member [STL/CLR]
+- const_iterator member [STL/CLR]
+- const_reference member [STL/CLR]
+- const_reverse_iterator member [STL/CLR]
+- count member [STL/CLR]
+- difference_type member [STL/CLR]
+- empty member [STL/CLR]
+- end member [STL/CLR]
+- equal_range member [STL/CLR]
+- erase member [STL/CLR]
+- find member [STL/CLR]
+- generic_container member [STL/CLR]
+- generic_iterator member [STL/CLR]
+- generic_reverse_iterator member [STL/CLR]
+- generic_value member [STL/CLR]
+- insert member [STL/CLR]
+- iterator member [STL/CLR]
+- key_comp member [STL/CLR]
+- key_compare member [STL/CLR]
+- key_type member [STL/CLR]
+- lower_bound member [STL/CLR]
+- make_value member [STL/CLR]
+- map member [STL/CLR]
+- mapped_type member [STL/CLR]
+- operator= member [STL/CLR]
+- operator member [STL/CLR]
+- rbegin member [STL/CLR]
+- reference member [STL/CLR]
+- rend member [STL/CLR]
+- reverse_iterator member [STL/CLR]
+- size member [STL/CLR]
+- size_type member [STL/CLR]
+- swap member [STL/CLR]
+- to_array member [STL/CLR]
+- upper_bound member [STL/CLR]
+- value_comp member [STL/CLR]
+- value_compare member [STL/CLR]
+- value_type member [STL/CLR]
+- operator!= (map) member [STL/CLR]
+- operator< (map) member [STL/CLR]
+- operator<= (map) member [STL/CLR]
+- operator== (map) member [STL/CLR]
+- operator> (map) member [STL/CLR]
+- operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cda679ed01e5266f0605639df45940d8f17e506d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
+ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137791"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305827"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`map`1 つの要素を格納する各ノードのバランスの取れた (ほとんど) の順序付けられたツリーとして要素のシーケンスを管理します。 要素は、シーケンスとよいに沿って移動する、マップされた値は、管理するためのキーで構成されます。  
@@ -63,62 +153,67 @@ template<typename Key,
   
  マップ  
  被制御シーケンス内の要素の追加のコンポーネントの型。  
+
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** \<cliext マップ/>  
   
-## <a name="members"></a>メンバー  
+ **Namespace:** cliext  
+  
+## <a name="declarations"></a>宣言
   
 |型定義|説明|  
 |---------------------|-----------------|  
-|[map::const_iterator (STL/CLR)](../dotnet/map-const-iterator-stl-clr.md)|被制御シーケンスの定数反復子の型です。|  
-|[map::const_reference (STL/CLR)](../dotnet/map-const-reference-stl-clr.md)|要素への定数参照の型です。|  
-|[map::const_reverse_iterator (STL/CLR)](../dotnet/map-const-reverse-iterator-stl-clr.md)|被制御シーケンスの定数反転反復子の型です。|  
-|[map::difference_type (STL/CLR)](../dotnet/map-difference-type-stl-clr.md)|2 つの要素間の距離を (場合によっては符号付き) の型。|  
-|[map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)|コンテナーのジェネリック インターフェイスの型。|  
-|[map::generic_iterator (STL/CLR)](../dotnet/map-generic-iterator-stl-clr.md)|コンテナーのジェネリック インターフェイスの反復子の型。|  
-|[map::generic_reverse_iterator (STL/CLR)](../dotnet/map-generic-reverse-iterator-stl-clr.md)|コンテナーのジェネリック インターフェイスの反転反復子の型。|  
-|[map::generic_value (STL/CLR)](../dotnet/map-generic-value-stl-clr.md)|コンテナーのジェネリック インターフェイスの要素の型。|  
-|[map::iterator (STL/CLR)](../dotnet/map-iterator-stl-clr.md)|被制御シーケンスの反復子の型です。|  
-|[map::key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)|2 つのキーの順序付けのデリゲート。|  
-|[map::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)|順序付けキーの型です。|  
-|[map::mapped_type (STL/CLR)](../dotnet/map-mapped-type-stl-clr.md)|各キーに関連付けられているマップされた値の型。|  
-|[map::reference (STL/CLR)](../dotnet/map-reference-stl-clr.md)|要素への参照の型です。|  
-|[map::reverse_iterator (STL/CLR)](../dotnet/map-reverse-iterator-stl-clr.md)|被制御シーケンスの反転反復子の型です。|  
-|[map::size_type (STL/CLR)](../dotnet/map-size-type-stl-clr.md)|(負符号) 距離は 2 つの要素の型。|  
-|[map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)|2 つの要素値の順序付けのデリゲート。|  
-|[map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)|要素の型。|  
+|[map::const_iterator (STL/CLR)](#const_iterator)|被制御シーケンスの定数反復子の型です。|  
+|[map::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|  
+|[map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|  
+|[map::difference_type (STL/CLR)](#difference_type)|2 つの要素間の距離を (場合によっては符号付き) の型。|  
+|[map::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリック インターフェイスの型。|  
+|[map::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリック インターフェイスの反復子の型。|  
+|[map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリック インターフェイスの反転反復子の型。|  
+|[map::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリック インターフェイスの要素の型。|  
+|[map::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|  
+|[map::key_compare (STL/CLR)](#key_compare)|2 つのキーの順序付けのデリゲート。|  
+|[map::key_type (STL/CLR)](#key_type)|順序付けキーの型です。|  
+|[map::mapped_type (STL/CLR)](#mapped_type)|各キーに関連付けられているマップされた値の型。|  
+|[map::reference (STL/CLR)](#reference)|要素への参照の型です。|  
+|[map::reverse_iterator (STL/CLR)](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|  
+|[map::size_type (STL/CLR)](#size_type)|(負符号) 距離は 2 つの要素の型。|  
+|[map::value_compare (STL/CLR)](#value_compare)|2 つの要素値の順序付けのデリゲート。|  
+|[map::value_type (STL/CLR)](#value_type)|要素の型。|  
   
 |メンバー関数|説明|  
 |---------------------|-----------------|  
-|[map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)|被制御シーケンスの先頭を指定します。|  
-|[map::clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)|すべての要素を削除します。|  
-|[map::count (STL/CLR)](../dotnet/map-count-stl-clr.md)|指定したキーに一致する要素の数をカウントします。|  
-|[map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)|要素が存在しないかどうかをテストします。|  
-|[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)|被制御シーケンスの末尾を指定します。|  
-|[map::equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)|指定したキーに一致する範囲を検索します。|  
-|[map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md)|指定した位置にある要素を削除します。|  
-|[map::find (STL/CLR)](../dotnet/map-find-stl-clr.md)|指定したキーに一致する要素を検索します。|  
-|[map::insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)|要素を追加します。|  
-|[map::key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)|2 つのキーの順序付けのデリゲートをコピーします。|  
-|[map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)|指定したキーに一致する範囲の先頭を検出します。|  
-|[map::make_value (STL/CLR)](../dotnet/map-make-value-stl-clr.md)|値オブジェクトを構築します。|  
-|[map::map (STL/CLR)](../dotnet/map-map-stl-clr.md)|コンテナー オブジェクトを構築します。|  
-|[map::rbegin (STL/CLR)](../dotnet/map-rbegin-stl-clr.md)|反転被制御シーケンスの先頭を指定します。|  
-|[map::rend (STL/CLR)](../dotnet/map-rend-stl-clr.md)|反転被制御シーケンスの末尾を指定します。|  
-|[map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)|要素の数をカウントします。|  
-|[map::swap (STL/CLR)](../dotnet/map-swap-stl-clr.md)|2 つのコンテナーのコンテンツを交換します。|  
-|[map::to_array (STL/CLR)](../dotnet/map-to-array-stl-clr.md)|被制御シーケンスを新しい配列にコピーします。|  
-|[map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)|指定したキーに一致する範囲の末尾を検索します。|  
-|[map::value_comp (STL/CLR)](../dotnet/map-value-comp-stl-clr.md)|2 つの要素値の順序付けのデリゲートをコピーします。|  
+|[map::begin (STL/CLR)](#begin)|被制御シーケンスの先頭を指定します。|  
+|[map::clear (STL/CLR)](#clear)|すべての要素を削除します。|  
+|[map::count (STL/CLR)](#count)|指定したキーに一致する要素の数をカウントします。|  
+|[map::empty (STL/CLR)](#empty)|要素が存在しないかどうかをテストします。|  
+|[map::end (STL/CLR)](#end)|被制御シーケンスの末尾を指定します。|  
+|[map::equal_range (STL/CLR)](#equal_range)|指定したキーに一致する範囲を検索します。|  
+|[map::erase (STL/CLR)](#erase)|指定した位置にある要素を削除します。|  
+|[map::find (STL/CLR)](#find)|指定したキーに一致する要素を検索します。|  
+|[map::insert (STL/CLR)](#insert)|要素を追加します。|  
+|[map::key_comp (STL/CLR)](#key_comp)|2 つのキーの順序付けのデリゲートをコピーします。|  
+|[map::lower_bound (STL/CLR)](#lower_bound)|指定したキーに一致する範囲の先頭を検出します。|  
+|[map::make_value (STL/CLR)](#make_value)|値オブジェクトを構築します。|  
+|[map::map (STL/CLR)](#map)|コンテナー オブジェクトを構築します。|  
+|[map::rbegin (STL/CLR)](#rbegin)|反転被制御シーケンスの先頭を指定します。|  
+|[map::rend (STL/CLR)](#rend)|反転被制御シーケンスの末尾を指定します。|  
+|[map::size (STL/CLR)](#size)|要素の数をカウントします。|  
+|[map::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|  
+|[map::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|  
+|[map::upper_bound (STL/CLR)](#upper_bound)|指定したキーに一致する範囲の末尾を検索します。|  
+|[map::value_comp (STL/CLR)](#value_comp)|2 つの要素値の順序付けのデリゲートをコピーします。|  
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|被制御シーケンスを置き換えます。|  
-|[map::operator(STL/CLR)](../dotnet/map-operator-stl-clr.md)|関連するマップされた値をキーにマップします。|  
-|[operator!= (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)|かどうかを`map`オブジェクトが他と等しくない`map`オブジェクト。|  
-|[operator< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)|かどうかを`map`オブジェクトが他よりも小さい`map`オブジェクト。|  
-|[operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)|かどうかを`map`オブジェクトが別に小さい`map`オブジェクト。|  
-|[operator== (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)|かどうかを`map`オブジェクトが他と等しい`map`オブジェクト。|  
-|[operator> (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)|かどうかを`map`オブジェクトが他よりも大きい`map`オブジェクト。|  
-|[operator>= (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)|かどうかを`map`オブジェクトがより大きいか等しい間`map`オブジェクト。|  
+|[map::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|  
+|[map::operator(STL/CLR)](#op)|関連するマップされた値をキーにマップします。|  
+|[operator!= (map) (STL/CLR)](#op_neq)|かどうかを`map`オブジェクトが他と等しくない`map`オブジェクト。|  
+|[operator< (map) (STL/CLR)](#op_lt)|かどうかを`map`オブジェクトが他よりも小さい`map`オブジェクト。|  
+|[operator<= (map) (STL/CLR)](#op_lteq)|かどうかを`map`オブジェクトが別に小さい`map`オブジェクト。|  
+|[operator== (map) (STL/CLR)](#op_eq)|かどうかを`map`オブジェクトが他と等しい`map`オブジェクト。|  
+|[operator> (map) (STL/CLR)](#op_gt)|かどうかを`map`オブジェクトが他よりも大きい`map`オブジェクト。|  
+|[operator>= (map) (STL/CLR)](#op_gteq)|かどうかを`map`オブジェクトがより大きいか等しい間`map`オブジェクト。|  
   
 ## <a name="interfaces"></a>インターフェイス  
   
@@ -132,7 +227,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.IDictionary%602>|{キー、値} のグループの管理のペア。|  
 |ITree < Key, 値 >|ジェネリックなコンテナーを管理します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  オブジェクトは、割り当てし、個々 のノードとして、制御するシーケンスの記憶域を解放します。 順序付けられた 1 つのノードの内容を別にコピーからではなく、ノード間のリンクを変更することにより保持される (ほとんど) バランスの良いツリーに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。  
   
  オブジェクトがストアド デリゲート型のオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[map::key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)です。 マップを構築するときにストアド デリゲート オブジェクトを指定することができます。デリゲート オブジェクトを指定しないと、既定値が比較`operator<(key_type, key_type)`です。 このメンバー関数を呼び出すことによってこのストアド オブジェクトにアクセスする[map::key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)`()`です。  
@@ -159,17 +254,2638 @@ template<typename Key,
   
  消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーは`not`その要素を破棄します。  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** \<cliext マップ/>  
+## <a name="members"></a>メンバー
+
+## <a name="begin"></a> map::begin (STL/CLR)
+被制御シーケンスの先頭を指定します。  
   
- **Namespace:** cliext  
+### <a name="syntax"></a>構文  
   
-## <a name="see-also"></a>関連項目  
- [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
- [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
- [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
- [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
- [マップ](../dotnet/map-stl-clr.md)   
- [マルチセット (STL/CLR)](../dotnet/multiset-stl-clr.md)   
- [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
- [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)
+```  
+iterator begin();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数では、または空のシーケンスの最後を越えたところ、被制御シーケンスの最初の要素を指定する双方向反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合は、被制御シーケンスが、そのステータスの先頭を変更できます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_begin.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect first two items   
+    Mymap::iterator it = c1.begin();   
+    System::Console::WriteLine("*begin() = [{0} {1}]",   
+        it->first, it->second);   
+    ++it;   
+    System::Console::WriteLine("*++begin() = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+*begin() = [a 1]  
+*++begin() = [b 2]  
+```  
+
+## <a name="clear"></a> map::clear (STL/CLR)
+すべての要素を削除します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+void clear();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数が効果的に呼び出し[map::erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. これを使用するには、被制御シーケンスが空であることを確認します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_clear.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+  
+// display contents " [a 1] [b 2]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
+
+## <a name="const_iterator"></a> map::const_iterator (STL/CLR)
+被制御シーケンスの定数反復子の型です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef T2 const_iterator;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数の双方向反復子として使用されることができます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_const_iterator.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Mymap::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        System::Console::Write(" [{0} {1}]", cit->first, cit->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="const_reference"></a> map::const_reference (STL/CLR)
+要素への定数参照の型です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef value_type% const_reference;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、要素への定数参照を表します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_const_reference.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Mymap::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        {   // get a const reference to an element   
+        Mymap::const_reference cref = *cit;   
+        System::Console::Write(" [{0} {1}]", cref->first, cref->second);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="const_reverse_iterator"></a> map::const_reverse_iterator (STL/CLR)
+被制御シーケンスの定数反転反復子の型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef T4 const_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として使用されることができます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_const_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" reversed   
+    Mymap::const_reverse_iterator crit = c1.rbegin();   
+    for (; crit != c1.rend(); ++crit)   
+        System::Console::Write(" [{0} {1}]", crit->first, crit->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
+
+## <a name="count"></a> map::count (STL/CLR)
+指定したキーに一致する要素の数を検索します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+size_type count(key_type key);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ key  
+ 検索対象のキー値。  
+  
+### <a name="remarks"></a>Remarks  
+ メンバー関数と同じ順序付けする被制御シーケンスの要素の数を返します`key`です。 それを使用して、指定したキーと一致する、被制御シーケンスの現在の要素の数を決定します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_count.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("count(L'A') = {0}", c1.count(L'A'));   
+    System::Console::WriteLine("count(L'b') = {0}", c1.count(L'b'));   
+    System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
+
+## <a name="difference_type"></a> map::difference_type (STL/CLR)
+2 つの要素間の距離を符号付きの型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef int difference_type;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、可能性のある負の値の要素の数を表します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_difference_type.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    Mymap::difference_type diff = 0;   
+    for (Mymap::iterator it = c1.begin(); it != c1.end(); ++it)   
+        ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+  
+// compute negative difference   
+    diff = 0;   
+    for (Mymap::iterator it = c1.end(); it != c1.begin(); --it)   
+        --diff;   
+    System::Console::WriteLine("begin()-end() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
+
+## <a name="empty"></a> map::empty (STL/CLR)
+要素が存在しないかどうかをテストします。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+bool empty();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、被制御シーケンスが空の場合に true を返します。 等価である[map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`です。 使用するマップが空かどうかをテストします。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_empty.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+
+## <a name="end"></a> map::end (STL/CLR)
+被制御シーケンスの末尾を指定します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+iterator end();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、被制御シーケンスの最後の位置を指し示す双方向反復子を返します。 被制御シーケンスの末尾を指定する反復子を取得するのにために使用します。その状態は、被制御シーケンスの長さが変更された場合は変更されません。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_end.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect last two items   
+    Mymap::iterator it = c1.end();   
+    --it;   
+    --it;   
+    System::Console::WriteLine("*-- --end() = [{0} {1}]",   
+        it->first, it->second);   
+    ++it;   
+    System::Console::WriteLine("*--end() = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+
+## <a name="equal_range"></a> map::equal_range (STL/CLR)
+指定したキーに一致する範囲を検索します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+cliext::pair<iterator, iterator> equal_range(key_type key);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ key  
+ 検索対象のキー値。  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数が組の反復子を返します`cliext::pair<iterator, iterator>(` [map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`です。 使用する指定したキーと一致する、被制御シーケンスの現在の要素の範囲が決まります。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_equal_range.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+typedef Mymap::pair_iter_iter Pairii;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// display results of failed search   
+    Pairii pair1 = c1.equal_range(L'x');   
+    System::Console::WriteLine("equal_range(L'x') empty = {0}",   
+        pair1.first == pair1.second);   
+  
+// display results of successful search   
+    pair1 = c1.equal_range(L'b');   
+    for (; pair1.first != pair1.second; ++pair1.first)   
+        System::Console::Write(" [{0} {1}]",   
+            pair1.first->first, pair1.first->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
+  
+## <a name="erase"></a> map::erase (STL/CLR)
+指定した位置にある要素を削除します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+iterator erase(iterator where);  
+iterator erase(iterator first, iterator last);  
+bool erase(key_type key)  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 先頭  
+ 消去する範囲の開始しています。  
+  
+ key  
+ 消去するキー値。  
+  
+ last  
+ 消去する範囲の終了。  
+  
+ where  
+ 消去する要素。  
+  
+### <a name="remarks"></a>Remarks  
+ 最初のメンバー関数によって示される、被制御シーケンスの要素を削除する`where`、し、削除、要素の後に残る最初の要素を指定する反復子を返しますまたは[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()`このような要素が存在しない場合。 それを使用するには 1 つの要素を削除します。  
+  
+ 2 番目のメンバー関数、被制御シーケンスの要素の範囲内の削除 [`first`、 `last`)、し、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは`end()`場合、このような要素がないです。存在する. これを使用するには 0 個以上の連続する要素を削除します。  
+  
+ 3 番目のメンバー関数と同じ順序キーを持つは、被制御シーケンスのいずれかの要素を削除する`key`、削除された要素の数のカウントを返します。 これを使用して、削除し、指定したキーと一致するすべての要素をカウントします。  
+  
+ 各要素の消去では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_erase.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    cliext::map<wchar_t, int> c1;   
+    c1.insert(cliext::map<wchar_t, int>::make_value(L'a', 1));   
+    c1.insert(cliext::map<wchar_t, int>::make_value(L'b', 2));   
+    c1.insert(cliext::map<wchar_t, int>::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (cliext::map<wchar_t, int>::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// erase an element and reinspect   
+    cliext::map<wchar_t, int>::iterator it =   
+        c1.erase(c1.begin());   
+    System::Console::WriteLine("erase(begin()) = [{0} {1}]",   
+        it->first, it->second);   
+  
+// add elements and display " b c d e"   
+    c1.insert(cliext::map<wchar_t, int>::make_value(L'd', 4));   
+    c1.insert(cliext::map<wchar_t, int>::make_value(L'e', 5));   
+    for each (cliext::map<wchar_t, int>::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// erase all but end   
+    it = c1.end();   
+    it = c1.erase(c1.begin(), --it);   
+    System::Console::WriteLine("erase(begin(), end()-1) = [{0} {1}]",   
+        it->first, it->second);   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+// erase end   
+    System::Console::WriteLine("erase(L'x') = {0}", c1.erase(L'x'));   
+    System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+erase(begin()) = [b 2]  
+ [b 2] [c 3] [d 4] [e 5]  
+erase(begin(), end()-1) = [e 5]  
+size() = 1  
+erase(L'x') = 0  
+erase(L'e') = 1  
+```  
+  
+## <a name="find"></a> map::find (STL/CLR)
+指定したキーに一致する要素を検索します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+iterator find(key_type key);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ key  
+ 検索対象のキー値。  
+  
+### <a name="remarks"></a>Remarks  
+ 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付けがかどうか`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返します。 それ以外の場合を返します[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`です。 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_find.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("find {0} = {1}",   
+        L'A', c1.find(L'A') != c1.end());   
+  
+    Mymap::iterator it = c1.find(L'b');   
+    System::Console::WriteLine("find {0} = [{1} {2}]",   
+        L'b', it->first, it->second);   
+  
+    System::Console::WriteLine("find {0} = {1}",   
+        L'C', c1.find(L'C') != c1.end());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+find A = False  
+find b = [b 2]  
+find C = False  
+```  
+
+## <a name="generic_container"></a> map::generic_container (STL/CLR)
+コンテナーのジェネリック インターフェイスの型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef Microsoft::VisualC::StlClr::  
+    ITree<GKey, GValue>  
+    generic_container;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスを表します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_generic_container.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Mymap::generic_container^ gc1 = %c1;   
+    for each (Mymap::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    gc1->insert(Mymap::make_value(L'd', 4));   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// modify original and display generic   
+    c1.insert(Mymap::make_value(L'e', 5));   
+    for each (Mymap::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3] [d 4] [e 5]  
+```  
+
+## <a name="generic_iterator"></a> map::generic_iterator (STL/CLR)
+コンテナーのジェネリック インターフェイスを使用するため、反復子の型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ContainerBidirectionalIterator<generic_value>  
+    generic_iterator;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反復子を表します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_generic_iterator.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Mymap::generic_container^ gc1 = %c1;   
+    for each (Mymap::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Mymap::generic_iterator gcit = gc1->begin();   
+    Mymap::generic_value gcval = *gcit;   
+    System::Console::Write(" [{0} {1}]", gcval->first, gcval->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
+
+## <a name="generic_reverse_iterator"></a> map::generic_reverse_iterator (STL/CLR)
+コンテナーのジェネリック インターフェイスを使用する反転反復子の型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ReverseRandomAccessIterator<generic_value>  
+    generic_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用反転反復子を表します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_generic_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Mymap::generic_container^ gc1 = %c1;   
+    for each (Mymap::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Mymap::generic_reverse_iterator gcit = gc1->rbegin();   
+    Mymap::generic_value gcval = *gcit;   
+    System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[c 3]  
+```  
+
+## <a name="generic_value"></a> map::generic_value (STL/CLR)
+コンテナーのジェネリック インターフェイスを使用するための要素の型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef GValue generic_value;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用することについて説明します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_generic_value.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Mymap::generic_container^ gc1 = %c1;   
+    for each (Mymap::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Mymap::generic_iterator gcit = gc1->begin();   
+    Mymap::generic_value gcval = *gcit;   
+    System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
+
+## <a name="insert"></a> map::insert (STL/CLR)
+要素を追加します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+cliext::pair<iterator, bool> insert(value_type val);  
+iterator insert(iterator where, value_type val);  
+template<typename InIter>  
+    void insert(InIter first, InIter last);  
+void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 先頭  
+ 挿入する範囲の開始しています。  
+  
+ last  
+ 挿入する範囲の終了。  
+  
+ 右  
+ 列挙型を挿入します。  
+  
+ val  
+ 挿入するキー値。  
+  
+ where  
+ (ヒントのみ) を挿入するためのコンテナー内の場所。  
+  
+### <a name="remarks"></a>Remarks  
+ 各メンバー関数は、残りのオペランドで指定されたシーケンスを挿入します。  
+  
+ 最初のメンバー関数が値を持つ要素を挿入するよう努めて`val`、値のペアを返しますと`X`です。 場合`X.second`が true の場合、`X.first`新しく挿入される要素を指定以外の場合`X.first`それと同等の要素を指定既に順序付けが存在し、新しい要素が挿入されません。 使用する 1 つの要素を挿入します。  
+  
+ 2 番目のメンバー関数は、値を持つ要素を挿入します。`val`を使用して、 `where` (パフォーマンスを向上させる) をヒントとしてし、新しく挿入される要素を指定する反復子を返します。 使用することがわかって要素に隣接する可能性のある 1 つの要素を挿入します。  
+  
+ 3 番目のメンバー関数は、シーケンスを挿入します。 [`first`、 `last`)。 使用する別のシーケンスからコピーした 0 個以上の要素を挿入します。  
+  
+ 4 番目のメンバー関数で指定されたシーケンスを挿入する、`right`です。 使用する列挙子によって説明されているシーケンスを挿入します。  
+  
+ 各要素の挿入では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。 挿入は、カーソル位置に隣接する要素を指定するヒントの指定、償却定数時間でただし、実行できます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_insert.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+typedef Mymap::pair_iter_bool Pairib;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert a single value, unique and duplicate   
+// insert a single value, success and failure   
+    Pairib pair1 = c1.insert(Mymap::make_value(L'x', 24));   
+    System::Console::WriteLine("insert([L'x' 24]) = [[{0} {1}] {2}]",   
+        pair1.first->first, pair1.first->second, pair1.second);   
+  
+    pair1 = c1.insert(Mymap::make_value(L'b', 2));   
+    System::Console::WriteLine("insert([L'b' 2]) = [[{0} {1}] {2}]",   
+        pair1.first->first, pair1.first->second, pair1.second);   
+  
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert a single value with hint   
+    Mymap::iterator it =   
+        c1.insert(c1.begin(), Mymap::make_value(L'y', 25));   
+    System::Console::WriteLine("insert(begin(), [L'y' 25]) = [{0} {1}]",   
+        it->first, it->second);   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert an iterator range   
+    Mymap c2;   
+    it = c1.end();   
+    c2.insert(c1.begin(), --it);   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert an enumeration   
+    Mymap c3;   
+    c3.insert(   // NOTE: cast is not needed   
+        (System::Collections::Generic::   
+            IEnumerable<Mymap::value_type>^)%c1);   
+    for each (Mymap::value_type elem in c3)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+insert([L'x' 24]) = [[x 24] True]  
+insert([L'b' 2]) = [[b 2] False]  
+ [a 1] [b 2] [c 3] [x 24]  
+insert(begin(), [L'y' 25]) = [y 25]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+ [a 1] [b 2] [c 3] [x 24]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+```  
+
+## <a name="iterator"></a> map::iterator (STL/CLR)
+被制御シーケンスの反復子の型です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef T1 iterator;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスの双方向反復子として使用されることができます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_iterator.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Mymap::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        System::Console::Write(" [{0} {1}]", it->first, it->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+
+## <a name="key_comp"></a> map::key_comp (STL/CLR)
+2 つのキーの順序付けのデリゲートをコピーします。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+key_compare^key_comp();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 2 つのキーの比較に使用するとします。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_key_comp.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    Mymap::key_compare^ kcomp = c1.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+  
+// test a different ordering rule   
+    Mymap c2 = cliext::greater<wchar_t>();   
+    kcomp = c2.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+
+## <a name="key_compare"></a> map::key_compare (STL/CLR)
+2 つのキーの順序付けのデリゲート。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
+    key_compare;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ 型は、そのキーの引数の順序を決定するデリゲートのシノニムです。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_key_compare.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    Mymap::key_compare^ kcomp = c1.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+  
+// test a different ordering rule   
+    Mymap c2 = cliext::greater<wchar_t>();   
+    kcomp = c2.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```
+
+## <a name="key_type"></a> map::key_type (STL/CLR)
+順序付けキーの型です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef Key key_type;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、テンプレート パラメーター `Key` のシノニムです。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_key_type.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" using key_type   
+    for (Mymap::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in key_type object   
+        Mymap::key_type val = it->first;   
+  
+        System::Console::Write(" {0}", val);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="lower_bound"></a> map::lower_bound (STL/CLR)
+指定したキーに一致する範囲の先頭を検出します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+iterator lower_bound(key_type key);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ key  
+ 検索対象のキー値。  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、最初の要素を決定する`X`をするのと同じ順序を持つ被制御シーケンス内`key`です。 このような要素が存在しないかどうかが返されます[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 指定する反復子を返しますそれ以外の場合`X`です。 これを使用して、指定したキーと一致する、被制御シーケンス内で現在の要素のシーケンスの先頭を検索します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_lower_bound.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("lower_bound(L'x')==end() = {0}",   
+        c1.lower_bound(L'x') == c1.end());   
+  
+    Mymap::iterator it = c1.lower_bound(L'a');   
+    System::Console::WriteLine("*lower_bound(L'a') = [{0} {1}]",   
+        it->first, it->second);   
+    it = c1.lower_bound(L'b');   
+    System::Console::WriteLine("*lower_bound(L'b') = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = [a 1]  
+*lower_bound(L'b') = [b 2]  
+```  
+
+## <a name="make_value"></a> map::make_value (STL/CLR)
+値オブジェクトを構築します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+static value_type make_value(key_type key, mapped_type mapped);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ key  
+ 使用するキー値。  
+  
+ マップ  
+ 検索する値をマップします。  
+  
+### <a name="remarks"></a>Remarks  
+ メンバー関数を返します、`value_type`オブジェクト キーを持つ`key`値を持つマップ`mapped`です。 他のいくつかのメンバー関数で使用するために適切なオブジェクトの作成に使用するとします。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_make_value.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="map"></a> map::map (STL/CLR)
+コンテナー オブジェクトを構築します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+map();  
+explicit map(key_compare^ pred);  
+map(map<Key, Mapped>% right);  
+map(map<Key, Mapped>^ right);  
+template<typename InIter>  
+    mapmap(InIter first, InIter last);  
+template<typename InIter>  
+    map(InIter first, InIter last,  
+        key_compare^ pred);  
+map(System::Collections::Generic::IEnumerable<GValue>^ right);  
+map(System::Collections::Generic::IEnumerable<GValue>^ right,  
+    key_compare^ pred);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 先頭  
+ 挿入する範囲の開始しています。  
+  
+ last  
+ 挿入する範囲の終了。  
+  
+ pred  
+ 被制御シーケンスの述語を順序付けです。  
+  
+ 右  
+ 挿入するオブジェクトまたは範囲。  
+  
+### <a name="remarks"></a>Remarks  
+ : コンス トラクター  
+  
+ `map();`  
+  
+ 既定の順序の述語を使用して要素を持たない、被制御シーケンスを初期化`key_compare()`です。 これを使用するには、既定の順序の述語を持つ、空の初期被制御シーケンスを指定します。  
+  
+ : コンス トラクター  
+  
+ `explicit map(key_compare^ pred);`  
+  
+ 順序の指定の述語での要素を持たない被制御シーケンスを初期化します`pred`です。 これを使用して、順序指定された述語を持つ、空の初期被制御シーケンスを指定します。  
+  
+ : コンス トラクター  
+  
+ `map(map<Key, Mapped>% right);`  
+  
+ シーケンスに、被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)、既定の順序の述語とします。 マップ オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`既定の順序の述語とします。  
+  
+ : コンス トラクター  
+  
+ `map(map<Key, Mapped>^ right);`  
+  
+ シーケンスに、被制御シーケンスを初期化します [`right->begin()`、 `right->end()`)、既定の順序の述語とします。 マップ オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`既定の順序の述語とします。  
+  
+ : コンス トラクター  
+  
+ `template<typename InIter> map(InIter first, InIter last);`  
+  
+ シーケンスに、被制御シーケンスを初期化します [`first`、 `last`)、既定の順序の述語とします。 使用する既定の順序の述語で被制御シーケンスの別のシーケンスのコピーを作成します。  
+  
+ : コンス トラクター  
+  
+ `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
+  
+ シーケンスに、被制御シーケンスを初期化します。 [`first`、 `last`)、順序の指定の述語に置き換えます`pred`です。 これを使用するには、被制御シーケンスの順序指定された述語を持つ、別のシーケンスのコピーを作成します。  
+  
+ : コンス トラクター  
+  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
+  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`既定の順序の述語とします。 これを使用するには、被制御シーケンスの既定の順序の述語と、列挙子によって記述された別のシーケンスのコピーを作成します。  
+  
+ : コンス トラクター  
+  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
+  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`、順序の指定の述語と`pred`です。 これを使用するには、被制御シーケンスの順序指定された述語を持つ、列挙子によって記述された別のシーケンスのコピーを作成します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_construct.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+// construct an empty container   
+    Mymap c1;   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an ordering rule   
+    Mymap c2 = cliext::greater_equal<wchar_t>();   
+    System::Console::WriteLine("size() = {0}", c2.size());   
+  
+    c2.insert(c1.begin(), c1.end());   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range   
+    Mymap c3(c1.begin(), c1.end());   
+    for each (Mymap::value_type elem in c3)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range and an ordering rule   
+    Mymap c4(c1.begin(), c1.end(),   
+        cliext::greater_equal<wchar_t>());   
+    for each (Mymap::value_type elem in c4)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration   
+    Mymap c5(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<   
+            Mymap::value_type>^)%c3);   
+    for each (Mymap::value_type elem in c5)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration and an ordering rule   
+    Mymap c6(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<   
+            Mymap::value_type>^)%c3,   
+                cliext::greater_equal<wchar_t>());   
+    for each (Mymap::value_type elem in c6)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct by copying another container   
+    Mymap c7(c4);   
+    for each (Mymap::value_type elem in c7)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct by copying a container handle   
+    Mymap c8(%c3);   
+    for each (Mymap::value_type elem in c8)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
+
+## <a name="mapped_type"></a> map::mapped_type (STL/CLR)
+各キーに関連付けられた、マップされた値の型です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef Mapped mapped_type;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、テンプレート パラメーター `Mapped` のシノニムです。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_mapped_type.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" using mapped_type   
+    for (Mymap::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in mapped_type object   
+        Mymap::mapped_type val = it->second;   
+  
+        System::Console::Write(" {0}", val);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+1 2 3  
+```  
+  
+## <a name="op_as"></a> map: = (STL/CLR)
+被制御シーケンスを置き換えます。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+map<Key, Mapped>% operator=(map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 右  
+ コピーするコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ メンバー演算子コピー`right`オブジェクトを返します`*this`です。 これを使用して、被制御シーケンスを `right` の被制御シーケンスのコピーと置き換えます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_as.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Mymap c2;   
+    c2 = c1;   
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="op"></a> map::operator(STL/CLR)
+関連するマップされた値をキーにマップします。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+mapped_type operator[](key_type key);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ key  
+ 検索対象のキー値。  
+  
+### <a name="remarks"></a>Remarks  
+ メンバー関数と同等の順序を持つ要素を検索する試み`key`です。 1 つが見つかると、値を返します、関連付けられているマップです。それ以外の場合、これは挿入`value_type(key, mapped_type())`し、関連付けられているを返します (既定値) には、値がマップされています。 これを使用してに関連付けられたキーの指定、マップされた値を確認するか、何も見つからない場合は、キーのエントリが存在することを確認します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_sub.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("c1[{0}] = {1}",   
+        L'A', c1[L'A']);   
+    System::Console::WriteLine("c1[{0}] = {1}",   
+        L'b', c1[L'b']);   
+  
+// redisplay altered contents   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// alter mapped values and redisplay   
+    c1[L'A'] = 10;   
+    c1[L'c'] = 13;   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [A 0] [a 1] [b 2] [c 3]  
+ [A 10] [a 1] [b 2] [c 13]  
+```  
+
+## <a name="rbegin"></a> map::rbegin (STL/CLR)
+反転被制御シーケンスの先頭を指定します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+reverse_iterator rbegin();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数では、最後の要素または空のシーケンスの先頭を越えた、被制御シーケンスの指定、逆順反復子を返します。 したがって、これを指定、`beginning`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合、逆の順序で表示される、被制御シーケンスですがその状態の先頭は変更できます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_rbegin.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect first two items in reversed sequence   
+    Mymap::reverse_iterator rit = c1.rbegin();   
+    System::Console::WriteLine("*rbegin() = [{0} {1}]",   
+        rit->first, rit->second);   
+    ++rit;   
+    System::Console::WriteLine("*++rbegin() = [{0} {1}]",   
+        rit->first, rit->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+*rbegin() = [c 3]  
+*++rbegin() = [b 2]  
+```  
+
+## <a name="reference"></a> map::reference (STL/CLR)
+要素への参照の型です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef value_type% reference;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、要素への参照を表します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_reference.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Mymap::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        {   // get a reference to an element   
+        Mymap::reference ref = *it;   
+        System::Console::Write(" [{0} {1}]", ref->first, ref->second);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+``` 
+
+## <a name="rend"></a> map::rend (STL/CLR)
+反転被制御シーケンスの末尾を指定します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+reverse_iterator rend();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、被制御シーケンスの先頭位置を指し示す反転反復子を返します。 したがって、これを指定、`end`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合は逆の順序で表示される、被制御シーケンスですがその状態の終了を変更できます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_rend.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect first two items in reversed sequence   
+    Mymap::reverse_iterator rit = c1.rend();   
+    --rit;   
+    --rit;   
+    System::Console::WriteLine("*-- --rend() = [{0} {1}]",   
+        rit->first, rit->second);   
+    ++rit;   
+    System::Console::WriteLine("*--rend() = [{0} {1}]",   
+        rit->first, rit->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --rend() = [b 2]  
+*--rend() = [a 1]  
+```   
+
+## <a name="reverse_iterator"></a> map::reverse_iterator (STL/CLR)
+被制御シーケンスの反転反復子の型です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef T3 reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として使用されることができます。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" reversed   
+    Mymap::reverse_iterator rit = c1.rbegin();   
+    for (; rit != c1.rend(); ++rit)   
+        System::Console::Write(" [{0} {1}]", rit->first, rit->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
+
+## <a name="size"></a> map::size (STL/CLR)
+要素の数をカウントします。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+size_type size();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、被制御シーケンスの長さを返します。 これを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスが参照してください、0 以外のサイズを持つかどうかは、関心のあるすべて場合[map::empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)`()`です。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_size.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0} after clearing", c1.size());   
+  
+// add elements and clear again   
+    c1.insert(Mymap::make_value(L'd', 4));   
+    c1.insert(Mymap::make_value(L'e', 5));   
+    System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+
+## <a name="size_type"></a> map::size_type (STL/CLR)
+2 つの要素の間の距離を符号付きの型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef int size_type;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は、負でない要素の数を表します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_size_type.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    Mymap::size_type diff = 0;   
+    for (Mymap::iterator it = c1.begin(); it != c1.end(); ++it)   
+        ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
+  
+## <a name="swap"></a> map::swap (STL/CLR)
+2 つのコンテナーのコンテンツを交換します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+void swap(map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 右  
+ コンテンツを交換するコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、`this` と `right` の間で被制御シーケンスを交換します。 定数時間では、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_swap.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct another container with repetition of values   
+    Mymap c2;   
+    c2.insert(Mymap::make_value(L'd', 4));   
+    c2.insert(Mymap::make_value(L'e', 5));   
+    c2.insert(Mymap::make_value(L'f', 6));   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// swap and redisplay   
+    c1.swap(c2);   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[d 4] [e 5] [f 6]  
+[d 4] [e 5] [f 6]  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="to_array"></a> map::to_array (STL/CLR)
+被制御シーケンスを新しい配列にコピーします。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+cli::array<value_type>^ to_array();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数では、被制御シーケンスを格納する配列を返します。 使用する配列形式の被制御シーケンスのコピーを入手します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_to_array.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// copy the container and modify it   
+    cli::array<Mymap::value_type>^ a1 = c1.to_array();   
+  
+    c1.insert(Mymap::make_value(L'd', 4));   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// display the earlier array copy   
+    for each (Mymap::value_type elem in a1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="upper_bound"></a> map::upper_bound (STL/CLR)
+指定したキーに一致する範囲の末尾を検索します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+iterator upper_bound(key_type key);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ key  
+ 検索対象のキー値。  
+  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数の最後の要素を決定する`X`をするのと同じ順序を持つ被制御シーケンス内`key`です。 このような要素が存在しない場合、または場合`X`、被制御シーケンスの最後の要素では返します[map::end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`;最初の要素を指定する反復子を返しますそれ以外の場合`X`. これを使用して、指定したキーと一致する、被制御シーケンス内で現在の要素のシーケンスの末尾を検索します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_upper_bound.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("upper_bound(L'x')==end() = {0}",   
+        c1.upper_bound(L'x') == c1.end());   
+  
+    Mymap::iterator it = c1.upper_bound(L'a');   
+    System::Console::WriteLine("*upper_bound(L'a') = [{0} {1}]",   
+        it->first, it->second);   
+    it = c1.upper_bound(L'b');   
+    System::Console::WriteLine("*upper_bound(L'b') = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
+
+## <a name="value_comp"></a> map::value_comp (STL/CLR)
+2 つの要素値の順序付けのデリゲートをコピーします。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+value_compare^ value_comp();  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 使用する 2 つの要素値を比較します。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_value_comp.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    Mymap::value_compare^ kcomp = c1.value_comp();   
+  
+    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",   
+        kcomp(Mymap::make_value(L'a', 1),   
+            Mymap::make_value(L'a', 1)));   
+    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",   
+        kcomp(Mymap::make_value(L'a', 1),   
+            Mymap::make_value(L'b', 2)));   
+    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",   
+        kcomp(Mymap::make_value(L'b', 2),   
+            Mymap::make_value(L'a', 1)));   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+  
+## <a name="value_compare"></a> map::value_compare (STL/CLR)
+2 つの要素値の順序付けのデリゲート。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
+    value_compare;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ 型は、その値の引数の順序を決定するデリゲートのシノニムです。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_value_compare.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    Mymap::value_compare^ kcomp = c1.value_comp();   
+  
+    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",   
+        kcomp(Mymap::make_value(L'a', 1),   
+            Mymap::make_value(L'a', 1)));   
+    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",   
+        kcomp(Mymap::make_value(L'a', 1),   
+            Mymap::make_value(L'b', 2)));   
+    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",   
+        kcomp(Mymap::make_value(L'b', 2),   
+            Mymap::make_value(L'a', 1)));   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+
+## <a name="value_type"></a> map::value_type (STL/CLR)
+要素の型。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+typedef generic_value value_type;  
+```  
+  
+### <a name="remarks"></a>Remarks  
+ この型は `generic_value` の同意語です。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_value_type.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" using value_type   
+    for (Mymap::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in value_type object   
+        Mymap::value_type val = *it;   
+        System::Console::Write(" [{0} {1}]", val->first, val->second);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="op_neq"></a> operator! = (map) (STL/CLR)
+等しくない比較を一覧表示します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+template<typename Key,  
+    typename Mapped>  
+    bool operator!=(map<Key, Mapped>% left,  
+        map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 左へ  
+ 比較する左のコンテナー。  
+  
+ 右  
+ 比較する右のコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ 演算子関数を返します`!(left == right)`です。 テストするために使用するかどうか`left`順序付けされていないと同じ`right`要素によって比較対象の要素が 2 つのマップの場合。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_ne.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Mymap c2;   
+    c2.insert(Mymap::make_value(L'a', 1));   
+    c2.insert(Mymap::make_value(L'b', 2));   
+    c2.insert(Mymap::make_value(L'd', 4));   
+  
+// display contents " [a 1] [b 2] [d 4]"   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] != [a b c] is {0}",   
+        c1 != c1);   
+    System::Console::WriteLine("[a b c] != [a b d] is {0}",   
+        c1 != c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
+  
+## <a name="op_lt"></a> 演算子&lt;(map) (STL/CLR)
+リストが比較未満です。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+template<typename Key,  
+    typename Mapped>  
+    bool operator<(map<Key, Mapped>% left,  
+        map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 左へ  
+ 比較する左のコンテナー。  
+  
+ 右  
+ 比較する右のコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ 演算子関数を返す場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`です。 返しますそれ以外の場合、`left->size() < right->size()`をテストするために使用するかどうか`left`前に順序付け`right`要素によって比較対象の要素が 2 つのマップの場合。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_lt.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Mymap c2;   
+    c2.insert(Mymap::make_value(L'a', 1));   
+    c2.insert(Mymap::make_value(L'b', 2));   
+    c2.insert(Mymap::make_value(L'd', 4));   
+  
+// display contents " [a 1] [b 2] [d 4]"   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] < [a b c] is {0}",   
+        c1 < c1);   
+    System::Console::WriteLine("[a b c] < [a b d] is {0}",   
+        c1 < c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
+
+## <a name="op_lteq"></a> 演算子&lt;= (map) (STL/CLR)
+以下の一覧の比較できます。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+template<typename Key,  
+    typename Mapped>  
+    bool operator<=(map<Key, Mapped>% left,  
+        map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 左へ  
+ 比較する左のコンテナー。  
+  
+ 右  
+ 比較する右のコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ 演算子関数を返します`!(right < left)`です。 テストするために使用するかどうか`left`後に順序付けされていない`right`要素によって比較対象の要素が 2 つのマップの場合。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_le.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Mymap c2;   
+    c2.insert(Mymap::make_value(L'a', 1));   
+    c2.insert(Mymap::make_value(L'b', 2));   
+    c2.insert(Mymap::make_value(L'd', 4));   
+  
+// display contents " [a 1] [b 2] [d 4]"   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] <= [a b c] is {0}",   
+        c1 <= c1);   
+    System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
+        c2 <= c1);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
+
+## <a name="op_eq"></a> 演算子 = = (map) (STL/CLR)
+比較を一覧表示します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+template<typename Key,  
+    typename Mapped>  
+    bool operator==(map<Key, Mapped>% left,  
+        map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 左へ  
+ 比較する左のコンテナー。  
+  
+ 右  
+ 比較する右のコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ 演算子の関数が、シーケンスがによって制御される場合にのみ true を返します`left`と`right`同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`です。 テストするために使用するかどうか`left`が同じ順序付け`right`要素によって比較対象の要素が 2 つのマップの場合。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_eq.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Mymap c2;   
+    c2.insert(Mymap::make_value(L'a', 1));   
+    c2.insert(Mymap::make_value(L'b', 2));   
+    c2.insert(Mymap::make_value(L'd', 4));   
+  
+// display contents " [a 1] [b 2] [d 4]"   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] == [a b c] is {0}",   
+        c1 == c1);   
+    System::Console::WriteLine("[a b c] == [a b d] is {0}",   
+        c1 == c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
+
+## <a name="op_gt"></a> 演算子&gt;(map) (STL/CLR)
+比較よりも大きい値を一覧表示します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+template<typename Key,  
+    typename Mapped>  
+    bool operator>(map<Key, Mapped>% left,  
+        map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 左へ  
+ 比較する左のコンテナー。  
+  
+ 右  
+ 比較する右のコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ 演算子関数を返します`right` `<` `left`です。 テストするために使用するかどうか`left`が後に順序付け`right`要素によって比較対象の要素が 2 つのマップの場合。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_gt.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Mymap c2;   
+    c2.insert(Mymap::make_value(L'a', 1));   
+    c2.insert(Mymap::make_value(L'b', 2));   
+    c2.insert(Mymap::make_value(L'd', 4));   
+  
+// display contents " [a 1] [b 2] [d 4]"   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] > [a b c] is {0}",   
+        c1 > c1);   
+    System::Console::WriteLine("[a b d] > [a b c] is {0}",   
+        c2 > c1);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
+
+## <a name="op_gteq"></a> 演算子&gt;= (map) (STL/CLR)
+リストよりも大きいまたは等しい比較します。  
+  
+### <a name="syntax"></a>構文  
+  
+```  
+template<typename Key,  
+    typename Mapped>  
+    bool operator>=(map<Key, Mapped>% left,  
+        map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>パラメーター  
+ 左へ  
+ 比較する左のコンテナー。  
+  
+ 右  
+ 比較する右のコンテナー。  
+  
+### <a name="remarks"></a>Remarks  
+ 演算子関数を返します`!(left` `<` `right)`です。 テストするために使用するかどうか`left`する前に順序付けされていない`right`要素によって比較対象の要素が 2 つのマップの場合。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// cliext_map_operator_ge.cpp   
+// compile with: /clr   
+#include <cliext/map>   
+  
+typedef cliext::map<wchar_t, int> Mymap;   
+int main()   
+    {   
+    Mymap c1;   
+    c1.insert(Mymap::make_value(L'a', 1));   
+    c1.insert(Mymap::make_value(L'b', 2));   
+    c1.insert(Mymap::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Mymap::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Mymap c2;   
+    c2.insert(Mymap::make_value(L'a', 1));   
+    c2.insert(Mymap::make_value(L'b', 2));   
+    c2.insert(Mymap::make_value(L'd', 4));   
+  
+// display contents " [a 1] [b 2] [d 4]"   
+    for each (Mymap::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("[a b c] >= [a b c] is {0}",   
+        c1 >= c1);   
+    System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
+        c1 >= c2);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] >= [a b c] is True  
+[a b c] >= [a b d] is False  
+``` 
