@@ -268,7 +268,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
  共通のプレフィックスを返します。  
   
 ### <a name="remarks"></a>コメント  
- プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..。\\\\". 詳細については、次を参照してください。 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)です。  
+ プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..\\\\". 詳細については、次を参照してください。 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)です。  
   
 ##  <a name="compactpath"></a>  CPathT::CompactPath  
  省略記号をパス コンポーネントを置き換えることで、特定のピクセル幅に収まるようにファイル パスを短くには、このメソッドを呼び出します。  
@@ -423,7 +423,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
   
 ### <a name="parameters"></a>パラメーター  
  `pszPrefix`  
- 検索対象のプレフィックス。 プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..。\\\\".  
+ 検索対象のプレフィックス。 プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..\\\\".  
   
 ### <a name="return-value"></a>戻り値  
  パスが含まれる場合、プレフィックス、または FALSE それ以外の場合は、TRUE を返します。  
