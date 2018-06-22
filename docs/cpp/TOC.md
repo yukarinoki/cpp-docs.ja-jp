@@ -322,8 +322,7 @@
 #### [allocate](allocate.md)
 #### [appdomain](appdomain.md)
 #### [code_seg (__declspec)](code-seg-declspec.md)
-#### 
-  [非推奨](deprecated-cpp.md)
+#### [非推奨](deprecated-cpp.md)
 #### [dllexport、dllimport](dllexport-dllimport.md)
 ##### [定義と宣言](definitions-and-declarations-cpp.md)
 ##### [dllexport と dllimport を使用したインライン C 関数の定義](defining-inline-cpp-functions-with-dllexport-and-dllimport.md)
