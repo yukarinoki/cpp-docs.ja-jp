@@ -2,7 +2,7 @@
 title: Visual Studio での C++ のサポートのインストール |Microsoft ドキュメント
 description: Visual Studio の Visual C サポートをインストールします。
 ms.custom: mvc
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253757"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322486"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストールします。
 
@@ -40,10 +40,10 @@ ms.locfileid: "35253757"
 1. Windows の最新の Visual Studio 2017 インストーラーをダウンロードします。
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 のインストールに関するコミュニティ</a>
+   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 のインストールに関するコミュニティ</a>
 
    >[!Tip]
-   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、<a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> または <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a> を使用してください。
+   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、<a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> または <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a> を使用してください。
 
 1. インストーラー ファイルをダウンロードして実行を検索します。 ブラウザーに表示される可能性や、ダウンロード フォルダーで検索することがあります。 インストーラーでは、管理者特権を実行する必要があります。 表示される、**ユーザー アカウント制御**インストーラーは、システムに変更を加える; を選択できるようにするアクセス許可を付与するように求めるダイアログ**はい**です。 ファイル エクスプ ローラーで、ダウンロードしたファイルを検索に問題が発生した場合、インストーラーのアイコンを右クリックし、選択**管理者として実行**コンテキスト メニュー。
 

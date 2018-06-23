@@ -1,6 +1,6 @@
 ---
 title: -寛容 - (標準準拠) |Microsoft ドキュメント
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379316"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322265"
 ---
 # <a name="permissive--standards-conformance"></a>寛容/-(標準準拠)
 
@@ -34,7 +34,7 @@ ms.locfileid: "32379316"
 
 > **/permissive-**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 使用することができます、**寛容/-** コンパイラ オプションをコンパイラの標準準拠の動作を指定します。 このオプションは、制限の緩やかな動作を無効にし、設定、 [/Zc](../../build/reference/zc-conformance.md)厳密に準拠するためのコンパイラ オプション。 IDE では、このオプションは、IntelliSense エンジン下線非準拠コードも、します。
 
@@ -50,7 +50,7 @@ Visual Studio 2017 15.3 のバージョンのコンパイラ以降のバージ�
 
 **寛容/-** オプションでは、現在のコンパイラ バージョンで準拠サポートを使用する言語構成要素が非準拠かを判断します。 オプションでは、コードを特定のバージョンの C++ 標準に準拠しているかどうかは判断されません。 最新のドラフト標準のすべての実装済みのコンパイラ サポートを有効にするを使用して、 [/std:latest](../../build/reference/std-specify-language-standard-version.md)オプション。 使用して、現在実装されている c++ 17 規格にコンパイラのサポートを制限、 [/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)オプション。 C++ 14 標準をより厳密に一致するようにコンパイラのサポートを制限するには、 [/std:c + + 14](../../build/reference/std-specify-language-standard-version.md)オプションは、既定値です。
 
-すべての c++ 11、c++ 14、または c++ 17 標準に準拠できませんコードは、Visual Studio 2017 で Visual C コンパイラでサポートされます。 **寛容/-** オプションは、名前の 2 フェーズ参照の一部の側面に関連、一時的に非定数の参照をバインド、コピー初期化を直接 init として扱うでの複数のユーザー定義の変換を許可する問題を検出いない可能性があります初期化、または論理演算子、およびその他の適合性のサポートされていない領域の代替トークンです。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
+すべての c++ 11、c++ 14、または c++ 17 標準に準拠できませんコードは、Visual Studio 2017 で Visual C コンパイラでサポートされます。 Visual Studio のバージョンに応じて、**寛容/-** オプションは、名前の 2 フェーズ参照の一部の側面に関連、一時的に非定数の参照をバインド、コピー初期化を直接 init として扱うことを許可する問題を検出できません可能性があります複数ユーザー定義変換初期化、または代替トークン内の論理演算子は、および他の適合性のサポートされていない領域。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。 最大限に活用する**寛容/-**、Visual Studio の最新バージョンに更新します。
 
 ### <a name="how-to-fix-your-code"></a>コードを修正する方法
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 条件演算子の結果の型を下にある変更可能性がありますテンプレート メタプログラミングでエラーが発生する可能性がありますも **/Zc:ternary**と**寛容/-** です。 この問題を使用して解決するのには 1 つの方法[std::remove_reference](../../standard-library/remove-reference-class.md)結果の型にします。
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>2 段階名前検索 (部分的)
+#### <a name="two-phase-name-look-up"></a>2 段階名前検索
 
-ときに、**寛容/-** Visual Studio 2017 15.3 のバージョンでは、オプションを設定してください、コンパイラ解析関数やクラスのテンプレート定義、必要に応じてテンプレートで 2 フェーズ名に使用される依存と非依存の名前を識別する。検索します。 このリリースでは、名前の依存関係分析だけが実行されます。 具体的には、テンプレート定義のコンテキストで宣言されていない非依存名では、ISO C 標準で必要に応じて、診断メッセージが発生します。 ただし、引数依存ファイルの場所を定義コンテキストが完了していないを必要とする非依存名のバインドです。
+ときに、**寛容/-** オプションの設定と、コンパイラは、2 段階名前検索の必要に応じてテンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 Visual Studio 2017 15.3 のバージョンでは、名前の依存関係の分析が実行されます。 具体的には、テンプレート定義のコンテキストで宣言されていない非依存名では、ISO C 標準で必要に応じて、診断メッセージが発生します。 Visual Studio 2017 バージョン 15.7 引数依存ファイルの場所を定義コンテキストを必要とする非依存名のバインドも行われます。
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+2 フェーズ参照は、従来の動作をしますが、それ以外の場合に必要なかどうかは**寛容/-** の動作を追加、 **/Zc:twoPhase-** オプション。
+
 ### <a name="windows-header-issues"></a>Windows ヘッダーの問題
 
 **寛容/-** オプションは Windows 秋作成者更新 SDK (10.0.16299.0) する前に Windows キットのバージョンの Windows Driver Kit (WDK) バージョン 1709 厳しすぎます。 使用するために Windows Kits の最新バージョンに更新することをお勧め**寛容/-** に Windows またはデバイスのドライバー コード。
 
-Windows 秋作成者更新 SDK (10.0.16299.0)、または Windows Driver Kit (WDK) 1709、内の特定のヘッダー ファイルには、使用と互換性がないように問題も含まれている**寛容/-** です。 これらの問題を回避することをお勧めのみこれらのソース コード ファイルをそれらを必要とし、削除するこれらのヘッダーの使用を制限する、**寛容/-** それらの特定のソース コード ファイルをコンパイルするオプションを選択します。 次の問題は、Windows 秋作成者更新 SDK (10.0.16299.0) に固有です。
+Windows に 2018 更新 SDK (10.0.17134.0)、Windows 秋作成者更新 SDK (10.0.16299.0)、または Windows Driver Kit (WDK) 1709、年 4 月の特定のヘッダー ファイルには、使用と互換性がないように問題も含まれている **/permissive-**. これらの問題を回避することをお勧めのみこれらのソース コード ファイルをそれらを必要とし、削除するこれらのヘッダーの使用を制限する、**寛容/-** それらの特定のソース コード ファイルをコンパイルするオプションを選択します。
 
-#### <a name="issue-in-umqueryh"></a>Um\Query.h での問題します。
+これらの WinRT WRL ヘッダーがリリースされた Windows では、年 2018年 4 月更新 SDK (10.0.17134.0) はありませんでクリーン**寛容/-** です。 これらの問題を回避するには、いずれかを使用しないで**寛容/-**、使用または**寛容/-** で **/Zc:twoPhase-** これらのヘッダーを使用する場合。
 
-使用する場合、**寛容/-** コンパイラ スイッチ、 `tagRESTRICTION` case(RTOr) メンバーのための構造はコンパイルされません 'または' です。
+- Winrt/wrl/async.h の問題
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-この問題に対処することがなく Query.h を含むファイルをコンパイル、**寛容/-** オプション。
+- Winrt/wrl/implements.h での問題します。
 
-#### <a name="issue-in-umcellularapioemh"></a>Um\cellularapi_oem.h での問題します。
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-使用する場合、**寛容/-** コンパイラ スイッチの事前宣言`enum UICCDATASTOREACCESSMODE`警告が発生します。
+これらのユーザー モード ヘッダーがリリースされた Windows では、年 2018年 4 月更新 SDK (10.0.17134.0) はありませんでクリーン**寛容/-** です。 これらの問題を回避するを使用しないで**寛容/-** これらのヘッダーを使用する場合。
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Um/Tune.h の問題
 
-対象範囲外の列挙の事前宣言は、Microsoft 拡張です。 この問題に対処することがなく cellularapi_oem.h を含むファイルをコンパイル、**寛容/-** オプション、またはを使用して、 [/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 をミュートするにはオプションです。
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>Um\omscript.h での問題します。
+- Um/spddkhlp.h での問題します。
 
-C++ 03、文字列リテラルから BSTR に変換 (typedef でにある ' wchar_t *') は推奨されなくなりましたが、許可されています。 C++ 11 では、変換は許可されません。
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Um/refptrco.h の問題
 
-この問題に対処することがなく omscript.h を含むファイルをコンパイル、**寛容/-** オプション、または使用 **/Zc:strictStrings-** 代わりにします。
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+これらの問題は、ユーザー モード SDK のヘッダーに、Windows 秋作成者更新 (10.0.16299.0) に固有です。
+
+- Um/Query.h での問題します。
+
+   使用する場合、**寛容/-** コンパイラ スイッチ、 `tagRESTRICTION` case(RTOr) メンバーのための構造はコンパイルされません 'または' です。
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   この問題に対処することがなく Query.h を含むファイルをコンパイル、**寛容/-** オプション。
+
+- Um/cellularapi_oem.h での問題します。
+
+   使用する場合、**寛容/-** コンパイラ スイッチの事前宣言`enum UICCDATASTOREACCESSMODE`警告が発生します。
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   対象範囲外の列挙の事前宣言は、Microsoft 拡張です。 この問題に対処することがなく cellularapi_oem.h を含むファイルをコンパイル、**寛容/-** オプション、またはを使用して、 [/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 をミュートするにはオプションです。
+
+- Um/omscript.h での問題します。
+
+   C++ 03、文字列リテラルから BSTR に変換 (typedef でにある ' wchar_t *') は推奨されなくなりましたが、許可されています。 C++ 11 では、変換は許可されません。
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   この問題に対処することがなく omscript.h を含むファイルをコンパイル、**寛容/-** オプション、または使用 **/Zc:strictStrings-** 代わりにします。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
@@ -407,7 +453,7 @@ Visual Studio 2017 バージョン 15.5 およびそれ以降のバージョン�
 
 1. プロジェクトの開く**プロパティ ページ** ダイアログ ボックス。
 
-1. **構成プロパティ**、展開、 **C/C++** フォルダーを選択し、**言語**プロパティ ページ。
+1. 選択、**構成プロパティ** > **C/C++** > **言語**プロパティ ページ。
 
 1. 変更、**準拠モード**プロパティの値を**はい (制限の緩やかな/-)** です。 選択**OK**または**適用**して変更を保存します。
 
@@ -425,5 +471,5 @@ Visual Studio 2017 バージョン 15.5 前に、のバージョンでは、こ�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)   
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+- [コンパイラ オプション](../../build/reference/compiler-options.md)
+- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)

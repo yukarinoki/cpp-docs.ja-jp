@@ -1,7 +1,7 @@
 ---
 title: MFC で使用するスタイル |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 06/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 9af450071546691778dc607746870084a7b1f346
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271371"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322421"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル  
   
@@ -321,7 +321,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |`ES_NOHIDESEL`|通常、エディット コントロールには、選択が非表示とコントロールが入力フォーカスを失ったコントロールが入力フォーカスを受け取ると、選択範囲を反転します。 指定する`ES_NOHIDESEL`この既定のアクションを削除します。|  
 |`ES_NUMBER`|エディット コントロールに入力する数字のみを使用できます。|  
 |`ES_OEMCONVERT`|エディット コントロールに入力されたテキストは、ANSI 文字セットから OEM 文字セットと ANSI 戻りますに変換されます。 これにより、アプリケーションを呼び出すと、文字変換が適切、`AnsiToOem`エディット コントロール内の ANSI 文字列を OEM 文字に変換する Windows の機能です。 このスタイルは、ファイル名を格納している編集コントロールに最も役立ちます。|  
-|`ES_PASSWORD`|すべての文字をアスタリスクが表示されます (**\\\***) エディット コントロールに入力されます。 アプリケーションで使用できます、`SetPasswordChar`表示されている文字を変更するメンバー関数。|  
+|`ES_PASSWORD`|すべての文字をアスタリスクが表示されます (__\*__) エディット コントロールに入力されます。 アプリケーションで使用できます、`SetPasswordChar`表示されている文字を変更するメンバー関数。|  
 |`ES_READONLY`|ユーザーが入力するか、エディット コントロールでテキストを編集できなくなります。|  
 |`ES_RIGHT`|単一行または複数行エディット コントロールで右揃えのテキストです。|  
 |`ES_UPPERCASE`|大文字のエディット コントロールに入力されたすべての文字に変換します。|  

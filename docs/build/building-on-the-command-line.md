@@ -1,7 +1,7 @@
 ---
 title: コマンドラインで C/C++ コードをビルド |Microsoft ドキュメント
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379277"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322317"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>コマンドラインで C/C++ コードをビルドします。
 
@@ -51,7 +51,7 @@ Visual Studio インストールを選択すると、C++ のワークロード�
 
 実際のスタート メニュー フォルダーとショートカット名は、1 つを設定した場合をインストールしたら、Visual Studio のバージョンおよびインストール ニックネームによって異なります。 たとえば、Visual Studio 2017 年 1 をインストールした場合とするした、指定したインストール ニックネームの*プレビュー*、開発者コマンド プロンプトのショートカットの名前は**VS 2017 (プレビュー)用開発者コマンドプロンプト**、という名前のフォルダーで**Visual Studio 2017**です。
 
-インストールしている場合、[構築ツールを Visual Studio 2017 の](https://go.microsoft.com/fwlink/p/?linkid=840931)(をも含む Visual Studio 2015 Update 3 のコンパイラ ツールセット) をアーキテクチャ固有のネイティブまたはクロス ツールのオプションがインストールされた開発者コマンド プロンプト、および一般的ないない**開発者コマンド プロンプト**ショートカットです。
+インストールしている場合、[構築ツールを Visual Studio 2017 の](https://go.microsoft.com/fwlink/p/?linkid=875721)(をも含む Visual Studio 2015 Update 3 のコンパイラ ツールセット) をアーキテクチャ固有のネイティブまたはクロス ツールのオプションがインストールされた開発者コマンド プロンプト、および一般的ないない**開発者コマンド プロンプト**ショートカットです。
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>開発者コマンド プロンプト ウィンドウを開く

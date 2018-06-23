@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704751"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322333"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラの警告 C4800 C5999 経由
 
@@ -250,3 +250,4 @@ ms.locfileid: "34704751"
 |コンパイラの警告 (レベル 3) C5042|'*宣言*': ブロック スコープでの関数宣言は、C++ の標準で指定された 'inline' をすることはできません 'inline' 指定子を削除。|
 |コンパイラの警告 (レベル 2) C5043|'*仕様*': 例外の指定が前の宣言と一致しません|
 |コンパイラの警告 (レベル 4) C5044|コマンド ライン オプションに引数*オプション*パスを指す '*パス*' に存在しません。|
+|[コンパイラの警告 C5045](c5045.md)|コンパイラは/Qspectre 切り替える場合は、指定されたメモリの負荷で Spectre 軽減策を挿入します。|
