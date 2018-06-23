@@ -24,9 +24,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
-このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 組織がに基づいて*、注解 C++ リファレンス マニュアル*Margaret Ellis と Bjarne stroustrup 共著者や、ANSI/ISO C 国際規格 (ISO/IEC FDIS 14882)。 C++ 言語機能の Microsoft 固有実装が含まれます。  
+このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 この体系が基づいている先は、*注解 C++ リファレンス マニュアル* Margaret Ellis と Bjarne stroustrup 共著者や、ANSI/ISO C++  国際規格 (ISO/IEC FDIS 14882)です。 Microsoft 固有の C++ 言語機能の実装も含まれます。  
 
-最新の C++ プログラミングの概要については、次を参照してください。[ようこそ戻る C++](welcome-back-to-cpp-modern-cpp.md)です。
+最新の C++ プログラミングの概要については、次を参照してください。[C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)に戻ってください。
   
  キーワードまたは演算子をすばやく見つけるには、次の表を参照してください。  
   
@@ -64,10 +64,10 @@ ms.lasthandoff: 05/03/2018
  オブジェクト、型、または関数の名前を指定する宣言ステートメントの要素。 抽象宣言子、型名、初期化子、関数宣言と定義、配列、参照。  
   
  [クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)  
- クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数、データ メンバー、ビット フィールド、このポインター、入れ子になったクラスです。  
+ クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数、データ メンバー、ビット フィールド、このポインター、入れ子になったクラス。  
   
  [派生クラス](../cpp/inheritance-cpp.md)  
- 単一継承と多重継承、仮想関数、複数の基底クラス、抽象クラス、スコープ規則。 _ _Super も、および\__interface キーワード。  
+ 単一継承と多重継承、仮想関数、複数の基底クラス、抽象クラス、スコープ規則。 __super も、および \__interface キーワード。  
   
  [メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)  
  クラス メンバーへのアクセスの制御: public、private、および protected キーワード。 friend 関数および friend クラス。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 05/03/2018
  イベントとイベント ハンドラーの宣言。  
   
  [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)  
- Microsoft C++ 固有の修飾子。 メモリのアドレス指定、呼び出し規約、naked 関数、拡張ストレージ クラス属性 (_ _declspec)、 \__w64。  
+ Microsoft C++ 固有の修飾子。 メモリのアドレス指定、呼び出し規約、naked 関数、拡張ストレージクラス属性 (__declspec)、 \__w64。  
   
  [インライン アセンブラー](../assembler/inline/inline-assembler.md)  
  __asm ブロックでのアセンブリ言語と C++ の使用。  
@@ -102,7 +102,7 @@ ms.lasthandoff: 05/03/2018
  [非標準動作](../cpp/nonstandard-behavior.md)  
  Visual C++ コンパイラの非標準動作に関する情報。  
 
- [C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)プラクティス セーフである、正確で効率的なプログラムを記述するための最新の C++ プログラミングの概要です。
+ [C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)  安全に記述するための、正確で効率的なプログラムを記述するための最新の C++ プログラミングの概要。
   
 ## <a name="related-sections"></a>関連項目  
  [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)  
