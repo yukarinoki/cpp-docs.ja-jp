@@ -22,7 +22,7 @@ ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-c-console-app-project"></a>C++ コンソール アプリケーション のプロジェクトの作成
 
-C++ プログラマのためのスタート地点は通常、「Hello, world!」 コマンドラインで実行されるアプリケーションです。 このステップで Visual Studio で作成しにいきます。
+C++ プログラマのためのスタート地点は通常、「Hello, world!」 コマンドラインで実行されるアプリケーションです。 このステップでは Visual Studio で作成します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
