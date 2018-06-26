@@ -1,6 +1,6 @@
 ---
 title: C++ デスクトップ開発のための Visual Studio IDE の使用 | Microsoft Docs
-ms.date: 11/27/2017
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29810e928ee910efe0eb9a4bdbcda8576bcb7a9e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4b71f09914d509aa4202bfc856d52f6cea26cea3
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328881"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253816"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>C++ デスクトップ開発のための Visual Studio IDE の使用
 
@@ -27,7 +27,7 @@ Visual Studio 統合開発環境 (IDE) は、大規模と小規模のコード �
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-Visual Studio をまだインストールしていない場合、この機会にインストールしてください。 Visual Studio は [Visual Studio のダウンロード](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx)からダウンロードできます。 Visual Studio をインストールするときは、Visual C++ 開発ツールを必ず含めてください。既定ではインストールされません。 Visual Studio のインストール方法に関する詳細については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)に関するページを参照してください。
+Visual Studio をまだインストールしていない場合、この機会にインストールしてください。 ダウンロードへのリンクおよびクイック チュートリアルは、「[Visual Studio での C++ サポートのインストール](../build/vscpp-step-0-installation.md)」を参照してください。 Visual Studio の一般的なインストール方法と不具合が生じた場合のトラブルシューティング方法の詳細については、「[Visual Studio のインストール](/visualstudio/install/install-visual-studio)」を参照してください。 **C++ によるデスクトップ開発**ワークロードを必ず選択し、既定ではインストールされない、C++ コンパイラー、ツールおよびライブラリを Visual Studio のインストール時に含めるようにします。
 
 一連のチュートリアルは、Visual Studio、Visual C++ 言語、Windows デスクトップ開発に必要なコンポーネントをインストールしていることを前提としています。 C++ 言語の基礎について理解していることも前提としています。 C++ について学習する必要がある場合、さまざまな書籍や Web リソースをご利用いただけます。 Standard C++ Foundation Web サイトの [Get Started](https://isocpp.org/get-started) ページが入門としてお勧めです。
 

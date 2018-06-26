@@ -89,7 +89,7 @@ ms.locfileid: "32417204"
  イベントとイベント ハンドラーの宣言。  
   
  [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)  
- Microsoft C++ 固有の修飾子。 メモリのアドレス指定、呼び出し規約、naked 関数、拡張ストレージ クラス属性 (_ _declspec)、 \__w64。  
+ Microsoft C++ 固有の修飾子。 メモリのアドレス指定、呼び出し規約、naked 関数、拡張ストレージクラス属性 (__declspec)、 \__w64。  
   
  [インライン アセンブラー](../assembler/inline/inline-assembler.md)  
  __asm ブロックでのアセンブリ言語と C++ の使用。  

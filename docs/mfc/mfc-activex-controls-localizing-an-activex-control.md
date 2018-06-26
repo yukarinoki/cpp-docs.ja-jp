@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355696"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929609"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのローカライズ
 この記事では、ActiveX コントロールのインターフェイスをローカライズするための手順について説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "33355696"
     > [!NOTE]
     >  これは正しく動きません場合によっては、将来のインスタンスが別のロケールがある場合。  
   
--   使用して、 **OnAmbientChanged**通知関数をコンテナーのロケールの適切なリソースを動的に読み込みます。  
+-   使用して、`OnAmbientChanged`通知関数をコンテナーのロケールの適切なリソースを動的に読み込みます。  
   
     > [!NOTE]
     >  これは、コントロールの機能しますが、ランタイム DLL が動的に更新されない、独自のリソース LocaleID アンビエント プロパティが変更されたときにします。 さらに、ActiveX コントロール ランタイム Dll は、そのリソースのロケールを決定するのにスレッドのロケールを使用します。  
@@ -98,7 +98,7 @@ ms.locfileid: "33355696"
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- 上記のコード サンプルに、メンバー関数のオーバーライドなど、コントロールの配置[COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite)です。 さらに、`m_hResDLL`コントロール クラスのメンバー変数にする必要があります。  
+ 上記のコード サンプルに、メンバー関数のオーバーライドなど、コントロールの配置[COleControl::OnSetClientSite](../mfc/reference/colecontrol-class.md#onsetclientsite)です。 さらに、 *m_hResDLL*コントロール クラスのメンバー変数にする必要があります。  
   
  コントロールのプロパティ ページをローカライズするのと同様のロジックを使用できます。 プロパティ ページをローカライズするには、プロパティ ページの実装ファイルに次の例のようなコードを追加 (のオーバーライドで[COlePropertyPage::OnSetPageSite](../mfc/reference/colepropertypage-class.md#onsetpagesite))。  
   

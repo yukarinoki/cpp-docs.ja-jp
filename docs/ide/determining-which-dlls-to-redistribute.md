@@ -1,7 +1,7 @@
 ---
 title: 再配布する DLL の決定 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -18,20 +18,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b52e2c4d45d92f10b535b9d2d23b5a1e1a043
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337601"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253868"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>再配布する DLL の決定
 
 Visual Studio によって提供されるライブラリ DLL を使用するアプリケーションをビルドする場合、アプリケーションを実行するユーザーもその DLL を自分のコンピューター上に持っている必要があります。 多くのユーザーは Visual Studio をインストールしていないと考えられるので、それらの DLL をユーザーに提供する必要があります。 Visual Studio では、これらの DLL を、アプリケーションのインストーラーに含めることができる*再頒布可能ファイル*として利用できるようにしています。
 
-再頒布可能 DLL をインストーラーに含めやすくするために、DLL はスタンドアロンの*再頒布可能パッケージ*として入手できます。 これらはアーキテクチャ固有の実行可能ファイルであり、集中配置を使用してユーザーのコンピューターに再頒布可能ファイルをインストールします。 たとえば、vcredist\_x86.exe の場合、x86 コンピューター用の 32 ビット ライブラリをインストールし、vcredist\_x64.exe の場合は x64 コンピューター用の 32 ビットと 64 ビットのライブラリをインストールします。また、vcredist\_ARM.exe の場合は、ARM コンピューター用のライブラリをインストールします。 Microsoft では Windows Update サービスを利用して、これらのライブラリを個別に更新するため、集中配置をお勧めします。 Visual Studio インストールのコピーに加え、[VisualStudio.com/Downloads](https://www.visualstudio.com/downloads/) の「その他のツールとフレームワーク」セクションから現在の再頒布可能パッケージをダウンロードして利用できます。
+再頒布可能 DLL をインストーラーに含めやすくするために、DLL はスタンドアロンの*再頒布可能パッケージ*として入手できます。 これらはアーキテクチャ固有の実行可能ファイルであり、集中配置を使用してユーザーのコンピューターに再頒布可能ファイルをインストールします。 たとえば、vcredist\_x86.exe の場合、x86 コンピューター用の 32 ビット ライブラリをインストールし、vcredist\_x64.exe の場合は x64 コンピューター用の 32 ビットと 64 ビットのライブラリをインストールします。また、vcredist\_ARM.exe の場合は、ARM コンピューター用のライブラリをインストールします。 Microsoft では Windows Update サービスを利用して、これらのライブラリを個別に更新するため、集中配置をお勧めします。 Visual Studio インストールのコピーに加え、現在の再頒布可能パッケージをダウンロードして利用できます。 現在および以前のツールセットの両方でサポートされる最新の再頒布可能パッケージへのリンクについては、「[最新のサポートされる Visual C++ のダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)」を参照してください。 以前の特定のバージョンの再頒布可能パッケージは、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?LinkId=158431)で "Visual C++ 再頒布可能パッケージ" を検索すると見つけることができます。
 
-配置する再頒布可能パッケージのメジャー バージョン番号は、アプリケーションの作成に使用した Visual Studio ツールセットのバージョンと一致している必要があります。 Visual Studio 2017 と Visual Studio 2015 のツールセットのバージョン番号には互換性があります。つまり、Visual Studio 2017 の再頒布可能ファイルは、2015 ツールセットを使用してビルドされたアプリで使用することができます。 互換性があっても、2017 ツールセットを使用してビルドされたアプリでの 2015 の再頒布可能ファイルの使用はサポートされません。 サポートされるのは、ご利用のツールセットのバージョンと同じであるか、それ以降の再頒布可能パッケージの使用のみです。 以前のツールセットでサポートされる最新の再頒布可能パッケージへのリンクについては、「[最新のサポートされる Visual C++ のダウンロード](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)」を参照してください。 以前の特定のバージョンの再頒布可能パッケージは、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?LinkId=158431)で "Visual C++ 再頒布可能パッケージ" を検索すると見つけることができます。
+配置する再頒布可能パッケージのメジャー バージョン番号は、アプリケーションの作成に使用した Visual Studio ツールセットのバージョンと一致している必要があります。マイナー バージョンは同じかそれ以上である必要があります。 Visual Studio 2017 と Visual Studio 2015 のツールセットのバージョン番号には互換性があります。つまり、Visual Studio 2017 の再頒布可能ファイルは、2015 ツールセットを使用してビルドされたアプリで使用することができます。 互換性があっても、2017 ツールセットを使用してビルドされたアプリでの 2015 の再頒布可能ファイルの使用はサポートされません。 サポートされるのは、ご利用のツールセットのバージョンと同じであるか、それ以降の再頒布可能パッケージの使用のみです。
 
 *マージ モジュール* を使用して、インストーラーに再頒布可能 DLL を含めることもできます。 これらの Microsoft インストーラー モジュールはアプリケーションのインストーラーに含まれており、このインストーラーでインストールされます。 再頒布可能 DLL のマージ モジュールは、Visual Studio インストール ディレクトリの \\VC\\Redist\MSVC\\*バージョン*\\MergeModules\\ の下にあります。 以前のバージョンの Visual Studio では、これらのファイルは \\Program Files または \\Program Files (x86) ディレクトリの Common Files\\Merge Modules サブディレクトリにあります。 これらのファイルの詳細については、「[マージ モジュールを使用したコンポーネントの再配布](../ide/redistributing-components-by-using-merge-modules.md)」を参照してください。
 
@@ -41,7 +41,7 @@ Visual Studio によって提供されるライブラリ DLL を使用するア�
 
 依存関係の一覧がある場合は、Microsoft Visual Studio インストール ディレクトリにある Redist.txt ファイルにリンクされている一覧、または Visual Studio のコピーのマイクロソフト ソフトウェア ライセンス条項の「頒布可能コード ファイル」セクションで言及されている再頒布可能 DLL の "再配布リスト" と比較してください。 Visual Studio 2017 については、「[Microsoft Visual Studio 2017 の頒布可能コード (ユーティリティ、機能拡張、および BuildServer ファイルを含む)](http://go.microsoft.com/fwlink/p/?linkid=823098)」を参照してください。 Visual Studio 2015 については、「[Microsoft Visual Studio 2015 および Microsoft Visual Studio 2015 SDK の頒布可能コード (ユーティリティおよび BuildServer ファイルを含む)](http://go.microsoft.com/fwlink/p/?linkid=799794)」を参照してください。 Visual Studio 2013 の一覧は、オンラインで「[Microsoft Visual Studio 2013 および Microsoft Visual Studio 2013 SDK 用頒布可能コード](http://go.microsoft.com/fwlink/p/?LinkId=313603)」から利用できます。
 
-Visual Studio 2015 より前のバージョンの Visual Studio では、C ランタイム ライブラリ (CRT) は msvc*バージョン*.dll に再頒布可能 DLL として含まれていました。 Visual Studio 2015 以降では、CRT の関数は vcruntime と UCRT にリファクタリングされました。 UCRT は、Windows Update で管理される、Windows 10 のシステム コンポーネントになりました。 すべての Windows 10 オペレーティング システムで利用できます。 以前のオペレーティング システムにアプリケーションを配置するには、UCRT も再配布する必要がある場合があります。 以前のバージョンの UCRT は Visual Studio の再頒布可能ファイルに含まれています。これは、まだいずれのバージョンの UCRT もインストールされていない場合にのみ、Windows 10 より前のオペレーティング システムのみにインストールされます。 Microsoft System Update パッケージとしてダウンレベル システム用の UCRT のインストール可能なバージョンについては、Microsoft ダウンロード センターの [Windows 10 ユニバーサル C ランタイム](https://www.microsoft.com/en-us/download/details.aspx?id=48234)に関するページを参照してください。
+Visual Studio 2015 より前のバージョンの Visual Studio では、C ランタイム ライブラリ (CRT) は msvc*バージョン*.dll に再頒布可能 DLL として含まれていました。 Visual Studio 2015 以降では、CRT の関数は vcruntime と UCRT にリファクタリングされました。 UCRT は、Windows Update で管理される、Windows 10 のシステム コンポーネントになりました。 すべての Windows 10 オペレーティング システムで利用できます。 以前のオペレーティング システムにアプリケーションを配置するには、UCRT も再配布する必要がある場合があります。 以前のバージョンの UCRT は Visual Studio の再頒布可能ファイルに含まれています。これは、まだいずれのバージョンの UCRT もインストールされていない場合にのみ、Windows 10 より前のオペレーティング システムのみにインストールされます。 Microsoft System Update パッケージとしてダウンレベル システム用の UCRT のインストール可能なバージョンについては、Microsoft ダウンロード センターの [Windows 10 ユニバーサル C ランタイム](https://www.microsoft.com/download/details.aspx?id=48234)に関するページを参照してください。
 
 Visual Studio に含まれているすべてのファイルを再配布することはできません。再配布を許可されているのは、Redist.txt またはオンラインの "REDIST list" で指定されているファイルだけです。 アプリケーションのデバッグ バージョンと、各種の Visual C++ デバッグ DLL は、再配布できません。 詳細については、「[配置方法の選択](../ide/choosing-a-deployment-method.md)」を参照してください。
 
