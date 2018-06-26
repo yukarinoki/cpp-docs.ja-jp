@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341350"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929446"
 ---
 # <a name="creating-an-active-document-container-application"></a>Active ドキュメント コンテナー アプリケーションの作成
 Active ドキュメント コンテナー アプリケーションを作成する最も簡単な最も推奨される方法は MFC アプリケーション ウィザードを使用して MFC EXE コンテナー アプリケーションを作成し、active ドキュメント コンテインメントをサポートするためにアプリケーションを変更します。  
@@ -36,7 +36,7 @@ Active ドキュメント コンテナー アプリケーションを作成す�
   
 3.  選択**MFC アプリケーション**右側のウィンドウからです。  
   
-4.  プロジェクトに名前を`MyProj`をクリックして**OK**です。  
+4.  プロジェクトに名前を*MyProj*をクリックして**OK**です。  
   
 5.  選択、**複合ドキュメント サポート**ページ。  
   
@@ -48,9 +48,9 @@ Active ドキュメント コンテナー アプリケーションを作成す�
   
 9. MFC アプリケーション ウィザードでは、アプリケーションの生成が完了すると、ソリューション エクスプ ローラーを使用して、次のファイルを開きます。  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. MyProjview.cpp では、次の変更を行います。  
+10. *MyProjview.cpp*、次の変更します。  
   
     -   `CMyProjView::OnPreparePrinting`関数の内容を次のコードに置き換えます。  
   

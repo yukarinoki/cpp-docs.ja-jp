@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344270"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928919"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>ドラッグ アンド ドロップ: ドロップ ターゲットの実装
 この記事では、ドロップ ターゲット アプリケーションを作成する方法について説明します。 ドロップ ソースを実装するよりも少し多い作業を受け取るドロップ ターゲットの実装が、それでも比較的簡単です。 これらの手法は、非 OLE アプリケーションにも適用されます。  
@@ -30,11 +30,11 @@ ms.locfileid: "33344270"
   
 1.  ドロップ ターゲットにする、アプリケーション内の各ビューにメンバー変数を追加します。 このメンバー変数は、型でなければなりません`COleDropTarget`またはその派生クラス。  
   
-2.  処理するビュー クラスの関数から、`WM_CREATE`メッセージ (通常`OnCreate`)、新しいメンバー変数の`Register`メンバー関数。 `Revoke` に対して呼び出されるは自動的にする、ビューが破棄されるとします。  
+2.  処理するビュー クラスの関数から、 **WM_CREATE**メッセージ (通常`OnCreate`)、新しいメンバー変数の`Register`メンバー関数。 `Revoke` に対して呼び出されるは自動的にする、ビューが破棄されるとします。  
   
 3.  次の関数をオーバーライドします。 アプリケーション全体で同じ動作をする場合は、ビュー クラスでこれらの関数をオーバーライドします。 特殊なケースでの動作を変更またはにドロップすることではないを有効にする場合`CView`、windows でこれらの関数のオーバーライド、 `COleDropTarget`-クラスを派生します。  
   
-    |上書き|許可するには|  
+    |オーバーライド|許可するには|  
     |--------------|--------------|  
     |`OnDragEnter`|ウィンドウで発生する操作を削除します。 カーソルがウィンドウを最初に入ったときに呼び出されます。|  
     |`OnDragLeave`|ドラッグ操作が指定されたウィンドウを離れるとの特別な動作です。|  

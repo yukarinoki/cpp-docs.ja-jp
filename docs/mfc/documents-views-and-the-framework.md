@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13a78c769a3c32f0293598ec6bd3c07788ea07b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349520"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929224"
 ---
 # <a name="documents-views-and-the-framework"></a>ドキュメント、ビュー、フレームワーク
-MFC フレームワークの中核にドキュメントとビューの概念があります。 ドキュメントは、ユーザーが編集セッションでやり取りするデータ オブジェクトです。 によって作成されて、`New`または**開く**コマンドを**ファイル**メニューし、通常、ファイルに保存します。 (MFC の標準ドキュメントでは、クラスから派生した**CDocument**はアクティブなドキュメント、および OLE 複合ドキュメントによって異なります)。ビューは、使用するユーザーは、ドキュメントを操作ウィンドウ オブジェクトです。  
+MFC フレームワークの中核にドキュメントとビューの概念があります。 ドキュメントは、ユーザーが編集セッションでやり取りするデータ オブジェクトです。 によって作成されて、**新規**または**開く**コマンドを**ファイル**メニューし、通常、ファイルに保存します。 (MFC の標準ドキュメントでは、クラスから派生した`CDocument`はアクティブなドキュメント、および OLE 複合ドキュメントによって異なります)。ビューは、使用するユーザーは、ドキュメントを操作ウィンドウ オブジェクトです。  
   
  実行中のアプリケーションの主要なオブジェクトは次のとおりです。  
   

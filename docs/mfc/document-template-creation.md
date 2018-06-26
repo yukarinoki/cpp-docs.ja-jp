@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345795"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928023"
 ---
 # <a name="document-template-creation"></a>ドキュメント テンプレートの作成
-応答で、新しいドキュメントを作成するときに、`New`または**開く**コマンドを**ファイル**] メニューの [ドキュメント テンプレートも新しいフレーム ウィンドウを作成したドキュメントを表示します。  
+応答で、新しいドキュメントを作成するときに、**新規**または**開く**コマンドを**ファイル**] メニューの [ドキュメント テンプレートもウィンドウを作成新しいフレームを表示するため、ドキュメントです。  
   
  ドキュメント テンプレートのコンス トラクターは、ドキュメント、windows、およびビューを作成できるテンプレートの種類を指定します。 これは、ドキュメント テンプレートのコンス トラクターに渡す引数によって決まります。 次のコード例の作成、 [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)サンプル アプリケーションについては。  
   

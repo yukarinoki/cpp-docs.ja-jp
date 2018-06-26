@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333831"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930662"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX コントロール コンテナー : ActiveX コントロールで発生したイベントの処理
 この記事では、[プロパティ] ウィンドウを使用して ActiveX コントロール コンテナーで ActiveX コントロールのイベント ハンドラーをインストールするについて説明します。 (制御) から特定のイベントの通知を受信し、応答で何らかのアクションを実行するイベント ハンドラーが使用されます。 この通知は、イベントを「発生」と呼ばれます。  
@@ -46,7 +46,7 @@ ms.locfileid: "33333831"
   
  [プロパティ] ウィンドウを使用してイベントを追加すると、イベントをマップ エントリ (`ON_EVENT`) が追加されるイベント シンク マップし、イベント ハンドラー関数が、コンテナーの実装に追加 (です。CPP) ファイルです。  
   
- 次の例と呼ばれる、イベント ハンドラーを宣言する`OnClickInCircCtrl`、Circ コントロールの**ClickIn**イベント。  
+ 次の例と呼ばれる、イベント ハンドラーを宣言する`OnClickInCircCtrl`、Circ コントロールの`ClickIn`イベント。  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

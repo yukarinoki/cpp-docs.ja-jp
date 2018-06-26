@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a45779034534ce87bd6bd4f55dfda4985a36f01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9252e08fe672f111dcf2b289b1b12891022a318d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343646"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931089"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>シリアル化機構のバイパス
 きたように、フレームワークは、ファイルからデータを読み書きする既定の方法を提供します。 ほとんどのアプリケーションのニーズに適したアーカイブ オブジェクトをシリアル化します。 このようなアプリケーションは、ファイルを読み込み、メモリに完全に、によりユーザーは、ファイルを更新でき、し、再度ディスクに更新されたバージョンを書き込みます。  
@@ -34,7 +34,7 @@ ms.locfileid: "33343646"
   
  このような場合は、オーバーライドすることができます、 [Serialize](../mfc/reference/cobject-class.md#serialize)関数を通じたファイル アクションを仲介する別の方法で、 [CFile](../mfc/reference/cfile-class.md)オブジェクトではなく、 [CArchive](../mfc/reference/carchive-class.md)オブジェクト。  
   
- 使用することができます、**開く**、**読み取り**、**書き込み**、**閉じる**、および`Seek`クラスのメンバー関数`CFile`ファイルを開く、ファイル ポインターを移動その時点で (指定したバイト数) のレコードを読み取る (のシーク)、ファイル内の特定の時点まで、let、ユーザーの更新、レコードは、へレコードがバックアップ ファイルに書き込み、同じ時点でもう一度しシークします。 フレームワークは、ファイルを開くし、使用することができます、`GetFile`クラスのメンバー関数`CArchive`へのポインターを取得する、`CFile`オブジェクト。 オーバーライドすることができますもより高度で柔軟性の高い使用するため、[かまいません](../mfc/reference/cdocument-class.md#onopendocument)と[呼び出す必要はありません](../mfc/reference/cdocument-class.md#onsavedocument)クラスのメンバー関数`CWinApp`です。 詳細については、クラスを参照してください。 [CFile](../mfc/reference/cfile-class.md)で、 *『 MFC リファレンス*です。  
+ 使用することができます、 `Open`、 `Read`、 `Write`、 `Close`、および`Seek`クラスのメンバー関数`CFile`ファイル ポインターを移動するファイルを開くには、レコード (指定された数のバイトを読み取るファイルで特定の時点までには、(シーク)) その時点では、ユーザーが、レコードを更新し、もう一度同じ時点にシークおよびレコードをファイルに書き込むできるようにします。 フレームワークは、ファイルを開くし、使用することができます、`GetFile`クラスのメンバー関数`CArchive`へのポインターを取得する、`CFile`オブジェクト。 オーバーライドすることができますもより高度で柔軟性の高い使用するため、[かまいません](../mfc/reference/cdocument-class.md#onopendocument)と[呼び出す必要はありません](../mfc/reference/cdocument-class.md#onsavedocument)クラスのメンバー関数`CWinApp`です。 詳細については、クラスを参照してください。 [CFile](../mfc/reference/cfile-class.md)で、 *『 MFC リファレンス*です。  
   
  このシナリオでは、`Serialize`をしない場合は、たとえば、ドキュメントを閉じるときに最新に保持するファイルのヘッダーの読み書きがある、何もオーバーライドしません。  
   

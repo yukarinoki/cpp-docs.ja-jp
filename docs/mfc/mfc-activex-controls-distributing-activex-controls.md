@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358808"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928883"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX コントロール : ActiveX コントロールの配布
 この記事では、ActiveX コントロールを再配布に関連するいくつかの問題について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "33358808"
  ActiveX コントロールを提供するセットアップ プログラムは、特別な Windows ディレクトリのサブディレクトリを作成し、コントロールのインストールする必要があります。OCX ファイルが入っています。  
   
 > [!NOTE]
->  Windows を使用して**GetWindowsDirectory**セットアップ プログラムでの API は、Windows ディレクトリの名前を取得します。 サブディレクトリ名を見て会社または製品の名前から派生することがあります。  
+>  Windows を使用して`GetWindowsDirectory`セットアップ プログラムでの API は、Windows ディレクトリの名前を取得します。 サブディレクトリ名を見て会社または製品の名前から派生することがあります。  
   
  セットアップ プログラムは、Windows システム ディレクトリに必要な再頒布可能 DLL ファイルをインストールする必要があります。 Dll のいずれかがユーザーのコンピューターに存在、する場合、セットアップ プログラム必要があります、それらのバージョンをインストールするバージョンとを比較します。 そのバージョン番号が既にインストールされているファイルよりも高い場合にのみ、ファイルを再インストールします。  
   
@@ -71,14 +71,14 @@ ms.locfileid: "33358808"
   
  場合は、代わりに直接コントロールを登録するセットアップ プログラムを記述することができます。  
   
- 使用して、 **LoadLibrary** Windows API コントロール DLL を読み込めません。 次に、使用**GetProcAddress** "DllRegisterServer"関数のアドレスを取得します。 最後を呼び出して、`DllRegisterServer`関数。 次のコード サンプルでは 1 つの可能なメソッドを`hLib`コントロール ライブラリのハンドルを格納および`lpDllEntryPoint`"DllRegisterServer"関数のアドレスを格納します。  
+ 使用して、 `LoadLibrary` Windows API コントロール DLL を読み込めません。 次に、使用`GetProcAddress`"DllRegisterServer"関数のアドレスを取得します。 最後を呼び出して、`DllRegisterServer`関数。 次のコード サンプルでは 1 つの可能なメソッドを`hLib`コントロール ライブラリのハンドルを格納および`lpDllEntryPoint`"DllRegisterServer"関数のアドレスを格納します。  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  コントロールの直接登録の利点は、する必要はありませんを起動し、別のプロセス (つまり、REGSVR32) を読み込むインストール時間を短縮です。 さらに、登録は、内部プロセスであるため、セットアップ プログラムはエラーを処理できるし、予期しない状況は外部プロセスをよりことができます。  
   
 > [!NOTE]
->  呼び出す必要がありますが、セットアップ プログラムは、ActiveX コントロールをインストールする前に**OleInitialize**です。 セットアップ プログラムが完了したら、呼び出す**OleUnitialize**です。 これにより、OLE システム Dll が ActiveX コントロールを登録するための適切な状態であります。  
+>  呼び出す必要がありますが、セットアップ プログラムは、ActiveX コントロールをインストールする前に`OleInitialize`です。 セットアップ プログラムが完了したら、呼び出す`OleUnitialize`です。 これにより、OLE システム Dll が ActiveX コントロールを登録するための適切な状態であります。  
   
  MFCx0.DLL を登録する必要があります。  
   

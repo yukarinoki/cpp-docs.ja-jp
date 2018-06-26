@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342161"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930977"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista コモン コントロールの作成要件
 Microsoft Foundation Class (MFC) ライブラリには、Windows のコモン コントロール バージョン 6.1 がサポートしています。 一般的なコントロールが含まれている[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]にライブラリが含まれています、[!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)]です。 ライブラリをサポートするメソッドと、既存のクラス、および新しいクラスを強化する新しいメソッドを提供する[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]コモン コントロールです。 アプリケーションをビルドすると、次のセクションで説明されている、コンパイルと移行の要件に従ってください。  
@@ -44,7 +44,7 @@ Microsoft Foundation Class (MFC) ライブラリには、Windows のコモン �
  ANSI バージョンのいくつかの MFC メソッドは、Windows のコモン コントロール バージョン 6.1 以降で廃止されました。 詳細については、次を参照してください。 [ANSI Api の廃止](../mfc/deprecated-ansi-apis.md)です。  
   
 ## <a name="migration-requirements"></a>移行の要件  
- Windows コモン コントロール バージョン 6.1 を使用する新しい MFC アプリケーションをビルドする Visual Studio IDE を使用する場合、IDE は自動的に適切なマニフェストを宣言します。 ただし、以前のバージョンの Visual Studio から既存の MFC アプリケーションを移行する、新しいコモン コントロールを使用する場合は、IDE は自動的に提供されませんマニフェスト情報をアプリケーションをアップグレードします。 Stdafx.h ファイルに次のソース コードを手動で挿入する必要があります。  
+ Windows コモン コントロール バージョン 6.1 を使用する新しい MFC アプリケーションをビルドする Visual Studio IDE を使用する場合、IDE は自動的に適切なマニフェストを宣言します。 ただし、以前のバージョンの Visual Studio から既存の MFC アプリケーションを移行する、新しいコモン コントロールを使用する場合は、IDE は自動的に提供されませんマニフェスト情報をアプリケーションをアップグレードします。 代わりに、必要があります手動で挿入するには、次のソース コード、 **stdafx.h**ファイル。  
   
 ```  
 #ifdef UNICODE  
@@ -63,6 +63,5 @@ Microsoft Foundation Class (MFC) ライブラリには、Windows のコモン �
 ## <a name="see-also"></a>関連項目  
  [MFC の一般的なトピック](../mfc/general-mfc-topics.md)   
  [階層図](../mfc/hierarchy-chart.md)   
- 
-  [非推奨の ANSI API](../mfc/deprecated-ansi-apis.md)
+ [非推奨の ANSI API](../mfc/deprecated-ansi-apis.md)
 

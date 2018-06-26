@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351840"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928365"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール : 高度なプロパティの実装
 この記事では、ActiveX コントロールのプロパティを高度な実装に関連するトピックについて説明します。  
@@ -66,9 +66,9 @@ ms.locfileid: "33351840"
  このサンプル コードを呼び出す`SetNotSupported`場合、`m_bReadOnlyMode`データ メンバーは**TRUE**です。 場合**FALSE**プロパティは、新しい値に設定されます。  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> プロパティから返されるエラー コード  
- 取得またはプロパティを設定しているときにエラーが発生したことを示すために使用して、`COleControl::ThrowError`を受け取る関数、 `SCODE` (状態コード) をパラメーターとして。 事前に定義を使用することができます`SCODE`か、独自のいずれかを定義します。 一覧については定義済み`SCODE`s およびカスタムの定義について`SCODE`s を参照してください[、ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)アーティクルの ActiveX コントロール: 高度なトピックです。  
+ 取得またはプロパティを設定しているときにエラーが発生したことを示すために使用して、`COleControl::ThrowError`をパラメーターとして SCODE (状態コード) を受け取る関数。 定義済み SCODE を使用したり、独自のいずれかを定義することができます。 定義済みの SCODEs とカスタム SCODEs を定義するための手順の一覧は、次を参照してください。 [、ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)、アーティクルの ActiveX コントロール: 高度なトピックです。  
   
- ヘルパー関数は、最も一般的な定義済みの存在`SCODE`s など[COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)、 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)、および[COleControl:。SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted)です。  
+ ヘルパー関数が存在する最も一般的な SCODEs のように定義済みの[COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)、 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)、および[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` このプロパティの Get または Set 内のエラーを返すための手段としてのみ使用するものでは関数またはオートメーション メソッドです。 これらは、スタックの適切な例外ハンドラーとなる時間が表示されます。  

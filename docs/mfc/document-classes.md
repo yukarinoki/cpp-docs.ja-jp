@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346618"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928542"
 ---
 # <a name="document-classes"></a>ドキュメント クラス
 ドキュメント テンプレート オブジェクトによって作成された、ドキュメント クラスのオブジェクトは、アプリケーションのデータを管理します。 これらのクラスのいずれかから、ドキュメントのクラスが派生されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "33346618"
  ドキュメント クラスのオブジェクトは、オブジェクトの表示と対話します。 ビュー オブジェクトは、ウィンドウのクライアント領域を表す、ドキュメントのデータを表示およびサービスと対話するユーザーを許可します。 ドキュメントとビューは、ドキュメント テンプレート オブジェクトによって作成されます。  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- アプリケーション固有のドキュメントの基底クラスです。 ドキュメント クラスまたはクラスから派生**CDocument**です。  
+ アプリケーション固有のドキュメントの基底クラスです。 ドキュメント クラスまたはクラスから派生`CDocument`です。  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  複合ドキュメントの実装、および基本的なコンテナー サポートに対して使用されます。 派生したクラスのコンテナーとして機能する[CDocItem](../mfc/reference/cdocitem-class.md)です。 このクラスは、文書化しの基本クラスは、コンテナーの基底クラスとして使用できる`COleServerDoc`です。  

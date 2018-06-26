@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346377"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931815"
 ---
 # <a name="handling-tool-tip-notifications"></a>ツール ヒントの通知の処理
-指定すると、`TBSTYLE_TOOLTIPS`スタイル、ツールバーを作成し、ツール ヒント コントロールを管理します。 ツール ヒントは、ツールバーのボタンを説明するテキストの行を含む小さなポップアップ ウィンドウです。 ツール ヒントが非表示、および表示されるだけと、ユーザー ツール バー ボタン上にカーソルを置きます 2 つ目の約半分ままにします。 ツール ヒントは、カーソルの近くに表示されます。  
+指定すると、 **TBSTYLE_TOOLTIPS**スタイル、ツールバーを作成し、ツール ヒント コントロールを管理します。 ツール ヒントは、ツールバーのボタンを説明するテキストの行を含む小さなポップアップ ウィンドウです。 ツール ヒントが非表示、および表示されるだけと、ユーザー ツール バー ボタン上にカーソルを置きます 2 つ目の約半分ままにします。 ツール ヒントは、カーソルの近くに表示されます。  
   
  ツール ヒントが表示される前に、 **TTN_NEEDTEXT**ボタンのわかりやすいテキストを取得するツールバーのオーナー ウィンドウに通知メッセージを送信します。 ツールバーのオーナー ウィンドウがある場合、`CFrameWnd`ウィンドウで、ツール ヒントが表示されて、余分な作成作業なし`CFrameWnd`の既定のハンドラーを持つ、 **TTN_NEEDTEXT**通知します。 ツールバーのオーナー ウィンドウがから派生していないかどうかは`CFrameWnd`、 ダイアログ ボックスやフォーム ビューなどには、オーナー ウィンドウのメッセージ マップにエントリを追加し、メッセージ マップに通知ハンドラーを提供する必要があります。 オーナー ウィンドウのメッセージ マップ エントリは次のとおりです。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `memberFxn`  
  このボタンのテキストが必要なときに呼び出されるメンバー関数。  
   

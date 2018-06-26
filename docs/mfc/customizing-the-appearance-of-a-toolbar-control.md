@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343695"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932118"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>ツール バー コントロールの外観のカスタマイズ
 クラス`CToolBarCtrl`外観 (および場合によっては、動作) のツールバー オブジェクトに影響する多くのスタイルを提供します。 設定してツール バー オブジェクトを変更、`dwCtrlStyle`のパラメーター、 `CToolBarCtrl::Create` (または`CToolBar::CreateEx`) メンバー関数は、ツール バー コントロールを作成します。  
@@ -47,17 +47,17 @@ ms.locfileid: "33343695"
 -   **TBSTYLE_ALTDRAG** alt キーを押しながらドラッグして、ツール バー ボタンの位置を変更することができます。 このスタイルが指定されていない場合、ユーザーはボタンをドラッグし、shift キーを押し必要があります。  
   
     > [!NOTE]
-    >  `CCS_ADJUSTABLE`をドラッグできるツール バー ボタンを有効にするスタイルを指定する必要があります。  
+    >  **ツール**をドラッグできるツール バー ボタンを有効にするスタイルを指定する必要があります。  
   
 -   **TBSTYLE_REGISTERDROP**生成**TBN_GETOBJECT**通知を要求するメッセージは、マウス ポインターがツール バー ボタン上に置いたときにターゲット オブジェクトを削除します。  
   
  残りのスタイルでは、ツールバーのオブジェクトのビジュアルとビジュアルの側面に影響します。  
   
--   `TBSTYLE_WRAPABLE` ボタンの複数の行を持つことができるツールバーを作成します。 ツール バー ボタン「ラップできます」次の行に、ツールバーが狭いが同じ直線上のすべてのボタンを含めるためになったとき。 分離と折り返されます境界での折り返しが発生します。  
+-   **TBSTYLE_WRAPABLE**ボタンの複数の行を持つことができるツールバーを作成します。 ツール バー ボタン「ラップできます」次の行に、ツールバーが狭いが同じ直線上のすべてのボタンを含めるためになったとき。 分離と折り返されます境界での折り返しが発生します。  
   
--   **TBSTYLE_CUSTOMERASE**生成**NM_CUSTOMDRAW**の通知メッセージを処理するとき`WM_ERASEBKGND`メッセージ。  
+-   **TBSTYLE_CUSTOMERASE**生成**NM_CUSTOMDRAW**の通知メッセージを処理するとき**WM_ERASEBKGND**メッセージ。  
   
--   `TBSTYLE_TOOLTIPS` ツールバーのボタンの説明テキストを表示するアプリケーションで使用できる、ツール ヒント コントロールを作成します。  
+-   **TBSTYLE_TOOLTIPS**ツールバーにボタンの説明テキストを表示するアプリケーションで使用できるツール ヒント コントロールを作成します。  
   
  ツール バー スタイルや拡張スタイルの完全な一覧については、次を参照してください。[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)と[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK にします。  
   

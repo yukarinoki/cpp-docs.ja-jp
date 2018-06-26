@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342148"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932020"
 ---
 # <a name="clipboard-adding-other-formats"></a>クリップボード : その他のデータ形式の追加
-このトピックでは、特に OLE サポートの場合、サポートされている形式の一覧を展開する方法について説明します。 トピック[クリップボード: データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)コピーと、クリップボードから貼り付けをサポートするために必要な最低限の実装について説明します。 クリップボードにコピーのみの形式は、すべてを実装する場合は、 `CF_METAFILEPICT`、 **CF_EMBEDSOURCE**、 **CF_OBJECTDESCRIPTOR**、および可能性のある`CF_LINKSOURCE`です。 ほとんどのアプリケーションでは、これら 3 つよりも、クリップボードにその他の形式を必要があります。  
+このトピックでは、特に OLE サポートの場合、サポートされている形式の一覧を展開する方法について説明します。 トピック[クリップボード: データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)コピーと、クリップボードから貼り付けをサポートするために必要な最低限の実装について説明します。 クリップボードにコピーのみの形式は、すべてを実装する場合は、 **CF_METAFILEPICT**、 **CF_EMBEDSOURCE**、 **CF_OBJECTDESCRIPTOR**、および可能性のある**CF_LINKSOURCE**です。 ほとんどのアプリケーションでは、これら 3 つよりも、クリップボードにその他の形式を必要があります。  
   
 ##  <a name="_core_registering_custom_formats"></a> 登録するカスタム書式設定します。  
  独自のカスタム形式を作成するには、独自のクリップボード形式を登録するときに使用する同じ手順を実行: する形式の名前を渡す、**独自のデータ**関数および形式 ID としてその戻り値を使用します。  

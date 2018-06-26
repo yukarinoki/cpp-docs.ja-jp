@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379243"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931737"
 ---
 # <a name="rubber-banding-and-trackers"></a>ラバー バンド処理とトラッカー
 トラッカーに付属している別の機能は、「ラバー バンド」の選択 を選択するアイテムの周囲のサイズ変更四角形をドラッグして複数の OLE 項目を選択することが可能です。 ユーザーがマウスの左ボタンを離したときに、ユーザーが選択されている地域内の項目が選択され、ユーザーが操作することができます。 たとえば、ユーザーは、別のコンテナー アプリケーションへ、選択をドラッグする可能性があります。  
   
- いくつか追加のコードで、アプリケーションのこの機能を実装する必要があります`WM_LBUTTONDOWN`ハンドラー関数。  
+ この機能を実装するには、いくつか、アプリケーションの WM_LBUTTONDOWN ハンドラー関数にコードを追加する必要があります。  
   
  次のコード サンプルは、ラバー バンドの選択と追加機能を実装します。  
   

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347218"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929091"
 ---
 # <a name="html-basics"></a>HTML の基礎
 ほとんどのブラウザーを参照するページの HTML ソースを調べる機能があります。 (ハイパー テキスト マークアップ言語) の HTML タグの数が表示されます、ソースを表示するときに、角度っこ、テキストが混在してで囲まれます。  
@@ -30,7 +30,7 @@ ms.locfileid: "33347218"
   
 1.  メモ帳または任意のプレーン テキスト エディターを開きます。  
   
-2.  **ファイル**] メニューの [選択`New`です。  
+2.  **ファイル**] メニューの [選択**新規**です。  
   
 3.  次の行に入力します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33347218"
   
 4.  **ファイル**] メニューの [選択**保存**、c:\webpages\First.htm として、ファイルを保存します。 ファイルをエディターで開いたままにしておきます。  
   
-5.  スイッチ、ブラウザーとの間、**ファイル**] メニューの [選択**開く**、または型`file://C:/webpages/first.htm`ブラウザーの URL の編集ボックス。 「上の HTML タグ」ウィンドウのキャプションを空白のページを表示する必要があります。  
+5.  スイッチ、ブラウザーとの間、**ファイル**] メニューの [選択**開く**、または型*file://C:/webpages/first.htm*ブラウザーの URL の編集ボックス。 「上の HTML タグ」ウィンドウのキャプションを空白のページを表示する必要があります。  
   
      タグはペアになって、山かっこで含まれてください。 タグは、大文字小文字を区別できませんが、大文字と小文字はタグを目立たによく使用します。  
   

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347696"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930517"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC モジュールの状態データの管理
-この記事では、MFC のモジュールと (パス コードは、アプリケーションの実行時に) 実行のフロー モジュールに出入りする場合にこの状態を更新する方法の状態データについて説明します。 モジュールの状態を切り替える、`AFX_MANAGE_STATE`と`METHOD_PROLOGUE`マクロについても説明します。  
+この記事では、MFC のモジュールと (パス コードは、アプリケーションの実行時に) 実行のフロー モジュールに出入りする場合にこの状態を更新する方法の状態データについて説明します。 AFX_MANAGE_STATE と METHOD_PROLOGUE マクロでモジュールの状態の切り替えについても説明します。  
   
 > [!NOTE]
 >  「モジュール」とは、実行可能プログラムまたは DLL (または一連の Dll) に、アプリケーションの残りの部分に関係なく動作するが共有 MFC DLL のコピーを使用します。 ActiveX コントロールでは、モジュールの典型的な例を示します。  

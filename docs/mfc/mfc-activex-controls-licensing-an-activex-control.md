@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353934"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929745"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのライセンス
 ライセンスのサポート、ActiveX コントロールのオプション機能を制御できますを使用して、コントロールを配布したりできるユーザーをします。 (ライセンスの問題の詳細については、ライセンスの問題を参照してください[既存の ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)。)。  
@@ -44,7 +44,7 @@ ms.locfileid: "33353934"
  ライセンスを実装する ActiveX コントロールでは、他のユーザーが ActiveX コントロールを使用する方法を決定する、コントロール開発者として使用する、できます。 コントロールにコントロールの購入者を指定するとします。購入した顧客配布することが、コントロールしない場合は、アグリーメントでの使用許諾契約書ファイル、します。コントロールを使用するアプリケーションでの使用許諾契約書ファイルです。 これは、最初のライセンスを制御することがなく、コントロールを使用する新しいアプリケーションの作成からそのアプリケーションのようにします。  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> ActiveX コントロールのライセンスの概要  
- ActiveX コントロールのライセンスをサポートする、 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)クラスにいくつかの関数の実装を提供、 **IClassFactory2**インターフェイス: **IClassFactory2: RequestLicKey**、 **IClassFactory2::GetLicInfo**、および**IClassFactory2::CreateInstanceLic**です。 コンテナー アプリケーションの開発者が、コントロールへの呼び出しのインスタンスを作成する要求を行うときに`GetLicInfo`されることを確認するコントロール。使用許諾契約書ファイルが存在します。 コントロールのライセンスが与えられた場合、コントロールのインスタンスが作成され、コンテナーに配置することができます。 開発者は、コンテナー アプリケーションの構築が終了したら、別の関数を呼び出すには、この時間`RequestLicKey`が行われます。 この関数は、コンテナー アプリケーションにライセンス キー (単純な文字列) を返します。 返されたキーは、アプリケーションで埋め込まれます。  
+ ActiveX コントロールのライセンスをサポートする、 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)クラスにいくつかの関数の実装を提供、`IClassFactory2`インターフェイス: `IClassFactory2::RequestLicKey`、 `IClassFactory2::GetLicInfo`、および`IClassFactory2::CreateInstanceLic`です。 コンテナー アプリケーションの開発者が、コントロールへの呼び出しのインスタンスを作成する要求を行うときに`GetLicInfo`されることを確認するコントロール。使用許諾契約書ファイルが存在します。 コントロールのライセンスが与えられた場合、コントロールのインスタンスが作成され、コンテナーに配置することができます。 開発者は、コンテナー アプリケーションの構築が終了したら、別の関数を呼び出すには、この時間`RequestLicKey`が行われます。 この関数は、コンテナー アプリケーションにライセンス キー (単純な文字列) を返します。 返されたキーは、アプリケーションで埋め込まれます。  
   
  次の図では、ActiveX コントロール コンテナー アプリケーションの開発時に使用されるライセンスの確認を示します。 前述のように、コンテナー アプリケーションの開発者には、適切な必要があります。コントロールのインスタンスを作成する開発用コンピューターにインストールされている使用許諾契約書ファイルです。  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33353934"
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     コントロールでは、デザイン時の使用方法によって、コントロールのライセンス ファイルのシステムに存在することを確認することを確認します。 この関数**IClassFactory2::GetLicInfo**と**IClassFactory::CreateInstanceLic**です。  
+     コントロールでは、デザイン時の使用方法によって、コントロールのライセンス ファイルのシステムに存在することを確認することを確認します。 この関数`IClassFactory2::GetLicInfo`と`IClassFactory::CreateInstanceLic`です。  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     コントロールの DLL からの一意のキーを要求します。 このキーはコンテナー アプリケーションの埋め込みデータ ソースとと共に、後で、使用`VerifyLicenseKey`コントロールのインスタンスを作成します。 この関数**IClassFactory2::RequestLicKey**です。  
+     コントロールの DLL からの一意のキーを要求します。 このキーはコンテナー アプリケーションの埋め込みデータ ソースとと共に、後で、使用`VerifyLicenseKey`コントロールのインスタンスを作成します。 この関数`IClassFactory2::RequestLicKey`です。  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     埋め込まれたキーと、コントロールの一意のキーは、同じであることを確認します。 これにより、コンテナーの使用のためのコントロールのインスタンスを作成できます。 この関数**IClassFactory2::CreateInstanceLic**ライセンス キーの確認方法をカスタマイズするオーバーライドすることができます。 既定の実装では、文字列比較を実行します。 詳細については、次を参照してください。[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)、この記事で後述します。  
+     埋め込まれたキーと、コントロールの一意のキーは、同じであることを確認します。 これにより、コンテナーの使用のためのコントロールのインスタンスを作成できます。 この関数`IClassFactory2::CreateInstanceLic`ライセンス キーの確認方法をカスタマイズするオーバーライドすることができます。 既定の実装では、文字列比較を実行します。 詳細については、次を参照してください。[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)、この記事で後述します。  
   
 ###  <a name="_core_header_file_modifications"></a> ヘッダー ファイルの変更  
  ActiveX コントロール ウィザードでは、コントロールのヘッダー ファイルに次のコードを配置します。 この例の 2 つのメンバー関数で`CSampleCtrl`オブジェクト 's`factory`宣言され、コントロールが存在することを検証します。使用許諾契約書ファイル、およびコントロールを含むアプリケーションで使用するライセンス キーを取得します。  
@@ -100,7 +100,7 @@ ms.locfileid: "33353934"
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  変更した場合**szLicString**何らかの方法では、コントロールの最初の行も変更する必要があります。使用許諾契約書ファイルまたはライセンスは正しく機能しません。  
+>  変更した場合`szLicString`何らかの方法では、コントロールの最初の行も変更する必要があります。使用許諾契約書ファイルまたはライセンスは正しく機能しません。  
   
  ActiveX コントロール ウィザードは、コントロール クラスの定義に、コントロール実装ファイルに次のコードを配置`VerifyUserLicense`と`GetLicenseKey`関数。  
   

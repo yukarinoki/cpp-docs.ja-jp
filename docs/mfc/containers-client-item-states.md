@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342174"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929719"
 ---
 # <a name="containers-client-item-states"></a>コンテナー : クライアント アイテムの状態
 この記事では、クライアント アイテムがその有効期間に通過するさまざまな状態について説明します。  
   
- クライアント アイテムは、作成、アクティブ化、変更されると、および保存されるいくつかの状態を通過します。 フレームワークによって、項目の状態が変更されるたびに[として](../mfc/reference/coleclientitem-class.md#onchange)で、`OLE_CHANGED_STATE`通知します。 2 番目のパラメーターの値は、 **COleClientItem::ItemState**列挙します。 次のいずれかを指定できます。  
+ クライアント アイテムは、作成、アクティブ化、変更されると、および保存されるいくつかの状態を通過します。 フレームワークによって、項目の状態が変更されるたびに[として](../mfc/reference/coleclientitem-class.md#onchange)で、 **OLE_CHANGED_STATE**通知します。 2 番目のパラメーターの値は、`COleClientItem::ItemState`列挙します。 次のいずれかを指定できます。  
   
--   **COleClientItem::emptyState**  
+-   *COleClientItem::emptyState*  
   
--   **COleClientItem::loadedState**  
+-   *COleClientItem::loadedState*  
   
--   **COleClientItem::openState**  
+-   *COleClientItem::openState*  
   
--   **COleClientItem::activeState**  
+-   *COleClientItem::activeState*  
   
--   **COleClientItem::activeUIState**  
+-   *COleClientItem::activeUIState*  
   
  空の状態でクライアント アイテムいないまだ完全アイテムです。 メモリが割り当てられたが、OLE アイテムのデータで初期化されていません。 クライアント アイテムの状態を呼び出すことによって作成されたときに、この**新しい**が、一般的な 2 段階の作成の 2 番目の手順を実施されていません。  
   
- 2 番目の手順を呼び出すことによって実行される`COleClientItem::CreateFromFile`別または **レプリカ * * * xxxx*関数、項目が作成される完全にします。 (ファイル、クリップボードなど、他のソースから) OLE データが関連付けられている、 `COleClientItem`-派生オブジェクト。 現在の項目は読み込まれた状態です。  
+ 2 番目の手順を呼び出すことによって実行される`COleClientItem::CreateFromFile`別または`CreateFrom` *xxxx*関数、項目が作成される完全にします。 (ファイル、クリップボードなど、他のソースから) OLE データが関連付けられている、 `COleClientItem`-派生オブジェクト。 現在の項目は読み込まれた状態です。  
   
  項目がされているサーバーのウィンドウで開かれているではなく、コンテナーのドキュメント内の場所で開かれている、ときに、開いている (または完全にオープン) 状態にある必要があります。 この状態で、クロスハッチ通常は描画で項目がアクティブである他の場所を示すために、コンテナーのウィンドウ内の項目の表示されます。  
   

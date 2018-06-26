@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347842"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929664"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE のダイアログ ボックス
 ユーザーは、OLE 対応アプリケーションを実行するときに、操作を実行するために、アプリケーションがユーザーからの情報をしなければならない場合があります。 MFC OLE クラスは、いくつかの必要な情報を収集するダイアログ ボックスを提供します。 このトピックでは、OLE のダイアログ ボックスで処理されるタスクと対応するダイアログ ボックスを表示するために必要なクラスを示します。 OLE ダイアログ ボックスとその動作をカスタマイズするために使用する構造体の詳細については、次を参照してください。 [『 MFC リファレンス](../mfc/mfc-desktop-applications.md)です。  
@@ -46,7 +46,7 @@ ms.locfileid: "33347842"
  リンクの編集 ダイアログ ボックスは、リンク オブジェクトのソースに関する情報を変更できます。 リンクの更新 ダイアログ ボックスでは、現在のダイアログ ボックスのすべてのリンクされた項目のソースを確認し、必要に応じてリンクの編集 ダイアログ ボックスを表示します。 編集 メニューからのリンクを選択すると、リンクの編集 ダイアログ ボックスを表示します。 リンクの更新 ダイアログ ボックスには、複合ドキュメントを初めて開いたときに通常表示されます。 いずれかを使用して、[関数](../mfc/reference/colelinksdialog-class.md)または[関数](../mfc/reference/coleupdatedialog-class.md)クラス、に応じてどの ダイアログ ボックスを表示します。  
   
  *サーバーがビジー状態または応答していないサーバー*  
- ユーザーが項目をアクティブ化しようとして、サーバーが要求を処理、通常、サーバーが別のユーザーによって使用中か、またはタスクに現在できないときに、サーバーがビジー状態のダイアログ ボックスが表示されます。 サーバーがすべてのアクティブ化要求に応答しない場合は、サーバーが応答しません ダイアログ ボックスが表示されます。 使用してこれらのダイアログ ボックスが表示される`COleMessageFilter`OLE インターフェイスの実装に基づいて、 **IMessageFilter**ユーザーは、アクティブ化要求を再試行するかどうかを決定できます。 使用して、 [COleBusyDialog](../mfc/reference/colebusydialog-class.md)をこのダイアログ ボックスを表示するクラス。  
+ ユーザーが項目をアクティブ化しようとして、サーバーが要求を処理、通常、サーバーが別のユーザーによって使用中か、またはタスクに現在できないときに、サーバーがビジー状態のダイアログ ボックスが表示されます。 サーバーがすべてのアクティブ化要求に応答しない場合は、サーバーが応答しません ダイアログ ボックスが表示されます。 使用してこれらのダイアログ ボックスが表示される`COleMessageFilter`OLE インターフェイスの実装に基づいて、`IMessageFilter`ユーザーは、アクティブ化要求を再試行するかどうかを決定できます。 使用して、 [COleBusyDialog](../mfc/reference/colebusydialog-class.md)をこのダイアログ ボックスを表示するクラス。  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックス](../mfc/dialog-boxes.md)   

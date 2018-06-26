@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354918"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930649"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
 この記事では、ActiveX コントロールに共通する Picture 型と、その実装方法を説明します。 ここでは、次の内容について説明します。  
@@ -71,11 +71,11 @@ ms.locfileid: "33354918"
      ActiveX コントロールの描画に使用するいくつかの関数を変更します。  
   
 ##  <a name="_core_additions_to_your_control_project"></a> コントロール プロジェクトへの追加  
- 標準の Picture プロパティ ページのプロパティ ページ ID を追加するには、コントロール実装ファイル内 (.CPP) の `BEGIN_PROPPAGEIDS` マクロの後に次の行を挿入します。  
+ 標準の Picture プロパティ ページのプロパティ ページの ID を追加するには、コントロール実装ファイル内の BEGIN_PROPPAGEIDS マクロの後に、次の行を挿入 (です。CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- また、 `BEGIN_PROPPAGEIDS` マクロのカウント パラメーターの値を 1 つ増やす必要があります。 次の行に例を示します。  
+ BEGIN_PROPPAGEIDS マクロのカウント パラメーターは、いずれかによっても増やす必要があります。 次の行に例を示します。  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "33354918"
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- データ メンバー `m_pic`に名前を付ける必要はありません。任意の名前で十分です。  
+ データ メンバーの名前を付ける必要はありません*m_pic*; は、任意の名前で十分です。  
   
  次に、Picture 型をサポートするカスタム プロパティを追加します。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "33354918"
 >  コントロールのクラス名と関数名は、上記の例とは異なる場合があります。  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> コントロール プロジェクトの変更  
- コントロール プロジェクトに必要なコードを追加した後、ActiveX コントロールの描画に影響するいくつかの関数を変更する必要があります。 変更する必要がある関数は、 `OnResetState`関数、 `OnDraw`関数、カスタム Picture プロパティの Get/Set 関数で、これらはコントロール実装ファイル内にあります。 (この例では、コントロール クラスは `CSampleCtrl`、 `CPictureHolder` データ メンバーは `m_pic`、カスタム Picture プロパティ名は `ControlPicture`です。)  
+ コントロール プロジェクトに必要なコードを追加した後、ActiveX コントロールの描画に影響するいくつかの関数を変更する必要があります。 変更する必要がある関数は、 `OnResetState`関数、 `OnDraw`関数、カスタム Picture プロパティの Get/Set 関数で、これらはコントロール実装ファイル内にあります。 (この例では、コントロール クラスは、呼び出されます`CSampleCtrl`、`CPictureHolder`データ メンバーが呼び出される*m_pic*、カスタム picture プロパティの名前と`ControlPicture`)。  
   
  コントロールの `OnResetState` 関数で、 `COleControl::OnResetState`への呼び出しの後にオプションの行を次のように追加します。  
   

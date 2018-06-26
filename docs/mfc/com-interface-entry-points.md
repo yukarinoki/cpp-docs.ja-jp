@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02aa70706df65318f2fbfd8103dff04a47ae2155
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341412"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929888"
 ---
 # <a name="com-interface-entry-points"></a>COM インターフェイスのエントリ ポイント
 COM インターフェイスのメンバー関数を使用して、 [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue)エクスポートされたインターフェイスのメソッドを呼び出すときに、適切なグローバル状態を維持するためにマクロです。  
@@ -33,7 +33,7 @@ COM インターフェイスのメンバー関数を使用して、 [METHOD_PROL
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- 詳細については、次を参照してください。[テクニカル ノート 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE で**IUnknown**実装します。  
+ 詳細については、次を参照してください。[テクニカル ノート 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE で`IUnknown`実装します。  
   
  `METHOD_PROLOGUE`としてマクロを定義します。  
   

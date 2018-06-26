@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cd19d4828269d0591afd0b46768e9917b96906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf21021e204a6caf298453bab42db2aedff409c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349345"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928421"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>ヘッダー項目に対するドラッグ アンド ドロップのサポート
-ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する指定、`HDS_DRAGDROP`スタイル。 ヘッダー項目に対するドラッグ アンド ドロップのサポートは、ヘッダー コントロールのヘッダー項目の順序を変更する機能をユーザーに与えます。 既定の動作は、ヘッダー項目が削除された場合、ドラッグされているヘッダー項目の半透明のドラッグ イメージと、新しい位置の視覚インジケーターを提供します。  
+ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供するには、HDS_DRAGDROP 形式を指定します。 ヘッダー項目に対するドラッグ アンド ドロップのサポートは、ヘッダー コントロールのヘッダー項目の順序を変更する機能をユーザーに与えます。 既定の動作は、ヘッダー項目が削除された場合、ドラッグされているヘッダー項目の半透明のドラッグ イメージと、新しい位置の視覚インジケーターを提供します。  
   
- 一般的なドラッグ アンド ドロップ機能により、処理することにより既定のドラッグ アンド ドロップの動作を拡張することができますと、 **HDN_BEGINDRAG**と**HDN_ENDDRAG**通知します。 オーバーライドすることで、ドラッグ イメージの外観をカスタマイズすることも、 [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage)メンバー関数。  
+ 一般的なドラッグ アンド ドロップ機能により、としてに HDN_BEGINDRAG および HDN_ENDDRAG の通知を処理することによって既定のドラッグ アンド ドロップの動作を拡張できます。 オーバーライドすることで、ドラッグ イメージの外観をカスタマイズすることも、 [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage)メンバー関数。  
   
 > [!NOTE]
 >  埋め込みヘッダー内のコントロール リスト コントロールをドラッグ アンド ドロップのサポートを提供する場合は、拡張スタイル」を参照してください、[リスト コントロール スタイルの変更](../mfc/changing-list-control-styles.md)トピックです。  

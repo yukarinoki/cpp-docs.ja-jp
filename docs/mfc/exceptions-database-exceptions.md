@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354303"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930239"
 ---
 # <a name="exceptions-database-exceptions"></a>例外処理 : データベースの例外
 この記事では、データベースの例外を処理する方法について説明します。 この記事の内容の大部分には、使用している MFC クラスのオープン データベース コネクティビティ (ODBC) または MFC クラスのデータ アクセス オブジェクト (DAO) かどうかが適用されます。 いずれかまたはその他のモデルに固有の情報が明示的にマークします。 ここでは、次の内容について説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "33354303"
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror) MFC DAO クラスから拡張エラー コードが含まれています。 フォームの名前を持つこれらのエラー コード**AFX_DAO_ERROR_XXX**、内のデータ メンバーの下に記載されて`CDaoException`です。  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) OLE を含む`SCODE`から DAO、該当する場合。 ただし、このエラー コードを操作する必要があることはほとんどありません。 通常の詳細については、その他の 2 つのデータ メンバーは、使用可能なです。 データ メンバーの詳細を参照してください`SCODE`値。  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode) OLE を含む**SCODE**から DAO、該当する場合。 ただし、このエラー コードを操作する必要があることはほとんどありません。 通常の詳細については、その他の 2 つのデータ メンバーは、使用可能なです。 データ メンバーの詳細を参照してください**SCODE**値。  
   
  DAO エラー、DAO エラー オブジェクトの種類、および DAO Errors コレクションに関する追加情報がクラスで使用可能な[CDaoException](../mfc/reference/cdaoexception-class.md)です。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33354303"
  次の例が、構築しようとしています。、 [CRecordset](../mfc/reference/crecordset-class.md)-派生、ヒープにオブジェクト、**新しい**演算子、および、レコード セット (ODBC データ ソース) を開きます。 DAO クラスの同様の例では、「DAO 例外次の例」を参照してください。  
   
 ### <a name="odbc-exception-example"></a>ODBC 例外の例  
- [開く](../mfc/reference/crecordset-class.md#open)メンバー関数が例外をスローできません (型の[CDBException](../mfc/reference/cdbexception-class.md) ODBC クラスの)、したがってこの角かっこをコード、**開く**を呼び出す、**を再試行してください**ブロックします。 後続**キャッチ**ブロックでキャッチする、`CDBException`です。 呼ばれる自体には、例外オブジェクトを調べる`e`がここではレコード セットを作成する試行が失敗したことを確認することができます。 **キャッチ**ブロックがメッセージ ボックスを表示し、レコード セット オブジェクトを削除してクリーンアップします。  
+ [開く](../mfc/reference/crecordset-class.md#open)メンバー関数が例外をスローできません (型の[CDBException](../mfc/reference/cdbexception-class.md) ODBC クラスの)、したがってこの角かっこをコード、`Open`を呼び出す、**を再試行してください**ブロックします。 後続**キャッチ**ブロックでキャッチする、`CDBException`です。 呼ばれる自体には、例外オブジェクトを調べる`e`がここではレコード セットを作成する試行が失敗したことを確認することができます。 **キャッチ**ブロックがメッセージ ボックスを表示し、レコード セット オブジェクトを削除してクリーンアップします。  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

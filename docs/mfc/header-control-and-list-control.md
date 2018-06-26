@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a84386781bf28edb9223f608fa7a64040eb68379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acee0508243f468f41c645a0cde825ca7c828657
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346101"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931595"
 ---
 # <a name="header-control-and-list-control"></a>ヘッダー コントロールおよびリスト コントロール
 ほとんどの場合に埋め込まれているヘッダー コントロールを使用して、 [CListCtrl](../mfc/reference/clistctrl-class.md)または[CListView](../mfc/reference/clistview-class.md)オブジェクト。 ただし、別のヘッダー コントロール オブジェクトが内の行または列に配置されたデータを操作するなど、望ましい場合がある、 [CView](../mfc/reference/cview-class.md)-派生オブジェクト。 このような場合は、埋め込みヘッダー コントロールの既定の動作と外観を細かく制御する必要があります。  
@@ -32,11 +32,11 @@ ms.locfileid: "33346101"
  ヘッダー コントロールを標準を提供する多くの場合、既定の動作を使用する場合は、 [CListCtrl](../mfc/reference/clistctrl-class.md)または[CListView](../mfc/reference/clistview-class.md)代わりにします。 使用して`CListCtrl`リスト ビューのコモン コントロールに埋め込まれている既定のヘッダー コントロールの機能を使用する場合。 使用して[CListView](../mfc/reference/clistview-class.md)ビュー オブジェクトに埋め込まれている既定のヘッダー コントロールの機能を使用する場合。  
   
 > [!NOTE]
->  これらのコントロールにはのみが含まれて、組み込みのヘッダー コントロールには使用してリスト ビュー コントロールを作成する場合、`LVS_REPORT`スタイル。  
+>  これらのコントロールにはのみが含まれて、組み込みのヘッダー コントロールには使用してリスト ビュー コントロールを作成する場合、 **LVS_REPORT**スタイル。  
   
  ほとんどの場合を含むリスト ビュー コントロールのスタイルを変更することによって埋め込みヘッダー コントロールの外観を変更できます。 さらに、ヘッダー コントロールの概要については、親のリスト ビュー コントロールのメンバー関数を使用して取得できます。 ただし、完全に制御および属性と埋め込みヘッダー コントロールのスタイルへのアクセスには、ヘッダー コントロール オブジェクトへのポインターを取得することをお勧めします。  
   
- 埋め込みのヘッダー コントロール オブジェクトは、いずれかからアクセスできる**CListCtrl**または`CListView`、それぞれのクラスを呼び出して`GetHeaderCtrl`メンバー関数。 次のコードでは、これを示しています。  
+ 埋め込みのヘッダー コントロール オブジェクトは、いずれかからアクセスできる`CListCtrl`または`CListView`、それぞれのクラスを呼び出して`GetHeaderCtrl`メンバー関数。 次のコードでは、これを示しています。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   

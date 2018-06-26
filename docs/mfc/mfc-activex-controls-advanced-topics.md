@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354019"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930005"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール : 高度なトピック
 この記事では、ActiveX コントロールの開発に関連する高度なトピックについて説明します。 次の設定があります。  
@@ -79,9 +79,9 @@ ms.locfileid: "33354019"
   
 8.  **Get 関数**と**設定関数**ボックス、Get と Set 関数に一意の名前を入力するか、既定の名前を受け入れます。  
   
-9. という名前のパラメーターを追加`row`(型`short`) を使用して、**パラメーター名**と**パラメーターの型**コントロール。  
+9. という名前のパラメーターを追加*行*(型*短い*) を使用して、**パラメーター名**と**パラメーターの型**コントロール。  
   
-10. 呼ばれる 2 番目のパラメーターを追加`column`(型`short`)。  
+10. 呼ばれる 2 番目のパラメーターを追加*列*(型*短い*)。  
   
 11. **[完了]** をクリックします。  
   
@@ -111,48 +111,48 @@ ms.locfileid: "33354019"
   
 |Error|説明|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|無効な関数呼び出し|  
-|**CTL_E_OVERFLOW**|オーバーフロー|  
-|**CTL_E_OUTOFMEMORY**|メモリ不足|  
-|**CTL_E_DIVISIONBYZERO**|0 による除算です。|  
-|**CTL_E_OUTOFSTRINGSPACE**|文字列スペースが不足しています|  
-|**CTL_E_OUTOFSTACKSPACE**|スタック領域不足|  
-|**CTL_E_BADFILENAMEORNUMBER**|ファイル名または番号が正しくありません。|  
-|**CTL_E_FILENOTFOUND**|ファイルが見つかりません。|  
-|**CTL_E_BADFILEMODE**|ファイル モードが正しくありません。|  
-|**CTL_E_FILEALREADYOPEN**|ファイルは既に開かれています。|  
-|**CTL_E_DEVICEIOERROR**|デバイス I/O エラーです。|  
-|**CTL_E_FILEALREADYEXISTS**|ファイルは既に存在します|  
-|**CTL_E_BADRECORDLENGTH**|レコード長が正しくありません。|  
-|**CTL_E_DISKFULL**|ディスクがいっぱいです。|  
-|**CTL_E_BADRECORDNUMBER**|レコード番号が正しくありません|  
-|**CTL_E_BADFILENAME**|不適切なファイル名|  
-|**CTL_E_TOOMANYFILES**|ファイルが多すぎます。|  
-|**CTL_E_DEVICEUNAVAILABLE**|デバイスが準備されていません|  
-|**CTL_E_PERMISSIONDENIED**|アクセス許可は拒否されました|  
-|**CTL_E_DISKNOTREADY**|ディスクが準備されていません|  
-|**CTL_E_PATHFILEACCESSERROR**|パス/ファイル アクセス エラー|  
-|**CTL_E_PATHNOTFOUND**|パスが見つかりません。|  
-|**CTL_E_INVALIDPATTERNSTRING**|正しくないパターン文字列|  
-|**CTL_E_INVALIDUSEOFNULL**|無効な NULL の使用|  
-|**CTL_E_INVALIDFILEFORMAT**|ファイル形式が無効|  
-|**CTL_E_INVALIDPROPERTYVALUE**|無効なプロパティ値|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|無効なプロパティの配列のインデックス|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Set は実行時にはサポートされません|  
-|**CTL_E_SETNOTSUPPORTED**|Set はサポートされません。読み取り専用のプロパティです。|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|プロパティ配列のインデックスが必要です。|  
-|**CTL_E_SETNOTPERMITTED**|Set は使用できません|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Get は実行時にはサポートされません|  
-|**CTL_E_GETNOTSUPPORTED**|Get はサポートされません。書き込み専用のプロパティです|  
-|**CTL_E_PROPERTYNOTFOUND**|プロパティが見つかりません。|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|無効なクリップボード形式|  
-|**CTL_E_INVALIDPICTURE**|無効な画像|  
-|**CTL_E_PRINTERERROR**|プリンター エラーです|  
-|**CTL_E_CANTSAVEFILETOTEMP**|ファイルを TEMP に保存することはできません。|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|検索文字列が見つかりませんでした|  
-|**CTL_E_REPLACEMENTSTOOLONG**|置換後の文字列が長すぎます|  
+|CTL_E_ILLEGALFUNCTIONCALL|無効な関数呼び出し|  
+|CTL_E_OVERFLOW|オーバーフロー|  
+|CTL_E_OUTOFMEMORY|メモリ不足|  
+|CTL_E_DIVISIONBYZERO|0 による除算です。|  
+|CTL_E_OUTOFSTRINGSPACE|文字列スペースが不足しています|  
+|CTL_E_OUTOFSTACKSPACE|スタック領域不足|  
+|CTL_E_BADFILENAMEORNUMBER|ファイル名または番号が正しくありません。|  
+|CTL_E_FILENOTFOUND|ファイルが見つかりません。|  
+|CTL_E_BADFILEMODE|ファイル モードが正しくありません。|  
+|CTL_E_FILEALREADYOPEN|ファイルは既に開かれています。|  
+|CTL_E_DEVICEIOERROR|デバイス I/O エラーです。|  
+|CTL_E_FILEALREADYEXISTS|ファイルは既に存在します|  
+|CTL_E_BADRECORDLENGTH|レコード長が正しくありません。|  
+|CTL_E_DISKFULL|ディスクがいっぱいです。|  
+|CTL_E_BADRECORDNUMBER|レコード番号が正しくありません|  
+|CTL_E_BADFILENAME|不適切なファイル名|  
+|CTL_E_TOOMANYFILES|ファイルが多すぎます。|  
+|CTL_E_DEVICEUNAVAILABLE|デバイスが準備されていません|  
+|CTL_E_PERMISSIONDENIED|アクセス許可は拒否されました|  
+|CTL_E_DISKNOTREADY|ディスクが準備されていません|  
+|CTL_E_PATHFILEACCESSERROR|パス/ファイル アクセス エラー|  
+|CTL_E_PATHNOTFOUND|パスが見つかりません。|  
+|CTL_E_INVALIDPATTERNSTRING|正しくないパターン文字列|  
+|CTL_E_INVALIDUSEOFNULL|無効な NULL の使用|  
+|CTL_E_INVALIDFILEFORMAT|ファイル形式が無効|  
+|CTL_E_INVALIDPROPERTYVALUE|無効なプロパティ値|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|無効なプロパティの配列のインデックス|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Set は実行時にはサポートされません|  
+|CTL_E_SETNOTSUPPORTED|Set はサポートされません。読み取り専用のプロパティです。|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|プロパティ配列のインデックスが必要です。|  
+|CTL_E_SETNOTPERMITTED|Set は使用できません|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Get は実行時にはサポートされません|  
+|CTL_E_GETNOTSUPPORTED|Get はサポートされません。書き込み専用のプロパティです|  
+|CTL_E_PROPERTYNOTFOUND|プロパティが見つかりません。|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|無効なクリップボード形式|  
+|CTL_E_INVALIDPICTURE|無効な画像|  
+|CTL_E_PRINTERERROR|プリンター エラーです|  
+|CTL_E_CANTSAVEFILETOTEMP|ファイルを TEMP に保存することはできません。|  
+|CTL_E_SEARCHTEXTNOTFOUND|検索文字列が見つかりませんでした|  
+|CTL_E_REPLACEMENTSTOOLONG|置換後の文字列が長すぎます|  
   
- 必要に応じて、使用して、 **CUSTOM_CTL_SCODE**マクロで説明されていない条件のいずれかの標準的なコードでのカスタム エラー コードを定義します。 このマクロのパラメーターが 1000 の間の整数にする必要があります、32767 です。 例えば:  
+ 必要に応じて、説明されていない条件のいずれかの標準的なコードでのカスタム エラー コードを定義するのに CUSTOM_CTL_SCODE マクロを使用します。 このマクロのパラメーターが 1000 の間の整数にする必要があります、32767 です。 例えば:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -176,7 +176,7 @@ ms.locfileid: "33354019"
   
      - または -  
   
--   ダイアログの項目として、ローカル変数とサブクラスを宣言します。 次のようなコードを挿入 (`CMyCtrl`ラッパー クラスは、`IDC_MYCTRL1`コントロールの id を指定)。  
+-   ダイアログの項目として、ローカル変数とサブクラスを宣言します。 次のようなコードを挿入 (`CMyCtrl`ラッパー クラスは、IDC_MYCTRL1 はコントロールの ID)。  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

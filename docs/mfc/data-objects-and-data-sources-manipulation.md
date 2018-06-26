@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349910"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929862"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>データ オブジェクトとデータ ソース : 操作
 データ オブジェクトまたはデータ ソースを作成した後、多数の挿入や削除、データが、形式を列挙する、データなど、データの一般的な操作を実行できます。 この記事では、最も一般的な操作を完了するために必要な手法について説明します。 ここでは、次の内容について説明します。  
@@ -73,7 +73,7 @@ ms.locfileid: "33349910"
   
     -   データ オブジェクトの`BeginEnumFormats`クリップボードで使用できる形式の列挙を開始するメンバー関数。 呼び出す`GetNextFormat`クリップボードを返すまで、形式、アプリケーションをサポートしているか、形式がありません。  
   
- 使用している場合`ON_UPDATE_COMMAND_UI`、貼り付けや、場合によっては、[編集] メニュー項目を貼り付けを有効にできます。 これを行うには、いずれかを呼び出す`CMenu::EnableMenuItem`または`CCmdUI::Enable`です。 どのようなコンテナーの詳細についてはアプリケーションする必要がありますのメニュー項目と共に実行し、するを参照してください[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)です。  
+ 使用している場合**ON_UPDATE_COMMAND_UI**、貼り付けや、場合によっては、[編集] メニュー項目を貼り付けを有効にできます。 これを行うには、いずれかを呼び出す`CMenu::EnableMenuItem`または`CCmdUI::Enable`です。 どのようなコンテナーの詳細についてはアプリケーションする必要がありますのメニュー項目と共に実行し、するを参照してください[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)です。  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> データ オブジェクトからのデータの取得  
  データ形式を決定した後は、データ オブジェクトからデータを取得します。 これを行うには、ユーザーは、データを配置する場所を決定し、アプリケーションが適切な関数を呼び出します。 データは次のメディアのいずれかで使用できます。  

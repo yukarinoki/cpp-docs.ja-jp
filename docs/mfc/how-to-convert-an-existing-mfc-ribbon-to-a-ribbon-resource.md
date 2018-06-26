@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8024acc4abbb02b14ed968df83779d34bd4a7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2551709652df0e0c65b1b0b6b5085550044e9966
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351651"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928998"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>方法: 既存の MFC リボンをリボン リソースに変換する
 リボン リソースは、視覚化、変更、および手動でコード化されたリボンより管理しやすくします。 このトピックでは、MFC プロジェクトに手動でコード化されたリボンをリボン リソースに変換する方法について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "33351651"
   
 ### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>MFC リボンをリボン リソースに変換するには  
   
-1.  Visual Studio での既存の MFC プロジェクトで CMFCRibbonBar オブジェクトが初期化されて、ソース ファイルを開きます。 通常、ファイルは、mainfrm.cpp です。 リボンの初期化コードの後に、次のコードを追加します。  
+1.  Visual Studio で、既存の MFC プロジェクトでは、ソース ファイルを開きます場所、`CMFCRibbonBar`オブジェクトを初期化します。 通常、ファイルは、mainfrm.cpp です。 リボンの初期化コードの後に、次のコードを追加します。  
   
  ```  
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");

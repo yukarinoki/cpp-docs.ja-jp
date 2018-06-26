@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379520"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931653"
 ---
 # <a name="relationships-among-mfc-objects"></a>各種 MFC オブジェクト間の関係
 パースペクティブにドキュメント/ビューの作成プロセスを配置するには、実行中のプログラムを検討してください: ドキュメント、ビューの格納に使用されるフレーム ウィンドウおよびドキュメントに関連付けられたビュー。  
@@ -53,7 +53,7 @@ ms.locfileid: "33379520"
  通常、フレーム ウィンドウが 1 つのビューが、場合によっては、分割ウィンドウと同様に、同じフレーム ウィンドウが含まれる複数のビュー。 フレーム ウィンドウが現在アクティブなビューにポインターを保持します。ポインターには、いつでも別のビューがアクティブ化が更新されます。  
   
 > [!NOTE]
->  メイン フレーム ウィンドウへのポインターが格納されている、 [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)アプリケーション オブジェクトのメンバー変数。 呼び出し`OnFileNew`のオーバーライドで、`InitInstance`のメンバー関数`CWinApp`設定`m_pMainWnd`します。 呼び出さない場合`OnFileNew`変数の値を設定する必要があります`InitInstance`自分でします。 (SDI COM コンポーネント (サーバー) のアプリケーションが変数を設定しなかった場合は、コマンドラインで/Embedding。)なお`m_pMainWnd`クラスのメンバーであるようになりました`CWinThread`なく`CWinApp`です。  
+>  メイン フレーム ウィンドウへのポインターが格納されている、 [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)アプリケーション オブジェクトのメンバー変数。 呼び出し`OnFileNew`のオーバーライドで、`InitInstance`のメンバー関数`CWinApp`設定*m_pMainWnd*します。 呼び出さない場合`OnFileNew`変数の値を設定する必要があります`InitInstance`自分でします。 (SDI COM コンポーネント (サーバー) のアプリケーションが変数を設定しなかった場合は、コマンドラインで/Embedding。)なお*m_pMainWnd*クラスのメンバーであるようになりました`CWinThread`なく`CWinApp`です。  
   
 ## <a name="see-also"></a>関連項目  
  [ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)   

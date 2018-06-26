@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348231"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931724"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX コントロール : アンビエント プロパティへのアクセス
 この記事では、ActiveX コントロールがそのコントロールのコンテナーのアンビエント プロパティにアクセスする方法について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "33348231"
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  呼び出し元が呼び出す必要があります**に関するページ () をリリース**返されたフォントです。  
+    >  呼び出し元が呼び出す必要があります`Release( )`返されたフォントです。  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33348231"
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- (一部の操作によって、コンテナーの)、アンビエント プロパティの値が変更された場合、 **OnAmbientPropertyChanged**コントロールのメンバー関数が呼び出されます。 このような通知を処理するには、このメンバー関数をオーバーライドします。 パラメーターを**OnAmbientPropertyChanged**影響を受けるアンビエント プロパティのディスパッチ id を指定します。 このディスパッチ ID の値にすることがあります**DISPID_UNKNOWN**、1 つまたは複数のアンビエント プロパティが変更されているが、影響を受けたプロパティに関する情報が利用できないことを示します。  
+ (一部の操作によって、コンテナーの)、アンビエント プロパティの値が変更された場合、`OnAmbientPropertyChanged`コントロールのメンバー関数が呼び出されます。 このような通知を処理するには、このメンバー関数をオーバーライドします。 パラメーターを`OnAmbientPropertyChanged`影響を受けるアンビエント プロパティのディスパッチ id を指定します。 このディスパッチ ID の値の 1 つまたは複数のアンビエント プロパティが変更されたことを示す、DISPID_UNKNOWN 可能性がありますが、影響を受けたプロパティに関する情報が利用できません。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)

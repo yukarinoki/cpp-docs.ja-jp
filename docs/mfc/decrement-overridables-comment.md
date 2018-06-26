@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345389"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928728"
 ---
 # <a name="-overridables-comment"></a>// Overridables コメント
 `// Overridables`の MFC クラス宣言のセクションには、基本クラスの動作を変更する必要がある場合、派生クラスでオーバーライドできる仮想関数が含まれています。 これらの名前は通常"On"で始まる必ずしも必要はありません。 オーバーライドして多くの場合、実装したり、何らかの"callback"または「フック」を提供する関数が設計されています 通常、これらのメンバーは保護されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "33345389"
   
  `virtual void OnDraw( ) = 0;`  
   
- クラスを一覧表示するサンプルの`CStdioFile`の[のコメントの例](../mfc/an-example-of-the-comments.md)一覧に overridables セクションが含まれていません。 クラス**CDocument**、その一方で、約 10 のオーバーライド可能なメンバー関数を一覧表示します。  
+ クラスを一覧表示するサンプルの`CStdioFile`の[のコメントの例](../mfc/an-example-of-the-comments.md)一覧に overridables セクションが含まれていません。 クラス`CDocument`、その一方で、約 10 のオーバーライド可能なメンバー関数を一覧表示します。  
   
  一部のクラス内もコメントを参照してください可能性があります`// Advanced Overridables`です。 これらは、のみ高度な関数をオーバーライドするプログラマが試みる必要があります。 おそらく、これらをオーバーライドする必要があります。  
   

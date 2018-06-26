@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347900"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931792"
 ---
 # <a name="control-bars"></a>コントロール バー
-「コントロール バー」は、ツールバー、ステータス バー、およびダイアログ バーの [全般] の名前です。 MFC クラス`CToolBar`、 `CStatusBar`、 `CDialogBar`、 `COleResizeBar`、および**CReBar**クラスから派生[CControlBar](../mfc/reference/ccontrolbar-class.md)、一般的な機能を実装します。  
+「コントロール バー」は、ツールバー、ステータス バー、およびダイアログ バーの [全般] の名前です。 MFC クラス`CToolBar`、 `CStatusBar`、 `CDialogBar`、 `COleResizeBar`、および`CReBar`クラスから派生[CControlBar](../mfc/reference/ccontrolbar-class.md)、一般的な機能を実装します。  
   
  コントロール バーは、コントロールをユーザーできますオプションを選択、コマンドを実行またはプログラム情報の取得の行を表示するウィンドウです。 コントロール バーの種類には、ツールバー、ダイアログ バー、およびステータス バーが含まれます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347900"
 -   クラスでの rebars [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  MFC バージョン 4.0 の時点でツールバー、ステータス バーおよびツールヒントでは MFC 固有の以前の実装ではなく comctl32.dll に実装されているシステム機能を使用して、実装されます。 Mfc バージョン 6.0 では、 **CReBar**、comctl32.dll 機能をラップするも追加されました。  
+>  MFC バージョン 4.0、ツールバー、ステータス バー、およびツールの時点でヒントを実装に実装されているシステム機能を使用して、 *comctl32.dll* MFC 固有の以前の実装ではなくです。 Mfc バージョン 6.0 では、 `CReBar`、comctl32.dll 機能をラップするも追加されました。  
   
  簡単な概要については、コントロール バーの種類に従ってください。 詳細については、以下のリンクを参照してください。  
   

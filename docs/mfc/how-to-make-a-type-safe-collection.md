@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354440"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930034"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>方法: タイプ セーフなコレクションを作成する
 この記事では、独自のデータ型のタイプ セーフなコレクションを作成する方法について説明します。 ここでは、次の内容について説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "33354440"
   
 3.  必要に応じて、実装、[ヘルパー関数](../mfc/reference/collection-class-helpers.md)と[SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)です。 これらの関数を実装する方法については、次を参照してください。[ヘルパー関数の実装](#_core_implementing_helper_functions)です。  
   
- この例では、整数のリストの宣言を示します。 手順 1 の最初のパラメーターは、リストの要素として格納されたデータの種類です。 2 番目のパラメーター データを指定する方法に渡されるされなどのコレクション クラスのメンバー関数から返される**追加**と`GetAt`です。  
+ この例では、整数のリストの宣言を示します。 手順 1 の最初のパラメーターは、リストの要素として格納されたデータの種類です。 2 番目のパラメーター データを指定する方法に渡されるされなどのコレクション クラスのメンバー関数から返される`Add`と`GetAt`です。  
   
 ##  <a name="_core_implementing_helper_functions"></a> ヘルパー関数の実装  
  テンプレート ベースのコレクション クラス`CArray`、 `CList`、および`CMap`派生コレクション クラスの必要に応じてカスタマイズできる 5 つのグローバルなヘルパー関数を使用します。 これらのヘルパー関数については、次を参照してください。[コレクション クラスのヘルパー](../mfc/reference/collection-class-helpers.md)で、 *『 MFC リファレンス*です。 シリアル化の関数の実装は、テンプレート ベースのコレクション クラスのほとんどの用途の必要があります。  
@@ -66,10 +66,10 @@ ms.locfileid: "33354440"
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- オーバー ロードされた挿入演算子`CArchive`呼び出す`CObject::Serialize`(またはその関数のオーバーライド) 各**CPerson**オブジェクト。  
+ オーバー ロードされた挿入演算子`CArchive`呼び出す`CObject::Serialize`(またはその関数のオーバーライド) 各`CPerson`オブジェクト。  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> 非テンプレート コレクション クラスを使用します。  
- MFC には、MFC バージョン 1.0 で導入されたコレクション クラスもサポートしています。 これらのクラスは、テンプレートには基づいていません。 サポートされる型のデータを格納する使えます`CObject*`、 **UINT**、 `DWORD`、および`CString`です。 これらの定義済みのコレクションを使用することができます (など`CObList`) から派生した任意のオブジェクトのコレクションを保持するために`CObject`です。 MFC は、その他の定義済みのコレクションなどのプリミティブ型を保持するためにも用意されています。 **UINT**ポインターを無効にすると (`void`*)。 一般に、ただしは多くの場合、固有のクラスとその派生クラスのオブジェクトを保持するために、独自のタイプ セーフなコレクションを定義すると便利です。 テンプレートに基づいていないコレクション クラスでこれをメモは、テンプレート ベースのクラスを使用するよりも多くの作業です。  
+ MFC には、MFC バージョン 1.0 で導入されたコレクション クラスもサポートしています。 これらのクラスは、テンプレートには基づいていません。 サポートされる型のデータを格納する使えます`CObject*`、 `UINT`、 `DWORD`、および`CString`です。 これらの定義済みのコレクションを使用することができます (など`CObList`) から派生した任意のオブジェクトのコレクションを保持するために`CObject`です。 MFC は、その他の定義済みのコレクションなどのプリミティブ型を保持するためにも用意されています。`UINT`ポインターを無効にすると (`void`*)。 一般に、ただしは多くの場合、固有のクラスとその派生クラスのオブジェクトを保持するために、独自のタイプ セーフなコレクションを定義すると便利です。 テンプレートに基づいていないコレクション クラスでこれをメモは、テンプレート ベースのクラスを使用するよりも多くの作業です。  
   
  これには、非テンプレート コレクションにタイプ セーフなコレクションを作成する 2 つの方法があります。  
   

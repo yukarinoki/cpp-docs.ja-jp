@@ -15,31 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1e71502f818321dc8893f89f21993c25b032602
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 576735841748d0b99053d038f8d5f674d5692f00
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346777"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930190"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>拡張コンボ ボックス コントロールでの通知メッセージの処理
-ユーザーが拡張コンボ ボックスを操作すると、コントロール (`CComboBoxEx`) から親ウィンドウ (通常はビュー オブジェクトかダイアログ オブジェクト) に通知メッセージが送信されます。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーがドロップダウン リストをアクティブにしたり、コントロールのエディット ボックスをクリックしたりすると、 **CBEN_BEGINEDIT** 通知が送信されます。  
+ユーザーが拡張コンボ ボックスを操作すると、コントロール (`CComboBoxEx`) から親ウィンドウ (通常はビュー オブジェクトかダイアログ オブジェクト) に通知メッセージが送信されます。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーは、ドロップダウン リストをアクティブ化か、コントロールのエディット ボックスでクリックすると、CBEN_BEGINEDIT 通知が送信されます。  
   
  [プロパティ] ウィンドウを使用して、実装するメッセージの親クラスに通知ハンドラーを追加します。  
   
  拡張コンボ ボックス コントロールで送信される通知を一覧で説明します。  
   
--   **CBEN_BEGINEDIT** ユーザーがドロップダウン リストをアクティブにするか、コントロールのエディット ボックスをクリックすると送信されます。  
+-   CBEN_BEGINEDIT は、ドロップダウン リストをアクティブにしたり、コントロールのエディット ボックス内をクリックしたときに送信されます。  
   
--   **CBEN_DELETEITEM** 項目が削除されると送信されます。  
+-   CBEN_DELETEITEM は、項目が削除されたときに送信されます。  
   
--   **CBEN_DRAGBEGIN** ユーザーがコントロールの編集部分に表示される項目のイメージをドラッグし始めると送信されます。  
+-   CBEN_DRAGBEGIN は、ユーザーがコントロールの編集部分に表示される項目のイメージのドラッグを始めたときに送信されます。  
   
--   **CBEN_ENDEDIT** ユーザーがエディット ボックス内の操作を完了するか、コントロールのドロップダウン リストから項目を選ぶと、送信されます。  
+-   CBEN_ENDEDIT は、ユーザーがエディット ボックス内の操作を完了またはコントロールのドロップダウン リストから項目が選択されているときに送信されます。  
   
--   **CBEN_GETDISPINFO** コールバック項目に関する表示情報を取得するために送信されます。  
+-   CBEN_GETDISPINFO 送信コールバック項目に関する表示情報を取得します。  
   
--   **CBEN_INSERTITEM** 新しい項目がコントロールに挿入されると送信されます。  
+-   CBEN_INSERTITEM は、コントロールに新しい項目が挿入されたときに送信されます。  
   
 ## <a name="see-also"></a>関連項目  
  [CComboBoxEx の使い方](../mfc/using-ccomboboxex.md)   

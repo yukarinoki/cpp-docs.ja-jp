@@ -18,24 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 698957d4e307ad1f099d5aef7de131c538ee4871
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a81f3c3a36f049e3f47401efa31b36677b3b9ba6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342619"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931750"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>CDocument からのドキュメント クラスの派生
 ドキュメントし、アプリケーションのデータを管理します。 MFC アプリケーション ウィザードで提供されるドキュメント クラスを使用するには、次の操作を行う必要があります。  
   
--   クラスを派生**CDocument**ドキュメントの種類ごとにします。  
+-   クラスを派生`CDocument`ドキュメントの種類ごとにします。  
   
 -   各ドキュメントのデータを格納するためのメンバー変数を追加します。  
   
--   オーバーライド**CDocument**の`Serialize`ドキュメント クラスのメンバー関数。 `Serialize` 書き込みをして、ディスクからのドキュメントのデータを読み取ります。  
+-   オーバーライド`CDocument`の`Serialize`ドキュメント クラスのメンバー関数。 `Serialize` 書き込みをして、ディスクからのドキュメントのデータを読み取ります。  
   
 ## <a name="other-document-functions-often-overridden"></a>多くの場合、オーバーライドされたその他のドキュメント関数  
- その他をオーバーライドすることも**CDocument**メンバー関数。 具体的には、オーバーライドする必要があります[でも実質的](../mfc/reference/cdocument-class.md#onnewdocument)と[かまいません](../mfc/reference/cdocument-class.md#onopendocument)ドキュメントのデータ メンバーを初期化して[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)を破棄するにはデータを動的に割り当てられます。 オーバーライド可能なメンバーについては、クラスを参照してください。 [CDocument](../mfc/reference/cdocument-class.md)で、 *『 MFC リファレンス*です。  
+ その他をオーバーライドすることも`CDocument`メンバー関数。 具体的には、オーバーライドする必要があります[でも実質的](../mfc/reference/cdocument-class.md#onnewdocument)と[かまいません](../mfc/reference/cdocument-class.md#onopendocument)ドキュメントのデータ メンバーを初期化して[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)を破棄するにはデータを動的に割り当てられます。 オーバーライド可能なメンバーについては、クラスを参照してください。 [CDocument](../mfc/reference/cdocument-class.md)で、 *『 MFC リファレンス*です。  
   
 ## <a name="see-also"></a>関連項目  
  [ドキュメントの使い方](../mfc/using-documents.md)

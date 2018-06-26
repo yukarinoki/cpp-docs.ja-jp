@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352790"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931890"
 ---
 # <a name="docking-and-floating-toolbars"></a>ツール バーのドッキングとフローティング
 Microsoft Foundation Class ライブラリでは、ドッキング可能ツールバーをサポートします。 ドッキング可能ツールバーをアタッチ、または、その親ウィンドウの任意の辺に、ドッキングされていることができます、またはデタッチ、または独自のミニフレーム ウィンドウで、フロートことができます。 この記事では、アプリケーションでドッキング可能ツールバーを使用する方法について説明します。  
@@ -62,7 +62,7 @@ Microsoft Foundation Class ライブラリでは、ドッキング可能ツー�
  MFC 標準サンプルを参照してください[DOCKTOOL](../visual-cpp-samples.md)例についてはします。  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> フレーム ウィンドウのドッキング可能にします。  
- フレーム ウィンドウにツールバーをドッキングするのにはフレーム ウィンドウ (または変換先) を有効にドッキング可能です。 これを使用して、 [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)関数で、1 つ取って`DWORD`スタイルのセットであるパラメーターのフレーム ウィンドウのどちらの側では、ドッキングが受け入れるを示すビットします。 渡されたパラメーターがツールバーをドッキングし、ドッキングする複数の辺に示された辺`EnableDocking`は次の順序で使用されます: top、bottom、left、right です。 ドッキング コントロール バーの任意の場所できる場合は、渡す`CBRS_ALIGN_ANY`に`EnableDocking`です。  
+ フレーム ウィンドウにツールバーをドッキングするのにはフレーム ウィンドウ (または変換先) を有効にドッキング可能です。 これを使用して、 [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)関数で、1 つ取って*DWORD*スタイルのセットであるパラメーターのフレーム ウィンドウのどちらの側では、ドッキングが受け入れるを示すビットします。 渡されたパラメーターがツールバーをドッキングし、ドッキングする複数の辺に示された辺`EnableDocking`は次の順序で使用されます: top、bottom、left、right です。 ドッキング コントロール バーの任意の場所できる場合は、渡す**CBRS_ALIGN_ANY**に`EnableDocking`です。  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> ツールバーのドッキング可能にします。  
  ドッキング先が準備できたら、同様の方法でツールバー (またはソース) を準備する必要があります。 呼び出す[CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking)ドッキングする各ツールバーのツールバーをドッキングする必要がある辺、変換先を指定します。 呼び出しで指定した辺の`CControlBar::EnableDocking`フレーム ウィンドウにドッキングできる辺が一致し、ツールバーをドッキングことはできません: に変化します。 フローティング状態されて、フローティング ツールバー、フレーム ウィンドウにドッキングするのにはできません。 そのままとなります。  

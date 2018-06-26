@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360967"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929233"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC ツール バーの実装
 ツールバーは、[コントロール バー](../mfc/control-bars.md)コントロールのビットマップ イメージを格納しています。 これらのイメージはプッシュ ボタン、チェック ボックス、オプション ボタンに似た動作をすることができます。 MFC クラスを提供する[CToolbar](../mfc/reference/ctoolbar-class.md)ツールバーを管理します。  
@@ -44,7 +44,7 @@ ms.locfileid: "33360967"
 > [!NOTE]
 >  MFC バージョン 4.0 の時点で、ツール バーとツール ヒントは、MFC 固有の以前の実装ではなく、Windows 95 以降の機能を使用して実装されています。  
   
- 旧バージョンと互換性のため、MFC では、古いツールバーの実装クラスで**COldToolBar**です。 MFC の以前のバージョンのドキュメントについては説明**COldToolBar** `CToolBar`です。  
+ 旧バージョンと互換性のため、MFC では、古いツールバーの実装クラスで`COldToolBar`です。 MFC の以前のバージョンのドキュメントについては説明`COldToolBar``CToolBar`です。  
   
  アプリケーション ウィザードの [ツール バー] オプションをクリックし、プログラムの最初のツール バーを作成します。 追加のツール バーを作成することもできます。  
   

@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344501"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932248"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>標準コントロールからのコントロールの派生
 同じよう[CWnd](../mfc/reference/cwnd-class.md)-派生クラスでは、既存のコントロール クラスから新しいクラスを派生させることによってコントロールの動作を変更することができます。  
   
 ### <a name="to-create-a-derived-control-class"></a>派生コントロール クラスを作成するには  
   
-1.  既存のコントロール クラスからクラスを派生し、必要に応じてオーバーライドして、**作成**メンバー関数の基底クラスのために必要な引数を提供するように**作成**関数。  
+1.  既存のコントロール クラスからクラスを派生し、必要に応じてオーバーライドして、`Create`メンバー関数の基底クラスのために必要な引数を提供するように`Create`関数。  
   
 2.  メッセージ ハンドラー メンバー関数と特定の Windows メッセージへの応答で、コントロールの動作を変更するメッセージ マップ エントリを提供します。 参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)です。  
   

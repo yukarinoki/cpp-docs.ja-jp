@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355662"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930314"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>永続化と初期化の最適化
 既定では、によって永続化とコントロールの初期化を処理します。、`DoPropExchange`メンバー関数。 この関数がいくつかの呼び出しを含む、一般的なコントロール**px _** 関数 (`PX_Color`、`PX_Font`など) の各プロパティのいずれか。  
@@ -45,7 +45,7 @@ ms.locfileid: "33355662"
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- キャストするのではなく、負荷の場合、一時変数を使用するとし、その値が割り当てられます、`m_boolProp`を**バイト**参照します。 キャスト手法の 1 バイトだけになる`m_boolProp`変更される、初期化されていない残りのバイトします。  
+ キャストするのではなく、負荷の場合、一時変数を使用するとし、その値が割り当てられます、 *m_boolProp*を**バイト**参照します。 キャスト手法の 1 バイトだけになる*m_boolProp*変更される、初期化されていない残りのバイトします。  
   
  同じコントロールは、オーバーライドすることで、コントロールの初期化を最適化できます[COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate)次のようにします。  
   

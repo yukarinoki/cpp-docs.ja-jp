@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f6c8f262061477da95a4863965c04e9d75c49a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58156f6d1c361c24dc6cf04a9208157d614f91a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352813"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929011"
 ---
 # <a name="overriding-the-standard-command-routing"></a>標準のコマンド ルーティングのオーバーライド
 まれなケースで、標準的なフレームワークのルーティングのいくつかのバリエーションを実装する必要がありますとオーバーライドできます。 つまり、オーバーライドすることで、1 つまたは複数のクラスでルーティングを変更する`OnCmdMsg`それらのクラスです。 そのための操作を行います。  
@@ -31,7 +31,7 @@ ms.locfileid: "33352813"
   
 -   またはコマンド ターゲットで新しい既定以外のオブジェクトでさらにコマンドを渡すこと可能性があります。  
   
- ルーティングにいくつかの新しいオブジェクトを挿入する場合、そのクラスは、コマンド ターゲット クラスをする必要があります。 オーバーライド元のバージョンの`OnCmdMsg`、オーバーライドしているバージョンを呼び出してください。 参照してください、 [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg)クラスのメンバー関数`CCmdTarget`で、 *『 MFC リファレンス*とバージョンのようなクラスを`CView`と**CDocument**で、例については、ソース コードを指定します。  
+ ルーティングにいくつかの新しいオブジェクトを挿入する場合、そのクラスは、コマンド ターゲット クラスをする必要があります。 オーバーライド元のバージョンの`OnCmdMsg`、オーバーライドしているバージョンを呼び出してください。 参照してください、 [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg)クラスのメンバー関数`CCmdTarget`で、 *『 MFC リファレンス*とバージョンのようなクラスを`CView`と`CDocument`例については、指定されたソース コードにします。  
   
 ## <a name="see-also"></a>関連項目  
  [フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)

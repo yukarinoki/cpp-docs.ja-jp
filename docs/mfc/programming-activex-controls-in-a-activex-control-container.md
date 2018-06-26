@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355042"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929956"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX コントロール コンテナー : ActiveX コントロール コンテナーでの ActiveX コントロールのプログラミング
 ここで、公開された状態にアクセスする手順について説明[メソッド](../mfc/mfc-activex-controls-methods.md)と[プロパティ](../mfc/mfc-activex-controls-properties.md)埋め込みの ActiveX コントロールのです。 基本的には、これらの手順に従うされます。  
@@ -76,7 +76,7 @@ ms.locfileid: "33355042"
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> プロジェクトにメンバー変数の変更  
  ActiveX コントロールは、プロジェクトに追加され、ダイアログ ボックスのコンテナーに埋め込まれているとは、プロジェクトの他の部分でアクセスできます。 コントロールにアクセスする最も簡単には[メンバー変数を作成](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)ダイアログ クラスの`CContainerDlg`(ステップ 2)、つまり Visual C によってプロジェクトに追加するラッパー クラスと同じ型です。 メンバー変数を使用して、いつでも埋め込まれたコントロールにアクセスすることができますし、します。  
   
- ときに、**メンバー変数の追加** ダイアログ ボックスを追加、`m_circctl`メンバー変数をプロジェクトも追加、次の行をヘッダー ファイル (です。H) の`CContainerDlg`クラス。  
+ ときに、**メンバー変数の追加** ダイアログ ボックスを追加、*で*メンバー変数をプロジェクトも追加、次の行をヘッダー ファイル (です。H) の`CContainerDlg`クラス。  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -92,7 +92,7 @@ ms.locfileid: "33355042"
   
  コントロールのプロパティを変更する一般的な場所は、`OnInitDialog`メイン ダイアログ クラスのメンバー関数。 この関数は、ダイアログ ボックスが表示され、そのコントロールのいずれかを含む、その内容を初期化するために使用される直前に呼び出されます。  
   
- 次のコード例では、`m_circctl`メンバー変数に埋め込まれた Circ コントロールのキャプションと CircleShape プロパティを変更します。  
+ 次のコード例では、*で*メンバー変数に埋め込まれた Circ コントロールのキャプションと CircleShape プロパティを変更します。  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

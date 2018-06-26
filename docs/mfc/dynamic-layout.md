@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350850"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930353"
 ---
 # <a name="dynamic-layout"></a>動的レイアウト
 Visual Studio 2015 で MFC をユーザーがダイアログを作成してサイズの変更に合わせてレイアウトを調整する方法を制御することができます。 たとえば、ボタンをダイアログの下の端に付けて、常にダイアログ ボックスの下部に配置されるようにすることができます。 ユーザーがダイアログを展開するときに、リスト ボックス、エディット ボックス、テキスト フィールドなどの特定のコントロールを展開するように設定することもできます。  
@@ -31,7 +31,7 @@ Visual Studio 2015 で MFC をユーザーがダイアログを作成してサ�
   
  ![サイズを変更した後のダイアログ。] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- IDE のリソース エディターの各コントロールの詳細を指定して、動的レイアウトを制御することも、特定のコントロールの CMFCDynamicLayout オブジェクトにアクセスしてプロパティを設定し、プログラムで制御することもできます。  
+ IDE では、リソース エディターで各コントロールの詳細を指定することによって動的レイアウトを制御したり、アクセスすることによってプログラムで行うことができます、`CMFCDynamicLayout`オブジェクトの特定のコントロールのプロパティを設定します。  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>リソース エディターで動的レイアウト プロパティを設定する  
  リソース エディターを使用すると、コードを記述しなくても、ダイアログ ボックス動的のレイアウトの動作を設定できます。  
@@ -61,7 +61,7 @@ Visual Studio 2015 で MFC をユーザーがダイアログを作成してサ�
   
 1.  ダイアログの動的レイアウトを指定する、ダイアログ クラスの実装コードの場所を検索または作成します。 たとえば、ダイアログに `AdjustLayout` などのメソッドを追加して、レイアウトを変更する必要がある場所から呼び出すことができます。 最初にこれをコンストラクターから呼び出すか、ダイアログに変更を加えた後で呼び出すことができます。  
   
-2.  ダイアログで、呼び出す[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)、CWnd クラスのメソッドです。 GetDynamicLayout は、CMFCDynamicLayout オブジェクトへのポインターを返します。  
+2.  ダイアログで、呼び出す[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)のメソッド、`CWnd`クラスです。 `GetDynamicLayout` は `CMFCDynamicLayout` オブジェクトへのポインターを返します。  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ Visual Studio 2015 で MFC をユーザーがダイアログを作成してサ�
   
 9. 次回ユーザーが、ダイアログ ボックスをサイズ変更、 [cmfcdynamiclayout::adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust)実際には、設定を適用するメソッドが呼び出されます。  
   
-10. 動的レイアウトを無効にする場合は、呼び出す[cwnd::enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout)で`FALSE`の場合と同様、`bEnabled`パラメーター。  
+10. 動的レイアウトを無効にする場合は、呼び出す[cwnd::enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout)で**FALSE**の場合と同様、 *bEnabled*パラメーター。  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ Visual Studio 2015 で MFC をユーザーがダイアログを作成してサ�
 
  ```  
   
-     名前付きのリソースは、次の例のように、リソース ファイル内の AFX_DIALOG_LAYOUT エントリの形式のレイアウト情報が含まれているダイアログを参照する必要があります。  
+     名前付きのリソースが形式のレイアウト情報を含むダイアログを参照する必要があります、 **AFX_DIALOG_LAYOUT**次の例のように、リソース ファイル内のエントリ。  
   
  '' \*///\*//\*//AFX_DIALOG_LAYOUT \*//  
  

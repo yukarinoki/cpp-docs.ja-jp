@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352426"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931916"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX コントロール : カスタム プロパティの追加
 カスタム プロパティとは異なり、ストック プロパティのカスタム プロパティがによって既に実装されていない、`COleControl`クラスです。 カスタム プロパティを使用して、特定の状態やコントロールを使用してプログラマに ActiveX コントロールの外観を公開できます。  
@@ -47,7 +47,7 @@ ms.locfileid: "33352426"
   
 -   パラメーター化の実装  
   
-     パラメーター化されたプロパティの追加ウィザードによってサポートされています。 使用にアクセスする一連の値、コントロールの 1 つのプロパティ (プロパティ配列とも呼ばれます)、パラメーター化されたプロパティを使用できます。 この実装のディスパッチ マップ エントリ マクロは`DISP_PROPERTY_PARAM`します。 この型の実装の詳細については、次を参照してください。[パラメーター化されたプロパティを実装する](../mfc/mfc-activex-controls-advanced-topics.md)記事 ActiveX コントロール: 高度なトピックです。  
+     パラメーター化されたプロパティの追加ウィザードによってサポートされています。 使用にアクセスする一連の値、コントロールの 1 つのプロパティ (プロパティ配列とも呼ばれます)、パラメーター化されたプロパティを使用できます。 この実装のディスパッチ マップ エントリ マクロは、DISP_PROPERTY_PARAM です。 この型の実装の詳細については、次を参照してください。[パラメーター化されたプロパティを実装する](../mfc/mfc-activex-controls-advanced-topics.md)記事 ActiveX コントロール: 高度なトピックです。  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用して、プロパティの追加ウィザードのカスタム プロパティを追加するには  
  次の手順では、CircleOffset で、Get と Set メソッドの実装を使用して、カスタム プロパティを追加することを示します。 CircleOffset のカスタム プロパティは、コントロールの外接する四角形の中心から円をオフセットするコントロールのユーザーを使用できます。 カスタム プロパティを Get/set メソッド以外の実装を追加する手順は、よく似ています。  
@@ -66,7 +66,7 @@ ms.locfileid: "33352426"
   
      開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)です。  
   
-5.  **プロパティ名**ボックスに、入力`CircleOffset`です。  
+5.  **プロパティ名**ボックスに、入力*CircleOffset*です。  
   
 6.  **[実装型]** として、 **[Get/Set メソッド]** をクリックします。  
   

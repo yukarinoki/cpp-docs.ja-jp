@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380209"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929596"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>ダイアログ オブジェクトからのデータの取得
 フレームワークは、ダイアログ ボックスのコントロールの値を初期化して、コントロールから値を取得する簡単な方法を提供します。 関数を呼び出すなどの手間がかかりより手動的な方法は、`SetDlgItemText`と`GetDlgItemText`クラスのメンバー関数`CWnd`windows のコントロールに適用されます。 これらの関数でアクセスする各コントロールを設定またはその値を取得する個別に関数を呼び出す`SetWindowText`と`GetWindowText`です。 フレームワークのアプローチでは、初期化と取得の両方を自動化します。  
@@ -47,7 +47,7 @@ ms.locfileid: "33380209"
   
  DDX ルーチンおよび DDV がで詳しく説明されている[ダイアログ データ エクス チェンジと検証](../mfc/dialog-data-exchange-and-validation.md)です。  
   
- モーダル ダイアログ ボックスで、ユーザーが入力したときに、データを取得できます`DoModal`返します**IDOK**ダイアログ ボックスの前にオブジェクトが破棄されますが、します。 モードレス ダイアログ ボックスのデータを取得できますダイアログ オブジェクトからいつでも呼び出すことによって`UpdateData`引数と共に**TRUE**ダイアログ クラスのメンバー変数にアクセスしています。 このトピックはで詳しく説明[ダイアログ データ エクス チェンジと検証](../mfc/dialog-data-exchange-and-validation.md)です。  
+ モーダル ダイアログ ボックスで、ユーザーが入力したときに、データを取得できます`DoModal`IDOK を返しますが、オブジェクトが破棄されるダイアログ ボックスの前にします。 モードレス ダイアログ ボックスのデータを取得できますダイアログ オブジェクトからいつでも呼び出すことによって`UpdateData`引数と共に**TRUE**ダイアログ クラスのメンバー変数にアクセスしています。 このトピックはで詳しく説明[ダイアログ データ エクス チェンジと検証](../mfc/dialog-data-exchange-and-validation.md)です。  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)

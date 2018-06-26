@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda38c7173feeccf878ee7befc3d27c0061ddb1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9379fef6a1d676d6a3bc757ee51d5d27acd5f6f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345027"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930177"
 ---
 # <a name="initinstance-member-function"></a>InitInstance メンバー関数
 Windows オペレーティング システムでは、複数のコピー、または「インスタンス」の同じアプリケーションを実行することができます。 `WinMain` 呼び出し[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)アプリケーションの新しいインスタンスを起動するたびにします。  
@@ -44,7 +44,7 @@ Windows オペレーティング システムでは、複数のコピー、ま�
  独自の初期化コードを追加したり、ウィザードによって作成されたコードを変更することができます。  
   
 > [!NOTE]
->  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)で、`InitInstance`オーバーライドで指定`COINIT_APARTMENTTHREADED`(なく`COINIT_MULTITHREADED`)。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)です。  
+>  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)で、`InitInstance`上書き、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)です。  
   
 ## <a name="see-also"></a>関連項目  
  [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)

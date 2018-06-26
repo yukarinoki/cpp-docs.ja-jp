@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abd49410f9982788e9403f0cb83ca8656473417d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d7544d92d55ec4a1f6d15f3c1d4358970bf2deb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344105"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928342"
 ---
 # <a name="messages"></a>メッセージ
-メッセージ ループで、**実行**クラスのメンバー関数`CWinApp`取得には、さまざまなイベントによって生成されたメッセージがキューに登録します。 たとえば、ユーザーには、マウスがクリックすると、Windows は送信いくつかのマウスに関連するメッセージなど`WM_LBUTTONDOWN`マウスの左ボタンが押されたときに、`WM_LBUTTONUP`マウスの左ボタンが離されたとき。 アプリケーション メッセージ ループのフレームワークの実装では、目的のウィンドウ メッセージをディスパッチします。  
+メッセージ ループで、`Run`クラスのメンバー関数`CWinApp`取得には、さまざまなイベントによって生成されたメッセージがキューに登録します。 たとえば、ユーザーには、マウスがクリックすると、Windows は WM_LBUTTONDOWN マウスの左ボタンが押されたときに、マウスの左ボタンが離されるとしたなど、いくつかのマウスに関連するメッセージを送信します。 アプリケーション メッセージ ループのフレームワークの実装では、目的のウィンドウ メッセージをディスパッチします。  
   
  メッセージの重要なカテゴリの記載[メッセージ カテゴリ](../mfc/message-categories.md)です。  
   

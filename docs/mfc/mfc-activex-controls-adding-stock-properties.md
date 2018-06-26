@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357560"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930131"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX コントロール : ストック プロパティの追加
-ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`です。 `COleControl` コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 一部の共通プロパティには、コントロールのキャプションと、前景色と背景色が含まれます。 その他のストック プロパティについては、次を参照してください。[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述します。 ストック プロパティのディスパッチ マップ エントリが常に付けた**DISP_STOCKPROP**です。  
+ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`です。 `COleControl` コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 一部の共通プロパティには、コントロールのキャプションと、前景色と背景色が含まれます。 その他のストック プロパティについては、次を参照してください。[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述します。 ストック プロパティが常に付きます DISP_STOCKPROP のディスパッチ マップ エントリ。  
   
  この記事では、(ここで、キャプション) ストック プロパティのプロパティの追加ウィザードを使用して ActiveX コントロールを追加する方法について説明し、結果として得られるコードの変更について説明します。 ここでは、次の内容について説明します。  
   
@@ -81,16 +81,16 @@ ms.locfileid: "33357560"
   
 |プロパティ|ディスパッチ マップ エントリ|値にアクセスする方法|  
 |--------------|------------------------|-------------------------|  
-|**外観**|**DISP_STOCKPROP_APPEARANCE に関するページ)**|値としてアクセスできる**m_sAppearance**です。|  
-|`BackColor`|**DISP_STOCKPROP_BACKCOLOR に関するページ)**|呼び出すことによってアクセス可能な値`GetBackColor`です。|  
-|`BorderStyle`|**DISP_STOCKPROP_BORDERSTYLE に関するページ)**|値としてアクセスできる**m_sBorderStyle**です。|  
-|**[キャプション]**|**DISP_STOCKPROP_CAPTION に関するページ)**|呼び出すことによってアクセス可能な値`InternalGetText`です。|  
-|**有効**|**DISP_STOCKPROP_ENABLED に関するページ)**|値としてアクセスできる**m_bEnabled**です。|  
-|**フォント**|**DISP_STOCKPROP_FONT に関するページ)**|記事を参照して[MFC ActiveX コントロール: フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)使用法をします。|  
-|`ForeColor`|**DISP_STOCKPROP_FORECOLOR に関するページ)**|呼び出すことによってアクセス可能な値`GetForeColor`です。|  
-|**hWnd**|**DISP_STOCKPROP_HWND に関するページ)**|値としてアクセスできる`m_hWnd`です。|  
-|**[テキスト]**|**DISP_STOCKPROP_TEXT に関するページ)**|呼び出すことによってアクセス可能な値`InternalGetText`です。 このプロパティは、同じ**キャプション**プロパティ名を除く。|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|M_lReadyState としてアクセス可能な値または `GetReadyState`|  
+|`Appearance`|DISP_STOCKPROP_APPEARANCE に関するページ)|値としてアクセスできる`m_sAppearance`です。|  
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR に関するページ)|呼び出すことによってアクセス可能な値`GetBackColor`です。|  
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE に関するページ)|値としてアクセスできる`m_sBorderStyle`です。|  
+|`Caption`|DISP_STOCKPROP_CAPTION に関するページ)|呼び出すことによってアクセス可能な値`InternalGetText`です。|  
+|`Enabled`|DISP_STOCKPROP_ENABLED に関するページ)|値としてアクセスできる`m_bEnabled`です。|  
+|`Font`|DISP_STOCKPROP_FONT に関するページ)|記事を参照して[MFC ActiveX コントロール: フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)使用法をします。|  
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR に関するページ)|呼び出すことによってアクセス可能な値`GetForeColor`です。|  
+|`hWnd`|DISP_STOCKPROP_HWND に関するページ)|値としてアクセスできる`m_hWnd`です。|  
+|`Text`|DISP_STOCKPROP_TEXT に関するページ)|呼び出すことによってアクセス可能な値`InternalGetText`です。 このプロパティは、同じ`Caption`プロパティ名を除く。|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|値としてアクセスできる`m_lReadyState`または `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> ストック プロパティと通知  
  ほとんどのストック プロパティでは、オーバーライド可能な通知関数があります。 たとえば、ときに、`BackColor`プロパティを変更すると、`OnBackColorChanged`関数 (コントロールのクラス メンバー関数) が呼び出されます。 既定の実装 (で`COleControl`) 呼び出し`InvalidateControl`です。 このような状況への応答でその他のアクションを実行する場合は、この関数をオーバーライドします。  

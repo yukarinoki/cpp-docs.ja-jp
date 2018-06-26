@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342775"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931689"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>コールバック項目とコールバック マスク
 その項目のそれぞれについて、リスト ビュー コントロールが通常、ラベルのテキスト項目のアイコンのイメージ リスト インデックスを格納および項目の状態に対するフラグのビットのセット。 アプリケーションで既にがいくつかのアイテムの情報を保存する場合に便利ですが、コールバック項目として、個々 のアイテムを定義できます。  
@@ -29,13 +29,13 @@ ms.locfileid: "33342775"
   
  コールバック項目を定義するだけでなく、コントロールのコールバック マスクを変更することもできます。 このマスクは、対象のコントロールではなく、アプリケーションで現在のデータが格納する項目の状態を指定するビット フラグのセットです。 コールバック マスクは、すべての特定の項目に適用されるコールバック項目の指定とは異なり、コントロールの項目に適用されます。 コールバック マスクは、既定では、コントロールがすべての項目の状態を追跡することを意味する 0 です。 この既定の動作を変更するには、次の値の任意の組み合わせにマスクを初期化します。  
   
--   `LVIS_CUT` 項目は、カット アンド ペースト操作がマークされます。  
+-   **LVIS_CUT**アイテムは、カット アンド ペースト操作をマークします。  
   
--   `LVIS_DROPHILITED` アイテムがドラッグ アンド ドロップのターゲットとして強調表示されます。  
+-   **LVIS_DROPHILITED**ドラッグ アンド ドロップのターゲットとして、項目が強調表示されます。  
   
--   `LVIS_FOCUSED` 項目にフォーカスが移動するとします。  
+-   **LVIS_FOCUSED**項目にフォーカスがあります。  
   
--   `LVIS_SELECTED` 項目が選択されます。  
+-   **LVIS_SELECTED**アイテムを選択します。  
   
 -   **LVIS_OVERLAYMASK**アプリケーションは、各項目の現在のオーバーレイ イメージのイメージ リスト インデックスを格納します。  
   
