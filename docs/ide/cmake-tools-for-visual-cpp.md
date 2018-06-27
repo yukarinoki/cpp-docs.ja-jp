@@ -1,7 +1,9 @@
 ---
 title: Visual C++ での CMake プロジェクト | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337432"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238566"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ での CMake プロジェクト
 
 この記事では、複数のプラットフォームで動作するビルド プロセスを定義するためのクロスプラットフォームのオープン ソース ツールである CMake についてよく理解していることを前提としています。
 
-最近まで、Visual Studio のユーザーは CMake を使って MSBuild プロジェクト ファイルを生成し、IDE はそのファイルを IntelliSense、参照、およびコンパイルに使っていました。 Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネントは、IntelliSense と参照のために、**フォルダーを開く**機能を使って IDE が CMake プロジェクト ファイル (CMakeLists.txt など) を直接使用できるようにします。 Visual Studio ジェネレーターを使用した場合は、一時プロジェクト ファイルが生成されて msbuild.exe に渡されますが、IntelliSense または参照のために読み込まれることはありません。 
+Visual Studio 2015 では、Visual Studio のユーザーは [CMake ジェネレーター](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html)を使って MSBuild プロジェクト ファイルを生成し、IDE はそのファイルを IntelliSense、参照、およびコンパイルに使っていました。 
+
+Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネントは、IntelliSense と参照のために、**フォルダーを開く**機能を使って IDE が CMake プロジェクト ファイル (CMakeLists.txt など) を直接使用できるようにします。 Visual Studio ジェネレーターを使用した場合は、一時プロジェクト ファイルが生成されて msbuild.exe に渡されますが、IntelliSense または参照のために読み込まれることはありません。 
 
 **Visual Studio 2017 バージョン 15.3**: Ninja ジェネレーターと Visual Studio ジェネレーターの両方がサポートされます。
 
@@ -33,6 +37,7 @@ ms.locfileid: "33337432"
 
 **Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュのインポートのサポートが追加されます。 Visual Studio はカスタマイズされた変数を自動的に抽出し、事前設定済みの CMakeSettings.json ファイルを作成します。
 
+**Visual Studio 2017 バージョン 15.7**: キャッシュの自動生成の無効化、**ソリューション エクスプローラー**でのターゲット ビュー、単一ファイルのコンパイルのサポートが追加されます。
 
 ## <a name="installation"></a>インストール
 
@@ -46,16 +51,25 @@ ms.locfileid: "33337432"
 
 - Visual Studio は、CMake スクリプトを表示および編集するためのコマンドを含む **[CMake]** メニュー項目を、メイン メニューに追加します。
 - **ソリューション エクスプローラー**に、フォルダーの構造とファイルが表示されます。
-- Visual Studio は CMake.exe を実行して、既定の "*構成*" (x86 デバッグ) 用の CMake キャッシュを生成します。 CMake コマンド ラインおよび CMake からの追加出力が、**出力ウィンドウ**に表示されます。
+- Visual Studio は CMake.exe を実行して、既定の "*構成*" (x86 デバッグ) 用の CMake キャッシュを生成します。 CMake コマンド ラインおよび CMake からの追加出力が、**出力ウィンドウ**に表示されます。  **Visual Studio 2017 バージョン 15.7 以降**: キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログで無効にできます。
 - Visual Studio は、IntelliSense、情報の参照、リファクタリングなどを有効にするためのソース ファイルのインデックス付けを、バックグラウンドで開始します。 ユーザーが作業を行っている間、Visual Studio は、エディターおよびディスク上での変更を監視し、インデックスとソースの同期を維持します。
  
 開くフォルダーに含まれる CMake プロジェクトの数は制限されていません。 Visual Studio は、ワークスペース内にあるすべての "ルート" CMakeLists.txt ファイルを検出して構成します。 CMake の操作 (構成、ビルド、デバッグ) および C++ の IntelliSense と参照は、ワークスペース内のすべての CMake プロジェクトが使用できます。
 
-![複数のルートを持つ CMake プロジェクト](media/cmake-multiple-roots.png) 
+![複数のルートを持つ CMake プロジェクト](media/cmake-multiple-roots.png)  
+
+**Visual Studio 2017 バージョン 15.7 以降**: ターゲットごとに論理的にまとめられたプロジェクトを参照することも可能です。 **ソリューション エクスプローラー** ツールバーのドロップダウンから、**[ターゲット ビュー]** を選択します。
+
+![CMake ターゲット ビュー ボタン](media/cmake-targets-view.png)
 
 ## <a name="import-an-existing-cache"></a>既存のキャッシュをインポートする
 
-ユーザーが既存の CMakeCache.txt ファイルをインポートすると、Visual Studio はカスタマイズされた変数を自動的に抽出し、それを基にして事前設定済みの CMakeSettings.json ファイルを作成します。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい CMakeSettings.json ファイルは、プロジェクトのルートの CMakeLists.txt と共に配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。 キャッシュ内のすべてのものがインポートされるわけではありません。  ジェネレーターや、コンパイラの場所などのプロパティは、IDE で問題なく機能することがわかっている既定値に置き換えられます。
+ユーザーが既存の CMakeCache.txt ファイルをインポートすると、Visual Studio はカスタマイズされた変数を自動的に抽出し、それを基にして事前設定済みの CMakeSettings.json ファイルを作成します。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい CMakeSettings.json ファイルは、プロジェクトのルートの CMakeLists.txt と共に配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。  
+
+
+**Visual Studio 2017 バージョン 15.7 以降**: キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログでオーバーライドできます。
+
+キャッシュ内のすべてのものがインポートされるわけではありません。  ジェネレーターや、コンパイラの場所などのプロパティは、IDE で問題なく機能することがわかっている既定値に置き換えられます。
 
 ### <a name="to-import-an-existing-cache"></a>既存のキャッシュをインポートするには
 
@@ -98,8 +112,7 @@ CMake プロジェクトをビルドするには、次の選択肢がありま�
 
 CMake プロジェクトをデバッグするには、対象の構成を選んで、**F5** キーを押すか、またはツール バーの **[実行]** ボタンをクリックします。 **[実行]** ボタンに [スタートアップ アイテムの選択] と表示されている場合は、ドロップダウン矢印を選んで、実行するターゲットを選びます (CMake プロジェクトでは、[現在のドキュメント] オプションは .cpp ファイルの場合にのみ有効です)。 
 
-![CMake の実行ボタン](media/cmake-run-button.png "Cmake の実行ボタン")
-
+![CMake の実行ボタン](media/cmake-run-button.png "CMake の実行ボタン")
 
 **[実行]** または **F5** コマンドを選ぶと、前回のビルドの後で何かが変更されている場合は、最初にプロジェクトがビルドされます。
 
@@ -112,7 +125,7 @@ CMake プロジェクトをデバッグするには、対象の構成を選ん�
 
 CMake メニューからデバッグ セッションを開始することもできます。
 
-プロジェクト内の実行可能な CMake ターゲットのデバッガー設定をカスタマイズするには、特定の CMakeLists.txt ファイルを右クリックして、**[デバッグ設定と起動設定]** を選びます。 サブメニューで CMake ターゲットを選ぶと、launch.vs.json という名前のファイルが作成されます。 このファイルには選んだ CMake ターゲットに関する情報があらかじめ入力されており、プログラムの引数やデバッガーの種類などの他のパラメーターを指定することができます。 CMakeSettings.json ファイル内のキーを参照するには、launch.vs.json 内で前に "cmake." を付けます。 次に示す簡単な launch.vs.json ファイルの例では、現在選択されている構成に対して、CMakeSettings.json ファイル内の "remoteCopySources" キーの値を取得しています。
+プロジェクト内の実行可能な CMake ターゲットのデバッガー設定をカスタマイズするには、特定の CMakeLists.txt ファイルを右クリックして、**[デバッグ設定と起動設定]** を選びます。 サブメニューで CMake ターゲットを選ぶと、launch.vs.json という名前のファイルが作成されます。 このファイルには選んだ CMake ターゲットに関する情報があらかじめ入力されており、プログラムの引数やデバッガーの種類などの他のパラメーターを指定することができます。 CMakeSettings.json ファイル内のキーを参照するには、launch.vs.json 内で前に "CMake." を付けます。 次に示す簡単な launch.vs.json ファイルの例では、現在選択されている構成に対して、CMakeSettings.json ファイル内の "remoteCopySources" キーの値を取得しています。
 
 ```json
 {
@@ -168,7 +181,6 @@ Visual Studio では、6 つの既定の CMake 構成 ("x86-Debug"、"x86-Releas
 
    ![設定変更のための CMake メイン メニュー コマンド](media/cmake-change-settings.png)
 
-
 JSON の IntelliSense は、CMakeSettings.json ファイルの編集を支援します。
 
    ![CMake の JSON IntelliSense](media/cmake-json-intellisense.png "CMake の JSON IntelliSense")
@@ -192,7 +204,6 @@ JSON の IntelliSense は、CMakeSettings.json ファイルの編集を支援し
 
 1. **name**: C++ の構成ドロップダウンに表示される名前です。 このプロパティ値をマクロ `${name}` として使って、他のプロパティ値を指定することもできます。 例については、CMakeSettings.json の **buildRoot** の定義をご覧ください。
 1. **generator**: **-G** スイッチに対応し、使用するジェネレーターを指定します。 このプロパティをマクロ `${generator}` として使って、他のプロパティ値を指定することもできます。 現在、Visual Studio では次の CMake ジェネレーターがサポートされています。
-
 
     - "Ninja"
     - "Visual Studio 14 2015"
@@ -363,3 +374,11 @@ CMakeSettings.json ファイルまたは CMakeLists.txt ファイルが大幅に
 - **[キャッシュ フォルダーを開く]** は、エクスプローラー ウィンドウでビルド ルート フォルダーを開きます。  
 - **[キャッシュをクリーン]** は、次の CMake 構成ステップがクリーンなキャッシュから開始されるように、ビルド ルート フォルダーを削除します。
 - **[キャッシュを生成]** は、Visual Studio が環境は最新の状態であると判断した場合でも、生成ステップを強制的に実行します。
+ 
+**Visual Studio 2017 バージョン 15.7 以降**: キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログで無効にできます。
+
+## <a name="single-file-compilation"></a>単一ファイルのコンパイル
+
+**Visual Studio 2017 バージョン 15.7 以降**: CMake プロジェクトに単一ファイルをビルドするには、**ソリューション エクスプローラー**でファイルを右クリックし、**[コンパイル]** を選択します。 メインの CMake メニューを使用すると、エディターで現在開いているファイルをビルドすることも可能です。
+
+![CMake の単一ファイルのコンパイル](media/cmake-single-file-compile.png)
