@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c033d33dd6b1e6c0ccd5bbdb4b6af6939521f592
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384135"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956175"
 ---
 # <a name="when-update-handlers-are-called"></a>更新ハンドラーが呼び出されるタイミング
-ユーザーを生成するファイル メニューにマウスをクリックすると、`WM_INITMENUPOPUP`メッセージ。 ドロップダウン メニュー、ユーザーが確認できるようにする前に、フレームワークの更新の機構は総称して [ファイル] メニューのすべての項目を更新します。  
+たとえば、ユーザーがポインター メッセージを生成して、[ファイル] メニューにマウスをクリックします。 ドロップダウン メニュー、ユーザーが確認できるようにする前に、フレームワークの更新の機構は総称して [ファイル] メニューのすべての項目を更新します。  
   
  これを行うには、framework ルートは、すべてのメニュー項目の標準コマンド ルーティングに沿ったポップアップ メニューのコマンドを更新します。 ルーティング上のコマンド ターゲットを適切なメッセージ マップ エントリと update コマンドを照合することでメニュー項目を更新する機会があります (形式の`ON_UPDATE_COMMAND_UI`)「更新ハンドラー」関数を呼び出すとします。 したがって、6 つのメニュー項目を含むメニューの 6 つの update コマンド、送出されます。更新ハンドラーがメニュー項目のコマンド id が存在する場合は、更新を行う呼び出されます。 ない場合、フレームワークのコマンド ID のハンドラーの存在を確認し、有効またはに応じて、メニュー項目を無効にします。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33384135"
   
  ユーザー インターフェイス オブジェクトの既定の無効化を無効にすることができます。 詳細については、次を参照してください。、 [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable)クラスのメンバー`CFrameWnd`で、 *『 MFC リファレンス*です。  
   
- メニューの初期化が framework では、アプリケーションの受信時に発生する自動、`WM_INITMENUPOPUP`メッセージ。 アイドル ループ時に、フレームワークは、コマンド ルーティング ボタン更新ハンドラーのほぼ同じ方法でメニューの場合と同様を検索します。  
+ メニューの初期化は、自動 framework では、アプリケーションがポインター メッセージを受信時に発生します。 アイドル ループ時に、フレームワークは、コマンド ルーティング ボタン更新ハンドラーのほぼ同じ方法でメニューの場合と同様を検索します。  
   
 ## <a name="see-also"></a>関連項目  
  [ユーザー インターフェイス オブジェクトの更新方法](../mfc/how-to-update-user-interface-objects.md)

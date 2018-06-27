@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354283"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954750"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap クラス
 ID2D1Bitmap のラッパーです。  
@@ -124,7 +124,7 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|TRUE の場合、m_hBmpSrc を破棄する必要があります。それ以外の場合は FALSE。|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|ソース ビットマップのハンドルです。|  
@@ -141,7 +141,7 @@ class CD2DBitmap : public CD2DResource;
   
  `CD2DBitmap`
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pResource`  
+ *pResource*  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `uiResID`  
+ *uiResID*  
  リソースのリソース ID 番号。  
   
- `lpszType`  
+ *lpszType*  
  リソースの種類を表す null で終わる文字列へのポインター。  
   
- `sizeDest`  
+ *sizeDest*  
  ビットマップの送信先のサイズ。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
- `lpszPath`  
+ *lpszPath*  
  ファイルの名前を表す null で終わる文字列へのポインター。  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  ビットマップへのハンドルします。  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pBitmap`  
+ *pBitmap*  
  コピー元ビットマップ  
   
- `destPoint`  
+ *destPoint*  
  現在のビットマップ srcRect でする領域が指定された領域の左上隅のコピーします。  
   
- `srcRect`  
+ *srcRect*  
  コピーするビットマップの領域  
   
 ### <a name="return-value"></a>戻り値  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `srcData`  
+ *srcData*  
  コピーするデータ  
   
- `pitch`  
+ *声の高さ*  
  ストライド、または srcData に格納されている元のビットマップの声の高さ。 Stride とは、スキャン ライン (メモリ内のピクセルの 1 つの行) のバイト数です。 Stride は次の数式に基づいて計算されます: ピクセル幅 * ピクセル + メモリ スペースあたりのバイト数  
   
- `destRect`  
+ *destRect*  
  現在のビットマップ srcRect でする領域が指定された領域の左上隅のコピーします。  
   
 ### <a name="return-value"></a>戻り値  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRenderTarget`  
+ *pRenderTarget*  
  レンダー ターゲットをコピーする領域を含む  
   
- `destPoint`  
+ *destPoint*  
  現在のビットマップ srcRect でする領域が指定された領域の左上隅のコピーします。  
   
- `srcRect`  
+ *srcRect*  
  コピーするレンダリング ターゲットの領域  
   
 ### <a name="return-value"></a>戻り値  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRenderTarget`  
+ *pRenderTarget*  
  レンダー ターゲットへのポインター。  
   
 ### <a name="return-value"></a>戻り値  

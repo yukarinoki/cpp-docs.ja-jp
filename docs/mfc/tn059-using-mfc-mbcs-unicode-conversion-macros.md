@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384291"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953504"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>テクニカル ノート 59: MFC の MBCS/Unicode 変換マクロの使用
 > [!NOTE]
@@ -86,9 +86,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
   
  ここで変換が必要に応じてがマクロを使用する簡単で効果的な余分な呼び出しがあります。  
   
- 各マクロの実装では、ヒープではなく、スタックからメモリを割り当てる _alloca() 関数を使用します。 スタックからのメモリの割り当ては、ヒープのメモリを割り当てる場合よりもはるかに高速とメモリは、関数が終了したときに自動的に解放します。 マクロが通話を回避するさらに、 **MultiByteToWideChar** (または**WideCharToMultiByte**) 1 つ以上の時間。 これは、必要なは、もう少し以上のメモリを割り当てることによって行います。 MBC は多くても 1 つに変換されていることが分かって**WCHAR**と各**WCHAR**が 2 文字の最大数。 必ずがよりは少し多く必要に応じて、割り当てることによって変換を処理する、2 番目の呼び出し 2 番目の変換関数の呼び出しを回避できます。 ヘルパー関数を呼び出す**AfxA2Whelper**が変換を実行するために行う必要がある引数のプッシュの数が減り、(この結果より小さなコードよりも呼び出される場合**MultiByteToWideChar**直接)。  
+ 各マクロの実装では、ヒープではなく、スタックからメモリを割り当てる _alloca() 関数を使用します。 スタックからのメモリの割り当ては、ヒープのメモリを割り当てる場合よりもはるかに高速とメモリは、関数が終了したときに自動的に解放します。 マクロが通話を回避するさらに、 `MultiByteToWideChar` (または`WideCharToMultiByte`) 1 つ以上の時間。 これは、必要なは、もう少し以上のメモリを割り当てることによって行います。 MBC は多くても 1 つに変換されていることが分かって**WCHAR**と各**WCHAR**が 2 文字の最大数。 必ずがよりは少し多く必要に応じて、割り当てることによって変換を処理する、2 番目の呼び出し 2 番目の変換関数の呼び出しを回避できます。 ヘルパー関数を呼び出す`AfxA2Whelper`が変換を実行するために行う必要がある引数のプッシュの数が減り、(この結果より小さなコードよりも呼び出される場合`MultiByteToWideChar`直接)。  
   
- 領域がないマクロを格納する順に、変換マクロを使用するは、各関数でを変換 (_c) と呼ばれるローカル変数を宣言する必要がある一時的な長さです。 呼び出すことによってこれは、 **USES_CONVERSION**マクロの例では、上で説明します。  
+ 領域がないマクロを格納する順に、変換マクロを使用するは、各関数でを変換 (_c) と呼ばれるローカル変数を宣言する必要がある一時的な長さです。 これは、上記の例に示すように USES_CONVERSION マクロを呼び出すことによって行います。  
   
  汎用変換マクロと OLE 固有のマクロの両方があります。 これら 2 つの異なるマクロ セットを次に説明します。 すべてのマクロは、AFXPRIV に存在します。H.  
   
@@ -105,7 +105,7 @@ W2A      (LPCWSTR) -> (LPSTR)
  テキスト変換を行うだけでなくもマクロとを変換するためのヘルパー関数`TEXTMETRIC`、 `DEVMODE`、 `BSTR`、および OLE 文字列が割り当てられます。 これらのマクロはここでは扱いません - AFXPRIV を参照してください。詳細については、これらのマクロ H します。  
   
 ## <a name="ole-conversion-macros"></a>OLE 変換マクロ  
- OLE 変換マクロが期待する関数の処理用に設計された**OLESTR**文字です。 OLE ヘッダーを確認する場合に多くの参照が表示されます**LPCOLESTR**と**OLECHAR**です。 これらの型は、プラットフォームに固有ではない方法での OLE インターフェイスで使用される文字の種類を参照に使用されます。 **OLECHAR**にマップ`char`Win16 または Macintosh プラットフォームと**WCHAR** Win32 でします。  
+ OLE 変換マクロが期待する関数の処理用に設計された**OLESTR**文字です。 OLE ヘッダーを確認する場合に多くの参照が表示されます**LPCOLESTR**と**OLECHAR**です。 これらの型は、プラットフォームに固有ではない方法での OLE インターフェイスで使用される文字の種類を参照に使用されます。 **OLECHAR**にマップ**char** Win16 または Macintosh プラットフォームと**WCHAR** Win32 でします。  
   
  数を保持するために **#ifdef** MFC でのディレクティブのコードを最小限に抑えるの各変換のようなマクロがあることを OLE 文字列が関係しています。 次のマクロがよく使用されます。  
   
@@ -116,7 +116,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- ここでも、そのようなマクロがあります`TEXTMETRIC`、 `DEVMODE`、 `BSTR`、および OLE 文字列が割り当てられます。 AFXPRIV を参照してください。詳細については H します。  
+ もう一度は、受け取る、DEVMODE、BSTR、および OLE 文字列の割り当てを行うためのようなマクロがあります。 AFXPRIV を参照してください。詳細については H します。  
   
 ## <a name="other-considerations"></a>その他の注意事項  
  ループの中でマクロを使用しないでください。 たとえば、次のようなコードを記述することはおたくないです。  

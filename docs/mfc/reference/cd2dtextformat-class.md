@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352891"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955470"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat クラス
 IDWriteTextFormat のラッパーです。  
@@ -79,7 +79,7 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|IDWriteTextFormat へのポインター。|  
   
@@ -90,7 +90,7 @@ class CD2DTextFormat : public CD2DResource;
   
  [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat:: ~ CD2DTextFormat  
@@ -117,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  フォント ファミリの名前を含む CString オブジェクト。  
   
- `fontSize`  
+ *FontSize*  
  DIP (「デバイスに依存しないピクセル」) 単位でフォントの論理サイズ。 DIPequals 1/96 インチです。  
   
- `fontWeight`  
+ *fontWeight*  
  テキスト オブジェクトのフォントの太さを示す値です。  
   
- `fontStyle`  
+ *fontStyle*  
  テキスト オブジェクトのフォント スタイルを示す値です。  
   
- `fontStretch`  
+ *fontStretch*  
  テキスト オブジェクトのフォントの伸縮を示す値です。  
   
- `strFontLocale`  
+ *strFontLocale*  
  ロケール名を含む CString オブジェクト。  
   
- `pFontCollection`  
+ *pFontCollection*  
  フォントのコレクション オブジェクトへのポインター。 これが NULL の場合は、システム フォントのコレクションを表します。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

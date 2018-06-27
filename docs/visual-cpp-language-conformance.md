@@ -1,5 +1,5 @@
 ---
-title: Visual C++ 言語への準拠 | Microsoft Docs
+title: Visual C++ 言語の準拠 | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
 - cpp-language
@@ -18,7 +18,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
 ms.locfileid: "34246235"
 ---
-# <a name="visual-c-language-conformance"></a>Visual C++ 言語への準拠
+# <a name="visual-c-language-conformance"></a>Visual C++ 言語の準拠
 
 このトピックでは、Visual Studio 2017 およびそれ以前のバージョンにおいて、C++ コンパイラ向けのコンパイラ機能と標準ライブラリ機能が ISO C++03、C++11、C++14、C++17 とドラフト C++20 の言語標準にどの程度準拠しているかをまとめています。 コンパイラと標準ライブラリの各機能の名前には、機能を説明する ISO C++ 標準提案書のリンクが埋め込まれています (ただし、発行時点で提案書が利用できるものに限ります)。 "サポート状況" 列には、機能のサポートが初めて搭載された Visual Studio のバージョンが記載されています。
 

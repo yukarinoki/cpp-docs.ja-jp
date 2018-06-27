@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366474"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953702"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget クラス
 ID2D1DCRenderTarget のラッパーです。  
@@ -72,7 +72,7 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget オブジェクトへのポインター。|  
   
@@ -83,7 +83,7 @@ class CDCRenderTarget : public CRenderTarget;
   
  [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="attach"></a>  CDCRenderTarget::Attach  
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pTarget`  
+ *pTarget*  
  既存のレンダー ターゲット インターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dc`  
+ *dc*  
  デバイス コンテキスト レンダー ターゲットが描画コマンドを発行するには  
   
- `rect`  
+ *rect*  
  レンダー ターゲットがバインドされているデバイス コンテキスト (HDC) へのハンドルのサイズ  
   
 ### <a name="return-value"></a>戻り値  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `props`  
+ *props*  
  表示モード、ピクセル形式、リモート処理オプション、DPI 情報、およびハードウェアのレンダリングに必要な最小の DirectX サポートします。  
   
 ### <a name="return-value"></a>戻り値  

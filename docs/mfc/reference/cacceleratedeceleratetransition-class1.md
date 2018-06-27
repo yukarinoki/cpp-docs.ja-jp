@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1dac40e91dd7b0a91c5d76b0d665d075e562267
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357846"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954709"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition クラス
 加速減速遷移を実装します。  
@@ -56,7 +56,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 |[CAccelerateDecelerateTransition::m_duration](#m_duration)|移行の期間です。|  
 |[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|遷移の終了時、アニメーション変数の値。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  加速中-減速遷移は、アニメーション変数を高速化し、速度が低下し、指定した値で終わる、切り替え効果の期間にわたっています。 変数がどの程度の速度を短縮し、異なるアクセラレータと減速率を指定することで、独立してに減速を制御できます。 アクセラレータの比率に加速する場合は、変数に要する時間の割合は、初期ベロシティが 0 の場合同様に、減速比でします。 初期ベロシティがゼロ以外の場合は、ベロシティ 0 と遷移の末尾に到達するまでの時間の割合を勧めします。 アクセラレータとの比率、減速率は、1.0 の最大合計を計算します。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -66,7 +66,7 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
   
  `CAccelerateDecelerateTransition`   
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition  
@@ -81,16 +81,16 @@ CAccelerateDecelerateTransition(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
- `finalValue`  
+ *finalValue*  
  遷移の終了時、アニメーション変数の値。  
   
- `accelerationRatio`  
+ *accelerationRatio*  
  までの期間を短縮に費やされた時間の比率です。  
   
- `decelerationRatio`  
+ *decelerationRatio*  
  期間に減速費やされた時間の比率です。  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
@@ -103,7 +103,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
-`pLibrary`  
+*pLibrary*  
  ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
   
 ### <a name="return-value"></a>戻り値  

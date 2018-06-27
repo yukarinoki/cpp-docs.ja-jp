@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348908"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954267"
 ---
 # <a name="cclientdc-class"></a>CClientDC クラス
 Windows 関数の呼び出しを行います[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)構築時に、 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)破棄時にします。  
@@ -46,11 +46,11 @@ class CClientDC : public CDC
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CClientDC::m_hWnd](#m_hwnd)|`HWND`対象のウィンドウの`CClientDC`は無効です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  つまり、デバイス コンテキストに関連付けられている、`CClientDC`オブジェクトは、ウィンドウのクライアント領域。  
   
  詳細については`CClientDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)です。  
@@ -62,21 +62,21 @@ class CClientDC : public CDC
   
  `CClientDC`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- 構築、`CClientDC`のクライアント領域にアクセスするオブジェクト、 [CWnd](../../mfc/reference/cwnd-class.md)によって示される`pWnd`です。  
+ 構築、`CClientDC`のクライアント領域にアクセスするオブジェクト、 [CWnd](../../mfc/reference/cwnd-class.md)によって示される*pWnd*です。  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  デバイス コンテキスト オブジェクトがアクセス クライアント領域を持つウィンドウです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンス トラクターは、Windows の関数を呼び出します。 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)です。  
   
  例外 (型の`CResourceException`) 場合にスローされますが、Windows`GetDC`呼び出しは失敗します。 デバイス コンテキストは、Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合に使用できない可能性があります。 アプリケーションは、共通のディスプレイ コンテキストで、Windows の特定の時点で利用可能なの 5 つに対して競合します。  
@@ -91,8 +91,8 @@ explicit CClientDC(CWnd* pWnd);
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>コメント  
- `m_hWnd` 保護された変数です。  
+### <a name="remarks"></a>Remarks  
+ *m_hWnd*保護された変数です。  
   
 ### <a name="example"></a>例  
   例を参照して[CClientDC::CClientDC](#cclientdc)です。  

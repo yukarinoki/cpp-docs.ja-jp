@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357016"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952386"
 ---
 # <a name="ccommandlineinfo-class"></a>メンバー クラス
 アプリケーション起動時のコマンド ライン解析を補助します。  
@@ -82,7 +82,7 @@ class CCommandLineInfo : public CObject
 |[CCommandLineInfo::m_strPrinterName](#m_strprintername)|プリンターを示す場合は印刷するには、シェル コマンドの名前を付けますそれ以外の場合は空です。|  
 |[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|再起動マネージャーは、アプリケーションを再起動する場合は、再起動マネージャーの一意の再起動識別子を示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MFC アプリケーションはこのクラスでのローカル インスタンスを作成して通常、 [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)アプリケーション オブジェクトの関数。 このオブジェクトに渡され[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)、繰り返し呼び出す[ParseParam](#parseparam)を埋める、`CCommandLineInfo`オブジェクト。 `CCommandLineInfo`にオブジェクトが渡され[CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)フラグとコマンドライン引数を処理します。  
   
  このオブジェクトを使用すると、次のコマンド ライン オプションとパラメーターをカプセル化します。  
@@ -116,7 +116,7 @@ class CCommandLineInfo : public CObject
 CCommandLineInfo();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定値は、スプラッシュ画面を表示するのには ( `m_bShowSplash=TRUE`) とコマンドを実行する、新しい [ファイル] メニュー ( `m_nShellCommand` **NewFile =**)。  
   
  アプリケーション フレームワーク[ParseParam](#parseparam)このオブジェクトのデータ メンバーを入力します。  
@@ -131,7 +131,7 @@ CCommandLineInfo();
 BOOL m_bRunAutomated;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合`TRUE`、つまり、OLE オートメーション サーバーとして起動します。  
   
 ##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded  
@@ -141,7 +141,7 @@ BOOL m_bRunAutomated;
 BOOL m_bRunEmbedded;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合`TRUE`、つまり OLE 埋め込みアイテムの編集開始します。  
   
 ##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash  
@@ -151,7 +151,7 @@ BOOL m_bRunEmbedded;
 BOOL m_bShowSplash;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合`TRUE`、これは、意味、スプラッシュ スクリーンの起動中にこのアプリケーションを表示する必要があります。 既定の実装[ParseParam](#parseparam)このデータ メンバーを設定`TRUE`場合[m_nShellCommand](#m_nshellcommand)と等しい`CCommandLineInfo::FileNew`です。  
   
 ##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand  
@@ -161,7 +161,7 @@ BOOL m_bShowSplash;
 m_nShellCommand;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このデータ メンバーの型は、次の列挙型で定義されている、`CCommandLineInfo`クラスです。  
   
 ```  
@@ -208,7 +208,7 @@ enum {
 CString m_strDriverName;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このパラメーターは、通常、印刷シェル コマンドのプリンタ ドライバの名前です。 既定の実装[ParseParam](#parseparam)データ メンバー場合のみ、この設定は`/pt`コマンドラインにフラグが見つかりました。  
   
 ##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName  
@@ -218,7 +218,7 @@ CString m_strDriverName;
 CString m_strFileName;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このパラメーターは、通常に開かれるファイルの名前です。  
   
 ##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName  
@@ -228,7 +228,7 @@ CString m_strFileName;
 CString m_strPortName;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このパラメーターは、通常、印刷シェル コマンドのプリンター ポートの名前です。 既定の実装[ParseParam](#parseparam)データ メンバー場合のみ、この設定は`/pt`コマンドラインにフラグが見つかりました。  
   
 ##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName  
@@ -238,7 +238,7 @@ CString m_strPortName;
 CString m_strPrinterName;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このパラメーターは、通常、印刷シェル コマンドのプリンターの名前です。 既定の実装[ParseParam](#parseparam)データ メンバー場合のみ、この設定は`/pt`コマンドラインにフラグが見つかりました。  
   
 ##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier  
@@ -248,7 +248,7 @@ CString m_strPrinterName;
 CString m_strRestartIdentifier;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  再起動識別子は、アプリケーションの各インスタンスに対して一意です。  
   
  再起動マネージャーが、アプリケーションを終了、再起動するように構成された場合は、再起動マネージャーは、省略可能なパラメーターとして再起動識別子をコマンドラインからアプリケーションを実行します。 再起動マネージャーは、再起動の識別子を使用する場合、アプリケーションで開いていたドキュメントを閉じて再度開きますおよび自動保存されたファイルを回復します。  
@@ -270,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszParam`  
+ *pszParam*  
  パラメーターまたはフラグです。  
   
  *bFlag*  
- 示すかどうか`pszParam`パラメーターまたはフラグ。  
+ 示すかどうか*pszParam*パラメーターまたはフラグ。  
   
- `bLast`  
+ *爆発*  
  これは最後のパラメーターまたはコマンド ラインでフラグを示します。  
   
-### <a name="remarks"></a>コメント  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼び出し`ParseParam`1 回ごとのパラメーターまたはコマンド ラインでフラグを使用して、引数を渡す`pszParam`です。 パラメーターの最初の文字がある場合、' **-**'または' **/**' が削除および*bFlag*に設定されている`TRUE`です。 最後のパラメーターを解析するときに`bLast`に設定されている`TRUE`です。  
+### <a name="remarks"></a>Remarks  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼び出し`ParseParam`1 回ごとのパラメーターまたはコマンド ラインでフラグを使用して、引数を渡す*pszParam*です。 パラメーターの最初の文字がある場合、' **-**'または' **/**' が削除および*bFlag*に設定されている`TRUE`です。 最後のパラメーターを解析するときに*爆発*に設定されている`TRUE`です。  
   
  この関数の既定の実装は、次のフラグを認識: `/p`、 `/pt`、 `/dde`、 `/Automation`、および`/Embedding`次の表に示すように、します。  
   

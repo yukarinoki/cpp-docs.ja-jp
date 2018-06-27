@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385379"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952415"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Visual C をコンパイルするとします。RC ファイルを定義**APSTUDIO_INVOKED**だけでなく**RC_INVOKED**です。 仮に AppWizard で作成したファイル構造が破損していて、Visual C++ が上記の #error 行を読み取った場合は、Visual C++ は致命的なエラーを報告し、.RC ファイルの読み取りを中止します。  
+ Visual C をコンパイルするとします。RC ファイルを定義`APSTUDIO_INVOKED`だけでなく`RC_INVOKED`です。 仮に AppWizard で作成したファイル構造が破損していて、Visual C++ が上記の #error 行を読み取った場合は、Visual C++ は致命的なエラーを報告し、.RC ファイルの読み取りを中止します。  
   
  **複数の Visual C で編集したで共有されるシンボルを管理します。RC ファイル**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE**ダイアログ リソース、メニュー リソースの使用される次のシンボル値です。 リソース シンボル値の有効な値の範囲は 1 ～ 0x6FFF です。  
+ `_APS_NEXT_RESOURCE_VALUE` ダイアログ リソース、メニュー リソースの使用される次のシンボル値です。 リソース シンボル値の有効な値の範囲は 1 ～ 0x6FFF です。  
   
- **_APS_NEXT_COMMAND_VALUE**コマンドの識別に使用される次のシンボル値です。 コマンド シンボル値の有効な値の範囲は 0x8000 ～ xDFFF です。  
+ `_APS_NEXT_COMMAND_VALUE` コマンドの識別に使用される次のシンボル値です。 コマンド シンボル値の有効な値の範囲は 0x8000 ～ xDFFF です。  
   
- **_Aps_next_command_value**ダイアログ コントロールに使用される次のシンボル値です。 ダイアログ コントロール値の有効な値の範囲は 8 ～ 0xDFFF です。  
+ `_APS_NEXT_CONTROL_VALUE` ダイアログ コントロールに使用される次のシンボル値です。 ダイアログ コントロール値の有効な値の範囲は 8 ～ 0xDFFF です。  
   
- **_APS_NEXT_SYMED_VALUE**シンボル ブラウザー内の新しいコマンドを使用してシンボル値を手動で割り当てるときに発行される次のシンボル値です。  
+ `_APS_NEXT_SYMED_VALUE` シンボル値を手動で割り当てるときに発行される次のシンボル値は、シンボル ブラウザー内の新しいコマンドを使用しています。  
   
  Visual C++ は、新しい .RC ファイルを作成するときに、最小の有効な値より少し大きい値を使用して割り当てを開始します。 AppWizard も、これらの値を、MFC アプリケーションに適切な値より少し大きい値に初期化します。 ID 値の範囲の詳細については、次を参照してください。[テクニカル ノート 20](../mfc/tn020-id-naming-and-numbering-conventions.md)です。  
   
- これで、同じ Visual C を定義、同じプロジェクトであっても、新しいリソース ファイルを作成するたびに **_APS_NEXT\_** 値。 これは、たとえば 2 つの異なる .RC ファイルの中で複数のダイアログを追加する場合に、異なるダイアログに対して #define の同じ値が割り当てられる可能性が非常に高いことを意味します。 たとえば、最初の .RC ファイル内の IDD_MY_DLG1 は、2 番目の .RC ファイル内にあるIDD_MY_DLG2 と同じ番号 101 を割り当てられる可能性があります。  
+ これで、同じ Visual C を定義、同じプロジェクトであっても、新しいリソース ファイルを作成するたびに`_APS_NEXT_`値。 これは、たとえば 2 つの異なる .RC ファイルの中で複数のダイアログを追加する場合に、異なるダイアログに対して #define の同じ値が割り当てられる可能性が非常に高いことを意味します。 たとえば、最初の .RC ファイル内の IDD_MY_DLG1 は、2 番目の .RC ファイル内にあるIDD_MY_DLG2 と同じ番号 101 を割り当てられる可能性があります。  
   
- これを回避するには、各 .RC ファイル内の 4 つの ID ドメインのそれぞれで、個別の数値範囲を予約する必要があります。 これには、手動で更新する、 **_APS_NEXT**の各内の値、します。RC ファイル`before`リソースの追加を開始します。 たとえば場合、最初。RC ファイルが既定値を使用して **_APS_NEXT**値は、以下の割り当てをすることもできますし、 **_APS_NEXT**が 2 番目の値。RC ファイル:  
+ これを回避するには、各 .RC ファイル内の 4 つの ID ドメインのそれぞれで、個別の数値範囲を予約する必要があります。 これには、手動で更新する、`_APS_NEXT`の各内の値、します。RC ファイル**する前に**リソースの追加を開始します。 たとえば場合、最初。RC ファイルが既定値を使用して`_APS_NEXT`値は、以下の割り当てをすることもできますし、`_APS_NEXT`が 2 番目の値。RC ファイル:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

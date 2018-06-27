@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4e4fd0106687927706b0ba303035258de7e651
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f946a7af93a8cbf7a285f0c01ebd0512231f7b3f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357185"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953389"
 ---
 # <a name="carray-class"></a>CArray クラス
 C 言語の配列に似ていますが動的を減らし、必要に応じて大きくなる配列をサポートします。  
@@ -70,11 +70,11 @@ class CArray : public CObject
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `TYPE`  
- 配列に格納されているオブジェクトの種類を指定するテンプレート パラメーター。 `TYPE` によって返されるパラメーターは、`CArray`です。  
+ *TYPE*  
+ 配列に格納されているオブジェクトの種類を指定するテンプレート パラメーター。 *型*によって返されるパラメーターは、`CArray`です。  
   
- `ARG` *_* `TYPE`  
- 配列に格納されているオブジェクトへのアクセスに使用される引数の型を指定するテンプレート パラメーター。 参照を多くの場合、`TYPE`です。 `ARG_TYPE` 渡されるパラメーターは、`CArray`です。  
+ *ARG* *_* *型*  
+ 配列に格納されているオブジェクトへのアクセスに使用される引数の型を指定するテンプレート パラメーター。 参照を多くの場合、*型*です。 *中*に渡されるパラメーターは、`CArray`です。  
   
 ## <a name="members"></a>メンバー  
   
@@ -112,7 +112,7 @@ class CArray : public CObject
 |----------|-----------------|  
 |[operator&#91;&#93;](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  配列のインデックスは、常に 0 の位置から開始します。 上限の境界を修正するか、過去の現在のバインド要素を追加するとき、展開先の配列を有効にするかどうかを決定できます。 上限の境界にメモリの割り当てが連続して場合でも、一部の要素が null になります。  
   
 > [!NOTE]
@@ -136,7 +136,7 @@ class CArray : public CObject
   
  `CArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  `Header:` afxtempl.h  
   
 ##  <a name="add"></a>  CArray::Add  
@@ -147,17 +147,17 @@ INT_PTR Add(ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ARG_TYPE`  
+ *中*  
  この配列内の要素を参照する引数の型を指定するテンプレート パラメーター。  
   
- `newElement`  
+ *newElement*  
  この配列に追加する要素。  
   
 ### <a name="return-value"></a>戻り値  
  追加された要素のインデックス。  
   
-### <a name="remarks"></a>コメント  
- 場合[SetSize](#setsize)と共に使用した、 `nGrowBy` 1、余分なメモリよりも大きい値を割り当てることができます。 ただし、上限の境界がのみ 1 ずつ増加します。  
+### <a name="remarks"></a>Remarks  
+ 場合[SetSize](#setsize)と共に使用した、 *nGrowBy* 1、余分なメモリよりも大きい値を割り当てることができます。 ただし、上限の境界がのみ 1 ずつ増加します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
@@ -176,10 +176,10 @@ INT_PTR Append(const CArray& src);
 ### <a name="return-value"></a>戻り値  
  追加の最初の要素のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列は、同じ型でなければなりません。  
   
- 必要に応じて、 **Append**配列に追加された要素を格納する余分なメモリを割り当てることがあります。  
+ 必要に応じて、`Append`配列に追加された要素を格納する余分なメモリを割り当てることがあります。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
@@ -191,7 +191,7 @@ INT_PTR Append(const CArray& src);
 CArray();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列は、一度に 1 つの要素を拡張します。  
   
 ### <a name="example"></a>例  
@@ -208,10 +208,10 @@ void Copy(const CArray& src);
  *src*  
  配列にコピーする要素のソースです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  別の配列の要素と 1 つの配列の要素を上書きするには、このメンバー関数を呼び出します。  
   
- **コピー**メモリを解放しません。 ただし、必要に応じて、**コピー**配列にコピーされた要素を格納する余分なメモリを割り当てることがあります。  
+ **コピー**メモリを解放しません。 ただし、必要に応じて、`Copy`配列にコピーされた要素を格納する余分なメモリを割り当てることがあります。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
@@ -225,13 +225,13 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下[です](#getupperbound)です。  
   
 ### <a name="return-value"></a>戻り値  
  配列要素への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列の左側の代入演算子の実装に使用されます。  
   
 ### <a name="example"></a>例  
@@ -244,7 +244,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 void FreeExtra();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数には、サイズや配列の上限値には影響はありません。  
   
 ### <a name="example"></a>例  
@@ -262,13 +262,13 @@ const TYPE& GetAt(INT_PTR nIndex) const;
  *TYPE*  
  配列の要素の型を指定するテンプレート パラメーター。  
   
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下[です](#getupperbound)です。  
   
 ### <a name="return-value"></a>戻り値  
  指定したインデックス位置の配列要素。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  によって返される値よりも大きい負の値または値を渡す`GetUpperBound`アサーションは失敗が発生します。  
   
 ### <a name="example"></a>例  
@@ -284,7 +284,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>戻り値  
  配列内の項目の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列内の要素の数を取得するには、このメソッドを呼び出します。 インデックスが 0 から始まるため、サイズは、インデックスの最大値より大きい 1 です。 このメソッドを呼び出すのと同じ結果が生成されます、[呼び出す](#getsize)メソッドです。  
   
 ### <a name="example"></a>例  
@@ -305,7 +305,7 @@ TYPE* GetData();
 ### <a name="return-value"></a>戻り値  
  配列要素へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  要素がない場合、 `GetData` null 値を返します。  
   
  呼び出すときに警告を使用して、配列の要素に直接アクセスより迅速に作業する際に役立つ、 `GetData`; 直接行うすべてのエラー、配列の要素に影響します。  
@@ -320,7 +320,7 @@ TYPE* GetData();
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  インデックスが 0 から始まるため、サイズは、インデックスの最大値より大きい 1 です。 このメソッドを呼び出すのと同じ結果が生成されます、[呼び出す](#getcount)メソッドです。  
   
 ### <a name="example"></a>例  
@@ -333,10 +333,10 @@ INT_PTR GetSize() const;
 INT_PTR GetUpperBound() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列のインデックスは 0 から始まる、ために、この関数は値 1 を返しますより小さい`GetSize`です。  
   
- 条件**です ()** =-1 は、配列に要素が含まれていないことを示します。  
+ 条件`GetUpperBound( )`=-1 は、配列に要素が含まれていないことを示します。  
   
 ### <a name="example"></a>例  
   例を参照して[CArray::GetAt](#getat)です。  
@@ -356,28 +356,28 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  によって返される値よりも大きい可能性がある整数インデックス`GetUpperBound`です。  
   
- `ARG_TYPE`  
+ *中*  
  この配列内の要素の型を指定するテンプレート パラメーター。  
   
- `newElement`  
+ *newElement*  
  この配列に格納される要素。  
   
- `nCount`  
+ *nCount*  
  この要素にする必要があります回数には、(既定値 1) が挿入されます。  
   
- `nStartIndex`  
+ *nStartIndex*  
  によって返される値よりも大きい可能性がある整数インデックス[です](#getupperbound)です。  
   
- `pNewArray`  
+ *pNewArray*  
  この配列に追加する要素を含む別の配列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プロセスでは、その上がり、(インデックスをインクリメント) によって、このインデックスでは、およびその位置にある既存の要素が上のすべての要素をシフトします。  
   
- 2 番目のバージョンから別のすべての要素の挿入`CArray`開始位置として、コレクション、`nStartIndex`位置。  
+ 2 番目のバージョンから別のすべての要素の挿入`CArray`開始位置として、コレクション、 *nStartIndex*位置。  
   
  `SetAt`関数の場合、これに対し、1 つの指定した配列の要素を置換し、すべての要素を移動しません。  
   
@@ -406,10 +406,10 @@ const TYPE& operator[](int_ptr nindex) const;
  *TYPE*  
  この配列内の要素の型を指定するテンプレート パラメーター。  
   
- `nIndex`  
+ *nIndex*  
  アクセスして、要素のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列の最初の演算子が呼び出されます**const**右側の (右辺値) または代入ステートメントの左側 (左辺値) のいずれかで使用することがあります。 2 つ目と呼ばれる**const**配列は右側でのみ使用できます。  
   
  ライブラリのデバッグ バージョンでは、(いずれかで、左または代入ステートメントの右側にある)、添字が範囲外かどうかをアサートします。  
@@ -429,17 +429,17 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pNewData`  
+ *pNewData*  
  要素の配列の新しいバッファーです。  
   
- `pData`  
+ *pData*  
  要素の古い配列。  
   
- `nCount`  
+ *nCount*  
  元の配列要素の数。  
   
-### <a name="remarks"></a>コメント  
- `pNewData` すべてを保持するのに十分な大きさでは常に、`pData`要素。  
+### <a name="remarks"></a>Remarks  
+ *pNewData*すべてを保持するのに十分な大きさでは常に、 *pData*要素。  
   
  [CArray](../../mfc/reference/carray-class.md)実装では、このメソッドを使用して、配列の拡大または縮小する必要があるときに、古いデータを新しいバッファーにコピー (ときに[SetSize](#setsize)または[FreeExtra](#freeextra)と呼ばれます)。 既定の実装は、データだけをコピーします。  
   
@@ -452,7 +452,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列が空では既に、関数は引き続き動作します。  
   
 ### <a name="example"></a>例  
@@ -468,13 +468,13 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下[です](#getupperbound)です。  
   
- `nCount`  
+ *nCount*  
  削除する要素の数を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プロセスでは、削除された要素の上のすべての要素の下にシフトします。 これは、上は、配列のバインドしますが、メモリを解放しませんをデクリメントします。  
   
  削除位置以降の配列に含まれる以上の要素を削除しようとすると、ライブラリのデバッグ バージョンがアサートします。  
@@ -490,16 +490,16 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下[です](#getupperbound)です。  
   
- `ARG_TYPE`  
+ *中*  
  配列の要素を参照するために使用する引数の型を指定するテンプレート パラメーター。  
   
- `newElement`  
+ *newElement*  
  指定した位置に格納される新しい要素の値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `SetAt` 拡張する配列は発生しません。 使用して[SetAtGrow](#setatgrow)する場合は自動的に拡張する配列。  
   
  インデックスの値が配列内の有効な位置を表すことを確認する必要があります。 範囲外の場合は、ライブラリのデバッグ バージョンはアサートします。  
@@ -515,16 +515,16 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数のインデックス。  
   
- `ARG_TYPE`  
+ *中*  
  配列内の要素の型を指定するテンプレート パラメーター。  
   
- `newElement`  
+ *newElement*  
  この配列に追加する要素。 A **NULL**値は許可します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  必要な場合に、配列が自動的に大きくなる (つまり、上限の境界から新しい要素のために調整されます)。  
   
 ### <a name="example"></a>例  
@@ -540,18 +540,18 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewSize`  
+ *nNewSize*  
  新しい配列のサイズ (要素の数)。 0 以上にする必要があります。  
   
- `nGrowBy`  
+ *nGrowBy*  
  サイズの増加が必要な場合を確保する要素のスロットの最小数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  新しいサイズが前のサイズよりも小さい場合は、配列は切り捨てられ、すべての未使用メモリを解放します。  
   
  この関数を使用すると、配列を使用して開始する前に、配列のサイズを設定できます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。  
   
- `nGrowBy`パラメーターは配列が拡大しているときに内部メモリの割り当てに影響します。 使用することはありませんに影響を与える、配列のサイズによって報告された[GetSize](#getsize)と[です](#getupperbound)です。 既定値を使用する場合、MFC はメモリの断片化を回避し、ほとんどの場合の効率を最適化するように計算にメモリを割り当てます。  
+ *NGrowBy*パラメーターは配列が拡大しているときに内部メモリの割り当てに影響します。 使用することはありませんに影響を与える、配列のサイズによって報告された[GetSize](#getsize)と[です](#getupperbound)です。 既定値を使用する場合、MFC はメモリの断片化を回避し、ほとんどの場合の効率を最適化するように計算にメモリを割り当てます。  
   
 ### <a name="example"></a>例  
   例を参照して[GetData](#getdata)です。  

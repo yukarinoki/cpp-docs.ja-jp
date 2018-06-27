@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b558bb373416338f4136a6142ca6d491b28b510
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384711"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951459"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>テクニカル ノート 11: DLL の構成要素としての MFC
 ここでは、標準 MFC Dll では、MFC ライブラリを Windows ダイナミック リンク ライブラリ (DLL) の一部として使用することについて説明します。 これは、Windows の Dll およびそれらをビルドする方法を理解するいると仮定します。 MFC 拡張 Dll の概要については、作成するために、MFC ライブラリの拡張機能を参照してください[MFC の DLL バージョン](../mfc/tn033-dll-version-of-mfc.md)します。  
@@ -65,7 +65,7 @@ ms.locfileid: "33384711"
   
  C および C++ の両方のファイルを含めることができる別のヘッダーには、独自の Api を配置します。 MFC Advanced Concepts サンプルでは、ヘッダー ScreenCap.h を参照してください[は](../visual-cpp-samples.md)例についてはします。 関数をエクスポートするでそれらを入力、`EXPORTS`モジュール定義ファイルのセクション (です。DEF) または含める`__declspec(dllexport)`関数定義します。 使用して`__declspec(dllimport)`クライアント実行可能ファイルにこれらの関数をインポートします。  
   
- 追加する必要があります、 `AFX_MANAGE_STATE` MFC と動的にリンクされるレギュラーの MFC Dll でエクスポートされたすべての関数の先頭にします。 このマクロは、現在のモジュール状態を DLL のいずれかに設定します。 このマクロを使用するのには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。  
+ MFC と動的にリンクされるレギュラーの MFC Dll でエクスポートされたすべての関数の先頭に AFX_MANAGE_STATE マクロを追加する必要があります。 このマクロは、現在のモジュール状態を DLL のいずれかに設定します。 このマクロを使用するのには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   

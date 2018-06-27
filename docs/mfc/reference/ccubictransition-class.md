@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 001a1e66707544f6446a5bc54e70269f94108654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8697e52368fd407d1c325990552ee9851d48a76
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351910"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953221"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition クラス
 3 次遷移をカプセル化します。  
@@ -64,7 +64,7 @@ class CCubicTransition : public CBaseTransition;
 |[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|移行の最後に変数の速度です。|  
 |[CCubicTransition::m_duration](#m_duration)|移行の期間です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  3 次遷移中にアニメーション変数の値変更初期値から、指定した最終的な値を指定した速度で終わる、切り替え効果の期間にわたってします。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -74,7 +74,7 @@ class CCubicTransition : public CBaseTransition;
   
  `CCubicTransition`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition  
@@ -88,13 +88,13 @@ CCubicTransition(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
- `finalValue`  
+ *finalValue*  
  遷移の終了時、アニメーション変数の値。  
   
- `finalVelocity`  
+ *finalVelocity*  
  移行の最後に変数の速度です。  
   
 ##  <a name="create"></a>  CCubicTransition::Create  
@@ -107,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
-`pLibrary`  
+*pLibrary*  
  ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
 
 ### <a name="return-value"></a>戻り値  
