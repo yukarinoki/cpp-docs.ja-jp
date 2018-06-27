@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349259"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951183"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 構造体
 `AFX_EXTENSION_MODULE` MFC 拡張 DLL のモジュールの状態を保持する MFC 拡張 Dll の初期化中に使用されます。  
@@ -43,7 +43,7 @@ struct AFX_EXTENSION_MODULE
  *bInitialized*  
  **TRUE**で DLL モジュールが初期化されている場合`AfxInitExtensionModule`です。  
   
- `hModule`  
+ *hModule*  
  DLL のモジュールのハンドルを指定します。  
   
  *hResource*  
@@ -55,22 +55,22 @@ struct AFX_EXTENSION_MODULE
  *pFirstSharedFactory*  
  DLL モジュールの最初のオブジェクト ファクトリへのポインター (、`COleObjectFactory`オブジェクト)。 クラス ファクトリの一覧の先頭を指定するために使用します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MFC 拡張 Dll で次の 2 つを行う必要性、`DllMain`関数。  
   
 -   呼び出す[AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)戻り値を確認します。  
   
--   作成、 **CDynLinkLibrary**オブジェクトの DLL をエクスポートするかどうかは[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)独自のカスタム リソースまたはオブジェクトします。  
+-   作成、`CDynLinkLibrary`オブジェクトの DLL をエクスポートするかどうかは[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)独自のカスタム リソースまたはオブジェクトします。  
   
  `AFX_EXTENSION_MODULE`構造が MFC 拡張 DLL のモジュールの状態、通常の静的オブジェクトの構築の前に実行の一部としてに MFC 拡張 DLL が初期化されたランタイム クラスのオブジェクトのコピーを含むのコピーを保持するために使用される`DllMain`は入力します。 例えば:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- 格納されているモジュールの情報、`AFX_EXTENSION_MODULE`に構造をコピーすることができます、 **CDynLinkLibrary**オブジェクト。 例えば:  
+ 格納されているモジュールの情報、`AFX_EXTENSION_MODULE`に構造をコピーすることができます、`CDynLinkLibrary`オブジェクト。 例えば:  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ## <a name="see-also"></a>関連項目  

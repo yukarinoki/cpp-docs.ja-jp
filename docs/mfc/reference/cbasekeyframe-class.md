@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f538874b1690be920e9c7a3b3f494ca6851c532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3de348131dded63794e818d40c0ac5aeae910b03
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353959"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956709"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame クラス
 キーフレームの基本機能を実装します。  
@@ -67,13 +67,13 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|このキーフレームがストーリー ボードに追加されたかどうかを指定します。|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|このキーフレームをストーリー ボードの別の既存のキーフレームからのオフセットまたはいくつかの遷移の末尾に追加するかどうかを指定します。|  
 |[CBaseKeyFrame::m_keyframe](#m_keyframe)|Windows Animation API キーフレームを表します。 キーフレームが初期化されていない場合は、UI_ANIMATION_KEYFRAME_STORYBOARD_START 定義済みの値に設定されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  UI_ANIMATION_KEYFRAME 変数をカプセル化します。 任意のキーフレームの実装の基本クラスとして機能します。 キーフレームは、ストーリー ボード内の特定の時点を表し、遷移の開始と終了時刻を指定するために使用できます。 キーフレームのキーフレーム (世界時刻)、指定したオフセットでストーリー ボードに追加または指定された移行後に、追加のキーフレームの 2 種類があります。 アニメーションの開始前に一部の切り替え効果の期間を特定できないために、実行時のみにいくつかのキーフレームの実際の値が決定されます。 キーフレームを順番にキーフレームに依存している遷移に依存するため、キーフレーム チェーンを構築するときに、無限再帰を防ぐ必要があります。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -81,7 +81,7 @@ class CBaseKeyFrame : public CObject;
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
@@ -94,16 +94,16 @@ virtual BOOL AddToStoryboard(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pStoryboard`  
+ *pStoryboard*  
  ストーリー ボードへのポインター。  
   
- `bDeepAdd`  
+ *bDeepAdd*  
  このパラメーターが TRUE であり、追加するキーフレームがいくつか他のキーフレームや遷移に依存する場合、このメソッドはこのキーフレームまたは最初にストーリー ボードへの移行を追加しようとします。  
   
 ### <a name="return-value"></a>戻り値  
  キーフレームが正常にストーリー ボードに追加された場合は TRUE。それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ストーリー ボードにキーフレームを追加する、このメソッドが呼び出されます。  
   
 ##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
@@ -123,7 +123,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ### <a name="return-value"></a>戻り値  
  現在のキーフレームです。 既定値は、UI_ANIMATION_KEYFRAME_STORYBOARD_START です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、アクセサーを基になるキーフレーム値です。  
   
 ##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
@@ -136,7 +136,7 @@ BOOL IsAdded() const;
 ### <a name="return-value"></a>戻り値  
  ストーリー ボードにキーフレームを追加する場合は TRUE。そう FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  基底クラスでも常に TRUE を返しますが、派生クラスでオーバーライドされます。  
   
 ##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
@@ -149,7 +149,7 @@ BOOL IsKeyframeAtOffset() const;
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、ストーリー ボードのいくつかの指定したオフセット位置にキーフレームを追加する必要があります。 FALSE の場合、いくつかの移行が完了した後ストーリー ボードにキーフレームを追加する必要があります。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ストーリー ボードのオフセット位置にキーフレームを追加する必要があるかどうかを指定します。 派生クラスでは、オフセットまたは遷移を指定する必要があります。  
   
 ##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  

@@ -20,26 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97c42f59042490f6408fb457b12f4bdb1a2eeb88
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385340"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953361"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>テクニカル ノート 39: MFC/OLE オートメーションの実装
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。  
   
 ## <a name="overview-of-ole-idispatch-interface"></a>OLE の IDispatch インターフェイスの概要  
- `IDispatch`インターフェイスは、アプリケーションは、アプリケーションの機能の使用などの他のアプリケーションなど、Visual BASIC、または他の言語をできるようにするメソッドとプロパティを公開することを意味します。 このインターフェイスの最も重要な部分は、 **idispatch::invoke**関数。 MFC は、「ディスパッチ マップ」を使用して実装する**idispatch::invoke**です。 ディスパッチ マップ"shape"のレイアウトに MFC 実装の情報を提供する、 `CCmdTarget`-派生クラスを直接、オブジェクトのプロパティを操作またはメンバーを満たすために、オブジェクト内の関数を呼び出すように**Idispatch::invoke**要求します。  
+ `IDispatch`インターフェイスは、アプリケーションは、アプリケーションの機能の使用などの他のアプリケーションなど、Visual BASIC、または他の言語をできるようにするメソッドとプロパティを公開することを意味します。 このインターフェイスの最も重要な部分は、`IDispatch::Invoke`関数。 MFC は、「ディスパッチ マップ」を使用して実装する`IDispatch::Invoke`です。 ディスパッチ マップ"shape"のレイアウトに MFC 実装の情報を提供する、 `CCmdTarget`-派生クラスを直接、オブジェクトのプロパティを操作またはメンバーを満たすために、オブジェクト内の関数を呼び出すように`IDispatch::Invoke`要求します。  
   
  ほとんどの場合、ClassWizard および MFC 連携して、アプリケーション プログラマから OLE オートメーションの詳細のほとんどを非表示にします。 プログラマは、アプリケーションに公開する実際の機能に重点を置いてし、基になるプラミングについて心配する必要はありません。  
   
  ただし、バック グラウンドで MFC の実行内容を理解する必要がある場合があります。 この注意はフレームワークを割り当てる方法を説明**DISPID**メンバー関数とプロパティにします。 MFC は、アルゴリズムの知識**DISPID**s は、アプリケーションのオブジェクトの「タイプ ライブラリ」を作成する場合など、Id がわかっている必要がある場合にのみ必要です。  
   
 ## <a name="mfc-dispid-assignment"></a>MFC の DISPID の割り当て  
- プロパティとメソッド (オブジェクトなど、コード内のオートメーション (Visual Basic のユーザー、たとえば)、エンドユーザーの実際の名前を表示するが、オートメーションが有効にShowWindow) の実装**idispatch::invoke**実際の名前を受信しません。 最適化のため、受信、 **DISPID**、これは、32 ビット"マジック"を cookie メソッドまたはプロパティへのアクセスをについて説明します。 これら**DISPID**から返される値、`IDispatch`と呼ばれる別の方法で実装 **::getidsofnames**です。 オートメーション クライアント アプリケーションが呼び出す`GetIDsOfNames`アクセス、およびそれ以降の呼び出しのキャッシュが意図メンバーまたはプロパティごとに一度**idispatch::invoke**です。 これにより、高価な文字列の検索に一度だけ実行オブジェクトを使用して、ごとの代わりに 1 回あたり**idispatch::invoke**呼び出します。  
+ プロパティとメソッド (オブジェクトなど、コード内のオートメーション (Visual Basic のユーザー、たとえば)、エンドユーザーの実際の名前を表示するが、オートメーションが有効にShowWindow)、実装の`IDispatch::Invoke`実際の名前を受信しません。 最適化のため、受信、 **DISPID**、これは、32 ビット"マジック"を cookie メソッドまたはプロパティへのアクセスをについて説明します。 これら**DISPID**から返される値、`IDispatch`と呼ばれる別の方法で実装`IDispatch::GetIDsOfNames`です。 オートメーション クライアント アプリケーションが呼び出す`GetIDsOfNames`アクセス、およびそれ以降の呼び出しのキャッシュが意図メンバーまたはプロパティごとに一度`IDispatch::Invoke`です。 これにより、高価な文字列の検索に一度だけ実行オブジェクトを使用して、ごとの代わりに 1 回あたり`IDispatch::Invoke`呼び出します。  
   
  MFC の決定、 **DISPID**メソッドとプロパティに基づいて 2 つの操作。  
   
@@ -128,26 +128,26 @@ property Y    (DISPID)0x00010002
     vtPropType) 
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  クラスの名前です。  
   
- `pszName`  
+ *pszName*  
  プロパティの外部名。  
   
- `memberName`  
+ *メンバー名*  
  プロパティが格納されているメンバー変数の名前です。  
   
- `pfnAfterSet`  
+ *pfnAfterSet*  
  プロパティが変更されたときに呼び出すメンバー関数の名前。  
   
- `vtPropType`  
+ *vtPropType*  
  プロパティの型を指定する値。  
   
-## <a name="remarks"></a>コメント  
- このマクロは、非常によく似た`DISP_PROPERTY`追加の引数を受け入れることを除いて、します。 追加の引数*pfnAfterSet、* が何も返され、'void OnPropertyNotify()'、パラメーターはメンバー関数である必要があります。 呼び出される**後**メンバー変数が変更されました。  
+## <a name="remarks"></a>Remarks  
+ このマクロは、追加の引数を受け取ってする点を除いてに、DISP_PROPERTY と似ています。 追加の引数*pfnAfterSet、* が何も返され、'void OnPropertyNotify()'、パラメーターはメンバー関数である必要があります。 呼び出される**後**メンバー変数が変更されました。  
   
 ## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM-マクロの説明  
   
@@ -162,29 +162,29 @@ property Y    (DISPID)0x00010002
     vtsParams) 
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  クラスの名前です。  
   
- `pszName`  
+ *pszName*  
  プロパティの外部名。  
   
- `memberGet`  
+ *memberGet*  
  プロパティの取得に使用するメンバー関数の名前です。  
   
- `memberSet`  
+ *メンバー セット*  
  このメンバー関数は、プロパティを設定するための名前です。  
   
- `vtPropType`  
+ *vtPropType*  
  プロパティの型を指定する値。  
   
- `vtsParams`  
+ *vtsParams*  
  領域の文字列には、各パラメーターの vts _ が区切られます。  
   
-## <a name="remarks"></a>コメント  
- ほぼ同様に、`DISP_PROPERTY_EX`マクロ、このマクロは、個別の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロでは、プロパティのパラメーター リストを指定することができます。 これは、その他の何らかの方法でインデックスを作成またはパラメーター化されているプロパティを実装するために役立ちます。 パラメーターは常に配置されます最初に、その後にプロパティの新しい値。 例えば:  
+## <a name="remarks"></a>Remarks  
+ かなり DISP_PROPERTY_EX マクロのようにこのマクロは個別の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロでは、プロパティのパラメーター リストを指定することができます。 これは、その他の何らかの方法でインデックスを作成またはパラメーター化されているプロパティを実装するために役立ちます。 パラメーターは常に配置されます最初に、その後にプロパティの新しい値。 例えば:  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -241,35 +241,35 @@ void CMyObject::SetItem(short row,
     vtsParams) 
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  クラスの名前です。  
   
- `pszName`  
+ *pszName*  
  プロパティの外部名。  
   
- `dispid`  
+ *dispid*  
  プロパティまたはメソッドの固定 DISPID です。  
   
- `pfnGet`  
+ *pfnGet*  
  プロパティの取得に使用するメンバー関数の名前です。  
   
- `pfnSet`  
+ *pfnSet*  
  このメンバー関数は、プロパティを設定するための名前です。  
   
- `memberName`  
+ *メンバー名*  
  プロパティにマップするには、このメンバー変数の名前  
   
- `vtPropType`  
+ *vtPropType*  
  プロパティの型を指定する値。  
   
- `vtsParams`  
+ *vtsParams*  
  領域の文字列には、各パラメーターの vts _ が区切られます。  
   
-## <a name="remarks"></a>コメント  
- これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかに割り当てます。 マクロ名をその ID が追加される点を除いて、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) ID は、直後に指定されたパラメーターによって決定されます、`pszName`パラメーター。 子を参照してください。詳細については、これらのマクロ H します。 **_ID**ディスパッチ マップの最後にエントリを配置する必要があります。 自動が影響**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンが (、 **DISPID**s は、位置によって決まります)。 例えば:  
+## <a name="remarks"></a>Remarks  
+ これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかに割り当てます。 マクロ名をその ID が追加される点を除いて、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) ID は、直後に指定されたパラメーターによって決定されます、 *pszName*パラメーター。 子を参照してください。詳細については、これらのマクロ H します。 **_ID**ディスパッチ マップの最後にエントリを配置する必要があります。 自動が影響**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンが (、 **DISPID**s は、位置によって決まります)。 例えば:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,
@@ -298,7 +298,7 @@ property Z     (DISPID)0x00000001
  固定を指定する**DISPID**有用な既存のディスパッチ インターフェイスへの旧バージョンとの互換性を維持するために、または特定のシステム定義のメソッドやプロパティを実装する (通常は、負の値によって示される**DISPID**、ように、 **DISPID_NEWENUM**コレクション)。  
   
 #### <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>COleClientItem の IDispatch インターフェイスを取得します。  
- 多くのサーバーでは、OLE サーバーの機能と共に、それらのドキュメント オブジェクト内でオートメーションをサポートします。 直接アクセスする必要は、このオートメーション インターフェイスにアクセスするために、 **COleClientItem::m_lpObject**メンバー変数。 次のコードを取得、`IDispatch`インターフェイスから派生したオブジェクトを`COleClientItem`です。 見つかった場合はこの機能に必要なアプリケーションで、以下のコードを含めることができます。  
+ 多くのサーバーでは、OLE サーバーの機能と共に、それらのドキュメント オブジェクト内でオートメーションをサポートします。 直接アクセスする必要は、このオートメーション インターフェイスにアクセスするために、`COleClientItem::m_lpObject`メンバー変数。 次のコードを取得、`IDispatch`インターフェイスから派生したオブジェクトを`COleClientItem`です。 見つかった場合はこの機能に必要なアプリケーションで、以下のコードを含めることができます。  
   
 ```  
 LPDISPATCH CMyClientItem::GetIDispatch()  
@@ -346,7 +346,7 @@ return NULL;
 }  
 ```  
   
- 返されたディスパッチ インターフェイスこの関数が直接使用またはにアタッチされているし、可能性がある、`COleDispatchDriver`のタイプ セーフ アクセスします。 直接使用する場合は、呼び出すことを確認してください、**リリース**メンバー使用するときに、ポインター (、`COleDispatchDriver`デストラクターは、既定で)。  
+ 返されたディスパッチ インターフェイスこの関数が直接使用またはにアタッチされているし、可能性がある、`COleDispatchDriver`のタイプ セーフ アクセスします。 直接使用する場合は、呼び出すことを確認してください、`Release`メンバー使用するときに、ポインター (、`COleDispatchDriver`デストラクターは、既定で)。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   

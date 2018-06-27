@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350798"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956449"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF クラス
 `D2D1_RECT_F`のラッパー。  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|返します、`boolean`を式に有効なデータがないかどうかを示す値 ( `null`)。|  
+|[CD2DRectF::IsNull](#isnull)|返します、**ブール**を式に有効なデータがないかどうかを示す値 ( **null**)。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -61,7 +61,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
  `CD2DRectF`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
@@ -81,19 +81,19 @@ CD2DRectF(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  元の四角形  
   
- `fLeft`  
+ *fLeft*  
  ソースの左座標  
   
- `fTop`  
+ *fTop*  
  ソースの上座標  
   
- `fRight`  
+ *させて喜ばせます*  
  右側の座標のソース  
   
- `fBottom`  
+ *fBottom*  
  ソースの下の座標  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  

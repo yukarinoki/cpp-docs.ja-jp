@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358356"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952181"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton クラス
 ラベルがテキストではなくビットマップ イメージのプッシュ ボタン コントロールを作成します。  
@@ -56,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|アプリケーションのリソース ファイルからの 1 つまたは複数の名前付きのビットマップ リソースの読み込みと、オブジェクトへのビットマップのアタッチによって、オブジェクトを初期化します。|  
 |[CBitmapButton::SizeToContent](#sizetocontent)|ビットマップに合わせてボタンのサイズを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CBitmapButton` オブジェクトに含める最大 4 つのビットマップは、ボタンのさまざまな状態の画像が含まれて: を (標準)、下 (または選択した)、中心し、無効になっています。 最初のビットマップのみが必要です。その他はオプションです。  
   
  ビットマップ ボタンのイメージには、そのイメージ自体と同様に、画像の周りの境界線が含まれます。 罫線は、通常、ボタンの状態の表示中に役割を果たします。 たとえば、フォーカスのある状態のビットマップと同様に、1 つの状態が、罫線または境界の実線シック (thick) から四角形の破線埋め込み通常です。 ビットマップ、無効な状態を通常のと似ていますが (淡色表示のメニュー選択) のようなコントラストがはっきりして最新の状態にします。  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  `CDialog`オブジェクトの[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンを呼び出し、`CBitmapButton`オブジェクトの[AutoLoad](#autoload)関数は、ボタンのコントロール ID をパラメーターとして使用して、`CDialog`オブジェクト**この**ポインター。  
   
- など、Windows の通知メッセージを処理するかどうかは**BN_CLICKED**ビットマップ ボタン コントロールをその親によって送信された、(通常から派生したクラス**CDialog)** への追加、 `CDialog`-派生各メッセージのメッセージ マップ エントリとメッセージ ハンドラー メンバー関数をオブジェクトです。 送信された通知、`CBitmapButton`オブジェクトは、によって送信されたものと同じ、 [CButton](../../mfc/reference/cbutton-class.md)オブジェクト。  
+ BN_CLICKED など、Windows の通知メッセージを処理する場合、その親にビットマップ ボタン コントロールから送信 (から派生するクラスの通常`CDialog`)、追加、 `CDialog`-派生オブジェクト メッセージ マップ エントリとメッセージ ハンドラー メンバー各メッセージの関数。 送信された通知、`CBitmapButton`オブジェクトは、によって送信されたものと同じ、 [CButton](../../mfc/reference/cbutton-class.md)オブジェクト。  
   
  クラス[CToolBar](../../mfc/reference/ctoolbar-class.md)ビットマップ ボタンへのさまざまなアプローチです。  
   
@@ -115,7 +115,7 @@ class CBitmapButton : public CButton
   
  `CBitmapButton`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
@@ -128,16 +128,16 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ボタンのコントロールの id。  
   
- `pParent`  
+ *pParent*  
  ボタンを所有するオブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、`AutoLoad`ビットマップ ボタンとして ダイアログ ボックスのオーナー描画ボタンを初期化します。 この関数を使用する手順については、「解説」で、`CBitmapButton`クラスです。  
   
 ### <a name="example"></a>例  
@@ -151,7 +151,7 @@ BOOL AutoLoad(
 CBitmapButton();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  C++ の作成後`CBitmapButton`オブジェクトを呼び出す[CButton::Create](../../mfc/reference/cbutton-class.md#create) Windows ボタン コントロールを作成しをアタッチする、`CBitmapButton`オブジェクト。  
   
 ### <a name="example"></a>例  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366936"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957033"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition クラス
 不連続遷移をカプセル化します。  
@@ -64,7 +64,7 @@ class CDiscreteTransition : public CBaseTransition;
 |[CDiscreteTransition::m_delay](#m_delay)|最終的な値に瞬間的なスイッチを遅延する時間数。|  
 |[CDiscreteTransition::m_hold](#m_hold)|によって、最終的な値に変数を格納するための時間。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  不連続遷移中に、アニメーション変数のまま初期値、指定された遅延時間では後で、指定した最終的な値とその値のままに瞬時に切り替えます。 保留中の指定した時間。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -74,7 +74,7 @@ class CDiscreteTransition : public CBaseTransition;
   
  [CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition  
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `delay`  
+ *遅延*  
  最終的な値に瞬間的なスイッチを遅延する時間数。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  遷移の終了時、アニメーション変数の値。  
   
- `hold`  
+ *保留中*  
  によって、最終的な値に変数を格納するための時間。  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
 
   

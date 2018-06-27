@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356493"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955662"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
 Microsoft Foundation Class ライブラリのメッセージ マップ アーキテクチャの基本クラスです。  
@@ -104,7 +104,7 @@ class CCmdTarget : public CObject
 |[CCmdTarget::OnFinalRelease](#onfinalrelease)|OLE の最後の参照のリリース後にクリーンアップされます。|  
 |[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|砂時計カーソルを復元します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  メッセージ マップは、それらを処理するために、メンバー関数にコマンドまたはメッセージをルーティングします。 (コマンドとは、メニュー項目、コマンド ボタンまたはアクセラレータ キーからのメッセージのことです)。  
   
  派生したキー フレームワーク クラス`CCmdTarget`含める[CView](../../mfc/reference/cview-class.md)、 [CWinApp](../../mfc/reference/cwinapp-class.md)、 [CDocument](../../mfc/reference/cdocument-class.md)、 [CWnd](../../mfc/reference/cwnd-class.md)、および[CFrameWnd](../../mfc/reference/cframewnd-class.md)です。 メッセージを処理する新しいクラスの場合は、次のいずれかからクラスを派生`CCmdTarget`-クラスを派生します。 クラスを派生させることはほとんどありませんは`CCmdTarget`直接です。  
@@ -130,8 +130,8 @@ class CCmdTarget : public CObject
 void BeginWaitCursor();
 ```  
   
-### <a name="remarks"></a>コメント  
- フレームワークが場合など、ビジー状態であることをユーザーに表示するには、この関数を呼び出す、 **CDocument**オブジェクトが読み込まれるか、またはそれ自体をファイルに保存します。  
+### <a name="remarks"></a>Remarks  
+ フレームワークが場合など、ビジー状態であることをユーザーに表示するには、この関数を呼び出す、`CDocument`オブジェクトが読み込まれるか、またはそれ自体をファイルに保存します。  
   
  アクション`BeginWaitCursor`などはありません常に 1 つのメッセージ ハンドラーの外部で効果的なその他のアクションとして`OnSetCursor`カーソルに変更を処理する可能性があります。  
   
@@ -159,22 +159,22 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iVerb`  
+ *iVerb*  
  動詞の数値識別子。  
   
- `lpMsg`  
+ *lpMsg*  
  ポインター、 [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) (ダブルクリック) などの動詞を起動したイベントを記述する構造体。  
   
- `hWndParent`  
+ *hWndParent*  
  オブジェクトを保持しているドキュメント ウィンドウのハンドル。  
   
- `lpRect`  
+ *lpRect*  
  ポインター、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体を含む、座標 (ピクセル単位)、オブジェクトを定義する外接する四角形で*hwndParent*です。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、成功すると、それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、の実装では基本的に[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)です。 によって実行可能なアクションを列挙する[CCmdTarget::EnumOleVerbs](#enumoleverbs)です。  
   
 ##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
@@ -184,7 +184,7 @@ BOOL DoOleVerb(
 void EnableAutomation();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、通常は、オブジェクトのコンス トラクターから呼び出されるし、クラスのディスパッチ マップが宣言されている場合にのみ呼び出す必要があります。 Automation の詳細については、記事を参照してください。[オートメーション クライアント](../../mfc/automation-clients.md)と[オートメーション サーバー](../../mfc/automation-servers.md)です。  
   
 ##  <a name="enableconnections"></a>  CCmdTarget::EnableConnections  
@@ -194,7 +194,7 @@ void EnableAutomation();
 void EnableConnections();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  接続ポイントを有効にするには、派生クラスのコンス トラクターでこのメンバー関数を呼び出します。  
   
 ##  <a name="enabletypelib"></a>  CCmdTarget::EnableTypeLib  
@@ -204,7 +204,7 @@ void EnableConnections();
 void EnableTypeLib();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数のコンス トラクターを呼び出して、 `CCmdTarget`-派生オブジェクトの種類の情報を提供する場合。 詳細については、サポート技術情報の記事 Q185720 を参照してください"HOWTO: MFC オートメーション サーバーから型情報を提供します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)です。  
   
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor  
@@ -214,7 +214,7 @@ void EnableTypeLib();
 void EndWaitCursor();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  砂時計カーソルを呼び出した後、フレームワークはまた、このメンバー関数を呼び出します。  
   
 ### <a name="example"></a>例  
@@ -228,13 +228,13 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  ポインターへのポインター、[返します](http://msdn.microsoft.com/library/windows/desktop/ms695084)インターフェイスです。  
   
 ### <a name="return-value"></a>戻り値  
- オブジェクトは、少なくとも 1 つの OLE 動詞をサポートしている場合は TRUE (後者\*`ppenumOleVerb`を指す、**返します**列挙子インターフェイス)、それ以外の場合は FALSE。  
+ オブジェクトは、少なくとも 1 つの OLE 動詞をサポートしている場合は TRUE (後者\* *ppenumOleVerb*を指す、`IEnumOLEVERB`列挙子インターフェイス)、それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、の実装では基本的に[IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)です。  
   
 ##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
@@ -245,13 +245,13 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDispatch`  
+ *lpDispatch*  
  `IDispatch` オブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CCmdTarget`オブジェクトに関連付けられている`lpDispatch`です。 この関数を返します**NULL**場合、`IDispatch`オブジェクトは、Microsoft Foundation Class として認識されません`IDispatch`オブジェクト。  
+ ポインター、`CCmdTarget`オブジェクトに関連付けられている*lpDispatch*です。 この関数を返します**NULL**場合、`IDispatch`オブジェクトは、Microsoft Foundation Class として認識されません`IDispatch`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数の結果は、メンバー関数への呼び出しの逆`GetIDispatch`です。  
   
 ##  <a name="getdispatchiid"></a>  CCmdTarget::GetDispatchIID  
@@ -268,7 +268,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、成功すると、それ以外の場合は FALSE。 成功した場合、 \* *pIID*プライマリ ディスパッチ インターフェイス ID に設定されています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  派生クラスは、このメンバー関数をオーバーライドする必要があります (オーバーライドされなかった場合、 `GetDispatchIID` FALSE を返します)。 参照してください[COleControl](../../mfc/reference/colecontrol-class.md)です。  
   
  詳細については、サポート技術情報の記事 Q185720 を参照してください"HOWTO: MFC オートメーション サーバーから型情報を提供します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)です。  
@@ -287,7 +287,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="return-value"></a>戻り値  
  `IDispatch`オブジェクトに関連付けられたポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトを呼び出す`EnableAutomation`オートメーションを有効にすること、コンス トラクターでこの関数のポインターを返しますの基礎クラスの実装に`IDispatch`を介して通信するクライアントによって使用される、`IDispatch`インターフェイスです。 呼び出しを行う必要はありませんので、ポインターへの参照を追加する自動的にこの関数を呼び出す[:addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)です。  
   
 ##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
@@ -300,10 +300,10 @@ virtual UINT GetTypeInfoCount();
 ### <a name="return-value"></a>戻り値  
  型情報インターフェイスの数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は基本的には、実装[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12)です。  
   
- 派生クラスでは、(0 または 1) を提供する型情報インターフェイスの数を返すには、この関数をオーバーライドする必要があります。 オーバーライドされなかった場合、**しなかった**0 を返します。 オーバーライドする、 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)も実装されているマクロ`GetTypeLib`と`GetTypeLibCache`です。  
+ 派生クラスでは、(0 または 1) を提供する型情報インターフェイスの数を返すには、この関数をオーバーライドする必要があります。 オーバーライドされなかった場合、 `GetTypeInfoCount` 0 を返します。 オーバーライドする、 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)も実装されているマクロ`GetTypeLib`と`GetTypeLibCache`です。  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  指定した GUID に対応する型の説明を取得します。  
@@ -316,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lcid`  
+ *lcid*  
  ロケール識別子 ( `LCID`)。  
   
- `guid`  
+ *guid*  
  [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)の種類の説明。  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  ポインターへのポインター、`ITypeInfo`インターフェイスです。  
   
 ### <a name="return-value"></a>戻り値  
- 呼び出しの成否を示す HRESULT。 成功した場合、*`ppTypeInfo`型情報インターフェイスを指します。  
+ 呼び出しの成否を示す HRESULT。 成功した場合、* *ppTypeInfo*型情報インターフェイスを指します。  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  タイプ ライブラリへのポインターを取得します。  
@@ -338,16 +338,16 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lcid`  
+ *lcid*  
  ロケール識別子 ( `LCID`)。  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  ポインターへのポインター、`ITypeLib`インターフェイスです。  
   
 ### <a name="return-value"></a>戻り値  
- 呼び出しの成否を示す HRESULT。 成功した場合、*`ppTypeLib`タイプ ライブラリのインターフェイスを指します。  
+ 呼び出しの成否を示す HRESULT。 成功した場合、* *ppTypeLib*タイプ ライブラリのインターフェイスを指します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  派生クラスは、このメンバー関数をオーバーライドする必要があります (オーバーライドされなかった場合、 `GetTypeLib` TYPE_E_CANTLOADLIBRARY を返します)。 使用して、 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)も実装されているマクロ`GetTypeInfoCount`と`GetTypeLibCache`です。  
   
 ##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache  
@@ -358,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 **CTypeLibCache**オブジェクト。  
+ ポインター、`CTypeLibCache`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 派生クラスは、このメンバー関数をオーバーライドする必要があります (オーバーライドされなかった場合、**によりオーバーライド**は NULL を返します)。 使用して、 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)も実装されているマクロ`GetTypeInfoCount`と`GetTypeLib`です。  
+### <a name="remarks"></a>Remarks  
+ 派生クラスは、このメンバー関数をオーバーライドする必要があります (オーバーライドされなかった場合、`GetTypeLibCache`は NULL を返します)。 使用して、 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)も実装されているマクロ`GetTypeInfoCount`と`GetTypeLib`です。  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- この関数は mfc の**idispatch::invoke**場合、指定されたオートメーション メソッド (で識別される`dispid`) 呼び出すことができます。  
+ この関数は mfc の`IDispatch::Invoke`場合、指定されたオートメーション メソッド (で識別される*dispid*) 呼び出すことができます。  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dispid`  
+ *dispid*  
  ディスパッチ id。  
   
 ### <a name="return-value"></a>戻り値  
  TRUE の場合、メソッドが呼び出される、それ以外の場合は FALSE を指定できます。  
   
-### <a name="remarks"></a>コメント  
- 場合`IsInvokeAllowed`に TRUE を返します**Invoke**メソッドを呼び出します。 に進みますそれ以外の場合、`Invoke`が失敗すると、E_UNEXPECTED を返します。  
+### <a name="remarks"></a>Remarks  
+ 場合`IsInvokeAllowed`に TRUE を返します`Invoke`メソッドを呼び出します。 に進みますそれ以外の場合、`Invoke`が失敗すると、E_UNEXPECTED を返します。  
   
  派生クラスは、適切な値を返すには、この関数をオーバーライドできます (オーバーライドされなかった場合、 `IsInvokeAllowed` TRUE を返します)。 具体的にを参照してください[COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)です。  
   
@@ -392,7 +392,7 @@ BOOL IsResultExpected();
 ### <a name="return-value"></a>戻り値  
  以外の場合は、オートメーション関数が値を返す必要があります。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  OLE インターフェイスが MFC をクライアントを使用してまたは関数の呼び出しの結果を無視するかどうかについての情報を提供し、MFC 順番に使用してこの情報への呼び出しの結果を決定`IsResultExpected`です。 戻り値の実稼働が時間のまたはリソースの消費が大きい場合は、戻り値を計算する前にこの関数を呼び出すことによって効率を高めることができます。  
   
  この関数は、クライアントによって呼び出されたから呼び出す場合に、オートメーション関数を他のオートメーション関数から有効な戻り値を取得することの 1 回だけ、0 を返します。  
@@ -411,31 +411,31 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  コマンド ID が含まれています  
   
- `nCode`  
- コマンド通知コードを識別します。 参照してください**解説**の値の詳細については詳細`nCode`です。  
+ *nCode*  
+ コマンド通知コードを識別します。 参照してください**解説**の値の詳細については詳細*nCode*です。  
   
- `pExtra`  
- 値に従って使用`nCode`です。 参照してください**解説**の詳細については`pExtra`します。  
+ *pExtra*  
+ 値に従って使用*nCode*です。 参照してください**解説**の詳細については*pExtra*です。  
   
- `pHandlerInfo`  
- ない場合**NULL**、`OnCmdMsg`を入力、 **pTarget**と**pmf**のメンバー、`pHandlerInfo`ディスパッチ コマンドではなく構造体。 通常、このパラメーターを指定する必要があります**NULL**です。  
+ *pHandlerInfo*  
+ ない場合**NULL**、`OnCmdMsg`を入力、 *pTarget*と*pmf*のメンバー、 *pHandlerInfo*ディスパッチの代わりに構造体コマンド。 通常、このパラメーターを指定する必要があります**NULL**です。  
   
 ### <a name="return-value"></a>戻り値  
  メッセージが処理された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、フレームワーク コマンド アーキテクチャの主な実装ルーチンです。  
   
  実行時に、`OnCmdMsg`ルート クラスを呼び出すことによって、コマンド自体を取り扱う他のオブジェクトへのコマンドをディスパッチ`CCmdTarget::OnCmdMsg`、どのは実際のメッセージ マップ検索します。 既定のコマンド ルーティングの詳細については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)です。  
   
  まれに、フレームワークを拡張するには、このメンバー関数を無効にすることがあります標準コマンド ルーティングします。 参照してください[テクニカル ノート 21](../../mfc/tn021-command-and-message-routing.md)コマンド ルーティングのアーキテクチャの詳細についてはします。  
   
- オーバーライドする場合は`OnCmdMsg`、適切な値を指定する必要があります`nCode`、コマンド通知コードおよび`pExtra`の値に依存する`nCode`です。 次の表は、対応する値を示します。  
+ オーバーライドする場合は`OnCmdMsg`、適切な値を指定する必要があります*nCode*、コマンド通知コードおよび*pExtra*の値に依存する*nCode*. 次の表は、対応する値を示します。  
   
-|`nCode` の値|`pExtra` の値|  
+|*nCode*値|*pExtra*値|  
 |-------------------|--------------------|  
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  
@@ -455,7 +455,7 @@ virtual BOOL OnCmdMsg(
 virtual void OnFinalRelease();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このような場合の特別な処理を提供するには、この関数をオーバーライドします。 既定の実装では、オブジェクトを削除します。  
   
 ##  <a name="restorewaitcursor"></a>  CCmdTarget::RestoreWaitCursor  

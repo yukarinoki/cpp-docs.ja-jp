@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355461"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951417"
 ---
 # <a name="ccacheddatapathproperty-class"></a>プロパティ クラス
 非同期で転送し、メモリ ファイルにキャッシュする OLE コントロール プロパティを実装します。  
@@ -50,10 +50,10 @@ class CCachedDataPathProperty : public CDataPathProperty
 |----------|-----------------|  
 |[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` データをキャッシュするオブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  メモリ ファイルはディスクではなく RAM に格納されてし、一時的な高速を転送するため便利です。  
   
- と共に**CAysncMonikerFile**と`CDataPathProperty`、 `CCachedDataPathProperty` OLE コントロールで非同期モニカーを使用するための機能を提供します。 `CCachedDataPathProperty`オブジェクト、URL またはファイル ソースからデータを非同期的に転送しを使用して、メモリ ファイルに格納できる、`m_Cache`パブリック変数です。 メモリ ファイル内のすべてのデータが格納されているし、オーバーライドする必要はありません[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)通知を監視して応答する場合を除き、します。 たとえば、大規模なを転送する場合です。GIF ファイルをコントロールを通知より多くのデータが到着した自体が再描画するか上書き`OnDataAvailable`通知します。  
+ と共に`CAysncMonikerFile`と`CDataPathProperty`、 `CCachedDataPathProperty` OLE コントロールで非同期モニカーを使用するための機能を提供します。 `CCachedDataPathProperty`オブジェクト、URL またはファイル ソースからデータを非同期的に転送しを使用して、メモリ ファイルに格納できる、`m_Cache`パブリック変数です。 メモリ ファイル内のすべてのデータが格納されているし、オーバーライドする必要はありません[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)通知を監視して応答する場合を除き、します。 たとえば、大規模なを転送する場合です。GIF ファイルをコントロールを通知より多くのデータが到着した自体が再描画するか上書き`OnDataAvailable`通知します。  
   
  クラス`CCachedDataPathProperty`から派生した`CDataPathProperty`です。  
   
@@ -78,7 +78,7 @@ class CCachedDataPathProperty : public CDataPathProperty
   
  `CCachedDataPathProperty`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxctl.h  
   
 ##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty  
@@ -94,14 +94,14 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pControl`  
+ *pControl*  
  オブジェクトへのポインター、ActiveX コントロールにこれを関連付けられる`CCachedDataPathProperty`オブジェクト。  
   
- `lpszPath`  
+ *lpszPath*  
  可能性のある絶対または相対パス、パスは、プロパティの実際の絶対位置を参照する非同期モニカーの作成に使用します。 `CCachedDataPathProperty` ファイル名の Url を使用します。 場合は、`CCachedDataPathProperty`ファイルのオブジェクトをパスに file:// を付加します。  
   
-### <a name="remarks"></a>コメント  
- `COleControl`によって指されるオブジェクト`pControl`によって使用される[開く](../../mfc/reference/cdatapathproperty-class.md#open)と派生クラスによって取得します。 場合`pControl`は**NULL**で使用されるコントロール**開く**で設定する必要があります[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)です。 場合`lpszPath`は**NULL**、パス経由で渡すことができます**開く**でそれを設定または[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)です。  
+### <a name="remarks"></a>Remarks  
+ `COleControl`によって指されるオブジェクト*pControl*によって使用される[開く](../../mfc/reference/cdatapathproperty-class.md#open)と派生クラスによって取得します。 場合*pControl*は**NULL**で使用されるコントロール`Open`で設定する必要があります[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)です。 場合*lpszPath*は**NULL**、パス経由で渡すことができます`Open`でそれを設定または[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)です。  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  データがキャッシュされる、メモリ ファイルのクラス名が含まれています。  
@@ -110,7 +110,7 @@ CCachedDataPathProperty(
 CMemFile m_Cache;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メモリ ファイルは、ディスクではなく RAM に格納されます。  
   
 ## <a name="see-also"></a>関連項目  

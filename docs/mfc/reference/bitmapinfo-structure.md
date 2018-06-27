@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e061802cbcd8926a146e5765cc9ecfd9bf917295
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea99cfb77f295530f65b3d3b07888b0735fc0b6a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348154"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950504"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO 構造体
 `BITMAPINFO` 構造体は、Windows のデバイスに依存しないビットマップ (DIB: Device-Independent Bitmap) の寸法と色の情報を定義します。  
@@ -36,13 +36,13 @@ typedef struct tagBITMAPINFO {
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `bmiHeader`  
+ *bmiHeader*  
  指定します、 [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)ディメンションとデバイスに依存しないビットマップの色の書式に関する情報を格納する構造体。  
   
- `bmiColors`  
+ *bmiColors*  
  配列を指定[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)または`DWORD`ビットマップの色を定義するデータ型。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  デバイスに依存しないビットマップは、2 つの異なる部分から構成されます。ビットマップの寸法と色を表す `BITMAPINFO` 構造体と、ビットマップのピクセルを指定するバイトの配列です。 配列内のビットはパックされますが、各スキャン ラインには `LONG` 境界上で終わるように 0 が埋め込まれている必要があります。 高さが正の値のとき、ビットマップの原点は左下隅になります。 高さが負の値のとき、原点は左上隅になります。  
   
  A*パックされたビットマップ*ビットマップは、バイト配列が直後に、`BITMAPINFO`構造体。 パックされたビットマップは、1 つのポインターで参照されます。  
@@ -55,7 +55,7 @@ typedef struct tagBITMAPINFO {
   
 - [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)構造体  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** wingdi.h  
   
 ## <a name="see-also"></a>関連項目  

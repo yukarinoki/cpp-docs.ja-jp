@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba1596e1dd114dcd46610b824405740a783c21e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386120"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954794"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>CArchive オブジェクトを作成する 2 つの方法
 作成する方法を次の 2 つが、`CArchive`オブジェクト。  
@@ -48,7 +48,7 @@ ms.locfileid: "33386120"
   
 3.  作成、`CArchive`これが指すオブジェクト`CFile`オブジェクト。 作成する、`CArchive`オブジェクト、フレームワークは、"を"保存するモードを設定 (書き込み、シリアル化)、"load"ではなく (読み取り、逆シリアル化) します。  
   
-4.  呼び出し、`Serialize`関数で定義されている、 **CDocument**-派生クラスへの参照を渡す、`CArchive`オブジェクト。  
+4.  呼び出し、`Serialize`関数で定義されている、 `CDocument`-派生クラスへの参照を渡す、`CArchive`オブジェクト。  
   
  ドキュメントの`Serialize`関数にデータを書き込む、`CArchive`オブジェクト、すぐに説明したようです。 戻ったとき、`Serialize`関数の場合、フレームワークの破棄、`CArchive`オブジェクトし、`CFile`オブジェクト。  
   

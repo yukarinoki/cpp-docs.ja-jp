@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be9a6a9db842f1e80be62f48a9990cff36168e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 759f8e6f9349fdcac61f6aca81d311e3bbc39e1d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367257"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957046"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 構造体
 `CDaoIndexFieldInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているインデックス フィールド オブジェクトに関する情報が含まれています。  
@@ -38,20 +38,20 @@ struct CDaoIndexFieldInfo
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `m_strName`  
+ *m_strName*  
  インデックスのフィールド オブジェクトの一意名です。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
  *m_bDescending*  
  Index オブジェクトによって定義されているインデックスの順序を示します。 **TRUE**は降順の場合。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Index オブジェクトには、いくつかのフィールド、テーブル定義 (またはテーブルに基づくレコード セット) がでインデックスを作成するフィールドを示すことができます。 プライマリの上記への参照で情報を返す方法を示します、`m_pFieldInfos`のメンバー、 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)呼び出すことによって取得したオブジェクト、`GetIndexInfo`クラスのメンバー関数[どちら](../../mfc/reference/cdaotabledef-class.md#getindexinfo)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)です。  
   
  オブジェクトのインデックスとインデックス フィールド オブジェクトは、MFC クラスによって表されません。 DAO オブジェクト クラスの基になる MFC オブジェクトの代わりに、[どちら](../../mfc/reference/cdaotabledef-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)インデックス コレクションと呼ばれるインデックス オブジェクトのコレクションを格納します。 さらに、各インデックス オブジェクトには、フィールド オブジェクトのコレクションが含まれています。 これらのクラスは、インデックス情報の各アイテムにアクセスするメンバー関数を指定するか、すべて同時にアクセスすることができます、`CDaoIndexInfo`オブジェクトを呼び出して、`GetIndexInfo`親オブジェクトのメンバー関数。 `CDaoIndexInfo`オブジェクトを持つデータ メンバー、`m_pFieldInfos`の配列を指す`CDaoIndexFieldInfo`オブジェクト。  
   
  呼び出す、`GetIndexInfo`では、インデックスがコレクションが含まれる tabledef またはレコード セット オブジェクトのメンバー関数には、興味のあるインデックス オブジェクトが格納されています。 その後アクセス、`m_pFieldInfos`のメンバー、 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)オブジェクト。 長さ、`m_pFieldInfos`に配列が格納されている`m_nFields`です。 `CDaoIndexFieldInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoIndexFieldInfo`オブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ebb97d7cb5cbf2e2ed9ac7ae5287b2261990f2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a85e178f59eab88844b1990922870f52463f54a8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381112"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955623"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>典型的な Gopher クライアント アプリケーションの作成手順
 次の表は、典型的な gopher クライアント アプリケーションで必要な手順を示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "33381112"
 |Gopher サーバーに接続します。|使用して[代わり](../mfc/reference/cinternetsession-class.md#getgopherconnection)です。|返します、[関数](../mfc/reference/cgopherconnection-class.md)オブジェクト。|  
 |Gopher 内の最初のリソースを検索します。|使用して[CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile)です。|最初のファイルを検索します。 ファイルが見つからない場合は、FALSE を返します。|  
 |Gopher で次のリソースを検索します。|使用して[CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile)です。|次のファイルを検索します。 ファイルが見つからない場合は、FALSE を返します。|  
-|によって検出されたファイルを開く**FindFile**または`FindNextFile`の読み取りにします。|使用して gopher ロケーターを取得[なった](../mfc/reference/cgopherfilefind-class.md#getlocator)です。 使用して[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)です。|ロケーターに指定されたファイルを開きます。 `OpenFile` 返します、 [CGopherFile](../mfc/reference/cgopherfile-class.md)オブジェクト。|  
+|によって検出されたファイルを開く`FindFile`または`FindNextFile`の読み取りにします。|使用して gopher ロケーターを取得[なった](../mfc/reference/cgopherfilefind-class.md#getlocator)です。 使用して[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)です。|ロケーターに指定されたファイルを開きます。 `OpenFile` 返します、 [CGopherFile](../mfc/reference/cgopherfile-class.md)オブジェクト。|  
 |指定した gopher ロケーターを使用してファイルを開きます。|使用して、gopher ロケーターを作成[CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator)です。 使用して[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)です。|ロケーターに指定されたファイルを開きます。 `OpenFile` 返します、 [CGopherFile](../mfc/reference/cgopherfile-class.md)オブジェクト。|  
 |ファイルから読み取られました。|使用して[CGopherFile](../mfc/reference/cgopherfile-class.md)です。|指定した入力バッファーを使用して、バイト数を読み取ります。|  
 |例外を処理する|使用して、 [CInternetException](../mfc/reference/cinternetexception-class.md)クラスです。|すべての一般的なインターネット例外タイプを処理します。|  

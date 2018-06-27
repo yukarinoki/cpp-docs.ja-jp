@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385308"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955675"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 既存の ActiveX コントロール (以前の OLE コントロール) 変更しなくても、インターネットで使用できます。 ただし、これらのパフォーマンスを向上させるためにコントロールを変更する可能性があります。 Web ページ上のコントロールを使用するときは、追加の考慮事項があります。 .Ocx ファイルとすべてのサポート ファイルは、対象のコンピューターである必要がありますか、インターネット経由でダウンロードします。 これにより、コードのサイズとダウンロードにかかる時間の重要な注意します。 ダウンロードは、署名済み .cab ファイルにパッケージ化することができます。 安全なスクリプト、および初期化の安全性として、コントロールをマークすることができます。  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  `-s 6144`パラメーターには、コード署名用キャビネットに領域が確保されます。  
   
 ### <a name="the-version-tag"></a>バージョン タグ  
- ここで注意、 `#Version` CAB ファイルで指定された情報で指定されたコントロールに適用されます、`CLASSID`のパラメーター、`<OBJECT>`タグ。  
+ ここで注意、 `#Version` CAB ファイルで指定された情報で指定されたコントロールに適用されます、 *CLASSID*のパラメーター、`<OBJECT>`タグ。  
   
- バージョンによっては、指定した、コントロールのダウンロードを強制することができます。 完全な仕様については、`OBJECT`タグを含む、`CODEBASE`パラメーターでは、参照を W3C を参照してください。  
+ バージョンによっては、指定した、コントロールのダウンロードを強制することができます。 完全な仕様については、`OBJECT`タグを含む、*コードベース*パラメーターでは、参照を W3C を参照してください。  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> スクリプトと初期化の安全性をマークします。  
  Web ページで使用する ActiveX コントロールは、スクリプト作成と初期化実際には安全である場合の安全性としてマークする必要があります。 安全なコントロールはディスク IO を実行またはメモリやマシンのレジスタに直接アクセスされません。  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  OCX 96 ガイドラインについては、下にあるコントロールは常にバック グラウンドでパレットを実現する必要があります。  
   
- アンビエント palette プロパティを使用していない古いコンテナーは送信`WM_QUERYNEWPALETTE`と`WM_PALETTECHANGED`メッセージ。 オーバーライドする`OnQueryNewPalette`と`OnPaletteChanged`をこれらのメッセージを処理します。  
+ アンビエント palette プロパティを使用していない古いコンテナーでは、WM_QUERYNEWPALETTE とするとメッセージを送信します。 オーバーライドする`OnQueryNewPalette`と`OnPaletteChanged`をこれらのメッセージを処理します。  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer ブラウザーの安全性レベルとコントロールの動作  
  ブラウザーでは、安全性レベルの場合、ユーザーによって構成可能なオプションがあります。 Web ページには、ユーザーのコンピューターに危害を及ぼす可能性がある可能性がありますのアクティブ コンテンツを含めることができます、ために、ブラウザーは安全性レベルのオプションを選択するユーザーを許可します。 ブラウザーには、安全性レベルが実装する方法、に応じて、コントロールは、ダウンロードできません可能性があります。 または証明書またはユーザーが実行時にコントロールをダウンロードするかどうか選択を許可する警告メッセージが表示されます。 高、中、低の安全性レベルの下にある Internet Explorer の ActiveX コントロールの動作は、以下に記載されています。  

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29870af50c549f432e87b6cc39be50d41fa40240
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379984"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951218"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>ダイアログ ボックスの背景色の設定
-処理することにより、ダイアログ ボックスの背景色を設定することができます`WM_CTLCOLOR` ダイアログ ボックスのウィンドウのメッセージ。 指定されたダイアログ ボックスのみを設定する色が使用されます。  
+ダイアログ ボックスの背景色を設定するには、ダイアログ ボックス ウィンドウに WM_CTLCOLOR メッセージを処理します。 指定されたダイアログ ボックスのみを設定する色が使用されます。  
   
 ## <a name="see-also"></a>関連項目  
  [ダイアログ ボックスのライフ サイクル](../mfc/life-cycle-of-a-dialog-box.md)   

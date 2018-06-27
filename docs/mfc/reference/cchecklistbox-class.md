@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 998a2124d80a03946df1cfeeb4a0223ccbf55b24
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358200"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956568"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox クラス
 Windows のチェックリスト ボックスの機能を提供します。  
@@ -77,12 +77,12 @@ class CCheckListBox : public CListBox
 |[CCheckListBox::SetCheck](#setcheck)|項目のチェック ボックスの状態を設定します。|  
 |[CCheckListBox::SetCheckStyle](#setcheckstyle)|コントロールのチェック ボックスのスタイルを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  「チェックリスト ボックス」には、ファイル名などのアイテムの一覧が表示されます。 リスト内の各項目は、ユーザーがオンまたはオフを隣のチェック ボックスがします。  
   
  `CCheckListBox` オーナー描画コントロールに対してのみ、一覧に含まれるテキスト文字列を超えるためです。 簡単に言うと、チェックリスト ボックスにはテキスト文字列とチェック ボックスが含まれていますが、すべてのテキストにする必要はありません。 たとえば、一連の各項目の横にあるチェック ボックスが小さいビットマップのことができます。  
   
- 独自のチェックリスト ボックスを作成する必要がありますから独自のクラスを派生させる`CCheckListBox`です。 独自のクラスを派生させる記述するには、派生クラスのコンス トラクターを呼び出す**作成**です。  
+ 独自のチェックリスト ボックスを作成する必要がありますから独自のクラスを派生させる`CCheckListBox`です。 独自のクラスを派生させる記述するには、派生クラスのコンス トラクターを呼び出す`Create`です。  
   
  リスト ボックスからその親に送信される Windows の通知メッセージを処理する場合 (通常から派生したクラス[CDialog](../../mfc/reference/cdialog-class.md))、メッセージ マップ エントリとメッセージ ハンドラー メンバー関数を各メッセージの親クラスに追加します。  
   
@@ -96,7 +96,7 @@ class CCheckListBox : public CListBox
   
  **afx_msg** `void` `memberFxn` **();**  
   
- 特に関連する 1 つだけのメッセージ マップ エントリがある**CCheckListBox** (メッセージ マップのエントリも参照してください。 しかし、 [CListBox](../../mfc/reference/clistbox-class.md))。  
+ 特に関連する 1 つだけのメッセージ マップ エントリがある`CCheckListBox`(メッセージ マップのエントリも参照してください。 しかし、 [CListBox](../../mfc/reference/clistbox-class.md))。  
   
 - **ON_CLBN_CHKCHANGE**ユーザーが項目のチェック ボックスをオンの状態を変更します。  
   
@@ -115,7 +115,7 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cchecklistbox"></a>  サンプル  
@@ -125,8 +125,8 @@ class CCheckListBox : public CListBox
 CCheckListBox();
 ```  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CCheckListBox` 2 つのステップ内のオブジェクト。 最初から派生するクラスを定義`CCheckListBox`、まず**作成**、Windows のチェックリスト ボックスの初期化し、にアタッチ、`CCheckListBox`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CCheckListBox` 2 つのステップ内のオブジェクト。 最初から派生するクラスを定義`CCheckListBox`、まず`Create`、Windows のチェックリスト ボックスの初期化し、にアタッチする、`CCheckListBox`オブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
@@ -143,25 +143,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  チェックリスト ボックスのスタイルを指定します。 スタイルである必要があります**LBS_HASSTRINGS** 、 **LBS_OWNERDRAWFIXED** (リスト内のすべての項目は、同じ高さ) または**LBS_OWNERDRAWVARIABLE** (リスト内の項目ではさまざまな高さ)。 このスタイルは、その他と組み合わせることができます[リスト ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)を除く**LBS_USETABSTOPS**です。  
   
- `rect`  
+ *rect*  
  チェックリスト ボックスのサイズと位置を指定します。 いずれかになります、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。  
   
- `pParentWnd`  
+ *pParentWnd*  
  チェックリスト ボックスの親ウィンドウを指定します (通常、`CDialog`オブジェクト)。 なければなりません**NULL**です。  
   
- `nID`  
+ *nID*  
  チェックリスト ボックスのコントロール ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CCheckListBox` 2 つのステップ内のオブジェクト。 派生するクラスを最初に、定義**CcheckListBox**し**作成**、Windows のチェックリスト ボックスの初期化し、にアタッチする、`CCheckListBox`です。 参照してください[サンプル](#cchecklistbox)サンプルについてはします。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CCheckListBox` 2 つのステップ内のオブジェクト。 派生するクラスを最初に、定義`CcheckListBox`し`Create`、Windows のチェックリスト ボックスの初期化し、にアタッチする、`CCheckListBox`です。 参照してください[サンプル](#cchecklistbox)サンプルについてはします。  
   
- ときに**作成**を実行する Windows の送信、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[wm _ で始まるGETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)チェックリスト ボックス コントロールへのメッセージ。  
+ ときに`Create`を実行する Windows の送信、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)チェックリスト ボックス コントロールするメッセージです。  
   
  既定では、これらのメッセージが処理されます、 [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)メンバー関数`CWnd`基本クラスです。 既定のメッセージ処理を拡張するには、メッセージ マップを追加、派生クラスとメンバー関数が、前のメッセージ ハンドラーをオーバーライドします。 オーバーライド`OnCreate`など、新しいクラスに必要な初期化を実行します。  
   
@@ -189,17 +189,17 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Long ポインター、 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)のために必要な図面の種類に関する情報を格納する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **ItemAction**と**itemState**のメンバー、`DRAWITEMSTRUCT`構造体は、実行するのには、描画の動作を定義します。  
   
  既定では、この関数は、左側に既定のサイズのチェック ボックスに文字列ごとの一覧から成る既定 チェック ボックスの一覧を描画します。 チェック ボックスの一覧のサイズは、1 つで指定された[作成](#create)です。  
   
- チェックリスト ボックスされない文字列リスト、可変サイズの項目、または、左上にいないチェック ボックスなど、既定ではないオーナー描画チェックリスト ボックスの描画を実装するには、このメンバー関数をオーバーライドします。 アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります`lpDrawItemStruct`このメンバー関数の終了前にします。  
+ チェックリスト ボックスされない文字列リスト、可変サイズの項目、または、左上にいないチェック ボックスなど、既定ではないオーナー描画チェックリスト ボックスの描画を実装するには、このメンバー関数をオーバーライドします。 アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります*lpDrawItemStruct*このメンバー関数の終了前にします。  
   
- チェックリスト ボックス スタイルのチェックリスト ボックスの項目はすべて同じ高さではない場合、(で指定された**作成**) する必要があります**一定**、オーバーライドする必要がありますと、 [MeasureItem](#measureitem)関数。  
+ チェックリスト ボックス スタイルのチェックリスト ボックスの項目はすべて同じ高さではない場合、(で指定された`Create`) する必要があります**一定**、オーバーライドする必要がありますと、 [MeasureItem](#measureitem)関数。  
   
 ##  <a name="enable"></a>  CCheckListBox::Enable  
  有効にするにまたはチェックリスト ボックスの項目を無効にするには、この関数を呼び出します。  
@@ -211,10 +211,10 @@ void Enable(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  有効にするチェックリスト ボックスの項目のインデックス。  
   
- `bEnabled`  
+ *bEnabled*  
  項目が有効になっているかどうかを指定します。  
   
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
@@ -225,7 +225,7 @@ int GetCheck(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックスに含まれているチェック ボックスの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
@@ -247,7 +247,7 @@ UINT GetCheckStyle();
 ### <a name="return-value"></a>戻り値  
  コントロールのチェック ボックスのスタイルです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  可能なスタイルのについては、次を参照してください。[有効なスタイル](#setcheckstyle)です。  
   
 ##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
@@ -258,7 +258,7 @@ BOOL IsEnabled(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  項目のインデックス。  
   
 ### <a name="return-value"></a>戻り値  
@@ -272,10 +272,10 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Long ポインター、 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、このメンバー関数では何も行いません。 このメンバー関数をオーバーライドし、入力、`MEASUREITEMSTRUCT`チェックリスト ボックスの項目のサイズの Windows に通知する構造体。 チェックリスト ボックスがで作成された場合、 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)リスト ボックス内の各項目のスタイル、フレームワークからこのメンバー関数。 それ以外の場合、このメンバーは、1 回だけ呼び出されます。  
   
 ##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
@@ -291,13 +291,13 @@ virtual CRect OnGetCheckPosition(
  *rectItem*  
  位置とリスト アイテムのサイズ。  
   
- `rectCheckBox`  
+ *rectCheckBox*  
  既定の位置とサイズ、項目のチェック ボックスをオンします。  
   
 ### <a name="return-value"></a>戻り値  
  位置と項目のチェック ボックスのサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装は、既定の位置とサイズのチェック ボックスにのみを返します ( `rectCheckBox`)。 既定は、チェック ボックスは、アイテムの左上隅に配置し、標準のチェック ボックスのサイズです。 場合、右側のチェック ボックスまたはチェック ボックスを拡大または縮小した位置である可能性があります。 このような場合は、オーバーライド`OnGetCheckPosition` チェック ボックスの位置とサイズ内に項目を変更します。  
   
 ##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
@@ -310,14 +310,14 @@ void SetCheck(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックスに含まれているチェック ボックスの 0 から始まるインデックス。  
   
- `nCheck`  
+ *nCheck*  
  指定されたチェック ボックスのボタンの状態。 使用可能な値は、「解説」を参照してください。  
   
-### <a name="remarks"></a>コメント  
- 次の表に、可能な値、`nCheck`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ 次の表に、可能な値、 *nCheck*パラメーター。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -333,10 +333,10 @@ void SetCheckStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nStyle`  
+ *nStyle*  
  チェックリスト ボックスのチェック ボックスのスタイルを決定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  有効なスタイルは次のとおりです。  
   
 - **BS_CHECKBOX**  

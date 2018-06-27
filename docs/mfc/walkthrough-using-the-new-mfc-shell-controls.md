@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f349c955724b66ccc8cb1b19fc826ca0b8354258
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385097"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951950"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>チュートリアル : 新しい MFC シェル コントロールの使用
 このチュートリアルでは、ファイル エクスプローラーのような外観のアプリケーションを作成します。 ここでは、2 つのペインのあるウィンドウを作成します。 左側のウィンドウには、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)を階層ビューで、デスクトップを表示するオブジェクト。 右側のペインには、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)左側のペインで選択されているフォルダー内のファイルを表示します。  
@@ -31,7 +31,7 @@ ms.locfileid: "33385097"
   
 1.  使用して、 **MFC アプリケーション ウィザード**新しい MFC アプリケーションを作成します。 ウィザードを実行する、**ファイル**メニュー選択**新規**、し、**プロジェクト**です。 **新しいプロジェクト** ダイアログ ボックスが表示されます。  
   
-2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual C**内のノード、**プロジェクトの種類**ペイン**MFC**です。 次に、**テンプレート**ペインで、 **MFC アプリケーション**です。 プロジェクトの名前を入力します。 `MFCShellControls`  をクリック**OK**です。 **MFC アプリケーション ウィザード**が表示されます。  
+2.  **新しいプロジェクト** ダイアログ ボックスで、展開、 **Visual C**内のノード、**プロジェクトの種類**ペイン**MFC**です。 次に、**テンプレート**ペインで、 **MFC アプリケーション**です。 プロジェクトの名前を入力します。 *MFCShellControls*  をクリック**OK**です。 **MFC アプリケーション ウィザード**が表示されます。  
   
 3.  **MFC アプリケーション ウィザード**ダイアログ ボックスで、をクリックして**次**です。 **アプリケーションの種類**ウィンドウが表示されます。  
   
@@ -65,18 +65,21 @@ ms.locfileid: "33385097"
   
      次に、`CMFCShellListCtrl` 型のメンバー変数を追加します。 最初に、ヘッダー ファイルで次のコメントを探します。  
   
- '' */メッセージ割り当て関数を生成/  
+ ``` 
+    // Generated message map functions  
  ```  
   
-     Immediately above that comment add this code:  
+     そのコメントの直前に、次のコードを追加します。  
   
  ```  
-    プライベート: CMFCShellListCtrl m_wndList です。  
+    private: 
+    CMFCShellListCtrl m_wndList;  
  ```  
   
-2.  The **MFC Application Wizard** already created a `CMFCShellTreeCtrl` object in the `CMainFrame` class, but it is a protected member. We will access this object later. Therefore, create an accessor for it now. Open the MainFrm.h header file by double-clicking it in the **Solution Explorer**. Locate the following comment:  
+2.  **MFC アプリケーション ウィザード**既に作成されて、`CMFCShellTreeCtrl`内のオブジェクト、`CMainFrame`クラスが保護されたメンバー。 後で、このオブジェクトにアクセスします。 したがって、ここでアクセサーを作成します。 ダブルクリックしてで MainFrm.h ヘッダー ファイルを開き、**ソリューション エクスプ ローラー**です。 次のコメントを探します。  
   
- ``` *// Attributes  
+ ``` 
+    // Attributes  
  ```  
   
      この直後に、次のメソッド宣言を追加します。  
@@ -84,66 +87,50 @@ ms.locfileid: "33385097"
  ```  
     public: 
     CMFCShellTreeCtrl& GetShellTreeCtrl();
-
  ```  
   
      次をダブルクリックしてで MainFrm.cpp ソース ファイルを開く、**ソリューション エクスプ ローラー**です。 このファイルの末尾に、次のメソッド定義を追加します。  
   
  ```  
     CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()  
- {  
-    return m_wndTree;  
- }  
+    {  
+        return m_wndTree;  
+    }  
  ```  
   
-3.  更新、`CMFCShellControlsView`を処理するクラス、 **WM_CREATE** windows メッセージ。 MFCShellControlsView.h ヘッダー ファイルを開き、次のコード行をクリックします。  
+3.  更新、 `CMFCShellControlsView` WM_CREATE windows メッセージを処理するクラス。 MFCShellControlsView.h ヘッダー ファイルを開き、次のコード行をクリックします。  
   
  ```  
     class CMFCShellControlsView : public CView  
  ```  
   
-     次に、**プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコン。 見つかるまで下へスクロール、 **WM_CREATE**メッセージ。 ドロップダウン リストに**WM_CREATE** **\<追加 > OnCreate**です。 これにより、メッセージ ハンドラーが作成され、MFC メッセージ マップが自動的に更新されます。  
+     次に、**プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコン。 WM_CREATE メッセージが見つかるまでスクロールします。 ドロップダウン リストから WM_CREATE の横にある、次のように選択します。 *\<追加 > OnCreate*です。 これにより、メッセージ ハンドラーが作成され、MFC メッセージ マップが自動的に更新されます。  
   
      `OnCreate` メソッドで、独自の `CMFCShellListCtrl` オブジェクトを作成します。 MFCShellControlsView.cpp ソース ファイルで `OnCreate` メソッド定義を探し、その実装を次のコードに置き換えます。  
   
  ```  
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)  
- {  
-    if (CView::OnCreate(lpCreateStruct) == -1)  
-    return -1;  
- 
-    CRect rectDummy (0,
-    0,
-    0,
-    0);
-
-    m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
-    rectDummy,
-    this,
-    1);
-
- 
-    return 0;  
- }  
+    {  
+        if (CView::OnCreate(lpCreateStruct) == -1)  
+            return -1;  
+     
+        CRect rectDummy (0, 0, 0, 0);
+    
+        m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT, rectDummy, this, 1);
+    
+        return 0;  
+    }  
  ```  
   
-4.  前の手順を繰り返しますが、 **WM_SIZE**メッセージ。 これにより、ユーザーがアプリケーション ウィンドウのサイズを変更するたびにアプリケーションのビューが再描画されるようになります。 `OnSize` メソッドの定義を次のコードに置き換えます。  
+4.  WM_SIZE メッセージは、前の手順を繰り返します。 これにより、ユーザーがアプリケーション ウィンドウのサイズを変更するたびにアプリケーションのビューが再描画されるようになります。 `OnSize` メソッドの定義を次のコードに置き換えます。  
   
  ```  
-    void CMFCShellControlsView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
-
-    m_wndList.SetWindowPos(NULL, -1, -1,
-    cx,
-    cy,  
-    SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
-
- }  
+    void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)  
+    {  
+        CView::OnSize(nType, cx, cy);
+    
+        m_wndList.SetWindowPos(NULL, -1, -1, cx, cy, SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
+    }  
  ```  
   
 5.  最後の手順が接続するには、`CMFCShellTreeCtrl`と`CMFCShellListCtrl`オブジェクトを使用して、 [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist)メソッドです。 このメソッドを呼び出すと、`CMFCShellListCtrl` で選択された項目の内容が自動的に `CMFCShellTreeCtrl` に表示されます。 この作業を行うは、`OnActivateView`からは、オーバーライドするメソッド[CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview)です。  
@@ -152,30 +139,21 @@ ms.locfileid: "33385097"
   
  ```  
     protected: 
-    virtual void OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView);
-
+    virtual void OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView);
  ```  
   
      次に、このメソッドの定義を MFCShellControlsView.cpp ソース ファイルに追加します。  
   
  ```  
-    void CMFCShellControlsView::OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView)   
- {  
-    if (bActivate&& AfxGetMainWnd() != NULL)  
- {  
- ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
-
- }  
- 
-    CView::OnActivateView(bActivate,
-    pActivateView,
-    pDeactiveView);
-
- }  
+    void CMFCShellControlsView::OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView)   
+    {  
+        if (bActivate&& AfxGetMainWnd() != NULL)  
+        {  
+            ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
+        }  
+     
+        CView::OnActivateView(bActivate, pActivateView, pDeactiveView);
+    }  
  ```  
   
      `CMainFrame` クラスのメソッドを呼び出すため、MFCShellControlsView.cpp ソース ファイルの先頭部分に次の `#include` ディレクティブを追加する必要があります。  
@@ -198,4 +176,3 @@ ms.locfileid: "33385097"
   
 ## <a name="see-also"></a>関連項目  
  [チュートリアル](../mfc/walkthroughs-mfc.md)
-

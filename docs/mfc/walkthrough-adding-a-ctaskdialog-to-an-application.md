@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384912"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951625"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>チュートリアル: アプリケーションへの CTaskDialog の追加
 このチュートリアルでは、 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) の概要と、そのクラスをアプリケーションに追加する方法について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "33384912"
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Windows メッセージ ボックスを CTaskDialog に置き換えるには  
   
-1.  既定の設定で、新しい MFC アプリケーション プロジェクトを作成します。 このプロジェクトに `MyProject`という名前を付けます。  
+1.  既定の設定で、新しい MFC アプリケーション プロジェクトを作成します。 それを呼び出す*MyProject*です。  
   
 2.  **ソリューション エクスプローラー** を使用して、MyProject.cpp ファイルを開きます。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "33384912"
  }  
  ```  
   
-6.  手順 5. の `if` ステートメントの後にあるかっこ内に、次のコードを挿入します。 このコードによって、 `CTaskDialog`が作成されます。  
+6.  後に角かっこの間は、次のコードを挿入、**場合**手順 5. のステートメント。 このコードによって、 `CTaskDialog`が作成されます。  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ ms.locfileid: "33384912"
   
 2.  **[リソース ビュー]** を展開して、 **[ストリング テーブル]** フォルダーを選択します。 そのフォルダーを展開し、 **[ストリング テーブル]** エントリをダブルクリックします。  
   
-3.  ストリング テーブルの一番下までスクロールし、新しいエントリを追加します。 ID を `TEMP_LINE1`に変更します。 キャプションを「 **Command Line 1**」に設定します。  
+3.  ストリング テーブルの一番下までスクロールし、新しいエントリを追加します。 ID を変更する*TEMP_LINE1*です。 キャプションを設定*Command Line 1*です。  
   
-4.  新しいエントリをもう 1 つ追加します。 ID を `TEMP_LINE2`に変更します。 キャプションを「 **Command Line 2**」に設定します。  
+4.  新しいエントリをもう 1 つ追加します。 ID を変更する*TEMP_LINE2*です。 キャプションを設定*Command Line 2*です。  
   
 5.  MyProject.cpp に戻ります。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "33384912"
   
 2.  `if (CTaskDialog::IsSupported())` ステートメントの右角かっこにカーソルを移動します。  
   
-3.  `if` ステートメントの右角かっこの直前 ( `else` ブロックの前) に、次のコードを挿入します。  
+3.  終わりかっこの直前に次のコードを挿入、**場合**ステートメント (前に、 **else**ブロック)。  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

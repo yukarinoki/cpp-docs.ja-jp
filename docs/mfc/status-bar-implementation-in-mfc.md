@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381089"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950449"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC でのステータス バーの実装
 A [CStatusBar](../mfc/reference/cstatusbar-class.md)オブジェクトは、テキスト出力ペインの行を持つコントロール バーです。 出力ウィンドウは、状態インジケーター、およびメッセージ行としてよく使用されます。 例としては、選択されたメニュー コマンドを簡単に説明するメニュー ヘルプ メッセージ行や SCROLL LOCK、NUM LOCK、およびその他のキーの状態を示すインジケーターです。  
   
- クラスを使用して MFC バージョン 4.0 の時点でステータス バーが実装されます[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)、ステータス バー コモン コントロールをカプセル化します。 旧バージョンと互換性のため、MFC では、古いステータス バーの実装クラスで**COldStatusBar**です。 MFC の以前のバージョンのドキュメントについて説明して**COldStatusBar** `CStatusBar`です。  
+ クラスを使用して MFC バージョン 4.0 の時点でステータス バーが実装されます[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)、ステータス バー コモン コントロールをカプセル化します。 旧バージョンと互換性のため、MFC では、古いステータス バーの実装クラスで`COldStatusBar`です。 MFC の以前のバージョンのドキュメントについて説明して`COldStatusBar``CStatusBar`です。  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)、メンバー関数は、新しい MFC 4.0 を取得できるようにのステータス バーのカスタマイズと追加の機能の Windows コモン コントロールのサポートを利用します。 `CStatusBar` メンバー関数は、Windows のコモン コントロール以外の機能のほとんどを与えるただし、呼び出す`GetStatusBarCtrl`、ステータス バーの特性の詳細も、ステータス バーを与えることができます。 呼び出すと`GetStatusBarCtrl`への参照が返されます、`CStatusBarCtrl`オブジェクト。 その参照を使用すると、ステータス バー コントロールを操作します。  
   

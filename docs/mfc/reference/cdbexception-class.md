@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368336"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952249"
 ---
 # <a name="cdbexception-class"></a>CDBException クラス
 データベース クラスから発生する例外状態を表現します。  
@@ -48,7 +48,7 @@ class CDBException : public CException
 |[CDBException::m_strError](#m_strerror)|英数字の用語で、エラーを説明する文字列が含まれています。|  
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|ODBC が返すエラー コードの観点からエラーを説明する文字列が含まれています。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラスには、例外の原因を確認または例外を説明するテキスト メッセージを表示するに使用できる 2 つのパブリック データ メンバーが含まれています。 `CDBException` オブジェクトが構築し、データベース クラスのメンバー関数によってスローされます。  
   
 > [!NOTE]
@@ -67,13 +67,13 @@ class CDBException : public CException
   
  `CDBException`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  型の ODBC エラー コードを含む**RETCODE** ODBC アプリケーション プログラミング インターフェイス (API) 関数によって返されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この型には、ODBC で定義されている SQL プレフィックスが付いたコードとデータベース クラスで定義されている AFX_SQL から始まるコードが含まれています。 `CDBException`、このメンバーには、次の値のいずれかが含まれます。  
   
 - **AFX_SQL_ERROR_API_CONFORMANCE**用のドライバー、`CDatabase::OpenEx`または`CDatabase::Open`呼び出しが必要な ODBC API への準拠レベル 1 に準拠していない ( **SQL_OAC_LEVEL1**)。  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** ODBC ドライバーがロックをサポートしていないために、更新用のレコードをロックする要求を処理できませんでした。  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**を呼び出す`CRecordset::Update`または**削除**ない一意のキーを持つテーブルの複数のレコードを変更します。  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**と呼ばれる`CRecordset::Update`または`Delete`ない一意のキーを持つテーブルの複数のレコードを変更します。  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD**を編集または削除されたレコードを削除しようとしました。 削除した後に、新しい現在のレコードをスクロールする必要があります。  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES**要求、ODBC ドライバーがサポートされていないために、ダイナセットを処理できませんでしたの位置指定更新します。  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED**と呼ばれる`CRecordset::Update`または**削除**レコードが見つからなくなった、操作が開始されたときに、します。  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED**と呼ばれる`CRecordset::Update`または`Delete`レコードが見つからなくなった、操作が開始されたときに、します。  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED** ODBC を読み込もうとしました。DLL が失敗しました。Windows では、見つかりませんでした。 または、この DLL を読み込むことができませんでした。 このエラーは致命的です。  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY**読み取り専用レコード セットを更新しようとしています。 または、データ ソースは読み取り専用です。 レコード セットと更新操作ができない、または`CDatabase`に関連付けられたオブジェクト。  
   
-- **SQL_ERROR**関数が失敗しました。 ODBC 関数から返されたエラー メッセージ**SQLError**に格納されて、 **m_strError**データ メンバーです。  
+- **SQL_ERROR**関数が失敗しました。 ODBC 関数から返されたエラー メッセージ`SQLError`に格納されて、 **m_strError**データ メンバーです。  
   
 - **SQL_INVALID_HANDLE**関数に無効な環境ハンドル、接続ハンドル、またはステートメント ハンドルのため失敗しました。 これは、プログラミング エラーを示します。 ODBC 関数から追加情報がない**SQLError**です。  
   
@@ -123,20 +123,20 @@ class CDBException : public CException
 ##  <a name="m_strerror"></a>  CDBException::m_strError  
  例外の原因となったエラーを説明する文字列が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  文字列は、英数字の用語でエラーを説明します。 詳細な情報と例についてを参照してください。 **m_strStateNativeOrigin**です。  
   
 ##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  例外の原因となったエラーを説明する文字列が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  文字列は、フォーム"の状態: %s、ネイティブ: %ld 元: %s"の順に、形式のコードは記述する値を置き換えなります。  
   
--   **SQLSTATE**で返される、5 文字のエラー コードを含む null で終わる文字列、 *szSqlState* ODBC 関数のパラメーター **SQLError**です。 **SQLSTATE**値は、「付録 A [ODBC エラー コード](https://msdn.microsoft.com/library/ms714687.aspx)で、 *ODBC プログラマ リファレンス*です。 例:"S0022"です。  
+-   **SQLSTATE**で返される、5 文字のエラー コードを含む null で終わる文字列、 *szSqlState* ODBC 関数のパラメーター`SQLError`です。 **SQLSTATE**値は、「付録 A [ODBC エラー コード](https://msdn.microsoft.com/library/ms714687.aspx)で、 *ODBC プログラマ リファレンス*です。 例:"S0022"です。  
   
--   返されたネイティブ エラー コード、データ ソースに固有の*pfNativeError*のパラメーター、 **SQLError**関数。 例: 207 です。  
+-   返されたネイティブ エラー コード、データ ソースに固有の*pfNativeError*のパラメーター、`SQLError`関数。 例: 207 です。  
   
--   返されるエラー メッセージ テキスト、*後*のパラメーター、 **SQLError**関数。 このメッセージは、いくつかのかっこで囲まれた名前で構成されます。 エラーは、ユーザーにそのソースから渡されたは、各 ODBC コンポーネント (データ ソース、ドライバー、ドライバー マネージャーの) は、独自の名前を追加します。 この情報は、エラーの原因を特定するのに役立ちます。 例: [Microsoft] [ODBC SQL Server Driver] [SQL Server]  
+-   返されるエラー メッセージ テキスト、*後*のパラメーター、`SQLError`関数。 このメッセージは、いくつかのかっこで囲まれた名前で構成されます。 エラーは、ユーザーにそのソースから渡されたは、各 ODBC コンポーネント (データ ソース、ドライバー、ドライバー マネージャーの) は、独自の名前を追加します。 この情報は、エラーの原因を特定するのに役立ちます。 例: [Microsoft] [ODBC SQL Server Driver] [SQL Server]  
   
  フレームワークは、エラー文字列を解釈し、そのコンポーネントに**m_strStateNativeOrigin**以外の場合は**m_strStateNativeOrigin**情報が含まれますで区切って複数のエラー、エラー改行文字。 フレームワークは、英数字のエラー テキストを**m_strError**です。  
   

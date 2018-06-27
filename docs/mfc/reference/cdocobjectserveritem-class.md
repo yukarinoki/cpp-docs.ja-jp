@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367049"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956633"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem クラス
 OLE サーバー動詞を DocObject サーバー用に実装します。  
@@ -61,7 +61,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnHide](#onhide)|フレームワーク DocObject 項目を非表示しようとする場合は、例外をスローします。|  
 |[CDocObjectServerItem::OnShow](#onshow)|DocObject アイテムの埋め込みを行うために、フレームワークによって呼び出されますアクティブです。 項目がない場合、DocObject、呼び出します[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CDocObjectServerItem` オーバーライド可能なメンバー関数を定義します。 [OnHide](#onhide)、 [OnOpen](http://msdn.microsoft.com/en-us/7a9b1363-6ad8-4732-9959-4e35c07644fd)、および[OnShow](#onshow)です。  
   
  使用する`CDocObjectServerItem`、確実、 [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)内の上書き、 `COleServerDoc`-派生クラスが新しいを返します`CDocObjectServerItem`オブジェクト。 アイテムでの機能を変更する必要がある場合は、独自の新しいインスタンスを作成することができます`CDocObjectServerItem`-クラスを派生します。  
@@ -79,7 +79,7 @@ class CDocObjectServerItem : public COleServerItem
   
  `CDocObjectServerItem`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdocob.h  
   
 ##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pServerDoc`  
+ *pServerDoc*  
  新しい項目の DocObject を格納するドキュメントへのポインター。  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  リンクがリリースされたときに、オブジェクトを削除するかどうかを示します。 引数に設定**FALSE**場合、`CDocObjectServerItem`オブジェクトは、ドキュメントのデータの重要な一部です。 設定**TRUE**場合は、オブジェクトは、二次的な構造を削除するには、フレームワークをドキュメントのデータの範囲を識別するために使用します。  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  
@@ -106,7 +106,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="return-value"></a>戻り値  
  項目を含むドキュメントへのポインター**NULL**場合は、項目は、ドキュメントの一部ではありません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これによりへの引数として渡されたサーバー ドキュメントへのアクセス、 [CDocObjectServerItem](#cdocobjectserveritem)コンス トラクターです。  
   
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide  
@@ -116,7 +116,7 @@ COleServerDoc* GetDocument() const;
 virtual void OnHide();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装は、項目が DocObject 場合に例外をスローします。 ビュー全体を受け取るためには、アクティブな DocObject 項目を非表示にすることはできません。 非表示にする DocObject アイテムを非アクティブ化する必要があります。 項目が DocObject でない場合は、既定の実装を呼び出す[COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide)です。  
   
 ##  <a name="onshow"></a>  CDocObjectServerItem::OnShow  
@@ -126,7 +126,7 @@ virtual void OnHide();
 virtual void OnShow();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  項目が DocObject でない場合は、既定の実装を呼び出す[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen)です。 特別な DocObject アイテムを開くときの処理を実行する場合は、この関数をオーバーライドします。  
   
 ## <a name="see-also"></a>関連項目  

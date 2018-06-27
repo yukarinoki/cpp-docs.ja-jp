@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80b63c6bd44b6d3606b7807913f1e3ae1b4e33f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f53d96c6b4c30b79d9724421debd7ccc989b64f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372331"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955705"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 日時指定コントロールの機能がカプセル化されています。  
@@ -95,7 +95,7 @@ class CDateTimeCtrl : public CWnd
 |[CDateTimeCtrl::SetRange](#setrange)|日付と時刻の選択コントロールの最小値と最大の許可されているシステム時刻を設定します。|  
 |[CDateTimeCtrl::SetTime](#settime)|日付と時刻の選択コントロールの時間を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  日付と時刻の選択コントロール (DTP コントロール) では、ユーザーに日付と時刻の情報を交換する単純なインターフェイスを提供します。 このインターフェイスには、コントロールに格納されている日付と時刻の情報の部分を表示するの各フィールドが含まれています。 ユーザーは、特定のフィールドに文字列の内容を変更することで、コントロールに格納されている情報を変更できます。 ユーザーは、フィールドをマウスまたはキーボードを使用して移動できます。  
   
  作成するときに、オブジェクトにさまざまなスタイルを適用することで、日付と時刻の選択コントロールをカスタマイズできます。 参照してください[日付と時刻の選択コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb761728)日付と時刻の選択コントロールに固有のスタイルの詳細については、Windows SDK でします。 形式のスタイルを使用して DTP コントロールの表示形式を設定することができます。 これらのスタイルの形式は 「形式のスタイル」Windows SDK のトピックに記載されて[日付と時刻の選択コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb761728)です。  
@@ -111,7 +111,7 @@ class CDateTimeCtrl : public CWnd
   
  `CDateTimeCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdtctl.h  
   
 ##  <a name="cdatetimectrl"></a>  CDateTimeCtrl::CDateTimeCtrl  
@@ -128,11 +128,11 @@ CDateTimeCtrl();
 void CloseMonthCal() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
- 次のコード例は、変数を定義`m_dateTimeCtrl`、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
+ 次のコード例は、変数を定義*m_dateTimeCtrl*、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -153,22 +153,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  日時コントロールのスタイルの組み合わせを指定します。 参照してください[日付と時刻の選択コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb761728)日付と時刻のピッカー スタイルの詳細については Windows SDK に含まれています。  
   
- `rect`  
+ *rect*  
  参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)日付と時刻の選択コントロールのサイズと位置である構造体。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、日付と時刻の選択コントロールの親ウィンドウです。 なければなりません**NULL**です。  
   
- `nID`  
+ *nID*  
  日付と時刻の選択コントロールのコントロール ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  作成が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##### <a name="to-create-a-date-and-time-picker-control"></a>日付と時刻の選択コントロールを作成するには  
   
@@ -192,16 +192,16 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[出力] `pDateTimePickerInfo`|ポインター、 [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729)を現在の日付と時刻の選択コントロールの説明を受け取る構造体。<br /><br /> 呼び出し元がこの構造体を割り当てます。 ただし、このメソッドは、初期化、`cbSize`構造体のメンバーです。|  
+|[out]*pDateTimePickerInfo*|ポインター、 [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729)を現在の日付と時刻の選択コントロールの説明を受け取る構造体。<br /><br /> 呼び出し元がこの構造体を割り当てます。 ただし、このメソッドは、初期化、 *cbSize*構造体のメンバーです。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
- 次のコード例は、変数を定義`m_dateTimeCtrl`、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
+ 次のコード例は、変数を定義*m_dateTimeCtrl*、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -218,13 +218,13 @@ COLORREF GetMonthCalColor(int iColor) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iColor`  
- `int`を取得するか月カレンダーの色領域を指定する値。 値の一覧は、次を参照してください。、`iColor`パラメーター [SetMonthCalColor](#setmonthcalcolor)です。  
+ *iColor*  
+ **Int**を取得するか月カレンダーの色領域を指定する値。 値の一覧は、次を参照してください。、 *iColor*パラメーター [SetMonthCalColor](#setmonthcalcolor)です。  
   
 ### <a name="return-value"></a>戻り値  
  A **COLORREF**正常終了した場合は、月間予定表コントロールの指定した部分の色の設定を表す値です。 関数は、それ以外の場合、-1 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[DTM_GETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761759)Windows SDK で説明されている。  
   
 ### <a name="example"></a>例  
@@ -240,7 +240,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)オブジェクト、または**NULL**失敗した場合、またはウィンドウが表示されない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  日付と時刻のピッカー コントロールは、ユーザーがドロップダウン矢印をクリックしたときに、月間予定表の子コントロールを作成します。 ときに、`CMonthCalCtrl`オブジェクトが不要、破棄すると、アプリケーションに依存しないこと、日時指定コントロールの子の月間予定表イベントを表すオブジェクトを格納するようにします。  
   
 ### <a name="example"></a>例  
@@ -256,7 +256,7 @@ CFont* GetMonthCalFont() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CFont](../../mfc/reference/cfont-class.md)オブジェクト、または**NULL**失敗した場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CFont`戻り値によって指されるオブジェクトは一時オブジェクトであり、[次へ] のアイドル状態の処理時に破棄します。  
   
 ##  <a name="getmonthcalstyle"></a>  CDateTimeCtrl::GetMonthCalStyle  
@@ -269,7 +269,7 @@ DWORD GetMonthCalStyle() const;
 ### <a name="return-value"></a>戻り値  
  日付と時刻のピッカー コントロール スタイルのビットごとの組み合わせであるドロップ ダウン月間予定表コントロールの (または) のスタイルです。 詳細については、次を参照してください。[月間予定表コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760919)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getrange"></a>  CDateTimeCtrl::GetRange  
@@ -286,10 +286,10 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pMinRange`  
+ *pMinRange*  
  ポインター、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトで許可されている最も早い時刻を含む、`CDateTimeCtrl`オブジェクト。  
   
- `pMaxRange`  
+ *整数*  
  ポインター、`COleDateTime`オブジェクトまたは`CTime`オブジェクトで許可されている最新の時刻を含む、`CDateTimeCtrl`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
@@ -303,7 +303,7 @@ DWORD GetRange(
   
  最初のパラメーターは有効です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[DTM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761767)Windows SDK で説明されている。 MFC の実装では、いずれかを指定できます`COleDateTime`または`CTime`の使用法。  
   
 ### <a name="example"></a>例  
@@ -326,12 +326,12 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  ポインター、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)システム時刻の情報を受け取る。 ことはできません**NULL**です。  
   
 ### <a name="return-value"></a>戻り値  
- 時間が正常に書き込む場合は 0 以外の最初のバージョンで、`COleDateTime`オブジェクト以外の場合は 0 です。 2 番目と 3 番目のバージョンで、`DWORD`値と等しい、 **dwFlag**セットのメンバー、[戻り](http://msdn.microsoft.com/library/windows/desktop/bb761730)構造体。 参照してください、**解説**詳細については、後述の「します。  
+ 時間が正常に書き込む場合は 0 以外の最初のバージョンで、`COleDateTime`オブジェクト以外の場合は 0 です。 2 番目と 3 番目のバージョンで、`DWORD`値と等しい、 *dwFlag*セットのメンバー、[戻り](http://msdn.microsoft.com/library/windows/desktop/bb761730)構造体。 参照してください、**解説**詳細については、後述の「します。  
   
-### <a name="remarks"></a>コメント  
- このメンバー関数は、Win32 メッセージの動作を実装して[DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769)Windows SDK で説明されている。 MFC 実装で**GetTime**、使用することができます`COleDateTime`または`CTime`を使用するか、クラス、`SYSTEMTIME`時の情報を格納する、構造体。  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、Win32 メッセージの動作を実装して[DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769)Windows SDK で説明されている。 MFC 実装で`GetTime`、使用することができます`COleDateTime`または`CTime`を使用するか、クラス、`SYSTEMTIME`時の情報を格納する、構造体。  
   
- 戻り値`DWORD`で、2 番目と 3 番目のバージョン以降、ことを示します、日付と時刻の選択コントロールが「日がない」状態に設定されているかどうかで指定されている、[戻り](http://msdn.microsoft.com/library/windows/desktop/bb761730)構造体メンバー`dwFlags`です。 Equals を値が返されます場合**GDT_NONE**、コントロールは、「日付なし」状態に設定されているしを使用して、 **DTS_SHOWNONE**スタイル。 Equals を値が返されます場合**戻り**、システム時刻が正常に移行先の場所に格納します。  
+ 戻り値`DWORD`で、2 番目と 3 番目のバージョン以降、ことを示します、日付と時刻の選択コントロールが「日がない」状態に設定されているかどうかで指定されている、[戻り](http://msdn.microsoft.com/library/windows/desktop/bb761730)構造体メンバー *dwFlags*です。 Equals を値が返されます場合**GDT_NONE**、コントロールは、「日付なし」状態に設定されているしを使用して、 **DTS_SHOWNONE**スタイル。 Equals を値が返されます場合**戻り**、システム時刻が正常に移行先の場所に格納します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
@@ -347,16 +347,16 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[出力] `psize`|ポインター、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)コントロールの適切なサイズを格納する構造体。|  
+|[out]*psize*|ポインター、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)コントロールの適切なサイズを格納する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は常に `true` です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
- 次のコード例は、変数を定義`m_dateTimeCtrl`、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
+ 次のコード例は、変数を定義*m_dateTimeCtrl*、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -382,7 +382,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 > [!NOTE]
 >  ユーザー入力は、この呼び出しの成功または失敗を判断できません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[DTM_SETFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb761771)Windows SDK で説明されている。  
   
 ### <a name="example"></a>例  
@@ -398,8 +398,8 @@ COLORREF SetMonthCalColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iColor`  
- `int` 月間予定表コントロールの設定の領域を指定する値。 この値は、次のいずれかを指定できます。  
+ *iColor*  
+ **int**を設定する月間予定表コントロールの領域を指定する値。 この値は、次のいずれかを指定できます。  
   
 |[値]|説明|  
 |-----------|-------------|  
@@ -410,13 +410,13 @@ COLORREF SetMonthCalColor(
 |MCSC_TITLETEXT|カレンダーの表題内のテキストの表示に使用する色を設定します。|  
 |MCSC_TRAILINGTEXT|ヘッダーと末尾の日付のテキスト表示に使用する色を設定します。 ヘッダーと後続の日現在の暦に表示される前と次の月からの日数がします。|  
   
- `ref`  
+ *ref*  
  A **COLORREF**月間予定表の指定した領域に設定する色を表す値です。  
   
 ### <a name="return-value"></a>戻り値  
  A **COLORREF**正常終了した場合は、月間予定表コントロールの指定した部分の前のカラー設定を表す値です。 それ以外の場合、メッセージは、-1 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[DTM_SETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761773)Windows SDK で説明されている。  
   
 ### <a name="example"></a>例  
@@ -432,20 +432,20 @@ void SetMonthCalFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hFont`  
+ *hFont*  
  設定されるフォントを処理します。  
   
- `bRedraw`  
+ *bRedraw*  
  かどうか、コントロール再描画するかすぐにフォントの設定を指定します。 このパラメーターを設定**TRUE**コントロールを自動的に再描画します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[DTM_SETMCFONT](http://msdn.microsoft.com/library/windows/desktop/bb761775)Windows SDK で説明されている。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
   
 > [!NOTE]
->  このコードを使用する場合のメンバにする、 `CDialog`-と呼ばれるクラスを派生`m_MonthFont`型の**CFont**です。  
+>  このコードを使用する場合のメンバにする、 `CDialog`-と呼ばれるクラスを派生*m_MonthFont*型の`CFont`します。  
   
 ##  <a name="setmonthcalstyle"></a>  CDateTimeCtrl::SetMonthCalStyle  
  現在の日付と時刻の選択コントロールに関連付けられているドロップダウン月間予定表コントロールのスタイルを設定します。  
@@ -458,16 +458,16 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `dwStyle`|予定表コントロールのスタイルは、月間予定表コントロールのスタイルのビットごとの組み合わせ (OR) は、新しい月です。 詳細については、次を参照してください。[月間予定表コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760919)です。|  
+|[in]*dwStyle*|予定表コントロールのスタイルは、月間予定表コントロールのスタイルのビットごとの組み合わせ (OR) は、新しい月です。 詳細については、次を参照してください。[月間予定表コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760919)です。|  
   
 ### <a name="return-value"></a>戻り値  
  ドロップ ダウン月間予定表コントロールの以前のスタイル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
- 次のコード例は、変数を定義`m_dateTimeCtrl`、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
+ 次のコード例は、変数を定義*m_dateTimeCtrl*、つまり、日付と時刻の選択コントロールをプログラムでアクセスするために使用します。 この変数は次の例で使用されています。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -491,16 +491,16 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pMinRange`  
+ *pMinRange*  
  ポインター、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトで許可されている最も早い時刻を含む、`CDateTimeCtrl`オブジェクト。  
   
- `pMaxRange`  
+ *整数*  
  ポインター、`COleDateTime`オブジェクトまたは`CTime`オブジェクトで許可されている最新の時刻を含む、`CDateTimeCtrl`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[DTM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761780)Windows SDK で説明されている。 MFC の実装では、いずれかを指定できます`COleDateTime`または`CTime`の使用法。 場合、`COleDateTime`オブジェクトには、 **NULL**状態、範囲が削除されます。 場合、`CTime`ポインター、または`COleDateTime`ポインターが**NULL**範囲が削除されます。  
   
 ### <a name="example"></a>例  
@@ -525,8 +525,8 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- このメンバー関数は、Win32 メッセージの動作を実装して[DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782)Windows SDK で説明されている。 MFC 実装で**SetTime**、使用することができます、`COleDateTime`または`CTime`を使用するか、クラス、`SYSTEMTIME`構造、時刻情報を設定します。  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数は、Win32 メッセージの動作を実装して[DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782)Windows SDK で説明されている。 MFC 実装で`SetTime`、使用することができます、`COleDateTime`または`CTime`を使用するか、クラス、`SYSTEMTIME`構造、時刻情報を設定します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  

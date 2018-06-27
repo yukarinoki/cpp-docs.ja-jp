@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367407"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956463"
 ---
 # <a name="cdocobjectserver-class"></a>関数クラス
 標準の `COleDocument` サーバーを完全な DocObject サーバーにするために必要な、 `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`、 `IPrint`などの追加 OLE インターフェイスを実装します。  
@@ -64,7 +64,7 @@ class CDocObjectServer : public CCmdTarget
 |[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|DocObject ビューの状態を復元します。|  
 |[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|DocObject ビューの状態を保存します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CDocObjectServer` 派生した`CCmdTarget`と密接に連携`COleServerDoc`インターフェイスを公開します。  
   
  DocObject サーバー ドキュメントを含めることができます[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) 、DocObject 項目へのサーバー インターフェイスを表すオブジェクト。  
@@ -84,7 +84,7 @@ class CDocObjectServer : public CCmdTarget
   
  `CDocObjectServer`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdocob.h  
   
 ##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject  
@@ -94,8 +94,8 @@ class CDocObjectServer : public CCmdTarget
 void ActivateDocObject();
 ```  
   
-### <a name="remarks"></a>コメント  
- `ActivateDocObject` 呼び出し`IOleDocumentSite`の**ActivateMe**メソッドを設定およびへの呼び出しで指定されたビューを表示する方法の具体的な手順についてまで待機するために、ビューを表示しない[CDocObjectServer::OnActivateView](#onactivateview).  
+### <a name="remarks"></a>Remarks  
+ `ActivateDocObject` 呼び出し`IOleDocumentSite`の`ActivateMe`メソッドを設定およびへの呼び出しで指定されたビューを表示する方法の具体的な手順についてまで待機するために、ビューを表示しない[CDocObjectServer::OnActivateView](#onactivateview)です。  
   
  同時に、`ActivateDocObject`と`OnActivateView`アクティブ化し、DocObject ビューを表示します。 DocObject アクティブ化は、OLE、インプレース アクティブ化の他の種類によって異なります。 インプレースで点線の枠と (サイズ変更ハンドル) などのオブジェクトの表示要素の表示をバイパスする、オブジェクトの拡張機能、および (標準のように、その四角形の外側に描画するのではなくビューの長方形内のスクロール バーを描画 DocObject アクティブ化インプレース アクティブ化) します。  
   
@@ -112,10 +112,10 @@ explicit CDocObjectServer(
  *pOwner*  
  DocObject サーバー用のクライアントは、クライアント サイトのドキュメントへのポインター。  
   
- `pDocSite`  
+ *pDocSite*  
  ポインター、`IOleDocumentSite`コンテナーによって実装されるインターフェイス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  DocObject がアクティブである場合、クライアント サイトの OLE インターフェイス ( `IOleDocumentSite`) は、DocObject サーバーがクライアント (コンテナー) と通信することができます。 DocObject サーバーがアクティブになると、まず、コンテナーによって実装されている、`IOleDocumentSite`インターフェイスです。 場合は、 [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver)コンテナー DocObjects でサポートされているかどうかに呼び出されます。 既定では、`GetDocObjectServer`返します**NULL**です。 オーバーライドする必要があります`COleServerDoc::GetDocObjectServer`新しい構築するために`CDocObjectServer`オブジェクトまたはへのポインターとの独自の派生オブジェクトを`COleServerDoc`コンテナーとその`IOleDocumentSite`コンス トラクターに引数としてのインターフェイスです。  
   
 ##  <a name="onactivateview"></a>  CDocObjectServer::OnActivateView  
@@ -128,7 +128,7 @@ virtual HRESULT OnActivateView();
 ### <a name="return-value"></a>戻り値  
  エラーまたは警告の値を返します。 既定では、次のように返されます。 **NOERROR**成功した場合は、 **E_FAIL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数で埋め込み先フレーム ウィンドウを作成するには、ビュー内にあるスクロール バーの描画、サーバー コンテナーと共有、フレーム コントロールの追加、アクティブなオブジェクトを設定し、最後に、埋め込み先フレーム ウィンドウを示していますおよびフォーカスを設定メニューを設定します。  
   
 ##  <a name="onapplyviewstate"></a>  CDocObjectServer::OnApplyViewState  
@@ -139,10 +139,10 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ar`  
+ *ar*  
  A`CArchive`ビュー ステートをシリアル化するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  インスタンス化の後に最初に、ビューが表示されるときに、この関数が呼び出されます。 `OnApplyViewState` データに基づいて再初期化するためのビューに指示、`CArchive`以前に保存されているオブジェクト[OnSaveViewState](#onsaveviewstate)です。 ビューのデータを検証する必要があります、`CArchive`オブジェクトをコンテナーは任意の方法で、ビュー状態データを解釈しようとはしません。  
   
  使用することができます`OnSaveViewState`ビューの状態を特定の永続的な情報を格納します。 オーバーライドする場合は`OnSaveViewState`情報を格納するにはオーバーライドする`OnApplyViewState`にその情報を参照し、新しくアクティブになったときに、ビューに適用します。  
@@ -155,10 +155,10 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ar`  
+ *ar*  
  A`CArchive`ビュー ステートがシリアル化するオブジェクトします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  状態には、ビューの種類、倍率、カーソルと選択ポイントなどのプロパティが含まれます。 コンテナーは、通常、ビューの非アクティブ化する前にこの関数を呼び出します。 保存された状態は、利用後で復元できます[OnApplyViewState](#onapplyviewstate)です。  
   
  使用することができます`OnSaveViewState`ビューの状態を特定の永続的な情報を格納します。 オーバーライドする場合は`OnSaveViewState`情報を格納するにはオーバーライドする`OnApplyViewState`にその情報を参照し、新しくアクティブになったときに、ビューに適用します。  

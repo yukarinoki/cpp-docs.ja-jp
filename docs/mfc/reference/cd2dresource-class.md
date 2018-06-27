@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eed5b60954d05094db610a233968c9c7dd83c704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1848e0fe6d3e09ea4707279e83293ae2dc0feb64
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350952"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950678"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource クラス
 ブラシ、レイヤー、テキストなどの D2D リソースの作成および管理インターフェイスを提供する抽象クラスです。  
@@ -74,7 +74,7 @@ class CD2DResource : public CObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|(CRenderTarget) の所有者によって destoyed されるリソースには|  
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|親 CRenderTarget へのポインター)|  
@@ -84,7 +84,7 @@ class CD2DResource : public CObject;
   
  `CD2DResource`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dresource"></a>  CD2DResource:: ~ CD2DResource  
@@ -104,10 +104,10 @@ CD2DResource(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
 ##  <a name="create"></a>  CD2DResource::Create  
@@ -118,7 +118,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRenderTarget`  
+ *pRenderTarget*  
  レンダー ターゲットへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -173,7 +173,7 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRenderTarget`  
+ *pRenderTarget*  
  レンダー ターゲットへのポインター。  
   
 ### <a name="return-value"></a>戻り値  

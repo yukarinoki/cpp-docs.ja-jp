@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356689"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954153"
 ---
 # <a name="ccmdui-class"></a>CCmdUI クラス
 内でのみ使用されて、`ON_UPDATE_COMMAND_UI`ハンドラー、 `CCmdTarget`-クラスを派生します。  
@@ -74,12 +74,12 @@ class CCmdUI
 |[CCmdUI::m_pOther](#m_pother)|通知を送信したウィンドウ オブジェクトへのポインター。|  
 |[CCmdUI::m_pSubMenu](#m_psubmenu)|によって表される包含のサブメニューを指す、`CCmdUI`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CCmdUI` 基本クラスはありません。  
   
  ときに、アプリケーションのユーザーをプル ダウン メニューの各メニュー項目いる必要があるかどうかを表示することが有効になっている、または無効になっています。 メニュー コマンドのターゲットが実装することでこの情報を提供する`ON_UPDATE_COMMAND_UI`ハンドラー。 アプリケーション内のコマンドのユーザー インターフェイス オブジェクトごとに、各ハンドラーのメッセージ マップ エントリと関数プロトタイプを作成するのに [プロパティ] ウィンドウを使用します。  
   
- フレームワークを検索し、それぞれを呼び出して、メニューを取り出した、ときに`ON_UPDATE_COMMAND_UI`ハンドラー、それぞれのハンドラーを呼び出す`CCmdUI`などのメンバー関数**を有効にする**と**確認**と、フレームワーク各メニュー項目が適切に表示されます。  
+ フレームワークを検索し、それぞれを呼び出して、メニューを取り出した、ときに`ON_UPDATE_COMMAND_UI`ハンドラー、それぞれのハンドラーを呼び出す`CCmdUI`などのメンバー関数`Enable`と`Check`、し、そのフレームワーク適切に、各メニュー項目を表示します。  
   
  メニュー項目は、内のコードを変更することがなくコントロール バーのボタンやその他のコマンドのユーザー インターフェイス オブジェクトに置き換えることが、`ON_UPDATE_COMMAND_UI`ハンドラー。  
   
@@ -98,7 +98,7 @@ class CCmdUI
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CCmdUI`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting  
@@ -108,7 +108,7 @@ class CCmdUI
 void ContinueRouting();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、高度なメンバー関数と組み合わせて使用する、`ON_COMMAND_EX`返すハンドラー **FALSE**です。 詳細については、次を参照してください。[テクニカル ノート 6](../../mfc/tn006-message-maps.md)です。  
   
 ##  <a name="enable"></a>  関数  
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bOn`  
+ *お*  
  **TRUE** 、項目を有効にする**FALSE**を無効にします。  
   
 ### <a name="example"></a>例  
@@ -148,7 +148,7 @@ UINT m_nIndex;
 CMenu* m_pMenu;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **NULL**場合は、アイテムは、メニューではありません。  
   
 ##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu  
@@ -158,8 +158,8 @@ CMenu* m_pMenu;
 CMenu* m_pSubMenu;  
 ```  
   
-### <a name="remarks"></a>コメント  
- **NULL**場合は、アイテムは、メニューではありません。 Sub メニュー場合は、ポップアップ`m_nID`ポップアップ メニューの最初の項目の ID が含まれています。 詳細については、次を参照してください。[テクニカル ノート 21](../../mfc/tn021-command-and-message-routing.md)です。  
+### <a name="remarks"></a>Remarks  
+ **NULL**場合は、アイテムは、メニューではありません。 Sub メニュー場合は、ポップアップ*サブメニュー*ポップアップ メニューの最初の項目の ID が含まれています。 詳細については、次を参照してください。[テクニカル ノート 21](../../mfc/tn021-command-and-message-routing.md)です。  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  ポインター (型の`CWnd`)、ツールバーやステータス バーなど、ウィンドウ オブジェクトへの通知を送信しました。  
@@ -168,7 +168,7 @@ CMenu* m_pSubMenu;
 CWnd* m_pOther;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **NULL** 、項目がメニューや以外`CWnd`オブジェクト。  
   
 ##  <a name="setcheck"></a>  CCmdUI::SetCheck  
@@ -179,10 +179,10 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCheck`  
+ *nCheck*  
  設定する状態の確認を指定します。 場合は 0、オフにします。場合 1 をチェックです。2 の場合、不確定な設定とします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、メニュー項目とツール バー ボタンの動作します。 中間の状態は、ツール バー ボタンにのみ適用されます。  
   
 ##  <a name="setradio"></a>  CCmdUI::SetRadio  
@@ -196,7 +196,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
  `bOn`  
  **TRUE** ; 項目を有効にするそれ以外の場合**FALSE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数のように動作する`SetCheck`オプション グループの一部として機能しているユーザー インターフェイス項目上で動作する点を除いて、します。 項目自体、オプション ボタン グループの動作を維持する場合、グループ内の他の項目をオフにする自動はありません。  
   
 ##  <a name="settext"></a>  CCmdUI::SetText  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszText`  
+ *lpszText*  
  文字列へのポインター。  
   
 ### <a name="example"></a>例  

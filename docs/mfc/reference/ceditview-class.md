@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371544"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953402"
 ---
 # <a name="ceditview-class"></a>CEditView クラス
 Windows のエディット コントロールの機能を提供するビュー クラスの一種であり、シンプルなテキスト編集エディターを実装できます。  
@@ -103,9 +103,9 @@ class CEditView : public CCtrlView
   
 |名前|説明|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|既定の型のオブジェクトのスタイル**CEditView です。**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|既定の型のオブジェクトのスタイル`CEditView`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CEditView`クラスには、次の追加機能が用意されています。  
   
 -   印刷します。  
@@ -149,7 +149,7 @@ class CEditView : public CCtrlView
   
  `CEditView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="ceditview"></a>  CEditView::CEditView  
@@ -159,8 +159,8 @@ class CEditView : public CCtrlView
 CEditView();
 ```  
   
-### <a name="remarks"></a>コメント  
- オブジェクトを構築するには、後に呼び出す必要があります、 [cwnd::create](../../mfc/reference/cwnd-class.md#create)エディット コントロールを使用する前に機能します。 クラスを派生する場合`CEditView`しを使用してテンプレートに追加する`CWinApp::AddDocTemplate`、フレームワークが両方このコンス トラクターを呼び出すと**作成**関数。  
+### <a name="remarks"></a>Remarks  
+ オブジェクトを構築するには、後に呼び出す必要があります、 [cwnd::create](../../mfc/reference/cwnd-class.md#create)エディット コントロールを使用する前に機能します。 クラスを派生する場合`CEditView`しを使用してテンプレートに追加する`CWinApp::AddDocTemplate`、フレームワークが両方このコンス トラクターを呼び出すと、`Create`関数。  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  既定のスタイルが含まれています、`CEditView`オブジェクト。  
@@ -169,8 +169,8 @@ CEditView();
 static const DWORD dwStyleDefault;  
 ```  
   
-### <a name="remarks"></a>コメント  
- この静的メンバーとして渡す、`dwStyle`のパラメーター、**作成**の既定のスタイルを取得する関数、`CEditView`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ この静的メンバーとして渡す、`dwStyle`のパラメーター、`Create`の既定のスタイルを取得する関数、`CEditView`オブジェクト。  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  呼び出す、`FindText`を検索する関数、`CEditView`オブジェクトのテキスト バッファー。  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索するテキストです。  
   
- `bNext`  
+ *bNext*  
  検索の方向を指定します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
   
 ### <a name="return-value"></a>戻り値  
  検索テキストが見つかった場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- この関数は、指定した文字列のバッファーにテキストを検索`lpszFind`を開始位置で指定した方向で、現在の選択として`bNext`で指定された大文字小文字の区別を使用して`bCase`です。 テキストが見つかった場合は、見つかったテキストを選択範囲を設定し、0 以外の値を返します。 テキストが見つからなかった場合は、0 を返します。  
+### <a name="remarks"></a>Remarks  
+ この関数は、指定した文字列のバッファーにテキストを検索*されて*を開始位置で指定した方向で、現在の選択として*bNext*で指定された大文字小文字の区別を使用して*置き換えた*です。 テキストが見つかった場合は、見つかったテキストを選択範囲を設定し、0 以外の値を返します。 テキストが見つからなかった場合は、0 を返します。  
   
  通常必要はありませんを呼び出して、`FindText`関数をオーバーライドする場合を除き、 `OnFindNext`、どの呼び出し`FindText`です。  
   
@@ -220,7 +220,7 @@ CEdit& GetEditCtrl() const;
 ### <a name="return-value"></a>戻り値  
  `CEdit` オブジェクトへの参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このコントロールの種類は[CEdit](../../mfc/reference/cedit-class.md)を直接使用して Windows のエディット コントロールを操作できるように、`CEdit`メンバー関数。  
   
 > [!CAUTION]
@@ -239,7 +239,7 @@ CFont* GetPrinterFont() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 `CFont` ; 現在のプリンター フォントを指定するオブジェクト**NULL**プリンター フォントが設定されていない場合。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プリンター フォントが設定されていないかどうか、既定の印刷の動作、`CEditView`クラスは、表示に使用される同じフォントを使用して印刷します。  
   
  現在プリンター フォントを判断するのにには、この関数を使用します。 場合はそうでない、目的のプリンター フォントを使用して[なかったとき](#setprinterfont)を変更します。  
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `strResult`  
+ *strResult*  
  参照、`CString`を選択したテキストを受け取るオブジェクト。  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  エディット コントロールのバッファーへのポインター。  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- 指定した文字列のバッファーにテキストを検索`lpszFind`で指定された方向に`bNext`で指定された大文字と小文字の区別`bCase`です。  
+ 指定した文字列のバッファーにテキストを検索*中から*で指定された方向に*bNext*で指定された大文字と小文字の区別*置き換えた*です。  
   
 ```  
 virtual void OnFindNext(
@@ -276,16 +276,16 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索するテキストです。  
   
- `bNext`  
+ *bNext*  
  検索の方向を指定します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  検索は、現在の選択範囲の先頭から開始されへの呼び出しによって行われます[FindText](#findtext)です。 既定の実装で`OnFindNext`呼び出し[見つからなかったとき](#ontextnotfound)テキストが見つからなかった場合です。  
   
  オーバーライド`OnFindNext`方法を変更する、 `CEditView`-派生オブジェクトは、テキストを検索します。 `CEditView` 呼び出し`OnFindNext`ユーザーが標準の検索 ダイアログ ボックスで、次を検索 ボタンを選択するとします。  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索するテキストです。  
   
- `lpszReplace`  
+ *見つかる*  
  検索テキストを置換するテキストです。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
   
-### <a name="remarks"></a>コメント  
- `OnReplaceAll` 指定した文字列のバッファーにテキストを検索`lpszFind`で指定された大文字と小文字の区別`bCase`です。 検索は、現在の選択範囲の先頭から開始します。 指定されたテキストで、検索テキストが見つかるたびこの関数の置換テキストの出現`lpszReplace`です。 呼び出すことによって、検索を行う[FindText](#findtext)です。 既定の実装で[見つからなかったとき](#ontextnotfound)は、テキストが見つからなかった場合に呼び出されます。  
+### <a name="remarks"></a>Remarks  
+ `OnReplaceAll` 指定した文字列のバッファーにテキストを検索*されて*で指定された大文字と小文字の区別*置き換えた*です。 検索は、現在の選択範囲の先頭から開始します。 たびに、検索テキストが見つかると、この関数で指定されたテキストでテキストの出現を置換する*見つかる*です。 呼び出すことによって、検索を行う[FindText](#findtext)です。 既定の実装で[見つからなかったとき](#ontextnotfound)は、テキストが見つからなかった場合に呼び出されます。  
   
- 現在の選択範囲が一致しない場合`lpszFind`、選択範囲が指定した文字列の最初に出現する更新`lpszFind`置換は実行されません。 これにより、ユーザーに選択範囲が置き換えられるテキストと一致しない場合の対処の必要なは、このことを確認できます。  
+ 現在の選択範囲が一致しない場合*中から*、によって指定されたテキストの最初に出現する、選択内容が更新*中から*置換は実行されません。 これにより、ユーザーに選択範囲が置き換えられるテキストと一致しない場合の対処の必要なは、このことを確認できます。  
   
  オーバーライド`OnReplaceAll`方法を変更する、 `CEditView`-派生オブジェクトには、テキストが置き換えられます。  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索するテキストです。  
   
- `bNext`  
+ *bNext*  
  検索の方向を指定します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
   
- `lpszReplace`  
+ *見つかる*  
  見つかったテキストを置換するテキストです。  
   
-### <a name="remarks"></a>コメント  
- この関数がで指定されたテキストの次の出現箇所のバッファーにテキストを検索、選択範囲を交換した後`lpszFind`で指定された方向に`bNext`で指定された大文字と小文字の区別`bCase`です。 呼び出すことによって、検索を行う[FindText](#findtext)です。 テキストが見つからなかった場合[見つからなかったとき](#ontextnotfound)と呼びます。  
+### <a name="remarks"></a>Remarks  
+ この関数がで指定されたテキストの次の出現箇所のバッファーにテキストを検索、選択範囲を交換した後*されて*で指定された方向に*bNext*、大文字と小文字の区別指定した*置き換えた*です。 呼び出すことによって、検索を行う[FindText](#findtext)です。 テキストが見つからなかった場合[見つからなかったとき](#ontextnotfound)と呼びます。  
   
  オーバーライド`OnReplaceSel`方法を変更する、 `CEditView`-派生オブジェクトには、選択したテキストが置き換えられます。  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索するテキストです。  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,22 +369,22 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  プリンター デバイス コンテキストへのポインター。  
   
  *rectLayout*  
  参照、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)テキストが表示される四角形を指定します。  
   
- `nIndexStart`  
+ *nIndexStart*  
  表示される最初の文字のバッファー内にあるインデックスを作成します。  
   
- `nIndexStop`  
+ *nIndexStop*  
  表示する最後の文字を次の文字のバッファー内にあるインデックスを作成します。  
   
 ### <a name="return-value"></a>戻り値  
  印刷するのには、次の文字のインデックス (つまり、表示される最後の文字文字)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合、`CEditView`コントロールにスタイルがない**ES_AUTOHSCROLL**レンダリングの四角形内でテキストをラップします。 コントロールにスタイルがある場合**ES_AUTOHSCROLL**テキストは四角形の右端にクリップします。  
   
  **に**の要素、 *rectLayout*オブジェクトが変更されたため、四角形の寸法がテキストで使用されている元の四角形の部分を定義します。  
@@ -397,24 +397,24 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ar`  
+ *ar*  
  参照、`CArchive`オブジェクトをシリアル化されたテキストを格納します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `SerializeRaw` 異なる`CEditView`の内部実装`Serialize`ことで読み取りし、オブジェクトの説明のデータの前せず、テキストのみを書き込みます。  
   
 ##  <a name="setprinterfont"></a>  なかったとき  
- 呼び出す`SetPrinterFont`で指定されたフォントにプリンター フォントを設定する`pFont`です。  
+ 呼び出す`SetPrinterFont`で指定されたフォントにプリンター フォントを設定する*pFont*です。  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFont`  
+ *pFont*  
  型のオブジェクトへのポインター`CFont`です。 場合**NULL**印刷に使用するフォントは表示フォントに基づいています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ビューを常に特定のフォントを印刷に使用する場合への呼び出しを含める`SetPrinterFont`クラスの`OnPreparePrinting`関数。 ビューの内容が印刷される前に、フォントの変更が発生するように印刷が行われる前にこの仮想関数が呼び出されます。  
   
 ##  <a name="settabstops"></a>  CEditView::SetTabStops  
@@ -425,10 +425,10 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nTabStops`  
+ *nTabStops*  
  ダイアログ単位で、それぞれのタブ ストップの幅。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  1 つのタブ ストップ幅のみがサポートされています。 (`CEdit`オブジェクトは複数のタブ幅をサポートします)。幅は、ダイアログ単位は、印刷または表示するのに使用するフォントの平均の文字幅 (大文字と小文字のアルファベット文字のみに基づく) の 4 分の 1 と同じです。 使用しないで`CEdit::SetTabStops`ため`CEditView`タブ ストップ値をキャッシュする必要があります。  
   
  この関数は、呼び出されたオブジェクトのタブのみを変更します。 タブを変更する各停止`CEditView`オブジェクトのアプリケーションで、各オブジェクトの`SetTabStops`関数。  
@@ -445,7 +445,7 @@ void SetTabStops(int nTabStops);
 void UnlockBuffer() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す`UnlockBuffer`によって返されたポインターを使用して完了したら[LockBuffer](#lockbuffer)です。  
   
 ## <a name="see-also"></a>関連項目  

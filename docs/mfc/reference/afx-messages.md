@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355419"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954661"
 ---
 # <a name="afx-messages"></a>AFX メッセージ
 これらのメッセージは、MFC で使用されます。  
@@ -89,7 +89,7 @@ ms.locfileid: "33355419"
   
 ||||||  
 |-|-|-|-|-|  
-|メッセージ|説明|[入力] `wParam`|`lParam` (すべてのパラメーターは、[in] 明記しない限り。)|戻り値|  
+|メッセージ|説明|[in]*wParam*|*lParam* (すべてのパラメーターは、[in] 明記しない限り)。|戻り値|  
 |AFX_WM_ACCGETOBJECT|使用しません。|使用しません。|該当なし。|該当なし。|  
 |AFX_WM_ACCGETSTATE|ユーザー補助のサポートのために使用します。 このメッセージを送信して`CMFCPopupMenu`または`CMFCRibbonPanelMenu`現在の要素の状態を取得します。|メニュー ボタンまたは区切り記号の場合も、要素のインデックス。|使用しません。|要素の状態。 インデックスが有効でない場合は-1 メニュー ボタンが特別な属性を持っていない場合は 0 です。 それ以外の場合、次のフラグの組み合わせです。<br /><br /> TBBS_DISABLED: 項目が無効になっています<br /><br /> 項目がチェックされて TBBS_CHECKED:<br /><br /> TBBS_BUTTON: 項目が標準のプッシュ ボタンです。<br /><br /> TBBS_PRESSED: ボタンが押されました。<br /><br /> TBBS_INDETERMINATE: 未定義の状態<br /><br /> TBBS_SEPARATOR - ではなくメニュー ボタンでは、他のメニュー項目間の分離をこの要素のフォーム|  
 |AFX_WM_CHANGE_ACTIVE_TAB|フレームワークは、このメッセージをサイズ変更可能なコントロール バー コントロールに送信します。 通知を受信するには、このメッセージを処理`CMFCTabCtrl`オブジェクトをユーザーには、アクティブなタブが変更されたときにします。|タブのインデックス。|使用しません。|0 以外。|  
@@ -131,7 +131,7 @@ ms.locfileid: "33355419"
 |AFX_WM_UPDATETOOLTIPS|ツールヒント コントロールを再作成することを示すために、ツールヒントのすべての所有者に送信されます。|このメッセージを処理するコントロールの型。 使用可能な値の一覧は、このトピックの後半の表を参照してください。|使用しません。|使用しません。|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` ユーザーがクリックしたときに、このメッセージを親フレームを送信、**ヘルプ** ボタン、またはをクリックしてヘルプ モードに入った、**ヘルプ**キャプション ボタンまたは F1 キーを押す。|使用しません。|インスタンスへのポインター`CMFCWindowsManagerDialog`です。|使用しません。|  
   
- 次の表に、値の下位ワードを`lParam`AFX_WM_HSCROLL メソッドのパラメーター。  
+ 次の表に、値の下位ワードを*lParam* AFX_WM_HSCROLL メソッドのパラメーター。  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ ms.locfileid: "33355419"
 |SB_THUMBTRACK|ユーザーがスクロール ボックスをドラッグします。 AFX_WM_ON_HSCROLL メッセージは、ユーザーがマウス ボタンを離すまでこの値を持つ繰り返し送信されます。 上位ワードは、スクロール ボックスをドラッグして位置を示します。|  
   
 > [!NOTE]
->  上位ワード、`lParam`下位ワードが SB_THUMBPOSITION または SB_THUMBTRACK の場合、パラメーターをスクロール ボックスの現在の位置を指定します。 それ以外の場合、この単語は使用されません。  
+>  上位ワード、 *lParam* SB_THUMBPOSITION または SB_THUMBTRACK 下位ワードの場合、パラメーターをスクロール ボックスの現在の位置を指定します。 それ以外の場合、この単語は使用されません。  
   
- 次の表に、フラグ値、 `lParam` AFX_WM_UPDATETOOLTIPS メッセージのパラメーター。  
+ 次の表に、フラグ値、 *lParam* AFX_WM_UPDATETOOLTIPS メッセージのパラメーター。  
   
 |||  
 |-|-|  

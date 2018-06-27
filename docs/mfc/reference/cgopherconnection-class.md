@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3dc5dae7758c77d335cf6e1255d8caba28df9f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49fe725c700a46e59625289de7ca5edf4b4d25b2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367774"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955688"
 ---
 # <a name="cgopherconnection-class"></a>関数クラス
 gopher インターネット サーバーへの接続を管理します。  
@@ -59,7 +59,7 @@ class CGopherConnection : public CInternetConnection
 |[CGopherConnection::GetAttribute](#getattribute)|Gopher オブジェクトの属性情報を取得します。|  
 |[CGopherConnection::OpenFile](#openfile)|Gopher ファイルを開きます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Gopher サービスは、MFC WinInet クラスによって認識される 3 つのインターネット サービスのいずれかです。  
   
  クラス`CGopherConnection`コンス トラクターと、gopher サービスを管理する次の 3 つの他のメンバー関数が含まれています: [OpenFile](#openfile)、 [CreateLocator](#createlocator)、および[GetAttribute](#getattribute).  
@@ -75,7 +75,7 @@ class CGopherConnection : public CInternetConnection
   
  `CGopherConnection`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
@@ -99,35 +99,35 @@ CGopherConnection(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSession`  
+ *pSession*  
  関連するへのポインター [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。  
   
- `hConnected`  
+ *hConnected*  
  現在のインターネット セッションの Windows ハンドル。  
   
- `pstrServer`  
+ *pstrServer*  
  FTP サーバーの名前を含む文字列へのポインター。  
   
- `dwContext`  
- 操作のコンテキストの識別子。 `dwContext` によって返される操作のステータス情報を識別する[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)です。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はしたコンテキスト ID と関連付けられます  
+ *独自*  
+ 操作のコンテキストの識別子。 *独自*によって返される操作のステータス情報を識別する[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)です。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はしたコンテキスト ID と関連付けられます  
   
- `pstrUserName`  
+ *pstrUserName*  
  ログインするユーザーの名前を指定する null で終わる文字列へのポインター。 場合**NULL**、既定値は匿名です。  
   
- `pstrPassword`  
- ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方`pstrPassword`と`pstrUserName`は**NULL**既定の匿名パスワードはユーザーの電子メール名。 場合`pstrPassword`は**NULL** (または空の文字列) が、`pstrUserName`は**NULL**、空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、`pstrUserName`と`pstrPassword`:  
+ *pstrPassword*  
+ ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*は**NULL**既定の匿名パスワードはユーザーの電子メール名。 場合*pstrPassword*は**NULL** (または空の文字列) が、 *pstrUserName*は**NULL**、空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|  
+|*pstrUserName*|*pstrPassword*|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL**または""|**NULL**または""|「匿名」|ユーザーの電子メール名|  
-|非- **NULL**文字列|**NULL**または""|`pstrUserName`|" "|  
+|非- **NULL**文字列|**NULL**または""|*pstrUserName*|" "|  
 |**NULL**以外**NULL**文字列|**エラー**|**エラー**||  
-|非- **NULL**文字列|非- **NULL**文字列|`pstrUserName`|`pstrPassword`|  
+|非- **NULL**文字列|非- **NULL**文字列|*pstrUserName*|*pstrPassword*|  
   
- `nPort`  
+ *nPort*  
  サーバーで使用する TCP/IP ポートを識別する番号。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成することはありません、`CGopherConnection`直接です。 代わりに、呼び出し[代わり](../../mfc/reference/cinternetsession-class.md#getgopherconnection)、作成する、`CGopherConnection`オブジェクトし、ポインターを返します。  
   
 ##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
@@ -151,28 +151,28 @@ static CGopherLocator CreateLocator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pstrDisplayString`  
- Gopher ドキュメントまたは取得するディレクトリの名前を含む文字列へのポインター。 場合、`pstrDisplayString`パラメーターは**NULL**、gopher サーバーの既定のディレクトリが返されます。  
+ *pstrDisplayString*  
+ Gopher ドキュメントまたは取得するディレクトリの名前を含む文字列へのポインター。 場合、 *pstrDisplayString*パラメーターは**NULL**、gopher サーバーの既定のディレクトリが返されます。  
   
- `pstrSelectorString`  
- 項目を取得するために、gopher サーバーに送信されるセレクター文字列へのポインター。 `pstrSelectorString` 指定できます**NULL**です。  
+ *pstrSelectorString*  
+ 項目を取得するために、gopher サーバーに送信されるセレクター文字列へのポインター。 *pstrSelectorString*できます**NULL**です。  
   
  *dwGopherType*  
- これを指定するかどうか`pstrSelectorString`ディレクトリやドキュメントを参照および要求が gopher か gopher + です。 構造体の属性を参照してください[GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK に含まれています。  
+ これを指定するかどうか*pstrSelectorString*ディレクトリやドキュメントを参照および要求が gopher か gopher + です。 構造体の属性を参照してください[GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK に含まれています。  
   
- `pstrLocator`  
+ *pstrLocator*  
  開くには、ファイルを識別する文字列へのポインター。 一般に、この文字列への呼び出しから返される[なった](../../mfc/reference/cgopherfilefind-class.md#getlocator)です。  
   
  *pstrServerName*  
  Gopher サーバー名を含む文字列へのポインター。  
   
- `nPort`  
+ *nPort*  
  この接続のインターネット ポートを識別する番号。  
   
 ### <a name="return-value"></a>戻り値  
  A[関数](../../mfc/reference/cgopherlocator-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  静的メンバー関数のバージョンでは、静的でないバージョンで、接続オブジェクトから、サーバー名を使用してサーバーを指定する必要があります。  
   
  Gopher サーバーから情報を取得するために、アプリケーションはまず gopher ロケーターを取得する必要があります。 アプリケーションは、不透明なトークンとしてロケーターを扱うし、必要があります (つまり、アプリケーションことができますロケーターを使用してが直接操作または比較)。 通常、アプリケーション、呼び出しのために、ロケーターを使用、 [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)特定の情報を取得します。  
@@ -187,13 +187,13 @@ BOOL GetAttribute(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `refLocator`  
+ *refLocator*  
  参照、[関数](../../mfc/reference/cgopherlocator-class.md)オブジェクト。  
   
  *strRequestedAttributes*  
  要求された属性の名前を指定する、スペースで区切られた文字列。  
   
- `strResult`  
+ *strResult*  
  参照、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)ロケーターの種類を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
@@ -211,23 +211,23 @@ CGopherFile* OpenFile(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `refLocator`  
+ *refLocator*  
  参照、[関数](../../mfc/reference/cgopherlocator-class.md)オブジェクト。  
   
- `dwFlags`  
+ *dwFlags*  
  INTERNET_FLAG_ * フラグの組み合わせ。 参照してください[できます](../../mfc/reference/cinternetsession-class.md#openurl)INTERNET_FLAG_ の詳細については\*フラグ。  
   
- `pstrView`  
- ファイル ビューの文字列へのポインター。 ファイルのいくつかのビューは、サーバーに存在する場合、このパラメーターは、ファイルを開くにはビューを指定します。 場合`pstrView`は**NULL**既定のファイルのビューを使用します。  
+ *pstrView*  
+ ファイル ビューの文字列へのポインター。 ファイルのいくつかのビューは、サーバーに存在する場合、このパラメーターは、ファイルを開くにはビューを指定します。 場合*pstrView*は**NULL**既定のファイルのビューを使用します。  
   
- `dwContext`  
- 開いているファイルのコンテキスト ID です。 参照してください**解説**の詳細については`dwContext`します。  
+ *独自*  
+ 開いているファイルのコンテキスト ID です。 参照してください**解説**の詳細については*独自*です。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CGopherFile](../../mfc/reference/cgopherfile-class.md)オブジェクトを開くことができません。  
   
-### <a name="remarks"></a>コメント  
- `dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CGopherConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)特定ために使用する操作の状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
+### <a name="remarks"></a>Remarks  
+ 上書き、*独自*既定値は、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CGopherConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)特定ために使用する操作の状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
   
 ## <a name="see-also"></a>関連項目  
  [関数クラス](../../mfc/reference/cinternetconnection-class.md)   

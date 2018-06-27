@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369016"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956130"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject クラス
 ビットマップ、領域、ブラシ、ペン、パレット、フォントなどの Windows のさまざまな種類のグラフィックス デバイス インターフェイス (GDI) の基底クラスを提供します。  
@@ -93,7 +93,7 @@ class CGdiObject : public CObject
 |----------|-----------------|  
 |[CGdiObject::m_hObject](#m_hobject)|A`HANDLE`を含む、 `HBITMAP`、 `HPALETTE`、 `HRGN`、 `HBRUSH`、 `HPEN`、または`HFONT`このオブジェクトにアタッチします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  作成することはありません、`CGdiObject`直接です。 代わりに、オブジェクトを作成するその派生クラスのいずれかのように`CPen`または`CBrush`です。  
   
  詳細については`CGdiObject`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)です。  
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hObject`  
+ *hObject*  
  A `HANDLE` Windows GDI オブジェクト (たとえば、`HPEN`または`HBRUSH`)。  
   
 ### <a name="return-value"></a>戻り値  
@@ -127,8 +127,8 @@ BOOL Attach(HGDIOBJ hObject);
 CGdiObject();
 ```  
   
-### <a name="remarks"></a>コメント  
- 作成することはありません、`CGdiObject`直接です。 代わりに、オブジェクトを作成するその派生クラスのいずれかのように`CPen`または**Cbrush**です。  
+### <a name="remarks"></a>Remarks  
+ 作成することはありません、`CGdiObject`直接です。 代わりに、オブジェクトを作成するその派生クラスのいずれかのように`CPen`または`Cbrush`です。  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  定義済みのストック Windows GDI ペン、ブラシ、フォントのいずれかへのハンドルを取得しに GDI オブジェクトをアタッチ、`CGdiObject`オブジェクト。  
@@ -138,13 +138,13 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  目的のストック オブジェクトの種類を指定する定数。 パラメーターを参照*fnObject*の[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925)適切な値の詳細については、Windows SDK でします。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  クラスの派生クラスのいずれかでこの関数の呼び出しなどの Windows GDI オブジェクトの種類に対応`CPen`ストック ペン用です。  
   
 ##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
@@ -157,7 +157,7 @@ BOOL DeleteObject();
 ### <a name="return-value"></a>戻り値  
  GDI オブジェクトが正常に削除された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関連付けられている記憶域、`CGdiObject`オブジェクトがこの呼び出しによって影響ありません。 アプリケーションを呼び出す必要がありますいない`DeleteObject`上、`CGdiObject`デバイス コンテキストに現在選択されているオブジェクト。  
   
  ブラシ パターンが削除されると、ブラシに関連付けられたビットマップは削除されません。 ビットマップは個別に削除する必要があります。  
@@ -169,7 +169,7 @@ BOOL DeleteObject();
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `DeleteTempMap` 一時的に接続されている Windows GDI オブジェクトをデタッチ`CGdiObject`オブジェクトを削除する前に、`CGdiObject`オブジェクト。  
   
 ### <a name="example"></a>例  
@@ -193,13 +193,13 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hObject`  
+ *hObject*  
  A `HANDLE` Windows GDI オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CGdiObject`一時的または永続する可能性があります。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合、`CGdiObject`オブジェクトが、一時的な Windows GDI オブジェクトに既にアタッチされていない`CGdiObject`オブジェクトが作成され、接続されています。  
   
  この一時`CGdiObject`オブジェクトは、次のアプリケーションが、すべての一時的なグラフィック オブジェクトの削除時に、イベント ループのアイドル時間までのみ有効です。 言い換えると、別の方法は、1 つのウィンドウ メッセージを処理中に、一時オブジェクトが有効でのみことです。  
@@ -214,16 +214,16 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCount`  
- コピーするバイト数を指定、`lpObject`バッファー。  
+ *nCount*  
+ コピーするバイト数を指定、 *lpObject*バッファー。  
   
- `lpObject`  
+ *lpObject*  
  情報を受信するユーザーが指定したバッファーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  バイト数を取得します。それ以外の場合 0 の場合、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数は、次の一覧に示すように、型を持つが、グラフィック オブジェクトの種類に依存するデータ構造体を取得します。  
   
 |Object|バッファーの種類|  
@@ -285,7 +285,7 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="return-value"></a>戻り値  
  A`HANDLE`にアタッチされた Windows GDI オブジェクトです。 それ以外の場合**NULL**オブジェクトがアタッチされていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  一般的なハンドル インターフェイスのパラダイムの一部であり、 **NULL**ハンドルが無効であるか特殊な値です。  
   
 ### <a name="example"></a>例  
@@ -306,10 +306,10 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `obj`  
+ *obj*  
  既存へのポインター`CGdiObject`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  左側の GDI オブジェクトが右側の GDI オブジェクトと等しくないかどうかを判断します。  
   
 ##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =  
@@ -320,10 +320,10 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `obj`  
+ *obj*  
  既存への参照を`CGdiObject`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  左側の GDI オブジェクトが右側の GDI オブジェクトと等しいかどうかを判断します。  
   
 ##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
@@ -343,7 +343,7 @@ BOOL UnrealizeObject();
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  中に`UnrealizeObject`のメンバー関数は、`CGdiObject`クラス、それを呼び出す上でのみ`CBrush`または`CPalette`オブジェクト。  
   
  `CBrush`オブジェクト、`UnrealizeObject`次回デバイス コンテキストに選択されている指定されたブラシの原点をリセットするシステムに指示します。 オブジェクトがある場合、`CPalette`オブジェクト、`UnrealizeObject`が、既に認識していない場合と同様に、パレットを実現するシステムに指示します。 次に、アプリケーションが呼び出すとき、 [:realizepalette](../../mfc/reference/cdc-class.md#realizepalette)指定のパレットでは、システム関数では、論理パレット システム パレットを完全に再マップします。  

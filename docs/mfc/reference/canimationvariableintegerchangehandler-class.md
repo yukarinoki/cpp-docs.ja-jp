@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55658efabf8c9df795ed8069d9659ebf0e01e364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fae1d569f49a50d3b7281e86c72fd12c69b40832
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352113"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956360"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler クラス
 アニメーション変数の値が変化したときに Animation API によって呼び出されるコールバックを実装します。  
@@ -56,7 +56,7 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 |[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|アニメーション変数の値が変更されたときに呼び出されます。 (`CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged` をオーバーライドします)。|  
 |[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このイベント ハンドラーが作成され、CAnimationVariable::EnableIntegerValueChangedEvent または (これにより CAnimationBaseObject::EnableIntegerValueChangedEvent を呼び出すときに、IUIAnimationVariable::SetVariableIntegerChangeHandler メソッドに渡されますこのイベントのアニメーション オブジェクトにカプセル化されたすべてのアニメーション変数) です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -68,7 +68,7 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
   
  `CAnimationVariableIntegerChangeHandler`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="canimationvariableintegerchangehandler"></a>  CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
@@ -88,10 +88,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pAnimationController`  
+ *pAnimationController*  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
@@ -108,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `storyboard`  
+ *ストーリー ボード*  
  変数がアニメーション化するストーリー ボードです。  
   
- `variable`  
+ *variable*  
  アニメーション変数が更新されたです。  
   
- `newValue`  
+ *newValue*  
  新しい丸められた値。  
   
- `previousValue`  
+ *previousValue*  
  以前の丸められた値。  
   
 ### <a name="return-value"></a>戻り値  
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pAnimationController`  
+ *pAnimationController*  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
 ## <a name="see-also"></a>関連項目  

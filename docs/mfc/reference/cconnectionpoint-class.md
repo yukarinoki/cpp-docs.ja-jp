@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357391"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952223"
 ---
 # <a name="cconnectionpoint-class"></a>関数クラス
 他の OLE オブジェクトと通信するために使われる "コネクション ポイント" と呼ばれる特別な型のインターフェイスを定義します。  
@@ -66,12 +66,12 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|コネクション マップを所有するコントロールのコンテナーを取得します。|  
 |[CConnectionPoint::GetIID](#getiid)|接続ポイントのインターフェイス ID を取得します。|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|コントロールでサポートされる接続ポイントの最大数を取得します。|  
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|接続要素へのポインターを取得`pos`です。|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|接続要素へのポインターを取得*pos*です。|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|返すことによって、マップの反復処理を開始、**位置**値を渡すことができる、`GetNextConnection`呼び出します。|  
 |[CConnectionPoint::OnAdvise](#onadvise)|確立されるかの接続を解除するときに、フレームワークによって呼び出されます。|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|要求されたシンク インターフェイスへのポインターを取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  標準の OLE インターフェイスを実装し、OLE コントロールの機能を公開に使用されるとは異なりは、接続ポイントは、イベントを発生させるなど、他のオブジェクトのアクションを開始して、変更通知が送信インターフェイスを実装します。  
   
  接続は、2 つの部分で構成されています:"source"と、インターフェイスを実装するオブジェクトと呼ばれるインターフェイスを呼び出すオブジェクト シンクと呼ばれる、"です"。 接続ポイントを公開するでは、ソースは、シンク自体への接続の確立を許可します。 接続ポイントのメカニズムは、ソース オブジェクトは、一連のメンバー関数のシンクの実装へのポインターを取得します。 たとえば、シンクによって実装されているイベントを発生させるには、ソースは、シンクの実装の適切なメソッドを呼び出すことができます。  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- `BEGIN_CONNECTION_PART`と`END_CONNECTION_PART`マクロ、埋め込みのクラスを宣言する`XSampleConnPt`(から派生した`CConnectionPoint`) この特定の接続ポイントを実装します。 オーバーライドする場合は、`CConnectionPoint`メンバー関数、または独自のメンバー関数を追加、これら 2 つのマクロの間、それらを宣言します。 たとえば、`CONNECTION_IID`マクロよりも優先、`CConnectionPoint::GetIID`メンバー関数はこれら 2 つのマクロの間に配置します。  
+ BEGIN_CONNECTION_PART と END_CONNECTION_PART マクロ、埋め込みのクラスを宣言する`XSampleConnPt`(から派生した`CConnectionPoint`) この特定の接続ポイントを実装します。 オーバーライドする場合は、`CConnectionPoint`メンバー関数、または独自のメンバー関数を追加、これら 2 つのマクロの間、それらを宣言します。 たとえば、CONNECTION_IID マクロがよりも優先、`CConnectionPoint::GetIID`メンバー関数はこれら 2 つのマクロの間に配置します。  
   
  2 番目のコード片は、実装ファイルに挿入 (です。CPP)、コントロールのクラスです。 このコードは、追加の接続ポイントが含まれており、コネクション マップを実装する`SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- サンプルの OLE コントロールがのコネクション ポイントを公開する以下のコード片が挿入されると、 **ISampleSink**インターフェイスです。  
+ サンプルの OLE コントロールがのコネクション ポイントを公開する以下のコード片が挿入されると、`ISampleSink`インターフェイスです。  
   
  通常、接続ポイントは、「マルチキャスト」は、同じインターフェイスに接続されている複数のシンクにブロードキャストする機能をサポートします。 次のコード フラグメントでは、マルチキャストを繰り返し処理で各シンク接続ポイントで使用して実行する方法を示します。  
   
@@ -105,7 +105,7 @@ class CConnectionPoint : public CCmdTarget
   
  `CConnectionPoint`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
@@ -135,8 +135,8 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="return-value"></a>戻り値  
  成功した場合、コンテナーへのポインターそれ以外の場合**NULL**です。  
   
-### <a name="remarks"></a>コメント  
- 通常、この関数はによって実装され、`BEGIN_CONNECTION_PART`マクロです。  
+### <a name="remarks"></a>Remarks  
+ この関数は通常、BEGIN_CONNECTION_PART マクロによって実装されます。  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  接続ポイントのインターフェイス ID を取得するためにフレームワークによって呼び出されます。  
@@ -148,7 +148,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="return-value"></a>戻り値  
  コネクション ポイントのインターフェイス ID への参照  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この接続ポイントのインターフェイス ID を返すには、この関数をオーバーライドします。  
   
 ##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
@@ -161,26 +161,26 @@ virtual int GetMaxConnections();
 ### <a name="return-value"></a>戻り値  
  制限がない場合は、コントロール、または-1 でサポートされている接続の最大数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装では、制限がないことを示す-1 を返します。  
   
  コントロールに接続できるシンクの数を制限する場合は、この関数をオーバーライドします。  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
- 接続要素へのポインターを取得`pos`です。  
+ 接続要素へのポインターを取得*pos*です。  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pos`  
+ *pos*  
  参照を指定します、**位置**によって以前返される値`GetNextConnection`または[中](#getstartposition)呼び出します。  
   
 ### <a name="return-value"></a>戻り値  
- 指定した接続要素へのポインター `pos`、または NULL。  
+ 指定した接続要素へのポインター *pos*、または NULL。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、コネクション マップ内のすべての要素の反復処理に最も役立ちます。 を反復処理するときは、この関数から返されたすべての Null をスキップします。  
   
 ### <a name="example"></a>例  
@@ -196,7 +196,7 @@ POSITION GetStartPosition() const;
 ### <a name="return-value"></a>戻り値  
  A**位置**マップを反復処理するための開始位置を表す値または**NULL**マップが空の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イテレーションのシーケンスが予測可能です。したがって、マップの最初の要素""には、特別な意味はありません。  
   
 ### <a name="example"></a>例  
@@ -210,10 +210,10 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bAdvise`  
+ *bAdvise*  
  **TRUE**それ以外の確立された接続されている場合は、 **FALSE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装では、何も行われません。  
   
  通知は、シンクに接続するか、接続ポイントから切断時に使用する場合は、この関数をオーバーライドします。  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pUnkSink`  
+ *pUnkSink*  
  要求されたシンク インターフェイスの識別子。  
   
- `ppInterface`  
- によって識別されるインターフェイス ポインターへのポインター`pUnkSink`です。 オブジェクトは、このインターフェイスをサポートしていない場合\*`ppInterface`に設定されている**NULL**です。  
+ *ppInterface*  
+ によって識別されるインターフェイス ポインターへのポインター *pUnkSink*です。 オブジェクトは、このインターフェイスをサポートしていない場合\* *ppInterface*に設定されている**NULL**です。  
   
 ### <a name="return-value"></a>戻り値  
  標準の `HRESULT` 値。  

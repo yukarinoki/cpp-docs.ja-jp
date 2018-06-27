@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366263"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951293"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 構造体
 `CDaoRelationInfo`構造体には、2 つのテーブルのフィールドの間で定義されている関係に関する情報が含まれています、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `m_strName`  
+ *m_strName*  
  Relation オブジェクトの一意名します。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  リレーションシップの外部テーブルを名前します。 外部テーブルは、外部キーの格納に使用されるテーブルです。 一般に、外部テーブルを使用して、確立するか、参照整合性を適用します。 外部テーブルは、一対多リレーションシップの"多"側で通常です。 外部テーブルの例では、アメリカ合衆国の州またはカナダの州や顧客の注文のコードを含むテーブルを含めます。  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  リレーションシップの種類についての情報が含まれています。 このメンバーの値には、次のいずれかを指定できます。  
   
 - **dbRelationUnique**リレーションシップは一対一です。  
@@ -70,20 +70,20 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade**が連鎖的に削除します。  
   
- `m_pFieldInfos`  
- 配列へのポインター [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)構造体。 配列には、リレーションシップ内の各フィールドの 1 つのオブジェクトが含まれています。 `m_nFields`データ メンバーは、配列要素の数を示します。  
+ *m_pFieldInfos*  
+ 配列へのポインター [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)構造体。 配列には、リレーションシップ内の各フィールドの 1 つのオブジェクトが含まれています。 *M_nFields*データ メンバーは、配列要素の数を示します。  
   
- `m_nFields`  
- 数`CDaoRelationFieldInfo`内のオブジェクト、`m_pFieldInfos`データ メンバーです。  
+ *m_nFields*  
+ 数`CDaoRelationFieldInfo`内のオブジェクト、 *m_pFieldInfos*データ メンバーです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  プライマリとセカンダリ上への参照は、情報がによって返される方法を示すため、 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)クラスのメンバー関数`CDaoDatabase`です。  
   
  リレーションシップ オブジェクトは、MFC クラスでは表されません。 代わりに、MFC オブジェクトの基になる DAO オブジェクトを使用して、`CDaoDatabase`クラス関係オブジェクトのコレクションを保持する:`CDaoDatabase`関係については、の各アイテムにアクセスするメンバー関数を提供して一度にすべてを使ってアクセスできる、 `CDaoRelationInfo`オブジェクトを呼び出して、`GetRelationInfo`親データベース オブジェクトのメンバー関数。  
   
  によって取得される情報、 [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)メンバー関数は、`CDaoRelationInfo`構造体。 `CDaoRelationInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoRelationInfo`オブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ## <a name="see-also"></a>関連項目  

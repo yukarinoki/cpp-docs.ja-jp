@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383176"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952038"
 ---
 # <a name="tn023-standard-mfc-resources"></a>テクニカル ノート 23: MFC の標準リソース
 ここでは、MFC ライブラリに必要し、するで提供される標準のリソースについて説明します。  
@@ -45,7 +45,7 @@ ms.locfileid: "33383176"
   
 -   Indicate.rc:、ステータス バー キー状態インジケーターの Caps Lock の「キャップ」などの文字列リソースが含まれています。  
   
--   Prompts.rc: の「新規ドキュメントの作成」など、あらかじめ定義された各コマンドのメニュー プロンプト文字列リソースを含む`ID_FILE_NEW`です。  
+-   Prompts.rc:、ID_FILE_NEW には「新規ドキュメントの作成」など、あらかじめ定義された各コマンドのメニュー プロンプト文字列リソースが含まれています。  
   
 -   Commdlg.rc: Visual C 互換性 .rc ファイルを標準の COMMDLG ダイアログ テンプレートが含まれています。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33383176"
 >  意図せず Common.rc 外のリソースを完全に移動しないように注意します。 CTRL キーを押しながら、リソースをドラッグすると場合、コピーが作成されます。 いない ctrl キーを押しながらドラッグする、リソースは移動されます。 いる可能性がありますが誤って変更を加えた Common.rc ファイルを懸念がある場合は、Common.rc に変更を保存するかどうかをたずねられたときに、"No"をクリックします。  
   
 > [!NOTE]
->  リソースの .rc ファイルがある特殊な`TEXTINCLUDE`により、誤って標準の .rc ファイルの上に保存できないでそれらのリソース。  
+>  .Rc リソース ファイルでは、により、誤って標準の .rc ファイルの上に保存できないことに特殊な TEXTINCLUDE リソースがあります。  
   
 ### <a name="customizing-standard-framework-resources"></a>標準的なフレームワーク リソースをカスタマイズします。  
  標準的なフレームワーク リソースに通常含まれて、アプリケーションを使用して、#include コマンドをアプリケーションのリソース ファイル。 AppWizard は、リソース ファイルが生成されます。 このファイルには、選択した AppWizard オプションに応じて、適切な標準フレームワーク リソースが含まれています。 確認、追加、または削除コンパイル時ディレクティブを変更することによってリソースが含まれていることができます。 これを行うには、開く、**リソース**メニュー**設定が含まれています**です。 見て「コンパイル時ディレクティブ」は、項目を編集します。 例えば:  

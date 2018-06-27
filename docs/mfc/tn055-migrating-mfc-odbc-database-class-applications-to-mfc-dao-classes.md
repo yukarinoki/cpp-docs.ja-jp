@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: d46150ee76219732d0895e818fa00c68dc588853
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322512"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957391"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>テクニカル ノート 55: MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行
 
@@ -99,9 +99,9 @@ MFC ODBC クラスの元のデザインは、Microsoft Access や Microsoft Visu
 
    ODBC クラスには、MFC はマクロを使用してこれらのオプションを定義するために必要なまたは列挙型。
 
-   DAO クラスでは、DAO がヘッダー ファイル (DBDAOINT これらのオプションの定義を提供します。H)。 レコード セットの種類の列挙のメンバーは、したがって`CRecordset`、しかし、DAO が定数代わりにします。 たとえばは使用`snapshot`の種類を指定するときに`CRecordset`odbc が`DB_OPEN_SNAPSHOT`の種類を指定するときに`CDaoRecordset`です。
+   DAO クラスでは、DAO がヘッダー ファイル (DBDAOINT これらのオプションの定義を提供します。H)。 レコード セットの種類の列挙のメンバーは、したがって`CRecordset`、しかし、DAO が定数代わりにします。 たとえばは使用**スナップショット**の種類を指定するときに`CRecordset`odbc が**DB_OPEN_SNAPSHOT**の種類を指定するときに`CDaoRecordset`です。
 
-- 既定のレコード セットの種類`CRecordset`は`snapshot`の既定のレコード セットの種類を while`CDaoRecordset`は`dynaset`(ODBC クラス スナップショットに関するその他の問題の下にあるメモを参照してください)。
+- 既定のレコード セットの種類`CRecordset`は**スナップショット**の既定のレコード セットの種類を while`CDaoRecordset`は**ダイナセット**(ODBC クラス スナップショットに関するその他の問題の下にあるメモを参照してください)。
 
 - ODBC`CRecordset`クラス順方向専用レコード セットの種類を作成するオプションがあります。 `CDaoRecordset`クラス、順方向専用、いないレコード セットの種類ではなくプロパティ (またはオプション) 特定の種類のレコード セット。
 
@@ -111,7 +111,7 @@ MFC ODBC クラスの元のデザインは、Microsoft Access や Microsoft Visu
 
 - 例外クラスが変更されました。 `CDBExceptions` ODBC クラス内でスローされると`CDaoExceptions`DAO クラスでします。
 
-- `RFX_Date` 使用して`CTime`と`TIMESTAMP_STRUCT`オブジェクトを少し`DFX_Date`使用`COleDateTime`です。 `COleDateTime`とほぼ同じ`CTime`、8 バイト OLE に基づきますが、 `DATE` 4 バイトではなく`time_t`データのはるかに大きい範囲を保持できるようにします。
+- `RFX_Date` 使用して`CTime`と`TIMESTAMP_STRUCT`オブジェクトを少し`DFX_Date`使用`COleDateTime`です。 `COleDateTime`とほぼ同じ`CTime`、8 バイト OLE に基づきますが、**日付**4 バイトではなく**time_t**データのはるかに大きい範囲を保持できるようにします。
 
    > [!NOTE]
    > DAO (`CDaoRecordset`) スナップショットは、ODBC の中に読み取り専用 (`CRecordset`) スナップショットが、ドライバーと ODBC カーソル ライブラリの使用によって更新可能な可能性があります。 カーソル ライブラリを使用している場合`CRecordset`スナップショットは更新可能です。 ODBC カーソル ライブラリが、デスクトップ ドライバー パック 3.0 から Microsoft ドライバーのいずれかを使用している場合、`CRecordset`スナップショットは読み取り専用です。 別のドライバーを使用している場合は、かどうかをドライバーのドキュメントを確認します。 スナップショット (`STATIC_CURSORS`) は読み取り専用です。

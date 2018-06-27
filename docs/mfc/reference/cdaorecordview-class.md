@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a228a545061c4807688014b62907c4c41a82151e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368951"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952304"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView クラス
 コントロール内にデータベース レコードを表示するビューです。  
@@ -59,7 +59,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 |[CDaoRecordView::OnGetRecordset](#ongetrecordset)|派生したクラスのオブジェクトへのポインターを返します`CDaoRecordset`です。 ClassWizard では、この関数を上書きし、必要な場合、レコード セットを作成します。|  
 |[CDaoRecordView::OnMove](#onmove)|現在のレコードを変更した場合、データ ソースを更新し、指定されたレコードに移動 (次に、前の最初のページまたは最後)。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ビューに直接接続されているフォーム ビュー、`CDaoRecordset`オブジェクト。 ビューはダイアログ テンプレート リソースから作成およびのフィールドを表示、`CDaoRecordset`ダイアログ テンプレートのコントロール内のオブジェクト。 `CDaoRecordView`オブジェクト ダイアログ データ エクス (チェンジ DDX) および DAO レコード フィールド エクス (チェンジ DFX) を使用して、フォーム上のコントロールとレコード セットのフィールドの間でデータの移動を自動化します。 `CDaoRecordView` 移動するための既定の実装を提供、最初に [次へ]、前、または最後のレコードと、ビューで現在のレコードを更新するためのインターフェイスです。  
   
 > [!NOTE]
@@ -92,7 +92,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  `CDaoRecordView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ##  <a name="cdaorecordview"></a>  指定して  
@@ -104,22 +104,22 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  ダイアログ テンプレート リソースの名前を指定する null で終わる文字列が含まれています。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  ダイアログ テンプレート リソースの ID 番号が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  名前 (コンス トラクターの引数として文字列を渡す) によって、または ID (パスを符号なし整数の引数として) か、リソースを識別できます。 リソースを使用して ID をお勧めします。  
   
 > [!NOTE]
 >  派生クラスでは、独自のコンス トラクターを指定する必要があります。 派生クラスのコンス トラクターで、コンス トラクターを呼び出します`CDaoRecordView::CDaoRecordView`リソース名または ID を引数として使用します。  
   
- **CDaoRecordView::OnInitialUpdate**呼び出し`CWnd::UpdateData`、どの呼び出し`CWnd::DoDataExchange`です。 この最初の呼び出し`DoDataExchange`接続`CDaoRecordView`(間接的に) に制御`CDaoRecordset`ClassWizard で作成したデータ メンバーのフィールドです。 これらのデータ メンバーは、基本クラスを呼び出した後まで使用できません**CFormView::OnInitialUpdate**メンバー関数。  
+ `CDaoRecordView::OnInitialUpdate` 呼び出し`CWnd::UpdateData`、どの呼び出し`CWnd::DoDataExchange`です。 この最初の呼び出し`DoDataExchange`接続`CDaoRecordView`(間接的に) に制御`CDaoRecordset`ClassWizard で作成したデータ メンバーのフィールドです。 これらのデータ メンバーは、基本クラスを呼び出した後まで使用できません`CFormView::OnInitialUpdate`メンバー関数。  
   
 > [!NOTE]
->  ClassWizard を使用する場合、ウィザードで定義、`enum`値`CDaoRecordView::IDD`コンス トラクターの一覧でメンバーの初期化を使用してクラスの宣言にします。  
+>  ClassWizard を使用する場合、ウィザードで定義、 **enum**値`CDaoRecordView::IDD`コンス トラクターの一覧でメンバーの初期化を使用してクラスの宣言にします。  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
@@ -133,7 +133,7 @@ BOOL IsOnFirstRecord();
 ### <a name="return-value"></a>戻り値  
  現在のレコードがレコード セットの最初のレコードの場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は ClassWizard で作成されたコマンド更新ハンドラーの既定の実装を記述するために役立ちます。  
   
  ユーザーは、最初のレコードに移動、すべてのユーザー インターフェイス オブジェクト (メニュー項目やツール バー ボタンなど) フレームワークを無効になりますがある場合、最初のページと前のレコードに移動するためです。  
@@ -148,7 +148,7 @@ BOOL IsOnLastRecord();
 ### <a name="return-value"></a>戻り値  
  現在のレコードがレコード セットの最後のレコードの場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、classwizard レコード間を移動するためのユーザー インターフェイスをサポートするためにコマンド更新ハンドラーの既定の実装を記述するために役立ちます。  
   
 > [!CAUTION]
@@ -164,8 +164,8 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
 ### <a name="return-value"></a>戻り値  
  ポインター、 `CDaoRecordset`-派生オブジェクトのオブジェクトが正常に作成されたそれ以外の場合、 **NULL**ポインター。  
   
-### <a name="remarks"></a>コメント  
- 作成またはレコード セット オブジェクトを取得してにポインターを返すには、このメンバー関数をオーバーライドする必要があります。 ClassWizard で、レコード ビュー クラスを宣言する場合の既定のオーバーライドが書き込まれます。 ClassWizard の既定の実装では、いずれかが存在する場合は、レコード ビューに格納されているレコード セットのポインターを返します。 ClassWizard でユーザーが指定した型のレコード セット オブジェクトを構築されていない場合、**開く**メンバー関数のテーブルを開くか、クエリを実行して、オブジェクトへのポインターを返します。  
+### <a name="remarks"></a>Remarks  
+ 作成またはレコード セット オブジェクトを取得してにポインターを返すには、このメンバー関数をオーバーライドする必要があります。 ClassWizard で、レコード ビュー クラスを宣言する場合の既定のオーバーライドが書き込まれます。 ClassWizard の既定の実装では、いずれかが存在する場合は、レコード ビューに格納されているレコード セットのポインターを返します。 ClassWizard でユーザーが指定した型のレコード セット オブジェクトを構築されていない場合、`Open`メンバー関数のテーブルを開くか、クエリを実行して、オブジェクトへのポインターを返します。  
   
  詳細と例については、記事を参照してください。[レコード ビュー: レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)です。  
   
@@ -177,7 +177,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  標準コマンド ID 値は次のいずれかです。  
   
 - `ID_RECORD_FIRST` レコード セットの最初のレコードに移動します。  
@@ -191,7 +191,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ### <a name="return-value"></a>戻り値  
  移動が成功した場合は 0 以外。移動要求が拒否された場合は、それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装が、適切な移動のメンバー関数を呼び出す、`CDaoRecordset`レコード ビューに関連付けられているオブジェクト。  
   
  既定では、`OnMove`ユーザーを使用すると、レコード ビューに変更された場合に、データ ソースの現在のレコードを更新します。  
@@ -201,7 +201,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  過去のレコード セットの最後のレコードを移動する場合、レコード ビューを最後のレコードが表示されます。 を越えて移動した最初のレコード場合、レコード ビューは最初のレコードが表示されます。  
   
 > [!CAUTION]
->  呼び出す`OnMove`レコード セットにレコードが存在しない場合、例外をスローします。 適切なユーザー インターフェイス更新ハンドラー関数を呼び出す — **OnUpdateRecordFirst**、 **OnUpdateRecordLast**、 **OnUpdateRecordNext**、または**OnUpdateRecordPrev** : 対応する前に、レコード セットがすべてのレコードを持つかどうかを決定する操作を移動します。  
+>  呼び出す`OnMove`レコード セットにレコードが存在しない場合、例外をスローします。 適切なユーザー インターフェイス更新ハンドラー関数を呼び出す — `OnUpdateRecordFirst`、 `OnUpdateRecordLast`、 `OnUpdateRecordNext`、または`OnUpdateRecordPrev`: 対応する前に、レコード セットがすべてのレコードを持つかどうかを決定する操作を移動します。  
   
 ## <a name="see-also"></a>関連項目  
  [CFormView クラス](../../mfc/reference/cformview-class.md)   

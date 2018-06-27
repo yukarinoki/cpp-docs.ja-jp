@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcf6fd613231567cbb54b95c8be924919d93269
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e232c363da4c9bbaf7e049551f9e2915671098c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357729"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957443"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 Windows のボタン コントロールの機能が用意されています。  
@@ -146,16 +146,16 @@ class CButton : public CWnd
 |[CButton::SetState](#setstate)|ボタン コントロールの強調表示の状態を設定します。|  
 |[CButton::SetTextMargin](#settextmargin)|ボタン コントロールのテキストの余白を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ボタン コントロールは、オンとオフのクリックして可能な小さな四角形の子ウィンドウです。 ボタンは、1 人またはグループに使用することができますとラベルを付けることができますか、またはテキストなしで表示されます。 ボタンは、ユーザーがクリックしたときに通常の外観を変更します。  
   
  一般的なボタンは、チェック ボックス、ラジオ ボタンとプッシュ ボタンです。 A`CButton`オブジェクトは、次のいずれかになることができますによると、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)によって初期化時に指定された、[作成](#create)メンバー関数。  
   
  さらに、 [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md)から派生したクラス`CButton`ボタン コントロールのラベルがテキストではなくビットマップ イメージの作成をサポートします。 A`CBitmapButton`ボタンの下、重点を置いて、および状態を無効になっているは、個別のビットマップを持つことができます。  
   
- ダイアログ テンプレートから、またはコードで直接、ボタン コントロールを作成できます。 どちらの場合、コンス トラクターを呼び出して最初`CButton`構築するために、`CButton`オブジェクトです。 まず、**作成**、ウィンドウを作成するメンバー関数は、コントロールのボタンをクリックし、添付、`CButton`オブジェクト。  
+ ダイアログ テンプレートから、またはコードで直接、ボタン コントロールを作成できます。 どちらの場合、コンス トラクターを呼び出して最初`CButton`構築するために、`CButton`オブジェクトです。 まず、 `Create` 、ウィンドウを作成するメンバー関数は、コントロールのボタンをクリックし、添付、`CButton`オブジェクト。  
   
- 派生したクラスで、1 つプロセスは、構築`CButton`です。 呼び出しと派生クラスのコンス トラクターを記述**作成**から、コンス トラクター内で。  
+ 派生したクラスで、1 つプロセスは、構築`CButton`です。 呼び出しと派生クラスのコンス トラクターを記述`Create`から、コンス トラクター内で。  
   
  Windows のボタン コントロールからその親に送信される通知メッセージを処理する場合 (通常から派生したクラス[CDialog](../../mfc/reference/cdialog-class.md))、メッセージ マップ エントリとメッセージ ハンドラー メンバー関数を各メッセージの親クラスに追加します。  
   
@@ -189,7 +189,7 @@ class CButton : public CWnd
   
  `CButton`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cbutton"></a>  CButton::CButton  
@@ -215,26 +215,26 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszCaption`  
+ *lpszCaption*  
  ボタン コントロールのテキストを指定します。  
   
- `dwStyle`  
+ *dwStyle*  
  ボタン コントロールのスタイルを指定します。 任意の組み合わせを適用[ボタン スタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)ボタンにします。  
   
- `rect`  
+ *rect*  
  ボタン コントロールのサイズと位置を指定します。 いずれかになります、`CRect`オブジェクトまたは`RECT`構造体。  
   
- `pParentWnd`  
+ *pParentWnd*  
  通常、ボタン コントロールの親ウィンドウを指定します、`CDialog`です。 なければなりません**NULL**です。  
   
- `nID`  
+ *nID*  
  ボタン コントロールの ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CButton` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出す**作成**、Windows ボタン コントロールを作成しにアタッチする、`CButton`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CButton` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出す`Create`、Windows ボタン コントロールを作成しにアタッチする、`CButton`オブジェクト。  
   
  場合、 **WS_VISIBLE**スタイルが与えられると、Windows は、ボタン コントロールをアクティブ化し、ボタンを表示するために必要なすべてのメッセージを送信します。  
   
@@ -261,11 +261,11 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Long ポインター、 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)構造体。 構造体には、描画される項目および必要な図面の種類に関する情報が含まれています。  
   
-### <a name="remarks"></a>コメント  
- なオーナー描画ボタンが、 **BS_OWNERDRAW**セットのスタイルを設定します。 オーナー描画の描画を実装するには、このメンバー関数をオーバーライド`CButton`オブジェクト。 アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります`lpDrawItemStruct`関数はメンバーの前に終了します。  
+### <a name="remarks"></a>Remarks  
+ なオーナー描画ボタンが、 **BS_OWNERDRAW**セットのスタイルを設定します。 オーナー描画の描画を実装するには、このメンバー関数をオーバーライド`CButton`オブジェクト。 アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります*lpDrawItemStruct*関数はメンバーの前に終了します。  
   
  参照してください、[うち](../../mfc/reference/styles-used-by-mfc.md#button-styles)値のスタイルを設定します。  
   
@@ -359,7 +359,7 @@ BOOL GetIdealSize(SIZE* psize);
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 **BCM_GETIDEALSIZE**メッセージ、」の説明に従って、[ボタン](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。  
   
 ##  <a name="getimagelist"></a>  CButton::GetImageList  
@@ -370,13 +370,13 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  イメージ リストへのポインター、`CButton`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 **BCM_GETIMAGELIST**メッセージ、」の説明に従って、[ボタン](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。  
   
 ##  <a name="getnote"></a>  CButton::GetNote  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[出力] `lpszNote`|呼び出し元が割り当てと解放を担当する、バッファーへのポインター。 場合は、戻り値は`true`バッファーには、それ以外の現在のコマンド リンク コントロールに関連付けられている注釈のテキストが含まれています、バッファーは変更されません。|  
-|[入力、出力] `cchNote`|符号なし整数の変数へのポインター。<br /><br /> 変数がで指定したバッファーのサイズを含むこのメソッドが呼び出されたときに、`lpszNote`パラメーター。<br /><br /> このメソッドが返す場合、戻り値が場合`true`変数には、現在のコマンド リンク コントロールに関連付けられている注釈のサイズが含まれています。 場合は、戻り値は`false`変数には、メモの格納に必要なバッファー サイズが含まれています。|  
+|[out]*lpszNote*|呼び出し元が割り当てと解放を担当する、バッファーへのポインター。 場合は、戻り値は`true`バッファーには、それ以外の現在のコマンド リンク コントロールに関連付けられている注釈のテキストが含まれています、バッファーは変更されません。|  
+|[入力、出力].*cchNote*|符号なし整数の変数へのポインター。<br /><br /> 変数がで指定したバッファーのサイズを含むこのメソッドが呼び出されたときに、 *lpszNote*パラメーター。<br /><br /> このメソッドが返す場合、戻り値が場合`true`変数には、現在のコマンド リンク コントロールに関連付けられている注釈のサイズが含まれています。 場合は、戻り値は`false`変数には、メモの格納に必要なバッファー サイズが含まれています。|  
   
 ### <a name="return-value"></a>戻り値  
  最初のオーバー ロード、 [CString](../../atl-mfc-shared/using-cstring.md)を現在のコマンド リンク コントロールに関連付けられているメモのテキストを含むオブジェクト。  
@@ -404,7 +404,7 @@ BOOL GetNote(
   
  2 番目のオーバー ロードで`true`このメソッドが成功した、それ以外の場合`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_COMMANDLINK`または`BS_DEFCOMMANDLINK`です。  
   
  このメソッドは、送信、 [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) Windows SDK で説明するメッセージ。  
@@ -419,7 +419,7 @@ UINT GetNoteLength() const;
 ### <a name="return-value"></a>戻り値  
  現在のコマンド リンク制御用の 16 ビット Unicode 文字で、メモのテキストの長さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_COMMANDLINK`または`BS_DEFCOMMANDLINK`です。  
   
  このメソッドは、送信、 [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) Windows SDK で説明するメッセージ。  
@@ -434,7 +434,7 @@ TCHAR GetSplitGlyph() const;
 ### <a name="return-value"></a>戻り値  
  現在の分割ボタン コントロールに関連付けられたグリフの文字。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  グリフは、特定のフォントの文字の物理的に表したものです。 たとえば、分割ボタン コントロールは、チェック マークの Unicode 文字のグリフで装飾できます可能性があります (u+2713)。  
   
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
@@ -451,7 +451,7 @@ CImageList* GetSplitImageList() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
  このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_IMAGE`フラグ、および、構造体送信、 [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)記載されているメッセージwindows SDK。 このメソッドは、イメージの一覧から取得メッセージの関数が戻るとき、`himlGlyph`構造体のメンバーです。  
@@ -467,12 +467,12 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[出力] `pInfo`|ポインター、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)現在の分割ボタン コントロールに関する情報を受け取る構造体。 呼び出し元は、構造体の割り当てをします。|  
+|[out]*pInfo*|ポインター、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)現在の分割ボタン コントロールに関する情報を受け取る構造体。 呼び出し元は、構造体の割り当てをします。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
  このメソッドは、送信、 [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK で説明するメッセージ。  
@@ -488,12 +488,12 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[出力] `pSize`|ポインター、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)四角形の説明を受け取る。|  
+|[out]*pSize*|ポインター、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)四角形の説明を受け取る。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
  分割ボタン コントロールを展開すると、リスト コントロールのページャー コントロールなどのドロップダウン コンポーネントを表示できます。 このメソッドは、ドロップダウンのコンポーネントを含む外接する四角形を取得します。  
@@ -510,7 +510,7 @@ UINT GetSplitStyle() const;
 ### <a name="return-value"></a>戻り値  
  分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、`uSplitStyle`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
  分割ボタンのスタイルは、配置、縦横比、および Windows が分割ボタン アイコンを描画するため、グラフィカルな形式を指定します。  
@@ -535,7 +535,7 @@ UINT GetState() const;
 |`BST_PUSHED`|0x0004|ボタン コントロールをクリックします。|  
 |`BST_FOCUS`|0x0008|ボタン コントロールにフォーカスが移動するとします。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン コントロール、`BS_3STATE`または`BS_AUTO3STATE`ボタンのスタイルを不定状態の名前は 3 番目の状態を持つチェック ボックスを作成します。 不確定な状態では、このチェック ボックスがオンでもオンになっていないことを示します。  
   
 ### <a name="example"></a>例  
@@ -549,16 +549,16 @@ BOOL GetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pmargin`  
+ *pmargin*  
  テキストの余白を指すポインター、`CButton`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  テキストの余白を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 **BCM_GETTEXTMARGIN**メッセージ、」の説明に従って、[ボタン](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。  
   
 ##  <a name="setbitmap"></a>  CButton::SetBitmap  
@@ -569,13 +569,13 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hBitmap`  
+ *hBitmap*  
  ビットマップのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  以前、ボタンに関連付けられているビットマップのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ビットマップは、既定で中央揃えボタンの表面に自動的に配置されます。 ビットマップが大きすぎる、ボタンのいずれかの側クリップされます。 次のように、他の配置オプションを選択できます。  
   
 - **BS_TOP**  
@@ -607,13 +607,13 @@ void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nStyle`  
+ *nStyle*  
  指定します、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)です。  
   
- `bRedraw`  
+ *bRedraw*  
  ボタンを再描画されるかどうかを指定します。 0 以外の値には、ボタンが再描画します。 値 0 は、ボタンを再描画されません。 ボタンは既定では再描画されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、`GetButtonStyle`ボタンのスタイルを取得します。 完全なボタンのスタイルの下位ワードは、ボタンに固有のスタイルです。  
   
 ### <a name="example"></a>例  
@@ -627,7 +627,7 @@ void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCheck`  
+ *nCheck*  
  チェックの状態を指定します。 このパラメーターには、次のいずれかを指定できます。  
   
 |[値]|説明|  
@@ -636,7 +636,7 @@ void SetCheck(int nCheck);
 |**BST_CHECKED**|チェック ボタンの状態を設定します。|  
 |**BST_INDETERMINATE**|不確定なにボタンの状態を設定します。 この値は、ボタンがある場合のみ使用できます、 **BS_3STATE**または**BS_AUTO3STATE**スタイル。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、プッシュ ボタンに影響を与えません。  
   
 ### <a name="example"></a>例  
@@ -650,13 +650,13 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hCursor`  
+ *hCursor*  
  カーソルのハンドルです。  
   
 ### <a name="return-value"></a>戻り値  
  以前、ボタンに関連付けられているカーソルのハンドルです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  カーソルは既定で中央揃えボタンの表面に自動的に配置されます。 カーソルが大きすぎる、ボタンのいずれかの側クリップされます。 次のように、他の配置オプションを選択できます。  
   
 - **BS_TOP**  
@@ -687,18 +687,18 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `fDropDown`|`true` 設定する`BST_DROPDOWNPUSHED`状態です。 それ以外の場合、`false`です。|  
+|[in]*fDropDown*|`true` 設定する`BST_DROPDOWNPUSHED`状態です。 それ以外の場合、`false`です。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  分割ボタン コントロールは、スタイルの`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`ボタンとその右側にドロップダウン矢印で構成されます。 詳細については、次を参照してください。[ボタン スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775951)です。 通常、ドロップ ダウン状態は、ユーザーがドロップダウン矢印をクリックしたときに設定されます。 コントロールのドロップ ダウン状態をプログラムで設定するのにには、このメソッドを使用します。 ドロップダウンの矢印は、状態を示す網掛けが描画されます。  
   
  このメソッドは、送信、 [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
- 次のコード例は、変数を定義`m_splitButton`、それが分割ボタン コントロールをプログラムでアクセスするために使用します。 次の例では、この変数を使用します。  
+ 次のコード例は、変数を定義*m_splitButton*、それが分割ボタン コントロールをプログラムでアクセスするために使用します。 次の例では、この変数を使用します。  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -723,7 +723,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタンやコマンドのリンク コントロールは、アクションの実行に管理者特権でのセキュリティ アクセス許可を必要とする場合は、コントロールを設定`elevation required`状態です。 その後、Windows では、コントロールのユーザー アカウント制御 (UAC) の盾アイコンが表示されます。 詳細についてを参照してください「のユーザー アカウント制御」 [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)です。  
   
  このメソッドは、送信、 [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) Windows SDK で説明するメッセージ。  
@@ -736,13 +736,13 @@ HICON SetIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hIcon`  
+ *hIcon*  
  アイコンのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  以前、ボタンに関連付けられているアイコンのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アイコンは、既定で中央揃えボタンの表面に自動的に配置されます。 ボタンのアイコンが大きすぎる、いずれかの側クリップされます。 次のように、他の配置オプションを選択できます。  
   
 - **BS_TOP**  
@@ -770,13 +770,13 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pbuttonImagelist`  
+ *pbuttonImagelist*  
  新しいイメージ リストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 **BCM_SETIMAGELIST**メッセージ、」の説明に従って、[ボタン](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。  
   
 ##  <a name="setnote"></a>  CButton::SetNote  
@@ -790,18 +790,18 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `lpszNote`|コマンド リンク コントロールの注釈テキストとして設定されている Unicode 文字列へのポインター。|  
+|[in]*lpszNote*|コマンド リンク コントロールの注釈テキストとして設定されている Unicode 文字列へのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_COMMANDLINK`または`BS_DEFCOMMANDLINK`です。  
   
  このメソッドは、送信、 [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
- 次のコード例は、変数を定義`m_cmdLink`、つまりコマンド リンク コントロールをプログラムでアクセスするために使用します。 次の例では、この変数を使用します。  
+ 次のコード例は、変数を定義*m_cmdLink*、つまりコマンド リンク コントロールをプログラムでアクセスするために使用します。 次の例では、この変数を使用します。  
   
  [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
@@ -821,15 +821,15 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `chGlyph`|分割ボタンのドロップダウン矢印として使用するグリフを指定する文字。|  
+|[in]*chGlyph*|分割ボタンのドロップダウン矢印として使用するグリフを指定する文字。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタンのスタイルを持つコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
- グリフは、特定のフォントの文字の物理的に表したものです。 `chGlyph`パラメーターは、グリフには使用されませんが、グリフのシステム定義のセットからのグリフを選択する代わりに使用します。 既定のドロップダウン矢印グリフは文字 '6' で指定され、黒いダウン-三角形 (U +0 25BC) の Unicode 文字のようになります。  
+ グリフは、特定のフォントの文字の物理的に表したものです。 *ChGlyph*パラメーターは、グリフには使用されませんが、グリフのシステム定義のセットからのグリフを選択する代わりに使用します。 既定のドロップダウン矢印グリフは文字 '6' で指定され、黒いダウン-三角形 (U +0 25BC) の Unicode 文字のようになります。  
   
  このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_GLYPH`フラグと`himlGlyph`を持つメンバー、`chGlyph`パラメーター、および、構造体、送信[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK に記載されているメッセージです。  
   
@@ -844,15 +844,15 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pSplitImageList`|ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)現在の分割ボタン コントロールに代入するオブジェクト。|  
+|[in]*pSplitImageList*|ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)現在の分割ボタン コントロールに代入するオブジェクト。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
- このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_IMAGE`フラグと`himlGlyph`を持つメンバー、`pSplitImageList`パラメーター、および、構造体、送信[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK に記載されているメッセージです。  
+ このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_IMAGE`フラグと`himlGlyph`を持つメンバー、 *pSplitImageList*パラメーター、し、その構造を送信、 [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK に記載されているメッセージです。  
   
 ##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
  現在の分割ボタン コントロールの描画方法を決定するパラメーターを指定します。  
@@ -865,12 +865,12 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pInfo`|ポインター、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)を現在の分割ボタン コントロールを定義します。|  
+|[in]*pInfo*|ポインター、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)を現在の分割ボタン コントロールを定義します。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
  このメソッドは、送信、 [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) Windows SDK で説明するメッセージ。  
@@ -896,17 +896,17 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pSize`|ポインター、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)外接する四角形を記述する構造体。|  
+|[in]*pSize*|ポインター、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)外接する四角形を記述する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
  分割ボタン コントロールを展開すると、リスト コントロールのページャー コントロールなどのドロップダウン コンポーネントを表示できます。 このメソッドは、ドロップダウンのコンポーネントを含む外接する四角形のサイズを指定します。  
   
- このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_SIZE`フラグと`size`を持つメンバー、`pSize`パラメーター、および、構造体、送信[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK に記載されているメッセージです。  
+ このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_SIZE`フラグと`size`を持つメンバー、 *pSize*パラメーター、し送信します。構造体、 [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK に記載されているメッセージです。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義`m_splitButton`、それが分割ボタン コントロールをプログラムでアクセスするために使用します。 次の例では、この変数を使用します。  
@@ -929,17 +929,17 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `uSplitStyle`|分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、`uSplitStyle`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体。|  
+|[in]*uSplitStyle*|分割ボタンのスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、`uSplitStyle`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン スタイルをコントロールでのみこのメソッドを使用して`BS_SPLITBUTTON`または`BS_DEFSPLITBUTTON`です。  
   
  分割ボタンのスタイルは、配置、縦横比、および Windows が分割ボタン アイコンを描画するため、グラフィカルな形式を指定します。 詳細については、次を参照してください。、`uSplitStyle`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体。  
   
- このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_STYLE`フラグと`uSplitStyle`を持つメンバー、`uSplitStyle`パラメーター、および、構造体、送信[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK に記載されているメッセージです。  
+ このメソッドは、初期化、`mask`のメンバー、 [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)構造体、`BCSIF_STYLE`フラグと`uSplitStyle`を持つメンバー、 *uSplitStyle*パラメーター、および、送信その構造体、 [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) Windows SDK に記載されているメッセージです。  
   
 ### <a name="example"></a>例  
  次のコード例は、変数を定義`m_splitButton`、それが分割ボタン コントロールをプログラムでアクセスするために使用します。  
@@ -962,7 +962,7 @@ void SetState(BOOL bHighlight);
  *bHighlight*  
  ボタンを強調表示されるかどうかを指定します。 0 以外の値が; ボタンを強調表示します。値 0 は、任意の強調表示を削除します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタン コントロールの外部に影響を強調表示します。 オプション ボタンまたはチェック ボックスのチェックの状態に影響を与えません。  
   
  ユーザーがクリックして、マウスの左ボタンと、ボタン コントロールは自動的に強調表示されます。 マウス ボタンを離したときに削除、強調表示されます。  
@@ -978,13 +978,13 @@ BOOL SetTextMargin(RECT* pmargin);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pmargin`  
+ *pmargin*  
  新しいテキスト マージンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、TRUE を返しますエラー発生時に false を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 **BCM_SETTEXTMARGIN**メッセージ、」の説明に従って、[ボタン](http://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。  
   
 ## <a name="see-also"></a>関連項目  

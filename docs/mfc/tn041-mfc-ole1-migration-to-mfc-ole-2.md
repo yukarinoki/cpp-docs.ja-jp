@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 486fd48a0d77c8c42a958dcb205854928fe00dc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385405"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952451"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>テクニカル ノート 41: MFC/OLE1 から MFC/OLE 2 への移植
 > [!NOTE]
@@ -85,9 +85,9 @@ ms.locfileid: "33385405"
 \oclient\mainview.cpp(288) : error C2664: 'CreateStaticFromClipboard' : cannot convert parameter 1 from 'char [1]' to 'enum ::tagOLERENDER '  
 ```  
   
- 結果のファクトを上記のエラーをすべての**COleClientItem::CreateXXXX** MFC/OLE1 内の関数に必要な項目を表す一意の名前が渡されることです。 これは、基になる OLE API の要件です。 これは、機能は、たとえば OLE 2 では、DDE (名前は、DDE メッセージ交換で使用された) 基になる通信メカニズムとして使用しないため MFC/OLE 2 では必要ありません。 この問題を解決するには削除、 **CreateNewName**への参照がすべてだけでなく機能します。 どのような各 MFC/OLE 関数が受け取るこのバージョンでの呼び出しでカーソルを置き、F1 キーを押すだけで調べる簡単です。  
+ 結果のファクトを上記のエラーをすべての`COleClientItem::CreateXXXX`MFC/OLE1 内の関数に必要な項目を表す一意の名前が渡されることです。 これは、基になる OLE API の要件です。 これは、機能は、たとえば OLE 2 では、DDE (名前は、DDE メッセージ交換で使用された) 基になる通信メカニズムとして使用しないため MFC/OLE 2 では必要ありません。 この問題を解決するには削除、`CreateNewName`への参照がすべてだけでなく機能します。 どのような各 MFC/OLE 関数が受け取るこのバージョンでの呼び出しでカーソルを置き、F1 キーを押すだけで調べる簡単です。  
   
- 大きく異なる別の領域は、OLE 2 クリップボード処理です。 OLE1 とクリップボードを Windows クリップボード Api 操作を使用します。 OLE 2 これは、別のメカニズムです。 MFC/OLE1 Api は、コピーする前に、クリップボードが開いていると見なされます、`COleClientItem`クリップボード オブジェクト。 これは必要なくなりましたなり、すべて MFC/OLE クリップボード操作が失敗します。 依存関係を削除するコードを編集するときに**CreateNewName**Windows のクリップボードを開いたり閉じたりするコードを削除することも必要があります。  
+ 大きく異なる別の領域は、OLE 2 クリップボード処理です。 OLE1 とクリップボードを Windows クリップボード Api 操作を使用します。 OLE 2 これは、別のメカニズムです。 MFC/OLE1 Api は、コピーする前に、クリップボードが開いていると見なされます、`COleClientItem`クリップボード オブジェクト。 これは必要なくなりましたなり、すべて MFC/OLE クリップボード操作が失敗します。 依存関係を削除するコードを編集するときに`CreateNewName`Windows のクリップボードを開いたり閉じたりするコードを削除することも必要があります。  
   
 ```  
 \oclient\mainview.cpp(332) : error C2065: 'AfxOleInsertDialog' : undeclared identifier  
@@ -96,7 +96,7 @@ ms.locfileid: "33385405"
 \oclient\mainview.cpp(347) : error C2039: 'CreateNewObject' : is not a member of 'CRectItem'  
 ```  
   
- これらのエラーの結果から、 **CMainView::OnInsertObject**ハンドラー。 「オブジェクトの挿入」コマンドの処理は、別の領域で変更された少しです。 この場合は、単に新しい OLE コンテナー アプリケーションに対して AppWizard によって提供される元の実装をマージする最も簡単なは。 実際には、これは、他のアプリケーションを移植するときに適用可能な手法です。 呼び出して「オブジェクトの挿入」ダイアログの表示で MFC/OLE1 **AfxOleInsertDialog**関数。 構築するこのバージョンでは、**インクルード**ダイアログ オブジェクトと呼び出し`DoModal`です。 新しい OLE 項目をさらに、作成、 **CLSID** classname 文字列の代わりにします。 次のように、最終的な結果になります  
+ これらのエラーの結果から、`CMainView::OnInsertObject`ハンドラー。 「オブジェクトの挿入」コマンドの処理は、別の領域で変更された少しです。 この場合は、単に新しい OLE コンテナー アプリケーションに対して AppWizard によって提供される元の実装をマージする最も簡単なは。 実際には、これは、他のアプリケーションを移植するときに適用可能な手法です。 呼び出して「オブジェクトの挿入」ダイアログの表示で MFC/OLE1`AfxOleInsertDialog`関数。 構築するこのバージョンでは、`COleInsertObject`ダイアログ オブジェクトと呼び出し`DoModal`です。 新しい OLE 項目をさらに、作成、 **CLSID** classname 文字列の代わりにします。 次のように、最終的な結果になります  
   
 ```  
 COleInsertDialog dlg;  
@@ -152,14 +152,14 @@ EndWaitCursor();
 > [!NOTE]
 >  新しいオブジェクトの挿入があります、アプリケーションによって異なる)。  
   
- 含める必要も\<afxodlgs.h > の宣言が含まれています、**インクルード**ダイアログ クラスと MFC によって提供される他の標準のダイアログ。  
+ 含める必要も\<afxodlgs.h > の宣言が含まれています、`COleInsertObject`ダイアログ クラスと MFC によって提供される他の標準のダイアログ。  
   
 ```  
 \oclient\mainview.cpp(367) : error C2065: 'OLEVERB_PRIMARY' : undeclared identifier  
 \oclient\mainview.cpp(367) : error C2660: 'DoVerb' : function does not take 1 parameters  
 ```  
   
- これらのエラーは、概念的に同じですが、にもかかわらずに OLE 2 で一部の OLE1 定数が変更されているという事実が原因です。 ここでは**例**に変更された`OLEIVERB_PRIMARY`です。 OLE1 と OLE 2 の両方で主動詞は通常、実行されるコンテナーによって、ユーザーが項目をダブルクリックするとします。  
+ これらのエラーは、概念的に同じですが、にもかかわらずに OLE 2 で一部の OLE1 定数が変更されているという事実が原因です。 ここでは`OLEVERB_PRIMARY`に変更された`OLEIVERB_PRIMARY`です。 OLE1 と OLE 2 の両方で主動詞は通常、実行されるコンテナーによって、ユーザーが項目をダブルクリックするとします。  
   
  さらに、`DoVerb`で追加のパラメーターを受け取るようになりました: ビューへのポインター (`CView`*)。 このパラメーターは「ビジュアル編集」(または、インプレース アクティブ化) を実装するのみ使用します。 用今すぐこの時点でこの機能を実装していないために、NULL の場合にそのパラメーターを設定します。  
   
@@ -177,7 +177,7 @@ BOOL CRectItem::CanActivate()
 \oclient\rectitem.cpp(84) : error C2064: term does not evaluate to a function  
 ```  
   
- MFC/OLE1 で**COleClientItem::GetBounds**と**SetBounds**クエリおよび項目の範囲を操作するために使用された (、**左**と**上部**メンバーが 0 では常に)。 MFC/OLE 2 でより直接的でサポートされる`COleClientItem::GetExtent`と`SetExtent`、対処する、**サイズ**または`CSize`代わりにします。  
+ MFC/OLE1 で`COleClientItem::GetBounds`と`SetBounds`クエリおよび項目の範囲を操作するために使用された (、**左**と**上部**メンバーが 0 では常に)。 MFC/OLE 2 でより直接的でサポートされる`COleClientItem::GetExtent`と`SetExtent`、対処する、**サイズ**または`CSize`代わりにします。  
   
  コードを新しい SetItemRectToServer UpdateItemRectFromServer 呼び出しが次のように検索。  
   
@@ -239,14 +239,14 @@ BOOL CRectItem::SetItemRectToServer()
 \oclient\frame.cpp(50) : error C2064: term does not evaluate to a function  
 ```  
   
- コンテナーからサーバーへの呼び出しでは、MFC/OLE1 同期 API が*シミュレーション*OLE1 が多くの場合は本質的に非同期であるため、します。 ユーザーからのコマンドを処理する前に進行中の非同期呼び出しを確認する必要があります。 指定された MFC/OLE1、 **COleClientItem::InWaitForRelease**これを行うための関数。 MFC/OLE 2 でこの必要はありません、CMainFrame で OnCommand の上書きをすべて同時に削除することができます。  
+ コンテナーからサーバーへの呼び出しでは、MFC/OLE1 同期 API が*シミュレーション*OLE1 が多くの場合は本質的に非同期であるため、します。 ユーザーからのコマンドを処理する前に進行中の非同期呼び出しを確認する必要があります。 指定された MFC/OLE1、`COleClientItem::InWaitForRelease`これを行うための関数。 MFC/OLE 2 でこの必要はありません、CMainFrame で OnCommand の上書きをすべて同時に削除することができます。  
   
  この時点で OCLIENT のコンパイルし、リンクします。  
   
 ## <a name="other-necessary-changes"></a>その他の必要な変更  
  いくつかの点を実行しないことが保持する OCLIENT の実行、ただしもあります。 以降ではなく今すぐ問題を解決することをお勧めします。  
   
- OLE ライブラリを初期化するために必要な場合は最初に、です。 これは、呼び出すことで**AfxOleInit**から`InitInstance`:  
+ OLE ライブラリを初期化するために必要な場合は最初に、です。 これは、呼び出すことで`AfxOleInit`から`InitInstance`:  
   
 ```  
 if (!AfxOleInit())  
@@ -282,7 +282,7 @@ Invalidate();
 }  
 ```  
   
- コンテナー アプリケーションでは、MFC/OLE1 からドキュメント クラスの派生**COleClientDoc**です。 MFC/OLE 2 でこのクラスが削除されに置き換えられました`COleDocument`(この新しい組織をやすくコンテナー/サーバー アプリケーションの構築) します。 `#define`マップされる**COleClientDoc**に`COleDocument`OCLIENT など、MFC/OLE 2 への MFC/OLE1 アプリケーションの移植を簡単にします。 提供されない機能の 1 つ`COleDocument`によって指定された**COleClientDoc**標準コマンド メッセージ マップ エントリです。 これは、これを使用しても、そのサーバー アプリケーション`COleDocument`(間接的に) を含まないにこれらのコマンド ハンドラーのオーバーヘッド コンテナー/サーバー アプリケーションでない限り、します。 このため CMainDoc メッセージ マップに、次のエントリを追加する必要があります。  
+ コンテナー アプリケーションでは、MFC/OLE1 からドキュメント クラスの派生`COleClientDoc`です。 MFC/OLE 2 でこのクラスが削除されに置き換えられました`COleDocument`(この新しい組織をやすくコンテナー/サーバー アプリケーションの構築) します。 **#Define**マップされる`COleClientDoc`に`COleDocument`OCLIENT など、MFC/OLE 2 への MFC/OLE1 アプリケーションの移植を簡単にします。 提供されない機能の 1 つ`COleDocument`によって指定された`COleClientDoc`標準コマンド メッセージ マップ エントリです。 これは、これを使用しても、そのサーバー アプリケーション`COleDocument`(間接的に) を含まないにこれらのコマンド ハンドラーのオーバーヘッド コンテナー/サーバー アプリケーションでない限り、します。 このため CMainDoc メッセージ マップに、次のエントリを追加する必要があります。  
   
 ```  
 ON_UPDATE_COMMAND_UI(ID_EDIT_PASTE,
@@ -328,13 +328,13 @@ AddDocTemplate(pTemplate);
   
  インプレース アクティブ化を有効にすることがありますの両方を変更する必要がある、`CView`を派生クラスだけでなく`COleClientItem`行うクラスを派生します。 AppWizard によって提供されるすべてのこれらのオーバーライドおよび実装の大部分が既定の AppWizard アプリケーションから直接取得されます。  
   
- このポートの最初の手順では、インプレース アクティブ化がオーバーライドする完全によって無効に`COleClientItem::CanActivate`です。 インプレース アクティブ化を許可するには、この上書きを削除してください。 さらに、NULL は、すべての呼び出しに渡された`DoVerb`(はそのうち 2 つ)、ビューを提供することはのみが、インプレース アクティブ化に必要なためです。 適切なビューを通過する必要が、インプレース アクティブ化を完全に実装するには、`DoVerb`呼び出します。 これらの呼び出しのいずれかが**CMainView::OnInsertObject**:  
+ このポートの最初の手順では、インプレース アクティブ化がオーバーライドする完全によって無効に`COleClientItem::CanActivate`です。 インプレース アクティブ化を許可するには、この上書きを削除してください。 さらに、NULL は、すべての呼び出しに渡された`DoVerb`(はそのうち 2 つ)、ビューを提供することはのみが、インプレース アクティブ化に必要なためです。 適切なビューを通過する必要が、インプレース アクティブ化を完全に実装するには、`DoVerb`呼び出します。 これらの呼び出しのいずれかが`CMainView::OnInsertObject`:  
   
 ```  
 pItem->DoVerb(OLEIVERB_SHOW, this);
 ```  
   
- 他にも**もう 1 つ**:  
+ 他にも`CMainView::OnLButtonDblClk`:  
   
 ```  
 m_pSelection->DoVerb(OLEIVERB_PRIMARY, this);
@@ -389,7 +389,7 @@ ASSERT(GetDocument()->GetInPlaceActiveItem(this) == NULL);
 }  
 ```  
   
- ユーザーがアイテムの外側をクリックするケースを処理するための先頭に次のコードを追加する**ときの処理**:  
+ ユーザーがアイテムの外側をクリックするケースを処理するための先頭に次のコードを追加する`CMainView::SetSelection`:  
   
 ```  
 if (pNewSel != m_pSelection || pNewSel == NULL)  
@@ -468,7 +468,7 @@ void CMainView::OnSize(UINT nType,
   
  この最初のエラーに大きな問題を示して、`InitInstance`サーバー用の関数。 OLE サーバーに必要な初期化は、MFC/OLE1 アプリケーションを実行していることをする必要があります、最も大きな変更のいずれかで、可能性があります。 最もよい方法は、AppWizard が OLE サーバーの作成を確認し、適切なコードを変更します。 ここでは、点に注意してください。  
   
- 呼び出して OLE ライブラリを初期化する必要がある**AfxOleInit**  
+ 呼び出して OLE ライブラリを初期化する必要があります。 `AfxOleInit`  
   
  サーバーのリソース ハンドルとでは設定できないランタイム クラス情報を設定するドキュメント テンプレート オブジェクトの SetServerInfo を呼び出して、`CDocTemplate`コンス トラクターです。  
   
@@ -573,7 +573,7 @@ RegisterShellFileTypes();
   
  上記のコードが、次のように新しいリソース ID IDR_HIERSVRTYPE_SRVR_EMB を指すことがわかります。 これは、別のコンテナーに埋め込まれているドキュメントを編集する際に使用するメニュー リソースです。 MFC/OLE1 埋め込みアイテムの編集に固有のメニュー項目がその場で変更されました。 ファイル ベースのドキュメントを編集する代わりに埋め込みアイテムの編集時に、まったく別のメニュー構造を使用するとは 2 つのモードを別のユーザー インターフェイスを提供するより簡単です。 わかる後で、埋め込みオブジェクトには、一括編集するときに、まったく別のメニュー リソースが使用されます。  
   
- このリソースを作成するには、リソース スクリプトを Visual C に読み込むし、既存の IDR_HIERSVRTYPE メニュー リソースをコピーします。 (これは、AppWizard を使用する同じ名前付け規則) IDR_HIERSVRTYPE_SRVR_EMB に新しいリソースの名前を変更します。 次に「ファイルの更新」に「ファイルの保存」を変更します。コマンド ID を付けます**ID_FILE_UPDATE**です。 "ファイルのコピーを付けて保存する";「付けて」変更もコマンド ID を付けます**ID_FILE_SAVE_COPY_AS**です。 フレームワークは、これらのコマンドの両方の実装を提供します。  
+ このリソースを作成するには、リソース スクリプトを Visual C に読み込むし、既存の IDR_HIERSVRTYPE メニュー リソースをコピーします。 (これは、AppWizard を使用する同じ名前付け規則) IDR_HIERSVRTYPE_SRVR_EMB に新しいリソースの名前を変更します。 次に「ファイルの更新」に「ファイルの保存」を変更します。コマンド ID ID_FILE_UPDATE を付けます。 "ファイルのコピーを付けて保存する";「付けて」変更もコマンド ID ID_FILE_SAVE_COPY_AS を付けます。 フレームワークは、これらのコマンドの両方の実装を提供します。  
   
 ```  
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations  
@@ -583,20 +583,20 @@ RegisterShellFileTypes();
 \hiersvr\svritem.h(60) : error C2501: 'OnSetData' : missing decl-specifiers  
 ```  
   
- オーバーライドによるエラーの数がある`OnSetData`を参照しているため、 **OLESTATUS**型です。 **OLESTATUS** OLE1 にエラーが返される方法でした。 これは、動作が変更を`HRESULT`OLE 2 で MFC が通常に変換しますが、`HRESULT`に、`COleException`エラーを含むです。 ここでは特定のオーバーライド`OnSetData`を行うには最も簡単な方法はそれを削除するために必要がなくなりました。  
+ オーバーライドによるエラーの数がある`OnSetData`を参照しているため、 **OLESTATUS**型です。 **OLESTATUS** OLE1 にエラーが返される方法でした。 これは、動作が変更を**HRESULT** OLE 2 で MFC が通常に変換しますが、 **HRESULT**に、`COleException`エラーを含むです。 ここでは特定のオーバーライド`OnSetData`を行うには最も簡単な方法はそれを削除するために必要がなくなりました。  
   
 ```  
 \hiersvr\svritem.cpp(30) : error C2660: 'COleServerItem::COleServerItem' : function does not take 1 parameters  
 ```  
   
- `COleServerItem`コンス トラクターは、余分な 'BOOL' パラメーターを受け取ります。 このフラグは、上のメモリ管理の方法を決定、`COleServerItem`オブジェクト。 TRUE に設定することは、によって、フレームワークではこれらのオブジェクトのメモリ管理を行います。-必要でなくなったときに、それらを削除します。 HIERSVR を使用して**よう**(から派生した`COleServerItem`) ため、このフラグを FALSE に設定をそのネイティブのデータの一部としてオブジェクト。 Hiersvr の各サーバーのアイテムが削除されたときを判断します。  
+ `COleServerItem`コンス トラクターは、余分な 'BOOL' パラメーターを受け取ります。 このフラグは、上のメモリ管理の方法を決定、`COleServerItem`オブジェクト。 TRUE に設定することは、によって、フレームワークではこれらのオブジェクトのメモリ管理を行います。-必要でなくなったときに、それらを削除します。 HIERSVR を使用して`CServerItem`(から派生した`COleServerItem`) ため、このフラグを FALSE に設定をそのネイティブのデータの一部としてオブジェクト。 Hiersvr の各サーバーのアイテムが削除されたときを判断します。  
   
 ```  
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class  
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class  
 ```  
   
- これらのエラーがあるようにオーバーライドされていない一部の ' 純粋仮想関数。 ほとんどの場合これは OnDraw のパラメーター リストが変更されたというにより発生します。 このエラーを解決するには、次のように変更します。**修正**次のように (およびに宣言)。  
+ これらのエラーがあるようにオーバーライドされていない一部の ' 純粋仮想関数。 ほとんどの場合これは OnDraw のパラメーター リストが変更されたというにより発生します。 このエラーを解決するには、次のように変更します。`CServerItem::OnDraw`次のように (およびに宣言)。  
   
 ```  
 BOOL CServerItem::OnDraw(CDC* pDC,
@@ -634,7 +634,7 @@ return TRUE;
     int)__far const ' : cannot convert parameter 1 from 'int __far *' to 'struct ::tagPOINT __far *'  
 ```  
   
- CServerItem::CalcNodeSize 関数では、アイテムのサイズに変換されます**HIMETRIC**で保存され**m_rectBounds**です。 記載されていない '**m_rectBounds**' のメンバー`COleServerItem`存在しません (これは部分的に置き換えられました`m_sizeExtent`、OLE 2 でこのメンバーよりも若干異なる、使用法が**m_rectBounds**OLE1 ででした)。 設定ではなく、 **HIMETRIC**サイズこのメンバー変数に、それが返すされます。 この戻り値が使用される`OnGetExtent`、以前に実装されています。  
+ CServerItem::CalcNodeSize 関数では、アイテムのサイズに変換されます**HIMETRIC**で保存され*m_rectBounds*です。 記載されていない '*m_rectBounds*' のメンバー`COleServerItem`存在しません (これは部分的に置き換えられました*です*、OLE 2 でこのメンバーは、よりも若干異なる、使用法が*m_rectBounds* OLE1 ででした)。 設定ではなく、 **HIMETRIC**サイズこのメンバー変数に、それが返すされます。 この戻り値が使用される`OnGetExtent`、以前に実装されています。  
   
 ```  
 CSize CServerItem::CalcNodeSize()  
@@ -660,7 +660,7 @@ CSize CServerItem::CalcNodeSize()
 }  
 ```  
   
- ようもオーバーライド**COleServerItem::OnGetTextData**です。 この関数は、MFC/OLE 残されているし、別のメカニズムは置き換えられます。 MFC 3.0 バージョンの MFC OLE サンプル[HIERSVR](../visual-cpp-samples.md)オーバーライドすることでこの機能を実装して`COleServerItem::OnRenderFileData`です。 OnGetTextData オーバーライドを削除することができますので、この機能はこの基本的なポートの重要ではありません。  
+ ようもオーバーライド`COleServerItem::OnGetTextData`です。 この関数は、MFC/OLE 残されているし、別のメカニズムは置き換えられます。 MFC 3.0 バージョンの MFC OLE サンプル[HIERSVR](../visual-cpp-samples.md)オーバーライドすることでこの機能を実装して`COleServerItem::OnRenderFileData`です。 OnGetTextData オーバーライドを削除することができますので、この機能はこの基本的なポートの重要ではありません。  
   
  多数のエラー svritem.cpp で対処していないことがあります。 「現実の」エラーではありません-以前のエラーが原因で、エラーのみです。  
   
@@ -729,7 +729,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```  
   
- 参照に注意してください**ここ**です。 サーバーが、インプレース アクティブ化の場合は、メイン ウィンドウがあると m_pMainWnd を設定するが通常表示されていません。 さらに、このウィンドウを指す、*メイン*アプリケーションのウィンドウで、サーバーは完全なときに表示される MDI フレーム ウィンドウを開く、またはスタンドアロンで実行します。 アクティブなフレーム ウィンドウには参照されません-ときに、インプレース アクティブ化は、フレーム ウィンドウから派生された`COleIPFrameWnd`です。 一括編集するには、このバージョンの MFC は、新しい関数を追加するときにも正しいのアクティブなウィンドウを取得する`AfxGetMainWnd`です。 一般に、この関数の代わりを使用する必要があります**ここ**です。 このコードは、次のように変更する必要があります。  
+ 参照に注意してください *`AfxGetApp()->m_pMainWnd*`です。 サーバーが、インプレース アクティブ化の場合は、メイン ウィンドウがあると m_pMainWnd を設定するが通常表示されていません。 さらに、このウィンドウを指す、*メイン*アプリケーションのウィンドウで、サーバーは完全なときに表示される MDI フレーム ウィンドウを開く、またはスタンドアロンで実行します。 アクティブなフレーム ウィンドウには参照されません-ときに、インプレース アクティブ化は、フレーム ウィンドウから派生された`COleIPFrameWnd`です。 一括編集するには、このバージョンの MFC は、新しい関数を追加するときにも正しいのアクティブなウィンドウを取得する`AfxGetMainWnd`です。 一般に、この関数の代わりを使用する必要があります *`AfxGetApp()->m_pMainWnd*`です。 このコードは、次のように変更する必要があります。  
   
 ```  
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,  
@@ -746,7 +746,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   選択範囲としてコンテナー ウィンドウのスクロールが変更されます。  
   
- また、MFC 3.0 で HIERSVR サンプルは、そのサーバーのアイテムのデザインが多少異なりますを使用します。 これは、メモリを節約でき、リンクより柔軟です。 HIERSVR の 2.0 バージョンで、ツリー内の各ノード*は a* `COleServerItem`です。 `COleServerItem` これらのノードごとに必ずしも必要ではよりもオーバーヘッドがもう少しが、`COleServerItem`のアクティブなリンクが必要です。 特定の時点で、非常にアクティブなリンクがあります、ほとんどの場合。 このバージョンの MFC で HIERSVR をより効率的に行うをするには、間のノードから、`COleServerItem`です。 両方 CServerNode と**よう**クラスです。 **よう**(から派生した`COleServerItem`) のみが必要に応じて作成します。 コンテナー (またはコンテナー) は、特定のノードをその特定のリンクを使用してを停止、CServerNode に関連付けられているようオブジェクトは削除されます。 この設計より効率的かつ柔軟です。 その柔軟性は、複数のリンクを選択範囲を処理する場合にします。 複数の選択をサポートして HIERSVR これら 2 つのバージョンのどちらが簡単に追加する (およびそのような選択項目にリンクをサポートする) ことが、MFC 3.0 のバージョンと HIERSVR、ので、`COleServerItem`はネイティブのデータから分離します。  
+ また、MFC 3.0 で HIERSVR サンプルは、そのサーバーのアイテムのデザインが多少異なりますを使用します。 これは、メモリを節約でき、リンクより柔軟です。 HIERSVR の 2.0 バージョンで、ツリー内の各ノード*は a* `COleServerItem`です。 `COleServerItem` これらのノードごとに必ずしも必要ではよりもオーバーヘッドがもう少しが、`COleServerItem`のアクティブなリンクが必要です。 特定の時点で、非常にアクティブなリンクがあります、ほとんどの場合。 このバージョンの MFC で HIERSVR をより効率的に行うをするには、間のノードから、`COleServerItem`です。 両方 CServerNode と`CServerItem`クラスです。 `CServerItem` (から派生した`COleServerItem`) のみが必要に応じて作成します。 コンテナー (またはコンテナー) は、特定のノードをその特定のリンクを使用してを停止、CServerNode に関連付けられているようオブジェクトは削除されます。 この設計より効率的かつ柔軟です。 その柔軟性は、複数のリンクを選択範囲を処理する場合にします。 複数の選択をサポートして HIERSVR これら 2 つのバージョンのどちらが簡単に追加する (およびそのような選択項目にリンクをサポートする) ことが、MFC 3.0 のバージョンと HIERSVR、ので、`COleServerItem`はネイティブのデータから分離します。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   

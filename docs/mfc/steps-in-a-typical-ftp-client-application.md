@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f5a21bd5fa20a40123ce442959125ea62c60d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fe5a55afda9e77db6e8baddd68c09f4250071bb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381125"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951202"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>典型的な FTP クライアント アプリケーションの作成手順
 典型的な FTP クライアント アプリケーションを作成、 [CInternetSession](../mfc/reference/cinternetsession-class.md)と[CFtpConnection](../mfc/reference/cftpconnection-class.md)オブジェクト。 これらの MFC WinInet クラスによって、プロキシの種類の設定; は実際に制御しないように注意してください。IIS では。  
@@ -45,7 +45,7 @@ ms.locfileid: "33381125"
 |サーバー上に新しい FTP ディレクトリを変更します。|使用して[CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory)です。|現在サーバー上に接続しているディレクトリを変更します。|  
 |FTP ディレクトリの最初のファイルを検索します。|使用して[CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile)です。|最初のファイルを検索します。 ファイルが見つからない場合は、FALSE を返します。|  
 |FTP ディレクトリの次のファイルを検索します。|使用して[CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile)です。|次のファイルを検索します。 ファイルが見つからない場合は、FALSE を返します。|  
-|によって検出されたファイルを開く**FindFile**または`FindNextFile`の読み取りまたは書き込み。|使用して[CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile)、によって返されるファイル名を使用して[FindFile](../mfc/reference/cftpfilefind-class.md#findfile)または[FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile)です。|サーバー上の読み取りまたは書き込みのファイルを開きます。 返します、 [CInternetFile](../mfc/reference/cinternetfile-class.md)オブジェクト。|  
+|によって検出されたファイルを開く`FindFile`または`FindNextFile`の読み取りまたは書き込み。|使用して[CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile)、によって返されるファイル名を使用して[FindFile](../mfc/reference/cftpfilefind-class.md#findfile)または[FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile)です。|サーバー上の読み取りまたは書き込みのファイルを開きます。 返します、 [CInternetFile](../mfc/reference/cinternetfile-class.md)オブジェクト。|  
 |読み込まれたり、ファイルに書き込みます。|使用して[細かい](../mfc/reference/cinternetfile-class.md#read)または[CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write)です。|読み取りまたは書き込みを指定した入力バッファーを使用して、バイト数。|  
 |例外を処理する|使用して、 [CInternetException](../mfc/reference/cinternetexception-class.md)クラスです。|すべての一般的なインターネット例外タイプを処理します。|  
 |FTP セッションを終了します。|破棄、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|開いているファイル ハンドルと接続を自動的にクリーンアップします。|  

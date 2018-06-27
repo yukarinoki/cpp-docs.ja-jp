@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc6556cabaa8f1f04a2a53771b495233620e1a14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384453"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954410"
 ---
 # <a name="tn043-rfx-routines"></a>テクニカル ノート 43: RFX ルーチン
 > [!NOTE]
@@ -63,7 +63,7 @@ RFX_Custom(pFX, "Col2",
   
  すべてのレコード セット フィールド exchange ルーチン MFC に用意されているの一覧については、' afxdb.h' を参照してください。  
   
- レコード セットのフィールドの呼び出しは、フィールドのデータを格納するメモリ位置 (通常はデータ メンバー) を登録する方法、 **CMySet**クラスです。  
+ レコード セットのフィールドの呼び出しは、フィールドのデータを格納するメモリ位置 (通常はデータ メンバー) を登録する方法、`CMySet`クラスです。  
   
 ## <a name="notes"></a>メモ  
  レコード セット フィールド関数でのみ機能するように設計されています、`CRecordset`クラスです。 その他の MFC クラスで一般的に使用可能なことはできません。  
@@ -77,23 +77,23 @@ RFX_Custom(pFX, "Col2",
 ## <a name="how-does-it-work"></a>動作方法  
  レコード フィールド エクス チェンジを使用するために、次を理解する必要はありません。 ただし、バック グラウンドでこの処理に役立つについては、独自 exchange プロシージャを記述します。  
   
- `DoFieldExchange`メンバー関数は、非常によく似た、`Serialize`メンバー関数は、-を取得または送信元/送信先クラスのメンバー データに/(ODBC クエリの結果からケース列がこの) 内の外部のフォームからデータを設定します。 `pFX`パラメーターのデータ交換を行うためのコンテキストし、似ています、`CArchive`パラメーターを`CObject::Serialize`です。 `pFX` (、`CFieldExchange`オブジェクト) を持ち、操作に似ていますが、インジケーターはの汎化、`CArchive`方向フラグ。 RFX 関数は、次の操作をサポートする必要があります。  
+ `DoFieldExchange`メンバー関数は、非常によく似た、`Serialize`メンバー関数は、-を取得または送信元/送信先クラスのメンバー データに/(ODBC クエリの結果からケース列がこの) 内の外部のフォームからデータを設定します。 *PFX*パラメーターのデータ交換を行うためのコンテキストし、似ています、 *CArchive*パラメーターを`CObject::Serialize`です。 *PFX* (、`CFieldExchange`オブジェクト) を持ち、操作に似ていますが、インジケーターはの汎化、 *CArchive*方向フラグ。 RFX 関数は、次の操作をサポートする必要があります。  
   
-- **BindParam** — ODBC がパラメーターのデータを取得する場所を示す  
+- `BindParam` — 示す ODBC がパラメーターのデータを取得する必要があります。  
   
-- **BindFieldToColumn** — を示す、ODBC 必要があります取得/預金 outputColumn データ  
+- `BindFieldToColumn` -場所 ODBC 必要があります取得/預金 outputColumn データを指定します。  
   
-- **Fixup** — 設定**CString/CByteArray**の長さは、NULL 状態ビットを設定します。  
+- `Fixup` -設定`CString/CByteArray`の長さは、NULL 状態ビットを設定します。  
   
-- **MarkForAddNew** — マーク ダーティ AddNew を呼び出すので、値が変更された場合  
+- `MarkForAddNew` 、AddNew を呼び出すので、値が変更された場合マークがダーティします。  
   
-- **MarkForUpdate** — マーク ダーティ編集を呼び出すので、値が変更された場合  
+- `MarkForUpdate` 、編集を呼び出すので、値が変更された場合マークがダーティします。  
   
-- **名前**— マークされているフィールドの名前を追加します  
+- `Name` — マークされているフィールドの名前を追加します。  
   
-- **NameValue** — Append"\<列名 > ="マークされているフィールドの  
+- `NameValue` -追加"\<列名 > ="マークされているフィールドの  
   
-- **値**— Append""などの区切り文字の後に、',' または ' '  
+- `Value` -追加""などの区切り文字の後に、',' または ' '  
   
 - `SetFieldDirty` ステータス ビット ダーティ (つまり変更された) フィールドを設定します。  
   
@@ -105,13 +105,13 @@ RFX_Custom(pFX, "Col2",
   
 - `IsFieldNullable` — フィールドが NULL 値を保持できる場合は TRUE を返す  
   
-- **StoreField** : フィールドの値のアーカイブ  
+- `StoreField` : アーカイブ フィールドの値  
   
-- **LoadField** — アーカイブされたフィールドの値を再読み込み  
+- `LoadField` アーカイブ済みのフィールドの値を再読み込み  
   
-- **GetFieldInfoValue** — フィールドに関する全般情報を返す  
+- `GetFieldInfoValue` 、フィールドに関する一般情報は戻り値  
   
-- **GetFieldInfoOrdinal** — フィールドに関する全般情報を返す  
+- `GetFieldInfoOrdinal` 、フィールドに関する一般情報は戻り値  
   
 ## <a name="user-extensions"></a>ユーザーの拡張機能  
  既定の RFX 機構を拡張するいくつかの方法はあります。 できます  
@@ -149,13 +149,13 @@ RFX_Custom(pFX, "Col2",
 ## <a name="writing-a-custom-rfx"></a>カスタム RFX の書き込み  
  独自のカスタム RFX 関数を書き込みは、既存の RFX 関数をコピーして、独自の目的に変更するをお勧めします。 コピーする右の RFX を選択する関数を作成できますはるかに簡単です。 一部の RFX 関数プロパティを持ついくつか一意のコピー先を決定する際に考慮します。  
   
- **RFX_Long と RFX_Int**:  
+ `RFX_Long` `RFX_Int`:  
  これらは、最も単純な RFX 関数です。 データ値が、何らかの解釈を必要はありませんし、データのサイズは固定します。  
   
- **RFX_Single と RFX_Double**:  
+ `RFX_Single` `RFX_Double`:  
  RFX_Long や RFX_Int 上記のようにこれらの関数は、シンプルで行うことができます、既定の実装の広範囲に使用します。 保存されているように、dbrfx.cpp ではなくでただし、浮動小数点ライブラリを明示的に参照されている場合にのみ、ランタイムの読み込みを有効にします。  
   
- **RFX_Text と RFX_Binary**:  
+ `RFX_Text` `RFX_Binary`:  
  これら 2 つの関数は、文字列またはバイナリ情報を保持する静的バッファーを事前に割り当てるし、ODBC SQLBindCol に登録すると値の代わりにこれらのバッファーを登録する必要があります。 このためは、これら 2 つの関数は、特殊なコードの多くがあります。  
   
  `RFX_Date`:  
@@ -164,9 +164,9 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`:  
  これは、唯一のクラス ライブラリのデータを送受信する列のバインドを使用しない RFX 関数です。 この関数は BindFieldToColumn 操作を無視し、代わりに、フィックス アップ操作中に受信 SQL_LONGVARCHAR または SQL_LONGVARBINARY データを保持するためにストレージを割り当てます、割り当てられているストレージに値を取得するための SQLGetData 呼び出しを実行します。 、(NameValue と値の操作) などのデータ ソースへのデータ値を返信する準備が整ったときに、この関数は、ODBC の DATA_AT_EXEC 機能を使用します。 参照してください[テクニカル ノート 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) SQL_LONGVARBINARY データ型と SQL_LONGVARCHARs の操作方法の詳細。  
   
- 独自の書き込み時に**rfx _** 関数の場合、多くの場合、ことができますを使用する**CFieldExchange::Default**特定の操作を実装します。 問題の操作の既定の実装を確認します。 操作を実行する場合とで記述した、 **rfx _** 関数に委任することができます、 **CFieldExchange::Default です。** 呼び出し元の例を確認できます**CFieldExchange::Default** dbrfx.cpp で  
+ 独自の書き込み時に**rfx _** 関数の場合、多くの場合、ことができますを使用する`CFieldExchange::Default`特定の操作を実装します。 問題の操作の既定の実装を確認します。 操作を実行する場合とで記述した、 **rfx _** 関数に委任することができます、`CFieldExchange::Default`です。 呼び出し元の例を確認できます`CFieldExchange::Default`dbrfx.cpp で  
   
- 呼び出すことが重要`IsFieldType`RFX 関数と FALSE を返す場合にすぐに戻り値の開始時にします。 このメカニズムで実行されているパラメーターの操作を保持する**outputColumns**、およびその逆 (呼び出しのような**BindParam**上、 **outputColumn**)。 さらに、`IsFieldType`自動的には、追跡のカウント**outputColumns** (`m_nFields`) とパラメーター (`m_nParams`)。  
+ 呼び出すことが重要`IsFieldType`RFX 関数と FALSE を返す場合にすぐに戻り値の開始時にします。 このメカニズムで実行されているパラメーターの操作を保持する*outputColumns*、およびその逆 (呼び出しのような`BindParam`上、 *outputColumn*)。 さらに、`IsFieldType`自動的には、追跡のカウント*outputColumns* (*m_nFields*) とパラメーター (*m_nParams*)。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   

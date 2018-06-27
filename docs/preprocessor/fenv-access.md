@@ -18,22 +18,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f74f20b1dcb20c1449d21e91181f8bfb17075b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
+ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912967"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963324"
 ---
 # <a name="fenvaccess"></a>fenv_access
 
-無効になります (**で**) か、または有効 (**オフ*) 浮動小数点環境に影響する最適化フラグ テストとモードの変更。
+無効になります (**で**) か、または有効 (**オフ**) 浮動小数点環境に影響する最適化フラグ テストとモードの変更。
 
 ## <a name="syntax"></a>構文
 
 > **#pragma fenv_access (** {**で** | **オフ**} **)**  
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 既定では、 **fenv_access**は**オフ**です。 コンパイラが想定する場合は、コードはアクセスできませんか、または浮動小数点の環境を操作し、多くの浮動小数点コードの最適化を実行できます。 設定**fenv_access**に**で**浮動小数点または環境をテストの状態フラグの例外を除き、制御モード フラグを設定するが、コードにアクセスすることをコンパイラに通知するためにします。 コンパイラでは、コードでは、浮動小数点環境を一貫してアクセスできるように、これらの最適化が無効にします。 
 

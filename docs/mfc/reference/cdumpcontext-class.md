@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367394"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955444"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext クラス
 人が読み取ることができる形式でテキストを出力するために、ストリームに依存した診断出力をサポートします。  
@@ -68,7 +68,7 @@ class CDumpContext
 |----------|-----------------|  
 |[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|ダンプ コンテキストには、変数およびオブジェクトを挿入します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CDumpContext` 基本クラスはありません。  
   
  使用することができます[afxDump](diagnostic-services.md#afxdump)は事前に宣言された`CDumpContext`ダンプのほとんどのオブジェクト。 `afxDump`オブジェクトは、Microsoft Foundation Class ライブラリのデバッグ バージョンでのみ使用できます。  
@@ -79,7 +79,7 @@ class CDumpContext
   
  `CDumpContext`クラスには、オーバー ロードされた挿入 ( **<<**) 演算子を`CObject`オブジェクトのデータをダンプするポインター。 派生オブジェクトのカスタムのダンプ形式を必要がある場合は、オーバーライド[CObject::Dump](../../mfc/reference/cobject-class.md#dump)です。 ほとんどの Microsoft Foundation classes をオーバーライドされた実装`Dump`メンバー関数。  
   
- クラスから派生していない`CObject`など`CString`、 `CTime`、および`CTimeSpan`、独自のオーバー ロードがある`CDumpContext`などの操作を頻繁に使用される構造体としての挿入演算子**CFileStatus**、 `CPoint`、および`CRect`です。  
+ クラスから派生していない`CObject`など`CString`、 `CTime`、および`CTimeSpan`、独自のオーバー ロードがある`CDumpContext`などの操作を頻繁に使用される構造体としての挿入演算子`CFileStatus`、 `CPoint`、および`CRect`.  
   
  使用する場合、 [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)または[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)マクロ、クラスの実装で`CObject::Dump`の名前を出力、 `CObject`-クラスを派生します。 それ以外の場合は印刷`CObject`です。  
   
@@ -94,7 +94,7 @@ class CDumpContext
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CDumpContext`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext  
@@ -105,10 +105,10 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFile`  
+ *pFile*  
  ポインター、`CFile`ダンプの転送先となるオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `afxDump`オブジェクトが自動的に構築します。  
   
  基になる書き込みません`CFile`ダンプに干渉するが、ダンプ コンテキストは、アクティブであるそれ以外の場合は、します。 Windows 環境下で、出力は、Windows の機能を使用して、デバッガーにルーティング**OutputDebugString**です。  
@@ -133,7 +133,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="return-value"></a>戻り値  
  `CDumpContext` オブジェクトへの参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  16 進数として指定した型の項目をダンプする場合は、このメンバー関数を呼び出します。 配列をダンプする[に](#hexdump)です。  
   
 ### <a name="example"></a>例  
@@ -180,13 +180,13 @@ void HexDump(
  *pby*  
  ダンプするバイトを格納するバッファーへのポインター。  
   
- `nBytes`  
+ *nBytes*  
  ダンプするバイト数。  
   
- `nWidth`  
+ *nWidth*  
  1 行 (出力行の幅されません) の最大バイト数にダンプします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  16 進数として、特定の 1 つの項目の種類をダンプを呼び出す[CDumpContext::DumpAsHex](#dumpashex)です。  
   
 ### <a name="example"></a>例  
@@ -222,8 +222,8 @@ CDumpContext& operator<<(HFONT h);
 ### <a name="return-value"></a>戻り値  
  A`CDumpContext`参照します。 戻り値を使用するには、ソース コードの 1 行に複数の挿入を記述できます。  
   
-### <a name="remarks"></a>コメント  
- に対して、挿入演算子がオーバー ロード`CObject`ほとんどのプリミティブ型の場合と同様のポインター。 文字列の内容のダンプに文字結果へのポインターポインター`void`のみアドレスの 16 進数のダンプの結果します。 A **LONGLONG** 64 ビットの符号付き整数のダンプの結果A**使い**64 ビット符号なし整数のダンプになります。  
+### <a name="remarks"></a>Remarks  
+ に対して、挿入演算子がオーバー ロード`CObject`ほとんどのプリミティブ型の場合と同様のポインター。 文字列の内容のダンプに文字結果へのポインターポインター **void**のみアドレスの 16 進数のダンプの結果します。 A **LONGLONG** 64 ビットの符号付き整数のダンプの結果A**使い**64 ビット符号なし整数のダンプになります。  
   
  使用する場合、`IMPLEMENT_DYNAMIC`または`IMPLEMENT_SERIAL`マクロで、クラス、挿入演算子の実装を通じて`CObject::Dump`の名前を印刷、 `CObject`-派生クラス。 それ以外の場合は印刷`CObject`です。 オーバーライドする場合、`Dump`クラスの関数は、16 進数のダンプの代わりに、オブジェクトの内容のわかりやすい出力を提供できます。  
   
@@ -241,7 +241,7 @@ void SetDepth(int nNewDepth);
  *nNewDepth*  
  新しい深さの値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プリミティブ型または単純なをダンプする場合`CObject`し、その他のオブジェクトへのポインターが含まれていない、0 の値で十分です。 0 = すべてのオブジェクトがある深いダンプよりも大きい値では、再帰的にダンプします。 たとえば、コレクションのディープ ダンプは、コレクションのすべての要素がダンプされます。 派生クラスで他の特定の深さの値を使用することがあります。  
   
 > [!NOTE]

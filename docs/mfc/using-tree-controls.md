@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384870"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954596"
 ---
 # <a name="using-tree-controls"></a>ツリー コントロールの使い方
 ツリー コントロールの一般的な使用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 次のパターンします。  
@@ -31,7 +31,7 @@ ms.locfileid: "33384870"
   
 -   呼び出して、コントロールにデータをまとめる、`CTreeCtrl`の[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)データ項目ごとに 1 回の関数。 `InsertItem` 場合など、後でそれを参照する際の項目へのハンドルを返すは、子項目を追加します。 データを初期化するために適切な時刻が含まれる`OnInitDialog`(でのコントロールのダイアログ ボックス) または`OnInitialUpdate`(views) 用です。  
   
--   ユーザー対話するので、コントロールで、さまざまな通知メッセージが送信されます。 各追加することで処理するメッセージを処理する関数を指定することができます、 **ON_NOTIFY_REFLECT**マクロ コントロール ウィンドウのメッセージ マップに追加したりして、`ON_NOTIFY`を親ウィンドウのメッセージ マップ マクロです。 参照してください[ツリー コントロールの通知メッセージ](../mfc/tree-control-notification-messages.md)可能な通知の一覧については、このトピックで後述します。  
+-   ユーザー対話するので、コントロールで、さまざまな通知メッセージが送信されます。 各コントロール ウィンドウのメッセージ マップで ON_NOTIFY_REFLECT マクロを追加するか、ON_NOTIFY マクロを親ウィンドウのメッセージ マップに追加することで処理するメッセージを処理する関数を指定することができます。 参照してください[ツリー コントロールの通知メッセージ](../mfc/tree-control-notification-messages.md)可能な通知の一覧については、このトピックで後述します。  
   
 -   コントロールの値を設定する、さまざまなセットのメンバー関数を呼び出します。 実行できる変更には、インデントを設定し、テキスト、画像、または項目に関連付けられているデータの変更が含まれます。  
   

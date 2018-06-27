@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353696"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957248"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush クラス
 ID2D1LinearGradientBrush のラッパーです。  
@@ -87,7 +87,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|開始およびグラデーションの終点。|  
 |[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|ID2D1LinearGradientBrush へのポインター。|  
@@ -103,7 +103,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
  `CD2DLinearGradientBrush`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush  
@@ -121,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pResource`  
+ *pResource*  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -140,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 構造体の配列へのポインター。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  大きいか gradientStops 配列でグラデーション境界の数を示す 1 に等しい値です。  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  開始およびグラデーションの終点。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  グラデーション境界間の補間を実行する色で領域です。  
   
- `extendMode`  
+ *オン*  
  [0, 1] の正規化された範囲外のグラデーションの動作です。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  不透明度およびブラシの変換へのポインター。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
@@ -172,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRenderTarget`  
+ *pRenderTarget*  
  レンダー ターゲットへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -257,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  ブラシの座標空間内の線形グラデーションの終点の 2 次元座標  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -268,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  ブラシの座標空間内の線形グラデーションの起点の 2 次元座標  
   
 ## <a name="see-also"></a>関連項目  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352607"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953101"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException クラス
 シリアル化の例外条件を表します  
@@ -53,7 +53,7 @@ class CArchiveException : public CException
 |[CArchiveException::m_cause](#m_cause)|例外の原因を示します。|  
 |[CArchiveException::m_strFileName](#m_strfilename)|この例外条件については、ファイルの名前を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CArchiveException`クラスには、例外の原因を示すパブリック データ メンバーが含まれています。  
   
  `CArchiveException` オブジェクトが構築され、内でスロー [CArchive](../../mfc/reference/carchive-class.md)メンバー関数。 これらのオブジェクトのスコープ内にアクセスすることができます、**キャッチ**式。 原因のコードは、オペレーティング システムの依存しません。 例外の処理の詳細については、次を参照してください。[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)です。  
@@ -65,11 +65,11 @@ class CArchiveException : public CException
   
  `CArchiveException`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- 構築、`CArchiveException`の値を格納するオブジェクト`cause`オブジェクトにします。  
+ 構築、`CArchiveException`の値を格納するオブジェクト*原因*オブジェクトにします。  
   
 ```  
 CArchiveException(
@@ -78,13 +78,13 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cause`  
+ *cause*  
  例外の理由を示す列挙型の変数です。 列挙子の一覧は、次を参照してください。、[は](#m_cause)データ メンバーです。  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  名前を含む文字列を指す、`CArchive`例外の原因とします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成することができます、`CArchiveException`グローバル関数のヒープ上のオブジェクトし自分でスローさせたり[AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)を処理します。  
   
  このコンス トラクターを直接使用しないでください。代わりに、グローバル関数を呼び出して`AfxThrowArchiveException`です。  
@@ -96,8 +96,8 @@ CArchiveException(
 int m_cause;  
 ```  
   
-### <a name="remarks"></a>コメント  
- このデータ メンバーは `int` 型のパブリック変数です。 その値は、`CArchiveException`列挙型。 列挙子とその意味は次のとおりです。  
+### <a name="remarks"></a>Remarks  
+ このデータ メンバーは型のパブリック変数**int**です。その値は、`CArchiveException`列挙型。 列挙子とその意味は次のとおりです。  
   
 - **CArchiveException::none**エラーが発生していません。  
   

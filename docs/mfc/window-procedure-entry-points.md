@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1095061cce8ff8f189984aca99a06eb741a46e83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 315526a8f95a1d62ac89f3a76fab492c9b136715
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382074"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956383"
 ---
 # <a name="window-procedure-entry-points"></a>ウィンドウ プロシージャのエントリ ポイント
-MFC のウィンドウ プロシージャ、特殊なウィンドウ プロシージャの実装とモジュールの静的リンクを保護します。 リンケージは、MFC とリンクすると、モジュールと自動的に発生します。 このウィンドウ プロシージャを使用して、`AFX_MANAGE_STATE`マクロを呼び出し、有効なモジュールの状態を正しく設定**プロシージャ**、順番にデリゲートを、`WindowProc`メンバー関数は、適切な`CWnd`-派生。オブジェクト。  
+MFC のウィンドウ プロシージャ、特殊なウィンドウ プロシージャの実装とモジュールの静的リンクを保護します。 リンケージは、MFC とリンクすると、モジュールと自動的に発生します。 このウィンドウの手順では、AFX_MANAGE_STATE マクロを使用して、有効なモジュールの状態が正しく設定し、呼び出す`AfxWndProc`、順番にデリゲートを`WindowProc`メンバー関数は、適切な`CWnd`-派生オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC モジュールの状態データの管理](../mfc/managing-the-state-data-of-mfc-modules.md)

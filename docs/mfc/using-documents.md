@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb5e6ad4cfcc1e14d3b6accc1e5adaf4037669a4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385639"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950215"
 ---
 # <a name="using-documents"></a>ドキュメントの使い方
 連携して、ドキュメントとビュー。  
@@ -44,7 +44,7 @@ ms.locfileid: "33385639"
   
 -   [処理](../mfc/handling-commands-in-the-document.md)ほとんどのアプリケーションのコマンドとメッセージです。  
   
- ドキュメントは、特にデータの管理に関連します。 ドキュメント クラスのメンバー変数に、通常、データを格納します。 ビューでは、これらの変数を使用して、表示用にデータをアクセスし、更新します。 ドキュメントの既定のシリアル化メカニズムでは、ファイルからデータの読み書きを管理します。 ドキュメントは、コマンドを処理できます (Windows ではないメッセージ以外の値が**WM_COMMAND**)。  
+ ドキュメントは、特にデータの管理に関連します。 ドキュメント クラスのメンバー変数に、通常、データを格納します。 ビューでは、これらの変数を使用して、表示用にデータをアクセスし、更新します。 ドキュメントの既定のシリアル化メカニズムでは、ファイルからデータの読み書きを管理します。 ドキュメントは、コマンド (ではない Windows メッセージ WM_COMMAND 以外) を処理することもできます。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351638"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950305"
 ---
 # <a name="bitmap-structure"></a>BITMAP 構造体
 **ビットマップ**構造体は、高さ、幅、色の書式、および論理ビットマップのビット値を定義します。**です。**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  ラスター行数を使用してビットマップの高さを指定します。 高さは 0 より大きい値でなければなりません。  
   
  *bmWidthBytes*  
- 各ラスター行に含まれるバイト数を指定します。 グラフィック デバイス インターフェイス (GDI) は、ビットマップ形式のビット値が整数値 (2 バイト) の配列を形成することを想定するため、この値は偶数であることが必要です。 つまり、 **bmWidthBytes** \* 8 が 16 より大きいか等しい場合に得られる値の倍数にする必要があります、 **bmWidth**メンバーを掛けた、 **bmBitsPixel**メンバー。  
+ 各ラスター行に含まれるバイト数を指定します。 グラフィック デバイス インターフェイス (GDI) は、ビットマップ形式のビット値が整数値 (2 バイト) の配列を形成することを想定するため、この値は偶数であることが必要です。 つまり、 *bmWidthBytes* \* 8 が 16 より大きいか等しい場合に得られる値の倍数にする必要があります、 *bmWidth*メンバーを掛けた、 *bmBitsPixel*メンバー。  
   
  *bmPlanes*  
  ビットマップ内でのカラー プレーンの数を指定します。  
@@ -60,9 +60,9 @@ typedef struct tagBITMAP {  /* bm */
  ピクセルを定義するために必要とされる各プレーンで、隣接するカラー ビット数を指定します。  
   
  *bmBits*  
- ビットマップのビット値が配置されている位置へのポインター。 **BmBits**メンバーは 1 バイト値の配列への long ポインターである必要があります。  
+ ビットマップのビット値が配置されている位置へのポインター。 *BmBits*メンバーは 1 バイト値の配列への long ポインターである必要があります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  現在使用されているビットマップ形式は、モノクロおよびカラーです。 モノクロ ビットマップは、1 ビット、1 プレーンのファイル形式を使用します。 各スキャンは 16 ビットの倍数です。  
   
  モノクロ ビットマップの高さのスキャンが次のように編成された*n*:  
@@ -87,7 +87,7 @@ typedef struct tagBITMAP {  /* bm */
   
  各デバイスには、独自のカラー形式があります。 別に 1 つのデバイスからビットマップを転送するために使用して、 [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)と[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 関数。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** wingdi.h  
   
 ## <a name="see-also"></a>関連項目  

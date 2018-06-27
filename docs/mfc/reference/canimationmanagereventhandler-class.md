@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358259"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955649"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler クラス
 アニメーション マネージャーのステータスの変更時に Animation API によって呼び出されるコールバックを実装します。  
@@ -56,7 +56,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 |[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|アニメーション マネージャーの状態が変わったときに呼び出されます。 (`CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged` をオーバーライドします)。|  
 |[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このイベント ハンドラーが作成され、CAnimationController::EnableAnimationManagerEvent を呼び出すときに IUIAnimationManager::SetManagerEventHandler メソッドに渡されます。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -66,7 +66,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
   
  `CAnimationManagerEventHandler`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="canimationmanagereventhandler"></a>  CAnimationManagerEventHandler::CAnimationManagerEventHandler  
@@ -90,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pAnimationController`  
+ *pAnimationController*  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  出力です。 そのメソッドが成功した場合は、アニメーション マネージャーにステータスの更新を処理する COM オブジェクトへのポインターを格納します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -111,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `newStatus`  
+ *newStatus*  
  新しいステータス。  
   
- `previousStatus`  
+ *previousStatus*  
  以前の状態。  
   
 ### <a name="return-value"></a>戻り値  
@@ -130,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pAnimationController`  
+ *pAnimationController*  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
 ## <a name="see-also"></a>関連項目  

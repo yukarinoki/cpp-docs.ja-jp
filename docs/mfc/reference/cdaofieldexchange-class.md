@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9e65b4880c80f8a4b0d9a192f316b16a92a3e69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368730"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953910"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange クラス
 DAO データベース クラスで使われる DAO レコード フィールド エクスチェンジ (DFX: DAO Record Field eXchange) ルーチンをサポートします。  
@@ -56,7 +56,7 @@ class CDaoFieldExchange
 |[CDaoFieldExchange::m_nOperation](#m_noperation)|レコード セットの現在の呼び出しによって実行される DFX 操作`DoFieldExchange`メンバー関数。|  
 |[CDaoFieldExchange::m_prs](#m_prs)|DFX の操作が実行されているレコード セットへのポインター。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CDaoFieldExchange` 基本クラスはありません。  
   
  カスタム データ型のデータ エクス チェンジ ルーチンを記述する場合は、このクラスを使用してください。それ以外の場合、していない直接このクラスを使用します。 DFX のフィールド データ メンバーの間のデータの交換、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトおよびデータ ソースの現在のレコードの対応するフィールドです。 DFX は、データ ソースから、データ ソースに、双方向で交換を管理します。 参照してください[テクニカル ノート 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)については、カスタム DFX ルーチンを記述します。  
@@ -67,7 +67,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  DAO レコード フィールド エクス (チェンジ DFX) は、ODBC ベースの MFC データベース クラスではレコード フィールド エクス (チェンジ RFX) によく似ています ( `CDatabase`、 `CRecordset`)。 RFX を理解している場合は、使いやすい DFX を検索されます。  
   
- A`CDaoFieldExchange`オブジェクトを提供するコンテキスト情報を必要な dao レコード フィールド エクスを実行します。 `CDaoFieldExchange` オブジェクトは、バインディング パラメーターのフィールド データ メンバーなど、現在のレコードのフィールドでさまざまなフラグを設定するときに、操作の数をサポートします。 DFX 操作によって定義された型のレコード セット クラスのデータ メンバーに対して実行され、 `enum` **FieldType**で`CDaoFieldExchange`です。 考えられる**FieldType**値は。  
+ A`CDaoFieldExchange`オブジェクトを提供するコンテキスト情報を必要な dao レコード フィールド エクスを実行します。 `CDaoFieldExchange` オブジェクトは、バインディング パラメーターのフィールド データ メンバーなど、現在のレコードのフィールドでさまざまなフラグを設定するときに、操作の数をサポートします。 DFX 操作によって定義された型のレコード セット クラスのデータ メンバーに対して実行され、 **enum** **FieldType**で`CDaoFieldExchange`です。 考えられる**FieldType**値は。  
   
 - **CDaoFieldExchange::outputColumn**フィールド データ メンバーにします。  
   
@@ -78,7 +78,7 @@ class CDaoFieldExchange
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CDaoFieldExchange`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation  
@@ -91,7 +91,7 @@ BOOL IsValidOperation();
 ### <a name="return-value"></a>戻り値  
  現在の操作が更新されるフィールドの型に適切な場合は 0 以外の値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  DFX メカニズムによって実行される操作の一部は、可能なフィールドの種類のいずれかにのみ適用されます。 DFX 関数を既存のモデルに従います。  
   
  カスタム DFX ルーチンの作成方法の詳細については、次を参照してください。[テクニカル ノート 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)です。  
@@ -99,7 +99,7 @@ BOOL IsValidOperation();
 ##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation  
  上で実行される操作を識別、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) field exchange オブジェクトに関連付けられているオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CDaoFieldExchange`オブジェクトは、多数のレコード セットの DFX 操作を別のコンテキストを提供します。  
   
 > [!NOTE]
@@ -118,7 +118,7 @@ BOOL IsValidOperation();
 |**StoreField**|現在のレコードをキャッシュに保存します。|  
 |**LoadField**|レコード セット内のキャッシュされたデータ メンバー変数を復元します。|  
 |**FreeCache**|レコード セット内の「ダーティ」フィールドを確認するためのキャッシュを解放します。|  
-|`SetFieldNull`|フィールドの状態を Null とする値に設定**PSEUDONULL**です。|  
+|**場合**|フィールドの状態を Null とする値に設定**PSEUDONULL**です。|  
 |**MarkForAddNew**|マークされていない場合、フィールドの「ダーティ」 **PSEUDONULL**です。|  
 |**MarkForEdit**|マークのフィールド「ダーティ」キャッシュと一致しない場合。|  
 |**SetDirtyField**|フィールド「ダーティ」としてマークされている値の設定|  
@@ -128,7 +128,7 @@ BOOL IsValidOperation();
 ##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs  
  ポインターが含まれています、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトに関連付けられている、`CDaoFieldExchange`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType  
  呼び出す`SetFieldType`で、`CDaoRecordset`クラスの`DoFieldExchange`をオーバーライドします。  
@@ -138,17 +138,17 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nFieldType`  
+ *nFieldType*  
  値、 **enum FieldType**で宣言された`CDaoFieldExchange`、これで、次のいずれかのことができます。  
   
 - **CDaoFieldExchange::outputColumn**  
   
 - **CDaoFieldExchange::param**  
   
-### <a name="remarks"></a>コメント  
- 通常、ClassWizard では、この呼び出しを書き込みます。 独自の関数を作成して書き込む、ウィザードを使用しているかどうか、`DoFieldExchange`関数、フィールド マップ外の独自の関数への呼び出しを追加します。 ウィザードを使用しない場合がありますされませんフィールドのマップ。 呼び出しは、クラスの各フィールド データ メンバーのいずれかの DFX 関数への呼び出しの前に、フィールドの型を識別**CDaoFieldExchange::outputColumn**です。  
+### <a name="remarks"></a>Remarks  
+ 通常、ClassWizard では、この呼び出しを書き込みます。 独自の関数を作成して書き込む、ウィザードを使用しているかどうか、`DoFieldExchange`関数、フィールド マップ外の独自の関数への呼び出しを追加します。 ウィザードを使用しない場合がありますされませんフィールドのマップ。 呼び出しは、クラスの各フィールド データ メンバーのいずれかの DFX 関数への呼び出しの前に、フィールドの型を識別`CDaoFieldExchange::outputColumn`です。  
   
- レコード セット クラスをパラメーター化する場合は、(、フィールド マップ外) のすべてのパラメーター データ メンバーの DFX 呼び出しを追加しを呼び出してこれらの呼び出しの前にする必要があります`SetFieldType`です。 値を渡す**CDaoFieldExchange::param**です。 (代わりに、使用することができます、 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)し、そのパラメーター値を設定します)。  
+ レコード セット クラスをパラメーター化する場合は、(、フィールド マップ外) のすべてのパラメーター データ メンバーの DFX 呼び出しを追加しを呼び出してこれらの呼び出しの前にする必要があります`SetFieldType`です。 値を渡す`CDaoFieldExchange::param`です。 (代わりに、使用することができます、 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)し、そのパラメーター値を設定します)。  
   
  一般に、フィールド データ メンバーまたはパラメーター データ メンバーに関連付けられている DFX 関数呼び出しの各グループの前への呼び出し`SetFieldType`です。 `nFieldType`の各パラメーター`SetFieldType`呼び出しに続く DFX 関数呼び出しによって表されるデータ メンバーの種類を識別する、`SetFieldType`呼び出します。  
   

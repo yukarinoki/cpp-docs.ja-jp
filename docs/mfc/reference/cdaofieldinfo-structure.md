@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e9e78a8137aa28acaa5f43e7549dc74566c7f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368408"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952203"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 構造体
 `CDaoFieldInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているフィールド オブジェクトに関する情報が含まれています。  
@@ -50,10 +50,10 @@ struct CDaoFieldInfo
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `m_strName`  
+ *m_strName*  
  フィールド オブジェクトの一意名です。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
- `m_nType`  
+ *m_nType*  
  フィールドのデータ型を示す値です。 詳細については、DAO ヘルプの「型プロパティ」を参照してください。 このプロパティの値には、次のいずれかを指定できます。  
   
 - **dbBoolean**はい/いいえと同じ**TRUE**/**FALSE**  
@@ -101,7 +101,7 @@ struct CDaoFieldInfo
 |**dbMemo**|0|メモ ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**データと**|16|グローバルに一意の識別子/ユニバーサル一意の識別子リモート プロシージャ コールで使用されます。|  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  テーブル定義、レコード セット、クエリ定義、またはインデックス オブジェクトに含まれるフィールド オブジェクトの特性を指定します。 返される値は、これらの定数はビットごとの OR を C++ で作成の合計を指定できます (**&#124;**) 演算子。  
   
 - **dbFixedField**フィールド サイズは固定 (数値フィールドの既定)。  
@@ -119,16 +119,16 @@ struct CDaoFieldInfo
  *m_nOrdinalPosition*  
  オブジェクトによって表される、DAO フィールドの他のフィールドとして表示されるフィールドをする数値の順序を指定する値。 このプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。 詳細については、DAO ヘルプの「OrdinalPosition プロパティ」を参照してください。  
   
- `m_bRequired`  
+ *m_bRequired*  
  DAO フィールド オブジェクトに Null 以外の値が必要かどうかを示します。 このプロパティは、する場合**TRUE**フィールドが Null 値を許可しません。 セット必要な場合**FALSE**、AllowZeroLength および ValidationRule プロパティの設定で指定された条件を満たす値だけでなく、Null 値、フィールドを含めることができます。 詳細については、「必要なプロパティ」DAO ヘルプ トピックを参照してください。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。  
   
  *m_bAllowZeroLength*  
  示すかどうか、空の文字列 ("") データ型がテキストまたはメモの DAO フィールド オブジェクトの有効な値は、します。 このプロパティは、する場合**TRUE**、空の文字列は有効な値です。 このプロパティを設定することができます**FALSE**フィールドの値を設定する空の文字列が使用することはできません。 詳細については、DAO ヘルプの「AllowZeroLength プロパティ」を参照してください。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。  
   
- `m_lCollatingOrder`  
+ *返さ*  
  文字列の比較または並べ替えのためのテキストの並べ替え順序を指定します。 詳細については、「をカスタマイズする Windows レジストリ設定のデータ アクセス」DAO ヘルプのトピックを参照してください。 返される有効な値の一覧は、次を参照してください。、**返さ**のメンバー、 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)構造体。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  、リレーションシップの主テーブル内のフィールドに対応する外部テーブル内の DAO フィールド オブジェクトの名前を指定する値。 詳細については、DAO ヘルプの「ForeignName プロパティ」を参照してください。  
   
  *m_strSourceField*  
@@ -137,18 +137,18 @@ struct CDaoFieldInfo
  *m_strSourceTable*  
  テーブル定義、レコード セット、またはクエリ定義オブジェクトに含まれる DAO フィールド オブジェクトのデータの元のソース テーブルの名前を示します。 このプロパティは、フィールドのオブジェクトに関連付けられている元のテーブル名を示します。 など、基になるテーブル内のフィールドの名前に無関係な名前を持つクエリ フィールド内のデータの元のソースを決定するのに、このプロパティを使用する可能性があります。 詳細については、DAO のヘルプ トピック「SourceField、SourceTable プロパティ」を参照してください。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  フィールド内のデータを検証する値が変更されたか、テーブルに追加します。 詳細については、"Validationrule"DAO ヘルプのトピックを参照してください。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。  
   
  テーブルの関連情報については、次を参照してください。、 **m_strValidationRule**のメンバー、 [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)構造体。  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  DAO フィールド オブジェクトの値が ValidationRule プロパティの設定で指定された検証規則を満たしていない場合に、アプリケーションが表示されるメッセージのテキストを指定する値。 詳細については、「プロパティ」DAO ヘルプのトピックを参照してください。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。  
   
  *m_strDefaultValue*  
  DAO フィールド オブジェクトの既定値。 新しいレコードが作成されると、DefaultValue プロパティの設定は自動的に入力値としてのフィールドです。 詳細については、DAO ヘルプの「DefaultValue プロパティ」を参照してください。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  プライマリ、セカンダリ、および上記のすべての参照は、情報がによって返される方法を示します、`GetFieldInfo`クラスでメンバー関数[どちら](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)、 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)、および[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)です。  
   
  Field オブジェクトは、MFC クラスでは表されません。 MFC オブジェクトと、次のクラスを基になる DAO オブジェクトがフィールド オブジェクトのコレクションを格納する代わりに、:[どちら](../../mfc/reference/cdaotabledef-class.md)、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)、および[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)です。 これらのクラスがいくつかのフィールドについては、個々 のアイテムにアクセスするメンバー関数を指定するか、すべて同時にアクセスすることができます、`CDaoFieldInfo`オブジェクトを呼び出して、`GetFieldInfo`親オブジェクトのメンバー関数。  
@@ -157,7 +157,7 @@ struct CDaoFieldInfo
   
  によって取得される情報、 `GetFieldInfo` (フィールドを含むクラス) のメンバー関数は、`CDaoFieldInfo`構造体。 呼び出す、 `GetFieldInfo` Fields コレクションを持つフィールド オブジェクトが格納されている親オブジェクトのメンバー関数。 `CDaoFieldInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoFieldInfo`オブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ## <a name="see-also"></a>関連項目  

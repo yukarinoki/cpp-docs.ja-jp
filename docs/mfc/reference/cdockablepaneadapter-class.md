@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367293"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951034"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter クラス
 `CWnd`の派生ペインのドッキングをサポートします。  
@@ -51,7 +51,7 @@ class CDockablePaneAdapter : public CDockablePane
 |[CDockablePaneAdapter::SaveState](#savestate)|(上書き[cdockablepane::savestate](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db))。|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  フレームワークにこのクラスのオブジェクトがインスタンス化を使用するときに、通常、 [cmfcbasetabctrl::addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)または[cmfcbasetabctrl::inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)メソッドです。  
   
  カスタマイズする場合、`CDockablePaneAdapter`動作、そこから新しいクラスを派生して、ランタイム クラス情報を使用して、タブ付きウィンドウに設定だけ[cmfcbasetabctrl::setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)です。  
@@ -63,7 +63,7 @@ class CDockablePaneAdapter : public CDockablePane
   
  [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxDockablePaneAdapter.h  
   
 ##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
@@ -76,7 +76,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="return-value"></a>戻り値  
  ラップされたウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ラップされたウィンドウにアクセスするのにには、この関数を使用します。  
   
 ##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
@@ -90,18 +90,18 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  プロファイル名。  
   
- [入力] `nIndex`  
+ [in]*nIndex*  
  プロファイルのインデックス。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  ウィンドウの id。  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
  レジストリにペインの状態を保存します。  
@@ -114,18 +114,18 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  プロファイル名。  
   
- [入力] `nIndex`  
+ [in]*nIndex*  
  プロファイルのインデックス (既定は、ウィンドウのコントロール ID)。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  ウィンドウの id。  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
  ウィンドウのドッキング可能なアダプターの基になるウィンドウを設定します。  
@@ -135,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
  ラップするウィンドウのアダプターは、ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  

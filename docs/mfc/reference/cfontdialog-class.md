@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368349"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953676"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog クラス
 フォントの選択 ダイアログ ボックスをアプリケーションに組み込むことができます。  
@@ -91,7 +91,7 @@ class CFontDialog : public CCommonDialog
 |----------|-----------------|  
 |[CFontDialog::m_cf](#m_cf)|カスタマイズに使用される構造体、`CFontDialog`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  A`CFontDialog`オブジェクトは、システムに現在インストールされているフォントの一覧がダイアログ ボックス。 ユーザーはリストから、特定のフォントを選択することができ、このオプションを選択し、報告をアプリケーションにします。  
   
  構築するために、`CFontDialog`オブジェクト、指定されたコンス トラクターを使用して、新しいサブクラスを派生させるや独自のカスタム コンス トラクターを使用します。  
@@ -125,7 +125,7 @@ class CFontDialog : public CCommonDialog
   
  `CFontDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
@@ -146,22 +146,22 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- L `plfInitial`  
+ *plfInitial*  
  ポインター、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)フォントの特性の一部を設定できるようにするデータ構造体。  
   
- `charFormat`  
+ *charFormat*  
  ポインター、 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)エディット コントロールのデータ構造を機能豊富なフォントの特性のいくつかを設定することができます。  
   
- `dwFlags`  
+ *dwFlags*  
  1 つ以上のフォント選択フラグを指定します。 ビットごとの OR 演算子を使用して、1 つ以上の事前設定値を組み合わせることができます。 `m_cf.Flag`s 構造体メンバーを変更する場合は、変更内容でビットごとの OR 演算子を使用して、既定の動作をそのままにします。 詳細については、これらのフラグは、の説明を参照して、 [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) Windows SDK 内の構造。  
   
- pdcPrinter  
+ *pdcPrinter*  
  プリンター デバイス コンテキストへのポインター。 指定すると、このパラメーターはフォントが選択されるプリンターのプリンター デバイス コンテキストを指します。  
   
- `pParentWnd`  
+ *pParentWnd*  
  フォント ダイアログ ボックスの親ウィンドウまたはオーナー ウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CHOOSEFONT` 構造体のメンバーはコンストラクターによって自動的に入力されることに注意してください。 既定とは異なるフォント ダイアログが必要な場合にのみ、これらを変更する必要があります。  
   
 > [!NOTE]
@@ -182,7 +182,7 @@ virtual INT_PTR DoModal();
   
  **IDOK**と**IDCANCEL**ユーザーが、[ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなフォント ダイアログ コントロールを初期化する場合、[構造体](#m_cf)構造体、呼び出す前にこれを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
   
  場合`DoModal`返します**IDOK**、他のメンバーは、ダイアログ ボックスに、設定や、ユーザーが入力した情報を取得する関数で呼び出すことができます。  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cf`  
+ *cf*  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)選択したフォントの文字の書式設定に関する情報を含む構造体。  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  
@@ -225,7 +225,7 @@ void GetCurrentFont(LPLOGFONT lplf);
  *lplf*  
  ポインター、`LOGFONT`構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  その他の`CFontDialog`現在のフォントの特性を個別にアクセスするメンバー関数が用意されています。  
   
  呼び出し中にこの関数が呼び出された場合[DoModal](#domodal)時に現在の選択範囲を返します (新機能、ユーザーが入れ替わったりがダイアログ ボックスで変更されました)。 呼び出しの後にこの関数が呼び出された場合`DoModal`(場合にのみ、`DoModal`返します**IDOK**)、ユーザーが実際に選択したを返します。  
@@ -282,7 +282,7 @@ int GetWeight() const;
 ### <a name="return-value"></a>戻り値  
  選択したフォントの太さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フォントの太さの詳細については、次を参照してください。 [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont)です。  
   
 ### <a name="example"></a>例  
@@ -347,7 +347,7 @@ BOOL IsUnderline() const;
 CHOOSEFONT m_cf;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築した後、`CFontDialog`オブジェクトを使用する`m_cf`を呼び出す前に ダイアログ ボックスのさまざまな側面を変更する、`DoModal`メンバー関数。 この構造体の詳細については、次を参照してください。 [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  

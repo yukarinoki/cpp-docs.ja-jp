@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34eb8f0b7394828782a3d0f9ed1ca44fb5731af6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f187ae7e3d5d9dbe6441aa8e2ba0f7631fd5072
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382087"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956539"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>CFrameWnd から派生していないウィンドウのツール ヒント
 ここから派生していない、ウィンドウに含まれているコントロールの有効化のツール ヒントを説明する[CFrameWnd](../mfc/reference/cframewnd-class.md)です。 アーティクル[ツールバーのツール ヒント](../mfc/toolbar-tool-tips.md)でのコントロールのツール ヒントに関する情報を提供する`CFrameWnd`です。  
@@ -41,7 +41,7 @@ ms.locfileid: "33382087"
   
  ただし、この既定のハンドラーがないときに呼び出されます、 **TTN_NEEDTEXT**はウィンドウ内のコントロールに関連付けられている、ツール ヒント コントロールから通知が送信された、 `CFrameWnd`、ダイアログまたはフォーム ビューのコントロールなどです。 そのため、必要があるためのハンドラー関数を提供するための**TTN_NEEDTEXT**子コントロールのツール ヒントを表示するために通知メッセージです。  
   
- によって、windows の既定ツール ヒント[CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips)それらに関連付けられたテキストはありません。 テキストを表示するツールヒントを取得する、 **TTN_NEEDTEXT**ツール ヒントのウィンドウが表示される直前に、ツール ヒント コントロールの親ウィンドウに通知が送信されます。 いくつかの値を割り当てるには、このメッセージのハンドラーがないかどうか、 **pszText**のメンバー、 **TOOLTIPTEXT**構造体にはないツール ヒントに表示されるテキストです。  
+ によって、windows の既定ツール ヒント[CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips)それらに関連付けられたテキストはありません。 テキストを表示するツールヒントを取得する、 **TTN_NEEDTEXT**ツール ヒントのウィンドウが表示される直前に、ツール ヒント コントロールの親ウィンドウに通知が送信されます。 いくつかの値を割り当てるには、このメッセージのハンドラーがないかどうか、 *pszText*のメンバー、 **TOOLTIPTEXT**構造体にはないツール ヒントに表示されるテキストです。  
   
 ## <a name="see-also"></a>関連項目  
  [ツール ヒント](../mfc/tool-tips.md)

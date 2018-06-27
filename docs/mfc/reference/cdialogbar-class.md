@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366715"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951557"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar クラス
 コントロール バー内の Windows のモードレス ダイアログ ボックスの機能を提供します。  
@@ -50,10 +50,10 @@ class CDialogBar : public CControlBar
 |----------|-----------------|  
 |[CDialogBar::Create](#create)|Windows ダイアログ バーを作成し、それにアタッチ、`CDialogBar`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ダイアログ バーでは、tab キーでの間で標準の Windows コントロールを持つという点で ダイアログ ボックスに似ています。 別の類似性は、ダイアログ バーを表すためのダイアログ テンプレートを作成することです。  
   
- 作成したり、ダイアログ バーを使用して作成および使用法と似ています、`CFormView`オブジェクト。 まず、使用して、[ダイアログ エディター](../../windows/dialog-editor.md)スタイルでダイアログ テンプレートを定義する**WS_CHILD**およびその他のスタイルはありません。 テンプレートは、スタイル**WS_VISIBLE**です。 構築するコンス トラクターの呼び出し、アプリケーション コードで、`CDialogBar`オブジェクト、し、呼び出す**作成**ダイアログ バー ウィンドウを作成し、アタッチして、`CDialogBar`オブジェクト。  
+ 作成したり、ダイアログ バーを使用して作成および使用法と似ています、`CFormView`オブジェクト。 まず、使用して、[ダイアログ エディター](../../windows/dialog-editor.md)スタイルでダイアログ テンプレートを定義する**WS_CHILD**およびその他のスタイルはありません。 テンプレートは、スタイル**WS_VISIBLE**です。 アプリケーション コードで構築するコンス トラクターを呼び出す、`CDialogBar`オブジェクト、し、呼び出す`Create`ダイアログ バー ウィンドウを作成し、添付、`CDialogBar`オブジェクト。  
   
  詳細については`CDialogBar`、記事を参照して[ダイアログ バー](../../mfc/dialog-bars.md)と[テクニカル ノート 31](../../mfc/tn031-control-bars.md)、コントロール バーです。  
   
@@ -71,7 +71,7 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
@@ -100,22 +100,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentWnd`  
+ *pParentWnd*  
  親へのポインター`CWnd`オブジェクト。  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  名前へのポインター、`CDialogBar`オブジェクトのダイアログ ボックス リソース テンプレート。  
   
- `nStyle`  
+ *nStyle*  
  ツールバーのスタイル。 追加のスタイルは次のとおりです。  
   
-- `CBRS_TOP` フレーム ウィンドウの上部には、コントロール バーです。  
+- **CBRS_TOP**フレーム ウィンドウの上部には、コントロール バーです。  
   
-- `CBRS_BOTTOM` フレーム ウィンドウの下部には、コントロール バーです。  
+- **CBRS_BOTTOM**フレーム ウィンドウの下部には、コントロール バーです。  
   
-- `CBRS_NOALIGN` 親のサイズが変更されるときにコントロール バーの位置を変更できません。  
+- **CBRS_NOALIGN**コントロール バーは、親のサイズが変更されるときに再配置されません。  
   
-- `CBRS_TOOLTIPS` コントロール バーには、ツール ヒントが表示されます。  
+- **CBRS_TOOLTIPS**コントロール バーがツール ヒントを表示します。  
   
 - **CBRS_SIZE_DYNAMIC**コントロール バーは動的です。  
   
@@ -123,21 +123,21 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING**コントロール バーがフローティング状態です。  
   
-- `CBRS_FLYBY` ステータス バーには、ボタンについての情報が表示されます。  
+- **CBRS_FLYBY**ステータス バーにボタンについての情報が表示されます。  
   
 - **CBRS_HIDE_INPLACE**コントロール バーは、ユーザーに表示されません。  
   
- `nID`  
+ *nID*  
  ダイアログ バーのコントロール ID。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  リソース ID、`CDialogBar`オブジェクトのダイアログ ボックスのテンプレートです。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 指定した場合、`CBRS_TOP`または`CBRS_BOTTOM`配置スタイル ダイアログ バーの幅は、フレーム ウィンドウのその高さで指定されたリソースの`nIDTemplate`します。 指定した場合、`CBRS_LEFT`または`CBRS_RIGHT`配置スタイル ダイアログ バーの高さのフレーム ウィンドウのその幅で指定されたリソースの`nIDTemplate`します。  
+### <a name="remarks"></a>Remarks  
+ 指定した場合、 **CBRS_TOP**または**CBRS_BOTTOM**配置スタイル ダイアログ バーの幅は、フレーム ウィンドウのその高さで指定されたリソースの*nIDTemplate*. 指定した場合、 **CBRS_LEFT**または**CBRS_RIGHT**配置スタイル ダイアログ バーの高さのフレーム ウィンドウのその幅で指定されたリソースの*nIDTemplate*.  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  

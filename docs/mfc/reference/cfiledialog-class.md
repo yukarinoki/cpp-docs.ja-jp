@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52d2912edc1632dc2fbe4fe330def6d357f16d2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 1512ae9a26b5b0cf25c4b4ebeff2d05bd0993f7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255770"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955246"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 ファイルを開く操作または保存に使用される、コモン ダイアログ ボックスをカプセル化します。  
@@ -243,12 +243,12 @@ class CFileDialog : public CCommonDialog
 |----------|-----------------|  
 |[:M_ofn](#m_ofn)|Windows`OPENFILENAME`構造体。 基本的なファイル ダイアログ ボックスのパラメーターへのアクセスを提供します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  コモン ファイル ダイアログ ボックスを使用するファイルの選択 ダイアログ ボックス、たとえばを実装できます**ファイルを開く**と**名前を付けて保存**Windows の標準と一貫性のある方法でします。  
   
  使用することができます`CFileDialog`として指定すると、コンス トラクターを持つかから、独自のダイアログ ボックス クラスを派生させることができます`CFileDialog`し、ニーズに合わせてコンス トラクターを記述します。 どちらの場合、これらのダイアログ ボックスと同様に標準の MFC ダイアログ ボックスから派生しているため、 [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)です。 `CFileDialog` COMMDLG に依存します。Windows に含まれている DLL ファイルです。  
   
- 外観と機能の両方、 `CFileDialog` Windows Vista 以降は、Windows の以前のバージョンによって異なります。 既定値`CFileDialog`プログラムがコンパイルおよび Windows Vista で実行またはそれ以降の場合に、新しい Windows Vista またはコードの変更なしの以降のスタイルが自動的に使用します。 使用して、`bVistaStyle`この自動更新を手動でオーバーライドするコンス トラクターのパラメーターです。 自動更新の例外では、カスタマイズされたダイアログ ボックスです。 これらは、新しいスタイルに変換できません。 コンス トラクターの詳細については、次を参照してください。 [CFileDialog::CFileDialog](#cfiledialog)です。  
+ 外観と機能の両方、 `CFileDialog` Windows Vista 以降は、Windows の以前のバージョンによって異なります。 既定値`CFileDialog`プログラムがコンパイルおよび Windows Vista で実行またはそれ以降の場合に、新しい Windows Vista またはコードの変更なしの以降のスタイルが自動的に使用します。 使用して、 *bVistaStyle*この自動更新を手動でオーバーライドするコンス トラクターのパラメーターです。 自動更新の例外では、カスタマイズされたダイアログ ボックスです。 これらは、新しいスタイルに変換できません。 コンス トラクターの詳細については、次を参照してください。 [CFileDialog::CFileDialog](#cfiledialog)です。  
   
 > [!NOTE]
 >  使用するとは異なる Windows Vista または Windows の以前のバージョンから後でのコントロール ID システム、`CFileDialog`です。 すべての参照を更新する必要があります`CFileDialog`Windows の以前のバージョンからプロジェクトを移植する前に、コード内のコントロールです。  
@@ -305,7 +305,7 @@ class CFileDialog : public CCommonDialog
   
  `CFileDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="addcheckbutton"></a>  CFileDialog::AddCheckButton  
@@ -319,16 +319,16 @@ HRESULT AddCheckButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  追加するは、チェック ボタンの ID。  
   
- `strLabel`  
+ *strLabel*  
  チェック ボタンの名前。  
   
- `bChecked`  
+ *bChecked*  
  チェック マーク ボタンの現在の状態を示すブール値。 `TRUE` チェックされている場合`FALSE`それ以外の場合  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addcombobox"></a>  CFileDialog::AddComboBox  
  ダイアログ ボックスに、コンボ ボックスを追加します。  
@@ -338,10 +338,10 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  追加するコンボ ボックスの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addcontrolitem"></a>  CFileDialog::AddControlItem  
  ダイアログ ボックス内のコンテナー コントロールに項目を追加します。  
@@ -354,16 +354,16 @@ HRESULT AddControlItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  項目を追加するコンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  項目の ID です。  
   
- `strLabel`  
+ *strLabel*  
  項目のテキスト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addeditbox"></a>  CFileDialog::AddEditBox  
  ダイアログ ボックスに、エディット ボックスを追加します。  
@@ -375,13 +375,13 @@ HRESULT AddEditBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  追加するエディット ボックスの ID。  
   
- `strText`  
+ *strText*  
  編集ボックスの名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addmenu"></a>  CFileDialog::AddMenu  
  ダイアログ ボックスに、メニューを追加します。  
@@ -393,13 +393,13 @@ HRESULT AddMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  追加するメニューの ID。  
   
- `strLabel`  
+ *strLabel*  
  メニュー名。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addplace"></a>  CFileDialog::AddPlace  
  一覧にフォルダーがユーザーが開くか、項目を保存するために使用できる場所を追加します。  
@@ -416,16 +416,16 @@ void AddPlace(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFolder`  
+ *lpszFolder*  
  ユーザーに利用可能にするフォルダーへのパス。 フォルダーのみ指定できます。  
   
- `fdap`  
+ *fdap*  
  リスト内でフォルダーを配置する場所を指定します。  
   
- `psi`  
+ *psi*  
  利用可能になるユーザーにフォルダーを表す IShellItem へのポインター。 フォルダーのみ指定できます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addpushbutton"></a>  CFileDialog::AddPushButton  
  ダイアログ ボックスにボタンを追加します。  
@@ -437,13 +437,13 @@ HRESULT AddPushButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  追加するボタンの ID。  
   
- `strLabel`  
+ *strLabel*  
  ボタンの名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addradiobuttonlist"></a>  CFileDialog::AddRadioButtonList  
  ダイアログ ボックスにオプション ボタンとも呼ばれます) グループを追加します。  
@@ -453,10 +453,10 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  追加するオプション ボタン グループの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addseparator"></a>  CFileDialog::AddSeparator  
  ダイアログ ボックスに、区切り記号を追加します。  
@@ -466,10 +466,10 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  区切り記号の ID を追加します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addtext"></a>  CFileDialog::AddText  
  ダイアログ ボックスにテキストを追加します。  
@@ -481,13 +481,13 @@ HRESULT AddText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  追加するテキストの ID。  
   
- `strText`  
+ *strText*  
  テキストの名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="applyofntoshelldialog"></a>  CFileDialog::ApplyOFNToShellDialog  
  現在の状態を更新、 [CFileDialog](../../mfc/reference/cfiledialog-class.md)に格納されている値に基づいて、`m_ofn`データ構造体。  
@@ -496,7 +496,7 @@ HRESULT AddText(
 void ApplyOFNToShellDialog();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Windows Vista では、メンバーの前に Windows のバージョンで[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)データ構造がの状態と同期が継続的に、`CFileDialog`です。 変更、 [m_ofn](#m_ofn)メンバー変数が、ダイアログ ボックスの状態にすぐに反映されます。 また、ダイアログ ボックスの状態への変更に更新されました、`m_ofn`メンバー変数。  
   
  Windows Vista 以降では、内の値、`m_ofn`メンバー変数との状態、`CFileDialog`を同期できる保証はありません。 この関数の状態の強制、`CFileDialog`一致するように更新する、`m_ofn`構造体。 Windows は時に自動的にこの関数を呼び出します[CFileDialog::DoModal](#domodal)です。  
@@ -522,36 +522,36 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bOpenFileDialog`  
+ [in]*bOpenFileDialog*  
  作成する ダイアログ ボックスの種類を指定するパラメーター。 設定`TRUE`構築するために、**ファイルを開く** ダイアログ ボックス。 設定`FALSE`構築するために、**ファイル名を付けて** ダイアログ ボックス。  
   
- [入力] `lpszDefExt`  
- 既定のファイル名の拡張子です。 拡張機能が指定された場合は、ユーザーがファイル名 ボックスに、既知の拡張子 (ユーザーのコンピューターに関連している) を含めない、`lpszDefExt`ファイル名に自動的に追加されます。 このパラメーターが場合`NULL`、拡張機能は追加されません。  
+ [in]*lpszDefExt*  
+ 既定のファイル名の拡張子です。 拡張機能が指定された場合は、ユーザーがファイル名 ボックスに、既知の拡張子 (ユーザーのコンピューターに関連している) を含めない、 *lpszDefExt*ファイル名に自動的に追加されます。 このパラメーターが場合`NULL`、拡張機能は追加されません。  
   
- [入力] `lpszFileName`  
+ [in]*場合*  
  ファイル名 ボックスに表示される初期ファイル名。 場合`NULL`、初期ファイル名は表示されません。  
   
- [入力] `dwFlags`  
+ [in]*dwFlags*  
  カスタマイズ ダイアログ ボックスを使用できる 1 つまたは複数のフラグの組み合わせ。 これらのフラグの説明は、次を参照してください。、 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Windows SDK 内の構造。 変更する場合、`m_ofn.Flags`構造体メンバー、既定の動作を維持する、変更内容でビットごとの OR 演算子を使用します。  
   
- [入力] `lpszFilter`  
+ [in]*lpszFilter*  
  一連のフィルターを指定する文字列のペアをファイルに適用できます。 フィルターを指定する場合は、フィルター条件に一致するファイルのみがファイルの一覧に表示されます。 ファイルのフィルターを操作する方法に関する詳細については、「解説」を参照してください。  
   
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  ファイル ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。  
   
- [入力] `dwSize`  
+ [in]*dwSize*  
  サイズ、`OPENFILENAME`構造体。 この値は、オペレーティング システムのバージョンによって異なります。 MFC では、作成するのに ダイアログ ボックスの適切な種類は、このパラメーターを使用します。 0 の場合、MFC コードが使用する適切なダイアログ ボックスのサイズを決定する既定のサイズは、プログラムを実行するオペレーティング システムのバージョンに基づいています。  
   
- [入力] `bVistaStyle`  
+ [in]*bVistaStyle*  
  **注**このパラメーターは、利用可能で、Visual Studio 2008 で後でありは Windows Vista またはそれ以降を実行している場合にのみ使用される新しいスタイル ダイアログが発生します。  
   
  ファイル ダイアログ ボックスのスタイルを指定するパラメーター。 設定`TRUE`新しい Vista スタイル ファイル ダイアログを使用します。 それ以外の場合、古い形式のダイアログ ボックスが使用されます。 Vista で実行されているに関する詳細については「解説」セクションをを表示します。  
   
-### <a name="remarks"></a>コメント  
- いずれか、**ファイルを開く**または**ファイル名を付けて**の値に応じて、ダイアログ ボックスが構築`bOpenFileDialog`です。  
+### <a name="remarks"></a>Remarks  
+ いずれか、**ファイルを開く**または**ファイル名を付けて**の値に応じて、ダイアログ ボックスが構築*bOpenFileDialog*です。  
   
- 既定の拡張機能を使用して、指定する`lpszDefExt`になっているため頻度の低い予測可能な拡張機能について、ユーザーのコンピューター上のファイルの関連付けのある、予測される動作をもたらさないことがあります。 既定の拡張機能の追加より詳細に制御する場合は、独自のクラスから派生できます`CFileDialog`をオーバーライドし、`CFileDialog::OnFileNameOK`独自の拡張機能の処理を実行するメソッド。  
+ 既定の拡張機能を使用して、指定する*lpszDefExt*になっているため頻度の低い予測可能な拡張機能について、ユーザーのコンピューター上のファイルの関連付けのある、予測される動作をもたらさないことがあります。 既定の拡張機能の追加より詳細に制御する場合は、独自のクラスから派生できます`CFileDialog`をオーバーライドし、`CFileDialog::OnFileNameOK`独自の拡張機能の処理を実行するメソッド。  
   
  ユーザーが複数のファイルの選択を有効にする設定、`OFN_ALLOWMULTISELECT`フラグを呼び出す前に[DoModal](#domodal)です。 返される複数のファイル名の一覧を格納する、独自ファイル名のバッファーを指定する必要があります。 これには、置換`m_ofn.lpstrFile`バッファーへのポインターが割り当てられていれば、構築した後、 [CFileDialog](../../mfc/reference/cfiledialog-class.md)を呼び出す前に、`DoModal`です。 さらに、設定する必要があります`m_ofn.nMaxFile`が指すバッファー内の文字の数と`m_ofn.lpstrFile`です。 選択するファイルの最大数を設定した場合`n`、必要なバッファー サイズは`n`*(_MAX_PATH + 1) + 1 です。 例えば:  
   
@@ -559,7 +559,7 @@ explicit CFileDialog(
   
  マウスまたはキーボードを使用して、[エクスプ ローラー スタイル] ダイアログ ボックスのサイズを変更するユーザーを有効にするには設定、`OFN_ENABLESIZING`フラグ。 このフラグを設定することは、フック プロシージャまたはカスタム テンプレートを指定する場合にのみ必要です。 このフラグはエクスプ ローラー スタイル ダイアログ ボックスでは; でのみ機能します。古い形式のダイアログ ボックスのサイズを変更できません。  
   
- `lpszFilter`ファイル名、ファイルの一覧に表示される必要のあるファイルの種類を決定するパラメーターを使用します。 文字列のペアの最初の文字列には、フィルターがについて説明します2 番目の文字列では、使用するファイル名拡張子を示します。 複数の拡張機能は、区切り記号としてセミコロン (';' 文字) を使用して指定できます。 文字列の末尾に、2 つ '&#124;' 文字が続く、`NULL`文字です。 使用することも、 [CString](../../atl-mfc-shared/using-cstring.md)このパラメーターのオブジェクト。  
+ *LpszFilter*ファイル名、ファイルの一覧に表示される必要のあるファイルの種類を決定するパラメーターを使用します。 文字列のペアの最初の文字列には、フィルターがについて説明します2 番目の文字列では、使用するファイル名拡張子を示します。 複数の拡張機能は、区切り記号としてセミコロン (';' 文字) を使用して指定できます。 文字列の末尾に、2 つ '&#124;' 文字が続く、`NULL`文字です。 使用することも、 [CString](../../atl-mfc-shared/using-cstring.md)このパラメーターのオブジェクト。  
   
  たとえば、[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]他拡張 .xlc (グラフの場合) または .xls (ワークシート) を持つファイルを開くことができます。 Excel 用のフィルターとしてを記述できます。  
   
@@ -567,9 +567,9 @@ explicit CFileDialog(
   
  ただし、直接この文字列を使用する場合は更新、`OPENFILENAME`構造体、null 文字、垂直バーではなく ' \0'、文字列を区切る必要があります ('&#124;')。  
   
- `bVistaStyle`パラメーターは、Windows Vista または後で実行されている場合にのみ適用されます。 以前のバージョンの Windows では、このパラメーターは無視されます。 場合`bVistaStyle`に設定されている`TRUE`Visual Studio 2008 以降、新しい Vista スタイル プログラムをコンパイルするときに、**ファイル ダイアログ**使用されます。 それ以外の場合、以前の MFC スタイル**ファイル ダイアログ**使用されます。  
+ *BVistaStyle*パラメーターは、Windows Vista または後で実行されている場合にのみ適用されます。 以前のバージョンの Windows では、このパラメーターは無視されます。 場合*bVistaStyle*に設定されている`TRUE`Visual Studio 2008 以降、新しい Vista スタイル プログラムをコンパイルするときに、**ファイル ダイアログ**使用されます。 それ以外の場合、以前の MFC スタイル**ファイル ダイアログ**使用されます。  
   
- 基づくダイアログでダイアログ テンプレートはサポートされていません `bVistaStyle`  
+ 基づくのダイアログ ボックスでは、ダイアログ テンプレートはサポートされていない*bVistaStyle*  
   
 ### <a name="example"></a>例  
   例を参照して[CFileDialog::DoModal](#domodal)です。  
@@ -586,7 +586,7 @@ virtual INT_PTR DoModal();
   
  **IDOK**と**IDCANCEL**ユーザーが、[ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバーを設定して、さまざまなファイル ダイアログ ボックスのオプションを初期化する場合、 **m_ofn**構造体、呼び出す前にこれを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
   
  たとえば、ユーザーが複数のファイルを選択できるようにする場合は、設定、`OFN_ALLOWMULTISELECT`フラグを呼び出す前に`DoModal`のこのトピックのコード例に示すようにします。  
@@ -606,10 +606,10 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  ドロップダウン リストの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="endvisualgroup"></a>  CFileDialog::EndVisualGroup  
  ダイアログ ボックスでビジュアルのグループに対する要素の追加を停止します。  
@@ -621,7 +621,7 @@ HRESULT EndVisualGroup();
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は S_OK を返します。それ以外の場合エラー値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcheckbuttonstate"></a>  CFileDialog::GetCheckButtonState  
  ダイアログ ボックスで、チェック ボタン (チェック ボックス) の現在の状態を取得します。  
@@ -633,13 +633,13 @@ HRESULT GetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  チェック ボックスの ID です。  
   
- `bChecked`  
+ *bChecked*  
  チェック ボックスの状態。 `TRUE` checked; ことを示します`FALSE`オンになっていないことを示します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcontrolitemstate"></a>  CFileDialog::GetControlItemState  
  ダイアログ ボックスで見つかったコンテナー コントロール内のアイテムの現在の状態を取得します。  
@@ -652,16 +652,16 @@ HRESULT GetControlItemState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  項目の ID です。  
   
- `dwState`  
+ *dwState*  
  コントロールの現在の状態を示す CDCONTROLSTATE 列挙体からより多くの値のいずれかを受け取る変数への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcontrolstate"></a>  CFileDialog::GetControlState  
  現在の可視性を取得し、指定されたコントロールの状態を有効にします。  
@@ -673,13 +673,13 @@ HRESULT GetControlState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コントロールの ID。  
   
- `dwState`  
+ *dwState*  
  コントロールの現在の状態を示す CDCONTROLSTATE 列挙体から 1 つまたは複数の値を受け取る変数への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="geteditboxtext"></a>  CFileDialog::GetEditBoxText  
  編集ボックス コントロールで現在のテキストを取得します。  
@@ -691,13 +691,13 @@ HRESULT GetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  編集ボックスの ID です。  
   
- `strText`  
+ *strText*  
  テキスト値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getfileext"></a>  CFileDialog::GetFileExt  
  この関数では、ダイアログ ボックスに入力されたファイル名の拡張子を取得します。  
@@ -709,7 +709,7 @@ CString GetFileExt() const;
 ### <a name="return-value"></a>戻り値  
  ファイル名の拡張子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  たとえば、次のように入力されたファイルの名前がデータの場合です。TXT、 `GetFileExt` "TXT"を返します。  
   
  場合`m_ofn.Flags`が、`OFN_ALLOWMULTISELECT`フラグを設定、この文字列には、最初の文字列を選択すると、ファイル グループのディレクトリ パスの中で、null で終わる文字列のシーケンスが含まれています。 ユーザーが選択されているすべてのファイル名の後にします。 ファイルのパス名を取得するを使用して、[中](#getstartposition)と[に](#getnextpathname)メンバー関数。  
@@ -724,7 +724,7 @@ CString GetFileName() const;
 ### <a name="return-value"></a>戻り値  
  ファイルの名前です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ファイルの名前には、プレフィックスと拡張機能の両方が含まれています。 たとえば、 `GetFileName` "テキストを返すです。DAT"C:\FILES\TEXT.DAT ファイル。  
   
  場合`m_ofn.Flags`が、`OFN_ALLOWMULTISELECT`フラグ設定、呼び出す必要があります[中](#getstartposition)と[に](#getnextpathname)ファイルのパス名を取得します。  
@@ -739,7 +739,7 @@ CString GetFileTitle() const;
 ### <a name="return-value"></a>戻り値  
  ファイルのタイトル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ファイルのタイトルには、パスおよび拡張子を含まない、プレフィックスのみが含まれています。 たとえば、 `GetFileTitle` C:\FILES\TEXT.DAT ファイルに対して"TEXT"が返されます。  
   
  場合`m_ofn.Flags`が、`OFN_ALLOWMULTISELECT`フラグを設定、この文字列には、最初の文字列を選択すると、ファイル グループのディレクトリ パスの中で、null で終わる文字列のシーケンスが含まれています。 ユーザーが選択されているすべてのファイル名の後にします。 このため、使用して、[中](#getstartposition)と[に](#getnextpathname)一覧で、次のファイル名を取得するメンバー関数。  
@@ -757,7 +757,7 @@ CString GetFolderPath() const;
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)現在開いているフォルダーまたはディレクトリを含むオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスが作成されている必要があります、 **OFN_EXPLORER**スタイルです。 それ以外の場合、メソッドは、アサーションに失敗します。  
   
  ダイアログ ボックスが表示されているときにのみ、このメソッドを呼び出すことができます。 ダイアログ ボックスが閉じられた後は、この関数は動作しなくとメソッドは、アサーションに失敗します。  
@@ -772,8 +772,8 @@ IFileDialogCustomize* GetIFileDialogCustomize();
 ### <a name="return-value"></a>戻り値  
  内部の COM オブジェクトへのポインター、`CFileDialog`です。 このポインターを適切に解放する必要があります。  
   
-### <a name="remarks"></a>コメント  
- Windows Vista でのみ、または以降を持つオブジェクトでは、この関数を使用して`bVistaStyle`'éý'`true`です。 この関数を使用する場合と`bVistaStyle`は`false`が返されます`NULL`リリース モードとデバッグ モードではアサーションをスローします。  
+### <a name="remarks"></a>Remarks  
+ Windows Vista でのみ、または以降を持つオブジェクトでは、この関数を使用して*bVistaStyle* 'éý'`true`です。 この関数を使用する場合と*bVistaStyle*は`false`が返されます`NULL`リリース モードとデバッグ モードではアサーションをスローします。  
   
  詳細については、`IFileDialogCustomize`インターフェイスを参照してください[IFileDialogCustomize](http://msdn.microsoft.com/library/windows/desktop/bb775912)です。  
   
@@ -792,8 +792,8 @@ IFileOpenDialog* GetIFileOpenDialog();
 ### <a name="return-value"></a>戻り値  
  内部の COM オブジェクトへのポインター、`CFileDialog`です。 このポインターを適切に解放する必要があります。  
   
-### <a name="remarks"></a>コメント  
- Windows Vista でのみ、または以降を持つオブジェクトでは、この関数を使用して`bVistaStyle`'éý'`true`です。 この関数を返します`NULL`場合、`CFileDialog`はありません、**開く** ダイアログ ボックスまたは`bVistaStyle`に設定されている`false`です。 後者の場合、関数だけを返します`NULL`リリース モードでデバッグ モードはアサーションをスローします。  
+### <a name="remarks"></a>Remarks  
+ Windows Vista でのみ、または以降を持つオブジェクトでは、この関数を使用して*bVistaStyle* 'éý'`true`です。 この関数を返します`NULL`場合、`CFileDialog`はありません、**開く** ダイアログ ボックスまたは*bVistaStyle*に設定されている`false`です。 後者の場合、関数だけを返します`NULL`リリース モードでデバッグ モードはアサーションをスローします。  
   
  詳細については、`IFileOpenDialog`インターフェイスを参照してください[IFileOpenDialog](http://msdn.microsoft.com/library/windows/desktop/bb775834)です。  
   
@@ -812,8 +812,8 @@ IFileSaveDialog* GetIFileSaveDialog();
 ### <a name="return-value"></a>戻り値  
  内部の COM オブジェクトへのポインター、`CFileDialog`です。 このポインターを適切に解放する必要があります。  
   
-### <a name="remarks"></a>コメント  
- Windows Vista でのみ、または以降を持つオブジェクトでは、この関数を使用して`bVistaStyle`'éý'`true`です。 この関数は`NULL`場合、`CFileDialog`はありません、**保存** ダイアログ ボックスまたは`bVistaStyle`に設定されている`false`です。 後者の場合、関数だけを返します`NULL`リリース モードでデバッグ モードはアサーションをスローします。  
+### <a name="remarks"></a>Remarks  
+ Windows Vista でのみ、または以降を持つオブジェクトでは、この関数を使用して*bVistaStyle* 'éý'`true`です。 この関数は`NULL`場合、`CFileDialog`はありません、**保存** ダイアログ ボックスまたは*bVistaStyle*に設定されている`false`です。 後者の場合、関数だけを返します`NULL`リリース モードでデバッグ モードはアサーションをスローします。  
   
  詳細については、`IFileSaveDialog`インターフェイスを参照してください[IFileSaveDialog](http://msdn.microsoft.com/library/windows/desktop/bb775688)です。  
   
@@ -830,13 +830,13 @@ CString GetNextPathName(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pos`  
+ *pos*  
  参照、**位置**によって以前返される値`GetNextPathName`または`GetStartPosition`関数呼び出しです。 **NULL**リストの末尾に達している場合。  
   
 ### <a name="return-value"></a>戻り値  
  ファイルの完全パス名を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ファイル名のパスには、ファイルのタイトルとディレクトリの完全パスが含まれています。 たとえば、 `GetNextPathName` "C:\FILES\TEXT を返します。DAT"C:\FILES\TEXT.DAT ファイル。 使用することができます`GetNextPathName`への呼び出しに最初の位置を確立する場合は、順方向の反復ループで`GetStartPosition`です。  
   
  選択範囲は、1 つのファイルで構成され、そのファイル名が返されます。  
@@ -853,7 +853,7 @@ OPENFILENAME& GetOFN();
 ### <a name="return-value"></a>戻り値  
  [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  外観を初期化するためにこの関数の 2 番目のバージョンを使用して、**ファイルを開く**または**ファイル名を付けて** ダイアログ ボックスに表示されるまでは、構築された後、`DoModal`メンバー関数。 たとえば、設定することができます、**キャプションを表示**のメンバー **m_ofn**ダイアログ ボックスには、キャプションにします。  
   
 ##  <a name="getpathname"></a>  CFileDialog::GetPathName  
@@ -866,7 +866,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>戻り値  
  ファイルの完全パス名を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ファイル名のパスには、ファイルのタイトルとディレクトリの完全パスが含まれています。 たとえば、 `GetPathName` "C:\FILES\TEXT を返します。DAT"C:\FILES\TEXT.DAT ファイル。  
   
  場合`m_ofn.Flags`が、`OFN_ALLOWMULTISELECT`フラグを設定、この文字列には、シーケンスが含まれています。 null で終わるの文字列は、選択すると、ファイル グループのディレクトリ パスをされている最初の文字列で続けて、ユーザーが選択したすべてのファイルの名前。 このため、使用して、[中](#getstartposition)と[に](#getnextpathname)一覧で、次のファイル名を取得するメンバー関数。  
@@ -884,7 +884,7 @@ BOOL GetReadOnlyPref() const;
 ### <a name="return-value"></a>戻り値  
  0 以外の値 ダイアログ ボックスでの読み取り専用チェック ボックスがオンの場合それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  読み取り専用 チェック ボックスを非表示を設定してできます、`OFN_HIDEREADONLY`のスタイルを設定、`CFileDialog`コンス トラクター。  
   
 > [!NOTE]
@@ -900,7 +900,7 @@ IShellItem* GetResult() throw();
 ### <a name="return-value"></a>戻り値  
  ユーザーの選択項目を表す IShellItem へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getresults"></a>  CFileDialog::GetResults  
  複数選択が可能なダイアログで、ユーザーの選択肢を取得します。  
@@ -912,7 +912,7 @@ IShellItemArray* GetResults() throw();
 ### <a name="return-value"></a>戻り値  
  アクセスすることができます、ダイアログ ボックスで選択した項目に使用する、IShellItemArray へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getselectedcontrolitem"></a>  CFileDialog::GetSelectedControlItem  
  ダイアログ ボックスで指定されたコンテナー コントロールからの特定のアイテムを取得します。  
@@ -924,13 +924,13 @@ HRESULT GetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  ユーザーがコントロールで選択した項目の ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getstartposition"></a>  CFileDialog::GetStartPosition  
  場合、一覧内の最初のファイルのパス名の位置を取得するには、このメンバー関数を呼び出す`m_ofn.Flags`が、`OFN_ALLOWMULTISELECT`フラグが設定されます。  
@@ -950,10 +950,10 @@ void HideControl(int nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  非表示にするコントロールの ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスが作成されている必要があります、 **OFN_EXPLORER**スタイルです。 それ以外の場合、関数はアサーションと失敗します。  
   
 ##  <a name="ispickfoldersmode"></a>  CFileDialog::IsPickFoldersMode  
@@ -966,13 +966,13 @@ BOOL IsPickFoldersMode() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` フォルダー ピッカー モードである場合は、ダイアログ ボックスそれ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_ofn"></a>  :M_ofn  
  `m_ofn` 型の構造体は、`OPENFILENAME`です。 この構造内のデータの現在の状態を表す、`CFileDialog`です。  
   
-### <a name="remarks"></a>コメント  
- 外観を初期化するためにこの構造体を使用して、**ファイルを開く**または**ファイル名を付けて** ダイアログ ボックスを表示する前に、構築した後、 [DoModal](#domodal)メソッドです。 たとえば、設定することができます、`lpstrTitle`のメンバー`m_ofn`ダイアログ ボックスには、キャプションにします。  
+### <a name="remarks"></a>Remarks  
+ 外観を初期化するためにこの構造体を使用して、**ファイルを開く**または**ファイル名を付けて** ダイアログ ボックスを表示する前に、構築した後、 [DoModal](#domodal)メソッドです。 たとえば、設定することができます、*キャプションを表示*のメンバー`m_ofn`ダイアログ ボックスには、キャプションにします。  
   
  Windows Vista またはそれ以降のスタイルの[CFileDialog](../../mfc/reference/cfiledialog-class.md)、 `m_ofn`  ダイアログ ボックスの状態を常に一致する保証はありません。 以前のバージョンの Windows で、ダイアログ ボックスと同期されます。 参照してください[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)と[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)同期の詳細については、`m_ofn`構造および`CFileDialog`状態Windows Vista またはそれ以降。  
   
@@ -1026,10 +1026,10 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コントロールの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onbuttonclicked"></a>  CFileDialog::OnButtonClicked  
  ボタンがクリックされたときに呼び出されます。  
@@ -1039,10 +1039,10 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  ボタンの ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="oncheckbuttontoggled"></a>  CFileDialog::OnCheckButtonToggled  
  チェック ボックスがオンまたはオフに呼び出されます。  
@@ -1054,13 +1054,13 @@ virtual void OnCheckButtonToggled(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  チェック ボックスの ID です。  
   
- `bChecked`  
+ *bChecked*  
  選択または選択解除します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="oncontrolactivating"></a>  CFileDialog::OnControlActivating  
  コントロールがアクティブになったときに呼び出されます。  
@@ -1070,10 +1070,10 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コントロールの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfilenamechange"></a>  CFileDialog::OnFileNameChange  
 このメソッドをオーバーライドして、処理する場合、 `WM_NOTIFY` `CDN_SELCHANGE`メッセージ。  
@@ -1082,7 +1082,7 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 virtual void OnFileNameChange();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  システムは、送信、`CDN_SELCHANGE`ユーザー ファイルの一覧で、新しいファイルまたはフォルダーを選択すると、メッセージ、**開く**または**名前を付けて保存** ダイアログ ボックス。 このメッセージに応答アクションを実行する場合は、このメソッドをオーバーライドします。  
   
  システムは、OFN_EXPLORER フラグをオンになっていると、ダイアログ ボックスが作成された場合にのみ、このメッセージを送信します。 通知の詳細については、次を参照してください。 [CDN_SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646865)です。 OFN_EXPLORER フラグについては、次を参照してください。、 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)構造と[開くおよびダイアログ ボックスとして保存](http://msdn.microsoft.com/library/windows/desktop/ms646960)です。  
@@ -1097,7 +1097,7 @@ virtual BOOL OnFileNameOK();
 ### <a name="return-value"></a>戻り値  
  ファイル名が有効なファイル名ではない場合は 1それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数では、アプリケーション固有の何らかの理由で、ファイル名を拒否することができます。 通常、フレームワークは、ファイル名の既定の検証を提供し、無効なファイル名が入力された場合は、メッセージ ボックスを表示するために、この関数を使用する必要はありません。  
   
  1 が返される場合は、ダイアログ ボックスが別のファイル名を入力するユーザーに対して表示されません。 ダイアログの手順は、戻り値が 0 の場合、ダイアログ ボックスを破棄します。 他の 0 以外を返します値は現在予約されているとは使用できません。  
@@ -1109,7 +1109,7 @@ virtual BOOL OnFileNameOK();
 virtual void OnFolderChange();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Open または名前を付けて保存 ダイアログ ボックスで、新しいフォルダーを開いたときに、通知メッセージが送信されます。  
   
  ダイアログ ボックスが OFN_EXPLORER スタイルで作成された場合にのみ、通知が送信されます。 通知の詳細については、次を参照してください。 [CDN_FOLDERCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646859)です。 OFN_EXPLORER スタイルの詳細については、次を参照してください。、 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)構造と[開くおよびダイアログ ボックスとして保存](http://msdn.microsoft.com/library/windows/desktop/ms646960)です。  
@@ -1121,7 +1121,7 @@ virtual void OnFolderChange();
 virtual void OnInitDone();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  システムのコントロールでの配置が完了すると、システムはこの通知メッセージを送信、**開く**または**名前を付けて保存** ダイアログ ボックス、子 ダイアログ ボックスのコントロールの確保するためにします。  
   
  システムはこのダイアログ ボックスが OFN_EXPLORER スタイルで作成された場合にのみ送信します。 通知の詳細については、次を参照してください。 [CDN_INITDONE](http://msdn.microsoft.com/library/windows/desktop/ms646863)です。 OFN_EXPLORER スタイルの詳細については、次を参照してください。、 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)構造と[開くおよびダイアログ ボックスとして保存](http://msdn.microsoft.com/library/windows/desktop/ms646960)です。  
@@ -1139,13 +1139,13 @@ virtual void OnItemSelected(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  項目の ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onlbselchangednotify"></a>  CFileDialog::OnLBSelChangedNotify  
  この関数は、リスト ボックスの現在の選択が変更されるたびに呼び出されます。  
@@ -1161,21 +1161,21 @@ virtual void OnLBSelChangedNotify(
  *nIDBox*  
  リスト ボックスまたはコンボ ボックスの選択範囲が発生したの ID。  
   
- `iCurSel`  
+ *iCurSel*  
  現在の選択範囲のインデックス。  
   
- `nCode`  
+ *nCode*  
  コントロール通知コード。 このパラメーターは、次の値のいずれかが必要です。  
   
-- **CD_LBSELCHANGE**指定`iCurSel`単一選択のリスト ボックスで選択された項目。  
+- **CD_LBSELCHANGE**指定*iCurSel*単一選択のリスト ボックスで選択された項目。  
   
-- **CD_LBSELSUB**ことを指定`iCurSel`複数選択のリスト ボックスで選択を解除します。  
+- **CD_LBSELSUB**ことを指定*iCurSel*複数選択のリスト ボックスで選択を解除します。  
   
-- **CD_LBSELADD**ことを指定`iCurSel`複数選択のリスト ボックスで選択されています。  
+- **CD_LBSELADD**ことを指定*iCurSel*複数選択のリスト ボックスで選択されています。  
   
 - **CD_LBSELNOITEMS**複数選択のリスト ボックス内の選択が存在しないことを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リスト ボックスで選択範囲の変更のカスタム処理を指定するには、この関数をオーバーライドします。 この関数を使用するにはアクセス権を表示するなど、日付、前回変更された各ファイルのユーザーを選択します。  
   
 ##  <a name="onshareviolation"></a>  CFileDialog::OnShareViolation  
@@ -1186,7 +1186,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszPathName`  
+ *終了*  
  共有違反が発生したファイルのパス。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1198,7 +1198,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
   
 - **OFN_SHAREWARN**このエラーの標準的な警告メッセージが表示されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  通常、フレームワークは、既定の共有違反のチェックを提供し、共有違反が発生した場合は、メッセージ ボックスを表示するために、この関数を使用する必要はありません。  
   
  共有違反チェックを無効にする場合は、ビットごとの OR 演算子を使用して、フラグを結合する**OFN_SHAREAWARE**で`m_ofn.Flags`です。  
@@ -1210,7 +1210,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 virtual void OnTypeChange();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーは、新しいファイルの種類の一覧から、開いているファイルの種類のまたは名前を付けて保存 ダイアログ ボックスを選択すると、通知メッセージが送信されます。  
   
  ダイアログ ボックスが OFN_EXPLORER スタイルで作成された場合にのみ、通知が送信されます。 通知の詳細については、次を参照してください。 [CDN_TYPECHANGE](http://msdn.microsoft.com/library/windows/desktop/ms646868)です。 OFN_EXPLORER スタイルの詳細については、次を参照してください。、 [OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839)構造と[開くおよびダイアログ ボックスとして保存](http://msdn.microsoft.com/library/windows/desktop/ms646960)です。  
@@ -1225,13 +1225,13 @@ HRESULT RemoveControlItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  項目を削除するコンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  項目の ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcheckbuttonstate"></a>  CFileDialog::SetCheckButtonState  
  ダイアログ ボックスで、チェック ボタン (チェック ボックス) の現在の状態を設定します。  
@@ -1243,13 +1243,13 @@ HRESULT SetCheckButtonState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  チェック ボックスの ID です。  
   
- `bChecked`  
+ *bChecked*  
  チェック ボックスの状態。 `TRUE` checked; ことを示します`FALSE`オフにした場合を示します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcontrolitemstate"></a>  CFileDialog::SetControlItemState  
  ダイアログ ボックスで見つかったコンテナー コントロールの項目の現在の状態を設定します。  
@@ -1262,16 +1262,16 @@ HRESULT SetControlItemState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  項目の ID です。  
   
- `dwState`  
+ *dwState*  
  1 つまたは複数の値 CDCONTROLSTATE 列挙体からコントロールの新しい状態を示すです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcontrolitemtext"></a>  CFileDialog::SetControlItemText  
  コントロールのアイテムのテキストを設定します。 たとえば、オプション ボタンまたはメニュー内の項目に付随するテキストです。  
@@ -1284,16 +1284,16 @@ HRESULT SetControlItemText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  項目の ID です。  
   
- `strLabel`  
+ *strLabel*  
  項目のテキスト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcontrollabel"></a>  CFileDialog::SetControlLabel  
  ボタンのテキストまたはエディット ボックスのラベルなどのコントロールに関連付けられているテキストを設定します。  
@@ -1305,13 +1305,13 @@ HRESULT SetControlLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コントロールの ID。  
   
- `strLabel`  
+ *strLabel*  
  コントロールの名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcontrolstate"></a>  CFileDialog::SetControlState  
  現在の可視性を設定し、指定されたコントロールの状態を有効にします。  
@@ -1323,13 +1323,13 @@ HRESULT SetControlState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コントロールの ID。  
   
- `dwState`  
+ *dwState*  
  1 つまたは複数の値 CDCONTROLSTATE 列挙体からコントロールの現在の状態を示すです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcontroltext"></a>  CFileDialog::SetControlText  
  エクスプ ローラー スタイルで指定したコントロールのテキストを設定するには、このメソッドを呼び出す**開く**または**名前を付けて保存** ダイアログ ボックス。  
@@ -1346,13 +1346,13 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  テキストを設定する対象のコントロールの ID。  
   
- [入力] `lpsz`  
+ [in]*lpsz*  
  コントロールに設定するテキストを格納する文字列へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数の両方のバージョンは、Unicode を使用するアプリケーションに対して有効です。 ただし、のみが付いているバージョン、LPCSTR 型を使用するアプリケーションの有効な[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]します。  
   
  このメソッドを使用するのには、OFN_EXPLORER スタイルでダイアログ ボックスを作成する必要があります。 それ以外の場合、アサーションと、関数は失敗します。  
@@ -1365,10 +1365,10 @@ void SetDefExt(LPCSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpsz`  
+ *lpsz*  
  ダイアログ ボックスのオブジェクトを使用する既定の拡張子を含む文字列へのポインター。 この文字列は、ピリオド (.) を含めることはできません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスが作成されている必要があります、 **OFN_EXPLORER**スタイルです。 それ以外の場合、関数はアサーションと失敗します。  
   
 ##  <a name="seteditboxtext"></a>  CFileDialog::SetEditBoxText  
@@ -1381,13 +1381,13 @@ HRESULT SetEditBoxText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  編集ボックスの ID です。  
   
- `strText`  
+ *strText*  
  テキスト値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setproperties"></a>  CFileDialog::SetProperties  
  保存される項目に対して使用される既定値を定義するプロパティ ストアを提供します。  
@@ -1397,10 +1397,10 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszPropList`  
+ *lpszPropList*  
  ";" で区切られた定義済みプロパティのリスト。 フラグの一覧は、次を参照してください。、`Flags`のセクション[OPENFILENAME](http://msdn.microsoft.com/en-us/8cecfd45-f7c1-4f8d-81a0-4e7fecc3b104)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setselectedcontrolitem"></a>  CFileDialog::SetSelectedControlItem  
  オプション ボタン グループ、またはダイアログ ボックスで、コンボ ボックス内の特定のアイテムの選択状態を設定します。  
@@ -1412,13 +1412,13 @@ HRESULT SetSelectedControlItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  コンテナー コントロールの ID。  
   
- `dwIDItem`  
+ *dwIDItem*  
  ユーザーがコントロールで選択した項目の ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="settemplate"></a>  CFileDialog::SetTemplate  
  ダイアログ ボックスのテンプレートを設定、 [CFileDialog](../../mfc/reference/cfiledialog-class.md)オブジェクト。  
@@ -1435,19 +1435,19 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nWin3ID`  
+ [in]*nWin3ID*  
  非エクスプ ローラーのテンプレート リソースの ID 番号を含む`CFileDialog`オブジェクト。 このテンプレートは Windows NT 3.51、または OFN_EXPLORER スタイルが存在しない場合にのみ使用します。  
   
- [入力] `nWin4ID`  
+ [in]*nWin4ID*  
  エクスプ ローラーのテンプレート リソースの ID 番号を含む`CFileDialog`オブジェクト。 このテンプレートはでのみ使用[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]以降のバージョン、Windows 95 およびそれ以降のバージョンのと OFN_EXPLORER スタイルが存在する場合またはします。  
   
- [入力] `lpWin3ID`  
+ [in]*lpWin3ID*  
  非エクスプ ローラーのテンプレート リソースの名前を含む`CFileDialog`オブジェクト。 このテンプレートは Windows NT 3.51、または OFN_EXPLORER スタイルが存在しない場合にのみ使用します。  
   
- [入力] `lpWin4ID`  
+ [in]*lpWin4ID*  
  エクスプ ローラーのテンプレート リソースの名前を含む`CFileDialog`オブジェクト。 このテンプレートはでのみ使用[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]以降のバージョン、Windows 95 およびそれ以降のバージョンのと OFN_EXPLORER スタイルが存在する場合またはします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定されたテンプレートの 1 つだけが使用されます。 システムでは、OFN_EXPLORER スタイルとで、アプリケーションが実行されているオペレーティング システムの有無に基づいて、使用するテンプレートを決定します。 エクスプ ローラーではないとエクスプ ローラー スタイル テンプレートの両方を指定するは、簡単にサポート Windows NT 3.51[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]と以降のバージョンで Windows 95 およびそれ以降のバージョン。  
   
 > [!NOTE]
@@ -1463,13 +1463,13 @@ HRESULT StartVisualGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwIDCtl`  
+ *dwIDCtl*  
  ビジュアルのグループの ID。  
   
- `strLabel`  
+ *strLabel*  
  グループの名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="updateofnfromshelldialog"></a>  CFileDialog::UpdateOFNFromShellDialog  
  更新プログラム、`m_ofn`のデータ構造、 [CFileDialog](../../mfc/reference/cfiledialog-class.md)内部オブジェクトの現在の状態に基づいて。  
@@ -1478,7 +1478,7 @@ HRESULT StartVisualGroup(
 void UpdateOFNFromShellDialog();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Windows Vista では、メンバーの前に Windows のバージョンで[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)データ構造がの状態と同期が継続的に、`CFileDialog`です。 変更、 [m_ofn](#m_ofn)メンバー変数 ダイアログ ボックスの状態に直接影響します。 ダイアログの状態への変更はすぐに m_ofn メンバー変数を更新します。  
   
  Windows Vista 以降では、`m_ofn`データ構造が自動的に更新されません。 内のデータの精度を保証するために、`m_ofn`メンバー変数を呼び出す必要があります、`UpdateOFNFromShellDialog`データにアクセスする前に関数。 Windows はこの関数に自動的の処理中に[IFileDialog::OnFileOK](http://msdn.microsoft.com/library/windows/desktop/bb775879)です。  

@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323f2861da9fcc498e34792c30c763b4dffb2fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cce98e4a3b3ffd506607529b9fea6f0c1114cc3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385964"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951269"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>CStatusBarCtrl オブジェクトでのツール ヒントの使い方
-ステータス バー コントロールにツールヒントを有効にするには、作成、`CStatusBarCtrl`オブジェクトを**には**スタイル。  
+ステータス バー コントロールにツールヒントを有効にするには、作成、`CStatusBarCtrl`には、スタイルを持つオブジェクト。  
   
 > [!NOTE]
->  使用している場合、`CStatusBar`を使用して、ステータス バーを実装するオブジェクト、`CStatusBar::CreateEx`関数。 埋め込みの追加のスタイルを指定することができます**CStatusBarCtrl**オブジェクト。  
+>  使用している場合、`CStatusBar`を使用して、ステータス バーを実装するオブジェクト、`CStatusBar::CreateEx`関数。 埋め込みの追加のスタイルを指定することができます`CStatusBarCtrl`オブジェクト。  
   
  1 回、`CStatusBarCtrl`オブジェクトが正常に作成されるを使用して[CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext)と[CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext)設定と特定のウィンドウに関するツールヒントのテキストを取得します。  
   

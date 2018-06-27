@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386094"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951995"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>テクニカル ノート 53: DAO データベース クラス用カスタム DFX ルーチン
 > [!NOTE]
@@ -134,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |操作|説明|  
 |---------------|-----------------|  
-|**AddToParameterList**|ビルド パラメーター句|  
-|**AddToSelectList**|ビルドの SELECT 句|  
-|**BindField**|バインド構造体を設定します。|  
-|**BindParam**|パラメーター値を設定します。|  
-|**フィックス アップ**|NULL の状態を設定します。|  
-|**AllocCache**|ダーティ チェックのキャッシュを割り当てます|  
-|**StoreField**|現在のレコードをキャッシュに保存します。|  
-|**LoadField**|メンバー値に復元キャッシュ|  
-|**FreeCache**|キャッシュを解放します。|  
+|`AddToParameterList`|ビルド パラメーター句|  
+|`AddToSelectList`|ビルドの SELECT 句|  
+|`BindField`|バインド構造体を設定します。|  
+|`BindParam`|パラメーター値を設定します。|  
+|`Fixup`|NULL の状態を設定します。|  
+|`AllocCache`|ダーティ チェックのキャッシュを割り当てます|  
+|`StoreField`|現在のレコードをキャッシュに保存します。|  
+|`LoadField`|メンバー値に復元キャッシュ|  
+|`FreeCache`|キャッシュを解放します。|  
 |`SetFieldNull`|フィールドの状態と値を NULL に設定|  
-|**MarkForAddNew**|記号フィールドがダーティかどう擬似 NULL|  
-|**MarkForEdit**|記号フィールド ダーティの場合はキャッシュに一致しません。|  
-|**SetDirtyField**|フィールド ダーティとマークされている値の設定|  
+|`MarkForAddNew`|記号フィールドがダーティかどう擬似 NULL|  
+|`MarkForEdit`|記号フィールド ダーティの場合はキャッシュに一致しません。|  
+|`SetDirtyField`|フィールド ダーティとマークされている値の設定|  
   
  次のセクションで各操作については説明のさらに詳しく`DFX_Text`です。  
   
@@ -168,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text の詳細  
  前述のように、DFX のしくみを説明する最善の方法、サンプルを使って作業を開始します。 このための内部を通過`DFX_Text`少なくとも DFX の基本的な知識を提供するのに役立つうまく動作する必要があります。  
   
- **AddToParameterList**  
- この操作は、SQL をビルド**パラメーター**句 ("`Parameters <param name>, <param type> ... ;`") Jet で必要です。 各パラメーターがという名前し、rfx 関数の呼び出しで指定) (として型指定します。 関数を参照してください**は**個別の型の名前を表示する関数。 場合、 `DFX_Text`、使用された型は`text`します。  
+ `AddToParameterList`  
+ この操作は、SQL をビルド**パラメーター**句 ("`Parameters <param name>, <param type> ... ;`") Jet で必要です。 各パラメーターがという名前し、rfx 関数の呼び出しで指定) (として型指定します。 関数を参照してください`CDaoFieldExchange::AppendParamType`個別の型の名前を表示する関数。 場合、 `DFX_Text`、使用された型は**テキスト**です。  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  SQL をビルド**選択**句。 とても簡単 DFX 呼び出しによって指定された列名が単に付加 ("`SELECT <column name>, ...`") です。  
   
- **BindField**  
+ `BindField`  
  最も複雑な操作です。 既に説明したように、これは DAO バインド構造体がによってどのように使用されている`GetRows`を設定します。 内のコードからわかるように`DFX_Text`構造内の情報の種類には、DAO の型が含まれます (**DAO_CHAR**または**DAO_WCHAR**の場合、 `DFX_Text`)。 さらに、使用されるバインディングの種類も設定します。 前のセクションで`GetRows`ごく短時間しか」で説明したが、MFC によって使用されるバインドの種類は、直接アドレスのバインドでは常に説明するための十分な (**DAOBINDING_DIRECT**)。 さらに可変長列のバインドの (と同様に`DFX_Text`) MFC をメモリ割り当てを制御し、正しい長さのアドレスを指定するためのコールバックのバインディングが使用されます。 つまり、MFC を常に把握 DAO メンバー変数に直接バインドできるように、データを格納する"where"です。 メモリ割り当てのコールバック関数と、(列の名前でバインド) 列のバインドの種類のアドレスなど、バインド構造体の残りの部分が入力されます。  
   
- **BindParam**  
+ `BindParam`  
  これは、単純な操作を呼び出す`SetParamValue`メンバーのパラメーターで指定されたパラメーターの値。  
   
- **フィックス アップ**  
+ `Fixup`  
  入力、 **NULL**各フィールドの状態。  
   
  `SetFieldNull`  
  この操作を各フィールドの状態としてマークするだけ**NULL**メンバー変数の値を設定および**PSEUDO_** です。  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  呼び出し`SetFieldValue`各フィールドをダーティとマークします。  
   
  残りのすべての操作のみ、データ キャッシュを使用してを処理します。 データ キャッシュは、一定の処理を簡単に使用される現在のレコード内のデータの余分なバッファーです。 たとえば、「ダーティ」フィールドを自動的に検出することができます。 オンライン ドキュメントの説明に従って完全にまたは、フィールド レベルで無効にできます。 バッファーの実装は、マップを利用しています。 このマップは、動的に割り当てられたデータのコピー「バインド」フィールドのアドレスを照合に使用されます (または`CDaoRecordset`データ メンバーの派生)。  
   
- **AllocCache**  
+ `AllocCache`  
  動的なキャッシュされたフィールドの値の割り当てし、マップに追加します。  
   
- **FreeCache**  
+ `FreeCache`  
  キャッシュされたフィールドの値を削除し、マップから削除します。  
   
- **StoreField**  
+ `StoreField`  
  データ キャッシュに現在のフィールドの値をコピーします。  
   
- **LoadField**  
+ `LoadField`  
  フィールドのメンバーに、キャッシュされた値をコピーします。  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  現在のフィールド値が非チェック**NULL**し、必要に応じてダーティ マークします。  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  データ キャッシュを使用して現在のフィールドの値を比較し、必要な場合は、ダーティのマークを付けます。  
   
 > [!TIP]

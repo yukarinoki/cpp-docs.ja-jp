@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354622"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954492"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush クラス
 ID2D1BitmapBrush のラッパーです。  
@@ -109,7 +109,7 @@ class CD2DBitmapBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|CD2DBitmap オブジェクトへのポインターを格納します。|  
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|ID2D1BitmapBrush オブジェクトへのポインターを格納します。|  
@@ -124,7 +124,7 @@ class CD2DBitmapBrush : public CD2DBrush;
   
  `CD2DBitmapBrush`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush  
@@ -142,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pResource`  
+ *pResource*  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -176,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  拡張モードとビットマップのブラシの補間モードへのポインター。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  不透明度およびブラシの変換へのポインター。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
- `uiResID`  
+ *uiResID*  
  リソースのリソース ID 番号。  
   
- `lpszType`  
+ *lpszType*  
  リソースの種類を表す null で終わる文字列へのポインター。  
   
- `sizeDest`  
+ *sizeDest*  
  ビットマップの送信先のサイズ。  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  ファイルの名前を表す null で終わる文字列へのポインター。  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -208,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  ビットマップのブラシのプロパティへのポインター。  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -219,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRenderTarget`  
+ *pRenderTarget*  
  レンダー ターゲットへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -331,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pBitmap`  
+ *pBitmap*  
  ブラシで使用されるビットマップのソース  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -342,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `extendModeX`  
+ *extendModeX*  
  そのビットマップを越える領域が水平方向にタイル ブラシ方法を指定する値  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -353,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `extendModeY`  
+ *extendModeY*  
  ブラシが垂直方向にそのビットマップを超えてが領域をタイル方法を指定する値  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -364,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `interpolationMode`  
+ *interpolationMode*  
  ブラシ ビットマップのスケールまたは回転したときに使用される補間モード  
   
 ## <a name="see-also"></a>関連項目  

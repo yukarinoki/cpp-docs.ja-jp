@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ae7496daf6827a6be7769d60af10bca45f7a3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edc17f099a208e69242a51c1273b1bd11bb5353d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384750"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954570"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへのアニメーションの追加
 このチュートリアルでは、基本的なアニメーション化されたオブジェクトを Visual C、Microsoft Foundation Class ライブラリ (MFC) プロジェクトに追加する方法を説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "33384750"
   
 1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **[名前]** ボックスに「`MFCAnimationWalkthrough`」と入力します。 **[OK]** をクリックします。  
+2.  **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **名前**ボックスに、入力*MFCAnimationWalkthrough*です。 **[OK]** をクリックします。  
   
 3.  **MFC アプリケーション ウィザード** ダイアログ ボックスであることを確認**アプリケーションの種類**は**複数ドキュメント**、**プロジェクト形式**には**Visual Studio**、および**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択します。 **[完了]** をクリックします。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "33384750"
   
 2.  **リソース ビュー**に移動し、**メニュー**フォルダーを開きます。 ダブルクリックして、`IDR_MFCAnimationWalTYPE`リソースを変更するために開きます。  
   
-3.  メニュー バーで、**ここへ入力**ボックスに、入力`A&nimation`アニメーション メニューを作成します。  
+3.  メニュー バーで、**ここに入力**ボックスに、入力*A & nimation*アニメーション メニューを作成します。  
   
-4.  **アニメーション**で、**ここへ入力**ボックスに、入力`Start &Forward`起動前コマンドを作成します。  
+4.  **アニメーション**で、**ここへ入力**ボックスに、入力*開始 (&) を転送*起動前コマンドを作成します。  
   
-5.  **フォワード開始**で、**ここへ入力**ボックスに、入力`Start &Backward`です。  
+5.  **フォワード開始**の**ここへ入力**ボックスに、入力*の開始日と下位*です。  
   
-6.  **開始旧バージョンと**で、**ここへ入力**ボックスに、入力`S&top`を停止するコマンドを作成します。  
+6.  **開始旧バージョンと**の**ここへ入力**ボックスに、入力*S & 上部*を停止するコマンドを作成します。  
   
 7.  MFCAnimationWalkthrough.rc を保存して閉じます。  
   
@@ -152,173 +152,132 @@ ms.locfileid: "33384750"
   
  ```  
     m_animationController.EnableAnimationTimerEventHandler();
-m_animationController.EnablePriorityComparisonHandler(UI_ANIMATION_PHT_TRIM);
+    m_animationController.EnablePriorityComparisonHandler(UI_ANIMATION_PHT_TRIM);
 
- 
-    m_animationColor = RGB(255,
-    255,
-    255);
+    m_animationColor = RGB(255, 255, 255);
 
-    m_animationRect = CRect(0,
-    0,
-    0,
-    0);
+    m_animationRect = CRect(0, 0, 0, 0);
 
- 
-    m_animationColor.SetID(-1,
-    nAnimationGroup);
+    m_animationColor.SetID(-1, nAnimationGroup);
 
-    m_animationRect.SetID(-1,
-    nAnimationGroup);
+    m_animationRect.SetID(-1, nAnimationGroup);
 
- 
     m_animationController.AddAnimationObject(&m_animationColor);
 
- m_animationController.AddAnimationObject(&m_animationRect);
-
+    m_animationController.AddAnimationObject(&m_animationRect);
  ```  
   
 7.  検索、`CAnimationWalthroughView::PreCreateWindow`メソッドと、次のコードで置換します。  
   
  ```  
     BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)  
- { *// TODO: Modify the Window class or styles here by modifying *//  the CREATESTRUCT cs  
+     { *// TODO: Modify the Window class or styles here by modifying *//  the CREATESTRUCT cs  
  
     m_animationController.SetRelatedWnd(this);
 
- return CView::PreCreateWindow(cs);
+     return CView::PreCreateWindow(cs);
 
- }  
+     }  
  ```  
   
 8.  検索、`CAnimationWalkthroughView::OnDraw`メソッドと、次のコードで置換します。  
   
  ```  
     void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)  
- {  
-    CMFCAnimationWalkthroughDoc* pDoc = GetDocument();
-ASSERT_VALID(pDoc);
-
- if (!pDoc)  
-    return; 
- *// TODO: add draw code for native data here  
-    CMemDC dcMem(*pDC,
-    this);
-
-    CDC& dc = dcMem.GetDC();
-
- 
-    CRect rect;  
-    GetClientRect(rect);
-
- 
-    dc.FillSolidRect(rect,
-    GetSysColor(COLOR_WINDOW));
-
- 
-    CString strRGB;  
-    strRGB.Format(_T("Fill Color is: %d; %d; %d"),
-    GetRValue(m_animationColor),
-    GetGValue(m_animationColor),
-    GetBValue(m_animationColor));
-
- 
-    dc.DrawText(strRGB,
-    rect,
-    DT_CENTER);
-
-    rect.top += nInfoAreaHeight;  
- 
-    CBrush br;  
- 
-    br.CreateSolidBrush(m_animationColor);
-
- CBrush* pBrushOld = dc.SelectObject(&br);
-
- 
-    dc.Rectangle((CRect)m_animationRect);
-
- dc.SelectObject(pBrushOld);
-
- }  
+    {  
+        CMFCAnimationWalkthroughDoc* pDoc = GetDocument();
+        ASSERT_VALID(pDoc);
+    
+        if (!pDoc)  
+           return; 
+        // TODO: add draw code for native data here  
+        CMemDC dcMem(*pDC, this);
+    
+        CDC& dc = dcMem.GetDC();
+    
+        CRect rect;  
+        GetClientRect(rect);
+    
+        dc.FillSolidRect(rect,
+        GetSysColor(COLOR_WINDOW));
+    
+        CString strRGB;  
+        strRGB.Format(_T("Fill Color is: %d; %d; %d"),
+        GetRValue(m_animationColor),
+        GetGValue(m_animationColor),
+        GetBValue(m_animationColor));
+    
+        dc.DrawText(strRGB, rect, DT_CENTER);
+    
+        rect.top += nInfoAreaHeight;  
+     
+        CBrush br;  
+     
+        br.CreateSolidBrush(m_animationColor);
+    
+        CBrush* pBrushOld = dc.SelectObject(&br);
+    
+        dc.Rectangle((CRect)m_animationRect);
+    
+        dc.SelectObject(pBrushOld);
+    }  
  ```  
   
 9. ファイルの最後に、次のコードを追加します。  
   
  ```  
     void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)  
- {  
-    static UI_ANIMATION_SECONDS duration = 3;  
-    static DOUBLE dblSpeed = 35.;  
-    static BYTE nStartColor = 50;  
-    static BYTE nEndColor = 255;  
- 
-    BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;  
-    BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;  
-    BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;  
- 
-    CLinearTransition* pRedTransition = new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
-
-    CSmoothStopTransition* pGreenTransition = new CSmoothStopTransition(duration, (DOUBLE)nGreenColorFinal);
-
-    CLinearTransitionFromSpeed* pBlueTransition = new CLinearTransitionFromSpeed(dblSpeed, (DOUBLE)nBlueColorFinal);
-
- 
-    m_animationColor.AddTransition(pRedTransition,
-    pGreenTransition,
-    pBlueTransition);
-
- 
-    CRect rectClient;  
-    GetClientRect(rectClient);
-
- rectClient.top += nInfoAreaHeight;  
- 
-    int nLeftFinal = bDirection  rectClient.left : rectClient.CenterPoint().x;  
-    int nTopFinal = bDirection  rectClient.top : rectClient.CenterPoint().y;  
-    int nRightFinal = bDirection  rectClient.right : rectClient.CenterPoint().x;  
-    int nBottomFinal = bDirection  rectClient.bottom : rectClient.CenterPoint().y;  
- 
-    CLinearTransition* pLeftTransition = new CLinearTransition(duration,
-    nLeftFinal);
-
-    CLinearTransition* pTopTransition = new CLinearTransition(duration,
-    nTopFinal);
-
-    CLinearTransition* pRightTransition = new CLinearTransition(duration,
-    nRightFinal);
-
-    CLinearTransition* pBottomTransition = new CLinearTransition(duration,
-    nBottomFinal);
-
- 
-    m_animationRect.AddTransition(pLeftTransition,
-    pTopTransition,
-    pRightTransition,
-    pBottomTransition);
-
- 
-    CBaseKeyFrame* pKeyframeStart = CAnimationController::GetKeyframeStoryboardStart();
-CKeyFrame* pKeyFrameEnd = m_animationController.CreateKeyframe(nAnimationGroup,
-    pBlueTransition);
-
- 
-    pLeftTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
-    pTopTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
-    pRightTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
-    pBottomTransition->SetKeyframes(pKeyframeStart,
-    pKeyFrameEnd);
-
- 
-    m_animationController.AnimateGroup(nAnimationGroup);
-
- }  
+    {  
+        static UI_ANIMATION_SECONDS duration = 3;  
+        static DOUBLE dblSpeed = 35.;  
+        static BYTE nStartColor = 50;  
+        static BYTE nEndColor = 255;  
+     
+        BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;  
+        BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;  
+        BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;  
+     
+        CLinearTransition* pRedTransition = new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
+    
+        CSmoothStopTransition* pGreenTransition = new CSmoothStopTransition(duration, (DOUBLE)nGreenColorFinal);
+    
+        CLinearTransitionFromSpeed* pBlueTransition = new CLinearTransitionFromSpeed(dblSpeed, (DOUBLE)nBlueColorFinal);
+    
+        m_animationColor.AddTransition(pRedTransition, pGreenTransition, pBlueTransition);
+    
+        CRect rectClient;  
+        GetClientRect(rectClient);
+    
+        rectClient.top += nInfoAreaHeight;  
+     
+        int nLeftFinal = bDirection  rectClient.left : rectClient.CenterPoint().x;  
+        int nTopFinal = bDirection  rectClient.top : rectClient.CenterPoint().y;  
+        int nRightFinal = bDirection  rectClient.right : rectClient.CenterPoint().x;  
+        int nBottomFinal = bDirection  rectClient.bottom : rectClient.CenterPoint().y;  
+     
+        CLinearTransition* pLeftTransition = new CLinearTransition(duration, nLeftFinal);
+    
+        CLinearTransition* pTopTransition = new CLinearTransition(duration, nTopFinal);
+    
+        CLinearTransition* pRightTransition = new CLinearTransition(duration, nRightFinal);
+    
+        CLinearTransition* pBottomTransition = new CLinearTransition(duration, nBottomFinal);
+    
+        m_animationRect.AddTransition(pLeftTransition, pTopTransition, pRightTransition, pBottomTransition);
+    
+        CBaseKeyFrame* pKeyframeStart = CAnimationController::GetKeyframeStoryboardStart();
+        CKeyFrame* pKeyFrameEnd = m_animationController.CreateKeyframe(nAnimationGroup, pBlueTransition);
+    
+        pLeftTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        pTopTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        pRightTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        pBottomTransition->SetKeyframes(pKeyframeStart, pKeyFrameEnd);
+    
+        m_animationController.AnimateGroup(nAnimationGroup);
+    }  
  ```  
   
 10. **プロジェクト** メニューをクリックして**クラス ウィザード**です。  
@@ -331,36 +290,32 @@ CKeyFrame* pKeyFrameEnd = m_animationController.CreateKeyframe(nAnimationGroup,
   
  ```  
     BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)  
- {  
-    return TRUE;  
- }  
+    {  
+        return TRUE;  
+    }  
  ```  
   
 14. 実装を置き換えます`CMFCAnimationWalkthroughView::OnAnimationStartforward`、 `CMFCAnimationWalkthroughView::OnAnimationStartbackward`、および`CMFCAnimationWalkthroughView::OnAnimationStop`を次のコード。  
   
  ```  
     void CMFCAnimationWalkthroughView::OnAnimationStartforward()  
- {  
-    Animate(TRUE);
-
- }  
+    {  
+        Animate(TRUE);
+    }  
  
     void CMFCAnimationWalkthroughView::OnAnimationStartbackward()  
- {  
-    Animate(FALSE);
-
- }  
+    {  
+        Animate(FALSE);
+    }  
  
     void CMFCAnimationWalkthroughView::OnAnimationStop()  
- {  
-    IUIAnimationManager* pManager = m_animationController.GetUIAnimationManager();
-if (pManager != NULL)  
- {  
-    pManager->AbandonAllStoryboards();
-
- }  
- }  
- 
+    {  
+        IUIAnimationManager* pManager = m_animationController.GetUIAnimationManager();
+        if (pManager != NULL)  
+        {  
+            pManager->AbandonAllStoryboards();
+        }  
+    }  
  ```  
   
 15. ファイルを保存して閉じます。  
@@ -384,32 +339,23 @@ if (pManager != NULL)
 6.  MFCAnimationWalkthroughView.cpp でのコードに置き換えます`CMFCAnimationWalkthroughView::OnSize`を次のコード。  
   
  ```  
-    void CMFCAnimationWalkthroughView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
+    void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)  
+    {  
+        CView::OnSize(nType, cx, cy);
 
- 
-    CRect rect;  
-    GetClientRect(rect);
-
- rect.top += nInfoAreaHeight;  
- 
-    CRect rectAnim = m_animationRect;  
-    m_animationRect = CRect(CPoint(rect.CenterPoint().x - rectAnim.Width() / 2,   
-    rect.CenterPoint().y - rectAnim.Height() / 2),   
-    rectAnim.Size());
-
- 
-    if (m_animationController.IsAnimationInProgress())  
- {  
-    Animate(m_bCurrentDirection);
-
- }  
- }  
+        CRect rect;  
+        GetClientRect(rect);
+    
+        rect.top += nInfoAreaHeight;  
+     
+        CRect rectAnim = m_animationRect;  
+        m_animationRect = CRect(CPoint(rect.CenterPoint().x - rectAnim.Width() / 2, rect.CenterPoint().y - rectAnim.Height() / 2), rectAnim.Size());
+    
+        if (m_animationController.IsAnimationInProgress())  
+        {  
+            Animate(m_bCurrentDirection);
+        }  
+    }  
  ```  
   
 7.  コンス トラクターの先頭に`CMFCAnimationWalkthroughView`、次のコードを追加します。  

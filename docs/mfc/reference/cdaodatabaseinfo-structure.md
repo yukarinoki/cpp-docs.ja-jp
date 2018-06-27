@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352741"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951934"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 構造体
 `CDaoDatabaseInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているデータベース オブジェクトに関する情報が含まれています。  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `m_strName`  
+ *m_strName*  
  データベース オブジェクトの一意名です。 このプロパティを直接取得するには、する[CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)です。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  変更をデータベースにできるかどうかを示します。 このプロパティを直接取得するには、する[CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)です。 詳細については、DAO ヘルプの「更新可能なプロパティ」を参照してください。  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  Microsoft Jet データベース エンジンのバージョンを示します。 このプロパティの値を直接取得する呼び出し、データベース オブジェクトの[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)メンバー関数。 詳細については、DAO ヘルプの「バージョン プロパティ」を参照してください。  
   
- `m_lCollatingOrder`  
+ *返さ*  
  文字列の比較または並べ替えのためのテキストの並べ替え順序を指定します。 次の値を使用できます。  
   
 - **dbSortGeneral** [全般] \(英語、フランス語、ドイツ語、ポルトガル語、イタリア語、および最新のスペイン語) の並べ替え順序を使用します。  
@@ -99,15 +99,15 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  Microsoft Jet データベース エンジンがタイムアウト エラーの前に待機する秒数は、ODBC データベースに、クエリの実行時に発生します。 既定のタイムアウト値は、60 秒です。 QueryTimeout が 0 に設定されている場合は、タイムアウトは行われません。これには、プログラムの応答を停止する可能性があります。 このプロパティの値を直接取得する呼び出し、データベース オブジェクトの[GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)メンバー関数。 詳細については、DAO ヘルプの「QueryTimeout プロパティ」を参照してください。  
   
- `m_strConnect`  
+ *m_strConnect*  
  開いているデータベースのソースに関する情報を提供します。 については、文字列を約接続し、このプロパティの値を直接取得する方法の詳細については、次を参照してください。、 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)メンバー関数。 詳細については、"接続 Property"DAO ヘルプのトピックを参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  データベースがクラスの MFC オブジェクトの基になる DAO オブジェクト[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)です。 プライマリ、セカンダリ、および上記のすべての参照は、情報がによって返される方法を示します、 [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数。  
   
  によって取得される情報、 [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数は、`CDaoDatabaseInfo`構造体。 呼び出す`GetDatabaseInfo`の`CDaoWorkspace`がデータベース コレクション内のデータベース オブジェクトが格納されているオブジェクト。 `CDaoDatabaseInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoDatabaseInfo`オブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ## <a name="see-also"></a>関連項目  

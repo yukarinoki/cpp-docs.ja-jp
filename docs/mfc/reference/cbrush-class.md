@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355890"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954105"
 ---
 # <a name="cbrush-class"></a>CBrush クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のブラシをカプセル化します。  
@@ -77,7 +77,7 @@ class CBrush : public CGdiObject
 |----------|-----------------|  
 |[CBrush::operator HBRUSH](#operator_hbrush)|接続されている Windows ハンドルを返します、`CBrush`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用する、`CBrush`オブジェクトを構築、`CBrush`オブジェクトし、いずれかに渡す`CDC`ブラシを必要とするメンバー関数。  
   
  ブラシは、ハッチ、およびパターン実線、することができます。  
@@ -91,7 +91,7 @@ class CBrush : public CGdiObject
   
  `CBrush`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cbrush"></a>  CBrush::CBrush  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `crColor`  
+ *crColor*  
  RGB 色としてブラシの前景色を指定します。 ブラシをハッチすると、このパラメーターは、() の陰影の色を指定します。  
   
- `nIndex`  
+ *nIndex*  
  ブラシの陰影のスタイルを指定します。 次の値のいずれかを指定できます。  
   
 - `HS_BDIAGONAL` 45 度で下ハッチ (左右から)  
@@ -123,17 +123,17 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` 垂直方向の陰影  
   
- `pBitmap`  
+ *pBitmap*  
  指す、`CBitmap`ブラシを描画するビットマップを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CBrush` 次の 4 つオーバー ロードされたコンス トラクターです。引数なしのコンス トラクターを作成、初期化されていない`CBrush`オブジェクトを使用する前に初期化する必要があります。  
   
  引数なしのコンス トラクターを使用する場合、その結果を初期化する必要があります`CBrush`オブジェクト[CreateSolidBrush](#createsolidbrush)、 [CreateHatchBrush](#createhatchbrush)、 [CreateBrushIndirect](#createbrushindirect)、[とき](#createpatternbrush)、または[構築](#createdibpatternbrush)です。 いずれかの引数を受け取るコンス トラクターを使用する場合、それ以上初期化は必要です。 引数を持つコンス トラクターは、引数なしのコンス トラクターは常に成功しますが、エラーが発生した場合、例外をスローできます。  
   
  1 つのコンス トラクター [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーターが指定した色ソリッド ブラシを構築します。 色の RGB 値を指定およびに構築される、 `RGB` windows マクロです。H.  
   
- 2 つのパラメーターを持つコンス トラクターは、ハッチ ブラシを構築します。 `nIndex`ハッチ パターンのインデックスを指定します。 `crColor`パラメーターは、色を指定します。  
+ 2 つのパラメーターを持つコンス トラクターは、ハッチ ブラシを構築します。 *NIndex*ハッチ パターンのインデックスを指定します。 *CrColor*パラメーターは、色を指定します。  
   
  コンス トラクター、`CBitmap`パラメーターは、パターンのブラシを構築します。 パラメーターは、ビットマップを識別します。 使用して作成されたものと見なされます、ビットマップ[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)、 [cbitmap::createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)、 [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)、または[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)です。 塗りつぶしのパターンで使用するビットマップの最小サイズは、8 ピクセルの 8 ピクセルです。  
   
@@ -154,7 +154,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ブラシは、任意のデバイス コンテキストの現在のブラシとして後で選択できます。  
   
  (1 平面、1 ビット/ピクセル) にモノクロ ビットマップを使用して作成されたブラシは、現在テキスト色と背景色を使用して描画されます。 0 に設定されたビットで表されるピクセルは、現在のテキストの色で描画されます。 1 に設定されたビットで表されるピクセルは、現在の背景色で描画されます。  
@@ -193,14 +193,14 @@ BOOL CreateDIBPatternBrush(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ブラシは、ラスター オペレーションをサポートする任意のデバイス コンテキストを選択できます。  
   
  DIB を処理する方法では、2 つのバージョンが異なります。  
   
--   最初のバージョンでは、DIB にハンドルを取得する呼び出しで、Windows **GlobalAlloc**関数をグローバル メモリのブロックを割り当てます。 パックされた DIB にメモリを入力します。  
+-   最初のバージョンでは、DIB にハンドルを取得する呼び出しで、Windows`GlobalAlloc`関数をグローバル メモリのブロックを割り当てます。 パックされた DIB にメモリを入力します。  
   
--   2 番目のバージョンで必要はありませんを呼び出す**GlobalAlloc**パックされた DIB のメモリを割り当てられません。  
+-   2 番目のバージョンで必要はありませんを呼び出す`GlobalAlloc`パックされた DIB のメモリを割り当てられません。  
   
  パックされた DIB から成る、`BITMAPINFO`データ構造体の直後に、ビットマップのピクセルを定義するバイトの配列。 塗りつぶしのパターンとして使用されるビットマップは、8 ピクセル × 8 ピクセルにする必要があります。 ビットマップが大きい場合は、Windows は、最初の 8 行、および 8 列のビットマップの左上隅にあるピクセルに対応するビットのみを使用して、塗りつぶしパターンを作成します。  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  次の Windows 機能の使用については、Windows SDK を参照してください。  
   
-- [構築](http://msdn.microsoft.com/library/windows/desktop/dd183492)(3.0 より前のバージョンの Windows 用に記述されたアプリケーションとの互換性のためだけに用意されているこの関数を使用して、**されている**関数です。)。  
+- [構築](http://msdn.microsoft.com/library/windows/desktop/dd183492)(3.0 より前のバージョンの Windows 用に記述されたアプリケーションとの互換性のためだけに用意されているこの関数を使用して、`CreateDIBPatternBrushPt`関数です。)。  
   
 - [されている](http://msdn.microsoft.com/library/windows/desktop/dd183493)(この関数は、Win32 ベースのアプリケーションで使用する必要があります)。  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  ブラシの陰影のスタイルを指定します。 次の値のいずれかを指定できます。  
   
 - `HS_BDIAGONAL` 45 度で下ハッチ (左右から)  
@@ -242,13 +242,13 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` 垂直方向の陰影  
   
- `crColor`  
+ *crColor*  
  RGB 色 (の陰影の色) として、ブラシの前景色を指定します。 参照してください[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)詳細については、Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ブラシは、任意のデバイス コンテキストの現在のブラシとして後で選択できます。  
   
 ### <a name="example"></a>例  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pBitmap`  
+ *pBitmap*  
  ビットマップを識別します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- ブラシは、ラスター オペレーションをサポートする任意のデバイス コンテキストを選択できます。 によって識別されるビットマップ`pBitmap`を使用して初期化は、通常、 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)、 [cbitmap::createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)、 [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)、または[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)関数。  
+### <a name="remarks"></a>Remarks  
+ ブラシは、ラスター オペレーションをサポートする任意のデバイス コンテキストを選択できます。 によって識別されるビットマップ*pBitmap*を使用して初期化は、通常、 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)、 [cbitmap::createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)、 [CBitmap:。LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)、または[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)関数。  
   
  塗りつぶしのパターンとして使用されるビットマップは、8 ピクセル × 8 ピクセルにする必要があります。 ビットマップが大きい場合は、Windows は、最初の 8 行と列のビットマップの左上隅にあるピクセルに対応するビットだけ使用します。  
   
@@ -290,13 +290,13 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)ブラシの色を指定する構造体。 色の RGB 値を指定およびに構築される、 `RGB` windows マクロです。H.  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)ブラシの色を指定する構造体。 色は、RGB 値を指定し、WINDOWS の RGB マクロに構築されます。H.  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ブラシは、任意のデバイス コンテキストの現在のブラシとして後で選択できます。  
   
  アプリケーションが完了するとによって作成されたブラシを使用して`CreateSolidBrush`、デバイス コンテキスト外のブラシを選択する必要があります。  
@@ -312,13 +312,13 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  色のインデックスを指定します。 この値は、21 ウィンドウ要素のいずれかの描画に使用する色に対応します。 参照してください[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)値の一覧については Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ブラシは、任意のデバイス コンテキストの現在のブラシとして後で選択できます。  
   
  アプリケーションが完了するとによって作成されたブラシを使用して`CreateSysColorBrush`、デバイス コンテキスト外のブラシを選択する必要があります。  
@@ -334,13 +334,13 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hBrush`  
+ *hBrush*  
  `HANDLE` Windows GDI ブラシ。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CBrush`それ以外の成功した場合は、オブジェクト**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合、`CBrush`オブジェクトが、一時的なハンドルに既にアタッチされていない`CBrush`オブジェクトが作成され、接続されています。 この一時`CBrush`のみ、[次へ]、アプリケーションがまでのアイドル時間イベント ループでオブジェクトが無効です。 この時点では、すべての一時的なグラフィック オブジェクトが削除されます。 つまり、一時オブジェクトは 1 つのウィンドウ メッセージを処理中にのみ有効です。  
   
  グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
@@ -356,17 +356,17 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLogBrush`  
+ *終了*  
  指す、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)ブラシについての情報を格納する構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合と`pLogBrush`有効なポインターは、戻り値は、バッファーに格納されるバイト数。  
+ 関数が成功した場合と*終了*有効なポインターは、戻り値は、バッファーに格納されるバイト数。  
   
- 関数が成功した場合と`pLogBrush`は**NULL**、戻り値は、関数の情報を保持するために必要なバイト数にバッファーに保存します。  
+ 関数が成功した場合と*終了*は**NULL**、戻り値は、関数の情報を保持するために必要なバイト数にバッファーに保存します。  
   
  関数が失敗した場合、戻り値は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `LOGBRUSH`構造体は、スタイル、色、およびブラシのパターンを定義します。  
   
  たとえば、呼び出す`GetLogBrush`特定の色またはビットマップのパターンに一致します。  
@@ -384,7 +384,7 @@ operator HBRUSH() const;
 ### <a name="return-value"></a>戻り値  
  かどうかは成功すると、Windows GDI オブジェクトへのハンドルによって表される、`CBrush`オブジェクト。 それ以外の場合**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子はキャスト演算子の`HBRUSH`オブジェクト。  
   
  グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  

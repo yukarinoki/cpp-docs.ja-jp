@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384089"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954860"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>テクニカル ノート 16: MFC における C++ の多重継承
 ここでは、Microsoft Foundation Classes で複数継承 (MI) を使用する方法について説明します。 多重継承の使用は、MFC で必要はありません。 MI は、すべての MFC クラスでは使用されませんし、クラス ライブラリを作成する必要はありません。  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- ここでは`CObject`2 回は含まれています。 つまりへの参照のあいまいさを解消する方法が必要`CObject`メソッドまたは演算子。 `operator new`と[演算子 delete](../mfc/reference/cobject-class.md#operator_delete) 2 つの演算子は、明確にする必要があります。 別の例としては、次のコードは、コンパイル時に、エラーを発生します。  
+ ここでは`CObject`2 回は含まれています。 つまりへの参照のあいまいさを解消する方法が必要`CObject`メソッドまたは演算子。 **New 演算子**と[演算子 delete](../mfc/reference/cobject-class.md#operator_delete) 2 つの演算子は、明確にする必要があります。 別の例としては、次のコードは、コンパイル時に、エラーを発生します。  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>CObject のメソッドを再実装  
- 2 つ以上の新しいクラスを作成する場合が`CObject`、基底クラスを派生する必要があります、`CObject`メソッドを使用するには、他のユーザーをします。 演算子`new`と`delete`は必須と[ダンプ](../mfc/reference/cobject-class.md#dump)をお勧めします。 次の例 reimplements、`new`と`delete`演算子および`Dump`メソッド。  
+ 2 つ以上の新しいクラスを作成する場合が`CObject`、基底クラスを派生する必要があります、`CObject`メソッドを使用するには、他のユーザーをします。 演算子**新しい**と**削除**は必須と[ダンプ](../mfc/reference/cobject-class.md#dump)をお勧めします。 次の例 reimplements、**新しい**と**削除**演算子および`Dump`メソッド。  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  そのほとんどを継承するように思えます`CObject`関数のあいまいさの問題を解決が、その場合ではありません。 メンバーのデータがないため`CObject`、基底クラス メンバー データの複数のコピーを防ぐために仮想継承する必要はありません。 以前に表示された最初の例では、`Dump`は異なる方法で実装されるため、仮想メソッドがあいまいです。`CFrameWnd`と`CObList`です。 あいまいさを排除する最善の方法では、前のセクションで説明した推奨事項に従います。  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>使うため、実行時の入力  
- MFC でサポートされている、実行時入力メカニズム`CObject`マクロを使用して`DECLARE_DYNAMIC`、 `IMPLEMENT_DYNAMIC`、 `DECLARE_DYNCREATE`、 `IMPLEMENT_DYNCREATE`、`DECLARE_SERIAL`と`IMPLEMENT_SERIAL`です。 これらのマクロは、安全なキャストを保証するために、実行時の型チェックを実行できます。  
+ MFC でサポートされている、実行時入力メカニズム`CObject`DECLARE_DYNAMIC、IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE、IMPLEMENT_DYNCREATE、DECLARE_SERIAL および IMPLEMENT_SERIAL マクロを使用します。 これらのマクロは、安全なキャストを保証するために、実行時の型チェックを実行できます。  
   
- これらのマクロは、1 つの基本クラスのみをサポートしは多重継承クラスの限定された方法で動作します。 指定した基本クラス`IMPLEMENT_DYNAMIC`または`IMPLEMENT_SERIAL`初の (または最も左) の基本クラスをする必要があります。 この配置を使用すると、型の左端の基底クラスのみを確認できます。 実行時の型システムを使用して、他の基本クラスはわかりません。 次の例では、実行時のシステムの作業型に対してチェック`CFrameWnd`、に関するが何もないが、`CObList`です。  
+ これらのマクロは、1 つの基本クラスのみをサポートしは多重継承クラスの限定された方法で動作します。 IMPLEMENT_DYNAMIC または IMPLEMENT_SERIAL で指定する基本クラスは、最初 (または最も左) の基本クラスにする必要があります。 この配置を使用すると、型の左端の基底クラスのみを確認できます。 実行時の型システムを使用して、他の基本クラスはわかりません。 次の例では、実行時のシステムの作業型に対してチェック`CFrameWnd`、に関するが何もないが、`CObList`です。  
   
 ```  
 class CListWnd : public CFrameWnd,

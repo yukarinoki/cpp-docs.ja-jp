@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384583"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956848"
 ---
 # <a name="tn014-custom-controls"></a>テクニカル ノート 14: カスタム コントロール
 ここでは、カスタムおよび自己描画コントロールの MFC サポートについて説明します。 動的なサブクラス化をについて説明し、関係について説明[CWnd](../mfc/reference/cwnd-class.md)オブジェクトおよび`HWND`s。  
@@ -100,11 +100,11 @@ ms.locfileid: "33384583"
 ## <a name="using-self-draw-controls-and-menus"></a>自己描画コントロールやメニューを使用  
  自己描画メニュー、両方をオーバーライドする必要があります、`OnMeasureItem`と`OnDrawItem`メソッドです。  
   
- オーバーライドする必要がありますの自己描画リスト ボックスやコンボ ボックス、`OnMeasureItem`と`OnDrawItem`です。 指定する必要があります、`LBS_OWNERDRAWVARIABLE`リスト ボックスのスタイルまたは`CBS_OWNERDRAWVARIABLE`スタイル コンボ ボックス ダイアログ テンプレート。 `OWNERDRAWFIXED`自己描画項目では、リスト ボックスに関連付けられているコントロールの自己描画前に、固定の項目の高さが決まるためスタイルは動作しません。 (メソッドを使用することができます[CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight)と[CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight)この制限を克服します)。  
+ オーバーライドする必要がありますの自己描画リスト ボックスやコンボ ボックス、`OnMeasureItem`と`OnDrawItem`です。 ダイアログ テンプレートで LBS_OWNERDRAWVARIABLE スタイルのリスト ボックスまたはコンボ ボックスの CBS_OWNERDRAWVARIABLE スタイルを指定する必要があります。 OWNERDRAWFIXED スタイルは、リスト ボックスに関連付けられているコントロールの自己描画前に、固定の項目の高さが決まるため自己描画項目では機能しません。 (メソッドを使用することができます[CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight)と[CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight)この制限を克服します)。  
   
- 切り替え、`OWNERDRAWVARIABLE`スタイルが強制的に適用するシステム、`NOINTEGRALHEIGHT`コントロールにスタイル。 コントロールは、変数のサイズと整数の高さを計算できませんので項目、既定のスタイルの`INTEGRALHEIGHT`は無視されます、コントロールが常に`NOINTEGRALHEIGHT`です。 アイテムの高さ固定である場合、コントロールのサイズの項目のサイズの整数乗数を指定することで描画されるから部分的な項目ができなくなります。  
+ OWNERDRAWVARIABLE スタイルに切り替えると、NOINTEGRALHEIGHT スタイルをコントロールに適用するシステムが実行されます。 コントロールは、変数のサイズが設定された項目を含む整数の高さを計算することはできません、ため、INTEGRALHEIGHT の既定のスタイルは無視され、コントロールが NOINTEGRALHEIGHT では常にします。 アイテムの高さ固定である場合、コントロールのサイズの項目のサイズの整数乗数を指定することで描画されるから部分的な項目ができなくなります。  
   
- 自己リスト ボックスやコンボ ボックスを描画するため、`LBS_SORT`または`CBS_SORT`スタイルをオーバーライドする必要がある、`OnCompareItem`メソッドです。  
+ リスト ボックスやコンボ ボックス LBS_SORT または CBS_SORT のスタイルと自己描画、オーバーライドする必要があります、`OnCompareItem`メソッドです。  
   
  自己描画リスト ボックスやコンボ ボックス、`OnDeleteItem`は通常、オーバーライドできません。 オーバーライドできます`OnDeleteItem`特別な処理を実行する場合。 該当する 1 つのケースは、追加のメモリやその他のリソースが各リスト ボックスまたはコンボ ボックスの項目に格納されている場合です。  
   

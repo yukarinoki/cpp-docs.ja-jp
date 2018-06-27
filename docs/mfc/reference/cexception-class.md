@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368034"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951710"
 ---
 # <a name="cexception-class"></a>CException クラス
 MFC (Microsoft Foundation Class) ライブラリ内のすべての例外に関する基底クラスです。  
@@ -53,7 +53,7 @@ class AFX_NOVTABLE CException : public CObject
 |[CException::Delete](#delete)|削除、`CException`オブジェクト。|  
 |[CException::ReportError](#reporterror)|ユーザーにメッセージ ボックスに、エラー メッセージを報告します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CException`抽象基本クラスを作成することはできませんが`CException`オブジェクト直接派生クラスのオブジェクトを作成する必要があります。 独自に作成する必要がある場合`CException`-スタイル クラスは、モデルとして上記の派生クラスのいずれかを使用します。 派生クラスも使用するように`IMPLEMENT_DYNAMIC`です。  
   
  派生クラスとその説明を次に示します。  
@@ -87,7 +87,7 @@ class AFX_NOVTABLE CException : public CObject
   
  `CException`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="cexception"></a>  CException::CException  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>パラメーター  
  *b_AutoDelete*  
- 指定**TRUE**場合のメモリを`CException`オブジェクトは、ヒープに割り当てられました。 これにより、`CException`ときに削除されるオブジェクト、**削除**例外を削除するメンバー関数が呼び出されます。 指定**FALSE**場合、`CException`オブジェクトがスタック上またはグローバル オブジェクトです。 この場合、`CException`されない時に削除、**削除**メンバー関数が呼び出されます。  
+ 指定**TRUE**場合のメモリを`CException`オブジェクトは、ヒープに割り当てられました。 これにより、`CException`ときに削除されるオブジェクト、`Delete`例外を削除するメンバー関数が呼び出されます。 指定**FALSE**場合、`CException`オブジェクトがスタック上またはグローバル オブジェクトです。 ここで、`CException`されない時に削除、`Delete`メンバー関数が呼び出されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このコンス トラクターを直接呼び出す必要は通常ありません。 例外をスローした関数がのインスタンスを作成する必要があります、 `CException`-クラスを派生し、そのコンス トラクター、または呼び出しが、MFC のいずれかを使用スローすることは、関数など[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、定義済みの型をスローします。 このドキュメントは完全を期すのためだけに提供します。  
   
 ##  <a name="delete"></a>  CException::Delete  
- この関数は、かどうかを**CException** 、ヒープのオブジェクトが作成され、それを呼び出す場合は、**削除**演算子をオブジェクトにします。  
+ この関数は、かどうかを`CException`、ヒープのオブジェクトが作成され、それを呼び出す場合は、**削除**演算子をオブジェクトにします。  
   
 ```  
 void Delete();
 ```  
   
-### <a name="remarks"></a>コメント  
- 削除するときに、 **CException**オブジェクトを使用して、**削除**例外を削除するメンバー関数。 使用しないで、**削除**演算子を直接ため、`CException`オブジェクトのグローバル オブジェクトである可能性がありますまたはスタック上に作成されました。  
+### <a name="remarks"></a>Remarks  
+ 削除するときに、`CException`オブジェクトを使用して、`Delete`例外を削除するメンバー関数。 使用しないで、**削除**演算子を直接ため、`CException`オブジェクトのグローバル オブジェクトである可能性がありますまたはスタック上に作成されました。  
   
  オブジェクトを作成するときに、オブジェクトを削除するかどうかを指定することができます。 詳細については、次を参照してください。 [CException::CException](#cexception)です。  
   
- のみを呼び出す必要がある**削除**、C++ を使用している場合**を再試行してください**- **キャッチ**メカニズムです。 MFC のマクロを使用している場合**を再試行してください**と**キャッチ**、これらのマクロはこの関数を呼び出しては自動的にします。  
+ のみを呼び出す必要がある`Delete`、C++ を使用している場合**を再試行してください**- **キャッチ**メカニズムです。 MFC のマクロを使用している場合**を再試行してください**と**キャッチ**、これらのマクロはこの関数を呼び出しては自動的にします。  
   
 ### <a name="example"></a>例  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nType`  
+ *タイプ*  
  メッセージ ボックスのスタイルを指定します。 任意の組み合わせを適用、[メッセージ ボックス スタイル](styles-used-by-mfc.md#message-box-styles)をボックスにします。 このパラメーターを指定しない場合、既定値は**MB_OK**です。  
   
  *nMessageID*  

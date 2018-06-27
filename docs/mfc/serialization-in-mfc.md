@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46dc8500543ce94b7d8d6a3415b22d019619d83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381024"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952594"
 ---
 # <a name="serialization-in-mfc"></a>MFC におけるシリアル化
 この記事では、間で永続化するオブジェクトを許可する Microsoft Foundation Class ライブラリ (MFC) でのシリアル化機構が、プログラムの実行について説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "33381024"
 > [!NOTE]
 >  混同しないでください、`CArchive`書式付きテキストのみの汎用的な iostream のクラスを持つクラス。 `CArchive`クラスは、バイナリ形式でシリアル化されたオブジェクト。  
   
- する場合は、永続的なデータ ストレージ用の独自のメカニズムを作成する MFC シリアル化をバイパスできます。 ユーザーのコマンドでシリアル化を開始する、クラス メンバー関数をオーバーライドする必要があります。 説明を参照[テクニカル ノート 22:](../mfc/tn022-standard-commands-implementation.md)の`ID_FILE_OPEN`、 **ID_FILE_SAVE**、および**ID_FILE_SAVE_AS**標準コマンド。  
+ する場合は、永続的なデータ ストレージ用の独自のメカニズムを作成する MFC シリアル化をバイパスできます。 ユーザーのコマンドでシリアル化を開始する、クラス メンバー関数をオーバーライドする必要があります。 説明を参照[テクニカル ノート 22:](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN、ID_FILE_SAVE、および ID_FILE_SAVE_AS 標準コマンド。  
   
  次の記事では、シリアル化に必要な 2 つの主なタスクを説明します。  
   

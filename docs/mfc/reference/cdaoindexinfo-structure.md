@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367036"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954066"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 構造体
 `CDaoIndexInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているインデックス オブジェクトに関する情報が含まれています。  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `m_strName`  
+ *m_strName*  
  フィールド オブジェクトの一意名です。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  配列へのポインター [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) tabledef またはレコード セット フィールドは、インデックスのキー フィールドを示すオブジェクト。 各オブジェクトは、インデックス内の 1 つのフィールドを識別します。 既定のインデックス順序は昇順です。 Index オブジェクトは、各レコードのインデックス キーを表す 1 つまたは複数のフィールドを持つことができます。 これらは、降順、または組み合わせ、昇順ことができます。  
   
- `m_nFields`  
- 格納されているフィールド数`m_pFieldInfos`です。  
+ *m_nFields*  
+ 格納されているフィールド数*m_pFieldInfos*です。  
   
  *m_bPrimary*  
  プライマリ プロパティが場合**TRUE**、index オブジェクトは、プライマリ インデックスを表します。 プライマリ インデックスは、定義済みの順序でテーブル内のすべてのレコードを一意に識別する 1 つ以上のフィールドで構成されます。 Index オブジェクトの一意のプロパティに設定もインデックスのフィールドは一意である必要があります、ため**TRUE** DAO でします。 場合は、プライマリ インデックスは、1 つ以上のフィールドで構成される、各フィールドは、重複する値を含めることができますが、すべてのインデックス付きフィールドの値の組み合わせは一意である必要があります。 プライマリ インデックスは、テーブルのキーで構成され、通常、主キーと同じフィールドが含まれます。  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  詳細については、DAO ヘルプの「IgnoreNulls プロパティ」を参照してください。  
   
- `m_bRequired`  
+ *m_bRequired*  
  DAO インデックス オブジェクトに Null 以外の値が必要かどうかを示します。 このプロパティは、する場合**TRUE**、インデックス オブジェクトが Null 値を許可しません。 詳細については、「必要なプロパティ」DAO ヘルプ トピックを参照してください。  
   
 > [!TIP]
@@ -101,16 +101,16 @@ struct CDaoIndexInfo {
  *m_lDistinctCount*  
  関連付けられているテーブルに含まれているインデックス オブジェクトの一意の値の数を示します。 一意の値、またはインデックス内のキーの数を決定する、DistinctCount プロパティを確認します。 任意のキーは 1 回だけカウントされる場合でも、インデックスが重複する値を許可している場合、その値の複数の発生にすることがあります。 この情報は、インデックスの情報を評価することによってデータ アクセスを最適化しようとするアプリケーションで役に立ちます。 一意の値の数は、インデックス オブジェクトの基数とも呼ばれます。 DistinctCount プロパティ常に反映されませんキーの実際の数、特定の時点。 たとえば、トランザクションのロールバックによって発生する変更反映されません直ちに DistinctCount プロパティにします。 詳細については、DAO ヘルプの「DistinctCount プロパティ」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  プライマリ、セカンダリ、および上記のすべての参照は、情報がによって返される方法を示します、`GetIndexInfo`クラスでメンバー関数[どちら](../../mfc/reference/cdaotabledef-class.md#getindexinfo)と[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)です。  
   
  Index オブジェクトは、MFC クラスでは表されません。 DAO オブジェクト クラスの基になる MFC オブジェクトの代わりに、[どちら](../../mfc/reference/cdaotabledef-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)インデックス コレクションと呼ばれるインデックス オブジェクトのコレクションを格納します。 これらのクラスは、インデックス情報の各アイテムにアクセスするメンバー関数を指定するか、すべて同時にアクセスすることができます、`CDaoIndexInfo`オブジェクトを呼び出して、`GetIndexInfo`親オブジェクトのメンバー関数。  
   
- `CDaoIndexInfo` コンス トラクターとデストラクターが正しく割り当ておよびでインデックスのフィールド情報を解放するために`m_pFieldInfos`です。  
+ `CDaoIndexInfo` コンス トラクターとデストラクターが正しく割り当ておよびでインデックスのフィールド情報を解放するために*m_pFieldInfos*です。  
   
  によって取得される情報、`GetIndexInfo`テーブル定義オブジェクトのメンバー関数は、`CDaoIndexInfo`構造体。 呼び出す、`GetIndexInfo`インデックス オブジェクトが格納されているコレクションを持つインデックスを含むテーブル定義オブジェクトのメンバー関数。 `CDaoIndexInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoIndexInfo`オブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ## <a name="see-also"></a>関連項目  

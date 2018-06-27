@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369217"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952399"
 ---
 # <a name="cdaoexception-class"></a>CDaoException クラス
 データ アクセス オブジェクト (DAO: Data Accsess Object) を基にした MFC データベース クラスから発生する例外条件を表します。  
@@ -67,7 +67,7 @@ class CDaoException : public CException
 |[CDaoException::m_pErrorInfo](#m_perrorinfo)|ポインター、 [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) DAO エラーの 1 つのオブジェクトに関する情報を含むオブジェクト。|  
 |[CDaoException::m_scode](#m_scode)|[SCODE](#m_scode)エラーに関連付けられている値。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラスには、例外の原因を調べて使用できるパブリック データ メンバーが含まれています。 `CDaoException` オブジェクトが構築し、DAO データベース クラスのメンバー関数によってスローされます。  
   
 > [!NOTE]
@@ -88,7 +88,7 @@ class CDaoException : public CException
   
  `CDaoException`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
@@ -98,7 +98,7 @@ class CDaoException : public CException
 CDaoException();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  通常は、フレームワークは、そのコードによって例外がスローされる例外オブジェクトを作成します。 頻度の低い例外オブジェクトを明示的に作成する必要があります。 スローする場合、`CDaoException`独自のコードからグローバル関数を呼び出し[AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception)です。  
   
  ただし、MFC クラスをカプセル化する DAO インターフェイス ポインターを使用して DAO の直接呼び出しを行う場合、例外オブジェクトを明示的に作成することができます。 その場合は、DAO からエラー情報を取得する必要があります。 ワークスペースのデータベース コレクションに DAODatabases インターフェイスを使用して、DAO メソッドを呼び出すと、DAO でのエラーが発生したとします。  
@@ -129,7 +129,7 @@ short GetErrorCount();
 ### <a name="return-value"></a>戻り値  
  DAO データベース エンジンのエラーのコレクションのオブジェクトのエラーの数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この情報はそれぞれ、1 つまたは複数 DAO エラー内のオブジェクトのコレクションを取得するエラーのコレクションをループに役立ちます。 インデックスまたは DAO エラー番号で、エラー オブジェクトを取得する、 [GetErrorInfo](#geterrorinfo)メンバー関数。  
   
 > [!NOTE]
@@ -143,10 +143,10 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  インデックスで検索する場合、データベース エンジンのエラー コレクションにエラー情報のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  次の種類の例外に関する情報を取得するには、このメンバー関数を呼び出します。  
   
 -   エラー コード  
@@ -166,7 +166,7 @@ void GetErrorInfo(int nIndex);
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError  
  MFC 拡張エラー コードが含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このコードは、MFC DAO クラスの特定のコンポーネントが下がの場合で提供されます。  
   
  指定できる値は次のとおりです。  
@@ -182,23 +182,23 @@ void GetErrorInfo(int nIndex);
 ##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo  
  ポインターが含まれています、`CDaoErrorInfo`最後に呼び出すことによって取得する DAO エラー オブジェクト情報を提供する構造体[GetErrorInfo](#geterrorinfo)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このオブジェクトには、次の情報が含まれています。  
   
 |CDaoErrorInfo メンバー|情報|説明|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|エラー コード|DAO エラー コード|  
+|`m_lErrorCode`|エラー コード|DAO エラー コード|  
 |`m_strSource`|ソース|最初に発生したエラーをオブジェクトまたはアプリケーションの名前|  
 |`m_strDescription`|説明|エラーに関連付けられているわかりやすい文字列|  
 |`m_strHelpFile`|ヘルプ ファイル|ユーザーが、問題に関する情報を取得できる、Windows のヘルプ ファイルへのパス|  
-|**m_lHelpContext**|ヘルプ コンテキスト|DAO のヘルプ ファイルのトピックのコンテキスト ID|  
+|`m_lHelpContext`|ヘルプ コンテキスト|DAO のヘルプ ファイルのトピックのコンテキスト ID|  
   
  含まれる情報の詳細について、`CDaoErrorInfo`オブジェクトを参照してください、 [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)構造体。  
   
 ##  <a name="m_scode"></a>  CDaoException::m_scode  
  型の値を含む`SCODE`エラーを説明します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、OLE コードです。 ほとんどの場合、MFC または DAO エラーの詳細については、他の使用可能なため、この値を使用する必要があります頻度の低い`CDaoException`データ メンバーです。  
   
  については`SCODE`、トピックを参照して[構造体の OLE エラー コード](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。 `SCODE`データ型にマップ、`HRESULT`データ型。  

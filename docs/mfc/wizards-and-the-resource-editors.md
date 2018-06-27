@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383842"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951141"
 ---
 # <a name="wizards-and-the-resource-editors"></a>ウィザードおよびリソース エディター
 Visual C には、多くの統合リソース エディターと共に、MFC プログラミングに使用するためのいくつかのウィザードが含まれます。 ActiveX コントロールをプログラミングでは、 [ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)MFC アプリケーション ウィザードのとまったく同様に、目的を果たします。 これらのツールのほとんどの MFC アプリケーションを記述するときに、ツールは大幅に簡略化し、作業内容を高速化します。  
@@ -41,7 +41,7 @@ Visual C には、多くの統合リソース エディターと共に、MFC プ
 > [!NOTE]
 >  クラス ビューでは、MFC クラスの仮想関数をオーバーライドすることができます。 クラスおよびオーバーライドする仮想関数を選択します。 プロセスの残りの部分は、次の段落で説明したよう、メッセージ処理に似ています。  
   
- Windows で実行されているアプリケーションは、[メッセージ ドリブン](../mfc/message-handling-and-mapping.md)です。 ユーザーの操作と他の実行中のプログラムで発生するイベントと、Windows、windows のプログラムでメッセージを送信します。 たとえば、ユーザーには、ウィンドウでマウスがクリックすると、Windows 送信、`WM_LBUTTONDOWN`マウスの左ボタンが押されたときに、メッセージ`WM_LBUTTONUP`ボタンが離されると、メッセージします。 Windows にも送信**WM_COMMAND**メッセージをユーザーがメニュー バーのコマンドを選択します。  
+ Windows で実行されているアプリケーションは、[メッセージ ドリブン](../mfc/message-handling-and-mapping.md)です。 ユーザーの操作と他の実行中のプログラムで発生するイベントと、Windows、windows のプログラムでメッセージを送信します。 たとえば、ユーザーには、ウィンドウでマウスがクリックすると、Windows、WM_LBUTTONDOWN メッセージ マウスの左ボタンが押されたときと送信したメッセージ、ボタンが離されるとします。 Windows は、ユーザーがメニュー バーのコマンドを選択したときにも WM_COMMAND メッセージを送信します。  
   
  MFC フレームワークでは、ドキュメント、ビュー、フレーム ウィンドウ、ドキュメント テンプレート、アプリケーション オブジェクトなどのさまざまなオブジェクト「メッセージを処理できます」です。 このオブジェクトは、「ハンドラー関数」のメンバーの 1 つとして、機能を提供し、フレームワークが受信メッセージをそのハンドラーにマップします。  
   

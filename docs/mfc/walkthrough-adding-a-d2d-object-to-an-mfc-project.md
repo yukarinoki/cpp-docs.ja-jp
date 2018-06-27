@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306009"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954872"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加
 
@@ -48,7 +48,7 @@ ms.locfileid: "36306009"
 
 1. **ファイル** メニューのをポイント**新規**を選択し**プロジェクト**です。
 
-2. **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **[名前]** ボックスに「`MFCD2DWalkthrough`」と入力します。 **[OK]** をクリックします。
+2. **新しいプロジェクト**ダイアログ ボックスの下の左ペインで**インストールされたテンプレート**、展開**Visual C**し、 **MFC**です。 中央のペインで選択**MFC アプリケーション**です。 **名前**ボックスに、入力*MFCD2DWalkthrough*です。 **[OK]** をクリックします。
 
 3. **MFC アプリケーション ウィザード**、選択**完了**設定を変更せずします。
 
@@ -132,7 +132,7 @@ ms.locfileid: "36306009"
 
 3. **メッセージ** タブで、選択**カスタム メッセージの追加**です。
 
-4. **カスタム メッセージの追加** ダイアログ ボックスで、**カスタム Windows メッセージ**ボックスに、入力`AFX_WM_DRAW2D`です。 **メッセージ ハンドラー名**ボックスに、入力`OnDraw2D`です。 選択、**登録メッセージ**を選択し**OK**です。 この操作用のメッセージ ハンドラーの追加、`AFX_WM_DRAW2D`メッセージごとに、`CMFCD2DWalkthroughView`クラスです。
+4. **カスタム メッセージの追加** ダイアログ ボックスで、**カスタム Windows メッセージ**ボックスに、入力*AFX_WM_DRAW2D*です。 **メッセージ ハンドラー名**ボックスに、入力*OnDraw2D*です。 選択、**登録メッセージ**を選択し**OK**です。 この操作に AFX_WM_DRAW2D メッセージ用のメッセージ ハンドラーの追加、`CMFCD2DWalkthroughView`クラスです。
 
 5. **既存ハンドラー**ボックスで、`OnDraw2D`です。 選択**コードの編集**を表示する、`CMFCD2DWalkthroughView::OnDraw2D`メソッドです。 このコードを使用して、`CMFCD2DWalkthroughView::OnDrawD2D`メソッド。
 

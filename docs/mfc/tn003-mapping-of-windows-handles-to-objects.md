@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382974"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951509"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>テクニカル ノート 3: Windows ハンドルとオブジェクト間のマップ
 この注の説明、MFC Windows をマップをサポートするルーチンが C++ オブジェクトへのハンドルをオブジェクトします。  
@@ -56,15 +56,15 @@ ms.locfileid: "33382974"
   
 -   ソケット ([CSocket](../mfc/reference/csocket-class.md))  
   
- ハンドルを指定すると、これらのオブジェクトのいずれにも、静的メソッドを呼び出すことによって、ハンドルをラップする MFC オブジェクトを見つけることができます`FromHandle`です。 たとえばと呼ばれる HWND をその`hWnd`、次の行はへのポインターを返します、`CWnd`をラップする`hWnd`:  
+ ハンドルを指定すると、これらのオブジェクトのいずれにも、静的メソッドを呼び出すことによって、ハンドルをラップする MFC オブジェクトを見つけることができます`FromHandle`です。 たとえばと呼ばれる HWND をその*hWnd*、次の行はへのポインターを返します、`CWnd`をラップする*hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- 場合`hWnd`が特定のラッパー オブジェクト、一時的な`CWnd`をラップする作成`hWnd`です。 これにより、いずれかのハンドルから有効な C++ オブジェクトを取得します。  
+ 場合*hWnd*が特定のラッパー オブジェクト、一時的な`CWnd`をラップする作成*hWnd*です。 これにより、いずれかのハンドルから有効な C++ オブジェクトを取得します。  
   
- ラッパー オブジェクトを作成したら、ラッパー クラスのパブリック メンバー変数からのハンドルを取得できます。 場合、 `CWnd`、 `m_hWnd` HWND そのオブジェクトにはが含まれています。  
+ ラッパー オブジェクトを作成したら、ラッパー クラスのパブリック メンバー変数からのハンドルを取得できます。 場合、 `CWnd`、 *m_hWnd* HWND そのオブジェクトにはが含まれています。  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>MFC オブジェクトにハンドルをアタッチします。  
  Windows のオブジェクトを新しく作成されたハンドルのラッパー オブジェクトおよびハンドルを指定、呼び出すことによって、2 つを関連付けることができます、`Attach`例のように関数。  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- これはパーマネント マップの関連付けにエントリ`myWnd`と`hWnd`です。 呼び出す`CWnd::FromHandle(hWnd)`はへのポインターを返します`myWnd`です。 ときに`myWnd`が削除されると、デストラクターを自動的に破棄`hWnd`、Windows を呼び出すことによって[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)関数。 これが必要ない場合`hWnd`からデタッチする必要があります`myWnd`する前に`myWnd`が破棄される (これでスコープを終了するときに通常`myWnd`定義されました)。 `Detach`メソッドではこのです。  
+ これはパーマネント マップの関連付けにエントリ*myWnd*と*hWnd*です。 呼び出す`CWnd::FromHandle(hWnd)`はへのポインターを返します*myWnd*です。 ときに*myWnd*が削除されると、デストラクターを自動的に破棄*hWnd* 、Windows を呼び出すことによって[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)関数。 これが必要ない場合*hWnd*からデタッチする必要があります*myWnd*する前に*myWnd*は破棄されます (これでスコープを終了するときに通常*myWnd*定義されました)。 `Detach`メソッドではこのです。  
   
 ```  
 myWnd.Detach();

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f36dae3c383aebedf7e8340188e78961066a30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374615"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955015"
 ---
 # <a name="cdialog-class"></a>CDialog クラス
 [画面] ダイアログ ボックスを表示するための基本クラス。  
@@ -97,10 +97,10 @@ class CDialog : public CWnd
   
 |名前|説明|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|オーバーライドして、[キャンセル] ボタンまたは ESC キーの操作を実行します。 既定値は、ダイアログ ボックスを閉じ、 **DoModal**返します**IDCANCEL**。|  
+|[CDialog::OnCancel](#oncancel)|オーバーライドして、[キャンセル] ボタンまたは ESC キーの操作を実行します。 既定値は、ダイアログ ボックスを閉じ、`DoModal`返します**IDCANCEL**です。|  
 |[CDialog::OnOK](#onok)|モーダル ダイアログ ボックスで [ok] ボタンの操作を実行するためにオーバーライドします。 既定値は、ダイアログ ボックスを閉じ、`DoModal`返します**IDOK**です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ダイアログ ボックスの 2 つの型である: モーダルとモードレスです。 アプリケーションを続行する前に、ユーザーが、モーダル ダイアログ ボックスを閉じる必要があります。 モードレス ダイアログ ボックスは、ダイアログ ボックスを表示し、キャンセルまたはダイアログ ボックスを削除せずに別のタスクに戻ることができます。  
   
  A`CDialog`オブジェクトするダイアログ テンプレートの組み合わせは、および`CDialog`-クラスを派生します。 ダイアログ テンプレートを作成し、リソースに格納する、ダイアログ エディターを使用してから派生したクラスを作成するクラスの追加ウィザードを使用して`CDialog`です。  
@@ -113,7 +113,7 @@ class CDialog : public CWnd
   
  データ マップを生成して、メンバー変数と、ダイアログ ボックスのコントロール間のデータ交換を自動的に処理されます。 データ マップは、適切な値を使用して、ダイアログ ボックスでコントロールを初期化し、データを取得、データの検証機能を提供します。  
   
- モーダル ダイアログ ボックスを作成するには、派生ダイアログ クラスのコンス トラクターを使用して、スタック上のオブジェクトを構築およびを呼び出す`DoModal`ダイアログ ウィンドウとそのコントロールを作成します。 モードレス ダイアログを作成する場合は、呼び出す**作成**ダイアログ クラスのコンス トラクターです。  
+ モーダル ダイアログ ボックスを作成するには、派生ダイアログ クラスのコンス トラクターを使用して、スタック上のオブジェクトを構築およびを呼び出す`DoModal`ダイアログ ウィンドウとそのコントロールを作成します。 モードレス ダイアログを作成する場合は、呼び出す`Create`ダイアログ クラスのコンス トラクターです。  
   
  使用して、メモリ内テンプレートを作成することも、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK」の説明に従って、データが構造体します。 構築した後、`CDialog`オブジェクトを呼び出す[CreateIndirect](#createindirect) 、モードレスを作成するダイアログ ボックスで、または呼び出し[持たない](#initmodalindirect)と[DoModal](#domodal)モーダルを作成するにはダイアログ ボックス。  
   
@@ -146,7 +146,7 @@ class CDialog : public CWnd
   
  `CDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cdialog"></a>  詳細  
@@ -166,26 +166,26 @@ CDialog();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  ダイアログ テンプレート リソースの名前を表す null で終わる文字列が含まれています。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  ダイアログ テンプレート リソースの ID 番号が含まれています。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウ オブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ オブジェクトの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンス トラクターの 1 つのフォームは、テンプレート名でダイアログ リソースへのアクセスを提供します。 その他のコンス トラクターへのアクセス提供テンプレート ID 番号では、通常、**文字列の先頭**プレフィックス (IDD_DIALOG1 など)。  
   
  メモリ内のテンプレートからモーダル ダイアログ ボックスを構築するために、まずパラメーターなし、保護されているコンス トラクターを呼び出すし、呼び出す`InitModalIndirect`です。  
   
  上記のメソッドのいずれかでモーダル ダイアログ ボックスを構築した後で呼び出す`DoModal`です。  
   
- モードレス ダイアログ ボックスを作成するには、保護されたフォームを使用して、`CDialog`コンス トラクターです。 モードレス ダイアログ ボックスを実装する独自のダイアログ ボックス クラスを派生させる必要があるために、コンス トラクターは保護されています。 モードレス ダイアログ ボックスの構築は、2 段階に分かれたプロセスです。 コンス トラクターの最初の呼び出し呼び出す、**作成**リソース ベースのダイアログ ボックスを作成するメンバー関数を呼び出したり`CreateIndirect`メモリ内のテンプレートからダイアログ ボックスを作成します。  
+ モードレス ダイアログ ボックスを作成するには、保護されたフォームを使用して、`CDialog`コンス トラクターです。 モードレス ダイアログ ボックスを実装する独自のダイアログ ボックス クラスを派生させる必要があるために、コンス トラクターは保護されています。 モードレス ダイアログ ボックスの構築は、2 段階に分かれたプロセスです。 コンス トラクターの最初の呼び出し呼び出す、`Create`リソース ベースのダイアログ ボックスを作成するメンバー関数を呼び出したり`CreateIndirect`メモリ内のテンプレートからダイアログ ボックスを作成します。  
   
 ##  <a name="create"></a>  CDialog::Create  
- 呼び出す**作成**リソースからダイアログ ボックスのテンプレートを使用してモードレス ダイアログ ボックスを作成します。  
+ 呼び出す`Create`リソースからダイアログ ボックスのテンプレートを使用してモードレス ダイアログ ボックスを作成します。  
   
 ```  
 virtual BOOL Create(
@@ -199,30 +199,30 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  ダイアログ テンプレート リソースの名前を表す null で終わる文字列が含まれています。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親ウィンドウ オブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ オブジェクトの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  ダイアログ テンプレート リソースの ID 番号が含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  両方の形式 ダイアログ ボックスの作成と初期化が成功した場合は 0 以外を返しますそれ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 呼び出しを配置する**作成**コンス トラクターまたは呼び出しの内部、コンス トラクターの後に呼び出されます。  
+### <a name="remarks"></a>Remarks  
+ 呼び出しを配置する`Create`コンス トラクターまたは呼び出しの内部、コンス トラクターの後に呼び出されます。  
   
- 2 つの形式、**作成**テンプレート名またはテンプレートの ID 番号 (IDD_DIALOG1 など) のいずれかによってダイアログ テンプレート リソースにアクセスするためのメンバー関数が提供されます。  
+ 2 つの形式、`Create`テンプレート名またはテンプレートの ID 番号 (IDD_DIALOG1 など) のいずれかによってダイアログ テンプレート リソースにアクセスするためのメンバー関数が提供されます。  
   
- いずれかの形式では、親ウィンドウ オブジェクトへのポインターを渡します。 場合`pParentWnd`は**NULL**、その親ウィンドウまたはオーナー ウィンドウにアプリケーションのメイン ウィンドウ設定のダイアログ ボックスが作成されます。  
+ いずれかの形式では、親ウィンドウ オブジェクトへのポインターを渡します。 場合*pParentWnd*は**NULL**、その親ウィンドウまたはオーナー ウィンドウにアプリケーションのメイン ウィンドウ設定のダイアログ ボックスが作成されます。  
   
- **作成** ダイアログ ボックスを作成したらすぐに、メンバー関数が返されます。  
+ `Create`  ダイアログ ボックスを作成したらすぐに、メンバー関数が返されます。  
   
  使用して、 **WS_VISIBLE**  ダイアログ ボックス テンプレートのスタイルを設定 ダイアログ ボックスが表示されない場合は親ウィンドウが作成されます。 それ以外の場合、呼び出す必要があります`ShowWindow`です。 さらにダイアログ ボックスのスタイルとそのアプリケーションは、次を参照してください。、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 内の構造と[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)で、 *『 MFC リファレンス*です。  
   
- 使用して、`CWnd::DestroyWindow`によって作成されたダイアログ ボックスを破棄する関数、**作成**関数。  
+ 使用して、`CWnd::DestroyWindow`によって作成されたダイアログ ボックスを破棄する関数、`Create`関数。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
@@ -243,22 +243,22 @@ virtual BOOL CreateIndirect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  ダイアログ ボックスを作成するために使用 ダイアログ ボックス テンプレートが含まれるメモリへのポインター。 このテンプレートは、の形式では、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)構造とコントロールについては、Windows SDK」の説明に従ってします。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ダイアログ オブジェクトの親ウィンドウ オブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md))。 場合は**NULL**、ダイアログ オブジェクトの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  指す、 **DLGINIT**リソース。  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  ダイアログ ボックスのテンプレートを含むグローバル メモリへのハンドルが含まれています。 このテンプレートは、の形式では、 **DLGTEMPLATE**構造と、ダイアログ ボックス内の各コントロールのデータ。  
   
 ### <a name="return-value"></a>戻り値  
  ダイアログ ボックスが作成され、正常に初期化される場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CreateIndirect`  ダイアログ ボックスを作成したらすぐに、メンバー関数が返されます。  
   
  使用して、 **WS_VISIBLE**  ダイアログ ボックス テンプレートのスタイルを設定 ダイアログ ボックスが表示されない場合は親ウィンドウが作成されます。 それ以外の場合、呼び出す必要があります`ShowWindow`に表示されるようにします。 テンプレートの他のダイアログ ボックスのスタイルを指定する方法の詳細については、次を参照してください。、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 内の構造。  
@@ -275,9 +275,9 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `int`の値を指定する値、`nResult`パラメーターに渡された、 [CDialog::EndDialog](#enddialog)メンバー関数は、ダイアログ ボックスを閉じるために使用します。 関数は、ダイアログ ボックスを作成できませんでしたの場合、戻り値は-1 または**IDABORT**その他のエラーが発生した場合いる場合は、出力ウィンドウがエラー情報を含むから[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)です。  
+ **Int**の値を指定する値、 *%n*パラメーターに渡された、 [CDialog::EndDialog](#enddialog)メンバー関数は、ダイアログ ボックスを閉じるために使用します。 関数は、ダイアログ ボックスを作成できませんでしたの場合、戻り値は-1 または**IDABORT**その他のエラーが発生した場合いる場合は、出力ウィンドウがエラー情報を含むから[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、ダイアログ ボックスがアクティブな間にユーザーとすべての対話を処理します。 モーダル ダイアログ ボックスは、します。ユーザーは、ダイアログ ボックスが閉じられるまで、他のウィンドウを操作できません。  
   
  ユーザーがクリックするとダイアログ ボックスで、[ok] または [キャンセル] メッセージ ハンドラー メンバー関数などのプッシュ ボタンのいずれかのように[OnOK](#onok)または[OnCancel](#oncancel)、しようとするダイアログ ボックスを閉じると呼びます。 既定値`OnOK`メンバー関数は、検証およびダイアログ ボックスのデータを更新し、結果を含むダイアログ ボックスを閉じます**IDOK**と既定`OnCancel`メンバー関数は、ダイアログ ボックスを閉じます結果と共に**IDCANCEL**なしの検証またはダイアログ ボックスのデータを更新します。 これらのメッセージ ハンドラー関数の動作を変更するのにはオーバーライドできます。  
@@ -296,11 +296,11 @@ void EndDialog(int nResult);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nResult`  
+ *%n*  
  ダイアログ ボックスからの呼び出し元に返される値が含まれる`DoModal`です。  
   
-### <a name="remarks"></a>コメント  
- このメンバー関数を返します`nResult`の戻り値として`DoModal`です。 使用する必要があります、`EndDialog`関数がモーダル ダイアログ ボックスが作成されるたびに処理を完了します。  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数を返します *%n*の戻り値として`DoModal`です。 使用する必要があります、`EndDialog`関数がモーダル ダイアログ ボックスが作成されるたびに処理を完了します。  
   
  呼び出すことができます`EndDialog`であっても、いつでも[OnInitDialog](#oninitdialog)case を閉じる必要がある前にダイアログ ボックスを表示または入力フォーカスを設定する前にします。  
   
@@ -321,7 +321,7 @@ DWORD GetDefID() const;
 ### <a name="return-value"></a>戻り値  
  32 ビットの値 ( `DWORD`)。 高位の単語に含まれる既定のプッシュ ボタンに ID 値がある場合は、 **DC_HASDEFID**下位ワードに ID 値が含まれています。 既定のプッシュ ボタンが ID 値を持たない場合、戻り値は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、通常、[ok] ボタンです。  
   
 ##  <a name="gotodlgctrl"></a>  CDialog::GotoDlgCtrl  
@@ -332,11 +332,11 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndCtrl`  
+ *pWndCtrl*  
  フォーカスを受け取るには、ウィンドウ (コントロール) を識別します。  
   
-### <a name="remarks"></a>コメント  
- コントロールとして渡す (子ウィンドウ) へのポインターを取得する`pWndCtrl`を呼び出し、`CWnd::GetDlgItem`へのポインターを返すメンバー関数、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ コントロールとして渡す (子ウィンドウ) へのポインターを取得する*pWndCtrl*を呼び出し、`CWnd::GetDlgItem`へのポインターを返すメンバー関数、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクト。  
   
 ### <a name="example"></a>例  
   例を参照して[:getdlgitem](../../mfc/reference/cwnd-class.md#getdlgitem)です。  
@@ -357,22 +357,22 @@ BOOL InitModalIndirect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  ダイアログ ボックスを作成するために使用 ダイアログ ボックス テンプレートが含まれるメモリへのポインター。 このテンプレートは、の形式では、 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)構造とコントロールについては、Windows SDK」の説明に従ってします。  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  ダイアログ ボックスのテンプレートを含むグローバル メモリへのハンドルが含まれています。 このテンプレートは、の形式では、 **DLGTEMPLATE**構造と、ダイアログ ボックス内の各コントロールのデータ。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウ オブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ オブジェクトの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  指す、 **DLGINIT**リソース。  
   
 ### <a name="return-value"></a>戻り値  
  ダイアログ オブジェクトが作成され、正常に初期化される場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  まず、モーダル ダイアログ ボックスを直接作成するには、グローバル メモリ ブロックを割り当て、 ダイアログ ボックスのテンプレートを使用して入力します。 空を呼び出す`CDialog` ダイアログ ボックスのオブジェクトを構築するコンス トラクターです。 次に、呼び出す`InitModalIndirect`をメモリ内のダイアログ ボックスのテンプレートに、ハンドルを格納します。 Windows のダイアログ ボックスが作成され、表示されるときに、後で、 [DoModal](#domodal)メンバー関数が呼び出されます。  
   
  ActiveX コントロールを含むダイアログ ボックスで提供される追加情報を必要とする**DLGINIT**リソース。 詳細については、サポート技術情報の記事 Q231591 を参照してください"HOWTO: ダイアログ テンプレートを使用して ActiveX コントロールを MFC ダイアログ ボックスを作成します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)です。  
@@ -385,15 +385,15 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpRect`  
+ *lpRect*  
  指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)  ダイアログ ボックスを含むオブジェクトを変換する座標します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ単位は、に関して、平均の幅と高さの使用 ダイアログ ボックスのテキストのフォントの文字から派生した現在のダイアログ ボックス基本単位です。 水平方向に 1 つのユニットのダイアログ ボックスのベースの幅単位の 4 分の 1、垂直方向の 1 つの単位 ダイアログ ボックスの高さの基本単位の 8 分の 1。  
   
  **GetDialogBaseUnits** Windows 関数はシステム フォントのサイズ情報を返しますが、使用する場合は、ダイアログ ボックスごとに別のフォントを指定できます、 **DS_SETFONT**のスタイルを設定しますリソース定義ファイルです。 `MapDialogRect` Windows の機能は、このダイアログ ボックスの適切なフォントを使用します。  
   
- `MapDialogRect`メンバー関数は、ダイアログ ボックスの単位を置き換えます`lpRect`で画面の作成 ダイアログ ボックスをボックス内のコントロールの位置四角形を使用できるようにする単位 (ピクセル単位)。  
+ `MapDialogRect`メンバー関数は、ダイアログ ボックスの単位を置き換えます*lpRect*で画面の作成 ダイアログ ボックスをボックス内のコントロールの位置四角形を使用できるようにする単位 (ピクセル単位)。  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  ダイアログ ボックスで、次のコントロールにフォーカスを移動します。  
@@ -402,7 +402,7 @@ void MapDialogRect(LPRECT lpRect) const;
 void NextDlgCtrl() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスで、最後のコントロールにフォーカスがある場合は、最初のコントロールに移動します。  
   
 ##  <a name="oncancel"></a>  CDialog::OnCancel  
@@ -412,7 +412,7 @@ void NextDlgCtrl() const;
 virtual void OnCancel();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  (古いデータを復元する) などのアクションを実行するには、このメソッドをオーバーライドして、ユーザーが をクリックしてダイアログ ボックスを閉じたときに**キャンセル**ESC キーを押すか。 既定値は、呼び出すことによって、モーダル ダイアログ ボックスを閉じます[EndDialog](#enddialog)およびによって[DoModal](#domodal) IDCANCEL に戻ります。  
   
  実装する場合、**キャンセル**ボタン モードレス ダイアログ ボックスでは、オーバーライドする必要があります、`OnCancel`メソッドと呼び出し[DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow)内です。 呼び出すので、基本クラスのメソッドを呼び出さないでください`EndDialog`は、ダイアログ ボックスを非表示にを破棄することができます。  
@@ -433,7 +433,7 @@ virtual BOOL OnInitDialog();
 ### <a name="return-value"></a>戻り値  
  アプリケーションがダイアログ ボックスで、コントロールのいずれかに入力フォーカスを設定したかどうかを指定します。 場合`OnInitDialog`0 以外を返します、Windows、入力フォーカスを設定 ダイアログ ボックスの最初のコントロール、既定の場所。 アプリケーションは、明示的にフォーカスを設定した、入力コントロールのいずれかに ダイアログ ボックスで場合にのみ、0 を返すことができます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Windows の送信、`WM_INITDIALOG`中に、ダイアログ ボックスにメッセージ、[作成](#create)、 [CreateIndirect](#createindirect)、または[DoModal](#domodal)呼び出しで、ダイアログ ボックスの直前に発生します。表示されます。  
   
  ダイアログ ボックスが初期化されたときに、特別な処理を実行する場合は、このメソッドをオーバーライドします。 オーバーライドされたバージョンでは、基底クラスを呼び出して最初`OnInitDialog`が、その戻り値は無視されます。 通常戻ります`TRUE`オーバーライドされたメソッドからです。  
@@ -453,7 +453,7 @@ virtual BOOL OnInitDialog();
 virtual void OnOK();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アクションを実行するには、このメソッドをオーバーライドときに、 **OK**  ボタンがアクティブにします。 ダイアログ ボックスには、データの自動検証し、exchange が含まれている場合、このメソッドの既定の実装はダイアログ ボックスのデータを検証し、アプリケーションの適切な変数を更新します。  
   
  実装する場合、 **OK**ボタン モードレス ダイアログ ボックスでは、オーバーライドする必要があります、`OnOK`メソッドを呼び出します[DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow)内です。 呼び出すので、基本クラスのメソッドを呼び出さないでください[EndDialog](#enddialog)  ダイアログ ボックスを非表示にするは、破棄することができます。  
@@ -472,10 +472,10 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pFont`  
+ [in]*pFont*  
  このダイアログ ボックスのすべてのコントロールの既定のフォントとして使用されるフォントへのポインターを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスは、そのすべてのコントロールを指定したフォントを既定値として使用されます。  
   
  ダイアログ エディターは通常、ダイアログ ボックスのテンプレート リソースの一部として、ダイアログ ボックスのフォントを設定します。  
@@ -490,7 +490,7 @@ Virtual void OnSetFont(CFont* pFont);
 void PrevDlgCtrl() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスの最初のコントロールにフォーカスがある場合、最後に移動コントロール ボックス。  
   
 ##  <a name="setdefid"></a>  CDialog::SetDefID  
@@ -501,7 +501,7 @@ void SetDefID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  既定値になるプッシュ ボタン コントロールの ID を指定します。  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  

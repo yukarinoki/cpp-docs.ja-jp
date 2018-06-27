@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f11edef585e699d90d8d33839e0e446cb5a726db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0bfca3c6e42c8b4efa6cd29d86a30f36fc394f5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357538"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952506"
 ---
 # <a name="carchive-class"></a>CArchive クラス
 使用すると、それらのオブジェクトを削除した後が引き続き発生する永続的なバイナリ形式 (通常はディスク ストレージ) にオブジェクトの複雑なネットワークを保存できます。  
@@ -125,7 +125,7 @@ class CArchive
 |----------|-----------------|  
 |[CArchive::m_pDocument](#m_pdocument)||  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CArchive` 基本クラスはありません。  
   
  後でメモリに保持して再構築、永続的な記憶領域からオブジェクトを読み込むことができます。 データを永続的に行うには、このプロセスは「シリアル化します」と呼ばれる  
@@ -145,7 +145,7 @@ class CArchive
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CArchive`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="abort"></a>  CArchive::Abort  
@@ -155,10 +155,10 @@ class CArchive
 void Abort ();
 ```  
   
-### <a name="remarks"></a>コメント  
- **CArchive**デストラクターを呼び出す通常**閉じる**、保存されていないすべてのデータをフラッシュするが、関連付けられている`CFile`オブジェクト。 これにより、例外が発生します。  
+### <a name="remarks"></a>Remarks  
+ `CArchive`デストラクターを呼び出す通常`Close`、保存されていないすべてのデータをフラッシュするが、関連付けられている`CFile`オブジェクト。 これにより、例外が発生します。  
   
- これらの例外をキャッチする場合を使用することをお勧め**中止**、破棄されるように、`CArchive`オブジェクトな例外が発生します。 例外を処理するときに`CArchive::Abort`ために、エラーに例外をスローしませんとは異なり[CArchive::Close](#close)、**中止**障害を無視します。  
+ これらの例外をキャッチする場合を使用することをお勧め`Abort`、破棄されるように、`CArchive`オブジェクトな例外が発生します。 例外を処理するときに`CArchive::Abort`ために、エラーに例外をスローしませんとは異なり[CArchive::Close](#close)、`Abort`障害を無視します。  
   
  使用した場合**新しい**を割り当て、`CArchive`ヒープのオブジェクトの後に、ファイルを閉じて後に削除する必要があります。  
   
@@ -177,25 +177,25 @@ CArchive(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFile`  
+ *pFile*  
  ポインター、`CFile`最終的な送信元または永続的なデータの送信先であるオブジェクト。  
   
- `nMode`  
- オブジェクトがから読み込まれたか、アーカイブに格納されているかどうかを指定するフラグ。 `nMode`パラメーターには、次の値のいずれかが必要があります。  
+ *nMode*  
+ オブジェクトがから読み込まれたか、アーカイブに格納されているかどうかを指定するフラグ。 *NMode*パラメーターには、次の値のいずれかが必要があります。  
   
 - **CArchive::load**アーカイブからデータを読み込みます。 だけで済みます`CFile`読み取りアクセス許可。  
   
 - **CArchive::store**データをアーカイブに保存します。 必要があります`CFile`書き込みアクセス許可。  
   
-- **CArchive::bNoFlushOnDelete**から自動的に呼び出すことにより、アーカイブ`Flush`アーカイブ デストラクターが呼び出されます。 このフラグを設定する場合、必要があります明示的に呼び出す**閉じる**デストラクターが呼び出される前にします。 そうしないと、データが破損します。  
+- **CArchive::bNoFlushOnDelete**から自動的に呼び出すことにより、アーカイブ`Flush`アーカイブ デストラクターが呼び出されます。 このフラグを設定する場合、必要があります明示的に呼び出す`Close`デストラクターが呼び出される前にします。 そうしないと、データが破損します。  
   
- `nBufSize`  
+ *nBufSize*  
  内部ファイル バッファーのサイズをバイト単位で指定する整数。 既定のバッファー サイズは 4,096 バイトであることに注意してください。 ラージ オブジェクトを定期的にアーカイブする場合は、ファイル バッファーのサイズの倍数では大きなバッファー サイズを使用する場合、パフォーマンスが向上します。  
   
- `lpBuf`  
- ユーザーが指定したサイズのバッファーへの省略可能なポインター`nBufSize`です。 このパラメーターを指定しない場合、アーカイブはバッファーがローカル ヒープから割り当てられ、オブジェクトが破棄されるときに、それを解放します。 アーカイブは、ユーザーが指定したバッファーを解放しません。  
+ *lpBuf*  
+ ユーザーが指定したサイズのバッファーへの省略可能なポインター *nBufSize*です。 このパラメーターを指定しない場合、アーカイブはバッファーがローカル ヒープから割り当てられ、オブジェクトが破棄されるときに、それを解放します。 アーカイブは、ユーザーが指定したバッファーを解放しません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アーカイブを作成した後、この仕様を変更することはできません。  
   
  使用することは`CFile`アーカイブを終了するまで、ファイルの状態を変更する操作。 このような操作には、アーカイブの整合性が破損します。 アーカイブのファイル オブジェクトを取得することによってシリアル化中にいつでもファイル ポインターの位置にアクセスする可能性があります、 [GetFile](#getfile)メンバー関数を使用して、[実行](../../mfc/reference/cfile-class.md#getposition)関数. 呼び出す必要があります[ときは](#flush)ファイル ポインターの位置を取得する前にします。  
@@ -210,10 +210,10 @@ CArchive(
 void Close();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アーカイブで他の操作が許可されていません。 アーカイブを閉じた後、同じファイルに対して別のアーカイブを作成するまたはファイルを閉じることができます。  
   
- このメンバー関数は**閉じる**により、ファイルをアーカイブからすべてのデータを転送し、アーカイブを使用できなくなります。 ストレージ メディアには、ファイルからの転送を完了する必要があります最初に使用する[先](../../mfc/reference/cfile-class.md#close)し、破棄、`CFile`オブジェクト。  
+ このメンバー関数は`Close`により、ファイルをアーカイブからすべてのデータを転送し、アーカイブを使用できなくなります。 ストレージ メディアには、ファイルからの転送を完了する必要があります最初に使用する[先](../../mfc/reference/cfile-class.md#close)し、破棄、`CFile`オブジェクト。  
   
 ### <a name="example"></a>例  
   例を参照して[CArchive::WriteString](#writestring)です。  
@@ -225,7 +225,7 @@ void Close();
 void Flush();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は`Flush`ファイルにアーカイブからすべてのデータが転送されることを確認します。 呼び出す必要があります[先](../../mfc/reference/cfile-class.md#close)ストレージ メディアには、ファイルからの転送を完了します。  
   
 ### <a name="example"></a>例  
@@ -241,7 +241,7 @@ CFile* GetFile() const;
 ### <a name="return-value"></a>戻り値  
  定数ポインター、`CFile`使用中のオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用する前にアーカイブをフラッシュする必要があります`GetFile`です。  
   
 ### <a name="example"></a>例  
@@ -257,10 +257,10 @@ UINT GetObjectSchema();
 ### <a name="return-value"></a>戻り値  
  シリアル化解除は、読み取られているオブジェクトのバージョン。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数を呼び出す場合のみを有効、`CArchive`オブジェクトが読み込まれている ([場合](#isloading)0 以外を返します)。 最初の呼び出しをする必要があります、`Serialize`関数と呼び出し先は 1 回のみです。 戻り値 ( **UINT**)-1 では、バージョン番号が不明であることを示します。  
   
- A `CObject`-派生クラスが使用することがあります**VERSIONABLE_SCHEMA**結合 (ビット演算子を使用して`OR`) 自体スキーマ バージョン (で、`IMPLEMENT_SERIAL`マクロ) オブジェクトを作成する"バージョン管理可能、"オブジェクトは、ある`Serialize`メンバー関数は、複数のバージョンを読み取ることができます。 既定のフレームワークの機能 (せず**VERSIONABLE_SCHEMA**) は、バージョンが一致しない場合、例外をスローします。  
+ A `CObject`-派生クラスが使用することがあります**VERSIONABLE_SCHEMA**結合 (ビット演算子を使用して**または**)、スキーマ バージョンと自体 (IMPLEMENT_SERIAL マクロ) では、「バージョン管理可能オブジェクト」を作成する、オブジェクトの`Serialize`メンバー関数は、複数のバージョンを読み取ることができます。 既定のフレームワークの機能 (せず**VERSIONABLE_SCHEMA**) は、バージョンが一致しない場合、例外をスローします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
@@ -275,7 +275,7 @@ BOOL IsBufferEmpty() const;
 ### <a name="return-value"></a>戻り値  
  アーカイブのバッファーが空である場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数に MFC Windows ソケット クラスを使用したプログラミングをサポートするために指定された`CSocketFile`です。 関連付けられているアーカイブを使用する必要はありません、`CFile`オブジェクト。  
   
  使用する理由`IsBufferEmpty`に関連付けられているアーカイブを使用して、`CSocketFile`オブジェクトは、アーカイブのバッファーが 1 つ以上のメッセージまたはレコードを含む可能性があります。 1 つのメッセージを受信した後必要がありますを使用する`IsBufferEmpty`バッファーが空になるまでデータの受信を継続するループを制御します。 詳細については、次を参照してください。、[受信](../../mfc/reference/casyncsocket-class.md#receive)クラスのメンバー関数`CAsyncSocket`、使用する方法を示す`IsBufferEmpty`です。  
@@ -292,7 +292,7 @@ BOOL IsLoading() const;
 ### <a name="return-value"></a>戻り値  
  アーカイブが現在読み込み; のために使用されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  によって呼び出されます、`Serialize`アーカイブ済みのクラスの関数。  
   
 ### <a name="example"></a>例  
@@ -308,7 +308,7 @@ BOOL IsStoring() const;
 ### <a name="return-value"></a>戻り値  
  アーカイブが現在; を格納するために使用されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  によって呼び出されます、`Serialize`アーカイブ済みのクラスの関数。  
   
  場合、`IsStoring`アーカイブの状態は 0 以外の場合、その`IsLoading`ステータスは 0、またはその逆です。  
@@ -324,11 +324,11 @@ void MapObject(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pOb`  
+ *私書箱*  
  格納されているオブジェクトへの定数ポインター。  
   
-### <a name="remarks"></a>コメント  
- たとえば、ドキュメントをシリアル化する可能性がありますいないが、ドキュメントの一部である項目をシリアル化します。 呼び出して`MapObject`、それらのアイテム、またはドキュメントを参照する、サブオブジェクトを許可します。 また、シリアル化されたサブ項目をシリアル化できる、`m_pDocument`バック ポインター。  
+### <a name="remarks"></a>Remarks  
+ たとえば、ドキュメントをシリアル化する可能性がありますいないが、ドキュメントの一部である項目をシリアル化します。 呼び出して`MapObject`、それらのアイテム、またはドキュメントを参照する、サブオブジェクトを許可します。 また、シリアル化されたサブ項目をシリアル化できる、 *m_pDocument*バック ポインター。  
   
  呼び出すことができます`MapObject`に格納しからの読み込み、`CArchive`オブジェクト。 `MapObject` 管理されている内部データ構造を指定したオブジェクトを追加、`CArchive`オブジェクトとは異なりが、シリアル化および逆シリアル化中に[ReadObject](#readobject)と[WriteObject](#writeobject) **、** 呼び出しませんオブジェクトのシリアル化します。  
   
@@ -342,16 +342,16 @@ void MapObject(const CObject* pOb);
  [!code-cpp[NVC_MFCSerialization#21](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
 ##  <a name="m_pdocument"></a>  CArchive::m_pDocument  
- 設定**NULL**既定では、このポインターを**CDocument**のユーザーに何かに設定できる、`CArchive`要望をインスタンス化します。  
+ 設定**NULL**既定では、このポインターを`CDocument`のユーザーに何かに設定できる、`CArchive`要望をインスタンス化します。  
   
 ```  
 CDocument* m_pDocument;  
 ```  
   
-### <a name="remarks"></a>コメント  
- This ポインターの一般的な使用方法では、シリアル化されるすべてのオブジェクトをシリアル化プロセスに関する追加情報を伝えるためです。 これは、ドキュメントでマウス ポインターを初期化することによって実現 (、 **CDocument**-派生クラス) がシリアル化される、このような形で必要な場合、ドキュメント内のオブジェクトにドキュメントをアクセスできます。 このポインターはによっても使用`COleClientItem`シリアル化中にオブジェクト。  
+### <a name="remarks"></a>Remarks  
+ This ポインターの一般的な使用方法では、シリアル化されるすべてのオブジェクトをシリアル化プロセスに関する追加情報を伝えるためです。 これは、ドキュメントでマウス ポインターを初期化することによって実現 (、 `CDocument`-派生クラス) がシリアル化される、このような形で必要な場合、ドキュメント内のオブジェクトにドキュメントをアクセスできます。 このポインターはによっても使用`COleClientItem`シリアル化中にオブジェクト。  
   
- Framework セット`m_pDocument`ユーザーがファイルを発行するときにシリアル化されるドキュメントを開くか、コマンドを保存します。 明示的に設定する必要がある場合は、Object Linking and Embedding (OLE) コンテナーのドキュメント ファイルを開くまたは保存以外の理由をシリアル化する`m_pDocument`です。 たとえば、これを実行する、クリップボードにコンテナーのドキュメントをシリアル化するとき。  
+ Framework セット*m_pDocument*ユーザーがファイルを発行するときにシリアル化されるドキュメントを開くか、コマンドを保存します。 明示的に設定する必要がある場合は、Object Linking and Embedding (OLE) コンテナーのドキュメント ファイルを開くまたは保存以外の理由をシリアル化する*m_pDocument*です。 たとえば、これを実行する、クリップボードにコンテナーのドキュメントをシリアル化するとき。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
@@ -409,15 +409,15 @@ CArchive& operator<<(LONGLONG dwdw);
 ### <a name="return-value"></a>戻り値  
  A`CArchive`を 1 行に複数の挿入演算子を有効にするための参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  上記の最後の 2 つのバージョンは、64 ビット整数値を格納するための特別なです。  
   
- 使用した場合、`IMPLEMENT_SERIAL`マクロ、クラスの実装では、次のオーバー ロードされた挿入演算子で`CObject`、保護された呼び出し**WriteObject**です。 この関数を呼び出す、`Serialize`クラスの関数。  
+ 実装では、クラス、IMPLEMENT_SERIAL マクロを使用するかどうかは、オーバー ロードされた挿入演算子`CObject`、保護された呼び出し`WriteObject`です。 この関数を呼び出す、`Serialize`クラスの関数。  
   
  [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)挿入演算子 (<<) 診断ダンプとアーカイブへの格納をサポートしています。  
   
 ### <a name="example"></a>例  
- この例での使用、`CArchive`挿入演算子 << で、`int`と`long`型です。  
+ この例での使用、`CArchive`挿入演算子 << で、 **int**と**長い**型です。  
   
  [!code-cpp[NVC_MFCSerialization#31](../../mfc/codesnippet/cpp/carchive-class_12.cpp)]  
   
@@ -491,15 +491,15 @@ CArchive& operator>>(LONGLONG& dwdw);
 ### <a name="return-value"></a>戻り値  
  A`CArchive`を 1 行に複数の抽出演算子を有効にするための参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  上記の最後の 2 つのバージョンは、64 ビット整数値を読み込むための特別なです。  
   
- 使用した場合、`IMPLEMENT_SERIAL`マクロ、クラスの実装し、抽出演算子のオーバー ロードで`CObject`、保護された呼び出し**ReadObject** (0 以外のランタイム クラスのポインター) を持つ関数です。 この関数を呼び出す、`Serialize`クラスの関数。  
+ 実装では、クラス、IMPLEMENT_SERIAL マクロを使用するかどうか、抽出演算子をオーバー ロードの`CObject`、保護された呼び出し`ReadObject`(0 以外のランタイム クラスのポインター) を持つ関数です。 この関数を呼び出す、`Serialize`クラスの関数。  
   
  [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)抽出演算子 (>>) アーカイブからの読み込みをサポートしています。  
   
 ### <a name="example"></a>例  
- この例での使用、`CArchive`抽出演算子 >> で、`int`型です。  
+ この例での使用、`CArchive`抽出演算子 >> で、 **int**型です。  
   
  [!code-cpp[NVC_MFCSerialization#33](../../mfc/codesnippet/cpp/carchive-class_14.cpp)]  
   
@@ -516,19 +516,19 @@ UINT Read(void* lpBuf, UINT nMax);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpBuf`  
+ *lpBuf*  
  アーカイブから読み取られるデータを受信するユーザーが指定したバッファーへのポインター。  
   
- `nMax`  
+ *nMax*  
  アーカイブから読み取られるバイト数を指定する符号なし整数。  
   
 ### <a name="return-value"></a>戻り値  
  実際に読み取られたバイト数を表す符号なし整数。 戻り値が、要求された数よりも小さい場合は、ファイルの末尾に到達しました。 ファイルの終了条件には、例外はスローされません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アーカイブは、バイト数を解釈できません。  
   
- 使用することができます、**読み取り**内でメンバー関数、`Serialize`オブジェクトに含まれている通常の構造を読み取るための関数。  
+ 使用することができます、`Read`内でメンバー関数、`Serialize`オブジェクトに含まれている通常の構造を読み取るための関数。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
@@ -544,24 +544,24 @@ CRuntimeClass* ReadClass(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pClassRefRequested`  
+ *pClassRefRequested*  
  ポインター、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)要求クラスの参照に対応する構造体。 指定できます**NULL**です。  
   
- `pSchema`  
+ *pSchema*  
  以前に格納されているランタイム クラスのスキーマへのポインター。  
   
- `pObTag`  
- オブジェクトの一意のタグを表す数値。 実装で内部的に使用される[ReadObject](#readobject)です。 高度なプログラミングだけです。`pObTag`通常する必要があります**NULL**です。  
+ *pObTag*  
+ オブジェクトの一意のタグを表す数値。 実装で内部的に使用される[ReadObject](#readobject)です。 高度なプログラミングだけです。*pObTag*通常する必要があります**NULL**です。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体。  
   
-### <a name="remarks"></a>コメント  
- 場合`pClassRefRequested`は**NULL**、`ReadClass`アーカイブされたクラスの情報がランタイム クラスに互換性があることを確認します。 場合は、互換性がありません`ReadClass`がスローされます、 [CArchiveException](../../mfc/reference/carchiveexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ 場合*pClassRefRequested*は**NULL**、`ReadClass`アーカイブされたクラスの情報がランタイム クラスに互換性があることを確認します。 場合は、互換性がありません`ReadClass`がスローされます、 [CArchiveException](../../mfc/reference/carchiveexception-class.md)です。  
   
  ランタイム クラスを使用する必要があります[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)、それ以外の`ReadClass`がスローされます、[行わない](../../mfc/reference/cnotsupportedexception-class.md)です。  
   
- 場合`pSchema`は**NULL**を呼び出してストアド クラスのスキーマを取得できる[CArchive::GetObjectSchema](#getobjectschema)、それ以外の**\*** `pSchema`は保存されていたランタイム クラスのスキーマが含まれます。  
+ 場合*pSchema*は**NULL**を呼び出してストアド クラスのスキーマを取得できる[CArchive::GetObjectSchema](#getobjectschema)以外の場合、**\** * *pSchema*は保存されていたランタイム クラスのスキーマが含まれます。  
   
  使用することができます[SerializeClass](#serializeclass)の代わりに`ReadClass`、両方の読み取りと書き込みクラスの参照を処理します。  
   
@@ -576,16 +576,16 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pClass`  
+ *pClass*  
  定数ポインター、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)を読み込む予定がオブジェクトに対応する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  A [CObject](../../mfc/reference/cobject-class.md)を使用して派生クラスを適切に安全にキャストする必要がありますポインター[使うため](../../mfc/reference/cobject-class.md#iskindof)です。  
   
-### <a name="remarks"></a>コメント  
- この関数は通常、呼び出される、`CArchive`抽出 ( **>>**) のオーバー ロードされた演算子、 [CObject](../../mfc/reference/cobject-class.md)ポインター。 **ReadObject**、さらに、呼び出し、`Serialize`アーカイブ済みのクラスの関数。  
+### <a name="remarks"></a>Remarks  
+ この関数は通常、呼び出される、`CArchive`抽出 ( **>>**) のオーバー ロードされた演算子、 [CObject](../../mfc/reference/cobject-class.md)ポインター。 `ReadObject`、、さらに、`Serialize`アーカイブ済みのクラスの関数。  
   
- 0 以外を指定する場合`pClass`ことによって取得されるパラメーター、 [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)マクロ、関数は、アーカイブ済みのオブジェクトのランタイム クラスをことを確認します。 これは、使用している前提としています。、`IMPLEMENT_SERIAL`マクロでクラスの実装です。  
+ 0 以外を指定する場合*pClass*ことによって取得されるパラメーター、 [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)マクロ、関数は、アーカイブ済みのオブジェクトのランタイム クラスをことを確認します。 これには、クラスの実装で IMPLEMENT_SERIAL マクロを使用した前提としています。  
   
 ### <a name="example"></a>例  
   例を参照して[CArchive::WriteObject](#writeobject)です。  
@@ -599,13 +599,13 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rString`  
+ *rString*  
  参照、 [CString](../../atl-mfc-shared/reference/cstringt-class.md) CArchive オブジェクトに関連付けられているファイルから読み取られた後、結果の文字列が含まれる。  
   
- `lpsz`  
+ *lpsz*  
  Null で終わる文字列を受信するユーザーが指定したバッファーへのポインターを指定します。  
   
- `nMax`  
+ *nMax*  
  読み取る文字の最大数を指定します。 いずれかを指定する必要がありますのサイズよりも小さいか、 *lpsz*バッファー。  
   
 ### <a name="return-value"></a>戻り値  
@@ -613,8 +613,8 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
   
  取得するバージョンでは、 `LPTSTR`、テキスト データを格納するバッファーへのポインター**NULL**ファイルの終端に達した場合。  
   
-### <a name="remarks"></a>コメント  
- メンバー関数のバージョンで、`nMax`パラメーター、バッファーを保持する制限する`nMax`- 1 文字です。 キャリッジ リターンとライン フィードのペアによって、読み込みは停止します。 後続の改行文字は常に削除します。 どちらの場合は、null 文字 ('\0') が追加されます。  
+### <a name="remarks"></a>Remarks  
+ メンバー関数のバージョンで、 *nMax*パラメーター、バッファーを保持する制限する*nMax* - 1 文字です。 キャリッジ リターンとライン フィードのペアによって、読み込みは停止します。 後続の改行文字は常に削除します。 どちらの場合は、null 文字 ('\0') が追加されます。  
   
  [読み書きするとき](#read)はキャリッジ リターンとライン フィードのペアに対してがテキスト モードの入力を終了しないにも使用できます。  
   
@@ -629,17 +629,17 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pClassRef`  
+ *pClassRef*  
  基本クラスのランタイム クラス オブジェクトへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `SerializeClass` 読み取りまたは書き込みをクラスへの参照、`CArchive`の方向に応じて、オブジェクト、`CArchive`です。 使用して`SerializeClass`の代わりに[ReadClass](#readclass)と[WriteClass](#writeclass)基底クラスのオブジェクトをシリアル化する便利な手段として`SerializeClass`少ないコードと数のパラメーターが必要です。  
   
  同様に`ReadClass`、`SerializeClass`アーカイブされたクラスの情報がランタイム クラスに互換性があることを確認します。 場合は、互換性がありません`SerializeClass`がスローされます、 [CArchiveException](../../mfc/reference/carchiveexception-class.md)です。  
   
  ランタイム クラスを使用する必要があります[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)、それ以外の`SerializeClass`がスローされます、[行わない](../../mfc/reference/cnotsupportedexception-class.md)です。  
   
- 使用して、 [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)マクロの値を取得する、`pRuntimeClass`パラメーター。 基本クラスを使用する必要がありますが、 [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)マクロです。  
+ 使用して、 [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)マクロの値を取得する、 *pRuntimeClass*パラメーター。 基本クラスを使用する必要がありますが、 [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)マクロです。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#25](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
@@ -652,10 +652,10 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nGrowBy`  
+ *nGrowBy*  
  サイズの増加が必要な場合を確保する要素のスロットの最小数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CArchive` アーカイブに格納されているオブジェクトへの参照を解決するのには、負荷の配列を使用します。 `SetLoadParams` 使用すると、ロード配列を拡張するサイズを設定できます。  
   
  呼び出す必要はありません`SetLoadParams`任意のオブジェクトが読み込まれた後、または後[MapObject](#mapobject)または[ReadObject](#readobject)と呼びます。  
@@ -664,18 +664,18 @@ void SetLoadParams(UINT nGrowBy = 1024);
  [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
 ##  <a name="setobjectschema"></a>  CArchive::SetObjectSchema  
- アーカイブ オブジェクトに格納されているオブジェクトのスキーマを設定するには、このメンバー関数を呼び出す`nSchema`です。  
+ アーカイブ オブジェクトに格納されているオブジェクトのスキーマを設定するには、このメンバー関数を呼び出す*nSchema*です。  
   
 ```  
 void SetObjectSchema(UINT nSchema);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nSchema`  
+ *nSchema*  
  オブジェクトのスキーマを指定します。  
   
-### <a name="remarks"></a>コメント  
- 次に呼び出した[使い方](#getobjectschema)に格納されている値が返されます`nSchema`です。  
+### <a name="remarks"></a>Remarks  
+ 次に呼び出した[使い方](#getobjectschema)に格納されている値が返されます*nSchema*です。  
   
  使用して`SetObjectSchema`の高度なバージョン管理します。 たとえば、とを適用するで読み取られる特定のバージョン、`Serialize`派生クラスの関数。  
   
@@ -693,10 +693,10 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
  *nHashSize*  
  インターフェイス ポインターのハッシュ テーブルのサイズにマップします。 素数をする必要があります。  
   
- `nBlockSize`  
+ *nBlockSize*  
  パラメーターを拡張するためのメモリ割り当ての粒度を指定します。 最適なパフォーマンスを 2 の累乗にする必要があります。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `SetStoreParams` ハッシュ テーブルのサイズと、シリアル化プロセス中に一意のオブジェクトを識別するために使用するマップのブロック サイズを設定できます。  
   
  呼び出す必要はありません`SetStoreParams`任意のオブジェクトが格納された、または後[MapObject](#mapobject)または[WriteObject](#writeobject)と呼びます。  
@@ -712,16 +712,16 @@ void Write(const void* lpBuf, INT nMax);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpBuf`  
+ *lpBuf*  
  アーカイブに書き込まれるデータを格納しているユーザーが指定したバッファーへのポインター。  
   
- `nMax`  
+ *nMax*  
  アーカイブに書き込まれるバイト数を指定する整数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アーカイブのバイトをフォーマットしません。  
   
- 使用することができます、**書き込み**内でメンバー関数、`Serialize`通常構造を記述する関数は、オブジェクトに含まれます。  
+ 使用することができます、`Write`内でメンバー関数、`Serialize`通常構造を記述する関数は、オブジェクトに含まれます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
@@ -734,10 +734,10 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pClassRef`  
+ *pClassRef*  
  ポインター、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)要求クラスの参照に対応する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `WriteClass` 参照を書き込みます、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 、基本クラスに対する、`CArchive`です。 使用して[場合](#readclass)への参照を取得します。  
   
  `WriteClass` アーカイブ済みのクラス情報にランタイム クラスに互換性があることを確認します。 場合は、互換性がありません`WriteClass`がスローされます、 [CArchiveException](../../mfc/reference/carchiveexception-class.md)です。  
@@ -757,13 +757,13 @@ void WriteObject(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pOb`  
+ *私書箱*  
  格納されているオブジェクトへの定数ポインター。  
   
-### <a name="remarks"></a>コメント  
- この関数は通常、呼び出される、`CArchive`挿入 ( **<<**) の演算子はオーバー ロード`CObject`です。 **WriteObject**、さらに、呼び出し、`Serialize`アーカイブ済みのクラスの関数。  
+### <a name="remarks"></a>Remarks  
+ この関数は通常、呼び出される、`CArchive`挿入 ( **<<**) の演算子はオーバー ロード`CObject`です。 `WriteObject`、、さらに、`Serialize`アーカイブ済みのクラスの関数。  
   
- 使用する必要があります、`IMPLEMENT_SERIAL`マクロ アーカイブを有効にします。 **WriteObject** ASCII クラス名をアーカイブに書き込みます。 このクラス名が、読み込みプロセス中に後で検証されます。 特殊なエンコード スキームでは、クラスの複数のオブジェクトのクラス名の不要な重複しないようにします。 このスキームでは、1 つ以上のポインターの対象になっているオブジェクトの冗長ストレージを防ぐことができます。  
+ 使用する必要があります、`IMPLEMENT_SERIAL`マクロ アーカイブを有効にします。 `WriteObject` アーカイブするには、ASCII クラス名を書き込みます。 このクラス名が、読み込みプロセス中に後で検証されます。 特殊なエンコード スキームでは、クラスの複数のオブジェクトのクラス名の不要な重複しないようにします。 このスキームでは、1 つ以上のポインターの対象になっているオブジェクトの冗長ストレージを防ぐことができます。  
   
  メソッド (ASCII クラス名の有無を含む) をエンコード、正確なオブジェクトは、実装の詳細し、後で、ライブラリのバージョンで変更できます。  
   
@@ -783,15 +783,15 @@ void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpsz`  
+ *lpsz*  
  Null で終わる文字列を格納するバッファーへのポインターを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  終端の null 文字 ('\0') は、ファイルに書き込まれませんまた、改行を配置に自動的に書き込まれます。  
   
  `WriteString` ディスクの空き容量の条件を含む、いくつかの条件への応答で例外をスローします。  
   
- **書き込む**も利用できますが、null 文字で終了してではなく、要求されたバイト数に書き込むファイルが、します。  
+ `Write` 利用できますが、要求されたバイト数、ファイルに書き込みますが、null 文字で終了してではなく、します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]  

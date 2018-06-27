@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560c496ac01dc09f4e49100eceea0b9f7af14d68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349936"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950524"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU クラス
 D2D1_SIZE_U のラッパーです。  
@@ -48,7 +48,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CD2DSizeU::IsNull](#isnull)|返します、`boolean`を式に有効なデータがないかどうかを示す値 ( `null`)。|  
+|[CD2DSizeU::IsNull](#isnull)|返します、**ブール**を式に有効なデータがないかどうかを示す値 ( **null**)。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -61,7 +61,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
   
  [CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
@@ -79,13 +79,13 @@ CD2DSizeU(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  ソースのサイズ  
   
- `cx`  
+ *cx*  
  元の幅  
   
- `cy`  
+ *cy*  
  元の高さ  
   
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382932"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955873"
 ---
 # <a name="special-cwinapp-services"></a>CWinApp のその他のサービス
 メッセージ ループの実行をアプリケーションを初期化し、その後をクリーンアップする機会を提供することだけでなく[CWinApp](../mfc/reference/cwinapp-class.md)他のいくつかのサービスを提供します。  
@@ -61,7 +61,7 @@ ms.locfileid: "33382932"
   
  GDI + アプリケーションを初期化するかどうか (を呼び出して[GdiplusStartup](https://msdn.microsoft.com/library/ms534077)で、 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance)関数)、GDI + のバック グラウンド スレッドを抑制する必要があります。  
   
- これを行うことができます、 **SuppressBackgroundThread**のメンバー、 [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067)構造の**TRUE**です。 スレッド、バック グラウンド GDI + を抑制する場合、 **NotificationHook**と**NotificationUnhook**呼び出しが行われる直前に入力して、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、次を参照してください。 [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)です。 そのためを呼び出すことをおすすめ**GdiplusStartup**フック通知関数は仮想関数のオーバーライドで、 [:run](../mfc/reference/cwinapp-class.md#run)次のように。  
+ これを行うことができます、`SuppressBackgroundThread`のメンバー、 [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067)構造の**TRUE**です。 スレッド、バック グラウンド GDI + を抑制する場合、`NotificationHook`と`NotificationUnhook`呼び出しが行われる直前に入力して、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、次を参照してください。 [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)です。 そのためを呼び出すことをおすすめ`GdiplusStartup`フック通知関数は仮想関数のオーバーライドで、 [:run](../mfc/reference/cwinapp-class.md#run)次のように。  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

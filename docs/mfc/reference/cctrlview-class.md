@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353167"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955522"
 ---
 # <a name="cctrlview-class"></a>CCtrlView クラス
 Windows 98 および Windows NT Version 3.51 以降がサポートするコモン コントロールにドキュメント/ビュー アーキテクチャを適合させます。  
@@ -59,12 +59,12 @@ class CCtrlView : public CView
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|ビュー クラスの既定のスタイルが含まれています。|  
 |[CCtrlView::m_strClass](#m_strclass)|ビュー クラスの Windows クラス名が含まれています。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラス`CCtrlView`とその派生[CEditView](../../mfc/reference/ceditview-class.md)、 [CListView](../../mfc/reference/clistview-class.md)、 [CTreeView](../../mfc/reference/ctreeview-class.md)、および[CRichEditView](../../mfc/reference/cricheditview-class.md)、改変、Windows 95/98 および Windows NT version 3.51 以降でサポートされる新しいコモン コントロールにドキュメント/ビュー アーキテクチャ。 ドキュメント/ビュー アーキテクチャの詳細については、次を参照してください。[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -78,7 +78,7 @@ class CCtrlView : public CView
   
  `CCtrlView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cctrlview"></a>  CCtrlView::CCtrlView  
@@ -91,13 +91,13 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszClass`  
+ *lpszClass*  
  ビュー クラスのウィンドウ クラス名。  
   
- `dwStyle`  
+ *dwStyle*  
  ビュー クラスのスタイルです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、新しいフレーム ウィンドウが作成されるか、ウィンドウを分割時に、コンス トラクターを呼び出します。 オーバーライド[:oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)ドキュメントをアタッチした後、ビューを初期化します。 呼び出す[cwnd::create](../../mfc/reference/cwnd-class.md#create)または[とき](../../mfc/reference/cwnd-class.md#createex)Windows オブジェクトを作成します。  
   
 ##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
@@ -114,7 +114,7 @@ CString m_strClass;
 DWORD m_dwDefaultStyle;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ウィンドウの作成時に、このスタイルが適用されます。  
   
 ##  <a name="ondraw"></a>  CCtrlView::OnDraw  
@@ -125,11 +125,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  図面が発生しているデバイス コンテキストへのポインター。  
   
-### <a name="remarks"></a>コメント  
- `OnDraw` 画面の表示で指定した画面デバイス コンテキストを渡すことは通常呼び出されます`pDC`です。  
+### <a name="remarks"></a>Remarks  
+ `OnDraw` 画面の表示で指定した画面デバイス コンテキストを渡すことは通常呼び出されます*pDC*です。  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  `CWnd` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。  
@@ -145,7 +145,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="return-value"></a>戻り値  
  ウィンドウの作成を続行する必要があります。 場合は 0 以外。作成エラーを示すために 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数を直接呼び出すことはありません。  
   
  この関数の既定の実装、 **NULL**ウィンドウ クラス名を適切な既定値を置き換えます。 変更するには、このメンバー関数をオーバーライドします`CREATESTRUCT`ウィンドウが作成される前に構造体します。  

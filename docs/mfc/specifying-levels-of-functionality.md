@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 425cbf2f9c769dbbb6cd054b9af6b7f6f5fc9d52
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381148"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954466"
 ---
 # <a name="specifying-levels-of-functionality"></a>継承機能のレベルの指定
 この記事は、次の機能レベルに追加する方法を説明します、 [CObject](../mfc/reference/cobject-class.md)-派生クラス。  
@@ -43,26 +43,26 @@ ms.locfileid: "33381148"
   
 1.  クラスを派生`CObject`で説明されている、 [CObject からクラスを派生する](../mfc/deriving-a-class-from-cobject.md)資料です。  
   
-2.  使用して、`DECLARE_DYNAMIC`マクロは、ここに示すように、クラス宣言で。  
+2.  次に示すように、クラス宣言 DECLARE_DYNAMIC マクロを使用します。  
   
      [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
   
-3.  使用して、`IMPLEMENT_DYNAMIC`実装ファイル内のマクロ (です。CPP) クラス。 このマクロを引数として受け取り、クラスとその基本クラスの名前として次のようにします。  
+3.  IMPLEMENT_DYNAMIC マクロを使用して、実装ファイル内 (です。CPP) クラス。 このマクロを引数として受け取り、クラスとその基本クラスの名前として次のようにします。  
   
      [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
   
 > [!NOTE]
->  常に put`IMPLEMENT_DYNAMIC`実装ファイル (です。CPP) クラス。 `IMPLEMENT_DYNAMIC`マクロは、コンパイル時に 1 回だけ評価される必要があり、そのため、インターフェイス ファイルでは使用できません (です。複数のファイルに H) を含めること可能性があります。  
+>  実装ファイルに IMPLEMENT_DYNAMIC を常に配置 (です。CPP) クラス。 IMPLEMENT_DYNAMIC マクロは、コンパイル時に 1 回だけ評価される必要があり、そのため、インターフェイス ファイルでは使用できません (です。複数のファイルに H) を含めること可能性があります。  
   
 #### <a name="_core_to_add_dynamic_creation_support"></a> 動的な作成のサポートを追加するには  
   
 1.  クラスを派生`CObject`です。  
   
-2.  使用して、`DECLARE_DYNCREATE`クラス宣言内のマクロです。  
+2.  クラス宣言で DECLARE_DYNCREATE マクロを使用します。  
   
 3.  (既定のコンス トラクター) を引数なしのコンス トラクターを定義します。  
   
-4.  使用して、`IMPLEMENT_DYNCREATE`クラス実装ファイル内のマクロです。  
+4.  クラスの実装ファイルには、IMPLEMENT_DYNCREATE マクロを使用します。  
   
 #### <a name="_core_to_add_serialization_support"></a> シリアル化のサポートを追加するには  
   
@@ -73,11 +73,11 @@ ms.locfileid: "33381148"
     > [!NOTE]
     >  呼び出す場合`Serialize`直接、つまり、たくないポリモーフィックなポインターを通じてオブジェクトをシリアル化するには、手順 3. ~ 5. を省略します。  
   
-3.  使用して、`DECLARE_SERIAL`クラス宣言内のマクロです。  
+3.  DECLARE_SERIAL マクロを使用して、クラス宣言にします。  
   
 4.  (既定のコンス トラクター) を引数なしのコンス トラクターを定義します。  
   
-5.  使用して、`IMPLEMENT_SERIAL`クラス実装ファイル内のマクロです。  
+5.  IMPLEMENT_SERIAL マクロを使用して、クラス ファイルに実装します。  
   
 > [!NOTE]
 >  「ポリモーフィックなポインター」クラスのオブジェクトを指します (それを呼び出す A)、(たとえば、B) から派生したクラスのオブジェクトにします。 ポリモーフィックなポインターを使ってシリアル化するには、フレームワークはいくつかの基本クラス (A) から派生したクラスのオブジェクトであるために、(B) をシリアル化されたオブジェクトのランタイム クラスを決定する必要があります。  

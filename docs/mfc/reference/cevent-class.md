@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367504"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950886"
 ---
 # <a name="cevent-class"></a>CEvent クラス
 これは 1 つのスレッドに別のイベントが発生したことを通知できるようにする同期オブジェクト、イベントを表します。  
@@ -59,12 +59,12 @@ class CEvent : public CSyncObject
 |[CEvent::SetEvent](#setevent)|使用可能な (シグナル)、イベントを設定し、待機中のスレッドを解放します。|  
 |[CEvent::Unlock](#unlock)|イベント オブジェクトを解放します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  イベントは、スレッドは、そのタスクを実行するタイミングを知る必要があるときに便利です。 たとえば、データ アーカイブにデータをコピーするスレッドは、新しいデータが使用可能な場合に通知する必要があります。 使用して、`CEvent`オブジェクトに新しいデータがある場合、コピー スレッドの通知をできるだけ早く、スレッドがそのタスクを行うことができます。  
   
  `CEvent` オブジェクトに 2 種類があります: 手動と自動です。  
   
- 自動`CEvent`には、少なくとも 1 つのスレッドが解放された後、このオブジェクトは、自動的を非シグナル (使用不可) 状態を返します。 既定では、`CEvent`しない限り、オブジェクトが自動`TRUE`の`bManualReset`構築時にパラメーター。  
+ 自動`CEvent`には、少なくとも 1 つのスレッドが解放された後、このオブジェクトは、自動的を非シグナル (使用不可) 状態を返します。 既定では、`CEvent`しない限り、オブジェクトが自動`TRUE`の*bManualReset*構築時にパラメーター。  
   
  手動`CEvent`設定された状態のままになるオブジェクト[SetEvent](#setevent)または[ResetEvent](#resetevent)他の関数が呼び出されるまでです。 手動作成を`CEvent`オブジェクトを渡す`TRUE`の`bManualReset`構築時にパラメーター。  
   
@@ -88,7 +88,7 @@ class CEvent : public CSyncObject
   
  `CEvent`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxmt.h  
   
 ##  <a name="cevent"></a>  CEvent::CEvent  
@@ -103,19 +103,19 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bInitiallyOwn`  
- 場合**TRUE**、スレッドの**CMultilock**または`CSingleLock`オブジェクトが有効にします。 それ以外の場合、リソースのアクセスを求めているすべてのスレッドは待機する必要があります。  
+ *bInitiallyOwn*  
+ 場合**TRUE**、スレッドの`CMultilock`または`CSingleLock`オブジェクトが有効にします。 それ以外の場合、リソースのアクセスを求めているすべてのスレッドは待機する必要があります。  
   
  *bManualReset*  
  場合**TRUE**、イベント オブジェクトが手動イベントか、それ以外の場合、イベント オブジェクトは、自動イベントを指定します。  
   
- `lpszName`  
+ *lpszName*  
  `CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 コンス トラクターは、ビルド、新しい名前には、既存のイベントが一致すると、`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築が失敗します。 場合**NULL**名前は null になります。  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  イベント オブジェクトのセキュリティ属性。 この構造体の詳細を参照してください。 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アクセスまたはリリース、`CEvent`オブジェクトを作成、 [CMultiLock](../../mfc/reference/cmultilock-class.md)または[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトと呼び出しの[ロック](../../mfc/reference/csinglelock-class.md#lock)と[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数。  
   
  状態を変更する、`CEvent`シグナル状態にオブジェクト (スレッドがない待機する) を呼び出す[SetEvent](#setevent)または[PulseEvent](#pulseevent)です。 状態を設定する、`CEvent`シグナルをオブジェクト (スレッド待つ必要があります)、呼び出す[ResetEvent](#resetevent)です。  
@@ -133,7 +133,7 @@ BOOL PulseEvent();
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イベントが手動の場合は、すべての待機中のスレッドが解放されます、イベントが非シグナル状態に設定されてと`PulseEvent`を返します。 イベントが自動の場合は、1 つのスレッドが解放される、イベントが非シグナル状態に設定されてと`PulseEvent`を返します。  
   
  待機しているスレッドがないか、すぐに解放する`PulseEvent`するイベントの状態を非シグナル状態に設定しを返します。  
@@ -150,7 +150,7 @@ BOOL ResetEvent();
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これにより、すべてのスレッドが待機するには、このイベントにアクセスしようとしています。  
   
  このメンバー関数は、自動イベントでは使用されません。  
@@ -165,7 +165,7 @@ BOOL SetEvent();
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合は 0 以外。 それ以外の場合に 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イベントをまでシグナル状態になりますが、イベントが手動の場合は、 [ResetEvent](#resetevent)と呼びます。 ここでは、複数のスレッドが解放できます。 イベントが自動の場合は、イベント シグナル状態になります、1 つのスレッドが解放されるまでです。 システムは、非シグナル状態に、イベントの状態が設定されます。 スレッドが待機していない場合、状態は、1 つのスレッドが解放されるまでシグナル状態のままです。  
   
 ##  <a name="unlock"></a>  CEvent::Unlock  
@@ -178,7 +178,7 @@ BOOL Unlock();
 ### <a name="return-value"></a>戻り値  
  イベント オブジェクトとイベント スレッドが所有している場合は 0 以外は、自動イベントです。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数を解放することが、終了後、ロック オブジェクトが再利用することがある場合、自動イベントを現在所有するスレッドで呼び出されます。 ロック オブジェクトは、再利用することはできませんの場合は、ロック オブジェクトのデストラクターでこの関数が呼び出されます。  
   
 ## <a name="see-also"></a>関連項目  

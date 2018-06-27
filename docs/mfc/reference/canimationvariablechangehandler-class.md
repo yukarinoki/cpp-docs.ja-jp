@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350993"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957092"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler クラス
 アニメーション変数の値が変化したときに Animation API によって呼び出されるコールバックを実装します。  
@@ -52,7 +52,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 |[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|アニメーション変数の値が変更されたときに呼び出されます。 (`CUIAnimationVariableChangeHandlerBase::OnValueChanged` をオーバーライドします)。|  
 |[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このイベント ハンドラーが作成されに渡される`IUIAnimationVariable::SetVariableChangeHandler`メソッドを呼び出すときに`CAnimationVariable::EnableValueChangedEvent`または`CAnimationBaseObject::EnableValueChangedEvent`(を有効にするアニメーション オブジェクトにカプセル化されたすべてのアニメーション変数は、このイベント)。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -62,7 +62,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
   
  `CAnimationVariableChangeHandler`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `storyboard`  
+ *ストーリー ボード*  
  変数がアニメーション化するストーリー ボードです。  
   
- `variable`  
+ *variable*  
  アニメーション変数が更新されたです。  
   
- `newValue`  
+ *newValue*  
  新しい値。  
   
- `previousValue`  
+ *previousValue*  
  前の値。  
   
 ### <a name="return-value"></a>戻り値  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pAnimationController`  
+ *pAnimationController*  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
 ## <a name="see-also"></a>関連項目  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386055"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955893"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>テクニカル ノート 26: DDX ルーチンおよび DDV ルーチン
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  すべてのダイアログ データ エクス チェンジ ルーチンと MFC に用意されているダイアログ データ検証ルーチンの一覧については、'afxdd_.h' を参照してください。  
   
- ダイアログ データは、単: にメンバーのデータ、 **CMyDialog**クラスです。 構造体または同様のものでは格納されません。  
+ ダイアログ データは、単: にメンバーのデータ、`CMyDialog`クラスです。 構造体または同様のものでは格納されません。  
   
 ## <a name="notes"></a>メモ  
  この「ダイアログ データ」と呼んで、すべての機能では利用できる任意のクラスから派生した`CWnd`だけダイアログに限定されませんとします。  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>動作方法  
  ダイアログ データを使用するために、次を理解する必要はありません。 ただし、バック グラウンドでこのしくみを理解することにより、独自の exchange または検証プロシージャを記述するされます。  
   
- `DoDataExchange`メンバー関数は、非常によく似た、`Serialize`メンバー関数を取得または設定するデータを外部のフォームから (ここでは、ダイアログ ボックスで制御) から/クラスにメンバーのデータにします。 `pDX`パラメーターのデータ交換を行うためのコンテキストし、似ています、`CArchive`パラメーターを`CObject::Serialize`です。 `pDX` (、`CDataExchange`オブジェクト) が似てフラグ方向`CArchive`方向フラグします。  
+ `DoDataExchange`メンバー関数は、非常によく似た、`Serialize`メンバー関数を取得または設定するデータを外部のフォームから (ここでは、ダイアログ ボックスで制御) から/クラスにメンバーのデータにします。 *PDX*パラメーターのデータ交換を行うためのコンテキストし、似ています、`CArchive`パラメーターを`CObject::Serialize`です。 *PDX* (、`CDataExchange`オブジェクト) が似てフラグ方向`CArchive`方向フラグします。  
   
--   場合 **! m_bSaveAndValidate**コントロールにデータの状態を読み込みます。  
+-   もし！*m_bSaveAndValidate*コントロールにデータの状態を読み込みます。  
   
--   場合`m_bSaveAndValidate`、コントロールからデータの状態を設定します。  
+-   場合*m_bSaveAndValidate*、コントロールからデータの状態を設定します。  
   
- 検証にのみ発生時に`m_bSaveAndValidate`設定されています。 値`m_bSaveAndValidate`BOOL パラメーターによって決定されます`CWnd::UpdateData`です。  
+ 検証にのみ発生時に*m_bSaveAndValidate*設定されています。 値*m_bSaveAndValidate* BOOL パラメーターによって決定されます`CWnd::UpdateData`です。  
   
  その他の 3 つの興味深いがある`CDataExchange`メンバー。  
   
-- `m_pDlgWnd`: ウィンドウ (通常はダイアログ) コントロールを含むです。 これは、ddx _ および DDV_ グローバル関数の呼び出し元は 'this' を渡さずに各 DDX/DDV ルーチンにありません。  
+- *m_pDlgWnd*: コントロールが含まれるウィンドウ (通常はダイアログ)。 これは、ddx _ および DDV_ グローバル関数の呼び出し元は 'this' を渡さずに各 DDX/DDV ルーチンにありません。  
   
 - `PrepareCtrl`、および`PrepareEditCtrl`: データ交換するためのダイアログ コントロールを準備します。 検証が失敗した場合、フォーカスを設定するため、そのコントロールのハンドルを格納します。 `PrepareCtrl` エディット コントロールの使用と`PrepareEditCtrl`エディット コントロールのために使用します。  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  このような任意の式は ClassWizard で編集することはできず、特殊な形式のコメントの外部で移動する必要があります (//{{AFX_DATA_MAP(CMyClass)) です。  
   
- **DoDialogExchange**メンバー関数には、条件または混合交換と検証の関数呼び出しとその他の有効な C++ ステートメントが含まれます。  
+ `DoDialogExchange`メンバー関数には、条件または混合交換と検証の関数呼び出しとその他の有効な C++ ステートメントが含まれます。  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

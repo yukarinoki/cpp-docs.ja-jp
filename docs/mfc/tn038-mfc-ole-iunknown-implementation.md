@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a52846754bdf1293e03a47127ae8886e0f1cd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385478"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952431"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>テクニカル ノート 38: MFC/OLE IUnknown の実装
 > [!NOTE]
@@ -89,7 +89,7 @@ public:
 };  
 ```  
   
- しかない場合、IPrintInterface を取得する、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)、呼び出す[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)を使用して、`IID`の**IPrintInterface**です。 `IID` は、インターフェイスを一意に識別する 128 ビットの数値です。 各インターフェイスには、開発者や OLE によって定義された `IID` があります。 場合`pUnk`へのポインター、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)オブジェクト、そこから、IPrintInterface を取得するコードがある可能性があります。  
+ しかない場合、IPrintInterface を取得する、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)、呼び出す[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)を使用して、`IID`の`IPrintInterface`です。 `IID` は、インターフェイスを一意に識別する 128 ビットの数値です。 各インターフェイスには、開発者や OLE によって定義された `IID` があります。 場合*pUnk*へのポインター、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)オブジェクト、そこから、IPrintInterface を取得するコードがある可能性があります。  
   
 ```  
 IPrintInterface* pPrint = NULL;  
@@ -116,7 +116,7 @@ virtual void PrintObject();
 };  
 ```  
   
- 実装[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)と[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)はまったく同じにするとその実装されている上記です。 **Cprintobj::queryinterface**は次のようになります。  
+ 実装[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)と[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)はまったく同じにするとその実装されている上記です。 `CPrintObj::QueryInterface` 次のようになります。  
   
 ```  
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)  
@@ -301,15 +301,15 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 2.  派生クラスで関数 `DECLARE_INTERFACE_MAP` を定義します。  
   
-3.  サポートする各インターフェイスに対して、クラス定義でマクロ `BEGIN_INTERFACE_PART` とマクロ `END_INTERFACE_PART` を使用します。  
+3.  サポート対象の各インターフェイスのクラス定義で BEGIN_INTERFACE_PART、END_INTERFACE_PART マクロを使用します。  
   
-4.  実装ファイルの中で、マクロ `BEGIN_INTERFACE_MAP` と `END_INTERFACE_MAP` を使用してクラスのインターフェイス マップを定義します。  
+4.  実装ファイル内には、クラスのインターフェイス マップを定義するのに BEGIN_INTERFACE_MAP、END_INTERFACE_MAP マクロを使用します。  
   
-5.  マクロ `INTERFACE_PART` とマクロ `BEGIN_INTERFACE_MAP` の間に、サポートする各 IID に対するマクロ `END_INTERFACE_MAP` を記述します。これによって、IID とそのクラスの中の特定の "部分" が対応付けられます。  
+5.  サポートする各 IID その IID を特定のクラスの「部分」にマップする BEGIN_INTERFACE_MAP、END_INTERFACE_MAP マクロの間で INTERFACE_PART マクロを使用します。  
   
 6.  入れ子になったクラスとして、サポートするインターフェイスを実装します。  
   
-7.  親 (`METHOD_PROLOGUE` 派生オブジェクト) にアクセスするにはマクロ `CCmdTarget` を使用します。  
+7.  METHOD_PROLOGUE マクロ、親のアクセスを使用して`CCmdTarget`-派生オブジェクト。  
   
 8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)、および[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)に委任することができます、`CCmdTarget`これらの関数の実装 (`ExternalAddRef`、 `ExternalRelease`、および`ExternalQueryInterface`)。  
   
@@ -338,7 +338,7 @@ END_INTERFACE_PART(PrintObj)
 };  
 ```  
   
- この宣言によって `CCmdTarget` 派生クラスが作成されます。 マクロ `DECLARE_INTERFACE_MAP` はこのクラスがカスタム インターフェイス マップを持つことをフレームワークに対して宣言します。 また、マクロ `BEGIN_INTERFACE_PART` とマクロ `END_INTERFACE_PART` は入れ子になったクラスを定義します。上の例では、入れ子になったクラスは CEditObj と CPrintObj です。入れ子になったクラス名の先頭には X が付きます。これに対してグローバル クラス名の先頭には "C"、インターフェイス クラス名の先頭には "I" が付きます。 これらの入れ子になった 2 つのクラスのそれぞれに、入れ子になった 2 つのメンバー m_CEditObj と m_CPrintObj が作成されます。 マクロを自動的に宣言、 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)、および[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)関数です。 したがってのみを宣言する関数は、このインターフェイスに特定。EditObject と PrintObject (OLE マクロ`STDMETHOD`が使用できるように`_stdcall`仮想キーワードが必要に応じて、ターゲット プラットフォームに提供されます)。  
+ この宣言によって `CCmdTarget` 派生クラスが作成されます。 DECLARE_INTERFACE_MAP マクロは、このクラスがカスタム インターフェイス マップを持つことをフレームワークに指示します。 さらに、BEGIN_INTERFACE_PART、END_INTERFACE_PART マクロを定義する入れ子になったクラスは、ここでは CEditObj と CPrintObj (X はのみを区別するため、入れ子になったクラス"C"とインターフェイスを使用する開始クラスをグローバル クラス名を持つ始める"I")。 これらの入れ子になった 2 つのクラスのそれぞれに、入れ子になった 2 つのメンバー m_CEditObj と m_CPrintObj が作成されます。 マクロを自動的に宣言、 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)、および[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)関数です。 したがってのみを宣言する関数は、このインターフェイスに特定。EditObject と PrintObject (OLE マクロを STDMETHOD が使用するように **_stdcall**仮想キーワードが必要に応じて、ターゲット プラットフォームに提供されます)。  
   
  このクラスに対するインターフェイス マップを実装するには:  
   
@@ -356,7 +356,7 @@ END_INTERFACE_MAP()
   
  これにより IID_IPrintInterface IID と m_CPrintObj、IID_IEditInterface IID と m_CEditObj が関連付けられます。 `CCmdTarget`の実装[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) このマップを使用してに m_CPrintObj や m_CEditObj 要求されたときにポインターを返します。 `IID_IUnknown` に対するエントリをマップに含める必要はありません。`IID_IUnknown` が要求されると、マップの先頭のインターフェイス (この場合は m_CPrintObj) が使用されます。  
   
- 場合でも、`BEGIN_INTERFACE_PART`マクロが自動的に宣言されている、 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)と[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)の関数は、まだ必要がありますそれらを実装します。  
+ BEGIN_INTERFACE_PART マクロが自動的に宣言されている場合でも、 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)と[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)するための関数、する必要がありますそれらを実装します。  
   
 ```  
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()  
@@ -404,10 +404,10 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 -   各インターフェイスに対するこれらの組み込みメソッドの宣言  
   
- フレームワーク内部でもメッセージ マップが使用されています。 このため、フレームワーク クラス (`COleServerDoc` など) の派生クラスを作成すると、そのクラスは自動的に数種類のインターフェイスを持つことになります。また、このインターフェイスを変更したり、まったく新しいインターフェイスに置き換えたりすることもできます。 これは、フレームワークが基底クラスからのインターフェイス マップの継承を完全にサポートしているためです。 このため、`BEGIN_INTERFACE_MAP` は第 2 パラメーターとして基底クラス名を必要とします。  
+ フレームワーク内部でもメッセージ マップが使用されています。 このため、フレームワーク クラス (`COleServerDoc` など) の派生クラスを作成すると、そのクラスは自動的に数種類のインターフェイスを持つことになります。また、このインターフェイスを変更したり、まったく新しいインターフェイスに置き換えたりすることもできます。 これは、フレームワークが基底クラスからのインターフェイス マップの継承を完全にサポートしているためです。 継承、第 2 パラメーターとして基底クラスの名前です。  
   
 > [!NOTE]
->  通常は、MFC から埋め込みに特殊化したインターフェイスを継承しても、MFC の組み込み OLE インターフェイスの実装を再利用できません。 これができないための使用、`METHOD_PROLOGUE`包含へのアクセスを取得するマクロ`CCmdTarget`-派生オブジェクトを意味、*固定オフセット*、埋め込みオブジェクトからの`CCmdTarget`-派生オブジェクト。 たとえば `COleClientItem::XAdviseSink` では、MFC 実装から埋め込みの XMyAdviseSink を派生できません。これは XAdviseSink では、`COleClientItem` オブジェクトの先頭からのオフセット値が異なる値になるためです。  
+>  通常は、MFC から埋め込みに特殊化したインターフェイスを継承しても、MFC の組み込み OLE インターフェイスの実装を再利用できません。 これができないため、親へのアクセスを取得する METHOD_PROLOGUE マクロの使用`CCmdTarget`-派生オブジェクトを意味、*固定オフセット*、埋め込みオブジェクトからの`CCmdTarget`-派生オブジェクト。 たとえば `COleClientItem::XAdviseSink` では、MFC 実装から埋め込みの XMyAdviseSink を派生できません。これは XAdviseSink では、`COleClientItem` オブジェクトの先頭からのオフセット値が異なる値になるためです。  
   
 > [!NOTE]
 >  ただし、これらの関数に MFC の既定の動作を求めるときは、MFC 実装に処理を任せることができます。 これは `IOleInPlaceFrame` クラスで MFC 実装の `COleFrameHook` (XOleInPlaceFrame) によって行われます。このクラスは多くの関数に対して m_xOleInPlaceUIWindow に処理を任せます。 この設計は、多数のインターフェイスを含むオブジェクトの実行時サイズを小さくする目的で選択されます。この処理ではバック ポインター (前の m_pParent など) は不要です。  
@@ -418,13 +418,13 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
  集約の利用方法には、(1) 集約をサポートする COM オブジェクトの利用、(2) 集約の一部となることができるオブジェクトの作成の 2 種類があります。 これらの機能はそれぞれ "集約オブジェクトの利用" と "集約可能オブジェクトの作成" と呼ばれます。 MFC ではこの両方がサポートされています。  
   
 ### <a name="using-an-aggregate-object"></a>集約オブジェクトの利用  
- 集約オブジェクトを使用するには、集約を QueryInterface 機構に結び付ける必要があります。 つまり、本体オブジェクトに最初から含まれているかのように集約オブジェクトを動作させる必要があります。 どのようにはオブジェクトを結び付けるに MFC インターフェイス マップ機構に加え、`INTERFACE_PART`マクロ、入れ子になったオブジェクトは、IID にマップされていることができますもオブジェクトを宣言する集計の一部として、`CCmdTarget`クラスを派生します。 宣言には、`INTERFACE_AGGREGATE` マクロを使用します。 メンバー変数を指定できます (をポインターである必要がありますが、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)またはその派生クラス)、インターフェイス マップ機構に組み込むことはできます。 場合は、ポインターが NULL でない場合に`CCmdTarget::ExternalQueryInterface`が呼び出されると、フレームワークは自動的にオブジェクトを呼び出す集計の[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)場合、メンバー関数、`IID`要求は、ネイティブのいずれかの`IID`sサポートされている、`CCmdTarget`オブジェクト自体です。  
+ 集約オブジェクトを使用するには、集約を QueryInterface 機構に結び付ける必要があります。 つまり、本体オブジェクトに最初から含まれているかのように集約オブジェクトを動作させる必要があります。 どのように INTERFACE_PART マクロに加えて、MFC のインターフェイス マップ機構にオブジェクトを結び付けるは、入れ子になったオブジェクトを IID にマップするで宣言することも集約オブジェクトの一部として、`CCmdTarget`クラスを派生します。 これを行うマクロ INTERFACE_AGGREGATE を使用します。 メンバー変数を指定できます (をポインターである必要がありますが、 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)またはその派生クラス)、インターフェイス マップ機構に組み込むことはできます。 場合は、ポインターが NULL でない場合に`CCmdTarget::ExternalQueryInterface`が呼び出されると、フレームワークは自動的にオブジェクトを呼び出す集計の[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)場合、メンバー関数、`IID`要求は、ネイティブのいずれかの`IID`sサポートされている、`CCmdTarget`オブジェクト自体です。  
   
 ##### <a name="to-use-the-interfaceaggregate-macro"></a>マクロ INTERFACE_AGGREGATE を使用するには  
   
 1.  集約オブジェクトへのポインター (`IUnknown*`) となるメンバー変数を宣言します。  
   
-2.  インターフェイス マップにマクロ `INTERFACE_AGGREGATE` を記述します。このマクロでこのメンバー変数を名前で指定します。  
+2.  マップでは、インターフェイス、メンバー変数を名前で参照される INTERFACE_AGGREGATE マクロが含まれます。  
   
 3.  適切な時点で (普通は `CCmdTarget::OnCreateAggregates` 内) このメンバー変数を NULL 値以外の値に初期化します。  
   
@@ -495,7 +495,7 @@ void EnableAggregation();
  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この種のオブジェクトについて OLE 集約をサポートする場合、この関数を派生クラスのコンストラクターで呼び出します。 この関数を呼び出すことによって、集約可能オブジェクトに必要な特別な IUnknown 実装が用意されます。  
   
 ### <a name="ccmdtargetexternalqueryinterface--function-description"></a>CCmdTarget::ExternalQueryInterface — 関数の説明  
@@ -505,16 +505,16 @@ void EnableAggregation();
     DWORD ExternalQueryInterface(constvoidFAR* lpIID, LPVOIDFAR* ppvObj);
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 #### <a name="parameters"></a>パラメーター  
- `lpIID`  
+ *lpIID*  
  IID への far ポインター (QueryInterface の第 1 引数)  
   
- `ppvObj`  
+ *ppvObj*  
  IUnknown* へのポインター (QueryInterface の第 2 引数)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  IUnknown を実装するとき、クラスが実装する各インターフェイスに対してこの関数を呼び出します。 この関数はオブジェクトのインターフェイス マップに基づき、標準的なデータ駆動型の QueryInterface を実行します。 この関数の戻り値は HRESULT 型にキャストする必要があります。 集約オブジェクトの場合、この関数はローカルなインターフェイス マップを使用せずに、"controlling IUnknown" を呼び出します。  
   
 ### <a name="ccmdtargetexternaladdref--function-description"></a>CCmdTarget::ExternalAddRef - 関数の説明  
@@ -526,7 +526,7 @@ DWORD ExternalAddRef();
  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  IUnknown::AddRef を実装するとき、クラスが実装する各インターフェイスに対してこの関数を呼び出します。 戻り値は、CCmdTarget オブジェクトの新しい参照カウント値を示します。 集約オブジェクトの場合、この関数はローカルな参照カウントを操作せずに、"controlling IUnknown" を呼び出します。  
   
 ### <a name="ccmdtargetexternalrelease--function-description"></a>CCmdTarget::ExternalRelease - 関数の説明  
@@ -538,7 +538,7 @@ DWORD ExternalRelease();
  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  IUnknown::Release を実装するとき、クラスが実装する各インターフェイスに対してこの関数を呼び出します。 戻り値は、オブジェクトの新しい参照カウント値を示します。 集約オブジェクトの場合、この関数はローカルな参照カウントを操作せずに、"controlling IUnknown" を呼び出します。  
   
 ### <a name="declareinterfacemap--macro-description"></a>DECLARE_INTERFACE_MAP - マクロの説明  
@@ -549,8 +549,8 @@ DECLARE_INTERFACE_MAP
  
 ```  
   
-## <a name="remarks"></a>コメント  
- このマクロは、`CCmdTarget` からの派生クラスのうち、インターフェイス マップを持つすべてのクラスで使用します。 使用方法は `DECLARE_MESSAGE_MAP` と同じです。 このマクロ呼び出しは、クラス定義 (通常はヘッダー (.H) ファイル内) で使用します。 `DECLARE_INTERFACE_MAP` を指定したクラスでは、実装ファイル (.CPP) でマクロ `BEGIN_INTERFACE_MAP` と `END_INTERFACE_MAP` を使用してインターフェイス マップを定義する必要があります。  
+## <a name="remarks"></a>Remarks  
+ このマクロは、`CCmdTarget` からの派生クラスのうち、インターフェイス マップを持つすべてのクラスで使用します。 DECLARE_MESSAGE_MAP と同じ方法をよく使用されます。 このマクロ呼び出しは、クラス定義 (通常はヘッダー (.H) ファイル内) で使用します。 DECLARE_INTERFACE_MAP を持つクラスは、実装ファイルにインターフェイス マップを定義する必要があります (です。CPP) BEGIN_INTERFACE_MAP、END_INTERFACE_MAP マクロを使用します。  
   
 ### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>BEGIN_INTERFACE_PART、END_INTERFACE_PART - マクロの説明  
   
@@ -564,21 +564,21 @@ END_INTERFACE_PART(
  localClass)  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 #### <a name="parameters"></a>パラメーター  
- `localClass`  
+ *マクロ*  
  このインターフェイスを実装するクラスの名前  
   
- `iface`  
+ *iface*  
  このクラスによって実装されるインターフェイスの名前  
   
-## <a name="remarks"></a>コメント  
- クラスが実装するインターフェイスごとに、`BEGIN_INTERFACE_PART` と `END_INTERFACE_PART` のペアを記述する必要があります。 これらのマクロでは、OLE インターフェイスから派生させるローカル クラスと、そのクラスの埋め込みメンバー変数を定義します。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)、および[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)メンバーが自動的に宣言されます。 これ以外のメンバー関数をインターフェイスで使用する場合は、直接宣言する必要があります。これらの宣言はマクロ `BEGIN_INTERFACE_PART` と `END_INTERFACE_PART` の間に記述します。  
+## <a name="remarks"></a>Remarks  
+ クラスが実装するインターフェイスごとに、BEGIN_INTERFACE_PART、END_INTERFACE_PART ペアを所持する必要があります。 これらのマクロでは、OLE インターフェイスから派生させるローカル クラスと、そのクラスの埋め込みメンバー変数を定義します。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)、[リリース](http://msdn.microsoft.com/library/windows/desktop/ms682317)、および[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)メンバーが自動的に宣言されます。 実装されるインターフェイスの一部である他のメンバー関数の宣言を含める必要があります (これらの宣言は BEGIN_INTERFACE_PART、END_INTERFACE_PART マクロの間に配置) します。  
   
- 引数 `iface` は作成する OLE インターフェイス (`IAdviseSink` や `IPersistStorage` など、またはカスタム インターフェイス) を示します。  
+ *Iface*引数 OLE インターフェイスを実装するようにするには、 `IAdviseSink`、または`IPersistStorage`(または、独自のカスタム インターフェイス)。  
   
- 引数 `localClass` に定義するローカル クラス名を指定します。 名前の先頭には 'X' が自動的に付けられます。 この名前付け規則は、グローバル クラス名との競合を回避するためです。 また埋め込みメンバーには `localClass` 名の前に 'm_x' を付けた名前が指定されます。  
+ *マクロ*引数は、定義するローカル クラスの名前。 名前の先頭には 'X' が自動的に付けられます。 この名前付け規則は、グローバル クラス名との競合を回避するためです。 さらに、同じ埋め込みのメンバーの名前、*マクロ*'m_x' を付けた以外の名前を付けます。  
   
  例えば:  
   
@@ -618,17 +618,17 @@ END_INTERFACE_PART(MyAdviseSink)
     baseClass)END_INTERFACE_MAP 
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 #### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  定義するインターフェイス マップが含まれるクラス  
   
- `baseClass`  
- `theClass` の派生元のクラス。  
+ *baseClass*  
+ 元のクラス*クラス*から派生します。  
   
-## <a name="remarks"></a>コメント  
- 実際にインターフェイス マップを定義するには、実装ファイルにマクロ `BEGIN_INTERFACE_MAP` と `END_INTERFACE_MAP` を記述します。 実装するインターフェイスごとに 1 つ以上の `INTERFACE_PART` マクロを呼び出します。 このクラスで使用する集約ごとに 1 つの `INTERFACE_AGGREGATE` マクロ呼び出しを記述します。  
+## <a name="remarks"></a>Remarks  
+ BEGIN_INTERFACE_MAP、END_INTERFACE_MAP マクロは、実際にインターフェイス マップを定義する実装ファイルで使用されます。 実装されている各インターフェイスの場合は、1 つまたは複数 INTERFACE_PART マクロを呼び出します。 クラスを使用する集約ごとに、1 つの INTERFACE_AGGREGATE マクロ呼び出しがあります。  
   
 ### <a name="interfacepart--macro-description"></a>INTERFACE_PART - マクロの説明  
   
@@ -640,20 +640,20 @@ END_INTERFACE_PART(MyAdviseSink)
     localClass) 
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 #### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  インターフェイス マップを持つクラスの名前。  
   
- `iid`  
+ *iid*  
  埋め込みクラスに割り当てられる `IID`。  
   
- `localClass`  
+ *マクロ*  
  ローカル クラスの名前。'X' は付けません。  
   
-## <a name="remarks"></a>コメント  
- このマクロはオブジェクトでサポートする各インターフェイスを定義する `BEGIN_INTERFACE_MAP` マクロと `END_INTERFACE_MAP` マクロの間で使用します。 このマクロは `theClass` と `localClass` で示されたクラスのメンバーに IID を割り当てます。 `localClass` の先頭には 'm_x' が自動的に追加されます。 1 個のメンバーに複数の `IID` を割り当てることもできます。 これは、"最派生" インターフェイスを 1 個だけ作成し、これをすべての中間インターフェイスとして使用するときにも役に立ちます。 この方法を使用した例が `IOleInPlaceFrameWindow` インターフェイスです。 このインターフェイスの階層構造は次のようになっています。  
+## <a name="remarks"></a>Remarks  
+ このマクロは、オブジェクトでサポートする各インターフェイスの BEGIN_INTERFACE_MAP マクロと END_INTERFACE_MAP マクロの間で使用されます。 によって示されるクラスのメンバーに IID をマップすることができます*クラス*と*マクロ*です。 'M_x' に追加されます、*マクロ*自動的にします。 1 個のメンバーに複数の `IID` を割り当てることもできます。 これは、"最派生" インターフェイスを 1 個だけ作成し、これをすべての中間インターフェイスとして使用するときにも役に立ちます。 この方法を使用した例が `IOleInPlaceFrameWindow` インターフェイスです。 このインターフェイスの階層構造は次のようになっています。  
   
 ```  
 IUnknown  
@@ -662,7 +662,7 @@ IUnknown
     IOleInPlaceFrameWindow 
 ```  
   
- オブジェクトを実装する場合`IOleInPlaceFrameWindow`、クライアントが`QueryInterface`これらのインターフェイスのいずれかの: `IOleUIWindow`、 `IOleWindow`、または[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)、「最派生」インターフェイスだけでなく`IOleInPlaceFrameWindow`(1 つが実際には実装する)。 この適用を処理するには、複数の `INTERFACE_PART` マクロを使用して、すべての基本インターフェイスを `IOleInPlaceFrameWindow` インターフェイスに割り当てます。  
+ オブジェクトを実装する場合`IOleInPlaceFrameWindow`、クライアントが`QueryInterface`これらのインターフェイスのいずれかの: `IOleUIWindow`、 `IOleWindow`、または[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)、「最派生」インターフェイスだけでなく`IOleInPlaceFrameWindow`(1 つが実際には実装する)。 これに対処するに、すべての基底インターフェイスにマップする 1 つ以上の INTERFACE_PART マクロを使用することができます、`IOleInPlaceFrameWindow`インターフェイス。  
   
  クラス定義ファイルには次のように記述されます。  
   
@@ -698,17 +698,17 @@ END_INTERFACE_MAP
     theAggr) 
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 #### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  インターフェイス マップを持つクラスの名前。  
   
- `theAggr`  
+ *theAggr*  
  集約するメンバー変数の名前。  
   
-## <a name="remarks"></a>コメント  
- このマクロは、クラスが集約オブジェクトを使用することをフレームワークに知らせます。 このマクロは `BEGIN_INTERFACE_PART` マクロと `END_INTERFACE_PART` マクロの間に記述します。 集約オブジェクトが別のオブジェクトから派生した[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)です。 集約と `INTERFACE_AGGREGATE` マクロを使用すると、集約によってサポートされているすべてのインターフェイスを、オブジェクトによって直接サポートされているように見せることができます。 `theAggr`引数はから派生するクラスのメンバー変数の名前だけで[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (直接または間接的に)。 `INTERFACE_AGGREGATE` マクロをインターフェイス マップの中に記述するときは、必ず `INTERFACE_PART` マクロの後に記述します。  
+## <a name="remarks"></a>Remarks  
+ このマクロは、クラスが集約オブジェクトを使用することをフレームワークに知らせます。 BEGIN_INTERFACE_PART、END_INTERFACE_PART マクロの間に表示する必要があります。 集約オブジェクトが別のオブジェクトから派生した[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)です。 集計関数とマクロ INTERFACE_AGGREGATE を使用すると、オブジェクトで直接サポートする集計のサポートが表示されるすべてのインターフェイスを行うことができます。 *TheAggr*引数はから派生するクラスのメンバー変数の名前だけで[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (直接または間接的に)。 INTERFACE_AGGREGATE にすべてのマクロは、インターフェイス マップに配置すると、INTERFACE_PART マクロに従う必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   

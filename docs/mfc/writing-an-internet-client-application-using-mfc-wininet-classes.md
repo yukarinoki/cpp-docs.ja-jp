@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384437"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956474"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法
 すべてのインターネット クライアント アプリケーションの基礎は、インターネット セッションです。 MFC クラスのオブジェクトとしてインターネット セッションを実装する[CInternetSession](../mfc/reference/cinternetsession-class.md)です。 このクラスを使用して、1 つのインターネット セッションまたは複数の同時セッションを作成できます。  
@@ -43,9 +43,9 @@ ms.locfileid: "33384437"
   
 -   使用する場合`CInternetSession::OpenURL`への呼び出し、サーバー接続を確立するために`OpenURL`を返します、`CStdioFile`です。  
   
--   場合を使用して**CInternetSession::GetFtpConnection**、 `GetGopherConnection`、または`GetHttpConnection`サーバー接続を確立するために呼び出す必要があります`CFtpConnection::OpenFile`、 `CGopherConnection::OpenFile`、または**しないで、** 、それぞれを返す、 `CInternetFile`、 `CGopherFile`、または`CHttpFile`、それぞれします。  
+-   場合を使用して`CInternetSession::GetFtpConnection`、 `GetGopherConnection`、または`GetHttpConnection`サーバー接続を確立するために呼び出す必要があります`CFtpConnection::OpenFile`、 `CGopherConnection::OpenFile`、または`CHttpConnection::OpenRequest`をそれぞれを返す、 `CInternetFile`、 `CGopherFile`、または`CHttpFile`、それぞれします。  
   
- インターネット クライアント アプリケーションの実装手順に基づいて汎用的なインターネット クライアントを作成するかどうかによって異なる**OpenURL**またはのいずれかを使用してプロトコル固有のクライアント、 **GetConnection**関数。  
+ インターネット クライアント アプリケーションの実装手順に基づいて汎用的なインターネット クライアントを作成するかどうかによって異なる`OpenURL`またはのいずれかを使用してプロトコル固有のクライアント、`GetConnection`関数。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
   

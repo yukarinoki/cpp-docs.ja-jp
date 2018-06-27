@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357229"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956308"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 `AFX_GLOBAL_DATA` 構造体は、フレームワークを管理するため、またはアプリケーションの外観および動作をカスタマイズするために使用されるフィールドおよびメソッドを格納します。  
@@ -86,7 +86,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|現在のオペレーティング システムがアルファ ブレンドをサポートするかどうかを示します。|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|アプリケーションが Windows 7 OS 以上で実行されているかどうかを示します。|  
@@ -103,13 +103,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](#m_ndragframethicknessdock)|ドッキング状態を知らせるのに使用するドラッグ フレームの幅を指定します。|  
 |[AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](#m_ndragframethicknessfloat)|フローティング状態を知らせるのに使用するドラッグ フレームの幅を指定します。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `AFX_GLOBAL_DATA` 構造体内のデータのほとんどは、アプリケーションの起動時に初期化されます。  
   
 ### <a name="inheritance-hierarchy"></a>継承階層  
  `AFX_GLOBAL_DATA`   
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー :** afxglobals.h  
   
 ### <a name="see-also"></a>関連項目  
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 BOOL  bIsOSAlphaBlendingSupport;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `TRUE` アルファ ブレンドはサポートされていることを示します。それ以外の場合、`FALSE`です。  
   
 
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- `angle`  
+ *角度*  
  時計回りの回転角度 (度単位)。  
   
- `center`  
+ *センター*  
  回転の中心点。  
   
- `matrix`  
+ *マトリックス*  
  このメソッドが戻るとき、新しい回転変換を格納します。 このパラメーターには、記憶域を割り当てる必要があります。  
   
 ### <a name="return-value"></a>戻り値  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `pWnd`  
+ [in]*pWnd*  
  コントロールのウィンドウへのポインター。  
   
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `lpRect`  
+ [in]*lpRect*  
  描画する領域に外接する四角形を指すポインター。 既定値は `NULL` です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `hTheme`  
+ [in]*hTheme*  
  ウィンドウのテーマ データのハンドル、または `NULL`。 このパラメーターが `NULL` ではなく、テーマがサポートされている場合、フレームワークは、指定されたテーマを使用してテキストを描画します。 それ以外の場合、フレームワークは、テーマを使用せずにテキストを描画します。  
   
  [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) メソッドを使用して `HTHEME`を作成します。  
   
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `iPartId`  
+ [in]*iPartId*  
  目的のテキストの外観を備えたコントロールのパーツ。 詳細については、「 [Parts and States (パーツと状態)](http://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「Parts (パーツ)」列を参照してください。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。  
   
- [入力] `iStateId`  
+ [in]*iStateId*  
  目的のテキストの外観を備えたコントロールの状態。 詳細については、「 [Parts and States (パーツと状態)](http://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「States (状態)」列を参照してください。  
   
- [入力] `strText`  
+ [in]*strText*  
  描画するテキスト。  
   
- [入力] `rect`  
+ [in]*rect*  
  指定されたテキストが描画される領域の境界。  
   
- [入力] `dwFlags`  
+ [in]*dwFlags*  
  指定されたテキストの描画方法を指定するフラグのビットごとの組み合わせ (OR)。  
   
- 場合、`hTheme`パラメーターは`NULL`テーマがサポートされているし、有効になっていない場合や、`nFormat`のパラメーター、 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)メソッドが有効なフラグについて説明します。 テーマがサポートされている場合は、 `dwFlags` DrawThemeTextEx [メソッドの](http://msdn.microsoft.com/library/windows/desktop/bb773317) パラメーターで有効なフラグを記述します。  
+ 場合、 *hTheme*パラメーターは`NULL`テーマがサポートされているし、有効になっていない場合や、*フォーマット*のパラメーター、 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)メソッドを有効な説明フラグです。 テーマがサポートされている場合、 *dwFlags*のパラメーター、 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)メソッドが有効なフラグについて説明します。  
   
- [入力] `nGlowSize`  
+ [in]*nGlowSize*  
  指定されたテキストを描画する前に背景に描画される光彩効果のサイズ。 既定値は 0 です。  
   
- [入力] `clrText`  
+ [in]*clrText*  
  指定されたテキストの描画に使用される色。 既定値は既定の色です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 指定したテキストの描画にテーマを使用する場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
- テーマは、アプリケーションの視覚スタイルを定義します。 `hTheme` パラメーターが `NULL`の場合、 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) メソッドがサポートされていない場合、または [デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) の構成が無効になっている場合は、テキストの描画にテーマが使用されません。  
+### <a name="remarks"></a>Remarks  
+ テーマは、アプリケーションの視覚スタイルを定義します。 場合、テキストの描画にテーマは使用されません、 *hTheme*パラメーターは`NULL`、場合、または、 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)メソッドはサポートされていない場合、または[デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) の構成が無効です。  
   
 ### <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
@@ -257,10 +257,10 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` ユーザー補助のサポートを有効にするには`FALSE` accessibility のサポートを無効にします。 既定値は `TRUE` です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Active Accessibility は、により、プログラムと Windows オペレーティング システムが支援技術製品と共に使用を改善する COM ベース テクノロジです。 これは、ユーザー インターフェイス要素に関する情報を公開するための信頼性の高いメソッドを提供します。 ただし、Microsoft UI オートメーションと呼ばれる新しいユーザー補助モデルでは、使用できるようになりました。 2 つのテクノロジの比較を参照してください。 [UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)です。  
   
  使用して、 [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) Microsoft Active Accessibility のサポートが有効になっているかどうかを調べます。  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `strBuffer`  
+ [in]*strBuffer*  
  テキストのバッファー。  
   
- [入力] `lpszTag`  
+ [in]*lpszTag*  
  タグと終了 XML タグのペアの名前。  
   
- [出力] `strTag`  
- このメソッドが戻るとき、`strTag`パラメーターには間にある開始タグと終了 XML タグによってというテキストが含まれています、`lpszTag`パラメーター。 先頭または末尾の空白は結果から除去します。  
+ [out]*strTag*  
+ このメソッドが戻るとき、 *strTag*パラメーターには間にある開始タグと終了 XML タグによってというテキストが含まれています、 *lpszTag*パラメーター。 先頭または末尾の空白は結果から除去します。  
   
- [入力] `bIsCharsList`  
- `TRUE` 記号のエスケープ文字を変換する、`strTag`パラメーターに実際のエスケープ文字です。`FALSE`変換を実行します。既定値は`FALSE`します。 詳細については、「解説」を参照してください。  
+ [in]*bIsCharsList*  
+ `TRUE` 記号のエスケープ文字を変換する、 *strTag*パラメーターに実際のエスケープ文字です。`FALSE`変換を実行します。既定値は`FALSE`します。 詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
- XML タグ ペアから成るタグと終了を開始および指定したバッファー内のテキストの実行の終了を示すタグをという名前です。 `strBuffer`パラメーターは、バッファーを指定し、`lpszTag`パラメーターが XML タグの名前を指定します。  
+### <a name="remarks"></a>Remarks  
+ XML タグ ペアから成るタグと終了を開始および指定したバッファー内のテキストの実行の終了を示すタグをという名前です。 *StrBuffer*パラメーターは、バッファーを指定し、 *lpszTag*パラメーターが XML タグの名前を指定します。  
   
- 次の表に、記号を使用して、指定したバッファー内のエスケープ文字のセットをエンコードします。 指定`TRUE`の`bIsCharsList`内のシンボルを変換するパラメーター、`strTag`実際のエスケープ文字のパラメーターです。 次の表には、 [_T()](../../c-runtime-library/data-type-mappings.md)記号を指定し、文字の文字列をエスケープするマクロです。  
+ 次の表に、記号を使用して、指定したバッファー内のエスケープ文字のセットをエンコードします。 指定`TRUE`の*bIsCharsList*内のシンボルを変換するパラメーター、 *strTag*実際のエスケープ文字のパラメーターです。 次の表には、 [_T()](../../c-runtime-library/data-type-mappings.md)記号を指定し、文字の文字列をエスケープするマクロです。  
   
 |シンボル|エスケープ文字|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `nColor`  
- 色を取得するユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、`nIndex`のパラメーター、 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)メソッドです。  
+ [in]*nColor*  
+ 色を取得するユーザー インターフェイス要素を指定する値。 有効な値の一覧は、次を参照してください。、 *nIndex*のパラメーター、 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)メソッドです。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたユーザー インターフェイス要素の RGB 色の値。 詳細については、「解説」を参照してください。  
   
-### <a name="remarks"></a>コメント  
- 場合、`nColor`パラメーターが範囲外には、戻り値は 0 です。 0 も有効な RGB 値であるために、システム カラーが現在のオペレーティング システムでサポートされているかどうかを決定するのにこのメソッドを使用することはできません。 代わりに、使用、 [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)を返すメソッド`NULL`色がサポートされていない場合。  
+### <a name="remarks"></a>Remarks  
+ 場合、 *nColor*パラメーターが範囲外には、戻り値は 0 です。 0 も有効な RGB 値であるために、システム カラーが現在のオペレーティング システムでサポートされているかどうかを決定するのにこのメソッドを使用することはできません。 代わりに、使用、 [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)を返すメソッド`NULL`色がサポートされていない場合。  
   
 ### <a name="see-also"></a>関連項目  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力、出力] `info`  
+ [入力、出力].*情報*  
  A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)を最小化されていないウィンドウの非クライアント領域に関連付けられている拡張可能なメトリックを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `bHorz`  
+ [in]*bHorz*  
  `TRUE` テキストを水平方向に実行すると、文字の高さを取得するには`FALSE`テキストを垂直方向に実行すると、文字の高さを取得します。 既定値は `TRUE` です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  D2D ファクトリとリソースのスレッド モデルが作成されます。  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  書き込みのファクトリ オブジェクトが共有または分離されたかどうかを指定する値  
   
 ### <a name="return-value"></a>戻り値  
@@ -448,7 +448,7 @@ BOOL Is32BitIcons() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` 定義済みの 32 ビット アイコンがサポートされています。 場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが戻る`TRUE`フレームワークには、32 ビットの組み込みアイコンがサポートされている場合、オペレーティング システムは、16 ビット/ピクセル以上をサポートしている場合と画像がハイ コントラストで表示されていない場合。  
   
 ## <a name="isaccessibilitysupport"></a> AFX_GLOBAL_DATA::IsAccessibilitySupport
@@ -462,7 +462,7 @@ BOOL IsAccessibilitySupport() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` ユーザー補助のサポートが有効である場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Microsoft Active Accessibility は、アプリケーションにアクセスできるように、以前のソリューションをでした。 Microsoft UI オートメーションは Microsoft Windows の新しいユーザー補助モデルおよび支援技術製品のニーズに対応するためのものでは、自動テスト ツール   
   
  使用して、 [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)メソッドを有効にするにまたは Active Accessibility のサポートを無効にします。  
@@ -506,7 +506,7 @@ BOOL IsHighContrastMode() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` イメージが黒と白のハイ コントラスト モードで現在表示されている場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  黒のハイ コントラスト モードでは、周縁が光源が白、背景が黒にします。 白いハイ コントラスト モード周縁が光源が黒、バック グラウンドは白です。  
   
 ## <a name="iswindowslayersupportavailable"></a> AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
@@ -520,7 +520,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` レイヤード ウィンドウがサポートされています。 場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  レイヤード ウィンドウはサポートされている場合*スマート ドッキング*マーカーがレイヤード ウィンドウを使用します。  
   
 ## <a name="m_busebuiltin32biticons"></a> AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
@@ -531,7 +531,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 BOOL  m_bUseBuiltIn32BitIcons;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `TRUE` フレームワークが 32 ビット カラー アイコン; を使用することを指定します`FALSE`低解像度アイコンを指定します。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`コンス トラクターにこのメンバーは初期化`TRUE`です。  
   
  このメンバーは、アプリケーションの起動時に設定する必要があります。  
@@ -544,7 +544,7 @@ BOOL  m_bUseBuiltIn32BitIcons;
 BOOL m_bUseSystemFont;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `TRUE` システム フォント; を使用することを指定します。それ以外の場合、`FALSE`です。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`コンス トラクターにこのメンバーは初期化`FALSE`です。  
   
  このメンバーのテストは、使用するフォントを特定するために、フレームワークの唯一の方法ではありません。 `AFX_GLOBAL_DATA::UpdateFonts`メソッドは、メニューのツールバー、およびリボンに適用できるどの visual スタイルを決定するのには、既定と代替手段のフォントもテストします。  
@@ -588,7 +588,7 @@ HICON m_hiconTool;
 int  m_nAutoHideToolBarMargin;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`コンス トラクターは、4 ピクセルにこのメンバーを初期化します。  
   
 ## <a name="m_nautohidetoolbarspacing"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
@@ -599,7 +599,7 @@ int  m_nAutoHideToolBarMargin;
 int   m_nAutoHideToolBarSpacing;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`コンス トラクターは、14 ピクセルにこのメンバーを初期化します。  
   
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
@@ -611,7 +611,7 @@ int   m_nAutoHideToolBarSpacing;
 int  m_nDragFrameThicknessDock;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`コンス トラクターは、このメンバーを 3 ピクセルを初期化します。  
   
 ## <a name="m_ndragframethicknessfloat"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
@@ -622,7 +622,7 @@ int  m_nDragFrameThicknessDock;
 int  m_nDragFrameThicknessFloat;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`コンス トラクターは、4 ピクセルにこのメンバーを初期化します。  
   
 ## <a name="onsettingchange"></a> AFX_GLOBAL_DATA::OnSettingChange
@@ -633,7 +633,7 @@ int  m_nDragFrameThicknessFloat;
 void OnSettingChange();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ユーザーのデスクトップの特定の属性の状態をフレームワーク変数を設定します。 このメソッドは、メニューのアニメーション、メニューのフェード、およびタスク バーの自動非表示機能の現在の状態を検出します。  
   
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `lpszClassNamePrefix`  
+ [in]*lpszClassNamePrefix*  
  登録ウィンドウ クラスの名前。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は、登録されているクラスの修飾名それ以外の場合、[リソース例外](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)です。  
   
-### <a name="remarks"></a>コメント  
- 戻り値は、コロン区切りの一覧、`lpszClassNamePrefix`パラメーター文字列、および現在のハンドルを表す 16 進数文字列アプリケーション インスタンス; 識別子を持つは IDC_ARROW; 矢印カーソルであるアプリケーション カーソルと背景のブラシ。 MFC ウィンドウ クラスの登録の詳細については、次を参照してください。 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)です。  
+### <a name="remarks"></a>Remarks  
+ 戻り値は、コロン区切りの一覧、 *lpszClassNamePrefix*パラメーター文字列、および現在のアプリケーション インスタンスのハンドルを表す 16 進数文字列、矢印が表示されているアプリケーション カーソル識別子を持つ IDC_ARROW; は、カーソル背景のブラシ。 MFC ウィンドウ クラスの登録の詳細については、次を参照してください。 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)です。  
   
 ### <a name="see-also"></a>関連項目    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -669,7 +669,7 @@ BOOL Resume();
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。 デバッグ モードでは、このメソッドは、このメソッドが成功していないかどうかをアサートします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、フレームワークが受信すると、 [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)メッセージ。  
   
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `hwnd`  
+ [in]*hwnd*  
  レイヤード ウィンドウへのハンドルします。  
   
- [入力] `crKey`  
+ [in]*crKey*  
  透過色キーを[デスクトップ ウィンドウ マネージャー](http://msdn.microsoft.com/library/windows/desktop/aa969540)レイヤード ウィンドウの作成に使用します。  
   
- [入力] `bAlpha`  
+ [in]*bAlpha*  
  レイヤード ウィンドウの不透明度を表すために使用するアルファ値。  
   
- [入力] `dwFlags`  
- 使用するには、どのメソッド パラメーターを指定するフラグのビットごとの組み合わせ (OR)。 使用する LWA_COLORKEY の指定、`crKey`透過色としてパラメーター。 使用する LWA_ALPHA の指定、`bAlpha`レイヤード ウィンドウの不透明度を決定するパラメーターです。  
+ [in]*dwFlags*  
+ 使用するには、どのメソッド パラメーターを指定するフラグのビットごとの組み合わせ (OR)。 使用する LWA_COLORKEY の指定、 *crKey*透過色としてパラメーター。 使用する LWA_ALPHA の指定、 *bAlpha*レイヤード ウィンドウの不透明度を決定するパラメーターです。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。   
@@ -715,16 +715,16 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- [入力] `lpLogFont`  
+ [in]*lpLogFont*  
  フォントの属性を格納する構造体へのポインター。  
   
- [入力] `bHorz`  
+ [in]*bHorz*  
  `TRUE` テキストを水平方向に実行するよう指定するには`FALSE`にテキストを垂直方向に実行するよう指定します。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。 デバッグ モードでは、このメソッドは、このメソッドが成功していないかどうかをアサートします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、水平通常フォントを下線の付いたフォントを作成し、既定のメニュー項目に使用される、太字のフォント。 このメソッドは、必要に応じて正規縦書きフォントを作成します。 論理フォントの詳細については、次を参照してください。 [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect)です。  
   
 ## <a name="updatefonts"></a> AFX_GLOBAL_DATA::UpdateFonts
@@ -735,7 +735,7 @@ BOOL SetMenuFont(
 void UpdateFonts();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  論理フォントの詳細については、次を参照してください。`CFont::CreateFontIndirect`です。  
   
 ## <a name="updatesyscolors"></a> AFX_GLOBAL_DATA::UpdateSysColors
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>パラメーター   
- `pszPath`  
+ *pszPath*  
  [in]表示名へのポインター。  
   
- `pbc`  
+ *pbc*  
  解析操作を制御するためのバインド コンテキストへのポインター。  
   
- `riid`  
+ *riid*  
  インターフェイス ID への参照  
   
- `ppv`  
- [out]この関数から制御が戻るときに要求されたインターフェイス ポインターを含む`riid`です。 これは一般に`IShellItem`または`IShellItem2`です。  
+ *ppv*  
+ [out]この関数から制御が戻るときに要求されたインターフェイス ポインターを含む*riid*です。 これは一般に`IShellItem`または`IShellItem2`です。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は S_OK を返します。それ以外の場合エラー値。  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37a74294d12be60af69a710cf5f1d688f4090379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab5a43747d258f7482f7de4d61b9da8201c0729b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350200"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952886"
 ---
 # <a name="cd2droundedrect-class"></a>CD2DRoundedRect クラス
 `D2D1_ROUNDED_RECT`のラッパー。  
@@ -47,7 +47,7 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
   
  [CD2DRoundedRect](../../mfc/reference/cd2droundedrect-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect  
@@ -63,10 +63,10 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rectIn`  
+ *rectIn*  
  元の四角形  
   
- `sizeRadius`  
+ *sizeRadius*  
  半径のサイズ  
   
 ## <a name="see-also"></a>関連項目  

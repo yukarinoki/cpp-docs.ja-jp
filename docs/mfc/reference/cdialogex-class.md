@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368047"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951853"
 ---
 # <a name="cdialogex-class"></a>CDialogEx クラス
 `CDialogEx` クラスは、ダイアログ ボックスの背景色と背景イメージを指定します。   
@@ -54,7 +54,7 @@ class CDialogEx : public CDialog
 |[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|ダイアログ ボックスの背景色を設定します。|  
 |[CDialogEx::SetBackgroundImage](#setbackgroundimage)|ダイアログ ボックスの背景イメージを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CDialogEx` クラスを使用するには、ダイアログ ボックス クラスを `CDialogEx` クラスではなく `CDialog` クラスから派生させます。  
   
  ダイアログ ボックス イメージは、リソース ファイルに格納されます。 フレームワークは、リソース ファイルから読み込まれたイメージを自動的に削除します。 現在の背景イメージをプログラムで削除するを呼び出して、 [CDialogEx::SetBackgroundImage](#setbackgroundimage)メソッドまたは実装、`OnDestroy`イベント ハンドラー。 呼び出すと、 [CDialogEx::SetBackgroundImage](#setbackgroundimage)メソッド、パス、`HBITMAP`イメージ ハンドルとしてパラメーター。 `CDialogEx` オブジェクトがイメージの所有権を取得し、`m_bAutoDestroyBmp` フラグが `TRUE` である場合は、そのイメージを削除します。  
@@ -72,7 +72,7 @@ class CDialogEx : public CDialog
   
  [CDialogEx](../../mfc/reference/cdialogex-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdialogex.h  
   
 ##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
@@ -90,21 +90,21 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIDTemplate`  
+ [in]*nIDTemplate*  
  ダイアログ ボックス テンプレートのリソース ID です。  
   
- [入力] `lpszTemplateName`  
+ [in]*lpszTemplateName*  
  ダイアログ ボックス テンプレートのリソースの名前。  
   
- [入力] `pParent`  
+ [in]*pParent*  
  親ウィンドウへのポインター。 既定値は `NULL` です。  
   
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  親ウィンドウへのポインター。 既定値は `NULL` です。  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  ダイアログ ボックスの背景色を設定します。  
@@ -116,13 +116,13 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `color`  
+ [in]*色*  
  色の RGB 値。  
   
- [入力] `bRepaint`  
+ [in]*bRepaint*  
  `TRUE` 画面をすぐに更新するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  ダイアログ ボックスの背景イメージを設定します。  
@@ -142,25 +142,25 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hBitmap`  
+ [in]*hBitmap*  
  背景イメージへのハンドル。  
   
- [入力] `uiBmpResId`  
+ [in]*uiBmpResId*  
  背景画像のリソース ID です。  
   
- [入力] `location`  
+ [in]*場所*  
  1 つ、`CDialogEx::BackgroundLocation`イメージの場所を指定する値。 有効な値には、BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT、および BACKGR_BOTTOMRIGHT が含まれます。 既定値は、BACKGR_TILE です。  
   
- [入力] `bAutoDestroy`  
+ [in]*bAutoDestroy*  
  `TRUE` 背景イメージを自動的に破棄するにはそれ以外の場合、`FALSE`です。  
   
- [入力] `bRepaint`  
+ [in]*bRepaint*  
  `TRUE` ダイアログ ボックスをすぐに再描画するにはそれ以外の場合、`FALSE`です。  
   
 ### <a name="return-value"></a>戻り値  
  2 番目のメソッド オーバー ロード構文、`TRUE`メソッドが成功した、それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定したイメージは、ダイアログ ボックスのクライアント領域に合わせて伸縮されません。  
   
 ## <a name="see-also"></a>関連項目  

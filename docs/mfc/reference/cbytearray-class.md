@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352936"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951066"
 ---
 # <a name="cbytearray-class"></a>CByteArray クラス
 バイトの動的配列をサポートします。  
@@ -111,8 +111,8 @@ class CByteArray : public CObject
 |----------|-----------------|  
 |[CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
-## <a name="remarks"></a>コメント  
- `CByteArray` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 アーカイブをオーバー ロードされた出力ストリームにバイトの配列が格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数は、各要素は、逆に、シリアル化します。  
+## <a name="remarks"></a>Remarks  
+ `CByteArray` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 アーカイブをオーバー ロードされた出力ストリームにバイトの配列が格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数は、各要素は、逆に、シリアル化します。  
   
 > [!NOTE]
 >  配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。  
@@ -126,7 +126,7 @@ class CByteArray : public CObject
   
  `CByteArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  
