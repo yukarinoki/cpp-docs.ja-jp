@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 227637dc042777725692122babe0d4c7b232d578
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366679"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037779"
 ---
 # <a name="cinternetconnection-class"></a>関数クラス
 インターネット サーバーへの接続を管理します。  
@@ -62,7 +62,7 @@ class CInternetConnection : public CObject
 |----------|-----------------|  
 |[CInternetConnection::operator HINTERNET](#operator_hinternet)|インターネット セッションへのハンドル。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MFC クラスの基本クラスである[CFtpConnection](../../mfc/reference/cftpconnection-class.md)、 [CHttpConnection](../../mfc/reference/chttpconnection-class.md)、および[関数](../../mfc/reference/cgopherconnection-class.md)です。 これらの各クラスは、それぞれ、FTP、HTTP、または gopher サーバーと通信するための追加機能を提供します。  
   
  インターネット サーバーと直接通信する必要があります、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトおよび`CInternetConnection`オブジェクト。  
@@ -74,7 +74,7 @@ class CInternetConnection : public CObject
   
  `CInternetConnection`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection  
@@ -89,19 +89,19 @@ CInternetConnection(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSession`  
+ *pSession*  
  ポインター、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。  
   
- `pstrServer`  
+ *pstrServer*  
  サーバー名を含む文字列へのポインター。  
   
- `nPort`  
+ *nPort*  
  この接続のインターネット ポートを識別する番号。  
   
- `dwContext`  
- コンテキスト識別子、`CInternetConnection`オブジェクト。 参照してください**解説**の詳細については`dwContext`します。  
+ *独自*  
+ コンテキスト識別子、`CInternetConnection`オブジェクト。 参照してください**解説**の詳細については*独自*です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出さないように`CInternetConnection`考えてください。 代わりに、、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)を確立する接続の種類のメンバー関数。  
   
 - [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)  
@@ -110,7 +110,7 @@ CInternetConnection(
   
 - [代わり](../../mfc/reference/cinternetsession-class.md#getgopherconnection)  
   
- 既定値`dwContext`に MFC によって送信される、 `CInternetConnection`-オブジェクトから派生した、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、**です**-派生オブジェクト。 既定値を 1 に設定します。ただしで特定のコンテキスト識別子を割り当てることができますに明示的に、 [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)接続のコンス トラクターです。 オブジェクトとその動作はしたコンテキスト ID と関連付けられます コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
+ 既定値*独自*に MFC によって送信される、 `CInternetConnection`-オブジェクトから派生した、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、**です**-派生オブジェクト。 既定値を 1 に設定します。ただしで特定のコンテキスト識別子を割り当てることができますに明示的に、 [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)接続のコンス トラクターです。 オブジェクトとその動作はしたコンテキスト ID と関連付けられます コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
   
 ##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  このセッションのコンテキスト ID を取得するには、このメンバー関数を呼び出します。  
@@ -122,10 +122,10 @@ DWORD_PTR GetContext() const;
 ### <a name="return-value"></a>戻り値  
  コンテキストのアプリケーションによって割り当てられた id。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンテキスト ID が指定した[CInternetSession](../../mfc/reference/cinternetsession-class.md)に反映されると`CInternetConnection`- と[CInternetFile](../../mfc/reference/cinternetfile-class.md)の異なる方法で表示される関数の呼び出しに指定しない限り、派生クラス接続です。 コンテキスト ID が指定したオブジェクトのすべての操作に関連付けられているし、によって返される操作のステータス情報を識別する[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)です。  
   
- 方法の詳細についての**GetContext**ユーザー状態情報を提供するには、他の wininet の基礎クラスとの連携が、記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキストの詳細については識別子です。  
+ 方法の詳細について`GetContext`ユーザー状態情報を提供するには、他の wininet の基礎クラスとの連携が、記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
   
 ##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  このインターネット接続に関連付けられているサーバーの名前を取得するには、このメンバー関数を呼び出します。  

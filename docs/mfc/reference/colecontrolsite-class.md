@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4dcb17c2650bf8b56702241a0ab4e77a3e2fc48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61544026f559e0c45cbd81735e76203a088d2d6b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377811"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040874"
 ---
 # <a name="colecontrolsite-class"></a>メンバー クラス
 クライアント側のカスタム コントロール インターフェイスをサポートします。  
@@ -204,8 +204,8 @@ class COleControlSite : public CCmdTarget
 |[COleControlSite::m_pWndCtrl](#m_pwndctrl)|ホストされるコントロールのウィンドウのオブジェクトへのポインター。|  
 |[COleControlSite::m_rect](#m_rect)|コントロール サイトの寸法。|  
   
-## <a name="remarks"></a>コメント  
- このサポートは、埋め込みの ActiveX コントロールが表示サイトのそのモニカー、そのユーザー インターフェイス、アンビエント プロパティ、およびコンテナーによって提供される他のリソースのエクステントと場所に関する情報を取得するための主要な手段です。 `COleControlSite` 完全に実装する、 [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)、[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586)、[していること](http://msdn.microsoft.com/library/windows/desktop/ms693706)、 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)、 **IBoundObjectSite**、 **INotifyDBEvents**、 [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)インターフェイスです。 さらに、(アンビエント プロパティとイベント シンクのサポートを提供) の IDispatch インターフェイスも実装します。  
+## <a name="remarks"></a>Remarks  
+ このサポートは、埋め込みの ActiveX コントロールが表示サイトのそのモニカー、そのユーザー インターフェイス、アンビエント プロパティ、およびコンテナーによって提供される他のリソースのエクステントと場所に関する情報を取得するための主要な手段です。 `COleControlSite` 完全に実装する、 [IOleControlSite](http://msdn.microsoft.com/library/windows/desktop/ms688502)、[ビュー](http://msdn.microsoft.com/library/windows/desktop/ms686586)、[していること](http://msdn.microsoft.com/library/windows/desktop/ms693706)、 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)、 `IBoundObjectSite`、`INotifyDBEvents`、 [IRowSetNotify](../../data/oledb/irowsetnotifyimpl-class.md)インターフェイスです。 さらに、(アンビエント プロパティとイベント シンクのサポートを提供) の IDispatch インターフェイスも実装します。  
   
  ActiveX コントロール サイトを使用してを作成する`COleControlSite`からクラスを派生`COleControlSite`です。 `CWnd`-コンテナー (たとえば、ダイアログ ボックス) の派生クラスでオーバーライド、 **CWnd::CreateControlSite**関数。  
   
@@ -216,7 +216,7 @@ class COleControlSite : public CCmdTarget
   
  `COleControlSite`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxocc.h  
   
 ##  <a name="binddefaultproperty"></a>  COleControlSite::BindDefaultProperty  
@@ -231,19 +231,19 @@ virtual void BindDefaultProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  指定します、 **DISPID**のデータ ソース コントロールにバインドするのにはデータ バインド コントロールのプロパティです。  
   
- `vtProp`  
- バインドするプロパティの種類を指定 — たとえば、 `VT_BSTR`、 **VT_VARIANT**のようにします。  
+ *vtProp*  
+ バインドするプロパティの種類を指定 — たとえば、 **VT_BSTR**、 **VT_VARIANT**のようにします。  
   
- `szFieldName`  
+ *szFieldName*  
  プロパティをバインドする、データ ソース コントロールによって提供されたカーソルで、列の名前を指定します。  
   
- `pDSCWnd`  
+ *pDSCWnd*  
  ポインター、 `CWnd`-派生オブジェクトのプロパティをバインドするデータ ソース コントロールをホストします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CWnd`この関数を呼び出すオブジェクトは、データ バインド コントロールである必要があります。  
   
 ##  <a name="bindproperty"></a>  COleControlSite::BindProperty  
@@ -259,10 +259,10 @@ virtual void BindProperty(
  *dwDispId*  
  指定します、 **DISPID**のデータ ソース コントロールにバインドするのにはデータ バインド コントロールのプロパティです。  
   
- `pWndDSC`  
+ *pWndDSC*  
  ポインター、 `CWnd`-派生オブジェクトのプロパティをバインドするデータ ソース コントロールをホストします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CWnd`この関数を呼び出すオブジェクトは、データ バインド コントロールである必要があります。  
   
 ##  <a name="colecontrolsite"></a>  COleControlSite::COleControlSite  
@@ -273,10 +273,10 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCtrlCont`  
+ *pCtrlCont*  
  コントロールのコンテナー (AtiveX コントロールをホストするウィンドウを表す) へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、 [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer)関数。 コンテナーの作成をカスタマイズする方法の詳細については、次を参照してください。 [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite)です。  
   
 ##  <a name="createcontrol"></a>  COleControlSite::CreateControl  
@@ -309,50 +309,50 @@ virtual HRESULT CreateControl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndCtrl`  
+ *pWndCtrl*  
  コントロールを表す window オブジェクトへのポインター。  
   
- `clsid`  
+ *clsid*  
  コントロールの一意のクラス ID。  
   
- `lpszWindowName`  
+ *したとき*  
  コントロールに表示されるテキストへのポインター。 (該当する場合) は、winodw のキャプションまたはテキストのプロパティの値を設定します。  
   
- `dwStyle`  
+ *dwStyle*  
  Windows のスタイルです。 使用できるスタイルは、下に表示されます、**解説**セクションです。  
   
- `rect`  
+ *rect*  
  コントロールのサイズと位置を指定します。 いずれかになります、`CRect`オブジェクトまたは`RECT`構造体。  
   
- `nID`  
+ *nID*  
  コントロールの子ウィンドウ ID を指定します  
   
- `pPersist`  
+ *pPersist*  
  ポインター、`CFile`コントロールの永続的な状態を格納します。 既定値は**NULL**、コントロール自体の初期化を永続的な記憶域からの状態を復元することがなくすることを示すです。 ない場合**NULL**へのポインターである必要があります、 `CFile`-、ストリームとストレージのどちらかの形式でのコントロールの永続的なデータを含むオブジェクトを派生します。 このデータは、クライアントの以前のライセンス認証で保存されている可能性があります。 `CFile`他のデータを含めることができますが、読み取り/書き込みを指すポインターへの呼び出し時に永続的なデータの最初のバイトに設定する必要があります`CreateControl`です。  
   
- `bStorage`  
- 示すかどうかのデータ`pPersist`として解釈する必要があります`IStorage`または`IStream`データ。 場合内のデータ`pPersist`、記憶域は、`bStorage`する必要があります**TRUE**です。 場合内のデータ`pPersist`ストリーム、`bStorage`する必要があります**FALSE**です。 既定値は**FALSE**です。  
+ *bStorage*  
+ 示すかどうかのデータ*pPersist*として解釈する必要があります`IStorage`または`IStream`データ。 場合内のデータ*pPersist* 、記憶域は、 *bStorage*する必要があります**TRUE**です。 場合内のデータ*pPersist*ストリーム、 *bStorage*する必要があります**FALSE**です。 既定値は**FALSE**です。  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  省略可能なライセンス キー データ。 このデータは、実行時ライセンス キーが必要なコントロールを作成するためにのみ必要です。 コントロールは、ライセンスをサポートする場合を正常にコントロールを作成するためのライセンス キーを指定する必要があります。 既定値は**NULL**です。  
   
- `ppt`  
- ポインター、**ポイント**コントロールの左上隅を格納する構造体。 コントロールのサイズの値によって決まります*psize*です。 `ppt`と*psize*値のサイズを指定するオプションのメソッドは、および使用して、コントロールを配置します。  
+ *ppt*  
+ ポインター、**ポイント**コントロールの左上隅を格納する構造体。 コントロールのサイズの値によって決まります*psize*です。 *Ppt*と*psize*値のサイズを指定するオプションのメソッドは、および使用して、コントロールを配置します。  
   
  *psize*  
- ポインター、**サイズ**コントロールのサイズを格納する構造体。 左上隅の値によって決まります`ppt`です。 `ppt`と*psize*値のサイズを指定するオプションのメソッドは、および使用して、コントロールを配置します。  
+ ポインター、**サイズ**コントロールのサイズを格納する構造体。 左上隅の値によって決まります*ppt*です。 *Ppt*と*psize*値のサイズを指定するオプションのメソッドは、および使用して、コントロールを配置します。  
   
 ### <a name="return-value"></a>戻り値  
  標準の `HRESULT` 値。  
   
-### <a name="remarks"></a>コメント  
- Windows のサブセットのみ`dwStyle`はフラグによって`CreateControl`:  
+### <a name="remarks"></a>Remarks  
+ Windows のサブセットのみ*dwStyle*はフラグによって`CreateControl`:  
   
 - **WS_VISIBLE**が最初に表示するウィンドウを作成します。 通常のウィンドウと同様に、すぐに表示するコントロールをするかどうかに必要です。  
   
 - **WS_DISABLED**最初に無効になっているウィンドウを作成します。 無効になっているウィンドウは、ユーザーから入力を受け取ることはできません。 コントロールは Enabled プロパティを持つ場合、設定できます。  
   
-- `WS_BORDER` 細い境界線でウィンドウを作成します。 コントロールに BorderStyle プロパティが設定されている場合、設定できます。  
+- **WS_BORDER**細い境界線でウィンドウを作成します。 コントロールに BorderStyle プロパティが設定されている場合、設定できます。  
   
 - **WS_GROUP**コントロールのグループの最初のコントロールを指定します。 ユーザーを変更できますキーボード フォーカス、グループ内の 1 つのコントロールから、次への方向キーを使用しています。 定義されているすべてのコントロール、 **WS_GROUP**後、同じグループに属している、最初のコントロールのスタイルを設定します。 [次へ] のコントロールに、 **WS_GROUP**スタイルは、グループを終了し、[次へ] のグループを開始します。  
   
@@ -370,7 +370,7 @@ virtual BOOL DestroyControl();
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外。 それ以外の場合に 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  完了すると、オブジェクトがメモリから解放すると、オブジェクトへのポインターは無効になります。  
   
 ##  <a name="doverb"></a>  COleControlSite::DoVerb  
@@ -383,7 +383,7 @@ virtual HRESULT DoVerb(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nVerb`  
+ *nVerb*  
  実行する動詞を指定します。 これは、次のいずれかを含めることができます。  
   
 |[値]|説明|シンボル|  
@@ -394,16 +394,16 @@ virtual HRESULT DoVerb(
 |-2|別のウィンドウで項目を編集します。|`OLEIVERB_OPEN`|  
 |-3|オブジェクトを非表示にします。|`OLEIVERB_HIDE`|  
 |-4|場所でコントロールをアクティブにします。|`OLEIVERB_UIACTIVATE`|  
-|-5|コントロール、インプレース、追加のユーザー インターフェイス要素を使用せずにアクティブにします。|**OLEIVERB_INPLACEACTIVATE**|  
-|-7|コントロールのプロパティを表示します。|**OLEIVERB_PROPERTIES**|  
+|-5|コントロール、インプレース、追加のユーザー インターフェイス要素を使用せずにアクティブにします。|`OLEIVERB_INPLACEACTIVATE`|  
+|-7|コントロールのプロパティを表示します。|`OLEIVERB_PROPERTIES`|  
   
- `lpMsg`  
+ *lpMsg*  
  アクティブ化する項目を原因となったメッセージへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  標準の `HRESULT` 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、コントロールの`IOleObject`インターフェイスを指定した動詞を実行します。 この関数呼び出しの結果として例外がスローされた場合、`HRESULT`エラー コードが返されます。  
   
  詳細については、次を参照してください。 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK に含まれています。  
@@ -415,7 +415,7 @@ virtual HRESULT DoVerb(
 virtual void EnableDSC();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  有効にして、コントロールのサイトのソースとなるデータを初期化するためにフレームワークによって呼び出されます。 カスタマイズされた動作を提供するには、この関数をオーバーライドします。  
   
 ##  <a name="enablewindow"></a>  COleControlSite::EnableWindow  
@@ -426,7 +426,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bEnable`  
+ *bEnable*  
  有効にするにまたはウィンドウを無効にするかどうかを指定します: **TRUE**ウィンドウの入力がそれ以外の場合、有効にする場合**FALSE**です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -440,11 +440,11 @@ void FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bFreeze`  
+ *bFreeze*  
  コントロール サイトにおけるイベントの受け取りを中止するかどうかを指定します。 コントロールがイベントを受け取らない場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 場合`bFreeze`は**TRUE**、コントロール サイト、コントロールにイベントを停止するように要求します。 場合`bFreeze`は**FALSE**、コントロール サイト コントロールのイベントの発生を続行するように要求します。  
+### <a name="remarks"></a>Remarks  
+ 場合*bFreeze*は**TRUE**、コントロール サイト、コントロールにイベントを停止するように要求します。 場合*bFreeze*は**FALSE**、コントロール サイト コントロールのイベントの発生を続行するように要求します。  
   
 > [!NOTE]
 >  コントロールは、コントロールのサイトで要求されている場合は、イベントを発生させるを停止する必要はありません。 起動処理を続行できますが、コントロールのサイトですべての後続のイベントは無視されます。  
@@ -456,7 +456,7 @@ void FreezeEvents(BOOL bFreeze);
 void GetControlInfo();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  情報が格納されている[COleControlSite::m_ctlInfo](#m_ctlinfo)です。  
   
 ##  <a name="getdefbtncode"></a>  COleControlSite::GetDefBtnCode  
@@ -493,11 +493,11 @@ BOOL GetEventIID(IID* piid);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `piid`  
+ *piid*  
  インターフェイス ID へのポインター  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、0 以外。 それ以外の場合に 0 です。 成功した場合、`piid`コントロールの既定のイベント インターフェイスのインターフェイス ID が含まれています。  
+ 成功した場合、0 以外。 それ以外の場合に 0 です。 成功した場合、 *piid*コントロールの既定のイベント インターフェイスのインターフェイス ID が含まれています。  
   
 ##  <a name="getexstyle"></a>  COleControlSite::GetExStyle  
  ウィンドウの拡張スタイルを取得します。  
@@ -509,11 +509,11 @@ virtual DWORD GetExStyle() const;
 ### <a name="return-value"></a>戻り値  
  コントロール ウィンドウのスタイルを拡張します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  正規のスタイルを取得する[COleControlSite::GetStyle](#getstyle)です。  
   
 ##  <a name="getproperty"></a>  COleControlSite::GetProperty  
- 指定されたコントロール プロパティを取得`dwDispID`です。  
+ 指定されたコントロール プロパティを取得*dwDispID*です。  
   
 ```  
 virtual void GetProperty(
@@ -523,17 +523,17 @@ virtual void GetProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  コントロールの既定のプロパティのディスパッチ ID を識別`IDispatch`インターフェイスを取得します。  
   
- `vtProp`  
+ *vtProp*  
  取得するプロパティの型を指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
- `pvProp`  
- プロパティの値を受け取る変数のアドレスです。 指定された型に一致する必要があります`vtProp`です。  
+ *pvProp*  
+ プロパティの値を受け取る変数のアドレスです。 指定された型に一致する必要があります*vtProp*です。  
   
-### <a name="remarks"></a>コメント  
- 値がによって返される`pvProp`です。  
+### <a name="remarks"></a>Remarks  
+ 値がによって返される*pvProp*です。  
   
 ##  <a name="getstyle"></a>  COleControlSite::GetStyle  
  コントロール サイトのスタイルを取得します。  
@@ -545,7 +545,7 @@ virtual DWORD GetStyle() const;
 ### <a name="return-value"></a>戻り値  
  ウィンドウのスタイルです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用可能な値の一覧は、次を参照してください。 [Windows スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)です。 コントロール サイトの拡張スタイルを取得する[COleControlSite::GetExStyle](#getexstyle)です。  
   
 ##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText  
@@ -556,14 +556,14 @@ virtual void GetWindowText(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `str`  
+ *str*  
  参照、`CString`コントロールの現在のテキストを含むオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コントロールは、キャプションのストック プロパティをサポートする場合は、この値が返されます。 キャプションのストック プロパティがサポートされていない場合は、Text プロパティの値が返されます。  
   
 ##  <a name="invokehelper"></a>  COleControlSite::InvokeHelper  
- メソッドまたはプロパティで指定された呼び出します`dwDispID`で指定されたコンテキストで`wFlags`です。  
+ メソッドまたはプロパティで指定された呼び出します*dwDispID*で指定されたコンテキストで*wFlags*です。  
   
 ```  
 virtual void AFX_CDECL InvokeHelper(
@@ -575,31 +575,31 @@ virtual void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  プロパティまたはコントロールの メソッドのディスパッチ ID を識別`IDispatch`インターフェイスを起動します。  
   
- `wFlags`  
- Idispatch::invoke への呼び出しのコンテキストを記述するフラグ。 可能性がある`wFlags`値を参照してください`IDispatch::Invoke`Windows SDK に含まれています。  
+ *wFlags*  
+ Idispatch::invoke への呼び出しのコンテキストを記述するフラグ。 可能性がある*wFlags*値を参照してください`IDispatch::Invoke`Windows SDK に含まれています。  
   
- `vtRet`  
+ *変数*  
  戻り値の型を指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
- `pvRet`  
- プロパティ値または戻り値を受け取る変数のアドレス。 これは、 `vtRet`によって指定される型と一致する必要があります。  
+ *pvRet*  
+ プロパティ値または戻り値を受け取る変数のアドレス。 指定された型に一致する必要があります*変数*です。  
   
- `pbParamInfo`  
- `pbParamInfo`に従うパラメーターの型を指定するバイトの null で終わる文字列へのポインター。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
+ *pbParamInfo*  
+ 次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*です。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
  *...*  
- `pbParamInfo`で指定される型の、パラメーターの変数一覧。  
+ パラメーターで指定された型の変数一覧*pbParamInfo*です。  
   
-### <a name="remarks"></a>コメント  
- `pbParamInfo` パラメーターは、メソッドまたはプロパティに渡されるパラメーターの型を指定します。 可変個引数リストは、構文宣言で... で表されます。  
+### <a name="remarks"></a>Remarks  
+ *PbParamInfo*パラメーターは、メソッドまたはプロパティに渡されるパラメーターの種類を指定します。 可変個引数リストは、構文宣言で... で表されます。  
   
- この関数のパラメーターの変換**VARIANTARG**値、し、起動、 **idispatch::invoke**コントロールのメソッドです。 場合に呼び出し**idispatch::invoke**失敗した場合、この関数には、例外がスローされます。 によって、状態コードが返される場合**idispatch::invoke**は`DISP_E_EXCEPTION`、この関数がスローされます、 **COleDispatchException**オブジェクトがスローされますが、それ以外の場合、`COleException`です。  
+ この関数のパラメーターの変換**VARIANTARG**値、し、起動、`IDispatch::Invoke`コントロールのメソッドです。 場合に呼び出し`IDispatch::Invoke`失敗した場合、この関数には、例外がスローされます。 によって、状態コードが返される場合`IDispatch::Invoke`は`DISP_E_EXCEPTION`、この関数がスローされます、`COleDispatchException`オブジェクトがスローされますが、それ以外の場合、`COleException`です。  
   
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV  
- メソッドまたはプロパティで指定された呼び出します`dwDispID`で指定されたコンテキストで`wFlags`です。  
+ メソッドまたはプロパティで指定された呼び出します*dwDispID*で指定されたコンテキストで*wFlags*です。  
   
 ```  
 virtual void InvokeHelperV(
@@ -612,26 +612,26 @@ virtual void InvokeHelperV(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  プロパティまたはコントロールの メソッドのディスパッチ ID を識別`IDispatch`インターフェイスを起動します。  
   
- `wFlags`  
+ *wFlags*  
  Idispatch::invoke への呼び出しのコンテキストを記述するフラグ。  
   
- `vtRet`  
+ *変数*  
  戻り値の型を指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
- `pvRet`  
- プロパティ値または戻り値を受け取る変数のアドレス。 これは、 `vtRet`によって指定される型と一致する必要があります。  
+ *pvRet*  
+ プロパティ値または戻り値を受け取る変数のアドレス。 指定された型に一致する必要があります*変数*です。  
   
- `pbParamInfo`  
- `pbParamInfo`に従うパラメーターの型を指定するバイトの null で終わる文字列へのポインター。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
+ *pbParamInfo*  
+ 次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*です。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
- `argList`  
+ *argList*  
  可変個引数リストへのポインター。  
   
-### <a name="remarks"></a>コメント  
- `pbParamInfo` パラメーターは、メソッドまたはプロパティに渡されるパラメーターの型を指定します。 使用して、メソッドまたはプロパティが呼び出されている追加パラメーターを渡すことができます、 *va_list*パラメーター。  
+### <a name="remarks"></a>Remarks  
+ *PbParamInfo*パラメーターは、メソッドまたはプロパティに渡されるパラメーターの種類を指定します。 使用して、メソッドまたはプロパティが呼び出されている追加パラメーターを渡すことができます、 *va_list*パラメーター。  
   
  通常、この関数は`COleControlSite::InvokeHelper`します。  
   
@@ -655,7 +655,7 @@ virtual BOOL IsWindowEnabled() const;
 ### <a name="return-value"></a>戻り値  
  0 以外の値、コントロールが有効になっている場合は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  値は、コントロールの Enabled のストック プロパティから取得されます。  
   
 ##  <a name="m_biswindowless"></a>  COleControlSite::m_bIsWindowless  
@@ -665,7 +665,7 @@ virtual BOOL IsWindowEnabled() const;
 BOOL m_bIsWindowless;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  0 以外の値、コントロールがウィンドウを持たない場合は 0 です。  
   
 ##  <a name="m_ctlinfo"></a>  COleControlSite::m_ctlInfo  
@@ -675,7 +675,7 @@ BOOL m_bIsWindowless;
 CONTROLINFO m_ctlInfo;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この情報は、 [CONTROLINFO](http://msdn.microsoft.com/library/windows/desktop/ms680734)構造体。  
   
 ##  <a name="m_dweventsink"></a>  COleControlSite::m_dwEventSink  
@@ -692,7 +692,7 @@ DWORD m_dwEventSink;
 DWORD m_dwMiscStatus;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については、次を参照してください。[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK に含まれています。  
   
 ##  <a name="m_dwpropnotifysink"></a>  COleControlSite::m_dwPropNotifySink  
@@ -790,24 +790,24 @@ virtual BOOL ModifyStyle(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwRemove`  
+ *dwRemove*  
  現在のウィンドウ スタイルから削除されるスタイルです。  
   
- `dwAdd`  
+ *dwAdd*  
  現在のウィンドウ スタイルを追加するスタイルです。  
   
- `nFlags`  
+ *nFlags*  
  ウィンドウ配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  スタイルが変更された場合、それ以外の場合 0 0 以外の値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コントロールのストック Enabled プロパティは、の設定と一致するように変更が**WS_DISABLED**です。 要求された設定と一致するコントロールの境界線のスタイルのストック プロパティが変更されます`WS_BORDER`です。 他のすべてのスタイルは、いずれかが存在する場合、コントロールのウィンドウ ハンドルに直接適用されます。  
   
  コントロールのウィンドウ スタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)について使用可能なウィンドウのスタイルは、Windows SDK 内の関数。  
   
- 場合`nFlags`がゼロ以外、 `ModifyStyle` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画`nFlags`の次の 4 つのフラグを使用。  
+ 場合*nFlags*がゼロ以外、 `ModifyStyle` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*の次の 4 つのフラグを使用。  
   
 - `SWP_NOSIZE` 現在のサイズを保持します。  
   
@@ -830,24 +830,24 @@ virtual BOOL ModifyStyleEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwRemove`  
+ *dwRemove*  
  現在のウィンドウ スタイルから削除する拡張スタイル。  
   
- `dwAdd`  
+ *dwAdd*  
  現在のウィンドウ スタイルを追加する拡張スタイル。  
   
- `nFlags`  
+ *nFlags*  
  ウィンドウ配置フラグ。 使用可能な値の一覧は、次を参照してください。、 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK 内の関数。  
   
 ### <a name="return-value"></a>戻り値  
  スタイルが変更された場合、それ以外の場合 0 0 以外の値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  設定と一致するコントロールの外観のストック プロパティが変更されます**WS_EX_CLIENTEDGE**です。 他のすべての拡張ウィンドウ スタイルは、いずれかが存在する場合、コントロールのウィンドウ ハンドルに直接適用されます。  
   
  ウィンドウの拡張コントロールのサイト オブジェクトのスタイルを変更します。 ビットごとの OR を使用してスタイルを追加または削除を組み合わせることができます ( &#124; ) 演算子。 参照してください、[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)について使用可能なウィンドウのスタイルは、Windows SDK 内の関数。  
   
- 場合`nFlags`がゼロ以外、 `ModifyStyleEx` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画`nFlags`の次の 4 つのフラグを使用。  
+ 場合*nFlags*がゼロ以外、 `ModifyStyleEx` Win32 関数を呼び出す`SetWindowPos`、し、結合することで、ウィンドウを再描画*nFlags*の次の 4 つのフラグを使用。  
   
 - `SWP_NOSIZE` 現在のサイズを保持します。  
   
@@ -877,10 +877,10 @@ virtual void MoveWindow(
  *y*  
  ウィンドウの上部の新しい位置。  
   
- `nWidth`  
+ *nWidth*  
  新しいウィンドウの幅  
   
- `nHeight`  
+ *パラメーター nHeight*  
  ウィンドウの新しい高さ。  
   
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate  
@@ -893,13 +893,13 @@ virtual BOOL QuickActivate();
 ### <a name="return-value"></a>戻り値  
  0 以外の値、コントロールのサイトがアクティブ化された場合は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、ユーザーがコントロールの作成処理をオーバーライドする場合にのみ呼び出す必要があります。  
   
  `IPersist*::Load`と`IPersist*::InitNew`迅速なアクティブ化が発生した後、メソッドを呼び出す必要があります。 コントロールは、迅速なアクティブ化中に、コンテナーのシンクへの接続を確立する必要があります。 ただし、これらの接続は、ライブまで`IPersist*::Load`または`IPersist*::InitNew`が呼び出されています。  
   
 ##  <a name="safesetproperty"></a>  COleControlSite::SafeSetProperty  
- 指定されたコントロール プロパティを設定`dwDispID`です。  
+ 指定されたコントロール プロパティを設定*dwDispID*です。  
   
 ```  
 virtual BOOL AFX_CDECL SafeSetProperty(
@@ -908,19 +908,19 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  プロパティまたはコントロールの メソッドのディスパッチ ID を識別`IDispatch`インターフェイスを設定します。  
   
- `vtProp`  
+ *vtProp*  
  設定するプロパティの型を指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
  *...*  
- `vtProp`によって指定された型の 1 つのパラメーターです。  
+ 1 つのパラメーターで指定された型の*vtProp*です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  異なり`SetProperty`と`SetPropertyV`エラーが発生した場合 (存在しないプロパティを設定しようとしています) など、例外はスローされません。  
@@ -933,10 +933,10 @@ void SetDefaultButton(BOOL bDefault);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bDefault`  
+ *bDefault*  
  以外の場合は、コントロールが既定のボタンになる必要があります。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  コントロールがあります、 **OLEMISC_ACTSLIKEBUTTON**ステータス ビットが設定されます。  
@@ -949,13 +949,13 @@ virtual int SetDlgCtrlID(int nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  新しい識別子の値。  
   
 ### <a name="return-value"></a>戻り値  
  以前のダイアログがウィンドウの識別子をアイテム成功した場合、それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setfocus"></a>  COleControlSite::SetFocus  
  コントロールにフォーカスを設定します。  
@@ -973,7 +973,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
  フォーカスを持っていたウィンドウへのポインター。  
   
 ##  <a name="setproperty"></a>  COleControlSite::SetProperty  
- 指定されたコントロール プロパティを設定`dwDispID`です。  
+ 指定されたコントロール プロパティを設定*dwDispID*です。  
   
 ```  
 virtual void AFX_CDECL SetProperty(
@@ -982,22 +982,22 @@ virtual void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  プロパティまたはコントロールの メソッドのディスパッチ ID を識別`IDispatch`インターフェイスを設定します。  
   
- `vtProp`  
+ *vtProp*  
  設定するプロパティの型を指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
  *...*  
- `vtProp`によって指定された型の 1 つのパラメーターです。  
+ 1 つのパラメーターで指定された型の*vtProp*です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合`SetProperty`エラーを検出すると、例外がスローされます。  
   
- 例外の種類は、メソッドまたはプロパティを設定しようとするの戻り値によって決まります。 場合は、戻り値は`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**がスローされた場合、`COleException`です。  
+ 例外の種類は、メソッドまたはプロパティを設定しようとするの戻り値によって決まります。 場合は、戻り値は`DISP_E_EXCEPTION`、`COleDispatchExcpetion`がスローされた場合、`COleException`です。  
   
 ##  <a name="setpropertyv"></a>  COleControlSite::SetPropertyV  
- 指定されたコントロール プロパティを設定`dwDispID`です。  
+ 指定されたコントロール プロパティを設定*dwDispID*です。  
   
 ```  
 virtual void SetPropertyV(
@@ -1007,19 +1007,19 @@ virtual void SetPropertyV(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  プロパティまたはコントロールの メソッドのディスパッチ ID を識別`IDispatch`インターフェイスを設定します。  
   
- `vtProp`  
+ *vtProp*  
  設定するプロパティの型を指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)です。  
   
- `argList`  
+ *argList*  
  引数リストへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  補足の余分なパラメーターのメソッドまたはプロパティが呼び出されているのできますを使用して、*補足*パラメーター。 場合`SetProperty`エラーを検出すると、例外がスローされます。  
   
- 例外の種類は、メソッドまたはプロパティを設定しようとするの戻り値によって決まります。 場合は、戻り値は`DISP_E_EXCEPTION`、 **COleDispatchExcpetion**がスローされた場合、`COleException`です。  
+ 例外の種類は、メソッドまたはプロパティを設定しようとするの戻り値によって決まります。 場合は、戻り値は`DISP_E_EXCEPTION`、`COleDispatchExcpetion`がスローされた場合、`COleException`です。  
   
 ##  <a name="setwindowpos"></a>  COleControlSite::SetWindowPos  
  サイズ、位置、およびコントロール サイトの Z オーダーを設定します。  
@@ -1035,7 +1035,7 @@ virtual BOOL SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndInsertAfter`  
+ *pWndInsertAfter*  
  ウィンドウへのポインター。  
   
  *x*  
@@ -1044,13 +1044,13 @@ virtual BOOL SetWindowPos(
  *y*  
  ウィンドウの上部の新しい位置。  
   
- `cx`  
+ *cx*  
  新しいウィンドウの幅  
   
- `cy`  
+ *cy*  
  ウィンドウの新しい高さ。  
   
- `nFlags`  
+ *nFlags*  
  ウィンドウ サイズ変更や配置フラグを指定します。 使用可能な値は、「解説」セクションを参照して[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1064,10 +1064,10 @@ virtual void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszString`  
+ *lpszString*  
  新しいタイトルまたはコントロールのテキストとして使用する null で終わる文字列へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、まず、キャプションのストック プロパティを設定しようとします。 キャプションのストック プロパティがサポートされていない場合、テキスト プロパティが代わりにします。  
   
 ##  <a name="showwindow"></a>  COleControlSite::ShowWindow  
@@ -1078,7 +1078,7 @@ virtual BOOL ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCmdShow`  
+ *nCmdShow*  
  コントロール サイトを表示する方法を指定します。 次の値のいずれかを指定する必要があります。  
   
 - **SW_HIDE**このウィンドウを非表示にし、別のウィンドウをアクティブ化を渡します。  
