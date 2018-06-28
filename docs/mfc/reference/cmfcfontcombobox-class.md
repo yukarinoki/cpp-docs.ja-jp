@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b37901bddec6a886ddb1ae538f3294bd9d28d9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9141dec6fdcb966dcdb664bb8dc090b50a10a614
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375746"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040000"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox クラス
 `CMFCFontComboBox`クラスは、フォントの一覧を含むコンボ ボックス コントロールを作成します。  
@@ -65,11 +65,11 @@ class CMFCFontComboBox : public CComboBox
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|フレームワークの現在のフォント コンボ ボックス内の項目のラベルの描画に使用するフォントを示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用する、 `CMFCFontComboBox`  ダイアログ ボックスでオブジェクトを追加、 `CMFCFontComboBox`  ダイアログ ボックス クラスに変数。 次に、 `OnInitDialog`  ダイアログ ボックスのクラス、呼び出しのメソッド、 [CMFCFontComboBox::Setup](#setup)コンボ ボックス コントロール内の項目のリストを初期化します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -83,7 +83,7 @@ class CMFCFontComboBox : public CComboBox
   
  [CMFCFontComboBox](../../mfc/reference/cmfcfontcombobox-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxfontcombobox.h  
   
 ##  <a name="cmfcfontcombobox"></a>  CMFCFontComboBox::CMFCFontComboBox  
@@ -95,7 +95,7 @@ CMFCFontComboBox();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getselfont"></a>  CMFCFontComboBox::GetSelFont  
  現在選択されているフォントに関する情報を取得します。  
@@ -107,7 +107,7 @@ CMFCFontInfo* GetSelFont() const;
 ### <a name="return-value"></a>戻り値  
  ポインター [CMFCFontInfo クラス](../../mfc/reference/cmfcfontinfo-class.md)フォントを表すオブジェクト。 できます`NULL`コンボ ボックスのフォントが選択されていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_bdrawusingfont"></a>  CMFCFontComboBox::m_bDrawUsingFont  
  フレームワークの現在のフォント コンボ ボックス内の項目のラベルの描画に使用するフォントを示します。  
@@ -116,7 +116,7 @@ CMFCFontInfo* GetSelFont() const;
 static BOOL m_bDrawUsingFont;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバーを設定`TRUE`同じフォントを使用して、各項目のラベルを描画するために、フレームワークを送信するためです。 このメンバーを設定`FALSE`フレームワークの名前は、ラベルと同じフォントで各項目のラベルの描画に指示します。 このメンバーの既定値は`FALSE`します。  
   
 ##  <a name="selectfont"></a>  CMFCFontComboBox::SelectFont  
@@ -132,19 +132,19 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDesc`  
+ [in]*pDesc*  
  フォントの説明オブジェクトへのポインター。  
   
- [入力] `lpszName`  
+ [in]*lpszName*  
  フォント名を指定します。  
   
- [入力] `nCharSet`  
+ [in]*nCharSet*  
  文字セットを指定します。 既定値は、DEFAULT_CHARSET です。 詳細については、次を参照してください。、`lfCharSet`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 説明オブジェクトの指定したフォントまたはフォント名と charset; フォント コンボ ボックス内の項目に一致する場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを使用して、選択し、指定したフォントに対応するフォント コンボ ボックス内の項目にスクロールします。  
   
 ### <a name="example"></a>例  
@@ -164,19 +164,19 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nFontType`  
+ [in]*nFontType*  
  フォントの種類を指定します。 既定値は、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE のビットごとの組み合わせ (OR) です。  
   
- [入力] `nCharSet`  
+ [in]*nCharSet*  
  フォントの文字セットを指定します。 既定値は、DEFAULT_CHARSET です。  
   
- [入力] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  フォントのピッチとファミリを指定します。 既定値は、DEFAULT_PITCH です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` フォント コンボ ボックスが正常に初期化される場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、指定したパラメーターに一致する現在インストールされているフォントを列挙する、フォント コンボ ボックスでそのフォント名を挿入してフォント コンボ ボックスを初期化します。  
   
 ### <a name="example"></a>例  

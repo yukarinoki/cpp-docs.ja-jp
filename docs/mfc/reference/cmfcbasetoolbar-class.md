@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc35091fef87c007fad73be45297536a170ca19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366318"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037845"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar クラス
 ツールバーの基本クラス。  
@@ -69,7 +69,7 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxbasetoolbar.h  
   
 ##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
@@ -90,7 +90,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `size`  
+ [out]*サイズ*  
  ツールバーの最小サイズ。  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
@@ -101,7 +101,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndOldParent`  
+ [in]*pWndOldParent*  
  前の親ウィンドウへのポインター。  
   
 ## <a name="see-also"></a>関連項目  

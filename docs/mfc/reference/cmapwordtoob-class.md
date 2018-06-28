@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367144"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041832"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb クラス
 16 ビット ワードをキーとした `CObject` ポインターのマップをサポートします。  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CMapWordToOb`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CString`または**const**へのポインター`char`関数パラメーターまたは戻り値は、置き換える**WORD**です。  
+ メンバー関数は、`CMapWordToOb`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CString`または**const**へのポインター **char**関数パラメーターまたは戻り値は、置き換える**WORD**です。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -101,7 +101,7 @@ class CMapWordToOb : public CObject
 |----------|-----------------|  
 |[CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMapWordToOb` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 各要素がシリアル化されるさらに、アーカイブ、オーバー ロードされた出力ストリームにマップが格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数。  
   
  個別にダンプする必要がある場合**WORD** -  `CObject`要素、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
@@ -115,7 +115,7 @@ class CMapWordToOb : public CObject
   
  `CMapWordToOb`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

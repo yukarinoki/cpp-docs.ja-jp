@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09f92440a926f547f051dd0bee73468a1958813e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367647"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041027"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection クラス
 HTTP サーバーへの接続を管理します。  
@@ -50,7 +50,7 @@ class CHttpConnection : public CInternetConnection
 |----------|-----------------|  
 |[しないで](#openrequest)|HTTP 要求を開きます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  HTTP は、MFC WinInet クラスによって実装される 3 つのインターネット サーバー プロトコルのいずれか。  
   
  クラス`CHttpConnection`コンス トラクターと 1 つのメンバー関数を含む[OpenRequest](#openrequest)、HTTP プロトコルを使って、サーバーへの接続を管理します。  
@@ -66,7 +66,7 @@ class CHttpConnection : public CInternetConnection
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
@@ -100,38 +100,38 @@ CHttpConnection(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSession`  
+ *pSession*  
  ポインター、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。  
   
- `hConnected`  
+ *hConnected*  
  インターネット接続へのハンドル。  
   
- `pstrServer`  
+ *pstrServer*  
  サーバー名を含む文字列へのポインター。  
   
- `dwContext`  
- コンテキスト識別子、`CInternetConnection`オブジェクト。 参照してください**解説**の詳細については`dwContext`します。  
+ *独自*  
+ コンテキスト識別子、`CInternetConnection`オブジェクト。 参照してください**解説**の詳細については*独自*です。  
   
- `nPort`  
+ *nPort*  
  この接続のインターネット ポートを識別する番号。  
   
- `pstrUserName`  
+ *pstrUserName*  
  ログインするユーザーの名前を指定する null で終わる文字列へのポインター。 場合**NULL**、既定値は匿名です。  
   
- `pstrPassword`  
- ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方`pstrPassword`と`pstrUserName`は**NULL**既定の匿名パスワードはユーザーの電子メール名。 場合`pstrPassword`は**NULL** (または空の文字列) が、`pstrUserName`は**NULL**、空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、`pstrUserName`と`pstrPassword`:  
+ *pstrPassword*  
+ ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*は**NULL**既定の匿名パスワードはユーザーの電子メール名。 場合*pstrPassword*は**NULL** (または空の文字列) が、 *pstrUserName*は**NULL**、空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|  
+|*pstrUserName*|*pstrPassword*|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL**または""|**NULL**または""|「匿名」|ユーザーの電子メール名|  
-|非- **NULL**文字列|**NULL**または""|`pstrUserName`|" "|  
+|非- **NULL**文字列|**NULL**または""|*pstrUserName*|" "|  
 |**NULL**以外**NULL**文字列|**エラー**|**エラー**||  
-|非- **NULL**文字列|非- **NULL**文字列|`pstrUserName`|`pstrPassword`|  
+|非- **NULL**文字列|非- **NULL**文字列|*pstrUserName*|*pstrPassword*|  
   
- `dwFlags`  
- 任意の組み合わせ、 **INTERNET_ _\*** フラグ。 表を参照して、**解説**のセクション[しないで](#openrequest)の詳細については`dwFlags`値。  
+ *dwFlags*  
+ 任意の組み合わせ、 **INTERNET_ _\*** フラグ。 表を参照して、**解説**のセクション[しないで](#openrequest)の詳細については*dwFlags*値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成することはありません、`CHttpConnection`直接です。 呼び出してオブジェクトを作成する代わりに、[代わりに](../../mfc/reference/cinternetsession-class.md#gethttpconnection)です。  
   
 ##  <a name="openrequest"></a>  しないで  
@@ -159,31 +159,31 @@ CHttpFile* OpenRequest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pstrVerb`  
+ *pstrVerb*  
  要求で使用する動詞を含む文字列へのポインター。 `NULL` の場合、"GET" が使用されます。  
   
- `pstrObjectName`  
+ *pstrObjectName*  
  指定した動詞のターゲット オブジェクトを含む文字列へのポインター。 これは一般的に、ファイル名、実行可能モジュール、または検索指定子です。  
   
- `pstrReferer`  
- 元のドキュメントのアドレス (URL) を指定する文字列へのポインター、要求内の URL ( `pstrObjectName`) 取得されました。 `NULL` の場合、HTTP ヘッダーは指定されません。  
+ *pstrReferer*  
+ 元のドキュメントのアドレス (URL) を指定する文字列へのポインター、要求内の URL ( *pstrObjectName*) 取得されました。 `NULL` の場合、HTTP ヘッダーは指定されません。  
   
- `dwContext`  
- `OpenRequest` 操作のコンテキスト識別子。 `dwContext` の詳細については、「解説」を参照してください。  
+ *独自*  
+ `OpenRequest` 操作のコンテキスト識別子。 詳細については「解説」セクションを参照してください*独自*です。  
   
- `ppstrAcceptTypes`  
- クライアントが受け入れるコンテンツ タイプを示す文字列への `LPCTSTR` ポインターの配列 (終端は null) へのポインター。 `ppstrAcceptTypes` が `NULL` の場合、クライアントが "text/*" 形式のドキュメントのみ (つまり画像やその他のバイナリ ファイルではなくテキスト ドキュメントのみ) を受け入れると、サーバーは解釈します。 コンテンツ タイプは CGI 変数 CONTENT_TYPE と同等です。HTTP POST や PUT など情報が添付されるクエリのデータの形式を識別します。  
+ *ppstrAcceptTypes*  
+ クライアントが受け入れるコンテンツ タイプを示す文字列への `LPCTSTR` ポインターの配列 (終端は null) へのポインター。 場合*ppstrAcceptTypes*は`NULL`クライアントは型のドキュメントのみを受け入れること、サーバーは解釈"テキスト/*"(つまり、テキスト ドキュメントのみといない画像またはその他のバイナリ ファイル)。 コンテンツ タイプは CGI 変数 CONTENT_TYPE と同等です。HTTP POST や PUT など情報が添付されるクエリのデータの形式を識別します。  
   
- `pstrVersion`  
+ *pstrVersion*  
  HTTP バージョンを定義する文字列へのポインター。 `NULL` の場合、"HTTP/1.0" が使用されます。  
   
- `dwFlags`  
- INTERNET_ FLAG_* フラグの任意の組み合わせ。 使用できる `dwFlags` 値の説明については、「解説」を参照してください。  
+ *dwFlags*  
+ INTERNET_ FLAG_* フラグの任意の組み合わせ。 可能な限りの詳細については「解説」セクションを参照してください*dwFlags*値。  
   
- `nVerb`  
+ *nVerb*  
  HTTP 要求の種類に関連付けられた番号。 次のいずれかの値を指定します。  
   
-|HTTP 要求の種類|`nVerb` の値|  
+|HTTP 要求の種類|*nVerb*値|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -196,8 +196,8 @@ CHttpFile* OpenRequest(
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CHttpFile](../../mfc/reference/chttpfile-class.md)要求オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- `dwFlags` は次のいずれかになります。  
+### <a name="remarks"></a>Remarks  
+ *dwFlags*次のいずれかになります。  
   
 |インターネット フラグ|説明|  
 |-------------------|-----------------|  

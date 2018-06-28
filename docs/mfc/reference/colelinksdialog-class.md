@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368970"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042535"
 ---
 # <a name="colelinksdialog-class"></a>関数クラス
 OLE の [リンクの編集] ダイアログ ボックスに使用します。  
@@ -58,7 +58,7 @@ class COleLinksDialog : public COleDialog
 |----------|-----------------|  
 |[COleLinksDialog::m_el](#m_el)|型の構造体**される** ダイアログ ボックスの動作を制御します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラスのオブジェクトを作成`COleLinksDialog`をこのダイアログ ボックスを呼び出したいとします。 後に、`COleLinksDialog`オブジェクトが構築された、使用することができます、[各](#m_el)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_el`構造体は型**される**です。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。  
   
 > [!NOTE]
@@ -83,7 +83,7 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="domodal"></a>  COleLinksDialog::DoModal  
@@ -102,7 +102,7 @@ virtual INT_PTR DoModal();
   
 - **IDABORT**場合はエラーが発生しました。 場合**IDABORT**は呼び出し、返される、`COleDialog::GetLastError`の詳細については、発生したエラーの種類を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms679703)Windows SDK 内の関数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバーを設定してさまざまなダイアログ ボックスのコントロールを初期化する場合、[各](#m_el)構造体、行う必要があります、呼び出す前に`DoModal`はダイアログ オブジェクトを構築します。  
   
 ##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
@@ -117,19 +117,19 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDoc`  
+ *pDoc*  
  編集しようとするリンクを含む OLE ドキュメントへのポインター。  
   
- `pView`  
- 上の現在のビューを指す`pDoc`です。  
+ *pView*  
+ 上の現在のビューを指す*pDoc*です。  
   
- `dwFlags`  
+ *dwFlags*  
  作成フラグは、0 を格納または**ELF_SHOWHELP**  ダイアログ ボックスが表示されたら、ヘルプ ボタンが表示されるかどうかを指定します。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウ オブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ ボックスの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数はのみ、`COleLinksDialog`オブジェクト。 ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
 ##  <a name="m_el"></a>  COleLinksDialog::m_el  
@@ -139,7 +139,7 @@ COleLinksDialog (
 OLEUIEDITLINKS m_el;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。  
   
  詳細については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms678492)Windows SDK 内の構造。  

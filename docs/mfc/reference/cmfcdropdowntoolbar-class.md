@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369809"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042119"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar クラス
 ユーザーがトップレベルのツール バー ボタンを押し続けたときに表示されるツール バーです。  
@@ -61,7 +61,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(`CMFCToolBar::OnSendCommand` をオーバーライドします)。|  
 |[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80))。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの動作と、ツールバーの外観を組み合わせます。 ときにユーザーを押し続けたドロップダウン ツールバー (を参照してください[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)) し、ドロップダウン ツールバーが表示されたら、ユーザーにスクロールして、マウス ボタンを押したドロップダウン ツールバーからボタンを選択することができますボタンをクリックします。 ユーザーがドロップダウン ツールバーのボタンを選択すると、そのボタンは、最上位のツールバーの現在のボタンとして表示されます。  
   
  ドロップダウン ツールバーをカスタマイズまたは、ドッキングされていることはできませんし、ティアオフ状態はありません。  
@@ -105,7 +105,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
  [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdropdowntoolbar.h  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu  
@@ -117,7 +117,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap  
  アプリケーション リソースからツール バー イメージを読み込みます。  
@@ -133,28 +133,28 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResID`  
+ [in]*uiResID*  
  ツール バーのホット イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiColdResID`  
+ [in]*uiColdResID*  
  ツール バーのコールド イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuResID`  
+ [in]*uiMenuResID*  
  ツール バーの通常のメニュー イメージを参照するビットマップのリソース ID。  
   
- [入力] `bLocked`  
+ [in]*ブロック*  
  `TRUE` ツールバーをロックするにはそれ以外の場合`FALSE`です。  
   
- [入力] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  ツール バーの無効イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuDisabledResID`  
+ [in]*uiMenuDisabledResID*  
  メニューの無効イメージを参照するビットマップのリソース ID です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドは、ツールバーに関連付けられているイメージを読み込むには、このメソッドを呼び出します。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。  
   
  ツール バーの作成後に、 `LoadBitmapEx` メソッドを呼び出して追加のイメージを読み込みます。  
@@ -174,17 +174,17 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResID`  
- [入力] `uiColdResID`  
- [入力] `uiMenuResID`  
- [入力] `BOOL`  
- [入力] `uiDisabledResID`  
- [入力] `uiMenuDisabledResID`  
- [入力] `uiHotResID`  
+ [in]*uiResID*  
+ [in]*uiColdResID*  
+ [in]*uiMenuResID*  
+ [in]*BOOL*  
+ [in]*uiDisabledResID*  
+ [in]*uiMenuDisabledResID*  
+ [in]*uiHotResID*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp  
 
@@ -196,10 +196,10 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nFlags`  
- [入力] `point`  
+ [in]*nFlags*  
+ [in]*ポイント*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove  
 
@@ -211,10 +211,10 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nFlags`  
- [入力] `point`  
+ [in]*nFlags*  
+ [in]*ポイント*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand  
 
@@ -224,11 +224,11 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI  
 
@@ -240,10 +240,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTarget`  
- [入力] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*持たず*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

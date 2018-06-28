@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373580"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042210"
 ---
 # <a name="coledocobjectitem-class"></a>関数クラス
 Active ドキュメント コンテインメントを実装します。  
@@ -71,7 +71,7 @@ class COleDocObjectItem : public COleClientItem
 |[COleDocObjectItem::QueryCommand](#querycommand)|ユーザー インターフェイスのイベントによって生成された 1 つ以上のコマンドの状態を調べるためにクエリを実行します。|  
 |[COleDocObjectItem::Release](#release)|OLE 項目にリンクへの接続を解放しが開いていた場合に終了します。 クライアント アイテムは破棄されません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MFC では、アクティブなドキュメントは、通常、一括編集可能な埋め込み、違いは次のと同様に処理します。  
   
 -   `COleDocument`-派生クラスは、埋め込まれた現在のアイテムの一覧を維持できます。 ただし、これらの項目があります`COleDocObjectItem`-項目を派生します。  
@@ -97,7 +97,7 @@ class COleDocObjectItem : public COleClientItem
   
  `COleDocObjectItem`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
@@ -108,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pContainerDoc`  
+ *pContainerDoc*  
  ポインター、 `COleDocument` active ドキュメント コンテナーとして機能するオブジェクト。 このパラメーターを指定する必要があります**NULL**を有効にする**IMPLEMENT_SERIALIZE**です。 以外の OLE 項目を構築する通常**NULL**ドキュメント ポインター。  
   
 ##  <a name="dodefaultprinting"></a>  :Dodefaultprinting  
@@ -121,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCaller`  
+ *pCaller*  
  ポインター、 [CView](../../mfc/reference/cview-class.md)印刷コマンドを送信しているオブジェクト。  
   
- `pInfo`  
+ *pInfo*  
  ポインター、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)を印刷するジョブを記述するオブジェクト。  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -138,14 +138,14 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCmdID`  
- 実行するコマンドの識別子。 識別されるグループである必要があります`pguidCmdGroup`です。  
+ *nCmdID*  
+ 実行するコマンドの識別子。 識別されるグループである必要があります*pguidCmdGroup*です。  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  コマンドの実行オプションを指定します。 既定では、ユーザーに確認しないでコマンドの実行に設定します。 参照してください[する](http://msdn.microsoft.com/library/windows/desktop/ms683930)の値の一覧です。  
   
- `pguidCmdGroup`  
- コマンド グループの一意の識別子。 既定では、 **NULL**、標準的なグループを指定します。 コマンドは、渡された`nCmdID`グループに属している必要があります。  
+ *pguidCmdGroup*  
+ コマンド グループの一意の識別子。 既定では、 **NULL**、標準的なグループを指定します。 コマンドは、渡された*nCmdID*グループに属している必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  返します`S_OK`成功した場合返しますそれ以外の場合、次のエラー コードのいずれか。  
@@ -155,14 +155,14 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|予期しないエラーが発生しました。|  
 |**E_FAIL**|エラーが発生しました。|  
 |**E_NOTIMPL**|MFC を示す自体が変換およびコマンドのディスパッチを試行します。|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 非**NULL**認識されているコマンド グループが指定されていません。|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` グループ pGroup で有効なコマンドとして認識されません。|  
-|**OLECMDERR_DISABLED**|によって識別されるコマンド`nCmdID`は無効になり、実行することはできません。|  
-|**OLECMDERR_NOHELP**|呼び出し元によって識別されるコマンドのヘルプの要望`nCmdID`しますが、利用可能なヘルプはありません。|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup*以外**NULL**認識されているコマンド グループが指定されていません。|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID*はグループ pGroup で有効なコマンドとして認識されません。|  
+|**OLECMDERR_DISABLED**|によって識別されるコマンド*nCmdID*は無効になり、実行することはできません。|  
+|**OLECMDERR_NOHELP**|呼び出し元によって識別されるコマンドのヘルプの要望*nCmdID*が利用可能なヘルプはありません。|  
 |**OLECMDERR_CANCELLED**|ユーザーには、実行が取り消されました。|  
   
-### <a name="remarks"></a>コメント  
- `pguidCmdGroup`と`nCmdID`パラメーターを一緒に呼び出すコマンドを一意に識別します。 `nCmdExecOpt`パラメーターを実行する正確なアクションを指定します。  
+### <a name="remarks"></a>Remarks  
+ *PguidCmdGroup*と*nCmdID*パラメーターを一緒に呼び出すコマンドを一意に識別します。 *NCmdExecOpt*パラメーターを実行する正確なアクションを指定します。  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  ポインターを取得するには、このメンバー関数を呼び出す、`IOleDocumentView`現在アクティブなビューのインターフェイスです。  
@@ -174,7 +174,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [IOleDocumentView](http://msdn.microsoft.com/library/windows/desktop/ms678455)現在アクティブなビューのインターフェイスです。 返すかどうか、現在のビューはありません、 **NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  参照カウントを返された`IOleDocumentView`ポインターは、この関数によって返される前に加算されません。  
   
 ##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
@@ -207,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCaller`  
+ *pCaller*  
  ポインター、 [CView](../../mfc/reference/cview-class.md)印刷コマンドを送信しているオブジェクト。  
   
- `pInfo`  
+ *pInfo*  
  ポインター、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)を印刷するジョブを記述するオブジェクト。  
   
- `bPrintAll`  
+ *bPrintAll*  
  ドキュメント全体を印刷するかどうかを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -230,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCaller`  
+ *pCaller*  
  印刷コマンドを送信している CView オブジェクトへのポインター。  
   
- `pInfo`  
+ *pInfo*  
  ポインター、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)を印刷するジョブを記述するオブジェクト。  
   
- `bPrintAll`  
+ *bPrintAll*  
  ドキュメント全体を印刷するかどうかを指定します。  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -251,22 +251,22 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCmdID`  
+ *nCmdID*  
  照会するコマンドの識別子。  
   
- `pdwStatus`  
+ *pdwStatus*  
  クエリの結果として返されたフラグへのポインター。 使用可能な値の一覧は、次を参照してください。 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)です。  
   
- `pCmdText`  
+ *pCmdText*  
  ポインター、 [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314)構造を 1 つのコマンドの名前と状態情報を返します。 指定できます**NULL**を呼び出し元がこの情報を必要としないことを示します。  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  コマンド グループの一意の識別子指定できます**NULL**標準グループを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値の完全な一覧については、次を参照してください。 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)メソッドを Windows SDK で説明します。  
   
 ##  <a name="release"></a>  COleDocObjectItem::Release  
@@ -277,10 +277,10 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwCloseOption`  
+ *dwCloseOption*  
  読み込み済み状態に戻ったときに、OLE 項目を保存どのような状況を指定するフラグを設定します。 使用可能な値の一覧は、次を参照してください。 [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  クライアント アイテムは破棄されません。  
   
 ## <a name="see-also"></a>関連項目  

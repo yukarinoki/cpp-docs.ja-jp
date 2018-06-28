@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515689e4596a3a0336e73b0be7aa008d21e445ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ec0fae7ceaa7b32636518f4c8a5eb5fc3836bb8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378406"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039063"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton クラス
 ポップアップ メニューを含むツール バー ボタンです。  
@@ -158,7 +158,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd))。|  
 |[CMFCToolBarMenuButton::OnClick](#onclick)|ユーザーがマウス ボタンをクリックしたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick))。|  
 |[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|ユーザーがポップアップ メニューの項目を選択したときに、フレームワークによって呼び出されます。|  
-|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|親ツールバーを処理するときに、フレームワークによって呼び出されます、`WM_HELPHITTEST`メッセージ。 (上書き[CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp))。|  
+|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|親ツールバー領域メッセージを処理するときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp))。|  
 |[CMFCToolBarMenuButton::OnDraw](#ondraw)|指定したスタイルとオプションを使用して、ボタンを描画するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw))。|  
 |[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|ボタンを描画するためにフレームワークによって呼び出される、**コマンド**のペイン、**カスタマイズ** ダイアログ ボックス。 (上書き[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist))。|  
 |[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|ユーザーがポップアップ メニューを開いたときに、フレームワークによって呼び出されます。|  
@@ -180,11 +180,11 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|場合`TRUE`、フレームワークが常に呼び出します[CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage)ボタンが描画されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  A`CMFCToolBarMenuButton`メニューのサブメニューのあるメニュー項目、コマンドを実行するか、メニューを表示するボタンまたはメニューのみを表示するボタンとして表示できます。 イメージ、テキスト、メニューのハンドルなどのパラメーターを指定して、メニュー ボタンの外観と動作を決定し、コマンド、コンス トラクターでボタンに関連付けられている ID`CMFCToolbarMenuButton::CMFCToolbarMenuButton`です。  
   
  派生したカスタム クラス、`CMFCToolbarMenuButton`クラスを使用する必要があります、 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロです。 [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)マクロでは、アプリケーションを閉じるときにエラーが生成されます。  
@@ -201,7 +201,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
   
  [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtoolbarmenubutton.h  
   
 ##  <a name="cmfctoolbarmenubutton"></a>  CMFCToolBarMenuButton::CMFCToolBarMenuButton  
@@ -220,26 +220,26 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
  既存の`CMFCToolBarMenuButton`オブジェクトにコピーされるこの`CMFCToolBarMenuButton`オブジェクト。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  ユーザーがボタンをクリックしたときに実行するコマンドの IDまたは ( `UINT`) コマンドを直接実行されないメニュー ボタンの場合は-1。  
   
- [入力] `hMenu`  
+ [in]*hMenu*  
  メニューへのハンドルまたは`NULL`ボタンがメニューにない場合。  
   
- [入力] `iImage`  
- ボタンのイメージのインデックスこのボタンは、アイコンがないかで指定されたコマンドのアイコンを使用する場合は-1`uiID`です。 インデックスは、それぞれの同じ`CMFCToolBarImages`アプリケーションのオブジェクト。  
+ [in]*画像*  
+ ボタンのイメージのインデックスこのボタンは、アイコンがないかで指定されたコマンドのアイコンを使用する場合は-1 *uiID*です。 インデックスは、それぞれの同じ`CMFCToolBarImages`アプリケーションのオブジェクト。  
   
- [入力] `lpszText`  
+ [in]*lpszText*  
  ツール バー メニュー ボタンのテキスト。  
   
- [入力] `bUserButton`  
- `TRUE` ボタンは、ユーザー定義のイメージを表示する場合`FALSE`ボタンがで指定されたコマンドに関連付けられている定義済みのイメージを表示する場合`uiID`です。  
+ [in]*bUserButton*  
+ `TRUE` ボタンは、ユーザー定義のイメージを表示する場合`FALSE`ボタンがで指定されたコマンドに関連付けられている定義済みのイメージを表示する場合*uiID*です。  
   
-### <a name="remarks"></a>コメント  
- 場合`uiID`は有効なコマンド ID、ボタンは、ユーザーがクリックしたときにそのコマンドを実行します。 場合`hMenu`有効なメニューのハンドル、ボタンがメニューに表示されるときに、ツールバーやサブメニューに表示されるときに、ドロップダウン メニューを提供します。 両方`uiID`と`hMenu`が有効で、ボタンは、ユーザーがクリックしたときに、コマンドが実行される部分はドロップダウン メニュー、ユーザーがクリックしたときにある下矢印の部分と分割ボタン。 ただし場合、`hMenu`有効ですが、ユーザーは、ボタンをクリックするボタンがメニューに挿入されたときにコマンドを実行できません。  
+### <a name="remarks"></a>Remarks  
+ 場合*uiID*は有効なコマンド ID、ボタンは、ユーザーがクリックしたときにそのコマンドを実行します。 場合*hMenu*有効なメニューのハンドル、ボタンがメニューに表示されるときに、ツールバーやサブメニューに表示されるときに、ドロップダウン メニューを提供します。 両方*uiID*と*hMenu*が有効で、ボタンは、ユーザーがクリックしたときに、コマンドが実行される部分はドロップダウン メニューが表示される下矢印の部分と分割ボタンとユーザーこれをクリックします。 ただし場合、 *hMenu*有効ですが、ユーザーは、ボタンをクリックするボタンがメニューに挿入されたときにコマンドを実行できません。  
   
 ### <a name="example"></a>例  
  次の例でのオブジェクトを作成する方法、`CMFCToolBarMenuButton`クラスです。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。  
@@ -254,11 +254,11 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `other`  
+ [in]*他の*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="copyfrom"></a>  Cmfctoolbarmenubutton::copyfrom  
 
@@ -268,9 +268,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="createfrommenu"></a>  CMFCToolBarMenuButton::CreateFromMenu  
  Windows メニューのハンドルからツール バー メニューを初期化します。  
@@ -280,10 +280,10 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hMenu`  
+ [in]*hMenu*  
  メニューへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールバーのメニュー ボタンには、ドロップ ダウン サブメニューを表示できます。  
   
  フレームワークは、メニューからサブメニューのコマンドを初期化するためにこのメソッドを呼び出します。  
@@ -298,7 +298,7 @@ virtual HMENU CreateMenu() const;
 ### <a name="return-value"></a>戻り値  
  識別するハンドルをメニューに場合は成功します。 `NULL` コマンドの一覧に関連付けられている場合、ツール バー メニュー ボタンが空です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メニューの生成方法をカスタマイズする派生クラスでは、このメソッドをオーバーライドすることができます。  
   
 ##  <a name="createpopupmenu"></a>  Cmfctoolbarmenubutton::createpopupmenu  
@@ -311,7 +311,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 ### <a name="return-value"></a>戻り値  
  ポインター、`CMFCPopupMenu`をツール バー メニュー ボタンに関連付けられたドロップダウン メニューを表示するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ボタンに関連付けられたドロップダウン メニューの表示を準備するためにフレームワークによって呼び出されます。  
   
  既定の実装だけを構築し、返します新しい`CMFCPopupMenu`オブジェクト。 派生型を使用する場合は、このメソッドをオーバーライド[CMFCPopupMenu クラス](cmfcpopupmenu-class.md)または追加の初期化を実行します。  
@@ -327,17 +327,17 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `rectImage`  
+ [in]*rectImage*  
  イメージに外接する四角形の座標。  
   
- [入力] `hIcon`  
+ [in]*hIcon*  
  アイコンへのハンドル。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、ドキュメントのアイコンを受け取りで指定された領域の中央に表示 メニューのボタンの描画`rectImage`です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、ドキュメントのアイコンを受け取りで指定された領域の中央に表示 メニューのボタンの描画*rectImage*です。  
   
 ##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize  
 
@@ -346,7 +346,7 @@ void DrawDocumentIcon(
 void EnableQuickCustomize();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton  
 
@@ -357,7 +357,7 @@ virtual BOOL HasButton() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder  
 
@@ -368,7 +368,7 @@ virtual BOOL HaveHotBorder() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder  
 
@@ -379,7 +379,7 @@ virtual BOOL IsBorder() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu  
 
@@ -390,7 +390,7 @@ BOOL IsClickedOnMenu() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode  
 
@@ -401,7 +401,7 @@ BOOL IsQuickMode();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcommands"></a>  CMFCToolBarMenuButton::GetCommands  
  ツールバーのメニューにコマンドの一覧への読み取り専用アクセスを提供します。  
@@ -413,7 +413,7 @@ const CObList& GetCommands() const;
 ### <a name="return-value"></a>戻り値  
  Const 参照、 [CObList クラス](../../mfc/reference/coblist-class.md)のコレクションを含むオブジェクトを[CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールバーのメニュー ボタンには、サブメニューを表示できます。 コンス トラクターまたはサブメニューのコマンドの一覧を指定することができます[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)メニューへのハンドルとして ( `HMENU`)。 派生したオブジェクトの一覧に、メニューが変換されます[CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)内部に格納されていると`CObList`オブジェクト。 この一覧は、このメソッドを呼び出すことによってアクセスできます。  
   
 ##  <a name="getimagerect"></a>  CMFCToolBarMenuButton::GetImageRect  
@@ -424,7 +424,7 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `rectImage`  
+ [out]*rectImage*  
  参照、`CRect`イメージに外接する四角形の座標を受け取るオブジェクトです。  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
@@ -437,7 +437,7 @@ int GetPaletteRows() const;
 ### <a name="return-value"></a>戻り値  
  パレット内の行の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メニュー ボタンがパレット モードに設定されている場合、メニュー項目は、限られた行数で複数の列に表示されます。 このメソッドを呼び出して行の数を取得します。 有効にするにまたはパレット モードを無効にし、使用して行の数を指定できます、 [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)です。  
   
 ##  <a name="getpopupmenu"></a>  CMFCToolBarMenuButton::GetPopupMenu  
@@ -450,7 +450,7 @@ CMFCPopupMenu* GetPopupMenu() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)フレームワーク、ツール バー メニュー ボタンの; サブメニューの描画時に作成されたオブジェクト`NULL`サブメニューが表示されない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールバーのメニュー ボタンには、ドロップダウン メニューが表示されたら、ボタンを作成、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)メニューを表すオブジェクト。 ポインターを取得するには、このメソッドを呼び出して、`CMFCPopupMenu`オブジェクト。 一時的なものと、ユーザーがドロップダウン メニューを閉じるときに無効になるため、返されたポインターを格納しないようにします。  
   
 ##  <a name="isdroppeddown"></a>  CMFCToolBarMenuButton::IsDroppedDown  
@@ -473,7 +473,7 @@ virtual BOOL IsEmptyMenuAllowed() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` フレームワークでは、サブメニューが空の場合でも、現在選択されているメニュー項目からサブメニューを開く場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザーは、現在選択されているメニュー項目から、サブメニューを開こうとすると、このメソッドを呼び出します。 サブメニューが空の場合と`IsEmptyMenuAllowed`返します`FALSE`サブメニューを開くことができません。  
   
  既定の実装では、`FALSE` が返されます。 この動作をカスタマイズするには、このメソッドをオーバーライドします。  
@@ -488,7 +488,7 @@ virtual BOOL IsExclusive() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` ボタンが排他モードで動作している場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーは、ボタンのポップアップ メニューを開き、別のツールバーまたはメニュー ボタンにマウス ポインターを移動、ときに、ボタンで排他モードでない限り、ポップアップ メニューを閉じます。  
   
  既定の実装では、常に `FALSE` を返します。 排他モードを有効にする場合は、派生クラスでは、このメソッドをオーバーライドします。  
@@ -503,7 +503,7 @@ BOOL IsMenuPaletteMode() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` それ以外の場合、パレットのモードが有効な場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メニュー ボタンがパレット モードに設定されている場合は、限られた行数で複数の列にメニュー項目が表示されます。 このメソッドを呼び出して行の数を取得します。 有効にするにまたは呼び出すことによって、パレットのモードを無効にする[CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)です。  
   
 ##  <a name="istearoffmenu"></a>  CMFCToolBarMenuButton::IsTearOffMenu  
@@ -516,7 +516,7 @@ virtual BOOL IsTearOffMenu() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` ツール バー メニュー ボタンにティアオフ バーです。それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ティアオフ機能を有効にし、ティアオフ設定 ID に、バーを呼び出す[CMFCToolBarMenuButton::SetTearOff](#settearoff)です。  
   
 ##  <a name="m_balwayscallownerdraw"></a>  CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw  
@@ -526,7 +526,7 @@ virtual BOOL IsTearOffMenu() const;
 static BOOL m_bAlwaysCallOwnerDraw;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー変数を設定すると`TRUE`、ボタンは常に呼び出します[CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage)ボタン イメージを表示するメソッド。 ときに`m_bAlwaysCallOwnerDraw`は`FALSE`イメージは、定義済みの場合、ボタン自体が、イメージを描画します。 それ以外の場合、呼び出し`OnDrawMenuImage`です。  
   
 ##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
@@ -536,7 +536,7 @@ static BOOL m_bAlwaysCallOwnerDraw;
 virtual void OnAfterCreatePopupMenu();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag  
 
@@ -547,7 +547,7 @@ virtual BOOL OnBeforeDrag() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize  
 
@@ -560,13 +560,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `sizeDefault`  
- [入力] `bHorz`  
+ [in]*pDC*  
+ [in]*sizeDefault*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode  
 
@@ -575,7 +575,7 @@ virtual SIZE OnCalculateSize(
 virtual void OnCancelMode();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd  
 
@@ -585,9 +585,9 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndParent`  
+ [in]*pWndParent*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick  
 
@@ -599,12 +599,12 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
- [入力] `bDelay`  
+ [in]*pWnd*  
+ [in]*bDelay*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onclickmenuitem"></a>  CMFCToolBarMenuButton::OnClickMenuItem  
  ユーザーがドロップダウン メニューの項目を選択したときに、フレームワークによって呼び出されます。  
@@ -616,7 +616,7 @@ virtual BOOL OnClickMenuItem();
 ### <a name="return-value"></a>戻り値  
  `FALSE` フレームワークは、項目の処理です。 既定のメニューを続行する場合それ以外の場合`TRUE`です。 既定の実装では、常に `FALSE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーには、メニュー項目がクリックすると、フレームワークは、その項目に関連付けられているコマンドを実行します。  
   
  メニュー項目の処理をカスタマイズする上書き`OnClickMenuItem`から派生したクラスで`CMFCToolBarMenuButton`クラスです。 オーバーライドする必要がありますも[CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu)と派生クラスのインスタンスを持つ特別な処理を必要とするメニュー ボタンを置換します。  
@@ -629,11 +629,11 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw  
 
@@ -651,16 +651,16 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `pImages`  
- [入力] `bHorz`  
- [入力] `bCustomizeMode`  
- [入力] `bHighlight`  
- [入力] `bDrawBorder`  
- [入力] `bGrayDisabledButtons`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pImages*  
+ [in]*bHorz*  
+ [in]*bCustomizeMode*  
+ [in]*bHighlight*  
+ [in]*bDrawBorder*  
+ [in]*bGrayDisabledButtons*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList  
 
@@ -673,13 +673,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bSelected`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bSelected*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="openpopupmenu"></a>  CMFCToolBarMenuButton::OpenPopupMenu  
  ユーザーがツールバーのメニュー ボタンのドロップダウン メニューを開いたときに、フレームワークによって呼び出されます。  
@@ -689,13 +689,13 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
  ドロップ ダウン メニュー コマンドを受け取るウィンドウを指定します。 できます`NULL`ツール バー メニュー ボタンが親ウィンドウを持つ場合だけです。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` ときに、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが作成され、それ以外の正常に開かれた`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、ユーザーは、ツールバーのメニュー ボタンからドロップ ダウン メニューを開いたときにフレームワークによって呼び出されます。  
   
 ##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault  
@@ -705,7 +705,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 virtual void ResetImageToDefault();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState  
 
@@ -714,7 +714,7 @@ virtual void ResetImageToDefault();
 virtual void SaveBarState();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツール バー ボタンのドラッグ アンド ドロップ操作の結果として作成時に、フレームワークはこのメソッドを呼び出します。 このメソッドは、 [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate)トップレベルのポップアップ メニューで、そのメニューを再作成するポップアップ メニューのボタンの親のメソッドです。  
   
 ##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize  
@@ -725,9 +725,9 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `ar`  
+ [in]*ar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setaccdata"></a>  CMFCToolBarMenuButton::SetACCData  
  リボン要素のアクセシビリティ データを設定します。  
@@ -739,16 +739,16 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParent`  
+ *pParent*  
  リボン要素の親ウィンドウ。  
   
- `data`  
+ *data*  
  リボン要素のアクセシビリティ データ。  
   
 ### <a name="return-value"></a>戻り値  
  常に `TRUE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、このメソッドはリボン要素のアクセシビリティ データを設定し、常に `TRUE`を返します。 アクセシビリティ データを設定し、成功または失敗を示す値を返すようにするには、このメソッドをオーバーライドします。  
   
 ##  <a name="setmenuonly"></a>  CMFCToolBarMenuButton::SetMenuOnly  
@@ -759,11 +759,11 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bMenuOnly`  
+ [in]*bMenuOnly*  
  `TRUE` 有効なコマンド ID とサブメニューの場合の両方にある場合に、メニュー ボタンとしては、このボタンを表示する`FALSE`有効なコマンド ID とサブメニューの両方にある場合に、分割ボタンとしては、このボタンを表示します。  
   
-### <a name="remarks"></a>コメント  
- 通常、ツールバーのメニュー ボタンは、サブメニューとコマンド ID の両方を持っている場合は、下向きの矢印ボタンのメイン ボタンと、接続されているが分割ボタンのように、メニューが表示されます。 このメソッドを呼び出す場合と`bMenuOnly`は`TRUE`ボタンが代わりに、ボタンに下向き矢印付きで 1 つのメニュー ボタンのように表示されます。 フレームワークは、どちらのモードでボタンの矢印のない部分がコマンドを実行して、ユーザーがクリックして、ユーザーは、どちらのモードにある矢印をクリックすると、サブメニューが開きます。  
+### <a name="remarks"></a>Remarks  
+ 通常、ツールバーのメニュー ボタンは、サブメニューとコマンド ID の両方を持っている場合は、下向きの矢印ボタンのメイン ボタンと、接続されているが分割ボタンのように、メニューが表示されます。 このメソッドを呼び出す場合と*bMenuOnly*は`TRUE`ボタンが代わりに、ボタンに下向き矢印付きで 1 つのメニュー ボタンのように表示されます。 フレームワークは、どちらのモードでボタンの矢印のない部分がコマンドを実行して、ユーザーがクリックして、ユーザーは、どちらのモードにある矢印をクリックすると、サブメニューが開きます。  
   
 ##  <a name="setmenupalettemode"></a>  CMFCToolBarMenuButton::SetMenuPaletteMode  
  ドロップダウン メニューがパレット モードであるかどうかを指定します。  
@@ -775,14 +775,14 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bMenuPaletteMode`  
+ [in]*bMenuPaletteMode*  
  ドロップダウン メニューがパレット モードであるかどうかを指定します。  
   
- [入力] `nPaletteRows`  
+ [in]*nPaletteRows*  
  パレット内の行の数です。  
   
-### <a name="remarks"></a>コメント  
- モードでは、パレット、すべてのメニュー項目は、複数列のパレットとして表示されます。 使用して行の数を指定する`nPaletteRows`です。  
+### <a name="remarks"></a>Remarks  
+ モードでは、パレット、すべてのメニュー項目は、複数列のパレットとして表示されます。 使用して行の数を指定する*nPaletteRows*です。  
   
 ##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd  
 
@@ -792,9 +792,9 @@ void SetMessageWnd(CWnd* pWndMessage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndMessage`  
+ [in]*pWndMessage*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setradio"></a>  CMFCToolBarMenuButton::SetRadio  
  オンの場合は、ラジオ ボタンのスタイル アイコンを表示するツールバーのメニュー ボタンを設定します。  
@@ -803,7 +803,7 @@ void SetMessageWnd(CWnd* pWndMessage);
 virtual void SetRadio();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オンのときにメニュー ボタンが描画されると、それを呼び出す[CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)チェック マーク アイコンを描画します。 既定では、`OnDrawMenuCheck`要求の現在のビジュアル マネージャーが、チェック ボックスを描画メニュー ボタンにチェック マークのスタイルを設定します。 このメソッドを呼び出すと、現在のビジュアル マネージャーは代わりに、ラジオ ボタンのスタイルのチェック マークをメニュー ボタンを描画します。 この変更を元に戻すことはできません。  
   
  このメソッドを呼び出すし、メニュー ボタンが表示されている、ときに更新されます。  
@@ -816,11 +816,11 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiBarID`  
+ [in]*uiBarID*  
  新しいティアオフ指定バー ID  
   
-### <a name="remarks"></a>コメント  
- このメソッドを呼び出して、ユーザーがメニュー バーのメニュー ボタンをドラッグしたときに作成されるティアオフ バーの ID を指定します。 場合、`uiBarID`パラメーターが 0 のユーザーがメニュー ボタン ティアオフことはできません場合、。  
+### <a name="remarks"></a>Remarks  
+ このメソッドを呼び出して、ユーザーがメニュー バーのメニュー ボタンをドラッグしたときに作成されるティアオフ バーの ID を指定します。 場合、 *uiBarID*パラメーターが 0 のユーザーがメニュー ボタン ティアオフことはできません場合、。  
   
  呼び出す[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)ティアオフ メニュー機能をアプリケーションで有効にします。  
   

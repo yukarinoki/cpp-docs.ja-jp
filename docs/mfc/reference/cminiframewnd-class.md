@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378383"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038587"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd クラス
 フローティング ツール バーの周りなどで使用される、半分の高さのフレーム ウィンドウを表します。  
@@ -53,7 +53,7 @@ class CMiniFrameWnd : public CFrameWnd
 |[には](#create)|作成、`CMiniFrameWnd`構築後のオブジェクト。|  
 |[CMiniFrameWnd::CreateEx](#createex)|作成、`CMiniFrameWnd`作成した後 (その他のオプション) のオブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのミニフレーム ウィンドウを最小限に抑える最大化ボタンがないまたはメニューとする必要があるだけそれらを消去するシステム メニューをクリックする点を除いて、通常のフレーム ウィンドウと同様に動作します。  
   
  使用する、`CMiniFrameWnd`オブジェクト、まずオブジェクトを定義します。 まず、[作成](#create)ミニフレーム ウィンドウを表示するメンバー関数。  
@@ -71,7 +71,7 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
@@ -81,7 +81,7 @@ class CMiniFrameWnd : public CFrameWnd
 CMiniFrameWnd();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ウィンドウを作成するには[には](#create)します。  
   
 ##  <a name="create"></a>  には  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpClassName`  
+ *lpClassName*  
  Windows クラスの名前を null で終わる文字列へのポインター。 クラス名は、グローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数。 場合**NULL**、フレームワークによって、ウィンドウ クラスの登録されます。 MFC では、既定のクラスを次のスタイルと属性。  
   
 -   セットのスタイル ビット**CS_DBLCLKS**、送信し、ユーザーがマウスをダブルクリックすると、ウィンドウ プロシージャへのメッセージ をダブルクリックします。  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Windows によって示される、既定のサイズと位置をウィンドウを設定します。  
   
- `lpWindowName`  
+ *lpWindowName*  
  ウィンドウの名前を表す null で終わる文字列へのポインター。  
   
- `dwStyle`  
+ *dwStyle*  
  ウィンドウのスタイル属性を指定します。 これらは、標準のウィンドウ スタイルと 1 つ以上の次の特殊なスタイルに含めることができます。  
   
 - **MFS_MOVEFRAME**ミニフレーム ウィンドウのキャプションだけでなく、ウィンドウのいずれかの端をクリックして移動するようにします。  
@@ -131,19 +131,19 @@ virtual BOOL Create(
   
  参照してください[cwnd::create](../../mfc/reference/cwnd-class.md#create)利用可能なウィンドウのスタイル値の詳細についてはします。 ミニフレーム ウィンドウで使用される一般的な組み合わせは**WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**です。  
   
- `rect`  
+ *rect*  
  A`RECT`構造のウィンドウの大きさを指定します。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親ウィンドウへのポインター。 使用して**NULL**トップ レベル ウィンドウに対してです。  
   
- `nID`  
+ *nID*  
  これは、子コントロールの識別子である子ウィンドウとして、ミニフレーム ウィンドウを作成する場合それ以外の場合 0 を返します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **作成**ウィンドウのクラス名とウィンドウの名前を初期化し、スタイルと親の既定値を登録します。  
   
 ##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
@@ -162,31 +162,31 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwExStyle`  
+ *dwExStyle*  
  拡張スタイルを指定します、`CMiniFrameWnd`作成中です。 任意の適用、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)ウィンドウにします。  
   
- `lpClassName`  
+ *lpClassName*  
  Windows クラスの名前を示す文字の null で終わる文字列へのポインター (、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造体)。 クラス名は、グローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数または定義済みのコントロール クラス名のいずれか。 なければなりません**NULL**です。  
   
- `lpWindowName`  
+ *lpWindowName*  
  ウィンドウの名前を表す null で終わる文字列へのポインター。  
   
- `dwStyle`  
+ *dwStyle*  
  ウィンドウのスタイル属性を指定します。 参照してください[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[cwnd::create](../../mfc/reference/cwnd-class.md#create)使用可能な値の詳細についてはします。  
   
- `rect`  
- クライアント座標で、ウィンドウの位置とサイズ`pParentWnd`です。  
+ *rect*  
+ クライアント座標で、ウィンドウの位置とサイズ*pParentWnd*です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親ウィンドウ オブジェクトへのポインター。  
   
- `nID`  
+ *nID*  
  子ウィンドウの識別子。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、TRUE を返しますエラー発生時に false を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CreateEx`パラメーターを指定して、 **WNDCLASS**ウィンドウのスタイルと (必要に応じて) 初期位置、およびウィンドウのサイズ。 `CreateEx` また、ウィンドウの親 (存在する場合) と ID を指定します  
   
  ときに`CreateEx`を実行する Windows の送信、 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)メッセージ ウィンドウにします。  
@@ -195,9 +195,9 @@ virtual BOOL CreateEx(
   
  さらにオーバーライド **で * * * メッセージ*メッセージ ハンドラーは、派生クラスに機能を追加します。  
   
- 場合、 **WS_VISIBLE**スタイルが与えられると、Windows アクティブ化し、ウィンドウを表示するために必要なすべてのメッセージ ウィンドウに送信します。 ウィンドウのスタイルは、タイトル バーを指定する場合、ウィンドウのタイトルを指す、`lpszWindowName`パラメーターは、タイトル バーに表示されます。  
+ 場合、 **WS_VISIBLE**スタイルが与えられると、Windows アクティブ化し、ウィンドウを表示するために必要なすべてのメッセージ ウィンドウに送信します。 ウィンドウのスタイルは、タイトル バーを指定する場合、ウィンドウのタイトルを指す、*したとき*パラメーターは、タイトル バーに表示されます。  
   
- `dwStyle`パラメーターの任意の組み合わせを指定できます[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)です。  
+ *DwStyle*パラメーターの任意の組み合わせを指定できます[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)です。  
   
  古いスタイルのパレット [ツールボックス] ウィンドウがサポートされていません。 MFC アプリケーションを以前のバージョンの Windows で実行されているときに、"X"閉じるボタン設定されていない、旧スタイルがサポートされていましたが、Visual C .NET ではサポートされなくです。 のみ新しい`WS_EX_TOOLWINDOW`スタイルがサポートされています。 このスタイルの説明は、次を参照してください。[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)です。  
   

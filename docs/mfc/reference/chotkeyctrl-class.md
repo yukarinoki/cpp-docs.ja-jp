@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368753"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040156"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl クラス
 Windows コモン ホット キー コントロールの機能が用意されています。  
@@ -68,12 +68,12 @@ class CHotKeyCtrl : public CWnd
 |[CHotKeyCtrl::SetHotKey](#sethotkey)|ホット キー コントロールのホット キーの組み合わせを設定します。|  
 |[CHotKeyCtrl::SetRules](#setrules)|無効な組み合わせとホット キー コントロールの既定の修飾子の組み合わせを定義します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  「ホット キー コントロール」は、ユーザーがホット キーを作成できるウィンドウです。 「ホット キー」は、キーの組み合わせを押すと、アクションをすばやく実行することです。 (たとえば、ユーザー キーを作成、ホット、特定のウィンドウをアクティブにし、これを Z オーダーの最上位にします。)ホット キー コントロールは、ユーザーの選択肢を表示し、ユーザーが有効なキーの組み合わせを選択することにより、します。  
   
  このコントロール (したがって、`CHotKeyCtrl`クラス) は、Windows 95/98 および Windows NT 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
   
- アプリケーションがコントロールから指定したキーの組み合わせを取得しを使用して、ユーザーがキーの組み合わせを選択すると、ときに、 **WM_SETHOTKEY**システムでホット キーを設定するメッセージ。 押されたときに、ホット キー、その後、システムの任意の部分からの指定された、ウィンドウ、 **WM_SETHOTKEY**メッセージを受信、`WM_SYSCOMMAND`メッセージを指定する**SC_HOTKEY**です。 このメッセージには、それを受信するウィンドウがアクティブにします。 呼び出したアプリケーションまで、ホット キーは有効**WM_SETHOTKEY**が終了します。  
+ アプリケーションがコントロールから指定したキーの組み合わせを取得しを使用して、ユーザーがキーの組み合わせを選択すると、ときに、 **WM_SETHOTKEY**システムでホット キーを設定するメッセージ。 押されたときに、ホット キー、その後、システムの任意の部分からの指定された、ウィンドウ、 **WM_SETHOTKEY**メッセージを受信、 **WM_SYSCOMMAND**メッセージを指定する**SC_HOTKEY**. このメッセージには、それを受信するウィンドウがアクティブにします。 呼び出したアプリケーションまで、ホット キーは有効**WM_SETHOTKEY**が終了します。  
   
  このメカニズムは、ホット キーのサポートに依存している異なる、 **WM_HOTKEY**メッセージと、Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)と[UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327)関数。  
   
@@ -88,7 +88,7 @@ class CHotKeyCtrl : public CWnd
   
  `CHotKeyCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
@@ -110,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  ホット キー コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 参照してください[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)詳細については、Windows SDK に含まれています。  
   
- `rect`  
+ *rect*  
  ホット キー コントロールのサイズと位置を指定します。 いずれかになります、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ホット キー コントロールの親ウィンドウを通常を指定します、 [CDialog](../../mfc/reference/cdialog-class.md)です。 なければなりません**NULL**です。  
   
- `nID`  
+ *nID*  
  ホット キー コントロールの ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  初期化が成功した場合は 0 以外それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CHotKeyCtrl` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出す**作成**、ホット キー コントロールを作成しにアタッチする、`CHotKeyCtrl`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CHotKeyCtrl` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出す`Create`、ホット キー コントロールを作成しにアタッチする、`CHotKeyCtrl`オブジェクト。  
   
- 拡張ウィンドウ スタイルをコントロールに使用する場合は、呼び出す[CreateEx](#createex)の代わりに**作成**です。  
+ 拡張ウィンドウ スタイルをコントロールに使用する場合は、呼び出す[CreateEx](#createex)の代わりに`Create`です。  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  コントロールを作成し、(子ウィンドウ) でそれを関連付けるには、この関数を呼び出して、`CHotKeyCtrl`オブジェクト。  
@@ -143,25 +143,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwExStyle`  
- 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、`dwExStyle`パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
+ *dwExStyle*  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
   
- `dwStyle`  
+ *dwStyle*  
  ホット キー コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 詳細については、次を参照してください。[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK に含まれています。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体`pParentWnd`です。  
+ *rect*  
+ 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体*pParentWnd*です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  コントロールの子ウィンドウ ID  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。  
   
 ##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
@@ -176,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `wVirtualKeyCode`  
+ [out]*wVirtualKeyCode*  
  キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
   
- [出力] `wModifiers`  
+ [out]*と*  
  キーボード ショートカット キーの修飾子キーを示すフラグのビットごとの組み合わせ (OR)。  
   
  修飾子フラグは次のとおりです。  
@@ -194,7 +194,7 @@ void GetHotKey(
 ### <a name="return-value"></a>戻り値  
  最初のオーバー ロードされたメソッドを`DWORD`仮想キー コードと修飾子のフラグを格納しています。 下位ワードの下位バイトが仮想キー コードには、下位ワードの高位バイト フラグを含む、修飾子、および上位ワードにはゼロです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  仮想キー コードと修飾子キーを一緒には、キーボード ショートカットを定義します。  
   
 ##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
@@ -207,7 +207,7 @@ CString GetHotKeyName() const;
 ### <a name="return-value"></a>戻り値  
  現在選択されているホット キーのローカライズされた名前。 選択したホット キーがない場合`GetHotKeyName`空の文字列を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数によって返される名前のキーボード ドライバーに由来します。 ローカライズされたバージョンの Windows でローカライズされていないキーボード ドライバーをインストールして、その逆です。  
   
 ##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
@@ -220,16 +220,16 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `vk`  
+ *vk*  
  仮想キー コード。  
   
  *fExtended*  
  仮想キー コードは、拡張キー場合**TRUE**それ以外の**FALSE**です。  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたキーのローカライズされた名前、`vk`パラメーター。 キーがマップされている名前を持たない場合`GetKeyName`空の文字列を返します。  
+ 指定されたキーのローカライズされた名前、 *vk*パラメーター。 キーがマップされている名前を持たない場合`GetKeyName`空の文字列を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数によって返されるキーの名前は、ローカライズされたバージョンの Windows でローカライズされていないキーボード ドライバーをインストールできるようにキーボード ドライバーから取得し、その逆です。  
   
 ### <a name="example"></a>例  
@@ -245,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `wVirtualKeyCode`  
+ [in]*wVirtualKeyCode*  
  キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
   
- [入力] `wModifiers`  
+ [in]*と*  
  キーボード ショートカット キーの修飾子キーを示すフラグのビットごとの組み合わせ (OR)。  
   
  修飾子フラグは次のとおりです。  
@@ -260,7 +260,7 @@ void SetHotKey(
 |`HOTKEYF_EXT`|拡張キー|  
 |`HOTKEYF_SHIFT`|Shift キー|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  仮想キー コードと修飾子キーを一緒には、キーボード ショートカットを定義します。  
   
 ##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
@@ -273,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `wInvalidComb`  
+ *wInvalidComb*  
  無効なキーの組み合わせを指定するフラグの配列。 次の値の組み合わせであることができます。  
   
 - `HKCOMB_A` ALT キー  
@@ -292,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` CTRL + ALT + SHIFT +  
   
- `wModifiers`  
+ *と*  
  ユーザーが、無効な組み合わせを入力したときに使用するキーの組み合わせを指定するフラグの配列。 修飾子フラグの詳細については、次を参照してください。 [GetHotKey](#gethotkey)です。  
   
-### <a name="remarks"></a>コメント  
- ユーザーが無効なキーの組み合わせに入ったときに指定されたフラグの定義に従って`wInvalidComb`、システムでは、OR 演算子を使用して、指定されたフラグを使って、ユーザーが入力したキーの組み合わせ`wModifiers`です。 結果として得られるキーの組み合わせは文字列に変換され、ホット キー コントロールに表示されます。  
+### <a name="remarks"></a>Remarks  
+ ユーザーが無効なキーの組み合わせに入ったときに指定されたフラグの定義に従って*wInvalidComb*、システムでは、OR 演算子を使用して、指定されたフラグを使って、ユーザーが入力したキーの組み合わせ*と*. 結果として得られるキーの組み合わせは文字列に変換され、ホット キー コントロールに表示されます。  
   
 ## <a name="see-also"></a>関連項目  
  [CWnd クラス](../../mfc/reference/cwnd-class.md)   

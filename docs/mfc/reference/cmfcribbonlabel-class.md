@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36b2d78bb3f1ffaefa67a062c6498c195d46336f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370123"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042496"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel クラス
 リボンのクリックできないテキスト ラベルを実装します。  
@@ -53,7 +53,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |`CMFCRibbonLabel::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |[CMFCRibbonLabel::SetACCData](#setaccdata)|現在のリボン label 要素のアクセシビリティ データを決定します。 (上書き[cmfcribbonbutton::setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata))。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リボンのラベルを作成した後に追加パネルを呼び出して[cmfcribbonpanel::add](../../mfc/reference/cmfcribbonpanel-class.md#add)です。  
   
  クイック アクセス ツールバーをリボンのラベルを追加することはできません。  
@@ -67,7 +67,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
   
  [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxRibbonLabel.h  
   
 ##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
@@ -80,10 +80,10 @@ CMFCRibbonLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszText`  
+ [in]*lpszText*  
  ラベルに表示されるテキストです。  
   
- [入力] `bIsMultiLine`  
+ [in]*bIsMultiLine*  
  `TRUE` ラベルが、複数行のラベルであることを指定するにはそれ以外の場合、`FALSE`です。  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
@@ -96,14 +96,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParent`  
+ [in]*pParent*  
  現在のリボンのラベルの親ウィンドウを表します。  
   
- [出力] `data`  
+ [out]*データ*  
  型のオブジェクト`CAccessibilityData`を現在のリボンのラベルのアクセシビリティ データが格納されます。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合、`data`パラメーターが正常に設定された状態でリボン ラベルを現在のユーザー補助データです。 それ以外の場合、`FALSE`です。  
+ `TRUE` 場合、*データ*パラメーターが正常に設定された状態でリボン ラベルを現在のユーザー補助データです。 それ以外の場合、`FALSE`です。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

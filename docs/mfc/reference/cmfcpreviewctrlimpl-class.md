@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370413"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040078"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl クラス
 このクラスは、リッチ プレビュー用にシェルによって提供されるホスト ウィンドウに配置されているウィンドウを実装します。  
@@ -93,14 +93,14 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|プレビュー ウィンドウの背景色です。|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|プレビュー ウィンドウのテキストの色。|  
 |[CMFCPreviewCtrlImpl::m_font](#m_font)|プレビュー ウィンドウでテキストを表示するために使用するフォントです。|  
 |[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|コントロールにコンテンツを持つがプレビューされているドキュメントへのポインター。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h    
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hWndParent`  
+ *hWndParent*  
  リッチ プレビュー用にシェルによって提供される、ホスト ウィンドウへのハンドル。  
   
- `prc`  
+ *中華人民共和国*  
  初期サイズとウィンドウの位置を指定します。  
   
- `pContext`  
+ *pContext*  
  コンテキストの作成へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  描画のデバイス コンテキストへのポインター。  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDocument`  
+ *pDocument*  
  ドキュメント実装へのポインター。  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hWndParent`  
+ *hWndParent*  
  新しい親ウィンドウへのハンドル。  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clrBack`  
+ *clrBack*  
  プレビュー ウィンドウの背景色です。  
   
- `clrText`  
+ *clrText*  
  プレビュー ウィンドウのテキストの色。  
   
- `plf`  
+ *plf*  
  プレビュー ウィンドウでテキストを表示するために使用するフォントです。 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,13 +300,13 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `prc`  
+ *中華人民共和国*  
  新しいサイズとプレビュー コントロールの位置を指定します。  
   
- `bRedraw`  
+ *bRedraw*  
  コントロールを再描画されるかどうかを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  通常、ホスト コントロールがサイズ変更されると、新しい外接する四角形が設定されます。  
 
 ## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  

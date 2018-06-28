@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368008"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040676"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage クラス
 カスタム ページを実装して、**カスタマイズ**リボン ベースのアプリケーション ダイアログ ボックス。  
@@ -58,7 +58,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|ユーザーがクリックすると、システムによって呼び出されます**OK**上、**カスタマイズ** ダイアログ ボックス。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  カスタム コマンドを追加する場合、**カスタマイズ**ダイアログ ボックスで、AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理する必要があります。 メッセージ ハンドラーでインスタンス化、`CMFCRibbonCustomizePropertyPage`スタック上のオブジェクト。 カスタムのコマンドの一覧を作成し、呼び出す`AddCustomCategory`に新しいページを追加する、**カスタマイズ** ダイアログ ボックス。  
   
 ## <a name="example"></a>例  
@@ -81,7 +81,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
  [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxribboncustomizedialog.h  
   
 ##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[入力] `lpszName`|カスタムのカテゴリの名前を指定します。|  
-|[入力] `lstIDS`|カスタムのカテゴリに表示されるリボン コマンド Id が含まれています。|  
+|[in]*lpszName*|カスタムのカテゴリの名前を指定します。|  
+|[in]*lstIDS*|カスタムのカテゴリに表示されるリボン コマンド Id が含まれています。|  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、という名前のカテゴリを追加`lpszName`を**コマンド**コンボ ボックス。 コマンドがで指定されたユーザーは、カテゴリを選択するときに`lstIDS`コマンドの一覧に表示されます。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、という名前のカテゴリを追加*lpszName*を**コマンド**コンボ ボックス。 コマンドがで指定されたユーザーは、カテゴリを選択するときに*lstIDS*コマンドの一覧に表示されます。  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  `CMFCRibbonCustomizePropertyPage` オブジェクトを構築します。  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pRibbonBar`  
+ [in]*pRibbonBar*  
  対象のリボン コントロールへのポインターをカスタマイズするオプションです。  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
@@ -122,7 +122,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 virtual void OnOK();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装で選択したオプションの適用、**カスタマイズ**クイック アクセス ツールバーに ダイアログ ボックス。  
   
 ## <a name="see-also"></a>関連項目  

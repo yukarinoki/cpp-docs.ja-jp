@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375772"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042249"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb クラス
 一意の `CString` オブジェクトを `CObject` へのポインターに割り当てる辞書コレクション クラスです。  
@@ -92,7 +92,7 @@ class CMapStringToOb : public CObject
 |----------|-----------------|  
 |[CMapStringToOb::operator](#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  挿入すると、 `CString` -  `CObject*`ペア (要素) に、マップには、効率的に取得したり、文字列を使用してペアリングが削除することができます、または`CString`キーと値。 マップ内のすべての要素を繰り返すこともできます。  
   
  型の変数**位置**すべての種類のマップ内の別のエントリのアクセスに使用します。 使用することができます、**位置**「に注意してください」のエントリをマップを反復処理します。 このイテレーションが順のキー値であると思われる場合があります。そうじゃないです。 取得された要素の順序が不定になります。  
@@ -110,7 +110,7 @@ class CMapStringToOb : public CObject
   
  `CMapStringToOb`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="cmapstringtoob"></a>  CMapStringToOb::CMapStringToOb  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBlockSize`  
+ *nBlockSize*  
  マップを拡張するためのメモリ割り当ての粒度を指定します。  
   
-### <a name="remarks"></a>コメント  
- 単位でメモリが割り当てられているマップするにつれて、`nBlockSize`エントリです。  
+### <a name="remarks"></a>Remarks  
+ 単位でメモリが割り当てられているマップするにつれて、 *nBlockSize*エントリです。  
   
  次の表はその他のメンバー関数に似ています**CMapStringToOb:: CMapStringToOb**です。  
   
@@ -153,7 +153,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>戻り値  
  このマップ内の要素の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  次の表はその他のメンバー関数に似ています`CMapStringToOb::GetCount`です。  
   
 |クラス|メンバー関数|  
@@ -180,7 +180,7 @@ UINT GetHashTableSize() const;
 ### <a name="return-value"></a>戻り値  
  ハッシュ テーブル内の要素の数を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  次の表はその他のメンバー関数に似ています`CMapStringToOb::GetHashTableSize`です。  
   
 |クラス|メンバー関数|  
@@ -212,7 +212,7 @@ void GetNextAssoc(
  *rValue*  
  取得される要素の戻り値を指定します (、 **CObject**ポインター)。 このパラメーターの詳細については、「解説」を参照してください。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、マップ内のすべての要素の反復処理に最も役立ちます。 位置シーケンスがないとは限りませんキーの値のシーケンスと同じに注意してください。  
   
  場合は、取得した最後の要素をマップではの新しい値*rNextPosition*に設定されている**NULL**です。  
@@ -259,7 +259,7 @@ INT_PTR GetSize() const;
 ### <a name="return-value"></a>戻り値  
  マップ内のアイテムの数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  マップ内の要素の数を取得するには、このメソッドを呼び出します。  
   
  次の表はその他のメンバー関数に似ています`CMapStringToOb::GetSize`です。  
@@ -286,7 +286,7 @@ POSITION GetStartPosition() const;
 ### <a name="return-value"></a>戻り値  
  A**位置**マップを反復処理するための開始位置を表す値または**NULL**マップが空の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イテレーションのシーケンスが予測可能です。したがって、マップの最初の要素""には、特別な意味はありません。  
   
  次の表はその他のメンバー関数に似ています`CMapStringToOb::GetStartPosition`です。  
@@ -311,13 +311,13 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `key`  
+ *key*  
  ハッシュ値が計算されるキー。  
   
 ### <a name="return-value"></a>戻り値  
  キーのハッシュ値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  次の表はその他のメンバー関数に似ています`CMapStringToOb::HashKey`です。  
   
 |クラス|メンバー関数|  
@@ -339,13 +339,13 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hashSize`  
+ *hashSize*  
  ハッシュ テーブル内のエントリの数です。  
   
- `bAllocNow`  
+ *bAllocNow*  
  場合**TRUE**初期化時にハッシュ テーブルを割り当てる必要なときにそれ以外の場合、テーブルが割り当てられます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最適なパフォーマンスをハッシュ テーブルのサイズは、素数をする必要があります。 競合を最小限に抑えるには、サイズする必要があります約 20%、最大の予想されるデータ セットよりも大きいです。  
   
  次の表はその他のメンバー関数に似ています`CMapStringToOb::InitHashTable`です。  
@@ -372,7 +372,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>例  
  例を参照して[RemoveAll](#removeall)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  次の表はその他のメンバー関数に似ています**CMapStringToOb:: IsEmpty**です。  
   
 |クラス|メンバー関数|  
@@ -394,16 +394,16 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `key`  
+ *key*  
  検索する要素を識別する文字列のキーを指定します。  
   
- `rValue`  
+ *rValue*  
  検索された要素から返された値を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  要素が見つかった場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `Lookup` ハッシュ アルゴリズムを使用してすばやく正確に一致するキーを持つマップの要素を検索 (`CString`値)。  
   
  次の表はその他のメンバー関数に似ています`CMapStringToOb::LookUp`です。  
@@ -432,16 +432,16 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `key`  
+ *key*  
  検索する要素を識別する文字列のキーを指定します。  
   
- `rKey`  
+ *rKey*  
  関連付けられているキーへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  キーが見つかった場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関連付けられている要素がマップから削除された後に使用する場合、またはマップの破棄された後は、キーへの参照を使用しても安全です。  
   
  次の表はその他のメンバー関数に似ています**CMapStringToOb:: LookupKey**です。  
@@ -459,9 +459,9 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインターへの参照、`CObject`オブジェクトまたは**NULL**マップが空の場合または`key`が範囲外です。  
+ ポインターへの参照、`CObject`オブジェクトまたは**NULL**マップが空の場合または*キー*が範囲外です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  したがって、代入ステートメント (左辺値) の左側にのみ使用できます。 指定されたキーにマップ要素がない場合は、新しい要素が作成されます。  
   
  ありません「右側にある」(右辺値) この演算子をキーがマップに見つからない可能性がある可能性があるためです。 使用して、`Lookup`要素を取得します。  
@@ -497,7 +497,7 @@ CObject*& operator[ ](lpctstr key);
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CObject`各キーによって参照されるオブジェクトは破棄されません。 `RemoveAll`するは保証されませんを参照されている場合、関数はメモリ リークを起こすことができます`CObject`オブジェクトは破棄されます。  
   
  関数は、マップがまだ空の場合、正常に動作します。  
@@ -526,13 +526,13 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `key`  
+ *key*  
  マップの検索に使用する文字列を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  項目が見つかり、正常に削除された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、場合にメモリ リークを発生できます、`CObject`オブジェクトは他の場所に削除されません。  
   
  次の表はその他のメンバー関数に似ています`CMapStringToOb::RemoveKey`です。  
@@ -571,13 +571,13 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `key`  
+ *key*  
  新しい要素のキーである文字列を指定します。  
   
- `newValue`  
+ *newValue*  
  指定します、`CObject`新しい要素の値を示すポインターです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初に、キーが検索されます。 キーが見つかった場合、対応する値を変更するとします。それ以外の場合、新しいキーと値の要素が作成されます。  
   
  次の表はその他のメンバー関数に似ています`CMapStringToOb::SetAt`です。  

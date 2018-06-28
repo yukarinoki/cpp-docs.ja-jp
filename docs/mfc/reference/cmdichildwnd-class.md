@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369350"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040848"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd クラス
 ウィンドウ管理用のメンバーも含めて、Windows のマルチ ドキュメント インターフェイス (MDI: multiple document interface) の子ウィンドウの機能が用意されています。  
@@ -68,24 +68,24 @@ class CMDIChildWnd : public CFrameWnd
 |[CMDIChildWnd::MDIRestore](#mdirestore)|MDI 子ウィンドウを最大化または最小化されているサイズから復元します。|  
 |[CMDIChildWnd::SetHandles](#sethandles)|メニューとアクセラレータのリソースに対するハンドルを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MDI 子ウィンドウがデスクトップ上ではなく、MDI フレーム ウィンドウ内に表示する点を除いて、一般的なフレーム ウィンドウと同様、MDI 子ウィンドウを検索します。 MDI 子ウィンドウでは、独自のメニュー バーではありませんが、代わりに、MDI フレーム ウィンドウのメニューを共有します。 フレームワークは、現在アクティブな MDI 子ウィンドウを表すため MDI フレームのメニューを自動的に変更します。  
   
  アプリケーションに役立ちます MDI 子ウィンドウを作成するには、派生クラスを`CMDIChildWnd`です。 メンバー変数をアプリケーションに固有のデータを格納する派生クラスに追加します。 ウィンドウにメッセージが送られたときに行われる処理を指定するには、派生クラスにメッセージ処理メンバー関数とメッセージ マップを実装します。  
   
  MDI 子ウィンドウを構築するための 3 つの方法があります。  
   
--   使用して直接構築**作成**です。  
+-   使用して直接構築`Create`です。  
   
 -   使用して直接構築`LoadFrame`です。  
   
 -   間接的に構築ドキュメント テンプレートを使用します。  
   
- 呼び出す前に**作成**または`LoadFrame`、C++ を使用して、ヒープ上のフレーム ウィンドウ オブジェクトを構築する必要があります**新しい**演算子。 呼び出しの前に**作成**でウィンドウ クラスを登録することも、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数、フレームのアイコンとクラスのスタイルを設定します。  
+ 呼び出す前に`Create`または`LoadFrame`、C++ を使用して、ヒープ上のフレーム ウィンドウ オブジェクトを構築する必要があります**新しい**演算子。 呼び出しの前に`Create`でウィンドウ クラスを登録することも、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数、フレームのアイコンとクラスのスタイルを設定します。  
   
- 使用して、**作成**引数を渡す、フレームの作成パラメーターとして直接のメンバー関数。  
+ 使用して、`Create`引数を渡す、フレームの作成パラメーターとして直接のメンバー関数。  
   
- `LoadFrame` も少ない引数を必要と**作成**、代わりに、フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースからほとんどの既定値を取得します。 によってアクセスされる`LoadFrame`、これらすべてのリソースが同じリソース ID を持つ必要があります (たとえば、 **IDR_MAINFRAME**)。  
+ `LoadFrame` も少ない引数を必要と`Create`、代わりに、フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースからほとんどの既定値を取得します。 によってアクセスされる`LoadFrame`、これらすべてのリソースが同じリソース ID を持つ必要があります (たとえば、 **IDR_MAINFRAME**)。  
   
  ときに、`CMDIChildWnd`オブジェクトには、ビューやドキュメントが含まれています、によって作成されるない直接の代わりに、プログラマが直接のフレームワークです。 `CDocTemplate`オブジェクトは、フレームの作成、コンテナーのビューの作成と適切なドキュメント ビューの接続を統制します。 パラメーター、`CDocTemplate`コンス トラクターを指定して、 `CRuntimeClass` 3 つのクラスの関係 (ドキュメント、フレーム、および表示)。 A`CRuntimeClass`オブジェクトを動的に (たとえば、ファイルの新規作成 コマンドまたは MDI ウィンドウの新しいコマンドを使用して) を指定すると、ユーザーが新しいフレームを作成する、フレームワークによって使用されます。  
   
@@ -112,7 +112,7 @@ class CMDIChildWnd : public CFrameWnd
   
  `CMDIChildWnd`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cmdichildwnd"></a>  CMDIChildWnd::CMDIChildWnd  
@@ -122,7 +122,7 @@ class CMDIChildWnd : public CFrameWnd
 CMDIChildWnd();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す**作成**表示ウィンドウを作成します。  
   
 ### <a name="example"></a>例  
@@ -142,31 +142,31 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszClassName`  
+ *lpszClassName*  
  Windows クラスの名前を示す文字の null で終わる文字列へのポインター (、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造体)。 クラス名に登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数。 必要があります**NULL**標準の`CMDIChildWnd`します。  
   
- `lpszWindowName`  
+ *したとき*  
  ウィンドウの名前を表す文字の null で終わる文字列へのポインター。 タイトル バーのテキストとして使用します。  
   
- `dwStyle`  
+ *dwStyle*  
  ウィンドウを指定[スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性。 **WS_CHILD**スタイルが必要です。  
   
- `rect`  
+ *rect*  
  ウィンドウの位置とサイズが含まれています。 `rectDefault`値により、新しい位置とサイズを指定する Windows`CMDIChildWnd`です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ウィンドウの親を指定します。 場合**NULL**アプリケーションのメイン ウィンドウを使用します。  
   
- `pContext`  
+ *pContext*  
  指定します、 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)構造体。 このパラメーターを指定できます**NULL**です。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  現在アクティブな MDI 子フレーム ウィンドウには、親フレーム ウィンドウのキャプションを判断できます。 この機能はオフになっている、 **FWS_ADDTOTITLE**子フレーム ウィンドウのスタイル ビットです。  
   
- フレームワークでは、このメンバー関数を呼び出して子ウィンドウを作成するコマンドをユーザーに応答してフレームワークを使用して、`pContext`子ウィンドウをアプリケーションに正しく接続するパラメーターです。 呼び出すと**作成**、`pContext`できます**NULL**です。  
+ フレームワークでは、このメンバー関数を呼び出して子ウィンドウを作成するコマンドをユーザーに応答してフレームワークを使用して、 *pContext*子ウィンドウをアプリケーションに正しく接続するパラメーターです。 呼び出すと`Create`、 *pContext*できます**NULL**です。  
   
 ### <a name="example"></a>例  
  例 1:  
@@ -190,7 +190,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="return-value"></a>戻り値  
  MDI 親フレーム ウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  返されたフレームは、2 つの親から削除された、`CMDIChildWnd`型のウィンドウの親であると**MDICLIENT**を管理する、`CMDIChildWnd`オブジェクト。 呼び出す、 [GetParent](../../mfc/reference/cwnd-class.md#getparent)を返すメンバー関数、`CMDIChildWnd`オブジェクトの即時**MDICLIENT**一時と親`CWnd`ポインター。  
   
 ### <a name="example"></a>例  
@@ -203,7 +203,7 @@ CMDIFrameWnd* GetMDIFrame();
 void MDIActivate();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームがアクティブになったときにもアクティブにされた子ウィンドウをアクティブ化されます。  
   
 ### <a name="example"></a>例  
@@ -216,7 +216,7 @@ void MDIActivate();
 void MDIDestroy();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバー関数は、フレーム ウィンドウから子ウィンドウのタイトルを削除し、子ウィンドウを非アクティブ化します。  
   
 ### <a name="example"></a>例  
@@ -229,7 +229,7 @@ void MDIDestroy();
 void MDIMaximize();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  子ウィンドウを最大表示しているときに Windows では、そのクライアント領域のフレーム ウィンドウのクライアント領域を塗りつぶすにサイズ変更します。 Windows では、ユーザーが復元または子ウィンドウを閉じるようにフレームのメニュー バーで子ウィンドウのコントロールのメニューを配置し、フレーム ウィンドウのタイトルに子ウィンドウのタイトルを追加します。  
   
 ### <a name="example"></a>例  
@@ -255,13 +255,13 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hMenu`  
+ *hMenu*  
  メニュー リソースのハンドル。  
   
- `hAccel`  
+ *hAccel*  
  アクセラレータ リソースのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  MDI 子ウィンドウのオブジェクトによって使用されているメニューとアクセラレータのリソースを設定するには、この関数を呼び出します。  
   
 ## <a name="see-also"></a>関連項目  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815f9e8177cc908d7d76ca6d0f3130d1d50c93ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f162a8da230177509ebe67741580ef224b20ba19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368171"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040796"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog クラス
 `CMFCDesktopAlertDialog`と共にクラスを使用する、 [CMFCDesktopAlertWnd クラス](../../mfc/reference/cmfcdesktopalertwnd-class.md)ポップアップ ウィンドウにカスタム ダイアログを表示します。  
@@ -53,7 +53,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
 |[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||  
 |[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|(`CDialogEx::PreTranslateMessage` をオーバーライドします)。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  次の手順を実行し、ポップアップ ウィンドウにカスタム ダイアログを表示します。  
   
 1.  `CMFCDesktopAlertDialog` の派生クラスを作成します。  
@@ -77,7 +77,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
   
  [CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxDesktopAlertDialog.h  
   
 ##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams  
@@ -90,12 +90,12 @@ BOOL CreateFromParams(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `params`  
- [入力] `pParent`  
+ [in]*params*  
+ [in]*pParent*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize  
 
@@ -106,7 +106,7 @@ CSize GetDlgSize();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus  
 
@@ -117,7 +117,7 @@ BOOL HasFocus() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage  
 
@@ -127,7 +127,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>戻り値  
   

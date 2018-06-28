@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376211"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042548"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage クラス
 ダイアログ ボックスのようなグラフィカルなインターフェイスでカスタム コントロールのプロパティを表示します。  
@@ -92,7 +92,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|ユーザーが、プロパティ ページを変更したかどうかを示すフラグを設定します。|  
 |[COlePropertyPage::SetPageName](#setpagename)|プロパティ ページの名前 (キャプション) を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  たとえば、プロパティ ページには、表示およびコントロールのキャプション プロパティを変更するユーザーをエディット コントロールが含まれます。  
   
  カスタムまたはストックのコントロールの各プロパティには、コントロールのユーザーを現在のプロパティ値を表示し、必要な場合は、その値を変更できるダイアログ コントロールを持つことができます。  
@@ -110,7 +110,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
  `COlePropertyPage`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxctl.h  
   
 ##  <a name="colepropertypage"></a>  COlePropertyPage::COlePropertyPage  
@@ -129,7 +129,7 @@ COlePropertyPage(
  *idCaption*  
  プロパティ ページのキャプションのリソース ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  サブクラスを実装する場合`COlePropertyPage`、サブクラスのコンス トラクターを使用する必要があります、`COlePropertyPage`でダイアログ テンプレート リソースを識別するコンス トラクター、キャプションを含む文字列リソースと、プロパティ ページに基づいています。  
   
 ##  <a name="getcontrolstatus"></a>  COlePropertyPage::GetControlStatus  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  プロパティ ページのコントロールのリソース ID です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pnObjects`  
+ *pnObjects*  
  ページで編集対象のオブジェクトの数を受信する、符号なし long 整数を指すポインター。  
   
 ### <a name="return-value"></a>戻り値  
  配列を指すポインター`IDispatch`ポインターで、[プロパティ] ページには、各コントロールのプロパティにアクセスするために使用します。 呼び出し元は、これらのインターフェイス ポインターを解放する必要があります。  
   
-### <a name="remarks"></a>コメント  
- 各プロパティ ページのオブジェクトへのポインターの配列を保持する、`IDispatch`のページで編集されているオブジェクトのインターフェイスです。 この関数は、設定、`pnObjects`その配列内の要素の数の引数の配列の最初の要素へのポインターを返します。  
+### <a name="remarks"></a>Remarks  
+ 各プロパティ ページのオブジェクトへのポインターの配列を保持する、`IDispatch`のページで編集されているオブジェクトのインターフェイスです。 この関数は、設定、 *pnObjects*その配列内の要素の数の引数の配列の最初の要素へのポインターを返します。  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  プロパティ ページへのポインターを取得`IPropertyPageSite`インターフェイスです。  
@@ -173,7 +173,7 @@ LPPROPERTYPAGESITE GetPageSite();
 ### <a name="return-value"></a>戻り値  
  プロパティ ページへのポインター`IPropertyPageSite`インターフェイスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コントロールとコンテナーは連携して、ユーザーが参照して、コントロールのプロパティを編集できるようにします。 コントロールは、それぞれが、ユーザーを関連する一連のプロパティを編集できるようにする OLE オブジェクトのプロパティ ページを提供します。 コンテナーは、プロパティ ページを表示するプロパティ フレームを提供します。 プロパティ フレームがサポートしているページのサイトを提供する、各ページの`IPropertyPageSite`インターフェイスです。  
   
 ##  <a name="ignoreapply"></a>  COlePropertyPage::IgnoreApply  
@@ -184,10 +184,10 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  無視するように、コントロールの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プロパティ ページの [適用] ボタンは、プロパティ ページのコントロールの値が変更された場合にのみ有効です。 この関数を使用すると、その値を変更するときに有効にするのに [適用] ボタンが発生しないコントロールを指定できます。  
   
 ##  <a name="ismodified"></a>  COlePropertyPage::IsModified  
@@ -208,13 +208,13 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dispid`  
+ *dispid*  
  編集中のプロパティのディスパッチ ID。  
   
 ### <a name="return-value"></a>戻り値  
  既定の実装を返します**FALSE**です。 この関数のオーバーライドを返す必要があります**TRUE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ページで適切なコントロールにフォーカスを設定するメソッドをオーバーライドすることができます。 既定の実装は何もしませんし、返します**FALSE**です。  
   
 ##  <a name="onhelp"></a>  COlePropertyPage::OnHelp  
@@ -231,7 +231,7 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ### <a name="return-value"></a>戻り値  
  既定の実装を返します**FALSE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プロパティ ページは、ユーザーがヘルプにアクセスするときに特別な操作を実行する必要がある場合は、それをオーバーライドします。 既定の実装は何もしませんし、返します**FALSE**WinHelp を呼び出すために、フレームワークに指示します。  
   
 ##  <a name="oninitdialog"></a>  COlePropertyPage::OnInitDialog  
@@ -244,7 +244,7 @@ virtual BOOL OnInitDialog();
 ### <a name="return-value"></a>戻り値  
  既定の実装を返します**FALSE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  特別な操作が必要な場合、ダイアログの初期化時にこのメソッドをオーバーライドします。 既定の実装`CDialog::OnInitDialog`し、返します**FALSE**です。  
   
 ##  <a name="onobjectschanged"></a>  COlePropertyPage::OnObjectsChanged  
@@ -254,7 +254,7 @@ virtual BOOL OnInitDialog();
 virtual void OnObjectsChanged();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  OLE コントロールのプロパティを表示する、開発環境で、そのプロパティ ページを表示するモードレス ダイアログ ボックスが使用されます。 別のコントロールが選択されている場合、新しいプロパティのセットの異なる一連のプロパティ ページを表示する必要があります。 フレームワークは、変更のプロパティ ページに通知するには、この関数を呼び出します。  
   
  この操作の通知を受信し、特別な操作を実行するには、この関数をオーバーライドします。  
@@ -266,7 +266,7 @@ virtual void OnObjectsChanged();
 virtual void OnSetPageSite();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装では、ページのキャプションを読み込み、ダイアログ リソースからのページのサイズを決定しようとします。 プロパティ ページには、その後の操作が必要な場合は、この関数をオーバーライドします。上書きは基本クラスの実装を呼び出す必要があります。  
   
 ##  <a name="setcontrolstatus"></a>  COlePropertyPage::SetControlStatus  
@@ -279,16 +279,16 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  プロパティ ページのコントロールの ID が含まれています。  
   
- `bDirty`  
+ *bDirty*  
  プロパティ ページのフィールドが変更されたかどうかを指定します。 設定**TRUE**フィールドが変更された場合**FALSE**変更されていない場合。  
   
 ### <a name="return-value"></a>戻り値  
  **TRUE**それ以外の設定に指定されたコントロールがあった場合、 **FALSE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダーティの場合、プロパティ ページのコントロールの状態プロパティ ページが閉じているか、[適用] ボタンを選択したときに、コントロールのプロパティを適切な値で更新されます。  
   
 ##  <a name="setdialogresource"></a>  COlePropertyPage::SetDialogResource  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  ステータス バーまたは他の場所に表示する簡単なヘルプ情報を含む文字列。  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  プロパティ ページのヘルプ ファイルの名前です。  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bModified`  
+ *bModified*  
  プロパティ ページの変更されたフラグの新しい値を指定します。  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

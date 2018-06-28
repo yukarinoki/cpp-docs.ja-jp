@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371583"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040835"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate クラス
 MDI (マルチ ドキュメント インターフェイス) を実装するドキュメント テンプレートを定義します。  
@@ -42,7 +42,7 @@ class CMultiDocTemplate : public CDocTemplate
 |----------|-----------------|  
 |[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|`CMultiDocTemplate` オブジェクトを構築します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MDI アプリケーションでは、ドキュメントを表示する各ユーザーが 0 個以上のドキュメント フレーム ウィンドウを開くことができますのワークスペースとメイン フレーム ウィンドウを使用します。 MDI のより詳細な説明を参照してください。*ソフトウェア設計のための Windows インターフェイス ガイドライン*です。  
   
  ドキュメント テンプレートには、3 種類のクラス間のリレーションシップを定義します。  
@@ -70,7 +70,7 @@ class CMultiDocTemplate : public CDocTemplate
   
  `CMultiDocTemplate`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDResource`  
+ *可能*  
  ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースが含まれます。  
   
  文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、プレース ホルダーとして '\n' 文字が必要ですただし、末尾の '\n' 文字は必要ありません;)。これらの部分文字列では、ドキュメントの種類について説明します。 詳細については、部分文字列は、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)です。 この文字列リソースについては、アプリケーションのリソース ファイルにあります。 例えば:  
@@ -104,16 +104,16 @@ CMultiDocTemplate(
   
  これらのリソースの種類の詳細については、次を参照してください。[リソース エディター](../../windows/resource-editors.md)です。  
   
- `pDocClass`  
- 指す、`CRuntimeClass`ドキュメント クラスのオブジェクト。 このクラスは、 **CDocument**のドキュメントを表すために定義するクラスを派生します。  
+ *pDocClass*  
+ 指す、`CRuntimeClass`ドキュメント クラスのオブジェクト。 このクラスは、 `CDocument`-ドキュメントを表すために定義するクラスを派生します。  
   
- `pFrameClass`  
+ *pFrameClass*  
  指す、`CRuntimeClass`フレーム ウィンドウ クラスのオブジェクト。 このクラスにすることができます、 `CMDIChildWnd`-派生クラスにすることもできます`CMDIChildWnd`自体、ドキュメント フレーム ウィンドウの既定の動作をする場合。  
   
- `pViewClass`  
+ *pViewClass*  
  指す、`CRuntimeClass`ビュー クラスのオブジェクト。 このクラスは、 `CView`-、ドキュメントを表示を定義するクラスを派生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  いずれかを動的に割り当てる`CMultiDocTemplate`各ドキュメントの種類、アプリケーションをサポートし、それぞれを渡すオブジェクト`CWinApp::AddDocTemplate`から、`InitInstance`アプリケーション クラスのメンバー関数。  
   
 ### <a name="example"></a>例  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371687"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040182"
 ---
 # <a name="colepropertiesdialog-class"></a>メンバー クラス
 Windows に共通の [OLE プロジェクト プロパティ] ダイアログ ボックスをカプセル化します。  
@@ -73,7 +73,7 @@ class COlePropertiesDialog : public COleDialog
 |[COlePropertiesDialog::m_psh](#m_psh)|追加のカスタム プロパティ ページを追加するために使用する構造。|  
 |[COlePropertiesDialog::m_vp](#m_vp)|構造体の"View"ページをカスタマイズするために使用する`COlePropertiesDialog`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  共通の OLE オブジェクトのプロパティ ダイアログ ボックスでは、表示し、Windows の標準に準拠した形式での OLE ドキュメント項目のプロパティを変更する簡単な方法を提供します。 これらのプロパティには、ドキュメント、項目 (項目がリンクされている) 場合、次の項目のリンク アイコンとイメージのスケーリングと情報を表示するオプションで表されるファイル情報が、他のユーザー間で含まれます。  
   
  使用する、`COlePropertiesDialog`オブジェクト、オブジェクトを使用して、最初に作成、`COlePropertiesDialog`コンス トラクターです。 ダイアログ ボックスが構築された後、`DoModal`メンバー関数 ダイアログ ボックスが表示され、ユーザーが項目のプロパティを変更できるようにします。 `DoModal` ユーザーが、[ok] を選択するかどうかを返します ( **IDOK**) またはキャンセル ( **IDCANCEL**) ボタンをクリックします。 に加えて、[ok] と [キャンセル] ボタン、[適用] ボタンがあります。 ユーザーは、適用を選択するときにドキュメント アイテムのプロパティに加えられた変更は、項目に適用され、そのイメージに自動的に更新されますが、アクティブなままです。  
@@ -97,7 +97,7 @@ class COlePropertiesDialog : public COleDialog
   
  `COlePropertiesDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="colepropertiesdialog"></a>  COlePropertiesDialog::COlePropertiesDialog  
@@ -113,7 +113,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  アクセスされるプロパティを持つドキュメント項目へのポインター。  
   
  *nScaleMin*  
@@ -122,10 +122,10 @@ COlePropertiesDialog(
  *nScaleMax*  
  ドキュメント アイテムのイメージの倍率を最大数です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ダイアログ ボックスの親または所有者へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  共通の OLE オブジェクトのプロパティ ダイアログのクラスを派生`COlePropertiesDialog`ドキュメント項目のスケーリングを実装するためにします。 このクラスのインスタンスによって実装されたすべてのダイアログ ボックスは、ドキュメント アイテムのスケーリングをサポートしていません。  
   
  既定では、共通の OLE オブジェクトのプロパティ ダイアログ ボックスでは、次の 3 つの既定のページがあります。  
@@ -163,7 +163,7 @@ virtual INT_PTR DoModal();
 OLEUIGNRLPROPS m_gp;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このページは、埋め込まれたアイテムのサイズと種類を表示し、[変換] ダイアログ ボックスへのアクセスを許可します。 このページには、かどうか、オブジェクトは、リンクのリンク先も表示されます。  
   
  詳細については、 **OLEUIGNRLPROPS**構造体、Windows SDK を参照してください。  
@@ -175,7 +175,7 @@ OLEUIGNRLPROPS m_gp;
 OLEUILINKPROPS m_lp;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このページは、リンク アイテムの場所を表示し、更新、またはアイテムへのリンクを解除することができます。  
   
  詳細については、 **OLEUILINKPROPS**構造体、Windows SDK を参照してください。  
@@ -187,7 +187,7 @@ OLEUILINKPROPS m_lp;
 OLEUIOBJECTPROPS m_op;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この構造体には、[全般]、リンク、およびビュー ページを初期化するために使用されるメンバーが含まれています。  
   
  詳細については、次を参照してください。、 **OLEUIOBJECTPROPS**と[OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) Windows SDK 内の構造体。  
@@ -199,7 +199,7 @@ OLEUIOBJECTPROPS m_op;
 PROPSHEETHEADER m_psh;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築した後、`COlePropertiesDialog`オブジェクトを使用する`m_psh`を呼び出す前に ダイアログ ボックスのさまざまな側面を設定する、`DoModal`メンバー関数。  
   
  変更する場合、`m_psh`データ メンバーを直接、既定の動作がオーバーライドされます。  
@@ -213,7 +213,7 @@ PROPSHEETHEADER m_psh;
 OLEUIVIEWPROPS m_vp;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このページでは、ユーザーを"content"と「アイコン化」のビュー、オブジェクトの間で切り替えるし、コンテナー内でスケールを変更します。 アイコンの変更 ダイアログ ボックスへのユーザー アクセスは、オブジェクトがアイコンとして表示されているときにこともできます。  
   
  詳細については、 **OLEUIVIEWPROPS**構造体、Windows SDK を参照してください。  
@@ -229,10 +229,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  アクセスされるプロパティを持つドキュメント項目へのポインター。  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  ダイアログのスケールの数値を設定します。  
   
  *bRelativeToOrig*  
@@ -241,11 +241,11 @@ virtual BOOL OnApplyScale(
 ### <a name="return-value"></a>戻り値  
  0 以外の場合は、次の処理です。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装では、何も行われません。 スケーリングの制御を有効にするには、この関数をオーバーライドする必要があります。  
   
 > [!NOTE]
->  共通の OLE オブジェクトのプロパティ ダイアログ ボックスが表示される前に、フレームワークでは、この関数は**NULL**の`pItem`- 1 を`nCurrentScale`です。 これは、スケーリングの制御を有効にするかどうかを決定します。  
+>  共通の OLE オブジェクトのプロパティ ダイアログ ボックスが表示される前に、フレームワークでは、この関数は**NULL**の*pItem* - 1 を*nCurrentScale*です。 これは、スケーリングの制御を有効にするかどうかを決定します。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル CIRC](../../visual-cpp-samples.md)   

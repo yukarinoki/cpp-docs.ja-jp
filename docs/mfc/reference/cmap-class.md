@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239425"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039158"
 ---
 # <a name="cmap-class"></a>CMap クラス
 一意なキーを値に割り当てる辞書コレクション クラスです。  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `KEY`  
+ *KEY*  
  マップのキーとして使用されるオブジェクトのクラスです。  
   
- `ARG_KEY`  
- データ型`KEY`引数です。 通常はへの参照を`KEY`です。  
+ *ARG_KEY*  
+ データ型*キー*引数です。 通常はへの参照を*キー*です。  
   
- `VALUE`  
+ *値*  
  マップに格納されているオブジェクトのクラスです。  
   
- `ARG_VALUE`  
- データ型`VALUE`引数です。 通常はへの参照を`VALUE`です。  
+ *ARG_VALUE*  
+ データ型*値*引数です。 通常はへの参照を*値*です。  
   
 ## <a name="members"></a>メンバー  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBlockSize`  
+ *nBlockSize*  
  マップを拡張するためのメモリ割り当ての粒度を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- 単位でメモリが割り当てられているマップするにつれて、`nBlockSize`エントリです。  
+ 単位でメモリが割り当てられているマップするにつれて、 *nBlockSize*エントリです。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rNextPosition`  
+ *rNextPosition*  
  参照を指定します、**位置**によって以前返される値`GetNextAssoc`または`GetStartPosition`呼び出します。  
   
  *KEY*  
  マップのキーの種類を指定するテンプレート パラメーター。  
   
- `rKey`  
+ *rKey*  
  取得される要素の返されたキーを指定します。  
   
  *値*  
  マップの値の型を指定するテンプレート パラメーター。  
   
- `rValue`  
+ *rValue*  
  取得される要素の戻り値を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  この関数は、マップ内のすべての要素の反復処理に最も役立ちます。 位置シーケンスがないとは限りませんキーの値のシーケンスと同じに注意してください。  
   
- 場合は、取得した最後の要素をマップではの新しい値`rNextPosition`に設定されている**NULL**です。  
+ 場合は、取得した最後の要素をマップではの新しい値*rNextPosition*に設定されている**NULL**です。  
   
 ### <a name="example"></a>例  
  例を参照して[CMap::SetAt](#setat)です。  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hashSize`  
+ *hashSize*  
  ハッシュ テーブル内のエントリの数です。  
   
- `bAllocNow`  
+ *bAllocNow*  
  場合**TRUE**初期化時にハッシュ テーブルを割り当てる必要なときにそれ以外の場合、テーブルが割り当てられます。  
   
 ### <a name="remarks"></a>Remarks  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ARG_KEY`  
- テンプレート パラメーターの型を指定する、`key`値。  
+ *ARG_KEY*  
+ テンプレート パラメーターの型を指定する、*キー*値。  
   
- `key`  
+ *key*  
  検索する要素を識別するキーを指定します。  
   
  *値*  
  検索する値の型を指定します。  
   
- `rValue`  
+ *rValue*  
  検索された値を受け取ります。  
   
 ### <a name="return-value"></a>戻り値  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *値*  
  マップ値の型を指定するテンプレート パラメーター。  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  キーの値の型を指定するテンプレート パラメーター。  
   
- `key`  
+ *key*  
  マップの値を取得するために使用するキー。  
   
 ### <a name="remarks"></a>Remarks  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- によって示されるマップ要素を取得`pAssocRec`です。  
+ によって示されるマップ要素を取得*pAssocRec*です。  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `key`  
+ *key*  
  検索する要素のキー。  
   
 ### <a name="return-value"></a>戻り値  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ARG_KEY`  
+ *ARG_KEY*  
  キーの型を指定するテンプレート パラメーター。  
   
- `key`  
+ *key*  
  削除する要素のキー。  
   
 ### <a name="return-value"></a>戻り値  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ARG_KEY`  
- テンプレート パラメーターの型を指定する、`key`パラメーター。  
+ *ARG_KEY*  
+ テンプレート パラメーターの型を指定する、*キー*パラメーター。  
   
- `key`  
+ *key*  
  新しい要素のキーを指定します。  
   
- `ARG_VALUE`  
- テンプレート パラメーターの型を指定する、`newValue`パラメーター。  
+ *ARG_VALUE*  
+ テンプレート パラメーターの型を指定する、 *newValue*パラメーター。  
   
- `newValue`  
+ *newValue*  
  新しい要素の値を指定します。  
   
 ### <a name="remarks"></a>Remarks  

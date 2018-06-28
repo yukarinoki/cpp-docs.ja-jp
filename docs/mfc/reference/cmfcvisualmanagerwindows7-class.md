@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373704"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042223"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 クラス
 `CMFCVisualManagerWindows7`アプリケーションの外観を与えます、[!INCLUDE[win7](../../build/includes/win7_md.md)]アプリケーションです。  
@@ -102,7 +102,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |`CMFCVisualManagerWindows7::SetResourceHandle`|ビジュアル マネージャーの属性を記述するためのリソース ハンドルを設定します。|  
 |`CMFCVisualManagerWindows7::SetStyle`|配色を設定、 `CMFCVisualManagerWindows7` GUI します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用して、 `CMFCVisualManagerWindows7` 、既定値を模倣するために、アプリケーションの外観を変更するクラス[!INCLUDE[win7](../../build/includes/win7_md.md)]アプリケーションです。 このクラスをアプリケーションが、バージョンの Windows で実行されている場合に有効にすることはできないよりも前[!INCLUDE[win7](../../build/includes/win7_md.md)]です。 アプリケーションがで定義されている既定のビジュアル マネージャーを使用するシナリオでは、 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)です。  
   
  CMFCVisualManagerWindows7 両方からの複数のメソッドの継承、 [CMFCVisualManagerWindows クラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md)と`CMFCVisualManager`クラスです。 前のセクションで示されているメソッドがメソッドを初めて使用する、`CMFCVisualManagerWindows7`クラスです。  
@@ -120,7 +120,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
  `CMFCVisualManagerWindows7`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxvisualmanagerwindows7.h  
   
 ##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
@@ -149,22 +149,22 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pEdit`  
+ [in]*pEdit*  
  エディット コントロールへのポインター。 この値を `NULL` にすることはできません。  
   
- [出力] `bIsHighlighted`  
+ [out]*bIsHighlighted*  
  リボン上のボックスが強調表示されているかどうかを返します。  
   
- [出力] `bIsPaneHighlighted`  
- 返します`TRUE`が含まれる場合、リボン パネルで`pEdit`が強調表示されます。  
+ [out]*bIsPaneHighlighted*  
+ 返します`TRUE`が含まれる場合、リボン パネルで*pEdit*が強調表示されます。  
   
- [出力] `bIsDisabled`  
- 返すかどうか`pEdit`は無効になります。  
+ [out]*bIsDisabled*  
+ 返すかどうか*pEdit*は無効になります。  
   
 ### <a name="return-value"></a>戻り値  
- エディット ボックスの背景色`pEdit`です。  
+ エディット ボックスの背景色*pEdit*です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect  
  フレームワークは、メニュー項目のイメージの周りの領域を塗りつぶすときに、このメソッドを呼び出します。  
@@ -178,19 +178,19 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  メニュー ボタンのデバイス コンテキストへのポインター。  
   
- [入力] `pButton`  
+ [in]*pButton*  
  ポインター、`CMFCToolBarButton`です。 フレームワークは、このボタンの背景を塗りつぶします。  
   
- [入力] `rect`  
+ [in]*rect*  
  メニュー ボタンの画像領域の境界を指定する四角形。  
   
- [入力] `state`  
+ [in]*状態*  
  ボタンの状態。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2312861a1b13ecb432c7893a27d72c61ecd78ef
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47cd25a92e572d02996008de9fc5265138d4ecb6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371700"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042379"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 Windows コモン SysLink コントロールの機能が用意されています。  
@@ -86,7 +86,7 @@ class CLinkCtrl : public CWnd
 |[CLinkCtrl::SetItemState](#setitemstate)|リンク コントロールの項目の状態を設定します。|  
 |[CLinkCtrl::SetItemUrl](#setitemurl)|リンク コントロールのアイテムで表される URL を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  「リンク制御」ウィンドウにハイパー テキスト リンクを埋め込むには便利な方法を提供します。 実際のコントロールは、テキストを表示し、ユーザーが埋め込みリンクをクリックしたときに、適切なアプリケーションを起動するウィンドウです。 複数のリンクは、1 つのコントロールではサポートされてし、0 から始まるインデックスによってアクセスできることができます。  
   
  このコントロール (したがって、`CLinkCtrl`クラス) は下にある Windows XP 以降を実行中のプログラムでのみ使用できます。  
@@ -102,7 +102,7 @@ class CLinkCtrl : public CWnd
   
  `CLinkCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl  
@@ -131,28 +131,28 @@ virtual BOOL Create(DWORD dwStyle,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  マークされた項目を表示するテキストを含む 0 で終わる文字列へのポインター。 詳細については、」の「マークアップとリンクのアクセス」セクションを参照してください。 [SysLink コントロールの概要](http://msdn.microsoft.com/library/windows/desktop/bb760706)です。  
   
- `dwStyle`  
+ *dwStyle*  
  リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 参照してください[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)で、`Windows SDK`詳細についてはします。  
   
- `rect`  
+ *rect*  
  リンク コントロールのサイズと位置を指定します。 いずれかになります、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。  
   
- `pParentWnd`  
+ *pParentWnd*  
  リンク コントロールの親ウィンドウを指定します。 なければなりません`NULL`です。  
   
- `nID`  
+ *nID*  
  リンク コントロールの ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  `true` 初期化が成功した場合それ以外の場合`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築する、 `CLinkCtrl` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出す`Create`、リンク コントロールを作成しにアタッチする、`CLinkCtrl`オブジェクト。 拡張ウィンドウ スタイルをコントロールに使用する場合は、呼び出す[適用](#createex)の代わりに`Create`です。  
   
- 2 番目の形式、`Create`メソッドは使用されなくなりました。 指定する最初の形式を使用して、`lpszLinkMarkup`パラメーター。  
+ 2 番目の形式、`Create`メソッドは使用されなくなりました。 指定する最初の形式を使用して、 *lpszLinkMarkup*パラメーター。  
   
 ### <a name="example"></a>例  
  次のコード例は、という名前の 2 つの変数を定義`m_Link1`と`m_Link2`、2 つのリンク コントロールのアクセスに使用されます。  
@@ -185,31 +185,31 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszLinkMarkup`  
+ *lpszLinkMarkup*  
  マークされた項目を表示するテキストを含む 0 で終わる文字列へのポインター。 詳細については、」の「マークアップとリンクのアクセス」セクションを参照してください。 [SysLink コントロールの概要](http://msdn.microsoft.com/library/windows/desktop/bb760706)です。  
   
- `dwExStyle`  
- リンク コントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、`dwExStyle`パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
+ *dwExStyle*  
+ リンク コントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
   
- `dwStyle`  
+ *dwStyle*  
  リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 詳細については、次を参照してください。[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)Windows SDK に含まれています。  
   
- `rect`  
+ *rect*  
  リンク コントロールのサイズと位置を指定します。 いずれかになります、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。  
   
- `pParentWnd`  
+ *pParentWnd*  
  リンク コントロールの親ウィンドウを指定します。 なければなりません`NULL`です。  
   
- `nID`  
+ *nID*  
  リンク コントロールの ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  `true` 初期化が成功した場合それ以外の場合`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して`CreateEx`の代わりに[作成](#create)拡張ウィンドウ スタイルの定数を適用します。  
   
- 2 番目の形式、`CreateEx`メソッドは使用されなくなりました。 指定する最初の形式を使用して、`lpszLinkMarkup`パラメーター。  
+ 2 番目の形式、`CreateEx`メソッドは使用されなくなりました。 指定する最初の形式を使用して、 *lpszLinkMarkup*パラメーター。  
   
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight  
  リンク コントロールの適切な高さを取得します。  
@@ -221,7 +221,7 @@ int GetIdealHeight() const;
 ### <a name="return-value"></a>戻り値  
  ピクセル単位で表したコントロールの適切な高さです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[LM_GETIDEALHEIGHT](http://msdn.microsoft.com/library/windows/desktop/bb760716)Windows SDK で説明されている。  
   
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize  
@@ -237,13 +237,13 @@ int GetIdealSize(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `cxMaxWidth`|ピクセル単位で、リンクの最大の幅。|  
-|[out] * `pSize`|Windows へのポインター[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造体。 このメソッドが戻るとき、`cy`のメンバー、`SIZE`構造で指定されたリンク テキストの幅の理想的なリンク テキストの高さに含まれる`cxMaxWidth`です。 `cx`構造体のメンバーには、実際に必要なリンク テキストの幅が含まれています。|  
+|[in]*cxMaxWidth*|ピクセル単位で、リンクの最大の幅。|  
+|[out] * *pSize*|Windows へのポインター[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されたリンク テキストの幅の理想的なリンク テキストの高さに含まれる*cxMaxWidth*です。 *Cx*構造体のメンバーには、実際に必要なリンク テキストの幅が含まれています。|  
   
 ### <a name="return-value"></a>戻り値  
- 適切な高さ (ピクセル単位)、このリンク テキスト。 戻り値は、同じの値として、`cy`のメンバー、`SIZE`構造体。  
+ 適切な高さ (ピクセル単位)、このリンク テキスト。 戻り値は、同じの値として、 *cy*のメンバー、`SIZE`構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  例については、`GetIdealSize`メソッドの例を参照してください[CLinkCtrl::Create](#create)です。  
   
  このメソッドは、送信、 [LM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760718) Windows SDK で説明するメッセージ。  
@@ -256,13 +256,13 @@ BOOL GetItem(PLITEM pItem) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  ポインター、 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)項目情報を受け取る構造です。  
   
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720)Windows SDK で説明されている。  
   
 ##  <a name="getitemid"></a>  CLinkCtrl::GetItemID  
@@ -280,7 +280,7 @@ BOOL GetItemID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iLink`  
+ *iLink*  
  リンク コントロールの項目のインデックス。  
   
  *strID*  
@@ -298,7 +298,7 @@ BOOL GetItemID(
 > [!NOTE]
 >  この関数も返します**FALSE**場合のバッファー *szID または strID*よりも小さい**MAX_LINKID_TEXT**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  特定のリンク コントロールの項目の ID を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK に含まれています。  
   
 ##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState  
@@ -312,19 +312,19 @@ BOOL GetItemState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iLink`  
+ *iLink*  
  リンク コントロールの項目のインデックス。  
   
- `pnState`  
+ *pnState*  
  指定された状態の項目の値です。  
   
- `stateMask`  
+ *対象*  
  取得するには、どの状態アイテムを記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、**状態**内のメンバー、 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)構造体。 許容される項目はで許可されているものと同じ**状態**です。  
   
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  特定のリンク コントロールの項目の指定された状態の項目の値を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK に含まれています。  
   
 ##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl  
@@ -342,13 +342,13 @@ BOOL GetItemUrl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iLink`  
+ *iLink*  
  リンク コントロールの項目のインデックス。  
   
- `strUrl`  
+ *strUrl*  
  A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)を指定した項目によって表される URL を含むオブジェクトを  
   
- `szUrl`  
+ *szUrl*  
  指定した項目によって表される URL を含む null で終わる文字列  
   
  *cchUrl*  
@@ -360,7 +360,7 @@ BOOL GetItemUrl(
 > [!NOTE]
 >  この関数も返します**FALSE**場合のバッファー *szUrl または strUrl*よりも小さい**MAX_LINKID_TEXT**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定したリンク コントロールの項目で表される URL を取得します。 詳細については、Win32 メッセージを参照してください。 [LM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760720) Windows SDK に含まれています。  
   
 ##  <a name="hittest"></a>  CLinkCtrl::HitTest  
@@ -377,7 +377,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[LM_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb760722)Windows SDK で説明されている。  
   
 ##  <a name="setitem"></a>  CLinkCtrl::SetItem  
@@ -388,13 +388,13 @@ BOOL SetItem(PLITEM pItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  ポインター、 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)設定情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724)Windows SDK で説明されている。  
   
 ##  <a name="setitemid"></a>  CLinkCtrl::SetItemID  
@@ -407,7 +407,7 @@ BOOL SetItemID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iLink`  
+ *iLink*  
  リンク コントロールの項目のインデックス。  
   
  *szID*  
@@ -416,7 +416,7 @@ BOOL SetItemID(
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  特定のリンク コントロールの項目の ID を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK に含まれています。  
   
 ##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState  
@@ -430,19 +430,19 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iLink`  
+ *iLink*  
  リンク コントロールの項目のインデックス。  
   
- `pnState`  
+ *pnState*  
  設定されている指定された状態の項目の値です。  
   
- `stateMask`  
+ *対象*  
  設定されている状態の項目を記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、**状態**内のメンバー、 [LITEM](http://msdn.microsoft.com/library/windows/desktop/bb760710)構造体。 許容される項目はで許可されているものと同じ**状態**です。  
   
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  特定のリンク コントロールの項目の指定された状態の項目の値を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK に含まれています。  
   
 ##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl  
@@ -455,16 +455,16 @@ BOOL SetItemUrl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iLink`  
+ *iLink*  
  リンク コントロールの項目のインデックス。  
   
- `szUrl`  
+ *szUrl*  
  指定した項目によって表される URL を含む null で終わる文字列  
   
 ### <a name="return-value"></a>戻り値  
  返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定したリンク コントロールの項目で表される URL を設定します。 詳細については、Win32 メッセージを参照してください。 [LM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb760724) Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  

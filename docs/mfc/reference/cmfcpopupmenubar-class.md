@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374475"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037759"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar クラス
 ポップアップ メニューに埋め込まれたメニュー バーです。  
@@ -100,11 +100,11 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|アプリケーションがある Windows XP の外観とグレーのサイドバーが表示されるかどうかを指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCPopupMenuBar`と同時に作成された、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)内に埋め込まれたとします。 `CMFCPopupMenuBar`の全体のクライアント領域を覆う、`CMFCPopupMenu`オブジェクト。 キーボードとマウス入力をサポートします。 入力とも通信、`CMFCPopupMenu`と最上位のフレーム ウィンドウにします。  
   
 ## <a name="example"></a>例  
@@ -129,7 +129,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
  [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxpopupmenubar.h  
   
 ##  <a name="adjustsizeimmediate"></a>  CMFCPopupMenuBar::AdjustSizeImmediate  
@@ -140,10 +140,10 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  `TRUE` ポップアップ メニュー バー ペインのレイアウトを自動的に再計算するにはそれ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="buildorigitems"></a>  CMFCPopupMenuBar::BuildOrigItems  
  指定されたメニュー リソースからのポップアップ メニュー項目を読み込みます。  
@@ -153,13 +153,13 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiMenuResID`  
+ [in]*uiMenuResID*  
  読み込むメニュー リソースのメニュー ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  返します`TRUE`正常終了した場合または`FALSE`しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="closedelayedsubmenu"></a>  CMFCPopupMenuBar::CloseDelayedSubMenu  
  実行が遅れているポップアップ メニュー ボタンを閉じます。  
@@ -168,7 +168,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 virtual void CloseDelayedSubMenu();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu  
  ポップアップ メニュー ボタンから表示するメニューを作成します。  
@@ -180,7 +180,7 @@ virtual HMENU ExportToMenu() const;
 ### <a name="return-value"></a>戻り値  
  新しいメニューにハンドルを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="finddestintationtoolbar"></a>  CMFCPopupMenuBar::FindDestintationToolBar  
  指定したポイントがあるツールバーを検索します。  
@@ -190,13 +190,13 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `point`  
+ [in]*ポイント*  
  画面上のポイント。  
   
 ### <a name="return-value"></a>戻り値  
  ハンドルを返します、ツールバー、点がある場所 therei が、いずれかである場合または`NULL`しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcurrentmenuimagesize"></a>  CMFCPopupMenuBar::GetCurrentMenuImageSize  
  メニュー ボタンのイメージのサイズを示します。  
@@ -208,7 +208,7 @@ virtual CSize GetCurrentMenuImageSize() const;
 ### <a name="return-value"></a>戻り値  
  ツールバーのメニュー ボタンのイメージのサイズを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getdefaultmenuid"></a>  CMFCPopupMenuBar::GetDefaultMenuId  
  既定のメニュー項目の識別子を返します。  
@@ -220,7 +220,7 @@ UINT GetDefaultMenuId() const;
 ### <a name="return-value"></a>戻り値  
  ポップアップ メニュー バーで、既定のメニュー項目の識別子を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getlastcommandindex"></a>  CMFCPopupMenuBar::GetLastCommandIndex  
  最後に呼び出したのメニュー コマンドのインデックスを取得します。  
@@ -232,7 +232,7 @@ static int __stdcall GetLastCommandIndex();
 ### <a name="return-value"></a>戻り値  
  呼び出された最後のメニュー コマンドのインデックスを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getoffset"></a>  CMFCPopupMenuBar::GetOffset  
  ポップアップ メニュー バーの行オフセットを取得します。  
@@ -244,7 +244,7 @@ int GetOffset() const;
 ### <a name="return-value"></a>戻り値  
  ポップアップ メニュー バーの行オフセットを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用してこの値を設定[CMFCPopupMenuBar::SetOffset](#setoffset)です。  
   
 ##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu  
@@ -257,16 +257,16 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hMenu`  
+ [in]*hMenu*  
  ポップアップ メニュー ボタンのインポート元のメニュー。  
   
- [入力] `bShowAllCommands`  
+ [in]*bShowAllCommands*  
  `TRUE` メニューのすべてのコマンドをインポートする場合または`FALSE`場合はあまり使用されないものを非表示にすることがあります。  
   
 ### <a name="return-value"></a>戻り値  
  返します`TRUE`メニュー ボタンは、メニューから正常にインポートされていない場合または`FALSE`しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isdropdownlistmode"></a>  CMFCPopupMenuBar::IsDropDownListMode  
  ポップアップ メニュー バーが、ドロップ ダウン リスト モードにするかどうかを示します。  
@@ -278,7 +278,7 @@ BOOL IsDropDownListMode() const;
 ### <a name="return-value"></a>戻り値  
  返します`TRUE`ポップアップ メニュー バーは、ドロップ ダウン リスト モードの場合、または`FALSE`しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ispalettemode"></a>  CMFCPopupMenuBar::IsPaletteMode  
  ポップアップ メニュー バーがパレット モードであるかどうかを示します。  
@@ -290,7 +290,7 @@ BOOL IsPaletteMode() const;
 ### <a name="return-value"></a>戻り値  
  返します`TRUE`パレット モードが有効になっている場合または`FALSE`しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メニュー バーがパレット モードに設定されている場合は、複数の列と行の制限数にメニュー項目が表示されます。  
   
 ##  <a name="isribbonpanel"></a>  CMFCPopupMenuBar::IsRibbonPanel  
@@ -303,7 +303,7 @@ virtual BOOL IsRibbonPanel() const;
 ### <a name="return-value"></a>戻り値  
  返します`FALSE`既定では、リボン パネルではないことを示すです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
  リボン パネル通常モードであるかどうかを示します (`FALSE`既定)。  
@@ -315,7 +315,7 @@ virtual BOOL IsRibbonPanelInRegularMode() const;
 ### <a name="return-value"></a>戻り値  
  返します`FALSE`既定ではないことを示すこのリボン パネル通常モードにします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="loadfromhash"></a>  CMFCPopupMenuBar::LoadFromHash  
  アーカイブ済みのメニューを読み込みます。  
@@ -325,13 +325,13 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hMenu`  
+ [in]*hMenu*  
  読み込むには、アーカイブされたメニューへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  返します`TRUE`、メニューが正常に読み込まれている場合または`FALSE`しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
  Windows XP の外観にある場合に、アプリケーションがグレーのサイドバーがかどうかを示すブール値パラメーターです。  
@@ -340,7 +340,7 @@ BOOL LoadFromHash(HMENU hMenu);
 BOOL m_bDisableSideBarInXPMode;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー変数に設定されている場合`FALSE`アプリケーションが Windows XP の外観をしていると、フレームワークは、アプリケーションでグレーのサイドバーを描画します。  
   
  既定値は `FALSE` です。  
@@ -352,7 +352,7 @@ BOOL m_bDisableSideBarInXPMode;
 virtual void RestoreDelayedSubMenu();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setbuttonstyle"></a>  CMFCPopupMenuBar::SetButtonStyle  
  指定したインデックス位置には、ツールバーのボタンのスタイルを設定します。 (上書き[CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle))。  
@@ -364,13 +364,13 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  スタイルを設定する、ツール バー ボタンの 0 から始まるインデックス。  
   
- [入力] `nStyle`  
+ [in]*nStyle*  
  ボタンのスタイルです。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)利用できるツール バー ボタンのスタイルの一覧についてはします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset  
  ポップアップ メニュー バーの行オフセットを設定します。  
@@ -380,10 +380,10 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iOffset`  
+ [in]*iOffset*  
  ポップアップ メニュー バーをオフセットするか行の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="startpopupmenutimer"></a>  CMFCPopupMenuBar::StartPopupMenuTimer  
  指定された遅延のポップアップ メニュー ボタン用タイマーを開始します。  
@@ -395,13 +395,13 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMenuButton`  
+ [in]*pMenuButton*  
  遅延タイマーを設定する対象のメニュー ボタンへのポインター。  
   
- [入力] `nDelayFactor`  
+ [in]*nDelayFactor*  
  遅延係数、少なくとも 1 つに、標準のメニューの遅延時間 (0.5 秒間一般に、5 秒) での乗算に等しい。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

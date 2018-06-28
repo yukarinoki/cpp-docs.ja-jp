@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369848"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039974"
 ---
 # <a name="colelinkingdoc-class"></a>直接クラス
 OLE コンテナー ドキュメントの基底クラスです。OLE コンテナー ドキュメントは、ドキュメントが保持する埋め込みアイテムへのリンクをサポートします。  
@@ -64,7 +64,7 @@ class COleLinkingDoc : public COleDocument
 |[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|指定された埋め込み項目を検索します。|  
 |[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|指定したリンク アイテムを検索します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  埋め込みアイテムへのリンクをサポートするコンテナー アプリケーションは、コンテナーと呼ばれる、"リンクします" [OCLIENT](../../visual-cpp-samples.md)サンプル アプリケーションは、リンクのコンテナーの例を示します。  
   
  リンクされた項目のソースが別のドキュメントに埋め込まれたアイテムの場合は、そのコンテナーのドキュメントを編集しようとする埋め込みアイテムの順序で読み込む必要があります。 このため、リンク コンテナーは、ユーザーがリンクされた項目のソースを編集するときに別のコンテナー アプリケーションによって起動できる必要があります。 アプリケーションを使用する必要がありますも、 [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)クラスのプログラムで起動されたときにドキュメントを作成できるようにします。  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- 接続、`COleTemplateServer`オブジェクトを呼び出して、オブジェクトのドキュメント テンプレートを`ConnectTemplate`メンバー関数、およびすべてのクラス オブジェクトを呼び出すことによって OLE システムに登録**COleTemplateServer::RegisterAll**:  
+ 接続、`COleTemplateServer`オブジェクトを呼び出して、オブジェクトのドキュメント テンプレートを`ConnectTemplate`メンバー関数、およびすべてのクラス オブジェクトを呼び出すことによって OLE システムに登録`COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -98,7 +98,7 @@ class COleLinkingDoc : public COleDocument
   
  `COleLinkingDoc`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
@@ -108,7 +108,7 @@ class COleLinkingDoc : public COleDocument
 COleLinkingDoc();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す必要があります、 `Register` OLE ドキュメントが開いていることを通知するメンバー関数。  
   
 ##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
@@ -119,13 +119,13 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszItemName`  
+ *lpszItemName*  
  埋め込み OLE アイテムの名前へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  指定された項目へのポインター**NULL**場合は、項目は見つかっていません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装では、指定した名前 (名前の比較では大文字小文字を区別) を持つ項目の埋め込まれた項目の一覧を検索します。 独自のメソッドの格納や埋め込み OLE アイテムの名前を付ける必要がある場合は、この関数をオーバーライドします。  
   
 ##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
@@ -136,13 +136,13 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszItemName`  
+ *lpszItemName*  
  リンクされた OLE アイテムの名前へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  指定された項目へのポインター**NULL**場合は、項目は見つかっていません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定値`COleLinkingDoc`実装は常に返します**NULL**です。 この関数は、派生クラスでオーバーライドされる`COleServerDoc`のリンクされた項目の指定した名前 (名前の比較では大文字小文字を区別) OLE サーバー項目のリストを検索します。 格納や、リンク サーバーのアイテムを取得する独自のメソッドを実装している場合は、この関数をオーバーライドします。  
   
 ##  <a name="register"></a>  COleLinkingDoc::Register  
@@ -158,13 +158,13 @@ BOOL Register(
  *pFactory*  
  OLE ファクトリ オブジェクトへのポインター (できます**NULL**)。  
   
- `lpszPathName`  
+ *終了*  
  コンテナー ドキュメントの完全修飾パスへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  以外の場合は、ドキュメントが正常に登録します。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成または OLE システム Dll で、ドキュメントを登録する名前付きのファイルを開くときは、この関数を呼び出します。 ドキュメントが埋め込まれた項目を表す場合は、この関数を呼び出す必要はありません。  
   
  使用している場合`COleTemplateServer`、アプリケーションで`Register`によって呼び出されます`COleLinkingDoc`の実装の`OnNewDocument`、 `OnOpenDocument`、および`OnSaveDocument`です。  
@@ -176,7 +176,7 @@ BOOL Register(
 void Revoke();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  OLE システム Dll のドキュメントの登録を取り消すには、この関数を呼び出します。  
   
  名前付きのファイルを閉じるときに、この関数を呼び出す必要がありますが、通常必要はありませんメソッドを直接呼び出す。 `Revoke` によって呼び出されます`COleLinkingDoc`の実装の`OnCloseDocument`、 `OnNewDocument`、 `OnOpenDocument`、および`OnSaveDocument`です。  

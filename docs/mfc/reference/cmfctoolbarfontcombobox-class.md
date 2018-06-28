@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3826a1a649cf4a2c3f292b660e90384edac2575e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373528"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040091"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox クラス
 ユーザーがシステム フォントの一覧からフォントを選択できるコンボ ボックス コントロールを含むツール バー ボタンです。  
@@ -57,14 +57,14 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
  [CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)  
  フォント コンボ ボックス内の文字の高さ。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  フォント コンボ ボックス ボタンをツールバーに追加するには、次の手順を実行します。  
   
 1.  親ツール バー リソースでボタンのダミー リソース ID を予約します。  
   
 2.  `CMFCToolBarFontComboBox` オブジェクトを構築します。  
   
-3.  処理するメッセージ ハンドラーで、`AFX_WM_RESETTOOLBAR`メッセージで、元のボタンを使用して、新しいコンボ ボックス ボタンを置き換える[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)です。  
+3.  AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで、元ボタンを置き換える新しいコンボ ボックス ボタンを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)です。  
   
 4.  使用して、ドキュメント内のフォント コンボ ボックスで選択されているフォントの同期、 [CMFCToolBarFontComboBox::SetFont](#setfont)メソッドです。  
   
@@ -81,7 +81,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtoolbarfontcombobox.h  
   
 ##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
@@ -110,13 +110,13 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiID`  
+ [in]*uiID*  
  コンボ ボックスのコマンド ID。  
   
- [入力] `iImage`  
+ [in]*画像*  
  ツール バー イメージの 0 から始まるインデックス。 イメージが格納されて、 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトを[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)クラスを保持します。  
   
- [入力] `nFontType`  
+ [in]*nFontType*  
  コンボ ボックスに表示されるフォントの種類。 このパラメーターは、次の値の組み合わせ (論理 OR) を指定できます。  
   
  DEVICE_FONTTYPE  
@@ -125,23 +125,23 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [入力] `nCharSet`  
+ [in]*nCharSet*  
  DEFAULT_CHARSET、コンボ ボックスに設定するには、すべての文字セットでフォントすべて一意な名前にはが含まれて 場合。 (同じ名前の 2 つのフォントがある場合は、コンボ ボックスが含まれていますうちの 1 つです。)場合は、コンボ ボックス、有効な文字セット値に設定するには、指定された文字セット内のフォントのみが含まれています。 参照してください[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)可能な文字の一覧についてを設定します。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  コンボ ボックスのスタイルです。 (を参照してください[コンボ ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [入力] `iWidth`  
+ [in]*iWidth*  
  エディット コントロールのピクセル単位の幅。  
   
- [入力] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  DEFAULT_PITCH、コンボ ボックスに設定するには、ピッチに関係なくフォントが含まれて 場合。 かどうか FIXED_PITCH または VARIABLE_PITCH に設定して、コンボ ボックス フォントのみを含む、ピッチ タイプにします。 フォント ファミリに基づいたフィルター処理は現在サポートされていません。  
   
- [出力] `pLstFontsExternal`  
+ [out]*pLstFontsExternal*  
  ポインター、 [CObList クラス](../../mfc/reference/coblist-class.md)使用できるフォントを格納するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 通常、`CMFCToolBarFontComboBox`オブジェクトは、単一の共有に使用できるフォントの一覧を格納`CObList`オブジェクト。 有効なポインターを指定するし、コンス トラクターの 2 番目のオーバー ロードを使用して`pLstFontsExternal`、その`CMFCToolBarFontComboBox`オブジェクトがいっぱいに代わりに、`CObList`を`pLstFontsExternal`使用可能なフォントを持つを指します。  
+### <a name="remarks"></a>Remarks  
+ 通常、`CMFCToolBarFontComboBox`オブジェクトは、単一の共有に使用できるフォントの一覧を格納`CObList`オブジェクト。 有効なポインターを指定するし、コンス トラクターの 2 番目のオーバー ロードを使用して*pLstFontsExternal*、その`CMFCToolBarFontComboBox`オブジェクトがいっぱいに代わりに、`CObList`を*pLstFontsExternal*使用可能なフォントを指します。  
   
 ### <a name="example"></a>例  
  次の例で作成する方法、`CMFCToolBarFontComboBox`オブジェクト。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。  
@@ -156,11 +156,11 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  コンボ ボックスの項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CMFCFontInfo`オブジェクト。 場合`iIndex`、有効な項目のインデックスが指定されていません、戻り値は`NULL`します。  
+ ポインター、`CMFCFontInfo`オブジェクト。 場合*iIndex* 、有効な項目のインデックスが指定されていません、戻り値は`NULL`します。  
   
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  コンボ ボックスがオーナー描画スタイルを持つ場合のフォント コンボ ボックス内の文字のピクセル単位の高さを指定します。  
@@ -169,7 +169,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 static int m_nFontHeight  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合、`m_nFontHeight`変数が 0 の場合に応じて既定のフォント コンボ ボックスの高さが自動的に計算されます。 高さには、ベースラインより上の文字の上昇とベースラインの下にある文字のディセントの両方が含まれています。  
   
 ##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
@@ -183,20 +183,20 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszName`  
+ [in]*lpszName*  
  フォントの名前またはプレフィックスを指定します。  
   
- [入力] `nCharSet`  
+ [in]*nCharSet*  
  文字セットを指定します。  
   
- [入力] `bExact`  
- 指定するかどうか`lpszName`フォント名またはフォントのプレフィックスが含まれています。  
+ [in]*bExact*  
+ 指定するかどうか*lpszName*フォント名またはフォントのプレフィックスが含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  フォントが正常に選択されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 場合`bExact`は`TRUE`、このメソッドは、として指定した名前と一致するフォントを選択`lpszName`です。 場合`bExact`は`FALSE`、このメソッドの選択として指定されたテキストで始まるフォント`lpszName`として指定した文字セットを使用して`nCharSet`です。 場合`nCharSet`設定されている DEFAULT_CHARSET に、文字セットはされ、無視されたのみ`lpszName`フォントを選択するために使用されます。  
+### <a name="remarks"></a>Remarks  
+ 場合*bExact*は`TRUE`、このメソッドは、として指定した名前と一致するフォントを選択*lpszName*です。 場合*bExact*は`FALSE`、このメソッドの選択として指定されたテキストで始まるフォント*lpszName*として指定した文字セットを使用して*nCharSet*. 場合*nCharSet*設定されている DEFAULT_CHARSET に、文字セットはされ、無視されたのみ*lpszName*フォントを選択するために使用されます。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

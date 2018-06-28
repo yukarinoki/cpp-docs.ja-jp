@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58469086089dafe2447446723e06d6aa20a845c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1788e5f3938cc496e66aa24d6d1b6a37603e7d7b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369753"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039948"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager クラス
 により、ユーザーは、さまざまなコマンドを関連付ける特定[CView](../../mfc/reference/cview-class.md)オブジェクトのビューの内側をダブルクリックします。  
@@ -63,8 +63,8 @@ class CMouseManager : public CObject
 |[CMouseManager::SaveState](#savestate)|書き込みます、 `CMouseManager` Windows レジストリに状態です。|  
 |[CMouseManager::SetCommandForDblClk](#setcommandfordblclk)|指定されたコマンドと、指定されたビューを関連付けます。|  
   
-## <a name="remarks"></a>コメント  
- `CMouseManager`クラスのコレクションを保持する`CView`オブジェクト。 各ビューは ID と名前によって識別されます。 これらのビューが示すように、**カスタマイズ** ダイアログ ボックス。 ユーザーが経由の任意のビューに関連付けられているコマンドを変更できる、**カスタマイズ** ダイアログ ボックス。 ビューにユーザーをダブルクリックすると、関連付けられたコマンドが実行されます。 これをサポートするコーディングの面から、処理する必要があります、`WM_LBUTTONDBLCLK`メッセージと呼び出し、 [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick)をコード内の関数`CView`オブジェクト.  
+## <a name="remarks"></a>Remarks  
+ `CMouseManager`クラスのコレクションを保持する`CView`オブジェクト。 各ビューは ID と名前によって識別されます。 これらのビューが示すように、**カスタマイズ** ダイアログ ボックス。 ユーザーが経由の任意のビューに関連付けられているコマンドを変更できる、**カスタマイズ** ダイアログ ボックス。 ビューにユーザーをダブルクリックすると、関連付けられたコマンドが実行されます。 これをサポートするコーディングの面から、したメッセージと呼び出しを処理する必要があります、 [CWinAppEx::OnViewDoubleClick](../../mfc/reference/cwinappex-class.md#onviewdoubleclick)をコード内の関数`CView`オブジェクト.  
   
  作成しないようにする、`CMouseManager`手動でのオブジェクトします。 アプリケーションのためにフレームワークによって作成されます。 これも破棄されます自動的にユーザーがアプリケーションを終了するときにします。 アプリケーションのマウス マネージャーへのポインターを取得、呼び出す[CWinAppEx::GetMouseManager](../../mfc/reference/cwinappex-class.md#getmousemanager)です。  
   
@@ -73,7 +73,7 @@ class CMouseManager : public CObject
   
  `CMouseManager`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxmousemanager.h  
   
 ##  <a name="addview"></a>  CMouseManager::AddView  
@@ -93,28 +93,28 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iViewId`  
+ [in]*iViewId*  
  ビューの id です。  
   
- [入力] `uiViewNameResId`  
+ [in]*uiViewNameResId*  
  ビュー名を参照するリソースの文字列 ID。  
   
- [入力] `uiIconId`  
+ [in]*uiIconId*  
  ビューのアイコンの id です。  
   
- [入力] `iId`  
+ [in]*iId*  
  ビューの id です。  
   
- [入力] `lpszViewName`  
+ [in]*lpszViewName*  
  ビューの名前。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  マウスをカスタムの動作をサポートするためには、ビューに登録する必要があります、`CMouseManager`オブジェクト。 派生した任意のオブジェクト、`CView`クラスは、マウス マネージャーに登録することができます。 文字列と、ビューに関連付けられているアイコンで表示されます、**マウス**のタブ、**カスタマイズ** ダイアログ ボックス。  
   
- 作成およびようにビューの Id を管理するプログラマの責任である`iViewId`と`iId`です。  
+ 作成およびようにビューの Id を管理するプログラマの責任である*iViewId*と*iId*です。  
   
  マウスのカスタム動作を提供する方法の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)です。  
   
@@ -131,7 +131,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iId`  
+ [in]*iId*  
  ビューの id です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -145,13 +145,13 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iViewId`  
+ [in]*iViewId*  
  ビューの id です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、アイコン リソースの識別子それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、ビューが最初に登録されていない場合、このメソッドは失敗[CMouseManager::AddView](#addview)です。  
   
 ##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName  
@@ -162,13 +162,13 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszName`  
+ [in]*lpszName*  
  ビューの名前。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は、ビュー IDそれ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは検索を使用して登録されているビューを通じて[CMouseManager::AddView](#addview)です。  
   
 ##  <a name="getviewnames"></a>  CMouseManager::GetViewNames  
@@ -179,10 +179,10 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `listOfNames`  
+ [out]*listOfNames*  
  参照を`CStringList`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、パラメーター、塗りつぶします`listOfNames`を使用して登録されているすべてのビューの名前を持つ[CMouseManager::AddView](#addview)です。  
   
 ##  <a name="loadstate"></a>  CMouseManager::LoadState  
@@ -193,14 +193,14 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  レジストリ キーのパス。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- レジストリから読み込まれた状態の情報には、登録済みのビュー、ビュー識別子、および関連付けられたコマンドが含まれています。 場合、パラメーター`lpszProfileName`は`NULL`、この関数は読み込みます、`CMouseManager`によって制御される既定のレジストリの場所からデータを[CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ レジストリから読み込まれた状態の情報には、登録済みのビュー、ビュー識別子、および関連付けられたコマンドが含まれています。 場合、パラメーター *lpszProfileName*は`NULL`、この関数は読み込みます、`CMouseManager`によって制御される既定のレジストリの場所からデータを[CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)です。  
   
  ほとんどの場合、この関数を直接呼び出すにはありません。 ワークスペースの初期化プロセスの一部として呼び出されます。 ワークスペースの初期化処理の詳細については、次を参照してください。 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)です。  
   
@@ -212,14 +212,14 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  レジストリ キーのパス。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- レジストリに書き込まれる状態情報には、登録されているすべてのビュー、ビュー識別子、および関連するコマンドが含まれています。 場合、パラメーター`lpszProfileName`は`NULL`、この関数を書き込みます、`CMouseManager`によって制御される既定のレジストリの場所へのデータ、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ レジストリに書き込まれる状態情報には、登録されているすべてのビュー、ビュー識別子、および関連するコマンドが含まれています。 場合、パラメーター *lpszProfileName*は`NULL`、この関数を書き込みます、`CMouseManager`によって制御される既定のレジストリの場所へのデータ、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)です。  
   
  ほとんどの場合、この関数を直接呼び出すにはありません。 ワークスペースのシリアル化プロセスの一部として呼び出されます。 ワークスペースのシリアル化プロセスの詳細については、次を参照してください。 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)です。  
   
@@ -233,16 +233,16 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iViewId`  
+ [in]*iViewId*  
  ビューの識別子です。  
   
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  コマンドの識別子です。  
   
-### <a name="remarks"></a>コメント  
- ビューとカスタム コマンドを関連付けるためにする必要があります最初、ビューを使用して登録[CMouseManager::AddView](#addview)です。 `AddView`メソッドには、入力パラメーターとしてビュー識別子が必要です。 ビューを登録した後は、呼び出す`CMouseManager::SetCommandForDblClk`を同じビュー識別子入力パラメーターに指定した`AddView`です。 その後、ユーザーをダブルクリックすると、登録済みのビューで、マウス、アプリケーションはコマンドを実行、によって示される`uiCmd.`カスタム マウスの動作をサポートするためにも必要になります、マウスのマネージャーに登録されているビューをカスタマイズします。 マウスのカスタム動作の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../keyboard-and-mouse-customization.md)です。  
+### <a name="remarks"></a>Remarks  
+ ビューとカスタム コマンドを関連付けるためにする必要があります最初、ビューを使用して登録[CMouseManager::AddView](#addview)です。 `AddView`メソッドには、入力パラメーターとしてビュー識別子が必要です。 ビューを登録した後は、呼び出す`CMouseManager::SetCommandForDblClk`を同じビュー識別子入力パラメーターに指定した`AddView`です。 その後、ユーザーをダブルクリックすると、登録済みのビューで、マウス、アプリケーションはコマンドを実行、によって示される*uiCmd です。* マウスのカスタム動作をサポートするためには、マウス マネージャーに登録されているビューをカスタマイズする必要があります。 マウスのカスタム動作の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../keyboard-and-mouse-customization.md)です。  
   
- 場合`uiCmd`設定は 0 に、指定されたビューは、コマンドを使用して関連付けられなくです。  
+ 場合*uiCmd*設定は 0 に、指定されたビューは、コマンドを使用して関連付けられなくです。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370169"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041249"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton クラス
 `CMFCRibbonUndoButton`クラスは、最新のユーザー コマンドを含むドロップダウン リスト ボタンを実装します。 ユーザーは、1 つ以上の最新のコマンドを元に戻すかやり直すにドロップダウン リストから選択できます。  
@@ -59,7 +59,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 |[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|ユーザーがドロップダウン リストから選択した項目の数を決定します。|  
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|オブジェクトにメニューが含まれるかどうかを示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCRibbonUndoButton`クラスでは、スタックを使用して、ドロップダウン リストを表します。  
   
 ## <a name="example"></a>例  
@@ -78,7 +78,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxribbonundobutton.h  
   
 ##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  ドロップダウン リストに表示されるアクション ラベルです。  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  コマンド識別子を指定します。  
   
- [入力] `lpszText`  
+ [in]*lpszText*  
  ボタンのテキスト ラベルを指定します。  
   
- [入力] `nSmallImageIndex`  
+ [in]*nSmallImageIndex*  
  イメージ リストには、ボタンの小さな画像の親オブジェクトの 0 から始まるインデックス。  
   
- [入力] `nLargeImageIndex`  
+ [in]*nLargeImageIndex*  
  イメージ リストには親オブジェクトの 0 から始まるインデックス、ボタンのイメージの大規模なのです。  
   
- [入力] `hIcon`  
+ [in]*hIcon*  
  ボタンのイメージとして使用できるアイコンへのハンドル。  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
@@ -152,7 +152,7 @@ virtual BOOL HasMenu() const;
 ### <a name="return-value"></a>戻り値  
  常に `TRUE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

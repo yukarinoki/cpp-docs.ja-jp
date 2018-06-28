@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367917"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040234"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog クラス
 `CMFCColorDialog`クラスは、色の選択 ダイアログ ボックスを表します。  
@@ -72,7 +72,7 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |`m_bIsMyPalette`|`TRUE` 色の選択 ダイアログ ボックスで、独自の色パレットを使用する場合または`FALSE` ダイアログ ボックスがで指定されているパレットを使用するかどうか、`CMFCColorDialog`コンス トラクターです。|  
 |`m_bPickerMode`|`TRUE` ユーザーが選択 ダイアログ ボックスから色を選択するときにそれ以外の場合、`FALSE`です。|  
@@ -87,7 +87,7 @@ class CMFCColorDialog : public CDialogEx
 |`m_wndColors`|カラー ピッカー コントロール オブジェクトです。|  
 |`m_wndStaticPlaceHolder`|カラー ピッカーのプロパティ シートのプレース ホルダーである静的なコントロールします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  色の選択 ダイアログ ボックスは、2 つのページで、プロパティ シートとして表示されます。 最初のページで、システム パレットから標準色を選択します。2 番目のページでは、カスタムの色を選択します。  
   
  構築することができます、`CMFCColorDialog`スタック上のオブジェクトを呼び出す`DoModal`、最初の色をパラメーターとして渡す、`CMFCColorDialog`コンス トラクター。 色の選択 ダイアログ ボックスは、いくつか作成[CMFCColorPickerCtrl クラス](../../mfc/reference/cmfccolorpickerctrl-class.md)各色パレットを処理するオブジェクト。  
@@ -110,7 +110,7 @@ class CMFCColorDialog : public CDialogEx
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcolordialog.h  
   
 ##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
@@ -125,21 +125,21 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `clrInit`  
+ [in]*clrInit*  
  既定の色の選択 値が指定されていない場合は、既定では RGB(0,0,0) (黒です)。  
   
- [入力] `dwFlags`  
+ [in]*dwFlags*  
  (予約されています。)  
   
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  ダイアログ ボックスの親ウィンドウまたはオーナー ウィンドウへのポインター。  
   
- [入力] `hPal`  
+ [in]*hPal*  
  カラー パレットへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  色のダイアログで、ユーザーが選択した色を取得します。  
@@ -151,7 +151,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色のダイアログ ボックスで選択した色の RGB 情報を含む値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出した後に、この関数を呼び出して、`DoModal`メソッドです。  
   
 ##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
@@ -164,7 +164,7 @@ CPalette* GetPalette() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、`CPalette`で指定されているオブジェクト、`CMFCColorDialog`コンス トラクターです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  カラー パレットは、ユーザーが選択できる色を指定します。  
   
 ##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
@@ -182,10 +182,10 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `rgb`  
+ [in]*rgb*  
  色の RGB 値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  最も類似したは、現在のパレットで色を現在の色を設定します。  
@@ -195,10 +195,10 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `rgb`  
+ [in]*rgb*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) RGB 色を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  色 ダイアログ ボックスの最初のプロパティ ページで選択した色の赤、緑、および青の要素を明示的に指定します。  
@@ -211,16 +211,16 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `R`  
+ [in]*R*  
  RGB 値の赤の要素を指定します。  
   
- [入力] `G`  
+ [in]*G*  
  RGB 値の緑の成分を指定します。  
   
- [入力] `B`  
+ [in]*B*  
  RGB 値の青の成分を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  色のダイアログの 2 番目のプロパティ ページで選択した色の赤、緑、および青の要素を明示的に指定します。  
@@ -233,16 +233,16 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `R`  
+ [in]*R*  
  RGB 値の赤の要素を指定します  
   
- [入力] `G`  
+ [in]*G*  
  RGB 値の緑の成分を指定します  
   
- [入力] `B`  
+ [in]*B*  
  RGB 値の青の成分を指定します  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

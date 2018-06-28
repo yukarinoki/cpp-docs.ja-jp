@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368801"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037962"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar クラス
 A`CMFCReBar`オブジェクトは、レイアウト、永続性、および rebar コントロールの状態情報を提供するコントロール バーです。  
@@ -72,7 +72,7 @@ class CMFCReBar : public CPane
 |[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/e139f06a-9793-4ee2-bc3d-517389368c77))。|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(上書き[CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment))。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  A`CMFCReBar`オブジェクトは、さまざまな子ウィンドウを含めることができます。 これには、エディット ボックス、ツールバー、およびリスト ボックスが含まれます。 サイズを変更する、rebar プログラムでは、またはユーザー手動でサイズを変更できる、rebar のグリッパー バーをドラッグしています。 任意のビットマップに rebar オブジェクトの背景を設定することもできます。  
   
  Rebar オブジェクトは、ツールバーのオブジェクトと同様に動作します。 Rebar コントロールは、1 つまたは複数のバンドを含めることができ、各バンドはグリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウを含めることができます。  
@@ -88,7 +88,7 @@ class CMFCReBar : public CPane
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxRebar.h  
   
 ##  <a name="addbar"></a>  CMFCReBar::AddBar  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in][out] `pBar`  
+ [in][out]*pBar*  
  Rebar に挿入するのには、子ウィンドウへのポインター。 参照先オブジェクトには、 **WS_CHILD**ウィンドウ スタイル。  
   
- [入力] `pszText`  
+ [in]*pszText*  
  Rebar に表示するテキストを指定します。 テキストは、子ウィンドウの一部ではありません。 代わりに、rebar 自体に表示されます。  
   
- [in][out] `pbmp`  
+ [in][out]*pbmp*  
  Rebar の背景に表示されるビットマップを指定します。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  バンドに適用するスタイルが含まれています。 帯域外スタイルの一覧については、説明を参照してください。`fStyle`で、 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Windows SDK のドキュメントの構造体。  
   
- [入力] `clrFore`  
+ [in]*clrFore*  
  Rebar の前景色を表します。  
   
- [入力] `clrBack`  
+ [in]*clrBack*  
  Rebar の背景色を表します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -143,22 +143,22 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  この rebar コントロールの親ウィンドウへのポインター。  
   
- [入力] `dwCtrlStyle`  
+ [in]*ツール バー*  
  Rebar コントロールのスタイルを指定します。 既定のスタイル値は**RBS_BANDBORDERS**」が表示されますが、rebar コントロール上の隣接するバンドの区切り線を絞り込みます。 有効なスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK のドキュメントです。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  Rebar コントロールのウィンドウ スタイル。 有効なスタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)です。  
   
- [入力] `nID`  
+ [in]*nID*  
  Rebar の子ウィンドウ ID  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` rebar が正常に作成された場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrebarctrl"></a>  CMFCReBar::GetReBarCtrl  
  直接アクセスできる`CReBarCtrl`の基になる一般的なコントロール`CMFCReBar`オブジェクト。  
@@ -170,7 +170,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="return-value"></a>戻り値  
  基になるへの参照を`CReBarCtrl`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを呼び出して、rebar をカスタマイズする際に、Windows rebar の一般的なコントロールの機能の活用します。  
   
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout  
@@ -183,12 +183,12 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bStretch`  
- [入力] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat  
 
@@ -199,7 +199,7 @@ virtual BOOL CanFloat() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking  
 
@@ -209,9 +209,9 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `dwDockStyle`  
+ [in]*dwDockStyle*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize  
 
@@ -222,7 +222,7 @@ UINT GetReBarBandInfoSize() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu  
 
@@ -232,11 +232,11 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `CPoint`  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest  
 
@@ -248,12 +248,12 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `point`  
- [入力] `pTI`  
+ [in]*ポイント*  
+ [in]*pTI*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI  
 
@@ -265,10 +265,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTarget`  
- [入力] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*持たず*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment  
 
@@ -278,9 +278,9 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `dwAlignment`  
+ [in]*場合*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

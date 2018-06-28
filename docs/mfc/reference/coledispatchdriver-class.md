@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f9eaa33abd0f24a1d584c5ba2a1e4d6f9e5d44
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d7a15243f68143f043d12486f9fd21b27373a17
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374553"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039961"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 OLE オートメーションのクライアント側を実装します。  
@@ -86,10 +86,10 @@ class COleDispatchDriver
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|解放するかどうかを指定します、`IDispatch`中に`ReleaseDispatch`またはオブジェクトの破棄します。|  
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|ポインターを示す、`IDispatch`をこのインターフェイスが接続されている`COleDispatchDriver`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `COleDispatchDriver` 基本クラスはありません。  
   
- OLE ディスパッチ インターフェイスは、オブジェクトのメソッドとプロパティへのアクセスを提供します。 メンバー関数は`COleDispatchDriver`アタッチ、デタッチ、作成、およびリリースの種類のディスパッチ接続`IDispatch`です。 他のメンバー関数では、可変個引数リストを使用して、呼び出しを簡略化**idispatch::invoke**です。  
+ OLE ディスパッチ インターフェイスは、オブジェクトのメソッドとプロパティへのアクセスを提供します。 メンバー関数は`COleDispatchDriver`アタッチ、デタッチ、作成、およびリリースの種類のディスパッチ接続`IDispatch`です。 他のメンバー関数では、可変個引数リストを使用して、呼び出しを簡略化`IDispatch::Invoke`です。  
   
  このクラスは、直接使用することができますが、通常は、クラスの追加ウィザードによって作成されたクラスによってのみ使用します。 新しいクラスの派生タイプ ライブラリのインポートによって新しい C++ のクラスを作成するときに`COleDispatchDriver`です。  
   
@@ -102,7 +102,7 @@ class COleDispatchDriver
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `COleDispatchDriver`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch  
@@ -115,13 +115,13 @@ void AttachDispatch(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDispatch`  
+ *lpDispatch*  
  `IDispatch` オブジェクトにアタッチされる OLE `COleDispatchDriver` オブジェクトへのポインター。  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  このオブジェクトがスコープ外になるときにディスパッチが解放されるかどうかを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、 `IDispatch` オブジェクトに既にアタッチされている `COleDispatchDriver` ポインターを解放します。  
   
 ### <a name="example"></a>例  
@@ -137,16 +137,16 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDispatch`  
+ *lpDispatch*  
  `IDispatch` オブジェクトにアタッチされる OLE `COleDispatchDriver` オブジェクトへのポインター。  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  このオブジェクトがスコープ外になるときにディスパッチが解放されるかどうかを指定します。  
   
- `dispatchSrc`  
+ *dispatchSrc*  
  参照すると、既存`COleDispatchDriver`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フォーム`COleDispatchDriver`( `LPDISPATCH lpDispatch`、 **BOOL**`bAutoRelease` = **TRUE**) 接続、 [IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)インターフェイスです。  
   
  フォーム`COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`)、既存のコピー`COleDispatchDriver`オブジェクトおよび参照カウントをインクリメントします。  
@@ -171,13 +171,13 @@ BOOL CreateDispatch(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clsid`  
+ *clsid*  
  作成する `IDispatch` 接続オブジェクトのクラス ID。  
   
- `pError`  
+ *pError*  
  作成の結果ステータス コードを格納する OLE 例外オブジェクトへのポインター。  
   
- `lpszProgID`  
+ *lpszProgID*  
  ディスパッチ オブジェクトが作成されるオートメーション オブジェクトの"Excel.Document.5"などのプログラム ID へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -196,7 +196,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="return-value"></a>戻り値  
  以前接続されている OLE へのポインター`IDispatch`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `IDispatch`は解放されません。  
   
  詳細については、`LPDISPATCH`を入力しを参照してください[IDispatch インターフェイスを実装する](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)Windows SDK に含まれています。  
@@ -205,7 +205,7 @@ LPDISPATCH DetachDispatch();
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
   
 ##  <a name="getproperty"></a>  ため  
- 指定されたオブジェクトのプロパティを取得`dwDispID`です。  
+ 指定されたオブジェクトのプロパティを取得*dwDispID*です。  
   
 ```  
 void GetProperty(
@@ -215,20 +215,20 @@ void GetProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  取得するプロパティを識別します。  
   
- `vtProp`  
+ *vtProp*  
  取得するプロパティを指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](#invokehelper)です。  
   
- `pvProp`  
- プロパティの値を受け取る変数のアドレスです。 指定された型に一致する必要があります`vtProp`です。  
+ *pvProp*  
+ プロパティの値を受け取る変数のアドレスです。 指定された型に一致する必要があります*vtProp*です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]  
   
 ##  <a name="invokehelper"></a>  Coledispatchdriver::invokehelper  
- `dwDispID`によって指定されるコンテキストで `wFlags`によって指定されるオブジェクト メソッドまたはプロパティを呼び出します。  
+ オブジェクトのメソッドまたはプロパティで指定された呼び出し*dwDispID*で指定されたコンテキストで*wFlags*です。  
   
 ```  
 void AFX_CDECL InvokeHelper(
@@ -240,32 +240,32 @@ void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  呼び出されるメソッドまたはプロパティを識別します。  
   
- `wFlags`  
- **IDispatch::Invoke**呼び出しのコンテキストを記述するフラグ。 である必要があります。 使用可能な値の一覧は、次を参照してください。、`wFlags`パラメーター [idispatch::invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) Windows SDK にします。  
+ *wFlags*  
+ **IDispatch::Invoke**呼び出しのコンテキストを記述するフラグ。 . 使用可能な値の一覧は、次を参照してください。、 *wFlags*パラメーター [idispatch::invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) Windows SDK にします。  
   
- `vtRet`  
+ *変数*  
  戻り値の型を指定します。 使用可能な値については、「解説」を参照してください。  
   
- `pvRet`  
- プロパティ値または戻り値を受け取る変数のアドレス。 これは、 `vtRet`によって指定される型と一致する必要があります。  
+ *pvRet*  
+ プロパティ値または戻り値を受け取る変数のアドレス。 指定された型に一致する必要があります*変数*です。  
   
- `pbParamInfo`  
- `pbParamInfo`に従うパラメーターの型を指定するバイトの null で終わる文字列へのポインター。  
+ *pbParamInfo*  
+ 次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*です。  
   
  *...*  
- `pbParamInfo`で指定される型の、パラメーターの変数一覧。  
+ パラメーターで指定された型の変数一覧*pbParamInfo*です。  
   
-### <a name="remarks"></a>コメント  
- `pbParamInfo` パラメーターは、メソッドまたはプロパティに渡されるパラメーターの型を指定します。 引数の変数一覧は、構文宣言では、 **...** で表されます。  
+### <a name="remarks"></a>Remarks  
+ *PbParamInfo*パラメーターは、メソッドまたはプロパティに渡されるパラメーターの種類を指定します。 引数の変数一覧は、構文宣言では、 **...** で表されます。  
   
- `vtRet` 引数の指定可能な値は、 `VARENUM` 列挙から取られます。 次の値を指定できます。  
+ 指定できる値、*変数*引数から取得、`VARENUM`列挙します。 次の値を指定できます。  
   
 |シンボル|戻り値の型|  
 |------------|-----------------|  
-|`VT_EMPTY`|`void`|  
+|`VT_EMPTY`|**void**|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
@@ -273,15 +273,15 @@ void AFX_CDECL InvokeHelper(
 |`VT_CY`|**CY**|  
 |`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`BSTR`|  
-|**VT_DISPATCH**|`LPDISPATCH`|  
+|`VT_DISPATCH`|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
 |`VT_BOOL`|**BOOL**|  
-|**VT_VARIANT**|**バリアント**|  
-|**VT_UNKNOWN**|`LPUNKNOWN`|  
+|`VT_VARIANT`|**バリアント**|  
+|`VT_UNKNOWN`|`LPUNKNOWN`|  
   
- `pbParamInfo` 引数は、 **VTS_** 定数のスペース区切りの一覧です。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用可能な値が付いて、 [EVENT_CUSTOM](event-maps.md#event_custom)マクロです。  
+ *PbParamInfo*引数は、のスペースで区切られたリスト**vts _** 定数。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用可能な値が付いて、 [EVENT_CUSTOM](event-maps.md#event_custom)マクロです。  
   
- この関数は、パラメータを **VARIANTARG** 値に変換し、その後、 [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) メソッドを呼び出します。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 場合、 `SCODE` (状態コード) がによって返される**idispatch::invoke**は`DISP_E_EXCEPTION`、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクトですそれ以外の場合、スロー、 [ 。COleDispatchException](../../mfc/reference/coledispatchexception-class.md)です。  
+ この関数は、パラメータを **VARIANTARG** 値に変換し、その後、 [IDispatch::Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx) メソッドを呼び出します。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 場合、 `SCODE` (状態コード) がによって返される`IDispatch::Invoke`は`DISP_E_EXCEPTION`、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクトです。 それ以外の場合、スロー、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)です。  
   
  詳細については、次を参照してください[VARIANTARG](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)、 [IDispatch インターフェイスを実装する](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx)、 [idispatch::invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx)、および[構造体の COM エラー コード。](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK にします。  
   
@@ -295,7 +295,7 @@ void AFX_CDECL InvokeHelper(
 BOOL m_bAutoRelease;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、`m_bAutoRelease`に設定されている**TRUE**コンス トラクターでします。  
   
  COM オブジェクトの解放の詳細については、次を参照してください。[参照カウントを実装する](http://msdn.microsoft.com/library/windows/desktop/ms693431)と[iunknown::release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK に含まれています。  
@@ -310,7 +310,7 @@ BOOL m_bAutoRelease;
 LPDISPATCH m_lpDispatch;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `m_lpDispatch`データ メンバーは型のパブリック変数`LPDISPATCH`です。  
   
  詳細については、次を参照してください。 [IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945) Windows SDK に含まれています。  
@@ -326,7 +326,7 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dispatchSrc`  
+ *dispatchSrc*  
  既存へのポインター`COleDispatchDriver`オブジェクト。  
   
 ##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH  
@@ -346,14 +346,14 @@ operator LPDISPATCH();
 void ReleaseDispatch();
 ```  
   
-### <a name="remarks"></a>コメント  
- この接続の自動リリースが設定されている場合はこの関数呼び出し**IDispatch::Release**インターフェイスを解放する前にします。  
+### <a name="remarks"></a>Remarks  
+ この接続の自動リリースが設定されている場合はこの関数呼び出し`IDispatch::Release`インターフェイスを解放する前にします。  
   
 ### <a name="example"></a>例  
   例を参照して[COleDispatchDriver::AttachDispatch](#attachdispatch)です。  
   
 ##  <a name="setproperty"></a>  このサンプル  
- `dwDispID`によって指定された OLE オブジェクトのプロパティを設定します。  
+ 指定した OLE オブジェクトのプロパティを設定*dwDispID*です。  
   
 ```  
 void AFX_CDECL SetProperty(
@@ -362,14 +362,14 @@ void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDispID`  
+ *dwDispID*  
  設定するプロパティを識別します。  
   
- `vtProp`  
+ *vtProp*  
  設定するプロパティの型を指定します。 使用可能な値は、「解説」セクションを参照して[coledispatchdriver::invokehelper](#invokehelper)です。  
   
  *...*  
- `vtProp`によって指定された型の 1 つのパラメーターです。  
+ 1 つのパラメーターで指定された型の*vtProp*です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]  

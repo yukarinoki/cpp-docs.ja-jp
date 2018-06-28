@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b3af1336c35fe9520834018d9c668005048db82
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366825"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037764"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr クラス
 void ポインターをキーとした void ポインターのマップをサポートします。  
@@ -61,7 +61,7 @@ class CMapPtrToPtr : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CMapPtrToPtr`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CObject` ポインターが使われている場合は、`void` へのポインターに置き換えます。 任意の場所が表示、`CString`または**const**へのポインター`char`関数パラメーターまたは戻り値へのポインターに置き換える`void`です。  
+ メンバー関数は、`CMapPtrToPtr`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CObject`関数パラメーターまたは戻り値としてのポインターへのポインターに置き換える**void**です。 任意の場所が表示、`CString`または**const**へのポインター`char`関数パラメーターまたは戻り値へのポインターに置き換える**void**です。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -101,7 +101,7 @@ class CMapPtrToPtr : public CObject
 |----------|-----------------|  
 |[CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMapPtrToPtr` には、`IMPLEMENT_DYNAMIC` マクロが組み込まれているので、`CDumpContext` オブジェクトへのランタイム型のアクセスとダンプをサポートします。 個々 のマップ要素 (ポインター値) のダンプを必要がある場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
   
  ポインターとポインターのマップは、シリアル化されません。  
@@ -115,7 +115,7 @@ class CMapPtrToPtr : public CObject
   
  `CMapPtrToPtr`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

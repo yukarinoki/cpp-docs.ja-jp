@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340f9f698d63587b7a3812d5922d8963c87751ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31bf2796d85dec335183b61a83ea5c675d5f4602
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376793"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038947"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl クラス
 日付と時刻の選択コントロールを含むツール バー ボタンです。  
@@ -104,7 +104,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |`CMFCToolBarDateTimeCtrl::OnCalculateSize`|指定したデバイス コンテキストとドッキングの状態のボタンのサイズを計算するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize))。|  
 |[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd))。|  
 |[CMFCToolBarDateTimeCtrl::OnClick](#onclick)|ユーザー コントロールをクリックしたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick))。|  
-|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|親ツールバーを処理するときに、フレームワークによって呼び出されます、`WM_CTLCOLOR`メッセージ。 (上書き[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor))。|  
+|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|親ツールバー WM_CTLCOLOR メッセージを処理するときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor))。|  
 |`CMFCToolBarDateTimeCtrl::OnDraw`|指定したスタイルとオプションを使用して、ボタンを描画するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw))。|  
 |`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|ボタンを描画するためにフレームワークによって呼び出される、**コマンド**のペイン、**カスタマイズ** ダイアログ ボックス。 (上書き[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist))。|  
 |[CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged](#onglobalfontschanged)|グローバルのフォントが変更されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged))。|  
@@ -117,7 +117,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 |[CMFCToolBarDateTimeCtrl::SetTime](#settime)|日時指定コントロールの日付と時刻を設定します。|  
 |[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)|日時指定コントロールの指定されたコマンド ID を持つすべてのインスタンスでの日付と時刻を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  日付と時刻の選択コントロールを使用する方法の例は、ToolbarDateTimePicker サンプル プロジェクトを参照してください。 ツールバーにコントロール ボタンを追加する方法については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -127,7 +127,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
   
  [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtoolbardatetimectrl.h  
   
 ##  <a name="canbestretched"></a>  CMFCToolBarDateTimeCtrl::CanBeStretched  
@@ -140,7 +140,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="return-value"></a>戻り値  
  このメソッドは `TRUE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークはユーザーがツール バー ボタンをカスタマイズするときに stretch をできません。 このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) をカスタマイズするときに日付と時刻のツール バー ボタンをストレッチするユーザーを許可することで。  
   
 ##  <a name="cmfctoolbardatetimectrl"></a>  CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
@@ -155,20 +155,20 @@ CMFCToolBarDateTimeCtrl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiID`  
+ [in]*uiID*  
  コントロールの id。  
   
- [入力] `iImage`  
+ [in]*画像*  
  ツールバーの イメージのインデックス`CMFCToolBarImages`オブジェクト。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  スタイル、`CMFCToolBarDateTimeCtrlImpl`ユーザーがボタンをクリックしたときに作成されるウィンドウ。  
   
- [入力] `iWidth`  
+ [in]*iWidth*  
  コントロールの幅 (ピクセル単位)。  
   
-### <a name="remarks"></a>コメント  
- このオブジェクトは、システムの日付と時刻に初期化されます。 内部のウィンドウ スタイル`CMFCToolBarDateTimeCtrlImpl`オブジェクトが含まれています、`dwStyle`パラメーターおよび`WS_CHILD`と`WS_VISIBLE`スタイル。 使用してこれらのスタイルを変更することはできません`CMFCToolBarDateTimeCtrl::SetStyle`です。 使用して`SetStyle`のスタイルを変更する、`CMFCToolBarDateTimeCtrl`コントロール。  
+### <a name="remarks"></a>Remarks  
+ このオブジェクトは、システムの日付と時刻に初期化されます。 内部のウィンドウ スタイル`CMFCToolBarDateTimeCtrlImpl`オブジェクトが含まれています、 *dwStyle*パラメーターおよび`WS_CHILD`と`WS_VISIBLE`スタイル。 使用してこれらのスタイルを変更することはできません`CMFCToolBarDateTimeCtrl::SetStyle`です。 使用して`SetStyle`のスタイルを変更する、`CMFCToolBarDateTimeCtrl`コントロール。  
   
 ### <a name="example"></a>例  
  次の例でのオブジェクトを作成する方法、`CMFCToolBarDateTimeCtrl`クラスです。 このコード スニペットの一部である、[ツールバー日時指定コントロール サンプル](../../visual-cpp-samples.md)です。  
@@ -183,11 +183,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
  コピー元のソース ボタンへの参照。  
   
-### <a name="remarks"></a>コメント  
- このツール バー ボタンに別のツール バー ボタンをコピーするには、このメソッドを呼び出します。 `src` 型でなければなりません`CMFCToolBarDateTimeCtrl`です。  
+### <a name="remarks"></a>Remarks  
+ このツール バー ボタンに別のツール バー ボタンをコピーするには、このメソッドを呼び出します。 *src*型でなければなりません`CMFCToolBarDateTimeCtrl`です。  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarDateTimeCtrl::ExportToMenuButton  
  メニュー、ツールバーのボタンのテキストをコピーします。  
@@ -197,13 +197,13 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `menuButton`  
+ [in]*メニュー ボタン*  
  対象のメニュー ボタンへの参照。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは `TRUE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) コントロールのコマンド ID に関連付けられている文字列リソースを読み込むことによりします。 文字列リソースの詳細については、次を参照してください。 [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)です。  
   
 ##  <a name="getbycmd"></a>  CMFCToolBarDateTimeCtrl::GetByCmd  
@@ -214,13 +214,13 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  取得する ボタンのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  最初の`CMFCToolBarDateTimeCtrl`指定されたコマンド ID を持つアプリケーションのオブジェクトまたは`NULL`いない場合`CMFCToolBarDateTimeCtrl`オブジェクトは、指定されたコマンド ID を持ちます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  など、この共有のユーティリティ メソッドをメソッドで使用される[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)と[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)を設定または時間のすべてのインスタンスの日付と時刻を取得するには指定されたコマンド ID を持つピッカー コントロール  
   
 ##  <a name="getdatetimectrl"></a>  CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
@@ -233,7 +233,7 @@ CDateTimeCtrl* GetDateTimeCtrl() const;
 ### <a name="return-value"></a>戻り値  
  日付と時刻の選択コントロールへのポインターまたは`NULL`コントロールが存在しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CMFCToolBarDateTimeCtrl`クラスの初期化、`m_pWndDateTime`データ メンバーを挿入するときに、`CMFCToolBarDateTimeCtrl`ツールバーにオブジェクト。  
   
 ##  <a name="gethwnd"></a>  CMFCToolBarDateTimeCtrl::GetHwnd  
@@ -246,7 +246,7 @@ virtual HWND GetHwnd();
 ### <a name="return-value"></a>戻り値  
  日付と時刻のツール バー ボタンに関連付けられているウィンドウ ハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、 [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)メソッドです。  
   
 ##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
@@ -259,16 +259,16 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[out] timeDest`  
+ [out]*timeDest*  
  最初のオーバー ロード、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)システム時刻の情報を受け取るオブジェクト。 2 番目のオーバー ロードで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)システム時刻の情報を受け取るオブジェクト。  
   
- `[out] pTimeDest`  
+ [out]*pTimeDest*  
  ポインター、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)システム時刻の情報を受け取る。 `NULL` にすることはできません。  
   
 ### <a name="return-value"></a>戻り値  
  最初のオーバー ロードで、時間が正常に書き込む場合は 0 以外、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクト以外の場合は 0 です。 2 番目と 3 番目のオーバー ロードで戻り値は、`DWORD`で設定されている dwFlag メンバーへの値が、[戻り](http://msdn.microsoft.com/library/windows/desktop/bb761730)構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メソッドのセット、[戻り](http://msdn.microsoft.com/library/windows/desktop/bb761730)形式、日付と時刻のピッカーが、日付と時刻に設定されているかどうかを示すためにします。 コントロールに設定されている値と等しい場合 GDT_NONE、`no date`状態、DTS_SHOWNONE スタイルを使用しています。 返される値と等しい場合戻り、システム時刻は正常に移行先の場所に格納されます。  
   
 ##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
@@ -289,19 +289,19 @@ static DWORD GetTimeAll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] uiCmd`  
+ [in]*uiCmd*  
  ツール バー ボタンのコマンド ID を指定します  
   
- `[out] timeDest`  
+ [out]*timeDest*  
  最初のオーバー ロード、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)システム時刻の情報を受け取るオブジェクト。 2 番目のオーバー ロードで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)システム時刻の情報を受け取るオブジェクト。  
   
- `[out] pTimeDest`  
+ [out]*pTimeDest*  
  ポインター、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)システム時刻の情報を受け取る。 `NULL` にすることはできません。  
   
 ### <a name="return-value"></a>戻り値  
- コマンド ID に一致するツールバー ボタンをフレームワークが見つからないかどうか`uiCmd`、戻り値は最初のオーバー ロードでは、0 やその他のオーバー ロードで GDT_NONE です。 呼び出しからの戻り値と同じ戻り値は、ツールバーのボタンが見つかった場合、 [CMFCToolBarDateTimeCtrl::GetTime](#gettime)そのボタンにします。 戻り、ボタンが検出されると、あることを示す、0 または GDT_NONE の値が発生する可能性がへの呼び出し`GetTime`何らかの理由で有効な日付が返されませんでした。  
+ コマンド ID に一致するツールバー ボタンをフレームワークが見つからないかどうか*uiCmd*、戻り値は最初のオーバー ロードでは、0 やその他のオーバー ロードで GDT_NONE です。 呼び出しからの戻り値と同じ戻り値は、ツールバーのボタンが見つかった場合、 [CMFCToolBarDateTimeCtrl::GetTime](#gettime)そのボタンにします。 戻り、ボタンが検出されると、あることを示す、0 または GDT_NONE の値が発生する可能性がへの呼び出し`GetTime`何らかの理由で有効な日付が返されませんでした。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを呼び出し、指定されたコマンド ID を持つツール バー ボタンを探します[CMFCToolBarDateTimeCtrl::GetTime](#gettime)メソッドをそのボタンをクリックします。  
   
 ##  <a name="havehotborder"></a>  CMFCToolBarDateTimeCtrl::HaveHotBorder  
@@ -314,7 +314,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="return-value"></a>戻り値  
  ボタンが選択されている場合、境界線を表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、コントロールが表示されている場合は 0 以外の値を返します。  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
@@ -325,13 +325,13 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iNotifyCode`  
+ [in]*iNotifyCode*  
  コマンドに関連付けられている通知メッセージです。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ボタンを処理する場合、`WM_COMMAND`メッセージ、または`FALSE`親ツールバーをメッセージを処理することを示すためにします。  
+ `TRUE` ボタンが WM_COMMAND メッセージを処理する場合または`FALSE`親ツールバーをメッセージを処理することを示すためにします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  送信しようとしているときに、フレームワークはこのメソッドを呼び出して、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージを親ウィンドウ。  
   
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 処理することで、 [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737)通知します。 内部の時間のステータスを更新したり、すべての時刻プロパティが更新`CMFCToolBarDateTimeCtrl`オブジェクトを同じコマンド ID  
@@ -343,7 +343,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 virtual void OnAddToCustomizePage();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張[CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)で最初の日付からプロパティのコピーと時刻をこのオブジェクトと同じコマンド ID を持つ任意のツールバーのコントロールです。 ツールバーには、日付と時刻を持つコントロールをこのオブジェクトと同じコマンド ID があるない場合は、何も行われません。  
   
  詳細については、**カスタマイズ**ダイアログ ボックスを参照してください[CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)です。  
@@ -356,10 +356,10 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndParent`  
+ [in]*pWndParent*  
  新しい親ウィンドウです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 内部の再作成して`CMFCToolBarDateTimeCtrlImpl`オブジェクト。  
   
 ##  <a name="onclick"></a>  CMFCToolBarDateTimeCtrl::OnClick  
@@ -372,20 +372,20 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
  使用されません。  
   
- [入力] `bDelay`  
+ [in]*bDelay*  
  使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンをクリックしてメッセージを処理する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装をオーバーライド[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)場合に、0 以外の値を返すことによって、内部`CMFCToolBarDateTimeCtrlImpl`オブジェクトを表示します。  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarDateTimeCtrl::OnCtlColor  
- 親ツールバーを処理するときに、フレームワークによって呼び出されます、`WM_CTLCOLOR`メッセージ。  
+ 親ツールバー WM_CTLCOLOR メッセージを処理するときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -394,16 +394,16 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  ボタンを表示しているデバイス コンテキスト。  
   
- [入力] `nCtlColor`  
+ [in]*のため*  
  使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンの背景を描画するために、フレームワークを使用するグローバル ブラシへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装をオーバーライド[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)でテキストを設定およびグローバルのテキストに指定されたデバイス コンテキストの色と背景の色をそれぞれバック グラウンドします。  
   
  アプリケーションに使用できるグローバルのオプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)です。  
@@ -415,7 +415,7 @@ virtual HBRUSH OnCtlColor(
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) のグローバルのフォントのコントロールのフォントを変更することによりします。  
   
  アプリケーションに使用できるグローバルのオプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)です。  
@@ -427,7 +427,7 @@ virtual void OnGlobalFontsChanged();
 virtual void OnMove();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、既定のクラスの実装 ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) 内部の位置を更新することによって`CMFCToolBarDateTimeCtrlImpl`オブジェクト。  
   
 ##  <a name="onshow"></a>  CMFCToolBarDateTimeCtrl::OnShow  
@@ -438,11 +438,11 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bShow`  
+ [in]*bShow*  
  ボタンが表示されているかどうかを指定します。 このパラメーターは、する場合`TRUE` ボタンを表示します。 それ以外の場合、ボタンは表示されません。  
   
-### <a name="remarks"></a>コメント  
- このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 場合は、ボタンを表示することによって`bShow`は`TRUE`します。 それ以外の場合、このメソッドには、ボタンが非表示にします。  
+### <a name="remarks"></a>Remarks  
+ このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 場合は、ボタンを表示することによって*bShow*は`TRUE`します。 それ以外の場合、このメソッドには、ボタンが非表示にします。  
   
 ##  <a name="onsize"></a>  CMFCToolBarDateTimeCtrl::OnSize  
  親ツールバーのサイズまたは位置が変更されに伴ってボタンのサイズを変更するときに、フレームワークによって呼び出されます。  
@@ -452,10 +452,10 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iSize`  
+ [in]*iSize*  
  ピクセル単位で、ボタンの新しい幅。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、既定のクラスの実装 ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) 内部の位置とサイズを更新することによって`CMFCToolBarDateTimeCtrlImpl`オブジェクト。  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
@@ -470,22 +470,22 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndParent`  
+ [in]*pWndParent*  
  親ウィンドウです。  
   
- [入力] `iButtonIndex`  
+ [in]*iButtonIndex*  
  親ボタン コレクション内のボタンの 0 から始まるインデックス。  
   
- [入力] `wndToolTip`  
+ [in]*wndToolTip*  
  ツールヒントのテキストを表示するコントロール。  
   
- [出力] `str`  
+ [out]*str*  
  A`CString`更新されたツールヒント テキストを受け取るオブジェクトです。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドは、ツールヒント テキストを更新する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip))、ボタンに関連付けられているツールヒント テキストを表示します。 このメソッドは何も実行し、返しますボタンが水平にドッキングされていない場合`FALSE`です。  
   
 ##  <a name="settime"></a>  CMFCToolBarDateTimeCtrl::SetTime  
@@ -498,16 +498,16 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] timeNew`  
+ [in]*timeNew*  
  最初のバージョンへの参照で、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)コントロールを設定する時刻を含むオブジェクト。 2 番目のバージョンへのポインターで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)コントロールを設定する時刻を含むオブジェクト。  
   
- `[in] pTimeNew`  
+ [in]*pTimeNew*  
  ポインター、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)コントロールを設定する時刻を格納する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  日付と時刻の選択コントロールを呼び出して、時刻を設定[CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime)です。  
   
 ##  <a name="settimeall"></a>  CMFCToolBarDateTimeCtrl::SetTimeAll  
@@ -528,19 +528,19 @@ static BOOL SetTimeAll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] uiCmd`  
+ [in]*uiCmd*  
  ツール バー ボタンのコマンド ID を指定します  
   
- `[in] timeNew`  
+ [in]*timeNew*  
  最初のバージョンで、 [COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)コントロールを設定する時刻を含むオブジェクト。 2 番目のバージョンへのポインターで、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)コントロールを設定する時刻を含むオブジェクト。  
   
- `[in] pTimeNew`  
+ [in]*pTimeNew*  
  ポインター、 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)コントロールを設定する時刻を格納する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定されたコマンド ID を持つツール バー ボタンを検索し、日付と時刻の選択コントロールを呼び出して、時刻を設定[CMFCToolBarDateTimeCtrl::SetTime](#settime)です。  
   
 ## <a name="see-also"></a>関連項目  

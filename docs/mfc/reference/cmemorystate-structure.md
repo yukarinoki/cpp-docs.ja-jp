@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367972"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040747"
 ---
 # <a name="cmemorystate-structure"></a>関数の構造体
 プログラムでのメモリ リークを検出する便利な手段を提供します。  
@@ -51,7 +51,7 @@ struct CMemoryState
 |[Cmemorystate::dumpallobjectssince](#dumpallobjectssince)|以前のチェックポイント以降には、現在割り当てられているすべてのオブジェクトの概要をダンプします。|  
 |[CMemoryState::DumpStatistics](#dumpstatistics)|メモリ割り当ての統計を出力、`CMemoryState`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMemoryState` 構造体は、基本クラスではありません。  
   
  オブジェクトのメモリ ヒープに割り当てが必要でなくなったときに割り当てを解除されない場合に、「メモリ リーク」が発生します。 このようなメモリ リークは、メモリ不足のエラーを最終的に可能性があります。 割り当てるし、プログラムでメモリの割り当てを解除するためのいくつかの方法があります。  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  その他の診断と同様、`CMemoryState`診断はのみ、プログラムのデバッグ バージョンで使用できます。 デバッグ バージョンである必要があります、 **_DEBUG**定数を定義します。  
   
- 使用することができます、プログラムには、メモリ リークが疑われる場合、 `Checkpoint`、**違い**、および`DumpStatistics`をプログラムで 2 つのさまざまな時点でのメモリの状態 (割り当てられたオブジェクト) の違いを検出する機能実行します。 この情報は、関数は、割り当てたすべてのオブジェクトをクリーンアップするかどうかの判定に役立ちます。  
+ 使用することができます、プログラムには、メモリ リークが疑われる場合、 `Checkpoint`、 `Difference`、および`DumpStatistics`プログラム実行中の 2 つのさまざまな時点でのメモリの状態 (割り当てられたオブジェクト) の違いを検出する機能。 この情報は、関数は、割り当てたすべてのオブジェクトをクリーンアップするかどうかの判定に役立ちます。  
   
  単に把握割り当てと解放の不均衡が発生しても十分な情報が提供されない場合を使用できます、`DumpAllObjectsSince`を前の呼び出し以降に割り当てられているすべてのオブジェクトをダンプ関数`Checkpoint`です。 このダンプは、割り当て、ソース ファイルと、オブジェクトが割り当てられた行の順序を示しています。 (を使用している場合`DEBUG_NEW`の割り当て)、およびオブジェクトのアドレスとサイズから派生します。 `DumpAllObjectsSince` オブジェクトごとにも呼び出します`Dump`関数は、現在の状態に関する情報を提供します。  
   
@@ -78,7 +78,7 @@ struct CMemoryState
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CMemoryState`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="checkpoint"></a>  CMemoryState::Checkpoint  
@@ -88,7 +88,7 @@ struct CMemoryState
 void Checkpoint();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CMemoryState`メンバー関数[違い](#difference)と[DumpAllObjectsSince](#dumpallobjectssince)このスナップショット データを使用します。  
   
 ### <a name="example"></a>例  
@@ -123,7 +123,7 @@ BOOL Difference(
 ### <a name="return-value"></a>戻り値  
  2 つのメモリ状態が異なっている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [チェックポイント](#checkpoint)2 つのメモリ状態パラメーターごとに呼び出されます必要があります。  
   
 ### <a name="example"></a>例  
@@ -138,7 +138,7 @@ void DumpAllObjectsSince() const;
  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す`DumpAllObjectsSince`、初期化されていないと`CMemoryState`オブジェクトが現在メモリ内のすべてのオブジェクトをダンプします。  
   
 ### <a name="example"></a>例  
@@ -153,7 +153,7 @@ void DumpStatistics() const;
  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  レポートに印刷されますが、 [afxDump](diagnostic-services.md#afxdump)デバイス、次に示します。  
   
  サンプル レポートは、数 (または金額) の情報を提供します。  

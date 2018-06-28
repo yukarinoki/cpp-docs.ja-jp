@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbc5972d244d9dfd969221d88299e868f617a5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378283"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039350"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser コントロールの機能を提供します。  
@@ -383,25 +383,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszClassName`  
+ *lpszClassName*  
  Windows クラスの名前を null で終わる文字列へのポインター。 クラス名に登録されている任意の名前を指定できます、 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)グローバル関数または**RegisterClass** Windows の機能です。 場合**NULL**、定義済みの既定値を使用して[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。  
   
- `lpszWindowName`  
+ *したとき*  
  ウィンドウの名前を表す文字の null で終わる文字列へのポインター。  
   
- `dwStyle`  
+ *dwStyle*  
  ウィンドウのスタイル属性を指定します。 既定では、 **WS_VISIBLE**と**WS_CHILD**ウィンドウ スタイルが設定されます。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体のサイズとウィンドウの位置を指定します。 `rectDefault`値により、Windows を新しいウィンドウの位置とサイズを指定します。  
+ *rect*  
+ 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体のサイズとウィンドウの位置を指定します。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親ウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  ビューの ID 番号。 既定では、' éý ' **AFX_IDW_PANE_FIRST**です。  
   
- `pContext`  
+ *pContext*  
  ポインター、 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)です。 **NULL**既定です。  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
@@ -416,22 +416,22 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pContainer`  
+ *pContainer*  
  ポインター、[メンバー](../../mfc/reference/colecontrolcontainer-class.md)コントロールを含むオブジェクト。  
   
- `ppSite`  
+ *ppSite*  
  ポインターへのポインター、[メンバー](../../mfc/reference/colecontrolsite-class.md)コントロールのサイトを提供するオブジェクト。  
   
- `nID`  
+ *nID*  
  ホストされるコントロールの識別子。  
   
- `clsid`  
+ *clsid*  
  ホストされるコントロールの CLSID  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、TRUE を返しますエラー発生時に false を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コントロール サイト クラスのインスタンスを返すには、このメンバー関数をオーバーライドすることができます。  
   
 ##  <a name="execformscommand"></a>  CHtmlView::ExecFormsCommand  
@@ -445,7 +445,7 @@ HRESULT ExecFormsCommand(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwCommandID`  
+ *dwCommandID*  
  実行するコマンド。 このコマンドに属している必要があります、 **CMDSETID3_Forms3**グループ。  
   
  *pVarIn*  
@@ -457,7 +457,7 @@ HRESULT ExecFormsCommand(
 ### <a name="return-value"></a>戻り値  
  標準の `HRESULT` 値。 使用可能な値の完全な一覧については、次を参照してください。 [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **ExecFormsCommand**の動作を実装、 [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)メソッドです。  
   
 ##  <a name="execwb"></a>  CHtmlView::ExecWB  
@@ -472,19 +472,19 @@ void ExecWB(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
+ *cmdID*  
  実行するコマンド。  
   
  *cmdexecopt*  
  オプション セットのコマンドを実行します。  
   
- `pvaIn`  
+ *pvaIn*  
  コマンドの入力引数を指定するバリアント値。  
   
  *pvaOut*  
  コマンドの出力引数を指定するバリアント値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  参照してください[IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) Windows SDK にします。  
   
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar  
@@ -497,7 +497,7 @@ BOOL GetAddressBar() const;
 ### <a name="return-value"></a>戻り値  
  アドレス バーを表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
   
 ##  <a name="getapplication"></a>  CHtmlView::GetApplication  
@@ -523,7 +523,7 @@ BOOL GetBusy() const;
 ### <a name="return-value"></a>戻り値  
  以外の場合は、web ブラウザーがビジー状態です。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getcontainer"></a>  CHtmlView::GetContainer  
@@ -536,7 +536,7 @@ LPDISPATCH GetContainer() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、`IDispatch`アクティブ ドキュメント オブジェクトのインターフェイスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getfullname"></a>  CHtmlView::GetFullName  
@@ -549,7 +549,7 @@ CString GetFullName() const;
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)現在表示されているファイルの名前とパスを含むオブジェクト。 パスとファイル名が存在しない場合`GetFullName`空白を返します`CString`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
   
 ##  <a name="getfullscreen"></a>  CHtmlView::GetFullScreen  
@@ -562,7 +562,7 @@ BOOL GetFullScreen() const;
 ### <a name="return-value"></a>戻り値  
  WebBrowser が全画面表示モードで動作している場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  全画面表示モードで Internet Explorer のメイン ウィンドウを最大化し、ステータス バー、ツールバー、メニュー バー、およびタイトル バーが非表示になります。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -587,7 +587,7 @@ LPDISPATCH GetHtmlDocument() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、`IDispatch`アクティブ ドキュメント オブジェクトのインターフェイスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getleft"></a>  CHtmlView::GetLeft  
@@ -600,7 +600,7 @@ long GetLeft() const;
 ### <a name="return-value"></a>戻り値  
  左端の距離 (ピクセル単位)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getlocationname"></a>  CHtmlView::GetLocationName  
@@ -613,7 +613,7 @@ CString GetLocationName() const;
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) WebBrowser で現在表示されているリソースの名前を表すオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リソースが World Wide Web 上の HTML ページの場合は、名前、そのページのタイトルです。 リソースが、フォルダーまたはネットワークまたはローカル コンピューター上のファイルの場合、名前は UNC またはフォルダーまたはファイルの完全なパスです。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -628,7 +628,7 @@ CString GetLocationURL() const;
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) WebBrowser で現在表示されているリソースの URL を表すオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リソースが、フォルダーまたはネットワークまたはローカル コンピューター上のファイルの場合、名前は UNC またはフォルダーまたはファイルの完全なパスです。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -643,7 +643,7 @@ BOOL GetMenuBar() const;
 ### <a name="return-value"></a>戻り値  
  メニュー バーを表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getoffline"></a>  CHtmlView::GetOffline  
@@ -656,7 +656,7 @@ BOOL GetOffline() const;
 ### <a name="return-value"></a>戻り値  
  Web ブラウザーが現在オフラインの場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getparentbrowser"></a>  CHtmlView::GetParentBrowser  
@@ -669,7 +669,7 @@ LPDISPATCH GetParentBrowser() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 `IDispatch` WebBrowser コントロールの親であるオブジェクトのインターフェイスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getproperty"></a>  CHtmlView::GetProperty  
@@ -684,16 +684,16 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszProperty`  
+ *lpszProperty*  
  取得するプロパティを含む文字列へのポインター。  
   
- `strValue`  
+ *StrValue*  
  参照、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)プロパティの現在の値を受け取るオブジェクトです。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外の最初のバージョンでそれ以外の場合 0 を返します。 2 番目のバージョンで、 [COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getreadystate"></a>  CHtmlView::GetReadyState  
@@ -706,7 +706,7 @@ READYSTATE GetReadyState() const;
 ### <a name="return-value"></a>戻り値  
  A [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx)値に設定するように、Windows SDK で説明します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getregisterasbrowser"></a>  CHtmlView::GetRegisterAsBrowser  
@@ -719,7 +719,7 @@ BOOL GetRegisterAsBrowser() const;
 ### <a name="return-value"></a>戻り値  
  ブラウザーが最上位レベルのブラウザーとして登録されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getregisterasdroptarget"></a>  CHtmlView::GetRegisterAsDropTarget  
@@ -732,7 +732,7 @@ BOOL GetRegisterAsDropTarget() const;
 ### <a name="return-value"></a>戻り値  
  ブラウザーがドロップ ターゲットとして登録されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getsilent"></a>  CHtmlView::GetSilent  
@@ -745,7 +745,7 @@ BOOL GetSilent() const;
 ### <a name="return-value"></a>戻り値  
  WebBrowser コントロールからダイアログ ボックスを表示できない場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getsource"></a>  CHtmlView::GetSource  
@@ -759,10 +759,10 @@ BOOL GetSource(CString& strRef);
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="parameters"></a>パラメーター  
- `refString`  
+ *refString*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)ソース コードを保持します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、ソース コードが返さ 点を除いて、Internet Explorer で、ソースの表示 コマンドに相当する`CString`です。  
   
 ##  <a name="getstatusbar"></a>  CHtmlView::GetStatusBar  
@@ -775,7 +775,7 @@ BOOL GetStatusBar() const;
 ### <a name="return-value"></a>戻り値  
  ステータス バーを表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
   
 ##  <a name="gettheatermode"></a>  CHtmlView::GetTheaterMode  
@@ -788,7 +788,7 @@ BOOL GetTheaterMode() const;
 ### <a name="return-value"></a>戻り値  
  Web ブラウザーがシアター モードである場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Web ブラウザーがシアター モードでは、ブラウザーのメイン ウィンドウが画面全体を占める、最小限のナビゲーション ツールを使用して、ツールバーが表示され、ステータス バーは画面の右上隅に表示されます。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -813,7 +813,7 @@ long GetTop() const;
 ### <a name="return-value"></a>戻り値  
  メイン ウィンドウの上端の画面座標を受け取る変数のアドレスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="gettoplevelcontainer"></a>  CHtmlView::GetTopLevelContainer  
@@ -826,7 +826,7 @@ BOOL GetTopLevelContainer() const;
 ### <a name="return-value"></a>戻り値  
  0 以外の値は、コンテナーは最上位のコンテナーです。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="gettype"></a>  CHtmlView::GetType  
@@ -839,7 +839,7 @@ CString GetType() const;
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)含まれているアクティブなドキュメントの種類名を表すオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getvisible"></a>  CHtmlView::GetVisible  
@@ -852,7 +852,7 @@ BOOL GetVisible() const;
 ### <a name="return-value"></a>戻り値  
  オブジェクトを表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="getwidth"></a>  CHtmlView::GetWidth  
@@ -872,7 +872,7 @@ long GetWidth() const;
 void GoBack();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="goforward"></a>  CHtmlView::GoForward  
@@ -899,7 +899,7 @@ void GoHome();
 void GoSearch();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="loadfromresource"></a>  CHtmlView::LoadFromResource  
@@ -911,10 +911,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszResource`  
+ *lpszResource*  
  読み込むリソースの名前を含む文字列へのポインター。  
   
- `nRes`  
+ *nRes*  
  読み込むリソースの名前を格納するバッファーの ID。  
   
 ### <a name="return-value"></a>戻り値  
@@ -940,22 +940,22 @@ void Navigate(
  *URL*  
  呼び出し元が割り当てた、移動先の URL を含む文字列またはに表示されるファイルの完全パス。  
   
- `dwFlags`  
+ *dwFlags*  
  履歴リストにリソースを追加するかどうか、読み取りや、キャッシュから作成するかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグです。 変数がで定義される値の組み合わせを指定できます、[変数には](https://msdn.microsoft.com/library/aa768360.aspx)列挙します。  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  リソースを表示するフレームの名前を表す文字列へのポインター。  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  サーバーに送信する HTTP ヘッダーを指定する値へのポインター。 これらのヘッダーは、既定の Internet Explorer のヘッダーに追加されます。 ヘッダーは、サーバー、サーバー、またはそのステータス コードに渡されるデータの種類の必要な操作として行うようなを指定できます。 場合、このパラメーターは無視されます*URL* HTTP URL ではありません。  
   
- `lpvPostData`  
+ *lpvPostData*  
  HTTP POST のトランザクションに送信するデータへのポインター。 たとえば、HTML フォームによって収集されたデータを送信する POST トランザクションが使用します。 このパラメーターに任意の投稿データが指定されていない場合**移動**HTTP GET トランザクションを発行します。 場合、このパラメーターは無視されます*URL* HTTP URL ではありません。  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  HTTP POST のトランザクションに送信するデータ。 たとえば、HTML フォームによって収集されたデータを送信する POST トランザクションが使用します。 このパラメーターに任意の投稿データが指定されていない場合**移動**HTTP GET トランザクションを発行します。 場合、このパラメーターは無視されます*URL* HTTP URL ではありません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="navigate2"></a>  CHtmlView::Navigate2  
@@ -989,28 +989,28 @@ void Navigate2(
  *pIDL*  
  ポインター、 [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321)構造体。  
   
- `dwFlags`  
+ *dwFlags*  
  履歴リストにリソースを追加するかどうか、読み取りや、キャッシュから作成するかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグです。 変数がで定義される値の組み合わせを指定できます、[変数には](https://msdn.microsoft.com/library/aa768360.aspx)列挙します。  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  リソースを表示するフレームの名前を表す文字列へのポインター。  
   
- `lpszURL`  
+ *lpszURL*  
  URL を含む文字列へのポインター。  
   
- `lpvPostData`  
+ *lpvPostData*  
  HTTP POST のトランザクションに送信するデータ。 たとえば、HTML フォームによって収集されたデータを送信する POST トランザクションが使用します。 このパラメーターに任意の投稿データが指定されていない場合`Navigate2`HTTP GET トランザクションを発行します。 場合、このパラメーターは無視されます*URL* HTTP または HTTPS URL ではありません。  
   
- `dwPostDataLen`  
- データのバイト長が指す、`lpvPostData`パラメーター。  
+ *dwPostDataLen*  
+ データのバイト長が指す、 *lpvPostData*パラメーター。  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  サーバーに送信する HTTP または HTTPS のヘッダーを指定する値へのポインター。 これらのヘッダーは、既定の Internet Explorer のヘッダーに追加されます。 ヘッダーは、サーバー、サーバー、またはそのステータス コードに渡されるデータの種類の必要な操作として行うようなを指定できます。 場合、このパラメーターは無視されます*URL* HTTP または HTTPS URL ではありません。  
   
- `baPostedData`  
+ *baPostedData*  
  参照、 [CByteArray](../../mfc/reference/cbytearray-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は拡張、**移動**メンバー関数は、パラメーターで表されているデスクトップやマイ コンピューター などの特別なフォルダーの参照をサポートすることによって*pIDL*です。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -1032,22 +1032,22 @@ virtual void OnBeforeNavigate2(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszURL`  
+ *lpszURL*  
  移動先の URL を含む文字列へのポインター。  
   
- `nFlags`  
+ *nFlags*  
  将来使用するために予約されています。  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  リソースを表示するためのフレームの名前を表す文字列または**NULL**リソースの名前付きフレームのターゲットがない場合。  
   
- `baPostedData`  
+ *baPostedData*  
  参照、 `CByteArray` HTTP POST のトランザクションが使用されている場合、サーバーに送信するデータを含むオブジェクト。  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  サーバー (HTTP Url) に送信する追加の HTTP ヘッダーを含む文字列へのポインター。 ヘッダーは、サーバー、サーバー、またはそのステータス コードに渡されるデータの種類の必要な操作として行うようなを指定できます。  
   
- `pbCancel`  
+ *pbCancel*  
  [キャンセル] フラグへのポインター。 アプリケーションでは、ナビゲーション操作を取り消すか続行することを許可する 0 に 0 以外に、このパラメーターを設定できます。  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
@@ -1063,7 +1063,7 @@ virtual void OnCommandStateChange(
  *%t%7*  
  有効になっている状態が変更されたコマンドの識別子。  
   
- `bEnable`  
+ *bEnable*  
  有効な状態です。 このパラメーターは、コマンドが有効または無効になっている場合は、0 の場合は 0 以外です。  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
@@ -1074,13 +1074,13 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszURL`  
+ *lpszURL*  
  UNC、URL に評価される文字列へのポインターはファイル名、または移動先 PIDL (項目 id リストへのポインター)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すべてのフレームが各フレームを起動するが、このイベントを発生させる、 [OnDownloadBegin](#ondownloadbegin) 、対応するイベントは起動`OnDocumentComplete`イベント。  
   
- によって示される URL`lpszURL`ブラウザー聞きましたに移動するため、この URL は、正規化された、修飾された URL から異なる場合があります。 アプリケーションへの呼び出しで"www.microsoft.com"の URL を指定する場合など、[移動](#navigate)または[Navigate2](#navigate2)、渡された URL`OnNavigateComplete2`なります"http://www.microsoft.com/"です。 また、サーバーが別の URL にブラウザーをリダイレクトする場合、ここでリダイレクト URL が反映されます。  
+ によって示される URL *lpszURL*ブラウザー聞きましたに移動するため、この URL は、正規化された、修飾された URL から異なる場合があります。 アプリケーションへの呼び出しで"www.microsoft.com"の URL を指定する場合など、[移動](#navigate)または[Navigate2](#navigate2)、渡された URL`OnNavigateComplete2`なります"http://www.microsoft.com/"です。 また、サーバーが別の URL にブラウザーをリダイレクトする場合、ここでリダイレクト URL が反映されます。  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  コンテナーのドキュメント ウィンドウがアクティブ化または非アクティブ化されたときにアクティブなインプレース オブジェクトに通知する、 **IOleInPlaceActiveObject::OnDocWindowActivate**の Internet Explorer または MSHTML の実装から呼び出されます。  
@@ -1090,13 +1090,13 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `fActivate`  
+ *fActivate*  
  ドキュメント ウィンドウの状態を示します。 この値が 0 以外の場合は、ウィンドウをアクティブ化します。 この値がゼロの場合は、ウィンドウを非アクティブ化します。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnDocWindowActivate`に反応するため、 `OnDocWindowActivate` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin  
@@ -1106,7 +1106,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 virtual void OnDownloadBegin();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すぐ後にこのイベントが発生した、 [OnBeforeNavigate2](#onbeforenavigate2)イベント、ナビゲーションが取り消された場合を除き、します。 アニメーションまたはコンテナーが表示する必要がある「ビジー」を示す値をこのイベントに接続する必要があります。  
   
 ##  <a name="ondownloadcomplete"></a>  CHtmlView::OnDownloadComplete  
@@ -1124,13 +1124,13 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `fEnable`  
+ *fEnable*  
  ホストのモードレス ダイアログ ボックスを有効または無効になっているかどうかを示します。 この値が 0 以外の場合は、モードレス ダイアログ ボックスが有効にします。 この値が 0 の場合は、モードレス ダイアログ ボックスが無効です。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  有効またはコンテナーを作成するか、モーダル ダイアログ ボックスを破棄するときに、モードレス ダイアログ ボックスを無効にします。 オーバーライド`OnEnableModeless`に反応するため、 `EnableModeless` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject  
@@ -1143,7 +1143,7 @@ virtual HRESULT OnFilterDataObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDataObject`  
+ *pDataObject*  
  アドレス、 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Internet Explorer または MSHTML によって提供されるインターフェイス。  
   
  *ppDataObject*  
@@ -1152,7 +1152,7 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="return-value"></a>戻り値  
  `S_OK` データ オブジェクトが置き換えられた場合**S_FALSE**データ オブジェクトが置き換えられない場合や、エラーが発生した場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnFilterDataObject`に反応するため、 `FilterDataObject` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate  
@@ -1163,13 +1163,13 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `fActivate`  
+ *fActivate*  
  コンテナーの最上位のフレーム ウィンドウの状態を示します。 この値が 0 以外の場合は、ウィンドウをアクティブ化します。 この値がゼロの場合は、ウィンドウを非アクティブ化します。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnFrameWindowActivate`に反応するため、 `OnFrameWindowActivate` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen  
@@ -1193,16 +1193,16 @@ virtual HRESULT OnGetDropTarget(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDropTarget`  
+ *pDropTarget*  
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Internet Explorer または MSHTML が使用する提示します。  
   
- `ppDropTarget`  
+ *ppDropTarget*  
  アドレス、`IDropTarget`を受け取る、`IDropTarget`ホストが提供するインターフェイス ポインター。  
   
 ### <a name="return-value"></a>戻り値  
  参照してください[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)リターン コードの一覧については、Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnGetDropTarget`に反応するため、 `GetDropTarget` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal  
@@ -1219,7 +1219,7 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnGetExternal`に反応するため、 `GetExternal` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo  
@@ -1230,13 +1230,13 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pInfo`  
+ *pInfo*  
  アドレス、[受け取る](https://msdn.microsoft.com/library/aa770044.aspx)ホストの UI 機能を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnGetHostInfo`に反応するため、 `GetHostInfo` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath  
@@ -1249,16 +1249,16 @@ virtual HRESULT OnGetOptionKeyPath(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pchKey`  
+ *pchKey*  
  アドレス、`LPOLESTR`ホストが既定のオプションを格納するレジストリ サブキーの文字列を受け取る。 このサブキーは、HKEY_CURRENT_USER キーになります。 使用して、このメモリを割り当てる[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)です。 呼び出し元のアプリケーションが使用して、このメモリの解放を[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)です。 このパラメーターは、必ずに初期化する**NULL**メソッドが失敗した場合でも、します。  
   
- `dwReserved`  
+ *dwReserved*  
  将来使用するために予約されています。 現在使用されていません。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、または**S_FALSE**それ以外の場合。 場合**S_FALSE**、Internet Explorer または MSHTML は既定で、独自のユーザー オプション。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnGetOptionKeyPath`に反応するため、 `GetOptionKeyPath` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI  
@@ -1271,7 +1271,7 @@ virtual HRESULT OnHideUI();
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnHideUI`に反応するため、 `HideUI` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar  
@@ -1296,7 +1296,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
  *strURL*  
  URL に評価される文字列式 UNC ファイル名、または移動先 PIDL (項目 id リストへのポインター)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  URL パラメーターには、対象の URL の形式はありません、シェル名の領域のエンティティの場合 PIDL を指定できます。  
   
  含まれている URL を*strURL*ブラウザー聞きましたに移動するため、この URL は、正規化された、修飾された URL から異なる場合があります。 アプリケーションへの呼び出しで"www.microsoft.com"の URL を指定する場合など、[移動](#navigate)または[Navigate2](#navigate2)、渡された URL`OnNavigateComplete2`なります"http://www.microsoft.com/"です。 また、サーバーが別の URL にブラウザーをリダイレクトする場合、ここでリダイレクト URL が反映されます。  
@@ -1313,19 +1313,19 @@ virtual void OnNavigateError(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszURL`  
+ *lpszURL*  
  URL では、ナビゲーションが失敗しました。  
   
  *lpszFrame*  
  リソースが表示されている、またはリソースの対象となった名前付きフレームがない場合は NULL にするのには、フレームの名前。  
   
- `dwError`  
+ *dwError*  
  エラー状態コード、使用可能な場合です。 考えられる HRESULT と、HTTP ステータス コードの一覧は、次を参照してください。 [NavigateError イベントのステータス コード。](https://msdn.microsoft.com/library/aa768365.aspx)  
   
- `pbCancel`  
+ *pbCancel*  
  エラー ページまたはその他の自動検索へのナビゲーションをキャンセルするかどうかを指定します。 場合**TRUE** (既定) 場合、エラー ページまたは自動; へのナビゲーションを続行して**FALSE**、エラー ページまたは自動検索へのナビゲーションをキャンセルします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  カスタム ナビゲーション エラーの処理を提供するには、このメソッドをオーバーライドします。  
   
  詳細については、次を参照してください[DWebBrowserEvents2::NavigateError。](https://msdn.microsoft.com/library/aa768286.aspx)  
@@ -1340,13 +1340,13 @@ virtual void OnNewWindow2(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppDisp`  
+ *ppDisp*  
  必要に応じて、受信するインターフェイス ポインターへのポインター、 `IDispatch` WebBrowser または Internet Explorer の新しいオブジェクトのインターフェイス ポインター。  
   
- `Cancel`  
+ *キャンセル*  
  [キャンセル] フラグへのポインター。 アプリケーションでは、ナビゲーション操作を取り消すか続行することを許可する 0 に 0 以外に、このパラメーターを設定できます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このイベントの前に、WebBrowser 内から新しいウィンドウを作成します。  
   
 ##  <a name="onprogresschange"></a>  CHtmlView::OnProgressChange  
@@ -1365,7 +1365,7 @@ virtual void OnProgressChange(
  *nProgressMax*  
  進行状況の最大値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンテナーは、このイベントによって提供される情報を使用して、これまでにダウンロードするバイト数を表示するか、進行状況インジケーターを更新できます。  
   
 ##  <a name="onpropertychange"></a>  CHtmlView::OnPropertyChange  
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszProperty`  
+ *lpszProperty*  
  プロパティの名前を含む文字列へのポインター。  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
@@ -1397,19 +1397,19 @@ virtual HRESULT OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `prcBorder`  
+ *prcBorder*  
  境界領域の新しい外接四角形。  
   
- `pUIWindow`  
+ *pUIWindow*  
  境界が変更されたフレームまたはドキュメント ウィンドウ オブジェクトのインターフェイスへのポインター。  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  **TRUE**フレーム ウィンドウを呼び出している場合は[ioleinplaceactiveobject:](http://msdn.microsoft.com/library/windows/desktop/ms680053)それ以外の場合、 **FALSE**です。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnResizeBorder`に反応するため、 `ResizeBorder` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu  
@@ -1424,22 +1424,22 @@ virtual HRESULT OnShowContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwID`  
+ *dwID*  
  表示されるコンテキスト メニューの識別子。 参照してください**IDocHostUIHandler::ShowContextMenu**値の一覧については Windows SDK に含まれています。  
   
- `ppt`  
+ *ppt*  
  メニューの画面座標。  
   
- `pcmdtReserved`  
+ *pcmdtReserved*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)コマンドの状態を照会し、このオブジェクトのコマンドを実行するためのインターフェイスです。  
   
- `pdispReserved`  
+ *pdispReserved*  
  画面座標にあるオブジェクトの IDispatch インターフェイスです。 これにより、特定のコンテキストを提供する特定のオブジェクトを区別するためにホストできます。  
   
 ### <a name="return-value"></a>戻り値  
  参照してください[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)値の一覧については Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnShowContextMenu`に反応するため、 `ShowContextMenu` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI  
@@ -1455,25 +1455,25 @@ virtual HRESULT OnShowUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwID`  
+ *dwID*  
  将来使用するために予約されています。  
   
- `pActiveObject`  
+ *pActiveObject*  
  [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299)現在アクティブなオブジェクトのインターフェイスです。  
   
- `pCommandTarget`  
+ *pCommandTarget*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797)オブジェクトのインターフェイスです。  
   
- `pFrame`  
+ *pFrame*  
  [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)オブジェクトのインターフェイスです。 メニューとツールバーこれが必要です。  
   
- `pDoc`  
+ *pDoc*  
  [埋め込み](http://msdn.microsoft.com/library/windows/desktop/ms680716)オブジェクトのインターフェイスです。 ツールバーに必要です。  
   
 ### <a name="return-value"></a>戻り値  
  参照してください[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)値の一覧については Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnShowUI`に反応するため、 `ShowUI` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar  
@@ -1495,7 +1495,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszText`  
+ *lpszText*  
  新しいステータス バーのテキストを含む文字列です。  
   
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode  
@@ -1517,10 +1517,10 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszText`  
+ *lpszText*  
  新しいドキュメントのタイトル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  HTML、タイトルを変更する可能性があります。HTML がまだダウンロード中、中に、ドキュメントの URL は、タイトルとして設定されます。 実際のタイトル (1 つである) 場合は、HTML から解析は、実際のタイトルを反映するように、タイトルが変更されます。  
   
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar  
@@ -1545,19 +1545,19 @@ virtual HRESULT OnTranslateAccelerator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpMsg`  
+ *lpMsg*  
  変換する必要があるメッセージを指します。  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  コマンド グループの識別子。  
   
- `nCmdID`  
+ *nCmdID*  
  コマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、または**S_FALSE**それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnTranslateAccelerator`に反応するため、 `TranslateAccelerator` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl  
@@ -1571,19 +1571,19 @@ virtual HRESULT OnTranslateUrl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwTranslate`  
+ *dwTranslate*  
  将来使用するために予約されています。  
   
- `pchURLIn`  
+ *pchURLIn*  
  Internet Explorer または MSHTML 変換される URL を表すによって指定された文字列のアドレスです。  
   
- `ppchURLOut`  
+ *ppchURLOut*  
  変換された URL のアドレスを受け取る文字列ポインターのアドレスです。 ホストは、タスク メモリ アロケーターを使用するバッファーを割り当てます。 このパラメーターの内容は、必ずに初期化する**NULL**URL が変換されないか、メソッドが失敗した場合でも、します。  
   
 ### <a name="return-value"></a>戻り値  
  `S_OK` URL が変換された場合**S_FALSE** URL が変換されていない場合、またはエラーが発生した場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライド`OnTranslateUrl`に反応するため、 `TranslateUrl` Microsoft の Web ブラウザー コントロールからの通知です。 参照してください[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)詳細については、Windows SDK に含まれています。  
   
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI  
@@ -1596,7 +1596,7 @@ virtual HRESULT OnUpdateUI();
 ### <a name="return-value"></a>戻り値  
  `S_OK` 成功した場合、またはそれ以外の場合、OLE 定義のエラー コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ホストは、ツール バー ボタンの状態を更新する必要があります。 このメソッドはからの戻り値に関係なく`ShowUI`です。 オーバーライド`OnUpdateUI`に反応するため、 `UpdateUI` Microsoft の Web ブラウザー コントロールからの通知です。  
   
 ##  <a name="onvisible"></a>  CHtmlView::OnVisible  
@@ -1607,10 +1607,10 @@ virtual void OnVisible(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bVisible`  
+ *bVisible*  
  オブジェクトを表示する場合は 0 以外。 それ以外の場合は 0 またはします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これにより、Internet Explorer のウィンドウの動作は同じように動作するオブジェクトのコントロール ホスト ウィンドウです。  
   
 ##  <a name="putproperty"></a>  CHtmlView::PutProperty  
@@ -1643,11 +1643,11 @@ void PutProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszProperty`  
+ *lpszProperty*  
  設定するプロパティを含む文字列。  
   
  *vtValue*  
- 示されたプロパティの新しい値`lpszProperty`です。  
+ 示されたプロパティの新しい値*lpszProperty*です。  
   
  *lpszPropertyName*  
  設定するプロパティの名前を含む文字列へのポインター。  
@@ -1655,13 +1655,13 @@ void PutProperty(
  *dValue*  
  プロパティの新しい値。  
   
- `lValue`  
+ *左辺値*  
  プロパティの新しい値。  
   
- `lpszValue`  
+ *lpszValue*  
  プロパティの新しい値を含む文字列へのポインター。  
   
- `nValue`  
+ *値*  
  プロパティの新しい値。  
   
 ### <a name="remarks"></a>コメント  
@@ -1679,22 +1679,22 @@ HRESULT QueryFormsCommand(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwCommandID`  
+ *dwCommandID*  
  照会するコマンドの識別子。  
   
  *pbSupported*  
- ポインター、 **BOOL**指定する場合のコマンドは、(で識別される`dwCommandID`) はサポートされています。 TRUE の場合、コマンドはサポートされています。それ以外の場合は FALSE。  
+ ポインター、 **BOOL**指定する場合のコマンドは、(で識別される*dwCommandID*) はサポートされています。 TRUE の場合、コマンドはサポートされています。それ以外の場合は FALSE。  
   
- `pbEnabled`  
- ポインター、 **BOOL**指定する場合のコマンドは、(で識別される`dwCommandID`) を有効にします。 TRUE の場合、コマンドはサポートされています。それ以外の場合は FALSE。  
+ *pbEnabled*  
+ ポインター、 **BOOL**指定する場合のコマンドは、(で識別される*dwCommandID*) を有効にします。 TRUE の場合、コマンドはサポートされています。それ以外の場合は FALSE。  
   
  *pbChecked*  
- ポインター、 **BOOL**指定する場合のコマンドは、(で識別される`dwCommandID`) がオンになっています。 TRUE の場合、コマンドはサポートされています。それ以外の場合は FALSE。  
+ ポインター、 **BOOL**指定する場合のコマンドは、(で識別される*dwCommandID*) がオンになっています。 TRUE の場合、コマンドはサポートされています。それ以外の場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  標準の `HRESULT` 値。 使用可能な値の完全な一覧については、次を参照してください。 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `QueryFormsCommand` 動作を実装、 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)メソッドです。  
   
 ##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB  
@@ -1705,13 +1705,13 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
+ *cmdID*  
  [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264)呼び出し元が状態情報を必要するコマンドの値。  
   
 ### <a name="return-value"></a>戻り値  
  アドレス、 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)コマンドのステータスを受信する値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `QueryStatusWB` 動作を実装、 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)メソッドです。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -1723,7 +1723,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 void Refresh();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **更新**更新レベルを設定するためのパラメーターが含まれていません。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -1736,10 +1736,10 @@ void Refresh2(int nLevel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nLevel`  
+ *nLevel*  
  更新レベルを指定する変数のアドレス。 可能な変数が定義されている[RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx)、Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  異なり[更新](#refresh)、`Refresh2`更新レベルを指定するパラメーターが含まれています。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -1752,10 +1752,10 @@ void SetAddressBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  アドレス バーを表示する 0 以外の値それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
   
 ##  <a name="setfullscreen"></a>  CHtmlView::SetFullScreen  
@@ -1766,10 +1766,10 @@ void SetFullScreen(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  全画面表示モード。 0 以外の値それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  全画面表示モードで Internet Explorer のメイン ウィンドウを最大化し、ステータス バー、ツールバー、メニュー バー、およびタイトル バーが非表示になります。  
   
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
@@ -1782,10 +1782,10 @@ void SetHeight(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewValue`  
+ *nNewValue*  
  (ピクセル単位) のメイン ウィンドウの高さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="setleft"></a>  CHtmlView::SetLeft  
@@ -1796,7 +1796,7 @@ void SetLeft(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewValue`  
+ *nNewValue*  
  メイン ウィンドウの左端の画面座標。  
   
 ##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar  
@@ -1807,10 +1807,10 @@ void SetMenuBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  メニュー バーを表示する 0 以外の値それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
   
 ##  <a name="setoffline"></a>  CHtmlView::SetOffline  
@@ -1821,10 +1821,10 @@ void SetOffline(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  ローカル キャッシュからの読み取りには 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オフライン モードでは、ブラウザーは、ソース ドキュメントではなくローカル キャッシュからの HTML ページを読み取ります。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -1837,10 +1837,10 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  Internet Explorer が最上位レベルのブラウザーとして登録されているかどうかを判断します。 Web ブラウザーが最上位レベルのブラウザーとして登録されている 0 以外の場合0 の場合、最上位レベルのブラウザーではありません。 既定値は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最上位レベルのブラウザーは、ブラウザーを既定のブラウザーとしてレジストリに設定します。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -1853,10 +1853,10 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  WebBrowser コントロールがナビゲーションのドロップ先として登録されているかどうかを判断します。 オブジェクトがドロップ ターゲットとして登録されている 0 以外の場合0 の場合、ドロップ ターゲットではありません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="setsilent"></a>  CHtmlView::SetSilent  
@@ -1867,7 +1867,7 @@ void SetSilent(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  ゼロ以外の場合、ダイアログ ボックスは表示されません。0 の場合、ダイアログ ボックスが表示されます。 既定値は 0 です。  
   
 ### <a name="remarks"></a>コメント  
@@ -1881,10 +1881,10 @@ void SetStatusBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  ステータス バーを表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
   
 ##  <a name="settheatermode"></a>  CHtmlView::SetTheaterMode  
@@ -1895,10 +1895,10 @@ void SetTheaterMode(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  シアター モード; に WebBrowser コントロールを設定する 0 以外の値それ以外の場合 0 を返します。 既定値は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Web ブラウザーがシアター モードでは、ブラウザーのメイン ウィンドウが画面全体を占める、最小限のナビゲーション ツールを使用して、ツールバーが表示され、ステータス バーは画面の右上隅に表示されます。  
   
  Internet Explorer と WebBrowser に適用されます。  
@@ -1911,10 +1911,10 @@ void SetToolBar(int nNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewValue`  
+ *nNewValue*  
  ツールバーを表示するかどうかを示します。 以外の場合は、ツールバーが表示されることです。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer に適用されます。 WebBrowser コントロールでこの呼び出しを使用する場合は、そのエラーが返されますなしがこの呼び出しは無視されます。  
   
 ##  <a name="settop"></a>  CHtmlView::SetTop  
@@ -1925,10 +1925,10 @@ void SetTop(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewValue`  
+ *nNewValue*  
  メイン ウィンドウの上端の画面座標。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="setvisible"></a>  CHtmlView::SetVisible  
@@ -1939,10 +1939,10 @@ void SetVisible(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bNewValue`  
+ *bNewValue*  
  コントロールを表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ##  <a name="setwidth"></a>  CHtmlView::SetWidth  
@@ -1953,7 +1953,7 @@ void SetWidth(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewValue`  
+ *nNewValue*  
  Internet Explorer のメイン ウィンドウのピクセル単位の幅。  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  
@@ -1963,7 +1963,7 @@ void SetWidth(long nNewValue);
 void Stop();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Internet Explorer と WebBrowser に適用されます。  
   
 ## <a name="see-also"></a>関連項目  

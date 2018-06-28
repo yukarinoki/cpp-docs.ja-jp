@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738c8c3fa25fcfe0a657685b370f8e973d483861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375925"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039207"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd クラス
 `CMultiPaneFrameWnd`クラスを拡張[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)です。 複数のペインをサポートします。 コントロール バーに埋め込まれたハンドルは 1 つではなく`CMultiPaneFrameWnd`が含まれています、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)いずれかをドッキングするのには、ユーザーを有効にするオブジェクト`CMultiPaneFrameWnd`別に、動的に複数の浮動小数点の作成、タブ付きwindows です。  
@@ -152,7 +152,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(上書き[CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo))。|  
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(上書き[CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo))。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このクラスのメソッドのほとんどのメソッドをオーバーライドする、 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)クラスです。  
   
  ウィンドウを使用している場合、`AFX_CBRS_AUTO_ROLLUP`スタイルと、ユーザーは、そのペインをドッキング マルチ ウィンドウ フレーム ウィンドウに、ユーザーは、ウィンドウの他のドッキング ウィンドウのスタイル設定に関係なくロールアップできます。  
@@ -177,7 +177,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
   
  [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxMultiPaneFrameWnd.h  
   
 ##  <a name="addpane"></a>  CMultiPaneFrameWnd::AddPane  
@@ -188,9 +188,9 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addrecentpane"></a>  CMultiPaneFrameWnd::AddRecentPane  
 
@@ -200,11 +200,11 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
+ [in]*pBar*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="adjustlayout"></a>  CMultiPaneFrameWnd::AdjustLayout  
 
@@ -213,7 +213,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 virtual void AdjustLayout();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="adjustpaneframes"></a>  CMultiPaneFrameWnd::AdjustPaneFrames  
 
@@ -222,7 +222,7 @@ virtual void AdjustLayout();
 virtual void AdjustPaneFrames();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="calcexpecteddockedrect"></a>  CMultiPaneFrameWnd::CalcExpectedDockedRect  
 
@@ -237,13 +237,13 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndToDock`  
- [入力] `ptMouse`  
- [入力] `rectResult`  
- [入力] `bDrawTab`  
- [入力] `ppTargetBar`  
+ [in]*pWndToDock*  
+ [in]*ptMouse*  
+ [in]*rectResult*  
+ [in]*bDrawTab*  
+ [in]*ppTargetBar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="canbeattached"></a>  CMultiPaneFrameWnd::CanBeAttached  
 
@@ -254,7 +254,7 @@ virtual BOOL CanBeAttached() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="canbedockedtopane"></a>  CMultiPaneFrameWnd::CanBeDockedToPane  
 
@@ -264,11 +264,11 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDockingBar`  
+ [in]*pDockingBar*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="checkgrippervisibility"></a>  CMultiPaneFrameWnd::CheckGripperVisibility  
 
@@ -277,7 +277,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 virtual void CheckGripperVisibility();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="closeminiframe"></a>  CMultiPaneFrameWnd::CloseMiniFrame  
 
@@ -286,7 +286,7 @@ virtual void CheckGripperVisibility();
 virtual void CloseMiniFrame();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="converttotabbeddocument"></a>  CMultiPaneFrameWnd::ConvertToTabbedDocument  
 
@@ -295,7 +295,7 @@ virtual void CloseMiniFrame();
 virtual void ConvertToTabbedDocument();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="dockframe"></a>  CMultiPaneFrameWnd::DockFrame  
 
@@ -307,12 +307,12 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDockedFrame`  
- [入力] `dockMethod`  
+ [in]*pDockedFrame*  
+ [in]*dockMethod*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="dockpane"></a>  CMultiPaneFrameWnd::DockPane  
 
@@ -322,11 +322,11 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDockedBar`  
+ [in]*pDockedBar*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="dockrecentpanetomainframe"></a>  CMultiPaneFrameWnd::DockRecentPaneToMainFrame  
 
@@ -336,9 +336,9 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
+ [in]*pBar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcaptiontext"></a>  CMultiPaneFrameWnd::GetCaptionText  
 
@@ -349,7 +349,7 @@ virtual CString GetCaptionText();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getfirstvisiblepane"></a>  CMultiPaneFrameWnd::GetFirstVisiblePane  
 
@@ -360,7 +360,7 @@ virtual CWnd* GetFirstVisiblePane() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getpane"></a>  CMultiPaneFrameWnd::GetPane  
 
@@ -371,7 +371,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getpanecontainermanager"></a>  CMultiPaneFrameWnd::GetPaneContainerManager  
  内部のコンテナー マネージャー オブジェクトへの参照を返します。  
@@ -383,7 +383,7 @@ CPaneContainerManager& GetPaneContainerManager();
 ### <a name="return-value"></a>戻り値  
  内部のコンテナー マネージャー オブジェクトへの参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、内部へのアクセスに使用できます[CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)オブジェクト。  
   
 ##  <a name="getpanecount"></a>  CMultiPaneFrameWnd::GetPaneCount  
@@ -395,7 +395,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getvisiblepanecount"></a>  CMultiPaneFrameWnd::GetVisiblePaneCount  
 
@@ -406,7 +406,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="insertpane"></a>  CMultiPaneFrameWnd::InsertPane  
 
@@ -419,13 +419,13 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pControlBar`  
- [入力] `pTarget`  
- [入力] `bAfter`  
+ [in]*pControlBar*  
+ [in]*pTarget*  
+ [in]*bAfter*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="loadstate"></a>  CMultiPaneFrameWnd::LoadState  
 
@@ -437,12 +437,12 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
- [入力] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondocktorecentpos"></a>  CMultiPaneFrameWnd::OnDockToRecentPos  
 
@@ -451,7 +451,7 @@ virtual BOOL LoadState(
 virtual void OnDockToRecentPos();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onkillrolluptimer"></a>  CMultiPaneFrameWnd::OnKillRollUpTimer  
 
@@ -460,7 +460,7 @@ virtual void OnDockToRecentPos();
 virtual void OnKillRollUpTimer();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onpanerecalclayout"></a>  CMultiPaneFrameWnd::OnPaneRecalcLayout  
 
@@ -469,7 +469,7 @@ virtual void OnKillRollUpTimer();
 virtual void OnPaneRecalcLayout();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsetrolluptimer"></a>  CMultiPaneFrameWnd::OnSetRollUpTimer  
 
@@ -478,7 +478,7 @@ virtual void OnPaneRecalcLayout();
 virtual void OnSetRollUpTimer();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onshowpane"></a>  CMultiPaneFrameWnd::OnShowPane  
 
@@ -490,10 +490,10 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
- [入力] `bShow`  
+ [in]*pBar*  
+ [in]*bShow*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="panefrompoint"></a>  CMultiPaneFrameWnd::PaneFromPoint  
 
@@ -506,13 +506,13 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `point`  
- [入力] `nSensitivity`  
- [入力] `bCheckVisibility`  
+ [in]*ポイント*  
+ [in]*nSensitivity*  
+ [in]*bCheckVisibility*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="removenonvalidpanes"></a>  CMultiPaneFrameWnd::RemoveNonValidPanes  
 
@@ -521,7 +521,7 @@ virtual CBasePane* PaneFromPoint(
 virtual void RemoveNonValidPanes();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="removepane"></a>  CMultiPaneFrameWnd::RemovePane  
 
@@ -534,11 +534,11 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
- [入力] `bDestroy`  
- [入力] `bNoDelayedDestroy`  
+ [in]*pBar*  
+ [in]*bDestroy*  
+ [in]*bNoDelayedDestroy*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="replacepane"></a>  CMultiPaneFrameWnd::ReplacePane  
 
@@ -550,10 +550,10 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBarOrg`  
- [入力] `pBarReplaceWith`  
+ [in]*pBarOrg*  
+ [in]*pBarReplaceWith*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="savestate"></a>  CMultiPaneFrameWnd::SaveState  
 
@@ -565,12 +565,12 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
- [入力] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="serialize"></a>  CMultiPaneFrameWnd::Serialize  
 
@@ -580,9 +580,9 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `ar`  
+ [in]*ar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setdockstate"></a>  CMultiPaneFrameWnd::SetDockState  
 
@@ -592,9 +592,9 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDockManager`  
+ [in]*pDockManager*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setlastfocusedpane"></a>  CMultiPaneFrameWnd::SetLastFocusedPane  
 
@@ -604,9 +604,9 @@ void SetLastFocusedPane(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hwnd`  
+ [in]*hwnd*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpredockstate"></a>  CMultiPaneFrameWnd::SetPreDockState  
 
@@ -619,13 +619,13 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `preDockState`  
- [入力] `pBarToDock`  
- [入力] `dockMethod`  
+ [in]*preDockState*  
+ [in]*pBarToDock*  
+ [in]*dockMethod*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="storerecentdocksiteinfo"></a>  CMultiPaneFrameWnd::StoreRecentDockSiteInfo  
 
@@ -635,9 +635,9 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
+ [in]*pBar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="storerecenttabrelatedinfo"></a>  CMultiPaneFrameWnd::StoreRecentTabRelatedInfo  
 
@@ -649,10 +649,10 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDockingBar`  
- [入力] `pTabbedBar`  
+ [in]*pDockingBar*  
+ [in]*pTabbedBar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

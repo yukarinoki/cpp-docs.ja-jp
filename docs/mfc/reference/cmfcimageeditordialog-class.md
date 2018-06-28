@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376250"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040770"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog クラス
 `CMFCImageEditorDialog`クラスは、イメージ エディター ダイアログ ボックスをサポートしています。  
@@ -42,7 +42,7 @@ class CMFCImageEditorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|`CMFCImageEditorDialog` オブジェクトを構築します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCImageEditorDialog`クラスが含まれるダイアログ ボックスが表示されます。  
   
 -   使用するイメージ内の個々 のピクセルを変更する画像領域。  
@@ -72,7 +72,7 @@ class CMFCImageEditorDialog : public CDialogEx
   
  [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afximageeditordialog.h  
   
 ##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog  
@@ -86,19 +86,19 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pBitmap`  
+ *pBitmap*  
  イメージへのポインター。  
   
- `pParent`  
+ *pParent*  
  現在のイメージ エディター ダイアログ ボックスの親ウィンドウへのポインター。  
   
- `nBitsPixel`  
- 色深度とも呼びますが単一のピクセルの色を表すために使用されるビットの数。  場合、`nBitsPixel`パラメーターが-1、色深度がで指定されたイメージから派生した、`pBitmap`パラメーター。 既定値は -1 です。  
+ *nBitsPixel*  
+ 色深度とも呼びますが単一のピクセルの色を表すために使用されるビットの数。  場合、 *nBitsPixel*パラメーターが-1、色深度がで指定されたイメージから派生した、 *pBitmap*パラメーター。 既定値は -1 です。  
   
 ### <a name="return-value"></a>戻り値  
  イメージを変更するをイメージ ポインターを渡す、`CMFCImageEditorDialog`コンス トラクターです。 まず、`DoModal`をモーダル ダイアログ ボックスを開くメソッドです。 ときに、`DoModal`ビットマップには、新しいイメージが含まれています。 メソッドが返されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ### <a name="example"></a>例  
  次の例でのオブジェクトを作成する方法、`CMFCImageEditorDialog`クラスです。 この例の一部である、[新しいコントロール サンプル](../../visual-cpp-samples.md)です。  

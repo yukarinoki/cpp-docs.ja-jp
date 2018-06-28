@@ -112,12 +112,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1101e4115efa3c5c822d0d64b767cdee379a0e0b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34baec7ddcb04cb3de564484a2b4afd04e36eae9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377837"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042281"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 Windows のリスト ボックスの機能を提供します。  
@@ -188,14 +188,14 @@ class CListBox : public CWnd
 |[CListBox::SetTopIndex](#settopindex)|リスト ボックスに表示される文字列の最初の 0 から始まるインデックスを設定します。|  
 |[CListBox::VKeyToItem](#vkeytoitem)|ユーザー設定を提供する上書き`WM_KEYDOWN`とリスト ボックスの処理、 **LBS_WANTKEYBOARDINPUT**セットのスタイルを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  リスト ボックスには、ユーザーが表示して選択し、ファイル名などのアイテムの一覧が表示されます。  
   
  単一選択のリスト ボックスでは、ユーザーは、1 つだけの項目を選択できます。 複数選択のリスト ボックスでは、項目の範囲を選択することができます。 ユーザーは、項目を選択してが強調表示されて、リスト ボックスは、親ウィンドウへ通知メッセージが送信されます。  
   
  リスト ボックスは、ダイアログ テンプレートから、またはコードで直接作成できます。 直接作成するには、構築、`CListBox`オブジェクト、し、呼び出し、[作成](#create)Windows リスト ボックス コントロールを作成し、アタッチにメンバー関数、`CListBox`オブジェクト。 ダイアログ テンプレートでリスト ボックスを使用するのには、ダイアログ ボックス クラスでボックスの一覧で変数を宣言しを使用して`DDX_Control` ダイアログ ボックス クラスで`DoDataExchange`コントロールにメンバー変数を接続する関数。 (これを自動的に、ダイアログ ボックス クラスをコントロール変数を追加するとします。)  
   
- 派生したクラスで、1 つプロセスは、構築`CListBox`です。 呼び出しと派生クラスのコンス トラクターを記述**作成**から、コンス トラクター内で。  
+ 派生したクラスで、1 つプロセスは、構築`CListBox`です。 呼び出しと派生クラスのコンス トラクターを記述`Create`から、コンス トラクター内で。  
   
  リスト ボックスからその親に送信される Windows の通知メッセージを処理する場合 (通常から派生したクラス[CDialog](../../mfc/reference/cdialog-class.md))、メッセージ マップ エントリとメッセージ ハンドラー メンバー関数を各メッセージの親クラスに追加します。  
   
@@ -242,7 +242,7 @@ class CListBox : public CWnd
   
  `CListBox`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="addstring"></a>  CListBox::AddString  
@@ -253,13 +253,13 @@ int AddString(LPCTSTR lpszItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszItem`  
+ *lpszItem*  
  追加するのには、null で終わる文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  リスト ボックス内の文字列の 0 から始まるインデックス。 戻り値は**返します**エラーが発生した場合、戻り値は**返します**新しい文字列を保存する十分な空き領域がある場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リスト ボックスで作成されなかった場合、 [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、文字列は、リストの末尾に追加されます。 それ以外の場合、リストに、文字列が挿入され、一覧が並べ替えられます。 リスト ボックスの作成時の**LBS_SORT**スタイルを設定しない場合は、 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、フレームワーク リストを並べ替えます、1 つまたは複数の呼び出しで、`CompareItem`メンバー関数。  
   
  使用して[InsertString](#insertstring)リスト ボックス内の指定位置に文字列を挿入します。  
@@ -277,16 +277,16 @@ virtual int CharToItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nKey`  
+ *nKey*  
  ユーザーが入力した文字の ANSI コード。  
   
- `nIndex`  
+ *nIndex*  
  ボックスの一覧でのキャレットの現在の位置。  
   
 ### <a name="return-value"></a>戻り値  
  返します - 1 または 2 の操作はこれ以上またはキーストロークの既定のアクションを実行する対象のリスト ボックス項目のインデックスを指定する負でない数値。 既定の実装では 1 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `WM_CHARTOITEM`を受信すると、リスト ボックスによってメッセージが送信される、`WM_CHAR`のみ場合、リスト ボックスをすべて満たしているこれらの条件が、メッセージ。  
   
 -   オーナー描画リスト ボックスがあります。  
@@ -311,8 +311,8 @@ virtual int CharToItem(
 CListBox();
 ```  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CListBox` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出す**ClistBox**し**作成**、Windows のリスト ボックスを初期化しにアタッチする、`CListBox`です。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CListBox` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出す`ClistBox`し`Create`、Windows のリスト ボックスを初期化しにアタッチする、`CListBox`です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
@@ -325,7 +325,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  Long ポインター、`COMPAREITEMSTRUCT`構造体。  
   
 ### <a name="return-value"></a>戻り値  
@@ -339,7 +339,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
   
  参照してください[CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)の詳細については、`COMPAREITEMSTRUCT`構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、このメンバー関数では何も行いません。 オーナー描画リスト ボックスを作成するかどうか、 **LBS_SORT**スタイル、リスト ボックスに追加された新しい項目の並べ替え中に、フレームワークを支援するためにこのメンバー関数をオーバーライドする必要があります。  
   
 ### <a name="example"></a>例  
@@ -357,25 +357,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  リスト ボックスのスタイルを指定します。 任意の組み合わせを適用[リスト ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)をボックスにします。  
   
- `rect`  
+ *rect*  
  リスト ボックスのサイズと位置を指定します。 いずれかになります、`CRect`オブジェクトまたは`RECT`構造体。  
   
- `pParentWnd`  
+ *pParentWnd*  
  リスト ボックスの親ウィンドウを指定します (通常、`CDialog`オブジェクト)。 なければなりません**NULL**です。  
   
- `nID`  
+ *nID*  
  リスト ボックスのコントロール ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CListBox` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出す**作成**、Windows のリスト ボックスを初期化しにアタッチする、`CListBox`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CListBox` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すし、呼び出す`Create`、Windows のリスト ボックスを初期化しにアタッチする、`CListBox`オブジェクト。  
   
- ときに**作成**を実行する Windows の送信、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[wm _ で始まるGETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)リスト ボックス コントロールへのメッセージ。  
+ ときに`Create`を実行する Windows の送信、 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)、 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)、 [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)リスト ボックス コントロールするメッセージです。  
   
  既定では、これらのメッセージが処理されます、 [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)、 [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)、 [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)、および[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)メンバー関数`CWnd`基本クラスです。 既定のメッセージ処理を拡張するには、派生クラスを`CListBox`メッセージ マップを新しいクラスに追加し、前のメッセージ ハンドラー メンバー関数をオーバーライドします。 オーバーライド`OnCreate`など、新しいクラスに必要な初期化を実行します。  
   
@@ -406,10 +406,10 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  Windows への long ポインター [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)削除された項目に関する情報を格納する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数の既定の実装は、何も行いません。 必要に応じてのオーナー描画リスト ボックスを再描画するには、この関数をオーバーライドします。  
   
  参照してください[構造体](../../mfc/reference/cwnd-class.md#ondeleteitem)の詳細については、`DELETEITEMSTRUCT`構造体。  
@@ -425,14 +425,14 @@ int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  削除する文字列の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- 一覧に残っている文字列の数。 戻り値は**返します**場合`nIndex`リスト内の項目数より大きいインデックスを指定します。  
+ 一覧に残っている文字列の数。 戻り値は**返します**場合*nIndex*リスト内の項目数より大きいインデックスを指定します。  
   
-### <a name="remarks"></a>コメント  
- 次のすべての項目`nIndex`で 1 つ下に移動します。 たとえば、リスト ボックスに 2 つの項目が含まれている場合の最初の項目を削除できるようになります、残りの項目に最初の位置になります。 `nIndex`最初の位置の項目の 0 を = です。  
+### <a name="remarks"></a>Remarks  
+ 次のすべての項目*nIndex*で 1 つ下に移動します。 たとえば、リスト ボックスに 2 つの項目が含まれている場合の最初の項目を削除できるようになります、残りの項目に最初の位置になります。 *nIndex*最初の位置の項目の 0 を = です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
@@ -447,8 +447,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `attr`  
- 任意の組み合わせにでき、`enum`で説明されている値**CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus)、または、次の値の任意の組み合わせ。  
+ *attr*  
+ 組み合わせにすることができます、 **enum**で説明されている値**CFile::GetStatu**[s](../../mfc/reference/cfile-class.md#getstatus)、または、次の値の任意の組み合わせ。  
   
 |[値]|説明|  
 |-----------|-------------|  
@@ -456,12 +456,12 @@ int Dir(
 |0x0001|ファイルからの読み取りに書き込まれないことができます。|  
 |0x0002|ファイルは、非表示には、ディレクトリの一覧に表示されません。|  
 |0x0004|ファイルは、システム ファイルです。|  
-|0x0010|指定した名前`lpszWildCard`ディレクトリを指定します。|  
+|0x0010|指定した名前*lpszWildCard*ディレクトリを指定します。|  
 |0x0020|ファイルがアーカイブされています。|  
-|0x4000|指定された名前と一致するすべてのドライブに含める`lpszWildCard`です。|  
+|0x4000|指定された名前と一致するすべてのドライブに含める*lpszWildCard*です。|  
 |0x8000|排他フラグ。 排他フラグが設定されている場合は、指定した種類のファイルのみが一覧表示されます。 それ以外の場合、「通常」のファイルだけでなく、指定した種類のファイルが一覧表示されます。|  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  ファイルの仕様の文字列を指します。 文字列は、ワイルドカードを含めることができます (たとえば、*.\*)。  
   
 ### <a name="return-value"></a>戻り値  
@@ -478,13 +478,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  Long ポインター、 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)のために必要な図面の種類に関する情報を格納する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **ItemAction**と**itemState**のメンバー、`DRAWITEMSTRUCT`構造体は、実行するのには、描画の動作を定義します。  
   
- 既定では、このメンバー関数では何も行いません。 オーナー描画の描画を実装するには、このメンバー関数をオーバーライド`CListBox`オブジェクト。 アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります`lpDrawItemStruct`関数はこのメンバーの前に終了します。  
+ 既定では、このメンバー関数では何も行いません。 オーナー描画の描画を実装するには、このメンバー関数をオーバーライド`CListBox`オブジェクト。 アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります*lpDrawItemStruct*関数はこのメンバーの前に終了します。  
   
  参照してください[体](../../mfc/reference/cwnd-class.md#ondrawitem)の詳細については、`DRAWITEMSTRUCT`構造体。  
   
@@ -501,23 +501,23 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nStartAfter`  
- 最初の項目を検索する前に、の項目の 0 から始まるインデックスが含まれています。 指定した項目に、リスト ボックスの上部から続行検索では、リスト ボックスの下部に達すると、`nStartAfter`です。 場合`nStartAfter`-1 で、リスト ボックス全体が先頭から検索します。  
+ *nStartAfter*  
+ 最初の項目を検索する前に、の項目の 0 から始まるインデックスが含まれています。 指定した項目に、リスト ボックスの上部から続行検索では、リスト ボックスの下部に達すると、 *nStartAfter*です。 場合*nStartAfter* -1 で、リスト ボックス全体が先頭から検索します。  
   
- `lpszItem`  
+ *lpszItem*  
  検索対象のプレフィックスを表す null で終わる文字列へのポインター。 検索では独立しており、ケース、ため、この文字列は、任意の大文字と小文字を含めることができます。  
   
 ### <a name="return-value"></a>戻り値  
  一致する項目の 0 から始まるインデックス、または**返します**検索が成功した場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、 [SelectString](#selectstring)メンバー関数を検索して、文字列を選択します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
 ##  <a name="findstringexact"></a>  CListBox::FindStringExact  
- 指定した文字列に一致する最初のボックスの一覧で文字列を検索`lpszFind`です。  
+ 指定した文字列に一致する最初のボックスの一覧で文字列を検索*されて*です。  
   
 ```  
 int FindStringExact(
@@ -526,17 +526,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndexStart`  
- 最初の項目を検索する前に、の項目の 0 から始まるインデックスを指定します。 指定した項目に、リスト ボックスの上部から続行検索では、リスト ボックスの下部に達すると、`nIndexStart`です。 場合`nIndexStart`-1 で、リスト ボックス全体が先頭から検索します。  
+ *nIndexStart*  
+ 最初の項目を検索する前に、の項目の 0 から始まるインデックスを指定します。 指定した項目に、リスト ボックスの上部から続行検索では、リスト ボックスの下部に達すると、 *nIndexStart*です。 場合*nIndexStart* -1 で、リスト ボックス全体が先頭から検索します。  
   
- `lpszFind`  
+ *されています。*  
  検索する null で終わる文字列へのポインター。 この文字列は、拡張子を含む、完全なファイル名を含めることができます。 検索では、文字列は、任意の大文字と小文字を含めることができますので、大文字と小文字が区別されません。  
   
 ### <a name="return-value"></a>戻り値  
  一致する項目のインデックスまたは**返します**検索が成功した場合。  
   
-### <a name="remarks"></a>コメント  
- リスト ボックスがオーナー描画スタイルで作成された場合、 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、`FindStringExact`メンバー関数の値に対してダブルワード値を一致させようとしています。`lpszFind`です。  
+### <a name="remarks"></a>Remarks  
+ ですが、リスト ボックスがオーナー描画スタイルで作成された場合、 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、`FindStringExact`メンバー関数の値に対してダブルワード値を一致させようとしています。*されて*です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
@@ -551,7 +551,7 @@ int GetAnchorIndex() const;
 ### <a name="return-value"></a>戻り値  
  成功した場合は現在のアンカー項目のインデックスそれ以外の場合**返します**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  複数選択のリスト ボックスでは、アンカー項目は、最初または最アイテム連続した選択した項目のブロックです。  
   
 ### <a name="example"></a>例  
@@ -567,7 +567,7 @@ int GetCaretIndex() const;
 ### <a name="return-value"></a>戻り値  
  リスト ボックスにフォーカス四角形をされている項目の 0 から始まるインデックス。 単一選択のリスト ボックスをリスト ボックスには、存在する場合、戻り値は、選択されている項目のインデックスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  項目は、可能性があります。 または選択されていない可能性があります。  
   
 ### <a name="example"></a>例  
@@ -583,7 +583,7 @@ int GetCount() const;
 ### <a name="return-value"></a>戻り値  
  リスト ボックス内の項目の数または**返します**場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  返される数は、1 (インデックスは 0 から始まる) の最後の項目のインデックス値より大きい値です。  
   
 ### <a name="example"></a>例  
@@ -601,7 +601,7 @@ int GetCurSel() const;
   
  複数選択のリスト ボックスでは、フォーカスがある項目のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す必要はありません`GetCurSel`複数選択のリスト ボックス。 使用して[CListBox::GetSelItems](#getselitems)代わりにします。  
   
 ### <a name="example"></a>例  
@@ -617,7 +617,7 @@ int GetHorizontalExtent() const;
 ### <a name="return-value"></a>戻り値  
  スクロール可能な (ピクセル単位)、リスト ボックスの幅。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、リスト ボックスに水平スクロール バーがある場合にのみ適用します。  
   
 ### <a name="example"></a>例  
@@ -631,14 +631,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックスで、項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  アイテムに関連付けられている 32 ビット値または**返します**場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
- ダブルワード値は、`dwItemData`のパラメーター、 [SetItemData](#setitemdata)呼び出します。  
+### <a name="remarks"></a>Remarks  
+ ダブルワード値は、 *dwItemData*のパラメーター、 [SetItemData](#setitemdata)呼び出します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
@@ -651,7 +651,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックスで、項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -668,11 +668,11 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックスで、項目の 0 から始まるインデックスを指定します。 リスト ボックスがある場合にのみ、このパラメーターは使用、 **LBS_OWNERDRAWVARIABLE**スタイルです。 それ以外の場合、0 に設定する必要がありますします。  
   
 ### <a name="return-value"></a>戻り値  
- リスト ボックス内の項目のピクセル単位の高さ。 リスト ボックスがある場合、 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、戻り値で指定した項目の高さ`nIndex`です。 エラーが発生する場合、戻り値は**返します**です。  
+ リスト ボックス内の項目のピクセル単位の高さ。 リスト ボックスがある場合、 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、戻り値で指定した項目の高さ*nIndex*です。 エラーが発生する場合、戻り値は**返します**です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
@@ -687,10 +687,10 @@ int GetItemRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  項目の 0 から始まるインデックスを指定します。  
   
- `lpRect`  
+ *lpRect*  
  Long ポインターを指定します、 [RECT 構造体](../../mfc/reference/rect-structure1.md)項目のリスト ボックスのクライアント座標を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
@@ -709,7 +709,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="return-value"></a>戻り値  
  各列の項目の数、`CListBox`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)メッセージ、Windows SDK で説明します。  
   
 ##  <a name="getlocale"></a>  CListBox::GetLocale  
@@ -722,7 +722,7 @@ LCID GetLocale() const;
 ### <a name="return-value"></a>戻り値  
  リスト ボックス内の文字列のロケール識別子 (LCID) 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ロケールが使用、たとえば、並べ替えられたリスト ボックス内の文字列の並べ替え順序を決定します。  
   
 ### <a name="example"></a>例  
@@ -736,13 +736,13 @@ int GetSel(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  正の数値を使用している場合は、指定した項目が選択されています。それ以外の場合は 0 です。 戻り値は`LB_ERR`場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、両方単一および複数選択のリスト ボックスで動作します。  
   
  使用して、現在選択されているリスト ボックス項目のインデックスを取得する[CListBox::GetCurSel](#getcursel)です。  
@@ -773,11 +773,11 @@ int GetSelItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nMaxItems`  
+ *nMaxItems*  
  項目番号が、バッファーに配置するのには、選択した項目の最大数を指定します。  
   
- `rgIndex`  
- 指定された整数の数に対して十分な大きさのバッファーを指すポインター`nMaxItems`です。  
+ *rgIndex*  
+ 指定された整数の数に対して十分な大きさのバッファーを指すポインター *nMaxItems*です。  
   
 ### <a name="return-value"></a>戻り値  
  実際のアイテムの数は、バッファーに格納します。 戻り値は、リスト ボックスが単一選択のリスト ボックスの場合は、`LB_ERR`です。  
@@ -799,19 +799,19 @@ void GetText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  取得する文字列の 0 から始まるインデックスを指定します。  
   
- `lpszBuffer`  
+ *lpszBuffer*  
  文字列を受け取るバッファーへのポインター。 バッファーには、文字列、終端の null 文字に十分な空き領域が必要です。 呼び出して前もって文字列のサイズを特定できる、`GetTextLen`メンバー関数。  
   
- `rString`  
+ *rString*  
  `CString` オブジェクトへの参照。  
   
 ### <a name="return-value"></a>戻り値  
- 終端の null 文字を除いた文字列の長さをバイト単位で。 場合`nIndex`有効なインデックスが指定されていません、戻り値は**返します**です。  
+ 終端の null 文字を除いた文字列の長さをバイト単位で。 場合*nIndex*有効なインデックスが指定されていません、戻り値は**返します**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバーの 2 番目の形式の関数がいっぱいになった、`CString`文字列のテキストを持つオブジェクト。  
   
 ### <a name="example"></a>例  
@@ -825,11 +825,11 @@ int GetTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  文字列の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- 文字列の終端の null 文字を除く、文字の長さ。 場合`nIndex`有効なインデックスが指定されていません、戻り値は**返します**です。  
+ 文字列の終端の null 文字を除く、文字の長さ。 場合*nIndex*有効なインデックスが指定されていません、戻り値は**返します**です。  
   
 ### <a name="example"></a>例  
   例を参照して[CListBox::GetText](#gettext)です。  
@@ -844,7 +844,7 @@ int GetTopIndex() const;
 ### <a name="return-value"></a>戻り値  
  成功した場合、リスト ボックスに表示される最初の項目の 0 から始まるインデックス**返します**それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初に、リスト ボックスの上部にある項目の 0 が上部にある別のアイテムがありますが、リスト ボックスをスクロールすると場合、。  
   
 ### <a name="example"></a>例  
@@ -860,21 +860,21 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItems`  
+ *nItems*  
  追加する項目の数を指定します。  
   
- `nBytes`  
+ *nBytes*  
  割り当てるバイト数、項目の文字列では、メモリの量を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  かどうか、成功、項目の最大数をメモリを再割り当てが必要とせずに、それ以外の場合に格納できるリスト ボックス**返します**、十分なメモリの意味があります。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  多数の項目を追加する前にこの関数を呼び出して、`CListBox`です。  
   
  この関数は、多数のアイテム (100 より大きい) を持つリスト ボックスの初期化を高速化に役立ちます。 指定されたため、その後のメモリ量を事前に割り当てます[AddString](#addstring)、 [InsertString](#insertstring)、および[Dir](#dir)関数は、最短時間を取得します。 パラメーターの見積もりを行うこともできます。 過大評価していない、余分なメモリが割り当てられます。過小を評価するには、事前に割り当てられた量を超えているアイテムの通常の割り当てが使用されます。  
   
- Windows 95/98 のみ:`nItems`パラメーターは 16 ビット値に制限されます。 つまり、リスト ボックスは、32,767 を超える項目を含めることはできません。 項目の数が制限されているが、リスト ボックス内の項目の合計サイズが使用可能なメモリによってのみ制限されます。  
+ Windows 95/98 のみ: *nItems*パラメーターは 16 ビット値に制限されます。 つまり、リスト ボックスは、32,767 を超える項目を含めることはできません。 項目の数が制限されているが、リスト ボックス内の項目の合計サイズが使用可能なメモリによってのみ制限されます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
@@ -889,23 +889,23 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  文字列を挿入する位置の 0 から始まるインデックスを指定します。 このパラメーターが-1 の場合、文字列はリストの末尾に追加されます。  
   
- `lpszItem`  
+ *lpszItem*  
  挿入される null で終わる文字列を指します。  
   
 ### <a name="return-value"></a>戻り値  
  文字列が挿入された位置の 0 から始まるインデックス。 戻り値は**返します**エラーが発生した場合、戻り値は**返します**新しい文字列を保存する十分な空き領域がある場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  異なり、 [AddString](#addstring)メンバー関数は、`InsertString`と一覧は行われません、 [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)並べ替えスタイルです。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
 ##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint  
- 指定した位置に最も近いリスト ボックス項目を決定`pt`です。  
+ 指定した位置に最も近いリスト ボックス項目を決定*pt*です。  
   
 ```  
 UINT ItemFromPoint(
@@ -914,16 +914,16 @@ UINT ItemFromPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pt`  
+ *pt*  
  リスト ボックスのクライアント領域の左上隅に対して相対的に指定された、最も近い項目を検索する対象のポイント。  
   
- `bOutside`  
- 参照、`BOOL`変数に設定されますを`TRUE`場合`pt`が、最も近いリスト ボックス項目のクライアント領域の範囲外`FALSE`場合`pt`は最も近いリスト ボックス項目のクライアント領域の内側です。  
+ *bOutside*  
+ 参照、`BOOL`変数に設定されますを`TRUE`場合`pt`が、最も近いリスト ボックス項目のクライアント領域の範囲外`FALSE`場合*pt*は最も近いリスト ボックス項目のクライアント領域の内側です。  
   
 ### <a name="return-value"></a>戻り値  
- 指定した位置に最も近い項目のインデックス`pt`です。  
+ 指定した位置に最も近い項目のインデックス*pt*です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数を使用して、上にマウス カーソルが移動リスト ボックス項目を特定します。  
   
 ### <a name="example"></a>例  
@@ -937,10 +937,10 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  Long ポインター、 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、このメンバー関数では何も行いません。 このメンバー関数をオーバーライドし、入力、`MEASUREITEMSTRUCT`構造体、リスト ボックスのサイズの Windows に通知します。 リスト ボックスが作成された場合、 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)リスト ボックス内の各項目のスタイル、フレームワークからこのメンバー関数。 それ以外の場合、このメンバーは、1 回だけ呼び出されます。  
   
  使用しての詳細については、 [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルで作成されたオーナー描画リスト ボックスで、`SubclassDlgItem`のメンバー関数`CWnd`の説明を参照[テクニカル ノート 14: カスタム](../../mfc/tn014-custom-controls.md).  
@@ -970,21 +970,21 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nStartAfter`  
- 最初の項目を検索する前に、の項目の 0 から始まるインデックスが含まれています。 指定した項目に、リスト ボックスの上部から続行検索では、リスト ボックスの下部に達すると、`nStartAfter`です。 場合`nStartAfter`-1 で、リスト ボックス全体が先頭から検索します。  
+ *nStartAfter*  
+ 最初の項目を検索する前に、の項目の 0 から始まるインデックスが含まれています。 指定した項目に、リスト ボックスの上部から続行検索では、リスト ボックスの下部に達すると、 *nStartAfter*です。 場合*nStartAfter* -1 で、リスト ボックス全体が先頭から検索します。  
   
- `lpszItem`  
+ *lpszItem*  
  検索対象のプレフィックスを表す null で終わる文字列へのポインター。 検索では独立しており、ケース、ため、この文字列は、任意の大文字と小文字を含めることができます。  
   
 ### <a name="return-value"></a>戻り値  
  検索が成功した場合は、選択した項目のインデックス。 検索が成功しなかった場合、戻り値は**返します**現在の選択は変更されません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リスト ボックスをスクロールすると、必要に応じて、選択した項目を表示します。  
   
  リスト ボックスで、このメンバー関数は使用できません、 [LBS_MULTIPLESEL](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル。  
   
- 項目を選択すると、その文字列の開始点) で指定された文字列内の文字を一致する場合にのみ`lpszItem`です。  
+ 項目を選択すると、その文字列の開始点) で指定された文字列内の文字を一致する場合にのみ*lpszItem*です。  
   
  使用して、`FindString`項目を選択せずに文字列を検索するメンバー関数。  
   
@@ -1002,20 +1002,20 @@ int SelItemRange(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bSelect`  
- 選択範囲を設定する方法を指定します。 場合`bSelect`は**TRUE**、文字列が選択され強調表示される場合**FALSE**、強調表示が削除され、文字列が選択されていません。  
+ *選択*  
+ 選択範囲を設定する方法を指定します。 場合*選択*は**TRUE**、文字列が選択され強調表示される場合**FALSE**、強調表示が削除され、文字列が選択されていません。  
   
- `nFirstItem`  
+ *nFirstItem*  
  設定する最初の項目の 0 から始まるインデックスを指定します。  
   
- `nLastItem`  
+ *nLastItem*  
  設定する最後の項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  **返します**場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
- このメンバー関数を複数選択のリスト ボックスでのみ使用します。 複数選択のリスト ボックスで 1 つの項目を選択する必要がある場合などは場合、`nFirstItem`と等しい`nLastItem`— を呼び出す、 [SetSel](#setsel)メンバー関数を使用します。  
+### <a name="remarks"></a>Remarks  
+ このメンバー関数を複数選択のリスト ボックスでのみ使用します。 複数選択のリスト ボックスで 1 つの項目を選択する必要がある場合などは場合、 *nFirstItem*と等しい*nLastItem* — を呼び出す、 [SetSel](#setsel)メンバー関数を使用します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
@@ -1028,10 +1028,10 @@ void SetAnchorIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  アンカーとなるリスト ボックス項目の 0 から始まるインデックスを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  複数選択のリスト ボックスでは、アンカー項目は、最初または最アイテム連続した選択した項目のブロックです。  
   
 ### <a name="example"></a>例  
@@ -1047,7 +1047,7 @@ int SetCaretIndex(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックスにフォーカス四角形を表示する項目の 0 から始まるインデックスを指定します。  
   
  *bScroll*  
@@ -1056,7 +1056,7 @@ int SetCaretIndex(
 ### <a name="return-value"></a>戻り値  
  **返します**場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  項目が表示されていない場合は、スクロールして表示します。  
   
 ### <a name="example"></a>例  
@@ -1070,7 +1070,7 @@ void SetColumnWidth(int cxWidth);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cxWidth`  
+ *cxWidth*  
  すべての列のピクセル単位の幅を指定します。  
   
 ### <a name="example"></a>例  
@@ -1084,13 +1084,13 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nSelect`  
- 選択する文字列の 0 から始まるインデックスを指定します。 場合`nSelect`-1 で、選択範囲がないように、リスト ボックスを設定します。  
+ *nSelect*  
+ 選択する文字列の 0 から始まるインデックスを指定します。 場合*nSelect* -1 で、選択範囲がないように、リスト ボックスを設定します。  
   
 ### <a name="return-value"></a>戻り値  
  `LB_ERR` 場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  新しい文字列を選択すると、リスト ボックスは選択されていた文字列から強調表示を削除します。  
   
  このメンバー関数は、単一選択のリスト ボックスでのみ使用します。  
@@ -1111,7 +1111,7 @@ void SetHorizontalExtent(int cxExtent);
  *cxExtent*  
  これによって、リスト ボックスを水平にスクロールすることができますのピクセル数を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リスト ボックスのサイズがこの値よりも小さい場合は、水平スクロール バーはリスト ボックス内の項目を水平にスクロールします。 リスト ボックスは、大規模なまたはこの値より大きいと、水平スクロール バーが表示されます。  
   
  呼び出しに応答する`SetHorizontalExtent`、リスト ボックスがで定義されている必要があります、 [WS_HSCROLL](../../mfc/reference/styles-used-by-mfc.md#window-styles)スタイル。  
@@ -1131,10 +1131,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  項目の 0 から始まるインデックスを指定します。  
   
- `dwItemData`  
+ *dwItemData*  
  項目に関連付けられる値を指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1153,16 +1153,16 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  項目の 0 から始まるインデックスを指定します。  
   
- `pData`  
+ *pData*  
  アイテムに関連付けられるへのポインターを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  **返します**場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このポインターは項目が追加または削除されるリスト ボックス内の項目の相対位置を変更する可能性がある場合でも、リスト ボックスの有効期間有効です。 そのため、ボックス内の項目のインデックスを変更することができますが、ポインターの信頼性を維持します。  
   
 ### <a name="example"></a>例  
@@ -1178,17 +1178,17 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックスで、項目の 0 から始まるインデックスを指定します。 リスト ボックスがある場合にのみ、このパラメーターは使用、 **LBS_OWNERDRAWVARIABLE**スタイルです。 それ以外の場合、0 に設定する必要がありますします。  
   
- `cyItemHeight`  
+ *cyItemHeight*  
  (ピクセル単位)、項目の高さを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  **返します**インデックスまたは高さが有効でない場合。  
   
-### <a name="remarks"></a>コメント  
- リスト ボックスがある場合、 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、この関数は設定で指定した項目の高さ`nIndex`です。 それ以外の場合、この関数は、リスト ボックスですべてのアイテムの高さを設定します。  
+### <a name="remarks"></a>Remarks  
+ リスト ボックスがある場合、 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル、この関数は設定で指定した項目の高さ*nIndex*です。 それ以外の場合、この関数は、リスト ボックスですべてのアイテムの高さを設定します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
@@ -1201,13 +1201,13 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewLocale`  
+ *nNewLocale*  
  リスト ボックスに設定する新しい値のロケール識別子 (LCID)。  
   
 ### <a name="return-value"></a>戻り値  
  このリスト ボックスの以前のロケール識別子 (LCID) 値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合**setlocale、_wsetlocale**は呼び出されません、既定のロケールは、システムから取得します。 コントロール パネルを使用してこのシステムの既定のロケールを変更できる地域 (または国際) アプリケーションです。  
   
 ### <a name="example"></a>例  
@@ -1223,16 +1223,16 @@ int SetSel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
- 設定する文字列の 0 から始まるインデックスが含まれています。 かどうかは-1 で、選択範囲が追加または削除の値に応じて、すべての文字列から`bSelect`です。  
+ *nIndex*  
+ 設定する文字列の 0 から始まるインデックスが含まれています。 かどうかは-1 で、選択範囲が追加または削除の値に応じて、すべての文字列から*選択*です。  
   
- `bSelect`  
- 選択範囲を設定する方法を指定します。 場合`bSelect`は`TRUE`、文字列が選択され強調表示される場合`FALSE`、強調表示が削除され、文字列が選択されていません。 指定した文字列が選択され、既定で強調表示されます。  
+ *選択*  
+ 選択範囲を設定する方法を指定します。 場合*選択*は`TRUE`、文字列が選択され強調表示される場合`FALSE`、強調表示が削除され、文字列が選択されていません。 指定した文字列が選択され、既定で強調表示されます。  
   
 ### <a name="return-value"></a>戻り値  
  `LB_ERR` 場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数を複数選択のリスト ボックスでのみ使用します。  
   
  単一選択のリスト ボックスから項目を選択するには[CListBox::SetCurSel](#setcursel)です。  
@@ -1254,22 +1254,22 @@ BOOL SetTabStops(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cxEachStop`  
- タブ ストップはすべて`cxEachStop`ダイアログ単位です。 参照してください*rgTabStops*ダイアログ ユニットの詳細についてはします。  
+ *cxEachStop*  
+ タブ ストップはすべて*cxEachStop*ダイアログ単位です。 参照してください*rgTabStops*ダイアログ ユニットの詳細についてはします。  
   
- `nTabStops`  
+ *nTabStops*  
  リスト ボックスのタブ ストップの数を指定します。  
   
- `rgTabStops`  
+ *rgTabStops*  
  ダイアログ単位でのタブ ストップの位置を表す、整数の配列の最初のメンバーへのポインター。 ダイアログ単位は、水平または垂直距離です。 1 つの水平方向のダイアログ単位は、現在のダイアログ ベースの幅の単位の 4 分の 1 に等しいと 1 つの垂直方向のダイアログ単位は、現在のダイアログ ベースの高さユニットの 8 分の 1 に等しい。 ダイアログの基本単位は、現在のシステム フォントの幅と高さに基づいて計算されます。 **GetDialogBaseUnits** Windows の機能はピクセル単位で現在のダイアログ ボックスの基本単位を返します。 タブ ストップは; 昇順に並べ替える必要があります。バック タブを指定することはできません。  
   
 ### <a name="return-value"></a>戻り値  
  すべてのタブが設定された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- タブ ストップを 2 つのダイアログ単位の既定のサイズに設定するには、このメンバー関数のパラメーターなしのバージョンを呼び出します。 タブ ストップを 2 以外のサイズを設定するとバージョンを呼び出す、`cxEachStop`引数。  
+### <a name="remarks"></a>Remarks  
+ タブ ストップを 2 つのダイアログ単位の既定のサイズに設定するには、このメンバー関数のパラメーターなしのバージョンを呼び出します。 タブ ストップを 2 以外のサイズを設定するとバージョンを呼び出す、 *cxEachStop*引数。  
   
- サイズの配列をタブ ストップを設定するには、バージョンを使用、`rgTabStops`と`nTabStops`引数。 タブ ストップを内の各値の設定は`rgTabStops`で指定された数まで`nTabStops`です。  
+ サイズの配列をタブ ストップを設定するには、バージョンを使用、 *rgTabStops*と*nTabStops*引数。 タブ ストップを内の各値の設定は*rgTabStops*で指定された数まで*nTabStops*です。  
   
  呼び出しに応答する、`SetTabStops`メンバー関数の場合、リスト ボックス必要がありますで作成されている、 [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイル。  
   
@@ -1284,14 +1284,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  リスト ボックス項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は、0 または**返します**場合は、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
- システムによって指定された項目まで、リスト ボックスをスクロールする`nIndex`が表示されます、一覧の上部にあるボックスまたは最大スクロールの範囲に達しています。  
+### <a name="remarks"></a>Remarks  
+ システムによって指定された項目まで、リスト ボックスをスクロールする*nIndex*が表示されます、一覧の上部にあるボックスまたは最大スクロールの範囲に達しています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
@@ -1306,16 +1306,16 @@ virtual int VKeyToItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nKey`  
+ *nKey*  
  ユーザーが押されたキーの仮想キー コード。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
   
- `nIndex`  
+ *nIndex*  
  ボックスの一覧でのキャレットの現在の位置。  
   
 ### <a name="return-value"></a>戻り値  
  返します - 2 以上のアクションを既定のアクションの場合は 1 またはキーストロークの既定のアクションを実行する対象のリスト ボックス項目のインデックスを指定する負でない数値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `WM_VKEYTOITEM`を受信すると、リスト ボックスによってメッセージが送信される、`WM_KEYDOWN`のみ、リスト ボックス満たしている場合、次の両方が、メッセージ。  
   
 -   [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)セットのスタイルを設定します。  

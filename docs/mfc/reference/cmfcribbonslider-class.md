@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372698"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037730"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider クラス
 `CMFCRibbonSlider`クラスは、リボン バーまたはリボン ステータス バーに追加できるスライダー コントロールを実装します。 リボン スライダー コントロールは、Office 2007 アプリケーションに表示されるズーム スライダーに似ています。  
@@ -80,7 +80,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 |[CMFCRibbonSlider::SetZoomButtons](#setzoombuttons)|ズーム ボタンの表示と非表示を切り替えます。|  
 |[CMFCRibbonSlider::SetZoomIncrement](#setzoomincrement)|スライダー コントロールのズーム インクリメントのサイズを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用することができます、`SetRange`スライダーのズーム インクリメントの範囲を構成する方法です。 使用して、スライダーの現在の位置を設定することができます、`SetPos`メソッドです。  
   
  使用して、左右のスライダー コントロールの右側にあるで循環ズーム ボタンを表示することができます、`SetZoomButtons`メソッドです。 既定では、スライダーは横方向、左のズーム ボタンにマイナス記号を表示および右のズーム ボタンは、プラス記号を表示します。  
@@ -99,7 +99,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
   
  [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxribbonslider.h  
   
 ##  <a name="cmfcribbonslider"></a>  CMFCRibbonSlider::CMFCRibbonSlider  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  スライダーの id。  
   
- [in] です。 `nWidth`  
+ [in] です。 *nWidth*  
  スライダーの幅 (ピクセル単位)。  
   
-### <a name="remarks"></a>コメント  
- 構築されるリボン スライダー`nWidth`スライダーの追加パネルのカテゴリでピクセルです。 既定では、スライダーは水平方向です。  
+### <a name="remarks"></a>Remarks  
+ 構築されるリボン スライダー *nWidth*スライダーの追加パネルのカテゴリでピクセルです。 既定では、スライダーは水平方向です。  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  スライダー コントロールの現在位置を返します。  
@@ -159,11 +159,11 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getzoomincrement"></a>  CMFCRibbonSlider::GetZoomIncrement  
  スライダー コントロールのズームの増分値を取得します。  
@@ -193,9 +193,9 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpos"></a>  CMFCRibbonSlider::SetPos  
  スライダー コントロールの現在の位置を設定します。  
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nPos`  
+ [in]*nPos*  
  スライダーを設定する位置を指定します。 スライダーの先頭からの相対位置では。  
   
- [入力] `bRedraw`  
+ [in]*bRedraw*  
  場合`TRUE`スライダーが再描画されます。  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,13 +223,13 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nMin`  
+ [in]*nMin*  
  スライダー コントロールの最小値を指定します。  
   
- [入力] `nMax`  
+ [in]*nMax*  
  スライダー コントロールの最大値を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  スライダー コントロールの値の範囲を指定するには、最小値と最大値を設定します。  
   
 ##  <a name="setzoombuttons"></a>  CMFCRibbonSlider::SetZoomButtons  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in] です。 `bSet`  
+ [in] です。 *bSet*  
  `TRUE` ズーム ボタンを表示するには`FALSE`それらを非表示にします。  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nZoomIncrement`  
+ [in]*nZoomIncrement*  
  スライダー コントロールのズーム増分値を指定します。  
   
 ## <a name="see-also"></a>関連項目  

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d9c60ee3601cd4055e963997a6cd4f8bbd48b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369874"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042184"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar クラス
 `CMFCAutoHideBar` クラスは、自動非表示機能を実装している、特殊なツール バー クラスです。  
@@ -94,11 +94,11 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|経由で、ユーザーがマウス カーソルを配置するときに、現在の時間遅延、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、関連付けられたウィンドウをフレームワークが表示されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ユーザーがドック ウィンドウを自動非表示モードに切り替えると、フレームワークは自動的に `CMFCAutoHideBar` オブジェクトを作成します。 また、必要に応じて、作成[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)と[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクト。 各 `CAutoHideDockSite` オブジェクトは、個別の `CMFCAutoHideButton` に関連付けられます。  
   
  `CMFCAutoHideBar` クラスは、ユーザーのマウスが `CMFCAutoHideButton` の上に移動したときの `CAutoHideDockSite` の表示を実装しています。 ツール バーが WM_MOUSEMOVE メッセージを受信すると、`CMFCAutoHideBar` がタイマーを開始します。 タイマーが終了したら、ツール バーに WM_TIMER イベント通知を送信します。 ツール バーは、タイマーが開始したときにマウス ポインターが位置していた自動非表示ボタン上にまだマウス ポインターがあるかどうかをチェックして、このイベントを処理します。 ある場合は、アタッチされている `CAutoHideDockSite` が表示されます。  
@@ -123,7 +123,7 @@ class CMFCAutoHideBar : public CPane
   
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxautohidebar.h  
   
 ##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow  
@@ -136,16 +136,16 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pAutoHideWnd`  
+ [in]*pAutoHideWnd*  
  隠すウィンドウ。  
   
- [入力] `dwAlignment`  
+ [in]*場合*  
  アプリケーション ウィンドウを使用して [自動的に隠す] ボタンの配置を指定する値。  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
- `dwAlignment` パラメーターは、[自動的に隠す] ボタンのアプリケーション内の位置を示します。 このパラメーターは次のいずれかの値に設定できます。  
+### <a name="remarks"></a>Remarks  
+ *場合*パラメーターは、アプリケーションで自動的に隠すボタンがあることを示します。 このパラメーターは次のいずれかの値に設定できます。  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -164,7 +164,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout  
 
@@ -176,12 +176,12 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bStretch`  
- [入力] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar  
  CMFCAutoHideBar オブジェクトを構築します。  
@@ -190,7 +190,7 @@ virtual CSize CalcFixedLayout(
 CMFCAutoHideBar();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="create"></a>  CMFCAutoHideBar::Create  
 
@@ -207,17 +207,17 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszClassName`  
- [入力] `dwStyle`  
- [入力] `rect`  
- [入力] `pParentWnd`  
- [入力] `nID`  
- [入力] `dwControlBarStyle`  
- [入力] `pContext`  
+ [in]*lpszClassName*  
+ [in]*dwStyle*  
+ [in]*rect*  
+ [in]*pParentWnd*  
+ [in]*nID*  
+ [in]*dwControlBarStyle*  
+ [in]*pContext*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow  
  アプリケーションの最初の自動非表示ウィンドウへのポインターを返します。  
@@ -229,7 +229,7 @@ CDockablePane* GetFirstAHWindow();
 ### <a name="return-value"></a>戻り値  
  アプリケーションの最初の自動非表示ウィンドウ、または NULL (ウィンドウがない場合)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount  
  自動的に隠すボタンのうち、表示されているものの数を取得します。  
@@ -241,7 +241,7 @@ int GetVisibleCount();
 ### <a name="return-value"></a>戻り値  
  自動的に隠すボタンのうち、表示されているものの数を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
  経由で、ユーザーがマウス カーソルを配置するときに、現在の時間遅延、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、関連付けられたウィンドウをフレームワークが表示されます。  
@@ -250,7 +250,7 @@ int GetVisibleCount();
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  経由で、ユーザーがマウス カーソルを配置するときに、`CMFCAutoHideButton`フレームワークは、関連付けられたウィンドウを表示する前に若干の遅延があります。 このパラメーターは、その遅延 (ミリ秒) の長さを決定します。  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
@@ -261,11 +261,11 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `CPoint`  
+ [in]*CPoint*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow  
  自動的に隠すウィンドウを削除して破棄します。  
@@ -275,13 +275,13 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- CDockablePane * `pAutoHideWnd`  
+ CDockablePane * *pAutoHideWnd*  
  削除する自動的に隠すウィンドウ。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup  
  自動的に隠すバーにアクティブというフラグを付けます。  
@@ -291,10 +291,10 @@ virtual void SetActiveInGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]BOOL `bActive`  
+ [in]BOOL*描画*  
  アクティブに設定する場合は TRUE、それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  参照してください[cpane::setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup)です。  
   
 ##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
@@ -305,9 +305,9 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bState`  
+ [in]*この*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow  
  自動的に隠すウィンドウを示します。  
@@ -320,17 +320,17 @@ BOOL ShowAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]CDockablePane * `pAutoHideWnd`  
- [in]BOOL `bShow`  
+ [in]CDockablePane * *pAutoHideWnd*  
+ [in]BOOL *bShow*  
  ウィンドウを表示する場合は TRUE。  
   
- [in]BOOL `bDelay`  
+ [in]BOOL *bDelay*  
  このパラメーターは無視されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane  
  折りたたまれた状態の自動的に隠すバーを `CMFCAutoHideButton` オブジェクトに合わせてサイズ変更します。  
@@ -342,16 +342,16 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nLength`  
+ [in]*されて*  
  この値は、基本実装では使用されません。 派生実装では、サイズを変更するウィンドウの長さを指定するためにこの値を使用します。  
   
- [入力] `bVert`  
+ [in]*bVert*  
  この値は、基本実装では使用されません。 派生実装で使用`TRUE`、自動的に隠すバーが垂直方向に折りたたまれているケースを処理して`FALSE`自動的に隠すバーが水平方向に折りたたまれている場合にします。  
   
 ### <a name="return-value"></a>戻り値  
  サイズを変更するウィンドウの結果のサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  派生クラスは、このメソッドをオーバーライドして動作をカスタマイズできます。  
   
 ##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode  
@@ -365,7 +365,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
  [in] pFirstBarInGroup  
  グループ内で最初の自動的に隠すバーを指すポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState  
  自動的に隠すバーを再描画する必要がある場合に、フレームワークによって呼び出されます。  
@@ -374,7 +374,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 void UpdateVisibleState();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369191"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038433"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane クラス
 `CMFCRibbonStatusBarPane`クラスは、リボン ステータス バーに追加できるリボン要素を実装します。  
@@ -80,7 +80,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 |[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|アニメーションを使用できるイメージ リストをペインに割り当てます。|  
 |[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|テキストの配置を設定します。|  
 |[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|ペインに割り当てられているアニメーションを開始します。|  
-|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|ペインに割り当てられているアニメーションを停止します。 である必要があります。|  
+|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|ペインに割り当てられているアニメーションを停止します。 .|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
@@ -102,7 +102,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
   
  [CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxribbonstatusbarpane.h  
   
 ##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nCmdID`  
+ [in]*nCmdID*  
  ウィンドウのコマンド ID を指定します。  
   
- [入力] `lpszText`  
+ [in]*lpszText*  
  ウィンドウに表示するテキスト文字列を指定します。  
   
- [入力] `bIsStatic`  
+ [in]*bIsStatic*  
  場合`TRUE`、ステータス ウィンドウを強調表示されているまたはをクリックして選択されていることはできません。  
   
- [入力] `hIcon`  
+ [in]*hIcon*  
  ウィンドウに表示されるアイコンのハンドルを指定します。  
   
- [入力] `lpszAlmostLargeText`  
+ [in]*lpszAlmostLargeText*  
  ウィンドウが表示可能な最大長の文字列を指定します。  
   
- [入力] `hBmpAnimationList`  
+ [in]*hBmpAnimationList*  
  アニメーションで使用されているイメージ リストへのハンドルを指定します。  
   
- [入力] `cxAnimation`  
+ [in]*cxAnimation*  
  (ピクセル単位)、アニメーションで使用されているイメージ リストのアイコンの幅を指定します。  
   
- [入力] `clrTrnsp`  
+ [in]*clrTrnsp*  
  アニメーションで使用されているイメージ リストのイメージの透明色を指定します。  
   
- [入力] `uiAnimationListResID`  
+ [in]*uiAnimationListResID*  
  アニメーションで使用されているイメージ リストのリソース ID を指定します。  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,9 +217,9 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `CDC*`  
+ [in]*CDC**  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -229,11 +229,11 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation  
  フレームワークは、ウィンドウに割り当てられているアニメーションの終了時にこのメソッドを呼び出します。  
@@ -242,7 +242,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 virtual void OnFinishAnimation();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `StopAnimation` メソッドの呼び出し、`OnFinishAnimation`メソッドで、アニメーションの終了時にデータのクリーンアップを行うこともできます。  
   
 ##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText  
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszAlmostLargeText`  
+ [in]*lpszAlmostLargeText*  
  ステータス バー ペインが切り詰めなしで表示できる最も長い文字列を指定します。  
   
-### <a name="remarks"></a>コメント  
- ライブラリは、テキストのサイズを計算する`lpszAlmostLargeText`を指定し、それに応じて、ウィンドウのサイズを変更します。 ウィンドウで、まだ適合しない場合は、テキストが切り捨てられます。  
+### <a name="remarks"></a>Remarks  
+ ライブラリは、テキストのサイズを計算する*lpszAlmostLargeText*を指定し、それに応じて、ウィンドウのサイズを変更します。 ウィンドウで、まだ適合しない場合は、テキストが切り捨てられます。  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  ステータス バー ペインに、アニメーションを使用できるイメージ リストをアタッチします。  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hBmpAnimationList`  
+ [in]*hBmpAnimationList*  
  イメージ リストへのハンドルを指定します。  
   
- [入力] `cxAnimation`  
+ [in]*cxAnimation*  
  イメージ リストには、フレームのピクセル単位の幅を指定します。  
   
- [入力] `clrTransp`  
+ [in]*clrTransp*  
  イメージ リストの透明色を指定します。  
   
- [入力] `uiAnimationListResID`  
+ [in]*uiAnimationListResID*  
  イメージ リストのリソース ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -298,11 +298,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nAlign`  
+ [in]*nAlign*  
  テキストの配置を指定します。  
   
-### <a name="remarks"></a>コメント  
- `nAlign` 次の値のいずれかを持つことができます。  
+### <a name="remarks"></a>Remarks  
+ *nAlign*値は次のいずれかを持つことができます。  
   
 - `TA_LEFT`: 左寄せ  
   
@@ -320,13 +320,13 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nFrameDelay`  
+ [in]*nFrameDelay*  
  アニメーションのフレーム レートをミリ秒単位で指定します。  
   
- [入力] `nDuration`  
+ [in]*nDuration*  
  ミリ秒単位でアニメーションの再生にどのくらいの期間を指定します。 無限ループに-1 を使用します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す前に、イメージ リストへのハンドルを指定する必要があります`StartAnimation`を使用して`SetAnimationList`です。  
   
 ##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation  

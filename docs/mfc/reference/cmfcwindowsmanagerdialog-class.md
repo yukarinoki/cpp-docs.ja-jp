@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366565"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042101"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog クラス
 `CMFCWindowsManagerDialog`オブジェクトにより、ユーザーを MDI アプリケーションで、MDI 子ウィンドウを管理します。  
@@ -42,7 +42,7 @@ class CMFCWindowsManagerDialog : public CDialog
 |----------|-----------------|  
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|`CMFCWindowsManagerDialog` オブジェクトを構築します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCWindowsManagerDialog`アプリケーションで現在開いている MDI 子ウィンドウの一覧が含まれています。 ユーザーは、このダイアログ ボックスを使用して、MDI 子ウィンドウの状態を手動で制御できます。  
   
  `CMFCWindowsManagerDialog` 内に埋め込まれた、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)です。 `CMFCWindowsManagerDialog`手動で作成する必要がありますクラスではありません。 代わりに、関数を呼び出して[CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog)と作成が表示され、`CMFCWindowsManagerDialog`オブジェクト。  
@@ -63,7 +63,7 @@ class CMFCWindowsManagerDialog : public CDialog
   
  [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxWindowsManagerDialog.h  
   
 ##  <a name="cmfcwindowsmanagerdialog"></a>  CMFCWindowsManagerDialog::CMFCWindowsManagerDialog  
@@ -76,13 +76,13 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMDIFrame`  
+ [in]*pMDIFrame*  
  親ウィンドウまたはオーナー ウィンドウへのポインター。  
   
- [入力] `bHelpButton`  
+ [in]*bHelpButton*  
  フレームワークを表示するかどうかを指定するブール型パラメーター、**ヘルプ**ボタンをクリックします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ビジュアル マネージャーの詳細については、次を参照してください。[ビジュアル マネージャー](../../mfc/visualization-manager.md)です。  
   
 ## <a name="see-also"></a>関連項目  

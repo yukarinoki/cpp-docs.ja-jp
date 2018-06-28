@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7bbd2b19e85f70ae9e61044ccd5a6c369e61b296
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371391"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041446"
 ---
 # <a name="colestreamfile-class"></a>関数クラス
 データのストリームを表します ( `IStream`) OLE 構造化記憶の一部として、複合ファイルでします。  
@@ -65,7 +65,7 @@ class COleStreamFile : public CFile
 |[COleStreamFile::GetStream](#getstream)|現在のストリームを返します。|  
 |[COleStreamFile::OpenStream](#openstream)|安全にストリームを開いてをオブジェクトに関連付けます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `IStorage`ストリームを開くか、メモリ ストリームである限り、作成する前にオブジェクトが存在する必要があります。  
   
  `COleStreamFile` 同様にオブジェクトが操作される[CFile](../../mfc/reference/cfile-class.md)オブジェクト。  
@@ -81,7 +81,7 @@ class COleStreamFile : public CFile
   
  `COleStreamFile`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="attach"></a>  COleStreamFile::Attach  
@@ -92,10 +92,10 @@ void Attach(LPSTREAM lpStream);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpStream`  
+ *lpStream*  
  OLE ストリームを指す ( `IStream`) オブジェクトに関連付ける。 ことはできません**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトおく必要がありますいない OLE ストリームに関連付けられています。  
   
  詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
@@ -109,11 +109,11 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpStream`  
+ *lpStream*  
  オブジェクトと関連付けられる OLE ストリームへのポインター。  
   
-### <a name="remarks"></a>コメント  
- 場合`lpStream`は**NULL**オブジェクトに関連付けられていない OLE ストリーム、それ以外の場合、オブジェクトは、指定された OLE ストリームに関連付けられています。  
+### <a name="remarks"></a>Remarks  
+ 場合*lpStream*は**NULL**オブジェクトに関連付けられていない OLE ストリーム、それ以外の場合、オブジェクトは、指定された OLE ストリームに関連付けられています。  
   
  詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
   
@@ -125,13 +125,13 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pError`  
+ *pError*  
  指す、 [CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは**NULL**作成操作の完了状態を示すです。 ストリームを作成しようとして生成される可能性のある例外を監視する場合は、このパラメーターを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ストリームが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メモリは、OLE サブシステムによって割り当てられます。  
   
  詳細については、次を参照してください。 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows SDK に含まれています。  
@@ -148,23 +148,23 @@ BOOL CreateStream(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpStorage`  
+ *lpStorage*  
  作成するストリームを含む OLE ストレージ オブジェクトへのポインター。 ことはできません**NULL**です。  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  作成されるストリームの名前です。 ことはできません**NULL**です。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  ストリームを開くときに使用するアクセス モード。 排他的、読み取り/書き込み、および作成モードは既定で使用します。 使用可能なモードの完全な一覧を参照してください。[ほか](../../mfc/reference/cfile-class.md#cfile)です。  
   
- `pError`  
+ *pError*  
  指す、 [CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは**NULL**です。 ストリームを作成しようとして生成される可能性のある例外を監視する場合は、このパラメーターを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ストリームが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- オープンに失敗した場合、ファイルの例外がスローされますと`pError`は**NULL**です。  
+### <a name="remarks"></a>Remarks  
+ オープンに失敗した場合、ファイルの例外がスローされますと*pError*は**NULL**です。  
   
  詳細については、次を参照してください。 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows SDK に含まれています。  
   
@@ -178,7 +178,7 @@ LPSTREAM Detach();
 ### <a name="return-value"></a>戻り値  
  ストリームへのポインター ( `IStream`) が、オブジェクトに関連付けられています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プログラムが終了する前に、その他の何らかの方法でストリームを閉じる必要があります。  
   
  詳細については、次を参照してください。 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows SDK に含まれています。  
@@ -205,23 +205,23 @@ BOOL OpenStream(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpStorage`  
+ *lpStorage*  
  開かれるストリームを含む OLE ストレージ オブジェクトへのポインター。 ことはできません**NULL**です。  
   
- `lpszStreamName`  
+ *lpszStreamName*  
  開かれるストリームの名前です。 ことはできません**NULL**です。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  ストリームを開くときに使用するアクセス モード。 排他的読み取り/書き込みモードは既定で使用されます。 使用可能なモードの完全な一覧については[ほか](../../mfc/reference/cfile-class.md#cfile)です。  
   
- `pError`  
+ *pError*  
  指す、 [CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは**NULL**です。 ストリームを開こうとしたによって生成される可能性のある例外を監視する場合は、このパラメーターを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ストリームが正常に開かれている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- オープンに失敗した場合、ファイルの例外がスローされますと`pError`は**NULL**です。  
+### <a name="remarks"></a>Remarks  
+ オープンに失敗した場合、ファイルの例外がスローされますと*pError*は**NULL**です。  
   
  詳細については、次を参照してください。 [IStorage::OpenStream](http://msdn.microsoft.com/library/windows/desktop/aa380025) Windows SDK に含まれています。  
   

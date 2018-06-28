@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371729"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038355"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl クラス
 `CMFCLinkCtrl`クラスは、ボタンをハイパーリンクとして表示し、ボタンがクリックされたときに、リンクのターゲットを呼び出します。  
@@ -56,7 +56,7 @@ class CMFCLinkCtrl : public CMFCButton
 |----------|-----------------|  
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|ボタンのフォーカスされた四角形が描画される前に、フレームワークによって呼び出されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  派生したボタンをクリックすると、`CMFCLinkCtrl`クラス、フレームワーク、ボタンの URL をパラメーターとして渡しますを`ShellExecute`メソッドです。 続いて、`ShellExecute`メソッドは、URL のターゲットを開きます。  
   
 ## <a name="example"></a>例  
@@ -78,7 +78,7 @@ class CMFCLinkCtrl : public CMFCButton
   
  [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxlinkctrl.h  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
@@ -91,13 +91,13 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `rectClient`  
+ [in]*rectClient*  
  リンク コントロールに外接する四角形。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  独自のコードを使用して、ボタンのフォーカスされた四角形を描画する場合は、このメソッドをオーバーライドします。  
   
 ##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
@@ -108,10 +108,10 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszURL`  
+ [in]*lpszURL*  
  表示するボタンのテキスト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
  暗黙的なプロトコルを設定します (たとえば、"http:")、URL のです。  
@@ -121,10 +121,10 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszPrefix`  
+ [in]*lpszPrefix*  
  URL のプロトコルのプレフィックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  URL プレフィックスを設定するのにには、このメソッドを使用します。 プレフィックスは、ボタンの表面上は表示されませんが、これを使用するには URL のターゲットを参照しやすくします。  
   
 ##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
@@ -137,16 +137,16 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bVCenter`  
+ [in]*bVCenter*  
  `TRUE` ボタンのテキストと、リンク コントロールの上下の垂直方向にビットマップの中央にそれ以外の場合、`FALSE`です。 既定値は `FALSE` です。  
   
- [入力] `bHCenter`  
+ [in]*bHCenter*  
  `TRUE` ボタンのテキストと、リンク コントロールの左右の間で水平方向にビットマップの中央にそれ以外の場合、`FALSE`です。 既定値は `FALSE` です。  
   
 ### <a name="return-value"></a>戻り値  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)リンク コントロールの新しいサイズを含むオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

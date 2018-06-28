@@ -70,12 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b85c64837f9bc7a0c8c1873f434855d77c01fb1b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376878"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041634"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray クラス
 任意の型および次元の配列を扱うクラスです。  
@@ -135,7 +135,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::operator = =](#operator_eq_eq)|2 つのバリアント型の配列を比較 ( **SAFEARRAY**、**バリアント**、 `COleVariant`、または`COleSafeArray`配列)。|  
 |[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|内容を出力、`COleSafeArray`ダンプ コンテキスト オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `COleSafeArray` OLE から派生した**バリアント**構造体。 OLE **SAFEARRAY**メンバー関数は、を通じて利用`COleSafeArray`、および一連のバイトの 1 次元配列用に設計されたメンバー関数として。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -143,7 +143,7 @@ class COleSafeArray : public tagVARIANT
   
  `COleSafeArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="accessdata"></a>  COleSafeArray::AccessData  
@@ -154,10 +154,10 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppvData`  
+ *ppvData*  
  配列データへのポインターへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ### <a name="example"></a>例  
@@ -170,7 +170,7 @@ void AccessData(void** ppvData);
 void AllocData();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ##  <a name="allocdescriptor"></a>  COleSafeArray::AllocDescriptor  
@@ -181,10 +181,10 @@ void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDims`  
+ *dwDims*  
  セーフ配列の次元数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ##  <a name="attach"></a>  COleSafeArray::Attach  
@@ -198,7 +198,7 @@ void Attach(VARIANT& varSrc);
  *varSrc*  
  A**バリアント**オブジェクト。 *VarSrc*パラメーターが必要、 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ソース**バリアント**の種類に設定されて`VT_EMPTY`です。 この関数は、存在する場合に、現在の配列のデータをクリアします。  
   
 ### <a name="example"></a>例  
@@ -211,7 +211,7 @@ void Attach(VARIANT& varSrc);
 void Clear();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数では、セーフ配列を消去を設定して、`VARTYPE`するオブジェクトの`VT_EMPTY`します。 現在の内容が解放され、配列が解放されます。  
   
 ##  <a name="colesafearray"></a>  COleSafeArray::COleSafeArray  
@@ -237,23 +237,23 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `saSrc`  
+ *saSrc*  
  既存の`COleSafeArray`オブジェクトまたは**SAFEARRAY**新しいにコピーされる`COleSafeArray`オブジェクト。  
   
- `vtSrc`  
+ *vtSrc*  
  **VARTYPE**新しい`COleSafeArray`オブジェクト。  
   
- `psaSrc`  
+ *psaSrc*  
  ポインター、 **SAFEARRAY**新しいにコピーされる`COleSafeArray`オブジェクト。  
   
  *varSrc*  
  既存の**バリアント**または`COleVariant`新しいにコピーされるオブジェクト`COleSafeArray`オブジェクト。  
   
- `pSrc`  
+ *pSrc*  
  ポインター、**バリアント**新しいにコピーされるオブジェクト`COleSafeArray`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 新規作成すべてこれらのコンス トラクターの`COleSafeArray`オブジェクト。 空のパラメーターがない場合は`COleSafeArray`オブジェクトが作成された ( `VT_EMPTY`)。 場合、`COleSafeArray`が別のコピー元の配列[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)は暗黙的に呼ばれます (、 `COleSafeArray`、 `COleVariant`、または**バリアント**) では、 **VARTYPE**のソース配列が保持され、指定する必要はありません。 場合、`COleSafeArray`が別のコピー元の配列**VARTYPE**既知ではありません ( **SAFEARRAY**) では、 **VARTYPE**で指定する必要があります、`vtSrc`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ 新規作成すべてこれらのコンス トラクターの`COleSafeArray`オブジェクト。 空のパラメーターがない場合は`COleSafeArray`オブジェクトが作成された ( `VT_EMPTY`)。 場合、`COleSafeArray`が別のコピー元の配列[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)は暗黙的に呼ばれます (、 `COleSafeArray`、 `COleVariant`、または**バリアント**) では、 **VARTYPE**のソース配列が保持され、指定する必要はありません。 場合、`COleSafeArray`が別のコピー元配列**VARTYPE**既知ではありません ( **SAFEARRAY**) では、 **VARTYPE**で指定する必要があります、 *vtSrc*パラメーター。  
   
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
@@ -268,7 +268,7 @@ void Copy(LPSAFEARRAY* ppsa);
  *ppsa*  
  新しい配列の記述子を返す先の場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ##  <a name="create"></a>  COleSafeArray::Create  
@@ -288,10 +288,10 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `vtSrc`  
- 配列の基本型 (つまり、 **VARTYPE**配列の各要素の)。 **VARTYPE**バリアント型のサブセットに制限されます。 どちらも、 **VT_ARRAY**も**VT_BYREF**フラグを設定することができます。 `VT_EMPTY` および**VT_** 配列の有効な基本型ではありません。 他のすべての種類は無効です。  
+ *vtSrc*  
+ 配列の基本型 (つまり、 **VARTYPE**配列の各要素の)。 **VARTYPE**バリアント型のサブセットに制限されます。 どちらも、 **VT_ARRAY**も**VT_BYREF**フラグを設定することができます。 **VT_EMPTY**と**VT_** 配列の有効な基本型ではありません。 他のすべての種類は無効です。  
   
- `dwDims`  
+ *dwDims*  
  配列の次元の数。 これは、配列の作成後に[Redim](#redim)です。  
   
  *rgElements*  
@@ -300,7 +300,7 @@ void Create(
  *rgsabounds*  
  (各ディメンションの 1 つ) の境界のベクターへのポインター、配列を割り当てられません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、必要に応じて、現在の配列のデータがクリアされます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)です。  
   
 ### <a name="example"></a>例  
@@ -318,20 +318,20 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `vtSrc`  
+ *vtSrc*  
  配列の基本型 (つまり、 **VARTYPE**配列の各要素の)。  
   
- `dwElements`  
+ *dwElements*  
  配列内の要素の数。 これは、配列の作成後に[でも](#resizeonedim)です。  
   
- `pvSrcData`  
+ *pvSrcData*  
  配列にコピーするデータへのポインター。  
   
  *nLBound*  
  配列の下限値です。  
   
-### <a name="remarks"></a>コメント  
- 関数は、の場合は、指定されたデータをコピー、配列のデータの初期化ポインター`pvSrcData`は**NULL**です。  
+### <a name="remarks"></a>Remarks  
+ 関数は、の場合は、指定されたデータをコピー、配列のデータの初期化ポインター *pvSrcData*は**NULL**です。  
   
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)です。  
   
@@ -345,7 +345,7 @@ void CreateOneDim(
 void Destroy();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトが配列に格納されている場合は、各オブジェクトが解放されます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ##  <a name="destroydata"></a>  COleSafeArray::DestroyData  
@@ -355,7 +355,7 @@ void Destroy();
 void DestroyData();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトが配列に格納されている場合は、各オブジェクトが解放されます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ##  <a name="destroydescriptor"></a>  COleSafeArray::DestroyDescriptor  
@@ -365,7 +365,7 @@ void DestroyData();
 void DestroyDescriptor();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ##  <a name="detach"></a>  COleSafeArray::Detach  
@@ -378,7 +378,7 @@ VARIANT Detach();
 ### <a name="return-value"></a>戻り値  
  基になる**バリアント**値で、`COleSafeArray`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数を設定して、セーフ配列内のデータの関連付けを解除、 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)するオブジェクトの`VT_EMPTY`します。 Windows の関数を呼び出すことによって、配列を解放する、呼び出し元の責任である[VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835)です。  
   
  エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)です。  
@@ -394,7 +394,7 @@ void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bytes`  
+ *バイト数*  
  参照、 [CByteArray](../../mfc/reference/cbytearray-class.md)オブジェクト。  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
@@ -420,14 +420,14 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rgIndices`  
+ *返す時*  
  インデックスの配列へのポインター (配列の次元ごと)。  
   
- `pvData`  
+ *pvData*  
  配列の要素を配置する場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
- この関数は、自動的に windows 関数を呼び出して`SafeArrayLock`と`SafeArrayUnlock`前に、と後、要素を取得します。 データ要素が文字列、オブジェクト、またはバリアント型の場合は、関数は、適切な方法で要素をコピーします。 パラメーター`pvData`要素を格納するための十分なバッファーの大規模なをポイントする必要があります。  
+### <a name="remarks"></a>Remarks  
+ この関数は、自動的に windows 関数を呼び出して`SafeArrayLock`と`SafeArrayUnlock`前に、と後、要素を取得します。 データ要素が文字列、オブジェクト、またはバリアント型の場合は、関数は、適切な方法で要素をコピーします。 パラメーター *pvData*要素を格納するための十分なバッファーの大規模なをポイントする必要があります。  
   
  エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
   
@@ -454,13 +454,13 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDim`  
+ *dwDim*  
  下限値を取得する対象の配列の次元です。  
   
  *pLBound*  
  下限の境界を返す場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ### <a name="example"></a>例  
@@ -489,13 +489,13 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDim`  
+ *dwDim*  
  上限の境界を取得する対象の配列の次元です。  
   
  *pUBound*  
  上限の境界を返す場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)です。  
   
 ### <a name="example"></a>例  
@@ -508,7 +508,7 @@ void GetUBound(
 void Lock();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  スローされるエラーの場合、 [COleException](../../mfc/reference/coleexception-class.md)です。  
   
  配列の記述子に、ポインターの有効期限`Unlock`と呼びます。 呼び出す`Lock`; 入れ子にすることができますへの呼び出しの数が等しい`Unlock`が必要です。  
@@ -529,7 +529,7 @@ operator LPCVARIANT() const;
 operator LPVARIANT();
 ```   
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  値を変更することに注意してください、**バリアント**の値を変更する構造体がこの関数によって返されるポインターは、アクセス`COleSafeArray`オブジェクト。  
   
 ##  <a name="operator_eq"></a>  COleSafeArray::operator =  
@@ -542,7 +542,7 @@ COleSafeArray& operator=(const VARIANT& varSrc);
 COleSafeArray& operator=(const COleVariant& varSrc);
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  各演算子の簡単な説明に従います。  
   
 - **演算子 = = (** *saSrc* **)** 、既存のコピー`COleSafeArray`オブジェクトをこのオブジェクトにします。  
@@ -581,11 +581,11 @@ void PtrOfIndex (時間の長い * 返す時、
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  An array of index values that identify an element of the array. All indexes for the element must be specified.  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ On return, pointer to the element identified by the values in *rgIndices*.  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
  Assigns a single element into the array.  
@@ -596,11 +596,11 @@ void PutElement (時間の長い * 返す時、
 ```  
   
 ### Parameters  
- `rgIndices`  
+ *rgIndices*  
  Pointer to an array of indexes for each dimension of the array.  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and **VT_BSTR** variant types are pointers and do not require another level of indirection.  
   
 ### Remarks  
  This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
@@ -634,7 +634,7 @@ void でも (DWORD dwElements) です。
 ```  
   
 ### Parameters  
- `dwElements`  
+ *dwElements*  
  Number of elements in the one-dimensional safe array.  
   
 ### Remarks  

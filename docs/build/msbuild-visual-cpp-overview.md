@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe3499cdd8f9a9a1cfb91a45e9f039e1b8be2e76
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379264"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039090"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) の概要  
   
@@ -139,7 +139,10 @@ Visual C++ のサポート ファイル内には、ターゲットが数多く�
 |リビルド|プロジェクトを消去してからビルドします。|  
 |ResourceCompile|Microsoft Windows リソース コンパイラ ツール (rc.exe) を実行します。|  
 |XdcMake|XML ドキュメント ツール (xdcmake.exe) を実行します。|  
-|Xsd|XML スキーマ定義ツール (Xsd.exe) を実行します。|  
+|Xsd|XML スキーマ定義ツール (Xsd.exe) を実行します。 *下記のメモを参照してください。*|  
+
+> [!NOTE] 
+> Visual Studio 2017、C++ プロジェクトのサポート**xsd**ファイルは使用されなくなりました。 使用することもできます**Microsoft.VisualC.CppCodeProvider**を追加して**CppCodeProvider.dll** GAC に手動でします。
   
 ## <a name="see-also"></a>関連項目  
   

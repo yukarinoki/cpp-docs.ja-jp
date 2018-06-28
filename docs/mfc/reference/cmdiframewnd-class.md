@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f3ba2a92ad523994a458abad9d4acee506e8e85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374040"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038891"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd クラス
 Windows のマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) のフレーム ウィンドウの機能が用意されています。さらに、ウィンドウを管理するメンバーも用意されています。  
@@ -86,16 +86,16 @@ class CMDIFrameWnd : public CFrameWnd
 |[CMDIFrameWnd::MDISetMenu](#mdisetmenu)|MDI フレーム ウィンドウのメニューのウィンドウのポップアップ メニューのまたはその両方を置換します。|  
 |[CMDIFrameWnd::MDITile](#mditile)|タイル化された形式ですべての子ウィンドウを整列します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アプリケーションに役立ちます MDI フレーム ウィンドウを作成するには、派生クラスを`CMDIFrameWnd`です。 メンバー変数をアプリケーションに固有のデータを格納する派生クラスに追加します。 ウィンドウにメッセージが送られたときに行われる処理を指定するには、派生クラスにメッセージ処理メンバー関数とメッセージ マップを実装します。  
   
  MDI フレーム ウィンドウを作成するには呼び出すことによって、[作成](../../mfc/reference/cframewnd-class.md#create)または[LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)のメンバー関数`CFrameWnd`です。  
   
- 呼び出す前に**作成**または`LoadFrame`、C++ を使用して、ヒープ上のフレーム ウィンドウ オブジェクトを構築する必要があります**新しい**演算子。 呼び出しの前に**作成**でウィンドウ クラスを登録することも、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数、フレームのアイコンとクラスのスタイルを設定します。  
+ 呼び出す前に`Create`または`LoadFrame`、C++ を使用して、ヒープ上のフレーム ウィンドウ オブジェクトを構築する必要があります**新しい**演算子。 呼び出しの前に`Create`でウィンドウ クラスを登録することも、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数、フレームのアイコンとクラスのスタイルを設定します。  
   
- 使用して、**作成**引数を渡す、フレームの作成パラメーターとして直接のメンバー関数。  
+ 使用して、`Create`引数を渡す、フレームの作成パラメーターとして直接のメンバー関数。  
   
- `LoadFrame` も少ない引数を必要と**作成**、代わりに、フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースからほとんどの既定値を取得します。 アクセスする`LoadFrame`、これらすべてのリソースが同じリソース ID を持つ必要があります (たとえば、 **IDR_MAINFRAME**)。  
+ `LoadFrame` も少ない引数を必要と`Create`、代わりに、フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースからほとんどの既定値を取得します。 アクセスする`LoadFrame`、これらすべてのリソースが同じリソース ID を持つ必要があります (たとえば、 **IDR_MAINFRAME**)。  
   
  **MDIFrameWnd**から派生した`CFrameWnd`、フレーム ウィンドウ クラスから派生した`CMDIFrameWnd`で宣言する必要がありますいない`DECLARE_DYNCREATE`です。  
   
@@ -134,7 +134,7 @@ class CMDIFrameWnd : public CFrameWnd
   
  `CMDIFrameWnd`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cmdiframewnd"></a>  CMDIFrameWnd::CMDIFrameWnd  
@@ -144,8 +144,8 @@ class CMDIFrameWnd : public CFrameWnd
 CMDIFrameWnd();
 ```  
   
-### <a name="remarks"></a>コメント  
- 呼び出す、**作成**または`LoadFrame`可視 MDI フレーム ウィンドウを作成するメンバー関数。  
+### <a name="remarks"></a>Remarks  
+ 呼び出す、`Create`または`LoadFrame`可視 MDI フレーム ウィンドウを作成するメンバー関数。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
@@ -160,16 +160,16 @@ virtual BOOL CreateClient(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  Long ポインター、 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)構造体。  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  ウィンドウのポップアップ メニューへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライドする場合、このメンバー関数を呼び出す必要があります、`OnCreate`直接のメンバー関数。  
   
 ### <a name="example"></a>例  
@@ -187,19 +187,19 @@ CMDIChildWnd* CreateNewChild(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pClass`  
+ *pClass*  
  子ウィンドウを作成できるのランタイム クラスです。  
   
  *nResource*  
  子ウィンドウに関連付けられている共有リソースの ID。  
   
- `hMenu`  
+ *hMenu*  
  子ウィンドウのメニュー。  
   
- `hAccel`  
+ *hAccel*  
  子ウィンドウのアクセラレータです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  子 MDI フレーム ウィンドウのウィンドウを作成するのにには、この関数を使用します。  
   
 ### <a name="example"></a>例  
@@ -221,7 +221,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ### <a name="return-value"></a>戻り値  
  存在する場合は 1 つのウィンドウのポップアップ メニューそれ以外の場合**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装は標準のウィンドウ メニューのコマンドをなどを含むポップアップ メニューの検索**ID_WINDOW_NEW**と**ID_WINDOW_TILE_HORZ**です。  
   
  標準のメニュー コマンド Id を使用しないウィンドウ メニューがある場合は、このメンバー関数をオーバーライドします。  
@@ -240,7 +240,7 @@ void MDIActivate(CWnd* pWndActivate);
  *pWndActivate*  
  アクティブ化する MDI 子ウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、 [WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate)子ウィンドウがアクティブ化されていると、子ウィンドウの両方の非アクティブ化するメッセージ。  
   
  これは、ユーザーは、マウスまたはキーボードを使用して MDI 子ウィンドウにフォーカスを変更した場合に送信されるのと同じメッセージです。  
@@ -260,10 +260,10 @@ void MDICascade(int nType);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nType`  
+ *タイプ*  
  Cascade フラグを指定します。 次のフラグだけを指定することができます: `MDITILE_SKIPDISABLED`、ため、無効になっている MDI 子ウィンドウを重ねて表示されています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初のバージョンの`MDICascade`、パラメーターなしで、無効になっているものを含め、すべての MDI 子ウィンドウを重ねて表示します。 2 番目のバージョンは cascade が無効になっている MDI 子ウィンドウされませんを指定した場合に必要に応じて`MDITILE_SKIPDISABLED`の`nType`パラメーター。  
   
 ### <a name="example"></a>例  
@@ -293,7 +293,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 void MDIIconArrange();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最小化されていない子ウィンドウには影響しません。  
   
 ### <a name="example"></a>例  
@@ -307,10 +307,10 @@ void MDIMaximize(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  最大表示するウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  子ウィンドウを最大表示しているときに Windows のサイズを変更するために、そのクライアント、クライアント ウィンドウを埋めることです。 Windows は、フレームのメニュー バーで、子ウィンドウのコントロールのメニューを配置するユーザーが復元または子ウィンドウを閉じるようにします。 また、フレーム ウィンドウのタイトルに子ウィンドウのタイトルを追加します。  
   
  現在アクティブな MDI 子ウィンドウを最大化時に別の MDI 子ウィンドウがアクティブな場合、Windows は現在アクティブな子を復元し、新しくアクティブにされた子ウィンドウを最大化します。  
@@ -325,7 +325,7 @@ void MDIMaximize(CWnd* pWnd);
 void MDINext();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  現在アクティブな MDI 子ウィンドウを最大表示している場合、メンバー関数は現在アクティブな子を復元し、新しくアクティブにされた子を最大化します。  
   
 ### <a name="example"></a>例  
@@ -338,7 +338,7 @@ void MDINext();
 void MDIPrev();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  現在アクティブな MDI 子ウィンドウを最大表示している場合、メンバー関数は現在アクティブな子を復元し、新しくアクティブにされた子を最大化します。  
   
 ##  <a name="mdirestore"></a>  CMDIFrameWnd::MDIRestore  
@@ -349,7 +349,7 @@ void MDIRestore(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  復元するウィンドウへのポインター。  
   
 ### <a name="example"></a>例  
@@ -368,13 +368,13 @@ CMenu* MDISetMenu(
  *pFrameMenu*  
  新しいフレーム ウィンドウ メニューのメニューを指定します。 場合**NULL**メニューは変更されません。  
   
- `pWindowMenu`  
+ *pWindowMenu*  
  新しいウィンドウのポップアップ メニューのメニューを指定します。 場合**NULL**メニューは変更されません。  
   
 ### <a name="return-value"></a>戻り値  
  このメッセージに置き換え、フレーム ウィンドウ メニューへのポインター。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出した後`MDISetMenu`、アプリケーションを呼び出す必要があります、 [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)のメンバー関数`CWnd`をメニュー バーを更新します。  
   
  この呼び出しに代わる、ウィンドウのポップアップ メニューで場合、MDI 子ウィンドウのメニュー項目が前のウィンドウ メニューから削除され、新しいウィンドウのポップアップ メニューに追加します。  
@@ -397,7 +397,7 @@ void MDITile(int nType);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nType`  
+ *タイプ*  
  並べて表示フラグを指定します。 このパラメーターは、次のフラグのいずれかを指定できます。  
   
 - `MDITILE_HORIZONTAL` MDI 子ウィンドウが並べて別上その 1 つのウィンドウに表示されます。  
@@ -406,8 +406,8 @@ void MDITile(int nType);
   
 - `MDITILE_VERTICAL` MDI 子ウィンドウが並べて別の横にあるその 1 つのウィンドウが表示されます。  
   
-### <a name="remarks"></a>コメント  
- 最初のバージョンの`MDITile`パラメーターを指定せずには、Windows 3.1 以降のバージョンで垂直方向にウィンドウを並べて表示します。 2 番目のバージョン ウィンドウを並べて表示垂直または水平方向の値に応じて、`nType`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ 最初のバージョンの`MDITile`パラメーターを指定せずには、Windows 3.1 以降のバージョンで垂直方向にウィンドウを並べて表示します。 2 番目のバージョン ウィンドウを並べて表示垂直または水平方向の値に応じて、*タイプ*パラメーター。  
   
 ### <a name="example"></a>例  
  例を参照して[CMDIFrameWnd::MDICascade](#mdicascade)です。  

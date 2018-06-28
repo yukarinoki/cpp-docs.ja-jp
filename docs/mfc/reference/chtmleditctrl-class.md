@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367157"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040143"
 ---
 # <a name="chtmleditctrl-class"></a>関数クラス
 MFC ウィンドウ内の WebBrowser ActiveX コントロールの機能が用意されています。  
@@ -57,7 +57,7 @@ class CHtmlEditCtrl: public CWnd,
 |[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|取得、 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)内の WebBrowser コントロールで、ドキュメント上のインターフェイスが現在読み込まれています。|  
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|内の WebBrowser コントロールでのロードに既定のドキュメントの URL を取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  作成した後、コントロールが自動的に入れるホステッド WebBrowser 編集モードです。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -71,7 +71,7 @@ class CHtmlEditCtrl: public CWnd,
   
  `CHtmlEditCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxhtml.h  
   
 ##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl  
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszWindowName`  
+ *したとき*  
  このパラメーターは使用されません。  
   
- `dwStyle`  
+ *dwStyle*  
  このパラメーターは使用されません。  
   
- `rect`  
+ *rect*  
  コントロールのサイズと位置を指定します。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親ウィンドウを指定します。 なければなりません**NULL**です。  
   
- `nID`  
+ *nID*  
  コントロールの ID を指定します  
   
- `pContext`  
+ *pContext*  
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppDocument`  
+ *ppDocument*  
  ドキュメントのインターフェイスです。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

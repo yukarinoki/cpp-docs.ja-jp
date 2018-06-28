@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367761"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041274"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase クラス
 アニメーション変数の新しい値を計算する必要があるときに、Animation API によって呼び出されるコールバックを実装します。  
@@ -74,7 +74,7 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 |[CInterpolatorBase::SetDuration](#setduration)|Interpolator の期間を設定 (オーバーライド`CUIAnimationInterpolatorBase::SetDuration`)。|  
 |[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Interpolator の初期値と速度を設定します。 (`CUIAnimationInterpolatorBase::SetInitialValueAndVelocity` をオーバーライドします)。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このハンドラーが作成されに渡される`IUIAnimationTransitionFactory::CreateTransition`ときに、`CCustomTransition`オブジェクトがアニメーション初期化プロセスの一部として作成される (によって開始された`CAnimationController::AnimateGroup`)。 通常、このクラスを直接使用する必要はありませんにすべてのイベントをだけ routs、 `CCustomInterpolator`-派生クラスを持つポインターのコンス トラクターに渡される`CCustomTransition`です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -84,7 +84,7 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
   
  `CInterpolatorBase`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pInterpolator`  
+ *pInterpolator*  
  カスタムのインターポレータへのポインター。  
   
- `ppHandler`  
+ *ppHandler*  
  出力です。 関数が返す場合は、CInterpolatorBase のインスタンスへのポインターが含まれます。  
   
 ### <a name="return-value"></a>戻り値  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  出力です。 Interpolator の初期値に依存する要素は、SetInitialValueAndVelocity に渡されます。  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  出力です。 Interpolator の初期速度に依存する要素は、SetInitialValueAndVelocity に渡されます。  
   
- `durationDependencies`  
+ *durationDependencies*  
  出力です。 Interpolator の期間に依存する要素は、SetDuration に渡されます。  
   
 ### <a name="return-value"></a>戻り値  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  出力です。 秒単位で、移行の期間です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `value`  
+ *値*  
  出力です。 移行の最後に変数の最終的な値。  
   
 ### <a name="return-value"></a>戻り値  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `offset`  
+ *オフセット*  
  移行の開始からのオフセット。 オフセットは、常により大きいまたは 0 に等しい、遷移の期間よりも小さいです。 移行の期間が 0 の場合、このメソッドは呼び出されません。  
   
- `value`  
+ *値*  
  出力です。 補間値です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `offset`  
+ *オフセット*  
  移行の開始からのオフセット。 オフセットは 0 以上では常に、遷移の期間以下です。 移行の期間が 0 の場合、このメソッドは呼び出されません。  
   
- `velocity`  
+ *ベロシティ*  
  出力です。 オフセットで変数の速度です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pInterpolator`  
+ *pInterpolator*  
  カスタムのインターポレータへのポインター。  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `initialValue`  
+ *初期値*  
  移行の開始時に変数の値。  
   
- `initialVelocity`  
+ *initialVelocity*  
  移行の開始時に変数の速度です。  
   
 ### <a name="return-value"></a>戻り値  

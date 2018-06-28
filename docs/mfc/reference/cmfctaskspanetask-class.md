@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371333"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040702"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask クラス
 `CMFCTasksPaneTask`クラスは、作業ウィンドウ コントロールのタスクを表すヘルパー クラス ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 タスク オブジェクトは、タスク グループ内の項目を表します ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 各タスクには、ユーザーがタスク名の左側に表示されるタスクやアイコンをクリックしたときにフレームワークが実行するコマンドを設定できます。  
@@ -73,7 +73,7 @@ class CMFCTasksPaneTask : public CObject
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|タスク一覧 ウィンドウが自動的に破棄されるかどうかを判断します。|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|フレームワークは太字でタスクのラベルを描画するかどうかを判断します。|  
@@ -86,7 +86,7 @@ class CMFCTasksPaneTask : public CObject
 |[CMFCTasksPaneTask::m_strName](#m_strname)|タスクの名前。|  
 |[CMFCTasksPaneTask::m_uiCommandID](#m_uicommandid)|ユーザーがタスクをクリックしたときに、フレームワークが実行されるコマンドのコマンド ID を指定します。 この値は有効なコマンド ID ではない場合は、タスクが単純なラベルとして扱われます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  次の図は、3 つのタスクを含むタスク グループを示しています。  
   
  ![展開されたタスク グループ](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
@@ -99,7 +99,7 @@ class CMFCTasksPaneTask : public CObject
   
  [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxTasksPane.h  
   
 ##  <a name="cmfctaskspanetask"></a>  CMFCTasksPaneTask::CMFCTasksPaneTask  
@@ -118,31 +118,31 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pGroup`  
+ *pGroup*  
  指定します、 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)タスクが属しています。  
   
- `lpszName`  
+ *lpszName*  
  タスクの名前を指定します。  
   
- `nIcon`  
+ *nIcon*  
  イメージ リストには、タスクのイメージのインデックスを指定します。  
   
- `uiCommandID`  
+ *uiCommandID*  
  タスクがクリックされたときに実行されるコマンドのコマンド ID を指定します。  
   
- `dwUserData`  
+ *dwUserData*  
  ユーザー定義データ。  
   
- `hwndTask`  
+ *hwndTask*  
  タスク一覧 ウィンドウへのハンドルを指定します。  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  場合`TRUE`、作業ウィンドウは自動的に破棄されます。  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  タスク一覧 ウィンドウの高さを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_bautodestroywindow"></a>  CMFCTasksPaneTask::m_bAutoDestroyWindow  
  タスク一覧 ウィンドウが自動的に破棄されるかどうかを判断します。  
@@ -151,7 +151,7 @@ CMFCTasksPaneTask(
 BOOL m_bAutoDestroyWindow;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  設定`TRUE`ことを指定する、タスク ウィンドウ ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) 以外の場合は、自動的に破棄する必要があります`FALSE`です。  
   
 ##  <a name="m_bisbold"></a>  CMFCTasksPaneTask::m_bIsBold  
@@ -161,7 +161,7 @@ BOOL m_bAutoDestroyWindow;
 BOOL m_bIsBold;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバーを設定`TRUE`太字テキスト タスク ラベルを表示します。  
   
 ##  <a name="m_dwuserdata"></a>  CMFCTasksPaneTask::m_dwUserData  
@@ -171,7 +171,7 @@ BOOL m_bIsBold;
 DWORD m_dwUserData;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_hwndtask"></a>  CMFCTasksPaneTask::m_hwndTask  
  タスク一覧 ウィンドウへのハンドル。  
@@ -180,7 +180,7 @@ DWORD m_dwUserData;
 HWND m_hwndTask;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作業ウィンドウを追加するには、呼び出す[CMFCTasksPane::AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)です。  
   
 ##  <a name="m_nicon"></a>  CMFCTasksPaneTask::m_nIcon  
@@ -190,7 +190,7 @@ HWND m_hwndTask;
 int m_nIcon;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イメージ リストはによって設定[CMFCTasksPane::SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist)です。  
   
  設定`m_nIcon`に画像がない場合、タスクを表示する場合は-1。  
@@ -202,7 +202,7 @@ int m_nIcon;
 int m_nWindowHeight;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_pgroup"></a>  CMFCTasksPaneTask::m_pGroup  
  ポインター、 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)このタスクが属しています。  
@@ -211,7 +211,7 @@ int m_nWindowHeight;
 CMFCTasksPaneTaskGroup* m_pGroup;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すべてのタスクは、親グループをいる必要があります。 呼び出して、作業ウィンドウにグループを追加する[cmfctaskspane::addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)です。  
   
 ##  <a name="m_rect"></a>  CMFCTasksPaneTask::m_rect  
@@ -221,7 +221,7 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 CRect m_rect;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この値は、タスクが描画されるときにフレームワークによって計算されます。  
   
 ##  <a name="m_strname"></a>  CMFCTasksPaneTask::m_strName  
@@ -231,7 +231,7 @@ CRect m_rect;
 CString m_strName;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_uicommandid"></a>  CMFCTasksPaneTask::m_uiCommandID  
  ユーザーがタスクをクリックしたときに実行されるコマンドのコマンド ID を指定します。 この値は有効なコマンド ID ではない場合は、タスクが単純なラベルとして扱われます。  
@@ -240,7 +240,7 @@ CString m_strName;
 UINT m_uiCommandID;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setaccdata"></a>  CMFCTasksPaneTask::SetACCData  
  現在のタスクのユーザー補助データを決定します。  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParent`  
+ [in]*pParent*  
  現在のタスクの親ウィンドウを表します。  
   
- [出力] `data`  
+ [out]*データ*  
  型のオブジェクト`CAccessibilityData`を現在のタスクのユーザー補助データが格納されます。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合、`data`パラメーターが正常に設定された状態で、現在のタスクのユーザー補助データです。 それ以外の場合、`FALSE`です。  
+ `TRUE` 場合、*データ*パラメーターが正常に設定された状態で、現在のタスクのユーザー補助データです。 それ以外の場合、`FALSE`です。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

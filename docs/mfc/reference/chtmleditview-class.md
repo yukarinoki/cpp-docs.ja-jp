@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ca4d5a88b14f32064e473bd129fcd0f8ddd7898
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367345"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040614"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView クラス
 MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。  
@@ -75,7 +75,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
   
  `CHtmlEditView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxhtml.h  
   
 ##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
@@ -100,28 +100,28 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszClassName`  
+ *lpszClassName*  
  Windows クラスの名前を null で終わる文字列へのポインター。 クラス名に登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数または**RegisterClass** Windows の機能です。 場合**NULL**、定義済みの既定値を使用して[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。  
   
- `lpszWindowName`  
+ *したとき*  
  ウィンドウの名前を表す文字の null で終わる文字列へのポインター。  
   
- `dwStyle`  
+ *dwStyle*  
  ウィンドウのスタイル属性を指定します。 既定では、 **WS_VISIBLE**と**WS_CHILD**ウィンドウ スタイルが設定されます。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体のサイズとウィンドウの位置を指定します。 `rectDefault`値により、Windows を新しいウィンドウの位置とサイズを指定します。  
+ *rect*  
+ 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体のサイズとウィンドウの位置を指定します。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親ウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  ビューの ID 番号。 既定では、' éý ' **AFX_IDW_PANE_FIRST**です。  
   
- `pContext`  
+ *pContext*  
  ポインター、 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)です。 **NULL**既定です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが含まれている WebBrowser の呼び出すことも**移動**を既定のドキュメントを読み込む方法 (を参照してください[CHtmlEditView::GetStartDocument](#getstartdocument))。  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppDocument`  
+ *ppDocument*  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)インターフェイスです。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  

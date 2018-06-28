@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371515"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040753"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox クラス
 `CMFCRibbonComboBox`クラス リボン バー、リボン パネル、またはリボン ポップアップ メニューに追加できるコンボ ボックス コントロールを実装します。  
@@ -70,7 +70,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>コンストラクター  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|CMFCRibbonComboBox オブジェクトを構築します。|  
   
@@ -95,7 +95,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 |[CMFCRibbonComboBox::SelectItem](#selectitem)|リスト ボックスの項目を選択します。|  
 |[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|にドロップしたときに、リスト ボックスの高さを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  リボンのコンボ ボックスは、ユーザーが編集可能なラベルまたは静的ラベルと組み合わせたリスト ボックスで構成されます。 リボン コンボ ボックスを作成するときに種類を指定する必要があります。  
   
 ## <a name="example"></a>例  
@@ -114,7 +114,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxribboncombobox.h  
   
 ##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszItem`  
+ [in]*lpszItem*  
  追加する項目の文字列です。  
   
- [入力] `dwData`  
+ [in]*dwData*  
  追加する項目に関連付けられているデータ。  
   
 ### <a name="return-value"></a>戻り値  
@@ -153,22 +153,22 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  コンボ ボックスの ID。  
   
- [入力] `bHasEditBox`  
+ [in]*bHasEditBox*  
  `TRUE` コントロール内で、編集ボックスを使用する場合`FALSE`それ以外の場合。  
   
- [入力] `nWidth`  
+ [in]*nWidth*  
  (ピクセル単位) です。 コンボ ボックスの幅または、既定の幅の場合は-1。  
   
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  コンボ ボックスの表示のラベルです。  
   
- [入力] `nImage`  
+ [in]*あり*  
  コンボ ボックスの小さいイメージのインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の幅は、108 ピクセルです。  
   
 ##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
@@ -182,19 +182,19 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  削除する項目の 0 から始まるインデックス。  
   
- [入力] `dwData`  
+ [in]*dwData*  
  削除するアイテムに関連付けられたデータ。  
   
- [入力] `lpszText`  
+ [in]*lpszText*  
  削除するアイテムの文字列です。 同じ文字列での複数の項目がある場合は、最初の項目は削除されます。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 指定した項目が削除された場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
  リスト ボックスのドロップダウンしたときにサイズを変更できるかどうかを指定します。  
@@ -204,10 +204,10 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` サイズ変更を有効にするには`FALSE`サイズ変更を無効にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  サイズ変更を有効にすると、リスト ボックスは表示する項目に合わせてサイズを変更します。  
   
 ##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
@@ -218,13 +218,13 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszText`  
+ [in]*lpszText*  
  リスト ボックス内の項目の文字列です。  
   
 ### <a name="return-value"></a>戻り値  
  項目の 0 から始まるインデックスまたは、項目が見つからない場合は-1。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
  リスト ボックスで項目の数を返します。  
@@ -236,7 +236,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>戻り値  
  リスト ボックスまたはリスト ボックスに項目が含まれていない場合は 0 のアイテムの数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
  リスト ボックスで現在選択されている項目のインデックスを取得します。  
@@ -258,7 +258,7 @@ int GetDropDownHeight();
 ### <a name="return-value"></a>戻り値  
  (ピクセル単位)、リスト ボックスの高さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
  中間モードで表示されているコンボ ボックスのサイズを返します。  
@@ -268,13 +268,13 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  コンボ ボックスにデバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  コンボ ボックスのサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  サイズの小さい画像を表示するとき、返されるサイズは、コンボ ボックスのサイズに基づきます。  
   
 ##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
@@ -285,13 +285,13 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  リスト ボックス内の項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  アイテムに関連付けられている文字列へのポインターそれ以外の場合、`NULL`インデックス パラメーターが有効でない場合、またはインデックス パラメーターが-1 し、コンボ ボックスで選択した項目がない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData  
  リスト ボックスで指定したインデックス位置にある項目に関連付けられているデータを返します。  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  リスト ボックス内の項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
@@ -317,7 +317,7 @@ BOOL HasEditBox() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` コントロールには、エディット ボックス; が含まれている場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList  
  リスト ボックスのサイズを変更できるかどうかを示します。  
@@ -329,7 +329,7 @@ BOOL IsResizeDropDownList() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` リスト ボックスのサイズを変更する場合それ以外の場合`FALSE`です。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用してリスト ボックスのサイズ変更を有効にする、 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)メソッドです。  
   
 ##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem  
@@ -340,10 +340,10 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nItem`  
+ [in]*nItem*  
  選択した項目のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザー入力の選択内容を処理する場合は、このメソッドをオーバーライドします。  
   
 ##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
@@ -353,7 +353,7 @@ virtual void OnSelectItem(int nItem);
 void RemoveAllItems();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem  
  リスト ボックスの項目を選択します。  
@@ -366,19 +366,19 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  リスト ボックス内の項目の 0 から始まるインデックス。  
   
- [入力] `dwData`  
+ [in]*dwData*  
  リスト ボックス内の項目に関連付けられたデータ。  
   
- [入力] `lpszText`  
+ [in]*lpszText*  
  リスト ボックス内の項目の文字列です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight  
  にドロップしたときに、リスト ボックスの高さを設定します。  
@@ -388,10 +388,10 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nHeight`  
+ [in]*パラメーター nHeight*  
  (ピクセル単位)、リスト ボックスの高さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の高さは、150 ピクセルです。  
   
 ## <a name="see-also"></a>関連項目  

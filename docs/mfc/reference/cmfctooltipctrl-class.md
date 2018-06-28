@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09a701498b47957f64558fe42408ff64351c238b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74efac50304554af3224b8b707b29a31248143f6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372957"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042070"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl クラス
 [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)に基づいた拡張ツールヒントの実装です。 `CMFCToolTipCtrl` クラスに基づいたツールヒントは、アイコン、ラベル、および説明を表示できます。 グラデーション塗りつぶし、カスタム テキストと境界線の色、太字、角を丸く表示、またはバルーン形式を使用して、外観をカスタマイズできます。  
@@ -86,7 +86,7 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 |[CMFCToolTipCtrl::SetLocation](#setlocation)||  
 |[CMFCToolTipCtrl::SetParams](#setparams)|`CMFCToolTipInfo` オブジェクトを使用して、ツールヒントの外観を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用して`CMFCToolTipCtrl`、 `CMFCToolTipInfo`、および[CTooltipManager クラス](../../mfc/reference/ctooltipmanager-class.md)アプリケーションでカスタマイズされたツールヒントを実装するオブジェクト。  
   
  たとえば、バルーン形式のツールヒントを使用するには、次の手順に従います。  
@@ -158,7 +158,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
   
  [CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtooltipctrl.h  
   
 ##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl  
@@ -169,9 +169,9 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParams`  
+ [in]*pParams*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="geticonsize"></a>  CMFCToolTipCtrl::GetIconSize  
  ツールヒント内のアイコンのサイズを返します。  
@@ -204,16 +204,16 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- `[in] rect`  
+ [in]*rect*  
  ツールヒントの外接する四角形。  
   
- `[in] clrLine`  
+ [in]*clrLine*  
  罫線の色。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールヒントの境界線の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription  
@@ -227,13 +227,13 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bCalcOnly`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bCalcOnly*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawicon"></a>  CMFCToolTipCtrl::OnDrawIcon  
  ツールヒント内にアイコンを表示します。  
@@ -245,16 +245,16 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `rectImage`  
+ [in]*rectImage*  
  アイコンの座標です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 場合は、アイコンが描画されています。 それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  カスタム アイコンを表示する派生クラスでは、このメソッドをオーバーライドします。 オーバーライドする必要がありますも[CMFCToolTipCtrl::GetIconSize](#geticonsize)ツールヒントのテキストと説明のレイアウトを正しく計算を有効にします。  
   
 ##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel  
@@ -268,19 +268,19 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- `[in] rect`  
+ [in]*rect*  
  ラベル領域の外接する四角形。  
   
- `[in] bCalcOnly`  
+ [in]*bCalcOnly*  
  場合`TRUE`ラベルは描画されません。  
   
 ### <a name="return-value"></a>戻り値  
  ピクセル単位で、ラベルのサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールヒントのラベルの外観をカスタマイズする場合は、派生クラスでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator  
@@ -295,19 +295,19 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `x1`  
+ [in]*x1*  
  区切り記号の左端の水平座標。  
   
- [入力] `x2`  
+ [in]*x2*  
  区切り記号の右端の水平座標。  
   
- [入力] `Y`  
+ [in]*Y*  
  区切り記号の垂直方向の座標。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装の点からの線の描画 (x1, y) をポイント (x2, y)。  
   
  区切り記号の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -324,20 +324,20 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- `[in] rect`  
+ [in]*rect*  
  塗りつぶす領域に外接する四角形を指定します。  
   
- `[in] clrText`  
+ [in]*clrText*  
  ツールヒントの前景色です。  
   
- `[in] clrLine`  
+ [in]*clrLine*  
  枠線とラベルと説明の間の区切り線の色です。  
   
-### <a name="remarks"></a>コメント  
- 既定の実装によって指定される四角形で塗りつぶします`rect`色または最新の呼び出しで指定されたパターンで[CMFCToolTipCtrl::SetParams](#setparams)です。  
+### <a name="remarks"></a>Remarks  
+ 既定の実装によって指定される四角形で塗りつぶします*rect*色または最新の呼び出しで指定されたパターンで[CMFCToolTipCtrl::SetParams](#setparams)です。  
   
  ツールヒントの外観をカスタマイズする場合は、派生クラスでは、このメソッドをオーバーライドします。  
   
@@ -349,10 +349,10 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] strDesrciption`  
+ [in]*strDesrciption*  
  説明テキストです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  説明のテキストは、区切り記号の下のツールヒントに表示されます。  
   
 ##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth  
@@ -365,10 +365,10 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nWidthRegular`  
- [入力] `nWidthLargeImage`  
+ [in]*nWidthRegular*  
+ [in]*nWidthLargeImage*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton  
 
@@ -378,9 +378,9 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pRibbonButton`  
+ [in]*pRibbonButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation  
 
@@ -390,9 +390,9 @@ void SetLocation(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pt`  
+ [in]*pt*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams  
  使用して、ツールヒントの外観を指定します、 [CMFCToolTipInfo クラス](../../mfc/reference/cmfctooltipinfo-class.md)オブジェクト。  
@@ -402,11 +402,11 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] pParams`  
+ [in]*pParams*  
  ポインター、 [CMFCToolTipInfo クラス](../../mfc/reference/cmfctooltipinfo-class.md)ディスプレイのパラメーターを含むオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
- ツールヒントが表示されます、カラーを使用して描画され、visual スタイルを`pParams`を指定します。 値`pParams`プロテクト メンバーに格納されて`m_Params`、オーバーライドする派生クラスでアクセスできる[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)、 [CMFCToolTipCtrl::OnDrawIcon](#ondrawicon)、 [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)、 [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)、または[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)維持するために、指定した外観です。  
+### <a name="remarks"></a>Remarks  
+ ツールヒントが表示されます、カラーを使用して描画され、visual スタイルを*pParams*を指定します。 値*pParams*プロテクト メンバーに格納されて`m_Params`、オーバーライドする派生クラスでアクセスできる[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)、 [CMFCToolTipCtrl:: OnDrawIcon](#ondrawicon)、 [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)、 [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)、または[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)指定の外観を維持するためにします。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

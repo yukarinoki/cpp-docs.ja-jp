@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368778"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040630"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton クラス
 `CMFCCaptionButton`クラスは、ドッキング ペインまたはミニフレーム ウィンドウのキャプション バーに表示されるボタンを実装します。 通常は、フレームワークがキャプション ボタンを自動的に作成します。  
@@ -54,7 +54,7 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>コンストラクター  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|CMFCCaptionButton オブジェクトを構築します。|  
   
@@ -71,7 +71,7 @@ class CMFCCaptionButton : public CObject
 |[CMFCCaptionButton::OnDraw](#ondraw)|キャプション ボタンを描画します。|  
 |[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|タイトル バーのミニ サイズを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラスを派生させる[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)保護の方法を使用して`AddButton`、ミニフレーム ウィンドウにキャプション ボタンを追加します。  
   
  CPaneFrameWnd.h には、次の 2 つの種類のキャプション ボタンのコマンド Id が定義されています。  
@@ -90,7 +90,7 @@ class CMFCCaptionButton : public CObject
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcaptionbutton.h  
   
 ##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nHit`  
+ [in]*nHit*  
  ボタンに関連付けられているコマンド。  
   
- [入力] `bLeftAlign`  
+ [in]*bLeftAlign*  
  ボタンは、左に配置されているかどうかを指定します。  
   
- 次の表に、可能な値、`nHit`パラメーター。  
+ 次の表に、可能な値、 *nHit*パラメーター。  
   
 |[値]|コマンド|  
 |-----------|-------------|  
@@ -124,7 +124,7 @@ CMFCCaptionButton(
 |`AFX_HTMENU`|下向きの矢印のメニュー ボタン。|  
 |`HTNOWHERE`|既定値です。コマンドを表すありません。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、キャプションのボタンに関連付けられていないコマンドです。  
   
  キャプション ボタンは、いずれかで、右または左に配置されます。  
@@ -161,16 +161,16 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 左または右矢印の画像の Id です。`FALSE`の上向きまたは下向き矢印イメージ Id。  
   
- [入力] `bMaximized`  
+ [in]*bMaximized*  
  `TRUE` 最大化イメージ ID です。`FALSE`を最小化の画像の id。  
   
 ### <a name="return-value"></a>戻り値  
  イメージ id。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  パラメーターは、最小化にイメージ Id を指定またはキャプション ボタンを最大化します。  
   
 ##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
@@ -183,7 +183,7 @@ virtual CRect GetRect() const;
 ### <a name="return-value"></a>戻り値  
  ボタンの位置を表す四角形。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタンが表示できない場合は、返されるサイズは 0 です。  
   
 ##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
@@ -196,7 +196,7 @@ static CSize GetSize();
 ### <a name="return-value"></a>戻り値  
  ボタンの外側のディメンションです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  返されるサイズには、ボタンのマージンと境界線が含まれています。  
   
 ##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
@@ -209,7 +209,7 @@ BOOL IsMiniFrameButton() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` キャプションがミニサイズ; に設定されている場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="move"></a>  CMFCCaptionButton::Move  
  ウィンドウの表示状態のボタンの描画位置を設定します。  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `ptTo`  
+ [in]*ptTo*  
  新しい位置。  
   
- [入力] `bHide`  
+ [in]*bHide*  
  ボタンを表示するかどうか。  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  ボタンのデバイス コンテキストへのポインター。  
   
- [入力] `bActive`  
+ [in]*描画*  
  アクティブなボタン イメージを描画するかどうか。  
   
- [入力] `bHorz`  
+ [in]*bHorz*  
  派生クラスで使用するために予約されています。  
   
- [入力] `bMaximized`  
+ [in]*bMaximized*  
  最大化ボタンのイメージを描画するかどうか。  
   
- [入力] `bDisabled`  
+ [in]*bDisabled*  
  有効になっているボタン イメージを描画するかどうか。  
   
-### <a name="remarks"></a>コメント  
- `bMaximized`パラメーターは、ボタンは、最大にするときに使用または最小化ボタンをクリックします。  
+### <a name="remarks"></a>Remarks  
+ *BMaximized*パラメーターは、ボタンは、最大にするときに使用または最小化ボタンをクリックします。  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  タイトル バーのミニ サイズを設定します。  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bSet`  
+ [in]*bSet*  
  `TRUE` ミニ タイトル バーの高さ;`FALSE`の既定のタイトル バーの高さ。  
   
 ## <a name="see-also"></a>関連項目  

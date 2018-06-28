@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373730"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037484"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 構造体
 この構造体は、ユーザーのホバー MDI タブの情報を提供します。  
@@ -36,14 +36,14 @@ struct CMFCTabToolTipInfo
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|タブ コントロールのインデックスを指定します。|  
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|タブ コントロールへのポインター。|  
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|ツールヒントのテキスト。|  
   
-## <a name="remarks"></a>コメント  
- ポインター、`CMFCTabToolTipInfo`のパラメーターとして構造体が渡される、`AFX_WM_ON_GET_TAB_TOOLTIP`メッセージ。 MDI タブが有効になっており、ユーザーがタブ コントロール上に置いたときに、このメッセージが生成されます。  
+## <a name="remarks"></a>Remarks  
+ ポインター、`CMFCTabToolTipInfo`構造は AFX_WM_ON_GET_TAB_TOOLTIP メッセージのパラメーターとして渡されます。 MDI タブが有効になっており、ユーザーがタブ コントロール上に置いたときに、このメッセージが生成されます。  
   
 ## <a name="example"></a>例  
  例を次にどのように`CMFCTabToolTipInfo`で使用される、 [MDITabsDemo サンプル: MDI タブ付きアプリケーションを MFC](../../visual-cpp-samples.md)です。  
@@ -53,7 +53,7 @@ struct CMFCTabToolTipInfo
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxbasetabctrl.h  
   
 ##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex  
@@ -63,7 +63,7 @@ struct CMFCTabToolTipInfo
 int m_nTabIndex;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーのホバーをタブのインデックス。  
   
 ### <a name="example"></a>例  
@@ -90,7 +90,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 CString m_strText;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  文字列が空の場合、ツールヒントは表示されません。  
   
 ### <a name="example"></a>例  

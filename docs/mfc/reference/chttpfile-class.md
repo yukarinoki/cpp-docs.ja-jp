@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: 6e1020c8b0f2b97053951cde6eeb0724dcf60d02
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271348"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039077"
 ---
 # <a name="chttpfile-class"></a>CHttpFile クラス
 HTTP サーバー上のファイルを要求し、読み込む機能が用意されています。  
@@ -110,10 +110,10 @@ BOOL AddRequestHeaders(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pstrHeaders`  
+ *pstrHeaders*  
  ヘッダーまたは要求に追加するヘッダーを含む文字列へのポインター。 各ヘッダーは、CR/LF の組み合わせで終わる必要があります。  
   
- `dwFlags`  
+ *dwFlags*  
  新しいヘッダーのセマンティクスを変更します。 次のいずれかの値を指定します。  
   
 - `HTTP_ADDREQ_FLAG_COALESCE` 後続のヘッダーに見つかった最初のヘッダーを追加するフラグを使用して、同じ名前のヘッダーをマージします。 たとえば、"Accept: テキスト/\*"続けて"Accept: オーディオ/\*"1 つのヘッダーの形成に"Accept: テキスト/\*、オーディオ/\*"です。 まとめられた、または別のヘッダーと共に送信される要求が受信するデータに対して結合方式のように、呼び出し元のアプリケーションの責任です。  
@@ -124,10 +124,10 @@ BOOL AddRequestHeaders(
   
 - `HTTP_ADDREQ_FLAG_ADD` With REPLACE を使用します。 存在しない場合は、ヘッダーを追加します。  
   
- `dwHeadersLen`  
- 文字の長さの`pstrHeaders`します。 場合は-1 L をし、これは`pstrHeaders`0 で終了すると想定し、長さが計算されます。  
+ *dwHeadersLen*  
+ 文字の長さの*pstrHeaders*です。 場合は-1 L をし、これは*pstrHeaders* 0 で終了すると想定し、長さが計算されます。  
   
- `str`  
+ *str*  
  参照、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)要求ヘッダーまたは追加するヘッダーを含むオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
@@ -137,7 +137,7 @@ BOOL AddRequestHeaders(
  `AddRequestHeaders` HTTP 要求のハンドルを自由形式の追加のヘッダーを追加します。 HTTP サーバーに送信される正確な要求の詳細に制御を必要とするクライアントによって目的が使用されます。  
   
 > [!NOTE]
->  アプリケーションで複数のヘッダーを渡すことができます`pstrHeaders`または`str`の`AddRequestHeaders`を使用して呼び出す`HTTP_ADDREQ_FLAG_ADD`または`HTTP_ADDREQ_FLAG_ADD_IF_NEW`です。 アプリケーションが削除または置換を使用してヘッダーを試むかどうか**HTTP_ADDREQ_FLAG_REMOVE**または`HTTP_ADDREQ_FLAG_REPLACE`、のみ 1 つのヘッダーを指定する`lpszHeaders`です。  
+>  アプリケーションで複数のヘッダーを渡すことができます*pstrHeaders*または*str*の`AddRequestHeaders`を使用して呼び出す`HTTP_ADDREQ_FLAG_ADD`または`HTTP_ADDREQ_FLAG_ADD_IF_NEW`です。 アプリケーションが削除または置換を使用してヘッダーを試むかどうか`HTTP_ADDREQ_FLAG_REMOVE`または`HTTP_ADDREQ_FLAG_REPLACE`、のみ 1 つのヘッダーを指定する*lpszHeaders*です。  
   
 ##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
  このメンバー関数は構築するために、`CHttpFile`オブジェクト。  
@@ -160,25 +160,25 @@ CHttpFile(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hFile`  
+ *hFile*  
  インターネット ファイルへのハンドル。  
   
- `hSession`  
+ *hSession*  
  インターネット セッションへのハンドル。  
   
  *pstrObject*  
  含む文字列へのポインター、`CHttpFile`オブジェクト。  
   
- `pstrServer`  
+ *pstrServer*  
  サーバーの名前を含む文字列へのポインター。  
   
- `pstrVerb`  
- 要求を送信するときに使用されるメソッドを含む文字列へのポインター。 指定できます**POST**、**ヘッド**、または`GET`です。  
+ *pstrVerb*  
+ 要求を送信するときに使用されるメソッドを含む文字列へのポインター。 指定できます**POST**、**ヘッド**、または**取得**です。  
   
- 独自  
+ *独自*  
  コンテキスト識別子、`CHttpFile`オブジェクト。 参照してください**解説**このパラメーターの詳細についてはします。  
   
- `pConnection`  
+ *pConnection*  
  ポインター、 [CHttpConnection](../../mfc/reference/chttpconnection-class.md)オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
@@ -197,20 +197,20 @@ BOOL EndRequest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwFlags`  
+ *dwFlags*  
  操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpEndRequest](http://msdn.microsoft.com/library/windows/desktop/aa384230) Windows SDK に含まれています。  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  初期化されたへのポインター[記述](http://msdn.microsoft.com/library/windows/desktop/aa385132)操作に使用する入力バッファーを説明します。  
   
- `dwContext`  
+ *独自*  
  `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しに失敗した場合は、スローされたエラーの原因を判断[CInternetException](../../mfc/reference/cinternetexception-class.md)オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 既定値`dwContext`に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)構築するために、`CHttpFile`オブジェクトのコンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
+ 既定値*独自*に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)構築するために、`CHttpFile`オブジェクトのコンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
   
 ##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
  URL として HTTP ファイルの名前を取得するには、このメンバー関数を呼び出します。  
@@ -273,10 +273,10 @@ BOOL QueryInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwInfoLevel`  
+ *dwInfoLevel*  
  属性をクエリし、次の要求された情報の種類を指定するフラグの組み合わせです。  
   
-- **ヘッダーが**ヘッダー名を検索し、この値を返します`lpvBuffer`出力します。 **ヘッダーが**ヘッダーが見つからない場合にアサーションをスローします。  
+- **ヘッダーが**ヘッダー名を検索し、この値を返します*lpvBuffer*出力します。 **ヘッダーが**ヘッダーが見つからない場合にアサーションをスローします。  
   
 - **HTTP_QUERY_FLAG_REQUEST_HEADERS**通常、応答ヘッダーに対してクエリを実行しますが、アプリケーションは、このフラグを使用して要求ヘッダーをクエリもできます。  
   
@@ -286,20 +286,20 @@ BOOL QueryInfo(
   
  参照してください、**解説**有効な値の一覧のセクションでします。  
   
- `lpvBuffer`  
+ *lpvBuffer*  
  情報を受け取るバッファーへのポインター。  
   
- `lpdwBufferLength`  
+ *書き込ま*  
  項目で、これは文字またはバイト数で、データ バッファーの長さを表す値を指します。 参照してください、**解説**セクションは、このパラメーターの詳細情報。  
   
- `lpdwIndex`  
- ヘッダーの 0 から始まるインデックスへのポインター。 指定できます**NULL**です。 同じ名前の複数のヘッダーを列挙するのにには、このフラグを使用します。 入力で`lpdwIndex`を返す指定したヘッダーのインデックスを示します。 出力では、`lpdwIndex`次のヘッダーのインデックスを示します。 次のインデックスが見つからない場合**見つからない**が返されます。  
+ *時*  
+ ヘッダーの 0 から始まるインデックスへのポインター。 指定できます**NULL**です。 同じ名前の複数のヘッダーを列挙するのにには、このフラグを使用します。 入力で*時*を返す指定したヘッダーのインデックスを示します。 出力では、*時*次のヘッダーのインデックスを示します。 次のインデックスが見つからない場合**見つからない**が返されます。  
   
- `str`  
+ *str*  
  参照、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)返される情報を受信するオブジェクト。  
   
- `dwIndex`  
- インデックス値。 「`lpdwIndex`」を参照してください。  
+ *dwIndex*  
+ インデックス値。 参照してください*時*です。  
   
  *pSysTime*  
  Win32 へのポインター [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)構造体。  
@@ -320,7 +320,7 @@ BOOL QueryInfo(
   
  文字列がバッファーに書き込まれ、メンバー関数が成功したときに`lpdwBufferLength`マイナス、終了するための 1 文字の文字列の長さを含む**NULL**文字です。  
   
- 考えられる`dwInfoLevel`値が含まれます。  
+ 考えられる*dwInfoLevel*値が含まれます。  
   
 - **HTTP_QUERY_MIME_VERSION**  
   
@@ -369,14 +369,14 @@ BOOL QueryInfo(
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
 ##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode  
- HTTP 要求に関連付けられている状態コードを取得するには、このメンバー関数を呼び出すし、指定されたに配置`dwStatusCode`パラメーター。  
+ HTTP 要求に関連付けられている状態コードを取得するには、このメンバー関数を呼び出すし、指定されたに配置*し*パラメーター。  
   
 ```  
 BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStatusCode`  
+ *し*  
  状態コードへの参照。 状態コードは、要求されたイベントの成否を示します。 参照してください**解説**のステータス コードの説明を選択するためです。  
   
 ### <a name="return-value"></a>戻り値  
@@ -423,19 +423,19 @@ BOOL SendRequest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pstrHeaders`  
+ *pstrHeaders*  
  送信するヘッダーの名前を含む文字列へのポインター。  
   
- `dwHeadersLen`  
- によって識別されるヘッダーの長さ`pstrHeaders`です。  
+ *dwHeadersLen*  
+ によって識別されるヘッダーの長さ*pstrHeaders*です。  
   
- `lpOptional`  
+ *lpOptional*  
  要求ヘッダーの直後に送信する省略可能なデータです。 これは通常、使用**POST**と**PUT**操作します。 これは、 **NULL**送信する省略可能なデータがない場合。  
   
  *dwOptionalLen*  
- `lpOptional` の長さ。  
+ 長さ*lpOptional*です。  
   
- `strHeaders`  
+ *strHeaders*  
  送信される要求のヘッダーの名前を含む文字列。  
   
 ### <a name="return-value"></a>戻り値  
@@ -462,13 +462,13 @@ BOOL SendRequestEx(
  *dwTotalLen*  
  要求で送信されるバイト数。  
   
- `dwFlags`  
+ *dwFlags*  
  操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpSendRequestEx](http://msdn.microsoft.com/library/windows/desktop/aa384318) Windows SDK に含まれています。  
   
- `dwContext`  
+ *独自*  
  `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。  
   
- `lpBuffIn`  
+ *lpBuffIn*  
  初期化されたへのポインター[記述](http://msdn.microsoft.com/library/windows/desktop/aa385132)操作に使用する入力バッファーを説明します。  
   
  *lpBuffOut*  
@@ -482,7 +482,7 @@ BOOL SendRequestEx(
   
  コンテンツがファイルに書き込まれると、呼び出す[EndRequest](#endrequest)操作を終了します。  
   
- 既定値`dwContext`に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)構築するために、`CHttpFile`オブジェクトのコンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
+ 既定値*独自*に MFC によって送信される、`CHttpFile`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CHttpFile`オブジェクト。 呼び出すと[できます](../../mfc/reference/cinternetsession-class.md#openurl)または[CHttpConnection](../../mfc/reference/chttpconnection-class.md)構築するために、`CHttpFile`オブジェクトのコンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
   
 ### <a name="example"></a>例  
  次のコード片は、文字列の内容を MFCISAPI をという名前の DLL に送信します。ローカル ホスト サーバー上の DLL です。 この例で使用する 1 つだけの呼び出し中に`WriteString`がブロックでデータを送信する複数の呼び出しを使用します。  

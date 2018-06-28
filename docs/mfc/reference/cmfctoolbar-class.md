@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 870f2e53688f4ea45bbf61c8f41dd30606670d6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a767c0c53aff4234a773cc8b788eaf0289972347
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378888"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041764"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 `CMFCToolBar`クラスに似ています[CToolBar クラス](../../mfc/reference/ctoolbar-class.md)が、ユーザー インターフェイス機能に対する追加サポートを提供します。 フラット ツール バー、ホット イメージのツール バー、大きいアイコン、ページャー ボタン、ロックされたツール バー、rebar コントロール、イメージの下のテキスト、背景イメージ、およびタブ付きのツール バーなどがサポートされます。 `CMFCToolBar` クラスには、ツール バーおよびメニューに対するユーザーのカスタマイズ、ツール バーとメニューの間のドラッグ アンド ドロップ、コンボ ボックス ボタン、エディット ボックス ボタン、カラー ピッカー、およびロールアップ ボタンのサポートも組み込まれています。
@@ -513,12 +513,12 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|高解像度モードで拡張するかどうか、またはツールバーのイメージを指定します。|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|大きいイメージの大きさ (高さまたは幅) と通常のイメージのディメンションの比率を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  組み込む、`CMFCToolBar`をアプリケーションにオブジェクトをこれらの手順に従います。  
   
 1.  追加、`CMFCToolBar`メイン フレーム ウィンドウにオブジェクト。  
@@ -537,7 +537,7 @@ class CMFCToolBar : public CMFCBaseToolBar
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtoolbar.h  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -563,10 +563,10 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  追加するコマンドを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  基本的なコマンドは、メニューが開かれたときに常に表示されます。 このメソッドは、ユーザーが最近使用したコマンドを表示するときに有効です。  
   
  使用して、 [CMFCToolBar::SetBasicCommands](#setbasiccommands)ユーザーがメニューを開いたときに常に表示されているコマンドの一覧を設定します。 使用して、 [CMFCToolBar::GetBasicCommands](#getbasiccommands)アプリケーションによって使用される基本的なコマンドの一覧を取得します。  
@@ -579,10 +579,10 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCommand`  
+ [in]*uiCommand*  
  インクリメントするコマンドのカウンターを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザーがメニュー項目を選択したときに、このメソッドを呼び出します。  
   
  フレームワークは、最近、表示するカウンターがメニュー項目を使用するコマンドを使用します。  
@@ -603,28 +603,28 @@ static BOOL __stdcall AddToolBarForImageCollection(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResID`  
+ [in]*uiResID*  
  リソースを読み込むには、イメージのツールバーの ID。  
   
- [入力] `uiBmpResID`  
+ [in]*uiBmpResID*  
  ツール バー イメージのビットマップのリソース ID です。  
   
- [入力] `uiColdResID`  
+ [in]*uiColdResID*  
  「コールド」ツール バー イメージのビットマップのリソース ID です。  
   
- [入力] `uiMenuResID`  
+ [in]*uiMenuResID*  
  メニュー イメージのビットマップのリソース ID です。  
   
- [入力] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  無効なツール バー イメージのビットマップのリソース ID です。  
   
- [入力] `uiMenuDisabledResID`  
+ [in]*uiMenuDisabledResID*  
  メニューの無効イメージのビットマップのリソース ID です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合`FALSE`場合`uiResID`または`uiBmpResID`、有効なリソースを指定しないか、別のエラーが発生します。  
+ `TRUE` メソッドが成功した場合`FALSE`場合*uiResID*または*uiBmpResID* 、有効なリソースを指定しないか、別のエラーが発生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツール バー イメージのビットマップを読み込んでツール バー イメージのコレクションに追加するには、このメソッドを呼び出します。 このメソッドを作成、一時的なツールバーのオブジェクトと呼び出し[CMFCToolBar::LoadToolBar](#loadtoolbar)です。  
   
 ##  <a name="adjustlayout"></a>  CMFCToolBar::AdjustLayout  
@@ -634,7 +634,7 @@ static BOOL __stdcall AddToolBarForImageCollection(
 virtual void AdjustLayout();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  サイズと位置の再計算を作成したら、ツールバーは、このメソッドを呼び出します。  
   
  フレームワークは、ツールバーのレイアウトを変更する必要があるたびにこのメソッドを呼び出します。 など、ユーザーは、別のコントロール バーを移動、アプリケーション ウィンドウのサイズを変更したり、ツールバーをカスタマイズ レイアウトを変更する必要があります。  
@@ -648,7 +648,7 @@ virtual void AdjustLayout();
 void AdjustSize();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ツールバーが親フレームの境界内に収まることを確認します。 このメソッドは、ツールバーは親フレームを持たない場合に、何も行いません。  
   
  [CMFCToolBar::AdjustLayout](#adjustlayout)メソッドは、ツールバーの親がない場合は、サイズを再計算するには、このメソッドを呼び出して、`CMFCReBar`オブジェクト。  
@@ -663,7 +663,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` イメージの下のテキスト ラベルを表示することが許可された場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、[カスタマイズ] ダイアログ ボックスを有効にするかどうかを決定する、**テキスト ラベルを表示する**チェック ボックスをオン、**ツールバー**選択したツールバーのページです。  
   
  既定の実装では、`TRUE` が返されます。  
@@ -680,7 +680,7 @@ virtual BOOL AllowShowOnList() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` ツールバーのカスタマイズ ページで; 上のリスト ボックスで、ツールバーのオブジェクトを表示できる場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ツールバーのカスタマイズ ページの一覧から派生した特定のオブジェクトを含めるかどうかを判断するためにフレームワークによって呼び出さ`CMFCToolBar`です。  
   
  既定の実装では、常に `TRUE` を返します。 ツールバーのカスタマイズ ダイアログ ボックスでツールバーの一覧に表示したくない場合は、このメソッドをオーバーライドします。  
@@ -695,7 +695,7 @@ BOOL AreTextLabels() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` ツール バー ボタン イメージの下のテキスト ラベルを表示する場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して[CMFCToolBar::EnableTextLabels](#enabletextlabels)テキストが表示されるかどうかを指定します。 既定値は `FALSE` です。 呼び出す[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)をユーザーが、[カスタマイズ] ダイアログ ボックスでこの設定を変更できるかどうかを指定します。  
   
 ##  <a name="autograyinactiveimages"></a>  CMFCToolBar::AutoGrayInactiveImages  
@@ -709,19 +709,19 @@ static void AutoGrayInactiveImages(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  非アクティブな画像の明るさを抑えるかどうかを指定するブール値。 このパラメーターが場合`TRUE`、アクティブでないイメージが淡色表示になります。 それ以外の場合、アクティブでないイメージは淡色表示されません。  
   
- [入力] `nGrayImagePercentage`  
- アクティブでないイメージの輝度の割合を指定します。 場合`bEnable`は`FALSE`、この値は無視されます。  
+ [in]*nGrayImagePercentage*  
+ アクティブでないイメージの輝度の割合を指定します。 場合*bEnable*は`FALSE`、この値は無視されます。  
   
- [入力] `bRedrawAllToolbars`  
+ [in]*bRedrawAllToolbars*  
  アプリケーション内のすべてのツールバーを再描画するかどうかを指定するブール値。 このパラメーターが場合`TRUE`、このメソッドは、すべてのツールバーを再描画します。  
   
-### <a name="remarks"></a>コメント  
- 場合`bEnable`は`TRUE`、フレームワークを使用して`nGrayImagePercentage`を通常のイメージからアクティブでないイメージを生成します。 それ以外の場合を使用して非アクティブなイメージのセットを指定する必要があります、 [CMFCToolBar::GetColdImages](#getcoldimages)メソッドです。 既定では、このオプションは無効です。  
+### <a name="remarks"></a>Remarks  
+ 場合*bEnable*は`TRUE`、フレームワークを使用して*nGrayImagePercentage*を通常のイメージからアクティブでないイメージを生成します。 それ以外の場合を使用して非アクティブなイメージのセットを指定する必要があります、 [CMFCToolBar::GetColdImages](#getcoldimages)メソッドです。 既定では、このオプションは無効です。  
   
- 詳細については、`nGrayImagePercentage`パラメーターを参照してください[CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages)です。  
+ 詳細については、 *nGrayImagePercentage*パラメーターを参照してください[CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages)です。  
   
 ##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex  
  指定したインデックスを返します[CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)このツールバー内のオブジェクト。  
@@ -731,11 +731,11 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  ツール バー ボタンのオブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- インデックス`pButton`; ツール バー ボタンまたは指定したボタンがツールバーにない場合は-1 の内部リストにします。  
+ インデックス*pButton* ; ツール バー ボタンまたは指定したボタンがツールバーにない場合は-1 の内部リストにします。  
   
 ##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout  
  ツールバーの水平方向のサイズを計算します。  
@@ -747,17 +747,17 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bStretch`  
+ [in]*bStretch*  
  `TRUE` 親フレームのサイズにツールバーを拡張します。  
   
- [入力] `bHorz`  
+ [in]*bHorz*  
  `TRUE` ツールバーを水平方向に回転させる`FALSE`ツールバーを縦向きにします。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`ツールバーのサイズを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- このメソッドを使用して、ツールバーのサイズを計算する、`CMFCToolBar::CalcLayout`メソッドです。 渡す、`LM_STRETCH`にフラグを設定、`dwMode`パラメーター場合`bStretch`は`TRUE`します。 渡す、`LM_HORZ`フラグ`bHorz`は`TRUE`します。  
+### <a name="remarks"></a>Remarks  
+ このメソッドを使用して、ツールバーのサイズを計算する、`CMFCToolBar::CalcLayout`メソッドです。 渡す、`LM_STRETCH`にフラグを設定、*寸法*パラメーター場合*bStretch*は`TRUE`します。 渡す、`LM_HORZ`フラグ*bHorz*は`TRUE`します。  
   
  このメソッドを使用する例については、VisualStudioDemo サンプルを参照してください。  
   
@@ -771,7 +771,7 @@ virtual int CalcMaxButtonHeight();
 ### <a name="return-value"></a>戻り値  
  ボタンの最大の高さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、すべてのツール バー ボタン、ツールバーの間で最大の高さを計算します。 高さは、現在のツールバーのドッキング状態などの要因によって異なる場合があります。  
   
  このメソッドから派生したクラスでオーバーライド`CMFCToolBar`を独自の高さの計算方法を提供します。  
@@ -784,13 +784,13 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bVertDock`  
+ [in]*bVertDock*  
  `TRUE` ツールバーが垂直方向にドッキングされていることを指定するには`FALSE`ツールバーが水平方向にドッキングされていることを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`ツールバーのボタンの全体的なサイズを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、テキスト ラベルと境界線のサイズの領域など、各ボタンのサイズに影響する属性を検討します。  
   
  このメソッドを使用して 1 つのボタンの予約サイズを返します、ツールバーにボタンが含まれていない場合、 [CMFCToolBar::GetButtonSize](#getbuttonsize)メソッドです。  
@@ -805,7 +805,7 @@ virtual BOOL CanBeClosed() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` ユーザーがツールバーを閉じることができる場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザーがツールバーを閉じるかどうかを決定するには、このメソッドを呼び出します。 メソッドを返す場合`TRUE`フレームワークにより、ツールバーの システム メニューで SC_CLOSE コマンド、およびユーザーがツールバーのカスタマイズ ダイアログ ボックスの一覧で、チェック ボックスを使用して、ツールバーを閉じることができます。  
   
  既定の実装では、`TRUE` が返されます。 このメソッドから派生したクラスでオーバーライド`CMFCToolBar`を閉じることができない、ユーザーがツール バー オブジェクト。  
@@ -820,7 +820,7 @@ virtual BOOL CanBeRestored() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` アプリケーション リソースから、ツールバーを復元できる場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、カスタマイズ後、元の状態にツールバーを返すことができるかどうかを決定するには、このメソッドを呼び出します。 元の状態は、アプリケーションのリソースから読み込まれます。  
   
  場合`CanBeRestored`を返します`TRUE`、**ツールバー**のカスタマイズ ダイアログ ボックスのページでは、**リセット**選択のツールバーのボタンをクリックします。  
@@ -839,7 +839,7 @@ virtual BOOL CanFocus() const;
 ### <a name="return-value"></a>戻り値  
  このメソッドは `FALSE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装をオーバーライド[CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)ツールバーのオブジェクトがフォーカスを受け取ることはできません。  
   
 ##  <a name="canhandlesiblings"></a>  CMFCToolBar::CanHandleSiblings  
@@ -852,7 +852,7 @@ BOOL CanHandleSiblings();
 ### <a name="return-value"></a>戻り値  
  ツール バーに兄弟があり、ツール バーと兄弟が同じウィンドウに配置されている場合は `TRUE`。それ以外の場合は `FALSE`。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  内部の cmfccustomizebutton::createpopupmenu メソッドは、表示する方法を決定するには、このメソッドを呼び出して、**カスタマイズ**ポップアップ メニュー。 このメソッドが戻る場合`TRUE`、フレームワークによって表示、**を 1 行に表示するボタン**または**2 つの行に表示するボタン**ボタン。  
   
  通常、このメソッドを使用する必要はありません。 有効にする、**カスタマイズ**呼び出し、ツールバーに表示されるボタン、 [cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)メソッドです。 有効にする、**を 1 行に表示するボタン**または**2 つの行に表示するボタン**ボタン、呼び出す[cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)です。  
@@ -864,7 +864,7 @@ BOOL CanHandleSiblings();
 static void CMFCToolBar::CleanUpImages();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、アプリケーションのシャット ダウン時に、このメソッドを呼び出します。  
   
 ##  <a name="cleanuplockedimages"></a>  CMFCToolBar::CleanUpLockedImages  
@@ -874,7 +874,7 @@ static void CMFCToolBar::CleanUpImages();
 void CleanUpLockedImages();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アプリケーションの visual スタイルが変更されたときに、このメソッドを呼び出します。 このメソッドを使用する例については、VisualStudioDemo サンプルを参照してください。  
   
 ##  <a name="commandtoindex"></a>  CMFCToolBar::CommandToIndex  
@@ -887,19 +887,19 @@ int CommandToIndex(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIDFind`  
+ [in]*から始まり*  
  コマンド ID を指定します  
   
- [入力] `iIndexFirst`  
+ [in]*iIndexFirst*  
  起動する最初のインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合、ツール バー ボタンの 0 から始まるインデックス指定した ID を持つボタンがない場合は-1  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  A`CMFCToolBar`オブジェクトは、ツールバーのボタンの内部リストを保持します。 ボタンのコマンド ID を指定されたリスト内のボタンのインデックスを取得するには、この関数を呼び出します。  
   
- 場合`iIndex`、0 より大きい値は、このメソッドは、ツールバーのインデックスを持つ任意のボタンを無視より小さい`iIndex`です。  
+ 場合*iIndex* 、0 より大きい値は、このメソッドは、ツールバーのインデックスを持つ任意のボタンを無視より小さい*iIndex*です。  
   
 ##  <a name="create"></a>  CMFCToolBar::Create  
  `CMFCToolBar` オブジェクトを作成します。  
@@ -912,19 +912,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  ツールバーの親ウィンドウへのポインター。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  ツールバーのスタイル。 参照してください[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)スタイルの一覧については、Windows SDK に含まれています。  
   
- [入力] `nID`  
+ [in]*nID*  
  ツールバーの子ウィンドウの ID。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、コントロール バーを作成し、ツールバーに結び付けます。 持つコントロール バーを作成、`TBSTYLE_FLAT`スタイル。 呼び出す[CMFCToolBar::CreateEx](#createex)別のコントロール バーのスタイルをする場合。  
   
 ##  <a name="createex"></a>  CMFCToolBar::CreateEx  
@@ -943,28 +943,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  ツールバーの親ウィンドウへのポインター。  
   
- [入力] `dwCtrlStyle`  
+ [in]*ツール バー*  
  埋め込まれたコントロール バー オブジェクトを作成するための追加スタイルです。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  ツールバーのスタイル。 参照してください[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)適切なスタイルの一覧についてはします。  
   
- [入力] `rcBorders`  
+ [in]*rcBorders*  
  A`CRect`ツールバー ウィンドウの境界線の幅を指定するオブジェクト。  
   
- [入力] `nID`  
+ [in]*nID*  
  ツールバーの子ウィンドウの ID。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、コントロール バーを作成し、ツールバーに結び付けます。  
   
- 代わりにこのメソッドを呼び出す[CMFCToolBar::Create](#create)特定のスタイルを提供する場合。 たとえば、設定`dwCtrlStyle`に`TBSTYLE_FLAT | TBSTYLE_TRANSPARENT`Internet Explorer 4 で使用される、ツールバーのようなツールバーを作成します。  
+ 代わりにこのメソッドを呼び出す[CMFCToolBar::Create](#create)特定のスタイルを提供する場合。 たとえば、設定*ツール バー*に`TBSTYLE_FLAT | TBSTYLE_TRANSPARENT`Internet Explorer 4 で使用される、ツールバーのようなツールバーを作成します。  
   
 ### <a name="example"></a>例  
  次の例で使用する方法、`CreateEx`のメソッド、`CMFCToolBar`クラスです。 このコード スニペットの一部である、 [IE デモ サンプル](../../visual-cpp-samples.md)です。  
@@ -979,7 +979,7 @@ virtual BOOL CreateEx(
 virtual void Deactivate();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドには、強調表示されているツール バー ボタンからフォーカスを削除することで、ツールバーが非アクティブにします。 フレームワークは、ツールバーがフォーカスを失ったかが破棄されるときに、このメソッドを呼び出します。  
   
 ##  <a name="dopaint"></a>  CMFCToolBar::DoPaint  
@@ -990,10 +990,10 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、フレームワークによって、ツールバーの一部が再描画する必要があります。  
   
  派生したオブジェクトの外観をカスタマイズするには、このメソッドをオーバーライド`CMFCToolBar`です。  
@@ -1011,25 +1011,25 @@ virtual BOOL DrawButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `pButton`  
+ [in]*pButton*  
  描画するためのボタンへのポインター。  
   
- [入力] `pImages`  
+ [in]*pImages*  
  ツール バー イメージへのポインター。  
   
- [入力] `bHighlighted`  
+ [in]*bHighlighted*  
  `TRUE` 場合は、ボタンが強調表示されます。それ以外の場合`FALSE`です。  
   
- [入力] `bDrawDisabledImages`  
+ [in]*bDrawDisabledImages*  
  `TRUE` 場合は無効なボタンが淡色表示になります。それ以外の場合`FALSE`です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 場合は、ボタンが再描画します。`FALSE`ボタンが表示されていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CMFCToolBar::DrawButton](#drawbutton)メソッドは、ツールバーのボタンが再描画する必要があるときにこのメソッドを呼び出します。  
   
  ツールバーのボタンの外観をカスタマイズする場合は、このメソッドをオーバーライドします。  
@@ -1045,16 +1045,16 @@ virtual void DrawSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `rect`  
+ [in]*rect*  
  ピクセル単位で、区分線を描画する場所の場所の外接する四角形。  
   
- [入力] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 場合は、区切り文字、水平方向、`FALSE`場合は、区切り記号は縦方向です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CMFCToolBar::DoPaint](#dopaint)ごとにこのメソッドを呼び出して[CMFCToolBar::DrawSeparator](#drawseparator)を持つオブジェクト、`TBBS_SEPARATOR`呼び出す代わりに、スタイル[CMFCToolBar::DrawButton](#drawbutton)向けボタン。  
   
  このメソッドから派生したクラスでオーバーライド[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)ツールバーの区分線の外観をカスタマイズします。 既定の実装[CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator)の外観は、現在のビジュアル マネージャーによって決定されます、区切り記号を描画します。  
@@ -1078,27 +1078,27 @@ void EnableCustomizeButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  有効または [カスタマイズ] ボタンを無効にします。  
   
- [入力] `iCustomizeCmd`  
+ [in]*iCustomizeCmd*  
  [カスタマイズ] ボタンのコマンド ID。  
   
- [入力] `strCustomizeText`  
+ [in]*strCustomizeText*  
  [カスタマイズ] ボタンのテキスト ラベル。  
   
- [入力] `uiCustomizeTextResId`  
+ [in]*uiCustomizeTextResId*  
  カスタマイズ ボタンのラベルのリソース文字列の ID。  
   
- [入力] `bQuickCustomize`  
+ [in]*bQuickCustomize*  
  有効または無効に、**の追加と削除 ボタン**ボタンにドロップダウン メニューのオプションです。  
   
-### <a name="remarks"></a>コメント  
- 場合`iCustomizeCmd`-1 で、カスタマイズ ボタン、ツールバーの領域に複数のツール バー ボタンが収まらないときにフレームワークが表示されます。 ボタンが表示されますが、二重左向きの矢印または山かっこは、他のボタンがあることを示します。  
+### <a name="remarks"></a>Remarks  
+ 場合*iCustomizeCmd* -1 で、カスタマイズ ボタン、ツールバーの領域に複数のツール バー ボタンが収まらないときにフレームワークが表示されます。 ボタンが表示されますが、二重左向きの矢印または山かっこは、他のボタンがあることを示します。  
   
- 場合`iCustomizeCmd`が有効なコマンド ID を指定し、`bEnable`は`TRUE`、[カスタマイズ] ボタンが常に表示されます。 ボタンは、下向き矢印を持ち、コマンドを含むメニューが開きます。 このコマンドで指定されたテキスト ラベルを使用して`strCustomizeText`です。 場合`bQuickCustomize`も`TRUE`、メニューが表示されたら、**の追加と削除 ボタン**オプション。  
+ 場合*iCustomizeCmd*が有効なコマンド ID を指定し、 *bEnable*は`TRUE`、[カスタマイズ] ボタンが常に表示されます。 ボタンは、下向き矢印を持ち、コマンドを含むメニューが開きます。 このコマンドで指定されたテキスト ラベルを使用して*strCustomizeText*です。 場合*bQuickCustomize*も`TRUE`、メニューが表示されたら、**の追加と削除 ボタン**オプション。  
   
- フレームワーク動的メニューに追加で指定されている項目の前に、ツールバーの領域に適合しないすべてのボタン`iCustomizeCmd`です。 下矢印の横にあるシェブロンが表示されます。  
+ フレームワーク動的メニューに追加で指定されている項目の前に、ツールバーの領域に適合しないすべてのボタン*iCustomizeCmd*です。 下矢印の横にあるシェブロンが表示されます。  
   
 ##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking  
  メイン フレーム ウィンドウのドッキングを有効にします。  
@@ -1108,11 +1108,11 @@ virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `dwAlignment`  
+ [in]*場合*  
  ドッキングの配置を有効にするを指定します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドが基底クラスの実装を拡張[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)を設定して、`CBasePane::m_dwControlBarStyle`データ メンバーを`AFX_CBRS_FLOAT`です。 このメソッドは、渡します`dwAlignment`基底クラスの実装にします。  
+### <a name="remarks"></a>Remarks  
+ このメソッドが基底クラスの実装を拡張[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)を設定して、`CBasePane::m_dwControlBarStyle`データ メンバーを`AFX_CBRS_FLOAT`です。 このメソッドは、渡します*場合*基底クラスの実装にします。  
   
 ##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons  
  有効またはツール バー ボタンに大きいアイコンを無効にします。  
@@ -1122,10 +1122,10 @@ void EnableLargeIcons(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 大きいアイコン、有効にする`FALSE`を大きいアイコンを無効にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、大きいアイコンが有効にします。  
   
 ##  <a name="enablequickcustomization"></a>  CMFCToolBar::EnableQuickCustomization  
@@ -1136,7 +1136,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` クイックのカスタマイズを有効にする`FALSE`クイック カスタマイズを無効にします。  
   
 ##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
@@ -1147,10 +1147,10 @@ void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` コマンドのリフレクション; を有効にするには`FALSE`コマンド リフレクションを無効にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンボ ボックスなどの組み込みコントロールを含むツール バー ボタンのコマンドのリフレクションを有効にするには、このメソッドを呼び出します。  
   
  コマンドのリフレクションの詳細については、次を参照してください。 [TN062: Windows コントロールへのメッセージ リフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)です。  
@@ -1163,10 +1163,10 @@ void EnableTextLabels(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bEnable`  
+ *bEnable*  
  `TRUE` ツール バー ボタンのイメージです。 下にあるテキスト ラベルが表示されない場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  テキスト ラベルが有効な場合、ツールバーのすべてのボタンが拡大され、イメージの下に表示されるラベル用の領域を提供します。 カスタマイズ ダイアログ ボックスには、**表示テキスト ラベル**チェック ボックスをオン、**ツールバー**ページ。 ユーザーは、ツールバーを選択し、このオプションの確認、ときに、フレームワークによって呼び出されます`EnableTextLabels`選択のツールバーにします。 派生したオブジェクトのチェック ボックスを無効にすることができます[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)を返すことによって`FALSE`から[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)です。  
   
 ##  <a name="fromhandlepermanent"></a>  CMFCToolBar::FromHandlePermanent  
@@ -1177,13 +1177,13 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hwnd`  
+ [in]*hwnd*  
  検索するウィンドウ ハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 `CMFCToolBar` 、指定したウィンドウ ハンドルを格納しているオブジェクトまたは`NULL`いない対応する場合`CMFCToolBar`オブジェクトが存在します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この共有方法がアプリケーションでは、各ツールバーを調べ、`CMFCToolBar`指定したウィンドウ ハンドルを格納しているオブジェクト。  
   
 ##  <a name="getallbuttons"></a>  CMFCToolBar::GetAllButtons  
@@ -1216,7 +1216,7 @@ static const CList<UINT,UINT>& GetBasicCommands();
 ### <a name="return-value"></a>戻り値  
  Const 参照、 [CList クラス](../../mfc/reference/clist-class.md)基本的なコマンドのコレクションを格納するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  基本的なコマンドを呼び出すことによって追加[CMFCToolBar::AddBasicCommand](#addbasiccommand)または[CMFCToolBar::SetBasicCommands](#setbasiccommands)です。  
   
 ##  <a name="getbutton"></a>  CMFCToolBar::GetButton  
@@ -1227,7 +1227,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  返されるボタンのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1245,22 +1245,22 @@ void GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツールバーのボタンの一覧で、ボタンのインデックスを指定します。  
   
- [出力] `nID`  
+ [out]*nID*  
  ボタンのコマンド ID。  
   
- [出力] `nStyle`  
+ [out]*nStyle*  
  ボタンのスタイルです。  
   
- [出力] `iImage`  
+ [out]*画像*  
  ボタンのイメージのインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `GetButtonInfo`メソッドが指定したインデックス位置ツール バー ボタンを検索し、ボタンのコマンド ID、スタイル、およびイメージのインデックスを取得します。  
   
- 指定したインデックスにあるボタンが存在しない場合、フレームワークを設定`nID`と`nStyle`0、および`iImage`-1 メソッドが戻るときにします。  
+ 指定したインデックスにあるボタンが存在しない場合、フレームワークを設定*nID*と*nStyle* 0、および*画像*-1 メソッドが戻るときにします。  
   
 ##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize  
  ツールバーの各ボタンのサイズを返します。  
@@ -1272,7 +1272,7 @@ CSize GetButtonSize() const;
 ### <a name="return-value"></a>戻り値  
  A [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)ツールバーの各ボタンのサイズを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[CMFCToolBar::SetSizes](#setsizes)または[CMFCToolBar::SetLockedSizes](#setlockedsizes)をツールバーの各ボタンのサイズを設定します。  
   
 ##  <a name="getbuttonstyle"></a>  CMFCToolBar::GetButtonStyle  
@@ -1283,13 +1283,13 @@ UINT GetButtonStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツール バー ボタンのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- ツール バー ボタンのスタイルを指定する値。 である必要があります。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)可能なスタイルの一覧についてはします。  
+ ツール バー ボタンのスタイルを指定する値。 . 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)可能なスタイルの一覧についてはします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[CMFCToolBar::SetButtonStyle](#setbuttonstyle)ツール バー ボタンのスタイルを設定するには  
   
 ##  <a name="getbuttontext"></a>  CMFCToolBar::GetButtonText  
@@ -1304,16 +1304,16 @@ void GetButtonText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツール バー ボタンのインデックス。  
   
- [出力] `rString`  
+ [out]*rString*  
  ツール バー ボタンのラベルのテキスト。  
   
 ### <a name="return-value"></a>戻り値  
  ツール バー ボタンのラベルのテキスト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[CMFCToolBar::SetButtonText](#setbuttontext)または[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)テキスト ラベルを設定します。  
   
 ##  <a name="getcoldimages"></a>  CMFCToolBar::GetColdImages  
@@ -1326,7 +1326,7 @@ static CMFCToolBarImages* GetColdImages();
 ### <a name="return-value"></a>戻り値  
  コールド ツール バー ボタンのイメージのコレクションへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コールド イメージは、ユーザーがツール バー ボタンと対話していないときに使用されるイメージです。 呼び出す[CMFCToolBar::LoadBitmapEx](#loadbitmapex)または[CMFCToolBar::LoadBitmap](#loadbitmap)コールド イメージを読み込みます。  
   
 ##  <a name="getcolumnwidth"></a>  CMFCToolBar::GetColumnWidth  
@@ -1339,7 +1339,7 @@ virtual int GetColumnWidth() const;
 ### <a name="return-value"></a>戻り値  
  ツール バー ボタンの幅を指定する値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ツールバーのレイアウトを計算するには、このメソッドを呼び出します。 ツールバーの別の列幅を指定する派生クラスでは、このメソッドをオーバーライドします。  
   
 ##  <a name="getcommandbuttons"></a>  CMFCToolBar::GetCommandButtons  
@@ -1352,10 +1352,10 @@ static int GetCommandButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  ボタンのコマンド ID。  
   
- [出力] `listButtons`  
+ [out]*listButtons*  
  参照、 [CObList クラス](../../mfc/reference/coblist-class.md)がツール バー ボタンの一覧を受け取るオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1381,7 +1381,7 @@ CMFCCustomizeButton* GetCustomizeButton();
 ### <a name="return-value"></a>戻り値  
  ポインター、`CMFCCustomizeButton`ツールバーに関連付けられているオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、取得、**カスタマイズ**ツールバーの最後に表示されるボタンをクリックします。 使用して、 [cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)を追加するメソッド、**カスタマイズ**ツールバーにボタンをクリックします。  
   
  呼び出すことができます、 [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)ツールバーには、有効かどうかを調べます`CMFCCustomizeButton`オブジェクト。  
@@ -1394,13 +1394,13 @@ static int GetDefaultImage(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiID`  
+ [in]*uiID*  
  ボタンのコマンド ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  共有の一覧で、イメージのツール バー イメージのインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この共有メソッドを使用して、指定されたコマンド ID を持つツール バー ボタンの既定のイメージのインデックスを取得するには 戻り値は、共有アプリケーションのすべてのツールバーのツール バー ボタンのイメージのコレクションにインデックスです。 呼び出す、 [CMFCToolBar::GetImages](#getimages)をこのコレクションへのポインターを取得します。  
   
 ##  <a name="getdisabledimages"></a>  CMFCToolBar::GetDisabledImages  
@@ -1413,7 +1413,7 @@ static CMFCToolBarImages* __stdcall GetDisabledImages();
 ### <a name="return-value"></a>戻り値  
  無効なツール バー ボタンのイメージのコレクションへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して無効なツール バー ボタンのイメージを読み込み、 [CMFCToolBarEditBoxButton クラス](../../mfc/reference/cmfctoolbareditboxbutton-class.md)と[CMFCToolBar::LoadBitmap](#loadbitmap)メソッドです。  
   
 ##  <a name="getdisabledmenuimages"></a>  CMFCToolBar::GetDisabledMenuImages  
@@ -1426,7 +1426,7 @@ static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ### <a name="return-value"></a>戻り値  
  メニューの無効イメージのコレクションへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して無効なイメージを読み込み、 [CMFCToolBarEditBoxButton クラス](../../mfc/reference/cmfctoolbareditboxbutton-class.md)メソッドです。  
   
 ##  <a name="getdroppeddownmenu"></a>  CMFCToolBar::GetDroppedDownMenu  
@@ -1437,14 +1437,14 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `pIndex`  
+ [out]*pIndex*  
  ツール バー ボタンのコレクションで、ボタンのインデックスを受け取ります。  
   
 ### <a name="return-value"></a>戻り値  
  そのサブメニューが表示されているメニュー ボタン オブジェクトへのポインターまたは`NULL`メニューが表示されていないそのサブメニュー場合。  
   
-### <a name="remarks"></a>コメント  
- このメソッドが戻る以外の場合`NULL`値および`pIndex`は`NULL`、値を指す`pIndex`ツール バー ボタンのコレクション内のメニュー ボタンのインデックスに設定されています。  
+### <a name="remarks"></a>Remarks  
+ このメソッドが戻る以外の場合`NULL`値および*pIndex*は`NULL`、値を指す*pIndex*ツール バー ボタンのコレクション内のメニュー ボタンのインデックスに設定されています。  
   
 ##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons  
  無効なボタンのイメージは、正規のボタンのイメージの淡色表示されているバージョンであるかどうかを指定または無効にされたボタンのイメージのコレクションから取得します。  
@@ -1456,7 +1456,7 @@ BOOL GetGrayDisabledButtons() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` 無効なボタンの画像の明るさを抑える`FALSE`無効なイメージのコレクションからイメージを取得します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)淡色表示されているイメージと無効なイメージのコレクションからイメージを切り替えます。  
   
 ##  <a name="gethighlightedbutton"></a>  CMFCToolBar::GetHighlightedButton  
@@ -1469,7 +1469,7 @@ CMFCToolBarButton* GetHighlightedButton() const;
 ### <a name="return-value"></a>戻り値  
  ツール バー ボタン オブジェクト; へのポインターまたは`NULL`ボタンが強調表示されていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  キーボード フォーカスがある場合は、ツールバーのボタンがハイライトされます。 ツールバーのボタンは、このアプリケーションのホット トラッキング場合にもツールバーのボタンが強調表示されます (詳細については、次を参照してください[CMFCToolBar::GetHotBorder](#gethotborder)と[CMFCToolBar::SetHotBorder](#sethotborder)) と、マウス。ツール バー ボタンまたはメニュー項目がキーボード フォーカスを持たない場合でポイントがします。  
   
 ##  <a name="gethotborder"></a>  CMFCToolBar::GetHotBorder  
@@ -1482,7 +1482,7 @@ BOOL GetHotBorder() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` ツール バー ボタンはフォーカスです。 場合、それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、ツールバーのボタンは、フォーカスです。  
   
 ##  <a name="gethottextcolor"></a>  CMFCToolBar::GetHotTextColor  
@@ -1495,7 +1495,7 @@ static COLORREF GetHotTextColor();
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)現在強調表示されたテキストの色を表す値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[CMFCToolBar::SetHotTextColor](#sethottextcolor)を強調表示されているツール バー ボタンの新しいテキストの色を設定します。  
   
 ##  <a name="gethwndlastfocus"></a>  CMFCToolBar::GetHwndLastFocus  
@@ -1508,7 +1508,7 @@ HWND GetHwndLastFocus() const;
 ### <a name="return-value"></a>戻り値  
  派生していないウィンドウのハンドル[CMFCBaseToolBar クラス](../../mfc/reference/cmfcbasetoolbar-class.md)、以前に入力フォーカスを配置するか、`NULL`そのようなウィンドウがない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ときに、`CMFCToolBar`コントロールが入力フォーカスを受け取る、フォーカスを失った後で復元できるようにするウィンドウへのハンドルを格納します。  
   
 ##  <a name="getignoresettext"></a>  CMFCToolBar::GetIgnoreSetText  
@@ -1521,7 +1521,7 @@ BOOL GetIgnoreSetText() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` 場合はボタン ラベルの設定への呼び出しは無視されます。それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getimages"></a>  CMFCToolBar::GetImages  
  アプリケーションで、ポインターをボタンのイメージを既定のコレクションに返します。  
@@ -1533,7 +1533,7 @@ static CMFCToolBarImages* GetImages();
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)アプリケーション内のすべてのツールバーの既定のイメージのコレクションを格納するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この共有方法は、アプリケーションのツール バー イメージのすべての既定のコレクションへのアクセスを提供します。 呼び出す、 [CMFCToolBar::LoadBitmap](#loadbitmap)イメージをコレクションに追加するメソッド。  
   
 ##  <a name="getimagesize"></a>  CMFCToolBar::GetImageSize  
@@ -1556,7 +1556,7 @@ int GetImagesOffset() const;
 ### <a name="return-value"></a>戻り値  
  ツール バー イメージのインデックスのオフセット。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すべてのツール バー既定イメージが、グローバルに格納されている[CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md) ボックスの一覧です。 ツールバー内の各ボタンのイメージは、リスト内で連続して格納されます。 イメージのインデックスを計算するためには、ツールバーのボタンのイメージ リストの先頭のオフセットに、ツールバーのボタンのインデックスを追加します。  
   
  呼び出す[CMFCToolBar::ButtonToIndex](#buttontoindex)ツールバーのボタン、ボタンにポインターを渡されたインデックスを取得します。  
@@ -1573,14 +1573,14 @@ virtual void GetInvalidateItemRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  クライアント領域を取得する対象のボタンのインデックス。  
   
- [出力] `lpRect`  
+ [out]*lpRect*  
  ポインター、`RECT`クライアント領域の領域を受け取るオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
- `lpRect`パラメーターがある必要がありますいない`NULL`です。 指定されたインデックス位置にボタンが存在しない場合`lpRect`を受け取る、`RECT`をゼロに初期化されるオブジェクト。  
+### <a name="remarks"></a>Remarks  
+ *LpRect*パラメーターがある必要がありますいない`NULL`です。 指定されたインデックス位置にボタンが存在しない場合*lpRect*を受け取る、`RECT`をゼロに初期化されるオブジェクト。  
   
 ##  <a name="getitemid"></a>  CMFCToolBar::GetItemID  
  指定したインデックスにあるツールバーのボタンのコマンド ID を返します。  
@@ -1590,7 +1590,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツール バー ボタンのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1606,14 +1606,14 @@ virtual void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツール バー ボタンのインデックスを指定します。  
   
- [出力] `lpRect`  
+ [out]*lpRect*  
  ポインター`CRect`をイメージに外接する四角形の座標を受け取るオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- `CRect`オブジェクトを`lpRect`指定したインデックスにあるボタンが存在しない場合は、ポイントを 0 に設定します。  
+### <a name="remarks"></a>Remarks  
+ `CRect`オブジェクトを*lpRect*指定したインデックスにあるボタンが存在しない場合は、ポイントを 0 に設定します。  
   
 ### <a name="example"></a>例  
  次の例で使用する方法、`GetItemRect`のメソッド、`CMFCToolBar`クラスです。 このコード スニペットの一部である、 [IE デモ サンプル](../../visual-cpp-samples.md)です。  
@@ -1631,7 +1631,7 @@ static CMFCToolBarImages* GetLargeColdImages();
 ### <a name="return-value"></a>戻り値  
  大きなサイズのコールド イメージのコレクションへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コールド イメージは、ユーザーがツール バー ボタンと対話していないときに使用されるイメージです。 呼び出す[CMFCToolBar::LoadBitmapEx](#loadbitmapex)大きなコールド イメージを読み込みます。  
   
 ##  <a name="getlargedisabledimages"></a>  CMFCToolBar::GetLargeDisabledImages  
@@ -1644,7 +1644,7 @@ static CMFCToolBarImages* GetLargeDisabledImages();
 ### <a name="return-value"></a>戻り値  
  大規模なコレクションへのポインターには、ツール バー ボタンのイメージが無効になります。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  大きなイメージは、標準ツール バー ボタンのイメージの大規模なバージョンです。 呼び出す[CMFCToolBar::LoadBitmapEx](#loadbitmapex)または[CMFCToolBar::LoadBitmap](#loadbitmap)大きなイメージを読み込みます。  
   
 ##  <a name="getlargeimages"></a>  CMFCToolBar::GetLargeImages  
@@ -1657,7 +1657,7 @@ static CMFCToolBarImages* GetLargeImages();
 ### <a name="return-value"></a>戻り値  
  大きいツール バー ボタンのイメージのコレクションへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  大きなイメージは、標準ツール バー ボタンのイメージの大規模なバージョンです。 呼び出す[CMFCToolBar::LoadBitmapEx](#loadbitmapex)大きなイメージを読み込みます。  
   
 ##  <a name="getlockedcoldimages"></a>  CMFCToolBar::GetLockedColdImages  
@@ -1670,7 +1670,7 @@ CMFCToolBarImages* GetLockedColdImages();
 ### <a name="return-value"></a>戻り値  
  ロックのコールド イメージのコレクションへのポインターまたは`NULL`ツールバーがロックされていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ロックされたイメージには、ユーザーがツールバーをカスタマイズすることはできません、フレームワークが使用する標準のツール バー ボタンのイメージのバージョンです。 コールド イメージは、ユーザーがツール バー ボタンと対話していないときに使用されるイメージです。  
   
  このメソッドが戻る`NULL`ツールバーがロックされていない場合。 このメソッドは、ツールバーがロックされていない場合も、アサーションの失敗とデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)です。  
@@ -1687,7 +1687,7 @@ CMFCToolBarImages* GetLockedDisabledImages();
 ### <a name="return-value"></a>戻り値  
  ロックの無効なイメージのコレクションへのポインターまたは`NULL`ツールバーがロックされていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ロックされたイメージには、ユーザーがツールバーをカスタマイズすることはできません、フレームワークが使用する標準のツール バー ボタンのイメージのバージョンです。 無効なイメージは、ボタンには、フレームワークが使用するイメージ、`TBBS_DISABLED`スタイル。  
   
  このメソッドが戻る`NULL`ツールバーがロックされていない場合。 このメソッドは、ツールバーがロックされていない場合も、アサーションの失敗とデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)です。  
@@ -1704,7 +1704,7 @@ CMFCToolBarImages* GetLockedImages();
 ### <a name="return-value"></a>戻り値  
  ロックされたツールバー ボタンのイメージのコレクションへのポインターまたは`NULL`ツールバーがロックされていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ロックされたイメージには、ユーザーがツールバーをカスタマイズすることはできません、フレームワークが使用する標準のツール バー ボタンのイメージのバージョンです。  
   
  このメソッドが戻る`NULL`ツールバーがロックされていない場合。 このメソッドは、ツールバーがロックされていない場合も、アサーションの失敗とデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)です。  
@@ -1719,7 +1719,7 @@ CSize GetLockedImageSize() const;
 ### <a name="return-value"></a>戻り値  
  A`CSize`ロックされたツール バー イメージや、空のサイズを指定する構造体`CSize`ツールバーがロックされていない場合に構造体します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ロックされたイメージには、ユーザーがツールバーをカスタマイズすることはできません、フレームワークが使用する標準のツール バー ボタンのイメージのバージョンです。  
   
  このメソッドが戻る、`CSize`ツールバーがロックされていない場合は、ゼロ幅と高さがゼロで構造体します。 このメソッドは、ツールバーがロックされていない場合も、アサーションの失敗とデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)です。  
@@ -1736,7 +1736,7 @@ CMFCToolBarImages* GetLockedMenuImages();
 ### <a name="return-value"></a>戻り値  
  ロックされたツールバー メニューのイメージのコレクションへのポインターまたは`NULL`ツールバーがロックされていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ロックされたイメージには、ユーザーがツールバーをカスタマイズすることはできません、フレームワークが使用する標準ツール バー メニュー イメージのバージョンです。  
   
  このメソッドが戻る`NULL`ツールバーがロックされていない場合。 このメソッドは、ツールバーがロックされていない場合も、アサーションの失敗とデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)です。  
@@ -1753,7 +1753,7 @@ static CSize GetMenuButtonSize();
 ### <a name="return-value"></a>戻り値  
  A`CSize`をピクセル単位でのメニュー ボタンのサイズを表すオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールバーのメニュー ボタンのサイズは、グローバル変数として保持され、この静的メソッドによって取得できます。  
   
  呼び出す[CMFCToolBar::SetMenuSizes](#setmenusizes)このグローバル変数を設定します。  
@@ -1768,7 +1768,7 @@ static CMFCToolBarImages* GetMenuImages();
 ### <a name="return-value"></a>戻り値  
  メニュー イメージのコレクションへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す、 [CMFCToolBar::LoadBitmapEx](#loadbitmapex)メニュー イメージを読み込みます。  
   
  呼び出す、 [CMFCToolBar::SetMenuSizes](#setmenusizes)ボタンとそのイメージのサイズを設定します。  
@@ -1783,7 +1783,7 @@ static CSize GetMenuImageSize();
 ### <a name="return-value"></a>戻り値  
  A`CSize`メニュー イメージのサイズを表すオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、グローバル変数として保持されているツール バー メニュー ボタンのイメージのサイズを返します。 呼び出す[CMFCToolBar::SetMenuSizes](#setmenusizes)このグローバル変数を設定します。  
   
 ##  <a name="getorigbuttons"></a>  CMFCToolBar::GetOrigButtons  
@@ -1796,7 +1796,7 @@ const CObList& GetOrigButtons() const;
 ### <a name="return-value"></a>戻り値  
  ツールバーのボタンをカスタマイズされていないの一覧への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザーによってカスタマイズされる前に、ツール バー ボタンのコピーを作成します。 [CMFCToolBar::SetButtons](#setbuttons)メソッドは、指定された配列内の各ボタンのコピーを元のボタンの一覧に追加します。 [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)メソッドは、リソース ファイルから読み込むことにより、ツールバーの元の状態を復元します。  
   
  呼び出し元のボタン、ツールバーのリストを設定するには[CMFCToolBar::SetOrigButtons](#setorigbuttons)メソッドです。  
@@ -1811,7 +1811,7 @@ const CObList& GetOrigResetButtons() const;
 ### <a name="return-value"></a>戻り値  
  カスタマイズされていないの一覧への参照は、ツールバーのボタンをリセットします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーがクリックしたとき、**リセット**カスタマイズ モードでは、フレームワークの中にボタンがこのメソッドを使用して、ツールバーから削除されたボタンを復元します。  
   
  [CMFCToolBar::SetButtons](#setbuttons)メソッドが呼び出された後元のリセット ボタンの一覧に各ツール バー ボタンのコピーを追加、 [CMFCToolBar::OnReset](#onreset)メソッドです。 オーバーライドすることができます、 [CMFCToolBar::OnReset](#onreset)後ユーザーがボタンの外観をカスタマイズする方法、**リセット**ボタンをクリックします。  
@@ -1826,7 +1826,7 @@ UINT GetResourceID() const;
 ### <a name="return-value"></a>戻り値  
  ツールバーのリソース ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す、 [CMFCToolBar::LoadToolBarEx](#loadtoolbarex)ツールバーのリソース ID を設定します。  
   
 ##  <a name="getroutecommandsviaframe"></a>  CMFCToolBar::GetRouteCommandsViaFrame  
@@ -1839,7 +1839,7 @@ BOOL GetRouteCommandsViaFrame();
 ### <a name="return-value"></a>戻り値  
  親フレームがツールバーにコマンドを送信する場合は 0 以外。所有者は、ツールバーにコマンドを送信する場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、親フレームは、ツールバーにコマンドを送信します。 呼び出す[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)この動作を変更します。  
   
  使用して親フレーム オブジェクトへのポインターを取得するにはこのメソッドに 0 以外の値が返される場合、`CMFCToolBar::GetCommandTarget`メソッドです。 このメソッドを使用する例については、VisualStudioDemo サンプルを参照してください。  
@@ -1854,7 +1854,7 @@ virtual int GetRowHeight() const;
 ### <a name="return-value"></a>戻り値  
  ピクセル単位でのツール バー ボタンの高さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ツールバーのレイアウトを計算するには、このメソッドを呼び出します。 ツールバーに別の高さを指定する派生クラスでは、このメソッドをオーバーライドします。  
   
 ##  <a name="getshowtooltips"></a>  CMFCToolBar::GetShowTooltips  
@@ -1867,7 +1867,7 @@ static BOOL GetShowTooltips();
 ### <a name="return-value"></a>戻り値  
  `TRUE` ツール バー ボタン以外のツール ヒントが表示される場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、ツール ヒントが表示されます。 この静的フラグを変更するには呼び出すことによって[CMFCToolBar::SetShowTooltips](#setshowtooltips)です。  
   
 ##  <a name="getsiblingtoolbar"></a>  CMFCToolBar::GetSiblingToolBar  
@@ -1880,7 +1880,7 @@ CMFCToolBar* GetSiblingToolBar();
 ### <a name="return-value"></a>戻り値  
  兄弟ツールバーへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  有効にする方法について、**を 1 行に表示するボタン**と**2 つの行に表示するボタン**ボタンを参照してください[cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)です。  
   
 ##  <a name="getuserimages"></a>  CMFCToolBar::GetUserImages  
@@ -1893,7 +1893,7 @@ static CMFCToolBarImages* GetUserImages();
 ### <a name="return-value"></a>戻り値  
  すべてのツールバーで、アプリケーションのユーザー定義のツール バー ボタンのイメージのコレクションへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す、 [CMFCToolBar::SetUserImages](#setuserimages)アプリケーションでイメージのユーザー定義のコレクションを設定します。  
   
 ##  <a name="hittest"></a>  CMFCToolBar::HitTest  
@@ -1904,7 +1904,7 @@ virtual int HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `point`  
+ [in]*ポイント*  
  クライアント座標で、テストする点です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1925,17 +1925,17 @@ virtual int InsertButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `button`  
+ [in]*ボタン*  
  挿入するボタンを指定します。  
   
- [入力] `iInsertAt`  
+ [in]*iInsertAt*  
  あるボタンを挿入する 0 から始まる位置を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンが挿入されたまたはと発生した場合は-1、エラーが発生する位置。  
   
-### <a name="remarks"></a>コメント  
- 場合`iInsertAt`-1 で、このメソッドは、ツール バー ボタンの一覧の最後に、ボタンを追加します。  
+### <a name="remarks"></a>Remarks  
+ 場合*iInsertAt* -1 で、このメソッドは、ツール バー ボタンの一覧の最後に、ボタンを追加します。  
   
  呼び出す、 [CMFCToolBar::InsertSeparator](#insertseparator)ツールバーに、区切り記号を挿入するメソッド。  
   
@@ -1947,14 +1947,14 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iInsertAt`  
+ [in]*iInsertAt*  
  区切り線を挿入する 0 から始まる位置を指定します。 このパラメーターは、0 より大きくする必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  位置、区切り記号が挿入された場合は-1、エラーが発生します。  
   
-### <a name="remarks"></a>コメント  
- 既存の 2 つのボタン間の区切り記号を挿入するには、このメソッドを呼び出します。 場合`iInsertAt`-1 で、このメソッドは、ツール バー ボタンのリストの末尾に区切り記号を追加します。  
+### <a name="remarks"></a>Remarks  
+ 既存の 2 つのボタン間の区切り記号を挿入するには、このメソッドを呼び出します。 場合*iInsertAt* -1 で、このメソッドは、ツール バー ボタンのリストの末尾に区切り記号を追加します。  
   
  このメソッドを使用して、空のツールバーに、区切り記号を追加することはできません。  
   
@@ -1968,13 +1968,13 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツールバーのボタンの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CMFCToolBarButton`指定されたインデックスに存在するオブジェクトまたは`NULL`このようなオブジェクトが存在しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ツール バー ボタンに関連付けられているクライアント領域を更新するときに、このメソッドを呼び出します。 呼び出す、[エディット](../../mfc/reference/cwnd-class.md#invalidaterect)メソッドのクライアントの四角形を`CMFCToolBarButton`指定されたインデックスに存在するオブジェクト。  
   
 ##  <a name="isaddremovequickcustomize"></a>  CMFCToolBar::IsAddRemoveQuickCustomize  
@@ -1987,7 +1987,7 @@ BOOL IsAddRemoveQuickCustomize();
 ### <a name="return-value"></a>戻り値  
  `TRUE` ユーザーが使用できる場合は、**カスタマイズ**; ツールバーを変更するメニュー オプションそれ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isaltcustomizemode"></a>  CMFCToolBar::IsAltCustomizeMode  
  指定するかどうか*クイック カスタマイズ*はボタンにドラッグされています。 クイック カスタマイズを有効にすると、ユーザーでキーを押すと、Alt キーを押しながらし、新しい場所にボタンをドラッグできます。、  
@@ -1999,7 +1999,7 @@ static BOOL __stdcall IsAltCustomizeMode();
 ### <a name="return-value"></a>戻り値  
  `TRUE` ボタンのドラッグをすばやくカスタマイズが使用されている場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isautograyinactiveimages"></a>  CMFCToolBar::IsAutoGrayInactiveImages  
  非アクティブな (非強調表示) ボタンのイメージの自動生成が有効になっているかどうかを指定します。  
@@ -2011,7 +2011,7 @@ static BOOL IsAutoGrayInactiveImages();
 ### <a name="return-value"></a>戻り値  
  `TRUE` 自動的にアクティブでないイメージを暗くオプションが有効である場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  有効にするにまたは呼び出すことによって自動の非アクティブなイメージの暗転を無効にする[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)です。  
   
 ##  <a name="isbasiccommand"></a>  CMFCToolBar::IsBasicCommand  
@@ -2022,14 +2022,14 @@ static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  確認するコマンドを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 基本的なコマンドの一覧に指定されたコマンドが属している場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
- この静的メソッドは、コマンドがで指定されたかどうかを判断`uiCmd`基本的なコマンドのグローバル リストに属しています。 基本的なコマンドの一覧を変更するには呼び出すことによって[CMFCToolBar::AddBasicCommand](#addbasiccommand)または[CMFCToolBar::SetBasicCommands](#setbasiccommands)です。  
+### <a name="remarks"></a>Remarks  
+ この静的メソッドは、コマンドがで指定されたかどうかを判断*uiCmd*基本的なコマンドのグローバル リストに属しています。 基本的なコマンドの一覧を変更するには呼び出すことによって[CMFCToolBar::AddBasicCommand](#addbasiccommand)または[CMFCToolBar::SetBasicCommands](#setbasiccommands)です。  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable  
  罫線を拡張したボタンをツールバーが表示できるかどうかを判断します。  
@@ -2041,7 +2041,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` バーは、余分な境界線のサイズです。 ボタンを表示できる場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツール バー オブジェクトを返します`TRUE`罫線を拡張したボタンを表示できる場合です。 ツール バー ボタンが処理する場合、このメソッドを呼び出して、 [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)通知し、それに応じて、内部の余分な境界線のサイズのフラグを設定します。 この内部フラグは、呼び出すことによって後で取得することがあります[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)です。  
   
  このメソッドから派生したクラスでオーバーライド`CMFCToolBar`返す`TRUE`、バーが余分な境界線のサイズと、ツール バー ボタンの表示を返す場合`FALSE`それ以外の場合。 既定の実装では、`TRUE` が返されます。  
@@ -2054,13 +2054,13 @@ BOOL IsButtonHighlighted(int iButton) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iButton`  
+ [in]*名前*  
  ツール バー ボタンのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 場合は、指定したボタンが強調表示されます。それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="iscommandpermitted"></a>  CMFCToolBar::IsCommandPermitted  
  コマンドが許可されるかどうかを決定します。  
@@ -2070,14 +2070,14 @@ static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  確認するコマンドを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 指定されたコマンドが許可されている場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
- この静的メソッドは、コマンドがで指定されたかどうかを判断`uiCmd`非許可コマンドのグローバル リストに属しています。  
+### <a name="remarks"></a>Remarks  
+ この静的メソッドは、コマンドがで指定されたかどうかを判断*uiCmd*非許可コマンドのグローバル リストに属しています。  
   
  非許可コマンドの一覧を変更するには呼び出すことによって[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)です。  
   
@@ -2089,13 +2089,13 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  確認するコマンドを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 指定されたコマンドは、ほとんど使用されていない場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `IsCommandRarelyUsed`メソッドを返します。 `FALSE` 1 つ以上の次の条件が発生します。  
   
 -   基本的なコマンドの一覧に属している、指定されたコマンド  
@@ -2118,7 +2118,7 @@ static BOOL IsCustomizeMode();
 ### <a name="return-value"></a>戻り値  
  `TRUE` フレームワークがカスタマイズ モードである場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出して、カスタマイズ モードを切り替えることができます[CMFCToolBar::SetCustomizeMode](#setcustomizemode)です。  
   
  ユーザーは、[カスタマイズ] ダイアログ ボックスを呼び出したときにフレームワークが、モードを変更 ( [CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md))。  
@@ -2131,13 +2131,13 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  ツール バー ボタンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 指定したボタンがドラッグされている場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isexistcustomizebutton"></a>  CMFCToolBar::IsExistCustomizeButton  
  ツールバーが含まれるかどうかを判断、**カスタマイズ**ボタンをクリックします。  
@@ -2149,7 +2149,7 @@ BOOL IsExistCustomizeButton();
 ### <a name="return-value"></a>戻り値  
  `TRUE` ツールバーが含まれている場合、**カスタマイズ**ボタンをクリックします。 それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが戻る場合`TRUE`、 [CMFCToolBar::GetCustomizeButton](#getcustomizebutton)メソッドへのポインターを返します、**カスタマイズ**ツールバーの最後に表示されるボタンをクリックします。  
   
  使用して、 [cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)を追加するメソッド、**カスタマイズ**ツールバーにボタンをクリックします。  
@@ -2174,7 +2174,7 @@ static BOOL IsLargeIcons();
 ### <a name="return-value"></a>戻り値  
  `TRUE` アプリケーションで大きいアイコンが使用されている場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[CMFCToolBar::SetLargeIcons](#setlargeicons)大きいアイコンと通常のアイコンを切り替えます。  
   
  フレームワークが自動的にユーザーを切り替えたときに、モードが変更、**大きいアイコン**チェック ボックスをオン、**オプション**のページ、**カスタマイズ** ダイアログ ボックス。  
@@ -2187,13 +2187,13 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  ボタンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 最後のコマンドは、ボタンから送信された場合を`pButton`を指定します。 それ以外の場合`FALSE`です。  
+ `TRUE` 最後のコマンドは、ボタンから送信された場合を*pButton*を指定します。 それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドへのポインターの取得、 [MSG 構造体](../../mfc/reference/msg-structure1.md)を呼び出して`CWnd::GetCurrentMessage`です。 比較して、`HWND`のボタンの`MSG::lParam`と`MSG::hwnd`メンバーが、ボタンがコマンドのソースであるかどうかを確認します。  
   
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked  
@@ -2206,7 +2206,7 @@ BOOL IsLocked() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` 場合は、ツールバーはロックされています。それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが戻る`TRUE`ユーザーがツール バー ボタンの位置を変更するなどのカスタマイズ タスクを実行できません。  
   
  ロックされたツールバーは、別のイメージ リストを使用します。 これらのイメージ リストの詳細については、次を参照してください。 [CMFCToolBar::LoadBitmapEx](#loadbitmapex)です。  
@@ -2221,7 +2221,7 @@ BOOL IsOneRowWithSibling();
 ### <a name="return-value"></a>戻り値  
  `TRUE` ツールバーと兄弟が同じ行に配置されている場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [Cmfccustomizebutton::createpopupmenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)メソッドを表示する方法を決定するには、このメソッドを呼び出す、**カスタマイズ**ポップアップ メニュー。 このメソッドが戻る場合`TRUE`、フレームワークによって表示、**を 1 行に表示するボタン**ボタンをクリックします。 それ以外の場合、フレームワークは、表示、 **2 つの行に表示するボタン**ボタンをクリックします。  
   
  通常、このメソッドを使用する必要はありません。 有効にする、**を 1 行に表示するボタン**または**2 つの行に表示するボタン**ボタン、呼び出す[cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)です。  
@@ -2235,7 +2235,7 @@ virtual BOOL IsResourceChanged() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="issibling"></a>  CMFCToolBar::IsSibling  
 
@@ -2246,7 +2246,7 @@ BOOL IsSibling();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isuserdefined"></a>  CMFCToolBar::IsUserDefined  
  ツールバーでは、ユーザー定義があるかどうかを指定します。  
@@ -2272,28 +2272,28 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResID`  
+ [in]*uiResID*  
  ツール バーのホット イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiColdResID`  
+ [in]*uiColdResID*  
  ツール バーのコールド イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuResID`  
+ [in]*uiMenuResID*  
  ツール バーの通常のメニュー イメージを参照するビットマップのリソース ID。  
   
- [入力] `bLocked`  
+ [in]*ブロック*  
  `TRUE` ツールバーをロックするにはそれ以外の場合`FALSE`です。  
   
- [入力] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  ツール バーの無効イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuDisabledResID`  
+ [in]*uiMenuDisabledResID*  
  メニューの無効イメージを参照するビットマップのリソース ID です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CMFCToolBar::LoadToolBarEx](#loadtoolbarex)メソッドは、ツールバーに関連付けられているイメージを読み込むには、このメソッドを呼び出します。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。  
   
  ツール バーの作成後に、 `LoadBitmapEx` メソッドを呼び出して追加のイメージを読み込みます。  
@@ -2308,12 +2308,12 @@ virtual BOOL LoadBitmapEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `params`  
- [入力] `bLocked`  
+ [in]*params*  
+ [in]*ブロック*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState  
 
@@ -2323,11 +2323,11 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="loadparameters"></a>  CMFCToolBar::LoadParameters  
  Windows レジストリからグローバル ツールバーのオプションを読み込みます。  
@@ -2337,13 +2337,13 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows レジストリ キーの相対パスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、メニューのアニメーションの種類、メニュー シャドウ スタイル、および Windows レジストリから大きいアイコンを表示するかどうかなどのグローバル パラメーターを読み込みます。  
   
  [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)メソッドは、アプリケーションの初期化処理の一部としてこのメソッドを呼び出します。  
@@ -2359,19 +2359,19 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows レジストリ キーの相対パスを指定します。  
   
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツールバーのコントロール ID を指定します。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  ツールバーのリソース ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、アプリケーションの初期化処理の一部としてこのメソッドを呼び出します。 詳細については、次を参照してください。 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)です。  
   
 ##  <a name="loadtoolbar"></a>  CMFCToolBar::LoadToolBar  
@@ -2389,31 +2389,31 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResID`  
+ [in]*uiResID*  
  ツールバーのリソース ID です。  
   
- [入力] `uiColdResID`  
+ [in]*uiColdResID*  
  ツール バーのコールド イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuResID`  
+ [in]*uiMenuResID*  
  ツール バーの通常のメニュー イメージを参照するビットマップのリソース ID。  
   
- [入力] `bLocked`  
- ツールバーをロックするかどうかを指定するブール値。 このパラメーターは場合`TRUE`ツールバーをロックします。 それ以外の場合、ツールバーはロックされていません。  
+ [in]*ブロック*  
+ ツールバーをロックするかどうかを指定するブール値。 このパラメーターがある場合*TRUE*ツールバーをロックします。 それ以外の場合、ツールバーはロックされていません。  
   
- [入力] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  ツール バーの無効イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuDisabledResID`  
+ [in]*uiMenuDisabledResID*  
  メニューの無効イメージを参照するビットマップのリソース ID です。  
   
- [入力] `uiHotResID`  
+ [in]*uiHotResID*  
  ツール バーのホット イメージを参照するビットマップのリソース ID。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ツールバーに関連付けられているイメージを読み込むための初期化中にこのメソッドを呼び出します。  
   
 ### <a name="example"></a>例  
@@ -2433,19 +2433,19 @@ virtual BOOL LoadToolBarEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiToolbarResID`  
+ [in]*uiToolbarResID*  
  ツールバーのリソース ID です。  
   
- [入力] `params`  
+ [in]*params*  
  参照、`CMFCToolBarInfo`ツール バー イメージのリソース Id を格納しているオブジェクト。  
   
- [入力] `bLocked`  
+ [in]*ブロック*  
  ツールバーをロックするかどうかを指定するブール値。 このパラメーターは場合`TRUE`ツールバーをロックします。 それ以外の場合、ツールバーはロックされていません。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アプリケーション リソースからツール バー イメージを読み込むには、このメソッドを呼び出します。  
   
 ##  <a name="m_dbllargeimageratio"></a>  CMFCToolBar::m_dblLargeImageRatio  
@@ -2455,7 +2455,7 @@ virtual BOOL LoadToolBarEx(
 AFX_IMPORT_DATA static double m_dblLargeImageRatio;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の比率は、2 です。 大規模なツール バー イメージのサイズを変更するには、この値を変更することができます。  
   
  大きいイメージのセットを指定しない場合に、フレームワークはこのデータ メンバーを使用します。 たとえば、16 x 16 のサイズの小さいイメージのセットのみを提供して大きいイメージのサイズを 24 x 24 は、このデータ メンバーを 1.5 に設定します。  
@@ -2469,7 +2469,7 @@ virtual BOOL NextMenu();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton  
 
@@ -2481,15 +2481,15 @@ virtual BOOL OnBeforeRemoveButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  使用されません。  
   
- [入力] `dropEffect`  
+ [in]*dropEffect*  
  使用されません。  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onchangehot"></a>  CMFCToolBar::OnChangeHot  
  ユーザーがツールバーのボタンを選択したときに、フレームワークによって呼び出されます。  
@@ -2499,10 +2499,10 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iHot`  
+ [in]*iHot*  
  選択されているツール バー ボタンのインデックスを指定しますまたは、ツールバーのボタンが選択されていない場合は-1。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーに、ツールバーのボタンが選択されている通知を処理するには、このメソッドをオーバーライドします。  
   
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager  
@@ -2512,7 +2512,7 @@ virtual void OnChangeHot(int iHot);
 virtual void OnChangeVisualManager();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillbackground"></a>  CMFCToolBar::OnFillBackground  
  フレームワークによって呼び出されます[CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint)ツールバー背景の塗りつぶしにします。  
@@ -2522,10 +2522,10 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CMFCToolBar::DoPaint](#dopaint)ツールバーの背景が満杯になったときに、このメソッドを呼び出します。 既定の実装では、何も行われません。  
   
  派生クラスでカスタムの背景を描画するには、このメソッドをオーバーライドします。  
@@ -2537,7 +2537,7 @@ virtual void OnFillBackground(CDC* pDC);
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onreset"></a>  CMFCToolBar::OnReset  
  ツールバーを元の状態に復元します。  
@@ -2546,7 +2546,7 @@ virtual void OnGlobalFontsChanged();
 virtual void OnReset();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールバーのリセットに関する通知を処理するには、このメソッドをオーバーライドします。  
   
  既定の実装では、何も行われません。 オーバーライド`OnReset`から派生したクラスで`CMFCToolBar`ツールバーが元の状態に戻ると、ツールバーに置き換える必要があるダミーのボタンを持つ場合にします。  
@@ -2559,11 +2559,11 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lVal`  
+ [in]*lVal*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsetdefaultbuttontext"></a>  CMFCToolBar::OnSetDefaultButtonText  
  ツール バー ボタンのテキストを既定の状態に復元します。  
@@ -2573,13 +2573,13 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  テキストが設定されているボタンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` そのテキストが正常に復元されました。それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツール バー ボタンのテキストの変更の既定の通知を処理するには、このメソッドをオーバーライドします。  
   
  既定の実装では、アプリケーション リソースから、ボタンのテキストを読み込みます。  
@@ -2594,17 +2594,17 @@ virtual BOOL OnUserToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  ツールヒントが表示されるツール バー ボタンをポイントします。  
   
- [出力] `strTTText`  
+ [out]*strTTText*  
  参照を`CString`ツールヒントのテキストを受け取るオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合`strTTText`それ以外のツールヒントのテキストに設定された`FALSE`です。  
+ `TRUE` 場合*strTTText*それ以外のツールヒントのテキストに設定された`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
- ツール バー ボタンのツールヒントが表示されるときに、フレームワークはこのメソッドを呼び出します。 場合`OnUserToolTip`返します`TRUE`、フレームワークによって返されるテキストを含むツールヒントが表示`OnUserToolTip`で`strTTText`です。 それ以外の場合、ツールヒントには、ボタンのテキストが含まれています。  
+### <a name="remarks"></a>Remarks  
+ ツール バー ボタンのツールヒントが表示されるときに、フレームワークはこのメソッドを呼び出します。 場合`OnUserToolTip`返します`TRUE`、フレームワークによって返されるテキストを含むツールヒントが表示`OnUserToolTip`で*strTTText*です。 それ以外の場合、ツールヒントには、ボタンのテキストが含まれています。  
   
  オーバーライド`OnUserToolTip`をツール バー ボタンのツール ヒントをカスタマイズします。 既定の実装[CMFCToolBar::OnUserToolTip](#onusertooltip)ツールヒント テキストを取得します。  
   
@@ -2617,26 +2617,26 @@ virtual BOOL PrevMenu();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand  
- 投稿、`WM_COMMAND`ツールバーを所有するウィンドウへのメッセージ。  
+ ツールバーを所有するウィンドウに WM_COMMAND メッセージをポストします。  
   
 ```  
 BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  ツールバーのボタンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドは常に返します`TRUE`です。 MFC を使用して`FALSE`内部値します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドはポスト、`WM_COMMAND`を呼び出すことで、ツールバーを所有するウィンドウにメッセージを[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)として指定したボタンのコマンド ID を渡すと、`wParam`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、呼び出すことで、ツールバーを所有しているウィンドウに WM_COMMAND メッセージをポスト[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)として指定したボタンのコマンド ID を渡すと、`wParam`パラメーター。  
   
- 使用して、 [ON_COMMAND](message-map-macros-mfc.md#on_command)にマップするマクロ、`WM_COMMAND`メンバー関数へのメッセージ。  
+ 使用して、 [ON_COMMAND](message-map-macros-mfc.md#on_command) WM_COMMAND メッセージをメンバー関数にマップするマクロです。  
   
 ##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons  
  ツールバーからすべてのボタンおよび区切り記号を削除します。  
@@ -2645,7 +2645,7 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
 virtual void RemoveAllButtons();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、再作成、または、ツールバーの破棄されたときに、このメソッドを呼び出します。  
   
 ##  <a name="removebutton"></a>  CMFCToolBar::RemoveButton  
@@ -2656,13 +2656,13 @@ virtual BOOL RemoveButton(int iIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  削除するには、ボタンの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` メソッドが成功した場合または`FALSE`指定したインデックスが無効であるか、インデックスを指すかどうか、**カスタマイズ**ボタンをクリックします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ボタンの削除によって影響を受ける追加のツールバーの属性を更新します。 たとえば、このメソッドは、ツールバーから不要な区切り記号を削除し、ショートカット キーのテーブルを再構築します。  
   
  詳細については、**カスタマイズ**ボタンをクリックしを参照してください[cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)です。  
@@ -2678,19 +2678,19 @@ virtual BOOL RemoveStateFromRegistry(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  状態情報が配置されているレジストリ キーを指定します。  
   
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツールバーのコントロール ID。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  ツールバーのリソース ID です。 このパラメーターが-1 の場合は、このメソッドを使用して、 [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid)リソース ID を取得する方法  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザー定義のツールバーを削除するときに、このメソッドを呼び出します。  
   
  Windows レジストリに追加の状態情報を格納する場合は、このメソッドをオーバーライドします。  
@@ -2706,19 +2706,19 @@ int ReplaceButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  置換するボタンのコマンド ID。  
   
- [入力] `button`  
+ [in]*ボタン*  
  参照、`CMFCToolBarButton`を挿入します。  
   
- [入力] `bAll`  
- 指定されたコマンド ID を持つすべてのボタンを置換するかどうかを指定するブール値`uiCmd`です。 このパラメーターが場合`TRUE`、指定されたコマンド ID を持つすべてのボタンが置き換えられます。 それ以外の場合、最初のボタンが置き換えられます。  
+ [in]*ボール*  
+ 指定されたコマンド ID を持つすべてのボタンを置換するかどうかを指定するブール値*uiCmd*です。 このパラメーターが場合`TRUE`、指定されたコマンド ID を持つすべてのボタンが置き換えられます。 それ以外の場合、最初のボタンが置き換えられます。  
   
 ### <a name="return-value"></a>戻り値  
  置き換えられるボタンの数。 このメソッドは、指定されたコマンド ID を持つボタンがツールバーに存在しない場合に 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リソースから読み込むことができないツール バー ボタンを追加するときに、このメソッドを呼び出します。 デザイン時にプレース ホルダーのボタンを作成し、ツールバーを初期化するときに、そのボタンをカスタム ボタンを置き換えることがことができます。 このメソッドを使用する例については、VisualStudioDemo サンプルを参照してください。  
   
 ### <a name="example"></a>例  
@@ -2734,7 +2734,7 @@ int ReplaceButton(
 static void __stdcall ResetAll();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、 [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)復元できるは、アプリケーション内の各ツールバー上のメソッドです。 使用して、 [CMFCToolBar::CanBeRestored](#canberestored)ツールバーを復元できるかどうかを調べます。  
   
 ##  <a name="resetallimages"></a>  CMFCToolBar::ResetAllImages  
@@ -2744,7 +2744,7 @@ static void __stdcall ResetAll();
 static void __stdcall ResetAllImages();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドで初期化されるイメージのコレクションをクリアする、 [CMFCToolBar::LoadToolBar](#loadtoolbar)と[CMFCToolBar::LoadBitmap](#loadbitmap)メソッドです。  
   
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages  
@@ -2754,7 +2754,7 @@ static void __stdcall ResetAllImages();
 virtual void ResetImages();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus  
 
@@ -2763,7 +2763,7 @@ virtual void ResetImages();
 virtual void RestoreFocus();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="restoreoriginalstate"></a>  CMFCToolBar::RestoreOriginalState  
  ツール バーを元の状態に戻します。  
@@ -2775,7 +2775,7 @@ virtual BOOL RestoreOriginalState();
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は `TRUE` を返します。メソッドが失敗した場合、またはツール バーがユーザー定義の場合は `FALSE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを使用して、リソース ファイルから、ツールバーを読み込みます、 [CMFCToolBar::LoadToolBar](#loadtoolbar)メソッドです。  
   
  選択すると、フレームワークはこのメソッドを呼び出して、**すべて元に戻す**ボタンをクリックして、**ツールバー**のカスタマイズ ダイアログ ボックスのページです。  
@@ -2788,11 +2788,11 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="savestate"></a>  CMFCToolBar::SaveState  
  Windows レジストリで、ツールバーの状態情報を保存します。  
@@ -2805,19 +2805,19 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows レジストリ キーの相対パスを指定します。  
   
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツールバーのコントロール ID。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  ツールバーのリソース ID です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、アプリケーションの状態をレジストリに保存するときに、このメソッドを呼び出します。 詳細については、次を参照してください。 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)です。  
   
 ##  <a name="setbasiccommands"></a>  CMFCToolBar::SetBasicCommands  
@@ -2828,10 +2828,10 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lstCommands`  
+ [in]*lstCommands*  
  参照、`CList`コマンドのコレクションを格納するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  基本的なコマンドは、メニューが開かれたときに常に表示されます。 このメソッドは、ユーザーが最近使用したコマンドを表示するときに有効です。  
   
  使用して、 [CMFCToolBar::AddBasicCommand](#addbasiccommand)基本的なコマンドの一覧にコマンドを追加します。 使用して、 [CMFCToolBar::GetBasicCommands](#getbasiccommands)アプリケーションによって使用される基本的なコマンドの一覧を取得します。  
@@ -2850,22 +2850,22 @@ void SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  プロパティ設定されているボタンの 0 から始まるインデックス。  
   
- [入力] `nID`  
+ [in]*nID*  
  ボタンのコマンド ID。  
   
- [入力] `nStyle`  
+ [in]*nStyle*  
  ボタンのスタイルです。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)利用できるツール バー ボタンのスタイルの一覧についてはします。  
   
- [入力] `iImage`  
+ [in]*画像*  
  ボタン (ツール バー イメージのコレクション内のインデックスは、) のイメージの 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツール バー ボタンのプロパティを設定するには、このメソッドを呼び出します。  
   
- 場合に、デバッグ ビルドでこのメソッドが、アサーションの失敗を生成で指定されているインデックス`nIndex`が無効です。  
+ 場合に、デバッグ ビルドでこのメソッドが、アサーションの失敗を生成で指定されているインデックス*nIndex*が無効です。  
   
  呼び出す、 [CMFCToolBar::SetButtonStyle](#setbuttonstyle)ボタンのスタイルのみを設定します。  
   
@@ -2880,22 +2880,22 @@ virtual BOOL SetButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpIDArray`  
+ [in]*lpIDArray*  
  挿入するボタンのコマンド Id の配列へのポインター。  
   
- [入力] `nIDCount`  
- 内の項目数`lpIDArray`です。  
+ [in]*nIDCount*  
+ 内の項目数*lpIDArray*です。  
   
- [入力] `bRemapImages`  
+ [in]*bRemapImages*  
  挿入ボタンを持つ既存のボタンのイメージを関連付けるかどうかを指定するブール値。 このパラメーターが場合`TRUE`イメージが再マップします。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを呼び出して、ツールバーから既存のボタンを削除し、新しいボタンのコレクションを挿入します。  
   
- このメソッドを追加、**カスタマイズ**ツールバーおよび送信するボタン、`AFX_WM_RESETTOOLBAR`ツールバーの親ウィンドウへのメッセージ。 詳細については、**カスタマイズ**ボタンをクリックしを参照してください[cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)です。  
+ このメソッドは、追加、**カスタマイズ**ツールバーとツールバーの親ウィンドウに表示する、AFX_WM_RESETTOOLBAR メッセージを送信するボタンをクリックします。 詳細については、**カスタマイズ**ボタンをクリックしを参照してください[cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)です。  
   
 ##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle  
  指定したインデックス位置には、ツールバーのボタンのスタイルを設定します。  
@@ -2907,13 +2907,13 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  スタイルを設定する、ツール バー ボタンの 0 から始まるインデックス。  
   
- [入力] `nStyle`  
+ [in]*nStyle*  
  ボタンのスタイルです。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)利用できるツール バー ボタンのスタイルの一覧についてはします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、削除、`TBBS_PRESSED`場合`nStyle`は`TBBS_DISABLED`のため、ユーザーが無効にされたボタンをクリックすることはできません。  
   
 ##  <a name="setbuttontext"></a>  CMFCToolBar::SetButtonText  
@@ -2926,16 +2926,16 @@ BOOL SetButtonText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  ツール バー ボタンのインデックス。  
   
- [入力] `lpszText`  
+ [in]*lpszText*  
  ツール バー ボタンのテキスト ラベル。 以外である必要があります`NULL`です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが戻る`FALSE`場合は、指定されたインデックスは有効なツール バー ボタンを参照していません。  
   
 ##  <a name="setcommandusageoptions"></a>  CMFCToolBar::SetCommandUsageOptions  
@@ -2948,16 +2948,16 @@ static BOOL SetCommandUsageOptions(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nStartCount`  
+ [in]*nStartCount*  
  フレームワークは、基本および最近使用したコマンドのみを表示する前に、コマンドの回数を実行する必要があります指定します。  
   
- [入力] `nMinUsagePercentage`  
+ [in]*nMinUsagePercentage*  
  最近使用したコマンドと見なされるにコマンドが実行される時間の割合。  
   
 ### <a name="return-value"></a>戻り値  
- `FALSE` 場合`nMinUsagePercentage`に等しいまたは 100 より大きい場合。 それ以外の場合は、`TRUE`です。  
+ `FALSE` 場合*nMinUsagePercentage*に等しいまたは 100 より大きい場合。 それ以外の場合は、`TRUE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  基本的な方法と、最近使用したメニュー項目を決定するフレームワークが使用されるアルゴリズムをカスタマイズするには、このメソッドを呼び出します。 基本的なコマンドの詳細については、次を参照してください。 [CMFCToolBar::AddBasicCommand](#addbasiccommand)です。  
   
  このクラスを使用して、`CMFCCmdUsageCount`コマンドの使用率カウントを追跡するクラス。 このクラスの詳細については、次を参照してください。 [CMFCCmdUsageCount クラス](../../mfc/reference/cmfccmdusagecount-class.md)です。  
@@ -2970,13 +2970,13 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bSet`  
+ [in]*bSet*  
  有効にするにまたは、カスタマイズ モードを無効にするかどうかを指定するブール値。 このパラメーターに設定`TRUE`カスタマイズ モードを有効にまたは`FALSE`を無効にします。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドを呼び出すと、カスタマイズ モードを変更します。それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、レイアウトを調整し、アプリケーションで各ツールバーを再描画します。 呼び出す、 [CMFCToolBar::IsCustomizeMode](#iscustomizemode)アプリケーションが、カスタマイズ モードにするかどうかを決定する方法  
   
 ##  <a name="setgraydisabledbuttons"></a>  CMFCToolBar::SetGrayDisabledButtons  
@@ -2987,10 +2987,10 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bGrayDisabledButtons`  
+ [in]*bGrayDisabledButtons*  
  使用できないボタンを表示する方法を指定するブール値。 このパラメーターが場合`TRUE`フレームワークには、ボタンが使用できなくなります。 それ以外の場合、フレームワークは、ボタン-利用不可のイメージのコレクションを使用します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、使用できないボタンは淡色表示になります。  
   
 ##  <a name="setheight"></a>  CMFCToolBar::SetHeight  
@@ -3001,10 +3001,10 @@ void SetHeight(int cyHeight);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `cyHeight`  
+ [in]*cyHeight*  
  ピクセル単位で、ツールバーの高さ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、高さを設定した後に、ツールバーを再描画します。  
   
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode  
@@ -3015,9 +3015,9 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bOn`  
+ [in]*お*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="sethot"></a>  CMFCToolBar::SetHot  
 
@@ -3027,11 +3027,11 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMenuButton`  
+ [in]*pMenuButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="sethotborder"></a>  CMFCToolBar::SetHotBorder  
  ツール バー ボタンのホット トラッキングがかどうかを指定します。  
@@ -3041,10 +3041,10 @@ void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bShowHotBorder`  
+ [in]*bShowHotBorder*  
  ホット トラッキング ツール バー ボタンかどうかを指定するブール値。 このパラメーターが場合`TRUE`、ツールバー ホット トラッキングのボタンです。 それ以外の場合、ツールバーはホット トラッキングのボタンです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタンがホットに追跡される場合は、マウスがコントロールに通過させたときに、フレームワーク、ボタン強調表示します。 既定では、各ツールバー ホット トラッキングのボタンです。  
   
  呼び出す、 [CMFCToolBar::GetHotBorder](#gethotborder)メソッドを呼び出せば確認するかどうか、ツールバー ホット トラッキングのボタンです。  
@@ -3057,10 +3057,10 @@ static void SetHotTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `clrText`  
+ [in]*clrText*  
  ホット トラッキングがツール バー ボタンのテキストの色を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ホット トラッキング ツール バー ボタンの詳細については、次を参照してください。 [CMFCToolBar::GetHotBorder](#gethotborder)と[CMFCToolBar::SetHotBorder](#sethotborder)です。  
   
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText  
@@ -3071,9 +3071,9 @@ void SetIgnoreSetText(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bValue`  
+ [in]*bValue*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setlargeicons"></a>  CMFCToolBar::SetLargeIcons  
  ツール バー ボタンが 大きいアイコンを表示するかどうかを指定します。  
@@ -3083,10 +3083,10 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bLargeIcons`  
+ [in]*bLargeIcons*  
  使用するアイコンを指定するブール値。 このパラメーターが場合`TRUE`フレームワークには、大きいアイコンが表示されます。 それ以外の場合、フレームワークは、通常のアイコンを表示します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザーの状態が変更されたときにこのメソッドを呼び出します、**大きいアイコン** チェック ボックス、**オプション**のタブ、**カスタマイズ** ダイアログ ボックス。 このメソッドは、アプリケーションのすべてのツールバーをサイズ変更します。  
   
  既定では、フレームワークには、通常のアイコンが表示されます。  
@@ -3104,16 +3104,16 @@ void SetLockedSizes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `sizeButton`  
+ [in]*sizeButton*  
  ロックされたツールバーのボタンのサイズを指定します。  
   
- [入力] `sizeImage`  
+ [in]*sizeImage*  
  ロックされたツール バー イメージのサイズを指定します。  
   
- `bDontScale`  
+ *bDontScale*  
  スケールか高解像度モードでのツール バー イメージ ロックするかどうかを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ロックされたボタンの既定のサイズは、23 x 22 ピクセルです。 ロックされたイメージの既定のサイズは、16 x 15 ピクセルです。  
   
  呼び出す、 [CMFCToolBar::GetLockedImageSize](#getlockedimagesize)のサイズを取得する方法には、イメージがロックされています。 呼び出す、 [CMFCToolBar::GetButtonSize](#getbuttonsize)のサイズを取得する方法には、ツールバーのボタンがロックされています。  
@@ -3126,9 +3126,9 @@ void SetMaskMode(BOOL bMasked);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bMasked`  
+ [in]*bMasked*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setmenusizes"></a>  CMFCToolBar::SetMenuSizes  
  ツール バー メニュー ボタンとそのイメージのサイズを設定します。  
@@ -3140,13 +3140,13 @@ static void __stdcall SetMenuSizes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `sizeButton`  
+ [in]*sizeButton*  
  ツール バー ボタンのサイズをピクセル単位で指定します。  
   
- [入力] `sizeImage`  
+ [in]*sizeImage*  
  ツール バー イメージのサイズをピクセル単位で指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、メニュー ボタンとそのイメージ、未定義のサイズに設定します。  
   
  呼び出す、 [CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)メニュー ボタンのサイズを決定するメソッド、および[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)メニュー ボタン イメージのサイズを決定するメソッド。  
@@ -3161,10 +3161,10 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lstCommands`  
+ [in]*lstCommands*  
  参照、`CList`ユーザーによって実行されることはできません、コマンドを含むオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを呼び出して、ユーザーが特定のコマンドを選択できないようにします。 たとえば、ユーザーがセキュリティ上の理由から特定のコマンドを選択できないようにすることができます。 このメソッドを使用する例については、MDITabsDemo および MenuSubSet のサンプルを参照してください。  
   
  このメソッドは、非許可コマンドの前の一覧をクリアします。 既定では、非許可コマンドの一覧が空です。  
@@ -3176,7 +3176,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 void SetOneRowWithSibling();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーがクリックしたときに、フレームワークはこのメソッドを呼び出して、**を 1 行に表示するボタン**ボタンをクリックします。  
   
  呼び出す、 [cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)を有効にする方法、**を 1 行に表示するボタン**または**2 つの行に表示するボタン**ボタン。 呼び出す場合[cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)このツールバーの兄弟ツールバーは、このツールバーの行に移動します。 それ以外の場合、このツールバーは、兄弟の行に移動されます。  
@@ -3191,9 +3191,9 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lstOrigButtons`  
+ [in]*lstOrigButtons*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpermament"></a>  CMFCToolBar::SetPermament  
  ユーザーがツールバーを閉じるかどうかを指定します。  
@@ -3203,10 +3203,10 @@ void SetPermament(BOOL bPermament=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bPermament`  
+ [in]*bPermament*  
  ユーザーがツールバーを閉じるかどうかを指定するブール値。 このパラメーターが場合`TRUE`ユーザーがツールバーを閉じることはできません。 それ以外の場合、ユーザーは、ツールバーを閉じることができます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、ユーザーは、各ツールバーを閉じることができます。  
   
  呼び出す、 [CMFCToolBar::CanBeClosed](#canbeclosed)ユーザーがツールバーを閉じるかどうかを調べます。  
@@ -3219,10 +3219,10 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bValue`  
+ [in]*bValue*  
  このパラメーターが場合`TRUE`、親フレームがツールバーにコマンドを送信します。 それ以外の場合、所有者は、ツールバーにコマンドを送信します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、親フレームは、ツールバーにコマンドを送信します。 呼び出す、 [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)親フレームまたは所有者に、ツールバーにあるコマンドが送信するかどうかを調べます。  
   
 ##  <a name="setshowtooltips"></a>  CMFCToolBar::SetShowTooltips  
@@ -3233,10 +3233,10 @@ static void SetShowTooltips(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bValue`  
+ [in]*bValue*  
  このパラメーターは、する場合`TRUE`フレームワークは、ツール ヒントを示しています。 それ以外の場合、フレームワークには、ツール ヒントが非表示にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークは、ツール ヒントを表示します。  
   
  呼び出す、 [CMFCToolBar::GetShowTooltips](#getshowtooltips)フレームワークがツール ヒントを示しているかどうかを判断するメソッド。  
@@ -3249,10 +3249,10 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBrotherToolbar`  
+ [in]*pBrotherToolbar*  
  兄弟ツールバーへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドにより、**を 1 行に表示するボタン**または**2 つの行に表示するボタン**ボタンを表示するには、ユーザーが表示されます、**カスタマイズ**ポップアップ メニュー。 ユーザーまたは別の行を同じ行に関連するツールバーが表示されるかどうかを指定するために必要な場合は、このメソッドを呼び出します。  
   
  有効にした後、このメソッドを呼び出して、**カスタマイズ**ツールバーに表示されるボタン。 有効にする、**カスタマイズ** ボタンを呼び出して、 [cmfctoolbar::enablecustomizebutton](#enablecustomizebutton)メソッドです。  
@@ -3269,13 +3269,13 @@ static void __stdcall SetSizes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `sizeButton`  
+ [in]*sizeButton*  
  ピクセル単位でのツール バー ボタンのサイズ。  
   
- [入力] `sizeImage`  
+ [in]*sizeImage*  
  ピクセル単位でのツール バー ボタンのイメージのサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツール バー ボタンの既定のサイズは、23 x 22 ピクセルです。 ツール バー ボタン イメージの既定のサイズは、16 x 15 ピクセルです。  
   
  呼び出す、 [CMFCToolBar::GetImageSize](#getimagesize)ツール バー ボタン イメージのサイズを取得します。 呼び出す、 [CMFCToolBar::GetButtonSize](#getbuttonsize)ツール バー ボタンのサイズを取得します。  
@@ -3292,22 +3292,22 @@ void SetToolBarBtnText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nBtnIndex`  
+ [in]*nBtnIndex*  
  ツール バー ボタンの一覧で、ツール バー ボタンの 0 から始まるインデックス。  
   
- [入力] `szText`  
+ [in]*szText*  
  ツール バー ボタンのテキスト ラベルを指定します。  
   
- [入力] `bShowText`  
+ [in]*bShowText*  
  このパラメーターは場合`TRUE`フレームワークがテキスト ラベルを表示します。 それ以外の場合、フレームワークでは、テキスト ラベルを非表示にします。  
   
- [入力] `bShowImage`  
+ [in]*bShowImage*  
  このパラメーターが場合`TRUE`フレームワークがツール バー ボタンのイメージを表示します。 それ以外の場合、フレームワークでは、ツールバーのボタンのイメージを非表示にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定は、フレームワークは、ツール バー ボタンの画像を示していますが、ツール バー ボタンのテキスト ラベルは表示されません。  
   
- 場合に、デバッグ ビルドでこのメソッドが、アサーションの失敗を生成`nBtnIndex`参照しない有効なツール バー ボタンまたはツール バー ボタンは、区切り記号。  
+ 場合に、デバッグ ビルドでこのメソッドが、アサーションの失敗を生成*nBtnIndex*参照しない有効なツール バー ボタンまたはツール バー ボタンは、区切り記号。  
   
 ##  <a name="settworowswithsibling"></a>  Cmfctoolbar::settworowswithsibling  
  ツールバーと兄弟を別々 の行に位置付けます。  
@@ -3316,7 +3316,7 @@ void SetToolBarBtnText(
 void SetTwoRowsWithSibling();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークが、ユーザーがクリックしたときに、このメソッドを呼び出して、**ボタンを 2 つの行に表示**ボタンをクリックします。  
   
  呼び出す、 [cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)を有効にする方法、**を 1 行に表示するボタン**または**2 つの行に表示するボタン**ボタン。 呼び出す場合[cmfctoolbar::setsiblingtoolbar](#setsiblingtoolbar)このツールバーに兄弟ツールバーが個別の行に移動します。 それ以外の場合、このツールバーは、個別の行に移動されます。  
@@ -3331,14 +3331,14 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pUserImages`  
+ [in]*pUserImages*  
  イメージのユーザー定義のコレクションへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。場合は 0 それ以外の場合、指定した`CMFCToolBarImages`オブジェクトが無効か、ツールバーの既定のイメージのサイズとは異なるイメージのサイズ。  
   
-### <a name="remarks"></a>コメント  
- フレームワークは、ユーザーによってカスタマイズされたツール バー ボタンを描画するのにユーザー定義のイメージを使用します。 指定されたイメージ リスト`pUserImages`アプリケーション内のすべてのツールバーの間で共有します。  
+### <a name="remarks"></a>Remarks  
+ フレームワークは、ユーザーによってカスタマイズされたツール バー ボタンを描画するのにユーザー定義のイメージを使用します。 指定されたイメージ リスト*pUserImages*アプリケーション内のすべてのツールバーの間で共有します。  
   
  場合、このメソッドがデバッグ ビルドで、アサーションの失敗を生成、指定した`CMFCToolBarImages`オブジェクトが無効か、ツールバーの既定のイメージのサイズとは異なるイメージのサイズ。  
   
@@ -3356,16 +3356,16 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nLength`  
+ [in]*されて*  
  (ピクセル単位) をウィンドウを拡大する量。  
   
- [入力] `bVert`  
+ [in]*bVert*  
  場合`TRUE`、垂直方向のウィンドウを拡大します。 場合`FALSE`、水平方向のウィンドウを拡大します。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`ツールバーのクライアント領域のサイズを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを呼び出す[CMFCToolBar::WrapToolBar](#wraptoolbar)ストレッチ ツールバー内のボタンの位置を変更します。  
   
  戻り値は呼び出すことによって決まります[CMFCToolBar::CalcSize](#calcsize)です。  
@@ -3378,13 +3378,13 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nChar`  
+ [in]*nChar*  
  仮想キー コードを指定します。 標準の仮想キー コードの一覧は、Winuser.h を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  `FALSE` 指定したキー コードがいずれかの場合は印刷できないか、有効なキーボード ショートカット以外に対応していません`TRUE` ; のドロップダウン メニュー オプションに指定されたキー コードが対応している場合からそれ以外の場合、戻り値[CMFCToolBar::ProcessCommand](#processcommand)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、Alt キーとキーが押されたときに、このメソッドを呼び出します。  
   
 ##  <a name="updatebutton"></a>  CMFCToolBar::UpdateButton  
@@ -3395,10 +3395,10 @@ void UpdateButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
+ [in]*nIndex*  
  更新するボタンの 0 から始まるインデックスを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="wraptoolbar"></a>  CMFCToolBar::WrapToolBar  
  指定されたディメンション内のツール バー ボタンの位置を変更します。  
@@ -3413,25 +3413,25 @@ int WrapToolBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nWidth`  
+ [in]*nWidth*  
  ツールバーの最大幅。  
   
- [入力] `nHeight`  
+ [in]*パラメーター nHeight*  
  ツールバーの最大の高さ。 ツールバーのフローティング状態の場合は使用されません。  
   
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。 NULL の場合は、ツールバーのデバイス コンテキストが使用されます。  
   
- [入力] `nColumnWidth`  
+ [in]*nColumnWidth*  
  ボタンの幅。 -1 の場合、現在の幅が使用されます。  
   
- [in] m `nRowHeight`  
+ [in] m *nRowHeight*  
  ボタンの高さ。 -1 の場合、現在の高さが使用されます。  
   
 ### <a name="return-value"></a>戻り値  
  ツールバーのボタンの行の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ボタンを必要に応じて追加の行の折り返し、ツールバーのボタンを再配置します。  
   
 ##  <a name="m_bdontscaleimages"></a>  CMFCToolBar::m_bDontScaleImages  
@@ -3441,7 +3441,7 @@ int WrapToolBar(
 AFX_IMPORT_DATA static BOOL m_bDontScaleImages;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

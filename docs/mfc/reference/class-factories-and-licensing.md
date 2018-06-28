@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367075"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038237"
 ---
 # <a name="class-factories-and-licensing"></a>クラス ファクトリとライセンス
 OLE コントロールのインスタンスを作成するには、コンテナー アプリケーションは、コントロールのクラス ファクトリのメンバー関数を呼び出します。 コントロールは、実際の OLE オブジェクトであるため、クラス ファクトリが、コントロールのインスタンスを作成します。 すべての OLE コントロール クラスには、クラス ファクトリをいる必要があります。  
@@ -51,14 +51,14 @@ DECLARE_OLECREATE_EX(class_name)
  *それ以外*  
  コントロール クラスの名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ライセンスをサポートしていないコントロールのコントロールのクラス ヘッダー ファイルでこのマクロを使用します。  
   
  このマクロは、次のコード サンプルと同じ目的でことに注意してください。  
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
@@ -91,10 +91,10 @@ IMPLEMENT_OLECREATE_EX(
  *l、w1、w2、b1、b2、b3、b4、b5、b6、b7、b8*  
  クラスのコンポーネント**CLSID**です。 これらのパラメーターの詳細については、「解説」を参照してください。 [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このマクロを使用して任意のコントロール クラスの実装ファイルに表示する必要があります、`DECLARE_OLECREATE_EX`マクロまたは`BEGIN_OLEFACTORY`と`END_OLEFACTORY`マクロです。 外部名は、他のアプリケーションに公開されている OLE コントロールの識別子です。 コンテナーでは、この名前を使用して、このコントロール クラスのオブジェクトを要求します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
@@ -108,10 +108,10 @@ BEGIN_OLEFACTORY(class_name)
  *それ以外*  
  これは、クラス ファクトリを持つコントロール クラスの名前を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  クラス ファクトリ ライセンス関数の宣言後すぐに開始`BEGIN_OLEFACTORY`です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="end_olefactory"></a>  END_OLEFACTORY  
@@ -125,7 +125,7 @@ END_OLEFACTORY(class_name)
  *それ以外*  
  これは、クラス ファクトリを持つコントロール クラスの名前。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
@@ -140,27 +140,27 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hInstance`  
+ *hInstance*  
  ライセンスされたコントロールに関連付けられている DLL のインスタンス ハンドル。  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  ライセンス ファイル名を含む null で終わる文字列へのポインター。  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  ライセンス ファイルの先頭にあるシーケンスに一致する必要があるバイト シーケンスを指します。  
   
- `cch`  
- 内の文字数`pszLicFileContents`です。  
+ *cch*  
+ 内の文字数*pszLicFileContents*です。  
   
 ### <a name="return-value"></a>戻り値  
- ライセンス ファイルが存在し、文字のシーケンスで始まる場合は 0 以外`pszLicFileContents`。 それ以外の場合に 0 です。  
+ ライセンス ファイルが存在し、文字のシーケンスで始まる場合は 0 以外*pszLicFileContents*。 それ以外の場合に 0 です。  
   
-### <a name="remarks"></a>コメント  
- 場合`cch`-1 で、この関数を使用します。  
+### <a name="remarks"></a>Remarks  
+ 場合*cch* -1 で、この関数を使用します。  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
 
 ## <a name="see-also"></a>関連項目  

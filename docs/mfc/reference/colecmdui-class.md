@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370758"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040715"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI クラス
 アプリケーションの `IOleCommandTarget`ドリブンの機能に関連するユーザー インターフェイス オブジェクトの状態を更新するメソッドを MFC に提供します。  
@@ -56,7 +56,7 @@ class COleCmdUI : public CCmdUI
 |[COleCmdUI::SetCheck](#setcheck)|オン/オフ切り替えの状態を設定コマンド。|  
 |[COleCmdUI::SetText](#settext)|コマンドのテキストの名前または状態文字列を返します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  有効になっていない DocObjects、ユーザーが、アプリケーションでは、MFC のプロセスで、メニューを表示すると、アプリケーションで**UPDATE_COMMAND_UI**通知します。 各通知、 [CCmdUI](../../mfc/reference/ccmdui-class.md)特定のコマンドの状態を反映するように操作できるオブジェクト。 ただし、アプリケーションは DocObjects の有効な場合、MFC 処理**UPDATE_OLE_COMMAND_UI**通知および割り当てます`COleCmdUI`オブジェクト。  
   
  `COleCmdUI` コマンド (など、という名前、開く、印刷、およびなど)、そのコンテナーのユーザー インターフェイスを受信する DocObject をでき、DocObject のユーザー インターフェイスに送られたコマンドを受信するためのコンテナーです。 `IDispatch` 、同じコマンドをディスパッチすることできます`IOleCommandTarget`クエリを実行し、標準的な一連の引数を指定せずに通常のコマンドに依存していると、型情報は必要ありませんので、実行する簡単な方法を提供します。 `COleCmdUI` 有効にする、更新、および DocObject ユーザー インターフェイスのコマンドの他のプロパティを設定するために使用します。 コマンドを呼び出す場合は、呼び出す[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)です。  
@@ -68,7 +68,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdocobj.h  
   
 ##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI  
@@ -82,16 +82,16 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rgCmds`  
+ *rgCmds*  
  指定された GUID に関連付けられている、サポートされているコマンドの一覧。 **OLECMD**構造体は、コマンド フラグを使ってコマンドを関連付けます。  
   
  *cCmds*  
- コマンド数`rgCmds`です。  
+ コマンド数*rgCmds*です。  
   
- `pGroup`  
+ *pGroup*  
  コマンドのセットを識別する GUID を指すポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `COleCmdUI`オブジェクトは、メニュー項目またはコントロール バー ボタンなどのユーザー インターフェイス オブジェクトを DocObject を更新するためのプログラム インターフェイスを提供します。 ユーザー インターフェイス オブジェクトを有効になっている、無効になっている、チェック、およびをオフになって、`COleCmdUI`オブジェクト。  
   
 ##  <a name="enable"></a>  COleCmdUI::Enable  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bOn`  
+ *お*  
  コマンドに関連付けられているかどうかを示す、`COleCmdUI`オブジェクトを有効または無効にする必要があります。 0 以外を有効にコマンド。0 は、コマンドを無効にします。  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCheck`  
+ *nCheck*  
  オン/オフ切り替えを設定する状態を決定する値コマンド。 値は次のとおりです。  
   
 |[値]|説明|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszText`  
+ *lpszText*  
  コマンドで使用されるテキストへのポインター。  
   
 ## <a name="see-also"></a>関連項目  

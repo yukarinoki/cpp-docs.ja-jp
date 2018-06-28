@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374882"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042171"
 ---
 # <a name="coleinsertdialog-class"></a>メンバー クラス
 OLE の [オブジェクトの挿入] ダイアログ ボックスで使用されます。  
@@ -76,7 +76,7 @@ class COleInsertDialog : public COleDialog
 |----------|-----------------|  
 |[COleInsertDialog::m_io](#m_io)|型の構造体**使う** ダイアログ ボックスの動作を制御します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラスのオブジェクトを作成`COleInsertDialog`をこのダイアログ ボックスを呼び出したいとします。 後に、`COleInsertDialog`オブジェクトが構築された、使用することができます、 [m_io](#m_io)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_io`構造体は型**使う**です。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。  
   
 > [!NOTE]
@@ -101,7 +101,7 @@ class COleInsertDialog : public COleDialog
   
  `COleInsertDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwFlags`  
+ *dwFlags*  
  任意の数のビットごとの OR 演算子を使用して結合するのには、次の値を含む作成フラグ:  
   
 - **IOF_SHOWHELP**  ダイアログ ボックスが呼び出されたときに、ヘルプ ボタンを表示するように指定します。  
@@ -131,10 +131,10 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST**  ダイアログ ボックスが、ダイアログ ボックスが表示される前に、登録情報データベースで指定されたサーバーが存在することを確認して、リスト ボックスに追加のクラスを検証する必要がありますを指定します。 このフラグを設定すると、パフォーマンスが低下することができますが大幅にします。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウ オブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ オブジェクトの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
 ##  <a name="createitem"></a>  クリック  
@@ -145,13 +145,13 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  作成される項目へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  アイテムが作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  割り当てる必要があります、`COleClientItem`オブジェクトの前に、この関数を呼び出すことができます。  
   
 ##  <a name="domodal"></a>  COleInsertDialog::DoModal  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwFlags`  
+ *dwFlags*  
  次のいずれかの値です。  
   
  `COleInsertDialog::DocObjectsOnly` DocObjects のみを挿入します。  
@@ -185,7 +185,7 @@ INT_PTR
   
 -   IDABORT 場合はエラーが発生しました。 IDABORT が返される場合は呼び出し、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)の詳細については、発生したエラーの種類を取得します。 考えられるエラーの一覧については、次を参照してください。、[使う](http://msdn.microsoft.com/library/windows/desktop/ms694325)Windows SDK 内の関数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバーを設定してさまざまなダイアログ ボックスのコントロールを初期化する場合、 [m_io](#m_io)構造体、呼び出す前にこれを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
   
  場合`DoModal`IDOK を返します関数、ユーザーがダイアログ ボックスに情報入力や設定を取得するその他のメンバーを呼び出すことができます。  
@@ -200,7 +200,7 @@ REFCLSID GetClassID() const;
 ### <a name="return-value"></a>戻り値  
  返します、 **CLSID**選択した項目に関連付けられています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
   
 ##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
@@ -217,7 +217,7 @@ DVASPECT GetDrawAspect() const;
   
 - `DVASPECT_ICON` アイコンで表示 チェック ボックスがオンになっているかどうかに返されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合にのみ、この関数を呼び出す[DoModal](#domodal)返します**IDOK**です。  
   
  アスペクトの描画の詳細については、次を参照してください。 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内のデータ構造です。  
@@ -252,7 +252,7 @@ UINT GetSelectionType() const;
 ### <a name="return-value"></a>戻り値  
  選択内容の種類です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  戻り値の型の値がで指定された、**選択**で宣言された列挙型、`COleInsertDialog`クラスです。  
   
 ```  
@@ -278,7 +278,7 @@ enum Selection {
 OLEUIINSERTOBJECT m_io;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。  
   
  詳細については、次を参照してください。、[使う](http://msdn.microsoft.com/library/windows/desktop/ms691316)Windows SDK 内の構造。  

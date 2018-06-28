@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54804ff4c6b2410aa47ea4d7cf5f5d3ab48316f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86250968fa8f6dfd9cb1a3b9a790549f70baa569
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375847"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039117"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 Windows コモン イメージ リスト コントロールの機能が用意されています。  
@@ -157,7 +157,7 @@ class CImageList : public CObject
 |----------|-----------------|  
 |[CImageList::m_hImageList](#m_himagelist)|このオブジェクトにアタッチされているイメージ リストを含むハンドルです。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  「イメージ リスト」は、それぞれが参照できます 0 から始まるインデックスを使用して、同じサイズのイメージのコレクションです。 イメージ リストを使用して、多数のアイコンまたはビットマップを効率的に管理できます。 イメージ リスト内のすべてのイメージは、単一のワイド画面デバイス形式のビットマップに格納されます。 イメージ リストは、モノクロ ビットマップを透過的にイメージを描画するためのマスク (アイコンのスタイル) を含むもあります。 Microsoft Win32 アプリケーション プログラミング インターフェイス (API) を使用すると、イメージの描画、作成しイメージ リストを破棄、および追加および削除イメージ、イメージを置き換える、イメージのマージ、イメージのドラッグ イメージ リストの関数を提供します。  
   
  このコントロール (したがって、`CImageList`クラス) は、Windows 95/98 および Windows NT 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
@@ -169,7 +169,7 @@ class CImageList : public CObject
   
  `CImageList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="add"></a>  CImageList::Add  
@@ -189,22 +189,22 @@ int Add(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pbmImage`  
+ *pbmImage*  
  イメージまたはイメージを含むビットマップへのポインター。 イメージの数は、ビットマップの幅から推測されます。  
   
- `pbmMask`  
+ *pbmMask*  
  マスクを含むビットマップへのポインター。 イメージ リスト、マスクが使用されていない場合、このパラメーターは無視されます。  
   
- `crMask`  
+ *crMask*  
  マスクを生成するために使用する色です。 各ピクセルの指定したビットマップでこの色が黒に変更され、マスクの対応するビットは 1 に設定します。  
   
- `hIcon`  
+ *hIcon*  
  ビットマップと、新しいイメージをマスクに含まれているアイコンのハンドルです。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は、最初の新しいイメージの 0 から始まるインデックスそれ以外の場合 - 1。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関連付けが完了したら、アイコンのハンドルを解放を担当しています。  
   
 ### <a name="example"></a>例  
@@ -218,7 +218,7 @@ BOOL Attach(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hImageList`  
+ *hImageList*  
  イメージ リスト オブジェクトへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
@@ -237,16 +237,16 @@ BOOL BeginDrag(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImage`  
+ *あり*  
  ドラッグするイメージの 0 から始まるインデックス。  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  ドラッグの開始位置 (通常は、カーソル位置) の座標。 座標は、イメージの左上隅を基準としました。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、ドラッグするために使用される一時イメージ リストを作成します。 イメージは、現在のカーソルに指定されたイメージとそのマスクを結合します。 その後に応答`WM_MOUSEMOVE`メッセージ、ドラッグ イメージを使用して移動することができます、`DragMove`メンバー関数。 使用することができます、ドラッグ操作を終了するため、`EndDrag`メンバー関数。  
   
 ### <a name="example"></a>例  
@@ -280,10 +280,10 @@ BOOL Copy(
  *iDst*  
  コピー操作のコピー先として使用するイメージの 0 から始まるインデックス。  
   
- `iSrc`  
+ *iSrc*  
  コピー操作のソースとして使用するイメージの 0 から始まるインデックス。  
   
- `uFlags`  
+ *uFlags*  
  に対するコピー操作の種類を指定するビット フラグの値です。 このパラメーターには、次の値のいずれかを指定できます。  
   
 |[値]|説明|  
@@ -291,7 +291,7 @@ BOOL Copy(
 |`ILCF_MOVE`|ソース イメージは、移行先のイメージのインデックス位置にコピーされます。 この操作は、指定したイメージの複数のインスタンスになります。 `ILCF_MOVE` が既定値です。|  
 |`ILCF_SWAP`|送信元と送信先のイメージは、イメージ リスト内の位置を交換します。|  
   
- `pSrc`  
+ *pSrc*  
  ポインター、`CImageList`コピー操作の対象となっているオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
@@ -338,13 +338,13 @@ BOOL Create(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cx`  
+ *cx*  
  ピクセル単位で、各イメージのサイズ。  
   
- `cy`  
+ *cy*  
  ピクセル単位で、各イメージのサイズ。  
   
- `nFlags`  
+ *nFlags*  
  作成するイメージ リストの種類を指定します。 このパラメーターは、次の値の組み合わせを指定できますのいずれかのみを含めることができますが、`ILC_COLOR`値。  
   
 |[値]|説明|  
@@ -358,46 +358,46 @@ BOOL Create(CImageList* pImageList);
 |`ILC_COLORDDB`|デバイスに依存しないビットマップを使用します。|  
 |`ILC_MASK`|マスクを使用します。 イメージ リストには、マスクとして使用されるモノクロ ビットマップは、1 つ、2 つのビットマップが含まれています。 この値が含まれない場合、イメージ リストには、1 つだけのビットマップが含まれています。 参照してください[はイメージ リストのイメージを描画](../../mfc/drawing-images-from-an-image-list.md)マスクされたイメージの詳細についてはします。|  
   
- `nInitial`  
+ *nInitial*  
  イメージ リストを含む最初にイメージの数。  
   
- `nGrow`  
+ *nGrow*  
  イメージのイメージ リストできます拡張を許可する、システムは、新しいイメージを格納するためにリストのサイズを変更する必要がある場合の数。 このパラメーターは、イメージのサイズを変更したリストには、新しいイメージの数を表します。  
   
- `nBitmapID`  
+ *nBitmapID*  
  イメージ リストに関連するビットマップのリソース Id です。  
   
- `crMask`  
+ *crMask*  
  マスクの生成に使用される色。 指定したビットマップでこの色の各ピクセルは黒に変更し、マスクの対応するビットは 1 に設定します。  
   
- `lpszBitmapID`  
+ *lpszBitmapID*  
  イメージのリソース Id を含む文字列。  
   
- `imagelist1`  
+ *imagelist1*  
  `CImageList` オブジェクトへの参照。  
   
- `nImage1`  
+ *nImage1*  
  最初の既存のイメージのインデックス。  
   
- `imagelist2`  
+ *imagelist2*  
  `CImageList` オブジェクトへの参照。  
   
- `nImage2`  
+ *nImage2*  
  2 つ目の既存のイメージのインデックス。  
   
- `dx`  
+ *dx*  
  最初のイメージのピクセル単位でのリレーションシップにおける 2 番目のイメージの x 軸のオフセットします。  
   
- `dy`  
+ *dy*  
  最初のイメージのピクセル単位でのリレーションシップにおける 2 番目のイメージの y 軸のオフセットします。  
   
- `pImageList`  
+ *pImageList*  
  ポインター、`CImageList`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築する、 `CImageList` 2 つの手順でします。 最初に、コンス トラクターを呼び出すし、呼び出す`Create`、イメージ リストを作成しにアタッチする、`CImageList`オブジェクト。  
   
 ### <a name="example"></a>例  
@@ -436,14 +436,14 @@ HIMAGELIST Detach();
 ### <a name="return-value"></a>戻り値  
  イメージ リスト オブジェクトへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、イメージ リストのオブジェクトへのハンドルを返します。  
   
 ### <a name="example"></a>例  
   例を参照して[CImageList::Attach](#attach)です。  
   
 ##  <a name="dragenter"></a>  CImageList::DragEnter  
- ドラッグ操作中にロック更新で指定されたウィンドウを`pWndLock`で指定された位置にドラッグ イメージを表示および`point`です。  
+ ドラッグ操作中にロック更新で指定されたウィンドウを*pWndLock*で指定された位置にドラッグ イメージを表示および*ポイント*です。  
   
 ```  
 static BOOL PASCAL DragEnter(
@@ -452,19 +452,19 @@ static BOOL PASCAL DragEnter(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndLock`  
+ *pWndLock*  
  ドラッグ イメージを所有するウィンドウへのポインター。  
   
- `point`  
+ *ポイント*  
  ドラッグ イメージを表示する位置。 座標は、(クライアント領域ではなく) ウィンドウの左上隅に対して相対的です。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  座標は、座標を指定するときに、境界線、タイトル バー、メニュー バーなどのウィンドウの要素の幅を補正する必要がありますので、ウィンドウの左上隅を基準としました。  
   
- 場合`pWndLock`は**NULL**、この関数は、デスクトップのウィンドウに関連付けられている表示のコンテキストで、イメージを描画し、画面の左上隅に対する相対座標は、します。  
+ 場合*pWndLock*は**NULL**、この関数は、デスクトップのウィンドウに関連付けられている表示のコンテキストで、イメージを描画し、画面の左上隅に対する相対座標は、します。  
   
  この関数は、ドラッグ操作中に指定されたウィンドウを他のすべての更新プログラムをロックします。 ドラッグ アンド ドロップ操作のターゲットを強調表示などのドラッグ操作中に描画を実行する必要がある場合を一時的に非表示にするドラッグされているイメージを使用して、[生じたとき](#dragleave)関数。  
   
@@ -472,14 +472,14 @@ static BOOL PASCAL DragEnter(
   例を参照して[CImageList::BeginDrag](#begindrag)です。  
   
 ##  <a name="dragleave"></a>  生じたとき  
- 指定されたウィンドウのロックを解除`pWndLock`し、ドラッグ イメージを更新するウィンドウを非表示にします。  
+ 指定されたウィンドウのロックを解除*pWndLock*し、ドラッグ イメージを更新するウィンドウを非表示にします。  
   
 ```  
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndLock`  
+ *pWndLock*  
  ドラッグ イメージを所有するウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -496,13 +496,13 @@ static BOOL PASCAL DragMove(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pt`  
+ *pt*  
  新しい位置にドラッグします。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数と通常呼ばれるへの応答、`WM_MOUSEMOVE`メッセージ。 を開始するには、ドラッグ操作を使用して、`BeginDrag`メンバー関数。  
   
 ### <a name="example"></a>例  
@@ -516,13 +516,13 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bShow`  
+ *bShow*  
  ドラッグ イメージを表示するかどうかを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CImageList::DragEnter](#dragenter)関数は、ドラッグ操作中にウィンドウにすべての更新プログラムをロックします。 ただし、この関数では、ウィンドウはロックされません。  
   
 ##  <a name="draw"></a>  :Draw  
@@ -537,23 +537,23 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  コピー先デバイス コンテキストへのポインター。  
   
- `nImage`  
+ *あり*  
  描画するイメージの 0 から始まるインデックス。  
   
- `pt`  
+ *pt*  
  指定したデバイス コンテキスト内で描画する場所です。  
   
- `nStyle`  
+ *nStyle*  
  描画スタイルを指定するフラグします。 これらの値の 1 つ以上を指定できます。  
   
 |[値]|説明|  
 |-----------|-------------|  
 |`ILD_BLEND25`、 **ILD_FOCUS**|システムの強調表示色を 25% を混合して、イメージを描画します。 この値はイメージ リストには、マスクが含まれていない場合に影響しません。|  
 |`ILD_BLEND50`、 **ILD_SELECTED**、 **ILD_BLEND**|システムの強調表示色を 50% を混合して、イメージを描画します。 この値はイメージ リストには、マスクが含まれていない場合に影響しません。|  
-|**ILD_MASK**|マスクを描画します。|  
+|`ILD_MASK`|マスクを描画します。|  
 |`ILD_NORMAL`|イメージ リストの背景色を使用してイメージを描画します。 背景色がある場合、`CLR_NONE`マスクを使用して、透過的に値、イメージを描画します。|  
 |`ILD_TRANSPARENT`|透過的に背景色に関係なく、マスクを使用して、イメージを描画します。|  
   
@@ -578,17 +578,17 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  コピー先デバイス コンテキストへのポインター。  
   
- `nImage`  
+ *あり*  
  描画するイメージの 0 から始まるインデックス。  
   
- `pt`  
+ *pt*  
  指定したデバイス コンテキスト内で描画する場所です。  
   
- `sz`  
- イメージの左上隅に対して相対的に描画するイメージの部分のサイズ。 参照してください`dx`と*dy*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK にします。  
+ *sz*  
+ イメージの左上隅に対して相対的に描画するイメージの部分のサイズ。 参照してください*dx*と*dy*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
   
  *clrBk*  
  イメージの背景色です。 参照してください*rgbBk*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
@@ -596,13 +596,13 @@ BOOL DrawEx(
  *clrFg*  
  イメージの前景色。 参照してください*rgbFg*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
   
- `nStyle`  
+ *nStyle*  
  描画スタイルを指定するフラグします。 参照してください*は*で[ImageList_DrawEx](http://msdn.microsoft.com/library/windows/desktop/bb761536) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数は、指定された描画スタイルを使用し、指定された色と画像を混ぜ合わせます。  
   
 ### <a name="example"></a>例  
@@ -634,30 +634,30 @@ BOOL DrawIndirect(
  *pimldp*  
  ポインター、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)描画操作に関する情報を格納する構造体。  
   
- `pDC`  
+ *pDC*  
  コピー先デバイス コンテキストへのポインター。 これを削除する必要があります[CDC](../../mfc/reference/cdc-class.md)オブジェクトが完了したことがあるときです。  
   
- `nImage`  
+ *あり*  
  描画するイメージの 0 から始まるインデックス。  
   
- `pt`  
+ *pt*  
  A[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)イメージを描画する x 座標と y 座標を含む構造体。  
   
- `sz`  
+ *sz*  
  A[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造体を描画するイメージのサイズを示すです。  
   
  *ptOrigin*  
  A[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)イメージ自体に関して描画操作の左上隅を指定する x 座標と y 座標を含む構造体。 左側の x 座標と y 座標の上に配置されている画像のピクセルは描画されません。  
   
- `fStyle`  
+ *について*  
  描画スタイルと、必要に応じて、オーバーレイのイメージを指定するフラグします。 オーバーレイ イメージについては「解説」セクションを参照してください。 MFC の既定の実装`ILD_NORMAL`、イメージ リストの背景色を使用してイメージを描画します。 背景色がある場合、`CLR_NONE`マスクを使用して、透過的に値、イメージを描画します。  
   
- 考えられる他のスタイルは、「、**は**のメンバー、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。  
+ 考えられる他のスタイルは、「、*は*のメンバー、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。  
   
  *dwRop*  
- ラスター オペレーション コードを指定する値。 これらのコードでは、最終的な色を実現するために、移行先の四角形の色データの元の四角形の色データの結合方法を定義します。 MFC の既定の実装、 **SRCCOPY**元の四角形を先の四角形に直接コピーします。 場合、このパラメーターは無視されます、`fStyle`パラメーターを含まない、 **ILD_ROP**フラグ。  
+ ラスター オペレーション コードを指定する値。 これらのコードでは、最終的な色を実現するために、移行先の四角形の色データの元の四角形の色データの結合方法を定義します。 MFC の既定の実装、 **SRCCOPY**元の四角形を先の四角形に直接コピーします。 場合、このパラメーターは無視されます、*は*パラメーターを含まない、 **ILD_ROP**フラグ。  
   
- その他の使用可能な値は、「、 **dwRop**のメンバー、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。  
+ その他の使用可能な値は、「、 *dwRop*のメンバー、[された](http://msdn.microsoft.com/library/windows/desktop/bb761395)構造体。  
   
  *rgbBack*  
  既定では、画像の背景色`CLR_DEFAULT`です。 このパラメーターには、アプリケーション定義の RGB 値または値は次のいずれかを指定できます。  
@@ -675,7 +675,7 @@ BOOL DrawIndirect(
 |`CLR_DEFAULT`|既定の前景の色。 イメージは、システムの強調表示色を使用して、前景色として描画されます。|  
 |`CLR_NONE`|ディザー カラーなし。 イメージは、コピー先デバイス コンテキストの色とブレンドされます。|  
   
- 場合にのみ、このパラメーターは使用`fStyle`が含まれています、`ILD_BLEND25`または`ILD_BLEND50`フラグ。  
+ 場合にのみ、このパラメーターは使用*は*が含まれています、`ILD_BLEND25`または`ILD_BLEND50`フラグ。  
   
  *fState*  
  描画の状態を指定するフラグします。 このメンバーは、1 つまたは複数のイメージ リストの状態フラグを含めることができます。  
@@ -693,10 +693,10 @@ BOOL DrawIndirect(
 ### <a name="return-value"></a>戻り値  
  **TRUE**場合は、イメージが正常にそれ以外の描画**FALSE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Win32 構造を手動で入力する場合は、最初のバージョンを使用します。 MFC の既定の引数の 1 つ以上の利用、または構造体を操作を回避する場合は、2 番目のバージョンを使用します。  
   
- オーバーレイ イメージでは、このメンバー関数で指定したプライマリのイメージの上に描画されるイメージとは、`nImage`パラメーター。 オーバーレイ マスクを使用して、描画、[描画](#draw)オーバーレイ マスクを使用して指定の 1 から始まるインデックスを持つメンバー関数、[から](http://msdn.microsoft.com/library/windows/desktop/bb761408)マクロです。  
+ オーバーレイ イメージでは、このメンバー関数で指定したプライマリのイメージの上に描画されるイメージとは、*あり*パラメーター。 オーバーレイ マスクを使用して、描画、[描画](#draw)オーバーレイ マスクを使用して指定の 1 から始まるインデックスを持つメンバー関数、[から](http://msdn.microsoft.com/library/windows/desktop/bb761408)マクロです。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]  
@@ -708,7 +708,7 @@ BOOL DrawIndirect(
 static void PASCAL EndDrag();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  を開始するには、ドラッグ操作を使用して、`BeginDrag`メンバー関数。  
   
 ### <a name="example"></a>例  
@@ -722,13 +722,13 @@ HICON ExtractIcon(int nImage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImage`  
+ *あり*  
  イメージの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は、アイコンのハンドルそれ以外の場合**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、の動作に依存している、 [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)マクロをアイコンを作成します。 参照してください、 [ImageList_ExtractIcon](http://msdn.microsoft.com/library/windows/desktop/bb761401)アイコンの作成とクリーンアップの詳細についてマクロです。  
   
 ### <a name="example"></a>例  
@@ -742,13 +742,13 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hImageList`  
+ *hImageList*  
  イメージ リストを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CImageList`それ以外の成功した場合は、オブジェクト**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合、`CImageList`ハンドル、一時的なに既にアタッチされていない`CImageList`オブジェクトが作成され、接続されています。 この一時`CImageList`オブジェクトが有効では、次回アプリケーションがある移動するまでのアイドル時間イベント ループで、どの時にすべての一時オブジェクトが削除専用です。  
   
 ### <a name="example"></a>例  
@@ -762,13 +762,13 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hImageList`  
+ *hImageList*  
  イメージ リストを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CImageList`それ以外の成功した場合は、オブジェクト**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合、`CImageList`オブジェクトがハンドルに関連付けられていない**NULL**が返されます。  
   
 ### <a name="example"></a>例  
@@ -797,7 +797,7 @@ static CImageList* PASCAL GetDragImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpPoint`  
+ *lpPoint*  
  アドレス、[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)受け取る現在位置にドラッグします。  
   
  *lpPointHotSpot*  
@@ -829,7 +829,7 @@ BOOL GetImageInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImage`  
+ *あり*  
  イメージの 0 から始まるインデックス。  
   
  *pImageInfo*  
@@ -838,7 +838,7 @@ BOOL GetImageInfo(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `IMAGEINFO`構造体には、イメージ リスト内のイメージに関する情報が含まれています。  
   
 ##  <a name="getsafehandle"></a>  CImageList::GetSafeHandle  
@@ -859,7 +859,7 @@ HIMAGELIST GetSafeHandle() const;
   
  **HIMAGELIST m_hImageList です。**  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **M_hImageList**データ メンバーは型のパブリック変数`HIMAGELIST`です。  
   
 ### <a name="example"></a>例  
@@ -875,7 +875,7 @@ operator HIMAGELIST() const;
 ### <a name="return-value"></a>戻り値  
  かどうかは成功すると、イメージ リストへのハンドルによって表される、`CImageList`オブジェクト。 それ以外の場合**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子はキャスト演算子の`HIMAGELIST`オブジェクト。  
   
 ### <a name="example"></a>例  
@@ -889,7 +889,7 @@ BOOL Read(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pArchive`  
+ *pArchive*  
  ポインター、`CArchive`元のイメージ リストが読み取られるオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
@@ -906,14 +906,14 @@ BOOL Remove(int nImage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImage`  
+ *あり*  
  削除するイメージの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 次のすべての項目`nImage`で 1 つ下に移動します。 たとえば、イメージ リストに 2 つの項目が含まれている場合の最初の項目を削除できるようになります、残りの項目に最初の位置になります。 `nImage`最初の位置の項目の 0 を = です。  
+### <a name="remarks"></a>Remarks  
+ 次のすべての項目*あり*で 1 つ下に移動します。 たとえば、イメージ リストに 2 つの項目が含まれている場合の最初の項目を削除できるようになります、残りの項目に最初の位置になります。 *あり*最初の位置の項目の 0 を = です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]  
@@ -934,24 +934,24 @@ int Replace(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImage`  
+ *あり*  
  置換するイメージの 0 から始まるインデックス。  
   
- `pbmImage`  
+ *pbmImage*  
  イメージを含むビットマップへのポインター。  
   
- `pbmMask`  
+ *pbmMask*  
  マスクを含むビットマップへのポインター。 イメージ リスト、マスクが使用されていない場合、このパラメーターは無視されます。  
   
- `hIcon`  
+ *hIcon*  
  ビットマップと、新しいイメージのマスクを含むアイコンへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  返すバージョン**BOOL**成功、0 以外の場合は 0 以外を返します。  
   
- 返すバージョン`int`成功した場合、それ以外の場合は、イメージの 0 から始まるインデックスを返します 1 です。  
+ 返すバージョン**int**成功した場合、それ以外の場合は、イメージの 0 から始まるインデックスを返します 1 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数を呼び出した後に呼び出す[呼び出す前](#setimagecount)プレース ホルダーを有効なイメージを割り当てるには、新しいには、イメージのインデックス番号します。  
   
 ### <a name="example"></a>例  
@@ -965,7 +965,7 @@ COLORREF SetBkColor(COLORREF cr);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cr`  
+ *cr*  
  背景色を設定します。 できます`CLR_NONE`です。 その場合は、イメージは、透過的にマスクを使用して描画されます。  
   
 ### <a name="return-value"></a>戻り値  
@@ -987,13 +987,13 @@ BOOL SetDragCursorImage(
  *nDrag*  
  ドラッグ イメージと組み合わせることを新しいイメージのインデックス。  
   
- `ptHotSpot`  
+ *ptHotSpot*  
  新しいイメージ内のホット スポットの位置。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ドラッグ関数は、ドラッグ操作中に、新しいイメージを使用するため、Windows を使用する必要があります[ShowCursor](http://msdn.microsoft.com/library/windows/desktop/ms648396)関数を呼び出した後、実際のマウス カーソルを非表示に`CImageList::SetDragCursorImage`です。 それ以外の場合、システム、ドラッグ操作の期間に対して 2 つのマウス カーソルを表示されます。  
   
 ##  <a name="setimagecount"></a>  CImageList::SetImageCount  
@@ -1010,7 +1010,7 @@ BOOL SetImageCount(UINT uNewCount);
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イメージ リストのイメージの数を増やすには、このメンバー関数を呼び出す場合は、まず[置換](#replace)に有効なイメージに新しいインデックスを割り当てる各追加したイメージにします。 有効なイメージに、インデックスの割り当てに失敗した場合は、新しいイメージを作成する描画操作は予測できません。  
   
  イメージ リストのサイズを小さくには、この関数を使用して、切り捨てられたイメージが解放されます。  
@@ -1028,7 +1028,7 @@ BOOL SetOverlayImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImage`  
+ *あり*  
  オーバーレイ マスクとして使用するイメージの 0 から始まるインデックス。  
   
  *nOverlay*  
@@ -1037,7 +1037,7 @@ BOOL SetOverlayImage(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  一覧には、最大で 4 つのインデックスを追加できます。  
   
  オーバーレイ マスクは、別のイメージ上に透過的に描画されるイメージです。 使用してイメージ上のオーバーレイ マスクを描画、 [:draw](#draw)オーバーレイ マスクを使用して指定の 1 から始まるインデックスを持つメンバー関数、**から**マクロです。  
@@ -1053,7 +1053,7 @@ BOOL Write(CArchive* pArchive);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pArchive`  
+ *pArchive*  
  ポインター、`CArchive`イメージ リストが格納されるオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  

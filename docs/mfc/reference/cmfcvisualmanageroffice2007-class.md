@@ -240,12 +240,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34fd742e6ec5c68944ae8ea854e7b8c79fb0a422
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fd70adb821724a476a66ad21157eb8506ffaa40
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378653"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039590"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 クラス
 `CMFCVisualManagerOffice2007` Microsoft Office 2007 の外観をアプリケーションに提供します。 
@@ -379,7 +379,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerOffice2007::SetResourceHandle](#setresourcehandle)||  
 |`CMFCVisualManagerOffice2007::SetStyle`|配色を設定、 `CMFCVisualManagerOffice2007` GUI します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用して`CMFCVisualManagerOffice2007`を Microsoft Office 2007 のと同じように、アプリケーションの外観を変更します。 このビジュアル マネージャーでは、使用する前に、スタイルを設定することが必要です。 このビジュアル マネージャーに渡す前に`CMFCVisualManager::SetDefaultManager`、静的関数を呼び出す必要があります`CMFCVisualManagerOffice2007::SetStyle`です。  
   
 ## <a name="example"></a>例  
@@ -400,7 +400,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
   
  [CMFCVisualManagerOffice2007](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxvisualmanageroffice2007.h  
   
 ##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs  
@@ -412,7 +412,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cleanstyle"></a>  CMFCVisualManagerOffice2007::CleanStyle  
 
@@ -421,7 +421,7 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 static void __stdcall CleanStyle();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManagerOffice2007::GetCaptionBarTextColor  
 
@@ -431,11 +431,11 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
+ [in]*pBar*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetHighlightedMenuItemTextColor  
 
@@ -445,11 +445,11 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getmenuitemtextcolor"></a>  CMFCVisualManagerOffice2007::GetMenuItemTextColor  
 
@@ -462,13 +462,13 @@ virtual COLORREF GetMenuItemTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
- [入力] `bHighlighted`  
- [入力] `bDisabled`  
+ [in]*pButton*  
+ [in]*bHighlighted*  
+ [in]*bDisabled*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getncbtnsize"></a>  CMFCVisualManagerOffice2007::GetNcBtnSize  
 
@@ -478,11 +478,11 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bSmall`  
+ [in]*bSmall*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getribbonbar"></a>  CMFCVisualManagerOffice2007::GetRibbonBar  
 
@@ -492,11 +492,11 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getribbonhyperlinktextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonHyperlinkTextColor  
 
@@ -506,11 +506,11 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pHyperLink`  
+ [in]*pHyperLink*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getribbonpopupbordersize"></a>  CMFCVisualManagerOffice2007::GetRibbonPopupBorderSize  
 
@@ -520,11 +520,11 @@ virtual int GetRibbonPopupBorderSize(const CMFCRibbonPanelMenu* pPopup) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pPopup`  
+ [in]*pPopup*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getribbonquickaccesstoolbarchevronoffset"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarChevronOffset  
 
@@ -535,7 +535,7 @@ virtual int GetRibbonQuickAccessToolBarChevronOffset();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getribbonquickaccesstoolbarrightmargin"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarRightMargin  
 
@@ -546,7 +546,7 @@ virtual int GetRibbonQuickAccessToolBarRightMargin();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getribbonquickaccesstoolbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonQuickAccessToolBarTextColor  
 
@@ -556,11 +556,11 @@ virtual COLORREF GetRibbonQuickAccessToolBarTextColor(BOOL bDisabled = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bDisabled`  
+ [in]*bDisabled*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getribbonstatusbartextcolor"></a>  CMFCVisualManagerOffice2007::GetRibbonStatusBarTextColor  
 
@@ -570,11 +570,11 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pStatusBar`  
+ [in]*pStatusBar*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2007::GetShowAllMenuItemsHeight  
 
@@ -586,12 +586,12 @@ virtual int GetShowAllMenuItemsHeight(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `sizeDefault`  
+ [in]*pDC*  
+ [in]*sizeDefault*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getstatusbarpanetextcolor"></a>  CMFCVisualManagerOffice2007::GetStatusBarPaneTextColor  
 
@@ -603,12 +603,12 @@ virtual COLORREF GetStatusBarPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pStatusBar`  
- [入力] `pPane`  
+ [in]*pStatusBar*  
+ [in]*pPane*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2007::GetTabFrameColors  
 
@@ -627,17 +627,17 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTabWnd`  
- [入力] `clrDark`  
- [入力] `clrBlack`  
- [入力] `clrHighlight`  
- [入力] `clrFace`  
- [入力] `clrDarkShadow`  
- [入力] `clrLight`  
- [入力] `pbrFace`  
- [入力] `pbrBlack`  
+ [in]*pTabWnd*  
+ [in]*clrDark*  
+ [in]*clrBlack*  
+ [in]*clrHighlight*  
+ [in]*clrFace*  
+ [in]*clrDarkShadow*  
+ [in]*clrLight*  
+ [in]*pbrFace*  
+ [in]*pbrBlack*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettabhorzmargin"></a>  CMFCVisualManagerOffice2007::GetTabHorzMargin  
 
@@ -647,11 +647,11 @@ virtual int GetTabHorzMargin(const CMFCBaseTabCtrl* pTabWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTabWnd`  
+ [in]*pTabWnd*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettabtextcolor"></a>  CMFCVisualManagerOffice2007::GetTabTextColor  
 
@@ -664,13 +664,13 @@ virtual COLORREF GetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTabWnd`  
- [入力] `iTab`  
- [入力] `bIsActive`  
+ [in]*pTabWnd*  
+ [in]*iTab*  
+ [in]*bIsActive*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarButtonTextColor  
 
@@ -682,12 +682,12 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
- [入力] `state`  
+ [in]*pButton*  
+ [in]*状態*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettoolbardisabledtextcolor"></a>  CMFCVisualManagerOffice2007::GetToolbarDisabledTextColor  
 
@@ -698,7 +698,7 @@ virtual COLORREF GetToolbarDisabledTextColor();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2007::GetToolTipInfo  
 
@@ -710,12 +710,12 @@ virtual BOOL GetToolTipInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `params`  
- [入力] `nType`  
+ [in]*params*  
+ [in]*タイプ*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerOffice2007::IsHighlightWholeMenuItem  
 
@@ -726,7 +726,7 @@ virtual BOOL IsHighlightWholeMenuItem();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="islayeredribbonkeytip"></a>  CMFCVisualManagerOffice2007::IsLayeredRibbonKeyTip  
 
@@ -737,7 +737,7 @@ virtual BOOL IsLayeredRibbonKeyTip() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isownerdrawcaption"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawCaption  
 
@@ -748,7 +748,7 @@ virtual BOOL IsOwnerDrawCaption();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManagerOffice2007::IsOwnerDrawMenuCheck  
 
@@ -759,7 +759,7 @@ virtual BOOL IsOwnerDrawMenuCheck();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isribbonpresent"></a>  CMFCVisualManagerOffice2007::IsRibbonPresent  
 
@@ -769,11 +769,11 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2007::OnDrawBarGripper  
 
@@ -787,12 +787,12 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectGripper`  
- [入力] `bHorz`  
- [入力] `pBar`  
+ [in]*pDC*  
+ [in]*rectGripper*  
+ [in]*bHorz*  
+ [in]*pBar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawButtonBorder  
 
@@ -806,12 +806,12 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rect`  
- [入力] `state`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*状態*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerOffice2007::OnDrawButtonSeparator  
 
@@ -826,13 +826,13 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rect`  
- [入力] `state`  
- [入力] `bHorz`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*状態*  
+ [in]*bHorz*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawcaptionbarinfoarea"></a>  CMFCVisualManagerOffice2007::OnDrawCaptionBarInfoArea  
 
@@ -845,11 +845,11 @@ virtual void OnDrawCaptionBarInfoArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2007::OnDrawCheckBoxEx  
 
@@ -865,14 +865,14 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `nState`  
- [入力] `bHighlighted`  
- [入力] `bPressed`  
- [入力] `bEnabled`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*%n 状態*  
+ [in]*bHighlighted*  
+ [in]*bPressed*  
+ [in]*bEnabled*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2007::OnDrawComboBorder  
 
@@ -888,14 +888,14 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bDisabled`  
- [入力] `bIsDropped`  
- [入力] `bIsHighlighted`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bDisabled*  
+ [in]*bIsDropped*  
+ [in]*bIsHighlighted*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2007::OnDrawComboDropButton  
 
@@ -911,14 +911,14 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bDisabled`  
- [入力] `bIsDropped`  
- [入力] `bIsHighlighted`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bDisabled*  
+ [in]*bIsDropped*  
+ [in]*bIsHighlighted*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawdefaultribbonimage"></a>  CMFCVisualManagerOffice2007::OnDrawDefaultRibbonImage  
 
@@ -933,13 +933,13 @@ virtual void OnDrawDefaultRibbonImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectImage`  
- [入力] `bIsDisabled`  
- [入力] `bIsPressed`  
- [入力] `bIsHighlighted`  
+ [in]*pDC*  
+ [in]*rectImage*  
+ [in]*bIsDisabled*  
+ [in]*bIsPressed*  
+ [in]*bIsHighlighted*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondraweditborder"></a>  CMFCVisualManagerOffice2007::OnDrawEditBorder  
 
@@ -954,13 +954,13 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bDisabled`  
- [入力] `bIsHighlighted`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bDisabled*  
+ [in]*bIsHighlighted*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerOffice2007::OnDrawFloatingToolbarBorder  
 
@@ -974,12 +974,12 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pToolBar`  
- [入力] `rectBorder`  
- [入力] `rectBorderSize`  
+ [in]*pDC*  
+ [in]*pToolBar*  
+ [in]*rectBorder*  
+ [in]*rectBorderSize*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2007::OnDrawHeaderCtrlBorder  
 
@@ -994,13 +994,13 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pCtrl`  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bIsPressed`  
- [入力] `bIsHighlighted`  
+ [in]*pCtrl*  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bIsPressed*  
+ [in]*bIsHighlighted*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2007::OnDrawMenuBorder  
 
@@ -1013,11 +1013,11 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pMenu`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pMenu*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenucheck"></a>  CMFCVisualManagerOffice2007::OnDrawMenuCheck  
 
@@ -1032,13 +1032,13 @@ virtual void OnDrawMenuCheck(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rect`  
- [入力] `bHighlight`  
- [入力] `bIsRadio`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*bHighlight*  
+ [in]*bIsRadio*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuitembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuItemButton  
 
@@ -1053,13 +1053,13 @@ virtual void OnDrawMenuItemButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rectButton`  
- [入力] `bHighlight`  
- [入力] `bDisabled`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rectButton*  
+ [in]*bHighlight*  
+ [in]*bDisabled*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenulabel"></a>  CMFCVisualManagerOffice2007::OnDrawMenuLabel  
 
@@ -1071,12 +1071,12 @@ virtual COLORREF OnDrawMenuLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*rect*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuresizebar"></a>  CMFCVisualManagerOffice2007::OnDrawMenuResizeBar  
 
@@ -1089,11 +1089,11 @@ virtual void OnDrawMenuResizeBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `nResizeFlags`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*nResizeFlags*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuScrollButton  
 
@@ -1109,14 +1109,14 @@ virtual void OnDrawMenuScrollButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bIsScrollDown`  
- [入力] `bIsHighlited`  
- [入力] `bIsPressed`  
- [入力] `bIsDisabled`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bIsScrollDown*  
+ [in]*bIsHighlited*  
+ [in]*bIsPressed*  
+ [in]*bIsDisabled*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerOffice2007::OnDrawMenuSystemButton  
 
@@ -1131,13 +1131,13 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `uiSystemCommand`  
- [入力] `nStyle`  
- [入力] `bHighlight`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*uiSystemCommand*  
+ [in]*nStyle*  
+ [in]*bHighlight*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerOffice2007::OnDrawMiniFrameBorder  
 
@@ -1151,12 +1151,12 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pFrameWnd`  
- [入力] `rectBorder`  
- [入力] `rectBorderSize`  
+ [in]*pDC*  
+ [in]*pFrameWnd*  
+ [in]*rectBorder*  
+ [in]*rectBorderSize*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookBarSplitter  
 
@@ -1168,10 +1168,10 @@ virtual void OnDrawOutlookBarSplitter(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectSplitter`  
+ [in]*pDC*  
+ [in]*rectSplitter*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawOutlookPageButtonBorder  
 
@@ -1185,12 +1185,12 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectBtn`  
- [入力] `bIsHighlighted`  
- [入力] `bIsPressed`  
+ [in]*pDC*  
+ [in]*rectBtn*  
+ [in]*bIsHighlighted*  
+ [in]*bIsPressed*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2007::OnDrawPaneCaption  
 
@@ -1205,15 +1205,15 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `bActive`  
- [入力] `rectCaption`  
- [入力] `rectButtons`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*描画*  
+ [in]*rectCaption*  
+ [in]*rectButtons*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2007::OnDrawPopupWindowCaption  
 
@@ -1226,13 +1226,13 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectCaption`  
- [入力] `pPopupWnd`  
+ [in]*pDC*  
+ [in]*rectCaption*  
+ [in]*pPopupWnd*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawpropertysheetlistitem"></a>  CMFCVisualManagerOffice2007::OnDrawPropertySheetListItem  
 
@@ -1247,15 +1247,15 @@ virtual COLORREF OnDrawPropertySheetListItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pParent`  
- [入力] `rect`  
- [入力] `bIsHighlihted`  
- [入力] `bIsSelected`  
+ [in]*pDC*  
+ [in]*pParent*  
+ [in]*rect*  
+ [in]*bIsHighlihted*  
+ [in]*bIsSelected*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonApplicationButton  
 
@@ -1267,10 +1267,10 @@ virtual void OnDrawRibbonApplicationButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonBorder  
 
@@ -1282,10 +1282,10 @@ virtual void OnDrawRibbonButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonButtonsGroup  
 
@@ -1298,13 +1298,13 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pGroup`  
- [入力] `rectGroup`  
+ [in]*pDC*  
+ [in]*pGroup*  
+ [in]*rectGroup*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribboncaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaption  
 
@@ -1318,12 +1318,12 @@ virtual void OnDrawRibbonCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `rectCaption`  
- [入力] `rectText`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rectCaption*  
+ [in]*rectText*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCaptionButton  
 
@@ -1335,10 +1335,10 @@ virtual void OnDrawRibbonCaptionButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribboncategory"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategory  
 
@@ -1351,11 +1351,11 @@ virtual void OnDrawRibbonCategory(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pCategory`  
- [入力] `rectCategory`  
+ [in]*pDC*  
+ [in]*pCategory*  
+ [in]*rectCategory*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryCaption  
 
@@ -1367,12 +1367,12 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pContextCaption`  
+ [in]*pDC*  
+ [in]*pContextCaption*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryScroll  
 
@@ -1384,10 +1384,10 @@ virtual void OnDrawRibbonCategoryScroll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pScroll`  
+ [in]*pDC*  
+ [in]*pScroll*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCategoryTab  
 
@@ -1400,13 +1400,13 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pTab`  
- [入力] `bIsActive`  
+ [in]*pDC*  
+ [in]*pTab*  
+ [in]*bIsActive*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonCheckBoxOnList  
 
@@ -1421,13 +1421,13 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pCheckBox`  
- [入力] `rect`  
- [入力] `bIsSelected`  
- [入力] `bHighlighted`  
+ [in]*pDC*  
+ [in]*pCheckBox*  
+ [in]*rect*  
+ [in]*bIsSelected*  
+ [in]*bHighlighted*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButton  
 
@@ -1439,10 +1439,10 @@ virtual void OnDrawRibbonDefaultPaneButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbondefaultpanebuttonindicator"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonDefaultPaneButtonIndicator  
 
@@ -1457,13 +1457,13 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rect`  
- [入力] `bIsSelected`  
- [入力] `bHighlighted`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*bIsSelected*  
+ [in]*bHighlighted*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbongalleryborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryBorder  
 
@@ -1476,11 +1476,11 @@ virtual void OnDrawRibbonGalleryBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rectBorder`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rectBorder*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbongallerybutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonGalleryButton  
 
@@ -1492,10 +1492,10 @@ virtual void OnDrawRibbonGalleryButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonkeytip"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonKeyTip  
 
@@ -1509,12 +1509,12 @@ virtual void OnDrawRibbonKeyTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pElement`  
- [入力] `rect`  
- [入力] `str`  
+ [in]*pDC*  
+ [in]*pElement*  
+ [in]*rect*  
+ [in]*str*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelButtonBorder  
 
@@ -1526,10 +1526,10 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMainPanelFrame  
 
@@ -1542,11 +1542,11 @@ virtual void OnDrawRibbonMainPanelFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pPanel`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pPanel*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonMenuCheckFrame  
 
@@ -1559,11 +1559,11 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonpanel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanel  
 
@@ -1577,14 +1577,14 @@ virtual COLORREF OnDrawRibbonPanel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pPanel`  
- [入力] `rectPanel`  
- [入力] `rectCaption`  
+ [in]*pDC*  
+ [in]*pPanel*  
+ [in]*rectPanel*  
+ [in]*rectCaption*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonPanelCaption  
 
@@ -1597,11 +1597,11 @@ virtual void OnDrawRibbonPanelCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pPanel`  
- [入力] `rectCaption`  
+ [in]*pDC*  
+ [in]*pPanel*  
+ [in]*rectCaption*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonProgressBar  
 
@@ -1616,13 +1616,13 @@ virtual void OnDrawRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pProgress`  
- [入力] `rectProgress`  
- [入力] `rectChunk`  
- [入力] `bInfiniteMode`  
+ [in]*pDC*  
+ [in]*pProgress*  
+ [in]*rectProgress*  
+ [in]*rectChunk*  
+ [in]*bInfiniteMode*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonRecentFilesFrame  
 
@@ -1635,11 +1635,11 @@ virtual void OnDrawRibbonRecentFilesFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pPanel`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pPanel*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderChannel  
 
@@ -1652,11 +1652,11 @@ virtual void OnDrawRibbonSliderChannel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pSlider`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pSlider*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderThumb  
 
@@ -1672,14 +1672,14 @@ virtual void OnDrawRibbonSliderThumb(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pSlider`  
- [入力] `rect`  
- [入力] `bIsHighlighted`  
- [入力] `bIsPressed`  
- [入力] `bIsDisabled`  
+ [in]*pDC*  
+ [in]*pSlider*  
+ [in]*rect*  
+ [in]*bIsHighlighted*  
+ [in]*bIsPressed*  
+ [in]*bIsDisabled*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonSliderZoomButton  
 
@@ -1696,15 +1696,15 @@ virtual void OnDrawRibbonSliderZoomButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pSlider`  
- [入力] `rect`  
- [入力] `bIsZoomOut`  
- [入力] `bIsHighlighted`  
- [入力] `bIsPressed`  
- [入力] `bIsDisabled`  
+ [in]*pDC*  
+ [in]*pSlider*  
+ [in]*rect*  
+ [in]*bIsZoomOut*  
+ [in]*bIsHighlighted*  
+ [in]*bIsPressed*  
+ [in]*bIsDisabled*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonStatusBarPane  
 
@@ -1717,13 +1717,13 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `pPane`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*pPane*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManagerOffice2007::OnDrawRibbonTabsFrame  
 
@@ -1736,13 +1736,13 @@ virtual COLORREF OnDrawRibbonTabsFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pWndRibbonBar`  
- [入力] `rectTab`  
+ [in]*pDC*  
+ [in]*pWndRibbonBar*  
+ [in]*rectTab*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2007::OnDrawScrollButtons  
 
@@ -1757,13 +1757,13 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `nBorderSize`  
- [入力] `iImage`  
- [入力] `bHilited`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*nBorderSize*  
+ [in]*画像*  
+ [in]*bHilited*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2007::OnDrawSeparator  
 
@@ -1777,12 +1777,12 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `rect`  
- [入力] `bIsHoriz`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
+ [in]*bIsHoriz*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2007::OnDrawShowAllMenuItems  
 
@@ -1795,11 +1795,11 @@ virtual void OnDrawShowAllMenuItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `state`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*状態*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarPaneBorder  
 
@@ -1814,13 +1814,13 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `rectPane`  
- [入力] `uiID`  
- [入力] `nStyle`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rectPane*  
+ [in]*uiID*  
+ [in]*nStyle*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2007::OnDrawStatusBarSizeBox  
 
@@ -1833,11 +1833,11 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pStatBar`  
- [入力] `rectSizeBox`  
+ [in]*pDC*  
+ [in]*pStatBar*  
+ [in]*rectSizeBox*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2007::OnDrawTab  
 
@@ -1852,13 +1852,13 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectTab`  
- [入力] `iTab`  
- [入力] `bIsActive`  
- [入力] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rectTab*  
+ [in]*iTab*  
+ [in]*bIsActive*  
+ [in]*pTabWnd*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2007::OnDrawTabsButtonBorder  
 
@@ -1873,13 +1873,13 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `pButton`  
- [入力] `uiState`  
- [入力] `pWndTab`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pButton*  
+ [in]*uiState*  
+ [in]*pWndTab*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2007::OnDrawTask  
 
@@ -1894,13 +1894,13 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pTask`  
- [入力] `pIcons`  
- [入力] `bIsHighlighted`  
- [入力] `bIsSelected`  
+ [in]*pDC*  
+ [in]*pTask*  
+ [in]*pIcons*  
+ [in]*bIsHighlighted*  
+ [in]*bIsSelected*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTasksGroupCaption  
 
@@ -1915,13 +1915,13 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pGroup`  
- [入力] `bIsHighlighted`  
- [入力] `bIsSelected`  
- [入力] `bCanCollapse`  
+ [in]*pDC*  
+ [in]*pGroup*  
+ [in]*bIsHighlighted*  
+ [in]*bIsSelected*  
+ [in]*bCanCollapse*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2007::OnDrawTearOffCaption  
 
@@ -1934,11 +1934,11 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bIsActive`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bIsActive*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onerasemdiclientarea"></a>  CMFCVisualManagerOffice2007::OnEraseMDIClientArea  
 
@@ -1950,12 +1950,12 @@ virtual BOOL OnEraseMDIClientArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectClient`  
+ [in]*pDC*  
+ [in]*rectClient*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2007::OnEraseTabsArea  
 
@@ -1968,11 +1968,11 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pTabWnd*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2007::OnEraseTabsButton  
 
@@ -1986,12 +1986,12 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `pButton`  
- [入力] `pWndTab`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pButton*  
+ [in]*pWndTab*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2007::OnEraseTabsFrame  
 
@@ -2004,13 +2004,13 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pTabWnd*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2007::OnFillBarBackground  
 
@@ -2025,13 +2025,13 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `rectClient`  
- [入力] `rectClip`  
- [入力] `bNCArea`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rectClient*  
+ [in]*rectClip*  
+ [in]*bNCArea*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2007::OnFillButtonInterior  
 
@@ -2045,12 +2045,12 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rect`  
- [入力] `state`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*状態*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManagerOffice2007::OnFillCaptionBarButton  
 
@@ -2068,18 +2068,18 @@ virtual COLORREF OnFillCaptionBarButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pBar`  
- [入力] `rect`  
- [入力] `bIsPressed`  
- [入力] `bIsHighlighted`  
- [入力] `bIsDisabled`  
- [入力] `bHasDropDownArrow`  
- [入力] `bIsSysButton`  
+ [in]*pDC*  
+ [in]*pBar*  
+ [in]*rect*  
+ [in]*bIsPressed*  
+ [in]*bIsHighlighted*  
+ [in]*bIsDisabled*  
+ [in]*bHasDropDownArrow*  
+ [in]*bIsSysButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2007::OnFillHighlightedArea  
 
@@ -2093,12 +2093,12 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `pBrush`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*pBrush*  
+ [in]*pButton*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerOffice2007::OnFillMiniFrameCaption  
 
@@ -2112,14 +2112,14 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectCaption`  
- [入力] `pFrameWnd`  
- [入力] `bActive`  
+ [in]*pDC*  
+ [in]*rectCaption*  
+ [in]*pFrameWnd*  
+ [in]*描画*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2007::OnFillOutlookBarCaption  
 
@@ -2132,11 +2132,11 @@ virtual void OnFillOutlookBarCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectCaption`  
- [入力] `clrText`  
+ [in]*pDC*  
+ [in]*rectCaption*  
+ [in]*clrText*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2007::OnFillOutlookPageButton  
 
@@ -2151,13 +2151,13 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
- [入力] `bIsHighlighted`  
- [入力] `bIsPressed`  
- [入力] `clrText`  
+ [in]*pDC*  
+ [in]*rect*  
+ [in]*bIsHighlighted*  
+ [in]*bIsPressed*  
+ [in]*clrText*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2007::OnFillPopupWindowBackground  
 
@@ -2169,10 +2169,10 @@ virtual void OnFillPopupWindowBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillribbonbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonButton  
 
@@ -2184,12 +2184,12 @@ virtual COLORREF OnFillRibbonButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillribbonedit"></a>  CMFCVisualManagerOffice2007::OnFillRibbonEdit  
 
@@ -2208,17 +2208,17 @@ virtual void OnFillRibbonEdit(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pEdit`  
- [入力] `rect`  
- [入力] `bIsHighlighted`  
- [入力] `bIsPaneHighlighted`  
- [入力] `bIsDisabled`  
- [入力] `clrText`  
- [入力] `clrSelBackground`  
- [入力] `clrSelText`  
+ [in]*pDC*  
+ [in]*pEdit*  
+ [in]*rect*  
+ [in]*bIsHighlighted*  
+ [in]*bIsPaneHighlighted*  
+ [in]*bIsDisabled*  
+ [in]*clrText*  
+ [in]*clrSelBackground*  
+ [in]*clrSelText*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMainPanelButton  
 
@@ -2230,12 +2230,12 @@ virtual COLORREF OnFillRibbonMainPanelButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
+ [in]*pDC*  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManagerOffice2007::OnFillRibbonMenuFrame  
 
@@ -2248,11 +2248,11 @@ virtual void OnFillRibbonMenuFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pPanel`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pPanel*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManagerOffice2007::OnFillRibbonQuickAccessToolBarPopup  
 
@@ -2265,11 +2265,11 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pMenuBar`  
- [入力] `rect`  
+ [in]*pDC*  
+ [in]*pMenuBar*  
+ [in]*rect*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2007::OnFillTab  
 
@@ -2285,14 +2285,14 @@ virtual void OnFillTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectFill`  
- [入力] `pbrFill`  
- [入力] `iTab`  
- [入力] `bIsActive`  
- [入力] `pTabWnd`  
+ [in]*pDC*  
+ [in]*rectFill*  
+ [in]*pbrFill*  
+ [in]*iTab*  
+ [in]*bIsActive*  
+ [in]*pTabWnd*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerOffice2007::OnHighlightMenuItem  
 
@@ -2306,12 +2306,12 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `pButton`  
- [入力] `rect`  
- [入力] `clrText`  
+ [in]*pDC*  
+ [in]*pButton*  
+ [in]*rect*  
+ [in]*clrText*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2007::OnHighlightRarelyUsedMenuItems  
 
@@ -2323,10 +2323,10 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- [入力] `rectRarelyUsed`  
+ [in]*pDC*  
+ [in]*rectRarelyUsed*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onncactivate"></a>  CMFCVisualManagerOffice2007::OnNcActivate  
 
@@ -2338,12 +2338,12 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
- [入力] `bActive`  
+ [in]*pWnd*  
+ [in]*描画*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onncpaint"></a>  CMFCVisualManagerOffice2007::OnNcPaint  
 
@@ -2356,13 +2356,13 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
- [入力] `lstSysButtons`  
- [入力] `rectRedraw`  
+ [in]*pWnd*  
+ [in]*lstSysButtons*  
+ [in]*rectRedraw*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsetwindowregion"></a>  CMFCVisualManagerOffice2007::OnSetWindowRegion  
 
@@ -2374,12 +2374,12 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
- [入力] `sizeWindow`  
+ [in]*pWnd*  
+ [in]*sizeWindow*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2007::OnUpdateSystemColors  
 
@@ -2388,7 +2388,7 @@ virtual BOOL OnSetWindowRegion(
 virtual void OnUpdateSystemColors();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setresourcehandle"></a>  CMFCVisualManagerOffice2007::SetResourceHandle  
 
@@ -2398,9 +2398,9 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hinstRes`  
+ [in]*hinstRes*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

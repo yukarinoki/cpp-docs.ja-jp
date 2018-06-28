@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d83765309f6df860b190d3ea2114e7e0fd35724
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e0962d4a0c97db27f7d5ae31ec58eb26f20a7f7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367634"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038394"
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget クラス
 ID2D1HwndRenderTarget のラッパーです。  
@@ -81,7 +81,7 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|ID2D1HwndRenderTarget オブジェクトへのポインター。|  
   
@@ -92,7 +92,7 @@ class CHwndRenderTarget : public CRenderTarget;
   
  [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="attach"></a>  CHwndRenderTarget::Attach  
@@ -103,7 +103,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pTarget`  
+ *pTarget*  
  既存のレンダー ターゲット インターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState  
@@ -124,7 +124,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hwnd`  
+ *hwnd*  
  これに関連付けられている HWND レンダー ターゲット  
   
 ##  <a name="create"></a>  CHwndRenderTarget::Create  
@@ -135,7 +135,7 @@ BOOL Create(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hWnd`  
+ *hWnd*  
  これに関連付けられている HWND レンダー ターゲット  
   
 ### <a name="return-value"></a>戻り値  
@@ -196,7 +196,7 @@ BOOL ReCreate(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hWnd`  
+ *hWnd*  
  これに関連付けられている HWND レンダー ターゲット  
   
 ### <a name="return-value"></a>戻り値  
@@ -210,7 +210,7 @@ BOOL Resize(const CD2DSizeU& size);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  デバイス ピクセル単位で、レンダー ターゲットの新しいサイズ  
   
 ### <a name="return-value"></a>戻り値  

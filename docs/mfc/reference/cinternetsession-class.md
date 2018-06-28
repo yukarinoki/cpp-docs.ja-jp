@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa89f17a546c0b1aec6e1ed53a320f57660687
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322408"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041111"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -422,7 +422,7 @@ HTTP サーバー名を含む文字列へのポインター。
 アクセスのパスワードを含む文字列へのポインター。
 
 *dwflags*  
-任意の組み合わせ、`INTERNET_FLAG_*`フラグ。 表を参照して、**解説**のセクション[しないで](../../mfc/reference/chttpconnection-class.md#openrequest)の詳細については`dwFlags`値。
+任意の組み合わせ、`INTERNET_FLAG_*`フラグ。 表を参照して、**解説**のセクション[しないで](../../mfc/reference/chttpconnection-class.md#openrequest)の詳細については*dwFlags*値。
 
 ### <a name="return-value"></a>戻り値
 

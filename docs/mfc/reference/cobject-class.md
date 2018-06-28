@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377241"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041712"
 ---
 # <a name="cobject-class"></a>CObject クラス
 MFC ライブラリの重要な基底クラスです。  
@@ -72,7 +72,7 @@ class AFX_NOVTABLE CObject
 |[CObject::operator delete](#operator_delete)|特殊な**削除**演算子。|  
 |[新しい CObject::operator](#operator_new)|特殊な**新しい**演算子。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  などのライブラリのクラスだけでなく、ルートとして機能し`CFile`と`CObList`、記述するクラスについてもします。 `CObject` などの基本的なサービスを提供します  
   
 -   シリアル化のサポート  
@@ -96,7 +96,7 @@ class AFX_NOVTABLE CObject
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CObject`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="assertvalid"></a>  Cobject::assertvalid  
@@ -106,7 +106,7 @@ class AFX_NOVTABLE CObject
 virtual void AssertValid() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `AssertValid` 内部状態をチェックして、このオブジェクトの有効性チェックを実行します。 ライブラリのデバッグ バージョンで`AssertValid`アサートし、アサーションが失敗した行番号とファイル名を一覧表示するメッセージを使用してプログラムを終了したがって可能性があります。  
   
  オーバーライドする必要があります、独自のクラスを記述するときに、`AssertValid`自分や、クラスの他のユーザーの診断サービスを提供する関数。 オーバーライドされた`AssertValid`通常を呼び出す、`AssertValid`派生クラス独自のデータ メンバーをチェックする前に、基底クラスの関数。  
@@ -134,10 +134,10 @@ CObject(const CObject& objectSrc);
  *objectSrc*  
  別の参照 `CObject`  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定のバージョンは自動的には、派生クラスのコンス トラクターによって呼び出されます。  
   
- クラスがシリアル化可能な場合 (組み込まれています、`IMPLEMENT_SERIAL`マクロ)、クラス宣言に既定のコンス トラクター (引数なしのコンス トラクター) を持つ必要があります。 既定のコンス トラクターを必要がない場合、private を宣言または"empty"のコンス トラクターを保護します。 詳細については、次を参照してください。[を使用して CObject](../../mfc/using-cobject.md)です。  
+ クラスがシリアル化可能な場合 (それが組み込まれており、IMPLEMENT_SERIAL マクロ)、クラス宣言に既定のコンス トラクター (引数なしのコンス トラクター) を持つ必要があります。 既定のコンス トラクターを必要がない場合、private を宣言または"empty"のコンス トラクターを保護します。 詳細については、次を参照してください。[を使用して CObject](../../mfc/using-cobject.md)です。  
   
  標準 C++ 既定クラスのコピー コンス トラクターは、メンバー間でコピーします。 プライベートのプレゼンス`CObject`クラスのコピー コンス トラクターが必要なのに使用できない場合、コピー コンス トラクターがコンパイラのエラー メッセージを保証します。 クラスは、この機能を必要とする場合は、コピー コンス トラクターを指定する必要がありますしたがってです。  
   
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dc`  
+ *dc*  
  通常、ダンプの診断ダンプ コンテキスト`afxDump`です。  
   
-### <a name="remarks"></a>コメント  
- オーバーライドする必要があります、独自のクラスを記述するときに、`Dump`自分や、クラスの他のユーザーの診断サービスを提供する関数。 オーバーライドされた`Dump`通常を呼び出す、`Dump`派生クラス独自のデータ メンバーを印刷する前に、基底クラスの関数。 `CObject::Dump` クラスで使用する場合は、クラス名を出力、`IMPLEMENT_DYNAMIC`または`IMPLEMENT_SERIAL`マクロです。  
+### <a name="remarks"></a>Remarks  
+ オーバーライドする必要があります、独自のクラスを記述するときに、`Dump`自分や、クラスの他のユーザーの診断サービスを提供する関数。 オーバーライドされた`Dump`通常を呼び出す、`Dump`派生クラス独自のデータ メンバーを印刷する前に、基底クラスの関数。 `CObject::Dump` クラスで使用する場合は、クラス名を出力、`IMPLEMENT_DYNAMIC`または IMPLEMENT_SERIAL マクロです。  
   
 > [!NOTE]
 >  `Dump`関数がその出力の末尾に改行文字に出力することはありません。  
@@ -186,7 +186,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造です。 このオブジェクトのクラスに対応することはありません**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  1 つを使用する必要がある`CRuntimeClass`構造`CObject`-クラスを派生します。 構造体のメンバーは次のとおりです。  
   
 - **LPCSTR m_lpszClassName** ASCII クラス名を含む null で終わる文字列。  
@@ -216,14 +216,14 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pClass`  
+ *pClass*  
  ポインター、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造に関連付けられている、 `CObject`-クラスを派生します。  
   
 ### <a name="return-value"></a>戻り値  
  オブジェクトが、クラスに対応している場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- この関数をテスト`pClass`するかどうか (1) は、指定したクラスのオブジェクト、または (2) は、指定したクラスから派生したクラスのオブジェクトを参照してください。 この機能で宣言されたクラスに対してのみ、 [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)、 [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)、または[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロです。  
+### <a name="remarks"></a>Remarks  
+ この関数をテスト*pClass*するかどうか (1) は、指定したクラスのオブジェクト、または (2) は、指定したクラスから派生したクラスのオブジェクトを参照してください。 この機能で宣言されたクラスに対してのみ、 [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)、 [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)、または[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロです。  
   
  C++ ポリモーフィズムの機能が活用できないためには、広範囲にこの関数を使用しないでください。 仮想関数を代わりに使用します。  
   
@@ -242,7 +242,7 @@ BOOL IsSerializable() const;
 ### <a name="return-value"></a>戻り値  
  この場合は 0 以外のオブジェクトをシリアル化できます。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  シリアル化できるクラスは、その宣言を含める必要があります、 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロ、および実装を含める必要があります、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロです。  
   
 > [!NOTE]
@@ -271,7 +271,7 @@ void PASCAL operator delete(
     int nLine);
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  デバッグ バージョンで演算子**削除**メモリ リークを検出するように設計割り当て監視のスキームに参加します。  
   
  コード行を使用する場合  
@@ -303,7 +303,7 @@ void* PASCAL operator new(
     int nLine);
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  デバッグ バージョンで演算子**新しい**メモリ リークを検出するように設計割り当て監視のスキームに参加します。  
   
  コード行を使用する場合  
@@ -330,10 +330,10 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ar`  
+ *ar*  
  A`CArchive`またはからにシリアル化するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーバーライドする必要があります`Serialize`シリアル化しようとする各クラスにします。 オーバーライドされた`Serialize`呼び出す必要があります最初、`Serialize`基底クラスの関数。  
   
  使用することも必要があります、 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)クラスの宣言でマクロを使用する必要があります、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロで実装します。  

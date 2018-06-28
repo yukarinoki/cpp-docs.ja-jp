@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2b2e8adccd77862b445d7e91df0b808967a31d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369165"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037422"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton クラス
 アプリケーション ウィンドウの左上隅に表示される特殊なボタンを実装します。 このボタンがクリックされると、通常は、一般的な **[ファイル]** メニューのコマンド ( **[開く]**、 **[上書き保存]**、 **[終了]** など) を含むメニューが開かれます。  
@@ -67,7 +67,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
   
  [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxRibbonBar.h  
   
 ##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
@@ -86,7 +86,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
  `hBmp`  
  アプリケーション ボタンに表示するビットマップへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リボン アプリケーション ボタンは、アプリケーション ウィンドウの左上隅にある特殊なボタンです。 アプリケーションが通常を含む一般的なメニューを開き、ユーザーには、このボタンがクリックすると、**ファイル**などのコマンド、**開く**、**保存**、および**終了**.  
   
 ##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
@@ -98,13 +98,13 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiBmpResID`  
+ [in]*uiBmpResID*  
  アプリケーション ボタンに表示するイメージのリソース ID。  
   
- [入力] `hBmp`  
+ [in]*hBmp*  
  アプリケーション ボタンに表示するビットマップへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを使用して、ボタンを作成した後、リボン アプリケーション ボタンを新しいイメージを割り当てます。 アプリケーション ボタンは、アプリケーション ウィンドウの左上隅にあります。  
   
 ## <a name="see-also"></a>関連項目  

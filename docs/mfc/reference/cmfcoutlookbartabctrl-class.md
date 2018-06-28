@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373304"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042314"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Microsoft Outlook の **ナビゲーション ウィンドウ** と同じ外観を持つタブ コントロールです。  
@@ -112,7 +112,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |[CMFCOutlookBarTabCtrl::SetToolbarImageList](#settoolbarimagelist)|Outlook 2003 モードで、Outlook バーの下部に表示されるアイコンを含むビットマップを設定 (を参照してください[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md))。|  
 |[CMFCOutlookBarTabCtrl::SetVisiblePageButtons](#setvisiblepagebuttons)||  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ドッキングのサポートのある Outlook バーを作成するには、使用、 `CMFCOutlookBar` Outlook バー タブ コントロールをホストするオブジェクト。 詳細については、次を参照してください。 [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)です。  
   
 ## <a name="example"></a>例  
@@ -132,7 +132,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxoutlookbartabctrl.h  
   
 ##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl  
@@ -148,27 +148,27 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndCtrl`  
+ [in]*pWndCtrl*  
  追加するコントロールへのポインター。  
   
- [入力] `lpszName`  
+ [in]*lpszName*  
  タブの名前を指定します。  
   
- [入力] `bDetachable`  
+ [in]*bDetachable*  
  場合`TRUE`のページが切り離し可能として作成されます。  
   
- [入力] `nImageID`  
+ [in]*nImageID*  
  新しいタブに表示されるイメージの内部のイメージ リストのイメージのインデックス。  
   
- [入力] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定、afx _ `CBRS_`* ラップされたドッキング ペインのスタイル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Outlook バーの新しいページにコントロールを追加するのにには、この関数を使用します。  
   
  この関数で内部的には[cmfcbasetabctrl::addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)です。  
   
- 設定した場合`bDetachable`に`TRUE`、`AddControl`内部的に作成、`CDockablePaneAdapter`オブジェクトを追加したコントロールをラップします。 ランタイム クラスにタブ付きウィンドウのランタイム クラスが自動的に設定`CMFCOutlookBar`とフローティング フレームのランタイム クラス`CMultiPaneFrameWnd`です。  
+ 設定した場合*bDetachable*に`TRUE`、`AddControl`内部的に作成、`CDockablePaneAdapter`オブジェクトを追加したコントロールをラップします。 ランタイム クラスにタブ付きウィンドウのランタイム クラスが自動的に設定`CMFCOutlookBar`とフローティング フレームのランタイム クラス`CMultiPaneFrameWnd`です。  
   
 ### <a name="example"></a>例  
  次の例で使用する方法、`AddControl`メソッドで、`CMFCOutlookBarTabCtrl`クラスです。 このコード スニペットの一部である、 [Outlook デモ サンプル](../../visual-cpp-samples.md)です。  
@@ -185,7 +185,7 @@ virtual BOOL CanShowFewerPageButtons() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` 複数のボタンがある場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Outlook バー タブ コントロールは動的に追加またはタブをどの程度のスペースが使用可能なに応じて表示から削除します。 このメソッドは、そのプロセスを支援するためにフレームワークによって使用されます。  
   
 ##  <a name="canshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
@@ -198,7 +198,7 @@ virtual BOOL CanShowMorePageButtons() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` 現在表示されていないボタンがある場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Outlook バー タブ コントロールは、動的に追加または空き方法に応じて、表示からタブを削除します。 このメソッドは、そのプロセスを支援するためにフレームワークによって使用されます。  
   
 ##  <a name="create"></a>  CMFCOutlookBarTabCtrl::Create  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `rect`  
+ [in]*rect*  
  初期サイズと位置をピクセル単位で指定します。  
   
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  親ウィンドウへのポインター。 `NULL` にすることはできません。  
   
- [入力] `nID`  
+ [in]*nID*  
  コントロールの id。  
   
 ### <a name="return-value"></a>戻り値  
  コントロールが正常に作成されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 通常、outlook バー タブ コントロールが作成されたときに[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)コントロール、`WM_CREATE`プロセスのメッセージ。  
+### <a name="remarks"></a>Remarks  
+ 通常、outlook バー タブ コントロールが作成されたときに[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)プロセスの WM_CREATE メッセージを制御します。  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  アクティブなタブの間で切り替え中に実行されるアニメーションが有効になっているかどうかを指定します。  
@@ -235,10 +235,10 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  アニメーションを有効または無効になっているかどうかを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アニメーションを無効にするには、この関数を呼び出します。 ユーザーは、タブ ページを開き、ページのキャプションはアニメーションが有効になっている場合に上下をスライドします。 アニメーションが無効になっている場合、ページがアクティブになった直後にします。  
   
  既定では、アニメーションが有効にします。  
@@ -251,10 +251,10 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bEnable`  
+ *bEnable*  
  場合`TRUE`、テキスト ラベルのインプレース編集を有効にします。 場合`FALSE`、インプレース編集を無効にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数では、有効またはインプレースでのタブ ページ ボタンのテキスト ラベルの編集を無効にします。 既定では、インプレース編集は無効です。  
   
 ##  <a name="enablescrollbuttons"></a>  CMFCOutlookBarTabCtrl::EnableScrollButtons  
@@ -268,16 +268,16 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  スクロール ボタンを表示するかどうかを判断します。  
   
- [入力] `bIsUp`  
+ [in]*bIsUp*  
  上部のスクロール バーが表示されるかどうかを判断します。  
   
- [入力] `bIsDown`  
+ [in]*bIsDown*  
  下部のスクロール バーが表示されるかどうかを判断します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  スクロール ボタンの表示を有効にします。 このメソッドは、スクロール ボタンを復元するアクティブなタブが変更されたときにフレームワークによって呼び出されます。  
   
 ##  <a name="getbordersize"></a>  CMFCOutlookBarTabCtrl::GetBorderSize  
@@ -299,7 +299,7 @@ int GetVisiblePageButtons() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isanimation"></a>  CMFCOutlookBarTabCtrl::IsAnimation  
  アクティブなタブの間で切り替え中に実行されるアニメーションが有効になっているかどうかを指定します。  
@@ -311,7 +311,7 @@ static BOOL IsAnimation();
 ### <a name="return-value"></a>戻り値  
  アニメーションが有効である場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す、 [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)を有効にするにまたはアニメーションを無効にします。  
   
 ##  <a name="ismode2003"></a>  CMFCOutlookBarTabCtrl::IsMode2003  
@@ -324,7 +324,7 @@ BOOL IsMode2003() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` Outlook タブ コントロール バーが Outlook 2003 モードである場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この値によって設定されます[CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003)です。  
   
 ##  <a name="onshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
@@ -334,7 +334,7 @@ BOOL IsMode2003() const;
 virtual void OnShowFewerPageButtons();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、コントロールがサイズ変更されたときに表示されるページ タブのボタンの数を調整します。  
   
 ##  <a name="onshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
@@ -344,7 +344,7 @@ virtual void OnShowFewerPageButtons();
 virtual void OnShowMorePageButtons();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、コントロールがサイズ変更されたときに表示されているタブ ページ ボタンの数を調整します。  
   
 ##  <a name="onshowoptions"></a>  CMFCOutlookBarTabCtrl::OnShowOptions  
@@ -354,7 +354,7 @@ virtual void OnShowMorePageButtons();
 virtual void OnShowOptions();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **ナビゲーション ウィンドウのオプション** ダイアログ ボックスで、ユーザーにタブ ページのボタンが、表示するかを選択および順序が表示されます。  
   
  このメソッドは、フレームワークによって、ユーザーを選択すると、**ナビゲーション ウィンドウのオプション**コントロールのカスタマイズ メニューからメニュー項目。  
@@ -367,13 +367,13 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iTab`  
+ [in]*iTab*  
  開く タブの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定したタブが正常に開かれた場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アクティブなタブの設定の視覚効果は、アニメーションを有効にするかどうかによって異なります。 詳細については、次を参照してください。 [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)です。  
   
 ##  <a name="setbordersize"></a>  CMFCOutlookBarTabCtrl::SetBorderSize  
@@ -384,10 +384,10 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nBorderSize`  
+ [in]*nBorderSize*  
  新しい境界線のサイズをピクセル単位で指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  新しい境界線のサイズを設定し、outlook のウィンドウ レイアウトを再計算します。  
   
 ##  <a name="setpagebuttontextalign"></a>  CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
@@ -400,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiAlign`  
+ [in]*uiAlign*  
  テキストの配置を指定します。  
   
- [入力] `bRedraw`  
+ [in]*bRedraw*  
  場合`TRUE`outlook のウィンドウが再描画されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数を使用すると、ページのボタンのテキストの配置を変更できます。  
   
- `uiAlign` 次の値のいずれかを指定できます。  
+ *uiAlign*値は次のいずれかになります。  
   
 |定数|説明|  
 |--------------|-------------|  
@@ -430,19 +430,19 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiID`  
+ [in]*uiID*  
  読み込むイメージのリソース ID を指定します。  
   
- [入力] `cx`  
+ [in]*cx*  
  イメージ リストには、ピクセル単位でイメージの幅を指定します。  
   
- [入力] `clrTransp`  
+ [in]*clrTransp*  
  透明色を指定する RGB 値。  
   
 ### <a name="return-value"></a>戻り値  
  返します`TRUE`成功した場合、それ以外の場合を返します`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数を使用すると、Microsoft Office 2003 モードでのツール バー ボタンに表示されるイメージがイメージ リストをアタッチできます。 イメージ インデックス ページのインデックスに対応します。  
   
  Microsoft Office 2003 モードではない場合、このメソッドを呼び出すことはできません。 詳細については、次を参照してください。 [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)です。  
@@ -455,9 +455,9 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nVisiblePageButtons`  
+ [in]*nVisiblePageButtons*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

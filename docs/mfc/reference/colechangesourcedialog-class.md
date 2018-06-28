@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376451"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037597"
 ---
 # <a name="colechangesourcedialog-class"></a>メンバー クラス
 OLE の [ソースの変更] ダイアログ ボックスに使用します。  
@@ -76,7 +76,7 @@ class COleChangeSourceDialog : public COleDialog
 |----------|-----------------|  
 |[COleChangeSourceDialog::m_cs](#m_cs)|ダイアログ ボックスの動作を制御する構造体。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラスのオブジェクトを作成`COleChangeSourceDialog`をこのダイアログ ボックスを呼び出したいとします。 後に、`COleChangeSourceDialog`オブジェクトが構築された、使用することができます、 [m_cs](#m_cs)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_cs`構造体は型[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)です。 このダイアログ ボックスの使い方の詳細については、次を参照してください。、 [DoModal](#domodal)メンバー関数。  
   
  詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 内の構造。  
@@ -98,7 +98,7 @@ class COleChangeSourceDialog : public COleDialog
   
  `COleChangeSourceDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
@@ -111,13 +111,13 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  リンクへのポインター [COleClientItem](../../mfc/reference/coleclientitem-class.md)を更新するにはソース。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウ オブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ ボックスの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
  詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)構造と[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 内の関数。  
@@ -138,7 +138,7 @@ virtual INT_PTR DoModal();
   
 - **IDABORT**場合はエラーが発生しました。 場合**IDABORT**は呼び出し、返される、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)の詳細については、発生したエラーの種類を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 内の関数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバーを設定してさまざまなダイアログ ボックスのコントロールを初期化する場合、 [m_cs](#m_cs)構造体、呼び出す前にこれを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
   
  場合`DoModal`返します**IDOK**関数、ダイアログ ボックスからユーザーが入力した設定や情報を取得するメンバーを呼び出すことができます。 次の一覧は、一般的なクエリ関数を名前します。  
@@ -169,7 +169,7 @@ CString GetFileName();
 ### <a name="return-value"></a>戻り値  
  ファイルのモニカーのソースの表示名の部分、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)コンス トラクターで指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アイテム モニカーと共にファイル モニカーでは、完全な表示名を示します。  
   
 ##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
@@ -182,7 +182,7 @@ CString GetFromPrefix();
 ### <a name="return-value"></a>戻り値  
  ソースの以前のプレフィックス文字列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  後にこの関数の呼び出し[DoModal](#domodal)返します**IDOK**です。  
   
  この値は直接、 **lpszFrom**のメンバー、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)構造体。  
@@ -199,7 +199,7 @@ CString GetItemName();
 ### <a name="return-value"></a>戻り値  
  ソースの表示名のアイテムのモニカーの部分、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)コンス トラクターで指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アイテム モニカーと共にファイル モニカーでは、完全な表示名を示します。  
   
 ##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
@@ -212,7 +212,7 @@ CString GetToPrefix();
 ### <a name="return-value"></a>戻り値  
  ソースの新しいプレフィックス文字列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  後にこの関数の呼び出し[DoModal](#domodal)返します**IDOK**です。  
   
  この値は直接、 **lpszTo**のメンバー、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)構造体。  
@@ -226,7 +226,7 @@ CString GetToPrefix();
 OLEUICHANGESOURCE m_cs;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `OLEUICHANGESOURCE` OLE の [ソースの変更] ダイアログ ボックスの動作を制御を使用します。 この構造体のメンバーを直接変更することができます。  
   
  詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 内の構造。  
@@ -241,7 +241,7 @@ BOOL IsValidSource();
 ### <a name="return-value"></a>戻り値  
  新しいソースは、有効な場合は 0 以外。 それ以外の場合に 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  後にこの関数の呼び出し[DoModal](#domodal)返します**IDOK**です。  
   
  詳細については、次を参照してください。、 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 内の構造。  

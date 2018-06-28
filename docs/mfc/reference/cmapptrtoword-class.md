@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180c6db999ed72a83de3f4addbec3db73ee64fa1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fee346e1bc16206df72f3056e6fbb3d73d0d21a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368077"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038248"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord クラス
 void ポインターをキーとした 16 ビット ワードのマップをサポートします。  
@@ -61,7 +61,7 @@ class CMapPtrToWord : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CMapPtrToWord`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CObject`ポインター関数パラメーターまたは戻り値は、置き換える**WORD**です。 任意の場所が表示、`CString`または**const**へのポインター`char`関数パラメーターまたは戻り値へのポインターに置き換える`void`です。  
+ メンバー関数は、`CMapPtrToWord`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CObject`ポインター関数パラメーターまたは戻り値は、置き換える**WORD**です。 任意の場所が表示、`CString`または**const**へのポインター **char**関数パラメーターまたは戻り値へのポインターに置き換える**void**です。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -101,7 +101,7 @@ class CMapPtrToWord : public CObject
 |----------|-----------------|  
 |[CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMapWordToPtr` には、`IMPLEMENT_DYNAMIC` マクロが組み込まれているので、`CDumpContext` オブジェクトへのランタイム型のアクセスとダンプをサポートします。 個々 のマップ要素をダンプする場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
   
  ポインターの単語のマップは、シリアル化されません。  
@@ -115,7 +115,7 @@ class CMapPtrToWord : public CObject
   
  `CMapPtrToWord`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

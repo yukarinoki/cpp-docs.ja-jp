@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377915"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040208"
 ---
 # <a name="cobarray-class"></a>CObArray クラス
 `CObject` ポインターの配列をサポートします。  
@@ -104,7 +104,7 @@ class CObArray : public CObject
 |----------|-----------------|  
 |[CObArray::operator](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これらのオブジェクトの配列は c 言語の配列に似ていますが、縮小や、必要に応じて拡張することができますが動的にします。  
   
  配列のインデックスは、常に 0 の位置から開始します。 上限の境界を修正するか、過去の現在のバインド要素を追加するとき、展開先の配列を許可するかどうかを決定できます。 上限の境界にメモリの割り当てが連続して場合でも、一部の要素が null になります。  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  C 言語の配列では、アクセスする時間と同様、`CObArray`インデックス付けされた要素は定数とは、配列のサイズに依存しません。  
   
- `CObArray` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 場合の配列`CObject`ポインターが格納されているか、オーバー ロードされた挿入演算子のいずれか、アーカイブ、`Serialize`メンバー関数は、各`CObject`要素は、配列インデックスと共にさらに、シリアル化します。  
+ `CObArray` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 場合の配列`CObject`ポインターが格納されているか、オーバー ロードされた挿入演算子のいずれか、アーカイブ、`Serialize`メンバー関数は、各`CObject`要素は、配列インデックスと共にさらに、シリアル化します。  
   
  個別にダンプする必要がある場合`CObject`配列内の要素の深さを設定する必要があります、`CDumpContext`を 1 以上のオブジェクト。  
   
@@ -125,14 +125,14 @@ class CObArray : public CObject
  配列クラスの派生は、リストの派生に似ています。 特殊なリスト クラスの派生の詳細については、記事を参照してください。[コレクション](../../mfc/collections.md)です。  
   
 > [!NOTE]
->  使用する必要があります、`IMPLEMENT_SERIAL`マクロで配列をシリアル化する場合は、派生クラスの実装です。  
+>  配列をシリアル化する場合は、派生クラスの実装で IMPLEMENT_SERIAL マクロを使用する必要があります。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CObArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="add"></a>  CObArray::Add  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `newElement`  
+ *newElement*  
  `CObject`この配列に追加するへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  追加された要素のインデックス。  
   
-### <a name="remarks"></a>コメント  
- 場合[SetSize](#setsize)と共に使用した、 `nGrowBy` 1、余分なメモリよりも大きい値を割り当てることができます。 ただし、上限の境界がのみ 1 ずつ増加します。  
+### <a name="remarks"></a>Remarks  
+ 場合[SetSize](#setsize)と共に使用した、 *nGrowBy* 1、余分なメモリよりも大きい値を割り当てることができます。 ただし、上限の境界がのみ 1 ずつ増加します。  
   
  次の表はその他のメンバー関数に似ています`CObArray::Add`です。  
   
@@ -190,10 +190,10 @@ INT_PTR Append(const CObArray& src);
 ### <a name="return-value"></a>戻り値  
  追加の最初の要素のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列は、同じ型でなければなりません。  
   
- 必要に応じて、 **Append**配列に追加された要素を格納する余分なメモリを割り当てることがあります。  
+ 必要に応じて、`Append`配列に追加された要素を格納する余分なメモリを割り当てることがあります。  
   
  次の表はその他のメンバー関数に似ています`CObArray::Append`です。  
   
@@ -222,8 +222,8 @@ void Copy(const CObArray& src);
  *src*  
  配列にコピーする要素のソースです。  
   
-### <a name="remarks"></a>コメント  
- **コピー**メモリを解放しません。 ただし、必要に応じて、**コピー**配列にコピーされた要素を格納する余分なメモリを割り当てることがあります。  
+### <a name="remarks"></a>Remarks  
+ `Copy` メモリを解放しませんただし、必要に応じて`Copy`配列にコピーされた要素を格納する余分なメモリを割り当てることがあります。  
   
  次の表はその他のメンバー関数に似ています`CObArray::Copy`です。  
   
@@ -248,7 +248,7 @@ void Copy(const CObArray& src);
 CObArray();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列は、一度に 1 つの要素を拡張します。  
   
  次の表に、他のコンス トラクターに似ています`CObArray::CObArray`です。  
@@ -273,13 +273,13 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下`GetUpperBound`です。  
   
 ### <a name="return-value"></a>戻り値  
  参照、`CObject`ポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列の左側の代入演算子の実装に使用されます。 これは、特殊な配列の演算子を実装する場合にのみ使用する高度な関数であることに注意してください。  
   
  次の表はその他のメンバー関数に似ています`CObArray::ElementAt`です。  
@@ -303,7 +303,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 void FreeExtra();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数には、サイズや配列の上限値には影響はありません。  
   
  次の表はその他のメンバー関数に似ています`CObArray::FreeExtra`です。  
@@ -328,13 +328,13 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下`GetUpperBound`です。  
   
 ### <a name="return-value"></a>戻り値  
  `CObject`ポインター要素を指定したインデックス位置。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  によって返される値よりも大きい負の値または値を渡す`GetUpperBound`アサーションは失敗が発生します。  
@@ -365,7 +365,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>戻り値  
  配列内の項目の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列内の要素の数を取得するには、このメソッドを呼び出します。 インデックスが 0 から始まるため、サイズは、インデックスの最大値より大きい 1 です。  
   
  次の表はその他のメンバー関数に似ています`CObArray::GetCount`です。  
@@ -396,7 +396,7 @@ CObject** GetData();
 ### <a name="return-value"></a>戻り値  
  配列へのポインター`CObject`ポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  要素がない場合、 `GetData` null 値を返します。  
   
  呼び出すときに警告を使用して、配列の要素に直接アクセスより迅速に作業する際に役立つ、 `GetData`; 直接行うすべてのエラー、配列の要素に影響します。  
@@ -424,7 +424,7 @@ CObject** GetData();
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  インデックスが 0 から始まるため、サイズは、インデックスの最大値より大きい 1 です。  
   
  次の表はその他のメンバー関数に似ています`CObArray::GetSize`です。  
@@ -453,7 +453,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="return-value"></a>戻り値  
  上限値 (0 から始まる) のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列のインデックスは 0 から始まる、ために、この関数は値 1 を返しますより小さい`GetSize`です。  
   
  条件**です ()** =-1 は、配列に要素が含まれていないことを示します。  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  によって返される値よりも大きい可能性がある整数インデックス`GetUpperBound`です。  
   
- `newElement`  
- `CObject`この配列に配置するへのポインター。 A`newElement`値の**NULL**は許可されています。  
+ *newElement*  
+ `CObject`この配列に配置するへのポインター。 A *newElement*値の**NULL**は許可されています。  
   
- `nCount`  
+ *nCount*  
  この要素にする必要があります回数には、(既定値 1) が挿入されます。  
   
- `nStartIndex`  
+ *nStartIndex*  
  によって返される値よりも大きい可能性がある整数インデックス`GetUpperBound`です。  
   
- `pNewArray`  
+ *pNewArray*  
  この配列に追加する要素を含む別の配列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初のバージョンの`InsertAt`配列内の指定したインデックス位置 1 つの要素 (または要素の複数のコピー) を挿入します。 プロセスでは、その上がり、(インデックスをインクリメント) によって、このインデックスでは、およびその位置にある既存の要素が上のすべての要素をシフトします。  
   
- 2 番目のバージョンから別のすべての要素の挿入`CObArray`開始位置として、コレクション、`nStartIndex`位置。  
+ 2 番目のバージョンから別のすべての要素の挿入`CObArray`開始位置として、コレクション、 *nStartIndex*位置。  
   
  `SetAt`関数の場合、これに対し、1 つの指定した配列の要素を置換し、すべての要素を移動しません。  
   
@@ -556,7 +556,7 @@ CObject*& operator[](int_ptr nindex);
 CObject* operator[](int_ptr nindex) const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列の最初の演算子が呼び出されます**const**右側の (右辺値) または代入ステートメントの左側 (左辺値) のいずれかで使用することがあります。 2 つ目と呼ばれる**const**配列は右側でのみ使用できます。  
   
  ライブラリのデバッグ バージョンでは、(いずれかで、左または代入ステートメントの右側にある)、添字が範囲外かどうかをアサートします。  
@@ -584,7 +584,7 @@ CObject* operator[](int_ptr nindex) const;
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  配列が空では既に、関数は引き続き動作します。  
   
  `RemoveAll`関数ポインターを格納するためのすべてのメモリを解放します。  
@@ -615,13 +615,13 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下`GetUpperBound`です。  
   
- `nCount`  
+ *nCount*  
  削除する要素の数を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プロセスでは、削除された要素の上のすべての要素の下にシフトします。 これは、上は、配列のバインドしますが、メモリを解放しませんをデクリメントします。  
   
  削除位置以降の配列に含まれる以上の要素を削除しようとすると、ライブラリのデバッグ バージョンがアサートします。  
@@ -660,13 +660,13 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数インデックスによって返された値以下`GetUpperBound`です。  
   
- `newElement`  
+ *newElement*  
  この配列に挿入されるオブジェクトのポインター。 A **NULL**値は許可します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `SetAt` 拡張する配列は発生しません。 使用して`SetAtGrow`する場合は自動的に拡張する配列。  
   
  インデックスの値が配列内の有効な位置を表すことを確認する必要があります。 範囲外の場合は、ライブラリのデバッグ バージョンはアサートします。  
@@ -705,13 +705,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  0 以上である整数のインデックス。  
   
- `newElement`  
+ *newElement*  
  この配列に追加するオブジェクトのポインター。 A **NULL**値は許可します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  必要な場合に、配列が自動的に大きくなる (つまり、上限の境界から新しい要素のために調整されます)。  
   
  次の表はその他のメンバー関数に似ています`CObArray::SetAtGrow`です。  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNewSize`  
+ *nNewSize*  
  新しい配列のサイズ (要素の数)。 0 以上にする必要があります。  
   
- `nGrowBy`  
+ *nGrowBy*  
  サイズの増加が必要な場合を確保する要素のスロットの最小数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  新しいサイズが前のサイズよりも小さい場合は、配列は切り捨てられ、すべての未使用メモリを解放します。 効率を高めるため、呼び出す`SetSize`を使用する前に、配列のサイズを設定します。 これにより、再割り当てして、項目が追加されるたびに、配列をコピーする必要があります。  
   
- `nGrowBy`パラメーターは配列が拡大しているときに内部メモリの割り当てに影響します。 使用することはありませんに影響を与える、配列のサイズによって報告された`GetSize`と`GetUpperBound`です。  
+ *NGrowBy*パラメーターは配列が拡大しているときに内部メモリの割り当てに影響します。 使用することはありませんに影響を与える、配列のサイズによって報告された`GetSize`と`GetUpperBound`です。  
   
  配列のサイズが増えた場合、新しく割り当てられた**CObject \*** ポインターが NULL に設定されます。  
   

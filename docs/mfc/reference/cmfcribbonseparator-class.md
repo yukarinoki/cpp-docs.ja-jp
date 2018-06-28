@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bed63f6752f0335e3c1917e6597e7f8b096c8df6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370859"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039797"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator クラス
 リボンの区分線を実装します。  
@@ -78,7 +78,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |[CMFCRibbonSeparator::OnDraw](#ondraw)|リボンまたはクイック アクセス ツールバーのいずれかの区分線を描画する、システムによって呼び出されます。|  
 |[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|区分線を描画するためにシステムと呼ばれる、**コマンド** ボックスの一覧です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  垂直または水平方向の行を論理的に離職リボン要素がリボンの区切り記号です。 リボン コントロール、アプリケーションのメイン メニューのリボン ステータス バー、およびクイック アクセス ツールバーの区分線を描画できます。  
   
  区切り記号を使用して、アプリケーションで、新しいオブジェクトを構築し、次に示すように、アプリケーションのメイン メニューに追加。  
@@ -100,7 +100,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
   
  [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxbaseribbonelement.h  
   
 ##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
@@ -113,14 +113,14 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndListBox`  
+ [in]*pWndListBox*  
  ポインター、**コマンド**区切り記号が追加された一覧です。  
   
- [入力] `bDeep`  
+ [in]*パラメーター bDeep*  
  無視されます。  
   
 ### <a name="return-value"></a>戻り値  
- 0 から始まるインデックスで指定された、リスト ボックス内の文字列に`pWndListBox`です。  
+ 0 から始まるインデックスで指定された、リスト ボックス内の文字列に*pWndListBox*です。  
   
 ##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  `CMFCRibbonSeparator` オブジェクトを構築します。  
@@ -130,10 +130,10 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bIsHoriz`  
+ [in]*bIsHoriz*  
  場合`TRUE`、区切り記号は横方向以外の場合は`FALSE`、区切り記号は縦方向です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  水平方向の区切り記号は、アプリケーションのメニューで使用されます。 垂直方向の区切り記号は、ツールバーで使用されます。  
   
 ### <a name="example"></a>例  
@@ -149,7 +149,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `Src`  
+ [in]*Src*  
  コピーするソース リボン要素。  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
@@ -160,7 +160,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイスのコンテンツへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -186,7 +186,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="return-value"></a>戻り値  
  常に`FALSE`このクラスにします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リボンの区切り記号は、タブ ストップではないです。  
   
 ##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
@@ -197,7 +197,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
@@ -218,12 +218,12 @@ virtual void OnDrawOnList(
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[入力] `pDC`|デバイス コンテキストへのポインター。|  
-|[入力] `strText`|一覧に表示されるテキストです。|  
-|[入力] `nTextOffset`|テキストと外接する四角形の左側にある間のスペースです。|  
-|[入力] `rect`|外接する四角形を指定します。|  
-|[入力] `bIsSelected`|無視されます。|  
-|[入力] `bHighlighted`|無視されます。|  
+|[in]*pDC*|デバイス コンテキストへのポインター。|  
+|[in]*strText*|一覧に表示されるテキストです。|  
+|[in]*nTextOffset*|テキストと外接する四角形の左側にある間のスペースです。|  
+|[in]*rect*|外接する四角形を指定します。|  
+|[in]*bIsSelected*|無視されます。|  
+|[in]*bHighlighted*|無視されます。|  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

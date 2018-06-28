@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bddd7274feb9ecde268a94d7e9a6e857c906650
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e6c4493239030380ab935d473af48d4107556d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376819"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041423"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton クラス
 編集コントロールを含むツール バー ボタン ( [CEdit クラス](../../mfc/reference/cedit-class.md))。  
@@ -110,7 +110,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|指定したデバイス コンテキストとドッキングの状態のボタンのサイズを計算するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize))。|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd))。|  
 |[CMFCToolBarEditBoxButton::OnClick](#onclick)|ユーザーがマウス ボタンをクリックしたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick))。|  
-|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|親ツールバーを処理するときに、フレームワークによって呼び出されます、`WM_CTLCOLOR`メッセージ。 (上書き[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor))。|  
+|[CMFCToolBarEditBoxButton::OnCtlColor](#onctlcolor)|親ツールバー WM_CTLCOLOR メッセージを処理するときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor))。|  
 |`CMFCToolBarEditBoxButton::OnDraw`|指定したスタイルとオプションを使用して、ボタンを描画するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw))。|  
 |`CMFCToolBarEditBoxButton::OnDrawOnCustomizeList`|ボタンを描画するためにフレームワークによって呼び出される、**コマンド**のペイン、**カスタマイズ** ダイアログ ボックス。 (上書き[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist))。|  
 |[CMFCToolBarEditBoxButton::OnGlobalFontsChanged](#onglobalfontschanged)|グローバルのフォントが変更されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged))。|  
@@ -126,14 +126,14 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)|アプリケーションでは、エディット ボックス ボタンのフラット スタイルの外観を指定します。|  
 |`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetStyle](#setstyle)|ボタンのスタイルを指定します。 (上書き[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle))。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ツールバーには、エディット ボックス ボタンを追加するには、次の手順を実行します。  
   
  1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。  
   
  2. `CMFCToolBarEditBoxButton` オブジェクトを構築します。  
   
- 3. 処理するメッセージ ハンドラーで、`AFX_WM_RESETTOOLBAR`メッセージで、ダミー ボタンを置き換える新しいコンボ ボックス ボタンを使用して、 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)です。  
+ 3. AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで、ダミー ボタンを置き換える新しいコンボ ボックス ボタンを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)です。  
   
  詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)です。  
   
@@ -149,7 +149,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
   
  `CMFCToolBarEditBoxButton` 
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtoolbareditboxbutton.h  
   
 ##  <a name="canbestretched"></a>  CMFCToolBarEditBoxButton::CanBeStretched  
@@ -162,7 +162,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="return-value"></a>戻り値  
  このメソッドは `TRUE` を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークはユーザーがツール バー ボタンをカスタマイズするときに stretch をできません。 このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) によって、ユーザーがカスタマイズ中にエディット ボックスのツールバー ボタンをストレッチできるようにします。  
   
 ##  <a name="cmfctoolbareditboxbutton"></a>  CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
@@ -177,19 +177,19 @@ CMFCToolBarEditBoxButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiID`  
+ [in]*uiID*  
  コントロール ID を指定します  
   
- [入力] `iImage`  
+ [in]*画像*  
  ツール バー イメージの 0 から始まるインデックスを指定します。 イメージが格納されて、 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトを[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)クラスを保持します。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  エディット コントロールのスタイルを指定します。  
   
- [入力] `iWidth`  
+ [in]*iWidth*  
  エディット コントロールのピクセル単位の幅を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定のコンス トラクターは、次の組み合わせにエディット コントロールのスタイルを設定します。  
   
  `WS_CHILD | WS_VISIBLE | ES_AUTOHSCROLL`  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
  コピー元のソース ボタンへの参照。  
   
-### <a name="remarks"></a>コメント  
- このツール バー ボタンに別のツール バー ボタンをコピーするには、このメソッドを呼び出します。 `src` 型でなければなりません`CMFCToolBarEditBoxButton`です。  
+### <a name="remarks"></a>Remarks  
+ このツール バー ボタンに別のツール バー ボタンをコピーするには、このメソッドを呼び出します。 *src*型でなければなりません`CMFCToolBarEditBoxButton`です。  
   
 ##  <a name="createedit"></a>  CMFCToolBarEditBoxButton::CreateEdit  
  ボタンには、新しい編集コントロールを作成します。  
@@ -220,16 +220,16 @@ virtual CEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] pWndParent`  
+ [in]*pWndParent*  
  エディット コントロールの親ウィンドウを指定します。 NULL は指定できません。  
   
- `[in] rect`  
+ [in]*rect*  
  エディット コントロールのサイズと位置を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成されたエディット コントロールへのポインター`NULL`コントロールの作成と添付ファイルが失敗した場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築する、 `CMFCToolBarEditBoxButton` 2 つのステップ内のオブジェクト。 まず、コンス トラクターを呼び出します`CreateEdit`、Windows のエディット コントロールを作成しにアタッチする、`CMFCToolBarEditBoxButton`オブジェクト。  
   
 ##  <a name="getbycmd"></a>  CMFCToolBarEditBoxButton::GetByCmd  
@@ -240,13 +240,13 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  取得する ボタンのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  最初の`CMFCToolBarEditBoxButton`指定されたコマンド ID を持つアプリケーションのオブジェクトまたは`NULL`このようなオブジェクトが存在しない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  など、この共有のユーティリティ メソッドをメソッドで使用される[CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall)と[CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall)を設定または最初の編集ボックスのツールバーのテキストを取得するには指定されたコマンド ID を持つコントロール  
   
 ##  <a name="getcontentsall"></a>  CMFCToolBarEditBoxButton::GetContentsAll  
@@ -257,13 +257,13 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  元のコンテンツを取得するボタンのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  A`CString`指定されたコマンド ID を持つ最初の編集ボックス ツールバー コントロールのテキストを格納しているオブジェクト  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドがない場合は、空の文字列を返します`CMFCToolBarEditBoxButton`オブジェクトは、指定されたコマンド ID を持ちます。  
   
 ##  <a name="getcontextmenuid"></a>  CMFCToolBarEditBoxButton::GetContextMenuID  
@@ -276,7 +276,7 @@ UINT GetContextMenuID();
 ### <a name="return-value"></a>戻り値  
  ボタンに関連付けられているショートカット メニューがあるない場合に、ボタンまたは 0 に関連付けられているショートカット メニューのリソース ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークでは、リソース ID を使用して、ユーザーがボタンを右クリックすると、ショートカット メニューを作成します。  
   
 ##  <a name="geteditborder"></a>  CMFCToolBarEditBoxButton::GetEditBorder  
@@ -287,10 +287,10 @@ virtual void GetEditBorder(CRect& rectBorder);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `rectBorder`  
+ [out]*rectBorder*  
  参照、`CRect`外接する四角形を受け取るオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、クライアント座標で、編集コントロールの外接する四角形を取得します。 1 ピクセルずつ各方向に四角形のサイズを展開します。  
   
  [CMFCVisualManager::OnDrawEditBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondraweditborder)の周りの境界線を描画するときに、メソッドがこのメソッドを呼び出して、`CMFCToolBarEditBoxButton`オブジェクト。  
@@ -305,7 +305,7 @@ CEdit* GetEditBox() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CEdit クラス](../../mfc/reference/cedit-class.md)ボタンが含まれるコントロール。 `NULL`場合、`CEdit`コントロールがまだ作成されていません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成する、`CEdit`呼び出すことによってコントロール[CMFCToolBarEditBoxButton::CreateEdit](#createedit)です。  
   
 ##  <a name="gethwnd"></a>  CMFCToolBarEditBoxButton::GetHwnd  
@@ -318,7 +318,7 @@ virtual HWND GetHwnd();
 ### <a name="return-value"></a>戻り値  
  ボタンに関連付けられているウィンドウ ハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、 [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)をエディット ボックス ボタンの編集コントロールの一部のウィンドウ ハンドルを返すメソッド。  
   
 ##  <a name="getinvalidaterect"></a>  CMFCToolBarEditBoxButton::GetInvalidateRect  
@@ -331,7 +331,7 @@ virtual const CRect GetInvalidateRect() const;
 ### <a name="return-value"></a>戻り値  
  A`CRect`の領域を再描画する必要がありますを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張[CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect)領域のテキスト ラベルの領域を含めることによってです。  
   
 ##  <a name="havehotborder"></a>  CMFCToolBarEditBoxButton::HaveHotBorder  
@@ -344,7 +344,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="return-value"></a>戻り値  
  ボタンが選択されている場合、境界線を表示する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張[CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder)コントロールが表示されている場合は、0 以外の値を返すことによってです。  
   
 ##  <a name="isflatmode"></a>  CMFCToolBarEditBoxButton::IsFlatMode  
@@ -357,7 +357,7 @@ static BOOL __stdcall IsFlatMode();
 ### <a name="return-value"></a>戻り値  
  ボタンにフラット スタイル; がある場合は 0 以外。それ以外の場合、0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、エディット ボックス ボタンにフラット スタイルがあります。 使用して、 [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)メソッドで、アプリケーションのフラット スタイルの外観を変更します。  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
@@ -368,13 +368,13 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iNotifyCode`  
+ [in]*iNotifyCode*  
  コマンドに関連付けられている通知メッセージです。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ボタンを処理する場合、`WM_COMMAND`メッセージ、または`FALSE`親ツールバーで、メッセージを処理する必要があることを表します。  
+ `TRUE` ボタンが WM_COMMAND メッセージを処理する場合または`FALSE`親ツールバーで、メッセージを処理する必要があることを表します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  送信しようとしているときに、フレームワークはこのメソッドを呼び出して、 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージを親ウィンドウ。  
   
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 処理することで、 [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687)通知します。 このオブジェクトと同じコマンド ID を持つ各編集ボックスのテキスト ラベルをこのオブジェクトのテキスト ラベルを設定します。  
@@ -386,7 +386,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 virtual void OnAddToCustomizePage();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)) をこのオブジェクトと同じコマンド ID を持つ任意のツールバーで、編集ボックス コントロールからプロパティをコピーしています。 エディット ボックス コントロールをこのオブジェクトと同じコマンド ID を持つツールバーがない場合は、何も行われません。  
   
  詳細については、**カスタマイズ**ダイアログ ボックスを参照してください[CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)です。  
@@ -399,10 +399,10 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndParent`  
+ [in]*pWndParent*  
  新しい親ウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 内部の再作成して`CEdit`オブジェクト。  
   
 ##  <a name="onclick"></a>  CMFCToolBarEditBoxButton::OnClick  
@@ -415,20 +415,20 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWnd`  
+ [in]*pWnd*  
  使用されません。  
   
- [入力] `bDelay`  
+ [in]*bDelay*  
  使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンをクリックしてメッセージを処理する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) 場合は、0 以外の値を返すことによって、内部`CEdit`オブジェクトを表示します。  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarEditBoxButton::OnCtlColor  
- 親ツールバーを処理するときに、フレームワークによって呼び出されます、`WM_CTLCOLOR`メッセージ。  
+ 親ツールバー WM_CTLCOLOR メッセージを処理するときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -437,16 +437,16 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  ボタンを表示しているデバイス コンテキスト。  
   
- [入力] `nCtlColor`  
+ [in]*のため*  
  使用されません。  
   
 ### <a name="return-value"></a>戻り値  
  グローバルのウィンドウのブラシへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)) によって提供されているデバイス コンテキストのテキストと背景色をグローバルのテキストと、背景色に設定すると、それぞれします。  
   
  アプリケーションに使用できるグローバルのオプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)です。  
@@ -458,7 +458,7 @@ virtual HBRUSH OnCtlColor(
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) のグローバルのフォントのコントロールのフォントを変更することによりします。  
   
  アプリケーションに使用できるグローバルのオプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)です。  
@@ -470,7 +470,7 @@ virtual void OnGlobalFontsChanged();
 virtual void OnMove();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、既定のクラスの実装 ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) 内部の位置を更新することによって`CEdit`オブジェクト  
   
 ##  <a name="onshow"></a>  CMFCToolBarEditBoxButton::OnShow  
@@ -481,11 +481,11 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bShow`  
+ [in]*bShow*  
  ボタンが表示されているかどうかを指定します。 このパラメーターは、する場合`TRUE` ボタンを表示します。 それ以外の場合、ボタンは表示されません。  
   
-### <a name="remarks"></a>コメント  
- このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 場合は、ボタンを表示することによって`bShow`は`TRUE`します。 それ以外の場合、このメソッドには、ボタンが非表示にします。  
+### <a name="remarks"></a>Remarks  
+ このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 場合は、ボタンを表示することによって*bShow*は`TRUE`します。 それ以外の場合、このメソッドには、ボタンが非表示にします。  
   
 ##  <a name="onsize"></a>  CMFCToolBarEditBoxButton::OnSize  
  親ツールバーのサイズまたは位置が変更されに伴ってボタンのサイズを変更するときに、フレームワークによって呼び出されます。  
@@ -495,10 +495,10 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iSize`  
+ [in]*iSize*  
  ピクセル単位で、ボタンの新しい幅。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、既定のクラス実装[CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)、内部の位置とサイズを更新することによって`CEdit`オブジェクト。  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarEditBoxButton::OnUpdateToolTip  
@@ -513,22 +513,22 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndParent`  
+ [in]*pWndParent*  
  使用されません。  
   
- [入力] `iButtonIndex`  
+ [in]*iButtonIndex*  
  使用されません。  
   
- [入力] `wndToolTip`  
+ [in]*wndToolTip*  
  ツールヒントのテキストを表示するコントロール。  
   
- [出力] `str`  
+ [out]*str*  
  A`CString`更新されたツールヒント テキストを受け取るオブジェクトです。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドは、ツールヒント テキストを更新する場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) ボタンの編集部分に関連付けられているツールヒント テキストを表示します。 場合、内部`CEdit`オブジェクトが`NULL`またはのウィンドウ ハンドル、`CEdit`オブジェクトは、既存のウィンドウを識別できません、このメソッドは何も実行し、返します`FALSE`です。  
   
 ##  <a name="setcontents"></a>  CMFCToolBarEditBoxButton::SetContents  
@@ -539,7 +539,7 @@ virtual void SetContents(const CString& sContents);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] sContents`  
+ [in]*sContents*  
  設定する新しいテキストを指定します。  
   
 ##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
@@ -552,10 +552,10 @@ static BOOL SetContentsAll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  テキストの変更のコントロールのコマンド ID を指定します。  
   
- [入力] `strContents`  
+ [in]*strContents*  
  設定する新しいテキストを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -569,10 +569,10 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmd`  
+ [in]*uiCmd*  
  ショートカット メニューのリソース ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークでは、リソース ID を使用して、ユーザーがツール バー ボタンを右クリックしたときに、ショートカット メニューを作成します。  
   
 ##  <a name="setflatmode"></a>  CMFCToolBarEditBoxButton::SetFlatMode  
@@ -583,10 +583,10 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bFlat`  
+ [in]*bFlat*  
  エディット ボックス ボタンのフラット スタイルです。 このパラメーターが場合`TRUE`、フラット スタイルの外観が有効です。 それ以外の場合、フラット スタイルの外観が無効になっています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  エディット ボックス ボタンの既定のフラット スタイル`TRUE`です。 使用して、 [CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)アプリケーションのフラット スタイルの外観を取得します。  
   
 ##  <a name="setstyle"></a>  CMFCToolBarEditBoxButton::SetStyle  
@@ -597,11 +597,11 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nStyle`  
+ [in]*nStyle*  
  新しいスタイルを設定します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは設定[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)に`nStyle`も無効になります、テキスト ボックスと、アプリケーションは、カスタマイズ モードのアプリケーションがカスタマイズ モードではないときに有効に、(を参照してください[CMFCToolBar:: SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)と[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode))。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)有効なスタイル フラグの一覧についてはします。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは設定[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)に*nStyle*も無効になります、テキスト ボックスと、アプリケーションは、カスタマイズ モードのアプリケーションがカスタマイズ モード (参照でないときに有効に、[CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)と[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode))。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)有効なスタイル フラグの一覧についてはします。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

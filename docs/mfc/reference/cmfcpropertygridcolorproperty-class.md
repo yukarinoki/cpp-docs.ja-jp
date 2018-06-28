@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367995"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040809"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty クラス
 `CMFCPropertyGridColorProperty` クラスは、色の選択用のダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートします。  
@@ -72,7 +72,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 |[CMFCPropertyGridColorProperty::SetColumnsNumber](#setcolumnsnumber)|現在のカラー プロパティ グリッド内の列の数を指定します。|  
 |[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|編集可能なプロパティの元の値を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCPropertyGridColorProperty` クラスは、プロパティ リスト コントロールに追加できるカラー プロパティをサポートします。 詳細については、次を参照してください。、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)です。  
   
 ## <a name="example"></a>例  
@@ -87,7 +87,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
   
  [CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxpropertygridctrl.h  
   
 ##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `strName`  
+ [in]*strName*  
  プロパティの名前。  
   
- [入力] `color`  
+ [in]*色*  
  プロパティの色の値。  
   
- [入力] `pPalette`  
+ [in]*pPalette*  
  色のパレットへのポインター。 既定値は `NULL` です。  
   
- [入力] `lpszDescr`  
+ [in]*lpszDescr*  
  プロパティの説明。 既定値は `NULL` です。  
   
- [入力] `dwData`  
+ [in]*dwData*  
  整数またはその他のプロパティに関連付けられているデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,16 +129,16 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  自動ボタンのラベルのテキスト。  
   
- [入力] `colorAutomatic`  
+ [in]*colorAutomatic*  
  Automatic (既定) の色の RGB 色の値。  
   
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 自動ボタンを有効にするにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton  
  により、*他の*色の選択 ダイアログ ボックスにボタンをクリックします。 (標準の他のボタンのラベルは**他の色**)。  
@@ -151,16 +151,16 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  その他のボタンのラベルのテキスト。  
   
- [入力] `bAltColorDlg`  
+ [in]*bAltColorDlg*  
  `TRUE` 表示する、 `CMFCColorDialog`  ダイアログ ボックスです。`FALSE`を標準的な色の選択 ダイアログ ボックスを表示します。 既定値は `TRUE` です。  
   
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` その他のボタンを表示するにはそれ以外の場合、`FALSE`です。  既定値は `TRUE` です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor  
  プロパティの現在の色を取得します。  
@@ -172,7 +172,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>戻り値  
  色の RGB 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor  
  プロパティの新しい色を設定します。  
@@ -182,10 +182,10 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `color`  
+ [in]*色*  
  色の RGB 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber  
  現在のカラー プロパティ グリッド内の列の数を指定します。  
@@ -195,10 +195,10 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nColumnsNumber`  
+ [in]*nColumnsNumber*  
  カラー プロパティ グリッド内の列の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドの値を設定、`m_nColumnsNumber`データ メンバーを保護します。  
   
 ##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue  
@@ -209,10 +209,10 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `varValue`  
+ [in]*varValue*  
  値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、 [cmfcpropertygridproperty::resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)編集可能なプロパティの元の値を再設定する方法です。  
   
 ## <a name="see-also"></a>関連項目  

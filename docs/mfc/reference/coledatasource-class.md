@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376708"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038556"
 ---
 # <a name="coledatasource-class"></a>COleDataSource クラス
 OLE アプリケーションが、クリップボード操作やドラッグ アンド ドロップ操作のようなデータ転送操作中に用意するデータを置くキャッシュの役目をします。  
@@ -89,7 +89,7 @@ class COleDataSource : public CCmdTarget
 |[COleDataSource::OnSetData](#onsetdata)|データを置換すると呼ばれる、`COleDataSource`オブジェクト。|  
 |[COleDataSource::SetClipboard](#setclipboard)|場所、`COleDataSource`クリップボード上のオブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  OLE のデータ ソースを直接作成することができます。 または、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)と[COleServerItem](../../mfc/reference/coleserveritem-class.md)クラスへの応答の OLE データ ソースの作成、`CopyToClipboard`と`DoDragDrop`メンバー関数。 参照してください[COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard)簡単な説明。 上書き、`OnGetClipboardData`の OLE データ ソース内のデータに追加のクリップボード形式を追加するクライアント アイテムまたはサーバー項目クラスのメンバー関数が作成された、`CopyToClipboard`または`DoDragDrop`メンバー関数。  
   
  転送するデータを準備するときにこのクラスのオブジェクトを作成、データの最適な方法を使ってデータを入力してください。 データ ソースに挿入される方法は直接影響を受けたデータがすぐに提供されるかどうか (即時レンダリング)、またはオンデマンドで (遅延レンダリング)。 クリップボードの形式が使用されるクリップボードの形式を渡すことによってデータを提供するすべての (省略可能[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)構造体)、呼び出す[に](#delayrenderdata)です。  
@@ -103,7 +103,7 @@ class COleDataSource : public CCmdTarget
   
  `COleDataSource`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="cachedata"></a>  取得  
@@ -117,16 +117,16 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cfFormat`  
+ *cfFormat*  
  データが提供されるがクリップボードの形式です。 このパラメーターには、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)関数。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指す、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)指定された形式のデータを含む構造体。  
   
- `lpFormatEtc`  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定`cfFormat`です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
+ *lpFormatEtc*  
+ 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定*cfFormat*です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数が即時の表示を使用して、提供されるため、データを指定してください。 データが必要になるまでにキャッシュされます。  
   
  データを使用して、提供、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)構造体。 使用することも、`CacheGlobalData`データの量を指定している場合、メンバー関数がそれを使用して効率的に転送するほど、`HGLOBAL`です。  
@@ -150,16 +150,16 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cfFormat`  
+ *cfFormat*  
  データが提供されるがクリップボードの形式です。 このパラメーターには、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)関数。  
   
  *hGlobal*  
  指定された形式のデータを含むグローバル メモリ ブロックへのハンドルします。  
   
- `lpFormatEtc`  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定`cfFormat`です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
+ *lpFormatEtc*  
+ 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定*cfFormat*です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、;、関数を呼び出すときにデータを指定する必要がありますので、即時の表示を使用してデータを提供します。データが必要になるまでにキャッシュされます。 使用して、`CacheData`大量のデータまたは構造化された記憶域メディアが必要なかどうかを指定している場合、メンバー関数。  
   
  遅延レンダリングを使用するのには、呼び出し、[に](#delayrenderdata)または[DelayRenderFileData](#delayrenderfiledata)メンバー関数。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)です。  
@@ -185,13 +185,13 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cfFormat`  
+ *cfFormat*  
  データが提供されるがクリップボードの形式です。 このパラメーターには、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)関数。  
   
- `lpFormatEtc`  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定`cfFormat`です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
+ *lpFormatEtc*  
+ 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定*cfFormat*です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、データがすぐに指定されていないので、遅延レンダリングを使用してデータを提供します。 [は](#onrenderdata)または[によって](#onrenderglobaldata)データを要求するメンバー関数が呼び出されます。  
   
  使ってデータを指定しない場合は、この関数を使用して、`CFile`オブジェクト。 データを提供しようとする場合、`CFile`オブジェクトを呼び出す、 [DelayRenderFileData](#delayrenderfiledata)メンバー関数。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)です。  
@@ -212,13 +212,13 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cfFormat`  
+ *cfFormat*  
  データが提供されるがクリップボードの形式です。 このパラメーターには、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)関数。  
   
- `lpFormatEtc`  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定`cfFormat`です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
+ *lpFormatEtc*  
+ 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)提示されるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定*cfFormat*です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、データがすぐに指定されていないので、遅延レンダリングを使用してデータを提供します。 [可変](#onrenderfiledata)データを要求するメンバー関数が呼び出されます。  
   
  使用する場合は、この関数を使用して、`CFile`データを提供するオブジェクト。 使用しない場合、`CFile`オブジェクトを呼び出し、[に](#delayrenderdata)メンバー関数。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)です。  
@@ -239,13 +239,13 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cfFormat`  
+ *cfFormat*  
  クリップボードの形式をデータを配置します。 このパラメーターには、定義済みのクリップボード形式またはネイティブの Windows で返される値のいずれかを指定できます[独自のデータ](http://msdn.microsoft.com/library/windows/desktop/ms649049)関数。  
   
- `lpFormatEtc`  
- 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)置き換えられるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定`cfFormat`です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
+ *lpFormatEtc*  
+ 指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)置き換えられるデータの形式を記述する構造体。 指定されたクリップボードの形式の追加の書式情報を指定する場合、このパラメーターの値を指定*cfFormat*です。 ある場合**NULL**、既定値は、他のフィールドの使用は、 **FORMATETC**構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [データ変更](#onsetdata)このような場合に、フレームワークによって呼び出されますが。 フレームワークからのデータ ソースが返されるときにだけ使用[は](../../mfc/reference/coleserveritem-class.md#getdatasource)します。 場合`DelaySetData`は呼び出されません、`OnSetData`関数は呼び出されません。 `DelaySetData` クリップボードの内容がそれぞれ呼び出す必要がありますまたは**FORMATETC**をサポートする形式。  
   
  詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内の構造。  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwEffects`  
+ *dwEffects*  
  ドラッグ アンド ドロップ操作ができるこのデータ ソース。 次の 1 つ以上を指定できます。  
   
 - `DROPEFFECT_COPY` コピー操作を実行する可能性があります。  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` ドラッグ スクロール操作が行われる可能性を示します。  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  実際には、ドラッグの開始位置を定義する四角形を指すポインター。 詳細については、「解説」を参照してください。  
   
  *pDropSource*  
@@ -283,8 +283,8 @@ DROPEFFECT DoDragDrop(
 ### <a name="return-value"></a>戻り値  
  ドロップ操作のドラッグ アンド ドロップ操作によって生成される結果それ以外の場合`DROPEFFECT_NONE`場合は、操作は、ユーザーが指定された四角形を終了する前に、マウス ボタンを解放するために決してが開始します。  
   
-### <a name="remarks"></a>コメント  
- ドラッグ アンド ドロップ操作がすぐに開始しません。 によって指定される四角形をマウス カーソルが離れるまで待機して`lpRectStartDrag`または指定したミリ秒数が経過するまでです。 場合`lpRectStartDrag`は**NULL**、四角形のサイズは 1 ピクセルです。  
+### <a name="remarks"></a>Remarks  
+ ドラッグ アンド ドロップ操作がすぐに開始しません。 によって指定される四角形をマウス カーソルが離れるまで待機して*lpRectStartDrag*または指定したミリ秒数が経過するまでです。 場合*lpRectStartDrag*は**NULL**、四角形のサイズは 1 ピクセルです。  
   
  遅延時間は、レジストリ キー設定によって指定されます。 遅延時間を変更するには呼び出すことによって[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)または[cwinapp::writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)です。 遅延時間を指定しない場合は、200 ミリ秒の既定値が使用されます。 ドラッグの遅延時間は、次のように格納されます。  
   
@@ -305,7 +305,7 @@ DROPEFFECT DoDragDrop(
 void Empty();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  両方をキャッシュし、再利用できるように、遅延レンダリングされた形式が空にします。  
   
  詳細については、次を参照してください。 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK に含まれています。  
@@ -317,7 +317,7 @@ void Empty();
 static void PASCAL FlushClipboard();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して[SetClipboard](#setclipboard)をクリップボードにデータを格納します。  
   
 ##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
@@ -340,19 +340,19 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)情報が要求された形式を指定します。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指す、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)データが返される構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  以前に指定の形式は、`COleDataSource`オブジェクトを使用して、[に](#delayrenderdata)または[DelayRenderFileData](#delayrenderfiledata)遅延レンダリングするためのメンバー関数。 この関数の既定の実装を呼び出す[可変](#onrenderfiledata)または[によって](#onrenderglobaldata)場合は、指定されたストレージ メディア ファイルまたはメモリ、それぞれします。 これらの形式のどちらも、指定した場合、既定の実装は 0 を返し、何もしません。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)です。  
   
- 場合`lpStgMedium` ->  *tymed*は**TYMED_NULL**、 **STGMEDIUM**割り当てられで指定された入力*lpFormatEtc ->tymed*です。 ない場合は**TYMED_NULL**、 **STGMEDIUM**のデータが配置を入力する必要があります。  
+ 場合*lpStgMedium*-> *tymed*は**TYMED_NULL**、 **STGMEDIUM**割り当てられ、で指定したとおりに入力する必要があります*lpFormatEtc tymed]-> [* です。 ない場合は**TYMED_NULL**、 **STGMEDIUM**のデータが配置を入力する必要があります。  
   
  これは、高度なオーバーライド可能です。 要求された形式および中規模でデータを提供するには、この関数をオーバーライドします。 によっては、データを代わりにこの関数の他のバージョンの 1 つを上書きする可能性があります。 データが小規模で固定サイズの場合は、オーバーライド`OnRenderGlobalData`です。 データをファイル内や可変サイズのオーバーライド`OnRenderFileData`です。  
   
@@ -368,16 +368,16 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)情報が要求された形式を指定します。  
   
- `pFile`  
+ *pFile*  
  指す、 [CFile](../../mfc/reference/cfile-class.md)データが表示されるオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  以前に指定の形式は、`COleDataSource`オブジェクトを使用して、[に](#delayrenderdata)遅延レンダリングするためのメンバー関数。 この関数の既定の実装を単純に返します**FALSE**です。  
   
  これは、高度なオーバーライド可能です。 要求された形式および中規模でデータを提供するには、この関数をオーバーライドします。 によっては、データは、代わりにこの関数の他のバージョンの 1 つをオーバーライドすることができます。 複数の記憶域メディアを処理する場合は、オーバーライド[は](#onrenderdata)します。 データをファイル内や可変サイズのオーバーライド`OnRenderFileData`です。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)です。  
@@ -394,19 +394,19 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)情報が要求された形式を指定します。  
   
- `phGlobal`  
+ *phGlobal*  
  データが返されるグローバル メモリへのハンドルへのポインター。 このパラメーターを指定できますいずれかがまだ割り当てられていない場合、 **NULL**です。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  以前に指定の形式は、`COleDataSource`オブジェクトを使用して、[に](#delayrenderdata)遅延レンダリングするためのメンバー関数。 この関数の既定の実装を単純に返します**FALSE**です。  
   
- 場合`phGlobal`は**NULL**、し、新しい`HGLOBAL`割り当てられで返される必要があります`phGlobal`です。 それ以外の場合、`HGLOBAL`によって指定された`phGlobal`データを格納する必要があります。 内に配置するデータ量、`HGLOBAL`メモリ ブロックの現在のサイズを超えない必要があります。 また、ブロックは、大きいサイズに再割り当てできません。  
+ 場合*phGlobal*は**NULL**、し、新しい`HGLOBAL`割り当てられで返される必要があります*phGlobal*です。 それ以外の場合、`HGLOBAL`によって指定された*phGlobal*データを格納する必要があります。 内に配置するデータ量、`HGLOBAL`メモリ ブロックの現在のサイズを超えない必要があります。 また、ブロックは、大きいサイズに再割り当てできません。  
   
  これは、高度なオーバーライド可能です。 要求された形式および中規模でデータを提供するには、この関数をオーバーライドします。 によっては、データを代わりにこの関数の他のバージョンの 1 つを上書きする可能性があります。 複数の記憶域メディアを処理する場合は、オーバーライド[は](#onrenderdata)します。 データをファイル内や可変サイズのオーバーライド[可変](#onrenderfiledata)です。 詳細については遅延レンダリングの MFC で処理されるは、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)です。  
   
@@ -423,19 +423,19 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指す、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)データを交換する形式を指定します。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指す、 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)の現在の内容で置換されるデータを含む構造体、`COleDataSource`オブジェクト。  
   
- `bRelease`  
- 関数呼び出しを完了した後、記憶域メディアの所有権を持っているユーザーを示します。 呼び出し元は、ストレージ メディア代理で割り当てられたリソースを解放する担当者を決定します。 呼び出し元は設定することで`bRelease`です。 場合`bRelease`は 0 以外の場合、データ ソース所有権を終了時に使用するメディアを解放します。 ときに`bRelease`0 は、呼び出し元が所有権を保持およびデータ ソースは、呼び出しの間でのみストレージ メディアを使用できます。  
+ *bRelease*  
+ 関数呼び出しを完了した後、記憶域メディアの所有権を持っているユーザーを示します。 呼び出し元は、ストレージ メディア代理で割り当てられたリソースを解放する担当者を決定します。 呼び出し元は設定することで*bRelease*です。 場合*bRelease*は 0 以外の場合、データ ソース所有権を終了時に使用するメディアを解放します。 ときに*bRelease* 0 は、呼び出し元が所有権を保持およびデータ ソースは、呼び出しの間でのみストレージ メディアを使用できます。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  正常に取得するまで、データ ソースは、データの所有権になりません。 つまり、その所有権を持ちません場合`OnSetData`0 を返します。 データ ソースの所有権を呼び出すことによってストレージ メディアを解放、 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)関数。  
   
  既定の実装では、何も行われません。 指定された形式でデータを置換するには、この関数をオーバーライドします。 これは、高度なオーバーライド可能です。  

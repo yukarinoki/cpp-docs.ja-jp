@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378419"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039131"
 ---
 # <a name="coblist-class"></a>CObList クラス
 一意の順序付きリスト fSupports`CObject`アクセス可能なポインター値の順番、またはポインターでします。  
@@ -110,14 +110,14 @@ class CObList : public CObject
 |[CObList::RemoveTail](#removetail)|リストの末尾から要素を削除します。|  
 |[CObList::SetAt](#setat)|指定された位置に要素を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CObList` リストは、二重リンク リストのように動作します。  
   
  型の変数**位置**はリストのキーです。 使用することができます、**位置**順番にリストを走査する反復子、および位置を保持するためのブックマークとして変数です。 位置は、インデックスと同じただしです。  
   
  要素の挿入は、非常に高速リストの先頭、末尾、および既知**位置**です。 順次検索は、値またはインデックスで要素を検索する必要があります。 この検索は、一覧が長い場合は低速にすることはできます。  
   
- `CObList` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 リストの場合`CObject`ポインターが格納されているか、オーバー ロードされた挿入演算子のいずれか、アーカイブ、`Serialize`メンバー関数は、各`CObject`要素はさらにシリアル化します。  
+ `CObList` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 リストの場合`CObject`ポインターが格納されているか、オーバー ロードされた挿入演算子のいずれか、アーカイブ、`Serialize`メンバー関数は、各`CObject`要素はさらにシリアル化します。  
   
  個別にダンプする必要がある場合`CObject`リスト内の要素、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
   
@@ -135,7 +135,7 @@ class CObList : public CObject
   
  `CObList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="addhead"></a>  CObList::AddHead  
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `newElement`  
+ *newElement*  
  `CObject`をこの一覧に追加するポインター。  
   
- `pNewList`  
- 別のポインター `CObList`  ボックスの一覧です。 内の要素`pNewList`この一覧に追加されます。  
+ *pNewList*  
+ 別のポインター `CObList`  ボックスの一覧です。 内の要素*pNewList*この一覧に追加されます。  
   
 ### <a name="return-value"></a>戻り値  
  最初のバージョンを返します、**位置**は新しく挿入される要素の値。  
@@ -163,7 +163,7 @@ void AddHead(CObList* pNewList);
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 AddHead (void\***  `newElement` **) です。**<br /><br /> **AddHead を無効にする (CPtrList\***  `pNewList` **) です。**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddHead (const CString &** `newElement` **) です。**<br /><br /> **位置 AddHead (LPCTSTR** `newElement` **) です。**<br /><br /> **AddHead を無効にする (CStringList\***  `pNewList` **) です。**|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  一覧は、操作の前に空にすることができます。  
   
 ### <a name="example"></a>例  
@@ -188,16 +188,16 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `newElement`  
+ *newElement*  
  `CObject`をこの一覧に追加するポインター。  
   
- `pNewList`  
- 別のポインター `CObList`  ボックスの一覧です。 内の要素`pNewList`この一覧に追加されます。  
+ *pNewList*  
+ 別のポインター `CObList`  ボックスの一覧です。 内の要素*pNewList*この一覧に追加されます。  
   
 ### <a name="return-value"></a>戻り値  
  最初のバージョンを返します、**位置**は新しく挿入される要素の値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  一覧は、操作の前に空にすることができます。  
   
  次の表はその他のメンバー関数に似ています`CObList::AddTail`です。  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBlockSize`  
+ *nBlockSize*  
  リストを拡張するメモリ割り当ての粒度。  
   
-### <a name="remarks"></a>コメント  
- 単位でメモリが割り当てられているリストするにつれて、`nBlockSize`エントリです。 メモリの割り当てに失敗した場合、`CMemoryException`がスローされます。  
+### <a name="remarks"></a>Remarks  
+ 単位でメモリが割り当てられているリストするにつれて、 *nBlockSize*エントリです。 メモリの割り当てに失敗した場合、`CMemoryException`がスローされます。  
   
  次の表はその他のメンバー関数に似ています`CObList::CObList`です。  
   
@@ -260,16 +260,16 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `searchValue`  
+ *searchValue*  
  この一覧で検索するオブジェクトのポインター。  
   
- `startAfter`  
+ *startAfter*  
  検索の開始位置。  
   
 ### <a name="return-value"></a>戻り値  
  A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**オブジェクトが見つからない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ポインター値を比較することに注意してください、オブジェクトの内容ではありません。  
   
  次の表はその他のメンバー関数に似ています`CObList::Find`です。  
@@ -285,20 +285,20 @@ POSITION Find(
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- 値を使用して`nIndex`一覧のインデックス。  
+ 値を使用して*nIndex*一覧のインデックス。  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  検索するリストの要素の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**場合`nIndex`が大きすぎます。 (場合に、フレームワークがアサーションを生成`nIndex`が負の値です)。  
+ A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**場合*nIndex*が大きすぎます。 (場合に、フレームワークがアサーションを生成*nIndex*が負の値です)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  停止する、リストの先頭から順次スキャンを開始、 *n*番目の要素。  
   
  次の表はその他のメンバー関数に似ています`CObList::FindIndex`です。  
@@ -323,12 +323,12 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>パラメーター  
  *位置*  
- A**位置**によって以前返される値`GetHeadPosition`または**検索**メンバー関数の呼び出しです。  
+ A**位置**によって以前返される値`GetHeadPosition`または`Find`メンバー関数の呼び出しです。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値の説明を参照してください[gethead 関数](#gethead)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `GetAt` 取得、`CObject`指定した位置に関連付けられたポインター。  
   
  確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
@@ -378,7 +378,7 @@ const CObject*& GetHead() const;
   
  一覧には直接にも、ポインターを介してアクセスする場合、 `CObList`、し`GetHead`への参照を返します、`CObject`ポインター。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`GetHead`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
   
  次の表はその他のメンバー関数に似ています`CObList::GetHead`です。  
@@ -418,7 +418,7 @@ POSITION GetHeadPosition() const;
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- によって識別される要素を取得`rPosition`を設定し、`rPosition`を`POSITION`一覧の次のエントリの値。  
+ によって識別される要素を取得*rPosition*を設定し、 *rPosition*を`POSITION`一覧の次のエントリの値。  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,18 +426,18 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rPosition`  
+ *rPosition*  
  参照、`POSITION`によって以前返される値`GetNext`、 `GetHeadPosition`、またはその他のメンバー関数の呼び出しです。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値の説明を参照してください[gethead 関数](#gethead)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用することができます`GetNext`への呼び出しに最初の位置を確立する場合は、順方向の反復ループで`GetHeadPosition`または`Find`です。  
   
  確認する必要があります、`POSITION`値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
- 場合は、取得した最後の要素を一覧での新しい値`rPosition`に設定されている`NULL`です。  
+ 場合は、取得した最後の要素を一覧での新しい値*rPosition*に設定されている`NULL`です。  
   
  反復処理中に要素を削除することができます。 例を参照して[RemoveAt](#removeat)です。  
   
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- 要素を取得します ボックスの一覧によって識別される`rPosition`を設定し、`rPosition`を`POSITION`一覧の前のエントリの値。  
+ 要素を取得します ボックスの一覧によって識別される*rPosition*を設定し、 *rPosition*を`POSITION`一覧の前のエントリの値。  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,13 +471,13 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rPosition`  
+ *rPosition*  
  参照、`POSITION`によって以前返される値`GetPrev`またはその他のメンバー関数の呼び出しです。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値の説明を参照してください[gethead 関数](#gethead)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用することができます`GetPrev`への呼び出しに最初の位置を確立する場合は、反転反復ループで`GetTailPosition`または`Find`です。  
   
  確認する必要があります、`POSITION`値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
@@ -515,7 +515,7 @@ INT_PTR GetSize() const;
 ### <a name="return-value"></a>戻り値  
  リストの項目数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リスト内の要素の数を取得するには、このメソッドを呼び出します。  
   
  次の表はその他のメンバー関数に似ています`CObList::GetSize`です。  
@@ -541,7 +541,7 @@ const CObject*& GetTail() const;
 ### <a name="return-value"></a>戻り値  
  戻り値の説明を参照してください[gethead 関数](#gethead)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`GetTail`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
   
  次の表はその他のメンバー関数に似ています`CObList::GetTail`です。  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>パラメーター  
  *位置*  
- 前の **、** 、または `GetNext`Find `GetPrev`メンバー関数呼び出しにより返される **POSITION** 値。  
+ A**位置**によって以前返される値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出しです。  
   
  `newElement`  
  この一覧に追加するオブジェクトのポインター。  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>パラメーター  
  *位置*  
- 前の **、** 、または `GetNext`Find `GetPrev`メンバー関数呼び出しにより返される **POSITION** 値。  
+ A**位置**によって以前返される値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出しです。  
   
- `newElement`  
+ *newElement*  
  この一覧に追加するオブジェクトのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -687,7 +687,7 @@ BOOL IsEmpty() const;
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが空で既に場合、エラーは生成されません。  
   
  要素を削除すると、 `CObList`、一覧からオブジェクトのポインターを削除します。 ユーザーの責任をオブジェクト自体を削除することをお勧めします。  
@@ -715,7 +715,7 @@ void RemoveAt(POSITION position);
  *位置*  
  一覧から削除する要素の位置。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  要素を削除すると、 `CObList`、一覧からオブジェクトへのポインターを削除します。 ユーザーの責任をオブジェクト自体を削除することをお勧めします。  
   
  確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
@@ -752,7 +752,7 @@ CObject* RemoveHead();
 ### <a name="return-value"></a>戻り値  
  `CObject`リストの先頭にあったポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`RemoveHead`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
   
  次の表はその他のメンバー関数に似ています`CObList::RemoveHead`です。  
@@ -777,7 +777,7 @@ CObject* RemoveTail();
 ### <a name="return-value"></a>戻り値  
  リストの末尾にあったオブジェクトへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`RemoveTail`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
   
  次の表はその他のメンバー関数に似ています`CObList::RemoveTail`です。  
@@ -802,13 +802,13 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pos`  
+ *pos*  
  **位置**を設定する要素のです。  
   
- `newElement`  
+ *newElement*  
  `CObject`一覧に書き込まれるへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  型の変数**位置**はリストのキーです。 インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `SetAt` 書き込みます、`CObject`リスト内の指定位置へのポインター。  
   
  確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  

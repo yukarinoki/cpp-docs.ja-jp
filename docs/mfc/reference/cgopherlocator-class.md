@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f466864e694f332f70d9f5932a528917a000974
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366923"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041287"
 ---
 # <a name="cgopherlocator-class"></a>関数クラス
 Gopher「ロケーター」を gopher サーバーから取得、ロケーターの種類を決定し、ロケーターを可能に[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)です。  
@@ -59,7 +59,7 @@ class CGopherLocator : public CObject
 |----------|-----------------|  
 |[CGopherLocator::operator lpctstr を使用します。](#operator_lpctstr)|格納された文字に直接アクセスする、`CGopherLocator`オブジェクトを C スタイルの文字列として。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アプリケーションは、そのサーバーから情報を取得できる前に、gopher サーバーのロケーターを取得する必要があります。 ロケーターがある、不明確なトークンとロケーターに処理に必要があります。  
   
  各 gopher ロケーターでは、ファイルまたはサーバーの種類を決定する属性があります。 参照してください[GetLocatorType](#getlocatortype) gopher ロケーターの種類の一覧についてはします。  
@@ -73,7 +73,7 @@ class CGopherLocator : public CObject
   
  `CGopherLocator`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
@@ -84,10 +84,10 @@ CGopherLocator(const CGopherLocator& ref);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ref`  
+ *ref*  
  定数への参照を`CGopherLocator`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成することはありません、`CGopherLocator`オブジェクトに直接できます。 代わりに、 [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator)を作成してへのポインターを返す、`CGopherLocator`オブジェクト。  
   
 ##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
@@ -104,7 +104,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するのに呼び出せる可能性があります。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  種類は次のとおりです。  
   
 |[値]|説明|  
@@ -144,7 +144,7 @@ operator LPCTSTR () const;
 ### <a name="return-value"></a>戻り値  
  文字列のデータを指すポインターです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  文字はコピーされません。ポインターのみが返されます。  
   
 ## <a name="see-also"></a>関連項目  

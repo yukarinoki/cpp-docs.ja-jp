@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43c9fdc667f5bd40b6c683f6e48753a084266847
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368148"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037649"
 ---
 # <a name="cmapstringtostring-class"></a>メンバー クラス
 `CString` オブジェクトをキーとした `CString` オブジェクトのマップをサポートします。  
@@ -69,7 +69,7 @@ class CMapStringToString : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CMapStringToString`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CObject`へのポインターにポインターように、戻り値または"output"関数のパラメーターを置き換える`char`です。 任意の場所が表示、 `CObject` 、「の入力」の関数のパラメーターとしてのポインターへのポインターに置き換える`char`です。  
+ メンバー関数は、`CMapStringToString`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CObject`へのポインターにポインターように、戻り値または"output"関数のパラメーターを置き換える**char**です。 任意の場所が表示、 `CObject` 、「の入力」の関数のパラメーターとしてのポインターへのポインターに置き換える**char**です。  
   
  `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`  
   
@@ -79,7 +79,7 @@ class CMapStringToString : public CObject
   
 ### <a name="public-structures"></a>パブリック構造体  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMapStringToString::CPair](#cpair)|キーの値と関連付けられている文字列オブジェクトの値を含む入れ子になった構造体。|  
   
@@ -116,7 +116,7 @@ class CMapStringToString : public CObject
 |----------|-----------------|  
 |[CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMapStringToString` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 各要素がシリアル化されるさらに、アーカイブ、オーバー ロードされた出力ストリームにマップが格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数。  
   
  個別にダンプする必要がある場合`CString` -  `CString`要素、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
@@ -130,13 +130,13 @@ class CMapStringToString : public CObject
   
  `CMapStringToString`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="cpair"></a>  CMapStringToString::CPair  
  キー値と関連付けられている文字列オブジェクトの値が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これは、クラス内で入れ子になった構造体[メンバー](../../mfc/reference/cmapstringtostring-class.md)です。  
   
  構造体は、2 つのフィールドで構成されます。  
@@ -162,14 +162,14 @@ CPair* PGetFirstAssoc();
 ### <a name="return-value"></a>戻り値  
  マップ内の最初のエントリへのポインター参照してください[CMapStringToString::CPair](#cpair)です。 値は、マップが空の場合は、`NULL`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ポインターを返す最初の要素のマップ オブジェクト内には、この関数を呼び出します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
- によって示されるマップ要素を取得`pAssocRec`です。  
+ によって示されるマップ要素を取得*pAssocRec*です。  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;  
@@ -184,7 +184,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="return-value"></a>戻り値  
  マップ内の次のエントリへのポインター参照してください[CMapStringToString::CPair](#cpair)です。 値は、要素がマップ内の最後の場合は、 **NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  マップ内のすべての要素を反復処理するには、このメソッドを呼び出します。 呼び出しの最初の要素を取得`PGetFirstAssoc`を連続する呼び出すと、マップを反復処理し、`PGetNextAssoc`です。  
   
 ### <a name="example"></a>例  
@@ -200,13 +200,13 @@ CPair* PLookup(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `key`  
+ *key*  
  検索する要素のキーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたキーへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定したキーと一致するキーを使用して、マップ要素を検索するには、このメソッドを呼び出します。  
   
 ### <a name="example"></a>例  

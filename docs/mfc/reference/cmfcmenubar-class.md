@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377795"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039272"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar クラス
 ドッキングを実装するメニュー バーです。  
@@ -190,7 +190,7 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)|メニュー バーが最近使用したメニュー コマンドを表示するかどうかを指定します。|  
 |[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|メニュー バーがすべてのコマンドを表示するかどうかを指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCMenuBar`クラスは、メニュー バーのドッキング機能の実装です。 ツールバーに似ていますが、終了することはできません - 常に表示されます。  
   
  `CMFCMenuBar` 最近使用したメニュー項目オブジェクトの表示オプションをサポートしています。 このオプションが有効になっている場合、`CMFCMenuBar`を最初に表示に使用できるコマンドのサブセットのみが表示されます。 その後、最近使用されたコマンドは、コマンドの元のサブセットと表示されます。 さらに、ユーザーはすべての利用可能なコマンドを表示するメニューを常に展開することができます。 したがって、使用可能な各コマンドでは、常に表示するか、最後に選択されている場合にのみ表示するには構成されます。  
@@ -220,7 +220,7 @@ class CMFCMenuBar : public CMFCToolbar
   
  `CMFCMenuBar`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxmenubar.h  
   
 ##  <a name="adjustlocations"></a>  CMFCMenuBar::AdjustLocations  
@@ -230,7 +230,7 @@ class CMFCMenuBar : public CMFCToolbar
 virtual void AdjustLocations();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="allowchangetextlabels"></a>  CMFCMenuBar::AllowChangeTextLabels  
  メニュー バーの画像でテキスト ラベルは許可されているかどうかを判断します。  
@@ -242,7 +242,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="return-value"></a>戻り値  
  返します`TRUE`イメージの下のテキスト ラベルを表示するユーザーが選択できる場合です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCMenuBar::AllowShowOnPaneMenu  
 
@@ -253,7 +253,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="calcfixedlayout"></a>  CMFCMenuBar::CalcFixedLayout  
 
@@ -265,12 +265,12 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bStretch`  
- [入力] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="calclayout"></a>  CMFCMenuBar::CalcLayout  
 
@@ -282,12 +282,12 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `dwMode`  
- [入力] `nLength`  
+ [in]*寸法*  
+ [in]*されて*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="calcmaxbuttonheight"></a>  CMFCMenuBar::CalcMaxButtonHeight  
 
@@ -298,7 +298,7 @@ virtual int CalcMaxButtonHeight();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="canbeclosed"></a>  CMFCMenuBar::CanBeClosed  
 
@@ -309,7 +309,7 @@ virtual BOOL CanBeClosed() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="canberestored"></a>  CMFCMenuBar::CanBeRestored  
 
@@ -320,7 +320,7 @@ virtual BOOL CanBeRestored() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="create"></a>  CMFCMenuBar::Create  
  メニュー コントロールを作成し、それにアタッチ、 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)オブジェクト。  
@@ -333,19 +333,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  新しい親ウィンドウへのポインター`CMFCMenuBar`オブジェクト。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  新しいメニュー バーのスタイルです。  
   
- [入力] `nID`  
+ [in]*nID*  
  メニュー バーの子ウィンドウの ID。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は `TRUE`。それ以外の場合は `FALSE`。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築した後、`CMFCMenuBar`オブジェクトを呼び出す必要があります`Create`です。 このメソッドを作成、`CMFCMenuBar`を制御し、それを`CMFCMenuBar`オブジェクト。  
   
  ツール バー スタイルの詳細については、次を参照してください。 [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)です。  
@@ -366,25 +366,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  新しい親ウィンドウへのポインター`CMFCMenuBar`オブジェクト。  
   
- [入力] `dwCtrlStyle`  
+ [in]*ツール バー*  
  新しいメニュー バーのスタイルを追加します。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  新しいメニュー バーの主なスタイル。  
   
- [入力] `rcBorders`  
+ [in]*rcBorders*  
  A`CRect`の境界線のサイズを指定するパラメーター、`CMFCMenuBar`オブジェクト。  
   
- [入力] `nID`  
+ [in]*nID*  
  メニュー バーの子ウィンドウの ID。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  代わりにこの関数を使用する必要があります[CMFCMenuBar::Create](#create)に加えて、ツールバーのスタイルのスタイルを指定する場合。 頻繁に使用されるいくつか追加スタイルが`TBSTYLE_TRANSPARENT`と`CBRS_TOP`です。  
   
  その他のスタイルのリストは、次を参照してください。[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)、[コモン コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb775498)、および[共通のウィンドウ スタイル](http://msdn.microsoft.com/library/windows/desktop/ms632600)です。  
@@ -406,16 +406,16 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hMenu`  
+ [in]*hMenu*  
  メニュー リソースへのハンドル。 `CreateFromMenu` このリソースのテンプレートとして使用、`CMFCMenuBar`です。  
   
- [入力] `bDefaultMenu`  
+ [in]*bDefaultMenu*  
  新しいメニューが既定のメニューであるかどうかを示すブール値。  
   
- [入力] `bForceUpdate`  
+ [in]*bForceUpdate*  
  このメソッドがメニュー更新を強制するかどうかを示すブール値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  同じメニュー項目をメニュー リソースとしてのメニュー コントロールをする場合は、このメソッドを使用します。 いずれかを呼び出した後は、このメソッドを呼び出す[CMFCMenuBar::Create](#create)または[CMFCMenuBar::CreateEx](#createex)です。  
   
 ##  <a name="enablehelpcombobox"></a>  CMFCMenuBar::EnableHelpCombobox  
@@ -429,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiID`  
+ [in]*uiID*  
  コマンド ID のボタンを**ヘルプ**コンボ ボックス。  
   
- [入力] `lpszPrompt`  
+ [in]*lpszPrompt*  
  空でアクティブでない場合に、フレームワークがコンボ ボックスに表示されるテキストを含む文字列です。 たとえば、「入力テキストをここで」します。  
   
- [入力] `nComboBoxWidth`  
+ [in]*nComboBoxWidth*  
  ピクセルのコンボ ボックスのボタンの幅。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **ヘルプ**コンボ ボックスに似ています、**ヘルプ**のメニュー バーのコンボ ボックス[!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]です。  
   
- このメソッドを呼び出す場合`uiID`を 0 に設定すると、このメソッドは、コンボ ボックス非表示にします。 それ以外の場合、このメソッドは、メニュー バーの右側にあるコンボ ボックスを自動的に表示します。 このメソッドを呼び出した後に呼び出す[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) 、挿入されたへのポインターを取得する[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)オブジェクト。  
+ このメソッドを呼び出す場合*uiID*を 0 に設定すると、このメソッドは、コンボ ボックス非表示にします。 それ以外の場合、このメソッドは、メニュー バーの右側にあるコンボ ボックスを自動的に表示します。 このメソッドを呼び出した後に呼び出す[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) 、挿入されたへのポインターを取得する[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)オブジェクト。  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  ポップアップ メニューの影を有効にします。  
@@ -451,10 +451,10 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
  ポップアップ メニューの影を有効にするかどうかを示すブール値パラメーターです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを使用するアルゴリズムは複雑で、低速なシステム上のアプリケーションのパフォーマンスが低下する可能性があります。  
   
 ##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize  
@@ -466,7 +466,7 @@ virtual int GetAvailableExpandSize() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcolumnwidth"></a>  CMFCMenuBar::GetColumnWidth  
 
@@ -477,7 +477,7 @@ virtual int GetColumnWidth() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getdefaultmenu"></a>  CMFCMenuBar::GetDefaultMenu  
  元のメニューへのハンドルを取得します。 フレームワークは、リソース ファイルから元のメニューを読み込みます。  
@@ -489,7 +489,7 @@ HMENU GetDefaultMenu() const;
 ### <a name="return-value"></a>戻り値  
  メニュー リソースへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アプリケーションでは、メニューをカスタマイズする場合は、元のメニューへのハンドルを取得するこのメソッドを使用できます。  
   
 ##  <a name="getdefaultmenuresid"></a>  CMFCMenuBar::GetDefaultMenuResId  
@@ -502,7 +502,7 @@ UINT GetDefaultMenuResId() const;
 ### <a name="return-value"></a>戻り値  
  メニュー リソースの識別子。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークの既定のメニューを読み込みます、`CMFCMenuBar`リソース ファイルからのオブジェクト。  
   
 ##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection  
@@ -513,11 +513,11 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getforcedownarrows"></a>  CMFCMenuBar::GetForceDownArrows  
 
@@ -528,7 +528,7 @@ BOOL GetForceDownArrows();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gethelpcombobox"></a>  CMFCMenuBar::GetHelpCombobox  
  ポインターを返します、**ヘルプ**コンボ ボックス。  
@@ -540,7 +540,7 @@ CMFCToolBarComboBoxButton* GetHelpCombobox();
 ### <a name="return-value"></a>戻り値  
  ポインター、**ヘルプ**コンボ ボックス。 `NULL` 場合、**ヘルプ**コンボ ボックスが非表示または有効になっていません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **ヘルプ**コンボ ボックスは、メニュー バーの右側にあります。 メソッドを呼び出して[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)このコンボ ボックスが有効にします。  
   
 ##  <a name="gethmenu"></a>  CMFCMenuBar::GetHMenu  
@@ -558,13 +558,13 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bHorz`  
+ [in]*bHorz*  
  水平または垂直のフォントを返すかどうかを指定するブール型パラメーター。 `TRUE` 水平方向のフォントを示します。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CFont](../../mfc/reference/cfont-class.md)を現在のメニュー バーのフォントを含むパラメーター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  返されるフォントは、アプリケーションのグローバル パラメーターです。 2 つのグローバル フォントはすべて保持`CMFCMenuBar`オブジェクト。 水平および垂直方向のメニュー バーでは、これら個別のフォントが使用されます。  
   
 ##  <a name="getmenuitem"></a>  CMFCMenuBar::GetMenuItem  
@@ -575,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iItem`  
+ [in]*iItem*  
  返されるメニュー項目のインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CMFCToolBarButton`で指定されたインデックスと一致するオブジェクト`iItem`です。 `NULL` 場合は、インデックスが有効ではありません。  
+ ポインター、`CMFCToolBarButton`で指定されたインデックスと一致するオブジェクト*iItem*です。 `NULL` 場合は、インデックスが有効ではありません。  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -590,7 +590,7 @@ virtual int GetRowHeight() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getsystembutton"></a>  CMFCMenuBar::GetSystemButton  
 
@@ -602,12 +602,12 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiBtn`  
- [入力] `bByCommand`  
+ [in]*uiBtn*  
+ [in]*bByCommand*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getsystembuttonscount"></a>  CMFCMenuBar::GetSystemButtonsCount  
 
@@ -618,7 +618,7 @@ int GetSystemButtonsCount() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getsystemmenu"></a>  CMFCMenuBar::GetSystemMenu  
 
@@ -629,7 +629,7 @@ CMFCToolBarSystemMenuButton* GetSystemMenu() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="highlightdisableditems"></a>  CMFCMenuBar::HighlightDisabledItems  
  フレームワークが無効なメニュー項目を強調表示するかどうかを制御します。  
@@ -639,10 +639,10 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bHighlight`  
+ [in]*bHighlight*  
  フレームワークが使用できないメニュー項目を強調表示するかどうかを示すブール値パラメーターです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークを強調表示しません使用できないメニュー項目、ユーザーは、上にマウス ポインターを置いたときにします。  
   
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable  
@@ -654,7 +654,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ishighlightdisableditems"></a>  CMFCMenuBar::IsHighlightDisabledItems  
  フレームワークが使用できないメニュー項目を強調表示するかどうかを示します。  
@@ -666,7 +666,7 @@ static BOOL IsHighlightDisabledItems();
 ### <a name="return-value"></a>戻り値  
  `TRUE` 場合は使用できないメニュー項目が強調表示されます。それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークを強調表示しません使用できないメニュー項目、ユーザーは、上にマウス ポインターを置いたときにします。 使用して、 [CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)メソッドはこの機能を有効にします。  
   
 ##  <a name="ismenushadows"></a>  CMFCMenuBar::IsMenuShadows  
@@ -679,7 +679,7 @@ static BOOL IsMenuShadows();
 ### <a name="return-value"></a>戻り値  
  `TRUE` メニュー シャドウを描画する場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、 [CMFCMenuBar::EnableMenuShadows](#enablemenushadows)メソッドを有効またはこの機能を無効にします。  
   
 ##  <a name="isrecentlyusedmenus"></a>  CMFCMenuBar::IsRecentlyUsedMenus  
@@ -692,7 +692,7 @@ static BOOL IsRecentlyUsedMenus();
 ### <a name="return-value"></a>戻り値  
  0 以外の場合、`CMFCMenuBar`オブジェクトが最近使用した表示メニュー コマンド以外の場合は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数を使用して[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)を制御するかどうか、メニュー バーが最近表示 メニューのコマンドを使用します。  
   
 ##  <a name="isshowallcommands"></a>  CMFCMenuBar::IsShowAllCommands  
@@ -705,7 +705,7 @@ static BOOL IsShowAllCommands();
 ### <a name="return-value"></a>戻り値  
  0 以外の場合、`CMFCMenuBar`すべて表示コマンド以外の場合は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  A`CMFCMenuBar`オブジェクトは、すべてのコマンドを表示するか、コマンドのサブセットのみを表示するように構成できます。 この機能の詳細については、次を参照してください。 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)です。  
   
  `IsShowAllCommands` わかるのこの機能を構成する方法、`CMFCMenuBar`オブジェクト。 表示するメニュー コマンドを制御する方法を使用[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)と[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)です。  
@@ -720,7 +720,7 @@ static BOOL IsShowAllCommandsDelay();
 ### <a name="return-value"></a>戻り値  
  メニュー バーです。 短い遅延後にすべてのメニューが表示される場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最近使用した表示項目にメニュー バーを構成するときに、メニュー バーでは、2 つの方法のいずれかでのすべてのメニューが表示されます。  
   
 -   ユーザーがメニューの下部にある矢印上にカーソルを置く場合下手遅延後にすべてのメニューを表示します。  
@@ -740,19 +740,19 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows レジストリ キーのパスを含む文字列です。  
   
- [入力] `nIndex`  
+ [in]*nIndex*  
  メニュー バーのコントロール ID。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  予約済みの値。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、 [CMFCMenuBar::SaveState](#savestate)メニュー バーの状態をレジストリに保存するメソッド。 保存された情報には、メニュー項目、ドッキング状態と、メニュー バーの位置が含まれています。  
   
  ほとんどの場合、アプリケーションは呼び出しません`LoadState`です。 フレームワークは、ワークスペースの初期化時に、このメソッドを呼び出します。  
@@ -765,9 +765,9 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iHot`  
+ [in]*iHot*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondefaultmenuloaded"></a>  CMFCMenuBar::OnDefaultMenuLoaded  
  フレームワークは、メニュー リソース、リソース ファイルから読み込むときに、このメソッドを呼び出します。  
@@ -777,10 +777,10 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hMenu`  
+ [in]*hMenu*  
  接続されているため、メニューのハンドル、`CMFCMenuBar`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数の既定の実装は、何も行いません。 フレームワーク メニュー リソースをリソース ファイルから読み込まれた後にカスタム コードを実行するには、この関数をオーバーライドします。  
   
 ##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand  
@@ -791,11 +791,11 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsetdefaultbuttontext"></a>  CMFCMenuBar::OnSetDefaultButtonText  
  フレームワークは、ユーザーがメニュー バーで、項目のテキストを変更したときに、このメソッドを呼び出します。  
@@ -805,13 +805,13 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
  ポインター、 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)ユーザーがカスタマイズするオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` フレームワークは、メニュー バーにユーザーの変更を適用する場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドの既定の実装では、ユーザーが提供するテキストをボタンのテキストを変更します。  
   
 ##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest  
@@ -824,12 +824,12 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `point`  
- [入力] `pTI`  
+ [in]*ポイント*  
+ [in]*pTI*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pretranslatemessage"></a>  CMFCMenuBar::PreTranslateMessage  
 
@@ -839,11 +839,11 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="restoreoriginalstate"></a>  CMFCMenuBar::RestoreOriginalstate  
  ユーザーが選択したときに、フレームワークによって呼び出されます**リセット**から、**カスタマイズ** ダイアログ ボックス。  
@@ -855,7 +855,7 @@ virtual BOOL RestoreOriginalstate();
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ユーザーが選択したときに**リセット**のカスタマイズ メニューからです。 手動でプログラムによって、メニュー バーの状態をリセットするには、このメソッドを呼び出すことができます。 このメソッドは、リソース ファイルから元の状態を読み込みます。  
   
  このメソッドをオーバーライドして、ユーザーを選択すると、任意の処理を実行する場合、**リセット**オプション。  
@@ -871,19 +871,19 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows レジストリ キーのパスを含む文字列です。  
   
- [入力] `nIndex`  
+ [in]*nIndex*  
  メニュー バーのコントロール ID。  
   
- [入力] `uiID`  
+ [in]*uiID*  
  予約済みの値。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` 成功した場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  通常、アプリケーションは呼び出しません`SaveState`です。 フレームワークは、ワークスペースがシリアル化する場合、このメソッドを呼び出します。 詳細については、次を参照してください。 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)です。  
   
  保存された情報には、メニュー項目、ドッキング状態と、メニュー バーの位置が含まれています。  
@@ -896,10 +896,10 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResId`  
+ [in]*uiResId*  
  新しい既定のメニューのリソース ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)メソッドは、リソース ファイルから既定のメニューを復元します。  
   
  使用して、 [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)を使わずに既定のメニューを取得する方法です。  
@@ -912,9 +912,9 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bValue`  
+ [in]*bValue*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setmaximizemode"></a>  CMFCMenuBar::SetMaximizeMode  
  MDI の表示モードを変更すると、メニュー バーを更新する必要があります、フレームワークはこのメソッドを呼び出します。  
@@ -927,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bMax`  
+ [in]*bMax*  
  モードを指定するブール値。 詳細については、次の「解説」を参照してください。  
   
- [入力] `pWnd`  
+ [in]*pWnd*  
  変更の MDI 子ウィンドウへのポインター。  
   
- [入力] `bRecalcLayout`  
+ [in]*bRecalcLayout*  
  メニュー バーのレイアウトをすぐに計算する必要があるかどうかを指定するブール値。  
   
-### <a name="remarks"></a>コメント  
- MDI メイン フレーム ウィンドウにアタッチされているメニュー バーがシステム メニューを表示する MDI 子ウィンドウを最大表示しているときに、**最小化**、**最大化**と**閉じる**ボタン。 場合`bMax`は`TRUE`と`pWnd`は`NULL`MDI 子ウィンドウを最大化し、メニュー バーは、追加のコントロールを組み込む必要があります。 それ以外の場合、メニュー バーは、通常の状態に戻ります。  
+### <a name="remarks"></a>Remarks  
+ MDI メイン フレーム ウィンドウにアタッチされているメニュー バーがシステム メニューを表示する MDI 子ウィンドウを最大表示しているときに、**最小化**、**最大化**と**閉じる**ボタン。 場合*bMax*は`TRUE`と*pWnd*は`NULL`MDI 子ウィンドウを最大化し、メニュー バーは、追加のコントロールを組み込む必要があります。 それ以外の場合、メニュー バーは、通常の状態に戻ります。  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  ユーザーがメニュー ボタンを作成するときにフレームワークによって使用されるランタイム クラス情報を設定します。  
@@ -947,10 +947,10 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMenuButtonRTC`  
+ [in]*pMenuButtonRTC*  
  [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)から派生したクラスの情報、 [CMFCMenuButton クラス](../../mfc/reference/cmfcmenubutton-class.md)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーが新しいボタンをメニュー バーに追加すると、フレームワークは動的にボタンを作成します。 既定で作成`CMFCMenuButton`オブジェクト。 フレームワークによって作成される button オブジェクトの種類を変更するには、このメソッドをオーバーライドします。  
   
 ##  <a name="setmenufont"></a>  CMFCMenuBar::SetMenuFont  
@@ -963,16 +963,16 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpLogFont`  
+ [in]*lpLogFont*  
  ポインター、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327)フォント設定を定義する構造体。  
   
- [入力] `bHorz`  
- 場合は TRUE、`lpLogFont`横書きフォントに使用する場合に垂直方向のフォントでは、FALSE を使用するパラメーターです。  
+ [in]*bHorz*  
+ 場合は TRUE、 *lpLogFont*横書きフォントに使用する場合に垂直方向のフォントでは、FALSE を使用するパラメーターです。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  2 つのフォントは、すべての使用`CMFCMenuBar`オブジェクト。 水平および垂直方向のメニュー バーでは、これら個別のフォントが使用されます。  
   
  フォントの設定はグローバル変数し、すべてに影響`CMFCMenuBar`オブジェクト。  
@@ -985,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bOn`  
+ [in]*お*  
  最近使用したメニュー コマンドを表示するかどうかを制御するブール値。  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -996,10 +996,10 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bShowAllCommands`  
+ [in]*bShowAllCommands*  
  すべてのメニュー コマンドがポップアップ メニューに表示するかどうかを指定するブール型のパラメーターです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メニューがすべてのメニュー コマンドが表示されない場合は、ほとんど使用されるコマンドが表示されません。 メニュー コマンドを表示する方法についての詳細については、次を参照してください。 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)です。  
   
 ## <a name="see-also"></a>関連項目  

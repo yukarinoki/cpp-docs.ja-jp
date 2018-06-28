@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375617"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040117"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar クラス
 OLE の埋め込み先アイテムのサイズ変更をサポートするコントロール バーの一種です。  
@@ -50,7 +50,7 @@ class COleResizeBar : public CControlBar
 |----------|-----------------|  
 |[COleResizeBar::Create](#create)|作成し、Windows 子ウィンドウを初期化しに関連付けます、`COleResizeBar`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `COleResizeBar` オブジェクトとして表示されます、 [CRectTracker](../../mfc/reference/crecttracker-class.md)斜線の外枠でと外側のハンドルのサイズを変更します。  
   
  `COleResizeBar` オブジェクトから派生するフレーム ウィンドウ オブジェクトの通常の埋め込みのメンバーである、 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)クラスです。  
@@ -68,7 +68,7 @@ class COleResizeBar : public CControlBar
   
  `COleResizeBar`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxole.h  
   
 ##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar  
@@ -78,7 +78,7 @@ class COleResizeBar : public CControlBar
 COleResizeBar();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す**作成**をサイズ変更バー オブジェクトを作成します。  
   
 ##  <a name="create"></a>  COleResizeBar::Create  
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentWnd`  
+ *pParentWnd*  
  サイズ変更バーの親ウィンドウへのポインター。  
   
- `dwStyle`  
+ *dwStyle*  
  指定します、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性。  
   
- `nID`  
+ *nID*  
  子ウィンドウのサイズ変更バーの id。  
   
 ### <a name="return-value"></a>戻り値  

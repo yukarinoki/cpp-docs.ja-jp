@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366910"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039483"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed クラス
 直線速度遷移をカプセル化します。  
@@ -61,7 +61,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 |[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時、アニメーション変数の値。|  
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|変数のベロシティの絶対値。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  直線速度遷移中に指定したレートでアニメーション変数の値を変更します。 移行の期間は、初期値と指定した最終的な値の違いによって決まります。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -71,7 +71,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
   
  [CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
@@ -84,10 +84,10 @@ CLinearTransitionFromSpeed(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dblSpeed`  
+ *dblSpeed*  
  変数のベロシティの絶対値。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  遷移の終了時、アニメーション変数の値。  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
-`pLibrary`  
+*pLibrary*  
  ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
   
 ### <a name="return-value"></a>戻り値  

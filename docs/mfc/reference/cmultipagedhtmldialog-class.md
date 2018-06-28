@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373893"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038007"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>関数クラス
 マルチページ ダイアログは、複数の HTML ページを順番に表示し、各ページのイベントを処理します。  
@@ -43,7 +43,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|マルチページ (ウィザード スタイル) DHTML dialog オブジェクトを構築します。|  
 |[関数:: ~ 関数](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|マルチページ DHTML dialog オブジェクトを破棄します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これを行うためのメカニズムは、 [DHTML と URL のイベント マップ](dhtml-event-maps.md)、各ページのイベントのマップが埋め込まれているが含まれています。  
   
 ## <a name="example"></a>例  
@@ -78,7 +78,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
  `CMultiPageDHtmlDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdhtml.h  
   
 ##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  ダイアログ テンプレート リソースの名前を表す null で終わる文字列。  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  HTML リソースの名前を表す null で終わる文字列。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウのオブジェクトへのポインター (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ オブジェクトの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  ダイアログ テンプレート リソースの ID 番号が含まれています。  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  HTML リソースの ID 番号が含まれています。  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  関数:: ~ 関数  

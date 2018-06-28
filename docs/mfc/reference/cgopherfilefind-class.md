@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584644963a647c5b458407b2d777f91014b40fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369415"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038530"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind クラス
 gopher サーバーのインターネット ファイル検索を支援します。  
@@ -77,7 +77,7 @@ class CGopherFileFind : public CFileFind
 |[CGopherFileFind::GetScreenName](#getscreenname)|Gopher 画面の名前を取得します。|  
 |[CGopherFileFind::IsDots](#isdots)|ファイルを反復処理するときに現在ディレクトリとその親ディレクトリのマーカーをテストします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CGopherFileFind` 検索を開始、ファイルを検索し、ファイルの URL を返すメンバー関数が含まれます。  
   
  インターネットとローカル ファイルの検索を含めるために設計されて他の MFC クラス[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)と[CFileFind](../../mfc/reference/cfilefind-class.md)です。 と共に`CGopherFileFind`、これらのクラスは、サーバー プロトコル、ファイルの種類または場所 (ローカル コンピューターまたはリモート サーバーのいずれかです) に関係なく、特定のファイルを検索するユーザーのシームレスなメカニズムを提供。HTTP は検索に必要なファイルを直接操作をサポートしていないために、HTTP サーバーで検索するための MFC クラスがないことに注意してください。  
@@ -106,7 +106,7 @@ class CGopherFileFind : public CFileFind
   
  `CGopherFileFind`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
   
 ##  <a name="cgopherfilefind"></a>  CGopherFileFind::CGopherFileFind  
@@ -119,14 +119,14 @@ explicit CGopherFileFind(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pConnection`  
+ *pConnection*  
  ポインター、[関数](../../mfc/reference/cgopherconnection-class.md)オブジェクト。  
   
- `dwContext`  
- 操作のコンテキストの識別子。 参照してください**解説**の詳細については`dwContext`します。  
+ *独自*  
+ 操作のコンテキストの識別子。 参照してください**解説**の詳細については*独自*です。  
   
-### <a name="remarks"></a>コメント  
- 既定値`dwContext`に MFC によって送信される、`CGopherFileFind`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CGopherFileFind`オブジェクト。 構築する場合、`CGopherFileFind`オブジェクトのコンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
+### <a name="remarks"></a>Remarks  
+ 既定値*独自*に MFC によって送信される、`CGopherFileFind`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CGopherFileFind`オブジェクト。 構築する場合、`CGopherFileFind`オブジェクトのコンテキスト識別子を独自の値に設定する既定値をオーバーライドすることができます。 コンテキスト識別子に返される[:onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)いる識別されるオブジェクトの状態をします。 記事を参照して[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)詳細については、コンテキスト識別子。  
   
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile  
  Gopher ファイルを検索するには、このメンバー関数を呼び出します。  
@@ -144,13 +144,13 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `refLocator`  
+ *refLocator*  
  参照、[関数](../../mfc/reference/cgopherlocator-class.md)オブジェクト。  
   
  *pstrString*  
  ファイル名を含む文字列へのポインター。  
   
- `dwFlags`  
+ *dwFlags*  
  このセッションを処理する方法を示すフラグ。 有効なフラグは次のとおりです。  
   
 -   ローカルにキャッシュされている場合でも、INTERNET_FLAG_RELOAD はリモート サーバーからデータを取得します。  
@@ -164,7 +164,7 @@ virtual BOOL FindFile(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得する Win32 関数を呼び出す[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出した後**FindFile** gopher の最初のオブジェクトを取得するを呼び出すことができます[FindNextFile](#findnextfile)後続 gopher ファイルを取得します。  
   
 ##  <a name="findnextfile"></a>  CGopherFileFind::FindNextFile  
@@ -186,16 +186,16 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pTimeStamp`  
+ *pTimeStamp*  
  ポインター、 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルが作成された時刻を含む構造体。  
   
- `refTime`  
+ *refTime*  
  参照、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外。それ以外の場合は 0 を返します。 `GetCreationTime` 場合にのみ、0 を返します[FindNextFile](#findnextfile)は決してこので呼び出されました`CGopherFileFind`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetCreationTime`です。  
   
 > [!NOTE]
@@ -210,16 +210,16 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `refTime`  
+ *refTime*  
  参照、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  ポインター、 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルの最終アクセス時刻を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外。それ以外の場合は 0 を返します。 `GetLastAccessTime` 場合にのみ、0 を返します[FindNextFile](#findnextfile)は決してこので呼び出されました`CGopherFileFind`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetLastAccessTime`です。  
   
 > [!NOTE]
@@ -234,16 +234,16 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pTimeStamp`  
+ *pTimeStamp*  
  ポインター、 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)ファイルに最後に書き込んだ時間を含む構造体。  
   
- `refTime`  
+ *refTime*  
  参照、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外。それ以外の場合は 0 を返します。 `GetLastWriteTime` 場合にのみ、0 を返します[FindNextFile](#findnextfile)は決してこので呼び出されました`CGopherFileFind`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`GetLastWriteTime`です。  
   
 > [!NOTE]
@@ -259,7 +259,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="return-value"></a>戻り値  
  見つかったファイルの長さ、(バイト単位)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `GetLength` Win32 構造を使用して[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)バイト単位で、ファイル サイズの値を取得します。  
   
 > [!NOTE]
@@ -298,7 +298,7 @@ virtual BOOL IsDots() const;
 ### <a name="return-value"></a>戻り値  
  見つかったファイルの名前にする場合は 0 以外"です。"または".."、見つかったファイルがディレクトリでは実際にします。 それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す必要があります[FindNextFile](#findnextfile)呼び出す前に少なくとも 1 回`IsDots`です。  
   
 ## <a name="see-also"></a>関連項目  

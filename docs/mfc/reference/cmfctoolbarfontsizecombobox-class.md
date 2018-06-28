@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f87dd55373599f8ab8394284a6271930b9fcd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372783"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037510"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox クラス
 コンボ ボックス コントロールのフォント サイズを選択することができますを含むツールバー ボタンをクリックします。  
@@ -56,7 +56,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 |[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|指定したフォントのすべてのサポートされているフォント サイズでコンボ ボックスのリストを塗りつぶします。|  
 |[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|Twips のフォント サイズを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用することができます、`CMFCToolBarFontSizeComboBox`オブジェクトと共に、 [CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)フォントとフォント サイズを選択するユーザーを有効にするオブジェクト。  
   
  フォント コンボ ボックス ボタンを追加すると同様に、ツールバーにフォント サイズのコンボ ボックス ボタンを追加できます。 詳細については、次を参照してください。 [CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)です。  
@@ -77,7 +77,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtoolbarfontcombobox.h  
   
 ##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
@@ -105,10 +105,10 @@ void RebuildFontSizes(const CString& strFontName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `[in] strFontName`  
+ [in]*strFontName*  
  フォント名を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  などのフォント コンボ ボックス内の選択とフォント サイズのコンボ ボックスでは、間で同期するときは、この関数を呼び出して、 [CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)です。  
   
 ##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize  
@@ -119,10 +119,10 @@ void SetTwipSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nSize`  
+ [in]*nSize*  
  設定するには、フォント サイズ (twips 単位) を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出すことによって後で、前の有効なフォント サイズを取得することができます、 [CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)メソッドです。  
   
 ## <a name="see-also"></a>関連項目  

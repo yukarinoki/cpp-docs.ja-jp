@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 673ce0694357a397590a29f7328612cfcc3cce09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b59a1ef4d1a70063c15b7de41963abc60dd341a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375338"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041930"
 ---
 # <a name="colecontrolcontainer-class"></a>メンバー クラス
 ActiveX コントロールのコントロール コンテナーとして機能します。  
@@ -122,7 +122,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::GetDlgItem](#getdlgitem)|指定されたダイアログのコントロールを取得します。|  
 |[COleControlContainer::GetDlgItemInt](#getdlgitemint)|指定されたダイアログ コントロールの値を取得します。|  
 |[COleControlContainer::GetDlgItemText](#getdlgitemtext)|指定されたダイアログ コントロールのキャプションを取得します。|  
-|[COleControlContainer::HandleSetFocus](#handlesetfocus)|コンテナーの処理を決定`WM_SETFOCUS`メッセージ。|  
+|[COleControlContainer::HandleSetFocus](#handlesetfocus)|コンテナーが WM_SETFOCUS メッセージを処理するかどうかを判断します。|  
 |[COleControlContainer::HandleWindowlessMessage](#handlewindowlessmessage)|ウィンドウなしのコントロールに送信されたメッセージを処理します。|  
 |[COleControlContainer::IsDlgButtonChecked](#isdlgbuttonchecked)|指定したボタンの状態を判断します。|  
 |[COleControlContainer::OnPaint](#onpaint)|コンテナーの一部を再描画に呼び出されます。|  
@@ -148,7 +148,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_pWnd](#m_pwnd)|コントロールのコンテナーを実装するウィンドウへのポインター。|  
 |[COleControlContainer::m_siteMap](#m_sitemap)|サイト マップします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これは、1 つ以上の ActiveX コントロール サイトをサポートすることで (によって実装される`COleControlSite`)。 `COleControlContainer` 完全に実装する、 [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770)と[IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103)インターフェイス、埋め込み先アイテムとして、必要条件を満たすために格納されている ActiveX コントロールを許可します。  
   
  一般的には、このクラスと組み合わせて使用`COccManager`と`COleControlSite`を 1 つ以上の ActiveX コントロールのカスタムのサイトと、カスタムの ActiveX コントロール コンテナーを実装します。  
@@ -160,7 +160,7 @@ class COleControlContainer : public CCmdTarget
   
  `COleControlContainer`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxocc.h  
   
 ##  <a name="attachcontrolsite"></a>  COleControlContainer::AttachControlSite  
@@ -178,13 +178,13 @@ void AttachControlSite(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  ポインター、`CWnd`オブジェクト。  
   
- `nIDC`  
+ *各*  
  アタッチする、コントロールの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このプロセスをカスタマイズする場合は、この関数をオーバーライドします。  
   
 > [!NOTE]
@@ -198,10 +198,10 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dispid`  
+ *dispid*  
  変更されたアンビエント プロパティのディスパッチ ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アンビエント プロパティに値が変更されたときに、この関数は、フレームワークによって呼び出されます。 この動作をカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="checkdlgbutton"></a>  COleControlContainer::CheckDlgButton  
@@ -214,10 +214,10 @@ virtual void CheckDlgButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDButton`  
+ *nIDButton*  
  変更するボタンの ID。  
   
- `nCheck`  
+ *nCheck*  
  ボタンの状態を指定します。 次のいずれかの値を指定します。  
   
 - **BST_CHECKED**ボタンの状態をオフに設定します。  
@@ -237,13 +237,13 @@ virtual void CheckRadioButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDFirstButton`  
+ *nIDFirstButton*  
  グループ内の最初のラジオ ボタンの識別子を指定します。  
   
- `nIDLastButton`  
+ *nIDLastButton*  
  グループ内の最後のオプション ボタンの識別子を指定します。  
   
- `nIDCheckButton`  
+ *nIDCheckButton*  
  チェックするラジオ ボタンの識別子を指定します。  
   
 ##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer  
@@ -254,10 +254,10 @@ explicit COleControlContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  コントロールのコンテナーの親ウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトが正常に作成される追加のカスタム コントロール サイトへの呼び出しが`AttachControlSite`です。  
   
 ##  <a name="createcontrol"></a>  COleControlContainer::CreateControl  
@@ -292,53 +292,53 @@ BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndCtrl`  
+ *pWndCtrl*  
  コントロールを表す window オブジェクトへのポインター。  
   
- `clsid`  
+ *clsid*  
  コントロールの一意のクラス ID。  
   
- `lpszWindowName`  
+ *したとき*  
  コントロールに表示されるテキストへのポインター。 (該当する場合) は、コントロールのキャプションまたはテキストのプロパティの値を設定します。 場合**NULL**コントロールのキャプションまたはテキストのプロパティは変更されません。  
   
- `dwStyle`  
+ *dwStyle*  
  Windows のスタイルです。 使用できるスタイルは、下に表示されます、**解説**セクションです。  
   
- `rect`  
+ *rect*  
  コントロールのサイズと位置を指定します。 いずれかになります、`CRect`オブジェクトまたは`RECT`構造体。  
   
- `nID`  
+ *nID*  
  コントロールの子ウィンドウ ID を指定します  
   
- `pPersist`  
+ *pPersist*  
  ポインター、`CFile`コントロールの永続的な状態を格納します。 既定値は**NULL**、コントロール自体の初期化を永続的な記憶域からの状態を復元することがなくすることを示すです。 ない場合**NULL**へのポインターである必要があります、 `CFile`-、ストリームとストレージのどちらかの形式でのコントロールの永続的なデータを含むオブジェクトを派生します。 このデータは、クライアントの以前のライセンス認証で保存されている可能性があります。 `CFile`他のデータを含めることができますが、読み取り/書き込みを指すポインターへの呼び出し時に永続的なデータの最初のバイトに設定する必要があります`CreateControl`です。  
   
- `bStorage`  
- 示すかどうかのデータ`pPersist`として解釈する必要があります`IStorage`または`IStream`データ。 場合内のデータ`pPersist`、記憶域は、`bStorage`する必要があります**TRUE**です。 場合内のデータ`pPersist`ストリーム、`bStorage`する必要があります**FALSE**です。 既定値は**FALSE**です。  
+ *bStorage*  
+ 示すかどうかのデータ*pPersist*として解釈する必要があります`IStorage`または`IStream`データ。 場合内のデータ*pPersist* 、記憶域は、 *bStorage*する必要があります**TRUE**です。 場合内のデータ*pPersist*ストリーム、 *bStorage*する必要があります**FALSE**です。 既定値は**FALSE**です。  
   
- `bstrLicKey`  
+ *bstrLicKey*  
  省略可能なライセンス キー データ。 このデータは、実行時ライセンス キーが必要なコントロールを作成するためにのみ必要です。 コントロールは、ライセンスをサポートする場合を正常にコントロールを作成するためのライセンス キーを指定する必要があります。 既定値は**NULL**です。  
   
  *ppNewSite*  
  作成されるコントロールをホストする既存のコントロール サイトへのポインター。 既定値は**NULL**、新しいコントロール サイトが自動的に作成され、新しいコントロールにアタッチされていることを示すです。  
   
- `ppt`  
- ポインター、**ポイント**コントロールの左上隅を格納する構造体。 コントロールのサイズの値によって決まります*psize*です。 `ppt`と*psize*値は、コントロールの位置とサイズを指定する省略可能なメソッドです。  
+ *ppt*  
+ ポインター、**ポイント**コントロールの左上隅を格納する構造体。 コントロールのサイズの値によって決まります*psize*です。 *Ppt*と*psize*値は、コントロールの位置とサイズを指定する省略可能なメソッドです。  
   
  *psize*  
- ポインター、**サイズ**コントロールのサイズを格納する構造体。 左上隅の値によって決まります`ppt`です。 `ppt`と*psize*値は、コントロールの位置とサイズを指定する省略可能なメソッドです。  
+ ポインター、**サイズ**コントロールのサイズを格納する構造体。 左上隅の値によって決まります*ppt*です。 *Ppt*と*psize*値は、コントロールの位置とサイズを指定する省略可能なメソッドです。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- Windows のサブセットのみ`dwStyle`はフラグによって`CreateControl`:  
+### <a name="remarks"></a>Remarks  
+ Windows のサブセットのみ*dwStyle*はフラグによって`CreateControl`:  
   
 - **WS_VISIBLE**が最初に表示するウィンドウを作成します。 通常のウィンドウと同様に、すぐに表示するコントロールをするかどうかに必要です。  
   
 - **WS_DISABLED**最初に無効になっているウィンドウを作成します。 無効になっているウィンドウは、ユーザーから入力を受け取ることはできません。 コントロールは Enabled プロパティを持つ場合、設定できます。  
   
-- `WS_BORDER` 細い境界線でウィンドウを作成します。 コントロールに BorderStyle プロパティが設定されている場合、設定できます。  
+- **WS_BORDER**細い境界線でウィンドウを作成します。 コントロールに BorderStyle プロパティが設定されている場合、設定できます。  
   
 - **WS_GROUP**コントロールのグループの最初のコントロールを指定します。 ユーザーを変更できますキーボード フォーカス、グループ内の 1 つのコントロールから、次への方向キーを使用しています。 定義されているすべてのコントロール、 **WS_GROUP**後、同じグループに属している、最初のコントロールのスタイルを設定します。 [次へ] のコントロールに、 **WS_GROUP**スタイルは、グループを終了し、[次へ] のグループを開始します。  
   
@@ -354,7 +354,7 @@ void CreateOleFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFont`  
+ *pFont*  
  コントロールのコンテナーで使用されるフォントへのポインター。  
   
 ##  <a name="finditem"></a>  COleControlContainer::FindItem  
@@ -365,7 +365,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  検索するアイテムの識別子。  
   
 ### <a name="return-value"></a>戻り値  
@@ -379,10 +379,10 @@ void FreezeAllEvents(BOOL bFreeze);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bFreeze`  
+ *bFreeze*  
  イベントが処理される場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  コントロールは、コントロール コンテナーによって要求された場合は、イベントを発生させるを停止する必要はありません。 起動処理を続行できますが、コントロール コンテナーですべての後続のイベントは無視されます。  
@@ -398,10 +398,10 @@ virtual BOOL GetAmbientProp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSite`  
+ *pSite*  
  アンビエント プロパティの取得元となるコントロール サイトへのポインター。  
   
- `dispid`  
+ *dispid*  
  目的のアンビエント プロパティのディスパッチ ID。  
   
  *pVarResult*  
@@ -422,10 +422,10 @@ virtual void GetDlgItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  取得する ダイアログの項目の識別子。  
   
- `phWnd`  
+ *phWnd*  
  指定したダイアログ アイテムのウィンドウのオブジェクトのハンドルへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -442,23 +442,23 @@ virtual UINT GetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  コントロールの識別子。  
   
- `lpTrans`  
+ *lpTrans*  
  関数の成功/失敗の値を受信するブール値変数へのポインター ( **TRUE**は成功を示し**FALSE**失敗を示します)。  
   
- `bSigned`  
- 関数は、必要があります、先頭にマイナス記号のテキストを調べるし、見つかった場合は、符号付き整数値を返すかどうかを指定します。 場合、`bSigned`パラメーターは**TRUE**、戻り値を取得する値が符号付き整数値を指定するキャスト、`int`型です。 拡張エラー情報を取得する呼び出し[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)です。  
+ *bSigned*  
+ 関数は、必要があります、先頭にマイナス記号のテキストを調べるし、見つかった場合は、符号付き整数値を返すかどうかを指定します。 場合、 *bSigned*パラメーターは**TRUE**、戻り値を取得する値が符号付き整数値を指定するキャスト、 **int**型です。 拡張エラー情報を取得する呼び出し[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)です。  
   
 ### <a name="return-value"></a>戻り値  
- かどうかは成功すると、変数が指す`lpTrans`に設定されている**TRUE**、戻り値は、コントロール テキストの翻訳済みの値とします。  
+ かどうかは成功すると、変数が指す*lpTrans*に設定されている**TRUE**、戻り値は、コントロール テキストの翻訳済みの値とします。  
   
- 関数が失敗した場合、変数が指す`lpTrans`に設定されている**FALSE**、戻り値は 0 です。 0 が使用できる翻訳された値であるため、戻り値が 0 を単独で示しませんエラーに注意してください。  
+ 関数が失敗した場合、変数が指す*lpTrans*に設定されている**FALSE**、戻り値は 0 です。 0 が使用できる翻訳された値であるため、戻り値が 0 を単独で示しませんエラーに注意してください。  
   
- 場合`lpTrans`は**NULL**関数が成功または失敗に関する情報を返しません。  
+ 場合*lpTrans*は**NULL**関数が成功または失敗に関する情報を返しません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数は、テキストの先頭にある余分なスペースを削除し、10 進変換することによって取得されたテキストを変換します。 関数は、テキストの末尾に到達または数値以外の文字を検出したときの変換を停止します。  
   
  変換された値がより大きい場合、この関数は 0 を返します**INT_MAX**の符号付き数値または**UINT_MAX** (の符号なし数値)。  
@@ -474,14 +474,14 @@ virtual int GetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  コントロールの識別子。  
   
- `lpStr`  
+ *lpStr*  
  コントロールのテキストへのポインター。  
   
- `nMaxCount`  
- 指すバッファーにコピーする文字列の文字の最大の長さを示す`lpStr`です。 文字列の長さが、制限を超える場合、文字列は切り捨てられます。  
+ *nMaxCount*  
+ 指すバッファーにコピーする文字列の文字の最大の長さを示す*lpStr*です。 文字列の長さが、制限を超える場合、文字列は切り捨てられます。  
   
 ### <a name="return-value"></a>戻り値  
  関数が成功した場合、戻り値は、終端の null 文字を含まない、バッファーにコピーされた文字数を指定します。  
@@ -489,14 +489,14 @@ virtual int GetDlgItemText(
  関数が失敗した場合は、0 を返します。 拡張エラー情報を取得する呼び出し[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)です。  
   
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
- コンテナーの処理を決定`WM_SETFOCUS`メッセージ。  
+ コンテナーが WM_SETFOCUS メッセージを処理するかどうかを判断します。  
   
 ```  
 virtual BOOL HandleSetFocus();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- コンテナーが処理する場合は 0 以外。`WM_SETFOCUS`メッセージ以外の場合は 0 です。  
+ コンテナーが WM_SETFOCUS メッセージを処理する場合は 0 以外。それ以外の場合 0 を返します。  
   
 ##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
  ウィンドウなしのコントロールのウィンドウ メッセージを処理します。  
@@ -510,14 +510,14 @@ virtual BOOL HandleWindowlessMessage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `message`  
+ *message*  
  Windows によって提供される、ウィンドウ メッセージの識別子。  
   
- `wParam`  
- メッセージのパラメーターWindows によって提供されます。 その他のメッセージに固有の情報を指定します。 このパラメーターの内容がの値に依存する、`message`パラメーター。  
+ *wParam*  
+ メッセージのパラメーターWindows によって提供されます。 その他のメッセージに固有の情報を指定します。 このパラメーターの内容がの値に依存する、*メッセージ*パラメーター。  
   
- `lParam`  
- メッセージのパラメーターWindows によって提供されます。 その他のメッセージに固有の情報を指定します。 このパラメーターの内容がの値に依存する、`message`パラメーター。  
+ *lParam*  
+ メッセージのパラメーターWindows によって提供されます。 その他のメッセージに固有の情報を指定します。 このパラメーターの内容がの値に依存する、*メッセージ*パラメーター。  
   
  *plResult*  
  Windows の結果コード。 メッセージの処理の結果を指定し、送信メッセージに依存します。  
@@ -525,7 +525,7 @@ virtual BOOL HandleWindowlessMessage(
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ウィンドウなしのコントロール メッセージの処理をカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="isdlgbuttonchecked"></a>  COleControlContainer::IsDlgButtonChecked  
@@ -536,7 +536,7 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDButton`  
+ *nIDButton*  
  ボタン コントロールの識別子。  
   
 ### <a name="return-value"></a>戻り値  
@@ -548,7 +548,7 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
   
 - **設定されている**ボタンは無効です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバー関数は、決定かどうか、淡色表示になり、チェックすると、ボタンが 3 つの状態コントロールの場合は、またはどちらもします。  
   
 ##  <a name="m_crback"></a>  COleControlContainer::m_crBack  
@@ -622,48 +622,48 @@ CMapPtrToPtr m_siteMap;
 ```  
   
 ##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
- 処理するためにフレームワークによって呼び出されます`WM_PAINT`要求します。  
+ WM_PAINT 要求を処理するためにフレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  コンテナーで使用されるデバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  メッセージが処理された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  描画プロセスをカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
- フレームワークによって呼び出されますとコントロール サイトを指す`pSite`をインプレース アクティブ化します。  
+ フレームワークによって呼び出されますとコントロール サイトを指す*pSite*をインプレース アクティブ化します。  
   
 ```  
 virtual void OnUIActivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSite`  
+ *pSite*  
  インプレース アクティブ化するコントロール サイトへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  インプレース アクティブ化は、コンテナーのメイン メニューが、インプレース コンポジット メニューに置き換えられることを意味します。  
   
 ##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
- フレームワークによって呼び出されるときコントロール サイトを指す`pSite`が非アクティブ化しようとしています。  
+ フレームワークによって呼び出されるときコントロール サイトを指す*pSite*が非アクティブ化しようとしています。  
   
 ```  
 virtual void OnUIDeactivate(COleControlSite* pSite);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSite`  
+ *pSite*  
  非アクティブにするコントロール サイトへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この通知を受信すると、コンテナーは、ユーザー インターフェイスを再インストールされ、フォーカスを移す必要があります。  
   
 ##  <a name="scrollchildren"></a>  COleControlContainer::ScrollChildren  
@@ -676,7 +676,7 @@ virtual void ScrollChildren(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dx`  
+ *dx*  
  X 軸方向のスクロールの (ピクセル単位) の量。  
   
  *dy*  
@@ -694,16 +694,16 @@ virtual LRESULT SendDlgItemMessage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  メッセージを受信するコントロールの識別子を指定します。  
   
- `message`  
+ *message*  
  送信するメッセージを指定します。  
   
- `wParam`  
+ *wParam*  
  その他のメッセージに固有の情報を指定します。  
   
- `lParam`  
+ *lParam*  
  その他のメッセージに固有の情報を指定します。  
   
 ##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
@@ -717,17 +717,17 @@ virtual void SetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  コントロールの識別子。  
   
- `nValue`  
+ *値*  
  表示される整数値。  
   
- `bSigned`  
- 指定するかどうか、`nValue`パラメーターが符号付きまたは符号なし。 このパラメーターは場合**TRUE**、`nValue`が署名されています。 このパラメーターは、する場合**TRUE**と`nValue`マイナス記号は、文字列の最初の桁の前に配置を 0 未満です。 このパラメーターが場合**FALSE**、`nValue`が署名されていません。  
+ *bSigned*  
+ 指定するかどうか、*値*パラメーターが符号付きまたは符号なし。 このパラメーターは場合**TRUE**、*値*が署名されています。 このパラメーターは、する場合**TRUE**と*値*マイナス記号は、文字列の最初の桁の前に配置を 0 未満です。 このパラメーターが場合**FALSE**、*値*が署名されていません。  
   
 ##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
- 含まれているテキストを使用して、指定したコントロールのテキストを設定`lpszString`です。  
+ 含まれているテキストを使用して、指定したコントロールのテキストを設定*lpszString*です。  
   
 ```  
 virtual void SetDlgItemText(
@@ -736,10 +736,10 @@ virtual void SetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  コントロールの識別子。  
   
- `lpszString`  
+ *lpszString*  
  コントロールのテキストへのポインター。  
   
 ## <a name="see-also"></a>関連項目  

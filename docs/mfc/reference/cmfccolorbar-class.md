@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2083c26943768afff4b3b20a2ba95c709648dd50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8786a35653dbf3d4de14b81563011b3a031c9c4b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376139"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038999"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar クラス
 `CMFCColorBar`クラスは、ドキュメントやアプリケーションで色を選択できるドッキング コントロール バーを表します。  
@@ -153,7 +153,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |`m_bInternal`|マウス イベントを処理するかどうかを決定するブール値フィールド。 マウス イベントが処理されるときに、このフィールドは、通常、 `TRUE` 、カスタマイズ モードが`FALSE`です。|  
 |`m_bIsEnabled`|コントロールが有効になっているかどうかを示すブール値。|  
@@ -183,7 +183,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_strDocColors`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)ドキュメントの色のボタンに表示されるテキストであります。 詳細については、次を参照してください。 [CMFCColorBar::SetDocumentColors](#setdocumentcolors)です。|  
 |`m_strOtherColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)に表示されるテキストである、*他*ボタンをクリックします。 詳細については、次を参照してください。 [CMFCColorBar::EnableOtherButton](#enableotherbutton)です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  通常、作成しない、`CMFCColorBar`オブジェクトに直接できます。 代わりに、 [CMFCColorMenuButton クラス](../../mfc/reference/cmfccolormenubutton-class.md)(メニューおよびツールバーに使用)、または[CMFCColorButton クラス](../../mfc/reference/cmfccolorbutton-class.md)を作成、`CMFCColorBar`オブジェクト。  
   
  `CMFCColorBar`クラスには、次の機能が用意されています。  
@@ -233,7 +233,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
  [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcolorbar.h  
   
 ##  <a name="adjustlocations"></a>  CMFCColorBar::AdjustLocations  
@@ -243,8 +243,8 @@ class CMFCColorBar : public CMFCPopupMenuBar
 virtual void AdjustLocations();
 ```  
   
-### <a name="remarks"></a>コメント  
- このメソッドが中にフレームワークによって呼び出されます`WM_SIZE`メッセージ処理します。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、WM_SIZE メッセージの処理中に、フレームワークによって呼び出されます。  
   
 ##  <a name="allowchangetextlabels"></a>  CMFCColorBar::AllowChangeTextLabels  
  色のボタンのテキスト ラベルを変更できるかどうかを示します。  
@@ -256,7 +256,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ### <a name="return-value"></a>戻り値  
  常に `FALSE`。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、このメソッドは常`FALSE`、つまり、テキスト ラベルを変更することはできません。 テキスト ラベルを変更を有効にするには、このメソッドをオーバーライドします。  
   
 ##  <a name="allowshowonlist"></a>  CMFCColorBar::AllowShowOnList  
@@ -269,7 +269,7 @@ virtual BOOL AllowShowOnList() const;
 ### <a name="return-value"></a>戻り値  
  常に `TRUE`。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、このメソッドは常`TRUE`フレームワークはカスタマイズ プロセス中にカラー バー コントロールを表示できます。 別の動作を実装するには、このメソッドをオーバーライドします。  
   
 ##  <a name="calcsize"></a>  CMFCColorBar::CalcSize  
@@ -280,7 +280,7 @@ virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bVertDock`  
+ [in]*bVertDock*  
  `TRUE` カラー バー コントロールが垂直方向にドッキングされていることを指定するには`FALSE`をカラー バー コントロールが水平方向にドッキングされていることを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -324,50 +324,50 @@ CMFCColorBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `colors`  
+ [in]*色*  
  フレームワークがカラー バー コントロールに表示される色の配列。  
   
- [入力] `color`  
+ [in]*色*  
  最初に選択した色です。  
   
- [入力] `lpszAutoColor`  
+ [in]*lpszAutoColor*  
  テキスト ラベル、*自動*(既定値) の色 ボタンまたは`NULL`です。  
   
  自動ボタンの標準のラベルは**自動**です。  
   
- [入力] `lpszOtherColor`  
+ [in]*lpszOtherColor*  
  テキスト ラベル、*他*ボタンを他の色を表示、または`NULL`です。  
   
  その他のボタンの標準のラベルは**他の色**。  
   
- [入力] `lpszDocColors`  
+ [in]*lpszDocColors*  
  ドキュメントの色のボタンのテキスト ラベル。 ドキュメントのカラー パレットは、ドキュメントが現在使用されているすべての色を示します。  
   
- [入力] `lstDocColors`  
+ [in]*lstDocColors*  
  ドキュメントが現在使用されている色の一覧。  
   
- [入力] `nColumns`  
+ [in]*nColumns*  
  色の配列は、列の数。  
   
- [入力] `nRowsDockHorz`  
+ [in]*nRowsDockHorz*  
  カラー バーが水平にドッキングされている行の数。  
   
- [入力] `nColDockVert`  
+ [in]*nColDockVert*  
  カラー バーが垂直方向にドッキングされている列の数。  
   
- [入力] `colorAutomatic`  
+ [in]*colorAutomatic*  
  自動ボタンをクリックすると、フレームワークが適用される既定の色。  
   
- [入力] `nCommandID`  
+ [in]*nCommandID*  
  カラー バー コントロールのコマンド id。  
   
- [入力] `pParentBtn`  
+ [in]*pParentBtn*  
  親ボタンへのポインター。  
   
- [入力] `src`  
+ [in]*src*  
  既存の`CMFCColorBar`新しいにコピーされるオブジェクト`CMFCColorBar`オブジェクト。  
   
- [入力] `uiCommandID`  
+ [in]*uiCommandID*  
  コマンド ID。  
   
 ##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize  
@@ -383,10 +383,10 @@ void ContextToSize(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `bSquareButtons`|`TRUE` カラー バー コントロールのボタンの形状が四角形であることを指定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。|  
-|[入力] `bCenterButtons`|`TRUE` カラー バーのコントロール ボタン表面のコンテンツを中央揃えにことを指定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。|  
+|[in]*bSquareButtons*|`TRUE` カラー バー コントロールのボタンの形状が四角形であることを指定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。|  
+|[in]*bCenterButtons*|`TRUE` カラー バーのコントロール ボタン表面のコンテンツを中央揃えにことを指定するにはそれ以外の場合、`FALSE`です。 既定値は `TRUE` です。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="create"></a>  CMFCColorBar::Create  
  カラー バー コントロール ウィンドウを作成し、それにアタッチ、`CMFCColorBar`オブジェクト。  
@@ -403,31 +403,31 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  親ウィンドウへのポインター。  
   
- [入力] `dwStyle`  
+ [in]*dwStyle*  
  ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)です。  
   
- [入力] `nID`  
+ [in]*nID*  
  コマンド ID。  
   
- [入力] `pPalette`  
- 色のパレットへのポインター。 既定値は、`NULL` です。  
+ [in]*pPalette*  
+ 色のパレットへのポインター。 既定値は `NULL` です。  
   
- [入力] `nColumns`  
+ [in]*nColumns*  
  カラー バー コントロール内の列の数。 既定値は 0 です。  
   
- [入力] `nRowsDockHorz`  
+ [in]*nRowsDockHorz*  
  水平方向にドッキングされているときに、カラー バー コントロールに行の数。 既定値は 0 です。  
   
- [入力] `nColDockVert`  
+ [in]*nColDockVert*  
  垂直方向にドッキングされているときに、カラー バー コントロールに列の数。 既定値は 0 です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築するために、`CMFCColorBar`オブジェクト、クラス コンス トラクターをこのメソッドを呼び出します。 `Create`メソッドは、Windows のコントロールを作成し、色の一覧を初期化します。  
   
 ##  <a name="createcontrol"></a>  CMFCColorBar::CreateControl  
@@ -443,26 +443,26 @@ virtual BOOL CreateControl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParentWnd`  
+ [in]*pParentWnd*  
  親ウィンドウへのポインター。 ことはできません`NULL`です。  
   
- [入力] `rect`  
+ [in]*rect*  
  カラー バーにコントロールを描画する場所を指定する外接する四角形。  
   
- [入力] `nID`  
+ [in]*nID*  
  コントロールの id。  
   
- [入力] `nColumns`  
+ [in]*nColumns*  
  カラー バーのコントロールの列数の最適です。 このメソッドは、指定された色パレットに合わせて列数を変更します。 既定値は、-1 で、このパラメーターが指定されていないことを意味します。  
   
- [入力] `pPalette`  
- 色のパレットへのポインターまたは`NULL`です。 このパラメーターが場合`NULL`、20 の色が指定した場合と、このメソッドは、カラー バー コントロールのサイズを計算します。 既定値は、`NULL` です。  
+ [in]*pPalette*  
+ 色のパレットへのポインターまたは`NULL`です。 このパラメーターが場合`NULL`、20 の色が指定した場合と、このメソッドは、カラー バー コントロールのサイズを計算します。 既定値は `NULL` です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
- このメソッドを使用して、 `rect`、 `nColumns`、および`pPalette`パラメーターを適切な数または行と、カラー バー コントロールとし、呼び出し内の列を計算する、 [CMFCColorBar::Create](#create)メソッドです。  
+### <a name="remarks"></a>Remarks  
+ このメソッドを使用して、 *rect*、 *nColumns*、および*pPalette*パラメーターを適切な数または行と、カラー バー コントロールとし、呼び出し内の列を計算する、[CMFCColorBar::Create](#create)メソッドです。  
   
 ##  <a name="createpalette"></a>  CMFCColorBar::CreatePalette  
  色の指定した配列内の色でパレットを初期化します。  
@@ -477,8 +477,8 @@ static BOOL CreatePalette(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `arColors`|色の配列。|  
-|[入力] `palette`|色パレット。|  
+|[in]*arColors*|色の配列。|  
+|[in]*パレット*|色パレット。|  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
@@ -494,19 +494,19 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  テキスト ラベル、*自動*(既定値) の色 ボタンまたは`NULL`です。  
   
  自動ボタンの標準のラベルは**自動**です。  
   
- [入力] `colorAutomatic`  
+ [in]*colorAutomatic*  
  自動ボタンをクリックすると、フレームワークが適用される既定の色。  
   
- [入力] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 自動ボタンを有効にするには`FALSE`自動ボタンを無効にします。 既定値は `TRUE` です。  
   
-### <a name="remarks"></a>コメント  
- 場合、自動ボタンのテキスト ラベルが削除された、`lpszLabel`パラメーターは`NULL`または`bEnable`パラメーターは`FALSE`します。  
+### <a name="remarks"></a>Remarks  
+ 場合、自動ボタンのテキスト ラベルが削除された、 *lpszLabel*パラメーターは`NULL`または*bEnable*パラメーターは`FALSE`します。  
   
 ##  <a name="enableotherbutton"></a>  CMFCColorBar::EnableOtherButton  
  有効またはユーザーが他の色を選択できるダイアログ ボックスの表示を無効にします。  
@@ -519,12 +519,12 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  テキスト ラベル、*他*ボタンを他の色を表示、または`NULL`です。  
   
  このボタンの標準的なラベルは**他の色**。  
   
- [入力] `bAltColorDlg`  
+ [in]*bAltColorDlg*  
  `TRUE` 表示する、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックスです。`FALSE`標準を表示する[CColorDialog](../../mfc/reference/ccolordialog-class.md)  ダイアログ ボックス。 既定値は `TRUE` です。  
   
  [入力] `bEnable`  
@@ -551,7 +551,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `bVertDock`|`TRUE` カラー バーが垂直方向にドッキングされたコントロールであるため、計算を実行するにはそれ以外の場合、水平にドッキングされたコントロールに対して計算を実行します。|  
+|[in]*bVertDock*|`TRUE` カラー バーが垂直方向にドッキングされたコントロールであるため、計算を実行するにはそれ以外の場合、水平にドッキングされたコントロールに対して計算を実行します。|  
   
 ### <a name="return-value"></a>戻り値  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト`cx`コンポーネントには、列と元の数が含まれている`cy`コンポーネントには、行の数が含まれています。  
@@ -566,8 +566,8 @@ UINT GetCommandID() const;
 ### <a name="return-value"></a>戻り値  
  コマンド id。  
   
-### <a name="remarks"></a>コメント  
- フレームワークがコマンド ID を送信するユーザーは、新しい色を選択するときに、`WM_COMMAND`の親に通知するメッセージ、`CMFCColorBar`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ フレームワークがの親に通知する WM_COMMAND メッセージのコマンド ID を送信するユーザーは、新しい色を選択するときに、`CMFCColorBar`オブジェクト。  
   
 ##  <a name="getextraheight"></a>  CMFCColorBar::GetExtraHeight  
  現在のカラー バーがなど、その他のユーザー インターフェイス要素の表示を必要とする追加の高さを計算、**他の**ボタンやドキュメントの色。  
@@ -580,7 +580,7 @@ int GetExtraHeight(int nNumColumns) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `nNumColumns`|場合は、カラー バー コントロールには、ドキュメントの色、ドキュメントの色のグリッドに表示する列の数が含まれています。 それ以外の場合、この値は使用されません。|  
+|[in]*nNumColumns*|場合は、カラー バー コントロールには、ドキュメントの色、ドキュメントの色のグリッドに表示する列の数が含まれています。 それ以外の場合、この値は使用されません。|  
   
 ### <a name="return-value"></a>戻り値  
  計算された余分な高さが必要です。  
@@ -595,7 +595,7 @@ COLORREF GetHighlightedColor() const;
 ### <a name="return-value"></a>戻り値  
  RGB 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gethorzmargin"></a>  CMFCColorBar::GetHorzMargin  
  水平右のマージンを取得します。  
@@ -630,8 +630,8 @@ static int InitColors(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pPalette`|パレット オブジェクトへのポインターまたは`NULL`です。 このパラメーターが場合`NULL`、このメソッドは、オペレーティング システムの既定のパレットを使用します。|  
-|[入力] `arColors`|色の配列。|  
+|[in]*pPalette*|パレット オブジェクトへのポインターまたは`NULL`です。 このパラメーターが場合`NULL`、このメソッドは、オペレーティング システムの既定のパレットを使用します。|  
+|[in]*arColors*|色の配列。|  
   
 ### <a name="return-value"></a>戻り値  
  色の配列内の要素の数。  
@@ -646,7 +646,7 @@ BOOL IsTearOff() const;
 ### <a name="return-value"></a>戻り値  
  `TRUE` 現在のカラー バー コントロールがドッキング可能な; 場合それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  カラー バー コントロールがドッキング可能な場合は、コントロール バーから切り離してし、別の場所にドッキングすることができます。  
   
 ##  <a name="onkey"></a>  CMFCColorBar::OnKey  
@@ -657,7 +657,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nChar`  
+ [in]*nChar*  
  ユーザーが押されたキーの仮想キー コードです。  
   
 ### <a name="return-value"></a>戻り値  
@@ -674,7 +674,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pButton`|ツールバー上に存在するコントロールへのポインター。|  
+|[in]*pButton*|ツールバー上に存在するコントロールへのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
@@ -689,13 +689,13 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTarget`  
+ [in]*pTarget*  
  更新するユーザー インターフェイス項目を含むウィンドウへのポインター。  
   
- [入力] `bDisableIfNoHndler`  
+ [in]*持たず*  
  `TRUE` handler を持たない場合、ユーザー インターフェイス項目を無効にするのには、メッセージ マップで定義されています。それ以外の場合、`FALSE`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  かどうかを表示することが有効になっているアイテムが知る必要があります、アプリケーションのユーザーには、ユーザー インターフェイスの項目がクリックすると、または無効にします。 コマンド メッセージのターゲットが実装することでこの情報を提供する`ON_UPDATE_COMMAND_UI`コマンド ハンドラー。 このメソッドを使用して、コマンドを処理できます。 詳細については、次を参照してください。 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)です。  
   
 ##  <a name="opencolordialog"></a>  CMFCColorBar::OpenColorDialog  
@@ -708,16 +708,16 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `colorDefault`  
+ [in]*colorDefault*  
  色のダイアログ ボックスが開いたときに、既定で選択されている色です。  
   
- [出力] `colorRes`  
+ [out]*colorRes*  
  ユーザーが選択されている色です。  
   
 ### <a name="return-value"></a>戻り値  
  `TRUE` ユーザーが、色を選択した場合`FALSE`ユーザーには、色のダイアログ ボックスが取り消された場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="rebuild"></a>  CMFCColorBar::Rebuild  
  カラー バー コントロールを完全に再描画します。  
@@ -737,7 +737,7 @@ CPalette* SelectPalette(CDC* pDC);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pDC`|現在のカラー バー コントロールの親のボタンのデバイス コンテキストへのポインター。|  
+|[in]*pDC*|現在のカラー バー コントロールの親のボタンのデバイス コンテキストへのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
  現在のカラー バー コントロールの親のボタンのパレットで置き換えられるパレットへのポインター。  
@@ -750,7 +750,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `color`  
+ [in]*色*  
  色の RGB 値。  
   
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName  
@@ -763,13 +763,13 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `color`  
+ [in]*色*  
  色の RGB 値。  
   
- [入力] `strName`  
+ [in]*strName*  
  指定した色の新しい名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、すべてのページで指定された色の名前を変更`CMFCColorBar`アプリケーション内のオブジェクト。  
   
 ##  <a name="setcommandid"></a>  CMFCColorBar::SetCommandID  
@@ -780,10 +780,10 @@ void SetCommandID(UINT nCommandID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nCommandID`  
+ [in]*nCommandID*  
  コマンド id。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  カラー バー コントロールのコマンド ID を変更し、ID が変更されているコントロールの親ウィンドウに通知する、このメソッドを呼び出します。  
   
 ##  <a name="setdocumentcolors"></a>  CMFCColorBar::SetDocumentColors  
@@ -797,16 +797,16 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszCaption`  
+ [in]*lpszCaption*  
  カラー バー コントロールがドッキングされていないときに表示されるキャプションです。  
   
- [入力] `lstDocColors`  
+ [in]*lstDocColors*  
  現在のドキュメントの色を置換する色の一覧。  
   
- [入力] `bShowWhenDocked`  
+ [in]*bShowWhenDocked*  
  `TRUE` カラー バー コントロールがドッキングしているときに、ドキュメントの色を表示するにはそれ以外の場合、`FALSE`です。 既定値は `FALSE` です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  *ドキュメントの色*ドキュメントで現在使用されている色は、します。 フレームワークが自動的にドキュメントの色の一覧を保持しますが、このメソッドを使用して一覧を変更することができます。  
   
 ##  <a name="sethorzmargin"></a>  CMFCColorBar::SetHorzMargin  
@@ -817,10 +817,10 @@ void SetHorzMargin(int nHorzMargin);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nHorzMargin`  
+ [in]*nHorzMargin*  
  水平方向の余白 (ピクセル)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、 [CMFCColorBar::CMFCColorBar](#cmfccolorbar)コンス トラクターは、4 ピクセルを横方向の余白を設定します。  
   
 ##  <a name="setproplist"></a>  CMFCColorBar::SetPropList  
@@ -834,7 +834,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pWndList`|プロパティ グリッド コントロール オブジェクトへのポインター。|  
+|[in]*pWndList*|プロパティ グリッド コントロール オブジェクトへのポインター。|  
   
 ##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin  
  上位または下位のカラー セルとクライアント領域の境界間のスペースは垂直方向の余白を設定します。  
@@ -844,10 +844,10 @@ void SetVertMargin(int nVertMargin);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nVertMargin`  
+ [in]*nVertMargin*  
  垂直方向の余白 (ピクセル)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、 [CMFCColorBar::CMFCColorBar](#cmfccolorbar)コンス トラクターは、4 ピクセルを縦方向の余白を設定します。  
   
 ##  <a name="showcommandmessagestring"></a>  CMFCColorBar::ShowCommandMessageString  
@@ -858,11 +858,11 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdId`  
+ [in]*uiCmdId*  
  コマンド id。 (このパラメーターは無視されます。)  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、送信、`WM_SETMESSAGESTRING`メッセージ カラー バー コントロールの所有者にします。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、カラー バー コントロールの所有者を WM_SETMESSAGESTRING メッセージを送信します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

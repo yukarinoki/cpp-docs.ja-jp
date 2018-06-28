@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370290"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042522"
 ---
 # <a name="coleconvertdialog-class"></a>メンバー クラス
 詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 内の構造。  
@@ -73,7 +73,7 @@ class COleConvertDialog : public COleDialog
 |----------|-----------------|  
 |[COleConvertDialog::m_cv](#m_cv)|ダイアログ ボックスの動作を制御する構造体。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 >  アプリケーション コンテナーのウィザードで生成されたコードでは、このクラスを使用します。  
@@ -95,7 +95,7 @@ class COleConvertDialog : public COleDialog
   
  `COleConvertDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  アクティブ化または変換する項目へのポインター。  
   
- `dwFlags`  
+ *dwFlags*  
  作成フラグは、次の値の任意の数を含む結合演算を使用して、or 演算子。  
   
 - **CF_SELECTCONVERTTO**  ダイアログ ボックスが呼び出されたときに、変換 ラジオ ボタンをクリックした状態を指定します。 既定値です。  
@@ -126,13 +126,13 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON**  ダイアログ ボックスが呼び出されたときに、ヘルプ ボタンを表示するように指定します。  
   
- `pClassID`  
- アクティブ化または変換する項目の CLSID を指します。 場合**NULL**、 **CLSID**に関連付けられている`pItem`使用されます。  
+ *pClassID*  
+ アクティブ化または変換する項目の CLSID を指します。 場合**NULL**、 **CLSID**に関連付けられている*pItem*使用されます。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウ オブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ ボックスの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
  詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424)と[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)構造体。  
@@ -145,13 +145,13 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  アクティブ化または変換する項目へのポインター。 ことはできません**NULL**です。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  項目を変換または変換 ダイアログ ボックスでユーザーが選択されている情報に従ってアクティブにします。  
   
 ##  <a name="domodal"></a>  COleConvertDialog::DoModal  
@@ -170,7 +170,7 @@ virtual INT_PTR DoModal();
   
 - **IDABORT**場合はエラーが発生しました。 場合**IDABORT**は呼び出し、返される、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)の詳細については、発生したエラーの種類を取得します。 考えられるエラーの一覧については、次を参照してください。、 [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) Windows SDK 内の関数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メンバーを設定してさまざまなダイアログ ボックスのコントロールを初期化する場合、 [m_cv](#m_cv)構造体、呼び出す前にこれを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
   
  場合`DoModal`返します**IDOK**設定や、ダイアログ ボックスに、ユーザーが入力した情報を取得する関数の他のメンバーを呼び出すことができます。  
@@ -185,7 +185,7 @@ REFCLSID GetClassID() const;
 ### <a name="return-value"></a>戻り値  
  **CLSID**変換 ダイアログ ボックスで選択した項目に関連付けられています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  後にこの関数の呼び出し[DoModal](#domodal)返します**IDOK**です。  
   
  詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
@@ -204,7 +204,7 @@ DVASPECT GetDrawAspect() const;
   
 - `DVASPECT_ICON` アイコンで表示 チェック ボックスがオンになっているかどうかに返されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  後にこの関数の呼び出し[DoModal](#domodal)返します**IDOK**です。  
   
  アスペクトの描画の詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内のデータ構造です。  
@@ -229,7 +229,7 @@ UINT GetSelectionType() const;
 ### <a name="return-value"></a>戻り値  
  選択内容の種類です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  戻り値の型の値がで指定された、**選択**で宣言された列挙型、`COleConvertDialog`クラスです。  
   
 ```  
@@ -255,7 +255,7 @@ enum Selection {
 OLEUICONVERT m_cv;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この構造体のメンバーは、直接またはメンバー関数のいずれかに変更できます。  
   
  詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 内の構造。  
