@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4a4255e5c6229ee570b9baa8952cc784044ef95
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b3c81bc3fd5068f8269476608cc870272a0ef2e4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305814"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079800"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`multiset`1 つの要素を格納する各ノードのバランスの取れた (ほとんど) の順序付けられたツリーとして要素のシーケンスを管理します。  
@@ -135,7 +135,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  キー  
  被制御シーケンス内の要素の主要な構成要素の型。  
 
@@ -826,7 +826,7 @@ iterator find(key_type key);
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()`. 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
+ 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1115,7 +1115,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入するキー値。  
   
  where  

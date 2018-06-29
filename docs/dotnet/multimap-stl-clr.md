@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5be90e57d558ba2dcceb3965d1cc1474dcaf463
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305879"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079721"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`multimap`1 つの要素を格納する各ノードのバランスの取れた (ほとんど) の順序付けられたツリーとして要素のシーケンスを管理します。 要素は、シーケンスとよいに沿って移動する、マップされた値は、管理するためのキーで構成されます。  
@@ -127,7 +127,7 @@ ms.locfileid: "36305879"
   
  `GMapped` 同じ`Mapped`ref 型を後者には、しない限り、どのケースでは `Mapped^`  
   
-### <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文  
   
 ```  
 template<typename Key,  
@@ -144,7 +144,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  キー  
  被制御シーケンス内の要素の主要な構成要素の型。  
   
@@ -222,7 +222,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|  
 |ITree\<キー、値 >|ジェネリックなコンテナーを管理します。|  
   
-### <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks  
  オブジェクトは、割り当てし、個々 のノードとして、制御するシーケンスの記憶域を解放します。 順序付けられた 1 つのノードの内容を別にコピーからではなく、ノード間のリンクを変更することにより保持される (ほとんど) バランスの良いツリーに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。  
   
  オブジェクトがストアド デリゲート型のオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)です。 Multimap を構築するときにストアド デリゲート オブジェクトを指定することができますデリゲート オブジェクトを指定しないと、既定値が比較`operator<(key_type, key_type)`です。 このメンバー関数を呼び出すことによってこのストアド オブジェクトにアクセスする[multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`です。  
@@ -856,7 +856,7 @@ iterator find(key_type key);
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
+ 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1149,7 +1149,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入するキー値。  
   
  where  
