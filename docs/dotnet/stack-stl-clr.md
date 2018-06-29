@@ -69,12 +69,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 078fd71dac8144e7aa6fda5772b820b086a78457
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305528"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079734"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 このテンプレート クラスでは、後入れ先出しのアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`stack`プッシュ ダウン スタックとの基になるコンテナーを管理します。  
@@ -93,7 +93,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  [値]  
  被制御シーケンス内の要素の型。  
   

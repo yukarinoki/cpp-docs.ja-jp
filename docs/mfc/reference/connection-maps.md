@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28a82cc55e1cbf782603c7b34368fbc3d4ebe4c4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372839"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079203"
 ---
 # <a name="connection-maps"></a>コネクション マップ
 OLE コントロールは、他のアプリケーションへのインターフェイスを公開できます。 これらのインターフェイスは、そのコントロールにのみ、コンテナーからのアクセスを許可します。 OLE コントロールは、他の OLE オブジェクトの外部インターフェイスにアクセスする場合、接続ポイントを確立する必要があります。 この接続ポイントは、コントロールからイベント マップや通知関数などの外部のディスパッチ マップへのアクセスを許可します。  
@@ -59,16 +59,16 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  コネクション ポイントを持つコントロール クラスの名前を指定します。  
   
  *マクロ*  
  接続ポイントを実装するローカル クラスの名前を指定します。  
   
-### <a name="remarks"></a>コメント  
- クラスのメンバー関数を定義する宣言 (.h) ファイル、起動接続ポイントが、`BEGIN_CONNECTION_PART`マクロを追加して、`CONNECTION_IID`マクロと実装、および接続ポイントのマップを完了したいその他の任意のメンバー関数`END_CONNECTION_PART`マクロです。  
+### <a name="remarks"></a>Remarks  
+ クラスのメンバー関数を定義する宣言 (.h) ファイル、BEGIN_CONNECTION_PART マクロとの接続ポイントの開始 CONNECTION_IID マクロと、実装するその他の任意のメンバー関数を追加し、接続を完了END_CONNECTION_PART マクロを使用したマップをポイントします。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
@@ -82,28 +82,28 @@ END_CONNECTION_PART(localClass)
  *マクロ*  
  接続ポイントを実装するローカル クラスの名前を指定します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="connection_iid"></a>  CONNECTION_IID  
- 間で使用して、`BEGIN_CONNECTION_PART`と`END_CONNECTION_PART`OLE コントロールでサポートされる接続ポイントのインターフェイス ID を定義するマクロです。  
+ BEGIN_CONNECTION_PART と END_CONNECTION_PART マクロを使用して OLE コントロールでサポートされる接続ポイントのインターフェイス ID を定義します。  
   
 ```   
 CONNECTION_IID(iid)   
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iid`  
+ *iid*  
  接続ポイントによると呼ばれるインターフェイスのインターフェイス ID です。  
   
-### <a name="remarks"></a>コメント  
- `iid`引数は、接続ポイントを接続シンクで呼び出すインターフェイスを識別するインターフェイス ID です。 例えば:  
+### <a name="remarks"></a>Remarks  
+ *Iid*引数は、接続ポイントを接続シンクで呼び出すインターフェイスを識別するインターフェイス ID です。 例えば:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
  呼び出す接続ポイントを指定します、`ISinkInterface`インターフェイスです。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
@@ -113,10 +113,10 @@ CONNECTION_IID(iid)
 DECLARE_CONNECTION_MAP() 
 ```  
   
-### <a name="remarks"></a>コメント  
- 使用して、コントロールは、追加の点をサポートする場合、`DECLARE_CONNECTION_MAP`クラスの宣言の最後にマクロです。 クラスのメンバー関数を定義する .cpp ファイルを使用して、`BEGIN_CONNECTION_MAP`マクロ、`CONNECTION_PART`用の各コントロールの接続ポイントでは、マクロ、および`END_CONNECTION_MAP`コネクション マップの最後を宣言するマクロ。  
+### <a name="remarks"></a>Remarks  
+ コントロールは、追加の点をサポートする場合は、クラス宣言の最後に DECLARE_CONNECTION_MAP マクロを使用します。 次に、.cpp ファイルで、クラスのメンバー関数を定義する、使用して BEGIN_CONNECTION_MAP マクロ、CONNECTION_PART マクロの各コントロールの接続ポイント、および END_CONNECTION_MAP マクロ宣言コネクション マップの最後。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
@@ -127,16 +127,16 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  コネクション マップを持つコントロール クラスの名前を指定します。  
   
  *基底*  
- 基本クラスの名前を指定`theClass`です。  
+ 基本クラスの名前を指定*クラス*です。  
   
-### <a name="remarks"></a>コメント  
- 実装 (です。CPP) ファイルをクラスのメンバー関数を定義すると接続のマップの開始、`BEGIN_CONNECTION_MAP`マクロを使用して、接続ポイントの各マクロ エントリを追加、 [CONNECTION_PART](#connection_part)マクロです。 コネクション マップを最後に、完了、 [END_CONNECTION_MAP](#end_connection_map)マクロです。  
+### <a name="remarks"></a>Remarks  
+ 実装 (です。クラスのメンバーを定義する CPP) ファイルの機能、BEGIN_CONNECTION_MAP マクロを持つ、コネクション マップを開始しを使用して、接続ポイントの各マクロ エントリを追加、 [CONNECTION_PART](#connection_part)マクロです。 コネクション マップを最後に、完了、 [END_CONNECTION_MAP](#end_connection_map)マクロです。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
@@ -146,7 +146,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 END_CONNECTION_MAP()  
 ```  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="connection_part"></a>  CONNECTION_PART  
@@ -157,27 +157,27 @@ CONNECTION_PART(theClass, iid, localClass)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  コネクション ポイントを持つコントロール クラスの名前を指定します。  
   
- `iid`  
+ *iid*  
  接続ポイントによると呼ばれるインターフェイスのインターフェイス ID です。  
   
  *マクロ*  
  接続ポイントを実装するローカル クラスの名前を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  例えば:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
  呼び出しである接続ポイントとの接続のマップを実装、`IID_ISinkInterface`インターフェイスです。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
- 指定される、ソースとの間の接続を確立するには、この関数を呼び出す`pUnkSrc`とで指定された、シンク`pUnkSink`です。  
+ 指定される、ソースとの間の接続を確立するには、この関数を呼び出す*pUnkSrc*とで指定された、シンク*pUnkSink*です。  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -189,20 +189,20 @@ BOOL AFXAPI AfxConnectionAdvise(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pUnkSrc`  
+ *pUnkSrc*  
  インターフェイスを呼び出し、オブジェクトへのポインター。  
   
- `pUnkSink`  
+ *pUnkSink*  
  インターフェイスを実装するオブジェクトへのポインター。  
   
- `iid`  
+ *iid*  
  接続のインターフェイス ID です。  
   
- `bRefCount`  
- **TRUE**接続を作成するの参照カウントが発生ことを示します`pUnkSink`インクリメントします。 **FALSE**参照カウントをインクリメントいないことを示します。  
+ *bRefCount*  
+ **TRUE**接続を作成するの参照カウントが発生ことを示します*pUnkSink*インクリメントします。 **FALSE**参照カウントをインクリメントいないことを示します。  
   
- `pdwCookie`  
- ポインター、`DWORD`接続 id が返されます。 としてこの値を渡す必要があります、`dwCookie`パラメーターを`AfxConnectionUnadvise`接続を切断するときにします。  
+ *pdwCookie*  
+ ポインター、`DWORD`接続 id が返されます。 としてこの値を渡す必要があります、 *dwCookie*パラメーターを`AfxConnectionUnadvise`接続を切断するときにします。  
   
 ### <a name="return-value"></a>戻り値  
  0 以外の場合、接続が確立されました。それ以外の場合 0 を返します。  
@@ -210,11 +210,11 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
 
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** afxctl.h 
 
 ##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
- 指定される、ソースとの間の接続を切断するには、この関数を呼び出す`pUnkSrc`とで指定された、シンク`pUnkSink`です。  
+ 指定される、ソースとの間の接続を切断するには、この関数を呼び出す*pUnkSrc*とで指定された、シンク*pUnkSink*です。  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -226,19 +226,19 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pUnkSrc`  
+ *pUnkSrc*  
  インターフェイスを呼び出し、オブジェクトへのポインター。  
   
- `pUnkSink`  
+ *pUnkSink*  
  インターフェイスを実装するオブジェクトへのポインター。  
   
- `iid`  
+ *iid*  
  コネクション ポイント インターフェイスのインターフェイス ID です。  
   
- `bRefCount`  
- **TRUE** 、接続の切断との参照カウントが発生する必要があることを示します`pUnkSink`デクリメントされます。 **FALSE**できないことを示す、参照カウントをデクリメントします。  
+ *bRefCount*  
+ **TRUE** 、接続の切断との参照カウントが発生する必要があることを示します*pUnkSink*デクリメントされます。 **FALSE**できないことを示す、参照カウントをデクリメントします。  
   
- `dwCookie`  
+ *dwCookie*  
  によって返される接続識別子`AfxConnectionAdvise`です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -247,7 +247,7 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
 
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** afxctl.h 
 
 ## <a name="see-also"></a>関連項目  

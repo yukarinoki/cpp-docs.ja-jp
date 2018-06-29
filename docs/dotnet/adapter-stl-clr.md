@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305543"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079437"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR ヘッダー `<cliext/adapter>` 2 つのテンプレート クラスを指定します (`collection_adapter`と`range_adapter`)、およびテンプレート関数は、`make_collection`です。  
@@ -80,7 +80,7 @@ STL/CLR ヘッダー `<cliext/adapter>` 2 つのテンプレート クラスを�
   
  **Namespace:** cliext 
   
-## <a name="members"></a>メンバー  
+## <a name="declarations"></a>宣言  
   
 |クラス|説明|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ STL/CLR ヘッダー `<cliext/adapter>` 2 つのテンプレート クラスを�
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](#make_collection)|反復子のペアを使用して範囲アダプターを作成します。|   
   
+## <a name="members"></a>メンバー
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 STL/CLR コンテナーとして使用するための .NET コレクションをラップします。 A`collection_adapter`単純 STL/CLR コンテナー オブジェクトを表すテンプレート クラスです。 メソッドは、基本クラス ライブラリ (BCL) インターフェイスをラップし、被制御シーケンスの操作に使用する反復子のペアを返します。  
   
@@ -990,7 +992,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- iter  
+ Iter  
  ラップされた反復子に関連付けられている型。  
   
 ### <a name="members"></a>メンバー  

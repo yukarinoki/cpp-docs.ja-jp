@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305918"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079787"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`list`1 つの要素を格納する各ノードの双方向リンク リストとして要素のシーケンスを管理します。  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  [値]  
  被制御シーケンス内の要素の型。  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Namespace:** cliext 
 
-## <a name="members"></a>メンバー  
+## <a name="declarations"></a>宣言  
   
 |型定義|説明|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーは`not`その要素を破棄します。  
   
+## <a name="members"></a>メンバー
+
 ## <a name="assign"></a> list::assign (STL/CLR)
 すべての要素を置換します。  
   
@@ -265,7 +267,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入する要素の値です。  
   
 ### <a name="remarks"></a>Remarks  
@@ -1249,7 +1251,7 @@ void insert(iterator where,
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入する要素の値です。  
   
  where  
@@ -1964,7 +1966,7 @@ void remove(value_type val);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- val  
+ Val  
  削除する要素の値です。  
   
 ### <a name="remarks"></a>Remarks  
@@ -2142,7 +2144,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  被制御シーケンスの新しいサイズ。  
   
- val  
+ Val  
  埋め込み要素の値です。  
   
 ### <a name="remarks"></a>Remarks  

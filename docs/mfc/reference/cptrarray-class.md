@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8749e54cc42a6ae98748e8a5906cf5a5009d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ab3416c0c4e659ce94f7dc4376ea2d7a1fd4c32
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372354"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078027"
 ---
 # <a name="cptrarray-class"></a>CPtrArray クラス
 void ポインターの配列をサポートします。  
@@ -69,7 +69,7 @@ class CPtrArray : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CPtrArray`クラスのメンバー関数に似ています[CObArray](../../mfc/reference/cobarray-class.md)です。 メンバー関数については `CObArray` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CObject` ポインターが使われている場合は、`void` へのポインターに置き換えます。  
+ メンバー関数は、`CPtrArray`クラスのメンバー関数に似ています[CObArray](../../mfc/reference/cobarray-class.md)です。 メンバー関数については `CObArray` クラスの説明を参照してください。 任意の場所が表示、`CObject`関数パラメーターまたは戻り値としてのポインターへのポインターに置き換える**void**です。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -111,7 +111,7 @@ class CPtrArray : public CObject
 |----------|-----------------|  
 |[CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CPtrArray` には、`IMPLEMENT_DYNAMIC` マクロが組み込まれているので、`CDumpContext` オブジェクトへのランタイム型のアクセスとダンプをサポートします。 個々 のポインター配列の要素をダンプする場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
   
 > [!NOTE]
@@ -128,7 +128,7 @@ class CPtrArray : public CObject
   
  `CPtrArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

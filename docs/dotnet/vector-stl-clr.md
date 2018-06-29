@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305772"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079813"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 このテンプレート クラスでは、ランダム アクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`vector`ストレージの連続ブロックとして要素のシーケンスを管理します。 ブロックは、必要に応じて大きくを配列として実装されます。  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  [値]  
  被制御シーケンス内の要素の型。  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーには、その要素は破棄されません。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** \<cliext/vector >  
-  
- **Namespace:** cliext  
+## <a name="members"></a>メンバー
 
 ## <a name="assign"></a> vector::assign (STL/CLR)
 すべての要素を置換します。  
@@ -255,7 +252,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入する要素の値です。  
   
 ### <a name="remarks"></a>Remarks  
@@ -1337,7 +1334,7 @@ void insert(iterator where,
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入する要素の値です。  
   
  where  
@@ -1881,7 +1878,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  被制御シーケンスの新しいサイズ。  
   
- val  
+ Val  
  埋め込み要素の値です。  
   
 ### <a name="remarks"></a>Remarks  
@@ -2252,7 +2249,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
  右  
  挿入するオブジェクトまたは範囲。  
   
- val  
+ Val  
  挿入する要素の値です。  
   
 ### <a name="remarks"></a>Remarks  

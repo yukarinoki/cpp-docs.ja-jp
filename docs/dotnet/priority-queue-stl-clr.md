@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306035"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079532"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 このテンプレート クラスは、可変長のアクセスが制限されている要素のシーケンスを順序付けを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`priority_queue`優先度のキューとしてを基になるコンテナーを管理します。  
   
  下記に、`GValue`と同じ`Value`ref 型を後者には、しない限り、どのケースでは`Value^`します。 同様に、`GContainer`と同じ`Container`ref 型を後者には、しない限り、どのケースでは`Container^`します。  
   
-### <a name="syntax"></a>構文  
+## <a name="syntax"></a>構文  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  [値]  
  被制御シーケンス内の要素の型。  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトが重複してください。|  
 |IPriorityQueue\<値、コンテナー >|汎用的なコンテナーのアダプターを管理します。|  
   
-### <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks  
  オブジェクトは、割り当てし、型の基になるコンテナーを制御するシーケンスの記憶域を解放`Container`、格納する`Value`要素および要求時に増加します。 アクセスとリムーバブル最も高い優先度要素 (最上位の要素) を持つ、ヒープとして順序付けられたシーケンスを保持します。 オブジェクトは、新しい要素をプッシュおよびポップだけでは、最も高い優先度要素優先度のキューの実装へのアクセスを制限します。  
   
  オブジェクトがストアド デリゲート型のオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)です。 Priority_queue; を作成する場合は、ストアド デリゲート オブジェクトを指定することができます。デリゲート オブジェクトを指定しないと、既定値が比較`operator<(value_type, value_type)`です。 このメンバー関数を呼び出すことによってこのストアド オブジェクトにアクセスする[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`です。  

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373486"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079148"
 ---
 # <a name="crecordview-class"></a>CRecordView クラス
 コントロール内にデータベース レコードを表示するビューです。  
@@ -66,7 +66,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 |----------|-----------------|  
 |[CRecordView::OnMove](#onmove)|現在のレコードを変更した場合、データ ソースを更新し、指定されたレコードに移動 (次に、前の最初のページまたは最後)。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ビューに直接接続されているフォーム ビュー、`CRecordset`オブジェクト。 ビューはダイアログ テンプレート リソースから作成およびのフィールドを表示、`CRecordset`ダイアログ テンプレートのコントロール内のオブジェクト。 `CRecordView`オブジェクト ダイアログ データ エクス (チェンジ DDX) とレコード フィールド エクス (チェンジ RFX) を使用して、フォーム上のコントロールとレコード セットのフィールドの間でデータの移動を自動化します。 `CRecordView` 移動するための既定の実装を提供、最初に [次へ]、前、または最後のレコードと、ビューの現在のレコードを更新するためのインターフェイスです。  
   
 > [!NOTE]
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
   
  `CRecordView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="crecordview"></a>  よ  
@@ -109,13 +109,13 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  ダイアログ テンプレート リソースの名前を指定する null で終わる文字列が含まれています。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  ダイアログ テンプレート リソースの ID 番号が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  名前 (コンス トラクターの引数として文字列を渡す) によって、または ID (パスを符号なし整数の引数として) か、リソースを識別できます。 リソースを使用して ID をお勧めします。  
   
 > [!NOTE]
@@ -124,7 +124,7 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate**呼び出し`UpdateData`、どの呼び出し`DoDataExchange`です。 この最初の呼び出し`DoDataExchange`接続`CRecordView`(間接的に) に制御`CRecordset`ClassWizard で作成したデータ メンバーのフィールドです。 これらのデータ メンバーは、基本クラスを呼び出した後まで使用できません**CFormView::OnInitialUpdate**メンバー関数。  
   
 > [!NOTE]
->  ClassWizard を使用する場合、ウィザードで定義、`enum`値`CRecordView::IDD`クラス宣言で指定、およびコンス トラクターのメンバー初期化リストで使用します。  
+>  ClassWizard を使用する場合、ウィザードで定義、 **enum**値`CRecordView::IDD`クラス宣言で指定、およびコンス トラクターのメンバー初期化リストで使用します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
@@ -139,7 +139,7 @@ BOOL IsOnFirstRecord();
 ### <a name="return-value"></a>戻り値  
  現在のレコードがレコード セットの最初のレコードの場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は ClassWizard で作成されたコマンド更新ハンドラーの既定の実装を記述するために役立ちます。  
   
  ユーザーは、最初のレコードに移動した場合、フレームワークには、最初のページと前のレコードに移動する必要があるすべてのユーザー インターフェイス オブジェクトが無効にします。  
@@ -154,11 +154,11 @@ BOOL IsOnLastRecord();
 ### <a name="return-value"></a>戻り値  
  現在のレコードがレコード セットの最後のレコードの場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、classwizard レコード間を移動するためのユーザー インターフェイスをサポートするためにコマンド更新ハンドラーの既定の実装を記述するために役立ちます。  
   
 > [!CAUTION]
->  これ以降、ユーザーに移動するまで、ビューは、レコード セットの末尾を検出できませんする点を除いて、この関数の結果は信頼できます。 ユーザーは、レコード ビューの [次へ] または最後のレコードに移動するためのユーザー インターフェイス オブジェクトを無効にする必要があることがわかります前に、最後のレコードを超える移動する必要があります。 最後のレコードの後ろに移動し、移動最後のレコード (またはその前に)、レコード ビュー、レコード セット内のユーザーの位置を追跡できユーザー インターフェイス オブジェクトを正しく無効にできます。 `IsOnLastRecord` または信頼性が低く、実装関数を呼び出した後**OnRecordLast**、処理する、`ID_RECORD_LAST`コマンド、または`CRecordset::MoveLast`です。  
+>  これ以降、ユーザーに移動するまで、ビューは、レコード セットの末尾を検出できませんする点を除いて、この関数の結果は信頼できます。 ユーザーは、レコード ビューの [次へ] または最後のレコードに移動するためのユーザー インターフェイス オブジェクトを無効にする必要があることがわかります前に、最後のレコードを超える移動する必要があります。 最後のレコードの後ろに移動し、移動最後のレコード (またはその前に)、レコード ビュー、レコード セット内のユーザーの位置を追跡できユーザー インターフェイス オブジェクトを正しく無効にできます。 `IsOnLastRecord` または信頼性が低く、実装関数を呼び出した後`OnRecordLast`、処理する、`ID_RECORD_LAST`コマンド、または`CRecordset::MoveLast`です。  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  ポインターを返します、 `CRecordset`-レコード ビューに関連付けられているオブジェクトを派生します。  
@@ -170,8 +170,8 @@ virtual CRecordset* OnGetRecordset() = 0;
 ### <a name="return-value"></a>戻り値  
  ポインター、 `CRecordset`-派生オブジェクトのオブジェクトが正常に作成されたそれ以外の場合、 **NULL**ポインター。  
   
-### <a name="remarks"></a>コメント  
- 作成またはレコード セット オブジェクトを取得してにポインターを返すには、このメンバー関数をオーバーライドする必要があります。 ClassWizard で、レコード ビュー クラスを宣言する場合の既定のオーバーライドが書き込まれます。 ClassWizard の既定の実装では、いずれかが存在する場合は、レコード ビューに格納されているレコード セットのポインターを返します。 ClassWizard でユーザーが指定した型のレコード セット オブジェクトを構築されていない場合、**開く**メンバー関数のテーブルを開くか、クエリを実行して、オブジェクトへのポインターを返します。  
+### <a name="remarks"></a>Remarks  
+ 作成またはレコード セット オブジェクトを取得してにポインターを返すには、このメンバー関数をオーバーライドする必要があります。 ClassWizard で、レコード ビュー クラスを宣言する場合の既定のオーバーライドが書き込まれます。 ClassWizard の既定の実装では、いずれかが存在する場合は、レコード ビューに格納されているレコード セットのポインターを返します。 ClassWizard でユーザーが指定した型のレコード セット オブジェクトを構築されていない場合、`Open`メンバー関数のテーブルを開くか、クエリを実行して、オブジェクトへのポインターを返します。  
   
  詳細と例については、記事を参照してください。[レコード ビュー: レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)です。  
   
@@ -197,8 +197,8 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ### <a name="return-value"></a>戻り値  
  移動が成功した場合は 0 以外。移動要求が拒否された場合は、それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定の実装を呼び出す、適切な**移動**のメンバー関数、`CRecordset`レコード ビューに関連付けられているオブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 既定の実装を呼び出す、適切な`Move`のメンバー関数、`CRecordset`レコード ビューに関連付けられているオブジェクト。  
   
  既定では、`OnMove`ユーザーを使用すると、レコード ビューに変更された場合に、データ ソースの現在のレコードを更新します。  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  過去のレコード セットの最後のレコードを移動する場合、レコード ビューを最後のレコードが表示されます。 を越えて移動した最初のレコード場合、レコード ビューは最初のレコードが表示されます。  
   
 > [!CAUTION]
->  呼び出す`OnMove`レコード セットにレコードが存在しない場合、例外をスローします。 適切なユーザー インターフェイス更新ハンドラー関数を呼び出す — **OnUpdateRecordFirst**、 **OnUpdateRecordLast**、 **OnUpdateRecordNext**、または**OnUpdateRecordPrev** : 対応する前に、レコード セットがすべてのレコードを持つかどうかを決定する操作を移動します。  
+>  呼び出す`OnMove`レコード セットにレコードが存在しない場合、例外をスローします。 適切なユーザー インターフェイス更新ハンドラー関数を呼び出す — `OnUpdateRecordFirst`、 `OnUpdateRecordLast`、 `OnUpdateRecordNext`、または`OnUpdateRecordPrev`: 対応する前に、レコード セットがすべてのレコードを持つかどうかを決定する操作を移動します。  
   
 ## <a name="see-also"></a>関連項目  
  [CFormView クラス](../../mfc/reference/cformview-class.md)   

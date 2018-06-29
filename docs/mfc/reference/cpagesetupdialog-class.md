@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374650"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079184"
 ---
 # <a name="cpagesetupdialog-class"></a>メンバー クラス
 印刷マージンの設定や変更の追加サポートと共に [OLE ページの設定] ダイアログ ボックスにより提供されるサービスをカプセル化します。  
@@ -85,7 +85,7 @@ class CPageSetupDialog : public CCommonDialog
 |----------|-----------------|  
 |[CPageSetupDialog::m_psd](#m_psd)|カスタマイズに使用される構造体、`CPageSetupDialog`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このクラスは、印刷のセットアップ ダイアログ ボックスの代わりに設計されています。  
   
  使用する、`CPageSetupDialog`オブジェクト、オブジェクトを使用して、最初に作成、`CPageSetupDialog`コンス トラクターです。 ダイアログ ボックスを構築すると、設定したり、任意の値を変更、`m_psd`データ メンバーは、ダイアログ ボックスのコントロールの値を初期化します。 [M_psd](#m_psd)構造体は型**PAGESETUPDLG**です。  
@@ -110,7 +110,7 @@ class CPageSetupDialog : public CCommonDialog
   
  `CPageSetupDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwFlags`  
+ *dwFlags*  
  1 つまたは複数のフラグがダイアログ ボックスの設定のカスタマイズに使用することができます。 値は、ビットごとの OR 演算子を使用して結合できます。 これらの値には、次の意味があります。  
   
 - **PSD_DEFAULTMINMARGINS**プリンターの最小値と同じであるページの余白の許容される最小の幅を設定します。 場合、このフラグは無視されます、 **PSD_MARGINS**と**PSD_MINMARGINS**フラグも指定します。  
@@ -162,10 +162,10 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING**  ダイアログ ボックスの描画領域を無効にします。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ダイアログ ボックスの親または所有者へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、 [DoModal](../../mfc/reference/cdialog-class.md#domodal)  ダイアログ ボックスを表示する関数。  
   
 ### <a name="example"></a>例  
@@ -193,7 +193,7 @@ virtual INT_PTR DoModal();
   
  **IDOK**と**IDCANCEL**ユーザーが、[ok] または [キャンセル] ボタンを選択するかどうかを示す定数です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  さらに、ネットワークの場所と、選択したプリンターに固有のプロパティなど、プリンター設定オプションをユーザーにアクセスできます。  
   
  メンバーを設定して、さまざまなページ セットアップ ダイアログ オプションを初期化する場合、`m_psd`構造体、呼び出す前に行う必要があります`DoModal`、前後ダイアログ オブジェクトを構築します。 呼び出した後`DoModal`、他のメンバー、ダイアログ ボックスに、設定や、ユーザーが入力した情報を取得する関数を呼び出します。  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- によって使用されるデバイス名、**コモン**オブジェクト。  
+ によって使用されるデバイス名、`CPageSetupDialog`オブジェクト。  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  この関数を呼び出した後`DoModal`のプリンター デバイス コンテキストに関する情報を取得、`CPageSetupDialog`オブジェクト。  
@@ -235,7 +235,7 @@ CString GetDriverName() const;
 ### <a name="return-value"></a>戻り値  
  A`CString`システム定義のドライバー名を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ポインターを使用して、`CString`によって返されるオブジェクト`GetDriverName`の値として`lpszDriverName`への呼び出しで[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)です。  
   
 ##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins  
@@ -281,7 +281,7 @@ CString GetPortName() const;
 PAGESETUPDLG m_psd;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  構築した後、`CPageSetupDialog`オブジェクトを使用する`m_psd`を呼び出す前に ダイアログ ボックスのさまざまな側面を設定する、`DoModal`メンバー関数。  
   
  変更する場合、`m_psd`データ メンバーを直接、既定の動作がオーバーライドされます。  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  プリンター デバイス コンテキストへのポインター。  
   
- `nMessage`  
+ *%n メッセージ*  
  現在描画されるページの領域を示すメッセージを指定します。 次のいずれかの値を指定します。  
   
 - **WM_PSD_FULLPAGERECT**全体のページの領域。  
@@ -319,20 +319,20 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT**リターン アドレス表現の領域。 この領域は、サンプルのページ領域の端に拡張します。  
   
- `lpRect`  
+ *lpRect*  
  ポインター、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)描画領域の座標を持つオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  処理された場合は 0 以外の値それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このイメージは、共通の OLE ページの設定 ダイアログ ボックスの一部として表示されます。 既定の実装では、テキストのページのイメージを描画します。  
   
- イメージ、またはイメージ全体の特定の領域の描画をカスタマイズするには、この関数をオーバーライドします。 使用してこれを行う、`switch`ステートメントと**ケース**の値をチェックするステートメント`nMessage`です。 たとえば、ページのイメージの内容の表示をカスタマイズするには、次のコード例を使用する可能性があります。  
+ イメージ、またはイメージ全体の特定の領域の描画をカスタマイズするには、この関数をオーバーライドします。 使用してこれを行う、**切り替える**ステートメントと**ケース**の値をチェックするステートメント *%n*です。 たとえば、ページのイメージの内容の表示をカスタマイズするには、次のコード例を使用する可能性があります。  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- すべてのケースを処理する必要はありません`nMessage`です。 イメージ、イメージ、または領域全体のいくつかのコンポーネントの 1 つのコンポーネントを処理することができます。  
+ すべてのケースを処理する必要はありません *%n*です。 イメージ、イメージ、または領域全体のいくつかのコンポーネントの 1 つのコンポーネントを処理することができます。  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  印刷ページの画面イメージを描画する前に、フレームワークによって呼び出されます。  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  用紙サイズを示す値を指定します。 この値には、いずれかを指定できます、 **DMPAPER_** 値の説明に一覧表示、 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)構造体。  
   
- `wFlags`  
+ *wFlags*  
  用紙または封筒の印刷の向きを示す、およびプリンターがドット マトリックスか HPPCL (Hewlett Packard Printer Control Language) デバイス。 このパラメーターには、次のいずれかの値を指定できます。  
   
 -   0x001 用紙横モード (ドット マトリックス)  
@@ -367,13 +367,13 @@ virtual UINT PreDrawPage(
   
 -   0x01f 縦向きモード (ドット マトリックス) エンベロープ  
   
- `pPSD`  
+ *pPSD*  
  ポインター、 **PAGESETUPDLG**構造体。 詳細については[PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842)、Windows SDK を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
  処理された場合は 0 以外の値それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イメージの描画をカスタマイズするには、この関数をオーバーライドします。 この関数をオーバーライドして返す**TRUE**、全体のイメージを描画する必要があります。 この関数をオーバーライドして返す**FALSE**、フレームワークによって、全体の既定のイメージを描画します。  
   
 ## <a name="see-also"></a>関連項目  

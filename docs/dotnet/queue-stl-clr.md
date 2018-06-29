@@ -73,12 +73,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b4d591d2abd7613777dec6ae668badd84fe31d0c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305554"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079708"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 このテンプレート クラスでは、先入れ先出しのアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`queue`キューとしてを基になるコンテナーを管理します。  
@@ -97,7 +97,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  [値]  
  被制御シーケンス内の要素の型。  
   
@@ -157,7 +157,7 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトが重複してください。|  
 |I キュー\<値、コンテナー >|汎用的なコンテナーのアダプターを管理します。|  
   
-### <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks  
  オブジェクトは、割り当てし、型の基になるコンテナーを制御するシーケンスの記憶域を解放`Container`、格納する`Value`要素および要求時に増加します。 オブジェクトが最初の要素を押すだけへのアクセスを制限し、(FIFO キューまたはキューでは単とも呼ばれます) キューの最後の要素をポップ、先入れ先出しの実装します。  
   
 ## <a name="members"></a>メンバー

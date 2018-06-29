@@ -151,12 +151,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 71399d254b2b47b33959695a00227e316c04a008
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a494993eea8a82307243ee1a05b92212dd4cb216
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305801"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079839"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 アルゴリズムを実行する STL/CLR コンテナーのテンプレート関数を定義します。  
@@ -172,7 +172,7 @@ ms.locfileid: "36305801"
   
  **Namespace:** cliext  
     
-## <a name="functions"></a>関数  
+## <a name="declarations"></a>宣言  
   
 |関数|説明|  
 |--------------|-----------------|  
@@ -217,7 +217,7 @@ ms.locfileid: "36305801"
 |[remove (STL/CLR)](#remove)|特定の範囲から、残りの要素の順序の影響を及ぼすことがなく、指定した値を削除し、指定された値を含まない新しい範囲の末尾を返します。|  
 |[remove_copy (STL/CLR)](#remove_copy)|残りの要素の順序の影響を及ぼすことがなく、指定された値の要素はコピーされないことを除き、要素をターゲット範囲に、ソース範囲からコピーします。|  
 |[remove_copy_if (STL/CLR)](#remove_copy_if)|ソース範囲から述語を満たす、残りの要素の順序の影響を及ぼすことがなくものを除き、ターゲットの範囲に要素をコピーします。|  
-|[remove_if (STL/CLR)](#remove_if)|残りの要素の順序の影響を及ぼすことがなく、指定された範囲から述語を満たす要素を削除します。 である必要があります。|  
+|[remove_if (STL/CLR)](#remove_if)|残りの要素の順序の影響を及ぼすことがなく、指定された範囲から述語を満たす要素を削除します。 .|  
 |[replace (STL/CLR)](#replace)|新しい値を持つ指定した値と一致する範囲内の要素を置き換えます。|  
 |[replace_copy (STL/CLR)](#replace_copy)|ソース範囲から新しい値を持つ指定した値と一致する要素を置換、ターゲットの範囲に要素をコピーします。|  
 |[replace_copy_if (STL/CLR)](#replace_copy_if)|ソース範囲内の各要素が指定された述語を満たすかどうかを調べ、満たす場合は置き換えて結果を新しいターゲット範囲にコピーします。|  
@@ -243,6 +243,7 @@ ms.locfileid: "36305801"
 |[unique_copy (STL/CLR)](#unique_copy)|互いに隣接する重複要素を除き、ソース範囲の要素をターゲット範囲にコピーします。|  
 |[upper_bound (STL/CLR)](#upper_bound)|順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値を超える値を持つ最初の要素の位置を検索します。|  
  
+## <a name="members"></a>メンバー
 
 ## <a name="adjacent_find"></a> adjacent_find (STL/CLR)
 等しいか、または指定された条件を満たす 2 個の隣接する要素を検索します。  

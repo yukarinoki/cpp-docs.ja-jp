@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434a0b428199b7c2298815523517097aeee2ab47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: beeef0d8ff1a89a003987f9cd79172ad2ff86d75
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376175"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079630"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage クラス
 タブ ダイアログ ボックスとして知られているプロパティ シートの各ページを表します。  
@@ -100,7 +100,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|  
 |[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)構造体。 基本的なプロパティ ページのパラメーターへのアクセスを提供します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  クラスを派生する標準的なダイアログ ボックスで、`CPropertyPage`プロパティ シートの各ページに対してです。 使用する`CPropertyPage`-派生オブジェクトは、まずを作成、 [CPropertySheet](../../mfc/reference/cpropertysheet-class.md)オブジェクト、およびプロパティ シートでページごとにオブジェクトを作成します。 呼び出す[が](../../mfc/reference/cpropertysheet-class.md#addpage)各シートで、ページし、呼び出すことによって、プロパティ シートを表示[する](../../mfc/reference/cpropertysheet-class.md#domodal)、モーダル プロパティ シートまたは[CPropertySheet:。作成](../../mfc/reference/cpropertysheet-class.md#create)モードレス プロパティ シートのです。  
   
  デバイスのセットアップやニュースレターを作成するなど、操作の手順を追ってプロパティ ページのシーケンスを持つプロパティ シートで構成される、ウィザードと呼ばれるタブ ダイアログ ボックスの種類を作成できます。 ウィザードの種類 タブのダイアログ ボックスでは、プロパティ ページには、タブはありません。 と、一度に 1 つのプロパティ ページが表示されます。 また、ボタンが ok と 今すぐ適用するのではなくウィザード型タブ ダイアログ ボックスが、戻る ボタン、次へ または 完了 ボタン、および キャンセル ボタン。  
@@ -118,7 +118,7 @@ class CPropertyPage : public CDialog
   
  `CPropertyPage`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="canceltoclose"></a>  CPropertyPage::CancelToClose  
@@ -128,7 +128,7 @@ class CPropertyPage : public CDialog
 void CancelToClose();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、[ok] ボタンを閉じるに変更し、[キャンセル] ボタンを無効にします。 これは、アラートの変更が確定され、変更があるユーザーはキャンセルできませんを変更します。  
   
  `CancelToClose`モードレス プロパティ シートでは、既定では、[キャンセル] ボタンはありませんのでメンバー関数は、モードレス プロパティ シートではありません。  
@@ -165,22 +165,22 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDTemplate`  
+ *nIDTemplate*  
  このページで使用するテンプレートの ID です。  
   
- `nIDCaption`  
+ *nIDCaption*  
  このページのタブに配置する名前の ID です。 0 の場合、名前がこのページのダイアログ テンプレートから取得されます。  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  テンプレート リソースの名前を表す null で終わる文字列が含まれています。  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  プロパティ ページのヘッダーのタイトルの位置に配置する名前の ID です。 既定では、0 です。  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  プロパティ ページのヘッダーの字幕の場所に配置する名前の ID です。 既定では、0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すべての次の条件が満たされた後、オブジェクトが表示されます。  
   
 -   ページを使用してプロパティ シートに追加された[が](../../mfc/reference/cpropertysheet-class.md#addpage)です。  
@@ -189,9 +189,9 @@ void Construct(
   
 -   ユーザーが選択されています (タブ) このページ。  
   
- 呼び出す**構築**他のクラス コンス トラクターのいずれかが呼び出されていない場合。 `Construct`パラメーター ステートメントを空白のままにして、コードで複数のパラメーターと任意の時点の構築を指定するので、メンバー関数は柔軟です。  
+ 呼び出す`Construct`他のクラス コンス トラクターのいずれかが呼び出されていない場合。 `Construct`パラメーター ステートメントを空白のままにして、コードで複数のパラメーターと任意の時点の構築を指定するので、メンバー関数は柔軟です。  
   
- 使用する必要があります`Construct`ときに、配列を使用して、呼び出す必要があります**構築**配列の各メンバーのデータ メンバーには、適切な値が割り当てられるようにします。  
+ 使用する必要があります`Construct`ときに、配列を使用して、呼び出す必要があります`Construct`配列の各メンバーのデータ メンバーには、適切な値が割り当てられるようにします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#112](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
@@ -232,23 +232,23 @@ CPropertyPage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDTemplate`  
+ *nIDTemplate*  
  このページで使用するテンプレートの ID です。  
   
- `nIDCaption`  
+ *nIDCaption*  
  このページのタブに配置する名前の ID です。 0 の場合、名前がこのページのダイアログ テンプレートから取得されます。  
   
- `dwSize`  
- `lpszTemplateName`  
+ *dwSize*  
+ *lpszTemplateName*  
  このページのテンプレートの名前を含む文字列へのポインター。 ことはできません**NULL**です。  
   
- `nIDHeaderTitle`  
+ *nIDHeaderTitle*  
  プロパティ ページのヘッダーのタイトルの位置に配置する名前の ID です。  
   
- `nIDHeaderSubTitle`  
+ *nIDHeaderSubTitle*  
  プロパティ ページのヘッダーの字幕の場所に配置する名前の ID です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すべての次の条件が満たされた後、オブジェクトが表示されます。  
   
 -   ページを使用してプロパティ シートに追加された[が](../../mfc/reference/cpropertysheet-class.md#addpage)です。  
@@ -281,7 +281,7 @@ PROPSHEETPAGE& GetPSP();
 PROPSHEETPAGE m_psp;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この構造体を使用して、構築した後、プロパティ ページの外観を初期化します。  
   
  そのメンバーの一覧を含めて、この構造の詳細についてを参照してください。 **PROPSHEETPAGE** Windows SDK に含まれています。  
@@ -299,7 +299,7 @@ virtual BOOL OnApply();
 ### <a name="return-value"></a>戻り値  
  変更が受け付けられた場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークがこの関数を呼び出すと、プロパティ シート内のすべてのプロパティ ページに加えられた変更が受け入れられます、プロパティ シートが、フォーカスを保持および`OnApply`返します**TRUE** (値 1)。 前に`OnApply`呼び出すことができます、フレームワークによってする必要がありますが呼び出さ[SetModified](#setmodified)そのパラメーターを設定および**TRUE**です。 今すぐ適用] ボタン、ユーザーは、[プロパティ ページで変更を行うとすぐにアクティブになります。  
   
  ユーザーは、[今すぐ適用] ボタンをクリックしたときのプログラムの動作を指定するには、このメンバー関数をオーバーライドします。 をオーバーライドする関数で返す必要があります**TRUE**の変更を確定と**FALSE**変更反映されないようにします。  
@@ -318,7 +318,7 @@ virtual BOOL OnApply();
 virtual void OnCancel();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [キャンセル] ボタンの操作を実行するには、このメンバー関数をオーバーライドします。 既定値は、加えられた変更を否定します。  
   
 ### <a name="example"></a>例  
@@ -334,7 +334,7 @@ virtual BOOL OnKillActive();
 ### <a name="return-value"></a>戻り値  
  データが正常に更新された場合は 0 以外。 それ以外の場合に 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  特別なデータの検証タスクを実行するには、このメンバー関数をオーバーライドします。  
   
  このメンバー関数の既定の実装では、プロパティ ページのメンバー変数に、コントロールのプロパティ ページから設定をコピーします。 ダイアログ データ バリデーション (DDV) エラーのため、データが正常に更新されない場合は、ページがフォーカスを保持します。  
@@ -351,7 +351,7 @@ virtual BOOL OnKillActive();
 virtual void OnOK();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークが受信 OK または [適用] ボタンを選択すると、 [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552)プロパティ ページからの通知です。 呼び出し`OnOK`を呼び出す場合に行われるされません[CPropertySheet::PressButton](../../mfc/reference/cpropertysheet-class.md#pressbutton)のため、プロパティ ページが、通知をその場合は送信されません。  
   
  ユーザーがプロパティ シート全体を閉じるときに、現在アクティブなページに固有の他の動作を実装するには、このメンバー関数をオーバーライドします。  
@@ -371,7 +371,7 @@ virtual BOOL OnQueryCancel();
 ### <a name="return-value"></a>戻り値  
  返します**FALSE**キャンセル操作または許可する場合は TRUE を防ぐためです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーは [キャンセル] ボタンをクリックしたときのプログラムの動作を指定するには、このメンバー関数をオーバーライドします。  
   
  既定の実装`OnQueryCancel`返します**TRUE**です。  
@@ -386,7 +386,7 @@ virtual BOOL OnQueryCancel();
 virtual void OnReset();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、この関数を呼び出す、以前 [適用] ボタンを選択するユーザーによって加えられたすべてのプロパティ ページへの変更は破棄され、プロパティ シートにフォーカスが保持されます。  
   
  ユーザーは [キャンセル] ボタンをクリックしたときのプログラムの動作を指定するには、このメンバー関数をオーバーライドします。  
@@ -406,7 +406,7 @@ virtual BOOL OnSetActive();
 ### <a name="return-value"></a>戻り値  
  ページを正常にアクティブに設定されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ページがアクティブになったときにタスクを実行するには、このメンバー関数をオーバーライドします。 このメンバー関数のオーバーライドは、ページ コントロールを新しいデータで更新することを許可する、データ メンバーを更新した後に通常既定のバージョンを呼び出します。  
   
  既定の実装は、ページ、ウィンドウを作成しない場合、以前に作成し、作業中のページになります。  
@@ -424,7 +424,7 @@ virtual LRESULT OnWizardBack();
 ### <a name="return-value"></a>戻り値  
  次のページに自動的に進める 0ページを変更できないようにする-1 です。 次の 1 つ以外のページにジャンプするには、表示されるダイアログ ボックスの識別子を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [戻る] ボタンがクリックされたときに、ユーザーが操作を指定するには、このメンバー関数をオーバーライドします。  
   
  ウィザード形式のプロパティ シートを作成する方法の詳細については、次を参照してください。 [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)です。  
@@ -442,7 +442,7 @@ virtual BOOL OnWizardFinish();
 ### <a name="return-value"></a>戻り値  
  プロパティ シートが、ウィザードが終了したときに破棄される場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーがクリックしたとき、**完了**ウィザード、フレームワークのボタンは、この関数を呼び出します以外の場合`OnWizardFinish`を返します**TRUE** (0 以外の値)、プロパティ シートは破棄されることはできません (が、実際には破棄されます)。 呼び出す`DestroyWindow`プロパティ シートを破棄します。 呼び出す必要はありません`DestroyWindow`から`OnWizardFinish`; そう原因なりますヒープの破損またはその他のエラーです。  
   
  [完了] ボタンがクリックされたときに、ユーザーが操作を指定するには、このメンバー関数をオーバーライドすることができます。 この関数をオーバーライドする場合は、返す**FALSE**をプロパティ シートが破棄されていることを防ぐためにします。  
@@ -470,7 +470,7 @@ virtual LRESULT OnWizardNext();
 ### <a name="return-value"></a>戻り値  
  次のページに自動的に進める 0ページを変更できないようにする-1 です。 次の 1 つ以外のページにジャンプするには、表示されるダイアログ ボックスの識別子を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [次へ] ボタンが押されたときに、ユーザーが操作を指定するには、このメンバー関数をオーバーライドします。  
   
  ウィザード形式のプロパティ シートを作成する方法の詳細については、次を参照してください。 [CPropertySheet::SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)です。  
@@ -488,16 +488,16 @@ LRESULT QuerySiblings(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `wParam`  
+ *wParam*  
  追加のメッセージに依存する情報を指定します。  
   
- `lParam`  
+ *lParam*  
  その他のメッセージに依存する情報を指定します  
   
 ### <a name="return-value"></a>戻り値  
  プロパティ シートで、または 0 の場合のページから 0 以外の値のすべてのページは、値 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ページが 0 以外の値を返す場合、プロパティ シートは後続のページにメッセージを送信しません。  
   
 ### <a name="example"></a>例  
@@ -515,10 +515,10 @@ void SetModified(BOOL bChanged = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bChanged`  
+ *bChanged*  
  **TRUE**プロパティ ページの設定が適用されたか、前回以降変更されていることを示すために**FALSE**プロパティ ページの設定が適用されているか、無視するかを示します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  そのうちページは「ダーティ」、つまり追跡、プロパティ ページが呼び出しのフレームワークが保持**SetModified (TRUE)** です。 今すぐ適用 ボタンは常に有効にするを呼び出す場合**SetModified (TRUE)** ページのいずれか。 呼び出すときに、今すぐ適用 ボタンは無効になります**SetModified (FALSE)** のみ場合、その他のページの なし は「ダーティ」ですが、ページの 1 つの  
   
 ### <a name="example"></a>例  

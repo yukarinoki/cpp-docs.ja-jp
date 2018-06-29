@@ -108,12 +108,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e595db4e194744ce5d1f1d644a55423c1022fc2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85a3c51f5c59b510e1024cc5f363096952c0f35a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377588"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079463"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl クラス
 Rebar コントロールの機能がカプセル化されています。Rebar コントロールは、子ウィンドウを含むコンテナーです。  
@@ -182,7 +182,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl::ShowBand](#showband)|Rebar コントロールで特定のバンドの表示と非表示を切り替えます。|  
 |[CReBarCtrl::SizeToRect](#sizetorect)|指定した四角形に rebar コントロールが収まるようにします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Rebar コントロールが存在するアプリケーションでは、rebar バンドに rebar コントロールに含まれる子ウィンドウを割り当てます。 子ウィンドウは、通常の別の一般的なコントロールです。  
   
  Rebar コントロールには、1 つまたは複数のバンドが含まれます。 各バンドには、グリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウの組み合わせを含めることができます。 バンドには、これらの各項目の 1 つだけを含めることができます。  
@@ -221,7 +221,7 @@ class CReBarCtrl : public CWnd
   
  `CReBarCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="begindrag"></a>  CReBarCtrl::BeginDrag  
@@ -234,11 +234,11 @@ void BeginDrag(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  ドラッグ アンド ドロップ操作に影響を与えるバンドの 0 から始まるインデックス。  
   
- `dwPos`  
- A`DWORD`開始のマウス座標を表す値です。 水平方向の座標が、LOWORD に含まれているし、くださいに垂直方向の座標が含まれています。 渡す場合`(DWORD)-1`、rebar コントロールが最後に、コントロールのスレッドと呼ばれる、マウスの位置を使用して**GetMessage**または**PeekMessage**です。  
+ *dwPos*  
+ A`DWORD`開始のマウス座標を表す値です。 水平方向の座標が、LOWORD に含まれているし、くださいに垂直方向の座標が含まれています。 渡す場合`(DWORD)-1`、rebar コントロールが最後に、コントロールのスレッドと呼ばれる、マウスの位置を使用して`GetMessage`または`PeekMessage`です。  
   
 ##  <a name="create"></a>  CReBarCtrl::Create  
  Rebar コントロールを作成し、それにアタッチ、`CReBarCtrl`オブジェクト。  
@@ -252,22 +252,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  Rebar コントロールのスタイルのコントロールに適用されるの組み合わせを指定します。 参照してください[Rebar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb774377)サポートされているスタイルの一覧については Windows SDK に含まれています。  
   
- `rect`  
+ *rect*  
  参照、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) rebar コントロールのサイズと位置である構造体。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ポインター、 [CWnd](../../mfc/reference/cwnd-class.md) rebar コントロールの親ウィンドウであるオブジェクト。 なければなりません**NULL**です。  
   
- `nID`  
+ *nID*  
  Rebar コントロールのコントロール ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  オブジェクトが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  2 つの手順では、rebar コントロールを作成します。  
   
 1.  呼び出す[CReBarCtrl](#crebarctrl)構築するために、`CReBarCtrl`オブジェクト。  
@@ -292,25 +292,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwExStyle`  
- 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、`dwExStyle`パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
+ *dwExStyle*  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
   
- `dwStyle`  
+ *dwStyle*  
  Rebar コントロールのスタイルのコントロールに適用されるの組み合わせを指定します。 サポートされているスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK に含まれています。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体`pParentWnd`です。  
+ *rect*  
+ 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体*pParentWnd*です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  コントロールの子ウィンドウ ID  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。  
   
 ##  <a name="crebarctrl"></a>  CReBarCtrl::CReBarCtrl  
@@ -332,7 +332,7 @@ BOOL DeleteBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  削除する帯域外の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
@@ -349,8 +349,8 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwPos`  
- A`DWORD`新しいマウス座標を表す値です。 水平方向の座標が、LOWORD に含まれているし、くださいに垂直方向の座標が含まれています。 渡す場合`(DWORD)-1`、rebar コントロールが最後に、コントロールのスレッドと呼ばれる、マウスの位置を使用して**GetMessage**または**PeekMessage**です。  
+ *dwPos*  
+ A`DWORD`新しいマウス座標を表す値です。 水平方向の座標が、LOWORD に含まれているし、くださいに垂直方向の座標が含まれています。 渡す場合`(DWORD)-1`、rebar コントロールが最後に、コントロールのスレッドと呼ばれる、マウスの位置を使用して`GetMessage`または`PeekMessage`です。  
   
 ##  <a name="enddrag"></a>  CReBarCtrl::EndDrag  
  Win32 メッセージの動作を実装する[RB_ENDDRAG](http://msdn.microsoft.com/library/windows/desktop/bb774435)Windows SDK で説明されている。  
@@ -369,10 +369,10 @@ void GetBandBorders(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  枠線を取得する対象のバンドの 0 から始まるインデックス。  
   
- `prc`  
+ *中華人民共和国*  
  ポインター、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)バンド境界線を受け取る。 Rebar コントロールがある場合、 **RBS_BANDBORDERS**スタイル、罫線を構成する、バンドの対応する側のピクセルの数がこの構造体の各メンバーに表示されます。 Rebar コントロールがない場合、 **RBS_BANDBORDERS**スタイルをこの構造体の左のメンバーは、有効な情報を受け取るだけです。 Rebar コントロールのスタイルの説明は、次を参照してください。 [Rebar コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK に含まれています。  
   
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount  
@@ -395,10 +395,10 @@ BOOL GetBandInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  情報を取得する対象のバンドの 0 から始まるインデックス。  
   
- `prbbi`  
+ *prbbi*  
  ポインター、 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)バンド情報を受け取る構造です。 設定する必要があります、`cbSize`をこの構造体のメンバー`sizeof(REBARBANDINFO)`設定と、 **fMask**このメッセージを送信する前に取得する項目へのメンバーです。  
   
 ### <a name="return-value"></a>戻り値  
@@ -415,7 +415,7 @@ void GetBandMargins(PMARGINS pMargins);
  *pMargins*  
  ポインター、[余白](http://msdn.microsoft.com/library/windows/desktop/bb773244)情報を受け取る。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 [RB_GETBANDMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb774453)メッセージ、Windows SDK で説明します。  
   
 ##  <a name="getbarheight"></a>  CReBarCtrl::GetBarHeight  
@@ -436,8 +436,8 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `prbi`  
- ポインター、 [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) rebar コントロールの情報を受け取る。 設定する必要があります、`cbSize`をこの構造体のメンバー`sizeof(REBARINFO)`このメッセージを送信する前にします。  
+ *prbi*  
+ ポインター、 [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) rebar コントロールの情報を受け取る。 設定する必要があります、 *cbSize*をこの構造体のメンバー`sizeof(REBARINFO)`このメッセージを送信する前にします。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -460,13 +460,13 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpcs`  
+ *lpc*  
  ポインター、 [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) Windows SDK」の説明に従って、構造体します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **COLORSCHEME**構造には、ボタンの強調表示色とボタンの影の色が含まれています。  
   
 ##  <a name="getdroptarget"></a>  CReBarCtrl::GetDropTarget  
@@ -487,9 +487,9 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 拡張スタイルを示すフラグのビットごとの組み合わせ (OR)。 可能なフラグは`RBS_EX_SPLITTER`と`RBS_EX_TRANSPARENT`です。 詳細については、次を参照してください。、`dwMask`のパラメーター、 [CReBarCtrl::SetExtendedStyle](#setextendedstyle)メソッドです。  
+ 拡張スタイルを示すフラグのビットごとの組み合わせ (OR)。 可能なフラグは`RBS_EX_SPLITTER`と`RBS_EX_TRANSPARENT`です。 詳細については、次を参照してください。、 *dwMask*のパラメーター、 [CReBarCtrl::SetExtendedStyle](#setextendedstyle)メソッドです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [RB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774433) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getimagelist"></a>  CReBarCtrl::GetImageList  
@@ -502,7 +502,7 @@ CImageList* GetImageList() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト。 返します**NULL**コントロールのイメージ リストが設定されていない場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数に格納されているサイズとマスクの情報を使用して、 [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395) Windows SDK」の説明に従って、構造体します。  
   
 ##  <a name="getpalette"></a>  CReBarCtrl::GetPalette  
@@ -515,7 +515,7 @@ CPalette* GetPalette() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CPalette](../../mfc/reference/cpalette-class.md) rebar コントロールの現在のパレットを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数を使用している、 `CPalette` 、戻り値としてオブジェクトではなく、`HPALETTE`です。  
   
 ### <a name="example"></a>例  
@@ -531,10 +531,10 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  Rebar コントロールのバンドの 0 から始まるインデックス。  
   
- `prc`  
+ *中華人民共和国*  
  ポインター、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) rebar バンドの境界を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
@@ -593,7 +593,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  なお MFC 実装の`GetToolTips`へのポインターを返します、`CToolTipCtrl`ではなく、`HWND`です。  
   
 ##  <a name="hittest"></a>  CReBarCtrl::HitTest  
@@ -637,8 +637,8 @@ BOOL InsertBand(
  *uIndex*  
  バンドを挿入する位置の 0 から始まるインデックス。 このパラメーターを-1 に設定する場合、コントロールは最後の位置で新しいバンドを追加します。  
   
- `prbbi`  
- ポインター、 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)を挿入するバンドを定義します。 設定する必要があります、`cbSize`をこの構造体のメンバー`sizeof(REBARBANDINFO)`この関数を呼び出す前にします。  
+ *prbbi*  
+ ポインター、 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)を挿入するバンドを定義します。 設定する必要があります、 *cbSize*をこの構造体のメンバー`sizeof(REBARBANDINFO)`この関数を呼び出す前にします。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -654,10 +654,10 @@ void MaximizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  最大化するバンドの 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Win32 メッセージの動作を実装する[RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500)で`fIdeal`Windows SDK」の説明に従って、0 に設定します。  
   
 ### <a name="example"></a>例  
@@ -671,10 +671,10 @@ void MinimizeBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  最小化するバンドの 0 から始まるインデックスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Win32 メッセージの動作を実装する[RB_MINIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774502)Windows SDK で説明されている。  
   
 ### <a name="example"></a>例  
@@ -709,11 +709,11 @@ void PushChevron(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  プッシュするのには、シェブロン バンドの 0 から始まるインデックス。  
   
- `lAppValue`  
- アプリケーションでは、32 ビット値を定義します。 参照してください`lAppValue`で[RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) Windows SDK にします。  
+ *lAppValue*  
+ アプリケーションでは、32 ビット値を定義します。 参照してください*lAppValue*で[RB_PUSHCHEVRON](http://msdn.microsoft.com/library/windows/desktop/bb774506) Windows SDK に含まれています。  
   
 ##  <a name="restoreband"></a>  CReBarCtrl::RestoreBand  
  理想的なサイズに rebar コントロールのバンドのサイズを変更します。  
@@ -723,10 +723,10 @@ void RestoreBand(UINT uBand);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  最大化するバンドの 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Win32 メッセージの動作を実装する[RB_MAXIMIZEBAND](http://msdn.microsoft.com/library/windows/desktop/bb774500)で`fIdeal`Windows SDK」の説明に従って、1 に設定します。  
   
 ### <a name="example"></a>例  
@@ -742,10 +742,10 @@ BOOL SetBandInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  新しい設定を受信する帯域の 0 から始まるインデックス。  
   
- `prbbi`  
+ *prbbi*  
  ポインター、 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393)を挿入するバンドを定義します。 設定する必要があります、`cbSize`をこの構造体のメンバー`sizeof(REBARBANDINFO)`このメッセージを送信する前にします。  
   
 ### <a name="return-value"></a>戻り値  
@@ -767,13 +767,13 @@ BOOL SetBandWidth(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `uBand`|Rebar バンドの 0 から始まるインデックス。|  
-|[入力] `cxWidth`|(ピクセル単位)、rebar バンドの幅。|  
+|[in]*uBand*|Rebar バンドの 0 から始まるインデックス。|  
+|[in]*cxWidth*|(ピクセル単位)、rebar バンドの幅。|  
   
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合は `true`。それ以外の場合は `false`。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [RB_SETBANDWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb774511) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -794,7 +794,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `prbi`  
+ *prbi*  
  ポインター、 [REBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb774395)を設定する情報を格納する構造体。 設定する必要があります、`cbSize`をこの構造体のメンバー`sizeof(REBARINFO)`このメッセージを送信する前に  
   
 ### <a name="return-value"></a>戻り値  
@@ -811,13 +811,13 @@ COLORREF SetBkColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clr`  
+ *clr*  
  **COLORREF**を新しい既定の背景色を表す値です。  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)を前の既定の背景色を表す値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  背景色を設定して、既定値を設定する方法の詳細については、このトピックを参照してください。  
   
 ##  <a name="setcolorscheme"></a>  CReBarCtrl::SetColorScheme  
@@ -831,7 +831,7 @@ void SetColorScheme(const COLORSCHEME* lpcs);
  `lpcs`  
  ポインター、 [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502) Windows SDK」の説明に従って、構造体します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **COLORSCHEME**構造には、ボタンの強調表示色とボタンの影の色の両方が含まれています。  
   
 ##  <a name="setextendedstyle"></a>  CReBarCtrl::SetExtendedStyle  
@@ -847,13 +847,13 @@ DWORD SetExtendedStyle(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `dwMask`|どのフラグを指定するフラグのビットごとの組み合わせ (OR)、`dwStyleEx`パラメーターを適用します。 次の値の 1 つ以上を使用します。<br /><br /> RBS_EX_SPLITTER: 既定では、スプリッター下部にある水平モードで、右側のモードで表示垂直方向。<br /><br /> RBS_EX_TRANSPARENT: 転送、 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)メッセージを親ウィンドウ。|  
-|[入力] `dwStyleEx`|適用するスタイルを指定するフラグのビットごとの組み合わせ (OR)。 スタイルを設定するで使用されている同じフラグを指定、`dwMask`パラメーター。 スタイルをリセットするには、バイナリのゼロを指定します。|  
+|[in]*dwMask*|どのフラグを指定するフラグのビットごとの組み合わせ (OR)、 *dwStyleEx*パラメーターを適用します。 次の値の 1 つ以上を使用します。<br /><br /> RBS_EX_SPLITTER: 既定では、スプリッター下部にある水平モードで、右側のモードで表示垂直方向。<br /><br /> RBS_EX_TRANSPARENT: 転送、 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)メッセージを親ウィンドウ。|  
+|[in]*dwStyleEx*|適用するスタイルを指定するフラグのビットごとの組み合わせ (OR)。 スタイルを設定するで使用されている同じフラグを指定、 *dwMask*パラメーター。 スタイルをリセットするには、バイナリのゼロを指定します。|  
   
 ### <a name="return-value"></a>戻り値  
  以前の拡張スタイル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [RB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb774519) Windows SDK で説明するメッセージ。  
   
 ##  <a name="setimagelist"></a>  CReBarCtrl::SetImageList  
@@ -864,7 +864,7 @@ BOOL SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pImageList`  
+ *pImageList*  
  ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md) rebar コントロールに割り当てられるイメージ リストを含むオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
@@ -878,13 +878,13 @@ CWnd* SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  ポインター、 `CWnd` rebar コントロールの所有者として設定するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CWnd](../../mfc/reference/cwnd-class.md) rebar コントロールの現在の所有者であるオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数へのポインターを使用して`CWnd`ウィンドウへのハンドルのではなく、rebar コントロールの現在および選択した所有者の両方のオブジェクトします。  
   
 > [!NOTE]
@@ -904,7 +904,7 @@ CPalette* SetPalette(HPALETTE hPal);
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CPalette](../../mfc/reference/cpalette-class.md) rebar コントロールの前のパレットを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数を使用している、 `CPalette` 、戻り値としてオブジェクトではなく、`HPALETTE`です。  
   
 ##  <a name="settextcolor"></a>  CReBarCtrl::SetTextColor  
@@ -915,13 +915,13 @@ COLORREF SetTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clr`  
+ *clr*  
  A **COLORREF**を新しいテキストを表す値の色を`CReBarCtrl`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)前のテキストの色を表す値に関連付けられている、`CReBarCtrl`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Rebar コントロールでテキストの色の柔軟性をサポートするために提供されます。  
   
 ##  <a name="settooltips"></a>  CReBarCtrl::SetToolTips  
@@ -935,7 +935,7 @@ void SetToolTips(CToolTipCtrl* pToolTip);
  *pToolTip*  
  ポインター、 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)オブジェクト  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  破棄する必要があります、`CToolTipCtrl`オブジェクトが完了したことがあるときです。  
   
 ##  <a name="setwindowtheme"></a>  CReBarCtrl::SetWindowTheme  
@@ -946,13 +946,13 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszSubAppName`  
+ *pszSubAppName*  
  設定する rebar の visual スタイルを含む Unicode 文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は使用されません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 [RB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb774530)メッセージ、Windows SDK で説明します。  
   
 ##  <a name="showband"></a>  CReBarCtrl::ShowBand  
@@ -965,7 +965,7 @@ BOOL ShowBand(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uBand`  
+ *uBand*  
  Rebar コントロールのバンドの 0 から始まるインデックス。  
   
  *fShow*  
@@ -982,13 +982,13 @@ BOOL SizeToRect(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  参照、 [CRect](../../atl-mfc-shared/reference/crect-class.md)に rebar コントロールのサイズを変更する必要がありますを四角形を指定するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数を使用している、`CRect`オブジェクトをパラメーターとしてではなく、`RECT`構造体。  
   
 ## <a name="see-also"></a>関連項目  

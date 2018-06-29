@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9833607065407e66473a9fab1907bf2262816296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9f5cc55adac2bf5900d9891635a025716b9c1f3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370641"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078580"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity クラス
 アニメーション変数の初期ベロシティによって振幅が決まる正弦波ベロシティ遷移をカプセル化します。  
@@ -61,7 +61,7 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 |[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|移行の期間です。|  
 |[CSinusoidalTransitionFromVelocity::m_period](#m_period)|秒単位で正弦波の振幅の期間。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アニメーション変数の値は、初期値を囲む正弦波範囲遷移の期間全体にわたって振動です。 移行の開始時に、振幅の振幅をアニメーション変数の速度によって決まります。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -71,7 +71,7 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
   
  [CSinusoidalTransitionFromVelocity](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create  
@@ -84,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLibrary`  
+ *pLibrary*  
  これは標準的な遷移の作成を担当する遷移ライブラリへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -100,10 +100,10 @@ CSinusoidalTransitionFromVelocity(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
- `period`  
+ *期間*  
  秒単位で正弦波の振幅の期間。  
   
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  

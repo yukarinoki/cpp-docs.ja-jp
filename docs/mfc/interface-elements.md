@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1906505e75273cc62a0eac55e6ed1a9686a3b76f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352578"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078445"
 ---
 # <a name="interface-elements"></a>インターフェイス要素
-導入されたインターフェイス要素について説明[!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]SP1、およびライブラリの以前のバージョンとの違いについても説明します。  
+このドキュメントでは、Visual Studio 2008 SP1 で導入されたインターフェイス要素について説明し、ライブラリの以前のバージョンとの違いについても説明します。  
   
  次の図は、新しいインターフェイス要素を使用してビルドされたアプリケーションを示します。  
   

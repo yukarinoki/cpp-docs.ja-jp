@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b81a35a696d3d5cdcb22a6f9a66425320b544c2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375442"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079450"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder クラス
 ユーザーがコントロールで画像を表示する Picture プロパティを実装します。  
@@ -82,7 +82,7 @@ class CPictureHolder
 |----------|-----------------|  
 |[CPictureHolder::m_pPict](#m_ppict)|画像オブジェクトへのポインター。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CPictureHolder` 基本クラスはありません。  
   
  ストックの画像のプロパティを使用して、開発者は、ビットマップ、アイコン、または表示のメタファイルを指定できます。  
@@ -92,7 +92,7 @@ class CPictureHolder
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CPictureHolder`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxctl.h  
   
 ##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder  
@@ -133,29 +133,29 @@ BOOL CreateFromBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `idResource`  
+ *idResource*  
  ビットマップ リソースのリソース ID です。  
   
- `pBitmap`  
+ *pBitmap*  
  ポインター、 [CBitmap](../../mfc/reference/cbitmap-class.md)オブジェクト。  
   
  *pPal*  
  ポインター、 [CPalette](../../mfc/reference/cpalette-class.md)オブジェクト。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  画像オブジェクトが、ビットマップ、およびパレット オブジェクトの所有権を持つかどうかを示します。  
   
- `hbm`  
+ *hbm*  
  元のビットマップへのハンドル、`CPictureHolder`オブジェクトを作成します。  
   
- `hpal`  
+ *hpal*  
  ビットマップの描画に使用するパレットへのハンドルします。  
   
 ### <a name="return-value"></a>戻り値  
  オブジェクトが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 場合`bTransferOwnership`は**TRUE**呼び出し元は、ビットマップを使用しないで、またはこの呼び出しの後の任意の方法でパレット オブジェクトを返します。 場合`bTransferOwnership`は**FALSE**、呼び出し元がいるビットマップとパレット オブジェクトは有効なまま画像オブジェクトの有効期間を確保するためです。  
+### <a name="remarks"></a>Remarks  
+ 場合*bTransferOwnership*は**TRUE**呼び出し元は、ビットマップを使用しないで、またはこの呼び出しの後の任意の方法でパレット オブジェクトを返します。 場合*bTransferOwnership*は**FALSE**、呼び出し元がいるビットマップとパレット オブジェクトは有効なまま画像オブジェクトの有効期間を確保するためです。  
   
 ##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  内の画像オブジェクトを初期化するためにアイコンを使用して、`CPictureHolder`です。  
@@ -171,20 +171,20 @@ BOOL CreateFromIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `idResource`  
+ *idResource*  
  ビットマップ リソースのリソース ID です。  
   
- `hIcon`  
+ *hIcon*  
  元のアイコンへのハンドル、`CPictureHolder`オブジェクトを作成します。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  画像オブジェクトが icon オブジェクトの所有権を持つかどうかを示します。  
   
 ### <a name="return-value"></a>戻り値  
  オブジェクトが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 場合`bTransferOwnership`は**TRUE**、呼び出し元は、いません、この呼び出しが戻った後任意の方法でアイコン オブジェクトを使用する必要があります。 場合`bTransferOwnership`は**FALSE**、呼び出し元がそのアイコン オブジェクトは有効な画像オブジェクトの有効期間を確保するためです。  
+### <a name="remarks"></a>Remarks  
+ 場合*bTransferOwnership*は**TRUE**、呼び出し元は、いません、この呼び出しが戻った後任意の方法でアイコン オブジェクトを使用する必要があります。 場合*bTransferOwnership*は**FALSE**、呼び出し元がそのアイコン オブジェクトは有効な画像オブジェクトの有効期間を確保するためです。  
   
 ##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  内の画像オブジェクトを初期化するために、メタファイルを使用して、`CPictureHolder`です。  
@@ -198,7 +198,7 @@ BOOL CreateFromMetafile(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hmf`  
+ *hmf*  
  作成に使われるメタファイルへのハンドル、`CPictureHolder`オブジェクト。  
   
  *xExt*  
@@ -207,14 +207,14 @@ BOOL CreateFromMetafile(
  *yExt*  
  画像の Y 範囲。  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  画像オブジェクトが、メタファイル オブジェクトの所有権を持つかどうかを示します。  
   
 ### <a name="return-value"></a>戻り値  
  オブジェクトが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 場合`bTransferOwnership`は**TRUE**、呼び出し元は、いません、この呼び出しが戻った後任意の方法でメタファイル オブジェクトを使用する必要があります。 場合`bTransferOwnership`は**FALSE**、呼び出し元がそのメタファイル オブジェクトは有効な画像オブジェクトの有効期間を確保するためです。  
+### <a name="remarks"></a>Remarks  
+ 場合*bTransferOwnership*は**TRUE**、呼び出し元は、いません、この呼び出しが戻った後任意の方法でメタファイル オブジェクトを使用する必要があります。 場合*bTransferOwnership*は**FALSE**、呼び出し元がそのメタファイル オブジェクトは有効な画像オブジェクトの有効期間を確保するためです。  
   
 ##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  コンテナーのプロパティ ブラウザーに表示される文字列を取得します。  
@@ -224,7 +224,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `strValue`  
+ *StrValue*  
  参照、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)表示文字列を保持します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -240,7 +240,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="return-value"></a>戻り値  
  ポインター、`CPictureHolder`オブジェクトの`IPictureDisp`インターフェイスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出し元が呼び出す必要があります**リリース**を使い終わったら、このポインター。  
   
 ##  <a name="gettype"></a>  CPictureHolder::GetType  
@@ -269,7 +269,7 @@ LPPICTURE m_pPict;
 ```  
   
 ##  <a name="render"></a>  Cpictureholder:  
- によって参照される四角形に画像をレンダリング`rcRender`です。  
+ によって参照される四角形に画像をレンダリング*rcRender*です。  
   
 ```  
 void Render(
@@ -279,14 +279,14 @@ void Render(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  画像がレンダリングされるディスプレイ コンテキストへのポインター。  
   
- `rcRender`  
+ *rcRender*  
  画像がレンダリングされる四角形。  
   
  *rcWBounds*  
- 画像が描画されるオブジェクトの外接する四角形を表す四角形。 この四角形には、コントロールの`rcBounds`のオーバーライドに渡されたパラメーター[オーバライド](../../mfc/reference/colecontrol-class.md#ondraw)です。  
+ 画像が描画されるオブジェクトの外接する四角形を表す四角形。 この四角形には、コントロールの*rcBounds*のオーバーライドに渡されたパラメーター[オーバライド](../../mfc/reference/colecontrol-class.md#ondraw)です。  
   
 ##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  接続、`CPictureHolder`オブジェクトを`IPictureDisp`インターフェイスです。  
@@ -296,7 +296,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDisp`  
+ *pDisp*  
  新しいポインター`IPictureDisp`インターフェイスです。  
   
 ## <a name="see-also"></a>関連項目  

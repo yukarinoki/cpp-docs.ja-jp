@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb0ec0233edd968ad121b84f9e1d584a26f3387
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bb4cba5ef2eafa27a26c945f8754eb1a0ab0315
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369965"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077956"
 ---
 # <a name="coloradjustment-structure"></a>COLORADJUSTMENT 構造体
-`COLORADJUSTMENT`構造体は、Windows によって使用される色の調整値を定義`StretchBlt`と**StretchDIBits**関数と、`StretchBlt`モードは**ハーフトーン**です。  
+`COLORADJUSTMENT`構造体は、Windows によって使用される色の調整値を定義`StretchBlt`と`StretchDIBits`関数と、`StretchBlt`モードは**ハーフトーン**です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -112,7 +112,7 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
  *caRedGreenTint*  
  ソース オブジェクトに適用する赤または緑の濃淡調整の量を指定します。 値は、100 ~-100 の範囲にする必要があります。 正の数値は赤色方向、負の数値が緑に調整します。 0 は、濃淡調整がないことを意味します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** wingdi.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f54f600e9a98304f1113c6e9e22389f6c974a80
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370976"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078896"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration クラス
 放物線加速遷移をカプセル化します。  
@@ -64,7 +64,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 |[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時、アニメーション変数の値。|  
 |[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|遷移の終了時、アニメーション変数の速度です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アニメーション変数の値は、放物線加速遷移中に、最終的な値を指定した速度で終了に初期値から変更します。 アクセラレータの比率を指定することにより、変数が最終的な値を到達どの程度の速度を制御できます。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -74,7 +74,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
   
  [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
@@ -88,13 +88,13 @@ CParabolicTransitionFromAcceleration(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dblFinalValue`  
+ *dblFinalValue*  
  遷移の終了時、アニメーション変数の値。  
   
- `dblFinalVelocity`  
+ *dblFinalVelocity*  
  遷移の終了時、アニメーション変数の速度です。  
   
- `dblAcceleration`  
+ *dblAcceleration*  
  移行中に、アニメーション変数のアクセラレータです。  
   
 ##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
@@ -107,7 +107,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLibrary`  
+ *pLibrary*  
  これは標準的な遷移の作成を担当する遷移ライブラリへのポインター。  
   
 ### <a name="return-value"></a>戻り値  

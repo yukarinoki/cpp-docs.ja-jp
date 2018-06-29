@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 353a45cad513e9c862b6ae6c15ab5383d3d65d48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06793ae544b76ac959a51224aae754ad58e1af78
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378957"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079852"
 ---
 # <a name="cricheditview-class"></a>CRichEditView クラス
 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)と[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)MFC のドキュメント ビュー アーキテクチャのコンテキストでリッチ エディット コントロールの機能を提供します。  
@@ -195,7 +195,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView::m_nBulletIndent](#m_nbulletindent)|箇条書きのインデントのサイズを示します。|  
 |[CRichEditView::m_nWordWrap](#m_nwordwrap)|ワード ラップ制約を示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  「リッチ エディット コントロール」は、ユーザーを入力し、テキストを編集するウィンドウです。 テキストは、文字と段落の書式に割り当てることができるし、埋め込み OLE オブジェクトを含めることができます。 リッチ エディット コントロールでは、テキストの書式設定のプログラミング インターフェイスを提供します。 ただし、アプリケーションでは、書式設定操作をユーザーに使用できるようにするために必要なすべてのユーザー インターフェイス コンポーネントを実装する必要があります。  
   
  `CRichEditView` テキストとテキストの書式設定特性を保持します。 `CRichEditDoc` ビューでは OLE クライアント アイテムの一覧を保持します。 `CRichEditCntrItem` コンテナー側 OLE クライアント アイテムへのアクセスを提供します。  
@@ -217,7 +217,7 @@ class CRichEditView : public CCtrlView
   
  `CRichEditView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrich.h  
   
 ##  <a name="adjustdialogposition"></a>  CRichEditView::AdjustDialogPosition  
@@ -259,19 +259,19 @@ void DoPaste(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dataobj`  
+ *dataobj*  
  [COleDataObject](../../mfc/reference/coledataobject-class.md)を貼り付けるデータを格納します。  
   
- `cf`  
+ *cf*  
  目的のクリップボード形式です。  
   
- `hMetaPict`  
+ *hMetaPict*  
  貼り付ける項目を表すメタファイル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークの既定の実装の一部としてこの関数が呼び出さ[QueryAcceptData](#queryacceptdata)です。  
   
- この関数は、貼り付け のハンドラーの結果に基づく貼り付けの種類を決定します。 場合`cf`が 0 の場合、新しい項目が、現在のアイコン表現を使用します。 場合`cf`は 0 以外と`hMetaPict`は**NULL**、新しい項目を使用して`hMetaPict`形式のです。  
+ この関数は、貼り付け のハンドラーの結果に基づく貼り付けの種類を決定します。 場合*cf*が 0 の場合、新しい項目が、現在のアイコン表現を使用します。 場合*cf*は 0 以外と*hMetaPict*は**NULL**、新しい項目を使用して*hMetaPict*形式のです。  
   
 ##  <a name="findtext"></a>  CRichEditView::FindText  
  指定したテキストを検索し、現在の選択範囲に設定するには、この関数を呼び出します。  
@@ -285,22 +285,22 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索する文字列が含まれています。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別かどうかを示します。  
   
- `bWord`  
+ *bword で*  
  検索する単語全体のみ、単語の一部ではないかどうかを示します。  
   
- `bNext`  
+ *bNext*  
  検索の方向を示します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
   
 ### <a name="return-value"></a>戻り値  
- 0 以外の値、`lpszFind`テキストが見つかった場合は 0 です。  
+ 0 以外の値、*されて*テキストが見つかった; 0 それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、find 操作中に待機カーソルを表示します。  
   
 ### <a name="example"></a>例  
@@ -318,20 +318,20 @@ BOOL FindTextSimple(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索する文字列が含まれています。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別かどうかを示します。  
   
- `bWord`  
+ *bword で*  
  検索する単語全体のみ、単語の一部ではないかどうかを示します。  
   
- `bNext`  
+ *bNext*  
  検索の方向を示します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
   
 ### <a name="return-value"></a>戻り値  
- 0 以外の値、`lpszFind`テキストが見つかった場合は 0 です。  
+ 0 以外の値、*されて*テキストが見つかった; 0 それ以外の場合。  
   
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::FindText](#findtext)です。  
@@ -346,7 +346,7 @@ CHARFORMAT2& GetCharFormatSelection();
 ### <a name="return-value"></a>戻り値  
  A [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)文字書式の現在の選択の属性を格納する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については、次を参照してください。、 [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026)メッセージ、および[CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Windows SDK 内の構造。  
   
 ### <a name="example"></a>例  
@@ -364,10 +364,10 @@ virtual HRESULT GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpchrg`  
- ポインター、[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)で指定されたデータ オブジェクトにコピーする文字 (と OLE アイテム) の範囲を指定する構造体`lplpdataobj`です。  
+ *lpchrg*  
+ ポインター、[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)によって指定されたデータ オブジェクトにコピーする文字 (と OLE アイテム) の範囲を指定する構造体*と*です。  
   
- `dwReco`  
+ *dwReco*  
  クリップボードの操作のフラグです。 これらの値のいずれかを指定できます。  
   
 - **RECO_COPY**をクリップボードにコピーします。  
@@ -380,17 +380,17 @@ virtual HRESULT GetClipboardData(
   
 - **RECO_PASTE**クリップボードから貼り付けします。  
   
- `lpRichDataObj`  
+ *lpRichDataObj*  
  ポインター、 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)エディット コントロールの豊富なからクリップボード データを含むオブジェクト ( [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341))。  
   
- `lplpdataobj`  
- アドレスを受け取るポインター変数へのポインター、`IDataObject`で指定された範囲を表すオブジェクトを`lpchrg`パラメーター。 値`lplpdataobj`エラーが返される場合は無視されます。  
+ *と*  
+ アドレスを受け取るポインター変数へのポインター、`IDataObject`で指定された範囲を表すオブジェクトを*lpchrg*パラメーター。 値*と*エラーが返される場合は無視されます。  
   
 ### <a name="return-value"></a>戻り値  
  `HRESULT`値操作の成功を報告します。 詳細については`HRESULT`を参照してください[COM エラー コードの構造体](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
- 場合は、戻り値は成功を示し**IRichEditOleCallback::GetClipboardData**を返します、`IDataObject`によってアクセス`lplpdataobj`、それ以外のアクセスによって 1 つを返します`lpRichDataObj`です。 クリップボード データを提供するには、この関数をオーバーライドします。 この関数の既定の実装を返します**E_NOTIMPL**です。  
+### <a name="remarks"></a>Remarks  
+ 場合は、戻り値は成功を示し**IRichEditOleCallback::GetClipboardData**を返します、`IDataObject`によってアクセス*と*、それ以外でアクセスする 1 つを返します*lpRichDataObj*です。 クリップボード データを提供するには、この関数をオーバーライドします。 この関数の既定の実装を返します**E_NOTIMPL**です。  
   
  これは、高度なオーバーライド可能です。  
   
@@ -410,16 +410,16 @@ virtual HMENU GetContextMenu(
  *seltyp*  
  選択の型。 選択型の値は、「解説」セクションで説明します。  
   
- `lpoleobj`  
- ポインター、 **OLEOBJECT**選択範囲には、1 つまたは複数の OLE 項目が含まれている場合は、最初の選択した OLE オブジェクトを指定する構造体。 選択範囲に、項目が含まれていない場合`lpoleobj`は**NULL**です。 **OLEOBJECT**構造体が OLE オブジェクト v テーブルへのポインターを保持します。  
+ *持っていないとき*  
+ ポインター、 **OLEOBJECT**選択範囲には、1 つまたは複数の OLE 項目が含まれている場合は、最初の選択した OLE オブジェクトを指定する構造体。 選択範囲に、項目が含まれていない場合*持っていないとき*は**NULL**です。 **OLEOBJECT**構造体が OLE オブジェクト v テーブルへのポインターを保持します。  
   
- `lpchrg`  
+ *lpchrg*  
  ポインター、[上](http://msdn.microsoft.com/library/windows/desktop/bb787885)現在の選択範囲を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
  コンテキスト メニューへのハンドルします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、処理速度の右マウス ボタンの標準的な部分です。  
   
  選択の種類は、次のフラグの組み合わせにすることができます。  
@@ -480,7 +480,7 @@ CRect GetPageRect() const;
 ### <a name="return-value"></a>戻り値  
  単位は、印刷で使用されるページの境界`MM_TWIPS`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この値は、用紙サイズに基づきます。  
   
 ##  <a name="getpapersize"></a>  CRichEditView::GetPaperSize  
@@ -506,7 +506,7 @@ PARAFORMAT2& GetParaFormatSelection();
 ### <a name="return-value"></a>戻り値  
  A [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942)段落の現在の選択の属性を格納する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については、次を参照してください。 [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182)メッセージと[PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Windows SDK 内の構造。  
   
 ##  <a name="getprintrect"></a>  CRichEditView::GetPrintRect  
@@ -575,16 +575,16 @@ long GetTextLengthEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwFlags`  
+ *dwFlags*  
  テキストの長さを決定に使用する方法を指定する値。 このメンバーは、いずれかを指定できますまたは以上の値のフラグのメンバーに示されている[GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) Windows SDK で説明します。  
   
- `uCodePage`  
+ *uCodePage*  
  変換 (Unicode の 1200 の ANSI コード ページの CP_ACP) 用のコード ページです。  
   
 ### <a name="return-value"></a>戻り値  
- 文字またはエディット コントロールでのバイト数。 互換性のないフラグが設定されている場合`dwFlags`、このメンバー関数を返します`E_INVALIDARG`です。  
+ 文字またはエディット コントロールでのバイト数。 互換性のないフラグが設定されている場合*dwFlags*、このメンバー関数を返します`E_INVALIDARG`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `GetTextLengthEx` テキストの長さを決定するその他の方法を提供します。 リッチ エディット 2.0 の機能をサポートします。 詳細については、次を参照してください。[リッチのエディット コントロールについて](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDK に含まれています。  
   
 ##  <a name="insertfileasobject"></a>  CRichEditView::InsertFileAsObject  
@@ -595,7 +595,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFileName`  
+ *場合*  
  挿入するファイルの名前を含む文字列です。  
   
 ##  <a name="insertitem"></a>  CRichEditView::InsertItem  
@@ -606,28 +606,28 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pItem`  
+ *pItem*  
  挿入する項目へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  `HRESULT`挿入の成功を示す値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については`HRESULT`を参照してください[COM エラー コードの構造体](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
   
 ##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
- かどうかをこの関数を呼び出す`cf`テキスト、リッチ テキスト、または OLE 項目を含む、リッチ テキストはクリップボード形式です。  
+ かどうかをこの関数を呼び出す*cf*テキスト、リッチ テキスト、または OLE 項目を含む、リッチ テキストはクリップボード形式です。  
   
 ```  
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cf`  
+ *cf*  
  目的のクリップボードの形式です。  
   
 ### <a name="return-value"></a>戻り値  
- 0 以外の値`cf`リッチ テキストの編集またはクリップボードの形式です。  
+ 0 以外の値*cf*リッチ テキストの編集またはクリップボードの形式です。  
   
 ##  <a name="isselected"></a>  CRichEditView::IsSelected  
  指定した OLE 項目がこのビューで現在選択されているかどうかを判断するには、この関数を呼び出します。  
@@ -637,13 +637,13 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDocItem`  
+ *pDocItem*  
  ビュー内のオブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  オブジェクトがオンの場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  派生ビュー クラス OLE 項目の選択を処理するための別の方法がある場合は、この関数をオーバーライドします。  
   
 ##  <a name="m_nbulletindent"></a>  CRichEditView::m_nBulletIndent  
@@ -660,7 +660,7 @@ int m_nBulletIndent;
 int m_nWordWrap;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  次のいずれかの値です。  
   
 - `WrapNone` 自動折り返しがないことを示します。  
@@ -682,16 +682,16 @@ void OnCharEffect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwMask`  
+ *dwMask*  
  現在の選択を変更するための効果を書式設定文字です。  
   
- `dwEffect`  
+ *dwEffect*  
  文字書式の効果を切り替えるの目的のリスト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数に対する各呼び出しでは、現在の選択範囲の指定した書式設定の効果を切り替えます。  
   
- 詳細については、`dwMask`と`dwEffect`パラメーターとその潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows SDK に含まれています。  
+ 詳細については、 *dwMask*と*dwEffect*パラメーターとその潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
@@ -708,19 +708,19 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  検索する文字列。  
   
- `bNext`  
+ *bNext*  
  検索する方向: **TRUE** ; ダウンを示します**FALSE**、最大です。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別するかどうかを示します。  
   
- `bWord`  
+ *bword で*  
  検索では、専用かどうかは、全体の単語を照合するかどうかを示します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  内のテキストを検索するには、この関数を呼び出して、`CRichEditView`です。 派生ビュー クラスの検索項目の特性を変更するには、この関数をオーバーライドします。  
   
 ##  <a name="oninitialupdate"></a>  CRichEditView::OnInitialUpdate  
@@ -730,8 +730,8 @@ virtual void OnFindNext(
 virtual void OnInitialUpdate();
 ```  
   
-### <a name="remarks"></a>コメント  
- この関数の既定の実装、 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)ヒント情報なしのメンバー関数 (つまり、0 を既定値を使用して、`lHint`パラメーターと**NULL**の`pHint`パラメーター)。 ドキュメントに関する情報を必要とする任意の 1 回だけ初期化を実行するには、この関数をオーバーライドします。 たとえば、アプリケーションに固定サイズのドキュメントがある場合は、ドキュメントのサイズに基づくビューのスクロールの範囲を初期化するためにこの関数を使用できます。 アプリケーションでは、可変サイズのドキュメントをサポートする場合を使用して`OnUpdate`スクロールを更新する制限たびにドキュメントの変更。  
+### <a name="remarks"></a>Remarks  
+ この関数の既定の実装、 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)ヒント情報なしのメンバー関数 (つまり、0 を既定値を使用して、 *lHint*パラメーターと**NULL**の*pHint*パラメーター)。 ドキュメントに関する情報を必要とする任意の 1 回だけ初期化を実行するには、この関数をオーバーライドします。 たとえば、アプリケーションに固定サイズのドキュメントがある場合は、ドキュメントのサイズに基づくビューのスクロールの範囲を初期化するためにこの関数を使用できます。 アプリケーションでは、可変サイズのドキュメントをサポートする場合を使用して`OnUpdate`スクロールを更新する制限たびにドキュメントの変更。  
   
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::m_nWordWrap](#m_nwordwrap)です。  
@@ -750,7 +750,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外。それ以外の場合、0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これを作成することで実行する通常、[関数](../../mfc/reference/colestreamfile-class.md)周囲、`IStorage`です。 `COleStreamFile`アーカイブに添付できると[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)データを読み込むために呼び出されます。  
   
  これは、高度なオーバーライド可能です。  
@@ -765,7 +765,7 @@ void OnParaAlign(WORD wAlign);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `wAlign`  
+ *wAlign*  
  目的の段落の配置です。 次のいずれかの値です。  
   
 - `PFA_LEFT` 左の余白を使用して段落を整列します。  
@@ -785,11 +785,11 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dcPrinter`  
+ *dcPrinter*  
  A [CDC](../../mfc/reference/cdc-class.md)新しいプリンターのオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 既定の実装では、用紙サイズを物理の高さと幅出力デバイス (プリンター) に設定します。 ある場合は、デバイス コンテキストに関連付けられた`dcPrinter`既定の実装が用紙サイズを 8.5 によって 11 インチに設定します。  
+### <a name="remarks"></a>Remarks  
+ 既定の実装では、用紙サイズを物理の高さと幅出力デバイス (プリンター) に設定します。 ある場合は、デバイス コンテキストに関連付けられた*dcPrinter*既定の実装が用紙サイズを 8.5 によって 11 インチに設定します。  
   
 ##  <a name="onreplaceall"></a>  CRichEditView::OnReplaceAll  
  すべて置換、置換 ダイアログ ボックスからコマンドを処理するときに、フレームワークによって呼び出されます。  
@@ -803,19 +803,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  置換するテキストです。  
   
- `lpszReplace`  
+ *見つかる*  
  置換する文字列。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別かどうかを示します。  
   
- `bWord`  
+ *bword で*  
  検索に単語を選択する必要がありますかかどうかを示します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  別の文字列で指定された文字列のすべての出現を置換するには、この関数を呼び出します。 このビューの検索項目の特性を変更するには、この関数をオーバーライドします。  
   
 ### <a name="example"></a>例  
@@ -834,22 +834,22 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  置換するテキストです。  
   
- `bNext`  
+ *bNext*  
  検索の方向を示す: **TRUE** 。**FALSE**、最大です。  
   
- `bCase`  
+ *置き換えた*  
  検索では、大文字小文字を区別かどうかを示します。  
   
- `bWord`  
+ *bword で*  
  検索に単語を選択する必要がありますかかどうかを示します。  
   
- `lpszReplace`  
+ *見つかる*  
  置換する文字列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数では、別の文字列で指定された文字列の 1 つの出現箇所を置き換えます。 このビューの検索項目の特性を変更するには、この関数をオーバーライドします。  
   
 ##  <a name="ontextnotfound"></a>  CRichEditView::OnTextNotFound  
@@ -860,10 +860,10 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  テキストが見つかりませんでした。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  出力の通知を変更するには、この関数をオーバーライドする[MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356)です。  
   
  詳細については、次を参照してください。 [MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356) Windows SDK に含まれています。  
@@ -882,19 +882,19 @@ void OnUpdateCharEffect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCmdUI`  
+ *対応付けられました。*  
  ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクト。  
   
- `dwMask`  
+ *dwMask*  
  マスクを書式設定文字を示します。  
   
- `dwEffect`  
+ *dwEffect*  
  文字書式の効果を示します。  
   
-### <a name="remarks"></a>コメント  
- マスク`dwMask`書式属性を確認する文字を指定します。 フラグ`dwEffect`文字書式設定/クリアする属性を一覧表示します。  
+### <a name="remarks"></a>Remarks  
+ マスク*dwMask*書式属性を確認する文字を指定します。 フラグ*dwEffect*文字書式設定/クリアする属性を一覧表示します。  
   
- 詳細については、`dwMask`と`dwEffect`パラメーターとその潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows SDK に含まれています。  
+ 詳細については、 *dwMask*と*dwEffect*パラメーターとその潜在的な値の対応するデータ メンバーを参照してください。 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
@@ -909,10 +909,10 @@ void OnUpdateParaAlign(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCmdUI`  
+ *対応付けられました。*  
  ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクト。  
   
- `wAlign`  
+ *wAlign*  
  段落の配置を確認します。 次のいずれかの値です。  
   
 - `PFA_LEFT` 左の余白を使用して段落を整列します。  
@@ -925,7 +925,7 @@ void OnUpdateParaAlign(
  [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]  
   
 ##  <a name="printinsiderect"></a>  CRichEditView::PrintInsideRect  
- 範囲内に収まるリッチ エディット コントロール内のテキストの書式設定するには、この関数を呼び出す*rectLayout*で指定されたデバイスの`pDC`します。  
+ 範囲内に収まるリッチ エディット コントロール内のテキストの書式設定するには、この関数を呼び出す*rectLayout*で指定されたデバイスの*pDC*です。  
   
 ```  
 long PrintInsideRect(
@@ -937,16 +937,16 @@ long PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  出力領域のデバイス コンテキストへのポインター。  
   
  *rectLayout*  
  [RECT](../../mfc/reference/rect-structure1.md)または[CRect](../../atl-mfc-shared/reference/crect-class.md)出力領域を定義します。  
   
- `nIndexStart`  
+ *nIndexStart*  
  書式設定する最初の文字の 0 から始まるインデックス。  
   
- `nIndexStop`  
+ *nIndexStop*  
  書式設定する最後の文字の 0 から始まるインデックス。  
   
  *bOutput*  
@@ -955,14 +955,14 @@ long PrintInsideRect(
 ### <a name="return-value"></a>戻り値  
  最後の文字を出力領域に 1 を加えた内に収まる範囲のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出しにこの呼び出しが続いて一般的に、 [CRichEditCtrl::DisplayBand](../../mfc/reference/cricheditctrl-class.md#displayband)出力が生成されます。  
   
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::GetPaperSize](#getpapersize)です。  
   
 ##  <a name="printpage"></a>  CRichEditView::PrintPage  
- 指定された出力デバイスのリッチ エディット コントロールでテキストの範囲の書式を設定するには、この関数を呼び出す`pDC`です。  
+ 指定された出力デバイスのリッチ エディット コントロールでテキストの範囲の書式を設定するには、この関数を呼び出す*pDC*です。  
   
 ```  
 long PrintPage(
@@ -972,19 +972,19 @@ long PrintPage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  ページ出力のデバイス コンテキストへのポインター。  
   
- `nIndexStart`  
+ *nIndexStart*  
  書式設定する最初の文字の 0 から始まるインデックス。  
   
- `nIndexStop`  
+ *nIndexStop*  
  書式設定する最後の文字の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  ページ 1 を加えた値に適合する最後の文字のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  によって制御される各ページのレイアウト[GetPageRect](#getpagerect)と[GetPrintRect](#getprintrect)です。 呼び出しにこの呼び出しが続いて一般的に、 [CRichEditCtrl::DisplayBand](../../mfc/reference/cricheditctrl-class.md#displayband)出力が生成されます。  
   
  余白は、論理ページではなく、物理ページの基準としたことに注意してください。 したがって、多くのプリンターがあるページの一部に印刷できないために、0 の余白はテキストをクリップ多くの場合。 テキストを避けるためを呼び出す必要があります[SetMargins](#setmargins)し、印刷する前に適切な余白を設定します。  
@@ -1008,19 +1008,19 @@ virtual HRESULT QueryAcceptData(
  *lpcfFormat*  
  許容可能なデータ形式へのポインター。  
   
- `dwReco`  
+ *dwReco*  
  使用しません。  
   
  *bReally*  
  かどうか、貼り付け操作を続行するかないことを示します。  
   
- `hMetaFile`  
+ *終了しました。*  
  項目のアイコンを描画するために使われるメタファイルへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
  `HRESULT`値操作の成功を報告します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  COM アイテム、ドキュメントの派生クラス内の別の構成を処理するには、この関数をオーバーライドします。 これは、高度なオーバーライド可能です。  
   
  詳細については`HRESULT`と`IDataObject`を参照してください[COM エラー コードの構造体](http://msdn.microsoft.com/library/windows/desktop/ms690088)と[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)、それぞれ、Windows SDK にします。  
@@ -1036,11 +1036,11 @@ void SetCharFormat(CHARFORMAT2 cf);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cf`  
+ *cf*  
  [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883)書式属性新しい既定の文字を含む構造体。  
   
-### <a name="remarks"></a>コメント  
- 指定された属性だけ、 **dwMask**のメンバー`cf`は、この関数によって変更します。  
+### <a name="remarks"></a>Remarks  
+ 指定された属性だけ、 **dwMask**のメンバー *cf*は、この関数によって変更します。  
   
  詳細については、次を参照してください。 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230)メッセージと[CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Windows SDK 内の構造。  
   
@@ -1058,7 +1058,7 @@ void SetMargins(const CRect& rectMargin);
  *rectMargin*  
  印刷の場合、新しい余白の値の単位で`MM_TWIPS`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合[m_nWordWrap](#m_nwordwrap)は`WrapToTargetDevice`、呼び出す必要があります[WrapChanged](#wrapchanged)この関数を使用して印刷特性を調整した後です。  
   
  によって使用される余白注[PrintPage](#printpage)は論理ページではなく、物理ページを基準とします。 したがって、多くのプリンターがあるページの一部に印刷できないために、0 の余白はテキストをクリップ多くの場合。 テキストを回避するのには、使用してを呼び出す必要があります`SetMargins`印刷する前に適切なプリンターの余白を設定します。  
@@ -1077,7 +1077,7 @@ void SetPaperSize(CSize sizePaper);
  *sizePaper*  
  単位は、新しい用紙サイズの値、印刷の`MM_TWIPS`します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合[m_nWordWrap](#m_nwordwrap)は`WrapToTargetDevice`、呼び出す必要があります[WrapChanged](#wrapchanged)この関数を使用して印刷特性を調整した後です。  
   
 ### <a name="example"></a>例  
@@ -1091,14 +1091,14 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pf`  
+ *pf*  
  [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942)新しい既定の段落書式属性。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 指定された属性だけ、 **dwMask**のメンバー`pf`は、この関数によって変更します。  
+### <a name="remarks"></a>Remarks  
+ 指定された属性だけ、 **dwMask**のメンバー *pf*は、この関数によって変更します。  
   
  詳細については、次を参照してください。 [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276)メッセージと[PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Windows SDK 内の構造。  
   
@@ -1113,13 +1113,13 @@ void TextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
+ *されています。*  
  見つからなかったテキスト文字列が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは呼び出しの失敗した直後に呼び出すことをお勧め[FindText](#findtext)コントロールの内部検索状態を適切にリセットできるようにします。  
   
- `lpszFind`パラメーターに指定された文字列と同じコンテンツを含める必要があります[FindText](#findtext)です。 このメソッドを呼び出して、内部検索状態をリセットした後、[見つからなかったとき](#ontextnotfound)指定された検索文字列を持つメソッドです。  
+ *されて*パラメーターに指定された文字列と同じコンテンツを含める必要があります[FindText](#findtext)です。 このメソッドを呼び出して、内部検索状態をリセットした後、[見つからなかったとき](#ontextnotfound)指定された検索文字列を持つメソッドです。  
   
 ### <a name="example"></a>例  
   例を参照して[CRichEditView::FindText](#findtext)です。  
@@ -1131,7 +1131,7 @@ void TextNotFound(LPCTSTR lpszFind);
 virtual void WrapChanged();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  変更に応答する豊富なビューを編集する方法を変更するには、この関数のオーバーライド[m_nWordWrap](#m_nwordwrap)または印刷特性 ( [OnPrinterChanged](#onprinterchanged))。  
   
 ### <a name="example"></a>例  

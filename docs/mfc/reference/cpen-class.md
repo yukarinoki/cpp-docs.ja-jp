@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17337239a3a58a0283fc96eadcd4417c3d5c69b0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376380"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079591"
 ---
 # <a name="cpen-class"></a>CPen クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のペンをカプセル化したものです。  
@@ -68,7 +68,7 @@ class CPen : public CGdiObject
 |----------|-----------------|  
 |[CPen::operator HPEN](#operator_hpen)|接続されている Windows ハンドルを返します、`CPen`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用する方法についての`CPen`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -78,7 +78,7 @@ class CPen : public CGdiObject
   
  `CPen`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cpen"></a>  CPen::CPen  
@@ -103,7 +103,7 @@ CPen(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nPenStyle`  
+ *nPenStyle*  
  ペンのスタイルを指定します。 コンス トラクターの最初のバージョンで、このパラメーターには、次の値のいずれかを指定できます。  
   
 - **きは**ソリッド ペンを作成します。  
@@ -118,7 +118,7 @@ CPen(
   
 - **必ず**null ペンを作成します。  
   
-- **ペン**外接する四角形を指定する Windows GDI 出力関数によって生成される閉じた図形のフレーム内の行を描画するペンを作成 (たとえば、**楕円**、**四角形**、 `RoundRect`、 `Pie`、および`Chord`メンバー関数)。 外接する四角形が指定されていない Windows GDI 関数と共にこのスタイルを使用した場合 (たとえば、`LineTo`メンバー関数)、ペンの描画領域は、フレームによって制限を受けません。  
+- **ペン**外接する四角形を指定する Windows GDI 出力関数によって生成される閉じた図形のフレーム内の行を描画するペンを作成 (たとえば、 `Ellipse`、 `Rectangle`、 `RoundRect`、 `Pie`、`Chord`メンバー関数)。 外接する四角形が指定されていない Windows GDI 関数と共にこのスタイルを使用した場合 (たとえば、`LineTo`メンバー関数)、ペンの描画領域は、フレームによって制限を受けません。  
   
  2 番目のバージョン、`CPen`コンス トラクターは、種類、スタイル、端点キャップ、および結合の属性の組み合わせを指定します。 ビットごとの OR 演算子を使用して、各カテゴリの値を組み合わせる必要があります (&#124;)。 ペンの種類には、次の値のいずれかを指定できます。  
   
@@ -126,7 +126,7 @@ CPen(
   
 - **PS_COSMETIC**表面的なペンを作成します。  
   
-     2 番目のバージョン、`CPen`コンス トラクターを次のペンのスタイルを追加する`nPenStyle`:  
+     2 番目のバージョン、`CPen`コンス トラクターを次のペンのスタイルを追加する*nPenStyle*:  
   
 - **PS_ALTERNATE**他のすべてのピクセルを設定するペンを作成します。 (このスタイルは、表面的なペンにのみ適用)。  
   
@@ -148,26 +148,26 @@ CPen(
   
 - **PS_JOIN_ROUND**結合は round です。  
   
- `nWidth`  
+ *nWidth*  
  ペンの幅を指定します。  
   
 -   コンス トラクターの最初のバージョンの場合、この値は 0、デバイス単位の幅は常にマッピング モードに関係なく、1 ピクセルです。  
   
--   コンス トラクターの 2 番目のバージョンの場合は`nPenStyle`は**PS_GEOMETRIC**幅は、論理単位で指定します。 場合`nPenStyle`は**PS_COSMETIC**幅が 1 に設定する必要があります。  
+-   コンス トラクターの 2 番目のバージョンの場合は*nPenStyle*は**PS_GEOMETRIC**幅は、論理単位で指定します。 場合*nPenStyle*は**PS_COSMETIC**幅が 1 に設定する必要があります。  
   
- `crColor`  
+ *crColor*  
  ペンの RGB 色が含まれています。  
   
- `pLogBrush`  
- 指す、`LOGBRUSH`構造体。 場合`nPenStyle`は**PS_COSMETIC**、`lbColor`のメンバー、`LOGBRUSH`構造体は、ペンの色を指定し、`lbStyle`のメンバー、`LOGBRUSH`に構造を設定する必要があります**うち純色**です。 場合`nPenStyle`は**PS_GEOMETRIC**、すべてのメンバーは、ペンのブラシ属性を指定するために使用する必要があります。  
+ *終了*  
+ 指す、`LOGBRUSH`構造体。 場合*nPenStyle*は**PS_COSMETIC**、 *lbColor*のメンバー、`LOGBRUSH`構造体は、ペンの色を指定し、 *lbStyle*のメンバー、`LOGBRUSH`に構造を設定する必要があります**BS_SOLID**です。 場合*nPenStyle*は**PS_GEOMETRIC**、すべてのメンバーは、ペンのブラシ属性を指定するために使用する必要があります。  
   
- `nStyleCount`  
- 長さをダブルワード単位を指定、`lpStyle`配列。 この値が場合は 0 にする必要があります`nPenStyle`は**PS_USERSTYLE**です。  
+ *nStyleCount*  
+ 長さをダブルワード単位を指定、 *lpStyle*配列。 この値が場合は 0 にする必要があります*nPenStyle*は**PS_USERSTYLE**です。  
   
- `lpStyle`  
- ダブルワードの値の配列を指します。 最初の値では、最初のダッシュの長さを指定したユーザー定義のスタイル、2 番目の値は、最初のスペースの長さを指定します。 このポインターがある必要があります**NULL**場合`nPenStyle`は**PS_USERSTYLE**です。  
+ *lpStyle*  
+ ダブルワードの値の配列を指します。 最初の値では、最初のダッシュの長さを指定したユーザー定義のスタイル、2 番目の値は、最初のスペースの長さを指定します。 このポインターがある必要があります**NULL**場合*nPenStyle*は**PS_USERSTYLE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  引数なしのコンス トラクターを使用する場合、その結果を初期化する必要があります`CPen`オブジェクトを`CreatePen`、 `CreatePenIndirect`、または`CreateStockObject`メンバー関数。  
   
  引数を受け取るコンス トラクターを使用する場合は、さらに初期化もする必要はありません。 引数を持つコンス トラクターは、引数なしのコンス トラクターは常に成功しますが、エラーが発生した場合、例外をスローできます。  
@@ -194,32 +194,32 @@ BOOL CreatePen(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nPenStyle`  
- ペンのスタイルを指定します。 使用可能な値の一覧は、次を参照してください。、`nPenStyle`内のパラメーター、 [CPen](#cpen)コンス トラクターです。  
+ *nPenStyle*  
+ ペンのスタイルを指定します。 使用可能な値の一覧は、次を参照してください。、 *nPenStyle*内のパラメーター、 [CPen](#cpen)コンス トラクターです。  
   
- `nWidth`  
+ *nWidth*  
  ペンの幅を指定します。  
   
 -   最初のバージョンの`CreatePen`、デバイス単位の幅がマッピング モードに関係なく、1 ピクセルでは常にこの値が 0 の場合。  
   
--   2 番目のバージョンの`CreatePen`場合は、`nPenStyle`は**PS_GEOMETRIC**幅は、論理単位で指定します。 場合`nPenStyle`は**PS_COSMETIC**幅が 1 に設定する必要があります。  
+-   2 番目のバージョンの`CreatePen`場合は、 *nPenStyle*は**PS_GEOMETRIC**幅は、論理単位で指定します。 場合*nPenStyle*は**PS_COSMETIC**幅が 1 に設定する必要があります。  
   
- `crColor`  
+ *crColor*  
  ペンの RGB 色が含まれています。  
   
- `pLogBrush`  
- 指す、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)構造体。 場合`nPenStyle`は**PS_COSMETIC**、 **lbColor**のメンバー、`LOGBRUSH`構造体は、ペンの色を指定し、`lbStyle`のメンバー、`LOGBRUSH`構造体である必要があります設定**BS_SOLID**です。 場合**nPenStyle**は**PS_GEOMETRIC**、すべてのメンバーは、ペンのブラシ属性を指定するために使用する必要があります。  
+ *終了*  
+ 指す、 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)構造体。 場合*nPenStyle*は**PS_COSMETIC**、 **lbColor**のメンバー、`LOGBRUSH`構造体は、ペンの色を指定し、 *lbStyle*のメンバー、`LOGBRUSH`に構造を設定する必要があります**BS_SOLID**です。 場合**nPenStyle**は**PS_GEOMETRIC**、すべてのメンバーは、ペンのブラシ属性を指定するために使用する必要があります。  
   
- `nStyleCount`  
- 長さをダブルワード単位を指定、`lpStyle`配列。 この値が場合は 0 にする必要があります`nPenStyle`は**PS_USERSTYLE**です。  
+ *nStyleCount*  
+ 長さをダブルワード単位を指定、 *lpStyle*配列。 この値が場合は 0 にする必要があります*nPenStyle*は**PS_USERSTYLE**です。  
   
- `lpStyle`  
- ダブルワードの値の配列を指します。 最初の値では、最初のダッシュの長さを指定したユーザー定義のスタイル、2 番目の値は、最初のスペースの長さを指定します。 このポインターがある必要があります**NULL**場合`nPenStyle`は**PS_USERSTYLE**です。  
+ *lpStyle*  
+ ダブルワードの値の配列を指します。 最初の値では、最初のダッシュの長さを指定したユーザー定義のスタイル、2 番目の値は、最初のスペースの長さを指定します。 このポインターがある必要があります**NULL**場合*nPenStyle*は**PS_USERSTYLE**です。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外のメソッドが失敗した場合は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初のバージョンの`CreatePen`指定したスタイル、幅、および色のペンを初期化します。 任意のデバイス コンテキストの現在のペンとペンを後で選択できます。  
   
  ペンの幅を超える 1 ピクセルは常にいずれか、**必ず**、**きは**、または**ペン**スタイル。  
@@ -228,11 +228,11 @@ BOOL CreatePen(
   
  2 番目のバージョンの`CreatePen`論理表面的なまたは幾何学的ペン、指定されたスタイル、幅、およびブラシ属性を初期化します。 表面的なペンの幅は、常に 1 になります。幾何学模様のペンの幅は常に、ワールド単位で指定します。 アプリケーションには、論理ペンが作成されたら、それを選択できますそのペン デバイス コンテキストに呼び出すことによって、 [cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject)関数。 デバイス コンテキストにペンを選択すると後、は、直線と曲線の描画に使用できます。  
   
--   場合`nPenStyle`は**PS_COSMETIC**と**PS_USERSTYLE**、内のエントリ、`lpStyle`配列は、スタイルの単位でダッシュと空白の長さを指定します。 スタイル、単位は、直線を描画するペンを使用しているデバイスによって定義されます。  
+-   場合*nPenStyle*は**PS_COSMETIC**と**PS_USERSTYLE**、内のエントリ、 *lpStyle*配列ダッシュと空白での長さを指定します。スタイルの単位です。 スタイル、単位は、直線を描画するペンを使用しているデバイスによって定義されます。  
   
--   場合`nPenStyle`は**PS_GEOMETRIC**と**PS_USERSTYLE**、内のエントリ、`lpStyle`配列が論理ユニットにダッシュと空白の長さを指定します。  
+-   場合*nPenStyle*は**PS_GEOMETRIC**と**PS_USERSTYLE**、内のエントリ、 *lpStyle*配列ダッシュと空白での長さを指定します。論理ユニット。  
   
--   場合`nPenStyle`は**PS_ALTERNATE**スタイル、単位は無視され、他のすべてのピクセルを設定します。  
+-   場合*nPenStyle*は**PS_ALTERNATE**スタイル、単位は無視され、他のすべてのピクセルを設定します。  
   
  呼び出して、アプリケーションには、特定のペン不要になったが必要な場合、 [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)メンバー関数または破壊、`CPen`オブジェクトのリソースが使用できないようにします。 デバイス コンテキストでペンを選択すると、アプリケーションは、ペンを削除しないでください。  
   
@@ -240,20 +240,20 @@ BOOL CreatePen(
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
 ##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
- ペンをスタイル、幅、およびが指す構造体で指定された色を初期化します`lpLogPen`です。  
+ ペンをスタイル、幅、およびが指す構造体で指定された色を初期化します*lpLogPen*です。  
   
 ```  
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpLogPen`  
+ *lpLogPen*  
  Windows が指す[LOGPEN](../../mfc/reference/logpen-structure.md)ペンについての情報を格納する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ペンの幅を超える 1 ピクセルは常にいずれか、**必ず**、**きは**、または**ペン**スタイル。  
   
  ペンがある場合、**ペン**スタイルと色が論理カラー テーブルで使用する色に一致しない、ペンをディザリングされた色で描画します。 **ペン**スタイルは**きは**ペンの幅が 1 未満の場合。  
@@ -275,7 +275,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="return-value"></a>戻り値  
  ポインター、`CPen`それ以外の成功した場合は、オブジェクト**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `CPen` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CPen` オブジェクトが生成され、関連付けられます。 この一時`CPen`オブジェクトが有効では、次回アプリケーションがある移動するまでのアイドル時間イベント ループで、すべて一時的なグラフィックを時間でオブジェクトが削除専用です。 つまり、一時オブジェクトは 1 つのウィンドウ メッセージを処理中に有効なのみなりました。  
   
 ### <a name="example"></a>例  
@@ -289,13 +289,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLogPen`  
+ *pLogPen*  
  指す、[保持](http://msdn.microsoft.com/library/windows/desktop/dd162711)ペンについての情報を格納する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  **保持**構造体は、スタイル、幅、およびペンのブラシの属性を定義します。 たとえば、呼び出す`GetExtLogPen`ペンの特定のスタイルを一致するようにします。  
   
  ペンの属性については、Windows SDK では、次のトピックを参照してください。  
@@ -321,13 +321,13 @@ int GetLogPen(LOGPEN* pLogPen);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLogPen`  
+ *pLogPen*  
  指す、 [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)ペンについての情報を格納する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `LOGPEN`構造体は、スタイル、色、およびペンのパターンを定義します。  
   
  たとえば、呼び出す`GetLogPen`ペンの特定のスタイルを一致するようにします。  
@@ -353,7 +353,7 @@ operator HPEN() const;
 ### <a name="return-value"></a>戻り値  
  かどうかは成功すると、Windows GDI オブジェクトへのハンドルによって表される、`CPen`オブジェクト。 それ以外の場合**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子はキャスト演算子の`HPEN`オブジェクト。  
   
  グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b569efb201f95ade8987aaa89bb6cea1bc0c15c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1d61049c4c5af0285d728685776b2f285f69ba4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376770"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079604"
 ---
 # <a name="crgn-class"></a>CRgn クラス
 Windows のグラフィック デバイス インターフェイス (GDI) の領域をカプセル化したものです。  
@@ -110,7 +110,7 @@ class CRgn : public CGdiObject
 |----------|-----------------|  
 |[CRgn::operator HRGN](#operator_hrgn)|含まれる Windows ハンドルを返します、`CRgn`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  領域は、ウィンドウ内で楕円形または多角形領域です。 クラスのメンバー関数を使用する領域を使用する`CRgn`クラスのメンバーとして定義されているクリッピング関数と`CDC`です。  
   
  メンバー関数は、`CRgn`作成、変更、およびが呼び出された対象の領域オブジェクトに関する情報を取得します。  
@@ -124,7 +124,7 @@ class CRgn : public CGdiObject
   
  `CRgn`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="combinergn"></a>  CRgn::CombineRgn  
@@ -138,20 +138,20 @@ int CombineRgn(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRgn1`  
+ *pRgn1*  
  既存の領域を識別します。  
   
- `pRgn2`  
+ *pRgn2*  
  既存の領域を識別します。  
   
- `nCombineMode`  
+ *nCombineMode*  
  2 つの領域を結合するときに実行する操作を指定します。 次の値のいずれかを指定できます。  
   
 - **RGN_AND** (共通集合) の両方の地域の重なり合う領域を使用します。  
   
-- **RGN_COPY**地域 1 のコピーを作成 (で識別される`pRgn1`)。  
+- **RGN_COPY**地域 1 のコピーを作成 (で識別される*pRgn1*)。  
   
-- **RGN_DIFF**領域 1 の部分から成る領域を作成する (で識別される`pRgn1`) 領域 2 の一部ではないこと (で識別される`pRgn2`)。  
+- **RGN_DIFF**領域 1 の部分から成る領域を作成する (で識別される*pRgn1*) 領域 2 の一部ではないこと (で識別される*pRgn2*)。  
   
 - **RGN_OR**全体 (union) の両方の領域を結合します。  
   
@@ -168,8 +168,8 @@ int CombineRgn(
   
 - **SIMPLEREGION**新しい領域には、重複する境界がありません。  
   
-### <a name="remarks"></a>コメント  
- 領域を結合の指定に従って`nCombineMode`です。  
+### <a name="remarks"></a>Remarks  
+ 領域を結合の指定に従って*nCombineMode*です。  
   
  2 つの指定された領域は結合に結果として得られる領域ハンドルが格納されている、`CRgn`オブジェクト。 どのような領域が格納されるため、`CRgn`オブジェクトは、結合された領域に置換します。  
   
@@ -181,14 +181,14 @@ int CombineRgn(
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
 ##  <a name="copyrgn"></a>  CRgn::CopyRgn  
- によって定義される領域をコピー`pRgnSrc`に、`CRgn`オブジェクト。  
+ によって定義される領域をコピー *pRgnSrc*に、`CRgn`オブジェクト。  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRgnSrc`  
+ *pRgnSrc*  
  既存の領域を識別します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -202,7 +202,7 @@ int CopyRgn(CRgn* pRgnSrc);
   
 - **SIMPLEREGION**新しい領域には、重複する境界がありません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  新しい領域が以前に格納されている領域を置き換えます、`CRgn`オブジェクト。 この関数は、の特殊なケース、 [CombineRgn](#combinergn)メンバー関数。  
   
 ### <a name="example"></a>例  
@@ -220,23 +220,23 @@ BOOL CreateEllipticRgn(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `x1`  
+ *x1*  
  論理で楕円の外接する四角形の左上隅の x 座標を指定します。  
   
- `y1`  
+ *y1*  
  論理で楕円の外接する四角形の左上隅の y 座標を指定します。  
   
- `x2`  
+ *x2*  
  論理で楕円の外接する四角形の右下隅の x 座標を指定します。  
   
- `y2`  
+ *y2*  
  論理で楕円の外接する四角形の右下隅の y 座標を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 領域がで指定された外接する四角形によって定義された`x1`、 `y1`、 `x2`、および`y2`です。 地域が格納されている、`CRgn`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 領域がで指定された外接する四角形によって定義された*x1*、 *y1*、 *x2*、および*y2*です。 地域が格納されている、`CRgn`オブジェクト。  
   
  領域のサイズは、32,767 で 32,767 の論理ユニットまたは 64 K のメモリに制限されます、小さい方です。  
   
@@ -253,14 +253,14 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpRect`  
+ *lpRect*  
  指す、`RECT`構造体、または`CRect`楕円の外接する四角形の左上隅および右下コーナーの論理座標を格納しているオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 地域が構造体またはによって指されるオブジェクトによって定義された`lpRect`に格納されて、`CRgn`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 地域が構造体またはによって指されるオブジェクトによって定義された*lpRect*に格納されて、`CRgn`オブジェクト。  
   
  領域のサイズは、32,767 で 32,767 の論理ユニットまたは 64 K のメモリに制限されます、小さい方です。  
   
@@ -283,16 +283,16 @@ BOOL CreateFromData(
  *lpXForm*  
  指す、 [XFORM](../../mfc/reference/xform-structure.md)領域上で実行される変換を定義するデータ構造体。 このポインターがある場合**NULL**、identity 変換を使用します。  
   
- `nCount`  
- によって示されるバイト数を指定`pRgnData`です。  
+ *nCount*  
+ によって示されるバイト数を指定*pRgnData*です。  
   
- `pRgnData`  
+ *pRgnData*  
  指す、 [RGNDATA](../../mfc/reference/rgndata-structure.md)地域のデータを格納するデータ構造です。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アプリケーションが呼び出すことによって、地域のデータを取得できます、`CRgn::GetRegionData`関数。  
   
 ##  <a name="createfrompath"></a>  CRgn::CreateFromPath  
@@ -303,14 +303,14 @@ BOOL CreateFromPath(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  閉じられたパスを格納しているデバイス コンテキストを識別します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- デバイス コンテキストで識別される、`pDC`パラメーターが閉じられたパスを含める必要があります。 後に`CreateFromPath`領域、Windows をパスに変換は、デバイス コンテキストから閉じたパスを破棄します。  
+### <a name="remarks"></a>Remarks  
+ デバイス コンテキストで識別される、 *pDC*パラメーターが閉じられたパスを含める必要があります。 後に`CreateFromPath`領域、Windows をパスに変換は、デバイス コンテキストから閉じたパスを破棄します。  
   
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
  多角形の領域を作成します。  
@@ -323,7 +323,7 @@ BOOL CreatePolygonRgn(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpPoints`  
+ *lpPoints*  
  配列を指す**ポイント**構造体や配列の`CPoint`オブジェクト。 X 座標と y 座標の多角形の 1 つの頂点の各構造体を指定します。 **ポイント**構造体には、次の形式。  
   
  `typedef struct tagPOINT {`  
@@ -334,16 +334,16 @@ BOOL CreatePolygonRgn(
   
  `} POINT;`  
   
- `nCount`  
- 数を指定**ポイント**構造体または`CPoint`配列内のオブジェクトを指す`lpPoints`です。  
+ *nCount*  
+ 数を指定**ポイント**構造体または`CPoint`配列内のオブジェクトを指す*lpPoints*です。  
   
- `nMode`  
+ *nMode*  
  領域の塗りつぶしモードを指定します。 このパラメーターには、いずれかを指定できます**代替**または**ワインディング**です。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  システム多角形が自動的に終了、必要に応じて、最初最後の頂点から線が描画します。 作成された領域が格納されている、`CRgn`オブジェクト。  
   
  領域のサイズは、32,767 で 32,767 の論理ユニットまたは 64 K のメモリに制限されます、小さい方です。  
@@ -369,7 +369,7 @@ BOOL CreatePolyPolygonRgn(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpPoints`  
+ *lpPoints*  
  配列を指す**ポイント**構造体や配列の`CPoint`多角形の頂点を定義するオブジェクト。 システムは閉じませんに自動的にあるために、各多角形を明示的に閉じる必要があります。 多角形が連続的に指定します。 **ポイント**構造体には、次の形式。  
   
  `typedef struct tagPOINT {`  
@@ -380,19 +380,19 @@ BOOL CreatePolyPolygonRgn(
   
  `} POINT;`  
   
- `lpPolyCounts`  
- 整数の配列を指します。 最初の整数は、最初の多角形の頂点の数を指定、 `lpPoints` 2 番目の整数の配列が 2 番目の多角形で頂点の数を指定します。  
+ *lpPolyCounts*  
+ 整数の配列を指します。 最初の整数は、最初の多角形の頂点の数を指定、 *lpPoints* 2 番目の整数の配列が 2 番目の多角形で頂点の数を指定します。  
   
- `nCount`  
- で整数の合計数を指定、`lpPolyCounts`配列。  
+ *nCount*  
+ で整数の合計数を指定、 *lpPolyCounts*配列。  
   
- `nPolyFillMode`  
+ *nPolyFillMode*  
  多角形の塗りつぶしモードを指定します。 この値は、いずれかの**代替**または**ワインディング**です。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成された領域が格納されている、`CRgn`オブジェクト。  
   
  多角形、不整合のあるか、重なる可能性があります。  
@@ -417,22 +417,22 @@ BOOL CreateRectRgn(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `x1`  
+ *x1*  
  論理で領域の左上隅の x 座標を指定します。  
   
- `y1`  
+ *y1*  
  論理で領域の左上隅の y 座標を指定します。  
   
- `x2`  
+ *x2*  
  論理で領域の右下隅の x 座標を指定します。  
   
- `y2`  
+ *y2*  
  論理で領域の右下隅の y 座標を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  領域のサイズは、32,767 で 32,767 の論理ユニットまたは 64 K のメモリに制限されます、小さい方です。  
   
  によって作成された領域の使用の終了時`CreateRectRgn`、アプリケーションを使用する必要があります、 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)領域を削除するメンバー関数。  
@@ -450,7 +450,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpRect`  
+ *lpRect*  
  指す、`RECT`構造または`CRect`領域の左上隅および右下コーナーの論理座標を格納しているオブジェクト。 `RECT`構造体には、次の形式。  
   
  `typedef struct tagRECT {`  
@@ -468,7 +468,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  領域のサイズは、32,767 で 32,767 の論理ユニットまたは 64 K のメモリに制限されます、小さい方です。  
   
  によって作成された領域の使用の終了時`CreateRectRgnIndirect`、アプリケーションを使用する必要があります、 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)領域を削除するメンバー関数。  
@@ -490,28 +490,28 @@ BOOL CreateRoundRectRgn(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `x1`  
+ *x1*  
  論理で領域の左上隅の x 座標を指定します。  
   
- `y1`  
+ *y1*  
  論理で領域の左上隅の y 座標を指定します。  
   
- `x2`  
+ *x2*  
  論理で領域の右下隅の x 座標を指定します。  
   
- `y2`  
+ *y2*  
  論理で領域の右下隅の y 座標を指定します。  
   
  *x3*  
  丸い角を作成するために使用する省略記号の幅を指定します。  
   
- `y3`  
+ *y3*  
  丸い角を作成するために使用する省略記号の高さを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  操作が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  領域のサイズは、32,767 で 32,767 の論理ユニットまたは 64 K のメモリに制限されます、小さい方です。  
   
  アプリケーションが終了した場合に作成された領域を使用して、`CreateRoundRectRgn`関数を使用して、デバイス コンテキストのアウト リージョンを選択にする必要があります、 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)メンバー関数を削除します。  
@@ -526,7 +526,7 @@ BOOL CreateRoundRectRgn(
 CRgn();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `m_hObject`データ メンバーを含まない有効な Windows GDI 領域とその他の 1 つ以上のオブジェクトが初期化されるまで`CRgn`メンバー関数。  
   
 ### <a name="example"></a>例  
@@ -540,7 +540,7 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRgn`  
+ *pRgn*  
  領域を識別します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -557,13 +557,13 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hRgn`  
+ *hRgn*  
  Windows の領域へのハンドルを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、`CRgn`オブジェクト。 関数が成功しなかった場合、戻り値は**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  場合、`CRgn`オブジェクトが、一時的なハンドルに既にアタッチされていない`CRgn`オブジェクトが作成され、接続されています。 この一時`CRgn`オブジェクトが有効では、次回アプリケーションがある移動するまでのアイドル時間イベント ループで、すべて一時的なグラフィックを時間でオブジェクトが削除専用です。 言い換えると、別の方法は、1 つのウィンドウ メッセージを処理中に、一時オブジェクトが有効でのみことです。  
   
 ##  <a name="getregiondata"></a>  CRgn::GetRegionData  
@@ -576,16 +576,16 @@ int GetRegionData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpRgnData`  
+ *lpRgnData*  
  指す、 [RGNDATA](../../mfc/reference/rgndata-structure.md)情報を受信するデータ構造です。 このパラメーターが場合**NULL**、戻り値には地域のデータに必要なバイト数が含まれています。  
   
- `nCount`  
- サイズ (バイト単位) を指定、`lpRgnData`バッファー。  
+ *nCount*  
+ サイズ (バイト単位) を指定、 *lpRgnData*バッファー。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合と`nCount`十分な数を指定します (バイト単位) の戻り値は常に`nCount`です。 関数が失敗した場合、または場合`nCount`未満を示すバイトの十分な数よりも、戻り値は 0 (エラー)。  
+ 関数が成功した場合と*nCount*十分な数を指定します (バイト単位) の戻り値は常に*nCount*です。 関数が失敗した場合、または場合*nCount*未満を示すバイトの十分な数よりも、戻り値は 0 (エラー)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このデータには、領域を構成する四角形のディメンションが含まれています。 この関数を組み合わせて使用、`CRgn::CreateFromData`関数。  
   
 ##  <a name="getrgnbox"></a>  CRgn::GetRgnBox  
@@ -596,7 +596,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpRect`  
+ *lpRect*  
  指す、`RECT`構造または`CRect`外接する四角形の座標を受け取るオブジェクト。 `RECT`構造体には、次の形式。  
   
  `typedef struct tagRECT {`  
@@ -643,8 +643,8 @@ int OffsetRgn(POINT point);
  *y*  
  上下に移動する単位の数を指定します。  
   
- `point`  
- X 座標`point`左に移動する単位の数を指定します。 Y 座標`point`を上下に移動する単位の数を指定します。 `point`パラメーターには、いずれかを指定できます、**ポイント**構造体、または`CPoint`オブジェクト。  
+ *ポイント*  
+ X 座標*ポイント*左に移動する単位の数を指定します。 Y 座標*ポイント*を上下に移動する単位の数を指定します。 *ポイント*パラメーターには、いずれかを指定できます、**ポイント**構造体、または`CPoint`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  新しい領域の種類。 次の値のいずれかを指定できます。  
@@ -657,7 +657,7 @@ int OffsetRgn(POINT point);
   
 - **SIMPLEREGION**領域に重複する境界がありません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  関数は、領域を移動*x* x 軸に単位と*y* y 軸に沿って単位です。  
   
  領域の座標の値は、32,767 および以上-32,768 を以下にする必要があります。 *X*と*y*パラメーターが無効な領域の座標値を防ぐために慎重に選択する必要があります。  
@@ -675,7 +675,7 @@ operator HRGN() const;
 ### <a name="return-value"></a>戻り値  
  かどうかは成功すると、Windows GDI オブジェクトへのハンドルによって表される、`CRgn`オブジェクト。 それ以外の場合**NULL**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子はキャスト演算子の**HRGN**オブジェクト。  
   
  グラフィック オブジェクトの使用に関する詳細については、記事を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
@@ -698,21 +698,21 @@ BOOL PtInRegion(POINT point) const;
  *y*  
  論理でテストする点の y 座標を指定します。  
   
- `point`  
- X 座標と y 座標`point`の値をテストする点の x 座標と y 座標を指定します。 `point`パラメーターを指定できますか、**ポイント**構造体、または`CPoint`オブジェクト。  
+ *ポイント*  
+ X 座標と y 座標*ポイント*の値をテストする点の x 座標と y 座標を指定します。 *ポイント*パラメーターを指定できますか、**ポイント**構造体、または`CPoint`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  ポイントが、領域の場合は 0 以外。それ以外の場合 0 を返します。  
   
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion  
- 四角形の任意の部分が指定したかどうかを判定`lpRect`に格納されている領域の境界内にある、`CRgn`オブジェクト。  
+ 四角形の任意の部分が指定したかどうかを判定*lpRect*に格納されている領域の境界内にある、`CRgn`オブジェクト。  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpRect`  
+ *lpRect*  
  指す、`RECT`構造または`CRect`オブジェクト。 `RECT`構造体には、次の形式。  
   
  `typedef struct tagRECT {`  
@@ -744,23 +744,23 @@ void SetRectRgn(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `x1`  
+ *x1*  
  四角形領域の左上隅の x 座標を指定します。  
   
- `y1`  
+ *y1*  
  四角形領域の左上隅の y 座標を指定します。  
   
- `x2`  
+ *x2*  
  四角形領域の右下隅の x 座標を指定します。  
   
- `y2`  
+ *y2*  
  四角形領域の右下隅の y 座標を指定します。  
   
- `lpRect`  
+ *lpRect*  
  四角形の領域を指定します。 ポインターにすることができます、`RECT`構造体、または`CRect`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 異なり[CreateRectRgn](#createrectrgn)、ただし、これは割り当てません追加のメモリが、ローカルの Windows アプリケーション ヒープからです。 代わりに格納されている領域に割り当てられた領域を使用して、`CRgn`オブジェクト。 つまり、`CRgn`オブジェクト既に初期化されていなければなりませんを呼び出す前に有効な Windows 領域`SetRectRgn`です。 によって指定されたポイント`x1`、 `y1`、 `x2`、および`y2`割り当てられた領域の最小サイズを指定します。  
+### <a name="remarks"></a>Remarks  
+ 異なり[CreateRectRgn](#createrectrgn)、ただし、これは割り当てません追加のメモリが、ローカルの Windows アプリケーション ヒープからです。 代わりに格納されている領域に割り当てられた領域を使用して、`CRgn`オブジェクト。 つまり、`CRgn`オブジェクト既に初期化されていなければなりませんを呼び出す前に有効な Windows 領域`SetRectRgn`です。 によって指定されたポイント*x1*、 *y1*、 *x2*、および*y2*割り当てられた領域の最小サイズを指定します。  
   
  代わりにこの関数を使用して、`CreateRectRgn`ローカル メモリ マネージャーへの呼び出しを避けるためにメンバー関数。  
   

@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad0d928f7190d3908c41560c7fb106e3024ebc6e
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377172"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079649"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl クラス
 `CPagerCtrl` クラスは、Windows のページャー コントロールをラップします。ページャー コントロールには、外側のウィンドウに収まらない内側のウィンドウをスクロールによって表示する機能があります。  
@@ -107,7 +107,7 @@ class CPagerCtrl : public CWnd
 |[CPagerCtrl::SetChild](#setchild)|現在のページャー コントロールの内側のウィンドウを設定します。|  
 |[CPagerCtrl::SetScrollPos](#setscrollpos)|現在のページャー コントロールのスクロール位置を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ページャー コントロールは、コンテナー内のウィンドウでは、線形と外側のウィンドウよりも大きい別のウィンドウを含むウィンドウです。 ページャー コントロールは、端まで達する、コンテナー内のウィンドウをスクロールするときに自動的に消滅する 2 つのスクロール ボタンを表示し、それ以外の場合に再表示します。 水平方向または垂直方向にスクロールするページャー コントロールを作成できます。  
   
  たとえば、アプリケーションのツールバーがすべての項目を表示するのに十分な幅がない場合は、ページャー コントロールにツールバーを割り当てることができ、ユーザーが左または右のすべてのアイテムにアクセスするには、ツールバーをスクロールできます。 Microsoft Internet Explorer バージョン 4.0 (commctrl.dll バージョン 4.71) には、ページャー コントロールが導入されています。  
@@ -123,7 +123,7 @@ class CPagerCtrl : public CWnd
   
  `CPagerCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
@@ -133,7 +133,7 @@ class CPagerCtrl : public CWnd
 CPagerCtrl();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、 [CPagerCtrl::Create](#create)または[CPagerCtrl::CreateEx](#createex)ページャー コントロールを作成しをアタッチする方法、`CPagerCtrl`オブジェクト。  
   
 ##  <a name="create"></a>  CPagerCtrl::Create  
@@ -151,15 +151,15 @@ virtual BOOL Create(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `dwStyle`|ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)をコントロールに適用できます。|  
-|[入力] `rect`|参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で表したコントロールのサイズと位置を格納する構造体。|  
-|[入力] `pParentWnd`|ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターを指定できません`NULL`です。|  
-|[入力] `nID`|コントロールの ID。|  
+|[in]*dwStyle*|ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)をコントロールに適用できます。|  
+|[in]*rect*|参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で表したコントロールのサイズと位置を格納する構造体。|  
+|[in]*pParentWnd*|ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターを指定できません`NULL`です。|  
+|[in]*nID*|コントロールの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ページャー コントロールを作成するには、宣言、`CPagerCtrl`変数、まず、 [CPagerCtrl::Create](#create)または[CPagerCtrl::CreateEx](#createex)その変数にメソッドです。  
   
 ### <a name="example"></a>例  
@@ -183,16 +183,16 @@ virtual BOOL CreateEx(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `dwExStyle`|コントロールに適用する拡張スタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、`dwExStyle`のパラメーター、[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)関数。|  
-|[入力] `dwStyle`|ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)をコントロールに適用できます。|  
-|[入力] `rect`|参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で表したコントロールのサイズと位置を格納する構造体。|  
-|[入力] `pParentWnd`|ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターを指定できません`NULL`です。|  
-|[入力] `nID`|コントロールの ID。|  
+|[in]*dwExStyle*|コントロールに適用する拡張スタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、 *dwExStyle*のパラメーター、[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)関数。|  
+|[in]*dwStyle*|ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)をコントロールに適用できます。|  
+|[in]*rect*|参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で表したコントロールのサイズと位置を格納する構造体。|  
+|[in]*pParentWnd*|ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターを指定できません`NULL`です。|  
+|[in]*nID*|コントロールの ID。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` このメソッドが成功した場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ページャー コントロールを作成するには、宣言、`CPagerCtrl`変数、まず、 [CPagerCtrl::Create](#create)または[CPagerCtrl::CreateEx](#createex)その変数にメソッドです。  
   
 ##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
@@ -206,9 +206,9 @@ void ForwardMouse(BOOL bForward);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `bForward`|`true` マウスのメッセージを転送または`false`マウス メッセージを転送しません。|  
+|[in]*bForward*|`true` マウスのメッセージを転送または`false`マウス メッセージを転送しません。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
@@ -221,7 +221,7 @@ int GetBorder() const;
 ### <a name="return-value"></a>戻り値  
  現在の境界線のサイズはピクセル単位で測定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -239,7 +239,7 @@ COLORREF GetBkColor() const;
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)のページャー コントロールの現在の背景色を表す値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -257,7 +257,7 @@ int GetButtonSize() const;
 ### <a name="return-value"></a>戻り値  
  現在のボタンのサイズはピクセル単位で測定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) Windows SDK で説明するメッセージ。  
   
  ページャー コントロールがある場合、`PGS_HORZ`ボタンのサイズのスタイル、ページャー ボタンの幅を決定するページャー コントロールがある場合と、`PGS_VERT`スタイル、ボタンのサイズは、ページャー ボタンの高さを決定します。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。  
@@ -273,12 +273,12 @@ DWORD GetButtonState(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iButton`|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
+|[in]*名前*|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたボタンの状態、`iButton`パラメーター。 いずれかの状態が`PGF_INVISIBLE`、 `PGF_NORMAL`、 `PGF_GRAYED`、 `PGF_DEPRESSED`、または`PGF_HOT`です。 詳細については、戻り値の参照、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)メッセージ。  
+ 指定されたボタンの状態、*名前*パラメーター。 いずれかの状態が`PGF_INVISIBLE`、 `PGF_NORMAL`、 `PGF_GRAYED`、 `PGF_DEPRESSED`、または`PGF_HOT`です。 詳細については、戻り値の参照、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)メッセージ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
@@ -291,7 +291,7 @@ IDropTarget* GetDropTarget() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、`IDropTarget`現在のページャー コントロールのインターフェイスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `IDropTarget` 実装するインターフェイスの 1 つは、アプリケーションでドラッグ アンド ドロップ操作をサポートします。  
   
  このメソッドは、送信、 [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) Windows SDK で説明するメッセージ。 このメソッドの呼び出し元が通話を担当する、`Release`のメンバー、 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)インターフェイスのインターフェイスが不要になったとき。  
@@ -306,7 +306,7 @@ int GetScrollPos() const;
 ### <a name="return-value"></a>戻り値  
  現在のスクロール位置をピクセル単位で計測します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -325,12 +325,12 @@ BOOL IsButtonDepressed(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iButton`|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
+|[in]*名前*|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` 指定したボタンが押された状態である場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK で説明するメッセージ。 返される状態があるかどうかをテストし、`PGF_DEPRESSED`です。 詳細については、戻り値の参照、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)メッセージ。  
   
 ##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
@@ -344,12 +344,12 @@ BOOL IsButtonGrayed(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iButton`|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
+|[in]*名前*|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` 指定したボタンが淡色表示の状態の場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK で説明するメッセージ。 返される状態があるかどうかをテストし、`PGF_GRAYED`です。 詳細については、戻り値の参照、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)メッセージ。  
   
 ##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
@@ -363,12 +363,12 @@ BOOL IsButtonHot(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iButton`|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
+|[in]*名前*|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` 指定したボタンがホットな状態の場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK で説明するメッセージ。 返される状態があるかどうかをテストし、`PGF_HOT`です。 詳細については、戻り値の参照、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)メッセージ。  
   
 ##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
@@ -382,12 +382,12 @@ BOOL IsButtonInvisible(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iButton`|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
+|[in]*名前*|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` 指定したボタンが非表示の状態の場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Windows では、スクロール ボタン、特定の方向に非表示コンテナー内のウィンドウは、スクロールし、端まで達する、さらにボタンをクリックするとできないウィンドウの詳細を表示させます。  
   
  このメソッドは、送信、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK で説明するメッセージ。 返される状態があるかどうかをテストし、`PGF_INVISIBLE`です。 詳細については、戻り値の参照、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)メッセージ。  
@@ -408,12 +408,12 @@ BOOL IsButtonNormal(int iButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iButton`|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
+|[in]*名前*|状態を取得するボタンを示します。 ページャー コントロール スタイルがの場合`PGS_HORZ`、指定`PGB_TOPORLEFT`、左ボタンのおよび`PGB_BOTTOMORRIGHT`右ボタンのです。 ページャー コントロール スタイルがの場合`PGS_VERT`を指定`PGB_TOPORLEFT`の一番上のボタンと`PGB_BOTTOMORRIGHT`の下部にあるボタンです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。|  
   
 ### <a name="return-value"></a>戻り値  
  `true` 指定したボタンは、通常の状態がある場合それ以外の場合、`false`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK で説明するメッセージ。 返される状態があるかどうかをテストし、`PGF_NORMAL`です。 詳細については、戻り値の参照、 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)メッセージ。  
   
 ##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
@@ -423,7 +423,7 @@ BOOL IsButtonNormal(int iButton) const;
 void RecalcSize();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) Windows SDK で説明するメッセージ。 その結果、ページャー コントロールは、 [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864)コンテナー内のウィンドウのスクロール可能なディメンションを取得する通知。  
   
 ### <a name="example"></a>例  
@@ -447,12 +447,12 @@ COLORREF SetBkColor(COLORREF clrBk);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)のページャー コントロールの新しい背景色を表す値です。|  
+|[in]*clrBk*|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)のページャー コントロールの新しい背景色を表す値です。|  
   
 ### <a name="return-value"></a>戻り値  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)のページャー コントロールの直前の背景色を表す値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -471,12 +471,12 @@ int SetBorder(int iBorder);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iBorder`|新しい境界線のサイズはピクセル単位で測定されます。 場合、`iBorder`パラメーターが負の場合、境界線のサイズは 0 に設定します。|  
+|[in]*iBorder*|新しい境界線のサイズはピクセル単位で測定されます。 場合、 *iBorder*パラメーターが負の場合、境界線のサイズは 0 に設定します。|  
   
 ### <a name="return-value"></a>戻り値  
  以前の境界線のサイズはピクセル単位で測定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -495,12 +495,12 @@ int SetButtonSize(int iButtonSize);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iButtonSize`|新しいボタンのサイズはピクセル単位で測定されます。|  
+|[in]*iButtonSize*|新しいボタンのサイズはピクセル単位で測定されます。|  
   
 ### <a name="return-value"></a>戻り値  
  以前のボタンのサイズはピクセル単位で測定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) Windows SDK で説明するメッセージ。  
   
  ページャー コントロールがある場合、`PGS_HORZ`ボタンのサイズのスタイル、ページャー ボタンの幅を決定するページャー コントロールがある場合と、`PGS_VERT`スタイル、ボタンのサイズは、ページャー ボタンの高さを決定します。 既定のボタンのサイズが 4 分の 3 つ、スクロール バーの幅と、ボタンの最小サイズは 12 ピクセルです。 詳細については、次を参照してください。[ページャー コントロール スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760859)です。  
@@ -521,9 +521,9 @@ void SetChild(HWND hwndChild);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `hwndChild`|含まれているウィンドウをハンドルします。|  
+|[in]*hwndChild*|含まれているウィンドウをハンドルします。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) Windows SDK で説明するメッセージ。  
   
  このメソッドが含まれているウィンドウの親を変更していません。のみ、スクロールするためのページャー コントロールにウィンドウ ハンドルを割り当てます。 ほとんどの場合は、ページャー コントロールの子ウィンドウがコンテナー内のウィンドウになります。  
@@ -544,9 +544,9 @@ void SetScrollPos(int iPos);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iPos`|新しいスクロール位置をピクセル単位で計測します。|  
+|[in]*iPos*|新しいスクロール位置をピクセル単位で計測します。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) Windows SDK で説明するメッセージ。  
   
 ## <a name="see-also"></a>関連項目  

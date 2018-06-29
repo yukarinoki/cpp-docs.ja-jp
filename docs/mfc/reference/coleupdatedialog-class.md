@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0208a24b69c1884d72c0ae525ce95b3d3258271
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373052"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079975"
 ---
 # <a name="coleupdatedialog-class"></a>関数クラス
 OLE の [リンクの編集] ダイアログ ボックスを使って、ドキュメント内の既存のリンク オブジェクトや埋め込みオブジェクトの更新のみを行います。これは、OLE の [リンクの編集] ダイアログ ボックスの特別な使い方です。  
@@ -50,7 +50,7 @@ class COleUpdateDialog : public COleLinksDialog
 |----------|-----------------|  
 |[COleUpdateDialog::DoModal](#domodal)|表示、**リンクの編集**更新モード ダイアログ ボックス。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -70,7 +70,7 @@ class COleUpdateDialog : public COleLinksDialog
   
  `COleUpdateDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
@@ -85,7 +85,7 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDoc`  
+ *pDoc*  
  更新が必要なリンクを含むドキュメントへのポインター。  
   
  *bUpdateLinks*  
@@ -94,10 +94,10 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  埋め込みオブジェクトを更新するかどうかを決定するフラグ。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親またはオーナー ウィンドウ オブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ ボックスの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数はのみ、`COleUpdateDialog`オブジェクト。 ダイアログ ボックスを表示するには、呼び出す[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)です。 このクラスは、の代わりに使用する必要があります`COleLinksDialog`リンクまたは埋め込みアイテムの既存ののみを更新する場合。  
   
 ##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
@@ -116,7 +116,7 @@ virtual INT_PTR DoModal();
   
 - **IDABORT**場合はエラーが発生しました。 場合**IDABORT**は呼び出し、返される、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)の詳細については、発生したエラーの種類を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms679703)Windows SDK 内の関数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーは [キャンセル] ボタンを選択しない限り、すべてのリンクや埋め込みが更新されます。  
   
 ## <a name="see-also"></a>関連項目  

@@ -109,12 +109,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3691ad17aff90e866a21918c0853d2b1f4ce3a2
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 51570171fbd8de9919bcba5dabb47c26d8e1c748
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305827"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079904"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`map`1 つの要素を格納する各ノードのバランスの取れた (ほとんど) の順序付けられたツリーとして要素のシーケンスを管理します。 要素は、シーケンスとよいに沿って移動する、マップされた値は、管理するためのキーで構成されます。  
@@ -147,7 +147,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  キー  
  被制御シーケンス内の要素の主要な構成要素の型。  
   
@@ -1148,7 +1148,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入するキー値。  
   
  where  

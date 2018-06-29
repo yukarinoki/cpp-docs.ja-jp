@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4313b80a4fa83e5340f678834b64dd5269278a0d
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: f8d470928cb4cbc1625ad439efe75b97f2bb1bd7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305515"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079042"
 ---
 # <a name="numeric-stlclr"></a>数値 (STL/CLR)
 数値処理のために用意されているアルゴリズムを実行するコンテナーのテンプレート関数を定義します。  
@@ -57,7 +57,7 @@ ms.locfileid: "36305515"
 |[inner_product (STL/CLR)](#inner_product)|2 つの範囲の要素ごとの積の合計を計算し、それを指定された初期値に加算するか、または和や積の二項演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。|  
 |[partial_sum (STL/CLR)](#partial_sum)|一連の最初の要素から入力範囲内の合計を計算、`i`番目の要素でこのような各合計の結果を格納および`i`番目の要素をターゲット範囲の汎用化されたプロシージャの結果を計算または場所合計演算指定した別の二項演算に置き換えられます。|  
  
-## <a name="functions"></a>関数
+## <a name="members"></a>メンバー
 
 ## <a name="accumulate"></a> accumulate (STL/CLR)
 連続する部分和を計算することで、いくつかの初期値を含め、指定された範囲のすべての要素の合計を計算します。または、指定された二項演算を使用して取得した、合計以外の連続する部分的な結果を計算します。  

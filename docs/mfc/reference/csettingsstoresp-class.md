@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9b7cdc0d75ec207e3bd8141ac3a0f9c5ce1d3eb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376052"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078700"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP クラス
 `CSettingsStoreSP`クラスは、ヘルパー クラスのインスタンスの作成に使用できる、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)です。  
@@ -55,12 +55,12 @@ class CSettingsStoreSP
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |`m_dwUserData`|カスタム ユーザー データに格納されている、`CSettingsStoreSP`オブジェクト。 コンス トラクターでは、このデータを指定する、`CSettingsStoreSP`オブジェクト。|  
 |`m_pRegistry`|`CSettingsStore`-派生オブジェクトを`Create`メソッドを作成します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用することができます、`CSettingsStoreSP`すべての MFC レジストリ操作を XML ファイルやデータベースなど、他の場所にリダイレクトするクラス。 その場合は、次の手順を実行します。  
   
 1.  クラスの作成 (など`CMyStore`) から派生`CSettingsStore`です。  
@@ -75,7 +75,7 @@ class CSettingsStoreSP
   
  `CSettingsStoreSP::SetRuntimeClass` グローバルな静的変数を使用します。 したがって、1 つだけのカスタム ストアは、一度に使用します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxsettingsstore.h  
   
 ##  <a name="create"></a>  CSettingsStoreSP::Create  
@@ -88,21 +88,21 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bAdmin`  
+ [in]*bAdmin*  
  決定するブール型のパラメーターかどうか、`CSettingsStore`管理者モードでオブジェクトを作成します。  
   
- [入力] `bReadOnly`  
+ [in]*bReadOnly*  
  決定するブール型のパラメーターかどうか、`CSettingsStore`読み取り専用アクセスのオブジェクトを作成します。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成されたへの参照を`CSettingsStore`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メソッドを使用して[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)オブジェクトの種類を決定する`CSettingsStoreSP::Create`が作成されます。 既定では、このメソッドを作成、`CSettingsStore`オブジェクト。  
   
  作成する場合、`CSettingsStore`管理者モードでオブジェクトのすべてのレジストリへのアクセスの既定の場所は HKEY_LOCAL_MACHINE です。 それ以外の場合、既定の場所すべてのレジストリへのアクセスは、HKEY_CURRENT_USER です。  
   
- 場合`bAdmin`は`TRUE`アプリケーションに管理権限が必要です。 それ以外の場合、レジストリにアクセスしようとするときに失敗します。  
+ 場合*bAdmin*は`TRUE`アプリケーションに管理権限が必要です。 それ以外の場合、レジストリにアクセスしようとするときに失敗します。  
   
 ### <a name="example"></a>例  
  次の例で使用する方法、`Create`のメソッド、`CSettingsStoreSP`クラスです。  
@@ -117,11 +117,11 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `dwUserData`  
+ [in]*dwUserData*  
  ユーザー定義データを`CSettingsStoreSP`オブジェクトのストア。  
   
-### <a name="remarks"></a>コメント  
- `CSettingsStoreSP`オブジェクトからデータを格納する`dwUserData`プロテクト メンバー変数に`m_dwUserData`です。  
+### <a name="remarks"></a>Remarks  
+ `CSettingsStoreSP`オブジェクトからデータを格納する*dwUserData*プロテクト メンバー変数に`m_dwUserData`です。  
   
 ##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  ランタイム クラスを設定します。 メソッド[CSettingsStoreSP::Create](#create)ランタイム クラスを使用して作成するオブジェクトの種類を決定します。  
@@ -131,13 +131,13 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pRTI`  
+ [in]*pRTI*  
  派生したクラスのランタイム クラス情報へのポインター、 [CSettingsStore クラス](../../mfc/reference/csettingsstore-class.md)です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 成功した場合`FALSE`によってクラスが識別される場合`pRTI`から派生していない`CSettingsStore`です。  
+ `TRUE` 成功した場合`FALSE`によってクラスが識別される場合*pRTI*から派生していない`CSettingsStore`です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用することができます、 [CSettingsStoreSP クラス](../../mfc/reference/csettingsstoresp-class.md)からクラスを派生させる`CSettingsStore`です。 メソッドを使用して`SetRuntimeClass`から派生したカスタム クラスのオブジェクトを作成するかどうかは`CSettingsStore`します。  
   
 ## <a name="see-also"></a>関連項目  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376292"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079545"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 構造体
 各クラスから派生した`CObject`に関連付けられている、`CRuntimeClass`実行時に、オブジェクトまたはその基本クラスについての情報を取得するときに使用できる構造。  
@@ -56,7 +56,7 @@ struct CRuntimeClass
 |[CRuntimeClass::m_pfnGetBaseClass](#m_pfngetbaseclass)|返します、 `CRuntimeClass` (ときに動的に使用可能なリンクを参照) のみを構成します。|  
 |[CRuntimeClass::m_wSchema](#m_wschema)|クラスのスキーマの数。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CRuntimeClass` 構造体は、そのため、基底クラスはありません。  
   
  実行時にオブジェクトのクラスを判断することは、オブジェクトのクラスに基づく特殊なコードを記述する必要がありますまたは特別な型チェック関数の引数が必要な場合に便利です。 ランタイム クラス情報は、C++ 言語によって直接サポートされていません。  
@@ -68,7 +68,7 @@ struct CRuntimeClass
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CRuntimeClass`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
@@ -83,13 +83,13 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszClassName`  
+ *lpszClassName*  
  作成するクラスの既知の名前。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成されたオブジェクトへのポインターまたは**NULL**クラス名が見つからないか、メモリ不足のオブジェクトを作成する場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  派生したクラス`CObject`実行時に指定したクラスのオブジェクトを作成することが、動的な作成をサポートできます。 ドキュメント、ビュー、およびフレームのクラス、動的な作成をサポートするなどです。 動的な作成の詳細については、 `CreateObject` 、メンバーを参照してください[CObject クラス](../../mfc/using-cobject.md)と[CObject クラス: 機能のレベルを指定する](../../mfc/specifying-levels-of-functionality.md)です。  
   
 ### <a name="example"></a>例  
@@ -105,11 +105,11 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszClassName`  
+ *lpszClassName*  
  派生したクラスの使い慣れた名前`CObject`です。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CRuntimeClass`で渡されたとは、名前に対応するオブジェクト`lpszClassName`です。 この関数を返します**NULL**一致するクラス名が見つからなかった場合です。  
+ ポインター、`CRuntimeClass`で渡されたとは、名前に対応するオブジェクト*lpszClassName*です。 この関数を返します**NULL**一致するクラス名が見つからなかった場合です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
@@ -130,11 +130,11 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="return-value"></a>戻り値  
  **TRUE**場合クラス通話`IsDerivedFrom`ベースから派生したクラス`CRuntimeClass`構造体は、それ以外のパラメーターとして指定された**FALSE**です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リレーションシップは、「ウォーキング」チェーン派生クラスのメンバーのクラスから最上位までによって決定されます。 この関数のみを返します**FALSE**基底クラスの一致が検出されない場合。  
   
 > [!NOTE]
->  使用する、`CRuntimeClass`構造体を含める必要があります、 `IMPLEMENT_DYNAMIC`、 `IMPLEMENT_DYNCREATE`、または`IMPLEMENT_SERIAL`マクロでは、実行時のオブジェクトの情報を取得するクラスの実装です。  
+>  使用する、`CRuntimeClass`構造体、実行時のオブジェクトの情報を取得するクラスの実装で IMPLEMENT_DYNAMIC、IMPLEMENT_DYNCREATE、または IMPLEMENT_SERIAL マクロを含める必要があります。  
   
  使用する方法についての`CRuntimeClass`、記事を参照して[CObject クラス: クラス情報にアクセスする](../../mfc/accessing-run-time-class-information.md)です。  
   
@@ -144,7 +144,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  ASCII クラス名を含む null で終わる文字列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この名前を使用して、クラスのインスタンスを作成するために使用できます、`FromName`メンバー関数。  
   
 ### <a name="example"></a>例  
@@ -153,7 +153,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  (バイト単位)、オブジェクトのサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトは、割り当てられたメモリを指すデータ メンバーが、そのメモリのサイズは含まれません。  
   
 ### <a name="example"></a>例  
@@ -162,7 +162,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  このデータ メンバーがへのポインターを含む、アプリケーションは、MFC と静的にリンクすることが場合、`CRuntimeClass`基底クラスの構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アプリケーションは、MFC ライブラリに動的にリンクすることが場合、は、次を参照してください。 [m_pfnGetBaseClass](#m_pfngetbaseclass)です。  
   
 ### <a name="example"></a>例  
@@ -171,13 +171,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  クラスのオブジェクトを作成する既定のコンス トラクターへの関数ポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このポインターが有効なは、クラスは、動的な作成をサポートしている場合のみ関数を返しますそれ以外の場合、 **NULL**です。  
   
 ##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  アプリケーションは、共有 DLL としての MFC ライブラリを使用する場合は、このデータへのポインターを返す関数、`CRuntimeClass`基底クラスの構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アプリケーションは、MFC ライブラリに静的にリンクすることが場合、は、次を参照してください。 [m_pBaseClass](#m_pbaseclass)です。  
   
 ### <a name="example"></a>例  
@@ -186,7 +186,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  スキーマの数 (シリアル化できないクラスの場合は-1)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  スキーマの番号の詳細については、次を参照してください。、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロです。  
   
 ### <a name="example"></a>例  

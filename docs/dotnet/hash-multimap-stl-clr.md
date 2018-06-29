@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d8b14a4941a280d34e29de80f343981a0f6d20e5
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: d78b03bea823dfcbb9df61fb40681c4ef66b49e7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305853"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079891"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`hash_multimap`双方向を格納するテーブルの各エントリをハッシュ テーブルとして要素のシーケンスを管理するには、ノード、および 1 つの要素を格納する各ノードの一覧がリンクされています。 要素は、シーケンスとよいに沿って移動する、マップされた値は、管理するためのキーで構成されます。  
@@ -145,7 +145,7 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  キー  
  被制御シーケンス内の要素の主要な構成要素の型。  
   
@@ -1545,7 +1545,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入するキー値。  
   
  where  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377341"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078409"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange クラス
 OLE コントロールの永続性の実装をサポートします。  
@@ -63,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsAsynchronous](#isasynchronous)|プロパティの交換が非同期的に行うかどうかを判断します。|  
 |[CPropExchange::IsLoading](#isloading)|プロパティがされているかどうかを示すから保存またはコントロールに読み込まれます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CPropExchange` 基本クラスはありません。  
   
  プロパティの exchange の方向とコンテキストを確立します。  
@@ -81,7 +81,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CPropExchange`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxctl.h  
   
 ##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `phBlob`  
+ *phBlob*  
  プロパティを格納する場所を指す変数へのポインター (変数は、通常、クラスのメンバー)。  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  プロパティの既定値です。  
   
 ### <a name="return-value"></a>戻り値  
  交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りに、必要に応じて、によって参照される変数に書き込み`phBlob`です。 場合`hBlobDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化が失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値を読み取りに、必要に応じて、によって参照される変数に書き込み*phBlob*です。 場合*hBlobDefault*を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化が失敗したときに使用されます。  
   
  関数は、 **CArchivePropExchange::ExchangeBlobProp**、 **CResetPropExchange::ExchangeBlobProp**、および**CPropsetPropExchange::ExchangeBlobProp**オーバーライドこの純粋仮想関数。  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `font`  
+ *フォント*  
  参照、 [CFontHolder](../../mfc/reference/cfontholder-class.md)フォント プロパティを含むオブジェクト。  
   
- `pFontDesc`  
- ポインター、 [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) font プロパティの既定の状態を初期化するための値を含む構造体と`pFontDispAmbient`は**NULL**です。  
+ *pFontDesc*  
+ ポインター、 [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) font プロパティの既定の状態を初期化するための値を含む構造体と*pFontDispAmbient*は**NULL**です。  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  ポインター、**この**font プロパティの既定の状態を初期化するために使用するフォントのインターフェイスです。  
   
 ### <a name="return-value"></a>戻り値  
  交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- フォントのプロパティは、コントロールに、メディアから読み込まれるは、フォントの特性は、メディアから取得されます、`CFontHolder`によって参照されるオブジェクト`font`で初期化されます。 Font プロパティが格納される場合のフォント オブジェクト内の特性がメディアに書き込まれます。  
+### <a name="remarks"></a>Remarks  
+ フォントのプロパティは、コントロールに、メディアから読み込まれるは、フォントの特性は、メディアから取得されます、`CFontHolder`によって参照されるオブジェクト*フォント*で初期化されます。 Font プロパティが格納される場合のフォント オブジェクト内の特性がメディアに書き込まれます。  
   
  関数は、 **CArchivePropExchange::ExchangeFontProp**、 **CResetPropExchange::ExchangeFontProp**、および**CPropsetPropExchange::ExchangeFontProp**オーバーライドこの純粋仮想関数。  
   
@@ -156,22 +156,22 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `ppUnk`  
+ *ppUnk*  
  プロパティへのポインターを含む変数を指すポインター **IUnknown**インターフェイス (この変数は、通常、クラスのメンバー)。  
   
- `iid`  
+ *iid*  
  コントロールを使用するプロパティのインターフェイスのインターフェイス ID です。  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  プロパティの既定値です。  
   
 ### <a name="return-value"></a>戻り値  
  交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  プロパティは、コントロールに、ファイルから読み込まれるが場合、プロパティが作成され、ファイルを使用して初期化します。 プロパティが格納されている場合、その値は、ファイルに書き込まれます。  
   
  関数は、 **CArchivePropExchange::ExchangePersistentProp**、 **CResetPropExchange::ExchangePersistentProp**、および**CPropsetPropExchange::ExchangePersistentProp**純粋仮想関数をオーバーライドします。  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `vtProp`  
+ *vtProp*  
  交換されるプロパティの型を指定する記号です。 指定できる値は次のとおりです。  
   
 |シンボル|プロパティの型|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  プロパティの値へのポインター。  
   
  *pvDefault*  
@@ -213,8 +213,8 @@ virtual BOOL ExchangeProp(
 ### <a name="return-value"></a>戻り値  
  交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- プロパティが読み込まれるとき、メディアからのコントロールに、プロパティの値はメディアから取得されによって指されるオブジェクトに格納されている`pvProp`です。 プロパティは、メディアに格納される場合、オブジェクトの値を指す`pvProp`はメディアに書き込まれます。  
+### <a name="remarks"></a>Remarks  
+ プロパティが読み込まれるとき、メディアからのコントロールに、プロパティの値はメディアから取得されによって指されるオブジェクトに格納されている*pvProp*です。 プロパティは、メディアに格納される場合、オブジェクトの値を指す*pvProp*はメディアに書き込まれます。  
   
  関数は、 **CArchivePropExchange::ExchangeProp**、 **CResetPropExchange::ExchangeProp**、および**CPropsetPropExchange::ExchangeProp**この純粋なオーバーライド仮想関数。  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  読み込まれている永続的なデータのバージョン番号が格納される変数への参照。  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  コントロールの現在のバージョン番号。  
   
- `bConvert`  
+ *bConvert*  
  現在のバージョンに永続的なデータを変換または読み込まれたものと同じバージョンのまま保持するかどうかを示します。  
   
 ### <a name="return-value"></a>戻り値  

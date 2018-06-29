@@ -105,12 +105,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 02678db98c40927114adf1b061482d9e8304aa30
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 3e5db2aafb10ad6d95fe50d073085041a1016cac
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305840"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079867"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`hash_multiset`双方向を格納するテーブルの各エントリをハッシュ テーブルとして要素のシーケンスを管理するには、ノード、および 1 つの要素を格納する各ノードの一覧がリンクされています。 各要素の値は、シーケンスの順序で、キーとして使用されます。  
@@ -133,7 +133,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+### <a name="parameters"></a>パラメーター  
  キー  
  被制御シーケンス内の要素の主要な構成要素の型。  
 
@@ -142,7 +142,7 @@ template<typename Key>
   
  **Namespace:** cliext  
   
-## <a name="members"></a>メンバー  
+## <a name="declarations"></a>宣言  
   
 |型定義|説明|  
 |---------------------|-----------------|  
@@ -207,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|  
 |IHash\<キー、値 >|ジェネリックなコンテナーを管理します。|  
   
-### <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks  
  オブジェクトは、割り当てし、双方向のリンク リスト内の個々 のノードとして、制御するシーケンスの記憶域を解放します。 アクセスを高速化、オブジェクトのサブリストのシーケンスとしてリスト全体を効果的に管理する (ハッシュ テーブル) の場合は、リストへのポインターの可変長配列を保持するか、バケットします。 順序付けられた 1 つのノードの内容を別にコピーからではなく、ノード間のリンクを変更することにより保持されるバケットに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。  
   
  オブジェクトが各バケット ストアド デリゲート型のオブジェクトを呼び出すことによって、制御を注文[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)です。 Hash_set; を作成する場合は、ストアド デリゲート オブジェクトを指定することができます。デリゲート オブジェクトを指定しないと、既定値が比較`operator<=(key_type, key_type)`です。  
@@ -240,6 +240,8 @@ template<typename Key>
   
  消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーは`not`その要素を破棄します。  
   
+## <a name="members"></a>メンバー
+
 ## <a name="begin"></a> hash_multiset::begin (STL/CLR)
 被制御シーケンスの先頭を指定します。  
   
@@ -1503,7 +1505,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  右  
  列挙型を挿入します。  
   
- val  
+ Val  
  挿入するキー値。  
   
  where  

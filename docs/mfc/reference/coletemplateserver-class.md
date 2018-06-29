@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374384"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077979"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer クラス
 OLE のビジュアル編集サーバー、オートメーション サーバー、およびリンク コンテナー (埋め込みアイテムへのリンクをサポートするアプリケーションのことです) で使います。  
@@ -56,7 +56,7 @@ class COleTemplateServer : public COleObjectFactory
 |[COleTemplateServer::Unregister](#unregister)|関連付けられたドキュメント テンプレートの登録を解除します。|  
 |[COleTemplateServer::UpdateRegistry](#updateregistry)|OLE システム レジストリをドキュメントの種類を登録します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このクラスは、クラスから派生[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)以外の場合は通常、使用することができます`COleTemplateServer`独自のクラスを派生するのではなく、直接です。 `COleTemplateServer` 使用して、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)サーバー ドキュメントを管理するオブジェクト。 使用して`COleTemplateServer`スタンドアロン アプリケーションとして実行できるサーバーは、サーバー全体を実装する場合。 フル サーバーは、シングル ドキュメント インターフェイス (SDI) アプリケーションはサポートされていますが、マルチ ドキュメント インターフェイス (MDI) アプリケーションでは、通常します。 1 つ`COleTemplateServer`アプリケーションをサポートしているサーバー ドキュメントの種類ごとにオブジェクトが必要です。 つまり、サーバー アプリケーションは、ワークシートとグラフの両方をサポートする場合必要がありますに 2 つ`COleTemplateServer`オブジェクト。  
   
  `COleTemplateServer` 上書き、`OnCreateInstance`によって定義されたメンバー関数`COleObjectFactory`です。 このメンバー関数は、適切な型の C++ オブジェクトを作成するためにフレームワークによって呼び出されます。  
@@ -72,7 +72,7 @@ class COleTemplateServer : public COleObjectFactory
   
  `COleTemplateServer`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
@@ -82,7 +82,7 @@ class COleTemplateServer : public COleObjectFactory
 COleTemplateServer();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用した簡単な説明、`COleTemplateServer`クラスを参照してください、[直接](../../mfc/reference/colelinkingdoc-class.md)クラスの概要です。  
   
 ##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
@@ -96,16 +96,16 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clsid`  
+ *clsid*  
  テンプレートを要求する OLE クラス ID への参照。  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  ドキュメント テンプレートへのポインター。  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  アプリケーションの 1 つのインスタンスが複数のインスタンスをサポートできるかどうかを示します。 場合**TRUE**オブジェクトを作成するには、各要求に対して、アプリケーションの複数のインスタンスを起動します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細については、次を参照してください。 [CLSID キー](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows SDK に含まれています。  
   
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister  
@@ -118,7 +118,7 @@ BOOL Unregister();
 ### <a name="return-value"></a>戻り値  
  成功した場合は TRUE、それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  EnterRemarks  
   
 ##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nAppType`  
+ *nAppType*  
  値、 **OLE_APPTYPE**列挙体、列挙子。H. 次の値のいずれかを取ります。  
   
 - `OAT_INPLACE_SERVER` サーバーには、サーバー全体のユーザー インターフェイスがあります。  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` オブジェクトが`IDispatch`に対応します。  
   
-- **OAT_DOC_OBJECT_SERVER**サーバーでは、両方がサポートを埋め込むと、ドキュメント オブジェクト コンポーネント モデル。  
+- `OAT_DOC_OBJECT_SERVER` サーバーでは、両方がサポートを埋め込むと、ドキュメント オブジェクト コンポーネント モデル。  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  エントリが存在しない場合にのみ、レジストリに書き込まれるエントリの一覧です。  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  既にエントリが存在するかどうかに関係なく、レジストリに書き込まれるエントリの一覧です。  
   
- `bRegister`  
- クラスを登録するかどうかを判断します。 場合`bRegister`は**TRUE**クラスは、システム レジストリに登録されています。 それ以外の場合、クラスが登録解除します。  
+ *bRegister*  
+ クラスを登録するかどうかを判断します。 場合*bRegister*は**TRUE**クラスは、システム レジストリに登録されています。 それ以外の場合、クラスが登録解除します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出しを使用して、登録情報が読み込まれる[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)です。 取得した部分文字列がインデックスによって識別される、**取り出さ**、 **regFileTypeName**、および**fileNewName**で説明されている、 `GetDocString`ページを参照します。  
   
  場合、**取り出さ**部分文字列が空またはへの呼び出し`GetDocString`何らかの理由、この関数が失敗し、レジストリで、ファイルの情報が入力されていません。  
   
- 引数の情報は、`rglpszRegister`と`rglpszOverwrite`を呼び出すことによって、レジストリに書き込まれる[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)です。 既定の情報が登録されているは、次の 2 つの引数が**NULL**、ほとんどのアプリケーションに適しています。 これらの引数内の情報の構造については、次を参照してください。`AfxOleRegisterServerClass`です。  
+ 引数の情報は、 *rglpszRegister*と*rglpszOverwrite*を呼び出すことによって、レジストリに書き込まれる[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)です。 既定の情報が登録されているは、次の 2 つの引数が**NULL**、ほとんどのアプリケーションに適しています。 これらの引数内の情報の構造については、次を参照してください。`AfxOleRegisterServerClass`です。  
   
- 詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。  
+ 詳細については、「 [Implementing the IDispatch Interface](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   

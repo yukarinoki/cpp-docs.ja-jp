@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305866"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079826"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 このテンプレート クラスでは、ランダム アクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`deque`ストレージの連続したブロックのようですが、拡大したり、一方の端を残りの要素をコピーする必要がない縮小することができますの要素のシーケンスを管理します。 効率的に、実装できるため、`double-ended queue`です。 (したがって名前です)。  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace:** cliext  
 
-## <a name="members"></a>メンバー  
+## <a name="declarations"></a>宣言  
   
 |型定義|説明|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーは`not`その要素を破棄します。  
  
-## <a name="member-definitions"></a>メンバーの定義
+## <a name="members"></a>メンバー
 
 ## <a name="assign"></a> deque::assign (STL/CLR)
 すべての要素を置換します。  
@@ -2023,7 +2023,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  被制御シーケンスの新しいサイズ。  
   
- val  
+ Val  
  埋め込み要素の値です。  
   
 ### <a name="remarks"></a>Remarks  

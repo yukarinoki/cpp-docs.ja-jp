@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a143fd99a79212ed0078f06b334ab6ae0964b3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 421373969beb83d033ce8ca14bd11fdb5d8dcb14
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370241"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078622"
 ---
 # <a name="cptrlist-class"></a>CPtrList クラス
 void ポインターのリストをサポートします。  
@@ -35,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CPtrList`クラスのメンバー関数に似ています[CObList](../../mfc/reference/coblist-class.md)です。 メンバー関数については `CObList` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CObject` ポインターが使われている場合は、`void` へのポインターに置き換えます。  
+ メンバー関数は、`CPtrList`クラスのメンバー関数に似ています[CObList](../../mfc/reference/coblist-class.md)です。 メンバー関数については `CObList` クラスの説明を参照してください。 任意の場所が表示、`CObject`関数パラメーターまたは戻り値としてのポインターへのポインターに置き換える**void**です。  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -43,7 +43,7 @@ class CPtrList : public CObject
   
  `void*& CPtrList::GetHead() const;`  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CPtrList` には、`IMPLEMENT_DYNAMIC` マクロが組み込まれているので、`CDumpContext` オブジェクトへのランタイム型のアクセスとダンプをサポートします。 ポインター リストの各要素をダンプする必要があるときは、ダンプ コンテキストの深さを 1 以上に設定する必要があります。  
   
  ポインター リストはシリアル化できません。  
@@ -57,7 +57,7 @@ class CPtrList : public CObject
   
  `CPtrList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

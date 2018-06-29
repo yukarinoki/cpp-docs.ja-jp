@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f83c36a9c1a0d334e3b4a75724521d5711123e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 496c06fe7550598eeeb4136b233f39079d7425e9
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376536"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078220"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC クラス
 デバイス コンテキスト クラスから派生[CDC](../../mfc/reference/cdc-class.md)です。  
@@ -54,11 +54,11 @@ class CPaintDC : public CDC
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CPaintDC::m_hWnd](#m_hwnd)|`HWND`先である`CPaintDC`オブジェクトをアタッチします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  実行、 [cwnd::beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)構築時に、 [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)破棄時にします。  
   
  A`CPaintDC`オブジェクトに応答する場合にのみ使用できます、 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)メッセージ、通常の`OnPaint`メッセージ ハンドラー メンバー関数。  
@@ -72,7 +72,7 @@ class CPaintDC : public CDC
   
  `CPaintDC`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
@@ -83,10 +83,10 @@ explicit CPaintDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  指す、`CWnd`オブジェクトを`CPaintDC`オブジェクトが属しています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  例外 (型の`CResourceException`) 場合にスローされますが、Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)呼び出しは失敗します。 デバイス コンテキストは、Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合に使用できない可能性があります。 アプリケーションは、共通のディスプレイ コンテキストで、Windows の特定の時点で利用可能なの 5 つに対して競合します。  
   
 ### <a name="example"></a>例  
@@ -99,8 +99,8 @@ explicit CPaintDC(CWnd* pWnd);
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>コメント  
- `m_hWnd` 保護された型の変数は、`HWND`です。  
+### <a name="remarks"></a>Remarks  
+ *m_hWnd*保護されている型の変数は、`HWND`です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
@@ -112,7 +112,7 @@ HWND m_hWnd;
 PAINTSTRUCT m_ps;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `PAINTSTRUCT`に渡され、記入するは[cwnd::beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)です。  
   
  `PAINTSTRUCT`に関連付けられているウィンドウのクライアント領域を塗りつぶすために、アプリケーションが使用される情報が含まれています、`CPaintDC`オブジェクト。  
