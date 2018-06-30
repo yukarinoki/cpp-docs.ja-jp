@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f56a09742276c7fcb1bd66ff1a36b1d17cdf882
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c844ad428143c82e8214eab74262b326bf2c9a4
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370947"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123241"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 構造体
 `DELETEITEMSTRUCT`構造が削除されたオーナー描画リスト ボックスまたはコンボ ボックス項目について説明します。  
@@ -39,25 +39,25 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `CtlType`  
- 指定**ODT_LISTBOX** (オーナー描画リスト ボックス、) または**ODT_COMBOBOX** (オーナー描画コンボ ボックス、)。  
+ *CtlType*  
+ ODT_LISTBOX (オーナー描画リスト ボックス、) または ODT_COMBOBOX (オーナー描画コンボ ボックス、) を指定します。  
   
- `CtlID`  
+ *CtlID*  
  リスト ボックスまたはコンボ ボックスの識別子を指定します。  
   
- `itemID`  
+ *itemID*  
  リスト ボックスまたはコンボ ボックスの削除された項目のインデックスを指定します。  
   
- `hwndItem`  
+ *hwndItem*  
  コントロールを識別します。  
   
- `itemData`  
- アイテムのアプリケーション定義のデータを指定します。 コントロールにこの値は、 **lParam**リスト ボックスまたはコンボ ボックスに、項目を追加、メッセージのパラメーターです。  
+ *取得*  
+ アイテムのアプリケーション定義のデータを指定します。 コントロールにこの値は、 *lParam*リスト ボックスまたはコンボ ボックスに、項目を追加、メッセージのパラメーターです。  
   
-## <a name="remarks"></a>コメント  
- リスト ボックスまたはコンボ ボックスから、またはリスト ボックスまたはコンボ ボックスが破棄されるときに項目が削除されると、Windows の送信、`WM_DELETEITEM`削除される各項目の所有者へのメッセージ。 **LParam**メッセージのパラメーターには、この構造体へのポインターが含まれています。  
+## <a name="remarks"></a>Remarks  
+ リスト ボックスまたはコンボ ボックスから、またはリスト ボックスまたはコンボ ボックスが破棄されるときに項目が削除されると、Windows は、削除される各項目の所有者を WM_DELETEITEM メッセージを送信します。 *LParam*メッセージのパラメーターには、この構造体へのポインターが含まれています。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atldbcli.h  
   
 ## <a name="see-also"></a>関連項目  

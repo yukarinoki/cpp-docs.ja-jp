@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2f5f0a72c08aeabcd764cf4c7763c9506769585
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372406"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121625"
 ---
 # <a name="cuintarray-class"></a>CUIntArray クラス
 符号なし整数の配列をサポートします。  
@@ -69,7 +69,7 @@ class CUIntArray : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CUIntArray`クラスのメンバー関数に似ています[CObArray](../../mfc/reference/cobarray-class.md)です。 メンバー関数については `CObArray` クラスの説明を参照してください。 任意の場所が表示、`CObject`ポインター関数パラメーターまたは戻り値は、置換、 **UINT**です。  
+ メンバー関数は、`CUIntArray`クラスのメンバー関数に似ています[CObArray](../../mfc/reference/cobarray-class.md)です。 メンバー関数については `CObArray` クラスの説明を参照してください。 任意の場所が表示、`CObject`関数パラメーターまたは戻り値としてのポインターが UINT を代用します。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -94,7 +94,7 @@ class CUIntArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|指定されたインデックス位置にある値を返します。|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|この配列内の要素の数を取得します。|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 指定できます**NULL**です。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|この配列内の要素の数を取得します。|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|有効な最大のインデックスを返します。|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|  
@@ -111,8 +111,8 @@ class CUIntArray : public CObject
 |----------|-----------------|  
 |[CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
-## <a name="remarks"></a>コメント  
- 符号なし整数または**UINT**、ワード、ダブルワードを異なるの物理サイズ、 **UINT**によっては、ターゲットの実行環境を変更することができます。 A **UINT**ダブルワードと同じサイズです。  
+## <a name="remarks"></a>Remarks  
+ 符号なし整数値または UINT、ワード、ダブルワード点で異なりますターゲットの実行環境に応じて UINT の物理サイズを変更することができます。 UINT はダブルワードと同じサイズです。  
   
  `CUIntArray` 組み込まれており、 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)実行時の型へのアクセスとダンプをサポートするマクロ、 [CDumpContext](../../mfc/reference/cdumpcontext-class.md)オブジェクト。 符号なし整数の個々 の要素をダンプする場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。 符号なし整数の配列をシリアル化できません。  
   
@@ -126,7 +126,7 @@ class CUIntArray : public CObject
   
  `CUIntArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

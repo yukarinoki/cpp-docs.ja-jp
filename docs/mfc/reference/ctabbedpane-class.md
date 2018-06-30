@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a6c42a4203fb1d0224f5f31e4123dca9a6fad65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9da7016e98d9bd84e62c3b05cae32346827142f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373815"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121839"
 ---
 # <a name="ctabbedpane-class"></a>派生クラス
 切り離し可能なタブを持つペインの機能を実装します。  
@@ -80,15 +80,15 @@ class CTabbedPane : public CBaseTabbedPane
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|アプリケーション内のタブの既定の場所。|  
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|カスタムの `CMFCTabCtrl` から派生したオブジェクトに関するランタイム クラス情報。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  2 つ目のペインのキャプションをポイントして、ユーザーがあるペインを別のペインにアタッチすると、フレームワークにより自動的にこのクラスのインスタンスが作成されます。 -1 の ID を持つフレームワークにより作成される、すべてのタブ付きペイン。  
   
- Outlook スタイルのタブではなく通常のタブを指定するには、渡す、`AFX_CBRS_REGULAR_TABS`にスタイルを設定、 [cdockablepane::createex](../../mfc/reference/cdockablepane-class.md#createex)メソッドです。  
+ Outlook スタイルのタブではなく通常のタブを指定するには、渡す AFX_CBRS_REGULAR_TABS スタイルを[cdockablepane::createex](../../mfc/reference/cdockablepane-class.md#createex)メソッドです。  
   
  切り離し可能なタブを持つタブ付きペインを作成すると、フレームワークによってペインが自動的に破棄される可能性があるため、ポインターを格納しないでください。 タブ付きペインへのポインターを取得するには、`CBasePane::GetParentTabbedPane` メソッドを呼び出します。  
   
@@ -164,7 +164,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
   
  [派生](../../mfc/reference/ctabbedpane-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxTabbedPane.h  
   
 ##  <a name="detachpane"></a>  CTabbedPane::DetachPane  
@@ -177,12 +177,12 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
- [入力] `bHide`  
+ [in]*pBar*  
+ [in]*bHide*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor  
  タブの色の自動設定を有効または無効にします。  
@@ -192,10 +192,10 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` タブの自動色分けを有効にするにはそれ以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ タブの自動色分けを有効にする場合は TRUEそれ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  有効にするにまたはアプリケーションのすべてのタブ付きウィンドウ内のタブの自動設定を無効にするには、この静的メソッドを使用します。 この機能を有効にすると、各タブは、独自の色で塗りつぶされます。 呼び出して、タブの色に使用される色の一覧を見つけることができます、 [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)メソッドです。  
   
  タブを呼び出すことによって使用される色の一覧を指定できます[CTabbedPane::SetTabAutoColors](#settabautocolors)です。  
@@ -214,14 +214,14 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
- [入力] `nTabID`  
- [入力] `dockMethod`  
- [入力] `bHide`  
+ [in]*pBar*  
+ [in]*nTabID*  
+ [in]*dockMethod*  
+ [in]*bHide*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea  
  タブ付きウィンドウのサイズとタブ領域の位置を返します。  
@@ -233,13 +233,13 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `rectTabAreaTop`  
+ [out]*rectTabAreaTop*  
  最上位のタブ領域の画面座標での位置とサイズが含まれています。  
   
- [出力] `rectTabAreaBottom`  
+ [out]*rectTabAreaBottom*  
  下のタブ領域の画面座標での位置とサイズが含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、ユーザーがドラッグすることを示すウィンドウをドッキングする方法を決定するには、このメソッドを呼び出します。 ユーザーは、ターゲット ウィンドウのタブ領域に、ウィンドウをドラッグ、フレームワークは対象のペインの新しいタブとして追加しようとします。 それ以外の場合、ウィンドウでは 2 つのペインを分離するウィンドウの境界線をペインに新しいコンテナーを作成する対象のペインの端にドッキングしようとします。  
   
  このメソッドをオーバーライドする`CTabbedPane`-この動作を変更するクラスを派生します。  
@@ -253,7 +253,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode  
 
@@ -264,7 +264,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom  
  タブがウィンドウの下部にあるかどうかを判断します。  
@@ -274,9 +274,9 @@ virtual BOOL IsTabLocationBottom() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` タブ付きウィンドウの下部にあるタブ領域がある場合それ以外の場合、`FALSE`です。  
+ タブ付きウィンドウの下部にあるタブ領域がある場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop  
  アプリケーション内のタブの既定の場所。  
@@ -285,12 +285,12 @@ virtual BOOL IsTabLocationBottom() const;
 AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;  
 ```  
   
-### <a name="remarks"></a>コメント  
- この静的メンバーを設定`TRUE`タブ付きペインの上部に表示されるアプリケーション内のすべてのタブを強制的にします。  
+### <a name="remarks"></a>Remarks  
+ タブ付きペインの上部に表示されるアプリケーションでは、この静的メンバーをすべてのタブが強制する場合は true を設定します。  
   
  タブ付きペインが作成される前に、この値を設定する必要があります。  
   
- 既定値は `FALSE` です。  
+ 既定値は FALSE です。  
   
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC  
  カスタムの `CMFCTabCtrl` から派生したオブジェクトに関するランタイム クラス情報。  
@@ -299,7 +299,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この静的メンバー変数のランタイム クラス情報へのポインターを設定、`CMFCTabCtrl`のタブ付きウィンドウ内のカスタム タブ付きウィンドウを使用している場合は、オブジェクトを派生します。  
   
 ##  <a name="resettabs"></a>  CTabbedPane::ResetTabs  
@@ -309,7 +309,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 static void ResetTabs();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  すべてのタブ付きペインは既定の状態を元に戻すには、このメソッドを呼び出します。 呼び出されると、このメソッドは、境界線のサイズとすべてのタブ付きウィンドウの自動カラーの状態をリセットします。  
   
 ##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors  
@@ -320,10 +320,10 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `arColors`  
+ [in]*arColors*  
  設定する色の配列が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを使用すると、自動設定機能が有効になっているときに使用される色の一覧をカスタマイズできます。 これは静的関数であり、アプリケーションのすべてのタブ付きペインに影響します。  
   
  使用して[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)を有効にするにまたは自動設定機能を無効にします。  

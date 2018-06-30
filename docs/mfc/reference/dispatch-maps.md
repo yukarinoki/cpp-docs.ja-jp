@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71d72f8ab9e107e6a1557c73873effc8da7a5c6
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 107dba503c11d3810f75dcd4ee6e6f5af47008fc
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322284"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122981"
 ---
 # <a name="dispatch-maps"></a>ディスパッチ マップ
 
@@ -51,10 +51,10 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Remarks
 
-使用して、`DECLARE_DISPATCH_MAP`クラスの宣言の最後にマクロです。 次に、します。クラスのメンバーを定義する CPP ファイルの機能を使用して、`BEGIN_DISPATCH_MAP`マクロです。 クラスの各メソッドとプロパティを公開のマクロのエントリを含める ( `DISP_FUNCTION`、`DISP_PROPERTY`など)。 最後に、使用して、`END_DISPATCH_MAP`マクロです。
+クラスの宣言の最後に DECLARE_DISPATCH_MAP マクロを使用します。 次に、します。クラスのメンバー関数を定義する CPP ファイルでは、BEGIN_DISPATCH_MAP マクロを使用します。 クラスの公開されたメソッドとプロパティ (DISP_FUNCTION DISP_PROPERTY、やなど) の各マクロ エントリが含まれます。 最後に、END_DISPATCH_MAP マクロを使用します。
 
 > [!NOTE]
-> 後のすべてのメンバーを宣言する場合`DECLARE_DISPATCH_MAP`、新しいアクセスの種類を指定する必要があります (**パブリック**、**プライベート**、または**保護**) にします。
+> DECLARE_DISPATCH_MAP 後にすべてのメンバーを宣言する場合は、新しいアクセスの種類を指定する必要があります (**パブリック**、**プライベート**、または**保護**) にします。
 
 アプリケーション ウィザードとコードのウィザードでは、オートメーション クラスの作成とディスパッチ マップの管理を支援します。 ディスパッチ マップの詳細については、次を参照してください。[オートメーション サーバー](../../mfc/automation-servers.md)です。
 
@@ -84,7 +84,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="remarks"></a>Remarks
 
-クラスのメンバー関数を定義する実装 (.cpp) ファイルでのディスパッチ マップを開始、`BEGIN_DISPATCH_MAP`マクロ、ディスパッチ関数とプロパティの各マクロ エントリの追加を行いでディスパッチ マップ、 `END_DISPATCH_MAP`マクロです。
+実装 (.cpp) ファイルに、クラスのメンバー関数を定義する、ディスパッチ マップを BEGIN_DISPATCH_MAP マクロに先頭の各関数のディスパッチと、プロパティのマクロのエントリを追加し、完了、END_DISPATCH_ でディスパッチ マップマップ マクロです。
 
 ### <a name="requirements"></a>必要条件
 
@@ -100,7 +100,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Remarks
 
-組み合わせて使用する必要があります`BEGIN_DISPATCH_MAP`です。
+BEGIN_DISPATCH_MAP と組み合わせて使用する必要があります。
 
 ### <a name="requirements"></a>必要条件
 
@@ -138,23 +138,23 @@ DISP_FUNCTION(
 
 ### <a name="remarks"></a>Remarks
 
-*VtRetVal*引数の型が**VARTYPE**です。 この引数の次の値がから取得された、`VARENUM`列挙します。
+*VtRetVal*引数が型 VARTYPE のです。 この引数の次の値がから取得された、`VARENUM`列挙します。
 
 |シンボル|戻り値の型|
 |------------|-----------------|
-|`VT_EMPTY`|**void**|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`BSTR`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_EMPTY|**void**|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|BSTR|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 *VtsParams*引数がスペースで区切られた一連の値から、`VTS_*`定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 たとえば、オブジェクトに適用された
 
@@ -166,31 +166,31 @@ DISP_FUNCTION(
 
 |シンボル|パラメーターの型|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_CY`|`const CY` または `CY*`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|`LPCSTR`|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*` または `VARIANT&`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_PI2`|__short\*__|
-|`VTS_PI4`|__long\*__|
-|`VTS_PR4`|__float\*__|
-|`VTS_PR8`|__double\*__|
-|`VTS_PCY`|`CY*`|
-|`VTS_PDATE`|`DATE*`|
-|`VTS_PBSTR`|`BSTR*`|
-|`VTS_PDISPATCH`|`LPDISPATCH*`|
-|`VTS_PSCODE`|`SCODE*`|
-|`VTS_PBOOL`|`BOOL*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_PUNKNOWN`|`LPUNKNOWN*`|
-|`VTS_NONE`|パラメーターなし|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_CY|`const CY` または `CY*`|
+|VTS_DATE|DATE|
+|VTS_BSTR|LPCSTR|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*` または `VARIANT&`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_PI2|__short\*__|
+|VTS_PI4|__long\*__|
+|VTS_PR4|__float\*__|
+|VTS_PR8|__double\*__|
+|VTS_PCY|`CY*`|
+|VTS_PDATE|`DATE*`|
+|VTS_PBSTR|`BSTR*`|
+|VTS_PDISPATCH|`LPDISPATCH*`|
+|VTS_PSCODE|`SCODE*`|
+|VTS_PBOOL|`BOOL*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_PUNKNOWN|`LPUNKNOWN*`|
+|VTS_NONE|パラメーターなし|
 
 ### <a name="requirements"></a>必要条件
 
@@ -224,22 +224,22 @@ DISP_PROPERTY(
 
 ### <a name="remarks"></a>Remarks
 
-*VtPropType*引数の型が**VARTYPE**です。 この引数に指定できる値はから取得、`VARENUM`列挙します。
+*VtPropType*引数の型が**VARTYPE**です。 この引数に指定できる値は、VARENUM 列挙から取得されます。
 
 |シンボル|プロパティの型|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 外部のクライアントで、プロパティで指定されたメンバー変数の値が変更されたとき*memberName*変更; 変更の通知は示されません。
 
@@ -281,7 +281,7 @@ DISP_PROPERTY_EX(
 
 *MemberGet*と*memberSet*関数によって署名がある、 *vtPropType*引数。 *MemberGet*関数は引数を使用しないで指定された型の値を返します*vtPropType*です。 *MemberSet*関数がで指定された型の引数を受け取る*vtPropType*とは何も返しません。
 
-*VtPropType*引数の型が`VARTYPE`です。 この引数に指定できる値はから取得、`VARENUM`列挙します。 これらの値の一覧は、「解説」を参照してください、 *vtRetVal*パラメーター [DISP_FUNCTION](#disp_function)です。 なお`VT_EMPTY`に一覧されている、 `DISP_FUNCTION` remarks、プロパティのデータ型としては許可されていません。
+*VtPropType*引数が型 VARTYPE のです。 この引数に指定できる値はの VARENUM 列挙から取得されます。 これらの値の一覧は、「解説」を参照してください、 *vtRetVal*パラメーター [DISP_FUNCTION](#disp_function)です。 プロパティのデータ型として VT_EMPTY、DISP_FUNCTION 解説に一覧表示することはできませんに注意してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -319,24 +319,24 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="remarks"></a>Remarks
 
-定義されたプロパティとは異なり`DISP_PROPERTY`で定義されているプロパティ`DISP_PROPERTY_NOTIFY`で指定された関数が自動的に呼び出さ*pfnAfterSet*プロパティが変更されたとき。
+DISP_PROPERTY で定義されたプロパティとは異なり DISP_PROPERTY_NOTIFY で定義されたプロパティが自動的に呼び出すで指定された関数*pfnAfterSet*プロパティが変更されたとき。
 
-*VtPropType*引数の型が`VARTYPE`です。 この引数に指定できる値はから取得、`VARENUM`列挙します。
+*VtPropType*引数が型 VARTYPE のです。 この引数に指定できる値は、VARENUM 列挙から取得されます。
 
 |シンボル|プロパティの型|
 |------------|-----------------------|
-|`VT_I2`|**short**|
-|`VT_I4`|**long**|
-|`VT_R4`|**float**|
-|`VT_R8`|**double**|
-|`VT_CY`|`CY`|
-|`VT_DATE`|`DATE`|
-|`VT_BSTR`|`CString`|
-|`VT_DISPATCH`|`LPDISPATCH`|
-|`VT_ERROR`|`SCODE`|
-|`VT_BOOL`|`BOOL`|
-|`VT_VARIANT`|`VARIANT`|
-|`VT_UNKNOWN`|`LPUNKNOWN`|
+|VT_I2|**short**|
+|VT_I4|**long**|
+|VT_R4|**float**|
+|VT_R8|**double**|
+|VT_CY|CY|
+|VT_DATE|DATE|
+|VT_BSTR|`CString`|
+|VT_DISPATCH|LPDISPATCH|
+|VT_ERROR|SCODE|
+|VT_BOOL|BOOL|
+|VT_VARIANT|VARIANT|
+|VT_UNKNOWN|LPUNKNOWN|
 
 ### <a name="requirements"></a>必要条件
 
@@ -378,7 +378,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="remarks"></a>Remarks
 
-異なり、`DISP_PROPERTY_EX`マクロ、このマクロを使用するプロパティのパラメーター リストを指定します。 これは、インデックスを作成またはパラメーター化されているプロパティを実装するために役立ちます。
+DISP_PROPERTY_EX マクロとは異なりこのマクロは、プロパティのパラメーター リストを指定することができます。 これは、インデックスを作成またはパラメーター化されているプロパティを実装するために役立ちます。
 
 ### <a name="example"></a>例
 
@@ -386,7 +386,7 @@ Get の次の宣言を検討し、メンバー プロパティにアクセスす
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-これらは、次に対応して`DISP_PROPERTY_PARAM`コントロールのディスパッチ マップ マクロ。
+これらは、コントロールのディスパッチ マップでは、次の DISP_PROPERTY_PARAM マクロに対応します。
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
@@ -394,7 +394,7 @@ Get の次の宣言を検討し、メンバー プロパティにアクセスす
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-これらは、次に対応して`DISP_PROPERTY_PARAM`コントロールのディスパッチ マップ マクロ。
+これらは、コントロールのディスパッチ マップでは、次の DISP_PROPERTY_PARAM マクロに対応します。
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 

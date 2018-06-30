@@ -1,7 +1,7 @@
 ---
 title: Web ブラウザー スタイルの MFC アプリケーションの作成 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374524"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122554"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Web ブラウザー形式の MFC アプリケーションの作成
 ネットワークとローカル ファイル システムで Web ブラウザー形式のアプリケーション (HTML またはアクティブ ドキュメント) など、インターネットまたはイントラネットでは、フォルダーから情報にアクセスできます。 アプリケーションのビュー クラスから派生することによって[CHtmlView](../../mfc/reference/chtmlview-class.md)、効果的に WebBrowser コントロールと、ビューを提供することで Web ブラウザー アプリケーションを作成します。  
@@ -50,30 +50,30 @@ ms.locfileid: "33374524"
   
  `CHtmlView` で、アプリケーションを Web または HTML ページに表示する、Web ブラウザー コントロール用のラッパーとして機能します。 ウィザードでの上書きを作成、[フィルターと並べ替え順序](../../mfc/reference/cview-class.md#oninitialupdate)Microsoft Visual C の Web サイトへのナビゲーション リンクを提供するビュー クラスの関数。  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+このサイトは、独自のいずれかで置き換えることができますか、使用して、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数、ビューの既定のコンテンツとして、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例えば:  
   
- このサイトは、独自のいずれかで置き換えることができますか、使用して、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数、ビューの既定のコンテンツとして、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例えば:  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>関連項目  
@@ -82,5 +82,5 @@ void CWebView::OnInitialUpdate()
  [プロジェクトのプロパティの使用](../../ide/working-with-project-properties.md)   
  [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
  [プロジェクトのプロパティの使用](../../ide/working-with-project-properties.md)   
- [アプリケーションを展開します。](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [アプリケーションの配置](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

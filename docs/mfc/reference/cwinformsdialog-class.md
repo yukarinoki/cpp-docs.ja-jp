@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371560"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122498"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog クラス
 Windows フォーム ユーザー コントロールをホストする MFC ダイアログ クラスのラッパーです。  
@@ -64,17 +64,17 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>パブリック演算子  
   
-|名前||  
+|name||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|置換[CWinFormsDialog::GetControl](#getcontrol)式でします。|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows フォーム ユーザー コントロールへの参照として型をキャストします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CWinFormsDialog` MFC ダイアログ クラスのラッパーです ( [CDialog](../../mfc/reference/cdialog-class.md))、Windows フォーム ユーザー コントロールをホストします。 これにより、モーダルまたはモードレスの MFC ダイアログ ボックスで .NET Framework のコントロールを表示できます。  
   
  Windows フォームを使用する方法については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)と[MFC ダイアログ ボックスとして Windows フォーム ユーザー コントロールをホストしている](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)です。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwinforms.h  
   
 ##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIDTemplate`  
+ *nIDTemplate*  
  ダイアログ ボックスのテンプレート リソースの ID が含まれています。 ダイアログ テンプレートを作成し、アプリケーションのリソース スクリプト ファイルに保存するには、ダイアログ エディターを使用します。 ダイアログ テンプレートの詳細については、次を参照してください。 [CDialog クラス](../../mfc/reference/cdialog-class.md)です。  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -118,8 +118,8 @@ virtual BOOL OnInitDialog();
 ### <a name="return-value"></a>戻り値  
  アプリケーションがダイアログ ボックスで、コントロールのいずれかに入力フォーカスを設定したかどうかを指定するブール値。 場合`OnInitDialog`0 以外を返します、Windows、入力フォーカスを設定、最初のコントロール ダイアログ ボックス。 このメソッドは、アプリケーションはダイアログ ボックスで、コントロールのいずれかに入力フォーカスを明示的に設定が場合にのみ、0 を返すことができます。  
   
-### <a name="remarks"></a>コメント  
- MFC ダイアログ ボックスの作成時に (を使用して、[作成](../../mfc/reference/cdialog-class.md#create)、 [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)、または[DoModal](../../mfc/reference/cdialog-class.md#domodal)から継承されたメソッド[CDialog](../../mfc/reference/cdialog-class.md))、 `WM_INITDIALOG`メッセージが送信され、このメソッドが呼び出されます。 ダイアログ ボックス上の Windows フォーム コントロールのインスタンスを作成し、ユーザー コントロールのサイズに合わせて調整する ダイアログ ボックスのサイズを調整します。 MFC ダイアログ ボックスで、新しいコントロールをホストします。  
+### <a name="remarks"></a>Remarks  
+ MFC ダイアログ ボックスの作成時に (を使用して、[作成](../../mfc/reference/cdialog-class.md#create)、 [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)、または[DoModal](../../mfc/reference/cdialog-class.md#domodal)から継承されたメソッド[CDialog](../../mfc/reference/cdialog-class.md))、wm _ で始まるINITDIALOG メッセージが送信され、このメソッドが呼び出されます。 ダイアログ ボックス上の Windows フォーム コントロールのインスタンスを作成し、ユーザー コントロールのサイズに合わせて調整する ダイアログ ボックスのサイズを調整します。 MFC ダイアログ ボックスで、新しいコントロールをホストします。  
   
  ダイアログ ボックスが初期化されたときに、特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 このメソッドを使用する方法については、次を参照してください。 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)です。  
   
@@ -130,7 +130,7 @@ virtual BOOL OnInitDialog();
 inline TManagedControl^  operator->() const throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子は、便利な構文を置き換える`GetControl`式でします。  
   
  Windows フォームの使用方法の詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
@@ -142,7 +142,7 @@ inline TManagedControl^  operator->() const throw();
 inline operator TManagedControl^() const throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子は、Windows フォーム コントロールへの参照として型をキャストします。 渡すために使用されます、`CWinFormsDialog<TManagedControl>`ダイアログ ボックスで、Windows フォーム ユーザー コントロールのオブジェクトへのポインターを受け取る関数をします。  
   
 ## <a name="see-also"></a>関連項目  

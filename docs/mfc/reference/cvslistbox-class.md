@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 380b470531fd28d8cfe68aa931105430111c3dbf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 582ddd1340dd94f367d5401d517e9335d370b634
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372996"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122638"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 `CVSListBox`クラスが編集可能なリスト コントロールをサポートします。  
@@ -84,7 +84,7 @@ class CVSListBox : public CVSListBoxBase
 |----------|-----------------|  
 |[CVSListBox::GetListHwnd](#getlisthwnd)|現在の埋め込みリスト ビュー コントロールにハンドルを返します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CVSListBox`クラスを作成、変更、削除、またはリスト コントロール項目を再配置するユーザーを有効にする編集ボタンのセットを提供します。  
   
  編集可能なリスト コントロールの画像を次に示します。 2 番目の一覧のエントリは、"Item2"のタイトルは、編集が選択されます。  
@@ -110,7 +110,7 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxvslistbox.h  
   
 ##  <a name="additem"></a>  CVSListBox::AddItem  
@@ -124,20 +124,20 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `strIext`  
+ [in]*strIext*  
  文字列への参照。  
   
- [入力] `dwData`  
+ [in]*dwData*  
  文字列に関連付けられているアプリケーション固有の 32 ビット値。 既定値は 0 です。  
   
- [入力] `iIndex`  
- 文字列を保持する位置の 0 から始まるインデックス。 場合、`iIndex`文字列はパラメーターが-1 の場合、リストの末尾に追加されます。 既定値は -1 です。  
+ [in]*iIndex*  
+ 文字列を保持する位置の 0 から始まるインデックス。 場合、 *iIndex*文字列はパラメーターが-1 の場合、リストの末尾に追加されます。 既定値は -1 です。  
   
 ### <a name="return-value"></a>戻り値  
  文字列のリスト コントロール内の位置の 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
- 使用して、 [CVSListBox::GetItemData](#getitemdata)で指定された値を取得するメソッド、`dwData`パラメーター。 この値は、アプリケーション固有の整数またはその他のデータへのポインターにすることができます。  
+### <a name="remarks"></a>Remarks  
+ 使用して、 [CVSListBox::GetItemData](#getitemdata)で指定された値を取得するメソッド、 *dwData*パラメーター。 この値は、アプリケーション固有の整数またはその他のデータへのポインターにすることができます。  
   
 ##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
  `CVSListBox` オブジェクトを構築します。  
@@ -148,7 +148,7 @@ CVSListBox();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="edititem"></a>  CVSListBox::EditItem  
  リスト コントロール項目のテキストの編集操作を開始します。  
@@ -158,13 +158,13 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  リスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 編集操作が正常に開始する場合それ以外の場合、`FALSE`です。  
+ 編集操作が正常に開始する場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  項目のラベルをダブルクリックするか、キーを押して、ユーザーが編集操作を開始、 **F2**または**space キー**キーの項目にフォーカスがあるとします。  
   
 ##  <a name="getcount"></a>  CVSListBox::GetCount  
@@ -177,7 +177,7 @@ virtual int GetCount() const;
 ### <a name="return-value"></a>戻り値  
  リスト コントロールの項目の数。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  数が 1 つの最後の項目のインデックス値より大きいインデックスが 0 から始まるため、注意してください。  
   
 ##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
@@ -188,13 +188,13 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  指定した項目に関連付けられている 32 ビット値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して、 [CVSListBox::SetItemData](#setitemdata)または[CVSListBox::AddItem](#additem)に 32 ビット値をリスト コントロール項目に関連付けるメソッド。 この値は、アプリケーション固有の整数またはその他のデータへのポインターにすることができます。  
   
 ##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
@@ -211,7 +211,7 @@ virtual CString GetItemText(int iIndex) const;
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)指定した項目のテキストを含むオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
  現在の埋め込みリスト ビュー コントロールにハンドルを返します。  
@@ -223,7 +223,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="return-value"></a>戻り値  
  埋め込みリスト ビュー コントロールへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドを使用して、サポートする埋め込みリスト ビュー コントロールへのハンドルを取得、`CVSListBox`クラスです。  
   
 ##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
@@ -236,7 +236,7 @@ virtual int GetSelItem() const;
 ### <a name="return-value"></a>戻り値  
  このメソッドが成功した場合、現在選択されている項目の 0 から始まるインデックスそれ以外の場合、-1 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
  編集可能なリスト コントロールから項目を削除します。  
@@ -246,13 +246,13 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 指定した項目が削除された場合それ以外の場合、`FALSE`です。  
+ 指定した項目が削除された場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="selectitem"></a>  CVSListBox::SelectItem  
  編集可能なリスト コントロール文字列を選択します。  
@@ -262,13 +262,13 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iItem`  
+ [in]*iItem*  
  編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` このメソッドが成功した場合それ以外の場合、`FALSE`です。  
+ このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、指定した項目を選択し、必要な場合は、ビューに、項目をスクロールします。  
   
 ##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
@@ -281,13 +281,13 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `iIndex`  
+ [in]*iIndex*  
  編集可能なリスト コントロール項目の 0 から始まるインデックス。  
   
- [入力] `dwData`  
+ [in]*dwData*  
  32 ビット値です。 この値は、アプリケーション固有の整数またはその他のデータへのポインターにすることができます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

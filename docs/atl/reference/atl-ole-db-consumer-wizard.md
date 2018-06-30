@@ -1,7 +1,7 @@
 ---
 title: ATL OLE DB コンシューマー ウィザード |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364951"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121690"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB コンシューマー ウィザード
 このウィザードを設定、OLE DB コンシューマー クラス、データ バインディングで、指定した OLE DB プロバイダーを介して指定されたデータ ソースにアクセスするために必要です。  
@@ -32,7 +32,7 @@ ms.locfileid: "32364951"
 >  このウィザードでは、をクリックする必要があります、**データソース**で名前を入力する前に、データ ソースを選択するにはボタン、`Class`と **.h ファイル**フィールドです。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
- **データ ソース**  
+ **Data Source**  
  **データソース**OLE DB プロバイダーを指定して、指定されたデータ ソースを設定することができます ボタンをクリックします。 このボタンをクリックすると、**データ リンク プロパティ** ダイアログ ボックスが表示されます。 接続文字列の作成の詳細については、**データ リンク プロパティ**ダイアログ ボックスを参照してください[データ リンク API の概要](https://msdn.microsoft.com/library/ms718102.aspx)Windows SDK のドキュメントです。  
   
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.locfileid: "32364951"
   
      をクリックして**OK**を完了します。 **データベース オブジェクトの選択** ダイアログ ボックスが表示されます。 このダイアログ ボックスから、テーブル、ビュー、またはコンシューマーが使用するストアド プロシージャを選択します。  
   
- **プロバイダー**  
+ **Provider**  
      データ ソースへの接続を管理するための適切なプロバイダーを選択します。 プロバイダーの種類は通常、接続先データベースの種類によって決まります。 クリックして、`Next`ボタンまたはをクリックして、**接続**タブです。  
   
  **接続**  
@@ -133,7 +133,7 @@ ms.locfileid: "32364951"
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  
@@ -189,5 +189,5 @@ ms.locfileid: "32364951"
   
 ## <a name="see-also"></a>関連項目  
  [ATL OLE DB コンシューマー](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
- [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [接続文字列およびデータ リンク (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

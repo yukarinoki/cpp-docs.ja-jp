@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f312d7e829657f2cc9c7c41c65afad8d8f8b343
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376396"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121865"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap クラス
 ポインター マップ クラス `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`、および `CMapStringToPtr`のオブジェクトに対してタイプ セーフな "ラップ" が用意されています。  
@@ -42,13 +42,13 @@ class CTypedPtrMap : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  型付きポインター マップ クラスの基本クラスポインター マップ クラスでなければなりません ( `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`、または`CMapStringToPtr`)。  
   
- `KEY`  
+ *KEY*  
  マップのキーとして使用されるオブジェクトのクラスです。  
   
- `VALUE`  
+ *値*  
  マップに格納されているオブジェクトのクラスです。  
   
 ## <a name="members"></a>メンバー  
@@ -68,7 +68,7 @@ class CTypedPtrMap : public BASE_CLASS
 |----------|-----------------|  
 |[CTypedPtrMap::operator](#operator_at)|Map に要素を挿入します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用すると`CTypedPtrMap`C++ の型チェック機能は、一致していないポインター型によって発生したエラーを解消します。  
   
  すべて`CTypedPtrMap`関数はインラインでこのテンプレートの使用が大幅には影響しません、コードの速度またはサイズ。  
@@ -80,7 +80,7 @@ class CTypedPtrMap : public BASE_CLASS
   
  `CTypedPtrMap`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtempl.h  
   
 ##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
@@ -94,25 +94,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rPosition`  
- 参照を指定します、**位置**によって以前返される値`GetNextAssoc`または`BASE_CLASS` **:: 中**呼び出します。  
+ *rPosition*  
+ 以前から返される位置の値への参照を指定`GetNextAssoc`または`BASE_CLASS` **:: 中**呼び出します。  
   
  *KEY*  
  マップのキーの型を指定するテンプレート パラメーター。  
   
- `rKey`  
+ *rKey*  
  取得される要素の返されたキーを指定します。  
   
  *値*  
  マップの値の型を指定するテンプレート パラメーター。  
   
- `rValue`  
+ *rValue*  
  取得される要素の戻り値を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、マップ内のすべての要素の反復処理に最も役立ちます。 位置シーケンスがないとは限りませんキーの値のシーケンスと同じに注意してください。  
   
- 場合は、取得した最後の要素をマップではの新しい値`rNextPosition`に設定されている**NULL**です。  
+ 場合は、取得した最後の要素をマップではの新しい値`rNextPosition`は NULL に設定します。  
   
  このインライン関数が呼び出す`BASE_CLASS` **:: たどる**です。  
   
@@ -124,22 +124,22 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  このマップのクラスの基本クラスを指定するテンプレート パラメーター。  
   
- `key`  
+ *key*  
  検索する要素のキー。  
   
  *値*  
  このマップに格納されている値の型を指定するテンプレート パラメーター。  
   
- `rValue`  
+ *rValue*  
  取得される要素の戻り値を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  要素が見つかった場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このインライン関数が呼び出す`BASE_CLASS` **:: ルックアップ**です。  
   
 ##  <a name="operator_at"></a>  CTypedPtrMap::operator  
@@ -153,13 +153,13 @@ VALUE& operator[ ](base_class ::base_arg_key key);
  *値*  
  このマップに格納されている値の型を指定するテンプレート パラメーター。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  このマップのクラスの基本クラスを指定するテンプレート パラメーター。  
   
- `key`  
+ *key*  
  検索またはマップで作成する要素のキー。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定されたキーにマップ要素がない場合は、新しい要素が作成されます。 ありません「右側にある」(右辺値) この演算子をキーがマップに見つからない可能性がある可能性があるためです。 使用して、`Lookup`要素を取得します。  
   
 ##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
@@ -173,13 +173,13 @@ BOOL RemoveKey(KEY key);
  *KEY*  
  マップのキーの型を指定するテンプレート パラメーター。  
   
- `key`  
+ *key*  
  削除する要素のキー。  
   
 ### <a name="return-value"></a>戻り値  
  項目が見つかり、正常に削除された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細についてを参照してください。 [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)です。  
   
 ##  <a name="setat"></a>  CTypedPtrMap::SetAt  
@@ -193,13 +193,13 @@ void SetAt(KEY key, VALUE newValue);
  *KEY*  
  マップのキーの型を指定するテンプレート パラメーター。  
   
- `key`  
+ *key*  
  NewValue のキー値を指定します。  
   
- `newValue`  
+ *newValue*  
  新しい要素の値であるオブジェクトのポインターを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  詳細についてを参照してください。 [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)です。  
   
 ## <a name="see-also"></a>関連項目  

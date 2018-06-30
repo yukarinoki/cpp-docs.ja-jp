@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce997441c11287626e9681a661f858e33ccdde24
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322213"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122390"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -71,7 +71,7 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Remarks
 
-使用して、`DECLARE_EVENT_MAP`クラスの宣言の最後にマクロです。 クラスのメンバー関数を定義する .cpp ファイルを使用して、`BEGIN_EVENT_MAP`マクロ、コントロールのイベントの各マクロ エントリと`END_EVENT_MAP`イベント リストの末尾を宣言するマクロです。
+クラスの宣言の終了時 DECLARE_EVENT_MAP マクロを使用します。 次に、クラスのメンバー関数を定義する .cpp ファイルを使用 BEGIN_EVENT_MAP マクロ マクロ エントリの各コントロールのイベントと END_EVENT_MAP マクロのイベントのリストの末尾を宣言します。
 
 イベント マップの詳細については、記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)です。
 
@@ -97,9 +97,9 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="remarks"></a>Remarks
 
-実装 (.cpp) ファイルで、クラスのメンバー関数を定義するを持つイベント マップを開始、`BEGIN_EVENT_MAP`マクロ、イベントの各マクロ エントリを追加しを持つイベント マップの完了、`END_EVENT_MAP`マクロです。
+クラスのメンバー関数を定義する実装 (.cpp) ファイル、BEGIN_EVENT_MAP マクロでのイベント マップの開始、イベントの各マクロ エントリを追加し、END_EVENT_MAP マクロを持つイベント マップを完了します。
 
-イベントの詳細については次のようにマップします。 および`BEGIN_EVENT_MAP`マクロ、記事を参照して[ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)です。
+イベント マップと BEGIN_EVENT_MAP マクロの詳細については、記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)です。
 
 ### <a name="requirements"></a>必要条件
 
@@ -107,7 +107,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
-使用して、`END_EVENT_MAP`マクロ イベント マップの定義を終了します。
+END_EVENT_MAP マクロを使用すると、イベント マップの定義を終了します。
 
 ```cpp
 END_EVENT_MAP()
@@ -148,36 +148,36 @@ RGB を表す 32 ビット整数を含むリストへのポインターを続け
 
 |シンボル|パラメーターの型|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_COLOR`|`OLE_COLOR`|
-|`VTS_CY`|`CURRENCY`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|**const** __char\*__|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_FONT`|`IFontDispatch*`|
-|`VTS_HANDLE`|`HANDLE`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_OPTEXCLUSIVE`|`OLE_OPTEXCLUSIVE`|
-|`VTS_PICTURE`|`IPictureDisp*`|
-|`VTS_TRISTATE`|`OLE_TRISTATE`|
-|`VTS_XPOS_PIXELS`|`OLE_XPOS_PIXELS`|
-|`VTS_YPOS_PIXELS`|`OLE_YPOS_PIXELS`|
-|`VTS_XSIZE_PIXELS`|`OLE_XSIZE_PIXELS`|
-|`VTS_YSIZE_PIXELS`|`OLE_YSIZE_PIXELS`|
-|`VTS_XPOS_HIMETRIC`|`OLE_XPOS_HIMETRIC`|
-|`VTS_YPOS_HIMETRIC`|`OLE_YPOS_HIMETRIC`|
-|`VTS_XSIZE_HIMETRIC`|`OLE_XSIZE_HIMETRIC`|
-|`VTS_YSIZE_HIMETRIC`|`OLE_YSIZE_HIMETRIC`|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_COLOR|OLE_COLOR|
+|VTS_CY|通貨|
+|VTS_DATE|DATE|
+|VTS_BSTR|**const** __char\*__|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_FONT|`IFontDispatch*`|
+|VTS_HANDLE|HANDLE|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE|
+|VTS_PICTURE|`IPictureDisp*`|
+|VTS_TRISTATE|OLE_TRISTATE|
+|VTS_XPOS_PIXELS|OLE_XPOS_PIXELS|
+|VTS_YPOS_PIXELS|OLE_YPOS_PIXELS|
+|VTS_XSIZE_PIXELS|OLE_XSIZE_PIXELS|
+|VTS_YSIZE_PIXELS|OLE_YSIZE_PIXELS|
+|TS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
+|VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
+|VTS_XSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
+|VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> 追加のバリアント定数が定義されて、すべてのバリアント型の例外を除いて`VTS_FONT`と`VTS_PICTURE`、variant データ定数へのポインターを提供します。 これらの定数の名前、`VTS_Pconstantname`規則。 たとえば、`VTS_PCOLOR`へのポインター、`VTS_COLOR`定数。
+> 追加のバリアント定数は、すべてのバリアント型、VTS_FONT と VTS_PICTURE、を除き、variant データ定数へのポインターを提供する定義されています。 これらの定数の名前、`VTS_Pconstantname`規則。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
 
 ### <a name="requirements"></a>必要条件
 
@@ -251,7 +251,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-値、 *lpMsg*、 *hWndParent*、および*lpRect*パラメーターは、対応するパラメーターから取得、 **IOleObject::DoVerb**メンバー関数。
+値、 *lpMsg*、 *hWndParent*、および*lpRect*パラメーターは、対応するパラメーターから取得、`IOleObject::DoVerb`メンバー関数。
 
 ### <a name="requirements"></a>必要条件
 
@@ -275,7 +275,7 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="remarks"></a>Remarks
 
-形式は、標準の動詞インデックス`OLEIVERB_`アクションと、その後です。 `OLEIVERB_SHOW`、 `OLEIVERB_HIDE`、および`OLEIVERB_UIACTIVATE`標準的な動詞の例を示します。
+形式は、標準の動詞インデックス`OLEIVERB_`アクションと、その後です。 OLEIVERB_HIDE、および OLEIVERB_UIACTIVATE は、標準的な動詞の例を示します。
 
 参照してください[ON_OLEVERB](#on_oleverb)として使用する関数のプロトタイプの詳細については、 *memberFxn*パラメーター。
 

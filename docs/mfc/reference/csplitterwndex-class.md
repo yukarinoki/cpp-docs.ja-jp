@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368876"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121651"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx クラス
 
@@ -52,7 +52,7 @@ class CSplitterWndEx : public CSplitterWnd
 |----------|-----------------|  
 |[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|分割ウィンドウを描画するためにフレームワークによって呼び出されます。 (上書き[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter))。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  上書き、`OnDrawSplitter`分割ウィンドウのグラフィック要素の外観をカスタマイズする方法です。  
   
  `CSplitterWndEx`と共にクラスを使用する、 [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)、 [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)、および[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)メソッドビジュアル マネージャーによって実装されます。 アプリケーションで分割ウィンドウを描画するビジュアル マネージャーの宣言を置き換える、`CSplitterWnd`クラス、`CSplitterWndEx`クラスです。 フレーム ウィンドウのアプリケーションでは、分割ウィンドウ クラスを mainfrm.h に配置されている CMainFrame クラスで宣言されます。 例については、次を参照してください。、`OutlookDemo`サンプル Samples ディレクトリにします。  
@@ -66,7 +66,7 @@ class CSplitterWndEx : public CSplitterWnd
   
  [CSplitterWnd](csplitterwnd-class.md)  
    
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxsplitterwndex.h  
   
 ##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
@@ -81,16 +81,16 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- デバイス コンテキストへのポインター。 このパラメーターが場合`NULL`フレームワークには、アクティブなウィンドウが再描画します。  
+ [in]*pDC*  
+ デバイス コンテキストへのポインター。 このパラメーターが NULL の場合、フレームワークには、アクティブなウィンドウが再描画します。  
   
- [入力] `nType`  
+ [in]*タイプ*  
  1 つ、`CSplitterWnd::ESplitType`を描画する分割ウィンドウ要素を指定する列挙値。 有効な値は`splitBox`、 `splitBar`、 `splitIntersection`、および`splitBorder`です。  
   
- [入力] `rect`  
+ [in]*rect*  
  ディメンションと、指定された分割ウィンドウ要素を描画する場所を指定する外接する四角形。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../hierarchy-chart.md)   

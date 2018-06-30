@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375280"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121638"
 ---
 # <a name="cwinformscontrol-class"></a>関数クラス
 Windows フォーム コントロールのホスティング用の基本機能を提供します。  
@@ -68,7 +68,7 @@ class CWinFormsControl : public CWnd
 |[CWinFormsControl::operator-&gt;](#operator_-_gt)|置換[CWinFormsControl::GetControl](#getcontrol)式でします。|  
 |[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows フォーム コントロールへのポインターとして型をキャストします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CWinFormsControl`クラスには、Windows フォーム コントロールのホスティングの基本的な機能が用意されています。  
   
  Windows フォームを使用する方法については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
@@ -78,7 +78,7 @@ class CWinFormsControl : public CWnd
 > [!NOTE]
 >  MFC Windows フォームの統合は、(AFXDLL が定義されている) MFC と動的にリンクするプロジェクトでのみ動作します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwinforms.h  
   
 ##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
@@ -113,40 +113,40 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pType`  
+ *p 入力してください。*  
  作成するコントロールのデータ型。 必要があります、[型](https://msdn.microsoft.com/en-us/library/system.type)データ型。  
   
- `dwStyle`  
+ *dwStyle*  
  コントロールに適用するウィンドウ スタイル。 組み合わせを指定[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)です。 現時点では、次のスタイルのみがサポートされている: WS_TABSTOP、WS_VISIBLE、WS_DISABLED および WS_GROUP です。  
   
- `rect`  
+ *rect*  
  A [RECT 構造体](../../mfc/reference/rect-structure1.md)コントロールの左上隅および右下隅の座標を定義する (最初のオーバー ロードだけ)。  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  静的なプレース ホルダー コントロールのハンドルでは、リソース エディターで配置されます。 新しく作成された Windows フォーム コントロールの位置、z オーダーとスタイルと仮定した場合、スタティック コントロールが置き換えられます (2 番目のオーバー ロードだけ)。  
   
- `pParentWnd`  
+ *pParentWnd*  
  親ウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  新しく作成されたコントロールに割り当てられるリソースの ID 番号。  
   
- `pControl`  
+ *pControl*  
  関連付けられる Windows フォーム コントロールのインスタンス、[関数](../../mfc/reference/cwinformscontrol-class.md)(4 番目のオーバー ロードだけ) のオブジェクトします。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、0 以外の値を返します。 失敗した場合は、0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、MFC コンテナー内の .NET Framework の Windows フォーム コントロールをインスタンス化します。  
   
- メソッドの最初のオーバー ロードは、.NET Framework データ型を受け入れる`pType`MFC は、この型の新しいオブジェクトをインスタンス化できるようにします。 `pType` 必要があります、[型](https://msdn.microsoft.com/en-us/library/system.type)データ型。  
+ メソッドの最初のオーバー ロードは、.NET Framework データ型を受け入れる*p 入力してください*MFC は、この型の新しいオブジェクトをインスタンス化できるようにします。 *p 入力してください*する必要があります、[型](https://msdn.microsoft.com/en-us/library/system.type)データ型。  
   
- メソッドの 2 番目のオーバー ロードに基づく Windows フォーム コントロールを作成する、`TManagedControl`のテンプレート パラメーター、`CWinFormsControl`クラスです。 コントロールの位置とサイズがに基づいて、`RECT`構造が、メソッドに渡されます。 のみ`dwStyle`スタイルには重要です。  
+ メソッドの 2 番目のオーバー ロードに基づく Windows フォーム コントロールを作成する、`TManagedControl`のテンプレート パラメーター、`CWinFormsControl`クラスです。 コントロールの位置とサイズがに基づいて、`RECT`構造が、メソッドに渡されます。 のみ*dwStyle*スタイルには重要です。  
   
- メソッドの 3 番目のオーバー ロードは、破棄して、その位置、z オーダーとスタイルを想定して、静的なコントロールを置換する Windows フォーム コントロールを作成します。 静的コントロールは、Windows フォーム コントロールのプレース ホルダーとしてのみ機能します。 このオーバー ロードがからスタイルを結合、コントロールを作成するときに`dwStyle`スタティック コントロールのリソースのスタイルを使用します。  
+ メソッドの 3 番目のオーバー ロードは、破棄して、その位置、z オーダーとスタイルを想定して、静的なコントロールを置換する Windows フォーム コントロールを作成します。 静的コントロールは、Windows フォーム コントロールのプレース ホルダーとしてのみ機能します。 このオーバー ロードがからスタイルを結合、コントロールを作成するときに*dwStyle*スタティック コントロールのリソースのスタイルを使用します。  
   
- メソッドの 4 番目のオーバー ロードは、既にインスタンス化された Windows フォーム コントロールに渡すことができる`pControl`MFC をラップします。 同じ型でなければなりません、`TManagedControl`のテンプレート パラメーター、`CWinFormsControl`クラスです。  
+ メソッドの 4 番目のオーバー ロードは、既にインスタンス化された Windows フォーム コントロールに渡すことができる*pControl* MFC をラップします。 同じ型でなければなりません、`TManagedControl`のテンプレート パラメーター、`CWinFormsControl`クラスです。  
   
  参照してください[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)サンプル Windows フォームを使用して制御します。  
   
@@ -157,7 +157,7 @@ inline BOOL CreateManagedControl(
 CWinFormsControl();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出すときに、Windows フォーム コントロールがインスタンス化[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)です。  
   
 ##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
@@ -183,7 +183,7 @@ inline HWND GetControlHandle() const;
 ### <a name="return-value"></a>戻り値  
  Windows フォーム コントロールへのハンドルを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `GetControlHandle` .NET Framework のコントロールのプロパティに格納されているウィンドウ ハンドルを返すヘルパー メソッドです。 ウィンドウのハンドル値をコピー [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)への呼び出し中に[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)です。  
   
 ##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
@@ -193,7 +193,7 @@ inline HWND GetControlHandle() const;
 inline TManagedControl^  operator->() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子は、便利な構文を置き換える`GetControl`式でします。  
   
  Windows フォームの詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
@@ -205,7 +205,7 @@ inline TManagedControl^  operator->() const;
 inline operator TManagedControl^() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子は渡します`CWinFormsControl<TManagedControl>`を Windows フォーム コントロールへのポインターを受け取る関数にします。  
   
 ## <a name="see-also"></a>関連項目  

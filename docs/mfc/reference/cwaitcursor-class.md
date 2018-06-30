@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372509"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122672"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor クラス
 時間がかかる処理を実行している最中に、通常は砂時計として表示される待機カーソルを表示する 1 つの方法を提供します。  
@@ -50,7 +50,7 @@ class CWaitCursor
 |----------|-----------------|  
 |[CWaitCursor::Restore](#restore)|変更された後に待機カーソルを復元します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CWaitCursor` 基本クラスはありません。  
   
  正確な Windows プログラミングでは、かなりの時間を取得する操作を実行するたびに待機カーソルを表示することが必要です。  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  コンス トラクターとデストラクターの動作のため`CWaitCursor`オブジェクトは常にローカル変数として宣言: グローバル変数として宣言もで割り当てられている**新しい**です。  
   
- カーソルが、メッセージ ボックスまたはダイアログ ボックスで、呼び出しを表示するなど、変更する操作を実行する場合、[復元](#restore)待機カーソルを復元するメンバー関数。 呼び出すことが**復元**待機カーソルが表示されている場合でもです。  
+ カーソルが、メッセージ ボックスまたはダイアログ ボックスで、呼び出しを表示するなど、変更する操作を実行する場合、[復元](#restore)待機カーソルを復元するメンバー関数。 呼び出すことが`Restore`待機カーソルが表示されている場合でもです。  
   
  待機カーソルを表示する別の方法は、の組み合わせを使用する[CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)、 [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)、そして[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). ただし、`CWaitCursor`時間のかかる操作を完了すると、以前のカーソルにカーソルを設定する必要がないために使用する方が簡単です。  
   
@@ -72,7 +72,7 @@ class CWaitCursor
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CWaitCursor`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ## <a name="example"></a>例  
@@ -85,7 +85,7 @@ class CWaitCursor
 CWaitCursor();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンス トラクターは、表示される待機カーソルを自動的にさせます。  
   
  オブジェクトがスコープから外れとき (をブロックの最後に、`CWaitCursor`オブジェクトが宣言されている)、デストラクターは、以前のカーソルにカーソルを設定します。 つまり、オブジェクトは、必要なクリーンアップを自動的に実行します。  
@@ -105,8 +105,8 @@ CWaitCursor();
 void Restore();
 ```  
   
-### <a name="remarks"></a>コメント  
- [Ok] を呼び出すことが**復元**待機カーソルが表示されている場合でもです。  
+### <a name="remarks"></a>Remarks  
+ [Ok] を呼び出すことが`Restore`待機カーソルが表示されている場合でもです。  
   
  1 つ以外の関数の中に待機カーソルを復元する必要がある場合、`CWaitCursor`を呼び出して、オブジェクトが宣言されている[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)です。  
   
