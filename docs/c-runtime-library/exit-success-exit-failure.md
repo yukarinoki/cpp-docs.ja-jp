@@ -1,7 +1,7 @@
 ---
 title: EXIT_SUCCESS、EXIT_FAILURE | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -18,26 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22bb302e89ae8bb6c4586c09c38a51b8c848eb7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 671946045de5cfd2a7a34e163b459ebfc3bb5479
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387679"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954349"
 ---
 # <a name="exitsuccess-exitfailure"></a>EXIT_SUCCESS、EXIT_FAILURE
-## <a name="syntax"></a>構文  
-  
-```  
-  
-#include <stdlib.h>  
-```  
-  
-## <a name="remarks"></a>コメント  
- これらは **exit** 関数と `_exit` 関数の引数であり、`atexit` 関数と `_onexit` 関数の戻り値です。  
-  
-## <a name="see-also"></a>参照  
- [atexit](../c-runtime-library/reference/atexit.md)   
- [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+## <a name="required-header"></a>必須ヘッダー
+
+```c
+#include <stdlib.h>
+```
+
+## <a name="remarks"></a>コメント
+
+これらは [exit](reference/exit-exit-exit.md) 関数と [_exit](reference/exit-exit-exit.md) 関数の引数であり、[atexit](reference/atexit.md) 関数と [_onexit](reference/onexit-onexit-m.md) 関数の戻り値です。
+
+|定数|定義済みの値|
+|-|-|
+|EXIT_SUCCESS|0|
+|EXIT_FAILURE|1|
+
+## <a name="see-also"></a>関連項目
+
+[グローバル定数](../c-runtime-library/global-constants.md)

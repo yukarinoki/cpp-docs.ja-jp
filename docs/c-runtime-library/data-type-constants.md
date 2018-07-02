@@ -1,7 +1,7 @@
 ---
 title: データ型定数 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -44,6 +44,39 @@ f1_keywords:
 - UCHAR_MAX
 - FLT_EPSILON
 - UINT_MAX
+- LLONG_MIN
+- LLONG_MAX
+- ULLONG_MAX
+- _I8_MIN
+- _I8_MAX
+- _UI8_MAX
+- _I16_MIN
+- _I16_MAX
+- _UI16_MAX
+- _I32_MIN
+- _I32_MAX
+- _UI32_MAX
+- _I64_MIN
+- _I64_MAX
+- _UI64_MAX
+- _I128_MIN
+- _I128_MAX
+- _UI128_MAX
+- SIZE_MAX
+- RSIZE_MAX
+- LDBL_DIG
+- LDBL_EPSILON
+- LDBL_HAS_SUBNORM
+- LDBL_MANT_DIG
+- LDBL_MAX
+- LDBL_MAX_10_EXP
+- LDBL_MAX_EXP
+- LDBL_MIN
+- LDBL_MIN_10_EXP
+- LDBL_MIN_EXP
+- _LDBL_RADIX
+- LDBL_TRUE_MIN
+- DECIMAL_DIG
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,72 +124,142 @@ helpviewer_keywords:
 - UINT_MAX constant
 - FLT_MANT_DIG constant
 - SCHAR_MIN constant
+- LLONG_MIN constant
+- LLONG_MAX constant
+- ULLONG_MAX constant
+- _I8_MIN constant
+- _I8_MAX constant
+- _UI8_MAX constant
+- _I16_MIN constant
+- _I16_MAX constant
+- _UI16_MAX constant
+- _I32_MIN constant
+- _I32_MAX constant
+- _UI32_MAX constant
+- _I64_MIN constant
+- _I64_MAX constant
+- _UI64_MAX constant
+- _I128_MIN constant
+- _I128_MAX constant
+- _UI128_MAX constant
+- SIZE_MAX constant
+- RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9a64b81ae90c517e9cd15e796dfb1333c7b08c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55690bc06ae838ad44e1d0d6f0527974b7859b94
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392147"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952467"
 ---
 # <a name="data-type-constants"></a>データ型定数
-データ型定数は、整数データ型に許可される実装依存の値範囲です。 下の一覧の定数は整数データ型の範囲を与えるものであり、LIMITS.H で定義されています。  
-  
+
+データ型定数は、整数データ型と浮動小数点データ型に許可される実装依存の値範囲です。
+
+## <a name="integral-type-constants"></a>整数型の定数
+
+これらの定数は、整数データ型の範囲を示します。 これらの定数を使用するには、ソース ファイルに limits.h ヘッダーをインクルードします。
+
+```C
+#include <limits.h>
+```
+
 > [!NOTE]
->  /J コンパイラ オプションは、既定値を `char` から `unsigned` に変更します。  
-  
-|定数|[値]|説明|  
-|--------------|-----------|-------------|  
-|**SCHAR_MAX**|127|最大符号付き `char` 値|  
-|**SCHAR_MIN**|-128|最小符号付き `char` 値|  
-|**UCHAR_MAX**|255 (0xff)|最大 `unsigned char` 値|  
-|**CHAR_BIT**|8|`char` のビット数|  
-|**USHRT_MAX**|65535 (0xffff)|最大**符号なしの short** 値|  
-|**SHRT_MAX**|32767|最大 (符号付き) **short**値|  
-|**SHRT_MIN**|-32768|最小 (符号付き) **short**値|  
-|**UINT_MAX**|4294967295 (0xffffffff)|最大 `unsigned int` 値|  
-|**ULONG_MAX**|4294967295 (0xffffffff)|最大 `unsigned long` 値|  
-|**INT_MAX**|2147483647|最大 (符号付き) `int` 値|  
-|**INT_MIN**|-2147483647-1|最小 (符号付き) `int` 値|  
-|**LONG_MAX**|2147483647|最大 (符号付き) **long** 値|  
-|**LONG_MIN**|-2147483647-1|最小 (符号付き) **long** 値|  
-|**CHAR_MAX**|127 (/J オプションが使用される場合は 255)|最大 `char` 値|  
-|**CHAR_MIN**|-128 (/J オプションが使用される場合は 0)|最小 `char` 値|  
-|**MB_LEN_MAX**|2|マルチバイト `char` の最大バイト数|  
-|**_I64_MAX**|9223372036854775807|最大 (符号付き) __**int64** 値|  
-|**_I64_MIN**|-9223372036854775807-1|最小 (符号付き) __**int64** 値|  
-|**_UI64_MAX**|0xffffffffffffffff|最大 (符号なし) __**int64** 値|  
-  
- 次の定数は **double** 型と **float** 型の範囲とその他の特徴を与え、FLOAT.H で定義されます。  
-  
-|定数|[値]|説明|  
-|--------------|-----------|-----------------|  
-|**DBL_DIG**|16|有効桁数|  
-|**DBL_EPSILON**|2.2204460492503131e-016|1.0+**DBL_EPSILON** !=1.0 のように最小|  
-|**DBL_MANT_DIG**|53|仮数部のビット数|  
-|**DBL_MAX**|1.7976931348623158e+308|最大値|  
-|**DBL_MAX_10_EXP**|308|最大 10 進指数|  
-|**DBL_MAX_EXP**|1024|最大 2 進指数|  
-|**DBL_MIN**|2.2250738585072014e-308|正の最小数|  
-|**DBL_MIN_10_EXP**|(-307)|最小 10 進指数|  
-|**DBL_MIN_EXP**|(-1021)|最小 2 進指数|  
-|**_DBL_RADIX**|2|指数の基数|  
-|**_DBL_ROUNDS**|1|加算の丸め: 近接|  
-|**FLT_DIG**|6|有効桁数|  
-|**FLT_EPSILON**|1.192092896e-07F|1.0+**FLT_EPSILON** !=1.0 のように最小|  
-|**FLT_MANT_DIG**|24|仮数部のビット数|  
-|**FLT_MAX**|3.402823466e+38F|最大値|  
-|**FLT_MAX_10_EXP**|38|最大 10 進指数|  
-|**FLT_MAX_EXP**|128|最大 2 進指数|  
-|**FLT_MIN**|1.175494351e-38F|正の最小数|  
-|**FLT_MIN_10_EXP**|(-37)|最小 10 進指数|  
-|**FLT_MIN_EXP**|(-125)|最小 2 進指数|  
-|**FLT_RADIX**|2|指数の基数|  
-|**FLT_ROUNDS**|1|加算の丸め: 近接|  
-  
-## <a name="see-also"></a>参照  
- [グローバル定数](../c-runtime-library/global-constants.md)
+> [/J](../build/reference/j-default-char-type-is-unsigned.md) コンパイラ オプションは、既定の **char** 型を **unsigned** に変更します。
+
+|定数|[値]|説明|
+|--------------|-----------|-------------|
+|**CHAR_BIT**|8|**char** のビット数|
+|**SCHAR_MIN**|(-128)|最小符号付き **char** 値|
+|**SCHAR_MAX**|127|最大符号付き **char** 値|
+|**UCHAR_MAX**|255 (0xff)|最大**符号なし** **char** 値|
+|**CHAR_MIN**|(-128) (**/J** オプションが使用される場合は 0)|最小 **char** 値|
+|**CHAR_MAX**|127 (**/J** オプションが使用される場合は 255)|最大 **char** 値|
+|**MB_LEN_MAX**|5|マルチバイト **char** の最大バイト数|
+|**SHRT_MIN**|-32768|最小符号付き **short** 値|
+|**SHRT_MAX**|32767|最大符号付き **short** 値|
+|**USHRT_MAX**|65535 (0xffff)|最大**符号なし** **short** 値|
+|**INT_MIN**|(-2147483647 - 1)|最小符号付き **int** 値|
+|**INT_MAX**|2147483647|最大符号付き **int** 値|
+|**UINT_MAX**|4294967295 (0xffffffff)|最大**符号なし** **int** 値|
+|**LONG_MIN**|(-2147483647L - 1)|最小符号付き **long** 値|
+|**LONG_MAX**|2147483647L|最大符号付き **long** 値|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|最大**符号なし** **long** 値|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|最小署名付き **long** **long** または **__int64** 値|
+|**LLONG_MAX**|9223372036854775807LL|最大署名付き **long** **long** または **__int64** 値|
+|**ULLONG_MAX**|0xffffffffffffffffull|最大**符号なし** **long** **long** 値|
+|**_I8_MIN**|(-127i8 - 1)|最小符号付き 8 ビット値|
+|**_I8_MAX**|127i8|最大符号付き 8 ビット値|
+|**_UI8_MAX**|0xffui8|最大符号なし 8 ビット値|
+|**_I16_MIN**|(-32767i16 - 1)|最小符号付き 16 ビット値|
+|**_I16_MAX**|32767i16|最大符号付き 16 ビット値|
+|**_UI16_MAX**|0xffffui16|最大符号なし 16 ビット値|
+|**_I32_MIN**|(-2147483647i32 - 1)|最小符号付き 32 ビット値|
+|**_I32_MAX**|2147483647i32|最大符号付き 32 ビット値|
+|**_UI32_MAX**|0xffffffffui32|最大符号なし 32 ビット値|
+|**_I64_MIN**|(-9223372036854775807 - 1)|最小符号付き 64 ビット値|
+|**_I64_MAX**|9223372036854775807|最大符号付き 64 ビット値|
+|**_UI64_MAX**|0xffffffffffffffffui64|最大符号なし 64 ビット値|
+|**_I128_MIN**|(-170141183460469231731687303715884105727i128 - 1)|最小符号付き 128 ビット値|
+|**_I128_MAX**|170141183460469231731687303715884105727i128|最大符号付き 128 ビット値|
+|**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|最大符号なし 128 ビット値|
+|**SIZE_MAX**|**_WIN64** が定義されている場合は **_UI64_MAX** と同じ、それ以外の場合は **UINT_MAX**|最大ネイティブ整数サイズ|
+|**RSIZE_MAX**|(**SIZE_MAX** >> 1) と同じ|セキュリティで保護された最大ライブラリ整数サイズ|
+
+## <a name="floating-point-type-constants"></a>浮動小数点型定数
+
+次の定数は、**long** **double**、**double**、**float** データ型の範囲とその他の特徴を与えます。 これらの定数を使用するには、ソース ファイルに float.h ヘッダーをインクルードします。
+
+```C
+#include <float.h>
+```
+
+|定数|[値]|説明|
+|--------------|-----------|-----------------|
+|**DBL_DECIMAL_DIG**|17|丸め精度の有効桁数|
+|**DBL_DIG**|16|有効桁数|
+|**DBL_EPSILON**|2.2204460492503131e-016|1.0 + **DBL_EPSILON** != 1.0 のように最小|
+|**DBL_HAS_SUBNORM**|1|入力は正常未満 (非正規) 数をサポートします|
+|**DBL_MANT_DIG**|53|有効桁 (仮数) のビット数|
+|**DBL_MAX**|1.7976931348623158e+308|最大値|
+|**DBL_MAX_10_EXP**|308|最大 10 進指数|
+|**DBL_MAX_EXP**|1024|最大 2 進指数|
+|**DBL_MIN**|2.2250738585072014e-308|正規化された正の最小数|
+|**DBL_MIN_10_EXP**|(-307)|最小 10 進指数|
+|**DBL_MIN_EXP**|(-1021)|最小 2 進指数|
+|**_DBL_RADIX**|2|指数の基数|
+|**DBL_TRUE_MIN**|4.9406564584124654e-324|正常未満の正の最小数|
+|**FLT_DECIMAL_DIG**|9|丸め精度の有効桁数|
+|**FLT_DIG**|6|有効桁数|
+|**FLT_EPSILON**|1.192092896e-07F|1.0 + **FLT_EPSILON** != 1.0 のように最小|
+|**FLT_HAS_SUBNORM**|1|入力は正常未満 (非正規) 数をサポートします|
+|**FLT_MANT_DIG**|24|有効桁 (仮数) のビット数|
+|**FLT_MAX**|3.402823466e+38F|最大値|
+|**FLT_MAX_10_EXP**|38|最大 10 進指数|
+|**FLT_MAX_EXP**|128|最大 2 進指数|
+|**FLT_MIN**|1.175494351e-38F|正規化された正の最小数|
+|**FLT_MIN_10_EXP**|(-37)|最小 10 進指数|
+|**FLT_MIN_EXP**|(-125)|最小 2 進指数|
+|**FLT_RADIX**|2|指数の基数|
+|**FLT_TRUE_MIN**|1.401298464e-45F|正常未満の正の最小数|
+|**LDBL_DIG**|16|有効桁数|
+|**LDBL_EPSILON**|2.2204460492503131e-016|1.0 + **LDBL_EPSILON** != 1.0 のように最小|
+|**LDBL_HAS_SUBNORM**|1|入力は正常未満 (非正規) 数をサポートします|
+|**LDBL_MANT_DIG**|53|有効桁 (仮数) のビット数|
+|**LDBL_MAX**|1.7976931348623158e+308|最大値|
+|**LDBL_MAX_10_EXP**|308|最大 10 進指数|
+|**LDBL_MAX_EXP**|1024|最大 2 進指数|
+|**LDBL_MIN**|2.2250738585072014e-308|正規化された正の最小数|
+|**LDBL_MIN_10_EXP**|(-307)|最小 10 進指数|
+|**LDBL_MIN_EXP**|(-1021)|最小 2 進指数|
+|**_LDBL_RADIX**|2|指数の基数|
+|**LDBL_TRUE_MIN**|4.9406564584124654e-324|正常未満の正の最小数|
+|**DECIMAL_DIG**|**DBL_DECIMAL_DIG** と同じ|既定 (倍精度) の丸め精度の有効桁数|
+
+## <a name="see-also"></a>関連項目
+
+[グローバル定数](../c-runtime-library/global-constants.md)  
