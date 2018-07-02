@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
-このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 この体系が基づいている先は、*注解 C++ リファレンス マニュアル* Margaret Ellis と Bjarne stroustrup 共著者や、ANSI/ISO C++  国際規格 (ISO/IEC FDIS 14882)です。 Microsoft 固有の C++ 言語機能の実装も含まれます。  
+このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 この体系は、Margaret Ellis と Bjarne Stroustrup による*Annotated C++ Reference Manual* および ANSI/ISO C++ 国際規格 (ISO/IEC FDIS 14882) に基づいてます。 Microsoft 固有の C++ 言語機能の実装も含まれます。 
 
 最新の C++ プログラミングの概要については、次を参照してください。[C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)に戻ってください。
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
  クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数、データ メンバー、ビット フィールド、 this ポインター、入れ子になったクラス。  
   
  [派生クラス](../cpp/inheritance-cpp.md)  
- 単一継承と多重継承、仮想関数、複数の基底クラス、抽象クラス、スコープ規則。 __super も、および \__interface キーワード。  
+ 単一継承と多重継承、仮想関数、複数の基底クラス、抽象クラス、スコープ規則。また、__super および __interface キーワード。  
   
  [メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)  
  クラス メンバーへのアクセスの制御: public、private、および protected キーワード。 friend 関数および friend クラス。  
