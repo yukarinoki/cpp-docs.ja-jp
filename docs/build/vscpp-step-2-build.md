@@ -48,7 +48,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 おめでとうございます! あなたは最初の「Hello, world!」コンソール アプリを Visual Studio で作成しました。 任意のキーを押せば、コンソール ウィンドウが閉じられ、Visual Studio に戻ります。
 
-[問題が発生しました。](#build-and-run-your-code-in-visual-studio-issues)
+[問題が発生しました](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>コマンド ウィンドウで、コードを実行します。
 
@@ -80,7 +80,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 ソースコード エディターで赤い波線が下に表示される場合、ビルドにエラーまたは警告があります。 コードが、スペル、句読点、および大文字小文字の例と一致することを確認してください。
 
-[戻る。](#build-and-run-your-code-in-visual-studio)
+[戻る](#build-and-run-your-code-in-visual-studio)
 
 ### <a name="run-your-code-in-a-command-window-issues"></a>コマンド ウィンドウで、コードを実行の問題
 
@@ -88,7 +88,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 表示されない場合**パスとしてコピー**ショートカット メニューで、メニューを閉じるし、Shift キーを押しながら、もう一度開きます。 これは、便宜上だけです。 フォルダーに、ファイル エクスプ ローラーの検索バーからパスをコピーして貼り付けます、**実行**ダイアログ ボックスで、最後に実行可能ファイルの名前を入力します。 ほんの少しだけ多くの入力しますが、同じ結果があります。
 
-[戻る。](#run-your-code-in-a-command-window)
+[戻る](#run-your-code-in-a-command-window)
 
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />
