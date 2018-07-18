@@ -1,5 +1,5 @@
 ---
-title: ATL AXHost を使用して ActiveX コントロールをホストしている |Microsoft ドキュメント
+title: ATL AXHost を使用して ActiveX コントロールのホスト |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e26fd9e80b96c2b0196e3fd0e11b9c97f0f3bff3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356254"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027207"
 ---
-# <a name="hosting-activex-controls-using-atl-axhost"></a>ATL AXHost を使用して ActiveX コントロールをホストしています。
-このトピックのサンプルでは、AXHost を作成する方法と ATL のさまざまな機能を使用して ActiveX コントロールをホストする方法を示します。 コントロールとシンク イベントにアクセスする方法も示しています (を使用して[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) でホストされるコントロールからです。 このサンプルでは、メイン ウィンドウ、または子ウィンドウで、カレンダー コントロールをホストします。  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>ATL AXHost を使用して ActiveX コントロールのホスト
+このトピックのサンプルでは、AXHost を作成する方法とさまざまな ATL 関数を使用して ActiveX コントロールをホストする方法を示します。 コントロールとシンク イベントにアクセスする方法も示します (を使用して[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) ホストされているコントロールから。 このサンプルでは、メイン ウィンドウ、または子ウィンドウには、予定表コントロールをホストします。  
   
- 定義に注意してください、`USE_METHOD`シンボル。 1 ~ 8 で変更するには、この記号の値を変更することができます。 記号の値は、コントロールの作成方法を決定します。  
+ USE_METHOD シンボルの定義に注目してください。 1 ~ 8 で変更するには、この記号の値を変更することができます。 シンボルの値は、コントロールの作成方法を決定します。  
   
--   値が偶数`USE_METHOD`ウィンドウのホストのサブクラスを作成する呼び出し、コントロールのホストに変換します。 奇数の値には、コードは、ホストとして機能する子ウィンドウを作成します。  
+-   USE_METHOD、ホストのサブクラスを作成するには、ウィンドウへの呼び出しの値が偶数とコントロールのホストに変換します。 奇数の値は、コードは、ホストとして機能する子ウィンドウを作成します。  
   
--   値が`USE_METHOD`コントロールへのアクセスを 1 4 から、およびイベント シンクもホストを作成する呼び出しで行われます。 値は 5 ~ 8 では、ホストにインターフェイスを照会し、シンクをフックします。  
+-   コントロールへのアクセスを 1 から 4 まで USE_METHOD の値と、呼び出しで行われます。 イベントのシンクをもホストを作成します。 5 ~ 8 の値は、ホストにインターフェイスを照会し、シンクをフックします。  
   
- 次に概要を示します。  
+次に概要を示します。  
   
-|USE_METHOD|ホスト|アクセス制御とイベント シンク|使用する関数|  
+|USE_METHOD|ホスト|アクセスを制御し、イベント シンク|使用する関数|  
 |-----------------|----------|--------------------------------------|---------------------------|  
-|1|子ウィンドウ|1 つの手順|CreateControlLicEx|  
-|2|メイン ウィンドウ|1 つの手順|AtlAxCreateControlLicEx|  
-|3|子ウィンドウ|1 つの手順|CreateControlEx|  
-|4|メイン ウィンドウ|1 つの手順|AtlAxCreateControlEx|  
+|1|子ウィンドウ|1 つのステップ|CreateControlLicEx|  
+|2|メイン ウィンドウ|1 つのステップ|AtlAxCreateControlLicEx|  
+|3|子ウィンドウ|1 つのステップ|CreateControlEx|  
+|4|メイン ウィンドウ|1 つのステップ|AtlAxCreateControlEx|  
 |5|子ウィンドウ|複数のステップ|CreateControlLic|  
 |6|メイン ウィンドウ|複数のステップ|AtlAxCreateControlLic|  
 |7|子ウィンドウ|複数のステップ|CreateControl|  
@@ -51,7 +51,7 @@ ms.locfileid: "32356254"
  [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
 ## <a name="see-also"></a>関連項目  
- [コントロール コンテインメントよく寄せられる質問](../atl/atl-control-containment-faq.md)   
+ [コントロール コンテインメント:](../atl/atl-control-containment-faq.md)   
  [して](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
  [行うに](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
  [して](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   

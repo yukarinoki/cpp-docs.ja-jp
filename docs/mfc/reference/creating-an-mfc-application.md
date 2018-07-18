@@ -1,5 +1,5 @@
 ---
-title: MFC アプリケーションの作成 |Microsoft ドキュメント
+title: MFC アプリケーションの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b30b1e0f5e8031609845c78da7558e8b3207862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368814"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026992"
 ---
 # <a name="creating-an-mfc-application"></a>MFC アプリケーションの作成
 MFC アプリケーションは、MFC (Microsoft Foundation Class) ライブラリに基づく Windows 対応の実行可能なアプリケーションです。 MFC アプリケーションを作成する最も簡単な方法は、MFC アプリケーション ウィザードを使用する方法です。  
@@ -29,9 +29,9 @@ MFC アプリケーションは、MFC (Microsoft Foundation Class) ライブラ�
 > [!IMPORTANT]
 >  MFC プロジェクトは、Visual Studio Express エディションではサポートされていません。  
   
- 通常、MFC の実行可能ファイルが 5 つの種類に分類されます。 標準の Windows アプリケーション、ダイアログ ボックス、フォーム ベースのアプリケーション、エクスプ ローラー スタイル アプリケーションと Web ブラウザー スタイルのアプリケーションです。 詳細については次を参照してください:  
+ MFC の実行可能ファイルは通常 5 つの種類に分類されます。 標準の Windows アプリケーション、ダイアログ ボックス、フォーム ベースのアプリケーション、エクスプ ローラー スタイルのアプリケーションおよび Web ブラウザー スタイルのアプリケーション。 詳細については次を参照してください:  
   
--   [Windows アプリケーションを作成するクラスを使用します。](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
+-   [Windows アプリケーションを記述するクラスを使用します。](../../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
 -   [ダイアログ ボックスの作成と表示](../../mfc/creating-and-displaying-dialog-boxes.md)  
   
@@ -45,22 +45,22 @@ MFC アプリケーションは、MFC (Microsoft Foundation Class) ライブラ�
   
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>MFC アプリケーション ウィザードを使用して MFC アプリケーションを作成するには  
   
-1.  ヘルプ トピックの指示に従って、 [Visual C のアプリケーション ウィザードでプロジェクトを作成する](../../ide/creating-desktop-projects-by-using-application-wizards.md)です。  
+1.  ヘルプ トピックの「[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)」の手順に従います。  
   
-2.  **新しいプロジェクト**ダイアログ ボックスで、 **MFC アプリケーション**を開くには、ウィザードの [テンプレート] ペインでします。  
+2.  **新しいプロジェクト**ダイアログ ボックスで、 **MFC アプリケーション**テンプレート ペイン、ウィザードを開きます。  
   
-3.  使用して、アプリケーションの設定を定義、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)です。  
+3.  使用して、アプリケーションの設定を定義、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)します。  
   
     > [!NOTE]
     >  ウィザードの既定の設定を使用する場合は、この手順を省略します。  
   
-4.  をクリックして**完了**ウィザードを終了し、開発環境で、新しいプロジェクトを開きます。  
+4.  クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。  
   
- 作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**です。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)です。  
+ 作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [Visual C の Windows アプリケーションのデバッグの準備:](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
- [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [ビジュアルの C++ Windows アプリケーションのデバッグの準備:](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
- [アプリケーションを展開します。](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

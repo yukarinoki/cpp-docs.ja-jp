@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Detach |Microsoft ドキュメント
+title: _variant_t::Detach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53d6dc51117ffe9b82511c6084e36bc49873b88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71257b369e7833f279c0f68ce33e0ec925ebf6b
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421948"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026261"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Microsoft 固有の仕様**  
   
- カプセル化されたデタッチ**バリアント**オブジェクトからこの`_variant_t`オブジェクト。  
+ カプセル化されたデタッチ`VARIANT`オブジェクトからこの`_variant_t`オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,10 +40,10 @@ VARIANT Detach( );
 ```  
   
 ## <a name="return-value"></a>戻り値  
- カプセル化された**バリアント**です。  
+ カプセル化された`VARIANT`します。  
   
-## <a name="remarks"></a>コメント  
- 抽出して戻し、カプセル化された**バリアント**、これをクリア`_variant_t`破棄せずオブジェクト。 このメンバー関数を削除、**バリアント**カプセル化し、セットから、 **VARTYPE**この`_variant_t`オブジェクトを`VT_EMPTY`です。 返されたを解放するかどうかは**バリアント**を呼び出して、 [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835)関数。  
+## <a name="remarks"></a>Remarks  
+ 抽出し、カプセル化された返します`VARIANT`、これをクリア`_variant_t`オブジェクトを破棄します。 このメンバー関数を削除、`VARIANT`カプセル化し、セットから、`VARTYPE`この`_variant_t`VT_EMPTY するオブジェクト。 返されたを解放するかどうかは`VARIANT`呼び出すことによって、 [VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835)関数。  
   
  **Microsoft 固有の仕様はここまで**  
   

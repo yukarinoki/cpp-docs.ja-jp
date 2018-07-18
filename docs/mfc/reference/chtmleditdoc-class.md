@@ -1,5 +1,5 @@
 ---
-title: 関数クラス |Microsoft ドキュメント
+title: CHtmlEditDoc クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335605"
 ---
-# <a name="chtmleditdoc-class"></a>関数クラス
-[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)、MFC ドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。  
+# <a name="chtmleditdoc-class"></a>CHtmlEditDoc クラス
+[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -53,8 +53,8 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 |名前|説明|  
 |----------|-----------------|  
 |[CHtmlEditDoc::GetView](#getview)|取得、`CHtmlEditView`オブジェクトはこのドキュメントにアタッチします。|  
-|[CHtmlEditDoc::IsModified](#ismodified)|関連するビューの WebBrowser コントロールにユーザーによって変更されているドキュメントが含まれているかどうかを返します。|  
-|[CHtmlEditDoc::OpenURL](#openurl)|URL を開きます。|  
+|[CHtmlEditDoc::IsModified](#ismodified)|関連するビューの WebBrowser コントロールがユーザーによって変更されたドキュメントを含むかどうかを返します。|  
+|[CHtmlEditDoc::OpenURL](#openurl)|URL が開きます。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
  **ヘッダー:** afxhtml.h  
   
 ##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- 構築、**関数**オブジェクト。  
+ `CHtmlEditDoc` オブジェクトを構築します。  
   
 ```  
 CHtmlEditDoc();
@@ -83,17 +83,17 @@ virtual CHtmlEditView* GetView() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ドキュメントへのポインターを返します**CHtmlEditView**オブジェクト。  
+ ドキュメントへのポインターを返します`CHtmlEditView`オブジェクト。  
   
 ##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
- 関連するビューの WebBrowser コントロールにユーザーによって変更されているドキュメントが含まれているかどうかを返します。  
+ 関連するビューの WebBrowser コントロールがユーザーによって変更されたドキュメントを含むかどうかを返します。  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
 ##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL  
- URL を開きます。  
+ URL が開きます。  
   
 ```  
 virtual BOOL OpenURL(LPCTSTR lpszURL);
@@ -101,10 +101,10 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
   
 ### <a name="parameters"></a>パラメーター  
  *lpszURL*  
- 開くには URL です。  
+ 開くための URL。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**TRUE**成功した場合、 **FALSE**エラー発生時にします。  
+ 成功した場合、true を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [HTMLEdit サンプル](../../visual-cpp-samples.md)   

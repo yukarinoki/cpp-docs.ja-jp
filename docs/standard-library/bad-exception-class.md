@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b30763f1382b7a12f68cd6a45b87960f623649
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b3813fae7a9ae6105d4a3dfe4e72ac1773a10e65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842678"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954657"
 ---
 # <a name="badexception-class"></a>bad_exception クラス
 
@@ -33,11 +33,11 @@ ms.locfileid: "33842678"
 class bad_exception    : public exception {};
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 [unexpected](../standard-library/exception-functions.md#unexpected) は、`bad_exception` が関数のスロー リストに含まれている場合には、終了の代わりに、または [set_unexpected](../standard-library/exception-functions.md#set_unexpected) で指定された別の関数を呼び出す代わりに、`bad_exception` をスローします。
 
-**what** が返す値は、実装で定義された C 文字列です。 このメンバー関数は、いずれも例外をスローしません。
+によって返される値`what`実装で定義された C 文字列します。 このメンバー関数は、いずれも例外をスローしません。
 
 `bad_exception` クラスで継承されたメンバーの一覧については、「[exception クラス](../standard-library/exception-class.md)」を参照してください。
 
@@ -45,7 +45,7 @@ class bad_exception    : public exception {};
 
 `bad_exception` をスローする [unexpected](../standard-library/exception-functions.md#unexpected) の使用例については、「[set_unexpected](../standard-library/exception-functions.md#set_unexpected)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<exception>
 

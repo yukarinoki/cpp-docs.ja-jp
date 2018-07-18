@@ -20,16 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d3de4c7538c36ac1a55ea2519fa26a878663a5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7e43d5f528e85ea3233b9ea4a68e83ee0cfb7f3
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848246"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026408"
 ---
 # <a name="complex-class"></a>complex クラス
 
-このテンプレート クラスでは、**Type** 型の 2 つのオブジェクト (1 つは複素数の実数部、もう 1 つは虚数部を表す) を格納するオブジェクトを記述します。
+このテンプレート クラスは、型の 2 つのオブジェクトを格納するオブジェクトを表します`Type`、虚数部を表す 1 つの複素数の実数部を表す 1 つ。
 
 ## <a name="syntax"></a>構文
 
@@ -40,9 +40,9 @@ Type>
 class complex
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Type** クラスのオブジェクト:
+クラスのオブジェクト`Type`:
 
 - 従来の動作で、パブリックな既定のコンストラクター、デストラクター、コピー コンストラクター、および代入演算子が用意されています。
 
@@ -50,9 +50,9 @@ class complex
 
 - 従来の動作で、必要に応じて浮動小数点型に対して定義される算術演算子と数学関数を定義します。
 
-特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 **Type** クラスのオブジェクトの演算では例外がスローされない場合があります。
+特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 クラスのオブジェクトに対する操作のいずれも`Type`例外をスローする可能性があります。
 
-テンプレート クラス complex の明示的な特殊化は 3 つの浮動小数点型に存在します。 この実装では、実際に計算を行うために他の **Type** 型の値は **double** 型に変換されます。**double** 型に変換された後、値は格納されている **Type**`.` 型のオブジェクトに再代入されます。
+テンプレート クラス complex の明示的な特殊化は 3 つの浮動小数点型に存在します。 この実装では、その他の種類の値で`Type`に型キャストは**二重**の実際の計算で、**二重**型の格納されているオブジェクトに割り当てられている結果 `Type``.`
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -83,7 +83,7 @@ class complex
 |[operator/=](#op_div_eq)|ターゲットの複素数を除数で除算します。除数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。|
 |[operator=](#op_eq)|ターゲットの複素数に数値を割り当てます。割り当てられる数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<complex>
 
@@ -108,13 +108,13 @@ constexpr complex(
 
 ### <a name="parameters"></a>パラメーター
 
-`_RealVal` 構築される複素数の初期化に使用される実数部の値。
+*_RealVal*構築される複素数の初期化に使用される実数部の値。
 
-`_ImagVal` 構築される複素数の初期化に使用される虚数部の値。
+*_ImagVal*構築される複素数の初期化に使用される虚数部の値。
 
-`complexNum` 複素数の実数部と虚数部の部分が構築される複素数の初期化に使用されます。
+*complexNum*複素数の実数部と虚数部の部分が構築される複素数の初期化に使用します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターは格納された実数部を _ *RealVal* に、格納された虚数部を \_ *Imagval* に初期化します。 2 番目のコンストラクターは格納された実数部を `complexNum`**.real**() に、格納された虚数部を `complexNum`**.imag**() に初期化します。
 
@@ -187,13 +187,13 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 虚数部の値が抽出される複素数。
+*適切な*虚数部の値が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
 
 複素数の虚数部。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数 *a + bi* の場合、虚数部または成分は *Im(a + bi) = b* です。
 
@@ -243,13 +243,13 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 複素数またはターゲットの複素数のパラメーターと同じ型の数。
+*適切な*複素数またはターゲットの複素数のパラメーターと同じ型の数。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーターとして指定された数値で乗算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -326,13 +326,13 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 複素数またはターゲットの複素数のパラメーターと同じ型の数。
+*適切な*複素数またはターゲットの複素数のパラメーターと同じ型の数。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーターとして指定された数値が加算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -428,15 +428,15 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 対象の複素数から減算する複素数。
+*complexNum*ターゲットの複素数から減算される複素数。
 
-`_RealPart` 対象の複素数から減算する実数。
+*_RealPart*ターゲットの複素数から減算する実数。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーターとして指定された数値が減算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -534,15 +534,15 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 対象の複素数から減算する複素数。
+*complexNum*ターゲットの複素数から減算される複素数。
 
-`_RealPart` 対象の複素数から減算する実数。
+*_RealPart*ターゲットの複素数から減算する実数。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーターとして指定された数値で除算された複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -634,13 +634,13 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 複素数またはターゲットの複素数のパラメーターと同じ型の数。
+*適切な*複素数またはターゲットの複素数のパラメーターと同じ型の数。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーターとして指定された数値が割り当てられた複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。
 
@@ -711,13 +711,13 @@ T real(const T& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 実数値が抽出される複素数。
+*適切な*が実際の値が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
 
 複素数の実数部。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数 *a + bi* の場合、実数部は *Re(a + bi) = a* です。
 
@@ -761,9 +761,9 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`value_type` は、クラス comlex **Type** テンプレート パラメーターのシノニムです。
+`value_type` クラスのシノニムは、複雑な`Type`テンプレート パラメーター。
 
 ### <a name="example"></a>例
 
@@ -792,5 +792,5 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>関連項目
 
-[複雑なメンバー](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
+[複雑なメンバー](http://msdn.microsoft.com/d5c4466c-43a0-4817-aca1-9a5d492dae28)<br/>
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

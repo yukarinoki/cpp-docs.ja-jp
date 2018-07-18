@@ -1,5 +1,5 @@
 ---
-title: オブジェクトのマップに関するマクロ |Microsoft ドキュメント
+title: オブジェクト マップに関するマクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671fd80bc2c4ad320efb282fd659899756c2ecbc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f0e2e14309b7175b003fbab9214d9dffde63af63
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362944"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026018"
 ---
 # <a name="object-map-macros"></a>オブジェクト マップに関するマクロ
 これらのマクロは、オブジェクトのマップとエントリを定義します。  
   
 |||  
 |-|-|  
-|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|オブジェクト マップに入力は、クラス オブジェクトのテキストの説明を指定できます。|  
-|[OBJECT_ENTRY_AUTO](#object_entry_auto)|オブジェクト マップに ATL オブジェクトを入力オブジェクトのインスタンスを作成し、レジストリを更新します。|  
+|[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|入力すると、オブジェクトのマップには、クラス オブジェクトのテキストの説明を指定することができます。|  
+|[OBJECT_ENTRY_AUTO](#object_entry_auto)|オブジェクト マップに ATL オブジェクトを入力、レジストリを更新し、オブジェクトのインスタンスを作成します。|  
 |[役立つ](#object_entry_non_createable_ex_auto)|オブジェクトを登録して初期化するように指定する一方で、`CoCreateInstance` を使用してオブジェクトを外部で作成できないように指定できます。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
    
 ##  <a name="declare_object_description"></a>  DECLARE_OBJECT_DESCRIPTION  
- クラスのオブジェクトの説明文を指定できます。  
+ クラスのオブジェクトのテキスト説明を指定することができます。  
   
 ```
 DECLARE_OBJECT_DESCRIPTION( x )
@@ -44,49 +44,49 @@ DECLARE_OBJECT_DESCRIPTION( x )
   
 ### <a name="parameters"></a>パラメーター  
  *x*  
- [in]クラスのオブジェクトの説明です。  
+ [in]クラス オブジェクトの説明です。  
   
-### <a name="remarks"></a>コメント  
- ATL を介してオブジェクト マップにこの説明を入力する、 [OBJECT_ENTRY](http://msdn.microsoft.com/en-us/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd)マクロです。  
+### <a name="remarks"></a>Remarks  
+ ATL を介したオブジェクトのマップにこの説明を入力した、 [OBJECT_ENTRY](http://msdn.microsoft.com/abd10ee2-54f0-4f94-9ec2-ddf8f4c8c8cd)マクロ。  
   
- `DECLARE_OBJECT_DESCRIPTION` 実装する、`GetObjectDescription`関数をオーバーライドして使用できる、 [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)メソッドです。  
+ DECLARE_OBJECT_DESCRIPTION 実装、`GetObjectDescription`関数をオーバーライドする際、 [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)メソッド。  
 
   
- `GetObjectDescription`によって呼び出されます**IComponentRegistrar::GetComponents**です。 **IComponentRegistrar**オートメーション インターフェイスを使用すると、登録および登録解除、DLL 内の個々 のコンポーネントです。 ATL プロジェクト ウィザードを使用してコンポーネント レジスタのオブジェクトを作成するときに、ウィザードは自動的に実装、 **IComponentRegistrar**インターフェイスです。 **IComponentRegistrar**は通常 Microsoft Transaction Server によって使用されます。  
+ `GetObjectDescription`関数`IComponentRegistrar::GetComponents`します。 `IComponentRegistrar` オートメーション インターフェイスを登録し、DLL 内の個々 のコンポーネントの登録を解除することができますです。 ATL プロジェクト ウィザードでコンポーネント レジストラー オブジェクトを作成するときに、ウィザードは自動的に実装、`IComponentRegistrar`インターフェイス。 `IComponentRegistrar` 通常、Microsoft Transaction Server によって使用されます。  
   
- ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトを作成する](../../atl/reference/creating-an-atl-project.md)です。  
+ ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#123](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
 ##  <a name="object_entry_auto"></a>  OBJECT_ENTRY_AUTO  
- オブジェクト マップに ATL オブジェクトを入力オブジェクトのインスタンスを作成し、レジストリを更新します。  
+ オブジェクト マップに ATL オブジェクトを入力、レジストリを更新し、オブジェクトのインスタンスを作成します。  
   
 ```
 OBJECT_ENTRY_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clsid`  
- [入力] `class` という名前の C++ クラスで実装されている COM クラスの CLSID。  
+ *clsid*  
+ [in]という名前の C++ クラスで実装されている COM クラスの CLSID*クラス*します。  
   
- `class`  
- [入力] `clsid` で表される COM クラスを実装する C++ クラスの名前。  
+ *class*  
+ [in]によって表される COM クラスを実装する C++ クラスの名前*clsid*します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトのエントリ マクロは、クラスの登録、初期化、および作成をサポートするためにプロジェクトのグローバル スコープに配置されます。  
   
- `OBJECT_ENTRY_AUTO` クリエーター クラスおよびクラス ファクトリ クリエーター クラスの関数ポインターが入る`CreateInstance`ATL オブジェクトの自動生成されたマップには、このオブジェクトの関数。 ときに[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)が呼び出されると、オブジェクト マップ内の各オブジェクトのシステム レジストリを更新します。  
+ OBJECT_ENTRY_AUTO クリエーター クラスとクラス ファクトリ クリエーター クラスの関数ポインターを入力した`CreateInstance`ATL オブジェクトの自動生成されたマップには、このオブジェクトの関数。 ときに[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)が呼び出されると、オブジェクト マップ内の各オブジェクトのシステム レジストリを更新します。  
 
   
- 次の表では、このマクロを 2 番目のパラメーターとして指定されているクラスからオブジェクト マップに追加される情報を取得する方法について説明します。  
+ 次の表では、このマクロを 2 番目のパラメーターとして指定したクラスからオブジェクトのマップに追加される情報を取得する方法について説明します。  
   
-|情報|取得|  
+|情報|取得しました。|  
 |---------------------|-------------------|  
 |COM 登録|[レジストリに関するマクロ](../../atl/reference/registry-macros.md)|  
-|クラス ファクトリの作成|[クラス ファクトリ マクロ](../../atl/reference/aggregation-and-class-factory-macros.md)|  
+|クラス ファクトリの作成|[クラス ファクトリに関するマクロ](../../atl/reference/aggregation-and-class-factory-macros.md)|  
 |インスタンスの作成|[集約マクロ](../../atl/reference/aggregation-and-class-factory-macros.md)|  
-|コンポーネントのカテゴリの登録|[カテゴリに関するマクロ](../../atl/reference/category-macros.md)|  
+|コンポーネント カテゴリの登録|[カテゴリに関するマクロ](../../atl/reference/category-macros.md)|  
 |クラス レベルの初期化とクリーンアップ|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
@@ -98,16 +98,16 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clsid`  
- [入力] `class` という名前の C++ クラスで実装されている COM クラスの CLSID。  
+ *clsid*  
+ [in]という名前の C++ クラスで実装されている COM クラスの CLSID*クラス*します。  
   
- `class`  
- [入力] `clsid` で表される COM クラスを実装する C++ クラスの名前。  
+ *class*  
+ [in]によって表される COM クラスを実装する C++ クラスの名前*clsid*します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトのエントリ マクロは、クラスの登録、初期化、および作成をサポートするためにプロジェクトのグローバル スコープに配置されます。  
   
- `OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO` オブジェクトを登録して初期化することを指定することができます (を参照してください[OBJECT_ENTRY_AUTO](#object_entry_auto)詳細については) を使用して作成する必要がありますされませんが、`CoCreateInstance`です。  
+ オブジェクトを登録して初期化することを指定する役立つことができます (を参照してください[OBJECT_ENTRY_AUTO](#object_entry_auto)詳細については) を使用して作成可能な型はありませんが、`CoCreateInstance`します。  
   
 ## <a name="see-also"></a>関連項目  
  [[マクロ]](../../atl/reference/atl-macros.md)

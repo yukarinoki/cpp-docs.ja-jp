@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d48bd8dce38a5042c01b56f40cebb2e030be6f4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 70ffecdfdf661e7423a4db0898b05dfa2f5ce832
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954644"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper クラス
 
@@ -61,7 +61,7 @@ private:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `reference_wrapper<Ty>` は、構築可能で、オブジェクトまたは `Ty` 型の関数への参照の周りの割り当て可能なラッパーのコピーであり、その型のオブジェクトを指すポインターを保持します。 `reference_wrapper` を使用して参照を標準コンテナーに格納できるほか、`std::bind` への参照によってオブジェクトを渡すことができます。
 
@@ -94,7 +94,7 @@ private:
 |-|-|
 |[reference_wrapper::operator Ty&amp;](#op_ty_amp)|ラップされた参照へのポインターを取得します。|
 |[reference_wrapper::operator()](#op_call)|ラップされた参照を呼び出します。|
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 
@@ -108,7 +108,7 @@ private:
 Ty& get() const noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数はラップされた参照を返します。
 
@@ -147,7 +147,7 @@ i = -1
 operator Ty&() const noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `*ptr`を返します。
 
@@ -186,11 +186,11 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-`Types` 引数リストの種類。
+*型*引数リストの型。
 
-`args` 引数リスト。
+*args*引数リスト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 テンプレート メンバー `operator()` は `std::invoke(get(), std::forward<Types>(args)...)` を返します。
 
@@ -229,11 +229,11 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` ラップする型。
+*Ty*をラップする型。
 
-`val` ラップする値。
+*val*をラップする値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このコンストラクターは、`ptr` の格納された値を `&val` に設定します。
 
@@ -276,7 +276,7 @@ i = -1
 typedef R result_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `result_type` typedef は、ラップされた関数の弱い結果型のシノニムです。 この typedef は、関数型に対してのみ意味があります。
 
@@ -315,7 +315,7 @@ val = -3
 typedef Ty type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この typedef は、テンプレート引数 `Ty` のシノニムです。
 

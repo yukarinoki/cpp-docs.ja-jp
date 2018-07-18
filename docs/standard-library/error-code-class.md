@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44de89891f3380f71e4fa590626ba4e275782f9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848038"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027233"
 ---
 # <a name="errorcode-class"></a>error_code クラス
 
@@ -46,7 +46,7 @@ ms.locfileid: "33848038"
 class error_code;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `error_code` クラス型のオブジェクトは、エラー コード値を格納するほか、レポートされた低レベルのシステム エラーを説明するエラー コードの[カテゴリ](../standard-library/error-category-class.md)を表すオブジェクトを指すポインターも格納します。
 
@@ -82,7 +82,7 @@ class error_code;
 |[operator=](#op_eq)|`error_code` オブジェクトに新しい列挙値を代入します。|
 |[operator bool](#op_bool)|`error_code` 型の変数をキャストします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<system_error>
 
@@ -100,12 +100,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|`error_code` に格納するエラー コード値。|
-|`_Cat`|`error_code` に格納するエラー カテゴリ。|
+|*val*|`error_code` に格納するエラー コード値。|
+|*_Cat*|`error_code` に格納するエラー カテゴリ。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、エラー コード値としての `val` と `_Cat` を指すポインターを格納します。
+メンバー関数のストア*val*エラー コード値とへのポインターとして *_Cat*します。
 
 ## <a name="category"></a>  error_code::category
 
@@ -115,7 +115,7 @@ void assign(value_type val, const error_category& _Cat);
 const error_category& category() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="clear"></a>  error_code::clear
 
@@ -125,7 +125,7 @@ const error_category& category() const;
 clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数はゼロ エラー コード値と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
@@ -141,7 +141,7 @@ error_condition default_error_condition() const;
 
 [default_error_condition](../standard-library/error-category-class.md#default_error_condition) で指定された [error_condition](../standard-library/error-condition-class.md)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `category().default_error_condition(value())` を返します。
 
@@ -164,15 +164,15 @@ error_code(_Enum _Errcode,
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|`error_code` に格納するエラー コード値。|
-|`_Cat`|`error_code` に格納するエラー カテゴリ。|
-|`_Errcode`|`error_code` に格納する列挙値。|
+|*val*|`error_code` に格納するエラー コード値。|
+|*_Cat*|`error_code` に格納するエラー カテゴリ。|
+|*_Errcode*|`error_code` に格納する列挙値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターはゼロ エラー コード値と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
-2 番目のコンストラクターは、エラー コード値としての `val` と [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8) を指すポインターを格納します。
+2 番目のコンス トラクター ストア*val*エラー コード値とへのポインターとして[error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)します。
 
 3 番目のコンストラクターは、エラー コード値としての `(value_type)_Errcode` と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
@@ -188,7 +188,7 @@ string message() const;
 
 エラー コードの名前を表す `string`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `category().message(value())` を返します。
 
@@ -204,13 +204,13 @@ bool operator==(const error_code& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|等しいかどうかをテストするオブジェクト。|
+|*right*|等しいかどうかをテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 オブジェクトが等しい場合は **true**、オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `category() == right.category() && value == right.value()`を返します。
 
@@ -226,19 +226,19 @@ bool operator!=(const error_code& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|不等性をテストするオブジェクト。|
+|*right*|不等性をテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-`error_code` オブジェクトが、`right` に渡される `error_code` オブジェクトに等しくない場合は **true**。それ以外の場合は **false**。
+**true**場合、`error_code`オブジェクトが等しく、`error_code`で渡されるオブジェクト*右*。 そうしないと**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `!(*this == right)`を返します。
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-[error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトが比較のために渡された `error_code` オブジェクトより小さいかどうかをテストします。
+[error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトが比較のために渡された `error_code` オブジェクトより小さいかどうかをテストします。
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -248,19 +248,19 @@ bool operator<(const error_code& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|比較する error_code オブジェクト。|
+|*right*|比較する error_code オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 `error_code` オブジェクトが、比較対象として渡された `error_code` より小さい場合は **true**。それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `category() < right.category() || category() == right.category() && value < right.value()`を返します。
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-[error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトに新しい列挙値を代入します。
+[error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) オブジェクトに新しい列挙値を代入します。
 
 ```cpp
 template <class _Enum>
@@ -273,13 +273,13 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Errcode`|`error_code` オブジェクトに代入する列挙値。|
+|*_Errcode*|`error_code` オブジェクトに代入する列挙値。|
 
 ### <a name="return-value"></a>戻り値
 
 メンバー関数によって新しい列挙値が代入される `error_code` オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、エラー コード値としての `(value_type)_Errcode` と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。 `*this` を返します。
 
@@ -295,9 +295,9 @@ explicit operator bool() const;
 
 `error_code` オブジェクトのブール値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この演算子は、[値](#value)が 0 と等しくない場合に限り、`true` に変換できる値が返されます。 戻り値の型は、`void *` またはその他の既知のスカラー型ではなく、`bool` 型にのみ変換可能です。
+演算子に変換できる値を返します**true**場合にのみ[値](#value)0 と等しくないです。 戻り値の型にのみ変換可能**bool**ではなく、`void *`またはその他の既知のスカラー型。
 
 ## <a name="value"></a>  error_code::value
 
@@ -311,7 +311,7 @@ value_type value() const;
 
 [value_type](#value_type) 型の格納されたエラー コード値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="value_type"></a>  error_code::value_type
 
@@ -321,9 +321,9 @@ value_type value() const;
 typedef int value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型定義は `int` のシノニムです。
+この型定義のシノニムは、 **int**します。
 
 ## <a name="see-also"></a>関連項目
 

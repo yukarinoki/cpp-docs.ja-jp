@@ -1,5 +1,5 @@
 ---
-title: CDockablePaneAdapter クラス |Microsoft ドキュメント
+title: CDockablePaneAdapter クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951034"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026307"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter クラス
 `CWnd`の派生ペインのドッキングをサポートします。  
@@ -47,14 +47,14 @@ class CDockablePaneAdapter : public CDockablePane
 |名前|説明|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|ラップされたウィンドウを返します。|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(上書き[cdockablepane::loadstate](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917))。|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(上書き[cdockablepane::savestate](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db))。|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(上書き[cdockablepane::loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917))。|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(上書き[cdockablepane::savestate](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db))。|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>Remarks  
- フレームワークにこのクラスのオブジェクトがインスタンス化を使用するときに、通常、 [cmfcbasetabctrl::addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)または[cmfcbasetabctrl::inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)メソッドです。  
+ 通常、フレームワークでは使用すると、このクラスのオブジェクトがインスタンス化します、 [::addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)または[cmfcbasetabctrl::inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)メソッド。  
   
- カスタマイズする場合、`CDockablePaneAdapter`動作、そこから新しいクラスを派生して、ランタイム クラス情報を使用して、タブ付きウィンドウに設定だけ[cmfcbasetabctrl::setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)です。  
+ カスタマイズする場合、`CDockablePaneAdapter`動作、そこから新しいクラスを派生して、ランタイム クラス情報を使用して、タブ付きウィンドウに設定だけ[cmfcbasetabctrl::setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
@@ -97,7 +97,7 @@ virtual BOOL LoadState(
  プロファイルのインデックス。  
   
  [in]*uiID*  
- ウィンドウの id。  
+ ペインの ID  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -118,10 +118,10 @@ virtual BOOL SaveState(
  プロファイル名。  
   
  [in]*nIndex*  
- プロファイルのインデックス (既定は、ウィンドウのコントロール ID)。  
+ プロファイルのインデックス (既定値は、ウィンドウのコントロール ID)。  
   
  [in]*uiID*  
- ウィンドウの id。  
+ ペインの ID  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -135,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  ラップするウィンドウのアダプターは、ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  

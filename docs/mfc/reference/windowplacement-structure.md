@@ -1,5 +1,5 @@
 ---
-title: WINDOWPLACEMENT 構造体 |Microsoft ドキュメント
+title: WINDOWPLACEMENT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 829b3c90acb089bd91d71c498df5906fff919f22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6dbd9a921194146e260eb79f5266311caa3d0300
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379474"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026196"
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT 構造体
-`WINDOWPLACEMENT`構造体には、画面上のウィンドウの配置に関する情報が含まれています。**です。**  
+`WINDOWPLACEMENT`構造体には、画面上のウィンドウの配置に関する情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,49 +40,49 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *length*  
- 構造体のバイト単位で長さを指定**です。**  
+*length*  
+構造体のバイト単位の長さを指定します。  
   
- `flags`  
- 最小化ウィンドウと、ウィンドウを復元する方法の位置を制御するフラグを指定します。 このメンバーは、次のフラグの一方または両方を指定できます。  
+*flags*  
+最小化されたウィンドウと、ウィンドウを復元する方法の位置を制御するフラグを指定します。 このメンバーには、次のフラグの一方または両方を指定できます。  
   
-- **WPF_SETMINPOSITION**最小化されたウィンドウの x 位置と y 位置を指定できることを示す**です。** このフラグである必要があります指定されたかどうかに、座標を設定、 **ptMinPosition**メンバー。  
+ - WPF_SETMINPOSITION では、最小化されたウィンドウの x 位置と y 位置を指定できることを指定します。 このフラグである必要があります指定座標を設定するかどうか、`ptMinPosition`メンバー。  
+      
+ - WPF_RESTORETOMAXIMIZED では、復元されたウィンドウが最大化される、最小化する前に、最大化されていたかどうかに関係なくを指定します。 この設定は次に、ウィンドウの復元時にのみ有効です。 既定の復元動作は変わりません。 このフラグが有効ではこのメンバーは値が指定されている場合にのみ、`showCmd`メンバー。  
   
-- **WPF_RESTORETOMAXIMIZED**復元されたウィンドウが最大化される、最小化する前に、最大化されていたかどうかに関係なくを指定します。 この設定は、ウィンドウが復元されるときにのみ有効です。 既定の復元動作は変わりません。 このフラグは有効な場合にのみ、 **SW_SHOWMINIMIZED**値が指定されて、 **showCmd**メンバー。  
+*showCmd*  
+ウィンドウの現在の表示状態を指定します。 このメンバーには、次の値のいずれかを指定できます。  
   
- *showCmd*  
- ウィンドウの現在の表示状態を指定します。 このメンバーは、次の値のいずれかになります。  
+ - SW_HIDE では、ウィンドウを非表示にし、別のウィンドウをアクティブ化を渡します。  
+      
+ - SW_MINIMIZE では、指定したウィンドウを最小化し、システムの一覧にあるトップレベル ウィンドウをアクティブにします。  
+      
+ - SW_RESTORE をアクティブにし、ウィンドウを表示します。 ウィンドウが最小化または最大化されている場合、Windows を元のサイズと位置 (SW_SHOWNORMAL と同じ) に復元します。  
+      
+ - SW_SHOW はウィンドウをアクティブにし、現在のサイズと位置に表示されます。  
+      
+ - SW_SHOWMAXIMIZED はウィンドウをアクティブにし、最大化されたウィンドウとして表示されます。  
+      
+ - このメンバーはでは、ウィンドウをアクティブにし、アイコンとして表示されます。  
+      
+ - SW_SHOWMINNOACTIVE ウィンドウをアイコンとして表示します。 現在アクティブなウィンドウは、アクティブなままです。  
+      
+ - SW_SHOWNA では、現在の状態でウィンドウが表示されます。 現在アクティブなウィンドウは、アクティブなままです。  
+      
+ - SW_SHOWNOACTIVATE では、最新のサイズと位置で、ウィンドウが表示されます。 現在アクティブなウィンドウは、アクティブなままです。  
+      
+ - SW_SHOWNORMAL をアクティブにし、ウィンドウを表示します。 ウィンドウが最小化または最大化されている場合、Windows を元のサイズと位置 (SW_RESTORE と同じ) に復元します。  
   
-- **SW_HIDE**ウィンドウを非表示にし、別のウィンドウをアクティブ化を渡します。  
+*ptMinPosition*  
+ウィンドウが最小化するときは、ウィンドウの左上隅の位置を指定します。  
   
-- **SW_MINIMIZE**指定されたウィンドウを最小化し、システムの一覧にあるトップレベル ウィンドウをアクティブにします。  
+*ptMaxPosition*  
+ウィンドウを最大化するときは、ウィンドウの左上隅の位置を指定します。  
   
-- **SW_RESTORE**にアクティブとウィンドウが表示されます。 ウィンドウが最小または最大化、Windows に復元されます、元のサイズと位置 (同じ**SW_SHOWNORMAL**)。  
+*rcNormalPosition*  
+ウィンドウが通常の (復元) の位置にあるときは、ウィンドウの座標を指定します。  
   
-- **SW_SHOW**ウィンドウをアクティブにし、現在のサイズと位置で表示します。  
-  
-- **SW_SHOWMAXIMIZED**ウィンドウをアクティブにし、最大化されたウィンドウとして表示します。  
-  
-- **このメンバーは**ウィンドウをアクティブにし、アイコンとして表示します。  
-  
-- **SW_SHOWMINNOACTIVE**ウィンドウをアイコンとして表示します。 現在アクティブなウィンドウは、アクティブなままです。  
-  
-- **SW_SHOWNA**現在の状態で、ウィンドウを表示します。 現在アクティブなウィンドウは、アクティブなままです。  
-  
-- **SW_SHOWNOACTIVATE**最新のサイズと位置で、ウィンドウを表示します。 現在アクティブなウィンドウは、アクティブなままです。  
-  
-- **SW_SHOWNORMAL**にアクティブとウィンドウが表示されます。 ウィンドウが最小または最大化、Windows に復元されます、元のサイズと位置 (同じ**SW_RESTORE**)。  
-  
- *ptMinPosition*  
- ウィンドウが最小化したときに、ウィンドウの左上隅の位置を指定します。  
-  
- `ptMaxPosition`  
- ウィンドウを最大化するときは、ウィンドウの左上隅の位置を指定します。  
-  
- *rcNormalPosition*  
- ウィンドウは、通常の (復元) の位置にあるときは、ウィンドウの座標を指定します。  
-  
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** winuser.h  
   
 ## <a name="see-also"></a>関連項目  

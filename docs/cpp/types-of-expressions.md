@@ -1,5 +1,5 @@
 ---
-title: 式の種類 |Microsoft ドキュメント
+title: 式の種類 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0904c5e503b60d5d9015e5102b1155016c78a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422424"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026566"
 ---
 # <a name="types-of-expressions"></a>式の型
 C++ の式は、複数のカテゴリに分けられます。  
   
--   [一次式](../cpp/primary-expressions.md)です。 これは、その他すべての式を構築する基本構成単位です。  
+-   [一次式](../cpp/primary-expressions.md)します。 これは、その他すべての式を構築する基本構成単位です。  
   
--   [後置式](../cpp/postfix-expressions.md)です。 これは、演算子が続く 1 次式です (配列の添字や後置インクリメント演算子など)。  
+-   [後置式](../cpp/postfix-expressions.md)します。 これは、演算子が続く 1 次式です (配列の添字や後置インクリメント演算子など)。  
   
--   [単項演算子で記述される式](../cpp/expressions-with-unary-operators.md)です。 単項演算子は、式の中で 1 つのオペランドに対してのみ作用します。  
+-   [単項演算子で記述される式](../cpp/expressions-with-unary-operators.md)します。 単項演算子は、式の中で 1 つのオペランドに対してのみ作用します。  
   
--   [二項演算子で記述される式](../cpp/expressions-with-binary-operators.md)です。 二項演算子は、式の中で 2 つのオペランドに作用します。  
+-   [二項演算子で記述される式](../cpp/expressions-with-binary-operators.md)します。 二項演算子は、式の中で 2 つのオペランドに作用します。  
   
--   [条件演算子を含む式](../cpp/conditional-operator-q.md)です。 条件演算子は、3 つのオペランドを受け取る、C++ 言語で唯一の三項演算子です。  
+-   [条件演算子を含む式](../cpp/conditional-operator-q.md)します。 条件演算子は、3 つのオペランドを受け取る、C++ 言語で唯一の三項演算子です。  
   
--   [定数式](../cpp/cpp-constant-expressions.md)です。 定数式は、定数データのみで構成されます。  
+-   [定数式](../cpp/cpp-constant-expressions.md)します。 定数式は、定数データのみで構成されます。  
   
--   [明示的な型変換を含む式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)です。 明示的な型変換、つまり "キャスト" を式で使用できます。  
+-   [明示的な型変換を含む式](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)します。 明示的な型変換、つまり "キャスト" を式で使用できます。  
   
--   [メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)です。  
+-   [メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)します。  
   
--   [キャスト](../cpp/casting.md)です。 式でタイプ セーフな "キャスト" を使用できます。  
+-   [キャスト](../cpp/casting.md)します。 式でタイプ セーフな "キャスト" を使用できます。  
   
--   [実行時型情報](../cpp/run-time-type-information.md)です。 プログラムの実行中にオブジェクトの型を決定します。  
+-   [実行時の型情報](../cpp/run-time-type-information.md)します。 プログラムの実行中にオブジェクトの型を決定します。  
   
 ## <a name="see-also"></a>関連項目  
  [式](../cpp/expressions-cpp.md)

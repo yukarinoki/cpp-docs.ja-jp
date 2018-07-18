@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ec1929becbfcd3f98124e4274687854ef2f455
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847703"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028230"
 ---
 # <a name="errorcategory-class"></a>error_category クラス
 
@@ -43,7 +43,7 @@ ms.locfileid: "33847703"
 class error_category;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 定義済みの 2 つのオブジェクト [generic_category](../standard-library/system-error-functions.md#generic_category) および [system_category](../standard-library/system-error-functions.md#system_category) によって `error_category` が実装されます。
 
@@ -70,7 +70,7 @@ class error_category;
 |[operator!=](#op_neq)|`error_category` オブジェクト間の不等性をテストします。|
 |[operator<](#op_lt)|[error_category](../standard-library/error-category-class.md) オブジェクトが比較のために渡される `error_category` オブジェクトより小さいかどうかをテストします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<system_error>
 
@@ -88,13 +88,13 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Errval`|[error_condition](../standard-library/error-condition-class.md) オブジェクトに格納するエラー コード値。|
+|*_Errval*|[error_condition](../standard-library/error-condition-class.md) オブジェクトに格納するエラー コード値。|
 
 ### <a name="return-value"></a>戻り値
 
 `error_condition(_Errval, *this)` を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="equivalent"></a>  error_category::equivalent
 
@@ -112,15 +112,15 @@ virtual bool equivalent(const error_code& _Code,
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Errval`|比較するエラー コード値。|
-|`_Cond`|比較する [error_condition](../standard-library/error-condition-class.md) オブジェクト。|
-|`_Code`|比較する [error_code](../standard-library/error-code-class.md) オブジェクト。|
+|*_Errval*|比較するエラー コード値。|
+|*_Cond*|比較する [error_condition](../standard-library/error-condition-class.md) オブジェクト。|
+|*(_C)*|比較する [error_code](../standard-library/error-code-class.md) オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-カテゴリと値が等しい場合は `true`、それ以外の場合は `false`。
+**true**カテゴリと値が、それ以外の場合は**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のメンバー関数は `*this == _Cond.category() && _Cond.value() == _Errval` を返します。
 
@@ -138,13 +138,13 @@ virtual string message(error_code::value_type val) const = 0;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|記述するエラー コード値。|
+|*val*|記述するエラー コード値。|
 
 ### <a name="return-value"></a>戻り値
 
-カテゴリのエラー コード`val` のわかりやすい名前を返します。
+エラー コードのわかりやすい名前を返します*val*のカテゴリ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="name"></a>  error_category::name
 
@@ -158,7 +158,7 @@ virtual const char *name() const = 0;
 
 カテゴリの名前を、null 終端バイト文字列として返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="op_eq_eq"></a>  error_category::operator==
 
@@ -172,13 +172,13 @@ bool operator==(const error_category& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|等しいかどうかをテストするオブジェクト。|
+|*right*|等しいかどうかをテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 オブジェクトが等しい場合は **true**、オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、`this == &right` を返します。
 
@@ -194,13 +194,13 @@ bool operator!=(const error_category& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|不等性をテストするオブジェクト。|
+|*right*|不等性をテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-`error_category` オブジェクトが、`right` に渡される `error_category` オブジェクトに等しくない場合は **true**。それ以外の場合は **false**。
+**true**場合、`error_category`オブジェクトが等しく、`error_category`で渡されるオブジェクト*右*。 そうしないと**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `(!*this == right)`を返します。
 
@@ -216,13 +216,13 @@ bool operator<(const error_category& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|比較される `error_category` オブジェクト。|
+|*right*|比較される `error_category` オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 `error_category` オブジェクトが、比較対象として渡された `error_category` より小さい場合は **true**。それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `this < &right`を返します。
 
@@ -234,9 +234,9 @@ bool operator<(const error_category& right) const;
 typedef int value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型定義は `int` のシノニムです。
+この型定義のシノニムは、 **int**します。
 
 ## <a name="see-also"></a>関連項目
 

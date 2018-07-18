@@ -1,5 +1,5 @@
 ---
-title: CObject の使い方 |Microsoft ドキュメント
+title: CObject の使い方 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 235bf1f4130f59a8af9548fcbf35e36d82255f14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0fab92dddc10a66fe350d343f1fd280ce5c9a50
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382299"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027152"
 ---
 # <a name="using-cobject"></a>CObject の使い方
-[CObject](../mfc/reference/cobject-class.md)ルート基本クラスが、ほとんどの Microsoft Foundation Class ライブラリ (MFC)。 `CObject`クラスには、シリアル化のサポート、ランタイム クラス情報、およびオブジェクトの診断出力を含む独自のプログラム オブジェクトに組み込むことが多くの便利な機能が含まれています。 クラスを派生する場合`CObject`、クラスは、これらを悪用できる`CObject`機能します。  
+[CObject](../mfc/reference/cobject-class.md)ルート基本クラスが、ほとんどの Microsoft Foundation Class ライブラリ (MFC)。 `CObject`クラスにはシリアル化のサポート、ランタイム クラス情報、オブジェクトの診断出力など、独自のプログラム オブジェクトに組み込むことが必要な多くの便利な機能が含まれています。 クラスを派生させる場合`CObject`、クラスは、これらを悪用できる`CObject`機能します。  
   
 ## <a name="what-do-you-want-to-do"></a>どうしたいんですか  
   
@@ -36,17 +36,17 @@ ms.locfileid: "33382299"
   
 -   [派生クラスに、ランタイム クラス情報、動的な作成、およびシリアル化のサポートを追加します。](../mfc/specifying-levels-of-functionality.md)  
   
--   [ランタイム クラス情報にアクセス](../mfc/accessing-run-time-class-information.md)  
+-   [ランタイム クラス情報へのアクセス](../mfc/accessing-run-time-class-information.md)  
   
 -   [オブジェクトを動的に作成します。](../mfc/dynamic-object-creation.md)  
   
--   [診断目的のため、オブジェクトのデータをダンプします。](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [診断のために、オブジェクトのデータをダンプします。](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)  
   
--   オブジェクトの内部状態の検証 (を参照してください[MFC ASSERT_VALID と cobject::assertvalid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
+-   オブジェクトの内部状態の検証 (を参照してください[MFC ASSERT_VALID と cobject::assertvalid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
--   [永続的ストレージに自体をシリアル化するクラスがあります。](../mfc/serialization-in-mfc.md)  
+-   [それ自体を永続的ストレージにシリアル化クラスします。](../mfc/serialization-in-mfc.md)  
   
--   一覧を参照してください[CObject に関してよく寄せられる質問](../mfc/cobject-class-frequently-asked-questions.md)  
+-   一覧を参照してください[CObject よくある質問。](../mfc/cobject-class-frequently-asked-questions.md)  
   
 ## <a name="see-also"></a>関連項目  
  [概念](../mfc/mfc-concepts.md)   

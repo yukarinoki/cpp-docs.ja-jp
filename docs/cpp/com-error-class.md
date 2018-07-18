@@ -1,5 +1,5 @@
 ---
-title: _com_error クラス |Microsoft ドキュメント
+title: _com_error クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95550c81235db58b1f8d372bf028750c003c7a9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415726"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026635"
 ---
 # <a name="comerror-class"></a>_com_error クラス
 **Microsoft 固有の仕様**  
   
- `_com_error` オブジェクトは、タイプ ライブラリから生成されるヘッダー ファイル内のエラー処理ラッパー関数によって、またはいずれかの COM サポート クラスによって検出される例外条件を表します。 `_com_error` クラスは、`HRESULT` エラー コードと、関連する任意の `IErrorInfo Interface` オブジェクトをカプセル化します。  
+ `_com_error` オブジェクトは、タイプ ライブラリから生成されるヘッダー ファイル内のエラー処理ラッパー関数によって、またはいずれかの COM サポート クラスによって検出される例外条件を表します。 `_com_error` HRESULT エラー コードおよび関連クラスがカプセル化`IErrorInfo Interface`オブジェクト。  
   
 ### <a name="construction"></a>構築  
   
@@ -44,9 +44,9 @@ ms.locfileid: "32415726"
   
 |||  
 |-|-|  
-|[エラー](../cpp/com-error-error.md)|コンストラクターに渡された `HRESULT` を取得します。|  
+|[エラー](../cpp/com-error-error.md)|コンス トラクターに渡された HRESULT を取得します。|  
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|コンストラクターに渡された `IErrorInfo` オブジェクトを取得します。|  
-|[WCode](../cpp/com-error-wcode.md)|カプセル化された `HRESULT` にマップされた 16 ビット エラー コードを取得します。|  
+|[WCode](../cpp/com-error-wcode.md)|カプセル化された HRESULT にマップされた 16 ビット エラー コードを取得します。|  
   
 ### <a name="ierrorinfo-functions"></a>IErrorInfo の関数  
   
@@ -68,16 +68,16 @@ ms.locfileid: "32415726"
   
 |||  
 |-|-|  
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|32 ビットの `HRESULT` を 16 ビットの `wCode` にマップします。|  
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|16 ビットをマップ`wCode`32 ビット`HRESULT`です。|  
+|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|16 ビットに 32 ビットの HRESULT をマップ`wCode`します。|  
+|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|16 ビット マップ`wCode`HRESULT の 32 ビットにします。|  
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** \<comdef.h >  
   
  `Lib:` comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)  
   
 ## <a name="see-also"></a>関連項目  
  [コンパイラ COM サポート クラス](../cpp/compiler-com-support-classes.md)   
- [IErrorInfo インターフェイス](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [IErrorInfo インターフェイス](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

@@ -1,7 +1,7 @@
 ---
 title: fgets、fgetws | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e92deea033443ec942895d2aef2d1a307ac89f34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c155150a364c2cbbd230c56678e6e7dcb4e4fde
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402021"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027168"
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 
@@ -78,17 +78,17 @@ wchar_t *fgetws(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数を返します*str*です。 **NULL**エラーまたはファイルの終端状態を示すが返されます。 使用して**feof**または**ferror**エラーが発生したかどうかを決定します。 場合*str*または*ストリーム*null ポインターでは、または*numChars*以下が 0 の場合にこの関数によって呼び出されます、無効なパラメーター ハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**です。
+これらの関数を返します。 *str*します。 **NULL**エラーまたはファイルの終端状態を示すが返されます。 使用**feof**または**ferror**にエラーが発生したかどうかを確認します。 場合*str*または*ストリーム*null ポインター、または*numChars*と同じかそれよりも少ない」の説明に従って、0 にこの関数が、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Fgets**関数は、入力から文字列を読み取ります*ストリーム*引数に格納および*str*です。 **fgets**を現在のストリームの位置と、ストリームの末尾に、最初の改行文字を含むから文字を読み取り、または読み取られた文字数までと等しい*numChars* - 1、どちらか早い方です。 結果が格納されている*str* null 文字が付加されます。 改行文字を読み取ると、文字列に含まれます。
+**Fgets**関数は入力から文字列を読み取る*ストリーム*引数に格納*str*します。 **fgets**を現在のストリームの位置と、ストリームの末尾に、最初の改行文字を含むから文字を読み取りまたは読み取られた文字数までと等しい*numChars* - 1、早い方です。 格納されている結果*str*は null 文字が付加されます。 改行文字を読み取ると、文字列に含まれます。
 
-**fgetws**のワイド文字バージョンは、 **fgets**です。
+**fgetws**のワイド文字バージョンは、 **fgets**します。
 
-**fgetws**のワイド文字引数を読み取り*str*マルチバイト文字の文字列またはかどうかに従って、ワイド文字列として*ストリーム*がテキスト モードとバイナリ モードで開かれるそれぞれします。 Unicode およびマルチバイトのストリーム入出力におけるテキスト モードおよびバイナリ モードの使い方の詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)」および「[テキスト モードとバイナリ モードの Unicode ストリーム入出力](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)」を参照してください。
+**fgetws**のワイド文字引数を読み取り*str*マルチバイト文字の文字列またはワイド文字の文字列かどうかに従ってとして*ストリーム*テキスト モードまたはバイナリ モードで開かれるそれぞれします。 Unicode およびマルチバイトのストリーム入出力におけるテキスト モードおよびバイナリ モードの使い方の詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)」および「[テキスト モードとバイナリ モードの Unicode ストリーム入出力](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -96,7 +96,7 @@ wchar_t *fgetws(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgetts**|**fgets**|**fgets**|**fgetws**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
@@ -109,9 +109,8 @@ wchar_t *fgetws(
 
 ```C
 // crt_fgets.c
-// This program uses fgets to display
-// a line from a file on the screen.
-//
+// This program uses fgets to display 
+// the first line from a file.
 
 #include <stdio.h>
 

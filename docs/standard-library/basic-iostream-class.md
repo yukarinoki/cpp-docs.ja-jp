@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de2f28feb775cd6e37116ea7c27691397d2dfce4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 662c4915753cc49534fa9f489eb61504907744c4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844277"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954709"
 ---
 # <a name="basiciostream-class"></a>basic_iostream クラス
 
@@ -43,7 +43,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、基底クラス [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> を使用した挿入の制御、および基底クラス [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`> を使用した抽出の制御を行うオブジェクトを記述します。 2 つのオブジェクトは、仮想基底クラス [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`> を共有しています。 また、これらは共通のストリーム バッファーを管理します。このストリーム バッファーには、`Elem` 型の要素が含まれ、その文字特性は `Tr` クラスによって決定されます。 コンストラクターは `basic_istream`( **strbuf**) および `basic_ostream`( **strbuf**) を使用して基底クラスを初期化します。
 
@@ -65,7 +65,7 @@ public:
 |-|-|
 |[operator=](#op_eq)|このオブジェクトに、指定された `basic_iostream` オブジェクトの値を代入します。 これは、`rvalue` が関係する移動代入で、コピーを残しません。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<istream>
 
@@ -85,15 +85,15 @@ basic_iostream();
 
 ### <a name="parameters"></a>パラメーター
 
-`strbuf` 既存の`basic_streambuf`オブジェクト。
+*strbuf*既存`basic_streambuf`オブジェクト。
 
-`right` 既存の`basic_iostream`新しい構築するために使用されるオブジェクト`basic_iostream`です。
+*適切な*既存`basic_iostream`新しい構築に使用されるオブジェクト`basic_iostream`します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターが `basic_istream(strbuf)` および `basic_ostream(strbuf)` を使用してベース オブジェクトを初期化します。
 
-2 番目のコンス トラクターを呼び出してベース オブジェクトを初期化します`move(right)`です。
+2 番目のコンス トラクターを呼び出してベース オブジェクトを初期化します`move(right)`します。
 
 ## <a name="op_eq"></a>  basic_iostream::operator=
 
@@ -105,11 +105,11 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `rvalue`への参照、`basic_iostream`から割り当てるオブジェクト。
+*適切な*、`rvalue`への参照を`basic_iostream`から自動的に割り当てるオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバーの演算子呼び出し`swap(right)`です。
+メンバーの演算子呼び出し`swap(right)`します。
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -121,11 +121,11 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `basic_iostream`交換するオブジェクト。
+*適切な*、`basic_iostream`交換するオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数の呼び出し`swap(right)`です。
+メンバー関数の呼び出し`swap(right)`します。
 
 ## <a name="see-also"></a>関連項目
 

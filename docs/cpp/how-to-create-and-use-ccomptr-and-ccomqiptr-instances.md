@@ -1,5 +1,5 @@
 ---
-title: '方法: を作成し、CComPtr および CComQIPtr インスタンスを使用して |Microsoft ドキュメント'
+title: '方法: を作成し、CComPtr および CComQIPtr インスタンスを使用して、|Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c63eb1657cd00580197e0571a40e9a7545688dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 80efab13dfe28c7ecec2da1d3d932ed90d46f0f8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415453"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026910"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: CComPtr および CComQIPtr インスタンスを作成して使用する
-従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の詳細については、「 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)」を参照してください。  
+従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の基本については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](http://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)します。  
   
  コンポーネント オブジェクト モデル (COM) オブジェクトをインスタンス化するときは、デストラクターの `AddRef` と `Release` の呼び出しを使用して参照のカウントを実行する COM スマート ポインターにインターフェイス ポインターを格納します。 Active Template Library (ATL) または Microsoft Foundation Class ライブラリ (MFC) を使用している場合は、 `CComPtr` スマート ポインターを使用します。 ATL または MFC を使用していない場合は、 `_com_ptr_t`を使用します。 COM には `std::unique_ptr`に相当するものがないため、これらのスマート ポインターを単一所有者のシナリオと複数所有者のシナリオの両方に使用します。 `CComPtr` と `ComQIPtr` のどちらも、右辺値参照が含まれる移動操作をサポートしています。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "32415453"
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` その関連項目は、ATL の一部で定義された\<atlcomcli.h >。 `_com_ptr_t` 宣言された\<comip.h >。 コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。  
+ `CComPtr` その関連は、ATL の一部であるありで定義された\<atlcomcli.h >。 `_com_ptr_t` 宣言されている\<comip.h >。 コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。  
   
 ## <a name="example"></a>例  
  ATL では、よりシンプルな構文を持つ `CComQIPtr`も提供されます。これを使用して COM オブジェクトに対するクエリを実行して、追加のインターフェイスを取得できます。 ただし、 `CComPtr` で実行できることのすべてを実行可能であるうえ、未加工の COM インターフェイス ポインターとセマンティクス的により整合性の高い `CComQIPtr` をお勧めします。 `CComPtr` を使用してインターフェイスを照会すると、新しいインターフェイス ポインターが出力パラメーターに配置されます。 呼び出しが失敗した場合、HRESULT が返されます。これは、COM の一般的なパターンです。 `CComQIPtr`の場合、戻り値はポインター自体です。呼び出しが失敗した場合、内部 HRESULT 戻り値にはアクセスできません。 次の 2 つの行から、 `CComPtr` と `CComQIPtr` におけるエラー処理機構の違いがわかります。  

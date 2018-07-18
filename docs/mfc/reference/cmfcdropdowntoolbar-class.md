@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownToolBar クラス |Microsoft ドキュメント
+title: CMFCDropDownToolBar クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74005682036e0a4d15d17d147b5994864fa97378
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042119"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027311"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar クラス
 ユーザーがトップレベルのツール バー ボタンを押し続けたときに表示されるツール バーです。  
@@ -59,31 +59,31 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(`CMFCToolBar::OnSendCommand` をオーバーライドします)。|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80))。|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80))。|  
   
 ### <a name="remarks"></a>Remarks  
- A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの動作と、ツールバーの外観を組み合わせます。 ときにユーザーを押し続けたドロップダウン ツールバー (を参照してください[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)) し、ドロップダウン ツールバーが表示されたら、ユーザーにスクロールして、マウス ボタンを押したドロップダウン ツールバーからボタンを選択することができますボタンをクリックします。 ユーザーがドロップダウン ツールバーのボタンを選択すると、そのボタンは、最上位のツールバーの現在のボタンとして表示されます。  
+ A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの動作では、ツールバーの外観を結合します。 ユーザーが押すし、ドロップダウン ツール バー ボタンを保持 (を参照してください[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md))、ドロップダウン ツールバーが表示され、ユーザーはまでスクロールし、マウスを解放してドロップダウン ツール バーからボタンを選択することができますボタンをクリックします。 ドロップダウン ツールバー ボタンを選択すると、そのボタンが最上位レベルのツールバーの現在のボタンとして表示されます。  
   
- ドロップダウン ツールバーをカスタマイズまたは、ドッキングされていることはできませんし、ティアオフ状態はありません。  
+ ドロップダウン ツールバーのカスタマイズや、ドッキングされていることはできませんし、ティアオフ状態はありません。  
   
  次の図は、`CMFCDropDownToolBar`オブジェクト。  
   
  ![CMFCDropDownToolbar の例](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- 作成する、`CMFCDropDownToolBar`オブジェクトの通常のツールバーの作成と同じ方法 (を参照してください[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md))。  
+ 作成する、`CMFCDropDownToolBar`オブジェクトの通常のツールバーを作成すると同じ方法 (を参照してください[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md))。  
   
- 親ツールバーに、ドロップダウン ツールバーの挿入。  
+ 親ツールバーのドロップダウン ツール バーを挿入します。  
   
  1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。  
   
- 2. 作成、`CMFCDropDownToolBarButton`ドロップダウン ツールバーを含むオブジェクトです (詳細については、次を参照してください。 [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。  
+ 2. 作成、`CMFCDropDownToolBarButton`ドロップダウン ツール バーを格納しているオブジェクト (詳細については、次を参照してください。 [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。  
   
- 3. ダミー ボタンに置き換える、`CMFCDropDownToolBarButton`オブジェクトを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)です。  
+ 3. ダミー ボタンに置き換える、`CMFCDropDownToolBarButton`オブジェクトを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。  
   
- ツール バー ボタンの詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)です。 ドロップダウン ツールバーの例は、サンプル プロジェクト VisualStudioDemo を参照してください。  
+ ツール バー ボタンの詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。 ドロップダウン ツール バーの例は、サンプル プロジェクト VisualStudioDemo を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例で使用する方法、`Create`メソッドで、`CMFCDropDownToolBar`クラスです。 このコード スニペットの一部である、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、使用する方法、`Create`メソッドで、`CMFCDropDownToolBar`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
@@ -143,7 +143,7 @@ virtual BOOL LoadBitmap(
  ツール バーの通常のメニュー イメージを参照するビットマップのリソース ID。  
   
  [in]*ブロック*  
- `TRUE` ツールバーをロックするにはそれ以外の場合`FALSE`です。  
+ ツールバーをロックする場合は TRUEそれ以外の場合は FALSE です。  
   
  [in]*uiDisabledResID*  
  ツール バーの無効イメージを参照するビットマップのリソース ID。  
@@ -155,7 +155,7 @@ virtual BOOL LoadBitmap(
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
 ### <a name="remarks"></a>Remarks  
- [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドは、ツールバーに関連付けられているイメージを読み込むには、このメソッドを呼び出します。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。  
+ [Cmfctoolbar::loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドは、ツールバーに関連付けられているイメージを読み込むには、このメソッドを呼び出します。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。  
   
  ツール バーの作成後に、 `LoadBitmapEx` メソッドを呼び出して追加のイメージを読み込みます。  
   

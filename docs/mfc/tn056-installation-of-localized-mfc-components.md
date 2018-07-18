@@ -1,5 +1,5 @@
 ---
-title: 'TN056: ローカライズされた MFC コンポーネントのインストール |Microsoft ドキュメント'
+title: 'TN056: ローカライズされた MFC コンポーネントのインストール |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10addbf21c276a98c980002e4e9a9ea08538455
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44c285e3ff50100dc34c4859c412d58ca8d084dc
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380878"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027113"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>テクニカル ノート 56: ローカライズされた MFC コンポーネントのインストール
-ローカライズされた MFC コンポーネントのインストールを説明するには、このテクニカル ノートでは廃止されました。  
+ローカライズされた MFC コンポーネントのインストールのように、このテクニカル ノートでは廃止されました。  
   
- **参照してください**[アプリケーションの配置](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)の追加**Visual C アプリケーションの再配布に関する情報。  参照してください**[テクニカル ノート 57](../mfc/tn057-localization-of-mfc-components.md) MFC アプリケーションをローカライズする方法についてです。  
+ **参照してください**[アプリケーションの配置](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)の追加**Visual C アプリケーションの再配布に関する情報。  参照してください**[テクニカル ノート 57](../mfc/tn057-localization-of-mfc-components.md) MFC アプリケーションのローカライズの詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
