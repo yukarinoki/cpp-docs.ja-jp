@@ -1,5 +1,5 @@
 ---
-title: パブリック (C++) |Microsoft ドキュメント
+title: public (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49c7f113aa234a5e682576ff509199c0223b7cc5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa6d4abf9423df29d59f375b825a815404a3c76c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943693"
 ---
 # <a name="public-c"></a>public (C++)
 ## <a name="syntax"></a>構文  
@@ -31,10 +32,10 @@ public:
 public base-class  
 ```  
   
-## <a name="remarks"></a>コメント  
- クラスのメンバーの一覧の前と、**パブリック**キーワードは、それらのメンバーが何らかの関数からアクセスできることを指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。  
+## <a name="remarks"></a>Remarks  
+ 前に、クラス メンバーの一覧と、**パブリック**キーワードは、それらのメンバーが任意の関数からアクセスできることを指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。  
   
- 基底クラスの名前、**パブリック**キーワードは、基本クラスのパブリックおよびプロテクト メンバーがパブリックであるを指定され、派生クラスのメンバーをそれぞれ、保護します。  
+ 基底クラスの名前、**パブリック**キーワードを指定、基底クラスのパブリックおよびプロテクト メンバーはパブリックとプロテクト メンバーはそれぞれ、派生クラスの。  
   
  クラスのメンバーの既定のアクセスはプライベートです。 構造体または共用体のメンバーの既定のアクセスはパブリックです。  
   
@@ -43,16 +44,16 @@ public base-class
  詳細については、次を参照してください[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)、[フレンド](../cpp/friend-cpp.md)、とでメンバー アクセス テーブル[クラス メンバーへのアクセスの制御](member-access-control-cpp.md).  
   
 ## <a name="clr-specific"></a>/clr 固有  
- CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、 `private`、および`protected`) 型とアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)です。  
+ CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、**プライベート**、および**保護**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。  
   
 > [!NOTE]
->  コンパイルされるファイル[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージ クラス (パブリックかプライベート) が表示されます。  
+>  ファイルがコンパイルされた[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。  
   
 ## <a name="end-clr-specific"></a>END /clr 固有  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // keyword_public.cpp  
 class BaseClass {  
 public:  

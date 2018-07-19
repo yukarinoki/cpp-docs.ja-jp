@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 676f6522a5625103a00310c6ce5353ce40da9359
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862927"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957426"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 関数
 
@@ -113,13 +113,13 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>パラメーター
 
-`Val` オブジェクト、または実際のアドレスを取得する対象の関数。
+*Val*オブジェクトまたは実際のアドレスを取得する対象の関数。
 
 ### <a name="return-value"></a>戻り値
 
-オーバーロードされた `Val` が存在する場合でも、`operator&()` で参照されるオブジェクトまたは関数の実際のアドレス。
+オブジェクトまたは関数によって参照される実際のアドレス*Val*、オーバー ロードされた場合でも、`operator&()`存在します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="align"></a>  align
 
@@ -136,23 +136,23 @@ void* align(
 
 ### <a name="parameters"></a>パラメーター
 
-`Alignment` アラインメントの境界を試みます。
+*配置*しようとするアラインメントの境界します。
 
-`Size` アラインされたストレージのバイト サイズ。
+*サイズ*アラインされたストレージのバイト単位のサイズ。
 
-`Ptr` 使用する利用可能な連続する記憶域プールの開始アドレス。 このパラメーターは、出力パラメーターでもあり、新しい開始アドレスが含まれて、アラインメントが成功した場合に設定されています。 `align()` が失敗した場合、このパラメーターは変更されません。
+*Ptr*を使用する使用可能な連続した記憶域プールの開始アドレス。 このパラメーターは、出力パラメーターでも、配置が成功した場合、新しい開始アドレスに設定されます。 `align()` が失敗した場合、このパラメーターは変更されません。
 
-`Space` 使用可能な合計領域`align()`アラインされたストレージの作成に使用します。 このパラメーターは出力パラメーターでもあり、アラインされたストレージと関連するオーバーヘッドが差し引かれた後の記憶域バッファーに残されている調整された領域を格納します。
+*領域*できる総容量`align()`アラインされたストレージの作成に使用します。 このパラメーターは出力パラメーターでもあり、アラインされたストレージと関連するオーバーヘッドが差し引かれた後の記憶域バッファーに残されている調整された領域を格納します。
 
 `align()` が失敗した場合、このパラメーターは変更されません。
 
 ### <a name="return-value"></a>戻り値
 
-要求されたアライン バッファーが利用可能な領域に収まらない場合は null ポインター。それ以外の場合は `Ptr` の新しい値。
+要求されたアライン バッファー使用可能な領域以外にも適合しない場合は null ポインターそれ以外の場合の新しい値*Ptr*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-変更された `Ptr` および `Space` パラメーターによって、`align()` と `Alignment` に異なる値を指定して、同じバッファーについて繰り返し `Size` を呼び出すことができます。 `align()` の使用方法の 1 つを次のコード スニペットに示します。
+変更された*Ptr*と*領域*パラメーターを使用すると、呼び出す`align()`場合によっては異なる値で、同じバッファーについて繰り返し*配置*と*サイズ*します。 `align()` の使用方法の 1 つを次のコード スニペットに示します。
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -189,13 +189,13 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>パラメーター
 
-`Alloc` オブジェクトの作成に使用されるアロケーター。
+*Alloc*オブジェクトの作成に使用されるアロケーター。
 
-`Args` オブジェクトになるゼロ以上の引数。
+*Args*オブジェクトになる、0 個以上の引数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-関数は、`Alloc` によって割り当てられて構築されているように、`shared_ptr<Type>` オブジェクト、`Type(Args...)` へのポインターを作成します。
+関数は、オブジェクトを作成します。 `shared_ptr<Type>`、へのポインター`Type(Args...)`として割り当てられ、構築された*アロケーション*します。
 
 ## <a name="const_pointer_cast"></a>  const_pointer_cast
 
@@ -209,15 +209,15 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 返される共有ポインターによって制御される型。
+*Ty*返されたによって制御される型がポインターを共有します。
 
-`Other` 引数の共有ポインターによって制御される型。
+*その他の*引数の共有ポインターによって制御される型。
 
-`Other` 引数の共有ポインター。
+*その他の*引数の共有ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-場合、テンプレート関数は、空の shared_ptr オブジェクトを返します`const_cast<Ty*>(sp.get())`; null ポインターを返しますを返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty > オブジェクトによって所有されているリソースを所有する`sp`です。 式 `const_cast<Ty*>(sp.get())` は有効な式である必要があります。
+場合、テンプレート関数は空の shared_ptr オブジェクトを返します`const_cast<Ty*>(sp.get())`; null ポインターを返しますそれ以外の場合を返します、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty > によって所有されているリソースを所有するオブジェクト`sp`します。 式 `const_cast<Ty*>(sp.get())` は有効な式である必要があります。
 
 ### <a name="example"></a>例
 
@@ -258,12 +258,12 @@ void declare_no_pointers(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|追跡可能なポインターがもう含まれない最初の文字のアドレス。|
-|`_Size`|追跡可能なポインターが含まれていない `ptr` で開始されるブロックのサイズ。|
+|*ptr*|追跡可能なポインターがもう含まれない最初の文字のアドレス。|
+|*サイズ) (_s*|開始されるブロックのサイズ*ptr*追跡可能なポインターが含まれていません。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-関数が、ガベージ コレクターに通知をアドレスの範囲`[ ptr, ptr + _Size)`追跡可能なポインターを含まない。 (任意のポインターに割り当てられたメモリ必要があります逆参照しないでに到達可能な場合を除き、します。)
+関数は、ガベージ コレクターに通知するアドレスの範囲`[ ptr, ptr + _Size)`追跡可能なポインターを含まない。 (割り当て済み記憶域へのポインターする必要がありますが逆参照されないに到達可能な場合を除き、します。)
 
 ## <a name="declare_reachable"></a>  declare_reachable
 
@@ -275,15 +275,15 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-`ptr` 到達可能で、割り当てられた、有効なストレージ領域へのポインター。
+*ptr*到達可能で割り当てられた、有効なストレージ領域へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`ptr` が null ではない場合、この関数は、`ptr` がこれ以降到達可能であること (有効な割り当て済みストレージを指すこと) をガベージ コレクターに通知します。
+場合*ptr*が null でない関数は、ガベージ コレクターに通知する*ptr*がこれ以降到達可能な (有効な割り当て済み記憶域を指します)。
 
 ## <a name="default_delete"></a>  default_delete
 
-`operator new` を使用して割り当てられたオブジェクトを削除します。 `unique_ptr` での使用に適しています。
+割り当てられたオブジェクトを削除します。**演算子 new**します。 `unique_ptr` での使用に適しています。
 
 ```cpp
 struct default_delete {
@@ -296,13 +296,13 @@ struct default_delete {
 
 ### <a name="parameters"></a>パラメーター
 
-`Ptr` 削除するオブジェクトへのポインター。
+*Ptr*を削除するオブジェクトへのポインター。
 
-その他の削除対象の配列内の要素の型。
+その他の要素を削除する配列内の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、テンプレート クラス `unique_ptr` での使用に適した、`operator new` で割り当てられたスカラー オブジェクトを削除する `deleter` を示します。 明示的な特殊化 `default_delete<Type[]>` もあります。
+テンプレート クラスについて説明します、`deleter`で割り当てられたスカラー オブジェクトを削除する**演算子 new**テンプレート クラスの使用に適した、`unique_ptr`します。 明示的な特殊化 `default_delete<Type[]>` もあります。
 
 ## <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast
 
@@ -316,15 +316,15 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 返される共有ポインターによって制御される型。
+*Ty*返されたによって制御される型がポインターを共有します。
 
-`Other` 引数の共有ポインターによって制御される型。
+*その他の*引数の共有ポインターによって制御される型。
 
-`sp` 引数の共有ポインター。
+*sp*引数の共有ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-場合、テンプレート関数は、空の shared_ptr オブジェクトを返します`dynamic_cast<Ty*>(sp.get())`; null ポインターを返しますを返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty > オブジェクトによって所有されているリソースを所有する`sp`です。 式 `dynamic_cast<Ty*>(sp.get())` は有効な式である必要があります。
+場合、テンプレート関数は空の shared_ptr オブジェクトを返します`dynamic_cast<Ty*>(sp.get())`; null ポインターを返しますそれ以外の場合を返します、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty > によって所有されているリソースを所有するオブジェクト*sp*. 式 `dynamic_cast<Ty*>(sp.get())` は有効な式である必要があります。
 
 ### <a name="example"></a>例
 
@@ -373,15 +373,15 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-`D` 削除子の型。
+*D*削除子の型。
 
-`Ty` 共有ポインターによって制御される型。
+*Ty*の共有ポインターによって制御される型。
 
-`sp` 共有ポインター。
+*sp*共有ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このテンプレート関数は、[shared_ptr クラス](../standard-library/shared-ptr-class.md) オブジェクト `sp` に属する `D` 型の削除子へのポインターを返します。 `sp` が削除子を持たない場合、またはその削除子が `D` 型でない場合、この関数は 0 を返します。
+テンプレート関数は、型の削除子へのポインターを返します*D*に属している、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)オブジェクト*sp*します。 場合*sp*子を持たない型の削除子がない場合または*D* 0 を返します。
 
 ### <a name="example"></a>例
 
@@ -436,7 +436,7 @@ get_deleter(sp1) != 0 == true
 pointer_safety get_pointer_safety();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関数は、自動ガベージ コレクターが想定ポインターの安全性の種類を返します。
 
@@ -451,13 +451,13 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>パラメーター
 
-`count` 要素の最大数は、メモリが割り当てられるを要求します。
+*カウント*メモリに対して要求された要素の最大数は、割り当てられます。
 
 ### <a name="return-value"></a>戻り値
 
 最初のコンポーネントが割り当て済みのメモリへのポインターで、2 番目のコンポーネントがバッファーのサイズ指定である `pair`。これで、格納可能な要素の最大数が示されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数はメモリを要求しますが、成功しない場合もあります。 バッファーが割り当てられなかった場合、関数は、2 番目のコンポーネントが 0 で、最初のコンポーネントが Null ポインターである pair を返します。
 
@@ -510,9 +510,9 @@ make_shared(Types&&... _Args);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Args`|0 個以上のコンス トラクター引数。 関数は、提供された引数に基づいてどのコンストラクターのオーバーロードを呼び出すかを推測します。|
+|*_Args*|0 個以上のコンス トラクター引数。 関数は、提供された引数に基づいてどのコンストラクターのオーバーロードを呼び出すかを推測します。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 オブジェクトを作成するための簡単で効率的な方法として `make_shared` を使用し、同時にオブジェクトへの共有アクセスを管理するために `shared_ptr` を使用します。 意味的には、これら 2 つのステートメントは同等です。
 
@@ -619,17 +619,17 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` オブジェクトの型を`unique_ptr`を指します。
+*T*オブジェクトの型を`unique_ptr`を指します。
 
-`Types` 指定されたコンス トラクターの引数の型`Args`です。
+*型*によって指定されたコンス トラクター引数の型*Args*します。
 
-`Args` 型のオブジェクトのコンス トラクターに渡される引数`T`です。
+*Args*型のオブジェクトのコンス トラクターに渡される引数*T*します。
 
-`Elem` 型の要素の配列`T`です。
+*Elem*型の要素の配列*T*します。
 
-`Size` 新しい配列の領域を割り当てる要素の数。
+*サイズ*新しい配列に領域を割り当てる要素の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のオーバーロードは、単一オブジェクトに対して使用されます。2 番目のオーバーロードは、配列に対して呼び出されます。3 番目のオーバーロードは、ユーザーが型引数 (make_unique\<T[N]>) で配列のサイズを指定することを防ぎます。この構造は、現在の標準ではサポートされていません。 `make_unique` を使用して、配列への `unique_ptr` を作成する場合、配列要素を個別に初期化する必要があります。 このオーバーロードを検討している場合、[std::vector](../standard-library/vector-class.md) の使用が適切である可能性があります。
 
@@ -645,7 +645,7 @@ make_unique(Types&&...) = delete;
 
 ## <a name="owner_less"></a>  owner_less
 
-共有ポインターとウィーク ポインターの所有権ベースの混合型比較を実行します。 メンバー関数 `owner_before` によって left パラメーターが right パラメーターの前に順序付けされている場合は、`true` を返します。
+共有ポインターとウィーク ポインターの所有権ベースの混合型比較を実行します。 返します**true** left パラメーターがメンバー関数によって適切なパラメーターの前に順序付けられたかどうか`owner_before`します。
 
 ```cpp
 template <class Type>
@@ -684,11 +684,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>パラメーター
 
-`_left` 共有/ウィーク ポインター。
+*_ 左*共有またはウィーク ポインター。
 
-`right` 共有/ウィーク ポインター。
+*適切な*共有またはウィーク ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、すべてのメンバー演算子が `left.owner_before(right)` を返すように定義します。
 
@@ -705,7 +705,7 @@ void return_temporary_buffer(Type* _Pbuf);
 
 *_Pbuf*解放するメモリへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は、一時的なメモリにのみ使用する必要があります。
 
@@ -759,15 +759,15 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 返される共有ポインターによって制御される型。
+*Ty*返されたによって制御される型がポインターを共有します。
 
-`Other` 引数の共有ポインターによって制御される型。
+*その他の*引数の共有ポインターによって制御される型。
 
-`Other` 引数の共有ポインター。
+*その他の*引数の共有ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-場合、テンプレート関数は、空の shared_ptr オブジェクトを返します`sp`は、空`shared_ptr`オブジェクト以外を返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty >によって所有されているリソースを所有するオブジェクト`sp`. 式 `static_cast<Ty*>(sp.get())` は有効な式である必要があります。
+場合、テンプレート関数は空の shared_ptr オブジェクトを返します`sp`は、空`shared_ptr`以外のオブジェクトを返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty >によって所有されているリソースを所有するオブジェクト`sp`. 式 `static_cast<Ty*>(sp.get())` は有効な式である必要があります。
 
 ### <a name="example"></a>例
 
@@ -818,15 +818,15 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 左辺の共有/ウィーク ポインターによって制御される型。
+*Ty*左辺の共有/ウィーク ポインターによって制御される型。
 
-`Other` 右辺の共有/ウィーク ポインターによって制御される型。
+*その他の*右辺の共有/ウィーク ポインターによって制御される型。
 
-`left` 左辺の共有/ウィーク ポインター。
+*左*左辺の共有/ウィーク ポインター。
 
-`right` 右辺の共有/ウィーク ポインター。
+*適切な*右辺の共有/ウィーク ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、`left.swap(right)` を呼び出します。
 
@@ -893,13 +893,13 @@ void undeclare_no_pointers(
     size_t _Size);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-関数が、ガベージ コレクターに通知をアドレスの範囲`[ptr, ptr + _Size)`トレース可能なポインターを含む可能性があります。
+関数は、ガベージ コレクターに通知するアドレスの範囲`[ptr, ptr + _Size)`追跡可能なポインターを含めるようになりましたことができます。
 
 ## <a name="undeclare_reachable"></a>  undeclare_reachable
 
-指定したメモリ位置に到達可能性情の宣言を取り消します。
+指定されたメモリ位置の到達可能性の宣言を取り消します。
 
 ```cpp
 template <class Type>
@@ -910,11 +910,11 @@ Type *undeclare_reachable(Type* ptr);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|到達不可と宣言されるメモリ アドレスへのポインター。|
+|*ptr*|到達不可と宣言されるメモリ アドレスへのポインター。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-場合`ptr`は`nullptr`、関数が、ガベージ コレクターに通知する`ptr`は到達できません。 ポインターが返されます、安全に派生を比較すると等しい`ptr`です。
+場合*ptr*ない**nullptr**、関数は、ガベージ コレクターに通知する*ptr*に到達できなくします。 等しいとを比較する安全に派生したポインターを返す*ptr*します。
 
 ## <a name="uninitialized_copy"></a>  uninitialized_copy
 
@@ -927,17 +927,17 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>パラメーター
 
-`first` ソース範囲の最初の要素を示す入力反復子。
+*最初*ソース範囲の最初の要素を示す入力反復子。
 
-`last` ソース範囲の最後の要素を示す入力反復子。
+*最後*ソース範囲の最後の要素を示す入力反復子。
 
-`dest` ターゲット範囲の最初の要素を示す前方反復子。
+*dest*ターゲット範囲の最初の要素を示す前方反復子。
 
 ### <a name="return-value"></a>戻り値
 
-ソース範囲が空ではない限り先の範囲を超える最初の位置を示す、前方反復子。
+ソース範囲が空であった場合を除き、先の範囲を超える最初の位置を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このアルゴリズムによって、オブジェクトの構築からメモリの割り当てを分離できます。
 
@@ -1032,17 +1032,17 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>パラメーター
 
-`first` コピー先のオブジェクトを参照する入力反復子。
+*最初*をコピーするオブジェクトを参照する入力反復子。
 
-`count` オブジェクトをコピーする回数を指定する符号付きまたは符号なし整数型。
+*カウント*A が符号付きまたは符号なしオブジェクトをコピーする回数を指定する整数型。
 
-`dest` 新しいコピーの移動先を参照する前方反復子。
+*dest*新しいコピーが移動先を参照する前方反復子。
 
 ### <a name="return-value"></a>戻り値
 
-ターゲットを超えた最初の位置を示す前方反復子。 反復子アドレスをソース範囲が空だった場合`first`です。
+ターゲットを超えた最初の位置を示す前方反復子。 ソース範囲が空であった場合、反復*最初*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、実質的に次の内容を実行します。
 
@@ -1066,13 +1066,13 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 開始するのには、ターゲット範囲の最初の要素を示す前方反復子。
+*最初*初期化されるターゲット範囲の最初の要素を示す前方反復子。
 
-`last` 開始するのには、ターゲット範囲の最後の要素を示す前方反復子。
+*最後*初期化されるターゲット範囲の最後の要素を示す前方反復子。
 
-`val` ターゲット範囲を初期化するために使用する値。
+*val*宛先範囲を初期化するために使用される値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このアルゴリズムによって、オブジェクトの構築からメモリの割り当てを分離できます。
 
@@ -1135,13 +1135,13 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 前方反復子、ターゲット範囲の最初の要素をアドレス指定が開始されます。
+*最初*が開始される前方反復子、ターゲット範囲の最初の要素をアドレス指定します。
 
-`count` 初期化される要素の数。
+*カウント*初期化する要素の数。
 
-`val` ターゲット範囲を初期化するために使用する値。
+*val*宛先範囲を初期化するために使用される値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このアルゴリズムによって、オブジェクトの構築からメモリの割り当てを分離できます。
 
