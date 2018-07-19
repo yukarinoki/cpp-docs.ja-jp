@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316544"
 ---
 # <a name="nmake-warning-u4010"></a>NMAKE の警告 U4010
 'target': ビルドに失敗しました。/K 指定すると、操作を続行しています.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345092"
 ---
 # <a name="internet-and-networking-classes"></a>インターネットおよびネットワーク クラス
 これらのクラスを使用すると、Windows ソケットまたは Win32 Internet (WinInet) を使用して別のコンピューター情報を交換できます。 Windows ソケットを操作するためのクラスのセットもします。  

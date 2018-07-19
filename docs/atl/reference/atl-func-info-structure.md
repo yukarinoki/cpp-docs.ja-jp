@@ -1,5 +1,5 @@
 ---
-title: _ATL_FUNC_INFO 構造 |Microsoft ドキュメント
+title: _ATL_FUNC_INFO 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa81e83d353c542ea5b2b6e8e5e8fe32f7c57606
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 8852deacfd36ba988b9b31bdad363c05aee12b6e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882209"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 構造体
 ディスパッチ インターフェイスでメソッドまたはプロパティを記述するために使用する型情報が含まれています。  
@@ -40,20 +41,20 @@ struct _ATL_FUNC_INFO {
 ```  
   
 ## <a name="members"></a>メンバー  
- **cc**  
- 呼び出し規則 この構造体を使用する場合、[されます](../../atl/reference/idispeventsimpleimpl-class.md)このメンバーである必要がありますクラス、 **CC_STDCALL**です。 `CC_CDECL` Windows CE でサポートされる唯一のオプションは、`CALLCONV`のフィールド、`_ATL_FUNC_INFO`構造体。 その他の値はサポートされていないためその動作が定義されていません。  
+ `cc`  
+ 呼び出し規則 この構造体を使用する場合、 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスでは、このメンバーは CC_STDCALL である必要があります。 `CC_CDECL` Windows CE でサポートされている唯一のオプションは、`CALLCONV`のフィールド、`_ATL_FUNC_INFO`構造体。 その他の値はサポートされていませんので、動作が定義されていません。  
   
- **vtReturn**  
+ `vtReturn`  
  関数のバリアント型は、値を返します。  
   
- **nParams**  
- 関数パラメーターの数。  
+ `nParams`  
+ 関数のパラメーターの数。  
   
- **pVarTypes**  
+ `pVarTypes`  
  関数のパラメーターのバリアント型の配列。  
   
-## <a name="remarks"></a>コメント  
- 内部的には、ATL は、タイプ ライブラリから取得した情報を保持するためにこの構造を使用します。 使用するイベント ハンドラーの型情報を提供する場合は、この構造体を直接操作する必要があります、[されます](../../atl/reference/idispeventsimpleimpl-class.md)クラスと[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)マクロです。  
+## <a name="remarks"></a>Remarks  
+ 内部的には、ATL は、タイプ ライブラリから取得した情報を保持するためにこの構造体を使用します。 型情報を使用するイベント ハンドラーを指定する場合は、この構造体を直接操作する必要があります、 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスと[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)マクロ。  
   
 ## <a name="example"></a>例  
  IDL で定義されたディスパッチ インターフェイス メソッドを指定します。  
@@ -64,12 +65,12 @@ struct _ATL_FUNC_INFO {
   
  [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** atlcom.h  
+## <a name="requirements"></a>必要条件  
+ ヘッダー: atlcom.h  
   
 ## <a name="see-also"></a>関連項目  
   [クラスと構造体](../../atl/reference/atl-classes.md)  
- [されますクラス](../../atl/reference/idispeventsimpleimpl-class.md)   
+ [IDispEventSimpleImpl クラス](../../atl/reference/idispeventsimpleimpl-class.md)   
  [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 
 

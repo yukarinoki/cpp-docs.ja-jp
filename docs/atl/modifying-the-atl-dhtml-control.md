@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356496"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>ATL DHTML コントロールの変更
 ATL コントロール ウィザードは、ビルドして、コントロールを実行できるようにし、プロジェクト ファイル内のメソッドを記述する方法とディスパッチ方法を使用して、コントロールの C++ コードを DHTML を呼び出す方法を確認できるように、スタート コードを提供します。 インターフェイスにディスパッチ メソッドを追加することができます。 次に、HTML リソースのメソッドを呼び出すことができます。  

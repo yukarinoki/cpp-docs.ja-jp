@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349481"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>リッチ エディット コントロールでの文字書式の設定
 リッチ エディット コントロールのメンバー関数を使用することができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 文字の書式設定し、書式設定情報を取得します。 文字については、フォント、サイズ、色、および太字、斜体などの効果を指定し、保護されています。  

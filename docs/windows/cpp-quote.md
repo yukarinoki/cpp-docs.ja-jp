@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871163"
 ---
 # <a name="cppquote"></a>cpp_quote
 生成された .idl ファイルに、引用符なしの指定した文字列を出力します。  

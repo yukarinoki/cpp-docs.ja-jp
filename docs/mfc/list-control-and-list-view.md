@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346000"
 ---
 # <a name="list-control-and-list-view"></a>リスト コントロールとリスト ビュー
 便宜上は、MFC は、2 つの方法でリスト コントロールをカプセル化します。 リスト コントロールを使用することができます。  

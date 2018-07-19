@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419934"
 ---
 # <a name="objects-own-resources-raii"></a>リソースを所有するオブジェクト (RAII)
 独自のリソース オブジェクトを確認します。 この原則とも呼ばれる"resource acquisition is 初期化"または"RAII"。  

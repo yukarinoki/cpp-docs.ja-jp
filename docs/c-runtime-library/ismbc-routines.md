@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392576"
 ---
 # <a name="ismbc-routines"></a>_ismbc 系ルーチン
 これらの各 **_ismbc** ルーチンは、特定の条件で特定のマルチバイト文字 `c` をテストします。  

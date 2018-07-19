@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e9887e51666405d3c6c106b40c99528ea4510
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6c8ad17195954feeeccb47896fa013302b6d7e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943522"
 ---
 # <a name="logical-negation-operator-"></a>論理否定演算子: !
 ## <a name="syntax"></a>構文  
@@ -33,17 +34,17 @@ ms.lasthandoff: 05/03/2018
 ! cast-expression  
 ```  
   
-## <a name="remarks"></a>コメント  
- 論理否定演算子 (**!**) のオペランドの意味を反転させます。 オペランドは、数値型またはポインター型 (または、数値型またはポインター型に評価される式) である必要があります。 オペランドは `bool` 型に暗黙的に変換されます。 結果は**true**場合は、変換されたオペランドが**false**; 結果は**false**場合は、変換されたオペランドが**true**です。 結果は `bool` 型です。  
+## <a name="remarks"></a>Remarks  
+ 論理否定演算子 (**!**)、オペランドの意味を反転させます。 オペランドは、数値型またはポインター型 (または、数値型またはポインター型に評価される式) である必要があります。 オペランドは型に暗黙的に変換されます**bool**します。 変換後のオペランドが FALSE 以外の場合、結果は TRUE変換後のオペランドが TRUE の場合、結果は FALSE です。 結果は型**bool**します。  
   
  式の*e*、単項式 **! * * * e*が、式と同じ **(* * * e* `==` 0)、オーバー ロードされた演算子が関係する場所を除く。  
   
 ## <a name="operator-keyword-for-"></a>! の演算子キーワード  
- **いない**演算子に相当するテキストは、 **!** です。 アクセスの 2 つの方法、**いない**をプログラムで演算子: ヘッダー ファイルをインクルード`iso646.h`、コンパイル時に、または、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語の拡張機能を無効にする) コンパイラ オプション。  
+ **いない**演算子と等価のテキストは、 **!** します。 アクセスする 2 つの方法がある、**いない**プログラムで演算子: ヘッダー ファイルをインクルード`iso646.h`、使用してコンパイル、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張を無効にする) コンパイラ オプション。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_Logical_NOT_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -58,5 +59,5 @@ int main() {
   
 ## <a name="see-also"></a>関連項目  
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [単項算術演算子](../c-language/unary-arithmetic-operators.md)

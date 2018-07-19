@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fba4925b6392969aceb1c00ac4c0f4e47b3b63a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 545fda08a027b1610f82d17c89ae98241ee5502b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958131"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
@@ -33,14 +34,14 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>パラメーター
 
-`Elem` ワイド文字要素型。
-`Maxcode` ロケールのファセットの文字の最大数。
-`Mode` ロケールのファセットの構成情報。
+*Elem*ワイド文字要素の型。
+*Maxcode*ロケール ファセットの文字の最大数。
+*モード*ロケール ファセットの構成情報。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このバイト ストリームはバイナリ ファイルまたはテキスト ファイルに書き込むことができます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ヘッダー: <codecvt> 名前空間: std

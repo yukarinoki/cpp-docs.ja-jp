@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f891366c4d195c012f57a6de9a6b96bc1aafceb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19cb52659c92b470057098edf3b65de4042e3bb9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950371"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>ダイアログ エディターを使用したコントロールの追加
-ダイアログ テンプレート リソースを作成する場合、[ダイアログ エディター](../windows/dialog-editor.md)、コントロール パレットからコントロールをドラッグし、ダイアログ ボックスにドロップします。 これは、ダイアログ テンプレート リソースにそのコントロール型の仕様を追加します。 ダイアログ オブジェクトと呼び出しを構築するときにその**作成**または`DoModal`メンバー関数は、フレームワークは、Windows コントロールを作成し、画面のダイアログ ウィンドウに配置します。  
+ダイアログ テンプレート リソースを作成する場合、[ダイアログ エディター](../windows/dialog-editor.md)、コントロール パレットからコントロールをドラッグし、ダイアログ ボックスにドロップします。 これは、ダイアログ テンプレート リソースにそのコントロール型の仕様を追加します。 ダイアログ オブジェクトと呼び出しを構築するときにその`Create`または`DoModal`メンバー関数は、フレームワークは、Windows コントロールを作成し、画面のダイアログ ウィンドウに配置します。  
   
  代わりにできます[コントロールを手動で作成](../mfc/adding-controls-by-hand.md)する場合。 これより多くの作業です。  
   

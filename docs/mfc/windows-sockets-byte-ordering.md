@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956003"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows ソケット : バイトの順序付け
 この記事の内容と 2 部構成の記事は、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、バイトの順序付けについて説明します。 他の問題については、技術情報: [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)と[Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)です。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- C++ では、`struct`クラスとして基本的に同じです。 `Message`構造がなどのメンバー関数を持つことができます、`Serialize`上メンバー関数が宣言されています。 `Serialize`メンバー関数は、次のようになります。  
+ C++ では、**構造体**クラスとして基本的に同じです。 `Message`構造がなどのメンバー関数を持つことができます、`Serialize`上メンバー関数が宣言されています。 `Serialize`メンバー関数は、次のようになります。  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   
@@ -91,8 +92,8 @@ ms.lasthandoff: 05/04/2018
 |--------------|-------------|  
 |**ntohs**|16 ビット値をネットワーク バイト オーダーからホストのバイト順 (ビッグ エンディアン リトル エンディアンに) 変換します。|  
 |**ntohl**|32 ビット値をネットワーク バイト オーダーからホストのバイト順 (ビッグ エンディアン リトル エンディアンに) 変換します。|  
-|**htons**|ホストのバイト順から 16 ビットの数をネットワークのバイト順 (リトル エンディアン ビッグ エンディアンに) に変換します。|  
-|**htonl**|ホストのバイト順から 32 ビット値をネットワークのバイト順 (リトル エンディアン ビッグ エンディアンに) に変換します。|  
+|**Htons**|ホストのバイト順から 16 ビットの数をネットワークのバイト順 (リトル エンディアン ビッグ エンディアンに) に変換します。|  
+|**Htonl**|ホストのバイト順から 32 ビット値をネットワークのバイト順 (リトル エンディアン ビッグ エンディアンに) に変換します。|  
   
  この例の別のポイントは、通信のもう一方の端のソケット アプリケーションが、非 MFC アプリケーションの場合は、必要がありますしないようにして、次のような処理が実行を示します。  
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356176"
 ---
 # <a name="introduction-to-com"></a>COM の概要
 COM では、どの OLE と ActiveX コントロールのビルドで、基本的な「オブジェクト モデル」がします。 COM は、他のコンポーネントおよびホスト アプリケーションには、その機能を公開するオブジェクトを許可します。 オブジェクトがそれ自体を公開する方法と、プロセス間やネットワークのこの公開の動作を定義します。 COM では、オブジェクトのライフ サイクルも定義します。  

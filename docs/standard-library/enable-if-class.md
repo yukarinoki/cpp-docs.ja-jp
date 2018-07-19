@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fbcf91b2b863312374fad96239a9585bb3b38c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966486"
 ---
 # <a name="enableif-class"></a>enable_if クラス
 
-SFINAE オーバーロード解決用のタイプのインスタンスを条件によって作成する 入れ子の typedef `enable_if<Condition,Type>::type` は `Type` のシノニムで、`Condition` が `true` の場合のみ存在します。
+SFINAE オーバーロード解決用のタイプのインスタンスを条件によって作成する 入れ子の typedef`enable_if<Condition,Type>::type`が存在する — のシノニムであり`Type`— 場合にのみ`Condition`は**true**します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,15 +37,15 @@ struct enable_if;
 
 ### <a name="parameters"></a>パラメーター
 
-`B` 結果の型の存在を決定する値。
+*B*結果の型の存在を決定する値。
 
-`T` インスタンス化する型`B`は true です。
+*T*場合をインスタンス化する型*B*は true。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`B` がs true の場合、`enable_if<B, T>` は "type" という名前の入れ子の typedef を持ちます。これは `T` のシノニムです。
+場合*B*が true の場合`enable_if<B, T>`のシノニムである入れ子になった typedef「型」という名前を持つ*T*します。
 
-`B` が false の場合、`enable_if<B, T>` は "type" という名前の入れ子の typedef を持ちません。
+場合*B*が false の場合`enable_if<B, T>`"type"という名前の入れ子にされた typedef はありません。
 
 このエイリアス テンプレートが提供されています。
 
@@ -99,7 +100,7 @@ s) {// ...
 
 シナリオ 1 は、コンストラクターおよび変換演算子では機能しません。それらは戻り値の型を持たないためです。
 
-シナリオ 2 では、パラメーターは名前がないままです。 `::type Dummy = BAR` とすることもできますが、名前`Dummy` は重要ではなく、名前を付けることは "未参照のパラメーター" 警告をトリガーする可能性があります。 関数パラメーターの型 `FOO`、および既定の引数`BAR` を選択する必要があります。  `int` および `0` とすることもできますが、このコードのユーザーが範囲外の整数を誤って関数に渡し、その整数が無視される可能性があります。 代わりに、`void **`、および`0` または `nullptr` のいずれかを使用することをお勧めします。`void **` に変換できるものはほとんどないからです。
+シナリオ 2 では、パラメーターは名前がないままです。 `::type Dummy = BAR` とすることもできますが、名前`Dummy` は重要ではなく、名前を付けることは "未参照のパラメーター" 警告をトリガーする可能性があります。 関数パラメーターの型 `FOO`、および既定の引数`BAR` を選択する必要があります。  たとえば**int**と`0`、コードのユーザーでした誤って関数に追加する整数を渡しますは無視されますが、します。 使用すること勧め代わりに、 `void **` 、`0`または**nullptr**ほとんどないからですに変換できるため、 `void **`:
 
 ```cpp
 template <your_stuff>
@@ -134,11 +135,11 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-この例では、`make_pair("foo", "bar")` は `pair<const char *, const char *>` を返します。 オーバーロード解決では、どの `func()` が必要かを決定する必要があります。 `pair<A, B>` は、`pair<X, Y>` から暗黙に変換されるコンストラクターを持っています。  これは新しいものではなく、C++98 にありました。 ただし C++98/03 では、暗黙に変換されるコンストラクターのシグネチャは、`pair<int, int>(const pair<const char *, const char *>&)` の場合でも必ず存在します。  オーバーロード解決では、コンストラクタを爆発的に増やすようなインスタンス化を試行しても問題になりません。`const char *` は暗黙に`int` に変換されず、関数定義がインスタンス化される前に、シグネチャを見ているだけだからです。  そのため、この例のコードは曖昧です。シグネチャは、`pair<const char *, const char *>` を `pair<int, int>` と `pair<string, string>` の両方に変換するために存在するからです。
+この例では、`make_pair("foo", "bar")` は `pair<const char *, const char *>` を返します。 オーバーロード解決では、どの `func()` が必要かを決定する必要があります。 `pair<A, B>` は、`pair<X, Y>` から暗黙に変換されるコンストラクターを持っています。  これは新しいものではなく、C++98 にありました。 ただし C++98/03 では、暗黙に変換されるコンストラクターのシグネチャは、`pair<int, int>(const pair<const char *, const char *>&)` の場合でも必ず存在します。  オーバー ロードの解決は関係ありませんので、そのコンス トラクターをインスタンス化が試行がひどいこと`const char *`に暗黙的に変換されていない**int**; のみ、署名を調べるには、定義は、関数の前にインスタンス化します。  そのため、この例のコードは曖昧です。シグネチャは、`pair<const char *, const char *>` を `pair<int, int>` と `pair<string, string>` の両方に変換するために存在するからです。
 
 C++11 は、`enable_if` を使用してこの曖昧さを解決しました。`pair<A, B>(const pair<X, Y>&)` が、以下の場合**のみ**、つまり `const X&` が `A` に暗黙に変換され、`const Y&` が `B` に暗黙に変換される場合のみ存在するようにしています。  これにより、オーバーロード解決は、`pair<const char *, const char *>` が `pair<int, int>` に変換されないこと、および `pair<string, string>` となるオーバーロードが実行可能であることを決定できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695643"
 ---
 # <a name="concurrency-runtime-best-practices"></a>同時実行ランタイムに関するベスト プラクティス
 ここでは、同時実行ランタイムの効率的な使用に役立つベスト プラクティスについて説明します。 これらのベスト プラクティスを適用する、[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、[非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)、および[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)です。  

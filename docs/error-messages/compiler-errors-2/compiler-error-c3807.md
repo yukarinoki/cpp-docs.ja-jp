@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272319"
 ---
 # <a name="compiler-error-c3807"></a>コンパイラ エラー C3807
 'type': ComImport 属性を持つクラスが 'type2' から派生できません、インターフェイスの実装のみが許可されています。  

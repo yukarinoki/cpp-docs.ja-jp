@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380473"
 ---
 # <a name="unprototyped-functions"></a>プロトタイプ宣言されていない関数
 ない完全なプロトタイプ関数では、呼び出し元は、整数値として整数と浮動小数点値として渡します倍精度。 浮動小数点値の場合にのみ、整数レジスタと浮動小数点レジスタの両方値が含まれます、float 場合に、呼び出し先は、整数レジスタに値が必要です。  

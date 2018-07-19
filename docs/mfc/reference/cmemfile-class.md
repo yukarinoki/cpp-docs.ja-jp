@@ -1,5 +1,5 @@
 ---
-title: CMemFile クラス |Microsoft ドキュメント
+title: CMemFile クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3584568196fbccc9bab33ea3b51e876e174cbd18
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336595"
 ---
 # <a name="cmemfile-class"></a>CMemFile クラス
 [CFile](../../mfc/reference/cfile-class.md)-メモリ ファイルをサポートするクラスを派生します。  
@@ -53,41 +54,41 @@ class CMemFile : public CFile
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMemFile::CMemFile](#cmemfile)|メモリ ファイル オブジェクトを構築します。|  
+|[CMemFile::CMemFile](#cmemfile)|メモリ ファイル オブジェクトを作成します。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMemFile::Attach](#attach)|メモリ ブロックをアタッチ`CMemFile`です。|  
-|[CMemFile::Detach](#detach)|メモリ ブロックを切り離します`CMemFile`デタッチされたメモリ ブロックへのポインターを返します。|  
+|[CMemFile::Attach](#attach)|メモリ ブロックをアタッチします`CMemFile`します。|  
+|[CMemFile::Detach](#detach)|メモリ ブロックをデタッチ`CMemFile`デタッチされたメモリのブロックにポインターを返します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMemFile::Alloc](#alloc)|メモリ割り当ての動作を変更するためにオーバーライドします。|  
-|[CMemFile::Free](#free)|メモリの割り当て解除の動作を変更するためにオーバーライドします。|  
-|[CMemFile::GrowFile](#growfile)|ファイルを拡張するときの動作を変更するためにオーバーライドします。|  
-|[CMemFile::Memcpy](#memcpy)|ファイルを読み書きするときに、メモリ コピー動作を変更するためにオーバーライドします。|  
-|[CMemFile::Realloc](#realloc)|メモリ割り当ての変更の動作を変更するためにオーバーライドします。|  
+|[CMemFile::Alloc](#alloc)|メモリ割り当ての動作の変更をオーバーライドします。|  
+|[CMemFile::Free](#free)|オーバーライドすると、メモリの割り当て解除の動作を変更します。|  
+|[CMemFile::GrowFile](#growfile)|オーバーライドすると、ファイルを拡張するときの動作を変更します。|  
+|[CMemFile::Memcpy](#memcpy)|オーバーライドすると、ファイルを読み書きするときに、メモリ コピー動作を変更します。|  
+|[CMemFile::Realloc](#realloc)|メモリ再割り当ての動作の変更をオーバーライドします。|  
   
-## <a name="remarks"></a>コメント  
- これらのメモリ ファイルは、ファイルはディスクではなく RAM に保存する点を除いて、ディスク ファイルと同様に動作します。 メモリ ファイルは高速に一時的なストレージまたは生バイトを転送するために役立ちます。 または、独立したプロセス間でオブジェクトをシリアル化します。  
+## <a name="remarks"></a>Remarks  
+ これらのメモリ ファイルは、ファイルがディスクではなく RAM に格納されていることを除いて、ディスク ファイルと同様に動作します。 メモリ ファイルは高速な一時ストレージまたは生バイトを転送するために役立ちます。 または、独立したプロセスの間でオブジェクトをシリアル化します。  
   
- `CMemFile` オブジェクトは、独自のメモリを自動的に割り当てることができますか、独自のメモリ ブロックを割り当てることができます、`CMemFile`呼び出して[アタッチ](#attach)です。 いずれの場合、メモリ ファイルを自動的に拡張にメモリが割り当てられます`nGrowBytes`-場合分ずつ`nGrowBytes`が 0 でないです。  
+ `CMemFile` 独自のメモリ ブロックをアタッチするオブジェクトが独自のメモリを自動的に割り当てることも、`CMemFile`オブジェクトを呼び出すことによって[アタッチ](#attach)します。 いずれの場合も、メモリ ファイルを自動的に拡大するためのメモリが割り当てられている`nGrowBytes`-場合分ずつ`nGrowBytes`がゼロでないです。  
   
- メモリ ブロックの破棄後に自動的に削除されます、`CMemFile`オブジェクトで最初にメモリが割り当てられたかどうか、`CMemFile`オブジェクトです。 それ以外の場合、オブジェクトに関連付けられているメモリを解放する責任があります。  
+ メモリ ブロックの破棄後に自動的に削除されます、`CMemFile`オブジェクトで最初のメモリに割り当てられたかどうか、`CMemFile`オブジェクト。 それ以外の場合、あなたは、オブジェクトに関連付けられているメモリの割り当て解除を担当します。  
   
- デタッチするときに提供されるポインターを通じてメモリ ブロックにアクセスすることができます、`CMemFile`呼び出して[デタッチ](#detach)です。  
+ 切断するときに指定したポインターを通じてメモリ ブロックにアクセスすることができます、`CMemFile`オブジェクトを呼び出すことによって[デタッチ](#detach)します。  
   
- 最も一般的な使用`CMemFile`を作成するには、`CMemFile`オブジェクトを呼び出すことによってこれを使用して[CFile](../../mfc/reference/cfile-class.md)メンバー関数。 作成することに注意してください、`CMemFile`それが自動的に開きます: 呼び出さない[CFile::Open](../../mfc/reference/cfile-class.md#open)、ディスク ファイルにのみ使用されます。 `CMemFile`ディスク ファイル、データ メンバーを使用しない`CFile::m_hFile`は使用されません。  
+ 最も一般的な用途`CMemFile`を作成するには、`CMemFile`オブジェクトを呼び出すことによってこれを使用して[CFile](../../mfc/reference/cfile-class.md)メンバー関数。 作成することに注意してください、`CMemFile`それが自動的に開きます。 呼び出さないでください[CFile::Open](../../mfc/reference/cfile-class.md#open)、ディスク ファイルにのみ使用されます。 `CMemFile`ディスク ファイルのデータ メンバーを使用しない`CFile::m_hFile`は使用されません。  
   
- `CFile`メンバー関数[複製](../../mfc/reference/cfile-class.md#duplicate)、 [LockRange](../../mfc/reference/cfile-class.md#lockrange)、および[UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)は適用されていない`CMemFile`です。 これらの関数を呼び出す場合、`CMemFile`オブジェクトを取得するが、[行わない](../../mfc/reference/cnotsupportedexception-class.md)です。  
+ `CFile`メンバー関数[複製](../../mfc/reference/cfile-class.md#duplicate)、 [LockRange](../../mfc/reference/cfile-class.md#lockrange)と[UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)に実装されていない`CMemFile`。 これらの関数を呼び出す場合、`CMemFile`オブジェクトの取得は、 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)します。  
   
- `CMemFile` ランタイム ライブラリ関数を使用して[malloc](../../c-runtime-library/reference/malloc.md)、 [realloc](../../c-runtime-library/reference/realloc.md)、および[空き](../../c-runtime-library/reference/free.md)割り当てるには、再割り当て、およびメモリと、組み込みの割り当てを解除[memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)ブロックの読み取りまたは書き込み時に、メモリをコピーします。 この動作または動作を変更するかかどうかとき`CMemFile`、ファイルが拡張から独自のクラスを派生させる`CMemFile`し、適切な関数をオーバーライドします。  
+ `CMemFile` ランタイム ライブラリ関数を使用して[malloc](../../c-runtime-library/reference/malloc.md)、 [realloc](../../c-runtime-library/reference/realloc.md)、および[無料](../../c-runtime-library/reference/free.md)割り当てるには、再割り当て、およびメモリと、組み込みの割り当てを解除[memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)ブロック読み書きするときに、メモリをコピーします。 たいかどうかこの動作または動作を変更するときに`CMemFile`、ファイルの拡大からクラスを派生`CMemFile`し、適切な関数をオーバーライドします。  
   
- 詳細については`CMemFile`、記事を参照して[MFC のファイル](../../mfc/files-in-mfc.md)と[メモリ管理 (MFC)](../../mfc/memory-management.md)しを参照してください[ファイル処理](../../c-runtime-library/file-handling.md)で、*ランタイムライブラリ リファレンス*です。  
+ 詳細については`CMemFile`、記事をご覧ください[MFC のファイル](../../mfc/files-in-mfc.md)と[メモリ管理 (MFC)](../../mfc/memory-management.md)して[ファイル処理](../../c-runtime-library/file-handling.md)で、*実行時ライブラリ リファレンス*します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -96,30 +97,30 @@ class CMemFile : public CFile
   
  `CMemFile`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="alloc"></a>  CMemFile::Alloc  
- この関数は`CMemFile`メンバー関数。  
+ この関数を呼び出して`CMemFile`メンバー関数。  
   
 ```  
 virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBytes`  
+ *nBytes*  
  割り当てられるメモリのバイト数。  
   
 ### <a name="return-value"></a>戻り値  
- 割り当てられたメモリ ブロックへのポインターまたは**NULL**場合は、割り当てが失敗します。  
+ 割り当てられたメモリ ブロックへのポインターまたは NULL の場合は、割り当てに失敗しました。  
   
-### <a name="remarks"></a>コメント  
- 独自のメモリ割り当てを実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくにしておくオーバーライド[空き](#free)と[Realloc](#realloc)もします。  
+### <a name="remarks"></a>Remarks  
+ 独自のメモリ割り当てを実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくたいオーバーライド[Free](#free)と[Realloc](#realloc)もします。  
   
- 既定の実装は、ランタイム ライブラリ関数を使用して[malloc](../../c-runtime-library/reference/malloc.md)メモリを割り当てられません。  
+ 既定の実装は、ランタイム ライブラリ関数を使用して[malloc](../../c-runtime-library/reference/malloc.md)メモリを割り当てることです。  
   
 ##  <a name="attach"></a>  CMemFile::Attach  
- メモリ ブロックをアタッチするには、この関数を呼び出す`CMemFile`です。  
+ メモリのブロックを接続するには、この関数を呼び出す`CMemFile`します。  
   
 ```  
 void Attach(
@@ -129,23 +130,23 @@ void Attach(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpBuffer`  
- アタッチされているバッファーへのポインター`CMemFile`です。  
+ *lpBuffer*  
+ 接続するバッファーへのポインター`CMemFile`します。  
   
- `nBufferSize`  
- バッファーのサイズをバイト単位で指定する整数。  
+ *nBufferSize*  
+ バッファーのサイズをバイト単位で示す整数。  
   
- `nGrowBytes`  
- メモリ割り当て増分値 (バイト単位)。  
+ *nGrowBytes*  
+ バイトのメモリ割り当てインクリメントします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これにより、`CMemFile`メモリ ファイルとしてのメモリ ブロックを使用します。  
   
- 場合`nGrowBytes`0 の場合は、`CMemFile`にファイルの長さを設定`nBufferSize`です。 つまり、このメモリ ブロック内のデータに割り当てられる前に`CMemFile`ファイルとして使用されます。 この方法で作成されたメモリ ファイルは拡張できません。  
+ 場合*nGrowBytes*は 0 です。`CMemFile`にファイルの長さを設定*nBufferSize*します。 つまり、メモリ ブロック内のデータに割り当てられる前に`CMemFile`ファイルとして使用されます。 この方法で作成されたメモリ ファイルは拡張できません。  
   
- ファイルを拡張することはできません、ために発生しないように注意する`CMemFile`ファイルを拡張しようとします。 などは呼び出さないでください、`CMemFile`の上書きが[CFile:Write](../../mfc/reference/cfile-class.md#write)に末尾の書き込みまたは呼び出さないでください[CFile:SetLength](../../mfc/reference/cfile-class.md#setlength)長がよりも長い`nBufferSize`です。  
+ ファイルを拡張することはできません、ために発生しないように注意する`CMemFile`しようとすると、ファイルを拡張します。 たとえば、呼び出さないでください、`CMemFile`のオーバーライド[CFile:Write](../../mfc/reference/cfile-class.md#write)に末尾を越えて書き込みまたは呼び出さないでください[CFile:SetLength](../../mfc/reference/cfile-class.md#setlength)長より長く*nBufferSize*。  
   
- 場合`nGrowBytes`は 0 より大きく、`CMemFile`添付したメモリ ブロックの内容は無視されます。 スクラッチを使用してから、メモリ ファイルの内容を記述する必要があります、`CMemFile`のオーバーライド`CFile::Write`です。 ファイルの末尾を越えて書き込みまたは呼び出すことによって、ファイルを拡張しようとすると、`CMemFile`のオーバーライド`CFile::SetLength`、`CMemFile`単位でメモリの割り当てが大きくなり`nGrowBytes`です。 メモリ ブロックを渡す場合は失敗、メモリ割り当てを拡大して**アタッチ**と互換性のあるメソッドで割り当てられていない[アロケーション](#alloc)します。 既定の実装との互換性を`Alloc`、ランタイム ライブラリ関数でメモリを割り当てる必要があります[malloc](../../c-runtime-library/reference/malloc.md)または[calloc](../../c-runtime-library/reference/calloc.md)です。  
+ 場合*nGrowBytes*は 0 より大きく、`CMemFile`アタッチしたメモリ ブロックの内容は無視されます。 スクラッチを使用してから、メモリ ファイルの内容を記述する必要があります、`CMemFile`のオーバーライド`CFile::Write`します。 ファイルの末尾を越えて書き込みまたは呼び出すことによって、ファイルを拡張しようとした場合、`CMemFile`のオーバーライド`CFile::SetLength`、`CMemFile`単位でメモリの割り当てが増大*nGrowBytes*します。 メモリ割り当ての成長にメモリ ブロックを渡す場合は失敗`Attach`と互換性のあるメソッドを使用して割り当てられていませんでした[アロケーション](#alloc)します。 既定の実装と互換性がある`Alloc`、ランタイム ライブラリ関数を使用したメモリを割り当てる必要があります[malloc](../../c-runtime-library/reference/malloc.md)または[calloc](../../c-runtime-library/reference/calloc.md)します。  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  最初のオーバー ロードは、空のメモリ ファイルを開きます。  
@@ -161,49 +162,49 @@ CMemFile(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nGrowBytes`  
- メモリ割り当て増分値 (バイト単位)。  
+ *nGrowBytes*  
+ バイトのメモリ割り当てインクリメントします。  
   
  *lpBuffe*r  
- サイズの情報を受け取るバッファーへのポインター`nBufferSize`です。  
+ サイズの情報を受け取るバッファーへのポインター *nBufferSize*します。  
   
- `nBufferSize`  
- ファイル バッファーのサイズをバイト単位で指定する整数。  
+ *nBufferSize*  
+ ファイル バッファーのサイズをバイト単位で示す整数。  
   
-### <a name="remarks"></a>コメント  
- コンス トラクターによって、ファイルが開かれていると、呼び出す必要がありますいないことに注意してください[CFile::Open](../../mfc/reference/cfile-class.md#open)です。  
+### <a name="remarks"></a>Remarks  
+ コンス トラクターでファイルを開くことと、呼び出す必要がありますいないことに注意してください[CFile::Open](../../mfc/reference/cfile-class.md#open)します。  
   
- 2 番目のオーバー ロードは、動作は同じように場合、最初のコンス トラクターを使用して、すぐと呼ばれる[アタッチ](#attach)同じパラメーターを使用します。 参照してください**アタッチ**詳細についてはします。  
+ 最初のコンス トラクターを使用し、呼び出してすぐにした場合と同じ 2 つ目のオーバー ロードは、動作[アタッチ](#attach)同じパラメーターを使用します。 詳細については、「`Attach`」を参照してください。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CMemFile::Detach  
- によって使用されているメモリ ブロックへのポインターを取得するには、この関数を呼び出す`CMemFile`です。  
+ によって使用されているメモリ ブロックへのポインターを取得するには、この関数を呼び出す`CMemFile`します。  
   
 ```  
 BYTE* Detach();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- メモリ ファイルの内容を保持するメモリ ブロックへのポインター。  
+ メモリのファイルの内容を格納するメモリ ブロックへのポインター。  
   
-### <a name="remarks"></a>コメント  
- 閉じますでこの関数を呼び出す、`CMemFile`です。 メモリ ブロックを再アタッチできます`CMemFile`を呼び出して[アタッチ](#attach)です。 ファイルを再アタッチし、データを使用する場合を呼び出す必要があります[結び付けてその中](../../mfc/reference/cfile-class.md#getlength)を呼び出す前にファイルの長さを取得する**デタッチ**です。 メモリ ブロックをアタッチする場合は、`CMemFile`そのデータを使用できるように ( `nGrowBytes` = = 0)、メモリ ファイルを拡張することはできませんし、します。  
+### <a name="remarks"></a>Remarks  
+ 閉じのこの関数を呼び出す、`CMemFile`します。 メモリ ブロックを再アタッチできます`CMemFile`呼び出して[アタッチ](#attach)します。 呼び出す必要があります、ファイルを再アタッチして、データを使用する場合は、[結び付けてその中](../../mfc/reference/cfile-class.md#getlength)呼び出す前に、ファイルの長さを取得する`Detach`します。 メモリ ブロックをアタッチする場合に注意する`CMemFile`そのデータを使用できるように ( `nGrowBytes` 0 を = =)、メモリ ファイルを拡張することはできませんし、します。  
   
 ##  <a name="free"></a>  CMemFile::Free  
- この関数は`CMemFile`メンバー関数。  
+ この関数を呼び出して`CMemFile`メンバー関数。  
   
 ```  
 virtual void Free(BYTE* lpMem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpMem`  
+ *lpMem*  
  解放するメモリへのポインター。  
   
-### <a name="remarks"></a>コメント  
- カスタムのメモリの解放を実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくにしておくオーバーライド[アロケーション](#alloc)と[Realloc](#realloc)もします。  
+### <a name="remarks"></a>Remarks  
+ カスタムのメモリの解放を実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくたいオーバーライド[アロケーション](#alloc)と[Realloc](#realloc)もします。  
   
 ##  <a name="growfile"></a>  CMemFile::GrowFile  
  この関数は、いくつかの`CMemFile`メンバー関数。  
@@ -213,14 +214,14 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwNewLen`  
+ *dwNewLen*  
  メモリ ファイルの新しいサイズ。  
   
-### <a name="remarks"></a>コメント  
- 変更する場合に上書きできる方法`CMemFile`そのファイルが拡張されます。 既定の実装[Realloc](#realloc)を既存のブロックを拡張する (または[アロケーション](#alloc)メモリ ブロックを作成する) の倍数でメモリを割り当て、`nGrowBytes`コンス トラクターで指定された値または[アタッチ](#attach)呼び出します。  
+### <a name="remarks"></a>Remarks  
+ 変更する場合にオーバーライドできる方法`CMemFile`そのファイルを拡大します。 既定の実装[Realloc](#realloc)既存のブロックを拡張する (または[アロケーション](#alloc)メモリ ブロックを作成する) の倍数でメモリを割り当て、`nGrowBytes`コンス トラクターで指定された値または[アタッチ](#attach)呼び出します。  
   
 ##  <a name="memcpy"></a>  CMemFile::Memcpy  
- この関数は、`CMemFile`の上書きが[:read](../../mfc/reference/cfile-class.md#read)と[CFile::Write](../../mfc/reference/cfile-class.md#write)とメモリ ファイルからデータを転送します。  
+ この関数は、`CMemFile`のオーバーライド[:read](../../mfc/reference/cfile-class.md#read)と[CFile::Write](../../mfc/reference/cfile-class.md#write)とメモリ ファイルからデータを転送します。  
   
 ```  
 virtual BYTE* Memcpy(
@@ -230,23 +231,23 @@ virtual BYTE* Memcpy(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpMemTarget`  
+ *lpMemTarget*  
  ソースのメモリのコピー先のメモリ ブロックへのポインター。  
   
- `lpMemSource`  
- 元のメモリ ブロックへのポインター。  
+ *lpMemSource*  
+ ソースのメモリ ブロックへのポインター。  
   
- `nBytes`  
+ *nBytes*  
  コピー対象のバイト数。  
   
 ### <a name="return-value"></a>戻り値  
- `lpMemTarget` のコピー。  
+ コピーを*lpMemTarget*します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  方法を変更する場合は、この関数をオーバーライドする`CMemFile`はメモリをコピーします。  
   
 ##  <a name="realloc"></a>  CMemFile::Realloc  
- この関数は`CMemFile`メンバー関数。  
+ この関数を呼び出して`CMemFile`メンバー関数。  
   
 ```  
 virtual BYTE* Realloc(
@@ -255,17 +256,17 @@ virtual BYTE* Realloc(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpMem`  
+ *lpMem*  
  再割り当てするメモリ ブロックへのポインター。  
   
- `nBytes`  
+ *nBytes*  
  メモリ ブロックの新しいサイズ。  
   
 ### <a name="return-value"></a>戻り値  
- 再割り当て (され、場合によって移動)、メモリ ブロックへのポインターまたは**NULL**再割り当てが失敗した場合。  
+ 再割り当て (および移動した可能性があります)、メモリ ブロックへのポインター、再割り当てが失敗した場合は null です。  
   
-### <a name="remarks"></a>コメント  
- カスタムのメモリ割り当ての変更を実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくにしておくオーバーライド[アロケーション](#alloc)と[空き](#free)もします。  
+### <a name="remarks"></a>Remarks  
+ カスタムのメモリを再割り当てを実装するには、この関数をオーバーライドします。 この関数をオーバーライドする場合はおそらくたいオーバーライド[アロケーション](#alloc)と[Free](#free)もします。  
   
 ## <a name="see-also"></a>関連項目  
  [CFile クラス](../../mfc/reference/cfile-class.md)   

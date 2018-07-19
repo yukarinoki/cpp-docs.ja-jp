@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295377"
 ---
 # <a name="automatic-function-scope-variables"></a>自動変数 (関数スコープ)
 関数内で宣言された変数は、その関数のスコープ内でのみ使用できます。  

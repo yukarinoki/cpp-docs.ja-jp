@@ -46,11 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955090"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator クラス
 基本のインターポレータを実装します。  
@@ -84,7 +85,7 @@ class CCustomInterpolator;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|補間値です。|  
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|補間された速度。|  
@@ -93,13 +94,13 @@ class CCustomInterpolator;
 |[CCustomInterpolator::m_initialValue](#m_initialvalue)|移行の開始時に変数の値。|  
 |[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|移行の開始時に変数の速度です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  CCustomInterpolator からクラスを派生し、カスタムの補間アルゴリズムを実装するために必要なすべてのメソッドをオーバーライドします。 このクラスへのポインターは、CCustomTransition をパラメーターとして渡されます。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CCustomInterpolator`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator  
@@ -115,12 +116,12 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
- `finalValue`  
+ *finalValue*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  CCustomInterpolator::Init を使用して、期間と、コードの後で最終的な値を初期化します。  
   
 ##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies  
@@ -134,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  出力です。 Interpolator の初期値に依存する要素は、SetInitialValueAndVelocity に渡されます。  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  出力です。 Interpolator の初期速度に依存する要素は、SetInitialValueAndVelocity に渡されます。  
   
- `durationDependencies`  
+ *durationDependencies*  
  出力です。 Interpolator の期間に依存する要素は、SetDuration に渡されます。  
   
 ### <a name="return-value"></a>戻り値  
@@ -154,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  出力です。 秒単位で、移行の期間です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -168,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `value`  
+ *値*  
  出力です。 移行の最後に変数の最終的な値。  
   
 ### <a name="return-value"></a>戻り値  
@@ -184,10 +185,10 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
- `finalValue`  
+ *finalValue*  
  移行の最後に変数の最終的な値。  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
@@ -200,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `value`  
+ *値*  
  出力です。 補間値です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -216,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `velocity`  
+ *ベロシティ*  
  出力です。 オフセットで変数の速度です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -272,7 +273,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -288,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `initialValue`  
+ *初期値*  
  移行の開始時に変数の値。  
   
- `initialVelocity`  
+ *initialVelocity*  
  移行の開始時に変数の速度です。  
   
 ### <a name="return-value"></a>戻り値  

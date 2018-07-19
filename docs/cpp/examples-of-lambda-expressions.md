@@ -1,5 +1,5 @@
 ---
-title: ラムダ式の例を示します |Microsoft ドキュメント
+title: ラムダ式の例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,19 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d294eef323d96ddbfecad8f740826a5a038d7b4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943307"
 ---
 # <a name="examples-of-lambda-expressions"></a>ラムダ式の例
-この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)です。 ラムダ式の構造に関する詳細については、次を参照してください。[ラムダ式の構文](../cpp/lambda-expression-syntax.md)です。  
+この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)します。 ラムダ式の構造の詳細については、次を参照してください。[ラムダ式の構文](../cpp/lambda-expression-syntax.md)します。  
   
 ##  <a name="declaringLambdaExpressions"></a> ラムダ式の宣言  
   
 ### <a name="example-1"></a>例 1  
- ラムダ式が入力されているためにを割り当てることができます、`auto`変数や、[関数](../standard-library/function-class.md)オブジェクト、次のように。  
+ ラムダ式が入力されているためにを割り当てることができます、**自動**変数または、[関数](../standard-library/function-class.md)オブジェクトを次に示します。  
   
 ### <a name="code"></a>コード  
   
@@ -60,8 +61,8 @@ int main()
 7  
 ```  
   
-### <a name="remarks"></a>コメント  
- 詳細については、次を参照してください。[自動](../cpp/auto-cpp.md)、[関数クラス](../standard-library/function-class.md)、および[関数を呼び出す](../cpp/function-call-cpp.md)です。  
+### <a name="remarks"></a>Remarks  
+ 詳細については、次を参照してください。[自動](../cpp/auto-cpp.md)、 [function クラス](../standard-library/function-class.md)、および[関数を呼び出す](../cpp/function-call-cpp.md)します。  
   
  ラムダ式は関数の本体で最も頻繁に宣言されますが、変数を初期化できる場所ならどこでも宣言できます。  
   
@@ -105,7 +106,7 @@ int main()
  [[この記事の内容](#top)]  
   
 ##  <a name="callingLambdaExpressions"></a> ラムダ式の呼び出し  
- 次のコード スニペットに示しているように、ラムダ式は直接呼び出すことができます。 2 番目のスニペットは、C++ 標準ライブラリのアルゴリズムに引数としてラムダをなど渡す方法を示します`find_if`です。  
+ 次のコード スニペットに示しているように、ラムダ式は直接呼び出すことができます。 2 番目のスニペットでは、C++ 標準ライブラリ アルゴリズムに引数としてラムダをなど渡す方法を示しています。`find_if`します。  
   
 ### <a name="example-1"></a>例 1  
  この例は、2 つの整数値の合計を返し、引数 `5` と `4` で直接、式を呼び出すラムダ式を宣言します。  
@@ -132,7 +133,7 @@ int main()
 ```  
   
 ### <a name="example-2"></a>例 2  
- この例は、`find_if` 関数の引数としてラムダ式を渡します。 ラムダ式は、パラメーターが偶数の場合、`true` を返します。  
+ この例は、`find_if` 関数の引数としてラムダ式を渡します。 ラムダ式から返される**true**そのパラメーターが偶数である場合。  
   
 ### <a name="code"></a>コード  
   
@@ -175,8 +176,8 @@ int main()
 The first even number in the list is 42.  
 ```  
   
-### <a name="remarks"></a>コメント  
- 詳細については、`find_if`関数を参照してください[find_if](../standard-library/algorithm-functions.md#find_if)です。 一般的なアルゴリズムを実行する C++ 標準ライブラリ関数の詳細については、次を参照してください。 [\<アルゴリズム >](../standard-library/algorithm.md)です。  
+### <a name="remarks"></a>Remarks  
+ 詳細については、`find_if`関数を参照してください[find_if](../standard-library/algorithm-functions.md#find_if)します。 一般的なアルゴリズムを実行する C++ 標準ライブラリ関数の詳細については、次を参照してください。 [\<アルゴリズム >](../standard-library/algorithm.md)します。  
   
  [[この記事の内容](#top)]  
   
@@ -212,7 +213,7 @@ int main()
 13  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この例では、`[](int y) { return y * 2; }` は入れ子になったラムダ式です。  
   
  [[この記事の内容](#top)]  
@@ -220,7 +221,7 @@ int main()
 ##  <a name="higherOrderLambdaExpressions"></a> 高階ラムダ関数  
   
 ### <a name="example"></a>例  
- 多くのプログラミング言語の概念をサポートする、*高階関数です。* 高階関数は、引数として別のラムダ式を受け取るか、ラムダ式を返すラムダ式です。 使用することができます、[関数](../standard-library/function-class.md)など高階関数の動作を C++ ラムダ式を有効にするクラス。 この例は、`function` オブジェクトを返すラムダ式と、`function` オブジェクトを引数として受け取るラムダ式を示しています。  
+ 多くのプログラミング言語の概念をサポートする、*高階関数。* 高階関数は、引数として別のラムダ式を受け取るか、ラムダ式を返すラムダ式です。 使用することができます、[関数](../standard-library/function-class.md)などの高階関数の動作を C++ ラムダ式を有効にするクラス。 この例は、`function` オブジェクトを返すラムダ式と、`function` オブジェクトを引数として受け取るラムダ式を示しています。  
   
 ### <a name="code"></a>コード  
   
@@ -266,13 +267,13 @@ int main()
   
  [[この記事の内容](#top)]  
   
-##  <a name="methodLambdaExpressions"></a> 関数でのラムダ式の使用  
+##  <a name="methodLambdaExpressions"></a> 関数でラムダ式の使用  
   
 ### <a name="example"></a>例  
- 関数の本体でラムダ式を使用できます。 ラムダ式は、外側の関数がアクセスできる任意の関数またはデータ メンバーにアクセスできます。 `this` ポインターを明示的または暗黙的にキャプチャして、外側のクラスの関数とデータ メンバーへのアクセスを提供できます。  
-**Visual Studio 2017 15.3 およびそれ以降のバージョン**(で利用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): キャプチャ`this`値によって (`[*this]`) 場合、ラムダで使用される非同期操作または並列操作のコードが可能性があります元のオブジェクトがスコープ外になった後を実行します。
+ 関数の本体でラムダ式を使用できます。 ラムダ式は、外側の関数がアクセスできる任意の関数またはデータ メンバーにアクセスできます。 明示的または暗黙的にキャプチャできます、**この**外側のクラスのメンバー関数とデータ メンバーにアクセスできるようにへのポインター。  
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): キャプチャ**この**値によって (`[*this]`) 非同期または並列操作でラムダを使用する場合コードを実行後に、元のオブジェクトがスコープから外れます。
   
- ここで示しているように、関数内で `this` ポインターを明示的に使用できます。  
+ 使用することができます、**この**関数の場合、次に示すように明示的にポインター。  
   
 ```cpp  
 
@@ -292,9 +293,9 @@ void ApplyScale2(const vector<int>& v) const
 
 ```  
   
- `this` ポインターを暗黙的にキャプチャすることもできます。  
+ キャプチャすることも、**この**ポインターに暗黙的に。  
   
-```  
+```cpp 
 void ApplyScale(const vector<int>& v) const  
 {  
    for_each(v.begin(), v.end(),   
@@ -356,12 +357,12 @@ int main()
   
 ```  
   
-### <a name="remarks"></a>コメント  
- `ApplyScale` 関数は、ラムダ式を使用してスケール値と `vector` オブジェクト内の各要素の積を出力します。 ラムダ式は、`this` メンバーにアクセスできるように `_scale` を暗黙的にキャプチャします。  
+### <a name="remarks"></a>Remarks  
+ `ApplyScale` 関数は、ラムダ式を使用してスケール値と `vector` オブジェクト内の各要素の積を出力します。 ラムダ式が暗黙的にキャプチャ**この**にアクセスできるように、`_scale`メンバー。  
   
  [[この記事の内容](#top)]  
   
-##  <a name="templateLambdaExpressions"></a> テンプレートでのラムダ式の使用  
+##  <a name="templateLambdaExpressions"></a> テンプレートでラムダ式の使用  
   
 ### <a name="example"></a>例  
  ラムダ式は型指定されているため、それらを C++ テンプレートで使用できます。 `negate_all` 関数および `print_all` 関数の例を次に示します。 `negate_all` 関数は、単項 `operator-` を `vector` オブジェクトの各要素に適用します。 `print_all` 関数は、`vector` オブジェクトの各要素をコンソールに出力します。  
@@ -420,15 +421,15 @@ After negate_all():
   
 ```  
   
-### <a name="remarks"></a>コメント  
- C++ テンプレートの詳細については、次を参照してください。[テンプレート](../cpp/templates-cpp.md)です。  
+### <a name="remarks"></a>Remarks  
+ C++ テンプレートの詳細については、次を参照してください。[テンプレート](../cpp/templates-cpp.md)します。  
   
  [[この記事の内容](#top)]  
   
 ##  <a name="ehLambdaExpressions"></a> 例外の処理  
   
 ### <a name="example"></a>例  
- ラムダ式の本体は、構造化例外処理 (SEH: Structured Exception Handling) および C++ 例外処理の規則に従います。 発生した例外をラムダ式の本体で処理するか、または例外処理を外側のスコープに延期することができます。 この例は、`for_each` 関数とラムダ式を使用して、`vector` オブジェクトに別の vector オブジェクトの値を挿入します。 使用して、 `try` / `catch`処理の最初のベクトルに無効なアクセスをブロックします。  
+ ラムダ式の本体は、構造化例外処理 (SEH: Structured Exception Handling) および C++ 例外処理の規則に従います。 発生した例外をラムダ式の本体で処理するか、または例外処理を外側のスコープに延期することができます。 次の例では、 **for_each**関数とラムダ式を入力する、`vector`もう 1 つの値を持つオブジェクト。 使用して、**お試しください**/**キャッチ**最初のベクトルに無効なアクセスを処理するためにブロックします。  
   
 ### <a name="code"></a>コード  
   
@@ -474,15 +475,15 @@ int main()
 Caught 'invalid vector<T> subscript'.  
 ```  
   
-### <a name="remarks"></a>コメント  
- 例外処理の詳細については、次を参照してください。[例外処理](../cpp/exception-handling-in-visual-cpp.md)です。  
+### <a name="remarks"></a>Remarks  
+ 例外処理の詳細については、次を参照してください。[例外処理](../cpp/exception-handling-in-visual-cpp.md)します。  
   
  [[この記事の内容](#top)]  
   
-##  <a name="managedLambdaExpressions"></a> マネージ型でのラムダ式の使用 (C + + CLI)  
+##  <a name="managedLambdaExpressions"></a> ラムダ式を使用してマネージ型 (C +/cli CLI)  
   
 ### <a name="example"></a>例  
- ラムダ式の capture 句には、マネージ型の変数を含めることができません。 ただし、ラムダ式のパラメーター リストにマネージ型の引数を渡すことができます。 この例に示しているラムダ式は、ローカル非マネージ型変数 `ch` を値でキャプチャし、<xref:System.String?displayProperty=fullName> オブジェクトをパラメーターとして受け取ります。  
+ ラムダ式の capture 句には、マネージド型の変数を含めることができません。 ただし、ラムダ式のパラメーター リストにマネージ型の引数を渡すことができます。 この例に示しているラムダ式は、ローカル非マネージ型変数 `ch` を値でキャプチャし、<xref:System.String?displayProperty=fullName> オブジェクトをパラメーターとして受け取ります。  
   
 ### <a name="code"></a>コード  
   
@@ -510,11 +511,11 @@ int main()
 Hello!  
 ```  
   
-### <a name="remarks"></a>コメント  
- ラムダ式を STL/CLR ライブラリで使用することもできます。 詳細については、次を参照してください。 [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)です。  
+### <a name="remarks"></a>Remarks  
+ ラムダ式を STL/CLR ライブラリで使用することもできます。 詳細については、次を参照してください。 [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)します。  
   
 > [!IMPORTANT]
->  ラムダは、共通言語ランタイム (CLR) によって管理されるエンティティである `ref class`、`ref struct`、`value class`、`value struct` ではサポートされていません。  
+>  ラムダは、これらの共通言語ランタイム (CLR) によって管理されるエンティティでサポートされていません: **ref クラス**、 **ref 構造体**、**値クラス**、および**値構造体**.  
   
  [[この記事の内容](#top)]  
   

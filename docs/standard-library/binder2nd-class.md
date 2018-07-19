@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de37ee92805d35b25e73e0682ce8abe79822a8b5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbd2f2c652c619a954b789a3b765fc636a03c33e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962725"
 ---
 # <a name="binder2nd-class"></a>binder2nd クラス
 
@@ -52,21 +53,21 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-`Func` 単項関数オブジェクトに変換する二項関数オブジェクト。
+*func*単項関数オブジェクトに変換する二項関数オブジェクト。
 
-`right` 二項関数オブジェクトの 2 番目の引数がバインドされる値です。
+*適切な*二項関数オブジェクトの 2 番目の引数がバインドされる値。
 
-`left` 2 番目の引数の固定値を作成し直したバイナリ オブジェクトを比較する引数の値。
+*左*適合のバイナリ オブジェクトが 2 番目の引数の固定値を比較する引数の値。
 
 ## <a name="return-value"></a>戻り値
 
-二項関数オブジェクトの 2 つ目の引数を値 `right.` にバインドした結果として生成される単項関数オブジェクト。
+値に二項関数オブジェクトの 2 番目の引数をバインドに起因する単項関数オブジェクト*右*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、二項関数オブジェクト _ *Func* のコピーを **op** に、`right` のコピーを **value** に格納します。 そのメンバー関数 `operator()` は **op**( `left`, **value**) を返すように定義されています。
+テンプレート クラスは、二項関数オブジェクト _ のコピーを格納*Func*で`op`のコピーと*右*で`value`します。 そのメンバー関数 `operator()` は **op**( `left`, **value**) を返すように定義されています。
 
-`Func` が型 **Operation** のオブジェクトで、c が定数の場合、[bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) は `binder2nd` class constructor `binder2nd`\< **Operation**> ( `Func`, `c` ) と等しくなり、より便利です。
+場合`Func`型のオブジェクトは、 `Operation` c は定数、 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`、 `c` ) と同じですが、`binder2nd`クラスのコンス トラクター `binder2nd` \< **操作**> ( `Func`、 `c` ) でより便利です。
 
 ## <a name="example"></a>例
 
@@ -118,7 +119,7 @@ The number of elements in v1 less than 10 is: 2.
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

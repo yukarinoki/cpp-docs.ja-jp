@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106233"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>RMyProviderRowset の継承の変更
 追加する、`IRowsetLocate`インターフェイスに単純な読み取り専用プロバイダーの例では、継承を変更する**RMyProviderRowset**です。 最初に、 **RMyProviderRowset**から継承`CRowsetImpl`です。 継承するように変更する必要があります**CRowsetBaseImpl**です。  

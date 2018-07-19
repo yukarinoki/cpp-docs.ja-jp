@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880800"
 ---
 # <a name="predefined-accelerator-keys"></a>定義済みのアクセラレータ キー
 Windows アプリケーション プロジェクトの一部として使用できるいくつかの定義済みのアクセラレータ キーがあります。 これらの仮想キーの一部は、Windows 環境用です。 その他の仮想キーは、ブラウザーや Unicode アプリケーションで使用できます。 どのアクセラレータでもこれらのキーを使用できます。  

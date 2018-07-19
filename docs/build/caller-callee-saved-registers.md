@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366797"
 ---
 # <a name="callercallee-saved-registers"></a>呼び出し元または呼び出し先保存済みレジスタ
 関数の呼び出しでは揮発性と見なされ、考慮すべき RAX、RCX、RDX、R8、R9、R10、R11 レジスタが破棄されます (しない限り、それ以外の場合の安全性の立証可能なプログラム全体の最適化などの分析で)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912980"
 ---
 # <a name="null-directive"></a>Null ディレクティブ
 Null プリプロセッサ ディレクティブは、1 つの番号記号 (**#**) 行に単独で記述します。 これは実行されません。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382742"
 ---
 # <a name="default-date-and-time"></a>既定の日付と時刻
 **ANSI 3.8.8** 翻訳の日時が使用できない場合の _DATE\_ と _TIME\_ の定義  

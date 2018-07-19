@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fcac345a572f8b33d76692d6852e2dc28698367
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f464efcc76d688ec753395876ebc0841ec4b2cfa
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931074"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>ダイアログ ボックスの作成と表示
 2 フェーズの操作は、ダイアログ ボックスのオブジェクトを作成します。 最初に、ダイアログのオブジェクトを構築し、ダイアログ ウィンドウを作成します。 モーダルとモードレスのダイアログ ボックスでは、作成し、それらを表示するために使用するプロセスが少し異なります。 次の表は、どのモーダルとモードレスのダイアログ ボックスは通常構築し、表示されます。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
   
 |ダイアログの種類|それを作成する方法|  
 |-----------------|----------------------|  
-|[モードレス](../mfc/creating-modeless-dialog-boxes.md)|構築`CDialog`、まず**作成**メンバー関数。|  
+|[モードレス](../mfc/creating-modeless-dialog-boxes.md)|構築`CDialog`、まず`Create`メンバー関数。|  
 |[モーダル](../mfc/creating-modal-dialog-boxes.md)|構築`CDialog`、まず`DoModal`メンバー関数。|  
   
  、する場合は、作成、ダイアログ ボックスから、[インメモリでダイアログ テンプレート](../mfc/using-a-dialog-template-in-memory.md)構築するダイアログ テンプレート リソースからではなくです。 ただし、高度なトピックでは、します。  

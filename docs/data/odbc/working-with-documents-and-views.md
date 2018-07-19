@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092947"
 ---
 # <a name="working-with-documents-and-views"></a>ドキュメントとビューの使用
 Microsoft Foundation Classes (MFC) ライブラリは、その機能の多くのドキュメント/ビュー アーキテクチャに依存します。 通常、ドキュメントは、データを格納し、ビュー、フレーム ウィンドウのクライアント領域内に表示してユーザーと対話データ。 ビューは、ドキュメントを取得し、データの更新と通信します。 フレームワークの有無には、データベース クラスを使用することができます。  

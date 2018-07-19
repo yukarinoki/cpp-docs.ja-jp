@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382568"
 ---
 # <a name="what-frame-windows-do"></a>フレーム ウィンドウの機能
 だけでなく、ビューをフレームだけで、フレーム ウィンドウは、ビューと、アプリケーションのフレームの調整に関連するさまざまなタスクを担当します。 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)から継承[CFrameWnd](../mfc/reference/cframewnd-class.md)であるため、`CFrameWnd`機能だけではなく、それらを追加する新しい機能です。 子ウィンドウの例には、ビュー、ボタン、リスト ボックス、およびコントロール バー、ツールバー、ステータス バー、およびダイアログ バーを含むなどのコントロールが含まれます。  

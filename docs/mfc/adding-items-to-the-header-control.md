@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342736"
 ---
 # <a name="adding-items-to-the-header-control"></a>ヘッダー コントロールへの項目の追加
 ヘッダー コントロールを作成した後 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md))、その親ウィンドウで項目数だけ追加"ヘッダー"ようにする必要があります: 通常は 1 列あたり 1 台。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388729"
 ---
 # <a name="extern-storage-class-specifier"></a>extern ストレージ クラス指定子
 `extern` のストレージ クラス指定子で宣言された変数は、プログラムのソース ファイルのいずれかの外部レベルで定義されている同じ名前の変数への参照です。 内部 `extern` 宣言は、ブロック内で外部レベル変数定義を表示するために使用されます。 外部レベルで宣言されていない限り、`extern` キーワードを使用して宣言された変数は、宣言されたブロックでのみ使用できます。  

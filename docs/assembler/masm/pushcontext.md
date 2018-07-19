@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056380"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 現在の一部またはすべてを保存`context`: セグメント レジスタの仮定、基数の値、および一覧表示する cref フラグ、またはプロセッサ/コプロセッサの値。 `context`できます**想定**、 `RADIX`、**を一覧表示する**、 **CPU**、または**すべて**です。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344364"
 ---
 # <a name="general-class-design-philosophy"></a>一般的なクラス デザインの考え方
 Microsoft Windows では、C++ 言語が普及よりかなり前に設計されています。 数千のアプリケーションでは、C 言語の Windows アプリケーション プログラミング インターフェイス (API) を使用するため、そのインターフェイスは、近い将来に保持されます。 手続き型の C 言語 API の上に、任意の C++ Windows インターフェイスを構築する必要がそのためです。 これは、C++ アプリケーションが C のアプリケーションと共存できることを保証します。  

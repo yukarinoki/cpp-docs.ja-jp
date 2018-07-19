@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088129"
 ---
 # <a name="platformcollectionsdetails-namespace"></a>Platform::Collections::Details 名前空間
 この名前空間は、 `Platform` インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  

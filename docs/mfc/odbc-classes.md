@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348141"
 ---
 # <a name="odbc-classes"></a>ODBC クラス
 これらのクラスは作業をオープン データベース コネクティビティ (ODBC) ドライバーが利用可能なデータベースのさまざまなに簡単にアクセスを提供するその他のアプリケーション フレームワークのクラスを使用します。  

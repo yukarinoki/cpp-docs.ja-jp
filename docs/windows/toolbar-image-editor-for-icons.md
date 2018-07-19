@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890555"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>ツール バー (アイコン用イメージ エディター)
 **イメージ エディター**ツールバーには、描画、ペイント、テキストを入力する、消去、およびビューの操作用のツールが含まれています。 オプション セレクター、各ツールを使用するオプションを選択することができますも含まれています。 たとえば、さまざまなブラシの幅、拡大率、および線のスタイルから選択することができます。  

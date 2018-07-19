@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858758"
 ---
 # <a name="adding-or-deleting-a-string"></a>文字列の追加と削除
 文字列エディターを使用して、文字列テーブルに新しいエントリを迅速に挿入できます。 新しい文字列は、テーブルの最後に配置され、[次へ] の使用可能な識別子が指定されます。 ID、値、またはキャプション プロパティを編集することができますし、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)に応じて。  

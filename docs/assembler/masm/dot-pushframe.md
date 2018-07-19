@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053205"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 生成、`UWOP_PUSH_MACHFRAME`アンワインド コードのエントリ。 場合、省略可能な`code`を指定すると、アンワインド コードのエントリが 1 の修飾子を指定します。 それ以外の場合、修飾子には 0 です。  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413207"
 ---
 # <a name="to-functions"></a>to 系関数
 各 **to** 関数と、もしあれば関連付けられているマクロは、任意の 1 文字を別の文字に変換します。  

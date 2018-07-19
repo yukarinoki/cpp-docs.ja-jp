@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879108"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 *内部ポインター*オブジェクト自体ではなく、参照型の内部にポインターを宣言します。 内部ポインターは、参照ハンドル、値の型をボックス化された型のハンドル、マネージ型のメンバー、またはマネージ配列の要素を参照できます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227099"
 ---
 # <a name="fatal-error-c999"></a>致命的なエラー C999
 不明なメッセージ、Visual C ヘルプ メニューのサポート情報コマンドを選択してください詳細については、テクニカル サポート ヘルプ ファイルを開く  

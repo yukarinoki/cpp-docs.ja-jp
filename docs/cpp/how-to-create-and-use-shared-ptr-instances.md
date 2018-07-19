@@ -1,5 +1,5 @@
 ---
-title: '方法: shared_ptr インスタンスを作成して |Microsoft ドキュメント'
+title: '方法: shared_ptr インスタンスを作成して |Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -13,10 +13,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1a2aad184a1f388df6f7a6941aa9e5f302f35b12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38102899"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
 `shared_ptr` 型は、C++ 標準ライブラリ内のスマート ポインターであり、複数の所有者がメモリ内のオブジェクトの有効期間を管理する必要が生じる可能性があるシナリオを想定して設計されたものです。 `shared_ptr` を初期化した後、そのポインターをコピーすること、関数の引数内の値として渡すこと、および他の `shared_ptr` インスタンスに割り当てることができます。 すべてのインスタンスは同じオブジェクトを指し、1 つの "コントロール ブロック" へのアクセスを共有します。このコントロール ブロックは、新しい `shared_ptr` が追加されるとき、スコープ外になるとき、またはリセットされるときに必ず参照カウントをインクリメントおよびデクリメントします。 参照カウントが 0 に達したときに、コントロール ブロックはメモリ リソースと自らを削除します。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
  [![共有ポインター](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
   
 ## <a name="example"></a>例  
- 可能な限り、使用、 [make_shared](../standard-library/memory-functions.md#make_shared)を作成する関数、`shared_ptr`が最初に、メモリ リソースの作成時にします。 `make_shared` は例外セーフです。 これは、コントロール ブロックとリソースにメモリを割り当てるために同じ呼び出しを使用し、その結果、構造のオーバーヘッドが削減されます。 `make_shared`を使用しない場合は、オブジェクトを `shared_ptr` コンストラクターに渡す前にオブジェクトを作成するために、明示的な新しい式を使用する必要があります。 次の例では、新しいオブジェクトと共に `shared_ptr` を宣言して初期化するさまざまな方法を示します。  
+ 可能であればを使用して、 [make_shared](../standard-library/memory-functions.md#make_shared)関数を作成する、`shared_ptr`メモリ リソースが最初に作成されたとき。 `make_shared` は例外セーフです。 これは、コントロール ブロックとリソースにメモリを割り当てるために同じ呼び出しを使用し、その結果、構造のオーバーヘッドが削減されます。 `make_shared`を使用しない場合は、オブジェクトを `shared_ptr` コンストラクターに渡す前にオブジェクトを作成するために、明示的な新しい式を使用する必要があります。 次の例では、新しいオブジェクトと共に `shared_ptr` を宣言して初期化するさまざまな方法を示します。  
   
  [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
 ## <a name="example"></a>例  
- `shared_ptr` 要素のコピーのアルゴリズムを使用しているときに C++ 標準ライブラリのコンテナーに役にもです。 基になるメモリが、必要とされている間は有効であり、必要なくなった後は無効になることを理解している場合は、要素を `shared_ptr` 内でラップし、他のコンテナーにコピーすることができます。 次の例では、ベクター内の `replace_copy_if` インスタンスに対して `shared_ptr` アルゴリズムを使用する方法を示します。  
+ `shared_ptr` 要素をコピーするアルゴリズムを使用しているときに、C++ 標準ライブラリ コンテナーに役立つも。 基になるメモリが、必要とされている間は有効であり、必要なくなった後は無効になることを理解している場合は、要素を `shared_ptr` 内でラップし、他のコンテナーにコピーすることができます。 次の例では、ベクター内の `replace_copy_if` インスタンスに対して `shared_ptr` アルゴリズムを使用する方法を示します。  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   

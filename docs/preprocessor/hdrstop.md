@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847027"
 ---
 # <a name="hdrstop"></a>hdrstop
 プリコンパイル ファイル名およびコンパイル状態が保存される場所に対する追加の制御を指定します。  

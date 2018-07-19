@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842769"
 ---
 # <a name="phases-of-translation"></a>変換フェーズ
 C および C++ プログラムは、それぞれがプログラムのテキストの一部を含む 1 つ以上のソース ファイルで構成されます。 ソース ファイルは、インクルード ファイル (`#include` プリプロセッサ ディレクティブを使用して含まれたファイル) と共に、`#if` などの条件付きコンパイル ディレクティブによって削除されたコードのセクションを除き、"翻訳単位" と呼ばれます。  

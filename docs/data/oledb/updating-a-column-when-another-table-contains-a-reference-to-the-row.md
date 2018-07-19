@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102886"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>行への参照が別のテーブルにある場合に列を更新する方法
 一部のプロバイダーは、行の変更のどの列を検出できますが、多くのプロバイダーができません。 その結果、列の更新時に発生するエラーを更新しようとしている行への参照があります。 この問題を解決するには、変更する列のみを含む別のアクセサーを作成します。 アクセサーにはその数を渡す`SetData`です。  

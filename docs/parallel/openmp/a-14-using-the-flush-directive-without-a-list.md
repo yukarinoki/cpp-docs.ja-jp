@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694330"
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14 リストのない flush ディレクティブの使用
 次の例 (の[セクション 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) 20 ページで) 共有に影響を受けるオブジェクトを区別、`flush`ディレクティブの影響を受けない共有オブジェクトからリストのないです。  

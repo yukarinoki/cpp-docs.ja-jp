@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279306"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>コンパイラの警告 (レベル 1) C4544
 'declaration': このテンプレート宣言の既定のテンプレート引数が無視されました  

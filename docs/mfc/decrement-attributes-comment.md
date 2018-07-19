@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74398d731c51223ea74fc6b827b0626af89286b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44b34c2e2d22d0a0a2feb15f6bf2793b68dc7042
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929570"
 ---
 # <a name="-attributes-comment"></a>// Attributes コメント
 `// Attributes`の MFC クラス宣言のセクションには、オブジェクトのパブリックの属性 (またはプロパティ) が含まれています。 通常これらは、メンバー変数、または関数を取得または設定します。 "Get"および"Set"関数は、仮想できない可能性があります。 "Get"関数は、通常**const**ほとんどの場合ではありません副作用が生じるのため、します。 これらのメンバーは通常はパブリックです。protected および private の属性は、通常、implementation セクションであります。  
   
- クラスを一覧表示するサンプルの`CStdioFile`[のコメントの例](../mfc/an-example-of-the-comments.md)、一覧には、1 つのメンバー変数が含まれています。`m_pStream`です。 クラス`CDC`このコメントの下の 20 個のメンバーを一覧表示します。  
+ クラスを一覧表示するサンプルの`CStdioFile`[のコメントの例](../mfc/an-example-of-the-comments.md)、一覧には、1 つのメンバー変数が含まれています。 *m_pStream*です。 クラス`CDC`このコメントの下の 20 個のメンバーを一覧表示します。  
   
 > [!NOTE]
 >  などの大きなクラス`CDC`と`CWnd`、単に 1 つのグループ内のすべての属性を一覧表示をわかりやすくするためには追加されません非常に多くのメンバーがあります。 このような場合は、クラス ライブラリをさらに、メンバーを記述するその他のコメントを見出しとして使用します。 たとえば、`CDC`使用`// Device-Context Functions`、 `// Drawing Tool Functions`、`// Drawing Attribute Functions`などです。 属性を表すグループは上記で説明した通常の構文に従います。 OLE クラスの多くがあると呼ばれる implementation セクション`// Interface Maps`です。  

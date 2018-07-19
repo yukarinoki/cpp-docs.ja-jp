@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368536"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>__declspec(dllimport) を使った関数呼び出しのインポート
 次のコード例は、使用する方法を示しています。 **_declspec(dllimport)** DLL から関数の呼び出しをアプリケーションにインポートします。 あると想定`func1`関数を含む .exe ファイルとは別の DLL に存在するは、**メイン**関数。  

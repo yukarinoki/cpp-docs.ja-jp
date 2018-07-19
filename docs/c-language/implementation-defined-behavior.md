@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383439"
 ---
 # <a name="implementation-defined-behavior"></a>実装定義の動作
 ANSI X3.159-1989 (*American National Standard for Information Systems* - *Programming Language* - *C*) には、移植性の問題に関するセクションがあります。 この ANSI セクションには、ANSI が特定の実装に対して開放している C 言語の領域が記載されています。 ここでは、C 言語のこれらの実装定義領域が Microsoft C でどのように処理されるかについて説明します。  

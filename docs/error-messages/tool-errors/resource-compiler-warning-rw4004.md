@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337107"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>リソース コンパイラの警告 RW4004
 仮想キー コードに相当しない ASCII 文字  

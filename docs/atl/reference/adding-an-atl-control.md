@@ -1,5 +1,5 @@
 ---
-title: ATL コントロールを追加する |Microsoft ドキュメント
+title: ATL コントロールの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fab4e01cafa314f259c22ce61ca4e0c4754a874a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954683"
 ---
-# <a name="adding-an-atl-control"></a>ATL コントロールを追加します。
-このウィザードを使用すると、すべてのコンテナー インターフェイスをサポートするプロジェクトにユーザー インターフェイス オブジェクトを追加します。 これらのインターフェイスをサポートするために、必要がありますが作成されたプロジェクト、ATL アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 使用することができます、 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)ATL アプリケーションを作成するか、 [ATL オブジェクトを MFC アプリケーションに追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)MFC アプリケーションに対する ATL のサポートを実装します。  
+# <a name="adding-an-atl-control"></a>ATL コントロールの追加
+このウィザードを使用すると、すべての潜在的なコンテナーのインターフェイスをサポートするプロジェクトにユーザー インターフェイス オブジェクトを追加します。 これらのインターフェイスをサポートするために、プロジェクトする必要がありますを作成して、ATL アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 ATL アプリケーションを作成するか、[ATL オブジェクトを MFC アプリケーションに追加して](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) MFC アプリケーションの ATL サポートを実装するには、[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)を利用できます。  
   
 ### <a name="to-add-an-atl-control-to-your-project"></a>ATL コントロールをプロジェクトに追加するには  
   
-1.  いずれかで**ソリューション エクスプ ローラー**または[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)、ATL シンプル オブジェクトを追加するプロジェクトの名前を右クリックします。  
+1.  いずれかで**ソリューション エクスプ ローラー**または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)、ATL シンプル オブジェクトを追加するプロジェクトの名前を右クリックします。  
   
-2.  をクリックして**追加**クリックしてショートカット メニューから**クラスの追加**です。  
+2.  クリックして**追加**クリックして、ショートカット メニューから**クラスの追加**します。  
   
-3.  [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL コントロール**、順にクリック**追加**を表示する、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)です。  
+3.  [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL コントロール**、順にクリックします**追加**を表示する、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)します。  
   
  使用して、 **ATL コントロール ウィザード**、3 種類のコントロールのいずれかを作成することができます。  
   
@@ -40,10 +41,9 @@ ms.lasthandoff: 05/03/2018
   
 -   DHTML コントロール  
   
- また、コントロールのサイズを小さくしを選択すると、ほとんどのコンテナーで使用されていないインターフェイスを削除する**最小限の制御**上、**オプション**ウィザードのページです。  
+ また、コントロールのサイズを小さくし、選択して、ほとんどのコンテナーで使用されていないインターフェイスを削除**最小限の制御**上、**オプション**ウィザードのページ。  
   
 ## <a name="see-also"></a>関連項目  
  [複合コントロールへの機能の追加](../../atl/adding-functionality-to-the-composite-control.md)   
- [ATL COM オブジェクトの基本事項](../../atl/fundamentals-of-atl-com-objects.md)   
- [ATLFire サンプル](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)
+ [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)   
 

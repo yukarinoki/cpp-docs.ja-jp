@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952275"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush クラス
 ID2D1RadialGradientBrush のラッパーです。  
@@ -98,7 +99,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|ID2D1RadialGradientBrush へのポインター。|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Center、グラデーションの起点オフセットと x 半径と y 半径ブラシのグラデーションのです。|  
@@ -114,7 +115,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
  `CD2DRadialGradientBrush`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dradialgradientbrush"></a>  CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
@@ -132,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pResource`  
+ *pResource*  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -151,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 構造体の配列へのポインター。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  大きいか gradientStops 配列でグラデーション境界の数を示す 1 に等しい値です。  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  Center、グラデーションの起点オフセットと x 半径と y 半径ブラシのグラデーションのです。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  グラデーション境界間の補間を実行する色で領域です。  
   
- `extendMode`  
+ *オン*  
  [0, 1] の正規化された範囲外のグラデーションの動作です。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  不透明度およびブラシの変換へのポインター。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -183,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRenderTarget`  
+ *pRenderTarget*  
  レンダー ターゲットへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -288,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  グラデーションの楕円のブラシの座標空間内の中央  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -299,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  グラデーションのグラデーションの楕円の中心から原点のオフセット  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -310,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `radiusX`  
+ *四角形*  
  グラデーションの楕円の x 半径。 この値がブラシの座標空間には  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -321,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `radiusY`  
+ *radiusY*  
  グラデーションの楕円の y 半径。 この値がブラシの座標空間には  
   
 ## <a name="see-also"></a>関連項目  

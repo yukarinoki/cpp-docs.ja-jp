@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878393"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier クラス
 モジュール内の最後のオブジェクトを解放すると、イベント ハンドラーを呼び出します。  

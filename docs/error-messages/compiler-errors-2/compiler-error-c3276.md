@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248243"
 ---
 # <a name="compiler-error-c3276"></a>コンパイラ エラー C3276
 'keyword': _ _finally/finally にブロックからのジャンプが動作を終了処理時に定義されていません  

@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963473"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/07/2018
 > [!NOTE]
 > 使用してコンパイルされたコードで **/clr**、このヘッダーはブロックされます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 条件変数を待機するコードでは `mutex` を使用する必要もあります。 呼び出しスレッドは、条件変数を待機する関数を呼び出す前に、`mutex` をロックする必要があります。 呼び出された関数が戻ると、`mutex` はロックされます。 条件が true になるまでスレッドが待機している間は、`mutex` はロックされません。 予測できない結果にならないように、条件変数を待機する各スレッドでは同じ `mutex` オブジェクトを使用する必要があります。
 
@@ -58,9 +59,9 @@ while (condition is false)
 
 - `wait_for` は指定された `time interval` の間待機します。
 
-これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 このメソッドは、述語が `true` になるまで値を返しません。
+これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 述語になるまでは、メソッドが返されません**true**します。
 
-各クラスにも、条件が `true` であることを条件変数に通知するために使用される 2 つのメソッドがあります。
+各クラスの状態にある条件変数を通知に使用される 2 つのメソッドもあります**true**します。
 
 - `notify_one` は、条件変数を待機しているスレッドの 1 つをウェイクアップします。
 

@@ -28,11 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ac125b068de5111a2b98800956c12a0c979737f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954995"
 ---
 # <a name="sharedfuture-class"></a>shared_future クラス
 
@@ -45,7 +46,7 @@ template <class Ty>
 class shared_future;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `valid`、`operator=` のメソッド、および*空の* `shared_future` オブジェクト上のデストラクター以外は呼び出しません。
 
@@ -75,7 +76,7 @@ class shared_future;
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|新しい関連付けられた非同期状態を割り当てます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<将来 >
 
@@ -93,7 +94,7 @@ Ty& get() const;
 void get() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 結果が例外の場合は、そのメソッドが再スローします。 それ以外の場合、結果が返されます。
 
@@ -101,7 +102,7 @@ void get() const;
 
 部分的特殊化 `shared_future<Ty&>` では、格納されている値は、実質的には*非同期プロバイダー*に戻り値として渡されたオブジェクトへの参照です。
 
-特殊化 `shared_future<void>` には格納されている値が存在しないため、このメソッドは `void` を返します。
+特殊化に格納されている値が存在しないので`shared_future<void>`、メソッドを返します**void**します。
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -114,17 +115,17 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` A`shared_future`オブジェクト。
+*右*A`shared_future`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `*this`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初の演算子では、操作の後、`Right` に関連付けられた非同期状態は既にありません。
+最初の演算子*右*不要になった操作の完了後、関連付けられた非同期状態を持ちます。
 
-2 番目のメソッドでは、`Right` は関連付けられた非同期状態を維持します。
+2 番目のメソッドでは、*右*関連付けられた非同期状態を維持します。
 
 ## <a name="shared_future"></a>  shared_future::shared_future コンストラクター
 
@@ -139,15 +140,15 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` A[将来](../standard-library/future-class.md)または`shared_future`オブジェクト。
+*右*A[将来](../standard-library/future-class.md)または`shared_future`オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、*関連付けられた非同期状態*がない `shared_future` オブジェクトを構築します。
 
-2 つ目および 3 つ目のコンストラクターは、`shared_future` オブジェクトを構築し、`Right` から関連付けられた非同期状態を転送します。 `Right` に関連付けられた非同期状態は既にありません。
+2 番目と 3 番目のコンス トラクターを構築、`shared_future`オブジェクトし、関連付けられた非同期状態からの転送*右*します。 *右*関連付けられた非同期状態にはなくなりました。
 
-4 つ目のコンストラクターは、`Right` と同じ関連付けられた非同期状態を持つ `shared_future` オブジェクトを構築します。
+4 番目のコンス トラクターの構成要素を`shared_future`として非同期状態が同じであるオブジェクトに関連付けられている*右*します。
 
 ## <a name="valid"></a>  shared_future::valid
 
@@ -159,7 +160,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが関連付けられた非同期状態である場合は `true` を返します。それ以外の場合は `false` を返します。
+**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -169,7 +170,7 @@ bool valid() noexcept;
 void wait() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ、準備完了になります。
 
@@ -185,13 +186,13 @@ future_status wait_for(
 
 ### <a name="parameters"></a>パラメーター
 
-`Rel_time` A [:duration](../standard-library/duration-class.md)最大時間間隔を指定するオブジェクトをそのスレッドはブロックされます。
+*Rel_time* A [chrono::duration](../standard-library/duration-class.md)最大時間間隔を指定するオブジェクトをそのスレッドはブロックします。
 
 ### <a name="return-value"></a>戻り値
 
 呼び出し側に戻る理由を示す [future_status](../standard-library/future-enums.md#future_status)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ *ready* になります。
 
@@ -207,13 +208,13 @@ future_status wait_until(
 
 ### <a name="parameters"></a>パラメーター
 
-`Abs_time` A [chrono::time_point](../standard-library/time-point-class.md)するまで、スレッド ブロックを解除できます時間を指定するオブジェクト。
+*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md)その後、スレッド ブロックを解除できる時間を指定するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 呼び出し側に戻る理由を示す [future_status](../standard-library/future-enums.md#future_status)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ、準備完了になります。
 

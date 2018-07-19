@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381678"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>CObject からクラスを派生するときのオーバーヘッド
 クラスから派生することで、オーバーヘッド[CObject](../mfc/reference/cobject-class.md)は最小限にします。 4 つだけの仮想関数と 1 つの派生クラスの継承[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)オブジェクト。  

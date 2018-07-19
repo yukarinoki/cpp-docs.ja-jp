@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385990"
 ---
 # <a name="writing-mfc-applications"></a>MFC アプリケーションの作成
 この記事では、アプリケーションを開発するときに実行する最初の手順について説明します。 最初に、作成するアプリケーションの種類を決定する必要があります。 説明したいくつかの選択肢の[アプリケーションの設計の選択肢](../mfc/application-design-choices.md)です。 アプリケーションになります。  

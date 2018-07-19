@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088392"
 ---
 # <a name="connecting-to-a-data-source"></a>データ ソースへの接続
 ODBC データ ソースは、特定のデータ、そのデータおよびデータ ソース名を使用して記述されるデータ ソースの場所にアクセスするために必要な情報のセットです。 プログラムの観点から、データ ソースには、データ、DBMS、(存在する場合) は、ネットワーク、および ODBC が含まれています。  

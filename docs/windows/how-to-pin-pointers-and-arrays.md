@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873590"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>方法 : ポインターと配列を固定する
 マネージ オブジェクトで定義されている下位のオブジェクトをピン留めすると、オブジェクト全体をピン留めの効果があります。  たとえば、配列のいずれかの要素をピン留めすると場合、し、配列全体がもピン留めします。 ピン留めされた配列を宣言するための言語拡張機能はありません。 配列をピン留めするには、その要素の型とその要素のいずれかの暗証番号 (pin) への固定ポインターを宣言します。  

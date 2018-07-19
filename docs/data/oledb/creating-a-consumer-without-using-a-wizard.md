@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097693"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>ウィザードを使用しないコンシューマーの作成
 次の例では、既存の ATL プロジェクトに OLE DB コンシューマーのサポートを追加することを前提としています。 MFC アプリケーションに OLE DB コンシューマーのサポートを追加するには、必要なすべてのサポートを作成し、アプリケーションを実行するために必要な MFC ルーチンを呼び出します MFC アプリケーション ウィザードを実行する必要があります。  

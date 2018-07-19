@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881706"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>開いている&lt;デバイス&gt;画像 ダイアログ ボックス (アイコン用イメージ エディター)
 このダイアログ ボックスを使用して、デバイスのイメージを開きます。 現在のリソース (イメージの場合は、現在のリソースの一部である) に存在するデバイス イメージが一覧表示します。  

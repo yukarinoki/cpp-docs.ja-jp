@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375257"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (ガード チェックを有効にする)
 実行可能イメージで、Control Flow Guard のチェックのサポートを指定します。  

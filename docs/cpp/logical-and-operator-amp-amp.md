@@ -1,5 +1,5 @@
 ---
-title: '論理 AND 演算子: &amp; &amp; |Microsoft ドキュメント'
+title: '論理 AND 演算子: &amp; &amp; |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f683b7ff17a1dd3945f5cb554a7440ab47fad454
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d826ba5a2252ba11a0b9206a0555c7a022a9382c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943749"
 ---
 # <a name="logical-and-operator-ampamp"></a>論理 AND 演算子: &amp;&amp;
 ## <a name="syntax"></a>構文  
   
 ```  
   
-expression   
-&&  
- expression  
+expression && expression  
   
 ```  
   
-## <a name="remarks"></a>コメント  
- 論理 AND 演算子 (**&&**) ブール値を返します**true**両方のオペランドが場合**true**し、返します**false**それ以外の場合。 オペランドは、評価前に `bool` 型に暗黙的に変換され、結果は `bool` 型です。 論理 AND には左から右方向の結合規則があります。  
+## <a name="remarks"></a>Remarks  
+ 論理 AND 演算子 (**&&**) 両方のオペランドが TRUE の場合は、ブール値 TRUE を返すし、それ以外の場合は FALSE を返します。 オペランドは型に暗黙的に変換**bool**前に、evaluation、および結果の種類では**bool**します。 論理 AND には左から右方向の結合規則があります。  
   
  論理 AND 演算子のオペランドが同じ型である必要はありませんが、整数型またはポインター型である必要があります。 オペランドは一般に関係式または等価式です。  
   
@@ -44,7 +43,7 @@ expression
   
  2 番目のオペランドは、最初のオペランドが true (ゼロ以外) と評価された場合にのみ、評価されます。 この評価により、論理 AND 式が false の場合に 2 番目のオペランドに不要な評価が行われないようになっています。 このショート サーキット評価を使用して、次の例に示すように、null ポインターの逆参照を防止できます。  
   
-```  
+```cpp 
 char *pch = 0;  
 ...  
 (pch) && (*pch = 'a');  
@@ -53,11 +52,11 @@ char *pch = 0;
  `pch` が null (0) であれば、式の右側は評価されません。 したがって、null ポインターを使用した代入が発生することはありません。  
   
 ## <a name="operator-keyword-for-"></a>&& の演算子キーワード  
- **と**演算子に相当するテキストは、  **&&** です。 アクセスする方法を次の 2 つが、**と**をプログラムで演算子: ヘッダー ファイルをインクルード`iso646.h`、コンパイル時に、または、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語の拡張機能を無効にする) コンパイラ オプション。  
+ **と**演算子と等価のテキストは、  **&&** します。 アクセスする 2 つの方法がある、**と**プログラムで演算子: ヘッダー ファイルをインクルード`iso646.h`、使用してコンパイル、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張を無効にする) コンパイラ オプション。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_Logical_AND_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate logical AND  
@@ -78,5 +77,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [C++ 組み込み演算子の優先順位と結合規則](cpp-built-in-operators-precedence-and-associativity.md) [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子の優先順位と結合規則](cpp-built-in-operators-precedence-and-associativity.md) [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 論理演算子](../c-language/c-logical-operators.md)

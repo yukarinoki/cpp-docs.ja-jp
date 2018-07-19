@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253109"
 ---
 # <a name="compiler-error-c3347"></a>コンパイラ エラー C3347
 'arg': 必要な引数が属性 idl_module 内で指定されていません  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097069"
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 使用してデータ ソースへの接続を開き、 **CLSID**、 **ProgID**、または`CEnumerator`モニカー ロケーター ダイアログ ボックスを持つユーザーを求められます。  

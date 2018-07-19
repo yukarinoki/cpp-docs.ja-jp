@@ -28,11 +28,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b4a87cadedb11368d7803231b96d0f7a5acfb99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bfabbd938f2258f7e1a75fd77eaac7b2cd23b2b8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957624"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex クラス
 
@@ -63,9 +64,9 @@ class recursive_timed_mutex;
 |[try_lock_until](#try_lock_until)|指定した時刻まで `mutex` の所有権の取得を試みます。|
 |[unlock](#unlock)|`mutex` の所有権を解放します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ミュー テックス >
+**ヘッダー:** \<mutex >
 
 **名前空間:** std
 
@@ -77,7 +78,7 @@ class recursive_timed_mutex;
 void lock();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 呼び出しスレッドが既に `mutex` を所有している場合、メソッドが直ちに返され、以前のロックは有効のままになります。
 
@@ -97,7 +98,7 @@ recursive_timed_mutex();
 ~recursive_timed_mutex();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 デストラクターの実行時にオブジェクトがロックされる場合の動作は未定義です。
 
@@ -111,11 +112,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが `mutex` の所有権を正常に取得した場合、または呼び出しスレッドがすでに `mutex` を所有している場合は `true`、それ以外の場合は `false` です。
+**true**メソッドの所有権を取得できた場合、`mutex`または呼び出し元のスレッドが既に所有している場合、 `mutex`、それ以外の**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-呼び出しスレッドが既に `mutex` を所有している場合、関数が直ちに `true` を返し、以前のロックは有効のままになります。
+呼び出し元のスレッドが既に所有している場合、 `mutex`、関数をすぐに返します**true**、および以前のロックが有効になります。
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -128,17 +129,17 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>パラメーター
 
-`Rel_time` A [:duration](../standard-library/duration-class.md)の所有権の取得を試行する時間の最大サイズを指定するオブジェクト、`mutex`です。
+*Rel_time* A [chrono::duration](../standard-library/duration-class.md)メソッドが所有権を取得しようとする最大時間を指定するオブジェクト、`mutex`します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが `mutex` の所有権を正常に取得した場合、または呼び出し元のスレッドがすでに `mutex` を所有している場合は `true`、それ以外の場合は `false` です。
+**true**メソッドの所有権を正常に取得した場合、`mutex`または呼び出し元のスレッドが既に所有している場合、 `mutex`、それ以外の**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-呼び出しスレッドが既に `mutex` を所有している場合、メソッドが直ちに `true` を返し、以前のロックは有効のままになります。
+呼び出し元のスレッドが既に所有している場合、 `mutex`、メソッドはすぐに返します**true**、および以前のロックが有効になります。
 
-## <a name="try_lock_until"></a>try_lock_until
+## <a name="try_lock_until"></a>  try_lock_until
 
 ブロックせずに `mutex` の所有権を取得しようとします。
 
@@ -151,15 +152,15 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>パラメーター
 
-`Abs_time` その後、メソッドを止めるの所有権の取得のしきい値を指定する時点、`mutex`です。
+*Abs_time*時点でメソッドを不要になったの所有権の取得を試行するしきい値を指定する、`mutex`します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが `mutex` の所有権を正常に取得した場合、または呼び出し元のスレッドがすでに `mutex` を所有している場合は `true`、それ以外の場合は `false` です。
+**true**メソッドの所有権を正常に取得した場合、`mutex`または呼び出し元のスレッドが既に所有している場合、 `mutex`、それ以外の**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-呼び出しスレッドが既に `mutex` を所有している場合、メソッドが直ちに `true` を返し、以前のロックは有効のままになります。
+呼び出し元のスレッドが既に所有している場合、 `mutex`、メソッドはすぐに返します**true**、および以前のロックが有効になります。
 
 ## <a name="unlock"></a>  unlock
 
@@ -169,7 +170,7 @@ bool try_lock_until(const xtime* Abs_time);
 void unlock();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメソッドが `mutex` の所有権を開放するのは、[lock](#lock)、[try_lock](#try_lock)、[try_lock_for](#try_lock_for)、および [try_lock_until](#try_lock_until) が `recursive_timed_mutex` オブジェクト上で正常に呼び出されたのと同じ回数だけ呼び出された後のみです。
 

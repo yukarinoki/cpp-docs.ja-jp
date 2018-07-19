@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383525"
 ---
 # <a name="linkage"></a>リンケージ
 識別子名で、さまざまなスコープのさまざまな識別子を参照できます。 異なるスコープまたは同じスコープ内で複数回宣言される識別子は、"リンケージ" と呼ばれるプロセスで同じ識別子または関数を参照するようにできます。 リンケージは、識別子を参照できる (参照可能な) プログラムの部分を判断します。 3 種類のリンケージがあります: [内部](../c-language/internal-linkage.md)、[外部](../c-language/external-linkage.md)、[リンケージなし](../c-language/no-linkage.md)。  

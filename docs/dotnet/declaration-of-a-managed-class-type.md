@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112642"
 ---
 # <a name="declaration-of-a-managed-class-type"></a>マネージ クラス型の宣言
 Visual c、c++ マネージ拡張から変更、参照クラス型を宣言する方法。  

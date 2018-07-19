@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860633"
 ---
 # <a name="attributes-by-usage"></a>使用法別の属性
 このトピックでは、C++ 言語要素を適用するに従って属性を示します。  

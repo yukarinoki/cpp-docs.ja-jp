@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377233"
 ---
 # <a name="v-version-number"></a>/V (バージョン番号)
 非推奨。 .Obj ファイルにテキスト文字列を埋め込みます。  

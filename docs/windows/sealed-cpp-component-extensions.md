@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890864"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ コンポーネント拡張)
 `sealed` は ref クラスの状況依存のキーワードであり、仮想メンバーがオーバーライドできないこと、または型を基本型として使用できないことを示します。  

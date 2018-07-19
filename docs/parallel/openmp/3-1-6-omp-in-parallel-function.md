@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686283"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel 関数
 **Omp_in_parallel**関数は、並列で実行される並列領域の動的な範囲内で呼び出された場合に 0 以外の値を返します。 それ以外の場合は 0 を返します。 形式は次のとおりです。  

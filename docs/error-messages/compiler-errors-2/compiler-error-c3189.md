@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251014"
 ---
 # <a name="compiler-error-c3189"></a>コンパイラ エラー C3189
 ' typeid\<抽象宣言子を入力 >': この構文はサポートされなくを使用して:: typeid 代わりに  

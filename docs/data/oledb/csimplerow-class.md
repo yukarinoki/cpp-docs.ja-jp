@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099564"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 使用されている行ハンドルの既定の実装を提供、 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)クラスです。  

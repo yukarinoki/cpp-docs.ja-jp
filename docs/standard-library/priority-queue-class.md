@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 149d255dd82d0dff2d2ddb1101b38bf05c69673a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954761"
 ---
 # <a name="priorityqueue-class"></a>priority_queue クラス
 
@@ -51,15 +52,15 @@ class priority_queue
 
 *型*priority_queue に格納される要素のデータを入力します。
 
-`Container` Priority_queue の実装に使用される基になるコンテナーの型。
+*コンテナー* priority_queue を実装するために使用される基になるコンテナーの種類。
 
-*比較*priority_queue 内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 この引数は省略可能な二項述語と**小さい***\<*** typename** *コンテナー ***:: value_type*** >* 既定値です。
+*比較*priority_queue 内の相対順序を決定する並べ替えキーとして 2 つの要素の値を比較できる関数オブジェクトを提供する型。 この引数は省略可能な二項述語と**少ない***\<*** typename** *コンテナー ***:: value_type*** >* は既定値です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-queue オブジェクトの最初のテンプレート パラメーターで指定するクラス **Type** の要素は [value_type](#value_type) と同義で、2 番目のテンプレート パラメーターで指定する、基になるコンテナー クラス **Container** 内の要素の型と一致する必要があります。 **Type** は割り当て可能にして、対象の型のオブジェクトをコピーできるように、および対象の型の変数に値を割り当てられるようにする必要があります。
+クラスの要素`Type`最初のテンプレートで規定されているキュー オブジェクトのパラメーター [value_type](#value_type)基になるコンテナー クラス内の要素の型に一致する必要がありますと`Container`によって規定、2 番目のテンプレート パラメーター。 `Type`その型のオブジェクトをコピーして、その型の変数に値を割り当てることができるように、割り当てることがあります。
 
-priority_queue では、クラス **Traits** の格納されている関数オブジェクトを呼び出すことによって、priority_queue が制御するシーケンスを並べ替えます。 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。
+Priority_queue がクラスの格納されている関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます`Traits`します。 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。
 
 priority_queue に適した基になるコンテナー クラスには、[deque クラス](../standard-library/deque-class.md)および既定の [vector クラス](../standard-library/vector-class.md)、または `front`、`push_back`、および `pop_back` の各操作をサポートするその他すべてのシーケンス コンテナーがあります。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
 
@@ -97,7 +98,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[size](#size)|`priority_queue` 内の要素数を返します。|
 |[top](#top)|`priority_queue` の最上位にある最大要素への const 参照を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<queue>
 
@@ -111,7 +112,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Container` のシノニムです。 C++ 標準ライブラリのシーケンス コンテナー クラス `deque` と既定のクラス `vector` は、priority_queue オブジェクトの基本のコンテナーとして使用するための要件を満たしています。 要件を満たすユーザー定義型を使用することもできます。
 
@@ -175,7 +176,7 @@ The priority_queue s2 is empty.
 void pop();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数を適用するには、priority_queue を空にすることはできません。 priority_queue の最上位は、常に、コンテナー内の最大要素に占有されます。
 
@@ -248,23 +249,23 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>パラメーター
 
-*_ comp*型の比較関数**constTraits**既定値は、基本のコンテナーの機能を比較すると、priority_queue で要素の並べ替えに使用します。
+*_ comp*型の比較関数**constTraits**既定値は、基本のコンテナーの機能を比較すると、priority_queue 内の要素の並べ替えに使用します。
 
-`_Cont` 構築された priority_queue のコピーに元の基本のコンテナーです。
+*_Cont*が構築された priority_queue がコピーに基本のコンテナー。
 
-`right` 構築されたセットのコピーに元の priority_queue します。
+*適切な*priority_queue を構築されたセットがコピーにです。
 
-`first` コピーされる要素の範囲内の最初の要素の位置。
+*最初*コピーされる要素の範囲内の最初の要素の位置。
 
-`last` コピーする要素の範囲を超える最初の要素の位置。
+*最後*コピーされる要素の範囲を超える先頭の要素の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初の 3 つの各コンストラクターは、空の初期 priority_queue を指定します。2 番目のコンストラクターも要素の順序を確立するために使用する比較関数の型 (`comp`) を指定し、3 番目のコンストラクターは使用する `container_type` (`_Cont`) を明示的に指定します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
+空の初期 priority_queue を 2 つ目も指定して、比較関数の型の最初の 3 つのコンス トラクターを指定します (`comp`) と、3 番目の要素の順序を明示的に確立するため、を指定する`container_type`(`_Cont`) を使用します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
 
-4 番目のコンストラクターは、priority_queue `right` のコピーを指定します。
+4 番目のコンス トラクターには、priority_queue のコピーを示す*右*します。
 
-最後の 3 つのコンス トラクターは、範囲をコピー [* 最初に、最終 *) のいくつかのコンテナー クラスの比較関数の種類を指定するときになるほど、priority_queue を初期化するために値を使用して**特徴 (traits)** と`container_type`.
+最後の 3 つのコンス トラクターは、範囲をコピーします [* 最初に、最終 *) 一部のコンテナー クラスの比較関数の種類を指定するときになるほど、priority_queue を初期化するために、値を使用**Traits**と`container_type`.
 
 ### <a name="example"></a>例
 
@@ -387,9 +388,9 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-`val` Priority_queue の最上部に追加する要素。
+*val* priority_queue の最上部に追加する要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 priority_queue の最上位は、コンテナー内の最大要素に占有される位置です。
 
@@ -474,7 +475,7 @@ priority_queue 内の要素の数を表すことができる符号なし整数�
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、priority_queue によって採用された基本コンテナーの `size_type` のシノニムです。
 
@@ -492,9 +493,9 @@ const_reference top() const;
 
 ### <a name="return-value"></a>戻り値
 
-**Traits** 関数によって決定される priority_queue オブジェクトの最大要素への参照。
+によって決定される最大の要素への参照、`Traits`関数、priority_queue のオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数を適用するには、priority_queue を空にすることはできません。
 
@@ -538,7 +539,7 @@ priority_queue 内に要素として格納されるオブジェクトの種類�
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、priority_queue によって採用された基本コンテナーの `value_type` のシノニムです。
 

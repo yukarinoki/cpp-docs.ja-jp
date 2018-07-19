@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136484"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>方法: ユーザー コントロールを作成し、MDI ビューをホストする
 次の手順では、.NET Framework ユーザー コントロールを作成し、そのユーザー コントロールをコントロール クラス ライブラリ (特に Windows コントロール ライブラリ プロジェクト) に作成し、プロジェクトをアセンブリにコンパイルする方法について説明します。 コントロールから派生したクラスを使用する MFC アプリケーションから使用できます[CView クラス](../mfc/reference/cview-class.md)と[CWinFormsView クラス](../mfc/reference/cwinformsview-class.md)です。  

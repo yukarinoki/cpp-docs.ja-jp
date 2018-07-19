@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281259"
 ---
 # <a name="compiler-warning-level-1-c4392"></a>コンパイラの警告 (レベル 1) C4392
 'signature': 組み込み関数の引数の数が正しくないが 'number' 引数が必要です  

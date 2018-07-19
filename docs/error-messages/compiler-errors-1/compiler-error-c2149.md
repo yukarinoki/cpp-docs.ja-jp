@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167825"
 ---
 # <a name="compiler-error-c2149"></a>コンパイラ エラー C2149
 'identifier': 名前付きビットフィールドの幅が 0 です  

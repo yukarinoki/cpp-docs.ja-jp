@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693888"
 ---
 # <a name="a22---using-the-defaultnone-clause"></a>A.22 default(none) 句の使用
 次の例は、影響を受ける変数を区別、`default(none)`されていない句。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883982"
 ---
 # <a name="copying-a-device-image-image-editor-for-icons"></a>デバイス イメージのコピー (アイコン用イメージ エディター)
 ### <a name="to-copy-a-device-image"></a>デバイス イメージをコピーするには  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091999"
 ---
 # <a name="record-field-exchange-using-rfx"></a>レコード フィールド エクスチェンジ: RFX の使い方
 このトピックでは、フレームワークの動作に関連して RFX を使用するには新機能について説明します。  

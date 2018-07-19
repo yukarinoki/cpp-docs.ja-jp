@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089053"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL データベース クラス (OLE DB テンプレート)
 Microsoft では、OLE DB では、さまざまな情報源や形式でのデータへの統一されたアクセスを提供する COM インターフェイスのセットのいくつかの実装を提供します。  OLE DB は正式に廃止されました。このドキュメントは、レガシ コードを保持している開発者です。 新しいアプリケーションは、ODBC を使用して、SQL データ ソースに接続する必要があります。

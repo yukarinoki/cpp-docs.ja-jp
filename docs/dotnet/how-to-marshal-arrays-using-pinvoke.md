@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132532"
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>方法: PInvoke を使用して配列をマーシャリングする
 このトピックの C スタイルの文字列は、CLR の文字列型を使用して呼び出すことができますを受け入れる関数をネイティブ<xref:System.String>.NET Framework プラットフォーム呼び出しのサポートを使用します。 Visual の C++ プログラマは、ほとんどのコンパイル時エラーを報告がタイプ セーフではありませんし、実装に時間がかかることができます、P/invoke が用意されているため (可能な場合)、代わりに、C++ Interop 機能を使用することをお勧めします。 アンマネージ API が DLL としてパッケージ化され、ソース コードを使用できない、P/invoke が唯一のオプション (それ以外の場合を参照してください[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md))。  

@@ -30,15 +30,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0512e2794e5ac493a997b5d4d885931d9a9fc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960555"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf クラス
 
-`char` 配列オブジェクトに格納されている要素のシーケンスとの間で行う、要素の送信を制御するストリーム バッファーを表します。
+要素に格納されている要素のシーケンスとの間の転送を制御するストリーム バッファーについて説明します、 **char**配列オブジェクト。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/08/2018
 class strstreambuf : public streambuf
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 オブジェクトの構築方法に応じて、シーケンスにおける変更に対応できるように割り当て、拡張、解放を必要に応じて行えます。
 
@@ -86,7 +87,7 @@ class strstreambuf : public streambuf
 |[str](#str)|[freeze](#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 |[underflow](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<strstream>
 
@@ -102,11 +103,12 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Freezeit` A`bool`は固定表示をストリームするかどうかを示すです。
+*_Freezeit*  
+ A **bool**ストリームを停止するかどうかを示します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`_Freezeit` が true の場合、この関数によって格納されている `strstreambuf` モードが変更され、被制御シーケンスが固定されます。 それ以外の場合、被制御シーケンスは固定されません。
+場合 *_Freezeit*が true の場合、この関数は、格納されている変更`strstreambuf`モードが固定されている被制御シーケンスを変更します。 それ以外の場合、被制御シーケンスは固定されません。
 
 [str](#str) は `freeze` を意味します。
 
@@ -189,13 +191,14 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Meta` バッファーに挿入する文字または`EOF`です。
+*_Meta*  
+ バッファーに挿入する文字または `EOF`。
 
 ### <a name="return-value"></a>戻り値
 
 関数が成功しない場合は、`EOF` が返されます。 それ以外の場合、_ *Meta* == `EOF` の場合に `EOF` 以外の値が返されます。 それ以外の場合は、\_ *Meta* が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 _ *Meta* != `EOF` の場合、プロテクト仮想メンバー関数は要素 ( `char`)\_ *Meta* を出力バッファーに挿入しようとします。 これはさまざまな方法で行うことができます。
 
@@ -213,21 +216,22 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Meta` バッファーに挿入する文字または`EOF`です。
+*_Meta*  
+ バッファーに挿入する文字または `EOF`。
 
 ### <a name="return-value"></a>戻り値
 
 関数が成功しない場合は、`EOF` が返されます。 それ以外の場合、_ *Meta* == `EOF` の場合に `EOF` 以外の値が返されます。 それ以外の場合は、\_ *Meta* が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 プロテクト仮想メンバー関数が要素を入力バッファーに戻そうと試み、その要素を現在の要素に (次のポインターによって指されるように) します。
 
 _ *Meta* == `EOF` の場合、プッシュ バックする要素は、実質的に、現在の要素の前に既にストリームにある要素になります。 それ以外の場合、この要素は **ch** = ( `char`)\_ *Meta* によって置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
 
-- 戻り位置が使用可能であり、格納されている要素が **ch** に等しい場合、入力バッファーの次のポインターをデクリメントできます。
+- 戻り位置が使用してに格納されている要素が等しい場合`ch`、入力バッファーのネクスト ポインターをデクリメントできます。
 
-- 戻り位置が使用可能であり、strstreambuf モードによって被制御シーケンスが変更可能であることが示されている場合、この関数は **ch** を戻り位置に格納し、入力バッファーの次のポインターをデクリメントできます。
+- 戻り位置が使用可能なと関数に格納できる場合は、strstreambuf モードによると、被制御シーケンスは変更可能な場合`ch`戻り位置に、入力バッファーのネクスト ポインターをデクリメントします。
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
@@ -241,9 +245,9 @@ streamsize pcount() const;
 
 被制御シーケンスに書き込まれる要素の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-具体的には、[pptr](../standard-library/basic-streambuf-class.md#pptr) が Null ポインターの場合、この関数はゼロを返します。 返しますそれ以外の場合、 `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)です。
+具体的には、[pptr](../standard-library/basic-streambuf-class.md#pptr) が Null ポインターの場合、この関数はゼロを返します。 返しますそれ以外の場合、 `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)します。
 
 ### <a name="example"></a>例
 
@@ -276,17 +280,20 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` に対して相対的なをシークする位置`_Way`です。
+*_Off*  
+ に対して相対的にシークする位置 *_Way*します。
 
-`_Way` オフセット演算の開始点です。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
+*_Way*  
+ オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-`_Which` ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*  
+ ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
 いずれかまたは両方のストリームの位置を変更することで、関数が成功すると、結果のストリームの位置が返されます。 それ以外の場合は、失敗し、無効なストリームの位置が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 プロテクト仮想メンバー関数が、制御対象ストリームの現在の位置を変更しようと試みます。 クラス strstreambuf のオブジェクトの場合、ストリームの位置がストリーム オフセットのみで構成されます。 オフセット ゼロは、被制御シーケンスの最初の要素を指定します。
 
@@ -312,15 +319,17 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>パラメーター
 
-`_Sp` シークする位置。
+*_Sp*  
+ シークする位置。
 
-`_Which` ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*  
+ ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
 いずれかまたは両方のストリームの位置を変更することで、関数が成功すると、結果のストリームの位置が返されます。 それ以外の場合は、失敗し、無効なストリームの位置が返されます。 ストリームの位置が無効であることを確認するには、戻り値と `pos_type(off_type(-1))` を比較します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 プロテクト仮想メンバー関数が、制御対象ストリームの現在の位置を変更しようと試みます。 クラス strstreambuf のオブジェクトの場合、ストリームの位置がストリーム オフセットのみで構成されます。 オフセット ゼロは、被制御シーケンスの最初の要素を指定します。 新しい位置は、_ *Sp* によって判断されます。
 
@@ -338,7 +347,7 @@ char *str();
 
 被制御シーケンスの先頭へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 明示的に挿入しない場合、終端の null 要素は存在しません。
 
@@ -380,19 +389,24 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Allocfunc*バッファー メモリの割り当てに使用する関数。
+*_Allocfunc*  
+ バッファー メモリの割り当てに使用される関数。
 
-`count` 指すバッファーの長さを決定`_Getptr`です。 `_Getptr` が引数ではない場合 (最初のコンストラクター フォーム)、バッファーの割り当てサイズの提案。
+*count*  
+ 指し示されるバッファーの長さを決定 *_Getptr*します。 場合 *_Getptr*引数ではない (最初のコンス トラクター フォーム)、割り当ての提案がバッファーのサイズします。
 
-*_Freefunc*バッファーのメモリを解放するために使用する関数。
+*_Freefunc*  
+ バッファー メモリを解放するために使用する関数。
 
-`_Getptr` 入力に使用されるバッファーです。
+*_Getptr*  
+ 入力に使用するバッファー。
 
-`_Putptr` 出力に使用するバッファー。
+*_Putptr*  
+ 出力に使用するバッファー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、入力バッファー、出力バッファー、および strstreambuf 割り当てを制御するすべてのポインターに Null ポインターを格納します。 被制御シーケンスを変更および拡張できるように、ストアド strstreambuf モードに設定します。 また、提案される初期割り当てサイズとして `count` を受け入れます。
+最初のコンストラクターは、入力バッファー、出力バッファー、および strstreambuf 割り当てを制御するすべてのポインターに Null ポインターを格納します。 被制御シーケンスを変更および拡張できるように、ストアド strstreambuf モードに設定します。 受け入れます。*カウント*提案される初期割り当てサイズとして。
 
 2 番目のコンストラクターは、ストレージを割り当てるために呼び出す関数へのポインターとしての _ *Allocfunc* と、ストレージを解放するために呼び出す関数へのポインターとしての \_ *Freefunc* を格納する点を除いて、最初のコンストラクターのように動作します。
 
@@ -416,9 +430,9 @@ strstreambuf(unsigned char *_Getptr,
 
 - 場合 (`count` > 0)、し*N*は`count`します。
 
-- 場合 (`count` = = 0)、し*N*は`strlen`(( **const** `char` *) `_Getptr` )。
+- 場合 (`count` 0 を = =)、し*N*は`strlen`(( **const** `char` *) `_Getptr` )。
 
-- 場合 (`count` < 0)、し*N*は**INT_MAX**です。
+- 場合 (`count` < 0)、し*N*は**INT_MAX**します。
 
 `_Putptr` が Null ポインターの場合、関数は次を実行することによって入力バッファーだけを確立します。
 
@@ -474,9 +488,9 @@ virtual int underflow();
 
 関数が成功しない場合は、`EOF` が返されます。 それ以外の場合、上記のように変換された入力ストリームの現在の要素が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-現在の要素を抽出するプロテクト仮想メンバー関数がよう努めて**ch**は入力バッファーから現在のストリームの位置を進めるととしての要素を返します (`int`) (`unsigned char`) **ch**. これは 1 つの方法でのみ実行可能です。読み取り位置が使用可能な場合は、読み取り位置に格納されている要素として **ch** を使用し、入力バッファーの次のポインターを進めます。
+プロテクト仮想メンバー関数は、現在の要素を抽出しようと`ch`は入力バッファーから現在のストリームの位置を進める、およびとして要素を返します (`int`) (`unsigned char`) **ch**します。 1 つの方法で行うことができます。 かかる読み取り位置が使用可能な場合は、`ch`要素は、読み取り位置に格納されていると、入力バッファーのネクスト ポインターを進めます。
 
 ## <a name="see-also"></a>関連項目
 

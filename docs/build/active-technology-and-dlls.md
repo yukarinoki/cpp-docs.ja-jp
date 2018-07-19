@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360114"
 ---
 # <a name="active-technology-and-dlls"></a>Active テクノロジと DLL
 Active テクノロジにより、オブジェクトのサーバーを DLL 内部に完全に実装します。 この種類のサーバーには、インプロセス サーバーは呼び出されます。 MFC は、Active テクノロジは、サーバーをコンテナーのメイン メッセージ ループにフックするための手段を提供しないために主に、ビジュアル編集の機能は、すべてのプロセスでサーバーを完全にできません。 MFC には、アクセラレータ キーとアイドル処理を処理するコンテナー アプリケーションのメッセージ ループへのアクセスが必要です。  

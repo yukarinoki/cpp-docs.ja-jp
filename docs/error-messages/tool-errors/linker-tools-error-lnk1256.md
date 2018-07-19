@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300645"
 ---
 # <a name="linker-tools-error-lnk1256"></a>リンカ ツール エラー LNK1256
 ALINK 処理に失敗しました : 理由  

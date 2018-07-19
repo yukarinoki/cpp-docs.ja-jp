@@ -29,11 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929308"
 ---
 # <a name="memory-management-examples"></a>メモリ管理 : 例
 この記事では、メモリ割り当ての 3 つの一般的な種類の各、MFC がフレーム割り当てとヒープの割り当てを実行する方法について説明します。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/04/2018
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     場合の引数、`CPerson`コンス トラクターへのポインターは、 `char`、フレーム割り当て用のステートメントは。  
+     場合の引数、`CPerson`コンス トラクターへのポインターは、 **char**、フレーム割り当て用のステートメントは。  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

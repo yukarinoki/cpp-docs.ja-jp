@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877411"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>イメージから選択した色を他の場所で使用する (アイコン用イメージ エディター)
 **色の選択**、または色ピックアップ、ツール、イメージ上の任意の色現在前景色または背景色、左または右マウス ボタンを押すかどうかによって異なります。 [キャンセル] を**色の選択**ツールで、別のツールを選択します。  

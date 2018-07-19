@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60c66beb3c0c8874bd3d678bfc4331dc766c443a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929132"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>コマンドとコントロール通知のハンドラー
 コマンドまたはコントロール通知メッセージの既定のハンドラーはありません。 したがって、これらのカテゴリのメッセージのハンドラーの名前付け規則でのみバインドされます。 コマンドまたはコントロールの通知をハンドラーにマップするときに、[プロパティ] ウィンドウは、コマンドの ID またはコントロール通知のコードに基づく名前を提案します。 提案された名前を受け入れる、変更するか、または置換できます。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCMessageHandling#5](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_2.h)]  
   
- このコマンドの ID を割り当てることが`IDC_MY_BUTTON`をアプリケーションに固有のユーザー インターフェイス オブジェクトと等価であるためです。  
+ このコマンドの ID を割り当てることが**として**アプリケーション固有のユーザー インターフェイス オブジェクトと等価であるためです。  
   
  メッセージの両方のカテゴリは、引数を受け取らずし、値を返しません。  
   

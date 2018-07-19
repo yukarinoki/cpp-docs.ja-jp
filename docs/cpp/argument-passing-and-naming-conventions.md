@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413487"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引数の渡し規則と名前付け規則
 **Microsoft 固有の仕様**  

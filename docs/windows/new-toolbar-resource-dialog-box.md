@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877541"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>[新規ツール バー リソース] ダイアログ ボックス
 新規ツールバー ダイアログ ボックスでは、ツール バー リソースを追加するボタンの高さと幅を指定することができます。 既定値は、16 × 15 ピクセルです。  

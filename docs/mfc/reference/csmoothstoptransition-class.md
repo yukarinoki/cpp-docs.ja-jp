@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f87c83b9f4c3840318b27922f758787d929d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80f0c9802077b89ca5555dc476b1066f61e6c593
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121491"
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition クラス
 スムーズ停止遷移をカプセル化します。  
@@ -60,7 +61,7 @@ class CSmoothStopTransition : public CBaseTransition;
 |[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時、アニメーション変数の値。|  
 |[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|移行の最大期間です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  スムーズ停止遷移は、特定の最終的な値に近づくし、0 の速度で到達によって低下します。 移行の期間は、最初と最後の値と指定した最大期間の違いの初期速度によって決まります。 1 つの放物線円弧から成るソリューションがない場合、このメソッドは、3 次遷移を作成します。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -70,7 +71,7 @@ class CSmoothStopTransition : public CBaseTransition;
   
  [CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="create"></a>  CSmoothStopTransition::Create  
@@ -83,7 +84,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLibrary`  
+ *pLibrary*  
  これは標準的な遷移の作成を担当する遷移ライブラリへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -99,10 +100,10 @@ CSmoothStopTransition(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `maximumDuration`  
+ *maximumDuration*  
  移行の最大期間です。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  遷移の終了時、アニメーション変数の値。  
   
 ##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  

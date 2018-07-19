@@ -1,5 +1,5 @@
 ---
-title: コンパイラ COM サポート クラス |Microsoft ドキュメント
+title: コンパイラ COM サポート クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939820"
 ---
 # <a name="compiler-com-support-classes"></a>コンパイラ COM サポート クラス
 **Microsoft 固有の仕様**  
   
- 標準クラスは、COM 型の一部をサポートするために使用されます。 クラスが定義されている\<comdef.h > と、タイプ ライブラリから生成されたヘッダー ファイルです。  
+ 標準クラスは、COM 型の一部をサポートするために使用されます。 クラスが定義されている\<comdef.h > とタイプ ライブラリから生成されたヘッダー ファイル。  
   
 |クラス|目的|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|便利な演算子とメソッドを提供するために、`BSTR` 型をラップします。|  
-|[_com_error](../cpp/com-error-class.md)|によってスローされたエラー オブジェクトを定義[_com_raise_error](../cpp/com-raise-error.md)でほとんどの障害が発生します。|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|COM インターフェイス ポインターをカプセル化し、必要な呼び出しを自動化`AddRef`、**リリース**、および`QueryInterface`です。|  
-|[_variant_t](../cpp/variant-t-class.md)|ラップ、**バリアント**便利な演算子とメソッドを提供する型。|  
+|[_com_error](../cpp/com-error-class.md)|によってスローされたエラー オブジェクトを定義します[_com_raise_error](../cpp/com-raise-error.md)ほとんどエラーが発生します。|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|COM インターフェイス ポインターをカプセル化し、必要な呼び出しを自動化`AddRef`、 `Release`、および`QueryInterface`します。|  
+|[_variant_t](../cpp/variant-t-class.md)|便利な演算子とメソッドを提供するために、`VARIANT` 型をラップします。|  
   
 **Microsoft 固有の仕様はここまで**  
   

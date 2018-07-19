@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381930"
 ---
 # <a name="c-language-syntax-summary"></a>C 言語の構文概要
 このセクションでは、C 言語および Microsoft 固有の C 言語機能の詳細について説明します。 このセクションの構文表記を使用して、あらゆる言語コンポーネントの正確な構文を決定できます。 構文の説明は、このマニュアル内のトピックを説明するセクションに表示されます。  

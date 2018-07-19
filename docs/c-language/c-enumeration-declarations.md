@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389742"
 ---
 # <a name="c-enumeration-declarations"></a>C 列挙体の宣言
 列挙体は、名前が付いた一連の整数定数で構成されます。 列挙型の宣言では、列挙タグ (省略可能) の名前を指定し、名前が付いた一連の整数識別子を定義します (これらの識別子は、"列挙セット"、"列挙定数"、"列挙子"、または "メンバー" と呼ばれます)。 列挙型の変数には、その型で定義された列挙セットの 1 つの値が格納されます。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374545"
 ---
 # <a name="lib-files-as-linker-input"></a>リンカー入力としての .lib ファイル
 形式の標準ライブラリおよび COFF インポート ライブラリ、どちらも通常、拡張子であるリンクを受け入れます。 lib です。 標準ライブラリでは、オブジェクトが含まれており、LIB ツールによって作成されます。 インポート ライブラリは他のプログラムでのエクスポートに関する情報が含まれてし、作成するにはリンクによってエクスポートを含むプログラムをビルドするとき、または LIB ツールによってです。 標準的な作成またはインポート ライブラリに LIB の使用方法の詳細については、次を参照してください。 [LIB リファレンス](../../build/reference/lib-reference.md)です。 リンクを使用して、インポート ライブラリを作成する方法の詳細については、「、 [/DLL](../../build/reference/dll-build-a-dll.md)オプション。  

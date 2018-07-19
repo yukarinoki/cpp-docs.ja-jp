@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095467"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>プロバイダーでサポートされないデータの変換
 コンシューマーはプロバイダーによってサポートされていないデータ型を要求するとき、OLE DB プロバイダー テンプレートのコードに`IRowsetImpl::GetData`データ型に変換する Msdadc.dll を呼び出します。  

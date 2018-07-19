@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420156"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>コンパイル時のカプセル化の Pimpl (Modern C++)
 *Pimpl 表現*インターフェイスを分離したり結合度を最小限に抑えるの実装を非表示に最新の C++ 手法です。 Pimpl はの短縮形「へのポインターの実装です」 既に概念を理解するが、Cheshire Cat またはコンパイラのファイアウォールの表現形式のようなその他の名前を知っている可能性があります。  

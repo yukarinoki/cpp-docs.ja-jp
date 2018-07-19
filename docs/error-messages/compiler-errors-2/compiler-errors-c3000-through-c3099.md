@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284720"
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>コンパイラ エラー C3000 C3099 経由
 

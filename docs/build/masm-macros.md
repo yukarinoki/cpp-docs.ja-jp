@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368695"
 ---
 # <a name="masm-macros"></a>MASM マクロ
 使用を簡略化するために、[生の擬似演算](../build/raw-pseudo-operations.md)、一般的な手順のプロローグおよびエピローグの作成に使用できる ksamd64.inc で定義されているマクロのセットがあります。  

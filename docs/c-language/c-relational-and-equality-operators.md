@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387584"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 関係演算子と等値演算子
 二項関係演算子および二項等値演算子は、最初のオペランドと 2 番目のオペランドを比較して、指定された関係の有効性をテストします。 テストした関係が true の場合、その式の結果は 1 になり、false の場合は 0 になります。 結果の型は `int` です。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089234"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>ダイナセットを使う場合の ODBC ドライバーの必要条件
 ダイナセットでは、MFC ODBC データベース クラスで、動的なプロパティを持つレコード セットです。特定の方法でデータ ソースと同期されたままになります。 MFC ダイナセットを使う場合 (ただし、前方スクロール専用レコード セット) 準拠のレベル 2 の API の ODBC ドライバーが必要です。 場合のドライバー、[データソース](../../data/odbc/data-source-odbc.md)レベル 1 の API に準拠している設定すると、使用できますが、更新可能なと読み取り専用のスナップショットと順方向専用レコード セットでは、ダイナセットはします。 ただし、レベル 1 のドライバーは、拡張フェッチとキーセット ドリブン カーソルがサポートされている場合、ダイナセットをサポートできます。  

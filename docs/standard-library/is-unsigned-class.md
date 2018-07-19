@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66128074d7beb52ab73f2e6b48371999d38e83a5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: f6ef4f70807e753c24d3a3595ab3665b45fdbe42
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955707"
 ---
 # <a name="isunsigned-class"></a>is_unsigned クラス
 
@@ -36,11 +37,11 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` が符号なし整数型または `cv-qualified` 符号なし整数型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*は符号なし整数型または`cv-qualified`符号なし整数型、それ以外の場合は false を保持します。
 
 ## <a name="example"></a>例
 
@@ -78,7 +79,7 @@ is_unsigned<unsigned int> == true
 is_unsigned<float> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

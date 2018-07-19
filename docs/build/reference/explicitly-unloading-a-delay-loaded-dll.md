@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374175"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>遅延読み込みした DLL の明示的なアンロード
 [/Delay](../../build/reference/delay-delay-load-import-settings.md): アンロード リンカー オプションでは、遅延読み込みされた DLL をアンロードすることができます。 既定で、コードが DLL をアンロードするとき (/delay:unload を使用して **__FUnloadDelayLoadedDLL2**)、インポート アドレス テーブル (IAT) に、遅延読み込みしたインポートが残ります。 ただし、/delay:unload リンカー コマンドラインを使用する場合、ヘルパー関数がサポート、IAT をリセットする元の形式に、DLL の明示的なアンロード無効になったポインターが上書きされます。 IAT が内のフィールド、 [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) (ある場合) 元の IAT のコピーのアドレスを格納します。  

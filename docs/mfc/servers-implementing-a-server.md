@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381694"
 ---
 # <a name="servers-implementing-a-server"></a>サーバー : サーバーの実装
 この記事では、MFC アプリケーション ウィザード ビジュアル編集サーバー アプリケーション用に作成するコードについて説明します。 アプリケーションのウィザードを使用していない場合、この記事には、サーバー アプリケーションを実装するコードを記述する必要があります、領域が一覧表示します。  

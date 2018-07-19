@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264182"
 ---
 # <a name="compiler-error-c3724"></a>コンパイラ エラー C3724
 必要があります #include \<windows.h > を使用するイベントでマルチ スレッド  

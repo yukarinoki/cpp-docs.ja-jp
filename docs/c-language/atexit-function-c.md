@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381227"
 ---
 # <a name="atexit-function-c"></a>atexit 関数 (C)
 **ANSI 4.10.4.3** 引数の値が 0、EXIT_SUCCESS、または EXIT_FAILURE 以外の場合に `atexit` 関数が返すステータス  

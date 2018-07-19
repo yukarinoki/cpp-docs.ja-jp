@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881651"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 名前空間
 Windows ランタイム C++ テンプレート ライブラリを構成する基本的な型を定義します。  

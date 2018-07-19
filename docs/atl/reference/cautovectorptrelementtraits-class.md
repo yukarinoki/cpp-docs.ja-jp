@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357884"
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits クラス
 このクラスは、メソッド、静的関数、および typedef と delete 演算子を新しいベクトルを使用して、スマート ポインターのコレクションを作成するときに便利です。 を提供します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371435"
 ---
 # <a name="improving-compiler-throughput"></a>コンパイラのスループットの向上
 プリコンパイル済みヘッダー ファイルを使用して、高速化、プロジェクトをビルドします。 これは、ATL、MFC、または Windows SDK のヘッダー ファイルを使用している場合に重要です。  

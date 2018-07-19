@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345782"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>フレームワークのメッセージ マップ検索方法
 フレームワークが受信メッセージを一致するには、メッセージ マップの表を検索します。 処理し、対応するハンドラーを記述するクラスを希望する各メッセージのメッセージ マップ エントリを記述した後、フレームワークは、ハンドラーを自動的に呼び出します。 次のトピックでは、メッセージ マップの検索について説明します。  

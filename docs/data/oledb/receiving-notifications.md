@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112317"
 ---
 # <a name="receiving-notifications"></a>通知の受信
 OLE DB は、イベントが発生したときに通知を受信するためのインターフェイスを提供します。 については、 [OLE DB オブジェクト通知](https://msdn.microsoft.com/en-us/library/ms725406.aspx)で、 *OLE DB プログラマーズ リファレンス*です。 これらのイベントのセットアップでは、標準の COM 接続ポイント メカニズムを使用します。 たとえばが使用してイベントを取得する ATL オブジェクト`IRowsetNotify`を実装、`IRowsetNotify`インターフェイスを追加して`IRowsetNotify`クラスから派生した一覧、およびを通じて公開することを**COM_INTERFACE_ENTRY**マクロです。  

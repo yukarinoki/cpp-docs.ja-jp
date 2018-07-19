@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874591"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 構造体
 一般的な特性を定義、[ミュー テックス](../windows/mutex-class1.md)クラスです。  

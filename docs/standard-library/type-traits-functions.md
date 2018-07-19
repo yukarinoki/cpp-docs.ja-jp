@@ -26,11 +26,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: ff6d6066d90fe5049b89586ce657e62860c12f9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3754af9a32ab1beeb4f3b9a783547bd081d57a46
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955839"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 関数
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="is_assignable"></a>  is_assignable
 
-`From` 型の値を `To` 型に代入できるかどうかをテストします。
+値かどうかをテスト*から*型に割り当てることができます、*に*型。
 
 ```cpp
 template <class To, class From>
@@ -52,13 +53,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-オブジェクトの型には、割り当てを受け取る。
+*目的*  
+ 代入を受け取るオブジェクトの型。
 
-値を提供するオブジェクトの型。
+*From*  
+ 値を渡すオブジェクトの型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 `From` と `To` の両方とも完全な型、`void`、または不明なバインドの配列にする必要があります。
+評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 両方*から*と*に*完全な型は、必要があります**void**、または不明なバインドの配列。
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -71,11 +74,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `Ty` がコピー代入演算子を持つクラスの場合、型 predicate のインスタンスは true を保持します。それ以外の場合は false を保持します。 is_assignable\<Ty&, const Ty&> に相当します。
+場合、型述語のインスタンスは true を保持型*Ty*はコピー代入演算子を持つ、それ以外の場合は false を保持するクラスです。 is_assignable\<Ty&, const Ty&> に相当します。
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -88,11 +92,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `Ty` がコピー コンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*はコピー コンス トラクターを持つ、それ以外の場合は false を保持するクラスです。
 
 ### <a name="example"></a>例
 
@@ -140,11 +145,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 照会する型。
+*T*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `T` が既定のコンストラクターを持つクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 これは、述語 `is_constructible<T>`と同じです。 型 `T` は完全な型、 `void`、または不明なバインドの配列である必要があります。
+場合、型述語のインスタンスは true を保持型*T*既定コンス トラクターを持つ、それ以外の場合は false を保持するクラス型です。 これは、述語 `is_constructible<T>`と同じです。 型*T*完全な型である必要があります**void**、または不明なバインドの配列。
 
 ### <a name="example"></a>例
 
@@ -192,9 +198,10 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 照会する型。
+*T*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 型への右辺値参照を型の参照に割り当てる事ができる場合、その型は移動代入可能です。 型述語は `is_assignable<T&, T&&>` と同じです。 移動代入できる型には、コンパイラにより生成された移動代入演算子またはユーザー定義の移動代入演算子を含む参照可能なスカラー型やクラス型があります。
 
@@ -209,11 +216,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-T 型に評価されます。
+*T*  
+ 評価される型
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `T` が移動操作によって構築できる場合に、true と評価される型述語です。 この述語は `is_constructible<T, T&&>` と同じです。
+型の場合に true に評価される型の述語*T*移動操作を使用して構築できます。 この述語は `is_constructible<T, T&&>` と同じです。
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -226,11 +234,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `Ty` が nothrow ムーブ代入演算子を持つ場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*が nothrow 移動代入演算子をそれ以外の場合は false を保持します。
 
 ## <a name="is_trivially_copy_assignable"></a>  is_trivially_copy_assignable
 
@@ -243,13 +252,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 照会する型。
+*T*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `T` が自明なコピー代入演算子を持つクラスの場合、型述語のインスタンスは true を保持します。それ以外の場合は false を保持します。
+場合、型述語のインスタンスは true を保持型*T*は自明なコピー代入演算子を持つ、それ以外の場合は false を保持するクラスです。
 
-クラス `T` の代入コンストラクターが自明となるのは、暗黙的に指定されている場合、クラス `T` に仮想関数がない場合、クラス `T` に仮想基底がない場合、クラス型の非静的データ メンバーすべてのクラスに自明な代入演算子が含まれており、かつクラスの型配列の非静的データ メンバーすべてでクラスに自明な代入演算子が含まれている場合です。
+クラスの代入コンス トラクター *T*は暗黙的に入力すると、クラスに自明*T*仮想関数、クラスを持たない*T*のクラスの仮想基底がないです。クラス型のすべての非静的データ メンバーが自明な代入演算子、ありのクラスの型配列のすべての非静的データ メンバーのクラスが自明な代入演算子があります。
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -262,19 +272,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `Ty` が自明なムーブ代入演算子を持つクラスの場合、型述語のインスタンスは true を保持します。それ以外の場合は false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*は自明なムーブ代入演算子を持つ、それ以外の場合は false を保持するクラスです。
 
-次の条件が満たされる場合、クラス `Ty` のムーブ代入演算子は自明です。
+クラスの移動代入演算子*Ty*は簡単では場合。
 
 暗黙的に指定されている
 
-クラス `Ty` に仮想関数がない
+クラスは、 *Ty*仮想関数がありません
 
-クラス `Ty` に仮想基底がない
+クラスは、 *Ty*仮想基底クラスがありません
 
 クラス型のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
 
@@ -291,25 +302,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*  
+ 照会する型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-型 `Ty` が自明な移動コンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*は自明な移動コンス トラクターを持つ、それ以外の場合は false を保持するクラスです。
 
-クラス `Ty` の移動コンストラクターが自明であるのは、以下の場合です。
+クラスの移動コンス トラクター *Ty*は簡単では場合。
 
 暗黙的に宣言されている
 
 そのパラメーターの型が暗黙的な宣言のものと同じである
 
-クラス `Ty` に仮想関数がない
+クラスは、 *Ty*仮想関数がありません
 
-クラス `Ty` に仮想基底がない
+クラスは、 *Ty*仮想基底クラスがありません
 
 クラスに揮発性の非静的データ メンバーがない
 
-クラス `Ty` のすべての直接基本に自明な移動コンストラクターがある
+すべての直接の基底クラスの*Ty*自明な移動コンス トラクターがあります。
 
 クラス型のすべての非静的データ メンバーのクラスに自明な移動コンストラクターがある
 

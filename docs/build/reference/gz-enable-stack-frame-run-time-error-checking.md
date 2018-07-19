@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373554"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (スタック フレームのランタイム エラー チェックの有効化)
 同じ操作を実行、 [/RTC (ランタイム エラー チェック)](../../build/reference/rtc-run-time-error-checks.md)オプション。 非推奨。  

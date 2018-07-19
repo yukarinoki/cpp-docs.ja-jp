@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382482"
 ---
 # <a name="remainders"></a>Remainders (剰余)
 **ANSI 3.3.5** 整数除算の剰余の符号  

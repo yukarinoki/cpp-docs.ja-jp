@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372244"
 ---
 # <a name="modules-button"></a>[モジュール] ボタン
 クリックして、**モジュール** をクリックする、**エラーを検索するその他のモジュール**ダイアログ。 編集ボックスに必要な EXE または DLL の名前を入力し、クリックして**追加**検索に含めるモジュール、エラー メッセージ。 モジュールを一覧から強調表示しをクリックすると、削除、**削除**ボタンをクリックします。  

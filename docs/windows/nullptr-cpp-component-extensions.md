@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880703"
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (C++ コンポーネント拡張)
 `nullptr`キーワードを表す、 *null ポインター値*です。 Null ポインター値を使用して、あるオブジェクトのハンドル、内部ポインター、またはネイティブ ポインター型を指していないオブジェクトを示します。  

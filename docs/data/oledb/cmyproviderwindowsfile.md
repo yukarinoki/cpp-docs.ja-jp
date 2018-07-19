@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097927"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 ウィザードを 1 つの行のデータを格納するクラスを作成します。この場合、呼び出された`CMyProviderWindowsFile`です。 次のコードの`CMyProviderWindowsFile`生成ウィザードを使用して、ディレクトリ内のすべてのファイルを一覧表示、 **WIN32_FIND_DATA**構造体。 `CMyProviderWindowsFile` 継承、 **WIN32_FIND_DATA**構造体。  

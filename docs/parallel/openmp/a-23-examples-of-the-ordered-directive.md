@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692757"
 ---
 # <a name="a23---examples-of-the-ordered-directive"></a>A.23 ordered ディレクティブの例
 順序付けられた複数のセクションを取得することは、`for`で指定された、`ordered`句。 最初の例は、API は、次を指定するために準拠していません。  

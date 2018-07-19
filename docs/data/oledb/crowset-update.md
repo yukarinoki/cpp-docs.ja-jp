@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098135"
 ---
 # <a name="crowsetupdate"></a>CRowset::Update
 保留中の最後のフェッチ、現在の行に加えられた変更を送信または**更新**それで呼び出します。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367083"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>DLL 関数の Visual Basic アプリケーションからの呼び出し方
 VBA (Visual Basic アプリケーション) や Pascal、Fortran などの他の言語で書かれたアプリケーションから C/C++ DLL 内の関数を呼び出すには、コンパイラによって装飾された名前ではなく正しい呼び出し規則を使ってその関数をエクスポートする必要があります。  

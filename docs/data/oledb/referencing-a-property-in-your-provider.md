@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106545"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>プロバイダーでのプロパティの参照
 目的のプロパティのプロパティ グループとプロパティ ID が見つかりません。 詳細については、次を参照してください。 [OLE DB プロパティ](https://msdn.microsoft.com/en-us/library/ms722734.aspx)で、 *OLE DB プログラマーズ リファレンス*です。  

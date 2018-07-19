@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367993"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する
 カスタム ビルド ステップは、ユーザー定義のビルドにおける手順です。 カスタム ビルド ステップは、他のように動作*コマンド ツール*など、標準のコンパイルまたはリンクのツールの手順のステップします。  

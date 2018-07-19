@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952373"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink クラス
 ID2D1GeometrySink のラッパーです。  
@@ -99,14 +100,14 @@ class CD2DGeometrySink;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|ID2D1GeometrySink へのポインター。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CD2DGeometrySink`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink  
@@ -124,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `arc`  
+ *円弧*  
  円弧のセグメントの図に追加するには  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -135,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bezier`  
+ *ベジエ*  
  構造体の制御点と追加をベジエ曲線の終了点について説明します。  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -148,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `beziers`  
+ *ベジエ曲線*  
  作成するベジエ曲線を記述するベジエ セグメントの配列。 配列内の最初のベジエ線分の終点のジオメトリ シンクの現在のポイント (描画の最後のセグメントまたは BeginFigure で指定された場所の終了ポイント) から、曲線が描画されます。 配列に追加のベジエ セグメントが含まれている場合、後続の各ベジエ セグメントは開始ポイントとして前のベジエ線分の終点を使用します。  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -159,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  描画する線の終点。  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -172,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `points`  
+ *ポイント*  
  描画する行を 1 つまたは複数の点の配列。 配列の最初のポイントのジオメトリ シンクの現在のポイント (描画の最後のセグメントまたは BeginFigure で指定された場所の終了ポイント) から線が描画されます。 配列に追加の点が含まれている場合、3 番目のポイントなどの 2 番目の点から、配列の 2 番目の点に行は最初の点から描画されます。 描画する線の終点のシーケンスの配列。  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -183,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bezier`  
+ *ベジエ*  
  構造体の制御点と追加の 2 次ベジエ曲線の終了点について説明します。  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -196,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `beziers`  
+ *ベジエ曲線*  
  一連の 2 次ベジエ セグメントの配列。  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -209,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `startPoint`  
+ *startPoint*  
  新しい図を開始する位置。  
   
- `figureBegin`  
+ *figureBegin*  
  かどうか新しい図は、中空または塗りつぶされたにする必要があります。  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -223,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pathGeometry`  
+ *pathGeometry*  
  既存の CD2DPathGeometry オブジェクト。  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -244,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `figureEnd`  
+ *figureEnd*  
  現在の図が閉じられたかどうかを示す値。 図が閉じている場合、現在のポイントと BeginFigure で指定された開始点の間で線を描画します。  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -292,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `fillMode`  
+ *fillMode*  
  特定の時点のジオメトリの一部であるかどうかを判断するために使用するメソッド。  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -303,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `vertexFlags`  
+ *vertexFlags*  
  Geometry シンクに追加された新しいセグメントに適用する線と結合のオプションです。  
   
 ## <a name="see-also"></a>関連項目  

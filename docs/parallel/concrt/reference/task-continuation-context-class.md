@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689182"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context クラス
 `task_continuation_context` クラスを使用すると、継続する場所を指定できます。 のみである Windows ランタイム アプリからこのクラスを使用すると便利です。 非 Windows ランタイム アプリでは、タスク継続の実行コンテキストは、ランタイムによって決定され、構成できません。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361954"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL クラスは、ActiveX コントロール サポートを容易にしますか。
 ATL のコントロール ホスト コードでは、ATL クラスを使用する必要としません。単に作成することができます、 **"AtlAxWin80"** ウィンドウおよび必要に応じてコントロール ホスト API を使用 (詳細については、次を参照してください。 **、ATL コントロール ホスト API は、どのような**します。 ただし、次のクラス包含機能を使いやすきます。  

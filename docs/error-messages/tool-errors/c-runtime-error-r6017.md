@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302725"
 ---
 # <a name="c-runtime-error-r6017"></a>C ランタイム エラー R6017
 予期しないマルチ スレッドのロック エラーです。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367525"
 ---
 # <a name="dependency-side-effects"></a>依存関係の副作用
 ターゲットが、異なる場所に 2 つの依存関係の線にコロン (:) で指定されている場合、および行の 1 つだけの後にコマンドが表示されない場合は、隣接するまたは結合まるで (nmake の) の依存関係は解釈します。 コマンドがありませんが、代わりにでは、依存関係の説明を 1 つのブロックに属するし、コマンドを実行するその他の依存関係と共に指定する依存関係の推論規則は呼び出されません。 たとえば、これは、ルールの設定。  

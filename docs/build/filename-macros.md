@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458863"
 ---
 # <a name="filename-macros"></a>ファイル名マクロ
 依存関係 (ディスク上のない完全なファイル名の仕様) で指定されたファイル名には、ファイル名マクロが定義済みです。 これらのマクロを呼び出すときにかっこで囲む必要はありません。ように $ だけを指定します。  

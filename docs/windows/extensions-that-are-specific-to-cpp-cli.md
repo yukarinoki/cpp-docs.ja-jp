@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872615"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>C++/CLI に固有の拡張機能
 次の言語の機能は、ドキュメントのこのセクションで説明されて、適用のみ C + + CLI です。  

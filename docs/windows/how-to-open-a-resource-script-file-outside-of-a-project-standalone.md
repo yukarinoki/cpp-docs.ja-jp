@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879166"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>方法: プロジェクトの外側で (スタンドアロンで) リソース スクリプト ファイルを開く
 .rc ファイル内のリソースは、プロジェクトを開かずに表示できます。 ドキュメント ウィンドウで開く場合に、.rc ファイルが開きます、[リソース ビュー](../windows/resource-view-window.md)ウィンドウ (同様に、ファイルがプロジェクト内の場合)。  

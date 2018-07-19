@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110873"
 ---
 # <a name="changes-to-conversion-operators"></a>変換演算子に対する変更点
 変換演算子の構文は、Visual C を c++ マネージ拡張から変更されました。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695325"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>タスクの並列化 (同時実行ランタイム)
 同時実行ランタイムで、*タスク*を特定のジョブを実行し、その他のタスクと並列で通常実行される作業の単位です。 タスクに分解し、追加より細かい別のタスクに編成された、*タスク グループ*です。  

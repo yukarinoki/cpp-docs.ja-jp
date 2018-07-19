@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881118"
 ---
 # <a name="id-property"></a>ID プロパティ
 ID プロパティは、プログラム コード内の各アクセラレータ テーブル エントリを参照します。 これは、アクセラレータ キーまたはキーの組み合わせを押すと、プログラムを受信するコマンドの値です。 アクセラレータ メニュー項目と同じを見せるその Id と同じ (限り、アクセラレータ テーブルの ID は、メニュー リソースの ID と同じです)。  

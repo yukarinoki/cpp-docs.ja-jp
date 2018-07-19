@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882694"
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows プログラミングのシンボル
 これらのシンボルは、MFC サポート ファイルの一部でもが、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、メニューで主に使用されます。 メニュー エディターのメニューを使用する場合、これらのシンボルは、共通のメニュー コマンドに関連付けられたプロパティ ウィンドウに表示されます。 たとえば、アプリケーションの終了 コマンド ファイル メニューにある場合そのコマンドに関連付けられるシンボル ID_APP_EXIT で、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。  

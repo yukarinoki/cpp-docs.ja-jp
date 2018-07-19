@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388787"
 ---
 # <a name="string-literal-concatenation"></a>文字列リテラルの連結
 複数の行にわたる文字列リテラルを作成するときには、2 つの文字列を連結できます。 これには、円記号を入力してから Enter キーを押します。 円記号を入力すると、コンパイラは後続の改行文字を無視します。 たとえば、次の文字列リテラル  

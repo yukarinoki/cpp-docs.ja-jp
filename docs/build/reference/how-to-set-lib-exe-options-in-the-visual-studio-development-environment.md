@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372361"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>方法 : Visual Studio の開発環境で LIB.EXE オプションを設定する
 ### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>LIB を設定します。Visual Studio 開発環境で EXE オプション  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327094"
 ---
 # <a name="resource-compiler-error-rc2175"></a>リソース コンパイラ エラー RC2175
 リソース ファイルのファイル名は 3.00 形式ではありません。  

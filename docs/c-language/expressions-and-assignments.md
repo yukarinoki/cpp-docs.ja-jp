@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382716"
 ---
 # <a name="expressions-and-assignments"></a>式と代入
 このセクションでは、C 言語での式の形成と値の割り当て方法について説明します。 定数、識別子、文字列、および関数呼び出しが、式で処理されるすべてのオペランドです。 C 言語には、通常の言語演算子がすべて用意されています。 このセクションでは、これらの演算子と、C または Microsoft C の独自の演算子について説明します。説明するトピックは次のとおりです。  

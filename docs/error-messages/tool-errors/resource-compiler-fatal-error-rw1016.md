@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318039"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>リソース コンパイラの致命的なエラー RW1016
 プリプロセッサ エラー後終了 RC  

@@ -1,5 +1,5 @@
 ---
-title: 添字演算子 |Microsoft ドキュメント
+title: 添字演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65798eb9983273cf3b8b2b136be9a9acc082cb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a55aca3abe95d189c40c7571db39fc48edf5f4cc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943540"
 ---
 # <a name="subscripting"></a>添字演算子 
 添字演算子 (**[]**) と同様、関数呼び出し演算子は二項演算子と見なされます。 添字演算子は 1 つの引数を受け取る非静的メンバー関数である必要があります。 この引数は任意の型にでき、目的の配列の添字を指定します。  
   
 ## <a name="example"></a>例  
- 範囲チェックを実行する型 `int` のベクターを作成する方法を次の例に示します。  
+ 次の例は、型のベクトルを作成する方法を示します**int**境界チェックを実装します。  
   
-```  
+```cpp 
 // subscripting.cpp  
 // compile with: /EHsc  
 #include <iostream>  

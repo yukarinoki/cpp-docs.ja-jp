@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226e9895d7ddc199e2f15c3721228f59c0e5a0ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962163"
 ---
 # <a name="modulus-struct"></a>modulus 構造体
 
@@ -48,17 +49,17 @@ struct modulus<void>
 
 ### <a name="parameters"></a>パラメーター
 
-`Type`、 `T`、`U`をサポートする任意の型、`operator%`指定または推論された型のオペランドを取得します。
+*型*、 *T*、 *U*をサポートする任意の型、`operator%`指定または推論された型のオペランドを受け取る。
 
-`Left` 剰余演算の左オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `T` の左辺値および右辺値参照引数の完全転送を行います。
+*左*剰余演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-`Right` 剰余演算の右オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `U` の左辺値および右辺値参照引数の完全転送を行います。
+*右*剰余演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
 
 `Left % Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator%` によって返された型が含まれます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `modulus` ファンクターは、基本データ型の整数型、または `operator%` を実装しているユーザー定義型に制限されます。
 
@@ -118,7 +119,7 @@ The element-wise remainders of the modular division
  */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

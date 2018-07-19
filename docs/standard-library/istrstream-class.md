@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48e6fcd7da3b1e1c91b4aecb640c02ae4068bf9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6484d70488da834d0acea79cbe9b02968e0e2a35
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957286"
 ---
 # <a name="istrstream-class"></a>istrstream クラス
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/08/2018
 class istrstream : public istream
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このオブジェクトは、クラス `strstreambuf` のオブジェクトを格納します。
 
@@ -53,7 +54,7 @@ class istrstream : public istream
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
 |[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<strstream>
 
@@ -81,13 +82,13 @@ istrstream(
 
 ### <a name="parameters"></a>パラメーター
 
-`count` バッファーの長さ ( `ptr`)。
+*カウント*バッファーの長さ (*ptr*)。
 
-`ptr` バッファーが初期化されている内容です。
+*ptr*バッファーが初期化されている内容。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-すべてのコンストラクターは、[istream](../standard-library/istream-typedefs.md#istream)(**sb**) を呼び出すことにより基本クラスを初期化します。ここで、**sb** は [strstreambuf](../standard-library/strstreambuf-class.md) クラスの格納されているオブジェクトです。 最初の 2 つのコンストラクターは、`strstreambuf`( ( **const**`char` \*) `ptr`, 0 ) を呼び出すことによって **sb** の初期化も行います。 残りの 2 つのコンストラクターは、代わりに `strstreambuf`( ( **const**`char` *) `ptr`, `count` ) を呼び出します。
+すべてのコンス トラクターを呼び出して基底クラスを初期化する[istream](../standard-library/istream-typedefs.md#istream)(**sb**) ここで、`sb`クラスの格納されているオブジェクトは、 [strstreambuf](../standard-library/strstreambuf-class.md)します。 最初の 2 つのコンス トラクターの初期化も`sb`呼び出して`strstreambuf`(( **const** `char` \*) `ptr`, 0)。 残りの 2 つのコンストラクターは、代わりに `strstreambuf`( ( **const**`char` *) `ptr`, `count` ) を呼び出します。
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -101,7 +102,7 @@ strstreambuf *rdbuf() const
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、ポインター型の格納されたストリーム バッファーのアドレスを [strstreambuf](../standard-library/strstreambuf-class.md) に返します。
 
@@ -121,13 +122,13 @@ char *str();
 
 被制御シーケンスの先頭へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str) を返します。
 
 ### <a name="example"></a>例
 
-**str** の使用例は、[strstream::str](../standard-library/strstreambuf-class.md#str) をご覧ください。
+参照してください[strstream::str](../standard-library/strstreambuf-class.md#str)を使用するサンプルの`str`します。
 
 ## <a name="see-also"></a>関連項目
 

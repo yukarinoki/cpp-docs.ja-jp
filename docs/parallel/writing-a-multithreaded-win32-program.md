@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689975"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>マルチスレッド Win32 プログラムの作成
 複数のスレッドでプログラムを記述するときに、その動作を調整する必要がありますと[プログラムのリソースの使用](#_core_sharing_common_resources_between_threads)です。 各スレッドが受信することを確認することも必要[独自のスタック](#_core_thread_stacks)です。  

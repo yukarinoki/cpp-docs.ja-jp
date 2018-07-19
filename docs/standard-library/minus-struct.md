@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10145e52931fc9ef993108c2373bf3d0fbf0519e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fdbcc396b77c6e0eb13262b80ca30df704f0c62
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959106"
 ---
 # <a name="minus-struct"></a>minus 構造体
 
@@ -48,11 +49,11 @@ struct minus<void>
 
 ### <a name="parameters"></a>パラメーター
 
-`Type`、 `T`、`U`バイナリをサポートする型`operator-`指定または推論された型のオペランドを取得します。
+*型*、 *T*、 *U*バイナリをサポートする型`operator-`指定または推論された型のオペランドを受け取る。
 
-`Left` 演算の左オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `T` の左辺値および右辺値参照引数の完全転送を行います。
+*左*演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-`Right` 演算の右オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `U` の左辺値および右辺値参照引数の完全転送を行います。
+*右*演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
 
@@ -113,7 +114,7 @@ The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

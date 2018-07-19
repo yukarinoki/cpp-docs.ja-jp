@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093403"
 ---
 # <a name="accessing-xml-data"></a>XML データへのアクセス
 データ ソースから XML データを取得する 2 つの異なるメソッドがある: いずれかを使用して[CStreamRowset](../../data/oledb/cstreamrowset-class.md)およびその他の用途[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)です。  

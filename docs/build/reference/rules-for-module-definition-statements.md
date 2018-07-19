@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376391"
 ---
 # <a name="rules-for-module-definition-statements"></a>モジュール定義ステートメントに関する規則
 次の構文規則は、.def ファイル内のすべてのステートメントに適用されます。 特定のステートメントに適用されるその他の規則は、それぞれのステートメントについて説明します。  

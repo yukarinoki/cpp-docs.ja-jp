@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930076"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー : コンテナーの実装
 ここでは、コンテナーを実装する手順を概説し、詳細な説明については、コンテナーの実装を提供する他の記事を紹介します。 実装することもいくつかのオプションの OLE 機能やこれらの機能を説明する記事も一覧表示されます。  
   
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>CWinApp の派生クラスを準備するには  
   
-1.  OLE ライブラリを呼び出すことによって初期化**AfxOleInit**で、`InitInstance`メンバー関数。  
+1.  OLE ライブラリを呼び出すことによって初期化`AfxOleInit`で、`InitInstance`メンバー関数。  
   
 2.  呼び出す`CDocTemplate::SetContainerInfo`で`InitInstance`埋め込みアイテムが使用されているリソースをメニューとアクセラレータを割り当てるには、インプレースをアクティブ化します。 このトピックの詳細については、次を参照してください。[アクティベーション](../mfc/activation-cpp.md)です。  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  オーバーライド`IsSelected`に渡された項目が現在選択されているかどうかを確認します。  
   
-3.  実装する**OnInsertObject**を表示するメッセージ ハンドラー、**オブジェクトの挿入** ダイアログ ボックス。  
+3.  実装する`OnInsertObject`を表示するメッセージ ハンドラー、**オブジェクトの挿入** ダイアログ ボックス。  
   
 4.  実装する`OnSetFocus`メッセージ ハンドラー フォーカスを移動するビューから、インプレース アクティブ ole 埋め込みアイテムです。  
   
@@ -50,9 +51,9 @@ ms.lasthandoff: 05/04/2018
   
 1.  クラスを派生[COleClientItem](../mfc/reference/coleclientitem-class.md)です。 このクラスのオブジェクトに埋め込まれているまたは OLE ドキュメントにリンクされている項目を表します。  
   
-2.  オーバーライド**OnChange**、 `OnChangeItemPosition`、および`OnGetItemPosition`です。 これらの関数は、サイズ変更、配置、および埋め込みまたはリンクされた項目の変更を処理します。  
+2.  オーバーライド`OnChange`、 `OnChangeItemPosition`、および`OnGetItemPosition`です。 これらの関数は、サイズ変更、配置、および埋め込みまたはリンクされた項目の変更を処理します。  
   
- アプリケーションのウィザードは、クラスが派生されますが、オーバーライドする必要があります**OnChange**し、他の関数がそれに前の手順では、手順 2. で一覧表示します。 スケルトンの実装は、次の 1 つのアプリケーションからこれらの関数は異なる方法で実装されているため、ほとんどのアプリケーション用にカスタマイズする必要があります。 この例については、MFC のサンプルを参照してください。 [DRAWCLI](../visual-cpp-samples.md)と[コンテナー](../visual-cpp-samples.md)です。  
+ アプリケーションのウィザードは、クラスが派生されますが、オーバーライドする必要があります`OnChange`し、他の関数がそれに前の手順では、手順 2. で一覧表示します。 スケルトンの実装は、次の 1 つのアプリケーションからこれらの関数は異なる方法で実装されているため、ほとんどのアプリケーション用にカスタマイズする必要があります。 この例については、MFC のサンプルを参照してください。 [DRAWCLI](../visual-cpp-samples.md)と[コンテナー](../visual-cpp-samples.md)です。  
   
  OLE をサポートするために、コンテナー アプリケーションのメニュー構造を項目の数を追加する必要があります。 これらの詳細については、次を参照してください。[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)です。  
   

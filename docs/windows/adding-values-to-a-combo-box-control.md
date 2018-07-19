@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858969"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>コンボ ボックス コントロールへの値の追加
 ダイアログ エディターを開く必要がある限り、コンボ ボックス コントロールに値を追加できます。  

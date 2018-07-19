@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379108"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外処理モデル)
 コンパイラで使用される例外処理の種類、例外チェックを最適化して除去するタイミング、および例外が原因でスコープを外れた C++ オブジェクトを破棄するかどうかを指定します。 **/EH** が指定されていない場合、コンパイラは非同期構造化例外と C++ 例外の両方をキャッチしますが、非同期例外の結果としてスコープを外れた C++ オブジェクトを破棄しません。  

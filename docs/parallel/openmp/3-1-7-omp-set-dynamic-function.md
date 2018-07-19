@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687869"
 ---
 # <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic 関数
 **Omp_set_dynamic**関数を有効または並列領域を実行するために使用できるスレッドの数が動的に調整を無効にします。 形式は次のとおりです。  

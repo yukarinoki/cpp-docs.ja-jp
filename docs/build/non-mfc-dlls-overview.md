@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368643"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL: 概要
 非 MFC DLL が内部的には、MFC を使わない DLL と、MFC または非 MFC の実行可能ファイルによって、DLL からエクスポートされた関数を呼び出すことができます。 関数から、非 MFC DLL standard C インターフェイスを使用して通常エクスポートされます。  

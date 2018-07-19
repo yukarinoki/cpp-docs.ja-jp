@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951744"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor クラス
 赤、緑、および青の各色要素をアニメーション化できる機能を実装します。  
@@ -90,13 +91,13 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|アニメーションの色の青の要素を表すアニメーションをカプセル化された変数です。|  
 |[CAnimationColor::m_gValue](#m_gvalue)|アニメーションの色の緑の成分を表すアニメーションをカプセル化された変数です。|  
 |[CAnimationColor::m_rValue](#m_rvalue)|アニメーションの色の赤の要素を表すアニメーションをカプセル化された変数です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  CAnimationColor クラスは、3 つの CAnimationVariable オブジェクトをカプセル化し、色のアプリケーションで表すことができます。 たとえば、画面上の任意のオブジェクトの色をアニメーション化するこのクラスを使用できます (テキストの色のように背景色など)。 アプリケーションでこのクラスを使用するには、このクラスのオブジェクトをインスタンス化、CAnimationController::AddAnimationObject を使用してアニメーション コント ローラーに追加してだけ赤、緑、および青のコンポーネントに適用される各移行につき AddTransition の呼び出しです。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -106,7 +107,7 @@ class CAnimationColor : public CAnimationBaseObject;
   
  `CAnimationColor`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>  CAnimationColor::AddTransition  
@@ -120,16 +121,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pRTransition`  
+ *pRTransition*  
  赤の成分に移行します。  
   
- `pGTransition`  
+ *pGTransition*  
  緑の成分に移行します。  
   
- `pBTransition`  
+ *pBTransition*  
  青の成分に移行します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アニメーション変数の色要素を表すには適用への遷移の内部リストに指定された遷移を追加するには、この関数を呼び出します。 切り替え効果を追加すると、いないすぐに適用されるとなり、内部の一覧に格納されています。 遷移を (特定の値のストーリー ボードへの追加) に適用されます CAnimationController::AnimateGroup を呼び出すとします。 色の要素のいずれかに遷移を適用する必要としない場合は、NULL を渡すことができます。  
   
 ##  <a name="canimationcolor"></a>  CAnimationColor::CAnimationColor  
@@ -146,19 +147,19 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `color`  
+ *色*  
  既定の色を指定します。  
   
- `nGroupID`  
+ *nGroupID*  
  グループ ID を指定します  
   
- `nObjectID`  
+ *nObjectID*  
  オブジェクト ID を指定します  
   
- `dwUserData`  
+ *dwUserData*  
  ユーザー定義データを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定値を赤、緑、青、オブジェクト ID とグループの ID を 0 に設定されますには、オブジェクトを構築します。 これらは、SetDefaultValue および SetID を使用して実行時に後で変更することができます。  
   
 ##  <a name="getanimationvariablelist"></a>  CAnimationColor::GetAnimationVariableList  
@@ -169,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lst`  
+ *lst*  
  関数から返されたときに、赤、緑、青のコンポーネントを表す 3 つの CAnimationVariable オブジェクトへのポインターを格納します。  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -182,7 +183,7 @@ CAnimationVariable& GetB();
 ### <a name="return-value"></a>戻り値  
  青の要素を表すカプセル化された CAnimationVariable への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  青の要素を表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationColor::GetDefaultValue  
@@ -195,7 +196,7 @@ COLORREF GetDefaultValue();
 ### <a name="return-value"></a>戻り値  
  RGB コンポーネントの既定値を含む COLORREF 値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンス トラクターまたは SetDefaultValue で以前に設定された既定値を取得するには、この関数を呼び出します。  
   
 ##  <a name="getg"></a>  CAnimationColor::GetG  
@@ -208,7 +209,7 @@ CAnimationVariable& GetG();
 ### <a name="return-value"></a>戻り値  
  カプセル化された CAnimationVariable を表す緑の要素への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  基になる CAnimationVariable を表す緑の要素に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
 ##  <a name="getr"></a>  CAnimationColor::GetR  
@@ -221,7 +222,7 @@ CAnimationVariable& GetR();
 ### <a name="return-value"></a>戻り値  
  赤の要素を表すカプセル化された CAnimationVariable への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  赤の要素を表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
 ##  <a name="getvalue"></a>  CAnimationColor::GetValue  
@@ -232,13 +233,13 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `color`  
+ *色*  
  出力です。 このメソッドが戻るとき、現在の値が含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  現在の値の取得が成功した場合は TRUE。それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  アニメーションの色の現在の値を取得するには、この関数を呼び出します。 このメソッドが失敗した、または色の要素の基になる COM オブジェクトが初期化されていない、色には、コンス トラクターまたは SetDefaultValue によって設定されている既定値が含まれています。  
   
 ##  <a name="m_bvalue"></a>  CAnimationColor::m_bValue  
@@ -278,10 +279,10 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `color`  
+ *色*  
  新しい値をアニメーションの色を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  お勧めをアニメーションの開始前に行うにはこの演算子は、それが作成された場合の色要素の基になる COM オブジェクトを作成し直さ SetDefaultValue を呼び出すためです。 このアニメーション オブジェクト (ValueChanged または IntegerValueChanged) イベントをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。  
   
 ##  <a name="setdefaultvalue"></a>  CAnimationColor::SetDefaultValue  
@@ -292,10 +293,10 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `color`  
+ *色*  
  赤、緑、青のコンポーネントの新しい既定値を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定値をアニメーション オブジェクトに設定するのにには、この関数を使用します。 このメソッドは、既定値をアニメーションの色の色要素に代入します。 それが作成された場合は、基になる COM オブジェクトも再作成します。 このアニメーション オブジェクト (ValueChanged または IntegerValueChanged) イベントをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。  
   
 ## <a name="see-also"></a>関連項目  

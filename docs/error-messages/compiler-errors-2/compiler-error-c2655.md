@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199380"
 ---
 # <a name="compiler-error-c2655"></a>コンパイラ エラー C2655
 'identifier': 現在のスコープに無効な宣言あるいは再定義  

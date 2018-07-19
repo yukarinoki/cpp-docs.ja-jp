@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342632"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>例外処理 : コンストラクターの例外処理
 コンス トラクターで例外をスローするときにどのようなオブジェクトとのメモリ割り当てを加えた例外をスローする前に」の説明に従ってクリーンアップ[例外: 独自関数から例外をスロー](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)です。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369306"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 使用することができます、 **MSBuild**ツール、コマンド プロンプトからの Visual C アプリケーションをビルドします。 ビルド プロセスは、プロジェクト ファイル (.vcxproj) を作成して編集することで、情報によって制御されます。 プロジェクト ファイルでは、ステージ、条件、およびイベントに基づくビルド オプションがビルドを指定します。  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0451b8565a4d021181d79d15437637e1b2f3b27
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5433c9ff76b8b6f218cfff5e5fd39a0ad7166613
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963616"
 ---
 # <a name="decay-class"></a>decay クラス
 
@@ -38,9 +39,9 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 型が引数として値で渡されたかのように結果の型を生成するには、decay テンプレートを使います。 テンプレート クラスのメンバー typedef `type` は、次の段階で定義された修飾型を保持します。
 
@@ -52,7 +53,7 @@ using decay_t = typename decay<T>::type;
 
 - それ以外の場合、修飾型 `type` は `remove_cv<U>::type` になります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

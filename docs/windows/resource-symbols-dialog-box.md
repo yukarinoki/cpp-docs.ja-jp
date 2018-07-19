@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880193"
 ---
 # <a name="resource-symbols-dialog-box"></a>[リソース シンボル] ダイアログ ボックス
 **リソース シンボル**ダイアログ ボックスでは、新しいリソース シンボルの追加が表示され、またはソース コード内のシンボルは使用されている場所にスキップするシンボルを変更することができます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127836"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>方法: 標準文字列を System::String に変換する
 このトピックの内容表示は、C++ 標準ライブラリの文字列を変換する方法 ([\<文字列 >](../standard-library/string.md)) に、<xref:System.String>です。  

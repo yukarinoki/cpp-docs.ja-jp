@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950436"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>テクニカル ノート 64: ActiveX コントロールにおけるアパートメント モデルのスレッド処理
 > [!NOTE]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
  アパートメント モデルのスレッドの有効化はまったくまたはほとんどの共有データがある場合に特にほとんどのコントロールは簡単です。  
   
 ## <a name="protecting-shared-data"></a>共有データの保護  
- コントロールは、共有のデータを使用している場合など、静的メンバー変数へのアクセスを複数のスレッドが同時にデータを変更することを防ぐために、クリティカル セクションのデータを保護する必要があります。 この目的のため、クリティカル セクションをセットアップするクラスの静的メンバー変数を宣言`CCriticalSection`コントロールのクラスでします。 使用して、`Lock`と**Unlock**このクリティカル セクションのメンバー関数は、コード共有のデータにアクセスするオブジェクトします。  
+ コントロールは、共有のデータを使用している場合など、静的メンバー変数へのアクセスを複数のスレッドが同時にデータを変更することを防ぐために、クリティカル セクションのデータを保護する必要があります。 この目的のため、クリティカル セクションをセットアップするクラスの静的メンバー変数を宣言`CCriticalSection`コントロールのクラスでします。 使用して、`Lock`と`Unlock`このクリティカル セクションのメンバー関数は、コード共有のデータにアクセスするオブジェクトします。  
   
  たとえば、すべてのインスタンスによって共有されている文字列を管理する必要があるコントロール クラスを検討します。 この文字列は、静的メンバー変数に保持されるあり、クリティカル セクションによって保護されていることができます。 コントロールのクラス宣言には、次が含まれます。  
   
@@ -80,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>アパートメント モデル対応コントロールの登録  
- アパートメント モデルのスレッドをサポートするコントロールは、クラス ID レジストリ エントリの下で「アパートメント」の値を持つ"ThreadingModel"の名前付きの値を追加することによってレジストリで、この機能を指定する必要があります、*クラス id* \\ **InprocServer32**キー。 コントロールに自動的に登録するには、このキーには、渡す、 `afxRegApartmentThreading` 6 番目のパラメーターでフラグ`AfxOleRegisterControlClass`:  
+ アパートメント モデルのスレッドをサポートするコントロールは、クラス ID レジストリ エントリの下で「アパートメント」の値を持つ"ThreadingModel"の名前付きの値を追加することによってレジストリで、この機能を指定する必要があります、*クラス id* \\ **InprocServer32**キー。 コントロールに自動的に登録するには、このキーには、渡す、 *afxRegApartmentThreading* 6 番目のパラメーターでフラグ`AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -107,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  コントロール プロジェクトは、ControlWizard 4.1 またはそれ以降のバージョンの Visual c で生成された場合、このフラグは、コードで存在でしょう。 変更する、スレッディング モデルを登録する必要はありません。  
   
- プロジェクトは、以前のバージョンの ControlWizard によって生成された、既存のコードは、6 番目のパラメーターとしてブール値があります。 既存のパラメーターが TRUE の場合に変更`afxRegInsertable | afxRegApartmentThreading`です。 既存のパラメーターが FALSE の場合に変更`afxRegApartmentThreading`です。  
+ プロジェクトは、以前のバージョンの ControlWizard によって生成された、既存のコードは、6 番目のパラメーターとしてブール値があります。 既存のパラメーターが TRUE の場合に変更*afxRegInsertable | afxRegApartmentThreading*です。 既存のパラメーターが FALSE の場合に変更*afxRegApartmentThreading*です。  
   
- コントロールがアパートメント モデルのスレッドの規則を遵守しない場合で渡さないでください`afxRegApartmentThreading`このパラメーターにします。  
+ コントロールがアパートメント モデルのスレッドの規則を遵守しない場合で渡さないでください*afxRegApartmentThreading*このパラメーターにします。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   

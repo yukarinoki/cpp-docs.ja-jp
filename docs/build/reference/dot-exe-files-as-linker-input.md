@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372404"
 ---
 # <a name="exe-files-as-linker-input"></a>リンカー入力としての .exe ファイル
 [MS-DOS スタブ ファイル名](../../build/reference/stub-ms-dos-stub-file-name.md)(/stub) オプションは、MS-DOS で実行される .exe ファイルの名前を指定します。 リンクは、有効な MS-DOS プログラムであることを確認する指定されたファイルをチェックします。  

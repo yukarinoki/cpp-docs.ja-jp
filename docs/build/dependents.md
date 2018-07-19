@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366937"
 ---
 # <a name="dependents"></a>依存ファイル
 依存関係行では、0 個以上の依存、コロン (:) または二重のコロン (:) の後に任意の有効なファイル名を使用するを指定または[疑似ターゲット](../build/pseudotargets.md)です。 1 つ以上のスペースまたはタブで複数の依存関係を区切ります。 依存オブジェクトは、大文字小文字を区別されません。 ファイル名を持つ、パスを指定します。  

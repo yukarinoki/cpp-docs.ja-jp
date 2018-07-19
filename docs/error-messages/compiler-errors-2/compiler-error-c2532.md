@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198457"
 ---
 # <a name="compiler-error-c2532"></a>コンパイラ エラー C2532
 'identifier': 参照の修飾子が正しくありません  

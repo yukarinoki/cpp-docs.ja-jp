@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b886b805eb551831ad2d559b041df0d38c5987
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c931e81b27c3a5eb95d546119e0abee118f6e76a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964978"
 ---
 # <a name="issame-class"></a>is_same クラス
 
@@ -36,13 +37,13 @@ struct is_same;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty1` 照会する最初の型。
+*Ty1*クエリする最初の型。
 
-`Ty2` 照会する 2 番目の型。
+*Ty2*クエリには、2 番目の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty1` と型 `Ty2` が等しい型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty1*と*Ty2*同じ型には、それ以外の場合は false を保持します。
 
 ## <a name="example"></a>例
 
@@ -88,7 +89,7 @@ is_same<int, int> == true
 is_same<int, const int> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

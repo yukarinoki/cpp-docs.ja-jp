@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106311"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>1 つのストアド プロシージャからの複数の結果セットの使用
 ほとんどのストアド プロシージャは、複数の結果セットを返します。 このようなストアド プロシージャが通常 1 つを含むまたは以上の select ステートメント。 コンシューマーは、すべての結果セットの処理を行うために考慮する必要があります。  

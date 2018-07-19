@@ -28,10 +28,11 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051386"
 ---
 # <a name="data-directives-and-operators-in-inline-assembly"></a>インライン アセンブリでのデータ ディレクティブと演算子
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- ただし、`__asm`ブロックは、C または C++ のデータ型およびオブジェクトを参照できる、MASM ディレクティブまたは演算子を持つデータ オブジェクトを定義できません。 具体的には、定義ディレクティブを使用することはできません**DB**、 `DW`、 **DD**、 `DQ`、 `DT`、および`DF`、か、または演算子`DUP`または**これは、**です。 MASM の構造とレコードもご利用いただけません。 インライン アセンブラーは、ディレクティブを受け取らない`STRUC`、 `RECORD`、**幅**、または**マスク**です。  
+ ただし、`__asm`ブロックは、C または C++ のデータ型およびオブジェクトを参照できる、MASM ディレクティブまたは演算子を持つデータ オブジェクトを定義できません。 具体的には、定義ディレクティブを使用することはできません**DB**、 `DW`、 **DD**、 `DQ`、 `DT`、および`DF`、か、または演算子`DUP`または**これは、** です。 MASM の構造とレコードもご利用いただけません。 インライン アセンブラーは、ディレクティブを受け取らない`STRUC`、 `RECORD`、**幅**、または**マスク**です。  
   
  **Microsoft 固有の仕様はここまで**  
   

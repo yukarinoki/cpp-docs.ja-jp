@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136068"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>方法: /clr を使用して MFC および ATL コードをコンパイルする
 このトピックでは、共通言語ランタイムをターゲットに既存の MFC および ATL プログラムをコンパイルする方法について説明します。  

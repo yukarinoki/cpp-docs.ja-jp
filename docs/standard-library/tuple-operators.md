@@ -13,11 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: c3e5c1e82e98379ff2cefae48f8af89f8fc0b698
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ce4c1a0b7fa1771cf80437d27ed9dd89baa5f220
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956964"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 演算子
 
@@ -39,9 +40,10 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の tuple 要素の型。
+*TN*  
+ N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は、`N` が 0 の場合は false、それ以外の場合は `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)` を返します。
 
@@ -103,9 +105,10 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の tuple 要素の型。
+*TN*  
+ N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は、`N` が 0 より大きくかつ `tpl1` 内の最初に異なる値が `tpl2` 内の対応する値よりも小さい場合は true、それ以外の場合は false を返します。
 
@@ -167,9 +170,10 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の tuple 要素の型。
+*TN*  
+ N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `!(tpl2 < tpl1)` が返されます。
 
@@ -231,9 +235,10 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の tuple 要素の型。
+*TN*  
+ N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は、`N` が 0 の場合は true、それ以外の場合は `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)` を返します。
 
@@ -295,9 +300,10 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の tuple 要素の型。
+*TN*  
+ N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `tpl2 < tpl1` が返されます。
 
@@ -359,9 +365,10 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の tuple 要素の型。
+*TN*  
+ N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `!(tpl1 < tpl2)` が返されます。
 

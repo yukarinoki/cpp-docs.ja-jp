@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361867"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>ATL DHTML コントロールのテスト
 プロジェクトを作成した後は、ビルドおよびサンプル コントロールをテストできます。 これを行う前に、クラス ビューとソリューション エクスプ ローラーを使用して、プロジェクトを調べます。 プロジェクトの要素がでさらに詳しく説明されている[DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)です。  

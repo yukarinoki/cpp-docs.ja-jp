@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233163"
 ---
 # <a name="compiler-error-c2677"></a>コンパイラ エラー C2677
 binary 'operator': 型 'type' を扱うグローバル演算子が見つかりません (または許容可能な変換はありません)  

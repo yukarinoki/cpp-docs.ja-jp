@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 698d8a754716f6876f9a72a0d5043807a32d2089
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932209"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外処理 : MFC マクロと C++ 例外機構の使用
 この記事では、MFC 例外処理マクロと C++ 例外処理のキーワードの両方を使用するコードを記述するための考慮事項について説明します。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
   
- 問題は、`e`実行は、「内部」外から渡すときに削除**キャッチ**ブロックします。 使用して、`THROW_LAST`マクロの代わりに、**スロー**ステートメントが発生、「外部」**キャッチ**有効なポインターを受け取るブロック。  
+ 問題は、`e`実行は、「内部」外から渡すときに削除**キャッチ**ブロックします。 使用して、 **THROW_LAST**マクロの代わりに、**スロー**ステートメントが発生、「外部」**キャッチ**有効なポインターを受け取るブロック。  
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   

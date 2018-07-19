@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056462"
 ---
 # <a name=""></a>@@:
 コードの間でのみ認識可能なラベルを定義*label1*と*label2*ここで、 *label1*はコードの開始、または前の`@@:`ラベル、および*label2*はコードの末尾、または、次へ`@@:`ラベル。 参照してください[ @B ](../../assembler/masm/at-b.md)と[ @F](../../assembler/masm/at-f.md)です。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368578"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>インライン関数のインポートとエクスポート
 インポートされた関数は、インラインとして定義することができます。 結果は、標準関数のインライン; を定義すると同じでは約関数の呼び出しは、マクロと同様に、インライン コードに展開されます。 これは、機能は、によってメンバー関数の効率がインラインそのクラスで DLL を C++ のサポート方法、主に便利です。  

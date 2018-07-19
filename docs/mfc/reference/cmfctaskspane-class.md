@@ -1,5 +1,5 @@
 ---
-title: CMFCTasksPane クラス |Microsoft ドキュメント
+title: CMFCTasksPane クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -204,11 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da86312e425f6b54abf6422af09a04c45aa733f2
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028383"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -238,7 +239,7 @@ class CMFCTasksPane : public CDockablePane
 |[Cmfctaskspane::addmrufileslist](#addmrufileslist)|最近使用した (MRU) ファイル リストに指定されているタスクをグループに追加します。|  
 |[CMFCTasksPane::AddPage](#addpage)|作業ウィンドウに新しいページを追加します。|  
 |[CMFCTasksPane::AddSeparator](#addseparator)||  
-|[Cmfctaskspane::addtask](#addtask)|指定したタスク グループに新しいタスクを追加します。|  
+|[:Addtask](#addtask)|指定したタスク グループに新しいタスクを追加します。|  
 |[CMFCTasksPane::AddWindow](#addwindow)|作業ウィンドウに子ウィンドウを追加します。|  
 |[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||  
 |[CMFCTasksPane::CollapseGroup](#collapsegroup)|プログラムを使用してグループを折りたたみます。|  
@@ -246,7 +247,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::CreateMenu](#createmenu)|メニューを作成するためにフレームワークによって呼び出される、**その他のタスク ウィンドウ**メニュー ボタンをクリックします。|  
 |[CMFCTasksPane::EnableAnimation](#enableanimation)|タスク グループの展開または折りたたみ中のアニメーションを有効または無効にします。|  
 |[:Enablegroupcollapse](#enablegroupcollapse)|タスク グループを折りたたみ可能にするかどうかを指定します。|  
-|[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|有効または無効にドロップダウン メニューで**次**と**前**ナビゲーション ボタンです。|  
+|[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|有効またはでドロップダウン メニューを無効に**次**と**前**ナビゲーション ボタン。|  
 |[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|ナビゲーション ツール バーを有効または無効にします。|  
 |[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||  
 |[CMFCTasksPane::EnableScrollButtons](#enablescrollbuttons)|スクロール バーではなく、スクロール ボタンを有効にします。|  
@@ -283,7 +284,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
 |[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|作業ウィンドウでラベルのテキストが折り返されるかどうかを示します。|  
 |[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|作業ウィンドウでタスクのテキストが折り返されるかどうかを示します。|  
-|[CMFCTasksPane::LoadState](#loadstate)|(上書き[cdockablepane::loadstate](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917))。|  
+|[CMFCTasksPane::LoadState](#loadstate)|(上書き[cdockablepane::loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917))。|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
 |[CMFCTasksPane::OnClickTask](#onclicktask)|ユーザーが作業ウィンドウ内の項目をクリックすると、フレームワークによって呼び出されます。|  
 |[CMFCTasksPane::OnOK](#onok)||  
@@ -292,8 +293,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|ユーザーが [ホーム] ナビゲーション ボタンをクリックすると、フレームワークによって呼び出されます。|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
 |[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(上書き[cbasepane::onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata))。|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(上書き[cdockablepane::onupdatecmdui](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0))。|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(上書き[cdockablepane::pretranslatemessage](http://msdn.microsoft.com/en-us/49a242cc-b158-400e-9e01-0345ec9c3ffd))。|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(上書き[cdockablepane::onupdatecmdui](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0))。|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(上書き[cdockablepane::pretranslatemessage](http://msdn.microsoft.com/49a242cc-b158-400e-9e01-0345ec9c3ffd))。|  
 |[CMFCTasksPane::RecalcLayout](#recalclayout)|(上書き[cpane::recalclayout](../../mfc/reference/cpane-class.md#recalclayout))。|  
 |[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|指定したページ上のすべてのグループを削除します。|  
 |[CMFCTasksPane::RemoveAllPages](#removeallpages)|既定 (最初) のページを除く、すべてのページを作業ウィンドウから削除します。|  
@@ -301,8 +302,8 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemoveGroup](#removegroup)|グループを削除します。|  
 |[CMFCTasksPane::RemovePage](#removepage)|指定されたページを作業ウィンドウから削除します。|  
 |[CMFCTasksPane::RemoveTask](#removetask)|タスク グループからタスクを削除します。|  
-|[CMFCTasksPane::SaveState](#savestate)|(上書き[cdockablepane::savestate](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db))。|  
-|[CMFCTasksPane::Serialize](#serialize)|(上書き[cdockablepane::serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6))。|  
+|[CMFCTasksPane::SaveState](#savestate)|(上書き[cdockablepane::savestate](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db))。|  
+|[CMFCTasksPane::Serialize](#serialize)|(上書き[cdockablepane::serialize](http://msdn.microsoft.com/09787e59-e446-4e76-894b-206d303dcfd6))。|  
 |[CMFCTasksPane::SetActivePage](#setactivepage)|作業ウィンドウの指定されたページをアクティブにします。|  
 |[CMFCTasksPane::SetCaption](#setcaption)|作業ウィンドウのキャプション名を設定します。|  
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|グループ キャプションの高さを設定します。|  
@@ -332,7 +333,7 @@ class CMFCTasksPane : public CDockablePane
 |----------|-----------------|  
 |[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|新しい作業ウィンドウ ページがアクティブになると、フレームワークによって呼び出されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCTasksPane` クラスは次の機能を実装します。  
   
 -   項目をグループ化し、項目の各グループにキャプションを関連付ける。  
@@ -341,21 +342,21 @@ class CMFCTasksPane : public CDockablePane
   
 -   作業ウィンドウの各項目にアイコンを関連付ける。  
   
--   個々の項目をコマンド ID に関連付けることができる。このコマンド ID は、ユーザーが項目をクリックすると実行されます。 クリックされると、`WM_COMMAND` メッセージが作業ウィンドウ コントロールの所有者に送信されます。  
+-   個々の項目をコマンド ID に関連付けることができる。このコマンド ID は、ユーザーが項目をクリックすると実行されます。 クリックが発生したときに、WM_COMMAND メッセージは、作業ウィンドウ コントロールの所有者に送信されます。  
   
  アプリケーションで、`CMFCTasksPane` コントロールを使用するには、次の手順に従います。  
   
 1.  `CMFCTasksPane` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。  
   
-2.  `WM_CREATE` メッセージを処理するときは、`Create` メソッドを呼び出します。 標準を使用する[CControlBar](../../mfc/reference/ccontrolbar-class.md)スタイル。 詳細については、「`CControlBar::Create`」を参照してください。  
+2.  WM_CREATE メッセージを処理するときに呼び出す、`Create`メソッド。 標準を使用する[CControlBar](../../mfc/reference/ccontrolbar-class.md)スタイル。 詳細については、「`CControlBar::Create`」を参照してください。  
   
-3.  呼び出す、 [cmfctaskspane::addgroup](#addgroup)をさまざまなグループを追加するメソッド。  
+3.  呼び出す、 [cmfctaskspane::addgroup](#addgroup)さまざまなグループを追加するメソッド。  
   
-4.  呼び出す、 [cmfctaskspane::addtask](#addtask)、 [cmfctaskspane::addlabel](#addlabel)または[cmfctaskspane::addmrufileslist](#addmrufileslist)各グループに新しい項目 (タスク) を追加するメンバー関数。  
+4.  呼び出す、 [::addtask](#addtask)、 [cmfctaskspane::addlabel](#addlabel)または[cmfctaskspane::addmrufileslist](#addmrufileslist)各グループに新しい項目 (タスク) を追加するメンバー関数。  
   
 5.  呼び出す[:enablegroupcollapse](#enablegroupcollapse)項目グループを折りたためるかどうかを指定します。  
   
- 次の図は、標準的な作業ウィンドウ コントロールを示しています。 最初のグループは、*特別な*グループで、キャプションは濃い色。 3 番目のグループは折りたたまれています。 最後のグループは作業ウィンドウの最下部に揃えられており、キャプションはなく、このグループの最後のタスクは単純なラベルです。  
+ 次の図は、標準的な作業ウィンドウ コントロールを示しています。 最初のグループは、*特殊*グループとそのキャプションは濃い色。 3 番目のグループは折りたたまれています。 最後のグループは作業ウィンドウの最下部に揃えられており、キャプションはなく、このグループの最後のタスクは単純なラベルです。  
   
  ![作業ウィンドウの例](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")  
   
@@ -364,7 +365,7 @@ class CMFCTasksPane : public CDockablePane
  ![カスタム タスク グループ](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")  
   
 ## <a name="example"></a>例  
- `CMFCTasksPane` オブジェクトを構築して `CMFCTasksPane` クラスのさまざまなメソッドを使用する方法を次の例に示します。 例で、ドロップダウン メニューを有効にするタスク グループの折りたたみを有効にする方法を示します、**次**と**前**ナビゲーション ボタン、スクロール バーの代わりにスクロール ボタンを有効にする、という単語を有効にします。ラベルのテキストの折り返し、グループ キャプションのテキストの色を設定し、水平および垂直方向の余白を設定、タスク ウィンドウのキャプション名を設定します。  
+ `CMFCTasksPane` オブジェクトを構築して `CMFCTasksPane` クラスのさまざまなメソッドを使用する方法を次の例に示します。 ドロップダウン メニューを有効にするタスク グループの折りたたみを有効にする方法の例に示します、**次**と**前**ナビゲーション ボタン、スクロール バーではなくスクロール ボタンを有効にする、という単語を有効にします。ラベルのテキストの折り返しは、グループ キャプションのテキストの色を設定し、水平および垂直方向の余白を設定する [タスク] ウィンドウのキャプション名を設定します。  
   
  [!code-cpp[NVC_MFC_RibbonApp#28](../../mfc/reference/codesnippet/cpp/cmfctaskspane-class_1.cpp)]  
   
@@ -375,7 +376,7 @@ class CMFCTasksPane : public CDockablePane
   
  `CMFCTasksPane`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxTasksPane.h  
   
 ##  <a name="addgroup"></a>  Cmfctaskspane::addgroup  
@@ -398,28 +399,28 @@ int AddGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nPageIdx`  
+ [in]*nPageIdx*  
  ページの 0 から始まるインデックスを指定します。  
   
- [入力] `lpszGroupName`  
+ [in]*lpszGroupName*  
  グループ名を指定します。  
   
- [入力] `bBottomLocation`  
- `TRUE` 作業ウィンドウ コントロールの下部にあるグループを作成するにはそれ以外の場合、`FALSE`です。  
+ [in]*bBottomLocation*  
+ 作業ウィンドウ コントロールの下部にあるグループを作成する場合は TRUEそれ以外の場合、FALSE です。  
   
- [入力] `bSpecial`  
- `TRUE` このグループとしてマークする、*特別な*グループです。 それ以外の場合、`FALSE`です。 特別なグループの詳細については、の「解説」セクションを参照してください。`CMFCTasksPane`です。  
+ [in]*bSpecial*  
+ このグループとしてマークする場合は TRUE、*特殊*グループ化しない場合は FALSE。 特別なグループの詳細については、の「解説」を参照してください。`CMFCTasksPane`します。  
   
- [入力] `hIcon`  
+ [in]*hIcon*  
  グループ キャプションに表示するアイコンを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- クラスを保持するグループの内部リストにあるグループの 0 から始まるインデックス。  
+ 内部リストにクラスを保持するグループのグループの 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
- タスクのグループを作成して、作業ウィンドウ コントロールにそのグループを追加するは、このメソッドを呼び出します。  
+### <a name="remarks"></a>Remarks  
+ タスクのグループを作成する作業ウィンドウ コントロールにそのグループを追加して、このメソッドを呼び出します。  
   
- フレームワークでは、作業ウィンドウ コントロールの上部または下部にある、タスク グループが表示されます。 フレームワークは、下部です。 1 つのグループを表示することができます。このグループは、最後に追加する必要があります。  
+ フレームワークでは、作業ウィンドウ コントロールの上部または下部にある、タスク グループが表示されます。 フレームワークは、下部にある 1 つのグループを表示できます。このグループは、最後に追加する必要があります。  
   
 ##  <a name="addlabel"></a>  Cmfctaskspane::addlabel  
  指定したタスク グループにラベルを追加します。  
@@ -433,26 +434,26 @@ int AddLabel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  グループのラベルを追加する位置のインデックスを指定します。  
   
- [入力] `lpszLabelName`  
+ [in]*lpszLabelName*  
  ラベルの名前を指定します。  
   
- [入力] `nTaskIcon`  
- ラベルの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧のアイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
+ [in]*nTaskIcon*  
+ ラベルの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧で、アイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
   
- [入力] `bIsBold`  
- `TRUE` 太字のテキストにラベルを表示するにはそれ以外の場合、`FALSE`です。  
+ [in]*bIsBold*  
+ 太字のテキストにラベルを表示する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
- ラベルが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1`nGroup`存在しません。  
+ ラベルが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
   
-### <a name="remarks"></a>コメント  
- フレームワークは、タスクとラベルを異なる方法で処理します。 ユーザーは、タスクをクリックすると、フレームワークは、コマンドを実行します。 ユーザーは、ラベルをクリックすると、コマンドは実行されません。 詳細については、次を参照してください。 [cmfctaskspane::addtask](#addtask)です。  
+### <a name="remarks"></a>Remarks  
+ フレームワークは、タスクとラベルを異なる方法で処理します。 ユーザーがタスクをクリックしたときに、フレームワークは、コマンドを実行します。 ユーザーがラベルをクリックすると、コマンドは実行されません。 詳細については、次を参照してください。 [::addtask](#addtask)します。  
   
 ##  <a name="addmrufileslist"></a>  Cmfctaskspane::addmrufileslist  
- グループに、最も最近使用した (MRU) ファイルの一覧に格納されているファイルごとにタスクを追加します。  
+ 最近使用したファイル (MRU) ファイルの一覧をグループに格納されているファイルごとにタスクを追加します。  
   
 ```  
 int AddMRUFilesList(
@@ -461,24 +462,24 @@ int AddMRUFilesList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
- グループのインデックスを指定します。 このメソッドは、MRU ファイル リストをこのパラメーターで指定されたグループに追加します。  
+ [in]*n グループ*  
+ グループのインデックスを指定します。 このメソッドは、このパラメーターで指定されたグループに、MRU ファイル リストを追加します。  
   
- [入力] `nMaxFiles`  
+ [in]*nMaxFiles*  
  MRU ファイル リストに表示するファイルの数を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- MRU ファイル リストが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1`nGroup`存在しません。  
+ MRU ファイル リストが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
   
 ##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
- 作業ウィンドウに、ページを追加します。  
+ 作業ウィンドウには、ページを追加します。  
   
 ```  
 int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszPageLabel`  
+ [in]*lpszPageLabel*  
  ページのラベルを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -492,14 +493,14 @@ int AddSeparator(int nGroup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addtask"></a>  Cmfctaskspane::addtask  
- 指定したタスク グループにタスクを追加します。  
+##  <a name="addtask"></a>  :Addtask  
+ 指定したタスク グループには、タスクを追加します。  
   
 ```  
 int AddTask(
@@ -511,23 +512,23 @@ int AddTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
- タスクが追加されたグループ インデックスを指定します。  
+ [in]*n グループ*  
+ タスクを追加する位置グループ インデックスを指定します。  
   
- [入力] `lpszTaskName`  
+ [in]*lpszTaskName*  
  タスクの名前を指定します。  
   
- [入力] `nTaskIcon`  
- タスクの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧のアイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
+ [in]*nTaskIcon*  
+ タスクの横に表示するアイコンを指定します。 フレームワークは、イメージの一覧で、アイコンを格納します。 このパラメーターは、そのリストへのインデックスです。  
   
- [入力] `uiCommandID`  
- ユーザーがタスクをクリックしたときに実行するコマンドのコマンド ID を指定します。 場合は、タスクをラベルとして扱わ`uiCommandID`は 0 です。  
+ [in]*uiCommandID*  
+ ユーザーがタスクを実行するコマンドのコマンド ID を指定します。 場合、タスクは、ラベルとして扱われます*uiCommandID*は 0 です。  
   
- [入力] `dwUserData`  
+ [in]*dwUserData*  
  タスクに関連するユーザー定義データを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- タスクが追加されたグループの 0 から始まるインデックスまたはグループがで指定された場合は-1`nGroup`存在しません。  
+ タスクが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
   
 ##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  作業ウィンドウに子ウィンドウを追加します。  
@@ -542,26 +543,26 @@ int AddWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
- ウィンドウが追加されたグループ インデックスを指定します。  
+ [in]*n グループ*  
+ ウィンドウの追加先グループ インデックスを指定します。  
   
- [入力] `hwndTask`  
- 追加するウィンドウのハンドルを指定します。  
+ [in]*hwndTask*  
+ 追加するには、ウィンドウのハンドルを指定します。  
   
- [入力] `nWndHeight`  
+ [in]*nWndHeight*  
  ウィンドウの高さを指定します。  
   
- [入力] `bAutoDestroyWindow`  
- `TRUE` タスクが削除されたときにウィンドウを破棄するにはそれ以外の場合、`FALSE`です。  
+ [in]*bAutoDestroyWindow*  
+ タスクが削除されたときにウィンドウを破棄する場合は TRUEそれ以外の場合、FALSE です。  
   
- [入力] `dwUserData`  
+ [in]*dwUserData*  
  タスクに関連付けられているユーザー定義データを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- ウィンドウが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1`nGroup`存在しません。  
+ ウィンドウが追加されたグループの 0 から始まるインデックス、またはグループがで指定された場合は-1*英*存在しません。  
   
-### <a name="remarks"></a>コメント  
- 作業ウィンドウにコントロールを追加するには、このメソッドを呼び出します。 たとえばなどの検索バーを関数エディット コントロールを追加することができます。  
+### <a name="remarks"></a>Remarks  
+ 作業ウィンドウにコントロールを追加するには、このメソッドを呼び出します。 たとえば、検索バーのように機能するエディット コントロールを追加できます。  
   
 ##  <a name="cmfctaskspane"></a>  CMFCTasksPane::CMFCTasksPane  
  構築、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)オブジェクト。  
@@ -583,10 +584,10 @@ void CollapseAllGroups(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bCollapse`  
- [入力] `nPageIdx`  
+ [in]*bCollapse*  
+ [in]*nPageIdx*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="collapsegroup"></a>  CMFCTasksPane::CollapseGroup  
  折りたたみまたはグループを展開します。  
@@ -603,19 +604,19 @@ BOOL CollapseGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pGroup`  
- 折りたたむグループを指定します。  
+ [in]*pGroup*  
+ 折りたたむには、グループを指定します。  
   
- [入力] `bCollapse`  
- `TRUE` は、グループを折りたたみます`FALSE`グループを展開します。  
+ [in]*bCollapse*  
+ グループを折りたたむ場合は TRUE。グループを展開する場合は FALSE。  
   
- [入力] `nGroup`  
- 内部の一覧で、グループを折りたたむにグループの 0 から始まるインデックスを指定します。  
+ [in]*n グループ*  
+ グループの内部一覧に折りたたむには、グループの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` グループの折りたたみまたは正常に展開する場合それ以外の場合、`FALSE`です。  
+ グループを折りたたむか、正常に展開する場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  折りたたまれたグループは、グループ キャプション; のみを示しています。タスクの一覧は表示されません。  
   
 ##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe  
@@ -626,11 +627,11 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `rectInitial`  
+ [in]*rectInitial*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="createmenu"></a>  CMFCTasksPane::CreateMenu  
  ユーザーがクリックしたときに表示されるメニューを作成、**その他のタスク ウィンドウ**メニュー ボタンをクリックします。  
@@ -640,26 +641,26 @@ HMENU CreateMenu() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 新しいメニューへのハンドル。  
+ [新規] メニューへのハンドル。  
   
-### <a name="remarks"></a>コメント  
- 作業ウィンドウのメニューをカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 作業ウィンドウのメニューをカスタマイズする派生クラスでは、このメソッドをオーバーライドします。  
   
  このメソッドが作成されるポップアップ メニューには、作業ウィンドウ内のページの一覧が含まれています。 メニューには、アクティブなページの横にあるチェック マークが表示されます。  
   
 ##  <a name="enableanimation"></a>  CMFCTasksPane::EnableAnimation  
- 有効またはタスク グループを展開または折りたたむときに発生するアニメーションを無効にします。  
+ 有効またはタスク グループを展開または折りたたむ場合に発生するアニメーションを無効にします。  
   
 ```  
 void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` タスク グループを展開または折りたたむときに発生するアニメーションを有効にするにはそれ以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ タスク グループを展開または折りたたむ場合に発生するアニメーションを有効にする場合は TRUEそれ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- 既定では、タスク グループを展開または折りたたむときに発生する、アニメーションが有効にします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、タスク グループを展開または折りたたむ場合に発生するアニメーションが有効にします。  
   
 ##  <a name="enablegroupcollapse"></a>  :Enablegroupcollapse  
  ユーザーがタスク グループを折りたたむかどうかを指定します。  
@@ -669,25 +670,25 @@ void EnableGroupCollapse(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` ユーザーは、タスク グループを折りたたむことができる場合それ以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ ユーザーがタスク グループを折りたたむ場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  折りたたまれたタスク グループには、グループ キャプションのみが表示されます。タスクの一覧は表示されません。  
   
 ##  <a name="enablehistorymenubuttons"></a>  CMFCTasksPane::EnableHistoryMenuButtons  
- ドロップダウン メニューを有効にします、**次**と**前**ナビゲーション ボタンです。  
+ ドロップダウン メニューを有効に、**次**と**前**ナビゲーション ボタン。  
   
 ```  
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` ドロップダウン メニューを有効にする、**次**と**前**ナビゲーション ボタン以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ ドロップダウン メニューを有効にする場合は True、**次**と**前**ナビゲーション ボタン場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
- 既定では、ドロップダウン メニューで、**次**と**前**ボタンが無効になっています。  
+### <a name="remarks"></a>Remarks  
+ 既定では、ドロップダウン メニュー、**次**と**前**ボタンが無効になっています。  
   
  メニューには、ユーザーが使用したタスクのページの履歴が含まれます。  
   
@@ -705,22 +706,22 @@ void EnableNavigationToolbar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` ナビゲーション ツールバーを有効にするにはそれ以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ ナビゲーション ツールバーを有効にする場合は TRUEそれ以外の場合、FALSE です。  
   
- [入力] `uiToolbarBmpRes`  
- ツールバーに表示するイメージを含むビットマップのリソース ID を指定します。  
+ [in]*uiToolbarBmpRes*  
+ ツールバーに表示するイメージを保持するビットマップのリソース ID を指定します。  
   
- [入力] `sizeToolbarImage`  
+ [in]*sizeToolbarImage*  
  ツール バー イメージのサイズを指定します。  
   
- [入力] `sizeToolbarButton`  
+ [in]*sizeToolbarButton*  
  ツール バー ボタンのサイズを指定します。  
   
-### <a name="remarks"></a>コメント  
- ナビゲーション ツールバーは、フレームワークは、作業ウィンドウの上部に表示されるツールバーです。 ナビゲーション ツールバーが含まれ、**戻る**、**フォワード**と**ホーム**ナビゲーション ボタンとメニュー ボタンを使用可能なページの一覧が含まれています。  
+### <a name="remarks"></a>Remarks  
+ ナビゲーション ツールバーは、フレームワークが作業ウィンドウの上部に表示するツールバーです。 ナビゲーション ツールバーが含まれています、**戻る**、**フォワード**と**ホーム**ナビゲーション ボタンと使用可能なページの一覧を含むメニュー ボタンをクリックします。  
   
- 既定では、フレームワークで、ナビゲーション ツールバーは表示されません。 ナビゲーション ツールバーが表示されない場合は、ドッキング バーのキャプションにナビゲーション ボタンがあります。  
+ 既定では、フレームワークでは、ナビゲーション ツールバーは表示されません。 ナビゲーション ツールバーが表示されない場合は、ナビゲーション ボタンがドッキング バーのキャプションに配置されます。  
   
 ##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls  
 
@@ -730,50 +731,50 @@ void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
+ [in]*bEnable*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enablescrollbuttons"></a>  CMFCTasksPane::EnableScrollButtons  
- スクロール バーの代わりにボタンのスクロールを有効にします。  
+ スクロール バーではなくボタンのスクロールを有効にします。  
   
 ```  
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` スクロール バーの代わりに、作業ウィンドウにスクロール ボタンを表示するにはそれ以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ スクロール バーではなく、作業ウィンドウのスクロール ボタンを表示する場合は TRUEそれ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークには、作業ウィンドウで、スクロール ボタンが表示されます。  
   
 ##  <a name="enablewraplabels"></a>  CMFCTasksPane::EnableWrapLabels  
- 有効またはラベルのテキストの折り返しを無効にします。  
+ 有効または、ラベルのテキストのワード ラップを無効にします。  
   
 ```  
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` 作業ウィンドウに表示されるラベルのテキストを折り返すそれ以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ 作業ウィンドウに表示されるラベルのテキストをラップする場合は Trueそれ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- 既定では、フレームワークは折り返されませんテキスト ラベル。 ワード ラップを有効にすると、ラベルのテキストは、複数の行に表示できます。 ラベルに改行マーカーなどを含める`\n`と下線マーカー`&`です。  
+### <a name="remarks"></a>Remarks  
+ 既定では、フレームワークは、ラベルのテキストをラップしません。 テキストの折り返しが有効にすると、ラベルのテキストは、複数の行に表示できます。 ラベルに改行マーカーなどを含める`\n`と下線マーカー`&`します。  
   
 ##  <a name="enablewraptasks"></a>  CMFCTasksPane::EnableWrapTasks  
- 有効またはタスク内のテキストの折り返しを無効にします。  
+ 有効または、タスク内のテキストのワード ラップを無効にします。  
   
 ```  
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` 作業ウィンドウでタスクをラップするにはそれ以外の場合、`FALSE`です。  
+ [in]*bEnable*  
+ 作業ウィンドウでタスクをラップする場合は TRUEそれ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、タスクのワード ラップは無効です。  
   
 ##  <a name="getactivepage"></a>  CMFCTasksPane::GetActivePage  
@@ -784,7 +785,7 @@ int GetActivePage() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- アクティブ ページの 0 から始まるインデックス。  
+ アクティブなページの 0 から始まるインデックス。  
   
 ##  <a name="getgroupcaptionheight"></a>  CMFCTasksPane::GetGroupCaptionHeight  
  グループ キャプションの高さを返します。  
@@ -797,27 +798,27 @@ int GetGroupCaptionHeight() const;
  ピクセル単位で、グループ キャプションの高さ。  
   
 ##  <a name="getgroupcaptionhorzoffset"></a>  CMFCTasksPane::GetGroupCaptionHorzOffset  
- グループ キャプションの水平方向のオフセットを返します。  
+ グループ キャプションの水平オフセットを返します。  
   
 ```  
 int GetGroupCaptionHorzOffset() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- グループ キャプションの水平方向のオフセット。 水平方向のオフセットは、作業ウィンドウの左端または右端からピクセル単位で距離です。  
+ グループ キャプションの水平オフセット。 水平方向のオフセットは、作業ウィンドウの左端または右端からのピクセル単位で距離です。  
   
 ##  <a name="getgroupcaptionvertoffset"></a>  CMFCTasksPane::GetGroupCaptionVertOffset  
- グループ キャプションの垂直方向のオフセットを返します。  
+ グループ キャプションの垂直オフセットを返します。  
   
 ```  
 int GetGroupCaptionVertOffset() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 作業ウィンドウの上部と下部エッジからグループ キャプションの垂直方向のオフセット。  
+ 作業ウィンドウの上部と下部エッジからグループ キャプションの垂直オフセット。  
   
-### <a name="remarks"></a>コメント  
- 縦方向のオフセットの既定値は、7 ピクセルです。  
+### <a name="remarks"></a>Remarks  
+ 垂直方向のオフセットの既定値は、7 ピクセルです。  
   
 ##  <a name="getgroupcount"></a>  CMFCTasksPane::GetGroupCount  
  グループの総数を返します。  
@@ -830,7 +831,7 @@ int GetGroupCount() const;
  作業ウィンドウ内のグループの合計数。  
   
 ##  <a name="getgrouplocation"></a>  CMFCTasksPane::GetGroupLocation  
- 指定されたグループの内部グループ インデックスを返します。  
+ 指定したグループの内部グループ インデックスを返します。  
   
 ```  
 BOOL GetGroupLocation(
@@ -839,14 +840,14 @@ BOOL GetGroupLocation(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pGroup`  
- 場所を取得、タスク グループを指定します。  
+ [in]*pGroup*  
+ 位置を取得するタスク グループを指定します。  
   
- [出力] `nGroup`  
+ [out]*n グループ*  
  タスク グループの 0 から始まるインデックスが含まれています。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` タスク グループが見つかった場合それ以外の場合、`FALSE`です。  
+ タスク グループが見つかった場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="getgroupvertoffset"></a>  CMFCTasksPane::GetGroupVertOffset  
  グループの垂直方向のオフセットを返します。  
@@ -856,20 +857,20 @@ int GetGroupVertOffset() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ピクセルで、グループの垂直方向のオフセット。  
+ ピクセルで、グループの垂直オフセット。  
   
 ##  <a name="gethorzmargin"></a>  CMFCTasksPane::GetHorzMargin  
- 作業ウィンドウとクライアント領域の端の間の左右の間隔を返します。  
+ 作業ウィンドウとクライアント領域の端との間の左右の間隔を返します。  
   
 ```  
 int GetHorzMargin() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 作業ウィンドウとクライアント領域の端の間の左右の間隔。  
+ 作業ウィンドウとクライアント領域の端の間隔。  
   
-### <a name="remarks"></a>コメント  
- 作業ウィンドウとクライアント領域の端の既定の間隔は、12 ピクセルです。  
+### <a name="remarks"></a>Remarks  
+ 作業ウィンドウとクライアント領域の端との間の既定の間隔は、12 ピクセルです。  
   
 ##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages  
 
@@ -879,9 +880,9 @@ void GetNextPages(CStringList& lstNextPages) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lstNextPages`  
+ [in]*lstNextPages*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getpagebygroup"></a>  CMFCTasksPane::GetPageByGroup  
  指定されたグループのページ インデックスを取得します。  
@@ -893,14 +894,14 @@ BOOL GetPageByGroup(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  タスク グループの 0 から始まるインデックスを指定します。  
   
- [出力] `nPage`  
- 指定されたグループのページ インデックスが含まれています。 場合は、タスク グループには、既定のページにはのみが含まれています、戻り値は 0 です。  
+ [out]*n ページ レイアウト*  
+ 指定したグループのページ インデックスが含まれています。 タスク グループには、既定のページのみが含まれる場合、返される値は 0 です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合、グループ`nGroup`が存在します。 それ以外の場合、`FALSE`です。  
+ TRUE の場合、グループ*英*が存在します。 それ以外の場合、FALSE。  
   
 ##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  ページ数を返します。  
@@ -920,9 +921,9 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lstPrevPages`  
+ [in]*lstPrevPages*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl  
 
@@ -932,11 +933,11 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nBar`  
+ [in]*れる*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettask"></a>  CMFCTasksPane::GetTask  
  タスクを取得します。  
@@ -948,42 +949,42 @@ CMFCTasksPaneTask* GetTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  タスクが含まれているグループの 0 から始まるインデックスを指定します。  
   
- [入力] `nTask`  
- 指定された一覧で、タスクの 0 から始まるインデックスを指定`nGroup`です。  
+ [in]*%n タスク*  
+ によって指定されたリストで、タスクの 0 から始まるインデックスを指定します。*英*します。  
   
 ### <a name="return-value"></a>戻り値  
- 指定したインデックス位置タスク。  
+ 指定したインデックス位置にあるタスク。  
   
 ##  <a name="gettaskcount"></a>  CMFCTasksPane::GetTaskCount  
- 指定されたグループ内のタスクの数を返します。  
+ 指定したグループで、タスクの数を返します。  
   
 ```  
 int GetTaskCount(int nGroup) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  タスク グループのインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- 指定したグループまたは 0 の場合にタスクの数`nGroup`が無効です。  
+ 0 の場合、指定したグループまたはタスクの数*英*が無効です。  
   
 ##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
- 指定されたグループのインデックスのタスク グループを返します。  
+ タスク グループを指定したグループのインデックスを返します。  
   
 ```  
 CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
- 取得するグループの 0 から始まるインデックスを指定します。  
+ [in]*n グループ*  
+ 取得するには、グループの 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- 指定したインデックス位置のタスクのグループです。  
+ 指定したインデックス位置にあるタスクのグループ。  
   
 ##  <a name="gettasklocation"></a>  CMFCTasksPane::GetTaskLocation  
  グループと指定したタスクのインデックスを返します。  
@@ -1006,38 +1007,38 @@ BOOL GetTaskLocation(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCommandID`  
+ [in]*uiCommandID*  
  検索するタスクのコマンド ID を指定します。  
   
- [出力] `nGroup`  
+ [out]*n グループ*  
  タスクのグループのインデックスが含まれています。  
   
- [出力] `nTask`  
- タスク、タスク グループ内のインデックスが含まれています。  
+ [out]*%n タスク*  
+ タスク グループ内のタスクのインデックスが含まれています。  
   
- [入力] `hwndTask`  
+ [in]*hwndTask*  
  タスクに関連付けられているウィンドウを指定します。  
   
- [入力] `pTask`  
+ [in]*pTask*  
  検索するタスクを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` タスクの場所が見つかった場合`FALSE`指定したタスクが存在しない場合。  
+ タスクの場所が見つかった場合は TRUE。指定したタスクが存在しない場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、グループのインデックスと指定されたタスクのタスクのインデックスを取得します。 メソッドを返す場合`FALSE`、`nGroup`と`nTask`-1 に設定されます。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、グループのインデックスと、指定したタスクのタスクのインデックスを取得します。 メソッドは、FALSE を返す場合*英*と *%n タスク*-1 に設定されます。  
   
 ##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
- タスクの水平方向のオフセットを返します。  
+ タスクの水平オフセットを返します。  
   
 ```  
 int GetTasksHorzOffset() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 親グループの左端および右端からタスクの水平方向のオフセット。  
+ 親グループの左端および右端からタスクの水平オフセット。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  タスクの既定の水平方向のオフセットは、12 ピクセルです。  
   
 ##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset  
@@ -1049,7 +1050,7 @@ int GetTasksIconHorzOffset() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset  
 
@@ -1060,7 +1061,7 @@ int GetTasksIconVertOffset() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getvertmargin"></a>  CMFCTasksPane::GetVertMargin  
  作業ウィンドウとクライアント領域の端の間には、垂直方向の余白を返します。  
@@ -1070,10 +1071,10 @@ int GetVertMargin() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- クライアント領域の端と、作業ウィンドウを垂直方向の余白。  
+ タスク ウィンドウとクライアント領域の端の縦の余白。  
   
-### <a name="remarks"></a>コメント  
- 縦方向の余白は、作業ウィンドウとクライアント領域の端の間の領域です。 縦方向の余白の既定値は、12 ピクセルです。  
+### <a name="remarks"></a>Remarks  
+ 縦の余白は、作業ウィンドウとクライアント領域の端の間のスペースです。 縦の余白の既定値は、12 ピクセルです。  
   
 ##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible  
 
@@ -1084,7 +1085,7 @@ virtual BOOL IsAccessibilityCompatible();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isanimationenabled"></a>  CMFCTasksPane::IsAnimationEnabled  
  アニメーションが有効かどうかを示します。  
@@ -1094,10 +1095,10 @@ BOOL IsAnimationEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ユーザーが展開されるか、グループを折りたたむときに発生する、アニメーションが有効である場合それ以外の場合、`FALSE`です。  
+ は、ユーザーが展開またはグループを折りたたむときに発生するアニメーションが有効な場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- 呼び出す[CMFCTasksPane::EnableAnimation](#enableanimation)を有効にするにまたはアニメーションを無効にします。  
+### <a name="remarks"></a>Remarks  
+ 呼び出す[CMFCTasksPane::EnableAnimation](#enableanimation)有効またはアニメーションを無効にします。  
   
 ##  <a name="isbackbuttonenabled"></a>  CMFCTasksPane::IsBackButtonEnabled  
  [戻る] ボタンが有効かどうかを示します。  
@@ -1107,10 +1108,10 @@ BOOL IsBackButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` [戻る] ボタンが有効である場合それ以外の場合、`FALSE`です。  
+ は、[戻る] ボタンが有効な場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- ユーザーは、[戻る] ボタンをクリックすると、フレームワークは、前のタスク ページを表示します。  
+### <a name="remarks"></a>Remarks  
+ ユーザーは、[戻る] ボタンをクリックすると、フレームワークには、前のタスク ページが表示されます。  
   
 ##  <a name="isforwardbuttonenabled"></a>  CMFCTasksPane::IsForwardButtonEnabled  
  [進む] ボタンが有効かどうかを示します。  
@@ -1120,9 +1121,9 @@ BOOL IsForwardButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` [進む] ボタンが有効である場合それ以外の場合、`FALSE`です。  
+ は、[進む] ボタンが有効な場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [進む] ボタンでは、タスクの各ページの履歴を前方に移動できるようにします。  
   
 ##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled  
@@ -1134,7 +1135,7 @@ BOOL IsGroupCollapseEnabled() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ishistorymenubuttonsenabled"></a>  CMFCTasksPane::IsHistoryMenuButtonsEnabled  
  示すかどうか、 **[次へ]** と**前**ナビゲーション ボタンにドロップダウン メニューがあります。  
@@ -1144,7 +1145,7 @@ BOOL IsHistoryMenuButtonsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合、**次**と**前**ナビゲーション ボタンにドロップダウン メニューがある、それ以外の`FALSE`します。  
+ TRUE の場合、**次**と**前**ナビゲーション ボタンにドロップダウン メニューがある場合は FALSE。  
   
 ##  <a name="isnavigationtoolbarenabled"></a>  CMFCTasksPane::IsNavigationToolbarEnabled  
  ナビゲーション ツール バーが有効かどうかを示します。  
@@ -1154,7 +1155,7 @@ BOOL IsNavigationToolbarEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ナビゲーション ツールバーが有効である場合それ以外の場合、`FALSE`です。  
+ ナビゲーション ツールバーが有効な場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox  
 
@@ -1165,7 +1166,7 @@ virtual BOOL IsToolBox() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="iswraplabelsenabled"></a>  CMFCTasksPane::IsWrapLabelsEnabled  
  作業ウィンドウでラベルのテキストが折り返されるかどうかを示します。  
@@ -1175,7 +1176,7 @@ BOOL IsWrapLabelsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ラベルのテキストが折り返される場合それ以外の場合、`FALSE`です。  
+ ラベルのテキストが折り返される場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="iswraptasksenabled"></a>  CMFCTasksPane::IsWrapTasksEnabled  
  フレームワークがタスクの文字列を折り返すかどうかを指定します。  
@@ -1185,7 +1186,7 @@ BOOL IsWrapTasksEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` タスクの文字列をラップする場合それ以外の場合、`FALSE`です。  
+ タスクの文字列をラップする場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="loadstate"></a>  CMFCTasksPane::LoadState  
 
@@ -1198,13 +1199,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
- [入力] `nIndex`  
- [入力] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*nIndex*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onactivatetaskspanepage"></a>  CMFCTasksPane::OnActivateTasksPanePage  
  作業ウィンドウ ページのアクティブなときに、フレームワークによって呼び出されます。  
@@ -1213,8 +1214,8 @@ virtual BOOL LoadState(
 virtual void OnActivateTasksPanePage();
 ```  
   
-### <a name="remarks"></a>コメント  
- 作業ウィンドウ ページの外観をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 作業ウィンドウ ページの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel  
 
@@ -1223,7 +1224,7 @@ virtual void OnActivateTasksPanePage();
 virtual void OnCancel();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onclicktask"></a>  CMFCTasksPane::OnClickTask  
  ユーザーが作業ウィンドウ内の項目をクリックすると、フレームワークによって呼び出されます。  
@@ -1237,22 +1238,22 @@ virtual void OnClickTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroupNumber`  
- クリックしたタスクが含まれているグループの 0 から始まるインデックスを指定します。  
+ [in]*nGroupNumber*  
+ クリックされたタスクを含むグループの 0 から始まるインデックスを指定します。  
   
- [入力] `nTaskNumber`  
- クリックしたタスクの 0 から始まるインデックスを指定します。  
+ [in]*nTaskNumber*  
+ クリックされたタスクの 0 から始まるインデックスを指定します。  
   
- [入力] `uiCommandID`  
+ [in]*uiCommandID*  
  タスクに関連付けられているコマンド ID を指定します。  
   
- [入力] `dwUserData`  
+ [in]*dwUserData*  
  クリックされたタスクに関連付けられているユーザー定義のデータが含まれています。  
   
-### <a name="remarks"></a>コメント  
- フレームワークは、ユーザーがタスクをクリックしたときに、このメソッドを呼び出します。 既定では、フレームワーク クリックされたタスクに関連付けられているコマンド ID を確認し、0 ではない場合は、送信、`WM_COMMAND`メッセージ作業ウィンドウ コントロールの所有者にします。  
+### <a name="remarks"></a>Remarks  
+ フレームワークは、ユーザーがタスクをクリックすると、このメソッドを呼び出します。 既定では、フレームワーク、クリックされたタスクに関連付けられたコマンド ID を確認し、0 でない場合は、作業ウィンドウ コントロールの所有者に WM_COMMAND メッセージを送信します。  
   
- タスクがクリックされたときに、カスタム コードを実行する派生クラスでは、このメソッドをオーバーライドします。  
+ タスクがクリックされたときに、カスタム コードを実行する派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="onok"></a>  CMFCTasksPane::OnOK  
 
@@ -1261,7 +1262,7 @@ virtual void OnClickTask(
 virtual void OnOK();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onpressbackbutton"></a>  CMFCTasksPane::OnPressBackButton  
  ユーザーが [戻る] ナビゲーション ボタンをクリックすると、フレームワークによって呼び出されます。  
@@ -1270,10 +1271,10 @@ virtual void OnOK();
 virtual void OnPressBackButton();
 ```  
   
-### <a name="remarks"></a>コメント  
- 既定では、フレームワークは、前に表示したページを表示します。  
+### <a name="remarks"></a>Remarks  
+ 既定では、フレームワークには、表示されたページが表示されます。  
   
- ユーザーが [戻る] ボタンをクリックしたときに、カスタム コードを実行する派生クラスでは、このメソッドをオーバーライドします。  
+ ユーザーが [戻る] ボタンをクリックすると、カスタム コードを実行する派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="onpressforwardbutton"></a>  CMFCTasksPane::OnPressForwardButton  
  ユーザーが [進む] ナビゲーション ボタンをクリックすると、フレームワークによって呼び出されます。  
@@ -1282,22 +1283,22 @@ virtual void OnPressBackButton();
 virtual void OnPressForwardButton();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークには、ユーザーがクリックする前に表示されるページが表示されます、**戻る**ボタンをクリックします。  
   
- ユーザーが [進む] ボタンをクリックしたときに、カスタム コードを実行する派生クラスでは、このメソッドをオーバーライドします。  
+ ユーザーが [進む] ボタンをクリックすると、カスタム コードを実行する派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="onpresshomebutton"></a>  CMFCTasksPane::OnPressHomeButton  
- ユーザーがホーム ナビゲーション ボタンをクリックしたときに、フレームワークによって呼び出されます。  
+ ユーザーがホーム ナビゲーション ボタンをクリックすると、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnPressHomeButton();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、フレームワークには、タスク グループの既定のページが表示されます。  
   
- ユーザーがホーム ナビゲーション ボタンをクリックしたときに、カスタム コードを実行する派生クラスでは、このメソッドをオーバーライドします。  
+ ユーザーがホーム ナビゲーション ボタンをクリックすると、カスタム コードを実行する派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton  
 
@@ -1309,10 +1310,10 @@ virtual void OnPressOtherButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pbtn`  
- [入力] `pWndOwner`  
+ [in]*pbtn*  
+ [in]*pWndOwner*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData  
 
@@ -1322,11 +1323,11 @@ virtual BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lVal`  
+ [in]*lVal*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI  
 
@@ -1338,10 +1339,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTarget`  
- [入力] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*持たず*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage  
 
@@ -1351,11 +1352,11 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMsg`  
+ [in]*pMsg*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout  
 
@@ -1365,9 +1366,9 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bRedraw`  
+ [in]*bRedraw*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="removeallgroups"></a>  CMFCTasksPane::RemoveAllGroups  
  指定したページ上のすべてのグループを削除します。  
@@ -1377,11 +1378,11 @@ void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nPageIdx`  
+ [in]*nPageIdx*  
  ページの 0 から始まるインデックスを指定します。  
   
-### <a name="remarks"></a>コメント  
- によって指定されたページ上のすべてのグループを削除`nPageIdx`、または既定のページのみがある場合、すべてのグループです。  
+### <a name="remarks"></a>Remarks  
+ 指定されたページ上のすべてのグループを削除します*nPageIdx*、または既定のページのみがある場合、すべてのグループ。  
   
 ##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  既定 (最初) のページを除く、すべてのページを作業ウィンドウから削除します。  
@@ -1398,7 +1399,7 @@ void RemoveAllTasks(int nGroup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  グループの 0 から始まるインデックスを指定します。  
   
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
@@ -1409,13 +1410,13 @@ void RemoveGroup(int nGroup);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  削除するグループの 0 から始まるインデックスを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、1 つのグループを削除します。 すべてのグループを削除するには、呼び出す[CMFCTasksPane::RemoveAllGroups](#removeallgroups)代わりにします。  
   
- フレームワークは、グループを削除するときは、すべてのタスクとそれに関連付けられている windows のユーザーは破棄されます。  
+ フレームワークは、グループを削除するときは、すべてのタスクと関連付けられている windows のユーザーが破棄されます。  
   
 ##  <a name="removepage"></a>  CMFCTasksPane::RemovePage  
  指定されたページを作業ウィンドウから削除します。  
@@ -1425,7 +1426,7 @@ void RemovePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nPageIdx`  
+ [in]*nPageIdx*  
  削除するページの 0 から始まるインデックスを指定します。  
   
 ##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
@@ -1439,17 +1440,17 @@ BOOL RemoveTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  削除するタスクが含まれているタスク グループの 0 から始まるインデックスを指定します。  
   
- [入力] `nTask`  
+ [in]*%n タスク*  
  削除するタスクの 0 から始まるインデックスを指定します。  
   
- [入力] `bRedraw`  
- `TRUE` 作業ウィンドウを再描画するにはそれ以外の場合、`FALSE`です。  
+ [in]*bRedraw*  
+ 作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 関数が成功した場合`FALSE`場合`nGroup`または`nTask`が無効です。  
+ 関数が成功した場合は TRUE。場合は FALSE*英*または *%n タスク*が無効です。  
   
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
@@ -1462,13 +1463,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
- [入力] `nIndex`  
- [入力] `uiID`  
+ [in]*lpszProfileName*  
+ [in]*nIndex*  
+ [in]*uiID*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="serialize"></a>  CMFCTasksPane::Serialize  
 
@@ -1478,9 +1479,9 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `ar`  
+ [in]*ar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setactivepage"></a>  CMFCTasksPane::SetActivePage  
  作業ウィンドウで、指定したページをアクティブになります。  
@@ -1490,11 +1491,11 @@ void SetActivePage(int nPageIdx);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nPageIdx`  
+ [in]*nPageIdx*  
  表示するページの 0 から始まるインデックスを指定します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドはアサート場合、`nPageIdx`が無効です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドはアサート場合、 *nPageIdx*が無効です。  
   
 ##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  作業ウィンドウのキャプション名を設定します。  
@@ -1504,11 +1505,11 @@ void SetCaption(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszName`  
+ [in]*lpszName*  
  キャプション名を指定します。  
   
-### <a name="remarks"></a>コメント  
- 作業ウィンドウに複数のページがある場合は、既定のページはこの関数を使用して設定されたキャプションがします。  
+### <a name="remarks"></a>Remarks  
+ 作業ウィンドウに複数のページがある場合は、既定のページは、この関数を使用して設定されたキャプションが。  
   
 ##  <a name="setgroupcaptionheight"></a>  CMFCTasksPane::SetGroupCaptionHeight  
  グループ キャプションの高さを設定します。  
@@ -1518,13 +1519,13 @@ void SetGroupCaptionHeight(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
+ [in]*n*  
  キャプションの高さを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作業ウィンドウの要素の余白をカスタマイズするには、このメソッドを呼び出します。  
   
- 場合`n`-1 で、フレームワークはビジュアル マネージャーを使用して余白の値を指定 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 既定のキャプションの高さは、25 ピクセルです。  
+ 場合*n* -1 で、フレームワークは、ビジュアル マネージャーを使用して、余白の値を決定します ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 既定のキャプションの高さは、25 ピクセルです。  
   
 ##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  グループ キャプションの水平方向のオフセットを設定します。  
@@ -1534,8 +1535,8 @@ void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
- グループ キャプションの水平方向のオフセットを指定します。  
+ [in]*n*  
+ グループ キャプションの水平オフセットを指定します。  
   
 ##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  グループ キャプションの垂直方向のオフセットを設定します。  
@@ -1545,8 +1546,8 @@ void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
- (ピクセル単位)、グループ キャプションの垂直方向のオフセットを指定します。  
+ [in]*n*  
+ グループ キャプションのピクセル単位では、垂直方向のオフセットを指定します。  
   
 ##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  グループ名を設定します。  
@@ -1558,14 +1559,14 @@ BOOL SetGroupName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  グループの 0 から始まるインデックスを指定します。  
   
- [入力] `lpszGroupName`  
+ [in]*lpszGroupName*  
  グループの名前を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` グループ名が正常に設定された場合それ以外の場合、`FALSE`です。  
+ グループ名が正しく設定されている場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="setgrouptextcolor"></a>  CMFCTasksPane::SetGroupTextColor  
  グループ キャプションのテキストの色を設定します。  
@@ -1578,17 +1579,17 @@ BOOL SetGroupTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  グループの 0 から始まるインデックスを指定します。  
   
- [入力] `color`  
+ [in]*色*  
  テキストの色を指定します。  
   
- [入力] `colorHot`  
- 強調表示されたグループのテキストの色を指定します。 -1 の場合、既定の強調表示色を使用します。  
+ [in]*colorHot*  
+ 強調表示されているグループのテキストの色を指定します。 -1 の場合、既定の強調表示色が使用されます。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、グループのテキストの色が正常に変更されました。それ以外の場合、`FALSE`です。  
+ TRUE の場合、グループのテキストの色が変更されました。それ以外の場合、FALSE です。  
   
 ##  <a name="setgroupvertoffset"></a>  CMFCTasksPane::SetGroupVertOffset  
  グループの垂直方向のオフセットを設定します。  
@@ -1598,29 +1599,29 @@ void SetGroupVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
- 縦方向のオフセットを指定します。  
+ [in]*n*  
+ 垂直方向のオフセットを指定します。  
   
-### <a name="remarks"></a>コメント  
- 縦方向のオフセットは、タスク グループとタスク ウィンドウの枠線の間の距離です。  
+### <a name="remarks"></a>Remarks  
+ 垂直方向のオフセットは、タスク グループと、作業ウィンドウの境界線の間の距離です。  
   
- 作業ウィンドウの要素の余白をカスタマイズするには、このメソッドを呼び出します。 場合`n`-1 で、フレームワークはビジュアル マネージャーを使用して余白の値を指定 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 既定のオフセットは、15 ピクセルです。  
+ 作業ウィンドウの要素の余白をカスタマイズするには、このメソッドを呼び出します。 場合*n* -1 で、フレームワークは、ビジュアル マネージャーを使用して、余白の値を決定します (`CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 既定のオフセットは、15 ピクセルです。  
   
 ##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
- 横方向の余白を設定します。  
+ 水平方向の余白を設定します。  
   
 ```  
 void SetHorzMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
+ [in]*n*  
  ピクセル単位で、余白を指定します。  
   
-### <a name="remarks"></a>コメント  
- 横方向の余白は、作業ウィンドウとクライアント領域の上端または下端の間の距離です。  
+### <a name="remarks"></a>Remarks  
+ 水平方向の余白は、タスク ウィンドウとクライアント領域の上端または下端の距離です。  
   
- N は-1、およびフレームワーク ビジュアル マネージャーを使用して余白の値を指定する場合 ( `CMFCVisualManager::GetTasksPaneHorzMargin`)。 既定の水平方向の余白は、12 ピクセルです。  
+ N が-1 で、フレームワークは、ビジュアル マネージャーを使用して、余白の値を決定する場合 (`CMFCVisualManager::GetTasksPaneHorzMargin`)。 既定の水平方向の余白は、12 ピクセルです。  
   
 ##  <a name="seticonslist"></a>  CMFCTasksPane::SetIconsList  
  イメージ リストを設定します。  
@@ -1635,22 +1636,22 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiImageListResID`  
+ [in]*uiImageListResID*  
  イメージ リストのリソース ID を指定します。  
   
- [入力] `cx`  
- イメージ リストのアイコンのサイズを指定します。  
+ [in]*cx*  
+ イメージ リスト内のアイコンのサイズを指定します。  
   
- [入力] `clrTransparent`  
+ [in]*clrTransparent*  
  透明色を指定します。  
   
- [入力] `hIcons`  
- 作業ウィンドウのアイコンを含むイメージ リストを指定します。  
+ [in]*hIcons*  
+ 作業ウィンドウのアイコンを格納しているイメージ リストを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、イメージ リストのアイコンを格納します。 タスクは、そのリストに格納されているアイコンに関連付けられます。  
   
- このメソッドは、作業ウィンドウ コントロールでイメージ リストを関連付けます。 呼び出すときに、タスクのアイコンを設定する[cmfctaskspane::addtask](#addtask)設定、`nTaskIcon`このイメージ リスト内の適切な 0 から始まるインデックスにします。  
+ このメソッドは、イメージ リストを作業ウィンドウ コントロールに関連付けます。 呼び出すときに、タスクのアイコンを設定する[::addtask](#addtask)設定`nTaskIcon`にこのイメージ リストで該当する 0 から始まるインデックス。  
   
 ##  <a name="setpagecaption"></a>  CMFCTasksPane::SetPageCaption  
  作業ウィンドウ ページのキャプション テキストを設定します。  
@@ -1662,14 +1663,14 @@ void SetPageCaption(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nPageIdx`  
+ [in]*nPageIdx*  
  ページの 0 から始まるインデックスを指定します。  
   
- [入力] `lpszName`  
- ページに表示されるキャプション テキストを指定します。  
+ [in]*lpszName*  
+ ページに表示するキャプション テキストを指定します。  
   
-### <a name="remarks"></a>コメント  
- 作業ウィンドウに複数のページがある場合は、既定のページはこのメソッドを使用して設定されたキャプションがします。  
+### <a name="remarks"></a>Remarks  
+ 作業ウィンドウに複数のページがある場合は、既定のページは、このメソッドを使用して設定されたキャプションが。  
   
 ##  <a name="settaskname"></a>  CMFCTasksPane::SetTaskName  
  タスクの名前を設定します。  
@@ -1682,17 +1683,17 @@ BOOL SetTaskName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  タスク グループの 0 から始まるインデックスを指定します。  
   
- [入力] `nTask`  
+ [in]*%n タスク*  
  タスクの 0 から始まるインデックスを指定します。  
   
- [入力] `lpszTaskName`  
+ [in]*lpszTaskName*  
  タスク名を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` タスク名が正常に設定された場合それ以外の場合、`FALSE`です。  
+ タスク名が正しく設定されている場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="settaskshorzoffset"></a>  CMFCTasksPane::SetTasksHorzOffset  
  タスクの水平方向のオフセットを設定します。  
@@ -1702,13 +1703,13 @@ void SetTasksHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
+ [in]*n*  
  水平方向のオフセットを指定します。  
   
-### <a name="remarks"></a>コメント  
- 水平方向のオフセットは、グループの左と右のエッジからピクセル単位で距離です。  
+### <a name="remarks"></a>Remarks  
+ 水平方向のオフセットは、グループの左端および右端からのピクセル単位で距離です。  
   
- 場合`n`-1 で、このメソッドによって返される値の横方向のオフセットの設定、`CMFCVisualManager::GetTasksPaneTaskHorzOffset`メソッドです。  
+ 場合*n* -1 で、このメソッドによって返される値の水平方向のオフセットの設定、`CMFCVisualManager::GetTasksPaneTaskHorzOffset`メソッド。  
   
  既定の水平方向のオフセットは、12 ピクセルです。  
   
@@ -1720,9 +1721,9 @@ void SetTasksIconHorzOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
+ [in]*n*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset  
 
@@ -1732,9 +1733,9 @@ void SetTasksIconVertOffset(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
+ [in]*n*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="settasktextcolor"></a>  CMFCTasksPane::SetTaskTextColor  
  タスクのテキストの色を設定します。  
@@ -1748,36 +1749,36 @@ BOOL SetTaskTextColor(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  タスクが含まれているタスク グループの 0 から始まるインデックスを指定します。  
   
- [入力] `nTask`  
+ [in]*%n タスク*  
  タスクの 0 から始まるインデックスを指定します。  
   
- [入力] `color`  
+ [in]*色*  
  タスクのテキストの色を指定します。  
   
- [入力] `colorHot`  
- 強調表示されたグループのテキストの色を指定します。 -1 の場合、このメソッドは、既定の強調表示色を使用します。  
+ [in]*colorHot*  
+ 強調表示されているグループのテキストの色を指定します。 -1 の場合、このメソッドは、既定の強調表示色を使用します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` タスクのテキストの色が正常に設定された場合それ以外の場合、`FALSE`です。  
+ タスクのテキストの色が正しく設定されている場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="setvertmargin"></a>  CMFCTasksPane::SetVertMargin  
- 縦方向の余白を設定します。  
+ 縦の余白を設定します。  
   
 ```  
 void SetVertMargin(int n = -1);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `n`  
- 設定する垂直方向の余白を指定します。  
+ [in]*n*  
+ 設定するのには、縦の余白を指定します。  
   
-### <a name="remarks"></a>コメント  
- 縦方向の余白は、作業ウィンドウとクライアント領域の垂直方向の端の間の距離です。  
+### <a name="remarks"></a>Remarks  
+ 縦の余白は、作業ウィンドウとクライアント領域の垂直方向の端との間の距離です。  
   
- 場合`n`-1 で、フレームワークはビジュアル マネージャーを使用して余白の値を指定 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 既定の余白は、12 ピクセルです。  
+ 場合*n* -1 で、フレームワークは、ビジュアル マネージャーを使用して、余白の値を決定します (`CMFCVisualManager::GetTasksPaneVertMargin`)。 既定の余白は、12 ピクセルです。  
   
 ##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  ウィンドウ コントロールの高さを設定します。  
@@ -1795,20 +1796,20 @@ BOOL SetWindowHeight(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
- ウィンドウ コントロールが含まれているグループの 0 から始まるインデックスを指定します。  
+ [in]*n グループ*  
+ ウィンドウ コントロールを含むグループの 0 から始まるインデックスを指定します。  
   
- [入力] `hwndTask`  
+ [in]*hwndTask*  
  ウィンドウ コントロールを識別するハンドルを指定します。  
   
- [入力] `nWndHeight`  
+ [in]*nWndHeight*  
  設定する高さを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ウィンドウ コントロールの高さが正常に設定された場合`FALSE`場合`nGroup`が正しくない場合、または`hwndTask`存在しません。  
+ ウィンドウ コントロールの高さが正常に設定された場合は TRUE。場合は FALSE*英*有効でない場合、または*hwndTask*が存在しません。  
   
-### <a name="remarks"></a>コメント  
- 呼び出す[CMFCTasksPane::AddWindow](#addwindow)ウィンドウ コントロールを使用してタスクを追加します。  
+### <a name="remarks"></a>Remarks  
+ 呼び出す[CMFCTasksPane::AddWindow](#addwindow)ウィンドウ コントロールでのタスクを追加します。  
   
 ##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString  
 
@@ -1818,9 +1819,9 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdId`  
+ [in]*uiCmdId*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="showtask"></a>  CMFCTasksPane::ShowTask  
  タスクの表示と非表示を切り替えます。  
@@ -1834,23 +1835,23 @@ BOOL ShowTask(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nGroup`  
+ [in]*n グループ*  
  グループの 0 から始まるインデックスを指定します。  
   
- [入力] `nTask`  
- タスクを表示または非表示の 0 から始まるインデックスを指定します。  
+ [in]*%n タスク*  
+ 表示または非表示にするタスクの 0 から始まるインデックスを指定します。  
   
- [入力] `bShow`  
- `TRUE` タスクを表示するには`FALSE`タスクを非表示にします。  
+ [in]*bShow*  
+ タスクを表示する場合は TRUEタスクを非表示にする場合は FALSE。  
   
- [入力] `bRedraw`  
- `TRUE` 作業ウィンドウを再描画するにはそれ以外の場合、`FALSE`です。  
+ [in]*bRedraw*  
+ 作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、タスクが正常に表示または非表示になります。`FALSE`指定したグループまたはタスクが存在しない場合。  
+ TRUE の場合、タスクが正常に表示または非表示になります。指定したグループまたはタスクが存在しない場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- 使用して[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)コマンド ID に基づいて、タスクを非表示  
+### <a name="remarks"></a>Remarks  
+ 使用[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)コマンド ID に基づくタスクを非表示  
   
 ##  <a name="showtaskbycmdid"></a>  CMFCTasksPane::ShowTaskByCmdId  
  コマンド ID に基づいて、タスクの表示と非表示を切り替えます。  
@@ -1863,20 +1864,20 @@ BOOL ShowTaskByCmdId(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCommandID`  
- タスクのコマンド ID を表示または非表示を指定します。  
+ [in]*uiCommandID*  
+ または非表示には、タスクのコマンド ID を指定します。  
   
- [入力] `bShow`  
- `TRUE` タスクを表示するには`FALSE`タスクを非表示にします。  
+ [in]*bShow*  
+ タスクを表示する場合は TRUEタスクを非表示にする場合は FALSE。  
   
- [入力] `bRedraw`  
- `TRUE` 作業ウィンドウを再描画するにはそれ以外の場合、`FALSE`です。  
+ [in]*bRedraw*  
+ 作業ウィンドウを再描画する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、タスクが正常に表示または非表示になります。`FALSE`指定されたコマンド ID を持つタスクが存在しない場合。  
+ TRUE の場合、タスクが正常に表示または非表示になります。FALSE の場合、指定したコマンドを使用して、タスク ID がありません。  
   
-### <a name="remarks"></a>コメント  
- 使用して[CMFCTasksPane::ShowTask](#showtask)コマンド ID に基づいて、タスクを非表示  
+### <a name="remarks"></a>Remarks  
+ 使用[CMFCTasksPane::ShowTask](#showtask)コマンド ID に基づくタスクを非表示  
   
 ##  <a name="update"></a>  CMFCTasksPane::Update  
  すべてのタスク ウィンドウでコントロールを更新します。  
@@ -1885,10 +1886,10 @@ BOOL ShowTaskByCmdId(
 virtual void Update();
 ```  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、作業ウィンドウのキャプションを更新、スクロール バーの調整、すべてのタスクが再配置、およびすべてのタスク ウィンドウのコントロールが再描画を。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、作業ウィンドウのキャプションを更新、スクロール バーを調整します。 化し、すべてのタスクを再配置のすべてのタスク ウィンドウのコントロールが再描画します。  
   
- フレームワークは、作業ウィンドウを更新すると、カスタム コードを実行する派生クラスでは、このメソッドをオーバーライドします。  
+ 作業ウィンドウが更新されると、フレームワークは、カスタム コードを実行する派生クラスでこのメソッドをオーバーライドします。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

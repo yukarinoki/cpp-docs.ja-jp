@@ -126,11 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32cd9dc76954b7b4dc5d38081ed39bc42511ab0e
-ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
+ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957975"
 ---
 # <a name="basicstring-class"></a>basic_string クラス
 
@@ -145,11 +146,11 @@ class basic_string;
 
 ### <a name="parameters"></a>パラメーター
 
-`CharType` 文字列に格納される単一文字のデータ型。 C++ 標準ライブラリでは、`char` 型の要素に型定義 [string](../standard-library/string-typedefs.md#string)、`wchar_t` に [wstring](../standard-library/string-typedefs.md#wstring)、`char16_t` に [u16string](../standard-library/string-typedefs.md#u16string)、`char32_t` に [u32string](../standard-library/string-typedefs.md#u32string) を使用した、このテンプレート クラスの特殊化が提供されます。
+*CharType*文字列に格納される単一文字のデータ型。 C++ 標準ライブラリの型定義は、このテンプレート クラスの特殊化を提供する[文字列](../standard-library/string-typedefs.md#string)型の要素に対して**char**、 [wstring](../standard-library/string-typedefs.md#wstring)の**wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string)の`char16_t`、および[u32string](../standard-library/string-typedefs.md#u32string)の`char32_t`します。
 
-`Traits` さまざまな重要なプロパティ、 **CharType** basic_string 特化内の要素は、クラスによって記述**Traits**です。 既定値は `char_traits`< `CharType`> です。
+*Traits*のさまざまな重要なプロパティ、 `CharType` basic_string 特化の要素がクラスで説明されている`Traits`します。 既定値は `char_traits`< `CharType`> です。
 
-`Allocator` 文字列の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型。 既定値は **allocator**< `CharType`> です。
+*アロケーター*文字列の割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 既定値は **allocator**< `CharType`> です。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -162,13 +163,13 @@ class basic_string;
 |型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|文字列オブジェクトの `allocator` クラス型を表す型。|
-|[const_iterator](#const_iterator)|文字列内の `const` 要素にアクセスし、読み取ることができるランダム アクセス反復子を提供する型。|
-|[const_pointer](#const_pointer)|文字列内の `const` 要素へのポインターを提供する型。|
-|[const_reference](#const_reference)|読み取りと `const` 操作の実行のために、文字列に格納された `const` 要素への参照を提供する型。|
-|[const_reverse_iterator](#const_reverse_iterator)|文字列内の任意の `const` 要素を読み取ることができるランダム アクセス反復子を提供する型。|
+|[const_iterator](#const_iterator)|文字列内の **const** 要素にアクセスし、読み取ることができるランダム アクセス反復子を提供する型。|
+|[const_pointer](#const_pointer)|文字列内の **const** 要素へのポインターを提供する型。|
+|[const_reference](#const_reference)|**const** 操作の読み取りと実行のために、文字列に格納された **const** 要素への参照を提供する型。|
+|[const_reverse_iterator](#const_reverse_iterator)|文字列内の任意の **const** 要素を読み取ることができるランダム アクセス反復子を提供する型。|
 |[difference_type](#difference_type)|同じ文字列内の要素を参照する 2 反復子の違いを提供する型。|
 |[Iterator](#iterator)|文字列内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
-|[npos](#npos)|"Not found"いずれかを示す-1 または「残りの文字をすべて」に初期化された符号なし整数値検索機能に失敗するとします。|
+|[npos](#npos)|"Not found"いずれかを示す-1 または「残りの文字をすべて」に初期化された符号なし整数値、検索機能が失敗するとします。|
 |[pointer](#pointer)|文字列または文字アレイ内の文字要素へのポインターを提供する型。|
 |[reference](#reference)|文字列に格納されている要素への参照を提供する型。|
 |[reverse_iterator](#reverse_iterator)|反転文字列内の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
@@ -230,13 +231,13 @@ class basic_string;
 |[operator=](#op_eq)|文字列の内容に新しい文字の値を割り当てます。|
 |[operator&#91;&#93;](#op_at)|文字列に指定したインデックスのある文字への参照を提供します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 関数が [max_size](#max_size) の要素よりも長いシーケンスを生成するように指示された場合、関数は [length_error](../standard-library/length-error-class.md) 型のオブジェクトをスローして長さエラーを報告します。
 
 被制御シーケンスの要素を指定する参照、ポインター、および反復子は、被制御シーケンスを変更する関数の呼び出しの後、または非 **const** メンバー関数への最初の呼び出しの後、無効になることがあります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<string>
 
@@ -250,9 +251,9 @@ class basic_string;
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート パラメーター **Allocator** のシノニムです。
+この型は、テンプレート パラメーター `Allocator` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -313,27 +314,27 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>パラメーター
 
-`ptr` 追加される C 文字列。
+*ptr*追加される C 文字列。
 
-`str` 文字が追加される文字列。
+*str*文字が追加される文字列。
 
-`_Off` 追加する文字を指定して、ソース文字列の一部のインデックス。
+*_Off*追加する文字を指定するソース文字列の一部のインデックス。
 
-`count` 追加する、最大では、ソース文字列から文字の数。
+*カウント*追加される、最大では、ソース文字列から文字の数。
 
-`_Ch` 追加する文字の値。
+*_Ch*追加される文字の値。
 
-`first` 入力反復子の範囲の最初の要素に追加されます。
+*最初*追加する入力反復子の範囲の最初の要素をアドレス指定します。
 
-`last` 入力反復子、const_pointer、または const_iterator 範囲の最後の要素の次の位置を示す追加します。
+*最後*入力反復子、const_pointer、または const_iterator 範囲内の最後の要素の次の位置に追加されます。
 
 ### <a name="return-value"></a>戻り値
 
 このメンバー関数によって渡された文字が付加される文字列オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-文字は、[operator+=](#op_add_eq) またはメンバー関数 **append** または [push_back](#push_back) を使用して文字列に追加することができます。 `operator+=` が単一引数値を追加するのに対し、複数引数の **append** メンバー関数では、文字列の特定の部分を指定して追加できます。
+使用して文字列に文字を追加することができます、[演算子 + =](#op_add_eq)またはメンバー関数は、`append`または[push_back](#push_back)します。 `operator+=` 複数の引数の中に引数が 1 つの値を追加`append`メンバー関数では、文字列を追加するために指定できるは特定の部分。
 
 ### <a name="example"></a>例
 
@@ -467,27 +468,27 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>パラメーター
 
-`ptr` 対象の文字列に割り当てられる C 文字列の文字へのポインター。
+*ptr*対象の文字列に割り当てられる C 文字列の文字へのポインター。
 
-`count` ソース文字列から割り当てられる文字数。
+*カウント*ソース文字列から割り当てられる文字数。
 
-`str` 対象の文字列に割り当てられる文字は、元の文字列。
+*str*文字が対象の文字列に割り当てられるソース文字列。
 
-`_Ch` 割り当てられるに文字値。
+*_Ch*割り当てられる文字値。
 
-`first` 入力反復子、const_pointer、または const_iterator ソース文字列の範囲の最初の文字をアドレス指定をターゲット範囲に割り当てられます。
+*最初*入力反復子、const_pointer、または const_iterator ソース文字列の範囲の最初の文字をターゲット範囲に割り当てられます。
 
-`last` 入力反復子、const_pointer、または const_iterator 範囲の最後の文字を超えるソース文字列の 1 つのアドレス指定をターゲット範囲に割り当てられます。
+*最後*入力反復子、const_pointer、または const_iterator ソース文字列のいずれかの範囲の最後の文字を超えるターゲット範囲に割り当てられます。
 
-`off` 新しい文字が割り当てられるに開始する位置。
+*オフ*を割り当てられる新しい文字の開始位置。
 
 ### <a name="return-value"></a>戻り値
 
 このメンバー関数によって新しい文字が割り当てられる文字列オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-文字列には、新しい文字値を割り当てることができます。 新しい値には、文字列および C 文字列または単一の文字を指定できます。 新しい値が 1 つのパラメーターで記述できる場合には、[operator=](#op_eq) を使用できます。それ以外の場合は、複数のパラメーターを持つメンバー関数 **assign** を使用して、対象の文字列に割り当てる文字列の部分を指定できます。
+文字列には、新しい文字値を割り当てることができます。 新しい値には、文字列および C 文字列または単一の文字を指定できます。 [演算子 =](#op_eq)新しい値はそれ以外の 1 つのパラメーターで記述できる場合に使用される可能性がありますメンバー関数は、`assign`ターゲットに割り当てられる文字列の部分を指定する複数のパラメーターを持つを使用できます文字列。
 
 ### <a name="example"></a>例
 
@@ -594,19 +595,19 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` 参照されている要素の位置のインデックス。
+*_Off*参照される要素の位置のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーターのインデックスで指定した位置の文字列の文字への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-文字列の最初の要素がゼロから始まるインデックスと、次の要素が連続した正の整数によってインデックスが作成できるように、文字列の長さの*n*が、 *n*番目の要素のインデックス数を*n -* 1 です。
+文字列の最初の要素がゼロのインデックスと、次の要素が連続した正の整数によってインデックスが作成できるように長さの文字列*n*が、 *n*数によってインデックス付けされた番目の要素*n -* 1。
 
-メンバー [operator&#91;&#93;](#op_at) は、メンバー関数 **at** より高速な文字列の要素への読み取り/書き込みアクセスを提供します。
+メンバー[演算子&#91;&#93; ](#op_at)はメンバー関数より高速`at`読み取りと文字列の要素への書き込みアクセスを提供します。
 
-メンバー `operator[]` では、パラメーターとして渡されたインデックスが有効かどうかがチェックされませんが、メンバー関数 **at** ではチェックされるため、有効性が不明な場合にはこちらを使用する必要があります。 メンバー関数 **at** に渡された無効なインデックス (インデックスが 0 未満または文字列のサイズ以上) は、[out_of_range クラス](../standard-library/out-of-range-class.md)例外をスローします。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
+メンバー`operator[]`をパラメーターとして渡されたインデックスが有効かどうかが、メンバー関数はチェックしません`at`有効性が不明の場合は、これを使用する必要があります。 無効なインデックス、インデックスが 0 未満であるか、メンバー関数に渡される、文字列のサイズ以上`at`がスローされます、 [out_of_range クラス](../standard-library/out-of-range-class.md)例外。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
 
 返された参照は、文字列の再割り当てまたは非 **const** 文字列の変更によって無効化される可能性があります。
 
@@ -664,7 +665,7 @@ reference back();
 
 文字列の最後の要素 (空以外でなければなりません) への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="basic_string"></a>  basic_string::basic_string
 
@@ -740,27 +741,27 @@ basic_string(
 
 ### <a name="parameters"></a>パラメーター
 
-`ptr` 文字が初期化するために使用される C 文字列、`string`構築されます。 この値を null ポインターにすることはできません。
+*ptr*文字が初期化に使用される C 文字列、`string`構築されます。 この値を null ポインターにすることはできません。
 
-`_Al` 作成される文字列オブジェクトのストレージ アロケーター クラス。
+*_Al*構築される文字列オブジェクトのストレージ アロケーター クラス。
 
-`count` 初期化される文字の数。
+*カウント*初期化される文字の数。
 
-`right` 作成される文字列を初期化する文字列。
+*適切な*作成される文字列を初期化する文字列。
 
-`_Roff` 最初に作成される文字列の文字値を初期化するために使用されますが、文字列内の文字のインデックス。
+*_Roff*が最初に作成される文字列の文字値の初期化に使用する文字列内の文字のインデックス。
 
-`_Ch` 作成される文字列にコピーする文字の値。
+*_Ch*作成される文字列にコピーされる文字の値。
 
-`first` 入力反復子、const_pointer、または const_iterator ソース範囲の最初の要素を挿入します。
+*最初*入力反復子、const_pointer、または const_iterator ソース範囲の最初の要素を挿入します。
 
-`last` 入力反復子、const_pointer、または const_iterator ソース範囲の最後の要素の次の位置を示す挿入します。
+*最後*入力反復子、const_pointer、または const_iterator ソース範囲の最後の要素の次の位置に挿入します。
 
 ### <a name="return-value"></a>戻り値
 
 コンストラクターによって作成される文字列オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 すべてのコンストラクターは [basic_string::allocator_type](#allocator_type) を格納し、被制御シーケンスを初期化します。 アロケーター オブジェクトは、引数 `al` が指定されていれば、この引数です。 コピー コンストラクターの場合は、`right.`[basic_string::get_allocator](#get_allocator)`()` です。 それ以外の場合は `Alloc()` です。
 
@@ -878,7 +879,7 @@ const value_type *c_str() const;
 
 呼び出し文字列の C スタイル バージョンへのポインター。  ポインター値は、オブジェクトの basic_string クラスでデストラクターなどの非 const 関数を呼び出した後に無効になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 C++ テンプレート クラス basic_string\<char> に属している string 型のオブジェクトは、null で終了する必要はありません。 null 文字 '\0' は、C 文字列では文字列の末尾をマークするための特殊文字として使用されますが、string 型のオブジェクトでは特別な意味を持たず、他の文字と同様に文字列の一部にすることができます。 定数 **char\*** から文字列への自動変換がありますが、この文字列クラスは C スタイル文字列から **basic_string\<char >** 型のオブジェクトへの自動変換を提供していません。
 
@@ -942,7 +943,7 @@ size_type capacity() const;
 
 文字列を保持するためにメモリに現在割り当てられている記憶域のサイズ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスを保持するために現在割り当てられている記憶域を返します (値は [size](#size) 以上)。
 
@@ -1002,7 +1003,7 @@ int main( )
 
 ## <a name="cbegin"></a>  basic_string::cbegin
 
-範囲内の最初の要素を示す `const` 反復子を返します。
+返します、 **const**範囲の最初の要素を指す反復子。
 
 ```cpp
 const_iterator cbegin() const;
@@ -1010,13 +1011,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合、`const`) を指し示す `cbegin() == cend()` ランダム アクセス反復子。
+A **const**最初の要素の範囲、または空の範囲の末尾の次の場所を指すランダム アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `begin()` と`cbegin()` をサポートする任意の種類の変更可能な (非 `const`) コンテナーであると見なします。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`begin()`と`cbegin()`します。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1028,7 +1029,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  basic_string::cend
 
-範囲内の最後の要素の次の位置を指す `const` 反復子を返します。
+返します、 **const**範囲の最後の要素の次の位置を指す反復子。
 
 ```cpp
 const_iterator cend() const;
@@ -1036,13 +1037,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の末尾の次の位置を指し示す `const` ランダム アクセス反復子。
+A **const**範囲の終了位置を指すランダム アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `end()` と`cend()` をサポートする任意の種類の変更可能な (非 `const`) コンテナーであると見なします。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
 
 ```cpp
 auto i1 = Container.end();
@@ -1062,7 +1063,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数が呼び出された文字列は空になります。
 
@@ -1147,27 +1148,27 @@ int compare(
 
 ### <a name="parameters"></a>パラメーター
 
-`str` オペランドの文字列を比較する文字列です。
+*str*オペランド文字列と比較する文字列。
 
-`_Pos1` 比較が始まるオペランド文字列のインデックス。
+*_Pos1*比較が開始されるオペランド文字列のインデックス。
 
-`_Num1` 比較するオペランド文字列から文字の最大数。
+*_Num1*と比較するオペランド文字列から文字の最大数。
 
-`_Num2` 比較するパラメーターの文字列から文字の最大数。
+*_Num2*と比較するパラメーターの文字列から文字の最大数。
 
-`_Off` パラメーターの文字列比較を開始する位置のインデックス。
+*_Off*比較が開始されるパラメーターの文字列のインデックス。
 
-`count` 比較するパラメーターの文字列から文字の最大数。
+*カウント*と比較するパラメーターの文字列から文字の最大数。
 
-`ptr` オペランドの文字列と比較する C 文字列。
+*ptr*オペランド文字列と比較する C 文字列。
 
 ### <a name="return-value"></a>戻り値
 
 オペランド文字列がパラメーター文字列より小さい場合は負の値、2 つの文字列が等しい場合は 0、オペランド文字列がパラメーター文字列より大きい場合は正の値になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数 **compare** は、使用状況に応じてパラメーターのすべてまたは部分をオペランド文字列と比較します。
+`compare`メンバー関数は、すべてまたは使用に応じてパラメーターとオペランド文字列の一部を比較します。
 
 比較では、大文字と小文字を区別します。
 
@@ -1372,7 +1373,7 @@ The 3 characters from position 2 of the operand string are equal to
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_iterator` 型は文字値の変更には使用できず、順方向に文字列を反復処理するために使用されます。
 
@@ -1388,11 +1389,11 @@ typedef implementation-defined const_iterator;
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は **allocator_type::const_pointer** のシノニムです。
+この型は `allocator_type::const_pointer` の同意語です。
 
-**string** 型の場合、これは `char`* と同じになります。
+型の`string`と同じになります`char*`します。
 
 const が宣言されているポインターは、宣言時に初期化する必要があります。 const ポインターは常に同じメモリ位置を指しますが、定数データまたは非定数データを指すこともできます。
 
@@ -1428,11 +1429,11 @@ The C-string cstr1c is: Out There.
 typedef typename allocator_type::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_reference` 型で要素の値を変更することはできません。
 
-この型は **allocator_type::const_reference** のシノニムです。 文字列 **type** の場合、これは const **char&** と同じになります。
+この型は `allocator_type::const_reference` の同意語です。 文字列の`type`、これは定数に相当`char&`します。
 
 ### <a name="example"></a>例
 
@@ -1446,7 +1447,7 @@ typedef typename allocator_type::const_reference const_reference;
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_reverse_iterator` 型は文字の値を変更できず、逆の順序で文字列を反復処理するために使用されます。
 
@@ -1469,17 +1470,17 @@ size_type copy(
 
 ### <a name="parameters"></a>パラメーター
 
-`ptr` 要素がコピーされるターゲットの文字配列。
+*ptr*要素がコピーされるターゲット文字配列。
 
-_`Count`からコピーされる、最大では、ソース文字列の文字数。
+_*カウント*からコピーされる、最大では、ソース文字列の文字数。
 
-`_Off` コピーが作成される元のソース文字列の先頭の位置。
+*_Off*コピーが作成される元のソース文字列の先頭位置。
 
 ### <a name="return-value"></a>戻り値
 
 実際にコピーされた文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 null 文字はコピーの末尾には追加されません。
 
@@ -1556,7 +1557,7 @@ const_reverse_iterator crend() const;
 
 反転文字列内の最後の要素の次の場所 (通常の順序の文字列内の最初の要素の前の場所) を指す定数反転反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="copy_s"></a>  basic_string::_Copy_s
 
@@ -1572,19 +1573,19 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>パラメーター
 
-`dest` 要素がコピーされるターゲットの文字配列。
+*dest*要素がコピーされるターゲット文字配列。
 
-`dest_size` サイズ`dest`です。
+*dest_size*のサイズ*dest*します。
 
-_`Count`からコピーされる、最大では、ソース文字列の文字数。
+_*カウント*からコピーされる、最大では、ソース文字列の文字数。
 
-`_Off` コピーが作成される元のソース文字列の先頭の位置。
+*_Off*コピーが作成される元のソース文字列の先頭位置。
 
 ### <a name="return-value"></a>戻り値
 
 実際にコピーされた文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 null 文字はコピーの末尾には追加されません。
 
@@ -1647,9 +1648,9 @@ const value_type *data() const;
 
 文字列のコンテンツを含む配列の最初の要素を指すポインター、または空の配列の場合は、逆参照できない null 以外のポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-C++ テンプレート クラス basic_string \<char> に属している string 型のオブジェクトは、null で終了する必要はありません。 null 文字が追加されないため、**data** の戻り値の型は有効な C 文字列ではありません。 null 文字 '\0' は、C 文字列では文字列の末尾をマークするための特殊文字として使用されますが、string 型のオブジェクトでは特別な意味を持たず、他の文字と同様に文字列オブジェクトの一部にすることができます。
+C++ テンプレート クラス basic_string \<char> に属している string 型のオブジェクトは、null で終了する必要はありません。 戻り値の型`data`null 文字が追加されないために、有効な C の文字列ではありません。 null 文字 '\0' は、C 文字列では文字列の末尾をマークするための特殊文字として使用されますが、string 型のオブジェクトでは特別な意味を持たず、他の文字と同様に文字列オブジェクトの一部にすることができます。
 
 定数 **char\*** から文字列への自動変換がありますが、この文字列クラスは C スタイル文字列から **basic_string \<char>** 型のオブジェクトへの自動変換を提供しません。
 
@@ -1709,11 +1710,11 @@ The length of C-style string str1 = 11
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。
 
-**string** 型の場合、これは **ptrdiff_t** と同じになります。
+型の`string`と同じになります`ptrdiff_t`します。
 
 ### <a name="example"></a>例
 
@@ -1761,7 +1762,7 @@ bool empty() const;
 
 文字列オブジェクトに文字が含まれていない場合は **true**、1 つ以上の文字が含まれている場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[size](#size) == 0 と同じです。
 
@@ -1812,11 +1813,11 @@ iterator end();
 
 文字列内の最後の要素の次の位置を指すランダム アクセス反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**end** は、反復子が文字列の末尾に達したかどうかをテストするためによく使用されます。 **end** によって返された値は逆参照しないでください。
+`end` 反復子が文字列の末尾に達したかどうかをテストによく使用されます。 `end` によって返された値は逆参照しないでください。
 
-**end** の戻り値が `const_iterator` に割り当てられている場合、文字列オブジェクトを変更することはできません。 **end** の戻り値が **iterator** に割り当てられている場合、文字列オブジェクトを変更することはできません。
+`end` の戻り値が `const_iterator` に割り当てられている場合、文字列オブジェクトを変更することはできません。 場合の戻り値`end`に割り当てられている、 `iterator`、文字列オブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -1890,21 +1891,21 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 消去する範囲内の最初の要素の位置を示す反復子。
+*最初*消去する範囲の最初の要素の位置を示す反復子。
 
-`last` 消去する 1 つの後ろの位置の最後の要素範囲を示す反復子。
+*最後*消去する範囲の最後の要素いずれかの位置を示す反復子。
 
-`_It` 消去する、文字列内の要素の位置を示す反復子。
+*_It*消去する、文字列内の要素の位置を示す反復子。
 
-`_Pos` 削除する文字列の最初の文字のインデックス。
+*_Pos*を削除する文字列の最初の文字のインデックス。
 
-`count` 始まる文字列の範囲の数だけがある場合に削除される要素の数 *_Pos*です。
+*カウント*で始まる文字列の範囲内に同じ数がある場合に削除される要素の数 *_Pos*します。
 
 ### <a name="return-value"></a>戻り値
 
 最初の 2 つのメンバー関数には、メンバー関数によって削除される最後の文字の後の最初の文字を指定する反復子。 3 番目のメンバー関数には、要素を消去する文字列オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 3 番目のメンバー関数は **\*this** を返します。
 
@@ -1997,15 +1998,15 @@ size_type find(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` メンバー関数が検索対象の文字の値。
+*_Ch*メンバー関数が検索対象の文字の値。
 
-`_Off` 検索が開始位置のインデックス。
+*_Off*の検索が開始される位置のインデックス。
 
-`ptr` このメンバー関数が検索される C 文字列。
+*ptr*メンバー関数が検索される C 文字列。
 
-`count` このメンバー関数が検索される C 文字列の最初の文字から順方向に数えた文字数。
+*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
 
-`str` このメンバー関数が検索文字列。
+*str*メンバー関数を検索する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2170,15 +2171,15 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` メンバー関数が検索対象の文字の値。
+*_Ch*メンバー関数が検索対象の文字の値。
 
-`_Off` 検索が開始位置のインデックス。
+*_Off*の検索が開始される位置のインデックス。
 
-`ptr` このメンバー関数が検索される C 文字列。
+*ptr*メンバー関数が検索される C 文字列。
 
-`count` このメンバー関数が検索される C 文字列の最初の文字から順方向に数えた文字数。
+*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
 
-`str` このメンバー関数が検索文字列。
+*str*メンバー関数を検索する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2356,15 +2357,15 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` メンバー関数が検索対象の文字の値。
+*_Ch*メンバー関数が検索対象の文字の値。
 
-`_Off` 検索が開始位置のインデックス。
+*_Off*の検索が開始される位置のインデックス。
 
-`ptr` このメンバー関数が検索される C 文字列。
+*ptr*メンバー関数が検索される C 文字列。
 
-`count` このメンバー関数が検索される C 文字列の最初の文字から順方向に数えた文字数。
+*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
 
-`str` このメンバー関数が検索文字列。
+*str*メンバー関数を検索する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2541,15 +2542,15 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` メンバー関数が検索対象の文字の値。
+*_Ch*メンバー関数が検索対象の文字の値。
 
-`_Off` 検索が終了位置のインデックス。
+*_Off*検索が終了位置のインデックス。
 
-`ptr` このメンバー関数が検索される C 文字列。
+*ptr*メンバー関数が検索される C 文字列。
 
-`count` このメンバー関数が検索される C 文字列の最初の文字から順方向に数えた文字数。
+*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
 
-`str` このメンバー関数が検索文字列。
+*str*メンバー関数を検索する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2728,15 +2729,15 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` メンバー関数が検索対象の文字の値。
+*_Ch*メンバー関数が検索対象の文字の値。
 
-`_Off` 検索が終了位置のインデックス。
+*_Off*検索が終了位置のインデックス。
 
-`ptr` このメンバー関数が検索される C 文字列。
+*ptr*メンバー関数が検索される C 文字列。
 
-`count` このメンバー関数が検索される C 文字列の最初の文字から順方向に数えた文字数。
+*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
 
-`str` このメンバー関数が検索文字列。
+*str*メンバー関数を検索する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2887,7 +2888,7 @@ reference front();
 
 文字列の最初の要素への参照。空以外でなければなりません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="get_allocator"></a>  basic_string::get_allocator
 
@@ -2901,7 +2902,7 @@ allocator_type get_allocator() const;
 
 文字列で使用されるアロケーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されているアロケーター オブジェクトを返します。
 
@@ -2991,23 +2992,23 @@ void insert(
 
 ### <a name="parameters"></a>パラメーター
 
-*_P0*挿入ポイントの背後の位置のインデックスの新しい文字です。
+*_P0*挿入ポイントの背後の位置のインデックス、新しい文字。
 
-`ptr` 全体または一部に挿入する文字列を C 文字列。
+*ptr* C 文字列全体または一部に挿入する文字列。
 
-`count` 挿入する文字の数。
+*カウント*を挿入する文字数。
 
-`str` 全体または一部に挿入する対象の文字列の文字列です。
+*str*全体または一部に挿入されるターゲット文字列の文字列。
 
-`_Off` 追加する文字を指定して、ソース文字列の一部のインデックス。
+*_Off*追加する文字を指定するソース文字列の一部のインデックス。
 
-`_Ch` 挿入される要素の文字の値。
+*_Ch*を挿入する要素の文字の値。
 
-`_It` これの背後にある文字を挿入する位置を示す反復子。
+*_It*が背後にある文字が挿入される位置を示す反復子。
 
-`first` 入力反復子、const_pointer、または const_iterator ソース範囲の最初の要素を挿入します。
+*最初*入力反復子、const_pointer、または const_iterator ソース範囲の最初の要素を挿入します。
 
-`last` 入力反復子、const_pointer、または const_iterator ソース範囲の最後の要素の次の位置を示す挿入します。
+*最後*入力反復子、const_pointer、または const_iterator ソース範囲の最後の要素の次の位置に挿入します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3110,13 +3111,13 @@ The string with a character inserted from a range is: ABCDeeeHIJ
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**iterator** 型は文字値の変更に使用でき、順方向に文字列を反復処理するために使用されます。
+型`iterator`文字の値を変更するために使用して、順方向に文字列を反復処理するために使用します。
 
 ### <a name="example"></a>例
 
-**iterator** の宣言方法や使用方法の例については、[begin](#begin) の例を参照してください。
+`iterator` の宣言方法や使用方法の例については、[begin](#begin) の例をご覧ください。
 
 ## <a name="length"></a>  basic_string::length
 
@@ -3126,7 +3127,7 @@ typedef implementation-defined iterator;
 size_type length() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は [size](#size) と同じです。
 
@@ -3196,7 +3197,7 @@ size_type max_size() const;
 
 文字列が含むことができる最大文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 操作が最大サイズを超える長さの文字列を生成すると、[length_error Class](../standard-library/length-error-class.md) 型の例外がスローされます。
 
@@ -3256,15 +3257,15 @@ int main( )
 
 ## <a name="npos"></a>  basic_string::npos
 
-"Not found"いずれかを示す-1 または「残りの文字をすべて」に初期化された符号なし整数値検索機能に失敗するとします。
+"Not found"いずれかを示す-1 または「残りの文字をすべて」に初期化された符号なし整数値、検索機能が失敗するとします。
 
 ```cpp
 static const size_type npos = -1;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`npos` の値に対して戻り値がチェックされる際に、戻り値が [size_type](#size_type) 型で、`int` または `unsigned` のどちらでもない場合を除き、機能しない場合があります。
+戻り値がチェックする、`npos`値、それが動作しない型の戻り値でない場合[size_type](#size_type)どちらでもない**int**または**符号なし**します。
 
 ### <a name="example"></a>例
 
@@ -3287,17 +3288,17 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` 追加する文字。
+*_Ch*追加される文字。
 
-`ptr` 追加される C 文字列の文字。
+*ptr*追加される C 文字列の文字。
 
-`right` 追加する文字列の文字。
+*適切な*追加される文字列の文字。
 
 ### <a name="return-value"></a>戻り値
 
 このメンバー関数によって渡された文字が付加される文字列オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字は、`operator+=` またはメンバー関数 [append](#append) または [push_back](#push_back) を使用して文字列に追加することができます。 `operator+=` が単一引数値を追加するのに対し、複数引数の append メンバー関数では、文字列の特定の部分を指定して追加できます。
 
@@ -3376,17 +3377,17 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` 割り当てられるに文字値。
+*_Ch*割り当てられる文字値。
 
-`ptr` 対象の文字列に割り当てられる C 文字列の文字へのポインター。
+*ptr*対象の文字列に割り当てられる C 文字列の文字へのポインター。
 
-`right` 対象の文字列に割り当てられる文字は、元の文字列。
+*適切な*文字が対象の文字列に割り当てられるソース文字列。
 
 ### <a name="return-value"></a>戻り値
 
 このメンバー関数によって新しい文字が割り当てられる文字列オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列には、新しい文字値を割り当てることができます。 新しい値には、文字列および C 文字列または単一の文字を指定できます。 新しい値が 1 つのパラメーターで記述できる場合には、`operator=` を使用できます。それ以外の場合は、複数のパラメーターを持つメンバー関数 [assign](#assign) を使用して、対象の文字列に割り当てる文字列の部分を指定できます。
 
@@ -3458,19 +3459,19 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` 参照されている要素の位置のインデックス。
+*_Off*参照される要素の位置のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
 パラメーターのインデックスで指定した位置の文字列の文字への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列の最初の要素はゼロから始まるインデックスを持ち、次の要素は連続した正の整数によってインデックスが作成されます。これにより、長さ *n* の文字列が *n* - 1 の数でインデックスが作成された *n* 番目の要素を持つようになります。
 
 `operator[]` はメンバー関数 [at](#at) より高速な文字列の要素への読み取り/書き込みアクセスを提供します。
 
-`operator[]` では、パラメーターとして渡されたインデックスが有効かどうかがチェックされませんが、メンバー関数 **at** ではチェックされるため、有効性が不明な場合にはこちらを使用する必要があります。 メンバー関数 **at** に渡された無効なインデックス (インデックスが 0 未満または文字列のサイズ以上) は、[out_of_range クラス](../standard-library/out-of-range-class.md)例外をスローします。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
+`operator[]` パラメーターとして渡されたインデックスが有効ですが、メンバー関数はチェックしません`at`し、有効性のために使用する必要がありますのでが不明です。 無効なインデックス (インデックスが 0 未満または文字列のサイズ以上)、メンバー関数に渡される`at`スロー、 [out_of_range クラス](../standard-library/out-of-range-class.md)例外。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
 
 返された参照は、文字列の再割り当てまたは非 **const** 文字列の変更によって無効化される可能性があります。
 
@@ -3523,11 +3524,11 @@ int main( )
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は **allocator_type::pointer** のシノニムです。
+この型は `allocator_type::pointer` の同意語です。
 
-**string** 型の場合、これは **char\*** と同じになります。
+型の`string`と同じになります**char\*** します。
 
 ### <a name="example"></a>例
 
@@ -3560,7 +3561,7 @@ The C-string cstr1b is: Out There.
 void pop_back();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、事実上 `erase(size() - 1)` を呼び出して、シーケンスの最後の要素 (空であってはなりません) を消去します。
 
@@ -3574,9 +3575,9 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` 文字列の末尾に追加する文字。
+*_Ch*文字列の末尾に追加する文字。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は効果的に [insert](#insert)( [end](#end), _ *Ch* ) を呼び出します。
 
@@ -3633,7 +3634,7 @@ reverse_iterator rbegin();
 
 対応する通常の順序の文字列の最後の要素を指す、反転文字列内の最初の要素へのランダム アクセス反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `rbegin` は、[begin](#begin) が文字列で使用されているのと同じように、反転文字列で使用されます。
 
@@ -3703,17 +3704,17 @@ The string str2 is empty.
 typedef typename allocator_type::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**reference** 型を使って要素の値を変更できます。
+型`reference`要素の値を変更するために使用できます。
 
-この型は **allocator_type::reference** のシノニムです。
+この型は `allocator_type::reference` の同意語です。
 
-**string** 型の場合、これは **chr&** と同じになります。
+型の`string`と同じになります`chr&`します。
 
 ### <a name="example"></a>例
 
-**reference** の宣言方法や使用方法の例については、[at](#at) の例を参照してください。
+`reference` の宣言方法や使用方法の例については、[at](#at) の例を参照してください。
 
 ## <a name="rend"></a>  basic_string::rend
 
@@ -3730,7 +3731,7 @@ reverse_iterator rend();
 
 反転文字列内の最後の要素の次の位置を指す逆順ランダム アクセス反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `rend` は、[end](#end) が文字列で使用されているのと同じように、反転文字列で使用されます。
 
@@ -3872,29 +3873,29 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>パラメーター
 
-`str` オペランド文字列の文字のソースを表す文字列。
+*str*オペランド文字列の文字のソースである文字列。
 
-`_Pos1` 交換を開始するオペランド文字列のインデックス。
+*_Pos1*交換が開始されるオペランド文字列のインデックス。
 
-`_Num1` オペランド文字列内で置換する文字の最大数。
+*_Num1*オペランド文字列内で置換する文字の最大数。
 
-*_Pos2*コピーを開始するパラメーターの文字列のインデックス。
+*_Pos2*コピーが開始されるパラメーターの文字列のインデックス。
 
-`_Num2` C 文字列パラメーターから使用する文字の最大数。
+*_Num2*パラメーター C 文字列から使用する文字の最大数。
 
-`ptr` オペランド文字列の文字のソースにするには C 文字列。
+*ptr*オペランド文字列の文字のソースを使用する場合は C 文字列。
 
-`_Ch` オペランドの文字列にコピーする文字。
+*_Ch*オペランド文字列にコピーする文字。
 
-* first0 * オペランド文字列で削除される最初の文字を示す反復子にします。
+* first0 * をオペランド文字列で削除される最初の文字を示す反復子。
 
-* last0 * オペランド文字列で削除される最後の文字を示す反復子にします。
+* last0 * をオペランド文字列で削除される最後の文字を示す反復子。
 
-`first` 反復子、const_pointer、または最初の文字をアドレス指定 const_iterator パラメーター文字列にコピーします。
+*最初*反復子、const_pointer、または const_iterator 最初の文字パラメーター文字列にコピーします。
 
-`last` 反復子、const_pointer、または最後の文字をアドレス指定 const_iterator パラメーター文字列にコピーします。
+*最後*反復子、const_pointer、または const_iterator 最後の文字パラメーター文字列にコピーします。
 
-`count` 回数を超える`_Ch`オペランド文字列にコピーされます。
+*カウント*回数 *_Ch*オペランド文字列にコピーされます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4089,13 +4090,13 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-`count` メモリが予約されている文字数。
+*カウント*メモリが予約されている文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 再割り当ては時間のかかるプロセスで、文字列内の文字を参照するすべての参照、ポインター、および反復子が無効になるため、十分な容量を確保することが重要です。
 
-string 型のオブジェクトの容量の概念は、vector 型のオブジェクトの場合と同様です。 vector とは異なり、メンバー関数 **reserve** は、オブジェクトの容量を縮小するために呼び出すことができます。 要求は非バインドで、発生する場合もあればしない場合もあります。 パラメーターの既定値は 0 なので、**reserve** の呼び出しは、文字列内の現在の文字数に合わせて文字列の容量を縮小するための非バインド要求です。 容量は現在の文字数より小さくなることはありません。
+string 型のオブジェクトの容量の概念は、vector 型のオブジェクトの場合と同様です。 Vector、メンバー関数とは異なり`reserve`オブジェクトの容量を縮小を呼び出すことができます。 要求は非バインドで、発生する場合もあればしない場合もあります。 パラメーターの値が 0 の呼び出しを既定値として`reserve`は、文字列の文字列の現在の文字数に合わせて容量を縮小非バインド要求です。 容量は現在の文字数より小さくなることはありません。
 
 `reserve` の呼び出しは、文字列の容量を縮小できる唯一の方法です。 ただし、前述のように、この要求は非バインドで発生しない場合があります。
 
@@ -4183,11 +4184,11 @@ void resize(
 
 ### <a name="parameters"></a>パラメーター
 
-`count` 文字列の新しいサイズ。
+*カウント*文字列の新しいサイズ。
 
-`_Ch` 文字を追加する値は、追加の要素が必要な場合で初期化されます。
+*_Ch*文字が追加された値は、追加の要素が必要な場合に初期化されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 結果のサイズが最大文字数を超えている場合、フォームは `length_error` をスローします。
 
@@ -4284,7 +4285,7 @@ The capacity of downsized string str1 is: 47.
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `reverse_iterator` 型は文字の値を変更するために使用でき、逆の順序で文字列を反復処理するために使用されます。
 
@@ -4320,15 +4321,15 @@ size_type rfind(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` メンバー関数が検索対象の文字の値。
+*_Ch*メンバー関数が検索対象の文字の値。
 
-`_Off` 検索が開始位置のインデックス。
+*_Off*の検索が開始される位置のインデックス。
 
-`ptr` このメンバー関数が検索される C 文字列。
+*ptr*メンバー関数が検索される C 文字列。
 
-`count` このメンバー関数が検索される C 文字列の最初の文字から順方向に数えた文字数。
+*カウント*メンバー関数が検索される C 文字列で、最初の文字から数えて、文字数。
 
-`str` このメンバー関数が検索文字列。
+*str*メンバー関数を検索する文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4473,7 +4474,7 @@ The index of the 1st element of 'clear' in str4 is: 17
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、コンテナー内の不要な記憶域を削除します。
 
@@ -4551,11 +4552,11 @@ int main( )
 typedef typename allocator_type::size_type size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-これは **allocator_type::size_type** と同じです。
+これは `allocator_type::size_type` と同じです。
 
-**string** 型の場合、これは **size_t** と同じになります。
+型の`string`と同じになります`size_t`します。
 
 ### <a name="example"></a>例
 
@@ -4598,9 +4599,9 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` 元の文字列のコピーが行われる既定値は 0 の位置にある要素を検索するインデックス。
+*_Off*元の文字列のコピーが行われる既定値は 0 の位置にある要素を検索するインデックス。
 
-`count` 存在する場合はコピーする文字数。
+*カウント*が存在する場合にコピーする文字数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4654,9 +4655,9 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 要素があると、コピー先文字列で交換される元の文字列。
+*str*要素がコピー先の文字列と交換されるソース文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 交換される文字列に同じアロケーター オブジェクトがある場合、`swap` メンバー関数は以下のように動作します。
 
@@ -4711,11 +4712,11 @@ After swapping string s1 and s2:
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は 2 番目のテンプレート パラメーター **Traits** のシノニムです。
+型が 2 番目のテンプレート パラメーターのシノニム`Traits`します。
 
-**string** 型の場合、これは **char_traits\<char>** と同じになります。
+型の`string`と同じになります**char_traits\<char >** します。
 
 ### <a name="example"></a>例
 
@@ -4729,9 +4730,9 @@ typedef Traits traits_type;
 typedef typename allocator_type::value_type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-これは **traits_type::char_type** と同じで、**string** 型のオブジェクトの `char` と同じです。
+同じになります`traits_type::char_type`と等価**char**型のオブジェクトの`string`します。
 
 ### <a name="example"></a>例
 

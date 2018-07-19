@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197742"
 ---
 # <a name="compiler-error-c2394"></a>コンパイラ エラー C2394
 'your_type::operator'op'": CLR または WinRToperator 有効ではありません。 少なくとも 1 つのパラメーターが次の型である必要があります: 'T^'、'T^%'、'T^&' (T = 'your_type')。  

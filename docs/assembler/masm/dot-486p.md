@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049058"
 ---
 # <a name="486p"></a>.486P
 80486 プロセッサのすべての手順 (特権を含む) のアセンブリを有効にします。  

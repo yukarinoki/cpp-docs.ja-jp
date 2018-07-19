@@ -1,5 +1,5 @@
 ---
-title: CComPtr クラス |Microsoft ドキュメント
+title: CComPtr クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8513a3de54f8a99191936dfff5b894962c597381
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881592"
 ---
 # <a name="ccomptr-class"></a>CComPtr クラス
 COM インターフェイス ポインターを管理するためのスマート ポインター クラスです。  
@@ -35,8 +36,8 @@ class CComPtr
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 格納するポインターの種類を指定する COM インターフェイスです。  
+ *T*  
+ COM インターフェイスを格納するポインターの種類を指定します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -52,23 +53,23 @@ class CComPtr
 |----------|-----------------|  
 |[CComPtr::operator =](#operator_eq)|メンバーのポインターにポインターを割り当てます。|  
   
-## <a name="remarks"></a>コメント  
- ATL を使用して`CComPtr`と[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインターを管理します。 派生されます両方[CComPtrBase](../../atl/reference/ccomptrbase-class.md)、し、両方は、自動参照カウントを実行します。  
+## <a name="remarks"></a>Remarks  
+ ATL を使用して`CComPtr`と[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインターを管理します。 派生両方[CComPtrBase](../../atl/reference/ccomptrbase-class.md)、両方は、自動参照カウントを実行するとします。  
   
- **CComPtr**と[CComQIPtr](../../atl/reference/ccomqiptr-class.md)クラスは、自動参照カウントを実行することによってメモリ リークを解決できます。  次の関数は両方が同じ論理的操作を実行します。ただし、どのように 2 番目のバージョンがありますエラーの発生を使用して、 **CComPtr**クラス。  
+ `CComPtr`と[CComQIPtr](../../atl/reference/ccomqiptr-class.md)クラスは、自動参照カウントを実行することによってメモリ リークを解決できます。  次の関数は両方が、同じ論理操作を実行します。ただし、どのように 2 番目のバージョンがありますエラーの発生を使用して、`CComPtr`クラス。  
   
  [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
  [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- デバッグ ビルドで、コードのトレースの atlsd.lib をリンクします。  
+ デバッグ ビルドでは、コードのトレースの atlsd.lib をリンクします。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
   
  `CComPtr`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="ccomptr"></a>  CComPtr::CComPtr  
@@ -81,10 +82,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lp`  
- インターフェイス ポインターを初期化するために使用します。  
+ *lp*  
+ インターフェイス ポインターを初期化するために使用されます。  
   
- `T`  
+ *T*  
  COM インターフェイスです。  
   
 ##  <a name="operator_eq"></a>  CComPtr::operator =  
@@ -96,10 +97,10 @@ T* operator= (const CComPtr<T>& lp) throw ();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 更新後にポインターを返します`CComPtr`オブジェクト  
+ 更新されたポインターを返します`CComPtr`オブジェクト  
   
-### <a name="remarks"></a>コメント  
- この操作 AddRefs 新しいオブジェクトをリリース 1 つの場合、既存のオブジェクトが存在します。  
+### <a name="remarks"></a>Remarks  
+ この AddRefs 新しいオブジェクトを操作して解放場合は、1 つの既存のオブジェクトが存在します。  
   
 ## <a name="see-also"></a>関連項目  
  [CComPtr::CComPtr](#ccomptr)   

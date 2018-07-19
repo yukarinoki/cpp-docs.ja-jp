@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8d68723573d3a11565ae32f07bf8899661097c4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8468cb290b6845050943159aaa69b9cd000d2bc7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960295"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution クラス
 
@@ -75,11 +76,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数結果型が既定で`int`です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 *URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、幾何分布を使用してユーザー指定の整数型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
@@ -210,7 +211,7 @@ Distribution for 100 samples:
    35 :
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -229,9 +230,9 @@ explicit geometric_distribution(const param_type& parm);
 
 *p* 、`p`分布パラメーター。
 
-*パラメーター*分布の作成に使用されるパラメーターの構造体。
+*parm*分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < p && p < 1.0`
 
@@ -258,9 +259,9 @@ struct param_type {
 
 *p* 、`p`分布パラメーター。
 
-*右*、`param_type`インスタンスを比較します。
+*適切な*、`param_type`インスタンスを比較します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < p && p < 1.0`
 

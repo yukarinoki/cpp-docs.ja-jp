@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098694"
 ---
 # <a name="columnnameex"></a>COLUMN_NAME_EX
 行セットの特定の列を行セットのバインドを表します。 ような[COLUMN_NAME](../../data/oledb/column-name.md)ただし、このマクロは、データ型、サイズ、有効桁数、小数点以下桁数、列の長さ、および列の状態にも受け取ります。  

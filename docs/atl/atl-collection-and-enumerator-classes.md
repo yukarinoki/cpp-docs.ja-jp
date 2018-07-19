@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354447"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>ATL コレクションと列挙子クラス
 ATL は、コレクションと列挙子を実装するのに役立つ次のクラスを提供します。  

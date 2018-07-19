@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380250"
 ---
 # <a name="unwind-helpers-for-masm"></a>MASM のアンワインド ヘルパー
 適切なアセンブリ ルーチンを記述するためには、並列実際のアセンブリ命令に適切な .pdata および .xdata を作成するために使用する擬似演算のセット。 あるも一連のマクロを提供するには、最もよく使用される擬似演算の使用が簡素化します。  

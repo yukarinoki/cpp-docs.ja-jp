@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871041"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>イメージの形式変換 (アイコン用イメージ エディター)
 Gif 形式または JPEG イメージ、イメージ エディター内を開き、ビットマップとして保存できます。 また、ビットマップ ファイルを開くでき、gif 形式または JPEG として保存します。 使用するイメージでなくても、開発環境で編集するためのプロジェクトの一部 (を参照してください[スタンドアロン イメージ編集](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md))。  

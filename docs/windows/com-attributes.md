@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861387"
 ---
 # <a name="com-attributes"></a>COM 属性
 COM 属性は、COM で開発および .NET Framework 共通言語ランタイムの数多くの領域をサポートするためにコードを挿入します。 これらの分野カスタム インターフェイスの実装と、既存のインターフェイスからストック プロパティ、メソッド、およびイベントをサポートします。 さらに、複合と ActiveX コントロールの実装のサポートを確認できます。  

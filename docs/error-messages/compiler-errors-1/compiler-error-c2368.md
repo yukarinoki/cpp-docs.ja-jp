@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195075"
 ---
 # <a name="compiler-error-c2368"></a>コンパイラ エラー C2368
 'identifier': 再定義されています。異なるアロケーション指定子です  

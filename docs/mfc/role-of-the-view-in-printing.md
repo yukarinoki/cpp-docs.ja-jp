@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379256"
 ---
 # <a name="role-of-the-view-in-printing"></a>印刷でのビューの役割
 ビューは、関連付けられたドキュメントを印刷で 2 つの重要な役割も再生します。  

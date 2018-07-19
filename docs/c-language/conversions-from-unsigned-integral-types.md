@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391523"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversions from Unsigned Integral Types (符号なし整数型からの変換)
 

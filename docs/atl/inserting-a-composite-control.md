@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358691"
 ---
 # <a name="inserting-a-composite-control"></a>複合コントロールの挿入
 **クラスの追加** ダイアログ ボックスでは、プロジェクトに ATL オブジェクトを挿入することができます。 指す、ソリューション エクスプ ローラーでプロジェクト名を右クリックしてこのダイアログ ボックスを開く**追加**、クリックして**クラスの追加**です。  

@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae0a967fc8be50ec6b777cf5513543e0e2aecde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079001"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo クラス
 `CRecentDockSiteInfo`クラスは、最新の状態情報を格納するヘルパー クラス、 [CPane クラス](../../mfc/reference/cpane-class.md)です。  
@@ -81,7 +82,7 @@ class CRecentDockSiteInfo : public CObject
 |[CRecentDockSiteInfo::SetInfo](#setinfo)||  
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CRecentDockSiteInfo` クラスは、データ管理クラスです。 ドッキング状態とフローティング状態の間で切り替わる `CPane` の最後の状態を追跡します。 ユーザーがフローティング状態のドッキング可能ペインをダブルクリックすると、ペインはドッキング状態になります。 ドッキング状態のペインをダブルクリックすると、ペインは前の位置、サイズ、および状態に戻ります。 同様に、ペインを再びドッキング状態にすると、前のドッキング位置が復元されます。 このデータ クラスは、この機能を実現します。 このクラスのメンバーはドッキング状態のペインの状態情報を格納するため、アプリケーションで直接変更しないでください。  
   
  `CRecentDockSiteInfo` オブジェクトは、ペインが作成されるたびに作成されます。 各`CPane`オブジェクト変数が存在するメンバー、 [:m_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)、この情報を格納します。  
@@ -91,7 +92,7 @@ class CRecentDockSiteInfo : public CObject
   
  [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrecentDockSiteInfo.h  
   
 ##  <a name="cleanup"></a>  CRecentDockSiteInfo::CleanUp  
@@ -101,7 +102,7 @@ class CRecentDockSiteInfo : public CObject
 void CleanUp();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="crecentdocksiteinfo"></a>  CRecentDockSiteInfo::CRecentDockSiteInfo  
 
@@ -111,9 +112,9 @@ CRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pBar`  
+ [in]*pBar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrecentdefaultpanedivider"></a>  CRecentDockSiteInfo::GetRecentDefaultPaneDivider  
 
@@ -124,7 +125,7 @@ CPaneDivider* GetRecentDefaultPaneDivider();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrecentdockedpercent"></a>  CRecentDockSiteInfo::GetRecentDockedPercent  
 
@@ -134,11 +135,11 @@ int GetRecentDockedPercent(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrecentdockedrect"></a>  CRecentDockSiteInfo::GetRecentDockedRect  
 
@@ -148,11 +149,11 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrecentlistofpanes"></a>  CRecentDockSiteInfo::GetRecentListOfPanes  
 
@@ -162,11 +163,11 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrecentpanecontainer"></a>  CRecentDockSiteInfo::GetRecentPaneContainer  
 
@@ -176,11 +177,11 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrecenttabcontainer"></a>  CRecentDockSiteInfo::GetRecentTabContainer  
 
@@ -190,11 +191,11 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="init"></a>  CRecentDockSiteInfo::Init  
 
@@ -203,7 +204,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 void Init();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isrecentleftpane"></a>  CRecentDockSiteInfo::IsRecentLeftPane  
 
@@ -213,11 +214,11 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bForSlider`  
+ [in]*bForSlider*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="operator_eq"></a>  CRecentDockSiteInfo::operator =  
 
@@ -227,11 +228,11 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="savelistofrecentpanes"></a>  CRecentDockSiteInfo::SaveListOfRecentPanes  
 
@@ -243,11 +244,11 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `CList<HWND`  
- [入力] `lstOrg`  
- [入力] `bForSlider`  
+ [in]*CList < HWND*  
+ [in]*lstOrg*  
+ [in]*bForSlider*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setinfo"></a>  CRecentDockSiteInfo::SetInfo  
 
@@ -259,10 +260,10 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bForSlider`  
- [入力] `srcInfo`  
+ [in]*bForSlider*  
+ [in]*srcInfo*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="storedockinfo"></a>  CRecentDockSiteInfo::StoreDockInfo  
 
@@ -274,10 +275,10 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pRecentContainer`  
- [入力] `pTabbedBar`  
+ [in]*pRecentContainer*  
+ [in]*pTabbedBar*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

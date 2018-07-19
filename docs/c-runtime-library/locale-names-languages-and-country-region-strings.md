@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391816"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>ロケール名、言語、および国/地域識別文字列
 `setlocale` および `_create_locale` 関数の*ロケール*引数は、Windows NLS API でサポートされているロケール名、言語、国/地域コード、コード ページなどを使用して設定できます。 *ロケール*引数は次の形式になります。  

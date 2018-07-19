@@ -38,11 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03cd10d3efac16521cf826f3d9081ec533b9abec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954865"
 ---
 # <a name="weakptr-class"></a>weak_ptr クラス
 
@@ -76,9 +77,10 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` ウィーク ポインターによって制御される型。
+*Ty*  
+ ウィーク ポインターによって制御される型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、1 つ以上の [shared_ptr クラス](../standard-library/shared-ptr-class.md) オブジェクトによって管理されるリソースを指し示すオブジェクトを表します。 リソースを指し示す `weak_ptr` オブジェクトは、そのリソースの参照カウントに一切影響を与えません。 したがって、リソースを管理する最後の `shared_ptr` オブジェクトが破棄されると、仮にそのリソースを指し示す `weak_ptr` オブジェクトが存在していたとしても、そのリソースは解放されます。 これは、データ構造の循環を防ぐうえで不可欠です。
 
@@ -103,7 +105,7 @@ public:
 |[element_type](#element_type)|要素の型。|
 |[expired](#expired)|所有権の有効期限が切れているかどうかをテストします。|
 |[lock](#lock)|リソースの排他的所有権を取得します。|
-|[owner_before](#owner_before)|この `weak_ptr` が、指定されたポインターの前 (より小さい) に順序付けされている場合は `true` を返します。|
+|[owner_before](#owner_before)|返します**true**場合は、この`weak_ptr`前に順序付けは (またはより小さい)、指定されたポインター。|
 |[reset](#reset)|所有されたリソースを解放します。|
 |[swap](#swap)|2 つの `weak_ptr` オブジェクトを交換します。|
 |[use_count](#use_count)|指定された `shared_ptr` オブジェクトの数をカウントします。|
@@ -114,7 +116,7 @@ public:
 |-|-|
 |[operator=](#op_eq)|所有されたリソースを置換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 
@@ -128,7 +130,7 @@ public:
 typedef Ty element_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Ty` のシノニムです。
 
@@ -165,9 +167,9 @@ int main()
 bool expired() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は `*this` の期限が切れた場合に `true` を返し、それ以外の場合は `false` を返します。
+メンバー関数を返します**true**場合`*this`有効期限が切れた、それ以外の場合**false**します。
 
 ### <a name="example"></a>例
 
@@ -223,9 +225,9 @@ wp.expired() == true
 shared_ptr<Ty> lock() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-場合、メンバー関数は、空の shared_ptr オブジェクトを返します`*this`有効期限が切れた; を返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty >、リソースを所有しているオブジェクト`*this`を指します。
+場合、このメンバー関数は、空の shared_ptr オブジェクトを返します`*this`切れて; を返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty > リソースを所有するオブジェクト`*this`を指します。
 
 ### <a name="example"></a>例
 
@@ -288,13 +290,16 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-`Other` 引数の共有/ウィーク ポインターによって制御される型。
+*その他*  
+ 引数の共有ポインターまたはウィーク ポインターによって制御される型。
 
-`wp` コピーするウィーク ポインター。
+*wp*  
+ コピーするウィーク ポインター。
 
-`sp` 共有ポインターにコピーします。
+*sp*  
+ コピーする共有ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 すべての演算子は、現在 `*this` によって指し示されているリソースを解放し、オペランド シーケンスで指定されたリソースの所有権を `*this` に割り当てます。 演算子が失敗した場合、`*this` は変更されません。
 
@@ -332,7 +337,7 @@ int main()
 
 ## <a name="owner_before"></a>  owner_before
 
-この `weak_ptr` が、指定されたポインターの前 (より小さい) に順序付けされている場合は `true` を返します。
+返します**true**場合は、この`weak_ptr`前に順序付けは (またはより小さい)、指定されたポインター。
 
 ```cpp
 template <class Other>
@@ -344,11 +349,12 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>パラメーター
 
-`ptr` `lvalue`への参照、`shared_ptr`または`weak_ptr`です。
+*ptr*  
+ `shared_ptr` または `weak_ptr` への `lvalue` 参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート メンバー関数を返します`true`場合`*this`は`ordered before``ptr`です。
+テンプレート メンバー関数を返します**true**場合`*this`は`ordered before``ptr`します。
 
 ## <a name="reset"></a>  reset
 
@@ -358,7 +364,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 void reset();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `*this` によって指し示されるリソースを解放し、`*this` を空の weak_ptr オブジェクトに変換します。
 
@@ -403,11 +409,12 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>パラメーター
 
-`wp` スワップするウィーク ポインター。
+*wp*  
+ 交換するウィーク ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、最初に `*this` が指し示しその後 `wp` が指し示したリソースと、最初に `wp` が指し示しその後 `*this` が指し示したリソースを残します。 この関数はこれら 2 つのリソースの参照数を変更せず、例外をスローしません。
+メンバー関数が指していたリソースを残します`*this`によってが指し示しその後*wp*、およびリソースが指していた*wp* によってが指し示しその後`*this`. この関数はこれら 2 つのリソースの参照数を変更せず、例外をスローしません。
 
 ### <a name="example"></a>例
 
@@ -471,7 +478,7 @@ int main()
 long use_count() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`*this` が指し示すリソースを所有する `shared_ptr` オブジェクトの数を返します。
 
@@ -522,13 +529,16 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>パラメーター
 
-`Other` 引数の共有/ウィーク ポインターによって制御される型。
+*その他*  
+ 引数の共有ポインターまたはウィーク ポインターによって制御される型。
 
-`wp` コピーするウィーク ポインター。
+*wp*  
+ コピーするウィーク ポインター。
 
-`sp` 共有ポインターにコピーします。
+*sp*  
+ コピーする共有ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コンストラクターはそれぞれ、オペランド シーケンスで指定されたリソースを指し示すオブジェクトを構築します。
 

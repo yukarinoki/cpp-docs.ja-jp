@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387389"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8 進文字と 16 進文字の仕様
 シーケンス **\\***ooo* は、3 桁の 8 進数コードで ASCII 文字セットの任意の文字を指定できることを意味します。 8 進数の数値は、目的の文字またはワイド文字の値を指定します。  

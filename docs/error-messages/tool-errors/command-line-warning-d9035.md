@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296986"
 ---
 # <a name="command-line-warning-d9035"></a>コマンド ラインの警告 D9035
 オプション 'option' は廃止されており、将来のリリースで削除される予定  

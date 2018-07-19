@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1151464d4f2d863f8cdc30191199c0606d58b8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58599777f3e680b7ea124d9e9dfa427fd55b4051
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956935"
 ---
 # <a name="negate-struct"></a>negate 構造体
 
@@ -48,9 +49,9 @@ struct negate<void>
 
 ### <a name="parameters"></a>パラメーター
 
-`Type` サポートする任意の型、`operator-`指定または推論された型のオペランドを取得します。
+*型*をサポートする任意の型、`operator-`指定または推論された型のオペランドを受け取る。
 
-`Left` 符号を反転されるオペランド。 特殊化されたテンプレートは、推論された型 `Type` の左辺値および右辺値参照引数の完全転送を行います。
+*左*符号が反転されるオペランド。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*型*します。
 
 ## <a name="return-value"></a>戻り値
 
@@ -98,7 +99,7 @@ The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

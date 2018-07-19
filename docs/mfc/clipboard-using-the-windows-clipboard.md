@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342109"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>クリップボード : Windows クリップボードの使用方法
 このトピックでは、MFC アプリケーション内では、標準の Windows クリップボード API を使用する方法について説明します。  

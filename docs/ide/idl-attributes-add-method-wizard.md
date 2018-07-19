@@ -1,5 +1,5 @@
 ---
-title: IDL 属性、メソッド追加ウィザード |Microsoft ドキュメント
+title: IDL 属性、メソッド追加ウィザード | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,45 +18,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4a7a1e8fe89f64ad5909e7c1415545e3b3d80196
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33337770"
 ---
 # <a name="idl-attributes-add-method-wizard"></a>IDL 属性、メソッド追加ウィザード
-メソッド追加ウィザードのこのページを使用すると、メソッドの任意のインターフェイス定義言語 (IDL) の設定を指定できます。  
+メソッド追加ウィザードのこのページを使用して、メソッドのインターフェイス定義言語 (IDL) 設定を指定します。  
   
  **ID**  
- メソッドを識別する数値 ID を設定します。 参照してください[id](http://msdn.microsoft.com/library/windows/desktop/aa367040)で、 *MIDL 参照*です。  
+ メソッドを識別する数値 ID を設定します。 *MIDL リファレンス*の [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) に関するページを参照してください。  
   
- このボックスは、カスタム インターフェイスでは使用できません、MFC ディスパッチ インターフェイスでは使用できません。  
+ このボックスは、カスタム インターフェイスでは使用不可であり、MFC ディスパッチ インターフェイスで使用することはできません。  
   
  **call_as**  
- このローカル メソッドをマップできるリモート メソッドの名前を指定します。 参照してください[call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748)で、 *MIDL 参照*です。  
+ このローカル メソッドをマップできるリモート メソッドの名前を指定します。 *MIDL リファレンス*の [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) に関するページを参照してください。  
   
- MFC ディスパッチ インターフェイスは使用できません。  
+ MFC ディスパッチ インターフェイスでは使用できません。  
   
  **helpcontext**  
- コンテキスト ID をユーザーに関する情報を表示、ヘルプ ファイルでこのメソッドを指定します。 参照してください[helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851)で、 *MIDL 参照*です。  
+ コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのメソッドに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) に関するページを参照してください。  
   
- MFC ディスパッチ インターフェイスは使用できません。  
+ MFC ディスパッチ インターフェイスでは使用できません。  
   
  **helpstring**  
- 適用すると、要素の記述に使用される文字の文字列を指定します。 既定では、その設定は"メソッド*メソッド名*"。 参照してください[helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856)で、 *MIDL 参照*です。  
+ 適用先となる要素を記述するために使用される文字列を指定します。 既定では、"メソッド <*メソッド名*>" に設定されます。 *MIDL リファレンス*の [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) に関するページを参照してください。  
   
- MFC ディスパッチ インターフェイスは使用できません。  
+ MFC ディスパッチ インターフェイスでは使用できません。  
   
  **追加の属性**  
- MFC ディスパッチ インターフェイスは使用できません。  
+ MFC ディスパッチ インターフェイスでは使用できません。  
   
 |属性|説明|  
 |---------------|-----------------|  
-|**hidden**|メソッドが存在するが、ユーザー指向ブラウザーに表示されます必要がありますいないことを示します。 参照してください[隠し](http://msdn.microsoft.com/library/windows/desktop/aa366861)で、 *MIDL 参照*です。|  
-|**ソース**|メソッドのメンバーは、イベントの発生元であることを示します。 参照してください[ソース](http://msdn.microsoft.com/library/windows/desktop/aa367166)で、 *MIDL 参照*です。|  
-|`local`|MIDL コンパイラにメソッドがリモートでないことを指定します。 参照してください[ローカル](http://msdn.microsoft.com/library/windows/desktop/aa367071)で、 *MIDL 参照*です。|  
-|**restricted**|メソッドを任意に呼び出すことができませんを指定します。 参照してください[制限](http://msdn.microsoft.com/library/windows/desktop/aa367157)で、 *MIDL 参照*です。|  
-|**vararg**|メソッドが可変個の引数を取ることを指定します。 これを実現する最後の引数がありますのセーフ配列**バリアント**を残りのすべての引数を含む型。 参照してください[vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304)で、 *MIDL 参照*です。|  
+|**hidden**|メソッドは存在するが、ユーザー指向ブラウザーでは表示されないことを示します。 *MIDL リファレンス*の [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) に関するページを参照してください。|  
+|**source**|メソッドのメンバーがイベントのソースであることを示します。 *MIDL リファレンス* の [source](http://msdn.microsoft.com/library/windows/desktop/aa367166) に関するページを参照してください。|  
+|`local`|メソッドがリモートでないことを MIDL コンパイラに対して指定します。 *MIDL リファレンス* の [local](http://msdn.microsoft.com/library/windows/desktop/aa367071) に関するページを参照してください。|  
+|**restricted**|メソッドを任意に呼び出せないことを指定します。 *MIDL リファレンス* の [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) に関するページを参照してください。|  
+|**vararg**|メソッドが可変個の引数を取ることを指定します。 そのためには、最後の引数が、残りのすべての引数を含む**バリアント**型のセーフ配列である必要があります。 *MIDL リファレンス* の [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) に関するページを参照してください。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メソッドの追加](../ide/adding-a-method-visual-cpp.md)   
  [メソッド追加ウィザード](../ide/add-method-wizard.md)

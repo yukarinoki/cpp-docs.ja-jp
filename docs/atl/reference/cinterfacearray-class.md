@@ -1,5 +1,5 @@
 ---
-title: CInterfaceArray クラス |Microsoft ドキュメント
+title: CInterfaceArray クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a24eadea87d0d34adf0f577b321fa16a7cfc86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33e0783acfba1b460894ac8f5dde80e61780762
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882722"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray クラス
 このクラスは、COM インターフェイス ポインターの配列を構築するときに役立つメソッドを提供します。  
@@ -37,11 +38,11 @@ class CInterfaceArray :
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `I`  
- 格納するポインターの種類を指定する COM インターフェイスです。  
+ *I*  
+ COM インターフェイスを格納するポインターの種類を指定します。  
   
- `piid`  
- IID へのポインター`I`です。  
+ *piid*  
+ ポインターの IID を*は*します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -49,19 +50,19 @@ class CInterfaceArray :
   
 |名前|説明|  
 |----------|-----------------|  
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|インターフェイスの配列のコンス トラクターです。|  
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|インターフェイスの配列のコンス トラクター。|  
   
-## <a name="remarks"></a>コメント  
- このクラスは、コンス トラクターおよび COM インターフェイス ポインターの配列を作成するための派生メソッドを提供します。 使用して[CInterfaceList](../../atl/reference/cinterfacelist-class.md)リストが必要な場合です。  
+## <a name="remarks"></a>Remarks  
+ このクラスは、コンス トラクターおよび COM インターフェイス ポインターの配列を作成するための派生メソッドを提供します。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)一覧が必要な場合。  
   
- 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)です。  
+ 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CAtlArray`  
   
  `CInterfaceArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcoll.h  
   
 ##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray  
@@ -71,7 +72,7 @@ class CInterfaceArray :
 CInterfaceArray() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  スマート ポインターの配列を初期化します。  
   
 ## <a name="see-also"></a>関連項目  

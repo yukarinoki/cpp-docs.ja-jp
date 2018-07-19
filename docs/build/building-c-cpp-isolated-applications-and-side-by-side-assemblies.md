@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361285"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド
 Visual C++ では、 [分離アプリケーション](http://msdn.microsoft.com/library/aa375190) および [side-by-side アセンブリ](http://msdn.microsoft.com/library/ff951640)という概念に基づく、Windows クライアント アプリケーションの配置モデルがサポートされます。 既定では、Visual C++ では、すべてのネイティブ C/C++ アプリケーションは、 [マニフェスト](http://msdn.microsoft.com/library/aa375365) を使用して Visual C++ ライブラリへの依存関係を記述する分離アプリケーションとしてビルドされます。  

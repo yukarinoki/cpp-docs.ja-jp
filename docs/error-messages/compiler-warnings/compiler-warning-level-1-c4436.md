@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281643"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>コンパイラの警告 (レベル 1) C4436
 仮想ベース 'class1' から 'class2' コンス トラクターまたはデストラクターでへの dynamic_cast でした/vd2 を部分的に構築されるオブジェクト コンパイルに失敗または #pragma vtordisp(2) と ' class2' を有効に定義します。  

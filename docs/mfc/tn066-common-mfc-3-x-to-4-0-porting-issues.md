@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381791"
 ---
 # <a name="tn066-common-mfc-3x-to-40-porting-issues"></a>テクニカル ノート 66: MFC 3.x から 4.0 への移植によくある問題点
 このテクニカル ノートには、MFC で記述されたアプリケーションを移植するときに発生する最も一般的な問題が説明されている 3.x (Visual C に含まれている MFC 2.x) MFC 4.0 です。  

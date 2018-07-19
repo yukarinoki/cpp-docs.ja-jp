@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049168"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 **エイリアス**ディレクティブによって、関数の代替名を作成します。  これにより、関数に対して複数の名前を作成またはリンカー (LINK.exe) を新しい関数には古い関数にマップするライブラリを作成できます。  

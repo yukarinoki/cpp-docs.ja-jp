@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d88359bbf1521ad9fa464f22149c82497101ecb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 108182e7f54453bb88d9ea6e001f672c0c214a2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961627"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution クラス
 
@@ -76,9 +77,9 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数結果型が既定で`int`です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、ポワソン分布を使用してユーザー指定の整数型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
@@ -199,7 +200,7 @@ Distribution for 100 samples:
    17 :
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -218,9 +219,9 @@ explicit binomial_distribution(const param_type& parm);
 
 *意味*、`mean`分布パラメーター。
 
-*パラメーター*分布の作成に使用されるパラメーターの構造体。
+*parm*分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < mean`
 
@@ -247,7 +248,7 @@ struct param_type {
 
 [poisson_distribution](#poisson_distribution) のコンストラクター パラメーターをご覧ください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < mean`
 

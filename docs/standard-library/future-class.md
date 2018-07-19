@@ -30,11 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490578b1f1d9b6028b3fa2cdcc5769d3a53935
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956639"
 ---
 # <a name="future-class"></a>future クラス
 
@@ -47,7 +48,7 @@ template <class Ty>
 class future;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 各標準*非同期プロバイダー*は、このテンプレートのインスタンス化の型を持つオブジェクトを返します。 `future` オブジェクトは、関連付けられている非同期プロバイダーへのアクセスのみを提供します。 同じ非同期プロバイダーに関連付けられている複数の非同期リターン オブジェクトが必要な場合は、`future` オブジェクトを [shared_future](../standard-library/shared-future-class.md) オブジェクトにコピーします。
 
@@ -76,7 +77,7 @@ class future;
 |----------|-----------------|
 |[future::operator=](#op_eq)|指定したオブジェクトから関連付けられた非同期状態を転送します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<将来 >
 
@@ -93,13 +94,13 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Other` A`future`オブジェクト。
+*その他の*A`future`オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、関連付けられた非同期状態がない `future` オブジェクトを構築します。
 
-2 つ目のコンストラクターは、`future` オブジェクトを構築し、`Other` から関連付けられた非同期状態を転送します。 `Other` に関連付けられた非同期状態は既にありません。
+2 番目のコンス トラクターの構成要素を`future`オブジェクトし、関連付けられた非同期状態からの転送*他*します。 *その他の*関連付けられた非同期状態にはなくなりました。
 
 ## <a name="get"></a>  future::get
 
@@ -113,13 +114,13 @@ Ty get();
 
 結果が例外の場合は、そのメソッドが再スローします。 それ以外の場合、結果が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 結果を取得する前に、このメソッドは、関連付けられた非同期状態が準備できるまで、現在のスレッドをブロックします。
 
 部分的特殊化 `future<Ty&>` では、格納されている値は、実質的には非同期プロバイダーに戻り値として渡されたオブジェクトへの参照です。
 
-特殊化 `future<void>` には格納されている値がないため、このメソッドは `void` を返します。
+特殊化に格納されている値が存在しないので`future<void>`、メソッドを返します**void**します。
 
 その他の特殊化では、メソッドは、格納されている値からその戻り値を移動します。 そのため、このメソッドを 1 回だけ呼び出します。
 
@@ -133,15 +134,15 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` A`future`オブジェクト。
+*右*A`future`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `*this`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-転送の後、`Right` に関連付けられた非同期状態は既にありません。
+転送の後、*右*関連付けられた非同期状態にはなくなりました。
 
 ## <a name="share"></a>  future::share
 
@@ -165,7 +166,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが関連付けられた非同期状態である場合は `true` を返します。それ以外の場合は `false` を返します。
+**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
 
 ## <a name="wait"></a>  future::wait
 
@@ -175,7 +176,7 @@ bool valid() noexcept;
 void wait() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ *ready* になります。
 
@@ -190,13 +191,13 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`Rel_time` A [:duration](../standard-library/duration-class.md)最大時間間隔を指定するオブジェクトをそのスレッドはブロックされます。
+*Rel_time* A [chrono::duration](../standard-library/duration-class.md)最大時間間隔を指定するオブジェクトをそのスレッドはブロックします。
 
 ### <a name="return-value"></a>戻り値
 
 呼び出し側に戻る理由を示す [future_status](../standard-library/future-enums.md#future_status)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ準備完了になります。
 
@@ -211,13 +212,13 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>パラメーター
 
-`Abs_time` A [chrono::time_point](../standard-library/time-point-class.md)するまで、スレッド ブロックを解除できます時間を指定するオブジェクト。
+*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md)その後、スレッド ブロックを解除できる時間を指定するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 呼び出し側に戻る理由を示す [future_status](../standard-library/future-enums.md#future_status)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ *ready* になります。
 

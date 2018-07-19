@@ -1,5 +1,5 @@
 ---
-title: CComClassFactoryAutoThread クラス |Microsoft ドキュメント
+title: CComClassFactoryAutoThread クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 601f67d4a753dd617b9d7a3d5856ca64588a66c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3a38f3320a507b8bd4ce3095ed2c7a02b7bf573
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883061"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread クラス
-このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイス、およびオブジェクトが複数のアパートメント内で作成することができます。  
+このクラスは、実装、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)インターフェイス、およびオブジェクトを複数のアパートメントを作成できます。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -45,13 +46,13 @@ class CComClassFactoryAutoThread
   
 |名前|説明|  
 |----------|-----------------|  
-|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|指定された CLSID のオブジェクトを作成します。|  
+|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|指定した CLSID のオブジェクトを作成します。|  
 |[CComClassFactoryAutoThread::LockServer](#lockserver)|メモリ内のクラス ファクトリをロックします。|  
   
-## <a name="remarks"></a>コメント  
- `CComClassFactoryAutoThread` ような[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)はオブジェクトを複数のアパートメント内で作成できるようにします。 このサポートを利用する、EXE モジュールから派生させる[は](../../atl/reference/ccomautothreadmodule-class.md)します。  
+## <a name="remarks"></a>Remarks  
+ `CComClassFactoryAutoThread` ような[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)が複数のアパートメント内に作成するオブジェクトを許可します。 このサポートを利用する、EXE のモジュールから派生させる[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)します。  
   
- ATL オブジェクトから派生することで、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)です。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactoryAutoThread`を指定して、 [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)オブジェクトのクラス定義でマクロです。 例えば:  
+ ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言する[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactoryAutoThread`、指定、 [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)オブジェクトのクラス定義でマクロ。 例えば:  
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
@@ -64,11 +65,11 @@ class CComClassFactoryAutoThread
   
  `CComClassFactoryAutoThread`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance  
- 指定された CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイス ポインターを取得します。  
+ 指定した CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイス ポインターを取得します。  
   
 ```
 STDMETHODIMP CreateInstance(
@@ -78,39 +79,39 @@ STDMETHODIMP CreateInstance(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pUnkOuter`  
- [in]オブジェクトが作成されるかどうか、集計の一部として、`pUnkOuter`外部不明にする必要があります。 それ以外の場合、`pUnkOuter`する必要があります**NULL**です。  
+ *pUnkOuter*  
+ [in]かどうか、オブジェクトがの作成、集計の一部として、 *pUnkOuter*不明な外部にある必要があります。 それ以外の場合、 *pUnkOuter* NULL にする必要があります。  
   
- `riid`  
- [in]要求されたインターフェイスの IID です。 場合`pUnkOuter`以外**NULL**、`riid`する必要があります**IID_IUnknown**です。  
+ *riid*  
+ [in]要求されたインターフェイスの IID。 場合*pUnkOuter* NULL 以外の場合は、 *riid*あります`IID_IUnknown`します。  
   
- `ppvObj`  
- [out]によって識別されるインターフェイス ポインターへのポインター`riid`です。 オブジェクトは、このインターフェイスをサポートしていない場合`ppvObj`に設定されている**NULL**です。  
+ *ppvObj*  
+ [out]によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObj* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- モジュールがから派生している場合[は](../../atl/reference/ccomautothreadmodule-class.md)、`CreateInstance`最初にオブジェクトを作成する、関連付けられているアパートメント内のスレッドを選択します。  
+### <a name="remarks"></a>Remarks  
+ モジュールがから派生している場合[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)、`CreateInstance`スレッドに関連付けられているアパートメント オブジェクトを作成する、最初に選択します。  
   
 ##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer  
- インクリメントおよびデクリメントはモジュールのロックを呼び出すことによってカウント **_Module::Lock**と **_Module::Unlock**、それぞれします。  
+ インクリメントおよびデクリメントはモジュールのロックを呼び出すことによってカウント`_Module::Lock`と`_Module::Unlock`、それぞれします。  
   
 ```
 STDMETHODIMP LockServer(BOOL fLock);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `fLock`  
- [in]場合**TRUE**ロック数がインクリメントされます。 それ以外の場合、ロック カウントがデクリメントします。  
+ *群れ*  
+ [in]TRUE の場合、ロック数がインクリメントされます。それ以外の場合、ロック数は減少します。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- 使用する場合`CComClassFactoryAutoThread`、 **_Module**通常のグローバル インスタンスを指す[は](../../atl/reference/ccomautothreadmodule-class.md)します。  
+### <a name="remarks"></a>Remarks  
+ 使用する場合`CComClassFactoryAutoThread`、`_Module`は通常のグローバル インスタンスを指します[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)します。  
   
- 呼び出す`LockServer`クライアントを複数のオブジェクトをすばやく作成できるように、クラス ファクトリを保持できます。  
+ 呼び出す`LockServer`により、クライアントは複数のオブジェクトをすばやく作成できるように、クラス ファクトリを保持します。  
   
 ## <a name="see-also"></a>関連項目  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   

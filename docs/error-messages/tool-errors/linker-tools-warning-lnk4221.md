@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301009"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>リンカー ツールの警告 LNK4221
 このライブラリを使用するリンク操作では使用されませんに、このオブジェクト ファイルで、以前に定義されていないパブリック シンボルが定義されていません  

@@ -17,23 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea701c33001ffa3585c2d5847f3056454b7850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955457"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl の設定値
-既定の位置、 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)ステータス ウィンドウが、親ウィンドウの下部では、指定することが、`CCS_TOP`スタイルを親ウィンドウのクライアント領域の上部に表示します。  
+既定の位置、 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)親ウィンドウの下部では、ステータス ウィンドウが、親ウィンドウのクライアント領域の上部に表示させる CCS_TOP スタイルを指定することができます。  
   
- 指定することができます、 **SBARS_SIZEGRIP**を含めるの右端にあるサイズ変更グリップのスタイル、`CStatusBarCtrl`ステータス ウィンドウです。 サイズ変更グリップがサイズ変更境界線; に似ています。これは、ユーザーをクリックして親ウィンドウのサイズにドラッグされる四角形の領域です。  
+ 右端にあるサイズ変更グリップを含める SBARS_SIZEGRIP スタイルを指定することができます、`CStatusBarCtrl`ステータス ウィンドウです。 サイズ変更グリップがサイズ変更境界線; に似ています。これは、ユーザーをクリックして親ウィンドウのサイズにドラッグされる四角形の領域です。  
   
 > [!NOTE]
->  結合する場合、`CCS_TOP`と**SBARS_SIZEGRIP**スタイル、サイズ変更グリップを結果として得られるが機能していない場合でも、システムは、ステータス ウィンドウに描画します。  
+>  CCS_TOP と SBARS_SIZEGRIP のスタイルを結合する場合、結果のサイズ変更グリップは、システムは、ステータス ウィンドウに描画にもかかわらずと機能しません。  
   
  ステータス ウィンドウのウィンドウ プロシージャは、初期サイズとコントロール ウィンドウの位置に自動的に設定します。 幅は、親ウィンドウのクライアント領域のと同じです。 高さは、ステータス ウィンドウのデバイス コンテキストに現在選択されているフォントのメトリックとウィンドウの境界線の幅に基づいています。  
   
- ウィンドウ プロシージャは、ステータス ウィンドウのサイズを自動的に調整を受け取るたびに、`WM_SIZE`メッセージ。 通常、親ウィンドウのサイズが変更されたとき、親の送信、`WM_SIZE`ステータス ウィンドウにメッセージ。  
+ ウィンドウ プロシージャは、WM_SIZE メッセージを受信するたびに、ステータス ウィンドウのサイズを自動的に調整されます。 通常、親ウィンドウのサイズが変更されたときに、親は、ステータス ウィンドウに WM_SIZE メッセージを送信します。  
   
  ステータス ウィンドウの描画領域の高さの最小値を設定するには呼び出すことによって[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)ピクセルの高さの最小値を指定します。 描画領域では、ウィンドウの境界線は含まれません。  
   

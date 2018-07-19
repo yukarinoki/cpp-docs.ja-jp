@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294483"
 ---
 # <a name="compiler-warning-level-4-c4242"></a>コンパイラの警告 (レベル 4) C4242
 'identifier': 'type1' から 'type2' にデータ損失の可能性への変換  

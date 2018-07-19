@@ -68,6 +68,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451525"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 系関数
 この系列の各関数は、新しいプロセスを読み込んで実行します。  

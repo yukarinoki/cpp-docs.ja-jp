@@ -24,6 +24,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451889"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>1 バイト文字セットとマルチバイト文字セット
 

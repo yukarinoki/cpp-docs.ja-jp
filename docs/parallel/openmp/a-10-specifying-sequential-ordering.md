@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690079"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10 順番の指定
 セクションでは順序付け ([セクション 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 22 ページ上) は並列で行われる仕事からの出力を順番に配置するのに便利です。 次のプログラムを順番にインデックスを出力します。  

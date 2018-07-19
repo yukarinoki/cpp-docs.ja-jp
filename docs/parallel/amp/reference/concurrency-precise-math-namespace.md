@@ -148,6 +148,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695380"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math 名前空間
 `precise_math` 名前空間の関数は C99 に準拠しています。 両方の単一の精度と倍精度浮動小数点精度バージョンの各関数が含まれています。 たとえば、`acos`倍精度のバージョンと`acosf`単精度バージョンです。 単精度関数も含め、これらの関数では、アクセラレータでの拡張の倍精度サポートが必要です。 使用することができます、 [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision)を特定のかどうかは、特定のアクセラレータでこれらの関数を実行できます。 

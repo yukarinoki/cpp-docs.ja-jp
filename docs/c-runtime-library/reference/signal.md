@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416821"
 ---
 # <a name="signal"></a>signal
 
@@ -59,7 +60,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 ## <a name="return-value"></a>戻り値
 
-**信号**指定されたシグナルに関連付けられている func の前の値を返します。 たとえば場合の前の値*func*が**SIG_IGN**、戻り値も**SIG_IGN**です。 戻り値の**、今**はエラーを示します。 その場合は、 **errno**に設定されている**EINVAL**です。
+**信号**指定されたシグナルに関連付けられている func の前の値を返します。 たとえば場合の前の値*func*が**SIG_IGN**、戻り値も**SIG_IGN**です。 戻り値の **、今**はエラーを示します。 その場合は、 **errno**に設定されている**EINVAL**です。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345665"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC で使用できる派生ビュー クラス
 次の表は、MFC のビュー クラスと相互の関係を示します。 ビュー クラスの機能は、派生元の MFC ビュー クラスに依存します。  

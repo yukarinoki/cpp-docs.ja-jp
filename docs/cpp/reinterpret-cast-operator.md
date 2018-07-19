@@ -1,5 +1,5 @@
 ---
-title: reinterpret_cast 演算子 |Microsoft ドキュメント
+title: reinterpret_cast 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd64960469c9c4ca069611f6ebeefeaac8b29ba0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18a7cdd80c1d7b6b17a988d8f3581c7757f69823
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943528"
 ---
 # <a name="reinterpretcast-operator"></a>reinterpret_cast 演算子
 ポインターが他のポインター型に変換されることを許可します。 また、整数型から任意のポインター型への変換およびその逆の変換を許可します。  
@@ -31,20 +32,20 @@ ms.lasthandoff: 05/03/2018
 reinterpret_cast < type-id > ( expression )  
 ```  
   
-## <a name="remarks"></a>コメント  
- `reinterpret_cast` 演算子の誤用により簡単に安全でない状態になります。 必要な変換が本質的に低レベルでない限り、他のキャスト演算子の 1 つを使用する必要があります。  
+## <a name="remarks"></a>Remarks  
+ 不正使用、 **reinterpret_cast**演算子は簡単に安全でないあります。 必要な変換が本質的に低レベルでない限り、他のキャスト演算子の 1 つを使用する必要があります。  
   
- `reinterpret_cast` 演算子は、本質的に安全でない `char*` から `int*` へ、`One_class*` から `Unrelated_class*` へなどの変換に使用できます。  
+ **Reinterpret_cast**演算子はなどの変換を使用できます`char*`に`int*`、または`One_class*`に`Unrelated_class*`、これは本質的に安全ではありません。  
   
- `reinterpret_cast` の結果は、元の型にキャスト バックする場合以外は安全に使用することはできません。 その他の使用方法は、最高でも非ポータブルです。  
+ 結果、 **reinterpret_cast**元の型にキャストされている以外は安全に使用することはできません。 その他の使用方法は、最高でも非ポータブルです。  
   
- `reinterpret_cast`キャストできません演算子、 **const**、 `volatile`、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)これらの属性を削除する方法についてです。  
+ **Reinterpret_cast**演算子はキャストできません、 **const**、**揮発性**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。  
   
- `reinterpret_cast` 演算子は、null ポインター値を変換先の型の null ポインター値に変換します。  
+ **Reinterpret_cast**演算子は、null ポインターの値を変換先の型の null ポインター値に変換します。  
   
- `reinterpret_cast` の実用的な使用方法の 1 つは、2 つの異なる値が同じインデックスで終わることがほとんどないようにインデックスに値を割り当てるハッシュ関数での使用です。  
+ 実用的用途の 1 つ**reinterpret_cast**はハッシュ関数で、その 2 つの異なる方法でインデックスに値を割り当てる値ほとんどエンドを同じインデックスを持つ。  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -84,7 +85,7 @@ Output:
 64829  
 ```  
   
- `reinterpret_cast` は、ポインターが整数型として処理されることを許可します。 結果は、一意のインデックス (高レベルの発生確率で一意) を生成するためにビット シフトされ、XOR されます。 インデックスは、関数の戻り値の型への標準 C 形式のキャストにより切り捨てられます。  
+ **Reinterpret_cast**により、整数型として扱うへのポインター。 結果は、一意のインデックス (高レベルの発生確率で一意) を生成するためにビット シフトされ、XOR されます。 インデックスは、関数の戻り値の型への標準 C 形式のキャストにより切り捨てられます。  
   
 ## <a name="see-also"></a>関連項目  
  [キャスト演算子](../cpp/casting-operators.md)   

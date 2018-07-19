@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391208"
 ---
 # <a name="return-statement-c"></a>return ステートメント (C)
 `return` ステートメントは、関数の実行を終了し、コントロールを呼び出し元の関数に戻します。 呼び出し直後の位置から、呼び出し元の関数で実行が再開します。 `return` ステートメントは、呼び出し元の関数に値を返すこともできます。 詳細については、「[戻り値の型](../c-language/return-type.md)」をご覧ください。  

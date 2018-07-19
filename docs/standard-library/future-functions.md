@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 83a1d50c0041c3cd66abbd3d52d2e2b49231c81c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027398"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 関数
 
@@ -45,9 +46,9 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>パラメーター
 
-`policy` A[起動](../standard-library/future-enums.md#launch)値。
+*ポリシー* A[起動](../standard-library/future-enums.md#launch)値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 省略形の定義:
 
@@ -63,11 +64,9 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 `decay<Fn>::type` が launch 以外の型でない限り、2 番目の関数はオーバーロードの解決に関与しません。
 
-`policy` が `launch::any` であれば、関数は `launch::async` か `launch::deferred` を選択できます。 この実装では、関数は `launch::async` を使用しています。
+C++ 標準では、ポリシーが launch::async の場合は、関数が新しいスレッドを作成するを示しています。 ただし、Microsoft による実装は現在非準拠します。 場合によっては、新しいものではなく、リサイクルのスレッドを提供することがあります Windows ThreadPool から自身のスレッドを取得します。 つまり、`launch::async`は実際にポリシーの実装として`launch::async|launch::deferred`します。  ThreadPool ベースの実装の別の意味は保証がないスレッド ローカル変数は、スレッドの完了時に破棄されます。 スレッドがリサイクルされ、新しい呼び出しに提供されているかどうかは`async`、従来の変数は引き続き存在します。 そのためにスレッド ローカル変数を使用しないことをお勧め`async`します。
 
-`policy` が `launch::async` であれば、関数は `INVOKE(dfn, dargs..., Ty)` を評価するスレッドを作成します。 関数はスレッドの作成後、結果を待たずに戻ります。 システムが新しいスレッドを開始できない場合、関数はエラー コードが `resource_unavailable_try_again` である [system_error](../standard-library/system-error-class.md) をスローします。
-
-`policy` が `launch::deferred` である場合、関数は関連付けられた非同期状態を*遅延関数*の保持中としてマークして戻ります。 関連付けられた非同期状態が実際に準備完了になるまで待機する、時間指定のない関数への初めての呼び出しでは、`INVOKE(dfn, dargs..., Ty)` を評価することによって遅延関数が呼び出されます。
+場合*ポリシー*は`launch::deferred`、関数は、マークの保持中として関連付けられた非同期状態、*遅延関数*を返します。 関連付けられた非同期状態が実際に準備完了になるまで待機する、時間指定のない関数への初めての呼び出しでは、`INVOKE(dfn, dargs..., Ty)` を評価することによって遅延関数が呼び出されます。
 
 いずれの場合も、`future` オブジェクトの関連付けられた非同期状態は、`INVOKE(dfn, dargs..., Ty)` の評価が完了するまでは、例外がスローされても正常に制御が戻っても、*ready* には設定されません。 関連付けられた非同期状態の結果は、例外がスローされた場合の例外か、評価から返された値です。
 
@@ -94,7 +93,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc)報告されたエラーを識別する値。
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc)報告されたエラーを識別する値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -110,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc)報告されたエラーを識別する値。
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc)報告されたエラーを識別する値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -130,9 +129,9 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`promise`オブジェクト。
+*左*左`promise`オブジェクト。
 
-`Right` 右側の`promise`オブジェクト。
+*右*右側`promise`オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 

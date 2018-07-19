@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33853818"
 ---
 # <a name="benefits-of-character-set-portability"></a>文字セットにおける移植性の利点
 現在しないアプリケーションの国際化する場合でも、MFC および C ランタイムの移植性の機能を使用する利点が得られます。  

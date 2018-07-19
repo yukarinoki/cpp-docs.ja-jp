@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889654"
 ---
 # <a name="specifying-the-dominant-control"></a>最も優先度の高いコントロールの指定
 最初に選択されているコントロールは、主要なコントロールです。  

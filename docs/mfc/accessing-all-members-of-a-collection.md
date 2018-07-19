@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931939"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>コレクションの全メンバーへのアクセス
 MFC の配列コレクション クラスでは、テンプレート クラスでも非テンプレート クラスでも、インデックスを使って要素にアクセスします。 MFC のリスト コレクション クラスおよびマップ コレクション クラスでは、テンプレート クラスでも非テンプレート クラスでも、 **POSITION** 型のインジケーターを使ってコレクション内の位置を指定します。 そのコレクションの 1 つ以上のメンバーにアクセスするには、まず、ポジション インジケーターを初期化し、次にそのポジションを繰り返しコレクションに渡して、次の要素の位置を問い合わせます。 コレクションは、反復の進行に関する状態情報を保持していません。 この情報は、ポジション インジケーターで保持されます。 ただし、特定のポジションについては、コレクションはそのポジションの次の要素を返します。  
@@ -50,7 +51,7 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
   
      この例では、 `CPerson` オブジェクトへのポインターを格納する型付きポインター配列を使っています。 この配列は、定義済みの非テンプレート クラスである `CObArray`クラスから派生しています。 `GetAt` は `CPerson` オブジェクトへのポインターを返します。 型付きポインター コレクション クラスの場合は、配列でもリストでも、最初のパラメーターで基本クラスを指定し、2 番目のパラメーターで格納するデータの型を指定します。  
   
-     `CTypedPtrArray`クラスのオーバー ロードではまた、 **[ ]** 演算子、配列の要素にアクセスする一般的な配列サブスクリプト構文を使用できるようにします。 上記の `for` ループ本体のステートメントは、次のように書き換えることができます。  
+     `CTypedPtrArray`クラスのオーバー ロードではまた、 **[ ]** 演算子、配列の要素にアクセスする一般的な配列サブスクリプト構文を使用できるようにします。 ステートメントの本文内に代わり、**の**上記ループがあります。  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

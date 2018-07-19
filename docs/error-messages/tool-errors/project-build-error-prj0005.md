@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327767"
 ---
 # <a name="project-build-error-prj0005"></a>プロジェクト ビルド エラー PRJ0005
 ディレクトリ 'directory' に一時ファイルを作成できません。  

@@ -1,5 +1,5 @@
 ---
-title: CPtrList クラス |Microsoft ドキュメント
+title: CPtrList クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a143fd99a79212ed0078f06b334ab6ae0964b3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853895"
 ---
 # <a name="cptrlist-class"></a>CPtrList クラス
 void ポインターのリストをサポートします。  
@@ -34,7 +35,7 @@ class CPtrList : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CPtrList`クラスのメンバー関数に似ています[CObList](../../mfc/reference/coblist-class.md)です。 メンバー関数については `CObList` クラスの説明を参照してください。 関数パラメーターまたは戻り値として `CObject` ポインターが使われている場合は、`void` へのポインターに置き換えます。  
+ メンバー関数は、`CPtrList`クラスのメンバー関数のような[CObList](../../mfc/reference/coblist-class.md)します。 メンバー関数については `CObList` クラスの説明を参照してください。 任意の場所が表示、`CObject`関数パラメーターまたは戻り値としてのポインターへのポインターを置き換える**void**します。  
   
  `CObject*& CObList::GetHead() const;`  
   
@@ -42,21 +43,21 @@ class CPtrList : public CObject
   
  `void*& CPtrList::GetHead() const;`  
   
-## <a name="remarks"></a>コメント  
- `CPtrList` には、`IMPLEMENT_DYNAMIC` マクロが組み込まれているので、`CDumpContext` オブジェクトへのランタイム型のアクセスとダンプをサポートします。 ポインター リストの各要素をダンプする必要があるときは、ダンプ コンテキストの深さを 1 以上に設定する必要があります。  
+## <a name="remarks"></a>Remarks  
+ `CPtrList` 実行時の型へのアクセスとダンプをサポートするために IMPLEMENT_DYNAMIC マクロが組み込まれています、`CDumpContext`オブジェクト。 ポインター リストの各要素をダンプする必要があるときは、ダンプ コンテキストの深さを 1 以上に設定する必要があります。  
   
  ポインター リストはシリアル化できません。  
   
  `CPtrList` オブジェクトが削除されたとき、またはその要素が削除されたときは、ポインターだけが削除されます。ポインターが参照するエンティティは削除されません。  
   
- 使用する方法についての`CPtrList`、記事を参照して[コレクション](../../mfc/collections.md)です。  
+ 使用しての詳細については`CPtrList`、記事をご覧ください[コレクション](../../mfc/collections.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

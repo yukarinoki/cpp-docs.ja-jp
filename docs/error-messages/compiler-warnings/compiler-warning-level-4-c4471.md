@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302686"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>コンパイラの警告 (レベル 4) C4471
 '*列挙*': 対象範囲外の列挙の事前宣言が基になる型 (int が想定されます) を持つ必要があります  

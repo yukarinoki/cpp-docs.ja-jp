@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860191"
 ---
 # <a name="attributed-programming-concepts"></a>属性付きプログラミングの概念
 Visual C には、さまざまなプログラム内で属性を使用するための情報が含まれています。 Visual C の新機能の属性は、COM プログラミングと .NET Framework 共通言語ランタイムによる開発を容易に設計されています。 ソース ファイルで属性を追加するときに、コンパイラは、プロバイダーのダイナミック リンク ライブラリ (DLL) または生成されたオブジェクト ファイル内のコードを変更するコードを挿入で動作します。 .Idl ファイル、インターフェイス、タイプ ライブラリ、およびその他の COM 要素の作成をサポートする属性があります。 統合開発環境 (IDE) と [プロパティ] ウィンドウ、ウィザードによって属性はサポートされます。  

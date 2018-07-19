@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538acbf4e12c1d18e8d07337c6f428a0a0dc4b1a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faa94f14461ed41229d11857125a317b00c27abd
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123033"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView と CDaoRecordView のダイアログ データ エクスチェンジ (DDX) 関数
 このトピックの間でデータの交換に使用するための DDX_Field 関数を一覧表示、 [CRecordset](../../mfc/reference/crecordset-class.md)と[CRecordView](../../mfc/reference/crecordview-class.md)フォームまたは[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フォーム。  
@@ -76,19 +77,19 @@ void AFXAPI DDX_FieldCBIndex(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  内のコントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *index*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数がで指定された値に基づいてコントロールの選択を設定するレコード セットからデータをコントロールに移動するときに*インデックス*です。 レコード セットからコントロールへの転送では、レコード セットのフィールドが Null の場合、MFC を設定、インデックスの値を 0 にします。 コントロールからレコード セットへの転送時にコントロールが空の場合、または項目が選択されていない場合は、レコード セットのフィールドは 0 に設定します。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -98,7 +99,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 この例はのようになります`DDX_FieldCBIndex`です。  
 
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
 
 ##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
@@ -119,19 +120,19 @@ void AFXAPI DDX_FieldCBString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  内のコントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *値*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数がで指定された文字列内の文字で始まる最初の行に、コンボ ボックスの現在の選択範囲を設定、レコード セットからデータをコントロールに移動するときに*値*です。 レコード セットから、コントロールへの転送にレコード セットのフィールドが Null の場合は、コンボ ボックスからの選択は解除し、コンボ ボックスの編集コントロールの設定を空にします。 コントロールからレコード セットへの転送時にコントロールが空の場合、レコード セットのフィールドは Null に設定フィールドで許可される場合。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -141,7 +142,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 この例への呼び出しが含まれています。`DDX_FieldCBString`です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
   
 ## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
@@ -162,19 +163,19 @@ void AFXAPI DDX_FieldCBStringExact(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  内のコントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *値*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数がで指定した文字列と一致する最初の行に、コンボ ボックスの現在の選択範囲を設定、レコード セットからデータをコントロールに移動するときに*値*です。 レコード セットから、コントロールへの転送のレコード セットのフィールドが NULL の場合は、コンボ ボックスからの選択は解除し、コンボ ボックスの編集ボックスの設定を空にします。 コントロールからレコード セットへの転送時にコントロールが、空の場合は、レコード セットのフィールドは NULL に設定します。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -184,11 +185,11 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 呼び出す`DDX_FieldCBStringExact`になります。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
   
 ##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
- `DDX_FieldCheck`関数の転送を管理`int` ダイアログ ボックスでは、チェック ボックス コントロールの間でデータ ビュー、またはコントロール ビュー オブジェクトのフォームと`int` ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータ メンバーです。  
+ `DDX_FieldCheck`関数の転送を管理**int**  ダイアログ ボックスでは、チェック ボックス コントロールの間でデータ ビュー、またはコントロール ビュー オブジェクトのフォームと**int**  ダイアログ ボックス、フォーム ビュー、またはコントロールのデータ メンバービュー オブジェクト。  
   
 ```  
 void AFXAPI DDX_FieldCheck(
@@ -205,28 +206,28 @@ void AFXAPI DDX_FieldCheck(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  コントロールのプロパティに関連付けられているチェック ボックス コントロールのリソース ID です。  
   
  *値*  
  ダイアログ ボックス、フォーム ビュー、またはデータとで交換される、コントロール ビュー オブジェクトのメンバー変数への参照。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ときに`DDX_FieldCheck`が呼び出されると、*値*] チェック ボックス コントロールの現在の状態に設定されているコントロールの状態が [に設定されているまたは*値*転送の方向に応じて、します。  
   
  DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
   
 ##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
- `DDX_FieldLBIndex`関数は、レコード ビュー内のリスト ボックス コントロールで選択した項目のインデックスを同期し、`int`レコード ビューに関連付けられているレコード セットのフィールド データ メンバーです。  
+ `DDX_FieldLBIndex`関数は、レコード ビュー内のリスト ボックス コントロールで選択した項目のインデックスを同期し、 **int**レコード ビューに関連付けられているレコード セットのフィールド データ メンバーです。  
   
 ```  
 void AFXAPI DDX_FieldLBIndex(
@@ -243,19 +244,19 @@ void AFXAPI DDX_FieldLBIndex(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  内のコントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *index*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数がで指定された値に基づいてコントロールの選択を設定するレコード セットからデータをコントロールに移動するときに*インデックス*です。 レコード セットからコントロールへの転送では、レコード セットのフィールドが Null の場合、MFC を設定、インデックスの値を 0 にします。 コントロールからレコード セットへの転送時にコントロールが空の場合は、レコード セットのフィールドは 0 に設定します。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -265,7 +266,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
   
 ##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
@@ -286,19 +287,19 @@ void AFXAPI DDX_FieldLBString(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  内のコントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *値*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  逆の方向でこの関数がで指定された文字列内の文字で始まる最初の行にあるリスト ボックスで現在の選択範囲を設定*値*です。 レコード セットからコントロールへの転送でレコード セットのフィールドが Null の場合、選択内容が、リスト ボックスから削除されます。 コントロールからレコード セットへの転送時にコントロールが、空の場合は、レコード セットのフィールドは Null に設定します。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -308,7 +309,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 呼び出す`DDX_FieldLBString`になります。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
   
 ##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
@@ -329,19 +330,19 @@ void AFXAPI DDX_FieldLBStringExact(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  内のコントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *値*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  逆の方向でこの関数がで指定した文字列と一致する最初の行にあるリスト ボックスで現在の選択範囲を設定*値*です。 レコード セットからコントロールへの転送でレコード セットのフィールドが Null の場合、選択内容が、リスト ボックスから削除されます。 コントロールからレコード セットへの転送時にコントロールが、空の場合は、レコード セットのフィールドは Null に設定します。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -351,11 +352,11 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 呼び出す`DDX_FieldLBStringExact`になります。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
   
 ##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
- `DDX_FieldRadio`関数は、0 から始まる`int`レコード ビューのラジオ ボタンのグループ内の現在選択されているオプション ボタンを持つレコード ビューのレコード セットのメンバー変数。  
+ `DDX_FieldRadio`関数は、0 から始まる**int**レコード ビューのラジオ ボタンのグループ内の現在選択されているオプション ボタンを持つレコード ビューのレコード セットのメンバー変数。  
   
 ```  
 void AFXAPI DDX_FieldRadio(
@@ -372,19 +373,19 @@ void AFXAPI DDX_FieldRadio(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
- 最初の ID でグループ (スタイルを**WS_GROUP**) にある隣接するラジオ ボタン コントロールの[CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
+ *各*  
+ 最初の ID (スタイル WS_GROUP) のグループにある隣接するラジオ ボタン コントロールの[CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *値*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  レコード セット フィールドからビューに転送する際に、この関数がオン、 *n 番目*(0 から始まる) ラジオ ボタンをクリックし、他のボタンを無効にします。 逆方向には、この関数は、現在 (チェック) 上にあるラジオ ボタンの序数をレコード セットのフィールドを設定します。 レコード セットからコントロールへの転送のレコード セットのフィールドが Null の場合、ボタンが選択されていません。 コントロールからレコード セットへの転送にコントロールが選択されていない場合、レコード セットのフィールドは Null に設定フィールドが許可されている場合。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -394,11 +395,11 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 呼び出す`DDX_FieldRadio`になります。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
   
 ##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
- `DDX_FieldScroll`関数は、レコード ビュー内のスクロール バー コントロールのスクロール位置を同期し、`int`レコード ビュー (またはに関連付けられた整数変数にマップする) レコード セットのフィールド データ メンバーです。  
+ `DDX_FieldScroll`関数は、レコード ビュー内のスクロール バー コントロールのスクロール位置を同期し、 **int**レコード ビュー (またはに関連付けられた整数変数にマップする) レコード セットのフィールド データ メンバー.  
   
 ```  
 void AFXAPI DDX_FieldScroll(
@@ -415,19 +416,19 @@ void AFXAPI DDX_FieldScroll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
- 最初の ID でグループ (スタイルを**WS_GROUP**) にある隣接するラジオ ボタン コントロールの[CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
+ *各*  
+ 最初の ID (スタイル WS_GROUP) のグループにある隣接するラジオ ボタン コントロールの[CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *値*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数がで指定された値にスクロール バー コントロールのスクロール位置を設定するレコード セットからデータをコントロールに移動するときに*値*です。 レコード セットからコントロールへの転送のレコード セットのフィールドが Null の場合は、スクロール バー コントロールは 0 に設定します。 コントロールからレコード セットへの転送時にコントロールが空の場合、レコード セットのフィールドの値は 0 です。  
   
  ODBC ベースのクラスを使用している場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用している場合は、2 番目のバージョンを使用します。  
@@ -437,11 +438,11 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 呼び出す`DDX_FieldScroll`になります。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
 
   ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
-`DDX_FieldSlider`関数は、レコード ビュー内のスライダー コントロールのつまみの位置を同期し、`int`レコード ビュー (またはに関連付けられた整数変数にマップする) レコード セットのフィールド データ メンバーです。  
+`DDX_FieldSlider`関数は、レコード ビュー内のスライダー コントロールのつまみの位置を同期し、 **int**レコード ビュー (またはに関連付けられた整数変数にマップする) レコード セットのフィールド データ メンバーです。  
    
 ### <a name="syntax"></a>構文  
   ```
@@ -458,19 +459,19 @@ void AFXAPI DDX_FieldSlider(
      CDaoRecordset* pRecordset );  
 ```
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  スライダー コントロールのリソース ID です。  
   
  *値*  
  交換する値への参照。 このパラメーターには、スライダー コントロールのつまみの現在の位置を設定するために使用されますか。  
   
- `pRecordset`  
+ *pRecordset*  
  関連付けられたへのポインター`CRecordset`または`CDaoRecordset`オブジェクトを使用するには、データを交換します。  
    
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  データをレコード セットから、スライダーを移動するときこの関数で指定された値をスライダーの位置を設定*値*です。 レコード セットからコントロールへの転送のレコード セットのフィールドが Null の場合は、スライダー コントロールの位置は 0 に設定します。 コントロールからレコード セットへの転送時にコントロールが空の場合、レコード セットのフィールドの値は 0 です。  
   
  `DDX_FieldSlider` スライダー コントロールの位置だけではなく、範囲を設定できると範囲の情報を交換しないしません。  
@@ -482,14 +483,14 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="example"></a>例  
  参照してください[DDX_FieldText](#ddx_fieldtext)全般 DDX_Field 例についてはします。 呼び出す`DDX_FieldSlider`になります。  
    
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
    
 ### <a name="see-also"></a>関連項目  
  [マクロとグローバル](mfc-macros-and-globals.md)   
   
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
- `DDX_FieldText`関数の転送を管理`int`、**短い**、**長い**、 `DWORD`、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)、 **float**、**二重**、 **BOOL**、または**バイト**エディット ボックス コントロールとレコード セットのフィールド データ メンバーの間のデータ。  
+ `DDX_FieldText`関数の転送を管理**int**、**短い**、**長い**、DWORD、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)、 **float**、**二重**、 **BOOL**、または**バイト**エディット ボックス コントロールとレコード セットのフィールド データ メンバーの間のデータ。  
   
 ```  
 void AFXAPI DDX_FieldText(
@@ -602,19 +603,19 @@ void AFXAPI DDX_FieldText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDX`  
+ *pDX*  
  ポインター、 [CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。  
   
- `nIDC`  
+ *各*  
  内のコントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。  
   
  *値*  
  関連付けられているフィールドのデータ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。 値のデータ型によって異なりますのどのオーバー ロードされたバージョンの`DDX_FieldText`を使用します。  
   
- `pRecordset`  
+ *pRecordset*  
  ポインター、 [CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを使用するには、データを交換します。 このポインターにより`DDX_FieldText`を検出し、Null 値を設定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクト、`DDX_FieldText`転送も管理[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)、および[COleCurrency](../../mfc/reference/colecurrency-class.md)値。 空の編集ボックス コントロールは、Null 値を示します。 レコード セットからコントロールへの転送では、レコード セットのフィールドが Null の場合、エディット ボックスが設定を空にします。 コントロールからレコード セットへの転送時にコントロールが、空の場合は、レコード セットのフィールドは Null に設定します。  
   
  バージョンを使用して[CRecordset](../../mfc/reference/crecordset-class.md) ODBC ベースのクラスを使用している場合のパラメーターです。 バージョンを使用して[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) DAO ベースのクラスを使用している場合のパラメーターです。  
@@ -627,7 +628,7 @@ void AFXAPI DDX_FieldText(
  [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
 
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdao.h  
     
 ## <a name="see-also"></a>関連項目  

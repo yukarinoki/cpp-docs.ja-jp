@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341998"
 ---
 # <a name="communicating-with-a-tree-control"></a>ツリー コントロールとの情報のやり取り
 メンバー関数を呼び出すさまざまな方法を使用する、 [CTreeCtrl](../mfc/reference/ctreectrl-class.md)オブジェクトの作成方法に依存するオブジェクト。  

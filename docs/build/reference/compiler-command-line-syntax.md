@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370122"
 ---
 # <a name="compiler-command-line-syntax"></a>コンパイラ コマンド ラインの構文
 CL のコマンド ラインでは、次の構文を使用します。  

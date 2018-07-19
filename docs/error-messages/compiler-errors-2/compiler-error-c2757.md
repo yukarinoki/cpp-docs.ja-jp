@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233857"
 ---
 # <a name="compiler-error-c2757"></a>コンパイラ エラー C2757
 'symbol': この名前のシンボルが既に存在し、そのため、この名前は名前空間の名前として使用できません  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693862"
 ---
 # <a name="scheduler-instances"></a>スケジューラ インスタンス
 このドキュメントで使用する方法と、同時実行ランタイム スケジューラ インスタンスの役割の説明、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)と[concurrency::currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)クラスを作成および管理するにはスケジューラ インスタンス。 スケジューラ インスタンスは、特定の種類のワークロードに明示的なスケジューリング ポリシーを関連付ける場合に便利です。 たとえば、昇格したスレッド優先順位で一部のタスクを実行するようにスケジューラ インスタンスを 1 つ作成し、他のタスクについては既定のスケジューラを使用して通常のスレッド優先順位で実行することができます。  

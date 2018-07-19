@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170844"
 ---
 # <a name="compiler-error-c2299"></a>コンパイラ エラー C2299
 'function': 動作変更: 明示的な特殊化することはできません、コピー コンス トラクターまたはコピー代入演算子  

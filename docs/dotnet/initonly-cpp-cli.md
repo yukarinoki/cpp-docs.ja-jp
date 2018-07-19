@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130556"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 **initonly**をその変数の代入を示す状況依存のキーワードが、同じクラスの静的コンス トラクターまたは宣言の一部としてのみ実行します。  

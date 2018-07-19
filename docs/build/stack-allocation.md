@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380603"
 ---
 # <a name="stack-allocation"></a>スタック割り当て
 関数のプロローグは、ローカル変数のスタック領域を割り当てるための保存済みレジスタ、スタック パラメーター、およびパラメーターを登録します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348636"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>ツール バーの作成方法
 MFC には、ツールバーを作成する 2 つのクラスが用意されています: [CToolBar](../mfc/reference/ctoolbar-class.md)と[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (をラップする Windows のコモン コントロール API)。 `CToolBar` すべてのツール バー コモン コントロールの機能を提供する; の必要な共通コントロールの設定と構造の多くを処理し、ただし、実行可能ファイル、通常はより大きくするを使用して作成`CToolBarCtrl`です。  

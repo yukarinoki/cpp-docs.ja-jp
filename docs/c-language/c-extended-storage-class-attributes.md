@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382440"
 ---
 # <a name="c-extended-storage-class-attributes"></a>C 拡張ストレージ クラス属性
 **Microsoft 固有の仕様**  

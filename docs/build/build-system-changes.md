@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363322"
 ---
 # <a name="build-system-changes"></a>ビルド システムの変更点
 MSBuild システムを使用すると、Visual C プロジェクトをビルドします。 ただし、Visual Studio 2008 以前のリリースで、VCBuild システムが使用されます。 特定ファイルの種類と VCBuild に依存していたの概念は、存在しないかは現在のシステムで異なる方法で表されます。 このドキュメントでは、現在のビルド システムの違いについて説明します。  

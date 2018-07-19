@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687414"
 ---
 # <a name="lightweight-tasks"></a>軽量タスク
 このドキュメントでは、軽量タスク、同時実行ランタイムでの役割について説明します。 A*軽量タスク*から直接スケジュールするタスク、`concurrency::Scheduler`または`concurrency::ScheduleGroup`オブジェクト。 軽量タスクが Windows API に提供する関数に似た[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)関数。 したがって、軽量タスクは、同時実行ランタイムのスケジュール機能を使用する既存のコードを改変する場合に役立ちます。 同時実行ランタイム自体では、軽量タスクを使用して、非同期エージェントをスケジュールし、非同期メッセージ ブロックの間でメッセージを送信します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888424"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 1 つの数値が他よりも小さいかどうかを判断します。  

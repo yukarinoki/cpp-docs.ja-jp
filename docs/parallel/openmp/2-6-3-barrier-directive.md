@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689793"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 barrier ディレクティブ
 **バリア**ディレクティブは、チーム内のすべてのスレッドを同期します。 発生した場合、チーム内の各スレッドはすべて、他のユーザーのこのポイントに到達するまで待機します。 構文、**バリア**ディレクティブは、次のようにします。  

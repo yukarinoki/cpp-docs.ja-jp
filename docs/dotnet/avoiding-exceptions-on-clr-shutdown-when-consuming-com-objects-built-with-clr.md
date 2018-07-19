@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103513"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>/clr で構築された COM オブジェクト使用時における CLR シャットダウンの例外の回避
 共通言語ランタイム (CLR) がシャット ダウン モードになると、ネイティブ関数には CLR サービスへのアクセスが制限されます。 COM オブジェクトをコンパイルしたに対して Release を呼び出すしようとするとき **/clr**、ネイティブ コードに遷移する CLR および iunknown::release 呼び出し (これは、マネージ コードで定義されている) に対応するマネージ コードに遷移の戻さです。 CLR では、シャット ダウン モードであるために、マネージ コードへのコールバックができなくなります。  

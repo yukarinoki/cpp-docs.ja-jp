@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbcedd8cf217c993511bdb84a89294d7e98d6bab
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930203"
 ---
 # <a name="menus-and-resources-server-additions"></a>メニューとリソース : サーバーの変更点
 この記事では、メニューやその他のビジュアル編集サーバー (コンポーネント) アプリケーションのリソースに必要な変更について説明します。 サーバー アプリケーションでは、3 つのモードのいずれかで起動できるため、メニュー構造とその他のリソースに多くの追加が必要です。 スタンドアロン、埋め込み、および配置します。 」の説明に従って、[メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)記事、最大 4 つの組のメニューがあります。 ミニサーバーの 3 つだけが使用中に、MDI フル サーバー アプリケーションは、4 つすべてが使用されます。 アプリケーションを作成します メニューのレイアウトかサーバーの種類に必要です。 一部のカスタマイズが必要な可能性があります。  
@@ -62,14 +63,14 @@ ms.lasthandoff: 05/04/2018
   
  2 番目のテーブルは、ほぼビューのアクセラレータ テーブルの正確なコピーです。 説明したメニューで行われた変更を書き換えて[Server メニューの追加](#_core_server_menu_additions)です。  
   
- これらのアクセラレータ テーブルの変更の例は、比較、 **IDR_HIERSVRTYPE_SRVR_IP**と**IDR_HIERSVRTYPE_SRVR_EMB**アクセラレータを持つテーブル**IDR_MAINFRAME**Hiersvr です。MFC OLE サンプルに含まれている RC ファイル[HIERSVR](../visual-cpp-samples.md)です。 ファイルとウィンドウのアクセラレータをインプレースでテーブルから不足していると、それらの正確なコピーは、埋め込みテーブル。  
+ これらのアクセラレータ テーブルの変更など、hiersvr IDR_MAINFRAME で IDR_HIERSVRTYPE_SRVR_IP と IDR_HIERSVRTYPE_SRVR_EMB アクセラレータ テーブルを比較します。MFC OLE サンプルに含まれている RC ファイル[HIERSVR](../visual-cpp-samples.md)です。 ファイルとウィンドウのアクセラレータをインプレースでテーブルから不足していると、それらの正確なコピーは、埋め込みテーブル。  
   
 ##  <a name="_core_string_table_additions_for_server_applications"></a> サーバー アプリケーション用の文字列テーブルの変更点  
  1 つだけの文字列テーブルの追加は、サーバー アプリケーションで必要です: OLE の初期化が失敗したことを示す文字列。 たとえば、アプリケーションのウィザードによって生成される文字列テーブルのエントリを次に示します。  
   
 |ID|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|OLE の初期化に失敗しました。 OLE ライブラリが適切なバージョンを確認します。|  
+|IDP_OLE_INIT_FAILED|OLE の初期化に失敗しました。 OLE ライブラリが適切なバージョンを確認します。|  
   
 ##  <a name="_core_mini.2d.server_additions"></a> ミニサーバーの変更点  
  同じ追加機能を上に示したものと miniservers の適用フル サーバー。 ミニサーバーがスタンドアロン モードで実行されることはできません、ためメイン メニューが大幅に小さくなります。 アプリケーション ウィザードによって作成されたメイン メニューがのみ、ファイル メニュー項目の終了時のみを含むしようとします。 埋め込みおよびインプレースでメニューおよび miniservers のアクセラレータは、フル サーバーの場合と同じです。  

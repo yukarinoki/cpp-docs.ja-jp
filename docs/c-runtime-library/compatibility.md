@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390483"
 ---
 # <a name="compatibility"></a>互換性
 Universal C Run-Time Library (UCRT) は、C++ に適合するために必要な C 標準ライブラリの大部分をサポートしています。 C99 (ISO/IEC 9899:1999) ライブラリを実装しています (ただし、\<tgmath.h> で定義されている型がジェネリックのマクロと、\<complex.h> での厳密な型の互換性は除きます)。 また、UCRT は、POSIX.1 (ISO/IEC 9945-1:1996、POSIX システム アプリケーション プログラミング インターフェイス) の C ライブラリの大きなサブセットを実装していますが、すべての POSIX 標準に完全に適合しているわけではありません。  さらに、UCRT はいくつかの Microsoft 固有の関数とマクロを実装していますが、これらは標準には含まれていません。  

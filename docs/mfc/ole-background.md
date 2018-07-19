@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355562"
 ---
 # <a name="ole-background"></a>OLE の背景知識
 OLE はユーザーを作成し、項目または「オブジェクト」を含むドキュメントを編集できるようにするメカニズムによって作成複数のアプリケーション。  

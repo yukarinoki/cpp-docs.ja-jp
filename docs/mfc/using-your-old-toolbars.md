@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385123"
 ---
 # <a name="using-your-old-toolbars"></a>古い形式のツール バーの使用方法
 カスタマイズされたツールバー、クラスの新しい実装を作成する Visual C の以前のバージョンを使用している場合[CToolBar](../mfc/reference/ctoolbar-class.md)問題が発生する可能性があります。 新しい機能を使用する古い形式のツールバーを放棄する必要はありません、ように、以前の実装は引き続きサポートされます。  

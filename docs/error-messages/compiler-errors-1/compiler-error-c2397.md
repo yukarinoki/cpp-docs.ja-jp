@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196884"
 ---
 # <a name="compiler-error-c2397"></a>コンパイラ エラー C2397
 'type_1' から 'type_2' への変換で縮小変換が必要です。  

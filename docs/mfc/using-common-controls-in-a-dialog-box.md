@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382692"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>ダイアログ ボックスでのコモン コントロールの使い方
 Windows コモン コントロールで使用できます[ ダイアログ ボックス](../mfc/dialog-boxes.md)ビュー、レコード ビュー、およびダイアログ テンプレートに基づくその他のウィンドウを形成します。 軽微な変更を次の手順は形式も機能します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371101"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>構造体、スタイル、コールバック関数とメッセージ マップ
 このセクションでは、構造体、スタイル、および Microsoft Foundation Class ライブラリで使用されるコールバック関数を文書化し MFC メッセージ マップです。  

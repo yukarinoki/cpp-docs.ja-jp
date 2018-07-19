@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391380"
 ---
 # <a name="localunwind2"></a>_local_unwind2
 内部 CRT 関数。 指定されたスコープ テーブルに示されているすべての終了ハンドラーを実行します。  

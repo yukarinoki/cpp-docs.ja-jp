@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418840"
 ---
 # <a name="indirection-on-array-types"></a>配列型の間接参照
 間接演算子の使用 (**\***) で、 *n*の次元の配列型を生成、 *n*-1 次元配列。 場合*n* 1 の場合は、スカラー (または配列の要素) が返されます。  

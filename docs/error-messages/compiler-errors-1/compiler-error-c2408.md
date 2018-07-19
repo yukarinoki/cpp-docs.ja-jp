@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195452"
 ---
 # <a name="compiler-error-c2408"></a>コンパイラ エラー C2408
 'context' での PTR 演算子の引数の型指定が、正しくありません。  

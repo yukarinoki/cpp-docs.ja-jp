@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366784"
 ---
 # <a name="comments-in-a-makefile"></a>メイクファイルのコメント
 番号記号付きのコメントの前 (#)。 NMAKE では、次の改行文字にシャープ記号からテキストを無視します。 次に例を示します。  

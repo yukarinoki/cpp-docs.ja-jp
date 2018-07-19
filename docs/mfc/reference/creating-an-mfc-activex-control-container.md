@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372483"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>MFC ActiveX コントロール コンテナーの作成
 ActiveX コントロール コンテナーを実行する (OLE 以前) の ActiveX コントロールの環境を提供する親プログラムです。 対応の有無にかかわらず、MFC ActiveX コントロールを含むアプリケーションを作成することができますが、MFC を行うにははるかに簡単です。  

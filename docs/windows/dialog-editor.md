@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875859"
 ---
 # <a name="dialog-editor"></a>ダイアログ エディター
 ダイアログ エディターを使用すると、ダイアログ ボックス リソースの作成や編集ができます。 リソース ビュー ウィンドウで、ダイアログの .rc ファイルをダブルクリックして、ダイアログ エディターを開きます (**ビュー&#124;リソース ビュー**)。 リソース ビューは Express Edition では使用できないことに注意してください。  

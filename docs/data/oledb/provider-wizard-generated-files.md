@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106009"
 ---
 # <a name="provider-wizard-generated-files"></a>プロバイダー ウィザードで生成されたファイル
 ATL OLE DB プロバイダー ウィザードでは、次のファイルを生成します。 次のトピックでは、短い名前"MyProvider"を使用するが、正確なファイル名は、プロバイダーを作成するときに対して行った選択によって異なります。  

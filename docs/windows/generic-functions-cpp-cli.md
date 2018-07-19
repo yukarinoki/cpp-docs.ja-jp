@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878835"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 ジェネリック関数は、型パラメーターで宣言された関数です。 呼び出されると、実際の型が型パラメーターの代わりに使用されます。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090054"
 ---
 # <a name="catalog-information--mfc-data-access"></a>カタログ情報 (MFC データ アクセス)
 データ ソース内のテーブルに関する情報には、テーブルの名前やそのテーブル内の列、テーブルの特権、主キーおよび外部キーの名前、定義済みクエリまたはストアド プロシージャに関する情報、テーブルのインデックスに関する情報、テーブルに関する統計情報などを含めることができます。  

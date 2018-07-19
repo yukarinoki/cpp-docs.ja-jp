@@ -24,16 +24,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a386de558730e12bb8cf40da250c1d04dd4ff37a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931119"
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>例外処理 : 古いコードの変換
 これは、高度なトピックです。  
   
- この記事は、Microsoft Foundation Class マクロで記述された既存のコードに変換する方法を説明します:**を再試行してください**、**キャッチ**、**スロー**など — C++ 例外処理を使用するにはキーワード**再試行**、**キャッチ**、および`throw`です。 ここでは、次の内容について説明します。  
+ この記事は、Microsoft Foundation Class マクロで記述された既存のコードに変換する方法を説明します:**を再試行してください**、**キャッチ**、**スロー**など — C++ 例外処理を使用するにはキーワード**再試行**、**キャッチ**と**スロー**です。 ここでは、次の内容について説明します。  
   
 -   [変換の利点があります。](#_core_advantages_of_converting)  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
   
 -   C++ 例外処理のキーワードを使用するコードは、わずかに小さいをコンパイルします。EXE またはします。DLL です。  
   
--   C++ 例外処理キーワードは、柔軟性の高い: コピーできる任意のデータ型の例外を処理できる (`int`、 **float**、`char`など) マクロのみクラスの例外を処理する一方、`CException`し、そこから派生したクラスです。  
+-   C++ 例外処理キーワードは、柔軟性の高い: コピーできる任意のデータ型の例外を処理できる (**int**、 **float**、 **char**など) であるのに対し、マクロの例外を処理する`CException`し、そこから派生したクラスです。  
   
  マクロとキーワードの大きな違いは、例外がスコープ外に出るときに、「自動的に」マクロを使用してコードが例外をキャッチしましたによって削除されます。 コードを使用して、キーワードがないため、キャッチした例外を明示的に削除する必要があります。 詳細については、記事を参照してください。[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)です。  
   
@@ -68,19 +69,19 @@ ms.lasthandoff: 05/04/2018
   
 2.  Catch ブロックの区切り:  
   
-     マクロを使用、**キャッチ**(とその引数) のマクロが最初の catch ブロックを開始以外の場合は、`AND_CATCH`マクロは、後続の catch ブロックを開始し、`END_CATCH`マクロは、catch ブロックのシーケンスを終了します。  
+     マクロで、**キャッチ**(とその引数) のマクロが最初の catch ブロックを開始以外の場合は、 **AND_CATCH**マクロは、後続の catch ブロックを開始し、 **END_CATCH**マクロcatch ブロックのシーケンスを終了します。  
   
-     キーワードと、**キャッチ**(例外宣言) のキーワードは、各 catch ブロックを開始します。 相当するはありません、`END_CATCH`マクロ; catch の最後に、終わりかっこをブロックします。  
+     キーワードと、**キャッチ**(例外宣言) のキーワードは、各 catch ブロックを開始します。 相当するはありません、 **END_CATCH**マクロ; catch の最後に、終わりかっこをブロックします。  
   
 3.  Throw 式:  
   
-     マクロを使用して`THROW_LAST`を現在の例外を再スローします。 `throw`キーワードを引数なしで同じ効果があります。  
+     マクロを使用して**THROW_LAST**を現在の例外を再スローします。 **スロー**キーワードを引数なしで同じ効果があります。  
   
 ##  <a name="_core_doing_the_conversion"></a> 変換を行う  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>C++ 例外処理キーワードを使用するマクロを使用してコードを変換するには  
   
-1.  MFC のマクロの発生箇所をすべて検索**を再試行してください**、**キャッチ**、 `AND_CATCH`、 `END_CATCH`、**スロー**、および`THROW_LAST`です。  
+1.  MFC のマクロの発生箇所をすべて検索**再試行**、**キャッチ**、 **AND_CATCH**、 **END_CATCH**、**スロー**、および**THROW_LAST**です。  
   
 2.  置換またはマクロを次のすべての出現を削除します。  
   
@@ -88,13 +89,13 @@ ms.lasthandoff: 05/04/2018
   
      **キャッチ**(コードに置き換えます**キャッチ**)  
   
-     `AND_CATCH` (コードに置き換えます**キャッチ**)  
+     **AND_CATCH** (コードに置き換えます**キャッチ**)  
   
-     `END_CATCH` (削除)  
+     **END_CATCH** (削除)  
   
-     **スロー** (コードに置き換えます`throw`)  
+     **スロー** (コードに置き換えます**スロー**)  
   
-     `THROW_LAST` (コードに置き換えます`throw`)  
+     **THROW_LAST** (コードに置き換えます**スロー**)  
   
 3.  有効な例外宣言が形成されるように、マクロの引数を変更します。  
   

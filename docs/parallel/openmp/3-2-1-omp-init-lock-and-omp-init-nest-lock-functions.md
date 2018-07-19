@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695799"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数
 これらの関数は、ロックの初期化の唯一の手段を提供します。 各関数は、パラメーターに関連付けられているロック、初期化*ロック*後続の呼び出しで使用するためです。 形式は次のとおりです。  

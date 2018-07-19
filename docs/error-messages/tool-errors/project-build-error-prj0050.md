@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318514"
 ---
 # <a name="project-build-error-prj0050"></a>プロジェクト ビルド エラー PRJ0050
 出力を登録できませんでした。 レジストリを変更する適切なアクセス許可があることを確認してください。  

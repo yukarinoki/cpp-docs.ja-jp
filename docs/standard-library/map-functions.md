@@ -7,11 +7,12 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: d6f62868d17cec9215b18451527c3a2e4e22b7f2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c6cb7d0308e4bafc531fe0baf0c5d666228c3ec
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966369"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt; 系関数
 
@@ -32,13 +33,13 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 交換する要素を提供するマップまたはマップのものと交換される要素は、マップ`left`です。
+*適切な*を交換する要素を提供するマップまたはマップのものと交換される要素がマップ*左*します。
 
-`left` 要素と交換されるマップのマップ`right`です。
+*左*要素を持つ、map と交換されるマップ*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数を実行するコンテナー クラスのマップに特化したアルゴリズムは、テンプレート関数は`left`.[スワップ](../standard-library/map-class.md#swap)( `right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョンであり、algorithm クラスにある **template** \< **class T**> **void swap**(**T&**, **T&**) は、代入によって機能し、処理が低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
+テンプレート関数はメンバー関数を実行するコンテナー クラス map に特化したアルゴリズム`left`.[スワップ](../standard-library/map-class.md#swap)( `right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョンであり、algorithm クラスにある **template** \< **class T**> **void swap**(**T&**, **T&**) は、代入によって機能し、処理が低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 
 ### <a name="example"></a>例
 
@@ -57,13 +58,13 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 交換する要素を提供する multimap または要素が multimap のものと交換される、multimap`left`です。
+*適切な*を交換する要素を提供する multimap または要素が multimap のものと交換される multimap*左*します。
 
-`left` Multimap のものと交換される要素は、multimap`right`です。
+*左*要素が multimap のものと交換される multimap*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数は、アルゴリズムは、コンテナー クラス multimap メンバー関数を実行するを実行するコンテナー クラスのマップに特化した`left`.[スワップ](../standard-library/multimap-class.md#swap)( `right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョンであり、algorithm クラスにある **template** \< **class T**> **void swap**(**T&**, **T&**) は、代入によって機能し、処理が低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
+テンプレート関数はメンバー関数を実行するコンテナー クラス multimap 上で実行するコンテナー クラス map に特化したアルゴリズム`left`.[スワップ](../standard-library/multimap-class.md#swap)(`right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョンであり、algorithm クラスにある **template** \< **class T**> **void swap**(**T&**, **T&**) は、代入によって機能し、処理が低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 
 ### <a name="example"></a>例
 

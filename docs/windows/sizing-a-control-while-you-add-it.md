@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889688"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>コントロールの追加時のサイズ変更
 ### <a name="to-size-a-control-while-you-add-it"></a>追加するときにコントロールのサイズ  

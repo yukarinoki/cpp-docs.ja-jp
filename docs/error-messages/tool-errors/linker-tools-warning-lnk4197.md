@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300836"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>リンカー ツールの警告 LNK4197
 'exportname' が複数回; 指定のエクスポートします。最初の仕様を使用してください。  

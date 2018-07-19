@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256615"
 ---
 # <a name="compiler-error-c3391"></a>コンパイラ エラー C3391
 'type_arg': ジェネリック パラメーター 'param' のジェネリック 'generic_type' の無効な型引数が null 非許容値型にする必要があります  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693807"
 ---
 # <a name="synchronization-data-structures"></a>同期データ構造
 同時実行ランタイムでは、複数のスレッドから共有データへのアクセスを同期するために、いくつかのデータ構造体を提供します。 これらのデータ構造は、頻繁に変更するデータを共有している場合に便利です。 たとえば、重要なセクションの同期オブジェクトは、共有リソースが利用するまで待機するには、他のスレッドをによりします。 そのため、このようなオブジェクトを頻繁に使用されるデータへのアクセスを同期するために使用する場合をスケーラビリティ、アプリケーションで失います。 [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)提供、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスは、複数のスレッドまたは同期の必要としないタスクにリソースを共有することができます。 詳細については、`combinable`クラスを参照してください[並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)です。  

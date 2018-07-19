@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392420"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist、および _sys_nerr
 プログラムの実行中に設定されるエラー コードと、エラー コードに相当する表示用の文字列を保持するグローバル マクロ。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128408"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>方法: /clr コンパイルでネイティブ型を使用する
 ネイティブ型を定義することができます、 **/clr**コンパイルと、アセンブリ内からそのネイティブ型を使用するが無効です。 ただし、ネイティブ型は参照されたメタデータから使用できません。  

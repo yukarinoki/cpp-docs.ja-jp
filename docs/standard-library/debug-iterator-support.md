@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9153d5e85540c50e11e096c33c474f1344d3ad2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959593"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -154,7 +155,7 @@ int main()
 
 ## <a name="example"></a>例
 
-また、反復子のデバッグのチェックにより、`for` ループで宣言されている反復子変数は、`for` ループのスコープが終了するとスコープ外になります。
+デバッグ反復子のチェックで宣言されている反復子変数が発生することも、**の**ループ外になりますき、**の**ループにスコープが終了します。
 
 ```cpp
 // iterator_debugging_4.cpp

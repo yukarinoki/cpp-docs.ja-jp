@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268332"
 ---
 # <a name="compiler-error-c3815"></a>コンパイラ エラー C3815
 メソッド 'get_accessor' の戻り値の型は、setter の最後のパラメーターの型と一致する必要があります。  

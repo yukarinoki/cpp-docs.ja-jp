@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341399"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>リッチ エディット コントロールに関連するクラス
 [CRichEditView](../mfc/reference/cricheditview-class.md)、 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)、および[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)リッチ エディット コントロールの機能を提供するクラス ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))MFC のドキュメント/ビュー アーキテクチャの枠内にします。 `CRichEditView` テキストとテキストの書式設定特性を保持します。 `CRichEditDoc` ビューに含まれる OLE クライアント アイテムの一覧を保持します。 `CRichEditCntrItem` コンテナー側 OLE クライアント アイテムへのアクセスを提供します。 内容を変更する、`CRichEditView`を使用して[CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl)リッチ エディット コントロールの基になるにアクセスします。  

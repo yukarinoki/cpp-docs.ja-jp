@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e366f9b0cf92aed9c61609642f48f0e5cc9530d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964133"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread クラス
 
@@ -43,9 +44,9 @@ class sync_per_thread
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Cache`|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+|*キャッシュ*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `sync_per_thread` を使用するアロケーターは、1 つのスレッドに割り当てられたブロックの割り当てを別のスレッドから解除できなくても、比較したときに等しい結果になりえます。 これらのアロケーターのいずれかを使用するときに、1 つのスレッドに割り当てられているメモリー ブロックが他のスレッドから参照できないようにする必要があります。 つまり、これらアロケーターのいずれかを使用するコンテナーは 1 つのスレッドによってのみアクセスする必要があります。
 
@@ -57,7 +58,7 @@ class sync_per_thread
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -75,9 +76,9 @@ void *allocate(std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`count`|割り当てられる配列内の要素の数。|
+|*count*|割り当てられる配列内の要素の数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、呼び出しの結果を、現在のスレッドに属しているキャッシュ オブジェクトの `cache::allocate(count)` に返します。 現在のスレッドにキャッシュ オブジェクトが割り当てられていない場合は、最初にキャッシュ オブジェクトを割り当ててください。
 
@@ -93,10 +94,10 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`count`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、現在のスレッドに属しているキャッシュ オブジェクトの `deallocate` を呼び出します。 現在のスレッドにキャッシュ オブジェクトが割り当てられていない場合は、最初にキャッシュ オブジェクトを割り当ててください。
 
@@ -112,14 +113,14 @@ bool equals(const sync<Cache>& Other) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Cache`|同期フィルターのキャッシュ オブジェクト。|
-|`Other`|等しいかどうかを比較するキャッシュ オブジェクト。|
+|*キャッシュ*|同期フィルターのキャッシュ オブジェクト。|
+|*その他*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-このオブジェクトまたは現在のスレッドの `Other` にキャッシュ オブジェクトが割り当てられていない場合は `false` です。 そうでない場合は、`operator==` を 2 つのキャッシュ オブジェクトに割り当てた結果を返します。
+**false**かどうかキャッシュ オブジェクトが割り当てられていない、このオブジェクトの*他*現在のスレッドにします。 そうでない場合は、`operator==` を 2 つのキャッシュ オブジェクトに割り当てた結果を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

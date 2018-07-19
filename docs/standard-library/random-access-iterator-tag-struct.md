@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e911d91e987bb5172d9681161dcd87a287201b4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7323c7dc104d8fbf54292fb7f1ca455b5e1a92f6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957374"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 構造体
 
-ランダム アクセス反復子を表す **iterator_category** 関数の戻り値の型を提供するクラス。
+戻り値の型を提供するクラス`iterator_category`ランダム アクセス反復子を表す関数。
 
 ## <a name="syntax"></a>構文
 
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/08/2018
 struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 カテゴリ タグ クラスはアルゴリズムの選択にコンパイル タグとして使用されます。 テンプレート関数は、コンパイル時に最も効率的なアルゴリズムを利用できるように、その反復子引数の最も具体的なカテゴリを見つける必要があります。 `Iterator` 型の反復子ごとに、反復子の動作を表す最も具体的なカテゴリ タグとして `iterator_traits`< `Iterator`> **::iterator_category** を定義する必要があります。
 
-この型は、**Iter** がランダム アクセス反復子としてサービスを提供するオブジェクトを表すとき、**iterator**\< **Iter**> **::iterator_category** と同じになります。
+型が同じ**反復子**\< **Iter**> **:::iterator_category**とき`Iter`として使用できるオブジェクトについて説明します、ランダム アクセス反復子。
 
 ## <a name="example"></a>例
 
@@ -105,7 +106,7 @@ The iterators are not the same.
 0012FF3B
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347664"
 ---
 # <a name="printing-in-rich-edit-controls"></a>リッチ エディット コントロールでの印刷
 リッチ エディット コントロールに指示することができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) プリンターなどの指定したデバイスの出力を表示するためにします。 出力デバイスをリッチ エディット コントロールがそのテキストを書式設定を指定することもできます。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892320"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>さまざまなカラー パレットの保存と読み込み (アイコン用イメージ エディター)
 保存して含むカラー パレットを読み込む、[色をカスタマイズ](../windows/customizing-or-changing-colors-image-editor-for-icons.md)です。 既定では、Visual Studio を起動すると、前回使用したカラー パレットが自動的に読み込まれます。  

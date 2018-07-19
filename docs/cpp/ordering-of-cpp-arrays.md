@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419967"
 ---
 # <a name="ordering-of-c-arrays"></a>C++ 配列の順序
 C++ 配列は、行優先順で格納されます。 行優先は、最後の添字が最も速く変化することを意味します。  

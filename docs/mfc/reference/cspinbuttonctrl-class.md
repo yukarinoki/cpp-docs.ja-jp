@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122968"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl クラス
 Windows コモン スピン ボタン コントロールの機能が用意されています。  
@@ -82,7 +83,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetPos](#setpos)|コントロールの現在の位置を設定します。|  
 |[上限値と下限](#setrange)|スピン ボタン コントロールの上限と下限制限 (範囲) を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  「スピン ボタン コントロール」(アップダウン コントロールとも呼ばれます) は、ユーザーがスクロール位置または横にあるコントロールに表示される番号など、値を増減するクリックしてできる矢印ボタンのペアです。 スピン ボタン コントロールに関連付けられている値には、現在の位置が呼び出されます。 スピン ボタン コントロールは、「buddy ウィンドウ」と呼ばれる、横にあるコントロールでよく使用されます。  
   
  このコントロール (したがって、`CSpinButtonCtrl`クラス) は、Windows 95/98 および Windows NT 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
@@ -104,7 +105,7 @@ class CSpinButtonCtrl : public CWnd
   
  `CSpinButtonCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="create"></a>  CSpinButtonCtrl::Create  
@@ -119,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  スピン ボタン コントロールのスタイルを指定します。 スピン ボタン コントロールのスタイルの任意の組み合わせをコントロールに適用されます。 これらのスタイルが説明されている[アップダウン コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb759885)Windows SDK に含まれています。  
   
- `rect`  
+ *rect*  
  スピン ボタン コントロールのサイズと位置を指定します。 いずれかになります、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体  
   
- `pParentWnd`  
- スピン ボタン コントロールの親ウィンドウを通常へのポインター、`CDialog`です。 なければなりません**NULL です。**  
+ *pParentWnd*  
+ スピン ボタン コントロールの親ウィンドウを通常へのポインター、`CDialog`です。 NULL は指定できません。  
   
- `nID`  
+ *nID*  
  スピン ボタン コントロールの ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  初期化が成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 構築する、`CSpinButtonCtrl`まずオブジェクトの 2 つの手順で、コンス トラクターを呼び出しておよびを呼び出す**作成**、スピン ボタン コントロールを作成しにアタッチする、`CSpinButtonCtrl`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 構築する、`CSpinButtonCtrl`まずオブジェクトの 2 つの手順で、コンス トラクターを呼び出しておよびを呼び出す`Create`、スピン ボタン コントロールを作成しにアタッチする、`CSpinButtonCtrl`オブジェクト。  
   
- 拡張ウィンドウ スタイルを使用して、スピン ボタン コントロールを作成するには、呼び出す[CSpinButtonCtrl::CreateEx](#createex)の代わりに**作成**です。  
+ 拡張ウィンドウ スタイルを使用して、スピン ボタン コントロールを作成するには、呼び出す[CSpinButtonCtrl::CreateEx](#createex)の代わりに`Create`です。  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  コントロール (子ウィンドウ) を作成しに関連付けます、`CSpinButtonCtrl`オブジェクト。  
@@ -152,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwExStyle`  
- 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、`dwExStyle`パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
+ *dwExStyle*  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
   
- `dwStyle`  
+ *dwStyle*  
  スピン ボタン コントロールのスタイルを指定します。 スピン ボタン コントロールのスタイルの任意の組み合わせをコントロールに適用されます。 これらのスタイルが説明されている[アップダウン コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb759885)Windows SDK に含まれています。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体`pParentWnd`です。  
+ *rect*  
+ 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体*pParentWnd*です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  コントロールの子ウィンドウ ID  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。  
+### <a name="remarks"></a>Remarks  
+ 使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル preface WS_EX で指定された、Windows の拡張スタイルを適用します。  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  `CSpinButtonCtrl` オブジェクトを構築します。  
@@ -190,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nAccel`  
- 指定された配列の要素数`pAccel`です。  
+ *nAccel*  
+ 指定された配列の要素数*pAccel*です。  
   
- `pAccel`  
+ *pAccel*  
  配列を指すポインター [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)アクセラレータの情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
@@ -228,14 +229,14 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>パラメーター  
  *lpbError*  
- 値の場合は 0 に設定されているブール値へのポインターは、正常に取得されたか、0 以外のエラーが発生した場合です。 このパラメーターに設定されている場合**NULL**エラーは報告されません。  
+ 値の場合は 0 に設定されているブール値へのポインターは、正常に取得されたか、0 以外のエラーが発生した場合です。 このパラメーターが NULL に設定されている場合、エラーは報告されません。  
   
 ### <a name="return-value"></a>戻り値  
  最初のバージョンでは、下位ワードに 16 ビットの現在位置を返します。 上位ワードは、エラーが発生した場合は 0 以外です。  
   
  2 番目のバージョンでは、32 ビットの位置を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  返される値を処理するとき、コントロールが連動ウィンドウのキャプションに基づく現在の位置を更新します。 コントロールは、関連ウィンドウがない場合、またはキャプションを無効または範囲外の値を指定する場合に、エラーを返します。  
   
 ##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
@@ -263,7 +264,7 @@ void GetRange32(
 ### <a name="return-value"></a>戻り値  
  最初のバージョンでは、上限と下限を表す 32 ビット値を返します。 下位ワードは、コントロールの数の上限で、上位ワードは下限です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は`GetRange32`32 ビット整数値として、スピン ボタン コントロールの範囲を取得します。  
   
 ##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
@@ -276,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nAccel`  
- 数[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)構造体で指定された`pAccel`です。  
+ *nAccel*  
+ 数[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)構造体で指定された*pAccel*です。  
   
- `pAccel`  
- 配列を指すポインター`UDACCEL`構造体は、アクセラレータの情報が含まれています。 要素がに基づいて昇順で並べ替えられます、 **nSec**メンバー。  
+ *pAccel*  
+ アクセラレータの情報を含む UDACCEL 構造体の配列へのポインター。 要素がに基づいて昇順で並べ替えられます、`nSec`メンバー。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -293,13 +294,13 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBase`  
+ *nBase*  
  コントロールの新しい基本値。 10 は 10 進数または 16 の 16 進数を指定できます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は、前の基本値または 0 の場合は、無効な base を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ベース値は、関連ウィンドウが 10 進数または 16 進数の桁の数値を表示するかを判断します。 16 進数は、常に符号付きです。10 進数は署名されます。  
   
 ##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
@@ -310,13 +311,13 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndBuddy`  
+ *pWndBuddy*  
  新しい関連ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  以前の連動ウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  スピン コントロールが、編集コントロールは、一部のコンテンツを表示するなど、別のウィンドウに関連付けではほとんどの場合です。 この他のウィンドウは、スピン コントロールの「メンバー」と呼ばれます。  
   
 ##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
@@ -328,13 +329,13 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nPos`  
+ *nPos*  
  コントロールの新しい位置。 この値は、コントロールの上限と下限で指定された範囲である必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  前の位置 (16 ビット単位の精度`SetPos`、32 ビットの有効桁数`SetPos32`)。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `SetPos32` 32 ビットの位置を設定します。  
   
 ##  <a name="setrange"></a>  上限値と下限  
@@ -352,10 +353,10 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nLower` および `nUpper`  
- コントロールの上限と下限です。 `SetRange`、どちらの制限を上回ることが**UD_MAXVAL**またはより小さい**UD_MINVAL**以外の場合はさらに、2 つの制限の違いを超えないように**UD_MAXVAL**. `SetRange32` 制限内での制限は配置なし任意の整数を使用します。  
+ *上限値*と*下限*  
+ コントロールの上限と下限です。 `SetRange`どちらの制限は UD_MAXVAL より長くすること、または UD_MINVAL; より小さいさらに、2 つの制限の違いできません ud_maxval です。 `SetRange32` 制限内での制限は配置なし任意の整数を使用します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は`SetRange32`スピン ボタン コントロールの 32 ビット範囲を設定します。  
   
 > [!NOTE]

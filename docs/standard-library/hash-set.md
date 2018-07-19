@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dccf608b9949ad9e1502b489a237adf60a4d50a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f163ef7d0e5ec05dd0f41c11ea77c558cfef4919
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955703"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/07/2018
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 ### <a name="operators"></a>演算子
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/07/2018
 
 |クラス|説明|
 |-|-|
-|[hash_compare クラス](../standard-library/hash-compare-class.md)|任意のハッシュ連想コンテナー (hash_map、hash_multimap、hash_set、または hash_multiset) によって使用可能なオブジェクトを示しています。既定では **Traits** パラメーター オブジェクトを使用して、含まれる要素の順序付けおよびハッシュを行います。|
+|[hash_compare クラス](../standard-library/hash-compare-class.md)|任意のハッシュ連想コンテナーで使用できるオブジェクトを表します — hash_map、hash_multimap、hash_set、または hash_multiset — 既定値として`Traits`パラメーター オブジェクトを順序付けおよびハッシュが含まれている要素。|
 |[hash_set クラス](../standard-library/hash-set-class.md)|コレクションのデータを格納し、迅速に取得するために使用されます。このコレクションに含まれる要素の値は一意で、キー値として機能します。|
 |[hash_multiset クラス](../standard-library/hash-multiset-class.md)|コレクションのデータを格納し、迅速に取得するために使用されます。このコレクションに含まれる要素の値は一意で、キー値として機能します。|
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283131"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>コンパイラの警告 (レベル 1) C4326
 'function' の戻り値の型が 'type2' ではなく ' type1' をする必要があります。  

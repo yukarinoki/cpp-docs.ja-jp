@@ -1,5 +1,5 @@
 ---
-title: void (C++) |Microsoft ドキュメント
+title: void (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de70ec6758109bc765d0cec3552762288d51ded2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81dd7717940bb6f78063b0fba64dd5d7f8cad583
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943541"
 ---
 # <a name="void-c"></a>void (C++)
-関数の戻り値の型として `void` キーワードを使用した場合は、関数が値を戻さないことを示します。 関数のパラメーター リストで void を使用した場合は、関数がパラメーターを受け取らないことを示します。 ポインターの宣言で void を使用した場合は、ポインターが "汎用" であることを示します。  
+関数戻り値の型として使用すると、 **void**キーワードは、関数が値を返さないことを指定します。 関数のパラメーター リストで void を使用した場合は、関数がパラメーターを受け取らないことを示します。 ポインターの宣言で void を使用した場合は、ポインターが "汎用" であることを示します。  
   
- ポインターの型が場合**void \*** 、ポインターで宣言されていない任意の変数を指すことができます、 **const**または`volatile`キーワード。 void ポインターは別の型にキャストしない限り、逆参照できません。 void ポインターは他の型のデータ ポインターに変換できます。  
+ ポインターの型がある場合**void \*** で宣言されていない任意の変数に、ポインターが指し示すことができます、 **const**または**揮発性**キーワード。 void ポインターは別の型にキャストしない限り、逆参照できません。 void ポインターは他の型のデータ ポインターに変換できます。  
   
  void ポインターは、関数を指すことはできますが、C++ のクラス メンバーを指すことはできません。  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // void.cpp  
 void vobject;   // C2182  
 void *pv;   // okay  
@@ -45,7 +46,7 @@ int main() {
    // Cast optional in C required in C++  
    pint = (int *)pv;  
 }   
-```  
+``` 
   
 ## <a name="see-also"></a>関連項目  
  [キーワード](../cpp/keywords-cpp.md)   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380453"
 ---
 # <a name="wildcards-and-nmake"></a>ワイルドカードと NMAKE
 Nmake では、ファイル名のワイルドカード (* と?) 依存関係の線にします。 コマンドで指定されたワイルドカードは、コマンドに渡されますNMAKE によって展開されません。  

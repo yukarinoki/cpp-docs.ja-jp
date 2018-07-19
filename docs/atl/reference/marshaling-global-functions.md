@@ -1,5 +1,5 @@
 ---
-title: グローバル関数をマーシャ リング |Microsoft ドキュメント
+title: グローバル関数をマーシャ リング |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d93839002ce5136d735e4740388109e855561fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44c5205416ff19eeb849b0532d015275e4eb166e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879340"
 ---
-# <a name="marshaling-global-functions"></a>マーシャ リングのグローバル関数
-これらの関数は、マーシャ リングとのインターフェイス ポインターにマーシャ リング データを変換するためのサポートを提供します。  
+# <a name="marshaling-global-functions"></a>マーシャ リングに関するグローバル関数
+これらの関数は、マーシャ リングとマーシャ リング データ インターフェイス ポインターに変換するサポートを提供します。  
   
 > [!IMPORTANT]
->  次の表に示す関数は、Windows ランタイムで実行するアプリケーションでは使用できません。  
+>  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。  
   
 |||  
 |-|-|  
@@ -45,11 +46,11 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pStream`  
- [in]ポインター、`IStream`マーシャ リングするために使用するストリーム上のインターフェイスです。  
+ *pStream*  
+ [in]ポインター、`IStream`インターフェイスのマーシャ リングするために使用するストリーム。  
   
 ### <a name="example"></a>例  
-  例を参照して[AtlMarshalPtrInProc](#atlmarshalptrinproc)です。  
+  例をご覧ください[AtlMarshalPtrInProc](#atlmarshalptrinproc)します。  
   
 ##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc  
  新しいストリーム オブジェクトを作成し、プロキシの CLSID をストリームに書き込みます。さらに、プロキシの初期化に必要なデータをストリームに書き込んで、指定されたインターフェイス ポインターをマーシャリングします。  
@@ -63,21 +64,21 @@ HRESULT AtlMarshalPtrInProc(
   
 ### <a name="parameters"></a>パラメーター  
  *pUnk*  
- [in]マーシャ リングするためのインターフェイスへのポインター。  
+ [in]マーシャ リングするインターフェイスへのポインター。  
   
- `iid`  
+ *iid*  
  [in]マーシャ リングされるインターフェイスの GUID です。  
   
- `ppStream`  
- [out]ポインター、`IStream`マーシャ リングに使用する、新しいストリーム オブジェクトのインターフェイスです。  
+ *ppStream*  
+ [out]ポインター、`IStream`マーシャ リングするため、新しいストリーム オブジェクトのインターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- **MSHLFLAGS_TABLESTRONG**フラグの設定されているため、複数のストリームにポインターをマーシャ リングすることができます。 ポインターもされませんマーシャ リングされた複数回できます。  
+### <a name="remarks"></a>Remarks  
+ MSHLFLAGS_TABLESTRONG フラグは設定されているため、複数のストリームにポインターをマーシャ リングすることができます。 ポインターもいないマーシャ リングされた複数回できます。  
   
- 失敗をマーシャ リングする場合にストリーム ポインターが解放されます。  
+ 失敗をマーシャ リングする場合は、ストリーム ポインターが解放されます。  
   
  `AtlMarshalPtrInProc` プロセスでオブジェクトへのポインターでのみ使用できます。  
   
@@ -95,20 +96,20 @@ HRESULT AtlUnmarshalPtr(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pStream`  
- [in]マーシャ リングを解除されているストリームへのポインター。  
+ *pStream*  
+ [in]マーシャ リング解除されているストリームへのポインター。  
   
- `iid`  
- [in]マーシャ リングを解除されているインターフェイスの GUID です。  
+ *iid*  
+ [in]マーシャ リング解除されているインターフェイスの GUID です。  
   
- `ppUnk`  
- [out]マーシャ リングを解除インターフェイスへのポインター。  
+ *ppUnk*  
+ [out]マーシャ リング解除されたインターフェイスへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT 値。  
   
 ### <a name="example"></a>例  
-  例を参照して[AtlMarshalPtrInProc](#atlmarshalptrinproc)です。  
+  例をご覧ください[AtlMarshalPtrInProc](#atlmarshalptrinproc)します。  
   
 ## <a name="see-also"></a>関連項目  
  [関数](../../atl/reference/atl-functions.md)

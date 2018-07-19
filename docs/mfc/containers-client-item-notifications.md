@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928225"
 ---
 # <a name="containers-client-item-notifications"></a>コンテナー : クライアント アイテムへの通知
 この記事では、オーバーライド可能なサーバー アプリケーションがクライアント アプリケーションのドキュメント内の項目を変更、MFC フレームワークによって呼び出される関数について説明します。  
@@ -31,11 +32,11 @@ ms.lasthandoff: 05/04/2018
   
 |通知|説明|  
 |------------------|-------------|  
-|`OLE_CHANGED`|OLE 項目の外観が変更されました。|  
-|`OLE_SAVED`|OLE 項目が保存されました。|  
-|`OLE_CLOSED`|OLE 項目が閉じられました。|  
+|**OLE_CHANGED**|OLE 項目の外観が変更されました。|  
+|**で**|OLE 項目が保存されました。|  
+|**OLE_CLOSED**|OLE 項目が閉じられました。|  
 |**OLE_RENAMED**|OLE 項目を格納しているサーバーのドキュメントが変更されています。|  
-|`OLE_CHANGED_STATE`|OLE 項目は、別の 1 つの状態から変更されました。|  
+|**OLE_CHANGED_STATE**|OLE 項目は、別の 1 つの状態から変更されました。|  
 |**OLE_CHANGED_ASPECT**|OLE アイテムの描画のアスペクト比は、フレームワークによって変更されました。|  
   
  これらの値は、 **OLE_NOTIFICATION** AFXOLE で定義されている列挙します。H.  
@@ -44,9 +45,9 @@ ms.lasthandoff: 05/04/2018
   
 |最初の引数|2 番目の引数|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` または `OLE_CLOSED`|使用されません。|  
-|`OLE_CHANGED`|OLE 項目が変更されたことの縦横比を指定します。|  
-|`OLE_CHANGED_STATE`|入力されている状態を表します (`emptyState`、 **loadedState**、 `openState`、 `activeState`、または`activeUIState`)。|  
+|**OLE_SAVED**または**OLE_CLOSED**|使用されません。|  
+|**OLE_CHANGED**|OLE 項目が変更されたことの縦横比を指定します。|  
+|**OLE_CHANGED_STATE**|入力されている状態を表します (*これ*、 *loadedState*、 *openState*、 *activeState*、または*activeUIState*)。|  
   
  クライアント アイテムの状態の詳細については、次を参照してください。[コンテナー: クライアント アイテムの状態](../mfc/containers-client-item-states.md)です。  
   

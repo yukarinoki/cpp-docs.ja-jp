@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170649"
 ---
 # <a name="user-defined-conversions-ccli"></a>ユーザー定義変換 (C++/CLI)
 このセクションでは、参照または値型または参照型のインスタンスには、変換内の型のいずれかの場合、ユーザー定義の変換 (UDC) がについて説明します。  

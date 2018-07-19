@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a55a6e015a2f8c1613a85717c030737712c4da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 93d37b49a949ab29e0ae888d9c961da086ee4ca4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928597"
 ---
 # <a name="image-overlays-in-image-lists"></a>イメージ リストのイメージのオーバーレイ
 すべてのイメージ リスト ([CImageList](../mfc/reference/cimagelist-class.md)) オーバーレイ マスクとして使用するイメージの一覧が含まれています。 「オーバーレイ マスク」は、別のイメージ上に透過的に描画されるイメージです。 任意の画像は、オーバーレイ マスクとして使用できます。 イメージ リストごとに最大 4 つのオーバーレイ マスクを指定することができます。  
   
  オーバーレイ マスクの一覧を使用して、イメージのインデックスを追加する、 [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)メンバー関数は、イメージのインデックスおよびオーバーレイ マスクのインデックス。 マスクのオーバーレイ インデックスは 1 ベースではなく 0 から始まることに注意してください。  
   
- 1 回の呼び出しを使用してイメージ上にオーバーレイ マスクを描画する**描画**です。 パラメーターには、描画するイメージのインデックスと、オーバーレイ マスクのインデックスが含まれます。 使用する必要があります、[から](http://msdn.microsoft.com/library/windows/desktop/bb761408)マクロ オーバーレイ マスクのインデックスを指定します。 呼び出すときにオーバーレイ イメージを指定することも、[もう 1 つ](../mfc/reference/cimagelist-class.md#drawindirect)メンバー関数。  
+ 1 回の呼び出しを使用してイメージ上にオーバーレイ マスクを描画する`Draw`です。 パラメーターには、描画するイメージのインデックスと、オーバーレイ マスクのインデックスが含まれます。 使用する必要があります、[から](http://msdn.microsoft.com/library/windows/desktop/bb761408)マクロ オーバーレイ マスクのインデックスを指定します。 呼び出すときにオーバーレイ イメージを指定することも、[もう 1 つ](../mfc/reference/cimagelist-class.md#drawindirect)メンバー関数。  
   
 ## <a name="see-also"></a>関連項目  
  [CImageList の使い方](../mfc/using-cimagelist.md)   

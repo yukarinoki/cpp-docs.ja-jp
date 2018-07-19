@@ -1,5 +1,5 @@
 ---
-title: CFont クラス |Microsoft ドキュメント
+title: CFont クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a598a05c31c36c7defd5fe2441031d3bccdf20f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336791"
 ---
 # <a name="cfont-class"></a>CFont クラス
 Windows のグラフィック デバイス インターフェイス (GDI) のフォントをカプセル化したもので、フォントを操作するメンバー関数を提供します。  
@@ -57,25 +58,25 @@ class CFont : public CGdiObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[CFont::CreateFont](#createfont)|初期化、`CFont`と特性を指定します。|  
-|[CFont::CreateFontIndirect](#createfontindirect)|初期化、`CFont`オブジェクトで指定された特性を持つ、`LOGFONT`構造体。|  
-|[CFont::CreatePointFont](#createpointfont)|初期化、`CFont`ポイント、および書体 10 分の 1 単位は、指定された高さでします。|  
-|[CFont::CreatePointFontIndirect](#createpointfontindirect)|同じ`CreateFontIndirect`フォントの高さが論理ユニットではなく、ポイントの 0.1 単位で測定される点が異なります。|  
-|[CFont::FromHandle](#fromhandle)|ポインターを返します、 `CFont` Windows が指定されると**HFONT**です。|  
+|[CFont::CreateFont](#createfont)|初期化します、`CFont`と特性を指定します。|  
+|[CFont::CreateFontIndirect](#createfontindirect)|初期化します、`CFont`オブジェクトで指定された特性を持つ、`LOGFONT`構造体。|  
+|[CFont::CreatePointFont](#createpointfont)|初期化します、`CFont`指定の高さを持つポイント、および書体 0.1 単位で測定します。|  
+|[CFont::CreatePointFontIndirect](#createpointfontindirect)|同じ`CreateFontIndirect`する点を除いて、フォントの高さは論理ユニットではなく、ポイントの 10 分で測定されます。|  
+|[CFont::FromHandle](#fromhandle)|ポインターを返します、 `CFont` Windows HFONT が指定されるとします。|  
 |[CFont::GetLogFont](#getlogfont)|入力、`LOGFONT`にアタッチされている論理フォントに関する情報を含む、`CFont`オブジェクト。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CFont::operator HFONT](#operator_hfont)|接続されている Windows GDI フォント ハンドルを返します、`CFont`オブジェクト。|  
+|[CFont::operator HFONT](#operator_hfont)|アタッチされている Windows GDI フォントのハンドルを返します、`CFont`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
- 使用する、`CFont`オブジェクトを構築、`CFont`オブジェクトし、を使って Windows のフォントをアタッチ[構築](#createfont)、 [CreateFontIndirect](#createfontindirect)、 [CreatePointFont](#createpointfont)、または[CreatePointFontIndirect](#createpointfontindirect)、し、オブジェクトのメンバー関数を使用して、フォントを操作します。  
+## <a name="remarks"></a>Remarks  
+ 使用する、`CFont`オブジェクト、構築、`CFont`オブジェクトし、を使って Windows フォントをアタッチ[構築](#createfont)、 [CreateFontIndirect](#createfontindirect)、 [CreatePointFont](#createpointfont)、または[CreatePointFontIndirect](#createpointfontindirect)、し、オブジェクトのメンバー関数を使用してフォントを操作します。  
   
- `CreatePointFont`と`CreatePointFontIndirect`関数は、多くの場合よりも使いやすく`CreateFont`または`CreateFontIndirect`のため、フォントの高さを変換、ポイント サイズから論理ユニットを自動的にします。  
+ `CreatePointFont`と`CreatePointFontIndirect`関数は、多くの場合より使いやすく`CreateFont`または`CreateFontIndirect`フォントの高さの変換、ポイント サイズから論理ユニットを自動的に行うためです。  
   
- 詳細については`CFont`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)です。  
+ 詳細については`CFont`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -84,7 +85,7 @@ class CFont : public CGdiObject
   
  `CFont`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cfont"></a>  CFont::CFont  
@@ -94,14 +95,14 @@ class CFont : public CGdiObject
 CFont();
 ```  
   
-### <a name="remarks"></a>コメント  
- 結果のオブジェクトを初期化する必要があります`CreateFont`、 `CreateFontIndirect`、 `CreatePointFont`、または`CreatePointFontIndirect`を使用する前にします。  
+### <a name="remarks"></a>Remarks  
+ 結果のオブジェクトを初期化する必要があります`CreateFont`、 `CreateFontIndirect`、 `CreatePointFont`、または`CreatePointFontIndirect`を使用します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
 ##  <a name="createfont"></a>  CFont::CreateFont  
- 初期化、`CFont`指定された特性を持つオブジェクト。  
+ 初期化します、`CFont`指定の特性を持つオブジェクト。  
   
 ```  
 BOOL CreateFont(
@@ -122,99 +123,99 @@ BOOL CreateFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nHeight`  
- フォントの高さ (論理単位) を指定します。 参照してください、`lfHeight`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)詳細については、Windows SDK 内の構造。 絶対値`nHeight`が変換されたら、16,384 デバイス単位を超えない必要があります。 高さ比較はすべては、すべてのフォントが要求されたサイズを超える場合も、フォント マッパーは要求されたサイズを超えていない最大のフォントまたは最小のフォントを探します。  
+ *パラメーター nHeight*  
+ フォントの高さを (論理単位) で指定します。 参照してください、`lfHeight`のメンバー、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)説明については、Windows SDK で構造体。 絶対値*パラメーター nHeight*は変換後、16,384 デバイス単位を超えない必要があります。 すべての高さの比較は、すべてのフォントが要求されたサイズを超える場合も、フォント マッパーは要求されたサイズを超えていない最大のフォントまたは最小のフォントを探します。  
   
- `nWidth`  
- フォントに、平均 (論理単位) で文字幅を指定します。 場合`nWidth`が 0 の使用可能なフォントの差の絶対値によって決定される、最も近い一致を検索するデジタル化縦横比と一致するデバイスの縦横比場合、。  
+ *nWidth*  
+ フォントで、(論理単位) での平均文字幅を指定します。 場合*nWidth*が 0 の差の絶対値によって決定される最も近い一致を検索する利用可能なフォントの業務に携わる縦横比と一致するデバイスの縦横比場合、。  
   
- `nEscapement`  
- 角度 (0.1 度単位)、傾斜ベクターと画面の表面の x 軸を指定します。 傾斜ベクターは、行の最初と最後の文字の原点を結ぶ直線です。 角度は、x 軸から反時計回りに計測されます。 参照してください、`lfEscapement`内のメンバー、`LOGFONT`詳細については、Windows SDK 内の構造。  
+ *nEscapement*  
+ (0.1 度単位) で文字送りベクターと x 軸の表示画面間の角度を指定します。 文字送りベクターは、行の最初と最後の文字のオリジンを行です。 角度は、x 軸から反時計回りに計測されます。 参照してください、`lfEscapement`内のメンバー、`LOGFONT`詳細については、Windows SDK で構造体。  
   
- `nOrientation`  
- 角度 (0.1 度単位) を文字のベースラインと x 軸を指定します。 角度は、y 軸方向のダウンして、x 軸の y 方向が上の座標系から時計回りに座標系の x 軸から反時計回りに計測されます。  
+ *nOrientation*  
+ (0.1 度単位) を文字のベースラインと x 軸の角度を指定します。 角度は、y 方向のダウンして y 方向が稼働する座標系の x 軸から時計回りに座標系の x 軸から反時計回りに計測されます。  
   
- `nWeight`  
- インク付きピクセルあたり 1000 単位のフォントの太さを指定します。 参照してください、`lfWeight`内のメンバー、`LOGFONT`詳細については、Windows SDK 内の構造。 値は概算です。実際の外観はフォントに依存します。 一部のフォントがのみがある`FW_NORMAL`、 `FW_REGULAR`、および`FW_BOLD`重み。 場合`FW_DONTCARE`を指定すると、既定の重みを使用します。  
+ *nWeight*  
+ (1000 ピクセル単位) でのフォントの太さを指定します。 参照してください、 *lfWeight*内のメンバー、`LOGFONT`詳細については、Windows SDK で構造体。 説明の値は概数です。実際の外観はフォントに依存します。 一部のフォントはある FW_NORMAL、FW_REGULAR、および FW_BOLD 重みだけです。 FW_DONTCARE が指定されている場合は、既定の重み付けが使用されます。  
   
- `bItalic`  
+ *bItalic*  
  フォントが斜体かどうかを指定します。  
   
- `bUnderline`  
- フォントに下線が引かれているかどうかを指定します。  
+ *bUnderline*  
+ フォントが下付きかどうかを指定します。  
   
- `cStrikeOut`  
- フォントの文字は、取り消しかどうかを指定します。場合に取り消し線フォントを指定する 0 以外の値に設定します。  
+ *cStrikeOut*  
+ 、フォントの文字を入れるかどうかを指定します。場合、取り消し線フォントを指定します、0 以外の値に設定します。  
   
- `nCharSet`  
- フォントの文字セットを指定します、`lfCharSet`内のメンバー、`LOGFONT`値の一覧については、Windows SDK 内の構造。  
+ *nCharSet*  
+ フォントの文字セットを指定します、`lfCharSet`内のメンバー、`LOGFONT`値の一覧については、Windows SDK で構造体。  
   
  OEM 文字セットは、システムによって異なります。  
   
- その他の文字セットを使用するフォント システムに存在する可能性があります。 不明な文字セットとフォントを使用するアプリケーションは、変換や、そのフォントで表示するのには、文字列の解釈しないでください。 代わりに、文字列は、出力デバイス ドライバーに直接渡されます。  
+ その他の文字セットでのフォントのシステムに存在する可能性があります。 不明な文字セットとフォントを使用するアプリケーションでは、変換や、そのフォントで表示するのには文字列の解釈がしよう必要があります。 代わりに、文字列を出力するデバイス ドライバーに直接渡す必要があります。  
   
- フォント マッパーが使用しない、`DEFAULT_CHARSET`値。 アプリケーションは、この値を使用した論理フォントを完全に記述するのにフォントのサイズと名前を許可します。 指定した名前のフォントが存在しない場合、指定されたフォントの任意の文字セットからフォントに置き換えられることができます。 予期しない結果を避けるためには、アプリケーションを使用する必要があります、`DEFAULT_CHARSET`値の限定的に使用します。  
+ フォント マッパーでは、DEFAULT_CHARSET 値は使用しません。 アプリケーションでは、名前と完全に記述する論理フォントのフォントのサイズを許可するのに、この値を使用できます。 指定した名前のフォントが存在しない場合、任意の文字セットからのフォントは、指定したフォントの代わりに使用できます。 予期しない結果を避けるためには、アプリケーションは控えめ DEFAULT_CHARSET 値を使用する必要があります。  
   
- `nOutPrecision`  
- 目的の出力の有効桁数を指定します。 出力の精度は、要求されたフォントの高さ、幅、文字の方向、傾斜、およびピッチに出力をどの程度一致する必要がありますを定義します。 参照してください、`lfOutPrecision`内のメンバー、`LOGFONT`値および詳細の一覧については、Windows SDK 内の構造。  
+ *nOutPrecision*  
+ 目的の出力の有効桁数を指定します。 出力の有効桁数は、要求されたフォントの高さ、幅、文字の方向、傾斜、およびピッチ、出力がどの程度一致する必要がありますを定義します。 参照してください、`lfOutPrecision`内のメンバー、`LOGFONT`と詳細については値の一覧については、Windows SDK で構造体。  
   
- `nClipPrecision`  
- 必要な領域の有効桁数を指定します。 クリッピング精度は、部分的にクリッピング領域の外側にある文字をクリップする方法を定義します。 参照してください、`lfClipPrecision`内のメンバー、`LOGFONT`値の一覧については、Windows SDK 内の構造。  
+ *nClipPrecision*  
+ 必要なクリッピング精度を指定します。 クリッピング精度は、部分的にクリッピング領域の外側にある文字をクリップする方法を定義します。 参照してください、`lfClipPrecision`内のメンバー、`LOGFONT`値の一覧については、Windows SDK で構造体。  
   
- 読み取り専用の埋め込みフォントを使用するアプリケーションを指定する必要があります`CLIP_ENCAPSULATE`です。  
+ 読み取り専用の埋め込みフォントを使用するには、アプリケーションで使うを指定する必要があります。  
   
- デバイス、truetype フォント、およびベクター フォントの一貫した回転を実現するために、アプリケーションは、OR 演算子を使用して、結合、`CLIP_LH_ANGLES`値とその他の`nClipPrecision`値。 場合、`CLIP_LH_ANGLES`ビットが設定されている、すべてのフォントの回転は、座標系の向きが左ききかどうかによって異なりますか右回りです。 (座標系の方向に関する詳細については、の説明を参照して、`nOrientation`パラメーターです)。場合`CLIP_LH_ANGLES`が設定されていないデバイス フォントを常に反時計回りに回転、その他のフォントの回転、座標系の向きに依存します。  
+ デバイス、truetype フォント、およびベクター フォントの一貫した回転を実現するために、アプリケーションは、OR 演算子を使用して、CLIP_LH_ANGLES 値と組み合わせて、その他の*nClipPrecision*値。 すべてのフォントの回転は、座標系の向きが左手座標系かどうかに依存 CLIP_LH_ANGLES ビットが設定されている場合または右手座標系。 (詳細については、座標系の向きは、の説明を参照して、 *nOrientation*パラメーターです)。CLIP_LH_ANGLES が設定されていない場合は、デバイス フォントは常に、反時計回りに回転しますが、他のフォントの回転は、座標系の向きに依存します。  
   
- `nQuality`  
- 実際の物理的なフォントの論理フォント属性と一致する GDI を試みる必要がありますに注意を定義するフォントの出力の品質を指定します。 参照してください、`lfQuality`内のメンバー、`LOGFONT`値の一覧については、Windows SDK 内の構造。  
+ *nQuality*  
+ 実際の物理フォントの論理フォント属性が一致するように、GDI を試みる必要がありますに注意を定義するフォントの出力品質を指定します。 参照してください、`lfQuality`内のメンバー、`LOGFONT`値の一覧については、Windows SDK で構造体。  
   
- `nPitchAndFamily`  
- ピッチとファミリのフォントを指定します。 参照してください、`lfPitchAndFamily`内のメンバー、`LOGFONT`値および詳細の一覧については、Windows SDK 内の構造。  
+ *nPitchAndFamily*  
+ ピッチとファミリのフォントを指定します。 参照してください、`lfPitchAndFamily`内のメンバー、`LOGFONT`と詳細については値の一覧については、Windows SDK で構造体。  
   
- `lpszFacename`  
- A`CString`またはフォントのフォント名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619)現在使用可能なすべてのフォントを列挙する関数を使用できます。 場合`lpszFacename`は`NULL`GDI がデバイスに依存しない書体を使用します。  
+ *lpszFacename*  
+ A`CString`またはフォントのタイプフェイス名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619)関数は現在使用可能なすべてのフォントを列挙するために使用できます。 場合*lpszFacename*が null の場合、GDI がデバイスに依存しないタイプフェイスを使用します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フォントは、任意のデバイス コンテキストのフォントとして後で選択できます。  
   
- `CreateFont`関数は新しい Windows GDI フォントは作成されません。 単からを選択、最も近い利用できる物理フォント GDI にします。  
+ `CreateFont`関数は新しい Windows GDI フォントを作成できません。 単に、GDI 使用可能な物理フォントから最も近い一致を選択します。  
   
- アプリケーションは、論理フォントを作成するときに、ほとんどのパラメーターに既定の設定を使用できます。 特定の値を指定する必要がありますは常に、パラメーターが`nHeight`と`lpszFacename`です。 場合`nHeight`と`lpszFacename`が設定されていないアプリケーションで作成される論理フォントがデバイスに依存します。  
+ アプリケーションは、論理フォントを作成するときに、ほとんどのパラメーターに既定の設定を使用できます。 特定の値を常に指定するパラメーターは、*パラメーター nHeight*と*lpszFacename*します。 場合*パラメーター nHeight*と*lpszFacename*が設定されていないアプリケーションで作成される論理フォントにはデバイスに依存します。  
   
- 使用が終了したら、`CFont`によって作成されたオブジェクト、`CreateFont`関数を使用して`CDC::SelectObject`をデバイス コンテキストに、別のフォントを選択し、削除、`CFont`不要になったオブジェクトです。  
+ 終了したら、`CFont`によって作成されたオブジェクト、`CreateFont`関数を使用して`CDC::SelectObject`デバイス コンテキストに別のフォントを選択し、削除、`CFont`オブジェクトが不要です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
 ##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
- 初期化、`CFont`オブジェクトで指定された特性を持つ、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
+ 初期化します、`CFont`で指定された特性を持つオブジェクトを[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。  
   
 ```  
 BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpLogFont`  
+ *lpLogFont*  
  指す、`LOGFONT`論理フォントの特性を定義する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- フォントは、任意のデバイスの現在のフォントとして後で選択できます。  
+### <a name="remarks"></a>Remarks  
+ フォントは、任意のデバイスの現在のフォントとして後から選択できます。  
   
- このフォントがで指定された特性を持つ、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。 使用して、フォントを選択すると、 [cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject)メンバー関数は、GDI フォント マッパーを既存の物理フォントの論理フォントを一致させようとします。 論理フォントを正確に一致するフォント マッパーに失敗した場合、代替のフォントとして可能な要求の特性の多くを提供します。  
+ このフォントにで指定された特性、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)構造体。 使用して、フォントを選択すると、 [cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject)メンバー関数は、GDI フォントとマッパーは、既存の物理フォントの論理フォントを一致するようにします。 論理フォントを正確に一致するフォント マッパーに失敗した場合は、要求の特性をできるだけ多く一致する特性を持つ別のフォントを提供します。  
   
- 不要になった必要がある場合、`CFont`によって作成されたオブジェクト、`CreateFontIndirect`関数を使用して`CDC::SelectObject`をデバイス コンテキストに、別のフォントを選択し、削除、`CFont`不要になったオブジェクトです。  
+ 不要になった必要がある場合、`CFont`によって作成されたオブジェクト、`CreateFontIndirect`関数を使用して`CDC::SelectObject`デバイス コンテキストに別のフォントを選択し、削除、`CFont`オブジェクトが不要です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
 ##  <a name="createpointfont"></a>  CFont::CreatePointFont  
- この関数は、指定したフォントのフォントを作成し、ポイント サイズを簡単な方法を提供します。  
+ この関数は、指定したタイプフェイスのフォントを作成し、サイズをポイントする簡単な方法を提供します。  
   
 ```  
 BOOL CreatePointFont(
@@ -224,28 +225,28 @@ BOOL CreatePointFont(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nPointSize`  
+ *nPointSize*  
  10 分の 1 点のフォントの高さを要求します。 (たとえば、渡す 12 ポイントのフォントを指定するのには 120 です。)  
   
- `lpszFaceName`  
- A`CString`またはフォントのフォント名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows **EnumFontFamilies**現在使用可能なすべてのフォントを列挙する関数を使用できます。 場合`lpszFaceName`は**NULL**GDI がデバイスに依存しない書体を使用します。  
+ *lpszFaceName*  
+ A`CString`またはフォントのタイプフェイス名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows ' EnumFontFamilies 関数は現在使用可能なすべてのフォントを列挙するために使用できます。 場合*lpszFaceName*が null の場合、GDI がデバイスに依存しないタイプフェイスを使用します。  
   
- `pDC`  
- ポインター、 [CDC](../../mfc/reference/cdc-class.md)高さでの変換に使用するオブジェクト`nPointSize`論理ユニットにします。 場合**NULL**画面のデバイス コンテキストは、変換に使用します。  
+ *pDC*  
+ ポインター、 [CDC](../../mfc/reference/cdc-class.md)高さでの変換を使用するオブジェクトを*nPointSize*論理ユニットにします。 NULL の場合は、画面のデバイス コンテキストが、変換に使用します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外。 それ以外の場合に 0 です。  
   
-### <a name="remarks"></a>コメント  
- 高さを自動的に変換`nPointSize`を使用して論理ユニットに、`CDC`によって指されるオブジェクト`pDC`です。  
+### <a name="remarks"></a>Remarks  
+ 高さを自動的に変換します*nPointSize*論理ユニットに CDC オブジェクトを使用して指す*pDC*します。  
   
- 使用が終了したら、`CFont`によって作成されたオブジェクト、`CreatePointFont`関数の最初に、デバイス コンテキスト外のフォントを選択し、削除、`CFont`オブジェクト。  
+ 終了したら、`CFont`によって作成されたオブジェクト、`CreatePointFont`関数、まず、デバイス コンテキスト外のフォントを選択し、削除、`CFont`オブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
 ##  <a name="createpointfontindirect"></a>  CFont::CreatePointFontIndirect  
- この関数は、同じ[CreateFontIndirect](#createfontindirect)する点を除いて、**する**のメンバー、`LOGFONT`はデバイスではなく、ポイント単位の部分の 1/10 に解釈されます。  
+ この関数は、同じ[CreateFontIndirect](#createfontindirect)する点を除いて、`lfHeight`のメンバー、`LOGFONT`は 10 分のデバイスではなく、ポイント単位で解釈されます。  
   
 ```  
 BOOL CreatePointFontIndirect(
@@ -254,45 +255,45 @@ BOOL CreatePointFontIndirect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpLogFont`  
- 指す、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)論理フォントの特性を定義する構造体。 **する**のメンバー、`LOGFONT`構造は論理ユニットではなく、ポイントの 0.1 単位で測定されます。 (たとえば、設定**する**を 120 に 12 ポイントのフォント)。  
+ *lpLogFont*  
+ 指す、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)論理フォントの特性を定義する構造体。 `lfHeight`のメンバー、`LOGFONT`構造は論理ユニットではなく、ポイントの 10 分で測定されます。 (たとえば、設定`lfHeight`を 120 に 12 ポイントのフォントを指定します)。  
   
- `pDC`  
- ポインター、 [CDC](../../mfc/reference/cdc-class.md)高さでの変換に使用するオブジェクト**する**論理ユニットにします。 場合**NULL**画面のデバイス コンテキストは、変換に使用します。  
+ *pDC*  
+ ポインター、 [CDC](../../mfc/reference/cdc-class.md)高さでの変換を使用するオブジェクトを`lfHeight`論理ユニットにします。 NULL の場合は、画面のデバイス コンテキストが、変換に使用します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、0 以外。 それ以外の場合に 0 です。  
   
-### <a name="remarks"></a>コメント  
- この関数は、高さで自動的に変換します。**する**を使用して論理ユニットに、`CDC`によって指されるオブジェクト`pDC`渡す前に、`LOGFONT`構造 Windows にログオンします。  
+### <a name="remarks"></a>Remarks  
+ この関数は、高さを自動的に変換します`lfHeight`論理ユニットに CDC オブジェクトを使用して指す*pDC*渡す前に、`LOGFONT`構造を Windows にログオンします。  
   
- 使用が終了したら、`CFont`によって作成されたオブジェクト、`CreatePointFontIndirect`関数の最初に、デバイス コンテキスト外のフォントを選択し、削除、`CFont`オブジェクト。  
+ 終了したら、`CFont`によって作成されたオブジェクト、`CreatePointFontIndirect`関数、まず、デバイス コンテキスト外のフォントを選択し、削除、`CFont`オブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
 ##  <a name="fromhandle"></a>  CFont::FromHandle  
- ポインターを返します、`CFont`が指定されると、 **HFONT** Windows GDI フォント オブジェクトへのハンドルします。  
+ ポインターを返します、 `CFont` Windows GDI フォント オブジェクト、HFONT ハンドルが指定されるとします。  
   
 ```  
 static CFont* PASCAL FromHandle(HFONT hFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hFont`  
- **HFONT** Windows フォントを処理します。  
+ *hFont*  
+ Windows フォントに HFONT ハンドル。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CFont`それ以外の成功した場合は、オブジェクト**NULL**です。  
+ ポインター、`CFont`成功。 それ以外の場合に NULL の場合は、オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 場合、`CFont`オブジェクトが、一時的なハンドルに既にアタッチされていない`CFont`オブジェクトが作成され、接続されています。 この一時`CFont`オブジェクトが有効では、次回アプリケーションがある移動するまでのアイドル時間イベント ループで、すべて一時的なグラフィックを時間でオブジェクトが削除専用です。 言い換えるとは、一時オブジェクトが 1 つのウィンドウ メッセージを処理中にのみ有効であります。  
+### <a name="remarks"></a>Remarks  
+ 場合、`CFont`ハンドル、一時的にオブジェクトが既にアタッチされていない`CFont`オブジェクトを作成し、接続されています。 この一時`CFont`すべて一時的なグラフィックを時間があるオブジェクトは削除まで、次回、アプリケーションは、イベント ループでのアイドル時間は、専用、オブジェクトが無効です。 言い換えると、別の方法は、一時オブジェクトが 1 つのウィンドウ メッセージを処理中にのみ有効であります。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
 ##  <a name="getlogfont"></a>  CFont::GetLogFont  
- コピーを取得するには、この関数を呼び出して、`LOGFONT`の構造体`CFont`です。  
+ コピーを取得するには、この関数を呼び出して、`LOGFONT`の構造体`CFont`します。  
   
 ```  
 int GetLogFont(LOGFONT* pLogFont);
@@ -300,7 +301,7 @@ int GetLogFont(LOGFONT* pLogFont);
   
 ### <a name="parameters"></a>パラメーター  
  *pLogFont*  
- ポインター、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)フォント情報を受け取る構造です。  
+ ポインター、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)フォント情報を受け取る構造体。  
   
 ### <a name="return-value"></a>戻り値  
  関数が成功すると、それ以外の場合 0 0 以外の値。  
@@ -309,17 +310,17 @@ int GetLogFont(LOGFONT* pLogFont);
  [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
 ##  <a name="operator_hfont"></a>  CFont::operator HFONT  
- この演算子にアタッチされているフォントの Windows GDI ハンドルの取得を使用して、`CFont`オブジェクト。  
+ アタッチされているフォントの Windows GDI ハンドルを取得するこの演算子を使用して、`CFont`オブジェクト。  
   
 ```  
 operator HFONT() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 接続されている Windows GDI フォント オブジェクトのハンドル`CFont`成功した場合は**NULL**です。  
+ アタッチされている Windows GDI フォント オブジェクトのハンドル`CFont`成功。 それ以外の場合に NULL の場合。  
   
-### <a name="remarks"></a>コメント  
- この演算子は自動的に使用からの変換のため`CFont`に[フォントとテキスト](http://msdn.microsoft.com/library/windows/desktop/dd144819)を渡すことができます`CFont`する関数にオブジェクト**HFONT**s。  
+### <a name="remarks"></a>Remarks  
+ この演算子は自動的からの変換に使用されるため`CFont`に[フォントとテキスト](http://msdn.microsoft.com/library/windows/desktop/dd144819)、渡すことができます`CFont`HFONTs を期待する関数へのオブジェクト。  
   
  グラフィック オブジェクトの使用に関する詳細については、次を参照してください。[グラフィック オブジェクト](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK に含まれています。  
   

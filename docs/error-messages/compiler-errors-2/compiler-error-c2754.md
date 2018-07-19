@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233916"
 ---
 # <a name="compiler-error-c2754"></a>コンパイラ エラー C2754
 'specialization': 部分的特殊化は、依存非型テンプレート パラメーターを持つことはできません  

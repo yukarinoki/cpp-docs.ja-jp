@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389781"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 次の表は、ほとんどの識別子について、有効期間と可視性をまとめたものです。 最初の 3 列は、有効期間および可視性を定義する属性を示します。 最初の 3 列によって指定された属性を持つ識別子には、4 番目および 5 番目の列に表示される有効期間および可視性があります。 ただし、表には、使用可能なすべてのケースは示されていません。 詳細については、[ストレージ クラス](../c-language/c-storage-classes.md)に関するページを参照してください。  

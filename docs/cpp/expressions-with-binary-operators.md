@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414677"
 ---
 # <a name="expressions-with-binary-operators"></a>二項演算子を含む式
 二項演算子は、式の中で 2 つのオペランドに作用します。 二項演算子は次のとおりです。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385313"
 ---
 # <a name="range-of-integer-values"></a>Range of Integer Values (整数値の範囲)
 **ANSI 3.1.2.5** 整数のさまざまな型の表現と値セット  

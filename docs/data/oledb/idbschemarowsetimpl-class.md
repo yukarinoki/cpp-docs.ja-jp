@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110952"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl クラス
 スキーマ行セットの実装を提供します。  
@@ -57,7 +58,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 ## <a name="remarks"></a>コメント  
  このクラスは、 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) インターフェイスと、テンプレート化された作成関数 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)を実装します。  
   
- OLE DB はスキーマ行セットを使用して、プロバイダーのデータに関するデータを返します。 このようなデータは、多くの場合、"メタデータ" と呼ばれます。 `DBSCHEMA_TABLES`OLE DB プログラマーズ リファレンス **の「**IDBSchemaRowset **」で説明されているように、既定では、プロバイダーは常に**、 [DBSCHEMA_COLUMNS](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 、および *DBSCHEMA_PROVIDER_TYPES*をサポートする必要があります。 スキーマ行セットはスキーマ マップで指定します。 スキーマ マップ エントリの詳細については、「 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)」を参照してください。  
+ OLE DB はスキーマ行セットを使用して、プロバイダーのデータに関するデータを返します。 このようなデータは、多くの場合、"メタデータ" と呼ばれます。 `DBSCHEMA_TABLES`OLE DB プログラマーズ リファレンス **の「** IDBSchemaRowset **」で説明されているように、既定では、プロバイダーは常に**、 [DBSCHEMA_COLUMNS](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 、および *DBSCHEMA_PROVIDER_TYPES*をサポートする必要があります。 スキーマ行セットはスキーマ マップで指定します。 スキーマ マップ エントリの詳細については、「 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)」を参照してください。  
   
  ATL オブジェクト ウィザードの OLE DB プロバイダー ウィザードでは、プロジェクトのスキーマ行セットのコードが自動的に生成されます (既定では、ウィザードは、以前説明した必須のスキーマ行セットをサポートしています)。ATL オブジェクト ウィザードでコンシューマーを作成すると、スキーマ行セットで正しいデータがプロバイダーにバインドされます。 正しいメタデータを提供するようにスキーマ行セットを実装していないと、正しいデータがバインドされません。  
   

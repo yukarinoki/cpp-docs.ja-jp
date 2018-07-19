@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951601"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 構造体
 `CDaoParameterInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているパラメーターのオブジェクトに関する情報が含まれています。  
@@ -38,16 +39,16 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `m_strName`  
+ *m_strName*  
  パラメーター オブジェクトの一意名です。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
   
- `m_nType`  
- パラメーター オブジェクトのデータ型を示す値です。 有効な値の一覧は、次を参照してください。、`m_nType`のメンバー、 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体。 詳細については、DAO ヘルプの「型プロパティ」を参照してください。  
+ *m_nType*  
+ パラメーター オブジェクトのデータ型を示す値です。 有効な値の一覧は、次を参照してください。、 *m_nType*のメンバー、 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体。 詳細については、DAO ヘルプの「型プロパティ」を参照してください。  
   
  *m_varValue*  
  格納され、パラメーターの値、 [COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  プライマリとセカンダリ上への参照は、情報がによって返される方法を示すため、 [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)クラスのメンバー関数`CDaoQueryDef`です。  
   
  MFC は、DAO クラスでオブジェクトのパラメーターをカプセル化しません。 クエリ定義オブジェクトを基になる MFC`CDaoQueryDef`オブジェクトが、パラメーター コレクションにパラメーターを格納します。 パラメーター オブジェクトにアクセスする、 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)オブジェクトをクエリ定義オブジェクトの`GetParameterInfo`メンバー関数の特定のパラメーター名またはパラメーターのコレクションへのインデックス。 使用することができます、 [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount)メンバー関数と組み合わせて`GetParameterInfo`パラメーター コレクションをループします。  
@@ -59,7 +60,7 @@ struct CDaoParameterInfo
   
  `CDaoParameterInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoParameterInfo`オブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ## <a name="see-also"></a>関連項目  

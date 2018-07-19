@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353133"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>コレクション クラスの選択に関する推奨事項
 この記事には、特定のアプリケーション ニーズに合わせてコレクション クラスを選択する際に役立つ詳細情報が含まれています。  

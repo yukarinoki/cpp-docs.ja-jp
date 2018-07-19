@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892476"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock メソッド
 指定されたタイムアウト期間が経過したか、現在のオブジェクトか、指定したハンドルに関連付けられているセマフォ オブジェクトになるまで待機がシグナル状態になっています。  

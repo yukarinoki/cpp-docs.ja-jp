@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::chrono [C++], time_point
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2f425e37d9471db42fa9ceec69048e3936f07c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99209063e8856ffe9ea26ffaaf0917e1f6cd487b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954261"
 ---
 # <a name="timepoint-class"></a>time_point クラス
 
@@ -70,7 +71,7 @@ class time_point;
 |[time_point::operator+=](#op_add_eq)|指定した値を格納された期間に加算します。|
 |[time_point::operator-=](#operator-_eq)|指定した値を格納された期間から減算します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<chrono >
 
@@ -110,7 +111,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A`duration`オブジェクト。
+*期間*  
+ `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -126,7 +128,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A`duration`オブジェクト。
+*期間*  
+ `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -147,15 +150,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A[期間](../standard-library/duration-class.md)オブジェクト。
+*期間*  
+ [duration](../standard-library/duration-class.md) オブジェクト。
 
-`Tp` A`time_point`オブジェクト。
+*Tp*  
+ `time_point` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターは、格納されている `duration` 値が [duration::zero](../standard-library/duration-class.md#zero) と等しいオブジェクトを構築します。
 
-2 番目のコンストラクターは、格納されている duration 値が `Dur` と等しいオブジェクトを構築します。 `is_convertible<Duration2, duration>` が *true を保持*しない限り、2 番目のコンストラクターはオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
+2 番目のコンス トラクターは、格納された期間の値と等しいオブジェクトを構築します。*期間*します。 `is_convertible<Duration2, duration>` が *true を保持*しない限り、2 番目のコンストラクターはオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
 
 3 番目のコンストラクターは、`duration` を使用してその `Tp.time_since_epoch()` 値を初期化します。
 

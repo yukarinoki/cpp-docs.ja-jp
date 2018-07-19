@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351616"
 ---
 # <a name="abcfloat-structure"></a>ABCFLOAT 構造体
 `ABCFLOAT`構造には、フォントの文字の A、B、および C の幅が含まれています。  

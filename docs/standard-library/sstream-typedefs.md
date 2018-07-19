@@ -13,11 +13,12 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: 23a93f90488e56436a8f185d7b4f12218a93a321
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a354a5f7792d85d1d6c5dc02aa1174efae716a73
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963733"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedefs
 
@@ -29,99 +30,99 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="istringstream"></a>  istringstream
 
-`char` テンプレート パラメーターに特殊化された `basic_istringstream` 型を作成します。
+型を作成します`basic_istringstream`に特殊化された、 **char**テンプレート パラメーター。
 
 ```cpp
 typedef basic_istringstream<char> istringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_istringstream](../standard-library/basic-istringstream-class.md) の同意語であり、型 `char` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_istringstream](../standard-library/basic-istringstream-class.md)型の要素に対して特殊化されて、 **char**します。
 
 ## <a name="ostringstream"></a>  ostringstream
 
-`char` テンプレート パラメーターに特殊化された `basic_ostringstream` 型を作成します。
+型を作成します`basic_ostringstream`に特殊化された、 **char**テンプレート パラメーター。
 
 ```cpp
 typedef basic_ostringstream<char> ostringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_ostringstream](../standard-library/basic-ostringstream-class.md) の同意語であり、型 `char` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_ostringstream](../standard-library/basic-ostringstream-class.md)型の要素に対して特殊化されて、 **char**します。
 
 ## <a name="stringbuf"></a>  stringbuf
 
-`char` テンプレート パラメーターに特殊化された `basic_stringbuf` 型を作成します。
+型を作成します`basic_stringbuf`に特殊化された、 **char**テンプレート パラメーター。
 
 ```cpp
 typedef basic_stringbuf<char> stringbuf;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_stringbuf](../standard-library/basic-stringbuf-class.md) の同意語であり、型 `char` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_stringbuf](../standard-library/basic-stringbuf-class.md)型の要素に対して特殊化されて、 **char**します。
 
 ## <a name="stringstream"></a>  stringstream
 
-`char` テンプレート パラメーターに特殊化された `basic_stringstream` 型を作成します。
+型を作成します`basic_stringstream`に特殊化された、 **char**テンプレート パラメーター。
 
 ```cpp
 typedef basic_stringstream<char> stringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_stringstream](../standard-library/basic-stringstream-class.md) の同意語であり、型 `char` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_stringstream](../standard-library/basic-stringstream-class.md)型の要素に対して特殊化されて、 **char**します。
 
 ## <a name="wistringstream"></a>  wistringstream
 
-`wchar_t` テンプレート パラメーターに特殊化された `basic_istringstream` 型を作成します。
+型を作成します`basic_istringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。
 
 ```cpp
 typedef basic_istringstream<wchar_t> wistringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_istringstream](../standard-library/basic-istringstream-class.md) の同意語であり、型 `wchar_t` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_istringstream](../standard-library/basic-istringstream-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
 
 ## <a name="wostringstream"></a>  wostringstream
 
-`wchar_t` テンプレート パラメーターに特殊化された `basic_ostringstream` 型を作成します。
+型を作成します`basic_ostringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。
 
 ```cpp
 typedef basic_ostringstream<wchar_t> wostringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_ostringstream](../standard-library/basic-ostringstream-class.md) の同意語であり、型 `wchar_t` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_ostringstream](../standard-library/basic-ostringstream-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
 
 ## <a name="wstringbuf"></a>  wstringbuf
 
-`wchar_t` テンプレート パラメーターに特殊化された `basic_stringbuf` 型を作成します。
+型を作成します`basic_stringbuf`に特殊化された、 **wchar_t**テンプレート パラメーター。
 
 ```cpp
 typedef basic_stringbuf<wchar_t> wstringbuf;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_stringbuf](../standard-library/basic-stringbuf-class.md) の同意語であり、型 `wchar_t` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_stringbuf](../standard-library/basic-stringbuf-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
 
 ## <a name="wstringstream"></a>  wstringstream
 
-`wchar_t` テンプレート パラメーターに特殊化された `basic_stringstream` 型を作成します。
+型を作成します`basic_stringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。
 
 ```cpp
 typedef basic_stringstream<wchar_t> wstringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_stringstream](../standard-library/basic-stringstream-class.md) の同意語であり、型 `wchar_t` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_stringstream](../standard-library/basic-stringstream-class.md)型の要素に対して特殊化されて、 **wchar_t**します。
 
 ## <a name="see-also"></a>関連項目
 

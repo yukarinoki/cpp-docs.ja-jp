@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880749"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>プラットフォーム、既定、および cli 名前空間 (C++ コンポーネント拡張)
 言語要素の名前は名前空間によって修飾されるため、それ以外は同じである名前と、ソース コードの別の部分で競合することはありません。 たとえば、名前の衝突されない可能性があります、コンパイラを認識し[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)です。 名前空間はコンパイラによって使用されますが、コンパイルされたアセンブリでは保持されません。  

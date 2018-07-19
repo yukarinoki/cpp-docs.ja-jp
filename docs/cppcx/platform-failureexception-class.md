@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088142"
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException クラス
 操作が失敗したときにスローされます。 これは E_FAIL HRESULT と同等です。  

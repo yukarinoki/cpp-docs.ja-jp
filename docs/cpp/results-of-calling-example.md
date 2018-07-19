@@ -1,5 +1,5 @@
 ---
-title: サンプル呼び出しの結果 |Microsoft ドキュメント
+title: サンプル呼び出しの結果 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc5d5f96b5ffabd5397f26b6ff1372232fe0cd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939108"
 ---
 # <a name="results-of-calling-example"></a>サンプル呼び出しの結果
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
@@ -34,13 +35,13 @@ ms.lasthandoff: 05/03/2018
 __cdecl の呼び出し規則  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall と thiscall  
- C の装飾名 (`__stdcall`) は "_MyFunc@20" です。 C++ の装飾名は処理系固有の仕様です。  
+ C の装飾名 (**_ _stdcall**) は"_MyFunc@20"。 C++ の装飾名は商標で守られています。  
   
  ![&#95;&#95;stdcall と thiscall の呼び出し規約](../cpp/media/vc37i02.gif "vc37I02")  
 __stdcall と thiscall の呼び出し規則  
   
 ## <a name="fastcall"></a>__fastcall  
- C の装飾名 (`__fastcall`) は "@MyFunc@20" です。 C++ の装飾名は処理系固有の仕様です。  
+ C の装飾名 (**_ _fastcall**) は"@MyFunc@20"。 C++ の装飾名は商標で守られています。  
   
  ![呼び出し規約の&#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
 __fastcall の呼び出し規則  

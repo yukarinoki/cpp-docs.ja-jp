@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854812"
 ---
 # <a name="associating-an-accelerator-key-with-a-menu-item"></a>アクセラレータ キーとメニュー項目との関連付け
 メニュー項目とキーボードの組み合わせで同じプログラム コマンドを発行したいと思うことはよくあります。 これを行うには、メニュー項目とアプリケーションのアクセラレータ テーブル内のエントリに同じリソース識別子 (ID) を割り当てます。 次に、メニュー項目のキャプションを編集して、アクセラレータの名前を表示します。 メニュー項目とアクセラレータ キーの詳細については、次を参照してください。[アクセラレータ キーとメニュー項目の関連付け](../windows/associating-a-menu-command-with-an-accelerator-key.md)です。  

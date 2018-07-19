@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380071"
 ---
 # <a name="testing-internet-applications"></a>インターネット アプリケーションのテスト
 特に、Web サーバーで実行されているアプリケーションの場合、インターネットには、一意なテスト課題があります。 初期のテストは実行される可能性があります、テスト サーバーに接続するシングル ユーザーのクライアントを使用します。 これは、コードのデバッグに役立つになります。  

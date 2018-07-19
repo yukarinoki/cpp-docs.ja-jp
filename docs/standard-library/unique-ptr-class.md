@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08e2505a77643053c60c4ce1a164dc89cc1e0952
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 554b6a1c405060c975e914340b5e4b312d9b25b7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961556"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr クラス
 
@@ -103,19 +104,23 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` A`unique_ptr`です。
+*右*  
+ `unique_ptr`。
 
-`Nptr` `rvalue`型の`std::nullptr_t`します。
+*関数*  
+ `rvalue` 型の `std::nullptr_t`。
 
-`Ptr` A`pointer`です。
+*ptr*  
+ `pointer`。
 
-`Deleter` A`deleter`にバインドされている関数、`unique_ptr`です。
+*削除子*  
+ `deleter` にバインドされている `unique_ptr` 関数。
 
 ## <a name="exceptions"></a>例外
 
 例外は `unique_ptr` で生成されません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `unique_ptr` クラスは、`auto_ptr` に代わるものであり、C++ 標準ライブラリ コンテナーの要素として使用できます。
 
@@ -123,7 +128,7 @@ public:
 
 `unique_ptr` は一意にリソースを管理します。 `unique_ptr` オブジェクトは null ポインターを所有または保存するオブジェクトへのポインターを格納します。 1 つのリソースは、1 つの `unique_ptr` オブジェクトによってのみ所有されます。特定のリソースを所有する `unique_ptr` オブジェクトが破棄された時点で、リソースが解放されます。 `unique_ptr` オブジェクトを移動することはできますが、コピーすることはできません。詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
-特定の `deleter` に対するリソースの割り当てを認識する、`Del` 型の格納された `unique_ptr` オブジェクトを呼び出すことによって、リソースが解放されます。 既定値`deleter``default_delete<T>`がでリソースを指すことを前提としています`ptr`で割り当てられた`new`、呼び出すことによって解放できることと`delete _Ptr`です。 (部分的特殊化 `unique_ptr<T[]>` は `new[]` で割り当てられた配列オブジェクトを管理します。また、delete[] `deleter` の呼び出しに特化した既定の `default_delete<T[]>` `ptr` があります)。
+特定の `deleter` に対するリソースの割り当てを認識する、`Del` 型の格納された `unique_ptr` オブジェクトを呼び出すことによって、リソースが解放されます。 既定の`deleter``default_delete<T>`がでリソースを指すことを前提としています`ptr`使用が割り当てられた`new`、呼び出すことによって解放できることと`delete _Ptr`します。 (部分的特殊化 `unique_ptr<T[]>` は `new[]` で割り当てられた配列オブジェクトを管理します。また、delete[] `deleter` の呼び出しに特化した既定の `default_delete<T[]>` `ptr` があります)。
 
 所有されたリソースに対する格納されたポインター、`stored_ptr` には、`pointer` 型があります。 これは、定義されている場合は `Del::pointer`、定義されていない場合は `T *` です。 `deleter` がステートレスである場合、格納された `stored_deleter` オブジェクトである `deleter` はオブジェクト内の領域を使用しません。 `Del` が参照型である場合があることに注意してください。
 
@@ -157,12 +162,12 @@ public:
 
 |演算子|説明|
 |-|-|
-|`operator bool`|この演算子は、`bool` に変換可能な型の値を返します。 `bool` への変換結果は、`true` の場合は `get() != pointer()`、それ以外の場合は `false` です。|
+|**operator bool**|演算子に変換できる型の値を返します**bool**します。 変換の結果**bool**は**true**とき`get() != pointer()`それ以外の場合、 **false**します。|
 |`operator->`|このメンバー関数は、`stored_ptr` を返します。|
 |`operator*`|このメンバー関数は、`*stored_ptr` を返します。|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|現在の `unique_ptr` に `unique_ptr` (または `pointer-type`) の値を割り当てます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 
@@ -176,7 +181,7 @@ public:
 typedef Del deleter_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Del` のシノニムです。
 
@@ -188,7 +193,7 @@ typedef Del deleter_type;
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Ty`のシノニムです。
 
@@ -200,7 +205,7 @@ typedef Type element_type;
 pointer get() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`stored_ptr` を返します。
 
@@ -214,7 +219,7 @@ Del& get_deleter();
 const Del& get_deleter() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`stored_deleter` への参照を返します。
 
@@ -233,7 +238,7 @@ unique_ptr& operator=(pointer-type);
 
 現在の `unique_ptr` に値を割り当てるために使用される `unique_ptr` 参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `reset(right.release())` を呼び出し、`right.stored_deleter` を `stored_deleter` に移動し、`*this` を返します。
 
@@ -245,19 +250,19 @@ unique_ptr& operator=(pointer-type);
 typedef T1 pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、定義されている場合は `Del::pointer` の同意語、それ以外の場合は `Type *` の同意語です。
 
 ## <a name="release"></a>  unique_ptr::release
 
-返された格納されているポインターの所有権を呼び出し元に解放し、格納されているポインターの値を `nullptr` に設定します。
+呼び出し元に返される、格納されたポインターの所有権を解放し、格納されているポインター値に設定**nullptr**します。
 
 ```cpp
 pointer release();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `release` を使用して、`unique_ptr` が保存した生のポインターの所有権を引き継ぎます。 呼び出し元は、返されたポインターの削除を担当します。 `unique-ptr` は、既定で構築される空の状態に設定します。 `unique_ptr` を呼び出した後に、互換性のある型の別のポインターを `release` に割り当てることができます。
 
@@ -314,7 +319,7 @@ Deleting Sample(3)
 
 ## <a name="reset"></a>  unique_ptr::reset
 
-ポインター パラメーターの所有権を取得してから、格納されている元のポインターを削除します。 新しいポインターが元の格納されているポインターの場合と同じ場合には、`reset` でポインターを削除して、格納されているポインターを `nullptr` に設定します。
+ポインター パラメーターの所有権を取得してから、格納されている元のポインターを削除します。 新しいポインターは、元の格納されたポインターと同じ場合`reset`ポインターを削除し、格納されたポインター設定**nullptr**します。
 
 ```cpp
 void reset(pointer ptr = pointer());
@@ -325,13 +330,13 @@ void reset(nullptr_t ptr);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|所有権を取得するリソースへのポインター。|
+|*ptr*|所有権を取得するリソースへのポインター。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`reset` を使用して、`unique_ptr` が保有する格納されている[ポインター](#pointer)を `ptr` へ変更してから、元の格納されているポインターを削除します。 `unique_ptr` が空でなかった場合、`reset` は元の格納されているポインターについて [get_deleter](#get_deleter) が返すデリーター関数を呼び出します。
+使用`reset`、格納されている変更[ポインター](#pointer)によって所有されている、`unique_ptr`に*ptr*し、元の格納されているポインターを削除します。 `unique_ptr` が空でなかった場合、`reset` は元の格納されているポインターについて [get_deleter](#get_deleter) が返すデリーター関数を呼び出します。
 
-`reset` は、まず新しいポインター `ptr` を格納してから、格納されている元のポインターを削除するため、新しいポインターと格納されている元のポインターが同じ場合には、`reset` は直ちに `ptr` を削除することがあります。
+`reset`まず新しいポインターを格納*ptr*、元の格納されたポインターを削除しますが可能性があります`reset`を今すぐ削除*ptr*元と同じである場合格納されたポインター。
 
 ## <a name="swap"></a>  unique_ptr::swap
 
@@ -343,9 +348,10 @@ void swap(unique_ptr& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` A`unique_ptr`ポインターを交換するために使用します。
+*right*  
+ ポインターを交換するために使用される `unique_ptr`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`stored_ptr` を `right.stored_ptr` と交換し、`stored_deleter` を `right.stored_deleter` と交換します。
 
@@ -376,15 +382,15 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|`unique_ptr.` に割り当てられるリソースへのポインター。|
-|`_Deleter`|`unique_ptr` に割り当てられる `deleter`。|
-|`right`|新しく構築された `unique_ptr` に対する `unique_ptr` フィールドの割り当て元となる `unique_ptr` への `rvalue reference`。|
+|*ptr*|`unique_ptr.` に割り当てられるリソースへのポインター。|
+|*_Deleter*|`unique_ptr` に割り当てられる `deleter`。|
+|*right*|新しく構築された `unique_ptr` に対する `unique_ptr` フィールドの割り当て元となる `unique_ptr` への `rvalue reference`。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初の 2 つのコンストラクターはリソースを管理しないオブジェクトを構築します。 3 番目のコンストラクターは `stored_ptr` に `ptr` を格納します。 4 番目のコンストラクターは `stored_ptr` に `ptr` を、`stored_deleter` に `deleter` を格納します。
+最初の 2 つのコンストラクターはリソースを管理しないオブジェクトを構築します。 3 番目のコンス トラクター ストア*ptr*で`stored_ptr`します。 4 番目のコンス トラクター ストア*ptr*で`stored_ptr`と`deleter`で`stored_deleter`します。
 
-5 番目のコンストラクターは `stored_ptr` に `ptr` を格納し、`stored_deleter` に `deleter` を移動します。 6 番目と 7 番目のコンストラクターは `stored_ptr` に `right.release()` を格納し、`stored_deleter` に `right.get_deleter()` を移動します。
+5 番目のコンス トラクター ストア*ptr*で`stored_ptr`移動`deleter`に`stored_deleter`します。 6 番目と 7 番目のコンストラクターは `stored_ptr` に `right.release()` を格納し、`stored_deleter` に `right.get_deleter()` を移動します。
 
 ## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
 
@@ -394,7 +400,7 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ~unique_ptr();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このデストラクターは `get_deleter()(stored_ptr)` を呼び出します。
 

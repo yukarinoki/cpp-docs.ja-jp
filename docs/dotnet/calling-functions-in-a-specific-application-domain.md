@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104907"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>特定のアプリケーション ドメイン内での関数の呼び出し
 特定のアプリケーション ドメインで関数の呼び出しをサポートします。  

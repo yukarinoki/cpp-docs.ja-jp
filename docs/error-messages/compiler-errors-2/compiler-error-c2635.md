@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233991"
 ---
 # <a name="compiler-error-c2635"></a>コンパイラ エラー C2635
 変換できません、' identifier1 *'、' identifier2\*'; 仮想基底クラスからの変換は暗黙的に指定  

@@ -21,11 +21,12 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 411fcf8969ba13c4f50360c3db151f0801fd5a28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7dcd064216a9c1f1ba3f014b0f418b18b61193f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954696"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 演算子
 
@@ -52,15 +53,15 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**反復子**です。
+*左*型のオブジェクト`iterator`します。
 
-`right` 型のオブジェクト**反復子**です。
+*適切な*型のオブジェクト`iterator`します。
 
 ### <a name="return-value"></a>戻り値
 
 反復子オブジェクトが等しくない場合は **true**、反復子オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コンテナー内の同じ要素に対応する場合は、1 つの反復子オブジェクトが別の反復子オブジェクトと等しくなります。 2 つの反復子がコンテナー内の異なる要素を指す場合、これらの反復子は等しくありません。
 
@@ -154,19 +155,19 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 反復子の型のオブジェクトです。
+*左*iterator 型のオブジェクト。
 
-`right` 反復子の型のオブジェクトです。
+*適切な*iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-反復子オブジェクトが等しい場合は `true`、反復子オブジェクトが等しくない場合は `false`。
+**true**反復子オブジェクトが等しい場合**false**反復子オブジェクトが等しくない場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コンテナー内の同じ要素に対応する場合は、1 つの反復子オブジェクトが別の反復子オブジェクトと等しくなります。 2 つの反復子がコンテナー内の異なる要素を指す場合、これらの反復子は等しくありません。
 
-最初の 2 つのテンプレート演算子は、`left` と `right` の両方に同じ反復子が格納されている場合にのみ true を返します。 3 番目のテンプレート演算子は、`left` と `right` の両方に同じストリーム ポインターが格納されている場合にのみ true を返します。 4 番目のテンプレート演算子は ` left.equal ( right)` を返します。
+True の場合にだけを返す最初の 2 つのテンプレート演算子は、*左*と*右*同じ反復子を格納します。 3 番目のテンプレート演算子は true の場合にだけ返します*左*と*右*同じストリーム ポインターを格納します。 4 番目のテンプレート演算子は ` left.equal ( right)` を返します。
 
 ### <a name="example"></a>例
 
@@ -241,15 +242,15 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**反復子**です。
+*左*型のオブジェクト`iterator`します。
 
-`right` 型のオブジェクト**反復子**です。
+*適切な*型のオブジェクト`iterator`します。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が式の右側の反復子未満の場合は **true**、式の右側の反復子以上の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト未満となります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以上となります。
 
@@ -330,15 +331,15 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 反復子の型のオブジェクトです。
+*左*iterator 型のオブジェクト。
 
-`right` 反復子の型のオブジェクトです。
+*適切な*iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が右側の反復子以下の場合は **true**、右側の反復子より大きい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以下となります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクトより大きくなります。
 
@@ -423,15 +424,15 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 反復子の型のオブジェクトです。
+*左*iterator 型のオブジェクト。
 
-`right` 反復子の型のオブジェクトです。
+*適切な*iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が式の右側の反復子より大きい場合は **true**、式の右側の反復子以下の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクトより大きくなります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以下となります。
 
@@ -510,15 +511,15 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 反復子の型のオブジェクトです。
+*左*iterator 型のオブジェクト。
 
-`right` 反復子の型のオブジェクトです。
+*適切な*iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が式の右側の反復子以上の場合は **true**、式の右側の反復子未満の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以上となります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト未満となります。
 
@@ -612,13 +613,13 @@ operator+(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` Const move_iterator または const reverse_iterator がオフセットを位置の数。
+*_Off* const move_iterator または const reverse_iterator がオフセットされる位置の数。
 
-`right` オフセットする反復子。
+*適切な*オフセットされる反復子。
 
 ### <a name="return-value"></a>戻り値
 
-合計 `right` + `_Off` を返します。
+合計を返します*右* + *_Off*します。
 
 ### <a name="example"></a>例
 
@@ -687,15 +688,15 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 反復子。
+*左*反復子。
 
-`right` 反復子。
+*適切な*反復子。
 
 ### <a name="return-value"></a>戻り値
 
 2 つの反復子の相違点。`.`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のテンプレート演算子は `left.base() - right.base()` を返します。
 

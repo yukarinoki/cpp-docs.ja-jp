@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107819"
 ---
 # <a name="transactions--mfc-data-access"></a>トランザクション (MFC データ アクセス)
 トランザクションの概念は、データベースの結果の状態が、一連の操作の全体的な成功に依存するケースを処理するために開発されました。 このような状況は、連続した操作によって前の操作の結果が変更される場合があるために発生します。 このような場合は、いずれかの操作が失敗すると、最終的な状態が不定になることがあります。  

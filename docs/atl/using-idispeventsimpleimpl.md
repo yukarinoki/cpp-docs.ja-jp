@@ -1,5 +1,5 @@
 ---
-title: されます (ATL) を使用して |Microsoft ドキュメント
+title: Idispeventsimpleimpl の使用 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cdef5012288b7f5f17040f73dfac5ec1f90d4f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34fad264e222d27c82f8c1cf79f59664f2c3f601
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850782"
 ---
-# <a name="using-idispeventsimpleimpl"></a>IDispEventSimpleImpl を使用します。
+# <a name="using-idispeventsimpleimpl"></a>Idispeventsimpleimpl の使用
 使用する場合`IDispEventSimpleImpl`イベントを処理する必要があります。  
   
--   クラスを派生[されます](../atl/reference/idispeventsimpleimpl-class.md)です。  
+-   クラスを派生[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)します。  
   
--   クラスには、イベント シンク マップを追加します。  
+-   クラスにイベント シンク マップを追加します。  
   
--   定義[_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md)イベントを記述する構造体。  
+-   定義[_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md)のイベントを表す構造体。  
   
--   イベント シンク マップを使用して、エントリを追加、 [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info)マクロです。  
+-   イベント シンク マップを使用するエントリを追加、 [SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info)マクロ。  
   
--   興味のある処理でメソッドを実装します。  
+-   処理したいメソッドを実装します。  
   
--   案内し、イベント ソースをアドバイズします。  
+-   イベント ソースをアドバイズことをお勧めします.  
   
 ## <a name="example"></a>例  
- 次の例は、処理する方法を示します、 **DocumentChange**によって Word のイベントが発生した**アプリケーション**オブジェクト。 このイベントは、メソッドとしてで定義されている、 **ApplicationEvents**ディスパッチ インターフェイスです。  
+ 次の例は、処理する方法を示します、`DocumentChange`によって Word のイベントが発生した**アプリケーション**オブジェクト。 このイベントは、メソッドとしてで定義されている、`ApplicationEvents`ディスパッチ インターフェイス。  
   
- 例は、[コード](../visual-cpp-samples.md)です。  
+ 例は、[コード](../visual-cpp-samples.md)します。  
   
  `[`  
   
@@ -70,13 +71,13 @@ ms.lasthandoff: 05/03/2018
   
  `};`  
   
- この例では`#import`を Word のタイプ ライブラリから、必要なヘッダー ファイルを生成します。 Word の他のバージョンでこの例を使用する場合は、正しい mso dll ファイルを指定する必要があります。 たとえば、Office 2000 mso9.dll を提供し、OfficeXP が mso.dll を提供します。 このコードは、stdafx.h からが簡素化されます。  
+ この例では`#import`Word のタイプ ライブラリから必要なヘッダー ファイルを生成します。 Word の他のバージョンでこの例を使用する場合は、正しい mso dll ファイルを指定する必要があります。 たとえば、Office 2000 mso9.dll を提供し、OfficeXP が mso.dll を提供します。 このコードは、stdafx.h から簡素化します。  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]  
   
- この例では実際に使用されるタイプ ライブラリから唯一の情報は、Word の CLSID**アプリケーション**オブジェクトとの IID、 **ApplicationEvents**インターフェイスです。 この情報は、コンパイル時にのみ使用されます。  
+ この例では実際に使用されるタイプ ライブラリからの唯一の情報は、Word の CLSID`Application`オブジェクトとの IID、`ApplicationEvents`インターフェイス。 この情報はコンパイル時にのみ使用します。  
   
- Simple.h に次のコードが表示されます。 関連するコードにはコメントで注意します。  
+ Simple.h に次のコードが表示されます。 関連するコードは、コメントでされています。  
   
  [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]  
   

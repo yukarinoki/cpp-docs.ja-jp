@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247886"
 ---
 # <a name="compiler-error-c3265"></a>コンパイラ エラー C3265
 マネージ 'マネージ構造' で、アンマネージ 'アンマネージ コンストラクト' を宣言することはできません。  

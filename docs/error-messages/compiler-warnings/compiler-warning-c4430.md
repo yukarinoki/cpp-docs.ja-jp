@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272114"
 ---
 # <a name="compiler-warning-c4430"></a>コンパイラの警告 C4430
 型指定子がありません - int と仮定しました。 注: C++ は int を既定値をサポートしていません  

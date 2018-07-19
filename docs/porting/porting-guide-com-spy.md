@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845610"
 ---
 # <a name="porting-guide-com-spy"></a>移植のガイド: COM Spy
 このトピックは、旧バージョンの Visual C++ プロジェクトを Visual Studio の最新バージョンにアップグレードするプロセスについて説明する一連の記事の 2 番目です。 このトピックのコード例は、前回 Visual Studio 2005 でコンパイルされています。  

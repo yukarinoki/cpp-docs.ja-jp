@@ -1,5 +1,5 @@
 ---
-title: 構造体 (C++) |Microsoft ドキュメント
+title: 構造体 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9ea6bea20ad1591db9b07507b4db959d10a318
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f4b343097be6c15b5a273fd4e2a59198858d576
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943237"
 ---
 # <a name="struct-c"></a>struct (C++ )
-`struct` キーワードは構造体型や構造体型の変数の定義に使用します。  
+**構造体**キーワードは構造体型や構造体型の変数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,46 +37,46 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `template-spec`  
- テンプレートの指定 (省略可能)。 詳細についてを参照してください[テンプレートの仕様](templates-cpp.md)です。  
+ *テンプレートの仕様*  
+ テンプレートの指定 (省略可能)。 詳細についてを参照してください[テンプレートの仕様](templates-cpp.md)します。  
   
- `struct`  
- `struct` キーワード。  
+ *struct*  
+ **構造体**キーワード。  
   
- `ms-decl-spec`  
+ *ms 宣言の仕様*  
  ストレージ クラスの指定 (省略可能)。 詳細についてを参照してください、 [_ _declspec](../cpp/declspec.md)キーワード。  
   
- `tag`  
- 構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)です。  
+ *タグ*  
+ 構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)します。  
   
- `base-list`  
- この構造体がメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラス](../cpp/base-classes.md)詳細についてはします。 各基底クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワードです。 メンバー アクセス テーブルを参照してください[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。  
+ *基本リスト*  
+ この構造体がメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラスの](../cpp/base-classes.md)詳細についてはします。 各基本クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワード。 メンバー アクセス テーブルを参照してください。[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。  
   
- `member-list`  
- 構造体のメンバーのリスト。 参照してください[クラス メンバーの概要](../cpp/class-member-overview.md)詳細についてはします。 ここで唯一の違いは、`struct` が `class` の代わりに使用されることです。  
+ *メンバー リスト*  
+ 構造体のメンバーのリスト。 参照してください[クラス メンバーの概要](../cpp/class-member-overview.md)詳細についてはします。 ここで唯一の違いは**構造体**の代わりに使用が**クラス**します。  
   
- `declarators`  
- クラスの名前を指定する宣言子リスト。 宣言子リストは構造体型の 1 つ以上のインスタンスを宣言します。 宣言子には、クラスのすべてのデータ メンバーが `public` である場合、初期化子リストが含まれる場合があります。 初期子のリストは構造体では一般的です。構造体のデータ メンバーは既定で `public` であるためです。  参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。  
+ *宣言子*  
+ クラスの名前を指定する宣言子リスト。 宣言子リストは構造体型の 1 つ以上のインスタンスを宣言します。 クラスのすべてのデータ メンバーがある場合、宣言子は初期化子リストを含めることができます**パブリック**します。 データ メンバーがあるために、初期化子リストは構造体で一般的な**パブリック**既定。  参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  構造体型はユーザー定義の複合データ型です。 この型は異なる型のフィールドやメンバーで構成されます。  
   
- C++ では、構造体はクラスと同じですが、そのメンバーが既定で `public` である点は異なります。  
+ C++ では、構造体はクラスと同じメンバーが実行される点を除いて**パブリック**既定。  
   
- 詳細については、マネージ クラスと構造体は、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)です。  
+ マネージ クラスと構造体については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。  
   
 ## <a name="using-a-structure"></a>構造体の使用  
- C では、構造体を宣言するには、`struct` キーワードの明示的な使用が必要です。 C++ では、型の定義後に `struct` キーワードを使用する必要はありません。  
+ C では、明示的に使用する必要あります、**構造体**キーワードを構造体を宣言します。 C++ では使用する必要はありません、**構造体**キーワード、型が定義した後にします。  
   
  右中かっことセミコロンの間に 1 つ以上のコンマ区切りの変数名を挿入することで構造体型を定義している場合は、変数を宣言してもかまいません。  
   
  構造体の変数は初期化できます。 各変数の初期化は中かっこで囲む必要があります。  
   
- 関連情報については、次を参照してください。[クラス](../cpp/class-cpp.md)、[共用体](../cpp/unions.md)、および[enum](../cpp/enumerations-cpp.md)です。  
+ 関連情報については、次を参照してください。[クラス](../cpp/class-cpp.md)、[共用体](../cpp/unions.md)、および[enum](../cpp/enumerations-cpp.md)します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   

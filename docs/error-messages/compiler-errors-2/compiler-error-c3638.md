@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267091"
 ---
 # <a name="compiler-error-c3638"></a>コンパイラ エラー C3638
 'operator': 標準ボックス化とボックス化解除変換演算子を再定義することはできません  

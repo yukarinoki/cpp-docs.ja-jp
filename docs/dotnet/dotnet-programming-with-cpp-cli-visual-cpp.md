@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110247"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>C++/CLI (Visual C++) による .NET プログラミング
 次のトピックでは、.NET プラットフォームを対象として Visual C++ を使用する方法について説明します。  

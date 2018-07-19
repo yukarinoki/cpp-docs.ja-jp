@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956506"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="quick-tips"></a>簡単なヒント
 
-ここでは、いくつかのヒントを使用する場合に留意する\<ランダム >:
+いくつかのヒントを使用する場合に留意する\<ランダム >:
 
 - ほとんどの場合、URNG は分布で成形される必要がある生のビットを生成します (主な例外は、[std::shuffle()](../standard-library/algorithm-functions.md#shuffle) で、理由は URNG を直接使用するからです)。
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/08/2018
 
 - 大部分のアプリケーションに対して最も役立つ組み合わせは、`mt19937` エンジンと `uniform_int_distribution` の組み合わせです (この記事の後の方にある[コード例](#code)に示されています)。
 
-選択に多くのオプションがある、\<ランダム > ヘッダー、およびそれらのいずれかが期限切れの C ランタイム関数にも適しています`rand()`です。 については、何が発生しています`rand()`とどのように\<ランダム > これらの欠点に対処を参照してください[このビデオ](http://go.microsoft.com/fwlink/p/?linkid=397615)です。
+多くのオプションがある、 \<random > ヘッダー、およびこれらのいずれかが期限切れの C ランタイム関数のことをお勧め`rand()`します。 スクリプトに問題がについて`rand()`とどのように\<ランダム > これらの欠点を補いを参照してください[このビデオ](http://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a> 例
 
@@ -227,7 +228,7 @@ URNG は、次の特性においてよく説明されます。
 
 3. **品質**: 生成されたシーケンスがどれほど真の乱数に近いか。 これは通常 "*ランダム性*" と呼ばれます。
 
-次のセクションでは、一覧、uniform random number generator (Urng) で提供される、\<ランダム > ヘッダー。
+次のセクションでは、一覧の uniform random number generator (Urng) で提供される、 \<random > ヘッダー。
 
 ####  <a name="rd"></a> 非確定的なジェネレーター
 
@@ -293,7 +294,7 @@ URNG は、次の特性においてよく説明されます。
 
 ###  <a name="distributions"></a> 乱数分布
 
-次のセクションでは、一覧で提供されている分布、\<ランダム > ヘッダー。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
+次のセクションでは、一覧で提供されている分布、 \<random > ヘッダー。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
 
 #### <a name="uniform-distributions"></a>一様分布
 
@@ -309,7 +310,7 @@ URNG は、次の特性においてよく説明されます。
 
 |||
 |-|-|
-|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|`bool` 値のベルヌイ分布を作成します。|
+|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|ベルヌイ分布を作成**bool**値。|
 |[binomial_distribution クラス](../standard-library/binomial-distribution-class.md)|整数値の二項分布を作成します。|
 |[geometric_distribution クラス](../standard-library/geometric-distribution-class.md)|整数値の幾何分布を作成します。|
 |[negative_binomial_distribution クラス](../standard-library/negative-binomial-distribution-class.md)|整数値の負の二項分布を作成します。|
@@ -353,7 +354,7 @@ URNG は、次の特性においてよく説明されます。
 
 ### <a name="utility-functions"></a>ユーティリティ関数
 
-このセクションで提供される一般的なユーティリティ関数を一覧表示、\<ランダム > ヘッダー。
+このセクションで提供される一般的なユーティリティ関数を一覧表示、 \<random > ヘッダー。
 
 |||
 |-|-|
@@ -361,7 +362,7 @@ URNG は、次の特性においてよく説明されます。
 
 ### <a name="operators"></a>演算子
 
-このセクションで提供される演算子の一覧、\<ランダム > ヘッダー。
+このセクションで提供される演算子の一覧を\<random > ヘッダー。
 
 |||
 |-|-|
@@ -372,13 +373,13 @@ URNG は、次の特性においてよく説明されます。
 
 ## <a name="engdist"></a> エンジンと分布
 
-これらのテンプレート クラス カテゴリで定義されている各については、次のセクションを参照してください\<ランダム >。 これらのテンプレート クラス カテゴリではいずれも引数として型を受け取り、共有のテンプレート パラメーター名を使って、実引数の型として許可されている、次の型のプロパティを表します。
+定義されているこれらのテンプレート クラス カテゴリのそれぞれについては、次のセクションを参照してください\<ランダム >。 これらのテンプレート クラス カテゴリではいずれも引数として型を受け取り、共有のテンプレート パラメーター名を使って、実引数の型として許可されている、次の型のプロパティを表します。
 
-- `IntType` は、`short`、`int`、`long`、`long long`、`unsigned short`、`unsigned int`、`unsigned long`、または `unsigned long long` を示します。
+- `IntType` 示す、**短い**、 **int**、**長い**、 **long**、 **unsigned short**、 **符号なし int**、 **unsigned long**、または**unsigned long long 型**します。
 
-- `UIntType` は、`unsigned short`、`unsigned int`、`unsigned long`、または `unsigned long long` を示します。
+- `UIntType` 示します**unsigned short**、**符号なし int**、 **unsigned long**、または**unsigned long long 型**します。
 
-- `RealType` は、`float`、`double`、または `long double` を示します。
+- `RealType` 示す、 **float**、**二重**、または**long double**します。
 
 ### <a name="engines"></a>エンジン
 
@@ -462,8 +463,8 @@ URNG は、次の特性においてよく説明されます。
 
 |URNG|Fast|暗号的に安全|シード設定可能|Deterministic|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|[はい]|いいえ|[はい]|はい<sup>*</sup>|
-|`random_device`|×|はい|いいえ|×|
+|`mt19937`|[はい]|×|[はい]|はい<sup>*</sup>|
+|`random_device`|いいえ|はい|×|いいえ|
 
 <sup>* 既知のシードが提供される場合。</sup>
 

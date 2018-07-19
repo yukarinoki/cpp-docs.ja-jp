@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd8b757ab46d462bd5d6a596f7dbbfdd18061a8d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5666aca2d6a855b64af26d38a1ae834fecec5d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958466"
 ---
 # <a name="isassignable-class"></a>is_assignable クラス
 
@@ -37,13 +38,13 @@ struct is_assignable;
 
 オブジェクトの型には、割り当てを受け取る。
 
-値を提供するオブジェクトの型。
+オブジェクトの型から値を提供します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 `From` と `To` の両方とも完全な型、`void`、または不明なバインドの配列にする必要があります。
+評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 両方`From`と`To`完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

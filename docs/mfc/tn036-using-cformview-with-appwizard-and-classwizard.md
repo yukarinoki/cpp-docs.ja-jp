@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379876"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>テクニカル ノート 36: AppWizard と ClassWizard を使って CFormView を利用する方法
 このテクニカル ノートには、使用するために、AppWizard が生成されたアプリケーションを変更する方法が説明されている、 `CFormView` 、既定ではなく`CView`ビューのメイン クラスです。 これは、このバージョンの Visual C と直接はサポートされています。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136614"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>方法: PInvoke を使用して構造体をマーシャリングする
 このドキュメントでは、C スタイル構造体に呼び出すことによってマネージ関数 P/invoke を使用してを受け入れるどのネイティブ関数について説明します。 代わりに、C++ Interop 機能を使用することをお勧めします P/invoke P/invoke はほとんどのコンパイル時エラーを報告があるので、タイプ セーフではありませんしを実装する、アンマネージ API が DLL としてパッケージ化され、ソース コードが面倒になることができます。P/invoke は唯一のオプションを使用できる、です。 それ以外の場合、次のドキュメントを参照してください。  

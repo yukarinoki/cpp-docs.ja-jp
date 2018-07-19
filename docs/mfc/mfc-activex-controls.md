@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930098"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX コントロール
 ActiveX コントロールは、コンポーネント オブジェクト モデル (COM: Component Object Model) に基づく再利用可能なソフトウェア コンポーネントです。多岐にわたる OLE の機能をサポートしており、さまざまなソフトウェアの要件に合わせてカスタマイズできます。 ActiveX コントロールは、通常の ActiveX コントロール コンテナー内と、インターネット上の WWW (World Wide Web) ページの両方で使用できるように設計されています。 MFC では、ここでは、またはに記載されているのいずれかの ActiveX コントロールを作成できる、[アクティブ テンプレート ライブラリ (ATL)](../atl/active-template-library-atl-concepts.md)です。  
@@ -76,7 +77,7 @@ ActiveX コントロール コンテナーと ActiveX コントロールとの�
   
  前の図では、コントロールが他の OLE インターフェイスを (オートメーションとイベント以外の方法で) 処理する方法も示します。  
   
- コントロールとコンテナーとのすべての通信は、`COleControl` によって実行されます。 コンテナーの要求の一部を処理するために**COleControl**メンバー コントロール クラスに実装されている関数を呼び出します。 すべてのメソッドと一部のプロパティは、この方法で処理されます。 開発するコントロールが属するクラスは、`COleControl` のメンバー関数を呼び出して、コンテナーとの通信を開始することもできます。 イベントは次の方法で発生します。  
+ コントロールとコンテナーとのすべての通信は、`COleControl` によって実行されます。 コンテナーの要求の一部を処理するために`COleControl`メンバー コントロール クラスに実装されている関数を呼び出します。 すべてのメソッドと一部のプロパティは、この方法で処理されます。 開発するコントロールが属するクラスは、`COleControl` のメンバー関数を呼び出して、コンテナーとの通信を開始することもできます。 イベントは次の方法で発生します。  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> ActiveX コントロールのアクティブおよび非アクティブの状態  
  各コントロールには、アクティブおよび非アクティブという 2 つの基本的な状態があります。 従来、これらの状態は、コントロールがウィンドウを持つかどうかという形で判別されていました。 アクティブなコントロールはウィンドウを持ち、非アクティブなコントロールはウィンドウを持たないという分類でした。 ウィンドウなしのアクティブ状態が導入された結果、この区別はもう普遍的ではありませんが、今でも多くのコントロールに適用されます。  

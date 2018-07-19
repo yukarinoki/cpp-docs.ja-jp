@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686816"
 ---
 # <a name="c1-notation"></a>C.1 表記
 文法規則は、非終端、名の後に別の行に交換用の代替手段を続けて、コロンです。  

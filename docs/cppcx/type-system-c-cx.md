@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094372"
 ---
 # <a name="type-system-ccx"></a>型システム (C++/CX)
 Windows ランタイムのアーキテクチャを使用するを使用することが C + + CX、Visual Basic、Visual c# および JavaScript アプリやコンポーネントを直接 Windows API にアクセスし、その他の Windows ランタイム アプリおよびコンポーネントと相互運用を書き込めません。 C++ で記述されているユニバーサル Windows プラットフォーム アプリは、CPU で直接実行するネイティブ コードにコンパイルされます。 C# または Visual Basic で記述されているユニバーサル Windows プラットフォーム アプリでは、Microsoft intermediate language (MSIL) にコンパイルされ、共通言語ランタイム (CLR) で実行します。 JavaScript で記述されているユニバーサル Windows プラットフォーム アプリは、実行時環境で実行します。 Windows ランタイムのオペレーティング システム コンポーネント自体では、C++ で記述され、ネイティブ コードとして実行することができます。 これらすべてのコンポーネントおよびユニバーサル Windows プラットフォーム アプリは、Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を通じて直接通信します。  

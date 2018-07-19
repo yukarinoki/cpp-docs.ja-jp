@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409723"
 ---
 # <a name="additional-startup-considerations"></a>起動に関するその他の考慮事項
 C++ では、オブジェクトの構築時と破棄時にユーザー コードを実行することができます。 したがって、どの初期化に入る前に発生する可能性を理解しておく必要は**メイン**から出た後にどのデストラクターが呼び出されると**メイン**です。 (オブジェクトの構築と破棄の詳細については、次を参照してください[コンス トラクター](../cpp/constructors-cpp.md)と[デストラクター](../cpp/destructors-cpp.md)。)。  

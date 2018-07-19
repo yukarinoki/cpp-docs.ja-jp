@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382849"
 ---
 # <a name="initialization"></a>初期化
 "初期化子" は、宣言された変数に代入される値または値のシーケンスです。 変数宣言の宣言子に初期化子を適用して、変数を初期値に設定できます。 初期化子の値を変数に割り当てます。  

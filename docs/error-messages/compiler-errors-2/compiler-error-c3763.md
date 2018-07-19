@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269026"
 ---
 # <a name="compiler-error-c3763"></a>コンパイラ エラー C3763
 'type': 'retval' および 'out' はデータ ポインター型でのみ使用できます  

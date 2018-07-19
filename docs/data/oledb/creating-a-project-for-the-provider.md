@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098356"
 ---
 # <a name="creating-a-project-for-the-provider"></a>プロバイダーのプロジェクトの作成
 #### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>OLE DB プロバイダーが存在するプロジェクトを作成するには  

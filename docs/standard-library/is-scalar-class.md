@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962372"
 ---
 # <a name="isscalar-class"></a>is_scalar クラス
 
@@ -36,11 +37,11 @@ struct is_scalar;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型述語のインスタンスは、型 `Ty` が、整数型、浮動小数点型、列挙型、ポインター型、メンバーへのポインター型、またはそのうちいずれかの `cv-qualified` 形式である場合は true を保持し、それ以外の場合は false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*が整数型、メンバーの種類、型、列挙型、ポインター型、またはポインター浮動小数点または`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
 
 ## <a name="example"></a>例
 
@@ -78,7 +79,7 @@ is_scalar<int> == true
 is_scalar<float> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

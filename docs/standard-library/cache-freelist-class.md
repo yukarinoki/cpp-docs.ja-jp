@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8478490914a6f9049cd54ec78c8de8a1e519f36f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960418"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist クラス
 
@@ -41,14 +42,14 @@ class cache_freelist
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Sz`|割り当てられる配列内の要素の数。|
-|`Max`|フリー リストの最大サイズを表す max クラスです。 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_variable_size](../standard-library/max-variable-size-class.md) のいずれかにすることができます。|
+|*sz*|割り当てられる配列内の要素の数。|
+|*Max*|フリー リストの最大サイズを表す max クラスです。 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_variable_size](../standard-library/max-variable-size-class.md) のいずれかにすることができます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-cache_freelist テンプレート クラスは、サイズが `Sz` であるフリー リストを保持します。 フリー リストがいっぱいになると、`operator delete` を使用してメモリ ブロックの割り当てを解除します。 フリー リストが空になると、`operator new` を使用して新しいメモリ ブロックを割り当てます。 フリー リストの最大サイズは、max クラスで `Max` パラメーターに渡されたクラスによって決定されます。
+Cache_freelist テンプレート クラスは、メモリ ブロックのサイズのフリー リストを保持する*Sz*します。 使用して、フリー リストがいっぱいになったとき**delete 演算子**メモリの割り当てを解除するブロックします。 使用して、フリー リストが空の場合**演算子 new**新しいメモリ ブロックを割り当てる。 フリー リストの最大サイズは、クラスに渡される最大クラスによって決まります、*最大*パラメーター。
 
-各メモリ ブロックは、`Sz` バイトの使用可能なメモリと、`operator new` および `operator delete` に必要なデータを保持します。
+各メモリ ブロックを保持*Sz*使用可能なメモリと、データのバイトを**演算子 new**と**delete 演算子**が必要です。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -63,7 +64,7 @@ cache_freelist テンプレート クラスは、サイズが `Sz` であるフ�
 |[allocate](#allocate)|メモリのブロックを割り当てます。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -81,13 +82,13 @@ void *allocate(std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`count`|割り当てられる配列内の要素の数。|
+|*count*|割り当てられる配列内の要素の数。|
 
 ### <a name="return-value"></a>戻り値
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_freelist"></a>  cache_freelist::cache_freelist
 
@@ -97,7 +98,7 @@ void *allocate(std::size_t count);
 cache_freelist();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="deallocate"></a>  cache_freelist::deallocate
 
@@ -111,10 +112,10 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`count`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

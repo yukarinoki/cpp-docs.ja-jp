@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369904"
 ---
 # <a name="txt-files-as-linker-input"></a>リンカー入力としての .txt ファイル
 リンクでは、追加の入力としてさまざまなテキスト ファイルが必要です。 [コマンド ファイル](../../build/reference/link-command-files.md)指定子 (@) と[のベース アドレス](../../build/reference/base-base-address.md)(/base)、 [/DEF](../../build/reference/def-specify-module-definition-file.md)、および[/order](../../build/reference/order-put-functions-in-order.md)オプションすべては、テキスト ファイルを指定します。 これらのファイルには、任意の拡張機能、だけでなく .txt を持つことができます。  

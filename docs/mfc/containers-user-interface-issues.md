@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341190"
 ---
 # <a name="containers-user-interface-issues"></a>コンテナー : ユーザー インターフェイスの問題
 リンクと埋め込みの項目を適切に管理するコンテナー アプリケーションのユーザー インターフェイスをいくつかの機能を追加する必要があります。 これらの機能には、メニュー構造およびアプリケーションが処理するイベントに対する変更が含まれます。 詳細については、次の記事を参照してください。  

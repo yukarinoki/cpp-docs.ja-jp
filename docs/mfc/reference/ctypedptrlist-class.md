@@ -36,11 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f74782241ec69d77ec55b8613c59f87adb40fb
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122831"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList クラス
 `CPtrList`クラスのオブジェクトに対してタイプ セーフな "ラップ" が用意されています。  
@@ -53,10 +54,10 @@ class CTypedPtrList : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  クラスの基本クラス、型付きポインター リストです。ポインター リストのクラスにする必要があります (`CObList`または`CPtrList`)。  
   
- `TYPE`  
+ *TYPE*  
  基底クラス リストに格納されている要素の型。  
   
 ## <a name="members"></a>メンバー  
@@ -76,7 +77,7 @@ class CTypedPtrList : public BASE_CLASS
 |[CTypedPtrList::RemoveTail](#removetail)|リストの末尾から要素を削除します。|  
 |[CTypedPtrList::SetAt](#setat)|指定された位置に要素を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  使用すると`CTypedPtrList`なく`CObList`または`CPtrList`C++ の型チェック機能は、一致していないポインター型によって発生したエラーを解消します。  
   
  さらに、`CTypedPtrList`ラッパーを使用した場合に必要になるキャストの多くを実行します`CObList`または`CPtrList`です。  
@@ -103,7 +104,7 @@ class CTypedPtrList : public BASE_CLASS
   
  `CTypedPtrList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtempl.h  
   
 ##  <a name="addhead"></a>  CTypedPtrList::AddHead  
@@ -118,19 +119,19 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYPE*  
  基底クラス リストに格納されている要素の型。  
   
- `newElement`  
- この一覧に追加するオブジェクトのポインター。 A **NULL**値は許可します。  
+ *newElement*  
+ この一覧に追加するオブジェクトのポインター。 NULL 値は許可されています。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  クラスの基本クラス、型付きポインター リストです。ポインター リストのクラスにする必要があります ( [CObList](../../mfc/reference/coblist-class.md)または[CPtrList](../../mfc/reference/cptrlist-class.md))。  
   
- `pNewList`  
- 別のポインター [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)オブジェクト。 内の要素`pNewList`この一覧に追加されます。  
+ *pNewList*  
+ 別のポインター [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)オブジェクト。 内の要素*pNewList*この一覧に追加されます。  
   
 ### <a name="return-value"></a>戻り値  
- 最初のバージョンを返します、**位置**は新しく挿入される要素の値。  
+ 最初のバージョンでは、新しく挿入される要素の位置の値を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初のバージョンでは、リストの先頭の前に新しい要素を追加します。 2 番目のバージョンでは、先頭の前に要素の別のリストを追加します。  
   
 ##  <a name="addtail"></a>  CTypedPtrList::AddTail  
@@ -145,23 +146,23 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *TYPE*  
  基底クラス リストに格納されている要素の型。  
   
- `newElement`  
- この一覧に追加するオブジェクトのポインター。 A **NULL**値は許可します。  
+ *newElement*  
+ この一覧に追加するオブジェクトのポインター。 NULL 値は許可されています。  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  クラスの基本クラス、型付きポインター リストです。ポインター リストのクラスにする必要があります ( [CObList](../../mfc/reference/coblist-class.md)または[CPtrList](../../mfc/reference/cptrlist-class.md))。  
   
- `pNewList`  
- 別のポインター [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)オブジェクト。 内の要素`pNewList`この一覧に追加されます。  
+ *pNewList*  
+ 別のポインター [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md)オブジェクト。 内の要素*pNewList*この一覧に追加されます。  
   
 ### <a name="return-value"></a>戻り値  
- 最初のバージョンを返します、**位置**は新しく挿入される要素の値。  
+ 最初のバージョンでは、新しく挿入される要素の位置の値を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初のバージョンでは、リストの末尾の後に新しい要素を追加します。 2 番目のバージョンでは、リストの末尾の後に要素の別のリストを追加します。  
   
 ##  <a name="getat"></a>  CTypedPtrList::GetAt  
- 型の変数**位置**はリストのキーです。  
+ 位置の型の変数は、リストのキーです。  
   
 ```  
 TYPE& GetAt(POSITION position);  
@@ -173,17 +174,17 @@ TYPE GetAt(POSITION position) const;
  一覧に格納されている要素の型を指定するテンプレート パラメーター。  
   
  *位置*  
- A**位置**によって以前返される値`GetHeadPosition`または**検索**メンバー関数の呼び出しです。  
+ 以前から返される位置の値`GetHeadPosition`または`Find`メンバー関数の呼び出しです。  
   
 ### <a name="return-value"></a>戻り値  
- リストへのポインターを介してアクセスする場合、 **const CTypedPtrList**、し`GetAt`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
+ リストへのポインターを介してアクセスする場合、 `const CTypedPtrList`、し`GetAt`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
   
  一覧には直接にも、ポインターを介してアクセスする場合、 `CTypedPtrList`、し`GetAt`テンプレート パラメーターで指定された型のポインターへの参照を返します*型*です。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
   
-### <a name="remarks"></a>コメント  
- インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `GetAt` 取得、`CObject`指定した位置に関連付けられたポインター。  
+### <a name="remarks"></a>Remarks  
+ 操作できません。 位置の値を自分であり、インデックスと同じではありません。 `GetAt` 取得、`CObject`指定した位置に関連付けられたポインター。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
  このインライン関数が呼び出す`BASE_CLASS` **:: GetAt**です。  
   
@@ -200,15 +201,15 @@ TYPE GetHead() const;
  一覧に格納されている要素の型を指定するテンプレート パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
- リストへのポインターを介してアクセスする場合、 **const CTypedPtrList**、し`GetHead`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
+ リストへのポインターを介してアクセスする場合、 `const CTypedPtrList`、し`GetHead`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
   
  一覧には直接にも、ポインターを介してアクセスする場合、 `CTypedPtrList`、し`GetHead`テンプレート パラメーターで指定された型のポインターへの参照を返します*型*です。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`GetHead`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](../../mfc/reference/coblist-class.md#isempty)リストに要素が含まれていることを確認します。  
   
 ##  <a name="getnext"></a>  CTypedPtrList::GetNext  
- によって識別される要素を取得`rPosition`を設定し、`rPosition`を**位置**一覧の次のエントリの値。  
+ によって識別される要素を取得*rPosition*を設定し、 *rPosition*一覧の次のエントリの位置の値にします。  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -219,25 +220,25 @@ TYPE GetNext(POSITION& rPosition) const;
  *TYPE*  
  この一覧に含まれる要素の型を指定するテンプレート パラメーター。  
   
- `rPosition`  
- 参照、**位置**によって以前返される値`GetNext`、 `GetHeadPosition`、またはその他のメンバー関数の呼び出しです。  
+ *rPosition*  
+ 以前から返される位置の値への参照を`GetNext`、 `GetHeadPosition`、またはその他のメンバー関数の呼び出しです。  
   
 ### <a name="return-value"></a>戻り値  
- リストへのポインターを介してアクセスする場合、 **const CTypedPtrList**、し`GetNext`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
+ リストへのポインターを介してアクセスする場合、 `const CTypedPtrList`、し`GetNext`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
   
  一覧には直接にも、ポインターを介してアクセスする場合、 `CTypedPtrList`、し`GetNext`テンプレート パラメーターで指定された型のポインターへの参照を返します*型*です。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用することができます`GetNext`への呼び出しに最初の位置を確立する場合は、順方向の反復ループで`GetHeadPosition`または[CPtrList::Find](../../mfc/reference/coblist-class.md#find)です。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
- 場合は、取得した最後の要素を一覧での新しい値`rPosition`に設定されている**NULL**です。  
+ 場合は、取得した最後の要素を一覧での新しい値*rPosition*は NULL に設定します。  
   
  反復処理中に要素を削除することができます。 例を参照して[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)です。  
   
 ##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
- 要素を取得します ボックスの一覧によって識別される`rPosition`を設定し、`rPosition`を**位置**一覧の前のエントリの値。  
+ 要素を取得します ボックスの一覧によって識別される*rPosition*を設定し、 *rPosition*一覧の前のエントリの位置の値にします。  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -248,20 +249,20 @@ TYPE GetPrev(POSITION& rPosition) const;
  *TYPE*  
  この一覧に含まれる要素の型を指定するテンプレート パラメーター。  
   
- `rPosition`  
- 参照、**位置**によって以前返される値`GetPrev`またはその他のメンバー関数の呼び出しです。  
+ *rPosition*  
+ 以前から返される位置の値への参照を`GetPrev`またはその他のメンバー関数の呼び出しです。  
   
 ### <a name="return-value"></a>戻り値  
- リストへのポインターを介してアクセスする場合、 **const CTypedPtrList**、し`GetPrev`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
+ リストへのポインターを介してアクセスする場合、 `const CTypedPtrList`、し`GetPrev`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
   
  一覧には直接にも、ポインターを介してアクセスする場合、 `CTypedPtrList`、し`GetPrev`テンプレート パラメーターで指定された型のポインターへの参照を返します*型*です。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
   
-### <a name="remarks"></a>コメント  
- 使用することができます`GetPrev`への呼び出しに最初の位置を確立する場合は、反転反復ループで`GetTailPosition`または**検索**です。  
+### <a name="remarks"></a>Remarks  
+ 使用することができます`GetPrev`への呼び出しに最初の位置を確立する場合は、反転反復ループで`GetTailPosition`または`Find`です。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
- 取得される要素が一覧で、最初、新しい値の`rPosition`に設定されている**NULL**です。  
+ 取得される要素が一覧で、最初、新しい値の*rPosition*は NULL に設定します。  
   
 ##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  この一覧の先頭の要素を表すポインターを取得します。  
@@ -276,11 +277,11 @@ TYPE GetTail() const;
  一覧に格納されている要素の型を指定するテンプレート パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
- リストへのポインターを介してアクセスする場合、 **const CTypedPtrList**、し`GetTail`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
+ リストへのポインターを介してアクセスする場合、 `const CTypedPtrList`、し`GetTail`テンプレート パラメーターによって指定された型のポインターを返します*型*です。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、したがって変更から一覧を保護できます。  
   
  一覧には直接にも、ポインターを介してアクセスする場合、 `CTypedPtrList`、し`GetTail`テンプレート パラメーターで指定された型のポインターへの参照を返します*型*です。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`GetTail`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](../../mfc/reference/coblist-class.md#isempty)リストに要素が含まれていることを確認します。  
   
 ##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
@@ -297,7 +298,7 @@ TYPE RemoveHead();
 ### <a name="return-value"></a>戻り値  
  リストの先頭にあったのポインター。 このポインターは、テンプレート パラメーターで指定された型*型*です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`RemoveHead`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](../../mfc/reference/coblist-class.md#isempty)リストに要素が含まれていることを確認します。  
   
 ##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
@@ -314,7 +315,7 @@ TYPE RemoveTail();
 ### <a name="return-value"></a>戻り値  
  リストの末尾にあったのポインター。 このポインターは、テンプレート パラメーターで指定された型*型*です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リストが呼び出す前に空でないことを確認する必要があります`RemoveTail`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](../../mfc/reference/coblist-class.md#isempty)リストに要素が含まれていることを確認します。  
   
 ##  <a name="setat"></a>  CTypedPtrList::SetAt  
@@ -325,19 +326,19 @@ void SetAt(POSITION pos, TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pos`  
- **位置**を設定する要素のです。  
+ *pos*  
+ 設定する要素の位置。  
   
  *TYPE*  
  基底クラス リストに格納されている要素の型。  
   
- `newElement`  
+ *newElement*  
  一覧に書き込まれるオブジェクトのポインター。  
   
-### <a name="remarks"></a>コメント  
- 型の変数**位置**はリストのキーです。 インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `SetAt` オブジェクトへのポインターを一覧内の指定位置に書き込みます。  
+### <a name="remarks"></a>Remarks  
+ 位置の型の変数は、リストのキーです。 操作できません。 位置の値を自分であり、インデックスと同じではありません。 `SetAt` オブジェクトへのポインターを一覧内の指定位置に書き込みます。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
  詳細についてを参照してください。 [CObList::SetAt](../../mfc/reference/coblist-class.md#setat)です。  
   

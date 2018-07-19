@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693251"
 ---
 # <a name="extent-class-c-amp"></a>extent クラス (C++ AMP)
 ベクターを表します*N*の境界を指定する整数値、 *N*-0 の原点が次元の空間です。 ベクターの値は最上位から最下位へ順に並べ替えられます。  

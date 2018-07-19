@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689481"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections のコンストラクト
 **Parallel sections の**ディレクティブを指定するショートカット フォームを提供する、**並列**が 1 つのみが含まれる領域**セクション**ディレクティブです。 セマンティクスは明示的に指定することと同じ、**並列**ディレクティブの直後に続く、**セクション**ディレクティブです。 構文、 **parallel sections の**ディレクティブは、次のようにします。  

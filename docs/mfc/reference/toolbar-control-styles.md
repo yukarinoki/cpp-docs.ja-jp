@@ -1,5 +1,5 @@
 ---
-title: ツール バー コントロールのスタイル |Microsoft ドキュメント
+title: ツール バー コントロールのスタイル |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1958c83ef5a0eec5f3c7f5873451edd3839146be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35b5b87944f2b0f9ce78adbe42b59d92b98a6e5a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885836"
 ---
 # <a name="toolbar-control-styles"></a>ツール バー コントロールのスタイル
-[CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)外観を決定するスタイル フラグのセットと、ボタンの動作を持ちます。 これらのフラグの組み合わせを設定するには呼び出すことによって[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)です。 このトピックでは、スタイル フラグの値とその意味を示します。  
+[CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)がボタンの動作と外観を決定するスタイル フラグのセット。 これらのフラグの組み合わせを設定するには呼び出すことによって[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)します。 このトピックでは、スタイル フラグの値とその意味を示します。  
   
-## <a name="property-values"></a>プロパティ値  
- 次の値には、コントロールを表すボタンの種類を決定します。  
+## <a name="property-values"></a>プロパティの値  
+ 次の値は、コントロールを表すボタンの種類を決定します。  
   
  TBBS_BUTTON  
- 標準プッシュ ボタン (既定)。  
+ 標準プッシュ ボタン (既定値)。  
   
  TBBS_CHECKBOX  
- オンにします。  
+ チェック ボックスです。  
   
  TBBS_CHECKGROUP  
- チェック ボックスのグループの開始。  
+ チェック ボックスの グループの先頭。  
   
  TBBS_GROUP  
  ボタンのグループの開始。  
@@ -58,14 +59,14 @@ ms.lasthandoff: 05/04/2018
  次の値は、ツールバーのボタンのレイアウトを変更します。  
   
  TBBS_BREAK  
- 新しい行にまたは新しい列の列を分離することがなく、項目を配置します。  
+ 新しい行または新しい列に列を分離することがなく、項目を配置します。  
   
-## <a name="remarks"></a>コメント  
- 現在のスタイルが格納されている[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)です。 新しい値を設定しないで`m_nStyle`直接、いくつかの派生クラスで呼び出すときに、追加の処理を実行するため`SetStyles`です。  
+## <a name="remarks"></a>Remarks  
+ 現在のスタイルが格納されている[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)します。 新しい値を設定しないでください`m_nStyle`を直接いくつかの派生クラスを呼び出すときに、追加の処理を実行するため、`SetStyles`します。  
   
- ビジュアル マネージャーでは、各状態のボタンの外観を決定します。 参照してください[ビジュアル マネージャー](../../mfc/visualization-manager.md)詳細についてはします。  
+ ビジュアル マネージャーでは、各状態にあるボタンの外観を決定します。 参照してください[ビジュアル マネージャー](../../mfc/visualization-manager.md)詳細についてはします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxtoolbarbutton.h  
   
 ## <a name="see-also"></a>関連項目  

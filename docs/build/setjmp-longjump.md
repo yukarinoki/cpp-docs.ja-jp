@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379836"
 ---
 # <a name="setjmplongjump"></a>setjmp/longjump
 Setjmpex.h または setjmp.h を含めると、すべての呼び出し[setjmp](../c-runtime-library/reference/setjmp.md)または[longjmp](../c-runtime-library/reference/longjmp.md)デストラクターを呼び出すし、最後に呼び出されをアンワインドが発生します。  これは、プロセスは、finally 句の setjmp.h とデストラクターを呼び出さない x86 とは異なります。  

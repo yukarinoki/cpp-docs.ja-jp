@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422164"
 ---
 # <a name="tilestatic-keyword"></a>tile_static キーワード
 `tile_static` キーワードは、スレッドのタイル内のすべてのスレッドによってアクセスできる変数を宣言するために使用されます。 実行が宣言の位置を達したときに変数の有効期間が開始し、カーネル関数の復帰時に終了します。 タイルを使用する方法については、次を参照してください。[を使用してタイル](../parallel/amp/using-tiles.md)です。  

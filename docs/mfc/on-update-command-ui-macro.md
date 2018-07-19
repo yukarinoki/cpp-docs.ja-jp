@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 726eba2edbb857784a3a23ddcfb2d69fd8e30a72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43caffe53be180221b4145a03df7cfc41c31828e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928639"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI マクロ
-使用して、**プロパティ**コマンド ターゲット オブジェクトにコマンド更新ハンドラーへのユーザー インターフェイス オブジェクトを接続するウィンドウです。 ユーザー インターフェイス オブジェクトの ID を自動的に接続、`ON_UPDATE_COMMAND_UI`マクロを更新プログラムを処理するオブジェクトでのハンドラーを作成します。 参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)詳細についてはします。  
+使用して、**プロパティ**コマンド ターゲット オブジェクトにコマンド更新ハンドラーへのユーザー インターフェイス オブジェクトを接続するウィンドウです。 ON_UPDATE_COMMAND_UI マクロをユーザー インターフェイス オブジェクトの ID を接続し、ハンドラーを更新プログラムを処理するオブジェクトを生成するには自動的にします。 参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)詳細についてはします。  
   
  たとえば、更新するには、プログラムの編集 メニューで、すべてクリア コマンドを使用して、**プロパティ**コマンド更新ハンドラーの関数宣言を選択したクラスのメッセージ マップ エントリを追加するウィンドウと呼ばれる`OnUpdateEditClearAll`クラス宣言、およびクラスの実装ファイルには空の関数テンプレートです。 関数プロトタイプは、次のようになります。  
   

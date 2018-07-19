@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347247"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC インターネット プログラミングのタスク
 このセクションには、アプリケーションにインターネット サポートを追加するための詳細な手順が含まれています。 トピックには、既存の COM コンポーネントをアクティブなドキュメントのサポートを追加する方法と、既存のアプリケーションのインターネット対応にする MFC クラスを使用する方法が含まれます。 最新の株価情報、ピッツバーグの試合の結果を持つドキュメントを作成するし、南極 Microsoft の最新の温度がインターネット経由で行うを支援するテクノロジの数を提供します。  

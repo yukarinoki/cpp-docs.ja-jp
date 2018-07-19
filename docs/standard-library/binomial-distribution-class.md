@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f46e2d7f6fd7337965d0b5dcf5b5cfe8d7a53688
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957686"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution クラス
 
@@ -80,20 +81,20 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数結果型が既定で`int`です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 *URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、二項分布の離散確率関数に従って分布した、ユーザー指定の整数型の値または型 `int` の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**int**がない場合は、二項分布の離散確率関数に従って分散されます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-プロパティ メンバー `t()` と `p()` はそれぞれ、格納されている分布パラメーター `t` と `p` の値を返します。
+プロパティ メンバー`t()`と`p()`格納されている分布パラメーター値を返す*t*と*p*それぞれします。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -232,7 +233,7 @@ Histogram for 100 samples:
     21 :
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -253,13 +254,13 @@ explicit binomial_distribution(const param_type& parm);
 
 *p* 、`p`分布パラメーター。
 
-*パラメーター* 、`param_type`分布の作成に使用される構造体。
+*parm* 、`param_type`分布の作成に使用される構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0 ≤ t` および `0.0 ≤ p ≤ 1.0`
 
-1 つ目のコンストラクターは、格納されている値 `p` と `t` にそれぞれ *p* と *t* の値を保持するオブジェクトを作成します。
+最初のコンス トラクターは、オブジェクトを構築します。 あるストアド*p*値を保持*p*とがストアド*t*値を保持*t*します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
@@ -285,9 +286,9 @@ struct param_type {
 
 *p* 、`p`分布パラメーター。
 
-*右*、`param_type`これと比較するオブジェクト。
+*適切な*、`param_type`これと比較するオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0 ≤ t` および `0.0 ≤ p ≤ 1.0`
 

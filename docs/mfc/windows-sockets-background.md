@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384938"
 ---
 # <a name="windows-sockets-background"></a>Windows ソケット : 予備知識
 この記事では、Windows ソケットの特性と目的について説明します。 以下の内容についても説明します。  

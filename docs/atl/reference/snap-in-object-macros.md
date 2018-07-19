@@ -1,5 +1,5 @@
 ---
-title: スナップイン オブジェクト マクロ |Microsoft ドキュメント
+title: スナップイン オブジェクトに関するマクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,31 +21,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8a335bbe5424ca04f1db03a3f3ac4bf3cfa9ec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dee93d395a86cc2c06945f9f6f1e84ced6558af
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879406"
 ---
-# <a name="snap-in-object-macros"></a>スナップイン オブジェクト マクロ
+# <a name="snap-in-object-macros"></a>スナップイン オブジェクトに関するマクロ
 これらのマクロは、スナップインの拡張機能のサポートを提供します。  
   
 |||  
 |-|-|  
-|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|スナップインでオブジェクトのスナップイン拡張データ クラスのマップの先頭を示します。|  
-|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|スナップインでオブジェクトのツールバーのマップの先頭をマークします。|  
-|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|スナップイン拡張クラスのデータ マップのスナップインでオブジェクトの末尾をマークします。|  
-|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|スナップインでオブジェクトのツールバーのマップの最後をマークします。|  
+|[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)|スナップイン オブジェクトのスナップイン拡張データ クラスのマップの先頭をマークします。|  
+|[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)|スナップイン オブジェクトのツールバーのマップの先頭をマークします。|  
+|[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)|スナップイン オブジェクトのスナップイン拡張データ クラスのマップの終了を示します。|  
+|[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)|スナップイン オブジェクトのマップをツールバーの最後をマークします。|  
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|スナップイン拡張機能のデータ クラスのデータ メンバーを作成します。|  
-|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|スナップインでオブジェクトのスナップイン拡張データ クラスのマップにスナップイン拡張データ クラスを入力します。|  
-|[SNAPINMENUID](#snapinmenuid)|スナップインでオブジェクトによって使用されるコンテキスト メニューの ID を宣言します。|  
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|スナップインでオブジェクトのツールバーのマップにツールバーを入力します。|  
+|[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|スナップイン オブジェクトのスナップイン拡張データ クラスのマップには、スナップインの拡張機能のデータ クラスを入力します。|  
+|[SNAPINMENUID](#snapinmenuid)|スナップイン オブジェクトによって使用されるコンテキスト メニューの ID を宣言します。|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|スナップイン オブジェクトのツールバーのマップをツールバーに入力します。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlsnap.h 
    
 ##  <a name="begin_extension_snapin_nodeinfo_map"></a>  BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
- スナップイン拡張データ クラスのマップの先頭を示します。  
+ スナップインの拡張機能のデータ クラスのマップの先頭をマークします。  
   
 ```
 BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
@@ -53,54 +54,54 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
   
 ### <a name="parameters"></a>パラメーター  
  *classname*  
- [in]スナップイン拡張データ クラスの名前。  
+ [in]スナップインの拡張機能のデータ クラスの名前。  
   
-### <a name="remarks"></a>コメント  
- スナップイン拡張マップを開始、`BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP`マクロ、スナップイン拡張データ型と型の各エントリを追加、 [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)マクロでマップを完了し、 [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)マクロです。  
+### <a name="remarks"></a>Remarks  
+ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP マクロ拡張スナップインでマップを開始、スナップイン拡張データ型と型の各エントリを追加、 [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)マクロ、うえで、とマップ[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)マクロ。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
 ##  <a name="begin_snapintoolbarid_map"></a>  BEGIN_SNAPINTOOLBARID_MAP  
- マップの先頭、ツールバー ID のスナップインでオブジェクトを宣言します。  
+ スナップイン オブジェクトのツールバーの ID のマップの先頭を宣言します。  
   
 ```
 BEGIN_SNAPINTOOLBARID_MAP(_class)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_class`  
+ *(_c)*  
  [in]スナップイン オブジェクト クラスを指定します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#106](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
   
 ##  <a name="end_extension_snapin_nodeinfo_map"></a>  END_EXTENSION_SNAPIN_NODEINFO_MAP  
- データ クラスのマップのスナップイン拡張の末尾をマークします。  
+ スナップインの拡張機能のデータ クラスのマップの最後をマークします。  
   
 ```
 END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ```  
   
-### <a name="remarks"></a>コメント  
- 拡張スナップインでマップを開始、 [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)マクロ、拡張スナップインでデータの種類とそれぞれのエントリを追加、 [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)マクロマップを完了し、`END_EXTENSION_SNAPIN_NODEINFO_MAP`マクロです。  
+### <a name="remarks"></a>Remarks  
+ スナップイン拡張マップを開始、 [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)マクロ、ごとに、拡張機能のスナップインからのデータ型のエントリを追加、 [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)マクロEND_EXTENSION_SNAPIN_NODEINFO_MAP マクロでマップを完了します。  
   
 ### <a name="example"></a>例  
- 例を参照して[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)です。  
+ 例をご覧ください[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)します。  
   
 ##  <a name="end_snapintoolbarid_map"></a>  END_SNAPINTOOLBARID_MAP  
- マップの最後、ツールバー ID のスナップインでオブジェクトを宣言します。  
+ スナップイン オブジェクトのツールバーの ID のマップの末尾を宣言します。  
   
 ```
 END_SNAPINTOOLBARID_MAP( _class )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `_class`  
+ *(_c)*  
  [in]スナップイン オブジェクト クラスを指定します。  
   
 ### <a name="example"></a>例  
- 例を参照して[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)です。  
+ 例をご覧ください[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)します。  
   
 ##  <a name="extension_snapin_dataclass"></a>  EXTENSION_SNAPIN_DATACLASS  
  スナップイン拡張データ クラスにデータ メンバーを追加、 **ISnapInItemImpl**-クラスを派生します。  
@@ -110,31 +111,31 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dataClass`  
- [in]データ クラスのスナップイン拡張します。  
+ *dataClass*  
+ [in]スナップイン拡張機能のデータ クラス。  
   
-### <a name="remarks"></a>コメント  
- このクラスは、スナップイン拡張データのクラスのマップにも入力する必要があります。 スナップイン拡張データ クラス マップを開始、 [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)マクロ、スナップイン拡張データ型と型の各エントリを追加、 [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)マクロでマップを完了し、 [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)マクロです。  
+### <a name="remarks"></a>Remarks  
+ このクラスは、スナップイン拡張データのクラスのマップにも入力する必要があります。 スナップイン拡張データ クラス マップを開始、 [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)マクロ、スナップイン拡張データ型と型の各エントリを追加、 [EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)マクロを含むマップを完了して、 [END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)マクロ。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Windowing#105](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
 ##  <a name="extension_snapin_nodeinfo_entry"></a>  EXTENSION_SNAPIN_NODEINFO_ENTRY  
- データ クラスのマップのスナップイン拡張にスナップイン拡張データ クラスを追加します。  
+ スナップイン拡張データ クラスのマップには、スナップインの拡張機能のデータ クラスを追加します。  
   
 ```
 EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dataClass`  
- [in]データ クラスのスナップイン拡張します。  
+ *dataClass*  
+ [in]スナップイン拡張機能のデータ クラス。  
   
-### <a name="remarks"></a>コメント  
- スナップイン拡張データ クラス マップを開始、 [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)マクロ、スナップイン拡張データ型と型の各エントリを追加、`EXTENSION_SNAPIN_NODEINFO_ENTRY`マクロ、でマップを完了し、[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)マクロです。  
+### <a name="remarks"></a>Remarks  
+ スナップイン拡張データ クラス マップを開始、 [BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)マクロ、EXTENSION_SNAPIN_NODEINFO_ENTRY のマクロを含む、スナップインの拡張機能のデータ型の各エントリを追加し、マップを完了[END_EXTENSION_SNAPIN_NODEINFO_MAP](#end_extension_snapin_nodeinfo_map)マクロ。  
   
 ### <a name="example"></a>例  
- 例を参照して[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)です。  
+ 例をご覧ください[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)します。  
   
 ##  <a name="snapinmenuid"></a>  SNAPINMENUID  
  このマクロを使用すると、スナップイン オブジェクトのコンテキスト メニュー リソースを宣言できます。  
@@ -144,25 +145,25 @@ SNAPINMENUID( id )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `id`  
- [in]スナップインでオブジェクトのコンテキスト メニューを識別します。  
+ *ID*  
+ [in]スナップイン オブジェクトのコンテキスト メニューを識別します。  
   
 ##  <a name="snapintoolbarid_entry"></a>  SNAPINTOOLBARID_ENTRY  
- このマクロを使用すると、スナップイン オブジェクトのツールバー ID マップにツールバー ID を入力します。  
+ このマクロを使用すると、スナップイン オブジェクトの ID のマップのツールバーに、ツールバーの ID を入力します。  
   
 ```
 SNAPINTOOLBARID_ENTRY( id )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `id`  
+ *ID*  
  [in]ツール バー コントロールを識別します。  
   
-### <a name="remarks"></a>コメント  
- [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)マクロは、ツールバー ID マップの開始をマーク; [END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)マクロは、終了を示します。  
+### <a name="remarks"></a>Remarks  
+ [BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)マクロには、ツールバー ID のマップの先頭は[END_SNAPINTOOLBARID_MAP](#end_snapintoolbarid_map)マクロは、終了をマークします。  
   
 ### <a name="example"></a>例  
- 例を参照して[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)です。  
+ 例をご覧ください[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)します。  
   
 ## <a name="see-also"></a>関連項目  
  [[マクロ]](../../atl/reference/atl-macros.md)

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346182"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>ダイアログ ボックスの有効期間
 ライフ サイクルは、ダイアログ ボックスの中に、ユーザーがダイアログ ボックスを呼び出します、通常コマンド ハンドラーを作成し、ダイアログ オブジェクトを初期化する、内部ユーザーと通信します ダイアログ ボックス、ダイアログ ボックスを閉じます。  

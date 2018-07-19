@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127215"
 ---
 # <a name="how-to-unbox"></a>方法: ボックス化を解除する
 ボックス化を解除し、値を変更する方法を示します。  

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078422"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>エクスプローラー形式の MFC アプリケーションの作成
 多くの Windows システム アプリケーションは、ファイル エクスプ ローラーのユーザー インターフェイス (UI) を使用します。 ファイル エクスプ ローラーを開始するときになど、表示、垂直方向に分割分割バー クライアント領域を持つアプリケーション。 クライアント領域の左側にあるナビゲーションと参照の機能を提供し、クライアント領域の右側にある詳細が表示されます、選択範囲を左ペインでします。 ユーザーには、左側のウィンドウ内の項目がクリックすると、アプリケーションには、右側のウィンドウが再作成されます。 MDI アプリケーションでのコマンドを使用することができます、**ビュー**  メニューの右側のウィンドウに表示される詳細情報の量を変更します。 (SDI またはマルチ トップレベル ドキュメント アプリケーションでは、ツールバーのボタンのみを使用して詳細を変更できます)。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
   
  ウィザードでは、次のクラスを作成します。  
   
--   **CLeftView**クラスは、クライアント領域の左側のウィンドウを定義します。 常に由来[CTreeView](../../mfc/reference/ctreeview-class.md)です。  
+-   `CLeftView`クラスは、クライアント領域の左側のウィンドウを定義します。 常に由来[CTreeView](../../mfc/reference/ctreeview-class.md)です。  
   
 -   C*ProjName*ビュー クラスがクライアント領域の右側のウィンドウを定義します。 既定では、派生は[CListView](../../mfc/reference/clistview-class.md)から指定したクラスによってビューの他の種類を指定できますが、**基底クラス**一覧に、[生成されたクラス](../../mfc/reference/generated-classes-mfc-application-wizard.md)のページ、ウィザード。  
   

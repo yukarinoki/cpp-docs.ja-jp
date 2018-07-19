@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5e2ceff83704632a77ef0fb1eedecaa9e678b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954019"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 #include <future>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > 使用してコンパイルされたコードで **/clr**、このヘッダーはブロックされます。
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/07/2018
 
 テンプレート関数 `async`、およびテンプレート クラス `promise` と `packaged_task` は、非同期プロバイダーです。 テンプレート クラス `future` と `shared_future` は、非同期のリターン オブジェクトを記述します。
 
-各テンプレート クラス (`promise`、`future`、`shared_future`) は、`void` 型に特殊化されています。また、参照渡しによる値の格納と取得用に部分的に特殊化されています。 これらの特殊化がプライマリ テンプレートと異なる点は、戻り値を格納および取得する関数のシグネチャとセマンティクスだけです。
+テンプレート クラスの各`promise`、 `future`、および`shared_future`型に特殊化が**void**と格納すると、参照渡しで値を取得する部分的な特殊化します。 これらの特殊化がプライマリ テンプレートと異なる点は、戻り値を格納および取得する関数のシグネチャとセマンティクスだけです。
 
 テンプレート クラス `future` と `shared_future` では、それらのデストラクターでブロックは実行されません。ただし、下位互換性のために次のような例外が 1 つだけあります。`future` で開始されたタスクにアタッチされている `shared_future` (または最後の `std::async`) では、他のすべての future とは異なり、タスクが完了していない場合にデストラクターでブロックが実行されます。つまり、デストラクターがブロックするのは、スレッドがまだ `.get()` や `.wait()` を呼び出しておらず、タスクが実行中の場合です。 標準の草案では、`std::async` の説明に使用上の注意事項が追加されています。その注意事項とは、「メモ: std::async から取得された future をローカル スコープ外に移動する場合、future を使用する他のコードでは、future のデストラクターは共有状態が準備完了になるのをブロックする可能性があることを考慮する必要があります。」といったものです。ただし、それ以外の場合は、`future` と `shared_future` のデストラクターでは、ブロックが確実に実行されないようにする必要があります。
 
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/07/2018
 
 ### <a name="enumerations"></a>列挙
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|`future_error` クラスによって報告されるエラーのシンボル名を提供します。|
 |[future_status](../standard-library/future-enums.md#future_status)|期限が設定された wait 関数から返される理由のシンボル名を提供します。|

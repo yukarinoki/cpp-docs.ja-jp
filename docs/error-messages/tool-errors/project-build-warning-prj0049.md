@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319811"
 ---
 # <a name="project-build-warning-prj0049"></a>プロジェクト ビルドの警告 PRJ0049
 参照先の対象 '\<参照 >'.NET Framework が必要\<ごと > とは、このプロジェクトのターゲット フレームワーク上で実行できません  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688285"
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections のコンストラクト
 **セクション**ディレクティブを識別、noniterative work-sharing コンス トラクターの構造体をチーム内のスレッドに分割するにはセットを指定します。 各セクションでは、チーム内のスレッドで 1 回実行されます。 構文、**セクション**ディレクティブは、次のようにします。  

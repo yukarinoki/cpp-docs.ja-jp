@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350485"
 ---
 # <a name="output-device-context-classes"></a>出力 (デバイス コンテキスト) クラス
 これらのクラスには、Windows で使用可能なデバイス コンテキストのさまざまな種類がカプセル化します。  

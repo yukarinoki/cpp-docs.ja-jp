@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859814"
 ---
 # <a name="boolstructmember-data-member"></a>BoolStruct::Member データ メンバー
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  

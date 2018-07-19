@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350368"
 ---
 # <a name="onidle-member-function"></a>OnIdle メンバー関数
 Windows メッセージを処理するないときに、フレームワーク、 [CWinApp](../mfc/reference/cwinapp-class.md)メンバー関数は、 [OnIdle](../mfc/reference/cwinapp-class.md#onidle) (MFC ライブラリ リファレンス 』 で説明)。  

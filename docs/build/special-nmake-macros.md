@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380015"
 ---
 # <a name="special-nmake-macros"></a>NMAKE の特殊マクロ
 (Nmake の) は、さまざまなファイル名とコマンドを表すいくつかの特別なマクロを提供します。 これらのマクロの一部の 1 つの用途は、あらかじめ定義された推論規則です。 すべてのマクロのように、マクロ (nmake の) によって提供されるは大文字小文字を区別します。  

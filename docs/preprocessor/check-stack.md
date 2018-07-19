@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849770"
 ---
 # <a name="checkstack"></a>check_stack
 場合、スタック プローブをオフにするコンパイラに指示**オフ**(または**-**) が指定されている場合、スタック プローブをオンにする、または**で**(または**+**) を指定します。  

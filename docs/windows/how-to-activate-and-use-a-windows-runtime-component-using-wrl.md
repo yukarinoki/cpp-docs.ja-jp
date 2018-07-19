@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880775"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>方法: WRL を使用して Windows ランタイム コンポーネントをアクティブ化し使用する
 このドキュメントでは、Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、Windows ランタイムを初期化する方法とアクティブ化して、Windows ランタイム コンポーネントを使用する方法を示します。  

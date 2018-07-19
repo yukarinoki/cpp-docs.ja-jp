@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691145"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ の OpenMP
 OpenMP C および C++ アプリケーション プログラミング インターフェイスでは、複数のプロセッサを効果的に使用するアプリケーションを作成することができます。 Visual C では、OpenMP 2.0 標準をサポートします。  

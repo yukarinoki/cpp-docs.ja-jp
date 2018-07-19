@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089818"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>ODBC でデータベース フォーム (レコード ビュー) を使うには
 データ入力やデータの表示など、一部のアプリケーションでは、フォーム、ダイアログと同様、コントロールでは、ビューが必要です。  

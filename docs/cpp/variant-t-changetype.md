@@ -1,5 +1,5 @@
 ---
-title: _variant_t::ChangeType |Microsoft ドキュメント
+title: _variant_t::ChangeType |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fd73fc9606053dda6f8c143618373ad9bb7e4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d9e4d7193755f70e3463f4da60d88a7bd832c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943481"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 **Microsoft 固有の仕様**  
   
- 型を変更、`_variant_t`オブジェクトを指定された**VARTYPE**です。  
+ 型を変更、`_variant_t`オブジェクトを指定された`VARTYPE`します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
   
-      void ChangeType(  
+void ChangeType(  
    VARTYPE vartype,  
    const _variant_t* pSrc = NULL   
 );  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `vartype`  
- **VARTYPE**この`_variant_t`オブジェクト。  
+ *vartype*  
+ `VARTYPE`この`_variant_t`オブジェクト。  
   
- `pSrc`  
- 変換する `_variant_t` オブジェクトへのポインター。 この値が場合**NULL**変換が適切に行われます。  
+ *pSrc*  
+ 変換する `_variant_t` オブジェクトへのポインター。 この値が NULL の場合は、変換が適切に実行されます。  
   
-## <a name="remarks"></a>コメント  
- このメンバー関数に変換する`_variant_t`を指定されたオブジェクト**VARTYPE**です。 場合`pSrc`は**NULL**、変換が行われる代わりに、それ以外の場合この`_variant_t`からオブジェクトをコピー`pSrc`され、換算します。  
+## <a name="remarks"></a>Remarks  
+ このメンバー関数に変換する`_variant_t`オブジェクトを指定された`VARTYPE`します。 場合*pSrc*が NULL の場合、変換が行われる場所、それ以外の場合にこの`_variant_t`からオブジェクトをコピー *pSrc*変換と。  
   
  **Microsoft 固有の仕様はここまで**  
   

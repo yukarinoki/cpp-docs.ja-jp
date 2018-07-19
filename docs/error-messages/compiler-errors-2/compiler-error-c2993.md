@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242316"
 ---
 # <a name="compiler-error-c2993"></a>コンパイラ エラー C2993
 'identifier': 非型テンプレート パラメーター 'parameter' に対する無効な型  

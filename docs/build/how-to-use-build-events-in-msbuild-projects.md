@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369774"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルド イベントを使用する
 ビルド イベントは、コマンドを[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]ビルド プロセスで特定のステージでを実行します。 *ビルド前*ビルドの開始前に、イベントが発生した以外の場合は、*リンク前*、リンクの手順を開始する前に発生するイベントと*ビルド後*ビルドの後にイベントが発生します。正常に終了します。 ビルド イベントは、関連するビルド ステップが発生した場合にのみ発生します。 たとえば、リンク ステップが実行されない場合に、このリンク前イベントは発生しません。  

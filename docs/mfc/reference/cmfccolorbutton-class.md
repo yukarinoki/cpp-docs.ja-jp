@@ -1,5 +1,5 @@
 ---
-title: CMFCColorButton クラス |Microsoft ドキュメント
+title: CMFCColorButton クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -54,14 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cea6fc2a543a528a0838479b2c47bea99f21cf96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac1b2c7f078acaa929cbfec0ac85456e6d72ee20
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850109"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton クラス
-`CMFCColorButton`と[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)カラー ピッカー コントロールを実装するクラスが一緒に使用されます。  
+`CMFCColorButton`と[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)カラー ピッカー コントロールを実装するクラスを組み合わせて使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -81,63 +82,63 @@ class CMFCColorButton : public CMFCButton
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|有効にし、通常の色のボタンの上に配置する「自動」ボタンを無効にします。 (標準のシステムの自動ボタンのラベルは**自動**)。|  
-|[CMFCColorButton::EnableOtherButton](#enableotherbutton)|有効にし、標準のカラー ボタンの下にある、"other"ボタンを無効にします。 ("のその他"ボタンのラベルは、標準的なシステム**他の色**)。|  
+|[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|有効にし、通常の色のボタンの上に配置された「自動」のボタンを無効にします。 (標準のシステムの自動ボタンのラベルは**自動**)。|  
+|[CMFCColorButton::EnableOtherButton](#enableotherbutton)|有効にし、標準のカラー ボタンの下にある、「その他」ボタンを無効にします。 ("Other"ボタンのラベルは、標準的なシステム**その他の色**)。|  
 |[CMFCColorButton::GetAutomaticColor](#getautomaticcolor)|現在の自動の色を取得します。|  
 |[CMFCColorButton::GetColor](#getcolor)|ボタンの色を取得します。|  
 |[CMFCColorButton::SetColor](#setcolor)|ボタンの色を設定します。|  
 |[CMFCColorButton::SetColorName](#setcolorname)|色の名前を設定します。|  
-|[CMFCColorButton::SetColumnsNumber](#setcolumnsnumber)|カラー ピッカー ダイアログ ボックスの列の数を設定します。|  
+|[CMFCColorButton::SetColumnsNumber](#setcolumnsnumber)|カラー ピッカー ダイアログ ボックスで、列の数を設定します。|  
 |[CMFCColorButton::SetDocumentColors](#setdocumentcolors)|カラー ピッカー ダイアログ ボックスに表示されるドキュメントに固有の色の一覧を指定します。|  
 |[CMFCColorButton::SetPalette](#setpalette)|標準の表示の色のパレットを指定します。|  
-|[CMFCColorButton::SizeToContent](#sizetocontent)|そのテキストおよびイメージのサイズによっては、ボタン コントロールのサイズを変更します。|  
+|[CMFCColorButton::SizeToContent](#sizetocontent)|テキストとイメージのサイズに応じて、ボタン コントロールのサイズを変更します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Windows XP の視覚スタイルで現在のカラー ボタンを表示するかどうかを示します。|  
+|[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Windows XP の visual スタイルで現在のカラー ボタンを表示するかどうかを示します。|  
 |[CMFCColorButton::OnDraw](#ondraw)|ボタンのイメージを表示するためにフレームワークによって呼び出されます。|  
 |[CMFCColorButton::OnDrawBorder](#ondrawborder)|ボタンの境界線を表示するためにフレームワークによって呼び出されます。|  
-|[CMFCColorButton::OnDrawFocusRect](#ondrawfocusrect)|ボタンにフォーカスがあるときに、フォーカスされた四角形を表示するためにフレームワークによって呼び出されます。|  
-|[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)|カラー ピッカー ダイアログ ボックスが表示されると、フレームワークによって呼び出されます。|  
-|[CMFCColorButton::RebuildPalette](#rebuildpalette)|初期化、`m_pPalette`を指定されたパレットまたは既定のシステム パレット データ メンバーを保護します。|  
+|[CMFCColorButton::OnDrawFocusRect](#ondrawfocusrect)|ボタンにフォーカスがあるときに、フォーカスの四角形を表示するためにフレームワークによって呼び出されます。|  
+|[CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)|カラー ピッカー ダイアログ ボックスが表示されるときに、フレームワークによって呼び出されます。|  
+|[CMFCColorButton::RebuildPalette](#rebuildpalette)|初期化します、`m_pPalette`パレットを指定または既定のシステム パレット データ メンバーを保護します。|  
 |[CMFCColorButton::UpdateColor](#updatecolor)|カラー ピッカー ダイアログ ボックスのパレットから色を選択すると、フレームワークによって呼び出されます。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|`m_bAltColorDlg`|ブール値。 場合`TRUE`、フレームワークによって表示、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)色 ダイアログ ボックスの場合、*他の*ボタンがクリックされた場合、または`FALSE`システムの色 ダイアログ ボックス。 既定値は `TRUE` です。 詳細については、次を参照してください。 [CMFCColorButton::EnableOtherButton](#enableotherbutton)です。|  
-|`m_bAutoSetFocus`|ブール値。 場合`TRUE`、フレームワークでは、メニューが表示されている場合、または、[色] メニューにフォーカスを設定`FALSE`フォーカスは変わりません。 既定値は `TRUE` です。|  
+|`m_bAltColorDlg`|ブール値。 TRUE の場合、フレームワークが表示されます、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)色 ダイアログ ボックスの場合に、*他*ボタンをクリックすると、FALSE の場合、システムの色 ダイアログ ボックスまたはします。 既定値は TRUE です。 詳細については、次を参照してください。 [CMFCColorButton::EnableOtherButton](#enableotherbutton)します。|  
+|`m_bAutoSetFocus`|ブール値。 TRUE の場合、フレームワークは、メニューが表示されたら、または FALSE の場合がフォーカスを変更していないときに、[色] メニュー、フォーカスを設定します。 既定値は TRUE です。|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|色のボタンのカスタマイズ モードが有効になっているかどうかを示します。|  
 |`m_Color`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在選択されている色が含まれています。|  
 |`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在選択されている既定の色が含まれています。|  
-|`m_Colors`|A [CArray](../../mfc/reference/carray-class.md)の[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在使用可能な色が含まれます。|  
+|`m_Colors`|A [CArray](../../mfc/reference/carray-class.md)の[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在使用できる色が含まれています。|  
 |`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)の[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)値。 現在のドキュメントの色が含まれています。|  
-|`m_nColumns`|整数。 色の選択メニュー内の色のグリッドに表示する列の数が含まれています。|  
-|`m_pPalette`|ポインター、 [CPalette](../../mfc/reference/cpalette-class.md)です。 現在の色の選択メニューで使用できる色が含まれます。|  
-|`m_pPopup`|ポインター、 [CMFCColorPopupMenu クラス](../../mfc/reference/cmfccolorpopupmenu-class.md)オブジェクト。 色のボタンをクリックしたときに表示される色の選択メニュー。|  
+|`m_nColumns`|整数。 色の選択メニューでの色のグリッドに表示する列の数が含まれています。|  
+|`m_pPalette`|ポインターを[CPalette](../../mfc/reference/cpalette-class.md)します。 現在の色の選択メニューで利用できる色が含まれています。|  
+|`m_pPopup`|ポインターを[CMFCColorPopupMenu クラス](../../mfc/reference/cmfccolorpopupmenu-class.md)オブジェクト。 色のボタンをクリックすると表示される色の選択メニュー。|  
 |`m_strAutoColorText`|文字列。 色の選択メニューで「自動」のボタンのラベル。|  
-|`m_strDocColorsText`|文字列。 ドキュメントの色を表示する色の選択メニューのボタンのラベル。|  
-|`m_strOtherText`|文字列。 色の選択メニューに「その他」ボタンのラベル。|  
+|`m_strDocColorsText`|文字列。 ドキュメントの色を表示する色の選択メニュー ボタンのラベル。|  
+|`m_strOtherText`|文字列。 色の選択メニューで「その他」ボタンのラベルです。|  
   
-## <a name="remarks"></a>コメント  
- 既定では、`CMFCColorButton`クラスは、カラー ピッカー ダイアログ ボックスを開くプッシュ ボタンとして動作します。 カラー ピッカー ダイアログ ボックスには、小さなカラー ボタンとカスタム カラー ピッカーを表示する、"other"ボタンの配列が含まれています。 ("のその他"ボタンのラベルは、標準的なシステム**他の色**)。ユーザーが新しい色を選択したときに、`CMFCColorButton`オブジェクトが、変更を反映し、選択した色が表示されます。  
+## <a name="remarks"></a>Remarks  
+ 既定で、`CMFCColorButton`クラスをカラー ピッカー ダイアログ ボックスを開くプッシュ ボタンと同様に動作します。 カラー ピッカー ダイアログ ボックスには、小さなカラー ボタンと、カスタム カラー ピッカーを表示する、「その他」ボタンの配列が含まれています。 ("Other"ボタンのラベルは、標準的なシステム**その他の色**)。ユーザーが、新しい色を選択すると、`CMFCColorButton`オブジェクトの変更が反映され、選択した色が表示されます。  
   
- 色のボタン コントロールを作成する、コード内で直接、またはを使用して、 **ClassWizard**ツールとダイアログ ボックス テンプレート。 色のボタン コントロールを直接作成する場合は、追加、`CMFCColorButton`変数をアプリケーション、およびコンス トラクターを呼び出しますと`Create`のメソッド、`CMFCColorButton`オブジェクト。 使用する場合、 **ClassWizard**、追加、`CButton`ため、アプリケーション変数から変数の型を変更および`CButton`に`CMFCColorButton`です。  
+ コードで直接、またはを使用して、色のボタン コントロールを作成、 **ClassWizard**ツールとダイアログ ボックスのテンプレート。 色のボタン コントロールを直接作成する場合は、追加、`CMFCColorButton`変数を呼び出して、コンス トラクター、アプリケーション、および`Create`のメソッド、`CMFCColorButton`オブジェクト。 使用する場合、 **ClassWizard**、追加、`CButton`アプリケーションには、変数から変数の種類を変更および`CButton`に`CMFCColorButton`します。  
   
- カラー ピッカー ダイアログ ボックス ( [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)) によって表示される、 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)メソッドは、フレームワークと、`OnLButtonDown`イベント ハンドラー。 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)のカスタム色の選択をサポートするメソッドをオーバーライドすることができます。  
+ カラー ピッカー ダイアログ ボックス ( [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)) によって表示される、 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)メソッド フレームワーク、`OnLButtonDown`イベント ハンドラー。 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)カスタム色の選択をサポートするメソッドをオーバーライドすることができます。  
   
- `CMFCColorButton`オブジェクトに通知が送信することによって、色が変更されていること、親、`WM_COMMAND | BN_CLICKED`通知します。 親を使用して、 [CMFCColorButton::GetColor](#getcolor)を現在の色を取得する方法です。  
+ `CMFCColorButton`オブジェクトが親 WM_COMMAND を送信することで、色が変更されていることを通知します |BN_CLICKED 通知します。 親を使用して、 [CMFCColorButton::GetColor](#getcolor)現在の色を取得します。  
   
 ## <a name="example"></a>例  
- 次の例でのさまざまなメソッドを使用してカラー ボタンを構成する方法、`CMFCColorButton`クラスです。 メソッドは、色のボタンと、列の数の色を設定し、自動ボタンと他のボタンを有効にします。 この例の一部である、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例は、さまざまなメソッドを使用してカラー ボタンを構成する方法を示します、`CMFCColorButton`クラス。 メソッドは、色のボタンと、列の数の色を設定し、自動およびその他のボタンを有効にします。 この例は、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcolorbutton.h  
   
 ##  <a name="cmfccolorbutton"></a>  CMFCColorButton::CMFCColorButton  
@@ -148,7 +149,7 @@ CMFCColorButton();
 ```  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCColorButton::EnableAutomaticButton  
- 有効にするまたは、カラー ピッカー コントロールの「自動」ボタンを無効にし、自動 (既定値) の色を設定します。  
+ 有効にまたは、カラー ピッカー コントロールの「自動」ボタンを無効にし、自動 (既定値) の色を設定します。  
   
 ```  
 void EnableAutomaticButton(
@@ -158,19 +159,19 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  自動ボタンのテキストを指定します。  
   
- [入力] `colorAutomatic`  
- 自動ボタンの既定の色を指定する RGB 値。  
+ [in]*colorAutomatic*  
+ 自動ボタンの既定の色を指定する RGB 値を指定します。  
   
- [入力] `bEnable`  
- 自動ボタンが有効または無効になっているかどうかを指定します。  
+ [in]*bEnable*  
+ 自動ボタンが有効になっているかどうかを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enableotherbutton"></a>  CMFCColorButton::EnableOtherButton  
- 有効にするにまたは通常の色のボタンの下に表示される"other"ボタンを無効にします。  
+ 有効または通常の色のボタンの下に表示される"other"ボタンを無効にします。  
   
 ```  
 void EnableOtherButton(
@@ -180,17 +181,17 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  ボタンのテキストを指定します。  
   
- [入力] `bAltColorDlg`  
- 指定するかどうか、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックスまたはシステムの色 ダイアログ ボックスには、ユーザーがボタンをクリックしたときに開かれます。  
+ [in]*bAltColorDlg*  
+ 指定するかどうか、 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックスまたはシステムの色 ダイアログ ボックスを開いたときに、ユーザーがボタンをクリックします。  
   
- [入力] `bEnable`  
- 「その他」ボタンが有効になっているか、無効にするかどうかを指定します。  
+ [in]*bEnable*  
+ 「その他」ボタンが有効になっているかどうかを指定します。  
   
-### <a name="remarks"></a>コメント  
- 色のダイアログ ボックスを表示する"other"ボタンをクリックします。 場合、 *bAltColorDlg*パラメーターは`TRUE`、 [CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)が表示されます。 それ以外の場合、システムの色 ダイアログ ボックスが表示されます。  
+### <a name="remarks"></a>Remarks  
+ 「その他」の色 ダイアログ ボックスを表示するボタンをクリックします。 場合、 *bAltColorDlg*パラメーターが true の場合、 [CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)が表示されます。 それ以外の場合、システムの色 ダイアログ ボックスが表示されます。  
   
 ##  <a name="getautomaticcolor"></a>  CMFCColorButton::GetAutomaticColor  
  自動 (既定値) の現在の色を取得します。  
@@ -202,8 +203,8 @@ COLORREF GetAutomaticColor() const;
 ### <a name="return-value"></a>戻り値  
  現在の自動の色を表す RGB 値。  
   
-### <a name="remarks"></a>コメント  
- によって現在の自動の色を設定、 [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)メソッドです。  
+### <a name="remarks"></a>Remarks  
+ 現在の自動の色が設定され、 [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)メソッド。  
   
 ##  <a name="getcolor"></a>  CMFCColorButton::GetColor  
  現在選択されている色を取得します。  
@@ -215,27 +216,27 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>戻り値  
  RGB 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isdrawxptheme"></a>  CMFCColorButton::IsDrawXPTheme  
- Windows XP の視覚スタイルで現在のカラー ボタンを表示するかどうかを示します。  
+ Windows XP の visual スタイルで現在のカラー ボタンを表示するかどうかを示します。  
   
 ```  
 BOOL IsDrawXPTheme() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` visual スタイルがサポートされていて、現在のカラー ボタンが Windows XP の視覚スタイルで表示されます。それ以外の場合、`FALSE`です。  
+ Visual スタイルがサポートされており、Windows XP の visual スタイルで現在のカラー ボタンが表示される場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="m_benabledincustomizemode"></a>  CMFCColorButton::m_bEnabledInCustomizeMode  
- 色のボタンをカスタマイズ モードに設定します。  
+ カラー ボタンをカスタマイズ モードに設定します。  
   
 ```  
 BOOL m_bEnabledInCustomizeMode;  
 ```  
   
-### <a name="remarks"></a>コメント  
- カラー ボタンのカスタマイズ ダイアログ ボックスのページを追加 (またはカスタマイズ中に別の色の選択をユーザーに許可する) 必要がある場合は、設定して、ボタンを有効に、`m_bEnabledInCustomizeMode`メンバー`TRUE`です。 既定では、このメンバーに設定`FALSE`です。  
+### <a name="remarks"></a>Remarks  
+ カスタマイズ ダイアログ ボックスのページにカラー ボタンを追加 (または、ユーザーがカスタマイズするときに別の色の選択を行うことを許可する) 必要がある場合は、設定して、ボタンを有効に、`m_bEnabledInCustomizeMode`メンバーを TRUE にします。 既定では、このメンバーは FALSE に設定します。  
   
 ##  <a name="ondraw"></a>  CMFCColorButton::OnDraw  
  ボタンの画像を表示するためにフレームワークによって呼び出されます。  
@@ -248,17 +249,17 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- ボタンの画像を表示するために使用されるデバイス コンテキストへのポインター。  
+ [in]*pDC*  
+ ボタンのイメージを表示するために使用されるデバイス コンテキストへのポインター。  
   
- [入力] `rect`  
- ボタンに外接する四角形。  
+ [in]*rect*  
+ ボタンの外接する四角形にします。  
   
- [入力] `uiState`  
- ボタンの表示状態を指定します。  
+ [in]*uiState*  
+ ボタンのビジュアル状態を指定します。  
   
-### <a name="remarks"></a>コメント  
- 表示処理をカスタマイズするには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ レンダリング プロセスをカスタマイズするには、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawborder"></a>  CMFCColorButton::OnDrawBorder  
  ボタンの境界線を表示するためにフレームワークによって呼び出されます。  
@@ -271,20 +272,20 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  境界線の描画に使用するデバイス コンテキストへのポインター。  
   
- [入力] `rectClient`  
- 指定されているデバイス コンテキスト内の四角形、`pDC`で描画されるボタンの境界を定義するパラメーターです。  
+ [in]*rectClient*  
+ 指定されているデバイス コンテキスト内の四角形、 *pDC*を描画するボタンの境界を定義するパラメーター。  
   
- [入力] `uiState`  
- ボタンの表示状態を指定します。  
+ [in]*uiState*  
+ ボタンのビジュアル状態を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  色のボタンの境界線の外観をカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCColorButton::OnDrawFocusRect  
- ボタンにフォーカスがあるときに、フォーカスされた四角形を表示するためにフレームワークによって呼び出されます。  
+ ボタンにフォーカスがあるときに、フォーカスの四角形を表示するためにフレームワークによって呼び出されます。  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -293,14 +294,14 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- フォーカス四角形を描画するために使用するデバイス コンテキストへのポインター。  
+ [in]*pDC*  
+ フォーカスされた四角形を描画するために使用するデバイス コンテキストへのポインター。  
   
- [入力] `rectClient`  
- 指定されたデバイス コンテキスト内の四角形、`pDC`ボタンの境界を定義するパラメーターです。  
+ [in]*rectClient*  
+ 指定されたデバイス コンテキスト内の四角形、 *pDC*ボタンの境界を定義するパラメーター。  
   
-### <a name="remarks"></a>コメント  
- フォーカス四角形の外観をカスタマイズするには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ フォーカスされた四角形の外観をカスタマイズするには、このメソッドをオーバーライドします。  
   
 ##  <a name="onshowcolorpopup"></a>  CMFCColorButton::OnShowColorPopup  
  ポップアップ カラー バーが表示される前に呼び出されます。  
@@ -309,10 +310,10 @@ virtual void OnDrawFocusRect(
 virtual void OnShowColorPopup();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="rebuildpalette"></a>  CMFCColorButton::RebuildPalette  
- 初期化、`m_pPalette`を指定されたパレットまたは既定のシステム パレット データ メンバーを保護します。  
+ 初期化します、`m_pPalette`パレットを指定または既定のシステム パレット データ メンバーを保護します。  
   
 ```  
 void RebuildPalette(CPalette* pPal);
@@ -322,7 +323,7 @@ void RebuildPalette(CPalette* pPal);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pPal`|論理パレットへのポインターまたは`NULL`です。 場合`NULL`既定のシステム パレットを使用します。|  
+|[in]*pPal*|論理パレットまたは NULL へのポインター。 NULL の場合、既定のシステム パレットが使用されます。|  
   
 ##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  ボタンの色を指定します。  
@@ -332,10 +333,10 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `color`  
+ [in]*色*  
  RGB 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setcolorname"></a>  CMFCColorButton::SetColorName  
  色の名前を指定します。  
@@ -347,31 +348,31 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `color`  
+ [in]*色*  
  色の RGB 値。  
   
- [入力] `strName`  
+ [in]*strName*  
  色の名前。  
   
-### <a name="remarks"></a>コメント  
- 色の名前の一覧は、アプリケーションごとに共通です。 そのため、このメソッドは移動にパラメーターを[CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname)です。  
+### <a name="remarks"></a>Remarks  
+ 色の名前の一覧は、アプリケーションごとにグローバルです。 その結果、このメソッドは移動するには、そのパラメーター [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname)します。  
   
 ##  <a name="setcolumnsnumber"></a>  CMFCColorButton::SetColumnsNumber  
- ユーザーの色の選択プロセスで、ユーザーに表示される色の一覧に表示される列の数を定義します。  
+ ユーザーの色の選択プロセス中に、ユーザーに表示される色の一覧に表示される列の数を定義します。  
   
 ```  
 void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nColumns`  
+ [in]*nColumns*  
  列の数を指定します。  
   
-### <a name="remarks"></a>コメント  
- ユーザーは、定義済みの色の一覧が表示されるポップアップ カラー バーの色を選択できます。 このメソッドを使用すると、テーブルの列の数を定義します。  
+### <a name="remarks"></a>Remarks  
+ ユーザーは、定義済みの色の一覧が表示されるポップアップ カラー バーから色を選択することができます。 このメソッドを使用すると、テーブルの列の数を定義できます。  
   
 ##  <a name="setdocumentcolors"></a>  CMFCColorButton::SetDocumentColors  
- 一連の色とセットの名前を指定します。 使用して、色のセットが表示される、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクト。  
+ 一連の色とセットの名前を指定します。 使用して色のセットを表示、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクト。  
   
 ```  
 void SetDocumentColors(
@@ -380,14 +381,14 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLabel`  
+ [in]*lpszLabel*  
  ドキュメントの色のセットを表示するラベルを指定します。  
   
- [入力] `lstColors`  
+ [in]*lstColors*  
  RGB 値の一覧への参照。  
   
-### <a name="remarks"></a>コメント  
- A`CMFCColorButton`ために転送する RGB 値の一覧を保持するオブジェクト、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクト。 ラベルがで指定された特別なセクションにこれらの色を示す、カラー バーが表示される場合、`lpszLabel`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ A`CMFCColorButton`オブジェクトに転送する RGB 値のリストを保持する、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクト。 これらの色はラベルがで指定された特別なセクションに示したカラー バーが表示されたら、 *lpszLabel*パラメーター。  
   
 ##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
  ポップアップ カラー バーに表示する標準の色を指定します。  
@@ -397,40 +398,40 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pPalette`  
- カラー パレットへのポインター。  
+ [in]*pPalette*  
+ 色パレットへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="sizetocontent"></a>  CMFCColorButton::SizeToContent  
- ボタン コントロールに合わせてそのテキストおよびイメージのサイズを変更します。  
+ ボタン コントロールに合わせてそのテキストとイメージのサイズを変更します。  
   
 ```  
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bCalcOnly`  
- ゼロ以外の場合は、ボタン コントロールの新しいサイズが計算されますが、実際のサイズは変更されません。  
+ [in]*bCalcOnly*  
+ 0 以外の場合は、ボタン コントロールの新しいサイズが計算されますが、実際のサイズは変更されません。  
   
 ### <a name="return-value"></a>戻り値  
  A`CSize`新しいボタン コントロールのサイズを指定するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="updatecolor"></a>  CMFCColorButton::UpdateColor  
- ユーザーは、ユーザーは、色のボタンをクリックしたときに表示されるカラー バーから色を選択すると、フレームワークによって呼び出されます。  
+ ユーザーが、ユーザーが色のボタンをクリックしたときに表示するカラー バーの色を選択、フレームワークによって呼び出されます。  
   
 ```  
 virtual void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `color`  
+ [in]*色*  
  ユーザーが選択した色。  
   
-### <a name="remarks"></a>コメント  
- `UpdateColor`関数は、現在選択されているボタンの色を変更し、送信することによって、親に通知を`WM_COMMAND`、メッセージ、`BN_CLICKED`標準通知します。 使用して、 [CMFCColorButton::GetColor](#getcolor)メソッドを選択した色を取得します。  
+### <a name="remarks"></a>Remarks  
+ `UpdateColor`関数は、現在選択されているボタンの色を変更し、BN_CLICKED 標準通知 WM_COMMAND メッセージを送信することによって、親に通知します。 使用して、 [CMFCColorButton::GetColor](#getcolor)選択した色を取得します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

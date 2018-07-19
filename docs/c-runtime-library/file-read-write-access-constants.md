@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391143"
 ---
 # <a name="file-readwrite-access-constants"></a>ファイル読み出し/書き込みアクセス定数
 ## <a name="syntax"></a>構文  

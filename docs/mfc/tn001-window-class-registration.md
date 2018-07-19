@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0be2e87f77e047e1b29d99e562a67bb9f4f1ee9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951979"
 ---
 # <a name="tn001-window-class-registration"></a>テクニカル ノート 1: ウィンドウ クラスの登録
 このメモには、特別なを登録する MFC ルーチンがについて説明[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es Microsoft Windows で必要とします。 特定`WNDCLASS`MFC と Windows で使用される属性がについて説明します。  
   
 ## <a name="the-problem"></a>問題を  
- 属性、 [CWnd](../mfc/reference/cwnd-class.md)オブジェクトと同様に、 `HWND` Windows での処理、2 つの場所に格納されます: ウィンドウ オブジェクトおよび`WNDCLASS`です。 名前、`WNDCLASS`など、全般的なウィンドウ作成関数に渡される[cwnd::create](../mfc/reference/cwnd-class.md#create)と[CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create)で、`lpszClassName`パラメーター。  
+ 属性、 [CWnd](../mfc/reference/cwnd-class.md)オブジェクトと同様に、 `HWND` Windows での処理、2 つの場所に格納されます: ウィンドウ オブジェクトおよび`WNDCLASS`です。 名前、`WNDCLASS`など、全般的なウィンドウ作成関数に渡される[cwnd::create](../mfc/reference/cwnd-class.md#create)と[CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create)で、 *lpszClassName*パラメーター。  
   
  これは、 `WNDCLASS` 4 つの手段の 1 つによって登録される必要があります。  
   
@@ -45,15 +46,15 @@ ms.lasthandoff: 05/04/2018
   
 |フィールド|説明|  
 |-----------|-----------------|  
-|`lpfnWndProc`|ウィンドウ プロシージャがある必要があります、 `AfxWndProc`|  
-|`cbClsExtra`|使用されません (0 にする必要があります)|  
-|`cbWndExtra`|使用されません (0 にする必要があります)|  
-|`hInstance`|自動的に入力[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
-|`hIcon`|フレーム ウィンドウのアイコンは、以下を参照してください。|  
-|`hCursor`|下のウィンドウで、上にマウスをカーソルを参照してください。|  
-|`hbrBackground`|背景色、以下を参照してください。|  
-|`lpszMenuName`|使用されません (NULL にする必要があります)|  
-|`lpszClassName`|クラス名、以下を参照してください。|  
+|*lpfnWndProc*|ウィンドウ プロシージャがある必要があります、 `AfxWndProc`|  
+|*cbClsExtra*|使用されません (0 にする必要があります)|  
+|*cbWndExtra*|使用されません (0 にする必要があります)|  
+|*hInstance*|自動的に入力[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|*hIcon*|フレーム ウィンドウのアイコンは、以下を参照してください。|  
+|*hCursor*|下のウィンドウで、上にマウスをカーソルを参照してください。|  
+|*hbrBackground*|背景色、以下を参照してください。|  
+|*lpszMenuName*|使用されません (NULL にする必要があります)|  
+|*lpszClassName*|クラス名、以下を参照してください。|  
   
 ## <a name="provided-wndclasses"></a>WNDCLASSes の提供  
  以前のバージョンの MFC (MFC 4.0 の場合) の前にいくつかの定義済みウィンドウ クラスを提供します。 これらのウィンドウ クラスは既定では提供されません。 アプリケーションを使用する必要があります`AfxRegisterWndClass`適切なパラメーターを使用します。  
@@ -104,7 +105,7 @@ pWnd->Create(strWndClass, ...);
  `AfxRegisterWndClass` スローされます、[関数](../mfc/reference/cresourceexception-class.md)(により無効なパラメーターは、または Windows のメモリ不足) を登録する、ウィンドウ クラスが失敗したかどうか。  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass および AfxRegisterClass 関数  
- 実行する場合は、何もより高度なより`AfxRegisterWndClass`を提供する Windows API を呼び出すことができます`RegisterClass`または MFC 関数`AfxRegisterClass`です。 `CWnd`、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`関数、`lpszClassName`ウィンドウ クラスを最初のパラメーターとしての文字列名。 登録時に使用する方法に関係なく、すべての登録済みのウィンドウ クラス名を使用することができます。  
+ 実行する場合は、何もより高度なより`AfxRegisterWndClass`を提供する Windows API を呼び出すことができます`RegisterClass`または MFC 関数`AfxRegisterClass`です。 `CWnd`、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`関数、 *lpszClassName*ウィンドウ クラスを最初のパラメーターとしての文字列名。 登録時に使用する方法に関係なく、すべての登録済みのウィンドウ クラス名を使用することができます。  
   
  使用することが重要`AfxRegisterClass`(または`AfxRegisterWndClass`) で Win32 DLL にします。 Win32 は自動的に登録解除されないため、DLL が終了した場合に、明示的に登録を解除する必要があります、DLL によって登録されたクラスです。 使用して`AfxRegisterClass`の代わりに`RegisterClass`これは自動的に処理するためです。 `AfxRegisterClass` 一意のクラスの一覧は、DLL に登録されているしは自動的に解除して、DLL が終了するときは保持します。 使用すると`RegisterClass`DLL で DLL が終了した場合には、すべてのクラスが登録されているないことを確認する必要があります (で、 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)関数)。 そのためにはエラーが発生する可能性があります`RegisterClass`別のクライアント アプリケーションが DLL を使用しようとしたときに予期せず失敗します。  
   

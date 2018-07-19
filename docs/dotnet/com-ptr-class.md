@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108287"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 CLR クラスのメンバーとして使用できる COM オブジェクトのラッパーです。  ラッパーは、またそのデストラクターが呼び出されたときに、オブジェクトを所有しているすべての参照を解放し、COM オブジェクトの有効期間の管理を自動化します。 に似て[CComPtr クラス](../atl/reference/ccomptr-class.md)です。  

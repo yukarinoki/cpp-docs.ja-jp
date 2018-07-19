@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd0af17faf3eb4a7206f50d81753e1def508aed4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e82dce1d80ee241c8bffae99457c2e25555818
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121716"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView クラス
 Windows フォーム コントロールのホスティング用の汎用機能を MFC ビューとして提供します。  
@@ -51,11 +52,11 @@ class CWinFormsView : public CView;
   
 ### <a name="public-operators"></a>パブリック演算子  
   
-|名前||  
+|name||  
 |----------|-|  
 |[CWinFormsView::operator コントロール ^](#operator_control)|Windows フォーム コントロールへのポインターとして型をキャストします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  MFC を使用して、 `CWinFormsView` MFC ビュー内で .NET Framework の Windows フォーム コントロールをホストするクラス。 コントロールは、ネイティブのビューの子であるし、MFC ビューの全体のクライアント領域を占有します。 結果がに似ていますが、`CFormView`ビュー、Windows フォーム デザイナーを利用し、実行時に豊富なフォーム ベースのビューを作成することができます。  
   
  Windows フォームを使用する方法については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
@@ -66,7 +67,7 @@ class CWinFormsView : public CView;
 > [!NOTE]
 >  CWinFormsView は MFC 分割ウィンドウをサポートしていません ( [CSplitterWnd クラス](../../mfc/reference/csplitterwnd-class.md))。 現在のみ、Windows フォームのスプリッター コントロールはサポートされています。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwinforms.h  
   
 ##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
@@ -77,7 +78,7 @@ CWinFormsView(System::Type^ pManagedViewType);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pManagedViewType`  
+ *pManagedViewType*  
  Windows フォーム ユーザー コントロールのデータ型へのポインター。   
   
 ### <a name="example"></a>例  
@@ -97,7 +98,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="return-value"></a>戻り値  
  ポインター、`System.Windows.Forms.Control`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  Windows フォームを使用する方法の例は、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
   
 ##  <a name="operator_control"></a>  CWinFormsView::operator コントロール ^  
@@ -107,7 +108,7 @@ System::Windows::Forms::Control^ GetControl() const;
 operator System::Windows::Forms::Control^() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この演算子は、渡すことができます、`CWinFormsView`型の Windows フォーム コントロールへのポインターを受け取る関数をビュー<xref:System.Windows.Forms.Control>です。  
   
 ### <a name="example"></a>例  

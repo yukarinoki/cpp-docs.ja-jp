@@ -1,5 +1,5 @@
 ---
-title: 抽象クラス (C++) |Microsoft ドキュメント
+title: 抽象クラス (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35ea26bc5dda6c0dce27217cc75784034a77554
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 73c1d560f0e2adfbecb72fe9df96d981d0bb93af
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705362"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957949"
 ---
 # <a name="abstract-classes-c"></a>抽象クラス (C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "34705362"
 
 純粋仮想関数を 1 つでも含むクラスは抽象クラスと見なされます。 抽象クラスから派生したクラスは純粋仮想関数を実装する必要があります。つまり派生クラスも抽象クラスです。
 
-仮想関数を使用して、「純粋」として宣言された、*純粋指定子*構文 (記載[クラス プロトコルの実装](http://msdn.microsoft.com/en-us/a319f1b3-05e8-400e-950a-1ca6eb105ab5))。 示されている例を検討してください[仮想関数](../cpp/virtual-functions.md)です。 `Account` クラスの目的は一般的な機能を提供することですが、`Account` 型のオブジェクトは一般的すぎて役に立ちません。 したがって、`Account` は抽象クラスに適した候補です。
+示されている例を検討してください。[仮想関数](../cpp/virtual-functions.md)します。 `Account` クラスの目的は一般的な機能を提供することですが、`Account` 型のオブジェクトは一般的すぎて役に立ちません。 したがって、`Account` は抽象クラスに適した候補です。
 
 ```cpp
 // deriv_AbstractClasses.cpp

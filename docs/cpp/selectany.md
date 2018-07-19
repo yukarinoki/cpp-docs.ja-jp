@@ -1,5 +1,5 @@
 ---
-title: selectany |Microsoft ドキュメント
+title: selectany |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb4f4ccd3cbfb5bb26e9f58a862eaa87dba3c538
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943625"
 ---
 # <a name="selectany"></a>selectany
 **Microsoft 固有の仕様**  
@@ -34,22 +35,22 @@ ms.lasthandoff: 05/03/2018
 __declspec( selectany ) declarator  
 ```  
   
-## <a name="remarks"></a>コメント  
- リンク時、COMDAT の複数の定義が見つかった場合、リンカーは 1 つを選択し、残りを破棄します。 場合、リンカー オプション[/opt:ref による](../build/reference/opt-optimizations.md)(最適化) が選択されている場合は、リンカー出力のすべての参照データ項目を削除する中間 COMDAT 除去が発生し、します。  
+## <a name="remarks"></a>Remarks  
+ リンク時、COMDAT の複数の定義が見つかった場合、リンカーは 1 つを選択し、残りを破棄します。 場合、リンカー オプション[/OPT:REF](../build/reference/opt-optimizations.md) (最適化) が選択されている場合は、中間 COMDAT 除去が発生してリンカー出力のすべての参照されないデータ項目を削除し、します。  
   
  コンストラクター、および宣言におけるグローバル関数または静的メソッドによる代入は参照を作成しないため、/OPT:REF による削除が妨げられません。 このようなコードからの副作用は、データへの他の参照が存在しない時期によって決まりません。  
   
- 動的に初期化されたグローバル オブジェクトでは、`selectany` によって、参照されていないオブジェクトの初期化コードが破棄されます。  
+ 動的に初期化されると、グローバル オブジェクト、 **selectany**未参照のオブジェクトの初期化コードもが破棄されます。  
   
- グローバル データ項目は、一度だけ EXE または DLL プロジェクトで正常に初期化できます。 `selectany` は、同じヘッダーが複数のソース ファイルに含まれる場合、ヘッダーで定義されたグローバル データの初期化中に使用できます。 `selectany` は、C コンパイラと C++ コンパイラの両方で使用できます。  
+ グローバル データ項目は、一度だけ EXE または DLL プロジェクトで正常に初期化できます。 **selectany** 1 つ以上のソース ファイルに同じヘッダーが表示されたら、ヘッダーで定義されたグローバル データの初期化に使用されることができます。 **selectany**は C および C++ の両方のコンパイラで使用できます。  
   
 > [!NOTE]
->  `selectany` は、外部から参照可能なグローバル データ項目の実際の初期化だけに適用できます。  
+>  **selectany**は外部から参照するグローバル データ項目の実際の初期化にのみ適用できます。  
   
 ## <a name="example"></a>例  
- このコードは、`selectany` 属性の使用方法を示しています。  
+ このコードは、使用する方法を示します、 **selectany**属性。  
   
-```  
+```cpp 
 //Correct - x1 is initialized and externally visible   
 __declspec(selectany) int x1=1;  
   
@@ -80,9 +81,9 @@ __declspec(selectany) X x(1);
 ```  
   
 ## <a name="example"></a>例  
- このコードを使用する方法を示しています、`selectany`も使用するときにデータ COMDAT が折りたたまれるようにする属性、 [/OPT:ICF](../build/reference/opt-optimizations.md)リンカー オプション。 データをマークする必要がありますに注意してください`selectany`に置かれていると、 **const** (読み取り専用) セクション。 読み取り専用セクションを明示的に指定する必要があります。  
+ このコードは、使用する方法を示します、 **selectany**データ COMDAT の圧縮も使用するとことを確認する属性、 [/OPT:ICF](../build/reference/opt-optimizations.md)リンカー オプション。 データをマークする必要がありますに注意してください。 **selectany**に置かれていると、 **const** (読み取り専用) セクション。 読み取り専用セクションを明示的に指定する必要があります。  
   
-```  
+```cpp 
 // selectany2.cpp  
 // in the following lines, const marks the variables as read only  
 __declspec(selectany) extern const int ix = 5;  

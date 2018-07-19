@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105905"
 ---
 # <a name="using-manual-accessors"></a>手動アクセサーの使用
 不明なコマンドを処理する場合は 4 つの点があります。  

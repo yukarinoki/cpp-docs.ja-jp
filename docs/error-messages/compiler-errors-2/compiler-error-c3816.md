@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269094"
 ---
 # <a name="compiler-error-c3816"></a>コンパイラ エラー C3816
 'declaration' が以前に宣言または定義には、異なるマネージまたは WinRTmodifier  

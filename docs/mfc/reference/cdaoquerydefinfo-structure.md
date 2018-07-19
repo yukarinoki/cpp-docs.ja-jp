@@ -1,5 +1,5 @@
 ---
-title: CDaoQueryDefInfo 構造体 |Microsoft ドキュメント
+title: CDaoQueryDefInfo 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fe098472eb31f0bd9b185adfa6793f7061a35ac
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338735"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 構造体
 `CDaoQueryDefInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているクエリ定義のオブジェクトに関する情報が含まれています。  
@@ -44,70 +45,70 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `m_strName`  
- クエリ定義オブジェクトの一意名です。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。 呼び出す[CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname)を直接このプロパティを取得します。  
+ *m_strName*  
+ クエリ定義のオブジェクトの一意名します。 詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。 呼び出す[CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname)このプロパティを直接取得します。  
   
- `m_nType`  
- クエリ定義オブジェクトの操作の型を示す値です。 値は次のいずれかになります。  
+ *m_nType*  
+ クエリ定義のオブジェクトの操作の型を示す値。 値は次のいずれかになります。  
   
-- **dbQSelect**選択、クエリを作成します。  
+- `dbQSelect` 選択: クエリでは、レコードを選択します。  
   
-- **dbQAction**アクション: クエリは、移動、またはデータの変更レコードは返されません。  
+- `dbQAction` アクション: クエリを移動または変更データしますが、レコードは返されません。  
   
-- **dbQCrosstab**クロス集計: クエリでは、スプレッドシートのような形式でデータを返します。  
+- `dbQCrosstab` クロス集計など、クエリは、スプレッドシートのような形式でデータを返します。  
   
-- **dbQDelete**削除-クエリが指定された行のセットを削除します。  
+- `dbQDelete` クエリが指定された行のセットを削除します。  
   
-- **dbQUpdate**更新など、クエリが一連のレコードを変更します。  
+- `dbQUpdate` クエリが一連のレコードを更新します。  
   
-- **dbQAppend** Append: クエリは、テーブルまたはクエリの末尾に新しいレコードを追加します。  
+- `dbQAppend` 追加するには、クエリは、テーブルまたはクエリの末尾に新しいレコードを追加します。  
   
-- **dbQMakeTable**テーブルの作成、クエリでは、レコード セットから新しいテーブルを作成します。  
+- `dbQMakeTable` テーブル-作成、クエリは、レコード セットから新しいテーブルを作成します。  
   
-- **dbQDDL**データ定義、クエリがテーブルまたはその一部の構造に影響します。  
+- `dbQDDL` データ定義、クエリは、テーブルまたはその一部の構造に影響します。  
   
-- **dbQSQLPassThrough**パススルー — SQL ステートメントは、中間処理されず、データベース バックエンドに直接渡されます。  
+- `dbQSQLPassThrough` パススルー: SQL ステートメントは、中間処理を行わなくても、データベース バックエンドに直接渡されます。  
   
-- **dbQSetOperation**共用体: クエリは、2 つの指定したすべてのレコードからデータを含むスナップショット タイプのレコード セット オブジェクトを作成または重複するレコードと他のテーブルを削除します。 キーワードを追加含めるには、重複、**すべて**クエリ定義の SQL ステートメントにします。  
+- `dbQSetOperation` 共用体、クエリは 2 つの指定したすべてのレコードからデータを含むスナップショット タイプのレコード セット オブジェクトを作成します。 または、重複するレコードのテーブルを削除します。 重複を含めるには、キーワードを追加**すべて**クエリ定義の SQL ステートメントでします。  
   
-- **dbQSPTBulk**併用**dbQSQLPassThrough**レコードを返さないクエリを指定します。  
+- `dbQSPTBulk` 併用`dbQSQLPassThrough`クエリ レコードは返されませんを指定します。  
   
 > [!NOTE]
->  SQL のパススルー クエリを作成するを設定しない、 **dbQSQLPassThrough**定数。 これは自動的に設定 Microsoft Jet データベース エンジンによってクエリ定義オブジェクトを作成し、接続プロパティを設定します。  
+>  設定しない SQL パススルー クエリを作成する、`dbQSQLPassThrough`定数。 これは自動的に設定、Microsoft Jet データベース エンジンによってクエリ定義のオブジェクトを作成し、接続プロパティを設定します。  
   
- 詳細については、DAO ヘルプの「型プロパティ」を参照してください。  
+ 詳細については、「型のプロパティ」DAO ヘルプのトピックを参照してください。  
   
- `m_dateCreated`  
- 日付とクエリ定義が作成された時刻。 クエリ定義が作成された日付を直接取得する呼び出し、 [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)のメンバー関数、`CDaoTableDef`テーブルに関連付けられているオブジェクト。 詳細については、下のコメントを参照してください。 DAO のヘルプでは、「作成日時、LastUpdated プロパティ」トピックを参照してください。  
+ *m_dateCreated*  
+ 日付とクエリ定義が作成された時刻。 直接クエリ定義が作成された日付を取得する、 [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)のメンバー関数、`CDaoTableDef`テーブルに関連付けられているオブジェクト。 詳細については、以下のコメントを参照してください。 DAO のヘルプでは、「DateCreated プロパティの LastUpdated」のトピックを参照してください。  
   
- `m_dateLastUpdated`  
- 日付とクエリ定義に加えられた最近の変更時刻。 テーブルの最終更新日を直接取得する呼び出し、 [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated)クエリ定義のメンバー関数。 詳細については、下のコメントを参照してください。 DAO ヘルプの「「DateCreated LastUpdated プロパティ」を参照してください。  
+ *m_dateLastUpdated*  
+ 日付とクエリ定義に加えられた最新の変更の時刻。 テーブルの最終更新日を直接取得する、 [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated)クエリ定義のメンバー関数。 詳細については、以下のコメントを参照してください。 DAO のヘルプ トピックの"DateCreated プロパティの LastUpdated"を確認してください。  
   
- `m_bUpdatable`  
- 変更をクエリ定義オブジェクトにできるかどうかを示します。 このプロパティは、する場合**TRUE**、クエリ定義が更新可能な場合はありません。 更新可能では、クエリ定義オブジェクトのクエリ定義を変更することができますを意味します。 クエリ定義オブジェクトの更新可能なプロパティに設定**TRUE**かどうか、クエリ定義を更新できる、結果のレコード セットは更新可能でない場合でもです。 このプロパティを直接取得するを呼び出すクエリ定義の[CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)メンバー関数。 詳細については、DAO ヘルプの「更新可能なプロパティ」を参照してください。  
+ *m_bUpdatable*  
+ クエリ定義のオブジェクトへの変更を行うことができるかどうかを示します。 このプロパティが TRUE の場合、クエリ定義は更新できます。それ以外の場合は。 更新可能では、クエリ定義オブジェクトのクエリ定義を変更することができますを意味します。 クエリ定義のオブジェクトの更新可能なプロパティが設定を TRUE にクエリの定義を更新する場合場合でも、結果のレコード セットは更新できません。 このプロパティを直接取得するには、呼び出すクエリ定義の[CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)メンバー関数。 詳細については、「更新可能なプロパティ」DAO ヘルプのトピックを参照してください。  
   
  *m_bReturnsRecords*  
- 外部データベースに SQL パススルー クエリがレコードを返すかどうかを示します。 このプロパティは、する場合**TRUE**レコードが返されます。 このプロパティを直接取得するには、する[CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)です。 外部データベースへのすべての SQL パススルー クエリは、レコードを返します。 たとえば、SQL**更新**ステートメントは、SQL の中に、レコードを返さずにレコードを更新**選択**ステートメントはレコードが返されます。 詳細については、DAO のヘルプで「レコード表示プロパティ」を参照してください。  
+ 外部データベースに SQL パススルー クエリがレコードを返すかどうかを示します。 このプロパティが TRUE の場合、クエリは、レコードを返します。 このプロパティを直接取得するには、する[CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)します。 外部データベースへのすべての SQL パススルー クエリには、レコードが返されます。 たとえば、SQL**更新**ステートメントは、SQL の中に、レコードを返さずにレコードを更新**選択**ステートメントはレコードが返されます。 詳細については、「レコード表示プロパティ」DAO ヘルプのトピックを参照してください。  
   
  *m_strSQL*  
- クエリ定義オブジェクトによって実行されるクエリを定義する SQL ステートメント。 SQL プロパティには、どのレコードが選択、グループ化、順序付けられたクエリを実行するときに決定する SQL ステートメントが含まれています。 ダイナセットまたはスナップショット タイプのレコード セット オブジェクトに含めるレコードを選択するのにクエリを使用することができます。 データを変更するレコードを返さずに一括クエリを定義することもできます。 このプロパティの値を取得するには、クエリの定義を呼び出すことによって直接[GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)メンバー関数。  
+ クエリ定義のオブジェクトによって実行されるクエリを定義する SQL ステートメント。 SQL プロパティには、どのレコードが選択、グループ化、順序付けられたクエリを実行するときに決定する SQL ステートメントが含まれています。 ダイナセット、またはスナップショットの種類のレコード セット オブジェクトに含めるレコードを選択するのにクエリを使用することができます。 レコードを返さずにデータを変更する一括クエリを定義することもできます。 このプロパティの値を取得するには、クエリ定義を呼び出すことによって直接[GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)メンバー関数。  
   
- `m_strConnect`  
- パススルー クエリで使用されるデータベースのソースに関する情報を提供します。 この情報は接続文字列の形式になります。 詳細については、文字列を約接続し、このプロパティの値を直接取得する方法の詳細については、次を参照してください。、 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)メンバー関数。  
+ *m_strConnect*  
+ パススルー クエリで使用されるデータベースのソースに関する情報を提供します。 この情報は、接続文字列の形式をとります。 詳細については、文字列を約接続し、このプロパティの値を直接取得する方法の詳細については、次を参照してください。、 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)メンバー関数。  
   
  *m_nODBCTimeout*  
- Microsoft Jet データベース エンジンがタイムアウト エラーの前に待機する秒数は、ODBC データベースに、クエリの実行時に発生します。 Microsoft SQL Server などの ODBC データベースを使用しているときに遅れることがあります、ODBC のサーバーのネットワーク トラフィックや使用しているためです。 無限に待機するのではなく Microsoft Jet エンジンがエラーを生成するまでに待機する時間を指定することができます。 既定のタイムアウト値は、60 秒です。 このプロパティの値を取得するには、クエリの定義を呼び出すことによって直接[GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout)メンバー関数。 詳細については、DAO ヘルプの「補足プロパティ」を参照してください。  
+ Microsoft Jet データベース エンジンがタイムアウト エラーが発生する前に待機する秒数では、ODBC データベース クエリの実行時に発生します。 Microsoft SQL Server など、ODBC データベースを使用しているときに、ODBC のサーバーのネットワーク トラフィックや負荷の高い使用しているため遅延が発生する可能性がありますがあります。 無限に待機するのではなく、Microsoft Jet エンジンがエラーを生成するまで待機する時間を指定できます。 既定のタイムアウト値は、60 秒です。 このプロパティの値を取得するには、クエリ定義を呼び出すことによって直接[GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout)メンバー関数。 詳細については、DAO ヘルプの「補足プロパティ」を参照してください。  
   
-## <a name="remarks"></a>コメント  
- クエリ定義がクラスのオブジェクト[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)です。 プライマリ、セカンダリ、および上記のすべての参照は、情報がによって返される方法を示します、 [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)クラスのメンバー関数`CDaoDatabase`です。  
+## <a name="remarks"></a>Remarks  
+ クエリ定義がクラスのオブジェクト[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)します。 プライマリ、セカンダリ、および上記のすべてへの参照情報がによって返される方法を示すため、 [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)クラスのメンバー関数`CDaoDatabase`します。  
   
- によって取得される情報、 [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)メンバー関数は、`CDaoQueryDefInfo`構造体。 呼び出す`GetQueryDefInfo`QueryDefs コレクションでのクエリ定義オブジェクトが格納されているデータベース オブジェクト用です。 `CDaoQueryDefInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoQueryDefInfo`オブジェクト。 クラス`CDaoDatabase`もすべてのプロパティで返されるに直接アクセスするためのメンバー関数を提供、`CDaoQueryDefInfo`オブジェクトを呼び出す必要があります頻度の低い可能性がありますので`GetQueryDefInfo`です。  
+ によって取得される情報、 [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)にメンバー関数が格納されている、`CDaoQueryDefInfo`構造体。 呼び出す`GetQueryDefInfo`QueryDefs コレクションでのクエリ定義のオブジェクトが格納されているデータベース オブジェクト。 `CDaoQueryDefInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoQueryDefInfo`オブジェクト。 クラス`CDaoDatabase`で返されるプロパティのすべてに直接アクセスするためのメンバー関数が用意されても、`CDaoQueryDefInfo`オブジェクトを呼び出す必要がありますおそらくほとんど`GetQueryDefInfo`。  
   
- クエリ定義オブジェクトのフィールドまたはパラメーターのコレクションに新しいフィールドまたはパラメーター オブジェクトを追加するときに、基になるデータベースが新しいオブジェクトの指定されたデータ型をサポートしていない場合、例外がスローされます。  
+ クエリ定義のオブジェクトのフィールドまたはパラメーターのコレクションに新しいフィールドまたはパラメーター オブジェクトを追加する場合は、基になるデータベースは、新しいオブジェクトの指定されたデータ型をサポートしていない場合、例外がスローされます。  
   
- 日付と時刻の設定は、クエリ定義が作成または最後に更新されたコンピューターから派生します。 マルチ ユーザー環境で、ファイル サーバーを使用して、直接からのこれらの設定を取得する必要があります、**時の net** DateCreated および LastUpdated プロパティの設定の不一致を避けるためコマンド。  
+ 日付と時刻の設定は、クエリ定義が作成または最後に更新されたコンピューターから派生します。 マルチ ユーザー環境では、ユーザーは、使用して、ファイル サーバーから直接これらの設定を取得する必要があります、**時間を net** DateCreated および LastUpdated プロパティの設定の不一致を避けるためのコマンド。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  
   
 ## <a name="see-also"></a>関連項目  

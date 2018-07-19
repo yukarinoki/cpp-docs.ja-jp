@@ -25,11 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4adbf2c0b6f3ce6d1bababf0a69bb6720ef6be77
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13b46bcd29624d696ae22494c394fa028d58fa8a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961975"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine クラス
 
@@ -44,9 +45,9 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-`Engine` ベース エンジンの種類。
+*エンジン*ベース エンジンの種類。
 
-`K` **テーブル サイズ**です。 バッファー (テーブル) 内の要素の数。 **前提条件**: `0 < K`
+*K* **テーブル サイズ**します。 バッファー (テーブル) 内の要素の数。 **前提条件**: `0 < K`
 
 ## <a name="members"></a>メンバー
 
@@ -57,11 +58,11 @@ class shuffle_order_engine;
 
 エンジンのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ベースのエンジンによって返される値を並べ替えることで値を生成する*エンジン アダプター*を表します。 各コンストラクターは、ベースのエンジンによって返される `K` 個の値を内部テーブルに読み込みます。値が要求されると、テーブルからランダムに要素が選択されます。
+このテンプレート クラスは、ベースのエンジンによって返される値を並べ替えることで値を生成する*エンジン アダプター*を表します。 各コンス トラクターを内部テーブルに格納*K*ベースのエンジンによって返される値と値が要求されたときに、テーブルからランダムに要素が選択されています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 

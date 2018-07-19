@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384386"
 ---
 # <a name="postfix-operators"></a>後置演算子
 後置演算子は、式の評価で優先順位が最高位 (最も強力なバインディング) になります。  

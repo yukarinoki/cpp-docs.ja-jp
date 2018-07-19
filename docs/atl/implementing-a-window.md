@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357014"
 ---
 # <a name="implementing-a-window"></a>ウィンドウの実装
 クラス[CWindowImpl](../atl/reference/cwindowimpl-class.md)ウィンドウを実装し、そのメッセージを処理することができます。 ATL のメッセージは、メッセージ マップに基づいています。 このセクションの内容について説明します。  

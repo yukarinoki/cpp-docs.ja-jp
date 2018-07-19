@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088873"
 ---
 # <a name="advanced-provider-techniques"></a>高度なプロバイダー手法
 高度なプロバイダー手法の詳細については、次のトピックを参照してください。  

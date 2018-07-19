@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957199"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect クラス
 四角形の 4 辺をアニメーション化できる機能を実装します。  
@@ -105,7 +106,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|アニメーションの四角形の下端を表すカプセル化されたアニメーション変数をバインドします。|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|アニメーションの四角形の左を表すカプセル化されたアニメーション変数をバインドします。|  
@@ -113,7 +114,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |[CAnimationRect::m_szInitial](#m_szinitial)|アニメーションの四角形の初期サイズを指定します。|  
 |[CAnimationRect::m_topValue](#m_topvalue)|アニメーションの四角形の上部を表すカプセル化されたアニメーション変数をバインドします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  CAnimationRect クラスは、4 つの CAnimationVariable オブジェクトをカプセル化して、四角形のアプリケーションで表すことができます。 アプリケーションでこのクラスを使用するには、このクラスのオブジェクトをインスタンス化、CAnimationController::AddAnimationObject を使用してアニメーション コント ローラーに追加してだけ左側、右側の上部と下部の座標に適用される各移行につき AddTransition の呼び出しです。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -123,7 +124,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
  `CAnimationRect`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="addtransition"></a>  CAnimationRect::AddTransition  
@@ -138,19 +139,19 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLeftTransition`  
+ *pLeftTransition*  
  左側の遷移を指定します。  
   
- `pTopTransition`  
+ *pTopTransition*  
  上側の遷移を指定します。  
   
- `pRightTransition`  
+ *pRightTransition*  
  右側の遷移を指定します。  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  下の辺の遷移を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  各四角形の辺をアニメーション変数に適用するへの遷移の内部リストに指定された遷移を追加するには、この関数を呼び出します。 切り替え効果を追加すると、いないすぐに適用されるとなり、内部の一覧に格納されています。 遷移を (特定の値のストーリー ボードへの追加) に適用されます CAnimationController::AnimateGroup を呼び出すとします。 四角形の辺のいずれかに遷移を適用を必要としない場合は、NULL を渡すことができます。  
   
 ##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect  
@@ -186,37 +187,37 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  既定の四角形を指定します。  
   
- `nGroupID`  
+ *nGroupID*  
  グループ ID を指定します  
   
- `nObjectID`  
+ *nObjectID*  
  オブジェクト ID を指定します  
   
- `dwUserData`  
+ *dwUserData*  
  ユーザー定義データを指定します。  
   
- `pt`  
+ *pt*  
  左上隅の座標。  
   
- `sz`  
+ *sz*  
  四角形のサイズです。  
   
- `nLeft`  
+ *nLeft*  
  左側のバインドの座標を指定します。  
   
- `nTop`  
+ *nTop*  
  バインドされている最上位の座標を指定します。  
   
- `nRight`  
+ *nRight*  
  右側のバインドの座標を指定します。  
   
- `nBottom`  
+ *nBottom*  
  下限の座標を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定値を左、上、右および下、オブジェクト ID とグループの ID を 0 に設定されますには、オブジェクトを構築します。 これらは、SetDefaultValue および SetID を使用して実行時に後で変更することができます。  
   
 ##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList  
@@ -229,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lst`  
+ *lst*  
  関数から返されたときに、四角形の座標を表す 4 つの CAnimationVariable オブジェクトへのポインターを格納します。  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -242,7 +243,7 @@ CAnimationVariable& GetBottom();
 ### <a name="return-value"></a>戻り値  
  下の座標を表すカプセル化された CAnimationVariable への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  下の座標を表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue  
@@ -255,7 +256,7 @@ CRect GetDefaultValue();
 ### <a name="return-value"></a>戻り値  
  左、右、上と下の既定値を含む CRect 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンス トラクターまたは SetDefaultValue で以前に設定された既定値を取得するには、この関数を呼び出します。  
   
 ##  <a name="getleft"></a>  CAnimationRect::GetLeft  
@@ -268,7 +269,7 @@ CAnimationVariable& GetLeft();
 ### <a name="return-value"></a>戻り値  
  左側の座標を表すカプセル化された CAnimationVariable への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  左側の座標を表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
 ##  <a name="getright"></a>  CAnimationRect::GetRight  
@@ -281,7 +282,7 @@ CAnimationVariable& GetRight();
 ### <a name="return-value"></a>戻り値  
  右側の座標を表すカプセル化された CAnimationVariable への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  右側の座標を表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
 ##  <a name="gettop"></a>  CAnimationRect::GetTop  
@@ -294,7 +295,7 @@ CAnimationVariable& GetTop();
 ### <a name="return-value"></a>戻り値  
  上部の座標を表すカプセル化された CAnimationVariable への参照。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  上部の座標を表す、基になる CAnimationVariable に直接アクセスを取得するには、このメソッドを呼び出すことができます。  
   
 ##  <a name="getvalue"></a>  CAnimationRect::GetValue  
@@ -305,13 +306,13 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  出力です。 このメソッドが戻るとき、現在の値が含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  現在の値の取得が成功した場合は TRUE。それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  四角形のアニメーションの現在の値を取得するには、この関数を呼び出します。 このメソッドは失敗または基になる COM は、左のオブジェクト、上、右、下が初期化されていない、rect には SetDefaultValue、コンス トラクターで設定されている既定値が含まれています。  
   
 ##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize  
@@ -321,7 +322,7 @@ BOOL GetValue(CRect& rect);
 BOOL m_bFixedSize;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバーが true の場合は、右側の四角形のサイズが固定されてし、下の値が左上隅が固定サイズに応じて移動するたびに再計算します。 この値を画面の周りの四角形を簡単に移動する場合は TRUE に設定します。 ここでは右下隅の座標に適用される遷移は無視されます。 オブジェクトを構築または、SetDefaultValue を呼び出すとき、サイズが内部的に格納されます。 既定では、このメンバーは FALSE に設定します。  
   
 ##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue  
@@ -369,7 +370,7 @@ operator RECT();
 ### <a name="return-value"></a>戻り値  
  可変噴出口四角形のアニメーションの現在の値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、GetValue を内部的に呼び出します。 GetValue 何らかの理由により失敗した場合、返された RECT すべて四角形の座標の既定値が含まれます。  
   
 ##  <a name="operator_eq"></a>  CAnimationRect::operator =  
@@ -380,10 +381,10 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  アニメーションの四角形の新しい値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  お勧めをアニメーションの開始前に行うにはこの演算子は、それが作成された場合の色要素の基になる COM オブジェクトを作成し直さ SetDefaultValue を呼び出すためです。 このアニメーション オブジェクト (ValueChanged または IntegerValueChanged) イベントをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。  
   
 ##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue  
@@ -394,10 +395,10 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  左、上、右および下の新しい既定値を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定値をアニメーション オブジェクトに設定するのにには、この関数を使用します。 このメソッドは、既定値を四角形の境界に割り当てます。 それが作成された場合は、基になる COM オブジェクトも再作成します。 このアニメーション オブジェクト (ValueChanged または IntegerValueChanged) イベントをサブスクライブしている場合は、これらのイベントを再度有効にする必要があります。  
   
 ## <a name="see-also"></a>関連項目  

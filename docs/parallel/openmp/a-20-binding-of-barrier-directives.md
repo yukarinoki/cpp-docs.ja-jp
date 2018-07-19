@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691412"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20 barrier ディレクティブのバインド
 ディレクティブのバインディングのルールの呼び出し、**バリア**、最も近い包含にバインドするディレクティブ`parallel`ディレクティブです。 ディレクティブのバインディングの詳細については、次を参照してください。[セクション 2.8](../../parallel/openmp/2-8-directive-binding.md) [32] ページ。  

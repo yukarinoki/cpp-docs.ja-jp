@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd7ab0593d3a8d6486f2f29cd796656407e14cb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1883f051a1df74256da533cf2aba19626b9f19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959460"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible クラス
 
@@ -35,13 +36,13 @@ struct is_nothrow_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` に nothrow 移動コンストラクターが存在する場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty* nothrow 移動コンス トラクターを持つ、それ以外の場合は false を保持します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

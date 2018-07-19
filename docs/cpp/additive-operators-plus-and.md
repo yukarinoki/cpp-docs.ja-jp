@@ -1,5 +1,5 @@
 ---
-title: '加法演算子: +、- |Microsoft ドキュメント'
+title: '加法演算子: +、- |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943941"
 ---
 # <a name="additive-operators--and--"></a>加法演算子: + および -
 ## <a name="syntax"></a>構文  
@@ -36,7 +37,7 @@ expression + expression
 expression - expression  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  加法演算子を次に示します。  
   
 -   追加 (**+**)  
@@ -45,9 +46,9 @@ expression - expression
   
  これらの二項演算子の結合規則は、左から右方向です。  
   
- 加法演算子は、数値型またはポインター型のオペランドを受け取ります。 加算の結果 (**+**) 演算子はオペランドの合計。 減算の結果 (**-**) 演算子は、オペランド間の差。 オペランドの一方または両方がポインターの場合、これらのオペランドは、関数ではなくオブジェクトのポインターである必要があります。 両方のオペランドがポインターの場合、両方とも同じ配列のオブジェクトへのポインターでない限り意味がありません。  
+ 加法演算子は、数値型またはポインター型のオペランドを受け取ります。 加算の結果 (**+**) 演算子はオペランドの合計になります。 減算の結果 (**-**) 演算子は、オペランド間の差。 オペランドの一方または両方がポインターの場合、これらのオペランドは、関数ではなくオブジェクトのポインターである必要があります。 両方のオペランドがポインターの場合、両方とも同じ配列のオブジェクトへのポインターでない限り意味がありません。  
   
- 加法演算子のオペランドを受け取ります*算術*、*整数*、および*スカラー*型です。 次の表にこれらの定義を示します。  
+ 加法演算子のオペランドを受け取ります*算術*、*整数*、および*スカラー*型。 次の表にこれらの定義を示します。  
   
 ### <a name="types-used-with-additive-operators"></a>加法演算子と併用される型  
   
@@ -59,23 +60,23 @@ expression - expression
   
  これらの演算子の有効な組み合わせは以下のとおりです。  
   
- *算術* + *算術演算*  
+ *算術* + *算術*  
   
  *scalar* + *integral*  
   
  *integral* + *scalar*  
   
- *算術* - *算術演算*  
+ *算術* - *算術*  
   
  *scalar* - *scalar*  
   
  加算と減算が同等の操作ではないことに注意してください。  
   
- 両方のオペランドが演算型の場合は、変換、「[標準変換](standard-conversions.md)オペランドに適用され結果は変換後の型のです。  
+ 両方のオペランドが演算型である場合は、変換、「[標準変換](standard-conversions.md)オペランドに適用され結果は変換後の型のです。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_Additive_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -96,7 +97,7 @@ int main() {
 ## <a name="pointer-addition"></a>ポインターの加算  
  加算演算のオペランドの 1 つがオブジェクトの配列へのポインターである場合、もう一方は整数型である必要があります。 結果は、元のポインターと同じ型のポインターで、他の配列要素をポイントします。 この概念を次のコードに示します。  
   
-```  
+```cpp 
 short IntArray[10]; // Objects of type short occupy 2 bytes  
 short *pIntArray = IntArray;  
   
@@ -114,11 +115,11 @@ for( int i = 0; i < 10; ++i )
 >  `pIntArray = pIntArray + 1` のような形式のコードは、C++ プログラムではあまり見られません。インクリメントを行う場合は、`pIntArray++` または `pIntArray += 1` のような形式を使用することをお勧めします。  
   
 ## <a name="pointer-subtraction"></a>ポインターの減算  
- 両方のオペランドがポインターの場合、減算の結果は、オペランド間の (配列要素内の) 差になります。 減算式は ptrdiff_t 型の符号付き整数の結果を得られます (標準インクルード ファイルで定義されている\<stddef.h >)。  
+ 両方のオペランドがポインターの場合、減算の結果は、オペランド間の (配列要素内の) 差になります。 減算式には、符号付き整数型の結果が得られます**ptrdiff_t** (標準インクルード ファイルで定義されている\<stddef.h >)。  
   
- それが 2 番目のオペランドである限り、オペランドの 1 つは整数型にできます。 減算の結果は、元のポインターと同じ型です。 減算の値がへのポインター、(*n* - *すれば*) 番目の配列要素を*n*要素によって指される元のポインターと*すれば*2 番目のオペランドの整数値です。  
+ それが 2 番目のオペランドである限り、オペランドの 1 つは整数型にできます。 減算の結果は、元のポインターと同じ型です。 減算の値はへのポインター、(*n* - *は*) 番目の配列要素、 *n*要素を指しています、元のポインターと*は*2 番目のオペランドの整数値です。  
   
 ## <a name="see-also"></a>関連項目  
  [二項演算子を含む式](../cpp/expressions-with-binary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 加法演算子](../c-language/c-additive-operators.md)

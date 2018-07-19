@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418186"
 ---
 # <a name="strcoll-functions"></a>strcoll 系関数
 各 `strcoll` 関数と各 `wcscoll` 関数は、現在使用されているロケールのコード ページの `LC_COLLATE` カテゴリ設定に基づいて 2 つの文字列を比較します。 各 `_mbscoll` 関数は、現在使用されているマルチバイトのコード ページに基づいて、2 つの文字列を比較します。 文字列を比較する `coll` 関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが比較に関係がある場合にのみ使用します。 対応する `cmp` 関数は、文字列が等しいかをテストする目的でのみ使用します。  

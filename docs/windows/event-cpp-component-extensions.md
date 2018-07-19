@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881212"
 ---
 # <a name="event--c-component-extensions"></a>event (C++ コンポーネント拡張)
 `event`キーワードで宣言した、*イベント*、登録されているサブスクライバーに通知される (*イベント ハンドラー*) 関心のある問題が発生したことです。  

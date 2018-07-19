@@ -1,5 +1,5 @@
 ---
-title: _ _ptr32、_ _ptr64 |Microsoft ドキュメント
+title: _ _ptr32、_ _ptr64 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,18 +22,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 39078cfef6b327aee60d98fce6cccc0b69c5953b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704816"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941705"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32、__ptr64
 
 **Microsoft 固有の仕様**
 
-`__ptr32` は 32 ビット システムのネイティブ ポインターを表し、`__ptr64` は、64 ビット システムのネイティブ ポインターを表します。
+**_ _ptr32** 32 ビット システムでネイティブ ポインターを表すときに **_ _ptr64**の 64 ビット システムでネイティブ ポインターを表します。
 
 次の例は、これらのポインター型のそれぞれを宣言する方法を示します。
 
@@ -42,14 +42,14 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
- 32 ビット システムでは、`__ptr64` で宣言されたポインターは 32 ビット ポインターに切り詰められます。 64 ビット システムでは、`__ptr32` で宣言されたポインターは 64 ビットのポインター型に変換されます。
+ 32 ビット システムで宣言されたポインター **_ _ptr64**は 32 ビット ポインターに切り詰められます。 64 ビット システムで宣言されたポインター **_ _ptr32**は 64 ビット ポインターに変換します。
 
 > [!NOTE]
-> 使用することはできません`__ptr32`または`__ptr64`でコンパイルするときに **/clr: 純粋な**します。 それ以外の場合、コンパイラ エラー C2472 が生成されます。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+> 使用することはできません **_ _ptr32**または **_ _ptr64**でコンパイルするときに **/clr: 純粋な**します。 それ以外の場合、コンパイラ エラー C2472 が生成されます。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 ## <a name="example"></a>例
 
-次の例は、`__ptr32` キーワードと `__ptr64` キーワードを持つポインターを宣言して割り当てる方法を示します。
+次の例を宣言のポインターの割り当てでは、 **_ _ptr32**と **_ _ptr64**キーワード。
 
 ```cpp
 #include <cstdlib>

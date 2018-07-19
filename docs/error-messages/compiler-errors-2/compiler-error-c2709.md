@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230138"
 ---
 # <a name="compiler-error-c2709"></a>コンパイラ エラー C2709
 'identifier' : 仮パラメーターのバイト数が前回の宣言時と異なっています  

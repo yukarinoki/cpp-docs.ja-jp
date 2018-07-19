@@ -34,11 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964835"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 演算子
 
@@ -77,9 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 非等値をテストする要素は、次の 2 つの valarray の最初の数値。
+*left*  
+ 要素が等しくないことをテストする 2 つの valarray のうち 1 つ目の valarray。
 
-`right` 2 つの valarray の 2 番目の要素は、不等性をテストするのにです。
+*right*  
+ 要素が等しくないことをテストする 2 つの valarray のうち 2 つ目の valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -89,13 +92,13 @@ operator!=(
 
 - **false**: 対応する要素が等しい場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-1 つ目のテンプレート演算子は、クラスのオブジェクトを返します[valarray\<bool >](../standard-library/valarray-bool-class.md)、要素の各`I`は`left[I] != right[I]`します。
+1 つ目のテンプレート演算子は、クラスのオブジェクトを返します[valarray\<bool >](../standard-library/valarray-bool-class.md)、その各要素の`I`は`left[I] != right[I]`します。
 
-2 番目のテンプレート演算子は、要素に格納`I``left[I] != right`です。
+2 番目のテンプレート演算子は、要素に格納`I``left[I] != right`します。
 
-3 番目のテンプレート演算子は、要素に格納`I``left != right[I]`です。
+3 番目のテンプレート演算子は、要素に格納`I``left != right[I]`します。
 
 ### <a name="example"></a>例
 
@@ -170,13 +173,15 @@ operator%(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 値を別の値には、被除数として機能する valarray、または valarray を除算です。
+*left*  
+ 被除数の役割を果たし、別の値または valarray で除算する値または valarray。
 
-`right` 値、または valarray を除数として機能して、別の値を除算するまたは valarray。
+*right*  
+ 除数の役割を果たし、別の値または valarray を除算する値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
-要素ごとの剰余要素が valarray の`left`で割った値`right`です。
+要素ごとの剰余要素が valarray の*左*で割った値*右*します。
 
 ### <a name="example"></a>例
 
@@ -251,19 +256,21 @@ operator&(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 演算と組み合わせることがそれぞれの要素が 2 つの valarray の最初の**AND**かビットごとの valarray の各要素に結合する要素の型の値を指定します。
+*left*  
+ それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-`right` 演算と組み合わせることがそれぞれの要素が 2 つの valarray の 2 番目の**AND**かビットごとの valarray の各要素に結合する要素の型の値を指定します。
+*right*  
+ それぞれの要素をビットごとに `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
-ビットごとの AND 演算の要素ごとの組み合わせ要素が valarray の`left`と`right`です。
+ビットごとの AND 演算の要素ごとの組み合わせ要素が valarray の*左*と*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-ビットごとの演算は、`char` および `int` データ型とそのバリエーションのビットを操作するためにのみ使用できます。**float**、**double**、**longdouble**、`void`、`bool` など、より複雑なデータ型には使用できません。
+ビットごとの演算は、ビットを操作にのみ使用できます**char**と**int**データ型とバリアントできません**float**、**二重**、 **longdouble**、 **void**、 **bool**またはその他より複雑なデータ型。
 
-ビットごとの **AND** は論理 **AND** と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 [operator&&](../standard-library/valarray-operators.md#amp) は要素レベルで適用され、すべての非ゼロ値を true と見なし、結果はブール値から成る valarray になります。 それに対して、ビットごとの **ANDoperator&** は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
+ビット演算 `AND` は論理 `AND` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 [operator&&](../standard-library/valarray-operators.md#amp) は要素レベルで適用され、すべての非ゼロ値を true と見なし、結果はブール値から成る valarray になります。 それに対して、ビットごとの **ANDoperator&** は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
 
 ### <a name="example"></a>例
 
@@ -338,17 +345,19 @@ operator&&(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` それぞれの要素が論理と組み合わせるには 2 つの valarray の最初の**AND**か、valarray の各要素と組み合わせる要素の型の値を指定します。
+*left*  
+ それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
-`right` それぞれの要素が論理と組み合わせるには 2 つの valarray の 2 番目の**AND**か、valarray の各要素と組み合わせる要素の型の値を指定します。
+*right*  
+ それぞれの要素を論理 `AND` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
-要素は、ブール型の、論理の要素ごとの組み合わせの valarray **AND**の操作`left`と`right`です。
+Valarray の要素は、ブール型のの論理要素ごとの組み合わせ`AND`操作の*左*と*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-論理 **ANDoperator&&** は要素レベルで適用され、すべての非ゼロ値を true と見なし、結果はブール値から成る valarray になります。 それに対して、ビットごとのバージョンの **AND** である [operator&](../standard-library/valarray-operators.md#op_amp) は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
+論理`ANDoperator&&`適用は要素レベルでのブール値を含む valarray とが true で、結果として、すべての非ゼロ値をカウントします。 ビットごとのバージョンの`AND`、[演算子 &、](../standard-library/valarray-operators.md#op_amp)、これに対し、0 または 1 のビットごとの演算の結果に応じて、以外の値を含む valarray になることができます。
 
 ### <a name="example"></a>例
 
@@ -423,19 +432,21 @@ operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` Valarray の各要素と比較する最初の要素があると比較する 2 つの valarray または指定された値。
+*left*  
+ それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-`right` Valarray の各要素と比較する 2 番目の要素があると比較する 2 つの valarray または値を指定します。
+*right*  
+ それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- `left` の要素または値が、対応する `right` の要素または値より大きい場合は **true**。
+- **true**場合、*左*要素または値が、対応するよりも大きい*右*要素または値。
 
-- `left` の要素または値が、対応する `right` の要素または値より大きくない場合は **false**。
+- **false**場合、*左*要素または値が、対応するよりも大きい*右*要素または値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 2 つの valarray に含まれる要素数が異なる場合、結果は未定義です。
 
@@ -512,19 +523,21 @@ operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` Valarray の各要素と比較する最初の要素があると比較する 2 つの valarray または指定された値。
+*left*  
+ それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-`right` Valarray の各要素と比較する 2 番目の要素があると比較する 2 つの valarray または値を指定します。
+*right*  
+ それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- `left` の要素または値が、対応する `right` の要素または値以上の場合は **true**。
+- **true**場合、*左*要素または値が、対応する以上*右*要素または値。
 
-- `left` の要素または値が、対応する `right` の要素または値未満の場合は **false**。
+- **false**場合、*左*要素または値が、対応するよりも小さい*右*要素または値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 2 つの valarray に含まれる要素数が異なる場合、結果は未定義です。
 
@@ -601,15 +614,17 @@ operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` シフトする値か、valarray の要素をシフトします。
+*left*  
+ シフトする値、またはシフトする値を要素とする valarray。
 
-`right` 右シフト、または valarray の量を示す値を要素には、右シフトの要素ごとの量を示します。
+*right*  
+ 右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
 指定された量だけ右にシフトした要素から成る valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 符号付きの数値の符号は保持されます。
 
@@ -686,19 +701,21 @@ operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` Valarray の各要素と比較する最初の要素があると比較する 2 つの valarray または指定された値。
+*left*  
+ それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-`right` Valarray の各要素と比較する 2 番目の要素があると比較する 2 つの valarray または値を指定します。
+*right*  
+ それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- `left` の要素または値が、対応する `right` の要素または値未満の場合は **true**。
+- **true**場合、*左*要素または値が、対応するよりも小さい*右*要素または値。
 
-- `left` の要素または値が、対応する `right` の要素または値未満でない場合は **false**。
+- **false**場合、*左*要素または値が、対応するよりも小さい*右*要素または値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 2 つの valarray の要素数が異なる場合、結果は未定義です。
 
@@ -775,19 +792,21 @@ operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` Valarray の各要素と比較する最初の要素があると比較する 2 つの valarray または指定された値。
+*left*  
+ それぞれの要素を比較する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と比較する指定値。
 
-`right` Valarray の各要素と比較する 2 番目の要素があると比較する 2 つの valarray または値を指定します。
+*right*  
+ それぞれの要素を比較する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と比較する指定値。
 
 ### <a name="return-value"></a>戻り値
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- `left` の要素または値が、対応する `right` の要素または値以下の場合は **true**。
+- **true**場合、*左*要素または値が、対応する小さい*右*要素または値。
 
-- `left` の要素または値が、対応する `right` の要素または値より大きい場合は **false**。
+- **false**場合、*左*要素または値が、対応するよりも大きい*右*要素または値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 2 つの valarray の要素数が異なる場合、結果は未定義です。
 
@@ -864,15 +883,17 @@ operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` シフトする値か、valarray の要素をシフトします。
+*left*  
+ シフトする値、またはシフトする値を要素とする valarray。
 
-`right` 左シフト、または valarray の量を示す値を要素には、左シフトの要素ごとの量を示します。
+*right*  
+ 左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
 
 指定された量だけ左にシフトした要素から成る valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 符号付きの数値の符号は保持されます。
 
@@ -949,13 +970,15 @@ operator*(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` Valarray の各要素に乗算する最初の要素があると乗算する 2 つの valarray または指定された値。
+*left*  
+ それぞれの要素を乗算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と乗算する指定値。
 
-`right` Valarray の各要素に乗算する 2 番目の要素があると乗算する 2 つの valarray または値を指定します。
+*right*  
+ それぞれの要素を乗算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と乗算する指定値。
 
 ### <a name="return-value"></a>戻り値
 
-ごとの積要素が valarray の`left`と`right`です。
+要素ごとの積 valarray の*左*と*右*します。
 
 ### <a name="example"></a>例
 
@@ -1030,13 +1053,15 @@ operator+(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` Valarray の各要素に追加する最初の要素が追加するのには 2 つの valarray または指定された値。
+*left*  
+ それぞれの要素を加算する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と加算する指定値。
 
-`right` Valarray の各要素に追加する 2 番目の要素が追加するのには 2 つの valarray または値を指定します。
+*right*  
+ それぞれの要素を加算する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と加算する指定値。
 
 ### <a name="return-value"></a>戻り値
 
-要素ごとの合計要素が valarray の`left`と`right`です。
+要素ごとの合計要素が valarray の*左*と*右*します。
 
 ### <a name="example"></a>例
 
@@ -1111,15 +1136,17 @@ operator-(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 値またはその他の値または valarray の元の違いを形成する減算する被減数として機能する valarray。
+*left*  
+ 被減数の役割を果たし、これから他の値または valarray を減算して差を求める値または valarray。
 
-`right` 値またはその他の値または差を形成するで valarray から減算する減数として機能する valarray。
+*right*  
+ 減数の役割を果たし、他の値または valarray から減算して差を求める値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
-要素ごとの違いは、要素が valarray の`left`と`right`です。
+要素ごとの違いは、要素が valarray の*左*と*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 減算の説明で使われる算術用語:
 
@@ -1198,15 +1225,17 @@ operator/(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 値を別の値には、被除数として機能する valarray、または valarray を除算の商を形成するのにです。
+*left*  
+ 被除数の役割を果たし、別の値または valarray で除算して商を求める値または valarray。
 
-`right` 値または valarray を除数として機能して、別の値または商を形成するで valarray を除算します。
+*right*  
+ 除数の役割を果たし、別の値または valarray を除算して商を求める値または valarray。
 
 ### <a name="return-value"></a>戻り値
 
-要素ごとの商要素が valarray の`left`で割った値`right`です。
+要素ごとの商要素が valarray の*左*で割った値*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 除算の説明で使われる算術用語:
 
@@ -1285,9 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素が等しいかどうかをテストするのには 2 つの valarray の最初の数値。
+*left*  
+ 要素が等しいことをテストする 2 つの valarray のうち 1 つ目の valarray。
 
-`right` 要素が等しいかどうかをテストするのには 2 つの valarray の 1 秒です。
+*right*  
+ 要素が等しいことをテストする 2 つの valarray のうち 2 つ目の valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1297,9 +1328,9 @@ operator==(
 
 - **false**: 対応する要素が等しくない場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-1 つ目のテンプレート演算子は、クラスのオブジェクトを返します[valarray\<bool >](../standard-library/valarray-bool-class.md)、要素の各`I`は`left[I] == right[I]`します。 2 番目のテンプレート演算子は、要素に格納`I``left[I] == right`です。 3 番目のテンプレート演算子は、要素に格納`I``left == right[I]`です。
+1 つ目のテンプレート演算子は、クラスのオブジェクトを返します[valarray\<bool >](../standard-library/valarray-bool-class.md)、その各要素の`I`は`left[I] == right[I]`します。 2 番目のテンプレート演算子は、要素に格納`I``left[I] == right`します。 3 番目のテンプレート演算子は、要素に格納`I``left == right[I]`します。
 
 ### <a name="example"></a>例
 
@@ -1374,17 +1405,19 @@ operator^(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 演算と組み合わせることがそれぞれの要素が 2 つの valarray の最初の**XOR**かビットごとの valarray の各要素に結合する要素の型の値を指定します。
+*left*  
+ それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-`right` 演算と組み合わせることがそれぞれの要素が 2 つの valarray の 2 番目の**XOR**かビットごとの valarray の各要素に結合する要素の型の値を指定します。
+*right*  
+ それぞれの要素をビットごとに **XOR** で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
-ビットごとの要素ごとの組み合わせ要素を持つ valarray **XOR**の操作`left`と`right`です。
+ビットごとの要素ごとの組み合わせ要素が valarray **XOR**操作の*左*と*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-ビットごとの演算は、内のビットを操作する場合にのみ使用できます`char`と`int`データ型とバリアントなく**float**、**二重**、 `long double`、 `void`、 `bool`またはその他より複雑なデータ型。
+ビットごとの演算は、ビットを操作にのみ使用できます**char**と**int**データ型とバリアントできません**float**、**二重**、 **long double**、 **void**、 **bool**またはその他より複雑なデータ型。
 
 ビットごとの排他的 `OR`( **XOR**) は次の意味を持ちます: ビット *b*1 と *b*2 に対して、*b*1 **XOR** *b*2 は、片方のビットだけが true の場合は **true**、両方のビットが false または両方のビットが true の場合は **false** です。
 
@@ -1465,17 +1498,19 @@ operator|(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 演算と組み合わせることがそれぞれの要素が 2 つの valarray の最初の`OR`かビットごとの valarray の各要素に結合する要素の型の値を指定します。
+*left*  
+ それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
-`right` 2 番目の数値演算と組み合わせることがそれぞれの要素が 2 つの valarray`OR`またはビットごとの valarray の各要素に結合する要素の型の指定した値です。
+*right*  
+ それぞれの要素をビットごとに `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素とビットごとに結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
-ビットごとの要素ごとの組み合わせ要素を持つ valarray`OR`の操作`left`と`right`です。
+ビットごとの要素ごとの組み合わせ要素が valarray`OR`操作の*左*と*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-ビットごとの演算は、`char` および `int` データ型とそのバリエーションのビットを操作するためにのみ使用できます。**float**、**double**、**longdouble**、`void`、`bool` など、より複雑なデータ型には使用できません。
+ビットごとの演算は、ビットを操作にのみ使用できます**char**と**int**データ型とバリアントできません**float**、**二重**、 **longdouble**、 **void**、 **bool**またはその他より複雑なデータ型。
 
 ビットごとの OR は論理 `OR` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット *b*1 と *b*2 について、最低 1 つのビットが true の場合、*b*1 `OR` *b*2 は **true** です。どちらのビットも false の場合は **false** になります。 論理 `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor) は要素レベルで適用され、すべての非ゼロ値を **true** と見なし、結果はブール値から成る valarray になります。 それに対して、ビットごとの OR `operator|` は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
 
@@ -1556,17 +1591,19 @@ operator||(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` それぞれの要素が論理と組み合わせるには 2 つの valarray の最初の`OR`か、valarray の各要素と組み合わせる要素の型の値を指定します。
+*left*  
+ それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 1 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
-`right` それぞれの要素が論理と組み合わせるには 2 つの valarray の 2 番目の`OR`か、valarray の各要素と組み合わせる要素の型の値を指定します。
+*right*  
+ それぞれの要素を論理 `OR` で結合する 2 つの valarray のうち 2 つ目の valarray、または valarray の各要素と結合する要素型の指定値。
 
 ### <a name="return-value"></a>戻り値
 
-型の要素を持つ valarray`bool`要素ごとの論理 OR 演算の組み合わせと`left`と`right`です。
+型の要素を持つ valarray **bool**要素ごとの論理 OR 演算の組み合わせと*左*と*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-論理`OR``operator||`として 0 以外のすべての値をカウントする要素レベルで適用される**true**、され、結果はブール値の valarray。 それに対して、ビットごとのバージョンの `OR` である [operator&#124;](../standard-library/valarray-operators.md#op_or) は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
+論理`OR``operator||`としてすべての非ゼロ値のカウント、要素レベルで適用される**true**、され、結果はブール値の valarray。 それに対して、ビットごとのバージョンの `OR` である [operator&#124;](../standard-library/valarray-operators.md#op_or) は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
 
 ### <a name="example"></a>例
 

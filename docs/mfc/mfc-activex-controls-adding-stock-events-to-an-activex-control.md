@@ -52,14 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930788"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加
-ストック イベントは、クラスによって自動的に呼び出される点で、カスタム イベントとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 `COleControl` 定義済みのメンバー関数の一般的なアクションの結果として得られるイベントを発生させることがあります。 いくつかの一般的なアクションによって実装される`COleControl`に含める 1 つのシングル クリックやダブルクリック コントロール、キーボード イベント、および変更のマウス ボタンの状態。 ストック イベントのイベント マップ エントリには、必ず、 **EVENT_STOCK**プレフィックス。  
+ストック イベントは、クラスによって自動的に呼び出される点で、カスタム イベントとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 `COleControl` 定義済みのメンバー関数の一般的なアクションの結果として得られるイベントを発生させることがあります。 いくつかの一般的なアクションによって実装される`COleControl`に含める 1 つのシングル クリックやダブルクリック コントロール、キーボード イベント、および変更のマウス ボタンの状態。 ストック イベントの前に必ず EVENT_STOCK プレフィックスのエントリをイベントにマップします。  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> ストック イベントでサポートされている、イベント追加ウィザード  
  `COleControl`クラスには、次の表に、10 個のストック イベントが用意されています。 使用して、コントロールの対象とするイベントを指定することができます、[イベント追加ウィザード](../ide/add-event-wizard.md)です。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/04/2018
 |Keypress イベント|**FireKeyPress を無効にする (短い\***`pnChar`**)** |発生したときに、`WM_CHAR`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYPRESS に関するページ)**|  
 |KeyUp|**FireKeyUp を無効にする (短い**`nChar` **、短い**`nShiftState`**)** |発生したときに、`WM_SYSKEYUP`または`WM_KEYUP`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYUP に関するページ)**|  
 |MouseDown|**FireMouseDown を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |存在する場合に発生した**BUTTONDOWN** (左、中央、または右) を受信します。 このイベントが発生する直前に、マウスがキャプチャされます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEDOWN に関するページ)**|  
-|MouseMove|**FireMouseMove を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |発生したときに、`WM_MOUSEMOVE`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEMOVE に関するページ)**|  
+|MouseMove|**FireMouseMove を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |WM_MOUSEMOVE メッセージを受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEMOVE に関するページ)**|  
 |MouseUp|**FireMouseUp を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |存在する場合に発生した**BUTTONUP** (左、中央、または右) を受信します。 このイベントが発生する前に、マウスのキャプチャが解放されます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEUP に関するページ)**|  
 |ReadyStateChange|**FireReadyStateChange に関するページ () を無効にします。**|受信データの量のため次の準備完了状態に移行するコントロールのときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_READYSTATECHANGE に関するページ)**|  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- KeyPress イベントを発生させるこのコードを追加するときに、`WM_CHAR`とコントロールがアクティブでメッセージを受信します。 KeyPress イベントは起動処理関数を呼び出すことによって他のタイミングで起動されます (たとえば、 `FireKeyPress`) から、コントロールのコード内で。  
+ このコードを追加すると、WM_CHAR メッセージが受信され、コントロールがアクティブな KeyPress イベントが発生します。 KeyPress イベントは起動処理関数を呼び出すことによって他のタイミングで起動されます (たとえば、 `FireKeyPress`) から、コントロールのコード内で。  
   
  イベントの追加ウィザードでは、コントロールの次のコード行を追加します。IDL ファイル:  
   

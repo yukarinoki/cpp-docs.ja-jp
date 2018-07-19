@@ -1,5 +1,5 @@
 ---
-title: SOCKADDR_IN 構造体 |Microsoft ドキュメント
+title: SOCKADDR_IN 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeb9e61f94ddd5f41ff3de26728c1fbe155f809d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5ec6ebf4329ff03c75240dc7cec93e9ba46331
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885739"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN 構造体
 インターネット アドレス ファミリでは、ソケットを接続するローカルまたはリモート エンドポイント アドレスを指定するために、Windows ソケットによって `SOCKADDR_IN` の構造体が使用されます。  
@@ -38,7 +39,7 @@ struct in_addr sin_addr;
   
 #### <a name="parameters"></a>パラメーター  
  *これは必須*  
- アドレス ファミリ (する必要があります**AF_INET**)。  
+ アドレス ファミリ (AF_INET をする必要があります)。  
   
  *いった*  
  IP ポート。  
@@ -49,10 +50,10 @@ struct in_addr sin_addr;
  *sin_zero*  
  `SOCKADDR` と同じサイズに構造体を変更する埋め込み。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  これはインターネット アドレス ファミリに特有の `SOCKADDR` 構造体の形態であり、`SOCKADDR` にキャストできます。  
   
- この構造体の IP アドレスのコンポーネントのタイプは**IN_ADDR**です。 **IN_ADDR** Windows ソケットのヘッダー ファイル WINSOCK で構造体を定義します。次のように H:  
+ この構造体の IP アドレスのコンポーネントのタイプは`IN_ADDR`します。 `IN_ADDR` Windows ソケットのヘッダー ファイル WINSOCK の構造を定義します。次のように H:  
   
 ```  
 struct in_addr {
@@ -68,7 +69,7 @@ struct in_addr {
 };  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** winsock2.h  
   
 ## <a name="see-also"></a>関連項目  

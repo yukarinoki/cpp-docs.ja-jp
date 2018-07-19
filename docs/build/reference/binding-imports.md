@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368929"
 ---
 # <a name="binding-imports"></a>インポートのバインド
 既定のリンカー動作では、遅延読み込みされた DLL のバインド可能なインポート アドレス テーブルを作成します。 ヘルパー関数が呼び出す代わりに、バインドされた情報を使用しようとして、DLL がバインドされている場合**GetProcAddress**参照されているインポートごとにします。 タイムスタンプまたは優先アドレスが一致しない場合、読み込まれた DLL のヘルパー関数とバインドされたインポート アドレス テーブルが古すぎますが存在しないかのように続行されます。  

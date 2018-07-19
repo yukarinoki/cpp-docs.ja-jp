@@ -9,15 +9,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 25e40157c1872df3e970bb234accab5c487c6287
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc4ce7c36d3ba097b04b1704fea7633eb7d26ea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962957"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 演算子
 
-これらで定義されているグローバル テンプレート演算子関数は、&lt;アロケーター&gt;です。 クラスのメンバー演算子関数は、クラスのドキュメントを参照してください。
+これらは、グローバル テンプレートの演算子関数で定義されている&lt;アロケーター&gt;します。 クラスのメンバー演算子関数は、クラスのドキュメントを参照してください。
 
 |||
 |-|-|
@@ -38,14 +39,14 @@ bool operator!=(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`left`|不等性をテストする一方のアロケーター オブジェクト。|
-|`right`|不等性をテストする一方のアロケーター オブジェクト。|
+|*left*|不等性をテストする一方のアロケーター オブジェクト。|
+|*right*|不等性をテストする一方のアロケーター オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 アロケーター オブジェクトが等しくない場合は **true**、アロケーター オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 テンプレート演算子は `!(left == right)` を返します。
 
@@ -64,14 +65,14 @@ bool operator==(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`left`|等しいかどうかをテストする一方のアロケーター オブジェクト。|
-|`right`|等しいかどうかをテストする一方のアロケーター オブジェクト。|
+|*left*|等しいかどうかをテストする一方のアロケーター オブジェクト。|
+|*right*|等しいかどうかをテストする一方のアロケーター オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 アロケーター オブジェクトが等しい場合は **true**、アロケーター オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート演算子は `left.equals(right)` を返します。
 

@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 559cb87dbed412e706cc85b3db1120083b694991
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eeccfa5245c6395e530859eb91c7f9a5c01335e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930372"
 ---
 # <a name="manipulating-image-lists"></a>イメージ リストの操作
-[置換](../mfc/reference/cimagelist-class.md#replace)メンバー関数にはイメージ リスト内のイメージが置き換えられます ([CImageList](../mfc/reference/cimagelist-class.md)) 新しいイメージを含むです。 この関数は、イメージ リスト オブジェクト内のイメージの数を動的に増やす必要がある場合に役立ちます。 もできます。 [呼び出す前](../mfc/reference/cimagelist-class.md#setimagecount)関数がイメージ リストに格納されているイメージの数を動的に変更します。 イメージ リストのサイズを大きくした場合は、呼び出す**置換**イメージをイメージの新しいスロットに追加します。 イメージ リストのサイズを小さくと、新しいサイズを超えたイメージが解放されます。  
+[置換](../mfc/reference/cimagelist-class.md#replace)メンバー関数にはイメージ リスト内のイメージが置き換えられます ([CImageList](../mfc/reference/cimagelist-class.md)) 新しいイメージを含むです。 この関数は、イメージ リスト オブジェクト内のイメージの数を動的に増やす必要がある場合に役立ちます。 もできます。 [呼び出す前](../mfc/reference/cimagelist-class.md#setimagecount)関数がイメージ リストに格納されているイメージの数を動的に変更します。 イメージ リストのサイズを大きくした場合は、呼び出す`Replace`イメージをイメージの新しいスロットに追加します。 イメージ リストのサイズを小さくと、新しいサイズを超えたイメージが解放されます。  
   
  [削除](../mfc/reference/cimagelist-class.md#remove)メンバー関数は、イメージ リストのイメージを削除します。 [コピー](../mfc/reference/cimagelist-class.md#copy)メンバー関数をコピーしたりイメージ リスト内のイメージをスワップします。 この関数では、ソース イメージをコピー先のインデックスにコピーする必要がありますか、送信元と送信先のイメージを交換するかを指定することができます。  
   
- 2 つのイメージ リストをマージすることによって、新しいイメージ リストを作成するには、適切なオーバー ロードを使用して、[作成](../mfc/reference/cimagelist-class.md#create)メンバー関数。 このオーバー ロード**作成**結合結果のイメージを格納する新しいイメージ リスト オブジェクト内の既存のイメージの最初のイメージが一覧表示します。 最初に透過的に 2 番目のイメージを描画して、新しいイメージが作成されます。 新しいイメージのマスクは、2 つの既存のイメージのマスクのビットの論理 OR 演算を実行した場合の結果を示します。  
+ 2 つのイメージ リストをマージすることによって、新しいイメージ リストを作成するには、適切なオーバー ロードを使用して、[作成](../mfc/reference/cimagelist-class.md#create)メンバー関数。 このオーバー ロード`Create`結合結果のイメージを格納する新しいイメージ リスト オブジェクト内の既存のイメージの最初のイメージが一覧表示します。 最初に透過的に 2 番目のイメージを描画して、新しいイメージが作成されます。 新しいイメージのマスクは、2 つの既存のイメージのマスクのビットの論理 OR 演算を実行した場合の結果を示します。  
   
  すべてのイメージがマージされ、新しいイメージ リスト オブジェクトに追加されるまでは、これが繰り返されます。  
   

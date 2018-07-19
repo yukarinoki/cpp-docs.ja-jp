@@ -1,5 +1,5 @@
 ---
-title: 指定子の使用 |Microsoft ドキュメント
+title: 指定子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2888f8a75e9b7addd2b8f195ffbf875c2b7ae1a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d437b70148fdaba4c8eb4d7aa855e7d75f6f2487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953748"
 ---
 # <a name="specifiers"></a>指定子
-このトピックの内容について説明します、*子*の (宣言指定子) コンポーネント、[宣言](declarations-and-definitions-cpp.md)です。  
+このトピックで説明します、*子*の (宣言指定子) コンポーネント、[宣言](declarations-and-definitions-cpp.md)します。  
   
  次のプレースホルダーと言語キーワードは宣言指定子です。  
   
@@ -35,23 +36,21 @@ ms.lasthandoff: 05/03/2018
   
  [friend](../cpp/friend-cpp.md)  
   
- [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
+ [typedef]( [typedef](http://msdn.microsod) `(` *拡張修飾子宣言 seq* `)`  
   
- [_ _declspec](../cpp/declspec.md) `(` *拡張修飾子 decl seq* `)`  
+## <a name="remarks"></a>Remarks  
+ *子*宣言の一部が最も長いシーケンスの*子*ポインターを含まない型名を示すや参照修飾子を使用できます。 宣言の残りの部分は、*宣言子*、導入された名前が含まれます。  
   
-## <a name="remarks"></a>コメント  
- *子*宣言の一部が最も長いシーケンスの*子*という意味では、ポインターを含まない型名、または参照修飾子を実行することができます。 宣言の残りの部分は、*宣言子*、導入された名前が含まれます。  
-  
- 次の表の 4 つの宣言を一覧表示し、各宣言の一覧表示*宣言指定子*と*宣言子*コンポーネントとは別にします。  
+ 次の表は、次の 4 つの宣言を一覧表示し、各宣言の一覧表示*宣言指定子*と*宣言子*コンポーネントとは別にします。  
   
 |宣言|*宣言指定子*|`declarator`|  
 |-----------------|------------------------|------------------|  
-|`char *lpszAppName;`|`char`|`*lpszAppName`|  
-|`typedef char * LPSTR;`|`char`|`*LPSTR`|  
-|`const int func1();`|`const int`|`func1`|  
-|`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
+|`char *lpszAppName;`|**char**|`*lpszAppName`|  
+|`typedef char * LPSTR;`|**char**|`*LPSTR`|  
+|`const int func1();`|**const int**|`func1`|  
+|`volatile void *pvvObj;`|**揮発性 void**|`*pvvObj`|  
   
- `signed`、 `unsigned`、 `long`、および`short`意味すべて`int`、`typedef`名前を次のメンバーであるこれらのキーワードのいずれかが実行*宣言子リスト、* のではありません*子*です。  
+ **署名**、**符号なし**、**長い**、および**短い**意味すべて**int**、 **typedef**名前を次のメンバーであるこれらのキーワードのいずれかが実行*宣言リスト、* のではありません*子*します。  
   
 > [!NOTE]
 >  名前は再宣言できるため、その解釈は、現在のスコープ内の最新の宣言に従います。 再宣言は、名前 (特に `typedef` 名) がコンパイラによってどのように解釈されるかに影響を与える可能性があります。  

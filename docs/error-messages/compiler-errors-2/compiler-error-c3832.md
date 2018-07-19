@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266556"
 ---
 # <a name="compiler-error-c3832"></a>コンパイラ エラー C3832
 'type library': タイプ ライブラリは 32 ビット ポインター用にビルドされたように表示可能性があります' 修飾子を変更してください。  

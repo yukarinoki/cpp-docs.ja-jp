@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113188"
 ---
 # <a name="exceptions-in-ccli"></a>C++/CLI の例外
 C + での例外処理を説明するドキュメントのこのセクションの記事 + CLI 標準例外処理とは異なる方法とします。  

@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950707"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>Rebar コントロールでのイメージ リストの使い方
 各 rebar バンド含めることができます、特に、関連付けられているイメージ リストのイメージです。 次の手順では、rebar バンドでイメージを表示するために必要な手順について説明します。  
@@ -30,9 +31,9 @@ ms.lasthandoff: 05/04/2018
   
 2.  変更、 **REBARBANDINFO** rebar バンドにイメージを代入する構造体。  
   
-    -   設定、 **fMask**メンバー **RBBIM_IMAGE**、必要に応じて、追加のフラグを含めるには、ビットごとの OR 演算子を使用します。  
+    -   設定、 *fMask*メンバー `RBBIM_IMAGE`、必要に応じて、追加のフラグを含めるには、ビットごとの OR 演算子を使用します。  
   
-    -   設定、`iImage`を表示するイメージのイメージ リスト インデックスへのメンバーです。  
+    -   設定、*画像*を表示するイメージのイメージ リスト インデックスへのメンバーです。  
   
 3.  サイズ、テキスト、および必要な情報を使用して、含まれる子ウィンドウのハンドルなど、残りのデータ メンバーを初期化します。  
   

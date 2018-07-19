@@ -7,11 +7,12 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 356c98ce5c93d1e05a583fc30c4758c5d15d7529
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5795d146714c6eb00902518347138a98574679a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960649"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列挙型
 
@@ -34,11 +35,11 @@ enum float_denorm_style {
 
 この列挙型は以下を返します。
 
-- **denorm_indeterminate**: 変換時に非正規化形式の有無を特定できない場合。
+- `denorm_indeterminate` 変換時に、非正規化形式の有無を特定できません。 場合、
 
-- **denorm_absent**: 非正規化形式が存在しない場合。
+- `denorm_absent` 非正規化形式が存在しない場合は。
 
-- **denorm_absent**: 非正規化形式が存在する場合。
+- `denorm_present` 非正規化形式が存在する場合。
 
 ### <a name="example"></a>例
 
@@ -61,15 +62,15 @@ enum float_round_style {
 
 この列挙型は以下を返します。
 
-- **round_indeterminate**: 丸め処理を行う方法を特定できない場合。
+- `round_indeterminate` 場合は、丸め処理を行うメソッドを特定できません。
 
-- **round_toward_zero**: ゼロに向かって丸める場合。
+- `round_toward_zero` 場合はゼロに向かって丸める。
 
-- **round_to_nearest**: 最も近い整数に丸める場合。
+- `round_to_nearest` 場合は最も近い整数に丸める。
 
-- **round_toward_infinity**: ゼロから離れるように丸める場合。
+- `round_toward_infinity` 場合はゼロから離れる方向に丸める。
 
-- **round_toward_neg_infinity**: より負の方向の整数に丸める場合。
+- `round_toward_neg_infinity` 場合は負の整数に丸める。
 
 ### <a name="example"></a>例
 

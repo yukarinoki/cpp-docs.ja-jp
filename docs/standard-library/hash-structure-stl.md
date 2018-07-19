@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843224"
 ---
 # <a name="hash-structure-c-standard-library"></a>hash 構造体 (C++ 標準ライブラリ)
 

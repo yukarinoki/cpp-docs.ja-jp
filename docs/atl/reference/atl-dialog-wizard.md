@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358007"
 ---
 # <a name="atl-dialog-wizard"></a>ATL ダイアログ ウィザード
 このウィザードが、プロジェクトに、ATL ダイアログ ボックスから派生したオブジェクトを挿入[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)です。 ダイアログ ボックスから派生した`CAxDialogImpl`ActiveX コントロールをホストできます。  

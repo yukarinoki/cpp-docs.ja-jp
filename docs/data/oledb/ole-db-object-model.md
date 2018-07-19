@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111082"
 ---
 # <a name="ole-db-object-model"></a>OLE DB オブジェクト モデル
 OLE DB オブジェクト モデルには、次のオブジェクトまたはコンポーネントが構成されています。 最初の 4 つのオブジェクトまたはコンポーネントの一覧 (データ ソース、セッション、コマンド、および行セット) を使用すると、データ ソースに接続し、それを表示できます。 アクセサーから始まる残りの部分は、データが表示されるときの操作に関連します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244111"
 ---
 # <a name="compiler-error-c2833"></a>コンパイラ エラー C2833
 'operator 演算子' は認識されている演算子または型ではありません。  

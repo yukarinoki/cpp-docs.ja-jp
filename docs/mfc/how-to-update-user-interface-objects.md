@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346208"
 ---
 # <a name="how-to-update-user-interface-objects"></a>ユーザー インターフェイス オブジェクトの更新方法
 通常、メニュー項目とツール バー ボタンした複数の状態。 たとえば、メニュー項目は淡色表示 (淡色) は現在のコンテキストで使用可能な場合です。 メニュー項目には、オンまたはオフができます。 ツール バー ボタンは、使用できない場合は無効になっても、または確認されることができます。  

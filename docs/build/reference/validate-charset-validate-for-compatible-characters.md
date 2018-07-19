@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377389"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset (互換性のある文字の検証)
 ソース ファイルのテキストに表現できる文字だけが含まれている検証 utf-8 として。  

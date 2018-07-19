@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329184"
 ---
 # <a name="writedr"></a>__writedr
 指定されたデバッグ登録するには、指定した値を書き込みます。  

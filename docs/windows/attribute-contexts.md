@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860334"
 ---
 # <a name="attribute-contexts"></a>属性コンテキスト
 C++ 属性は、次の 4 つの基本的なフィールドを使用して記述できます: ターゲットに適用できます (**適用先**) 場合は、反復可能かどう (**Repeatable**) では、その他の属性 (の存在が必要**必要な属性**)、およびその他の属性を持つ非互換性 (**無効な属性**)。 これらのフィールドは、各属性の参照トピックの表に表示されます。 これらの各フィールドは、以下について説明します。  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961923"
 ---
 # <a name="binarynegate-class"></a>binary_negate クラス
 
@@ -43,17 +44,17 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`Func` 符号を反転される二項関数。
+*Func*符号が反転される二項関数。
 
-`left` 符号を反転される二項関数の左オペランド。
+*左*符号が反転される二項関数の左オペランド。
 
-`right` 符号を反転される二項関数の右オペランド。
+*適切な*符号が反転される二項関数の右オペランド。
 
 ## <a name="return-value"></a>戻り値
 
 二項関数の否定。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、二項関数オブジェクト _ *Func* のコピーを格納します。 そのメンバー関数 `operator()` は **!**\_*Func(left, right) を返すように定義されています。*
 
@@ -122,7 +123,7 @@ Resorted vector v1 = ( 3739828298 3715465425 2621500314 2233879413 580942933 626
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<関数型>
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169050"
 ---
 # <a name="compiler-error-c2160"></a>コンパイラ エラー C2160
 マクロ定義がトークン連結演算子 (##) で始まっています。  

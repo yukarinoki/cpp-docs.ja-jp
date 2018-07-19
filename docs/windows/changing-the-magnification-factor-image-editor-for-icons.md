@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857000"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>拡大率の変更 (アイコン用イメージ エディター)
 既定では、イメージ エディターは、実際のサイズと実際のサイズを 6 回に右側のウィンドウで、ビューの左ペインでビューを表示します。 拡大率 (ワークスペースの下部にあるステータス バーに表示) は、イメージの実際のサイズと表示されているサイズの比率です。 既定の係数が 6 と範囲は、1 から 10。  

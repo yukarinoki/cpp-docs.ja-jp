@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356187"
 ---
 # <a name="file-io-classes"></a>ファイル I/O クラス
 これらのクラスは、従来のディスク ファイル、メモリ内のファイル、Active ストリーム、および Windows ソケットへのインターフェイスを提供します。 派生したすべてのクラス`CFile`で使用できる、`CArchive`オブジェクトをシリアル化を実行します。  

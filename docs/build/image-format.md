@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367941"
 ---
 # <a name="image-format"></a>イメージ形式
 実行可能イメージの形式は pe 32 + です。 (Dll と Exe) の実行可能イメージは、静的なイメージのデータに対処する 32 ビットの変位相対アドレスを使用できるように、2 ギガバイト単位の最大サイズに制限されます。 このデータには、インポート アドレス テーブル、文字列定数、グローバルな静的データ、およびなどが含まれています。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089393"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array と WriteOnlyArray (C++/CX)
 正規の C スタイルの配列を自由に使用できるまたは[std::array](../standard-library/array-class-stl.md) C + +/CX プログラム (が[std::vector](../standard-library/vector-class.md)方が適切では多くの場合)、メタデータでパブリッシュされている api では、C スタイル配列を変換する必要がありますが、またはにベクター、 [platform::array](../cppcx/platform-array-class.md)または[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)によってどのように使用されている型。 [Platform::Array](../cppcx/platform-array-class.md) 型は、 [std::vector](../standard-library/vector-class.md)ほどには効率的でも強力でもありません。そのため、一般的なガイドラインとして、配列要素で多くの操作を実行する内部コードでは使用を避ける必要があります。  

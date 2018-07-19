@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368045"
 ---
 # <a name="inferred-dependents-and-rules"></a>推論による依存ファイルと推論規則
 NMAKE では、適切な推論規則が存在する場合、ターゲット用の推論による依存ファイルが前提とします。 場合、ルールが適用されます。  

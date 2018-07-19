@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111056"
 ---
 # <a name="user-record"></a>ユーザー レコード
 ユーザー レコードは、行セットの列データを表すコードとデータ構造を提供します。 コンパイル時または実行時に、ユーザー レコードを作成することができます。 ATL OLE DB プロバイダー ウィザードを使用してプロバイダーを作成するときに、ウィザードには、次のような ("MyProvider"のプロバイダー名 [短い名前] を指定したと仮定した場合)、既定のユーザー レコードが作成されます。  

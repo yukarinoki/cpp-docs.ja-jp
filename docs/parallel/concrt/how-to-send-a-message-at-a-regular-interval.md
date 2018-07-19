@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705251"
 ---
 # <a name="how-to-send-a-message-at-a-regular-interval"></a>方法: メッセージを定期的に送信する
 この例は、同時実行性を使用する方法を示しています。::[timer クラス](../../parallel/concrt/reference/timer-class.md)を定期的にメッセージを送信します。  

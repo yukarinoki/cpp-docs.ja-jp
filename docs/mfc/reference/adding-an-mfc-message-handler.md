@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353729"
 ---
 # <a name="adding-an-mfc-message-handler"></a>MFC メッセージ ハンドラーの追加
 実行できます[メッセージ ハンドラーを追加して、[プロパティ] ウィンドウを使用して](../../mfc/reference/mapping-messages-to-functions.md)(Windows メッセージを処理するメンバー関数)、メッセージ ハンドラーへのクラスおよびマップの Windows メッセージをします。 追加することも[ダイアログ ボックス コントロールのイベント ハンドラーを](../../windows/adding-event-handlers-for-dialog-box-controls.md)です。  

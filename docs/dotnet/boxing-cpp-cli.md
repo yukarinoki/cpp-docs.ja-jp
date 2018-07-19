@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105892"
 ---
 # <a name="boxing-ccli"></a>ボックス化 (C++/CLI)
 値の型を型に変換するプロセスはボックス化が`object`または値の型によって実装されるインターフェイスの種類。 値型がボックス化、共通言語ランタイム (CLR) の値を折り返した、`System.Object`され、マネージ ヒープに格納します。 ボックス化解除すると、値型がオブジェクトから抽出されます。 ボックス化は暗黙的に行われ、ボックス化解除すると明示的になります。  

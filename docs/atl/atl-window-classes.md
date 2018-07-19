@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355433"
 ---
 # <a name="atl-window-classes"></a>ATL ウィンドウ クラス
 ATL を使用して、ウィンドウの実装では、いくつかのクラスが含まれています。 その他の ATL クラスと同様に、これらのクラスは、コードのオーバーヘッドを課しません効率的な実装を提供します。  

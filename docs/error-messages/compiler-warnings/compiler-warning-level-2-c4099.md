@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33309469"
 ---
 # <a name="compiler-warning-level-2-c4099"></a>コンパイラの警告 (レベル 2) C4099
 'identifier': 'objecttype1' 使われて '%objecttype2' を使用して 1 つ目の種類名  

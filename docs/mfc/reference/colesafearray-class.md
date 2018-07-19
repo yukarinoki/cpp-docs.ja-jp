@@ -1,5 +1,5 @@
 ---
-title: COleSafeArray クラス |Microsoft ドキュメント
+title: COleSafeArray クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e21cecc00c9aab170c79247bced635783541be48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff18423aa981fc453850084bb2f315a5600cf6fd
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027639"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray クラス
 任意の型および次元の配列を扱うクラスです。  
@@ -100,49 +101,49 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::AccessData](#accessdata)|配列データへのポインターを取得します。|  
 |[COleSafeArray::AllocData](#allocdata)|配列のメモリを割り当てます。|  
 |[COleSafeArray::AllocDescriptor](#allocdescriptor)|セーフ配列記述子のメモリを割り当てます。|  
-|[COleSafeArray::Attach](#attach)|既存のすべての制御**バリアント**配列を`COleSafeArray`オブジェクト。|  
-|[COleSafeArray::Clear](#clear)|基になるすべてのデータを解放**バリアント**です。|  
+|[COleSafeArray::Attach](#attach)|既存の制御`VARIANT`配列を`COleSafeArray`オブジェクト。|  
+|[COleSafeArray::Clear](#clear)|基になるすべてのデータを解放`VARIANT`します。|  
 |[COleSafeArray::Copy](#copy)|既存の配列のコピーを作成します。|  
 |[COleSafeArray::Create](#create)|セーフ配列を作成します。|  
 |[COleSafeArray::CreateOneDim](#createonedim)|1 次元作成`COleSafeArray`オブジェクト。|  
 |[COleSafeArray::Destroy](#destroy)|既存の配列を破棄します。|  
 |[COleSafeArray::DestroyData](#destroydata)|セーフ配列内のデータを破棄します。|  
-|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|セーフ配列の記述子を破棄します。|  
-|[COleSafeArray::Detach](#detach)|デタッチ、**バリアント**の配列を`COleSafeArray`オブジェクト (データは解放されません) をします。|  
-|[COleSafeArray::GetByteArray](#getbytearray)|セーフ配列の内容をコピー、 [CByteArray](../../mfc/reference/cbytearray-class.md)です。|  
+|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|セーフ配列記述子を破棄します。|  
+|[COleSafeArray::Detach](#detach)|バリアント配列からのデタッチ、`COleSafeArray`オブジェクト (そのデータは解放されません)。|  
+|[COleSafeArray::GetByteArray](#getbytearray)|セーフ配列の内容をコピー、 [CByteArray](../../mfc/reference/cbytearray-class.md)します。|  
 |[COleSafeArray::GetDim](#getdim)|配列内の次元数を返します。|  
 |[Colesafearray::getelement](#getelement)|セーフ配列の 1 つの要素を取得します。|  
 |[COleSafeArray::GetElemSize](#getelemsize)|セーフ配列の 1 つの要素のバイト単位のサイズを返します。|  
 |[COleSafeArray::GetLBound](#getlbound)|セーフ配列の任意の次元の下限の境界を返します。|  
-|[COleSafeArray::GetOneDimSize](#getonedimsize)|1 次元で要素の数を返します`COleSafeArray`オブジェクト。|  
+|[COleSafeArray::GetOneDimSize](#getonedimsize)|1 次元内の要素の数を返します`COleSafeArray`オブジェクト。|  
 |[COleSafeArray::GetUBound](#getubound)|セーフ配列の任意の次元の上限の境界を返します。|  
-|[COleSafeArray::Lock](#lock)|配列のロック カウントをインクリメントし、配列の記述子に配列データへのポインターを配置します。|  
-|[COleSafeArray::PtrOfIndex](#ptrofindex)|インデックス付きの要素へのポインターを返します。|  
+|[COleSafeArray::Lock](#lock)|配列のロック カウントをインクリメントし、配列のデータへのポインターを配列記述子に配置します。|  
+|[COleSafeArray::PtrOfIndex](#ptrofindex)|インデックス付けされた要素へのポインターを返します。|  
 |[COleSafeArray::PutElement](#putelement)|1 つの要素を配列に割り当てます。|  
 |[COleSafeArray::Redim](#redim)|セーフ配列の最下位 (右端) の境界を変更します。|  
-|[COleSafeArray::ResizeOneDim](#resizeonedim)|1 次元内の要素の数を変更`COleSafeArray`オブジェクト。|  
-|[COleSafeArray::UnaccessData](#unaccessdata)|デクリメント ロックは、配列のカウントし、によって取得されたポインターを無効に`AccessData`です。|  
-|[COleSafeArray::Unlock](#unlock)|ロック カウントをデクリメント、配列の解放またはサイズ変更できるようにします。|  
+|[COleSafeArray::ResizeOneDim](#resizeonedim)|1 次元の要素の数を変更`COleSafeArray`オブジェクト。|  
+|[COleSafeArray::UnaccessData](#unaccessdata)|デクリメント、ロックは、配列のカウントし、によって取得されたポインターを無効に`AccessData`します。|  
+|[COleSafeArray::Unlock](#unlock)|ロック カウントをデクリメント、配列の解放やサイズを変更できるようにします。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|基になるアクセス**バリアント**の構造、`COleSafeArray`オブジェクト。|  
-|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|基になるアクセス**バリアント**の構造、`COleSafeArray`オブジェクト。|  
-|[COleSafeArray::operator =](#operator_eq)|値をコピー、`COleSafeArray`オブジェクト ( **SAFEARRAY**、**バリアント**、 `COleVariant`、または`COleSafeArray`配列)。|  
-|[COleSafeArray::operator = =](#operator_eq_eq)|2 つのバリアント型の配列を比較 ( **SAFEARRAY**、**バリアント**、 `COleVariant`、または`COleSafeArray`配列)。|  
-|[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|内容を出力、`COleSafeArray`ダンプ コンテキスト オブジェクト。|  
+|[COleSafeArray::operator LPCVARIANT](#operator_lpcvariant)|基になるにアクセスする`VARIANT`の構造、`COleSafeArray`オブジェクト。|  
+|[COleSafeArray::operator LPVARIANT](#operator_lpvariant)|基になるにアクセスする`VARIANT`の構造、`COleSafeArray`オブジェクト。|  
+|[COleSafeArray::operator =](#operator_eq)|値をコピー、`COleSafeArray`オブジェクト (`SAFEARRAY`、 `VARIANT`、 `COleVariant`、または`COleSafeArray`配列)。|  
+|[COleSafeArray::operator = =](#operator_eq_eq)|2 つのバリアント型の配列を比較します (`SAFEARRAY`、 `VARIANT`、 `COleVariant`、または`COleSafeArray`配列)。|  
+|[COleSafeArray::operator &lt;&lt;](#operator_lt_lt)|内容を出力する`COleSafeArray`ダンプ コンテキスト オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
- `COleSafeArray` OLE から派生した**バリアント**構造体。 OLE **SAFEARRAY**メンバー関数は、を通じて利用`COleSafeArray`、および一連のバイトの 1 次元配列用に設計されたメンバー関数として。  
+## <a name="remarks"></a>Remarks  
+ `COleSafeArray` OLE から派生した`VARIANT`構造体。 OLE`SAFEARRAY`メンバー関数を利用`COleSafeArray`同様、一連のバイトの 1 次元配列用にデザインされたメンバー関数として。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `tagVARIANT`  
   
  `COleSafeArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="accessdata"></a>  COleSafeArray::AccessData  
@@ -153,11 +154,11 @@ void AccessData(void** ppvData);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppvData`  
+ *ppvData*  
  配列データへのポインターへのポインター。  
   
-### <a name="remarks"></a>コメント  
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#26](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
@@ -169,25 +170,25 @@ void AccessData(void** ppvData);
 void AllocData();
 ```  
   
-### <a name="remarks"></a>コメント  
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="allocdescriptor"></a>  COleSafeArray::AllocDescriptor  
- セーフ配列の記述子のメモリを割り当てます。  
+ メモリのセーフ配列記述子を割り当てます。  
   
 ```  
 void AllocDescriptor(DWORD dwDims);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDims`  
+ *dwDims*  
  セーフ配列の次元数。  
   
-### <a name="remarks"></a>コメント  
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="attach"></a>  COleSafeArray::Attach  
- 既存のデータの制御**バリアント**配列を`COleSafeArray`オブジェクト。  
+ 既存のデータの制御`VARIANT`配列を`COleSafeArray`オブジェクト。  
   
 ```  
 void Attach(VARIANT& varSrc);
@@ -195,23 +196,23 @@ void Attach(VARIANT& varSrc);
   
 ### <a name="parameters"></a>パラメーター  
  *varSrc*  
- A**バリアント**オブジェクト。 *VarSrc*パラメーターが必要、 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)**VT_ARRAY**です。  
+ `VARIANT` オブジェクト。 *VarSrc*パラメーターが必要、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)vt_array です。  
   
-### <a name="remarks"></a>コメント  
- ソース**バリアント**の種類に設定されて`VT_EMPTY`です。 この関数は、存在する場合に、現在の配列のデータをクリアします。  
+### <a name="remarks"></a>Remarks  
+ ソース`VARIANT`の種類が VT_EMPTY に設定します。 この関数は、存在する場合に、現在の配列のデータをクリアします。  
   
 ### <a name="example"></a>例  
-  例を参照して[COleSafeArray::AccessData](#accessdata)です。  
+  例をご覧ください[COleSafeArray::AccessData](#accessdata)します。  
   
 ##  <a name="clear"></a>  COleSafeArray::Clear  
- セーフ配列を消去します。  
+ セーフ配列をクリアします。  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>コメント  
- 関数では、セーフ配列を消去を設定して、`VARTYPE`するオブジェクトの`VT_EMPTY`します。 現在の内容が解放され、配列が解放されます。  
+### <a name="remarks"></a>Remarks  
+ 関数は、セーフ配列を設定してクリアします、 `VARTYPE` VT_EMPTY にオブジェクトの。 現在の内容がリリースされ、配列が解放されます。  
   
 ##  <a name="colesafearray"></a>  COleSafeArray::COleSafeArray  
  `COleSafeArray` オブジェクトを構築します。  
@@ -236,25 +237,25 @@ COleSafeArray(const COleVariant& varSrc);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `saSrc`  
- 既存の`COleSafeArray`オブジェクトまたは**SAFEARRAY**新しいにコピーされる`COleSafeArray`オブジェクト。  
+ *saSrc*  
+ 既存の`COleSafeArray`オブジェクトまたは`SAFEARRAY`新しいにコピーされる`COleSafeArray`オブジェクト。  
   
- `vtSrc`  
- **VARTYPE**新しい`COleSafeArray`オブジェクト。  
+ *vtSrc*  
+ 新しい VARTYPE`COleSafeArray`オブジェクト。  
   
- `psaSrc`  
- ポインター、 **SAFEARRAY**新しいにコピーされる`COleSafeArray`オブジェクト。  
+ *psaSrc*  
+ ポインターを`SAFEARRAY`新しいにコピーされる`COleSafeArray`オブジェクト。  
   
  *varSrc*  
- 既存の**バリアント**または`COleVariant`新しいにコピーされるオブジェクト`COleSafeArray`オブジェクト。  
+ 既存の`VARIANT`または`COleVariant`新しいにコピーされるオブジェクト`COleSafeArray`オブジェクト。  
   
- `pSrc`  
- ポインター、**バリアント**新しいにコピーされるオブジェクト`COleSafeArray`オブジェクト。  
+ *pSrc*  
+ ポインターを`VARIANT`新しいにコピーされるオブジェクト`COleSafeArray`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 新規作成すべてこれらのコンス トラクターの`COleSafeArray`オブジェクト。 空のパラメーターがない場合は`COleSafeArray`オブジェクトが作成された ( `VT_EMPTY`)。 場合、`COleSafeArray`が別のコピー元の配列[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)は暗黙的に呼ばれます (、 `COleSafeArray`、 `COleVariant`、または**バリアント**) では、 **VARTYPE**のソース配列が保持され、指定する必要はありません。 場合、`COleSafeArray`が別のコピー元の配列**VARTYPE**既知ではありません ( **SAFEARRAY**) では、 **VARTYPE**で指定する必要があります、`vtSrc`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ これらのコンス トラクターのすべてが新規作成`COleSafeArray`オブジェクト。 空のパラメーターがない場合`COleSafeArray`オブジェクトが作成されます (VT_EMPTY)。 場合、`COleSafeArray`別のコピーは配列の[VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4)は暗黙的に呼ばれます (、 `COleSafeArray`、 `COleVariant`、または`VARIANT`)、ソース配列の VARTYPE は保持され、指定する必要はありません。 場合、`COleSafeArray`が VARTYPE がわからない場合は別の配列からコピーされます (`SAFEARRAY`)、VARTYPE を指定する必要があります、 *vtSrc*パラメーター。  
   
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="copy"></a>  COleSafeArray::Copy  
  既存のセーフ配列のコピーを作成します。  
@@ -265,13 +266,13 @@ void Copy(LPSAFEARRAY* ppsa);
   
 ### <a name="parameters"></a>パラメーター  
  *ppsa*  
- 新しい配列の記述子を返す先の場所へのポインター。  
+ 新しい配列記述子を返す場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="create"></a>  COleSafeArray::Create  
- 配列のデータを初期化します。  
+ 割り当て、配列にデータを初期化します。  
   
 ```  
 void Create(
@@ -287,20 +288,20 @@ void Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `vtSrc`  
- 配列の基本型 (つまり、 **VARTYPE**配列の各要素の)。 **VARTYPE**バリアント型のサブセットに制限されます。 どちらも、 **VT_ARRAY**も**VT_BYREF**フラグを設定することができます。 `VT_EMPTY` および**VT_** 配列の有効な基本型ではありません。 他のすべての種類は無効です。  
+ *vtSrc*  
+ 配列 (つまり、配列の各要素の VARTYPE) の基本型。 VARTYPE は、バリアント型のサブセットに限定されます。 VT_ARRAY も VT_BYREF フラグを設定することができます。 VT_EMPTY、VT_ は、配列の有効なの基本型ではありません。 その他のすべての種類は有効です。  
   
- `dwDims`  
- 配列の次元の数。 これは、配列の作成後に[Redim](#redim)です。  
+ *dwDims*  
+ 配列の次元の数。 配列の作成後に変更できます[Redim](#redim)します。  
   
  *rgElements*  
  配列内の各ディメンションの要素の数の配列へのポインター。  
   
  *rgsabounds*  
- (各ディメンションの 1 つ) の境界のベクターへのポインター、配列を割り当てられません。  
+ 境界 (ディメンションごとに 1 つ) のベクターへのポインター、配列を割り当てられません。  
   
-### <a name="remarks"></a>コメント  
- この関数は、必要に応じて、現在の配列のデータがクリアされます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ この関数は、必要に応じて、現在の配列のデータがクリアされます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
@@ -317,84 +318,84 @@ void CreateOneDim(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `vtSrc`  
- 配列の基本型 (つまり、 **VARTYPE**配列の各要素の)。  
+ *vtSrc*  
+ 配列 (つまり、配列の各要素の VARTYPE) の基本型。  
   
- `dwElements`  
- 配列内の要素の数。 これは、配列の作成後に[でも](#resizeonedim)です。  
+ *dwElements*  
+ 配列内の要素の数。 配列の作成後に変更できます[でも](#resizeonedim)します。  
   
- `pvSrcData`  
+ *pvSrcData*  
  配列にコピーするデータへのポインター。  
   
  *nLBound*  
  配列の下限値です。  
   
-### <a name="remarks"></a>コメント  
- 関数は、の場合は、指定されたデータをコピー、配列のデータの初期化ポインター`pvSrcData`は**NULL**です。  
+### <a name="remarks"></a>Remarks  
+ 関数は、割り当て、場合に、指定されたデータをコピーして、配列のデータを初期化しますポインター *pvSrcData*が NULL でないです。  
   
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)です。  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#28](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
   
 ##  <a name="destroy"></a>  COleSafeArray::Destroy  
- 既存の配列の記述子と配列内のすべてのデータを破棄します。  
+ 既存の配列記述子と、配列内のすべてのデータを破棄します。  
   
 ```  
 void Destroy();
 ```  
   
-### <a name="remarks"></a>コメント  
- オブジェクトが配列に格納されている場合は、各オブジェクトが解放されます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ オブジェクトが配列に格納されている場合は、各オブジェクトが解放されます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="destroydata"></a>  COleSafeArray::DestroyData  
- セーフ配列内のすべてのデータを破棄します。  
+ セーフ配列のすべてのデータを破棄します。  
   
 ```  
 void DestroyData();
 ```  
   
-### <a name="remarks"></a>コメント  
- オブジェクトが配列に格納されている場合は、各オブジェクトが解放されます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ オブジェクトが配列に格納されている場合は、各オブジェクトが解放されます。 エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="destroydescriptor"></a>  COleSafeArray::DestroyDescriptor  
- セーフ配列の記述子を破棄します。  
+ セーフ配列記述子を破棄します。  
   
 ```  
 void DestroyDescriptor();
 ```  
   
-### <a name="remarks"></a>コメント  
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="detach"></a>  COleSafeArray::Detach  
- デタッチ、**バリアント**からデータを`COleSafeArray`オブジェクト。  
+ デタッチ、`VARIANT`からデータを`COleSafeArray`オブジェクト。  
   
 ```  
 VARIANT Detach();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 基になる**バリアント**値で、`COleSafeArray`オブジェクト。  
+ 基になる`VARIANT`値、`COleSafeArray`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 関数を設定して、セーフ配列内のデータの関連付けを解除、 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)するオブジェクトの`VT_EMPTY`します。 Windows の関数を呼び出すことによって、配列を解放する、呼び出し元の責任である[VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835)です。  
+### <a name="remarks"></a>Remarks  
+ 関数では、セーフ配列内のデータをデタッチを設定して、 [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) VT_EMPTY にオブジェクトの。 Windows 関数を呼び出すことによって、配列を解放する呼び出し元の責任[VariantClear](http://msdn.microsoft.com/28741d81-8404-4f85-95d3-5c209ec13835)します。  
   
- エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)です。  
+ エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ### <a name="example"></a>例  
-  例を参照して[COleSafeArray::PutElement](#putelement)です。  
+  例をご覧ください[COleSafeArray::PutElement](#putelement)します。  
   
 ##  <a name="getbytearray"></a>  COleSafeArray::GetByteArray  
- セーフ配列の内容をコピー、`CByteArray`です。  
+ セーフ配列の内容をコピー、`CByteArray`します。  
   
 ```  
 void GetByteArray(CByteArray& bytes);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bytes`  
- 参照、 [CByteArray](../../mfc/reference/cbytearray-class.md)オブジェクト。  
+ *バイト数*  
+ 参照を[CByteArray](../../mfc/reference/cbytearray-class.md)オブジェクト。  
   
 ##  <a name="getdim"></a>  COleSafeArray::GetDim  
  内のディメンションの数を返します、`COleSafeArray`オブジェクト。  
@@ -419,16 +420,16 @@ void GetElement(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rgIndices`  
+ *返す時*  
  インデックスの配列へのポインター (配列の次元ごと)。  
   
- `pvData`  
+ *pvData*  
  配列の要素を配置する場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
- この関数は、自動的に windows 関数を呼び出して`SafeArrayLock`と`SafeArrayUnlock`前に、と後、要素を取得します。 データ要素が文字列、オブジェクト、またはバリアント型の場合は、関数は、適切な方法で要素をコピーします。 パラメーター`pvData`要素を格納するための十分なバッファーの大規模なをポイントする必要があります。  
+### <a name="remarks"></a>Remarks  
+ この関数は、windows の関数を自動的に呼び出します`SafeArrayLock`と`SafeArrayUnlock`前に、と後、要素を取得します。 データ要素が文字列、オブジェクト、またはバリアントの場合、関数は、適切な方法で要素をコピーします。 パラメーター *pvData*要素を格納するための十分なバッファーの大きなをポイントする必要があります。  
   
- エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)です。  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#29](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
@@ -453,30 +454,30 @@ void GetLBound(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDim`  
- 下限値を取得する対象の配列の次元です。  
+ *dwDim*  
+ 下限の境界を取得する対象の配列の次元。  
   
  *pLBound*  
  下限の境界を返す場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
- エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#30](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
   
 ##  <a name="getonedimsize"></a>  COleSafeArray::GetOneDimSize  
- 1 次元で要素の数を返します`COleSafeArray`オブジェクト。  
+ 1 次元内の要素の数を返します`COleSafeArray`オブジェクト。  
   
 ```  
 DWORD GetOneDimSize();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 1 次元のセーフ配列内の要素の数。  
+ 1 次元のセーフ配列の要素の数。  
   
 ### <a name="example"></a>例  
-  例を参照して[COleSafeArray::CreateOneDim](#createonedim)です。  
+  例をご覧ください[COleSafeArray::CreateOneDim](#createonedim)します。  
   
 ##  <a name="getubound"></a>  COleSafeArray::GetUBound  
  セーフ配列の任意の次元の上限の境界を返します。  
@@ -488,51 +489,51 @@ void GetUBound(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwDim`  
- 上限の境界を取得する対象の配列の次元です。  
+ *dwDim*  
+ 上限を取得する対象の配列の次元。  
   
  *pUBound*  
  上限の境界を返す場所へのポインター。  
   
-### <a name="remarks"></a>コメント  
- エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#31](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
   
 ##  <a name="lock"></a>  COleSafeArray::Lock  
- 配列と場所、データへのポインター、配列を配列の記述子のロック カウントをインクリメントします。  
+ 配列と、配列のデータの配列記述子へのポインターの場所のロック カウントをインクリメントします。  
   
 ```  
 void Lock();
 ```  
   
-### <a name="remarks"></a>コメント  
- スローされるエラーの場合、 [COleException](../../mfc/reference/coleexception-class.md)です。  
+### <a name="remarks"></a>Remarks  
+ エラーがスロー、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
- 配列の記述子に、ポインターの有効期限`Unlock`と呼びます。 呼び出す`Lock`; 入れ子にすることができますへの呼び出しの数が等しい`Unlock`が必要です。  
+ 配列記述子のポインターは有効期限`Unlock`が呼び出されます。 呼び出す`Lock`入れ子にできます。 への呼び出しの数が等しい`Unlock`が必要です。  
   
- ロック中に、配列を削除できません。  
+ ロックされている配列を削除できません。  
   
 ##  <a name="operator_lpcvariant"></a>  COleSafeArray::operator LPCVARIANT  
- 基になるにアクセスするには、このキャスト演算子を呼び出す**バリアント**この構造体`COleSafeArray`オブジェクト。  
+ このキャスト演算子を呼び出す`VARIANT`この構造体`COleSafeArray`オブジェクト。  
   
 ```  
 operator LPCVARIANT() const;  
 ```  
   
 ##  <a name="operator_lpvariant"></a>  COleSafeArray::operator LPVARIANT  
- 基になるにアクセスするには、このキャスト演算子を呼び出す**バリアント**この構造体`COleSafeArray`オブジェクト。  
+ このキャスト演算子を呼び出す`VARIANT`この構造体`COleSafeArray`オブジェクト。  
   
 ```  
 operator LPVARIANT();
 ```   
   
-### <a name="remarks"></a>コメント  
- 値を変更することに注意してください、**バリアント**の値を変更する構造体がこの関数によって返されるポインターは、アクセス`COleSafeArray`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 値を変更することに注意してください、`VARIANT`これの値を変更する構造体のこの関数によって返されたポインターによってアクセス`COleSafeArray`オブジェクト。  
   
 ##  <a name="operator_eq"></a>  COleSafeArray::operator =  
- これらのオーバー ロードされた代入演算子は、これに元の値をコピー`COleSafeArray`オブジェクト。  
+ これらのオーバー ロードされた代入演算子はコピー元の値をこの`COleSafeArray`オブジェクト。  
   
 ```  
 COleSafeArray& operator=(const COleSafeArray& saSrc);  
@@ -541,132 +542,136 @@ COleSafeArray& operator=(const VARIANT& varSrc);
 COleSafeArray& operator=(const COleVariant& varSrc);
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  各演算子の簡単な説明に従います。  
   
-- **演算子 = = (** *saSrc* **)** 、既存のコピー`COleSafeArray`オブジェクトをこのオブジェクトにします。  
+- **operator = (** *saSrc* **)** 、既存のコピー`COleSafeArray`オブジェクトをこのオブジェクトにします。  
   
-- **演算子 = = (** *varSrc * * *)**、既存のコピー**バリアント**または`COleVariant`このオブジェクトの配列。  
+- **operator = (** *varSrc * * *)**、既存のコピー`VARIANT`または`COleVariant`このオブジェクトの配列。  
   
-- **演算子 = = (** `pSrc` **)** コピー、**バリアント**によってアクセスされる配列オブジェクト`pSrc`このオブジェクトにします。  
+- **operator = (** `pSrc` **)** コピー、`VARIANT`からアクセスされるオブジェクトの配列`pSrc`このオブジェクトにします。  
   
 ##  <a name="operator_eq_eq"></a>  COleSafeArray::operator = =  
- この演算子は、2 つの配列を比較 ( **SAFEARRAY**、**バリアント**、 `COleVariant`、または`COleSafeArray`配列) し、それらが等しい。 それ以外の場合 0 の場合は 0 以外を返します。  
+ この演算子は、2 つの配列を比較します (`SAFEARRAY`、 `VARIANT`、 `COleVariant`、または`COleSafeArray`配列) し、それ以外の場合 0 以外の場合、0 以外の値を返します。  
   
 ```  
 BOOL operator==(const SAFEARRAY& saSrc) const;  BOOL operator==(LPCSAFEARRAY pSrc) const;  
    
 BOOL operator==(const COleSafeArray& saSrc) const;  BOOL operator==(const VARIANT& varSrc) const;  
    
-BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varSrc) const;  ```  
+BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varSrc) const;  
+```  
   
-### Remarks  
- Two arrays are equal if they have an equal number of dimensions, equal size in each dimension, and equal element values.  
+### <a name="remarks"></a>Remarks  
+ 2 つの配列は同じ数のディメンション、各ディメンション、および要素値のサイズを持つ場合に等価です。  
   
 ##  <a name="operator_lt_lt"></a>  COleSafeArray::operator &lt;&lt;  
- The `COleSafeArray` insertion (<<) operator supports diagnostic dumping and storing of a `COleSafeArray` object to an archive.  
+ `COleSafeArray`挿入 (<<) 演算子は、診断ダンプと格納をサポートしています、`COleSafeArray`オブジェクトをアーカイブします。  
   
 ```  
-CDumpContext & AFXAPI 演算子 << (CDumpContext & dc では、  
-    COleSafeArray & saSrc) です。
+CDumpContext& AFXAPI operator<<(
+    CDumpContext& dc,  
+    COleSafeArray& saSrc);
 ```  
   
 ##  <a name="ptrofindex"></a>  COleSafeArray::PtrOfIndex  
- Returns a pointer to the element specified by the index values.  
+ インデックス値によって指定された要素へのポインターを返します。  
   
 ```  
-void PtrOfIndex (時間の長い * 返す時、  
-    void * * ppvData) です。
+void PtrOfIndex(
+    long* rgIndices,  
+    void** ppvData);
 ```  
   
-### Parameters  
- `rgIndices`  
- An array of index values that identify an element of the array. All indexes for the element must be specified.  
+### <a name="parameters"></a>パラメーター  
+ *返す時*  
+ 配列の要素を識別するインデックス値の配列。 要素のすべてのインデックスを指定する必要があります。  
   
- `ppvData`  
- On return, pointer to the element identified by the values in `rgIndices`.  
+ *ppvData*  
+ 内の値によって識別された要素に戻り、ポインターで*返す時*します。  
   
 ##  <a name="putelement"></a>  COleSafeArray::PutElement  
- Assigns a single element into the array.  
+ 1 つの要素を配列に割り当てます。  
   
 ```  
-void PutElement (時間の長い * 返す時、  
-    void * pvData) です。
+void PutElement(
+    long* rgIndices,  
+    void* pvData);
 ```  
   
-### Parameters  
- `rgIndices`  
- Pointer to an array of indexes for each dimension of the array.  
+### <a name="parameters"></a>パラメーター  
+ *返す時*  
+ インデックスの配列へのポインター (配列の次元ごと)。  
   
- `pvData`  
- Pointer to the data to assign to the array. **VT_DISPATCH**, **VT_UNKNOWN**, and `VT_BSTR` variant types are pointers and do not require another level of indirection.  
+ *pvData*  
+ 配列に割り当てるデータへのポインター。 バリアント型が VT_DISPATCH、VT_UNKNOWN、および VT_BSTR ポインターは、別のレベルの間接参照を必要としません。  
   
-### Remarks  
- This function automatically calls the Windows functions [SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx) and [SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx) before and after assigning the element. If the data element is a string, object, or variant, the function copies it correctly, and if the existing element is a string, object, or variant, it is cleared correctly.  
+### <a name="remarks"></a>Remarks  
+ この関数は、Windows の機能を自動的に呼び出します[SafeArrayLock](https://msdn.microsoft.com/library/windows/desktop/ms221492.aspx)と[SafeArrayUnlock](https://msdn.microsoft.com/library/windows/desktop/ms221246.aspx)前に、と後、要素を割り当てます。 データ要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にコピーされ、既存の要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にクリアされます。  
   
- Note that you can have multiple locks on an array, so you can put elements into an array while the array is locked by other operations.  
+ 配列は多重にロックできるため、配列が別の操作によってロックされている間に要素を配列に配置できることに注意してください。  
   
- On error, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) or [COleException](../../mfc/reference/coleexception-class.md).  
+ エラー、関数、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)します。  
   
-### Example  
+### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#32](../../mfc/codesnippet/cpp/colesafearray-class_7.cpp)]  
   
 ##  <a name="redim"></a>  COleSafeArray::Redim  
- Changes the least significant (rightmost) bound of a safe array.  
+ セーフ配列の最下位 (右端) の境界を変更します。  
   
 ```  
-redim ステートメント (SAFEARRAYBOUND * psaboundNew); を無効にします。
+void Redim(SAFEARRAYBOUND* psaboundNew);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>パラメーター  
  *psaboundNew*  
- Pointer to a new safe array bound structure containing the new array bound. Only the least significant dimension of an array may be changed.  
+ 新しいセーフ配列へのポインターには、バインドされた新しい配列を含む構造体がバインドされています。 最下位の次元の配列のみを変更することがあります。  
   
-### Remarks  
- On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
 ##  <a name="resizeonedim"></a>  COleSafeArray::ResizeOneDim  
- Changes the number of elements in a one-dimensional `COleSafeArray` object.  
+ 1 次元の要素の数を変更`COleSafeArray`オブジェクト。  
   
 ```  
-void でも (DWORD dwElements) です。
+void ResizeOneDim(DWORD dwElements);
 ```  
   
-### Parameters  
- `dwElements`  
- Number of elements in the one-dimensional safe array.  
+### <a name="parameters"></a>パラメーター  
+ *dwElements*  
+ 1 次元のセーフ配列の要素の数。  
   
-### Remarks  
- On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
-### Example  
-  See the example for [COleSafeArray::CreateOneDim](#createonedim).  
+### <a name="example"></a>例  
+  例をご覧ください[COleSafeArray::CreateOneDim](#createonedim)します。  
   
 ##  <a name="unaccessdata"></a>  COleSafeArray::UnaccessData  
- Decrements the lock count of an array and invalidates the pointer retrieved by `AccessData`.  
+ デクリメント、ロックは、配列のカウントし、によって取得されたポインターを無効に`AccessData`します。  
   
 ```  
-void UnaccessData() です。
+void UnaccessData();
 ```  
   
-### Remarks  
- On error, the function throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
-### Example  
-  See the example for [COleSafeArray::AccessData](#accessdata).  
+### <a name="example"></a>例  
+  例をご覧ください[COleSafeArray::AccessData](#accessdata)します。  
   
 ##  <a name="unlock"></a>  COleSafeArray::Unlock  
- Decrements the lock count of an array so it can be freed or resized.  
+ ロック カウントをデクリメント、配列の解放やサイズを変更できるようにします。  
   
 ```  
-void Unlock() です。
+void Unlock();
 ```  
   
-### Remarks  
- This function is called after access to the data in an array is finished. On error, it throws a [COleException](../../mfc/reference/coleexception-class.md).  
+### <a name="remarks"></a>Remarks  
+ 配列内のデータへのアクセスが完了したら、この関数が呼び出されます。 エラーがスロー、 [COleException](../../mfc/reference/coleexception-class.md)します。  
   
-## See Also  
- [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
- [COleVariant Class](../../mfc/reference/colevariant-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)
+## <a name="see-also"></a>関連項目  
+ [階層図](../../mfc/hierarchy-chart.md)   
+ [COleVariant クラス](../../mfc/reference/colevariant-class.md)   
+ [CRecordset クラス](../../mfc/reference/crecordset-class.md)   
+ [CDatabase クラス](../../mfc/reference/cdatabase-class.md)

@@ -1,5 +1,5 @@
 ---
-title: ATL プロジェクトで CRT にリンク |Microsoft ドキュメント
+title: ATL プロジェクトで CRT へのリンク |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,24 +22,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec0d93f8770ebbd893491c0e8b8eed239396e00a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fad8209c680a782bd9800215e1e0affc7e2a98c8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852498"
 ---
-# <a name="linking-to-the-crt-in-your-atl-project"></a>ATL プロジェクトで CRT にリンク
-[C ランタイム ライブラリ](../c-runtime-library/crt-library-features.md)(CRT) できるようにするプログラミングはるかに簡単 ATL 開発時に多くの便利な関数を提供します。 すべての ATL プロジェクトは、CRT ライブラリにリンクします。 長所と短所のメソッドのリンクを確認できます[CRT へのリンクに使用されるメソッドの利点とトレードオフ](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)です。  
+# <a name="linking-to-the-crt-in-your-atl-project"></a>ATL プロジェクトで CRT にリンクするには
+[C ランタイム ライブラリ](../c-runtime-library/crt-library-features.md)(CRT) はプログラミングがより簡単 ATL 開発中に多数の役立つ機能を提供します。 すべての ATL プロジェクトでは、CRT ライブラリにリンクします。 長所と短所のメソッドのリンクを確認できます[CRT へのリンクに使用されるメソッドの利点とトレードオフ](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)します。  
   
-## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>プログラム イメージ CRT にリンクの効果  
- CRT に静的にリンクする場合は、CRT のコードは、実行可能イメージに配置され、イメージを実行するシステムで、CRT DLL が存在する必要はありません。 CRT に動的にリンクする場合は、CRT DLL 内のコードへの参照が、イメージが、コード自体ではないに配置されます。 イメージを指定したシステムで実行するためには、CRT DLL は、そのシステムに存在する必要があります。 でもを動的にリンクする場合、CRT、いくつかのコードを静的にリンクできるがあります (たとえば、 **DllMainCRTStartup**)。  
+## <a name="effects-of-linking-to-the-crt-on-your-program-image"></a>プログラム イメージの CRT へのリンクの効果  
+ CRT に静的にリンクする場合は CRT からのコードは、実行可能イメージに配置され、イメージを実行するシステムで、CRT DLL に存在する必要はありません。 CRT に動的にリンクする場合、CRT DLL 内のコードへの参照は、イメージは、コード自体ではなくに配置されます。 イメージを特定のシステムで実行するためには、CRT DLL はそのシステムに存在する必要があります。 でもを動的にリンクする場合、CRT、いくつかのコードを静的にリンクできますがするあります (たとえば、 `DllMainCRTStartup`)。  
   
- イメージをリンクするときに明示的または暗黙的を指定するイメージを読み込んだ後に、オペレーティング システムを呼び出すエントリ ポイント。 既定のエントリ ポイントは、dll の場合、 **DllMainCRTStartup**です。 EXE は**WinMainCRTStartup**です。 /ENTRY リンカー オプションを使用して既定値を上書きすることができます。 CRT の実装を提供する**DllMainCRTStartup**、 **WinMainCRTStartup**、および**wWinMainCRTStartup** (exe ファイルの Unicode のエントリ ポイント)。 これらの CRT に用意されているエントリ ポイントは、グローバル オブジェクトのコンス トラクターを呼び出すし、一部の CRT 関数によって使用されているその他のデータ構造を初期化します。 このスタートアップ コードでは、静的にリンクされている場合、約 25 K を画像に追加します。 動的にリンクされている場合は、イメージのサイズを小さく抑えるために、コードのほとんどが、DLL 内です。  
+ イメージをリンクするときに明示的または暗黙的に指定する、オペレーティング システムは、イメージの読み込み後に呼び出すエントリ ポイント。 既定のエントリ ポイントは、dll の場合、`DllMainCRTStartup`します。 Exe`WinMainCRTStartup`します。 /ENTRY リンカー オプションを使用して既定をオーバーライドすることができます。 CRT の実装を提供する`DllMainCRTStartup`、 `WinMainCRTStartup`、および`wWinMainCRTStartup`(exe Unicode エントリ ポイント)。 これらの CRT で提供されるエントリ ポイントはグローバル オブジェクトのコンス トラクターを呼び出すし、一部の CRT 関数によって使用されるその他のデータ構造を初期化します。 このスタートアップ コードでは、静的にリンクされている場合に、約 25 K がイメージに追加します。 動的にリンクされている場合は、イメージのサイズを小さく抑えるため、コードのほとんどは、DLL 内です。  
   
- 詳細については、リンカーのトピックを参照してください。 [/ENTRY (エントリ ポイント シンボル)](../build/reference/entry-entry-point-symbol.md)です。  
+ 詳細については、リンカーのトピックを参照してください。 [/ENTRY (エントリ ポイント シンボル)](../build/reference/entry-entry-point-symbol.md)します。  
   
 ## <a name="optimization-options"></a>最適化オプション  
- /OPT:NOWIN98 リンカー オプションを使用してさらに減らせる 10 k は、既定の ATL コントロール譲歩読み込み Windows 98 システムで時間を増加します。 リンク オプションの詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)です。  
+ /OPT:NOWIN98 リンカー オプションを使用してさらに低下 10 k は、既定の ATL コントロール譲歩読み込み Windows 98 システム上の時間が増加します。 リンク オプションの詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ATL および C ランタイム コードによるプログラミング](../atl/programming-with-atl-and-c-run-time-code.md)   

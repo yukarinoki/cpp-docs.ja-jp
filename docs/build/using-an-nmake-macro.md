@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380577"
 ---
 # <a name="using-an-nmake-macro"></a>NMAKE マクロの使用
 マクロを使用するのには、ドル記号 ($) を次のように続くかっこ内にその名前を囲みます。  

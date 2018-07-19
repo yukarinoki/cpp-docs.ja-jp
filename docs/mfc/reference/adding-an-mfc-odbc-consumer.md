@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346859"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>MFC ODBC コンシューマーの追加
 MFC ODBC コンシューマーは、ODBC レコード セット クラスとデータ バインディングのデータ ソースにアクセスするために必要なので構成されます。  

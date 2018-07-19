@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336600"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ 
 Visual C コンパイラ オプションを使用する[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)と[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)を設定する、[自動並行化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)出力理由コードとそのアクティビティに関する情報メッセージです。 この記事では、理由コードとメッセージについて説明します。  

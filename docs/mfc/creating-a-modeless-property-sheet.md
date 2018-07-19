@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342723"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>モードレス プロパティ シートの作成
 通常、作成するプロパティ シートはモーダルになります。 モーダル プロパティ シートを使用する場合、アプリケーションの他の部分を使用する前に、プロパティ シートを閉じる必要があります。 この記事では、ユーザーがアプリケーションの他の部分を使用しているときに、プロパティ シートを開いたままにできるモードレス プロパティ シートの作成に使用できる方法について説明します。  

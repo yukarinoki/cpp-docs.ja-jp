@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345962"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Active ドキュメント コンテインメントの例 : Office バインダー
 Microsoft Office バインダーは、active ドキュメント コンテナーの例を示します。 Office バインダーには、コンテナーと同様の 2 つのプライマリ ペインが含まれています。 左側のウィンドウには、バインダー内のアクティブなドキュメントに対応するアイコンが含まれています。 各ドキュメントと呼ばれる、*セクション*バインダー内です。 たとえば、バインダーは、Word 文書、PowerPoint ファイル、Excel スプレッドシート、およびなどを含めることができます。  

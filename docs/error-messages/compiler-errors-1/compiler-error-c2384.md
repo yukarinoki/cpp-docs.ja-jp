@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33194932"
 ---
 # <a name="compiler-error-c2384"></a>コンパイラ エラー C2384
 'member' : __declspec(thread) をマネージ クラスまたは WinRT クラスのメンバーに適用できません  

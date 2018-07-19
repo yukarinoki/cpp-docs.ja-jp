@@ -29,11 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe7108c2eb370739494a2c6b8bc95fbdc1001840
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b32031103e6e6d9922fdb3b0fc3a0d95e5eb280c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957042"
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;regex&gt; typedefs
 
@@ -54,7 +55,7 @@ char match_results の型定義です。
 typedef match_results<const char*> cmatch;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const char*` 型の反復子に合わせて特殊化したテンプレート クラス [match_results クラス](../standard-library/match-results-class.md)を表します。
 
@@ -66,7 +67,7 @@ char regex_iterator の型定義。
 typedef regex_iterator<const char*> cregex_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const char*` 型の反復子に合わせて特殊化したテンプレート クラス [regex_iterator クラス](../standard-library/regex-iterator-class.md)を表します。
 
@@ -78,7 +79,7 @@ char regex_token_iterator の型定義
 typedef regex_token_iterator<const char*> cregex_token_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const char*` 型の反復子に合わせて特殊化したテンプレート クラス [regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)を表します。
 
@@ -90,7 +91,7 @@ char sub_match の型定義です。
 typedef sub_match<const char*> csub_match;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const char*` 型の反復子に合わせて特殊化したテンプレート クラス [sub_match クラス](../standard-library/sub-match-class.md)を表します。
 
@@ -102,9 +103,9 @@ char basic_regex の型定義です。
 typedef basic_regex<char> regex;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、`char` 型の要素に合わせて特殊化したテンプレート クラス [basic_regex クラス](../standard-library/basic-regex-class.md)を表します。
+この型はテンプレート クラスの特殊化を表します[basic_regex クラス](../standard-library/basic-regex-class.md)型の要素に対して**char**します。
 
 > [!NOTE]
 > ハイビット文字は、`regex` を使用すると予測できない結果を起こします。 0 から 127 の範囲を外れる値を使用すると未定義の動作をすることがあります。
@@ -117,7 +118,7 @@ string match_results の型定義です。
 typedef match_results<string::const_iterator> smatch;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`string::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [match_results クラス](../standard-library/match-results-class.md)を表します。
 
@@ -129,7 +130,7 @@ typedef match_results<string::const_iterator> smatch;
 typedef regex_iterator<string::const_iterator> sregex_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`string::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [regex_iterator クラス](../standard-library/regex-iterator-class.md)を表します。
 
@@ -141,7 +142,7 @@ typedef regex_iterator<string::const_iterator> sregex_iterator;
 typedef regex_token_iterator<string::const_iterator> sregex_token_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`string::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)を表します。
 
@@ -153,7 +154,7 @@ string sub_match の型定義です。
 typedef sub_match<string::const_iterator> ssub_match;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`string::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [sub_match クラス](../standard-library/sub-match-class.md)を表します。
 
@@ -165,7 +166,7 @@ wchar_t match_results の型定義です。
 typedef match_results<const wchar_t *> wcmatch;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const wchar_t*` 型の反復子に合わせて特殊化したテンプレート クラス [match_results クラス](../standard-library/match-results-class.md)を表します。
 
@@ -177,7 +178,7 @@ wchar_t regex_iterator の型定義です。
 typedef regex_iterator<const wchar_t*> wcregex_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const wchar_t*` 型の反復子に合わせて特殊化したテンプレート クラス [regex_iterator クラス](../standard-library/regex-iterator-class.md)を表します。
 
@@ -189,7 +190,7 @@ wchar_t regex_token_iterator の型定義です。
 typedef regex_token_iterator<const wchar_t*> wcregex_token_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const wchar_t*` 型の反復子に合わせて特殊化したテンプレート クラス [regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)を表します。
 
@@ -201,7 +202,7 @@ wchar_t sub_match の型定義です。
 typedef sub_match<const wchar_t*> wcsub_match;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`const wchar_t*` 型の反復子に合わせて特殊化したテンプレート クラス [sub_match クラス](../standard-library/sub-match-class.md)を表します。
 
@@ -213,9 +214,9 @@ wchar_t basic_regex の型定義です。
 typedef basic_regex<wchar_t> wregex;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、`wchar_t` 型の要素に合わせて特殊化したテンプレート クラス [basic_regex クラス](../standard-library/basic-regex-class.md)を表します。
+この型はテンプレート クラスの特殊化を表します[basic_regex クラス](../standard-library/basic-regex-class.md)型の要素に対して**wchar_t**します。
 
 ## <a name="wsmatch"></a>  wsmatch Typedef
 
@@ -225,7 +226,7 @@ wstring match_results の型定義です。
 typedef match_results<wstring::const_iterator> wsmatch;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`wstring::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [match_results クラス](../standard-library/match-results-class.md)を表します。
 
@@ -237,7 +238,7 @@ wstring regex_iterator の型定義です。
 typedef regex_iterator<wstring::const_iterator> wsregex_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`wstring::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [regex_iterator クラス](../standard-library/regex-iterator-class.md)を表します。
 
@@ -249,7 +250,7 @@ wstring regex_token_iterator の型定義です。
 typedef regex_token_iterator<wstring::const_iterator> wsregex_token_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`wstring::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)を表します。
 
@@ -261,7 +262,7 @@ Wstring sub_match の型定義です。
 typedef sub_match<wstring::const_iterator> wssub_match;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`wstring::const_iterator` 型の反復子に合わせて特殊化したテンプレート クラス [sub_match クラス](../standard-library/sub-match-class.md)を表します。
 

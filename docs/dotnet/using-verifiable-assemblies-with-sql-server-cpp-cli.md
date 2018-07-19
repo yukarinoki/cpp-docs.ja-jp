@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168647"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
 ダイナミック リンク ライブラリ (Dll) としてパッケージ化、拡張ストアド プロシージャは、Visual C で開発した関数を使用して SQL Server の機能を拡張する手段を提供します。 拡張ストアド プロシージャは、Dll 内で関数として実装されます。 以外の関数、拡張ストアド プロシージャも定義[ユーザー定義型](../cpp/classes-and-structs-cpp.md)と[集計関数](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da)(SUM、AVG など)。  

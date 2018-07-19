@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355805"
 ---
 # <a name="introduction-to-atl"></a>ATL の概要
 ATL Active Template Library は、一連のテンプレート ベースの C++ クラス作成するために簡単に小さく、コンポーネント オブジェクト モデル (COM) オブジェクトを高速です。 キーの COM 機能などのための特別なサポートしています: ストックの実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)、 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)、 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)、および`IDispatch`デュアルです。インターフェイスです。標準の COM 列挙子インターフェイスです。接続ポイントです。ティアオフ インターフェイスです。ActiveX コントロールとします。  

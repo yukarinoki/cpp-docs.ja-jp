@@ -1,5 +1,5 @@
 ---
-title: 初期化とデリゲート コンス トラクター、統一された |Microsoft ドキュメント
+title: 一定の初期化とコンス トラクターのデリゲート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df40eef538ec09a0189bf6c1e6b4881edb59f5c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92174ceefa350b739567ac3e67c2ca023afb6008
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939833"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>均一な初期化とコンストラクターのデリゲート
-最新の C++ で使用できます*かっこ初期化*等号せず、任意の種類。 また、同様の作業を実行するコンストラクターが複数あるときに、デリゲート コンストラクターを使用してコードを簡単にすることもできます。  
+最新の C++ で使用できます*かっこ初期化を*等号せず、任意の種類。 また、同様の作業を実行するコンストラクターが複数あるときに、デリゲート コンストラクターを使用してコードを簡単にすることもできます。  
   
 ## <a name="brace-initialization"></a>かっこ初期化  
  任意のクラス、構造体、または共用体にかっこ初期化を使用できます。 型に既定のコンストラクターがあり、暗黙的または明示的に宣言されている場合、(空のかっこで) 既定のかっこ初期化を使用できます。 たとえば、次のクラスは、既定のかっこ初期化と既定以外のかっこ初期化を使用して初期化できます。  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- かっこ初期化は、通常の初期化と同じように任意の場所で使用できます。たとえば、関数パラメーターや戻り値として、または `new` キーワードと共に使用できます。  
+ かっこ初期化を使用することができますの初期化をどこでも通常実行 — たとえば、関数パラメーターまたは戻り値として、**新しい**キーワード。  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -100,7 +101,7 @@ return { 4.5 };
 ```  
   
 ## <a name="initializerlist-constructors"></a>initializer_list Constructors  
- [Initializer_list クラス](../standard-library/initializer-list-class.md)コンス トラクター、およびその他のコンテキストで使用できる指定された型のオブジェクトのリストを表します。 かっこ初期化を使用して、initializer_list を構築できます。  
+ [Initializer_list クラス](../standard-library/initializer-list-class.md)コンス トラクターと他のコンテキストで使用できる指定された型のオブジェクトの一覧を表します。 かっこ初期化を使用して、initializer_list を構築できます。  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  

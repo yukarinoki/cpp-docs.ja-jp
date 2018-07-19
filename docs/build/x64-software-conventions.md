@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380889"
 ---
 # <a name="x64-software-conventions"></a>x64 ソフトウェア規約
 このセクションには、Visual C の呼び出し規約がについて説明[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]、64 ビットの拡張機能を x86 アーキテクチャ。  

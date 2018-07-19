@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692783"
 ---
 # <a name="texture-class"></a>texture クラス
 テクスチャは範囲ドメイン内の `accelerator_view` についてのデータ集合体です。 これは、範囲ドメインの各要素に対して 1 つずつの変数のコレクションです。 各変数は C++ のプリミティブ型に対応する値を保持 ( `unsigned int`、 `int`、 `float`、 `double`)、スカラー型 ( `norm`、または`unorm`)、または短いベクター型です。  

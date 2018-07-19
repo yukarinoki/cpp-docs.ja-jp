@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105206"
 ---
 # <a name="retrieving-a-blob"></a>BLOB の取得
 さまざまな方法でバイナリ ラージ オブジェクト (BLOB) を取得することができます。 使用することができます**DBTYPE_BYTES**バイトのシーケンスとして BLOB を取得またはのようなインターフェイスを使用する`ISequentialStream`です。 詳細については、次を参照してください。 [BLOB と OLE オブジェクト](https://msdn.microsoft.com/en-us/library/ms711511.aspx)で、 *OLE DB プログラマーズ リファレンス*です。  

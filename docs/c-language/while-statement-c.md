@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389918"
 ---
 # <a name="while-statement-c"></a>while ステートメント (C)
 `while` ステートメントを使用して、指定した式が false になるまでステートメントを繰り返すことができます。  

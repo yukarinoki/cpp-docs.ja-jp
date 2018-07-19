@@ -7,11 +7,12 @@ f1_keywords:
 - iosfwd/std::streambuf
 - iosfwd/std::wstreambuf
 ms.assetid: 2678e18f-f0f0-4995-bc53-f1bc7dfc4ec6
-ms.openlocfilehash: 8fb1713dfbc2d9766c488f21d324d801a4886d68
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 81c7cd875c6083ee77701116f6b1179760373ec0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953993"
 ---
 # <a name="ltstreambufgt-typedefs"></a>&lt;streambuf&gt; typedef
 
@@ -21,27 +22,27 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="streambuf"></a>  streambuf
 
-`char` を使用する `basic_streambuf` をテンプレート パラメーターとして特化したクラス。
+特殊化`basic_streambuf`を使用して**char**テンプレート パラメーターとして。
 
 ```cpp
 typedef basic_streambuf<char, char_traits<char>> streambuf;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_streambuf](../standard-library/basic-streambuf-class.md) の同意語で、既定の文字の特性を持つ型 `char` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_streambuf](../standard-library/basic-streambuf-class.md)型の要素に対して特殊化されて、 **char**で既定の特性。
 
 ## <a name="wstreambuf"></a>  wstreambuf
 
-`wchar_t` を使用する `basic_streambuf` をテンプレート パラメーターとして特化したクラス。
+特殊化`basic_streambuf`を使用して**wchar_t**テンプレート パラメーターとして。
 
 ```cpp
 typedef basic_streambuf<wchar_t, char_traits<wchar_t>> wstreambuf;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラス [basic_streambuf](../standard-library/basic-streambuf-class.md) の同意語で、既定の文字の特性を持つ型 `wchar_t` の要素に対して特殊化されています。
+型はテンプレート クラスのシノニム[basic_streambuf](../standard-library/basic-streambuf-class.md)型の要素に対して特殊化されて、 **wchar_t**で既定の特性。
 
 ## <a name="see-also"></a>関連項目
 

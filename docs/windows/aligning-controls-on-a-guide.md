@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857839"
 ---
 # <a name="aligning-controls-on-a-guide"></a>ガイドのコントロールの配置
 コントロールのサイズ変更ハンドルは、コントロールが移動され、(ガイドに合わせてコントロールが存在しない) 場合に、ガイドがコントロールに合わせるときに、ガイドにスナップされます。 ガイドを移動するとときに、スナップしたコントロールはも移動します。 1 つ以上のガイドにスナップ コントロールは、ガイドでは、いずれかが移動されるときにサイズ変更されます。  

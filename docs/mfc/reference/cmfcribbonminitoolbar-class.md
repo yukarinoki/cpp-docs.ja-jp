@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonMiniToolBar クラス |Microsoft ドキュメント
+title: CMFCRibbonMiniToolBar クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d97e3e993571392893533be220e243b045b81e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852888"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar クラス
 コンテキスト ポップアップ ツール バーを実装します。  
@@ -55,14 +56,14 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |名前|説明|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|  
-|`CMFCRibbonMiniToolBar::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCRibbonMiniToolBar::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||  
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(`CMFCPopupMenu::IsRibbonMiniToolBar` をオーバーライドします)。|  
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|ツール バーに表示するコマンドのリストを設定します。|  
 |[CMFCRibbonMiniToolBar::Show](#show)|指定した画面座標に、ミニ ツール バーを表示します。|  
 |[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|コンテキスト メニューとミニ ツール バーが表示されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ミニ ツール バーは、通常、ユーザーがドキュメント内のオブジェクトを選択した後に表示されます。 たとえば、ユーザーがワード プロセッサ プログラム内のテキストを選択すると、アプリケーションでテキストの書式設定コマンドを含むミニ ツール バーが表示されます。  
   
  マウス ポインターがミニ ツール バーの境界外にあるときは、ミニ ツール バーは透明になります。  
@@ -84,7 +85,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
   
  [CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxRibbonMiniToolBar.h  
   
 ##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
@@ -97,17 +98,17 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pRibbonBar`  
- ミニ ツールバーを表示するボタンの検索、リボン バー。  
+ [in]*pRibbonBar*  
+ リボン バー、ミニ ツールバーを表示するボタンを検索します。  
   
- [入力] `lstCommands`  
- ミニ ツールバーに表示されるコマンドの一覧。 関連付けられたボタンを検索するには、すべてのリボン カテゴリが検索されます。  
+ [in]*lstCommands*  
+ ミニ ツールバーに表示するコマンドの一覧。 関連付けられたボタンを検索するには、すべてのリボン カテゴリが検索されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数を使用すると、ミニ ツールバーに表示されるコマンドの一覧を設定できます。  
   
 ### <a name="example"></a>例  
- 次の例で使用する方法、`SetCommands`のメソッド、`CMFCRibbonMiniToolBar`クラスです。 このコード スニペットの一部である、 [MS Office 2007 デモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、使用する方法、`SetCommands`のメソッド、`CMFCRibbonMiniToolBar`クラス。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
@@ -121,14 +122,14 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `x`  
+ [in]*x*  
  画面座標では、ミニ ツールバーの水平方向の位置を指定します。  
   
- [入力] `y`  
- 画面座標では、ミニ ツールバーの垂直方向の位置を指定します。  
+ [in]*y*  
+ 画面座標では、ミニ ツールバーの垂直位置を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ミニ ツールバーが正常に表示された場合それ以外の場合、`FALSE`です。  
+ ミニ ツールバーが正常に表示されている場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  コンテキスト メニューとミニ ツール バーが表示されます。  
@@ -142,23 +143,23 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `x`  
- 画面座標でコンテキスト メニューの水平方向の位置を指定します。  
+ [in]*x*  
+ 画面座標では、コンテキスト メニューの水平方向の位置を指定します。  
   
- [入力] `y`  
- 画面座標でコンテキスト メニューの垂直方向の位置を指定します。  
+ [in]*y*  
+ 画面座標で、コンテキスト メニューの垂直位置を指定します。  
   
- [入力] `uiMenuResID`  
+ [in]*uiMenuResID*  
  表示するコンテキスト メニューのリソース ID を指定します。  
   
- [入力] `pWndOwner`  
+ [in]*pWndOwner*  
  コンテキスト メニューからメッセージを受信するウィンドウを識別します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` コンテキスト メニューが正常に表示された場合それ以外の場合、`FALSE`です。  
+ コンテキスト メニューが正常に表示されている場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- コンテキスト メニューのあるミニ ツールバーを表示するのにには、この関数を使用します。 コンテキスト メニューは、ミニ ツールバーの下の位置指定の 15 ピクセルです。  
+### <a name="remarks"></a>Remarks  
+ コンテキスト メニューを含むミニ ツールバーを表示するのにには、この関数を使用します。 コンテキスト メニューは、ミニ ツールバーの下の位置指定の 15 ピクセルです。  
   
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -169,7 +170,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

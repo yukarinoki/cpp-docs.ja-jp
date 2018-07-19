@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0d654c526e5c856431d69c045c5018d77a6fed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf93d84534671cb65c873555d70fea756036fe06
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961640"
 ---
 # <a name="logicalnot-struct"></a>logical_not 構造体
 
@@ -48,9 +49,9 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>パラメーター
 
-`Type` サポートする任意の型、`operator!`指定または推論された型のオペランドを取得します。
+*型*をサポートする任意の型、`operator!`指定または推論された型のオペランドを受け取る。
 
-`Left` オペランドの論理操作ではありません。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `Type` の左辺値および右辺値参照引数の完全転送を行います。
+*左*オペランドの論理操作ではありません。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*型*します。
 
 ## <a name="return-value"></a>戻り値
 
@@ -101,7 +102,7 @@ The deque with its values negated is:
  */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

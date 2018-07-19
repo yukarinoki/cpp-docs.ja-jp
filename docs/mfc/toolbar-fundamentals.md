@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951638"
 ---
 # <a name="toolbar-fundamentals"></a>ツール バーに関する基本事項
 この記事では、アプリケーションのウィザードでオプションを選択して、アプリケーションに既定のツールバーを追加できる基本的な MFC 実装について説明します。 トピックは次のとおりです。  
@@ -55,11 +56,11 @@ ms.lasthandoff: 05/04/2018
 -   ツールバーをドッキングまたはフローティングする機能を管理します。  
   
 ##  <a name="_core_the_toolbar_in_code"></a> ツールバーのコード  
- ツールバーは、 [CToolBar](../mfc/reference/ctoolbar-class.md)オブジェクトは、アプリケーションのデータ メンバーとして宣言されている**CMainFrame**クラスです。 つまり、ツールバーのオブジェクトは、メイン フレーム ウィンドウ オブジェクトに埋め込まれます。 これは、フレーム ウィンドウを作成およびフレーム ウィンドウが破棄されると、ツールバーの破棄時に、MFC でツールバーを作成することを意味します。 複数ドキュメント インターフェイス (MDI) アプリケーションの場合、次の部分クラス宣言では、埋め込みのツールバーに表示される埋め込みステータス バーのデータ メンバーを示します。 オーバーライドも示しています、`OnCreate`メンバー関数。  
+ ツールバーは、 [CToolBar](../mfc/reference/ctoolbar-class.md)オブジェクトは、アプリケーションのデータ メンバーとして宣言されている`CMainFrame`クラスです。 つまり、ツールバーのオブジェクトは、メイン フレーム ウィンドウ オブジェクトに埋め込まれます。 これは、フレーム ウィンドウを作成およびフレーム ウィンドウが破棄されると、ツールバーの破棄時に、MFC でツールバーを作成することを意味します。 複数ドキュメント インターフェイス (MDI) アプリケーションの場合、次の部分クラス宣言では、埋め込みのツールバーに表示される埋め込みステータス バーのデータ メンバーを示します。 オーバーライドも示しています、`OnCreate`メンバー関数。  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- ツールバーの作成は、**割り当て**です。 MFC 呼び出し[OnCreate](../mfc/reference/cwnd-class.md#oncreate)可視になりますが、そのフレームのウィンドウの作成後にします。 既定値`OnCreate`ツールバーの次のタスクには、アプリケーションのウィザードが生成されます。  
+ ツールバーの作成は、`CMainFrame::OnCreate`です。 MFC 呼び出し[OnCreate](../mfc/reference/cwnd-class.md#oncreate)可視になりますが、そのフレームのウィンドウの作成後にします。 既定値`OnCreate`ツールバーの次のタスクには、アプリケーションのウィザードが生成されます。  
   
 1.  呼び出し、`CToolBar`オブジェクトの[作成](../mfc/reference/ctoolbar-class.md#create)メンバー関数を作成、基になる[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクト。  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/04/2018
 3.  ドッキング、フローティング、およびツール ヒントを有効にする関数を呼び出します。 これらの呼び出しに関する詳細については、「アーティクル[ドッキング ツールバーとフローティング ツールバー](../mfc/docking-and-floating-toolbars.md)です。  
   
 > [!NOTE]
->  MFC 標準サンプル[DOCKTOOL](../visual-cpp-samples.md)新旧両方の MFC ツールバーの図が含まれています。 使用するツールバー **COldToolbar**に手順 2. で呼び出しが必要`LoadBitmap`(なく`LoadToolBar`) および`SetButtons`です。 新しいツールバーへの呼び出しを必要と`LoadToolBar`です。  
+>  MFC 標準サンプル[DOCKTOOL](../visual-cpp-samples.md)新旧両方の MFC ツールバーの図が含まれています。 使用するツールバー`COldToolbar`に手順 2. で呼び出しが必要`LoadBitmap`(なく`LoadToolBar`) および`SetButtons`です。 新しいツールバーへの呼び出しを必要と`LoadToolBar`です。  
   
  ドッキング、フローティング、およびツール ヒントの呼び出しはオプションです。 これらの行を削除する`OnCreate`したい場合。 結果は、固定、フローティングやできず、ツール ヒントを表示できませんに残っているツールバーです。  
   

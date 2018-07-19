@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951908"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>ツール バー コントロールでのイメージ リストの使い方
 既定では、ツール バー コントロールのボタンが使用するイメージは、1 つのビットマップとして格納されます。 ただし、一連のイメージ リストのボタンのイメージを保存することもできます。 ツール バー コントロール オブジェクトは、最大 3 つの別々 のイメージ リストを使用できます。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 -   イメージ リストは、現在無効になっているツール バー ボタンのイメージを含むを無効になります。  
   
--   イメージ リストは、現在強調表示されているツール バー ボタンのイメージを含むを強調表示されます。 ツールバーを使用する場合のみ、このイメージ リストが使用される、 **TBSTYLE_FLAT**スタイル。  
+-   イメージ リストは、現在強調表示されているツール バー ボタンのイメージを含むを強調表示されます。 このイメージ リストは、ツールバーが TBSTYLE_FLAT スタイルを使用する場合のみ使用されます。  
   
  これらを関連付けるときにこれらのイメージ リストがツール バー コントロールで使用される、`CToolBarCtrl`オブジェクト。 この関連付けを呼び出すことで実現[CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist)、 [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist)、および[SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist)です。  
   

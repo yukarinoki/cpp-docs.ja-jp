@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236106"
 ---
 # <a name="compiler-error-c2726"></a>コンパイラ エラー C2726
 'gcnew' は、マネージ型または WinRT 型のオブジェクトの作成にのみ使用できます  

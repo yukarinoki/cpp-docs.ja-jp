@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225431"
 ---
 # <a name="compiler-error-c2395"></a>コンパイラ エラー C2395
 'your_type::operator'op'' : CLR または WinRT 演算子が無効です。 少なくとも 1 つのパラメーターが次の型である必要があります: 'T'、'T%'、'T&'、'T^'、'T^%'、'T^&' (T = 'your_type')。  

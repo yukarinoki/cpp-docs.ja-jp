@@ -52,6 +52,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380813"
 ---
 # <a name="wm-message-handlers-n---o"></a>WM_ で始まるメッセージのハンドラー : N - O
 左側の次のマップ エントリは、右側の関数プロトタイプに対応します。  

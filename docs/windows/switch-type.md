@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890184"
 ---
 # <a name="switchtype"></a>switch_type
 共用体の判別変数として使用される変数の型を識別します。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087843"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>その他の言語との相互運用 (C++/CX)
 ドキュメントのこの部分は、C + を使用する方法を説明 +/CX を他のプログラミング言語とライブラリで利用できる Windows ランタイム コンポーネントを作成します。 すべての言語では使用できないコンポーネントを作成することもできます。 このセクションで説明するときに検討するさまざまな側面に C + +/CX アプリケーションは、JavaScript、.NET Framework マネージ言語、または Windows ランタイム C++ テンプレート ライブラリを使用して記述されたコンポーネントと相互運用します。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090726"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
 フェッチして、1 回の呼び出しで複数の行ハンドルを取得することによってデータの一括で作業する行を操作できます。  

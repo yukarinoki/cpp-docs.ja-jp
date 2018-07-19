@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689715"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数
 これらの各関数は、指定されたロックを使用し、ロックを設定するまでは、関数を実行するスレッドをブロックします。 単純なロックはロックされていない場合に使用できます。 ロックされていない場合、または関数を実行するスレッドによって既に所有している場合は、入れ子にできるロックは使用します。 形式は次のとおりです。  

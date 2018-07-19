@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380371"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>ActiveX コントロールの作成手順
 次の表は、ActiveX コントロール (以前の OLE コントロール) を作成して、フレームワークの役割分担を示します。  

@@ -7,11 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 515d16cf8b9f11f5e9eb0b9699a0f72a19a64053
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956671"
 ---
 # <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt; 関数
 
@@ -33,19 +34,25 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`Key` キーの型。
+*Key*  
+ キーの型。
 
-`Hash` ハッシュ関数オブジェクトの型。
+*ハッシュ*  
+ ハッシュ関数のオブジェクト型。
 
-`Pred` 等値比較関数オブジェクトの型。
+*Pred*  
+ 等価比較関数のオブジェクト型。
 
-`Alloc` アロケーター クラス。
+*Alloc*  
+ アロケーター クラス。
 
-`left` スワップする最初のコンテナーです。
+*left*  
+ スワップする最初のコンテナー。
 
-`right` スワップする 2 番目のコンテナーです。
+*right*  
+ スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、`left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)` を実行します。
 
@@ -119,19 +126,25 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`Key` キーの型。
+*Key*  
+ キーの型。
 
-`Hash` ハッシュ関数オブジェクトの型。
+*ハッシュ*  
+ ハッシュ関数のオブジェクト型。
 
-`Pred` 等値比較関数オブジェクトの型。
+*Pred*  
+ 等価比較関数のオブジェクト型。
 
-`Alloc` アロケーター クラス。
+*Alloc*  
+ アロケーター クラス。
 
-`left` スワップする最初のコンテナーです。
+*left*  
+ スワップする最初のコンテナー。
 
-`right` スワップする 2 番目のコンテナーです。
+*right*  
+ スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、`left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)` を実行します。
 

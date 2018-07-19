@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857273"
 ---
 # <a name="comptras-method"></a>ComPtr::As メソッド
 指定されたテンプレート パラメーターで識別されるインターフェイスを表す ComPtr オブジェクトを返します。  

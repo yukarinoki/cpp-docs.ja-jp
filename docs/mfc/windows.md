@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950475"
 ---
 # <a name="windows"></a>Windows
 この一連のトピックでは、MFC フレームワーク ウィンドウ オブジェクトについて説明します。 クラスから派生してすべての MFC windows [CWnd](../mfc/reference/cwnd-class.md)(フレーム ウィンドウ、ビュー、ダイアログ ボックス コントロールなど)。  
   
- 記事の最初のグループについて説明します[ウィンドウ オブジェクト](../mfc/window-objects.md)一般にします。 C++ ウィンドウ オブジェクトは HWND をカプセル化の方法および使用する方法の子ウィンドウなどの独自のウィンドウを作成するときに詳細については、このグループを参照してください。  
+ 記事の最初のグループについて説明します[ウィンドウ オブジェクト](../mfc/window-objects.md)一般にします。 C++ ウィンドウ オブジェクトに関する一般的な情報について、このグループを参照してくださいカプセル化の方法、 `HWND`、および使用する方法に子ウィンドウなどの独自のウィンドウを作成するときにします。  
   
  アーティクルの 2 番目のグループ[フレーム ウィンドウ](../mfc/frame-windows.md)-コンテンツの周囲にフレームを配置するウィンドウ — 具体的には。 フレーム ウィンドウと、そのコンテンツをコントロール バーやビューなどの MFC フレームワークの管理については、このグループを参照してください。  
   

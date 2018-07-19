@@ -1,5 +1,5 @@
 ---
-title: CMFCCaptionBar クラス |Microsoft ドキュメント
+title: CMFCCaptionBar クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -76,11 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09b7f38926ad3e76de7e5e9bc36425ef77c42d4f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338464"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar クラス
 A`CMFCCaptionBar`オブジェクトは 3 つの要素を表示できるコントロール バー: ボタン、テキスト ラベル、およびビットマップ。 表示できる各要素の数は 1 つずつです。 各要素は、コントロールの左端、右端、または中央に揃えて配置できます。 また、キャプション バーの上部または下部の境界線にフラット スタイルまたは 3D スタイルを適用することもできます。  
@@ -97,18 +98,18 @@ class CMFCCaptionBar : public CPane
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCCaptionBar::Create](#create)|キャプション バー コントロールを作成し、それにアタッチ、`CMFCCaptionBar`オブジェクト。|  
-|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|キャプション バーとその親のフレームの間で別のペインを動的に挿入するかどうかを示します。 (上書き[cbasepane::doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore))。|  
+|[CMFCCaptionBar::Create](#create)|キャプション バー コントロールを作成しにアタッチします、`CMFCCaptionBar`オブジェクト。|  
+|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|キャプション バーとその親フレームの間の別のウィンドウを動的に挿入するかどうかを示します。 (上書き[cbasepane::doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore))。|  
 |[CMFCCaptionBar::EnableButton](#enablebutton)|有効またはキャプション バーにあるボタンを無効にします。|  
 |[CMFCCaptionBar::GetAlignment](#getalignment)|指定した要素の配置を返します。|  
 |[CMFCCaptionBar::GetBorderSize](#getbordersize)|キャプション バーの境界線のサイズを返します。|  
 |[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|キャプション バーのボタンの外接する四角形を取得します。|  
-|[CMFCCaptionBar::GetMargin](#getmargin)|キャプション バーの要素の端と、キャプション バー コントロールの端の間の距離を返します。|  
-|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|キャプション バーをメッセージ バー モードであるかどうかを指定します。|  
-|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|キャプション バーのビットマップ イメージを削除します。|  
+|[CMFCCaptionBar::GetMargin](#getmargin)|キャプション バーの要素の端とキャプション バー コントロールの端との間の距離を返します。|  
+|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|キャプション バーが、メッセージ バー モードかどうかを指定します。|  
+|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|キャプション バーからビットマップ イメージを削除します。|  
 |[CMFCCaptionBar::RemoveButton](#removebutton)|キャプション バーから、ボタンを削除します。|  
 |[CMFCCaptionBar::RemoveIcon](#removeicon)|キャプション バーからアイコンを削除します。|  
-|[CMFCCaptionBar::RemoveText](#removetext)|キャプション バーのテキスト ラベルを削除します。|  
+|[CMFCCaptionBar::RemoveText](#removetext)|キャプション バーからテキスト ラベルを削除します。|  
 |[CMFCCaptionBar::SetBitmap](#setbitmap)|キャプション バーのビットマップ イメージを設定します。|  
 |[CMFCCaptionBar::SetBorderSize](#setbordersize)|キャプション バーの境界線のサイズを設定します。|  
 |[CMFCCaptionBar::SetButton](#setbutton)|キャプション バーのボタンを設定します。|  
@@ -116,15 +117,15 @@ class CMFCCaptionBar : public CPane
 |[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|ボタンのツールヒントを設定します。|  
 |[CMFCCaptionBar::SetFlatBorder](#setflatborder)|キャプション バーの境界線スタイルを設定します。|  
 |[CMFCCaptionBar::SetIcon](#seticon)|キャプション バーのアイコンを設定します。|  
-|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|キャプション バーの画像のツールヒントを設定します。|  
-|[CMFCCaptionBar::SetMargin](#setmargin)|キャプション バーの要素の端と、キャプション バー コントロールの端の間の距離を設定します。|  
+|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|キャプション バーのイメージのツールヒントを設定します。|  
+|[CMFCCaptionBar::SetMargin](#setmargin)|キャプション バーの要素の端とキャプション バー コントロールの端との間の距離を設定します。|  
 |[CMFCCaptionBar::SetText](#settext)|キャプション バーのテキスト ラベルを設定します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|キャプション バーの背景を埋めるために、フレームワークによって呼び出されます。|  
+|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|キャプション バーの背景を塗りつぶすために、フレームワークによって呼び出されます。|  
 |[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|キャプション バーの境界線を描画するためにフレームワークによって呼び出されます。|  
 |[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|キャプション バーのボタンを描画するためにフレームワークによって呼び出されます。|  
 |[CMFCCaptionBar::OnDrawImage](#ondrawimage)|キャプション バーの画像を描画するためにフレームワークによって呼び出されます。|  
@@ -132,29 +133,29 @@ class CMFCCaptionBar : public CPane
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|キャプション バーの背景色。|  
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|キャプション バーの境界線の色。|  
 |[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|キャプション バーのテキストの色。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  キャプション バーを作成するには、次の手順を実行します。  
   
-1.  構築、`CMFCCaptionBar`オブジェクト。 通常、フレーム ウィンドウ クラスに、キャプション バーを追加します。  
+1.  構築、`CMFCCaptionBar`オブジェクト。 通常、キャプション バーをフレーム ウィンドウ クラスに追加します。  
   
-2.  呼び出す、 [CMFCCaptionBar::Create](#create)キャプション バー コントロールを作成しをアタッチする方法、`CMFCCaptionBar`オブジェクト。  
+2.  呼び出す、 [CMFCCaptionBar::Create](#create)キャプション バー コントロールを作成し、アタッチ先メソッドを`CMFCCaptionBar`オブジェクト。  
   
 3.  呼び出す[CMFCCaptionBar::SetButton](#setbutton)、 [CMFCCaptionBar::SetText](#settext)、 [CMFCCaptionBar::SetIcon](#seticon)、および[CMFCCaptionBar::SetBitmap](#setbitmap)キャプション バーの要素を設定します。  
   
- ボタンの要素を設定すると、ボタンをコマンド ID を割り当てる必要があります。 ユーザーが、ボタンのキャプション バーのルートをクリックしたとき、`WM_COMMAND`を親フレーム ウィンドウにこの ID を持つメッセージ。  
+ ボタンの要素を設定すると、ボタンをコマンド ID を割り当てる必要があります。 ユーザーは、ボタンをクリックすると、キャプション バーを親フレーム ウィンドウにこの ID を持つ WM_COMMAND メッセージをルーティングします。  
   
- キャプション バーは、Microsoft Office 2007 アプリケーションで表示されるメッセージ バーをエミュレートするメッセージ バー モードも作業ができます。 メッセージ バー モード、キャプション バーが表示されます、ビットマップ、メッセージ、およびボタン (通常、ダイアログ ボックスが開きます。)ビットマップにツールヒントを割り当てることができます。  
+ キャプション バーは、Microsoft Office 2007 アプリケーションで表示されるメッセージ バーにエミュレートするメッセージ バー モードで操作もできます。 ビットマップ、メッセージ、およびボタン (通常は、ダイアログ ボックスが開きます。) メッセージ バー モード、キャプション バーに表示されます。ビットマップにツールヒントを割り当てることができます。  
   
- メッセージ バー モードを有効にするを呼び出す[CMFCCaptionBar::Create](#create)に 4 番目のパラメーター (bIsMessageBarMode) を設定および`TRUE`です。  
+ メッセージ バー モードを有効にするのには、呼び出す[CMFCCaptionBar::Create](#create) (bIsMessageBarMode) の 4 番目のパラメーターを TRUE に設定します。  
   
 ## <a name="example"></a>例  
- 次の例では、さまざまなメソッドを使用する方法、`CMFCCaptionBar`クラスです。 例がキャプション バー コントロールを作成、キャプション バーの 3D 罫線の設定、(ピクセル単位) のキャプション バーの要素の端と、キャプション バー コントロールの端との間の距離を設定、キャプション バーのボタンを設定する方法を示します、ボタンのツールヒントを設定、キャプション バーのテキスト ラベル、ビットマップ イメージのキャプション バーの設定およびキャプション バーにイメージのツールヒントを設定します。 このコード スニペットの一部である、 [MS Office 2007 デモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、さまざまなメソッドを使用する方法、`CMFCCaptionBar`クラス。 キャプション バー コントロールを作成、キャプション バーの 3D 境界線を設定、キャプション バーの要素の端とキャプション バー コントロールの端の間隔をピクセル単位で距離を設定、キャプション バーのボタンを設定する方法を示します、、ボタンのツールヒントを設定、キャプション バーのテキスト ラベルを設定、ビットマップ イメージのキャプション バーの設定、およびキャプション バーにイメージのツールヒントを設定します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]  
@@ -172,11 +173,11 @@ class CMFCCaptionBar : public CPane
   
  [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcaptionbar.h  
   
 ##  <a name="create"></a>  CMFCCaptionBar::Create  
- キャプション バー コントロールを作成し、それにアタッチ、`CMFCCaptionBar`オブジェクト。  
+ キャプション バー コントロールを作成しにアタッチします、`CMFCCaptionBar`オブジェクト。  
   
 ```  
 BOOL Create(
@@ -188,38 +189,38 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  キャプション バーのスタイルの論理 OR の組み合わせ。  
   
- `pParentWnd`  
- キャプション バー コントロールの親ウィンドウです。  
+ *pParentWnd*  
+ キャプション バー コントロールの親ウィンドウ。  
   
- `uID`  
+ *uID*  
  キャプション バー コントロールの ID。  
   
- `nHeight`  
- (ピクセル単位) のキャプション バー コントロールの高さ。 -1 の場合、高さは、アイコン、テキスト、キャプション バー コントロールを表示するボタンの高さに基づいて計算されます。  
+ *パラメーター nHeight*  
+ キャプション バー コントロールのピクセル単位の高さ。 -1 の場合は、高さが、アイコン、テキスト、キャプション バー コントロールを表示するボタンの高さに基づいて計算されます。  
   
- `bIsMessageBarMode`  
- `TRUE` キャプション バー モードの場合、メッセージ バーです。`FALSE`それ以外の場合。  
+ *bIsMessageBarMode*  
+ キャプション バーが、メッセージ バー モードでは、TRUE を返します。FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` キャプション バー コントロールが正常に作成された場合`FALSE`それ以外の場合。  
+ キャプション バー コントロールが正常に作成された場合は TRUE。FALSE それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CMFCCaptionBar` 2 つのステップ内のオブジェクト。 最初、コンス トラクターを呼び出すし、その後呼び出す、 `Create` Windows コントロールを作成し、それにアタッチするメソッド、`CMFCCaptionBar`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CMFCCaptionBar` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出すしを呼び出して、`Create`メソッドでは、Windows コントロールを作成しにアタッチします、`CMFCCaptionBar`オブジェクト。  
   
 ##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore  
- キャプション バーとその親のフレームの間で別のペインを動的に挿入するかどうかを示します。  
+ キャプション バーとその親フレームの間の別のウィンドウを動的に挿入するかどうかを示します。  
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します`FALSE`オーバーライドされない限り、します。  
+ オーバーライドされない限り、FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton  
  有効またはキャプション バーにあるボタンを無効にします。  
@@ -229,8 +230,8 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bEnable`  
- `TRUE` ボタンを有効にする`FALSE` ボタンを無効にします。  
+ [in]*bEnable*  
+ ボタンを無効に false の場合、ボタンを有効にする場合は TRUE。  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  指定した要素の配置を返します。  
@@ -240,13 +241,13 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `elem`  
+ [in]*elem*  
  キャプション バーには、配置を取得するための要素が表示されます。  
   
 ### <a name="return-value"></a>戻り値  
- たとえば、ボタンやビットマップ、テキスト、アイコンなど、要素の配置です。  
+ ボタン、ビットマップ、テキスト、アイコンなどの要素の配置です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  要素の配置には、次の値のいずれかを指定できます。  
   
 -   ALIGN_INVALID  
@@ -278,26 +279,26 @@ CRect GetButtonRect() const;
  A`CRect`キャプション バーのボタンの外接する四角形の座標を格納しているオブジェクト。  
   
 ##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin  
- キャプション バーの要素の端と、キャプション バー コントロールの端の間の距離を返します。  
+ キャプション バーの要素の端とキャプション バー コントロールの端との間の距離を返します。  
   
 ```  
 int GetMargin() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- (ピクセル単位) のキャプション バーの要素の端と、キャプション バー コントロールの端の間の距離。  
+ キャプション バーの要素の端とキャプション バー コントロールの端の間隔をピクセル単位で距離です。  
   
 ##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode  
- キャプション バーをメッセージ バー モードであるかどうかを指定します。  
+ キャプション バーが、メッセージ バー モードかどうかを指定します。  
   
 ```  
 BOOL IsMessageBarMode() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` キャプション バー モードの場合、メッセージ バーです。`FALSE`それ以外の場合。  
+ キャプション バーが、メッセージ バー モードでは、TRUE を返します。FALSE それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メッセージ バー モードでは、キャプション バーには、ツールヒント、メッセージ テキスト、ボタンの画像が表示されます。  
   
 ##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground  
@@ -322,7 +323,7 @@ COLORREF m_clrBarText
 ```  
   
 ##  <a name="ondrawbackground"></a>  CMFCCaptionBar::OnDrawBackground  
- キャプション バーの背景を埋めるために、フレームワークによって呼び出されます。  
+ キャプション バーの背景を塗りつぶすために、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnDrawBackground(
@@ -331,14 +332,14 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  キャプション バーのデバイス コンテキストへのポインター。  
   
- [入力] `rect`  
- 入力に外接する四角形。  
+ [in]*rect*  
+ 外接する四角形を入力します。  
   
-### <a name="remarks"></a>コメント  
- `OnDrawBackground`キャプション バーの背景が入力すると、メソッドが呼び出されます。 既定の実装を使用して背景を塗りつぶす、 [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)色。  
+### <a name="remarks"></a>Remarks  
+ `OnDrawBackground`キャプション バーの背景が入力するときに、メソッドが呼び出されます。 既定の実装を使用して背景を塗りつぶす、 [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)色。  
   
  このメソッドをオーバーライドする`CMFCCaptionBar`キャプション バーの外観をカスタマイズするクラスを派生します。  
   
@@ -352,13 +353,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
- 枠線の表示に使用されるデバイス コンテキスト。  
+ [in]*pDC*  
+ 枠線の表示に使用されるデバイス コンテキストを指定します。  
   
- [入力] `rect`  
+ [in]*rect*  
  外接する四角形。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定では、罫線には、フラット スタイルが設定されています。  
   
  このメソッドをオーバーライドする`CMFCCaptionBar`キャプション バーの境界線の外観をカスタマイズするクラスを派生します。  
@@ -375,19 +376,19 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  ボタンを表示するために使用しているデバイス コンテキストへのポインター。  
   
- [入力] `rect`  
+ [in]*rect*  
  ボタンの外接する四角形。  
   
- [入力] `strButton`  
+ [in]*strButton*  
  ボタンのテキスト ラベル。  
   
- [入力] `bEnabled`  
- `TRUE` ボタンが有効である場合`FALSE`それ以外の場合。  
+ [in]*bEnabled*  
+ は、ボタンが有効な場合は TRUE。FALSE それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドをオーバーライドする`CMFCCaptionBar`キャプション バーのボタンの外観をカスタマイズするクラスを派生します。  
   
 ##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage  
@@ -400,13 +401,13 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  イメージを表示するために使用しているデバイス コンテキストへのポインター。  
   
- [入力] `rect`  
+ [in]*rect*  
  イメージの外接する四角形を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドをオーバーライドする`CMFCCaptionBar`イメージの外観をカスタマイズするクラスを派生します。  
   
 ##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText  
@@ -420,22 +421,22 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  ボタンを表示するために使用しているデバイス コンテキストへのポインター。  
   
- [入力] `rect`  
+ [in]*rect*  
  テキストの外接する四角形。  
   
- [入力] `strText`  
+ [in]*strText*  
  表示するテキスト文字列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装を使用して、テキストを表示する`CDC::DrawText`と[CMFCCaptionBar::m_clrBarText](#m_clrbartext)色。  
   
  このメソッドをオーバーライドする`CMFCCaptionBar`キャプション バーのテキストの外観をカスタマイズするクラスを派生します。  
   
 ##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap  
- キャプション バーのビットマップ イメージを削除します。  
+ キャプション バーからビットマップ イメージを削除します。  
   
 ```  
 void RemoveBitmap();
@@ -448,7 +449,7 @@ void RemoveBitmap();
 void RemoveButton();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  キャプション バーの要素のレイアウトは自動的に調整されます。  
   
 ##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon  
@@ -459,7 +460,7 @@ void RemoveIcon();
 ```  
   
 ##  <a name="removetext"></a>  CMFCCaptionBar::RemoveText  
- キャプション バーのテキスト ラベルを削除します。  
+ キャプション バーからテキスト ラベルを削除します。  
   
 ```  
 void RemoveText();
@@ -484,24 +485,24 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hBitmap`  
- 設定するビットマップへのハンドルです。  
+ [in]*hBitmap*  
+ 設定するビットマップ ハンドル。  
   
- [入力] `clrTransparent`  
+ [in]*clrTransparent*  
  ビットマップの透明色を指定する RGB 値。  
   
- [入力] `bStretch`  
- 場合`TRUE`イメージを外接する四角形に収まりきらない場合、ビットマップを拡大します。 それ以外の場合、ビットマップは拡張されていません。  
+ [in]*bStretch*  
+ TRUE の場合、イメージの外接する四角形に収まらない場合、ビットマップが拡大します。 それ以外の場合、ビットマップは引き伸ばされません。  
   
- [入力] `bmpAlignment`  
+ [in]*bmpAlignment*  
  ビットマップの配置です。  
   
-### <a name="remarks"></a>コメント  
- このメソッドを使用すると、キャプション バーにビットマップを設定できます。  
+### <a name="remarks"></a>Remarks  
+ キャプション バーにビットマップを設定するのにには、このメソッドを使用します。  
   
- 前のビットマップは自動的に破棄されます。 キャプション バーにアイコンが表示されますが呼び出されるためかどうか、 [CMFCCaptionBar::SetIcon](#seticon)メソッドを呼び出すことによって、アイコンを削除しない限り、ビットマップは表示されません[CMFCCaptionBar::RemoveIcon](#removeicon)です。  
+ 前のビットマップは自動的に破棄されます。 キャプション バーにアイコンが表示されますを呼び出したためかどうか、 [CMFCCaptionBar::SetIcon](#seticon)メソッドを呼び出すことで、アイコンを削除しない限り、ビットマップは表示されません[CMFCCaptionBar::RemoveIcon](#removeicon)します。  
   
- ビットマップの配置で指定されたとおり、`bmpAlignment`パラメーター。  このパラメーターには、次の `BarElementAlignment` 値のいずれかを指定できます。  
+ ビットマップの配置の指定に従って、 *bmpAlignment*パラメーター。  このパラメーターには、次の `BarElementAlignment` 値のいずれかを指定できます。  
   
 -   ALIGN_INVALID  
   
@@ -519,8 +520,8 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nSize`  
- キャプション バーの境界線のピクセル単位の新しいサイズ。  
+ [in]*nSize*  
+ 新しいサイズ (ピクセル)、キャプション バーの境界線。  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  キャプション バーのボタンを設定します。  
@@ -534,17 +535,17 @@ void SetButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszLabel`  
+ *lpszLabel*  
  ボタンのコマンドのラベル。  
   
- `uiCmdUI`  
+ *uiCmdUI*  
  ボタンのコマンド id。  
   
- `btnAlignmnet`  
- ボタンの配置です。  
+ *btnAlignmnet*  
+ ボタンの配置。  
   
- `bHasDropDownArrow`  
- `TRUE` ボタンは、ドロップダウン矢印を表示する場合`FALSE`それ以外の場合。  
+ *bHasDropDownArrow*  
+ TRUE の場合、ボタンを表示するドロップダウン矢印を FALSE それ以外の場合。  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
  ボタンが押された状態のままになるかどうかを指定します。  
@@ -554,8 +555,8 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bPresed`  
- `TRUE` ボタンが押された状態の状態を保持する場合`FALSE`それ以外の場合。  
+ *bPresed*  
+ ボタンがそれ以外の場合、押された状態、FALSE を保持した場合は TRUE。  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
  ボタンのツールヒントを設定します。  
@@ -567,10 +568,10 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszToolTip`  
+ [in]*lpszToolTip*  
  ツールヒントのキャプション。  
   
- [入力] `lpszDescription`  
+ [in]*lpszDescription*  
  ツールヒントの説明。  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
@@ -581,8 +582,8 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bFlat`  
- `TRUE` キャプション バーの境界線のフラット場合。 `FALSE` 境界線が 3D である場合。  
+ [in]*bFlat*  
+ キャプション バーの境界線がフラットな場合は TRUE。 境界線が 3D である場合は FALSE。  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  キャプション バーのアイコンを設定します。  
@@ -594,16 +595,16 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `hIcon`  
+ [in]*hIcon*  
  設定アイコンのハンドルです。  
   
- [入力] `iconAlignment`  
+ [in]*iconAlignment*  
  アイコンの配置です。  
   
-### <a name="remarks"></a>コメント  
- キャプション バーには、アイコンまたはビットマップのいずれかを表示できます。 参照してください[CMFCCaptionBar::SetBitmap](#setbitmap)ビットマップを表示する方法を確認します。 アイコンとビットマップの両方を設定すると場合、常にアイコンが表示されます。 呼び出す[CMFCCaptionBar::RemoveIcon](#removeicon)キャプション バーからアイコンを削除します。  
+### <a name="remarks"></a>Remarks  
+ キャプション バーには、アイコンまたはビットマップのいずれかを表示できます。 参照してください[CMFCCaptionBar::SetBitmap](#setbitmap)ビットマップを表示する方法を説明します。 アイコンとビットマップの両方を設定した場合、アイコンが常に表示されます。 呼び出す[CMFCCaptionBar::RemoveIcon](#removeicon)キャプション バーからアイコンを削除します。  
   
- よると、アイコンを整列、`iconAlignment`パラメーター。 次のいずれか`BarElementAlignment`値。  
+ に従って配置されたが、アイコン、 *iconAlignment*パラメーター。 次のいずれか`BarElementAlignment`値。  
   
 -   ALIGN_INVALID  
   
@@ -623,22 +624,22 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszToolTip`  
- ツールヒントのテキストです。  
+ [in]*lpszToolTip*  
+ ツールヒントのテキスト。  
   
- [入力] `lpszDescription`  
+ [in]*lpszDescription*  
  ツールヒントの説明。  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
- キャプション バーの要素の端と、キャプション バー コントロールの端の間の距離を設定します。  
+ キャプション バーの要素の端とキャプション バー コントロールの端との間の距離を設定します。  
   
 ```  
 void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nMargin`  
- (ピクセル単位) のキャプション バーの要素の端と、キャプション バー コントロールの端の間の距離。  
+ [in]*nMargin*  
+ キャプション バーの要素の端とキャプション バー コントロールの端の間隔をピクセル単位で距離です。  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  キャプション バーのテキスト ラベルを設定します。  
@@ -650,14 +651,14 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `strText`  
+ [in]*strText*  
  設定するテキスト文字列。  
   
- [入力] `textAlignment`  
+ [in]*textalignment それから*  
  テキストの配置。  
   
-### <a name="remarks"></a>コメント  
- テキスト ラベルを配置して指定されたとおり、`textAlignment`パラメーター。 次のいずれか`BarElementAlignment`値。  
+### <a name="remarks"></a>Remarks  
+ テキスト ラベルを配置の指定に従って、 *textalignment それから*パラメーター。 次のいずれか`BarElementAlignment`値。  
   
 -   ALIGN_INVALID  
   

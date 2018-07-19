@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fffa778854519bff6f947aec779e36b77fd4e202
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6f45f8a445420d85c539de2f5ba485c0a47127b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962557"
 ---
 # <a name="regexiterator-class"></a>regex_iterator クラス
 
@@ -74,13 +75,13 @@ private:
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` サブマッチの反復子の型。
+*BidIt*サブマッチの反復子の型。
 
-`Elem` 一致する要素の型。
+*Elem*と一致する要素の型。
 
-`RXtraits` 要素の特徴 (traits) クラス。
+*RXtraits*要素用の特性クラス。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、定数前方反復子オブジェクトを表します。 反復子範囲 `match_results<BidIt>` で定義された文字シーケンスに正規表現オブジェクト `*pregex` を繰り返し適用することによって、 `[begin, end)`型のオブジェクトを抽出します。
 
@@ -96,7 +97,7 @@ private:
 
 - [swap](../standard-library/regex-functions.md#swap)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
@@ -110,7 +111,7 @@ private:
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `std::ptrdiff_t` の同意語です。
 
@@ -165,7 +166,7 @@ match == a
 typedef std::forward_iterator_tag iterator_category;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `std::forward_iterator_tag` の同意語です。
 
@@ -222,9 +223,9 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 比較する反復子。
+*適切な*と比較する反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`!(*this == right)` を返します。
 
@@ -279,7 +280,7 @@ match == a
 const match_results<BidIt>& operator*();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されている値 `match` を返します。
 
@@ -335,7 +336,7 @@ regex_iterator& operator++();
 regex_iterator& operator++(int);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 現在の一致に文字が含まれていない場合は、最初の演算子が `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail | regex_constants::match_not_null)`を呼び出します。それ以外の場合は、現在の一致の後の最初の文字を指すように格納されている値 `begin` を増やしてから、 `regex_search(begin, end, match, *pregex, flags | regex_constants::match_prev_avail)`を呼び出します。 どちらの場合も、検索に失敗したら、演算子がオブジェクトをシーケンス末尾の反復子に設定します。 演算子はそのオブジェクトを返します。
 
@@ -394,11 +395,11 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 比較する反復子。
+*適切な*と比較する反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、 `*this` と `right` の両方がシーケンス末尾の反復子の場合、または両方がシーケンス末尾の反復子ではなく、 `begin == right.begin`、 `end == right.end`、 `pregex == right.pregex`、および `flags == right.flags` の場合に true を返します。 それ以外の場合は、false を返します。
+場合、メンバー関数は true を返します`*this`と*右*シーケンス末尾の反復子またはかどうかは、シーケンス末尾の反復子がないと`begin == right.begin`、 `end == right.end`、`pregex == right.pregex`と`flags == right.flags`します。 それ以外の場合は、false を返します。
 
 ### <a name="example"></a>例
 
@@ -451,7 +452,7 @@ match == a
 const match_results<BidIt> * operator->();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、格納されている値 `match`のアドレスを返します。
 
@@ -506,7 +507,7 @@ match == a
 typedef match_results<BidIt> *pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `match_results<BidIt>*`のシノニムです。ここで `BidIt` はテンプレート パラメーターです。
 
@@ -561,7 +562,7 @@ match == a
 typedef match_results<BidIt>& reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `match_results<BidIt>&`のシノニムです。ここで `BidIt` はテンプレート パラメーターです。
 
@@ -624,17 +625,17 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 一致させるシーケンスの先頭。
+*最初*と一致するシーケンスの最初します。
 
-`last` 一致させるシーケンスの最後。
+*最後*と一致するシーケンスの末尾。
 
-`re` 照合する正規表現。
+*re*正規表現一致。
 
-`f` 一致のフラグ。
+*f*一致のフラグ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-1 つ目のコンストラクターは、シーケンス末尾の反復子を構築します。 2 番目のコンストラクターは、格納されている値 `begin` を `first`で、格納されている値 `end` を `last`で、格納されている値 `pregex` を `&re`で、格納されている値 `flags` を `f`でそれぞれ初期化します。 次に、 `regex_search(begin, end, match, *pregex, flags)`を呼び出します。 検索に失敗すると、コンストラクターがオブジェクトをシーケンス末尾の反復子に設定します。
+1 つ目のコンストラクターは、シーケンス末尾の反復子を構築します。 2 番目のコンス トラクターは、格納されている値を初期化します`begin`で*最初*、値が格納されている`end`で*最後*、値が格納されている`pregex`で`&re`、および値が格納されている`flags`で*f*します。 次に、 `regex_search(begin, end, match, *pregex, flags)`を呼び出します。 検索に失敗すると、コンストラクターがオブジェクトをシーケンス末尾の反復子に設定します。
 
 ### <a name="example"></a>例
 
@@ -688,7 +689,7 @@ match == a
 typedef basic_regex<Elem, RXtraits> regex_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、`basic_regex<Elem, RXtraits>` の同意語です。
 
@@ -744,7 +745,7 @@ match == a
 typedef match_results<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `match_results<BidIt>`のシノニムです。ここで `BidIt` はテンプレート パラメーターです。
 

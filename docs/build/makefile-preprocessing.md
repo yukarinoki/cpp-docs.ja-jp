@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368227"
 ---
 # <a name="makefile-preprocessing"></a>メイクファイルのプリプロセス
 プリプロセス ディレクティブと式を使用して、(nmake の) セッションを制御できます。 Tools.ini またはメイクファイルで、事前処理命令を配置できます。 ディレクティブを使用して、条件付きで処理、メイクファイル、エラー メッセージを表示、他のメイクファイルを含める、未定義マクロ、および特定のオプションをオンまたはオフにします。  

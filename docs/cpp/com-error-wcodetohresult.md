@@ -1,5 +1,5 @@
 ---
-title: _com_error::WCodeToHRESULT |Microsoft ドキュメント
+title: _com_error::WCodeToHRESULT |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9df8305d0eea772979904f63847f6d6c2325a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dce98775007360e3fdd4177141f7a550548d3679
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939196"
 ---
 # <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
 **Microsoft 固有の仕様**  
   
- 16 ビットをマップ`wCode`32 ビット`HRESULT`です。  
+ 16 ビット マップ*wCode* HRESULT の 32 ビットにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +38,13 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `wCode`  
- 32 ビットの `wCode` にマップされる 16 ビットの `HRESULT`。  
+ *WCode*  
+ 16 ビット*wCode* HRESULT の 32 ビットにマップします。  
   
 ## <a name="return-value"></a>戻り値  
- 16 ビットの `HRESULT` からマップされた 32 ビットの `wCode`。  
+ 16 ビットからマップされた 32 ビット HRESULT *wCode*します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  参照してください、 [WCode](../cpp/com-error-wcode.md)メンバー関数。  
   
  **Microsoft 固有の仕様はここまで**  

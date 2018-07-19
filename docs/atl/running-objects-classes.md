@@ -1,5 +1,5 @@
 ---
-title: 実行中のオブジェクト クラス (ATL) |Microsoft ドキュメント
+title: 実行中オブジェクト クラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8541d0732813ebd2b86e9a1941dc262b0ba1c20e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fcbc0820f98052ee29c489ca9cb556e1c913d07c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958573"
 ---
 # <a name="running-objects-classes"></a>実行中のオブジェクト クラス
-次のクラスは、オブジェクトを実行するためサポートを提供します。  
+次のクラスは、オブジェクトを実行するためのサポートを提供します。  
   
 -   [IRunnableObjectImpl](../atl/reference/irunnableobjectimpl-class.md)決定オブジェクトが実行されている場合は、強制的に実行、実行中の状態にロックしたりします。  
   

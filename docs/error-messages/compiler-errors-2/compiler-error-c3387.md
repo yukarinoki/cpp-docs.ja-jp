@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249504"
 ---
 # <a name="compiler-error-c3387"></a>コンパイラ エラー C3387
 'member': 関数/\__declspec(dllimport) は WinRT 型またはマネージのメンバーに適用できません  

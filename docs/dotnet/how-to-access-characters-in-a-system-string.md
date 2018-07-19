@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129750"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::String の文字にアクセスする
 文字にアクセスすることができます、<xref:System.String>アンマネージ呼び出しを高パフォーマンスのためのオブジェクトの関数を受け取る`wchar_t*`文字列。 メソッドの最初の文字への内部ポインターを生成する、<xref:System.String>オブジェクト。 このポインター直接操作またはピン留めして通常必要とする関数に渡される`wchar_t`文字列。  

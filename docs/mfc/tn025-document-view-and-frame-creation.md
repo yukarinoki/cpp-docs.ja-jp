@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97db14dcb8c0b8b5b71823cf39d6bf36f0d19f25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956695"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>テクニカル ノート 25: ドキュメント、ビュー、フレームの作成
 > [!NOTE]
@@ -42,12 +43,12 @@ pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 AddDocTemplate(pTemplate);
 ```  
   
- 1 つ`CWinApp`オブジェクトには、アプリケーション内のすべてのフレーム ウィンドウを所有しています。 アプリケーションのメイン フレーム ウィンドウに保存するか **:m_pmainwnd**; 通常設定`m_pMainWnd`で、`InitInstance`実装が AppWizard でそれを行う場合。 シングル ドキュメント インターフェイス (SDI) に対してこれは 1 つ`CFrameWnd`のみドキュメント フレーム ウィンドウと同様に、アプリケーションのメイン フレーム ウィンドウとして機能します。 MDI フレームは、マルチ ドキュメント インターフェイス (MDI) (クラス`CMDIFrameWnd`) アプリケーションのメイン フレーム ウィンドウを含むすべての子として機能する`CFrameWnd`s。 クラスの各子ウィンドウは、 `CMDIChildWnd` (から派生した`CFrameWnd`) し、場合によっては多数のドキュメント フレーム ウィンドウのいずれかとして機能します。  
+ 1 つ`CWinApp`オブジェクトには、アプリケーション内のすべてのフレーム ウィンドウを所有しています。 アプリケーションのメイン フレーム ウィンドウに保存するか`CWinApp::m_pMainWnd`; 通常設定*m_pMainWnd*で、`InitInstance`実装が AppWizard でそれを行う場合。 シングル ドキュメント インターフェイス (SDI) に対してこれは 1 つ`CFrameWnd`のみドキュメント フレーム ウィンドウと同様に、アプリケーションのメイン フレーム ウィンドウとして機能します。 MDI フレームは、マルチ ドキュメント インターフェイス (MDI) (クラス`CMDIFrameWnd`) アプリケーションのメイン フレーム ウィンドウを含むすべての子として機能する`CFrameWnd`s。 クラスの各子ウィンドウは、 `CMDIChildWnd` (から派生した`CFrameWnd`) し、場合によっては多数のドキュメント フレーム ウィンドウのいずれかとして機能します。  
   
 ## <a name="doctemplates"></a>ウィンドウ  
  `CDocTemplate`作成者とドキュメントの管理者は、します。 作成したドキュメントが所有しています。 派生する必要はありません、アプリケーションでは、次に示すリソース ベースのアプローチを使用する場合`CDocTemplate`です。  
   
- SDI アプリケーションは、クラス`CSingleDocTemplate`の 1 つ開いているドキュメントを追跡します。 MDI アプリケーションは、クラス`CMultiDocTemplate`リストを保持 (、 `CPtrList`) そのテンプレートから作成されたすべての現在開いているドキュメントのです。 `CDocTemplate::AddDocument` および`CDocTemplate::RemoveDocument`を追加またはテンプレートからドキュメントを削除するため、仮想メンバー関数を提供します。 `CDocTemplate` フレンド**CDocument**プロテクト セットアップできるように**CDocument::m_pDocTemplate**バック ポインターの元のドキュメントを作成したドキュメント テンプレートにポイントします。  
+ SDI アプリケーションは、クラス`CSingleDocTemplate`の 1 つ開いているドキュメントを追跡します。 MDI アプリケーションは、クラス`CMultiDocTemplate`リストを保持 (、 `CPtrList`) そのテンプレートから作成されたすべての現在開いているドキュメントのです。 `CDocTemplate::AddDocument` および`CDocTemplate::RemoveDocument`を追加またはテンプレートからドキュメントを削除するため、仮想メンバー関数を提供します。 `CDocTemplate` フレンド`CDocument`プロテクト セットアップできるように`CDocument::m_pDocTemplate`バック ポインターの元のドキュメントを作成したドキュメント テンプレートにポイントします。  
   
  `CWinApp` 既定値を処理する`OnFileOpen`実装で、すべてのドキュメント テンプレートはさらにクエリを実行します。 実装には、既に開いているドキュメントを検索し、どの形式で新しいドキュメントを開くの決定が含まれています。  
   
@@ -56,13 +57,13 @@ AddDocTemplate(pTemplate);
  `CDocTemplate` 名前のないドキュメントの数のカウントを保持します。  
   
 ## <a name="cdocument"></a>CDocument  
- A **CDocument**によって所有されて、`CDocTemplate`です。  
+ A`CDocument`によって所有されて、`CDocTemplate`です。  
   
  ドキュメントのビューを開く現在のリストがある (から派生した`CView`) ドキュメントを表示する (、 `CPtrList`)。  
   
  ドキュメントの作成/破棄しない、ビューがアタッチされている相互に作成した後。 文書が閉じているときに (つまり、を通じてファイル/終了)、接続されているすべてのビューは閉じられます。 (つまり、ウィンドウまたは Close) ドキュメントの最後のビューが閉じられたときに、ドキュメントは閉じられます。  
   
- `CDocument::AddView`、`RemoveView`インターフェイスは、ビューのリストを維持するために使用します。 **CDocument**のフレンド`CView`セットアップできるように、 **CView::m_pDocument**バック ポインター。  
+ `CDocument::AddView`、`RemoveView`インターフェイスは、ビューのリストを維持するために使用します。 `CDocument` フレンド`CView`セットアップできるように、`CView::m_pDocument`バック ポインター。  
   
 ## <a name="cframewnd"></a>CFrameWnd  
  A `CFrameWnd` (フレームとも呼ばれます) が MFC 1.0 と同様に、同じロールをようになりましたが、再生、`CFrameWnd`クラスが新しいクラスを派生することがなく、多くの場合に使用されるように設計されています。 派生クラス`CMDIFrameWnd`と`CMDIChildWnd`標準コマンドの多くは既に実装されても強化されています。  

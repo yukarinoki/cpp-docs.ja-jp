@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883594"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach メソッド
 この関連付けを解除`ComPtr`オブジェクトが表すインターフェイスからです。  

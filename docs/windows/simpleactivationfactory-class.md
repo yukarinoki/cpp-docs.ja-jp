@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889846"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory クラス
 Windows ランタイムまたはクラシック COM の基底クラスを作成するための基本的なメカニズムを提供します。  

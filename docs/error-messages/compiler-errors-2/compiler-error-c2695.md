@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231218"
 ---
 # <a name="compiler-error-c2695"></a>コンパイラ エラー C2695
 'function1': 仮想関数をオーバーライドする唯一の相違点から 'function2' 呼び出し規約  

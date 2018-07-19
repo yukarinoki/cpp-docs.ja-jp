@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276556"
 ---
 # <a name="compiler-warning-level-1-c4187"></a>コンパイラの警告 (レベル 1) C4187
 \#インポート属性 'attribute1' と 'attribute2' は互換性がありません。両方とも無視されます。  

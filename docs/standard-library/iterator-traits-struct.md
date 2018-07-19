@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57387af452ff4a127eec6b669cec6e02863b8fd3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e0b4221e32b6e85df0b559b1d6d4ecda381d8e3d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959639"
 ---
 # <a name="iteratortraits-struct"></a>iterator_traits 構造体
 
@@ -40,21 +41,21 @@ struct iterator_traits {
    };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 テンプレート構造体はメンバーの型を定義します。
 
-- **iterator_category**: **Iterator::iterator_category** のシノニム。
+- `iterator_category`: のシノニム`Iterator::iterator_category`します。
 
-- `value_type`: **Iterator::value_type** のシノニム。
+- `value_type`: のシノニム`Iterator::value_type`します。
 
-- `difference_type`: **Iterator::difference_type** のシノニム。
+- `difference_type`: のシノニム`Iterator::difference_type`します。
 
-- `distance_type`: **Iterator::difference_type** のシノニム。
+- `distance_type`: のシノニム `Iterator::difference_type.`
 
-- **pointer**: **Iterator::pointer** のシノニム。
+- `pointer`: のシノニム`Iterator::pointer`します。
 
-- **reference**: **Iterator::reference** のシノニム。
+- `reference`: のシノニム`Iterator::reference`します。
 
 部分的特殊化によって、型 **Type \*** または const **Type \*** のオブジェクト ポインターに関連付けられている重要な型が決まります。
 
@@ -125,7 +126,7 @@ struct std::bidirectional_iterator_tag
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 

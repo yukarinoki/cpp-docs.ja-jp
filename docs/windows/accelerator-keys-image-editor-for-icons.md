@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861533"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>アクセラレータ キー (アイコン用イメージ エディター)
 次は、既定では、キーにバインドされているイメージ エディターのコマンドをアクセラレータ キーを示します。 アクセラレータ キーを変更する をクリックして**オプション**上、**ツール** メニューを選択し**キーボード**下にある、**環境**フォルダーです。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)」をご覧ください。  

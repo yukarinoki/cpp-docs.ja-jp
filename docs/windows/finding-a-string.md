@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875735"
 ---
 # <a name="finding-a-string"></a>文字列の検索
 文字列テーブルに 1 つまたは複数の文字列を検索して使用することができます[正規表現](/visualstudio/ide/using-regular-expressions-in-visual-studio)で、**ファイル内の検索**コマンド (**編集**メニュー) の文字列のすべてのインスタンスを検索するにはパターンに一致します。  

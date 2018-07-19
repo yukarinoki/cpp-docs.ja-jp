@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33173139"
 ---
 # <a name="stlclr-containers"></a>STL/CLR コンテナー
 STL/CLR ライブラリ、C++ 標準ライブラリ内にある同じコンテナーが、.NET Framework の管理対象環境内で実行されます。 場合は、C++ 標準ライブラリに慣れて既に STL/CLR、引き続き共通言語ランタイム (CLR) ターゲットをコードのアップグレード中に作成したスキルを使用する最適な方法です。  

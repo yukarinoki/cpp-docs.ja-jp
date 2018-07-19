@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418472"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
@@ -184,7 +185,7 @@ NULL で終わる元の文字列。
 
 ## <a name="remarks"></a>コメント
 
-これらの関数が、最初に追加しようとしています*D*の文字*strSource*の末尾に*追加される文字*ここで、 *D* の小さい方が*。カウント*の長さと*strSource*です。 追加された場合は*D*内に収まる文字*追加される文字*(を指定すると*numberOfElements*) ままにし、null 終端記号をそれらの文字の領域を確保し追加すると、元の終端の null で始まる*追加される文字*、新しい終端の null は追加された、それ以外の*追加される文字*[0] の null 文字は、無効なパラメーターに設定されています。ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+これらの関数が、最初に追加しようとしています*D*の文字*strSource*の末尾に*追加される文字*ここで、 *D* の小さい方が *。カウント*の長さと*strSource*です。 追加された場合は*D*内に収まる文字*追加される文字*(を指定すると*numberOfElements*) ままにし、null 終端記号をそれらの文字の領域を確保し追加すると、元の終端の null で始まる*追加される文字*、新しい終端の null は追加された、それ以外の*追加される文字*[0] の null 文字は、無効なパラメーターに設定されています。ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 
 これには例外があります。 場合*カウント*は[_TRUNCATE](../../c-runtime-library/truncate.md) 、できるだけ多くの*strSource*に合わせる を追加だけでなく*追加される文字*を追加する領域を残して、null 終了しています。
 

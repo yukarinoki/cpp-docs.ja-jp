@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882499"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>グラフィカル リソースの編集 (アイコン用イメージ エディター)
 グラフィカル リソース、アプリケーション用に定義した画像が表示されます。 フリーハンドの描画または図形を使用して描画できます。 編集、反転、またはサイズ変更、イメージの一部を選択またはイメージの選択した一部のカスタム ブラシを作成してそのブラシで描画します。 イメージのプロパティを定義する、異なる形式で画像を保存し、イメージを別の 1 つの形式に変換できます。  

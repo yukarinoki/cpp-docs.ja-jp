@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880695"
 ---
 # <a name="editing-managed-resource-files"></a>マネージ リソース ファイルの編集
 マネージ リソース ファイル (.resx) は、XML ファイルです。 マネージ リソース ファイルをプロジェクトに追加すると、**新しい項目の追加** ダイアログ ボックスで、**マネージ リソース エディター**既定で開きます。  

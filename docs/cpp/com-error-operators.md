@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410354"
 ---
 # <a name="comerror-operators"></a>_com_error 演算子
 については、`_com_error`演算子を参照してください[_com_error クラス](../cpp/com-error-class.md)です。  

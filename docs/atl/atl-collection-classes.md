@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359831"
 ---
 # <a name="atl-collection-classes"></a>ATL コレクション クラス
 ATL は、格納およびデータにアクセスするための多くのクラスを提供します。 どのクラスを使用する場合など、いくつかの要因によって異なります。  

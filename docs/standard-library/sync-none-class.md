@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 540f5085d1f2ab3b641e023654d05f1e9e66bae2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fe7672a925105bff3b63032a709353388143c0c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953011"
 ---
 # <a name="syncnone-class"></a>sync_none クラス
 
@@ -53,7 +54,7 @@ class sync_none
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -71,9 +72,9 @@ void *allocate(std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`count`|割り当てられる配列内の要素の数。|
+|*count*|割り当てられる配列内の要素の数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `cache.allocate(count)` を返します。ここで、`cache` はキャッシュ オブジェクトです。
 
@@ -89,10 +90,10 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`count`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `cache.deallocate(ptr, count)` を呼び出します。ここで、`cache` はキャッシュ オブジェクトを表します。
 
@@ -108,14 +109,14 @@ bool equals(const sync<Cache>& Other) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Cache`|同期フィルターのキャッシュ オブジェクト。|
-|`Other`|等しいかどうかを比較するキャッシュ オブジェクト。|
+|*キャッシュ*|同期フィルターのキャッシュ オブジェクト。|
+|*その他*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は常に `true` を返します。
+メンバー関数は常に返します**true**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

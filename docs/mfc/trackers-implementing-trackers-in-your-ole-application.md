@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381551"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>トラッカー : OLE アプリケーションでのトラッカーの実装
 トラッカーは、OLE クライアント アイテムと対話するユーザーを有効にするためのグラフィカル インターフェイスを提供します。 トラッカーの異なるスタイルを使用すると、OLE 斜線の枠で、項目を表示できるクライアント サイズ変更ハンドル、またはその他の視覚効果のさまざまな。 この記事の内容について説明します。  

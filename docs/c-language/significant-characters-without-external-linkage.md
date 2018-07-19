@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385235"
 ---
 # <a name="significant-characters-without-external-linkage"></a>外部リンケージを持たない有意文字
 **ANSI 3.1.2** 外部リンケージを持たない有意文字の数  

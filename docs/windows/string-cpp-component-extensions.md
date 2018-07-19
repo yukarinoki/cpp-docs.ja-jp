@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889246"
 ---
 # <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
 Visual C コンパイラ サポート*文字列*、これは、文字のシーケンスとしてテキストを表すオブジェクト。 Visual C++ では、文字列の変数 (暗黙的な値) とリテラル (文字列が引用符で囲まれた明示的な値) をサポートしています。  

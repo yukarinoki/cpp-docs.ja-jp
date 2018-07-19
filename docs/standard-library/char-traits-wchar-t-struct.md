@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a117a7f9299591d971ecbfdd0a681b008937da33
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c7d8b87b51bfeef68ef8bfe22c8e7e201929aa3f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957075"
 ---
 # <a name="chartraitsltwchartgt-struct"></a>char_traits&lt;wchar_t&gt; 構造体
 
-テンプレート構造体 **char_traits\<CharType>** を `wchar_t` 型の要素に特殊化したクラス。
+テンプレート構造体の特殊化であるクラス**char_traits\<CharType >** 型の要素を**wchar_t**します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,11 +35,11 @@ template <>
 struct char_traits<wchar_t>;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-特殊化により、構造体でこの型 `wchar_t` のオブジェクトを操作するライブラリ関数を利用できます。
+特殊化によりこの型のオブジェクトを操作するライブラリ関数を活用するために構造体**wchar_t**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<string>
 

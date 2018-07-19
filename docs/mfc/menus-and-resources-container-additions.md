@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 437b80a0766a07b181a60743e79bdbaf32347de4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930547"
 ---
 # <a name="menus-and-resources-container-additions"></a>メニューとリソース : コンテナーの変更点
 この記事では、メニューやその他のビジュアル編集コンテナー アプリケーションのリソースに必要な変更について説明します。  
@@ -66,27 +67,27 @@ ms.lasthandoff: 05/04/2018
   
 |ID|キー|型|  
 |--------|---------|----------|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
- 2 番目の変更では、インプレース アクティブ化用に作成された新しいメニュー リソースに対応する新しいアクセラレータ テーブルを作成します。 このテーブルに加え、ファイルおよびウィンドウのメニューのエントリには、 **VK_ESCAPE**上記のエントリ。 次の例は、MFC のサンプル、インプレース アクティブ化用に作成された、アクセラレータ テーブル[コンテナー](../visual-cpp-samples.md):  
+ 2 番目の変更では、インプレース アクティブ化用に作成された新しいメニュー リソースに対応する新しいアクセラレータ テーブルを作成します。 このテーブルには、上記の VK_ESCAPE エントリだけでなく、ファイルおよびウィンドウのメニューのエントリがあります。 次の例は、MFC のサンプル、インプレース アクティブ化用に作成された、アクセラレータ テーブル[コンテナー](../visual-cpp-samples.md):  
   
 |ID|キー|型|  
 |--------|---------|----------|  
-|`ID_FILE_NEW`|Ctrl + N|**VIRTKEY**|  
-|`ID_FILE_OPEN`|Ctrl + O|**VIRTKEY**|  
-|**ID_FILE_SAVE**|Ctrl + S|**VIRTKEY**|  
-|**ID_FILE_PRINT**|Ctrl + P|**VIRTKEY**|  
-|**ID_NEXT_PANE**|VK_F6|**VIRTKEY**|  
-|**ID_PREV_PANE**|SHIFT キーを押しながら VK_F6|**VIRTKEY**|  
-|**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
+|ID_FILE_NEW|Ctrl + N|**VIRTKEY**|  
+|ID_FILE_OPEN|Ctrl + O|**VIRTKEY**|  
+|ID_FILE_SAVE|Ctrl + S|**VIRTKEY**|  
+|ID_FILE_PRINT|Ctrl + P|**VIRTKEY**|  
+|ID_NEXT_PANE|VK_F6|**VIRTKEY**|  
+|ID_PREV_PANE|SHIFT キーを押しながら VK_F6|**VIRTKEY**|  
+|ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|  
   
 ##  <a name="_core_string_table_additions_for_container_applications"></a> コンテナー アプリケーションの文字列テーブルの変更点  
  コンテナー アプリケーションの文字列テーブルに対する変更のほとんどに記載されている追加のメニュー項目に対応して[コンテナー メニューの変更点](#_core_container_menu_additions)です。 各メニュー項目が表示されるときに、ステータス バーに表示されるテキストを指定します。 たとえば、アプリケーションのウィザードが生成されますストリング テーブルのエントリを次に示します。  
   
 |ID|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|OLE の初期化に失敗しました。 OLE ライブラリが適切なバージョンを確認します。|  
-|**IDP_FAILED_TO_CREATE**|オブジェクトを作成できませんでした。 システム レジストリにオブジェクトを入力することを確認します。|  
+|IDP_OLE_INIT_FAILED|OLE の初期化に失敗しました。 OLE ライブラリが適切なバージョンを確認します。|  
+|IDP_FAILED_TO_CREATE|オブジェクトを作成できませんでした。 システム レジストリにオブジェクトを入力することを確認します。|  
   
 ## <a name="see-also"></a>関連項目  
  [メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)   

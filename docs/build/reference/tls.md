@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373525"
 ---
 # <a name="tls"></a>/TLS
 実行可能ファイルから IMAGE_TLS_DIRECTORY 構造を表示します。  

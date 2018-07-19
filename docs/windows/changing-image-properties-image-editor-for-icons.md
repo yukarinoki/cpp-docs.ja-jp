@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863330"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>イメージのプロパティの変更 (アイコン用イメージ エディター)
 設定またはを使用して、イメージのプロパティを変更することができます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。  

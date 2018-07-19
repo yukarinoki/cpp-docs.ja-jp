@@ -82,11 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e46a7d5720be765f2523ebde5d40655fb47b057
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 561f407fc651c08d46fe97486e2f9201cfe17333
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123176"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl クラス
 Windows のコモン タブ コントロールの機能が用意されています。  
@@ -142,7 +143,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::SetPadding](#setpadding)|各タブのアイコンとタブ コントロールのラベルの周りには、(埋め込み) 領域の量を設定します。|  
 |[CTabCtrl::SetToolTips](#settooltips)|タブ コントロールに、ツール ヒント コントロールを割り当てます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  [タブ コントロール] は、ノートの仕切りやファイル キャビネットのラベルに似ています。 タブ コントロールを使用すると、アプリケーションでウィンドウまたはダイアログ ボックスの同じ領域に複数のページを定義できます。 各ページは、一連の情報や、ユーザーが、対応するタブを選択したときに、アプリケーションで表示するコントロールのグループで構成されます。特殊な種類のタブ コントロールは、ボタンのようなタブを表示します。 ボタンをクリックしてページを表示する代わりにコマンドが実行されます。  
   
  このコントロール (したがって、`CTabCtrl`クラス) は、Windows 95/98 および Windows NT 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
@@ -158,7 +159,7 @@ class CTabCtrl : public CWnd
   
  `CTabCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
@@ -169,10 +170,10 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bLarger`  
- 実行する操作を示します。 このパラメーターは場合**TRUE**、`lpRect`表示長方形を指定し、対応するウィンドウの四角形を受け取る。 このパラメーターが場合**FALSE**、`lpRect`ウィンドウ四角形を指定し、対応する表示する四角形を受け取る。  
+ *き*  
+ 実行する操作を示します。 このパラメーターが true の場合場合、 *lpRect*表示長方形を指定し、対応するウィンドウの四角形を受け取る。 このパラメーターが FALSE の場合*lpRect*ウィンドウ四角形を指定し、対応する表示する四角形を受け取る。  
   
- `lpRect`  
+ *lpRect*  
  ポインター、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)指定された四角形を指定し、計算される四角形を受け取る。  
   
 ### <a name="example"></a>例  
@@ -190,37 +191,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
+ *dwStyle*  
  タブ コントロールのスタイルを指定します。 任意の組み合わせを適用[タブ コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760549)Windows SDK に記述されている。 参照してください**解説**コントロールに適用することもできます。 ウィンドウ スタイルの一覧についてはします。  
   
- `rect`  
+ *rect*  
  タブ コントロールのサイズと位置を指定します。 いずれかになります、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
- `pParentWnd`  
- タブ コントロールの親ウィンドウを通常を指定します、`CDialog`です。 なければなりません**NULL**です。  
+ *pParentWnd*  
+ タブ コントロールの親ウィンドウを通常を指定します、`CDialog`です。 NULL は指定できません。  
   
- `nID`  
+ *nID*  
  タブ コントロールの ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
- **TRUE**場合は、オブジェクトの初期化が成功しなかった場合は**FALSE**です。  
+ オブジェクトの初期化が成功した場合は TRUE。それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CTabCtrl` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出しておよびを呼び出す**作成**、タブ コントロールを作成しにアタッチする、`CTabCtrl`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CTabCtrl` 2 つのステップ内のオブジェクト。 最初に、コンス トラクターを呼び出しておよびを呼び出す`Create`、タブ コントロールを作成しにアタッチする、`CTabCtrl`オブジェクト。  
   
  タブ コントロールのスタイルに加え、タブ コントロールに次のウィンドウ スタイルを適用できます。  
   
-- **WS_CHILD**タブ コントロールを表す子ウィンドウを作成します。 `WS_POPUP` スタイルと一緒に使うことはできません。  
+- WS_CHILD では、タブ コントロールを表す子ウィンドウを作成します。 WS_POPUP スタイルでは使用できません。  
   
-- **WS_VISIBLE**が最初に表示されるタブ コントロールを作成します。  
+- WS_VISIBLE では、最初に表示されているタブ コントロールを作成します。  
   
-- **WS_DISABLED**最初に無効になっているウィンドウを作成します。  
+- WS_DISABLED は、最初に無効になっているウィンドウを作成します。  
   
-- **WS_GROUP**ユーザーことができますに移動する 1 つのコントロールから、[次へ] 矢印キーを持つコントロールのグループの最初のコントロールを指定します。 定義されているすべてのコントロール、 **WS_GROUP**後、同じグループに属している、最初のコントロールのスタイルを設定します。 [次へ] のコントロールに、 **WS_GROUP**スタイル スタイルのグループを終了し、[次へ] のグループ (つまり、1 つのグループの末尾が次の開始位置) を開始します。  
+- WS_GROUP では、ユーザーことができますに移動する 1 つのコントロールから、[次へ] 矢印キーを持つコントロールのグループの最初のコントロールを指定します。 最初のコントロールが、同じグループに属している後に WS_GROUP スタイルで定義されているすべてのコントロールです。 WS_GROUP スタイルを使用して、次のコントロールは、スタイルのグループを終了し、次のグループ (つまり、1 つのグループの末尾が次の開始位置) を開始します。  
   
-- **WS_TABSTOP**ユーザーが TAB キーを使用して移動できるコントロールの任意の数のいずれかを指定します。 TAB キーで指定された次のコントロールにユーザーを移動する、 **WS_TABSTOP**スタイル。  
+- WS_TABSTOP 任意の数のいずれかのコントロールを指定する、ユーザーが TAB キーを使用して移動できます。 TAB キーでは、ユーザーが WS_TABSTOP スタイルで指定された次のコントロールを移動します。  
   
- 拡張ウィンドウ スタイルを使用して、タブ コントロールを作成するには、呼び出す[CTabCtrl::CreateEx](#createex)の代わりに**作成**です。  
+ 拡張ウィンドウ スタイルを使用して、タブ コントロールを作成するには、呼び出す[CTabCtrl::CreateEx](#createex)の代わりに`Create`です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
@@ -238,28 +239,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwExStyle`  
- 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、`dwExStyle`パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
+ *dwExStyle*  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
   
- `dwStyle`  
+ *dwStyle*  
  タブ コントロールのスタイルを指定します。 任意の組み合わせを適用[タブ コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760549)Windows SDK に記述されている。 参照してください**解説**で[作成](#create)コントロールに適用することもできます。 ウィンドウ スタイルの一覧についてはします。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体`pParentWnd`です。  
+ *rect*  
+ 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体*pParentWnd*です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  コントロールの子ウィンドウ ID  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外。 それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。  
   
- `CreateEx` 指定された拡張ウィンドウ スタイルでコントロールが作成され`dwExStyle`です。 拡張を使用してコントロールに固有のスタイル セット[拡張](#setextendedstyle)です。 たとえば、使用して`CreateEx`としてこのようなスタイルを設定する**WS_EX_CONTEXTHELP**が使用して`SetExtendedStyle`としてこのようなスタイルを設定する**TCS_EX_FLATSEPARATORS**です。 詳細についてで説明されているスタイルを参照してください。[タブ コントロールの拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760546)Windows SDK に含まれています。  
+ `CreateEx` 指定された拡張ウィンドウ スタイルでコントロールが作成され*dwExStyle*です。 拡張を使用してコントロールに固有のスタイル セット[拡張](#setextendedstyle)です。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`TCS_EX_FLATSEPARATORS としてこのようなスタイルを設定します。 詳細についてで説明されているスタイルを参照してください。[タブ コントロールの拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760546)Windows SDK に含まれています。  
   
 ##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
  `CTabCtrl` オブジェクトを構築します。  
@@ -286,7 +287,7 @@ BOOL DeleteItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  削除する項目の 0 から始まる値です。  
   
 ### <a name="return-value"></a>戻り値  
@@ -304,9 +305,9 @@ void DeselectAll(BOOL fExcludeFocus);
   
 ### <a name="parameters"></a>パラメーター  
  *fExcludeFocus*  
- 項目選択解除のスコープを指定するフラグ。 このパラメーターに設定されている場合**FALSE**、すべてのタブ ボタンはリセットされます。 設定されている場合**TRUE**、現在選択されている 1 つを除くすべてのタブの項目がリセットされます。  
+ 項目選択解除のスコープを指定するフラグ。 このパラメーターが FALSE に設定されている場合は、すべてのタブ ボタンがリセットされます。 現在選択されている 1 つを除く、項目を [すべて] タブ、TRUE に設定されている場合はリセットされます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579)Windows SDK で説明されている。  
   
 ##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
@@ -317,15 +318,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  ポインター、 [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)描画する項目を記述します。  
   
-### <a name="remarks"></a>コメント  
- **ItemAction**のメンバー、`DRAWITEMSTRUCT`構造体を実行するのには、描画の動作を定義します。  
+### <a name="remarks"></a>Remarks  
+ `itemAction`のメンバー、`DRAWITEMSTRUCT`構造体を実行するのには、描画の動作を定義します。  
   
  既定では、このメンバー関数では何も行いません。 オーナー描画の描画を実装するには、このメンバー関数をオーバーライド`CTabCtrl`オブジェクト。  
   
- アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります`lpDrawItemStruct`関数はこのメンバーの前に終了します。  
+ アプリケーションで指定されたディスプレイ コンテキスト用に選択したすべてのグラフィック デバイス インターフェイス (GDI) オブジェクトを復元する必要があります*lpDrawItemStruct*関数はこのメンバーの前に終了します。  
   
 ##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
  現在のフォーカスをタブのインデックスを取得します。  
@@ -357,7 +358,7 @@ DWORD GetExtendedStyle();
 ### <a name="return-value"></a>戻り値  
  タブ コントロールで使用されている拡張スタイルを表します。 この値の組み合わせである[ タブのコントロールの拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760546)Windows SDK で説明されている。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585)Windows SDK で説明されている。  
   
 ##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
@@ -368,7 +369,7 @@ CImageList* GetImageList() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、タブのイメージ リストへのポインターを制御します。それ以外の場合、 **NULL**です。  
+ 成功した場合、タブのイメージ リストへのポインターを制御します。それ以外の場合は NULL です。  
   
 ##  <a name="getitem"></a>  CTabCtrl::GetItem  
  タブ コントロールのタブについての情報を取得します。  
@@ -378,42 +379,42 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  タブの 0 から始まるインデックス。  
   
- `pTabCtrlItem`  
+ *pTabCtrlItem*  
  ポインター、 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)構造体を取得する情報を指定するために使用します。 タブの情報を受信するも使用されます。この構造体を使用、 `InsertItem`、 `GetItem`、および`SetItem`メンバー関数。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**TRUE**成功した場合**FALSE**それ以外の場合。  
+ 成功した場合、TRUE を返しますFALSE それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- メッセージが送信されるときに、**マスク**メンバーを返す属性を指定します。 場合、**マスク**メンバーを指定します、`TCIF_TEXT`値、 **pszText**メンバーは、項目のテキストを受け取るバッファーのアドレスを含める必要があります、 **cchTextMax**メンバーは、バッファーのサイズを指定する必要があります。  
+### <a name="remarks"></a>Remarks  
+ メッセージが送信されるときに、`mask`メンバーを返す属性を指定します。 場合、`mask`メンバー TCIF_TEXT 値を指定する、`pszText`メンバーは、項目のテキストを受け取るバッファーのアドレスを含める必要があります、`cchTextMax`メンバーは、バッファーのサイズを指定する必要があります。  
   
- **マスク**  
+ `mask`  
  これを指定する値`TCITEM`構造体メンバーを取得または設定します。 このメンバーは、0、または、次の値の組み合わせを指定できます。  
   
-- `TCIF_TEXT` **PszText**メンバーは無効です。  
+- TCIF_TEXT、`pszText`メンバーは無効です。  
   
-- `TCIF_IMAGE` `iImage`メンバーは無効です。  
+- TCIF_IMAGE、`iImage`メンバーは無効です。  
   
-- `TCIF_PARAM` **LParam**メンバーは無効です。  
+- TCIF_PARAM、`lParam`メンバーは無効です。  
   
-- `TCIF_RTLREADING` テキスト**pszText**ヘブライ語やアラビア語のシステムで右から左への読み取り順序を使用して表示されます。  
+- TCIF_RTLREADING テキストの`pszText`ヘブライ語やアラビア語のシステムで右から左への読み取り順序を使用して表示されます。  
   
-- `TCIF_STATE` **DwState**メンバーは無効です。  
+- TCIF_STATE、`dwState`メンバーは無効です。  
   
- **pszText**  
+ `pszText`  
  構造体には、タブについての情報が含まれている場合、タブのテキストを含む null で終わる文字列へのポインター。構造体の情報を受信は、このメンバーは、タブのテキストを受け取るバッファーのアドレスを指定します。  
   
- **cchTextMax**  
- バッファーのサイズを指す**pszText**です。 このメンバーには、構造体は、情報を受信していない場合は無視されます。  
+ `cchTextMax`  
+ バッファーのサイズを指す`pszText`です。 このメンバーには、構造体は、情報を受信していない場合は無視されます。  
   
  `iImage`  
  タブの画像がない場合は、タブ コントロールのイメージ リスト、または 1 をインデックスです。  
   
- **lParam**  
- タブに関連付けられているアプリケーション定義のデータ。4 バイトを超えるタブごとのアプリケーション定義のデータがある場合は、アプリケーションする必要があります構造体を定義しの代わりに使用、`TCITEM`構造体。 アプリケーション定義の構造体の最初のメンバーである必要があります、[アプリケーション定義](http://msdn.microsoft.com/library/windows/desktop/bb760556)構造体。 **アプリケーション定義**構造体と同じ、`TCITEM`構造体がない、 **lParam**メンバー。 構造のサイズとのサイズの違い、**アプリケーション定義**構造体は、タブごとの追加のバイトの数を一致する必要があります。  
+ lParam  
+ タブに関連付けられているアプリケーション定義のデータ。4 バイトを超えるタブごとのアプリケーション定義のデータがある場合は、アプリケーションする必要があります構造体を定義しの代わりに使用、`TCITEM`構造体。 アプリケーション定義の構造体の最初のメンバーである必要があります、[アプリケーション定義](http://msdn.microsoft.com/library/windows/desktop/bb760556)構造体。 `TCITEMHEADER`構造体と同じ、`TCITEM`構造体がない、`lParam`メンバー。 構造のサイズとのサイズの違い、`TCITEMHEADER`構造体は、タブごとの追加のバイトの数を一致する必要があります。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
@@ -439,10 +440,10 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  タブ項目の 0 から始まるインデックス。  
   
- `lpRect`  
+ *lpRect*  
  ポインター、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)  タブの外接する四角形を受け取る。これらの座標は、ビューポートの現在のマップ モードを使用します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -452,7 +453,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
   例を参照して[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)です。  
   
 ##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
- によって識別されるタブ コントロール項目の状態を取得`nItem`です。  
+ によって識別されるタブ コントロール項目の状態を取得*nItem*です。  
   
 ```  
 DWORD GetItemState(
@@ -461,22 +462,22 @@ DWORD GetItemState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  状態情報を取得する対象の項目の 0 から始まるインデックス番号します。  
   
- `dwMask`  
+ *dwMask*  
  返されるアイテムの状態のうちフラグを指定するマスクです。 値の一覧は、のマスク メンバーを参照してください、 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) Windows SDK」の説明に従って、構造体します。  
   
 ### <a name="return-value"></a>戻り値  
- 参照、`DWORD`値の状態情報を受信します。 次のいずれかの値になります。  
+ 状態情報を受け取る DWORD 値への参照。 次のいずれかの値になります。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|タブ コントロール項目が選択されます。|  
-|**TCIS_HIGHLIGHTED**|タブ コントロール項目が強調表示されているし、タブとテキストは現在強調表示色を使用して描画します。 強調表示色を使用する場合は true。 補間、ディザリングされた色ではないになります。|  
+|TCIS_BUTTONPRESSED|タブ コントロール項目が選択されます。|  
+|TCIS_HIGHLIGHTED|タブ コントロール項目が強調表示されているし、タブとテキストは現在強調表示色を使用して描画します。 強調表示色を使用する場合は true。 補間、ディザリングされた色ではないになります。|  
   
-### <a name="remarks"></a>コメント  
- 項目の状態がで指定された、 **dwState**のメンバー、`TCITEM`構造体。  
+### <a name="remarks"></a>Remarks  
+ 項目の状態がで指定された、`dwState`のメンバー、`TCITEM`構造体。  
   
 ##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
  タブ コントロール内の行の現在の数を取得します。  
@@ -488,8 +489,8 @@ int GetRowCount() const;
 ### <a name="return-value"></a>戻り値  
  タブ コントロールのタブの行の数。  
   
-### <a name="remarks"></a>コメント  
- のみを持つコントロール タブ、 **TCS_MULTILINE**スタイルは、複数行のタブを持つことができます。  
+### <a name="remarks"></a>Remarks  
+ TCS_MULTILINE スタイルを持つタブ コントロールのみでは、複数行のタブを持つことができます。  
   
 ##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
  タブ コントロールに関連付けられているツール ヒント コントロールのハンドルを取得します。  
@@ -499,10 +500,10 @@ CToolTipCtrl* GetToolTips() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、ツール ヒント コントロールのハンドルそれ以外の場合**NULL**です。  
+ 成功した場合、ツール ヒント コントロールのハンドルそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
- ある場合、タブ コントロールは、ツール ヒント コントロールを作成、 **TCS_TOOLTIPS**スタイル。 使用して、タブ コントロールに、ツール ヒント コントロールを割り当てることができますも、`SetToolTips`メンバー関数。  
+### <a name="remarks"></a>Remarks  
+ タブ コントロールは、TCS_TOOLTIPS スタイルがある場合に、ツール ヒント コントロールを作成します。 使用して、タブ コントロールに、ツール ヒント コントロールを割り当てることができますも、`SetToolTips`メンバー関数。  
   
 ##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
  タブ項目の強調表示状態を設定します。  
@@ -512,16 +513,16 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `idItem`  
+ *idItem*  
  タブ コントロール項目の 0 から始まるインデックス。  
   
- `fHighlight`  
- 設定する、強調表示状態を指定する値。 この値が場合**TRUE**、タブが強調表示されます。 場合**FALSE**、タブが既定の状態に設定されています。  
+ *fHighlight*  
+ 設定する、強調表示状態を指定する値。 この値が TRUE の場合、タブが強調表示されます。FALSE の場合、タブは既定の状態に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージを実装して[TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602)Windows SDK で説明されている。  
   
 ##  <a name="hittest"></a>  CTabCtrl::HitTest  
@@ -532,7 +533,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pHitTestInfo`  
+ *pHitTestInfo*  
  ポインター、 [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553)をテストする画面上の位置を指定する Windows SDK」の説明に従って、構造体します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -577,35 +578,35 @@ LONG InsertItem(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  新しいタブの 0 から始まるインデックス。  
   
- `pTabCtrlItem`  
+ *pTabCtrlItem*  
  ポインター、 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)構造 タブの属性を指定します。  
   
- `lpszItem`  
+ *lpszItem*  
  タブのテキストを表す null で終わる文字列のアドレスです。  
   
- `nImage`  
+ *あり*  
  イメージ リストから挿入するイメージの 0 から始まるインデックス。  
   
- `nMask`  
+ *いる*  
  指定する`TCITEM`を設定する属性を構成します。 0 または次の値の組み合わせを指定できます。  
   
-- `TCIF_TEXT` **PszText**メンバーは無効です。  
+- TCIF_TEXT、`pszText`メンバーは無効です。  
   
-- `TCIF_IMAGE` `iImage`メンバーは無効です。  
+- TCIF_IMAGE、`iImage`メンバーは無効です。  
   
-- `TCIF_PARAM` **LParam**メンバーは無効です。  
+- TCIF_PARAM、 *lParam*メンバーは無効です。  
   
-- `TCIF_RTLREADING` テキスト**pszText**ヘブライ語やアラビア語のシステムで右から左への読み取り順序を使用して表示されます。  
+- TCIF_RTLREADING テキストの`pszText`ヘブライ語やアラビア語のシステムで右から左への読み取り順序を使用して表示されます。  
   
-- `TCIF_STATE` **DwState**メンバーは無効です。  
+- TCIF_STATE、 *dwState*メンバーは無効です。  
   
- `lParam`  
+ *lParam*  
  タブに関連付けられているアプリケーション定義のデータ。  
   
- `dwState`  
+ *dwState*  
  項目の状態の値を指定します。 詳細については、次を参照してください。 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) Windows SDK に含まれています。  
   
  *dwStateMask*  
@@ -625,10 +626,10 @@ void RemoveImage(int nImage);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImage`  
+ *あり*  
  削除するイメージの 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  タブ コントロールは、各タブは、同じイメージに関連付けできるように、各タブのイメージのインデックスを更新します。  
   
 ##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
@@ -639,10 +640,10 @@ void SetCurFocus(int nItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  フォーカスをタブのインデックスを指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610)Windows SDK で説明されている。  
   
 ##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
@@ -653,14 +654,14 @@ int SetCurSel(int nItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  選択する項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、以前に選択したタブの 0 から始まるインデックスそれ以外の場合 - 1。  
   
-### <a name="remarks"></a>コメント  
- タブ コントロールを送信しません、**は、**または**TCN_SELCHANGE**この関数を使用して、タブを選択すると、通知メッセージです。 使用して、これらの通知が送信**WM_NOTIFY**ユーザーがクリックするか、キーボードを使用して、タブを変更するときに、します。  
+### <a name="remarks"></a>Remarks  
+ タブ コントロールでは、この関数を使用して、タブを選択した場合は、または TCN_SELCHANGE 通知メッセージを送信しません。 WM_NOTIFY を使用して、ユーザーがクリックするか、キーボードを使用して、タブを変更するときにこれらの通知が送信されます。  
   
 ##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
  タブ コントロールの拡張スタイルを設定します。  
@@ -670,14 +671,14 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwNewStyle`  
+ *dwNewStyle*  
  タブの組み合わせを指定する値は、拡張スタイルを制御します。  
   
- `dwExMask`  
- A`DWORD`のスタイルを示す値`dwNewStyle`影響を受けるには、します。 拡張スタイルのみ`dwExMask`変更されます。 他のすべてのスタイルが保持されます。 このパラメーターが 0、すべてのスタイルの場合`dwNewStyle`を受けます。  
+ *dwExMask*  
+ スタイルを示す DWORD 値*dwNewStyle*影響を受けるには、します。 拡張スタイルのみ*dwExMask*変更されます。 他のすべてのスタイルが保持されます。 このパラメーターが 0、すべてのスタイルの場合*dwNewStyle*を受けます。  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`値を含む、以前[ タブのコントロールの拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760546)Windows SDK で説明されている。  
+ DWORD 値を含む、以前[ タブのコントロールの拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760546)Windows SDK で説明されている。  
   
 ### <a name="return-value"></a>戻り値  
  このメンバー関数は、Win32 メッセージの動作を実装して[TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627)Windows SDK で説明されている。  
@@ -690,11 +691,11 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pImageList`  
+ *pImageList*  
  タブ コントロールに割り当てられるイメージ リストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 前のイメージ リストへのポインターを返しますまたは**NULL**直前のイメージ リストがない場合。  
+ 直前のイメージ リストが存在しない場合、直前のイメージ リストまたは NULL へのポインターを返します。  
   
 ##  <a name="setitem"></a>  CTabCtrl::SetItem  
  一部またはすべてのタブの属性を設定します。  
@@ -704,11 +705,11 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  項目の 0 から始まるインデックス。  
   
- `pTabCtrlItem`  
- ポインター、 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)新しいアイテムの属性を格納する構造体。 **マスク**メンバーを設定する属性を指定します。 場合、**マスク**メンバーを指定します、`TCIF_TEXT`値、 **pszText**メンバーは、null で終わる文字列のアドレスと**cchTextMax**メンバーは無視されます。  
+ *pTabCtrlItem*  
+ ポインター、 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)新しいアイテムの属性を格納する構造体。 `mask`メンバーを設定する属性を指定します。 場合、`mask`メンバー TCIF_TEXT 値を指定する、`pszText`メンバーは、null で終わる文字列のアドレスと`cchTextMax`メンバーは無視されます。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -724,13 +725,13 @@ BOOL SetItemExtra(int nBytes);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBytes`  
+ *nBytes*  
  設定する追加のバイト数。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633)Windows SDK で説明されている。  
   
 ##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
@@ -741,14 +742,14 @@ CSize SetItemSize(CSize size);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  タブ コントロール項目の新しい幅と高さ (ピクセル単位)。  
   
 ### <a name="return-value"></a>戻り値  
  タブ コントロール項目の古い幅と高さを返します。  
   
 ##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
- によって識別されるタブ コントロール項目の状態を設定`nItem`です。  
+ によって識別されるタブ コントロール項目の状態を設定*nItem*です。  
   
 ```  
 BOOL SetItemState(
@@ -758,19 +759,19 @@ BOOL SetItemState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nItem`  
+ *nItem*  
  状態情報を設定する対象の項目の 0 から始まるインデックス番号します。  
   
- `dwMask`  
+ *dwMask*  
  アイテムの状態のうちフラグ設定を指定するマスクです。 値の一覧は、のマスク メンバーを参照してください、 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) Windows SDK」の説明に従って、構造体します。  
   
- `dwState`  
- 参照、`DWORD`状態情報を含む値です。 次のいずれかの値になります。  
+ *dwState*  
+ 状態情報を含む DWORD 値への参照。 次のいずれかの値になります。  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|タブ コントロール項目が選択されます。|  
-|**TCIS_HIGHLIGHTED**|タブ コントロール項目が強調表示されているし、タブとテキストは現在強調表示色を使用して描画します。 強調表示色を使用する場合は true。 補間、ディザリングされた色ではないになります。|  
+|TCIS_BUTTONPRESSED|タブ コントロール項目が選択されます。|  
+|TCIS_HIGHLIGHTED|タブ コントロール項目が強調表示されているし、タブとテキストは現在強調表示色を使用して描画します。 強調表示色を使用する場合は true。 補間、ディザリングされた色ではないになります。|  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -783,7 +784,7 @@ int SetMinTabWidth(int cx);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cx`  
+ *cx*  
  タブ コントロール項目用に設定する最小の幅。 このパラメーターが-1 に設定されている場合、コントロールは既定のタブ幅を使用します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -800,7 +801,7 @@ void SetPadding(CSize size);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  各タブのアイコンとタブ コントロールのラベルの周りには、(埋め込み) 領域の量を設定します。  
   
 ##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
@@ -811,10 +812,10 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWndTip`  
+ *pWndTip*  
  ツール ヒント コントロールのハンドルです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出すことによって、タブ コントロールに関連付けられているツール ヒント コントロールを取得する`GetToolTips`です。  
   
 ### <a name="example"></a>例  

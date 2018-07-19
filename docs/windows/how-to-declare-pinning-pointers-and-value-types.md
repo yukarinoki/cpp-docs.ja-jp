@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880385"
 ---
 # <a name="how-to-declare-pinning-pointers-and-value-types"></a>方法 : 固定ポインターと値型を宣言する
 値の型を暗黙的にボックス化することができます。 使用して値型のオブジェクトへの固定ポインターを宣言できます、 **pin_ptr**ボックス化された値の型にします。  

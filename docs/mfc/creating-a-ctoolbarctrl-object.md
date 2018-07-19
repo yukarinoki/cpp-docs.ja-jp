@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341695"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>CToolBarCtrl オブジェクトの作成
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクトはいくつかの内部データ構造体を含む — ボタン イメージのビットマップの一覧、ボタンのラベルの文字列のリストの一覧`TBBUTTON`構造体 — するイメージを関連付けるや文字列の位置、スタイル、状態、およびボタンのコマンド ID。 これらのデータ構造体の要素のそれぞれは、0 から始まるインデックスによって呼ばれます。 使用する前に、`CToolBarCtrl`オブジェクト、これらのデータ構造を設定する必要があります。 データ構造の一覧は、次を参照してください。[ツール バー コントロール](controls-mfc.md)Windows SDK に含まれています。 文字列の一覧は、ボタンのラベルに対してのみ使用できます。ツールバーから文字列を取得することはできません。  

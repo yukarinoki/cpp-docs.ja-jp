@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705567"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322395"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラの警告
 
@@ -89,7 +89,7 @@ ms.locfileid: "34705567"
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) (レベル 1)|'*operator1*': コンマの前に、の演算子も何も起こりませんするつもりでした'*operator2*' しますか?。|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) (レベル 1)|式の影響はありません; 式の副作用が必要です。|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (レベル 3)|'_ _assume' には、影響が含んでいます '*効果*'。|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (レベル 4)|Visual C 7.1; から変更情報: catch (...) セマンティクス構造化例外 (SEH) はキャッチされません。|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (レベル 4)|情報: catch (...) のセマンティクスが Visual C 7.1; から変更されました構造化例外 (SEH) はキャッチされません。|
 |C4574 (レベル 4)|'*識別子*'として定義されている' 0': を使用する意味する '#if*識別子*' しますか?|
 |C4577 (レベル 1)|' noexcept' がない例外です。 指定されたモードを処理で使用例外で終了処理は保証されません。 /EHsc を指定してください。|
 |C4582 (レベル 4)|'*型*': コンス トラクターは暗黙的に呼び出されません|
@@ -153,12 +153,14 @@ ms.locfileid: "34705567"
 |[C5038](../error-messages/compiler-warnings/c5038.md) (レベル 4)|データ メンバー '*member1*'データ メンバーの後に初期化されます'*member2*' <sup>15.3</sup>|
 |C5039 (レベル 4)|'*関数*': - EHc に基づいて、extern C 関数に渡される可能性のある関数のスローに対するポインターまたは参照します。 未定義の動作は、この関数が例外をスローした場合に発生する可能性があります。 <sup>15.5</sup>|
 |C5042 (レベル 3)|'*関数*': ブロック スコープでの関数宣言は、C++ の標準で指定された 'inline' をすることはできません 'inline' 指定子を削除<sup>15.5。</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre スイッチが指定されている場合、コンパイラはメモリの負荷の軽減策を Spectre を挿入する<sup>15.7</sup>|
 
-<sup>14.1</sup>この警告は Visual Studio 2015 Update 1 以降使用できます。<br>
-<sup>14.3</sup>この警告は Visual Studio 2015 Update 3 以降使用できます。<br>
-<sup>15.3</sup>この警告は、Visual Studio 2017 15.3 のバージョンので利用可能です。<br>
-<sup>15.5</sup>この警告は、Visual Studio 2017 15.5 のバージョンので利用可能です。<br>
-<sup>Perm</sup>この警告はオフになっていない限り、[寛容/-](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。
+<sup>14.1</sup>この警告は Visual Studio 2015 Update 1 以降使用できます。  
+<sup>14.3</sup>この警告は Visual Studio 2015 Update 3 以降使用できます。  
+<sup>15.3</sup>この警告は、Visual Studio 2017 15.3 のバージョンので利用可能です。  
+<sup>15.5</sup>この警告は、Visual Studio 2017 15.5 のバージョンので利用可能です。  
+<sup>15.7</sup>この警告は、Visual Studio 2017 15.7 のバージョンので利用可能です。  
+<sup>Perm</sup>この警告はオフになっていない限り、[寛容/-](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンで既定でオフの警告
 

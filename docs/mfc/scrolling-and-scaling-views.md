@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379269"
 ---
 # <a name="scrolling-and-scaling-views"></a>ビューのスクロールと拡大/縮小
 MFC には、それらを表示するフレーム ウィンドウのサイズが自動的に拡大縮小されるまでスクロールし、表示するビューがサポートしています。 クラス`CScrollView`ビューの両方の種類をサポートしています。  

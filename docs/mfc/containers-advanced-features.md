@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932173"
 ---
 # <a name="containers-advanced-features"></a>コンテナー : 高度な機能
 この記事では、既存のコンテナー アプリケーションに省略可能な高度な機能を組み込む必要な手順について説明します。 これらの機能は次のとおりです。  
@@ -69,13 +70,13 @@ ms.lasthandoff: 05/04/2018
   
     -   接続、`COleTemplateServer`オブジェクトを呼び出して、オブジェクトのドキュメント テンプレートを`ConnectTemplate`メンバー関数。  
   
-    -   呼び出す、 **COleTemplateServer::RegisterAll** OLE システム クラスのすべてのオブジェクトに登録します。  
+    -   呼び出す、 `COleTemplateServer::RegisterAll` OLE システム クラスのすべてのオブジェクトに登録します。  
   
-    -   `COleTemplateServer::UpdateRegistry` を呼び出す。 唯一のパラメーターを`UpdateRegistry`する必要があります`OAT_CONTAINER`「/埋め込み」スイッチを使用してアプリケーションを起動していない場合。 これは、埋め込みオブジェクトへのリンクをサポートできるコンテナーとして、アプリケーションを登録します。  
+    -   `COleTemplateServer::UpdateRegistry` を呼び出す。 唯一のパラメーターを`UpdateRegistry`する必要があります*OAT_CONTAINER* 「/埋め込み」スイッチを使用してアプリケーションを起動していない場合。 これは、埋め込みオブジェクトへのリンクをサポートできるコンテナーとして、アプリケーションを登録します。  
   
          「/埋め込み」スイッチを使用して、アプリケーションを起動する場合は、サーバー アプリケーションに似ていますのメイン ウィンドウは表示する必要があります。  
   
- MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、 `InitInstance` 、OCLIENT 内の関数。このサンプル アプリケーションの CPP ファイルです。  
+ MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、`InitInstance`で機能、 *OCLIENT です。CPP*このサンプル アプリケーションのファイルです。  
   
 ## <a name="see-also"></a>関連項目  
  [コンテナー](../mfc/containers.md)   

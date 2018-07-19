@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882707"
 ---
 # <a name="property--c-component-extensions"></a>プロパティ (C++ コンポーネント拡張)
 宣言、*プロパティ*が動作し、データ メンバーや配列要素のようにアクセスできるメンバー関数。  

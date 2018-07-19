@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873512"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>ガイドとマージンの作成と設定
 コントロールを移動する、追加、または現在のレイアウトを再配置ガイドを使用するかどうかは、ダイアログ ボックス内に正確にコントロールを揃えます。 ガイドは、ルーラー (上部にあると、ダイアログ エディターの左側にある) に対応する矢印、エディターで表示されるダイアログ ボックスでは、青色の点線として表示されます。  

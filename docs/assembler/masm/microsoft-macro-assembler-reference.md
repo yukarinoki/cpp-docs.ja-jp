@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052828"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler リファレンス
 Microsoft マクロ アセンブラー (MASM) は、インライン アセンブリにいくつかの利点を提供します。 MASM には、ループ、算術演算子、およびテキスト文字列の処理などの機能を含む言語マクロにはが含まれています。 MASM も制御できます大きいハードウェア、386、および Pentium プロセッサの命令セットをサポートしているためです。 MASM を使用するもに時間とメモリのオーバーヘッドを軽減できます。  

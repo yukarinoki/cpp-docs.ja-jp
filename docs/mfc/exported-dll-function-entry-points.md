@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928626"
 ---
 # <a name="exported-dll-function-entry-points"></a>DLL のエクスポート関数のエントリ ポイント
 DLL のエクスポート関数を使用して、 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL モジュールから呼び出し元のアプリケーションの DLL に切り替える際に、適切なグローバル状態を維持するためにマクロです。  
   
  呼び出されると、このマクロは、設定`pModuleState`へのポインター、`AFX_MODULE_STATE`関数のスコープの残りの有効なモジュールの状態と、モジュール用グローバル データを含む構造体。 マクロを含むスコープから離れると、以前の有効なモジュールの状態が自動的に復元します。  
   
- インスタンスを構築することによってこの切り替えを行う、 **AFX_MODULE_STATE**スタック上のクラスです。 コンス トラクターにこのクラス現在のモジュール状態へのポインターを取得し、メンバー変数に格納し、設定`pModuleState`新しい有効なモジュールの状態とします。 デストラクターの中では、このクラスは、有効なモジュールの状態とそのメンバー変数に格納されているポインターを復元します。  
+ インスタンスを構築することによってこの切り替えを行う、`AFX_MODULE_STATE`スタック上のクラスです。 コンス トラクターにこのクラス現在のモジュール状態へのポインターを取得し、メンバー変数に格納し、設定`pModuleState`新しい有効なモジュールの状態とします。 デストラクターの中では、このクラスは、有効なモジュールの状態とそのメンバー変数に格納されているポインターを復元します。  
   
  いずれかの DLL のダイアログ ボックスを起動するなど、エクスポートされた関数がある場合は、関数の先頭に次のコードを追加する必要があります。  
   

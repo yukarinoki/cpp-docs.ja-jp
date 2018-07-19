@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135028"
 ---
 # <a name="locklock"></a>lock::lock
 構築、`lock`オブジェクト、必要に応じて、指定された時間、またはまったく恒久的に、ロックの取得を待機しています。  

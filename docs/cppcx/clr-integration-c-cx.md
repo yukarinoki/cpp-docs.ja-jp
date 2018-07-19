@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086897"
 ---
 # <a name="clr-integration-ccx"></a>CLR 統合 (C++/CX)
 一部の Windows ランタイム型では、特別な処理を受信 C + + CX と共通言語ランタイム (CLR) に基づく言語です。 この記事では、1 つの言語のいくつかの型から別の言語へのマップの仕組みについて説明します。 たとえば、CLR は Windows.Foundation.IVector を System.Collections.IList へ、Windows.Foundation.IMap を System.Collections.IDictionary へ、というようにマップします。 同様に、C + + CX が platform::delegate や platform::string などの型を特別にマップします。  

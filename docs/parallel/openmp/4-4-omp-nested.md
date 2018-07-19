@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690271"
 ---
 # <a name="44-ompnested"></a>4.4 OMP_NESTED
 `OMP_NESTED`環境変数を有効または入れ子になった並列処理が有効になっている、または呼び出すことによって無効になっている場合を除き、入れ子になった並列処理を無効になります、 `o` **mp_set_nested**ライブラリ ルーチンです。 場合に設定**TRUE**、入れ子になった並列処理が有効である場合に設定されている**FALSE**、入れ子になった並列処理が無効になっています。 既定値は**FALSE**です。  

@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039782"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey クラス
 仮想キーのマッピングおよび書式設定を実装するヘルパー クラスです。  
@@ -52,7 +53,7 @@ class CMFCAcceleratorKey : public CObject
 |[CMFCAcceleratorKey::Format](#format)|ACCEL 構造体のビジュアル表現に変換します。|  
 |[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|ショートカット キーを設定、`CMFCAcceleratorKey`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アクセラレータ キーは、ショートカット キーとも呼ばれます。 ユーザー入力すると、キーボード ショートカットを表示する場合、 [CMFCAcceleratorKeyAssignCtrl クラス](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)マップのショートカット キー、Alt + Shift + S など"Alt + Shift + S"などのカスタム テキスト形式にします。 各`CMFCAcceleratorKey`オブジェクトは、テキスト形式を 1 つのショートカット キーをマップします。  
   
  ショートカット キーとアクセラレータ テーブルを使用する方法の詳細については、次を参照してください。 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)です。  
@@ -67,7 +68,7 @@ class CMFCAcceleratorKey : public CObject
   
  `CMFCAcceleratorKey`   
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxacceleratorkey.h  
   
 ##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
@@ -79,10 +80,10 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpAccel`  
+ [in]*lpAccel*  
  ショートカット キーへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  作成するときは、ショートカット キーを指定しないかどうか、`CMFCAccleratorKey`を使用して、 [CMFCAcceleratorKey::SetAccelerator](#setaccelerator)メソッドのショートカット キーを関連付けるには、`CMFCAcceleratorKey`オブジェクト。  
   
 ##  <a name="format"></a>  CMFCAcceleratorKey::Format  
@@ -93,10 +94,10 @@ void Format(CString& str) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [出力] `str`  
+ [out]*str*  
  参照、`CString`メソッドが変換されたショートカット キーを書き込むオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、関連付けられているショートカット キーの文字列形式を取得します。 文字列形式を設定することができます、 [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)オブジェクト コンス トラクターまたはメソッドのいずれかを使用して[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)です。  
   
 ##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
@@ -107,10 +108,10 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpAccel`  
+ [in]*lpAccel*  
  ショートカット キーへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドのショートカット キーの設定を使用して、`CMFCAcceleratorKey`作成したときに、ショートカット キーを指定しなかったかどうか、`CMFCAcceleratorKey`です。  
   
 ## <a name="see-also"></a>関連項目  

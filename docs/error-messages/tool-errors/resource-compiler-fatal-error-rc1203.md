@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321507"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>リソース コンパイラの致命的なエラー RC1203
 指定された無効な 16 進数の既定言語の ID。  

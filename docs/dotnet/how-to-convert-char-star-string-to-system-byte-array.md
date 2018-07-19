@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129490"
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>方法: char * 文字列を System::Byte 配列に変換する
 `char *` 文字列を <xref:System.Byte> 配列に変換する最も効率的な方法は、<xref:System.Runtime.InteropServices.Marshal> クラスを使用することです。  

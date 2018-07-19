@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388845"
 ---
 # <a name="outp-outpw"></a>outp、outpw
 これらの POSIX 関数は非推奨とされました。 代わりに、ISO C++ に準拠する [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md) を使用します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172110"
 ---
 # <a name="compiler-error-c2208"></a>コンパイラ エラー C2208
 'type': この型を使用して定義されているメンバーはありません  

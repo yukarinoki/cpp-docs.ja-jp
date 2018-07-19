@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391195"
 ---
 # <a name="source-files-and-source-programs"></a>ソース ファイルとソース プログラム
 ソース プログラムは、1 つ以上の "ソース ファイル" または "翻訳単位" に分割できます。 コンパイラへの入力は "翻訳単位" と呼ばれます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128515"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>方法 : 空の CLR プロジェクトを作成する
 CLR 空のプロジェクトを作成するには、使用、 **CLR 空プロジェクト**から利用できますが、テンプレート、**新しいプロジェクト** ダイアログ ボックス。  

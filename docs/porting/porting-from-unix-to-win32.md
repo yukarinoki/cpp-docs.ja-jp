@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843289"
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX から Win32 への移植
 アプリケーションを UNIX から Windows に移行するときにいくつかのオプションがあります。  

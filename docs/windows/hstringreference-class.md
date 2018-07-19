@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879556"
 ---
 # <a name="hstringreference-class"></a>HStringReference クラス
 既存の文字列から作成された HSTRING を表します。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875098"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>特定のシンボル用のリソース エディターを開く
 内のシンボルを参照しているときに、[リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)、特定のシンボルの使用方法の詳細についてをする可能性があります。 **ビューを使用して**ボタンは、この情報を取得する簡単な方法を提供します。  

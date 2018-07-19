@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370833"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>[生成されたクラス] (MFC アプリケーション ウィザード)
 このトピックでは、基本クラスと、プロジェクトで生成されるファイルの名前が一覧表示します。 既定では、名前は、プロジェクト名に基づいてで指定した、**新しいプロジェクト ダイアログ ボックス**です。 前述のように、これらの名前のほとんどを変更できます。  

@@ -1,5 +1,5 @@
 ---
-title: 可変個引数リスト (C++) を持つ関数 |Microsoft ドキュメント
+title: 関数の可変個引数リスト (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66ee17f8aa82e46011a78e34baa79b3dea3cdb1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943178"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>リストに可変個引数関数 (C++)
-最後のメンバーが省略記号 (...) である関数宣言は、可変数の引数を受け取ることができます。 このような場合、C++ は、明示的に宣言された引数に対してのみ型チェックを行います。 引数の数や型も変わるほどの汎用関数を作成する必要がある場合は、可変個引数リストを使用できます。 ファミリの関数は、可変個引数リストを使用する関数の例です。`printf`*引数宣言リスト*  
+# <a name="functions-with-variable-argument-lists--c"></a>可変個引数関数のリスト (C++)
+最後のメンバーが省略記号 (...) である関数宣言は、可変数の引数を受け取ることができます。 このような場合、C++ は、明示的に宣言された引数に対してのみ型チェックを行います。 引数の数や型も変わるほどの汎用関数を作成する必要がある場合は、可変個引数リストを使用できます。 ファミリの関数は、可変個引数リストを使用する関数の例を示します。`printf`*引数宣言リスト*  
   
 ## <a name="functions-with-variable-arguments"></a>可変個の引数を取る関数  
  宣言した後の引数にアクセスするには、標準インクルード ファイルに含まれているマクロを使用して\<stdarg.h > 以下のとおりです。  
@@ -39,13 +40,13 @@ ms.lasthandoff: 05/03/2018
   
  可変個の引数を受け取る関数の宣言には、使用しない場合でも、少なくとも 1 つのプレースホルダー引数が必要です。 このプレースホルダー引数が指定されていない場合、残りの引数にアクセスする方法はありません。  
   
- `char` 型の引数が可変個の引数として渡される場合は、`int` 型に変換されます。 同様に、型の引数**float**渡される型に可変個の引数として変換されます**二重**です。 他の型の引数は、通常の整数および浮動小数点の上位変換を受ける可能性があります。 参照してください[標準変換](standard-conversions.md)詳細についてはします。  
+ ときに型の引数**char**渡される型に変換されますが、可変個の引数として**int**します。同様に、型の引数**float**渡される型に変換されますが、可変個の引数として**二重**します。 他の型の引数は、通常の整数および浮動小数点の上位変換を受ける可能性があります。 参照してください[標準変換](standard-conversions.md)詳細についてはします。  
   
- 変数リストを必要とする関数は、引数リストで省略記号 (...) を使用して宣言されます。 型およびに記載されているマクロを使用して、 \<stdarg.h > 変数リストによって渡される引数にアクセスするファイルをインクルードします。 これらのマクロの詳細については、次を参照してください。 [va_arg、va_copy、va_end、va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)です。 これは、C ランタイム ライブラリのドキュメントにあります。  
+ 変数リストを必要とする関数は、引数リストで省略記号 (...) を使用して宣言されます。 型と記載されているマクロを使用して、 \<stdarg.h > 変数リストによって渡される引数にアクセスするファイルが含まれます。 これらのマクロの詳細については、次を参照してください。 [va_arg、va_copy、va_end、va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)します。 これは、C ランタイム ライブラリのドキュメントにあります。  
   
  次の例は、マクロが型を併用する方法を示します (で宣言されている\<stdarg.h >)。 
   
-```  
+```cpp 
 // variable_argument_lists.cpp  
 #include <stdio.h>  
 #include <stdarg.h>  

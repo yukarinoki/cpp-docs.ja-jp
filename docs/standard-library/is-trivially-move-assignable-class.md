@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1248c8efd06069863a9f78a94378fe7aed651011
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ae0db2b789e16a39396a329a64dfb8794eef5775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961910"
 ---
 # <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable クラス
 
@@ -35,25 +36,25 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` が自明なムーブ代入演算子を持つクラスの場合、型述語のインスタンスは true を保持します。それ以外の場合は false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*は自明なムーブ代入演算子を持つ、それ以外の場合は false を保持するクラスです。
 
-次の条件が満たされる場合、クラス `Ty` のムーブ代入演算子は自明です。
+クラスの移動代入演算子*Ty*は簡単では場合。
 
 暗黙的に指定されている
 
-クラス `Ty` に仮想関数がない
+クラスは、 *Ty*仮想関数がありません
 
-クラス `Ty` に仮想基底がない
+クラスは、 *Ty*仮想基底クラスがありません
 
 クラス型のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
 
 クラスの型配列のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

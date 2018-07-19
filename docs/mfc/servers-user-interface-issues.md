@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379672"
 ---
 # <a name="servers-user-interface-issues"></a>サーバー : サーバーとユーザー インターフェイス
 サーバー アプリケーションでは、多数の機能をコンテナー アプリケーション OLE アイテムへのユーザー インターフェイスに追加する必要があります。 メニューとサーバー アプリケーションに追加する必要があるその他のリソースについては、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)です。  

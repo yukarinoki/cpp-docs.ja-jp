@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351690"
 ---
 # <a name="dialog-box-classes"></a>ダイアログ ボックス クラス
 クラス`CDialog`し、その派生クラスがダイアログ ボックスの機能をカプセル化します。 ダイアログ ボックスはウィンドウの特殊なので`CDialog`から派生した`CWnd`です。 ダイアログ クラスを派生`CDialog`またはいずれかの標準のダイアログ ボックスで、開くファイルを保存したり、印刷、フォントや色を選択するなどのコモン ダイアログ クラスの検索と置換操作を開始するを実行するさまざまな OLE に関連します。操作です。  

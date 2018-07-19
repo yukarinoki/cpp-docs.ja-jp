@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695773"
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>方法: combinable を使用して集合を結合する
 このトピックの内容を使用する方法を示しています、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスに含まれる素数の集合を計算します。  

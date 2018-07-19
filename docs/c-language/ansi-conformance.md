@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380590"
 ---
 # <a name="ansi-conformance"></a>ANSI 規格適合性
 Microsoft C は、ANSI C 規格の 9899:1990 エディションで定められている C 言語の規格に準拠します。  

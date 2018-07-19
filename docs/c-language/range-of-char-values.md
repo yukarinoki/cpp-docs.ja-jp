@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383866"
 ---
 # <a name="range-of-char-values"></a>Range of char Values (char 値の範囲)
 **ANSI 3.2.1.1** "プレーン" の **char** が、**signed char** または `unsigned char` と同じ値の範囲を持つかどうか  

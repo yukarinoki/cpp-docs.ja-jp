@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347008"
 ---
 # <a name="making-and-using-controls"></a>コントロールの作成方法と使い方
 Visual C でダイアログ ボックスのほとんどのコントロールを作成する[ダイアログ エディター](../windows/dialog-editor.md)です。 任意のダイアログ ボックスまたはウィンドウでコントロールを作成することもできます。  

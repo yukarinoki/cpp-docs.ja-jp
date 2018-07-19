@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106207"
 ---
 # <a name="debug-class-ccli"></a>Debug クラス (C++/CLI)
 使用する場合<xref:System.Diagnostics.Debug>Visual C のアプリケーションで、動作が、デバッグとリリース ビルドの間で変更されません。  

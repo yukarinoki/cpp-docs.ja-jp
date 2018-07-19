@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870820"
 ---
 # <a name="consuming-generics-ccli"></a>ジェネリックの使用 (C++/CLI)
 1 つの .NET 言語で作成されたジェネリックは、他の .NET 言語で使用することがあります。 テンプレートとは異なり、コンパイルされたアセンブリ内のジェネリック残ってジェネリックです。 したがって、別のアセンブリでは、ジェネリック型が定義されているアセンブリとは異なる言語であっても、ジェネリック型をインスタンス化いずれかの可能性があります。  

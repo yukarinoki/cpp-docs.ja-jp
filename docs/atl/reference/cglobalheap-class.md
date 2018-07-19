@@ -1,5 +1,5 @@
 ---
-title: CGlobalHeap クラス |Microsoft ドキュメント
+title: CGlobalHeap クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bef811807c90507184690d1a29d4debd00cc6fda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f3113cf4176c3f582a210e89e732d5e0d92b62d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882833"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap クラス
 このクラスは実装[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)グローバル ヒープの Win32 関数を使用します。  
@@ -50,21 +51,21 @@ class CGlobalHeap : public IAtlMemMgr
 |[CGlobalHeap::GetSize](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。|  
 |[Cglobalheap::reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|  
   
-## <a name="remarks"></a>コメント  
- `CGlobalHeap` グローバル ヒープの Win32 関数を使用してメモリ割り当て関数を実装します。  
+## <a name="remarks"></a>Remarks  
+ `CGlobalHeap` グローバルのヒープの Win32 関数を使用して、メモリ割り当て関数を実装します。  
   
 > [!NOTE]
->  グローバル ヒープ関数は、他のメモリ管理機能よりも低速おりに多くの機能は提供されません。 したがって、新しいアプリケーションを使用する必要があります、[ヒープ関数](http://msdn.microsoft.com/library/windows/desktop/aa366711)です。 これらで使用できる、 [CWin32Heap](../../atl/reference/cwin32heap-class.md)クラスです。 グローバル関数は、DDE とクリップボード機能によって引き続き使用されます。  
+>  グローバルのヒープ関数では、他のメモリ管理関数よりも低速で、多くの機能を提供しません。 そのため、新しいアプリケーションを使用する必要があります、[ヒープ関数](http://msdn.microsoft.com/library/windows/desktop/aa366711)します。 これらで使用できる、 [CWin32Heap](../../atl/reference/cwin32heap-class.md)クラス。 グローバル関数は、DDE およびクリップボード機能によって引き続き使用されます。  
   
 ## <a name="example"></a>例  
- 例を参照して[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)です。  
+ 例をご覧ください[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IAtlMemMgr`  
   
  `CGlobalHeap`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlmem.h  
   
 ##  <a name="allocate"></a>  Cglobalheap::allocate  
@@ -75,16 +76,16 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBytes`  
+ *nBytes*  
  新しいメモリ ブロック内の要求されたバイト数。  
   
 ### <a name="return-value"></a>戻り値  
  新しく割り当てられたメモリ ブロックの先頭へのポインターを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[cglobalheap::free](#free)または[cglobalheap::reallocate](#reallocate)このメソッドによって割り当てられたメモリを解放します。  
   
- 使用して実装[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)のフラグ パラメーターを持つ**GMEM_FIXED**です。  
+ 使用して実装[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) GMEM_FIXED のフラグ パラメーターを使用します。  
   
 ##  <a name="free"></a>  Cglobalheap::free  
  このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。  
@@ -94,11 +95,11 @@ virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `p`  
- このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値であり、何も行われません。  
+ *p*  
+ このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値を何も行われません。  
   
-### <a name="remarks"></a>コメント  
- 使用して実装[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)です。  
+### <a name="remarks"></a>Remarks  
+ 使用して実装[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)します。  
   
 ##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。  
@@ -108,14 +109,14 @@ virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `p`  
+ *p*  
  このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  割り当てられたメモリ ブロックのサイズをバイト単位で返します。  
   
-### <a name="remarks"></a>コメント  
- 使用して実装[GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)です。  
+### <a name="remarks"></a>Remarks  
+ 使用して実装[GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)します。  
   
 ##  <a name="reallocate"></a>  Cglobalheap::reallocate  
  このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。  
@@ -125,19 +126,19 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `p`  
+ *p*  
  このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。  
   
- `nBytes`  
+ *nBytes*  
  新しいメモリ ブロック内の要求されたバイト数。  
   
 ### <a name="return-value"></a>戻り値  
  新しく割り当てられたメモリ ブロックの先頭へのポインターを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[cglobalheap::free](#free)このメソッドによって割り当てられたメモリを解放します。  
   
- 使用して実装[GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590)です。  
+ 使用して実装[GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590)します。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)   

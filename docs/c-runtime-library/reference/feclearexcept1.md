@@ -33,11 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe943bcc0a1e1a027e432911bd2ad722fc7c7c1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: face2637f308a56d95baa7563a6409dd38870d73
+ms.sourcegitcommit: 2f571220e16f6c20e1fdb005f6cbc9e7ef5608f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070078"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -60,7 +61,7 @@ int feclearexcept(
 
 場合は 0 を返します*excepts*ゼロ、または指定されたすべての例外が正常にクリアされた場合。 それ以外の場合は、0 以外の値を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **Feclearexcept**関数浮動をクリアするポイントで指定された例外状態フラグ*excepts*です。 この関数は、fenv.h に定義されている次の例外処理マクロをサポートしています。
 
@@ -71,11 +72,11 @@ int feclearexcept(
 |FE_INVALID|前の浮動小数点演算でドメイン エラーが発生しました。|
 |FE_OVERFLOW|範囲エラーが発生しました。前の浮動小数点演算結果は大きすぎて表現できませんでした。|
 |FE_UNDERFLOW|前の浮動小数点演算結果は小さすぎて最大有効桁数で表現できませんでした。|
-|FE_ALLEXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
+|FE_ALL_EXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
 
 *Excepts*ゼロ、またはサポートされている例外マクロの 1 つ以上のビットごとの OR を引数として使用することがあります。 他の引数値の結果は未定義です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381773"
 ---
 # <a name="cast-operators"></a>キャスト演算子
 型キャストは、特定の状況におけるオブジェクトの型の明示的な変換方法を示します。  

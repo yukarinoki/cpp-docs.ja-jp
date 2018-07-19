@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354869"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Active Template Library (ATL) のチュートリアル
 ATL は、効率的な柔軟で軽量のコントロールを作成するプロセスを簡単に設計されています。 このチュートリアルでは、多くの ATL および COM の基本事項を示す、ActiveX コントロールの作成を説明します。  

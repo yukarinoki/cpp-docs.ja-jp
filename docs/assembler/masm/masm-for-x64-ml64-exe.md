@@ -1,7 +1,7 @@
 ---
 title: X64 用 MASM (ml64.exe) |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b17771239ff9c89b765576ba49515463db42386f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: bb4f4a0ba996be34749350c0d99c1915752fe99e
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322249"
 ---
 # <a name="masm-for-x64-ml64exe"></a>x64 用 MASM (ml64.exe)
 
-Visual Studio には、32 ビットおよび 64 ビットの両方ホストされているバージョン MASM x64 を対象とコードにはが含まれています。 これは、x64 を受け入れるアセンブラー ml64.exe をという名前には、アセンブラー言語。 MASM のコマンド ライン ツールは、Visual Studio のインストール時に C++ ワークロードを選択するときにインストールされます。 これらのツールは、個別のダウンロードとしてご利用いただけません。 ダウンロードして Visual Studio のコピーをインストールを参照してください。 [ https://www.visualstudio.com/](https://www.visualstudio.com/)です。 場合は、Visual Studio IDE をインストールせずにのみ、コマンド ライン ツールが必要を参照してください、**構築ツールを Visual Studio 2017 の** オプションを選択、 [Visual Studio のダウンロード](https://www.visualstudio.com/downloads/)ページ。
+Visual Studio には、x64 を対象のコードを 32 ビットおよび 64 ビットの両方のホストされているバージョン Microsoft アセンブラー (MASM) にはが含まれています。 これは、x64 を受け入れるアセンブラー ml64.exe をという名前には、アセンブラー言語。 MASM のコマンド ライン ツールは、Visual Studio のインストール時に C++ ワークロードを選択するときにインストールされます。 MASM ツールは、個別のダウンロードとしてご利用いただけません。 ダウンロードして Visual Studio のコピーをインストールする方法については、次を参照してください。 [Visual Studio インストール](/visualstudio/install/install-visual-studio)です。 完全な Visual Studio IDE をインストールせずにのみするには、コマンド ライン ツール、ダウンロード、[構築ツールを Visual Studio 2017 の](https://go.microsoft.com/fwlink/p/?linkid=875721)します。
 
 ビルドに MASM を使用する x64 用のコードをコマンドラインでターゲットを x64 用開発者コマンド プロンプトを使用する必要がありますターゲットで、必要なパスとその他の環境変数を設定します。 開発者コマンド プロンプトを起動する方法については、次を参照してください。[コマンドラインでビルドの c/c++ コード](../../build/building-on-the-command-line.md)です。
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114485"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>マネージ例外の使用についての基本概念
 このトピックでは、マネージ アプリケーションでの例外処理について説明します。 つまり、と共にコンパイルされるアプリケーション、 **/clr**コンパイラ オプション。  

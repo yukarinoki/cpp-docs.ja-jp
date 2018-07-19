@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132009"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>方法: STL/CLR コンテナーを .NET コレクションに変換する
 このトピックでは、同等の .NET のコレクションを STL/CLR コンテナーに変換する方法を示します。 例として、STL/CLR に変換する方法を示します[ベクター](../dotnet/vector-stl-clr.md) .net <xref:System.Collections.Generic.ICollection%601> 、STL/CLR を変換する方法および[マップ](../dotnet/map-stl-clr.md).net<xref:System.Collections.Generic.IDictionary%602>プロシージャはすべてのコレクションと似ていますが、およびコンテナーです。  

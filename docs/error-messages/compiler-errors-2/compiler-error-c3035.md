@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244987"
 ---
 # <a name="compiler-error-c3035"></a>コンパイラ エラー C3035
 OpenMP 'ordered' ディレクティブは、'ordered' 句と共に 'for' または 'parallel for' ディレクティブに直接バインドしなければなりません  

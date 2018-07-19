@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390519"
 ---
 # <a name="files-and-streams"></a>ファイルとストリーム
 プログラムは、ファイルを読み書きすることによって対象の環境と通信します。 ファイルには次のものがあります。  

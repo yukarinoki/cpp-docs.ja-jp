@@ -1,5 +1,5 @@
 ---
-title: CEditView クラス |Microsoft ドキュメント
+title: CEditView クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -50,11 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7323dfa06e73342e956a9aacb1ad925b6fb022f2
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338497"
 ---
 # <a name="ceditview-class"></a>CEditView クラス
 Windows のエディット コントロールの機能を提供するビュー クラスの一種であり、シンプルなテキスト編集エディターを実装できます。  
@@ -77,13 +78,13 @@ class CEditView : public CCtrlView
   
 |名前|説明|  
 |----------|-----------------|  
-|[CEditView::FindText](#findtext)|テキスト内で文字列を検索します。|  
+|[CEditView::FindText](#findtext)|テキスト内の文字列を検索します。|  
 |[CEditView::GetBufferLength](#getbufferlength)|文字バッファーの長さを取得します。|  
-|[CEditView::GetEditCtrl](#geteditctrl)|アクセスできるように、`CEdit`の部分、 `CEditView` (、Windows のエディット コントロール) オブジェクト。|  
+|[CEditView::GetEditCtrl](#geteditctrl)|アクセスできるように、`CEdit`の部分を`CEditView`(、Windows コントロールの編集) オブジェクト。|  
 |[CEditView::GetPrinterFont](#getprinterfont)|現在のプリンター フォントを取得します。|  
-|[CEditView::GetSelectedText](#getselectedtext)|現在のテキスト選択範囲を取得します。|  
+|[CEditView::GetSelectedText](#getselectedtext)|選択されているテキストを取得します。|  
 |[CEditView::LockBuffer](#lockbuffer)|バッファーをロックします。|  
-|[CEditView::PrintInsideRect](#printinsiderect)|指定した四角形内のテキストを表示します。|  
+|[CEditView::PrintInsideRect](#printinsiderect)|指定した四角形内のテキストをレンダリングします。|  
 |[CEditView::SerializeRaw](#serializeraw)|シリアル化、`CEditView`未加工のテキストとしてディスクにオブジェクト。|  
 |[なかったとき](#setprinterfont)|新しいプリンター フォントを設定します。|  
 |[CEditView::SetTabStops](#settabstops)|タブの画面表示と印刷の両方の位置を設定します。|  
@@ -94,46 +95,46 @@ class CEditView : public CCtrlView
 |名前|説明|  
 |----------|-----------------|  
 |[CEditView::OnFindNext](#onfindnext)|テキスト文字列の次の出現箇所を検索します。|  
-|[CEditView::OnReplaceAll](#onreplaceall)|すべての出現する指定された文字列を新しい文字列に置き換えます。|  
-|[CEditView::OnReplaceSel](#onreplacesel)|現在の選択項目を置換します。|  
+|[CEditView::OnReplaceAll](#onreplaceall)|指定された文字列のすべての出現箇所を新しい文字列に置き換えます。|  
+|[CEditView::OnReplaceSel](#onreplacesel)|現在の選択範囲を置き換えます。|  
 |[CEditView::OnTextNotFound](#ontextnotfound)|さらに、テキストを照合する検索操作が失敗したときに呼び出されます。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|既定の型のオブジェクトのスタイル**CEditView です。**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|既定の型のオブジェクトのスタイル`CEditView`します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CEditView`クラスには、次の追加機能が用意されています。  
   
 -   印刷します。  
   
 -   検索し、置換します。  
   
- クラス`CEditView`クラスから派生したは`CView`、クラスのオブジェクト`CEditView`ドキュメントおよびドキュメント テンプレートで使用できます。  
+ クラス`CEditView`クラスの派生クラスは、 `CView`、クラスのオブジェクト`CEditView`ドキュメントおよびドキュメント テンプレートで使用できます。  
   
- 各`CEditView`コントロールのテキストを独自のグローバル メモリ オブジェクトに保持します。 アプリケーションは、任意の数を持つことができます`CEditView`オブジェクト。  
+ 各`CEditView`コントロールのテキストは独自のグローバル メモリ オブジェクトに保持されます。 アプリケーションは、任意の数を持つことができます`CEditView`オブジェクト。  
   
- 型のオブジェクトを作成する`CEditView`編集ウィンドウを上に示した機能機能を追加する場合、または単純なテキスト エディター機能を使用する場合。 A`CEditView`オブジェクトがウィンドウの全体のクライアント領域を占めることができます。 独自のクラスを派生`CEditView`、基本機能を追加するか、ドキュメント テンプレートに追加できるクラスを宣言します。  
+ 型のオブジェクトを作成する`CEditView`上の一覧に追加された機能を備えた編集ウィンドウをする場合、または単純なテキスト エディター機能を使用する場合。 A`CEditView`オブジェクトは、ウィンドウの全体のクライアント領域を占有できます。 独自のクラスを派生`CEditView`、基本機能を追加するか、ドキュメント テンプレートに追加できるクラスを宣言します。  
   
- クラスの既定の実装`CEditView`次のコマンドを処理します**ID_EDIT_SELECT_ALL**、 **ID_EDIT_FIND**、 **ID_EDIT_REPLACE**、 **。ID_EDIT_REPEAT**、および**ID_FILE_PRINT**です。  
+ クラスの既定の実装`CEditView`次のコマンドの処理: ID_EDIT_SELECT_ALL、ID_EDIT_FIND、ID_EDIT_REPLACE、ID_EDIT_REPEAT、および ID_FILE_PRINT します。  
   
- 既定の文字制限`CEditView`は (1024 \* 1024-1 = 1048575)。 これを呼び出すことにより変更することができます、 **EM_LIMITTEXT**基になる関数でコントロールを編集します。 ただし、制限は、オペレーティング システムによって異なります、エディット コントロール (1 つまたは複数行) の種類。 これらの制限の詳細については、次を参照してください。 [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607)です。  
+ 既定の文字制限`CEditView`は (1024 \* 1024-1 = 1048575)。 これは、基になるエディット コントロールの EM_LIMITTEXT 関数を呼び出すことによって変更できます。 ただし、制限は、オペレーティング システムによって異なりますの種類の編集コントロール (1 つまたは複数行)。 これらの制限に関する詳細については、次を参照してください。 [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607)します。  
   
- コントロールでは、この制限を変更するには、上書き、`OnCreate()`関数を`CEditView`クラスし、次のコード行を挿入します。  
+ コントロールでは、この制限を変更する、`OnCreate()`関数を`CEditView`クラスし、次のコード行を挿入します。  
   
  [!code-cpp[NVC_MFCDocView#65](../../mfc/codesnippet/cpp/ceditview-class_1.cpp)]  
   
  型のオブジェクト`CEditView`(またはから派生した型の`CEditView`)、次の制限があります。  
   
-- `CEditView` true を実装していません表示内容は、取得 (WYSIWYG) を編集します。 選択肢では、画面上の読みやすさと、印刷出力`CEditView`画面の読みやすさを選択します。  
+- `CEditView` true を実装していない表示内容は、取得 (WYSIWYG) を編集します。 選択肢では、画面上の読みやすさと、印刷出力`CEditView`opts 画面読みやすくするためです。  
   
-- `CEditView` 1 つのフォントのみにテキストを表示できます。 特殊文字が書式設定はサポートされません。 クラスを参照して[CRichEditView](../../mfc/reference/cricheditview-class.md)の大きい機能します。  
+- `CEditView` 1 つのフォントだけにテキストを表示できます。 特殊文字が書式設定はサポートされません。 クラスを参照してください。 [CRichEditView](../../mfc/reference/cricheditview-class.md)の優れた機能です。  
   
--   テキストの量、`CEditView`含めることができる制限されます。 制限は同じであるとは、`CEdit`コントロール。  
+-   テキストの量、`CEditView`含めることができますが制限されています。 制限は同じである、`CEdit`コントロール。  
   
- 詳細については`CEditView`を参照してください[派生ビュー クラスで使用できる MFC](../../mfc/derived-view-classes-available-in-mfc.md)です。  
+ 詳細については`CEditView`を参照してください[派生ビュー クラスで使用できる MFC](../../mfc/derived-view-classes-available-in-mfc.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -148,7 +149,7 @@ class CEditView : public CCtrlView
   
  `CEditView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="ceditview"></a>  CEditView::CEditView  
@@ -158,8 +159,8 @@ class CEditView : public CCtrlView
 CEditView();
 ```  
   
-### <a name="remarks"></a>コメント  
- オブジェクトを構築するには、後に呼び出す必要があります、 [cwnd::create](../../mfc/reference/cwnd-class.md#create)エディット コントロールを使用する前に機能します。 クラスを派生する場合`CEditView`しを使用してテンプレートに追加する`CWinApp::AddDocTemplate`、フレームワークが両方このコンス トラクターを呼び出すと**作成**関数。  
+### <a name="remarks"></a>Remarks  
+ オブジェクトを構築後に呼び出す必要がある、 [cwnd::create](../../mfc/reference/cwnd-class.md#create)エディット コントロールを使用する前に機能します。 クラスを派生させる場合`CEditView`しを使用して、テンプレートに追加する`CWinApp::AddDocTemplate`、フレームワークがこの両方のコンス トラクターを呼び出すと、`Create`関数。  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  既定のスタイルが含まれています、`CEditView`オブジェクト。  
@@ -168,8 +169,8 @@ CEditView();
 static const DWORD dwStyleDefault;  
 ```  
   
-### <a name="remarks"></a>コメント  
- この静的メンバーとして渡す、`dwStyle`のパラメーター、**作成**の既定のスタイルを取得する関数、`CEditView`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ この静的メンバーとして渡す、 *dwStyle*のパラメーター、`Create`の既定のスタイルを取得する関数、`CEditView`オブジェクト。  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  呼び出す、`FindText`を検索する関数、`CEditView`オブジェクトのテキスト バッファー。  
@@ -182,25 +183,25 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
- 検索するテキストです。  
+ *中から*  
+ 検索するテキスト。  
   
- `bNext`  
- 検索の方向を指定します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
+ *bNext*  
+ 検索の方向を指定します。 TRUE の場合、検索の方向は、バッファーの末尾方向です。 FALSE の場合、検索の方向は、バッファーの先頭方向です。  
   
- `bCase`  
- 検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
+ *置き換えた*  
+ 検索は大文字小文字を区別するかどうかを指定します。 TRUE の場合、検索は大文字小文字が区別されます。 FALSE の場合は、検索は大文字小文字が区別されません。  
   
 ### <a name="return-value"></a>戻り値  
- 検索テキストが見つかった場合は 0 以外。それ以外の場合 0 を返します。  
+ 検索テキストが見つかった場合は 0 以外それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- この関数は、指定した文字列のバッファーにテキストを検索`lpszFind`を開始位置で指定した方向で、現在の選択として`bNext`で指定された大文字小文字の区別を使用して`bCase`です。 テキストが見つかった場合は、見つかったテキストを選択範囲を設定し、0 以外の値を返します。 テキストが見つからなかった場合は、0 を返します。  
+### <a name="remarks"></a>Remarks  
+ この関数で指定されたテキストのバッファー内のテキストの検索*されて*を開始位置で指定された方向で現在の選択として*bNext*で指定された大文字小文字の区別を使用して*置き換えた*します。 テキストが見つかった場合は、見つかったテキストを選択範囲を設定し、0 以外の値を返します。 テキストが見つからない場合は、0 を返します。  
   
- 通常必要はありませんを呼び出して、`FindText`関数をオーバーライドする場合を除き、 `OnFindNext`、どの呼び出し`FindText`です。  
+ 通常必要はありませんを呼び出す、`FindText`関数をオーバーライドする場合を除き、 `OnFindNext`、呼び出す`FindText`します。  
   
 ##  <a name="getbufferlength"></a>  CEditView::GetBufferLength  
- 現在エディット コントロールのバッファーで、null 終端文字を除いた文字数を取得するには、このメンバー関数を呼び出します。  
+ Null 終端文字を含まない、編集コントロールのバッファーの現在の文字数を取得するには、このメンバー関数を呼び出します。  
   
 ```  
 UINT GetBufferLength() const;  
@@ -219,53 +220,53 @@ CEdit& GetEditCtrl() const;
 ### <a name="return-value"></a>戻り値  
  `CEdit` オブジェクトへの参照。  
   
-### <a name="remarks"></a>コメント  
- このコントロールの種類は[CEdit](../../mfc/reference/cedit-class.md)を直接使用して Windows のエディット コントロールを操作できるように、`CEdit`メンバー関数。  
+### <a name="remarks"></a>Remarks  
+ このコントロールは、型の[CEdit](../../mfc/reference/cedit-class.md)を使用して直接 Windows エディット コントロールを操作するため、`CEdit`メンバー関数。  
   
 > [!CAUTION]
->  使用して、`CEdit`オブジェクトの基になるウィンドウの状態の変更は、コントロールを編集できます。 たとえば、する必要がありますいない設定を変更するタブを使用して、 [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops)ために機能`CEditView`エディット コントロールと印刷の両方に使用するため、これらの設定をキャッシュします。 代わりに、 [CEditView::SetTabStops](#settabstops)です。  
+>  使用して、`CEdit`オブジェクトの編集コントロールを基になる Windows の状態を変更できます。 使用してタブの設定を変更するはいないなど、 [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops)ために機能`CEditView`エディット コントロールと印刷の両方に使用するため、これらの設定をキャッシュします。 代わりに、 [CEditView::SetTabStops](#settabstops)します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
 ##  <a name="getprinterfont"></a>  CEditView::GetPrinterFont  
- 呼び出す`GetPrinterFont`へのポインターを取得する、 [CFont](../../mfc/reference/cfont-class.md)を現在のプリンター フォントを記述するオブジェクト。  
+ 呼び出す`GetPrinterFont`へのポインターを取得する、 [CFont](../../mfc/reference/cfont-class.md)の現在のプリンター フォントを表すオブジェクト。  
   
 ```  
 CFont* GetPrinterFont() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 `CFont` ; 現在のプリンター フォントを指定するオブジェクト**NULL**プリンター フォントが設定されていない場合。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。  
+ ポインター、`CFont`現在のプリンターのフォントを指定するオブジェクトプリンターのフォントが設定されていない場合は NULL です。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。  
   
-### <a name="remarks"></a>コメント  
- プリンター フォントが設定されていないかどうか、既定の印刷の動作、`CEditView`クラスは、表示に使用される同じフォントを使用して印刷します。  
+### <a name="remarks"></a>Remarks  
+ プリンターのフォントが設定されていないかどうか、既定の動作の印刷、`CEditView`クラスは、同じ表示に使用されるフォントを使用して印刷します。  
   
- 現在プリンター フォントを判断するのにには、この関数を使用します。 場合はそうでない、目的のプリンター フォントを使用して[なかったとき](#setprinterfont)を変更します。  
+ 現在のプリンター フォントを決定するのにには、この関数を使用します。 使用して、目的のプリンターのフォントでない場合は場合、[なかったとき](#setprinterfont)を変更します。  
   
 ##  <a name="getselectedtext"></a>  CEditView::GetSelectedText  
- 呼び出す`GetSelectedText`に選択したテキストをコピーする、`CString`選択または選択範囲の最初のキャリッジ リターン文字の直前の文字の末尾までのオブジェクト。  
+ 呼び出す`GetSelectedText`に選択したテキストをコピーする、`CString`選択または選択範囲の先頭のキャリッジ リターン文字の直前の文字の末尾までのオブジェクト。  
   
 ```  
 void GetSelectedText(CString& strResult) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `strResult`  
- 参照、`CString`を選択したテキストを受け取るオブジェクト。  
+ *strResult*  
+ 参照、`CString`選択したテキストを受信するオブジェクト。  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
- バッファーへのポインターを取得するには、このメンバー関数を呼び出します。 バッファーは変更できません。  
+ バッファーへのポインターを取得するには、このメンバー関数を呼び出します。 バッファーは変更しないでください。  
   
 ```  
 LPCTSTR LockBuffer() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- エディット コントロールのバッファーへのポインター。  
+ 編集コントロールのバッファーへのポインター。  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- 指定した文字列のバッファーにテキストを検索`lpszFind`で指定された方向に`bNext`で指定された大文字と小文字の区別`bCase`です。  
+ 指定したテキスト バッファーのテキストを検索*されて*で指定された方向で*bNext*で指定された大文字小文字を区別*置き換えた*します。  
   
 ```  
 virtual void OnFindNext(
@@ -275,19 +276,19 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
- 検索するテキストです。  
+ *中から*  
+ 検索するテキスト。  
   
- `bNext`  
- 検索の方向を指定します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
+ *bNext*  
+ 検索の方向を指定します。 TRUE の場合、検索の方向は、バッファーの末尾方向です。 FALSE の場合、検索の方向は、バッファーの先頭方向です。  
   
- `bCase`  
- 検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
+ *置き換えた*  
+ 検索は大文字小文字を区別するかどうかを指定します。 TRUE の場合、検索は大文字小文字が区別されます。 FALSE の場合は、検索は大文字小文字が区別されません。  
   
-### <a name="remarks"></a>コメント  
- 検索は、現在の選択範囲の先頭から開始されへの呼び出しによって行われます[FindText](#findtext)です。 既定の実装で`OnFindNext`呼び出し[見つからなかったとき](#ontextnotfound)テキストが見つからなかった場合です。  
+### <a name="remarks"></a>Remarks  
+ 検索は、現在の選択範囲の先頭に開始されへの呼び出しによって行われます[FindText](#findtext)します。 既定の実装で`OnFindNext`呼び出し[見つからなかったとき](#ontextnotfound)テキストが見つからない場合。  
   
- オーバーライド`OnFindNext`方法を変更する、 `CEditView`-派生オブジェクトは、テキストを検索します。 `CEditView` 呼び出し`OnFindNext`ユーザーが標準の検索 ダイアログ ボックスで、次を検索 ボタンを選択するとします。  
+ オーバーライド`OnFindNext`方法を変更する、 `CEditView`-派生オブジェクトがテキストを検索します。 `CEditView` 呼び出し`OnFindNext`ユーザーが標準の検索 ダイアログ ボックスで、次を検索 ボタンを選択したときにします。  
   
 ##  <a name="onreplaceall"></a>  CEditView::OnReplaceAll  
  `CEditView` 呼び出し`OnReplaceAll`ユーザーが標準の置換 ダイアログ ボックスで、すべて置換 ボタンを選択するとします。  
@@ -300,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
- 検索するテキストです。  
+ *中から*  
+ 検索するテキスト。  
   
- `lpszReplace`  
- 検索テキストを置換するテキストです。  
+ *見つかる*  
+ 検索テキストを置換するテキスト。  
   
- `bCase`  
- 検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
+ *置き換えた*  
+ 検索は大文字小文字を区別するかどうかを指定します。 TRUE の場合、検索は大文字小文字が区別されます。 FALSE の場合は、検索は大文字小文字が区別されません。  
   
-### <a name="remarks"></a>コメント  
- `OnReplaceAll` 指定した文字列のバッファーにテキストを検索`lpszFind`で指定された大文字と小文字の区別`bCase`です。 検索は、現在の選択範囲の先頭から開始します。 指定されたテキストで、検索テキストが見つかるたびこの関数の置換テキストの出現`lpszReplace`です。 呼び出すことによって、検索を行う[FindText](#findtext)です。 既定の実装で[見つからなかったとき](#ontextnotfound)は、テキストが見つからなかった場合に呼び出されます。  
+### <a name="remarks"></a>Remarks  
+ `OnReplaceAll` 指定したテキスト バッファーのテキストを検索*されて*で指定された大文字小文字の区別を*置き換えた*します。 現在の選択範囲の先頭に検索を開始します。 毎回検索テキストが見つかると、この関数で指定されたテキストでその出現するテキストを置換する*見つかる*します。 呼び出しによって、検索が行われます[FindText](#findtext)します。 既定の実装で[見つからなかったとき](#ontextnotfound)テキストが見つからない場合に呼び出されます。  
   
- 現在の選択範囲が一致しない場合`lpszFind`、選択範囲が指定した文字列の最初に出現する更新`lpszFind`置換は実行されません。 これにより、ユーザーに選択範囲が置き換えられるテキストと一致しない場合の対処の必要なは、このことを確認できます。  
+ 現在の選択範囲が一致しない場合*されて*、選択範囲が更新され、最初に見つかった指定した文字列の*されて*置換が実行されていません。 これにより、ユーザーに選択範囲が置き換えられるテキストと一致しない場合に実行するにはこれを確認できます。  
   
  オーバーライド`OnReplaceAll`方法を変更する、 `CEditView`-派生オブジェクトには、テキストが置き換えられます。  
   
@@ -328,36 +329,36 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
- 検索するテキストです。  
+ *中から*  
+ 検索するテキスト。  
   
- `bNext`  
- 検索の方向を指定します。 場合**TRUE**バッファーの末尾方向検索の方向です。 場合**FALSE**バッファーの先頭方向検索の方向です。  
+ *bNext*  
+ 検索の方向を指定します。 TRUE の場合、検索の方向は、バッファーの末尾方向です。 FALSE の場合、検索の方向は、バッファーの先頭方向です。  
   
- `bCase`  
- 検索では、大文字小文字を区別するかどうかを指定します。 場合**TRUE**検索では、大文字小文字を区別します。 場合**FALSE**検索では、大文字と小文字が区別されません。  
+ *置き換えた*  
+ 検索は大文字小文字を区別するかどうかを指定します。 TRUE の場合、検索は大文字小文字が区別されます。 FALSE の場合は、検索は大文字小文字が区別されません。  
   
- `lpszReplace`  
- 見つかったテキストを置換するテキストです。  
+ *見つかる*  
+ 見つかったテキストを置換するテキスト。  
   
-### <a name="remarks"></a>コメント  
- この関数がで指定されたテキストの次の出現箇所のバッファーにテキストを検索、選択範囲を交換した後`lpszFind`で指定された方向に`bNext`で指定された大文字と小文字の区別`bCase`です。 呼び出すことによって、検索を行う[FindText](#findtext)です。 テキストが見つからなかった場合[見つからなかったとき](#ontextnotfound)と呼びます。  
+### <a name="remarks"></a>Remarks  
+ 選択範囲を交換した後この関数は、バッファーで指定されたテキストの次に出現する位置のテキストを検索*されて*で指定された方向で*bNext*、大文字と小文字の区別指定された*置き換えた*します。 呼び出しによって、検索が行われます[FindText](#findtext)します。 テキストが見つからない場合[見つからなかったとき](#ontextnotfound)が呼び出されます。  
   
  オーバーライド`OnReplaceSel`方法を変更する、 `CEditView`-派生オブジェクトには、選択したテキストが置き換えられます。  
   
 ##  <a name="ontextnotfound"></a>  CEditView::OnTextNotFound  
- 既定の実装では、Windows 関数を変更するには、この関数をオーバーライド**MessageBeep**です。  
+ この Windows 関数を呼び出す既定の実装を変更するには、この関数をオーバーライド`MessageBeep`します。  
   
 ```  
 virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFind`  
- 検索するテキストです。  
+ *中から*  
+ 検索するテキスト。  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
- 呼び出す`PrintInsideRect`によって指定される四角形内のテキストを印刷する*rectLayout*です。  
+ 呼び出す`PrintInsideRect`で指定された四角形内のテキストを印刷する*rectLayout*します。  
   
 ```  
 UINT PrintInsideRect(
@@ -368,72 +369,72 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  プリンター デバイス コンテキストへのポインター。  
   
  *rectLayout*  
- 参照、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)テキストが表示される四角形を指定します。  
+ 参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)テキストが表示される四角形を指定します。  
   
- `nIndexStart`  
- 表示される最初の文字のバッファー内にあるインデックスを作成します。  
+ *nIndexStart*  
+ 表示する最初の文字のバッファー内のインデックスします。  
   
- `nIndexStop`  
- 表示する最後の文字を次の文字のバッファー内にあるインデックスを作成します。  
+ *nIndexStop*  
+ 表示する最後の文字を次の文字のバッファー内のインデックスします。  
   
 ### <a name="return-value"></a>戻り値  
- 印刷するのには、次の文字のインデックス (つまり、表示される最後の文字文字)。  
+ 印刷するのには、次の文字のインデックス (最後の文字が表示される文字)。  
   
-### <a name="remarks"></a>コメント  
- 場合、`CEditView`コントロールにスタイルがない**ES_AUTOHSCROLL**レンダリングの四角形内でテキストをラップします。 コントロールにスタイルがある場合**ES_AUTOHSCROLL**テキストは四角形の右端にクリップします。  
+### <a name="remarks"></a>Remarks  
+ 場合、`CEditView`コントロールにスタイル ES_AUTOHSCROLL がない、テキストがレンダリングする四角形内にラップされます。 コントロールにスタイル ES_AUTOHSCROLL がある場合は、四角形の右端にテキストが切り取られます。  
   
- **に**の要素、 *rectLayout*オブジェクトが変更されたため、四角形の寸法がテキストで使用されている元の四角形の部分を定義します。  
+ `rect.bottom`の要素、 *rectLayout*オブジェクトを変更すると、四角形のサイズ、テキストによって使用されている元の四角形の部分を定義するようにします。  
   
 ##  <a name="serializeraw"></a>  CEditView::SerializeRaw  
- 呼び出す`SerializeRaw`が、`CArchive`テキストの書き込みまたは読み取りをオブジェクト、`CEditView`オブジェクトをテキスト ファイルにします。  
+ 呼び出す`SerializeRaw`が、`CArchive`オブジェクトの読み取りまたはテキストを作成、`CEditView`オブジェクトをテキスト ファイル。  
   
 ```  
 void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ar`  
- 参照、`CArchive`オブジェクトをシリアル化されたテキストを格納します。  
+ *ar*  
+ 参照、`CArchive`シリアル化されたテキストを格納するオブジェクトです。  
   
-### <a name="remarks"></a>コメント  
- `SerializeRaw` 異なる`CEditView`の内部実装`Serialize`ことで読み取りし、オブジェクトの説明のデータの前せず、テキストのみを書き込みます。  
+### <a name="remarks"></a>Remarks  
+ `SerializeRaw` 異なる`CEditView`の内部実装の`Serialize`を読み取ってオブジェクトの説明のデータの先頭テキストのみを書き込みます。  
   
 ##  <a name="setprinterfont"></a>  なかったとき  
- 呼び出す`SetPrinterFont`で指定されたフォントにプリンター フォントを設定する`pFont`です。  
+ 呼び出す`SetPrinterFont`プリンター フォントを指定しているフォントに設定する*pFont*します。  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFont`  
- 型のオブジェクトへのポインター`CFont`です。 場合**NULL**印刷に使用するフォントは表示フォントに基づいています。  
+ *pFont*  
+ 型のオブジェクトへのポインター`CFont`します。 NULL の場合は、印刷に使用されるフォントを表示フォントに基づきます。  
   
-### <a name="remarks"></a>コメント  
- ビューを常に特定のフォントを印刷に使用する場合への呼び出しを含める`SetPrinterFont`クラスの`OnPreparePrinting`関数。 ビューの内容が印刷される前に、フォントの変更が発生するように印刷が行われる前にこの仮想関数が呼び出されます。  
+### <a name="remarks"></a>Remarks  
+ 呼び出しを常に特定のフォントを印刷に使用する、表示する場合は、含める`SetPrinterFont`クラスの`OnPreparePrinting`関数。 フォントは、変更、ビューの内容が印刷される前に、印刷が行われる前にこの仮想関数が呼び出されます。  
   
 ##  <a name="settabstops"></a>  CEditView::SetTabStops  
- 表示と印刷に使用されるタブ ストップを設定するには、この関数を呼び出します。  
+ 表示および印刷のために使用するタブ ストップを設定するには、この関数を呼び出します。  
   
 ```  
 void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nTabStops`  
+ *nTabStops*  
  ダイアログ単位で、それぞれのタブ ストップの幅。  
   
-### <a name="remarks"></a>コメント  
- 1 つのタブ ストップ幅のみがサポートされています。 (`CEdit`オブジェクトは複数のタブ幅をサポートします)。幅は、ダイアログ単位は、印刷または表示するのに使用するフォントの平均の文字幅 (大文字と小文字のアルファベット文字のみに基づく) の 4 分の 1 と同じです。 使用しないで`CEdit::SetTabStops`ため`CEditView`タブ ストップ値をキャッシュする必要があります。  
+### <a name="remarks"></a>Remarks  
+ 1 つのタブ ストップ幅のみがサポートされています。 (`CEdit`オブジェクトは、複数のタブ幅をサポートします)。幅は、印刷または表示時に使用するフォントの平均文字幅 (大文字と小文字のアルファベット文字のみに基づく) の 4 分の 1 と同じダイアログ単位。 使用しないようにする`CEdit::SetTabStops`ため`CEditView`タブ ストップの値をキャッシュする必要があります。  
   
  この関数は、呼び出されたオブジェクトのタブのみを変更します。 タブを変更する各停止`CEditView`オブジェクトのアプリケーションで、各オブジェクトの`SetTabStops`関数。  
   
 ### <a name="example"></a>例  
- 上記のコードは、コントロールを使用するフォントを慎重に測定することによって、4 文字ごとに、コントロールのタブ ストップを設定します。  
+ このコード フラグメントは、コントロールが使用するフォントを慎重に測定することで、4 文字ごとに、コントロールのタブ ストップを設定します。  
   
  [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
@@ -444,8 +445,8 @@ void SetTabStops(int nTabStops);
 void UnlockBuffer() const;  
 ```  
   
-### <a name="remarks"></a>コメント  
- 呼び出す`UnlockBuffer`によって返されたポインターを使用して完了したら[LockBuffer](#lockbuffer)です。  
+### <a name="remarks"></a>Remarks  
+ 呼び出す`UnlockBuffer`によって返されたポインターを使用して完了後[LockBuffer](#lockbuffer)します。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル SUPERPAD](../../visual-cpp-samples.md)   

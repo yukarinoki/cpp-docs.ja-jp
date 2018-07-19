@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364022"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side アセンブリのビルド
 A[サイド バイ サイド アセンブリ](http://msdn.microsoft.com/library/windows/desktop/ff951640)リソースのコレクションは、— Dll、windows クラス、COM サーバー、タイプ ライブラリ、またはインターフェイスのグループ-実行時に使用するアプリケーションを使用できます。 アセンブリ内の Dll を再パッケージ化の主な利点は、アセンブリの複数のバージョンは、同時にアプリケーションで使用できます、更新プログラムのリリースが発生した場合、現在インストールされているサービス アセンブリを行うことです。  

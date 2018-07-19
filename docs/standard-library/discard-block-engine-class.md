@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b814f64f340577508add6bf3c0f85ffac0786db7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b65cfbe156ba462af9e87abf82d63023cfdc44b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957439"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine クラス
 
@@ -35,11 +36,11 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-`Engine` ベース エンジンの種類。
+*エンジン*ベース エンジンの種類。
 
-`P` **ブロック サイズ**です。 各ブロックの値の数。
+*P* **ブロック サイズ**します。 各ブロックの値の数。
 
-`R` **使用されるブロック**です。 使用される各ブロックの値の数。 残りは破棄されます (`P` - `R`)。 **前提条件**: `0 < R ≤ P`
+*R* **使用されるブロック**します。 使用される各ブロックの値の数。 残りの部分は破棄されます (`P` - `R`)。 **前提条件**: `0 < R ≤ P`
 
 ## <a name="members"></a>メンバー
 
@@ -50,11 +51,11 @@ class discard_block_engine;
 
 エンジンのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、ベースのエンジンによって返された値の一部を破棄することで値を生成するエンジン アダプターを表します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 

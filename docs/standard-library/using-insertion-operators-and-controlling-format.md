@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb6d17a771b5a1e24b8d09532f432b95ce5d736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959808"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>挿入演算子と制御形式の使用
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="vclrfoutputwidthanchor3"></a> 出力幅
 
-出力をアラインするには、`setw` マニピュレーターをストリーム内に配置するか、**width** メンバー関数を呼び出すことにより、出力幅を各項目に指定します。 この例では、列に値を 10 文字の幅に右揃えで出力します。
+出力をアラインする配置することで、出力幅を各項目を指定する、`setw`マニピュレーターをストリームまたは呼び出すことによって、`width`メンバー関数。 この例では、列に値を 10 文字の幅に右揃えで出力します。
 
 ```cpp
 // output_width.cpp
@@ -64,7 +65,7 @@ int main( )
 
 10 文字の幅に満たない値に対しては先頭に空白文字が追加されます。
 
-フィールドを埋めるには、幅が指定されたフィールドに対して、埋め込み文字の値を設定する **fill** メンバー関数を使用します。 既定では、空白文字です。 数値の列を埋めるのにアスタリスクを使用する場合は、前の **for** ループを次のように変更します。
+フィールドを埋め込むには、使用、`fill`メンバー関数は、幅が指定されたフィールドに対して、埋め込み文字の値を設定します。 既定では、空白文字です。 数値の列を埋めるのにアスタリスクを使用する場合は、前の **for** ループを次のように変更します。
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -103,7 +104,7 @@ int main( )
 }
 ```
 
-**width** メンバー関数は、\<iostream> 内で宣言されます。 `setw` または他の引数付きのマニピュレーターを使用する場合は、\<iomanip> をインクルードする必要があります。 出力では、文字列は 6 桁の幅のフィールドに、整数は 10 桁の幅のフィールドに出力されます。
+`width`でメンバー関数が宣言されている\<iostream >。 `setw` または他の引数付きのマニピュレーターを使用する場合は、\<iomanip> をインクルードする必要があります。 出力では、文字列は 6 桁の幅のフィールドに、整数は 10 桁の幅のフィールドに出力されます。
 
 ```Output
   Zoot      1.23
@@ -112,7 +113,7 @@ int main( )
   Stan   4358.24
 ```
 
-`setw` でも **width** でも、値は切り詰められません。 書式付き出力がこの幅を超えた場合、ストリームの精度の設定に従い、値全体が出力されます。 `setw` と **width** のどちらも次のフィールドのみに影響します。 フィールドが 1 つ出力されると、フィールドの幅は既定の動作 (既定の幅) に戻ります。 ただし、その他のストリームの形式オプションは変更されるまで有効です。
+どちらも`setw`も`width`値は切り捨てられます。 書式付き出力がこの幅を超えた場合、ストリームの精度の設定に従い、値全体が出力されます。 両方`setw`と`width`次のフィールドのみに影響します。 フィールドが 1 つ出力されると、フィールドの幅は既定の動作 (既定の幅) に戻ります。 ただし、その他のストリームの形式オプションは変更されるまで有効です。
 
 ## <a name="vclrfalignmentanchor4"></a> アラインメント
 
@@ -135,11 +136,11 @@ Al         653.7
 Stan     4358.24
 ```
 
-[setiosflags](../standard-library/iomanip-functions.md#setiosflags) マニピュレーターと `left` 列挙子を使用して、left-align フラグを設定します。 この列挙子は、[ios](../standard-library/basic-ios-class.md) クラス内で定義されるため、その参照には、**ios::** プレフィックスをインクルードする必要があります。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) マニピュレーターは、left-align フラグをオフにします。 **width** や `setw` とは異なり、`setiosflags` と `resetiosflags` の効果は持続します。
+[setiosflags](../standard-library/iomanip-functions.md#setiosflags) マニピュレーターと `left` 列挙子を使用して、left-align フラグを設定します。 この列挙子は、[ios](../standard-library/basic-ios-class.md) クラス内で定義されるため、その参照には、**ios::** プレフィックスをインクルードする必要があります。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) マニピュレーターは、left-align フラグをオフにします。 異なり`width`と`setw`の効果`setiosflags`と`resetiosflags`は恒久的です。
 
 ## <a name="vclrfprecisionanchor5"></a> 精度
 
-浮動小数点の精度の既定値は、6 桁です。 たとえば、3466.9768 という数値は 3466.98 と出力されます。 この値を出力する方法を変更するには、[setprecision](../standard-library/iomanip-functions.md#setprecision) マニピュレーターを使用します。 このマニピュレーターには [fixed](../standard-library/ios-functions.md#fixed) と [scientific](../standard-library/ios-functions.md#scientific) の 2 つのフラグがあります。 [fixed](../standard-library/ios-functions.md#fixed) が設定されている場合、数値は、3466.976800 と出力されます。 **scientific** が設定されている場合、3.4669773+003 と出力されます。
+浮動小数点の精度の既定値は、6 桁です。 たとえば、3466.9768 という数値は 3466.98 と出力されます。 この値を出力する方法を変更するには、[setprecision](../standard-library/iomanip-functions.md#setprecision) マニピュレーターを使用します。 このマニピュレーターには [fixed](../standard-library/ios-functions.md#fixed) と [scientific](../standard-library/ios-functions.md#scientific) の 2 つのフラグがあります。 [fixed](../standard-library/ios-functions.md#fixed) が設定されている場合、数値は、3466.976800 と出力されます。 場合`scientific`が設定された場合、3.4669773 + 003 と出力されます。
 
 有効桁 1 桁で[アライン](#vclrfalignmentanchor4)された浮動小数点数値を表示するには、**for** ループを次のように置き換えます。
 
@@ -179,7 +180,7 @@ Al         653.7
 Stan      4358.2
 ```
 
-**ios::fixed** フラグを **ios::scientific** フラグに変更すると、プログラムは次のように出力します。
+変更した場合、`ios::fixed`フラグを`ios::scientific`プログラムで出力します。
 
 ```cpp
 Zoot    1.2e+00
@@ -188,11 +189,11 @@ Al      6.5e+02
 Stan    4.4e+03
 ```
 
-この場合も、小数点以下 1 桁まで出力されます。 **ios::fixed** または **ios::scientific** のどちらかが設定されている場合、精度の値は小数点の後の桁数を決定します。 どちらのフラグも設定されていない場合、精度の値は、全体の有効桁数を決定します。 `resetiosflags` マニピュレーターは、これらのフラグをオフにします。
+この場合も、小数点以下 1 桁まで出力されます。 いずれか`ios::fixed`または`ios::scientific`が設定された場合、有効桁数の値は、小数点より後の桁数を決定します。 どちらのフラグも設定されていない場合、精度の値は、全体の有効桁数を決定します。 `resetiosflags` マニピュレーターは、これらのフラグをオフにします。
 
 ## <a name="vclrfradixanchor6"></a> 基数
 
-**dec**、**oct**、および **hex** マニピュレーターは、入力と出力の既定の基数を設定します。 たとえば、**hex** マニピュレーターを出力ストリームに挿入すると、オブジェクトは整数の内部データ表記を 16 進数の形式に正しく変換して出力します。 数値は、[uppercase](../standard-library/ios-functions.md#uppercase) フラグがオフの場合 (既定)、a から f 桁が小文字で表示されます。それ以外の場合は、大文字で表示されます。 既定の基数は **dec** (10 進数) です。
+`dec`、 `oct`、および`hex`マニピュレーターは、入力と出力の既定の基数を設定します。 挿入する場合など、`hex`マニピュレーターを出力ストリーム オブジェクトに正しく変換して整数の内部データ表記を 16 進数の出力形式にします。 数値は、[uppercase](../standard-library/ios-functions.md#uppercase) フラグがオフの場合 (既定)、a から f 桁が小文字で表示されます。それ以外の場合は、大文字で表示されます。 既定の基数は`dec`(10 進数)。
 
 ## <a name="quoted-strings-c14"></a>引用符で囲まれた文字列 (C++14)
 
@@ -210,13 +211,13 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-この動作は、手動で克服できますが、文字列のラウンド トリップの方が便利な c++ 14 を作成するには追加、`std::quoted`ストリーム マニピュレーター \<iomanip >。 `quoted()` は、挿入時に文字列を区切り記号 (既定では二重引用符 (")) で囲み、抽出時に終わりの区切り記号までのすべての文字を抽出するストリームを操作します。 埋め込まれた引用符は、エスケープ文字 (既定では '\\\\') でエスケープされます。
+この動作は、手動で克服できますが、文字列のラウンド トリップをより便利な c++ 14 を追加、`std::quoted`ストリーム マニピュレーター \<iomanip >。 `quoted()` は、挿入時に文字列を区切り記号 (既定では二重引用符 (")) で囲み、抽出時に終わりの区切り記号までのすべての文字を抽出するストリームを操作します。 埋め込まれた引用符は、エスケープ文字 (既定では '\\\\') でエスケープされます。
 
-区切り記号は、ストリーム オブジェクト内でのみ表示抽出された文字列で存在しないが、によって返される文字列に存在する[basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)です。
+区切り記号はストリーム オブジェクトにのみ存在します。抽出された文字列では表示されませんが、によって返される文字列に含まれている[basic_stringstream:](../standard-library/basic-stringstream-class.md#str)します。
 
 挿入演算子と抽出演算子の空白の処理は、コード内での文字列の表記方法に依存しません。そのため、入力文字列が未加工の文字列リテラルであるか、標準の文字列であるかにかかわらず、quoted 演算子は便利です。 埋め込みの引用符、改行、タブなどが含まれる入力文字列は、書式にかかわらず、quoted() マニピュレーターで保持されます。
 
-詳細と完全なコード例については、次を参照してください。[引用符で囲まれた](../standard-library/iomanip-functions.md#quoted)です。
+詳細と完全なコード例については、次を参照してください。[引用符で囲まれた](../standard-library/iomanip-functions.md#quoted)します。
 
 ## <a name="see-also"></a>関連項目
 

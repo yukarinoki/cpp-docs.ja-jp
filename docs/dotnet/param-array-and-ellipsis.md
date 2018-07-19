@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158522"
 ---
 # <a name="param-array-and-ellipsis"></a>パラメーター配列と省略記号
 オーバー ロードされた関数の呼び出しを解決するためのパラメーター配列の優先順位は、Visual C を c++ マネージ拡張から変更されました。  

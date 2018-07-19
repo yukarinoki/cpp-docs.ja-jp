@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334296"
 ---
 # <a name="accessing-file-status"></a>ファイルの状態の操作
 `CFile` サポートしているファイルの状態のファイルが存在するかどうかなど、作成と変更の日付と時間、論理サイズ、およびパスを取得します。  

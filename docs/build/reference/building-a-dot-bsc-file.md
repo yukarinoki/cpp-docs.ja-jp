@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369007"
 ---
 # <a name="building-a-bsc-file"></a>.bsc ファイルのビルド
 BSCMAKE では、新しく作成された .sbr ファイルから新しいブラウザー情報ファイルを作成できます。 前回のビルド以降に変更されたオブジェクト ファイルの .sbr ファイルを使用して既存の .bsc ファイルを管理することもできます。  

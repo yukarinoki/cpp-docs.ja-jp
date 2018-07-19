@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384373"
 ---
 # <a name="incomplete-types"></a>不完全な型
 不完全な型とは、識別子を記述する型でありながら、識別子のサイズを決定するために必要な情報が欠けている型です。 "不完全な型" には次のようなものがあります。  

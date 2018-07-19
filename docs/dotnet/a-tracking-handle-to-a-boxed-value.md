@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108288"
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>追跡ハンドルからボックス化変換された値へ
 値型を参照する追跡ハンドルの使用法は、Visual C を c++ マネージ拡張から変更されました。  

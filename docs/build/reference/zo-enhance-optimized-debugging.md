@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380276"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (最適化されたデバッグ機能の強化)
 非デバッグ ビルドで最適化されたコードに関する拡張デバッグ情報を生成します。  

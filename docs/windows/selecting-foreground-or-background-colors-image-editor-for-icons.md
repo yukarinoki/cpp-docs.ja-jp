@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888647"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>前景色または背景色の選択 (アイコン用イメージ エディター)
 を除き、**消しゴム**、上のツールを**イメージ エディター**ツールバー描画ボタンを押す、マウスの左または右に、それぞれ現在前景色または背景色を使用します。  

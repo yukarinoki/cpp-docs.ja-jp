@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088468"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC とデータベース クラス
 MFC ODBC データベース クラスは、通常行う自分で、メンバー内の関数、ODBC API 関数呼び出しをカプセル化する、 [CDatabase](../../mfc/reference/cdatabase-class.md)と[CRecordset](../../mfc/reference/crecordset-class.md)クラスです。 たとえば、複雑な odbc 呼び出し、記憶域の場所、エラー状態の処理およびその他の操作に返されるレコードのバインドは管理するデータベース クラスでされます。 その結果、かなりシンプルなインターフェイスとクラスを使用して、レコード セット オブジェクトを使用してレコードを操作します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290671"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>コンパイラの警告 (レベル 2) C4396
 "name": フレンド宣言が関数の特殊化を参照している場合、テンプレートのインライン指定子を使用できません  

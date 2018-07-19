@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931610"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX コントロール : カスタム プロパティ ページの追加
 場合によっては、ActiveX コントロールは、1 つのプロパティ ページに収まることにかなり多くのプロパティがあります。 この場合、これらのプロパティを表示する ActiveX コントロールにプロパティ ページを追加できます。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  展開して、**ダイアログ**ノード、および選択**IDD_OLE_PROPPAGE_SMALL**です。  
   
-4.  をクリックして`New`をプロジェクトにリソースを追加します。  
+4.  をクリックして**新規**をプロジェクトにリソースを追加します。  
   
 5.  [プロパティ] ウィンドウを更新する新しいプロパティ ページのテンプレートを選択します。  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- 2 番目のパラメーターを大きく必要がありますに注意してください、 `BEGIN_PROPPAGEIDS` 2 の 1 からマクロ (プロパティのページ数)。  
+ 2 を 1 から BEGIN_PROPPAGEIDS マクロ (プロパティのページ数) の 2 番目のパラメーターを大きく必要がありますに注意してください。  
   
  また、コントロール実装ファイルを変更する必要があります (です。ヘッダーをインクルードする CPP) ファイル (です。H)、新しいプロパティ ページ クラスのファイルです。  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 05/04/2018
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  コンス トラクターを変更`CAddtlPropPage`ように**IDS_SAMPLE_ADDPPG_CAPTION**に渡される、`COlePropertyPage`コンス トラクターで、次のようにします。  
+7.  コンス トラクターを変更`CAddtlPropPage`IDS_SAMPLE_ADDPPG_CAPTION に渡されるように、`COlePropertyPage`コンス トラクターで、次のようにします。  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

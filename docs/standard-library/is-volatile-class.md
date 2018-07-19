@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda5485fee6ae0d8a7de8c9212e7e27c76f430ae
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8e3ec18d00c50db29c6a08956d4c3375a4dc7ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962385"
 ---
 # <a name="isvolatile-class"></a>is_volatile クラス
 
@@ -36,11 +37,11 @@ struct is_volatile;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`Ty` が `volatile-qualified` の場合、型述語のインスタンスは true を保持します。
+場合、型述語のインスタンスは true を保持*Ty*は`volatile-qualified`します。
 
 ## <a name="example"></a>例
 
@@ -78,7 +79,7 @@ is_volatile<int> == false
 is_volatile<volatile int> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

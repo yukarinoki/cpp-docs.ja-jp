@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384399"
 ---
 # <a name="customizing-c-command-line-processing"></a>コマンド ライン パラメーターの処理
 プログラムがコマンド ラインの引数を受け取らない場合は、コマンド ライン処理を実行するライブラリ ルーチンの使用を制約することで、領域を節約できます。 このルーチンは、「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」で説明されているように、**_setargv** (ワイド文字環境では **_wsetargv**) と呼ばれます。 使用を抑制するには、**main** 関数を含むファイルの中に何も実行しないルーチンを定義し、**_setargv** (ワイド文字環境の場合は **_wsetargv**) という名前を付けます。 これにより、**_setargv** または **_wsetargv** の呼び出しが **_setargv** または **_wsetargv** の定義によって満たされるため、ライブラリ バージョンは読み込まれません。  

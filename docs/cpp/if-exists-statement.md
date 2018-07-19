@@ -1,5 +1,5 @@
 ---
-title: _ _if_exists ステートメント |Microsoft ドキュメント
+title: _ _if_exists ステートメント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd86b1756de2aa33fafdd992033cb56ca86266f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943242"
 ---
 # <a name="ifexists-statement"></a>__if_exists ステートメント
-`__if_exists` ステートメントは、指定された識別子があるかどうかをテストします。 ID が存在する場合、指定されたステートメント ブロックが実行されます。  
+**_ _If_exists**ステートメントは、指定した識別子が存在するかどうかをテストします。 ID が存在する場合、指定されたステートメント ブロックが実行されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,27 +41,27 @@ statements
 |パラメーター|説明|  
 |---------------|-----------------|  
 |`identifier`|存在をテストしたい識別子。|  
-|`statements`|場合に実行する 1 つまたは複数のステートメント`identifier`が存在します。|  
+|`statements`|1 つ以上の場合に実行されるステートメント`identifier`存在します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  最も信頼できる結果を得るには、次の制約に基づいて `__if_exists` ステートメントを使用します。  
+>  最も信頼性の高い結果を実現するために使用して、 **_ _if_exists**次の制約の下のステートメント。  
   
--   テンプレートではなく、単純型にのみ `__if_exists` ステートメントを適用します。  
+-   適用、 **_ _if_exists**テンプレートではなく、唯一の単純型のステートメント。  
   
--   クラスの内部または外部の識別子に `__if_exists` ステートメントを適用します。 ローカル変数に `__if_exists` ステートメントを適用しないでください。  
+-   適用、 **_ _if_exists**ステートメントの内部または外部クラスの識別子。 適用されません、 **_ _if_exists**ローカル変数にステートメント。  
   
--   `__if_exists` ステートメントは関数の本体でのみ使用します。 関数本体の外側では、`__if_exists` ステートメントは完全に定義された型のみテストできます。  
+-   使用して、 **_ _if_exists**関数の本体でのみステートメント。 関数の本文の外側、 **_ _if_exists**ステートメントは、型を完全に定義のみをテストできます。  
   
 -   オーバーロードされた関数をテストする場合、特定の形式のオーバーロードはテストできません。  
   
- 補完する、`__if_exists`ステートメントは、 [_ _if_not_exists](../cpp/if-not-exists-statement.md)ステートメントです。  
+ 補完する、 **_ _if_exists**ステートメントは、 [_ _if_not_exists](../cpp/if-not-exists-statement.md)ステートメント。  
   
 ## <a name="example"></a>例  
  この例ではテンプレートを使用していますが、これは推奨されません。  
   
-```  
+```cpp 
 // the__if_exists_statement.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -119,7 +120,7 @@ int main() {
   
 ## <a name="output"></a>出力  
   
-```  
+```Output  
 In X<T>::Dump()  
 In A::Dump()  
 In X<T>::Dump()  

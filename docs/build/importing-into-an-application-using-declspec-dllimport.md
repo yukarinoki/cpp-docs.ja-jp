@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368836"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>__declspec(dllimport) を使ったアプリケーションへのインポート
 あるプログラムが DLL によって定義されたパブリック シンボルを使うことを、シンボルをインポートすると言います。 ヘッダー ファイルを作成する場合でビルドする Dll を使用するアプリケーション使用の **_declspec**パブリック シンボルの宣言にします。 キーワード **_declspec**や .def ファイルをエクスポートするかどうかの動作、**方式**キーワード。  

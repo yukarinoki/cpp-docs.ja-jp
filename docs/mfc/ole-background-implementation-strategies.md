@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350498"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE の背景知識 : 実装の方法
 アプリケーションによっては、OLE サポートを追加するための 4 つの可能な実装戦略があります。  

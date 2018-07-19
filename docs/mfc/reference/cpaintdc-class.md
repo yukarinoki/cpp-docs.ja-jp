@@ -1,5 +1,5 @@
 ---
-title: CPaintDC クラス |Microsoft ドキュメント
+title: CPaintDC クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f83c36a9c1a0d334e3b4a75724521d5711123e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 119a4e1b39d86ef2d12565fd593ce2124cef5bd5
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848916"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC クラス
-デバイス コンテキスト クラスから派生[CDC](../../mfc/reference/cdc-class.md)です。  
+デバイス コンテキスト クラスから派生した[CDC](../../mfc/reference/cdc-class.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +44,7 @@ class CPaintDC : public CDC
   
 |名前|説明|  
 |----------|-----------------|  
-|[CPaintDC::CPaintDC](#cpaintdc)|構築、`CPaintDC`を指定した接続[CWnd](../../mfc/reference/cwnd-class.md)です。|  
+|[CPaintDC::CPaintDC](#cpaintdc)|構築、`CPaintDC`を指定した接続[CWnd](../../mfc/reference/cwnd-class.md)します。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -53,16 +54,16 @@ class CPaintDC : public CDC
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[CPaintDC::m_hWnd](#m_hwnd)|`HWND`先である`CPaintDC`オブジェクトをアタッチします。|  
+|[CPaintDC::m_hWnd](#m_hwnd)|この HWND`CPaintDC`オブジェクトがアタッチされています。|  
   
-## <a name="remarks"></a>コメント  
- 実行、 [cwnd::beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)構築時に、 [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)破棄時にします。  
+## <a name="remarks"></a>Remarks  
+ 実行、 [cwnd::beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)構築時に、 [CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)破棄時。  
   
- A`CPaintDC`オブジェクトに応答する場合にのみ使用できます、 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)メッセージ、通常の`OnPaint`メッセージ ハンドラー メンバー関数。  
+ A`CPaintDC`オブジェクトに応答する場合にのみ使用できます、 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)メッセージでは、通常、`OnPaint`メッセージ ハンドラー メンバー関数。  
   
- 使用する方法についての`CPaintDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)です。  
+ 使用しての詳細については`CPaintDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -71,55 +72,55 @@ class CPaintDC : public CDC
   
  `CPaintDC`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC  
- 構築、`CPaintDC`オブジェクトは、ペイントするため、アプリケーション ウィンドウを準備し、格納、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)構造体、[塗りつぶす対象となる](#m_ps)メンバー変数。  
+ 構築、`CPaintDC`オブジェクト、描画、アプリケーション ウィンドウを準備し、格納、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)構造体、[塗りつぶす対象となる](#m_ps)メンバー変数。  
   
 ```  
 explicit CPaintDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
- 指す、`CWnd`オブジェクトを`CPaintDC`オブジェクトが属しています。  
+ *我が物*  
+ 指す、`CWnd`先となるオブジェクト、`CPaintDC`オブジェクトが属しています。  
   
-### <a name="remarks"></a>コメント  
- 例外 (型の`CResourceException`) 場合にスローされますが、Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)呼び出しは失敗します。 デバイス コンテキストは、Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合に使用できない可能性があります。 アプリケーションは、共通のディスプレイ コンテキストで、Windows の特定の時点で利用可能なの 5 つに対して競合します。  
+### <a name="remarks"></a>Remarks  
+ 例外 (型の`CResourceException`) 場合にスローされる、Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)呼び出しは失敗します。 Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合は、デバイス コンテキストを使用しないことがあります。 アプリケーションは、共通のディスプレイ コンテキスト Windows の任意の時点でご利用いただけますの 5 つの競合します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CPaintDC::m_hWnd  
- `HWND`先である`CPaintDC`オブジェクトをアタッチします。  
+ `HWND`この`CPaintDC`オブジェクトがアタッチされています。  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>コメント  
- `m_hWnd` 保護された型の変数は、`HWND`です。  
+### <a name="remarks"></a>Remarks  
+ *m_hWnd* HWND の種類の保護された変数です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#98](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
 ##  <a name="m_ps"></a>  CPaintDC::m_ps  
- `m_ps` 型のパブリック メンバー変数は、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)です。  
+ `m_ps` 型のパブリック メンバー変数[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)します。  
   
 ```  
 PAINTSTRUCT m_ps;  
 ```  
   
-### <a name="remarks"></a>コメント  
- `PAINTSTRUCT`に渡され、記入するは[cwnd::beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)です。  
+### <a name="remarks"></a>Remarks  
+ `PAINTSTRUCT`に渡され、記入は[cwnd::beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)します。  
   
  `PAINTSTRUCT`に関連付けられているウィンドウのクライアント領域を塗りつぶすために、アプリケーションが使用される情報が含まれています、`CPaintDC`オブジェクト。  
   
- 使ってデバイス コンテキスト ハンドルにアクセスできることに注意してください、`PAINTSTRUCT`です。 ただしを使って直接ハンドルをアクセスすることができます、`m_hDC`メンバー変数を`CPaintDC`から継承`CDC`です。  
+ 使ってデバイス コンテキスト ハンドルにアクセスできることに注意してください、`PAINTSTRUCT`します。 ただしを使って直接ハンドルをアクセスすることができます、`m_hDC`メンバー変数を`CPaintDC`CDC から継承します。  
   
 ### <a name="example"></a>例  
-  例を参照して[CPaintDC::m_hWnd](#m_hwnd)です。  
+  例をご覧ください[CPaintDC::m_hWnd](#m_hwnd)します。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル MDI](../../visual-cpp-samples.md)   

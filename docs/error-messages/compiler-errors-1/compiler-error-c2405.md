@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195816"
 ---
 # <a name="compiler-error-c2405"></a>コンパイラ エラー C2405
 オフセットを含むを短い前方参照が正しくありません。  

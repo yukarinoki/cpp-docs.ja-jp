@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371997"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 /C オプションを指定していない限り、CL コンパイラは自動的にリンクを呼び出します。 CL は、いくつかのコマンド ライン オプションと引数をリンカーに制御を提供します。 次の表には、CL でリンクを制御する機能をまとめたものです。  

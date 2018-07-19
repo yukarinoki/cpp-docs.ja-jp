@@ -1,5 +1,5 @@
 ---
-title: 関数のインターフェイス |Microsoft ドキュメント
+title: ICommandSource インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,14 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ff57ec9deea4ff8b39e572d720ad7e0fdaa15dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 375d4135e4042abbd6aee6fc547640d78a33ce0d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335774"
 ---
-# <a name="icommandsource-interface"></a>関数のインターフェイス
-ユーザー コントロールにコマンド ソース オブジェクトから送信されたコマンドを管理します。  
+# <a name="icommandsource-interface"></a>ICommandSource インターフェイス
+ユーザー コントロールにコマンドのソース オブジェクトから送信されたコマンドを管理します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,29 +49,29 @@ interface class ICommandSource
   
 |名前|説明|  
 |----------|-----------------|  
-|[ICommandSource::AddCommandHandler](#addcommandhandler)|コマンド ソース オブジェクトに、コマンド ハンドラーを追加します。|  
-|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|コマンド ソース オブジェクトを一連のコマンド ハンドラーを追加します。|  
-|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|コマンド ソース オブジェクトを一連のユーザー インターフェイスのコマンドのメッセージ ハンドラーを追加します。|  
-|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|コマンド ソース オブジェクトには、ユーザー インターフェイスのコマンドのメッセージ ハンドラーを追加します。|  
-|[ICommandSource::PostCommand](#postcommand)|処理されるまで待つことがなく、メッセージをポストします。|  
+|[ICommandSource::AddCommandHandler](#addcommandhandler)|コマンド ソース オブジェクトには、コマンド ハンドラーを追加します。|  
+|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|コマンド ソース オブジェクトには、一連のコマンド ハンドラーを追加します。|  
+|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|コマンド ソース オブジェクトには、一連のユーザー インターフェイス コマンド メッセージ ハンドラーを追加します。|  
+|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|コマンド ソース オブジェクトには、ユーザー インターフェイス コマンド メッセージのハンドラーを追加します。|  
+|[ICommandSource::PostCommand](#postcommand)|処理するを待つことがなく、メッセージを送信します。|  
 |[ICommandSource::RemoveCommandHandler](#removecommandhandler)|コマンド ソース オブジェクトから、コマンド ハンドラーを削除します。|  
-|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|コマンド ソース オブジェクトから一連のコマンド ハンドラーを削除します。|  
-|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|コマンド ソース オブジェクトからのユーザー インターフェイスのコマンドのメッセージ ハンドラーのグループを削除します。|  
-|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|コマンド ソース オブジェクトからのユーザー インターフェイスのコマンドのメッセージ ハンドラーを削除します。|  
+|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|コマンド ソース オブジェクトから、コマンド ハンドラーのグループを削除します。|  
+|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|コマンド ソース オブジェクトからのユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。|  
+|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|コマンド ソース オブジェクトからのユーザー インターフェイス コマンド メッセージのハンドラーを削除します。|  
 |[ICommandSource::SendCommand](#sendcommand)|メッセージを送信し、返す前に処理されるまで待機します。|  
   
-### <a name="remarks"></a>コメント  
- MFC ビュー内のユーザー コントロールをホストしている場合[CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 実装することによって[し、ICommandTarget インターフェイス](../../mfc/reference/icommandtarget-interface.md)、ユーザー コントロールへの参照を提供する、`ICommandSource`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ MFC ビューでユーザー コントロールをホストするときに[CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 実装することによって[ICommandTarget インターフェイス](../../mfc/reference/icommandtarget-interface.md)、ユーザー コントロールへの参照を提供する、`ICommandSource`オブジェクト。  
   
- 参照してください[する方法: Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)の使用方法の例については`ICommandTarget`します。  
+ 参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。  
   
- Windows フォームを使用する方法については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)です。  
+ Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)  
   
 ## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
-コマンド ソース オブジェクトに、コマンド ハンドラーを追加します。
+コマンド ソース オブジェクトには、コマンド ハンドラーを追加します。
 ```
 void AddCommandHandler(
     unsigned int cmdID,
@@ -78,18 +79,18 @@ void AddCommandHandler(
 ```
 
 ### <a name="parameters"></a>パラメーター  
-`cmdID`  
+*cmdID*  
 コマンド ID。  
-`cmdHandler`  
+*cmdHandler*  
 コマンド ハンドラー メソッドへのハンドル。
 
-### <a name="remarks"></a>コメント
-このメソッドは、コマンド ソース オブジェクトにコマンド ハンドラー cmdHandler を追加し、cmdID ハンドラーにマップします。
-参照してください[する方法: Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)AddCommandHandler を使用する方法の例についてはします。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンド ソース オブジェクトにコマンド ハンドラーの cmdHandler を追加し、cmdID ハンドラーにマップします。
+参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)AddCommandHandler を使用する方法の例についてはします。
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
-コマンド ソース オブジェクトを一連のコマンド ハンドラーを追加します。
+コマンド ソース オブジェクトには、一連のコマンド ハンドラーを追加します。
 ```
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
@@ -97,17 +98,17 @@ void AddCommandRangeHandler(
     CommandHandler^ cmdHandler);
 ```
 ### <a name="parameters"></a>パラメーター  
-`cmdIDMin`  
-コマンド ID 範囲の開始インデックス。
-`cmdIDMax`  
-コマンド ID 範囲の終了インデックスです。
-`cmdHandler`  
-コマンドがマップされているメッセージ ハンドラー メソッドへのハンドル。
-### <a name="remarks"></a>コメント
-このメソッドは、1 つのメッセージ ハンドラーに連続した範囲のコマンド Id をマップし、コマンド ソース オブジェクトに追加します。 これは、は、1 つのメソッドを使用して関連するボタンのグループを処理するために使用されます。
+*cmdIDMin*  
+コマンドの ID 範囲の開始インデックス。
+*cmdIDMax*  
+コマンドの ID 範囲の終了インデックス。
+*cmdHandler*  
+コマンドがマップされているメッセージのハンドラー メソッドへのハンドル。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンド Id の連続する範囲を 1 つのメッセージ ハンドラーにマップし、コマンド ソース オブジェクトに追加します。 これは、1 つのメソッドを使用して関連するボタンのグループを処理するために使用されます。
 
 ## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
-コマンド ソース オブジェクトを一連のユーザー インターフェイスのコマンドのメッセージ ハンドラーを追加します。
+コマンド ソース オブジェクトには、一連のユーザー インターフェイス コマンド メッセージ ハンドラーを追加します。
 ```
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin, 
@@ -115,42 +116,42 @@ void AddCommandRangeUIHandler(
     CommandUIHandler^ cmdUIHandler);
 ```
 ### <a name="parameters"></a>パラメーター  
-`cmdIDMin`  
-コマンド ID 範囲の開始インデックス。
-`cmdIDMax`  
-コマンド ID 範囲の終了インデックスです。
-`cmdHandler`  
-コマンドがマップされているメッセージ ハンドラー メソッドへのハンドル。
+*cmdIDMin*  
+コマンドの ID 範囲の開始インデックス。
+*cmdIDMax*  
+コマンドの ID 範囲の終了インデックス。
+*cmdHandler*  
+コマンドがマップされているメッセージのハンドラー メソッドへのハンドル。
 
-### <a name="remarks"></a>コメント
-このメソッドは、1 人のユーザー インターフェイスのコマンドのメッセージ ハンドラーに連続した範囲のコマンド Id をマップし、コマンド ソース オブジェクトに追加します。 これは、は、1 つのメソッドを使用して関連するボタンのグループを処理するために使用されます。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンド Id の連続する範囲を 1 人のユーザー インターフェイス コマンド メッセージのハンドラーにマップし、コマンド ソース オブジェクトに追加します。 これは、1 つのメソッドを使用して関連するボタンのグループを処理するために使用されます。
 
 ## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
-コマンド ソース オブジェクトには、ユーザー インターフェイスのコマンドのメッセージ ハンドラーを追加します。
+コマンド ソース オブジェクトには、ユーザー インターフェイス コマンド メッセージのハンドラーを追加します。
 ```
 void AddCommandUIHandler(
     unsigned int cmdID, 
     CommandUIHandler^ cmdUIHandler);
 ```
 ### <a name="parameters"></a>パラメーター
-`cmdID`  
+*cmdID*  
 コマンド ID。  
-`cmdUIHandler`  
-ユーザー インターフェイスのコマンドのメッセージ ハンドラー メソッドへのハンドル。
+*cmdUIHandler*  
+ユーザー インターフェイス コマンド メッセージのハンドラー メソッドへのハンドル。
 
-### <a name="remarks"></a>コメント
-このメソッドは、コマンド ソース オブジェクトにユーザー インターフェイスのコマンドのメッセージ ハンドラー cmdHandler を追加し、cmdID ハンドラーにマップします。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンド ソース オブジェクトにユーザー インターフェイス コマンド メッセージ ハンドラー cmdHandler を追加し、cmdID ハンドラーにマップします。
 
 ## <a name="postcommand"></a> ICommandSource::PostCommand
-処理されるまで待つことがなく、メッセージをポストします。
+処理するを待つことがなく、メッセージを送信します。
 ```
 void PostCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>パラメーター
-`command`  
-メッセージをポストのコマンド ID。
-### <a name="remarks"></a>コメント
-このメソッドは、コマンドで指定した ID に割り当てられたメッセージを非同期的にポストします。 ウィンドウのメッセージ キューにメッセージを配置する CWnd::PostMessage を呼び出すし、対応するウィンドウ メッセージを処理するを待たずに戻ります。
+*command*  
+投稿するメッセージのコマンド ID。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンドで指定した ID にマップされているメッセージを非同期的にポストします。 ウィンドウのメッセージ キューにメッセージを配置する CWnd::PostMessage を呼び出し、対応するウィンドウ メッセージを処理するを待たずに戻ります。
 
 
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
@@ -159,52 +160,52 @@ void PostCommand(unsigned int command);
 void RemoveCommandHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>パラメーター
-`cmdID`  
+*cmdID*  
 コマンド ID。
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 このメソッドは、コマンド ソース オブジェクトから cmdID に割り当てられたコマンド ハンドラーを削除します。
 
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
-コマンド ソース オブジェクトから一連のコマンド ハンドラーを削除します。
+コマンド ソース オブジェクトから、コマンド ハンドラーのグループを削除します。
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>パラメーター
-`cmdIDMin`  
-コマンド ID 範囲の開始インデックス。
-`cmdIDMax`  
-コマンド ID 範囲の終了インデックスです。
-### <a name="remarks"></a>コメント
-このメソッドは、一連のコマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id を割り当て、メッセージのハンドラーを削除します。
+*cmdIDMin*  
+コマンドの ID 範囲の開始インデックス。
+*cmdIDMax*  
+コマンドの ID 範囲の終了インデックス。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id に割り当て、メッセージ ハンドラーのグループを削除します。
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
-コマンド ソース オブジェクトからのユーザー インターフェイスのコマンドのメッセージ ハンドラーのグループを削除します。
+コマンド ソース オブジェクトからのユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
 ### <a name="parameters"></a>パラメーター
-`cmdIDMin`  
-コマンド ID 範囲の開始インデックス。
-`cmdIDMax`  
-コマンド ID 範囲の終了インデックスです。
-### <a name="remarks"></a>コメント
-このメソッドは、一連のコマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id を割り当て、ユーザー インターフェイス コマンド メッセージ ハンドラーを削除します。
+*cmdIDMin*  
+コマンドの ID 範囲の開始インデックス。
+*cmdIDMax*  
+コマンドの ID 範囲の終了インデックス。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id に割り当て、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
-コマンド ソース オブジェクトからのユーザー インターフェイスのコマンドのメッセージ ハンドラーを削除します。
+コマンド ソース オブジェクトからのユーザー インターフェイス コマンド メッセージのハンドラーを削除します。
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 ### <a name="parameters"></a>パラメーター
-`cmdID`  
+*cmdID*  
 コマンド ID。
-### <a name="remarks"></a>コメント
-このメソッドは、コマンド ソース オブジェクトから cmdID に割り当てられたユーザー インターフェイスのコマンドのメッセージ ハンドラーを削除します。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンド ソース オブジェクトから cmdID に割り当てられたユーザー インターフェイス コマンドのメッセージ ハンドラーを削除します。
 
 ## <a name="sendcommand"></a> ICommandSource::SendCommand 
 メッセージを送信し、返す前に処理されるまで待機します。
@@ -212,10 +213,10 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 void SendCommand(unsigned int command);
 ```
 ### <a name="parameters"></a>パラメーター
-`command`  
+*command*  
 送信されるメッセージのコマンド ID。
-### <a name="remarks"></a>コメント
-このメソッドは、コマンドで指定した ID に割り当てられたメッセージを同期的に送信します。 ウィンドウのメッセージ キューにメッセージを配置する CWnd::SendMessage を呼び出すし、そのウィンドウ プロシージャが返す前にメッセージを処理するまで待機します。
+### <a name="remarks"></a>Remarks
+このメソッドは、コマンドで指定した ID にマップされているメッセージを同期的に送信します。 そのウィンドウ プロシージャが返す前にメッセージを処理するまで待機し、ウィンドウのメッセージ キューにメッセージを配置する CWnd::SendMessage の呼び出し。
 ## <a name="see-also"></a>関連項目  
- [方法: コマンドの追加にルーティングする Windows フォーム コントロール](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+ [方法: コマンドを追加するコントロールをフォーム、Windows へのルーティング](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [ICommandTarget インターフェイス](../../mfc/reference/icommandtarget-interface.md)

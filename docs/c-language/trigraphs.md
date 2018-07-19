@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389957"
 ---
 # <a name="trigraphs"></a>トライグラフ
 C ソース プログラムのソース文字セットは 7 ビットの ASCII 文字セット内に含まれますが、ISO 646-1983 Invariant Code Set のスーパーセットです。 トライグラフ シーケンスでは、ISO (国際標準化機構) の Invariant Code Set のみを使用して C プログラムを記述できます。 トライグラフは、2 つの連続する疑問符で始まる 3 文字のシーケンスで、これがコンパイラにより対応する区切り文字に置き換えられます。 トライグラフは、一部の区切り文字に対応する適切なグラフィック表示がない文字セットを含む C ソース ファイルで使用できます。  

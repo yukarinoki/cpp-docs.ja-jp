@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391901"
 ---
 # <a name="structure-declarations"></a>構造体宣言
 "構造体宣言" では、型に名前を付け、異なる型を持つことのできる変数値のシーケンス (構造体の "メンバー" または "フィールド" と呼びます) を指定します。 "タグ" と呼ばれる省略可能な識別子で構造体の型に名前を付けると、その後はタグを使用してその構造体型を参照できます。 構造体型の変数は、その型で定義されているシーケンス全体を保持します。 C の構造体は、他の言語で "レコード" と呼ばれる型に似ています。  

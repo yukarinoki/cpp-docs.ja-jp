@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408368"
 ---
 # <a name="setjmp3"></a>_setjmp3
 内部 CRT 関数。 `setjmp` 関数の新しい実装。  

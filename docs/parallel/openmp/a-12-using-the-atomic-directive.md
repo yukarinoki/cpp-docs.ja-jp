@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691413"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12 atomic ディレクティブの使用
 次の例は、競合状態を回避できます (の要素の同時更新*x*複数のスレッドで) を使用して、`atomic`ディレクティブ ([セクション 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) 19 ページ上)。  

@@ -1,7 +1,7 @@
 ---
 title: C++ におけるマーシャ リングの概要 |Microsoft ドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,15 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079161"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ におけるマーシャリングの概要
-混合モードでは、ネイティブ型とマネージ型の間でデータをマーシャリングすることが必要な場合があります。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] は、単純な方法でデータをマーシャリングして変換できるようにするためのマーシャリング ライブラリを導入しました。  
-  
+混合モードでは、ネイティブ型とマネージ型の間でデータをマーシャリングすることが必要な場合があります。 Visual Studio 2008 が導入された、*マーシャ リング ライブラリ*のためをマーシャ リングし、単純な方法でデータを変換します。  マーシャ リング ライブラリは一連の関数と`marshal_context`一般的な種類のマーシャ リングを実行するクラス。 これらのヘッダー内で、ライブラリが定義されている、**含める/msclr**ディレクトリを Visual Studio のエディション。
+
+|Header|説明|  
+|---------------|-----------------|
+|marshal.h|`marshal_context` クラスとマーシャ リングの関数のコンテキストに依存しません。|
+|marshal_atl.h| ATL 型のマーシャ リング関数|
+|marshal_cppstd.h|標準 C++ 型をマーシャ リングするための関数|
+|marshal_windows.h|Windows の型をマーシャ リングするための関数|
+
+
+既定のパス**msclr**フォルダーは、次のようにいずれかのエディションに応じてがあり、ビルド番号。
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
  マーシャ リング ライブラリを使用するには、有無、 [marshal_context クラス](../dotnet/marshal-context-class.md)です。 一部の変換では、コンテキストが必要です。 使用して、その他の変換を実装することができます、 [marshal_as](../dotnet/marshal-as.md)関数。 次の表は、現在サポートされている変換と、コンテキストが必要かどうか、含める必要があるマーシャリング ファイルを示しています。  
   
 |変換前の型|変換後の型|マーシャリング メソッド|インクルード ファイル|  
@@ -61,7 +76,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  文字列に `NULL` が埋め込まれている場合、文字列のマーシャリング結果は保証されません。 埋め込まれた `NULL` により、文字列が切り詰められたり残されたりする場合があります。  
   
- マーシャリング ライブラリ ヘッダーは、インクルード ディレクトリの msclr サブディレクトリにあります。 次の例では、インクルード ヘッダー宣言で msclr ディレクトリをインクルードする方法を示しています。  
+次の例では、インクルード ヘッダー宣言で msclr ディレクトリをインクルードする方法を示しています。  
   
  `#include "msclr\marshal_cppstd.h"`  
   

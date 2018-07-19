@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379230"
 ---
 # <a name="relationship-to-the-c-language-api"></a>C 言語 API との関係
 Windows の他のクラス ライブラリとは別に、Microsoft Foundation Class (MFC) ライブラリを設定する特性の 1 つは、C 言語で記述された Windows API に非常に類似のマッピングです。 さらを混在させることが呼び出し、クラス ライブラリを自由に Windows API に直接の呼び出しをします。 この直接アクセス、ただしを意味しませんクラスが対象となる API の完全な置換です。 開発者がなど一部の Windows 関数への直接呼び出しを行う場合によってはまだ必要があります[以前](http://msdn.microsoft.com/library/windows/desktop/ms648393)と[問題](http://msdn.microsoft.com/library/windows/desktop/ms724385)、例を示します。 Windows の機能は、する作業は、明確な利点がある場合にのみ、クラス メンバー関数によってラップされます。  

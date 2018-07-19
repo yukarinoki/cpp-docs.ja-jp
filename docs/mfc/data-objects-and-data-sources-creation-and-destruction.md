@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931877"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>データ オブジェクトとデータ ソース : 作成と破棄
 アーティクルの説明に従って[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)、データ オブジェクトとデータ ソースは、データ転送の両側を表します。 ここでは、データ転送を正しく実行するために、これらのオブジェクトとソースをいつ作成し、いつ破棄するかについて説明します。  
@@ -71,14 +72,14 @@ ms.lasthandoff: 05/04/2018
   
 5.  アプリケーションは、手順 3. で作成したオブジェクトに属する `SetClipboard` メンバー関数 (またはドラッグ アンド ドロップ操作の場合は `DoDragDrop` メンバー関数) を呼び出します。  
   
-6.  この場合、**切り取り**操作または`DoDragDrop`を返します`DROPEFFECT_MOVE`、手順 1. で選択したデータは、ドキュメントから削除します。  
+6.  この場合、**切り取り**操作または`DoDragDrop`を返します**行った**、手順 1. で選択したデータは、ドキュメントから削除します。  
   
  このシナリオは、MFC OLE サンプルで実装されて[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)です。 `GetClipboardData` 関数と `OnGetClipboardData` 関数を除くすべてについて、各アプリケーションの `CView` から派生したクラスのソースを確認してください。 これらの 2 つの関数は、`COleClientItem` または `COleServerItem` から派生したクラスの実装に含まれています。 これらのサンプル プログラムでは、これらの概念を実装する方法の良い例を示しています。  
   
  さらに、ドラッグ アンド ドロップ操作の既定の動作を変更する場合にも、`COleDataSource` オブジェクトの作成が必要になることがあります。 詳細については、次を参照してください。、[ドラッグ アンド ドロップ: カスタマイズ](../mfc/drag-and-drop-customizing.md)資料です。  
   
 ##  <a name="_core_destroying_data_sources"></a> データ ソースの破棄  
- データ ソースは、現在データ ソースを管理しているアプリケーションによって破棄する必要があります。 OLE にデータ ソースを配信する場合、呼び出しなど[された](../mfc/reference/coledatasource-class.md#dodragdrop)、呼び出す必要がある**pDataSrc InternalRelease]-> [** です。 例えば:  
+ データ ソースは、現在データ ソースを管理しているアプリケーションによって破棄する必要があります。 OLE にデータ ソースを配信する場合、呼び出しなど[された](../mfc/reference/coledatasource-class.md#dodragdrop)、呼び出す必要がある`pDataSrc->InternalRelease`です。 例えば:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

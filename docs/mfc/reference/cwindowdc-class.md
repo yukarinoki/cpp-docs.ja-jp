@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b757da27f2b4ae79a0192df0598f833b3d1e7b9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121543"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC クラス
 `CDC`の派生クラスです。  
@@ -45,11 +46,11 @@ class CWindowDC : public CDC
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
-|[CWindowDC::m_hWnd](#m_hwnd)|`HWND` の割り当て先である `CWindowDC`。|  
+|[CWindowDC::m_hWnd](#m_hwnd)|この HWND`CWindowDC`がアタッチされています。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Windows の関数を呼び出す[GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947\(v=vs.85\).aspx)構築時と[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920\(v=vs.85\).aspx)破棄時にします。 つまり、`CWindowDC`オブジェクト アクセスの全画面領域、 [CWnd](../../mfc/reference/cwnd-class.md) (クライアントおよび非クライアント領域の両方)。  
   
  使用する方法についての`CWindowDC`を参照してください[デバイス コンテキスト](../../mfc/device-contexts.md)です。  
@@ -61,21 +62,21 @@ class CWindowDC : public CDC
   
  `CWindowDC`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  ヘッダー: afxwin.h  
   
 ##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
- 構築、 `CWindowDC` 、画面全体 (クライアントと非クライアントの両方) の領域にアクセスするオブジェクト、`CWnd`によって指されるオブジェクト`pWnd`です。  
+ 構築、 `CWindowDC` 、画面全体 (クライアントと非クライアントの両方) の領域にアクセスするオブジェクト、`CWnd`によって指されるオブジェクト*pWnd*です。  
   
 ```  
 explicit CWindowDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  デバイス コンテキスト オブジェクトがアクセス クライアント領域を持つウィンドウです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コンス トラクターは、Windows の関数を呼び出します。 [GetWindowDC](http://msdn.microsoft.com/library/windows/desktop/dd144947)です。  
   
  例外 (型の`CResourceException`) 場合にスローされますが、Windows`GetWindowDC`呼び出しは失敗します。 デバイス コンテキストは、Windows が既に割り当てられているすべての利用可能なデバイス コンテキストの場合に使用できない可能性があります。 アプリケーションは、共通のディスプレイ コンテキストで、Windows の特定の時点で利用可能なの 5 つに対して競合します。  
@@ -84,14 +85,14 @@ explicit CWindowDC(CWnd* pWnd);
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
 ##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
- `HWND`の`CWnd`ポインターが構築するために使用される、`CWindowDC`オブジェクト。  
+ HWND、`CWnd`ポインターが構築するために使用される、`CWindowDC`オブジェクト。  
   
 ```  
 HWND m_hWnd;  
 ```  
   
-### <a name="remarks"></a>コメント  
- `m_hWnd` 保護された型の変数は、`HWND`です。  
+### <a name="remarks"></a>Remarks  
+ `m_hWnd` HWND の種類の保護されている変数。  
   
 ### <a name="example"></a>例  
   例を参照して[CWindowDC::CWindowDC](#cwindowdc)です。  

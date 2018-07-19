@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090287"
 ---
 # <a name="data-access-programming-mfcatl"></a>データ アクセス プログラミング (MFC/ATL)
 長年にわたって、Visual C ++ ではデータベースを操作するいくつかの方法を提供してきました。 2011 年に Microsoft は、ネイティブ コードから SQL Server 製品にアクセスするのに望ましいテクノロジである ODBC に合わせて調整中であると発表しました。 ODBC は業界標準であり、これを使用することで、複数のプラットフォームおよびデータ ソースでのコードの最大の移植性が得られます。 ほとんどの SQL データベース製品および多くの NoSQL 製品で ODBC がサポートされます。 ODBC は、低レベルの ODBC API を呼び出して直接使用できます。あるいは、MFC ODBC ラッパー クラス、またはサードパーティの C++ ラッパー ライブラリを使用することもできます。 

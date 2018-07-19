@@ -29,11 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f5d1475412de736970d0ae36a39540121bfbc01
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930716"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX コントロール: フォントの使用
 ActiveX コントロールには、テキストが表示されている場合は、フォントのプロパティを変更することによってテキストの外観を変更するコントロールのユーザーを許可できます。 フォントのプロパティは、フォント オブジェクトとして実装され、2 種類のいずれかになります。 株価またはカスタムです。 ストック フォント プロパティはあらかじめ実装されているフォント プロパティの追加ウィザードを使用して追加することができます。 カスタム フォントのプロパティがあらかじめ実装されていないと、コントロールの開発者は、プロパティの動作と使用状況を判断します。  
@@ -136,11 +137,11 @@ ActiveX コントロールには、テキストが表示されている場合は
   
 8.  **[完了]** をクリックします。  
   
- プロパティの追加ウィザードを追加するコードを作成、`HeadingFont`カスタム プロパティを`CSampleCtrl`クラスと、サンプルです。IDL ファイルです。 `HeadingFont`取得/設定プロパティの型は、プロパティの追加ウィザードは、`CSampleCtrl`クラスのディスパッチ マップに含める、 `DISP_PROPERTY_EX_ID` [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)マクロ エントリ。  
+ プロパティの追加ウィザードを追加するコードを作成、`HeadingFont`カスタム プロパティを`CSampleCtrl`クラスと、サンプルです。IDL ファイルです。 `HeadingFont`取得/設定プロパティの型は、プロパティの追加ウィザードは、`CSampleCtrl`クラスのディスパッチ マップに含める、DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex)マクロ エントリ。  
   
  [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]  
   
- `DISP_PROPERTY_EX`マクロ関連付けます、`HeadingFont`プロパティ名をそれに対応する`CSampleCtrl`Get し、Set メソッドをクラス`GetHeadingFont`と`SetHeadingFont`です。 プロパティ値の型が指定されてもです。この場合、 **VT_FONT**です。  
+ DISP_PROPERTY_EX マクロ関連付けます、`HeadingFont`プロパティ名をそれに対応する`CSampleCtrl`Get し、Set メソッドをクラス`GetHeadingFont`と`SetHeadingFont`です。 プロパティ値の型が指定されてもです。この場合、VT_FONT です。  
   
  また、プロパティの追加ウィザードは、コントロール ヘッダー ファイルで宣言を追加 (です。H) の`GetHeadingFont`と`SetHeadingFont`機能し、コントロール実装ファイル内の関数テンプレートを追加します (です。CPP):  
   
@@ -159,11 +160,11 @@ ActiveX コントロールには、テキストが表示されている場合は
   
  コントロール実装ファイル内 (です。CPP)、次の操作を行います。  
   
--   初期化`m_fontHeading`コントロール コンス トラクターでします。  
+-   初期化*取り上げた*コントロール コンス トラクターでします。  
   
      [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]  
   
--   静的な宣言**FONTDESC**フォントの既定の属性を含む構造体。  
+-   フォントの既定の属性を含む静的 FONTDESC 構造体を宣言します。  
   
      [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]  
   
@@ -191,27 +192,27 @@ ActiveX コントロールには、テキストが表示されている場合は
   
      [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]  
   
- カスタムのフォント プロパティを実装すると、後に、標準のフォント プロパティ ページを実装するコントロール ユーザーがコントロールの現在のフォントを変更できるようにします。 標準のフォント プロパティ ページのプロパティ ページの ID を追加するには、後に、次の行を挿入、`BEGIN_PROPPAGEIDS`マクロ。  
+ カスタムのフォント プロパティを実装すると、後に、標準のフォント プロパティ ページを実装するコントロール ユーザーがコントロールの現在のフォントを変更できるようにします。 標準のフォント プロパティ ページのプロパティ ページの ID を追加するには、BEGIN_PROPPAGEIDS マクロの後に、次の行を挿入します。  
   
  [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]  
   
- また、 `BEGIN_PROPPAGEIDS` マクロのカウント パラメーターの値を 1 つ増やす必要があります。 次の行に例を示します。  
+ BEGIN_PROPPAGEIDS マクロのカウント パラメーターは、いずれかによっても増やす必要があります。 次の行に例を示します。  
   
  [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]  
   
  これらの変更が完了したら、追加の機能を組み込むプロジェクト全体を再構築します。  
   
 ###  <a name="_core_processing_font_notifications"></a> フォントの通知の処理  
- ほとんどの場合、コントロールは、オブジェクトの特性、フォントが変更された際に知っておく必要があります。 フォントの各オブジェクトがのメンバー関数を呼び出すことによって変更するときに通知を提供できる、**個別**によって実装されるインターフェイス`COleControl`です。  
+ ほとんどの場合、コントロールは、オブジェクトの特性、フォントが変更された際に知っておく必要があります。 フォントの各オブジェクトがのメンバー関数を呼び出すことによって変更するときに通知を提供できる、`IFontNotification`によって実装されるインターフェイス`COleControl`です。  
   
- 通知の処理、コントロールは、ストック フォント プロパティを使用している場合、`OnFontChanged`のメンバー関数`COleControl`です。 カスタム フォントのプロパティを追加すると、同じ実装を使用することができます。 例では、前のセクションで、渡すことによってこれが (& a)**トラクター**初期化するときに、**取り上げた**メンバー変数。  
+ 通知の処理、コントロールは、ストック フォント プロパティを使用している場合、`OnFontChanged`のメンバー関数`COleControl`です。 カスタム フォントのプロパティを追加すると、同じ実装を使用することができます。 例では、前のセクションで、渡すことによってこれが (& a)*トラクター*初期化するときに、*取り上げた*メンバー変数。  
   
  ![複数のフォント オブジェクト インターフェイスを実装する](../mfc/media/vc373q1.gif "vc373q1")  
 複数のフォント オブジェクト インターフェイスの実装  
   
- 両方のフォント オブジェクトが同じ実装を使用している前の図では、純色の線を表示する**個別**です。 これにより、どのフォントが変更を区別する場合は問題が発生する可能性があります。  
+ 両方のフォント オブジェクトが同じ実装を使用している前の図では、純色の線を表示する`IFontNotification`です。 これにより、どのフォントが変更を区別する場合は問題が発生する可能性があります。  
   
- コントロールのフォント オブジェクトの通知を区別するために 1 つの方法はの別々 の実装を作成する、**個別**コントロール内の各フォント オブジェクト インターフェイスです。 この手法では、文字列、または最近変更されたフォントを使用する文字列のみを更新することで、描画コードを最適化することができます。 次のセクションでは、2 番目のフォント プロパティを別の通知インターフェイスを実装するために必要な手順を示します。 2 番目のフォント プロパティを想定する、`HeadingFont`前のセクションで追加されたプロパティ。  
+ コントロールのフォント オブジェクトの通知を区別するために 1 つの方法はの別々 の実装を作成する、`IFontNotification`コントロール内の各フォント オブジェクト インターフェイスです。 この手法では、文字列、または最近変更されたフォントを使用する文字列のみを更新することで、描画コードを最適化することができます。 次のセクションでは、2 番目のフォント プロパティを別の通知インターフェイスを実装するために必要な手順を示します。 2 番目のフォント プロパティを想定する、`HeadingFont`前のセクションで追加されたプロパティ。  
   
 ###  <a name="_core_implementing_a_new_font_notification_interface"></a> 新しいフォント通知インターフェイスを実装します。  
  2 つまたは複数のフォントの通知を区別するには、コントロールで使用される各フォントの新しい通知インターフェイスを実装する必要があります。 次のセクションでは、コントロールのヘッダーと実装ファイルを変更することで新しいフォント通知インターフェイスを実装する方法について説明します。  
@@ -224,11 +225,11 @@ ActiveX コントロールには、テキストが表示されている場合は
  これの実装を作成、`IPropertyNotifySink`と呼ばれるインターフェイス`HeadingFontNotify`です。 この新しいインターフェイスには、呼び出されたメソッドが含まれています。`OnChanged`です。  
   
 ### <a name="additions-to-the-implementation-file"></a>実装ファイルへの追加  
- コントロールのコンス トラクター) の「見出しのフォントを初期化するコードで次のように変更します。`&m_xFontNotification`に`&m_xHeadingFontNotify`です。 次のコードを追加し、します。  
+ 見出しのフォントでコントロールのコンス トラクター) を初期化するコードで次のように変更します。 (& a)*トラクター*する (& a)*m_xHeadingFontNotify*です。 次のコードを追加し、します。  
   
  [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]  
   
- `AddRef`と`Release`内のメソッド、`IPropertyNotifySink`インターフェイスの追跡、ActiveX コントロール オブジェクトの参照カウントします。 コントロールは、インターフェイス ポインターへのアクセスを取得する場合、コントロールは`AddRef`参照カウントをインクリメントします。 呼び出し、ポインターを持つコントロールが完了したら、 `Release`、同様の方法**GlobalFree**グローバル メモリ ブロックを解放するために呼び出す可能性があります。 このインターフェイスの参照カウントがゼロになる、インターフェイスの実装を解放することができます。 この例では、`QueryInterface`へのポインターを返します、`IPropertyNotifySink`特定のオブジェクトのインターフェイスです。 この関数は、ActiveX コントロールをサポートするインターフェイスを決定するオブジェクトを照会できます。  
+ `AddRef`と`Release`内のメソッド、`IPropertyNotifySink`インターフェイスの追跡、ActiveX コントロール オブジェクトの参照カウントします。 コントロールは、インターフェイス ポインターへのアクセスを取得する場合、コントロールは`AddRef`参照カウントをインクリメントします。 呼び出し、ポインターを持つコントロールが完了したら、 `Release`、同様の方法`GlobalFree`グローバル メモリ ブロックを解放するために呼び出す可能性があります。 このインターフェイスの参照カウントがゼロになる、インターフェイスの実装を解放することができます。 この例では、`QueryInterface`へのポインターを返します、`IPropertyNotifySink`特定のオブジェクトのインターフェイスです。 この関数は、ActiveX コントロールをサポートするインターフェイスを決定するオブジェクトを照会できます。  
   
  これらの変更が行われた後、プロジェクトにプロジェクトをリビルドし、インターフェイスをテストするテスト コンテナーを使用します。 Test Container にアクセスする方法について詳しくは、「 [テスト コンテナーでのプロパティとイベントのテスト](../mfc/testing-properties-and-events-with-test-container.md) 」をご覧ください。  
   

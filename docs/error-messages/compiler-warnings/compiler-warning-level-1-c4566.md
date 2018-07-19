@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284226"
 ---
 # <a name="compiler-warning-level-1-c4566"></a>コンパイラの警告 (レベル 1) C4566
 ユニバーサル文字名 'char' で表される文字は、現在のコード ページ (ページ) で表されることはできません。  

@@ -50,15 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dc91bebf55c617d5c18d86d308558e57cbd3c3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9ea6f4a5770163ddaa34478f6630ed2a24ffbd6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954969"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf クラス
 
-文字の特徴がクラス `Tr` によって決まる型 `Elem` の要素と、外部ファイルに格納されている要素のシーケンスとの間でやり取りされる転送を制御するストリーム バッファーを記述します。
+型の要素の転送を制御するストリーム バッファーを表します*Elem*、その文字特性はクラスによって決まります*Tr*、および外部のファイルに格納されている要素のシーケンス。
 
 ## <a name="syntax"></a>構文
 
@@ -69,16 +70,16 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-`Elem` ファイル バッファーの基本要素です。
+*Elem*ファイル バッファーの基本要素です。
 
-`Tr` ファイル バッファーの基本要素の特徴 (通常`char_traits` <  `Elem`>)。
+*Tr*ファイル バッファーの基本要素の特徴 (通常は`char_traits` <  `Elem`>)。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、文字の特徴がクラス `Tr` によって決まる型 `Elem` の要素と、外部ファイルに格納されている要素のシーケンスとの間でやり取りされる転送を制御するストリーム バッファーを記述します。
+このテンプレート クラスは、*Elem* 型の要素と外部ファイルに格納されている要素のシーケンスとの間でやり取りされる転送を制御するストリーム バッファーを記述します。Elem 型の特性は *Tr* クラスによって決められます。
 
 > [!NOTE]
-> 型パラメーター `Elem` で指定された `char_type` に関係なく、`basic_filebuf` 型のオブジェクトが `char *` 型の内部バッファーと共に作成されます。 これは、(`wchar_t` 文字を含む) Unicode 文字列が内部バッファーに書き込まれる前に (`char` 文字を含む) ANSI 文字列に変換されることを意味します。 Unicode 文字列をバッファーに格納するには、`wchar_t` 型の新しいバッファーを作成し、[basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()` メソッドを使用して設定します。 この動作を示す例については、以降のセクションを参照してください。
+> 型のオブジェクト`basic_filebuf`型の内部バッファーと共に作成`char *`に関係なく、`char_type`型パラメーターで指定された*Elem*します。 つまり、Unicode 文字列 (を含む**wchar_t**文字) は、ANSI 文字列に変換されます (を含む**char**文字) 内部バッファーに書き込まれる前にします。 Unicode 文字列バッファー内の保存は、型の新しいバッファーを作成します。 **wchar_t**しを使用して、設定、 [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()`メソッド。 この動作を示す例については、以降のセクションを参照してください。
 
 `basic_filebuf`< `Elem`, `Tr`> クラスのオブジェクトは、開いているファイルに関連付けられているストリームを制御する `FILE` オブジェクトを示すファイル ポインターを格納します。 さらに、プロテクト メンバー関数である [overflow](#overflow) と [underflow](#underflow) で使用される 2 つのファイル変換ファセットへのポインターも格納します。 詳細については、「[basic_filebuf::open](#open)」を参照してください。
 
@@ -234,7 +235,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |[uflow](../standard-library/basic-streambuf-class.md#uflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[underflow](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<fstream>
 
@@ -250,7 +251,7 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 また、ファイル ポインターにも Null ポインターを格納します。
 
@@ -258,7 +259,7 @@ basic_filebuf(basic_filebuf&& right);
 
 ## <a name="char_type"></a>  basic_filebuf::char_type
 
-型名を **Elem** テンプレート パラメーターに関連付けます。
+型名を `Elem` テンプレート パラメーターに関連付けます。
 
 ```cpp
 typedef Elem char_type;
@@ -276,11 +277,11 @@ basic_filebuf<Elem, Tr> *close();
 
 メンバー関数は、ファイル ポインターが Null ポインターの場合に、Null ポインターを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**close** は `fclose`( **fp**) を呼び出します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、**this** を返してファイルが正常に閉じられたことを示します。
+`close` 呼び出し`fclose`( **fp**)。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、**this** を返してファイルが正常に閉じられたことを示します。
 
-ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、必要に応じて、ファイル変換ファセット **fac** を使用して **fac.unshift** を呼び出すことで、初期の変換状態を復元するために必要な任意のシーケンスも挿入します。 そのため、生成された型 `char` の各要素 **byte** は、ファイル ポインター **fp** によって指定された関連付けられているストリームに、フォーム `fputc`( **byte**, **fp**) の連続呼び出しのように書き込まれます。 **fac.unshift** への呼び出しまたは書き込みが失敗すると、関数は失敗します。
+ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、ファイル変換ファセットを使用して、初期の変換状態を復元するために必要な任意のシーケンスを挿入`fac`を呼び出す`fac.unshift`に応じて。 各要素`byte`型の**char**ため、生成されたファイル ポインターで指定された関連付けられているストリームに書き込まれる`fp`同様、フォームの連続呼び出し`fputc`(**バイト**、 **fp**)。 場合に呼び出し`fac.unshift`またはすべての書き込みが失敗する、関数が成功しません。
 
 ### <a name="example"></a>例
 
@@ -333,7 +334,7 @@ s
 
 ## <a name="int_type"></a>  basic_filebuf::int_type
 
-**Tr** スコープ内のこの型を、basic_filebuf スコープ内の同じ名前の型と同等にします。
+同じ名前の型と等価の basic_filebuf スコープ内のこの型を作成、`Tr`スコープ。
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -377,7 +378,7 @@ true
 
 ## <a name="off_type"></a>  basic_filebuf::off_type
 
-**Tr** スコープ内のこの型を、basic_filebuf スコープ内の同じ名前の型と同等にします。
+同じ名前の型と等価の basic_filebuf スコープ内のこの型を作成、`Tr`スコープ。
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -409,21 +410,21 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Filename` 開くには、ファイルの名前。
+*_Filename*開くファイルの名前。
 
-`_Mode` 列挙のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)です。
+*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
 
-`_Prot` 既定のファイルを同等の保護を開いて、`shflag`パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)です。
+*_Prot*保護と同じ既定のファイル、 *shflag*パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
 
 ### <a name="return-value"></a>戻り値
 
 ファイル ポインターが Null ポインターの場合、関数は Null ポインターを返します。 それ以外の場合は、**this** を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、[fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**) を呼び出すことで、ファイル名が *filename* のファイルを開きます。 **strmode** は **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)) から決定されます。
+メンバー関数は、[fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**) を呼び出すことで、ファイル名が *filename* のファイルを開きます。 `strmode` 決定されます**モード (& a)**~ ( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [バイナリ](../standard-library/ios-base-class.md#openmode))。
 
-- **ios_base::in** は **"r"** になります (読み取り用に既存のファイルを開きます)。
+- `ios_base::in` なります **"r"** (既存のファイルを読み取り用に開きます)。
 
 - [ios_base::out](../standard-library/ios-base-class.md#fmtflags) または **ios_base::out &#124; ios_base::trunc** は **"w"** になります (書き込み用に既存のファイルを切り捨てるまたは作成します)。
 
@@ -435,7 +436,7 @@ basic_filebuf<Elem, Tr> *open(
 
 - **ios_base::in &#124; ios_base::out &#124; ios_base::app** は **"a+"** になります (読み取りと用とすべての書き込みを追加するために既存のファイルを開きます)。
 
-**mode & ios_base::binary** が 0 以外の値の場合、関数は **b** を **strmode** に付加して、テキスト ストリームの代わりにバイナリ ストリームを開きます。 その後、`fopen` によって返されたに値をファイル ポインター **fp** に格納します。 **mode & ios_base::ate** が 0 以外の値で、ファイル ポインターがNull ポインターでない場合、関数は `fseek`( **fp**, 0, `SEEK_END`) を呼び出してファイルの終端にストリームを配置します。 配置操作が失敗した場合、関数は [close](#close)( **fp**) を呼び出して Null ポインターをファイル ポインターに格納します。
+場合**mode & ios_base::binary**は、関数は、0 以外の場合、追加`b`に`strmode`をテキスト ストリームではなくバイナリ ストリームを開きます。 によって返される値を格納し、`fopen`ファイル ポインターで`fp`します。 **mode & ios_base::ate** が 0 以外の値で、ファイル ポインターがNull ポインターでない場合、関数は `fseek`( **fp**, 0, `SEEK_END`) を呼び出してファイルの終端にストリームを配置します。 配置操作失敗したかどうか、関数呼び出し[閉じます](#close)( `fp`) し、ファイル ポインターに null ポインターを格納します。
 
 ファイル ポインターが Null ポインターでない場合、関数は[underflow](#underflow) と [overflow](#overflow) で使用するために、ファイル変換ファセット `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)) を決定します。
 
@@ -443,7 +444,7 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="example"></a>例
 
-**open** の使用例については、「[basic_filebuf::close](#close)」を参照してください。
+`open` の使用例については、「[basic_filebuf::close](#close)」を参照してください。
 
 ## <a name="op_eq"></a>  basic_filebuf::operator=
 
@@ -455,15 +456,15 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 右辺値参照、 [basic_filebuf](../standard-library/basic-filebuf-class.md)オブジェクト。
+*適切な*への右辺値参照を[basic_filebuf](../standard-library/basic-filebuf-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 *this を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー演算子により、右辺値の参照として扱われる `right` の内容を使用して、オブジェクトの内容が置き換えられます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+メンバー演算子の内容を使用して、オブジェクトの内容が置き換えられます*右*、右辺値参照として扱われます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ## <a name="overflow"></a>  basic_filebuf::overflow
 
@@ -475,21 +476,21 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Meta` バッファーに挿入する文字または**traits_type::eof**です。
+*_Meta*バッファーに挿入する文字または`traits_type::eof`します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が失敗すると、**traits_type::eof** が返されます。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
+関数が成功しない場合は、`traits_type::eof` が返されます。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-場合 _ * メタ ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入するよう努めて**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
+場合 _ * メタ ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようと**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
 
 - 書き込み位置が使用可能な場合は、書き込み位置に要素を格納し、出力バッファーのネクスト ポインターをインクリメントできます。
 
 - 新しい記憶域または追加の記憶域を出力バッファーに割り当てることで、書き込み位置を使用可能にすることができます。
 
-- **ch** の後に、必要に応じて、ファイル変換ファセット **fac** を使用して **fac.out** を呼び出すことで、出力バッファーで任意の保留中の出力を変換できます。 そのため、生成された型 *char* の各要素 `ch` は、ファイル ポインター **fp** によって指定された関連付けられているストリームに、フォーム `fputc`( **ch**, **fp**) の連続呼び出しのように書き込まれます。 任意の変換または書き込みに失敗した場合、関数は失敗します。
+- 保留中で後に、出力バッファーに出力を変換できる`ch`、ファイル変換ファセットを使用して`fac`を呼び出す`fac.out`に応じて。 各要素`ch`型の*char*ため、生成されたファイル ポインターで指定された関連付けられているストリームに書き込まれる`fp`同様、フォームの連続呼び出し`fputc`( **ch**、 **fp**)。 任意の変換または書き込みに失敗した場合、関数は失敗します。
 
 ## <a name="pbackfail"></a>  basic_filebuf::pbackfail
 
@@ -501,25 +502,25 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Meta` バッファーに挿入する文字または**traits_type::eof**です。
+*_Meta* 、バッファーに挿入する文字または`traits_type::eof`します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が失敗すると、**traits_type::eof** が返されます。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
+関数が成功しない場合は、`traits_type::eof` が返されます。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 プロテクト仮想メンバー関数は要素を入力バッファーに戻してから、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。 _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof) の場合、プッシュ バックする要素は、実質的に、現在の要素の前に既にストリームにある要素になります。 それ以外の場合、その要素が **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) で置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
 
-- 戻り位置が使用可能であり、格納されている要素が **ch** に等しい場合、入力バッファーのネクスト ポインターをデクリメントできます。
+- 戻り位置が使用してに格納されている要素が等しい場合`ch`、入力バッファーのネクスト ポインターをデクリメントできます。
 
-- 関数が `putback` 位置を使用可能にできる場合はそのようにし、ネクスト ポインターをその位置を指すように設定し、**ch** をその位置に格納します。
+- 場合は、関数、`putback`配置、および格納される場合は、設定、[次へ] のポインターでポイントすることができます、使用可能な位置`ch`その位置にします。
 
-- 関数は、プッシュ バック要素入力ストリームに場合、これを行うなどを呼び出して`ungetc`型の要素の`char`します。
+- 関数は、プッシュ バックできる要素を入力ストリームに場合、そのようになどを呼び出して`ungetc`型の要素の**char**します。
 
 ## <a name="pos_type"></a>  basic_filebuf::pos_type
 
-**Tr** スコープ内のこの型を、basic_filebuf スコープ内の同じ名前の型と同等にします。
+同じ名前の型と等価の basic_filebuf スコープ内のこの型を作成、`Tr`スコープ。
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -537,23 +538,23 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` に対して相対的なをシークする位置`_Way`です。
+*_Off*に対して相対的にシークする位置 *_Way*します。
 
-`_Way` オフセット演算の開始点です。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
+*_Way*オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-`_Which` ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
 新しい位置または無効なストリーム位置を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 プロテクト仮想メンバー関数が、制御対象ストリームの現在の位置を変更しようと試みます。 クラス [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> のオブジェクトの場合、ストリームの位置は、型 `fpos_t` のオブジェクトで表現できます。これにはオフセットとワイド ストリームを解析するために必要なすべての状態情報が格納されます。 オフセット ゼロは、ストリームの最初の要素を指定します  (型 [pos_type](../standard-library/basic-streambuf-class.md#pos_type) のオブジェクトは、少なくとも `fpos_t` オブジェクトを格納します)。
 
 読み取りと書き込みのために開かれたファイルの場合、入力と出力の両方のストリームが直列に配置されます。 挿入と抽出を切り替えるには、[pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) または [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos) のいずれかを呼び出す必要があります。 `pubseekoff` (および `seekoff`) への呼び出しには、[テキスト ストリーム](../c-runtime-library/text-and-binary-streams.md)、[バイナリ ストリーム](../c-runtime-library/text-and-binary-streams.md)、および[ワイド ストリーム](../c-runtime-library/byte-and-wide-streams.md) に対するさまざまな制限があります。
 
-ファイル ポインター **fp** が Null ポインターの場合、関数は Null ポインターを返します。 それ以外の場合、関数は `fseek`( **fp**, `_Off`, `_Way`) を呼び出してストリームの位置を変更しようとします。 その関数が成功し、結果の位置 **fposn** を `fgetpos`( **fp**, **&fposn**) 呼び出すことによって決定できる場合に、関数は成功します。 関数が成功すると、**fposn** を含む型 **pos_type** の値が返されます。 それ以外の場合は、無効なストリームの位置が返されます。
+場合、ファイル ポインター`fp`が null ポインターの場合、関数は失敗します。 それ以外の場合、関数は `fseek`( **fp**, `_Off`, `_Way`) を呼び出してストリームの位置を変更しようとします。 その関数が成功した場合、結果の位置と`fposn`呼び出すことによって決定できます`fgetpos`( **fp**、 **& fposn**)、関数が成功しました。 型の値を返しますが、関数が成功すると、`pos_type`を含む`fposn`します。 それ以外の場合は、無効なストリームの位置が返されます。
 
 ## <a name="seekpos"></a>  basic_filebuf::seekpos
 
@@ -565,21 +566,21 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>パラメーター
 
-`_Sp` シークする位置。
+*_Sp*シークする位置。
 
-`_Which` ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
+*_Which*ポインターの位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
 
-ファイル ポインター **fp** が Null ポインターの場合、関数は Null ポインターを返します。 それ以外の場合は、`fsetpos`( **fp**, **&fposn**) を呼び出してストリームの位置を変更しようとします。ここで、**fposn** は、`pos` に格納される `fpos_t` オブジェクトです。 その関数が成功すると、関数は `pos` を返します。 それ以外の場合は、無効なストリームの位置が返されます。 ストリームの位置が無効であることを確認するには、戻り値と `pos_type(off_type(-1))` を比較します。
+場合、ファイル ポインター`fp`が null ポインターの場合、関数は失敗します。 呼び出すことによって、ストリームの位置を変更しようとそれ以外の場合、 `fsetpos`( **fp**、 **& fposn**) ここで、`fposn`は、`fpos_t`オブジェクトに格納されている`pos`します。 その関数が成功すると、関数は `pos` を返します。 それ以外の場合は、無効なストリームの位置が返されます。 ストリームの位置が無効であることを確認するには、戻り値と `pos_type(off_type(-1))` を比較します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 プロテクト仮想メンバー関数が、制御対象ストリームの現在の位置を変更しようと試みます。 クラス [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> のオブジェクトの場合、ストリームの位置は、型 `fpos_t` のオブジェクトで表現できます。これにはオフセットとワイド ストリームを解析するために必要なすべての状態情報が格納されます。 オフセット ゼロは、ストリームの最初の要素を指定します  (型 `pos_type` のオブジェクトは、少なくとも `fpos_t` オブジェクトを格納します)。
 
 読み取りと書き込みのために開かれたファイルの場合、入力と出力の両方のストリームが直列に配置されます。 挿入と抽出を切り替えるには、[pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) または [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos) のいずれかを呼び出す必要があります。 `pubseekoff` (および `seekoff`) への呼び出しには、テキスト ストリーム、バイナリ ストリーム、およびワイド ストリームに対するさまざまな制限があります。
 
-ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、必要に応じて、ファイル変換ファセット **fac** を使用して **fac**`.unshift` を呼び出すことで、初期の変換状態を復元するために必要な任意のシーケンスも挿入します。 そのため、生成された型 `char` の各要素 **byte** は、ファイル ポインター **fp** によって指定された関連付けられているストリームに、フォーム `fputc`( **byte**, **fp**) の連続呼び出しのように書き込まれます。 **fac.unshift** への呼び出しまたは書き込みが失敗すると、関数は失敗します。
+ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、ファイル変換ファセットを使用して、初期の変換状態を復元するために必要な任意のシーケンスを挿入`fac`を呼び出す**fac** `.unshift`に応じて。 各要素`byte`型の**char**ため、生成されたファイル ポインターで指定された関連付けられているストリームに書き込まれる`fp`同様、フォームの連続呼び出し`fputc`(**バイト**、 **fp**)。 場合に呼び出し`fac.unshift`またはすべての書き込みが失敗する、関数が成功しません。
 
 ## <a name="setbuf"></a>  basic_filebuf::setbuf
 
@@ -593,17 +594,18 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Buffer` バッファーへのポインター。
+*_Buffer*バッファーへのポインター。
 
-`count` バッファーのサイズです。
+*カウント*バッファーのサイズ。
 
 ### <a name="return-value"></a>戻り値
 
 プロテクト メンバー関数は、ファイル ポインター `fp` が Null ポインターの場合に、0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`setbuf` は `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**) ) を呼び出して、_ *Buffer* で始まる `count` 要素の配列をストリームのバッファーとして提供します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、シグナルの成功に **this** を返します。
+
+  `setbuf` は `setvbuf`( **fp**, ( `char`\*) `_Buffer`, `_IOFBF`, `count`\*`sizeof` ( **Elem**) ) を呼び出して、_ *Buffer* で始まる `count` 要素の配列をストリームのバッファーとして提供します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、シグナルの成功に **this** を返します。
 
 ## <a name="swap"></a>  basic_filebuf::swap
 
@@ -615,7 +617,7 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `lvalue`別への参照を`basic_filebuf`です。
+*適切な*、`lvalue`別への参照を`basic_filebuf`します。
 
 ## <a name="sync"></a>  basic_filebuf::sync
 
@@ -627,11 +629,11 @@ virtual int sync();
 
 ### <a name="return-value"></a>戻り値
 
-ファイル ポインター **fp** が Null ポインターの場合、0 を返します。 それ以外の場合は、保留中の出力のストリームへのフラッシュで、[overflow](#overflow) と `fflush`( **fp**) の両方の呼び出しが成功した場合にのみ 0 を返します。
+ファイル ポインターの場合は 0 を返します`fp`null ポインターです。 それ以外の場合は、保留中の出力のストリームへのフラッシュで、[overflow](#overflow) と `fflush`( **fp**) の両方の呼び出しが成功した場合にのみ 0 を返します。
 
 ## <a name="traits_type"></a>  basic_filebuf::traits_type
 
-型名を **Tr** テンプレート パラメーターに関連付けます。
+型名を `Tr` テンプレート パラメーターに関連付けます。
 
 ```cpp
 typedef Tr traits_type;
@@ -647,15 +649,15 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>戻り値
 
-関数が失敗すると、**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) が返されます。 それ以外の場合、「コメント」セクションに記載されているように変換された **ch** が返されます。
+関数が失敗すると、**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) が返されます。 返しますそれ以外の場合、 `ch`,」、「解説」の説明に従って変換されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は、現在の要素 **ch** を入力バッファーから抽出して、要素を **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**) として返そうとします。 これはさまざまな方法で行うことができます。
+プロテクト仮想メンバー関数は、現在の要素を抽出しようと`ch`入力からストリーム、およびとして要素を返します**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`)。 これはさまざまな方法で行うことができます。
 
-- 読み取り位置が使用可能な場合は、読み取り位置に格納されている要素として **ch** を使用し、入力バッファーのネクスト ポインターを進めます。
+- 読み取り位置が使用可能なかかる`ch`要素は、読み取り位置に格納されているし、入力バッファーのネクスト ポインターを進めます。
 
-- 型の 1 つまたは複数の要素を読み取ることができる`char`フォームの連続した呼び出しとしてでは、 `fgetc`(**fp**)、それらの要素に変換し、 **ch**型の**Elem**を呼び出してファイル変換ファセット要素を使用して、 **fac.in**に応じて。 任意の読み取りまたは変換が失敗すると、関数は失敗します。
+- 型の 1 つまたは複数の要素を読み取ることができる**char**場合と、フォームの連続呼び出しでは、 `fgetc`(**fp**)、要素への乗り換えと**ch**型の`Elem`を呼び出して、ファイル変換ファセット fac を使用して、`fac.in`に応じて。 任意の読み取りまたは変換が失敗すると、関数は失敗します。
 
 ## <a name="see-also"></a>関連項目
 

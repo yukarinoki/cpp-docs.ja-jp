@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931158"
 ---
 # <a name="ribbon-designer-mfc"></a>リボン デザイナー (MFC)
 リボン デザイナーを使用すると、MFC アプリケーションでリボンを作成してカスタマイズできます。 リボンは、複数のコマンドを 1 つの論理グループにまとめたユーザー インターフェイス (UI) 要素です。 これらのグループは、ウィンドウの上部に水平に並んで表示されるタブに別々に表示されます。 リボンは、メニュー バーとツール バーの代わりに表示されます。 リボンは、アプリケーションの使用性を大幅に向上させます。 詳細については、次を参照してください。[リボン](http://go.microsoft.com/fwlink/p/?linkid=129233)です。 リボンを次の図に示します。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="understanding-the-ribbon-designer"></a>リボン デザイナーについて  
  リボン デザイナーは、リボンをリソースとして作成および保存します。 リボン リソースを作成すると、リボン デザイナーによって次の 3 つの操作が行われます。  
   
--   プロジェクト リソース定義スクリプト (*.rc) にエントリを追加する。 次の例では、`IDR_RIBBON` はリボン リソースを識別する一意の名前、`RT_RIBBON_XML` はリボン リソースの種類、`ribbon.mfcribbon-ms` はリソース ファイルの名前です。  
+-   プロジェクト リソース定義スクリプト (*.rc) にエントリを追加する。 次の例では、IDR_RIBBON はリボン リソースを識別する一意の名前、RT_RIBBON_XML はリソースの種類、および ribbon.mfcribbon ms はリソース ファイルの名前。  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

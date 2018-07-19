@@ -1,5 +1,5 @@
 ---
-title: CD2DRectU クラス |Microsoft ドキュメント
+title: CD2DRectU クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336475"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU クラス
 `D2D1_RECT_U`のラッパー。  
@@ -47,7 +48,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|返します、`boolean`を式に有効なデータがないかどうかを示す値 ( `null`)。|  
+|[CD2DRectU::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -60,7 +61,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
  `CD2DRectU`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
@@ -80,20 +81,20 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  元の四角形  
   
- `uLeft`  
+ *uLeft*  
  ソースの左座標  
   
- `uTop`  
+ *uTop*  
  ソースの上座標  
   
- `uRight`  
+ *uRight*  
  右側の座標のソース  
   
- `uBottom`  
- ソースの下の座標  
+ *uBottom*  
+ ソースの下端の座標  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  
  式に有効なデータ (Null) がないかどうかを示すブール値を返します。  
@@ -103,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 四角形の上、左、下、および適切な値はすべて 0 に等しい場合は TRUE。それ以外の場合は FALSE。  
+ 四角形の上、左、下、および適切な値が 0 に等しい場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
- CD2DRectU を含む CRect オブジェクトに変換します。  
+ CD2DRectU CRect オブジェクトに変換します。  
   
 ```  
 operator CRect();

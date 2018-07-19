@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089416"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>レコード ビューのデータ交換 (MFC データ アクセス)
 使用すると[クラスの追加](../mfc/reference/adding-an-mfc-odbc-consumer.md)フレームワークをレコード ビューのダイアログ テンプレート リソース内のコントロールをレコード セットのフィールドをマップするには、双方向のデータ交換を管理する: レコード セットとコントロールとレコード セットへのコントロールからです。 DDX 機構を使用すると、データを双方向で転送するコードを自分で記述する必要がなくなります。  

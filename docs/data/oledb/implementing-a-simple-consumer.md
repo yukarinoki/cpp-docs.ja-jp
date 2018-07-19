@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112564"
 ---
 # <a name="implementing-a-simple-consumer"></a>単純なコンシューマーの実装
 次のトピックでは、単純なコンシューマーを作成するには、MFC アプリケーション ウィザードと ATL OLE DB コンシューマー ウィザードによって作成されたファイルを編集する方法を示します。 この例では、次の部分があります。  

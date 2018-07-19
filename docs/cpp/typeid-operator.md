@@ -1,5 +1,5 @@
 ---
-title: typeid 演算子 |Microsoft ドキュメント
+title: typeid 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,31 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb99b3dbc656d43701eebafbd7d34de125d1a31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9646678398ff1e18d0acf45c45bc931ce37cd54a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944002"
 ---
 # <a name="typeid-operator"></a>typeid 演算子
 ## <a name="syntax"></a>構文  
   
 ```  
   
-      typeid(   
-      type-id  
-       )  
-typeid( expression )  
+typeid(type-id)  
+typeid(expression)  
 ```  
   
-## <a name="remarks"></a>コメント  
- `typeid` 演算子は、オブジェクトの型を実行時に決定できるようにします。  
+## <a name="remarks"></a>Remarks  
+ **Typeid**演算子により、実行時に決定されるオブジェクトの型。  
   
- 結果`typeid`は、 **const type_info &** です。 値がへの参照を**type_info**いずれかを表すオブジェクト、*タイプ id*またはの種類、*式*の形式に応じて、`typeid`を使用. 参照してください[type_info クラス](../cpp/type-info-class.md)詳細についてはします。  
+ 結果**typeid**は、`const type_info&`します。 値がへの参照を`type_info`いずれかを表すオブジェクト、*タイプ id*または種類の*式*の形式に応じて、 **typeid**使用されます。 参照してください[type_info クラス](../cpp/type-info-class.md)詳細についてはします。  
   
- `typeid`演算子はマネージ型 (抽象宣言子またはのインスタンス) では機能しませんを参照してください[typeid](../windows/typeid-cpp-component-extensions.md)取得について、<xref:System.Type>指定の型。  
+ **Typeid**演算子は、マネージ型 (抽象宣言子またはインスタンス) では機能しませんを参照してください[typeid](../windows/typeid-cpp-component-extensions.md)取得について、<xref:System.Type>指定の型。  
   
- `typeid` 演算子は、オブジェクトの実際の型を指定された静的な情報によって判断できない場合に、ポリモーフィックなクラス型の左辺値への適用時にランタイム チェックを実行します。 そのようなケースを次に示します。  
+ **Typeid**演算子は、ポリモーフィックなクラス型の左辺値に適用すると、実行時チェックによって提供される静的情報オブジェクトの実際の型を特定できません。 そのようなケースを次に示します。  
   
 -   クラスへの参照  
   
@@ -46,9 +45,9 @@ typeid( expression )
   
 -   添字付きのポインター ([ ]) (一般に、ポリモーフィックな型へのポインターで添字を使用すると、安全ではないことに注意してください)。  
   
- 場合、*式*まだその基底クラスから派生した型のオブジェクトが実際には、基本クラス型を指す、 **type_info**派生クラスは、結果を参照します。 *式*ポリモーフィック型 (仮想関数を持つクラス) をポイントする必要があります。 それ以外の場合、結果は、 **type_info**で参照される静的クラスの*式*です。 さらに、ポインターが指し示すオブジェクトが使用されるように、ポインターを逆参照する必要があります。 ポインターを逆参照なしになります、 **type_info**どのような it ではないが指すポインターです。 例えば:  
+ 場合、*式*まだその基底クラスから派生した型のオブジェクトが実際には、基本クラスの型を指す、`type_info`派生クラスは、結果を参照します。 *式*ポリモーフィックな型 (仮想関数を持つクラス) をポイントする必要があります。 結果は、それ以外の場合、`type_info`で参照される静的クラスの*式*します。 さらに、ポインターが指し示すオブジェクトが使用されるように、ポインターを逆参照する必要があります。 ポインターを逆参照になります、`type_info`どのような it ではないが指すポインター。 例えば:  
   
-```  
+```cpp 
 // expre_typeid_Operator.cpp  
 // compile with: /GR /EHsc  
 #include <iostream>  
@@ -73,11 +72,11 @@ int main() {
 }  
 ```  
   
- 場合、*式*、ポインターを逆参照でポインターの値が 0、 **typeid**スロー、 [bad_typeid 例外](../cpp/bad-typeid-exception.md)です。 ポインターが有効なオブジェクトを指していない場合は、`__non_rtti_object`例外をスローすると、エラーをトリガーした RTTI を分析しようを示す (アクセス違反など)、オブジェクトが何らかの理由で無効 (無効なポインターまたはコードされなかったでコンパイルされた[/GR](../build/reference/gr-enable-run-time-type-information.md))。  
+ 場合、*式*、ポインターを逆参照はポインターの値が 0、 **typeid**がスローされます、 [bad_typeid 例外](../cpp/bad-typeid-exception.md)。 ポインターが有効なオブジェクトを指していない場合は、`__non_rtti_object`例外がスローされたエラーをトリガーした RTTI を分析する試行を示す (アクセス違反など)、オブジェクトが何らかの理由で無効です (無効なポインターや、コードがコンパイルした[/GR](../build/reference/gr-enable-run-time-type-information.md))。  
   
- 場合、*式*はポインターでも、オブジェクトの基底クラスへの参照を結果は、 **type_info**参照の静的な型を表す、*式*. *静的な型*式の型を参照式のコンパイル時に認識されています。 実行セマンティクスは、式の静的な型を評価するときは無視されます。 さらに、式の静的な型を判断するときに、参照は可能な限り無視されます。  
+ 場合、*式*はポインターでも、オブジェクトの基底クラスへの参照を結果は、`type_info`の静的な型を表す参照、*式*します。 *静的な型*式の型を表し、式のコンパイル時に認識されています。 実行セマンティクスは、式の静的な型を評価するときは無視されます。 さらに、式の静的な型を判断するときに、参照は可能な限り無視されます。  
   
-```  
+```cpp 
 // expre_typeid_Operator_2.cpp  
 #include <typeinfo>  
   
@@ -87,9 +86,9 @@ int main()
 }  
 ```  
   
- **typeid**できますもテンプレートで使用するテンプレート パラメーターの種類を判断します。  
+ **typeid**テンプレートのパラメーターの種類を決定するテンプレートでも使用されます。  
   
-```  
+```cpp 
 // expre_typeid_Operator_3.cpp  
 // compile with: /c  
 #include <typeinfo>  

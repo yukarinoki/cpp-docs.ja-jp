@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371464"
 ---
 # <a name="other-lib-output"></a>LIB のその他の出力
 既定のモードでは、結果として得られるライブラリに関する情報を表示するのに、/LIST オプションを使用できます。 この出力をファイルにリダイレクトすることができます。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094765"
 ---
 # <a name="snapshot"></a>スナップショット
 スナップショットは、スナップショットの作成時に存在していたデータの静的なビューを反映するレコード セットです。 スナップショットを開くすべてのレコードに移動すると、レコードのセットが含まれているし、呼び出すことにより、スナップショットを再構築するまでの値を変更しないで**Requery**です。  

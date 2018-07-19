@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109574"
 ---
 # <a name="ole-db-templates"></a>OLE DB テンプレート
 OLE DB テンプレートを使用する OLE DB データ アクセス容易にします。 Visual C では、多くの一般的に使用される OLE DB インターフェイスを実装するテンプレート クラスを提供します。 OLE DB クライアント (コンシューマー) アプリケーションを作成する Visual C のコンシューマー テンプレートとサーバー (プロバイダー) アプリケーションを記述するプロバイダー テンプレートを使用することができます。  

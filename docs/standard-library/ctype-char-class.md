@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edbc96419e68cf584222e4008f58fd96169b2fb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 47ac9fa5431b5edfb4885dfdbf39be6c6b89cee6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960662"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; クラス
 
-`char` 型への **ctype\<CharType**> テンプレート クラスの明示的な特殊化クラス。`char` 型の文字のさまざまなプロパティを設定するロケール ファセットとして使用できるオブジェクトを表します。
+クラスはテンプレート クラスの明示的な特殊化`ctype\<CharType>`入力**char**、型の文字のさまざまなプロパティを設定するロケール ファセットとして使用できるオブジェクトを記述する**char**.
 
 ## <a name="syntax"></a>構文
 
@@ -127,25 +128,25 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 明示的な特殊化は、いくつかの点でテンプレート クラスとは異なります。
 
-- クラス ctype< `char`> のオブジェクトは、型 **ctype_base::mask** の UCHAR_MAX + 1 要素の配列である ctype マスク テーブルの最初の要素を示すポインターを格納します。 ctype\< **Elem**> オブジェクトが破棄されるとき、(`operator delete[]` を利用して) 配列を削除するかどうかを示すブール値も格納します。
+- Ctype クラスのオブジェクト < `char`> ctype マスク テーブルの最初の要素、UCHAR_MAX の配列 + 型の 1 つの要素へのポインターを格納`ctype_base::mask`します。 ctype\< **Elem**> オブジェクトが破棄されるとき、(`operator delete[]` を利用して) 配列を削除するかどうかを示すブール値も格納します。
 
-- その唯一のパブリック コンストラクターでは、**tab**、ctype マスク テーブル、**del**、ctype< `char`> オブジェクトが破棄されるときに配列を削除する場合に true となるブール値オブジェクト、参照数パラメーター参照を指定できます。
+- その唯一のパブリック コンス トラクターを指定できます`tab`、ctype マスク テーブル、および`del`、配列する場合は true であるブール型のオブジェクトするときは削除、ctype < `char`> 参照カウントと、オブジェクトが破棄される。パラメーターの参照。
 
-- 保護されているメンバー関数 **table** は、格納されている ctype マスク テーブルを返します。
+- プロテクト メンバー関数`table`格納されている ctype マスク テーブルを返します。
 
-- 静的メンバー オブジェクト **table_size** は、ctype マスク テーブルの最小要素数を指定します。
+- 静的メンバー オブジェクト`table_size`ctype マスク テーブル内の要素の最小数を指定します。
 
-- 保護されている静的メンバー関数 **classic_table**( は、"C" ロケールに適切な ctype マスク テーブルを返します。
+- 保護されている静的メンバー関数は、 `classic_table`(返します ctype マスク テーブル"C"ロケールに対応します。
 
 - 保護されている仮想メンバー関数 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is)、[do_scan_not](../standard-library/ctype-class.md#do_scan_not) はありません。 それに対応するパブリック メンバー関数が同等の操作を実行します。
 
 メンバー関数の [do_narrow](../standard-library/ctype-class.md#do_narrow) と [do_widen](../standard-library/ctype-class.md#do_widen) は、要素を変更せずにコピーします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383229"
 ---
 # <a name="including-quoted-filenames"></a>引用符で囲まれたファイル名を含む
 **ANSI 3.8.2** インクルード可能なソース ファイルの引用された名前のサポート  

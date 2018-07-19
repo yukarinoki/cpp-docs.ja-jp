@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421823"
 ---
 # <a name="writing-an-exception-handler"></a>例外ハンドラーの記述
 特定のエラーに応答するために例外ハンドラーがよく使用されます。 例外処理構文を使用して、処理する方法が不明な例外をすべて除外できます。 他の例外は、それらの特定の例外を検索するように記述された他のハンドラー (ランタイム ライブラリまたはオペレーティング システム内にあると考えられます) に渡される必要があります。  

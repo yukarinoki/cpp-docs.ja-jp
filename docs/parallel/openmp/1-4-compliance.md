@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687232"
 ---
 # <a name="14-compliance"></a>1.4 準拠
 OpenMP C と C++ API の実装は*OpenMP 準拠*かどうかを認識し、章 1、2、3、4、レイアウトとは、この仕様のすべての要素のセマンティクスを保持および付録 C A、B、D、E、および F情報は、目的でのみと仕様の一部ではないです。 API のサブセットのみを含む実装は、OpenMP 準拠ではありません。  

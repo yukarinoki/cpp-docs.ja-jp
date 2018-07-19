@@ -1,5 +1,5 @@
 ---
-title: CComGITPtr クラス |Microsoft ドキュメント
+title: CComGITPtr クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,14 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 049873ce6ff630e8f00ea5ad5ec9b3786bd5e71b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884175"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr クラス
-このクラスは、インターフェイス ポインターを処理するためのメソッドと、グローバル インターフェイス テーブル (GIT) を提供します。  
+このクラスは、インターフェイス ポインターを処理するためのメソッドおよびグローバル インターフェイス テーブル (GIT) を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,17 +58,17 @@ class CComGITPtr
   
 |名前|説明|  
 |----------|-----------------|  
-|[CComGITPtr::Attach](#attach)|グローバル インターフェイス テーブル (GIT) で、インターフェイス ポインターを登録するには、このメソッドを呼び出します。|  
+|[CComGITPtr::Attach](#attach)|グローバル インターフェイス テーブル (GIT) のインターフェイス ポインターを登録するには、このメソッドを呼び出します。|  
 |[CComGITPtr::CopyTo](#copyto)|インターフェイスをグローバル インターフェイス テーブル (GIT) から渡されたポインターにコピーするには、このメソッドを呼び出します。|  
 |[CComGITPtr::Detach](#detach)|インターフェイスの関連付けを解除するには、このメソッドを呼び出して、`CComGITPtr`オブジェクト。|  
 |[CComGITPtr::GetCookie](#getcookie)|このメソッドから cookie を返すを呼び出して、`CComGITPtr`オブジェクト。|  
-|[CComGITPtr::Revoke](#revoke)|このメソッドを呼び出して、グローバル インターフェイス テーブル (GIT) からインターフェイスを削除します。|  
+|[CComGITPtr::Revoke](#revoke)|グローバル インターフェイス テーブル (GIT) から、インターフェイスを削除するには、このメソッドを呼び出します。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CComGITPtr::operator DWORD](#operator_dword)|Cookie を返し、`CComGITPtr`オブジェクト。|  
+|[CComGITPtr::operator DWORD](#operator_dword)|Cookie を返します、`CComGITPtr`オブジェクト。|  
 |[CComGITPtr::operator =](#operator_eq)|代入演算子。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
@@ -76,17 +77,17 @@ class CComGITPtr
 |----------|-----------------|  
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|クッキー。|  
   
-## <a name="remarks"></a>コメント  
- フリー スレッド マーシャラーを集約し、その他のオブジェクトから取得されたインターフェイス ポインターを使用する必要があるオブジェクトは、インターフェイスが正しくマーシャ リングすることを確認する追加の手順を実行する必要があります。 通常は、GIT にインターフェイス ポインターを格納してを使用するたびに、GIT からポインターを取得します。 クラス`CComGITPtr`GIT で格納されているインターフェイス ポインターを使用するために提供されます。  
+## <a name="remarks"></a>Remarks  
+ フリー スレッド マーシャラーを集約し、その他のオブジェクトから取得したインターフェイス ポインターを使用する必要があるオブジェクトは、インターフェイスが正しくマーシャ リングすることを確認する追加の手順を実行する必要があります。 通常これは、GIT でインターフェイス ポインターを格納して、使用されるたびに、GIT からポインターを取得する必要があります。 クラスは、 `CComGITPtr` GIT に格納されているインターフェイス ポインターを使用するために提供されます。  
   
 > [!NOTE]
->  グローバル インターフェイス テーブル機能では、Windows 95 DCOM バージョン 1.1 をし、その後、Windows 98、Windows NT 4.0 Service Pack 3 以降では、および Windows 2000 で利用できるのみです。  
+>  グローバル インターフェイス テーブルの機能は、DCOM バージョン 1.1 で Windows 95 以降、Windows 98、Windows NT 4.0 Service Pack 3 以降、および Windows 2000 にできるだけです。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="attach"></a>  CComGITPtr::Attach  
- グローバル インターフェイス テーブル (GIT) で、インターフェイス ポインターを登録するには、このメソッドを呼び出します。  
+ グローバル インターフェイス テーブル (GIT) のインターフェイス ポインターを登録するには、このメソッドを呼び出します。  
   
 ```
 HRESULT Attach(T* p) throw();
@@ -95,17 +96,17 @@ HRESULT Attach(DWORD dwCookie) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `p`  
- GIT を追加するインターフェイス ポインター。  
+ *p*  
+ GIT に追加するインターフェイス ポインター。  
   
- `dwCookie`  
- インターフェイス ポインターの識別に使用する cookie です。  
+ *dwCookie*  
+ インターフェイス ポインターを識別するために使用されるクッキー。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- デバッグ ビルドでは、GIT が有効でない場合、または、cookie が null の場合、アサーション エラーが発生します。  
+### <a name="remarks"></a>Remarks  
+ デバッグ ビルドでは、GIT が有効でない場合、またはクッキーが null の場合に、アサーション エラーが発生します。  
   
 ##  <a name="ccomgitptr"></a>  CComGITPtr::CComGITPtr  
  コンストラクターです。  
@@ -119,22 +120,22 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `p`  
+ [in]*p*  
  グローバル インターフェイス テーブル (GIT) に格納されるインターフェイス ポインター。  
   
- [入力] `git`  
+ [in]*git*  
  既存への参照を`CComGITPtr`オブジェクト。  
   
- [入力] `dwCookie`  
- インターフェイス ポインターの識別に使用する cookie です。  
+ [in]*dwCookie*  
+ インターフェイス ポインターを識別するために使用されるクッキー。  
   
- [入力] `rv`  
+ [in]*rv*  
  ソース`CComGITPtr`からデータを移動するオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 新たに作成`CComGITPtr`オブジェクト、必要に応じて 既存を使用して`CComGITPtr`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 新たに作成`CComGITPtr`オブジェクト、必要に応じて、既存を使用して`CComGITPtr`オブジェクト。  
   
- コンス トラクターを使用して`rv`移動コンス トラクターです。 ソースからデータを移動`rv`、し`rv`がオフになっています。  
+ コンス トラクターの利用*rv*移動コンス トラクターです。 元のデータを移動*rv*、し*rv*がオフになっています。  
   
 ##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr  
  デストラクターです。  
@@ -143,8 +144,8 @@ CComGITPtr(CComGITPtr&& rv);
 ~CComGITPtr() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
- グローバル インターフェイス テーブル (GIT) からインターフェイスを削除を使用して[CComGITPtr::Revoke](#revoke)です。  
+### <a name="remarks"></a>Remarks  
+ グローバル インターフェイス テーブル (GIT) から、インターフェイスを削除します。 を使用して[CComGITPtr::Revoke](#revoke)します。  
   
 ##  <a name="copyto"></a>  CComGITPtr::CopyTo  
  インターフェイスをグローバル インターフェイス テーブル (GIT) から渡されたポインターにコピーするには、このメソッドを呼び出します。  
@@ -154,14 +155,14 @@ HRESULT CopyTo(T** pp) const throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pp`  
+ *pp*  
  これは、インターフェイスを受信するポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- GIT からのインターフェイスは、渡されたポインターにコピーされます。 ポインターは必要なくなりましたときに、呼び出し元によって解放する必要があります。  
+### <a name="remarks"></a>Remarks  
+ GIT からのインターフェイスは、渡されたポインターにコピーされます。 ポインターは、必要でなくなったとき、呼び出し元がリリースする必要があります。  
   
 ##  <a name="detach"></a>  CComGITPtr::Detach  
  インターフェイスの関連付けを解除するには、このメソッドを呼び出して、`CComGITPtr`オブジェクト。  
@@ -171,10 +172,10 @@ DWORD Detach() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- Cookie を返し、`CComGITPtr`オブジェクト。  
+ Cookie を返します、`CComGITPtr`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- GIT からのインターフェイスを削除する、呼び出し元の役割を使用して[CComGITPtr::Revoke](#revoke)です。  
+### <a name="remarks"></a>Remarks  
+ 呼び出し元が、GIT からのインターフェイスを削除するまでを使用して[CComGITPtr::Revoke](#revoke)します。  
   
 ##  <a name="getcookie"></a>  CComGITPtr::GetCookie  
  このメソッドから cookie を返すを呼び出して、`CComGITPtr`オブジェクト。  
@@ -186,8 +187,8 @@ DWORD GetCookie() const;
 ### <a name="return-value"></a>戻り値  
  Cookie を返します。  
   
-### <a name="remarks"></a>コメント  
- Cookie は、インターフェイスとその場所の識別に使用される変数です。  
+### <a name="remarks"></a>Remarks  
+ Cookie は、インターフェイスとその場所を識別するために使用される変数です。  
   
 ##  <a name="m_dwcookie"></a>  CComGITPtr::m_dwCookie  
  クッキー。  
@@ -196,8 +197,8 @@ DWORD GetCookie() const;
 DWORD m_dwCookie;
 ```  
   
-### <a name="remarks"></a>コメント  
- Cookie は、メンバー変数がインターフェイスとその場所を識別するためです。  
+### <a name="remarks"></a>Remarks  
+ Cookie は、インターフェイスとその場所を識別するために使用されるメンバー変数です。  
   
 ##  <a name="operator_eq"></a>  CComGITPtr::operator =  
  代入演算子です。  
@@ -210,33 +211,33 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `p`  
+ [in]*p*  
  インターフェイスへのポインター。  
   
- [入力] `git`  
+ [in]*git*  
  `CComGITPtr` オブジェクトへの参照。  
   
- [入力] `dwCookie`  
- インターフェイス ポインターの識別に使用する cookie です。  
+ [in]*dwCookie*  
+ インターフェイス ポインターを識別するために使用されるクッキー。  
   
- [入力] `rv`  
+ [in]*rv*  
  `CComGITPtr`からデータを移動します。  
   
 ### <a name="return-value"></a>戻り値  
- 更新されたを返します`CComGITPtr`オブジェクト。  
+ 更新された返します`CComGITPtr`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 新しい値を割り当てます、`CComGITPtr`既存のオブジェクトとは、グローバル インターフェイス テーブルへの参照からのオブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 新しい値を割り当てます、`CComGITPtr`オブジェクト、既存のオブジェクトまたはグローバル インターフェイス テーブルへの参照。  
   
 ##  <a name="operator_dword"></a>  CComGITPtr::operator DWORD  
- 関連付けられた cookie を返し、`CComGITPtr`オブジェクト。  
+ 関連付けられているクッキーを返します、`CComGITPtr`オブジェクト。  
   
 ```  
 operator DWORD() const;
 ```  
   
-### <a name="remarks"></a>コメント  
- Cookie は、インターフェイスとその場所の識別に使用される変数です。  
+### <a name="remarks"></a>Remarks  
+ Cookie は、インターフェイスとその場所を識別するために使用される変数です。  
   
 ##  <a name="revoke"></a>  CComGITPtr::Revoke  
  グローバル インターフェイス テーブル (GIT) から現在のインターフェイスを削除するには、このメソッドを呼び出します。  
@@ -246,10 +247,10 @@ HRESULT Revoke() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- GIT からのインターフェイスを削除します。  
+### <a name="remarks"></a>Remarks  
+ GIT から、インターフェイスを削除します。  
   
 ## <a name="see-also"></a>関連項目  
  [フリー スレッド マーシャラー](../../atl/atl-and-the-free-threaded-marshaler.md)   

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonBaseElement クラス |Microsoft ドキュメント
+title: CMFCRibbonBaseElement クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -242,14 +242,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 048bb65ae7e8c82df0d4003916da5d7a36a9b569
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ac1ae7ba40ead2217fd2404a243f0e02664177a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028396"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement クラス
-`CMFCRibbonBaseElement`クラスは基底クラスに追加できるすべての要素に対して、[リボン バー](../../mfc/reference/cmfcribbonbar-class.md)です。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
+`CMFCRibbonBaseElement`クラスは基底クラスに追加できるすべての要素に対して、[リボン バー](../../mfc/reference/cmfcribbonbar-class.md)します。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -269,33 +270,33 @@ class CMFCRibbonBaseElement : public CObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|リボン要素の keytip を keytip の配列に追加します。|  
-|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|指定されたリボン コマンドのリスト ボックスをリボン要素を追加します。|  
-|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|クイック アクセス ツールバーをリボン要素を追加できるかどうかを示します。|  
-|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|リボン要素のサイズを最適化できるかどうかを示します。|  
-|[Cmfcribbonbaseelement::canbestretched](#canbestretched)|リボン要素の高さがリボンの行の高さを縦に拡大できるかどうかを示します。|  
+|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Keytip の配列には、リボン要素の keytip を追加します。|  
+|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|指定されたリボン コマンドのリスト ボックスに、リボン要素を追加します。|  
+|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|クイック アクセス ツールバーにリボン要素を追加できるかどうかを示します。|  
+|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|リボン要素のサイズを縮小できるかどうかを示します。|  
+|[Cmfcribbonbaseelement::canbestretched](#canbestretched)|リボン要素の高さが、リボンの行の高さを縦に拡大できるかどうかを示します。|  
 |[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|リボン要素の幅を変更できるかどうかを示します。|  
 |[Cmfcribbonbaseelement::cleanupsizes](#cleanupsizes)|リボン要素のディメンション設定をクリーンアップします。|  
 |[Cmfcribbonbaseelement::closepopupmenu](#closepopupmenu)|リボン要素のポップアップ メニューを閉じます。|  
 |[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|指定した状態をコピー`CMFCRibbonBaseElement`を現在のオブジェクト。|  
 |[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|リボン要素を破棄します。|  
 |[Cmfcribbonbaseelement::drawimage](#drawimage)|リボン要素のイメージを描画します。|  
-|[CMFCRibbonBaseElement::Find](#find)|現在のオブジェクトを指している場合は、リボン要素に指定されたポインターを返します。|  
+|[CMFCRibbonBaseElement::Find](#find)|現在のオブジェクトを指している場合は、リボン要素に指定のポインターを返します。|  
 |[CMFCRibbonBaseElement::FindByData](#findbydata)|指定されたデータが含まれている場合は、リボン要素へのポインターを取得します。|  
-|[CMFCRibbonBaseElement::FindByID](#findbyid)|その要素が指定されたコマンド ID によって識別される場合は、リボン要素へのポインターを取得します。|  
+|[CMFCRibbonBaseElement::FindByID](#findbyid)|その要素が指定したコマンド ID で識別される場合は、リボン要素へのポインターを取得します|  
 |[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|元のリボン要素が指定されたリボン要素と一致する場合は、リボン要素へのポインターを取得します。|  
 |[Cmfcribbonbaseelement::getcompactsize](#getcompactsize)|リボン要素のコンパクト サイズを返します。|  
-|[CMFCRibbonBaseElement::GetData](#getdata)|リボン要素に関連付けられているユーザー定義データを取得します。|  
+|[CMFCRibbonBaseElement::GetData](#getdata)|リボン要素に関連付けられたユーザー定義データを取得します。|  
 |[CMFCRibbonBaseElement::GetDescription](#getdescription)|リボン要素の説明を返します。|  
-|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|ポップアップ メニューのドロップダウンをされている場合は、リボン要素へのポインターを取得します。|  
+|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|のポップアップ メニューが削除された場合は、リボン要素へのポインターを取得します。|  
 |[CMFCRibbonBaseElement::GetElements](#getelements)|指定した配列に現在のリボン要素を追加します。|  
-|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|現在のリボン要素には、指定されたコマンド ID が含まれている場合は、現在のリボン要素を指定した配列に追加します。|  
+|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|現在のリボン要素には、指定したコマンド ID が含まれている場合は、現在のリボン要素を指定した配列に追加します。|  
 |[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|強調表示されている場合は、リボン要素へのポインターを取得します。|  
 |[CMFCRibbonBaseElement::GetID](#getid)|リボン要素のコマンド ID を返します。|  
 |[Cmfcribbonbaseelement::getimagesize](#getimagesize)|リボン要素のイメージ サイズを返します。|  
 |[Cmfcribbonbaseelement::getintermediatesize](#getintermediatesize)|サイズが中間状態になっているリボン要素のサイズを返します。|  
 |[CMFCRibbonBaseElement::GetKeys](#getkeys)|リボン要素に関連付けられている keytip を返します。|  
-|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|リボン要素の keytip 境界の四角形を取得します。|  
+|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|リボン要素の keytip の境界の四角形を取得します。|  
 |[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Keytip のテキストのサイズを取得します。|  
 |[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|リボン グループのリボン要素の表示位置を示します。|  
 |[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|ボタンに関連付けられている keytip を返します。|  
@@ -303,26 +304,26 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|元のリボン要素を取得します。|  
 |[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|リボン要素のリボン カテゴリを取得します。|  
 |[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|リボン要素を含むリボン パネルを取得します。|  
-|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|リボン要素の親リボン バーを取得します。|  
+|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|リボン要素の親のリボン バーを取得します。|  
 |[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|リボン要素の親ウィンドウを取得します。|  
 |[CMFCRibbonBaseElement::GetPressed](#getpressed)|ユーザーが現在押した場合は、リボン要素へのポインターを取得します。|  
 |[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|クイック アクセス ツールバーにあるときは、リボン要素のコマンド ID を取得します。|  
 |[CMFCRibbonBaseElement::GetRect](#getrect)|リボン要素の外接する四角形を返します。|  
 |[Cmfcribbonbaseelement::getregularsize](#getregularsize)|リボン要素の標準サイズを返します。|  
 |[CMFCRibbonBaseElement::GetSize](#getsize)|リボン要素の現在のサイズを返します。|  
-|[CMFCRibbonBaseElement::GetText](#gettext)|リボン要素に関連付けられているテキストを返します。|  
+|[CMFCRibbonBaseElement::GetText](#gettext)|リボン要素に関連付けられたテキストを返します。|  
 |[Cmfcribbonbaseelement::gettooltiptext](#gettooltiptext)|リボン要素のツールヒント テキストを返します。|  
 |[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|リボン要素の最上位のリボン バーを取得します。|  
 |[Cmfcribbonbaseelement::hascompactmode](#hascompactmode)|リボン要素に簡易モードがあるかどうかを指定します。|  
 |[CMFCRibbonBaseElement::HasFocus](#hasfocus)|親要素にキーボード フォーカスがあるかどうかを示します。|  
 |[Cmfcribbonbaseelement::hasintermediatemode](#hasintermediatemode)|リボン要素に中間モードがあるかどうかを指定します。|  
 |[Cmfcribbonbaseelement::haslargemode](#haslargemode)|リボン要素に大モードがあるかどうかを指定します。|  
-|[Cmfcribbonbaseelement::hasmenu](#hasmenu)|リボン要素にメニューがあるかどうかを示します。|  
-|[CMFCRibbonBaseElement::HitTest](#hittest)|指定したポイントが含まれる場合は、リボン要素へのポインターを取得します。|  
-|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|リボン要素が他のリボン要素と垂直方向に整列するかどうかを示します。|  
-|[Cmfcribbonbaseelement::isalwayslargeimage](#isalwayslargeimage)|リボン要素のイメージ サイズが常に大きいかどうかを示します。|  
+|[Cmfcribbonbaseelement::hasmenu](#hasmenu)|リボン要素がメニューにあるかどうかを示します。|  
+|[CMFCRibbonBaseElement::HitTest](#hittest)|これで、指定した点がある場合は、リボン要素へのポインターを取得します。|  
+|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|その他のリボン要素を持つリボン要素を垂直方向に揃えるかどうかを示します。|  
+|[Cmfcribbonbaseelement::isalwayslargeimage](#isalwayslargeimage)|リボン要素のイメージのサイズが常に大きいかどうかを示します。|  
 |[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|リボン要素が自動繰り返しモードであるかどうかを示します。|  
-|[CMFCRibbonBaseElement::IsChecked](#ischecked)|リボン要素をチェックするかどうかを指定します。|  
+|[CMFCRibbonBaseElement::IsChecked](#ischecked)|リボン要素がオンになっているかどうかを指定します。|  
 |[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|リボン要素がコンパクト モードであるかどうかを指定します。|  
 |[CMFCRibbonBaseElement::IsDefaultMenuLook](#isdefaultmenulook)||  
 |[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|リボン要素が無効になっているかどうかを指定します。|  
@@ -330,77 +331,77 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::IsFocused](#isfocused)|リボン要素にフォーカスがあるかどうかを指定します。|  
 |[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|リボン ギャラリーのリボン要素が含まれているかどうかを示します。|  
 |[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|リボン要素が強調表示されているかどうかを指定します。|  
-|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|リボン要素の現在のイメージが中間サイズであるかどうかを示します。|  
-|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|かどうか、現在のイメージのリボン要素が大きいサイズを示します。|  
-|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|メニューのリボン要素が含まれているかどうかを示します。|  
+|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|リボン要素の現在のイメージが中間のサイズであるかどうかを示します。|  
+|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|かどうか、現在のイメージのリボン要素のサイズが大きいサイズを示します。|  
+|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|メニューにリボン要素が含まれているかどうかを示します。|  
 |[CMFCRibbonBaseElement::IsPressed](#ispressed)|ユーザーがリボン要素をクリックするかどうかを示します。|  
-|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|クイック アクセス ツールバーにリボン要素が含まれるかどうかを示します。|  
+|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|クイック アクセス ツールバーのリボン要素が含まれているかどうかを示します。|  
 |[CMFCRibbonBaseElement::IsSeparator](#isseparator)|リボン要素が表示の区切り記号であるかどうかを示します。|  
-|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|リボン要素が共通の境界線を表示するグループに含まれているかどうかを示します。|  
-|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|リボン要素の下のツールヒントが表示されるかどうかを示します。|  
-|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|キーボードでリボン要素を選択できるかどうかを示します。|  
+|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|リボン要素が共通の境界線を表示するグループに含まれるかどうかを示します。|  
+|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|リボン要素の下のツールヒントを表示するかどうかを示します。|  
+|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|キーボードを使用してリボン要素を選択できるかどうかを示します。|  
 |[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|右側のリボン要素のテキストを表示するかどうかを示します。|  
 |[CMFCRibbonBaseElement::IsVisible](#isvisible)|リボン要素が現在表示されているかどうかを示します。|  
-|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|リボン要素の表示の高さは、それを含むリボン パネルの表示の高さと同じかどうかを示します。|  
-|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|リボン要素の親ウィンドウにコマンドの通知を送信します。|  
-|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|リボン バーの親ウィンドウは、ユーザーが一覧にあるリボン要素を強調表示したときに通知します。|  
-|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|指定のクイック アクセス ツールバーをリボン要素を追加します。|  
+|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|リボン要素の表示の高さがそれを含むリボン パネルの表示の高さと同じかどうかを示します。|  
+|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|リボン要素の親ウィンドウには、コマンドの通知を送信します。|  
+|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|リボン バーの親ウィンドウは、ユーザーの一覧にあるリボン要素を強調表示したときに通知します。|  
+|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|指定のクイック アクセス ツールバーには、リボン要素を追加します。|  
 |[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|リボン要素のツールヒントが更新されます。|  
-|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|持続的なユーザー入力に応答してリボン要素を更新します。|  
+|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|持続的なユーザー入力への応答でリボン要素を更新します。|  
 |[Cmfcribbonbaseelement::oncalctextsize](#oncalctextsize)|リボン要素のテキストのサイズを計算します。|  
 |[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|メニューに配置されているリボン要素の強調表示が変更されたときに、フレームワークによって呼び出されます。|  
 |[Cmfcribbonbaseelement::ondraw](#ondraw)|リボン要素を描画するために、フレームワークによって呼び出されます。|  
 |[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|リボン要素の keytip を描画するためにフレームワークによって呼び出されます。|  
-|[Cmfcribbonbaseelement::ondrawmenuimage](#ondrawmenuimage)|リボン要素のメニュー画像が描画されるときに、フレームワークによって呼び出されます。|  
+|[Cmfcribbonbaseelement::ondrawmenuimage](#ondrawmenuimage)|リボン要素のメニュー イメージが描画されるときに、フレームワークによって呼び出されます。|  
 |[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|コマンドのリスト ボックスで、リボン要素を描画するためにフレームワークによって呼び出されます。|  
 |[CMFCRibbonBaseElement::OnKey](#onkey)|Keytip を押すし、フォーカスを持つリボン要素に、フレームワークによって呼び出されます。|  
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||  
 |[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|レイアウトの方向を変更するときに、フレームワークによって呼び出されます。|  
-|[CMFCRibbonBaseElement::OnShow](#onshow)|リボン要素を非表示を切り替えるために、フレームワークによって呼び出されます。|  
+|[CMFCRibbonBaseElement::OnShow](#onshow)|またはリボン要素を非表示にフレームワークによって呼び出されます。|  
 |[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|リボン要素がポップアップ メニューを表示するときに、フレームワークによって呼び出されます。|  
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||  
 |[CMFCRibbonBaseElement::Redraw](#redraw)|リボン要素の表示を更新します。|  
 |[Cmfcribbonbaseelement::setaccdata](#setaccdata)|リボン要素のアクセシビリティ データを設定します。|  
 |[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|リボン要素の表示サイズを設定します。|  
-|[CMFCRibbonBaseElement::SetData](#setdata)|リボン要素のデータ項目に関連付けます。|  
+|[CMFCRibbonBaseElement::SetData](#setdata)|データ アイテムをリボン要素に関連付けます。|  
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||  
 |[Cmfcribbonbaseelement::setdescription](#setdescription)|リボン要素の説明を設定します。|  
 |[CMFCRibbonBaseElement::SetID](#setid)|リボン要素のコマンド ID を設定します。|  
-|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|リボン要素の最初の表示サイズを設定します。|  
+|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|リボン要素の初期表示サイズを設定します。|  
 |[CMFCRibbonBaseElement::SetKeys](#setkeys)|リボン要素の keytip を設定します。|  
 |[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|リボン要素の元のリボン要素を設定します。|  
 |[Cmfcribbonbaseelement::setparentcategory](#setparentcategory)|リボン要素の親カテゴリを設定します。|  
-|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|親メニューのリボン要素のコンテナーを設定します。|  
-|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|リボン要素の親リボン バーを設定します。|  
+|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Menu コンテナー リボン要素の親を設定します。|  
+|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|リボン要素の親のリボン バーを設定します。|  
 |[CMFCRibbonBaseElement::SetRect](#setrect)|表示するリボン要素の四角形の寸法を設定します。|  
 |[Cmfcribbonbaseelement::settext](#settext)|リボン要素のテキストを設定します。|  
 |[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|右上に表示するリボン要素のテキストを設定します。|  
 |[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|リボン要素のツールヒントのテキストを設定します。|  
 |[CMFCRibbonBaseElement::SetVisible](#setvisible)|リボン要素の可視性の状態を設定します。|  
-|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|リボン要素の幅を伸縮します。|  
-|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|指定した行の高さをリボン要素の表示の高さを変更します。|  
+|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|リボン要素の幅を広げます。|  
+|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|指定した行の高さにリボン要素の表示の高さを変更します。|  
 |[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|リボン要素のコマンドのリソースを使用して、ツールヒントのテキストを更新します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|ショートカット キーを押したときに、フレームワークによって呼び出されます。|  
-|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|リボン要素を受信するかが入力フォーカスを失ったときに、フレームワークによって呼び出されます。|  
+|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|ユーザーがショートカット キーを押したときに、フレームワークによって呼び出されます。|  
+|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|リボン要素を受け取るかが入力フォーカスを失ったときに、フレームワークによって呼び出されます。|  
   
-## <a name="remarks"></a>コメント  
- `CMFCRibbonBaseElement`クラス コマンド ID、テキスト ラベル、ツールヒントのテキスト、要素の説明、および状態 (に重点を置いて、強調表示されている、押された、無効、チェック、またはできるドロップダウン) を含むすべてのリボン要素に共通するプロパティを定義します。  
+## <a name="remarks"></a>Remarks  
+ `CMFCRibbonBaseElement`クラス コマンド ID、テキスト ラベル、ツールヒントのテキスト、要素の説明、および状態 (またはができる重点を置いて、強調表示されている、押された、無効になっている、オンになっているドロップダウン) を含むすべてのリボン要素に共通するプロパティを定義します。  
   
- リボン要素のイメージのサイズがによって定義された、`RibbonImageType`メンバーで、次の値のいずれかになります。  
+ リボン要素のイメージのサイズがによって定義されている、`RibbonImageType`メンバーで、次の値のいずれかを指定できます。  
   
 - `RibbonImageLarge`  
   
 - `RibbonImageSmall`  
   
- サイズによっては、リボン要素は、小規模または大規模なイメージのどちらかを表示します。  
+ サイズによっては、リボン要素は、大小さまざまなイメージのいずれかが表示されます。  
   
 ## <a name="example"></a>例  
- 次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonBaseElement`クラスです。 この例は、取得する方法を示します、`CMFCRibbonBaseElement`オブジェクトから、`CMFCRibbonStatusBar`クラス、設定リボン要素の説明テキストを設定、keytip、およびリボン要素のツールヒントのテキストを設定します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
+ 次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonBaseElement`クラス。 例では、取得する方法を示しています、`CMFCRibbonBaseElement`オブジェクトから、`CMFCRibbonStatusBar`クラス、セットのリボン要素の説明、テキストの設定を keytip を設定してリボン要素のツールヒントのテキストを設定します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
   
  [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]  
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]  
@@ -410,11 +411,11 @@ class CMFCRibbonBaseElement : public CObject
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxbaseribbonelement.h  
   
 ##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
- リボン要素の keytip を keytip の配列に追加します。  
+ Keytip の配列には、リボン要素の keytip を追加します。  
   
 ```  
 virtual void AddToKeyList(
@@ -422,14 +423,14 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `arElems`  
- 参照、 [CArray](../../mfc/reference/carray-class.md) keytip のです。  
+ [in]*arElems*  
+ 参照を[CArray](../../mfc/reference/carray-class.md) keytip の。  
   
-### <a name="remarks"></a>コメント  
- リボンのキー ヒント機能を有効にすると、フレームワークは、ユーザーが ALT キーまたは F10 キーを押したときにリボンのキー ヒントを表示します。  
+### <a name="remarks"></a>Remarks  
+ リボンのキー ヒントの機能が有効にすると、フレームワークは、ユーザーが ALT キーまたは F10 キーを押したときにリボンのキー ヒントを表示します。  
   
 ##  <a name="addtolistbox"></a>  CMFCRibbonBaseElement::AddToListBox  
- 指定されたリボン コマンドのリスト ボックスをリボン要素を追加します。  
+ 指定されたリボン コマンドのリスト ボックスに、リボン要素を追加します。  
   
 ```  
 virtual int AddToListBox(
@@ -438,55 +439,55 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pWndListBox`  
+ [in]*pWndListBox*  
  コマンドのリスト ボックスへのポインター。  
   
- [入力] `bDeep`  
+ [in]*パラメーター bDeep*  
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
- 追加されたリボン要素の 0 から始まるインデックス。  
+ 追加したリボン要素の 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
- フレームワークは、ユーザー インターフェイスをカスタマイズするユーザーを有効にするコマンドのリスト ボックスをリボン要素を追加します。  
+### <a name="remarks"></a>Remarks  
+ フレームワークは、ユーザー インターフェイスをカスタマイズするユーザーを有効にするコマンドのリスト ボックスに、リボン要素を追加します。  
   
 ##  <a name="canbeaddedtoquickaccesstoolbar"></a>  CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
- クイック アクセス ツールバーをリボン要素を追加できるかどうかを示します。  
+ クイック アクセス ツールバーにリボン要素を追加できるかどうかを示します。  
   
 ```  
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、要素を追加できます。それ以外の場合、`FALSE`です。  
+ TRUE の場合は、要素を追加できます。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="canbecompacted"></a>  CMFCRibbonBaseElement::CanBeCompacted  
- リボン要素のサイズを最適化できるかどうかを示します。  
+ リボン要素のサイズを縮小できるかどうかを示します。  
   
 ```  
 virtual BOOL CanBeCompacted() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素のサイズを縮小; できる場合それ以外の場合、`FALSE`です。  
+ リボン要素のサイズはコンパクトです。 できる場合は TRUEそれ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- リボン要素のサイズは、コンパクト、中間、または大きなできます。  
+### <a name="remarks"></a>Remarks  
+ リボン要素のサイズには、compact、中級者、または大規模なを指定できます。  
   
 ##  <a name="canbestretched"></a>  Cmfcribbonbaseelement::canbestretched  
- リボン要素の高さがリボンの行の高さを縦に拡大できるかどうかを示します。  
+ リボン要素の高さが、リボンの行の高さを縦に拡大できるかどうかを示します。  
   
 ```  
 virtual BOOL CanBeStretched();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `TRUE` を返します。  
+ 常に TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`TRUE`です。 リボン要素の高さがリボンの行の高さを縦に拡大できるかどうかを示すためにこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは常に TRUE を返します。 リボン要素の高さが、リボンの行の高さを縦に拡大できるかどうかを示すには、このメソッドをオーバーライドします。  
   
 ##  <a name="canbestretchedhorizontally"></a>  CMFCRibbonBaseElement::CanBeStretchedHorizontally  
  リボン要素の幅を変更できるかどうかを示します。  
@@ -496,10 +497,10 @@ virtual BOOL CanBeStretchedHorizontally();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`FALSE`です。 リボン要素の幅を変更できるかどうかを示すためにこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定でこのメソッドは常に FALSE を返します。 リボン要素の幅を変更できるかどうかを指定するには、このメソッドをオーバーライドします。  
   
 ##  <a name="cleanupsizes"></a>  Cmfcribbonbaseelement::cleanupsizes  
  リボン要素のディメンション設定をクリーンアップします。  
@@ -508,8 +509,8 @@ virtual BOOL CanBeStretchedHorizontally();
 virtual void CleanUpSizes();
 ```  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは何も行いません。 リボン要素のディメンション設定をリセットする派生クラスでこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは何もしません。 リボン要素のディメンション設定をリセットする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="closepopupmenu"></a>  Cmfcribbonbaseelement::closepopupmenu  
  リボン要素のポップアップ メニューを閉じます。  
@@ -518,7 +519,7 @@ virtual void CleanUpSizes();
 virtual void ClosePopupMenu();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonBaseElement::CopyFrom  
  指定した状態をコピー [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)を現在のオブジェクト。  
@@ -528,10 +529,10 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
  ソース[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="destroyctrl"></a>  CMFCRibbonBaseElement::DestroyCtrl  
  リボン要素を破棄します。  
@@ -540,8 +541,8 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 virtual void DestroyCtrl();
 ```  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは何も行いません。 リボン要素を破棄する派生クラスでは、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは何もしません。 リボン要素を破棄する派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="drawimage"></a>  Cmfcribbonbaseelement::drawimage  
  リボン要素のイメージを描画します。  
@@ -554,41 +555,41 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `type`  
- イメージの種類の列挙値。 使用可能な値の一覧については、「解説」セクションを参照してください。  
+ [in]*型*  
+ イメージの種類の列挙値。 使用可能な値の一覧については、「解説」を参照してください。  
   
- [入力] `rectImage`  
+ [in]*rectImage*  
  イメージの四角形。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは何も行いません。 リボン要素のイメージを描画する派生クラスでこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは何もしません。 リボン要素のイメージを描画する派生クラスでこのメソッドをオーバーライドします。  
   
- 次の表に、可能な値、`type`パラメーター。  
+ 次の表に指定できる値の一覧、*型*パラメーター。  
   
  `RibbonImageLarge`  
- 大規模なサイズは 32 x 32 ピクセル イメージのサイズ。  
+ 大きなサイズは 32 x 32 ピクセルのイメージ サイズ。  
   
  `RibbonImageSmall`  
- 小規模の 16 x 16 ピクセル イメージのサイズ。  
+ 小さな 16 x 16 ピクセルのイメージ サイズ。  
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
- 現在のオブジェクトを指している場合は、指定されたポインターを返します。  
+ 現在のオブジェクトを指している場合は、指定したポインターを返します。  
   
 ```  
 virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pElement`  
+ [in]*pElement*  
  リボン要素へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素へのポインター場合`pElement`が現在のオブジェクトを指すそれ以外の場合`NULL`です。  
+ リボン要素へのポインター場合*pElement*を現在のポイント オブジェクト。 それ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData  
  指定されたデータが含まれている場合は、リボン要素へのポインターを取得します。  
@@ -598,29 +599,29 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `dwData`  
+ [in]*指定*  
  リボン要素に関連付けられたデータ。  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたデータが含まれている場合は、リボン要素へのポインターそれ以外の場合`NULL`です。  
+ 指定されたデータが含まれている場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="findbyid"></a>  CMFCRibbonBaseElement::FindByID  
- その要素が指定されたコマンド ID によって識別される場合は、リボン要素へのポインターを取得します。  
+ その要素が指定したコマンド ID で識別される場合は、リボン要素へのポインターを取得します  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdID`  
+ [in]*uiCmdID*  
  リボン要素のコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
- その要素が指定されたコマンド ID で識別される場合は、リボン要素へのポインターそれ以外の場合`NULL`です。  
+ その要素が、指定したコマンド ID によって識別される場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="findbyoriginal"></a>  CMFCRibbonBaseElement::FindByOriginal  
  元のリボン要素が指定されたリボン要素と一致する場合は、現在のリボン要素へのポインターを取得します。  
@@ -630,14 +631,14 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pOriginal`  
+ [in]*pOriginal*  
  リボン要素へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 元のリボン要素が指定されたリボン要素と一致する場合は、リボン要素へのポインターそれ以外の場合`NULL`です。  
+ 元のリボン要素の指定されたリボン要素に一致する場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
- リボン要素が別のコンテナーにコピーされるは、元のリボン要素へのポインターを保持します。  
+### <a name="remarks"></a>Remarks  
+ 別のコンテナーにコピーされるリボン要素は、元のリボン要素へのポインターを保持します。  
   
 ##  <a name="getcompactsize"></a>  Cmfcribbonbaseelement::getcompactsize  
  リボン要素のコンパクト サイズを返します。  
@@ -647,24 +648,24 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  リボン要素のコンパクト サイズ。  
   
 > [!NOTE]
->  Compact のサイズはリボン要素が切り捨てられたことを意味 (小さな画像またはテキストなしイメージが表示されます)。  
+>  Compact のサイズはリボン要素が切り捨てられたことを意味 (小さな画像、または、テキストのないイメージが表示されます)。  
   
 ##  <a name="getdata"></a>  CMFCRibbonBaseElement::GetData  
- リボン要素に関連付けられているユーザー定義データを取得します。  
+ リボン要素に関連付けられたユーザー定義データを取得します。  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素に関連付けられているユーザー定義データ。  
+ リボン要素に関連付けられたユーザー定義データ。  
   
 ##  <a name="getdescription"></a>  CMFCRibbonBaseElement::GetDescription  
  リボン要素の説明を返します。  
@@ -674,19 +675,19 @@ virtual CString GetDescription() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素の説明。 説明は、ステータス バーで、またはがツールヒントにまたは表示メニュー ボタンの下にリボン要素がある場合、 [CMFCRibbonMainPanel クラス](../../mfc/reference/cmfcribbonmainpanel-class.md)です。  
+ リボン要素の説明。 説明は、ステータス バーまたはツールヒント、またはメニュー ボタンの下にリボン要素がある場合、表示されます、 [CMFCRibbonMainPanel クラス](../../mfc/reference/cmfcribbonmainpanel-class.md)します。  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBaseElement::GetDroppedDown  
- ポップアップ メニューのドロップダウンをされている場合は、リボン要素へのポインターを取得します。  
+ のポップアップ メニューが削除された場合は、リボン要素へのポインターを取得します。  
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポップアップ メニューがドロップダウンされる場合は、リボン要素へのポインターそれ以外の場合`NULL`です。  
+ ポップアップ メニューがダウンすると、削除された場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getelements"></a>  CMFCRibbonBaseElement::GetElements  
  指定した配列に現在のリボン要素を追加します。  
@@ -697,13 +698,13 @@ virtual void GetElements(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力] `arElements`  
+ [入力、出力]*arElements*  
  リボン要素の配列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getelementsbyid"></a>  CMFCRibbonBaseElement::GetElementsByID  
- 現在のリボン要素には、指定されたコマンド ID が含まれている場合は、現在のリボン要素を指定した配列に追加します。  
+ 現在のリボン要素には、指定したコマンド ID が含まれている場合は、現在のリボン要素を指定した配列に追加します。  
   
 ```  
 virtual void GetElementsByID(
@@ -712,13 +713,13 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdID`  
+ [in]*uiCmdID*  
  リボン要素のコマンド ID。  
   
- [入力] `arElements`  
+ [in]*arElements*  
  リボン要素の配列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gethighlighted"></a>  CMFCRibbonBaseElement::GetHighlighted  
  強調表示されている場合は、リボン要素へのポインターを取得します。  
@@ -728,9 +729,9 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 強調表示されている場合は、リボン要素へのポインターそれ以外の場合`NULL`です。  
+ 強調表示されている場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getid"></a>  CMFCRibbonBaseElement::GetID  
  リボン要素のコマンド ID を返します。  
@@ -760,11 +761,11 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 中間の状態でリボン要素のサイズ。  
+ 中間状態にリボン要素のサイズ。  
   
 ##  <a name="getkeys"></a>  CMFCRibbonBaseElement::GetKeys  
  リボン要素に関連付けられている keytip を返します。  
@@ -774,10 +775,10 @@ LPCTSTR GetKeys() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素に関連付けられている keytip です。  
+ リボン要素に関連付けられている keytip します。  
   
 ##  <a name="getkeytiprect"></a>  CMFCRibbonBaseElement::GetKeyTipRect  
- リボン要素の keytip 境界の四角形を取得します。  
+ リボン要素の keytip の境界の四角形を取得します。  
   
 ```  
 virtual CRect GetKeyTipRect(
@@ -786,17 +787,17 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `bIsMenu`  
- `TRUE` リボン要素には、ポップアップ メニューが表示される場合それ以外の場合`FALSE`です。  
+ [in]*bIsMenu*  
+ リボン要素には、ポップアップ メニューが表示される場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
- 常に 0 の値を含む四角形を返します。  
+ 常に 0 の値を持つ四角形を返します。  
   
-### <a name="remarks"></a>コメント  
- Keytip 境界四角形を返す派生クラスでこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ Keytip の境界の四角形を返すの派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="getkeytipsize"></a>  CMFCRibbonBaseElement::GetKeyTipSize  
  Keytip のテキストのサイズを取得します。  
@@ -806,13 +807,13 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  Keytip のテキストのサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getlocationingroup"></a>  CMFCRibbonBaseElement::GetLocationInGroup  
  リボン グループのリボン要素の表示位置を示します。  
@@ -822,31 +823,31 @@ RibbonElementLocation GetLocationInGroup() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`RibbonElementLocation`列挙値。 次の表は、使用可能な値を一覧表示します。  
+ A`RibbonElementLocation`列挙値。 次の表では、使用可能な値を示します。  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |`RibbonElementNotInGroup`|リボン グループには、リボン要素が含まれていません。|  
-|`RibbonElementSingleInGroup`|リボン要素は、リボン グループの唯一の項目として表示されます。|  
-|`RibbonElementFirstInGroup`|リボン要素は、リボン グループの左端に表示されます。|  
-|`RibbonElementLastInGroup`|リボン要素は、リボン グループの右端に表示されます。|  
-|`RibbonElementMiddleInGroup`|リボン要素は、リボン グループの先頭または末尾には表示されません。|  
+|`RibbonElementSingleInGroup`|リボン要素は、リボンのグループの唯一の項目として表示されます。|  
+|`RibbonElementFirstInGroup`|リボン要素は、リボンのグループの左の端に表示されます。|  
+|`RibbonElementLastInGroup`|リボン要素は、リボンのグループの右端に表示されます。|  
+|`RibbonElementMiddleInGroup`|リボン要素は、リボンのグループの先頭または末尾には表示されません。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リボン要素のグループは水平方向にのみ配置します。  
   
 ##  <a name="getmenukeys"></a>  CMFCRibbonBaseElement::GetMenuKeys  
- リボン要素のメニュー keytip を返します。  
+ リボン要素のメニューの keytip を返します。  
   
 ```  
 LPCTSTR GetMenuKeys() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素に関連付けられたメニュー keytip です。  
+ リボン要素に関連付けられたメニュー keytip します。  
   
-### <a name="remarks"></a>コメント  
- 呼び出されると、メニュー keytip はポップアップ メニューを表示します。  
+### <a name="remarks"></a>Remarks  
+ 呼び出されると、メニューの keytip にポップアップ メニューが表示されます。  
   
 ##  <a name="getnotifyid"></a>  CMFCRibbonBaseElement::GetNotifyID  
  リボン要素の通知のコマンド ID を取得します。  
@@ -858,7 +859,7 @@ virtual UINT GetNotifyID();
 ### <a name="return-value"></a>戻り値  
  通知コマンド id。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getoriginal"></a>  CMFCRibbonBaseElement::GetOriginal  
  元のリボン要素を取得します。  
@@ -870,8 +871,8 @@ CMFCRibbonBaseElement* GetOriginal() const;
 ### <a name="return-value"></a>戻り値  
  元のリボン要素へのポインター。  
   
-### <a name="remarks"></a>コメント  
- リボン要素が別のコンテナーにコピーされるは、元のリボン要素へのポインターを保持します。  
+### <a name="remarks"></a>Remarks  
+ 別のコンテナーにコピーされるリボン要素は、元のリボン要素へのポインターを保持します。  
   
 ##  <a name="getparentcategory"></a>  CMFCRibbonBaseElement::GetParentCategory  
  リボン要素のリボン カテゴリを取得します。  
@@ -883,7 +884,7 @@ CMFCRibbonCategory* GetParentCategory() const;
 ### <a name="return-value"></a>戻り値  
  リボン カテゴリへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getparentpanel"></a>  CMFCRibbonBaseElement::GetParentPanel  
  リボン要素を含むリボン パネルを取得します。  
@@ -895,19 +896,19 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
 ### <a name="return-value"></a>戻り値  
  リボン要素を含むリボン パネルへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getparentribbonbar"></a>  CMFCRibbonBaseElement::GetParentRibbonBar  
- リボン要素の親リボン バーを取得します。  
+ リボン要素の親のリボン バーを取得します。  
   
 ```  
 CMFCRibbonBar* GetParentRibbonBar() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素の親リボン バーへのポインター。  
+ リボン要素の親のリボン バーへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getparentwnd"></a>  CMFCRibbonBaseElement::GetParentWnd  
  リボン要素の親ウィンドウを取得します。  
@@ -917,10 +918,10 @@ virtual CWnd* GetParentWnd() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、リボン要素の親ウィンドウへのポインターそれ以外の場合、`NULL`です。  
+ メソッドが成功した場合は、リボン要素の親ウィンドウへのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
- リボン要素の親ウィンドウは、 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)または[CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581)です。  
+### <a name="remarks"></a>Remarks  
+ リボン要素の親ウィンドウは、 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)または[CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581)します。  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  ユーザーが現在押した場合は、リボン要素へのポインターを取得します。  
@@ -930,9 +931,9 @@ virtual CMFCRibbonBaseElement* GetPressed();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ユーザーが現在それを押した場合は、リボン要素へのポインターそれ以外の場合、`NULL`です。  
+ それは、ユーザーが現在押した場合は、リボン要素へのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getquickaccesstoolbarid"></a>  CMFCRibbonBaseElement::GetQuickAccessToolBarID  
  クイック アクセス ツールバーにあるときは、リボン要素のコマンド ID を取得します。  
@@ -944,7 +945,7 @@ virtual UINT GetQuickAccessToolBarID() const;
 ### <a name="return-value"></a>戻り値  
  クイック アクセス ツールバーにあるときにリボン要素のコマンド ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getrect"></a>  CMFCRibbonBaseElement::GetRect  
  リボン要素の外接する四角形を返します。  
@@ -964,16 +965,16 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素の標準サイズです。  
+ リボン要素の通常サイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  標準のサイズは、リボン要素の最大許容サイズです。  
+>  正規表現のサイズは、リボン要素の最大許容サイズです。  
   
 ##  <a name="getsize"></a>  CMFCRibbonBaseElement::GetSize  
  リボン要素の現在のサイズを返します。  
@@ -983,21 +984,21 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  リボン要素の現在のサイズ。  
   
 ##  <a name="gettext"></a>  CMFCRibbonBaseElement::GetText  
- リボン要素に関連付けられているテキストを返します。  
+ リボン要素に関連付けられたテキストを返します。  
   
 ```  
 LPCTSTR GetText() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- リボン要素に関連付けられたテキストです。  
+ リボン要素に関連付けられたテキスト。  
   
 ##  <a name="gettooltiptext"></a>  Cmfcribbonbaseelement::gettooltiptext  
  リボン要素のツールヒント テキストを返します。  
@@ -1017,9 +1018,9 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、リボン要素の最上位のリボン バーへのポインターそれ以外の場合、`NULL`です。  
+ メソッドが成功した場合は、リボン要素の最上位のリボン バーへのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="hascompactmode"></a>  Cmfcribbonbaseelement::hascompactmode  
  リボン要素に簡易モードがあるかどうかを指定します。  
@@ -1029,12 +1030,12 @@ virtual BOOL HasCompactMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素には、コンパクト モードがある場合。 それ以外の場合は `FALSE`。  
+ リボン要素コンパクト モードがある場合は TRUE。 FALSE それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  コンパクト モードでは、要素は、小さな画像のみを表示します。  
+>  コンパクト モードでは、要素には、小さなイメージのみが表示されます。  
   
 ##  <a name="hasintermediatemode"></a>  Cmfcribbonbaseelement::hasintermediatemode  
  リボン要素に中間モードがあるかどうかを指定します。  
@@ -1044,9 +1045,9 @@ virtual BOOL HasIntermediateMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素に中間モード、`FALSE`それ以外の場合。 中間のモードでは、要素は、イメージの右側の小さな画像とテキストを表示します。  
+ リボン要素に中間モードでは、FALSE それ以外の場合は TRUE。 中間のモードでは、要素は、イメージの右側に小さいイメージとテキストを表示します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="haslargemode"></a>  Cmfcribbonbaseelement::haslargemode  
  リボン要素に大モードがあるかどうかを指定します。  
@@ -1056,65 +1057,65 @@ virtual BOOL HasLargeMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素に大モードがある場合。 それ以外の場合は `FALSE`。  
+ リボン要素に大モードがある場合は TRUE。 FALSE それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- 大モードでは、要素は親パネルの最大の高さを実行できます。  
+### <a name="remarks"></a>Remarks  
+ 大規模なモードでは、要素は、親パネルの最大の高さを実行できます。  
   
 ##  <a name="hasmenu"></a>  Cmfcribbonbaseelement::hasmenu  
- リボン要素にメニューがあるかどうかを示します。  
+ リボン要素がメニューにあるかどうかを示します。  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`FALSE`です。 リボン要素にメニューがあるかどうかを示すために派生クラスでこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定でこのメソッドは常に FALSE を返します。 このメソッドをリボン要素がメニューにあるかどうかを示すために派生クラスでオーバーライドします。  
   
 ##  <a name="hittest"></a>  CMFCRibbonBaseElement::HitTest  
- 指定したポイントが含まれる場合は、リボン要素へのポインターを取得します。  
+ これで、指定した点がある場合は、リボン要素へのポインターを取得します。  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `point`  
+ [in]*ポイント*  
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
- 存在する場合は、リボン要素へのポインターそれ以外の場合`FALSE`です。  
+ 存在する場合は、リボン要素へのポインターそれ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッド常に返しますの有効なポインター リボン要素が存在する場合。 リボン要素の点が存在するかどうかを示すためにこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定でこのメソッドは常の有効なポインター リボン要素に存在する場合。 リボン要素に、ポイントが存在するかどうかを示すには、このメソッドをオーバーライドします。  
   
 ##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn  
- リボン要素が他のリボン要素と垂直方向に整列するかどうかを示します。  
+ その他のリボン要素を持つリボン要素を垂直方向に揃えるかどうかを示します。  
   
 ```  
 virtual BOOL IsAlignByColumn() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `TRUE` を返します。  
+ 常に TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`TRUE`です。 その他のリボン要素を持つ派生リボン要素を垂直方向に揃えるかどうかを示すために派生クラスでこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは常に TRUE を返します。 このメソッドを他のリボン要素を持つ派生リボン要素を垂直方向に揃えるかどうかを示すために派生クラスでオーバーライドします。  
   
 ##  <a name="isalwayslargeimage"></a>  Cmfcribbonbaseelement::isalwayslargeimage  
- リボン要素のイメージ サイズが常に大きいかどうかを示します。  
+ リボン要素のイメージのサイズが常に大きいかどうかを示します。  
   
 ```  
 virtual BOOL IsAlwaysLargeImage() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素のイメージ サイズが大きいは常に場合それ以外の場合`FALSE`です。  
+ リボン要素のイメージのサイズが常に大きい; は、TRUE を返します。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  大きいイメージのサイズは、32 x 32 ピクセルです。  
   
 ##  <a name="isautorepeatmode"></a>  CMFCRibbonBaseElement::IsAutoRepeatMode  
@@ -1125,26 +1126,26 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nDelay`  
+ [in]*nDelay*  
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`FALSE`です。 リボン要素が自動繰り返しモードであるかどうかを示すためにこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定でこのメソッドは常に FALSE を返します。 リボン要素が自動繰り返しモードであるかどうかを示すためには、このメソッドをオーバーライドします。  
   
- 自動で繰り返しモードではリボン要素が設定されている間隔、応答持続的なユーザー入力をミリ秒単位で測定されます。  
+ 自動では繰り返しモードでは、リボン要素の間隔を設定するには応答持続的なユーザー入力をミリ秒単位で測定されます。  
   
 ##  <a name="ischecked"></a>  CMFCRibbonBaseElement::IsChecked  
- リボン要素をチェックするかどうかを指定します。  
+ リボン要素がオンになっているかどうかを指定します。  
   
 ```  
 virtual BOOL IsChecked() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素がチェックされている場合それ以外の場合`FALSE`です。  
+ リボン要素がチェックされている場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="iscompactmode"></a>  CMFCRibbonBaseElement::IsCompactMode  
  リボン要素がコンパクト モードであるかどうかを指定します。  
@@ -1154,7 +1155,7 @@ BOOL IsCompactMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素が、コンパクト モードである場合それ以外の場合`FALSE`です。  
+ リボン要素が、コンパクト モードでは、TRUE を返します。それ以外の場合は FALSE です。  
   
 ##  <a name="isdefaultmenulook"></a>  CMFCRibbonBaseElement::IsDefaultMenuLook  
  ポップアップ コマンドとして表示するリボン要素を設定するかどうかを示します。  
@@ -1164,9 +1165,9 @@ BOOL IsDefaultMenuLook() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ポップアップ コマンドとして表示するリボン要素が設定されている場合それ以外の場合`FALSE`です。  
+ ポップアップ コマンドとして表示するリボン要素が設定されている場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isdisabled"></a>  CMFCRibbonBaseElement::IsDisabled  
  リボン要素が無効になっているかどうかを指定します。  
@@ -1176,17 +1177,17 @@ virtual BOOL IsDisabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素が無効な場合それ以外の場合`FALSE`です。  
+ TRUE の場合、リボン要素が無効にします。それ以外の場合は FALSE です。  
   
 ##  <a name="isdroppeddown"></a>  CMFCRibbonBaseElement::IsDroppedDown  
- リボン要素がポップアップ メニューを表示し、ドロップダウンがあるかどうかを指定します。  
+ リボン要素がポップアップ メニューを表示し、ドロップダウンがかどうかを指定します。  
   
 ```  
 virtual BOOL IsDroppedDown() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素がが削除され、ポップアップ メニューを表示する場合それ以外の場合`FALSE`です。  
+ リボン要素をドロップダウン ポップアップ メニューを表示する場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="isfocused"></a>  CMFCRibbonBaseElement::IsFocused  
  リボン要素にフォーカスがあるかどうかを指定します。  
@@ -1196,7 +1197,7 @@ virtual BOOL IsFocused() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素にフォーカスがある場合それ以外の場合`FALSE`です。  
+ リボン要素にフォーカスがある場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="isgalleryicon"></a>  CMFCRibbonBaseElement::IsGalleryIcon  
  リボン ギャラリーのリボン要素が含まれているかどうかを示します。  
@@ -1206,10 +1207,10 @@ virtual BOOL IsGalleryIcon() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`FALSE`です。 リボン ギャラリーのリボン要素が含まれているかどうかを示すために派生クラスでこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定でこのメソッドは常に FALSE を返します。 リボン ギャラリーのリボン要素が含まれるかどうかを指定の派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ishighlighted"></a>  CMFCRibbonBaseElement::IsHighlighted  
  リボン要素が強調表示されているかどうかを指定します。  
@@ -1219,47 +1220,47 @@ virtual BOOL IsHighlighted() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、リボン要素が強調表示されます。それ以外の場合`FALSE`です。  
+ TRUE の場合、リボン要素が強調表示されます。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isintermediatemode"></a>  CMFCRibbonBaseElement::IsIntermediateMode  
- リボン要素の現在のイメージが中間サイズであるかどうかを示します。  
+ リボン要素の現在のイメージが中間のサイズであるかどうかを示します。  
   
 ```  
 BOOL IsIntermediateMode() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素のイメージが中間サイズの場合それ以外の場合`FALSE`です。  
+ リボン要素のイメージが中間サイズの場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- 中間のイメージのサイズは、16 x 16 ピクセルです。  
+### <a name="remarks"></a>Remarks  
+ 中間イメージのサイズは、16 x 16 ピクセルです。  
   
 ##  <a name="islargemode"></a>  CMFCRibbonBaseElement::IsLargeMode  
- リボン要素の現在のイメージが大きいサイズであるかどうかを示します。  
+ リボン要素の現在のイメージが大きなサイズであるかどうかを示します。  
   
 ```  
 BOOL IsLargeMode() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素のイメージが大きいサイズの場合それ以外の場合`FALSE`です。  
+ リボン要素のイメージが大きなサイズの場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  大きいイメージのサイズは、32 x 32 ピクセルです。  
   
 ##  <a name="ismenumode"></a>  CMFCRibbonBaseElement::IsMenuMode  
- メニューのリボン要素が含まれているかどうかを示します。  
+ メニューにリボン要素が含まれているかどうかを示します。  
   
 ```  
 BOOL IsMenuMode() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メニューのリボン要素が含まれている場合それ以外の場合、`FALSE`です。  
+ メニューにリボン要素が含まれている場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ispressed"></a>  CMFCRibbonBaseElement::IsPressed  
  ユーザーがリボン要素をクリックするかどうかを示します。  
@@ -1269,19 +1270,19 @@ virtual BOOL IsPressed() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ユーザーがリボン要素をクリックした場合それ以外の場合`FALSE`です。  
+ ユーザーがリボン要素をクリックした場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="isqatmode"></a>  CMFCRibbonBaseElement::IsQATMode  
- クイック アクセス ツールバーにリボン要素が含まれるかどうかを示します。  
+ クイック アクセス ツールバーのリボン要素が含まれているかどうかを示します。  
   
 ```  
 BOOL IsQATMode() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素が、クイック アクセス ツールバーに含まれている場合それ以外の場合、`FALSE`です。  
+ クイック アクセス ツールバーのリボン要素が含まれている場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isseparator"></a>  CMFCRibbonBaseElement::IsSeparator  
  リボン要素が表示の区切り記号であるかどうかを示します。  
@@ -1291,46 +1292,46 @@ virtual BOOL IsSeparator() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素が画面に区切り記号の場合それ以外の場合`FALSE`です。  
+ リボン要素が画面に区切り記号の場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isshowgroupborder"></a>  CMFCRibbonBaseElement::IsShowGroupBorder  
- リボン要素が共通の境界線を表示するグループに含まれているかどうかを示します。  
+ リボン要素が共通の境界線を表示するグループに含まれるかどうかを示します。  
   
 ```  
 BOOL IsShowGroupBorder() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素が共通の境界線を表示するグループに含まれている場合それ以外の場合、`FALSE`です。  
+ 通常の境界線を表示するリボン要素が、グループに含まれる場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isshowtooltiponbottom"></a>  CMFCRibbonBaseElement::IsShowTooltipOnBottom  
- リボン要素の下のツールヒントが表示されるかどうかを示します。  
+ リボン要素の下のツールヒントを表示するかどうかを示します。  
   
 ```  
 virtual BOOL IsShowTooltipOnBottom() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素の下のツールヒントが表示される場合`FALSE`場合は、ポインターの近くのツールヒントが表示されます。  
+ リボン要素の下でヒントが表示されている場合は TRUE。ポインターの近くにツールヒントが表示されている場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="istabstop"></a>  CMFCRibbonBaseElement::IsTabStop  
- キーボードでリボン要素を選択できるかどうかを示します。  
+ キーボードを使用してリボン要素を選択できるかどうかを示します。  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `TRUE` を返します。  
+ 常に TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`TRUE`です。 キーボードでリボン要素を選択できるかどうかを示すためにこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは常に TRUE を返します。 キーボードを使用してリボン要素を選択できるかどうかを示すには、このメソッドをオーバーライドします。  
   
 ##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight  
  右側のリボン要素のテキストを表示するかどうかを示します。  
@@ -1340,9 +1341,9 @@ BOOL IsTextAlwaysOnRight() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素のテキストが右側に表示されている場合それ以外の場合、`FALSE`です。  
+ リボン要素のテキストが右に表示される場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isvisible"></a>  CMFCRibbonBaseElement::IsVisible  
  リボン要素が現在表示されているかどうかを示します。  
@@ -1352,9 +1353,9 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素が現在表示されている場合それ以外の場合、`FALSE`です。  
+ リボン要素が現在表示されている場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="iswholerowheight"></a>  CMFCRibbonBaseElement::IsWholeRowHeight  
  リボン要素の表示の高さがそれを含むリボン パネルの表示の高さと同じかどうかを示します。  
@@ -1364,55 +1365,55 @@ virtual BOOL IsWholeRowHeight() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`FALSE`です。 リボン要素の表示の高さがそれを含むリボン パネルの表示の高さと同じかどうかを示すためにこのメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定でこのメソッドは常に FALSE を返します。 リボン要素の表示の高さがそれを含むリボン パネルの表示の高さと同じかどうかを示すには、このメソッドをオーバーライドします。  
   
 ##  <a name="notifycommand"></a>  CMFCRibbonBaseElement::NotifyCommand  
- リボン要素の親ウィンドウにコマンドの通知を送信します。  
+ リボン要素の親ウィンドウには、コマンドの通知を送信します。  
   
 ```  
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bWithDelay`  
- `TRUE` コマンド通知を親ウィンドウのメッセージ キューに追加するには`FALSE`を親ウィンドウにメッセージをすぐに送信します。  
+ [in]*bWithDelay*  
+ コマンド通知を親ウィンドウのメッセージ キューに追加する場合は TRUE親ウィンドウにすぐに、メッセージを送信する場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、メッセージが送信されました。それ以外の場合、`FALSE`です。  
+ メッセージが送信された場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="notifyhighlightlistitem"></a>  CMFCRibbonBaseElement::NotifyHighlightListItem  
- リボン バーの親ウィンドウは、ユーザーが一覧にあるリボン要素を強調表示したときに通知します。  
+ リボン バーの親ウィンドウは、ユーザーの一覧にあるリボン要素を強調表示したときに通知します。  
   
 ```  
 virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nIndex`  
- リスト内のリボン要素のインデックス。  
+ [in]*nIndex*  
+ リストのリボン要素のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onaddtoqatoolbar"></a>  CMFCRibbonBaseElement::OnAddToQAToolbar  
- 指定のクイック アクセス ツールバーをリボン要素を追加します。  
+ 指定のクイック アクセス ツールバーには、リボン要素を追加します。  
   
 ```  
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `qat`  
+ [in]*qat*  
  クイック アクセス ツールバー。  
   
 ### <a name="return-value"></a>戻り値  
- 常に返します`TRUE`リボン要素を示すクイック アクセス ツールバーに追加されました。  
+ 常にクイック アクセス ツールバーに追加されたリボン要素を示す場合は TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onafterchangerect"></a>  CMFCRibbonBaseElement::OnAfterChangeRect  
  リボン要素のツールヒントが更新されます。  
@@ -1422,24 +1423,24 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  このパラメーターは使用されません。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは、リボン要素のツールヒントを更新します。 表示する四角形が変更された後に、リボン要素を更新するには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは、リボン要素のツールヒントを更新します。 表示する四角形を変更した後、リボン要素を更新するには、このメソッドをオーバーライドします。  
   
 ##  <a name="onautorepeat"></a>  CMFCRibbonBaseElement::OnAutoRepeat  
- 持続的なユーザー入力に応答してリボン要素を更新します。  
+ 持続的なユーザー入力への応答でリボン要素を更新します。  
   
 ```  
 virtual BOOL OnAutoRepeat();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドの戻り値を常に`FALSE`です。 持続的なユーザー入力を処理するには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは常に FALSE を返します。 持続的なユーザー入力を処理するには、このメソッドをオーバーライドします。  
   
 ##  <a name="oncalctextsize"></a>  Cmfcribbonbaseelement::oncalctextsize  
  リボン要素のテキストのサイズを計算します。  
@@ -1449,11 +1450,11 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  このパラメーターは使用されません。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは何も行いません。 リボン要素のテキストのサイズを計算するには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは何もしません。 リボン要素のテキストのサイズを計算するには、このメソッドをオーバーライドします。  
   
 ##  <a name="onchangemenuhighlight"></a>  CMFCRibbonBaseElement::OnChangeMenuHighlight  
  メニューに配置されているリボン要素の強調表示が変更されたときに、フレームワークによって呼び出されます。  
@@ -1464,14 +1465,14 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pPanelMenuBar`  
+ [in]*pPanelMenuBar*  
  このパラメーターは使用されません。  
   
- [入力] `pHot`  
+ [in]*写真*  
  このパラメーターは使用されません。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは何も行いません。 強調表示が変更されたときに、メニューにあるリボン要素を更新するには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは何もしません。 強調表示が変更されたときに、メニューにあるリボン要素を更新するには、このメソッドをオーバーライドします。  
   
 ##  <a name="ondraw"></a>  Cmfcribbonbaseelement::ondraw  
  リボン要素を描画するために、フレームワークによって呼び出されます。  
@@ -1481,11 +1482,11 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
-### <a name="remarks"></a>コメント  
- 特定のリボン要素の描画をカスタマイズする場合は、派生クラスでは、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 特定のリボン要素の描画をカスタマイズする場合は、派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawkeytip"></a>  CMFCRibbonBaseElement::OnDrawKeyTip  
  リボン要素の keytip を描画するためにフレームワークによって呼び出されます。  
@@ -1498,19 +1499,19 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `rect`  
+ [in]*rect*  
  Keytip の境界の四角形。  
   
- [入力] `bIsMenu`  
- `TRUE` keytip がポップアップ メニュー ボタン以外の場合それ以外の場合、`FALSE`です。  
+ [in]*bIsMenu*  
+ Keytip のポップアップ メニュー ボタン以外の場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuimage"></a>  Cmfcribbonbaseelement::ondrawmenuimage  
- リボン要素のメニュー画像が描画されるときに、フレームワークによって呼び出されます。  
+ リボン要素のメニュー イメージが描画されるときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -1519,16 +1520,16 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  デバイス コンテキストへのポインター。  
   
- [入力] `rect`  
+ [in]*rect*  
  メニュー イメージの四角形。  
   
 ### <a name="return-value"></a>戻り値  
- 常に返します`TRUE`イメージが描画されたを示すためにします。  
+ 常に、イメージが描画されたを指定する場合は TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawonlist"></a>  CMFCRibbonBaseElement::OnDrawOnList  
  コマンドのリスト ボックスで、リボン要素を描画するためにフレームワークによって呼び出されます。  
@@ -1544,25 +1545,25 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  リボン要素のデバイス コンテキストへのポインター。  
   
- [入力] `strText`  
- 表示テキストです。  
+ [in]*strText*  
+ 表示テキスト。  
   
- [入力] `nTextOffset`  
- (ピクセル単位) のテキストを表示するリスト ボックスの左側からの距離。  
+ [in]*nTextOffset*  
+ 距離 (ピクセル)、テキストを表示、リスト ボックスの左側にあるからです。  
   
- [入力] `rect`  
+ [in]*rect*  
  リボン要素の表示の四角形。  
   
- [入力] `bIsSelected`  
+ [in]*bIsSelected*  
  このパラメーターは使用されません。  
   
- [入力] `bHighlighted`  
+ [in]*bHighlighted*  
  このパラメーターは使用されません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コマンドのリスト ボックスには、クイック アクセス ツールバーをカスタマイズするユーザーを有効にするリボン要素が表示されます。  
   
 ##  <a name="onkey"></a>  CMFCRibbonBaseElement::OnKey  
@@ -1573,46 +1574,46 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bIsMenuKey`  
- `TRUE` keytip がポップアップ メニューを表示する場合それ以外の場合、`FALSE`です。  
+ [in]*bIsMenuKey*  
+ Keytip がポップアップ メニューが表示される場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` イベントが処理された場合それ以外の場合`FALSE`です。  
+ イベントが処理された場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onmenukey"></a>  CMFCRibbonBaseElement::OnMenuKey  
- ユーザーは、[メイン] パネル メニュー keytip を押したときに、フレームワークによって呼び出されます。  
+ ユーザーがメイン パネルでメニュー keytip を押したときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nUpperChar`  
+ [in]*nUpperChar*  
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定ではこのメソッドは常`FALSE`です。 ユーザーは、[メイン] パネル メニュー keytip を押したときに応答するには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定でこのメソッドは常に FALSE を返します。 [メイン] パネル メニュー keytip を押したときに応答するには、このメソッドをオーバーライドします。  
   
 ##  <a name="onprocesskey"></a>  CMFCRibbonBaseElement::OnProcessKey  
- ショートカット キーを押したときに、フレームワークによって呼び出されます。  
+ ユーザーがショートカット キーを押したときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nChar`  
+ [in]*nChar*  
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
- 常に `FALSE` を返します。  
+ 常に FALSE を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リボン要素のショートカット キーを処理する場合は、このメソッドをオーバーライドします。  
   
 ##  <a name="onrtlchanged"></a>  CMFCRibbonBaseElement::OnRTLChanged  
@@ -1623,44 +1624,44 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bIsRTL`  
+ [in]*bIsRTL*  
  このパラメーターは使用されません。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは何も行いません。 レイアウトの方向を変更する場合に、リボン要素を調整するには、このメソッドをオーバーライドします。 既定のレイアウトの方向は、左から右です。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは何もしません。 レイアウトの方向を変更する場合に、リボン要素を調整するには、このメソッドをオーバーライドします。 既定のレイアウトの方向は、左から右です。  
   
 ##  <a name="onsetfocus"></a>  CMFCRibbonBaseElement::OnSetFocus  
- リボン要素を受信するかが入力フォーカスを失ったときに、フレームワークによって呼び出されます。  
+ リボン要素を受け取るかが入力フォーカスを失ったときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnSetFocus(BOOL B);
 ```  
   
-### <a name="remarks"></a>コメント  
- アプリケーションのリボン要素のフォーカスの変更を処理する場合は、派生クラスでは、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ リボン要素のフォーカスの変更を処理するために、アプリケーションの場合は、派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="onshow"></a>  CMFCRibbonBaseElement::OnShow  
- リボン要素を非表示を切り替えるために、フレームワークによって呼び出されます。  
+ またはリボン要素を非表示にフレームワークによって呼び出されます。  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bShow`  
+ [in]*bShow*  
  このパラメーターは使用されません。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは何も行いません。 リボン要素を非表示には、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは何もしません。 リボン要素を非表示には、このメソッドをオーバーライドします。  
   
 ##  <a name="onshowpopupmenu"></a>  CMFCRibbonBaseElement::OnShowPopupMenu  
- リボン要素がポップアップ メニューを表示する前に、フレームワークによって呼び出されます。  
+ リボン要素は、ポップアップ メニューを表示する前に、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnShowPopupMenu();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、リボン要素のポップアップ メニューが表示されるリボン バーの親ウィンドウに通知します。  
   
 ##  <a name="postmenucommand"></a>  CMFCRibbonBaseElement::PostMenuCommand  
@@ -1671,11 +1672,11 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdId`  
+ [in]*uiCmdId*  
  パラメーターは使用されません。  
   
-### <a name="remarks"></a>コメント  
- クローズ メッセージが送信されるは、リボン要素がポップアップ メニューにある場合のみです。  
+### <a name="remarks"></a>Remarks  
+ クローズ メッセージが送信されるは、ポップアップ メニューにリボン要素がある場合のみです。  
   
 ##  <a name="redraw"></a>  CMFCRibbonBaseElement::Redraw  
  リボン要素の表示を更新します。  
@@ -1684,8 +1685,8 @@ void PostMenuCommand(UINT uiCmdId);
 virtual void Redraw();
 ```  
   
-### <a name="remarks"></a>コメント  
- このメソッドを呼び出してリボン要素の表示長方形を再描画[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)で、 `RDW_INVALIDATE`、 `RDW_ERASE`、および`RDW_UPDATENOW`フラグを設定します。  
+### <a name="remarks"></a>Remarks  
+ このメソッドを呼び出してリボン要素を表示する四角形を再描画[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) RDW_INVALIDATE、RDW_ERASE、および RDW_UPDATENOW フラグを設定します。  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbaseelement::setaccdata  
  リボン要素のアクセシビリティ データを設定します。  
@@ -1697,17 +1698,17 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParent`  
+ *pParent*  
  リボン要素の親ウィンドウ。  
   
- `data`  
+ *data*  
  リボン要素のアクセシビリティ データ。  
   
 ### <a name="return-value"></a>戻り値  
- 常に `TRUE` を返します。  
+ 常に TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドはリボン要素のアクセシビリティ データを設定し、常に `TRUE`を返します。 アクセシビリティ データを設定し、成功または失敗を示す値を返すようにするには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは、リボン要素のアクセシビリティ データを設定し、常に TRUE を返します。 アクセシビリティ データを設定し、成功または失敗を示す値を返すようにするには、このメソッドをオーバーライドします。  
   
 ##  <a name="setcompactmode"></a>  CMFCRibbonBaseElement::SetCompactMode  
  リボン要素の表示サイズを設定します。  
@@ -1717,42 +1718,42 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bCompactMode`  
- `TRUE` リボン要素の表示サイズを縮小するには`FALSE`リボン要素の表示サイズを増やします。  
+ [in]*bCompactMode*  
+ リボン要素の表示サイズを小さく場合は TRUEリボン要素の表示サイズを増やす場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
- 次の表は、このメソッドのロジックをまとめたものです。  
+### <a name="remarks"></a>Remarks  
+ 次の表では、このメソッドのロジックをまとめたものです。  
   
-|`bCompactMode`|現在のリボン要素のサイズ|新しいリボン要素のサイズ|  
+|*bCompactMode*|現在のリボン要素のサイズ|新しいリボン要素のサイズ|  
 |--------------------|---------------------------------|-----------------------------|  
-|`TRUE`|Compact|変更はありません。|  
-|`TRUE`|［中間］|可能な場合を最適化します。|  
-|`TRUE`|大規模です|中間可能性がある場合。|  
-|`FALSE`|Compact|中間可能な場合それ以外の場合、大きななります。|  
+|true|Compact|変更はありません。|  
+|true|［中間］|可能な場合を最適化します。|  
+|true|大規模です|中間可能性がある場合。|  
+|false|Compact|これが可能な場合は中間それ以外の場合、大きななります。|  
   
 ##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData  
- リボン要素のデータ項目に関連付けます。  
+ データ アイテムをリボン要素に関連付けます。  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `dwData`  
+ [in]*指定*  
  データの値。  
   
 ##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
- ポップアップ コマンドとして表示するリボン要素を設定します。  
+ ポップアップをコマンドとして表示するリボン要素を設定します。  
   
 ```  
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bIsDefaultMenuLook`  
- `TRUE` ポップアップ コマンドとして表示するリボン要素の設定それ以外の場合`FALSE`です。  
+ [in]*bIsDefaultMenuLook*  
+ ポップアップ コマンドとして表示するリボン要素を設定する場合は TRUEそれ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setdescription"></a>  Cmfcribbonbaseelement::setdescription  
  リボン要素の説明を設定します。  
@@ -1762,11 +1763,11 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszText`  
- リボン要素を説明します。  
+ [in]*lpszText*  
+ リボン要素の説明です。  
   
-### <a name="remarks"></a>コメント  
- フレームワークは、ステータス バーで、または、ツールヒント、またはメニュー ボタンの下に新しい説明を表示します。  
+### <a name="remarks"></a>Remarks  
+ フレームワークは、ステータス バーの または、ツールヒント、またはメニュー ボタンの下に新しい説明を表示します。  
   
 ##  <a name="setid"></a>  CMFCRibbonBaseElement::SetID  
  リボン要素のコマンド ID を設定します。  
@@ -1776,22 +1777,22 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  コマンド ID。  
   
 ##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
- リボン要素の最初の表示サイズを設定します。  
+ リボン要素の初期表示サイズを設定します。  
   
 ```  
 virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bOneRow`  
- `TRUE` 圧縮または中間; リボン要素の表示サイズを制限するにはそれ以外の場合、`FALSE`です。  
+ [in]*bOneRow*  
+ Compact または中間にリボン要素の表示サイズを制限する場合は Trueそれ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- リボン要素の表示サイズは、コンパクト、中間、または大きなできます。  
+### <a name="remarks"></a>Remarks  
+ リボン要素の表示サイズには、compact、中級者、または大規模なを指定できます。  
   
 ##  <a name="setkeys"></a>  CMFCRibbonBaseElement::SetKeys  
  リボン要素のキー ヒントを設定します。  
@@ -1803,11 +1804,11 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszKeys`  
+ [in]*lpszKeys*  
  リボン要素のキー ヒント。  
   
- [入力] `lpszMenuKeys`  
- リボン要素のポップアップ メニューを keytip です。  
+ [in]*lpszMenuKeys*  
+ リボン要素のポップアップ メニューの keytip します。  
   
 ##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
  リボン要素の元のリボン要素を設定します。  
@@ -1817,11 +1818,11 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pOriginal`  
+ [in]*pOriginal*  
  リボン要素へのポインター。  
   
-### <a name="remarks"></a>コメント  
- リボン要素が別のコンテナーにコピーされるは、元のリボン要素へのポインターを保持します。  
+### <a name="remarks"></a>Remarks  
+ 別のコンテナーにコピーされるリボン要素は、元のリボン要素へのポインターを保持します。  
   
 ##  <a name="setparentcategory"></a>  Cmfcribbonbaseelement::setparentcategory  
  リボン要素の親カテゴリを設定します。  
@@ -1831,64 +1832,64 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pParent`  
+ [in]*pParent*  
  リボン カテゴリへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  リボン コントロールのタブ付きグループは、カテゴリと呼ばれます。  
   
 ##  <a name="setparentmenu"></a>  CMFCRibbonBaseElement::SetParentMenu  
- 親メニューのリボン要素のコンテナーを設定します。  
+ Menu コンテナー リボン要素の親を設定します。  
   
 ```  
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pMenuBar`  
+ [in]*pMenuBar*  
  親メニュー。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setparentribbonbar"></a>  CMFCRibbonBaseElement::SetParentRibbonBar  
- リボン要素の親リボン バーを設定します。  
+ リボン要素の親のリボン バーを設定します。  
   
 ```  
 virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pRibbonBar`  
- 親リボン バーへのポインター。  
+ [in]*pRibbonBar*  
+ 親のリボン バーへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="setrect"></a>  CMFCRibbonBaseElement::SetRect  
- リボン要素の表示長方形の寸法を設定します。  
+ リボン要素を表示する四角形の大きさを設定します。  
   
 ```  
 void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `rect`  
+ [in]*rect*  
  四角形の寸法。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="settext"></a>  Cmfcribbonbaseelement::settext  
- リボン要素のキー ヒントのテキストを設定します。  
+ リボン要素の keytip のテキストを設定します。  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszText`  
- テキストとリボン要素のキー ヒント。  
+ [in]*lpszText*  
+ テキストとリボン要素の keytip します。  
   
-### <a name="remarks"></a>コメント  
- リボン要素の keytip を設定するには、追加する keytip の文字が続き、改行エスケープ シーケンス`lpszText`です。  
+### <a name="remarks"></a>Remarks  
+ リボン要素の keytip を設定する追加の keytip の文字に続く改行エスケープ シーケンス*lpszText*します。  
   
 ### <a name="example"></a>例  
   
@@ -1909,10 +1910,10 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bSet`  
- `TRUE` 右側にテキストを表示するにはそれ以外の場合`FALSE`です。  
+ [in]*bSet*  
+ 右側のテキストを表示する場合は TRUEそれ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="settooltiptext"></a>  CMFCRibbonBaseElement::SetToolTipText  
  リボン要素のツールヒントのテキストを設定します。  
@@ -1922,7 +1923,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszText`  
+ [in]*lpszText*  
  ツールヒントのテキスト。  
   
 ##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
@@ -1933,23 +1934,23 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `bIsVisible`  
- `TRUE` リボン要素を表示するには`FALSE`リボン要素を非表示にします。  
+ [in]*bIsVisible*  
+ リボン要素を表示する場合は TRUEリボン要素を非表示にする場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="stretchhorizontally"></a>  CMFCRibbonBaseElement::StretchHorizontally  
- リボン要素の幅を伸縮します。  
+ リボン要素の幅を広げます。  
   
 ```  
 virtual void StretchHorizontally();
 ```  
   
-### <a name="remarks"></a>コメント  
- 既定では、このメソッドは、デバッグ ビルドで、アサーションの失敗を生成し、そのため呼び出すことはできません。 リボン要素の幅をストレッチするには、このメソッドをオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定では、このメソッドは、デバッグ ビルドでのアサーション エラーを生成し、そのため呼び出すことはできません。 リボン要素の幅を拡張するには、このメソッドをオーバーライドします。  
   
 ##  <a name="stretchtowholerow"></a>  CMFCRibbonBaseElement::StretchToWholeRow  
- 指定した行の高さをリボン要素の表示の高さを変更します。  
+ 指定した行の高さにリボン要素の表示の高さを変更します。  
   
 ```  
 virtual BOOL StretchToWholeRow(
@@ -1958,16 +1959,16 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
  このパラメーターは使用されません。  
   
- [入力] `nHeight`  
+ [in]*パラメーター nHeight*  
  行の高さ。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 表示の高さが設定された場合それ以外の場合、`FALSE`です。  
+ 表示の高さが設定された場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定した行の高さにリボン要素の表示の高さを変更するには、このメソッドをオーバーライドします。  
   
 ##  <a name="updatetooltipinfo"></a>  CMFCRibbonBaseElement::UpdateTooltipInfo  
@@ -1977,7 +1978,7 @@ virtual BOOL StretchToWholeRow(
 virtual void UpdateTooltipInfo();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="hasfocus"></a>  CMFCRibbonBaseElement::HasFocus  
  親要素にキーボード フォーカスがあるかどうかを示します。  
@@ -1987,9 +1988,9 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン要素にフォーカスがある状態です。 場合それ以外の場合`FALSE`です。  
+ リボン要素がフォーカスされた; は、TRUE を返します。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

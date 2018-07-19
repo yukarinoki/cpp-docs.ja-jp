@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245391a0625d94fee0a4457f87e7b633ba3d03ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955736"
 ---
 # <a name="strstream-class"></a>strstream クラス
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/08/2018
 class strstream : public iostream
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このオブジェクトは、クラス `strstreambuf` のオブジェクトを格納します。
 
@@ -60,7 +61,7 @@ class strstream : public iostream
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
 |[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<strstream>
 
@@ -76,15 +77,16 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Freezeit` A`bool`は固定表示をストリームするかどうかを示すです。
+*_Freezeit*  
+ A **bool**ストリームを停止するかどうかを示します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*) を呼び出します。
 
 ### <a name="example"></a>例
 
-**freeze** の使用例は、[strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) をご覧ください。
+参照してください[strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze)を使用する例については`freeze`します。
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -98,7 +100,7 @@ streamsize pcount() const;
 
 被制御シーケンスに書き込まれる要素の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount) を返します。
 
@@ -118,9 +120,9 @@ strstreambuf *rdbuf() const
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は **pointer** 型の格納されたストリーム バッファーのアドレスを [strstreambuf](../standard-library/strstreambuf-class.md) に返します。
+メンバー関数は、型の格納されたストリーム バッファーのアドレスを返します`pointer`に[strstreambuf](../standard-library/strstreambuf-class.md)します。
 
 ### <a name="example"></a>例
 
@@ -138,13 +140,13 @@ char *str();
 
 被制御シーケンスの先頭へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str) を返します。
 
 ### <a name="example"></a>例
 
-**str** の使用例は、[strstreambuf::str](../standard-library/strstreambuf-class.md#str) をご覧ください。
+参照してください[strstreambuf::str](../standard-library/strstreambuf-class.md#str)を使用するサンプルの`str`します。
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -160,19 +162,22 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>パラメーター
 
-`count` バッファーのサイズ。
+*count*  
+ バッファーのサイズ。
 
-`_Mode` バッファーの入力と出力モードです。 詳細については、[ios_base::openmode](../standard-library/ios-base-class.md#openmode) をご覧ください。
+*モード (_m)*  
+ バッファーの入出力モード。 詳細については、[ios_base::openmode](../standard-library/ios-base-class.md#openmode) をご覧ください。
 
-`ptr` バッファーです。
+*ptr*  
+ バッファー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-両方のコンストラクターは、[streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) を呼び出すことにより基本クラスを初期化します。ここで、**sb** は [strstreambuf](../standard-library/strstreambuf-class.md) 型の格納されているオブジェクトです。 最初のコンストラクターはまた、[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf) を呼び出して **sb** を初期化します。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
+両方のコンス トラクターを呼び出して基底クラスを初期化する[streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) ここで、`sb`クラスの格納されているオブジェクトは、 [strstreambuf](../standard-library/strstreambuf-class.md)します。 最初のコンス トラクターによって初期化も`sb`呼び出して[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)します。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
 
-- `_Mode` & **ios_base::app**== 0 の場合、`ptr` は `count` 要素の配列の最初の要素を指定する必要があり、コンストラクターは `strstreambuf`(`ptr`, `count`, `ptr`) を呼び出します。
+- 場合`_Mode`  &  **ios_base::app**し、0 を = = *ptr*の配列の最初の要素を指定する必要があります`count`要素、およびコンス トラクター呼び出し`strstreambuf`( `ptr`, `count`, `ptr`).
 
-- それ以外の場合、`ptr` は count 要素の配列の最初の要素を指定する必要があります。この count 要素は C 文字列を含み、最初の要素が `ptr` によって指定されるものです。そしてコンストラクターは `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`(`ptr`)) を呼び出します。
+- それ以外の場合、 *ptr*配列の count 要素の C 文字列を含む最初の要素がで指定された最初の要素を指定する必要があります*ptr*、コンス トラクターの呼び出しと`strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>関連項目
 

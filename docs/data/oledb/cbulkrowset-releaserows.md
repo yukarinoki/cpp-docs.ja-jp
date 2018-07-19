@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094928"
 ---
 # <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
 呼び出し[irowset::releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) bulk 行セットから取得した現在のすべての行の参照カウントをデクリメントします。  

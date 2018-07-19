@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357324"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>ATL と MFC の選択に関する推奨事項
 コンポーネントおよびアプリケーションを開発するときに 2 つの方法を選択できます: ATL および MFC (Microsoft Foundation Class ライブラリ)。  

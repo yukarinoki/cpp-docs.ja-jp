@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370948"
 ---
 # <a name="heapsize"></a>HEAPSIZE
 同じ機能を公開、 [ヒープ/](../../build/reference/heap-set-heap-size.md)リンカー オプション。  

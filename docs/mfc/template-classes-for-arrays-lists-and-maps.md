@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380254"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>配列、リスト、マップのテンプレート クラス
 これらのコレクション クラスとは、テンプレート パラメーターが設定された集計に格納されているオブジェクトの種類の決定です。 `CArray`、 `CMap`、および`CList`クラスは、カスタマイズされた通常のグローバルのヘルパー関数を使用します。 これらのヘルパー関数の詳細については、次を参照してください。[コレクション クラスのヘルパー](../mfc/reference/collection-class-helpers.md)です。 型指定されたポインターのクラスは、クラス ライブラリの他のクラスのラッパーです。 これらのラッパーを使用すると、コンパイラの型チェックのエラーを回避するために参加させます。 これらのクラスを使用する方法については、次を参照してください。[コレクション](../mfc/collections.md)です。  

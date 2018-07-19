@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375371"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (デバッグ情報オプション)
 /DEBUGTYPE オプションは、/DEBUG オプションによって生成されるデバッグ情報の種類を指定します。  

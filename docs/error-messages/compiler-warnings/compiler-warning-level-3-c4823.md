@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293232"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>コンパイラの警告 (レベル 3) C4823
 'function': を使用して固定ポインターが、アンワインド セマンティクスが有効ではありません。 /EHa を使用してください。  

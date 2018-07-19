@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688038"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 名前空間
 graphics 名前空間は、グラフィックス プログラミング用に設計された型と関数を提供します。  

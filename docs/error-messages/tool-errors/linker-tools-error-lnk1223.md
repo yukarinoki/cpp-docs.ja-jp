@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298653"
 ---
 # <a name="linker-tools-error-lnk1223"></a>リンカ ツール エラー LNK1223
 ファイルが無効かまたは壊れています: ファイルに無効な .pdata のコントリビューションが含まれています。  

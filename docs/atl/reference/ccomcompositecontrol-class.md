@@ -1,5 +1,5 @@
 ---
-title: CComCompositeControl クラス |Microsoft ドキュメント
+title: CComCompositeControl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6414856aa893a9dba67dce5ffd9650fd03289ae
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885248"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl クラス
 このクラスは、複合コントロールを実装するために必要なメソッドを提供します。  
@@ -46,7 +47,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
+ *T*  
  派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)複合コントロールをサポートするために必要なその他のすべてのインターフェイスからも、します。  
   
 ## <a name="members"></a>メンバー  
@@ -62,11 +63,11 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
 |名前|説明|  
 |----------|-----------------|  
-|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|複合コントロールでホストされているすべてのコントロールをアドバイズするか、このメソッドを呼び出します。|  
-|[CComCompositeControl::CalcExtent](#calcextent)|サイズを計算するには、このメソッドを呼び出す**HIMETRIC**複合コントロールをホストするために使用するダイアログ リソースの単位。|  
-|[CComCompositeControl::Create](#create)|このメソッドは複合コントロールのコントロールのウィンドウを作成します。|  
-|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|コントロール ウィンドウを作成し、ホストされるコントロールをアドバイズするには、このメソッドを呼び出します。|  
-|[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|コンテナーの背景色を使用した複合コントロールの背景色を設定するには、このメソッドを呼び出します。|  
+|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|複合コントロールによってホストされているすべてのコントロールをアドバイズするか、このメソッドを呼び出します。|  
+|[CComCompositeControl::CalcExtent](#calcextent)|HIMETRIC 単位複合コントロールをホストするために使用するダイアログ リソースのサイズを計算するには、このメソッドを呼び出します。|  
+|[CComCompositeControl::Create](#create)|このメソッドは、複合コントロールのコントロール ウィンドウを作成します。|  
+|[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|このメソッドでは、コントロール ウィンドウを作成し、ホストされるコントロールのことをお勧めします。|  
+|[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|コンテナーの背景色を使用して複合コントロールの背景色を設定するには、このメソッドを呼び出します。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -75,20 +76,20 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 |[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|背景のブラシ。|  
 |[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|現在フォーカスがあるウィンドウのハンドル。|  
   
-## <a name="remarks"></a>コメント  
- クラスから派生したクラス`CComCompositeControl`ActiveX 複合コントロールの機能を継承します。 ActiveX コントロールから派生した`CComCompositeControl`標準のダイアログ ボックスによってホストされます。 これらの種類のコントロールと呼ばれる複合コントロール (ActiveX コントロールとネイティブの Windows コントロール) は、その他のコントロールをホストすることができます。  
+## <a name="remarks"></a>Remarks  
+ クラスから派生したクラス`CComCompositeControl`ActiveX の複合コントロールの機能を継承します。 派生した ActiveX コントロール`CComCompositeControl`標準のダイアログ ボックスによってホストされます。 これらの種類のコントロールは他のコントロール (Windows のネイティブ コントロールおよび ActiveX コントロール) をホストすることがあるために、複合コントロール呼び出されます。  
   
- `CComCompositeControl` 複合コントロールを列挙データ クラスのメンバーの子の作成に使用するダイアログ リソースを識別します。 この子クラスのメンバー IDD は、コントロールのウィンドウとして使用されるダイアログ リソースのリソース ID に設定されます。 クラスから派生するデータ メンバーの例を次に示します`CComCompositeControl`コントロールのウィンドウを使用するダイアログ リソースを識別する含める必要があります。  
+ `CComCompositeControl` 子クラスに、列挙データ メンバーを探すことによって、複合コントロールの作成に使用するダイアログ リソースを識別します。 IDD この子クラスのメンバーは、コントロールのウィンドウとして使用されるダイアログ リソースのリソース ID に設定されます。 クラスから派生するデータ メンバーの例を次に`CComCompositeControl`コントロールのウィンドウに使用するダイアログ リソースを識別するために含める必要があります。  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
 > [!NOTE]
->  複合コントロールは、ウィンドウなしのコントロールを含めることができるが、ウィンドウを持つコントロールは、常にします。  
+>  ウィンドウなしのコントロールを含めることができますが、複合コントロールはウィンドウのコントロールでは常に。  
   
- によって実装される、コントロール、 `CComCompositeControl`-派生クラスが既定構築された動作をタブ移動します。 アプリケーション内にタブによってコントロールがフォーカスを受け取ると、連続して TAB キーを押してが発生、フォーカスをすべての複合コントロールのコンテナー内のコントロールは、複合コントロールし、次の項目にログオンを循環する、コンテナーのタブ オーダーです。 ホストされるコントロールのタブ オーダーは、ダイアログ リソースによって決定され、順序を決定するタブでは発生しません。  
+ コントロールによって実装される、 `CComCompositeControl`-派生クラスが既定のタブの動作が組み込まれています。 連続して TAB キーを押すが循環にすべての複合コントロールの格納されているコントロール、し、複合コントロールからの次の項目にフォーカスを含んでいるアプリケーション内でのタブで、コントロールがフォーカスを受け取ると、ときに発生しますコンテナーのタブ オーダー。 ホストされるコントロールのタブ オーダーは、ダイアログ リソースによって決定され、順序を決定しますでどの tab キーによる移動が発生します。  
   
 > [!NOTE]
->  アクセラレータで正しく動作するために、 `CComCompositeControl`、するには、コントロールが作成されると、アクセラレータ テーブルを読み込む、ハンドルおよびにアクセラレータの数を渡す必要がある[IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)、および最後にコントロールがリリースされたときに、テーブルを破棄します。  
+>  アクセラレータで正しく動作するために、 `CComCompositeControl`、アクセラレータ テーブルを読み込み、コントロールが作成されると、ハンドルとにアクセラレータの番号を渡す必要がある[IOleControlImpl::GetControlInfo](../../atl/reference/iolecontrolimpl-class.md#getcontrolinfo)と最後に、コントロールがリリースされたときに、テーブルを破棄します。  
   
 ## <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#14](../../atl/codesnippet/cpp/ccomcompositecontrol-class_2.h)]  
@@ -102,61 +103,61 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
  `CComCompositeControl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
- 複合コントロールでホストされているすべてのコントロールをアドバイズするか、このメソッドを呼び出します。  
+ 複合コントロールによってホストされているすべてのコントロールをアドバイズするか、このメソッドを呼び出します。  
   
 ```
 HRESULT AdviseSinkMap(bool bAdvise);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bAdvise`  
- True の場合は、すべてのコントロールでは、することをお勧めします。それ以外の場合は false。  
+ *bAdvise*  
+ すべてのコントロールがあることをお勧めします。 には、true を返します。それ以外の場合は false。  
   
 ### <a name="return-value"></a>戻り値  
- `S_OK`  
- すべてのコントロール、イベント シンク マップに接続されたか、イベント ソースから正常に切断されました。  
+ S_OK  
+ すべてのコントロール、イベント シンク マップに接続されたか、イベント ソースから正常に切断します。  
   
- **E_FAIL**  
- すべてのコントロール、イベント シンク マップを接続しているか、イベント ソースから正常に切断された可能性があるとは限りません。  
+ E_FAIL  
+ すべてを制御、イベント シンク マップを接続されているか、イベント ソースから正常に切断された可能性があります。  
   
- `E_POINTER`  
- このエラーは、コントロールのイベント シンク マップ内のエントリの問題かで使用されるテンプレート引数に問題に通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラスです。  
+ E_POINTER  
+ このエラーは、コントロールのイベント シンク マップ内のエントリの問題またはで使用されるテンプレート引数の問題には、通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラス。  
   
- **CONNECT_E_ADVISELIMIT**  
+ CONNECT_E_ADVISELIMIT  
  接続ポイントは、接続の上限に既に達してし、以上を受け入れることはできません。  
   
- **CONNECT_E_CANNOTCONNECT**  
- シンクは、この接続ポイントに必要なインターフェイスをサポートしていません。  
+ CONNECT_E_CANNOTCONNECT  
+ シンクは、このコネクション ポイントが必要なインターフェイスをサポートしていません。  
   
- **CONNECT_E_NOCONNECTION**  
- Cookie の値には、有効な接続は表しません。 このエラーは、コントロールのイベント シンク マップ内のエントリの問題かで使用されるテンプレート引数に問題に通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラスです。  
+ CONNECT_E_NOCONNECTION  
+ Cookie の値は、有効な接続を表していません。 このエラーは、コントロールのイベント シンク マップ内のエントリの問題またはで使用されるテンプレート引数の問題には、通常を示します、`IDispEventImpl`または`IDispEventSimpleImpl`基本クラス。  
   
-### <a name="remarks"></a>コメント  
- このメソッドの基本実装は、イベント シンク マップのエントリを検索します。 次に、アドバイスまたはイベント シンク マップのシンクのエントリで説明されている COM オブジェクトへの接続ポイントをアドバイズします。 また、このメソッドは、派生クラスが 1 つのインスタンスから継承されるという事実に依存`IDispEventImpl`の推奨またはアドバイズ シンク マップ内のすべての制御します。  
+### <a name="remarks"></a>Remarks  
+ このメソッドの基本実装は、イベント シンク マップのエントリを検索します。 次に、アドバイスかアドバイズ シンクのエントリをイベント シンク マップのによって記述された COM オブジェクトへの接続ポイント。 このメソッドは、派生クラスが 1 つのインスタンスから継承されるということにも依存`IDispEventImpl`の推奨またはアドバイズ シンク マップ内のすべての制御。  
   
 ##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
- サイズを計算するには、このメソッドを呼び出す**HIMETRIC**複合コントロールをホストするために使用するダイアログ リソースの単位。  
+ HIMETRIC 単位複合コントロールをホストするために使用するダイアログ リソースのサイズを計算するには、このメソッドを呼び出します。  
   
 ```
 BOOL CalcExtent(SIZE& size);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
- 参照、**サイズ**このメソッドが格納される構造です。  
+ *size*  
+ 参照を`SIZE`このメソッドが格納される構造体。  
   
 ### <a name="return-value"></a>戻り値  
- コントロールがダイアログ ボックスでホストされている場合は TRUE。それ以外の場合は FALSE。  
+ コントロールがダイアログ ボックスでホストされている場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- サイズが返される、`size`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ サイズが返される、*サイズ*パラメーター。  
   
 ##  <a name="create"></a>  CComCompositeControl::Create  
- このメソッドは複合コントロールのコントロールのウィンドウを作成します。  
+ このメソッドは、複合コントロールのコントロール ウィンドウを作成します。  
   
 ```
 HWND Create(
@@ -166,19 +167,19 @@ HWND Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hWndParent`  
+ *hWndParent*  
  コントロールの親ウィンドウへのハンドル。  
   
- `rcPos`  
+ *rcPos*  
  予約済み。  
   
- `dwInitParam`  
- コントロールの作成時に、コントロールに渡されるデータ。 として渡されたデータ`dwInitParam`として表示されます、 **LPARAM**のパラメーター、 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)を取得、作成時に複合コントロールに送信されるメッセージ。  
+ *dwInitParam*  
+ コントロールの作成時に、コントロールに渡されるデータ。 として、データが渡される*dwInitParam*の LPARAM パラメーターとして表示されます、 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428)メッセージで、作成時に、複合コントロールに送信されます。  
   
 ### <a name="return-value"></a>戻り値  
- 新しく作成された複合コントロール ダイアログ ボックスへのハンドル。  
+ 新しく作成された複合コントロールのダイアログ ボックスへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは通常、コントロールのインプレース アクティブ化時に呼び出されます。  
   
 ##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
@@ -188,8 +189,8 @@ HWND Create(
 CComCompositeControl();
 ```  
   
-### <a name="remarks"></a>コメント  
- 初期化、 [CComCompositeControl::m_hbrBackground](#m_hbrbackground)と[CComCompositeControl::m_hWndFocus](#m_hwndfocus)データ メンバーを NULL にします。  
+### <a name="remarks"></a>Remarks  
+ 初期化します、 [CComCompositeControl::m_hbrBackground](#m_hbrbackground)と[CComCompositeControl::m_hWndFocus](#m_hwndfocus)データ メンバーを NULL にします。  
   
 ##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  デストラクターです。  
@@ -198,11 +199,11 @@ CComCompositeControl();
 ~CComCompositeControl();
 ```  
   
-### <a name="remarks"></a>コメント  
- 存在する場合は、バック グラウンド オブジェクトを削除します。  
+### <a name="remarks"></a>Remarks  
+ 存在する場合は、背景のオブジェクトを削除します。  
   
 ##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
- コントロール ウィンドウを作成し、ホストされるコントロールをアドバイズするには、このメソッドを呼び出します。  
+ このメソッドでは、コントロール ウィンドウを作成し、ホストされるコントロールのことをお勧めします。  
   
 ```
 virtual HWND CreateControlWindow(
@@ -211,17 +212,17 @@ virtual HWND CreateControlWindow(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hWndParent`  
+ *hWndParent*  
  コントロールの親ウィンドウへのハンドル。  
   
- `rcPos`  
- クライアントの複合コントロールの位置四角形がに対する相対座標`hWndParent`です。  
+ *rcPos*  
+ クライアントでの複合コントロールの位置四角形の座標を基準とする*hWndParent*します。  
   
 ### <a name="return-value"></a>戻り値  
- 新しく作成された複合コントロール ダイアログ ボックスのハンドルを返します。  
+ 新しく作成された複合コントロールのダイアログ ハンドルを返します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドを呼び出す[CComCompositeControl::Create](#create)と[CComCompositeControl::AdviseSinkMap](#advisesinkmap)です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドを呼び出す[CComCompositeControl::Create](#create)と[CComCompositeControl::AdviseSinkMap](#advisesinkmap)します。  
   
 ##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  背景のブラシ。  
@@ -238,14 +239,14 @@ HWND m_hWndFocus;
 ```  
   
 ##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
- コンテナーの背景色を使用した複合コントロールの背景色を設定するには、このメソッドを呼び出します。  
+ コンテナーの背景色を使用して複合コントロールの背景色を設定するには、このメソッドを呼び出します。  
   
 ```
 HRESULT SetBackgroundColorFromAmbient();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [CComControl クラス](../../atl/reference/ccomcontrol-class.md)   

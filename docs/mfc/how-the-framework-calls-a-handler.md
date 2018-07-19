@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343620"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>フレームワークがハンドラーを呼び出す方法
 次のトピックは最初フレームワークが、コマンドをルーティングする方法を確認し、windows への他のメッセージとコントロール通知の送信方法を確認します。  

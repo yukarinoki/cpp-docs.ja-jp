@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376034"
 ---
 # <a name="structure-and-constant-definitions"></a>構造体と定数の定義
 既定のヘルパー ルーチンでは、いくつかの構造を使用して、通信用のフック関数とは、例外の中にします。 通知とエラー値、情報構造体、およびフックに渡されるフック関数へのポインター型を次に示します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174151"
 ---
 # <a name="user-defined-operators-ccli"></a>ユーザー定義の演算子 (C++/CLI)
 マネージ型の場合、ユーザー定義の演算子は、静的メンバーまたはインスタンス メンバーまたはグローバル スコープで許可されます。 ただし、Visual C 以外の言語で記述されたクライアントにメタデータを通じてアクセスできるは静的演算子のみです。  

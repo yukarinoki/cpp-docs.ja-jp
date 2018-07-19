@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbc0003db72d6a72e31a7d79de786476c946188
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 350fd6007ab6b89064ed6d0a7070a21e57427018
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956323"
 ---
 # <a name="isconvertible-class"></a>is_convertible クラス
 
@@ -36,11 +37,11 @@ struct is_convertible;
 
 ### <a name="parameters"></a>パラメーター
 
-`From` 変換する型。
+** から変換先の型。
 
-`Ty` 変換後の型。
+*Ty*変換後の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `To to = from;` という式が正しい形式である場合、型述語のインスタンスは true を保持します (`from` は型 `From` のオブジェクト)。
 
@@ -77,7 +78,7 @@ is_convertible<trivial, trivial> == true
 is_convertible<char, int> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

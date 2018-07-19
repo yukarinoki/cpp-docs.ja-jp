@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e7c613f5c4a4273208e30cd0fc6284ef4e420c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037871"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException クラス
 OLE オートメーションの主要部分である OLE `IDispatch` インターフェイス固有の例外を処理します。  
@@ -53,8 +54,8 @@ class COleDispatchException : public CException
 |[COleDispatchException::m_strSource](#m_strsource)|例外を生成するアプリケーションです。|  
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-特定のエラー コード。|  
   
-## <a name="remarks"></a>コメント  
- 派生したその他の例外クラスと同じように、`CException`基底クラス、`COleDispatchException`で使用できる、**スロー**、 `THROW_LAST`、**を再試行してください**、**キャッチ**、`AND_CATCH`、および`END_CATCH`マクロです。  
+## <a name="remarks"></a>Remarks  
+ 派生したその他の例外クラスと同じように、`CException`基底クラス、 `COleDispatchException` THROW、THROW_LAST、TRY、CATCH、AND_CATCH、および END_CATCH マクロで使用できます。  
   
  一般に、呼び出す必要は[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)を作成し、スロー、`COleDispatchException`オブジェクト。  
   
@@ -67,7 +68,7 @@ class COleDispatchException : public CException
   
  `COleDispatchException`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext  
@@ -77,7 +78,7 @@ class COleDispatchException : public CException
 DWORD m_dwHelpContext;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバーは、関数に設定されます。 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)例外がスローされたときにします。  
   
 ### <a name="example"></a>例  
@@ -90,7 +91,7 @@ DWORD m_dwHelpContext;
 CString m_strDescription;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバーは、関数に設定されます。 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)例外がスローされたときにします。  
   
 ### <a name="example"></a>例  
@@ -120,7 +121,7 @@ CString m_strSource;
 WORD m_wCode;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバーは、関数に設定されます。 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)例外がスローされたときにします。  
   
 ## <a name="see-also"></a>関連項目  

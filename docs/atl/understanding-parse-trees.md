@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358832"
 ---
 # <a name="understanding-parse-trees"></a>パース ツリーについて
 各解析ツリーが、次の形式を持つ、レジストラー スクリプトでは、1 つまたは複数のパース ツリーを定義できます。  

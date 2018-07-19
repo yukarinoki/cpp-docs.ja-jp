@@ -1,5 +1,5 @@
 ---
-title: _set_com_error_handler |Microsoft ドキュメント
+title: _set_com_error_handler |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d341a2d7ee9f6220922dbdde95e19020fe085892
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f516114dbaa9e507491cf669c3371b6b8fbaf11
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943582"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 **Microsoft 固有の仕様**  
@@ -37,23 +38,23 @@ void __stdcall _set_com_error_handler(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `pHandler`  
+ *pHandler*  
  置換する関数へのポインター。  
   
- `hr`  
- `HRESULT` 情報。  
+ *hr*  
+ HRESULT 情報。  
   
- `perrinfo`  
+ *perrinfo*  
  `IErrorInfo` オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  既定では、 [_com_raise_error](../cpp/com-raise-error.md)すべての COM エラーを処理します。 この動作は、`_set_com_error_handler` で独自のエラー処理関数を呼び出すことで変更できます。  
   
  置換関数には `_com_raise_error` のシグネチャと等価のシグニチャが必要です。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // _set_com_error_handler.cpp  
 // compile with /EHsc  
 #include <stdio.h>  
@@ -92,7 +93,7 @@ int main()
 Exception raised: Unable to establish the connection!  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** \<comdef.h >  
   
  **Lib:** 場合、 **wchar_t をネイティブ型**コンパイラ オプションは、comsuppw.lib または comsuppwd.lib を使用します。 場合**wchar_t をネイティブ型**オフ、comsupp.lib を使用します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。  

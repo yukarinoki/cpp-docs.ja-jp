@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363260"
 ---
 # <a name="aggregates-and-unions"></a>集約と共用体
 配列、構造体、および共用体などの他の種類には、確実に一貫した集約と共用体記憶域とデータ取得厳しいアラインメント要件があります。 配列、構造、および共用体の定義を次に示します。  

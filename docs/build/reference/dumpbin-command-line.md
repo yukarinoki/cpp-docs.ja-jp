@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370515"
 ---
 # <a name="dumpbin-command-line"></a>DUMPBIN コマンド ライン
 DUMPBIN を実行するには、次の構文を使用します。  

@@ -48,11 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c078933ad35cff1a52de433b1ae5d321db1985c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f27cb2bc1a711b77006fa496cc080f546e539ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962460"
 ---
 # <a name="allocatorbase-class"></a>allocator_base クラス
 
@@ -69,8 +70,8 @@ class allocator_base
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Type`|アロケーターによって割り当てられた要素の型。|
-|`Sync`|アロケーターの同期ポリシー。[sync_none クラス](../standard-library/sync-none-class.md)、[sync_per_container クラス](../standard-library/sync-per-container-class.md)、[sync_per_thread クラス](../standard-library/sync-per-thread-class.md)、[sync_shared クラス](../standard-library/sync-shared-class.md)のいずれかです。|
+|*Type*|アロケーターによって割り当てられた要素の型。|
+|*同期*|アロケーターの同期ポリシー。[sync_none クラス](../standard-library/sync-none-class.md)、[sync_per_container クラス](../standard-library/sync-per-container-class.md)、[sync_per_thread クラス](../standard-library/sync-per-thread-class.md)、[sync_shared クラス](../standard-library/sync-shared-class.md)のいずれかです。|
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -94,16 +95,16 @@ class allocator_base
 
 |メンバー関数|説明|
 |-|-|
-|[_Charalloc](#charalloc)|型 `char` の配列のストレージを割り当てます。|
-|[_Chardealloc](#chardealloc)|型 `char` の要素を含む配列のストレージを解放します。|
+|[_Charalloc](#charalloc)|ストレージ型の配列を割り当てます**char**します。|
+|[_Chardealloc](#chardealloc)|ストレージの種類の要素を含む配列を解放**char**します。|
 |[address](#address)|値が指定されたオブジェクトのアドレスを検索します。|
 |[allocate](#allocate)|指定された要素数だけは格納できるメモリのブロックを割り当てます。|
 |[construct](#construct)|指定された値で初期化され、指定されたアドレスに配置される、指定された型のオブジェクトを構築します。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[destroy](#destroy)|オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。|
-|[max_size](#max_size)|空きメモリがすべて使用される前にクラス アロケーター オブジェクトによって割り当てることのできる、型 `Type` の要素の数を返します。|
+|[max_size](#max_size)|空きメモリがすべて使用される前にクラス アロケーター オブジェクトによって割り当てることのできる、*Type* 型の要素の数を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -111,7 +112,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-型 `char` の配列のストレージを割り当てます。
+ストレージ型の配列を割り当てます**char**します。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -121,19 +122,19 @@ char *_Charalloc(size_type count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`count`|割り当てられる配列内の要素の数。|
+|*count*|割り当てられる配列内の要素の数。|
 
 ### <a name="return-value"></a>戻り値
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、再バインドをコンパイルできないコンパイラでコンパイルした場合に、コンテナーによって使用されます。 この関数は、同期フィルターの `allocate` 関数への呼び出しの結果を返すことで、ユーザー定義のアロケーターに `_Charalloc` を実装します。
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-型 `char` の要素を含む配列のストレージを解放します。
+ストレージの種類の要素を含む配列を解放**char**します。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -143,10 +144,10 @@ void _Chardealloc(void* ptr, size_type count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`count`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、再バインドをコンパイルできないコンパイラでコンパイルした場合に、コンテナーによって使用されます。 この関数は、同期フィルターの `deallocate` 関数を呼び出すことで、ユーザー定義のアロケーターに `_Chardealloc` を実装します。 ポインター ptr は、同じサイズと型の配列オブジェクトを割り当てる `*this` と等しいことを比較するアロケーター オブジェクトに対し、`_Charalloc` を呼び出すことで、既に返されているはずです。 `_Chardealloc` は例外をスローしません。
 
@@ -162,13 +163,13 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>パラメーター
 
-`val` そのアドレスが検索対象のオブジェクトの const または nonconst 値。
+*val*アドレスが検索対象のオブジェクトの const または nonconst 値。
 
 ### <a name="return-value"></a>戻り値
 
 見つかった const 値または nonconst 値のそれぞれのオブジェクトに対する const ポインターまたは nonconst ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`&val` を返すことで、ユーザー定義のアロケーターに実装されます。
 
@@ -187,14 +188,14 @@ pointer allocate(size_type _Nx);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Nx`|割り当てられる配列内の要素の数。|
-|`_Hint`|このパラメーターは無視されます。|
+|*_Nx*|割り当てられる配列内の要素の数。|
+|*_Hint*|このパラメーターは無視されます。|
 
 ### <a name="return-value"></a>戻り値
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、`_Nx == 1` の場合、Type `*` 型の同期フィルターの `allocate` 関数への呼び出しの結果を返すことで、ユーザー定義のアロケーターにメモリ割り当てを実装します。それ以外の場合は、`operator new(_Nx * sizeof(Type))` への呼び出しの結果を返すことで、Type `*` 型にキャストします。
 
@@ -213,9 +214,9 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|コピーするアロケーター オブジェクト。|
+|*right*|コピーするアロケーター オブジェクト。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、[allocator_base](../standard-library/allocator-base-class.md) インスタンスを構築します。 2 番目のコンストラクターは、`allocator_base<Type, _Sync>` インスタンス `a`、`allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a` などのいずれかに対し、`allocator_base` インスタンスを構築します。
 
@@ -247,10 +248,10 @@ void construct(pointer ptr, const Type& val);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|オブジェクトが構築される場所へのポインター。|
-|`val`|構築されるオブジェクトが初期化される値。|
+|*ptr*|オブジェクトが構築される場所へのポインター。|
+|*val*|構築されるオブジェクトが初期化される値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`new((void*)ptr Type(val)` を呼び出すことで、ユーザー定義のアロケーターに実装されます。
 
@@ -266,10 +267,10 @@ void deallocate(pointer ptr, size_type _Nx);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`_Nx`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*_Nx*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`_Nx == 1` の場合は同期フィルター `Sync` で `deallocate(ptr)` を呼び出すことで、それ以外の場合は `operator delete(_Nx * ptr)` を呼び出すことで、ユーザー定義のアロケーターに実装されます。
 
@@ -285,9 +286,9 @@ void destroy(pointer ptr);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|破棄するオブジェクトのアドレスを指定するポインター。|
+|*ptr*|破棄するオブジェクトのアドレスを指定するポインター。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`ptr->~Type()` を呼び出すことで、ユーザー定義のアロケーターに実装されます。
 
@@ -311,7 +312,7 @@ size_type max_size() const;
 
 割り当てることができる要素の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`0 < (size_t)-1 / sizeof(Type)` の場合は `(size_t)-1 / sizeof(Type)` を返すことで、それ以外は `1` を返すことで、ユーザー定義のアロケーターに実装されます。
 

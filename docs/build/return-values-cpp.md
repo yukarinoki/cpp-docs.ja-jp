@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380322"
 ---
 # <a name="return-values-c"></a>戻り値 (C++)
 64 ビットに収まるスカラー戻り値は、RAX (__m64 型を含む) を通じて返されます。 非スカラー型の浮動小数点値、2 倍になり、およびなどのベクトルの型を含む[_ _m128](../cpp/m128.md)、 [_ _m128i](../cpp/m128i.md)、 [_ _m128d](../cpp/m128d.md) XMM0 で返されます。 RAX や XMM0 で返される値の未使用ビットの状態は未定義です。  

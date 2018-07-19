@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055779"
 ---
 # <a name="operator-ge"></a>GE 演算子
 True (-1) を返します*expression1*がより大きいまたは等しい*expression2*、ない場合は false (0) を返します。  

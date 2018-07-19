@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246404"
 ---
 # <a name="compiler-error-c3175"></a>コンパイラ エラー C3175
 'function1': 関数 'function2' をアンマネージからマネージ型のメソッドを呼び出すことはできません  

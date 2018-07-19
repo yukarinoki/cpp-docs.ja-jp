@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33175970"
 ---
 # <a name="compiler-error-c2173"></a>コンパイラ エラー C2173
 'function' : 実引数がポインターではありません : パラメーター番号 1、パラメーター リスト番号 2  

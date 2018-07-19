@@ -1,5 +1,5 @@
 ---
-title: 関数クラス |Microsoft ドキュメント
+title: COleUpdateDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,13 +20,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852108"
 ---
-# <a name="coleupdatedialog-class"></a>関数クラス
+# <a name="coleupdatedialog-class"></a>COleUpdateDialog クラス
 OLE の [リンクの編集] ダイアログ ボックスを使って、ドキュメント内の既存のリンク オブジェクトや埋め込みオブジェクトの更新のみを行います。これは、OLE の [リンクの編集] ダイアログ ボックスの特別な使い方です。  
   
 ## <a name="syntax"></a>構文  
@@ -47,10 +48,10 @@ class COleUpdateDialog : public COleLinksDialog
   
 |名前|説明|  
 |----------|-----------------|  
-|[COleUpdateDialog::DoModal](#domodal)|表示、**リンクの編集**更新モード ダイアログ ボックス。|  
+|[COleUpdateDialog::DoModal](#domodal)|表示、**リンクの編集**更新モードでのダイアログ ボックス。|  
   
-## <a name="remarks"></a>コメント  
- OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)です。  
+## <a name="remarks"></a>Remarks  
+ OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -69,7 +70,7 @@ class COleUpdateDialog : public COleLinksDialog
   
  `COleUpdateDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
@@ -84,8 +85,8 @@ explicit COleUpdateDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDoc`  
- 更新が必要なリンクを含むドキュメントへのポインター。  
+ *pDoc*  
+ 更新が必要なリンクを含むドキュメントを指します。  
   
  *bUpdateLinks*  
  リンク オブジェクトを更新するかどうかを決定するフラグ。  
@@ -93,33 +94,33 @@ explicit COleUpdateDialog(
  *bUpdateEmbeddings*  
  埋め込みオブジェクトを更新するかどうかを決定するフラグ。  
   
- `pParentWnd`  
- 親またはオーナー ウィンドウ オブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ ボックスの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。  
+ *pParentWnd*  
+ 親またはオーナー ウィンドウのオブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ ボックスの親ウィンドウは、メイン アプリケーション ウィンドウに設定されます。  
   
-### <a name="remarks"></a>コメント  
- この関数はのみ、`COleUpdateDialog`オブジェクト。 ダイアログ ボックスを表示するには、呼び出す[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)です。 このクラスは、の代わりに使用する必要があります`COleLinksDialog`リンクまたは埋め込みアイテムの既存ののみを更新する場合。  
+### <a name="remarks"></a>Remarks  
+ この関数の作成のみを`COleUpdateDialog`オブジェクト。 ダイアログ ボックスを表示するには、呼び出す[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)します。 このクラスは、の代わりに使用する必要があります`COleLinksDialog`リンクまたは埋め込みアイテムの既存ののみを更新する場合。  
   
 ##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
- リンクの編集 ダイアログ ボックスに表示は更新モードです。  
+ モードを更新するリンクの編集 ダイアログ ボックスが表示されます。  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ダイアログ ボックスの終了ステータスです。 次のいずれかの値です。  
+ ダイアログ ボックスの完了ステータス。 次のいずれかの値です。  
   
-- **IDOK**  ダイアログ ボックスが正常に返された場合。  
+- IDOK ダイアログ ボックスが正常に返された場合。  
   
-- **IDCANCEL**更新が必要な現在のドキュメントにリンクまたは埋め込み項目はどれもかどうか。  
+- 現在のドキュメントでリンクまたは埋め込み項目を更新する必要がある場合は IDCANCEL。  
   
-- **IDABORT**場合はエラーが発生しました。 場合**IDABORT**は呼び出し、返される、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)の詳細については、発生したエラーの種類を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms679703)Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、 [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[される](http://msdn.microsoft.com/library/windows/desktop/ms679703)Windows SDK 内の関数。  
   
-### <a name="remarks"></a>コメント  
- ユーザーは [キャンセル] ボタンを選択しない限り、すべてのリンクや埋め込みが更新されます。  
+### <a name="remarks"></a>Remarks  
+ ユーザーが [キャンセル] ボタンを選択しない限り、すべてのリンクや埋め込みが更新されます。  
   
 ## <a name="see-also"></a>関連項目  
- [MFC サンプル OCLIENT](../../visual-cpp-samples.md)   
- [関数クラス](../../mfc/reference/colelinksdialog-class.md)   
+ [MFC サンプルの OCLIENT](../../visual-cpp-samples.md)   
+ [COleLinksDialog クラス](../../mfc/reference/colelinksdialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [COleLinksDialog クラス](../../mfc/reference/colelinksdialog-class.md)

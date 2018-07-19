@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385818"
 ---
 # <a name="using-csliderctrl"></a>CSliderCtrl の使い方
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md)クラスは、トラック バーとも呼ばれるスライダー コントロールを表します。 「スライダー コントロール」は、スライダーと省略可能な目盛りを含むウィンドウ マークします。 ユーザーは、マウスまたは方向キーを使用して、スライダーを移動、スライダー コントロールは、変更を示す通知メッセージを送信します。  

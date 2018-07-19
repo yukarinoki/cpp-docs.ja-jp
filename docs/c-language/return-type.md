@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390188"
 ---
 # <a name="return-type"></a>戻り値の型
 関数の戻り値の型は、関数によって返される値のサイズと型を規定し、次の構文の type-specifier に相当します。  

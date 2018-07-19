@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28dc4e52e2f114600ad3a22697500ce9d8594113
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccc01372d08edb997ed6b0aaa70be69fde60a1e2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954324"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc クラス
 
@@ -41,13 +42,13 @@ class cache_suballoc
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Sz`|割り当てられる配列内の要素の数。|
+|*sz*|割り当てられる配列内の要素の数。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-cache_suballoc テンプレート クラスは、`freelist<sizeof(Type), max_unbounded>` を使用して、割り当てが解除されたメモリ ブロックを無限の長さのフリー リストに格納し、フリー リストが空になると、`operator new` で割り当てられた大きいチャンクからメモリ ブロックをサブ割り当てします。
+Cache_suballoc テンプレート クラスは、無限の長さのフリー リストの割り当てが解除されたメモリ ブロックを格納するを使用して`freelist<sizeof(Type), max_unbounded>`、メモリ ブロックを使用して割り当てられた大きいチャンクからなると**演算子 new**フリー リストの場合空です。
 
-各チャンクは `Sz * Nelts` バイトの使用可能なメモリと、`operator new` および `operator delete` に必要なデータを保持します。 割り当てたチャンクが解放されることはありません。
+各チャンクを保持`Sz * Nelts`使用可能なメモリと、データのバイトを**演算子 new**と**delete 演算子**が必要です。 割り当てたチャンクが解放されることはありません。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -62,7 +63,7 @@ cache_suballoc テンプレート クラスは、`freelist<sizeof(Type), max_unb
 |[allocate](#allocate)|メモリのブロックを割り当てます。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -80,13 +81,13 @@ void *allocate(std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`count`|割り当てられる配列内の要素の数。|
+|*count*|割り当てられる配列内の要素の数。|
 
 ### <a name="return-value"></a>戻り値
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
 
@@ -96,7 +97,7 @@ void *allocate(std::size_t count);
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="deallocate"></a>  cache_suballoc::deallocate
 
@@ -110,10 +111,10 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`count`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

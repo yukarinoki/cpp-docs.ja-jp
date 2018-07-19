@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877606"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC データベース プログラミングのシンボル
 このテーブル内のシンボルは、データベースのサポートが追加されたときに、MFC プロジェクトでのみ表示されます。 MFC への接続の SQL server とデータベース プログラミングをサポートしています。  

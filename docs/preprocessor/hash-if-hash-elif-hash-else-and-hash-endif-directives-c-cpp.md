@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846650"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else、および #endif ディレクティブ (C/C++)
 `#if` ディレクティブは、`#elif`、`#else`、および `#endif` ディレクティブと共にソース ファイルの各部分のコンパイルを制御します。 `#if` の後に記述した式がゼロ以外の値になる場合、`#if` ディレクティブの直後の一連の行が翻訳単位として保持されます。  

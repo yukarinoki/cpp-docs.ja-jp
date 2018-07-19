@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097706"
 ---
 # <a name="cenumeratorgetmoniker"></a>CEnumerator::GetMoniker
 モニカーに変換できる文字列の部分を抽出する表示名を解析します。  

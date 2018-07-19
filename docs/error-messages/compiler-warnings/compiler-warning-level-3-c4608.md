@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290687"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>コンパイラの警告 (レベル 3) C4608
 'union_member' は既に初期化子リスト 'union_member' 内の他の共用体メンバーにより初期化されています。  

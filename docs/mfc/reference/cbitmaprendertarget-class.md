@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd752ff649491ce23b537987ff9f4aebf7811255
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956753"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget クラス
 ID2D1BitmapRenderTarget のラッパーです。  
@@ -68,7 +69,7 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|ID2D1BitmapRenderTarget オブジェクトへのポインター。|  
   
@@ -79,7 +80,7 @@ class CBitmapRenderTarget : public CRenderTarget;
   
  `CBitmapRenderTarget` 
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
@@ -90,7 +91,7 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pTarget`  
+ *pTarget*  
  既存のレンダー ターゲット インターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
@@ -118,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bitmap`  
+ *ビットマップ*  
  このメソッドが戻るときに、このレンダー ターゲットに対する有効なビットマップが含まれています。 このビットマップを描画操作に使用できます。  
   
 ### <a name="return-value"></a>戻り値  

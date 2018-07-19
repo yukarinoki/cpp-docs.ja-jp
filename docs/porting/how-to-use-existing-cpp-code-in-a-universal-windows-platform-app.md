@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847973"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>方法: ユニバーサル Windows アプリで既存の C++ コードを使用する
 UWP 環境でデスクトップ プログラムを実行できるようにする最も簡単な方法は、おそらく、デスクトップ ブリッジ テクノロジを使うことです。 このテクノロジに含まれる Desktop App Converter は、既存のアプリケーションを UWP アプリとしてパッケージ化し、コードの変更は必要ありません。 詳しくは、「[Desktop Bridge でデスクトップ アプリをユニバーサル Windows プラットフォーム (UWP) 用に変換する](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)」をご覧ください。

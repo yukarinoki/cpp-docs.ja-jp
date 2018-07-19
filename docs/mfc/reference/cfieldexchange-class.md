@@ -1,5 +1,5 @@
 ---
-title: CFieldExchange クラス |Microsoft ドキュメント
+title: CFieldExchange クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336508"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange クラス
 データベース クラスで使うレコード フィールド エクスチェンジ (RFX) ルーチンとバルク レコード フィールド エクスチェンジ (Bulk RFX) ルーチンをサポートします。  
@@ -41,37 +42,37 @@ class CFieldExchange
   
 |名前|説明|  
 |----------|-----------------|  
-|[CFieldExchange::IsFieldType](#isfieldtype)|更新されるフィールドの型の場合は、現在の操作は、0 以外を返しますが適切なします。|  
-|[つ](#setfieldtype)|レコード セットのデータ メンバーの種類を指定します: 列またはパラメーター: 次の呼び出しまで RFX 関数に以下のすべての呼び出しによって表される`SetFieldType`です。|  
+|[CFieldExchange::IsFieldType](#isfieldtype)|現在の操作がある場合、0 以外の値を返します。 適切な更新されるフィールドの型。|  
+|[つ](#setfieldtype)|レコード セットのデータ メンバーの種類を指定します: 列またはパラメーター: 次回の呼び出しまで RFX 関数に次のすべての呼び出しによって表される`SetFieldType`します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CFieldExchange` 基本クラスはありません。  
   
- バルク行フェッチを実装するカスタム データ型のデータ エクス チェンジ ルーチンを記述する場合は、このクラスを使用してください。それ以外の場合、していない直接このクラスを使用します。 バルク RFX データ ソースの現在のレコードの対応するフィールドとレコード セット オブジェクトのフィールド データ メンバーのデータを交換します。  
+ バルク行フェッチを実装しているカスタム データ型のデータ エクス チェンジ ルーチンを記述する場合は、このクラスを使用してください。それ以外の場合、直接使用しないこのクラス。 バルク RFX データ ソースの現在のレコードの対応するフィールドとレコード セット オブジェクトのフィールド データ メンバーのデータを交換します。  
   
 > [!NOTE]
->  オープン データベース コネクティビティ (ODBC) クラスではなく、データ アクセス オブジェクト (DAO) クラスで作業している場合は、クラスを使用して[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)代わりにします。 詳細については、記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)です。  
+>  Open Database Connectivity (ODBC) クラスではなく、データ アクセス オブジェクト (DAO) クラスを使用している場合は、クラスを使用して[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)代わりにします。 詳細については、この記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。  
   
- A`CFieldExchange`オブジェクトを提供するコンテキスト情報を必要なレコード フィールド エクス チェンジまたはバルク レコード フィールド エクスを配置します。 `CFieldExchange` オブジェクトは、バインディング パラメーターのフィールド データ メンバーなど、現在のレコードのフィールドでさまざまなフラグを設定するときに、操作の数をサポートします。 バルク RFX 操作によって定義された型のレコード セット クラスのデータ メンバーに対して実行され、 `enum` **FieldType**で`CFieldExchange`です。 考えられる**FieldType**値は。  
+ A`CFieldExchange`コンテキスト情報に必要なレコード フィールド エクス チェンジまたはをバルク レコード フィールド エクス チェンジの配置オブジェクトを提供します。 `CFieldExchange` オブジェクトは、多くの操作、バインド パラメーター、フィールド データ メンバーなど、現在のレコードのフィールドでさまざまなフラグの設定をサポートします。 バルク RFX 操作によって定義された型のレコード セット クラスのデータ メンバーに対して実行される、 **enum** **FieldType**で`CFieldExchange`します。 考えられる**FieldType**値は。  
   
-- **CFieldExchange::outputColumn**フィールド データ メンバーにします。  
+- `CFieldExchange::outputColumn` フィールド データ メンバーにします。  
   
-- **CFieldExchange::inputParam**または**CFieldExchange::param**の入力パラメーターのデータ メンバーです。  
+- `CFieldExchange::inputParam` または`CFieldExchange::param`の入力パラメーターのデータ メンバー。  
   
-- **CFieldExchange::outputParam**出力パラメーターのデータ メンバーにします。  
+- `CFieldExchange::outputParam` パラメーターのデータ メンバーに出力します。  
   
-- **CFieldExchange::inoutParam**入力/出力パラメーター データ メンバーにします。  
+- `CFieldExchange::inoutParam` 入力/出力パラメーターのデータ メンバーにします。  
   
- クラスのメンバー関数とデータ メンバーの多くは、独自のカスタム RFX ルーチンを記述するために提供されます。 使用して`SetFieldType`頻繁にします。 詳細については、記事を参照してください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)と[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)です。 バルク行フェッチの詳細については、記事を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)です。 グローバル関数とバルク RFX の詳細については、「[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)のこのリファレンス MFC マクロとグローバルのセクションでします。  
+ ほとんどのクラスのメンバー関数とデータ メンバーは、独自のカスタム RFX ルーチンを記述するために提供されます。 使用する`SetFieldType`頻繁にします。 詳細については、記事をご覧ください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)と[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。 バルク行フェッチの詳細については、この記事を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。 グローバル関数とバルク RFX に関する詳細については、次を参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)この参照の MFC マクロとグローバルのセクションでします。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CFieldExchange`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdb.h  
   
 ##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
- RFX 関数を記述する場合は、呼び出す`IsFieldType`特定フィールドまたはパラメーターのデータ メンバー型に現在の操作を実行できるかどうかを決定する、関数の先頭 (、 **CFieldExchange::outputColumn**、 **CFieldExchange::inputParam**、 **CFieldExchange::param**、 **CFieldExchange::outputParam**、または**CFieldExchange::inoutParam**).  
+ RFX 関数を記述する場合は、呼び出す`IsFieldType`特定フィールドまたはパラメーターのデータ メンバー型に現在の操作を実行できるかどうかを判断する関数の先頭 (、 `CFieldExchange::outputColumn`、 `CFieldExchange::inputParam`、 `CFieldExchange::param`、 `CFieldExchange::outputParam`、または`CFieldExchange::inoutParam`)。  
   
 ```  
 BOOL IsFieldType(UINT* pnField);
@@ -79,53 +80,53 @@ BOOL IsFieldType(UINT* pnField);
   
 ### <a name="parameters"></a>パラメーター  
  *pnField*  
- このパラメーターには、フィールドまたはパラメーターのデータ メンバーの順序番号が返されます。 この数は、データ メンバーの順序、 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)関数。  
+ フィールドまたはパラメーターのデータ メンバーの通し番号が、このパラメーターで返されます。 この数は、データ メンバーの順序で、 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[CRecordset::DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)関数。  
   
 ### <a name="return-value"></a>戻り値  
- 以外の場合は、現在のフィールドまたはパラメーターの型に現在の操作を実行することができます。  
+ 以外の場合、現在のフィールドまたはパラメーターの種類で現在の操作を実行できます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既存の RFX 関数のモデルに従います。  
   
 ##  <a name="setfieldtype"></a>  つ  
- 呼び出す必要がある`SetFieldType`レコード セット クラスの[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)をオーバーライドします。  
+ 呼び出す必要がある`SetFieldType`でレコード セット クラスの[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)をオーバーライドします。  
   
 ```  
 void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nFieldType`  
- 値、 **enum FieldType**で宣言された`CFieldExchange`次のいずれかを指定することができます。  
+ *nFieldType*  
+ 値、`enum FieldType`で宣言された`CFieldExchange`次のいずれかを指定することができます。  
   
-- **CFieldExchange::outputColumn**  
+- `CFieldExchange::outputColumn`  
   
-- **CFieldExchange::inputParam**  
+- `CFieldExchange::inputParam`  
   
-- **CFieldExchange::param**  
+- `CFieldExchange::param`  
   
-- **CFieldExchange::outputParam**  
+- `CFieldExchange::outputParam`  
   
-- **CFieldExchange::inoutParam**  
+- `CFieldExchange::inoutParam`  
   
-### <a name="remarks"></a>コメント  
- フィールド データ メンバーを呼び出す必要があります`SetFieldType`のパラメーターを持つ**CFieldExchange::outputColumn**rfx 関数または Bulk RFX 関数を呼び出すと、その後です。 バルク行フェッチを実装していないかどうかは、この ClassWizard 配置`SetFieldType`、フィールド マップのセクションでの呼び出し`DoFieldExchange`です。  
+### <a name="remarks"></a>Remarks  
+ フィールドのデータ メンバーを呼び出す必要がある`SetFieldType`のパラメーターを持つ`CFieldExchange::outputColumn`、rfx 関数または Bulk RFX 関数の呼び出しをその後にします。 バルク行フェッチを実装していないかどうかは、ClassWizard 配置この`SetFieldType`のフィールド マップのセクションでの呼び出し`DoFieldExchange`します。  
   
- レコード セット クラスをパラメーター化する必要がありますを呼び出した場合`SetFieldType`、もう一度、フィールド マップのセクションの外部続けて rfx 関数呼び出しのすべてのパラメーター データ メンバーのです。 パラメーター データ メンバーの種類ごとにいる必要があります独自`SetFieldType`呼び出します。 次の表は、別の値を渡すことができますを区別`SetFieldType`クラスのパラメーターのデータ メンバーを表す。  
+ 呼び出す必要がある場合は、レコード セット クラスをパラメーター化する`SetFieldType`、任意のフィールド マップのセクションの外部が続く rfx 関数呼び出しのパラメーターのすべてのデータ メンバーの。 各型のパラメーターのデータ メンバーがいる必要があります独自`SetFieldType`呼び出します。 次の表に、別の値を渡すことができますを区別する`SetFieldType`クラスのパラメーターのデータ メンバーを表す。  
   
-|SetFieldType パラメーター値|パラメーター データ メンバーの型|  
+|SetFieldType パラメーターの値|パラメーターのデータ メンバーの型|  
 |----------------------------------|-----------------------------------|  
-|**CFieldExchange::inputParam**|入力パラメーターです。 レコード セットのクエリまたはストアド プロシージャに渡される値。|  
-|**CFieldExchange::param**|同じ**CFieldExchange::inputParam**です。|  
-|**CFieldExchange::outputParam**|出力パラメーターです。 レコード セットのストアド プロシージャの戻り値。|  
-|**CFieldExchange::inoutParam**|入力/出力パラメーターです。 渡されたられ、レコード セットのストアド プロシージャから返される値。|  
+|`CFieldExchange::inputParam`|入力パラメーターです。 レコード セットのクエリまたはストアド プロシージャに渡される値。|  
+|' * * ieldExchange::param`ame as **CFieldExchange::inputParam`します。|  
+|`CFieldExchange::outputParam`|出力パラメーターです。 レコード セットのストアド プロシージャの戻り値。|  
+|`CFieldExchange::inoutParam`|入力/出力パラメーターです。 渡されるされ、レコード セットのストアド プロシージャから返される値。|  
   
- 一般に、フィールド データ メンバーまたはパラメーター データ メンバーに関連付けられている RFX 関数の呼び出しの各グループの前への呼び出し`SetFieldType`です。 `nFieldType`の各パラメーター`SetFieldType`呼び出しに続く RFX 関数の呼び出しによって表されるデータ メンバーの種類を識別する、`SetFieldType`呼び出します。  
+ 一般に、フィールド データ メンバーまたはパラメーターのデータ メンバーに関連付けられた RFX 関数の呼び出しの各グループへの呼び出し前が必要`SetFieldType`します。 *NFieldType*の各パラメーター`SetFieldType`呼び出しに続く RFX 関数の呼び出しによって表されるデータ メンバーの種類を識別する、`SetFieldType`呼び出します。  
   
- 出力パラメーターと入出力パラメーターの処理の詳細については、次を参照してください。、`CRecordset`メンバー関数は、 [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)です。 バルク RFX 関数の詳細については、トピックを参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)です。 バルク行フェッチの関連情報については、記事を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)です。  
+ 出力および入力/出力パラメーターの処理方法の詳細については、次を参照してください。、`CRecordset`メンバー関数は[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)します。 バルク RFX 関数の詳細については、トピックを参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)します。 バルク行フェッチの詳細については、この記事を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。  
   
 ### <a name="example"></a>例  
- この例の呼び出しを伴う RFX 関数を複数回呼び出します`SetFieldType`です。 なお`SetFieldType`経由で呼び出され、`pFX`へのポインター、`CFieldExchange`オブジェクト。  
+ この例は、RFX 関数の呼び出しを伴ういくつかの呼び出しを示しています。`SetFieldType`します。 なお`SetFieldType`経由で呼び出され、`pFX`へのポインターを`CFieldExchange`オブジェクト。  
   
  [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  
   

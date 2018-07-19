@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849614"
 ---
 # <a name="macros-and-c"></a>マクロと C++
 C++ にはいくつかの新機能がありますが、その一部は ANSI C プリプロセッサが提供する機能に代替します。 これらの新機能によって、次のように言語のタイプ セーフと予測可能性が向上します。  

@@ -1,5 +1,5 @@
 ---
-title: サーバー登録のグローバル関数 |Microsoft ドキュメント
+title: サーバー登録に関するグローバル関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883281"
 ---
-# <a name="server-registration-global-functions"></a>サーバー登録のグローバル関数
-これらの関数は、登録およびオブジェクト マップ内のサーバー オブジェクトの登録を解除するためのサポートを提供します。  
+# <a name="server-registration-global-functions"></a>サーバー登録に関するグローバル関数
+これらの関数は、登録とオブジェクト マップ内のサーバー オブジェクトを登録解除のサポートを提供します。  
   
 > [!IMPORTANT]
->  次の表に示す関数は、Windows ランタイムで実行するアプリケーションでは使用できません。  
+>  Windows ランタイムで実行するアプリケーションでは、次の表に示す関数を使用できません。  
   
 |||  
 |-|-|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|この関数は COM モジュールからクラス オブジェクトを無効にします。|  
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|この関数は、クラス オブジェクトを取得します。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
    
 ##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
@@ -52,22 +53,22 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pComModule`  
+ *pComModule*  
  COM モジュールへのポインター。  
   
- `bRegTypeLib`  
- タイプ ライブラリは、登録する場合は TRUE。  
+ *bRegTypeLib*  
+ TRUE の場合、タイプ ライブラリを登録します。  
   
- `pCLSID`  
- 登録するオブジェクトの CLSID を指します。 NULL の場合、オブジェクト マップ内のすべてのオブジェクトが登録されます。  
+ *pclsid の値*  
+ 登録するオブジェクトの CLSID を指します。 NULL の場合、オブジェクトのマップ内のすべてのオブジェクトが登録されます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- `AtlComModuleRegisterServer` ATL の自動生成されたオブジェクトのマップおよびマップ内の各オブジェクトを登録します。 場合`pCLSID`が NULL の場合、によって参照されるオブジェクトのみ`pCLSID`が登録されているすべてのオブジェクトが登録されてそれ以外の場合。  
+### <a name="remarks"></a>Remarks  
+ `AtlComModuleRegisterServer` ATL の自動生成されたオブジェクトのマップおよびマップ内の各オブジェクトを登録します。 場合*と*が null の場合、その後で参照されるオブジェクトのみ*と*が登録されているすべてのオブジェクトが登録されてそれ以外の場合。  
   
- この関数は[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)です。  
+ この関数を呼び出して[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)します。  
   
 ##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  オブジェクト マップのオブジェクトの登録をすべて解除します。  
@@ -80,22 +81,22 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pComModule`  
+ *pComModule*  
  COM モジュールへのポインター。  
   
- `bUnRegTypeLib`  
- タイプ ライブラリは、登録する場合は TRUE。  
+ *bUnRegTypeLib*  
+ TRUE の場合、タイプ ライブラリを登録します。  
   
- `pCLSID`  
+ *pclsid の値*  
  登録解除するオブジェクトの CLSID を指します。 NULL の場合は、オブジェクト マップ内のすべてのオブジェクトは登録できません。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- `AtlComModuleUnregisterServer` ATL オブジェクト マップし、マップ内の各オブジェクトの登録を解除します。 場合`pCLSID`が NULL の場合、によって参照されるオブジェクトのみ`pCLSID`未登録です。 それ以外の場合は、すべてのオブジェクトは登録を解除します。  
+### <a name="remarks"></a>Remarks  
+ `AtlComModuleUnregisterServer` ATL オブジェクト マップおよびマップ内の各オブジェクトの登録を解除します。 場合*と*が null の場合、その後で参照されるオブジェクトのみ*と*登録を解除しました。 それ以外の場合は、登録されているすべてのオブジェクトはありません。  
   
- この関数は[CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)です。  
+ この関数を呼び出して[CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)します。  
   
 ##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  この関数は、クラス オブジェクトを登録するために呼び出されます。  
@@ -108,20 +109,20 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pComModule`  
+ *pComModule*  
  COM モジュールへのポインター。  
   
- `dwClsContext`  
- クラスのオブジェクトが実行されるコンテキストを指定します。 使用可能な値は CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER、または CLSCTX_LOCAL_SERVER です。 参照してください[CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716)詳細についてはします。  
+ *dwClsContext*  
+ クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 参照してください[CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716)の詳細。  
   
- `dwFlags`  
- クラスのオブジェクトへの接続の種類を決定します。 使用可能な値は REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE です。 参照してください[REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697)詳細についてはします。  
+ *dwFlags*  
+ クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 参照してください[REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697)の詳細。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- このヘルパー関数がによって使用されて[CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (ATL 7.0 で古い形式) および[CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)です。  
+### <a name="remarks"></a>Remarks  
+ このヘルパー関数が利用[CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (ATL 7.0 で廃止) と[CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)します。  
   
 ##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  クラス ファクトリをランニング オブジェクト テーブルから削除します。  
@@ -131,14 +132,14 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pComModule`  
+ *pComModule*  
  COM モジュールへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- このヘルパー関数がによって使用されて[CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (ATL 7.0 で古い形式) および[で](catlexemodulet-class.md#revokeclassobjects)です。  
+### <a name="remarks"></a>Remarks  
+ このヘルパー関数が利用[CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (ATL 7.0 で廃止) と[で](catlexemodulet-class.md#revokeclassobjects)します。  
   
 ##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  この関数は、クラス ファクトリを返すために呼び出されます。  
@@ -152,23 +153,23 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pComModule`  
+ *pComModule*  
  COM モジュールへのポインター。  
   
- `rclsid`  
+ *rclsid*  
  作成するオブジェクトの CLSID。  
   
- `riid`  
- 要求されたインターフェイスの IID です。  
+ *riid*  
+ 要求されたインターフェイスの IID。  
   
- `ppv`  
- によって識別されるインターフェイス ポインターへのポインター`riid`です。 オブジェクトは、このインターフェイスをサポートしていない場合`ppv`は NULL に設定します。  
+ *ppv*  
+ によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppv* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- このヘルパー関数がによって使用されて[CComModule::GetClassObject](ccommodule-class.md#getclassobject) (ATL 7.0 で古い形式) および[CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject)です。  
+### <a name="remarks"></a>Remarks  
+ このヘルパー関数が利用[CComModule::GetClassObject](ccommodule-class.md#getclassobject) (ATL 7.0 で廃止) と[CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject)します。  
   
 ## <a name="see-also"></a>関連項目  
  [関数](../../atl/reference/atl-functions.md)

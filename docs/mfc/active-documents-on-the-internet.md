@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930889"
 ---
 # <a name="active-documents-on-the-internet"></a>インターネット上の Active ドキュメント
 アクティブなドキュメントは、従来の埋め込みオブジェクトの拡張機能を提供します。 アクティブなドキュメントは、マルチページ可能性があり、全体のクライアント領域に表示されます。 従来のメニューのネゴシエーションを実行し、インプレースだけでなく、サーバー アプリケーションで開いているウィンドウで編集できます。 斜線の枠で囲まれた小さな四角形として表示する、代わりに、アクティブなドキュメントは、フル フレームと常に、インプレース アクティブです。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/04/2018
 |-------------------------|---------------------------------|  
 |そのストレージ メカニズムとして複合ファイルを使用します。|`IPersistStorage`。|  
 |アクティブなドキュメント、ファイルから作成などの基本的な埋め込み機能をサポートしています。|`IPersistFile`、`IOleObject`、および `IDataObject`。|  
-|サポートする、インプレース アクティブ化します。|`IOleInPlaceObject` および`IOleInPlaceActiveObject`(コンテナーを使用して`IOleInPlaceSite`と**IOleInPlaceFrame**インターフェイス)。|  
+|サポートする、インプレース アクティブ化します。|`IOleInPlaceObject` および`IOleInPlaceActiveObject`(コンテナーを使用して`IOleInPlaceSite`と`IOleInPlaceFrame`インターフェイス)。|  
 |これらの新しいインターフェイスを伴う作業中の文書の拡張機能をサポートしています。 一部のインターフェイスはオプションです。|`IOleDocument`、`IOleDocumentView`、`IOleCommandTarget`、および `IPrint`。|  
   
  MFC には、アクティブなドキュメントへの既存の埋め込みサーバー サポートを拡張するためのサポートが用意されています。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/04/2018
   
 |クラス型|前の派生元|派生する変更|  
 |----------------|---------------------------|---------------------------|  
-|埋め込み先フレーム|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|埋め込み先フレーム|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |アイテム|`COleServerItem`|`CDocObjectServerItem`|  
   
  また、レジストリで、情報を入力する方法を変更し、その他のいくつかの変更を加えます。 アプリケーション コンポーネントの COM サポートがあるない場合、は、アプリケーションのウィザードを実行し、既存のアプリケーションと COM コンポーネント固有のコードを統合することで、サーバーのサポートを追加できます。  

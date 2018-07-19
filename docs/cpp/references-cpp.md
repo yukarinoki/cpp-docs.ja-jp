@@ -1,5 +1,5 @@
 ---
-title: 参照 (C++) |Microsoft ドキュメント
+title: 参照 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe60a849cb1b14420ab83af77362ddda433884a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 174ab622b177766a33dd55f6b3c78ac38c26ded1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956594"
 ---
 # <a name="references-c"></a>参照 (C++)
-参照は、ポインターと同じように、メモリ内の他の場所に位置するオブジェクトのアドレスを格納します。 参照は、ポインターとは異なり、初期化された後で別のオブジェクトを参照するように指定したり、null に設定したりすることはできません。 参照の 2 種類があります: 左辺値参照を参照する名前付き変数および右辺値参照を参照する、[一時オブジェクト](../cpp/temporary-objects.md)です。 & 演算子は左辺値参照を示し、&& 演算子は、コンテキストによって右辺値参照またはユニバーサル参照 (右辺値または左辺値) を示します。  
+参照は、ポインターと同じように、メモリ内の他の場所に位置するオブジェクトのアドレスを格納します。 参照は、ポインターとは異なり、初期化された後で別のオブジェクトを参照するように指定したり、null に設定したりすることはできません。 参照の 2 種類があります。 左辺値参照を参照している名前付き変数および右辺値参照を参照している、[一時オブジェクト](../cpp/temporary-objects.md)します。 & 演算子は左辺値参照を示し、&& 演算子は、コンテキストによって右辺値参照またはユニバーサル参照 (右辺値または左辺値) を示します。  
   
  参照は次の構文を使用して宣言できます。  
   
@@ -48,34 +49,34 @@ ms.lasthandoff: 05/03/2018
   
 -   ストレージ クラスの指定子 (省略可能)。  
   
--   省略可能な**const**や`volatile`修飾子です。  
+-   省略可能な**const**や**揮発性**修飾子。  
   
 -   型指定子: 型の名前。  
   
 -   2. 宣言子:   
   
--   オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)です。  
+-   オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。  
   
 -   & 演算子または && 演算子。  
   
--   省略可能な**const**や`volatile`修飾子です。  
+-   省略可能な**const**や**揮発性**修飾子。  
   
 -   識別子。  
   
  3. 初期化子 (省略可能)。  
   
- 複雑な宣言子の形式の配列と関数へのポインターは配列および関数への参照にも適用を参照してください[ポインター](../cpp/pointers-cpp.md)と[宣言子](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)です。  
+ 複雑な宣言子フォーム参照の配列および関数へのポインターは、配列と関数への参照にも適用[ポインター](../cpp/pointers-cpp.md)します。  
   
  1 つの宣言指定子の後のコンマ区切りリストに、複数の宣言子と初期化子を含めることができます。 例えば:  
   
-```  
+```cpp 
 int &i;   
 int &i, &j;   
 ```  
   
  次のように、参照、ポインター、およびオブジェクトをまとめて宣言できます。  
   
-```  
+```cpp 
 int &ref, *ptr, k;   
 ```  
   
@@ -85,7 +86,7 @@ int &ref, *ptr, k;
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // references.cpp  
 #include <stdio.h>  
 struct S {  

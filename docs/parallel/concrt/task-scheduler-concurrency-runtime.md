@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689322"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>タスク スケジューラ (同時実行ランタイム)
 ドキュメントのこの部分のトピックでは、同時実行ランタイムのタスク スケジューラの重要な機能について説明します。 タスク スケジューラは、同時実行ランタイムを使用する既存のコードのパフォーマンスを微調整するときに役立ちます。  

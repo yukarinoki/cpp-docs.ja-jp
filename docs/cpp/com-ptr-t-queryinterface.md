@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::QueryInterface |Microsoft ドキュメント
+title: _com_ptr_t::QueryInterface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,22 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c046f1b1d14b7e7dbd44ca9f5f012e632efef6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c455ce81a869d64b3a9019088028e384c6a06217
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943149"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
 **Microsoft 固有の仕様**  
   
- 呼び出し、`QueryInterface`のメンバー関数**IUnknown**カプセル化されたインターフェイス ポインター。  
+ 呼び出し、`QueryInterface`のメンバー関数`IUnknown`カプセル化されたインターフェイス ポインター。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
   
-      template<typename _InterfaceType> HRESULT QueryInterface (  
+template<typename _InterfaceType> HRESULT QueryInterface (  
    const IID& iid,  
    _InterfaceType*& p   
 ) throw ( );  
@@ -43,14 +44,14 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `iid`  
- **IID**のインターフェイス ポインター。  
+ *iid*  
+ `IID` インターフェイス ポインター。  
   
- `p`  
+ *p*  
  生のインターフェイス ポインター。  
   
-## <a name="remarks"></a>コメント  
- 呼び出し**iunknown::queryinterface** 、指定したカプセル化されたインターフェイス ポインターで**IID**で結果として得られる生のインターフェイス ポインターを返します`p`です。 このルーチンは、成功または失敗を示すために、`HRESULT` を返します。  
+## <a name="remarks"></a>Remarks  
+ 呼び出し`IUnknown::QueryInterface`指定してカプセル化されたインターフェイス ポインターで`IID`で、結果として得られる生のインターフェイス ポインターを返します*p*します。 このルーチンは、成功または失敗を示す HRESULT を返します。  
   
  **Microsoft 固有の仕様はここまで**  
   

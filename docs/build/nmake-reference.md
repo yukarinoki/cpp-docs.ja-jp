@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372680"
 ---
 # <a name="nmake-reference"></a>NMAKE リファレンス
 Microsoft Program Maintenance Utility (NMAKE.EXE) は [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] に含まれているコマンドライン ツールで、記述ファイルに含まれているコマンドに基づいてプロジェクトをビルドします。  

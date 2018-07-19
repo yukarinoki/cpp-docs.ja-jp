@@ -31,6 +31,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255610"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 Microsoft は、クライアントとサーバーの両方のアプリケーションのプログラミングの多くの Api を提供します。 多くの新しいアプリケーションが、インターネットに書き込まれていると、テクノロジ、ブラウザーの機能、およびセキュリティ オプションの変更、新しい種類のアプリケーションが書き込まれます。 World Wide Web にアクセスするため、テキスト、グラフィック、ActiveX コントロール、およびドキュメントを含む HTML ページを表示して、クライアント コンピューターでブラウザーを実行します。 サーバーは、FTP、HTTP、および gopher サービスを提供し、CGI を使用してサーバー拡張機能のアプリケーションを実行します。 カスタム アプリケーションでは、情報を取得でき、インターネット上にデータを提供することができます。  

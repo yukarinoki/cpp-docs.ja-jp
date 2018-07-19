@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341976"
 ---
 # <a name="date-and-time-picker-control-examples"></a>日時指定コントロールの例
 [CMNCTRL1](../visual-cpp-samples.md)サンプルでは、さまざまな属性、`CDateTimeCtrl`クラスです。 別のページには、さまざまな属性を変更して、コントロールの基本的な機能をテストして、ユーザーが操作できることを日付と時刻の選択コントロールが含まれています。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231778"
 ---
 # <a name="compiler-error-c2756"></a>コンパイラ エラー C2756
 'template type': 既定のテンプレート引数は部分的特殊化では使用できません  

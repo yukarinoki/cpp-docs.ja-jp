@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270978"
 ---
 # <a name="compiler-error-c3867"></a>コンパイラ エラー C3867
 'func': 関数呼び出しには引数リストがありません。メンバーへのポインターを作成するために '&func' を使用してください  

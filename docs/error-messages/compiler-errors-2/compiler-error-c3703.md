@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264791"
 ---
 # <a name="compiler-error-c3703"></a>コンパイラ エラー C3703
 'イベント ハンドラー': イベント ハンドラー メソッドでは、ソース 'event' として同じストレージ クラスがあります  

@@ -1,5 +1,5 @@
 ---
-title: _U_RECT クラス |Microsoft ドキュメント
+title: _U_RECT クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93d067daf34538e3745e9a4efdd91fda65ef4de9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2ebb76d2f373862b39f2a3742481e14523a7a94b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882222"
 ---
 # <a name="urect-class"></a>_U_RECT クラス
-この引数のアダプター クラスは、いずれかの`RECT`ポインターまたは参照ポインターの観点から実装されている関数に渡されます。  
+この引数アダプター クラスを使用するか`RECT`ポインターまたは参照ポインターの観点から実装されている関数に渡されます。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -34,52 +35,53 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>構文  
   
 ```
-class _U_RECT```  
+class _U_RECT
+```  
   
-## Members  
+## <a name="members"></a>メンバー  
   
-### Public Constructors  
+### <a name="public-constructors"></a>パブリック コンストラクター  
   
-|Name|Description|  
+|名前|説明|  
 |----------|-----------------|  
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|The constructor.|  
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|コンストラクターです。|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>パブリック データ メンバー  
   
-|Name|Description|  
+|名前|説明|  
 |----------|-----------------|  
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Pointer to a `RECT`.|  
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|ポインター、`RECT`します。|  
   
-## Remarks  
- The class defines two constructor overloads: one accepts a **RECT&** argument and the other accepts an `LPRECT` argument. The first constructor stores the address of the reference argument in the class's single data member, [m_lpRect](#_u_rect__m_lprect). The argument to the pointer constructor is stored directly without conversion.  
+## <a name="remarks"></a>Remarks  
+ クラスは、2 つのコンス トラクター オーバー ロードを定義します: 1 つを受け入れる、 **RECT &** 引数と、その他を受け入れる、`LPRECT`引数。 最初のコンス トラクターはクラスの 1 つのデータ メンバーでは、参照の引数のアドレスを格納[ある m_lpRect](#_u_rect__m_lprect)します。 ポインターのコンス トラクター引数は、変換せずに直接格納されます。  
   
-## Requirements  
- **Header:** atlwin.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** atlwin.h  
   
 ##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
- The class holds the value passed to either of its constructors as a public `LPRECT` data member.  
+ クラスは、パブリック コンス トラクターのいずれかに渡された値を保持している`LPRECT`データ メンバー。  
   
 ```
-LPRECT ある m_lpRect です。
+LPRECT m_lpRect;
 ```  
   
 ##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
- The address of the reference argument is stored in the class's single data member, [m_lpRect](#_u_rect__m_lprect).  
+ 参照の引数のアドレスが、クラスの 1 つのデータのメンバーに格納されている[ある m_lpRect](#_u_rect__m_lprect)します。  
   
 ```
-_U_RECT (RECT & rc) です。  
-_U_RECT (LPRECT lpRect) です。
+_U_RECT(RECT& rc);  
+_U_RECT(LPRECT lpRect);
 ```  
   
-### Parameters  
- `rc`  
- A `RECT` reference.  
+### <a name="parameters"></a>パラメーター  
+ *rc*  
+ A`RECT`参照。  
   
- `lpRect`  
- A `RECT` pointer.  
+ *lpRect*  
+ A`RECT`ポインター。  
   
-### Remarks  
- The argument to the pointer constructor is stored directly without conversion.  
+### <a name="remarks"></a>Remarks  
+ ポインターのコンス トラクター引数は、変換せずに直接格納されます。  
   
-## See Also  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>関連項目  
+ [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: type_info クラス |Microsoft ドキュメント
+title: type_info クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e3138c9028f72327c9d4bf2c2f2e82c942dbde
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 54e4f4a2ac9be9dc68320e5121bc86e5a4280807
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941042"
 ---
 # <a name="typeinfo-class"></a>type_info Class
-**Type_info**クラスは、コンパイラによって、プログラム内で生成される型情報を表します。 このクラスのオブジェクトは、実質的には型の名前へのポインターを格納します。 **Type_info**クラスもまたは照合順序の 2 つの型の等価性を比較するのに適したエンコードした値を格納します。 型のエンコーディング規則と照合順序については指定されていないため、プログラムによって異なる場合があります。  
+`type_info`クラスには、プログラム内で、コンパイラによって生成される型情報がについて説明します。 このクラスのオブジェクトは、実質的には型の名前へのポインターを格納します。 `type_info`クラスでは、または照合順序の 2 つの型の等価性を比較するのに適したエンコード値も格納されます。 型のエンコーディング規則と照合順序については指定されていないため、プログラムによって異なる場合があります。  
   
- `<typeinfo>`ヘッダー ファイルを使用するために含める必要があります、 **type_info**クラスです。 インターフェイス、 **type_info**クラスは。  
+ `<typeinfo>`ヘッダー ファイルを使用するには含めることは、`type_info`クラス。 インターフェイス、`type_info`クラスです。  
   
 ```cpp
 class type_info {  
@@ -41,19 +42,19 @@ public:
 };  
 ```  
   
- オブジェクトをインスタンス化することはできません、 **type_info**クラスを直接クラスがプライベート コピー コンス トラクターのみを持つためです。 (一時) を構築する唯一の方法**type_info**オブジェクトは、使用する、 [typeid](../cpp/typeid-operator.md)演算子。 代入演算子もプライベートであるため、コピーまたはクラスのオブジェクトを代入することはできません**type_info**です。  
+ オブジェクトをインスタンス化することはできません、`type_info`クラスを直接クラスにプライベート コピー コンス トラクターのみがあるためです。 (一時) を構築する唯一の方法`type_info`オブジェクトは、使用する、 [typeid](../cpp/typeid-operator.md)演算子。 代入演算子はプライベートでもあるため、コピーまたはクラスのオブジェクトを代入することはできません`type_info`します。  
   
- **type_info::hash_code**型の値をマッピングするために適したハッシュ関数を定義**typeinfo**インデックス値の分布にします。  
+ `type_info::hash_code` 型の値のマッピングに適したハッシュ関数を定義します。`typeinfo`インデックス値の分布にします。  
   
- 演算子は、`==`と`!=`を他の等値演算子および非等値の比較に使用できる**type_info**オブジェクトをそれぞれします。  
+ 演算子`==`と`!=`他の等号または不等号の比較に使用できる`type_info`オブジェクトをそれぞれします。  
   
- 型の照合順序と継承関係には関連性はありません。 使用して、 **type_info::before**メンバー関数の種類の照合順序を決定します。 保証はありませんを**type_info::before**さまざまなプログラムや、同じプログラムの別の実行で同じ結果を得られます。 この方法で**type_info::before**アドレスのような **(&)** 演算子。  
+ 型の照合順序と継承関係には関連性はありません。 使用して、`type_info::before`型の照合順序を決定するメンバー関数。 保証はありませんが`type_info::before`別のプログラムまたは同じプログラムの別の実行で同じ結果が生成されます。 この方法で`type_info::before`アドレスのような`(&)`演算子。  
   
- **Type_info::name**メンバー関数を返します、 **const char\*** 型の人間が判読できる名前を表す null で終わる文字列にします。 ポイントされたメモリはキャッシュされ、直接解放されることはありません。  
+ `type_info::name`メンバー関数を返します、`const char*`型の人間が判読できる名前を表す null で終わる文字列にします。 ポイントされたメモリはキャッシュされ、直接解放されることはありません。  
   
- **:Raw_name**メンバー関数を返します、 **const char\*** オブジェクトの種類の装飾名を表す null で終わる文字列にします。 実際、名前は保存領域を節約するために、修飾された形式で格納されます。 そのため、この関数はよりも高速**type_info::name**に名前を外す必要がないためです。 によって返される文字列、 **:raw_name**関数は、比較操作で役に立ちますが、読み取ることができません。 人間が判読できる文字列を必要がある場合、 **type_info::name**関数を使用します。  
+ `type_info::raw_name`メンバー関数を返します、`const char*`オブジェクトの種類の装飾名を表す null で終わる文字列にします。 実際、名前は保存領域を節約するために、修飾された形式で格納されます。 そのため、この関数より高速`type_info::name`名前を使用する必要がないためです。 によって返される文字列、`type_info::raw_name`関数は比較演算で役に立ちますが、読み取ることができません。 使用して、人間が判読できる文字列が必要な場合、`type_info::name`関数を使用します。  
   
- 場合にのみ、ポリモーフィックなクラスの型情報が生成される、 [/GR (ランタイム型情報の有効化)](../build/reference/gr-enable-run-time-type-information.md)コンパイラ オプションを指定します。  
+ 場合にのみ、ポリモーフィックなクラスの型情報が生成された、 [/GR (ランタイム型情報の有効化)](../build/reference/gr-enable-run-time-type-information.md)コンパイラ オプションを指定します。  
   
 ## <a name="see-also"></a>関連項目  
  [ランタイム型情報](../cpp/run-time-type-information.md)

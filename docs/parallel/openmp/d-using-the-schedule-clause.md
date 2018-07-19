@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694941"
 ---
 # <a name="d-using-the-schedule-clause"></a>D: スケジュール句を使用します。
 並列領域には、少なくとも 1 つのバリア、末端で持ち内の別の障壁を必要があります。 各バリアで、チームの他のメンバーは到着する最後のスレッドを待つ必要があります。 すべてのスレッドがほぼ同時にバリアに到達できるようにこの待機時間を最小限に抑えるには、共有の作業を分散します。 作業が含まれている場合は、一部の共有**の**構築では、`schedule`句は、この目的で使用できます。  

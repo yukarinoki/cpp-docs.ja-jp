@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107858"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>動的アクセサーのオーバーライド
 など、動的なアクセサーを使用すると`CDynamicAccessor`のコマンドは、**開く**メソッドは、開かれた行セットの列情報を基に自動的には、アクセサーを作成します。 正確に列のバインド方法を制御する動的なアクセサーをオーバーライドできます。  

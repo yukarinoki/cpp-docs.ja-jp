@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686673"
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 **OMP_DYNAMIC**環境変数を有効または動的に調整が明示的に有効になっているか、を呼び出すことによって無効にしない限り、並列領域を実行するために使用できるスレッドの数が動的に調整を無効になります**omp_set_dynamic**ライブラリ ルーチンです。 その値がある必要があります**TRUE**または**FALSE**です。  

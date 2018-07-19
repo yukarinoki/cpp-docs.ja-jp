@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873694"
 ---
 # <a name="defining-mnemonics-access-keys"></a>ニーモニック (アクセス キー) の定義
 通常は、ユーザーがキーボード入力フォーカス間を移動 1 つのコントロール ダイアログ ボックスで、TAB キーと方向キーとします。 ただし、ユーザーを 1 つのキーを押して、コントロールを選択できるようにするアクセス キー (またはニーモニック覚えやすい名前) を定義することができます。  

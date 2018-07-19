@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391666"
 ---
 # <a name="interpreting-more-complex-declarators"></a>より複雑な宣言子の解釈
 宣言子をかっこで囲んで、"複雑な宣言子" の特定の解釈を指定できます。 複雑な宣言子は、複数の配列、ポインター、または関数の修飾子で修飾される識別子です。 1 つの ID には、配列、ポインター、関数修飾子のさまざまな組み合わせを適用できます。 通常、`typedef` を使用して、宣言を簡素化できます。 「[typedef 宣言](../c-language/typedef-declarations.md)」を参照してください。  

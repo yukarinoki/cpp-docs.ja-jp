@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111274"
 ---
 # <a name="using-ole-db-record-views"></a>OLE DB レコード ビューの使用
 MFC アプリケーションで OLE DB 行セットのデータを表示する場合は、MFC クラスを使用する必要があります[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)です。 レコード ビュー オブジェクトから作成`COleDBRecordView`MFC コントロールのデータベース レコードを表示することができます。 レコード ビューから作成された OLE DB 行セット オブジェクトに直接接続して、ダイアログ フォーム ビューとは、`CRowset`テンプレート クラス。 行セット オブジェクトへのハンドルを取得するは単純です。  

@@ -1,5 +1,5 @@
 ---
-title: CGdiObject クラス |Microsoft ドキュメント
+title: CGdiObject クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,11 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338419"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject クラス
 ビットマップ、領域、ブラシ、ペン、パレット、フォントなどの Windows のさまざまな種類のグラフィックス デバイス インターフェイス (GDI) の基底クラスを提供します。  
@@ -68,34 +69,34 @@ class CGdiObject : public CObject
 |名前|説明|  
 |----------|-----------------|  
 |[CGdiObject::Attach](#attach)|Windows GDI オブジェクトをアタッチ、`CGdiObject`オブジェクト。|  
-|[CGdiObject::CreateStockObject](#createstockobject)|Windows 定義済みのストック ペン、ブラシ、フォントのいずれかへのハンドルを取得します。|  
-|[CGdiObject::DeleteObject](#deleteobject)|接続されている Windows GDI オブジェクトの削除、`CGdiObject`オブジェクトに関連付けられているすべてのシステムの記憶域を解放することによって、メモリからのオブジェクト。|  
-|[CGdiObject::DeleteTempMap](#deletetempmap)|一時的な削除`CGdiObject`によって作成されたオブジェクト`FromHandle`です。|  
-|[CGdiObject::Detach](#detach)|Windows GDI オブジェクトからのデタッチ、`CGdiObject`オブジェクトおよびハンドル Windows GDI オブジェクトを返します。|  
-|[CGdiObject::FromHandle](#fromhandle)|ポインターを返します、 `CGdiObject` Windows GDI オブジェクトへのハンドルを指定されたオブジェクト。|  
-|[CGdiObject::GetObject](#getobject)|接続されている Windows GDI オブジェクトを説明するデータを含むバッファーがいっぱいになった、`CGdiObject`オブジェクト。|  
-|[CGdiObject::GetObjectType](#getobjecttype)|GDI オブジェクトの種類を取得します。|  
-|[CGdiObject::GetSafeHandle](#getsafehandle)|返します`m_hObject`しない限り、`this`は`NULL`、後者`NULL`が返されます。|  
-|[CGdiObject::UnrealizeObject](#unrealizeobject)|ブラシの原点のリセット、または論理パレットがリセットされます。|  
+|[CGdiObject::CreateStockObject](#createstockobject)|Windows の定義済みのストック ペン、ブラシ、またはフォントのいずれかを識別するハンドルを取得します。|  
+|[CGdiObject::DeleteObject](#deleteobject)|Windows GDI オブジェクトにアタッチされて削除、`CGdiObject`オブジェクトに関連付けられているすべてのシステムの記憶域を解放することによって、メモリからオブジェクト。|  
+|[CGdiObject::DeleteTempMap](#deletetempmap)|一時的な削除`CGdiObject`によって作成されたオブジェクト`FromHandle`します。|  
+|[CGdiObject::Detach](#detach)|Windows GDI オブジェクトからデタッチする`CGdiObject`オブジェクトし、Windows GDI オブジェクトへのハンドルを返します。|  
+|[CGdiObject::FromHandle](#fromhandle)|ポインターを返します、 `CGdiObject` Windows GDI オブジェクトを識別するハンドルを指定したオブジェクト。|  
+|[CGdiObject::GetObject](#getobject)|アタッチされている Windows GDI オブジェクトを説明するデータを使用して、バッファーを塗りつぶし、`CGdiObject`オブジェクト。|  
+|[CGdiObject::GetObjectType](#getobjecttype)|GDI オブジェクトの型を取得します。|  
+|[CGdiObject::GetSafeHandle](#getsafehandle)|返します`m_hObject`しない限り、**この**が null の場合、大文字と小文字の NULL が返されます。|  
+|[CGdiObject::UnrealizeObject](#unrealizeobject)|ブラシの原点にリセットまたは論理パレットをリセットします。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CGdiObject::operator! =](#operator_neq)|2 つの GDI オブジェクトが等しく論理的にないかどうかを判断します。|  
-|[CGdiObject::operator = =](#operator_eq_eq)|2 つの GDI オブジェクトが論理的に等しいかどうかを判断します。|  
-|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|取得、`HANDLE`アタッチされた Windows GDI オブジェクトにします。|  
+|[CGdiObject::operator! =](#operator_neq)|2 つの GDI オブジェクトが等しく論理的にないかどうかを決定します。|  
+|[CGdiObject::operator = =](#operator_eq_eq)|2 つの GDI オブジェクトが論理的に等しいかどうかを決定します。|  
+|[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|アタッチされている Windows GDI オブジェクトを識別するハンドルを取得します。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CGdiObject::m_hObject](#m_hobject)|A`HANDLE`を含む、 `HBITMAP`、 `HPALETTE`、 `HRGN`、 `HBRUSH`、 `HPEN`、または`HFONT`このオブジェクトにアタッチします。|  
+|[CGdiObject::m_hObject](#m_hobject)|HBITMAP、HPALETTE、HRGN、HBRUSH、HPEN、または HFONT ハンドルは、このオブジェクトにアタッチします。|  
   
-## <a name="remarks"></a>コメント  
- 作成することはありません、`CGdiObject`直接です。 代わりに、オブジェクトを作成するその派生クラスのいずれかのように`CPen`または`CBrush`です。  
+## <a name="remarks"></a>Remarks  
+ 作成することはありません、`CGdiObject`直接します。 代わりに、オブジェクトを作成するその派生クラスのいずれかからなど`CPen`または`CBrush`します。  
   
- 詳細については`CGdiObject`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)です。  
+ 詳細については`CGdiObject`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -113,11 +114,11 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hObject`  
- A `HANDLE` Windows GDI オブジェクト (たとえば、`HPEN`または`HBRUSH`)。  
+ *hObject*  
+ Windows GDI オブジェクト (たとえば、HPEN または HBRUSH) へのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
- 添付ファイルが正常に終了した場合は 0 以外。それ以外の場合 0 を返します。  
+ 添付ファイルが成功した場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
  `CGdiObject` オブジェクトを構築します。  
@@ -126,82 +127,82 @@ BOOL Attach(HGDIOBJ hObject);
 CGdiObject();
 ```  
   
-### <a name="remarks"></a>コメント  
- 作成することはありません、`CGdiObject`直接です。 代わりに、オブジェクトを作成するその派生クラスのいずれかのように`CPen`または**Cbrush**です。  
+### <a name="remarks"></a>Remarks  
+ 作成することはありません、`CGdiObject`直接します。 代わりに、オブジェクトを作成するその派生クラスのいずれかからなど`CPen`または`Cbrush`します。  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
- 定義済みのストック Windows GDI ペン、ブラシ、フォントのいずれかへのハンドルを取得しに GDI オブジェクトをアタッチ、`CGdiObject`オブジェクト。  
+ 定義済みのストック Windows GDI ペン、ブラシ、フォントのいずれかを識別するハンドルを取得し、GDI オブジェクトを`CGdiObject`オブジェクト。  
   
 ```  
 BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
- 目的のストック オブジェクトの種類を指定する定数。 パラメーターを参照*fnObject*の[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925)適切な値の詳細については、Windows SDK でします。  
+ *nIndex*  
+ 目的のストック オブジェクトの種類を指定する定数。 パラメーターを*fnObject*の[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) Windows sdk の適切な値の説明。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- クラスの派生クラスのいずれかでこの関数の呼び出しなどの Windows GDI オブジェクトの種類に対応`CPen`ストック ペン用です。  
+### <a name="remarks"></a>Remarks  
+ クラスの派生クラスのいずれかでこの関数の呼び出しなどの Windows GDI オブジェクトの種類に対応`CPen`の株価のペン。  
   
 ##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
- Windows GDI オブジェクトに関連付けられているすべてのシステムの記憶域を解放することで、メモリから、アタッチされた Windows GDI オブジェクトを削除します。  
+ Windows GDI オブジェクトに関連付けられたすべてのシステムの記憶域を解放して、メモリからアタッチされている Windows GDI オブジェクトを削除します。  
   
 ```  
 BOOL DeleteObject();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- GDI オブジェクトが正常に削除された場合は 0 以外。それ以外の場合 0 を返します。  
+ GDI オブジェクトが正常に削除された場合、0 以外の場合それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 関連付けられている記憶域、`CGdiObject`オブジェクトがこの呼び出しによって影響ありません。 アプリケーションを呼び出す必要がありますいない`DeleteObject`上、`CGdiObject`デバイス コンテキストに現在選択されているオブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 関連付けられている記憶域、`CGdiObject`オブジェクトがこの呼び出しによって影響ありません。 アプリケーションは呼び出さないでください`DeleteObject`上、`CGdiObject`デバイス コンテキストに現在選択されているオブジェクト。  
   
- ブラシ パターンが削除されると、ブラシに関連付けられたビットマップは削除されません。 ビットマップは個別に削除する必要があります。  
+ ブラシのパターンが削除されると、ブラシに関連付けられたビットマップは削除されません。 ビットマップは個別に削除する必要があります。  
   
 ##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
- によって自動的に呼び出されます、`CWinApp`アイドル処理ハンドラー`DeleteTempMap`一時的な削除`CGdiObject`によって作成されたオブジェクト`FromHandle`です。  
+ によって自動的と呼ばれる、`CWinApp`アイドル処理ハンドラー、`DeleteTempMap`一時を削除します`CGdiObject`によって作成されたオブジェクト`FromHandle`します。  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `DeleteTempMap` 一時的に接続されている Windows GDI オブジェクトをデタッチ`CGdiObject`オブジェクトを削除する前に、`CGdiObject`オブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CGdiObject::Detach  
- Windows GDI オブジェクトからのデタッチ、`CGdiObject`オブジェクトおよびハンドル Windows GDI オブジェクトを返します。  
+ Windows GDI オブジェクトからデタッチする`CGdiObject`オブジェクトし、Windows GDI オブジェクトへのハンドルを返します。  
   
 ```  
 HGDIOBJ Detach();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`HANDLE`オブジェクト デタッチ; それ以外の場合に、Windows GDI **NULL** GDI オブジェクトがアタッチされていない場合。  
+ A `HANDLE` Windows gdi オブジェクトをデタッチ; GDI オブジェクトがアタッチされていない場合は NULL それ以外の場合。  
   
 ##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
- ポインターを返します、 `CGdiObject` Windows GDI オブジェクトへのハンドルを指定されたオブジェクト。  
+ ポインターを返します、 `CGdiObject` Windows GDI オブジェクトを識別するハンドルを指定したオブジェクト。  
   
 ```  
 static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hObject`  
- A `HANDLE` Windows GDI オブジェクト。  
+ *hObject*  
+ Windows GDI オブジェクトへのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CGdiObject`一時的または永続する可能性があります。  
+ ポインター、`CGdiObject`一時的または永続的があります。  
   
-### <a name="remarks"></a>コメント  
- 場合、`CGdiObject`オブジェクトが、一時的な Windows GDI オブジェクトに既にアタッチされていない`CGdiObject`オブジェクトが作成され、接続されています。  
+### <a name="remarks"></a>Remarks  
+ 場合、`CGdiObject`オブジェクトが一時的なである Windows GDI オブジェクトに既にアタッチされていない`CGdiObject`オブジェクトを作成し、接続されています。  
   
- この一時`CGdiObject`オブジェクトは、次のアプリケーションが、すべての一時的なグラフィック オブジェクトの削除時に、イベント ループのアイドル時間までのみ有効です。 言い換えると、別の方法は、1 つのウィンドウ メッセージを処理中に、一時オブジェクトが有効でのみことです。  
+ この一時`CGdiObject`オブジェクトは、次回、アプリケーションがあるすべての一時的なグラフィック オブジェクトを削除する時点で、イベント ループでのアイドル時間までのみ有効です。 言い換えると、別の方法は、1 つのウィンドウ メッセージを処理中に一時オブジェクトが有効でのみことです。  
   
 ##  <a name="getobject"></a>  CGdiObject::GetObject  
  指定したオブジェクトを定義するデータをバッファーします。  
@@ -213,17 +214,17 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nCount`  
- コピーするバイト数を指定、`lpObject`バッファー。  
+ *nCount*  
+ コピーするバイト数を指定します、 *lpObject*バッファー。  
   
- `lpObject`  
- 情報を受信するユーザーが指定したバッファーへのポインター。  
+ *lpObject*  
+ 情報を受信するユーザー指定のバッファーを指します。  
   
 ### <a name="return-value"></a>戻り値  
- バイト数を取得します。それ以外の場合 0 の場合、エラーが発生します。  
+ バイトの数を取得します。それ以外の場合のエラーが 0 の場合に発生します。  
   
-### <a name="remarks"></a>コメント  
- 関数は、次の一覧に示すように、型を持つが、グラフィック オブジェクトの種類に依存するデータ構造体を取得します。  
+### <a name="remarks"></a>Remarks  
+ 関数は、次の一覧に示すように型を持つは、グラフィック オブジェクトの種類によって異なります。 データ構造体を取得します。  
   
 |Object|バッファーの種類|  
 |------------|-----------------|  
@@ -231,109 +232,109 @@ int GetObject(
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
 |`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
 |`CBitmap`|[ビットマップ](../../mfc/reference/bitmap-structure.md)|  
-|`CPalette`|**WORD**|  
+|`CPalette`|WORD|  
 |`CRgn`|サポートなし|  
   
- オブジェクトがある場合、`CBitmap`オブジェクト、`GetObject`幅、高さ、およびビットマップの色の書式情報のみを返します。 実際のビットを使用して取得できる[列](../../mfc/reference/cbitmap-class.md#getbitmapbits)です。  
+ オブジェクトの場合、`CBitmap`オブジェクト、`GetObject`幅、高さ、およびビットマップの色の書式情報のみを返します。 使用して取得できる実際のビット[列](../../mfc/reference/cbitmap-class.md#getbitmapbits)します。  
   
- オブジェクトがある場合、`CPalette`オブジェクト、`GetObject`取得、 **WORD**パレット内のエントリの数を指定します。 関数を取得することはありません、[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)パレットを定義する構造体。 アプリケーションが呼び出すことによってパレット エントリに関する情報を取得できます[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)です。  
+ オブジェクトの場合、`CPalette`オブジェクト、`GetObject`パレットのエントリの数を指定する単語を取得します。 関数を取得することはありません、[保持](http://msdn.microsoft.com/library/windows/desktop/dd145040)パレットを定義する構造体。 アプリケーションが呼び出すことによってパレット エントリに関する情報を取得できる[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)します。  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
- GDI オブジェクトの種類を取得します。  
+ GDI オブジェクトの型を取得します。  
   
 ```  
 UINT GetObjectType() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は、オブジェクトの種類それ以外の場合 0 を返します。 値は次のいずれかになります。  
+ 成功した場合は、オブジェクトの種類それ以外の場合 0 を返します。 値は次のいずれかになります。  
   
-- **OBJ_BITMAP**ビットマップ  
+- OBJ_BITMAP ビットマップ  
   
-- **OBJ_BRUSH**ブラシ  
+- OBJ_BRUSH ブラシ  
   
-- **OBJ_FONT**フォント  
+- OBJ_FONT フォント  
   
-- **OBJ_PAL**パレット  
+- OBJ_PAL パレット  
   
-- **OBJ_PEN**ペン  
+- OBJ_PEN ペン  
   
-- **OBJ_EXTPEN**拡張ペン  
+- ペンの OBJ_EXTPEN 拡張  
   
-- **OBJ_REGION**地域  
+- OBJ_REGION リージョン  
   
-- **OBJ_DC**デバイス コンテキスト  
+- OBJ_DC デバイス コンテキスト  
   
-- **OBJ_MEMDC**メモリ デバイス コンテキスト  
+- OBJ_MEMDC メモリ デバイス コンテキスト  
   
-- **OBJ_METAFILE**メタファイル  
+- OBJ_METAFILE メタファイル  
   
-- **OBJ_METADC**メタファイル デバイス コンテキスト  
+- OBJ_METADC メタファイル デバイス コンテキスト  
   
-- **OBJ_ENHMETAFILE**拡張メタファイル  
+- OBJ_ENHMETAFILE 拡張メタファイル  
   
-- **OBJ_ENHMETADC**拡張メタファイル デバイス コンテキスト  
+- OBJ_ENHMETADC 拡張メタファイル デバイス コンテキスト  
   
 ##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
- 返します`m_hObject`しない限り、**この**は**NULL**、後者**NULL**が返されます。  
+ 返します`m_hObject`しない限り、**この**が null の場合、大文字と小文字の NULL が返されます。  
   
 ```  
 HGDIOBJ GetSafeHandle() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`HANDLE`にアタッチされた Windows GDI オブジェクトです。 それ以外の場合**NULL**オブジェクトがアタッチされていない場合。  
+ 接続されている Windows GDI オブジェクトを識別するハンドルオブジェクトがアタッチされていない場合は NULL それ以外の場合です。  
   
-### <a name="remarks"></a>コメント  
- 一般的なハンドル インターフェイスのパラダイムの一部であり、 **NULL**ハンドルが無効であるか特殊な値です。  
+### <a name="remarks"></a>Remarks  
+ 一般的なハンドルのインターフェイスのパラダイムの一部でありこのハンドルが無効であるか、特殊な値は NULL は場合に便利です。  
   
 ### <a name="example"></a>例  
-  例を参照して[CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)です。  
+  例をご覧ください[CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)します。  
   
 ##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
- A`HANDLE`を含む、 `HBITMAP`、 **HRGN**、 `HBRUSH`、 `HPEN`、 `HPALETTE`、または**HFONT**このオブジェクトにアタッチします。  
+ HBITMAP、HRGN、HBRUSH、HPEN、HPALETTE、または HFONT ハンドルは、このオブジェクトにアタッチします。  
   
 ```  
 HGDIOBJ m_hObject;  
 ```  
   
 ##  <a name="operator_neq"></a>  CGdiObject::operator! =  
- 2 つの GDI オブジェクトが等しく論理的にないかどうかを判断します。  
+ 2 つの GDI オブジェクトが等しく論理的にないかどうかを決定します。  
   
 ```  
 BOOL operator!=(const CGdiObject& obj) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `obj`  
- 既存へのポインター`CGdiObject`です。  
+ *obj*  
+ 既存へのポインター`CGdiObject`します。  
   
-### <a name="remarks"></a>コメント  
- 左側の GDI オブジェクトが右側の GDI オブジェクトと等しくないかどうかを判断します。  
+### <a name="remarks"></a>Remarks  
+ 左側にある GDI オブジェクトが右側にある GDI オブジェクトと等しくないかどうかを決定します。  
   
 ##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =  
- 2 つの GDI オブジェクトが論理的に等しいかどうかを判断します。  
+ 2 つの GDI オブジェクトが論理的に等しいかどうかを決定します。  
   
 ```  
 BOOL operator==(const CGdiObject& obj) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `obj`  
- 既存への参照を`CGdiObject`です。  
+ *obj*  
+ 既存への参照を`CGdiObject`します。  
   
-### <a name="remarks"></a>コメント  
- 左側の GDI オブジェクトが右側の GDI オブジェクトと等しいかどうかを判断します。  
+### <a name="remarks"></a>Remarks  
+ 左側にある GDI オブジェクトが右側にある、GDI オブジェクトと等しいかどうかを判断します。  
   
 ##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
- 取得、`HANDLE`にアタッチされた Windows GDI オブジェクトです。 それ以外の場合**NULL**オブジェクトがアタッチされていない場合。  
+ 接続されている Windows GDI オブジェクトを識別するハンドルを取得します。オブジェクトがアタッチされていない場合は NULL それ以外の場合です。  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
 ##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
- ブラシの原点のリセット、または論理パレットがリセットされます。  
+ ブラシの原点にリセットまたは論理パレットをリセットします。  
   
 ```  
 BOOL UnrealizeObject();
@@ -342,12 +343,12 @@ BOOL UnrealizeObject();
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 中に`UnrealizeObject`のメンバー関数は、`CGdiObject`クラス、それを呼び出す上でのみ`CBrush`または`CPalette`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 中に`UnrealizeObject`のメンバー関数は、`CGdiObject`クラス、それを呼び出すだけで`CBrush`または`CPalette`オブジェクト。  
   
- `CBrush`オブジェクト、`UnrealizeObject`次回デバイス コンテキストに選択されている指定されたブラシの原点をリセットするシステムに指示します。 オブジェクトがある場合、`CPalette`オブジェクト、`UnrealizeObject`が、既に認識していない場合と同様に、パレットを実現するシステムに指示します。 次に、アプリケーションが呼び出すとき、 [:realizepalette](../../mfc/reference/cdc-class.md#realizepalette)指定のパレットでは、システム関数では、論理パレット システム パレットを完全に再マップします。  
+ `CBrush`オブジェクト、`UnrealizeObject`は、デバイス コンテキストに選択されているときに、指定されたブラシの原点をリセットするようにします。 オブジェクトの場合、`CPalette`オブジェクト、`UnrealizeObject`いた、以前認識していない場合と同様に、パレットを実現するシステムに指示します。 呼び出して、次回、 [:realizepalette](../../mfc/reference/cdc-class.md#realizepalette)関数の指定のパレットでは、システムの場合は、システム パレットにある論理パレットを完全に再マップします。  
   
- `UnrealizeObject`関数はストック オブジェクトを使用する必要があります。 `UnrealizeObject`新しいブラシの原点が設定されているときに、関数を呼び出す必要があります (により、 [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg)関数)。 `UnrealizeObject`現在選択されているブラシまたはディスプレイ コンテキストの現在選択されているパレットの関数を呼び出すことがない必要があります。  
+ `UnrealizeObject`ストック オブジェクトと関数を使用する必要があります。 `UnrealizeObject`新しいブラシの原点が設定されている場合、関数を呼び出す必要があります (によって、 [CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg)関数)。 `UnrealizeObject`現在選択されているブラシまたはディスプレイ コンテキストの現在選択されているパレットの関数を呼び出すことがない必要があります。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373024"
 ---
 # <a name="output-file-f-options"></a>出力ファイル (/F) オプション
 出力ファイルのオプションは、作成または出力ファイルの名前を変更します。 環境変数 CL、コマンドライン、またはコマンド ファイルで指定されたすべての C または C++ ソース ファイルに影響します。  

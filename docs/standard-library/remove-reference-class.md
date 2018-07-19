@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5aaf151d7591776857c5f731841847e31c41239
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957903"
 ---
 # <a name="removereference-class"></a>remove_reference クラス
 
@@ -39,11 +40,11 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`remove_reference<T>` のインスタンスは、`T1` の形式が `T` である場合は、修飾型 `T1&` を保持します。それ以外の場合は、`T` を保持します。
+インスタンス`remove_reference<T>`、修飾型であるを保持`T1`とき*T*の形式は`T1&`それ以外の場合、 *T*します。
 
 ## <a name="example"></a>例
 
@@ -67,7 +68,7 @@ int main()
 remove_reference_t<int&> == int
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

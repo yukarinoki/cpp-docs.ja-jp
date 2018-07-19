@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381656"
 ---
 # <a name="c-constants"></a>C 定数
 "定数" はプログラムで値として使用できる数、文字、または文字列です。 定数を使用して、変更できない浮動小数点、整数、列挙、または文字値を表します。  

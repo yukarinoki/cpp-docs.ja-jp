@@ -27,11 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202add45c335adea086087aed9ce3374e56a7e39
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7305ff80c50c65e4b03a9879d39960e8c47786df
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027340"
 ---
 # <a name="errorcondition-class"></a>error_condition クラス
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/07/2018
 class error_condition;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `error_condition` 型のオブジェクトは、エラー コード値を格納するほか、レポートされたユーザー定義のエラーに使用されるエラー コードの[カテゴリ](../standard-library/error-category-class.md)を表すオブジェクトを指すポインターも格納します。
 
@@ -78,7 +79,7 @@ class error_condition;
 |[operator=](#op_eq)|`error_condition` オブジェクトに新しい列挙値を代入します。|
 |[operator bool](#op_bool)|`error_condition` 型の変数をキャストします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<system_error>
 
@@ -96,12 +97,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|`error_code` に格納するエラー コード値。|
-|`_Cat`|`error_code` に格納するエラー カテゴリ。|
+|*val*|`error_code` に格納するエラー コード値。|
+|*_Cat*|`error_code` に格納するエラー カテゴリ。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、エラー コード値としての `val` と `_Cat` を指すポインターを格納します。
+メンバー関数のストア*val*エラー コード値とへのポインターとして *_Cat*します。
 
 ## <a name="category"></a>  error_condition::category
 
@@ -115,7 +116,7 @@ const error_category& category() const;
 
 格納されたエラー カテゴリへの参照
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="clear"></a>  error_condition::clear
 
@@ -125,7 +126,7 @@ const error_category& category() const;
 clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数はゼロ エラー コード値と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
@@ -148,15 +149,15 @@ error_condition(_Enum _Errcode,
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|`error_condition` に格納するエラー コード値。|
-|`_Cat`|`error_condition` に格納するエラー カテゴリ。|
-|`_Errcode`|`error_condition` に格納する列挙値。|
+|*val*|`error_condition` に格納するエラー コード値。|
+|*_Cat*|`error_condition` に格納するエラー カテゴリ。|
+|*_Errcode*|`error_condition` に格納する列挙値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターはゼロ エラー コード値と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
-2 番目のコンストラクターは、エラー コード値としての `val` と [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8) を指すポインターを格納します。
+2 番目のコンス トラクター ストア*val*エラー コード値とへのポインターとして[error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)します。
 
 3 番目のコンストラクターは、エラー コード値としての `(value_type)_Errcode` と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。
 
@@ -172,7 +173,7 @@ string message() const;
 
 エラー コードの名前を表す `string`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `category().message(value())` を返します。
 
@@ -188,13 +189,13 @@ bool operator==(const error_condition& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|等しいかどうかをテストするオブジェクト。|
+|*right*|等しいかどうかをテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 オブジェクトが等しい場合は **true**、オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `category() == right.category() && value == right.value()`を返します。
 
@@ -210,13 +211,13 @@ bool operator!=(const error_condition& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|不等性をテストするオブジェクト。|
+|*right*|不等性をテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-`error_condition` オブジェクトが、`right` に渡される `error_condition` オブジェクトに等しくない場合は **true**。それ以外の場合は **false**。
+**true**場合、`error_condition`オブジェクトが等しく、`error_condition`で渡されるオブジェクト*右*。 そうしないと**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `!(*this == right)`を返します。
 
@@ -232,13 +233,13 @@ bool operator<(const error_condition& right) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|比較される `error_condition` オブジェクト。|
+|*right*|比較される `error_condition` オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 `error_condition` オブジェクトが、比較対象として渡された `error_condition` より小さい場合は **true**。それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、`category() < right.category() || category() == right.category() && value < right.value()` を返します。
 
@@ -258,13 +259,13 @@ error_condition(_Enum error,
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Errcode`|`error_condition` オブジェクトに代入する列挙値。|
+|*_Errcode*|`error_condition` オブジェクトに代入する列挙値。|
 
 ### <a name="return-value"></a>戻り値
 
 メンバー関数によって新しい列挙値が代入される `error_condition` オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、エラー コード値としての `(value_type)error` と [generic_category](../standard-library/system-error-functions.md#generic_category) を指すポインターを格納します。 `*this` を返します。
 
@@ -280,9 +281,9 @@ explicit operator bool() const;
 
 `error_condition` オブジェクトのブール値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この演算子は、[値](#value)が 0 と等しくない場合に限り、`true` に変換できる値が返されます。 戻り値の型は、`void *` またはその他の既知のスカラー型ではなく、`bool` 型にのみ変換可能です。
+演算子に変換できる値を返します**true**場合にのみ[値](#value)0 と等しくないです。 戻り値の型にのみ変換可能**bool**ではなく、`void *`またはその他の既知のスカラー型。
 
 ## <a name="value"></a>  error_condition::value
 
@@ -296,7 +297,7 @@ value_type value() const;
 
 [value_type](#value_type) 型の格納されたエラー コード値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="value_type"></a>  error_condition::value_type
 
@@ -306,9 +307,9 @@ value_type value() const;
 typedef int value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型定義は `int` のシノニムです。
+型の定義がのシノニム**int**します。
 
 ## <a name="see-also"></a>関連項目
 

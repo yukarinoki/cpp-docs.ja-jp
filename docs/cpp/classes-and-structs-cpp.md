@@ -1,5 +1,5 @@
 ---
-title: クラスと構造体 (C++) |Microsoft ドキュメント
+title: クラスと構造体 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61348578018a5bbddcaff293fa3ed76575eb16de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88836d93d6ce3ba4dff817c7b470e87f48f61b14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954178"
 ---
 # <a name="classes-and-structs-c"></a>クラスと構造体 (C++)
 このセクションでは、C++ のクラスおよび構造体について説明します。 C++ においてこれらの 2 つのコンストラクトは、構造体では既定のアクセシビリティが "public" であるのに対してクラスでは "private" である点を除けば同じです。  
@@ -57,15 +58,15 @@ ms.lasthandoff: 05/03/2018
   
 -   [C++ ビット フィールド](../cpp/cpp-bit-fields.md)  
   
- 3 つのクラス型は、構造体、クラス、および共用体です。 使用して宣言されている、[構造体](../cpp/struct-cpp.md)、[クラス](../cpp/class-cpp.md)、および[共用体](../cpp/unions.md)キーワード (を参照してください[クラス型を定義する](http://msdn.microsoft.com/en-us/e8c65425-0f3a-4dca-afc2-418c3b1e57da))。 次の表は、3 つのクラス型の違いを示しています。  
+ 3 つのクラス型は、構造体、クラス、および共用体です。 使用して宣言されている、[構造体](../cpp/struct-cpp.md)、[クラス](../cpp/class-cpp.md)、および[共用体](../cpp/unions.md)キーワード。 次の表は、3 つのクラス型の違いを示しています。  
   
- 共用体の詳細については、次を参照してください。[共用体](../cpp/unions.md)です。 詳細については、マネージ クラスと構造体は、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)です。  
+ 共用体の詳細については、次を参照してください。[共用体](../cpp/unions.md)します。 マネージ クラスと構造体については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。  
   
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>構造体、クラス、および共用体のアクセス制御と制約  
   
-|構造体|クラス|共用体|  
+|構造体|クラス|Unions|  
 |----------------|-------------|------------|  
-|クラス キーは `struct`|クラス キーは**クラス**|クラス キーは**共用体**|  
+|クラス キーは**構造体**|クラス キーは**クラス**|クラス キーは**共用体**|  
 |既定のアクセスは public|既定のアクセスは private|既定のアクセスは public|  
 |使用制約なし|使用制約なし|同時に複数のメンバーを使用することはできない|  
   

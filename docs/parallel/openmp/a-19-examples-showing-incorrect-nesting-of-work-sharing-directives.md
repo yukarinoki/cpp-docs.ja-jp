@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691497"
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 Work-sharing ディレクティブの正しくない入れ子の例
 このセクションの例では、ディレクティブの入れ子の規則を説明します。 ディレクティブの入れ子の詳細については、次を参照してください。[セクション 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 ページにします。  

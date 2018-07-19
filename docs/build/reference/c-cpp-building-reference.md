@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375485"
 ---
 # <a name="cc-building-reference"></a>C/C++ ビルドのリファレンス
 Visual C には、C と C++ プログラムのビルドの 2 つの方法が用意されています。 最も簡単な (および最も一般的な) 方法を[Visual C 開発環境でビルド](../../ide/building-cpp-projects-in-visual-studio.md)です。 その他の方法を[コマンド ライン ツールを使用してコマンド プロンプトからビルド](../../build/building-on-the-command-line.md)です。 どちらの場合は、Visual C ソース エディターまたは任意のサード パーティ製のエディターを使用して、ソース ファイルを作成できます。  

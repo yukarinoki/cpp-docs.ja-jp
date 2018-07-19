@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247801"
 ---
 # <a name="compiler-error-c3194"></a>コンパイラ エラー C3194
 'member': 値型は、代入演算子を持つことはできません  

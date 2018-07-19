@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfa84326286b03f3ed0154138ed7f847440df284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928571"
 ---
 # <a name="ordering-items-in-the-header-control"></a>ヘッダー コントロールの項目の並べ替え
 したら[ヘッダー コントロールに項目を追加](../mfc/adding-items-to-the-header-control.md)、操作するか、次の関数では、その順序に関する情報を取得します。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
      特定のヘッダー項目のインデックス値を取得します。  
   
- 前のメンバー関数に加え、`HDS_DRAGDROP`スタイルにより、ユーザーがドラッグし、ヘッダー コントロール内のヘッダー項目をドロップします。 詳細については、次を参照してください。[ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する](../mfc/providing-drag-and-drop-support-for-header-items.md)です。  
+ に加えて、前のメンバー関数は、HDS_DRAGDROP 形式をドラッグして、ヘッダー コントロール内のヘッダー項目、ユーザーをできます。 詳細については、次を参照してください。[ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する](../mfc/providing-drag-and-drop-support-for-header-items.md)です。  
   
 ## <a name="see-also"></a>関連項目  
  [CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)

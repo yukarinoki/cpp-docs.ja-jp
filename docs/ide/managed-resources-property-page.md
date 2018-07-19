@@ -1,5 +1,5 @@
 ---
-title: マネージ リソース プロパティ ページ |Microsoft ドキュメント
+title: '[マネージド リソース] プロパティ ページ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340360"
 ---
 # <a name="managed-resources-property-page"></a>[マネージ リソース] プロパティ ページ
 リソース コンパイラの設定を有効にします。  
   
- **マネージ リソース**プロパティ ページには、次のプロパティが含まれています。  
+ **[マネージド リソース]** プロパティ ページには、以下のプロパティが含まれます。  
   
- **リソースの論理名**  
- 指定します、*論理名*の生成された中間 .resources ファイルです。 論理名は、リソースの読み込みに使用される名前です。 論理名が指定されていない場合は、リソース (.resx) ファイル名が論理名として使用されます。  
+ **リソース論理名**  
+ 生成された中間 .resources ファイルの*論理名* を指定します。 論理名は、リソースの読み込みに使用される名前です。 論理名が指定されていない場合は、リソース (.resx) ファイル名が論理名として使用されます。  
   
  **出力ファイル名**  
  リソース (.resx) ファイルによって決定する最終出力ファイルの名前を指定します。  
   
  **既定のローカライズされたリソース**  
- 特定の .resx ファイルが、既定のリソースまたはサテライト .dll に貢献するかどうかを指定します。  
+ 特定の .resx ファイルが既定のリソースまたはサテライト .dll に変更を与えるかどうかを指定します。  
   
- アクセスする方法については、**マネージ リソース**プロパティ ページを参照してください[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+ **[マネージド リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [RC (RC コマンドライン) を使用します。](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+## <a name="see-also"></a>参照  
+ [RC の使用 (RC コマンドライン)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](../build/reference/assemblyresource-embed-a-managed-resource.md)

@@ -1,5 +1,5 @@
 ---
-title: IRegistrar インターフェイス |Microsoft ドキュメント
+title: IRegistrar インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 2/1/2017
 ms.technology:
@@ -25,22 +25,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b6720ef830563e24d887071e1ee1e4a8c31df05c
+ms.sourcegitcommit: bb4488366e4581c561ca1e573a2b99b71d4c6288
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38993569"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar インターフェイス
-このインターフェイスは atliface.h で定義され、内部関数によって使用される不要メンバーなど[ため](catlmodule-class.md#updateregistryfromresourced)です。   
+このインターフェイスは atliface.h で定義され、内部的に関数によって使用される CAtlModule メンバーなど[ため](catlmodule-class.md#updateregistryfromresourced)します。   
   
 ## <a name="syntax"></a>構文  
   
 ```
 typedef interface IRegistrar IRegistrar;
 ```  
-## <a name="remarks"></a>コメント
-トピックを参照して[置き換え可能パラメーターの使用 (レジストラーのプリプロセッサ)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)詳細についてはします。  
+## <a name="remarks"></a>Remarks
+トピックを参照して[置き換え可能パラメーターの使用 (レジストラーのプリプロセッサ)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)の詳細。  
 
 ## <a name="members"></a>メンバー  
   
@@ -49,17 +50,17 @@ typedef interface IRegistrar IRegistrar;
 |名前|説明|  
 |----------|-----------------|  
 |[IRegistrar::ResourceRegisterSz](#resourceregistersz)|リソースを登録します。 |  
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| リソースの登録を解除します。|  
+|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| リソースを登録解除します。|  
 |[IRegistrar::FileRegister](#fileregister)|ファイルを登録します。|  
-|[IRegistrar::FileUnregister](#fileunregister)|ファイルの登録を解除します。|  
+|[IRegistrar::FileUnregister](#fileunregister)|ファイルを登録解除します。|  
 |[IRegistrar::StringRegister](#stringregister)|文字列を登録します。|  
 |[IRegistrar::StringUnregister](#stringunregister)|文字列の登録を解除します。|  
 |[IRegistrar::ResourceRegister](#resourceregister)|リソースを登録します。|  
-|[IRegistrar::ResourceUnregister](#resourceunregister)|リソースの登録を解除します。| 
+|[IRegistrar::ResourceUnregister](#resourceunregister)|リソースを登録解除します。| 
   
 
  
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlifase.h  
   
 ##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz 
@@ -75,7 +76,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
  
   
 ##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
- リソースの登録を解除します。
+ リソースを登録解除します。
   
 ```
 virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz( 
@@ -95,7 +96,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
   
   
 ##  <a name="fileunregister"></a>  IRegistrar::FileUnregister  
-ファイルの登録を解除します。
+ファイルを登録解除します。
 
 ```
 virtual HRESULT STDMETHODCALLTYPE FileUnregister( 
@@ -111,7 +112,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 ```  
   
 ##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
- 指定した文字列データの登録を解除します。  
+ 指定した文字列データを登録解除します。  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -131,7 +132,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
    
   
 ##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
- リソースの登録を解除します。  
+ リソースを登録解除します。  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE ResourceUnregister( 

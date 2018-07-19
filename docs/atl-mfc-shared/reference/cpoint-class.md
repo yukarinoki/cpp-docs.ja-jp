@@ -1,5 +1,5 @@
 ---
-title: CPoint クラス |Microsoft ドキュメント
+title: CPoint クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36dc82c03f13b4708d705d9fd66eff26870c8346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd7e3b405f5724abd1df5e0e8fcc35dcd2149153
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880098"
 ---
 # <a name="cpoint-class"></a>CPoint クラス
 Windows の `POINT` 構造体と同様のものです。  
@@ -48,36 +49,36 @@ class CPoint : public tagPOINT
   
 |名前|説明|  
 |----------|-----------------|  
-|[CPoint::Offset](#offset)|値を追加、 **x**と**y**のメンバー、`CPoint`です。|  
+|[CPoint::Offset](#offset)|値が追加され、`x`と`y`のメンバー、`CPoint`します。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CPoint::operator-](#operator_-)|差を返します、`CPoint`とサイズ、またはポイント、またはサイズの差 2 つのポイント、または負のサイズのオフセットの符号を反転します。|  
+|[CPoint::operator-](#operator_-)|差を返します、`CPoint`とサイズ、またはポイント、または 2 つのポイント、または負のサイズのオフセットの差をサイズの符号を反転します。|  
 |[CPoint::operator! =](#operator_neq)|2 つのポイント間の不等性を確認します。|  
-|[CPoint::operator +](#operator_add)|合計を返して、`CPoint`とサイズ、またはポイント、または`CRect`サイズによって相殺します。|  
-|[CPoint::operator + =](#operator_add_eq)|オフセット`CPoint`サイズまたはポイントを追加しています。|  
+|[CPoint::operator +](#operator_add)|合計を返して、`CPoint`とサイズ、またはポイント、または`CRect`サイズでオフセットします。|  
+|[CPoint::operator + =](#operator_add_eq)|オフセット`CPoint`サイズまたはポイントを追加します。|  
 |[CPoint::operator =](#operator_-_eq)|オフセット`CPoint`サイズまたはポイントを差し引くことで。|  
-|[CPoint::operator = =](#operator_eq_eq)|2 つのポイント間の等価性を確認します。|  
+|[CPoint::operator = =](#operator_eq_eq)|2 つのポイント間で等しいかどうかを確認します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  操作するメンバー関数も含まれています。`CPoint`と[ポイント](../../mfc/reference/point-structure1.md)構造体。  
   
- A`CPoint`オブジェクトには任意の場所に使用される、`POINT`構造体を使用します。 「サイズ」と対話するこのクラスの演算子は、両方を受け付ける[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトまたは[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)、構造体のため、2 つは互換性があります。  
+ A`CPoint`オブジェクトは任意の場所を使用、`POINT`構造体を使用します。 「サイズ」と対話するこのクラスの演算子は、両方を受け付ける[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトまたは[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)、構造体の 2 つは交換可能であるためです。  
   
 > [!NOTE]
->  このクラスから派生します`tagPOINT`構造体。 (名前`tagPOINT`の名前を使用頻度の低い、`POINT`構造です)。つまり、このデータ メンバーの`POINT`構造体、`x`と`y`のアクセス可能なデータ メンバーである`CPoint`です。  
+>  このクラスから派生、`tagPOINT`構造体。 (名前`tagPOINT`の使用頻度の低い名には、`POINT`構造です)。つまりのデータ メンバー、`POINT`構造体、`x`と`y`のアクセス可能なデータ メンバーである`CPoint`します。  
   
 > [!NOTE]
->  詳細については、ユーティリティ クラスを共有 (と同様に`CPoint`) を参照してください[共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)です。  
+>  詳細については、共有ユーティリティ クラス (など`CPoint`) を参照してください[共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `tagPOINT`  
   
  `CPoint`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atltypes.h  
   
 ##  <a name="cpoint"></a>  CPoint::CPoint
@@ -92,22 +93,22 @@ CPoint(LPARAM dwPoint) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `initX`  
+ *initX*  
  `x` の `CPoint` メンバーの値を指定します。  
   
- `initY`  
+ *initY*  
  `y` の `CPoint` メンバーの値を指定します。  
   
- `initPt`  
- [ポイント](../../mfc/reference/point-structure1.md)構造または`CPoint`初期化するために使用される値を指定する`CPoint`です。  
+ *initPt*  
+ [ポイント](../../mfc/reference/point-structure1.md)構造または`CPoint`初期化するために使用される値を指定する`CPoint`します。  
   
- `initSize`  
- [サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)初期化するために使用される値を指定する`CPoint`です。  
+ *initSize*  
+ [サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)初期化するために使用される値を指定する`CPoint`します。  
   
- `dwPoint`  
- `x` の下位ワードに `dwPoint` メンバー、`y` の上位ワードに `dwPoint` メンバーを設定します。  
+ *dwPoint*  
+ セット、`x`メンバーの下位ワードを*dwPoint*と`y`メンバーの上位ワードを*dwPoint*します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  引数を指定しない場合、`x` メンバーおよび `y` メンバーは 0 に設定されます。  
   
 ### <a name="example"></a>例  
@@ -138,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
 ##  <a name="offset"></a>  CPoint::Offset  
- 値を追加、 **x**と**y**のメンバー、`CPoint`です。  
+ 値が追加され、`x`と`y`のメンバー、`CPoint`します。  
   
 ```  
 void Offset(int xOffset, int yOffset) throw();
@@ -148,29 +149,29 @@ void Offset(SIZE size) throw();
   
 ### <a name="parameters"></a>パラメーター  
  *x オフセット*  
- オフセットの量を指定します、 **x**のメンバー、`CPoint`です。  
+ オフセットする量を指定します、`x`のメンバー、`CPoint`します。  
   
  *y オフセット*  
- オフセットの量を指定します、 **y**のメンバー、`CPoint`です。  
+ オフセットする量を指定します、`y`のメンバー、`CPoint`します。  
   
- `point`  
- 量を指定します ([ポイント](../../mfc/reference/point-structure1.md)または`CPoint`) のオフセット、`CPoint`です。  
+ *ポイント*  
+ 量を指定します ([ポイント](../../mfc/reference/point-structure1.md)または`CPoint`) オフセット、`CPoint`します。  
   
- `size`  
- 量を指定します ([サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](../../atl-mfc-shared/reference/csize-class.md)) のオフセット、`CPoint`です。  
+ *size*  
+ 量を指定します ([サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](../../atl-mfc-shared/reference/csize-class.md)) オフセット、`CPoint`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
   
 ##  <a name="operator_eq_eq"></a>  CPoint::operator = =  
- 2 つのポイント間の等価性を確認します。  
+ 2 つのポイント間で等しいかどうかを確認します。  
   
 ```  
 BOOL operator==(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または`CPoint`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
@@ -187,17 +188,17 @@ BOOL operator!=(POINT point) const throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または`CPoint`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- ポイントが等しくない場合は 0 以外。それ以外の場合 0 を返します。  
+ 点が等しくない場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
 ##  <a name="operator_add_eq"></a>  CPoint::operator + =  
- 最初のオーバー ロードを追加するサイズ、`CPoint`です。  
+ 最初のオーバー ロードを追加するサイズ、`CPoint`します。  
   
 ```  
 void operator+=(SIZE size) throw(); 
@@ -205,24 +206,24 @@ void operator+=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  含まれています、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
- `point`  
+ *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 2 番目のオーバー ロードするポイントを追加する、`CPoint`です。  
+### <a name="remarks"></a>Remarks  
+ 2 番目のオーバー ロードするポイントを追加します、`CPoint`します。  
   
- 追加することでどちらの場合も、加算が行われます、 **x** (または**cx**) を右辺のオペランドのメンバー、 **x**のメンバー、`CPoint`を追加して、 **y** (または**cy**) を右辺のオペランドのメンバー、 **y**のメンバー、`CPoint`です。  
+ どちらの場合も、追加することで加算を実行、 `x` (または`cx`) 右側のオペランドのメンバー、`x`のメンバー、`CPoint`を追加して、 `y` (または`cy`) 右側のオペランドのメンバー、`y`のメンバー、`CPoint`します。  
   
- たとえば、追加する`CPoint(5, -7)`を含む変数を`CPoint(30, 40)`に変数が変更される`CPoint(35, 33)`です。  
+ たとえば、追加`CPoint(5, -7)`を含む変数を`CPoint(30, 40)`に変数を変更`CPoint(35, 33)`。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
   
 ##  <a name="operator_-_eq"></a>  CPoint::operator =  
- 最初のオーバー ロードからサイズを減算し、`CPoint`です。  
+ 最初のオーバー ロードからサイズを減算する、`CPoint`します。  
   
 ```  
 void operator-=(SIZE size) throw(); 
@@ -230,24 +231,24 @@ void operator-=(POINT point) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  含まれています、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
- `point`  
+ *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 2 番目のオーバー ロードは、減算、ポイントから、`CPoint`です。  
+### <a name="remarks"></a>Remarks  
+ 2 番目のオーバー ロードからポイントを減算する、`CPoint`します。  
   
- どちらの場合は、減算は減算することによって行われます、 **x** (または**cx**) から右のオペランドのメンバー、 **x**のメンバー、 `CPoint` を差し引く**y** (または**cy**) から右のオペランドのメンバー、 **y**のメンバー、`CPoint`です。  
+ どちらの場合も、減算することで減算を実行、 `x` (または`cx`) から右のオペランドのメンバー、`x`のメンバー、`CPoint`引いて、 `y` (または`cy`)、右側のメンバーオペランド、`y`のメンバー、`CPoint`します。  
   
- たとえば、減算`CPoint(5, -7)`を含む変数から`CPoint(30, 40)`に変数が変更される`CPoint(25, 47)`です。  
+ たとえば、減算`CPoint(5, -7)`を含む変数から`CPoint(30, 40)`に変数を変更`CPoint(25, 47)`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
 ##  <a name="operator_add"></a>  CPoint::operator +  
- この演算子のオフセットを使用して`CPoint`によって、`CPoint`または`CSize`オブジェクト、またはオフセット、`CRect`によって、`CPoint`です。  
+ この演算子を使用して、短縮する`CPoint`によって、`CPoint`または`CSize`オブジェクト、またはオフセット、`CRect`によって、 `CPoint`。  
   
 ```  
 CPoint operator+(SIZE size) const throw();
@@ -256,28 +257,28 @@ CRect operator+(const RECT* lpRect) const throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  含まれています、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
- `point`  
+ *ポイント*  
  含まれています、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
   
- `lpRect`  
+ *lpRect*  
  ポインターが含まれています、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- A `CPoint` 、サイズをオフセットする、 **CPoint** 、点をオフセットする、または**CRect**点をオフセットします。  
+ A`CPoint`サイズでのオフセットを`CPoint`段階では、オフセットまたは`CRect`ポイントによってオフセットします。  
   
-### <a name="remarks"></a>コメント  
- たとえば、最初の 2 つのオーバー ロードのいずれかの点をオフセットするを使用して`CPoint(25, -19)`ポイントによって`CPoint(15, 5)`またはサイズ`CSize(15, 5)`値を返します`CPoint(40, -14)`です。  
+### <a name="remarks"></a>Remarks  
+ たとえば、最初の 2 つのオーバー ロードのいずれかの点をオフセットするを使用して`CPoint(25, -19)`ポイントによって`CPoint(15, 5)`サイズまたは`CSize(15, 5)`値を返します`CPoint(40, -14)`します。  
   
- 後でオフセットされている四角形を返します、ポイントに四角形を追加する、 **x**と**y**ポイントで指定された値。 たとえば、四角形をオフセットする最後のオーバー ロードを使用して`CRect(125, 219, 325, 419)`ポイントによって`CPoint(25, -19)`返します`CRect(150, 200, 350, 400)`です。  
+ 後で相殺される四角形を返しますポイントに四角形の追加、`x`と`y`ポイントで指定された値。 たとえば、四角形をオフセットする最後のオーバー ロードを使用して`CRect(125, 219, 325, 419)`ポイントによって`CPoint(25, -19)`返します`CRect(150, 200, 350, 400)`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
 ##  <a name="operator_-"></a>  CPoint::operator-  
- 減算する最初の 2 つのオーバー ロードのいずれかを使用して、`CPoint`または`CSize`オブジェクトから`CPoint`です。  
+ 減算する最初の 2 つのオーバー ロードのいずれかを使用して、`CPoint`または`CSize`オブジェクトから`CPoint`します。  
   
 ```  
 CSize operator-(POINT point) const throw();
@@ -287,28 +288,28 @@ CPoint operator-() const throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  A[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。  
   
- `size`  
+ *size*  
  A[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。  
   
- `lpRect`  
- ポインター、 [RECT](../../mfc/reference/rect-structure1.md)構造体、または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。  
+ *lpRect*  
+ ポインターを[RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- A `CSize` 2 つのポイント間の違いは、 `CPoint` 、サイズの否定をオフセットする、 `CRect` 、ポイントの否定をオフセットするまたは`CPoint`は、ポイントの符号を反転します。  
+ A `CSize` 2 つのポイント間の違いは、`CPoint`オフセット、サイズの符号を反転して、 `CRect` 、ポイントの否定でのオフセットまたは`CPoint`ポイントの否定は。  
   
-### <a name="remarks"></a>コメント  
- 3 番目のオーバー ロードのオフセット、`CRect`の符号を反転して`CPoint`です。 符号反転する単項演算子を使用して最後に、`CPoint`です。  
+### <a name="remarks"></a>Remarks  
+ 3 番目のオーバー ロードのオフセットを`CRect`の否定で`CPoint`します。 最後に、否定する単項演算子を使用して`CPoint`します。  
   
- たとえば、2 つのポイント間の違いを検索する最初のオーバー ロードを使用して`CPoint(25, -19)`と`CPoint(15, 5)`返します`CSize(10, -24)`です。  
+ たとえば、最初のオーバー ロードを使用して、2 つの点の差を求める`CPoint(25, -19)`と`CPoint(15, 5)`返します`CSize(10, -24)`します。  
   
- 減算、`CSize`から`CPoint`上と同じ計算が返されます、`CPoint`オブジェクトは、`CSize`オブジェクト。 たとえば、2 番目のオーバー ロードを使用して、ポイント間の違いを検索する`CPoint(25, -19)`およびサイズ`CSize(15, 5)`返します`CPoint(10, -24)`です。  
+ 減算、`CSize`から`CPoint`は上記と同じ計算が返されます、`CPoint`オブジェクトは、`CSize`オブジェクト。 たとえば、2 番目のオーバー ロードを使用して、ポイント間の差を検索する`CPoint(25, -19)`とサイズ`CSize(15, 5)`返します`CPoint(10, -24)`します。  
   
- 符号を反転して四角形のオフセットを返します点から四角形を引いて、 **x**と**y**ポイントで指定された値。 たとえば、四角形をオフセットする最後のオーバー ロードを使用して`CRect(125, 200, 325, 400)`ポイントによって`CPoint(25, -19)`返します`CRect(100, 219, 300, 419)`です。  
+ 符号を反転して四角形のオフセットを返しますポイントから四角形を引いて、`x`と`y`ポイントで指定された値。 たとえば、四角形をオフセットする最後のオーバー ロードを使用して`CRect(125, 200, 325, 400)`ポイントによって`CPoint(25, -19)`返します`CRect(100, 219, 300, 419)`します。  
   
- ポイントを無効にするのにには、単項演算子を使用します。 たとえば、単項演算子を使用して、ポイントと`CPoint(25, -19)`返します`CPoint(-25, 19)`です。  
+ ポイントを否定するのに単項演算子を使用します。 たとえば、ポイントと単項演算子を使用して`CPoint(25, -19)`返します`CPoint(-25, 19)`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]  

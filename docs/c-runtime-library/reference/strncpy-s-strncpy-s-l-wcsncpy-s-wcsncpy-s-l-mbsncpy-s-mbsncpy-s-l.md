@@ -60,6 +60,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418212"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
@@ -183,7 +184,7 @@ errno_t _mbsncpy_s_l(
 
 ## <a name="remarks"></a>コメント
 
-これらの関数が、最初にコピーしようとしています*D*の文字*strSource*に*追加される文字*ここで、 *D*の小さい方が*数。*の長さと*strSource*です。 場合、それら*D*内に収まる文字*追加される文字*(を指定すると*numberOfElements*) し、それらの文字をコピーし、引き続き null 終端記号を余裕を確保します。終端の null が追加されます。それ以外の場合、*追加される文字*[0] 設定は、null 文字、および無効なパラメーター ハンドラーが呼び出されます、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+これらの関数が、最初にコピーしようとしています*D*の文字*strSource*に*追加される文字*ここで、 *D*の小さい方が*数。* の長さと*strSource*です。 場合、それら*D*内に収まる文字*追加される文字*(を指定すると*numberOfElements*) し、それらの文字をコピーし、引き続き null 終端記号を余裕を確保します。終端の null が追加されます。それ以外の場合、*追加される文字*[0] 設定は、null 文字、および無効なパラメーター ハンドラーが呼び出されます、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 
 これには例外があります。 場合*カウント*は **_TRUNCATE**、できるだけ多くの*strSource*に収まる*追加される文字*用の領域を残してコピーは、追加される常に null を終了しています。
 

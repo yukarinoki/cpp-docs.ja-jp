@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fc8fb21afe1f024e4e5418d3cc706f654946de6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e49fcc87c4c074494164a085e01581077bbfe118
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953863"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -82,13 +83,17 @@ void swap (
 
 ### <a name="parameters"></a>パラメーター
 
-ベクトルに格納されたデータの種類のテンプレート パラメーターを入力します。
+*Type*  
+ ベクター内に格納されるデータ型に対するテンプレート パラメーター。
 
-アロケーターのメモリの割り当てと解放を担当する格納されたアロケーター オブジェクト、テンプレート パラメーター。
+*アロケーター*  
+ メモリの割り当てと解放を担当する格納されたアロケーター オブジェクトのテンプレート パラメーター。
 
-`left` 比較演算の最初の (左) ベクター
+*left*  
+ 比較演算の最初の (左辺の) ベクター
 
-`right` 比較操作での (右) の 2 番目のベクトル。
+*right*  
+ 比較演算の 2 つ目の (右辺の) ベクター。
 
 ### <a name="operators"></a>演算子
 
@@ -113,7 +118,7 @@ void swap (
 |-|-|
 |[vector\<bool> クラス](../standard-library/vector-bool-class.md)|テンプレート クラス vector を型 `bool` の要素に対して完全に特殊化したもので、基になる型のアロケーターを特殊化で使用します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<vector>
 

@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecde11ddb55992032b2a8b052e2897a384293bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b6b07040fbece5fae24fb2ca6be8985695eb0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950538"
 ---
 # <a name="using-an-animation-control"></a>アニメーション コントロールの使い方
 アニメーション コントロールの一般的な使用方法は、次のパターンを次に示します。  
@@ -29,11 +30,11 @@ ms.lasthandoff: 05/04/2018
   
 -   アニメーション コントロールに呼び出すことによって、AVI クリップを読み込む、[開く](../mfc/reference/canimatectrl-class.md#open)メンバー関数。 アニメーション コントロールがダイアログ ボックス内にある場合は、これを行うことをおすすめはダイアログ クラスの[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)関数。  
   
--   呼び出して、クリップの再生、[再生](../mfc/reference/canimatectrl-class.md#play)メンバー関数。 アニメーション コントロールがダイアログ ボックス内にある場合は、これを行うことをおすすめはダイアログ クラスの**OnInitDialog**関数。 呼び出す**再生**アニメーション コントロールがある場合は必要ありません、`ACS_AUTOPLAY`セットのスタイルを設定します。  
+-   呼び出して、クリップの再生、[再生](../mfc/reference/canimatectrl-class.md#play)メンバー関数。 アニメーション コントロールがダイアログ ボックス内にある場合は、これを行うことをおすすめはダイアログ クラスの`OnInitDialog`関数。 呼び出す`Play`アニメーション コントロールに ACS_AUTOPLAY のスタイル セットがある場合は必要ありません。  
   
 -   クリップの部分を表示またはフレームごとの使用を再生する場合、`Seek`メンバー関数。 停止するには、クリップの再生を使用して、`Stop`メンバー関数。  
   
--   コントロールの破棄をすぐに行わない場合、クリップをメモリから削除を呼び出して、**閉じる**メンバー関数。  
+-   コントロールの破棄をすぐに行わない場合、クリップをメモリから削除を呼び出して、`Close`メンバー関数。  
   
 -   アニメーション コントロールがダイアログ ボックスでは、場合、および`CAnimateCtrl`オブジェクトは自動的に破棄されます。 かどうか、する必要はありません、両方のコントロールをことを確認して、`CAnimateCtrl`オブジェクトが破棄されました。 コントロールを自動的に破棄するには、AVI クリップが閉じられます。  
   

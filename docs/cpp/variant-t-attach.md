@@ -1,5 +1,5 @@
 ---
-title: _variant_t::Attach |Microsoft ドキュメント
+title: _variant_t::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93c4ec0b4d25f1ca0ec03d9aae1dd9e1c16b79a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42c275d085434cc8077a0629429c7c0e1cbbfcc3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943789"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Microsoft 固有の仕様**  
   
- アタッチ、**バリアント**オブジェクトに、`_variant_t`オブジェクト。  
+ アタッチを`VARIANT`オブジェクトを`_variant_t`オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
   
-      void Attach(  
-   VARIANT& varSrc   
-);  
+void Attach(VARIANT& varSrc);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  *varSrc*  
- A**バリアント**オブジェクトにアタッチされる`_variant_t`オブジェクト。  
+ A`VARIANT`オブジェクトにアタッチされる`_variant_t`オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 所有権を取得、**バリアント**によってカプセル化しています。 このメンバー関数は、既存のカプセル化を解放**バリアント**、指定されたコピー**バリアント**、設定とその**VARTYPE**に`VT_EMPTY`を確認する、リソースを解放することができますのみ、`_variant_t`デストラクターです。  
+## <a name="remarks"></a>Remarks  
+ 所有権を取得、`VARIANT`によってカプセル化しています。 このメンバー関数は、既存のカプセル化を解放`VARIANT`、コピーし、指定された`VARIANT`、設定とその`VARTYPE`VT_EMPTY を確認するにそのリソースのみ解放できますが、`_variant_t`デストラクター。  
   
  **Microsoft 固有の仕様はここまで**  
   

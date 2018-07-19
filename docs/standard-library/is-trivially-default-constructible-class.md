@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2bd65fa7145325fd4c5c2f1a2483851d0738b7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aa7b831790804005f0649dbae0dbb98df5121106
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954735"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible クラス
 
@@ -35,27 +36,27 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` が自明なコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*が自明なコンス トラクター、それ以外の場合は false を保持するクラスです。
 
-クラス `Ty` の既定コンストラクターが自明であるのは、以下の場合です。
+クラスの既定のコンス トラクター *Ty*は簡単では場合。
 
 - 暗黙的に宣言された既定のコンス トラクターである
 
-- クラス `Ty` に仮想関数がない
+- クラスは、 *Ty*仮想関数がありません
 
-- クラス `Ty` に仮想基底がない
+- クラスは、 *Ty*仮想基底クラスがありません
 
-- クラス `Ty` のすべての直接基底に自明なコンストラクターがある
+- すべての直接の基底クラスの*Ty*自明なコンス トラクターがあります。
 
 - クラス型のすべての非静的データ メンバーのクラスに自明なコンストラクターがある
 
 - クラスの型配列のすべての非静的データ メンバーのクラスに自明なコンストラクターがある
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

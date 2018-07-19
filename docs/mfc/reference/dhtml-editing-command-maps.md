@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69630d00b09534d97d5e46a8400b73f0e9d85b24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1d040f3cb4c9bf8e1f3afc0e8213cd4513fc8571
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123371"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 DHTML 編集コマンドをマップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 それらの使用例は、次を参照してください。 [HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
@@ -41,10 +42,10 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `className`  
+ *クラス名*  
  クラスの名前。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このマクロの定義で使用するのには、 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。  
   
  使用して[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)マップを実装します。  
@@ -52,7 +53,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxhtml.h  
   
 ##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP  
@@ -63,15 +64,15 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `className`  
+ *クラス名*  
  DHTML 編集コマンド マップを含むクラスの名前です。 このクラスから直接または間接的を派生する必要があります[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)を含めると、 [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)そのクラス定義内でのマクロです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  DHTML 編集コマンド マップは、ユーザー インターフェイスのコマンドを HTML の編集コマンドにマップするクラスに追加します。  
   
- 場所、`BEGIN_DHTMLEDITING_CMDMAP`クラスの実装 (.cpp) ファイル内のマクロが続く[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)にマップするクラスは、コマンドのマクロ (からの変更など、 **ID_EDIT_CUT** に**IDM_CUT**)。 使用して、 [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)マクロ イベント マップの終わりをマークします。  
+ BEGIN_DHTMLEDITING_CMDMAP マクロに続く、クラスの実装 (.cpp) ファイルに配置[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) (たとえば、IDM_CUT に ID_EDIT_CUT) からマップするクラスは、コマンドのマクロです。 使用して、 [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)マクロ イベント マップの終わりをマークします。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxhtml.h  
   
 ##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP  
@@ -81,13 +82,13 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 END_DHTMLEDITING_CMDMAP()   
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  組み合わせて使用して[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)です。  
   
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxhtml.h  
   
 ##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY  
@@ -98,16 +99,16 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
- コマンド ID (など**ID_EDIT_COPY**)。  
+ *cmdID*  
+ ID_EDIT_COPY) などのコマンド ID。  
   
- `dhtmlcmdID`  
- 編集コマンドを HTML`cmdID`マップ (など**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ 編集コマンドを HTML *cmdID* (IDM_COPY) などにマップします。  
   
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxhtml.h  
   
 ##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC  
@@ -118,19 +119,19 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
- コマンド ID (など**ID_EDIT_COPY**)。  
+ *cmdID*  
+ ID_EDIT_COPY) などのコマンド ID。  
   
- `dhtmlcmdID`  
- 編集コマンドを HTML`cmdID`マップ (など**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ 編集コマンドを HTML *cmdID* (IDM_COPY) などにマップします。  
   
- `member_func_name`  
+ *member_func_name*  
  コマンドがマップされているメッセージ ハンドラー関数の名前。  
   
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxhtml.h  
   
 ##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE  
@@ -141,19 +142,19 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
- コマンド ID (など**ID_EDIT_COPY**)。  
+ *cmdID*  
+ ID_EDIT_COPY) などのコマンド ID。  
   
- `dhtmlcmdID`  
- 編集コマンドを HTML`cmdID`マップ (など**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ 編集コマンドを HTML *cmdID* (IDM_COPY) などにマップします。  
   
- `elemType`  
- ユーザー インターフェイス要素の型です。いずれかの**AFX_UI_ELEMTYPE_NORMAL**、 **AFX_UI_ELEMTYPE_CHECKBOX**、または**AFX_UI_ELEMTYPE_RADIO**です。  
+ *elemType*  
+ ユーザー インターフェイス要素の型です。AFX_UI_ELEMTYPE_NORMAL、AFX_UI_ELEMTYPE_CHECKBOX、AFX_UI_ELEMTYPE_RADIO のいずれか。  
   
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxhtml.h  
   
 ##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE  
@@ -164,22 +165,22 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
- コマンド ID (など**ID_EDIT_COPY**)。  
+ *cmdID*  
+ ID_EDIT_COPY) などのコマンド ID。  
   
- `dhtmlcmdID`  
- 編集コマンドを HTML`cmdID`マップ (など**IDM_COPY**)。  
+ *dhtmlcmdID*  
+ 編集コマンドを HTML *cmdID* (IDM_COPY) などにマップします。  
   
- `member_func_name`  
+ *member_func_name*  
  コマンドがマップされているメッセージ ハンドラー関数の名前。  
   
- `elemType`  
- ユーザー インターフェイス要素の型です。いずれかの**AFX_UI_ELEMTYPE_NORMAL**、 **AFX_UI_ELEMTYPE_CHECKBOX**、または**AFX_UI_ELEMTYPE_RADIO**です。  
+ *elemType*  
+ ユーザー インターフェイス要素の型です。AFX_UI_ELEMTYPE_NORMAL、AFX_UI_ELEMTYPE_CHECKBOX、AFX_UI_ELEMTYPE_RADIO のいずれか。  
   
 ### <a name="example"></a>例  
  参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)です。  
 
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxhtml.h  
     
 ## <a name="see-also"></a>関連項目  

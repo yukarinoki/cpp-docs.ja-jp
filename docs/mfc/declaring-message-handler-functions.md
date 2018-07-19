@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341711"
 ---
 # <a name="declaring-message-handler-functions"></a>メッセージ ハンドラー関数の宣言
 特定の規則と規約は、メッセージ ハンドラー関数の名前を制御します。 これは、プロセスは、次のトピックの説明に従ってメッセージの種類とは異なります。  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378146"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze (言語拡張機能の無効化)
 **/Za**コンパイラ オプションは、ANSI C89 または ISO C 11 と互換性がない言語構成要素のエラーを出力します。 **/Ze**コンパイラ オプションは、既定では、Microsoft 拡張機能を有効にします。  

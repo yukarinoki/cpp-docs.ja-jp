@@ -1,5 +1,5 @@
 ---
-title: _ _interface |Microsoft ドキュメント
+title: _ _interface |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea8f2585a1e385795a42c745aa95e180c6bb352
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03964b224603d86064290aa68344c828c2630a17
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943535"
 ---
 # <a name="interface"></a>__interface
 **Microsoft 固有の仕様**  
@@ -43,36 +44,35 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-modifier  
- __interface interface-name {interface-definition};  
+modifier __interface interface-name {interface-definition};  
 ```  
   
-## <a name="remarks"></a>コメント  
- C++[クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)これらの規則に、実装する可能性がありますが、`__interface`はこれらを強制します。  
+## <a name="remarks"></a>Remarks  
+ C++[クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)これらの規則を実装できますが、 **_ _interface**それらを適用します。  
   
  次にインターフェイスの定義例を示します。  
   
-```  
+```cpp 
 __interface IMyInterface {  
    HRESULT CommitX();  
    HRESULT get_X(BSTR* pbstrName);  
 };  
 ```  
   
- 詳細については、マネージ インターフェイスは、次を参照してください。[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)です。  
+ マネージ インターフェイスについては、次を参照してください。[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)します。  
   
  `CommitX` 関数と `get_X` 関数が純粋仮想関数であることを明示的に示す必要がないことに注意してください。 最初の関数の同等の宣言は次のとおりです。  
   
-```  
+```cpp 
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` 意味、 [novtable](../cpp/novtable.md) `__declspec`修飾子です。  
+ **_ _interface**意味、 [novtable](../cpp/novtable.md) **_ _declspec**修飾子。  
   
 ## <a name="example"></a>例  
  次の例では、インターフェイスで宣言されたプロパティを使用する方法を示します。  
   
-```  
+```cpp 
 // deriv_interface.cpp  
 #define _ATL_ATTRIBUTES 1  
 #include <atlbase.h>  

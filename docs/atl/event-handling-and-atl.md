@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354933"
 ---
 # <a name="event-handling-and-atl"></a>イベント処理と ATL
 このセクションでは、ATL を使用してイベントをシンクする方法を示しています。 COM イベント処理の基本原則と ATL で提供されるサポートを使用してイベントをシンクの仕様に対応します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316895"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>リンカー ツールの警告 LNK4254
 セクション '「section1」' (オフセット) が 'セクション 2' にマージ異なる属性を持つ (オフセット)  

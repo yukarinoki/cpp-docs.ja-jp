@@ -26,11 +26,12 @@ helpviewer_keywords:
 - std::mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e7220d2710465dc8d155cf35ec7d47db4e3c08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 84a6b685501927d9fbd79fa7c82a90c5671f70b2
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958946"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex クラス (C++ 標準ライブラリ)
 
@@ -60,9 +61,9 @@ class mutex;
 |[try_lock](#try_lock)|ブロックせずに `mutex` の所有権を取得しようとします。|
 |[unlock](#unlock)|`mutex` の所有権を解放します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ミュー テックス >
+**ヘッダー:** \<mutex >
 
 **名前空間:** std
 
@@ -74,7 +75,7 @@ class mutex;
 void lock();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 呼び出しスレッドが既に `mutex` を所有している場合の動作は未定義です。
 
@@ -94,7 +95,7 @@ constexpr mutex() noexcept;
 ~mutex();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 デストラクターの実行時にオブジェクトがロックされる場合の動作は未定義です。
 
@@ -120,9 +121,9 @@ bool try_lock();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが `true` の所有権の取得に成功した場合は `mutex` を返します。それ以外の場合は `false` を返します。
+**true**メソッドの所有権を正常に取得した場合、 `mutex`、それ以外の**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 呼び出しスレッドが既に `mutex` を所有している場合の動作は未定義です。
 
@@ -134,7 +135,7 @@ bool try_lock();
 void unlock();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 呼び出しスレッドが `mutex` を所有していない場合の動作は未定義です。
 

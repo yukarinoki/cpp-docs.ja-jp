@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855384"
 ---
 # <a name="changing-unassigned-symbols"></a>未使用のシンボルの変更
 [リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)、編集またはリソースまたはオブジェクトに既に割り当てられていない既存のシンボルを削除することができます。  

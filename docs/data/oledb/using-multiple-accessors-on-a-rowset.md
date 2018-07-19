@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111316"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>行セットでの複数アクセサーの使用
 複数のアクセサーを使用する必要がある 3 つの基本的なシナリオはあります。  

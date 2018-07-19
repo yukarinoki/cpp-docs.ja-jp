@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251076"
 ---
 # <a name="compiler-error-c3095"></a>コンパイラ エラー C3095
 'attribute': 属性を繰り返して使用できません  

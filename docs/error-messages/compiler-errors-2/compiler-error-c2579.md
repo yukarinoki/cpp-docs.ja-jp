@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227307"
 ---
 # <a name="compiler-error-c2579"></a>コンパイラ エラー C2579
 型 'type' (オフセット) を解決できません。 ファイル内と想定されます。  

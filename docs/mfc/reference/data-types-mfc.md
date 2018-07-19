@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d098a88e57ecbbedfde1a4674a915e13c28ab435
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121015"
 ---
 # <a name="data-types-mfc"></a>データ型 (MFC)
 このトピックでは、Microsoft Foundation Class ライブラリで最もよく使用されるデータ型を示します。 データ型のほとんどは、他のユーザーは MFC 固有プラットフォーム ソフトウェア開発キット (SDK) のと同じです。  
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/04/2018
   
  Microsoft Foundation Class ライブラリに固有のデータ型を以下に示します。  
   
--   **位置**値をコレクション内の要素の位置を示すために使用する以外の場合は MFC コレクション クラスで使用します。  
+-   コレクションの要素の位置を示すために使用される値を配置します。MFC コレクション クラスによって使用されます。  
   
--   **LPCRECT**定数 (不変) を 32 ビット ポインター`RECT`構造体。  
+-   定数 (不変) を 32 ビット ポインターを LPCRECT`RECT`構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../mfc/class-library-overview.md)   

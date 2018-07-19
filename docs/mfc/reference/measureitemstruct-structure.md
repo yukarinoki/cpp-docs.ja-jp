@@ -1,5 +1,5 @@
 ---
-title: MEASUREITEMSTRUCT 構造体 |Microsoft ドキュメント
+title: MEASUREITEMSTRUCT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336960"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 構造体
-`MEASUREITEMSTRUCT`構造オーナー描画コントロールまたはメニュー項目のサイズのウィンドウに通知します。  
+`MEASUREITEMSTRUCT`構造オーナー描画コントロールまたはメニュー項目のサイズの Windows に通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,28 +40,28 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `CtlType`  
+ *CtlType*  
  コントロールの種類が含まれています。 コントロール型の値は次のとおりです。  
   
-- **ODT_COMBOBOX**オーナー描画コンボ ボックス  
+- ODT_COMBOBOX オーナー描画コンボ ボックス  
   
-- **ODT_LISTBOX**オーナー描画リスト ボックス  
+- ODT_LISTBOX オーナー描画リスト ボックス  
   
-- **ODT_MENU**オーナー描画メニュー  
+- ODT_MENU オーナー描画メニュー  
   
- `CtlID`  
- コンボ ボックス、リスト ボックスまたはボタンのコントロール ID が含まれています。 このメンバーは、メニューには使用されません。  
+ *CtlID*  
+ コンボ ボックス、リスト ボックス、またはボタンのコントロール ID が含まれています。 このメンバーは、メニューには使用されません。  
   
- `itemID`  
- メニューのメニュー項目の ID または可変高コンボ ボックスまたはリスト ボックスのリスト ボックス項目 ID が含まれています。 このメンバーは、高さ固定のコンボ ボックスまたはリスト ボックスやボタンは使用されません。  
+ *アイテム Id*  
+ メニューのメニュー項目の ID または可変高ボックスまたはリスト ボックスのリスト ボックス項目 ID が含まれています。 このメンバーは、固定サイズのコンボ ボックスまたはリスト ボックスまたはボタンは使用されません。  
   
  *itemWidth*  
- メニュー項目の幅を指定します。 オーナー描画メニュー項目の所有者は、返されるメッセージの前に、このメンバーを読み込む必要があります。  
+ メニュー項目の幅を指定します。 オーナー描画メニュー項目の所有者は、メッセージから返す前に、このメンバーを入力する必要があります。  
   
  *itemHeight*  
- リスト ボックスまたはメニューで、個々 の項目の高さを指定します。 メッセージをオーナー描画コンボ ボックスの所有者を返す前にリスト ボックス、またはメニュー項目を入力するこのメンバー。 リスト ボックス項目の高さの最大値は 255 です。  
+ リスト ボックスまたはメニューで、個々 の項目の高さを指定します。 メッセージをオーナー描画コンボ ボックスの所有者を返す前に、リスト ボックス、またはメニュー項目がこのメンバーを入力する必要があります。 リスト ボックス アイテムの高さの最大値は、255 です。  
   
- `itemData`  
+ *取得*  
  コンボ ボックスまたはリスト ボックスでは、次のいずれかによってリスト ボックスに渡された値がメンバーに含まれています。  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -79,9 +80,9 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- これにより、Windows がコントロールでのユーザー操作を正しく処理できます。 適切なメンバーに記入エラー、`MEASUREITEMSTRUCT`構造体には、コントロールの不適切な操作が発生します。  
+ これにより、Windows コントロールにユーザーの操作を正しく処理できます。 障害に適切なメンバーの入力を`MEASUREITEMSTRUCT`構造体には、コントロールの不適切な操作が発生します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** winuser.h  
   
 ## <a name="see-also"></a>関連項目  

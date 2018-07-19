@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881170"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>オブジェクト演算子 (^) へのハンドル (C++ コンポーネント拡張)
 *ハンドル宣言子*(`^`、「ハット」と発音)、型を変更[指定子](../cpp/overview-of-declarators.md)という意味では、宣言されたオブジェクトが自動的に削除されるとき、システム オブジェクトあると判断するにはアクセス不可能になっています。  

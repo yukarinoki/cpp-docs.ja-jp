@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354793"
 ---
 # <a name="atl-services"></a>ATL サービス
 サービスで実行されるように、ATL COM オブジェクトを作成するには、ATL プロジェクト ウィザードでのサーバー オプションの一覧からサービス (EXE) を選択します。 ウィザードはから派生するクラスを作成し、`CAtlServiceModuleT`してサービスを実装します。  

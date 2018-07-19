@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037371"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel クラス
 クリックしたときに表示されるリボン パネルを実装、 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)です。  
@@ -62,7 +63,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 |[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|リボンのメイン パネルの領域を表す四角形を返します。|  
 |`CMFCRibbonMainPanel::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  フレームワークは、表示、`CMFCRibbonMainPanel`アプリケーションのパネルを開くとします。 3 つのペインが含まれています。  
   
 -   左側のウィンドウには、コマンドに関連付けられているファイルなどが含まれています。**開く**、**保存**、**印刷**、および**閉じる**です。 このウィンドウにコマンドを追加するには、呼び出す[CMFCRibbonMainPanel::Add](#add)です。  
@@ -78,7 +79,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
   
  [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxRibbonMainPanel.h  
   
 ##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
@@ -89,10 +90,10 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in][out] `pElem`  
+ [in][out]*pElem*  
  メイン パネルに追加するリボン要素へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  パネルにリボン要素を追加します。 このメソッドを使用して追加された要素は、メイン パネルの左側の列に格納されます。  
   
 ##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
@@ -105,13 +106,13 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszLabel`  
+ *lpszLabel*  
  最近使ったファイルの一覧に追加する文字列を指定します。  
   
- `nWidth`  
+ *nWidth*  
  最近使ったファイルの一覧 パネルのピクセル単位の幅を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom  
  アプリケーションのリボン パネルの下のウィンドウにリボン要素を追加します。  
@@ -121,10 +122,10 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in][out] `pElem`  
+ [in][out]*pElem*  
  メイン パネルの下に追加するリボン要素へのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight  
  アプリケーション ボタン パネルの右側のウィンドウにリボン要素を追加します。  
@@ -136,13 +137,13 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pElem`  
+ *pElem*  
  メイン パネルの右側に追加するリボン要素へのポインター。  
   
- `nWidth`  
+ *nWidth*  
  右側のパネルのピクセル単位の幅を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  右側のパネルをリボン要素を追加するのにには、この関数を使用します。 右側のパネルには、最近使ったファイル で、通常が表示されますが、リボンの要素を追加することができます。  
   
 ##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  

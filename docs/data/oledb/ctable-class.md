@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100146"
 ---
 # <a name="ctable-class"></a>CTable クラス
 (パラメーターなしのいずれかの) 単純な行セットに直接アクセスするための手段を提供します。  

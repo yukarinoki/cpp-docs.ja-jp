@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351365"
 ---
 # <a name="how-to-customize-the-application-button"></a>方法: アプリケーション ボタンをカスタマイズする
 アプリケーション ボタンをクリックすると、コマンドのメニューが表示されます。 通常、メニューに含まれるファイルに関連するコマンドなど**開く**、**保存**、**印刷**、および**終了**です。  

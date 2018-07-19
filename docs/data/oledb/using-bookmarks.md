@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104488"
 ---
 # <a name="using-bookmarks"></a>ブックマークの使用
 行セットを開く前に、ブックマークを使用することをプロバイダーに指示する必要があります。 これを行うには、次のように設定します。、 **DBPROP_BOOKMARKS**プロパティを**true**プロパティで設定します。 特殊マクロを使用する必要がありますので、プロバイダーが列 0 としてブックマークを取得`BOOKMARK_ENTRY`と`CBookmark`クラスの静的アクセサーを使用している場合。 `CBookmark` 引数がブックマーク バッファーの長さ (バイト単位) は、テンプレート クラスです。 ブックマークに必要なバッファーの長さは、プロバイダーによって異なります。 次の例で示すように、ODBC OLE DB プロバイダーを使用する場合、バッファーは 4 バイトにする必要があります。  

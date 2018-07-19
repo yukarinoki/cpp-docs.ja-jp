@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169011"
 ---
 # <a name="compiler-error-c2199"></a>コンパイラ エラー C2199
 構文エラー: 検出された ' 識別子 (' グローバル スコープで (意図して宣言をでしたか?)  

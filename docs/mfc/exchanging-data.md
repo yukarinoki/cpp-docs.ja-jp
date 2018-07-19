@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345821"
 ---
 # <a name="exchanging-data"></a>データの交換
 ほとんどのダイアログ ボックスと同様、プロパティ シートとアプリケーション間でデータの交換はプロパティ シートの最も重要な機能の 1 つです。 この記事では、このタスクを実行する方法について説明します。  

@@ -1,5 +1,5 @@
 ---
-title: '左辺値参照宣言子: &amp; |Microsoft ドキュメント'
+title: '左辺値参照宣言子: &amp; |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d16ed882b1037123963f105b1a78bf8e1023d332
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943901"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>左辺値参照宣言子: &amp;
 オブジェクトのアドレスを保持しますが、オブジェクトのように構文的に実行されます。  
@@ -33,17 +34,17 @@ ms.lasthandoff: 05/03/2018
 type-id & cast-expression  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  lvalue 参照は、オブジェクトの別名と考えることができます。 左辺値参照の宣言は、参照宣言子が続く指定子のオプションのリストから構成されます。 参照は初期化する必要があり、変更できません。  
   
  アドレスを特定のポインター型に変換できるオブジェクトは、類似した参照型にも変換できます。 たとえば、アドレスを `char *` 型に変換できるオブジェクトは、`char &` 型にも変換できます。  
   
- 使用した参照の宣言を混同しないでください、 [address-of 演算子](../cpp/address-of-operator-amp.md)です。 ときに、 `&`*識別子*は後に、型など`int`または`char`、*識別子*型への参照として宣言されています。 ときに`&`*識別子*前がない使用法では、型によっては、address-of 演算子のです。  
+ 参照の宣言の使用を混同しないでください、 [address-of 演算子](../cpp/address-of-operator-amp.md)します。 ときに、 `&`*識別子*など、型の前が**int**または**char**、*識別子*への参照として宣言されています型。 ときに`&`*識別子*前がない型で、使用状況は、address-of 演算子の。  
   
 ## <a name="example"></a>例  
  次の例は、`Person` オブジェクトの宣言による参照宣言子と、そのオブジェクトへの参照を示します。 `rFriend` は `myFriend` への参照であるため、いずれかの変数を更新すると同じオブジェクトが変更されます。  
   
-```  
+```cpp 
 // reference_declarator.cpp  
 // compile with: /EHsc  
 // Demonstrates the reference declarator.  

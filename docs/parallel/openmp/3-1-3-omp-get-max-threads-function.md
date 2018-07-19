@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687512"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 関数
 **Omp_get_max_threads**関数には、少なくともチームを形成する場合、並行領域なしに使用されるスレッドの数と同じ大きさが保証される整数を返します、 **num_threads**句その時点でコードを検出することでした。 形式は次のとおりです。  

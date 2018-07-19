@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686127"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1 単純ループの並列実行
 次の例を使用して、単純なループを並列化する方法を示します、`parallel for`ディレクティブ ([セクション 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) [16] ページ)。 ループの反復変数は既定では、プライベート private 句で明示的に指定する必要はありません。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275513"
 ---
 # <a name="compiler-error-c3854"></a>コンパイラ エラー C3854
 '=' の左辺の式は、関数に評価されます。 (関数は左辺値ではありません) 関数に割り当てることはできません。  

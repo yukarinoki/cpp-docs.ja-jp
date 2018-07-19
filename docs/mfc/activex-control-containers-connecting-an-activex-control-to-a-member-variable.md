@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a2b6a5ab17db7b512f1f44d2eda68169d71645
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930469"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX コントロール コンテナー : ActiveX コントロールとメンバー変数の関連付け
 コントロール コンテナー アプリケーション内での ActiveX コントロールにアクセスする最も簡単な方法は、ActiveX コントロールにコントロールを含むダイアログ クラスのメンバー変数を関連付けるにです。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  **変数名**ボックスで、名前を入力します。  
   
-     たとえば、`m_circctl` のようにします。  
+     たとえば、*で*です。  
   
 6.  をクリックして**完了**選択内容を確定し、メンバー変数の追加ウィザードを終了します。  
   

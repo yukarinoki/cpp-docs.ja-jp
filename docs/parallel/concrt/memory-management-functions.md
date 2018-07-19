@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687297"
 ---
 # <a name="memory-management-functions"></a>メモリ管理関数
 このドキュメントでは、割り当ておよび同時実行方式でメモリを解放するため、同時実行ランタイムを提供する、メモリ管理関数について説明します。  

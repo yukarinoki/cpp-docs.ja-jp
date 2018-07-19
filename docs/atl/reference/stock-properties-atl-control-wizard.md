@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358900"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>[ストック プロパティ]、ATL コントロール ウィザード
 ウィザードのこのページでは、コントロールでサポートするストック プロパティを識別します。 既定では、プロパティは確認されません。  

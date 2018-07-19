@@ -16,17 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953026"
 ---
 # <a name="using-cdatetimectrl"></a>CDateTimeCtrl の使い方
 日付と時刻の選択コントロール ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) を入力するか、特定の日付を選択すること、直感的で認識可能なメソッドを実装します。 コントロールのメイン インターフェイスは、コンボ ボックスの機能と似ています。 ただし、ユーザー コントロールを展開する (既定)、月間予定表コントロールが表示される場合は、特定の日付を指定するユーザーを許可します。 日付を選択すると、月間予定表コントロールでは、自動的に表示されなくなります。  
   
 > [!NOTE]
->  両方を使用する、 **CDateTimePicker**と`CMonthCalCtrl`クラス プロジェクトでは、AFXDTCTL を含める必要があります。H をインクルードします。H ファイルです。  
+>  両方を使用する、`CDateTimePicker`と`CMonthCalCtrl`クラス プロジェクトでは、AFXDTCTL を含める必要があります。H をインクルードします。H ファイルです。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
   

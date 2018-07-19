@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32402788"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 
@@ -81,7 +82,7 @@ int _mbtowc_l(
 
 ## <a name="remarks"></a>コメント
 
-**Mbtowc**関数に変換*カウント*によって示される数以下のバイト*mbchar*場合は、 *mbchar*は**NULL**、対応するワイド文字。 **mbtowc**で結果のワイド文字を格納*wchar、*場合*wchar*は**NULL**です。 **mbtowc**を検査しない複数の**MB_CUR_MAX**バイトです。 **mbtowc**ロケールに依存する動作に現在のロケールを使用 **_mbtowc_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Mbtowc**関数に変換*カウント*によって示される数以下のバイト*mbchar*場合は、 *mbchar*は**NULL**、対応するワイド文字。 **mbtowc**で結果のワイド文字を格納*wchar、* 場合*wchar*は**NULL**です。 **mbtowc**を検査しない複数の**MB_CUR_MAX**バイトです。 **mbtowc**ロケールに依存する動作に現在のロケールを使用 **_mbtowc_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263597"
 ---
 # <a name="compiler-error-c3637"></a>コンパイラ エラー C3637
 'function': friend 関数の定義は、関数型の特殊化をすることはできません  

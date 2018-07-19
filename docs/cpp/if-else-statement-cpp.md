@@ -1,5 +1,5 @@
 ---
-title: if-else ステートメント (C++) |Microsoft ドキュメント
+title: if-else ステートメント (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943157"
 ---
 # <a name="if-else-statement-c"></a>if-else ステートメント (C++)
-条件分岐を制御します。 内のステートメント、 *if ブロック*が実行された場合にのみ、 *if 式*0 以外の値に評価される (または`true`)。 場合の値*式*がゼロ以外、 *statement1*ブロック内の他のステートメントが実行され、存在する場合、その他のブロックはスキップされます。 場合の値*式*0 の場合は、し、if ブロックはスキップされ、他のブロックが存在する場合を実行します。 0 以外に評価される式は、します。
-- `true`
+条件分岐を制御します。 内のステートメント、 *if ブロック*が実行された場合にのみ、 *if 式*0 以外の値 (または TRUE) に評価されます。 場合の値*式*0 以外の場合、 *statement1*とブロック内の他のステートメントが実行され、存在する場合、他のブロックはスキップされます。 場合の値*式*0 の場合は、if ブロックはスキップされ、他のブロックが存在する場合が実行されます。 0 以外に評価される式は、
+- true
 - null 以外のポインター
 - 0 以外の算術値、または 
-- 算術演算子、ブール値またはポインターへの明確な変換を定義するクラス型を入力します。 (変換については、次を参照してください[標準変換](../cpp/standard-conversions.md)。)。   
+- 算術演算子、ブール値またはポインターに明確な変換を定義するクラス型を入力します。 (変換については、次を参照してください[標準変換](../cpp/standard-conversions.md)。)。   
   
 ## <a name="syntax"></a>構文  
   
@@ -71,8 +72,10 @@ else  // optional
    ...
 } 
 ```  
+
 ## <a name="example"></a>例  
-```  
+
+```cpp  
 // if_else_statement.cpp  
 #include <iostream>
 
@@ -118,7 +121,7 @@ int main()
 }
 ```  
 ## <a name="if-statement-with-an-initializer"></a>場合、初期化子と共にステートメント
-**Visual Studio 2017 15.3 およびそれ以降のバージョン**(で利用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**場合**ステートメントは、式を宣言し、名前付き変数が初期化される場合もあります。 変数が、if ブロックのスコープ内だけに必要なときは、この形式の if ステートメントを使用します。 
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**場合**ステートメントは、式を宣言し、名前付きの変数の初期化を含めることもできます。 変数が if ブロックのスコープ内だけに必要なときは、この形式の if ステートメントを使用します。 
 
 ```cpp
 ## Example  
@@ -166,12 +169,12 @@ int main()
 }
 ```
 
- すべてのフォーム、**場合**ステートメントでは、*式*構造体以外の値であることができますが評価され、すべての副作用を含めています。 制御が渡される、**場合**プログラムに次のステートメントにステートメントしない限りのいずれか、*ステートメント*が含まれて、 [break](../cpp/break-statement-cpp.md)、 [を続行](../cpp/continue-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md)です。  
+ すべてのフォーム、**場合**ステートメントでは、*式*構造体以外の値であるが評価され、すべての副作用を含めています。 制御が渡される、**場合**プログラムに次のステートメントにしない限りのいずれか、*ステートメント*が含まれて、 [break](../cpp/break-statement-cpp.md)、 [を続行](../cpp/continue-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md)します。  
   
- **Else**の句、`if...else`ステートメントは、最も近いに関連付けられた以前**場合**が、対応するものと同じスコープ内のステートメント**else**ステートメント。   
+ **他**の句、`if...else`ステートメントは、最も近いの関連付け前**場合**ステートメントがない、対応するのと同じスコープ内で**他**ステートメント。   
 
 ## <a name="constexpr-if-statements"></a>constexpr 場合ステートメント
-**Visual Studio 2017 15.3 およびそれ以降のバージョン**(で利用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 関数テンプレートで使用することができます、 **constexpr 場合**なしのコンパイル時の分岐意思決定を行うステートメント複数の関数オーバー ロードに頼ることです。 たとえば、1 つの関数を記述する、そのハンドル パラメーターの開梱 (0 パラメーター オーバー ロードは必要ありません)。 
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 関数テンプレートで使用することができます、`constexpr if`ステートメントを複数に頼ることがなくコンパイル時の分岐の決定関数のオーバー ロードします。 たとえば、1 つの関数を記述する、そのハンドル パラメーターのアンパック (ゼロのパラメーター オーバー ロードは必要ありません)。 
 
 ```cpp
 template <class T, class... Rest>

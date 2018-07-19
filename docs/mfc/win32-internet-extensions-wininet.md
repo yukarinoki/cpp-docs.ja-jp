@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383962"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 インターネット拡張機能 (WinInet)
 インターネット クライアント アプリケーションは、gopher、FTP、HTTP などのインターネット プロトコルを使用してネットワークのデータ ソース (サーバー) から情報にアクセスするプログラムです。 インターネット クライアント アプリケーションは、たとえば weather マップ、株価、新聞ヘッドラインなどのデータを取得するサーバーにアクセス可能性があります。 インターネット クライアントは、外部ネットワーク (インターネット) または内部ネットワーク (イントラネットとも呼ばれます) を介して、サーバーにアクセスできます。  

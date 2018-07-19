@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057540"
 ---
 # <a name="operator-opattr"></a>OPATTR 演算子
 スコープとモードを定義する単語を返します*式*です。 下位バイトがによって返されるバイトと同じ[です。型](../../assembler/masm/operator-dot-type.md)です。 高位バイトには、追加情報が含まれています。  

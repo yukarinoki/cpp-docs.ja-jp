@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236402"
 ---
 # <a name="compiler-error-c2668"></a>コンパイラ エラー c2668 を発行
 'function': オーバー ロードされた関数のあいまいな呼び出し  

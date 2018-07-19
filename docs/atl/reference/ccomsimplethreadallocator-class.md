@@ -1,5 +1,5 @@
 ---
-title: CComSimpleThreadAllocator クラス |Microsoft ドキュメント
+title: CComSimpleThreadAllocator クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884666"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator クラス
-このクラスは、クラスのスレッドの選択を管理`CComAutoThreadModule`です。  
+このクラスは、クラスのスレッドの選択を管理`CComAutoThreadModule`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +45,10 @@ class CComSimpleThreadAllocator
 |----------|-----------------|  
 |[CComSimpleThreadAllocator::GetThread](#getthread)|スレッドを選択します。|  
   
-## <a name="remarks"></a>コメント  
- `CComSimpleThreadAllocator` スレッドの選択を管理する[は](../../atl/reference/ccomautothreadmodule-class.md)します。 `CComSimpleThreadAllocator::GetThread` 各スレッドを単に循環参照し、シーケンスの次の 1 つを返します。  
+## <a name="remarks"></a>Remarks  
+ `CComSimpleThreadAllocator` スレッドの選択を管理[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)します。 `CComSimpleThreadAllocator::GetThread` 単に各スレッドが繰り返しし、シーケンス内の次の 1 つ返されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
@@ -58,19 +59,19 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pApt`  
+ *pApt*  
  ATL の既定の実装では使用されません。  
   
- `nThreads`  
+ *nThreads*  
  EXE モジュール内のスレッドの最大数。  
   
 ### <a name="return-value"></a>戻り値  
- 0 までの整数と ( `nThreads` - 1)。 EXE モジュール内のスレッドのいずれかを識別します。  
+ 0 までの整数と (*nThreads* - 1)。 EXE モジュール内のスレッドのいずれかを識別します。  
   
-### <a name="remarks"></a>コメント  
- オーバーライドできます`GetThread`選択範囲のさまざまなメソッドを提供したりの使用、`pApt`パラメーター。  
+### <a name="remarks"></a>Remarks  
+ オーバーライドできます`GetThread`選択範囲のさまざまなメソッドを提供したりの使用、 *pApt*パラメーター。  
   
- `GetThread` によって呼び出される[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)です。  
+ `GetThread` によって呼び出される[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)します。  
   
 ## <a name="see-also"></a>関連項目  
  [CComApartment クラス](../../atl/reference/ccomapartment-class.md)   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167178"
 ---
 # <a name="compiler-error-c2167"></a>コンパイラ エラー C2167
 'function': 組み込み関数の実引数が多すぎます。  
