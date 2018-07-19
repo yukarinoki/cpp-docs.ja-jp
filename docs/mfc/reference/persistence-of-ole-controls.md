@@ -1,5 +1,5 @@
 ---
-title: OLE コントロールの永続化 |Microsoft ドキュメント
+title: OLE コントロールの永続化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,41 +17,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336827"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE コントロールの永続化
-OLE コントロールの機能の 1 つは永続化 (またはプロパティのシリアル化)、これにより、ファイルやストリームとの間、プロパティの値を読み書きする OLE コントロール。 コンテナー アプリケーションでは、シリアル化を使用して、アプリケーションがコントロールを破棄した後も、コントロールのプロパティの値を格納します。 OLE コントロールのプロパティ値をファイルから読み取ることができますし、または、後でストリームとコントロールの新しいインスタンスを作成します。  
+OLE コントロールの機能の 1 つは、プロパティの永続化 (またはシリアル化)、OLE コントロール プロパティの値を記述して、ファイルまたはストリームから読み取ったりすることができます。 コンテナー アプリケーションは、シリアル化を使用して、アプリケーションがコントロールを破棄した後でも、コントロールのプロパティの値を格納できます。 OLE コントロールのプロパティ値をファイルから読み取るまたは後でストリームの場合、コントロールの新しいインスタンスを作成します。  
   
 ### <a name="persistence-of-ole-controls"></a>OLE コントロールの永続化  
   
 |||  
 |-|-|  
-|[PX_Blob](#px_blob)|バイナリ ラージ オブジェクト (BLOB) データを格納するコントロールのプロパティを交換します。|  
-|[PX_Bool](#px_bool)|型のコントロール プロパティを交換**BOOL**です。|  
+|[PX_Blob](#px_blob)|バイナリ ラージ オブジェクト (BLOB) データを格納するコントロール プロパティを交換します。|  
+|[PX_Bool](#px_bool)|型のコントロール プロパティを交換**BOOL**します。|  
 |[PX_Color](#px_color)|コントロールの色のプロパティを交換します。|  
-|[PX_Currency](#px_currency)|型のコントロール プロパティを交換**CY**です。|  
-|[PX_DataPath](#px_datapath)|型のコントロール プロパティを交換`CDataPathProperty`です。|  
-|[PX_Double](#px_double)|型のコントロール プロパティを交換**二重**です。|  
+|[PX_Currency](#px_currency)|型のコントロール プロパティを交換**CY**します。|  
+|[PX_DataPath](#px_datapath)|型のコントロール プロパティを交換`CDataPathProperty`します。|  
+|[PX_Double](#px_double)|型のコントロール プロパティを交換**二重**します。|  
 |[PX_Font](#px_font)|コントロールのフォント プロパティを交換します。|  
-|[PX_Float](#px_float)|型のコントロール プロパティを交換**float**です。|  
-|[PX_IUnknown](#px_iunknown)|未定義の型のコントロール プロパティを交換します。|  
-|[PX_Long](#px_long)|型のコントロール プロパティを交換**長い**です。|  
+|[PX_Float](#px_float)|型のコントロール プロパティを交換**float**します。|  
+|[PX_IUnknown](#px_iunknown)|未定義の型のコントロールのプロパティを交換します。|  
+|[PX_Long](#px_long)|型のコントロール プロパティを交換**長い**します。|  
 |[PX_Picture](#px_picture)|コントロールの picture プロパティを交換します。|  
-|[PX_Short](#px_short)|型のコントロール プロパティを交換**短い**です。|  
-|[PX_ULong](#px_ulong)|型のコントロール プロパティを交換**ULONG**です。|  
-|[PX_UShort](#px_ushort)|型のコントロール プロパティを交換**USHORT**です。|  
-|[PXstring](#px_string)|文字の文字列のコントロール プロパティを交換します。|  
-|[PX_VBXFontConvert](#px_vbxfontconvert)|OLE コントロールのフォント プロパティに VBX コントロールのフォントに関連するプロパティを交換します。|  
+|[PX_Short](#px_short)|型のコントロール プロパティを交換**短い**します。|  
+|[PX_ULong](#px_ulong)|型のコントロール プロパティを交換**ULONG**します。|  
+|[PX_UShort](#px_ushort)|型のコントロール プロパティを交換**USHORT**します。|  
+|[PXstring](#px_string)|文字の文字列のコントロールのプロパティを交換します。|  
+|[PX_VBXFontConvert](#px_vbxfontconvert)|OLE コントロールのフォント プロパティに VBX コントロールのフォント関連プロパティを交換します。|  
   
- さらに、`AfxOleTypeMatchGuid`間で一致の判定に用意されているグローバル関数、`TYPEDESC`と指定された GUID。  
+ さらに、`AfxOleTypeMatchGuid`グローバル関数が TYPEDESC と指定された GUID の一致の判定に使用されます。  
   
 ##  <a name="px_blob"></a>  PX_Blob  
- コントロールの内には、この関数を呼び出して`DoPropExchange`メンバー関数をシリアル化またはバイナリ ラージ オブジェクト (BLOB) データを格納するプロパティを初期化します。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化またはバイナリ ラージ オブジェクト (BLOB) データを格納するプロパティを初期化します。  
   
 ```  
  
@@ -69,34 +69,34 @@ hBlobDefault
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `hBlob`  
+ *hBlob*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `hBlobDefault`  
- プロパティの既定値です。  
+ *hBlobDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`hBlob` をクリックします。 この変数を初期化する必要があります**NULL**最初に呼び出す前に`PX_Blob`を初めて (通常は、そのため、コントロールのコンス トラクターで)。 場合`hBlobDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールの初期化またはシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値の読み取りまたはで参照される変数に書き込まれたは*hBlob*必要に応じて、します。 この変数は、最初に呼び出す前に NULL に初期化する必要があります`PX_Blob`最初に (通常、これ行うコントロールのコンス トラクターで)。 場合*hBlobDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールの初期化またはシリアル化プロセスが失敗したときに使用されます。  
   
- ハンドル`hBlob`と`hBlobDefault`を次を含むメモリのブロックを参照してください。  
+ ハンドル*hBlob*と*hBlobDefault*を次を含むメモリのブロックを参照してください。  
   
--   A`DWORD`ですぐにその後に続く、バイナリ データの長さ、(バイト単位) が含まれています  
+-   すぐに、次のバイナリ データの長さ、(バイト単位) を含む DWORD の後に  
   
 -   実際のバイナリ データを格納しているメモリのブロック。  
   
- 注意してください`PX_Blob`、Windows を使用しているメモリを割り当てる[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API、BLOB 型のプロパティを読み込むときにします。 このメモリの解放を担当しています。 したがって、コントロールのデストラクターを呼び出す必要があります[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)ハンドルを解放は任意の BLOB 型のプロパティをコントロールに割り当てられたメモリをセットアップします。  
+ なお`PX_Blob`、Windows を使用して、メモリの割り当ては[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API、BLOB 型のプロパティの読み込み時にします。 このメモリの解放を担当します。 そのため、コントロールのデストラクターを呼び出す必要があります[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)ハンドルを解放する任意の BLOB の種類プロパティをコントロールに割り当てられたメモリがアップします。  
   
 ##  <a name="px_bool"></a>  PX_Bool  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**BOOL**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`をシリアル化、または BOOL 型のプロパティを初期化します。  
   
 ```  
  
@@ -120,26 +120,26 @@ bValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `bValue`  
+ *bValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `bDefault`  
- プロパティの既定値です。  
+ *bDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`bValue` をクリックします。 場合`bDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値の読み取りまたはで参照される変数に書き込まれたは*bValue*必要に応じて、します。 場合*bDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_color"></a>  PX_Color  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**OLE_COLOR**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または OLE_COLOR 型のプロパティを初期化します。  
   
 ```  
  
@@ -162,26 +162,26 @@ clrDefault);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `clrValue`  
+ *clrValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `clrDefault`  
- コントロールの開発者によって定義されているように、プロパティの既定値です。  
+ *clrDefault*  
+ コントロールの開発者によって定義されている、プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`clrValue` をクリックします。 場合`clrDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値の読み取りまたはで参照される変数に書き込まれたは*clrValue*必要に応じて、します。 場合*clrDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_currency"></a>  PX_Currency  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**通貨**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のプロパティを初期化する**通貨**します。  
   
 ```  
  
@@ -205,26 +205,26 @@ cyValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `cyValue`  
+ *cyValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `cyDefault`  
- プロパティの既定値です。  
+ *cyDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`cyValue` をクリックします。 場合`cyDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値の読み取りまたはで参照される変数に書き込まれたは*cyValue*必要に応じて、します。 場合*cyDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_datapath"></a>  PX_DataPath  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のデータ パス プロパティを初期化するメンバー関数[関数](../../mfc/reference/cdatapathproperty-class.md)です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のデータ パスのプロパティを初期化する[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)します。  
   
 ```  
  
@@ -244,23 +244,23 @@ pPX,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `dataPathProperty`  
+ *dataPathProperty*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- データ パスのプロパティは、非同期のコントロールのプロパティを実装します。 プロパティの値からの読み取りまたはで参照される変数に書き込まれるされる`dataPathProperty` をクリックします。  
+### <a name="remarks"></a>Remarks  
+ データ パスのプロパティは、非同期のコントロールのプロパティを実装します。 プロパティの値の読み取りまたはで参照される変数に書き込まれたは*dataPathProperty*必要に応じて、します。  
   
 ##  <a name="px_double"></a>  PX_Double  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**二重**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のプロパティを初期化する**二重**します。  
   
 ```  
  
@@ -284,26 +284,26 @@ doubleValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `doubleValue`  
+ *doubleValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `doubleDefault`  
- プロパティの既定値です。  
+ *doubleDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる`doubleValue` をクリックします。 場合`doubleDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*doubleValue*必要に応じて、します。 場合*doubleDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_font"></a>  PX_Font  
- コントロールの内には、この関数を呼び出して`DoPropExchange`メンバー関数をシリアル化または種類のフォントのプロパティを初期化します。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のフォントのプロパティを初期化します。  
   
 ```  
  
@@ -327,29 +327,29 @@ pFontDispAmbient
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `font`  
- 参照、`CFontHolder`フォント プロパティを含むオブジェクト。  
+ *フォント*  
+ 参照を`CFontHolder`フォント プロパティを含むオブジェクト。  
   
- `pFontDesc`  
- ポインター、 **FONTDESC**の場合、フォントのプロパティの既定の状態の初期化中に使用する値を含む構造体、`pFontDispAmbient`は**NULL**です。  
+ *pFontDesc*  
+ ポインターを`FONTDESC`の場合は、フォント プロパティの既定の状態の初期化中に使用する値を含む構造体、 *pFontDispAmbient*は NULL です。  
   
- `pFontDispAmbient`  
- ポインター、**この**font プロパティの既定の状態の初期化中に使用するフォントのインターフェイスです。  
+ *pFontDispAmbient*  
+ ポインター、`IFontDisp`フォント プロパティの既定の状態の初期化中に使用するフォントのインターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値がから読み取るまたは書き込む`font`、`CFontHolder`参照、適切な場合です。 場合`pFontDesc`と`pFontDispAmbient`は指定すると、必要なときに、プロパティの既定値を初期化するために使用されます。 これらの値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。 通常、渡す**NULL**の`pFontDesc`アンビエントにによって返される値と`COleControl::AmbientFont`の`pFontDispAmbient`です。 フォント オブジェクトによって返されます注`COleControl::AmbientFont`への呼び出しによって解放される必要があります、 **IFontDisp::Release**メンバー関数。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みを`font`、`CFontHolder`適切な場合は、参照します。 場合*pFontDesc*と*pFontDispAmbient*は指定すると、必要なときに、プロパティの既定の値を初期化するために使用されます。 これらの値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。 通常は、NULL を渡す*pFontDesc*およびアンビエント値によって返される`COleControl::AmbientFont`の*pFontDispAmbient*します。 によって返されるフォント オブジェクト注`COleControl::AmbientFont`を呼び出して解放する必要があります、`IFontDisp::Release`メンバー関数。  
   
 ##  <a name="px_float"></a>  PX_Float  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**float**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のプロパティを初期化する**float**します。  
   
 ```  
  
@@ -373,26 +373,26 @@ floatValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `floatValue`  
+ *floatValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `floatDefault`  
- プロパティの既定値です。  
+ *floatDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる`floatValue` をクリックします。 場合`floatDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*floatValue*必要に応じて、します。 場合*floatDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_iunknown"></a>  PX_IUnknown  
- コントロールの内には、この関数を呼び出して`DoPropExchange`、オブジェクトを持つによって表されるプロパティを初期化または逆シリアル化するメンバー関数、 **IUnknown**-派生インターフェイスです。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、オブジェクトで表されるプロパティを初期化またはシリアル化する、 `IUnknown`-派生インターフェイス。  
   
 ```  
  
@@ -412,29 +412,29 @@ pUnkDefault
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
  *pUnk*  
  プロパティの値を表すオブジェクトのインターフェイスを含む変数への参照。  
   
- `iid`  
- プロパティ オブジェクトのインターフェイスがコントロールによって使用されることを示すインターフェイス ID です。  
+ *iid*  
+ プロパティ オブジェクトのインターフェイスを示すインターフェイス ID は、コントロールによって使用されます。  
   
- `pUnkDefault`  
- プロパティの既定値です。  
+ *pUnkDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる*pUnk* をクリックします。 場合`pUnkDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*pUnk*必要に応じて、します。 場合*pUnkDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_long"></a>  PX_Long  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**長い**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のプロパティを初期化する**長い**します。  
   
 ```  
  
@@ -458,26 +458,26 @@ lValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `lValue`  
+ *左辺値*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `lDefault`  
- プロパティの既定値です。  
+ *lDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる`lValue` をクリックします。 場合`lDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*左辺値*必要に応じて、します。 場合*lDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_picture"></a>  PX_Picture  
- コントロールの内には、この関数を呼び出して`DoPropExchange`メンバー関数をシリアル化またはコントロールの picture プロパティを初期化します。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化またはコントロールの picture プロパティを初期化します。  
   
 ```  
  
@@ -501,26 +501,26 @@ pict  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `pict`  
- 参照、 [CPictureHolder](../../mfc/reference/cpictureholder-class.md)プロパティが格納されているオブジェクト (通常、クラスのメンバー変数)。  
+ *pict*  
+ 参照を[CPictureHolder](../../mfc/reference/cpictureholder-class.md)プロパティが格納されているオブジェクト (通常、クラスのメンバー変数)。  
   
- `pictDefault`  
- プロパティの既定値です。  
+ *pictDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる`pict` をクリックします。 場合`pictDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*pict*必要に応じて、します。 場合*pictDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_short"></a>  PX_Short  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**短い**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のプロパティを初期化する**短い**します。  
   
 ```  
  
@@ -544,26 +544,26 @@ sValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `sValue`  
+ *sValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `sDefault`  
- プロパティの既定値です。  
+ *sDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる`sValue` をクリックします。 場合`sDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*sValue*必要に応じて、します。 場合*sDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_ulong"></a>  PX_ULong  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数**ULONG**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のプロパティを初期化する**ULONG**します。  
   
 ```  
  
@@ -587,26 +587,26 @@ ulValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前です。  
   
- `ulValue`  
+ *ulValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `ulDefault`  
- プロパティの既定値です。  
+ *ulDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる`ulValue` をクリックします。 場合`ulDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*ulValue*必要に応じて、します。 場合*ulDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_ushort"></a>  PX_UShort  
- コントロールの内には、この関数を呼び出して`DoPropExchange`シリアル化または型のプロパティを初期化するメンバー関数`unsigned`**短い**です。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または型のプロパティを初期化する**unsigned short**します。  
   
 ```  
  
@@ -630,26 +630,26 @@ usValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前です。  
   
  *usValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
  *usDefault*  
- プロパティの既定値です。  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる*usValue* をクリックします。 場合*usDefault*を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*usValue*必要に応じて、します。 場合*usDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_string"></a>  PXstring  
- コントロールの内には、この関数を呼び出して**DoPropExchange**メンバー関数をシリアル化または文字の文字列プロパティを初期化します。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`メンバー関数は、シリアル化または文字の文字列プロパティを初期化します。  
   
 ```  
  
@@ -673,26 +673,26 @@ strValue  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `pszPropName`  
+ *pszPropName*  
  交換されるプロパティの名前。  
   
- `strValue`  
+ *strValue*  
  プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。  
   
- `strDefault`  
- プロパティの既定値です。  
+ *strDefault*  
+ プロパティの既定値。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- プロパティの値を読み取りまたはで参照される変数に書き込まれる`strValue` をクリックします。 場合`strDefault`を指定すると、プロパティの既定値として使用されます。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
+### <a name="remarks"></a>Remarks  
+ プロパティの値がから読み取りまたは書き込みで参照される変数を*strValue*必要に応じて、します。 場合*strDefault*指定すると、これは、プロパティの既定値として使用します。 この値は、何らかの理由で、コントロールのシリアル化プロセスが失敗したときに使用されます。  
   
 ##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
- コントロールの内には、この関数を呼び出して`DoPropExchange`VBX コントロールのフォントに関連するプロパティを変換することで、[フォント] プロパティを初期化するためにメンバー関数。  
+ コントロールの中でこの関数を呼び出す`DoPropExchange`VBX コントロールのフォント関連プロパティを変換することで、[フォント] プロパティを初期化するために、メンバー関数。  
   
 ```  
  
@@ -704,17 +704,17 @@ pPX  ,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPX`  
+ *pPX*  
  ポインター、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)オブジェクト (通常のパラメーターとして渡される`DoPropExchange`)。  
   
- `font`  
- 変換された VBX フォントに関連するプロパティを格納する OLE コントロールのフォント プロパティ。  
+ *フォント*  
+ 変換された VBX フォント関連プロパティを格納する OLE コントロールのフォント プロパティ。  
   
 ### <a name="return-value"></a>戻り値  
- 交換が成功した場合は 0 以外。それ以外の場合は 0 を返します。  
+ 交換が成功した場合、0 以外の場合失敗した場合は 0。  
   
-### <a name="remarks"></a>コメント  
- この関数は、直接の代わりに、VBX コントロールに設計されている OLE コントロールでのみ使用する必要があります。 Visual Basic 開発環境では、対応する置換 OLE コントロールを使用する VBX コントロールを含むフォームが変換されるときに呼び出すことが、コントロールの**IDataObject::SetData**関数、プロパティに渡すことを設定します。VBX コントロールのプロパティのデータが含まれています。 この操作により、コントロールの`DoPropExchange`呼び出される関数。 `DoPropExchange` 呼び出すことができます`PX_VBXFontConvert`VBX コントロールのフォントに関連するプロパティに変換する (たとえば、"FontName、""FontSize、"など) を OLE コントロールのフォントのプロパティの対応するコンポーネントです。  
+### <a name="remarks"></a>Remarks  
+ この関数は、VBX コントロールの直接の置き換えとして設計されている OLE コントロールのみで使用する必要があります。 コントロールを呼び出すが、Visual Basic 開発環境では、対応する置換 OLE コントロールを使用する VBX コントロールを含む形式に変換、 `IDataObject::SetData` VBX コントロールのプロパティのデータを含むプロパティ セットを渡す関数。 この操作により、コントロールの`DoPropExchange`呼び出される関数。 `DoPropExchange` 呼び出すことができます`PX_VBXFontConvert`VBX コントロールのフォント関連プロパティに変換する (たとえば、"FontName、""FontSize、"など) OLE コントロールのフォントのプロパティの対応するコンポーネントにします。  
   
  `PX_VBXFontConvert` コントロールが VBX フォーム アプリケーションから実際に変換されている場合にのみ呼び出す必要があります。 例えば:  
   

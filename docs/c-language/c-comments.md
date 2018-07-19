@@ -1,7 +1,7 @@
 ---
 title: C コメント | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a6c2d32596aa8205d02ee5cddb28b5ba3c8166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c2eccff8ab582270f766fdbcb448fdb91145e348
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384347"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121745"
 ---
 # <a name="c-comments"></a>C コメント
 "コメント" は、コンパイラによって 1 個の空白文字として扱われる、スラッシュとアスタリスクの組み合わせ (<b>/\*</b>) で始まる文字シーケンスです。それ以外の場合は無視されます。 コメントには、"コメント終了" 区切り記号 (<b>\*/</b>) を除いて、改行文字も含む、表現できる文字セットの文字の任意の組み合わせを含めることができます。 コメントは複数行にわたって記述できますが、入れ子にすることはできません。  
@@ -70,13 +70,13 @@ printf( "Hello\n" );  /* Comments can go here */
   
  **Microsoft 固有の仕様**  
   
- Microsoft コンパイラは、2 つのスラッシュ (**//**) で始まる 1 行コメントもサポートします。 /Za (ANSI 規格) を使用してコンパイルすると、このコメントでエラーが発生します。 このコメントは次の行に続けることはできません。  
+ Microsoft コンパイラは、2 つのスラッシュ (__//__) で始まる 1 行コメントもサポートします。 /Za (ANSI 規格) を使用してコンパイルすると、このコメントでエラーが発生します。 このコメントは次の行に続けることはできません。  
   
 ```  
 // This is a valid comment  
 ```  
   
- 2 つのスラッシュ (**//**) で始まるコメントは、エスケープ文字が前に付いていない次の改行文字で終了します。 次の例では、改行文字の前にバックスラッシュ (**\\**) が付いて、"エスケープ シーケンス" が作成されています。 このエスケープ シーケンスによって、コンパイラは次の行を前の行の一部として処理します  (詳細については、「[エスケープ シーケンス](../c-language/escape-sequences.md)」を参照してください)。  
+ 2 つのスラッシュ (__//__) で始まるコメントは、エスケープ文字が前に付いていない次の改行文字で終了します。 次の例では、改行文字の前にバックスラッシュ (**\\**) が付いて、"エスケープ シーケンス" が作成されています。 このエスケープ シーケンスによって、コンパイラは次の行を前の行の一部として処理します  (詳細については、「[エスケープ シーケンス](../c-language/escape-sequences.md)」を参照してください)。  
   
 ```  
 // my comment \  

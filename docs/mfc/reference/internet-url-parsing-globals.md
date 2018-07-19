@@ -1,5 +1,5 @@
 ---
-title: インターネット URL 解析用グローバル関数とヘルパー |Microsoft ドキュメント
+title: インターネット URL 解析用グローバル関数とヘルパー |Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2017
 ms.technology:
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b7ea1a6d22d3e16230acafa25c53f8748a825a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 839e07db88edf8b1bb007a6aedfe90c94732c784
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335732"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>インターネット URL 解析用グローバル関数とヘルパー
-クライアントはインターネット サーバーにクエリを送信するときは、クライアントに関する情報を抽出するのに URL 解析用グローバルのいずれかを使用できます。 ヘルパー関数では、その他のインターネット機能を提供します。
+クライアントはインターネット サーバーにクエリを送信するときは、クライアントに関する情報を抽出するのに URL 解析用グローバルのいずれかを使用できます。 ヘルパー関数は、その他のインターネット機能を提供します。
   
 ## <a name="internet-url-parsing-globals"></a>インターネット URL 解析用グローバル関数  
   
 |||  
 |-|-|  
 |[AfxParseURL](#afxparseurl)|URL 文字列を解析し、サービスとそのコンポーネントの型を返します。|  
-|[AfxParseURLEx](#afxparseurlex)|URL 文字列を解析し、サービスとそのコンポーネントをできるだけでなく、ユーザー名とパスワードの種類を取得します。|  
+|[AfxParseURLEx](#afxparseurlex)|URL 文字列を解析し、サービスとそのコンポーネントでは、できるだけでなく、ユーザー名とパスワードの種類を返します。|  
 
 ## <a name="other-internet-helpers"></a>その他のインターネット ヘルパー
 |||
@@ -41,7 +41,7 @@ ms.locfileid: "33374802"
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|インターネット ハンドルの種類を決定します。|
   
 ##  <a name="afxparseurl"></a>  AfxParseURL  
- このグローバル[できます](../../mfc/reference/cinternetsession-class.md#openurl)です。  
+ このグローバル[できます](../../mfc/reference/cinternetsession-class.md#openurl)します。  
   
 ```   
 BOOL AFXAPI AfxParseURL(
@@ -56,7 +56,7 @@ BOOL AFXAPI AfxParseURL(
  *pstrURL*  
  解析する URL を含む文字列へのポインター。  
   
- `dwServiceType`  
+ *dwServiceType*  
  インターネット サービスの種類を示します。 次の値を指定できます。  
   
 -   AFX_INET_SERVICE_FTP  
@@ -89,39 +89,39 @@ BOOL AFXAPI AfxParseURL(
   
 -   AFX_INET_SERVICE_UNK  
   
- `strServer`  
- 次のサービスの種類 URL の最初のセグメント。  
+ *strServer*  
+ サービスの種類を次の URL の最初のセグメント。  
   
- `strObject`  
- URL を表すオブジェクト (空でもかまいません)。  
+ *strObject*  
+ URL を参照するオブジェクト (空でもかまいません)。  
   
- `nPort`  
+ *ポート*  
  いずれかが存在する場合に、URL のサーバーまたはオブジェクトのいずれかの部分から決定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 以外の場合は、URL は正常に解析されました。これが空か、既知のインターネット サービスの種類が含まれていない場合それ以外の場合、0 を返します。  
+ 以外の場合は、URL が正常に解析します。空であるか、既知のインターネット サービスの種類が含まれていない場合、それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  URL 文字列を解析し、サービスとそのコンポーネントの型を返します。  
   
- たとえば、`AfxParseURL`フォームの Url を解析して**service://server/dir/dir/object.ext:port**し、次のように格納されているそのコンポーネントを返します。  
+ たとえば、`AfxParseURL`フォームの Url を解析*service://server/dir/dir/object.ext:port*し、次のように格納されているそのコンポーネントを返します。  
   
- `strServer` "server"= =  
+ *strServer* "server"= =  
   
- `strObject` = ="/dir/dir/object/object.ext"  
+ *strObject* = ="/dir/dir/object/object.ext"  
   
- `nPort` #port を = =  
+ *ポート*#port = =  
   
- `dwServiceType` #service を = =  
+ *dwServiceType* #service = =  
   
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxinet.h  
   
 ##  <a name="afxparseurlex"></a>  AfxParseURLEx  
- このグローバル関数は、拡張のバージョン[AfxParseURL](#afxparseurl)で使用されると[できます](../../mfc/reference/cinternetsession-class.md#openurl)です。  
+ このグローバル関数は、拡張のバージョンの[AfxParseURL](#afxparseurl)で使用されます[できます](../../mfc/reference/cinternetsession-class.md#openurl)します。  
   
 ```   
 BOOL AFXAPI AfxParseURLEx(
@@ -139,7 +139,7 @@ BOOL AFXAPI AfxParseURLEx(
  *pstrURL*  
  解析する URL を含む文字列へのポインター。  
   
- `dwServiceType`  
+ *dwServiceType*  
  インターネット サービスの種類を示します。 次の値を指定できます。  
   
 -   AFX_INET_SERVICE_FTP  
@@ -172,65 +172,65 @@ BOOL AFXAPI AfxParseURLEx(
   
 -   AFX_INET_SERVICE_UNK  
   
- `strServer`  
- 次のサービスの種類 URL の最初のセグメント。  
+ *strServer*  
+ サービスの種類を次の URL の最初のセグメント。  
   
- `strObject`  
- URL を表すオブジェクト (空でもかまいません)。  
+ *strObject*  
+ URL を参照するオブジェクト (空でもかまいません)。  
   
- `nPort`  
+ *ポート*  
  いずれかが存在する場合に、URL のサーバーまたはオブジェクトのいずれかの部分から決定されます。  
   
  *strUsername*  
- 参照、`CString`ユーザーの名前を表すオブジェクト。  
+ 参照を`CString`ユーザーの名前を表すオブジェクト。  
   
- `strPassword`  
- 参照、`CString`ユーザーのパスワードを表すオブジェクト。  
+ *strPassword*  
+ 参照を`CString`ユーザーのパスワードを格納しているオブジェクト。  
   
- `dwFlags`  
- URL を解析する方法を制御するフラグ。 次の値の組み合わせが可能です。  
+ *dwFlags*  
+ URL を解析する方法を制御するフラグ。 次の値の組み合わせになります。  
   
 |[値]|説明|  
 |-----------|-------------|  
-|**ICU_DECODE**|%XX エスケープ シーケンスを文字に変換します。|  
-|**ICU_NO_ENCODE**|安全でない文字をエスケープ シーケンスに変換されません。|  
-|**ICU_NO_META**|(「\」などのメタ シーケンスを削除しないでください。 および「\..」)URL です。|  
-|**ICU_ENCODE_SPACES_ONLY**|スペースだけをエンコードします。|  
-|**ICU_BROWSER_MODE**|エンコードまたは '#' の後に文字をデコードまたは '後の末尾の空白文字を削除しない' です。 この値が指定されていない場合は、URL 全体をエンコードされ、後続の空白が削除されます。|  
+|ICU_DECODE|%XX エスケープ シーケンスを文字に変換します。|  
+|ICU_NO_ENCODE|安全でない文字をエスケープ シーケンスに変換されません。|  
+|ICU_NO_META|(「\.」などのメタデータのシーケンスを削除しないでください。 および「\..」)URL。|  
+|ICU_ENCODE_SPACES_ONLY|Spaces only. をエンコードします。|  
+|ICU_BROWSER_MODE|エンコードまたは '#' の後に文字をデコードまたは '後の後続の空白を削除しない' です。 この値が指定されていない場合は、URL 全体はエンコードされ、後続の空白が削除されます。|  
   
- 関数には、すべての認識できない文字とメタ シーケンスに変換しますフラグがない、MFC の既定を使用する場合 (など\\.、\..、および\\...) をエスケープ シーケンスです。  
+ 変換が安全でない文字や meta シーケンスのすべてのフラグがない、MFC の既定を使用する場合 (など\\.、\.. と\\...) をエスケープするシーケンスします。  
   
 ### <a name="return-value"></a>戻り値  
- 以外の場合は、URL は正常に解析されました。これが空か、既知のインターネット サービスの種類が含まれていない場合それ以外の場合、0 を返します。  
+ 以外の場合は、URL が正常に解析します。空であるか、既知のインターネット サービスの種類が含まれていない場合、それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- URL 文字列を解析し、サービスとそのコンポーネントをできるだけでなく、ユーザーの名前とパスワードの種類を取得します。 フラグがどのように安全でない文字を指定処理されます。  
+### <a name="remarks"></a>Remarks  
+ これにより、URL 文字列を解析し、サービスとそのコンポーネントでは、できるだけでなく、ユーザーの名とパスワードの種類を返します。 どのように安全でない文字を指定するフラグは、処理されます。  
   
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.  
 
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxinet.h  
     
 ## <a name="see-also"></a>関連項目  
  [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
  
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
-インターネット ハンドルの種類を確認するのにには、この関数を使用します。  
+このグローバル関数を使用して、インターネット ハンドルの種類を決定します。  
    
 ### <a name="syntax"></a>構文  
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );  
 ```
 ### <a name="parameters"></a>パラメーター  
- `hQuery`  
+ *hQuery*  
  インターネット クエリへのハンドル。  
    
 ### <a name="return-value"></a>戻り値  
- WININET で定義されているインターネット サービスの種類のいずれか。H. これらのインターネット サービスの一覧については、「解説」セクションを参照してください。 ハンドルは、null または認識されない、AFX_INET_SERVICE_UNK を返します。  
+ WININET で定義されているインターネット サービスの種類のいずれか。H. これらのインターネット サービスの一覧については、「解説」を参照してください。 ハンドルは、null または認識されない、AFX_INET_SERVICE_UNK を返します。  
    
-### <a name="remarks"></a>コメント  
- 次の一覧には、によって返される使用可能なインターネット型が含まれています。`AfxGetInternetHandleType`です。  
+### <a name="remarks"></a>Remarks  
+ 次の一覧には、によって返される使用可能なインターネットの型が含まれています。`AfxGetInternetHandleType`します。  
   
 -   INTERNET_HANDLE_TYPE_INTERNET  
   
@@ -261,7 +261,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 > [!NOTE]
 >  この関数を呼び出すために、プロジェクトは AFXINET を含める必要があります。H.  
    
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
    
 ### <a name="see-also"></a>関連項目  
@@ -276,19 +276,19 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );  
 ```
 ### <a name="parameters"></a>パラメーター  
- `dwContext`  
- エラーの原因となった操作のコンテキストの識別子です。 既定値の`dwContext`で最初に指定された[CInternetSession](cinternetsession-class.md)に渡されると[関数](cinternetconnection-class.md)- と[CInternetFile](cinternetfile-class.md)-派生クラス。 接続やファイルに対して実行される特定の操作、通常をオーバーライドする場合の既定で、`dwContext`独自のです。 この値に返されます、 [:onstatuscallback](cinternetsession-class.md#onstatuscallback)を特定の操作の状態を識別します。 
+ *独自*  
+ エラーの原因となった操作のコンテキスト id。 既定値*独自*で最初に指定された[CInternetSession](cinternetsession-class.md)に渡されると[CInternetConnection](cinternetconnection-class.md)- と[CInternetFile](cinternetfile-class.md)-クラスを派生します。 既定のオーバーライドは、通常、接続や、ファイルに対して実行される特定の操作、*独自*独自の。 この値に返されます、[対応](cinternetsession-class.md#onstatuscallback)特定の操作の状態を識別するためにします。 
   
- `dwError`  
+ *dwError*  
  例外の原因となったエラー。  
    
-### <a name="remarks"></a>コメント  
- オペレーティング システム エラー コードに基づく原因を特定するを担当しています。  
+### <a name="remarks"></a>Remarks  
+ オペレーティング システム エラー コードに基づいて、原因を判断するためにあります。  
   
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.  
    
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** afxinet.h  
    
 ### <a name="see-also"></a>関連項目  

@@ -1,5 +1,5 @@
 ---
-title: クラス ファクトリとライセンス |Microsoft ドキュメント
+title: クラス ファクトリとライセンス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: abb9d5ca169edf28bb3f72c26e644894c12ccb93
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336230"
 ---
 # <a name="class-factories-and-licensing"></a>クラス ファクトリとライセンス
-OLE コントロールのインスタンスを作成するには、コンテナー アプリケーションは、コントロールのクラス ファクトリのメンバー関数を呼び出します。 コントロールは、実際の OLE オブジェクトであるため、クラス ファクトリが、コントロールのインスタンスを作成します。 すべての OLE コントロール クラスには、クラス ファクトリをいる必要があります。  
+OLE コントロールのインスタンスを作成するには、コンテナー アプリケーションは、コントロールのクラス ファクトリのメンバー関数を呼び出します。 コントロールは、実際の OLE オブジェクトであるために、クラス ファクトリが、コントロールのインスタンスを作成する責任を負います。 すべての OLE コントロール クラスには、クラス ファクトリが必要です。  
   
- OLE コントロールのもう 1 つの重要な機能では、ライセンスを強制できる点です。 ControlWizard を使用すると、コントロール プロジェクトの作成中にライセンスを組み込むことができます。 コントロールのライセンスの詳細については、記事を参照してください。 [ActiveX コントロール: ActiveX コントロールの ライセンス](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)です。  
+ OLE コントロールのもう 1 つの重要な機能では、ライセンスを強制できる点です。 ControlWizard は、コントロール プロジェクトの作成時にライセンスを反映することができます。 コントロールのライセンスの詳細については、この記事を参照してください。 [ActiveX コントロール: ActiveX コントロールの ライセンス](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)。  
   
- 次の表は、いくつかのマクロと関数を宣言し、コントロールのクラス ファクトリを実装するために使用し、コントロールのライセンスを取得します。  
+ 次の表は、いくつかのマクロと関数を宣言し、コントロールのクラス ファクトリを実装するために使用して、コントロールのライセンス。  
   
 ### <a name="class-factories-and-licensing"></a>クラス ファクトリとライセンス  
   
 |||  
 |-|-|  
 |[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|OLE コントロールまたはプロパティ ページのクラス ファクトリを宣言します。|  
-|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|コントロールの実装`GetClassID`関数し、クラス ファクトリのインスタンスを宣言します。|  
+|[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|コントロールの実装`GetClassID`関数をクラス ファクトリのインスタンスを宣言します。|  
 |[BEGIN_OLEFACTORY](#begin_olefactory)|ライセンス関数の宣言を開始します。|  
 |[END_OLEFACTORY](#end_olefactory)|ライセンス関数の宣言を終了します。|  
-|[AfxVerifyLicFile](#afxverifylicfile)|コントロールが特定のコンピューターで使用するライセンスされているかどうかを確認します。|  
+|[AfxVerifyLicFile](#afxverifylicfile)|コントロールが特定のコンピューターで使用するためにライセンスされているかどうかを確認します。|  
   
 ##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
  クラス ファクトリを宣言し、`GetClassID`コントロール クラスのメンバー関数。  
@@ -48,13 +48,13 @@ DECLARE_OLECREATE_EX(class_name)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *それ以外*  
+ *$class_name$*  
  コントロール クラスの名前。  
   
 ### <a name="remarks"></a>Remarks  
- ライセンスをサポートしていないコントロールのコントロールのクラス ヘッダー ファイルでこのマクロを使用します。  
+ ライセンスをサポートしていないコントロールのコントロール クラスのヘッダー ファイルでこのマクロを使用します。  
   
- このマクロは、次のコード サンプルと同じ目的でことに注意してください。  
+ このマクロは、次のコード サンプルと同じ目的ことに注意してください。  
   
  [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
@@ -82,17 +82,17 @@ IMPLEMENT_OLECREATE_EX(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *それ以外*  
+ *$class_name$*  
  コントロールのプロパティ ページ クラスの名前。  
   
  *external_name*  
  アプリケーションに公開されるオブジェクトの名前。  
   
- *l、w1、w2、b1、b2、b3、b4、b5、b6、b7、b8*  
- クラスのコンポーネント**CLSID**です。 これらのパラメーターの詳細については、「解説」を参照してください。 [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)です。  
+ *l、-w1、w2、b1、b2、b3、b4、b5、b6、b7、b8*  
+ クラスの CLSID のコンポーネント。 これらのパラメーターの詳細については、「解説」を参照してください。 [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)します。  
   
 ### <a name="remarks"></a>Remarks  
- このマクロを使用して任意のコントロール クラスの実装ファイルに表示する必要があります、`DECLARE_OLECREATE_EX`マクロまたは`BEGIN_OLEFACTORY`と`END_OLEFACTORY`マクロです。 外部名は、他のアプリケーションに公開されている OLE コントロールの識別子です。 コンテナーでは、この名前を使用して、このコントロール クラスのオブジェクトを要求します。  
+ このマクロは、DECLARE_OLECREATE_EX マクロまたは BEGIN_OLEFACTORY と END_OLEFACTORY マクロを使用するコントロール クラスの実装ファイルに表示する必要があります。 External name は、他のアプリケーションに公開されている OLE コントロールの識別子です。 コンテナーでは、この名前を使用して、このコントロール クラスのオブジェクトを要求します。  
   
 ### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
@@ -105,11 +105,11 @@ BEGIN_OLEFACTORY(class_name)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *それ以外*  
+ *$class_name$*  
  これは、クラス ファクトリを持つコントロール クラスの名前を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- クラス ファクトリ ライセンス関数の宣言後すぐに開始`BEGIN_OLEFACTORY`です。  
+ クラス ファクトリのライセンスの関数の宣言は、BEGIN_OLEFACTORY 後すぐに開始する必要があります。  
   
 ### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
@@ -122,14 +122,14 @@ END_OLEFACTORY(class_name)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *それ以外*  
+ *$class_name$*  
  これは、クラス ファクトリを持つコントロール クラスの名前。  
   
 ### <a name="requirements"></a>必要条件  
   **ヘッダー** afxctl.h  
   
 ##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
- ライセンス ファイルが付けたことを確認するには、この関数を呼び出す`pszLicFileName`OLE コントロールに対して有効です。  
+ ライセンス ファイルがによってという名前を確認するには、この関数を呼び出す`pszLicFileName`は OLE コントロールに対して有効です。  
   
 ```   
 BOOL AFXAPI AfxVerifyLicFile(
@@ -150,7 +150,7 @@ BOOL AFXAPI AfxVerifyLicFile(
  ライセンス ファイルの先頭にあるシーケンスに一致する必要があるバイト シーケンスを指します。  
   
  *cch*  
- 内の文字数*pszLicFileContents*です。  
+ 内の文字数*pszLicFileContents*します。  
   
 ### <a name="return-value"></a>戻り値  
  ライセンス ファイルが存在し、文字のシーケンスで始まる場合は 0 以外*pszLicFileContents*。 それ以外の場合に 0 です。  

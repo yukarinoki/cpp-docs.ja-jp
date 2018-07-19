@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideBar クラス |Microsoft ドキュメント
+title: CMFCAutoHideBar クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 506ef6d9d70f336ad5a8b8df36a07ed5ba6480e6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3278824e565f34a61943b466ccc6ffef9c4f0be0
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337024"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar クラス
 `CMFCAutoHideBar` クラスは、自動非表示機能を実装している、特殊なツール バー クラスです。  
@@ -80,7 +80,7 @@ class CMFCAutoHideBar : public CPane
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(`CPane::AllowShowOnPaneMenu` をオーバーライドします)。|  
 |[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(上書き[cbasepane::calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout))。|  
-|[CMFCAutoHideBar::Create](#create)|コントロール バーを作成し、それにアタッチ、 [CPane](../../mfc/reference/cpane-class.md)オブジェクト。 (上書き[cpane::create](../../mfc/reference/cpane-class.md#create))。|  
+|[CMFCAutoHideBar::Create](#create)|コントロール バーを作成し、それにアタッチします、 [CPane](../../mfc/reference/cpane-class.md)オブジェクト。 (上書き[cpane::create](../../mfc/reference/cpane-class.md#create))。|  
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||  
 |[CMFCAutoHideBar::GetVisibleCount](#getvisiblecount)||  
 |[CMFCAutoHideBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|特殊ウィンドウ メニューが表示されるときにフレームワークによって呼び出されます。 (上書き[cpane::onshowcontrolbarmenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu))。|  
@@ -96,10 +96,10 @@ class CMFCAutoHideBar : public CPane
   
 |name|説明|  
 |----------|-----------------|  
-|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|経由で、ユーザーがマウス カーソルを配置するときに、現在の時間遅延、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、関連付けられたウィンドウをフレームワークが表示されます。|  
+|[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|経由でユーザーがマウス カーソルを配置するときに、現時点までの時間、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、フレームワークが関連付けられているウィンドウを示しています。|  
   
 ## <a name="remarks"></a>Remarks  
- ユーザーがドック ウィンドウを自動非表示モードに切り替えると、フレームワークは自動的に `CMFCAutoHideBar` オブジェクトを作成します。 また、必要に応じて、作成[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)と[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクト。 各 `CAutoHideDockSite` オブジェクトは、個別の `CMFCAutoHideButton` に関連付けられます。  
+ ユーザーがドック ウィンドウを自動非表示モードに切り替えると、フレームワークは自動的に `CMFCAutoHideBar` オブジェクトを作成します。 また、必要な作成[CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)と[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクト。 各 `CAutoHideDockSite` オブジェクトは、個別の `CMFCAutoHideButton` に関連付けられます。  
   
  `CMFCAutoHideBar` クラスは、ユーザーのマウスが `CMFCAutoHideButton` の上に移動したときの `CAutoHideDockSite` の表示を実装しています。 ツール バーが WM_MOUSEMOVE メッセージを受信すると、`CMFCAutoHideBar` がタイマーを開始します。 タイマーが終了したら、ツール バーに WM_TIMER イベント通知を送信します。 ツール バーは、タイマーが開始したときにマウス ポインターが位置していた自動非表示ボタン上にまだマウス ポインターがあるかどうかをチェックして、このイベントを処理します。 ある場合は、アタッチされている `CAutoHideDockSite` が表示されます。  
   
@@ -145,15 +145,15 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- *場合*パラメーターは、アプリケーションで自動的に隠すボタンがあることを示します。 このパラメーターは次のいずれかの値に設定できます。  
+ *場合*パラメーターは、アプリケーションでは、自動的に隠す ボタンが存在する場所を示します。 このパラメーターは次のいずれかの値に設定できます。  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu  
 
@@ -244,14 +244,14 @@ int GetVisibleCount();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay  
- 経由で、ユーザーがマウス カーソルを配置するときに、現在の時間遅延、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、関連付けられたウィンドウをフレームワークが表示されます。  
+ 経由でユーザーがマウス カーソルを配置するときに、現時点までの時間、 [CMFCAutoHideButton クラス](../../mfc/reference/cmfcautohidebutton-class.md)から、フレームワークが関連付けられているウィンドウを示しています。  
   
 ```  
 int CMFCAutoHideBar::m_nShowAHWndDelay = 400;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 経由で、ユーザーがマウス カーソルを配置するときに、`CMFCAutoHideButton`フレームワークは、関連付けられたウィンドウを表示する前に若干の遅延があります。 このパラメーターは、その遅延 (ミリ秒) の長さを決定します。  
+ 経由でユーザーがマウス カーソルを配置するときに、`CMFCAutoHideButton`フレームワークは、関連するウィンドウを表示する前に、わずかに遅延があります。 このパラメーターは、その遅延 (ミリ秒単位) の長さを決定します。  
   
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu  
 
@@ -295,7 +295,7 @@ virtual void SetActiveInGroup(BOOL bActive);
  アクティブに設定する場合は TRUE、それ以外の場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[cpane::setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup)です。  
+ 参照してください[cpane::setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup)します。  
   
 ##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState  
 
@@ -346,7 +346,7 @@ virtual CSize StretchPane(
  この値は、基本実装では使用されません。 派生実装では、サイズを変更するウィンドウの長さを指定するためにこの値を使用します。  
   
  [in]*bVert*  
- この値は、基本実装では使用されません。 派生実装で使用`TRUE`、自動的に隠すバーが垂直方向に折りたたまれているケースを処理して`FALSE`自動的に隠すバーが水平方向に折りたたまれている場合にします。  
+ この値は、基本実装では使用されません。 派生実装で、自動的に隠すバーが水平方向に折りたたまれたケースのハンドルを自動的に隠すバーが垂直方向に折りたたまれている場所の場合と FALSE の場合は true を使用します。  
   
 ### <a name="return-value"></a>戻り値  
  サイズを変更するウィンドウの結果のサイズ。  

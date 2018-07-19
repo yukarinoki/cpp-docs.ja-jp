@@ -1,5 +1,5 @@
 ---
-title: CCommonDialog クラス |Microsoft ドキュメント
+title: CCommonDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: d6821b7a33339b2a143778172caa7a4a22cb101e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335916"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog クラス
 Windows コモン ダイアログの機能をカプセル化したクラスの基底クラスです。  
@@ -43,7 +43,7 @@ class CCommonDialog : public CDialog
 |[CCommonDialog::CCommonDialog](#ccommondialog)|`CCommonDialog` オブジェクトを構築します。|  
   
 ## <a name="remarks"></a>Remarks  
- 次のクラスには、Windows のコモン ダイアログの機能がカプセル化します。  
+ 次のクラスは、Windows のコモン ダイアログの機能をカプセル化します。  
   
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)  
   
@@ -84,10 +84,10 @@ explicit CCommonDialog(CWnd* pParentWnd);
   
 ### <a name="parameters"></a>パラメーター  
  *pParentWnd*  
- 親またはオーナー ウィンドウ オブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ オブジェクトの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
+ 親またはオーナー ウィンドウのオブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ オブジェクトの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。  
   
 ### <a name="remarks"></a>Remarks  
- 参照してください[詳細](../../mfc/reference/cdialog-class.md#cdialog)については完了します。  
+ 参照してください[詳細](../../mfc/reference/cdialog-class.md#cdialog)の完全な情報。  
   
 ## <a name="see-also"></a>関連項目  
  [CDialog クラス](../../mfc/reference/cdialog-class.md)   
@@ -95,7 +95,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
  [CFileDialog クラス](../../mfc/reference/cfiledialog-class.md)   
  [CFontDialog クラス](../../mfc/reference/cfontdialog-class.md)   
  [CColorDialog クラス](../../mfc/reference/ccolordialog-class.md)   
- [メンバー クラス](../../mfc/reference/cpagesetupdialog-class.md)   
+ [CPageSetupDialog クラス](../../mfc/reference/cpagesetupdialog-class.md)   
  [CPrintDialog クラス](../../mfc/reference/cprintdialog-class.md)   
  [CFindReplaceDialog クラス](../../mfc/reference/cfindreplacedialog-class.md)   
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)

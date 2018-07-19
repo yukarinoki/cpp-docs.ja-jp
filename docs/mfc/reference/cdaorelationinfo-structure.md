@@ -1,5 +1,5 @@
 ---
-title: CDaoRelationInfo 構造体 |Microsoft ドキュメント
+title: CDaoRelationInfo 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0fedf6ad90af670a462b0ccac23cc599a1a13e26
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336359"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 構造体
-`CDaoRelationInfo`構造体には、2 つのテーブルのフィールドの間で定義されている関係に関する情報が含まれています、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。  
+`CDaoRelationInfo`構造には、2 つのテーブルのフィールドの間で定義されている関係に関する情報が含まれる、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,43 +46,43 @@ struct CDaoRelationInfo
   
 #### <a name="parameters"></a>パラメーター  
 *m_strName*  
- Relation オブジェクトの一意名します。 詳細については、DAO ヘルプの「名前プロパティ」を参照してください。  
+ Relation オブジェクトの一意名します。 詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。  
   
  *m_strTable*  
- リレーションシップの主テーブルを名前します。  
+ リレーションシップでプライマリ テーブルを名前します。  
   
  *m_strForeignTable*  
- リレーションシップの外部テーブルを名前します。 外部テーブルは、外部キーの格納に使用されるテーブルです。 一般に、外部テーブルを使用して、確立するか、参照整合性を適用します。 外部テーブルは、一対多リレーションシップの"多"側で通常です。 外部テーブルの例では、アメリカ合衆国の州またはカナダの州や顧客の注文のコードを含むテーブルを含めます。  
+ リレーションシップの外部テーブルを名前します。 外部テーブルは、外部キーの格納に使用されるテーブルです。 一般に、外部テーブルを使用して、確立するか、参照整合性を適用します。 外部テーブルは、一対多リレーションシップの"多"側では、通常は。 外部テーブルの例では、アメリカ合衆国の州またはカナダの州や顧客の注文のコードを含むテーブルを含めます。  
   
  *m_lAttributes*  
  リレーションシップの種類についての情報が含まれています。 このメンバーの値には、次のいずれかを指定できます。  
   
-- **dbRelationUnique**リレーションシップは一対一です。  
+- `dbRelationUnique` リレーションシップは一対一です。  
   
-- **dbRelationDontEnforce**関係はありません (参照整合性がありません) を適用します。  
+- `dbRelationDontEnforce` リレーションシップがない (参照整合性がありません) が適用されます。  
   
-- **dbRelationInherited**リレーションシップが 2 つの接続されているテーブルを含む固定データベースに存在します。  
+- `dbRelationInherited` アタッチされた 2 つのテーブルを含む固定データベース内にリレーションシップが存在します。  
   
-- **dbRelationLeft**リレーションシップは、左結合します。 左外部結合には、すべての最初のレコードが含まれています (左側) の 2 つのテーブルでは、2 つ目の (右側) のテーブル内のレコードに一致する値がない場合でもです。  
+- `dbRelationLeft` 関係は、左結合です。 左外部結合には、すべての最初のレコードが含まれます (左側) の 2 つのテーブルでは、値が一致する 2 つ目の (右側) のテーブル内のレコードがない場合でもです。  
   
-- **dbRelationRight**関係は、右外部結合します。 右外部結合には、すべての 2 番目のレコードが含まれます (右側) の 2 つのテーブル (左側) の最初のテーブル内のレコードに一致する値がない場合でもです。  
+- `dbRelationRight` リレーションシップは、右外部結合です。 右外部結合には、すべての 2 番目のレコードが含まれます (右側) の 2 つのテーブルでは、値が一致する最初の (左側) のテーブルにレコードがない場合でもです。  
   
-- **これら**が連鎖的に更新します。  
+- `dbRelationUpdateCascade` 更新プログラムが重ねて表示します。  
   
-- **dbRelationDeleteCascade**が連鎖的に削除します。  
+- `dbRelationDeleteCascade` 削除が重ねて表示します。  
   
 *m_pFieldInfos*  
- 配列へのポインター [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)構造体。 配列には、リレーションシップ内の各フィールドの 1 つのオブジェクトが含まれています。 `m_nFields`データ メンバーは、配列要素の数を示します。  
+ 配列へのポインター [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)構造体。 配列には、1 つのオブジェクト リレーションシップ内の各フィールドが含まれています。 `m_nFields`データ メンバーが配列の要素の数を示します。  
   
 *m_nFields*  
- 数`CDaoRelationFieldInfo`内のオブジェクト、`m_pFieldInfos`データ メンバーです。  
+ 数`CDaoRelationFieldInfo`内のオブジェクト、`m_pFieldInfos`データ メンバー。  
   
 ## <a name="remarks"></a>Remarks  
- プライマリとセカンダリ上への参照は、情報がによって返される方法を示すため、 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)クラスのメンバー関数`CDaoDatabase`です。  
+ プライマリとセカンダリの上への参照情報がによって返される方法を示すため、 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)クラスのメンバー関数`CDaoDatabase`します。  
   
- リレーションシップ オブジェクトは、MFC クラスでは表されません。 代わりに、MFC オブジェクトの基になる DAO オブジェクトを使用して、`CDaoDatabase`クラス関係オブジェクトのコレクションを保持する:`CDaoDatabase`関係については、の各アイテムにアクセスするメンバー関数を提供して一度にすべてを使ってアクセスできる、 `CDaoRelationInfo`オブジェクトを呼び出して、`GetRelationInfo`親データベース オブジェクトのメンバー関数。  
+ リレーションシップ オブジェクトは、MFC クラスでは表されません。 代わりに、MFC オブジェクトの基になる、DAO オブジェクト、`CDaoDatabase`クラスがリレーションシップ オブジェクトのコレクションを保持:`CDaoDatabase`の関係については、各アイテムにアクセスする装置メンバー関数を使ってアクセスできるすべて一度に、 `CDaoRelationInfo`オブジェクトを呼び出すことによって、`GetRelationInfo`親データベース オブジェクトのメンバー関数。  
   
- によって取得される情報、 [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)メンバー関数は、`CDaoRelationInfo`構造体。 `CDaoRelationInfo` 定義、`Dump`デバッグでメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoRelationInfo`オブジェクト。  
+ によって取得される情報、 [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)にメンバー関数が格納されている、`CDaoRelationInfo`構造体。 `CDaoRelationInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoRelationInfo`オブジェクト。  
   
 ## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdao.h  

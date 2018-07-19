@@ -1,5 +1,5 @@
 ---
-title: CMapWordToOb クラス |Microsoft ドキュメント
+title: CMapWordToOb クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d9f9554f0ba8daf5a96f0fa2daa32e0e20469bf7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335406"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb クラス
 16 ビット ワードをキーとした `CObject` ポインターのマップをサポートします。  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CMapWordToOb`クラスのメンバー関数に似ています[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)です。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所が表示、`CString`または**const**へのポインター **char**関数パラメーターまたは戻り値は、置き換える**WORD**です。  
+ メンバー関数は、`CMapWordToOb`クラスのメンバー関数のような[CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)します。 メンバー関数については `CMapStringToOb` クラスの説明を参照してください。 任意の場所を確認、`CString`または**const**へのポインター **char**関数パラメーターまたは戻り値は、WORD に置き換えてください。  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   
@@ -81,34 +81,34 @@ class CMapWordToOb : public CObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップの要素の数を返します。|  
+|[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ要素の数を返します。|  
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|現在のハッシュ テーブル内の要素数を決定します。|  
 |[CMapStringToOb::GetNextAssoc](../../mfc/reference/cmapstringtoob-class.md#getnextassoc)|反復処理するためには、次の要素を取得します。|  
-|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|このマップの要素の数を返します。|  
+|[CMapStringToOb::GetSize](../../mfc/reference/cmapstringtoob-class.md#getsize)|このマップ要素の数を返します。|  
 |[CMapStringToOb::GetStartPosition](../../mfc/reference/cmapstringtoob-class.md#getstartposition)|最初の要素の位置を返します。|  
 |[CMapStringToOb::HashKey](../../mfc/reference/cmapstringtoob-class.md#hashkey)|指定したキーのハッシュ値を計算します。|  
 |[CMapStringToOb::InitHashTable](../../mfc/reference/cmapstringtoob-class.md#inithashtable)|ハッシュ テーブルを初期化します。|  
-|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|マップが空の状態 (要素がない) をテストします。|  
-|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Void ポインター キーに基づく void ポインターを検索します。 指す、エンティティではなく、ポインター値は、キーの比較に使用されます。|  
+|[CMapStringToOb::IsEmpty](../../mfc/reference/cmapstringtoob-class.md#isempty)|マップが空の状態 (要素がない場合) をテストします。|  
+|[CMapStringToOb::Lookup](../../mfc/reference/cmapstringtoob-class.md#lookup)|Void ポインター キーに基づく void ポインターを検索します。 エンティティではなく、ポインター値は、キーの比較に使用されます。|  
 |[CMapStringToOb::LookupKey](../../mfc/reference/cmapstringtoob-class.md#lookupkey)|指定したキー値に関連付けられているキーへの参照を返します。|  
 |[CMapStringToOb::RemoveAll](../../mfc/reference/cmapstringtoob-class.md#removeall)|このマップからすべての要素を削除します。|  
 |[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)|キーで指定された要素を削除します。|  
-|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|マップに要素を挿入します。一致するキーが見つかった場合は、既存の要素を置換します。|  
+|[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)|マップに要素を挿入します。一致するキーが見つかった場合は、既存の要素を置き換えます。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入などの演算子の代替`SetAt`です。|  
+|[CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|マップに要素を挿入、演算子の代替の`SetAt`します。|  
   
 ## <a name="remarks"></a>Remarks  
- `CMapWordToOb` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 各要素がシリアル化されるさらに、アーカイブ、オーバー ロードされた出力ストリームにマップが格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数。  
+ `CMapWordToOb` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 各要素は、アーカイブ、オーバー ロードされた挿入のあるいずれかにマップが格納されている場合にシリアル化。 ( **<<**) 演算子、または、`Serialize`メンバー関数。  
   
- 個別にダンプする必要がある場合**WORD** -  `CObject`要素、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
+ 個々 の単語のダンプが必要な場合`CObject`要素、1 以上に、ダンプ コンテキストの深さを設定する必要があります。  
   
- ときに、`CMapWordToOb`オブジェクトを削除すると、またはその要素が削除されたときに、`CObject`ポインターを削除します。 によって参照されるオブジェクト、`CObject`ポインターは破棄されません。  
+ ときに、`CMapWordToOb`オブジェクトを削除すると、またはその要素が削除されます、`CObject`ポインターを削除します。 によって参照されるオブジェクト、`CObject`ポインターは破棄されません。  
   
- 詳細については`CMapWordToOb`、記事を参照して[コレクション](../../mfc/collections.md)です。  
+ 詳細については`CMapWordToOb`、記事をご覧ください[コレクション](../../mfc/collections.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  

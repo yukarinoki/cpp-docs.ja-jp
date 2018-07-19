@@ -1,5 +1,5 @@
 ---
-title: CDocument クラス |Microsoft ドキュメント
+title: CDocument クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e0d67012afe34cf3fe2c4633f2d838d1f3bfb49
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c6822957abfa98dab737494bb2924c3ecf84090e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337503"
 ---
 # <a name="cdocument-class"></a>CDocument クラス
 ユーザーが定義するドキュメント クラスの基本機能が用意されています。  
@@ -162,93 +162,93 @@ class CDocument : public CCmdTarget
 |[CDocument::BeginReadChunks](#beginreadchunks)|チャンクの読み取りを初期化します。|  
 |[CDocument::CanCloseFrame](#cancloseframe)|オーバーライド可能な; 高度なこのドキュメントを表示するフレーム ウィンドウを閉じる前に呼び出されます。|  
 |[CDocument::ClearChunkList](#clearchunklist)|チャンクの一覧をクリアします。|  
-|[CDocument::ClearPathName](#clearpathname)|ドキュメント オブジェクトのパスを消去します。|  
-|[のに](#deletecontents)|ドキュメントのクリーンアップを実行するには、呼び出されます。|  
+|[CDocument::ClearPathName](#clearpathname)|ドキュメント オブジェクトのパスをクリアします。|  
+|[のに](#deletecontents)|ドキュメントのクリーンアップを実行すると呼ばれます。|  
 |[CDocument::FindChunk](#findchunk)|指定した GUID のチャンクを検索します。|  
-|[CDocument::GetAdapter](#getadapter)|実装するオブジェクトへのポインターを返します`IDocument`インターフェイスです。|  
+|[CDocument::GetAdapter](#getadapter)|実装するオブジェクトへのポインターを返します`IDocument`インターフェイス。|  
 |[CDocument::GetDocTemplate](#getdoctemplate)|ドキュメントの種類を説明するドキュメント テンプレートへのポインターを返します。|  
-|[CDocument::GetFile](#getfile)|目的にポインターを返します`CFile`オブジェクト。|  
+|[CDocument::GetFile](#getfile)|必要なポインターを返します`CFile`オブジェクト。|  
 |[CDocument::GetFirstViewPosition](#getfirstviewposition)|最初の位置を返しますビューの一覧で、。イテレーションを開始するために使用します。|  
 |[CDocument::GetNextView](#getnextview)|ドキュメントに関連付けられているビューの一覧を反復処理します。|  
 |[CDocument::GetPathName](#getpathname)|ドキュメントのデータ ファイルのパスを返します。|  
-|[CDocument::GetThumbnail](#getthumbnail)|サムネイルを表示するサムネイル プロバイダーで使用されるビットマップを作成するには、呼び出されます。|  
+|[CDocument::GetThumbnail](#getthumbnail)|サムネイルを表示するサムネイル プロバイダーによって使用されるビットマップを作成するには、呼び出されます。|  
 |[CDocument::GetTitle](#gettitle)|ドキュメントのタイトルを返します。|  
 |[CDocument::InitializeSearchContent](#initializesearchcontent)|検索ハンドラーの検索コンテンツを初期化するために呼び出されます。|  
-|[CDocument::IsModified](#ismodified)|ドキュメントが最後に保存された後に変更されているかどうかを示します。|  
-|[CDocument::IsSearchAndOrganizeHandler](#issearchandorganizehandler)|指示するかどうかのこのインスタンス`CDocument`検索と整理のハンドラーのオブジェクトが作成されました。|  
-|[CDocument::LoadDocumentFromStream](#loaddocumentfromstream)|ストリームからドキュメント データを読み込むと呼ばれます。|  
-|[CDocument::OnBeforeRichPreviewFontChanged](#onbeforerichpreviewfontchanged)|リッチ プレビューのフォントを変更する前に呼び出されます。|  
+|[CDocument::IsModified](#ismodified)|最後に保存してから、ドキュメントが変更されたかどうかを示します。|  
+|[CDocument::IsSearchAndOrganizeHandler](#issearchandorganizehandler)|通知するかどうかのこのインスタンス`CDocument`ハンドラーの検索と整理のオブジェクトが作成されました。|  
+|[CDocument::LoadDocumentFromStream](#loaddocumentfromstream)|ストリームからドキュメントのデータを読み込むと呼ばれます。|  
+|[CDocument::OnBeforeRichPreviewFontChanged](#onbeforerichpreviewfontchanged)|リッチ プレビューのフォントが変更される前に呼び出されます。|  
 |[CDocument::OnChangedViewList](#onchangedviewlist)|ビューが追加またはドキュメントから削除された後に呼び出されます。|  
 |[は](#onclosedocument)|文書を閉じると呼ばれます。|  
-|[CDocument::OnCreatePreviewFrame](#oncreatepreviewframe)|リッチ プレビュー用プレビューのフレームを作成する必要があるときに、フレームワークによって呼び出されます。|  
-|[CDocument::OnDocumentEvent](#ondocumentevent)|ドキュメントのイベントに応答にフレームワークによって呼び出されます。|  
-|[CDocument::OnDrawThumbnail](#ondrawthumbnail)|サムネイルのコンテンツを描画する派生クラスでは、このメソッドをオーバーライドします。|  
-|[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|ドキュメント データをストリームから読み込む必要があるときに、フレームワークによって呼び出されます。|  
+|[CDocument::OnCreatePreviewFrame](#oncreatepreviewframe)|リッチ プレビュー用プレビュー フレームを作成する必要があるときに、フレームワークによって呼び出されます。|  
+|[CDocument::OnDocumentEvent](#ondocumentevent)|ドキュメントのイベントに応答フレームワークによって呼び出されます。|  
+|[CDocument::OnDrawThumbnail](#ondrawthumbnail)|サムネイルのコンテンツを描画するために派生クラスでこのメソッドをオーバーライドします。|  
+|[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|ストリームからドキュメント データを読み込む必要があるときに、フレームワークによって呼び出されます。|  
 |[CDocument::OnNewDocument](#onnewdocument)|新しいドキュメントを作成するには、呼び出されます。|  
-|[CDocument::OnOpenDocument](#onopendocument)|開くには、既存のドキュメントと呼ばれます。|  
-|[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|プレビュー ハンドラー、フォーカス関数の呼び出しから HWND を返すように指示します。|  
-|[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|プレビュー ハンドラー、プレビュー ハンドラーが実行されているプロセスのメッセージ ポンプから渡されたキー入力を処理するように指示します。|  
-|[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|リッチ プレビューの背景色が変更されたときに呼び出されます。|  
-|[CDocument::OnRichPreviewFontChanged](#onrichpreviewfontchanged)|リッチ プレビュー フォントが変更されたときに呼び出されます。|  
-|[CDocument::OnRichPreviewSiteChanged](#onrichpreviewsitechanged)|リッチ プレビューのサイトが変更されたときに呼び出されます。|  
+|[CDocument::OnOpenDocument](#onopendocument)|既存のドキュメントを開くと呼ばれます。|  
+|[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|プレビュー ハンドラーを呼び出し元の GetFocus 関数から HWND を返すよう指示します。|  
+|[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|プレビュー ハンドラーが実行されているプロセスのメッセージ ポンプから渡されたキーストロークを処理するために、プレビュー ハンドラーに指示します。|  
+|[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|豊富なプレビューの背景色が変更されたときに呼び出されます。|  
+|[CDocument::OnRichPreviewFontChanged](#onrichpreviewfontchanged)|リッチ プレビューのフォントが変更されたときに呼び出されます。|  
+|[CDocument::OnRichPreviewSiteChanged](#onrichpreviewsitechanged)|リッチ プレビュー サイトが変更されたときに呼び出されます。|  
 |[CDocument::OnRichPreviewTextColorChanged](#onrichpreviewtextcolorchanged)|リッチ プレビュー テキストの色が変更されたときに呼び出されます。|  
-|[単一](#onsavedocument)|ドキュメントをディスクに保存するには、呼び出されます。|  
+|[単一](#onsavedocument)|ドキュメントをディスクに保存すると呼ばれます。|  
 |[CDocument::OnUnloadHandler](#onunloadhandler)|プレビュー ハンドラーがアンロードされるときに、フレームワークによって呼び出されます。|  
 |[CDocument::PreCloseFrame](#precloseframe)|フレーム ウィンドウを閉じる前に呼び出されます。|  
 |[CDocument::ReadNextChunkValue](#readnextchunkvalue)|次のチャンク値を読み取ります。|  
-|[CDocument::ReleaseFile](#releasefile)|他のアプリケーションで使用できるようにファイルを解放します。|  
+|[CDocument::ReleaseFile](#releasefile)|他のアプリケーションで使用できるようにするファイルを解放します。|  
 |[CDocument::RemoveChunk](#removechunk)|指定した GUID のチャンクを削除します。|  
 |[CDocument::RemoveView](#removeview)|ドキュメントからビューをデタッチします。|  
 |[CDocument::ReportSaveLoadException](#reportsaveloadexception)|オーバーライド可能な; 高度な開いているときに呼び出されますまたは保存操作は、例外のため完了できません。|  
-|[に対して、順番](#savemodified)|オーバーライド可能な; 高度なドキュメントを保存するかどうかをユーザーに確認するには、呼び出されます。|  
-|[CDocument::SetChunkValue](#setchunkvalue)|チャンク値を設定します。|  
+|[に対して、順番](#savemodified)|オーバーライド可能な; 高度なドキュメントを保存するかどうかをユーザーに要求と呼ばれます。|  
+|[CDocument::SetChunkValue](#setchunkvalue)|チャンクの値を設定します。|  
 |[CDocument::SetModifiedFlag](#setmodifiedflag)|最後に保存してから、ドキュメントを変更したことを示すフラグを設定します。|  
 |[CDocument::SetPathName](#setpathname)|ドキュメントで使用されるデータ ファイルのパスを設定します。|  
 |[CDocument::SetTitle](#settitle)|ドキュメントのタイトルを設定します。|  
-|[CDocument::UpdateAllViews](#updateallviews)|ドキュメントのすべてのビューが変更されたに通知します。|  
+|[CDocument::UpdateAllViews](#updateallviews)|ドキュメントのすべてのビューが変更されたかを通知します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CDocument::OnFileSendMail](#onfilesendmail)|ドキュメントを添付して、メッセージを送信します。|  
+|[CDocument::OnFileSendMail](#onfilesendmail)|ドキュメントを添付して、メール メッセージを送信します。|  
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|メールのサポートが存在する場合は、メール送信コマンドを有効にします。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|指定`CDocument`サムネイルの dllhost によってオブジェクトが作成されます。 チェックインする必要があります`CView::OnDraw`です。|  
-|[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|指定する`CDocument`の prevhost によってオブジェクトが作成された`Rich Preview`です。 チェックインする必要があります`CView::OnDraw`です。|  
-|[CDocument::m_bSearchMode](#m_bsearchmode)|指定する`CDocument`インデクサーまたはその他の検索アプリケーションによってオブジェクトが作成されます。|  
+|[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|指定します`CDocument`サムネイルの dllhost でオブジェクトが作成されます。 チェックインする必要があります`CView::OnDraw`します。|  
+|[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|指定します`CDocument`の prevhost によってオブジェクトが作成された`Rich Preview`します。 チェックインする必要があります`CView::OnDraw`します。|  
+|[CDocument::m_bSearchMode](#m_bsearchmode)|指定します`CDocument`インデクサーまたはその他の検索アプリケーションでオブジェクトが作成されます。|  
 |[CDocument::m_clrRichPreviewBackColor](#m_clrrichpreviewbackcolor)|リッチ プレビュー ウィンドウの背景色を指定します。 この色は、ホストによって設定されます。|  
 |[CDocument::m_clrRichPreviewTextColor](#m_clrrichpreviewtextcolor)|リッチ プレビュー ウィンドウの前景色を指定します。 この色は、ホストによって設定されます。|  
-|[CDocument::m_lfRichPreviewFont](#m_lfrichpreviewfont)|リッチ プレビュー ウィンドウのテキストのフォントを指定します。 このフォントの詳細については、ホストによって設定されます。|  
+|[CDocument::m_lfRichPreviewFont](#m_lfrichpreviewfont)|リッチ プレビュー ウィンドウのテキストのフォントを指定します。 このフォント情報は、ホストによって設定されます。|  
   
 ## <a name="remarks"></a>Remarks  
- ドキュメントでは、ユーザーは、通常ファイルを開くコマンドを使用して開きし、ファイルの保存のコマンドを使用して保存するデータの単位を表します。  
+ ドキュメントでは、ユーザーが通常ファイルを開くコマンドを使用して表示してファイルの保存のコマンドを使用して保存データの単位を表します。  
   
- `CDocument` ドキュメントの作成、保存して、読み込みなどの標準的な操作をサポートしています。 フレームワークによって定義されたインターフェイスを使用して、ドキュメントを操作する`CDocument`です。  
+ `CDocument` ドキュメントを作成し、それを読み込み、保存などの標準的な操作をサポートしています。 フレームワークによって定義されたインターフェイスを使用して、ドキュメントを操作する`CDocument`します。  
   
- アプリケーションのドキュメントの 1 つ以上の型をサポートできます。たとえば、アプリケーションでは、スプレッドシートやテキスト ドキュメントの両方をサポート可能性があります。 ドキュメントの種類ごとに、関連するドキュメント テンプレートドキュメント テンプレートでは、そのドキュメントの種類に使用がどのようなリソース (たとえば、メニューのアイコン、またはアクセラレータ テーブル) を指定します。 各ドキュメントには、それに関連するへのポインターが含まれています。`CDocTemplate`オブジェクト。  
+ アプリケーションのドキュメントの 1 つ以上の型をサポートできます。たとえば、アプリケーションでは、スプレッドシートやテキスト ドキュメントの両方をサポート可能性があります。 ドキュメントの種類ごとに、関連付けられたドキュメント テンプレートドキュメント テンプレートでは、そのドキュメントの種類を使用するリソース (たとえば、メニューのアイコン、またはアクセラレータ テーブル) を指定します。 各ドキュメントには、それに関連付けられたへのポインターが含まれています。`CDocTemplate`オブジェクト。  
   
- ユーザーを使用してドキュメントの対話、 [CView](../../mfc/reference/cview-class.md)それに関連付けられているオブジェクト。 ビューはドキュメント フレーム ウィンドウのイメージをレンダリングしでユーザー入力は、ドキュメントに対する操作として解釈します。 ドキュメントには、関連付けられている複数のビューを持つことができます。 ユーザーがウィンドウにドキュメントを開いたときに、フレームワークはビューを作成し、ドキュメントにアタッチします。 ドキュメント テンプレートでは、ドキュメントの種類を表示する使用ビューとフレームのウィンドウの種類を指定します。  
+ ユーザーを使用するドキュメントと対話する、 [CView](../../mfc/reference/cview-class.md)関連付けられているオブジェクト。 ビューは、フレーム ウィンドウにドキュメントのイメージをレンダリングし、ドキュメントに対する操作としてユーザー入力を解釈します。 ドキュメントには、関連付けられている複数のビューを持つことができます。 ユーザーは、ドキュメント上のウィンドウが開いたら、フレームワークはビューを作成し、ドキュメントにアタッチします。 ドキュメント テンプレートでは、どのような種類のビューとフレームのウィンドウはドキュメントの種類を表示するために使用を指定します。  
   
- フレームワークの標準の一部であるドキュメント コマンド ルーティングし、その結果 (ファイルの保存のメニュー項目) などの標準のユーザー インターフェイス コンポーネントからコマンドを受信します。 ドキュメントは、アクティブなビューが転送されたコマンドを受信します。 ドキュメントでは、特定のコマンドを処理しない場合は、それを管理するドキュメント テンプレートにコマンドを転送します。  
+ ドキュメント、framework の標準の一部では、ルーティング コマンドし、その結果 (ファイルの保存のメニュー項目) などの標準的なユーザー インターフェイス コンポーネントからのコマンドを受信します。 ドキュメントでは、アクティブなビューが転送されたコマンドを受信します。 ドキュメントでは、特定のコマンドを処理しない場合は、コマンドによって管理されるドキュメント テンプレートを転送します。  
   
- ドキュメントのデータが変更されると、そのビューの各変更を反映させる必要があります。 `CDocument` 提供、 [UpdateAllViews](#updateallviews)ビューがそれ自体を必要に応じて、repaint ように、ビューにこのような変更を通知するためのメンバー関数。 フレームワークもを閉じる前に変更されたファイルを保存するユーザーに求めます。  
+ ドキュメントのデータが変更されたときにそのビューの各変更を反映させる必要があります。 `CDocument` 提供、 [UpdateAllViews](#updateallviews)ビューを必要に応じて再描画自体は、ビューに、このような変更を通知するためのメンバー関数。 フレームワークには、それを閉じる前に、変更されたファイルを保存するユーザーも求められます。  
   
  一般的なアプリケーションでドキュメントを実装するには、次の操作を行う必要があります。  
   
 -   クラスを派生`CDocument`ドキュメントの種類ごとにします。  
   
--   各ドキュメントのデータを格納するためのメンバー変数を追加します。  
+-   各ドキュメントのデータを格納するメンバー変数を追加します。  
   
--   読み取りと、ドキュメントのデータを変更するためのメンバー関数を実装します。 ドキュメントのビューとは、これらのメンバー関数の最も重要なユーザーです。  
+-   読み取りおよびドキュメントのデータを変更するためのメンバー関数を実装します。 ドキュメントのビューは、これらのメンバー関数の最も重要なユーザーです。  
   
--   上書き、 [cobject::serialize](../../mfc/reference/cobject-class.md#serialize)ディスクと、ドキュメントのデータの読み取りし、書き込みをするドキュメント クラスのメンバー関数。  
+-   上書き、 [cobject::serialize](../../mfc/reference/cobject-class.md#serialize)やディスクから、ドキュメントのデータを読み書きするドキュメント クラスのメンバー関数。  
   
- `CDocument` メール サポート (MAPI) が存在する場合、メールを使用して、ドキュメントの送信をサポートします。 記事を参照して[MAPI](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)です。  
+ `CDocument` サポート メール サポート (MAPI) が存在する場合にメールを使ってドキュメントを送信します。 記事を参照して[MAPI](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)します。  
   
  詳細については`CDocument`を参照してください[シリアル化](../../mfc/serialization-in-mfc.md)、[ドキュメント/ビュー アーキテクチャに関するトピック](../../mfc/document-view-architecture.md)、および[ドキュメント/ビューの作成](../../mfc/document-view-creation.md)です。  
   
@@ -271,12 +271,12 @@ void AddView(CView* pView);
   
 ### <a name="parameters"></a>パラメーター  
  *pView*  
- 追加されるビューへのポインター。  
+ 追加するビューを指します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、ドキュメントに関連付けられているビューの一覧に、指定されたビューを追加します。関数は、このドキュメントにもビューのドキュメント ポインターを設定します。 新しく作成されたビュー オブジェクトをドキュメントにアタッチするときに、フレームワークはこの関数を呼び出しますこれは、応答ファイルを新しいファイルを開く、または新しいウィンドウのコマンドまたは分割ウィンドウを分割すると発生します。  
+ この関数は、ドキュメントに関連付けられたビューの一覧に、指定されたビューを追加します。また、関数は、このドキュメントに、ビューのドキュメントのポインターを設定します。 ドキュメントを新しく作成されたビュー オブジェクトをアタッチするときに、フレームワークはこの関数を呼び出しますこれは、応答ファイルの新しいファイルを開く、または新しいウィンドウのコマンドまたはスプリッター ウィンドウを分割すると発生します。  
   
- 手動で作成して、ビューをアタッチする場合にのみ、この関数を呼び出します。 Framework のドキュメントとビューを定義することで接続することは通常、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)ドキュメント クラス、ビューのクラスとフレーム ウィンドウ クラスに関連付けるオブジェクト。  
+ 手動で作成して、ビューをアタッチする場合にのみ、この関数を呼び出します。 ドキュメントとビューを定義することによって接続フレームワークをできるように、通常、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)クラスのドキュメント、ビューのクラスとフレーム ウィンドウ クラスに関連付けるオブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocViewSDI#12](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]  
@@ -302,20 +302,20 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
  ドキュメントにアタッチされているビューのフレーム ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- フレーム ウィンドウを閉じるには安全である場合は 0 以外。それ以外の場合 0 を返します。  
+ フレーム ウィンドウを閉じるには安全である場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 既定の実装では、他のフレーム ウィンドウのドキュメントを表示するかを確認します。 指定したフレーム ウィンドウがドキュメントを表示する最後の 1 つの場合は、関数が変更された場合は、ドキュメントを保存するように求めるプロンプトを表示します。 フレーム ウィンドウが閉じられたときに、特別な処理を実行する場合は、この関数をオーバーライドします。 これは、高度なオーバーライド可能です。  
+ ドキュメントを表示するその他のフレーム ウィンドウがあるかどうか、既定の実装を確認します。 指定したフレーム ウィンドウがドキュメントを表示する最後の 1 つである場合は、関数が変更された場合に、ドキュメントを保存するように求めるプロンプトを表示します。 フレーム ウィンドウが閉じられたときに、特別な処理を実行する場合は、この関数をオーバーライドします。 これは、高度なオーバーライド可能な。  
   
 ##  <a name="cdocument"></a>  CDocument::CDocument  
- 構築、 **CDocument**オブジェクト。  
+ `CDocument` オブジェクトを構築します。  
   
 ```  
 CDocument();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークは、ドキュメントの作成を処理します。 上書き、[でも実質的](#onnewdocument)ドキュメントごと単位での初期化を実行するメンバー関数これは、シングル ドキュメント インターフェイス (SDI) アプリケーションで特に重要です。  
+ フレームワークは、ドキュメントの作成を処理します。 上書き、[でも実質的](#onnewdocument)ドキュメント単位; での初期化を実行するメンバー関数はこれには、シングル ドキュメント インターフェイス (SDI) アプリケーションで特に重要です。  
   
 ##  <a name="clearchunklist"></a>  CDocument::ClearChunkList  
  チャンクの一覧をクリアします。  
@@ -327,24 +327,24 @@ virtual void ClearChunkList ();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="clearpathname"></a>  CDocument::ClearPathName  
- ドキュメント オブジェクトのパスを消去します。  
+ ドキュメント オブジェクトのパスをクリアします。  
   
 ```  
 virtual void ClearPathName();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- パスをオフにすると、`CDocument`オブジェクトにより、アプリケーションは、次には、ドキュメントの保存時にユーザーに確認します。 これにより、**保存**コマンドの動作と同様に、**名前を付けて保存**コマンド。  
+ パスをオフにすると、`CDocument`オブジェクトにより、アプリケーションは、ドキュメントが次に保存するときにユーザーに確認します。 これにより、**保存**コマンドと同様に動作を**名前を付けて保存**コマンド。  
   
 ##  <a name="deletecontents"></a>  のに  
- 破棄せずに、ドキュメントのデータを削除するためにフレームワークによって呼び出される、 **CDocument**オブジェクト自体です。  
+ 破棄せずに、ドキュメントのデータを削除するためにフレームワークによって呼び出される、`CDocument`オブジェクト自体です。  
   
 ```  
 virtual void DeleteContents();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- ドキュメントが破棄される直前に呼び出されます。 再利用される前に、ドキュメントが空であることを確認するが呼び出されます。 これはドキュメントを 1 つのみを使用して、SDI アプリケーションにとって特に重要です。ユーザーを作成または別のドキュメントを開くたびに、ドキュメントが再利用されます。 編集すべてクリア やドキュメントのデータをすべて削除する同様のコマンドを実装するには、この関数を呼び出します。 この関数の既定の実装は、何も行いません。 ドキュメント内のデータを削除するには、この関数をオーバーライドします。  
+ ドキュメントが破棄される直前に呼び出されます。 再利用される前に、ドキュメントが空であることを確認することも呼び出されます。 これは、ドキュメントを 1 つのみを使用して、SDI アプリケーションにとって特に重要です。ドキュメントは、ユーザーを作成または別のドキュメントを開くたびに再利用されます。 "クリアを編集する All"またはドキュメントのデータをすべて削除する同様のコマンドを実装するには、この関数を呼び出します。 この関数の既定の実装は、何も行いません。 ドキュメント内のデータを削除するには、この関数をオーバーライドします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#57](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]  
@@ -366,31 +366,31 @@ virtual POSITION FindChunk(
  検索するには、チャンクの PID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合は、内部のチャンク リスト内の位置。 それ以外の場合`NULL`です。  
+ 成功した場合は、内部のチャンク リスト内の位置。 それ以外の場合は NULL です。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="getadapter"></a>  CDocument::GetAdapter  
- 実装するオブジェクトへのポインターを返します、`IDocument`インターフェイスです。  
+ 実装するオブジェクトへのポインターを返します、`IDocument`インターフェイス。  
   
 ```  
 virtual ATL::IDocument* GetAdapter();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 実装するオブジェクトへのポインター、`IDocument`インターフェイスです。  
+ 実装するオブジェクトへのポインター、`IDocument`インターフェイス。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="getdoctemplate"></a>  CDocument::GetDocTemplate  
- この関数では、このドキュメントの種類のドキュメント テンプレートへのポインターを取得します。  
+ このドキュメントの種類のドキュメント テンプレートをポインターを取得するには、この関数を呼び出します。  
   
 ```  
 CDocTemplate* GetDocTemplate() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- このドキュメントの種類のドキュメント テンプレートへのポインターまたは**NULL**ドキュメント テンプレートでは、ドキュメントは管理されていない場合。  
+ このドキュメントの種類、またはドキュメントがドキュメント テンプレートで管理されていない場合は NULL のドキュメント テンプレートへのポインター。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#58](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]  
@@ -410,23 +410,23 @@ virtual CFile* GetFile(
  目的のファイルのパスを表す文字列。 相対パスまたは絶対パスがあります。  
   
  *pError*  
- 操作の完了状態を示す既存のファイルの例外オブジェクトへのポインター。  
+ 操作の完了ステータスを示す既存のファイルの例外オブジェクトへのポインター。  
   
  *nOpenFlags*  
- 共有とアクセス モードです。 ファイルを開くときに実行するアクションを指定します。 CFile コンス トラクターで記載されているオプションを組み合わせることができます[ほか](../../mfc/reference/cfile-class.md#cfile)ビットごとの OR を使用して (&#124;) 演算子。 1 つのアクセス許可と 1 つの共有のオプションが必要です。**modeCreate**と**modeNoInherit**モードは省略可能です。  
+ 共有とアクセス モード。 ファイルを開くときに実行するアクションを指定します。 CFile コンス トラクターに示すオプションを組み合わせることができます[ほか](../../mfc/reference/cfile-class.md#cfile)ビットごとの OR を使用して (&#124;) 演算子。 1 つのアクセス許可と 1 つの共有オプションが必要です。`modeCreate`と`modeNoInherit`モードは省略可能です。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CFile`オブジェクト。  
+ ポインターを`CFile`オブジェクト。  
   
 ##  <a name="getfirstviewposition"></a>  CDocument::GetFirstViewPosition  
- ドキュメントに関連付けられているビューの一覧内の最初のビューの位置を取得するには、この関数を呼び出します。  
+ ドキュメントに関連付けられたビューの一覧で最初のビューの位置を取得するには、この関数を呼び出します。  
   
 ```  
 virtual POSITION GetFirstViewPosition() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A**位置**を反復処理に使用できる値、 [GetNextView](#getnextview)メンバー関数。  
+ 位置の値を使用したイテレーションを使用できる、 [GetNextView](#getnextview)メンバー関数。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
@@ -440,29 +440,29 @@ virtual CView* GetNextView(POSITION& rPosition) const;
   
 ### <a name="parameters"></a>パラメーター  
  *rPosition*  
- 参照、**位置**を以前の呼び出しによって返される値、`GetNextView`または[GetFirstViewPosition](#getfirstviewposition)メンバー関数。 この値にする必要がありますいない**NULL**です。  
+ 以前の呼び出しによって返される位置の値への参照、`GetNextView`または[GetFirstViewPosition](#getfirstviewposition)メンバー関数。 この値は、NULL は指定できません。  
   
 ### <a name="return-value"></a>戻り値  
- によって識別されるビューへのポインター *rPosition*です。  
+ 識別されるビューへのポインター *rPosition*します。  
   
 ### <a name="remarks"></a>Remarks  
- によって識別されるビューを返します*rPosition*し、設定*rPosition*を**位置**一覧における次のビューの値。 取得したビューが、一覧内の最後の*rPosition*に設定されている**NULL**です。  
+ 識別されるビューを返します*rPosition*し、設定*rPosition*の一覧で、[次へ] ビューの位置の値にします。 リスト内の最後は、取得したビュー *rPosition* NULL に設定されます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
 ##  <a name="getpathname"></a>  CDocument::GetPathName  
- この関数では、ドキュメントのディスク ファイルの完全修飾パスを取得します。  
+ ドキュメントのディスク ファイルの完全修飾パスを取得するには、この関数を呼び出します。  
   
 ```  
 const CString& GetPathName() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ドキュメントの完全修飾パス。 ドキュメントが保存されていないに関連付けられているディスク ファイルがない場合、この文字列が空です。  
+ ドキュメントの完全修飾パス。 文書が保存されていないかに関連付けられているディスク ファイルがない場合、この文字列が空です。  
   
 ##  <a name="getthumbnail"></a>  CDocument::GetThumbnail  
- サムネイルを表示するサムネイルのプロバイダーで使用されるビットマップを作成します。  
+ サムネイルを表示するサムネイルのプロバイダーによって使用されるビットマップを作成します。  
   
 ```  
 virtual BOOL GetThumbnail(
@@ -476,25 +476,25 @@ virtual BOOL GetThumbnail(
  ビットマップの高さと幅を指定します。  
   
  *phbmp*  
- 関数が成功した場合、ビットマップへのハンドルが含まれています。  
+ 関数が正常に返されるときに、ビットマップを識別するハンドルが含まれています。  
   
  *pdwAlpha*  
- 関数が成功した場合、アルファ チャネル値を指定する DWORD が含まれています。  
+ 関数が正常に返されるときに、アルファ チャネルの値を指定する DWORD が含まれています。  
   
 ### <a name="return-value"></a>戻り値  
- 返します`TRUE`正常です。 それ以外の場合、サムネイルのビットマップが作成された場合`FALSE`です。  
+ サムネイルのビットマップの場合は TRUE を返しますが正常に作成されました。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettitle"></a>  CDocument::GetTitle  
- 通常、ドキュメントのファイル名から派生されるドキュメントのタイトルを取得するには、この関数を呼び出します。  
+ 通常、ドキュメントのファイル名から派生するドキュメントのタイトルを取得するには、この関数を呼び出します。  
   
 ```  
 const CString& GetTitle() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ドキュメントのタイトルです。  
+ ドキュメントのタイトル。  
   
 ##  <a name="initializesearchcontent"></a>  CDocument::InitializeSearchContent  
  検索ハンドラーの検索コンテンツを初期化するために呼び出されます。  
@@ -504,33 +504,33 @@ virtual void InitializeSearchContent ();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 検索コンテンツを初期化するために派生クラスでこのメソッドをオーバーライドします。 コンテンツで区切られた文字列である必要があります「;」です。 たとえば、"ポイントです。四角形です。ole 項目"です。  
+ コンテンツの検索を初期化するために派生クラスでこのメソッドをオーバーライドします。 コンテンツで区切られた文字列である必要があります「;」します。 たとえば、"ポイントです。四角形。ole 項目"。  
   
 ##  <a name="ismodified"></a>  CDocument::IsModified  
- ドキュメントが最後に保存された後に変更されているかどうかを判断するには、この関数を呼び出します。  
+ 最後に保存してから、ドキュメントが変更されたかどうかを判断するには、この関数を呼び出します。  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 最後の保存からドキュメントが変更された場合は 0 以外。それ以外の場合 0 を返します。  
+ 最後の保存のため、ドキュメントが変更された場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ##  <a name="issearchandorganizehandler"></a>  CDocument::IsSearchAndOrganizeHandler  
- 指示するかどうかのこのインスタンス`CDocument`検索と整理ハンドラー用に作成されました。  
+ 通知するかどうかのこのインスタンス`CDocument`検索と整理のハンドラー用に作成されました。  
   
 ```  
 BOOL IsSearchAndOrganizeHandler() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します`TRUE`場合のこのインスタンス`CDocument`検索と整理ハンドラー用に作成されました。  
+ TRUE の場合は、このインスタンスを返します`CDocument`検索と整理のハンドラー用に作成されました。  
   
 ### <a name="remarks"></a>Remarks  
- この関数が返す現在`TRUE`外のプロセス サーバーに実装されている豊富なプレビュー ハンドラーに対してのみです。 この関数に戻り、アプリケーション レベルで適切なフラグ (m_bPreviewHandlerMode、m_bSearchMode、m_bGetThumbnailMode) を設定することができます`TRUE`です。  
+ 現在この関数は、アウト プロセス サーバーで実装された豊富なプレビュー ハンドラーに対してのみ TRUE を返します。 この機能は TRUE を返すようにする、アプリケーション レベルでは、(m_bPreviewHandlerMode、m_bSearchMode、m_bGetThumbnailMode) は、適切なフラグを設定できます。  
   
 ##  <a name="loaddocumentfromstream"></a>  CDocument::LoadDocumentFromStream  
- ストリームからドキュメント データを読み込むと呼ばれます。  
+ ストリームからドキュメントのデータを読み込むと呼ばれます。  
   
 ```  
 virtual HRESULT LoadDocumentFromStream(
@@ -546,13 +546,13 @@ virtual HRESULT LoadDocumentFromStream(
  ストリームへのアクセス モード。  
   
 ### <a name="return-value"></a>戻り値  
- ロード操作が成功すると、それ以外の場合の HRESULT エラー コードの場合は S_OK です。  
+ 読み込み操作が成功すると、それ以外の場合の HRESULT エラー コードの場合は s_ok を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ストリームからデータを読み込む方法をカスタマイズする派生クラスでは、このメソッドをオーバーライドすることができます。  
+ ストリームからデータを読み込む方法をカスタマイズする派生クラスでこのメソッドをオーバーライドすることができます。  
   
 ##  <a name="m_bgetthumbnailmode"></a>  CDocument::m_bGetThumbnailMode  
- 指定、`CDocument`サムネイルの dllhost によってオブジェクトが作成されます。 チェックインする必要があります`CView::OnDraw`です。  
+ 指定します、`CDocument`サムネイルの dllhost でオブジェクトが作成されます。 チェックインする必要があります`CView::OnDraw`します。  
   
 ```  
 BOOL m_bGetThumbnailMode;  
@@ -562,24 +562,24 @@ BOOL m_bGetThumbnailMode;
  `TRUE` サムネイルの dllhost でドキュメントが作成されたことを示します。  
   
 ##  <a name="m_bpreviewhandlermode"></a>  CDocument::m_bPreviewHandlerMode  
- 指定する、`CDocument`リッチ プレビュー用 prevhost によってオブジェクトが作成されます。 チェックインする必要があります`CView::OnDraw`です。  
+ 指定します、`CDocument`リッチ プレビュー用 prevhost によってオブジェクトが作成されます。 チェックインする必要があります`CView::OnDraw`します。  
   
 ```  
 BOOL m_bPreviewHandlerMode;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `TRUE` リッチ プレビュー用 prevhost によってドキュメントが作成されたことを示します。  
+ TRUE は、リッチ プレビュー用 prevhost によってドキュメントが作成されたことを示します。  
   
 ##  <a name="m_bsearchmode"></a>  CDocument::m_bSearchMode  
- 指定する、`CDocument`インデクサーによって、または別の検索アプリケーションでオブジェクトが作成されました。  
+ 指定します、`CDocument`インデクサーによって、または他の検索アプリケーションでオブジェクトが作成されました。  
   
 ```  
 BOOL m_bSearchMode;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `TRUE` インデクサーまたはによって別の検索アプリケーションにドキュメントが作成されたことを示します。  
+ `TRUE` インデクサーで、または他の検索アプリケーションでドキュメントが作成されたことを示します。  
   
 ##  <a name="m_clrrichpreviewbackcolor"></a>  CDocument::m_clrRichPreviewBackColor  
  リッチ プレビュー ウィンドウの背景色を指定します。 この色は、ホストによって設定されます。  
@@ -600,7 +600,7 @@ COLORREF m_clrRichPreviewTextColor;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_lfrichpreviewfont"></a>  CDocument::m_lfRichPreviewFont  
- リッチ プレビュー ウィンドウのテキストのフォントを指定します。 このフォントの詳細については、ホストによって設定されます。  
+ リッチ プレビュー ウィンドウのテキストのフォントを指定します。 このフォント情報は、ホストによって設定されます。  
   
 ```  
 CFont m_lfRichPreviewFont;  
@@ -609,7 +609,7 @@ CFont m_lfRichPreviewFont;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onbeforerichpreviewfontchanged"></a>  CDocument::OnBeforeRichPreviewFontChanged  
- リッチ プレビューのフォントを変更する前に呼び出されます。  
+ リッチ プレビューのフォントが変更される前に呼び出されます。  
   
 ```  
 virtual void OnBeforeRichPreviewFontChanged();
@@ -625,34 +625,34 @@ virtual void OnChangedViewList();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- かどうか最後のビューを削除して、その場合は、ドキュメントを削除します。 この関数の既定の実装を確認します。 フレームワークを追加またはビューを削除する場合は、特別な処理を実行する場合は、この関数をオーバーライドします。 たとえば、ビューを関連付けることがない場合でも、開いたままにドキュメントを作成する場合は、この関数をオーバーライドします。  
+ かどうか、最後のビューが削除されると、そうである場合は、ドキュメントを削除します。 この関数の既定の実装を確認します。 フレームワークを追加またはビューを削除する場合は、特別な処理を実行する場合は、この関数をオーバーライドします。 たとえば、ビューを関連付けることがない場合でも、開いたままにドキュメントを作成する場合は、この関数をオーバーライドします。  
   
 ##  <a name="onclosedocument"></a>  は  
- ドキュメントが閉じられたときに、通常、File Close コマンドの一部として、フレームワークによって呼び出されます。  
+ ドキュメントが閉じられたとき、通常、ファイルを閉じるコマンドの一部として、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnCloseDocument();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この関数の既定の実装のためのドキュメントを表示するフレームのすべてを破棄し、ビューを閉じ、ドキュメントの内容をクリーンアップおよびを呼び出して、 [DeleteContents](#deletecontents)メンバー関数を実行するドキュメントの削除データ。  
+ この関数の既定の実装のドキュメントを表示するためのフレームのすべてを破棄し、ビューを閉じ、ドキュメントの内容を消去およびを呼び出して、 [DeleteContents](#deletecontents)メンバー関数は、ドキュメントの削除データ。  
   
- フレームワークは、ドキュメントを閉じるときに特別な後処理を実行する場合は、この関数をオーバーライドします。 たとえば、ドキュメントでは、データベース内のレコードを表す、場合、データベースを終了するには、この関数をオーバーライドします。 この関数の基底クラスのバージョンは、オーバーライドから呼び出す必要があります。  
+ フレームワークは、ドキュメントを閉じるときに特別な後処理を実行する場合は、この関数をオーバーライドします。 などのドキュメントでは、データベース内のレコードを表している場合、データベースを終了するには、この関数をオーバーライドします。 この関数の基底クラスのバージョンは、オーバーライドから呼び出す必要があります。  
   
 ##  <a name="oncreatepreviewframe"></a>  CDocument::OnCreatePreviewFrame  
- リッチ プレビュー用プレビューのフレームを作成する必要があるときに、フレームワークによって呼び出されます。  
+ リッチ プレビュー用プレビュー フレームを作成する必要があるときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnCreatePreviewFrame();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します`TRUE`正常です。 それ以外の場合、フレームが作成された場合`FALSE`です。  
+ フレームが正常に作成されたかどうかは TRUE を返しますそれ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondocumentevent"></a>  CDocument::OnDocumentEvent  
- ドキュメントのイベントに応答にフレームワークによって呼び出されます。  
+ ドキュメントのイベントに応答フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnDocumentEvent(DocumentEvent deEvent);
@@ -660,12 +660,12 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*deEvent*  
- イベントの種類を説明する列挙型。  
+ イベントの種類を示す列挙型。  
   
 ### <a name="remarks"></a>Remarks  
- ドキュメント イベントを複数のクラスに影響を与える可能性があります。 以外のクラスに影響を与えるドキュメント イベントを処理するため、このメソッドは、 [CDocument クラス](../../mfc/reference/cdocument-class.md)です。 現時点では、ドキュメント イベントに応答する必要がありますを唯一のクラスは、 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)です。 `CDocument`クラスの他の上書き可能なメソッドの効果を対応する必要があります、`CDocument`です。  
+ 複数のクラスがドキュメント イベントの影響を与える可能性があります。 以外のクラスに影響を与えるドキュメント イベントを処理するため、このメソッドは、 [CDocument クラス](../../mfc/reference/cdocument-class.md)します。 現在、ドキュメントのイベントに応答する必要がありますを唯一のクラスは、 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)します。 `CDocument`クラスが他の上書き可能な方法で効果を処理する、`CDocument`します。  
   
- 次の表に、可能な値*deEvent*しに対応するイベントです。  
+ 次の表に、可能な値*deEvent*および対応するイベントです。  
   
 |[値]|対応するイベント|  
 |-----------|-------------------------|  
@@ -675,7 +675,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 |`onAfterCloseDocument`|ドキュメントが閉じられました。|  
   
 ##  <a name="ondrawthumbnail"></a>  CDocument::OnDrawThumbnail  
- 縮小表示を描画する派生クラスでは、このメソッドをオーバーライドします。  
+ 縮小表示を描画するために派生クラスでこのメソッドをオーバーライドします。  
   
 ```  
 virtual void OnDrawThumbnail(
@@ -693,21 +693,21 @@ virtual void OnDrawThumbnail(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfilesendmail"></a>  CDocument::OnFileSendMail  
- 常駐しているメール ホスト経由でメッセージ (あれば) して送信ドキュメントの添付ファイルとしてします。  
+ メッセージを送信常駐メール ホスト経由で (ある場合)、ドキュメント、添付ファイルとして。  
   
 ```  
 void OnFileSendMail();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `OnFileSendMail` 呼び出し[呼び出す必要はありません](#onsavedocument)(保存) は、電子メールで送信し、一時ファイルに無題と変更されたドキュメントをシリアル化します。 ドキュメントが変更されていない場合、一時ファイルは必要ありません。オリジナルが送信されます。 `OnFileSendMail` MAPI32 を読み込みます。DLL が既に読み込まれていない場合。  
+ `OnFileSendMail` 呼び出し[呼び出す必要はありません](#onsavedocument)(保存) 無題と変更されたドキュメントは、電子メールで送信し、一時ファイルをシリアル化します。 ドキュメントが変更されていない場合、一時ファイルは必要ありません。元に送信されます。 `OnFileSendMail` MAPI32 を読み込みます。既に読み込まれていない場合は、DLL です。  
   
- 特殊な実装`OnFileSendMail`の[COleDocument](../../mfc/reference/coledocument-class.md)複合ファイルを正しく処理されます。  
+ 特殊な実装`OnFileSendMail`の[COleDocument](../../mfc/reference/coledocument-class.md)複合ファイルを正しく処理します。  
   
- **CDocument**メール サポート (MAPI) が存在する場合、メールを使用して、ドキュメントの送信をサポートします。 記事を参照して[MAPI トピック](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)です。  
+ `CDocument` サポート メール サポート (MAPI) が存在する場合にメールを使ってドキュメントを送信します。 記事を参照して[MAPI トピック](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)します。  
   
 ##  <a name="onloaddocumentfromstream"></a>  CDocument::OnLoadDocumentFromStream  
- ドキュメント データをストリームから読み込む必要があるときに、フレームワークによって呼び出されます。  
+ ストリームからドキュメント データを読み込む必要があるときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual HRESULT OnLoadDocumentFromStream(
@@ -717,18 +717,18 @@ virtual HRESULT OnLoadDocumentFromStream(
   
 ### <a name="parameters"></a>パラメーター  
  *pStream*  
- 着信ストリームへのポインター。  
+ 受信のストリームへのポインター。  
   
  *grfMode*  
  ストリームへのアクセス モード。  
   
 ### <a name="return-value"></a>戻り値  
- 負荷が成功した場合は S_OK、それ以外の場合はエラー コード。  
+ 負荷が成功した場合は s_ok を返します。それ以外の場合、エラー コード。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onnewdocument"></a>  CDocument::OnNewDocument  
- ファイルの新規作成 コマンドの一部としてフレームワークによって呼び出されます。  
+ ファイルの新しいコマンドの一部として、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnNewDocument();
@@ -738,14 +738,14 @@ virtual BOOL OnNewDocument();
  以外の場合は、ドキュメントが正常に初期化します。それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数の既定の実装、 [DeleteContents](#deletecontents)メンバー関数をドキュメントが空ことを確認し、新しいドキュメントにマークを付けます。 新しいドキュメントのデータ構造を初期化するためには、この関数をオーバーライドします。 この関数の基底クラスのバージョンは、オーバーライドから呼び出す必要があります。  
+ この関数の既定の実装、 [DeleteContents](#deletecontents)メンバー関数は、ドキュメントが空で、新しいドキュメントにマークを確認します。 新しいドキュメントのデータ構造を初期化するためには、この関数をオーバーライドします。 この関数の基底クラスのバージョンは、オーバーライドから呼び出す必要があります。  
   
- SDI アプリケーションでファイルの新規作成 を選択すると、フレームワークは新規に作成するのではなく、既存のドキュメントを再初期化するのにこの関数を使用します。 ユーザーは、マルチ ドキュメント インターフェイス (MDI) アプリケーションに新しいファイルを選択、フレームワークはたびに、新しいドキュメントを作成しを初期化するには、この関数を呼び出します。 SDI アプリケーションで有効にするファイルの新しいコマンドのコンス トラクターではなく、この関数には、初期化コードを配置する必要があります。  
+ SDI アプリケーションで新しいファイル を選択すると、フレームワークは、新しいものを作成するのではなく、既存のドキュメントを再初期化するのにこの関数を使用します。 場合は、ユーザーは、マルチ ドキュメント インターフェイス (MDI) アプリケーションで新しいファイルが選択した、フレームワークは毎回新しい文書を作成、初期化するには、この関数を呼び出します。 SDI アプリケーションで有効にするファイルの新しいコマンドのコンス トラクターではなく、この関数には、初期化コードを配置する必要があります。  
   
- 注が存在している場合、where`OnNewDocument`が 2 回呼び出されます。 これは、ActiveX ドキュメント サーバーとして、ドキュメントが埋め込まれている場合に発生します。 関数が最初に呼び出された、`CreateInstance`メソッド (によって公開されている、 `COleObjectFactory`-派生クラス) と 2 番目の時間によって、`InitNew`メソッド (によって公開されている、 `COleServerDoc`-派生クラス)。  
+ あるをケースがあることに注意してください`OnNewDocument`が 2 回呼び出されます。 これは、ActiveX ドキュメント サーバーとして、ドキュメントが埋め込まれている場合に発生します。 関数が初めて呼び出された、`CreateInstance`メソッド (によって公開されている、 `COleObjectFactory`-派生クラス) と、2 つ目の時刻、`InitNew`メソッド (によって公開されている、 `COleServerDoc`-派生クラス)。  
   
 ### <a name="example"></a>例  
- 次の例では、ドキュメント オブジェクトの初期化の方法を示します。  
+ 次の例では、別のドキュメント オブジェクトの初期化方法を示します。  
   
  [!code-cpp[NVC_MFCDocView#60](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
   
@@ -754,7 +754,7 @@ virtual BOOL OnNewDocument();
  [!code-cpp[NVC_MFCDocView#62](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
   
 ##  <a name="onopendocument"></a>  CDocument::OnOpenDocument  
- ファイルを開くコマンドの一部としてフレームワークによって呼び出されます。  
+ ファイルを開く コマンドの一部として、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
@@ -762,18 +762,18 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
   
 ### <a name="parameters"></a>パラメーター  
  *終了*  
- 開かれるドキュメントのパスを指します。  
+ 開かれているドキュメントのパスを指します。  
   
 ### <a name="return-value"></a>戻り値  
- ドキュメント読み込みが成功した場合は 0 以外。それ以外の場合 0 を返します。  
+ 以外の場合は、ドキュメントが正常に読み込まれました。それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数の既定の実装は、指定したファイルを開き、 [DeleteContents](#deletecontents)ドキュメントが空であることを確認するメンバー関数が呼び出す[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)ファイルの読み取り内容、およびしてクリーンとしてマークします。 アーカイブ機構やファイル メカニズム以外のものを使用する場合は、この関数をオーバーライドします。 たとえば、ドキュメントが別々 のファイルではなく、データベース内のレコードを表すアプリケーションを作成する場合があります。  
+ この関数の既定の実装は、指定したファイルを開き、 [DeleteContents](#deletecontents)ドキュメントが空であることを確認するメンバー関数を呼び出す[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)ファイルの読み取り内容、およびクリーンとしてマークします。 アーカイブ機構やファイル メカニズム以外の何かを使用する場合は、この関数をオーバーライドします。 たとえば、ドキュメントが別々 のファイルではなく、データベース内のレコードを表すアプリケーションを作成する場合があります。  
   
- フレームワークでこの関数を使用して、既存の再初期化中の SDI アプリケーション ファイルを開く を選択すると場合、 **CDocument**新規に作成するのではなく、オブジェクトです。 場合は、ユーザーが、MDI アプリケーションでファイルを開く、フレームワークは、新しい**CDocument**オブジェクトごとに初期化するには、この関数を呼び出します。 SDI アプリケーションで有効にするファイルを開くコマンドのコンス トラクターではなく、この関数には、初期化コードを配置する必要があります。  
+ フレームワークでこの関数を使用して、既存の再初期化する SDI アプリケーションでファイルを開く を選択すると場合、`CDocument`新規に作成するのではなく、オブジェクト。 フレームワークの作成、新しいユーザーは、MDI アプリケーションでファイルを開くが場合、`CDocument`オブジェクト毎回し初期化するには、この関数を呼び出します。 SDI アプリケーションで有効にするファイルを開くコマンドのコンス トラクターではなく、この関数には、初期化コードを配置する必要があります。  
   
 ### <a name="example"></a>例  
- 次の例では、ドキュメント オブジェクトの初期化の方法を示します。  
+ 次の例では、別のドキュメント オブジェクトの初期化方法を示します。  
   
  [!code-cpp[NVC_MFCDocView#60](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
   
@@ -784,7 +784,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
  [!code-cpp[NVC_MFCDocView#63](../../mfc/codesnippet/cpp/cdocument-class_8.cpp)]  
   
 ##  <a name="onpreviewhandlerqueryfocus"></a>  CDocument::OnPreviewHandlerQueryFocus  
- プレビュー ハンドラーを呼び出し元から取得した、HWND を返すように指示、`GetFocus`関数。  
+ プレビュー ハンドラーを呼び出し元から取得した HWND を返すように指示、`GetFocus`関数。  
   
 ```  
 virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
@@ -792,15 +792,15 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
   
 ### <a name="parameters"></a>パラメーター  
  *phwnd*  
- [out]このメソッドが戻るときに、呼び出し元から返される HWND へのポインターを含む、`GetFocus`プレビュー ハンドラーのフォア グラウンド スレッドからの関数。  
+ [out]このメソッドから制御が戻るときに、呼び出しから返される HWND へのポインターが含まれています、`GetFocus`プレビュー ハンドラーのフォア グラウンド スレッドからの関数。  
   
 ### <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK を返します。または、それ以外の場合、エラー値。  
+ 成功した場合は S_OK を返します。または、それ以外の場合、エラー値。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onpreviewhandlertranslateaccelerator"></a>  CDocument::OnPreviewHandlerTranslateAccelerator  
- プレビュー ハンドラー、プレビュー ハンドラーが実行されているプロセスのメッセージ ポンプから渡されたキー入力を処理するように指示します。  
+ プレビュー ハンドラーが実行されているプロセスのメッセージ ポンプから渡されたキーストロークを処理するために、プレビュー ハンドラーに指示します。  
   
 ```  
 virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
@@ -811,12 +811,12 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
  [in]ウィンドウ メッセージへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- プレビュー ハンドラーによって、キー入力メッセージを処理できる場合、ハンドラーはプロセスがおよび、S_OK を返します。 ホストには、プレビュー ハンドラーでは、キー入力メッセージを処理できない場合`IPreviewHandlerFrame::TranslateAccelerator`です。 ホストは、メッセージを処理する場合、このメソッドは、S_OK を返します。 ホストにメッセージが処理されない場合、このメソッドは S_FALSE を返します。  
+ キーストロークのメッセージは、プレビュー ハンドラーによって処理されることができる場合、ハンドラーはそれを処理し、S_OK を返します。 使用してホストには、プレビュー ハンドラーでは、キー入力メッセージを処理できない場合`IPreviewHandlerFrame::TranslateAccelerator`します。 ホストは、メッセージを処理する場合、このメソッドは、S_OK を返します。 ホストにメッセージが処理されない場合、このメソッドは S_FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onrichpreviewbackcolorchanged"></a>  CDocument::OnRichPreviewBackColorChanged  
- リッチ プレビューの背景色が変更されたときに呼び出されます。  
+ 豊富なプレビューの背景色が変更されたときに呼び出されます。  
   
 ```  
 virtual void OnRichPreviewBackColorChanged();
@@ -834,7 +834,7 @@ virtual void OnRichPreviewFontChanged();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onrichpreviewsitechanged"></a>  CDocument::OnRichPreviewSiteChanged  
- リッチ プレビューのサイトが変更されたときに呼び出されます。  
+ リッチ プレビュー サイトが変更されたときに呼び出されます。  
   
 ```  
 virtual void OnRichPreviewSiteChanged();
@@ -852,7 +852,7 @@ virtual void OnRichPreviewTextColorChanged();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsavedocument"></a>  単一  
- ファイルの保存やファイル名を付けてコマンドの一部としてフレームワークによって呼び出されます。  
+ ファイルの保存またはファイル名を付けてコマンドの一部として、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
@@ -866,10 +866,10 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
  以外の場合は、ドキュメントが正常に保存されました。それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数の既定の実装は、指定したファイルを開き[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)ドキュメントのデータを書き込むファイル、および、マークとしてドキュメントをクリーニングします。 フレームワークは、ドキュメントを保存するときに、特別な処理を実行する場合は、この関数をオーバーライドします。 たとえば、ドキュメントが別々 のファイルではなく、データベース内のレコードを表すアプリケーションを作成する場合があります。  
+ この関数の既定の実装は、指定したファイルを開き[cobject::serialize](../../mfc/reference/cobject-class.md#serialize)ドキュメントのデータを書き込むファイル、および、マークとしてドキュメントをクリーンアップします。 フレームワークは、ドキュメントを保存するときに、特別な処理を実行する場合は、この関数をオーバーライドします。 たとえば、ドキュメントが別々 のファイルではなく、データベース内のレコードを表すアプリケーションを作成する場合があります。  
   
 ##  <a name="onunloadhandler"></a>  CDocument::OnUnloadHandler  
- プレビュー ハンドラーがアンロードされるときに、フレームワークによって呼び出されます。  
+ プレビュー ハンドラーが読み込まれるときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnUnloadHandler();
@@ -878,7 +878,7 @@ virtual void OnUnloadHandler();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onupdatefilesendmail"></a>  CDocument::OnUpdateFileSendMail  
- により、**判定**コマンド メール サポート (MAPI) が存在するかどうか。  
+ メール サポート (MAPI) が存在する場合は、判定コマンドを有効にします。  
   
 ```  
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
@@ -886,12 +886,12 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
   
 ### <a name="parameters"></a>パラメーター  
  *対応付けられました。*  
- ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクトに関連付けられている、**判定**コマンド。  
+ ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)判定コマンドに関連付けられているオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- それ以外の場合、関数を削除、**判定**コマンドをメニューから、上記の区切り記号を含む、または必要に応じて項目のメニューの下。 場合、MAPI が有効になっている MAPI32 です。DLL がパスにし、[メール] のセクション、WIN です。INI ファイル、MAPI = 1 です。 ほとんどのアプリケーションでは、[ファイル] メニューにこのコマンドを配置します。  
+ それ以外の場合、関数では、適切なメニュー項目の上または区切り記号を含む、メニューから判定コマンドを削除します。 場合に、MAPI が有効になっている MAPI32 します。DLL は、パスと、WIN の [メール] セクションに存在します。INI ファイル、MAPI = 1。 ほとんどのアプリケーションは、[ファイル] メニューのこのコマンドを配置します。  
   
- **CDocument**メール サポート (MAPI) が存在する場合、メールを使用して、ドキュメントの送信をサポートします。 記事を参照して[MAPI トピック](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)です。  
+ `CDocument` サポート メール サポート (MAPI) が存在する場合にメールを使ってドキュメントを送信します。 記事を参照して[MAPI トピック](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)します。  
   
 ##  <a name="precloseframe"></a>  CDocument::PreCloseFrame  
  このメンバー関数は、フレーム ウィンドウが破棄される前に、フレームワークによって呼び出されます。  
@@ -902,12 +902,12 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
   
 ### <a name="parameters"></a>パラメーター  
  *pFrame*  
- ポインター、 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 、関連付けられているを保持する`CDocument`オブジェクト。  
+ ポインター、 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 、関連付けられているを保持している`CDocument`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- カスタム クリーンアップが、同様の基本クラスを呼び出してくださいをオーバーライドできます。  
+ カスタムのクリーンアップが、基本クラスも必ずオーバーライドできます。  
   
- 既定値は`PreCloseFrame`何も`CDocument`します。 `CDocument`-派生クラス[COleDocument](../../mfc/reference/coledocument-class.md)と[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)このメンバー関数を使用します。  
+ 既定値は`PreCloseFrame`何も`CDocument`します。 `CDocument`-クラスを派生[COleDocument](../../mfc/reference/coledocument-class.md)と[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)このメンバー関数を使用します。  
   
 ##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
  次のチャンク値を読み取ります。  
@@ -918,7 +918,7 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
   
 ### <a name="parameters"></a>パラメーター  
  *ppValue*  
- [out]関数から返されたときに*ppValue*読み取られた値が含まれています。  
+ [out]関数から制御が戻るときに*ppValue*読み取られた値が含まれています。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -926,7 +926,7 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="releasefile"></a>  CDocument::ReleaseFile  
- このメンバー関数は、他のアプリケーションで使用するために使用できるように、ファイルを解放するためにフレームワークによって呼び出されます。  
+ このメンバー関数は、他のアプリケーションで使用するために使用できるように、ファイルをリリースするためにフレームワークによって呼び出されます。  
   
 ```  
 virtual void ReleaseFile(
@@ -936,17 +936,17 @@ virtual void ReleaseFile(
   
 ### <a name="parameters"></a>パラメーター  
  *pFile*  
- 解放される CFile オブジェクトへのポインター。  
+ リリースされる CFile オブジェクトへのポインター。  
   
  *bAbort*  
- ファイルがいずれかを使用して解放されるかどうかを示す`CFile::Close`または`CFile::Abort`です。 **FALSE**を使用して解放する場合は、ファイル[先](../../mfc/reference/cfile-class.md#close)です。**TRUE**を使用して解放する場合は、ファイル[解放](../../mfc/reference/cfile-class.md#abort)です。  
+ ファイルがいずれかを使用して解放するかどうかを指定`CFile::Close`または`CFile::Abort`します。 ファイルを使用して解放する場合は FALSE[データ](../../mfc/reference/cfile-class.md#close);ファイルを使用して解放する場合は TRUE。[解放](../../mfc/reference/cfile-class.md#abort)します。  
   
 ### <a name="remarks"></a>Remarks  
- 場合*bAbort*は**TRUE**、`ReleaseFile`呼び出し`CFile::Abort`ファイルが離されるとします。 `CFile::Abort` 例外はスローされません。  
+ 場合*bAbort*が true の場合、`ReleaseFile`呼び出し`CFile::Abort`、され、ファイルが解放されます。 `CFile::Abort` 例外はスローされません。  
   
- 場合*bAbort*は**FALSE**、`ReleaseFile`呼び出し`CFile::Close`され、ファイルを解放します。  
+ 場合*bAbort* false で、`ReleaseFile`呼び出し`CFile::Close`され、ファイルが解放されます。  
   
- ファイルがリリースされる前に、ユーザーが操作を要求するには、このメンバー関数をオーバーライドします。  
+ ファイルが解放される前に、ユーザーが操作を要求するには、このメンバー関数をオーバーライドします。  
   
 ##  <a name="removechunk"></a>  CDocument::RemoveChunk  
  指定した GUID のチャンクを削除します。  
@@ -978,14 +978,14 @@ void RemoveView(CView* pView);
  削除されるビューへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- この関数では、ドキュメントに関連付けられているビューの一覧から、指定されたビューが削除されます。ビューのドキュメントのポインターにセット**NULL**です。 フレーム ウィンドウが閉じているか、分割ウィンドウのウィンドウが閉じられたときに、この関数は、フレームワークによって呼び出されます。  
+ この関数は、ドキュメントに関連付けられたビューの一覧から、指定されたビューを削除します。また、ビューのドキュメントのポインターを NULL に設定します。 フレーム ウィンドウが閉じているか、スプリッター ウィンドウのペインが閉じられたときに、この関数は、フレームワークによって呼び出されます。  
   
- ビューをデタッチして手動で場合にのみ、この関数を呼び出します。 通常ドキュメントとビューを定義することによってデタッチ フレームワークを使用できますが、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)ドキュメント クラス、ビューのクラスとフレーム ウィンドウ クラスに関連付けるオブジェクト。  
+ ビューを手動でデタッチされている場合にのみ、この関数を呼び出します。 ドキュメントとビューを定義することでデタッチ フレームワークをできるように、通常、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)クラスのドキュメント、ビューのクラスとフレーム ウィンドウ クラスに関連付けるオブジェクト。  
   
  例を参照してください[AddView](#addview)のサンプルを実装します。  
   
 ##  <a name="reportsaveloadexception"></a>  CDocument::ReportSaveLoadException  
- 例外がスローされた場合に呼び出されます (通常、 [CFileException](../../mfc/reference/cfileexception-class.md)または[CArchiveException](../../mfc/reference/carchiveexception-class.md)) を保存またはドキュメントの読み込み中にします。  
+ 例外がスローされた場合に呼び出されます (通常、 [CFileException](../../mfc/reference/cfileexception-class.md)または[CArchiveException](../../mfc/reference/carchiveexception-class.md)) の保存や、ドキュメントの読み込み中にします。  
   
 ```  
 virtual void ReportSaveLoadException(
@@ -997,35 +997,35 @@ virtual void ReportSaveLoadException(
   
 ### <a name="parameters"></a>パラメーター  
  *終了*  
- しようとしたドキュメントの名前を指すの保存または読み込みします。  
+ ポイントされていたドキュメントの名前を保存または読み込み。  
   
  *e*  
- スローされた例外を指します。 あります**NULL**です。  
+ スローされた例外を指します。 NULL にすることがあります。  
   
  *bSaving*  
- どのような操作が進行中です。 であったことを示すフラグします。ドキュメントが保存されている場合、0、ドキュメントが読み込まれたされている場合は 0 以外の値。  
+ どのような操作が進行中を示すフラグします。ドキュメントが保存されている場合、0、ドキュメントが読み込まれたされている場合は 0 以外の値。  
   
  *nIDPDefault*  
- 関数が特定の 1 つを指定しない場合に表示されるエラー メッセージの識別子。  
+ 関数が複数の特定の 1 つを指定しない場合に表示されるエラー メッセージの識別子。  
   
 ### <a name="remarks"></a>Remarks  
- 既定の実装では、例外オブジェクトを検査し、具体的には、原因を説明するエラー メッセージを探します。 特定のメッセージが見つからない場合、または場合*e*は**NULL**で指定された一般的なメッセージ、 *nIDPDefault*パラメーターを使用します。 関数は、エラー メッセージを含むメッセージ ボックスを表示します。 追加のカスタマイズされたエラー メッセージを提供する場合は、この関数をオーバーライドします。 これは、高度なオーバーライド可能です。  
+ 既定の実装では、例外オブジェクトを検査し、具体的には、原因を説明するエラー メッセージを探します。 特定のメッセージが見つからない場合、または場合*e*が null の場合、一般的なメッセージで指定された、 *nIDPDefault*パラメーターを使用します。 関数は、エラー メッセージを含むメッセージ ボックスを表示します。 追加のカスタマイズされたエラー メッセージを提供したい場合は、この関数をオーバーライドします。 これは、高度なオーバーライド可能な。  
   
 ##  <a name="savemodified"></a>  に対して、順番  
- 変更されたドキュメントが閉じられる前に、フレームワークによって呼び出されます。  
+ 変更されたドキュメントが終了する前に、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL SaveModified();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 続行して、ドキュメントを閉じても安全である場合は 0 以外。ドキュメントを閉じてはいけない場合は 0 を返します。  
+ 続行して、ドキュメントを閉じても安全である場合、0 以外の場合ドキュメントが閉じていない場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数の既定の実装には、ユーザーに確認するには、ドキュメントに変更を保存するかどうか行われている場合、メッセージ ボックスが表示されます。 プログラムには、別のプロンプトを表示する手順が必要な場合は、この関数をオーバーライドします。 これは、高度なオーバーライド可能です。  
+ この関数の既定の実装では、行われている場合、ユーザーをドキュメントに変更を保存するかどうか確認するメッセージ ボックスが表示されます。 プログラムには、別のプロンプトを表示する手順が必要な場合は、この関数をオーバーライドします。 これは、高度なオーバーライド可能な。  
   
 ##  <a name="setchunkvalue"></a>  CDocument::SetChunkValue  
- チャンク値を設定します。  
+ チャンクの値を設定します。  
   
 ```  
 virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
@@ -1033,7 +1033,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
   
 ### <a name="parameters"></a>パラメーター  
  *pValue*  
- 設定するチャンク値を指定します。  
+ 設定するチャンクの値を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
@@ -1049,13 +1049,13 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  *bModified*  
- ドキュメントが変更されているかどうかを示すフラグします。  
+ ドキュメントが変更されたかどうかを示すフラグします。  
   
 ### <a name="remarks"></a>Remarks  
- 一貫してこの関数を呼び出して、フレームワークがドキュメントを閉じる前に変更を保存するユーザーを要求することを確認します。 通常の既定値を使用する必要があります**TRUE**の*bModified*パラメーター。 この関数の値を呼び出し、(変更なし) のクリーンにドキュメントをマーク、 **FALSE**です。  
+ この関数を一貫して呼び出すことによってフレームワークがドキュメントを閉じる前に変更を保存するユーザーを要求することを確認します。 通常、既定の値が TRUE を使用する必要があります、 *bModified*パラメーター。 マークはクリーンにドキュメント (変更なし)、FALSE の値は、この関数を呼び出します。  
   
 ##  <a name="setpathname"></a>  CDocument::SetPathName  
- この関数では、ドキュメントのディスク ファイルの完全修飾パスを指定します。  
+ ドキュメントのディスク ファイルの完全修飾パスを指定するには、この関数を呼び出します。  
   
 ```  
 virtual void SetPathName(
@@ -1065,16 +1065,16 @@ virtual void SetPathName(
   
 ### <a name="parameters"></a>パラメーター  
  *終了*  
- ドキュメントのパスとして使用する文字列へのポインター。  
+ ドキュメントのパスとして使用する文字列を指します。  
   
- *bAddToMRU*  
- ファイル名を追加するかどうか、最近使用した (MRU) ファイルの一覧を決定します。 場合**true の場合、** ファイル名を追加する場合は**FALSE**、追加されていません。  
+ *baddtomru です。*  
+ ファイル名に追加するかどうか、最近使用した (MRU) ファイルの一覧を決定します。 TRUE の場合、ファイル名を追加します。FALSE の場合は追加されません。  
   
 ### <a name="remarks"></a>Remarks  
- 値に応じて*bAddToMRU*パスを追加、または、アプリケーションによって管理される MRU 一覧に追加されません。 一部のドキュメントがディスク ファイルに関連付けられていないことに注意してください。 開くと、フレームワークによって使用されるファイルの保存の既定の実装をオーバーライドする場合にのみ、この関数を呼び出します。  
+ 値に応じて*bAddToMRU*パスを追加、または、アプリケーションによって管理される MRU 一覧に追加されません。 いくつかのドキュメントがディスク ファイルに関連付けられていないことに注意してください。 オープンと保存、フレームワークによって使用されるファイルの既定の実装をオーバーライドしている場合にのみ、この関数を呼び出します。  
   
 ##  <a name="settitle"></a>  CDocument::SetTitle  
- この関数では、ドキュメントのタイトル (フレーム ウィンドウのタイトル バーに表示される文字列) を指定します。  
+ ドキュメントのタイトル (フレーム ウィンドウのタイトル バーに表示される文字列) を指定するには、この関数を呼び出します。  
   
 ```  
 virtual void SetTitle(LPCTSTR lpszTitle);
@@ -1082,7 +1082,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
   
 ### <a name="parameters"></a>パラメーター  
  *lpszTitle*  
- ドキュメントのタイトルとして使用する文字列へのポインター。  
+ ドキュメントのタイトルとして使用する文字列を指します。  
   
 ### <a name="remarks"></a>Remarks  
  この関数を呼び出すと、ドキュメントを表示するすべてのフレーム ウィンドウのタイトルが更新されます。  
@@ -1099,24 +1099,24 @@ void UpdateAllViews(
   
 ### <a name="parameters"></a>パラメーター  
  *pSender*  
- ドキュメントを変更するビューへのポインターまたは**NULL**場合、すべてのビューを更新します。  
+ ドキュメントを変更するビューを指すすべてのビューを更新するか場合は null です。  
   
  *lHint*  
  変更に関する情報が含まれています。  
   
  *pHint*  
- 変更に関する情報を格納するオブジェクトへのポインター。  
+ 変更に関する情報を格納するオブジェクトを指します。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出した後は、この関数を呼び出す必要があります、 [SetModifiedFlag](#setmodifiedflag)メンバー関数。 この関数で指定されるビューを除く、ドキュメントにアタッチされている各ビューは通知*pSender*ドキュメントが変更されています。 通常この関数を呼び出すビュー クラスからビューを使用してドキュメントをユーザーが変更された後です。  
+ 呼び出した後は、この関数を呼び出す必要があります、 [SetModifiedFlag](#setmodifiedflag)メンバー関数。 この関数で指定されたビューを除く、ドキュメントにアタッチされているそれぞれのビューに通知*pSender*ドキュメントが変更されました。 通常この関数を呼び出すビュー クラスから、ユーザーには、ビューを使用して、ドキュメントが変更された後です。  
   
- この関数を呼び出して、 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)送信以外のドキュメントのビューの各メンバー関数を表示、渡す*pHint*と*lHint*です。 ドキュメントに加えられた変更に関するビューに情報を渡すには、これらのパラメーターを使用します。 使用して情報をエンコードする*lHint*を定義することや、 [CObject](../../mfc/reference/cobject-class.md)-派生したクラスを変更についての情報を格納および使用して、そのクラスのオブジェクトを渡す*pHint*. 上書き、`CView::OnUpdate`でメンバー関数、 [CView](../../mfc/reference/cview-class.md)-渡された情報に基づいて、ビューの表示の更新を最適化するためにクラスを派生します。  
+ この関数を呼び出して、 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)を除き、送信ドキュメントのビューの各メンバー関数を表示、渡す*pHint*と*lHint*。 ドキュメントに加えられた変更についてのビューに情報を渡すには、これらのパラメーターを使用します。 使用して情報をエンコードする*lHint*定義することや、 [CObject](../../mfc/reference/cobject-class.md)-派生クラスを変更についての情報を格納しを使用してそのクラスのオブジェクトを渡す*pHint*. 上書き、`CView::OnUpdate`でメンバー関数、 [CView](../../mfc/reference/cview-class.md)-渡された情報に基づいて、ビューの表示の更新を最適化するためにクラスを派生します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  
   
 ## <a name="see-also"></a>関連項目  
- [MFC サンプルは](../../visual-cpp-samples.md)   
+ [MFC のサンプルは](../../visual-cpp-samples.md)   
  [MFC サンプル SNAPVW](../../visual-cpp-samples.md)   
  [MFC サンプル NPP](../../visual-cpp-samples.md)   
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   

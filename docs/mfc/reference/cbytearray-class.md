@@ -1,5 +1,5 @@
 ---
-title: CByteArray クラス |Microsoft ドキュメント
+title: CByteArray クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 22e138b586070a0e47ffa399d2c76d086fd4b951
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335855"
 ---
 # <a name="cbytearray-class"></a>CByteArray クラス
 バイトの動的配列をサポートします。  
@@ -69,7 +69,7 @@ class CByteArray : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CByteArray`クラスのメンバー関数に似ています[CObArray](../../mfc/reference/cobarray-class.md)です。 メンバー関数については `CObArray` クラスの説明を参照してください。 任意の場所が表示、`CObject`ポインター関数パラメーターまたは戻り値は、置換、**バイト**です。  
+ メンバー関数は、`CByteArray`クラスのメンバー関数のような[CObArray](../../mfc/reference/cobarray-class.md)します。 メンバー関数については `CObArray` クラスの説明を参照してください。 任意の場所を確認、`CObject`関数パラメーターまたは戻り値としてのポインターをバイトに置き換えてください。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -90,11 +90,11 @@ class CByteArray : public CObject
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|配列の末尾に要素を追加します。必要に応じて、配列を大きくします。|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|配列に別の配列を追加します。必要に応じて、配列を大きくします。|  
 |[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|配列に別の配列をコピーします。必要に応じて、配列を大きくします。|  
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|配列内のバイトまでの一時的な参照を返します。|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|一時参照、配列内のバイトを返します。|  
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|指定されたインデックス位置にある値を返します。|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|この配列内の要素の数を取得します。|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 指定できます**NULL**です。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|この配列内の要素の数を取得します。|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|有効な最大のインデックスを返します。|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|  
@@ -112,14 +112,14 @@ class CByteArray : public CObject
 |[CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
 ## <a name="remarks"></a>Remarks  
- `CByteArray` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 アーカイブをオーバー ロードされた出力ストリームにバイトの配列が格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数は、各要素は、逆に、シリアル化します。  
+ `CByteArray` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 バイト配列がアーカイブ、オーバー ロードされた挿入のあるいずれかに格納されている場合 ( **<<**) 演算子、または、`Serialize`メンバー関数は、各要素は、さらに、シリアル化します。  
   
 > [!NOTE]
 >  配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。  
   
  配列内の個々 の要素からの出力をデバッグする必要がある場合は、深さを設定する必要があります、`CDumpContext`を 1 以上のオブジェクト。  
   
- 使用する方法についての`CByteArray`、記事を参照して[コレクション](../../mfc/collections.md)です。  
+ 使用しての詳細については`CByteArray`、記事をご覧ください[コレクション](../../mfc/collections.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  

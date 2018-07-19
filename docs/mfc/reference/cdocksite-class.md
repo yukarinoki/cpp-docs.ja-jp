@@ -1,5 +1,5 @@
 ---
-title: CDockSite クラス |Microsoft ドキュメント
+title: CDockSite クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336840"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -162,9 +162,9 @@ class CDockSite: public CBasePane
 |[CDockSite::SwapRows](#swaprows)||  
   
 ## <a name="remarks"></a>Remarks  
- フレームワークによって作成`CDockSite`を呼び出すときに自動的にオブジェクト[:enabledocking](../../mfc/reference/cframewndex-class.md#enabledocking)です。 ドッキング サイト ウィンドウは、メイン フレーム ウィンドウ上のクライアント領域の端に配置されます。  
+ フレームワークは作成`CDockSite`を呼び出すときに自動的にオブジェクト[cframewndex::enabledocking](../../mfc/reference/cframewndex-class.md#enabledocking)します。 ドッキング サイト ウィンドウは、メイン フレーム ウィンドウ上のクライアント領域の端に配置されます。  
   
- 通常がありませんので、ドッキング サイトによって提供されるサービスを呼び出す[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)これらのサービスを処理します。  
+ 通常はしなかったために、ドッキング サイトによって提供されるサービスを呼び出す[CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)これらのサービスを処理します。  
   
 ## <a name="example"></a>例  
  次の例では、`CDockSite` クラスのオブジェクトを作成する方法を示します。  
@@ -317,7 +317,7 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*dockMethod*  
  [in]*lpRect*  
   
@@ -334,13 +334,13 @@ virtual BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>パラメーター  
  [in][out]*pBarToDock*  
- 左側にドッキングするウィンドウへのポインター *pTargetBar*です。  
+ 左側にドッキングするウィンドウへのポインター *pTargetBar*します。  
   
  [in][out]*pTargetBar*  
- ターゲット ウィンドウへのポインター。  
+ [ターゲット] ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ウィンドウが正常にドッキングされている場合それ以外の場合、`FALSE`です。  
+ ウィンドウが正常にドッキングされている場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -367,7 +367,7 @@ CPane* FindPaneByID(UINT nID);
  検索する、ウィンドウのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたコマンド ID を持つペインへのポインターまたは`NULL`ウィンドウが見つからない場合。  
+ 指定したコマンド ID、または、ウィンドウが見つからない場合は NULL で、ウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -424,7 +424,7 @@ const CObList& GetPaneList() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在、ドッキング バーにドッキングされているペインの一覧への参照を読み取り専用です。  
+ 現在、ドッキング バーにドッキングされているペインの一覧への読み取り専用の参照。  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -501,7 +501,7 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*nFlags*  
  [in]*ptOffset*  
   
@@ -615,10 +615,10 @@ virtual CPane* PaneFromPoint(CPoint pt);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pt*  
- 取得するウィンドウを画面座標でのポイント。  
+ 取得するウィンドウの画面座標にポイントします。  
   
 ### <a name="return-value"></a>戻り値  
- 指定した位置にあるペインへのポインターまたは`NULL`場合は、ウィンドウは指定した位置に存在しません。  
+ 指定したポイントに存在するウィンドウがない場合は、指定した点または NULL にあるウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -649,7 +649,7 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*dockMethod*  
   
 ### <a name="remarks"></a>Remarks  
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>パラメーター  
  [in][out]*pBar*  
- ウィンドウを表示するか非表示へのポインター。  
+ 表示/非表示するウィンドウへのポインター。  
   
  [in]*bShow*  
- `TRUE` ウィンドウを表示することを指定するには`FALSE`ウィンドウが非表示にすることを指定します。  
+ ウィンドウを表示することを指定する場合は TRUEウィンドウを非表示にすることを指定する場合は FALSE。  
   
  [in]*bDelay*  
- `TRUE` ウィンドウのレイアウトをペインが終了するまで遅延させることを指定するを示すです。それ以外の場合、`FALSE`です。  
+ ウィンドウが表示されます。 後に、ウィンドウのレイアウトがまで延期されることを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
  [in]*bActivate*  
  このパラメーターは使用されません。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、ウィンドウが表示または非表示に正常にします。 `FALSE` 指定されたペインがこれに属していない場合は、サイトをドッキングします。  
+ TRUE の場合は、ウィンドウが表示または非表示に正常にします。 指定したウィンドウがこのドッキング サイトに属していない場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- ドッキング ウィンドウを非表示には、このメソッドを呼び出します。 通常がありませんを呼び出す`CDockSite::ShowPane`直接、親フレーム ウィンドウまたはベースのウィンドウで、これを呼び出すためです。  
+ ドッキング ペインを非表示には、このメソッドを呼び出します。 通常、必要はありませんを呼び出す`CDockSite::ShowPane`直接、親フレーム ウィンドウまたは基本ウィンドウによって呼び出されるためです。  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 

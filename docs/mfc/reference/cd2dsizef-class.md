@@ -1,5 +1,5 @@
 ---
-title: CD2DSizeF クラス |Microsoft ドキュメント
+title: CD2DSizeF クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: f7c25f55263270ad797b231a21e60fe4b0e552c4
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336114"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF クラス
 D2D1_SIZE_F のラッパーです。  
@@ -48,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|返します、**ブール**を式に有効なデータがないかどうかを示す値 ( **null**)。|  
+|[CD2DSizeF::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -96,10 +96,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 幅と高さは空以外の場合は TRUE。それ以外の場合は FALSE。  
+ TRUE の場合、幅と高さが空です。それ以外の場合は FALSE です。  
   
 ##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize  
- CD2DSizeF を CSize オブジェクトに変換します。  
+ CD2DSizeF CSize オブジェクトに変換します。  
   
 ```  
 operator CSize();

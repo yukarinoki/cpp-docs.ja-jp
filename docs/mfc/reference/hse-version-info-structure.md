@@ -1,5 +1,5 @@
 ---
-title: HSE_VERSION_INFO 構造体 |Microsoft ドキュメント
+title: HSE_VERSION_INFO 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acdf63e062aab1407daee461e22f00f5d3c59cee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37335816"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 構造体
-この構造体を指す、`pVer`内のパラメーター、`CHttpServer::GetExtensionVersion`メンバー関数。 ISA のバージョン番号と、ISA のテキストの説明を提供します。  
+この構造体を指す、 *pVer*パラメーター、`CHttpServer::GetExtensionVersion`メンバー関数。 ISA のバージョン番号と、ISA の説明テキストを提供します  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,9 +40,9 @@ typedef struct _HSE_VERSION_INFO {
  ISA のバージョン番号  
   
  *lpszExtensionDesc*  
- ISA のテキストの説明 既定の実装は、プレース ホルダー テキストです。オーバーライド`CHttpServer::GetExtensionVersion`に独自の説明を提供します。  
+ ISA のテキストの説明 既定の実装は、プレース ホルダー テキストを提供します。オーバーライド`CHttpServer::GetExtensionVersion`を独自の説明を提供します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** httpext.h  
   
 ## <a name="see-also"></a>関連項目  

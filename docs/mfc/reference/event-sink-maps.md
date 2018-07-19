@@ -1,5 +1,5 @@
 ---
-title: イベント シンク マップ |Microsoft ドキュメント
+title: イベント シンク マップ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ababaab7324d712457f6411ed731274ea361084b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336606"
 ---
 # <a name="event-sink-maps"></a>イベント シンク マップ
-埋め込み OLE コントロールは、イベントを発生させる、コントロールのコンテナーは、マップと呼ばれる、"イベント シンク、"MFC によって提供される機構を使用して、イベントを受信します。 このイベント シンク マップは、それぞれ特定のイベントと、これらのイベントのパラメーターのハンドラー関数を指定します。 イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)です。  
+埋め込み OLE コントロールのイベントが発生したとき、コントロールのコンテナーは、マップと呼ばれる、"イベント シンク、"MFC によって提供されるメカニズムを使用してイベントを受け取ります。 このイベント シンク マップは、それぞれ特定のイベントと、これらのイベントのパラメーター ハンドラー関数を指定します。 イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。  
   
 ### <a name="event-sink-maps"></a>イベント シンク マップ  
   
@@ -37,8 +37,8 @@ ms.locfileid: "33373929"
 |[ON_EVENT_RANGE](#on_event_range)|OLE コントロールのセットから発生した特定のイベントのイベント ハンドラーを定義します。|  
 |[ON_EVENT_REFLECT](#on_event_reflect)|コントロールのコンテナーによって処理される前に、コントロールによって発生したイベントを受信します。|  
 |[ON_PROPNOTIFY](#on_propnotify)|OLE コントロールからプロパティの通知を処理するためのハンドラーを定義します。|  
-|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|OLE コントロールのセットからのプロパティの通知を処理するためのハンドラーを定義します。|  
-|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|プロパティによって送信された通知コントロールがコントロールのコンテナーによって処理される前に受け取ります。|  
+|[ON_PROPNOTIFY_RANGE](#on_propnotify_range)|OLE コントロールのセットからプロパティの通知を処理するためのハンドラーを定義します。|  
+|[ON_PROPNOTIFY_REFLECT](#on_propnotify_reflect)|コントロールのコンテナーによって処理される前に、コントロールから送信されたプロパティの通知を受信します。|  
   
 ##  <a name="begin_eventsink_map"></a>  BEGIN_EVENTSINK_MAP  
  イベント シンク マップの定義を開始します。  
@@ -48,18 +48,18 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
- あるイベント シンク マップ コントロール クラスの名前を指定します。  
+ *クラス*  
+ イベント シンク マップ コントロール クラスの名前を指定します。  
   
- `baseClass`  
- 基本クラスの名前を指定`theClass`です。  
+ *baseClass*  
+ 基本クラスの名前を示す*クラス*します。  
   
-### <a name="remarks"></a>コメント  
- クラスのメンバー関数を定義する実装 (.cpp) ファイル、起動するとイベント シンク マップ、`BEGIN_EVENTSINK_MAP`マクロ、各イベントについて通知を受けるは、マクロのエントリを追加し、完了とイベント シンク マップ、`END_EVENTSINK_MAP`マクロです。  
+### <a name="remarks"></a>Remarks  
+ クラスのメンバー関数を定義する、実装 (.cpp) ファイルで BEGIN_EVENTSINK_MAP マクロでは、イベント シンク マップを開始し、通知を受けるには、各イベントのマクロのエントリを追加 END_EVENTSINK_MAP マクロとイベント シンク マップを完了します。  
   
- イベント シンク マップと OLE コントロールのコンテナーの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)です。  
+ イベント シンク マップと OLE コントロールのコンテナーの詳細については、この記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="declare_eventsink_map"></a>  DECLARE_EVENTSINK_MAP  
@@ -69,12 +69,12 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 DECLARE_EVENTSINK_MAP()   
 ```  
   
-### <a name="remarks"></a>コメント  
- 使用して、`DECLARE_EVENTSINK_MAP`クラスの宣言の最後にマクロです。 次に、します。クラスのメンバーを定義する CPP ファイルの機能を使用して、`BEGIN_EVENTSINK_MAP`マクロの通知を受信するイベントの各マクロ エントリと`END_EVENTSINK_MAP`イベント シンクのリストの末尾を宣言するマクロです。  
+### <a name="remarks"></a>Remarks  
+ クラスの宣言の最後に DECLARE_EVENTSINK_MAP マクロを使用します。 次に、します。クラスのメンバー関数を定義する CPP ファイルは、通知を受けるは、イベントとイベント シンクのリストの末尾を宣言する END_EVENTSINK_MAP マクロの各 BEGIN_EVENTSINK_MAP マクロ、マクロのエントリを使用します。  
   
- イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)です。  
+ イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxwin.h  
   
 ##  <a name="end_eventsink_map"></a>  END_EVENTSINK_MAP  
@@ -84,81 +84,81 @@ DECLARE_EVENTSINK_MAP()
 END_EVENTSINK_MAP()   
 ```  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_event"></a>  ON_EVENT  
- 使用して、 `ON_EVENT` OLE コントロールによって発生したイベントのイベント ハンドラー関数を定義するマクロです。  
+ ON_EVENT マクロを使用すると、OLE コントロールによって発生するイベントのイベント ハンドラー関数を定義します。  
   
 ```   
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  このイベント シンク マップが所属するクラスです。  
   
- `id`  
+ *ID*  
  OLE コントロールのコントロール ID。  
   
- `dispid`  
+ *dispid*  
  コントロールによって発生したイベントのディスパッチ ID。  
   
- `pfnHandler`  
- イベントを処理するメンバー関数へのポインター。 この関数が必要です、 **BOOL**型、およびイベントのパラメーターに一致するパラメーターの型を返す (を参照してください`vtsParams`)。 関数が返す必要があります**TRUE**イベントがそれ以外の処理を示すために**FALSE**です。  
+ *pfnHandler*  
+ イベントを処理するメンバー関数へのポインター。 この関数には、型、およびイベントのパラメーターと一致するパラメーターの型を返すブール値が必要です。 (を参照してください*vtsParams*)。 関数は、イベントが処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
- `vtsParams`  
- 一連の**vts _** イベントのパラメーターの型を指定する定数。 これらは、ようなディスパッチ マップ エントリで使用される定数を同じ`DISP_FUNCTION`です。  
+ *vtsParams*  
+ 一連の**vts _** イベントのパラメーターの型を指定する定数。 これらは、DISP_FUNCTION などのディスパッチ マップ エントリで使用される同じ定数です。  
   
-### <a name="remarks"></a>コメント  
- `vtsParams`引数がスペースで区切られた一連の値から、 **vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
+### <a name="remarks"></a>Remarks  
+ *VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 続けて短整数を含む一覧を示す、 **BOOL**です。  
+ BOOL 続けて短整数を含むリストを指定します。  
   
- 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)です。  
+ 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_event_range"></a>  ON_EVENT_RANGE  
- 使用して、 `ON_EVENT_RANGE` Id の連続した範囲内のコントロール ID を持つ任意の OLE コントロールによって発生したイベントのイベント ハンドラー関数を定義するマクロです。  
+ ON_EVENT_RANGE マクロを使用すると、連続した Id の範囲内のコントロール ID を持つ任意の OLE コントロールによって発生するイベントのイベント ハンドラー関数を定義します。  
   
 ```   
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)   
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  このイベント シンク マップが所属するクラスです。  
   
- `idFirst`  
+ *idFirst*  
  範囲の最初の OLE コントロールのコントロール ID。  
   
- `idLast`  
+ *idLast*  
  範囲の最後の OLE コントロールのコントロール ID。  
   
- `dispid`  
+ *dispid*  
  コントロールによって発生したイベントのディスパッチ ID。  
   
- `pfnHandler`  
- イベントを処理するメンバー関数へのポインター。 この関数が必要です、 **BOOL**型の最初のパラメーターの型を返す**UINT** (用、コントロールの ID)、およびイベントのパラメーターに一致する追加のパラメーターの型 (を参照してください`vtsParams`)。 関数が返す必要があります**TRUE**イベントがそれ以外の処理を示すために**FALSE**です。  
+ *pfnHandler*  
+ イベントを処理するメンバー関数へのポインター。 この関数には、BOOL 型の戻り型 UINT (のコントロール ID にある) と、イベントのパラメーターと一致する追加のパラメーター型の最初のパラメーターが必要です。 (を参照してください*vtsParams*)。 関数は、イベントが処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
- `vtsParams`  
- 一連の**vts _** イベントのパラメーターの型を指定する定数。 最初の定数が型でなければなりません**VTS_I4**コントロールの id これらは、ようなディスパッチ マップ エントリで使用される定数を同じ`DISP_FUNCTION`です。  
+ *vtsParams*  
+ 一連の**vts _** イベントのパラメーターの型を指定する定数。 最初の定数は、コントロール ID の型 VTS_I4 でなければなりません これらは、DISP_FUNCTION などのディスパッチ マップ エントリで使用される同じ定数です。  
   
-### <a name="remarks"></a>コメント  
- `vtsParams`引数がスペースで区切られた一連の値から、 **vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
+### <a name="remarks"></a>Remarks  
+ *VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 続けて短整数を含む一覧を示す、 **BOOL**です。  
+ BOOL 続けて短整数を含むリストを指定します。  
   
- 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)です。  
+ 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。  
   
 ### <a name="example"></a>例  
- 次の例では、3 つのコントロールの実装、MouseDown イベントのイベント ハンドラー (`IDC_MYCTRL1`を通じて`IDC_MYCTRL3`)。 イベント ハンドラー関数`OnRangeMouseDown`、ダイアログ クラスのヘッダー ファイルで宣言されて ( `CMyDlg`) として。  
+ 次の例では、3 つのコントロールの実装、MouseDown イベントのイベント ハンドラー (IDC_MYCTRL1 IDC_MYCTRL3 経由)。 イベント ハンドラー関数、 `OnRangeMouseDown`、ダイアログ クラスのヘッダー ファイルで宣言されます ( `CMyDlg`) として。  
   
  [!code-cpp[NVC_MFCAutomation#12](../../mfc/codesnippet/cpp/event-sink-maps_2.h)]  
   
@@ -166,45 +166,45 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
   
  [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_event_reflect"></a>  ON_EVENT_REFLECT  
- `ON_EVENT_REFLECT`イベント シンク マップ OLE コントロールのラッパー クラスを使用する場合、マクロがコントロールのコンテナーによって処理される前に、コントロールによって発生したイベントを受信します。  
+ ON_EVENT_REFLECT マクロは、イベント シンク マップ OLE コントロールのラッパー クラスを使用する場合は、コントロールのコンテナーで処理される前に、コントロールによって発生したイベントを受信します。  
   
 ```   
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams) 
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  このイベント シンク マップが所属するクラスです。  
   
  dispid  
  コントロールによって発生したイベントのディスパッチ ID。  
   
- `pfnHandler`  
- イベントを処理するメンバー関数へのポインター。 この関数が必要です、 **BOOL**型と、イベントのパラメーターに一致するパラメーターの型を返す (を参照してください`vtsParams`)。 関数が返す必要があります**TRUE**イベントがそれ以外の処理を示すために**FALSE**です。  
+ *pfnHandler*  
+ イベントを処理するメンバー関数へのポインター。 この関数には、型と、イベントのパラメーターと一致するパラメーターの型を返すブール値が必要です。 (を参照してください*vtsParams*)。 関数は、イベントが処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
- `vtsParams`  
- 一連の**vts _** イベントのパラメーターの型を指定する定数。 これらは、ようなディスパッチ マップ エントリで使用される定数を同じ`DISP_FUNCTION`です。  
+ *vtsParams*  
+ 一連の**vts _** イベントのパラメーターの型を指定する定数。 これらは、DISP_FUNCTION などのディスパッチ マップ エントリで使用される同じ定数です。  
   
-### <a name="remarks"></a>コメント  
- `vtsParams`引数がスペースで区切られた一連の値から、 **vts _** 定数。  
+### <a name="remarks"></a>Remarks  
+ *VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。  
   
  1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 続けて短整数を含む一覧を示す、 **BOOL**です。  
+ BOOL 続けて短整数を含むリストを指定します。  
   
- 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)です。  
+ 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_propnotify"></a>  ON_PROPNOTIFY  
- 使用して、 `ON_PROPNOTIFY` OLE コントロールからプロパティの通知を処理するためには、イベント シンク マップ エントリを定義するマクロです。  
+ ON_PROPNOTIFY マクロを使用すると、OLE コントロールからプロパティの通知を処理するためのイベント シンク マップ エントリを定義します。  
   
 ```   
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)  
@@ -212,32 +212,32 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  このイベント シンク マップが所属するクラスです。  
   
- `id`  
+ *ID*  
  OLE コントロールのコントロール ID。  
   
- `dispid`  
+ *dispid*  
  通知に関連するプロパティのディスパッチ ID。  
   
- `pfnRequest`  
- 処理するメンバー関数へのポインター、 **OnRequestEdit**このプロパティに通知します。 この関数が必要です、 **BOOL**型を返すと、 **BOOL\*** パラメーター。 この関数はパラメーターを設定する必要があります**TRUE**を変更するプロパティを許可して**FALSE**を許可しないようにします。 関数が返す必要があります**TRUE**通知されたそれ以外の処理を示す**FALSE**です。  
+ *pfnRequest*  
+ 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数の型を返すブール値を必要と**BOOL\*** パラメーター。 この関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
- `pfnChanged`  
- 処理するメンバー関数へのポインター、 **OnChanged**このプロパティに通知します。 関数が必要、 **BOOL**型を返すと、 **UINT**パラメーター。 関数が返す必要があります**TRUE**通知がそれ以外の処理されたことを示す**FALSE**です。  
+ *pfnChanged*  
+ 処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数は、BOOL 型 UINT パラメーターの戻り値が必要です。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- `vtsParams`引数がスペースで区切られた一連の値から、 **vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
+### <a name="remarks"></a>Remarks  
+ *VtsParams*引数は、スペースで区切られたリストから値の**vts _** 定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:  
   
  [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]  
   
- 続けて短整数を含む一覧を示す、 **BOOL**です。  
+ BOOL 続けて短整数を含むリストを指定します。  
   
- 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)です。  
+ 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。  
   
 ##  <a name="on_propnotify_range"></a>  ON_PROPNOTIFY_RANGE  
- 使用して、`ON_PROPNOTIFY_RANGE`マクロを連続した Id の範囲内のコントロール ID を持つ任意の OLE コントロールからプロパティの通知を処理するためのイベント シンク マップ エントリを定義します。  
+ ON_PROPNOTIFY_RANGE マクロを使用すると、連続した Id の範囲内のコントロール ID を持つ任意の OLE コントロールからプロパティの通知を処理するためのイベント シンク マップ エントリを定義します。  
   
 ```  
  
@@ -246,29 +246,29 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  このイベント シンク マップが所属するクラスです。  
   
- `idFirst`  
+ *idFirst*  
  範囲の最初の OLE コントロールのコントロール ID。  
   
- `idLast`  
+ *idLast*  
  範囲の最後の OLE コントロールのコントロール ID。  
   
- `dispid`  
+ *dispid*  
  通知に関連するプロパティのディスパッチ ID。  
   
- `pfnRequest`  
- 処理するメンバー関数へのポインター、 **OnRequestEdit**このプロパティに通知します。 この関数が必要です、 **BOOL**型を返すと**UINT**と**BOOL\*** パラメーター。 関数がパラメーターを設定する必要があります**TRUE**を変更するプロパティを許可して**FALSE**を許可しないようにします。 関数が返す必要があります**TRUE**通知がそれ以外の処理されたことを示す**FALSE**です。  
+ *pfnRequest*  
+ 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数は、型を返すブール値と UINT が必要と**BOOL\*** パラメーター。 関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
- `pfnChanged`  
- 処理するメンバー関数へのポインター、 **OnChanged**このプロパティに通知します。 関数が必要、 **BOOL**型を返すと、 **UINT**パラメーター。 関数が返す必要があります**TRUE**通知がそれ以外の処理されたことを示す**FALSE**です。  
+ *pfnChanged*  
+ 処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数は、BOOL 型 UINT パラメーターの戻り値が必要です。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
   
 ##  <a name="on_propnotify_reflect"></a>  ON_PROPNOTIFY_REFLECT  
- `ON_PROPNOTIFY_REFLECT`イベント シンク マップ OLE コントロールのラッパー クラスを使用する場合、マクロがコントロールのコンテナーによって処理される前に、コントロールによって送信されるプロパティの通知を受け取ります。  
+ イベント シンク マップ OLE コントロールのラッパー クラスを使用すると、ON_PROPNOTIFY_REFLECT マクロでは、コントロールのコンテナーで処理される前に、コントロールから送信されたプロパティの通知を受け取ります。  
   
 ```  
  
@@ -277,19 +277,19 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  このイベント シンク マップが所属するクラスです。  
   
- `dispid`  
+ *dispid*  
  通知に関連するプロパティのディスパッチ ID。  
   
- `pfnRequest`  
- 処理するメンバー関数へのポインター、 **OnRequestEdit**このプロパティに通知します。 この関数が必要です、 **BOOL**型を返すと、 **BOOL\*** パラメーター。 この関数はパラメーターを設定する必要があります**TRUE**を変更するプロパティを許可して**FALSE**を許可しないようにします。 関数が返す必要があります**TRUE**通知されたそれ以外の処理を示す**FALSE**です。  
+ *pfnRequest*  
+ 処理するメンバー関数へのポインター、`OnRequestEdit`このプロパティに通知します。 この関数の型を返すブール値を必要と**BOOL\*** パラメーター。 この関数は、プロパティを変更する場合は TRUE と FALSE を許可しないようにするパラメーターを設定する必要があります。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
- `pfnChanged`  
- 処理するメンバー関数へのポインター、 **OnChanged**このプロパティに通知します。 関数が必要、 **BOOL**型およびパラメーターを返します。 関数が返す必要があります**TRUE**通知されたそれ以外の処理を示す**FALSE**です。  
+ *pfnChanged*  
+ 処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数の型およびパラメーターを返すブール値が必要です。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxdisp.h  
     
 ## <a name="see-also"></a>関連項目  
