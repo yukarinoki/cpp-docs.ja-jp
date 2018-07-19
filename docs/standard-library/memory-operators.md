@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fe61112e5b36c8341e4a3209a9bec335549736
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ad33ff04c688ab79fa4a73234829d3e13fd1b44d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857192"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954236"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 演算子
 
@@ -56,19 +56,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 非等値をテストするオブジェクトの 1 つ。
+*左*不等性をテストするオブジェクトの 1 つ。
 
-`right` 非等値をテストするオブジェクトの 1 つ。
+*適切な*不等性をテストするオブジェクトの 1 つ。
 
-`Ty1` 左辺の共有ポインターによって制御される型。
+*Ty1*左によって制御される型がポインターを共有します。
 
-`Ty2` 右辺の共有ポインターによって制御される型。
+*Ty2*権限によって制御される型がポインターを共有します。
 
 ### <a name="return-value"></a>戻り値
 
 オブジェクトが等しくない場合は **true**、オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のテンプレートの演算子は、false を返します。 (すべての既定のアロケーターは等価です。)
 
@@ -154,23 +154,23 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 等しいかどうかをテストするオブジェクトの 1 つ。
+*左*等しいかどうかをテストするオブジェクトのいずれか。
 
-`right` 等しいかどうかをテストするオブジェクトの 1 つ。
+*適切な*等しいかどうかをテストするオブジェクトのいずれか。
 
-`Ty1` 左辺の共有ポインターによって制御される型。
+*Ty1*左によって制御される型がポインターを共有します。
 
-`Ty2` 右辺の共有ポインターによって制御される型。
+*Ty2*権限によって制御される型がポインターを共有します。
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが等しい場合は `true`、オブジェクトが等しくない場合は `false`。
+**true**オブジェクトが等しい場合**false**オブジェクトが等しくない場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のテンプレート演算子は true を返します。 (すべての既定のアロケーターは等価です。)
 
-2 番目と 3 番目のテンプレート演算子は ` left.get() ==  right.get()` を返します。
+2 番目と 3 番目のテンプレート演算子は `left.get() ==  right.get()` を返します。
 
 ### <a name="example"></a>例
 
@@ -258,17 +258,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 比較するオブジェクトの 1 つ。
+*左*と比較するオブジェクトの 1 つ。
 
-`right` 比較するオブジェクトの 1 つ。
+*適切な*と比較するオブジェクトの 1 つ。
 
-`Ty1` 左辺の共有ポインターによって制御される型。
+*Ty1*左によって制御される型がポインターを共有します。
 
-`Ty2` 右辺の共有ポインターによって制御される型。
+*Ty2*権限によって制御される型がポインターを共有します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このテンプレートの演算子を返す`left.get() >= right.get()`です。
+テンプレートの演算子を返す`left.get() >= right.get()`します。
 
 ## <a name="op_lt"></a>  operator&lt;
 
@@ -288,13 +288,13 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 比較するオブジェクトの 1 つ。
+*左*と比較するオブジェクトの 1 つ。
 
-`right` 比較するオブジェクトの 1 つ。
+*適切な*と比較するオブジェクトの 1 つ。
 
-`Ty1` 左辺のポインターによって制御される型。
+*Ty1*左辺のポインターによって制御される型。
 
-`Ty2` 右辺のポインターによって制御される型。
+*Ty2*右のポインターによって制御される型。
 
 ## <a name="op_lt_eq"></a>  演算子&lt;=
 
@@ -314,17 +314,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 比較するオブジェクトの 1 つ。
+*左*と比較するオブジェクトの 1 つ。
 
-`right` 比較するオブジェクトの 1 つ。
+*適切な*と比較するオブジェクトの 1 つ。
 
-`Ty1` 左辺の共有ポインターによって制御される型。
+*Ty1*左によって制御される型がポインターを共有します。
 
-`Ty2` 右辺の共有ポインターによって制御される型。
+*Ty2*権限によって制御される型がポインターを共有します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このテンプレートの演算子を返す `left.get() <= right.get()`
+テンプレートの演算子を返します `left.get() <= right.get()`
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -344,13 +344,13 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 比較するオブジェクトの 1 つ。
+*左*と比較するオブジェクトの 1 つ。
 
-`right` 比較するオブジェクトの 1 つ。
+*適切な*と比較するオブジェクトの 1 つ。
 
-`Ty1` 左辺の共有ポインターによって制御される型。
+*Ty1*左によって制御される型がポインターを共有します。
 
-`Ty2` 右辺の共有ポインターによって制御される型。
+*Ty2*権限によって制御される型がポインターを共有します。
 
 ## <a name="op_lt_lt"></a>  演算子&lt;&lt;
 
@@ -364,17 +364,17 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>パラメーター
 
-`Elem` ストリームの要素の型。
+*Elem*ストリーム要素の型。
 
-`Tr` 型ストリーム要素の特徴です。
+*Tr*型ストリーム要素の特性。
 
-`Ty` 共有ポインターによって制御される型。
+*Ty*の共有ポインターによって制御される型。
 
-`out` 出力ストリーム。
+*out*出力ストリーム。
 
-`sp` 共有ポインター。
+*sp*共有ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `out << sp.get()` を返します。
 

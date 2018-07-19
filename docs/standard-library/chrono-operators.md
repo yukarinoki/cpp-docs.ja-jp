@@ -6,12 +6,12 @@ ms.topic: reference
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: 1ac1051ddaa67dc1970119586ecb9e937583c58a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 786713f37bc8470dd5c455eae49eb4faed72b781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847401"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957413"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 演算子
 
@@ -49,21 +49,21 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+*左*左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+*右*右側`duration`または`time_point`オブジェクト。
 
-`Time` A`time_point`オブジェクト。
+*時間*A`time_point`オブジェクト。
 
-`Dur` A`duration`オブジェクト。
+*期間*A`duration`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 最初の関数は、間隔の長さが 2 つの引数の期間の違いである `duration` オブジェクトを返します。
 
-2 番目の関数は、`time_point` で指定された時点から `Dur` によって表される期間の拒否によって転置される時点を表す `Time` オブジェクトを返します。
+2 番目の関数を返します、`time_point`オブジェクトで表される時間間隔の符号を反転によって、転置される時点を表す*期間*、によって指定された時間内のポイントから*時間*.
 
-3 番目の関数は、`duration` と `Left` 間の時間間隔を表す `Right` オブジェクトを返します。
+3 番目の関数を返します、`duration`間の時間間隔を表すオブジェクトを*左*と*右*します。
 
 ## <a name="op_neq"></a>  operator!=
 
@@ -84,9 +84,9 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+`Left` 左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+`Right` 右側`duration`または`time_point`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -114,13 +114,13 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A`duration`オブジェクト。
+*期間*A`duration`オブジェクト。
 
-`Mult` 整数値。
+*Mult*を整数値。
 
 ### <a name="return-value"></a>戻り値
 
-各関数は、間隔が `duration` の長さを乗算した `Mult` である `Dur` オブジェクトを返します。
+各関数を返します、`duration`間隔の長さがオブジェクト*Mult*の長さで乗算*期間*します。
 
 `is_convertible<Rep2, common_type<Rep1, Rep2>>` が *true* にならない限り、最初の関数はオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
 
@@ -147,19 +147,19 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A`duration`オブジェクト。
+*期間*A`duration`オブジェクト。
 
-`Div` 整数値。
+*Div*を整数値。
 
-`Left` 左側の`duration`オブジェクト。
+*左*左`duration`オブジェクト。
 
-`Right` 右側の`duration`オブジェクト。
+*右*右側`duration`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子は、間隔の長さが `Dur` の値で除算した `Div` の長さである duration オブジェクトを返します。
+1 つ目の演算子は間隔の duration オブジェクトを返しますの長さ*期間*値で除算*Div*します。
 
-2 番目の演算子は、`Left` と `Right` の間隔の長さの比率を返します。
+2 番目の演算子は、の間隔の長さの比率を返します*左*と*右*します。
 
 `is_convertible<Rep2, common_type<Rep1, Rep2>>` が *true を保持*せず、かつ `Rep2` が `duration` のインスタンス化ではない限り、最初の演算子はオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
 
@@ -191,19 +191,19 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+*左*左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+*右*右側`duration`または`time_point`オブジェクト。
 
-`Time` A`time_point`オブジェクト。
+*時間*A`time_point`オブジェクト。
 
-`Dur` A`duration`オブジェクト。
+*期間*A`duration`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-最初の関数は `duration` と `Left` の間隔の合計と同じ時間間隔がある `Right` オブジェクトを返します。
+最初の関数を返します、`duration`の間隔の合計に等しい時間間隔を含むオブジェクト*左*と*右*します。
 
-2 番目と 3 番目の関数は、`time_point`時点からの間隔 `Dur` によって、転置される時点を表す `Time` オブジェクトを返します。
+2 番目と 3 番目の関数が返す、`time_point`間隔によって、転置される時点を表すオブジェクト*期間*、特定の時点から*時間*します。
 
 ## <a name="op_lt"></a>  operator&lt;
 
@@ -224,15 +224,15 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+*左*左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+*右*右側`duration`または`time_point`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-`true` の間隔の長さが `Left` の間隔の長さ未満である場合、最初の関数は `Right` を返します。 それ以外の場合、関数は `false` を返します。
+最初の関数を返します**true**場合の間隔の長さ*左*の間隔の長さより小さい*右*します。 関数を返しますそれ以外の場合、 **false**します。
 
-`true` が `Left` に先行する場合、2 番目の関数は `Right` を返します。 それ以外の場合、関数は `false` を返します。
+2 番目の関数を返します**true**場合*左*前*右*します。 関数を返しますそれ以外の場合、 **false**します。
 
 ## <a name="op_lt_eq"></a>  演算子&lt;=
 
@@ -252,9 +252,9 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+*左*左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+*右*右側`duration`または`time_point`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -278,15 +278,15 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+*左*左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+*右*右側`duration`または`time_point`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-最初の関数は、`true` と `Left` が同じ長さの時間間隔を表す場合に `Right` を返します。 それ以外の場合、関数は `false` を返します。
+最初の関数を返します**true**場合*左*と*右*同じ長さである時間間隔を表します。 関数を返しますそれ以外の場合、 **false**します。
 
-2 番目の関数は、`true` と `Left` が同じ時点を表す場合に `Right` を返します。 それ以外の場合、関数は `false` を返します。
+2 番目の関数を返します**true**場合*左*と*右*の同じ時点を表しています。 関数を返しますそれ以外の場合、 **false**します。
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -306,9 +306,9 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+*左*左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+*右*右側`duration`または`time_point`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -332,9 +332,9 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`duration`または`time_point`オブジェクト。
+*左*左`duration`または`time_point`オブジェクト。
 
-`Right` 右側の`duration`または`time_point`オブジェクト。
+*右*右側`duration`または`time_point`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -360,19 +360,19 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A`duration`オブジェクト。
+*期間*A`duration`オブジェクト。
 
-`Div` 整数値。
+*Div*を整数値。
 
-`Left` 左側の`duration`オブジェクト。
+*左*左`duration`オブジェクト。
 
-`Right` 右側の`duration`オブジェクト。
+*右*右側`duration`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-最初の関数は、間隔の長さが `Dur` を `Div` で除算した剰余となっている `duration` オブジェクトを返します。
+最初の関数を返します、`duration`間隔の長さがオブジェクト*期間*剰余*Div*します。
 
-2 番目の関数は、`Left` を `Right` で除算した剰余を表す値を返します。
+2 番目の関数が表す値を返します*左*剰余*右*します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efd633fb4617a5058afd9bd55b40ccb4fbcee06e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6830baf3d474b80f2e7906a7aadd27d2eee27f9a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847687"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958621"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator クラス
 
@@ -40,9 +40,9 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>パラメーター
 
-`Container` によって挿入される要素の背面にコンテナーの型は、`back_insert_iterator`です。
+*コンテナー*によって挿入される要素の背面にコンテナーの型は、`back_insert_iterator`します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 コンテナーは償却定数時間でシーケンスの末尾に要素を挿入できる、有効な後方挿入シーケンスの要件を満たしている必要があります。 [deque クラス](../standard-library/deque-class.md)、[list クラス](../standard-library/list-class.md)、[vector クラス](../standard-library/vector-class.md)によって定義された、C++ 標準ライブラリ シーケンス コンテナーは、`push_back` メンバー関数を提供し、次の要件を満たします。 この 3 種類のコンテナー、および文字列はそれぞれ `back_insert_iterator` で使用するために改変される可能性があります。 `back_insert_iterator` は、常に、コンテナーで初期化されている必要があります。
 
@@ -67,7 +67,7 @@ class back_insert_iterator;
 |[operator++](#op_add_add)|値を格納できる次の位置に `back_insert_iterator` をインクリメントします。|
 |[operator=](#op_eq)|後方挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<iterator>
 
@@ -83,7 +83,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Cont` コンテナーを`back_insert_iterator`に要素を挿入することです。
+*_Cont*コンテナーを`back_insert_iterator`に要素を挿入します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -146,7 +146,7 @@ typedef Container
 container_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター **Container** のシノニムです。
 
@@ -203,7 +203,7 @@ back_insert_iterator<Container>& operator*();
 
 コンテナーの後ろに挿入される要素への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 出力反復子式 **\*Iter** = **value** を実装するために使用されます。 **Iter** がシーケンス内の要素をアドレス指定する反復子である場合、**\*Iter** = **value** はその要素を値に置き換え、シーケンス内の要素の合計数は変えません。
 
@@ -264,7 +264,7 @@ back_insert_iterator<Container> operator++(int);
 
 値を格納できる次の位置をアドレス指定する `back_insert_iterator`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 preincrementation と postincrementation の演算子は、どちらも同じ結果を返します。
 
@@ -323,13 +323,13 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>パラメーター
 
-`val` コンテナーに挿入する値。
+*val*コンテナーに挿入する値。
 
 ### <a name="return-value"></a>戻り値
 
 コンテナーの後ろに挿入される最後の要素への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のメンバー演算子は、`Container.push_back( val)` を評価し、
 
@@ -386,7 +386,7 @@ int main( )
 typedef typename Container::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、関連するコンテナーによって制御されるシーケンスの要素への参照を示します。
 

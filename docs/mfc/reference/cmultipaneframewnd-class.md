@@ -1,5 +1,5 @@
 ---
-title: CMultiPaneFrameWnd クラス |Microsoft ドキュメント
+title: CMultiPaneFrameWnd クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -90,15 +90,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 544b6ef8887ab9d6f5e5063fcee435c64e355645
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039207"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852349"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd クラス
-`CMultiPaneFrameWnd`クラスを拡張[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)です。 複数のペインをサポートします。 コントロール バーに埋め込まれたハンドルは 1 つではなく`CMultiPaneFrameWnd`が含まれています、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)いずれかをドッキングするのには、ユーザーを有効にするオブジェクト`CMultiPaneFrameWnd`別に、動的に複数の浮動小数点の作成、タブ付きwindows です。  
+`CMultiPaneFrameWnd`クラスは拡張[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)します。 複数のペインをサポートします。 コントロール バーへの単一の埋め込みハンドルではなく`CMultiPaneFrameWnd`が含まれています、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)により、1 つをドッキングするのには、ユーザー オブジェクト`CMultiPaneFrameWnd`別に、動的に作成する複数のフローティング、タブ付きwindows とします。  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
@@ -128,7 +128,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::DockPane](#dockpane)|ペインをドッキングします。 (上書き[CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane))。|  
 |[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||  
 |[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|キャプション テキストを返します。 (上書き[CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext))。|  
-|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|内部のコンテナー マネージャー オブジェクトへの参照を返します。|  
+|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|内部コンテナー マネージャー オブジェクトへの参照を返します。|  
 |[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|ミニフレーム ウィンドウに含まれる最初の可視ペインを返します。 (上書き[CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane))。|  
 |[CMultiPaneFrameWnd::GetPane](#getpane)|ミニフレーム ウィンドウに含まれるペインを返します。 (上書き[CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane))。|  
 |[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|ミニフレーム ウィンドウに含まれるペインの数を返します。 (上書き[CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount))。|  
@@ -153,16 +153,16 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(上書き[CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo))。|  
   
 ## <a name="remarks"></a>Remarks  
- このクラスのメソッドのほとんどのメソッドをオーバーライドする、 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)クラスです。  
+ このクラスのメソッドのほとんどのメソッドをオーバーライドする、 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)クラス。  
   
- ウィンドウを使用している場合、`AFX_CBRS_AUTO_ROLLUP`スタイルと、ユーザーは、そのペインをドッキング マルチ ウィンドウ フレーム ウィンドウに、ユーザーは、ウィンドウの他のドッキング ウィンドウのスタイル設定に関係なくロールアップできます。  
+ ペインが AFX_CBRS_AUTO_ROLLUP スタイルを使用し、ユーザーがマルチ ウィンドウ フレーム ウィンドウにそのウィンドウをドッキングする場合、ユーザーは、他のドッキング ペインのスタイル設定に関係なく、ウィンドウをロールアップできます。  
   
- フレームワークが自動的に作成、`CMultiPaneFrameWnd`ユーザー ペインを切り離して表示を使用するときにオブジェクト、`CBRS_FLOAT_MULTI`スタイル。  
+ フレームワークが自動的に作成、`CMultiPaneFrameWnd`ユーザー CBRS_FLOAT_MULTI スタイルを使用するウィンドウをフローティングするときにオブジェクト。  
   
- クラスを派生させる方法について、`CPaneFrameWnd`クラスし、動的に作成を参照してください[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)です。  
+ クラスを派生させる方法について、`CPaneFrameWnd`クラスし、動的に作成を参照してください[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)します。  
   
 ## <a name="example"></a>例  
- 次の例へのポインターを取得する方法を示します、`CMultiPaneFrameWnd`オブジェクト。 このコード スニペットの一部である、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)です。  
+ 次の例へのポインターを取得する方法を示します、`CMultiPaneFrameWnd`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
   
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -374,14 +374,14 @@ virtual CWnd* GetPane() const;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="getpanecontainermanager"></a>  CMultiPaneFrameWnd::GetPaneContainerManager  
- 内部のコンテナー マネージャー オブジェクトへの参照を返します。  
+ 内部コンテナー マネージャー オブジェクトへの参照を返します。  
   
 ```  
 CPaneContainerManager& GetPaneContainerManager();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 内部のコンテナー マネージャー オブジェクトへの参照。  
+ 内部コンテナー マネージャー オブジェクトへの参照。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドは、内部へのアクセスに使用できます[CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)オブジェクト。  

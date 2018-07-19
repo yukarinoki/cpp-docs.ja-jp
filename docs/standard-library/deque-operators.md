@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: d4dfa6963e9c8194bd4ee589a1a0adced1f05d0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 21fdf5e624634a29d8ed32e004e7fb0d653b86f1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846845"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955216"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; の演算子
 
@@ -44,15 +44,15 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`deque`です。
+*左*型のオブジェクト`deque`します。
 
-`right` 型のオブジェクト`deque`です。
+*適切な*型のオブジェクト`deque`します。
 
 ### <a name="return-value"></a>戻り値
 
 deque オブジェクトが等しくない場合は **true**、deque オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの deque オブジェクトは、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -92,15 +92,15 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`deque`です。
+*左*型のオブジェクト`deque`します。
 
-`right` 型のオブジェクト`deque`です。
+*適切な*型のオブジェクト`deque`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque 未満である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -144,15 +144,15 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`deque`です。
+*左*型のオブジェクト`deque`します。
 
-`right` 型のオブジェクト`deque`です。
+*適切な*型のオブジェクト`deque`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以下" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -197,15 +197,15 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`deque`です。
+*左*型のオブジェクト`deque`します。
 
-`right` 型のオブジェクト`deque`です。
+*適切な*型のオブジェクト`deque`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの deque は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -253,15 +253,15 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`deque`です。
+*左*型のオブジェクト`deque`します。
 
-`right` 型のオブジェクト`deque`です。
+*適切な*型のオブジェクト`deque`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -307,15 +307,15 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`deque`です。
+*左*型のオブジェクト`deque`します。
 
-`right` 型のオブジェクト`deque`です。
+*適切な*型のオブジェクト`deque`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque 以上である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以上" 関係は、最初の等しくない要素のペアの比較に基づいています。
 

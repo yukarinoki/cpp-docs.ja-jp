@@ -1,5 +1,5 @@
 ---
-title: CJumpList クラス |Microsoft ドキュメント
+title: CJumpList クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0c4090ebfa432f1d8b7f05942a6b1af68b75d270
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337893"
 ---
 # <a name="cjumplist-class"></a>CJumpList クラス
 A`CJumpList`タスク バーのアイコンを右クリックしたときに表示されるショートカットの一覧を示します。  
@@ -73,20 +73,20 @@ class CJumpList;
   
 |name|説明|  
 |----------|-----------------|  
-|[CJumpList::AbortList](#abortlist)|コミットすることがなくリスト構築トランザクションを中止します。|  
-|[CJumpList::AddDestination](#adddestination)|オーバーロードされます。 変換先を一覧に追加します。|  
-|[CJumpList::AddKnownCategory](#addknowncategory)|既知のカテゴリを一覧に追加します。|  
-|[CJumpList::AddTask](#addtask)|オーバーロードされます。 正規のタスク カテゴリにアイテムを追加します。|  
-|[CJumpList::AddTasks](#addtasks)|正規のタスク カテゴリにアイテムを追加します。|  
+|[CJumpList::AbortList](#abortlist)|コミットせずリスト構築トランザクションを中止します。|  
+|[CJumpList::AddDestination](#adddestination)|オーバーロードされます。 一覧には、変換先を追加します。|  
+|[CJumpList::AddKnownCategory](#addknowncategory)|一覧には、既知のカテゴリを追加します。|  
+|[CJumpList::AddTask](#addtask)|オーバーロードされます。 正規のタスク カテゴリには、項目を追加します。|  
+|[CJumpList::AddTasks](#addtasks)|正規のタスク カテゴリには、項目を追加します。|  
 |[CJumpList::AddTaskSeparator](#addtaskseparator)|タスク間の区切り記号を追加します。|  
-|[CJumpList::ClearAll](#clearall)|すべてのタスクとの現在のインスタンスに追加されている変換先を削除`CJumpList`これまでです。|  
-|[CJumpList::ClearAllDestinations](#clearalldestinations)|現在のインスタンスに追加されているすべての送信先を削除`CJumpList`これまでです。|  
-|[CJumpList::CommitList](#commitlist)|リスト生成トランザクションを終了し、リストをコミットします報告された関連するストア (ここではレジストリ。)|  
-|[CJumpList::GetDestinationList](#getdestinationlist)|宛先一覧へのインターフェイス ポインターを取得します。|  
-|[CJumpList::GetMaxSlots](#getmaxslots)|呼び出し元のアプリケーションの保存先のメニューに表示できるカテゴリ ヘッダーを含む、アイテムの最大数を取得します。|  
+|[CJumpList::ClearAll](#clearall)|すべてのタスクと変換先の現在のインスタンスに追加された削除`CJumpList`これまでにします。|  
+|[CJumpList::ClearAllDestinations](#clearalldestinations)|現在のインスタンスに追加されたすべての変換先を削除します。`CJumpList`これまでにします。|  
+|[CJumpList::CommitList](#commitlist)|リスト構築トランザクションを終了し、報告された一覧をコミットに関連付けられているストア (ここではレジストリです。)|  
+|[CJumpList::GetDestinationList](#getdestinationlist)|ターゲット リストへのインターフェイス ポインターを取得します。|  
+|[CJumpList::GetMaxSlots](#getmaxslots)|呼び出し元アプリケーションの移行先のメニューで表示できるカテゴリ ヘッダーを含む項目の最大数を取得します。|  
 |[CJumpList::GetRemovedItems](#getremoveditems)|表す項目の配列を返しますでは、変換先を削除します。|  
-|[CJumpList::InitializeList](#initializelist)|リスト生成トランザクションを開始します。|  
-|[CJumpList::SetAppID](#setappid)|一覧については、構築するには、アプリケーション ユーザー モデル ID を設定します。|  
+|[CJumpList::InitializeList](#initializelist)|リスト構築トランザクションを開始します。|  
+|[CJumpList::SetAppID](#setappid)|構築されるリストのアプリケーション ユーザー モデル ID を設定します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CJumpList](../../mfc/reference/cjumplist-class.md)  
@@ -102,17 +102,17 @@ class CJumpList;
 ```  
   
 ##  <a name="abortlist"></a>  CJumpList::AbortList  
- コミットすることがなくリスト構築トランザクションを中止します。  
+ コミットせずリスト構築トランザクションを中止します。  
   
 ```  
 void AbortList();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出して破棄すると同じ効果は`CJumpList`呼び出さず`CommitList`です。  
+ このメソッドを呼び出すのと同じ効果を破棄する`CJumpList`呼び出さず`CommitList`します。  
   
 ##  <a name="adddestination"></a>  CJumpList::AddDestination  
- 変換先を一覧に追加します。  
+ 一覧には、変換先を追加します。  
   
 ```  
 BOOL AddDestination(
@@ -132,27 +132,27 @@ BOOL AddDestination(
   
 ### <a name="parameters"></a>パラメーター  
  *lpcszCategoryName*  
- カテゴリ名を指定します。 指定したカテゴリが存在しない場合は作成されます。  
+ カテゴリ名を指定します。 指定したカテゴリが存在しない場合は、それが作成されます。  
   
  *strDestinationPath*  
  コピー先ファイルへのパスを指定します。  
   
  *strCategoryName*  
- カテゴリ名を指定します。 指定したカテゴリが存在しない場合は作成されます。  
+ カテゴリ名を指定します。 指定したカテゴリが存在しない場合は、それが作成されます。  
   
  *pShellItem*  
  シェル項目が追加されている変換先を表すを指定します。  
   
  *pShellLink*  
- シェル リンクが追加されている変換先を表すを指定します。  
+ シェルのリンクが追加されている変換先を表すを指定します。  
   
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- インスタンス`CJumpList`追加した変換先を内部的に蓄積され、それらをコミット`CommitList`です。  
+ インスタンス`CJumpList`追加の変換先を内部的に蓄積され、それらをコミット`CommitList`します。  
   
 ##  <a name="addknowncategory"></a>  CJumpList::AddKnownCategory  
- 既知のカテゴリを一覧に追加します。  
+ 一覧には、既知のカテゴリを追加します。  
   
 ```  
 BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
@@ -160,15 +160,15 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
   
 ### <a name="parameters"></a>パラメーター  
  *category*  
- 既知のカテゴリの種類を指定します。 いずれかになります`KDC_RECENT`、または`KDC_KNOWN`です。  
+ 既知のカテゴリの種類を指定します。 KDC_RECENT、または KDC_KNOWN のいずれかを指定できます。  
   
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- 既知のカテゴリは、利用頻度および最近使ったもの カテゴリが自動的に計算を行うを利用するアプリケーションごとに`SHAddToRecentDocs`(または直接いないそのまま使用シェルを使用すると一部のシナリオで、アプリケーションの代わりに呼び出されます)。  
+ 既知のカテゴリは、利用頻度および最近使ったもの カテゴリを使用するすべてのアプリケーションに対して私たちが自動的に計算する`SHAddToRecentDocs`(または、直接に使用されることに、シェルを使用すると一部のシナリオで、アプリケーションの代わりに呼び出すが、)。  
   
 ##  <a name="addtask"></a>  CJumpList::AddTask  
- 正規のタスク カテゴリにアイテムを追加します。  
+ 正規のタスク カテゴリには、項目を追加します。  
   
 ```  
 BOOL AddTask(
@@ -183,13 +183,13 @@ BOOL AddTask(IShellLink* pShellLink);
   
 ### <a name="parameters"></a>パラメーター  
  *strTargetExecutablePath*  
- 対象タスクのパスを指定します。  
+ タスクのターゲット パスを指定します。  
   
  *strCommandLineArgs*  
  StrTargetExecutablePath で指定された実行可能ファイルのコマンドライン引数を指定します。  
   
  *されません*  
- 変換先 ボックスの一覧に表示されるタスクの名前です。  
+ ターゲット リストに表示されるタスクの名前。  
   
  *strIconLocation*  
  タイトルと共に移行先のリストに表示されるアイコンの場所です。  
@@ -198,15 +198,15 @@ BOOL AddTask(IShellLink* pShellLink);
  アイコンのインデックス。  
   
  *pShellLink*  
- 追加するタスクを表すシェル リンクします。  
+ 追加するタスクを表現するシェルのリンク。  
   
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- インスタンス`CJumpList`累計する指定したタスク中に、ターゲット リストに追加して`CommitList`です。 作業項目は、アプリケーションの移行先のメニューの下部にあるカテゴリに表示されます。 このカテゴリは他のすべてのカテゴリに優先される UI でいっぱいになったときにします。  
+ インスタンス`CJumpList`指定したタスクの累積し、中に、ターゲット リストに追加`CommitList`します。 タスク項目は、アプリケーションの移行先のメニューの下部にあるカテゴリに表示されます。 このカテゴリは他のすべてのカテゴリに優先される UI でいっぱいになったときにします。  
   
 ##  <a name="addtasks"></a>  CJumpList::AddTasks  
- 正規のタスク カテゴリにアイテムを追加します。  
+ 正規のタスク カテゴリには、項目を追加します。  
   
 ```  
 BOOL AddTasks(IObjectArray* pObjectCollection);
@@ -219,7 +219,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- CJumpList のインスタンスを選択し、累計する指定したタスク中に、ターゲット リストに追加`CommitList`です。 作業項目は、アプリケーションの移行先のメニューの下部にあるカテゴリに表示されます。 このカテゴリは他のすべてのカテゴリに優先される UI でいっぱいになったときにします。  
+ CJumpList のインスタンスは、指定したタスクを蓄積され、中に、ターゲット リストに追加します`CommitList`します。 タスク項目は、アプリケーションの移行先のメニューの下部にあるカテゴリに表示されます。 このカテゴリは他のすべてのカテゴリに優先される UI でいっぱいになったときにします。  
   
 ##  <a name="addtaskseparator"></a>  CJumpList::AddTaskSeparator  
  タスク間の区切り記号を追加します。  
@@ -229,7 +229,7 @@ BOOL AddTaskSeparator();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合は 0 以外。 なっていない場合は 0 です。  
+ 、成功した場合は 0 以外でない場合は 0。  
   
 ##  <a name="cjumplist"></a>  CJumpList::CJumpList  
  `CJumpList` オブジェクトを構築します。  
@@ -240,30 +240,30 @@ CJumpList(BOOL bAutoCommit = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  *bAutoCommit*  
- このパラメーターが FALSE の場合、一覧が自動的にコミットされていないデストラクターでします。  
+ このパラメーターが FALSE の場合、リストがデストラクターで自動的にコミットされません。  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
- すべてのタスクとの現在のインスタンスに追加されている変換先を削除`CJumpList`これまでです。  
+ すべてのタスクと変換先の現在のインスタンスに追加された削除`CJumpList`これまでにします。  
   
 ```  
 void ClearAll();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドをクリアし、すべてのデータと内部のインターフェイスを解放します。  
+ このメソッドは、クリアし、すべてのデータと内部インターフェイスを解放します。  
   
 ##  <a name="clearalldestinations"></a>  CJumpList::ClearAllDestinations  
- これまで CJumpList の現在のインスタンスに追加されているすべての送信先を削除します。  
+ これまでに CJumpList の現在のインスタンスに追加されたすべての変換先を削除します。  
   
 ```  
 void ClearAllDestinations();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 変換先 ボックスの一覧の構築の現在のセッションでこれまでに追加されたその他の送信先、再度追加しているすべての送信先を削除する必要がある場合は、この関数を呼び出します。 場合、内部`ICustomDestinationList`されましたが、初期化はそのまま存続します。  
+ 他の変換先、再度追加して変換先 ボックスの一覧のビルドの現在のセッションでこれまでに追加されたすべての変換先を削除する必要がある場合は、この関数を呼び出します。 場合、内部`ICustomDestinationList`されましたが、初期化が中断したアライブします。  
   
 ##  <a name="commitlist"></a>  CJumpList::CommitList  
- リスト構築トランザクションを終了し、関連するストア (ここではレジストリ) に報告されたリストをコミットします。  
+ リスト構築トランザクションを終了し、関連付けられているストア (ここではレジストリ) に報告されたリストをコミットします。  
   
 ```  
 BOOL CommitList();
@@ -272,10 +272,10 @@ BOOL CommitList();
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- コミットはアトミックです。 コミットに失敗した場合、エラーが返されます。  ときに`CommitList`が呼び出されると、現在削除された項目の一覧をクリーンアップします。 このメソッドを呼び出すリスト構築のアクティブなトランザクションがあるないように、オブジェクトにリセットします。 一覧を更新する`BeginList`にもう一度呼び出される必要があります。  
+ コミットはアトミックです。 エラーが、コミットに失敗した場合に返されます。  ときに`CommitList`を呼び出すと、現在削除された項目の一覧をクリーンアップします。 リストの構築のアクティブなトランザクションがあるないように、オブジェクトをリセットするこのメソッドを呼び出します。 一覧を更新する`BeginList`もう一度呼び出す必要があります。  
   
 ##  <a name="getdestinationlist"></a>  CJumpList::GetDestinationList  
- 宛先一覧へのインターフェイス ポインターを取得します。  
+ ターゲット リストへのインターフェイス ポインターを取得します。  
   
 ```  
 ICustomDestinationList* GetDestinationList();
@@ -284,10 +284,10 @@ ICustomDestinationList* GetDestinationList();
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- ジャンプ リストは初期化されていませんまたは、コミットまたは中止されましたが場合、返される値は`NULL`します。  
+ ジャンプ リストは初期化されていないか、コミットまたは中止されていますが場合、返される値は NULL になります。  
   
 ##  <a name="getmaxslots"></a>  CJumpList::GetMaxSlots  
- 呼び出し元のアプリケーションの保存先のメニューに表示できるカテゴリ ヘッダーを含む、アイテムの最大数を取得します。  
+ 呼び出し元アプリケーションの移行先のメニューで表示できるカテゴリ ヘッダーを含む項目の最大数を取得します。  
   
 ```  
 UINT GetMaxSlots() const;  
@@ -296,7 +296,7 @@ UINT GetMaxSlots() const;
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションは、アイテムの数と組み合わせてこの値になるまでのカテゴリ ヘッダーをレポートのみ可能性があります。 場合に呼び出す`AppendCategory`、 `AppendKnownCategory`、または`AddUserTasks`この数を超える、エラーが返されます。  
+ アプリケーションでは、さまざまな項目と組み合わせてこの値になるまでカテゴリ ヘッダーがレポートのみ可能性があります。 場合に呼び出す`AppendCategory`、 `AppendKnownCategory`、または`AddUserTasks`この数を超える、エラーが返されます。  
   
 ##  <a name="getremoveditems"></a>  CJumpList::GetRemovedItems  
  表す項目の配列を返しますでは、変換先を削除します。  
@@ -308,10 +308,10 @@ IObjectArray* GetRemovedItems();
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- 削除された変換先は、ジャンプ リストの初期化中に取得されます。 新しいターゲット リストを生成するときに、アプリケーションは、最初に削除された一覧の列挙子によって返されるすべての項目について、追跡データのクリア、削除された変換先の一覧を処理する必要があります。 アプリケーションが、現在の呼び出し、トランザクションにだけ削除された項目を提供しようとしています。 場合`BeginList`開始されると、その項目を再度追加したメソッドの呼び出しは失敗をアプリケーションが削除されたリストを考慮しことを確認します。  
+ 削除された変換先は、ジャンプ リストの初期化中に取得されます。 新しい変換先のリストを生成するときに、最初の追跡データ削除の一覧の列挙子によって返されるすべての項目をオフにすると、削除された変換先の一覧を処理するアプリケーションが必要です。 アプリケーションが、現在の呼び出しをトランザクションにだけ削除された項目を提供しようとしています。 場合`BeginList`開始されると、その項目を再度追加したメソッドの呼び出しは失敗、アプリケーションが削除されたリストを尊重しすることを確認します。  
   
 ##  <a name="initializelist"></a>  CJumpList::InitializeList  
- リスト生成トランザクションを開始します。  
+ リスト構築トランザクションを開始します。  
   
 ```  
 BOOL InitializeList();
@@ -320,10 +320,10 @@ BOOL InitializeList();
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- ポインターを取得する場合を除き、このメソッドを明示的に呼び出す必要はありません`ICustomDestinationList`を使用して`GetDestinationList`を使用して、使用可能なスロット数`GetMaxSlots`、またはを使用して削除された項目の一覧`GetRemovedItems`です。  
+ ポインターを取得する場合を除き、このメソッドを明示的に呼び出す必要はありません`ICustomDestinationList`を使用して`GetDestinationList`を使用して、使用可能なスロット数`GetMaxSlots`、またはを使用して削除された項目のリストを`GetRemovedItems`します。  
   
 ##  <a name="setappid"></a>  CJumpList::SetAppID  
- 一覧については、構築するには、アプリケーション ユーザー モデル ID を設定します。  
+ 構築されるリストのアプリケーション ユーザー モデル ID を設定します。  
   
 ```  
 void SetAppID(LPCTSTR strAppID);

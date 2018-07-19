@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955895"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex クラス
 
@@ -58,9 +58,9 @@ class recursive_mutex;
 |[try_lock](#try_lock)|ブロックせずにミューテックスの所有権を取得しようとします。|
 |[unlock](#unlock)|ミューテックスの所有権を解放します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ミュー テックス >
+**ヘッダー:** \<mutex >
 
 **名前空間:** std
 
@@ -72,7 +72,7 @@ class recursive_mutex;
 void lock();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 呼び出しスレッドが既に `mutex` を所有している場合、メソッドが直ちに返され、以前のロックは有効のままになります。
 
@@ -92,7 +92,7 @@ recursive_mutex();
 ~recursive_mutex();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 デストラクターの実行時にオブジェクトがロックされる場合の動作は未定義です。
 
@@ -106,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが `mutex` の所有権を正常に取得した場合、または呼び出し元のスレッドがすでに `mutex` を所有している場合は `true`、それ以外の場合は `false` です。
+**true**メソッドの所有権を正常に取得した場合、`mutex`または呼び出し元のスレッドが既に所有している場合、`mutex**; otherwise, **false`します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-呼び出しスレッドが既に `mutex` を所有している場合、関数が直ちに `true` を返し、以前のロックは有効のままになります。
+呼び出し元のスレッドが既に所有している場合、 `mutex`、関数をすぐに返します**true**、および以前のロックが有効になります。
 
 ## <a name="unlock"></a>  unlock
 
@@ -120,7 +120,7 @@ bool try_lock() noexcept;
 void unlock();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメソッドが `mutex` の所有権を開放するのは、[lock](#lock) および [try_lock](#try_lock) が `recursive_mutex` オブジェクト上で正常に呼び出されたのと同じ回数だけ呼び出された後のみです。
 

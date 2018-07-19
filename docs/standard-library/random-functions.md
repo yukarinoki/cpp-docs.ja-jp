@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: c8ee20759e66c7beb295de96b8311df46555ac6b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5b0cd634dad099669d803d4a2717fc9198151781
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852817"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954159"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt; 関数
 
@@ -31,15 +31,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>パラメーター
 
-`RealType` 浮動小数点、整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-`Bits` 乱数ジェネレーター。
+*Bits*乱数ジェネレーター。
 
-`Gen` 乱数ジェネレーター。
+*Gen*乱数ジェネレーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このテンプレート関数は、`operator()` の `Gen` を繰り返し呼び出して、型 `x` の浮動小数点値 `RealType` に戻り値を埋め込みます。これは、指定された数の仮数部のビットが `x` に揃うまで続行されます。 指定された数とは、`Bits` (0 以外である必要があります) と `RealType` の仮数部のビット数の小さい方を示します。 最初の呼び出しで最下位のビットが提供されます。 `x` が返されます。
+テンプレートの関数呼び出し`operator()`の*Gen*繰り返しと返される値を浮動小数点値にパック`x`型の*RealType*まで、指定した数を収集しました仮数部のビットの`x`します。 指定した数がのうち、小さい方*ビット*(0 以外の値がある必要があります) と仮数部のビット数の完全な*RealType*します。 最初の呼び出しで最下位のビットが提供されます。 `x` が返されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -7,12 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: 4ae585c53fde68c580059532722ac5d0b019a3db
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845974"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958554"
 ---
 # <a name="lthashmapgt-functions"></a>&lt;hash_map&gt; 関数
 
@@ -35,11 +35,11 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`right` マップのものと交換される要素は、hash_map`left`です。
+*適切な*要素が map と交換される hash_map*左*します。
 
-`left` マップのものと交換される要素は、hash_map`right`です。
+*左*要素が map と交換される hash_map*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 テンプレート関数は、コンテナー クラス hash_map に特化したアルゴリズムであり、メンバー関数 `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*) を実行します。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョンであり、algorithm ヘッダー ファイルにある **template \<class T> void swap(T&, T&)** は、代入によって機能し、処理が低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 
@@ -58,11 +58,11 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`right` マップのものと交換される要素は、hash_multimap`left`です。
+*適切な*要素が map と交換される hash_multimap*左*します。
 
-`left` マップのものと交換される要素は、hash_multimap`right`です。
+*左*要素が map と交換される hash_multimap*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 テンプレート関数は、コンテナー クラス hash_multimap に特化したアルゴリズムであり、メンバー関数 `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)` を実行します。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョンであり、algorithm ヘッダー ファイルにある **template \<class T> void swap(T&, T&)** は、代入によって機能し、処理が低速です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 

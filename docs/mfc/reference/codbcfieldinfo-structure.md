@@ -1,5 +1,5 @@
 ---
-title: CODBCFieldInfo 構造体 |Microsoft ドキュメント
+title: CODBCFieldInfo 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: c1723e93320129fae232bb850caa123d1638a37b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040195"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853083"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 構造体
-`CODBCFieldInfo`構造体には、ODBC データ ソース内のフィールドに関する情報が含まれています。  
+`CODBCFieldInfo`構造体には、ODBC データ ソースのフィールドについての情報が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,19 +45,19 @@ struct CODBCFieldInfo
  フィールドの名前。  
   
  *m_nSQLType*  
- フィールドの SQL データ型です。 これには、ODBC SQL データ型またはドライバー固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧は、Windows SDK の「SQL データ型」を参照してください。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
+ フィールドの SQL データ型。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧は、Windows SDK の「SQL データ型」を参照してください。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
   
  *m_nPrecision*  
- フィールドの最大有効桁数です。 詳細については、Windows SDK の「有効桁数、小数点以下桁数、長さ、および表示サイズ」を参照してください。  
+ フィールドの最大有効桁数。 詳細については、Windows SDK の「有効桁数、スケール、長さ、および表示サイズ」を参照してください。  
   
  *m_nScale*  
- フィールドの小数点以下桁数。 詳細については、Windows SDK の「有効桁数、小数点以下桁数、長さ、および表示サイズ」を参照してください。  
+ フィールドの小数点以下桁数。 詳細については、Windows SDK の「有効桁数、スケール、長さ、および表示サイズ」を参照してください。  
   
  *m_nNullability*  
- かどうか、フィールドは、Null 値を受け入れます。 2 つの値のいずれかです: **SQL_NULLABLE**フィールドが Null 値を受け入れる場合、または**SQL_NO_NULLS**フィールドが Null 値を受け付けない場合。  
+ かどうか、フィールドは、Null 値を受け入れます。 これは 2 つの値のいずれかを指定できます: SQL_NULLABLE フィールドは Null 値を受け入れるか SQL_NO_NULLS フィールドを受け入れない場合は Null 値。  
   
 ## <a name="remarks"></a>Remarks  
- この情報を取得する[に](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)です。  
+ この情報を取得する[に](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)します。  
   
 ## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdb.h  

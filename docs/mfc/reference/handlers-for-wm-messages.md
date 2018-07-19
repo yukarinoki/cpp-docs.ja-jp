@@ -1,5 +1,5 @@
 ---
-title: Wm _ で始まるメッセージのハンドラー |Microsoft ドキュメント
+title: Wm _ で始まるメッセージのハンドラー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f4c55eef55cb1258932f5e503c82c1ee824246
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eeb3ee5b458ea65628e7f1c86c87dcad42f6fd2
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338604"
 ---
 # <a name="handlers-for-wm-messages"></a>WM_ で始まるメッセージのハンドラー
-次のトピックは、マップのエントリに対応します。  
+次のトピックでは、マップのエントリに対応します。  
   
 |トピック|マップのエントリ|  
 |-----------|-----------------|  
-|[A、C](../../mfc/reference/wm-message-handlers-a-c.md)|**ON_WM_ACTIVATE**を通じて**ON_WM_CTLCOLOR**|  
-|[D、E](../../mfc/reference/wm-message-handlers-d-e.md)|**ON_WM_DEADCHAR**を通じて**ON_WM_ERASEBKGND**|  
-|[F ~ K](../../mfc/reference/wm-message-handlers-f-k.md)|**ON_WM_FONTCHANGE**を通じて**ON_WM_KILLFOCUS**|  
-|[L、M](../../mfc/reference/wm-message-handlers-l-m.md)|**ON_WM_LBUTTONDBLCLK**を通じて**ON_WM_MOVING**|  
-|[N-O](../../mfc/reference/wm-message-handlers-n-o.md)|**ON_WM_NCACTIVATE**を通じて**ON_WM_NCRBUTTONUP**|  
-|[P: R](../../mfc/reference/wm-messages-p-r.md)|**ON_WM_PAINT**を通じて**ON_WM_RENDERFORMAT**|  
-|[S](../../mfc/reference/wm-messages-s.md)|**ON_WM_SETCURSOR**を通じて**ON_WM_SYSKEYUP**|  
-|[T ~ Z](../../mfc/reference/wm-messages-t-z.md)|**ON_WM_TIMECHANGE**を通じて**ON_WM_WININICHANGE**|  
+|[-C](../../mfc/reference/wm-message-handlers-a-c.md)|ON_WM_CTLCOLOR を通じて ON_WM_ACTIVATE|  
+|[D、E](../../mfc/reference/wm-message-handlers-d-e.md)|ON_WM_ERASEBKGND を通じて ON_WM_DEADCHAR|  
+|[F-K](../../mfc/reference/wm-message-handlers-f-k.md)|ON_WM_KILLFOCUS を通じて ON_WM_FONTCHANGE|  
+|[L、M](../../mfc/reference/wm-message-handlers-l-m.md)|ON_WM_MOVING を通じて ON_WM_LBUTTONDBLCLK|  
+|[N – O](../../mfc/reference/wm-message-handlers-n-o.md)|ON_WM_NCRBUTTONUP を通じて ON_WM_NCACTIVATE|  
+|[P-R](../../mfc/reference/wm-messages-p-r.md)|ON_WM_RENDERFORMAT を通じて ON_WM_PAINT|  
+|[S](../../mfc/reference/wm-messages-s.md)|ON_WM_SYSKEYUP を通じて ON_WM_SETCURSOR|  
+|[T ~ Z](../../mfc/reference/wm-messages-t-z.md)|ON_WM_WININICHANGE を通じて ON_WM_TIMECHANGE|  
   
 ## <a name="see-also"></a>関連項目  
  [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)

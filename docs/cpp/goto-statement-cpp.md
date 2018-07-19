@@ -1,5 +1,5 @@
 ---
-title: goto ステートメント (C++) |Microsoft ドキュメント
+title: goto ステートメント (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3bbd026a00306fb2d8e69df94fd9c0c913039
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7676f38e52734fa2f0ce8ecbc9b268be1939f6dc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953396"
 ---
 # <a name="goto-statement-c"></a>goto ステートメント (C++)
-`goto` ステートメントは、指定した識別子によってラベル付けされたステートメントに制御を移します。  
+**Goto**ステートメントは無条件で指定した識別子によってラベル付けステートメントに制御を転送します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,19 +32,19 @@ ms.lasthandoff: 05/03/2018
 goto identifier;  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `identifier` で指定されたラベル付きステートメントは、現在の関数内にある必要があります。 すべての `identifier` 名は内部の名前空間のメンバーであるため、他の識別子と干渉することはありません。  
   
- ステートメント ラベルは `goto` ステートメントに対してのみ意味があります。その他の場合、ステートメント ラベルは無視されます。 ラベルは再宣言できません。  
+ ステートメント ラベルにのみ意味のある、 **goto**ステートメントです。 それ以外の場合、ステートメント ラベルは無視されます。 ラベルは再宣言できません。  
   
- 可能な限り、`break` ステートメントより `continue`、`return`、および `goto` ステートメントを使用することをお勧めします。 ただし、`break` ステートメントはループの 1 つのレベルのみを終了するため、深い入れ子のループを終了するには `goto` ステートメントを使用する必要がある場合もあります。  
+ 使用するスタイルのプログラミングをお勧め、 **break**、**続行**と**返す**ステートメントの代わりに、 **goto**ステートメントたびに考えられる。 ただし、ため、 **break**ステートメント、ループの 1 つだけのレベルから抜けるを使用する必要があります、 **goto**深く入れ子になったループを終了するステートメント。  
   
- ラベルの詳細については、`goto`ステートメントを参照してください[ラベル付きステートメント](../cpp/labeled-statements.md)と[goto ステートメントを使用してラベル](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe)です。  
+ ラベルの詳細については、 **goto**ステートメントを参照してください[ラベル付きステートメント](../cpp/labeled-statements.md)します。  
   
 ## <a name="example"></a>例  
- この例で `goto` ステートメントは、`stop` が 3 に等しい場合に、`i` というラベルの位置に制御を移します。  
+ この例で、 **goto**ステートメントに制御というラベルの位置を転送`stop`とき`i`が 3 に等しい。  
   
-```  
+```cpp  
 // goto_statement.cpp  
 #include <stdio.h>  
 int main()  

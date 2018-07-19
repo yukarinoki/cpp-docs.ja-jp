@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958254"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
 
@@ -45,11 +45,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>パラメーター
 
-`CharType` Ostreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char` です。
+*CharType* ostreambuf_iterator の文字型を表す型。 この引数は省略可能、既定値は**char**します。
 
-`Traits` Ostreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
+*Traits* ostreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 ostreambuf_iterator クラスは出力反復子の要件を満たす必要があります。 アルゴリズムは `ostreambuf_iterator` を使用して出力ストリームに直接書き込むことができます。 このクラスは、生の (フォーマットされていない) I/O ストリームに文字の形式でアクセスできる低レベルのストリームの反復子を提供し、高レベルのストリーム反復子に関連付けられたバッファリングや文字変換をバイパスすることができます。
 
@@ -82,7 +82,7 @@ ostreambuf_iterator クラスは出力反復子の要件を満たす必要があ
 |[operator++](#op_add_add)|操作が呼び出される前に示したものと同じオブジェクトに `ostreambuf_iterator` を返す、実質的な機能を持たないインクリメント演算子。|
 |[operator=](#op_eq)|この演算子は、関連付けられているストリーム バッファーに文字を挿入します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 
@@ -96,9 +96,9 @@ ostreambuf_iterator クラスは出力反復子の要件を満たす必要があ
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **CharType** のシノニムです。
+この型は、テンプレート パラメーター `CharType` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -150,7 +150,7 @@ bool failed() const throw();
 
 これまでに出力ストリーム バッファーへの挿入が失敗していない場合は、**true**。そうでない場合は、**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、これまでのメンバー `operator=` の使用で、**subf**_-> `sputc` の呼び出しが **eof** を返した場合、**true** を返します。
 
@@ -201,7 +201,7 @@ ostreambuf_iterator<CharType, Traits>& operator*();
 
 ostreambuf 反復子オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この演算子は、出力反復子式 \* *i* = *x* 内でのみ機能して、ストリーム バッファーに文字を出力します。 ostreambuf 反復子に適用されて、反復子を返します。**\*iter** は **iter** を返します。
 
@@ -249,7 +249,7 @@ ostreambuf_iterator<CharType, Traits>& operator++(int);
 
 最初に示された文字または、`ostreambuf_iterator`\< **CharType**, **Traits**> に変換できる実装定義のオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この演算子は、出力反復子式 \* *i* = *x* を実装するために使用されます。
 
@@ -294,13 +294,13 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Char` ストリーム バッファーに挿入する文字。
+*_Char*ストリーム バッファーに挿入する文字。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム バッファーに挿入された文字への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 出力ストリームに書き込むための出力反復子式 \* *i* = *x* を実装するために使用される代入演算子。
 
@@ -346,13 +346,13 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-`strbuf` 出力ストリーム バッファー ポインターを初期化するために使用される出力 streambuf オブジェクト。
+*strbuf*出力ストリームバッファー ポインターを初期化するために使用される出力 streambuf オブジェクト。
 
-`Ostr` 出力ストリーム バッファー ポインターを初期化するために使用する出力ストリーム オブジェクト。
+*Ostr*出力ストリームバッファー ポインターを初期化するために使用される出力ストリーム オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、出力ストリームバッファー ポインターを `strbuf` で初期化します。
+最初のコンス トラクターによって初期化、出力ストリームバッファー ポインターを*strbuf*します。
 
 2 番目のコンストラクターは、出力ストリームバッファー ポインターを `Ostr`. `rdbuf` で初期化します。 格納されたポインターは null ポインターでない必要があります。
 
@@ -397,7 +397,7 @@ These characters are being written to the output stream.
 typedef basicOstream<CharType, Traits> ostream_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`basicOstream`\< **CharType**, **Traits**> のシノニムです。
 
@@ -413,9 +413,9 @@ typedef basicOstream<CharType, Traits> ostream_type;
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、文字型 `char` に特化したときに `streambuf` になる I/O バッファーのストリーム クラスである、`basic_streambuf`\< **CharType**, **Traits**> のシノニムです。
+型のシノニムは、 `basic_streambuf` \< **CharType**、 **Traits**> になる I/O バッファーのストリーム クラス`streambuf`文字型に特殊化される**char**します。
 
 ### <a name="example"></a>例
 
@@ -429,9 +429,9 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **Traits** のシノニムです。
+この型は、テンプレート パラメーター `Traits` のシノニムです。
 
 ### <a name="example"></a>例
 

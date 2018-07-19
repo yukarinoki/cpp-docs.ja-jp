@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 040104eeb43ccfe6225821b7318346bc1fe60f92
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6fd1712cb5d6c565b5ccea90050d2d4be6a1f7b0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848610"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959993"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 関数
 
@@ -73,13 +73,13 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 複素数の剰余を確認します。
+*complexNum*が剰余を確認する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 複素数の係数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数の*係数*は、複素数を表すベクトル長の測定単位です。 複素数 a + bi の係数は sqrt (a<sup>2</sup> + b<sup>2</sup>) で、&#124;a + bi&#124; と記述されます。 複素数 a + bi の*ノルム*は (a<sup>2</sup> + b<sup>2</sup>) であるため、複素数の係数はそのノルムの平方根になります。
 
@@ -159,15 +159,15 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 引数を確認する複素数。
+*complexNum*偏角を特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 複素数の偏角。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-*引数*複雑なベクターが複素平面に正の値の実際の軸となる角度がします。 複素数の*a + bi*、引数が行って、アーク タンジェントと等しい (*b/、*)。 角度は、正の実軸から反時計方向に測定した場合は正方向、時計方向に測定した場合は負方向になります。 プリンシパルの値がおよび、- π より小さい大きいよりまたは等しい + π。
+*引数*複素平面の正の実軸と複素ベクトルの角度のことです。 複素数の *+ bi*、引数が等しい arctan (*b/*)。 角度は、正の実軸から反時計方向に測定した場合は正方向、時計方向に測定した場合は負方向になります。 プリンシパルの値より低い pi より大きいよりまたは等しい + pi します。
 
 ### <a name="example"></a>例
 
@@ -245,15 +245,15 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 複素数の複素共役が返されています。
+*complexNum*複素数の複素共役が返されます。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数の複素共役。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-複素数の複素共役*a + bi*は *-bi*です。 複素数とその共役の積は、数値 *a*2 + *b*2 のノルムです。
+複素数の複素共役 *+ bi*は *-bi*します。 複素数とその共役の積は、数値 *a*2 + *b*2 のノルムです。
 
 ### <a name="example"></a>例
 
@@ -319,13 +319,13 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` コサインが特定される複素数。
+*complexNum*複素数のコサインを特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数のコサインである複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数のコサインを定義する単位元は次のようになります。
 
@@ -409,13 +409,13 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 双曲線余弦が特定される複素数。
+*complexNum*複素数のハイパーボリック コサインを特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数のハイパーボリック コサインである複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数のハイパーボリック コサインを定義する単位元は次のようになります。
 
@@ -499,7 +499,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 複雑な数値の指数が特定されます。
+*complexNum*複素数指数を特定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -569,13 +569,13 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 実数部が抽出される複素数。
+*complexNum*実数部が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
 
 グローバル関数としての複素数の虚数部。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、複素数の実数部を変更するのに使用することはできません。 実数部を変更するには、新しい複素数に成分値を割り当てる必要があります。
 
@@ -620,13 +620,13 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 自然対数を求める対象が特定される複素数。
+*complexNum*複素数の自然対数を特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数の自然対数である複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 分岐切断線は負の実軸に沿っています。
 
@@ -689,13 +689,13 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 複素数の底 10 の対数が特定されます。
+*complexNum*複素数の底 10 の対数を特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数の底 10 の対数である複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 分岐切断線は負の実軸に沿っています。
 
@@ -758,13 +758,13 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 複素数のノルムを確認します。
+*complexNum*のノルムを特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 複素数のノルム。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数 *a + bi* のノルムは *(a*<sup>2</sup> *+ b*<sup>2</sup>*) になります。* 複素数のノルムは、その係数の平方根となります。 複素数の係数は、複素数を表すベクトル長の測定単位です。 複素数 *a + bi* の係数は `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)* で、*&#124;a + bi&#124;* と記述されます。
 
@@ -840,7 +840,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Modulus*入力される複素数の剰余を得ます。
+*_Modulus*入力される複素数の係数。
 
 *_Argument*入力される複素数の引数。
 
@@ -848,9 +848,9 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 極形式で指定されたデカルト形式の複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-複素数の極座標グラフの形式では、剰余*r*と引数*p*これらのパラメーターが実数部と虚数部のデカルト コンポーネントに関連する場所、 *、* と*b*式によって *、* r = \* cos *p*と*b* = *r* \* sin *p*です。
+極形式の複素数は、剰余*r*と引数*p*これらのパラメーターが実数部と虚数のデカルト成分に関連する場所、 *、* と*b*方程式で算出される *、* = r \* cos *p*と*b* = *r* \* sin *p*します。
 
 ### <a name="example"></a>例
 
@@ -924,15 +924,15 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Base` 複素数またはベース メンバー関数によってを累乗するのには、複素数のパラメーターの型の数。
+*(_B)* 複素数、または底をメンバー関数で累乗する複素数のパラメーターの型の数値。
 
-*(_P)* 整数または複素数を使用するメンバー関数によって発生する、ベースである power は、複素数のパラメーターの型の数。
+*(_P)* 整数または複素数、またはメンバー関数で累乗する底である power である複素数のパラメーターの型の数値。
 
 ### <a name="return-value"></a>戻り値
 
 指定された底を指定された指数で累乗して得られた複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 関数はそれぞれ効率的に両方のオペランドを戻り値の型に変換してから、変換した **left** の **right** 乗を返します。
 
@@ -1058,13 +1058,13 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 実数部が抽出される複素数。
+*complexNum*実数部が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
 
 グローバル関数としての複素数の実数部。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、複素数の実数部を変更するのに使用することはできません。 実数部を変更するには、新しい複素数に成分値を割り当てる必要があります。
 
@@ -1109,17 +1109,17 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` サインの値が特定される複素数。
+*complexNum*複素数のサインを特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数のサインである複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数のサインを定義する単位元は次のようになります。
 
-sin ( *z*) = (1/2*すれば*)\*(exp ( *iz*)-exp (- *iz*))
+sin ( *z*) = (1/2*は*)\*(exp ( *iz*)-exp (- *iz*))
 
 sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
 
@@ -1199,13 +1199,13 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 双曲線正弦が特定される複素数。
+*complexNum*複素数のハイパーボリック サインを特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数のハイパーボリック サインである複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数のハイパーボリック サインを定義する単位元は次のようになります。
 
@@ -1289,13 +1289,13 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 複素数の平方根を検索します。
+*complexNum*の平方根を検索する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 複素数の平方根。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 平方根の半開区間には位相角があります (-pi/2, pi/2)。
 
@@ -1365,17 +1365,17 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` タンジェントが特定される複素数。
+*complexNum*複素数のタンジェントを特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数のタンジェントである複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数のコタンジェントを定義する単位元は次のようになります。
 
-tan ( *z*) = sin ( *z*) co/( *z*) = (exp ( *iz*)-exp (- *iz*))/ *i*(exp ( *iz*) + exp (- *iz*))
+tan ( *z*) = sin ( *z*)]、[cos ( *z*) = (exp ( *iz*)-exp (- *iz*))/ *i*(exp ( *iz*) + exp (- *iz*))
 
 ### <a name="example"></a>例
 
@@ -1453,13 +1453,13 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`complexNum` 双曲線正接が特定される複素数。
+*complexNum*複素数のハイパーボリック タンジェントを特定する複素数。
 
 ### <a name="return-value"></a>戻り値
 
 入力された複素数のハイパーボリック タンジェントである複素数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 複素数のハイパーボリック コタンジェントを定義する単位元は次のようになります。
 

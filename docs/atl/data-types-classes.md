@@ -1,5 +1,5 @@
 ---
-title: データ型クラス (ATL) |Microsoft ドキュメント
+title: データ型クラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab8c9d6839fad12459e65b396878f719a60c6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae961d47f77b630eaff91e1c02e244454b12dc80
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353859"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851315"
 ---
 # <a name="data-types-classes"></a>データ型クラス
 次のクラスは、C++ のデータ型をラップします。  
   
 -   [CComBSTR](../atl/reference/ccombstr-class.md)ラップ、`BSTR`データ型。  
   
--   [CComVariant](../atl/reference/ccomvariant-class.md)ラップ、**バリアント**データ型。  
+-   [CComVariant](../atl/reference/ccomvariant-class.md)ラップ、`VARIANT`データ型。  
   
--   [CComCurrency](../atl/reference/ccomcurrency-class.md)を作成および管理するためのメソッドと演算子が含まれています、`CURRENCY`オブジェクト。  
+-   [CComCurrency](../atl/reference/ccomcurrency-class.md)作成および管理するためのメソッドと演算子が含まれています、`CURRENCY`オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: CMFCColorPopupMenu クラス |Microsoft ドキュメント
+title: CMFCColorPopupMenu クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54999252af2ec55c67e1afc69c2788f96cfc640e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: b32317f4fd67a627a272ea8eefcc949d1b0e63c8
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037305"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852995"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu クラス
-ユーザー、ドキュメントやアプリケーションで色を選択に使用するポップアップ メニューを表します。  
+ユーザーが文書またはアプリケーションで色の選択に使用するポップアップ メニューを表します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,8 +57,8 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |名前|説明|  
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|ドッキング可能なティアオフ カラー バーを作成します。 (上書き[CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar))。|  
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|返します、 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)ポップアップ メニュー内に埋め込まれています。 (上書き[CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar))。|  
-|`CMFCColorPopupMenu::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
-|[CMFCColorPopupMenu::SetPropList](#setproplist)|オブジェクトを設定、プロパティ グリッド コントロールの埋め込み`CMFCColorBar`オブジェクト。|  
+|`CMFCColorPopupMenu::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|[CMFCColorPopupMenu::SetPropList](#setproplist)|埋め込みのプロパティ グリッド コントロール オブジェクトを設定`CMFCColorBar`オブジェクト。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
@@ -66,12 +66,12 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 |-|-|  
 |name|説明|  
 |`m_bEnabledInCustomizeMode`|カラー バーを表示するかどうかを決定するブール値。|  
-|`m_wndColorBar`|`CMFCColorBar`の色の選択を提供するオブジェクト。|  
+|`m_wndColorBar`|`CMFCColorBar`色の選択を提供するオブジェクト。|  
   
 ### <a name="remarks"></a>Remarks  
- このクラスは継承のポップアップ メニュー機能、`CMFCPopupMenu`クラスし、管理、`CMFCColorBar`の色の選択を提供するオブジェクト。 カスタマイズ モードでは、ツールバー framework が場合と`m_bEnabledInCustomizeMode`に設定されているメンバー `FALSE`、カラー バー オブジェクトは表示されません。 カスタマイズ モードの詳細については、次を参照してください[CMFCToolBar::IsCustomizeMode。](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
+ このクラスは継承のポップアップ メニュー機能、`CMFCPopupMenu`クラスし、管理、`CMFCColorBar`色の選択を提供するオブジェクト。 ツールバーのフレームワークがカスタマイズ モードの場合に、`m_bEnabledInCustomizeMode`メンバーが FALSE に設定、カラー バーのオブジェクトは表示されません。 カスタマイズ モードの詳細については、次を参照してください[CMFCToolBar::IsCustomizeMode。](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)  
   
- 詳細については`CMFCColorBar`を参照してください[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)です。  
+ 詳細については`CMFCColorBar`を参照してください[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -134,32 +134,32 @@ CMFCColorPopupMenu(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*色*  
- フレームワークがポップアップ メニューに表示される色の配列。  
+ フレームワークは、ポップアップ メニューに表示する色の配列。  
   
  [in]*色*  
- 既定値は、色を選択します。  
+ 選択されている既定の色。  
   
  [in]*lpszAutoColor*  
- テキスト ラベル、*自動*(既定値) の色 ボタンまたは`NULL`です。  
+ テキスト ラベル、*自動*(既定値) の色のボタン、または NULL。  
   
- 自動ボタンの標準のラベルは**自動**です。  
+ 自動ボタンの標準的なラベルが**自動**します。  
   
  [in]*lpszOtherColor*  
- テキスト ラベル、*他*ボタンを他の色を表示、または`NULL`です。  
+ テキスト ラベル、*他*ボタンが表示されるより色の選択、または NULL。  
   
  その他のボタンの標準のラベルは**他の色**。  
   
  [in]*lpszDocColors*  
- ドキュメントの色のボタンのテキスト ラベル。 ドキュメントのカラー パレットは、ドキュメントが現在使用されているすべての色を示します。  
+ ドキュメントの色のボタンのテキスト ラベル。 ドキュメントのカラー パレットには、ドキュメントが現在使用されているすべての色が一覧表示します。  
   
  [in]*lstDocColors*  
  ドキュメントが現在使用されている色の一覧。  
   
  [in]*nColumns*  
- 色の配列は、列の数。  
+ 色の配列を含む列の数。  
   
  [in]*nHorzDockRows*  
- カラー バーが水平にドッキングされている行の数。  
+ カラー バーが水平方向にドッキングされている行の数。  
   
  [in]*nVertDockColumns*  
  カラー バーが垂直方向にドッキングされている列の数。  
@@ -168,10 +168,10 @@ CMFCColorPopupMenu(
  自動ボタンをクリックすると、フレームワークが適用される既定の色。  
   
  [in]*uiCommandID*  
- カラー バー コントロールのコマンド id。  
+ カラー バーのコントロールのコマンド id。  
   
  [in]*bStdColorDlg*  
- 標準のシステム カラー ダイアログ ボックスを表示するかどうかを示すブール値、または[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックス。  
+ 標準のシステム カラーのダイアログ ボックスを表示するかどうかを示すブール値、または[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックス。  
   
  [in]*pParentBtn*  
  親ボタンへのポインター。  
@@ -180,10 +180,10 @@ CMFCColorPopupMenu(
  コマンド ID。  
   
 ### <a name="remarks"></a>Remarks  
- それぞれのオーバー ロードされたコンス トラクターのセット、`m_bEnabledInCustomizeMode`メンバー`FALSE`です。  
+ それぞれのオーバー ロードされたコンス トラクターのセット、`m_bEnabledInCustomizeMode`メンバーを FALSE にします。  
   
 ### <a name="example"></a>例  
- 次の例で作成する方法、`CMFCColorPopupMenu`オブジェクト。  
+ 次の例は、構築する方法を示します、`CMFCColorPopupMenu`オブジェクト。  
   
  [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
@@ -210,7 +210,7 @@ virtual CPane* CreateTearOffBar(
  新しいティアオフ コントロール バー オブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを作成、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクトおよびにキャスト、 [CPane クラス](../../mfc/reference/cpane-class.md)ポインター。 この値をキャストすることができますに戻す、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)で説明するキャスト マクロのいずれかを使用してポインター [MFC クラス オブジェクトの型キャスト](../../mfc/reference/type-casting-of-mfc-class-objects.md)です。  
+ このメソッドを作成、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)オブジェクトおよびにキャスト、 [CPane クラス](../../mfc/reference/cpane-class.md)ポインター。 この値をキャストすることに、 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)で説明するキャスト マクロのいずれかを使用してポインター [MFC クラス オブジェクトの型キャスト](../../mfc/reference/type-casting-of-mfc-class-objects.md)します。  
   
 ##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar  
  返します、 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)ポップアップ メニュー内に埋め込まれています。  
@@ -220,13 +220,13 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 埋め込まれたへのポインター`CMFCPopupMenuBar`です。  
+ 埋め込まれたへのポインター`CMFCPopupMenuBar`します。  
   
 ### <a name="remarks"></a>Remarks  
- 色のポップアップ メニューが埋め込まれた[CMFCPopupMenuBar クラス](../../mfc/reference/cmfcpopupmenubar-class.md)オブジェクト。 アプリケーションが別の埋め込み型を使用する場合は、派生クラスでは、このメソッドをオーバーライドします。  
+ 色のポップアップ メニューが埋め込まれた[CMFCPopupMenuBar クラス](../../mfc/reference/cmfcpopupmenubar-class.md)オブジェクト。 アプリケーションが別の埋め込み型を使用する場合は、派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList  
- オブジェクトを設定、プロパティ グリッド コントロールの埋め込み`CMFCColorBar`オブジェクト。  
+ 埋め込みのプロパティ グリッド コントロール オブジェクトを設定`CMFCColorBar`オブジェクト。  
   
 ```  
 void SetPropList(CMFCPropertyGridCtrl* pWndList);

@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックスを実装する |Microsoft ドキュメント
+title: ダイアログ ボックスの実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,38 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c5133960cca3aab3d4bf526179fd9c825c41a20
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355853"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848458"
 ---
-# <a name="implementing-a-dialog-box"></a>ダイアログ ボックスの実装
-ATL プロジェクトに、ダイアログ ボックスを追加する 2 つの方法があります。 ATL ダイアログ ウィザードを使用するか、手動で追加します。  
+# <a name="implementing-a-dialog-box"></a>ダイアログ ボックスを実装します。
+ATL プロジェクト ダイアログ ボックスに追加する 2 つの方法はあります。 ATL ダイアログ ウィザードを使用して、または手動で追加します。  
   
-## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>ATL ダイアログ ウィザードとダイアログ ボックスの追加  
- [クラスの追加 ダイアログ ボックス](../ide/add-class-dialog-box.md)、ATL プロジェクトに、ダイアログ ボックスを追加する、ATL ダイアログ オブジェクトを選択します。 必要に応じて ATL ダイアログ ウィザードに入力し、をクリックして**完了**です。 派生したクラスが追加されます[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)をプロジェクトにします。 リソース ビューを開き、**ビュー** ] メニューの [、ダイアログを見つけて、ダブルクリックして、リソース エディターで開きます。  
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>ATL ダイアログ ウィザードとダイアログ ボックスを追加します。  
+ [クラスの追加 ダイアログ ボックス](../ide/add-class-dialog-box.md)、ATL プロジェクト ダイアログ ボックスを追加する ATL ダイアログ オブジェクトを選択します。 適切な ATL ダイアログ ウィザードで入力し、クリックして**完了**します。 派生したクラスが追加されます[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)をプロジェクトにします。 リソース ビューを開き、**ビュー**  メニューのダイアログを見つけてをダブルクリックして、リソース エディターで開きます。  
   
 > [!NOTE]
->  ダイアログ ボックスはから派生している場合`CAxDialogImpl`両方 ActiveX をホストできる、および Windows を制御します。 使用する場合は、ダイアログ ボックス クラスでは、ActiveX コントロール サポートのオーバーヘッドをしたくない、 [CSimpleDialog](../atl/reference/csimpledialog-class.md)または[CDialogImpl](../atl/reference/cdialogimpl-class.md)代わりにします。  
+>  ダイアログ ボックスがから派生している場合`CAxDialogImpl`ActiveX の両方をホストできる、Windows を制御します。 ダイアログ ボックス クラスで ActiveX コントロール サポートのオーバーヘッドをしたくない場合は、使用[CSimpleDialog](../atl/reference/csimpledialog-class.md)または[CDialogImpl](../atl/reference/cdialogimpl-class.md)代わりにします。  
   
- メッセージおよびイベント ハンドラーは、クラス ビューからダイアログ クラスに追加できます。 詳細については、次を参照してください。 [ATL メッセージ ハンドラーを追加する](../atl/adding-an-atl-message-handler.md)です。  
+ メッセージおよびイベント ハンドラーは、クラス ビューから、ダイアログ クラスに追加できます。 詳細については、次を参照してください。 [ATL メッセージ ハンドラーの追加](../atl/adding-an-atl-message-handler.md)します。  
   
 ## <a name="adding-a-dialog-box-manually"></a>ダイアログ ボックスを手動で追加します。  
- ダイアログ ボックスの実装は、ウィンドウの実装に似ています。 いずれかから、クラスを派生[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)、 [CDialogImpl](../atl/reference/cdialogimpl-class.md)、または[CSimpleDialog](../atl/reference/csimpledialog-class.md)を宣言し、[メッセージ マップ](../atl/message-maps-atl.md)メッセージを処理します。 ただし、派生クラスでダイアログ テンプレート リソース ID を指定することも必要があります。 クラスと呼ばれるデータ メンバーを含める必要があります`IDD`この値を保持します。  
+ ダイアログ ボックスの実装は、ウィンドウの実装に似ています。 いずれかからクラスを派生する[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)、 [CDialogImpl](../atl/reference/cdialogimpl-class.md)、または[CSimpleDialog](../atl/reference/csimpledialog-class.md)を宣言し、[メッセージ マップ](../atl/message-maps-atl.md)メッセージを処理します。 ただし、派生クラスでは、ダイアログ テンプレート リソースの ID を指定することも必要があります。 クラスはというデータ メンバーが必要`IDD`この値を保持します。  
   
 > [!NOTE]
->  ATL ダイアログ ウィザードを使用してダイアログ ボックスを作成すると、ウィザードは自動的に追加、`IDD`メンバーとして、`enum`型です。  
+>  ATL ダイアログ ウィザードを使用してダイアログ ボックスを作成すると、ウィザードは自動的に追加、`IDD`メンバーとして、 **enum**型。  
   
- `CDialogImpl` 使用すると、モーダルまたはモードレス ダイアログ ボックスの Windows コントロールをホストしている実装できます。 `CAxDialogImpl` 使用すると、モーダルまたはモードレス ダイアログ ボックス コントロールの ActiveX や Windows の両方をホストする実装できます。  
+ `CDialogImpl` モーダルまたはモードレスのダイアログ ボックスを Windows コントロールをホストを実装することができます。 `CAxDialogImpl` モーダルまたはモードレスのダイアログ ボックス ActiveX と Windows の両方のコントロールをホストするを実装することができます。  
   
- モーダル ダイアログ ボックスを作成するには、インスタンスを作成、 `CDialogImpl`-派生 (または`CAxDialogImpl`-派生) クラスを呼び出す、 [DoModal](../atl/reference/cdialogimpl-class.md#domodal)メソッドです。 モーダル ダイアログ ボックスを閉じるを呼び出して、 [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog)メッセージ ハンドラーからメソッドです。 モードレス ダイアログ ボックスを作成するには、[作成](../atl/reference/cdialogimpl-class.md#create)メソッドの代わりに`DoModal`です。 モードレス ダイアログ ボックスを破棄するには、呼び出す[DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow)です。  
+ モーダル ダイアログ ボックスを作成するには、インスタンスを作成、 `CDialogImpl`-派生 (または`CAxDialogImpl`-派生) クラスを呼び出して、 [DoModal](../atl/reference/cdialogimpl-class.md#domodal)メソッド。 モーダル ダイアログ ボックスを閉じるには、呼び出し、 [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog)メッセージ ハンドラーからメソッド。 モードレス ダイアログ ボックスを作成するには、[作成](../atl/reference/cdialogimpl-class.md#create)メソッドの代わりに`DoModal`します。 モードレス ダイアログ ボックスを破棄するには、呼び出す[DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow)します。  
   
- 自動的に行われるイベントをシンク[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)です。 内のハンドラーのように、ダイアログ ボックスのメッセージ ハンドラーを実装する`CWindowImpl`-クラスを派生します。 メッセージに固有の戻り値がある場合を返すように、`LRESULT`です。 返された`LRESULT`Windows ダイアログ マネージャーによって正しく処理するための値が ATL によってマップされます。 詳細については、ソース コードを参照してください[CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) atlwin.h 内です。  
+ 自動的に行われるイベントをシンク[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)します。 内のハンドラーと同様、ダイアログ ボックスのメッセージ ハンドラーを実装する`CWindowImpl`-クラスを派生します。 メッセージに固有の戻り値がある場合を返すように、`LRESULT`します。 返された`LRESULT`値は、Windows ダイアログ マネージャーによって適切な処理の ATL によってマップされます。 詳細については、ソース コードを参照してください。 [CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) atlwin.h 内。  
   
 ## <a name="example"></a>例  
- 次のクラスには、ダイアログ ボックスを実装します。  
+ 次のクラスを実装すると、ダイアログ ボックス。  
   
  [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
   

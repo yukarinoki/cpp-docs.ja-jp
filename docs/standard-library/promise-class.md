@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac8508cab7afc7e6614c29b64d78849383f5bc2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861047"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958565"
 ---
 # <a name="promise-class"></a>promise クラス
 
@@ -77,7 +77,7 @@ class promise;
 
 `promise`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<将来 >
 
@@ -91,7 +91,7 @@ class promise;
 future<Ty> get_future();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 promise オブジェクトが空の場合、このメソッドは `no_state` の [error_code](../standard-library/error-code-class.md) を持つ [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -107,15 +107,15 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Other` A`promise`オブジェクト。
+*その他の*A`promise`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `*this`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この演算子は `Other` から関連付けられた非同期状態を転送します。 転送後、`Other` は*空*になります。
+この演算子から関連付けられた非同期状態を転送する*他*します。 転送の後、*他*は*空*します。
 
 ## <a name="promise"></a>  promise::promise コンストラクター
 
@@ -130,17 +130,17 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Al` メモリ割り当て。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」をご覧ください。
+*Al*メモリ アロケーター。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」をご覧ください。
 
-`Other` A`promise`オブジェクト。
+*その他の*A`promise`オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、*空の*`promise` オブジェクトを構築します。
 
-2 つ目のコンストラクターは、空の `promise` オブジェクトを構築して、`Al` をメモリの割り当てに使用します。
+2 番目のコンス トラクターが、空を構築`promise`オブジェクトと使用*Al*メモリの割り当て。
 
-3 つ目のコンストラクターは、`promise` オブジェクトを構築し、関連付けられた非同期状態を `Other` から転送し、`Other` を空のままにします。
+3 番目のコンス トラクターの構成要素を`promise`オブジェクトし、の関連付けられた非同期状態を転送*他*、出入り*他*空。
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -152,9 +152,9 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>パラメーター
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)このメソッドにより例外結果として格納されています。
+*排他*、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)このメソッドにより例外結果として格納されています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `promise` オブジェクトに関連付けられた非同期状態がない場合、このメソッドは `no_state` のエラー コードを持つ [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -172,9 +172,9 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>パラメーター
 
-`Exc` [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)このメソッドにより例外結果として格納されています。
+*排他*、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)このメソッドにより例外結果として格納されています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 promise オブジェクトに*関連付けられた非同期状態*がない場合、このメソッドは `no_state` のエラー コードを持つ [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -195,9 +195,9 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>パラメーター
 
-`Val` 結果として格納される値です。
+*Val*結果として格納される値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `promise` オブジェクトに関連付けられた非同期状態がない場合、このメソッドは `no_state` のエラー コードを持つ [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -205,11 +205,11 @@ void promise<void>::set_value();
 
 このメソッドの結果として、関連付けられた非同期状態に対してブロックされているすべてのスレッドのブロックが解除されます。
 
-最初のメソッドは、`Val` が関連付けられた非同期状態にコピーされたときにスローされるすべての例外もスローします。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
+最初のメソッドもときにスローされる例外をスロー *Val*関連付けられた非同期状態にコピーされます。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
 
-2 番目のメソッドは、`Val` が関連付けられた非同期状態に移動されたときにスローされるすべての例外もスローします。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
+2 番目のメソッドもときにスローされる例外をスロー *Val*が関連付けられた非同期状態に移動します。 この状況では、関連付けられた非同期状態は準備完了に設定されません。
 
-部分的特殊化 `promise<Ty&>` の場合、格納されている値は、実際には `Val` への参照です。
+部分的特殊化`promise<Ty&>`、格納されている値はへの参照が有効で*Val*します。
 
 特殊化 `promise<void>` の場合、格納されている値は存在しません。
 
@@ -226,9 +226,9 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>パラメーター
 
-`Val` 結果として格納される値です。
+*Val*結果として格納される値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 promise オブジェクトに*関連付けられた非同期状態*がない場合、このメソッドは `no_state` のエラー コードを持つ [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -236,11 +236,11 @@ promise オブジェクトに*関連付けられた非同期状態*がない場�
 
 `set_value` とは対照的に、関連付けられた非同期状態は、現在のスレッドのスレッド ローカルのオブジェクトがすべて破棄されるまでは準備完了に設定されません。 通常、関連付けられた非同期状態に対してブロックされたスレッドは、現在のスレッドが終了するまでブロック解除されません。
 
-最初のメソッドは、`Val` が関連付けられた非同期状態にコピーされたときにスローされるすべての例外もスローします。
+最初のメソッドもときにスローされる例外をスロー *Val*関連付けられた非同期状態にコピーされます。
 
-2 番目のメソッドは、`Val` が関連付けられた非同期状態に移動されたときにスローされるすべての例外もスローします。
+2 番目のメソッドもときにスローされる例外をスロー *Val*が関連付けられた非同期状態に移動します。
 
-部分的特殊化 `promise<Ty&>` の場合、格納されている値は、事実上 `Val` への参照です。
+部分的特殊化`promise<Ty&>`、格納されている値への参照では実質的に*Val*します。
 
 特殊化 `promise<void>` の場合、格納されている値は存在しません。
 
@@ -254,7 +254,7 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Other` A`promise`オブジェクト。
+*その他の*A`promise`オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 

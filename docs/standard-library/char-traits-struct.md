@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3250bd3a80c46345b7b83c524f6aa084ea0b3c11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2346ed8a7d9cc2359c0bdf984b52993a13b05a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848412"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956883"
 ---
 # <a name="chartraits-struct"></a>char_traits 構造体
 
@@ -57,11 +57,11 @@ struct char_traits;
 
 ### <a name="parameters"></a>パラメーター
 
-`CharType` 要素のデータを入力します。
+*CharType*要素のデータ型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレートの構造体は **CharType** 型のさまざまな文字特性を記述します。 このテンプレート クラス [basic_string](../standard-library/basic-string-class.md) は、[basic_ios](../standard-library/basic-ios-class.md) などのいくつかの iostream テンプレート クラスと同様、この情報を使用して **CharType** 型の要素を操作します。 このような要素型では、明示的な構築や破棄を要求できません。 既定のコンストラクター、コピー コンストラクター、および代入演算子を、必要なセマンティクスと共に指定する必要があります。 ビットごとのコピーは、代入と同じ効果を持つ必要があります。 char_traits 構造体のメンバー関数は、いずれも例外をスローしません。
+テンプレート構造体は、型のさまざまな文字特性を説明します。`CharType`します。 テンプレート クラスは、 [basic_string](../standard-library/basic-string-class.md)など、いくつかの iostream テンプレート クラスと同様[basic_ios](../standard-library/basic-ios-class.md)、この情報を使用して型の要素を操作する`CharType`します。 このような要素型では、明示的な構築や破棄を要求できません。 既定のコンストラクター、コピー コンストラクター、および代入演算子を、必要なセマンティクスと共に指定する必要があります。 ビットごとのコピーは、代入と同じ効果を持つ必要があります。 char_traits 構造体のメンバー関数は、いずれも例外をスローしません。
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -93,7 +93,7 @@ struct char_traits;
 |[to_char_type](#to_char_type)|`int_type` の文字を `char_type` の対応する文字に変換し、その結果を返します。|
 |[to_int_type](#to_int_type)|`char_type` の文字を `int_type` の対応する文字に変換し、その結果を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<string>
 
@@ -114,17 +114,17 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="parameters"></a>パラメーター
 
-**_** *CharFrom*割り当てられるには、値を持つ文字。
+**_** *CharFrom*値が割り当てられる文字。
 
-*_CharTo*に文字の値を代入する要素。
+*_CharTo*が文字の値を割り当てられる要素。
 
-* strTo * を最初の要素が文字の値を割り当てられる文字列または文字の配列。
+* strTo * 最初の要素が文字値を割り当てられる文字列または文字の配列。
 
-`_Num` 値が割り当てられるに設定されている要素の数。
+*_Num*要素の値を割り当てることの数。
 
 ### <a name="return-value"></a>戻り値
 
-2 番目のメンバー関数は、最初の `_Num` 要素に *_CharFrom* という値が割り当てられている文字列へのポインターを返します。
+2 番目のメンバー関数ポインターを返します、文字列の最初 *_Num*要素の値が割り当てられている *_CharFrom*します。
 
 ### <a name="example"></a>例
 
@@ -175,9 +175,9 @@ The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **CharType** のシノニムです。
+この型は、テンプレート パラメーター `CharType` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -199,13 +199,13 @@ static int compare(const char_type* str1,
 
 * str2 * 2 番目の相互に比較する 2 つの文字列。
 
-`_Num` 比較するために、文字列内の要素の数。
+*_Num*と比較する文字列内の要素の数。
 
 ### <a name="return-value"></a>戻り値
 
 最初の文字列が 2 番目の文字列より少ない場合は負の値、2 つの文字列が等しい場合は 0、最初の文字列が 2 番目の文字列より多い場合は正の値になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列間の比較は要素ごとに行われます。最初に等しいかどうかがテストされ、シーケンス テスト内の要素のペアが等しくない場合は、より少ないかどうかのテストが実行されます。
 
@@ -258,17 +258,17 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>パラメーター
 
-`_To` コピーされた文字シーケンスを受信する対象となる文字列または文字の配列の先頭にある要素。
+*(_T)* 文字列または文字配列の先頭にある要素を対象とする、文字のコピーのシーケンスを受信します。
 
-`_From` コピーされるソース文字列または文字の配列の先頭にある要素。
+*_From*コピーされるソース文字列または文字配列の先頭にある要素。
 
-`_Num` コピーする要素の数。
+*_Num*コピーされる要素の数。
 
 ### <a name="return-value"></a>戻り値
 
 コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列にコピーされる最初の要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ソースとコピー先の文字シーケンスは重複できません。
 
@@ -317,19 +317,19 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>パラメーター
 
-`dest` コピーされた文字シーケンスを受信する対象となる文字列または文字配列。
+*dest*文字列または文字配列を対象とする、文字のコピーのシーケンスを受信します。
 
-`dest_size` サイズ`dest`です。 `char_type` が `char` の場合、サイズはバイト単位です。 `char_type` が `wchar_t` の場合、サイズはワード数単位です。
+*dest_size*のサイズ*dest*します。 場合`char_type`は**char**、このサイズ (バイト単位)。 場合`char_type`は**wchar_t**、このサイズはワード数単位です。
 
-`_From` コピーされるソース文字列または文字配列。
+*_From*コピーされるソース文字列または文字配列。
 
-`count` コピーする要素の数。
+*カウント*コピーされる要素の数。
 
 ### <a name="return-value"></a>戻り値
 
 コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ソースとコピー先の文字シーケンスは重複できません。
 
@@ -376,11 +376,11 @@ static int_type eof();
 
 EOF 文字。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-ファイルの終わりを表す値 (たとえば `EOF` または `WEOF` )。
+ファイル (EOF、WEOF など) の終わりを表す値。
 
-C++ 規格によると、この値は、有効な `char_type` 値に対応しないようにする必要があります。 Visual C++ コンパイラは `char` 型ではなく、`wchar_t` 型にこの制約を適用します。 次に示しているのはその例です。
+C++ 規格によると、この値は、有効な `char_type` 値に対応しないようにする必要があります。 Visual C コンパイラの種類には、この制約を適用する**char**、型ではなく**wchar_t**します。 次に示しているのはその例です。
 
 ### <a name="example"></a>例
 
@@ -425,9 +425,9 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch1` 等しいかどうかをテストする最初の 2 つの文字。
+*_Ch1*等しいかどうかをテストする 2 つの文字の最初。
 
-`_Ch2` 2 番目の 2 つの文字の等しいかどうかをテストします。
+*_Ch2* 2 文字の 2 番目の等しいかどうかをテストします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -483,9 +483,9 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch1` 等しいかどうかをテストする 2 つの文字の最初**その文字を int_type**s。
+*_Ch1*と等しいかどうかをテストする 2 つの文字の最初の`int_type`秒。
 
-`_Ch2` 等しいかどうかをテストする 2 つの文字の 2 番目の`int_type`s。
+*_Ch2*と等しいかどうかをテストする 2 つの文字の 2 番目の`int_type`秒。
 
 ### <a name="return-value"></a>戻り値
 
@@ -568,11 +568,11 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 検索する文字列の最初の文字です。
+*str*検索対象の文字列の最初の文字。
 
-`_Num` 最初から数えた位置の数が検索対象の範囲内です。
+*_Num*最初から数えてその位置の数で検索する範囲。
 
-`_Ch` 範囲内で検索する文字。
+*_Ch*範囲内で検索する文字。
 
 ### <a name="return-value"></a>戻り値
 
@@ -628,9 +628,9 @@ The result2 of the search is NULL.
 typedef long int_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-元の値を変更せずに型 **CharType** の値を `int_type` に型キャストしてから、**CharType** に戻すことができる必要があります。
+キャストの型の値を入力できる必要があります`CharType`に`int_type`戻す`CharType`元の値を変更することがなく。
 
 ### <a name="example"></a>例
 
@@ -646,7 +646,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 長さは、測定される C 文字列。
+*str*長さを測定するが、C 文字列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -688,9 +688,9 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch1` 2 つの文字の最初のテストするより小さい。
+*_Ch1*をテストする 2 つの文字の最初のより小さい。
 
-`_Ch2` 2 番目の 2 つの文字をテストするより小さい。
+*_Ch2*をテストする 2 つの文字の 1 秒未満です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -749,17 +749,17 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>パラメーター
 
-`_To` コピーされた文字シーケンスを受信する対象となる文字列または文字の配列の先頭にある要素。
+*(_T)* 文字列または文字配列の先頭にある要素を対象とする、文字のコピーのシーケンスを受信します。
 
-`_From` コピーされるソース文字列または文字の配列の先頭にある要素。
+*_From*コピーされるソース文字列または文字配列の先頭にある要素。
 
-`_Num` ソース文字列からコピーされる要素の数。
+*_Num*ソース文字列からコピーされる要素の数。
 
 ### <a name="return-value"></a>戻り値
 
-コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列にコピーされる最初の要素 `_To`。
+最初の要素 *(_t)* 文字のコピーのシーケンスの受信ターゲットとなる文字列または文字配列にコピーします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ソースと宛先が重複してもかまいません。
 
@@ -823,19 +823,19 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>パラメーター
 
-`dest` コピーされた文字シーケンスを受信する対象となる文字列または文字の配列の先頭にある要素。
+*dest*文字列または文字配列の先頭にある要素を対象とする、文字のコピーのシーケンスを受信します。
 
-`dest_size` サイズ`dest`です。 `char_type` が `char` の場合は、バイト単位です。 `char_type` が `wchar_t` の場合は、ワード数単位です。
+*dest_size*のサイズ*dest*します。 場合`char_type`は**char**、バイト単位です。 場合`char_type`は**wchar_t**、単語単位です。
 
-`_From` コピーされるソース文字列または文字の配列の先頭にある要素。
+*_From*コピーされるソース文字列または文字配列の先頭にある要素。
 
-`count` ソース文字列からコピーされる要素の数。
+*カウント*ソース文字列からコピーされる要素の数。
 
 ### <a name="return-value"></a>戻り値
 
-コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列にコピーされる最初の要素 `dest`。
+最初の要素*dest*文字のコピーのシーケンスの受信ターゲットとなる文字列または文字配列にコピーします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ソースと宛先が重複してもかまいません。
 
@@ -895,11 +895,11 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` として表される文字、`int_type`かどうかが EOF 文字かをテストします。
+*_Ch*として表される文字、 `int_type` EOF 文字であるかどうかどうかをテストするためです。
 
 ### <a name="return-value"></a>戻り値
 
-文字の **int_type** が EOF 文字の型と異なる場合、テストされる文字の `int_type` 表現。
+`int_type`場合、文字の表現がテストされる、`int_type`の文字が EOF 文字に等しくありません。
 
 文字 `int_type` 値が EOF `int_type` 値と等しい場合は、**false** です。
 
@@ -964,7 +964,7 @@ The eofTest2 indicates int2 is an EOF character.
 typedef streamoff off_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 通常は、[streamoff](../standard-library/ios-typedefs.md#streamoff) のシノニムですが、基本的にその型と同じプロパティを持っています。
 
@@ -976,7 +976,7 @@ typedef streamoff off_type;
 typedef streampos pos_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、ストリーム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを表します。 通常は、[streampos](../standard-library/ios-typedefs.md#streampos) のシノニムですが、どのような場合も基本的にその型と同じプロパティを持っています。
 
@@ -988,7 +988,7 @@ typedef streampos pos_type;
 typedef implementation-defined state_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、変換状態を表すことができるオブジェクトを表します。 通常は、`mbstate_t` のシノニムですが、どのような場合も基本的にその型と同じプロパティを持っています。
 
@@ -1002,15 +1002,15 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` `int_type`として表現されている文字、`char_type`です。
+*_Ch* 、`int_type`として表現できない文字を`char_type`します。
 
 ### <a name="return-value"></a>戻り値
 
 `int_type` 文字に対応する `char_type` 文字。
 
-予期しない結果をもたらすようには表されない `_Ch` の値。
+値 *_Ch*を表すことができない予期しない結果をもたらすようにします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 変換操作 [to_int_type](#to_int_type) と `to_char_type` は互いに逆の操作を実行できるので、次のようになります。
 
@@ -1107,13 +1107,13 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ch` `char_type`として表現されている文字、`int_type`です。
+*_Ch* 、`char_type`として表現できない文字を`int_type`します。
 
 ### <a name="return-value"></a>戻り値
 
 `char_type` 文字に対応する `int_type` 文字。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 変換操作 `to_int_type`to_char_type[ と ](#to_char_type) は互いに逆の操作を実行できるので、次のようになります。
 

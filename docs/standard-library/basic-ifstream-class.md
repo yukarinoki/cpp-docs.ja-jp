@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b72b49f545b4ba04c92840cb4d15f2258f08680
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a2e641dbea0507c51987d67e78b3cd8ef8be0dc6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958505"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream クラス
 
@@ -46,11 +46,11 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-`Elem` ファイル バッファーの基本要素です。
+*Elem*ファイル バッファーの基本要素です。
 
-`Tr` ファイル バッファーの基本要素の特徴 (通常`char_traits` <  `Elem`>)。
+*Tr*ファイル バッファーの基本要素の特徴 (通常は`char_traits` <  `Elem`>)。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このオブジェクトは、クラス `basic_filebuf`< `Elem`, `Tr`> のオブジェクトを格納します。
 
@@ -113,7 +113,7 @@ This is the contents of basic_ifstream_class.txt.
 |-|-|
 |[operator=](#op_eq)|このストリーム オブジェクトの内容を割り当てます。 これは、`rvalue` が関係する移動代入で、コピーを残しません。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<fstream>
 
@@ -141,13 +141,13 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Filename` 開くには、ファイルの名前。
+*_Filename*開くファイルの名前。
 
-`_Mode` 列挙のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)です。
+*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
 
-`_Prot` 既定のファイルを同等の保護を開いて、`shflag`パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)です。
+*_Prot*保護と同じ既定のファイル、`shflag`パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターは、[basic_istream](../standard-library/basic-istream-class.md)( `sb`) を呼び出すことで基底クラスを初期化します。ここで、`sb` はクラス [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> の格納されているオブジェクトです。 また、`basic_filebuf`< `Elem`, `Tr`> を呼び出すことで `sb` の初期化もします。
 
@@ -188,13 +188,13 @@ int main(int argc, char **argv)
 void close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数の呼び出し[rdbuf](#rdbuf) **->** [閉じる](../standard-library/basic-filebuf-class.md#close)です。
+メンバー関数の呼び出し[rdbuf](#rdbuf) **->** [閉じます](../standard-library/basic-filebuf-class.md#close)します。
 
 ### <a name="example"></a>例
 
-**close** の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
+`close` の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
 
 ## <a name="is_open"></a>  basic_ifstream::is_open
 
@@ -208,9 +208,9 @@ bool is_open() const;
 
 ファイルが開いている場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数を返します[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)です。
+メンバー関数を返します[rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)します。
 
 ### <a name="example"></a>例
 
@@ -242,19 +242,19 @@ void open(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Filename` 開くには、ファイルの名前。
+*_Filename*開くファイルの名前。
 
-`_Mode` 列挙のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)です。
+*モード (_m)* 列挙値のいずれかの[ios_base::openmode](../standard-library/ios-base-class.md#openmode)します。
 
-`_Prot` 既定のファイルを同等の保護を開いて、`shflag`パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)です。
+*_Prot*保護と同じ既定のファイル、`shflag`パラメーター [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) を呼び出します。 オープンに失敗すると、関数は ios_base::failure 例外をスローできる [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。
+メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) を呼び出します。 オープン失敗したかどうか、関数呼び出し[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)、ios_base::failure 例外をスローする可能性があります。
 
 ### <a name="example"></a>例
 
-**open** の使用例については、「[basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)」を参照してください。
+参照してください[basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)を使用する例については`open`します。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -266,15 +266,15 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 右辺値参照、`basic_ifstream`オブジェクト。
+*適切な*への右辺値参照を`basic_ifstream`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `*this` を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー演算子により、右辺値の参照として扱われる `right` の内容を使用して、オブジェクトの内容が置き換えられます。 詳細については、「[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)」を参照してください。
+メンバー演算子の内容を使用して、オブジェクトの内容が置き換えられます*右*、右辺値参照として扱われます。 詳細については、「[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)」を参照してください。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 
@@ -302,11 +302,11 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 別のストリーム バッファーへの参照。
+*適切な*別のストリーム バッファーへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`right` の内容を、このオブジェクトの内容と交換します。
+メンバー関数は、このオブジェクトの内容についての内容を交換する*右*します。
 
 ## <a name="see-also"></a>関連項目
 

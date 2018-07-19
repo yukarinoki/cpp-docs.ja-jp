@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 278a9e33fb305b73c2919c455f55b816de644e4b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: af6d3ce3beca7d9bb3b14ee9c9373a8505623376
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843393"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954006"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-型のオブジェクトの順序付けされたペアを格納するオブジェクトについて説明します **float * * *、* まず、2 つ目、複素数の実数部を表す虚数部を表すです。
+型のオブジェクトの順序付きペアを格納するオブジェクトについて説明します **float * * *、* 最初の複素数の値と、2 つ目の実数部を表す虚数部を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -51,19 +51,19 @@ constexpr complex(
 
 ### <a name="parameters"></a>パラメーター
 
-`_RealVal` 型の値**float**構築される複素数の実数部。
+*_RealVal*型の値**float**構築される複素数の実数部。
 
-`_ImagVal` 型の値**float**構築される複素数の虚数部。
+*_ImagVal*型の値**float**構築される複素数の虚数部。
 
-`complexNum` 型の複素数**二重**または型の`long double`が実数部と虚数部の構成は、型の複素数の初期化に使用される**float**構築されます。
+*complexNum*型の複素数**二重**または型の**long double**が実数部と虚数部の部分は、型の複素数の初期化に使用される**float**構築されます。
 
 ## <a name="return-value"></a>戻り値
 
 **float** 型の複素数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート クラス complex の **float** 型の complex クラスに対する明示的な特殊化と、テンプレート クラスによって定義されるコンストラクター内でのみ使用するテンプレート クラスとは異なります。 **float** から **double** への変換は暗黙的に行えますが、安全性の低い **float** から `long double` への変換は **explicit** でなければなりません。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
+テンプレート クラス complex の **float** 型の complex クラスに対する明示的な特殊化と、テンプレート クラスによって定義されるコンストラクター内でのみ使用するテンプレート クラスとは異なります。 変換**float**に**二重**は暗黙的に許可されてからの安全性の低い変換が、 **float**に**long double**はある必要があります**明示的な**します。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
 
 テンプレート クラス `complex` の詳細については、「[complex クラス](../standard-library/complex-class.md)」を参照してください。 テンプレート クラス `complex` のメンバー一覧については、以下を参照してください。
 
@@ -122,7 +122,7 @@ Argument of c3 is recovered from c3 using:
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<complex>
 

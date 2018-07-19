@@ -1,7 +1,7 @@
 ---
-title: コンパイラの警告 (レベル 4) C4690 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 4) C4690 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/03/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,24 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c8285fd3763b93c8a320a6cb984168b88d2e9ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04fb68bdab762f0f541849fad1568caff836b623
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293622"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853323"
 ---
 # <a name="compiler-warning-level-4-c4690"></a>コンパイラの警告 (レベル 4) C4690
-[ emitidl( pop ) ] : ポップがプッシュの回数を上回っています。  
-  
- [emitidl](../../windows/emitidl.md) 属性は、プッシュよりも 1 回多くポップされています。  
-  
-## <a name="example"></a>例  
- 次の例では C4690 警告が生成されます。  
-  
-```  
-// C4690.cpp  
-// compile with: /c /W4  
-[emitidl(pop)];   // C4690  
-class x {};  
+
+> \[ emitidl (pop)]: ポップがプッシュ
+
+## <a name="remarks"></a>Remarks
+
+[emitidl](../../windows/emitidl.md) 属性は、プッシュよりも 1 回多くポップされています。
+
+## <a name="example"></a>例
+
+次の例では C4690 警告が生成されます。 この問題を解決するには、レバーが回数とまったく同じ属性がポップされますを確認します。
+
+```cpp
+// C4690.cpp
+// compile with: /c /W4
+[emitidl(pop)];   // C4690
+class x {};
 ```

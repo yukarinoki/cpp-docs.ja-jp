@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e1e57693650c69aa1a5b8ec006830458ef7775
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c691ce0896a5227e28db6ac8f684d712150e8861
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854195"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960916"
 ---
 # <a name="maxfixedsize-class"></a>max_fixed_size クラス
 
@@ -48,7 +48,7 @@ class max_fixed_size
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Max`|`freelist` に格納する要素の最大数を決定する、最大クラス。|
+|*Max*|`freelist` に格納する要素の最大数を決定する、最大クラス。|
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -66,7 +66,7 @@ class max_fixed_size
 |[released](#released)|フリー リスト上のメモリ ブロックの数を減らします。|
 |[saved](#saved)|フリー リスト上のメモリ ブロックの数を減らします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -84,11 +84,11 @@ void allocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Nx`|増分値。|
+|*_Nx*|増分値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は何も処理を行いません。 このメンバー関数は、`cache_freelist::allocate` による演算子 `new` への呼び出しが成功するたび、その後に呼び出されます。 引数 `_Nx` は、演算子 `new` によって割り当てられたチャンク内のメモリ ブロックの数です。
+このメンバー関数は何も処理を行いません。 によって呼び出しが成功した後にこのメンバー関数が呼び出されます`cache_freelist::allocate`演算子**新しい**します。 引数 *_Nx*演算子によって割り当てられたチャンク内のメモリ ブロックの数は、**新しい**します。
 
 ## <a name="deallocated"></a>  max_fixed_size::deallocated
 
@@ -102,11 +102,11 @@ void deallocated(std::size_t _Nx = 1);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Nx`|増分値。|
+|*_Nx*|増分値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は何も処理を行いません。 このメンバー関数は、`cache_freelist::deallocate` による演算子 `delete` への呼び出しがあるたび、その後に呼び出されます。 引数 `_Nx` は、演算子 `delete` によって割り当て解除されたチャンク内のメモリ ブロックの数です。
+このメンバー関数は何も処理を行いません。 によって、各呼び出しの後にこのメンバー関数が呼び出されます`cache_freelist::deallocate`演算子**削除**します。 引数 *_Nx*演算子によって割り当て解除されたチャンク内のメモリ ブロックの数は、**削除**します。
 
 ## <a name="full"></a>  max_fixed_size::full
 
@@ -118,11 +118,11 @@ bool full();
 
 ### <a name="return-value"></a>戻り値
 
-`Max <= _Nblocks` の場合は `true`。それ以外の場合は `false`。
+**true**場合`Max <= _Nblocks`、それ以外の**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しが `true` を返すと、`deallocate` はメモリ ブロックをフリー リストに置きます。false を返す場合は、`deallocate` は演算子 `delete` を呼び出してブロックの割り当てを解除します。
+このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出し、返される場合**true**、 `deallocate` false の場合、返された場合は、フリー リスト; にメモリ ブロックを配置`deallocate`呼び出し演算子**削除**割り当てを解除するブロック。
 
 ## <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size
 
@@ -132,7 +132,7 @@ bool full();
 max_fixed_size();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このコンストラクターは、格納された値 `_Nblocks` をゼロに初期化します。
 
@@ -144,7 +144,7 @@ max_fixed_size();
 void released();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 格納された `_Nblocks`を減らします。 現在の[最大クラス](../standard-library/allocators-header.md)の`released` メンバー関数は、`cache_freelist::allocate` によって、フリー リストからメモリ ブロックが削除されるたびに、呼び出されます。
 
@@ -156,7 +156,7 @@ void released();
 void saved();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納された値 `_Nblocks` を増やします。 このメンバー関数は、`cache_freelist::deallocate` によって、フリー リストにメモリ ブロックが置かれるたびに、呼び出されます。
 

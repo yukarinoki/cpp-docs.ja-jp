@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b516478c72e92f63b898cc43aa4838ab72733a05
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b475f497509249a29eb466c1a353111661b744e6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858956"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959473"
 ---
 # <a name="piecewiselineardistribution-class"></a>piecewise_linear_distribution クラス
 
@@ -90,9 +90,9 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`RealType` 浮動小数点の結果の型、既定値は`double`します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点の結果の型、既定値は**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このサンプリング分布は、各間隔で確率が直線的に変化する可変幅間隔を持っています。 他のサンプリング分布の詳細については、「[piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md)」および [discrete_distribution](../standard-library/discrete-distribution-class.md) に関する記事を参照してください。
 
@@ -222,7 +222,7 @@ Distribution for 100 samples:
    14-15 :::::
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -262,7 +262,7 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *lastI*分布範囲内の最後の要素の入力反復子。
 
-*firstW*重みの範囲内で最初の要素の入力反復子。
+*firstW*重みの範囲の最初の要素の入力反復子。
 
 *間隔*、 [initializer_list](../cpp/initializers.md)分布の区間を含むです。
 
@@ -272,11 +272,11 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *xmax*分布範囲内の最大値。 *xmin* より大きくなければなりません。
 
-*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方が `double` に変換可能である必要があります。
+*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
 
-*パラメーター*分布の作成に使用されるパラメーターの構造体。
+*parm*分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定のコンストラクターは、確率密度が 1 の、0 から 1 までの 1 つの区間を含むように、格納されているパラメーターを設定します。
 
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-シーケンスにわたる反復子の区間 [ `firstI`, `lastI`) と、`firstW` で始まる対応する重みシーケンスを使用して分布オブジェクトを構築します。
+シーケンスにわたる反復子の区間を持つ分布オブジェクトを構築します。 [ `firstI`、 `lastI`) し、シーケンスを開始位置として、対応する重み付け*firstW*します。
 
 初期化子リスト コンストラクター
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-は、初期化子リスト `intervals` の区間と、関数 `weightfunc` から生成された重みを使用して分布オブジェクトを構築します。
+初期化子リストからの間隔で分布オブジェクトを構築します*間隔*と、関数から生成された重み*weightfunc*します。
 
 次のように定義されたコンストラクターは
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-[ `xmin,xmax`] で一様に分布した `count` 個の区間を含み、各区間に関数 `weightfunc` に応じた重みを割り当てる分布オブジェクトを構築します。`weightfunc` は 1 つのパラメーターを受け入れて戻り値を持ち、いずれも `double` に変換可能である必要があります。 **前提条件:**`xmin < xmax`。
+配布オブジェクトを構築します*カウント*で一様に分布 [ `xmin,xmax`]、関数は、応じた重み間隔ごとの割り当て*weightfunc*と*weightfunc* 1 つのパラメーターをそのまま使用しに変換できるは、戻り値を持つ必要があります`double`します。 **前提条件:**`xmin < xmax`。
 
 次のように定義されたコンストラクターは
 
@@ -322,7 +322,7 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-格納されたパラメーター構造体として `parm` を使用する分布オブジェクトを作成します。
+使用して分布オブジェクトを構築します*parm*として格納されているパラメーター構造体。
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 
@@ -350,7 +350,7 @@ struct param_type {
 
 [piecewise_linear_distribution](#piecewise_linear_distribution) のコンストラクター パラメーターを参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `xmin < xmax`
 

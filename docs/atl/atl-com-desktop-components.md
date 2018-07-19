@@ -1,5 +1,5 @@
 ---
-title: ATL COM デスクトップ コンポーネント |Microsoft ドキュメント
+title: ATL COM デスクトップ コンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,50 +15,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255994"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953850"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
-ATL リファレンスでは、アクティブ テンプレート ライブラリ (ATL)、コンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスのセットを説明します。 完全に活用するために ATL、COM を熟知して作業を強くお勧めします。  
+ATL リファレンスで、Active Template Library (ATL)、一連のコンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスについて説明します。 完全に活用するために ATL、COM に精通する作業は強くお勧めします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ATL のクラスの概要](../atl/atl-class-overview.md)  
- カテゴリにより分類 ATL クラスの簡単な説明とへのリンクを提供します。  
+ カテゴリ別に整理された ATL クラスの簡単な説明とへのリンクを提供します。  
   
  [ATL クラスと構造体](../atl/reference/atl-classes.md)  
- クラスと構造体のアルファベット順での参考資料を提供します。  
+ クラスと構造体のアルファベット順のリファレンス資料を提供します。  
   
  [ATL 関数](../atl/reference/atl-functions.md)  
- アルファベット順グローバル関数に関するリファレンス情報を提供します。 カテゴリに関数のトピックが含まれます。  
+ グローバル関数をアルファベット順リファレンス資料を提供します。 カテゴリに関数のトピックが含まれています。  
   
  [ATL グローバル変数](../atl/reference/atl-global-variables.md)  
- アルファベット順のグローバル変数に関するリファレンス情報を提供します。  
+ アルファベット順のグローバル変数のリファレンス資料を提供します。  
   
  [ATL マクロ](../atl/reference/atl-macros.md)  
- アルファベット順のマクロの参考資料を提供します。 マクロのカテゴリにトピックが含まれます。  
+ アルファベット順のマクロに関するリファレンス資料を提供します。 マクロのカテゴリにトピックが含まれています。  
   
- [ATL Typedef](../atl/reference/atl-typedefs.md)  
- Typedef のアルファベット順での参考資料を提供します。  
+ [ATL Typedefs](../atl/reference/atl-typedefs.md)  
+ アルファベット順の typedef のリファレンス資料を提供します。  
   
  [ワーカーのアーキタイプ](../atl/reference/worker-archetype.md)  
- ATL ワーカー原型へのリンクを提供します。  
-  
- [古い ATL トピック](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- クラス、マクロ、およびいる旧式の関数に関するリファレンス情報を提供します。  
+ ATL のワーカーのアーキタイプへのリンクを提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- アクティブ テンプレート ライブラリ (ATL) を使用してプログラミングする方法に関するトピックを提供します。  
+ Active Template Library (ATL) を使用してプログラミングする方法に関するトピックを提供します。  
   
  [ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)  
  コントロールの作成について説明し、プロセスで、ATL の基本事項をいくつかを示します。  
   
  [ATL のサンプル](../visual-cpp-samples.md)  
- ATL を使用して、COM オブジェクトを記述する方法を示すサンプル コードです。  
+ ATL を使用して、COM オブジェクトを記述する方法を示すサンプル コード。  
   
  [OLE DB テンプレート](../data/oledb/ole-db-templates.md)  
  OLE DB のコンシューマーおよびプロバイダーのテンプレートのリファレンスが用意されています。このテンプレート クラスのセットは、一般的に使用される多くの OLE DB インターフェイスを実装します。  

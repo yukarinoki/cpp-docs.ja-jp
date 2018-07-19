@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFontProperty クラス |Microsoft ドキュメント
+title: CMFCPropertyGridFontProperty クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039043"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852982"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty クラス
 `CMFCPropertyGridFileProperty`クラスは、フォントの選択 ダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートしています。  
@@ -54,7 +54,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 |`CMFCPropertyGridFontProperty::FormatProperty`|プロパティ値のテキスト表現の書式を設定します  (上書き[cmfcpropertygridproperty::formatproperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty))。|  
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|ユーザーが、[フォント] ダイアログ ボックスから選択したフォントの色を取得します。|  
 |[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|ユーザーが、[フォント] ダイアログ ボックスから選択したフォントを取得します。|  
-|`CMFCPropertyGridFontProperty::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCPropertyGridFontProperty::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |`CMFCPropertyGridFontProperty::OnClickButton`|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます  (上書き[cmfcpropertygridproperty::onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton))。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -90,22 +90,22 @@ CMFCPropertyGridFontProperty(
  フォントの属性を指定するフォントの論理構造体。  
   
  [in]*dwFontDialogFlags*  
- プロパティ値のドロップダウン ボタンをクリックしたときに表示される [フォント] ダイアログ ボックスに適用されるスタイルです。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR) です。 詳細については、次を参照してください。、*フラグ*のパラメーター、 [CHOOSEFONT 構造](http://msdn.microsoft.com/library/windows/desktop/ms646832)です。  
+ プロパティ値のドロップダウン ボタンをクリックすると表示される [フォント] ダイアログ ボックスに適用されるスタイル。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR です)。 詳細については、次を参照してください。、*フラグ*のパラメーター、 [CHOOSEFONT 構造](http://msdn.microsoft.com/library/windows/desktop/ms646832)します。  
   
  [in]*lpszDescr*  
- Font プロパティの説明です。 既定値は `NULL` です。  
+ フォントのプロパティの説明。 既定値は、NULL です。  
   
- [in]*dwData*  
- 整数またはその他のプロパティに関連付けられているデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。  
+ [in]*指定*  
+ 整数プロパティに関連付けられているその他のデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。  
   
  [in]*色*  
  フォントの色。 既定値は既定の色です。  
   
 ### <a name="remarks"></a>Remarks  
- A`CMFCPropertyGridFontProperty`オブジェクトのフォントのプロパティ グリッド コントロールのフォント プロパティを表します。  
+ A`CMFCPropertyGridFontProperty`オブジェクト、プロパティ グリッドのフォント コントロールのフォント プロパティを表します。  
   
 ### <a name="example"></a>例  
- 次の例でのオブジェクトを作成する方法、`CMFCPropertyGridFontProperty`クラスです。 この例の一部である、[新しいコントロール サンプル](../../visual-cpp-samples.md)です。  
+ 次の例のオブジェクトを構築する方法、`CMFCPropertyGridFontProperty`クラス。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)選択したフォントを記述する構造体。  
+ ポインターを[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)選択したフォントを記述する構造体。  
   
 ### <a name="remarks"></a>Remarks  
   

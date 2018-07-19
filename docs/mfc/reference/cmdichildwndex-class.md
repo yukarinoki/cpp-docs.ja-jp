@@ -1,5 +1,5 @@
 ---
-title: CMDIChildWndEx クラス |Microsoft ドキュメント
+title: CMDIChildWndEx クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -122,15 +122,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ecefc377c620028b520945c6aaefd8b178d9ff9f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338451"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx クラス
-`CMDIChildWndEx`マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに、Windows の機能を提供するクラス。 機能を拡張[CMDIChildWnd クラス](../../mfc/reference/cmdichildwnd-class.md)です。 ある特定の MFC クラスを MDI アプリケーションで使用するときは、フレームワークにこのクラスが必要です。  
+`CMDIChildWndEx`マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに、Windows の機能を提供するクラス。 機能を拡張[CMDIChildWnd クラス](../../mfc/reference/cmdichildwnd-class.md)します。 ある特定の MFC クラスを MDI アプリケーションで使用するときは、フレームワークにこのクラスが必要です。  
  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 
@@ -147,69 +147,69 @@ class CMDIChildWndEx : public CMDIChildWnd
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|タスク バー タブから、アプリケーションをアクティブ化する場合は、トップ レベルのフレームをアクティブ化するためにフレームワークによって内部的に呼び出されます。|  
-|`CMDIChildWndEx::AddDockSite`|このメソッドは、使用または実装されていません。|  
+|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|タスク バー タブから、アプリケーションをアクティブ化するときに、トップ レベルのフレームをアクティブ化するためにフレームワークによって内部的に呼び出されます。|  
+|`CMDIChildWndEx::AddDockSite`|このメソッドを実装または使用されていません。|  
 |[CMDIChildWndEx::AddPane](#addpane)|ペインを追加します。|  
 |[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|タブ付きペインを追加します。|  
 |[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|ドッキング レイアウトを調整します。|  
 |[CMDIChildWndEx::CanShowOnMDITabs](#canshowonmditabs)||  
-|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|この MDI 子フォームを Windows 7 のタスクバー タブに表示されるかどうかをフレームワークに指示します。|  
-|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|返します`TRUE`に MDI 子ウィンドウの名前を表示できるかどうか、 [CMFCWindowsManagerDialog クラス](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) ダイアログ ボックス。 それ以外の場合は、`FALSE` を返します。|  
+|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|Windows 7 タスク バーのタブでこの MDI 子フォームを表示できるかどうかをフレームワークに指示します。|  
+|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|MDI 子ウィンドウの名前で表示できる場合は TRUE を返します、 [CMFCWindowsManagerDialog クラス](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) ダイアログ ボックス。 それ以外の場合、FALSE を返します。|  
 |`CMDIChildWndEx::CreateObject`|このクラス型の動的インスタンスを作成するためにフレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::DockPane](#dockpane)|ペインをドッキングします。|  
 |[CMDIChildWndEx::DockPaneLeftOf](#dockpaneleftof)|ウィンドウを別のウィンドウの左側にドッキングします。|  
-|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|有効に自動的に隠すウィンドウのモード ウィンドウの指定した辺にドッキングされている場合。|  
+|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|により自動的に隠すウィンドウ モード、ウィンドウの指定した辺にドッキングされている場合。|  
 |[CMDIChildWndEx::EnableDocking](#enabledocking)|メイン フレームに子ウィンドウのドッキングを有効にします。|  
 |[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|有効またはウィンドウのクライアント領域の一部の自動選択を無効にします。|  
 |[CMDIChildWndEx::GetDockingManager](#getdockingmanager)||  
 |[CMDIChildWndEx::GetDocumentName](#getdocumentname)|MDI 子ウィンドウに表示されるドキュメントの名前を返します。|  
 |[CMDIChildWndEx::GetFrameIcon](#getframeicon)|MDI 子ウィンドウのアイコンを取得するためにフレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::GetFrameText](#getframetext)|MDI 子ウィンドウのテキストを取得するためにフレームワークによって呼び出されます。|  
-|[CMDIChildWndEx::GetPane](#getpane)|指定したコントロール ID によってペインを検索します。|  
+|[CMDIChildWndEx::GetPane](#getpane)|指定したコントロール ID によってペインを検索します|  
 |[CMDIChildWndEx::GetRelatedTabGroup](#getrelatedtabgroup)||  
-|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|タブ付きドキュメントに変換された埋め込みドッキング ペインへのポインターを返します。|  
-|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|Windows 7 のタスクバー タブに実際に登録されているプロキシ ウィンドウ タブを返します。|  
-|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Windows 7 のタスクバー タブのサムネイルに表示する子ウィンドウ (通常はビューまたは分割ウィンドウ) を取得する必要があるときに、フレームワークによって呼び出されます。|  
+|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|タブ付きドキュメントに変換された埋め込みのドッキング ペインへのポインターを返します。|  
+|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|タブの Windows 7 タスク バーのタブに実際に登録されているプロキシ ウィンドウを返します。|  
+|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Windows 7 タスク バーのタブのサムネイルに表示する子ウィンドウ (通常はビューまたは分割ウィンドウ) を取得する必要があるときに、フレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|ウィンドウのクライアント領域の一部を選択する必要があるときに、フレームワークによって呼び出されます。|  
 |`CMDIChildWndEx::GetThisClass`|ポインターを取得するためにフレームワークによって呼び出される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|ツール バー ボタンのツールヒントを取得するためにフレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::InsertPane](#insertpane)|指定したウィンドウをドッキング マネージャーに登録します。|  
-|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|MDI 子フォームのアイコン ビットマップ形式を無効にします。|  
-|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|指定したポイントがドッキング サイトの近くにいるかどうかを判断します。|  
-|[CMDIChildWndEx::IsReadOnly](#isreadonly)|返します`TRUE`場合は、子ウィンドウに表示されるドキュメントは読み取り専用です。 それ以外の場合は、`FALSE` を返します。|  
-|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|MDI 子フォームが Windows 7 のタスクバー タブに正常に登録されている場合は、TRUE を返します。|  
-|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|返します`TRUE`MDI 子ウィンドウには、ドッキング ペインが含まれている場合。 それ以外の場合は、`FALSE` を返します。|  
-|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|Windows 7 のタスクバー タブに、MDI 子ウィンドウを表示できるかどうかを指示します。|  
-|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|ウィンドウのクライアント領域の一部の自動選択が有効か無効かどうかを示します。|  
-|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|フレームワークによって SetTaskbarTabProperties メソッドはとタブ (MDI 子)、に渡されるフラグの組み合わせは、Windows 7 のタスクバー タブに登録しています。 既定値の組み合わせが STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE です。|  
-|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|MDI 子ウィンドウのライブのプレビューのビットマップを取得する必要があるときに、フレームワークによって呼び出されます。|  
+|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|MDI 子フォームのアイコンのビットマップ表現を無効にします。|  
+|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|指定したポイントがドッキング サイトに近いかどうかを判断します。|  
+|[CMDIChildWndEx::IsReadOnly](#isreadonly)|子ウィンドウに表示されているドキュメントが読み取り専用の場合は、TRUE を返します。 それ以外の場合、FALSE を返します。|  
+|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|MDI 子ウィンドウに Windows 7 タスク バーのタブが正常に登録されている場合は、TRUE を返します。|  
+|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|MDI 子ウィンドウには、ドッキング ペインが含まれている場合は、TRUE を返します。 それ以外の場合、FALSE を返します。|  
+|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|Windows 7 タスク バーのタブに、MDI 子フォームを表示できるかどうかを指示します。|  
+|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|ウィンドウのクライアント領域の一部の自動選択が有効になっているかどうかを指示します。|  
+|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|フレームワークによって、SetTaskbarTabProperties メソッドは、タブ (MDI 子) に渡されるフラグの組み合わせは、Windows 7 タスク バーのタブに登録しています。 既定の組み合わせが STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE します。|  
+|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|MDI 子フォームのライブ プレビューのビットマップを取得する必要があるときに、フレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|MDI 子フォームのアイコンのサムネイルのビットマップを取得する必要があるときに、フレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|ミニフレーム ウィンドウを移動するためにフレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|ユーザーがタスク バーのタブのサムネイルの閉じるボタンを押したときに、フレームワークによって呼び出されます.|  
 |[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|入力するか、印刷プレビュー モードを終了するためにフレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|タスク バーのタブのサムネイルは WM_ACTIVATE メッセージを処理するときに、フレームワークによって呼び出されます。|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|タスク バーのタブのサムネイルは WM_MOUSEACTIVATE メッセージを処理するときに、フレームワークによって呼び出されます。|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|MDI 子ウィンドウの Windows 7 タスク バー タブの縮小表示プレビューのビットマップを拡大する必要があるときに、フレームワークによって呼び出されます。|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|タスク バーのタブのサムネイルが WM_MOUSEACTIVATE メッセージを処理するときに、フレームワークによって呼び出されます。|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|MDI 子フォームの Windows 7 タスク バー タブの縮小表示プレビューのビットマップを拡大する必要があるときに、フレームワークによって呼び出されます。|  
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|フレームのタイトルを更新するためにフレームワークによって呼び出されます。 (`CMDIChildWnd::OnUpdateFrameTitle` をオーバーライドします)。|  
-|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|指定したポイントを含むウィンドウを返します。|  
+|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|指定したポイントを含むペインを返します。|  
 |`CMDIChildWndEx::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](http://msdn.microsoft.com/library/windows/desktop/ms644934) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|  
-|[CMDIChildWndEx::RecalcLayout](#recalclayout)|ウィンドウのレイアウトを再計算されます。|  
-|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Windows 7 のタスクバー タブに、MDI 子フォームを登録します。|  
+|[CMDIChildWndEx::RecalcLayout](#recalclayout)|ウィンドウのレイアウトを再計算します。|  
+|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Windows 7 タスク バーのタブ付き MDI 子フォームを登録します。|  
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|ドッキング マネージャーから、ウィンドウを削除します。|  
 |[CMDIChildWndEx::SetRelatedTabGroup](#setrelatedtabgroup)||  
-|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|対応する Windows 7 のタスクバー タブをアクティブにします。|  
-|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Windows 7 のタスクバー タブで指定された期間の前に MDI 子フォームを挿入します。|  
+|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|対応する Windows 7 タスク バーのタブがアクティブにします。|  
+|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Windows 7 タスク バーのタブで指定されたウィンドウの前に MDI 子フォームを挿入します。|  
 |[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Windows 7 のタスクバー タブのプロパティを設定します。|  
 |[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|ウィンドウのクライアント領域の一部を選択するクリッピング四角形を設定するためにフレームワークによって内部的に呼び出されます。|  
 |[CMDIChildWndEx::ShowPane](#showpane)||  
-|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Windows 7 のタスクバー タブから、MDI 子フォームを削除します。|  
-|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Windows 7 のタスクバー タブのアイコンを更新します。|  
+|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Windows 7 タスク バーのタブからは、MDI 子フォームを削除します。|  
+|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Windows 7 タスク バーのタブのアイコンを更新します。|  
   
 ## <a name="remarks"></a>Remarks  
- MDI アプリケーションでドッキングの拡張機能を利用する、アプリケーションからの MDI 子ウィンドウのクラスを派生`CMDIChildWndEx`の代わりに[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)です。  
+ MDI アプリケーションでドッキングの拡張機能を利用するアプリケーションの MDI 子ウィンドウ クラスを派生`CMDIChildWndEx`の代わりに[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)します。  
   
 ## <a name="example"></a>例  
- 次の例からクラスを派生する`CMDIChildWndEx`です。 このコード スニペットを起源、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)です。  
+ 次の例では、派生クラスから`CMDIChildWndEx`します。 このコード スニペットに由来、 [VisualStudioDemo サンプル: Visual Studio アプリケーションを MFC](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]  
   
@@ -243,10 +243,10 @@ BOOL AddPane(
  ペインへのポインター。  
   
  [in]*bTail*  
- `TRUE` ペインの一覧の最後に、ドッキング マネージャー;、ウィンドウを追加するにはそれ以外の場合、`FALSE`です。  
+ ペインの一覧の末尾に、ドッキング マネージャーに、ウィンドウを追加する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、ウィンドウは、ドッキング マネージャー; に正常に登録されましたそれ以外の場合、`FALSE`です。  
+ TRUE の場合、ウィンドウはドッキング マネージャーに正常に登録されましたそれ以外の場合、FALSE です。  
   
 ##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane  
  タブ付きペインを追加します。  
@@ -268,7 +268,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*hdwp*  
- 遅延ウィンドウ位置構造体へのハンドルします。  
+ 遅延のウィンドウの位置の構造体へのハンドルします。  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -289,10 +289,10 @@ virtual BOOL CanShowOnWindowsList();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ウィンドウを表示できる場合、 **Windows**  ダイアログ ボックス、それ以外の`FALSE`します。  
+ ウィンドウを表示できる場合は TRUE、 **Windows**  ダイアログ ボックス場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- 派生クラスでは、このメソッドをオーバーライドし、返す`FALSE`ウィンドウに表示しない場合、 **Windows**  ダイアログ ボックス。 この関数から`CMFCWindowsManagerDialog`です。  
+ 派生クラスでは、このメソッドをオーバーライドしで、ウィンドウを表示するかしない場合は FALSE を返します、 **Windows**  ダイアログ ボックス。 この関数から`CMFCWindowsManagerDialog`します。  
   
 ##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane  
  ペインをドッキングします。  
@@ -328,21 +328,21 @@ BOOL DockPaneLeftOf(
   
 ### <a name="parameters"></a>パラメーター  
  *pBar*  
- ドッキングするのには、ウィンドウへのポインター。  
+ ドッキング ウィンドウへのポインター。  
   
  *pLeftOf*  
  参照のポイントとして機能するウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 成功した場合、`FALSE`エラー発生時にします。  
+ 成功した場合は TRUE、失敗した場合にします。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドで指定されたウィンドウ*pBar*で指定されたウィンドウの左側にドッキングして*pLeftOf*です。  
+ このメソッドで指定されたウィンドウは、 *pBar*で指定されたウィンドウの左側にドッキングと*pLeftOf*します。  
   
- 事前定義された順序でいくつかのペインをドッキングするときに、このメソッドを呼び出します。  
+ 事前定義された順序でいくつかのペインをドッキングする場合に、このメソッドを呼び出します。  
   
 ##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes  
- 有効に自動的に隠すウィンドウのモード ウィンドウの指定した辺にドッキングされている場合。  
+ により自動的に隠すウィンドウ モード、ウィンドウの指定した辺にドッキングされている場合。  
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
@@ -352,16 +352,16 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
  [in]*dwDockStyle*  
  有効になっているメイン フレーム ウィンドウの辺を指定します。 次のフラグの 1 つ以上を使用します。  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
+ メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking  
  メイン フレームに子ウィンドウのドッキングを有効にします。  
@@ -372,10 +372,10 @@ BOOL EnableDocking(DWORD dwDockStyle);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*dwDockStyle*  
- ドッキングの配置を有効にするを指定します。  
+ 有効にするドッキングの配置を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
+ メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  メイン フレームにドッキングの配置を有効にするには、このメソッドを呼び出します。 Cbrs_align _ フラグの組み合わせを渡すことができます (詳細については、次を参照してください。 [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking))。  
@@ -399,19 +399,19 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ドキュメントの名前を表す文字列へのポインター。  
+ ドキュメントの名前を含む文字列へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- ドキュメントは、MDI 子ウィンドウが表示されます。 一般に、ウィンドウから読み込まれた、またはファイルに保存されるデータを表示します。 したがって、ドキュメントの名前は、ファイルの名前です。 既定の実装`GetDocumentName`から取得した文字列を返します`CDocument::GetPathName`です。  
+ ドキュメントは、MDI 子ウィンドウが表示されます。 一般に、ウィンドウから読み込まれた、またはファイルに保存されるデータが表示されます。 そのため、ドキュメントの名前は、ファイルの名前です。 既定の実装`GetDocumentName`から取得した文字列を返します`CDocument::GetPathName`します。  
   
- ウィンドウには、ファイルから読み込まれていないドキュメントが表示されている場合は、派生クラスでは、このメソッドをオーバーライドし、一意のドキュメント識別子を返します。  
+ ウィンドウには、ファイルから読み込まれていないドキュメントが表示されている場合は、派生クラスでこのメソッドをオーバーライドし、ドキュメントの一意の識別子を返します。  
   
  `GetDocumentName` すべての開いているドキュメントの状態を保存するときに、フレームワークによって呼び出されます。 返される文字列は、レジストリに書き込まれます。  
   
- ドキュメント名がレジストリから読み取られに渡されるフレームワークでは、後で状態を復元は、 [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)です。 このメソッドをオーバーライドする[CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-派生クラスを作成またはこの名前を持つドキュメントを開くし、この名前を持つファイルの読み取り。 ドキュメントがないファイルに基づく場合は、ドキュメント識別子自体に基づくドキュメントを作成します。 保存し、ドキュメントを復元する場合にのみ、上記の操作を行う必要があります。  
+ ドキュメント名がレジストリから読み取るしに渡されるフレームワークでは、後で状態を復元は、 [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)します。 このメソッドをオーバーライドする[CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-派生クラスと作成またはこの名前を持つドキュメントを開き、この名前を持つファイルの読み取り。 ドキュメントがファイルに基づいていない場合、は、ドキュメント識別子自体に基づくドキュメントを作成します。 保存し、ドキュメントを復元する場合にのみ、上記の操作を行う必要があります。  
   
 ### <a name="example"></a>例  
- `GetDocumentName` メソッドの使用例を次に示します。 このコード スニペットを起源、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)です。  
+ `GetDocumentName` メソッドの使用例を次に示します。 このコード スニペットに由来、 [VisualStudioDemo サンプル: Visual Studio アプリケーションを MFC](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
   
@@ -426,7 +426,7 @@ virtual HICON GetFrameIcon() const;
  ウィンドウ アイコンへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、MDI 子フレーム ウィンドウを含む MDI タブ上に表示するには、どのようなアイコンを決定するためにフレームワークによって呼び出されます。  
+ このメソッドは、MDI 子フレーム ウィンドウを含む MDI タブに表示するには、どのようなアイコンを決定するためにフレームワークによって呼び出されます。  
   
  既定では、このメソッドは、ウィンドウのアイコンを返します。 オーバーライド`GetFrameIcon`で、 `CMDIChildWndEx`-この動作をカスタマイズするクラスを派生します。  
   
@@ -438,15 +438,15 @@ virtual CString GetFrameText() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- フレーム ウィンドウのテキストを含む文字列です。  
+ フレーム ウィンドウのテキストを含む文字列。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、MDI 子フレーム ウィンドウを含む MDI タブに表示するには、どのようなテキストを調べるためにフレームワークによって呼び出されます。  
+ このメソッドは、MDI 子フレーム ウィンドウを含む MDI タブに表示するには、どのようなテキストを決定するためにフレームワークによって呼び出されます。  
   
  既定では、このメソッドは、ウィンドウのテキストを返します。 オーバーライド`GetFrameText`で、 `CMDIChildWndEx`-この動作をカスタマイズするクラスを派生します。  
   
 ##  <a name="getpane"></a>  CMDIChildWndEx::GetPane  
- 指定したコントロール ID によってペインを検索します。  
+ 指定したコントロール ID によってペインを検索します  
   
 ```  
 CBasePane* GetPane(UINT nID);
@@ -454,10 +454,10 @@ CBasePane* GetPane(UINT nID);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nID*  
- 検索するウィンドウのコントロール ID。  
+ 検索する、ウィンドウのコントロール ID。  
   
 ### <a name="return-value"></a>戻り値  
- ペインへのポインター場合が見つかると、それ以外の場合`NULL`です。  
+ 見つかった場合 NULL それ以外の場合、ウィンドウへのポインター。  
   
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup  
 
@@ -490,10 +490,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、ツールヒントが表示されています。 既定の実装では、`FALSE` が返されます。  
+ ツールヒントが表示されている場合は TRUE。 既定の実装では、FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ツール バー ボタンのカスタム ツールヒントを表示する場合は、このメソッドをオーバーライドします。  
+ ツール バー ボタンのカスタム ツール ヒントを表示したい場合は、このメソッドをオーバーライドします。  
   
 ##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane  
  指定したウィンドウをドッキング マネージャーに登録します。  
@@ -510,16 +510,16 @@ BOOL InsertPane(
  挿入するウィンドウへのポインター。  
   
  [in]*pTarget*  
- 隣のウィンドウへのポインター。  
+ 隣接するウィンドウへのポインター。  
   
  [in]*bAfter*  
- 場合`TRUE`、 *pControlBar*の後に挿入*pTarget*です。 場合`FALSE`、 *pControlBar*前に、挿入は*pTarget*です。  
+ TRUE の場合、 *pControlBar*後に挿入されます*pTarget*します。 FALSE の場合、 *pControlBar*前に挿入されます*pTarget*します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功すると、`FALSE`それ以外の場合。  
+ メソッドが成功した場合、FALSE それ以外の場合は TRUE。  
   
 ##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite  
- 指定したポイントがドッキング サイトの近くにいるかどうかを判断します。  
+ 指定したポイントがドッキング サイトに近いかどうかを判断します。  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -530,35 +530,35 @@ BOOL IsPointNearDockSite(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*ポイント*  
- 指定された点です。  
+ 指定した点。  
   
  [in]*dwBarAlignment*  
- 点が近い端を指定します。 指定できる値は`CBRS_ALIGN_LEFT`、 `CBRS_ALIGN_RIGHT`、 `CBRS_ALIGN_TOP`、および `CBRS_ALIGN_BOTTOM`  
+ どちらの端点が近いを指定します。 指定できる値は CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM です。  
   
  [in]*bOuterEdge*  
- `TRUE` ドッキング サイトの外側の境界線の近くのポイントがある場合`FALSE`それ以外の場合。  
+ ポイントが、ドッキング サイトの外側の境界線の近くにある場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ドッキング サイトの近くのポイントがある場合それ以外の場合`FALSE`です。  
+ 点がドッキング サイトに近い場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 点は、ドッキング マネージャーで設定された感度内にある場合、ドッキング サイトに近いです。 既定値と小文字の区別は、15 ピクセルです。  
+ ポイントは、ドッキング マネージャーで設定された感度内にある場合に、ドッキング サイトに近いです。 既定の感度は、15 ピクセルです。  
   
 ##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly  
- 子ウィンドウに表示されるドキュメントは読み取り専用であるかどうかを指定します。  
+ 子ウィンドウに表示されているドキュメントが読み取り専用かどうかを指定します。  
   
 ```  
 virtual BOOL IsReadOnly();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、ドキュメントが読み取り専用です。それ以外の場合`FALSE`です。  
+ ドキュメントが読み取り専用である場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- この関数を防ぐために使用される読み取り専用の文書を保存します。  
+ この関数の使用を防ぐために読み取り専用の文書を保存します。  
   
 ### <a name="example"></a>例  
- 次の例では、オーバーライドを示しています、`IsReadOnly`メソッドです。 このコード スニペットを起源、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)です。  
+ 次の例は、オーバーライド、`IsReadOnly`メソッド。 このコード スニペットに由来、 [VisualStudioDemo サンプル: Visual Studio アプリケーションを MFC](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
   
@@ -570,7 +570,7 @@ BOOL IsTabbedPane() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` MDI 子ウィンドウには、タブ付きドキュメントに変換されたドッキング ウィンドウが含まれている場合それ以外の場合`FALSE`です。  
+ MDI 子ウィンドウには、タブ付きドキュメントに変換されたドッキング ペインが含まれている場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame  
  ミニフレーム ウィンドウを移動するためにフレームワークによって呼び出されます。  
@@ -584,7 +584,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
  ミニフレーム ウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合、それ以外の場合`FALSE`です。  
+ TRUE の場合、メソッドが成功した場合は FALSE。  
   
 ##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode  
  入力するか、印刷プレビュー モードを終了するためにフレームワークによって呼び出されます。  
@@ -597,10 +597,10 @@ virtual void OnSetPreviewMode(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bPreview*  
- 場合`TRUE`、印刷プレビュー モードを入力します。 場合`FALSE`、印刷プレビュー モードを終了します。  
+ TRUE の場合は、印刷プレビュー モードを入力します。 FALSE の場合、終了印刷プレビュー モードです。  
   
  [in]*pState*  
- 印刷プレビューの状態の構造体へのポインター。  
+ 印刷プレビュー状態の構造体へのポインター。  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  フレームのタイトルを更新するためにフレームワークによって呼び出されます。  
@@ -611,10 +611,10 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bAddToTitle*  
- 場合`TRUE`タイトルには、ドキュメント名を追加します。  
+ TRUE の場合は、タイトルにドキュメント名を追加します。  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
- 指定したポイントを含むウィンドウを返します。  
+ 指定したポイントを含むペインを返します。  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -635,27 +635,27 @@ CBasePane* PaneFromPoint(
  確認の画面座標で、ポイントを指定します。  
   
  [in]*nSensitivity*  
- この量によって、検索の領域を増やします。 ペインは、指定したポイントが拡大された領域内になった場合に、検索条件を満たします。  
+ この金額には、検索領域を増やします。 ペインは、指定したポイントが拡大された領域内にある場合に、検索条件を満たします。  
   
  [in]*bExactBar*  
- `TRUE` 無視する、 *nSensitivity*パラメーターです。 それ以外の場合、`FALSE`です。  
+ 無視する場合は TRUE、 *nSensitivity*パラメーター場合は FALSE。  
   
  [in]*pRTCBarType*  
- ない場合`NULL`、指定した型のペインのみが検索されます。  
+ NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。  
   
  [in]*場合*  
- 指定した位置に、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いしたペインの横が含まれています。 詳細については、「解説」を参照してください。  
+ 指定した時点で、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いいたペインの横にはが含まれています。 詳細については、「解説」を参照してください。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 `CBasePane`-特定のポイントを格納しているオブジェクトを派生または`NULL`ウィンドウが見つからなかった場合です。  
+ ポインター、 `CBasePane`-ウィンドウが見つからなかった場合は、特定のポイント、または NULL を含む派生オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドでは、ランタイム クラスと可視性などの指定した条件に従って、指定したポイントがペインに含まれるかどうかを決定します。  
+ ランタイム クラスと可視性など、指定した条件に従って、指定したポイントがウィンドウに含まれるかどうかを確認するには、このメソッドを呼び出します。  
   
- この関数を返し、ペインが見つかりましたが、*場合*指定した点の配置が含まれています。 たとえば、次の点が、ウィンドウの上部に最も近い*場合*に設定されている`CBRS_ALIGN_TOP`です。  
+ 関数に戻り、ペインが検出されましたが、*場合*指定した点の配置が含まれています。 たとえば、次の点が、ウィンドウの上部に最も近い*場合*CBRS_ALIGN_TOP に設定されます。  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
- ウィンドウのレイアウトを再計算されます。  
+ ウィンドウのレイアウトを再計算します。  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
@@ -663,7 +663,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bNotify*  
- 場合`TRUE`ウィンドウのアクティブなインプレースで項目がレイアウトの変更の通知を受信します。  
+ TRUE の場合、ウィンドウのアクティブなインプレース項目は、レイアウトの変更の通知を受け取ります。  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  ドッキング マネージャーから、ウィンドウを削除します。  
@@ -682,16 +682,16 @@ void RemovePaneFromDockManager(
  削除するウィンドウへのポインター。  
   
  [in]*bDestroy*  
- 場合`TRUE`、削除されたウィンドウが破棄されます。  
+ TRUE の場合、削除されたウィンドウが破棄されます。  
   
  [in]*bAdjustLayout*  
- 場合`TRUE`、すぐにドッキング レイアウトを調整します。  
+ TRUE の場合は、すぐにドッキング レイアウトを調整します。  
   
  [in]*bAutoHide*  
- 場合`TRUE`、ドッキング レイアウトは自動的に隠すバーのリストに関連します。 場合`FALSE`、ドッキング レイアウトは標準のペインの一覧に関連します。  
+ TRUE の場合、ドッキング レイアウトは自動的に隠すバーのリストに関連します。 FALSE の場合、ドッキング レイアウトに関連する標準のペインの一覧。  
   
  [in]*pBarReplacement*  
- 削除されるペインに置き換えられるペインへのポインター。  
+ 削除されたウィンドウを置換するウィンドウへのポインター。  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -725,7 +725,7 @@ void ShowPane(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon  
- Windows 7 のタスクバー タブのアイコンを更新します。  
+ Windows 7 タスク バーのタブのアイコンを更新します。  
   
 ```  
 virtual void UpdateTaskbarTabIcon(HICON hIcon);
@@ -733,12 +733,12 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
   
 ### <a name="parameters"></a>パラメーター  
  *hIcon*  
- Windows 7 のタスクバー タブに表示するアイコンのハンドル。  
+ Windows 7 タスク バーのタブに表示するアイコンへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab  
- Windows 7 のタスクバー タブから、MDI 子ウィンドウを削除します。  
+ Windows 7 タスク バーのタブから、MDI 子フォームを削除します。  
   
 ```  
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
@@ -746,7 +746,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  *bCheckRegisteredMDIChildCount*  
- この関数を MDI タブに登録されている MDI 子の数を確認する必要があるかどうかを指定します。 この数が 0 の場合、この関数は、アプリケーションのタスク バーのサムネイルからクリッピング四角形を削除し、します。  
+ この関数が MDI 子フォーム MDI タブに登録されている数を確認する必要があるかどうかを指定します。 この番号が 0 の場合、この関数は、アプリケーションのタスク バーのサムネイルからクリッピング四角形を削除します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -759,10 +759,10 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
   
 ### <a name="parameters"></a>パラメーター  
  *rect*  
- 新しいクリッピング四角形を指定します。 四角形が空または null の場合は、領域は削除されます。  
+ 新しいクリッピング四角形を指定します。 四角形が空または null の場合は、クリッピングは削除されます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合は `TRUE`。それ以外の場合は `FALSE`。  
+ 成功した場合は TRUE、それ以外の場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -775,12 +775,12 @@ void SetTaskbarTabProperties(DWORD dwFlags);
   
 ### <a name="parameters"></a>パラメーター  
  *dwFlags*  
- STPFLAG の値の組み合わせ。 詳細については、次を参照してください。 [itaskbarlist 4::settabproperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx)です。  
+ STPFLAG の値の組み合わせ。 詳細については、次を参照してください。 [itaskbarlist 4::settabproperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx)します。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder  
- Windows 7 のタスクバー タブで指定された期間の前に、MDI 子を挿入します。  
+ Windows 7 タスク バーのタブで指定したウィンドウの前に、MDI 子フォームを挿入します。  
   
 ```  
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
@@ -788,12 +788,12 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="parameters"></a>パラメーター  
  *pWndBefore*  
- サムネイルの左側に挿入が MDI 子ウィンドウへのポインター。 このウィンドウはによって既に登録される必要があります`RegisterTaskbarTab`です。 この値が場合`NULL`、新しいサムネイルがリストの末尾に追加します。  
+ 左側にあるサムネイルを挿入する MDI 子ウィンドウへのポインター。 このウィンドウを登録する必要が既に`RegisterTaskbarTab`します。 この値が NULL の場合は、新しいサムネイルがリストの末尾に追加されます。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive  
- 対応する Windows 7 のタスクバー タブをアクティブにします。  
+ 対応する Windows 7 タスク バーのタブがアクティブにします。  
   
 ```  
 void SetTaskbarTabActive();
@@ -802,7 +802,7 @@ void SetTaskbarTabActive();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab  
- Windows 7 のタスクバー タブに、MDI 子を登録します。  
+ Windows 7 タスク バーのタブ付き MDI 子ウィンドウを登録します。  
   
 ```  
 virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
@@ -810,12 +810,12 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
   
 ### <a name="parameters"></a>パラメーター  
  *pWndBefore*  
- サムネイルの左側に挿入が MDI 子ウィンドウへのポインター。 このウィンドウはによって既に登録される必要があります`RegisterTaskbarTab`です。 この値が場合`NULL`、新しいサムネイルがリストの末尾に追加します。  
+ 左側にあるサムネイルを挿入する MDI 子ウィンドウへのポインター。 このウィンドウを登録する必要が既に`RegisterTaskbarTab`します。 この値が NULL の場合は、新しいサムネイルがリストの末尾に追加されます。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
- MDI 子ウィンドウの Windows 7 タスク バー タブ縮小表示プレビューのビットマップを拡大する必要があるときに、フレームワークによって呼び出されます。  
+ MDI 子ウィンドウの Windows 7 タスクバー タブ縮小表示プレビューのビットマップを拡大する必要があるときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL OnTaskbarTabThumbnailStretch(
@@ -833,16 +833,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
  先の四角形を指定します。  
   
  *hBmpSrc*  
- 元のビットマップへのハンドル。  
+ ソース ビットマップへのハンドル。  
   
  *rectSrc*  
  元の四角形を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- Requirementher または彼彼彼彼彼彼彼 **:** afxmdichildwndex.h  
+ 要件: afxmdichildwndex.h  
   
 ##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
- タスク バーのタブのサムネイルは WM_MOUSEACTIVATE メッセージを処理するときに、フレームワークによって呼び出されます。  
+ タスク バーのタブのサムネイルが WM_MOUSEACTIVATE メッセージを処理するときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual int OnTaskbarTabThumbnailMouseActivate(
@@ -853,13 +853,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
   
 ### <a name="parameters"></a>パラメーター  
  *pDesktopWnd*  
- アクティブ化されているウィンドウの最上位の親ウィンドウへのポインターを指定します。 ポインターは、一時的な場合があり、保存されません。  
+ アクティブ化されているウィンドウの最上位の親ウィンドウへのポインターを指定します。 ポインターは、一時的な場合があり、保存してはなりません。  
   
  *nHitTest*  
- ヒット テストの市外局番を指定します。 ヒット テストは、カーソルの位置を決定するテストです。  
+ ヒット テスト領域のコードを指定します。 ヒット テストは、カーソルの位置を決定するテストです。  
   
  *message*  
- マウスのメッセージ番号を指定します。  
+ マウス メッセージの数を指定します。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装には、関連する MDI 子フレームがアクティブにします。  
@@ -875,14 +875,14 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *%n 状態*  
+ *状態*  
  指定するかどうか、`CWnd`がアクティブまたは非アクティブ化します。  
   
  *pWndOther*  
- ポインター、`CWnd`アクティブまたは非アクティブ化します。 マウス ポインターを指定できます`NULL`、一時的な可能性があるとします。  
+ ポインター、`CWnd`アクティブまたは非アクティブ化します。 ポインターが NULL にできるし、は一時的なものです。  
   
  *bMinimized*  
- 最小化された状態を指定します、`CWnd`アクティブまたは非アクティブ化します。 値`TRUE`ウィンドウが最小化することを示します。  
+ 最小化された状態を指定します、`CWnd`アクティブまたは非アクティブ化します。 TRUE の値は、ウィンドウが最小化を示します。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装には、関連する MDI 子フレームがアクティブにします。  
@@ -915,7 +915,7 @@ virtual HBITMAP OnGetIconicThumbnail(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
- MDI 子ウィンドウのライブのプレビューのビットマップを取得する必要があるときに、フレームワークによって呼び出されます。  
+ MDI 子ウィンドウのライブ プレビューのビットマップを取得する必要があるときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual HBITMAP OnGetIconicLivePreviewBitmap(
@@ -925,60 +925,60 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
   
 ### <a name="parameters"></a>パラメーター  
  *bIsMDIChildActive*  
- このパラメーターは`TRUE`MDI 子ウィンドウのビットマップが要求された場合は、現在アクティブとのメイン ウィンドウが最小化されていません。 既定の処理をここでは、メイン ウィンドウのスナップショットを取得します。  
+ 現在アクティブな MDI 子のビットマップが要求され、メイン ウィンドウが最小化されていない場合、このパラメーターは TRUE です。 既定の処理をここでは、メイン ウィンドウのスナップショットを取得します。  
   
  *ptLocation*  
- メイン (最上位)、ビットマップの場所を指定するウィンドウのクライアント座標。 このポイントは、呼び出し先によって提供される必要があります。  
+ ビットマップの場所を指定して、メインの (最上位レベル) ウィンドウのクライアント座標。 呼び出し先によっては、このポイントを指定する必要があります。  
   
 ### <a name="return-value"></a>戻り値  
- 処理がある場合のハンドルを返します有効 32 bpp のビットマップでは、それ以外の場合`NULL`です。  
+ 処理がある場合、有効な 32 bpp のビットマップへのハンドルを返すそれ以外の場合 NULL です。  
   
 ### <a name="remarks"></a>Remarks  
- 派生クラスでは、このメソッドをオーバーライドし、MDI 子ウィンドウのライブのプレビューの有効 32 bpp のビットマップを返します。 MDI 子ウィンドウは、Windows 7 のタスクバー タブに表示される場合にのみ、このメソッドが呼び出されます。 返す場合`NULL`、MFC の既定のハンドラーを呼び出すし、ビットマップを使用して取得`PrintClient`または`PrintWindow`です。  
+ 派生クラスでは、このメソッドをオーバーライドし、MDI 子フォームのライブ プレビューの有効な 32 bpp のビットマップを返します。 MDI 子ウィンドウは、Windows 7 タスク バーのタブに表示される場合にのみ、このメソッドが呼び出されます。 MFC が既定のハンドラーを呼び出すし、ビットマップを使用してを取得します。 NULL を返す場合`PrintClient`または`PrintWindow`します。  
   
 ##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
- フレームワークによって渡されるフラグの組み合わせ、`SetTaskbarTabProperties`メソッドは、Windows 7 のタスクバー タブに、タブ (MDI 子) を登録するとします。  
+ フレームワークによって渡されるフラグの組み合わせ、`SetTaskbarTabProperties`メソッドは、タブ (MDI 子フォームでは、Windows 7 タスク バーのタブに登録しています。  
   
 ```  
 AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 既定値の組み合わせが STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE です。  
+ 既定の組み合わせが STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE します。  
   
 ##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
- ウィンドウのクライアント領域の一部の自動選択が有効か無効かどうかを示します。  
+ ウィンドウのクライアント領域の一部の自動選択が有効になっているかどうかを指示します。  
   
 ```  
 BOOL IsTaskbarThumbnailClipRectEnabled() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します`TRUE`を表示するウィンドウのクライアント領域の一部の自動選択は、それ以外の有効なかどうかは`FALSE`します。  
+ 表示するウィンドウのクライアント領域の一部を返します。 TRUE の場合、自動選択を有効にすると;それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
- Windows 7 のタスクバー タブに、MDI 子ウィンドウを表示できるかどうかを指示します。  
+ Windows 7 タスク バーのタブに、MDI 子フォームを表示できるかどうかを指示します。  
   
 ```  
 BOOL IsTaskbarTabsSupportEnabled();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` MDI 子ウィンドウは、Windows 7 のタスクバー タブ; に表示できる場合`FALSE`場合は、MDI 子が Windows 7 のタスクバー タブに表示されないことができます。  
+ Windows 7 タスク バーのタブ; に MDI 子ウィンドウが表示できる場合は TRUE。MDI 子ウィンドウは Windows 7 タスク バーのタブに表示されない場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
- 返します`TRUE`場合は、MDI 子は、Windows 7 のタスクバー タブに正常に登録されました。  
+ MDI 子ウィンドウに Windows 7 タスク バーのタブが正常に登録されている場合は、TRUE を返します。  
   
 ```  
 BOOL IsRegisteredWithTaskbarTabs();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` MDI 子ウィンドウが Windows 7 のタスクバー タブ; に登録されている場合それ以外の場合`FALSE`です。  
+ MDI 子ウィンドウが Windows 7 タスク バーのタブ; に登録されている場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -990,10 +990,10 @@ BOOL InvalidateIconicBitmaps();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します`FALSE`Windows 7 タスク バーのサポートが無効にするか、MDI 子は、Windows 7 のタスクバー タブ; に登録されていない場合それを返します`TRUE`です。  
+ MDI 子や Windows 7 タスク バーのサポートが無効になっている場合は FALSE を返しますが、Windows 7 タスク バーのタブ; に登録されていませんそれ以外の場合は TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ライブ コンテンツまたは MDI 子ウィンドウのサイズが変更されたときに呼び出す必要があります。  
+ ライブ コンテンツまたは MDI 子ウィンドウのサイズが変更されたときに呼び出されます。  
   
 ##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect  
  ウィンドウのクライアント領域の一部を選択する必要があるときに、フレームワークによって呼び出されます。  
@@ -1003,31 +1003,31 @@ virtual CRect GetTaskbarThumbnailClipRect() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- Windows の座標で四角形。 この四角形は、最上位のフレームのクライアント領域にマップされます。 四角形は、クリッピング四角形をオフにする場合は空にする必要があります。  
+ Windows の座標で四角形。 この四角形は、最上位レベルのフレームのクライアント領域にマップされます。 四角形は、クリッピング四角形をオフにする場合は空にする必要があります。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd  
- Windows 7 のタスクバー タブのサムネイルに表示する子ウィンドウ (通常はビューまたは分割ウィンドウ) を取得する必要があるときに、フレームワークによって呼び出されます。  
+ Windows 7 タスク バーのタブのサムネイルに表示する子ウィンドウ (通常はビューまたは分割ウィンドウ) を取得する必要があるときに、フレームワークによって呼び出されます。  
   
 ```  
 virtual CWnd* GetTaskbarPreviewWnd();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 有効なポインターを返す必要があります、`CWnd`この MDI の子に関連するオブジェクト、Windows 7 のタスクバー タブ上のプレビューを表示する必要があります。 既定の実装が AFX_IDW_PANE_FIRST コントロール ID の場合は、この MDI 子の子ウィンドウを返します (これは、通常、 `CView`-派生クラス)。  
+ 有効なポインターを返す必要があります、`CWnd`プレビューは、Windows 7 タスク バーのタブに表示するか、オブジェクトに関連するこの MDI 子フォーム。 既定の実装は、この MDI 子フォーム AFX_IDW_PANE_FIRST コントロール id の子ウィンドウを返します (これは通常、 `CView`-派生クラス)。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd  
- Windows 7 のタスクバー タブに登録されているタブ プロキシ ウィンドウを返します。  
+ Windows 7 タスク バーのタブに登録されているタブ プロキシ ウィンドウを返します。  
   
 ```  
 CMDITabProxyWnd* GetTabProxyWnd();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CMDITabProxyWnd`オブジェクトで、Windows 7 のタスクバー タブに登録されています。  
+ ポインター、 `CMDITabProxyWnd` Windows 7 タスク バーのタブに登録されているオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1040,25 +1040,25 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  *bEnable*  
- 有効にするかどうかを指定します ( `TRUE`)、または無効にする ( `FALSE`) を表示するウィンドウのクライアント領域の一部の自動選択します。  
+ 表示するウィンドウのクライアント領域の一部の自動選択を無効にする (FALSE) か (TRUE) を有効にするかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs  
- この MDI 子フォームを Windows 7 のタスクバー タブに表示されるかどうかをフレームワークに指示します。  
+ Windows 7 タスク バーのタブでこの MDI 子フォームを表示できるかどうかをフレームワークに指示します。  
   
 ```  
 virtual BOOL CanShowOnTaskBarTabs();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` MDI 子ウィンドウの内容は、Windows 7 のタスクバーの縮小表示で表示できます。 場合、  
+ MDI 子ウィンドウのコンテンツは、Windows 7 タスク バー サムネイルに表示できる場合は TRUE。  
   
 ### <a name="remarks"></a>Remarks  
- 派生クラスでは、このメソッドをオーバーライドし、返す`FALSE`この MDI 子フォームの Windows 7 のタスクバー タブの外観を無効にします。  
+ 派生クラスでは、このメソッドをオーバーライドし、Windows 7 タスク バーのタブでこの MDI 子フォームの外観を無効にする場合は FALSE を返します。  
   
 ##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame  
- タスク バー タブから、アプリケーションがアクティブになったときに、最上位のフレームをアクティブ化するためにフレームワークによって呼び出されます。  
+ タスク バー タブから、アプリケーションがアクティブにすると、最上位レベルのフレームをアクティブ化するためにフレームワークによって呼び出されます。  
   
 ```  
 virtual void ActivateTopLevelFrame();

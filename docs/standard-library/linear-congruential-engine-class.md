@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902e7a1a3ae4bcb35a4822228425747476d5bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d4069dc5151dd231773e926aadf17de7c03d3770
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864074"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958280"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine クラス
 
@@ -55,13 +55,13 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>パラメーター
 
-`UIntType` 結果の型が符号なし整数。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*UIntType*符号なし整数の結果の型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-`A` **乗数**です。 **Precondition**: セクションの「解説」を参照してください。
+*A* **乗数**します。 **Precondition**: セクションの「解説」を参照してください。
 
-`C` **インクリメント**です。 **Precondition**: セクションの「解説」を参照してください。
+*C* **インクリメント**します。 **Precondition**: セクションの「解説」を参照してください。
 
-`M` **剰余**です。 **Precondition**:「解説」を参照してください。
+*M* **剰余**します。 **Precondition**:「解説」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -74,15 +74,15 @@ class linear_congruential_engine{
 
 エンジンのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `linear_congruential_engine` テンプレート クラスは、最も単純なジェネレーター エンジンですが、速度や品質は最高というわけではありません。 このエンジンを改良したものが [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) です。 これらのエンジンはいずれも、[mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) ほど高速ではなく、結果も高品質ではありません。
 
 このエンジンは、漸化式 ( *周期*) `x(i) = (A * x(i-1) + C) mod M` を使用して、ユーザー指定の符号なし整数型の値を生成します。
 
-`M` が 0 の場合、この剰余演算に使用される値は `numeric_limits<result_type>::max() + 1` です。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
+場合*M* 0 の場合は、この剰余演算に使用される値は`numeric_limits<result_type>::max() + 1`します。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
 
-`M` が 0 以外の場合、テンプレート引数 `A` と `C` の値は `M` 未満である必要があります。
+場合*M* 、テンプレート引数の値に 0 以外は*A*と*C*必要がありますより小さい*M*します。
 
 このエンジンから直接ジェネレーターを構築できますが、定義済みの typedef のいずれかを使用することもできます。
 
@@ -100,7 +100,7 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 線形合同法エンジン アルゴリズムの詳細については、Wikipedia の記事「[Linear congruential generator (線形合同法)](http://go.microsoft.com/fwlink/p/?linkid=402446)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 

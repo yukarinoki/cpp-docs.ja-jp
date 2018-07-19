@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccf17eb39d71d444db9154fb06991be42c34a70
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6bd4a7827ec5223297f3ec3195724b62d4dc72c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857377"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955307"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine クラス
 
@@ -46,13 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-`UIntType` 結果の型が符号なし整数。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*UIntType*  
+ 結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-`W` **ワード サイズ**です。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*  
+ **ワード サイズ**。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`S` **短いラグ**です。 整数値の数。 **前提条件**: `0 < S < R`
+*S*  
+ **短いラグ**。 整数値の数。 **前提条件**: `0 < S < R`
 
-`R` **長いラグ**です。 生成される数列の中の繰り返しを決定します。
+*R*  
+ **長いラグ**。 生成される数列の中の繰り返しを決定します。
 
 ## <a name="members"></a>メンバー
 
@@ -64,11 +68,11 @@ class subtract_with_carry_engine;
 
 エンジンのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `substract_with_carry_engine` テンプレート クラスは、[linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) を改良したものです。 これらのエンジンはいずれも、[mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) ほど高速ではなく、結果も高品質ではありません。
 
-このエンジンは、漸化式 (*周期*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` を使用して、ユーザー指定の符号なし整数型の値を生成します。ここで、`x(i - S) - x(i - R) - cy(i - 1) < 0` の場合 `cy(i)` は値 `1` を、そうでない場合は `0` を持ち、`M` は値 `2`<sup>W</sup> を持ちます。エンジンの状態は、キャリー インジケーター + `R` の値になります。 `R` が `operator()` 回以上呼び出された場合、これらの値は最後の `R` の値で構成され、それ以外の場合は、返された `N` の値とシードの最後の `R - N` の値で構成されます。
+このエンジンは、漸化式 (*周期*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` を使用して、ユーザー指定の符号なし整数型の値を生成します。ここで、`x(i - S) - x(i - R) - cy(i - 1) < 0` の場合 `cy(i)` は値 `1` を、そうでない場合は `0` を持ち、`M` は値 `2`<sup>W</sup> を持ちます。エンジンの状態は、キャリー インジケーター + *R*値。 これらの値は、最後で構成されている*R*場合に返される値`operator()`少なくともが呼び出された*R*タイムアウトと、それ以外の場合、`N`返された値と最後`R - N`seed の値。
 
 テンプレート引数 `UIntType` には、最大 `M - 1` の値を保持するのに十分な大きさが必要です。
 

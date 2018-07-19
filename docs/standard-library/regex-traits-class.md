@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d6eb69787d20343e8ed289311dba02a55e85592
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451564"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960932"
 ---
 # <a name="regextraits-class"></a>regex_traits クラス
 
@@ -92,15 +92,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`Elem` 記述する文字要素の型。
+*Elem*を記述する文字要素の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、 `Elem`型のさまざまな正規表現の特徴 (traits) を表します。 テンプレート クラス [basic_regex クラス](../standard-library/basic-regex-class.md)では、この情報を使用して、`Elem` 型の要素を操作します。
+このテンプレート クラスは、型のさまざまな正規表現の特性を表します*Elem*します。 テンプレート クラスは、 [basic_regex クラス](../standard-library/basic-regex-class.md)この情報を使用して型の要素を操作する*Elem*します。
 
 各 `regex_traits` オブジェクトは、そのオブジェクトの一部のメンバー関数が使用する `regex_traits::locale` 型のオブジェクトを保持します。 既定のロケールは、 `regex_traits::locale()`のコピーです。 メンバー関数 `imbue` は、ロケール オブジェクトを置き換えます。また、メンバー関数 `getloc` は、ロケール オブジェクトのコピーを返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
@@ -114,7 +114,7 @@ public:
 typedef T8 char_class_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、文字クラスを指定する未指定の型のシノニムです。 この型の値は、 `|` 演算子で連結して、オペランドで指定されたクラスの共用体である文字クラスを指定することができます。
 
@@ -197,7 +197,7 @@ hex C == 12
 typedef Elem char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この typedef は、テンプレート引数 `Elem` のシノニムです。
 
@@ -280,7 +280,7 @@ hex C == 12
 locale_type getloc() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、格納されている `locale` オブジェクトを返します。
 
@@ -365,11 +365,11 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-`loc` 格納するロケール オブジェクト。
+*loc*を格納するロケール オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、 `loc` を格納されている `locale` オブジェクトにコピーして、格納されている `locale` オブジェクトの前の値のコピーを返します。
+メンバー関数のコピー *loc*に格納されている`locale`オブジェクトし、格納されているは、前の値のコピーを返します`locale`オブジェクト。
 
 ### <a name="example"></a>例
 
@@ -452,13 +452,13 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`ch` テストする要素。
+*ch*をテストする要素。
 
-`cls` テストするためのクラス。
+*cls*をテストするクラス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、文字 `ch` が `cls`で指定された文字クラスにある場合にのみ、true を返します。
+場合にのみ、メンバー関数は true を返します文字*ch*によって指定された文字クラスでは、 *cls*します。
 
 ### <a name="example"></a>例
 
@@ -541,11 +541,11 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str`
+*str*
 
-Null で終わるシーケンス。
+Null 終端シーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この静的メンバー関数は `std::char_traits<char_type>::length(str)`を返します。
 
@@ -628,7 +628,7 @@ hex C == 12
 typedef T7 locale_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、ロケールをカプセル化する型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、 `std::locale`の同意語です。
 
@@ -714,11 +714,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 検索するシーケンスの先頭。
+*最初*を検索するシーケンスの最初します。
 
-`last` 検索するシーケンスの最後。
+*最後*を検索するシーケンスの末尾。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、引数が指し示す文字シーケンスによって指定された文字クラスを表す値を返します。 この値は、シーケンス内の文字のケース (大文字と小文字) には依存しません。
 
@@ -808,11 +808,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 検索するシーケンスの先頭。
+*最初*を検索するシーケンスの最初します。
 
-`last` 検索するシーケンスの最後。
+*最後*を検索するシーケンスの末尾。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、シーケンス `[first, last)` に対応する照合要素を含んだ文字列オブジェクトを返します。シーケンスが有効な照合要素でない場合は、空の文字列を返します。
 
@@ -895,7 +895,7 @@ hex C == 12
 regex_traits();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コンストラクターは、格納された `locale` オブジェクトが既定ロケールに初期化されるオブジェクトを作成します。
 
@@ -978,7 +978,7 @@ hex C == 12
 typedef T6 size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 Typedef は符号なし整数型の同意語です。 特化された型である `regex_traits<char>` と `regex_traits<wchar_t>` では、`std::size_t` の同意語です。
 
@@ -1063,7 +1063,7 @@ hex C == 12
 typedef basic_string<Elem> string_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、`basic_string<Elem>` の同意語です。
 
@@ -1149,11 +1149,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 変換するシーケンスの先頭。
+*最初*変換するシーケンスの最初から開始します。
 
-`last` 変換するシーケンスの最後。
+*最後*を変換するシーケンスの末尾。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字列を返します。 反復子の範囲の `[first1, last1)` と `[first2, last2)`で指定された 2 つの文字シーケンスでは、反復子の範囲 `transform(first1, last1) < transform(first2, last2)` で指定された文字シーケンスが、反復子の範囲 `[first1, last1)` で指定された文字シーケンスより前に来る場合は、 `[first2, last2)`です。
 
@@ -1239,11 +1239,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 変換するシーケンスの先頭。
+*最初*変換するシーケンスの最初から開始します。
 
-`last` 変換するシーケンスの最後。
+*最後*を変換するシーケンスの末尾。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字列を返します。 反復子の範囲の `[first1, last1)` と `[first2, last2)`で指定された 2 つの文字シーケンスでは、反復子の範囲 `transform_primary(first1, last1) < transform_primary(first2, last2)` で指定された文字シーケンスが、ケースやアクセントに関係なく、反復子の範囲 `[first1, last1)` で指定された文字シーケンスより前に来る場合は、 `[first2, last2)` です。
 
@@ -1328,9 +1328,9 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`ch` 変換する要素。
+*ch*に変換する要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字を返します。 2 つの `char_type` オブジェクト `ch1` と `ch2`があるとします。一方が正規表現の定義に出現し、もう一方がターゲット シーケンス内の対応する位置に出現した場合にロケールを区別して比較して `translate(ch1) == translate(ch2)` と `ch1` が一致するときのみ、 `ch2` になります。
 
@@ -1415,9 +1415,9 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`ch` 変換する要素。
+*ch*に変換する要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されている `locale` オブジェクトによって異なる変換規則を使用して生成された文字を返します。 2 つの `char_type` オブジェクト `ch1` と `ch2`では、 `translate_nocase(ch1) == translate_nocase(ch2)` と `ch1` のいずれか一方が正規表現の定義で出現し、もう一方がターゲット シーケンス内の対応する位置に出現し、大文字と小文字を区別せずに比較して両者が一致する場合に限り、 `ch2` になります。
 
@@ -1502,13 +1502,13 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`ch` 変換する要素。
+*ch*に変換する要素。
 
-`radix` 使用する基数。
+*基数*を使用する基数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、基数 `ch` の文字 `radix` で表現される値を返します。 `ch` が基数 `radix` の有効な数値でない場合は -1 を返します。 この関数は、8、10、または 16 の `radix` 引数だけで呼び出されます。
+このメンバー関数は文字で表される値を返します*ch*ベース*基数*、場合は-1 *ch*ベースで有効な数字でない*基数*. 関数でのみ呼び出される、*基数*8、10、または 16 の引数。
 
 ### <a name="example"></a>例
 

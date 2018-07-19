@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ddd6ad1d27f1479bb653373517f7d8c1f1d3bc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847352"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959652"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution クラス
 
@@ -79,13 +79,13 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型、既定値は`double`します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 *URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、フィッシャーの F 分布に従って分布した、ユーザー指定の浮動小数点型の値または型 `double` の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+テンプレート クラスは、ユーザー指定の浮動小数点の値を生成する分布を表します。 型、または型**二重**がない場合は、フィッシャー F 分布に従って分散します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -240,7 +240,7 @@ Distribution for 10 samples:
     10: 3.4363333954
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -261,9 +261,9 @@ explicit fisher_f_distribution(const param_type& parm);
 
 *n* 、`n`分布パラメーター。
 
-*パラメーター* 、`param_type`分布の作成に使用される構造体。
+*parm* 、`param_type`分布の作成に使用される構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < m` および `0.0 < n`
 
@@ -293,9 +293,9 @@ struct param_type {
 
 *n* 、`n`分布パラメーター。
 
-*右*、`param_type`これと比較するオブジェクト。
+*適切な*、`param_type`これと比較するオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < m` および `0.0 < n`
 

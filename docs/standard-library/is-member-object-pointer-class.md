@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89dd2c01b4eea80fcd284a6eed44383c3eec9c5b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7a045abd8bb6a41e96febf972d21bae80b9b4f7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845480"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955417"
 ---
 # <a name="ismemberobjectpointer-class"></a>is_member_object_pointer クラス
 
@@ -37,11 +37,11 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` がメンバー オブジェクトへのポインターまたは `cv-qualified` ポインターである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 `Ty` がメンバー関数へのポインターである場合は、`is_member_object_pointer` が false を保持することに注意してください。
+場合、型述語のインスタンスは true を保持型*Ty*メンバー オブジェクトへのポインターまたは`cv-qualified`メンバー オブジェクト、それ以外の場合は false を保持するポインター。 なお`is_member_object_pointer`場合は false を保持*Ty*メンバー関数へのポインターです。
 
 ## <a name="example"></a>例
 
@@ -87,7 +87,7 @@ is_member_object_pointer<int trivial::*> == true
 is_member_object_pointer<int (functional::*)()> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

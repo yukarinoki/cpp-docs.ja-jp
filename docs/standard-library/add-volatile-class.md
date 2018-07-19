@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf15ef0b5134af7831cf2e71b4235df9534f3425
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8775c681954799e2239da5ad429f9f8131ca25b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841298"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958891"
 ---
 # <a name="addvolatile-class"></a>add_volatile クラス
 
-指定した型から volatile 型を作成します。
+により、**揮発性**指定した型からの型。
 
 ## <a name="syntax"></a>構文
 
@@ -40,11 +40,11 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`add_volatile<T>` のインスタンスには、*T* が参照、関数、または volatile で修飾された型の場合は *T*、それ以外の場合は `volatile` *T* のメンバー typedef `type` があります。別名 `add_volatile_t` は、メンバー typedef `type` にアクセスするショートカットです。
+インスタンス`add_volatile<T>`メンバーがある**typedef** `type`つまり*T*場合*T*が参照、関数の場合、または volatile で修飾された型、それ以外の場合**揮発性** *T*します。エイリアス`add_volatile_t`メンバーにアクセスするショートカット**typedef** `type`します。
 
 ## <a name="example"></a>例
 
@@ -68,7 +68,7 @@ int main()
 add_volatile<int> == int
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

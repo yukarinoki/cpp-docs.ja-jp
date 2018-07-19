@@ -8,12 +8,12 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 68f95407fe22c7e8b70426e555f46eb0a4c80338
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1c32311109ee19056c0a73d922ab1a965e3fbbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846260"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954126"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
 
@@ -29,7 +29,7 @@ ms.locfileid: "33846260"
 typedef unspecified exception_ptr;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `exception_ptr` 型を実装するために使用される未指定の内部クラス。
 
@@ -37,7 +37,7 @@ typedef unspecified exception_ptr;
 
 `exception_ptr` 変数を宣言する場合、変数は例外に関連付けられません。 つまり、例外参照フィールドが NULL です。 このような `exception_ptr` オブジェクトは、*null exception_ptr* と呼ばれます。
 
-例外を `current_exception` オブジェクトに割り当てるには、`make_exception_ptr` または `exception_ptr` 関数を使用します。 `exception_ptr` 変数に例外を割り当てた場合、変数の例外参照フィールドは例外のコピーを指します。 例外をコピーするためのメモリが不足している場合、例外参照フィールドは、[std::bad_alloc](../standard-library/bad-alloc-class.md) 例外のコピーを指し示します。 `current_exception` 関数または `make_exception_ptr` 関数が他の理由で例外をでコピーできない場合、この関数は、現在のプロセスを終了する **terminate** CRT 関数を呼び出します。
+例外を `current_exception` オブジェクトに割り当てるには、`make_exception_ptr` または `exception_ptr` 関数を使用します。 `exception_ptr` 変数に例外を割り当てた場合、変数の例外参照フィールドは例外のコピーを指します。 例外をコピーするためのメモリが不足している場合、例外参照フィールドは、[std::bad_alloc](../standard-library/bad-alloc-class.md) 例外のコピーを指し示します。 場合、`current_exception`または`make_exception_ptr`関数はその他の理由、関数呼び出しの例外をコピーすることはできません、 `terminate` CRT 関数を現在のプロセスを終了します。
 
 名前とは異なり、`exception_ptr` オブジェクト自体はポインターではありません。 ポインターのセマンティクスに従わず、ポインターのメンバー アクセス (`->`) 演算子または間接 (*) 演算子で使用することはできません。 `exception_ptr` オブジェクトには、パブリック データ メンバーまたはメンバー関数がありません。
 
@@ -53,7 +53,7 @@ typedef unspecified exception_ptr;
 typedef void (*terminate_handler)();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、終了ハンドラーとして使用するのに適した関数へのポインターを表します。
 

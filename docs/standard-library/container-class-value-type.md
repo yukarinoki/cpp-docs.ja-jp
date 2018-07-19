@@ -14,19 +14,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a4927657bd0a4944e62493134c041011c142051
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 919d62d967df4e41b5a25e953202352305b50d02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841462"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958167"
 ---
 # <a name="container-classvaluetype"></a>コンテナー クラス::value_type
 
 > [!NOTE]
 > このトピックは、C++ 標準ライブラリで使用されるコンテナーの例 (実際には機能しない) として、Visual C++ ドキュメントに含まれています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
 
-テンプレート パラメーター **Ty** のシノニムとして動作します。
+テンプレート パラメーター *Ty* のシノニムとして動作します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,9 +35,9 @@ ms.locfileid: "33841462"
 typedef T4 value_type;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ここでは、指定されていない型 **T4** のシノニムとして記述されています (通常は **Alloc::value_type**)。
+説明されている、ここで指定されていない型のシノニムとして`T4`(通常`Alloc::value_type`)。
 
 ## <a name="see-also"></a>関連項目
 

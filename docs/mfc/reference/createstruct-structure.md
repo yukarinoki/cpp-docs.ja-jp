@@ -1,5 +1,5 @@
 ---
-title: CREATESTRUCT 構造体 |Microsoft ドキュメント
+title: CREATESTRUCT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 6036490b21ccbd86dfed56ea90226cbb2db8d596
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078468"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848471"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 構造体
 `CREATESTRUCT`構造体は、アプリケーションのウィンドウ プロシージャに渡される初期化パラメーターを定義します。  
@@ -47,16 +47,16 @@ typedef struct tagCREATESTRUCT {
   
 #### <a name="parameters"></a>パラメーター  
  *lpCreateParams*  
- ウィンドウを作成するために使用するデータへのポインター。  
+ ウィンドウを作成するためのデータへのポインター。  
   
  *hInstance*  
  新しいウィンドウを所有しているモジュールのモジュール インスタンス ハンドルを識別します。  
   
  *hMenu*  
- 新しいウィンドウで使用するのには、メニューを識別します。 場合、子ウィンドウは、整数の ID が含まれています  
+ 新しいウィンドウで使用するメニューを識別します。 子ウィンドウの場合は、整数の ID が含まれています  
   
  *hwndParent*  
- 新しいウィンドウを所有しているウィンドウを識別します。 このメンバーは**NULL**新しいウィンドウがトップレベル ウィンドウの場合。  
+ 新しいウィンドウを所有しているウィンドウを識別します。 新しいウィンドウが最上位ウィンドウの場合、このメンバーは NULL です。  
   
  *cy*  
  新しいウィンドウの高さを指定します。  
@@ -65,22 +65,22 @@ typedef struct tagCREATESTRUCT {
  新しいウィンドウの幅を指定します。  
   
  *y*  
- 新しいウィンドウの左上隅の y 座標を指定します。 新しいウィンドウが子ウィンドウ以外の場合、親ウィンドウに対する相対座標は、します。それ以外の場合座標は、画面の原点に対するします。  
+ 新しいウィンドウの左上隅の y 座標を指定します。 新しいウィンドウが子ウィンドウの場合に、親ウィンドウとの相対座標はそれ以外の場合、座標は画面の原点は。  
   
  *x*  
- 新しいウィンドウの左上隅の x 座標を指定します。 新しいウィンドウが子ウィンドウ以外の場合、親ウィンドウに対する相対座標は、します。それ以外の場合座標は、画面の原点に対するします。  
+ 新しいウィンドウの左上隅の x 座標を指定します。 新しいウィンドウが子ウィンドウの場合に、親ウィンドウとの相対座標はそれ以外の場合、座標は画面の原点は。  
   
  *style*  
- 新しいウィンドウの指定[スタイル](../../mfc/reference/styles-used-by-mfc.md)です。  
+ 新しいウィンドウの指定[スタイル](../../mfc/reference/styles-used-by-mfc.md)します。  
   
  *lpszName*  
  新しいウィンドウの名前を指定する null で終わる文字列へのポインター。  
   
  *lpszClass*  
- 新しいウィンドウのウィンドウ クラス名を指定する null で終わる文字列へのポインター (、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造体です。 詳細については、Windows SDK を参照してください)。  
+ 新しいウィンドウの Windows クラス名を指定する null で終わる文字列の指す (、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造体は、詳細については、Windows SDK を参照してください)。  
   
  *dwExStyle*  
- 指定します、[拡張スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新しいウィンドウのです。  
+ 指定します、[拡張スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新しいウィンドウの。  
   
 ## <a name="requirements"></a>必要条件  
  **ヘッダー:** winuser.h  

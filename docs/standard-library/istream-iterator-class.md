@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74c62c1d6d80f21054f03f78e0151c2cddf00e2c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e41abbc4d7fa3cd18363982b806811b0698b44f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959869"
 ---
 # <a name="istreamiterator-class"></a>istream_iterator クラス
 
@@ -46,13 +46,13 @@ class istream_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-`Type` 入力ストリームから抽出されるオブジェクトの型。
+*型*入力ストリームから抽出されるオブジェクトの型。
 
-`CharType` 文字の種類を表す型、`istream_iterator`です。 この引数は省略可能であり、既定値は `char` です。
+*CharType*の文字の種類を表す型、`istream_iterator`します。 この引数は省略可能、既定値は**char**します。
 
-`Traits` 文字の種類を表す型、`istream_iterator`です。 この引数は省略可能であり、既定値は `char_traits`< `CharType`> です。
+*Traits*の文字の種類を表す型、`istream_iterator`します。 この引数は省略可能であり、既定値は `char_traits`< `CharType`> です。
 
-`Distance` 相違点の種類を表す整数型を符号付き、`istream_iterator`です。 この引数は省略可能であり、既定値は `ptrdiff_t` です。
+*距離*署名付きの差の型を表す整数型、`istream_iterator`します。 この引数は省略可能であり、既定値は `ptrdiff_t` です。
 
 null 以外の格納されたポインターを使用して istream_iterator クラスのオブジェクトを構築またはインクリメントすると、オブジェクトは、関連付けられている入力ストリームから `Type` 型のオブジェクトを抽出および格納することを試行します。 抽出が失敗した場合、オブジェクトは効果的に格納されたポインターを null ポインターに置き換え、シーケンス終端のインジケーターを作成します。
 
@@ -78,7 +78,7 @@ null 以外の格納されたポインターを使用して istream_iterator ク
 |[operator->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
 |[operator++](#op_add_add)|入力ストリームからインクリメントされたオブジェクトを抽出するか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 
@@ -92,9 +92,9 @@ null 以外の格納されたポインターを使用して istream_iterator ク
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **Chartype** のシノニムです。
+この型は、テンプレート パラメーター `Chartype` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -144,11 +144,11 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Istr` 使用して読み取る入力ストリームを初期化、`istream_iterator`です。
+*_Istr*を使用して読み取る入力ストリームを初期化する、`istream_iterator`します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、null ポインターを使用して入力ストリーム ポインターを初期化し、ストリームの終わり反復子を作成します。 2 番目のコンストラクターは、*&_Istr* を使用して入力ストリーム ポインターを初期化してから、**Type** 型のオブジェクトの抽出と格納を試みます。
+最初のコンストラクターは、null ポインターを使用して入力ストリーム ポインターを初期化し、ストリームの終わり反復子を作成します。 2 番目のコンス トラクターを使用して、入力ストリーム ポインターを初期化します *& _Istr*を抽出し、型のオブジェクトの格納を試みます`Type`します。
 
 ストリームの終わり反復子は、`istream_iterator` がストリームの終わりに達しているかどうかのテストに使用できます。
 
@@ -194,7 +194,7 @@ int main( )
 typedef basic_istream<CharType, Traits> istream_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`basic_istream`\< **CharType**, **Traits**> のシノニムです。
 
@@ -204,7 +204,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ## <a name="op_star"></a>  istream_iterator::operator*
 
-逆参照演算子は、`istream_iterator` で指定された **Type** 型の格納されたオブジェクトを返します。
+逆参照演算子は、`Type` で指定された `istream_iterator` 型の格納されたオブジェクトを返します。
 
 ```cpp
 const Type& operator*() const;
@@ -212,7 +212,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>戻り値
 
-**Type** 型の格納されているオブジェクト。
+型の格納オブジェクト`Type`します。
 
 ### <a name="example"></a>例
 
@@ -258,7 +258,7 @@ const Type* operator->() const;
 
 メンバーの値 (存在する場合)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 *i* -> は (\* *i*) と同等です。 *m*
 
@@ -308,7 +308,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>戻り値
 
-最初のメンバー演算子は、入力ストリームから抽出された **Type** 型のインクリメントされたオブジェクトへの参照を返し、2 番目のメンバー関数が、このオブジェクトのコピーを返します。
+最初のメンバー演算子は、型のインクリメントされたオブジェクトへの参照を返します`Type`抽出から入力ストリームと、オブジェクトのコピーを 2 番目のメンバー関数を返します。
 
 ### <a name="example"></a>例
 
@@ -350,9 +350,9 @@ int main( )
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **Traits** のシノニムです。
+この型は、テンプレート パラメーター *Traits* のシノニムです。
 
 ### <a name="example"></a>例
 

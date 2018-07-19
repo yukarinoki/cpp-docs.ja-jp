@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f8bd1ec1436b960a0637a79cb04982a953636a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856301"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956457"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc クラス
 
@@ -44,9 +44,9 @@ class rts_alloc
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Cache`|配列に含まれているキャッシュ インスタンスの型。 これは、[cache_chunklist クラス](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+|*キャッシュ*|配列に含まれているキャッシュ インスタンスの型。 これは、[cache_chunklist クラス](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、複数のブロック アロケーター インスタンスを保持し、コンパイル時ではなく、実行時に割り当てと割り当て解除に使用するインスタンスを判別します。 再バインドをコンパイルできないコンパイラと一緒に使用します。
 
@@ -58,7 +58,7 @@ class rts_alloc
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -76,15 +76,15 @@ void *allocate(std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`count`|割り当てられる配列内の要素の数。|
+|*count*|割り当てられる配列内の要素の数。|
 
 ### <a name="return-value"></a>戻り値
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、要求されたブロック サイズ `count` によってインデックス `_IDX` が定義される `caches[_IDX].allocate(count)` を返します。また `count` が大きすぎる場合は `operator new(count)` を返します。 キャッシュ オブジェクトを表す `cache`。
+メンバー関数を返します`caches[_IDX].allocate(count)`ここで、インデックス`_IDX`は要求されたブロックのサイズによって決まります*カウント*、または、*数*は返しますが大きすぎて、`operator new(count)`します。 キャッシュ オブジェクトを表す `cache`。
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -98,12 +98,12 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`count`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、要求されたブロック サイズ `count` によってインデックス `_IDX` が定義される `caches[_IDX].deallocate(ptr, count)` を呼び出します。また `count` が大きすぎる場合は `operator delete(ptr)` を返します。
+メンバー関数の呼び出し`caches[_IDX].deallocate(ptr, count)`ここで、インデックス`_IDX`は要求されたブロックのサイズによって決まります*カウント*、または、*数*は返しますが大きすぎて、`operator delete(ptr)`します。
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -117,12 +117,12 @@ bool equals(const sync<_Cache>& _Other) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Cache`|フィルターに関連付けられているキャッシュ オブジェクト。|
-|`_Other`|等しいかどうかを比較するキャッシュ オブジェクト。|
+|*_Cache*|フィルターに関連付けられているキャッシュ オブジェクト。|
+|*_Other*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`caches[0].equals(other.caches[0])` の結果の場合は `true`、それ以外の場合は `false` です。 `caches` はキャッシュ オブジェクトの配列を表します。
+**true**場合の結果`caches[0].equals(other.caches[0])`、それ以外の**false**します。 `caches` はキャッシュ オブジェクトの配列を表します。
 
 ## <a name="see-also"></a>関連項目
 

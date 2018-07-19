@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 029fba9cc5a13569df8cc1e2e11b639e65ea24c9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: fc0684d51fd406f16588188555f67fcebb351fbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956099"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t クラス
 
-参照引数による初期化を行うときに、引数を使用しない **non_const** メンバー関数を単項関数オブジェクトとして呼び出せるようにするアダプター クラス。
+使用するアダプター クラスを`non_const`参照引数による初期化時に、単項関数オブジェクトとして呼び出せるようにする引数を受け取らないメンバー関数。
 
 ## <a name="syntax"></a>構文
 
@@ -42,23 +42,23 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>パラメーター
 
-`_Pm` クラスのメンバー関数へのポインター**型**関数オブジェクトに変換します。
+*_Pm*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
 
-`left` オブジェクトを`_Pm`でメンバー関数が呼び出されます。
+*左*オブジェクトを *_Pm*でメンバー関数が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
 
 適合可能な単項関数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは `_Pm` のコピーをプライベート メンバー オブジェクトに格納します。これは、クラス **Type** のメンバー関数へのポインターである必要があります。 そのメンバー関数 `operator()` は ( **left**.* `_Pm`)( ) を返すように定義されています。
+テンプレート クラスのコピーを格納する *_Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数 `operator()` は ( **left**.* `_Pm`)( ) を返すように定義されています。
 
 ## <a name="example"></a>例
 
 `mem_fun_ref_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun_ref` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

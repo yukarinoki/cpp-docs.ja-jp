@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9aaae690acd372e8482ac8a0e33a14e030e4b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c0eaf8eeab1c5d9c024baa85af025f2294956e8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959285"
 ---
 # <a name="removeconst-class"></a>remove_const クラス
 
@@ -42,11 +42,11 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`remove_const<T>` のインスタンスは、`T1` の形式が `T` である場合は、修飾型 `const T1` を保持します。それ以外の場合は、`T` を保持します。
+インスタンス`remove_const<T>`、修飾型であるを保持`T1`とき*T*の形式は`const T1`それ以外の場合、 *T*します。
 
 ## <a name="example"></a>例
 
@@ -70,7 +70,7 @@ int main()
 remove_const_t<const int> == int
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

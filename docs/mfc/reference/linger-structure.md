@@ -1,5 +1,5 @@
 ---
-title: LINGER 構造体 |Microsoft ドキュメント
+title: LINGER 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19ab7e05b4e27a3b00576339d0b60b37bdba4a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339372"
 ---
 # <a name="linger-structure"></a>LINGER 構造体
-`LINGER`構造が操作に使用される、 **SO_LINGER**と**SO_DONTLINGER**のオプション`CAsyncSocket::GetSockOpt`です。  
+`LINGER`構造がの SO_LINGER と SO_DONTLINGER のオプションを操作するために使用される`CAsyncSocket::GetSockOpt`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,10 +35,10 @@ struct linger {
 };  
 ```  
   
-## <a name="remarks"></a>コメント  
- 設定、 **SO_DONTLINGER**オプションを使用するメンバー関数でのブロッキング**閉じる**未送信のデータを送信するを待っているときにします。 設定は、このオプションを設定**SO_LINGER**で**こと**を 0 に設定します。  
+## <a name="remarks"></a>Remarks  
+ メンバー関数でブロックされている SO_DONTLINGER オプションを設定できません`Close`未送信のデータの送信を待機中にします。 SO_LINGER の設定と同じには、このオプションを設定`l_onoff`を 0 に設定します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** winsock2.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843913"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956086"
 ---
 # <a name="isconst-class"></a>is_const クラス
 
@@ -37,11 +37,11 @@ struct is_const;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`Ty` が `const-qualified` の場合、型述語のインスタンスは true を保持します。
+場合、型述語のインスタンスは true を保持*Ty*は`const-qualified`します。
 
 ## <a name="example"></a>例
 
@@ -79,7 +79,7 @@ is_const<int> == false
 is_const<const int> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

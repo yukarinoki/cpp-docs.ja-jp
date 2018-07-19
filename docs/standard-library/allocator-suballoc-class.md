@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11d9d45a8bf9d2eff7f4fa8d006299045a21c116
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a6238aeada530a8fc33fc98b79cba969353796ae
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843120"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953089"
 ---
 # <a name="allocatorsuballoc-class"></a>allocator_suballoc クラス
 
-[cache_suballoc](../standard-library/cache-suballoc-class.md) 型のキャッシュを使用して、`Type` 型のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。
+記憶域の割り当てと型のオブジェクトの解放を管理するオブジェクトを表します*型*型のキャッシュを使用して[cache_suballoc](../standard-library/cache-suballoc-class.md)します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ class allocator_suballoc;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Type`|アロケーターによって割り当てられた要素の型。|
+|*Type*|アロケーターによって割り当てられた要素の型。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) マクロは、このクラスを次のステートメント内の `name` パラメーターとして渡します: `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)マクロとしてこのクラスを渡す、*名前*次のステートメントのパラメーター。 `ALLOCATOR_DECL(CACHE_SUBALLOC, SYNC_DEFAULT, allocator_suballoc);`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 

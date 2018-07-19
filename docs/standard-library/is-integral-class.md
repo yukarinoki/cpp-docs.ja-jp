@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 531ee45aed64daa19f818bc5c8480a9c1b032d30
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 58f3245e430ba1c74ea88f6262f14a4d38c1ca2c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954032"
 ---
 # <a name="isintegral-class"></a>is_integral クラス
 
@@ -37,13 +37,13 @@ struct is_integral;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` が整数型の 1 つ、または整数型の 1 つの `cv-qualified` 形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*は整数の型のいずれかまたは`cv-qualified`形式のいずれかの整数型、それ以外の場合は false を保持します。
 
-整数型は、`bool`、`char`、`unsigned char`、`signed char`、`wchar_t`、`short`、`unsigned short`、`int`、`unsigned int`、`long`、`unsigned long` のいずれかです。 さらに、それらを提供するコンパイラの場合、整数の型は `long long`、`unsigned long long`、`__int64`、`unsigned __int64` のいずれかにすることもできます。
+整数型は、のいずれかの**bool**、 **char**、 **unsigned char**、 **char を署名**、 **wchar_t**、 **短い**、 **unsigned short**、 **int**、**符号なし int**、**長い**、および**unsigned long**します。 さらに、それらを提供するコンパイラでは、整数型のいずれかできます**long**、 **unsigned long long 型**、 **_ _int64**、および**符号なし _ _int64**.
 
 ## <a name="example"></a>例
 
@@ -78,7 +78,7 @@ is_integral<int> == true
 is_integral<float> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

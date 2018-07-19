@@ -1,5 +1,5 @@
 ---
-title: COleResizeBar クラス |Microsoft ドキュメント
+title: COleResizeBar クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3706521108d848535742bf2314142fedf46f1746
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040117"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852713"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar クラス
 OLE の埋め込み先アイテムのサイズ変更をサポートするコントロール バーの一種です。  
@@ -48,14 +48,14 @@ class COleResizeBar : public CControlBar
   
 |名前|説明|  
 |----------|-----------------|  
-|[COleResizeBar::Create](#create)|作成し、Windows 子ウィンドウを初期化しに関連付けます、`COleResizeBar`オブジェクト。|  
+|[COleResizeBar::Create](#create)|作成および Windows 子ウィンドウを初期化します、それを関連付ける、`COleResizeBar`オブジェクト。|  
   
 ## <a name="remarks"></a>Remarks  
- `COleResizeBar` オブジェクトとして表示されます、 [CRectTracker](../../mfc/reference/crecttracker-class.md)斜線の外枠でと外側のハンドルのサイズを変更します。  
+ `COleResizeBar` オブジェクトとして表示されます、 [CRectTracker](../../mfc/reference/crecttracker-class.md)破線の境界線と外部のハンドルのサイズを変更します。  
   
- `COleResizeBar` オブジェクトから派生するフレーム ウィンドウ オブジェクトの通常の埋め込みのメンバーである、 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)クラスです。  
+ `COleResizeBar` オブジェクトから派生したフレーム ウィンドウ オブジェクトの埋め込みは、通常のメンバーである、 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)クラス。  
   
- 詳細については、記事を参照してください。[アクティベーション](../../mfc/activation-cpp.md)です。  
+ 詳細については、この記事を参照してください。[アクティベーション](../../mfc/activation-cpp.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -79,7 +79,7 @@ COleResizeBar();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出す**作成**をサイズ変更バー オブジェクトを作成します。  
+ 呼び出す`Create`バーのサイズ変更オブジェクトを作成します。  
   
 ##  <a name="create"></a>  COleResizeBar::Create  
  子ウィンドウを作成しに関連付けます、`COleResizeBar`オブジェクト。  
@@ -93,16 +93,16 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *pParentWnd*  
- サイズ変更バーの親ウィンドウへのポインター。  
+ サイズ変更のバーの親ウィンドウへのポインター。  
   
  *dwStyle*  
  指定します、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)属性。  
   
  *nID*  
- 子ウィンドウのサイズ変更バーの id。  
+ 子ウィンドウのサイズ変更のバーの id。  
   
 ### <a name="return-value"></a>戻り値  
- サイズ変更バーが作成された場合は 0 以外。それ以外の場合 0 を返します。  
+ サイズ変更のバーが作成された場合は 0 以外それ以外の場合 0 を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル SUPERPAD](../../visual-cpp-samples.md)   

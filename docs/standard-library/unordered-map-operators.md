@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 69a53ae6b54248f5b9938e2c9137a24f441c061d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a43528b270571a9994187711e2a21ca5a0e1f096
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859353"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958904"
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 演算子
 
@@ -32,15 +32,17 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`unordered_map`です。
+*left*  
+ `unordered_map` 型のオブジェクト。
 
-`right` 型のオブジェクト`unordered_map`です。
+*right*  
+ `unordered_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_map が等しくない場合は、`true`。等しい場合は、`false`。
+**true** unordered_map が等しくない場合**false**が等しい場合は。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 unordered_map オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_map は等しくなります。 それ以外の場合は等しくありません。
 
@@ -95,15 +97,17 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`unordered_map`です。
+*left*  
+ `unordered_map` 型のオブジェクト。
 
-`right` 型のオブジェクト`unordered_map`です。
+*right*  
+ `unordered_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_map が等しい場合は、`true`。等しくない場合は、`false`。
+**true**場合は、unordered_map は等しくなります。**false**等しくない場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 unordered_map オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_map は等しくなります。 それ以外の場合は等しくありません。
 
@@ -158,15 +162,17 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`unordered_multimap`です。
+*left*  
+ `unordered_multimap` 型のオブジェクト。
 
-`right` 型のオブジェクト`unordered_multimap`です。
+*right*  
+ `unordered_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_multimap が等しくない場合は、`true`。等しい場合は、`false`。
+**true** unordered_multimap が等しくない場合**false**が等しい場合は。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 unordered_multimap オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_multimap は等しくなります。 それ以外の場合は等しくありません。
 
@@ -222,15 +228,17 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`unordered_multimap`です。
+*left*  
+ `unordered_multimap` 型のオブジェクト。
 
-`right` 型のオブジェクト`unordered_multimap`です。
+*right*  
+ `unordered_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_multimap が等しい場合は、`true`。等しくない場合は、`false`。
+**true**場合は、unordered_multimap は等しくなります。**false**等しくない場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 unordered_multimap オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_multimap は等しくなります。 それ以外の場合は等しくありません。
 

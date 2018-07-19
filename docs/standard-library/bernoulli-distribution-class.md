@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fd2bfdfc2a55dc1723fb72ab8de64a46c3c612f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d20a887c5fa056ef697b087fdaf91b94702d0c0f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846078"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953235"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution クラス
 
@@ -78,9 +78,9 @@ public:
 
 *URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このクラスは、ベルヌイ分布の離散確率関数に従って分布した、型 `bool` の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラスは、型の値を生成する分布を表します**bool**ベルヌイ分布の離散確率関数に従って分布。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -161,7 +161,7 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
  true :::::::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -180,9 +180,9 @@ explicit bernoulli_distribution(const param_type& parm);
 
 *p* 、格納されている`p`分布パラメーター。
 
-*パラメーター* 、`param_type`分布の作成に使用される構造体。
+*parm* 、`param_type`分布の作成に使用される構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 ≤ p ≤ 1.0`
 
@@ -194,7 +194,7 @@ explicit bernoulli_distribution(const param_type& parm);
 
 分布のパラメーターを含みます。
 
-構造体 param_type {typedef bernoulli_distribution distribution_type; param_type (二重の p = 0.5); 二重の原点を結んだ const;
+構造体 param_type {typedef bernoulli_distribution distribution_type; param_type (ダブルクリック p = 0.5); const; 原点を結んだをダブルクリック
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
@@ -202,7 +202,7 @@ explicit bernoulli_distribution(const param_type& parm);
 
 *p* 、格納されている`p`分布パラメーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 ≤ p ≤ 1.0`
 

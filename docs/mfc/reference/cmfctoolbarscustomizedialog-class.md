@@ -1,5 +1,5 @@
 ---
-title: CMFCToolBarsCustomizeDialog クラス |Microsoft ドキュメント
+title: CMFCToolBarsCustomizeDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,17 +34,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b4c2d7de8c9be8aa33cd5849c089a2caac1271b
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3c12b23c2250f2b0d26b053410c864c8cf435469
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041878"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852875"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog クラス
-モードレス タブ ダイアログ ボックス ( [CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md)) を使用して、ツールバー、メニューのキーボード ショートカット、ユーザー定義のツールおよびアプリケーションで visual スタイルをカスタマイズします。 通常、このダイアログ ボックスを表示するには、 **[ツール]** メニューの **[ユーザー設定]** をクリックします。  
+モードレス タブ ダイアログ ボックス ( [CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md)) ユーザーがツールバー、メニューのキーボード ショートカット、ユーザー定義のツール、およびアプリケーションでの visual スタイルをカスタマイズできるようにします。 通常、このダイアログ ボックスを表示するには、 **[ツール]** メニューの **[ユーザー設定]** をクリックします。  
   
- **カスタマイズ** ダイアログ ボックスが 6 つのタブ:**コマンド**、**ツールバー**、**ツール**、**キーボード**、 **メニュー**、および**オプション**です。  
+ **カスタマイズ**ダイアログ ボックスには 6 つのタブ:**コマンド**、**ツールバー**、**ツール**、**キーボード**、 **メニュー**、および**オプション**します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,26 +66,26 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 |名前|説明|  
 |----------|-----------------|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|コマンドの一覧にツール バー ボタンを挿入、**コマンド**ページ|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|リソースと呼び出しからメニューを読み込み[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)を追加するメニュー コマンドの一覧、**コマンド**ページ。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|リソースと呼び出しからメニューを読み込み[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)を追加するメニュー コマンドの一覧、**コマンド**ページ。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|リソースからツールバーを読み込みます。 その後、メニューの呼び出しで各コマンドについて、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)にコマンドの一覧で、ボタンを挿入する方法、**コマンド**指定されたカテゴリ内のページです。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|リソースの呼び出しからメニューを読み込み[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)でコマンドの一覧にそのメニューを追加する、**コマンド**ページ。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)|リソースの呼び出しからメニューを読み込み[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)でコマンドの一覧にそのメニューを追加する、**コマンド**ページ。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)|リソースからツールバーを読み込みます。 次に、各コマンド メニューの呼び出しで、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)にコマンドの一覧で、ボタンを挿入する方法、**コマンド**指定したカテゴリのページ。|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::Create](#create)|表示、**カスタマイズ** ダイアログ ボックス。|  
 |`CMFCToolBarsCustomizeDialog::EnableTools`|将来使用するために予約されています。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|有効または無効を使用して新しいツールバーの作成、**カスタマイズ** ダイアログ ボックス。|  
-|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|指定された設定`CListBox`オブジェクト内のコマンドを**すべてコマンド**カテゴリ。|  
-|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|指定された設定`CComboBox`内の各コマンド カテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。|  
-|[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|指定された設定`CListBox`内の各コマンド カテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。|  
-|[CMFCToolBarsCustomizeDialog::GetCommandName](#getcommandname)|指定されたコマンド ID に関連付けられている名前を取得します|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|有効またはを使用して新しいツールバーの作成を無効に、**カスタマイズ** ダイアログ ボックス。|  
+|[CMFCToolBarsCustomizeDialog::FillAllCommandsList](#fillallcommandslist)|設定`CListBox`コマンドでは、オブジェクト、**すべてコマンド**カテゴリ。|  
+|[CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)|設定`CComboBox`で各コマンドのカテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。|  
+|[CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)|設定`CListBox`で各コマンドのカテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。|  
+|[CMFCToolBarsCustomizeDialog::GetCommandName](#getcommandname)|指定されたコマンド ID に関連付けられている名前を取得します。|  
 |[CMFCToolBarsCustomizeDialog::GetCountInCategory](#getcountincategory)|指定したテキスト ラベルを持つ指定されたリスト内の項目の数を取得します。|  
 |[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)|ダイアログ ボックスの動作に影響するフラグのセットを取得します。|  
-|`CMFCToolBarsCustomizeDialog::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCToolBarsCustomizeDialog::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|イメージ エディターを起動し、ユーザーがツール バー ボタンまたはメニュー項目のアイコンをカスタマイズできます。|  
-|[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|プロパティ シートの初期化処理を拡張するためにオーバーライドします。 (上書き[cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog))。|  
+|[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|プロパティ シートの初期化処理を強化するよりも優先されます。 (上書き[cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog))。|  
 |[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|ウィンドウが破棄された後に、フレームワークによって呼び出されます。 (`CPropertySheet::PostNcDestroy` をオーバーライドします)。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|指定したカテゴリまたはすべてのカテゴリから、指定されたコマンド ID を持つボタンを削除します。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|カテゴリのリスト ボックス内にあるカテゴリの名前を変更、**コマンド**タブです。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|コマンドの一覧で、ボタンが置き換えられます、**コマンド**新規ツール バー ボタン オブジェクトを持つタブです。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|表示されるカテゴリの一覧にカテゴリを追加、**コマンド**タブです。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|指定したカテゴリまたはすべてのカテゴリから、指定したコマンド ID を持つボタンを削除します。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|カテゴリのリスト ボックス内にあるカテゴリの名前を変更、**コマンド**タブ。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|上のコマンドの一覧で ボタンの代わり、**コマンド**新しいツール バー ボタン オブジェクトを持つタブ。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::SetUserCategory](#setusercategory)|表示されるカテゴリの一覧にカテゴリを追加、**コマンド**タブ。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
@@ -93,17 +93,17 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 |----------|-----------------|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|ユーザー定義のツールの一覧が有効かどうかを判断するためにフレームワークによって呼び出されます。|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|ユーザー定義のツールのプロパティを変更するときに、フレームワークによって呼び出されます。|  
-|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAssignKey](#onassignkey)|指定されたキーボード ショートカットをアクションに割り当て可能かどうかを判断します。|  
+|`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAssignKey](#onassignkey)|アクションに指定されたキーボード ショートカットを割り当てることがあるかどうかを判断します。|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnBeforeChangeTool](#onbeforechangetool)|ユーザー定義のツールを変更できるかどうかを判断します。|  
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnInitToolsPage](#oninittoolspage)|ユーザーが選択したときに、フレームワークによって呼び出されます、**ツール** タブを要求します。|  
   
 ## <a name="remarks"></a>Remarks  
- 表示する、**カスタマイズ** ダイアログ ボックスで、作成、`CMFCToolBarsCustomizeDialog`オブジェクトと呼び出し、 [CMFCToolBarsCustomizeDialog::Create](#create)メソッドです。  
+ 表示する、**カスタマイズ** ダイアログ ボックスで、作成、`CMFCToolBarsCustomizeDialog`オブジェクトと呼び出し、 [CMFCToolBarsCustomizeDialog::Create](#create)メソッド。  
   
- 中に、**カスタマイズ** ダイアログ ボックスがアクティブな場合、アプリケーションのカスタマイズのタスクにユーザーを制限する特殊なモードで動作します。  
+ 中に、**カスタマイズ** ダイアログ ボックスがアクティブで、アプリケーションのカスタマイズのタスクにユーザーを制限する特殊なモードで動作します。  
   
 ## <a name="example"></a>例  
- 次の例では、さまざまなメソッドを使用する方法、`CMFCToolBarsCustomizeDialog`クラスです。 例では、コマンドのリスト ボックスにツール バー ボタンを交換する方法を示しています、**コマンド** ページを使用して新しいツールバーの作成を有効にする、**カスタマイズ**ダイアログ ボックスと表示、 **カスタマイズ** ダイアログ ボックス。 このコード スニペットの一部である、 [IE デモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、さまざまなメソッドを使用する方法、`CMFCToolBarsCustomizeDialog`クラス。 例では、コマンドのリスト ボックスにツール バー ボタンを交換する方法を示しています、**コマンド** ページを使用して新しいツールバーの作成を有効にする、**カスタマイズ** ダイアログ ボックスで、表示、 **カスタマイズ** ダイアログ ボックス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]  
   
@@ -144,27 +144,27 @@ void AddButton(
  挿入するボタンを指定します。  
   
  [in]*iInsertBefore*  
- ボタンを挿入する前にあるツールバーのボタンの 0 から始まるインデックスを指定します。  
+ ボタンの挿入前にあるツール バー ボタンの 0 から始まるインデックスを指定します。  
   
  [in]*lpszCategory*  
  ボタンを挿入するカテゴリ文字列を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- `AddButton`メソッド (ID_FILE_MRU_FILE1) などの標準コマンド Id を持つボタンは無視されます、コマンドは許可されていません (を参照してください[CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) のボタンのダミーとします。  
+ `AddButton`メソッド (ID_FILE_MRU_FILE1) などの標準コマンド Id を持つボタンは無視されます、コマンドは許可されていません (を参照してください[CMFCToolBar::IsCommandPermitted](../../mfc/reference/cmfctoolbar-class.md#iscommandpermitted)) ボタンをダミーとします。  
   
- このメソッドと同じ型の新しいオブジェクトを作成する`button`(通常、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)) ボタンのランタイム クラスを使用しています。 呼び出して[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)をボタンのデータ メンバーをコピーし、指定したカテゴリに、コピーを挿入します。  
+ このメソッドと同じ型の新しいオブジェクトを作成します`button`(通常、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)) ボタンのランタイム クラスを使用しています。 呼び出して[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)ボタンのデータ メンバーのコピーを指定したカテゴリに、コピーを挿入します。  
   
- 新しいボタンを挿入すると、受信、`OnAddToCustomizePage`通知します。  
+ 新しいボタンが挿入されると、受信、`OnAddToCustomizePage`通知します。  
   
  場合`iInsertBefore`-1 で、カテゴリの一覧に、ボタンが追加されます。 それ以外の場合、指定したインデックス項目の前に挿入されます。  
   
 ### <a name="example"></a>例  
- 次の例で使用する方法、`AddButton`のメソッド、`CMFCToolBarsCustomizeDialog`クラスです。 このコード スニペットの一部である、[スライダー サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、使用する方法、`AddButton`のメソッド、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、[スライダー サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]  
   
 ##  <a name="addmenu"></a>  CMFCToolBarsCustomizeDialog::AddMenu  
- リソースと呼び出しからメニューを読み込み[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)を追加するメニュー コマンドの一覧、**コマンド**ページ。  
+ リソースの呼び出しからメニューを読み込み[CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)でコマンドの一覧にそのメニューを追加する、**コマンド**ページ。  
   
 ```  
 BOOL AddMenu(UINT uiMenuResId);
@@ -175,13 +175,13 @@ BOOL AddMenu(UINT uiMenuResId);
  読み込むメニューのリソース ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メニューが正常に追加された場合それ以外の場合`FALSE`です。  
+ メニューが正常に追加された場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出しで`AddMenuCommands`、 *bPopup*は`FALSE`します。 その結果、そのメソッドでは、コマンドの一覧にサブメニューを含むメニュー項目は追加されません。 このメソッドは、コマンドの一覧に、サブメニューのメニュー項目を追加はします。  
+ 呼び出しで`AddMenuCommands`、 *bPopup*は FALSE です。 その結果、そのメソッドでは、コマンドの一覧にサブメニューが含まれているメニュー項目は追加されません。 このメソッドは、コマンドの一覧に、サブメニューのメニュー項目を追加は。  
   
 ##  <a name="addmenucommands"></a>  CMFCToolBarsCustomizeDialog::AddMenuCommands  
- コマンドの一覧に項目を追加、**コマンド**ページを指定されたメニューのすべての項目を表します。  
+ コマンドの一覧に項目を追加、**コマンド**ページを指定したメニュー内のすべての項目を表します。  
   
 ```  
 void AddMenuCommands(
@@ -202,15 +202,15 @@ void AddMenuCommands(
  メニューを挿入するカテゴリの名前。  
   
  [in]*lpszMenuPath*  
- コマンドが表示されている場合、名前に追加されるプレフィックス、**すべてのカテゴリ** ボックスの一覧です。  
+ コマンドが表示されるときに、名前に追加するプレフィックス、**すべてのカテゴリ**一覧。  
   
 ### <a name="remarks"></a>Remarks  
- `AddMenuCommands`のすべてのメニュー項目をメソッドのループ*pMenu*です。 サブメニューを含まないメニュー項目ごとに、このメソッドを作成、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトと呼び出し、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)ツールバーとメニュー項目を追加する方法コマンドの一覧にボタンを**コマンド**ページ。 区切り記号は、このプロセスで無視されます。  
+ `AddMenuCommands`メソッドのすべてのメニュー項目をループ*pMenu*します。 サブメニューを含まないメニュー項目ごとに、このメソッドを作成、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトと呼び出し、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)ツールバーとメニュー項目を追加する方法コマンドの一覧にボタンを**コマンド**ページ。 このプロセスでは、区切り記号は無視されます。  
   
- 場合*bPopup*は`TRUE`、サブメニューを含むメニュー項目ごとに、このメソッドを作成、 [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクトを呼び出すことによって、コマンドのリストに挿入`AddButton`. それ以外の場合を含むサブメニューのメニュー項目は、コマンドの一覧には表示されません。 どちらの場合と`AddMenuCommands`メニュー項目を検出したサブメニュー呼び出し自体としてサブメニューにポインターを渡す、再帰的に、 *pMenu*パラメーターおよびサブメニューのラベルを付加*lpszMenuPath*.  
+ 場合*bPopup*が true の場合、このメソッドを作成、サブメニューを含むメニュー項目ごとに、 [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクトし、呼び出すことによって、コマンドのリストに挿入します`AddButton`。 それ以外の場合を含むサブメニューのメニュー項目は、コマンドの一覧には表示されません。 どちらの場合と`AddMenuCommands`メニュー項目を検出するとサブメニュー呼び出し自体のポインターとしてサブメニューを渡して再帰的に、 *pMenu*パラメーターとサブメニューのラベルを追加*lpszMenuPath*.  
   
 ##  <a name="addtoolbar"></a>  CMFCToolBarsCustomizeDialog::AddToolBar  
- リソースからツールバーを読み込みます。 その後、メニューの呼び出しで各コマンドについて、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)にコマンドの一覧で、ボタンを挿入する方法、**コマンド**指定されたカテゴリ内のページです。  
+ リソースからツールバーを読み込みます。 次に、各コマンド メニューの呼び出しで、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)にコマンドの一覧で、ボタンを挿入する方法、**コマンド**指定したカテゴリのページ。  
   
 ```  
 BOOL AddToolBar(
@@ -227,21 +227,21 @@ BOOL AddToolBar(
  ツールバーを追加するカテゴリのリソース ID を指定します。  
   
  [in]*uiToolbarResId*  
- コマンドの一覧に挿入するがコマンド、ツールバーのリソース ID を指定します。  
+ そのコマンドがコマンドの一覧に挿入されたツールバーのリソース ID を指定します。  
   
  [in]*lpszCategory*  
  ツールバーを追加するカテゴリの名前を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
+ メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="example"></a>例  
- 次の例で使用する方法、`AddToolBar`メソッドで、`CMFCToolBarsCustomizeDialog`クラスです。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。  
+ 次の例では、使用する方法、`AddToolBar`メソッドで、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。  
   
  [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]  
   
 ### <a name="remarks"></a>Remarks  
- 各コマンドを表すために使用するコントロールが、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト。 ツールバーを追加した後に置き換えることができます、ボタン、派生型のコントロールを呼び出して[CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)です。  
+ 各コマンドを表すために使用するコントロールが、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト。 ツールバーを追加した後、派生型のコントロールでのボタンを置き換えますを呼び出して[CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)します。  
   
 ##  <a name="checktoolsvalidity"></a>  CMFCToolBarsCustomizeDialog::CheckToolsValidity  
  ユーザー ツールの一覧の有効性を確認します。  
@@ -255,12 +255,12 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
  確認するユーザー定義のツールの一覧。  
   
 ### <a name="return-value"></a>戻り値  
- 返します`TRUE`ユーザー定義のツールの一覧は、それ以外の有効な場合`FALSE`です。 既定の実装では、常に `TRUE` を返します。  
+ ユーザー定義のツールの一覧が有効なかどうかは TRUE を返しますそれ以外の場合は FALSE です。 既定の実装を常に TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークによって返されるユーザー定義のツールを表すオブジェクトの有効性を確認するには、このメソッドを呼び出して[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)です。  
+ フレームワークによって返されるユーザー定義のツールを表すオブジェクトの有効性を確認するには、このメソッドを呼び出して[CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)します。  
   
- 上書き、`CheckToolsValidity`から派生したクラスのメソッド`CMFCToolBarsCustomizeDialog`ユーザーがダイアログ ボックスを閉じる前にユーザー ツールを検証するかどうか。 このメソッドが戻る場合`FALSE`、ユーザーがいずれかをクリックしたとき、**閉じる** ダイアログ ボックスまたはボタンの右上隅のボタン**閉じる** ダイアログ ボックスの右下隅で、ダイアログ ボックスが表示されます、**ツール**終了ではなくタブです。 このメソッドが戻る場合`FALSE`の外に移動するタブをクリックすると、**ツール** タブのナビゲーションは発生しません。 検証が失敗する原因となった問題をユーザーに通知を適切なメッセージ ボックスを表示する必要があります。  
+ 上書き、`CheckToolsValidity`から派生したクラスのメソッドで`CMFCToolBarsCustomizeDialog`にユーザーがダイアログ ボックスを閉じる前に、ユーザー ツールを検証したいかどうか。 いずれかをクリックすると、このメソッドは FALSE を返した場合、**閉じる** ダイアログ ボックスまたはボタンの右上隅にあるボタン**閉じる** ダイアログ ボックス、ダイアログ ボックスの右上隅にあります。表示、**ツール**終了ではなくタブです。 ユーザーから移動しようとするタブをクリックしたときに、このメソッドは FALSE を返した場合、**ツール**] タブの [ナビゲーションは発生しません。 検証が失敗する原因となった問題をユーザーに通知する適切なメッセージ ボックスを表示する必要があります。  
   
 ##  <a name="cmfctoolbarscustomizedialog"></a>  CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog  
  `CMFCToolBarsCustomizeDialog` オブジェクトを構築します。  
@@ -275,40 +275,40 @@ CMFCToolBarsCustomizeDialog(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pWndParentFrame*  
- 親フレームへのポインター。 このパラメーターは `NULL` にすることはできません。  
+ 親フレームへのポインター。 このパラメーターには、NULL は指定できません。  
   
  [in]*bAutoSetFromMenus*  
- コマンドの一覧にすべてのメニューからメニュー コマンドを追加するかどうかを指定するブール値、**コマンド**ページ。 このパラメーターが場合`TRUE`、メニュー コマンドが追加されます。 それ以外の場合、メニュー コマンドは追加されません。  
+ すべてのメニューからメニュー コマンドをコマンドの一覧に追加するかどうかを指定するブール値、**コマンド**ページ。 このパラメーターが TRUE の場合は、メニュー コマンドが追加されます。 それ以外の場合、メニュー コマンドは追加されません。  
   
  [in]*uiFlags*  
  ダイアログ ボックスの動作に影響するフラグの組み合わせ。 このパラメーターには、次の値の 1 つ以上を指定できます。  
   
-- `AFX_CUSTOMIZE_MENU_SHADOWS`  
+- AFX_CUSTOMIZE_MENU_SHADOWS  
   
-- `AFX_CUSTOMIZE_TEXT_LABELS`  
+- AFX_CUSTOMIZE_TEXT_LABELS  
   
-- `AFX_CUSTOMIZE_MENU_ANIMATIONS`  
+- AFX_CUSTOMIZE_MENU_ANIMATIONS  
   
-- `AFX_CUSTOMIZE_NOHELP`  
+- AFX_CUSTOMIZE_NOHELP  
   
-- `AFX_CUSTOMIZE_CONTEXT_HELP`  
+- AFX_CUSTOMIZE_CONTEXT_HELP  
   
-- `AFX_CUSTOMIZE_NOTOOLS`  
+- AFX_CUSTOMIZE_NOTOOLS  
   
-- `AFX_CUSTOMIZE_MENUAMPERS`  
+- AFX_CUSTOMIZE_MENUAMPERS  
   
-- `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
+- AFX_CUSTOMIZE_NO_LARGE_ICONS  
   
  [in]*plistCustomPages*  
- リストへのポインター`CRuntimeClass`追加のカスタム ページを指定するオブジェクト。  
+ 一覧へのポインター`CRuntimeClass`追加のカスタム ページを指定するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- *PlistCustomPages*パラメーターの一覧を参照`CRuntimeClass`追加のカスタム ページを指定するオブジェクト。 コンス トラクターを使用して、ダイアログ ボックスに複数のページを追加、 [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject)メソッドです。 CustomPages のサンプルを複数のページを追加する例を参照してください、**カスタマイズ** ダイアログ ボックス。  
+ *PlistCustomPages*パラメーターの一覧を指す`CRuntimeClass`追加のカスタム ページを指定するオブジェクト。 コンス トラクターの ダイアログ ボックスを使用してより多くのページを追加する、 [CRuntimeClass::CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject)メソッド。 CustomPages のサンプルをより多くのページを追加する例を参照してください、**カスタマイズ** ダイアログ ボックス。  
   
- 渡すことができる値の詳細については、 *uiFlags*パラメーターを参照してください[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)です。  
+ 渡すことができる値の詳細については、 *uiFlags*パラメーターを参照してください[CMFCToolBarsCustomizeDialog::GetFlags](#getflags)します。  
   
 ### <a name="example"></a>例  
- 次の例でのオブジェクトを作成する方法、`CMFCToolBarsCustomizeDialog`クラスです。 このコード スニペットの一部である、[カスタム ページ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例のオブジェクトを構築する方法、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]  
   
@@ -320,13 +320,13 @@ virtual BOOL Create();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` カスタマイズのプロパティ シートが正常に作成された場合それ以外の場合`FALSE`です。  
+ カスタマイズのプロパティ シートが正常に作成された場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出す、`Create`メソッド、クラスを完全に初期化した後にのみです。  
+ 呼び出す、`Create`メソッド、クラスを完全に初期化した後でのみです。  
   
 ##  <a name="enableuserdefinedtoolbars"></a>  CMFCToolBarsCustomizeDialog::EnableUserDefinedToolbars  
- 有効または無効を使用して新しいツールバーの作成、**カスタマイズ** ダイアログ ボックス。  
+ 有効またはを使用して新しいツールバーの作成を無効に、**カスタマイズ** ダイアログ ボックス。  
   
 ```  
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
@@ -334,15 +334,15 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bEnable*  
- `TRUE` ユーザー定義のツールバーで; を有効にするには`FALSE`ツールバーを無効にします。  
+ ユーザー定義のツールバーを有効にする場合は TRUEツールバーを無効にする場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- 場合*bEnable*は`TRUE`、**新規**、**の名前を変更**と**削除**にボタンが表示される、**ツールバー**ページ。  
+ 場合*bEnable* true で、**新規**、**の名前を変更**と**削除**でボタンが表示されます、**ツールバー**ページです。  
   
- 既定では、または*bEnable*は`FALSE`、これらのボタンは表示されず、ユーザーが新しいツールバーを定義することはできません。  
+ 既定では、場合*bEnable* false、これらのボタンは表示されず、ユーザーが新しいツールバーを定義できません。  
   
 ##  <a name="fillallcommandslist"></a>  CMFCToolBarsCustomizeDialog::FillAllCommandsList  
- 指定された設定`CListBox`オブジェクト内のコマンドを**すべてコマンド**カテゴリ。  
+ 設定`CListBox`コマンドでは、オブジェクト、**すべてコマンド**カテゴリ。  
   
 ```  
 virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;  
@@ -353,14 +353,14 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
  参照、`CListBox`を設定するオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- **すべてコマンド**カテゴリには、すべてのカテゴリのコマンドが含まれています。 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)メソッドが提供されているボタンに関連付けられているコマンドを追加、**すべてコマンド**のカテゴリ。  
+ **すべてコマンド**カテゴリには、すべてのカテゴリのコマンドが含まれています。 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)メソッドに指定されたボタンに関連付けられているコマンドの追加、**のすべてのコマンド**のカテゴリ。  
   
- このメソッドが用意されている内容を消去`CListBox`コマンドで設定する前にオブジェクト、**すべてコマンド**カテゴリ。  
+ このメソッドが用意されている内容を消去`CListBox`オブジェクト内のコマンドを追加する前に、**すべてコマンド**カテゴリ。  
   
  `CMFCMousePropertyPage`クラスでは、このメソッドを使用して、ダブルクリック イベントのリスト ボックスに入力します。  
   
 ##  <a name="fillcategoriescombobox"></a>  CMFCToolBarsCustomizeDialog::FillCategoriesComboBox  
- 指定された設定`CComboBox`内の各コマンド カテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。  
+ 設定`CComboBox`で各コマンドのカテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。  
   
 ```  
 void FillCategoriesComboBox(
@@ -373,19 +373,19 @@ void FillCategoriesComboBox(
  参照、`CComboBox`を設定するオブジェクト。  
   
  [in]*bAddEmpty*  
- コマンドがないコンボ ボックスにカテゴリを追加するかどうかを指定するブール値。 このパラメーターが場合`TRUE`、コンボ ボックスに空のカテゴリを追加します。 それ以外の場合、空のカテゴリは追加されません。  
+ コマンドがないコンボ ボックスにカテゴリを追加するかどうかを示すブール値。 このパラメーターがある場合は TRUE、空のカテゴリは、コンボ ボックスに追加されます。 それ以外の場合、空のカテゴリは追加されません。  
   
 ### <a name="remarks"></a>Remarks  
- 同様に、このメソッドは、 [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)メソッドでこのメソッドが動作する点を除いて、`CComboBox`オブジェクト。  
+ このメソッドは似ています、 [CMFCToolBarsCustomizeDialog::FillCategoriesListBox](#fillcategorieslistbox)メソッドでこのメソッドが機能する点を除いて、`CComboBox`オブジェクト。  
   
- このメソッドの内容を消去していない、`CComboBox`値を設定する前にオブジェクト。 保証されます、**すべてコマンド**カテゴリは、コンボ ボックスの最終的な項目です。  
+ このメソッドの内容をクリアしません、`CComboBox`値を設定する前にオブジェクト。 保証されます、**すべてコマンド**カテゴリは、コンボ ボックス内の最後の項目。  
   
- 使用して新しいコマンドのカテゴリを追加することができます、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)メソッドです。 使用して既存のカテゴリの名前を変更することができます、 [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)メソッドです。  
+ 使用して新しいコマンドのカテゴリを追加することができます、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)メソッド。 使用して既存のカテゴリの名前を変更することができます、 [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)メソッド。  
   
  `CMFCToolBarsKeyboardPropertyPage`と`CMFCKeyMapDialog`クラスでは、このメソッドを使用して、キーボード マップを分類します。  
   
 ##  <a name="fillcategorieslistbox"></a>  CMFCToolBarsCustomizeDialog::FillCategoriesListBox  
- 指定された設定`CListBox`内の各コマンド カテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。  
+ 設定`CListBox`で各コマンドのカテゴリの名前を持つオブジェクト、**カスタマイズ** ダイアログ ボックス。  
   
 ```  
 void FillCategoriesListBox(
@@ -398,19 +398,19 @@ void FillCategoriesListBox(
  参照、`CListBox`を設定するオブジェクト。  
   
  [in]*bAddEmpty*  
- コマンドがないリスト ボックスにカテゴリを追加するかどうかを指定するブール値。 このパラメーターは場合`TRUE`、リスト ボックスに空のカテゴリを追加します。 それ以外の場合、空のカテゴリは追加されません。  
+ コマンドがないリスト ボックスにカテゴリを追加するかどうかを示すブール値。 このパラメーターがある場合は TRUE、空のカテゴリは、リスト ボックスに追加されます。 それ以外の場合、空のカテゴリは追加されません。  
   
 ### <a name="remarks"></a>Remarks  
- 同様に、このメソッドは、 [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)メソッドでこのメソッドが動作する点を除いて、`CListBox`オブジェクト。  
+ このメソッドは似ています、 [CMFCToolBarsCustomizeDialog::FillCategoriesComboBox](#fillcategoriescombobox)メソッドでこのメソッドが機能する点を除いて、`CListBox`オブジェクト。  
   
- このメソッドの内容を消去していない、`CListBox`値を設定する前にオブジェクト。 保証されます、**すべてコマンド**カテゴリは、リスト ボックス内の最後の項目。  
+ このメソッドの内容をクリアしません、`CListBox`値を設定する前にオブジェクト。 保証されます、**すべてコマンド**カテゴリは、リスト ボックス内の最後の項目。  
   
- 使用して新しいコマンドのカテゴリを追加することができます、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)メソッドです。 使用して既存のカテゴリの名前を変更することができます、 [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)メソッドです。  
+ 使用して新しいコマンドのカテゴリを追加することができます、 [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)メソッド。 使用して既存のカテゴリの名前を変更することができます、 [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)メソッド。  
   
- `CMFCToolBarsCommandsPropertyPage`クラスでは、このメソッドを使用して、各コマンドの分類に関連付けられているコマンドの一覧を表示します。  
+ `CMFCToolBarsCommandsPropertyPage`クラスでは、このメソッドを使用して、各コマンドのカテゴリに関連付けられているコマンドの一覧を表示します。  
   
 ##  <a name="getcommandname"></a>  CMFCToolBarsCustomizeDialog::GetCommandName  
- 指定されたコマンド ID に関連付けられている名前を取得します  
+ 指定されたコマンド ID に関連付けられている名前を取得します。  
   
 ```  
 LPCTSTR GetCommandName(UINT uiCmd) const;  
@@ -421,7 +421,7 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
  取得するコマンドの ID。  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたコマンド ID に関連付けられている名前または`NULL`コマンドが存在しない場合。  
+ コマンドが存在しない場合に、指定したコマンド ID、または NULL に関連付けられている名前です。  
   
 ##  <a name="getcountincategory"></a>  CMFCToolBarsCustomizeDialog::GetCountInCategory  
  指定したテキスト ラベルを持つ指定されたリスト内の項目の数を取得します。  
@@ -440,10 +440,10 @@ int GetCountInCategory(
  含むリストへの参照を`CMFCToolBarButton`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- 指定した項目の数の一覧をテキスト ラベル equals *lpszItemName*です。  
+ 指定した項目の数の一覧をテキスト ラベル equals *lpszItemName*します。  
   
 ### <a name="remarks"></a>Remarks  
- 指定されたオブジェクトの一覧内の各要素が型でなければなりません`CMFCToolBarButton`です。 このメソッドは比較*lpszItemName*で、 [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)データ メンバーです。  
+ 指定されたオブジェクトの一覧内の各要素は型でなければなりません`CMFCToolBarButton`します。 このメソッドは比較*lpszItemName*で、 [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)データ メンバー。  
   
 ##  <a name="getflags"></a>  CMFCToolBarsCustomizeDialog::GetFlags  
  ダイアログ ボックスの動作に影響するフラグのセットを取得します。  
@@ -458,45 +458,45 @@ UINT GetFlags() const;
 ### <a name="remarks"></a>Remarks  
  このメソッドの値を取得、 *uiFlags*コンス トラクターに渡されるパラメーター。 戻り値には、次の値の 1 つ以上を指定できます。  
   
- `AFX_CUSTOMIZE_MENU_SHADOWS`  
- メニューの影を指定することができます。  
+ AFX_CUSTOMIZE_MENU_SHADOWS  
+ メニューの シャドウ表示形式を指定できます。  
   
- `AFX_CUSTOMIZE_TEXT_LABELS`  
- ツール バー ボタンのイメージの下にテキスト ラベルが表示されるかどうかを指定することができます。  
+ AFX_CUSTOMIZE_TEXT_LABELS  
+ ツール バー ボタンのイメージの下にあるテキスト ラベルが表示されるかどうかを指定できます。  
   
- `AFX_CUSTOMIZE_MENU_ANIMATIONS`  
- メニューのアニメーションのスタイルを指定することができます。  
+ AFX_CUSTOMIZE_MENU_ANIMATIONS  
+ メニューのアニメーションのスタイルを指定できます。  
   
- `AFX_CUSTOMIZE_NOHELP`  
- カスタマイズ ダイアログ ボックスから、ヘルプ ボタンを削除します。  
+ AFX_CUSTOMIZE_NOHELP  
+ カスタマイズ ダイアログ ボックスから [ヘルプ] ボタンを削除します。  
   
- `AFX_CUSTOMIZE_CONTEXT_HELP`  
- により、 `WS_EX_CONTEXTHELP` visual スタイル。  
+ AFX_CUSTOMIZE_CONTEXT_HELP  
+ WS_EX_CONTEXTHELP visual スタイルを有効にします。  
   
- `AFX_CUSTOMIZE_NOTOOLS`  
- 削除、**ツール**ページのカスタマイズ ダイアログ ボックスからです。 このフラグがアプリケーションで使用する場合は、有効では、`CUserToolsManager`クラスです。  
+ AFX_CUSTOMIZE_NOTOOLS  
+ 削除、**ツール**、[カスタマイズ] ダイアログ ボックスからのページ。 このフラグがアプリケーションで使用する場合は、有効では、`CUserToolsManager`クラス。  
   
- `AFX_CUSTOMIZE_MENUAMPERS`  
- ボタンのキャプション、アンパサンドを含めるには、( **&**) 文字です。  
+ AFX_CUSTOMIZE_MENUAMPERS  
+ ボタンのキャプションに、アンパサンドを含めることができます ( **&**) 文字。  
   
- `AFX_CUSTOMIZE_NO_LARGE_ICONS`  
- 削除、**大きいアイコン**のカスタマイズ ダイアログ ボックスからオプション。  
+ AFX_CUSTOMIZE_NO_LARGE_ICONS  
+ 削除、**大きいアイコン**カスタマイズ ダイアログ ボックスからオプション。  
   
- 詳細については、 `WS_EX_CONTEXTHELP` visual スタイルを参照してください[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)です。  
+ WS_EX_CONTEXTHELP visual スタイルの詳細については、次を参照してください。[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)します。  
   
 ##  <a name="onafterchangetool"></a>  CMFCToolBarsCustomizeDialog::OnAfterChangeTool  
- これが発生した後すぐには、ユーザー ツールの変更に応答します。  
+ 発生後すぐには、ユーザー ツールでの変更に応答します。  
   
 ```  
 virtual void OnAfterChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力].*pSelTool*  
+ [入力、出力]*pSelTool*  
  変更されているユーザー ツールのオブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、ユーザーがユーザー定義のツールのプロパティを変更すると、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 このメソッドから派生したクラスでオーバーライド`CMFCToolBarsCustomizeDialog`ユーザー ツールへの変更が発生した後の処理を実行します。  
+ ユーザー定義のツールのプロパティを変更するとき、このメソッドは、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 このメソッドから派生したクラスでオーバーライド`CMFCToolBarsCustomizeDialog`ユーザー ツールの変更が発生した後、処理を実行します。  
   
 ##  <a name="onassignkey"></a>  CMFCToolBarsCustomizeDialog::OnAssignKey  
  ユーザーが定義には、キーボード ショートカットを検証します。  
@@ -506,28 +506,28 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力].*pAccel*  
- として表現される提案されたキーの割り当てへのポインター、 [ACCEL](http://msdn.microsoft.com/library/windows/desktop/ms646340)構造体。  
+ [入力、出力]*pAccel*  
+ として表される候補キーの割り当てへのポインター、[アクセル](http://msdn.microsoft.com/library/windows/desktop/ms646340)構造体。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` キーを割り当てることができる場合、または`FALSE`場合は、キーを割り当てることができません。 既定の実装では、常に `TRUE` を返します。  
+ TRUE の場合は、キーを割り当てることができない場合に、キーが割り当てられている、または FALSE を指定できます。 既定の実装を常に TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ユーザーが新しいキーボード ショートカットを割り当てるか、またはユーザーとしてのキーボード ショートカットを検証するには、それを定義するときに、余分な処理を実行する派生クラスでこのメソッドをオーバーライドします。 ショートカットが割り当てられていることを防ぐために返す`FALSE`です。 またメッセージ ボックスを表示またはそれ以外の場合、キーボード ショートカットが拒否された理由のためのユーザーに通知する必要があります。  
+ ユーザーが新しいショートカット キー、またはユーザーとしてのキーボード ショートカットを検証するには、それを定義するときに、余分な処理を実行する派生クラスでこのメソッドをオーバーライドします。 ショートカットが割り当てられていることを防ぐために FALSE が返されます。 またメッセージ ボックスを表示または、キーボード ショートカットが拒否された理由のためのユーザーに通知する必要があります。  
   
 ##  <a name="onbeforechangetool"></a>  CMFCToolBarsCustomizeDialog::OnBeforeChangeTool  
- カスタムの処理、ユーザー ツールに変化したとき、ユーザーが変更を適用を実行します。  
+ カスタムの処理を実行ユーザー ツールに変更されたときに、ユーザーが変更を適用しようとします。  
   
 ```  
 virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力].*pSelTool*  
- 置換しようとするは、ユーザー ツールのオブジェクトへのポインター。  
+ [入力、出力]*pSelTool*  
+ 置き換えられますユーザー ツールのオブジェクトへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- ユーザー定義のツールのプロパティを変更しようと、このメソッドは、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 上書き、`OnBeforeChangeTool`から派生したクラスのメソッド`CMFCToolBarsCustomizeDialog`リソースを解放するなど、ユーザー ツールへの変更が発生する前に、処理を実行する場合を*pSelTool*を使用します。  
+ ユーザー定義のツールのプロパティを変更する場合、このメソッドは、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 上書き、`OnBeforeChangeTool`から派生したクラスのメソッドで`CMFCToolBarsCustomizeDialog`リソースを解放するなど、ユーザー ツールの変更が発生する前に、処理を実行する場合を*pSelTool*を使用します。  
   
 ##  <a name="onedittoolbarmenuimage"></a>  CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage  
  イメージ エディターを起動し、ユーザーがツール バー ボタンまたはメニュー項目のアイコンをカスタマイズできます。  
@@ -544,39 +544,39 @@ virtual BOOL OnEditToolbarMenuImage(
  親ウィンドウへのポインター。  
   
  [in]*ビットマップ*  
- オブジェクトへの参照、ビットマップを編集することです。  
+ 編集するビットマップ オブジェクトへの参照。  
   
  [in]*nBitsPerPixel*  
- ビットマップのピクセルあたりのビット単位の色の解像度。  
+ ビットマップのビット/ピクセルの色の解像度。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 変更がコミットされている場合それ以外の場合`FALSE`です。 既定の実装は、ダイアログ ボックスを表示しを返します`TRUE`、ユーザーがクリックした場合**OK**、または`FALSE`、ユーザーがクリックした場合**キャンセル**または**閉じる**ボタンをクリックします。  
+ 変更がコミットされている場合は TRUE。それ以外の場合は FALSE です。 既定の実装がダイアログ ボックスを表示し、ユーザーがクリックした場合は TRUE を返します**OK**、または、ユーザーがクリックした場合は FALSE**キャンセル**または**閉じる**ボタン。  
   
 ### <a name="remarks"></a>Remarks  
- ユーザー イメージ エディターの実行時に、このメソッドは、フレームワークによって呼び出されます。 既定の実装で、表示[[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)] ダイアログ ボックス。 オーバーライド`OnEditToolbarMenuImage`カスタム イメージ エディターを使用して派生クラスでします。  
+ ユーザー イメージ エディターの実行時に、このメソッドは、フレームワークによって呼び出されます。 既定の実装が表示されます[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md) ダイアログ ボックス。 オーバーライド`OnEditToolbarMenuImage`カスタム イメージ エディターを使用して派生クラスでします。  
   
 ##  <a name="oninitdialog"></a>  CMFCToolBarsCustomizeDialog::OnInitDialog  
- プロパティ シートの初期化処理を拡張するためにオーバーライドします。  
+ プロパティ シートの初期化処理を強化するよりも優先されます。  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 呼び出しの結果、 [cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)メソッドです。  
+ 呼び出しの結果、 [cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)メソッド。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドが基底クラスの実装を拡張[cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)、表示することによって、**閉じる**ボタン、および移動することによって、ダイアログ ボックスが現在の画面サイズに収まることを確認して、**ヘルプ** ダイアログ ボックスの左下隅にボタンをクリックします。  
+ このメソッドが基底クラスの実装によって拡張[cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)、表示することによって、**閉じる**ボタン、ダイアログ ボックスが現在の画面サイズに収まることを確認することで、移動することによって、**ヘルプ** ダイアログ ボックスの左下隅にボタンをクリックします。  
   
 ##  <a name="oninittoolspage"></a>  CMFCToolBarsCustomizeDialog::OnInitToolsPage  
- フレームワークからの通知を処理する、**ツール**ページが初期化しようとしています。  
+ Framework から通知を処理する、**ツール**ページが初期化されます。  
   
 ```  
 virtual void OnInitToolsPage();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 既定の実装では、何も行われません。 この通知を処理する派生クラスでこのメソッドをオーバーライドします。  
+ 既定の実装では、何も行われません。 この通知を処理するための派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="postncdestroy"></a>  CMFCToolBarsCustomizeDialog::PostNcDestroy  
  ウィンドウが破棄された後に、フレームワークによって呼び出されます。  
@@ -586,12 +586,12 @@ virtual void PostNcDestroy();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドが基底クラスの実装を拡張`CPropertySheet::PostNcDestroy`、以前のモードにアプリケーションを復元しています。  
+ このメソッドが基底クラスの実装によって拡張`CPropertySheet::PostNcDestroy`、前のモードにアプリケーションを復元することで。  
   
  [CMFCToolBarsCustomizeDialog::Create](#create)メソッドは、カスタマイズのタスクにユーザーを制限する特殊なモードでアプリケーションを配置します。  
   
 ##  <a name="removebutton"></a>  CMFCToolBarsCustomizeDialog::RemoveButton  
- 指定したカテゴリまたはすべてのカテゴリから、指定されたコマンド ID を持つボタンを削除します。  
+ 指定したカテゴリまたはすべてのカテゴリから、指定したコマンド ID を持つボタンを削除します。  
   
 ```  
 int RemoveButton(
@@ -614,10 +614,10 @@ int RemoveButton(
  ボタンを削除するカテゴリの名前を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- 削除のボタン、または指定したカテゴリで、指定されたコマンド ID が見つからなかった場合は-1 の 0 から始まるインデックス。 場合*uiCategoryId* -1 で、戻り値は 0 です。  
+ 削除ボタン、または指定したコマンド ID が指定したカテゴリで見つからなかった場合は-1 の 0 から始まるインデックス。 場合*uiCategoryId* -1 で、戻り値は 0。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドとセットの最初のオーバー ロードを呼び出すすべてのカテゴリから、ボタンを削除、 *uiCategoryId* -1 です。  
+ ボタンすべてのカテゴリからを削除するには、このメソッドとセットの最初のオーバー ロードを呼び出す*uiCategoryId*を-1 にします。  
   
 ##  <a name="renamecategory"></a>  CMFCToolBarsCustomizeDialog::RenameCategory  
  カテゴリのリスト ボックス内にあるカテゴリの名前を変更、**コマンド**ページ。  
@@ -633,16 +633,16 @@ BOOL RenameCategory(
  変更するカテゴリ名。  
   
  [in]*lpszCategoryNew*  
- 新しいカテゴリ名。  
+ 新しいカテゴリの名前。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
+ メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  カテゴリ名は一意である必要があります。  
   
 ##  <a name="replacebutton"></a>  CMFCToolBarsCustomizeDialog::ReplaceButton  
- コマンドのリスト ボックスにツール バー ボタンを置き換える、**コマンド**ページ。  
+ コマンドのリスト ボックスにツール バー ボタンが置き換えられます、**コマンド**ページ。  
   
 ```  
 void ReplaceButton(
@@ -655,18 +655,18 @@ void ReplaceButton(
  置き換えられる ボタンのコマンドを指定します。  
   
  [in]*ボタン*  
- A **const**古い ボタンの代わりをツール バー ボタンのオブジェクトへの参照。  
+ A **const**古い ボタンの代わりをツール バー ボタン オブジェクトへの参照。  
   
 ### <a name="remarks"></a>Remarks  
- ときに[CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)、 [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)、または[CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)を追加します。コマンドを**コマンド**ページで、コマンドがの形式である、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト (または[CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)メニュー オブジェクトによって追加されるサブメニューを含む項目`AddMenuCommands`)。 フレームワークでは、これらのコマンドを自動的に追加する 3 つのメソッドも呼び出します。 代わりに、派生型で表現するためのコマンドを実行する場合に、呼び出す`ReplaceButton`を渡して、派生型のボタンをクリックします。  
+ ときに[CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)、 [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands)、または[CMFCToolBarsCustomizeDialog::AddToolBar](#addtoolbar)を追加します。コマンドを**コマンド**] ページの [コマンドの形式である、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト (または[CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)メニュー オブジェクトによって追加されたサブメニューを含む項目`AddMenuCommands`)。 フレームワークでは、これら 3 つのコマンドを自動的に追加するメソッドも呼び出します。 代わりに派生型で表されるコマンドを実行する場合に、呼び出す`ReplaceButton`を派生型のボタンを渡します。  
   
 ### <a name="example"></a>例  
- 次の例で使用する方法、`ReplaceButton`メソッドで、`CMFCToolBarsCustomizeDialog`クラスです。 このコード スニペットの一部である、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、使用する方法、`ReplaceButton`メソッドで、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]  
   
 ##  <a name="setusercategory"></a>  CMFCToolBarsCustomizeDialog::SetUserCategory  
- カテゴリの一覧でカテゴリを指定します、**コマンド**ページは、ユーザーのカテゴリ。 呼び出す前に、この関数を呼び出す必要があります[CMFCToolBarsCustomizeDialog::Create](#create)です。  
+ カテゴリの一覧でカテゴリを指定します、**コマンド**ページは、ユーザーのカテゴリ。 呼び出す前に、この関数を呼び出す必要があります[CMFCToolBarsCustomizeDialog::Create](#create)します。  
   
 ```  
 BOOL SetUserCategory(LPCTSTR lpszCategory);
@@ -677,7 +677,7 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
  カテゴリの名前。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合それ以外の場合`FALSE`です。  
+ メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  現在、ユーザーのカテゴリの設定は、フレームワークによって使用されていません。  

@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c6e71b0872b19ea063d9cc0ff2615ef4362ac1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4c92b24dbd5ccfbd308cb1b52dee7347f1df1e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855761"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959862"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution クラス
 
@@ -81,18 +81,18 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型、既定値は`double`します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、正規分布に従って分布した、ユーザー指定の整数型の値または型 `double` の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**二重**がない場合は、正規分布に従って分布します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-プロパティ関数 `mean()` および `stddev()` は、格納されている分布パラメーター `mean` および `stddev` に対してそれぞれの値を返します。
+プロパティ関数`mean()`と`stddev()`格納されている分布パラメーターの値を返す*意味*と*stddev*それぞれします。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -191,7 +191,7 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -212,9 +212,9 @@ explicit normal_distribution(const param_type& parm);
 
 *stddev* 、`stddev`分布パラメーター。
 
-*パラメーター*分布の作成に使用されるパラメーターの構造体。
+*parm*分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 ≤ stddev`
 
@@ -243,9 +243,9 @@ struct param_type {
 
 *stddev* 、`stddev`分布パラメーター。
 
-*右*、`param_type`構造体を比較するために使用します。
+*適切な*、`param_type`構造体を比較するために使用します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 ≤ stddev`
 

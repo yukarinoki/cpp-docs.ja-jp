@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb1eec82e7f9e39f508bd0c9559cec787f6ec9a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847638"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960006"
 ---
 # <a name="insertiterator-class"></a>insert_iterator クラス
 
@@ -40,11 +40,11 @@ class insert_iterator;
 
 ### <a name="parameters"></a>パラメーター
 
-`Container` によって挿入される要素がコンテナーの種類、`insert_iterator`です。
+`Container` によって挿入される要素がコンテナーの種類、`insert_iterator`します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Container** 型のコンテナーは、可変サイズのコンテナーの要件を満たし、2 つの引数を取る insert メンバー関数を備えている必要があります。このメンバー関数のパラメーターは **Container::iterator** 型と **Container::value_type** 型で、**Container::iterator** 型を返します。 C++ 標準ライブラリ シーケンスおよび並べ替えられた連想コンテナーはこれらの要件を満たしており、`insert_iterator` で使用するために適合させることができます。 連想コンテナーでは、位置の引数はヒントとして扱われ、ヒントの品質に応じてパフォーマンスを向上させる場合も、低下させる場合もあります。 `insert_iterator` は、常に、コンテナーで初期化されている必要があります。
+型のコンテナー`Container`可変サイズのコンテナーの要件を満たす必要があり、型のパラメーターは引数が 2 つの insert メンバー関数がある`Container::iterator`と`Container::value_type`型を返すと`Container::iterator`します。 C++ 標準ライブラリ シーケンスおよび並べ替えられた連想コンテナーはこれらの要件を満たしており、`insert_iterator` で使用するために適合させることができます。 連想コンテナーでは、位置の引数はヒントとして扱われ、ヒントの品質に応じてパフォーマンスを向上させる場合も、低下させる場合もあります。 `insert_iterator` は、常に、コンテナーで初期化されている必要があります。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -67,7 +67,7 @@ class insert_iterator;
 |[operator++](#op_add_add)|値を格納できる次の位置に `insert_iterator` をインクリメントします。|
 |[operator=](#op_eq)|一般的な挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<iterator>
 
@@ -81,9 +81,9 @@ class insert_iterator;
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **Container** のシノニムです。
+この型は、テンプレート パラメーター *Container* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -125,11 +125,11 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Cont` コンテナー、`insert_iterator`要素を挿入することです。
+*_Cont*されるコンテナ ―、`insert_iterator`要素が挿入されます。
 
-`_It` カーソルの位置。
+*_It*挿入の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 すべてのコンテナーには、`insert_iterator`によって呼び出される insert メンバー関数があります。 連想コンテナーについては、位置パラメーターは参考にすぎません。 Inserter 関数は、値を挿入する便利な手段となります。
 
@@ -191,9 +191,9 @@ insert_iterator<Container>& operator*();
 
 このメンバー関数は、アドレス指定された要素の値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-出力反復子式 **\*Iter** = **value** を実装するために使用されます。 **Iter** がシーケンス内の要素をアドレス指定する反復子である場合、**\*Iter** = **value** はその要素を値に置き換え、シーケンス内の要素の合計数は変えません。
+出力反復子式 **\*Iter** = **value** を実装するために使用されます。 場合`Iter`し、シーケンス内の要素を指す反復子は、  **\*Iter** = **値**その要素の値を置き換えますの合計数は変わりません。シーケンス内の要素。
 
 ### <a name="example"></a>例
 
@@ -241,7 +241,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>  insert_iterator::operator++
 
-値を格納できる次の位置に **insert_iterator** をインクリメントします。
+値を格納できる次の位置に `insert_iterator` をインクリメントします。
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -253,7 +253,7 @@ insert_iterator<Container> operator++(int);
 
 値を格納できる次の位置をアドレス指定する `insert_iterator`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 preincrementation と postincrementation の演算子は、どちらも同じ結果を返します。
 
@@ -317,13 +317,13 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-`val` コンテナーに割り当てられる値です。
+*val*コンテナーに割り当てられる値。
 
 ### <a name="return-value"></a>戻り値
 
 コンテナーに挿入される要素への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のメンバー演算子は次の評価をします。
 
@@ -393,7 +393,7 @@ After the insertions, the list L is:
 typedef typename Container::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、関連するコンテナーによって制御されるシーケンスの要素への参照を示します。
 

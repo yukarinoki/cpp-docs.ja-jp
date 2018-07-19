@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ffc59d3425f403fb1dca43f70876cfbfb5d3dd9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861962"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954891"
 ---
 # <a name="messages-class"></a>messages クラス
 
@@ -54,9 +54,9 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>パラメーター
 
-`CharType` ロケールの文字をエンコードする、プログラム内で使用される型。
+*CharType*ロケールの文字をエンコードする、プログラム内で使用される型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、**id** に一意の正の値が格納されます。
 
@@ -86,7 +86,7 @@ class messages : public messages_base;
 |[get](#get)|メッセージ カタログを取得します。|
 |[open](#open)|メッセージ カタログを開きます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 
@@ -100,7 +100,7 @@ class messages : public messages_base;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター **CharType** のシノニムです。
 
@@ -114,9 +114,9 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`_Catval` 終了するカタログです。
+*_Catval*終了するカタログ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、[do_close](#do_close)(_ *Catval*) を呼び出します。
 
@@ -130,11 +130,11 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`_Catval` 終了するカタログです。
+*_Catval*終了するカタログ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-プロテクト メンバー関数は、メッセージ カタログ `_Catval` を閉じます。メッセージ カタログは、[do_open](#do_open) への事前の呼び出しで開かれている必要があります。
+プロテクト メンバー関数は、メッセージ カタログを閉じます *_Catval*、する必要がありますが開かれているを以前の呼び出しによって[do_open](#do_open)します。
 
 *_Catval* は、以前に開かれ、まだ閉じていないカタログから取得する必要があります。
 
@@ -156,21 +156,21 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Catval` 検索するメッセージのカタログを指定する識別値。
+*_Catval* id 値を検索するメッセージ カタログを指定します。
 
-`_Set` 1 つ目が識別されるメッセージのカタログのメッセージを検索するために使用します。
+*設定 (_s)* 最初が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
 
-`_Message` 2 つ目が識別されるメッセージのカタログのメッセージを検索するために使用します。
+*メッセージ (_m)* 2 つ目が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
 
-`_Dfault` 失敗した場合に返される文字列。
+*_Dfault*失敗時に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合は、`_Dfault` のコピーを返します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
+コピーを返します *_Dfault*失敗します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-プロテクト メンバー関数は、メッセージ カタログ `_Catval` からメッセージ シーケンスを取得しようとします。 その際に、`_Set`、`_Message`、および `_Dfault` を使用する場合があります。
+プロテクト メンバー関数が、メッセージのカタログからのメッセージ シーケンスを取得しようとしています。 *_Catval*します。 可能性がありますの使用*設定 (_s)*、*メッセージ (_m)*、および *_Dfault*きました。
 
 ### <a name="example"></a>例
 
@@ -188,17 +188,17 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Catname` 検索するカタログの名前。
+*_Catname*検索するカタログの名前。
 
-`_Loc` カタログの検索対象のロケールです。
+*_Loc*カタログで検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
 
 失敗した場合、0 より小さい値を返します。 それ以外の場合は、後で [get](#get) を呼び出すときに、この戻り値を最初の引数として使用できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-プロテクト メンバー関数は、名前が `_Catname` であるメッセージ カタログを開こうとします。 その際に、ロケール `_Loc` を使用する場合があります。
+プロテクト メンバー関数は、名前を持つメッセージ カタログを開こうとした *_Catname*します。 可能性があります、ロケールを使用して、 *_Loc*きました
 
 後で [close](#close) を呼び出すときに、この戻り値を引数として使用する必要があります。
 
@@ -220,19 +220,19 @@ string_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Catval` 検索するメッセージのカタログを指定する識別値。
+*_Catval* id 値を検索するメッセージ カタログを指定します。
 
-`_Set` 1 つ目が識別されるメッセージのカタログのメッセージを検索するために使用します。
+*設定 (_s)* 最初が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
 
-`_Message` 2 つ目が識別されるメッセージのカタログのメッセージを検索するために使用します。
+*メッセージ (_m)* 2 つ目が識別されるメッセージ カタログ内でメッセージを検索するために使用します。
 
-`_Dfault` 失敗した場合に返される文字列。
+*_Dfault*失敗時に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-失敗した場合は、`_Dfault` のコピーを返します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
+コピーを返します *_Dfault*失敗します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、[do_get](#do_get)( `_Catval`, `_Set`, `_Message`, `_Dfault`) を返します。
 
@@ -251,13 +251,13 @@ protected: messages(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Refs` オブジェクトのメモリ管理の種類を指定するために使用する整数値です。
+*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-`_Locname` ロケールの名前。
+*_Locname*ロケールの名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`_Refs` パラメーターの可能な値とその重要性は次のとおりです。
+使用可能な値を *_Refs*パラメーターとその重要性は。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
@@ -281,27 +281,27 @@ catalog open(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Catname` 検索するカタログの名前。
+*_Catname*検索するカタログの名前。
 
-`_Loc` カタログの検索対象のロケールです。
+*_Loc*カタログで検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
 
 失敗した場合、0 より小さい値を返します。 それ以外の場合は、後で [get](#get) を呼び出すときに、この戻り値を最初の引数として使用できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、[do_open](#do_open)( `_Catname`, `_Loc`) を返します。
 
 ## <a name="string_type"></a>  messages::string_type
 
-**CharType** 型の文字を格納する `basic_string` 型の文字列を表す型。
+`basic_string` 型の文字を格納する `CharType` 型の文字列を表す型。
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、オブジェクトにメッセージ シーケンスのコピーを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
 

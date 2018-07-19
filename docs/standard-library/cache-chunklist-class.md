@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71b6a45dbdb882cc666c72296938f970bba52ac
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844947"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953261"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist クラス
 
@@ -42,13 +42,13 @@ class cache_chunklist
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Sz`|割り当てられる配列内の要素の数。|
+|*sz*|割り当てられる配列内の要素の数。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは `operator new` を使用して生メモリ チャンクを割り当て、必要なときにブロックをサブ割り当てしてメモリ ブロック用の記憶域を割り当てます。また、割り当てが解除されたメモリ ブロックをチャンクごとの独立したフリー リストに格納し、どのメモリ ブロックも使用中でないときは `operator delete` を使用してチャンクの割り当てを解除します。
+このテンプレート クラスを使用して**演算子 new**を生のメモリのチャンクを割り当てるには、記憶域を割り当てるために必要なときに、メモリ ブロックのブロックないときは、各チャンクの独立したフリー リストの割り当てが解除されたメモリ ブロックを格納し、を使用**delete 演算子**はそのメモリ ブロックの使用時に、チャンクの割り当てを解除します。
 
-各メモリ ブロックは、`Sz` バイトの使用可能なメモリと、そのブロックが属しているチャンクへのポインターを保持します。 各チャンクには `Nelts` メモリ ブロック、3 つのポインター、int、`operator new` と `operator delete` に必要なデータが保持されます。
+各メモリ ブロックを保持*Sz*バイトの使用可能なメモリおよびが属しているチャンクへのポインター。 各チャンクを保持`Nelts`メモリ ブロック、3 つのポインター、int、およびデータを**演算子 new**と**delete 演算子**が必要です。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -63,7 +63,7 @@ class cache_chunklist
 |[allocate](#allocate)|メモリのブロックを割り当てます。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -81,13 +81,13 @@ void *allocate(std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`count`|割り当てられる配列内の要素の数。|
+|*count*|割り当てられる配列内の要素の数。|
 
 ### <a name="return-value"></a>戻り値
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
 
@@ -97,7 +97,7 @@ void *allocate(std::size_t count);
 cache_chunklist();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="deallocate"></a>  cache_chunklist::deallocate
 
@@ -111,10 +111,10 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`ptr`|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|`count`|記憶域から割り当てを解除されるオブジェクトの数。|
+|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

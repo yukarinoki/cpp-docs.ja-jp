@@ -1,5 +1,5 @@
 ---
-title: プロパティとプロパティ ページ クラス (ATL) |Microsoft ドキュメント
+title: プロパティとプロパティ ページ クラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 027eb9c91b03501560c7001a2688d7e494154bce
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355008"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953801"
 ---
 # <a name="properties-and-property-pages-classes"></a>プロパティとプロパティ ページ クラス
-次のクラスは、プロパティとプロパティ ページをサポートします。  
+次のクラスは、プロパティやプロパティ ページをサポートします。  
   
 -   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver)を取得またはオブジェクトのプロパティを設定、`IDispatch`ポインター。  
   
--   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) ATL でサポートされるストック プロパティを実装します。  
+-   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) ATL でサポートされているストック プロパティを実装します。  
   
 -   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md)オブジェクトのプロパティ ページの情報にアクセスします。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "32355008"
   
 -   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md)プロパティ シート内の特定のプロパティ ページを管理します。  
   
--   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md)と同様に`IPropertyPageImpl`、クライアント プロパティ ページで、特定のプロパティを選択することもできますが、します。  
+-   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md)と同様に`IPropertyPageImpl`、プロパティ ページで、特定のプロパティを選択するクライアントにもできます。  
   
--   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)オブジェクトでサポートされているプロパティ ページの Clsid を取得します。  
+-   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)オブジェクトによってサポートされるプロパティ ページの Clsid を取得します。  
   
 ## <a name="related-articles"></a>関連トピック  
  [ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)  

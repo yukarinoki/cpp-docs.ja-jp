@@ -1,5 +1,5 @@
 ---
-title: 関数クラス |Microsoft ドキュメント
+title: COleMessageFilter クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,14 +38,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a35f73405340b1ad66b004efcab49ac4c569c560
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037616"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852134"
 ---
-# <a name="colemessagefilter-class"></a>関数クラス
+# <a name="colemessagefilter-class"></a>COleMessageFilter クラス
 OLE アプリケーション間の相互の要求を同時に管理します。  
   
 ## <a name="syntax"></a>構文  
@@ -66,27 +66,27 @@ class COleMessageFilter : public CCmdTarget
   
 |名前|説明|  
 |----------|-----------------|  
-|[COleMessageFilter::BeginBusyState](#beginbusystate)|ビジー状態でアプリケーションを配置します。|  
+|[COleMessageFilter::BeginBusyState](#beginbusystate)|ビジー状態で、アプリケーションを配置します。|  
 |[COleMessageFilter::EnableBusyDialog](#enablebusydialog)|有効にし、呼び出し先のアプリケーションがビジー状態のときに表示されるダイアログ ボックスを無効にします。|  
 |[COleMessageFilter::EnableNotRespondingDialog](#enablenotrespondingdialog)|有効にし、呼び出し先のアプリケーションが応答していないときに表示されるダイアログ ボックスを無効にします。|  
 |[COleMessageFilter::EndBusyState](#endbusystate)|アプリケーションのビジー状態を終了します。|  
 |[COleMessageFilter::OnMessagePending](#onmessagepending)|OLE 呼び出しが進行中は、メッセージを処理するためにフレームワークによって呼び出されます。|  
 |[COleMessageFilter::Register](#register)|OLE システム Dll をメッセージ フィルターを登録します。|  
-|[COleMessageFilter::Revoke](#revoke)|OLE システム Dll とメッセージ フィルターの登録を取り消します。|  
+|[COleMessageFilter::Revoke](#revoke)|OLE システム Dll へのメッセージ フィルターの登録を取り消します。|  
 |[COleMessageFilter::SetBusyReply](#setbusyreply)|OLE 呼び出しにビジー状態のアプリケーションの応答を決定します。|  
-|[COleMessageFilter::SetMessagePendingDelay](#setmessagependingdelay)|アプリケーションが OLE 呼び出しに対する応答を待機する時間を決定します。|  
-|[COleMessageFilter::SetRetryReply](#setretryreply)|ビジー状態のアプリケーションへの呼び出し元のアプリケーションの応答を決定します。|  
+|[COleMessageFilter::SetMessagePendingDelay](#setmessagependingdelay)|アプリケーションが OLE 呼び出しへの応答を待機する時間を決定します。|  
+|[COleMessageFilter::SetRetryReply](#setretryreply)|ビジー状態のアプリケーションへの呼び出し元アプリケーションの応答を決定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `COleMessageFilter`クラスはビジュアル編集サーバーとコンテナー アプリケーションだけでなく OLE オートメーション アプリケーションに便利です。 呼び出されるサーバー アプリケーションでは、アプリケーションにするのには「ビジー」その他のコンテナー アプリケーションからの着信呼び出しか、取り消されたか、後で再試行できるようにこのクラスを使用できます。 このクラスは、呼び出し先のアプリケーションがビジー状態のときに、呼び出し元アプリケーションによって実行される操作を決定するも使用できます。  
+ `COleMessageFilter`クラスは、OLE オートメーション アプリケーションだけでなく、ビジュアル編集サーバーとコンテナー アプリケーションで役立ちます。 呼び出されるサーバー アプリケーションで他のコンテナー アプリケーションからの着信呼び出しがキャンセルされるか、後で再試行するようにアプリケーションを「ビジー」にするこのクラスを使用できます。 このクラスは、呼び出し先のアプリケーションがビジー状態のときに、呼び出し元アプリケーションによって実行されるアクションを決定するも使用できます。  
   
- サーバー アプリケーションを呼び出すための一般的な使用方法は、 [BeginBusyState](#beginbusystate)と[EndBusyState](#endbusystate)した方がドキュメントまたはその他の OLE アクセス可能なオブジェクトを破棄するは危険です。 これらの呼び出しが行われた[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)ユーザー インターフェイスの更新中です。  
+ 一般的な使用方法は、サーバー アプリケーションを呼び出す[BeginBusyState](#beginbusystate)と[EndBusyState](#endbusystate)危険なため、ドキュメントまたはその他の OLE アクセス可能なオブジェクトを破棄するときになります。 これらの呼び出しが行われた[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)ユーザー インターフェイスの更新中にします。  
   
- 既定では、`COleMessageFilter`アプリケーションの初期化時にオブジェクトが割り当てられます。 取得できる[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)です。  
+ 既定で、`COleMessageFilter`アプリケーションが初期化されるとき、オブジェクトが割り当てられます。 取得できる[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)します。  
   
- これは高度なクラスです。頻度の低い、直接使用する必要があります。  
+ これは、高度なクラスです。頻度の低い、直接使用する必要があります。  
   
- 詳細については、記事を参照してください。[サーバー: サーバーの実装](../../mfc/servers-implementing-a-server.md)です。  
+ 詳細については、この記事を参照してください。[サーバー: サーバーを実装する](../../mfc/servers-implementing-a-server.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -99,18 +99,18 @@ class COleMessageFilter : public CCmdTarget
  **ヘッダー:** afxole.h  
   
 ##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
- この関数では、ビジー状態を開始します。  
+ ビジー状態を開始するには、この関数を呼び出します。  
   
 ```  
 virtual void BeginBusyState();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 組み合わせて動作[EndBusyState](#endbusystate)をアプリケーションのビジー状態を制御します。 関数は、 [SetBusyReply](#setbusyreply)呼び出し元アプリケーションのビジー状態であるときに、アプリケーションの応答を決定します。  
+ 組み合わせて動作[EndBusyState](#endbusystate)アプリケーションのビジー状態を制御します。 関数は、 [SetBusyReply](#setbusyreply)ビジー状態のときに、アプリケーションを呼び出すことに、アプリケーションの応答を決定します。  
   
- `BeginBusyState`と`EndBusyState`呼び出しインクリメントし、それぞれ、アプリケーションがビジー状態であるかどうかを決定するカウンターをデクリメントします。 たとえば、2 回の呼び出しに`BeginBusyState`とに 1 回の呼び出し`EndBusyState`ビジー状態の結果をまだです。 呼び出す必要があるビジー状態をキャンセルする`EndBusyState`同じ回数`BeginBusyState`が呼び出されています。  
+ `BeginBusyState`と`EndBusyState`呼び出しをインクリメントおよびデクリメント、それぞれ、アプリケーションがビジー状態かどうかを決定するカウンター。 たとえば、2 回の呼び出しに`BeginBusyState`とに 1 回の呼び出し`EndBusyState`ビジー状態の結果をまだします。 呼び出す必要があるビジー状態をキャンセルする`EndBusyState`同じ回数`BeginBusyState`が呼び出されました。  
   
- 既定では、フレームワークの状態にビジー状態で実行される、アイドル状態の処理中に[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)です。 アプリケーション ON_COMMANDUPDATEUI 通知の処理は、中に呼び出しが処理後で、アイドル状態の処理が完了します。  
+ 既定では、フレームワークが付属しています、アイドル状態の処理中にビジー状態を入力[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)します。 アプリケーションが ON_COMMANDUPDATEUI 通知を処理中に呼び出しが処理後で、アイドル状態の処理が完了した後。  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  
@@ -121,7 +121,7 @@ COleMessageFilter();
 ```  
   
 ##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog  
- 有効にし、保留中のメッセージの遅延時間の有効期限が切れるときに表示されるダイアログ ボックスが無効になります (を参照してください[ビジー](#setretryreply)) OLE 呼び出し中にします。  
+ 有効にし、保留中のメッセージの遅延時間の有効期限が切れるときに表示されるダイアログ ボックスを無効にします (を参照してください[ビジー](#setretryreply)) OLE 呼び出し中にします。  
   
 ```  
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
@@ -129,10 +129,10 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  *bEnableBusy*  
- 「ビジー」のダイアログ ボックスを有効または無効になっているかどうかを指定します。  
+ 「ビジー」ダイアログ ボックスが有効になっているかどうかを指定します。  
   
 ##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog  
- 有効にし、キーボードまたはマウスのメッセージが保留されている場合に表示される「応答していない」の ダイアログ ボックスを無効にする OLE 中の呼び出しと呼び出しがタイムアウトしました。  
+ キーボードまたはマウス メッセージが保留中の場合に表示される「応答していない」のダイアログ ボックスを無効にでき、OLE 中の呼び出しと呼び出しがタイムアウトしました。  
   
 ```  
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
@@ -140,7 +140,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  *bEnableNotResponding*  
- 「応答していない」のダイアログ ボックスを有効または無効になっているかどうかを指定します。  
+ 「応答していない」のダイアログ ボックスが有効になっているかどうかを指定します。  
   
 ##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState  
  この関数では、ビジー状態を終了します。  
@@ -150,11 +150,11 @@ virtual void EndBusyState();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 組み合わせて動作[BeginBusyState](#beginbusystate)をアプリケーションのビジー状態を制御します。 関数は、 [SetBusyReply](#setbusyreply)呼び出し元アプリケーションのビジー状態であるときに、アプリケーションの応答を決定します。  
+ 組み合わせて動作[BeginBusyState](#beginbusystate)アプリケーションのビジー状態を制御します。 関数は、 [SetBusyReply](#setbusyreply)ビジー状態のときに、アプリケーションを呼び出すことに、アプリケーションの応答を決定します。  
   
- `BeginBusyState`と`EndBusyState`呼び出しインクリメントし、それぞれ、アプリケーションがビジー状態であるかどうかを決定するカウンターをデクリメントします。 たとえば、2 回の呼び出しに`BeginBusyState`とに 1 回の呼び出し`EndBusyState`ビジー状態の結果をまだです。 呼び出す必要があるビジー状態をキャンセルする`EndBusyState`同じ回数`BeginBusyState`が呼び出されています。  
+ `BeginBusyState`と`EndBusyState`呼び出しをインクリメントおよびデクリメント、それぞれ、アプリケーションがビジー状態かどうかを決定するカウンター。 たとえば、2 回の呼び出しに`BeginBusyState`とに 1 回の呼び出し`EndBusyState`ビジー状態の結果をまだします。 呼び出す必要があるビジー状態をキャンセルする`EndBusyState`同じ回数`BeginBusyState`が呼び出されました。  
   
- 既定では、フレームワークの状態にビジー状態で実行される、アイドル状態の処理中に[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)です。 アプリケーションが ON_UPDATE_COMMAND_UI 通知を処理中に、受信呼び出しは、アイドル処理が完了した後に処理されます。  
+ 既定では、フレームワークが付属しています、アイドル状態の処理中にビジー状態を入力[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)します。 ON_UPDATE_COMMAND_UI 通知の処理には、アプリケーションがあるが、中に、受信呼び出しは、アイドル状態の処理が完了した後に処理されます。  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  OLE 呼び出しが進行中は、メッセージを処理するためにフレームワークによって呼び出されます。  
@@ -171,7 +171,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
  正常に完了した場合はゼロ以外、それ以外の場合は 0 です。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し元のアプリケーションは、呼び出しの完了を待っている、ときに、フレームワークによって呼び出されます`OnMessagePending`保留中のメッセージへのポインター。 既定では、長い時間がかかっている呼び出し中にウィンドウの更新を実行できるように、フレームワークが WM_PAINT メッセージをディスパッチします。  
+ 呼び出し元のアプリケーションは、呼び出しの完了の待機中に、フレームワーク`OnMessagePending`保留中のメッセージへのポインター。 既定では、ウィンドウの更新は長い時間がかかっている呼び出し中に発生することができるように、フレームワークは、WM_PAINT メッセージをディスパッチします。  
   
  呼び出しを使用して、メッセージ フィルターを登録する必要があります[登録](#register)前に、アクティブになることができます。  
   
@@ -186,12 +186,12 @@ BOOL Register();
  正常に完了した場合はゼロ以外、それ以外の場合は 0 です。  
   
 ### <a name="remarks"></a>Remarks  
- システム Dll に登録されていない限りは、メッセージ フィルターを指定しても効果はありません。 通常、アプリケーションの初期化コードは、アプリケーションのメッセージ フィルターを登録します。 呼び出しによって、プログラムが終了する前に、アプリケーションで登録されている他のメッセージ フィルターを取り消す必要があります[取り消す](#revoke)です。  
+ システム Dll に登録されていないメッセージ フィルターの効果はありません。 通常、アプリケーションの初期化コードは、アプリケーションのメッセージ フィルターを登録します。 呼び出して、プログラムが終了する前に、他のメッセージ フィルターによって、アプリケーション登録を取り消す必要があります[取り消す](#revoke)します。  
   
  フレームワークの既定のメッセージ フィルターは自動的に初期化中に登録され、終了時に失効します。  
   
 ##  <a name="revoke"></a>  COleMessageFilter::Revoke  
- 呼び出しによって実行される前の登録では失効[登録](#register)です。  
+ 呼び出しによって実行される前の登録を取り消します[登録](#register)します。  
   
 ```  
 void Revoke();
@@ -211,37 +211,37 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
 ### <a name="parameters"></a>パラメーター  
  *nBusyReply*  
- 値、 `SERVERCALL` COMPOBJ で定義されている列挙します。H. 次の値のいずれかを取ります。  
+ 値、 `SERVERCALL` COMPOBJ で定義されている列挙型。H. 次の値のいずれかのことができます。  
   
-- **SERVERCALL_ISHANDLED**アプリケーションは呼び出しを受け取ることができますが、特定の呼び出しの処理に失敗する可能性があります。  
+- SERVERCALL_ISHANDLED アプリケーションでは、呼び出しを受け入れることができますが、特定の呼び出しの処理に失敗する可能性があります。  
   
-- **SERVERCALL_REJECTED**アプリケーションおそらくできなくなりますの呼び出しを処理できません。  
+- SERVERCALL_REJECTED アプリケーションおそらくできなく、呼び出しを処理します。  
   
-- **SERVERCALL_RETRYLATER**アプリケーションが一時的に、状態では、呼び出しを処理できません。  
+- SERVERCALL_RETRYLATER アプリケーションは、呼び出しを処理できない状態では一時的にします。  
   
 ### <a name="remarks"></a>Remarks  
  [BeginBusyState](#beginbusystate)と[EndBusyState](#endbusystate)関数は、アプリケーションのビジー状態を制御します。  
   
- ときに、アプリケーションが行われたへの呼び出しでビジー状態`BeginBusyState`からに応答する通話 OLE システム Dll の最後の設定によって決定される値と`SetBusyReply`です。 呼び出し元のアプリケーションでは、このビジー状態の応答を使って、実行するアクションを決定します。  
+ アプリケーションを行ったときの呼び出しでビジー状態`BeginBusyState`の最後の設定によって決定される値で OLE システム Dll からの呼び出しに応答が`SetBusyReply`します。 呼び出し元のアプリケーションでは、このビジー状態の応答を使用して、実行するには、どのようなアクションを調べます。  
   
- ビジー状態の応答は、既定では、 **SERVERCALL_RETRYLATER**です。 この応答は、できるだけ早く呼び出しを再試行する呼び出し側アプリケーションです。  
+ 既定では、ビジー状態の応答は SERVERCALL_RETRYLATER です。 この応答は、できるだけ早く、呼び出しを再試行する呼び出し元のアプリケーションです。  
   
 ##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay  
- これ以上の操作を実行する前に呼び出されたアプリケーションからの応答の呼び出し元のアプリケーションの待機を決定します。  
+ 呼び出し元のアプリケーションがこれ以上の操作を実行する前に呼び出し先のアプリケーションからの応答を待機する時間を決定します。  
   
 ```  
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- *%n タイムアウト*  
- 保留中のメッセージの遅延時間 (ミリ秒) の数です。  
+ *タイムアウト*  
+ 保留中のメッセージの遅延時間のミリ秒数。  
   
 ### <a name="remarks"></a>Remarks  
- この関数と連携して動作[ビジー](#setretryreply)です。  
+ この関数の動作と連携して[ビジー](#setretryreply)します。  
   
 ##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply  
- 呼び出し先のアプリケーションがビジー状態の応答を受け取ると、呼び出し元のアプリケーションのアクションを決定します。  
+ 呼び出し先のアプリケーションのビジー状態の応答を受信した場合、呼び出し元アプリケーションの動作を決定します。  
   
 ```  
 void SetRetryReply(DWORD nRetryReply = 0);
@@ -249,20 +249,20 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
 ### <a name="parameters"></a>パラメーター  
  *nretryreply で指定しました。*  
- 再試行の間隔 (ミリ秒) の数です。  
+ 再試行の間のミリ秒数。  
   
 ### <a name="remarks"></a>Remarks  
- 呼び出し先のアプリケーションでは、ビジー状態であることを示します、ときに、呼び出し元アプリケーションは、サーバーがビジー状態、すぐを再試行するか、指定した時間後に再試行するされなくなるまで待つことができます。 呼び出しをキャンセルすることもできます。  
+ 呼び出し先のアプリケーションでは、ビジー状態であることを示します、ときに、サーバーがビジー状態で、すぐに再試行するか、指定した時間後に再試行するまで待機する、呼び出し元アプリケーションがあります。 呼び出しをキャンセルすることもできます。  
   
- 呼び出し元の応答は、関数によって制御されます`SetRetryReply`と[SetMessagePendingDelay](#setmessagependingdelay)です。 `SetRetryReply` 呼び出し元のアプリケーションが待機、特定の呼び出しの再試行の間隔を決定します。 `SetMessagePendingDelay` さらに操作を実行する前にサーバーからの応答を呼び出し元のアプリケーション待機時間を決定します。  
+ 呼び出し元の応答は、関数によって制御される`SetRetryReply`と[SetMessagePendingDelay](#setmessagependingdelay)します。 `SetRetryReply` 呼び出し元のアプリケーションが特定の呼び出しの再試行の間待機する時間を決定します。 `SetMessagePendingDelay` さらにアクションを実行する前に、サーバーからの応答の呼び出し元のアプリケーションでは、待機する時間を決定します。  
   
- 通常の既定値は許容され、変更する必要はありません。 フレームワークは、呼び出しを再試行すべて*nretryreply で指定した*呼び出しがまたは保留中のメッセージの遅延時間が経過するまで、ミリ秒です。 値 0 を*nretryreply で指定した*を指定、呼び出しのキャンセルの即時再試行、および 1 を指定します。  
+ 通常、既定値が許容されると変更する必要はありません。 呼び出しを再試行するために、フレームワークすべて*nretryreply で指定した*呼び出しがまたは保留中のメッセージの遅延時間が経過するまでのミリ秒。 値 0 を*nretryreply で指定した*を指定します、通話のキャンセルの即時再試行、および 1 を指定します。  
   
- 保留中のメッセージの遅延時間が有効期限が切れて、OLE「ビジー状態 ダイアログ ボックス」(を参照してください[COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) が表示され、ユーザーを取り消すか、呼び出しを再実行を選択できます。 呼び出す[EnableBusyDialog](#enablebusydialog)を有効にするにまたは、このダイアログ ボックスを無効にします。  
+ 保留中のメッセージの遅延が有効期限が切れて、OLE「ビジー状態 ダイアログ ボックス」(を参照してください[COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) が表示され、ユーザーをキャンセルするか、呼び出しを再試行できます。 呼び出す[EnableBusyDialog](#enablebusydialog)有効またはこのダイアログ ボックスを無効にします。  
   
- キーボードまたはマウスのメッセージが保留中の場合、呼び出しと呼び出し中にタイムアウトしました (保留中のメッセージの遅延時間を超えると)、「応答していない」のダイアログ ボックスが表示されます。 呼び出す[EnableNotRespondingDialog](#enablenotrespondingdialog)を有効にするにまたは、このダイアログ ボックスを無効にします。 通常事態は、この状態は、問題の発生し、ユーザーは待たことを示します。  
+ キーボードまたはマウス メッセージが保留中の場合、呼び出しと呼び出しの中にタイムアウトしました (保留中のメッセージの遅延時間を超えると)、「応答していない」のダイアログ ボックスが表示されます。 呼び出す[EnableNotRespondingDialog](#enablenotrespondingdialog)有効またはこのダイアログ ボックスを無効にします。 通常の問題」のこの状態は、問題の発生をユーザーを待たを示します。  
   
- ダイアログ ボックスが無効な場合、現在「再試行」の応答は常に使用ビジー状態のアプリケーションへの呼び出し。  
+ ダイアログ ボックスを無効にすると、現在「再試行応答」がビジー状態のアプリケーションへの呼び出しに使用されます。  
   
 ## <a name="see-also"></a>関連項目  
  [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   

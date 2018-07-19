@@ -1,5 +1,5 @@
 ---
-title: MFC で使用されるコールバック関数 |Microsoft ドキュメント
+title: MFC で使用されるコールバック関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 96db2ea0c28e14f7a8e614d94e18cd3fad3cda53
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339011"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC で使われているコールバック関数
-次の 3 つのコールバック関数は、Microsoft Foundation Class ライブラリに表示されます。 これらのコールバック関数に渡される[cdc::enumobjects](../../mfc/reference/cdc-class.md#enumobjects)、 [cdc::graystring](../../mfc/reference/cdc-class.md#graystring)、および[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)です。 すべてのコールバック関数がコールバックの境界を越えて例外をスローすることはできませんので、Windows に返す前に MFC 例外をトラップする必要がありますに注意してください。 例外の詳細については、記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)です。  
+次の 3 つのコールバック関数は、Microsoft Foundation Class ライブラリに表示されます。 これらのコールバック関数に渡される[cdc::enumobjects](../../mfc/reference/cdc-class.md#enumobjects)、 [cdc::graystring](../../mfc/reference/cdc-class.md#graystring)、および[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)します。 すべてのコールバック関数がコールバックの境界を越えて例外をスローすることはできませんので、Windows に戻る前に MFC の例外をトラップする必要がありますに注意してください。 例外の詳細については、記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)します。  
 
 |name||  
 |----------|-----------------|  
@@ -51,13 +51,13 @@ int CALLBACK EXPORT ObjectFunc(
   
 ### <a name="parameters"></a>パラメーター  
  *lpszLogObject*  
- 指す、 [LOGPEN](../../mfc/reference/logpen-structure.md)または[LOGBRUSH](../../mfc/reference/logbrush-structure.md)オブジェクトの論理属性に関する情報を格納するデータ構造です。  
+ 指す、 [LOGPEN](../../mfc/reference/logpen-structure.md)または[LOGBRUSH](../../mfc/reference/logbrush-structure.md)オブジェクトの論理の属性に関する情報を含むデータ構造です。  
   
  *lpData*  
  アプリケーションによって提供されるデータへのポインターが渡される、`EnumObjects`関数。  
   
 ### <a name="return-value"></a>戻り値  
- コールバック関数が返す、 **int**です。この戻り値の値は、ユーザー定義です。 コールバック関数は 0 を返す場合`EnumObjects`早い段階で列挙を停止します。  
+ コールバック関数が返す、 **int**します。この戻り値の値は、ユーザー定義します。 コールバック関数は 0 を返す場合`EnumObjects`早い段階で列挙を停止します。  
   
 ### <a name="remarks"></a>Remarks  
  実際の名前をエクスポートする必要があります。  
@@ -76,19 +76,19 @@ BOOL CALLBACK EXPORT OutputFunc(
   
 ### <a name="parameters"></a>パラメーター  
  *hDC*  
- 少なくとものビットマップをメモリ デバイス コンテキストを識別の幅と高さで指定された*nWidth*と*パラメーター nHeight*に`GrayString`です。  
+ 少なくとものビットマップをメモリ デバイス コンテキストを識別します。 幅と高さで指定された`nWidth`と`nHeight`に`GrayString`します。  
   
  *lpData*  
  描画される文字列を指します。  
   
  *nCount*  
- 出力する文字の数を指定します。  
+ 出力する文字数を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- コールバック関数の戻り値である必要があります**TRUE**成功した場合はそれ以外の場合は**FALSE**です。  
+ コールバック関数の戻り値が成功した場合は TRUE にする必要があります。それ以外の場合は、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- コールバック関数 (*OutputFunc*) 座標 (0, 0) を基準としたイメージを描画する必要がなく (*x*、 *y*)。  
+ コールバック関数 (*OutputFunc*) 座標 (0, 0) を基準として、イメージを描画する必要がありますのではなく (*x*、 *y*)。  
 
 ## <a name="setabortproc"></a>  Cdc::setabortproc 用コールバック関数
 名前*AbortFunc*アプリケーションによって提供される関数名のプレース ホルダーです。  
@@ -106,13 +106,13 @@ BOOL CALLBACK EXPORT AbortFunc(
  デバイス コンテキストを識別します。  
   
  *コード*  
- エラーが発生したかどうかを指定します。 エラーが発生していない場合は 0 になります。 **させることでより**プリント マネージャーがディスク領域が不足が現在、多くのディスク領域は、アプリケーションが待機する場合に使用可能になる場合。 場合*コード*は**させることでより**アプリケーションは、印刷ジョブを中止する必要はありません。 そうでない場合に呼び出すことにより、プリント マネージャーを生成する必要があります、`PeekMessage`または`GetMessage`Windows の機能です。  
+ エラーが発生したかどうかを指定します。 エラーが発生していない場合は 0 になります。 させることでよりプリント マネージャーがディスク領域が現在しより多くのディスク領域が利用可能になる場合は、アプリケーションが待機します。 場合*コード*させることよりは、アプリケーションは、印刷ジョブを中止する必要はありません。 そうでない場合に呼び出すことによって、プリント マネージャーに譲渡する必要があります、`PeekMessage`または`GetMessage`Windows 関数。  
   
 ### <a name="return-value"></a>戻り値  
- 中止ハンドラー関数の戻り値は、印刷ジョブの操作を続行する場合、0 以外の値、0 が取り消された場合。  
+ 中止ハンドラー関数の戻り値が 0 以外の場合、印刷ジョブの操作を続行する場合、0 がキャンセルされた場合。  
   
 ### <a name="remarks"></a>Remarks  
- 」の「解説」セクションの説明に従って実際名前をエクスポートする必要があります[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)です。  
+ 」の「解説」の説明に従って、実際の名前をエクスポートする必要があります[cdc::setabortproc](../../mfc/reference/cdc-class.md#setabortproc)します。  
  
   
 ## <a name="see-also"></a>関連項目  

@@ -16,20 +16,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7219ed039e77d0857151c54e73a03a0d1f6a3f5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4163542d0ba741e6f0a123cbdcdc44dbbec470d1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864139"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957792"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
-`_ITERATOR_DEBUG_LEVEL` マクロは、[チェックを行う反復子](../standard-library/checked-iterators.md)および[反復子のデバッグのサポート](../standard-library/debug-iterator-support.md)が有効かどうかを制御します。 このマクロは、以前の `_SECURE_SCL` および `_HAS_ITERATOR_DEBUGGING` マクロを置き換え、組み合わせたものです。
+_ITERATOR_DEBUG_LEVEL マクロ コントロールかどうか[反復子がチェック](../standard-library/checked-iterators.md)と[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)を有効にします。 このマクロよりも優先され、以前の _SECURE_SCL および _HAS_ITERATOR_DEBUGGING マクロの機能を結合します。
 
 ## <a name="macro-values"></a>マクロの値
 
-`_ITERATOR_DEBUG_LEVEL` マクロの有効値を次の表に示します。
+次の表では、_ITERATOR_DEBUG_LEVEL マクロの値をまとめたものです。
 
 |コンパイル モード|マクロの値|説明|
 |----------------------|----------------|-----------------|
@@ -41,13 +41,13 @@ ms.locfileid: "33864139"
 ||0 (既定値)|チェックを行う反復子を無効にします。|
 ||1|チェックを行う反復子を有効にします。反復子のデバッグは関連しません。|
 
-リリース モードでは、`_ITERATOR_DEBUG_LEVEL` に 2 を指定するとコンパイラはエラーを生成します。
+リリース モードでは、コンパイラは、_ITERATOR_DEBUG_LEVEL を 2 として指定する場合に、エラーを生成します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`_ITERATOR_DEBUG_LEVEL` マクロは、[チェックを行う反復子](../standard-library/checked-iterators.md)が有効かどうか、およびデバッグ モードで[反復子のデバッグのサポート](../standard-library/debug-iterator-support.md)が有効かどうかを制御します。 `_ITERATOR_DEBUG_LEVEL` が 1 または 2 と定義されている場合、チェックを行う反復子は、コンテナーの境界が上書きされないようにします。 `_ITERATOR_DEBUG_LEVEL` が 0 の場合、反復子はチェックされません。 `_ITERATOR_DEBUG_LEVEL` が 1 と定義されている場合、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 `_ITERATOR_DEBUG_LEVEL` が 2 と定義されている場合、反復子の安全でない使用によってアサートが発生し、ランタイム エラー ダイアログによってデバッガーに侵入できます。
+_ITERATOR_DEBUG_LEVEL マクロ コントロールかどうか[反復子がチェック](../standard-library/checked-iterators.md)が有効にして、デバッグ モードでかどうか、[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)を有効にします。 _ITERATOR_DEBUG_LEVEL が 1 または 2 として定義される場合、checked 反復子は、コンテナーの境界が上書きされないことを確認します。 _ITERATOR_DEBUG_LEVEL が 0 の場合、反復子はチェックされません。 _ITERATOR_DEBUG_LEVEL が 1 として定義されると、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 _ITERATOR_DEBUG_LEVEL は 2 として定義されている、安全でない反復子は、アサートとすることができます、ランタイム エラー ダイアログがデバッガーに割り込む原因を使用します。
 
-`_ITERATOR_DEBUG_LEVEL` マクロでは、`_SECURE_SCL` および `_HAS_ITERATOR_DEBUGGING` マクロと同様の機能がサポートされるため、特定の状況で使用するマクロおよびマクロ値を判断できない場合があります。 混乱を回避するために、`_ITERATOR_DEBUG_LEVEL` マクロのみを使用することをお勧めします。 次の表では、既存のコードの `_SECURE_SCL` および `_HAS_ITERATOR_DEBUGGING` のさまざまな値に使用する `_ITERATOR_DEBUG_LEVEL` マクロの同等の値を示します。
+_ITERATOR_DEBUG_LEVEL マクロが、_SECURE_SCL マクロおよび _HAS_ITERATOR_DEBUGGING マクロと同様の機能をサポートするため、場合があります特定するマクロおよびマクロは、特定の状況で使用する値します。 混乱を防ぐためには、_ITERATOR_DEBUG_LEVEL マクロのみを使用することをお勧めします。 このテーブルには、_SECURE_SCL と既存のコードで _HAS_ITERATOR_DEBUGGING のさまざまな値を使用する同等の _ITERATOR_DEBUG_LEVEL マクロの値について説明します。
 
 |**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
 |---|---|---|
@@ -59,7 +59,7 @@ ms.locfileid: "33864139"
 
 ### <a name="example"></a>例
 
-`_ITERATOR_DEBUG_LEVEL` マクロの値を指定するには、[/D](../build/reference/d-preprocessor-definitions.md) コンパイラ オプションを使用して、コマンド ラインで定義するか、または C++ 標準ライブラリ ヘッダーがソース ファイルに含まれる前に `#define` を使用します。 たとえば、コマンド ラインで、*sample.cpp* をデバッグ モードでコンパイルし、反復子のデバッグのサポートを使用するには、`_ITERATOR_DEBUG_LEVEL` マクロ定義を指定します。
+_ITERATOR_DEBUG_LEVEL マクロの値を指定するには、使用、 [/D](../build/reference/d-preprocessor-definitions.md)コンパイラ オプションで、コマンドラインで定義または使用`#define`ソース ファイルで、C++ 標準ライブラリの前にヘッダーが含まれています。 コンパイル、コマンドラインでなど*sample.cpp*デバッグ モードで、反復子のデバッグのサポートを使用するには、_ITERATOR_DEBUG_LEVEL マクロの定義を指定することができます。
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

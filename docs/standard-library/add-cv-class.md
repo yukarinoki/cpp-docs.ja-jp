@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9825b690336acc8e93b0d404cc8335e5b27404b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b138424f3394c940307b422f590648c661d037d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840590"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958144"
 ---
 # <a name="addcv-class"></a>add_cv クラス
 
-型から const volatile 型を作成します。
+**Const volatile**型からの型。
 
 ## <a name="syntax"></a>構文
 
@@ -40,11 +40,11 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-変更後の型 `add_cv<T>` のインスタンスには、[add_volatile](../standard-library/add-volatile-class.md) と [add_const](../standard-library/add-const-class.md) の両方で変更された *T* と同等の `type` メンバー typedef があります。ただし、*T* が CV 修飾子を既に持っている場合、参照の場合、または関数の場合は除きます。
+変更された型のインスタンス`add_cv<T>`が、`type`メンバー **typedef**等しく*T*両方で変更された[add_volatile](../standard-library/add-volatile-class.md)と[add_const](../standard-library/add-const-class.md)がない限り、 *T* cv 修飾子を持っている場合は、参照か関数です。
 
 `add_cv_t<T>` ヘルパー型は、`add_cv<T>` メンバー typedef `type` にアクセスするショートカットです。
 
@@ -93,7 +93,7 @@ invoked volatile S.f()
 invoked const volatile S.f()
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits > **Namespace:** std
 

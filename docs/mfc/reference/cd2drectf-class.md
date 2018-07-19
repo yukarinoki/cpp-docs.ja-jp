@@ -1,5 +1,5 @@
 ---
-title: CD2DRectF クラス |Microsoft ドキュメント
+title: CD2DRectF クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1f96adf519eb710d412465a9db4cbd7313f91f41
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338273"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF クラス
 `D2D1_RECT_F`のラッパー。  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|返します、**ブール**を式に有効なデータがないかどうかを示す値 ( **null**)。|  
+|[CD2DRectF::IsNull](#isnull)|返します、**ブール**式に有効なデータ (NULL) がないかどうかを示す値です。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
@@ -94,7 +94,7 @@ CD2DRectF(
  右側の座標のソース  
   
  *fBottom*  
- ソースの下の座標  
+ ソースの下端の座標  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  
  式に有効なデータ (Null) がないかどうかを示すブール値を返します。  
@@ -104,10 +104,10 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 四角形の上、左、下、および適切な値はすべて 0 に等しい場合は TRUE。それ以外の場合は FALSE。  
+ 四角形の上、左、下、および適切な値が 0 に等しい場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
- CD2DRectF を含む CRect オブジェクトに変換します。  
+ CD2DRectF CRect オブジェクトに変換します。  
   
 ```  
 operator CRect();

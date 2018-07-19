@@ -1,5 +1,5 @@
 ---
-title: BITMAP 構造体 |Microsoft ドキュメント
+title: BITMAP 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950305"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339348"
 ---
 # <a name="bitmap-structure"></a>BITMAP 構造体
-**ビットマップ**構造体は、高さ、幅、色の書式、および論理ビットマップのビット値を定義します。**です。**  
+**ビットマップ**構造体は、高さ、幅、色の書式、および論理ビットマップのビット値を定義します。**します。**  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  ラスター行数を使用してビットマップの高さを指定します。 高さは 0 より大きい値でなければなりません。  
   
  *bmWidthBytes*  
- 各ラスター行に含まれるバイト数を指定します。 グラフィック デバイス インターフェイス (GDI) は、ビットマップ形式のビット値が整数値 (2 バイト) の配列を形成することを想定するため、この値は偶数であることが必要です。 つまり、 *bmWidthBytes* \* 8 が 16 より大きいか等しい場合に得られる値の倍数にする必要があります、 *bmWidth*メンバーを掛けた、 *bmBitsPixel*メンバー。  
+ 各ラスター行に含まれるバイト数を指定します。 グラフィック デバイス インターフェイス (GDI) は、ビットマップ形式のビット値が整数値 (2 バイト) の配列を形成することを想定するため、この値は偶数であることが必要です。 つまり、 *bmWidthBytes* \* 8 は、ときに取得した値以上の 16 の倍数である必要があります、 *bmWidth*メンバーを乗算して、 *bmBitsPixel*メンバー。  
   
  *bmPlanes*  
  ビットマップ内でのカラー プレーンの数を指定します。  
@@ -83,7 +83,7 @@ typedef struct tagBITMAP {  /* bm */
   
  モノクロ デバイス上のピクセルは黒と白のどちらかです。 ビットマップ内で対応するビットが 1 の場合、そのピクセルはオン (白) になります。 ビットマップ内で対応するビットが 0 の場合、そのピクセルはオフ (黒) になります。  
   
- すべてのデバイスをサポートしているビットマップを**RC_BITBLT**ビットが設定、 **RASTERCAPS**のインデックス、[について](../../mfc/reference/cdc-class.md#getdevicecaps)メンバー関数。  
+ すべてのデバイスの RASTERCAPS インデックスのビット RC_BITBLT セット ビットマップをサポートする、[は](../../mfc/reference/cdc-class.md#getdevicecaps)メンバー関数。  
   
  各デバイスには、独自のカラー形式があります。 別に 1 つのデバイスからビットマップを転送するために使用して、 [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)と[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 関数。  
   

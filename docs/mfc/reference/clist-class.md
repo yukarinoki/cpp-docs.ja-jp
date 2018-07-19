@@ -1,5 +1,5 @@
 ---
-title: CList クラス |Microsoft ドキュメント
+title: CList クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339333"
 ---
 # <a name="clist-class"></a>CList クラス
 オブジェクト (重複あり) を順に並べたリストをサポートします。このリストには、シーケンシャル アクセスまたは値指定によるアクセスを行うことができます。  
@@ -89,47 +89,47 @@ class CList : public CObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[CList::AddHead](#addhead)|(新しいヘッドにより) リストの先頭に要素 (または別のリスト内のすべての要素) を追加します。|  
-|[CList::AddTail](#addtail)|(新しい末尾になります)、リストの末尾に要素 (または別のリスト内のすべての要素) を追加します。|  
+|[CList::AddHead](#addhead)|(新しい head は、) リストの先頭に要素 (または別のリストのすべての要素) を追加します。|  
+|[CList::AddTail](#addtail)|(新しい末尾になります)、リストの末尾に要素 (または別のリストのすべての要素) を追加します。|  
 |[CList::Find](#find)|ポインター値で指定された要素の位置を取得します。|  
-|[CList::FindIndex](#findindex)|0 から始まるインデックスによって指定された要素の位置を取得します。|  
+|[CList::FindIndex](#findindex)|0 から始まるインデックスで指定した要素の位置を取得します。|  
 |[CList::GetAt](#getat)|指定された位置に要素を取得します。|  
-|[呼び出す](#getcount)|この一覧にある要素の数を返します。|  
-|[CList::GetHead](#gethead)|(空にすることはできません)、リストの先頭の要素を返します。|  
+|[呼び出す](#getcount)|この一覧には、要素の数を返します。|  
+|[CList::GetHead](#gethead)|(空にすることはできません) の一覧の先頭の要素を返します。|  
 |[CList::GetHeadPosition](#getheadposition)|リストの先頭の要素の位置を返します。|  
 |[CList::GetNext](#getnext)|反復処理するためには、次の要素を取得します。|  
 |[CList::GetPrev](#getprev)|反復処理するためには、直前の要素を取得します。|  
-|[CList::GetSize](#getsize)|この一覧にある要素の数を返します。|  
+|[CList::GetSize](#getsize)|この一覧には、要素の数を返します。|  
 |[CList::GetTail](#gettail)|(空にすることはできません)、リストの末尾の要素を返します。|  
 |[CList::GetTailPosition](#gettailposition)|リストの末尾の要素の位置を返します。|  
-|[CList::InsertAfter](#insertafter)|指定した位置の後に新しい要素を挿入します。|  
+|[CList::InsertAfter](#insertafter)|指定した位置より後に新しい要素を挿入します。|  
 |[CList::InsertBefore](#insertbefore)|指定した位置の前に新しい要素を挿入します。|  
 |[CList::IsEmpty](#isempty)|空のリストの条件 (要素がない) をテストします。|  
-|[CList::RemoveAll](#removeall)|このリストからすべての要素を削除します。|  
-|[CList::RemoveAt](#removeat)|この一覧から、位置によって指定された要素を削除します。|  
+|[CList::RemoveAll](#removeall)|この一覧からすべての要素を削除します。|  
+|[CList::RemoveAt](#removeat)|位置によって指定された、このリストから要素を削除します。|  
 |[CList::RemoveHead](#removehead)|リストの先頭から要素を削除します。|  
 |[CList::RemoveTail](#removetail)|リストの末尾から要素を削除します。|  
 |[CList::SetAt](#setat)|指定された位置に要素を設定します。|  
   
 #### <a name="parameters"></a>パラメーター  
- `TYPE`  
- 一覧に格納されているオブジェクトの型。  
+ *TYPE*  
+ リストに格納されているオブジェクトの型。  
   
- `ARG` *_* `TYPE`  
+ *ARG* *_* *型*  
  型リストに格納されているオブジェクトを参照するために使用します。 参照であることができます。  
   
 ## <a name="remarks"></a>Remarks  
  `CList` リストは、二重リンク リストのように動作します。  
   
- 型の変数**位置**はリストのキーです。 使用することができます、**位置**順番にリストを走査する反復子および位置を保持するためのブックマークとして変数です。 位置は、インデックスと同じただしです。  
+ 位置の型の変数は、リストのキーです。 POSITION 変数は、位置を保持するのにブックマークとして、順番にリストを走査するのに反復子として使用できます。 位置が、インデックスと同じです。 ただしです。  
   
- 要素の挿入は、非常に高速リストの先頭、末尾、および既知**位置**です。 順次検索は、値またはインデックスで要素を検索する必要があります。 この検索は、一覧が長い場合は低速にすることはできます。  
+ 要素の挿入はリストの先頭、末尾、および既知の位置に非常に高速です。 順次検索は、値またはインデックスで要素を検索する必要があります。 この検索は、リストが長い場合は低速にすることはできます。  
   
- 個々 の要素の一覧にダンプする場合は、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
+ リスト内の個々 の要素のダンプが必要な場合は、1 以上にダンプ コンテキストの深さを設定する必要があります。  
   
- ほとんどの用途のグローバルのヘルパー関数をこのクラスの呼び出しの一部のメンバー関数をカスタマイズする必要があります、`CList`クラスです。 参照してください[コレクション クラスのヘルパー](../../mfc/reference/collection-class-helpers.md) 「マクロとグローバル変数」セクションでします。  
+ ほとんどの用途のグローバルなヘルパー関数をこのクラスの呼び出しの一部のメンバー関数をカスタマイズする必要があります、`CList`クラス。 参照してください[コレクション クラスのヘルパー](../../mfc/reference/collection-class-helpers.md) 「マクロとグローバル変数」セクションでします。  
   
- 使用する方法についての`CList`、記事を参照して[コレクション](../../mfc/collections.md)です。  
+ 使用しての詳細については`CList`、記事をご覧ください[コレクション](../../mfc/collections.md)します。  
   
 ## <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#35](../../mfc/codesnippet/cpp/clist-class_1.cpp)]  
@@ -143,7 +143,7 @@ class CList : public CObject
  **ヘッダー:** afxtempl.h  
   
 ##  <a name="addhead"></a>  CList::AddHead  
- このリストの先頭に新しい要素または要素の一覧を追加します。  
+ このリストの先頭に新しい要素または要素のリストを追加します。  
   
 ```  
 POSITION AddHead(ARG_TYPE newElement);  
@@ -158,10 +158,10 @@ void AddHead(CList* pNewList);
  新しい要素。  
   
  *pNewList*  
- 別のポインター `CList`  ボックスの一覧です。 内の要素*pNewList*この一覧に追加されます。  
+ 別のポインター`CList`一覧。 内の要素*pNewList*この一覧に追加されます。  
   
 ### <a name="return-value"></a>戻り値  
- 最初のバージョンを返します、**位置**は新しく挿入される要素の値。  
+ 最初のバージョンでは、新しく挿入される要素の位置を表す値を返します。  
   
 ### <a name="remarks"></a>Remarks  
  一覧は、操作の前に空にすることができます。  
@@ -170,7 +170,7 @@ void AddHead(CList* pNewList);
  [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
 ##  <a name="addtail"></a>  CList::AddTail  
- このリストの末尾に新しい要素または要素の一覧を追加します。  
+ このリストの末尾に新しい要素または要素のリストを追加します。  
   
 ```  
 POSITION AddTail(ARG_TYPE newElement);  
@@ -185,10 +185,10 @@ void AddTail(CList* pNewList);
  この一覧に追加する要素。  
   
  *pNewList*  
- 別のポインター `CList`  ボックスの一覧です。 内の要素*pNewList*この一覧に追加されます。  
+ 別のポインター`CList`一覧。 内の要素*pNewList*この一覧に追加されます。  
   
 ### <a name="return-value"></a>戻り値  
- 最初のバージョンを返します、**位置**は新しく挿入される要素の値。  
+ 最初のバージョンでは、新しく挿入される要素の位置を表す値を返します。  
   
 ### <a name="remarks"></a>Remarks  
  一覧は、操作の前に空にすることができます。  
@@ -205,16 +205,16 @@ CList(INT_PTR nBlockSize = 10);
   
 ### <a name="parameters"></a>パラメーター  
  *nBlockSize*  
- リストを拡張するメモリ割り当ての粒度。  
+ リストを拡張するためのメモリの割り当て粒度。  
   
 ### <a name="remarks"></a>Remarks  
- 単位でメモリが割り当てられているリストするにつれて、 *nBlockSize*エントリです。  
+ 単位でメモリが割り当てられている、一覧につれ、 *nBlockSize*エントリ。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- 指定された一致する最初の要素を検索するには、順番にリストから検索*searchValue*です。  
+ 指定された一致する最初の要素を検索するには、順番に一覧を検索*searchValue*します。  
   
 ```  
 POSITION Find(
@@ -230,16 +230,16 @@ POSITION Find(
  一覧で検索する値。  
   
  *startAfter*  
- 検索の開始位置。 値が指定されていない場合、検索は、head 要素で始まります。  
+ 検索の開始位置。 値が指定されていない場合は、head 要素で、検索が始まります。  
   
 ### <a name="return-value"></a>戻り値  
- A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**オブジェクトが見つからない場合。  
+ イテレーションまたはオブジェクト ポインターの取得に使用できる位置の値オブジェクトが見つからない場合は NULL です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- 値を使用して*nIndex*一覧のインデックス。  
+ 値を使用して*nIndex*リストのインデックス。  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
@@ -250,10 +250,10 @@ POSITION FindIndex(INT_PTR nIndex) const;
  検索するリストの要素の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**場合*nIndex*が負の値または大きすぎます。  
+ イテレーションまたはオブジェクト ポインターの取得に使用できる位置の値場合は NULL *nIndex*負の値または大きすぎます。  
   
 ### <a name="remarks"></a>Remarks  
- 停止する、リストの先頭から順次スキャンを開始、 *n*番目の要素。  
+ 上の停止、リストの先頭から順次スキャンを開始、 *n*番目の要素。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
@@ -271,37 +271,37 @@ const TYPE& GetAt(POSITION position) const;
  一覧でオブジェクトの種類を指定するテンプレート パラメーター。  
   
  *位置*  
- 取得する要素の一覧で位置。  
+ 取得する要素のリスト内の位置。  
   
 ### <a name="return-value"></a>戻り値  
- 戻り値の説明を参照してください`GetHead`です。  
+ 戻り値の説明を参照して`GetHead`します。  
   
 ### <a name="remarks"></a>Remarks  
- `GetAt` 指定した位置に関連付けられている、要素 (または、要素への参照) を返します。 インデックスと同じではなく、操作することはできません、**位置**自分での値します。 型の変数**位置**はリストのキーです。  
+ `GetAt` 指定した位置に関連付けられている要素 (または、要素への参照) を返します。 、インデックスと同じではありませんし、操作できません。 位置の値を自分でします。 位置の型の変数は、リストのキーです。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
 ### <a name="example"></a>例  
-  例を参照して[CList::GetHeadPosition](#getheadposition)です。  
+  例をご覧ください[CList::GetHeadPosition](#getheadposition)します。  
   
 ##  <a name="getcount"></a>  呼び出す  
- この一覧内の要素の数を取得します。  
+ この一覧には、要素の数を取得します。  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 要素の数を含む整数値。  
+ 要素の数を格納する整数値。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出すのと同じ結果が生成されます、 [CList::GetSize](#getsize)メソッドです。  
+ このメソッドを呼び出すのと同じ結果が生成されます、 [CList::GetSize](#getsize)メソッド。  
   
 ### <a name="example"></a>例  
-  例を参照して[CList::RemoveHead](#removehead)です。  
+  例をご覧ください[CList::RemoveHead](#removehead)します。  
   
 ##  <a name="gethead"></a>  CList::GetHead  
- この一覧の先頭の要素 (または、head 要素への参照) を取得します。  
+ この一覧の先頭の要素 (または head 要素への参照) を取得します。  
   
 ```  
 const TYPE& GetHead() const;  
@@ -314,12 +314,12 @@ TYPE& GetHead();
  一覧でオブジェクトの種類を指定するテンプレート パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
- リストが場合**const**、`GetHead`リストの先頭にある要素のコピーを返します。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護できます。  
+ リストの場合**const**、`GetHead`リストの先頭にある要素のコピーを返します。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。  
   
- リストがない場合**const**、`GetHead`リストの先頭にある要素への参照を返します。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
+ リストがない場合**const**、`GetHead`リストの先頭にある要素への参照を返します。 これは、関数は、代入ステートメントの右辺でも左辺でも使用して、できるので、リスト エントリを変更できます。  
   
 ### <a name="remarks"></a>Remarks  
- リストが呼び出す前に空でないことを確認する必要があります`GetHead`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
+ リストが呼び出す前に空でないことを確認する必要があります`GetHead`します。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。 使用[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
@@ -332,13 +332,13 @@ POSITION GetHeadPosition() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**リストが空の場合。  
+ イテレーションまたはオブジェクト ポインターの取得に使用できる位置の値リストが空の場合は NULL です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- によって識別される要素を取得*rPosition*を設定し、 *rPosition*を**位置**一覧の次のエントリの値。  
+ 識別される要素を取得*rPosition*、設定し、 *rPosition*一覧の次のエントリの位置の値にします。  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -347,28 +347,28 @@ const TYPE& GetNext(POSITION& rPosition) const;
   
 ### <a name="parameters"></a>パラメーター  
  *TYPE*  
- リスト内の要素の型を指定するテンプレート パラメーター。  
+ 一覧で、要素の型を指定するテンプレート パラメーター。  
   
  *rPosition*  
- 参照、**位置**によって以前返される値`GetNext`、[順](#getheadposition)、またはその他のメンバー関数の呼び出しです。  
+ によって以前返される位置の値への参照を`GetNext`、[順](#getheadposition)、またはその他のメンバー関数の呼び出し。  
   
 ### <a name="return-value"></a>戻り値  
- リストが場合**const**、`GetNext`リストの要素のコピーを返します。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護できます。  
+ リストの場合**const**、`GetNext`リストの要素のコピーを返します。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。  
   
- リストがない場合**const**、`GetNext`リストの要素への参照を返します。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
+ リストがない場合**const**、`GetNext`リストの要素への参照を返します。 これは、関数は、代入ステートメントの右辺でも左辺でも使用して、できるので、リスト エントリを変更できます。  
   
 ### <a name="remarks"></a>Remarks  
- 使用することができます`GetNext`への呼び出しに最初の位置を確立する場合は、順方向の反復ループで`GetHeadPosition`または`Find`です。  
+ 使用することができます`GetNext`への呼び出しを初期位置を確立する場合は、順方向の反復ループで`GetHeadPosition`または`Find`します。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
- 場合は、取得した最後の要素を一覧での新しい値`rPosition`に設定されている**NULL**です。  
+ 場合は、取得された最後の要素を一覧での新しい値`rPosition`NULL に設定されます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
 ##  <a name="getprev"></a>  CList::GetPrev  
- 要素を取得します ボックスの一覧によって識別される`rPosition`を設定し、`rPosition`を**位置**一覧の前のエントリの値。  
+ 識別される要素を取得`rPosition`、設定し、`rPosition`一覧の前のエントリの位置の値にします。  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -377,22 +377,22 @@ const TYPE& GetPrev(POSITION& rPosition) const;
   
 ### <a name="parameters"></a>パラメーター  
  *TYPE*  
- リスト内の要素の型を指定するテンプレート パラメーター。  
+ 一覧で、要素の型を指定するテンプレート パラメーター。  
   
  *rPosition*  
- 参照、**位置**によって以前返される値`GetPrev`またはその他のメンバー関数の呼び出しです。  
+ によって以前返される位置の値への参照を`GetPrev`またはその他のメンバー関数の呼び出し。  
   
 ### <a name="return-value"></a>戻り値  
- リストが場合**const**、`GetPrev`リストの先頭にある要素のコピーを返します。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護できます。  
+ リストの場合**const**、`GetPrev`リストの先頭にある要素のコピーを返します。 これにより、関数は、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。  
   
- リストがない場合**const**、`GetPrev`リストの要素への参照を返します。 これは、関数は、代入ステートメントのどちらにも使用して、できるので、一覧のエントリを変更します。  
+ リストがない場合**const**、`GetPrev`リストの要素への参照を返します。 これは、関数は、代入ステートメントの右辺でも左辺でも使用して、できるので、リスト エントリを変更できます。  
   
 ### <a name="remarks"></a>Remarks  
- 使用することができます`GetPrev`への呼び出しに最初の位置を確立する場合は、反転反復ループで`GetTailPosition`または`Find`です。  
+ 使用することができます`GetPrev`への呼び出しを初期位置を確立する場合に、逆順イテレーション ループで`GetTailPosition`または`Find`します。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
- 取得される要素が一覧で、最初、新しい値の*rPosition*に設定されている**NULL**です。  
+ 要素を取得した一覧で、最初からの新しい値場合*rPosition* NULL に設定されます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
@@ -408,13 +408,13 @@ INT_PTR GetSize() const;
  リストの項目数。  
   
 ### <a name="remarks"></a>Remarks  
- リスト内の要素の数を取得するには、このメソッドを呼び出します。  このメソッドを呼び出すのと同じ結果が生成されます、[呼び出す](#getcount)メソッドです。  
+ リスト内の要素の数を取得するには、このメソッドを呼び出します。  このメソッドを呼び出すのと同じ結果が生成されます、[呼び出す](#getcount)メソッド。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
 ##  <a name="gettail"></a>  CList::GetTail  
- 取得、`CObject`ポインターがこのリストの末尾の要素を表します。  
+ 取得、`CObject`このリストの末尾の要素を表すポインターです。  
   
 ```  
 TYPE& GetTail();  
@@ -423,32 +423,32 @@ const TYPE& GetTail() const;
   
 ### <a name="parameters"></a>パラメーター  
  *TYPE*  
- リスト内の要素の型を指定するテンプレート パラメーター。  
+ リストの要素の型を指定するテンプレート パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
- 戻り値の説明を参照してください[gethead 関数](../../mfc/reference/coblist-class.md#gethead)です。  
+ 戻り値の説明を参照して[gethead 関数](../../mfc/reference/coblist-class.md#gethead)します。  
   
 ### <a name="remarks"></a>Remarks  
- リストが呼び出す前に空でないことを確認する必要があります`GetTail`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](../../mfc/reference/coblist-class.md#isempty)リストに要素が含まれていることを確認します。  
+ リストが呼び出す前に空でないことを確認する必要があります`GetTail`します。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)リストに要素が含まれていることを確認します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
 ##  <a name="gettailposition"></a>  CList::GetTailPosition  
- このリストの末尾の要素の位置を取得します。**NULL**リストが空の場合。  
+ このリストの末尾の要素の位置を取得します。リストが空の場合は NULL です。  
   
 ```  
 POSITION GetTailPosition() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A**位置**イテレーションまたはオブジェクト ポインターの取得に使用できる値**NULL**リストが空の場合。  
+ イテレーションまたはオブジェクト ポインターの取得に使用できる位置の値リストが空の場合は NULL です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
 ##  <a name="insertafter"></a>  CList::InsertAfter  
- 指定位置にある要素の後に、このリストに要素を追加します。  
+ 指定した位置にある要素の後にこのリストに要素を追加します。  
   
 ```  
 POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
@@ -456,7 +456,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>パラメーター  
  *位置*  
- A**位置**によって以前返される値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出しです。  
+ 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。  
   
  *中*  
  リストの要素の型を指定するテンプレート パラメーター。  
@@ -465,7 +465,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
  この一覧に追加する要素。  
   
 ### <a name="return-value"></a>戻り値  
- イテレーションまたは一覧の要素の取得に使用できる **POSITION** 値。  
+ 位置の値で、イテレーションまたは一覧の要素の取得に使用できます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
@@ -479,7 +479,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>パラメーター  
  *位置*  
- A**位置**によって以前返される値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出しです。  
+ 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。  
   
  *中*  
  一覧の要素の型を指定するテンプレート パラメーター (参照を使用できます)。  
@@ -488,10 +488,10 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
  この一覧に追加する要素。  
   
 ### <a name="return-value"></a>戻り値  
- イテレーションまたは一覧の要素の取得に使用できる **POSITION** 値。  
+ 位置の値で、イテレーションまたは一覧の要素の取得に使用できます。  
   
 ### <a name="remarks"></a>Remarks  
- *position* が **NULL**である場合、一覧の先頭に要素が挿入されます。  
+ 場合*位置*が null の場合、一覧の先頭の要素が挿入されます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
@@ -504,20 +504,20 @@ BOOL IsEmpty() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- この場合は 0 以外のリストが空です。それ以外の場合 0 を返します。  
+ この場合は 0 以外のリストは空です。それ以外の場合 0 を返します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
 ##  <a name="removeall"></a>  CList::RemoveAll  
- このリストからすべての要素を削除し、関連付けられているメモリを解放します。  
+ この一覧からすべての要素を削除し、関連付けられているメモリを解放します。  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- リストが空で既に場合、エラーは生成されません。  
+ リストが空で既に場合、エラーは発生しません。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
@@ -534,7 +534,7 @@ void RemoveAt(POSITION position);
  一覧から削除する要素の位置。  
   
 ### <a name="remarks"></a>Remarks  
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
@@ -548,13 +548,13 @@ TYPE RemoveHead();
   
 ### <a name="parameters"></a>パラメーター  
  *TYPE*  
- リスト内の要素の型を指定するテンプレート パラメーター。  
+ リストの要素の型を指定するテンプレート パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  以前、リストの先頭にある要素。  
   
 ### <a name="remarks"></a>Remarks  
- リストが呼び出す前に空でないことを確認する必要があります`RemoveHead`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
+ リストが呼び出す前に空でないことを確認する必要があります`RemoveHead`します。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。 使用[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
@@ -568,19 +568,19 @@ TYPE RemoveTail();
   
 ### <a name="parameters"></a>パラメーター  
  *TYPE*  
- リスト内の要素の型を指定するテンプレート パラメーター。  
+ リストの要素の型を指定するテンプレート パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
- リストの末尾にあった要素です。  
+ リストの末尾にあった要素。  
   
 ### <a name="remarks"></a>Remarks  
- リストが呼び出す前に空でないことを確認する必要があります`RemoveTail`です。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンをアサートします。 使用して[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
+ リストが呼び出す前に空でないことを確認する必要があります`RemoveTail`します。 リストが空の場合、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。 使用[IsEmpty](#isempty)リストに要素が含まれていることを確認します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
 ##  <a name="setat"></a>  CList::SetAt  
- 型の変数**位置**はリストのキーです。  
+ 位置の型の変数は、リストのキーです。  
   
 ```  
 void SetAt(POSITION pos, ARG_TYPE newElement);
@@ -588,7 +588,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>パラメーター  
  *pos*  
- **位置**を設定する要素のです。  
+ 設定する要素の位置。  
   
  *中*  
  一覧の要素の型を指定するテンプレート パラメーター (参照を使用できます)。  
@@ -597,9 +597,9 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
  一覧に追加する要素。  
   
 ### <a name="remarks"></a>Remarks  
- インデックスと同じではなく、操作することはできません、**位置**自分での値します。 `SetAt` リスト内の指定した位置に要素を書き込みます。  
+ 、インデックスと同じではありませんし、操作できません。 位置の値を自分でします。 `SetAt` リスト内の指定した位置に要素を書き込みます。  
   
- 確認する必要があります、**位置**値がリスト内の有効な位置を表します。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
+ 位置の値がリスト内の有効な位置を表すことを確認する必要があります。 有効な場合は、Microsoft Foundation Class ライブラリのデバッグ バージョンはアサートします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  

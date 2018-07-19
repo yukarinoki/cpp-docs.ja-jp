@@ -1,5 +1,5 @@
 ---
-title: CMFCToolTipInfo クラス |Microsoft ドキュメント
+title: CMFCToolTipInfo クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb5cb4020b851f3522842951030c8155ee68516f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: babc490d63f6c7e1692877e53b4971fc85ec4c24
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037546"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850892"
 ---
 # <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo クラス
 ツールヒントの外観に関する情報を格納します。  
@@ -85,7 +85,7 @@ class CMFCToolTipInfo
 |[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|ツールヒントの説明で可能な最大幅 (ピクセル)。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用して[CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)、 `CMFCToolTipInfo`、および[CTooltipManager クラス](../../mfc/reference/ctooltipmanager-class.md)アプリケーションでカスタマイズされたツールヒントを実装します。 これらのツールヒントのクラスを使用する方法の例は、次を参照してください。、 [CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)トピックです。  
+ 使用[CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)、 `CMFCToolTipInfo`、および[CTooltipManager クラス](../../mfc/reference/ctooltipmanager-class.md)アプリケーションでカスタマイズされたツールヒントを実装するためにします。 これらのツールヒントのクラスを使用する方法の例は、次を参照してください。、 [CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)トピック。  
   
 ## <a name="example"></a>例  
  次の例では、`CMFCToolTipInfo` クラスのさまざまなメンバー変数の値を設定する方法を示します。  
@@ -106,7 +106,7 @@ BOOL m_bBalloonTooltip;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `TRUE` ツールヒントがバルーン形式を使用することを示します`FALSE`ツールヒントが四角形のスタイルを使用することを示します。  
+ ツールヒントがバルーン形式を使用することを示す TRUE、FALSE ツールヒントが四角形のスタイルを使用することを示します。  
   
 ##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
  ツールヒントのテキストのフォントが太字かどうかを指定します。  
@@ -116,17 +116,17 @@ BOOL m_bBoldLabel;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバーを設定`TRUE`太字のフォントのツールヒント テキストを表示するのにまたは`FALSE`ラベルを表示するツールヒントにフォントが太字以外です。  
+ このメンバーを設定する表示のツールヒント テキストを太字のフォントまたは FALSE の場合は true フォントを太字でないとツールヒントのラベルを表示します。  
   
 ##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
- 各ツールヒントが説明テキストを表示するかどうかを指定します。  
+ 各ヒントが説明テキストを表示するかどうかを指定します。  
   
 ```  
 BOOL m_bDrawDescription;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバーを設定`TRUE`、説明を表示または`FALSE`説明を非表示にします。 呼び出して、ツールヒントの説明を指定できる[CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+ このメンバーは、表示、説明、または説明を非表示にする場合は FALSE の場合は true に設定します。 ツールヒントの説明を指定するには呼び出すことによって[CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
 ##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
  すべてのツールヒントにアイコンを表示するかどうかを指定します。  
@@ -136,17 +136,17 @@ BOOL m_bDrawIcon;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバーを設定`TRUE`各ツールヒントにアイコンが表示または`FALSE`アイコンなしのツール ヒントを表示します。  
+ 各のツールヒントにアイコンが表示する場合は TRUE または FALSE アイコンなしのツールヒントを表示するには、このメンバーを設定します。  
   
 ##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
- 各ツールヒントのラベルとその説明の間の区切り記号かどうかを指定します。  
+ 各ツールヒントのラベルとその説明の間の区切り記号があるかどうかを指定します。  
   
 ```  
 BOOL m_bDrawSeparator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバーを設定`TRUE`ツールヒントのラベルと説明、間の区切り記号を表示するか、`FALSE`区切り記号なしでツールヒントを表示します。  
+ ツールヒントのラベルと説明、間の区切り記号を表示する場合は TRUE または FALSE 区切り記号なしでツールヒントを表示するには、このメンバーを設定します。  
   
 ##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
  すべてのツールヒントの角が丸いかどうかを指定します。  
@@ -156,10 +156,10 @@ BOOL m_bRoundedCorners;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバーを設定`TRUE`、ツールヒントの角の丸いを表示するか、`FALSE`四角形の角のツールヒントを表示します。  
+ このメンバーを設定する丸め表示角ヒント、または FALSE の場合は true ツール ヒントの四角形の角を表示します。  
   
 ##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
- すべてのツールヒントの境界線の色を指定します。  
+ すべてのツールヒントの枠線の色を指定します。  
   
 ```  
 COLORREF m_clrBorder;  
@@ -173,17 +173,17 @@ COLORREF m_clrFill;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 場合[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) -1 で、ツールヒントの背景色が`m_clrFill`です。 それ以外の場合、`m_clrFill`グラデーションの最初の色を指定し、`m_clrFillGradient`グラデーションの最後の色を指定します。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)グラデーションの方向を決定します。  
+ 場合[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) -1 で、ツールヒントの背景色は`m_clrFill`します。 それ以外の場合、`m_clrFill`グラデーションの最初の色を指定し、`m_clrFillGradient`グラデーションの終了色を指定します。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)のグラデーションの方向を決定します。  
   
 ##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
- ツールヒントのグラデーションの背景の最後の色を指定します。  
+ ツールヒントの背景のグラデーションの終了色を指定します。  
   
 ```  
 COLORREF m_clrFillGradient;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 場合`m_clrFillGradient`-1 で、グラデーションがありません。 それ以外の場合、初期のグラデーションの色がで指定された[CMFCToolTipInfo::m_clrFill](#m_clrfill)しグラデーションの終了色を指定`m_clrFillGradient`です。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)グラデーションの方向を決定します。  
+ 場合`m_clrFillGradient`-1 で、グラデーションはありません。 それ以外の場合、初期のグラデーションの色がで指定された[CMFCToolTipInfo::m_clrFill](#m_clrfill)によりグラデーションの終了色を指定`m_clrFillGradient`します。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)のグラデーションの方向を決定します。  
   
 ##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
  すべてのツールヒントのテキストの色を指定します。  
@@ -200,12 +200,12 @@ int m_nGradientAngle;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `m_nGradientAngle` ツールヒントの背景のグラデーションの水平方向のオフセットを度単位の角度を指定します。 場合`m_nGradientAngle`が 0 の場合、グラデーションは左から右に描画します。 場合`m_nGradientAngle`は 1 ~ 360 の場合は、間、グラデーションが右回りに回転、その角度。 場合`m_nGradientAngle`-1 で、既定値は、グラデーションは上から下に描画します。 これは、設定と同じ`m_nGradientAngle`を 90 にします。  
+ `m_nGradientAngle` ツールヒントの背景のグラデーションを水平方向のオフセットを度単位の角度を指定します。 場合`m_nGradientAngle`が 0 のグラデーションは、左から右に描画されます場合、。 場合`m_nGradientAngle`は 1 ~ 360 の場合は、間、グラデーションが右回りに回転、その角度。 場合`m_nGradientAngle`-1 で、既定値は、グラデーションは、上から下に描画されます。 これは、設定と同じ`m_nGradientAngle`を 90 にします。  
   
- [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill`グラデーションの最初の色を指定し、 [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient`グラデーションの最後の色を指定します。 場合`m_clrFillGradient`-1 で、グラデーションがありません。  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill`グラデーションの最初の色を指定し、 [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient`グラデーションの終了色を指定します。 場合`m_clrFillGradient`-1 で、グラデーションはありません。  
   
 ##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
- 各ヒントに表示される説明の最大の幅を指定します。 説明の幅は、指定した値を超えている場合、テキストが折り返されます。  
+ 各ヒントに表示される説明の最大の幅を指定します。 説明の幅は、指定した値を超えている場合は、テキストがラップされます。  
   
 ```  
 int m_nMaxDescrWidth;  
@@ -219,7 +219,7 @@ BOOL m_bVislManagerTheme;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 場合`m_bVislManagerTheme`は`TRUE`、すべてのツール ヒントを新しい要求[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)画面に表示し、そのオブジェクトの外観を決定する値を使用する前に、アプリケーションのビジュアル マネージャーからです。 他のメンバー、 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)は無視されます。  
+ 場合`m_bVislManagerTheme`が true の場合、すべてのツールヒントに、新しい要求[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)そのオブジェクトの外観を決定する値を使用して、画面に表示する前に、アプリケーションのビジュアル マネージャーから。 他のメンバー、 [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)は無視されます。  
   
 ##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  

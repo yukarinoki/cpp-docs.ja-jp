@@ -1,5 +1,5 @@
 ---
-title: イベント処理のグローバル関数 |Microsoft ドキュメント
+title: イベントの処理に関するグローバル関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85babf3155fdc94dafd5d62c2e67401e5add3663
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358339"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884000"
 ---
-# <a name="event-handling-global-functions"></a>イベント処理のグローバル関数
+# <a name="event-handling-global-functions"></a>イベント処理に関するグローバル関数
 この関数は、イベント ハンドラーを提供します。  
   
 > [!IMPORTANT]
@@ -32,9 +32,9 @@ ms.locfileid: "32358339"
   
 |||  
 |-|-|  
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|その一方で、必要に応じてウィンドウ メッセージのディスパッチが通知されるオブジェクトを待機します。|  
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|待機オブジェクトがシグナル状態に、その一方で、必要に応じてウィンドウ メッセージをディスパッチします。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
 
 ##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop  
@@ -48,14 +48,14 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hEvent`  
+ *hEvent*  
  [in]待機するオブジェクトのハンドル。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**TRUE**オブジェクトがシグナル状態になった場合。  
+ オブジェクトがシグナル状態になった場合に TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
- これは、オブジェクトのイベントを発生し、発生していることを通知するを待機するを待機中にディスパッチするウィンドウ メッセージを許可する場合に便利です。  
+### <a name="remarks"></a>Remarks  
+ これは、機能は、し、発生の原因が、通知を受けるオブジェクトのイベントを待機するウィンドウ メッセージを待機中にディスパッチできるようにする場合に便利です。  
   
 ## <a name="see-also"></a>関連項目  
  [関数](../../atl/reference/atl-functions.md)

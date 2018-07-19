@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d442e6b62a7e18a3b6025633ae5f12dde7915f3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72f7b6e352240498f921c9aa5c3d1a990da34813
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955430"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -46,19 +46,19 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-`RealVal` 型の値**二重**構築される複素数の実数部。
+*RealVal*型の値**二重**構築される複素数の実数部。
 
-`ImagVal` 型の値**二重**構築される複素数の虚数部。
+*ImagVal*型の値**二重**構築される複素数の虚数部。
 
-`complexNum` 型の複素数**float**または型の`long double`が実数部と虚数部の構成は、型の複素数の初期化に使用される**二重**構築されます。
+*complexNum*型の複素数**float**または型の**long double**が実数部と虚数部の部分は、型の複素数の初期化に使用される**倍**構築されます。
 
 ## <a name="return-value"></a>戻り値
 
 **double** 型の複素数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート クラス complex の **double** 型の complex クラスに対する明示的な特殊化と、テンプレート クラスによって定義されるコンストラクター内でのみ使用するテンプレート クラスとは異なります。 **float** から **double** への変換は暗黙的に行えますが、`long double` から **double** への変換は**明示的**でなければなりません。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
+テンプレート クラス complex の **double** 型の complex クラスに対する明示的な特殊化と、テンプレート クラスによって定義されるコンストラクター内でのみ使用するテンプレート クラスとは異なります。 変換**float**に**二重**は暗黙的に許可されてからの変換が、 **long double**に**二重**にする必要が**明示的な**します。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
 
 テンプレート クラス `complex` の詳細については、「[complex クラス](../standard-library/complex-class.md)」を参照してください。 テンプレート クラス `complex` のメンバー一覧については、以下を参照してください。
 
@@ -117,7 +117,7 @@ Argument of c3 is recovered from c3 using:
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<complex>
 

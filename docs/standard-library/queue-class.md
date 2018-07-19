@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861504"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954917"
 ---
 # <a name="queue-class"></a>queue クラス
 
@@ -52,17 +52,17 @@ class queue
 
 ### <a name="parameters"></a>パラメーター
 
-*型*要素のデータがキューに格納される型
+*型*キューに格納される要素のデータ型
 
-`Container` キューを実装するために使用する基になるコンテナーの型。
+*コンテナー*キューの実装に使用される基になるコンテナーの種類。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-queue オブジェクトの最初のテンプレート パラメーターで指定するクラス **Type** の要素は [value_type](#value_type) と同義で、2 番目のテンプレート パラメーターで指定する、基になるコンテナー クラス **Container** 内の要素の型と一致する必要があります。 対象の型のオブジェクトをコピーし、対象の型の変数に値を割り当てられるように、**Type** は割り当て可能でなければいけません。
+クラスの要素`Type`最初のテンプレートで規定されているキュー オブジェクトのパラメーター [value_type](#value_type)基になるコンテナー クラス内の要素の型に一致する必要がありますと`Container`によって規定、2 番目のテンプレート パラメーター。 `Type`その型のオブジェクトをコピーして、その型の変数に値を割り当てることができるように、割り当てることがあります。
 
-キューに適した基になるコンテナー クラスには、[deque](../standard-library/deque-class.md) および [list](../standard-library/list-class.md)、または `front`、**back**`push_back`、`pop_front` の操作をサポートするその他のすべてのシーケンス コンテナーが含まれます。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
+キューに適したの基になるコンテナー クラスを含める[deque](../standard-library/deque-class.md)と[一覧](../standard-library/list-class.md)、またはの操作をサポートするその他のすべてのシーケンス コンテナー `front`、 `back`、 `push_back`、`pop_front`します。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
 
-queue オブジェクトは、クラス **Type** の要素が等価比較できる場合にのみ等価比較でき、クラス **Type** の要素が小なり比較できる場合にのみ小なり比較できます。
+キュー オブジェクトは等値比較できる場合と場合にのみ、クラスの要素`Type`は等しいかどうかを比較、および小さい-なり場合にのみ、クラスの要素`Type`小さい-比較対象より。
 
 C++ 標準ライブラリで定義されたコンテナー アダプターには、stack、queue、および priority_queue の 3 つの種類があります。 それぞれが、基になるコンテナー クラスの機能を制限して、標準的なデータ構造に対して精密に制御されたインターフェイスを提供します。
 
@@ -97,7 +97,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[push](#push)|`queue` の後ろに要素を追加します。|
 |[size](#size)|`queue` 内の要素数を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<queue>
 
@@ -117,9 +117,9 @@ const_reference back() const;
 
 キューの最後の要素。 キューが空の場合、戻り値は定義されません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**back** の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 **back** の戻り値が **reference** に割り当てられている場合、queue オブジェクトを変更できます。
+`back` の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 場合の戻り値`back`に割り当てられている、 `reference`、キュー オブジェクトを変更できます。
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 として定義してコンパイルすると、空のキュー内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
@@ -157,7 +157,7 @@ int main( )
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Container` のシノニムです。 2 つの C++ 標準ライブラリ シーケンス コンテナー クラス (list クラスと既定の deque クラス) は、queue オブジェクトの基本のコンテナーとして使用する要件を満たしています。 要件を満たすユーザー定義型を使用することもできます。
 
@@ -227,11 +227,11 @@ const_reference front() const;
 
 キューの最初の要素。 キューが空の場合、戻り値は定義されません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`front` の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 `front` の戻り値が **reference** に割り当てられている場合、queue オブジェクトを変更できます。
+`front` の戻り値が `const_reference` に割り当てられている場合、queue オブジェクトは変更できません。 場合の戻り値`front`に割り当てられている、 `reference`、キュー オブジェクトを変更できます。
 
-このメンバー関数は、被制御シーケンスの最初の要素への**参照**を返します。被制御シーケンスを空にすることはできません。
+メンバー関数を返します、`reference`被制御シーケンスの最初の要素を空にすることです。
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 として定義してコンパイルすると、空のキュー内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
@@ -273,7 +273,7 @@ int main() {
 void pop();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数を適用するには、キューは空でない必要があります。 キューの先頭は最も直近に追加された要素によって占有されている位置で、コンテナーの末尾にある最後の要素です。
 
@@ -331,9 +331,9 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-`val` キューの背面に追加する要素。
+*val*キューの後ろに追加する要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 キューの一番後ろは最も直近に追加された要素によって占有されている位置で、コンテナーの末尾にある最後の要素です。
 
@@ -381,9 +381,9 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` **Const**が、構築されたキューのコピーに元のコンテナーです。
+*適切な*、 **const**コンテナーが作成されたキューをコピーがあります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 キューの既定の基本コンテナーは、deque です。 基本のコンテナーとして list を指定することもできますが、vector を指定することはできません。必要な `pop_front` メンバー関数がないからです。
 
@@ -484,7 +484,7 @@ The queue length is now 2.
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、キューによって採用された基本コンテナーの `size_type` のシノニムです。
 
@@ -500,7 +500,7 @@ typedef typename Container::size_type size_type;
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、キューによって採用された基本コンテナーの `value_type` のシノニムです。
 

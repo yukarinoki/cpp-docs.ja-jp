@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4144eed22a3a16615d7fa79ecd4828835c6ebe0b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 73a051eadaf06950e606f475b2bb418425e1b19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846481"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958875"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage クラス
 
@@ -40,13 +40,13 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`Len` オブジェクトのサイズ。
+*Len*オブジェクトのサイズ。
 
-`Align` オブジェクトの配置。
+*Align*オブジェクトの配置。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート メンバー typedef `type` は、アライメント `Align`、サイズ `Len` の POD 型のシノニムです。 `Align` は、一部の型 `T` では `alignment_of<T>::value` と等しくする必要があります。または既定のアライメントと等しくする必要があります。
+テンプレート メンバー typedef `type` POD 型の配置のシノニムです*Align*とサイズ*Len*します。 *Align*に等しくなければ`alignment_of<T>::value`何らかの種類の`T`、または既定の配置。
 
 ## <a name="example"></a>例
 
@@ -73,7 +73,7 @@ alignment_of<int> == 4
 aligned to double == 8
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

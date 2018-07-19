@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc34a0a176e39a30e6cdb5d4c2cdeeebc94b5b1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46e5b0b0c55c5a5dd0a48d2437fc83fa43226f5a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845753"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956144"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this クラス
 
@@ -46,17 +46,17 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 共有ポインターによって制御される型。
+*Ty*の共有ポインターによって制御される型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`enable_shared_from_this` の派生オブジェクトは、メンバー関数の `shared_from_this` メソッドを使って、既存の `shared_ptr` 所有者と所有権を共有するインスタンスの [shared_ptr](../standard-library/shared-ptr-class.md) 所有者を作成できます。 それ以外の場合は、`this` を使って作成した新しい `shared_ptr` は、既存の `shared_ptr` 所有者とは区別され、無効な参照になるか、またはオブジェクトが複数回削除される可能性があります。
+`enable_shared_from_this` の派生オブジェクトは、メンバー関数の `shared_from_this` メソッドを使って、既存の `shared_ptr` 所有者と所有権を共有するインスタンスの [shared_ptr](../standard-library/shared-ptr-class.md) 所有者を作成できます。 それ以外の場合、新規に作成する場合`shared_ptr`を使用して**この**は既存のものから区別され`shared_ptr`所有者で、参照が無効です。 または複数回削除するオブジェクトが発生する可能性があります。
 
-コンストラクター、デストラクター、および代入演算子は、偶発的な誤用を防ぐために保護されています。 テンプレート引数型 `Ty` は、派生クラスの型である必要があります。
+コンストラクター、デストラクター、および代入演算子は、偶発的な誤用を防ぐために保護されています。 テンプレート引数の型*Ty*派生クラスの型でなければなりません。
 
 使用方法の例については、「[enable_shared_from_this::shared_from_this](#shared_from_this)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 
@@ -71,9 +71,9 @@ shared_ptr<T> shared_from_this();
 shared_ptr<const T> shared_from_this() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-基底クラス `enable_shared_from_this` からオブジェクトを派生すると、`shared_from_this` テンプレート メンバー関数は、このインスタンスの所有権を既存の `shared_ptr` 所有者と共有する [shared_ptr クラス](../standard-library/shared-ptr-class.md)のオブジェクトを返します。 それ以外の場合は、`this` から作成した新しい `shared_ptr` は、既存の `shared_ptr` 所有者とは区別され、無効な参照になるか、またはオブジェクトが複数回削除される可能性があります。 `shared_ptr` オブジェクトによってまだ所有されていないインスタンスで `shared_from_this` を呼び出した場合の動作は未定義です。
+基底クラス `enable_shared_from_this` からオブジェクトを派生すると、`shared_from_this` テンプレート メンバー関数は、このインスタンスの所有権を既存の `shared_ptr` 所有者と共有する [shared_ptr クラス](../standard-library/shared-ptr-class.md)のオブジェクトを返します。 それ以外の場合、新規に作成する場合`shared_ptr`から**この**は既存のものから区別され`shared_ptr`所有者で、参照が無効です。 または複数回削除するオブジェクトが発生する可能性があります。 `shared_ptr` オブジェクトによってまだ所有されていないインスタンスで `shared_from_this` を呼び出した場合の動作は未定義です。
 
 ### <a name="example"></a>例
 

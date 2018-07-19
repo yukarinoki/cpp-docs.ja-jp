@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c36808d375dd774286c3663a02fdc308cc4b2790
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953967"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable クラス
 
@@ -36,15 +36,15 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 照会する型。
+*T*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `T` が自明なコピー代入演算子を持つクラスの場合、型述語のインスタンスは true を保持します。それ以外の場合は false を保持します。
+場合、型述語のインスタンスは true を保持型*T*は自明なコピー代入演算子を持つ、それ以外の場合は false を保持するクラスです。
 
-クラス `T` の代入コンストラクターが自明となるのは、クラス `T` の代入コンストラクターが暗黙的に指定されており、クラス `T` に仮想関数と仮想基底が含まれず、クラス型の非静的データ メンバーすべてのクラスに自明な代入演算子が含まれており、かつクラスの型配列の非静的データ メンバーすべてでクラスに自明な代入演算子が含まれている場合です。
+クラスの代入コンス トラクター *T*は暗黙的に入力すると、クラスに自明*T*仮想関数、クラスを持たない*T*のクラスの仮想基底がないです。クラス型のすべての非静的データ メンバーが自明な代入演算子、ありのクラスの型配列のすべての非静的データ メンバーのクラスが自明な代入演算子があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe02890ce8d8dcde099f4b91b23c770b2e36c96d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847947"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956867"
 ---
 # <a name="duration-class"></a>duration クラス
 
@@ -43,7 +43,7 @@ template <class Rep, class Period1, class Period2>
 class duration <duration<Rep, Period1>, Period2>;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 テンプレート引数 `Rep` では、間隔内でのクロック ティック数を保持するために使用する型を記述します。 テンプレート引数 `Period` は、各ティックが表す間隔のサイズを記述する [ratio](../standard-library/ratio.md) のインスタンス化です。
 
@@ -85,7 +85,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[duration::operator+=](#op_add_eq)|指定した `duration` オブジェクトのティック カウントを、格納されたティック カウントに加算します。|
 |[duration::operator-=](#operator-_eq)|指定した `duration` オブジェクトのティック カウントを、格納されたティック カウントから減算します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<chrono >
 
@@ -120,25 +120,25 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-`Rep2` タイマー刻みの数を表す演算型。
+*Rep2*タイマー刻みの数を表す演算型。
 
-`Period2` A`std::ratio`時間を秒単位でティックの間隔を表すためのテンプレートの特殊化です。
+*Period2* A`std::ratio`を秒単位でティック期間を表すテンプレートの特殊化します。
 
-`R` 既定の期間のタイマー刻みの数。
+*R*既定の期間のタイマー刻みの数。
 
-`Dur` によって指定された期間のタイマー刻みの数`Period2`です。
+*期間*によって指定された期間のタイマー刻み数*Period2*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定のコンストラクターは、初期化されていないオブジェクトを作成します。 空のかっこを使う値の初期化は、ゼロ クロック ティックの時間間隔を表すオブジェクトを初期化します。
 
-2 番目のテンプレート引数 1 つのコンストラクターは、`std::ratio<1>` の既定の期間を使って `R` クロック ティックの時間間隔を表すオブジェクトを作成します。 ティック カウントが丸められないようにするため、`Rep2` を浮動小数点型として処理できないときに、浮動小数点型として処理できる `duration::rep` 表現型か duration オブジェクトを構築するとエラーになります。
+時間間隔を表す秒、コンス トラクターは、オブジェクトを構築します。 1 つのテンプレート引数*R*クロック ティックの既定の期間を使用して`std::ratio<1>`します。 表現型から duration オブジェクトを構築するとエラーが丸めティック カウントを避けるため、 *Rep2* 、浮動小数点数として扱うことができますをときに、型`duration::rep`浮動小数点型として扱うことはできません。
 
-3 番目の 2 つのテンプレート引数コンストラクターは、長さが `Dur` によって指定された時間間隔である時間間隔を表すオブジェクトを作成します。 ティック カウントが切り捨てられないようにするため、対象の型と*通約可能*な型を持つ duration オブジェクトから duration オブジェクトを作成するとエラーになります。
+3 番目、2 つのテンプレート引数コンス トラクターは、時間間隔の長さがで指定された時間間隔を表すオブジェクトを構築します。*期間*します。 ティック カウントが切り捨てられないようにするため、対象の型と*通約可能*な型を持つ duration オブジェクトから duration オブジェクトを作成するとエラーになります。
 
 `D2` を浮動小数点型として処理できず、[ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) が 1 ではない場合、duration 型の `D1` は、別の duration 型の `D2` と*通約可能*になります。
 
-`Rep2` が暗黙的に `rep` に変換可能ではなく、`treat_as_floating_point<rep>` が *true を保持*していないか、`treat_as_floating_point<Rep2>` が *false を保持*していない場合、2 番目のコンストラクターはオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
+しない限り、 *Rep2*暗黙的に変換できる`rep`、 `treat_as_floating_point<rep>` *true を保持*または`treat_as_floating_point<Rep2>` *false を保持*、2 番目のコンス トラクターオーバー ロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
 
 変換でオーバーフローが発生して `treat_as_floating_point<rep>` が *true を保持*していない場合、または両方の `ratio_divide<Period2, period>::den` が 1 ではなく `treat_as_floating_point<Rep2>` が *false を保持*していない場合、3 番目のコンストラクターはオーバーロードの解決に関与しません。 詳しくは、「[<type_traits>](../standard-library/type-traits.md)」をご覧ください。
 
@@ -202,7 +202,7 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-`Div` 最初の方法では、`Div`ティック数を表します。 2 番目のメソッドでは、`Div` はティック カウントを含む `duration` オブジェクトです。
+*Div*最初の方法では、 *Div*ティック数を表します。 2 番目のメソッドでは、 *Div*は、`duration`ティック カウントを格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -218,7 +218,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>パラメーター
 
-`Mult` 指定された型の値`duration::rep`です。
+*Mult*で指定された型の値`duration::rep`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -234,7 +234,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-`Div` 指定された型の値`duration::rep`です。
+*Div*で指定された型の値`duration::rep`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -274,7 +274,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A`duration`オブジェクト。
+*期間*A`duration`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -290,7 +290,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-`Dur` A`duration`オブジェクト。
+*期間*A`duration`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -314,9 +314,9 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-`Div` Duration オブジェクトまたはティック カウントを表す値のいずれかは、除数。
+*Div* duration オブジェクトまたはティック カウントを表す値のいずれかであると、除数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のメンバー関数では、格納されたティック カウント剰余の Div を減算し、*this を返します。 最初のメンバー関数では、格納されたティック カウント剰余の Div.count() を減算し、\*this を返します。
 

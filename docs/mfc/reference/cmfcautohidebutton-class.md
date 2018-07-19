@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideButton クラス |Microsoft ドキュメント
+title: CMFCAutoHideButton クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 3135c95ddc32c198bb7abc6ddea4ef5aea5a1d8a
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338020"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton クラス
 非表示になるように構成されている [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) を表示または非表示にするボタンです。  
@@ -102,12 +102,12 @@ class CMFCAutoHideButton : public CObject
 |[CMFCAutoHideButton::OnDrawBorder](#ondrawborder)|フレームワークは、自動的に隠すボタンの境界線を描画するときにこのメソッドを呼び出します。|  
 |[CMFCAutoHideButton::OnFillBackground](#onfillbackground)|フレームワークは、自動的に隠すボタンの背景を塗りつぶすときにこのメソッドを呼び出します。|  
 |[CMFCAutoHideButton::ReplacePane](#replacepane)||  
-|[CMFCAutoHideButton::ShowAttachedWindow](#showattachedwindow)|表示または非、関連付けられている表示[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)です。|  
+|[CMFCAutoHideButton::ShowAttachedWindow](#showattachedwindow)|表示と関連付けられている非表示[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。|  
 |[CMFCAutoHideButton::ShowButton](#showbutton)|自動的に隠すボタンの表示と非表示を切り替えます。|  
 |[CMFCAutoHideButton::UnSetAutoHideMode](#unsetautohidemode)||  
   
 ## <a name="remarks"></a>Remarks  
- 作成時に、`CMFCAutoHideButton`オブジェクトにアタッチされて、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)です。 ユーザーが `CMFCAutoHideButton` オブジェクトと対話操作を行うと、`CDockablePane` オブジェクトの非表示と表示が切り替えられます。  
+ 作成、`CMFCAutoHideButton`オブジェクトにアタッチされて、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。 ユーザーが `CMFCAutoHideButton` オブジェクトと対話操作を行うと、`CDockablePane` オブジェクトの非表示と表示が切り替えられます。  
   
  既定では、ユーザーが自動非表示をオンにすると、フレームワークが自動的に `CMFCAutoHideButton` を作成します。 フレームワークは、`CMFCAutoHideButton` クラスではなく、カスタム UI クラスの要素を作成できます。 フレームワークが使用するカスタム UI クラスを指定するには、静的メンバー変数 `CMFCAutoHideBar::m_pAutoHideButtonRTS` をカスタム UI クラスと等しくなるように設定します。 既定では、この変数は `CMFCAutoHideButton` に設定されます。  
   
@@ -134,7 +134,7 @@ void BringToTop();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="create"></a>  CMFCAutoHideButton::Create  
- 作成し、自動的に隠すボタンを初期化します。  
+ 作成し、自動的に隠す ボタンを初期化します。  
   
 ```  
 virtual BOOL Create(
@@ -148,7 +148,7 @@ virtual BOOL Create(
  親ツールバーへのポインター。  
   
  [in]*pAutoHideWnd*  
- ポインター、 [CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。 この自動的に隠すボタンが非表示にし、ことを示しています`CDockablePane`です。  
+ ポインターを[CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。 この自動的に隠すボタンが非表示になり、ことを示しています`CDockablePane`します。  
   
  [in]*場合*  
  メイン フレーム ウィンドウのボタンの配置を指定する値。  
@@ -157,17 +157,17 @@ virtual BOOL Create(
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 作成するときに、`CMFCAutoHideButton`オブジェクトを関連付ける必要がある自動的に隠す ボタン、特定`CDockablePane`です。 ユーザーが自動的に隠すボタンを使用して非表示にし、関連付けられている表示`CDockablePane`です。  
+ 作成するときに、`CMFCAutoHideButton`オブジェクト、特定の自動的に隠す ボタンを関連付ける必要があります`CDockablePane`します。 ユーザーは、自動的に隠す ボタンを使用して、非表示にし、表示、関連付けられている`CDockablePane`します。  
   
- *場合*パラメーターは、アプリケーションで自動的に隠すボタンがあることを示します。 このパラメーターは次のいずれかの値に設定できます。  
+ *場合*パラメーターは、アプリケーションでは、自動的に隠す ボタンが存在する場所を示します。 このパラメーターは次のいずれかの値に設定できます。  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CBRS_ALIGN_TOP`  
+- CBRS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment  
  自動的に隠すボタンの配置を取得します。  
@@ -177,18 +177,18 @@ DWORD GetAlignment() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`自動的に隠すボタンの現在の配置を含む値です。  
+ 自動的に隠すボタンの現在の配置を含む DWORD 値を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- 自動的に隠すボタンの配置では、アプリケーションで、ボタンがあることを示します。 次の値のいずれかを指定できます。  
+ 自動的に隠すボタンの配置では、アプリケーションでは、ボタンが存在する場所を示します。 次の値のいずれかを指定できます。  
   
-- `CBRS_ALIGN_LEFT`  
+- CBRS_ALIGN_LEFT  
   
-- `CBRS_ALIGN_RIGHT`  
+- CBRS_ALIGN_RIGHT  
   
-- `CRBS_ALIGN_TOP`  
+- CRBS_ALIGN_TOP  
   
-- `CBRS_ALIGN_BOTTOM`  
+- CBRS_ALIGN_BOTTOM  
   
 ##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow  
  返します、 [CDockablePane](../../mfc/reference/cdockablepane-class.md)自動的に隠すボタンに関連付けられているオブジェクト。  
@@ -198,10 +198,10 @@ CDockablePane* GetAutoHideWindow() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 関連付けられたへのポインター`CDockablePane`オブジェクト。  
+ 関連付けられているへのポインター`CDockablePane`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 関連付けると、自動的に隠すボタンには、 `CDockablePane`、渡す、`CDockablePane`へのパラメーターとして、 [CMFCAutoHideButton::Create](#create)メソッドです。  
+ 関連付けると、自動的に隠す ボタンを`CDockablePane`、渡す、`CDockablePane`へのパラメーターとして、 [CMFCAutoHideButton::Create](#create)メソッド。  
   
 ##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar  
 
@@ -233,7 +233,7 @@ CSize GetSize() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`CSize`ボタンのサイズを含むオブジェクトです。  
+ A`CSize`ボタンのサイズを格納しているオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
  計算されたサイズには、自動的に隠すボタンの境界線のサイズが含まれています。  
@@ -246,7 +246,7 @@ virtual CSize GetTextSize() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)を自動的に隠すボタンのテキストのサイズを含むオブジェクト。  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md)自動的に隠すボタンのテキストのサイズを格納しているオブジェクト。  
   
 ##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive  
  自動的に隠すボタンがアクティブかどうかを示します。  
@@ -256,10 +256,10 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 自動的に隠すボタンがアクティブである場合`FALSE`それ以外の場合。  
+ 自動的に隠す ボタンがアクティブである場合は TRUEFALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
- 自動的に隠すボタンが有効な場合、関連付けられている[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md) ウィンドウが表示されます。  
+ 自動的に隠す ボタンが有効な場合、関連付けられている[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)ウィンドウが表示されます。  
   
 ##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal  
  自動的に隠すボタンの表示方向が水平と垂直のどちらであるかを判断します。  
@@ -269,10 +269,10 @@ BOOL IsHorizontal() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 以外の場合は、ボタンは横方向です。それ以外の場合は 0 です。  
+ ボタンが水平の場合、0 以外の場合それ以外の場合は 0 です。  
   
 ### <a name="remarks"></a>Remarks  
- 向きを設定するために、フレームワーク、 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクトを作成するとき。  使用して、印刷の向きを制御することができます、`dwAlignment`内のパラメーター、 [CMFCAutoHideButton::Create](#create)メソッドです。  
+ 向きを設定するために、フレームワーク、 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクトの作成時にします。  使用して方向を制御することができます、*場合*パラメーター、 [CMFCAutoHideButton::Create](#create)メソッド。  
   
 ##  <a name="istop"></a>  CMFCAutoHideButton::IsTop  
 
@@ -286,14 +286,14 @@ BOOL IsTop() const;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible  
- 自動的に隠すボタンを表示するかどうかを示します。  
+ 自動的に隠す ボタンが表示されているかどうかを示します。  
   
 ```  
 virtual BOOL IsVisible() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ボタンが表示されている場合`FALSE`それ以外の場合。  
+ ボタンが表示される場合は TRUE。FALSE それ以外の場合。  
   
 ##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw  
  フレームワークは、自動的に隠すボタンを描画するときにこのメソッドを呼び出します。  
@@ -307,7 +307,7 @@ virtual void OnDraw(CDC* pDC);
  デバイス コンテキストへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- 派生する新しいクラスを作成、アプリケーションで自動的に隠すボタンの外観をカスタマイズする場合は、`CMFCAutoHideButton`です。 派生クラスでは、このメソッドをオーバーライドします。  
+ 派生した新しいクラスを作成、アプリケーションで自動的に隠すボタンの外観をカスタマイズする場合は、`CMFCAutoHideButton`します。 派生クラスでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder  
  フレームワークは、自動的に隠すボタンの境界線を描画するときにこのメソッドを呼び出します。  
@@ -327,10 +327,10 @@ virtual void OnDrawBorder(
  自動的に隠すボタンの外接する四角形。  
   
  [in]*rectBorderSize*  
- 自動的に隠すボタンのそれぞれの側の境界線の太さ。  
+ 自動的に隠すボタンの各側の境界線の太さ。  
   
 ### <a name="remarks"></a>Remarks  
- 派生する新しいクラスをアプリケーションでは、それぞれ自動的に隠すボタンの境界線をカスタマイズする場合は、作成、`CMFCAutoHideButton`です。 派生クラスでは、このメソッドをオーバーライドします。  
+ 派生した新しいクラスを作成、アプリケーションでは、各自動的に隠すボタンの境界線をカスタマイズする場合、`CMFCAutoHideButton`します。 派生クラスでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground  
  フレームワークは、自動的に隠すボタンの背景を塗りつぶすときにこのメソッドを呼び出します。  
@@ -349,10 +349,10 @@ virtual void OnFillBackground(
  自動的に隠すボタンの外接する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- 派生する新しいクラスをアプリケーションで自動的に隠すボタンの背景をカスタマイズする場合は、作成、`CMFCAutoHideButton`です。 派生クラスでは、このメソッドをオーバーライドします。  
+ 派生した新しいクラスを作成、アプリケーションで自動的に隠すボタンの背景をカスタマイズする場合、`CMFCAutoHideButton`します。 派生クラスでは、このメソッドをオーバーライドします。  
   
 ##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow  
- 表示または非、関連付けられている表示[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)です。  
+ 表示と関連付けられている非表示[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。  
   
 ```  
 void ShowAttachedWindow(BOOL bShow);
@@ -360,7 +360,7 @@ void ShowAttachedWindow(BOOL bShow);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bShow*  
- このメソッドを示しています、関連付けられているかどうかを指定するブール値`CDockablePane`です。  
+ このメソッドを示しています、関連付けられているかどうかを指定するブール値`CDockablePane`します。  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
  自動的に隠すボタンの表示と非表示を切り替えます。  
@@ -411,7 +411,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton  
- 自動的に隠すボタンを強調表示されます。  
+ 自動的に隠す ボタンが強調表示されます。  
   
 ```  
 virtual void HighlightButton(BOOL bHighlight);
@@ -419,19 +419,19 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="parameters"></a>パラメーター  
  *bHighlight*  
- 新しい自動ボタンの状態を非表示を指定します。 `TRUE` ボタンが強調表示されていることを示します`FALSE`ボタンが強調表示されていないことを示します。  
+ 新しい自動ボタンの状態を非表示を指定します。 True の場合、ボタンが強調表示されていることを示します、false の場合、ボタンが強調表示されていないことを示します。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted  
- 自動的に隠すボタンの強調表示状態を返します。  
+ 自動的に隠す ボタンの強調表示状態を返します。  
   
 ```  
 virtual BOOL IsHighlighted() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します`TRUE`自動的に隠すボタンが強調表示された場合`FALSE`です。  
+ 自動ボタンを非表示にする場合は TRUE を返しますが強調表示されます。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7249aad5e130e805aae73bdbfba7f9c4f78ad4fe
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853984"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958267"
 ---
 # <a name="tuplesize-class"></a>tuple_size クラス
 
@@ -66,23 +66,29 @@ template <class Tuple>
 
 ### <a name="parameters"></a>パラメーター
 
-*タプル*タプルの型。
+*Tuple*  
+タプルの型。
 
-*Elem*配列の要素の型。
+*Elem*  
+配列要素の型。
 
-*サイズ*配列のサイズ。
+*Size*  
+配列のサイズ。
 
-*T1*ペアの最初のメンバーの種類。
+*T1*  
+ペアの最初のメンバーの型。
 
-*T2*ペアの 2 番目のメンバーの種類。
+*T2*  
+ペアの 2 番目のメンバーの型。
 
-*型*タプル要素の型。
+*型*  
+タプル要素の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、組型 `value` の範囲を値として持つ整数定数式であるメンバー `Tuple`を持ちます。
+テンプレート クラスは、メンバーがある`value`は整数定数式の値は、タプル型の範囲*タプル*します。
 
-配列のテンプレート特殊化には、配列のサイズである `Size` を値として持つ整数定数式であるメンバー `value` が含まれます。
+配列のテンプレート特殊化を持つメンバー`value`は整数定数式の値は*サイズ*、これは、配列のサイズです。
 
 ペアのテンプレート特殊化には、2 を値として持つ整数定数式であるメンバー `value` が含まれます。
 
@@ -114,9 +120,9 @@ int main()
  0 1.5 2 3.7
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<組 >**ヘッダー:** \<配列 > (配列の特殊化) の**ヘッダー** \<ユーティリティ > のペアの特殊化)。
+**ヘッダー:** \<タプル >**ヘッダー:** \<array > (配列の特殊化) 用**ヘッダー:** \<ユーティリティ > (ペアの特殊化) 用
 
 **名前空間:** std
 

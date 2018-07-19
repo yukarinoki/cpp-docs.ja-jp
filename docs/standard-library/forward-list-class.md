@@ -90,12 +90,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86e66d7f626943db2288cefdc6bedd5087f71c82
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c85e1637691d602c63208cd180071c0f388c5893
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848844"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954956"
 ---
 # <a name="forwardlist-class"></a>forward_list クラス
 
@@ -113,12 +113,12 @@ class forward_list
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Type`|forward_list に格納される要素のデータ型。|
-|`Allocator`|forward_list によるメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクト。 このパラメーターは省略できます。 既定値は allocator< `Type`> です。|
+|*Type*|forward_list に格納される要素のデータ型。|
+|*アロケーター*|forward_list によるメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクト。 このパラメーターは省略できます。 既定値は allocator< `Type`> です。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`forward_list` オブジェクトは、[allocator](../standard-library/allocator-class.md) クラス (一般的な呼び方では `std::allocator)`) に基づくクラス `Allocator` の格納されているオブジェクトを通じて制御しているシーケンスに対して、ストレージの割り当てと解放を行います。 詳細については、「[アロケーター](../standard-library/allocators.md)」をご覧ください。 アロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。
+A`forward_list`割り当ておよび解放クラスの格納されているオブジェクトを通じて制御してシーケンスに対するストレージの*アロケーター*に基づく[allocator クラス](../standard-library/allocator-class.md)(一般的と呼ばれる`std::allocator)`します。 詳細については、「[アロケーター](../standard-library/allocators.md)」をご覧ください。 アロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。
 
 > [!NOTE]
 > コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされません。
@@ -139,7 +139,7 @@ class forward_list
 |-|-|
 |[allocator_type](#allocator_type)|前方リスト オブジェクトのアロケーター クラスを表す型。|
 |[const_iterator](#const_iterator)|前方リストに定数反復子を提供する型。|
-|[const_pointer](#const_pointer)|前方リスト内の `const` 要素へのポインターを提供する型。|
+|[const_pointer](#const_pointer)|ポインターを提供する型、 **const**前方リスト内の要素。|
 |[const_reference](#const_reference)|前方リスト内の要素への定数参照を提供する型。|
 |[difference_type](#difference_type)|前方リストの要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。|
 |[Iterator](#iterator)|前方リストの反復子を提供する型。|
@@ -186,7 +186,7 @@ class forward_list
 |-|-|
 |[operator=](#op_eq)|別の前方リストのコピーで前方リストの要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<forward_list>
 
@@ -200,7 +200,7 @@ class forward_list
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `allocator_type` は、テンプレート パラメーター Allocator のシノニムです。
 
@@ -224,14 +224,14 @@ void assign(InputIterator First, InputIterator Last);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`first`|置換範囲の先頭。|
-|`last`|置換範囲の末尾。|
-|`count`|割り当てる要素の数。|
-|`val`|各要素に割り当てる値。|
-|`Type`|値の型。|
-|`IList`|コピーする initializer_list。|
+|*first*|置換範囲の先頭。|
+|*last*|置換範囲の末尾。|
+|*count*|割り当てる要素の数。|
+|*val*|各要素に割り当てる値。|
+|*Type*|値の型。|
+|* IList'|コピーする initializer_list。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 forward_list が整数型の場合、1 つ目のメンバー関数は `assign((size_type)First, (Type)Last)` と同様に動作します。 それ以外の場合、1 つ目のメンバー関数は、`*this` によって制御されているシーケンスをシーケンス [ `First, Last)` に置換します。このシーケンスは、初期状態の被制御シーケンスと重なってはなりません。
 
@@ -252,7 +252,7 @@ iterator before_begin();
 
 シーケンスの最初の要素の直前 (または末尾の空のシーケンスの直前) の位置を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="begin"></a>  forward_list::begin
 
@@ -267,7 +267,7 @@ iterator begin();
 
 シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="cbefore_begin"></a>  forward_list::cbefore_begin
 
@@ -281,11 +281,11 @@ const_iterator cbefore_begin() const;
 
 シーケンスの最初の要素の直前 (または末尾の空のシーケンスの直前) の位置を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="cbegin"></a>  forward_list::cbegin
 
-範囲内の最初の要素を示す `const` 反復子を返します。
+返します、 **const**範囲の最初の要素を指す反復子。
 
 ```cpp
 const_iterator cbegin() const;
@@ -293,13 +293,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合、`const`) を指し示す `cbegin() == cend()` 前方アクセス反復子。
+A **const**を最初の要素の範囲、または空の範囲の末尾の次の場所を指し示す前方アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `const` と `begin()` をサポートする任意の種類の変更可能な (非 `cbegin()`) コンテナーであると見なします。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`begin()`と`cbegin()`します。
 
 ```cpp
 auto i1 = Container.begin();
@@ -310,7 +310,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  forward_list::cend
 
-範囲内の最後の要素の次の位置を指す `const` 反復子を返します。
+返します、 **const**範囲の最後の要素の次の位置を指す反復子。
 
 ```cpp
 const_iterator cend() const;
@@ -320,11 +320,11 @@ const_iterator cend() const;
 
 範囲の末尾の次の位置を指し示す前方アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `end()` と`cend()` をサポートする任意の種類の変更可能な (非 `const`) コンテナーであると見なします。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
 
 ```cpp
 auto i1 = Container.end();
@@ -344,7 +344,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`erase_after(before_begin(), end()).` を呼び出します。
 
@@ -356,20 +356,20 @@ void clear();
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_iterator` は、被制御シーケンスの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型のシノニムとして記述されています。
 
 ## <a name="const_pointer"></a>  forward_list::const_pointer
 
-前方リスト内の `const` 要素へのポインターを提供する型。
+ポインターを提供する型、 **const**前方リスト内の要素。
 
 ```cpp
 typedef typename Allocator::const_pointer
     const_pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="const_reference"></a>  forward_list::const_reference
 
@@ -379,7 +379,7 @@ typedef typename Allocator::const_pointer
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="difference_type"></a>  forward_list::difference_type
 
@@ -389,7 +389,7 @@ typedef typename Allocator::const_reference const_reference;
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `difference_type` は、被制御シーケンス内にある任意の 2 つの要素のアドレスの違いを表現できるオブジェクトを記述します。
 
@@ -406,16 +406,16 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Where`|新しい要素が構築された、ターゲット前方リスト内の位置。|
-|`val`|コンストラクターの引数。|
+|*Where*|新しい要素が構築された、ターゲット前方リスト内の位置。|
+|*val*|コンストラクターの引数。|
 
 ### <a name="return-value"></a>戻り値
 
 新しく挿入される要素を指定する反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、被制御シーケンス内の、`Where` が指す要素の直後にコンストラクター引数 `val` を持つ要素を挿入します。 それ以外は、[forward_list::insert_after](#insert_after) と同じ動作をします。
+このメンバー関数は、コンス トラクターの引数を持つ要素を挿入*val*が指す要素の直後後*場所*被制御シーケンス内。 それ以外は、[forward_list::insert_after](#insert_after) と同じ動作をします。
 
 ## <a name="emplace_front"></a>  forward_list::emplace_front
 
@@ -430,9 +430,9 @@ void emplace_front(Type&& val);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|前方リストの先頭に追加する要素。|
+|*val*|前方リストの先頭に追加する要素。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスの末尾に、コンストラクター引数 `_ val` を持つ要素を挿入します。
 
@@ -448,7 +448,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-前方リストが空である場合は `true`。それ以外の場合は `false`。
+**true**前方リストが空。 それ以外の場合**false**します。
 
 ## <a name="end"></a>  forward_list::end
 
@@ -476,17 +476,17 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Where`|要素が削除される、ターゲット前方リスト内の位置。|
-|`first`|削除する範囲の先頭。|
-|`last`|削除する範囲の最後。|
+|*Where*|要素が削除される、ターゲット前方リスト内の位置。|
+|*first*|削除する範囲の先頭。|
+|*last*|削除する範囲の最後。|
 
 ### <a name="return-value"></a>戻り値
 
 削除した要素の後に残る最初の要素を指定する反復子。このような要素が存在しない場合は、[forward_list::end](#end)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-1 番目のメンバー関数は `Where` の直後の被制御シーケンスの要素を削除します。
+最初のメンバー関数は、コントロールの要素を削除します。 直後シーケンス*場所*します。
 
 2 番目のメンバー関数は、範囲 `( first,  last)` (両端は含まない) の被制御シーケンスの要素を削除します。
 
@@ -519,25 +519,25 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Al`|このオブジェクトに対して使用するアロケーター クラス。|
-|`Count`|構築されたリスト内の要素の数。|
-|`Val`|構築されたリストの要素の値。|
-|`Right`|構築されたリストがコピーになる元のリスト。|
-|`First`|コピーする要素範囲内の最初の要素の位置。|
-|`Last`|コピーする要素範囲を超える最初の要素の位置。|
-|`IList`|コピーする initializer_list。|
+|*Al*|このオブジェクトに対して使用するアロケーター クラス。|
+|*カウント*|構築されたリスト内の要素の数。|
+|*val*|構築されたリストの要素の値。|
+|*右*|構築されたリストがコピーになる元のリスト。|
+|*まずは*|コピーする要素範囲内の最初の要素の位置。|
+|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*IList*|コピーする initializer_list。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-すべてのコンストラクターは[アロケーター](../standard-library/allocator-class.md)を格納し、被制御シーケンスを初期化します。 アロケーター オブジェクトは、引数 `Al` が指定されていれば、この引数です。 コピー コンストラクターの場合は、` right.get_allocator()` です。 それ以外の場合は `Allocator()` です。
+すべてのコンストラクターは[アロケーター](../standard-library/allocator-class.md)を格納し、被制御シーケンスを初期化します。 アロケーター オブジェクトは、引数*Al*、存在する場合。 コピー コンストラクターの場合は、` right.get_allocator()` です。 それ以外の場合は `Allocator()` です。
 
 最初の 2 つのコンストラクターは、空の初期被制御シーケンスを指定します。
 
-3 つ目のコンストラクターは、値 `Count` の `Type()` 個の要素の繰り返しを指定します。
+3 番目のコンス トラクターは、指定の繰り返しを*カウント*値の要素`Type()`します。
 
-4 番目と 5 番目のコンストラクターは、値 `Count` の `Val` 個の要素の繰り返しを指定します。
+4 番目と 5 番目のコンス トラクターの繰り返しを指定する*カウント*値の要素*Val*します。
 
-6 番目のコンストラクターは、`Right` によって制御されるシーケンスのコピーを指定します。 `InputIterator` が整数型の場合、次の 2 つのコンストラクターは、値 `(size_type)First` の `(Type)Last` 個の要素の繰り返しを指定します。 それ以外の場合、次の 2 つのコンストラクターは、シーケンス `[First, Last)` を指定します。
+6 番目のコンス トラクターによって制御されるシーケンスのコピーを指定する*右*します。 `InputIterator` が整数型の場合、次の 2 つのコンストラクターは、値 `(size_type)First` の `(Type)Last` 個の要素の繰り返しを指定します。 それ以外の場合、次の 2 つのコンストラクターは、シーケンス `[First, Last)` を指定します。
 
 9 番目と 10 番目のコンストラクターは 6 番目と同じですが、[rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 参照があります。
 
@@ -585,24 +585,24 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Where`|最初の要素が挿入される、ターゲット前方リスト内の位置。|
-|`Count`|挿入する要素の数。|
-|`First`|挿入範囲の先頭。|
-|`Last`|挿入範囲の末尾。|
-|`Val`|前方リストに追加する要素。|
-|`IList`|挿入する initializer_list。|
+|*Where*|最初の要素が挿入される、ターゲット前方リスト内の位置。|
+|*カウント*|挿入する要素の数。|
+|*まずは*|挿入範囲の先頭。|
+|*前の*|挿入範囲の末尾。|
+|*val*|前方リストに追加する要素。|
+|*IList*|挿入する initializer_list。|
 
 ### <a name="return-value"></a>戻り値
 
 新しく挿入される要素を指定する反復子 (最初と最後のメンバー関数のみ)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-各メンバー関数は、被制御シーケンス内の `Where` によって示されている要素の直後に、残りのオペランドによって指定されたシーケンスを挿入します。
+メンバーの関数の挿入-が指す要素の直後*場所*被制御シーケンス内 — シーケンスを '、残りのオペランドで指定されました。
 
-1 番目のメンバー関数は、値 `Val` を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。
+最初のメンバー関数は、値を持つ要素を挿入*Val*し、新しく挿入された要素を指定する反復子を返します。
 
-2 番目のメンバー関数は、値 `Count` の要素を `Val` 個挿入します。
+2 番目のメンバー関数は、挿入の繰り返しを*カウント*値の要素*Val*します。
 
 `InputIterator` が整数型である場合、3 番目のメンバー関数は `insert(it, (size_type)First, (Type)Last)` と同じように動作します。 それ以外の場合は、シーケンス `[First, Last)` を挿入します。このシーケンスは、最初の被制御シーケンスと重複しないようにする必要があります。
 
@@ -622,7 +622,7 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `iterator` は、被制御シーケンスの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型のシノニムとして記述されています。
 
@@ -638,7 +638,7 @@ size_type max_size() const;
 
 オブジェクトが制御できる最も長いシーケンスの長さ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="merge"></a>  forward_list::merge
 
@@ -654,12 +654,12 @@ void merge(forward_list& right, Predicate comp);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|マージする前方リスト。|
-|`comp`|要素を並べ替えるために使用される比較関数オブジェクト。|
+|*right*|マージする前方リスト。|
+|*comp*|要素を並べ替えるために使用される比較関数オブジェクト。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`forward_list::merge` 要素を削除、 `forward_list` `right`、し、これに挿入`forward_list`です。 以下に示すように、両方のシーケンスを同じ述語に基づいて順序付けする必要があります。 結合されたシーケンスも、その比較関数オブジェクトに基づいて順序付けされます。
+`forward_list::merge` 要素を削除、 `forward_list` `right`、これに挿入して`forward_list`します。 以下に示すように、両方のシーケンスを同じ述語に基づいて順序付けする必要があります。 結合されたシーケンスも、その比較関数オブジェクトに基づいて順序付けされます。
 
 `i` および `j` の位置にある要素を指定する反復子 `Pi` および `Pj` がある場合、最初のメンバー関数は、`i < j` のたびに、順序 `!(*Pj < *Pi)` を設定します。 (要素は `ascending`順序で並び替えられます)。2 番目のメンバー関数は、`i < j` のたびに、順序 `! comp(*Pj, *Pi)` を設定します。
 
@@ -681,12 +681,12 @@ forward_list& operator=(forward_list&& right);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|前方リストにコピーする前方リスト。|
-|`IList`|型 `Type` の要素のシーケンスと同じように動作する中かっこで囲まれた初期化子リスト。|
+|*right*|前方リストにコピーする前方リスト。|
+|*IList*|型 `Type` の要素のシーケンスと同じように動作する中かっこで囲まれた初期化子リスト。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のメンバー演算子は、被制御シーケンスを `right` によって制御されるシーケンスのコピーに置き換えます。
+最初のメンバー演算子は、によって制御されるシーケンスのコピーで、被制御シーケンスを置き換えます*右*します。
 
 2 番目のメンバー演算子は、クラス `initializer_list<Type>` オブジェクトからの被制御シーケンスを置き換えます。
 
@@ -700,7 +700,7 @@ forward_list& operator=(forward_list&& right);
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="pop_front"></a>  forward_list::pop_front
 
@@ -710,7 +710,7 @@ typedef typename Allocator::pointer pointer;
 void pop_front();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 前方リストの最初の要素は、空にすることができません。
 
@@ -729,9 +729,9 @@ void push_front(Type&& val);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|前方リストの先頭に追加する要素。|
+|*val*|前方リストの先頭に追加する要素。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 例外がスローされた場合、コンテナーは変更されず、例外が再度スローされます。
 
@@ -743,7 +743,7 @@ void push_front(Type&& val);
 typedef typename Allocator::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="remove"></a>  forward_list::remove
 
@@ -757,9 +757,9 @@ void remove(const Type& val);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`val`|要素によって保持されている場合、リストからその要素が削除される原因となる値。|
+|*val*|要素によって保持されている場合、リストからその要素が削除される原因となる値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、反復子 `P` で指定されたすべての要素を被制御シーケンスから削除します (`*P ==  val`)。
 
@@ -778,13 +778,13 @@ void remove_if(Predicate pred);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`pred`|要素によって満たされる場合、単項述語は結果的にリストからその要素を削除します。|
+|*Pred*|要素によって満たされる場合、単項述語は結果的にリストからその要素を削除します。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、反復子 `P` で指定されたすべての要素を被制御シーケンスから削除します (` pred(*P)` は true)。
 
-例外は、`pred` が例外をスローした場合にのみ発生します。 その場合、被制御シーケンスは状態が未指定のままとなり、例外が再スローされます。
+場合にのみ、例外が発生した*pred*例外をスローします。 その場合、被制御シーケンスは状態が未指定のままとなり、例外が再スローされます。
 
 ## <a name="resize"></a>  forward_list::resize
 
@@ -799,12 +799,12 @@ void resize(size_type _Newsize, const Type& val);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Newsize`|サイズ指定された前方リストの要素の数。|
-|`val`|埋め込みで使用する値。|
+|*_Newsize*|サイズ指定された前方リストの要素の数。|
+|*val*|埋め込みで使用する値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は両方とも、リスト内の要素の数がその後 `_Newsize` であることを確認します。 被制御シーケンスを長くする必要がある場合、最初のメンバー関数では値 `Type()` で要素を追加し、2 番目のメンバー関数では値 `val` で要素を追加します。 被制御シーケンスを短くするには、両方のメンバー関数とも `erase_after(begin() + _Newsize - 1, end())` を効果的に呼び出します。
+メンバー関数の両方では、リスト内の要素の数が以下があることを確認 *_Newsize*します。 最初のメンバー関数が値で要素を追加する場合は、被制御シーケンスを長くするには、する必要があります、 `Type()`2 番目のメンバー関数は、値を持つ要素を追加します。 一方、 *val*します。 被制御シーケンスを短くするには、両方のメンバー関数とも `erase_after(begin() + _Newsize - 1, end())` を効果的に呼び出します。
 
 ## <a name="reverse"></a>  forward_list::reverse
 
@@ -814,7 +814,7 @@ void resize(size_type _Newsize, const Type& val);
 void reverse();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="size_type"></a>  forward_list::size_type
 
@@ -824,7 +824,7 @@ void reverse();
 typedef typename Allocator::size_type size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。
 
@@ -842,15 +842,15 @@ void sort(Predicate pred);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`pred`|順序付け述語。|
+|*Pred*|順序付け述語。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 両方のメンバー関数は、次に説明するように、述語に基づいて被制御シーケンス内の要素を順序付けします。
 
 `i` および `j` の位置にある要素を指定する反復子 `Pi` および `Pj` がある場合、最初のメンバー関数は、`i < j` のたびに、順序 `!(*Pj < *Pi)` を設定します。 (要素は `ascending`順序で並び替えられます)。メンバー テンプレート関数は、`i < j` のたびに、順序 `! pred(*Pj, *Pi)` を設定します。 元の被制御シーケンス内の順序付けされた要素ペアは、結果として得られた被制御シーケンス内で順序が反転されることはありません。 (並べ替えは安定しています)。
 
-例外は、`pred` が例外をスローした場合にのみ発生します。 その場合、被制御シーケンスは順序が指定されないままとされ、例外が再スローされます。
+場合にのみ、例外が発生した*pred*例外をスローします。 その場合、被制御シーケンスは順序が指定されないままとされ、例外が再スローされます。
 
 ## <a name="splice_after"></a>  forward_list::splice_after
 
@@ -881,23 +881,23 @@ void splice_after(
 
 ### <a name="parameters"></a>パラメーター
 
-`Where` 後ろに挿入するターゲットの forward_list 内の位置。
+*場所*後ろに挿入するターゲットの forward_list 内の位置。
 
-`Source` ターゲットの forward_list に挿入されるソースの forward_list。
+*ソース*ターゲットの forward_list に挿入するのには、ソースの forward_list。
 
-`Iter` ソースの forward_list リストから挿入される要素。
+*Iter*ソースの forward_list リストから挿入される要素。
 
-`First` ソースの forward_list リストから挿入される範囲の最初の要素。
+*最初*ソースの forward_list リストから挿入される範囲の最初の要素。
 
-`Last` ソースの forward_list リストから挿入される範囲を超える最初の位置。
+*最後*ソースの forward_list リストから挿入される範囲を超えた最初の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数の最初のペアは、`Source` によって制御されるシーケンスを、`Where` によって指し示される制御シーケンス内の要素の直後に挿入します。 これはまた、`Source` からすべての要素を削除します (`&Source` を `this` と同じにすることはできません)。
+最初のメンバー関数のペアによって制御されるシーケンスを挿入する*ソース*が指す被制御シーケンス内の要素の直後後*場所*します。 すべての要素も削除*ソース*します。 (`&Source`と同じにしないで**この**)。
 
-メンバー関数の 2 つ目のペアは、`Iter` によって制御されるシーケンス内の `Source` の直後の要素を削除し、それを `Where` で指し示される制御シーケンス内の要素の直後に挿入します (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
+メンバー関数の 2 つ目のペアは、要素を削除します直後*Iter*によって制御されるシーケンスで*ソース*によってが指す被制御シーケンス内の要素の直後に挿入し *。場所*します。 (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
 
-メンバー関数の 3 つ目のペア (範囲指定されたスプライス) は、`(First, Last)` で制御されるシーケンスの `Source` で指定されたサブ範囲を、`Where` で指し示される制御シーケンス内の要素の直後に挿入します。 これはまた、`Source` で制御されるシーケンスから元のサブ範囲を削除します (`&Source == this` の場合、範囲 `(First, Last)` に `Where` で指し示される要素を含めることはできません)。
+メンバー関数 (範囲指定されたスプライス) の 3 番目のペアで指定されたサブ範囲を挿入する`(First, Last)`によって制御されるシーケンスから*ソース*が指す被制御シーケンス内の要素の直後後*場所*. また、元のサブ範囲によって制御されるシーケンスから削除*ソース*します。 (場合`&Source == this`、範囲`(First, Last)`が指す要素を含めることはできません*場所*)。
 
 範囲指定されたスプライスで `N` 個の要素が挿入され、さらに `&Source != this` の場合、クラス [iterator](#iterator) のオブジェクトは `N` 回インクリメントされます。
 
@@ -989,11 +989,11 @@ void swap(forward_list& right);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`right`|交換する要素を指定する前方リスト。|
+|*right*|交換する要素を指定する前方リスト。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`*this` と `right` の間で被制御シーケンスを交換します。 `get_allocator() ==  right.get_allocator()` の場合、この処理は一定時間に実行されます。例外がスローされることはなく、参照や、ポインター、2 つの被制御シーケンス内の要素を指定する反復子が無効にされることもありません。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
+メンバー関数は、交換の間で被制御シーケンス`*this`と*右*します。 `get_allocator() ==  right.get_allocator()` の場合、この処理は一定時間に実行されます。例外がスローされることはなく、参照や、ポインター、2 つの被制御シーケンス内の要素を指定する反復子が無効にされることもありません。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
 ## <a name="unique"></a>  forward_list::unique
 
@@ -1009,9 +1009,9 @@ void unique(BinaryPredicate comp);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`comp`|一連の要素の比較に使用する二項述語。|
+|*comp*|一連の要素の比較に使用する二項述語。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 各一意の要素の最初のオブジェクトを保持し、残りは削除します。 値の等しい要素がリスト内で隣接するように、要素を並べ替える必要があります。
 
@@ -1029,7 +1029,7 @@ void unique(BinaryPredicate comp);
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター _ `Ty` のシノニムです。
 

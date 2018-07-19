@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b58c31c7f4180f9c65b04bbb852bf15c7315c35d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7fe6eb3ffa83316071de2ba26cf80e6e6cbd5245
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957348"
 ---
 # <a name="makesigned-class"></a>make_signed クラス
 
@@ -40,13 +40,13 @@ using make_signed_t = typename make_signed<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この型修飾子のインスタンスは、`is_signed<T>` が true を保持している場合に `T` になる修飾型を保持します。 それ以外の場合は、`sizeof (T) <= sizeof (UT)` である最小の符号なしの型 `UT` になります。
+型修飾子のインスタンスを保持する、修飾型である*T*場合`is_signed<T>`true を保持します。 それ以外の場合は、`sizeof (T) <= sizeof (UT)` である最小の符号なしの型 `UT` になります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

@@ -1,5 +1,5 @@
 ---
-title: PAINTSTRUCT 構造体 |Microsoft ドキュメント
+title: PAINTSTRUCT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfeddfd1ebf0c5c2247b27a0c69a8a6ef33e7766
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338211"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 構造体
 `PAINTSTRUCT`構造体には、ウィンドウのクライアント領域の描画に使用できる情報が含まれています。  
@@ -44,21 +44,21 @@ typedef struct tagPAINTSTRUCT {
  描画に使用するディスプレイ コンテキストを識別します。  
   
  *fErase*  
- バック グラウンドを再描画する必要があるかどうかを指定します。 アプリケーションは、バック グラウンドを再描画する場合は 0 です。 背景のブラシせずに Windows のウィンドウ クラスを作成する場合に、背景を描画するため、アプリケーションは、(の説明を参照して、 **hbrBackground**のメンバー、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)構造体windows SDK)。  
+ バック グラウンドが再描画する必要があるかどうかを指定します。 アプリケーションがバック グラウンドを再描画する場合は 0。 背景ブラシなし Windows ウィンドウ クラスを作成した場合、背景を描画するため、アプリケーションは、(の説明を参照して、`hbrBackground`のメンバー、 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK の構造)。  
   
  *rcPaint*  
- 左上隅を指定して、描画が要求された四角形の右下です。  
+ 左上隅を指定して、描画が要求された四角形の右下します。  
   
  *fRestore*  
- 予約済みのメンバーです。 Windows によって内部的に使用されます。  
+ 予約済みのメンバー。 Windows によって内部的に使用されます。  
   
  *fIncUpdate*  
- 予約済みのメンバーです。 Windows によって内部的に使用されます。  
+ 予約済みのメンバー。 Windows によって内部的に使用されます。  
   
  *rgbReserved [16]*  
- 予約済みのメンバーです。 Windows によって内部的に使用されるメモリの予約されたブロックします。  
+ 予約済みのメンバー。 Windows によって内部的に使用されるメモリの予約済みのブロック。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** winuser.h  
   
 ## <a name="see-also"></a>関連項目  

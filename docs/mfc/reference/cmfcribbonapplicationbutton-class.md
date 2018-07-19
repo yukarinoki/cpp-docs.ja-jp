@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonApplicationButton クラス |Microsoft ドキュメント
+title: CMFCRibbonApplicationButton クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c105938fbca6abf98f46ff5c62c27bfa2b83a38e
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037422"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849016"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton クラス
 アプリケーション ウィンドウの左上隅に表示される特殊なボタンを実装します。 このボタンがクリックされると、通常は、一般的な **[ファイル]** メニューのコマンド ( **[開く]**、 **[上書き保存]**、 **[終了]** など) を含むメニューが開かれます。  
@@ -49,11 +49,11 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 |名前|説明|  
 |----------|-----------------|  
 |`CMFCRibbonApplicationButton::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|  
-|`CMFCRibbonApplicationButton::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCRibbonApplicationButton::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |[CMFCRibbonApplicationButton::SetImage](#setimage)|リボン アプリケーション ボタンにイメージを割り当てます。|  
   
 ## <a name="example"></a>例  
- 次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonApplicationButton`クラスです。 例では、アプリケーション ボタンにイメージを割り当てる方法と、ツールヒントを設定する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
+ 次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonApplicationButton`クラス。 例では、アプリケーションのボタンにイメージを割り当てる方法と、ツールヒントを設定する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
   
  [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]  
@@ -71,7 +71,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
  **ヘッダー:** afxRibbonBar.h  
   
 ##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
- 構築して初期化、 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)オブジェクト。  
+ 構築し、初期化、 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)オブジェクト。  
   
 ```  
 CMFCRibbonApplicationButton();  
@@ -80,14 +80,14 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uiBmpResID`  
+ *uiBmpResID*  
  アプリケーション ボタンに表示するイメージのリソース ID。  
   
- `hBmp`  
- アプリケーション ボタンに表示するビットマップへのハンドル。  
+ *hBmp*  
+ アプリケーション ボタンを表示するビットマップへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
- リボン アプリケーション ボタンは、アプリケーション ウィンドウの左上隅にある特殊なボタンです。 アプリケーションが通常を含む一般的なメニューを開き、ユーザーには、このボタンがクリックすると、**ファイル**などのコマンド、**開く**、**保存**、および**終了**.  
+ リボン アプリケーション ボタンは、アプリケーション ウィンドウの左上隅に配置されている特殊なボタンです。 アプリケーションが通常を含む一般的なメニューを開くユーザーには、このボタンがクリックすると、**ファイル**などのコマンド**オープン**、**保存**、および**終了**.  
   
 ##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage  
  アプリケーション ボタンにイメージを割り当てます。  
@@ -102,7 +102,7 @@ void SetImage(HBITMAP hBmp);
  アプリケーション ボタンに表示するイメージのリソース ID。  
   
  [in]*hBmp*  
- アプリケーション ボタンに表示するビットマップへのハンドル。  
+ アプリケーション ボタンを表示するビットマップへのハンドル。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドを使用して、ボタンを作成した後、リボン アプリケーション ボタンを新しいイメージを割り当てます。 アプリケーション ボタンは、アプリケーション ウィンドウの左上隅にあります。  

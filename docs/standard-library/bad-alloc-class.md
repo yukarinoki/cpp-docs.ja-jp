@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ab496a5de8062f6888b92b318788ff72345bc7c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0e76bd39477c92d075f1dba8cf14b912c0f616e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850731"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955911"
 ---
 # <a name="badalloc-class"></a>bad_alloc クラス
 
@@ -37,11 +37,11 @@ virtual ~bad_alloc();
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**what** が返す値は、実装で定義された C 文字列です。 このメンバー関数は、いずれも例外をスローしません。
+によって返される値`what`実装で定義された C 文字列します。 このメンバー関数は、いずれも例外をスローしません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<new>
 
@@ -74,7 +74,7 @@ int main() {
 bad allocation
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<new>
 

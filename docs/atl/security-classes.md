@@ -1,5 +1,5 @@
 ---
-title: セキュリティ クラス (ATL) |Microsoft ドキュメント
+title: セキュリティのクラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,35 +14,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3ba3675196e0e6e3564beeca5bc76a57e8903a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fecc4865d0138a08ba7dd264e95d3cc9809ff7b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362340"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848646"
 ---
 # <a name="security-classes"></a>セキュリティ クラス
-これらのクラスは、共通の Win32 セキュリティ クラスとオブジェクトのラッパーです。  
+これらのクラスは、一般的な Win32 セキュリティ クラスとオブジェクトのラッパーです。  
   
--   [CAccessToken](../atl/reference/caccesstoken-class.md)このクラスは、アクセス トークンのラッパー。  
+-   [CAccessToken](../atl/reference/caccesstoken-class.md)このクラスは、アクセス トークンのラッパーです。  
   
--   [CAcl](../atl/reference/cacl-class.md)このクラスは、用のラッパー、 **ACL** (アクセス制御リスト) 構造体。  
+-   [CAcl](../atl/reference/cacl-class.md)このクラスは、のラッパー、 `ACL` (アクセス制御リスト) の構造体。  
   
--   [CDacl](../atl/reference/cdacl-class.md)このクラスは、用のラッパー、 **DACL** (随意アクセス制御リスト) 構造体。  
+-   [CDacl](../atl/reference/cdacl-class.md)このクラスは、のラッパーを`DACL`(随意アクセス制御リスト) の構造体。  
   
 -   [CPrivateObjectSecurityDesc](../atl/reference/cprivateobjectsecuritydesc-class.md)このクラスは、プライベート オブジェクトのセキュリティ記述子オブジェクトを表します。  
   
--   [CSacl](../atl/reference/csacl-class.md)このクラスは、用のラッパー、 **SACL** (システム アクセス制御リスト) 構造体。  
+-   [CSacl](../atl/reference/csacl-class.md)このクラスは、のラッパーを`SACL`(システムへのアクセス制御リスト) の構造体。  
   
--   [CSecurityAttributes](../atl/reference/csecurityattributes-class.md)このクラスは、のシン ラッパー、 **SECURITY_ATTRIBUTES**構造体。  
+-   [CSecurityAttributes](../atl/reference/csecurityattributes-class.md)このクラスは、シン ラッパーを`SECURITY_ATTRIBUTES`構造体。  
   
--   [CSecurityDesc](../atl/reference/csecuritydesc-class.md)このクラスは、用のラッパー、 **SECURITY_DESCRIPTOR**構造体。  
+-   [CSecurityDesc](../atl/reference/csecuritydesc-class.md)このクラスは、のラッパー、`SECURITY_DESCRIPTOR`構造体。  
   
--   [CSid](../atl/reference/csid-class.md)このクラスは、用のラッパー、 `SID` (セキュリティ識別子) 構造体。  
+-   [CSid](../atl/reference/csid-class.md)このクラスは、のラッパーを`SID`(セキュリティ識別子) 構造体。  
   
--   [CTokenGroups](../atl/reference/ctokengroups-class.md)このクラスは、用のラッパー、 **TOKEN_GROUPS**構造体。  
+-   [CTokenGroups](../atl/reference/ctokengroups-class.md)このクラスは、のラッパー、`TOKEN_GROUPS`構造体。  
   
--   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md)このクラスは、用のラッパー、 **TOKEN_PRIVILEGES**構造体。  
+-   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md)このクラスは、のラッパー、`TOKEN_PRIVILEGES`構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../atl/atl-class-overview.md)   

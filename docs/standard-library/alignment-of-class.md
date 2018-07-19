@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7d9ba59d7f1539f690d7b04c70139c263490368
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b679d4c8807a19c977cd7e59481dc1d78e67ba1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850692"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956519"
 ---
 # <a name="alignmentof-class"></a>alignment_of クラス
 
@@ -37,13 +37,13 @@ struct alignment_of;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型クエリは、型 `Ty` のアラインメントの値を保持します。
+クエリの種類の値を保持する、型のアラインメント*Ty*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

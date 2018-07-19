@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcbd0f17392c69b09d6f9f3c8123dfcf8b543fa4
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7f53732fee62906da19a5771c8598cce51fc6331
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852352"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953759"
 ---
 # <a name="lockguard-class"></a>lock_guard クラス
 
@@ -33,7 +33,7 @@ template <class Mutex>
 class lock_guard;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 テンプレート引数 `Mutex` には *mutex 型*を指定する必要があります。
 
@@ -52,9 +52,9 @@ class lock_guard;
 |[lock_guard](#lock_guard)|`lock_guard` オブジェクトを構築します。|
 |[lock_guard::~lock_guard デストラクター](#dtorlock_guard_destructor)|コンストラクターに渡された `mutex` をロック解除します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ミュー テックス >
+**ヘッダー:** \<mutex >
 
 **名前空間:** std
 
@@ -70,13 +70,13 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>パラメーター
 
-`Mtx` A *mutex 型*オブジェクト。
+*続け*A *mutex 型*オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-1 番目のコンストラクターは `lock_guard` 型のオブジェクトを構築し、`Mtx` をロックします。 `Mtx` が再帰的なミューテックスではない場合、このコンストラクターが呼び出されたときにロック解除される必要があります。
+最初のコンス トラクターが型のオブジェクトを構築`lock_guard`とロック*続け*します。 場合*続け*が再帰的なミュー テックスにする必要がありますロックを解除するこのコンス トラクターが呼び出されるとします。
 
-2 番目のコンストラクターは `Mtx` をロックしません。 `Mtx` は、このコンストラクターが呼び出されたときにロックされる必要があります。 このコンストラクターでは例外はスローされません。
+2 番目のコンス トラクターをロックしません*続け*します。 *続け*このコンス トラクターが呼び出されたときにロックされている必要があります。 このコンストラクターでは例外はスローされません。
 
 ## <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard デストラクター
 
@@ -86,7 +86,7 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 ~lock_guard() noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 デストラクターの実行時に `mutex` が存在しない場合の動作は未定義です。
 

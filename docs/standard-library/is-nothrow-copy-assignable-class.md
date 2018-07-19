@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5c5bdc1e944483071f0f1dcd53c3bc93eb6ed3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e540d6fe4c00772af01b187d24efae18fd62357f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842938"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957559"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable クラス
 
@@ -36,13 +36,13 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 照会する型。
+*T*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`is_nothrow_assignable<T&, const T&>` が true を保持する場合に、参照型 `T` に対して型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型述語のインスタンスは、参照型の場合は true を保持*T*場所`is_nothrow_assignable<T&, const T&>`それ以外の場合は true を保持して false を保持します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

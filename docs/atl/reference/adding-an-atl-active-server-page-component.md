@@ -1,5 +1,5 @@
 ---
-title: ATL Active Server Page コンポーネントを追加する |Microsoft ドキュメント
+title: ATL Active Server Page コンポーネントの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b49db13f4067ee595896ace808213a11256f7ff7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2e8e15a19cfa7069e7dbaf8d9e9af8bc3dd6f0b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356467"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957325"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>ATL Active Server Page コンポーネントを追加します。
-アクティブ テンプレート ライブラリ (ATL) オブジェクトをプロジェクトに追加するには、プロジェクト必要がありますが作成されて、ATL COM アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 使用することができます、 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)ATL アプリケーションを作成するには [ **MFC に ATL サポートを追加**から、[クラスの追加] ダイアログ ボックス](../../ide/add-class-dialog-box.md)ダイアログ ボックスで、こともできます[ATL オブジェクトを MFC アプリケーションに追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)MFC アプリケーション用の ATL サポートを実装します。  
+Active Template Library (ATL) オブジェクトをプロジェクトに追加するには、プロジェクトする必要がありますが作成されたら、ATL COM アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 使用することができます、 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)ATL アプリケーションの作成を選択できます**MFC に ATL サポートの追加**から、[クラスの追加 ダイアログ ボックス](../../ide/add-class-dialog-box.md)ダイアログ ボックスで、またはできます[ATL オブジェクトを MFC アプリケーションに追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)MFC アプリケーションの ATL サポートを実装します。  
   
  Active Server Pages コンポーネントは、次の高度な Web 開発機能を提供するインターネット インフォメーション サービス アーキテクチャの一部です。  
   
--   ASP のコンポーネントは、ブラウザーに依存しない、動的なコンテンツを作成する HTML ページに埋め込むことができます。  
+-   ASP のコンポーネントは、ブラウザーに依存しない動的なコンテンツを作成する HTML ページに埋め込むことができます。  
   
 -   ASP ページを使用して、標準ベースのデータベース接続を提供することができます。  
   
--   ASP のエラー処理機能を使用するには、Web ベース アプリケーション用。  
+-   Web ベースのアプリケーションの ASP エラー処理機能を使用することができます。  
   
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>ATL Active Server Page コンポーネントをプロジェクトに追加するには  
+### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>ATL Active Server Pages コンポーネントをプロジェクトに追加するには  
   
-1.  いずれかで**ソリューション エクスプ ローラー**または[クラス ビュー](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)、ATL Active Server Page コンポーネントを追加するプロジェクトの名前を右クリックします。  
+1.  **ソリューション エクスプ ローラー** ATL Active Server Pages コンポーネントを追加するプロジェクトの名前を右クリックします。  
   
-2.  ショートカット メニューをクリックして**追加**、クリックして**クラスの追加**です。  
+2.  ショートカット メニューの **[追加]**、**[クラスの追加]** を順にクリックします。  
   
-3.  [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL Active Server Page コンポーネント**、順にクリック**開く**を表示する、 [ATL Active ServerPage コンポーネント ウィザード](../../atl/reference/atl-active-server-page-component-wizard.md)です。  
+3.  [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL Active Server Page コンポーネント**、 をクリックし、**オープン**を表示する、 [ATL Active ServerPage コンポーネント ウィザード](../../atl/reference/atl-active-server-page-component-wizard.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   

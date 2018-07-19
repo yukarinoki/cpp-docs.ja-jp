@@ -20,27 +20,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335fecb1104a3aa1754f0267eb7b9686446782ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74adf7d42fcb5e5e3114e1a06162022f9f062e67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846715"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960240"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
 チェックを行う反復子は、コンテナーの境界が上書きされないようにします。 チェックを行う反復子は、リリース ビルドおよびデバッグ ビルドの両方に適用されます。 デバッグ モードでのコンパイル時に debug 反復子を使用する方法の詳細については、「[debug 反復子のサポート](../standard-library/debug-iterator-support.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 チェックを行う反復子によって生成される警告を無効にする方法の詳細については、「[_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)」を参照してください。
 
-[\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) プロセッサ マクロを使用して、チェックを行う反復子の機能の有効と無効を切り替えることができます。 `_ITERATOR_DEBUG_LEVEL` が 1 または 2 と定義されている場合、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 0 と定義されている場合、チェックを行う反復子は無効になります。 既定では、`_ITERATOR_DEBUG_LEVEL` の値は、リリース ビルドの場合は 0、デバッグ ビルドの場合は 2 です。
+[\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) プロセッサ マクロを使用して、チェックを行う反復子の機能の有効と無効を切り替えることができます。 _ITERATOR_DEBUG_LEVEL が 1 または 2 として定義される場合は、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 0 と定義されている場合、チェックを行う反復子は無効になります。 既定では、_ITERATOR_DEBUG_LEVEL の値は、リリース ビルドの場合は 0 と 2 デバッグ ビルドの場合。
 
 > [!IMPORTANT]
-> 古いドキュメントやソース コードは、[_SECURE_SCL](../standard-library/secure-scl.md) マクロを参照している場合があります。 `_ITERATOR_DEBUG_LEVEL` を制御するには、`_SECURE_SCL` を使用します。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)」を参照してください。
+> 古いドキュメントやソース コードは、[_SECURE_SCL](../standard-library/secure-scl.md) マクロを参照している場合があります。 _ITERATOR_DEBUG_LEVEL を使用すると、_SECURE_SCL を制御できます。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)」を参照してください。
 
-`_ITERATOR_DEBUG_LEVEL` が 1 または 2 として定義されている場合、これらの反復子のチェックが実行されます。
+_ITERATOR_DEBUG_LEVEL が 1 または 2 として定義されると、これらの反復子のチェックが実行されます。
 
 - すべての標準反復子 (たとえば、[vector::iterator](../standard-library/vector-class.md#iterator)) がチェックされます。
 
@@ -56,7 +56,7 @@ ms.locfileid: "33846715"
 |[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
 |[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|
 
-`_ITERATOR_DEBUG_LEVEL` 0 と定義されている場合、
+_ITERATOR_DEBUG_LEVEL が 0 として定義されている場合。
 
 - すべての標準的な反復子はチェックされません。 反復子はコンテナーの境界を越えて移動でき、未定義の動作につながります。
 
@@ -70,7 +70,7 @@ ms.locfileid: "33846715"
 
 ## <a name="example"></a>例
 
-1 または 2 に設定された `_ITERATOR_DEBUG_LEVEL` を使用してコンパイルする場合、特定のクラスのインデックス演算子を使用して、コンテナーの境界の外側にある要素にアクセスしようとすると、ランタイム エラーが発生します。
+_ITERATOR_DEBUG_LEVEL 1 または 2 に設定を使用してコンパイルするときに、特定のクラスのインデックス作成演算子を使用して、コンテナーの境界の外側にある要素にアクセスしようとした場合に、ランタイム エラーが発生します。
 
 ```cpp
 // checked_iterators_1.cpp
@@ -99,7 +99,7 @@ int main()
 
 ## <a name="example"></a>例
 
-同様に、1 または 2 に設定された `_ITERATOR_DEBUG_LEVEL` を使用してコンパイルする場合、コンテナーが空であるときに、コンテナー クラス内の `front` または `back` を使用して要素にアクセスしようとすると、ランタイム エラーが発生します。
+同様に、_ITERATOR_DEBUG_LEVEL 1 または 2 に設定を使用してコンパイルするときに、ランタイム エラーが発生を使用して要素にアクセスしようとした場合`front`または`back`コンテナー クラスのコンテナーが空にします。
 
 ```cpp
 // checked_iterators_2.cpp
@@ -123,7 +123,7 @@ int main()
 
 ## <a name="example"></a>例
 
-次のコードは、さまざまな反復子のユース ケースのシナリオを示しており、それぞれにコメントが付けられています。 既定では、`_ITERATOR_DEBUG_LEVEL` は、デバッグ ビルドでは 2 に設定され、製品版ビルドでは 0 に設定されます。
+次のコードは、さまざまな反復子のユース ケースのシナリオを示しており、それぞれにコメントが付けられています。 既定では、_ITERATOR_DEBUG_LEVEL はデバッグ ビルドで 2 に、製品版ビルドで 0 に設定されます。
 
 ```cpp
 // checked_iterators_3.cpp

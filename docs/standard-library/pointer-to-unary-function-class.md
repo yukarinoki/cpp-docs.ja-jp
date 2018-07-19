@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f431542ab85b4ae540622651967f3a5520ff5f7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 33161d622bf43b79b33c91a5abc6f703c48c4f2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853444"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953063"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function クラス
 
@@ -43,23 +43,23 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`pfunc` 変換する二項関数。
+*pfunc*変換する二項関数。
 
-`left` オブジェクトを *\*pfunc*で呼び出されるとします。
+*左*オブジェクトを *\*pfunc*で呼び出されます。
 
 ## <a name="return-value"></a>戻り値
 
-テンプレート クラスは **pfunc** のコピーを格納します。 そのメンバー関数 `operator()` は (\* **pfunc**)(_ *Left*) を返すように定義されています。
+テンプレート クラスのコピーを格納する`pfunc`します。 そのメンバー関数 `operator()` は (\* **pfunc**)(_ *Left*) を返すように定義されています。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-単項関数ポインターは関数オブジェクトであり、パラメーターとして単項関数を想定する C++ 標準ライブラリの任意のアルゴリズムに渡される場合がありますが、適合性はありません。 単項関数ポインターをアダプターと共に使用する (値をバインドしたり否定子と共に使用するなど) には、このような適合を可能にする、入れ子にされた型 (**argument_type** および **result_type**) と共に指定する必要があります。 `pointer_to_unary_function` による変換によって、関数アダプターを二項関数ポインターと共に使用できるようになります。
+単項関数ポインターは関数オブジェクトであり、パラメーターとして単項関数を想定する C++ 標準ライブラリの任意のアルゴリズムに渡される場合がありますが、適合性はありません。 値をバインドなど、否定子と共に使用するアダプターを使用して入れ子にされた型で指定する必要があります`argument_type`と`result_type`このような適応を可能にします。 `pointer_to_unary_function` による変換によって、関数アダプターを二項関数ポインターと共に使用できるようになります。
 
 ## <a name="example"></a>例
 
 `pointer_to_unary_function` のコンストラクターが直接使用されることはほとんどありません。 `pointer_to_unary_function` アダプターの述語を宣言および使用する方法の例については、ヘルパー関数 [ptr_fun](../standard-library/functional-functions.md#ptr_fun) をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

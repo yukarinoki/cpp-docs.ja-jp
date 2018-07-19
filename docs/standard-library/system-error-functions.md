@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 6135a3dc51b372c85545f01f52c70cbc6f236e64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 838a63fc43ef71561c0911cfa4c85c76cf04bc08
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959666"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;system_error&gt; 関数
 
@@ -36,9 +36,9 @@ ms.locfileid: "33855134"
 extern const error_category& generic_category();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`generic_category`オブジェクトの実装は、 [error_category](../standard-library/error-category-class.md)です。
+`generic_category`オブジェクトの実装は、 [error_category](../standard-library/error-category-class.md)します。
 
 ## <a name="make_error_code"></a>  make_error_code
 
@@ -52,13 +52,13 @@ error_code make_error_code(generic_errno _Errno);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Errno`|エラー コード オブジェクトに格納する列挙値。|
+|*_Errno*|エラー コード オブジェクトに格納する列挙値。|
 
 ### <a name="return-value"></a>戻り値
 
 エラー コード オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="make_error_condition"></a>  make_error_condition
 
@@ -72,13 +72,13 @@ error_condition make_error_condition(generic_errno _Errno);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`_Errno`|エラー条件オブジェクトに格納する列挙値。|
+|*_Errno*|エラー条件オブジェクトに格納する列挙値。|
 
 ### <a name="return-value"></a>戻り値
 
 エラー条件オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="system_category"></a>  system_category
 
@@ -88,9 +88,9 @@ error_condition make_error_condition(generic_errno _Errno);
 extern const error_category& system_category();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`system_category`オブジェクトの実装は、 [error_category](../standard-library/error-category-class.md)です。
+`system_category`オブジェクトの実装は、 [error_category](../standard-library/error-category-class.md)します。
 
 ## <a name="see-also"></a>関連項目
 

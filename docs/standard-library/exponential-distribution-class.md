@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f324eaea0f84767d174bb109a8c1cfff7abfb50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e40c06d2dc95366e154f4299dda0087c42698312
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960197"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution クラス
 
@@ -77,13 +77,13 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型、既定値は`double`します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 *URNG* 乱数ジェネレーター エンジン。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、ユーザー指定の整数型、または何も指定されない場合は `double` 型で、指数分布に従って分布されている値を生成する分布について説明します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**二重**がない場合は指数分布に従って分布します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -174,7 +174,7 @@ Distribution for 10 samples:
     10: 2.1201210996
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -193,9 +193,9 @@ explicit exponential_distribution(const param_type& parm);
 
 *ラムダ*、`lambda`分布パラメーター。
 
-*パラメーター*分布の作成に使用されるパラメーター パッケージ。
+*parm*分布の作成に使用されるパラメーター パッケージ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < lambda`
 
@@ -222,9 +222,9 @@ struct param_type {
 
 *ラムダ*、`lambda`分布パラメーター。
 
-*右*、`param_type`これと比較するオブジェクト。
+*適切な*、`param_type`これと比較するオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < lambda`
 

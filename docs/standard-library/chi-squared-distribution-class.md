@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 562e522d695b20795d59f90dc1f166b4dfe44874
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5092107cc1af6327c5ab7d6e08f373f88dd56711
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846065"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959246"
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution クラス
 
@@ -76,13 +76,13 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型、既定値は`double`します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 *URNG* Uniform Random Number Generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、カイ 2 乗分布に従って分布した、ユーザー指定の浮動小数点型の値または型 `double` の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+テンプレート クラスは、ユーザー指定の浮動小数点の値を生成する分布を表します。 型、または型**二重**がない場合は、カイ 2 乗分布に従って分散します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -226,7 +226,7 @@ Distribution for 10 samples:
     10: 1054.7051509381
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -245,9 +245,9 @@ explicit chi_squared_distribution(const param_type& parm);
 
 *n* 、`n`分布パラメーター。
 
-*パラメーター*分布の作成に使用されるパラメーターの構造体。
+*parm*分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < n`
 
@@ -274,9 +274,9 @@ struct param_type {
 
 *n* 、`n`分布パラメーター。
 
-*右*、`param_type`これと比較するオブジェクト。
+*適切な*、`param_type`これと比較するオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < n`
 

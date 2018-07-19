@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a20e9c1df241feb8dd7f16891f1e2a67068f772
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1150de3c94f8a656d46d54b673cb2d08dc05a7be
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959327"
 ---
 # <a name="chartraitsltchargt-struct"></a>char_traits&lt;char&gt; 構造体
 
-テンプレート構造体 **char_traits\<CharType>** を `char` 型の要素に特殊化した構造体。
+テンプレート構造体の特殊化した構造体**char_traits\<CharType >** 型の要素を**char**します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,9 +35,9 @@ template <>
 struct char_traits<char>;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-特殊化により、構造体でこの型 `char` のオブジェクトを操作するライブラリ関数を利用できます。
+特殊化によりこの型のオブジェクトを操作するライブラリ関数を活用するために構造体**char**します。
 
 ## <a name="example"></a>例
 

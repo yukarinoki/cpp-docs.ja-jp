@@ -52,12 +52,12 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 4937d79c04484dd0cd96f74abb7150873b6f7235
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 23689b7c7d6770816db02e4a463fd63080abbaf4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848425"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959093"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 関数
 
@@ -82,17 +82,17 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-既定では、`bool` 型の変数は 1 または 0 として表示されます。
+既定では、型の変数によって**bool**は 1 または 0 として表示されます。
 
-`boolalpha` 効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`)、しを返します`str`です。
+`boolalpha` 効果的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`)、し、返します*str*します。
 
 [noboolalpha](../standard-library/ios-functions.md#noboolalpha) は `boolalpha` の実行結果を元に戻します。
 
@@ -133,17 +133,17 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、整数変数は、10 進表記で表示されます。
 
-**dec** は実質的に `str.`[setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`**, ios_base::basefield**) を呼び出して、`str` を返します。
+`dec` 効果的に呼び出す`str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`、 `ios_base::basefield`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -185,9 +185,9 @@ ios_base& defaultfloat(ios_base& _Iosbase);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Iosbase` `ios_base`オブジェクト。
+*されている _Iosbase* 、`ios_base`オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 マニピュレーターは実質的に _I `osbase.`[ios_base::unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)` を呼び出し、_I `osbase` を返します。
 
@@ -201,17 +201,17 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**fixed** は浮動小数点数の既定の表示の表記です。 [scientific](../standard-library/ios-functions.md#scientific) は、浮動小数点数を指数表記を使用して表示します。
+`fixed` 浮動小数点数の既定の表示の表記です。 [scientific](../standard-library/ios-functions.md#scientific) は、浮動小数点数を指数表記を使用して表示します。
 
-マニピュレーターが効果的に呼び出し * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`、 **ios_base::floatfield**)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`、 `ios_base::floatfield`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -248,21 +248,21 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、整数変数は、10 進表記で表示されます。 [dec](../standard-library/ios-functions.md#dec) および [oct](../standard-library/ios-functions.md#oct) も整数変数の表示方法を変更します。
 
-マニピュレーターは実質的に `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**) を呼び出し、`str` を返します。
+マニピュレーターは実質的に呼び出す`str` **.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`、 `ios_base::basefield`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
-**hex** の使用例については、「[dec](../standard-library/ios-functions.md#dec)」を参照してください。
+参照してください[dec](../standard-library/ios-functions.md#dec)を使用する方法の例については`hex`します。
 
 ## <a name="internal"></a>  internal
 
@@ -274,17 +274,17 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
-`str` の派生元となるオブジェクトへの参照。
+元のオブジェクトへの参照*str*が派生します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 [showpos](../standard-library/ios-functions.md#showpos) によって、正の数値に符号が表示されます。
 
-マニピュレーターが効果的に呼び出し`str`です。 [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags)、 [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags))、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`します。 [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags)、 [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags))、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -319,15 +319,15 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`、 **ios_base::adjustfield**)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`、 `ios_base::adjustfield`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -361,17 +361,17 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、`noboolalpha` は有効です。
 
-`noboolalpha` 効果的に呼び出し`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`)、しを返します`str`です。
+`noboolalpha` 効果的に呼び出す`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`)、し、返します*str*します。
 
 [boolalpha](../standard-library/ios-functions.md#boolalpha) は `noboolalpha` の実行結果を元に戻します。
 
@@ -389,17 +389,17 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `noshowbase` は既定でオンになります。 [showbase](../standard-library/ios-functions.md#showbase) を使用して、数値表記の基底を示します。
 
-マニピュレーターが効果的に呼び出し`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -415,17 +415,17 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `noshowpoint` は既定ではオンです。[showpoint](../standard-library/ios-functions.md#showpoint) と [precision](../standard-library/ios-base-class.md#precision) を使用して、小数点の後に 0 を表示します。
 
-マニピュレーターが効果的に呼び出し`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -461,17 +461,17 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `noshowpos` は既定でオンになります。
 
-マニピュレーターが効果的に呼び出し`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`)、戻ります*str*します。
 
 ### <a name="example"></a>例
 
@@ -487,17 +487,17 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、[skipws](../standard-library/ios-functions.md#skipws) は有効です。 入力ストリームでスペースが読み込まれると、バッファーの終了を通知します。
 
-マニピュレーターが効果的に呼び出し`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -528,17 +528,17 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) はバッファーが空ではないときに、バッファーを処理します。
 
-マニピュレーターが効果的に呼び出し`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::unitbuf`)、し、返します*str*します。
 
 ## <a name="nouppercase"></a>  nouppercase
 
@@ -550,15 +550,15 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-マニピュレーターが効果的に呼び出し`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -574,21 +574,21 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 元のオブジェクトへの参照*str*が派生します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、整数変数は、10 進表記で表示されます。 [dec](../standard-library/ios-functions.md#dec) および [hex](../standard-library/ios-functions.md#hex) も整数変数の表示方法を変更します。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`、 `ios_base::basefield`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`、 `ios_base::basefield`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
-**oct** の使用例については、「[dec](../standard-library/ios-functions.md#dec)」を参照してください。
+参照してください[dec](../standard-library/ios-functions.md#dec)を使用する方法の例については`oct`します。
 
 ## <a name="right"></a>  right
 
@@ -600,17 +600,17 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 元のオブジェクトへの参照*str*が派生します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 [left](../standard-library/ios-functions.md#left) もテキストの両端揃えを変更します。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`、 `ios_base::adjustfield`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`、 `ios_base::adjustfield`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -656,17 +656,17 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、[fixed](../standard-library/ios-functions.md#fixed) 表記は浮動小数点数に対して有効です。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`、 `ios_base::floatfield`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`、 `ios_base::floatfield`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -700,17 +700,17 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 数値表記の基底は、[dec](../standard-library/ios-functions.md#dec)、[oct](../standard-library/ios-functions.md#oct)、または [hex](../standard-library/ios-functions.md#hex) を使用して変更できます。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -753,17 +753,17 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、[noshowpoint](../standard-library/ios-functions.md#noshowpoint) は有効です。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -779,17 +779,17 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 [noshowpos](../standard-library/ios-functions.md#noshowpos) が既定の設定です。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -823,17 +823,17 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
 _ *Str* の派生元となるオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、`skipws` は有効です。 [noskipws](../standard-library/ios-functions.md#noskipws) は、入力ストリームから空白を読み取るようにします。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`)、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`)、し、返します*str*します。
 
 ### <a name="example"></a>例
 
@@ -876,19 +876,19 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
-`str` の派生元となるオブジェクトへの参照。
+元のオブジェクトへの参照*str*が派生します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `endl` もバッファーをフラッシュします。
 
 既定では、[nounitbuf](../standard-library/ios-functions.md#nounitbuf) は有効です。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags))、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::unitbuf](../standard-library/ios-base-class.md#fmtflags))、し、返します*str*します。
 
 ## <a name="uppercase"></a>  uppercase
 
@@ -900,17 +900,17 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または継承された型に`ios_base`です。
+*str*型のオブジェクトへの参照を[ios_base](../standard-library/ios-base-class.md)、または型から継承する`ios_base`します。
 
 ### <a name="return-value"></a>戻り値
 
-`str` の派生元となるオブジェクトへの参照。
+元のオブジェクトへの参照*str*が派生します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、[nouppercase](../standard-library/ios-functions.md#nouppercase) は有効です。
 
-マニピュレーターが効果的に呼び出し`str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags))、しを返します`str`です。
+マニピュレーターは実質的に呼び出す`str`.[setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags))、し、返します*str*します。
 
 ### <a name="example"></a>例
 

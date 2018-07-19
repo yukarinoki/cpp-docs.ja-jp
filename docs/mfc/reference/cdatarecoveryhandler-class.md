@@ -1,5 +1,5 @@
 ---
-title: CDataRecoveryHandler クラス |Microsoft ドキュメント
+title: CDataRecoveryHandler クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -72,15 +72,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73596ec5ec9f17b2007a6816bbe0ab90b1463430
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 9be1d106257787d5a5dd919372726c8d31a1edc1
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339281"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler クラス
-`CDataRecoveryHandler`自動保存を文書化し、アプリケーションが予期せず終了した場合は、それを復元します。  
+`CDataRecoveryHandler`自動保存を文書化し、アプリケーションが予期せず終了した場合に復元します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -100,82 +100,82 @@ class CDataRecoveryHandler : public CObject
   
 |||  
 |-|-|  
-|[CDataRecoveryHandler::AutosaveAllDocumentInfo](#autosavealldocumentinfo)|登録されている各ファイルの自動保存、`CDataRecoveryHandler`クラスです。|  
-|[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)|自動指定されたドキュメントを保存します。|  
+|[CDataRecoveryHandler::AutosaveAllDocumentInfo](#autosavealldocumentinfo)|登録されている各ファイルの自動保存、`CDataRecoveryHandler`クラス。|  
+|[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)|指定されたドキュメントの自動保存します。|  
 |[CDataRecoveryHandler::CreateDocumentInfo](#createdocumentinfo)|開いているドキュメントの一覧にドキュメントを追加します。|  
 |[CDataRecoveryHandler::DeleteAllAutosavedFiles](#deleteallautosavedfiles)|現在の自動保存されたファイルをすべて削除します。|  
-|[CDataRecoveryHandler::DeleteAutosavedFile](#deleteautosavedfile)|指定した自動保存されたファイルを削除します。|  
+|[CDataRecoveryHandler::DeleteAutosavedFile](#deleteautosavedfile)|指定された自動保存ファイルを削除します。|  
 |[CDataRecoveryHandler::GenerateAutosaveFileName](#generateautosavefilename)|指定されたドキュメントのファイル名に関連付けられている自動保存ファイルの名前を生成します。|  
 |[CDataRecoveryHandler::GetAutosaveInterval](#getautosaveinterval)|自動保存の試行間隔を返します。|  
 |[CDataRecoveryHandler::GetAutosavePath](#getautosavepath)|自動保存されたファイルのパスを返します。|  
 |[CDataRecoveryHandler::GetDocumentListName](#getdocumentlistname)|ドキュメントの名前を取得、`CDocument`オブジェクト。|  
-|[CDataRecoveryHandler::GetNormalDocumentTitle](#getnormaldocumenttitle)|指定されたドキュメントの通常のタイトルを取得します。|  
-|[CDataRecoveryHandler::GetRecoveredDocumentTitle](#getrecovereddocumenttitle)|作成し、復元したドキュメントのタイトルを返します。|  
-|[CDataRecoveryHandler::GetRestartIdentifier](#getrestartidentifier)|アプリケーションの一意の再起動の識別子を取得します。|  
-|[CDataRecoveryHandler::GetSaveDocumentInfoOnIdle](#getsavedocumentinfoonidle)|示すかどうか、`CDataRecoveryHandler`現在アイドル ループの自動保存を実行します。|  
+|[CDataRecoveryHandler::GetNormalDocumentTitle](#getnormaldocumenttitle)|指定した文書の通常のタイトルを取得します。|  
+|[CDataRecoveryHandler::GetRecoveredDocumentTitle](#getrecovereddocumenttitle)|作成し、復元された文書のタイトルを返します。|  
+|[CDataRecoveryHandler::GetRestartIdentifier](#getrestartidentifier)|アプリケーションの再起動の一意の識別子を取得します。|  
+|[CDataRecoveryHandler::GetSaveDocumentInfoOnIdle](#getsavedocumentinfoonidle)|示すかどうか、`CDataRecoveryHandler`現在アイドル ループに対して自動保存を実行します。|  
 |[CDataRecoveryHandler::GetShutdownByRestartManager](#getshutdownbyrestartmanager)|再起動マネージャーのアプリケーションを終了する原因となったかどうかを示します。|  
 |[CDataRecoveryHandler::Initialize](#initialize)|`CDataRecoveryHandler` を初期化します。|  
-|[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)|各ドキュメントをユーザーにダイアログ ボックスを表示、`CDataRecoveryHandler`自動保存します。 ダイアログ ボックスでは、ユーザーが、自動保存されたドキュメントを復元するかどうかを判断します。|  
-|[CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist)|レジストリから開いているドキュメントのリストを読み込みます。|  
-|[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)|指定されたドキュメントを開いているドキュメントの一覧から削除します。|  
-|[CDataRecoveryHandler::ReopenPreviousDocuments](#reopenpreviousdocuments)|既に開いているドキュメントを開きます。|  
-|[CDataRecoveryHandler::RestoreAutosavedDocuments](#restoreautosaveddocuments)|ユーザー入力に基づく自動保存されたドキュメントを復元します。|  
+|[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)|各ドキュメントをユーザーにダイアログ ボックスを表示、`CDataRecoveryHandler`自動保存されます。 ダイアログ ボックスでは、ユーザーが自動保存されたドキュメントを復元するかどうかを判断します。|  
+|[CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist)|レジストリから開いているドキュメントの一覧を読み込みます。|  
+|[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)|開いているドキュメントの一覧から、指定されたドキュメントを削除します。|  
+|[CDataRecoveryHandler::ReopenPreviousDocuments](#reopenpreviousdocuments)|以前に開かれているドキュメントを開きます。|  
+|[CDataRecoveryHandler::RestoreAutosavedDocuments](#restoreautosaveddocuments)|ユーザー入力に基づいて、自動保存されたドキュメントを復元します。|  
 |[CDataRecoveryHandler::SaveOpenDocumentList](#saveopendocumentlist)|現在開いているドキュメントの一覧を Windows レジストリに保存します。|  
-|[CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval)|ミリ秒単位での自動保存のサイクルの間隔を設定します。|  
+|[CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval)|ミリ秒単位での自動保存のサイクルの間の時間を設定します。|  
 |[CDataRecoveryHandler::SetAutosavePath](#setautosavepath)|自動保存されたファイルが格納されるディレクトリを設定します。|  
-|[CDataRecoveryHandler::SetRestartIdentifier](#setrestartidentifier)|このインスタンスの一意の再起動の識別子を設定、`CDataRecoveryHandler`です。|  
-|[CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle)|設定するかどうか、`CDataRecoveryHandler`現在アイドル サイクル中に、開いているドキュメントの情報を Windows レジストリに保存します。|  
-|[CDataRecoveryHandler::SetShutdownByRestartManager](#setshutdownbyrestartmanager)|再起動マネージャーによって、アプリケーションの前回の終了が発生したかどうかを設定します。|  
-|[CDataRecoveryHandler::UpdateDocumentInfo](#updatedocumentinfo)|ユーザーで保存されるため、ドキュメントの情報を更新します。|  
+|[CDataRecoveryHandler::SetRestartIdentifier](#setrestartidentifier)|このインスタンスの再起動の一意の識別子を設定、`CDataRecoveryHandler`します。|  
+|[CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle)|セットかどうか、`CDataRecoveryHandler`アイドル状態の現在のサイクル中に、開いているドキュメントの情報を Windows レジストリに保存します。|  
+|[CDataRecoveryHandler::SetShutdownByRestartManager](#setshutdownbyrestartmanager)|再起動マネージャーによって、アプリケーションの以前の終了が発生したかどうかを設定します。|  
+|[CDataRecoveryHandler::UpdateDocumentInfo](#updatedocumentinfo)|そのユーザーが保存されるため、ドキュメントの情報を更新します。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
 |||  
 |-|-|  
-|m_bRestoringPreviousOpenDocs|データ回復のハンドラーが開いていたドキュメントを再度開くかどうかを示します。|  
-|m_bSaveDocumentInfoOnIdle|データ回復のハンドラーの自動保存が次のアイドル ループでドキュメントかどうかを示します。|  
+|m_bRestoringPreviousOpenDocs|データ回復のハンドラーが既に開いているドキュメントを再度開くかどうかを示します。|  
+|m_bSaveDocumentInfoOnIdle|次のアイドル ループでデータ回復のハンドラーの自動保存がドキュメントかどうかを示します。|  
 |m_bShutdownByRestartManager|再起動マネージャー アプリケーションを終了するかどうかを示します。|  
-|m_dwRestartManagerSupportFlags|再起動マネージャーのサポート内容を示すフラグは、アプリケーションを提供します。|  
-|m_lstAutosavesToDelete|元のドキュメントを閉じたときに削除されなかった自動保存されたファイルの一覧。 アプリケーションの終了時、ファイルを削除する再起動マネージャー再試行します。|  
-|m_mapDocNameToAutosaveName|自動保存されたファイル名にドキュメント名のマップです。|  
+|m_dwRestartManagerSupportFlags|アプリケーションの再起動マネージャーがサポートされる内容を示すフラグを提供します。|  
+|m_lstAutosavesToDelete|元のドキュメントを閉じたときに削除されなかった自動保存されたファイルの一覧。 アプリケーションの終了時、再起動マネージャーの再試行がファイルを削除します。|  
+|m_mapDocNameToAutosaveName|ドキュメント名と自動保存されたファイル名のマップです。|  
 |m_mapDocNameToDocumentPtr|ドキュメント名のマップ、 [CDocument](../../mfc/reference/cdocument-class.md)ポインター。|  
-|m_mapDocNameToRestoreBool|自動保存されたドキュメントを復元するかどうかを示すブール値パラメーターにドキュメント名のマップです。|  
+|m_mapDocNameToRestoreBool|ドキュメント名と自動保存されたドキュメントを復元するかどうかを示すブール値パラメーターのマップです。|  
 |m_mapDocumentPtrToDocName|マップ、`CDocument`ドキュメント名へのポインター。|  
 |m_mapDocumentPtrToDocTitle|マップ、`CDocument`ドキュメント タイトルへのポインター。 これらのタイトルは、ファイルを保存するために使用されます。|  
 |m_nAutosaveInterval|自動保存の間隔をミリ秒で時間です。|  
 |m_nTimerID|自動保存タイマーの識別子。|  
-|m_strAutosavePath|自動保存されたドキュメントの格納場所。|  
-|m_strRestartIdentifier|再起動マネージャーの GUID の文字列表現。|  
+|m_strAutosavePath|自動保存されたドキュメントの保存場所。|  
+|m_strRestartIdentifier|再起動マネージャーの GUID の文字列形式。|  
   
 ## <a name="remarks"></a>Remarks  
- 再起動マネージャーを使用して、`CDataRecoveryHandler`を保持するクラスに追跡をすべての開いているドキュメントと自動保存を必要に応じて、します。 自動保存を有効にするを使用して、 [CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle)メソッドです。 このメソッドに指示、`CDataRecoveryHandler`を次のアイドル ループの自動保存を実行します。 再起動マネージャー呼び出し`SetSaveDocumentInfoOnIdle`ときに、`CDataRecoveryHandler`自動保存を実行する必要があります。  
+ 再起動マネージャーを使用して、`CDataRecoveryHandler`保持するクラスのすべての開いているドキュメントと自動保存として追跡必要です。 自動保存を有効にするには使用、 [CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle)メソッド。 このメソッドは、 `CDataRecoveryHandler` next アイドル ループに対して自動保存を実行します。 再起動マネージャーの呼び出し`SetSaveDocumentInfoOnIdle`ときに、`CDataRecoveryHandler`自動保存を実行する必要があります。  
   
- すべてのメソッドの`CDataRecoveryHandler`クラスは仮想です。 独自のカスタム データ復旧のハンドラーを作成するには、このクラスのメソッドをオーバーライドします。 独自のデータ回復のハンドラーを作成するマネージャーを再起動するか、しない限りには、CDataRecoveryHandler がインスタンス化できません。 [CWinApp クラス](../../mfc/reference/cwinapp-class.md)を作成、`CDataRecoveryHandler`オブジェクトが必要です。  
+ すべてのメソッドの`CDataRecoveryHandler`クラスは仮想です。 独自のカスタム データ復旧のハンドラーを作成するには、このクラスのメソッドをオーバーライドします。 独自のデータ復旧ハンドラーを作成するか、マネージャーを再起動すると、しない限りを CDataRecoveryHandler がインスタンス化できません。 [CWinApp クラス](../../mfc/reference/cwinapp-class.md)作成、`CDataRecoveryHandler`オブジェクトが必要です。  
   
- 使用する前に、`CDataRecoveryHandler`オブジェクトを呼び出す必要があります[CDataRecoveryHandler::Initialize](#initialize)です。  
+ 使用する前に、`CDataRecoveryHandler`オブジェクトを呼び出す必要があります[CDataRecoveryHandler::Initialize](#initialize)します。  
   
- `CDataRecoveryHandler`クラスは、再起動マネージャーに密接に関連して`CDataRecoveryHandler`グローバル パラメーターに依存する`m_dwRestartManagerSupportFlags`です。 このパラメーターは、再起動マネージャーがどのようなアクセス許可と、アプリケーションとの対話方法を決定します。 再起動マネージャーを既存のアプリケーションに組み込むを割り当てる必要が`m_dwRestartManagerSupportFlags`メイン アプリケーションのコンス トラクターに適切な値です。 再起動マネージャーを使用する方法の詳細については、次を参照してください。[する方法: 再起動マネージャー サポートの追加](../../mfc/how-to-add-restart-manager-support.md)です。  
+ `CDataRecoveryHandler`クラスは、再起動マネージャーを密接に関連して`CDataRecoveryHandler`グローバル パラメーターに依存する`m_dwRestartManagerSupportFlags`します。 このパラメーターは、再起動マネージャーがどのようなアクセス許可と、アプリケーションと対話する方法を決定します。 再起動マネージャーを既存のアプリケーションに組み込むに割り当てる必要があります`m_dwRestartManagerSupportFlags`メイン アプリケーションのコンス トラクターで適切な値。 再起動マネージャーを使用する方法の詳細については、次を参照してください。[方法: 再起動マネージャーのサポートを追加](../../mfc/how-to-add-restart-manager-support.md)します。  
   
 ## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdatarecovery.h  
   
 ##  <a name="autosavealldocumentinfo"></a>  CDataRecoveryHandler::AutosaveAllDocumentInfo  
- 登録されている各ファイルの自動保存、`CDataRecoveryHandler`クラスです。  
+ 登録されている各ファイルの自動保存、`CDataRecoveryHandler`クラス。  
   
 ```  
 virtual BOOL AutosaveAllDocumentInfo();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合、`CDataRecoveryHandler`すべてのドキュメントを保存`FALSE`任意の文書が保存されていない場合。  
+ TRUE の場合、`CDataRecoveryHandler`保存されているすべてのドキュメント。任意のドキュメントが保存されていない場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドが戻る`TRUE`保存する必要があるドキュメントが存在しない場合。 返します`TRUE`を取得する場合は、すべてのドキュメントを保存せず、`CWinApp`または`CDocManager`のアプリケーションでエラーが生成されます。  
+ このメソッドは、ドキュメントを保存する必要がありますがない場合に TRUE を返します。 取得する場合、すべてのドキュメントを保存せず TRUE を返します、`CWinApp`または`CDocManager`のアプリケーションにエラーが生成されます。  
   
- このメソッドのいずれも使用する`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`または`AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`で設定する必要があります`m_dwRestartManagerSupportFlags`です。 参照してください[m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)詳細についてはします。  
+ このメソッドを使用して、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 設定する必要があります`m_dwRestartManagerSupportFlags`します。 参照してください[m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)詳細についてはします。  
   
 ##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo  
- 自動指定されたドキュメントを保存します。  
+ 指定されたドキュメントの自動保存します。  
   
 ```  
 virtual BOOL AutosaveDocumentInfo(
@@ -189,20 +189,20 @@ virtual BOOL AutosaveDocumentInfo(
 |-|-|  
 |パラメーター|説明|  
 |[in]*pDocument*|ポインター、`CDocument`を保存します。|  
-|[in]*bResetModifiedFlag*|`TRUE` 示します、`CDataRecoveryHandler`考慮*pDocument*を変更できます。`FALSE`フレームワークでは考慮を示す*pDocument*変更できません。 このフラグの効果についての詳細については、「解説」を参照してください。|  
+|[in]*bResetModifiedFlag*|True を`CDataRecoveryHandler`考慮*pDocument* ; 変更するにはフレームワークを考慮する場合は false *pDocument*変更します。 このフラグの効果の詳細については「解説」を参照してください。|  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 適切なフラグが設定されている場合と*pDocument*は有効な`CDocument`オブジェクト。  
+ 適切なフラグが設定されている場合は TRUE と*pDocument*は有効な`CDocument`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 各`CDocument`オブジェクトは、これが最後に保存してから変更されていないことを示すフラグを持ちます。 使用して[CDocument::IsModified](../../mfc/reference/cdocument-class.md#ismodified)このフラグの状態を判断します。 場合、`CDocument`が、最後に保存してから変更されていない`AutosaveDocumentInfo`そのドキュメントの自動保存されたファイルを削除します。 ドキュメントが最後に保存されてから変更されている場合に終了する、閉じる前にドキュメントを保存するユーザーがメッセージを表示します。  
+ 各`CDocument`オブジェクトが最後に保存してからそれが変更されているかを示すフラグ。 使用[CDocument::IsModified](../../mfc/reference/cdocument-class.md#ismodified)このフラグの状態を判断します。 場合、`CDocument`が、最後に保存してから変更されていない`AutosaveDocumentInfo`そのドキュメントの自動保存されたファイルを削除します。 ドキュメントが最後に保存してから変更した場合は閉じても、ユーザーを閉じる前にドキュメントを保存するように求められます。  
   
 > [!NOTE]
->  使用して*bResetModifiedFlag*に変更されていないドキュメントの状態を変更する可能性がありますデータが失われる。 フレームワーク、ドキュメントが変更されていない場合、終了するプロンプトが表示されませんを保存します。  
+>  使用して*bResetModifiedFlag*を変更するドキュメントの状態に変更されていない可能性がありますと、ユーザー データが失われる。 フレームワーク、ドキュメントが変更されていない場合、終了するプロンプトが表示されません、ユーザーを保存します。  
   
- このメソッドで例外をスローする、 [ASSERT](diagnostic-services.md#assert)マクロ場合*pDocument*が無効です`CDocument`オブジェクト。  
+ このメソッドで例外をスロー、 [ASSERT](diagnostic-services.md#assert)マクロ場合*pDocument*は無効な`CDocument`オブジェクト。  
   
- このメソッドのいずれも使用する`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`または`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`で設定する必要があります*m_dwRestartManagerSupportFlags*です。   
+ このメソッドを使用して、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL 設定する必要があります*m_dwRestartManagerSupportFlags*します。   
   
 ##  <a name="cdatarecoveryhandler"></a>  CDataRecoveryHandler::CDataRecoveryHandler  
  `CDataRecoveryHandler` オブジェクトを構築します。  
@@ -219,10 +219,10 @@ CDataRecoveryHandler(
 |-|-|  
 |パラメーター|説明|  
 |[in]*dwRestartManagerSupportFlags*|再起動マネージャーのオプションがサポートされていることを示します。|  
-|[in]*nAutosaveInterval*|自動保存までの時間。 このパラメーターはミリ秒です。|  
+|[in]*nAutosaveInterval*|自動保存までの時間。 このパラメーターは、ミリ秒単位です。|  
   
 ### <a name="remarks"></a>Remarks  
- MFC フレームワークが自動的に作成、`CDataRecoveryHandler`を使用するときに、アプリケーションのオブジェクト、**新しいプロジェクト**ウィザード。 データの回復の動作をカスタマイズすることも、再起動マネージャーをする場合は、しない限り、作成しないようにする、`CDataRecoveryHandler`オブジェクト。  
+ MFC フレームワークが自動的に作成、`CDataRecoveryHandler`を使用する場合、アプリケーションのオブジェクト、**新しいプロジェクト**ウィザード。 データの回復の動作をカスタマイズすることも、再起動マネージャーをする場合は、しない限り、作成しないようにする、`CDataRecoveryHandler`オブジェクト。  
   
   
 ##  <a name="createdocumentinfo"></a>  CDataRecoveryHandler::CreateDocumentInfo  
@@ -237,15 +237,15 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|ポインター、`CDocument`です。 このメソッドには、このドキュメントの情報が作成されます`CDocument`です。|  
+|[in]*pDocument*|ポインター、`CDocument`します。 このメソッドは、このドキュメントの情報を作成します。`CDocument`します。|  
   
 ### <a name="return-value"></a>戻り値  
- 既定の実装では、`TRUE` が返されます。  
+ 既定の実装では、TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは確認場合*pDocument*は、ドキュメントの一覧に既にドキュメントを追加する前にします。 場合*pDocument*は既にこのメソッドの一覧で、自動保存されたファイルに関連付けられている削除*pDocument*です。  
+ このメソッドはチェック場合*pDocument*は、ドキュメントの一覧に既にドキュメントを追加する前にします。 場合*pDocument*は既にこのメソッドの一覧で、自動保存されたファイルに関連付けられている削除*pDocument*します。  
   
- このメソッドのいずれも使用する`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`または`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`で設定する必要があります*m_dwRestartManagerSupportFlags*です。 
+ このメソッドを使用して、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL 設定する必要があります*m_dwRestartManagerSupportFlags*します。 
   
 ##  <a name="deleteallautosavedfiles"></a>  CDataRecoveryHandler::DeleteAllAutosavedFiles  
  現在の自動保存されたファイルをすべて削除します。  
@@ -255,10 +255,10 @@ virtual BOOL DeleteAllAutosavedFiles();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 既定の実装では、常に `TRUE` を返します。  
+ 既定の実装を常に TRUE を返します。  
   
 ##  <a name="deleteautosavedfile"></a>  CDataRecoveryHandler::DeleteAutosavedFile  
- 指定した自動保存されたファイルを削除します。  
+ 指定された自動保存ファイルを削除します。  
   
 ```  
 virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
@@ -269,13 +269,13 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*strAutosavedFile*|自動保存されたファイル名を表す文字列。|  
+|[in]*strAutosavedFile*|自動保存されたファイル名を含む文字列。|  
   
 ### <a name="return-value"></a>戻り値  
- 常に戻り値の既定の実装`TRUE`です。  
+ 既定の実装を常に TRUE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、自動保存されたファイルを削除できません、一覧で、ファイルの名前を保存します。 デストラクター、`CDataRecoveryHandler`リストで指定された各自動保存されたファイルを削除しようとしています。  
+ このメソッドでは、自動保存されたファイルで削除できない場合は、一覧で、ファイルの名前を保存します。 デストラクター、`CDataRecoveryHandler`そのリストで指定された各自動保存されたファイルを削除しようとしています。  
   
 ##  <a name="generateautosavefilename"></a>  CDataRecoveryHandler::GenerateAutosaveFileName  
  指定されたドキュメントのファイル名に関連付けられている自動保存ファイルの名前を生成します。  
@@ -286,13 +286,13 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
   
 ### <a name="parameters"></a>パラメーター  
  [in]*strDocumentName*  
- ドキュメントの名前を表す文字列。 `GenerateAutosaveFileName` このドキュメントの名前を使用すると、対応する自動保存ファイル名を生成します。  
+ ドキュメント名を含む文字列。 `GenerateAutosaveFileName` このドキュメントの名前を使用すると、対応する自動保存ファイル名を生成します。  
   
 ### <a name="return-value"></a>戻り値  
- 自動保存ファイル名から生成された*strDocumentName*です。  
+ 自動保存ファイル名から生成された*strDocumentName*します。  
   
 ### <a name="remarks"></a>Remarks  
- 各ドキュメント名では、自動保存ファイル名を持つ一対一のマッピングを持ちます。  
+ 各ドキュメント名には、自動保存ファイル名と一対一のマッピングがいます。  
   
 ##  <a name="getautosaveinterval"></a>  CDataRecoveryHandler::GetAutosaveInterval  
  自動保存の試行間隔を返します。  
@@ -312,7 +312,7 @@ virtual CString GetAutosavePath() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 自動保存されたドキュメントの格納場所。  
+ 自動保存されたドキュメントの保存場所。  
   
 ##  <a name="getdocumentlistname"></a>  CDataRecoveryHandler::GetDocumentListName  
  ドキュメントの名前を取得、`CDocument`オブジェクト。  
@@ -326,16 +326,16 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|ポインター、`CDocument`です。 `GetDocumentListName` このドキュメントの名前を取得`CDocument`です。|  
+|[in]*pDocument*|ポインター、`CDocument`します。 `GetDocumentListName` このドキュメントの名前を取得`CDocument`します。|  
   
 ### <a name="return-value"></a>戻り値  
- ドキュメント名から*pDocument*です。  
+ ドキュメント名から*pDocument*します。  
   
 ### <a name="remarks"></a>Remarks  
- `CDataRecoveryHandler`ドキュメント名でキーとして使用*m_mapDocNameToAutosaveName*、 *m_mapDocNameToDocumentPtr*、および*m_mapDocNameToRestoreBool*です。 これらのパラメーターを有効にする、`CDataRecoveryHandler`を監視する`CDocument`オブジェクト、自動保存ファイル名、および自動保存設定します。  
+ `CDataRecoveryHandler`ドキュメント名のキーとして使用*m_mapDocNameToAutosaveName*、 *m_mapDocNameToDocumentPtr*、および*m_mapDocNameToRestoreBool*します。 これらのパラメーターを有効にする、`CDataRecoveryHandler`を監視する`CDocument`オブジェクト、自動保存ファイル名、および自動保存設定します。  
   
 ##  <a name="getnormaldocumenttitle"></a>  CDataRecoveryHandler::GetNormalDocumentTitle  
- 指定されたドキュメントの通常のタイトルを取得します。  
+ 指定した文書の通常のタイトルを取得します。  
   
 ```  
 virtual CString GetNormalDocumentTitle(CDocument* pDocument);
@@ -346,16 +346,16 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*pDocument*|ポインター、`CDocument`です。|  
+|[in]*pDocument*|ポインター、`CDocument`します。|  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたドキュメントの通常のタイトル。  
+ 指定した文書の通常のタイトル。  
   
 ### <a name="remarks"></a>Remarks  
- ドキュメントの通常のタイトルは、パスを含まないドキュメントのファイル名では通常です。 これは、タイトル、**ファイル名**のフィールド、**名前を付けて保存** ダイアログ ボックス。  
+ 通常のドキュメントのタイトルは通常、パスを使用せず、ドキュメントのファイル名です。 これは、タイトル、**ファイル名**のフィールド、**名前を付けて保存** ダイアログ ボックス。  
   
 ##  <a name="getrecovereddocumenttitle"></a>  CDataRecoveryHandler::GetRecoveredDocumentTitle  
- 作成し、復元したドキュメントのタイトルを返します。  
+ 作成し、復元された文書のタイトルを返します。  
   
 ```  
 virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const;  
@@ -363,16 +363,16 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
   
 ### <a name="parameters"></a>パラメーター  
  [in]*strDocumentTitle*  
- ドキュメントの通常のタイトル。  
+ 通常のドキュメントのタイトル。  
   
 ### <a name="return-value"></a>戻り値  
  回復したドキュメントのタイトル。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、ドキュメントの回復のタイトルは通常のタイトルを **[回復]** が追加されます。 回復したタイトルが、ユーザーに表示されるときに、`CDataRecoveryHandler`自動保存されたドキュメントを復元するユーザーのクエリを実行します。  
+ 既定では、ドキュメントの回復のタイトルには通常のタイトルを **[回復]** が追加されます。 回復したタイトルが、ユーザーに表示されるときに、`CDataRecoveryHandler`自動保存されたドキュメントを復元するユーザーのクエリを実行します。  
   
 ##  <a name="getrestartidentifier"></a>  CDataRecoveryHandler::GetRestartIdentifier  
- アプリケーションの一意の再起動の識別子を取得します。  
+ アプリケーションの再起動の一意の識別子を取得します。  
   
 ```  
 virtual CString GetRestartIdentifier() const;  
@@ -384,17 +384,17 @@ virtual CString GetRestartIdentifier() const;
 ### <a name="remarks"></a>Remarks  
  再起動識別子は、アプリケーションの実行ごとに一意です。  
   
- `CDataRecoveryHandler`現在開いているドキュメントはレジストリに情報を格納します。 再起動マネージャーは、アプリケーションを終了して再起動し、する際に再起動識別子が提供、`CDataRecoveryHandler`です。 `CDataRecoveryHandler`再起動識別子を使用して既に開いているドキュメントの一覧を取得します。 これにより、`CDataRecoveryHandler`検索し、自動保存されたファイルを復元しようとします。  
+ `CDataRecoveryHandler`現在開いているドキュメントのレジストリに情報を格納します。 再起動の識別子を再起動マネージャーは、アプリケーションを終了するし、再起動、提供、`CDataRecoveryHandler`します。 `CDataRecoveryHandler`再起動識別子を使用して、以前開いているドキュメントの一覧を取得します。 これにより、`CDataRecoveryHandler`検索し、自動保存されたファイルを復元しようとします。  
   
 ##  <a name="getsavedocumentinfoonidle"></a>  CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
- 示すかどうか、`CDataRecoveryHandler`現在アイドル ループの自動保存を実行します。  
+ 示すかどうか、`CDataRecoveryHandler`現在アイドル ループに対して自動保存を実行します。  
   
 ```  
 virtual BOOL GetSaveDocumentInfoOnIdle() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 示します、`CDataRecoveryHandler`現在のアイドル ループの自動保存`FALSE`そうでないことを示します。  
+ True、 `CDataRecoveryHandler` ; 現在アイドル ループの自動保存FALSE は、そうでないことを示します。  
   
 ##  <a name="getshutdownbyrestartmanager"></a>  CDataRecoveryHandler::GetShutdownByRestartManager  
  再起動マネージャーのアプリケーションを終了する原因となったかどうかを示します。  
@@ -404,7 +404,7 @@ virtual BOOL GetShutdownByRestartManager() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 再起動マネージャーのアプリケーションを終了する原因となったことを示します。`FALSE`しないことを示します。  
+ True の場合は再起動マネージャーによってアプリケーションが終了します。FALSE は、しないことを示します。  
   
 ##  <a name="initialize"></a>  CDataRecoveryHandler::Initialize  
  `CDataRecoveryHandler` を初期化します。  
@@ -414,44 +414,44 @@ virtual BOOL Initialize();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 初期化が成功した場合それ以外の場合`FALSE`です。  
+ 初期化に成功した場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 初期化プロセスでは、レジストリからの自動保存ファイルを格納するパスを読み込みます。 場合、`Initialize`メソッドには、このディレクトリが見つけられないか、かどうか、パスは`NULL`、`Initialize`失敗し、返します`FALSE`です。  
+ 初期化プロセスでは、レジストリからの自動保存ファイルを保存するパスを読み込みます。 場合、`Initialize`メソッドは、このディレクトリを見つけることができませんかかどうか、パスが null の場合、`Initialize`失敗し、返します`FALSE`します。  
   
- 使用して[CDataRecoveryHandler::SetAutosavePath](#setautosavepath) 、アプリケーションが初期化された後に自動保存パスを変更する、`CDataRecoveryHandler`です。  
+ 使用[CDataRecoveryHandler::SetAutosavePath](#setautosavepath) 、アプリケーションが初期化された後に自動保存パスを変更する、`CDataRecoveryHandler`します。  
   
- `Initialize`メソッドも次の自動保存が発生したときに監視するタイマーを開始します。 使用して[CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval) 、アプリケーションが初期化された後に自動保存の間隔を変更する、`CDataRecoveryHandler`です。  
+ `Initialize`メソッドも [次へ] の自動保存が発生したときに監視するためのタイマーを開始します。 使用[CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval) 、アプリケーションが初期化された後に自動保存の間隔を変更する、`CDataRecoveryHandler`します。  
   
 ##  <a name="queryrestoreautosaveddocuments"></a>  CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
- 各ドキュメントをユーザーにダイアログ ボックスを表示、`CDataRecoveryHandler`自動保存します。 ダイアログ ボックスでは、ユーザーが、自動保存されたドキュメントを復元するかどうかを判断します。  
+ 各ドキュメントをユーザーにダイアログ ボックスを表示、`CDataRecoveryHandler`自動保存されます。 ダイアログ ボックスでは、ユーザーが自動保存されたドキュメントを復元するかどうかを判断します。  
   
 ```  
 virtual void QueryRestoreAutosavedDocuments();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションが Unicode である場合は、このメソッドが表示されます、 [CTaskDialog](../../mfc/reference/ctaskdialog-class.md)をユーザーにします。 それ以外の場合、フレームワークを使用して[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)ユーザーを照会します。  
+ アプリケーションが Unicode である場合は、このメソッドが表示されます、 [CTaskDialog](../../mfc/reference/ctaskdialog-class.md)をユーザーにします。 それ以外の場合、フレームワークを使用して[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)ユーザー照会します。  
   
- 後に`QueryRestoreAutosavedDocuments`応答をすべて収集メンバー変数に情報を格納、ユーザーから*m_mapDocNameToRestoreBool*です。 このメソッドは、自動保存されたドキュメントを復元できません。  
+ 後`QueryRestoreAutosavedDocuments`すべての応答を収集、ユーザーから、メンバー変数に情報を格納、 *m_mapDocNameToRestoreBool*します。 このメソッドは、自動保存されたドキュメントを復元できません。  
   
 ##  <a name="readopendocumentlist"></a>  CDataRecoveryHandler::ReadOpenDocumentList  
- レジストリから開いているドキュメントのリストを読み込みます。  
+ レジストリから開いているドキュメントの一覧を読み込みます。  
   
 ```  
 virtual BOOL ReadOpenDocumentList();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 示します`ReadOpenDocumentList`には、少なくとも 1 つのドキュメントの情報をレジストリから読み込まれました。`FALSE`ドキュメントの情報が読み込まれていないことを示します。  
+ TRUE が示す`ReadOpenDocumentList`レジストリから少なくとも 1 つのドキュメントの情報を読み込むFALSE は、ドキュメントの情報が読み込まれていないことを示します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、開いているドキュメントの情報をレジストリから読み込むし、メンバー変数に格納*m_mapDocNameToAutosaveName*です。  
+ この関数は、レジストリから開いているドキュメント情報が読み込まれ、メンバー変数に格納*m_mapDocNameToAutosaveName*します。  
   
- 後に`ReadOpenDocumentList`すべてのデータが読み込まれるドキュメントについては、レジストリから削除します。  
+ 後`ReadOpenDocumentList`はすべてのデータを読み込み、レジストリからドキュメントの情報を削除します。  
   
 ##  <a name="removedocumentinfo"></a>  CDataRecoveryHandler::RemoveDocumentInfo  
- 指定されたドキュメントを開いているドキュメントの一覧から削除します。  
+ 開いているドキュメントの一覧から、指定されたドキュメントを削除します。  
   
 ```  
 virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
@@ -465,46 +465,46 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |[in]*pDocument*|削除するドキュメントへのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合*pDocument*リストから削除されました`FALSE`場合はエラーが発生しました。  
+ TRUE の場合*pDocument*は、一覧から削除されましたエラーが発生した場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
  ユーザーがドキュメントを閉じるときに、フレームワークは、開いているドキュメントの一覧から削除するのにこのメソッドを使用します。  
   
- 場合`RemoveDocumentInfo`見つかりません*pDocument* 、開いているドキュメントの一覧で何も行われません、返します`TRUE`です。  
+ 場合`RemoveDocumentInfo`見つかりません*pDocument*で開いているドキュメントの一覧で、何も行われません、TRUE を返します。  
   
- このメソッドを使用して`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`で設定する必要があります*m_dwRestartManagerSupportFlags*です。   
+ このメソッドを使用して、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 設定する必要があります*m_dwRestartManagerSupportFlags*します。   
   
 ##  <a name="reopenpreviousdocuments"></a>  CDataRecoveryHandler::ReopenPreviousDocuments  
- 既に開いているドキュメントを開きます。  
+ 以前に開かれているドキュメントを開きます。  
   
 ```  
 virtual BOOL ReopenPreviousDocuments();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 少なくとも 1 つのドキュメントが開いていた場合それ以外の場合`FALSE`です。  
+ 少なくとも 1 つのドキュメントが開いていた場合は TRUE。それ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、以前開いているドキュメントの最新の保存を開きます。 ドキュメントが保存されていない場合または自動保存、`ReopenPreviousDocuments`そのファイルの種類のテンプレートに基づく、空白のドキュメントを開きます。  
+ このメソッドは、以前に開かれているドキュメントの最新の保存を開きます。 ドキュメントが保存されていない場合または自動保存、`ReopenPreviousDocuments`そのファイルの種類のテンプレートに基づく、空白の文書を開きます。  
   
- このメソッドを使用して`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`で設定する必要があります*m_dwRestartManagerSupportFlags*です。 このパラメーターが設定されていない場合`ReopenPreviousDocuments`何も実行し、返します`FALSE`です。  
+ このメソッドを使用して、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 設定する必要があります*m_dwRestartManagerSupportFlags*します。 このパラメーターが設定されていない場合`ReopenPreviousDocuments`何も実行し、FALSE を返します。  
   
- 既に開いているドキュメントの一覧に格納されているドキュメントが存在しない場合`ReopenPreviousDocuments`何も実行し、返します`FALSE`です。  
+ 既に開いているドキュメントの一覧に格納されているドキュメントがない場合`ReopenPreviousDocuments`何も実行し、FALSE を返します。  
   
 ##  <a name="restoreautosaveddocuments"></a>  CDataRecoveryHandler::RestoreAutosavedDocuments  
- ユーザー入力に基づく自動保存されたドキュメントを復元します。  
+ ユーザー入力に基づいて、自動保存されたドキュメントを復元します。  
   
 ```  
 virtual BOOL RestoreAutosavedDocuments();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` このメソッドは、ドキュメントを正常に復元します。 場合、  
+ TRUE の場合は、このメソッドは、ドキュメントを正常に復元します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出す[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)を復元する必要があるどのドキュメントをユーザーを決定します。 ユーザーが、自動保存されたドキュメントを回復することに決めた場合`RestoreAutosavedDocuments`自動保存ファイルを削除します。 それ以外の場合、`RestoreAutosavedDocuments`開いているドキュメントを自動保存されたバージョンに置き換えます。  
+ このメソッドを呼び出す[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)を復元する必要があるどのドキュメントをユーザーを決定します。 ユーザーでは、自動保存されたドキュメントを復元しない場合`RestoreAutosavedDocuments`自動保存ファイルを削除します。 それ以外の場合、`RestoreAutosavedDocuments`開いているドキュメントを自動保存されたバージョンに置き換えます。  
   
- このメソッドのいずれも使用する`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`または`AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`で設定する必要があります`m_dwRestartManagerSupportFlags`です。   
+ このメソッドを使用して、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES または AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES 設定する必要があります`m_dwRestartManagerSupportFlags`します。   
   
 ##  <a name="saveopendocumentlist"></a>  CDataRecoveryHandler::SaveOpenDocumentList  
  現在開いているドキュメントの一覧を Windows レジストリに保存します。  
@@ -514,15 +514,15 @@ virtual BOOL SaveOpenDocumentList();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 開いているドキュメントを保存するが見つからない場合、または正常に保存された場合は。 `FALSE` 場合は、レジストリに保存するドキュメントがありますが、エラーが発生したため、保存されませんでした。  
+ 開いているドキュメントを保存することがない場合、または正常に保存された場合は TRUE です。 レジストリに保存するドキュメントが、エラーが発生したため、保存されていない場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- 再起動マネージャー呼び出し`SaveOpenDocumentList`アプリケーションが予期せず終了するときまたはでアップグレードを終了するとします。 使用して、アプリケーションが再起動されると、 [CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist)開いているドキュメントの一覧を取得します。  
+ 再起動マネージャーの呼び出し`SaveOpenDocumentList`アプリケーションが予期せずが終了したとき、またはアップグレードするときに終了します。 使用して、アプリケーションが再起動したら、 [CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist)開いているドキュメントの一覧を取得します。  
   
  このメソッドは、開いているドキュメントの一覧のみを保存します。 メソッド[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)ドキュメント自体の保存を担当します。  
   
 ##  <a name="setautosaveinterval"></a>  CDataRecoveryHandler::SetAutosaveInterval  
- ミリ秒単位での自動保存のサイクルの間隔を設定します。  
+ ミリ秒単位での自動保存のサイクルの間の時間を設定します。  
   
 ```  
 Virtual void SetAutosaveInterval(int nAutosaveInterval);
@@ -530,7 +530,7 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nAutosaveInterval*  
- ミリ秒単位で新しい自動保存の間隔。  
+ ミリ秒単位での新しい自動保存の間隔。  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
  自動保存されたファイルが格納されるディレクトリを設定します。  
@@ -544,13 +544,13 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*strAutosavePath*|自動保存ファイルの保存場所のパス。|  
+|[in]*strAutosavePath*|自動保存ファイルが格納されるパス。|  
   
 ### <a name="remarks"></a>Remarks  
- 自動保存ディレクトリを変更するファイルは移動されません現在自動保存します。  
+ 自動保存ディレクトリを変更するファイルは移動されません現在自動保存されます。  
   
 ##  <a name="setrestartidentifier"></a>  CDataRecoveryHandler::SetRestartIdentifier  
- このインスタンスの一意の再起動の識別子を設定、`CDataRecoveryHandler`です。  
+ このインスタンスの再起動の一意の識別子を設定、`CDataRecoveryHandler`します。  
   
 ```  
 virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
@@ -564,10 +564,10 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |[in]*strRestartIdentifier*|再起動マネージャーの一意の識別子。|  
   
 ### <a name="remarks"></a>Remarks  
- 再起動マネージャーは、レジストリで、開いているドキュメントに関する情報を記録します。 この情報は、一意の再起動の識別子を持つキーとして格納されます。 再起動識別子は、アプリケーションの各インスタンスに対して一意であるため、アプリケーションの複数のインスタンスに予期せず終了した場合し、再起動マネージャーは、それらの各を回復できます。  
+ 再起動マネージャーは、レジストリで開かれているドキュメントについての情報を記録します。 この情報は、再起動の一意の識別子を持つキーとして格納されます。 再起動の識別子は、アプリケーションの各インスタンスに対して一意であるため、アプリケーションの複数のインスタンスが予期せず終了可能性があり、再起動マネージャーが回復し、各します。  
   
 ##  <a name="setsavedocumentinfoonidle"></a>  CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
- 設定するかどうか、`CDataRecoveryHandler`現在アイドル サイクル中に、開いているドキュメントの情報を Windows レジストリに保存します。  
+ セットかどうか、`CDataRecoveryHandler`アイドル状態の現在のサイクル中に、開いているドキュメントの情報を Windows レジストリに保存します。  
   
 ```  
 virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
@@ -578,10 +578,10 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*bSaveOnIdle*|`TRUE` 現在のアイドル状態サイクル中にドキュメントの情報を保存するには`FALSE to not perform a save`.|  
+|[in]*bSaveOnIdle*|ドキュメントについては、現在のアイドル状態サイクル中に保存する場合は TRUE保存を実行する場合は FALSE。|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
- 再起動マネージャーによって、アプリケーションの前回の終了が発生したかどうかを設定します。  
+ 再起動マネージャーによって、アプリケーションの以前の終了が発生したかどうかを設定します。  
   
 ```  
 virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
@@ -592,13 +592,13 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |パラメーター|説明|  
-|[in]*bShutdownByRestartManager*|`TRUE` 再起動マネージャーのアプリケーションを終了する原因となったことを示すために`FALSE`の理由により、アプリケーションが終了していることを示すためにします。|  
+|[in]*bShutdownByRestartManager*|再起動マネージャーのアプリケーションを終了する原因となったことを指定する場合は TRUEもう 1 つの理由で、アプリケーションが終了していることを示す場合は FALSE。|  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークは、前回の終了が予想されるかどうか、または、再起動マネージャーによって開始されたかどうかに基づいて異なる方法では動作します。  
+ フレームワークでは、前回の終了が予想されるかどうか、または再起動マネージャーによって開始されたかどうかに基づいて異なる方法では動作します。  
   
 ##  <a name="updatedocumentinfo"></a>  CDataRecoveryHandler::UpdateDocumentInfo  
- ユーザーで保存されるため、ドキュメントの情報を更新します。  
+ そのユーザーが保存されるため、ドキュメントの情報を更新します。  
   
 ```  
 virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
@@ -612,12 +612,12 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |[in]*pDocument*|保存されたドキュメントへのポインター。|  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` このメソッドは、自動保存されたドキュメントを削除し、文書の情報を更新する場合`FALSE`場合はエラーが発生しました。  
+ このメソッドは、自動保存されたドキュメントを削除し、文書の情報を更新する場合は TRUE。エラーが発生した場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- ユーザーがドキュメントを保存すると、アプリケーションは、不要になったため、自動保存されたファイルを削除します。 `UpdateDocumentInfo` 呼び出して、自動保存されたファイルを削除[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)です。 `UpdateDocumentInfo` 情報を追加*pDocument*の一覧に現在開いているドキュメント`RemoveDocumentInfo`が保存されている、その情報を削除するドキュメントが開かれたままです。  
+ ユーザーがドキュメントを保存すると、アプリケーションは、不要になったため、自動保存されたファイルを削除します。 `UpdateDocumentInfo` 呼び出すことによって、自動保存されたファイルを削除します[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)します。 `UpdateDocumentInfo` 情報を追加し、 *pDocument*の一覧に現在オープン ドキュメント`RemoveDocumentInfo`、その情報が保存されているを削除します。 ドキュメントが開かれたまま。  
   
- このメソッドを使用して`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`で設定する必要があります*m_dwRestartManagerSupportFlags*です。   
+ このメソッドを使用して、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES 設定する必要があります*m_dwRestartManagerSupportFlags*します。   
   
 ## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)   
