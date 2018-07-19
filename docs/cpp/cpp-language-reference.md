@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ 言語リファレンス |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016

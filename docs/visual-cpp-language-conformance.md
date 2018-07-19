@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual C++ 言語の準拠 | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
