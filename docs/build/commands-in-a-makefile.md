@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366875"
 ---
 # <a name="commands-in-a-makefile"></a>メイクファイルのコマンド
 説明のブロックまたは推論のルールは、依存関係が最新でない場合に実行するコマンドのブロックを指定します。 しない限り、(nmake の) を実行する前に各コマンドが表示されます、/S**です。サイレント**、 **!CMDSWITCHES**、または @ を使用します。 記述ブロックの後にコマンドのブロックがありません (nmake の) に一致する推論規則の表示されます。  

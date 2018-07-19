@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3e55aaa8cfc659672632a897efc7543effaf26
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956555"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -39,8 +40,8 @@ iostream の抽出を仲介するテンプレート クラス basic_istream と�
 
 |型名|説明|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|`char` に特殊化された型 `basic_iostream`。|
-|[istream](../standard-library/istream-typedefs.md#istream)|`char` に特殊化された型 `basic_istream`。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|型`basic_iostream`に特殊化された**char**します。|
+|[istream](../standard-library/istream-typedefs.md#istream)|型`basic_istream`に特殊化された**char**します。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|**wchar** に特殊化された型 `basic_iostream`。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|**wchar** に特殊化された型 `basic_istream`。|
 
@@ -62,7 +63,7 @@ iostream の抽出を仲介するテンプレート クラス basic_istream と�
 |クラス|説明|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|入力と出力の両方を行うことができるストリーム クラス。|
-|[basic_istream](../standard-library/basic-istream-class.md)|このテンプレート クラスは、**Elem** 型の要素を含むストリーム バッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを表します。Elem 型は [char_type](../standard-library/basic-ios-class.md#char_type) とも呼ばれ、その特性は、[traits_type](../standard-library/basic-ios-class.md#traits_type) とも呼ばれるクラス **Tr** によって決定されます。|
+|[basic_istream](../standard-library/basic-istream-class.md)|テンプレート クラスは、型の要素を含むストリーム バッファーからエンコードされたオブジェクトと要素の抽出を制御するオブジェクトについて説明します`Elem`とも呼ばれる、 [char_type](../standard-library/basic-ios-class.md#char_type)、その文字特性はクラスによって決まります。`Tr`とも呼ばれる、 [traits_type](../standard-library/basic-ios-class.md#traits_type)します。|
 
 ## <a name="see-also"></a>関連項目
 

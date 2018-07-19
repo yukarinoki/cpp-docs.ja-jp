@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: e5ed9d81e4b63dd57ebaf5f41ecc8422eaf166dd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f5dc68dcd2b29b77b54bcc5af7e9dc8e4e79a897
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962027"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 演算子
 
@@ -47,15 +48,17 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**ペア。**
+*left*  
+ `pair` 型のオブジェクト。
 
-`right` 型のオブジェクト`pair`です。
+*right*  
+ `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 ペアが等しくない場合には **true**。等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ペアのそれぞれの要素が等しい場合に、ペアが等しくなります。 片方のペアの最初または 2 番目の要素のいずれかがもう一方のペアの対応する要素と等しくない場合には、2 つのペアは等しくありません。
 
@@ -117,15 +120,15 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**ペア。**
+*左*型のオブジェクト`pair`します。
 
-`right` 型のオブジェクト`pair`です。
+*適切な*型のオブジェクト`pair`します。
 
 ### <a name="return-value"></a>戻り値
 
 ペアが等しい場合には **true**。`pair` が等しくないときには **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ペアのそれぞれの要素が等しい場合に、ペアが等しくなります。 `left` が返されます。 **first** == `right`。 **first** && `left`。 **second** == `right`。 **second**。 片方のペアの最初または 2 番目の要素のいずれかがもう一方のペアの対応する要素と等しくない場合には、2 つのペアは等しくありません。
 
@@ -178,17 +181,19 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`pair`演算子の左側にあります。
+*left*  
+ 演算子の左辺にある `pair` 型のオブジェクト。
 
-`right` 型のオブジェクト`pair`演算子の右側にあります。
+*right*  
+ 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の `pair` が演算子の右辺の `pair` より厳密に小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`left` `pair`オブジェクトの厳密にすると表現はより小さい`right``pair`オブジェクトの場合`left`が等しくないと、それよりも小さい`right`です。
+`left` `pair`オブジェクトは厳密にはより小さい`right``pair`オブジェクトの場合*左*が等しくないと、それよりも小さい*右*します。
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 
@@ -253,15 +258,17 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`pair`演算子の左側にあります。
+*left*  
+ 演算子の左辺にある `pair` 型のオブジェクト。
 
-`right` 型のオブジェクト`pair`演算子の右側にあります。
+*right*  
+ 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の `pair` が演算子の右辺の `pair` 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 
@@ -336,17 +343,19 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`pair`演算子の左側にあります。
+*left*  
+ 演算子の左辺にある `pair` 型のオブジェクト。
 
-`right` 型のオブジェクト`pair`演算子の右側にあります。
+*right*  
+ 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺にある `pair` が演算子の右辺の `pair` より厳密に大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`left` `pair`オブジェクトと呼ばれますより厳密に大きく、 `right` `pair`オブジェクトの場合`left`はより大きいと等しくない`right`です。
+`left` `pair`オブジェクトはより厳密に大きいと呼ばれます、 `right` `pair`オブジェクトの場合*左*より大きくかつ等しくない*右*します。
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 
@@ -421,15 +430,17 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`pair`演算子の左側にあります。
+*left*  
+ 演算子の左辺にある `pair` 型のオブジェクト。
 
-`right` 型のオブジェクト`pair`演算子の右側にあります。
+*right*  
+ 演算子の右辺にある `pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の `pair` が演算子の右辺の `pair` 以上である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 

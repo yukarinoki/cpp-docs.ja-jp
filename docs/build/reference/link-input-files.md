@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374828"
 ---
 # <a name="link-input-files"></a>LINK の入力ファイル
 リンカーは、オブジェクト、インポートおよび標準ライブラリ、リソース、モジュールの定義、およびコマンドの入力を含むファイルを提供します。 リンクは、ファイルの内容に関する想定を行うにはファイル拡張子を使用しません。 代わりに、リンクは、各入力ファイルがファイルの種類を判断するを調べます。  

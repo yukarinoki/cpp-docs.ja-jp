@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383871"
 ---
 # <a name="technical-notes-by-category"></a>カテゴリ別テクニカル ノート
 テクニカル ノートは、次のカテゴリに分類されます。 番号順テクニカル ノートのでは、次を参照してください。[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)です。  

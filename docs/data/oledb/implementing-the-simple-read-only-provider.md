@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100617"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>単純な読み取り専用プロバイダーの実装
 このトピックで説明する例では、テキスト ファイルから 2 つの文字列のセットを読み込む簡単な読み取り専用プロバイダーの作成ウィザードで作成されたファイルを編集する方法を示します。 ウィザードのファイルからこのプロバイダーを作成するには、次のタスクを完了するコードを追加します。  

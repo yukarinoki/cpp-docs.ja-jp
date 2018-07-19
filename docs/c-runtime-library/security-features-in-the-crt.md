@@ -39,6 +39,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451811"
 ---
 # <a name="security-features-in-the-crt"></a>CRT のセキュリティ機能
 多くの古い CRT 関数には、セキュリティが強化された新しいバージョンがあります。 セキュリティで保護された関数が存在する場合、低いセキュリティ レベルの古いバージョンは非推奨としてマークされ、新しいバージョンには `_s` ("secure") のサフィックスが付いています。  

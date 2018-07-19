@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409346"
 ---
 # <a name="type-checking-crt"></a>型チェック (CRT)
 コンパイラは、制限付きの型チェックを行います。次のように、状況によって異なる数の引数をチェックします。  

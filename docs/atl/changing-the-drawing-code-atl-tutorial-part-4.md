@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358913"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>描画コードの変更 (ATL チュートリアル、パート 4)
 既定では、コントロールの描画コードを表示、正方形やテキスト**PolyCtl**です。 このステップでは、さらに興味深いを表示するコードを変更します。 次のタスクがあります。  

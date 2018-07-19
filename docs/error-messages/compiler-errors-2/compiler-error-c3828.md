@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267421"
 ---
 # <a name="compiler-error-c3828"></a>コンパイラ エラー C3828
 'object type': クラスまたは WinRTclasses 仮引数のマネージ インスタンスの作成中に許可されていません  

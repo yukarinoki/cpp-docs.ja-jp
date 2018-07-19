@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
-ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
+ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762062"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042330"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) での C++ 準拠の改善
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157) での C++ 準拠の改善
 
 Microsoft Visual C++ コンパイラは、汎用の constexpr および集計用の NSDMI をサポートし、C++ 14 標準で追加されたすべての機能に対応するようになりました。 コンパイラには、C++11 標準および C++98 標準の一部の機能がないことに注意してください。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](visual-cpp-language-conformance.md)」の表を参照してください。
 
@@ -341,7 +341,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html): `std::string_view` を定数式で使用できるようにするために、`std::traits_type` のメンバー関数である `length`、`compare`、`find` に変更します  (Visual Studio 2017 バージョン 15.6 では、Clang/LLVM のみがサポートされました。 バージョン 15.7 Preview 2 では、ClXX についてもサポートはほぼ完全です。)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Visual Studio バージョン 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157) でのバグ修正
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Visual Studio バージョン 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157)、[15.8](#update_158) でのバグ修正
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -495,12 +495,12 @@ int main()
     printf("%i\n", static_cast<int>(s))
 ```
 
-CStringW を使用して構築および管理される文字列の場合、指定されている `operator LPCWSTR()` を使用して、書式設定文字列によって予期されている C ポインターに CStringW オブジェクトをキャストする必要があります。
+CString を使用して構築および管理される文字列の場合、指定されている `operator LPCTSTR()` を使用して、書式設定文字列によって予期されている C ポインターに CString オブジェクトをキャストする必要があります。
 
 ```cpp
-CStringW str1;
-CStringW str2;
-str1.Format(L"%s", static_cast<LPCWSTR>(str2));
+CString str1;
+CString str2 = _T("hello!");
+str1.Format(_T("%s"), static_cast<LPCTSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>クラス コンストラクションの cv 修飾子
@@ -1624,6 +1624,211 @@ int main() {
     return 0;
 }
 
+```
+
+## <a name="update_158"></a> Visual Studio 2017 バージョン 15.8 のバグの修正および動作の変更
+
+### <a name="typename-on-unqualified-identifiers"></a>非限定識別子の typename
+
+[/permissive-](build/reference/permissive-standards-conformance.md) モードでは、エイリアス テンプレート定義の非限定識別子に使用される疑似の `typename` キーワードがコンパイラで受け入れられなくなりました。 次のコードでは C7511 *'T': 'typename' keyword must be followed by a qualified name\('T': 'typename' キーワードの後に修飾名が続く必要があります\)* が生成されます:
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+このエラーを解決するには、2 行目を `using  X = T;` に変更します。
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>エイリアス テンプレート定義の右側の __declspec()
+
+[__declspec](cpp/declspec.md) はエイリアス テンプレート定義の右側で使用できなくなりました。 これは以前はコンパイラによって受け入れられても完全に無視されていたため、エイリアスが使用されたときに非推奨化の警告が発生することはありませんでした。
+
+標準の C++ 属性 [\[\[deprecated\]\]](cpp/attributes.md) を代わりに使用できますが、適用されるのは Visual Studio 2017 バージョン 15.6 以降です。 次のコードでは C2760 *syntax error: unexpected token '__declspec', expected 'type specifier'\(構文エラー: 予期しないトークン '__declspec'、予期 'type specifier'\)* が生成されます。
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+このエラーを解決するには、コードを次のように変更します (属性はエイリアス定義の '=' の前に置く)。
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>2 フェーズの名前参照の診断
+
+2 フェーズの名前参照では、テンプレートの本文で使用される非依存名が定義時にテンプレートに表示されている必要があります。 以前の Microsoft C++ コンパイラでは、インスタンス化されるまで、見つからない名前は参照対象外のままになっていました。 現在は、非依存名がテンプレートの本文にバインドされている必要があります。
+
+これにより、マニフェストで依存する基底クラスを参照できるようになります。 以前は、すべての型が解決されている場合、依存する基底クラスで定義されている名前をコンパイラで使用することが許可されていました。これは、そのような名前がインスタンス化のときに参照されるためです。 現在は、そのようなコードはエラーとして扱われます。 このような場合、変数を基底クラス型で修飾するか、`this->` ポインターを使用するなどして依存させることで、インスタンス化のときに変数が参照されるように強制できます。
+
+**/permissive-** モードでは、次のコードによって C3861: *'base_value': 識別子が見つかりませんでした*が発生します。
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+このエラーを解決するには、`return` ステートメントを `return this->base_value;` に変更します。
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>名前空間 std での事前宣言と定義
+
+C++ 標準では、ユーザーが事前宣言または定義を名前空間 `std` に追加することができません。 名前空間 `std` または名前空間 std 内の名前空間に宣言または定義を追加すると、定義されていない動作が発生するようになりました。
+
+Microsoft は今後どこかの時点で、一部の STL 型を定義する場所を移動します。 これが行われると、名前空間 `std` に事前宣言を追加する既存のコードが破損します。 新しい警告 C4643 は、このようなソースの問題の特定に役立ちます。 この警告は **/default** モードでは有効に、既定では無効になっています。 **/Wall** または **/WX** でコンパイルされるプログラムに影響があります。 
+
+次のコードにより、C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard\(名前空間 std での事前宣言 'vector' は C++ 標準で許可されていません\)* が発生します。 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+このエラーを解決するには、事前宣言ではなく **include** ディレクティブを使用します。
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>それ自体にデリゲートするコンストラクター
+
+C++ 標準では、コンストラクターがそれ自体にデリゲートするときにはコンパイラで診断を出力することを提案しています。 Microsoft C++ コンパイラの [/std:c++17](build/reference/std-specify-language-standard-version.md) モードと [/std:c++latest](build/reference/std-specify-language-standard-version.md) モードで、C7535: *'X::X': デリゲート コンストラクターはそのコンストラクター自体を呼び出します*が発生します。
+
+このエラーがないと、次のプログラムでコンパイルされますが、無限ループが生成されます。
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+無限ループを避けるには、別のコンストラクターにデリゲートしてください。
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>定数式を含む offsetof
+
+[offsetof](c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 これは、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 STL の一部としてリリースされている offsetof マクロはコンパイラ組み込み型 (**__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の **offsetof** を定義しています。  
+
+Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの reinterpret_casts が既定のモードで表示される領域を制約します。 [/permissive-](build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で offsetof の結果を使用すると、警告 C4644 *usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead\(定数式でマクロに基づく offsetof パターンを使用することは標準ではありません。C++ 標準ライブラリで定義された offsetof を使用してください\)* または C2975 *invalid template argument, expected compile-time constant expression\(無効なテンプレート引数です。予期されたコンパイル時の定数式です\)* を発行するコードが生成される場合があります。
+
+次のコードにより **/default** モードと **/std:c++17** モードで C4644 が、**/permissive-** モードで C2975 が発生します。 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+このエラーを解決するには、\<cstddef> を使用して定義された **offsetof** を使用します。
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>パック拡張の対象になっている基底クラスの cv 修飾子
+
+以前のバージョンの Microsoft C++ コンパイラでは、基底クラスがパック拡張の対象でもあった場合、cv 修飾子が含まれることを検出しませんでした。 
+
+Visual Studio 2017 バージョン 15.8 の **/permissive-** モードでは次のコードにより C3770 *'const S': is not a valid base class\('const S': 有効な基底クラスではありません\)* が発生します。 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>template キーワードと nested-name-specifier
+
+**/permissive-** モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで `template` キーワードが必要になりました。 
+
+**/permissive-** モードでは次のコードにより、C7510 が発生します: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled\('foo': 依存するテンプレート名を使用する場合は 'template' のプレフィックスが必要です。注: コンパイルされているクラス テンプレートのインスタンス化 ’X<T>’ のリファレンスを参照してください\)*。
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+このエラーを解決するには、次の例で示すように、`template` キーワードを `Base<T>::foo<int>();` ステートメントに追加します。
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
 ```
 
 ## <a name="see-also"></a>関連項目

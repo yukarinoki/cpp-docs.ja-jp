@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2529a38a7737fc45573f5c151477e0a5754cde50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960893"
 ---
 # <a name="unarynegate-class"></a>unary_negate クラス
 
@@ -41,17 +42,19 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`Func` 符号を反転される単項関数。
+*Func*  
+ 否定する単項関数。
 
-`left` 符号を反転される単項関数の右オペランド。
+*left*  
+ 否定する単項関数のオペランド。
 
 ## <a name="return-value"></a>戻り値
 
 単項関数の否定。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、単項関数オブジェクト _ *Func* のコピーを格納します。 そのメンバー関数 `operator()` は **!**\_*Func(left) です。*
+このテンプレート クラスは、単項関数オブジェクト _ *Func* のコピーを格納します。 そのメンバー関数 `operator()` は **!**\_*Func(left) します。*
 
 `unary_negate` のコンストラクターが直接使用されることはほとんどありません。 **unary_negator** アダプター述語を宣言して使用する場合、ヘルパー関数 [not1](../standard-library/functional-functions.md#not1) を利用した方が簡単です。
 
@@ -107,7 +110,7 @@ The number of elements in v1 not greater than 10 is: 3.
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

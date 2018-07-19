@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250567"
 ---
 # <a name="compiler-error-c3062"></a>コンパイラ エラー C3062
 'enum': 基になる型が 'type' であるために、列挙子から値が必要です  

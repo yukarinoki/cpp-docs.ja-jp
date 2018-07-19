@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101849"
 ---
 # <a name="irowsetnotifycpfireonrowchange"></a>IRowsetNotifyCP::Fire_OnRowChange
 ブロードキャスト、 [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)イベント接続ポイントに対するすべてのリスナーを**IID_IRowsetNotify**行に影響する変更のコンシューマーに通知します。  

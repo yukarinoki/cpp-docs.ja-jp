@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374727"
 ---
 # <a name="module-definition-def-files"></a>モジュール定義 (.def) ファイル
 モジュール定義 (.def) ファイルは、エクスポート、属性、および他のプログラムについては、関連する問題に関する情報をリンカーを提供します。 .Def ファイルは、DLL を作成するときに最も役立ちます。 あるため[リンカー オプション](../../build/reference/linker-options.md)使用できるモジュール定義ステートメントではなく .def ファイルは通常必要ありません。 使用することも[方式](../../build/exporting-from-a-dll-using-declspec-dllexport.md)を指定する方法として関数をエクスポートします。  

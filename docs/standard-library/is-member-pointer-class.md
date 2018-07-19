@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb4b2be959dc48bbf7c5c5f786f7b803dba1a8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d3549d222ccfcf317b2621c2e2f8869b6634249
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959220"
 ---
 # <a name="ismemberpointer-class"></a>is_member_pointer クラス
 
@@ -36,11 +37,11 @@ struct is_member_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` が メンバー関数へのポインターまたはメンバー オブジェクトへのポインターである場合、あるいはそれらのいずれかの `cv-qualified` 形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*がメンバー関数へのポインターまたはメンバーのオブジェクトへのポインターまたは`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
 
 ## <a name="example"></a>例
 
@@ -86,7 +87,7 @@ is_member_pointer<int trivial::*> == true
 is_member_pointer<int (functional::*)()> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

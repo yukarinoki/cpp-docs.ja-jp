@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387864"
 ---
 # <a name="function-calls"></a>関数呼び出し
 *関数呼び出し*は、制御と引数 (存在する場合) を関数に渡す式であり、形式は以下の通りです。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163206"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>標準変換と暗黙のボックス化
 標準変換は、ボックス化を必要とする変換をコンパイラによって選択されます。  

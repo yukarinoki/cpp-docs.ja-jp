@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870846"
 ---
 # <a name="c-attributes-reference"></a>C++ 属性リファレンス
 Microsoft では、COM プログラミングおよび .NET Framework 共通言語ランタイムによる開発を簡略化する属性のセットを定義します。 ソース ファイルで属性を追加するときに、コンパイラは、プロバイダー コードを挿入または生成されたオブジェクト ファイル内のコードを変更する Dll で動作します。  

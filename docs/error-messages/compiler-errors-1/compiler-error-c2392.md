@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197911"
 ---
 # <a name="compiler-error-c2392"></a>コンパイラ エラー C2392
 'method1': covariant の戻り型がでサポートされていない管理または WinRTtypes、それ以外の場合 'method2' はオーバーライドされます  

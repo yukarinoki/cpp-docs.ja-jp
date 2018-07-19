@@ -1,5 +1,5 @@
 ---
-title: '方法: メイクファイル プロジェクトの IntelliSense を有効にする |Microsoft ドキュメント'
+title: '方法 : メイクファイル プロジェクトで IntelliSense を使用可能にする | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,44 +17,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.openlocfilehash: 4b9b11f04f1fe8d201d6d07ca5ed83f9ca7d991b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705463"
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>方法 : メイクファイル プロジェクトで IntelliSense を使用可能にする
-特定のプロジェクト設定、またはコンパイラ オプション、ときに、Visual C メイクファイル プロジェクトの場合は、IDE での操作に失敗する IntelliSense が正しく設定されていません。 メイクファイル プロジェクトを Visual Studio 開発環境で開いているときに IntelliSense が動作するように、Visual C メイクファイル プロジェクトを構成するのにこの手順を使用します。  
+特定のプロジェクト設定またはコンパイラ オプションが間違っていると、Visual C++ メイクファイル プロジェクト向けの IDE で IntelliSense が動作しません。 Visual Studio 開発環境でメイクファイル プロジェクトを開いたときに IntelliSense が動作するように、次の手順で Visual C++ メイクファイル プロジェクトを構成します。  
   
-### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>メイクファイル プロジェクトの場合、IDE での IntelliSense を有効にするには  
+### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>IDE でメイクファイル プロジェクトに対して IntelliSense を有効にするには  
   
-1.  開く、**プロパティ ページ** ダイアログ ボックス。 詳細については、「[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+1.  **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
-2.  展開して、**構成プロパティ**ノード。  
+2.  **[構成プロパティ]** ノードを展開します。  
   
-3.  選択、 **NMake**プロパティ ページ、および のプロパティを変更**IntelliSense**に応じて。  
+3.  **[NMake]** プロパティ ページを選択し、**[IntelliSense]** のプロパティを適宜変更します。  
   
-    -   設定、**プリプロセッサの定義**メイクファイル プロジェクトのすべてのプリプロセッサ シンボルを定義するプロパティです。 参照してください[/D (プリプロセッサの定義)](../build/reference/d-preprocessor-definitions.md)、詳細についてはします。  
+    -   **[プリプロセッサの定義]** プロパティでメイクファイル プロジェクトのプリプロセッサ シンボルを定義します。 詳細については、「[/D (プリプロセッサの定義)](../build/reference/d-preprocessor-definitions.md)」を参照してください。  
   
-    -   設定、**インクルード検索パス**メイクファイル プロジェクトのプリプロセッサ ディレクティブに渡されたファイル参照を解決するのには、コンパイラによって検索されるディレクトリの一覧を指定するプロパティです。 参照してください[/I (追加インクルード ディレクトリ)](../build/reference/i-additional-include-directories.md)、詳細についてはします。  
+    -   メイクファイル プロジェクトのプリプロセッサ ディレクティブに渡されるファイル参照を解決する目的でコンパイラが検索するディレクトリの一覧を、**[インクルードの検索パス]** プロパティで指定します。 詳細については、「[/I (追加インクルード ディレクトリ)](../build/reference/i-additional-include-directories.md)」を参照してください。  
   
-         CL を使用して構築されているプロジェクトの場合です。コマンド ウィンドウで、exe ファイルの設定、 **INCLUDE**環境変数をメイクファイル プロジェクトのプリプロセッサ ディレクティブに渡されたファイル参照を解決するのには、コンパイラによって検索されるディレクトリを指定します。  
+         コマンド ウィンドウから CL.EXE を利用してビルドするプロジェクトの場合、メイクファイル プロジェクトのプリプロセッサ ディレクティブに渡されるファイル参照を解決する目的でコンパイラが検索するディレクトリの一覧を、**INCLUDE** 環境変数で指定します。  
   
-    -   設定、**強制インクルード**メイクファイル プロジェクトのビルド時にヘッダーがプロセスにファイルを指定するプロパティです。 参照してください[/FI (強制含めるファイルの名前)](../build/reference/fi-name-forced-include-file.md)、詳細についてはします。  
+    -   **[強制インクルード]** プロパティで、メイクファイル プロジェクトのビルド時に処理するヘッダー ファイルを指定します。 詳細については、「[/FI (強制インクルード ファイルの名前の指定)](../build/reference/fi-name-forced-include-file.md)」を参照してください。  
   
-    -   設定、**アセンブリ検索パス**プロパティをプロジェクト内の .NET アセンブリへの参照を解決するのには、コンパイラによって検索されるディレクトリの一覧を指定します。 参照してください[/AI (メタデータ ディレクトリの指定)](../build/reference/ai-specify-metadata-directories.md)、詳細についてはします。  
+    -   プロジェクトの .NET アセンブリの参照を解決する目的でコンパイラが検索するディレクトリの一覧を **[アセンブリの検索パス]** プロパティで指定します。 詳細については、「[/AI (メタデータ ディレクトリの指定)](../build/reference/ai-specify-metadata-directories.md)」を参照してください。  
   
-    -   設定、**アセンブリの強制使用**メイクファイル プロジェクトのビルド時に使用される .NET アセンブリを指定するプロパティです。 参照してください[/FU (Name Forced #using ファイルの using)](../build/reference/fu-name-forced-hash-using-file.md)、詳細についてはします。  
+    -   **[アセンブリの強制使用]** プロパティで、メイクファイル プロジェクトのビルド時に処理する .NET アセンブリを指定します。 詳細については、「[/FU (強制 #using ファイルの名前の指定)](../build/reference/fu-name-forced-hash-using-file.md)」を参照してください。  
   
-    -   設定、**追加オプション**プロパティを C++ ファイルを解析するときに Intellisense によって使用する追加のコンパイラ スイッチを指定します。  
+    -   C++ ファイルの解析時に IntelliSense によって使用される追加のコンパイラ スイッチを **[追加のオプション]** プロパティで指定します。  
   
-4.  をクリックして**OK**プロパティ ページを閉じます。  
+4.  **[OK]** をクリックし、プロパティ ページを閉じます。  
   
-5.  使用して、**すべて保存**変更されたプロジェクトの設定を保存するコマンド。  
+5.  **[すべて保存]** コマンドを使用し、変更後のプロジェクト設定を保存します。  
   
- 次回開くメイクファイル プロジェクト、Visual Studio 開発環境で、実行、**ソリューションのクリーン**コマンドし、**ソリューションのビルド**メイクファイル プロジェクトのコマンド。 IntelliSense は、IDE で正しく動作する必要があります。  
+ 次回、Visual Studio 開発環境でメイクファイル プロジェクトを開くとき、**[ソリューションのクリーン]** コマンドを実行し、それからメイクファイル プロジェクトで **[ソリューションのビルド]** コマンドを実行します。 IntelliSense が IDE で正しく動作するはずです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IntelliSense の使用](/visualstudio/ide/using-intellisense)   
  [NMAKE リファレンス](../build/nmake-reference.md)   
  [方法 : 既存のコードから C++ プロジェクトを作成する](../ide/how-to-create-a-cpp-project-from-existing-code.md)

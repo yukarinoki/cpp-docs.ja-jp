@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20ff02b2d72f1dfa6afab5a0d547b46aa55b18c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a1e848827b46d40c1ec39f2af4788e6957932c5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929113"
 ---
 # <a name="handling-commands-in-the-document"></a>ドキュメントでのコマンドの処理
-ドキュメント クラスでは、メニュー項目、ツール バー ボタン、またはアクセラレータ キーによって生成される特定のコマンドは処理も可能性があります。 既定では、 **CDocument**保存を処理し、シリアル化を使用して [ファイル] メニュー コマンドの名前を付けて保存します。 データに影響する他のコマンドは、ドキュメントのメンバー関数によっても処理できます。 たとえば、この Scribble プログラム クラス`CScribDoc`すべてをクリア編集のコマンドは、すべてのドキュメントに格納されているデータを削除するハンドラーを提供します。 ドキュメントは、メッセージ マップを持つことができますが、ビューとは異なり、ドキュメントが標準 Windows メッセージを処理できません-のみ**WM_COMMAND**メッセージ、または「コマンド」。  
+ドキュメント クラスでは、メニュー項目、ツール バー ボタン、またはアクセラレータ キーによって生成される特定のコマンドは処理も可能性があります。 既定では、`CDocument`保存を処理し、シリアル化を使用して [ファイル] メニュー コマンドの名前を付けて保存します。 データに影響する他のコマンドは、ドキュメントのメンバー関数によっても処理できます。 たとえば、この Scribble プログラム クラス`CScribDoc`すべてをクリア編集のコマンドは、すべてのドキュメントに格納されているデータを削除するハンドラーを提供します。 ドキュメントは、メッセージ マップを持つことができますが、ビューとは異なり、ドキュメントが標準 Windows メッセージを処理できません-のみ**WM_COMMAND**メッセージ、または「コマンド」。  
   
 ## <a name="see-also"></a>関連項目  
  [ドキュメントの使い方](../mfc/using-documents.md)

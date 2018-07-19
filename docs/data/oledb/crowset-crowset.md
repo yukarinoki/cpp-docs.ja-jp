@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098382"
 ---
 # <a name="crowsetcrowset"></a>CRowset::CRowset
 新たに作成`CRowset`オブジェクトおよび (必要に応じて) に関連付けます、 [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx)インターフェイスのパラメーターとして指定します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129438"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>MFC ダイアログ ボックスにおける Windows フォーム ユーザー コントロールのホスト
 MFC ActiveX コントロールの特別な種類の Windows フォーム コントロールをホストし、ActiveX インターフェイス、およびのプロパティとメソッドを使用して、コントロールと通信、<xref:System.Windows.Forms.Control>クラスです。 コントロール上で動作する .NET Framework のプロパティとメソッドを使用することをお勧めします。  

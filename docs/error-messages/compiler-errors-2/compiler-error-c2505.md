@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227662"
 ---
 # <a name="compiler-error-c2505"></a>コンパイラ エラー C2505
 'symbol': '__declspec(modifer)' は、グローバル オブジェクトまたは静的データ メンバーの宣言または定義にのみ適用できます  

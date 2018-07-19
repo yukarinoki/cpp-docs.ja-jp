@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa2694e9f5bb477447d08ab976cac60634ef3b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 09123f4b8d0200d133ae04244d38b615640f7d30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964928"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 標準ライブラリの関数オブジェクト
 
@@ -57,7 +58,7 @@ template <class Key,
 class set
 ```
 
-2 番目のテンプレート引数は、関数オブジェクト `less`です。 この関数オブジェクトは、最初に渡されたパラメーターが 2 番目に渡されたパラメーターよりも小さい場合、 `true` を返します。 一部のコンテナーはその要素を並べ替えるため、コンテナーには 2 つの要素を比較する方法が必要です。関数オブジェクトを使えば、これが可能になります。 関数オブジェクトを作成し、それをコンテナーのテンプレート リストに指定すると、独自の並べ替え条件を定義できます。
+2 番目のテンプレート引数は、関数オブジェクト `less`です。 この関数オブジェクトを返します**true**以下は、最初のパラメーターが渡された場合、2 番目のパラメーターよりも渡されます。 一部のコンテナーはその要素を並べ替えるため、コンテナーには 2 つの要素を比較する方法が必要です。関数オブジェクトを使えば、これが可能になります。 関数オブジェクトを作成し、それをコンテナーのテンプレート リストに指定すると、独自の並べ替え条件を定義できます。
 
 ## <a name="function-objects-and-algorithms"></a>関数オブジェクトとアルゴリズム
 
@@ -71,7 +72,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-`remove_if` への最後の引数は、ブール値 ( *述語*) を返す関数オブジェクトです。 関数オブジェクトの結果が `true` の場合、反復子 `first` と `last`でアクセスされている要素がコンテナーから削除されます。 引数 `pred` には、[\<functional>](../standard-library/functional.md) ヘッダー内で宣言したいずれかの関数オブジェクトを使用するか、独自の関数オブジェクトを作成できます。
+`remove_if` への最後の引数は、ブール値 ( *述語*) を返す関数オブジェクトです。 関数オブジェクトの結果は場合**true**、反復子がアクセスされているコンテナーから要素を削除し、`first`と`last`します。 引数 `pred` には、[\<functional>](../standard-library/functional.md) ヘッダー内で宣言したいずれかの関数オブジェクトを使用するか、独自の関数オブジェクトを作成できます。
 
 ## <a name="see-also"></a>関連項目
 

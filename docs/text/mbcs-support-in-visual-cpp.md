@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865837"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ における MBCS のサポート
 実行すると、mbcs バージョンの Windows で、Visual C 開発システムの (統合ソース コード エディター、デバッガー、およびコマンド ライン ツールを含む) が mbcs、[メモリ] ウィンドウを除く。  

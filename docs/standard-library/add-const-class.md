@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79c06c49c8245da4911e8b72020537aa2e7bb45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eff64a70b2a666a6df081601c0e2a24f04563317
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954068"
 ---
 # <a name="addconst-class"></a>add_const クラス
 
@@ -36,11 +37,11 @@ struct add_const;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 変更する型。
+*Ty*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この型修飾子のインスタンスは、`Ty` が参照、関数、または const で修飾された型である場合は、修飾型 `Ty` を保持します。それ以外の場合は、`const Ty` を保持します。
+型修飾子のインスタンスを保持する、修飾型である*Ty*場合*Ty*の参照、関数、または const で修飾された型では、それ以外の場合は、`const Ty`します。
 
 ## <a name="example"></a>例
 
@@ -66,7 +67,7 @@ int main()
 add_const<int> == int
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

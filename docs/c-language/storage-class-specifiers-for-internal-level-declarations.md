@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385765"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>内部レベル宣言のストレージ クラス指定子
 内部レベルの変数宣言には、4 つの *storage-class-specifier* 終端要素のいずれでも使用できます。 こういう宣言から *storage-class-specifier* を省略した場合、既定のストレージ クラスは **auto** になります。そのため、キーワード **auto** は、C プログラムではほとんど使用されません。  

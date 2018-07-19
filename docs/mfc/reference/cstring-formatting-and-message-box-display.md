@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8074d84d739b59acfa0c6040bedf76f46b6ea9c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0367caf33eea9832d33e4e4ec96144d51b1c5c3
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122265"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString の書式指定とメッセージ ボックスの表示
 関数の数が書式設定および解析する指定された`CString`オブジェクト。 これらの関数を使用するには、操作する必要があるたびに`CString`オブジェクトではなくはメッセージ ボックスのテキストに表示される文字列を書式設定するために特に有用です。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 |[AfxFormatString2](#afxformatstring2)|形式の 2 つの代替文字列は、「1%」と"%2"、文字列内の文字列テーブルに格納されている文字します。|  
 |[AfxMessageBox](#afxmessagebox)|メッセージ ボックスを表示します。|  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxwin.h  
   
 ##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
@@ -64,21 +65,21 @@ BOOL AFXAPI AfxExtractSubString (
  -   区切り文字が部分文字列を区切るために使用します。  
   
 ### <a name="return-value"></a>戻り値  
- **TRUE**関数は、指定されたインデックスにある部分文字列を正常に展開する場合は、それ以外の場合、 **FALSE**です。  
+ 関数は、指定されたインデックスにある部分文字列を正常に展開する場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- この関数は、既知の単一の文字は、各サブ文字列を区切るときに、ソース文字列から複数の部分文字列を抽出するために役立ちます。 この関数は検索の先頭から、`lpszFullString`パラメーターたびに呼び出されます。  
+### <a name="remarks"></a>Remarks  
+ この関数は、既知の単一の文字は、各サブ文字列を区切るときに、ソース文字列から複数の部分文字列を抽出するために役立ちます。 この関数は検索の先頭から、 *lpszFullString*パラメーターたびに呼び出されます。  
   
- どちらの場合、この関数は FALSE を返しますが`lpszFullString`に設定されている**NULL**関数の末尾に到達または`lpszFullString`検索せず`iSubString`+1 出現する指定した区切り記号のです。 `rString`場合、パラメーターを元の値から変更されませんが`lpszFullString`に設定された**NULL**、それ以外の`rString`部分文字列を抽出できなかった場合、空の文字列にパラメーターが設定されますを指定インデックス。  
+ どちらの場合、この関数は FALSE を返しますが*lpszFullString*を NULL に設定されている関数の末尾に到達または*lpszFullString*検索せず*iSubString*+1指定した区切り記号文字の出現します。 *RString*場合、パラメーターを元の値から変更されませんが*lpszFullString*に NULL 以外の場合は、それ以外の場合に設定された、 *rString*場合、空の文字列にパラメーターが設定されます指定したインデックスの部分文字列を抽出できませんでした。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxwin.h  
   
 ##  <a name="afxformatstring1"></a>  AfxFormatString1  
- 指す文字列に置換されます`lpsz1`で識別されるテンプレート文字列リソースで文字"%1"のすべてのインスタンスの`nIDS`します。  
+ 指す文字列に置換されます*lpsz1*で識別されるテンプレート文字列リソースで文字"%1"のすべてのインスタンスの*nIDS*です。  
   
 ```  
 void  AfxFormatString1(
@@ -88,28 +89,28 @@ void  AfxFormatString1(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rString`  
+ *rString*  
  参照、`CString`置換が実行された後、結果の文字列を格納するオブジェクト。  
   
- `nIDS`  
+ *nIDS*  
  置換を実行する、テンプレート文字列のリソース ID です。  
   
- `lpsz1`  
+ *lpsz1*  
  「1%」は、テンプレート文字列の文字形式で置換される文字列。  
   
-### <a name="remarks"></a>コメント  
- 新しく生成された文字列が格納されている`rString`です。 たとえば、文字列テーブル内の文字列が「ファイル %1 は見つかりませんでした」と`lpsz1`と等しい"C:\MYFILE です。TXT"、し`rString`文字列"File C:\MYFILE には。TXT が見つかりません。"です。 この関数は、メッセージ ボックスおよびその他のウィンドウに送信される文字列を書式設定するために役立ちます。  
+### <a name="remarks"></a>Remarks  
+ 新しく生成された文字列が格納されている*rString*です。 たとえば、文字列テーブル内の文字列が「ファイル %1 は見つかりませんでした」と*lpsz1*と等しい"C:\MYFILE です。TXT"、し*rString*文字列"File C:\MYFILE には。TXT が見つかりません。"です。 この関数は、メッセージ ボックスおよびその他のウィンドウに送信される文字列を書式設定するために役立ちます。  
   
  書式指定文字"%1"は文字列で複数回表示される、複数の置き換えが行われます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxwin.h  
   
 ##  <a name="afxformatstring2"></a>  AfxFormatString2  
- 指す文字列に置換されます`lpsz1`、文字"%1"、およびが指す文字列のすべてのインスタンスの`lpsz2`で識別されるテンプレート文字列リソースの"%2"の文字のすべてのインスタンスの`nIDS`します。  
+ 指す文字列に置換されます*lpsz1* 「1%」文字のすべてのインスタンスを指す文字列*lpsz2*テンプレート文字列リソース内の文字"%2"のインスタンスによって識別される*nIDS*です。  
   
 ```   
 void AfxFormatString2(
@@ -120,27 +121,27 @@ void AfxFormatString2(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rString`  
+ *rString*  
  参照、`CString`置換が実行された後、結果の文字列が含まれる。  
   
- `nIDS`  
+ *nIDS*  
  置換を実行する、テンプレート文字列の文字列テーブルの ID。  
   
- `lpsz1`  
+ *lpsz1*  
  「1%」は、テンプレート文字列の文字形式で置換される文字列。  
   
- `lpsz2`  
+ *lpsz2*  
  "%2"は、テンプレート文字列に文字形式で置換される文字列。  
   
-### <a name="remarks"></a>コメント  
- 新しく生成された文字列が格納されている`rString`です。 たとえば、文字列テーブル内の文字列が「ファイル %1 がディレクトリ %2 に見つかりません」 `lpsz1` "MYFILE 指します。TXT"、および`lpsz2`"C:\MYDIR"が、指す`rString`文字列"File MYFILE には。TXT C:\MYDIR のディレクトリに見つかりませんでした"  
+### <a name="remarks"></a>Remarks  
+ 新しく生成された文字列が格納されている*rString*です。 たとえば、文字列テーブル内の文字列が「ファイル %1 がディレクトリ %2 に見つかりません」 *lpsz1* "MYFILE 指します。TXT"、および*lpsz2* "C:\MYDIR"が、指す*rString*文字列"File MYFILE には。TXT C:\MYDIR のディレクトリに見つかりませんでした"  
   
  文字"%1"の形式または"%2"は文字列で複数回表示される、複数の置き換えになります。 数値の順序ではありません。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
   **ヘッダー** afxwin.h  
   
 ##  <a name="afxmessagebox"></a>  AfxMessageBox  
@@ -159,43 +160,43 @@ int AFXAPI AfxMessageBox(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszText`  
+ *lpszText*  
  `CString` オブジェクト、またはメッセージ ボックスに表示されるメッセージを含む null で終了する文字列をポイントします。  
   
- `nType`  
+ *タイプ*  
  メッセージ ボックスのスタイル。 任意の適用、[メッセージ ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)をボックスにします。  
   
- `nIDHelp`  
+ *nIDHelp*  
  メッセージのヘルプ コンテキスト ID。0 は、アプリケーションの既定のヘルプ コンテキストが使用されることを示します。  
   
- `nIDPrompt`  
+ *nIDPrompt*  
  文字列テーブル内の文字列の参照に使用される一意の ID。  
   
 ### <a name="return-value"></a>戻り値  
  メッセージ ボックスを表示する十分なメモリがない場合は 0。それ以外の場合、次のいずれかの値が返されます。  
   
-- **IDABORT** [中止] ボタンが選択されています。  
+- IDABORT [中止] ボタンが選択されました。  
   
-- **IDCANCEL** キャンセル ボタンが選択されました。  
+- IDCANCEL [キャンセル] ボタンが選択されました。  
   
-- **IDIGNORE**を無視するボタンが選択されました。  
+- IDIGNORE [無視] ボタンが選択されました。  
   
-- **IDNO**されませんボタンが選択されました。  
+- IDNO、ボタンが選択されません。  
   
-- **IDOK** [ok] ボタンが選択されました。  
+- IDOK、[ok] ボタンが選択されました。  
   
-- **IDRETRY** [再試行] ボタンが選択されています。  
+- IDRETRY [再試行] ボタンが選択されました。  
   
-- **IDYES** [はい] ボタンが選択されました。  
+- IDYES [はい] ボタンが選択されました。  
   
- メッセージ ボックスに、[キャンセル] ボタンがある場合、 **IDCANCEL** ESC キーが押されたか、[キャンセル] ボタンが選択されている場合は、値が返されます。 メッセージ ボックスに [キャンセル] ボタンがない場合、Esc キーを押しても効果はありません。  
+ メッセージ ボックスに [キャンセル] ボタンがある場合は、ESC キーが押されたか、[キャンセル] ボタンが選択されている場合に、IDCANCEL 値が返されます。 メッセージ ボックスに [キャンセル] ボタンがない場合、Esc キーを押しても効果はありません。  
   
  関数は、 [AfxFormatString1](#afxformatstring1)と[AfxFormatString2](#afxformatstring2)メッセージ ボックスに表示されるテキストの書式設定に役に立ちます。  
   
-### <a name="remarks"></a>コメント  
- このオーバーロード関数の最初の形式には、メッセージ ボックスの `lpszText` がポイントする文字列が表示され、`nIDHelp` を使用してヘルプ コンテキストが記述されます。 ヘルプ コンテキストは、ユーザーがヘルプ キー (通常は F1 キー) を押したときに関連するヘルプ トピックにジャンプするために使用されます。  
+### <a name="remarks"></a>Remarks  
+ これの最初のフォームにテキスト文字列を指す、関数が表示されますがオーバー ロードされた*lpszText*使用してメッセージ ボックスに*nIDHelp*ヘルプ コンテキストを記述します。 ヘルプ コンテキストは、ユーザーがヘルプ キー (通常は F1 キー) を押したときに関連するヘルプ トピックにジャンプするために使用されます。  
   
- 関数の 2 番目の形式では、ID `nIDPrompt` を持つ文字列リソースを使用してメッセージ ボックスにメッセージが表示されます。 関連するヘルプ ページは、`nIDHelp` の値を使用して検出されます。 場合の既定値`nIDHelp`使用 (-1)、文字列リソースの ID を`nIDPrompt`、ヘルプ コンテキストを使用します。 ヘルプ コンテキストの定義の詳細については、次を参照してください。[テクニカル ノート 28:](../../mfc/tn028-context-sensitive-help-support.md)です。  
+ 関数の 2 番目の形式は文字列リソースを使用して ID を持つ*nIDPrompt*をメッセージ ボックスにメッセージを表示します。 値によって、関連するヘルプ ページが検出された*nIDHelp*です。 場合の既定値*nIDHelp*使用 (-1)、文字列リソースの ID を*nIDPrompt*、ヘルプ コンテキストを使用します。 ヘルプ コンテキストの定義の詳細については、次を参照してください。[テクニカル ノート 28:](../../mfc/tn028-context-sensitive-help-support.md)です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  

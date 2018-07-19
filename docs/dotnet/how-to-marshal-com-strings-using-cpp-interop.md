@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133333"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>方法: C++ Interop を使用して COM 文字列をマーシャリングする
 このトピックでは、(COM プログラミングで推奨される基本的な文字列形式) の BSTR をする方法を示しますをアンマネージ関数と、その逆に、管理対象から渡されます。 その他の文字列型との相互運用、次のトピックを参照してください。  

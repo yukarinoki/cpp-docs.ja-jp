@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891225"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 名前空間
 オブジェクトとファクトリの作成などの基本的な Windows ランタイム機能を有効にします。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322433"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>リソース コンパイラの警告 RC4093
 文字定数の非アクティブなコードでエスケープされていない改行  

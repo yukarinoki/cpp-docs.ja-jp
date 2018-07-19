@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380655"
 ---
 # <a name="blank-lines"></a>空白行
 **ANSI 4.9.2** 改行文字の直前にテキスト ストリームに書き出された空白文字が読み込み時に表示されるかどうか  

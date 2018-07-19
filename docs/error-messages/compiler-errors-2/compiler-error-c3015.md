@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241959"
 ---
 # <a name="compiler-error-c3015"></a>コンパイラ エラー C3015
 OpenMP 'for' ステートメントの初期化には、正しくない形式が含まれています  

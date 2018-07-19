@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389986"
 ---
 # <a name="type-qualifiers"></a>型修飾子
 型修飾子は、2 つのうちいずれかの特性を識別子に割り当てます。 **const** 型修飾子は、変更不可能なオブジェクトを宣言します。 `volatile` 型修飾子は、同時実行されるスレッドなど、そのプログラムの制御範囲以外の要素によって値を変更できる項目を宣言します。  

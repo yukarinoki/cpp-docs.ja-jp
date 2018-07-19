@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369761"
 ---
 # <a name="predefined-rules"></a>定義済み規則
 組み込み推論規則では、NMAKE のコマンド マクロおよびオプション マクロが使用されます。  

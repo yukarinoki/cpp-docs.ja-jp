@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c4a801952c6b29779c381237c291232ce2ef25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44da620750fd9fcb241da3a195e294e24143acaa
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953584"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse クラス
 `D2D1_ELLIPSE` のラッパー。  
@@ -46,7 +47,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
   
  `CD2DEllipse`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse  
@@ -64,16 +65,16 @@ CD2DEllipse(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rect`  
+ *rect*  
  元の四角形  
   
- `ellipse`  
+ *楕円*  
  ソース楕円  
   
- `ptCenter`  
+ *ptCenter*  
  楕円の中心点。  
   
- `sizeRadius`  
+ *sizeRadius*  
  X 半径と楕円の Y 半径。  
   
 ## <a name="see-also"></a>関連項目  

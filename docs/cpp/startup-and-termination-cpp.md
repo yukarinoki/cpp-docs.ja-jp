@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420838"
 ---
 # <a name="startup-and-termination-c"></a>起動と終了 (C++)
 プログラムの起動と終了は 2 つの関数を使用して容易になります:[メイン](../cpp/main-program-startup.md)と[終了](../cpp/program-termination.md)です。 他の開始コードと終了コードを実行することもできます。  

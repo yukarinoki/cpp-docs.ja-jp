@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410695"
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
@@ -107,7 +108,7 @@ int _wscanf_l(
 **Scanf**関数は、標準入力ストリームからデータを読み取ります**stdin**で指定した位置にそのデータを書き込みます*引数*です。 各*引数*に型指定子に対応する型の変数へのポインターにする必要があります*形式*です。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 含む文字列を読み取るとき**scanf**、向けに幅を必ず指定します、 **%s**形式 (たとえば、 **「% 男女」**の代わりに **"%s"**)、それ以外の不適切な書式の入力で、バッファー オーバーランが発生簡単にします。 代わりに、[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) または [fgets](fgets-fgetws.md) を使用することをご検討ください。
+> 含む文字列を読み取るとき**scanf**、向けに幅を必ず指定します、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**)、それ以外の不適切な書式の入力で、バッファー オーバーランが発生簡単にします。 代わりに、[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) または [fgets](fgets-fgetws.md) を使用することをご検討ください。
 
 **wscanf**のワイド文字バージョンは、 **scanf**以外の場合は、*形式*に渡す引数**wscanf**ワイド文字列です。 **wscanf**と**scanf**ストリームが ANSI モードで開かれている場合の動作は同じです。 **scanf** UNICODE ストリームからの入力はサポートされていません。
 

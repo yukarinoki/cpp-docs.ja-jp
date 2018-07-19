@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929829"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>ツール ヒント コントロールの操作
 クラス`CToolTipCtrl`メンバーのグループのさまざまな属性を制御する関数を提供、`CToolTipCtrl`オブジェクトとツール ヒントのウィンドウ。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor)と[SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor)ツールのテキストの色のヒント ウィンドウの取得および設定します。  
   
- ツール ヒント コントロールなど、重要なメッセージの通知を受信するために**WM_LBUTTONXXX**メッセージ、ツール ヒント コントロールにメッセージを中継する必要があります。 呼び出しを行うには、このリレーの最適な方法[CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)で、`PreTranslateMessage`オーナー ウィンドウの関数。 次の例では、1 つの可能なメソッド (ツール ヒント コントロールと仮定した場合と呼ばれる`m_ToolTip`)。  
+ ツール ヒント コントロール WM_LBUTTONXXX メッセージなどの重要なメッセージの通知を受信するために、ツール ヒント コントロールにメッセージを中継する必要があります。 呼び出しを行うには、このリレーの最適な方法[CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)で、`PreTranslateMessage`オーナー ウィンドウの関数。 次の例では、1 つの可能なメソッド (ツール ヒント コントロールと仮定した場合と呼ばれる`m_ToolTip`)。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

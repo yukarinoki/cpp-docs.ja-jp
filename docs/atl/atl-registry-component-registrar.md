@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354901"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL レジストリ コンポーネント (レジストラー)
 ATL レジストラーでは、カスタム インターフェイス経由でのシステム レジストリに最適にアクセスを提供します。 レジストラーでは、フリー スレッドし、C++ クライアントのコードの静的にリンクできます。  

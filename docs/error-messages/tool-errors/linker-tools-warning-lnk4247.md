@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301204"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>リンカー ツールの警告 LNK4247
 エントリ ポイント 'decorated_function_name' は既に thread 属性です。' attribute' は無視されます。  

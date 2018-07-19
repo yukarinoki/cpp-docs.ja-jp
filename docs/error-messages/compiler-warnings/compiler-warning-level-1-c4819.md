@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283381"
 ---
 # <a name="compiler-warning-level-1-c4819"></a>コンパイラの警告 (レベル 1) C4819
 ファイルは、現在のコード ページ (数) で表示できない文字を含んでいます。 データの損失を防ぐために、ファイルを Unicode 形式で保存してください。  

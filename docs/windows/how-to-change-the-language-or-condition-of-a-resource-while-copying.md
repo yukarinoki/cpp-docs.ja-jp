@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880138"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>方法: コピー時におけるリソースの言語または条件を変更する
 リソースのコピー時に、リソースの言語プロパティ、条件プロパティ、またはその両方を変更できます。  

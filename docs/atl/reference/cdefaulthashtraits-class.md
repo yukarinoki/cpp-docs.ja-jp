@@ -1,5 +1,5 @@
 ---
-title: CDefaultHashTraits クラス |Microsoft ドキュメント
+title: CDefaultHashTraits クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a87ecddfff7cb3096ae30d9da5d9e5b6913adcbd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886246"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits クラス
 このクラスは、ハッシュ値を計算するための静的関数を提供します。  
@@ -35,7 +36,7 @@ class CDefaultHashTraits
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
+ *T*  
  コレクションに格納されるデータの型。  
   
 ## <a name="members"></a>メンバー  
@@ -44,31 +45,31 @@ class CDefaultHashTraits
   
 |名前|説明|  
 |----------|-----------------|  
-|[CDefaultHashTraits::Hash](#hash)|(静的)この関数では、指定された要素のハッシュ値を計算します。|  
+|[CDefaultHashTraits::Hash](#hash)|(静的)指定された要素のハッシュ値を計算するには、この関数を呼び出します。|  
   
-## <a name="remarks"></a>コメント  
- このクラスには、指定された要素のハッシュ値を返す 1 つの静的関数が含まれています。 このクラスは、によって使用されて、 [CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ このクラスには、指定された要素のハッシュ値を返す 1 つの静的関数が含まれています。 このクラスは、によって使用されて、 [CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)します。  
   
- 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)です。  
+ 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcoll.h  
   
 ##  <a name="hash"></a>  CDefaultHashTraits::Hash  
- この関数では、指定された要素のハッシュ値を計算します。  
+ 指定された要素のハッシュ値を計算するには、この関数を呼び出します。  
   
 ```
 static ULONG Hash(const T& element) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `element`  
+ *要素*  
  要素。  
   
 ### <a name="return-value"></a>戻り値  
  ハッシュ値を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定のハッシュ アルゴリズムは非常に単純: 戻り値は、要素数。 複雑なアルゴリズムが必要な場合は、この関数をオーバーライドします。  
   
 ## <a name="see-also"></a>関連項目  

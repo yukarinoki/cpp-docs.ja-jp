@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932196"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX コントロール : ストック プロパティ ページの使用
 この記事では、ActiveX コントロールとその使用方法の使用可能なストック プロパティ ページについて説明します。  
@@ -40,13 +41,13 @@ ms.lasthandoff: 05/04/2018
   
 -   [MFC ActiveX コントロール: カスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC ActiveX コントロールで使用するための 3 つのストック プロパティ ページの提供:**できる**、 **CLSID_CFontPropPage**、および**あります**です。 これらのページでは、株価の色、フォント、および画像のプロパティのユーザー インターフェイスがそれぞれ表示されます。  
+ MFC ActiveX コントロールで使用するための 3 つのストック プロパティ ページの提供: `CLSID_CColorPropPage`、 `CLSID_CFontPropPage`、および`CLSID_CPicturePropPage`です。 これらのページでは、株価の色、フォント、および画像のプロパティのユーザー インターフェイスがそれぞれ表示されます。  
   
  これらのプロパティ ページをコントロールに組み込むするには、プロパティ ページ Id のコントロールの配列を初期化するコードをその Id を追加します。 次の例では、このコードは、コントロール実装ファイルにあります (です。CPP)、3 つすべてのストック プロパティ ページおよび既定のプロパティ ページを格納する配列を初期化します (名前付き`CMyPropPage`この例では)。  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- プロパティの数ページで、メモ、`BEGIN_PROPPAGEIDS`マクロは 4 です。 これは、ActiveX コントロールでサポートされているプロパティ ページの数を表します。  
+ BEGIN_PROPPAGEIDS マクロでのプロパティ ページの数は 4 であることに注意してください。 これは、ActiveX コントロールでサポートされているプロパティ ページの数を表します。  
   
  このような変更が完了したら、プロジェクトをリビルドします。 フォント、画像、および色のプロパティのプロパティ ページがコントロールに追加します。  
   

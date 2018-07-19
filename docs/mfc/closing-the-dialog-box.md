@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341746"
 ---
 # <a name="closing-the-dialog-box"></a>ダイアログ ボックスのクローズ
 [Ok] ボタンまたは [キャンセル] ボタンでは通常、そのボタンのいずれかを選択すると、モーダル ダイアログ ボックスを閉じます。 Windows ダイアログ オブジェクトを送信する、[ok] または [キャンセル] ボタンを選択すると、 **BN_CLICKED**をボタンとコントロール通知メッセージをするか、ID の**IDOK**または**IDCANCEL**です。 `CDialog` これらのメッセージに対する既定のハンドラー関数を提供します。`OnOK`と`OnCancel`です。 既定のハンドラーの呼び出し、`EndDialog`ダイアログ ウィンドウを閉じます。 呼び出すこともできます`EndDialog`独自のコードからです。 詳細については、次を参照してください。、 [EndDialog](../mfc/reference/cdialog-class.md#enddialog)クラスのメンバー関数`CDialog`で、 *『 MFC リファレンス*です。  

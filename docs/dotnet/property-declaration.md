@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161578"
 ---
 # <a name="property-declaration"></a>プロパティの宣言
 マネージ クラスのプロパティを宣言するための方法は、Visual C を c++ マネージ拡張から変更されました。  

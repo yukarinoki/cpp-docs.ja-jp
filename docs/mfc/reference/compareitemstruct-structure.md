@@ -1,5 +1,5 @@
 ---
-title: COMPAREITEMSTRUCT 構造体 |Microsoft ドキュメント
+title: COMPAREITEMSTRUCT 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c42f356cb323bb7690b6c39b1fc7bd9ce0485f3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850590"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 構造体
-`COMPAREITEMSTRUCT`構造が、識別子と、並べ替えられたオーナー描画リスト ボックスまたはコンボ ボックスの 2 つの項目のアプリケーションによって提供されるデータを提供します。  
+`COMPAREITEMSTRUCT`構造体は、識別子と並べ替えられた、オーナー描画リスト ボックスまたはコンボ ボックスの 2 つの項目のアプリケーションによって提供されるデータを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,17 +41,17 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `CtlType`  
- **ODT_LISTBOX** (オーナー描画リスト ボックスを指定する) または**ODT_COMBOBOX** (オーナー描画コンボ ボックスを指定する)。  
+ *CtlType*  
+ (これは、オーナー描画リスト ボックスを指定します) ODT_LISTBOX または ODT_COMBOBOX (元のオーナー描画のコンボ ボックスを指定)。  
   
- `CtlID`  
- リスト ボックスまたはコンボ ボックスのコントロール ID。  
+ *CtlID*  
+ リスト ボックスまたはコンボ ボックス コントロールの ID。  
   
- `hwndItem`  
+ *hwndItem*  
  コントロールのウィンドウ ハンドル。  
   
  *itemID1*  
- リスト ボックスまたはコンボ ボックスの比較対象となる最初の項目のインデックス。  
+ リスト ボックスまたはコンボ ボックスの比較対象の最初の項目のインデックス。  
   
  *itemData1*  
  比較対象となる最初の項目のアプリケーションによって提供されるデータ。 この値は、コンボ ボックスまたはリスト ボックスに、項目を追加する呼び出しに渡されました。  
@@ -61,10 +62,10 @@ typedef struct tagCOMPAREITEMSTRUCT {
  *itemData2*  
  比較対象となる 2 番目の項目のアプリケーションによって提供されるデータ。 この値は、コンボ ボックスまたはリスト ボックスに、項目を追加する呼び出しに渡されました。  
   
-## <a name="remarks"></a>コメント  
- ときに、アプリケーションがオーナー描画リスト ボックスに新しい項目を追加またはで作成されたコンボ ボックス、 **CBS_SORT**または**LBS_SORT**スタイル、Windows の送信、所有者、`WM_COMPAREITEM`メッセージ。 `lParam` 、メッセージのパラメーターにはへの long ポインターが含まれています、`COMPAREITEMSTRUCT`構造体。 メッセージを受信したときは、所有者は、2 つの項目を比較し、どの項目が、他のより前に来ることを示す値を返します。  
+## <a name="remarks"></a>Remarks  
+ アプリケーションでは、オーナー描画リスト ボックスまたは CBS_SORT または LBS_SORT スタイルで作成したコンボ ボックスに新しい項目を追加するたびに Windows は WM_COMPAREITEM メッセージ、所有者を送信します。 *LParam*メッセージのパラメーターにはへの long ポインターが含まれています、`COMPAREITEMSTRUCT`構造体。 メッセージを受信するとは、所有者は、2 つの項目を比較し、前に、その他のどの項目が並べ替えを示す値を返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** winuser.h  
   
 ## <a name="see-also"></a>関連項目  

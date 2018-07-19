@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369053"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法 : マニフェストを C/C++ アプリケーションに埋め込む
 C/C++ アプリケーション (またはライブラリ) にほとんどのシナリオで適切な実行時の動作が保証されるため、最終的なバイナリ内に埋め込まれたマニフェストがあることをお勧めします。 既定では、[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]ソース ファイルからプロジェクトをビルドするときに、マニフェストを埋め込むしようとしています。 参照してください[Visual Studio でのマニフェストの生成](../build/manifest-generation-in-visual-studio.md)詳細についてはします。 ただし場合 (nmake の) を使用してアプリケーションを作成すると、既存のメイクファイルをいくつかの変更が必要です。 このセクションでは、自動的に、最終的なバイナリ内にマニフェストを埋め込むには既存のメイクファイルを変更する方法を示します。  

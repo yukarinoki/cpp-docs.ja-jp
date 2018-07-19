@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaa99952daf401132768d9be5d4c589b5fdbee52
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf73aa44134aa05a61b372080b7e2033a73bf5b0
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122877"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager クラス
 コレクションを保持[CUserTool クラス](../../mfc/reference/cusertool-class.md)アプリケーション内のオブジェクト。 ユーザー ツールは、外部アプリケーションを実行するメニュー項目です。 `CUserToolsManager` オブジェクトは、ユーザーまたは開発者がアプリケーションに新しいユーザー ツールを追加できるようにします。 ユーザー ツールに関連するコマンドの実行をサポートし、Windows レジストリにユーザー ツールに関する情報を保存します。  
@@ -100,7 +101,7 @@ class CUserToolsManager : public CObject
 |[CUserToolsManager::SetDefExt](#setdefext)|既定の拡張子を指定する、**ファイルを開く** ダイアログ ボックス ( [CFileDialog クラス](../../mfc/reference/cfiledialog-class.md)) で使用して、**コマンド**フィールドに、**ツール** タブ**カスタマイズ** ダイアログ ボックス。|  
 |[CUserToolsManager::SetFilter](#setfilter)|フィルターを適用するファイルを指定します、**ファイルを開く** ダイアログ ボックス ( [CFileDialog クラス](../../mfc/reference/cfiledialog-class.md)) で使用して、**コマンド**フィールドに、**ツール**のタブ、**カスタマイズ** ダイアログ ボックス。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ユーザー ツールをアプリケーションに組み込む、する必要があります。  
   
  1. メニュー項目とユーザー ツールのメニュー エントリに関連付けられているコマンド ID を予約します。  
@@ -123,7 +124,7 @@ class CUserToolsManager : public CObject
   
  `CUserToolsManager`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxusertoolsmanager.h  
   
 ##  <a name="createnewtool"></a>  CUserToolsManager::CreateNewTool  
@@ -134,9 +135,9 @@ CUserTool* CreateNewTool();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 新しく作成されたユーザー ツールへのポインターまたは`NULL`ユーザー ツールの数が最大値を超過した場合。 渡される型と同じ戻り値の型は`CWinAppEx::EnableUserTools`として、`pToolRTC`パラメーター。  
+ 新しく作成されたユーザー ツール、またはユーザー ツールの数が最大値を超過した場合、NULL へのポインター。 渡される型と同じ戻り値の型は`CWinAppEx::EnableUserTools`として、 *pToolRTC*パラメーター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドの呼び出しで指定されている範囲内の最初の利用可能なメニュー コマンド ID の検索[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)し、ユーザー ツールにこの ID を割り当てます。  
   
  メソッドは、ツールの数が、上限に達した場合に失敗します。 これは、範囲内のすべてのコマンド Id は、ユーザー ツールに割り当てられたときに発生します。 ツールの最大数を取得するには呼び出すことによって[CUserToolsManager::GetMaxTools](#getmaxtools)です。 呼び出して、ツール一覧へのアクセスを取得することができます、 [CUserToolsManager::GetUserTools](#getusertools)メソッドです。  
@@ -158,25 +159,25 @@ CUserToolsManager(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdToolsDummy`  
+ [in]*uiCmdToolsDummy*  
  ユーザーの [ツール] メニューのコマンド ID のプレース ホルダーとしてフレームワークによって使用される符号なし整数。  
   
- [入力] `uiCmdFirst`  
+ [in]*uiCmdFirst*  
  最初のユーザー ツールのコマンドのコマンド ID。  
   
- [入力] `uiCmdLast`  
+ [in]*uiCmdLast*  
  最後のユーザー ツールのコマンドのコマンド ID。  
   
- [入力] `pToolRTC`  
+ [in]*pToolRTC*  
  クラスを[CUserToolsManager::CreateNewTool](#createnewtool)を作成します。 派生型を使用するこのクラスを使用すると、 [CUserTool クラス](../../mfc/reference/cusertool-class.md)既定の実装ではなくです。  
   
- [入力] `uArgMenuID`  
+ [in]*uArgMenuID*  
  引数のポップアップ メニューのメニュー リソースの ID。  
   
- [入力] `uInitDirMenuID`  
+ [in]*uInitDirMenuID*  
  [初期ディレクトリ] ポップアップ メニューのメニュー リソースの ID。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このコンス トラクターを呼び出さないでください。 代わりに、 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)を有効にするユーザーのツール、および呼び出し[CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager)へのポインターを取得する、`CUserToolsManager`です。 詳細については、次を参照してください。[ユーザー定義のツール](../../mfc/user-defined-tools.md)です。  
   
 ##  <a name="findtool"></a>  CUserToolsManager::FindTool  
@@ -187,14 +188,14 @@ CUserTool* FindTool(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdId`  
+ [in]*uiCmdId*  
  メニュー コマンドの識別子。  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CUserTool クラス](../../mfc/reference/cusertool-class.md)または`CUserTool`-派生オブジェクトの場合は成功です。 それ以外の場合`NULL`です。  
+ ポインター、 [CUserTool クラス](../../mfc/reference/cusertool-class.md)または`CUserTool`-派生オブジェクトの場合は成功以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
- ときに`FindTool`が成功すると、返された型は、同じの型として、`pToolRTC`パラメーターを[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)です。  
+### <a name="remarks"></a>Remarks  
+ ときに`FindTool`が成功すると、返された型は、同じの型として、 *pToolRTC*パラメーターを[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)です。  
   
 ##  <a name="getargumentsmenuid"></a>  CUserToolsManager::GetArgumentsMenuID  
  関連付けられているリソース ID を返します、**引数**メニューで、**ツール**のタブ、**カスタマイズ** ダイアログ ボックス。  
@@ -206,8 +207,8 @@ UINT GetArgumentsMenuID() const;
 ### <a name="return-value"></a>戻り値  
  メニュー リソースの識別子。  
   
-### <a name="remarks"></a>コメント  
- `uArgMenuID`のパラメーター [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)リソースの ID を指定します。  
+### <a name="remarks"></a>Remarks  
+ *UArgMenuID*のパラメーター [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)リソースの ID を指定します。  
   
 ##  <a name="getdefext"></a>  CUserToolsManager::GetDefExt  
  既定の拡張子を返します、**ファイルを開く** ダイアログ ボックス ( [CFileDialog](../../mfc/reference/cfiledialog-class.md#cfiledialog)) で使用して、**コマンド**フィールドに、**ツール**のタブ、**カスタマイズ** ダイアログ ボックス。  
@@ -239,8 +240,8 @@ UINT GetInitialDirMenuID() const;
 ### <a name="return-value"></a>戻り値  
  メニュー リソースの識別子。  
   
-### <a name="remarks"></a>コメント  
- 返された ID が指定された、`uInitDirMenuID`のパラメーター [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)です。  
+### <a name="remarks"></a>Remarks  
+ 返された ID が指定された、 *uInitDirMenuID*のパラメーター [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)です。  
   
 ##  <a name="getmaxtools"></a>  CUserToolsManager::GetMaxTools  
  アプリケーションに割り当てることができるユーザー ツールの最大数を返します。  
@@ -252,8 +253,8 @@ int GetMaxTools() const;
 ### <a name="return-value"></a>戻り値  
  割り当てることができるユーザー ツールの最大数。  
   
-### <a name="remarks"></a>コメント  
- このメソッドを呼び出して、アプリケーションに割り当てることができるツールの最大数を取得します。 この番号は、範囲内で Id の数、`uiCmdFirst`を通じて、`uiCmdLast`に渡すパラメーター [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
+### <a name="remarks"></a>Remarks  
+ このメソッドを呼び出して、アプリケーションに割り当てることができるツールの最大数を取得します。 この番号は、範囲内で Id の数、 *uiCmdFirst*を通じて、 *uiCmdLast*に渡すパラメーター [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)。  
   
 ##  <a name="gettoolsentrycmd"></a>  CUserToolsManager::GetToolsEntryCmd  
  ユーザー ツールのメニュー項目のプレース ホルダーのコマンド ID を返します。  
@@ -265,8 +266,8 @@ UINT GetToolsEntryCmd() const;
 ### <a name="return-value"></a>戻り値  
  プレース ホルダーのコマンド ID。  
   
-### <a name="remarks"></a>コメント  
- ユーザー ツールを有効にするを呼び出す[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)です。 `uiCmdToolsDummy`パラメーター ツール エントリ コマンドのコマンド ID を指定します。 このメソッドが戻るツール エントリ コマンド id。 任意の場所にその ID は、メニューで、メニューが表示されたら、ユーザー ツールの一覧で置き換えられます。  
+### <a name="remarks"></a>Remarks  
+ ユーザー ツールを有効にするを呼び出す[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)です。 *UiCmdToolsDummy*パラメーター ツール エントリ コマンドのコマンド ID を指定します。 このメソッドが戻るツール エントリ コマンド id。 任意の場所にその ID は、メニューで、メニューが表示されたら、ユーザー ツールの一覧で置き換えられます。  
   
 ##  <a name="getusertools"></a>  CUserToolsManager::GetUserTools  
  ユーザー ツールの一覧への参照を返します。  
@@ -278,8 +279,8 @@ const CObList& GetUserTools() const;
 ### <a name="return-value"></a>戻り値  
  Const 参照、 [CObList クラス](../../mfc/reference/coblist-class.md)ユーザー ツールの一覧を含むオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- ツールのユーザーの一覧を取得するには、このメソッドを呼び出し、 [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)オブジェクトを保持します。 各ユーザー ツールは、型のオブジェクトによって表される[CUserTool クラス](../../mfc/reference/cusertool-class.md)から派生した型または`CUserTool`です。 によって指定された、型、`pToolRTC`パラメーターを呼び出すと[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)ユーザー ツールを有効にします。  
+### <a name="remarks"></a>Remarks  
+ ツールのユーザーの一覧を取得するには、このメソッドを呼び出し、 [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)オブジェクトを保持します。 各ユーザー ツールは、型のオブジェクトによって表される[CUserTool クラス](../../mfc/reference/cusertool-class.md)から派生した型または`CUserTool`です。 によって指定された、型、 *pToolRTC*パラメーターを呼び出すと[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)ユーザー ツールを有効にします。  
   
 ##  <a name="invoketool"></a>  CUserToolsManager::InvokeTool  
  指定されたコマンド ID を持つユーザー ツールに関連付けられているアプリケーションを実行します。  
@@ -289,14 +290,14 @@ BOOL InvokeTool(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdId`  
+ [in]*uiCmdId*  
  ユーザー ツールに関連付けられているメニュー コマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザー ツールに関連付けられたコマンドが正常に実行された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- ツールのユーザーに関連付けられているアプリケーションを実行するには、このメソッドの呼び出しで指定されたコマンド ID では`uiCmdId`します。  
+### <a name="remarks"></a>Remarks  
+ ツールのユーザーに関連付けられているアプリケーションを実行するには、このメソッドの呼び出しで指定されたコマンド ID では*uiCmdId*です。  
   
 ##  <a name="isusertoolcmd"></a>  CUserToolsManager::IsUserToolCmd  
  コマンド ID が、ユーザー ツールに関連付けられているかどうかを判断します。  
@@ -306,13 +307,13 @@ BOOL IsUserToolCmd(UINT uiCmdId) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiCmdId`  
+ [in]*uiCmdId*  
  メニュー項目のコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
  指定されたコマンド ID が; ユーザー ツールを使用して関連付けられている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、コマンド ID の範囲で指定されたコマンド ID は、かどうかを確認します。 呼び出すときに、範囲を指定する[CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)ユーザー ツールを有効にします。  
   
 ##  <a name="loadstate"></a>  CUserToolsManager::LoadState  
@@ -323,13 +324,13 @@ BOOL LoadState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows レジストリ キーのパス。  
   
 ### <a name="return-value"></a>戻り値  
  状態が正常に読み込まれた場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、の状態を読み込みます、 `CUserToolsManager` Windows レジストリからのオブジェクト。  
   
  通常、このメソッドを直接呼び出すことはできません。 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)はワークスペース初期化プロセスの一部としてそれを呼び出します。  
@@ -342,14 +343,14 @@ BOOL MoveToolDown(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTool`  
+ [in]*pTool*  
  移動するユーザー ツールを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザー ツールが正常に; の下へ移動された場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 場合、メソッドは失敗ツールを`pTool`指定内部リストに含まれない場合や、ツールが、一覧の最後にします。  
+### <a name="remarks"></a>Remarks  
+ 場合、メソッドは失敗ツールを*pTool*指定内部リストに含まれない場合や、ツールが、一覧の最後にします。  
   
 ##  <a name="movetoolup"></a>  CUserToolsManager::MoveToolUp  
  ユーザー ツールの一覧で、上の指定したユーザー ツールを移動します。  
@@ -359,14 +360,14 @@ BOOL MoveToolUp(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTool`  
+ [in]*pTool*  
  移動するユーザー ツールを指定します。  
   
 ### <a name="return-value"></a>戻り値  
  ユーザー ツールが移動された場合正常に 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- メソッドは失敗、ツールを`pTool`内部リストにはパラメーターを指定またはツールが、一覧の最初のツール項目。  
+### <a name="remarks"></a>Remarks  
+ メソッドは失敗、ツールを*pTool*内部リストにはパラメーターを指定またはツールが、一覧の最初のツール項目。  
   
 ##  <a name="removetool"></a>  CUserToolsManager::RemoveTool  
  指定したユーザー ツールをアプリケーションから削除します。  
@@ -376,14 +377,14 @@ BOOL RemoveTool(CUserTool* pTool);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力、出力] `pTool`  
+ [入力、出力].*pTool*  
  削除するユーザー ツールへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合は、ツールが正常に削除します。 それ以外の場合は `FALSE`。  
+ TRUE を設定すると、ツールが正常に削除されます。 それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、削除、ツールが正常に削除されると場合、`pTool`です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、削除、ツールが正常に削除されると場合、 *pTool*です。  
   
 ##  <a name="savestate"></a>  CUserToolsManager::SaveState  
  Windows レジストリにユーザー ツールに関する情報を格納します。  
@@ -393,13 +394,13 @@ BOOL SaveState(LPCTSTR lpszProfileName=NULL);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszProfileName`  
+ [in]*lpszProfileName*  
  Windows レジストリ キーへのパス。  
   
 ### <a name="return-value"></a>戻り値  
  状態が正常に保存されている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  メソッドの現在の状態を格納する、 `CUserToolsManager` Windows レジストリ内のオブジェクト。  
   
  通常は、このメソッドを直接呼び出す必要はありません[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)アプリケーションのワークスペースのシリアル化プロセスの一部として自動的にはそれを呼び出します。  
@@ -412,10 +413,10 @@ void SetDefExt(const CString& strDefExt);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `strDefExt`  
+ [in]*strDefExt*  
  既定のファイル名拡張子を含む文字列。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定のファイル名拡張子を指定するには、このメソッドを呼び出して、**ファイルを開く**] ダイアログ ボックスは、ユーザーが [ユーザー ツールに関連付けるアプリケーションが表示されます。 既定値は、"exe"です。  
   
 ##  <a name="setfilter"></a>  CUserToolsManager::SetFilter  
@@ -426,7 +427,7 @@ void SetFilter(const CString& strFilter);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `strFilter`  
+ [in]*strFilter*  
  フィルターを指定します。  
   
 ## <a name="see-also"></a>関連項目  

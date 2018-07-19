@@ -35,11 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ad3e99399e4d5db45606accfd58512f3950f26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb7362e7b9ccb15d338c09da337a6af5077a9789
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929875"
 ---
 # <a name="multipage-documents"></a>マルチページ ドキュメント
 この記事では、Windows 印刷プロトコルについて説明し、複数のページを含むドキュメントを印刷する方法について説明します。 アーティクルでは、次のトピックについて説明します。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="cviews-overridable-functions-for-printing"></a>印刷用 CView のオーバーライド可能な関数  
   
-|名前|オーバーライドする理由|  
+|name|オーバーライドする理由|  
 |----------|---------------------------|  
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|[印刷] ダイアログ ボックスで、ドキュメントの長さなどの値を挿入するには|  
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|フォントまたはその他の GDI リソースを割り当てる|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/04/2018
   
  `DoPreparePrinting` [印刷] ダイアログ ボックスが表示されます。 返されたときに、`CPrintInfo`構造には、ユーザーによって指定された値が含まれています。 ページの選択範囲のみを印刷する場合は、そのユーザーを指定できます開始と終了値、[印刷] ダイアログ ボックスのページ番号。 フレームワークを使用してこれらの値を取得する、`GetFromPage`と`GetToPage`関数の[CPrintInfo](../mfc/reference/cprintinfo-structure.md)です。 ユーザーがページの範囲を指定していない場合、フレームワークによって呼び出されます`GetMinPage`と`GetMaxPage`文書全体を印刷に返される値を使用しています。  
   
- 印刷するドキュメントの各ページでは、フレームワークを呼び出し、2 つのメンバー関数、ビュー クラスで[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)と[OnPrint](../mfc/reference/cview-class.md#onprint)、し、各関数の 2 つのパラメーターを渡します: へのポインター、 [CDC](../mfc/reference/cdc-class.md)オブジェクトとへのポインター、`CPrintInfo`構造体。 たびに、フレームワークによって`OnPrepareDC`と`OnPrint`で別の値を渡す、`m_nCurPage`のメンバー、`CPrintInfo`構造体。 この方法では、フレームワークは、ビューに対し、どのページを印刷するかを示します。  
+ 印刷するドキュメントの各ページでは、フレームワークを呼び出し、2 つのメンバー関数、ビュー クラスで[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)と[OnPrint](../mfc/reference/cview-class.md#onprint)、し、各関数の 2 つのパラメーターを渡します: へのポインター、 [CDC](../mfc/reference/cdc-class.md)オブジェクトとへのポインター、`CPrintInfo`構造体。 たびに、フレームワークによって`OnPrepareDC`と`OnPrint`で別の値を渡す、 *m_nCurPage*のメンバー、`CPrintInfo`構造体。 この方法では、フレームワークは、ビューに対し、どのページを印刷するかを示します。  
   
  [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)メンバー関数は、画面の表示にも使用します。 やすくなる図面行われる前に、デバイス コンテキストの調整。 `OnPrepareDC` 印刷での同様の役割の機能がいくつかの相違点がある場合: 最初に、`CDC`オブジェクト画面デバイス コンテキスト、および秒ではなくプリンター デバイス コンテキストを表します、`CPrintInfo`オブジェクトが 2 番目のパラメーターとして渡されます。 (このパラメーターは**NULL**とき`OnPrepareDC`画面に対して呼び出されます)。オーバーライド`OnPrepareDC`ページの印刷に基づき、デバイス コンテキストを調整します。 たとえば、ビューポートの原点と、ドキュメントの適切な部分を取得印刷されるようにクリッピング領域を移動することができます。  
   
@@ -109,16 +110,16 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> プリンターのページとします。ドキュメントのページ  
  ページ番号を参照するとき、ページのプリンターの概念と、ページのドキュメントの概念を区別する必要があります。 観点から、プリンターのページは、1 枚の用紙します。 ただし、1 枚の用紙必ずしも、ドキュメントの 1 つのページが一致しません。 たとえば、ニュースレター、場所、シートは折りたたむには、印刷する場合 1 枚用紙にはに、ドキュメントでは、サイド バイ サイドの最初と最後のページが含まれます。 同様に、ワークシートを印刷する場合、ドキュメントしないで構成されているページのすべてのです。 代わりに、1 枚用紙にはには、1 ~ 20、6 ~ 10 の列の行が含まれます。  
   
- すべてのページ番号、 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)構造体は、プリンターのページを参照してください。 フレームワークによって`OnPrepareDC`と`OnPrint`1 枚の用紙がプリンターに送信されるに対して 1 回です。 オーバーライドする場合、 [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)関数のドキュメントの長さを指定する、プリンターのページを使用する必要があります。 一対一の対応関係がある場合 (つまり、1 つのプリンターのページと等しくなります 1 つのドキュメント ページ)、これは簡単です。 その一方で、ドキュメントのページと印刷ページ直接対応しない場合は、それらの間に変換する必要があります。 たとえば、スプレッドシートの印刷を検討してください。 オーバーライドする場合`OnPreparePrinting`、数枚の用紙がワークシート全体を印刷して呼び出すときにその値を使用、する必要がありますを計算する必要があります、`SetMaxPage`のメンバー関数`CPrintInfo`です。 同様に、オーバーライドする場合`OnPrepareDC`、変換する必要があります`m_nCurPage`をその特定のシートに表示され、必要に応じて、ビューポートの原点を調整する行と列の範囲にします。  
+ すべてのページ番号、 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)構造体は、プリンターのページを参照してください。 フレームワークによって`OnPrepareDC`と`OnPrint`1 枚の用紙がプリンターに送信されるに対して 1 回です。 オーバーライドする場合、 [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)関数のドキュメントの長さを指定する、プリンターのページを使用する必要があります。 一対一の対応関係がある場合 (つまり、1 つのプリンターのページと等しくなります 1 つのドキュメント ページ)、これは簡単です。 その一方で、ドキュメントのページと印刷ページ直接対応しない場合は、それらの間に変換する必要があります。 たとえば、スプレッドシートの印刷を検討してください。 オーバーライドする場合`OnPreparePrinting`、数枚の用紙がワークシート全体を印刷して呼び出すときにその値を使用、する必要がありますを計算する必要があります、`SetMaxPage`のメンバー関数`CPrintInfo`です。 同様に、オーバーライドする場合`OnPrepareDC`、変換する必要があります*m_nCurPage*をその特定のシートに表示され、必要に応じて、ビューポートの原点を調整する行と列の範囲にします。  
   
 ##  <a name="_core_print.2d.time_pagination"></a> 印刷時の改ページ  
  場合によっては、ビュー クラス可能性がありますいないを前もって知って実際に印刷されるまで、どのくらいの時間のドキュメントには。 たとえば、アプリケーションには、WYSIWYG がない場合と仮定しますので、画面上のドキュメントの長さは印刷時の長さと一致しません。  
   
  これをオーバーライドする際に問題が原因[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)ビュー クラス: の値を渡すことはできません、`SetMaxPage`の関数、 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)構造体の長さがわからないため、ドキュメントです。 [印刷] ダイアログ ボックスを使用して停止するページ番号を指定しない場合、印刷ループを停止するタイミングをフレームワークに知りません。 印刷ループを停止するタイミングを決定する唯一の方法では、ドキュメントを印刷し、終わりを確認します。 ビュー クラスが印刷される末尾に達したときに、フレームワークを通知中に、ドキュメントの最後のチェックが必要です。  
   
- ビュー クラスの依存フレームワーク[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)を指示する関数をいつ中止します。 呼び出すたび`OnPrepareDC`、フレームワークのメンバーのチェック、`CPrintInfo`と呼ばれる構造`m_bContinuePrinting`です。 既定値は**TRUE です。** 既定値のまま、限りフレームワークは印刷ループを続行します。 設定されている場合**FALSE**フレームワークが停止します。 印刷時の改ページを実行するのには、オーバーライド`OnPrepareDC`ドキュメントの末尾に達すると、および設定するかどうかをチェック`m_bContinuePrinting`に**FALSE**を得た場合。  
+ ビュー クラスの依存フレームワーク[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)を指示する関数をいつ中止します。 呼び出すたび`OnPrepareDC`、フレームワークのメンバーのチェック、`CPrintInfo`と呼ばれる構造*m_bContinuePrinting*です。 既定値は**TRUE です。** 既定値のまま、限りフレームワークは印刷ループを続行します。 設定されている場合**FALSE**フレームワークが停止します。 印刷時の改ページを実行するのには、オーバーライド`OnPrepareDC`ドキュメントの末尾に達すると、および設定するかどうかをチェック*m_bContinuePrinting*に**FALSE**を得た場合。  
   
- 既定の実装`OnPrepareDC`設定`m_bContinuePrinting`に**FALSE**現在のページが 1 より大きい場合。 これは、ドキュメントの長さが指定されていない場合、フレームワークを想定している 1 つのページの長さは、ドキュメントを意味します。 この結果は、の基本クラスのバージョンを呼び出す場合は、注意する必要があります`OnPrepareDC`です。 だない`m_bContinuePrinting`なります**TRUE**基底クラスのバージョンの呼び出し後にします。  
+ 既定の実装`OnPrepareDC`設定*m_bContinuePrinting*に**FALSE**現在のページが 1 より大きい場合。 これは、ドキュメントの長さが指定されていない場合、フレームワークを想定している 1 つのページの長さは、ドキュメントを意味します。 この結果は、の基本クラスのバージョンを呼び出す場合は、注意する必要があります`OnPrepareDC`です。 だない*m_bContinuePrinting*なります**TRUE**基底クラスのバージョンの呼び出し後にします。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293034"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>コンパイラの警告 (レベル 3) C4534
 'constructor' には、クラス 'class'、既定の引数のための既定のコンス トラクターはできません。  

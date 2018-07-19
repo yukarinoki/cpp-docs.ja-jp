@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931019"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外処理 : MFC 3.0 での変更点
 これは、高度なトピックです。  
@@ -45,13 +46,13 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- としてスローされる、 **CException\*** として構成する場合でも、 **CCustomException**です。 **キャッチ**マクロで以前使用して MFC バージョン 2.5`CObject::IsKindOf`を実行時に、型をテストします。 式  
+ としてスローされる、`CException*`として構成する場合でも、`CCustomException`です。 **キャッチ**マクロで以前使用して MFC バージョン 2.5`CObject::IsKindOf`を実行時に、型をテストします。 式  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  true の場合、最初の catch ブロックが例外をキャッチします。 C++ 例外処理を使用して、さまざまな例外処理マクロを実装する、バージョン 3.0 では、2 番目の catch ブロックと一致する、スローされた`CException`です。  
   
- 次のようにコードが共通ではありません。 例外オブジェクトがジェネリック型を受け取る別の関数に渡されるときに通常表示される**CException\***「スロー」処理を行い、最後に、例外がスローされます。  
+ 次のようにコードが共通ではありません。 例外オブジェクトがジェネリック型を受け取る別の関数に渡されるときに通常表示される`CException*`「スロー」処理を行い、最後に、例外がスローされます。  
   
  この問題を回避するには、関数からスロー式を呼び出し元のコードに移動し、例外が生成された時点にコンパイラに認識されている実際の型の例外をスローします。  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- 使用して**スロー** catch ブロックが発生したポインター`e`外側の catch サイトは無効なポインターを受け取れるように、削除します。 使用して`THROW_LAST`を再スロー`e`です。  
+ 使用して**スロー** catch ブロックが発生したポインター`e`外側の catch サイトは無効なポインターを受け取れるように、削除します。 使用して**THROW_LAST**を再スロー`e`です。  
   
  詳細については、次を参照してください。[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)です。  
   

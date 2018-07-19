@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343760"
 ---
 # <a name="frame-window-styles-c"></a>フレーム ウィンドウ スタイル (C++)
 フレームワークのフレーム ウィンドウが、ほとんどのプログラムに適しているが、高度な関数を使用して、さらに高い柔軟性を得ることができます[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)と MFC のグローバル関数[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` メンバー関数は、`CWnd`です。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380742"
 ---
 # <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>テクニカル ノート 49: MFC/OLE の MBCS から Unicode への翻訳層 (MFCANS32)
 どのように記載されているこの注 MFCANS32 です。DLL 内の ANSI インターフェイスを提供する、32 ビット OLE の Unicode 世界、主にします。 この DLL は MFC では使用されません。  

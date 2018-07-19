@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841661"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>ユーザー グループのメンバーとしての実行
 Windows ユーザー アカウントを (Administrators グループではなく) Users グループのメンバーとして構成すると、悪意のあるコードに感染する可能性が低くなるため、セキュリティが強化されます。このトピックでは、そのしくみについて説明します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343283"
 ---
 # <a name="destroying-the-list-control"></a>リスト コントロールの破棄
 埋め込む場合、 [CListCtrl](../mfc/reference/clistctrl-class.md)オブジェクト ビューまたはダイアログのクラスのデータ メンバーとしてその所有者が破棄されるときは破棄されます。 使用する場合、 [CListView](../mfc/reference/clistview-class.md)ビューが破棄されると、フレームワークが、コントロールを破棄します。  

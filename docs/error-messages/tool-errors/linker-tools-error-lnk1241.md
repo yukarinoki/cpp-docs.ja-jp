@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299176"
 ---
 # <a name="linker-tools-error-lnk1241"></a>リンカ ツール エラー LNK1241
 リソース ファイル 'リソース ファイル' が既に指定されています  

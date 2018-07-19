@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295393"
 ---
 # <a name="expression-evaluator-error-cxx0043"></a>式エバリュエーター エラー CXX0043
 このポインターはメンバー関数の外で使用  

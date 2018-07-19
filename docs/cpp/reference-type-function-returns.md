@@ -1,5 +1,5 @@
 ---
-title: 参照型関数の戻り値 |Microsoft ドキュメント
+title: 参照型関数の戻り値 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943218"
 ---
 # <a name="reference-type-function-returns"></a>Reference-Type Function Returns (参照型関数の戻り値)
 関数は、参照型を返すように宣言できます。 このような宣言をする場合は、次の 2 つの理由があります。  
@@ -31,14 +32,14 @@ ms.lasthandoff: 05/03/2018
   
 -   関数が戻るとき、参照先オブジェクトはスコープ外に出ません。  
   
- ラージ オブジェクトを渡す方が効率的であることができますと同様*に*参照渡しで関数を指定することもラージ オブジェクトを返す方が効率的*から*参照で機能します。 参照戻しプロトコルを使用すると、オブジェクトを返す前に一時的な場所にコピーする必要がなくなります。  
+ ラージ オブジェクトを渡す方が効率的であることができますよう*に*参照によって関数を指定することも大きなオブジェクトを返すより効率的な*から*参照によって関数。 参照戻しプロトコルを使用すると、オブジェクトを返す前に一時的な場所にコピーする必要がなくなります。  
   
- 参照戻し型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバー ロードされた演算子は、「[オーバー ロードされた演算子](../cpp/operator-overloading.md)です。  
+ 参照戻し型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバー ロードされた演算子は、「[オーバー ロードされた演算子](../cpp/operator-overloading.md)します。  
   
 ## <a name="example"></a>例  
  `Point` の例を考えます。  
   
-```  
+```cpp 
 // refType_function_returns.cpp  
 // compile with: /EHsc  
   
@@ -82,7 +83,7 @@ cout << "x = " << ThePoint.x() << "\n"
   
 ## <a name="output"></a>出力  
   
-```  
+```Output  
 x = 7  
 y = 9  
 ```  
@@ -93,7 +94,7 @@ y = 9
   
  参照型の宣言には、次のような場合を除き、初期化子を含める必要があります。  
   
--   明示的な `extern` 宣言  
+-   明示的な**extern**宣言  
   
 -   クラス メンバーの宣言  
   
@@ -104,7 +105,7 @@ y = 9
 ## <a name="caution-returning-address-of-local"></a>ローカルのアドレスを返す際の注意  
  ローカル スコープでオブジェクトを宣言する場合、関数が戻るときにそのオブジェクトは破棄されます。 関数がそのオブジェクトへの参照を返す場合、実行時に呼び出し元が null 参照の使用を試みると、その参照によるアクセス違反がおそらく発生します。  
   
-```  
+```cpp 
 // C4172 means Don’t do this!!!  
 Foo& GetFoo()  
 {  
@@ -114,7 +115,7 @@ Foo& GetFoo()
 } // f is destroyed here  
 ```  
   
- ここでは、コンパイラで警告:`warning C4172: returning address of local variable or temporary`です。 単純なプログラムで、メモリ位置が上書きされる前に呼び出し元がその参照にアクセスする場合には、アクセス違反が発生しない場合もあります。 これは全くの運任せです。 警告に留意してください。  
+ この場合、コンパイラで警告:`warning C4172: returning address of local variable or temporary`します。 単純なプログラムで、メモリ位置が上書きされる前に呼び出し元がその参照にアクセスする場合には、アクセス違反が発生しない場合もあります。 これは全くの運任せです。 警告に留意してください。  
   
 ## <a name="see-also"></a>関連項目  
  [参照](../cpp/references-cpp.md)

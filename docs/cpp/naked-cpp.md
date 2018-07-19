@@ -1,5 +1,5 @@
 ---
-title: naked (C++) |Microsoft ドキュメント
+title: naked (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e172c24bbb87f9243a4c0de25a98c90e043acc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943250"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft 固有の仕様**  
   
- `naked` 属性を指定して宣言されている関数の場合、コンパイラでプロローグおよびエピローグ コードのないコードが生成されます。 この機能を使用して、プロローグとエピローグのコード シーケンスをインライン アセンブラー コードで独自に記述できます。 naked 関数は、仮想デバイス ドライバーの記述用に特に便利です。  `naked` 属性は x86 と ARM でのみ有効であり、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] では使用できないことに注意してください。  
+ 宣言されている関数、 **naked**属性に、コンパイラは、プロローグおよびエピローグ コードなしのコードを生成します。 この機能を使用して、プロローグとエピローグのコード シーケンスをインライン アセンブラー コードで独自に記述できます。 naked 関数は、仮想デバイス ドライバーの記述用に特に便利です。  なお、 **naked**属性は x86 と ARM でのみ有効とでは使用できません[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,17 +35,17 @@ ms.lasthandoff: 05/03/2018
 __declspec(naked) declarator  
 ```  
   
-## <a name="remarks"></a>コメント  
- `naked`属性は、関数の定義に関連するのみされていない型修飾子、naked 関数は、拡張属性構文を使用する必要があります、 [_ _declspec](../cpp/declspec.md)キーワード。  
+## <a name="remarks"></a>Remarks  
+ **Naked**属性は関数の定義に関連するのみであり、型修飾子ではない、naked 関数は、拡張属性構文を使用する必要があります、 [_ _declspec](../cpp/declspec.md)キーワード。  
   
 
  関数も付いて場合でも、コンパイラが、naked 属性でマークされた関数のインライン関数を生成することはできません、 [_ _forceinline](inline-functions-cpp.md)キーワード。  
 
   
- メンバーではないメソッドの定義以外のすべてに `naked` 属性が適用されている場合、コンパイラ エラーが発生します。  
+ 場合、コンパイラがエラーを発行、 **naked**属性メンバーではないメソッドの定義以外のすべてに適用されます。  
   
 ## <a name="examples"></a>使用例  
- 次のコードは `naked` 属性の関数を定義します。  
+ このコードで関数を定義する、 **naked**属性。  
   
 ```  
 __declspec( naked ) int func( formal_parameters ) {}  
@@ -57,18 +58,17 @@ __declspec( naked ) int func( formal_parameters ) {}
 Naked int func( formal_parameters ) {}  
 ```  
   
- `naked` 属性は、関数のプロローグとエピローグのコード シーケンスをコンパイラが生成するかどうかにのみ影響を与えます。 このような関数を呼び出すために生成されるコードには影響を与えません。 したがって、`naked` 属性は関数の型の一部と見なされず、関数ポインターは `naked` 属性を持つことができません。 さらに、`naked` 属性は、データ定義に適用できません。 たとえば、次のサンプル コードはエラーになります。  
+ **Naked**属性が、関数のプロローグとエピローグ シーケンスのコンパイラのコード生成の性質のみに影響します。 このような関数を呼び出すために生成されるコードには影響を与えません。 つまり、 **naked**属性は、関数の型の一部と見なされますしないと、関数ポインターを持つことはできません、 **naked**属性。 さらに、 **naked**属性は、データの定義に適用できません。 たとえば、次のサンプル コードはエラーになります。  
   
 ```  
-__declspec( naked ) int i;       // Error--naked attribute not  
-                                 // permitted on data declarations.  
+__declspec( naked ) int i;  
+// Error--naked attribute not permitted on data declarations.  
 ```  
   
- `naked` 属性は、関数定義にだけ関連し、関数のプロトタイプでは指定できません。 たとえば、次の宣言はコンパイラ エラーになります。  
+ **Naked**属性は、関数の定義のみに関連し、関数のプロトタイプでは指定できません。 たとえば、次の宣言はコンパイラ エラーになります。  
   
 ```  
-__declspec( naked ) int func();  // Error--naked attribute not   
-                                 // permitted on function declarations  
+__declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations  
 ```  
   
  **Microsoft 固有の仕様はここまで**  

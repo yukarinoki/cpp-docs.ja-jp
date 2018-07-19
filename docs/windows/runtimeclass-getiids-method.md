@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888423"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids メソッド
 Id が現在の RuntimeClass オブジェクトによって実装されるインターフェイスを含めることができる配列を取得します。  

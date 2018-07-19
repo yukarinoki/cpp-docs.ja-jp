@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cceec4e7d954e07e1d776042f311dfa1a386300
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba90002bc16dee6def7f8de69314668204ff5466
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966622"
 ---
 # <a name="addrvaluereference-class"></a>add_rvalue_reference クラス
 
@@ -38,13 +39,13 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-T を変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`add_rvalue_reference` クラスには `type` という名前のメンバーがあります。これはテンプレート パラメーター `T` への右辺値参照の型の別名です。 参照縮小のセマンティクスは、非オブジェクトおよび非関数型 `T` では、`T&&` は `T` を意味します。 たとえば、 `T` 、左辺値参照型である`add_rvalue_reference<T>::type`は左辺値参照型で、右辺値参照ではなくです。
+`add_rvalue_reference`クラスという名前のメンバーには`type`、右辺値参照をテンプレート パラメーターの型のエイリアスである*T*します。非オブジェクトおよび関数ではない型の参照縮小のセマンティクスを意味する、 *T*、`T&&`は、 *T*します。たとえば、 *T*が左辺値参照型では、`add_rvalue_reference<T>::type`が左辺値参照型で、右辺値参照ではありません。
 
-便宜上、 \<type_traits > ヘルパー テンプレートを定義`add_rvalue_reference_t`、そのエイリアス、`type`のメンバー`add_rvalue_reference`です。
+便宜上、 \<type_traits > ヘルパー テンプレートを定義します`add_rvalue_reference_t`、そのエイリアス、`type`のメンバー`add_rvalue_reference`します。
 
 ## <a name="example"></a>例
 
@@ -77,7 +78,7 @@ All static_assert tests of add_rvalue_reference passed.
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ヘッダー: <type_traits> 名前空間: std
 

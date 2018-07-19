@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b775b06f605edc68c6f1dbe47035d9ecf214b396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb682236f41294b7d14f5950ed7906832dd7d8a2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038091"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo クラス
 `CMFCDesktopAlertWndInfo`クラスが使用されて、 [CMFCDesktopAlertWnd クラス](../../mfc/reference/cmfcdesktopalertwnd-class.md)です。 デスクトップ通知ウィンドウがポップアップする場合に表示されるコントロールを指定します。  
@@ -55,14 +56,14 @@ class CMFCDesktopAlertWndInfo
   
 ### <a name="data-members"></a>データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[アイコン](#m_hicon)|表示されるアイコンへのハンドル。|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|デスクトップ通知ウィンドウ上のリンクに関連付けられているコマンド ID。|  
 |[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|デスクトップ通知ウィンドウに表示されるテキストです。|  
 |[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|デスクトップ通知ウィンドウに表示されるリンク。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CMFCDesktopAlertWndInfo`クラスに渡される、 [cmfcdesktopalertwnd::create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)デスクトップ通知ウィンドウの既定のダイアログ ボックスに表示される要素を指定します。 既定のダイアログ ボックスでは、3 つの項目を含めることができます。  
   
 -   アイコンは、呼び出すことによって設定されている[アイコン](#m_hicon)です。  
@@ -81,7 +82,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxDesktopAlertDialog.h  
   
 ##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =  
@@ -92,11 +93,11 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_hicon"></a>  アイコン  
  表示されるアイコンへのハンドル。  
@@ -105,7 +106,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 HICON m_hIcon;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID  
  デスクトップ通知ウィンドウ上のリンクに関連付けられているコマンド ID。  
@@ -114,7 +115,7 @@ HICON m_hIcon;
 UINT m_nURLCmdID;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  コマンド ID で指定されたリンクをクリックするユーザーのポップアップ ウィンドウの所有者に送信される[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)です。  
   
 ##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText  
@@ -124,7 +125,7 @@ UINT m_nURLCmdID;
 CString m_strText;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL  
  デスクトップ通知ウィンドウに表示されるリンク。  
@@ -133,7 +134,7 @@ CString m_strText;
 CString m_strURL;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ユーザーは、リンクをクリックすると、コマンドを含む、 [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)コマンド ID は、ポップアップ ウィンドウの所有者に送信されます。  
   
 ## <a name="see-also"></a>関連項目  

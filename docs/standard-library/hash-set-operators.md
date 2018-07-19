@@ -9,11 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 4f8347ad891508e7cdf06db5a42ec7953fb7746a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966655"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 演算子
 
@@ -35,19 +36,19 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`hash_set`です。
+*左*型のオブジェクト`hash_set`します。
 
-`right` 型のオブジェクト`hash_set`です。
+*適切な*型のオブジェクト`hash_set`します。
 
 ### <a name="return-value"></a>戻り値
 
 hash_sets が等しくない場合は **true**、hash_sets が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 hash_set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_sets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
-メンバー、 [< hash_map >](../standard-library/hash-map.md)と[< hash_set >](../standard-library/hash-set.md)ヘッダー ファイルは、 [stdext Namespace](../standard-library/stdext-namespace.md)です。
+メンバー、 [< hash_map >](../standard-library/hash-map.md)と[< hash_set >](../standard-library/hash-set.md)ヘッダー ファイルは、 [stdext Namespace](../standard-library/stdext-namespace.md)します。
 
 ### <a name="example"></a>例
 
@@ -101,15 +102,15 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`hash_set`です。
+*左*型のオブジェクト`hash_set`します。
 
-`right` 型のオブジェクト`hash_set`です。
+*適切な*型のオブジェクト`hash_set`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の hash_set が演算子の右辺の hash_set と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 hash_set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_sets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -165,15 +166,15 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`hash_multiset`です。
+*左*型のオブジェクト`hash_multiset`します。
 
-`right` 型のオブジェクト`hash_multiset`です。
+*適切な*型のオブジェクト`hash_multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 hash_multisets が等しくない場合は **true**、hash_multisets が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 hash_multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multisets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -229,15 +230,15 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`hash_multiset`です。
+*左*型のオブジェクト`hash_multiset`します。
 
-`right` 型のオブジェクト`hash_multiset`です。
+*適切な*型のオブジェクト`hash_multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の hash_multiset が演算子の右辺の hash_multiset と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 hash_multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multisets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 

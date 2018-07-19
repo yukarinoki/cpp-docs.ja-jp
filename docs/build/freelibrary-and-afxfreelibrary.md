@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367512"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary と AfxFreeLibrary
 DLL の呼び出しに明示的にリンクされるプロセス、 [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) DLL モジュールが不要になったときに機能します。 これは、モジュールの参照カウントをデクリメントに機能し、参照カウントが 0 の場合は、プロセスのアドレス空間から割り当てを解除します。  

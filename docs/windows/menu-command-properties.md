@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878864"
 ---
 # <a name="menu-command-properties"></a>メニュー コマンドのプロパティ
 次の表は、メニュー コマンドを選択したときに [[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window) に表示されるメニュー プロパティに従って編成されています。 リストはアルファベット順になっていますが、[プロパティ] ウィンドウではプロパティをカテゴリ別に表示することもできます。  

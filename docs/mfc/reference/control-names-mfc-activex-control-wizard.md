@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369311"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>[コントロール名] \(MFC ActiveX コントロール ウィザード)
 コントロール クラスとプロパティ ページ クラス、型名の名前を指定し、コントロールの識別子を入力します。 例外を除いて**短い名前**、他のすべてのフィールドが個別に編集していないことができます。 テキストを変更する場合**短い名前**、このページの他のすべてのフィールドの名前に、変更が反映されます。 この名前付けの動作は、コントロールを開発する際に簡単に識別できるように、すべての名前に設計されています。  

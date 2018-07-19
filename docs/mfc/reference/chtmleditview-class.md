@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditView クラス |Microsoft ドキュメント
+title: CHtmlEditView クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339544"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView クラス
 MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。  
@@ -52,7 +53,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 |名前|説明|  
 |----------|-----------------|  
 |[CHtmlEditView::Create](#create)|新しいウィンドウ オブジェクトを作成します。|  
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|返します、 **IHTMLDocument2**現在のドキュメントに対するインターフェイスです。|  
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|返します、`IHTMLDocument2`現在のドキュメントのインターフェイス。|  
 |[CHtmlEditView::GetStartDocument](#getstartdocument)|このビューの既定のドキュメントの名前を取得します。|  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -74,7 +75,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
   
  `CHtmlEditView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxhtml.h  
   
 ##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
@@ -99,40 +100,40 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszClassName`  
- Windows クラスの名前を null で終わる文字列へのポインター。 クラス名に登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数または**RegisterClass** Windows の機能です。 場合**NULL**、定義済みの既定値を使用して[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。  
+ *lpszClassName*  
+ Windows クラスの名前を示す文字の null で終わる文字列を指します。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数または`RegisterClass`Windows 関数。 NULL の場合は、定義済みの既定値を使用して[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。  
   
- `lpszWindowName`  
- ウィンドウの名前を表す文字の null で終わる文字列へのポインター。  
+ *したとき*  
+ ウィンドウの名前を表す null で終わる文字列へのポインター。  
   
- `dwStyle`  
- ウィンドウのスタイル属性を指定します。 既定では、 **WS_VISIBLE**と**WS_CHILD**ウィンドウ スタイルが設定されます。  
+ *dwStyle*  
+ ウィンドウのスタイル属性を指定します。 既定では、WS_VISIBLE と WS_CHILD Windows スタイルが設定されます。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体のサイズとウィンドウの位置を指定します。 `rectDefault`値により、Windows を新しいウィンドウの位置とサイズを指定します。  
+ *rect*  
+ 参照を[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置とサイズを指定する構造体。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親ウィンドウへのポインター。  
   
- `nID`  
- ビューの ID 番号。 既定では、' éý ' **AFX_IDW_PANE_FIRST**です。  
+ *nID*  
+ ビューの ID 番号。 既定では、AFX_IDW_PANE_FIRST に設定します。  
   
- `pContext`  
- ポインター、 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)です。 **NULL**既定です。  
+ *pContext*  
+ ポインターを[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)します。 既定では NULL です。  
   
-### <a name="remarks"></a>コメント  
- このメソッドが含まれている WebBrowser の呼び出すことも**移動**を既定のドキュメントを読み込む方法 (を参照してください[CHtmlEditView::GetStartDocument](#getstartdocument))。  
+### <a name="remarks"></a>Remarks  
+ このメソッドが含まれている web ブラウザーを呼び出すことも`Navigate`を既定のドキュメントを読み込むメソッド (を参照してください[CHtmlEditView::GetStartDocument](#getstartdocument))。  
   
 ##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
- 返します、 **IHTMLDocument2**現在のドキュメントに対するインターフェイスです。  
+ 返します、`IHTMLDocument2`現在のドキュメントのインターフェイス。  
   
 ```  
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppDocument`  
- [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)インターフェイスです。  
+ *ppDocument*  
+ [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)インターフェイス。  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
  このビューの既定のドキュメントの名前を取得します。  

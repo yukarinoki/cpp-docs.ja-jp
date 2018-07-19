@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385631"
 ---
 # <a name="using-ctooltipctrl"></a>CToolTipCtrl の使い方
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)クラスは、アプリケーションでツールの目的を説明するテキストを 1 行を表示する小さなポップアップ ウィンドウのツール ヒント コントロールの機能をカプセル化します。 ツール ヒントには、ほとんどの場合、および表示されるだけときにユーザー ツールの上にカーソルを置きます約半分のままに 2 つ目は表示されません。 ツール ヒントは、カーソルの近くが表示され、ユーザーがマウス ボタンをクリックしてまたはカーソル ツールから移動させたときに表示されなくなります。  

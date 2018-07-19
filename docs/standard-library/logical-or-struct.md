@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9591e11774550f198de601f36fce0350f76cf6bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4cef7f0b51d9dc7a44e6dbc45c32f1296825ca30
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961507"
 ---
 # <a name="logicalor-struct"></a>logical_or 構造体
 
@@ -48,17 +49,17 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>パラメーター
 
-`Type`、 `T`、`U`をサポートする任意の型、`operator||`指定または推論された型のオペランドを取得します。
+*型*、 *T*、 *U*をサポートする任意の型、`operator||`指定または推論された型のオペランドを受け取る。
 
-`Left` 論理和演算の左オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `T` の左辺値および右辺値参照引数の完全転送を行います。
+*左*論理和演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-`Right` 論理和演算の右オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `U` の左辺値および右辺値参照引数の完全転送を行います。
+*右*論理和演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
 
 `Left || Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator||` によって返された型が含まれます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 ユーザー定義型の場合、オペランドの評価のショートサーキットはありません。 どちらの引数も `operator||` によって評価されます。
 
@@ -122,7 +123,7 @@ The deque which is the disjuction of d1 & d2 is:
 
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

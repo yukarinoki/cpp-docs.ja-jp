@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691353"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29 critical コンストラクト内での work-sharing コンストラクトの使用
 次の例では、内部 work-sharing コンス トラクターの使用方法を示します、`critical`を構築します。 この例では準拠作業の共有を作成し、`critical`コンストラクトを同じ並列領域にバインドしないでください。  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f1d24fb90b99d7b757f628be4b39d42f0c0051f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 676cc8ea493d113e9ef8a6f85108fdf3bad6ce5f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959508"
 ---
 # <a name="indirectarray-class"></a>indirect_array クラス
 
@@ -28,13 +29,13 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="syntax"></a>構文
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このクラスは、クラス **valarray<size_t>** のオブジェクト **xa** と共に、クラス [valarray](../standard-library/valarray-class.md)**\<Type>** のオブジェクト **va** への参照を格納するオブジェクトを表します。これらは **valarray\<Type>** オブジェクトから選択する要素のシーケンスを説明します。
+クラスは、オブジェクトへの参照を格納するオブジェクトを表します`va`クラスの[valarray](../standard-library/valarray-class.md)**\<型 >**、オブジェクトと共に`xa`クラスの`valarray<size_t>`、選択する要素のシーケンスを説明する、`valarray<Type>`オブジェクト。
 
-**indirect_array\<Type>** オブジェクトの構築は、**va[xa]** という形式の式を記述するだけです。 クラス indirect_array のメンバー関数は **valarray\<Type>** に対して定義された対応する関数のシグネチャのように動作しますが、選択された要素のシーケンスだけが影響を受けるという点が異なります。
+構築する、`indirect_array<Type>`オブジェクト形式の式を記述するだけ`va[xa]`です。 クラス indirect_array のメンバー関数に対して定義された対応する関数のシグネチャのように動作します`valarray<Type>`選択した要素のシーケンスだけが影響を受けることを除いて、します。
 
-シーケンスは **xa.**[size](../standard-library/valarray-class.md#size) 要素で構成されます。ここで、要素 `I` は **va** 内のインデックス **xa**[ `I`] になります。
+シーケンスから成る**xa** 。[サイズ](../standard-library/valarray-class.md#size)要素、場所要素`I`インデックスになります**xa**[ `I`] 内で`va`します。
 
 ## <a name="example"></a>例:
 
@@ -82,7 +83,7 @@ The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
 The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<valarray>
 

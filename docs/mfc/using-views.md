@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384063"
 ---
 # <a name="using-views"></a>ビューの使い方
 ビューの役割は、ユーザーにドキュメントのデータをグラフィカルに表示してそのまま使用し、ドキュメントに対する操作として、ユーザー入力を解釈です。 ビュー クラスの作成で、タスクには。  

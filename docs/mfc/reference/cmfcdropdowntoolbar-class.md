@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownToolBar クラス |Microsoft ドキュメント
+title: CMFCDropDownToolBar クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e12799f10fe86ef5dd556eac4e344aa972e2503
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027311"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar クラス
 ユーザーがトップレベルのツール バー ボタンを押し続けたときに表示されるツール バーです。  
@@ -58,31 +59,31 @@ class CMFCDropDownToolBar : public CMFCToolBar
 |[CMFCDropDownToolBar::OnLButtonUp](#onlbuttonup)||  
 |[CMFCDropDownToolBar::OnMouseMove](#onmousemove)||  
 |[CMFCDropDownToolBar::OnSendCommand](#onsendcommand)|(`CMFCToolBar::OnSendCommand` をオーバーライドします)。|  
-|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/571a38ab-2a56-4968-9796-273516126f80))。|  
+|[CMFCDropDownToolBar::OnUpdateCmdUI](#onupdatecmdui)|(上書き[CMFCToolBar::OnUpdateCmdUI](http://msdn.microsoft.com/571a38ab-2a56-4968-9796-273516126f80))。|  
   
-### <a name="remarks"></a>コメント  
- A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの動作と、ツールバーの外観を組み合わせます。 ときにユーザーを押し続けたドロップダウン ツールバー (を参照してください[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)) し、ドロップダウン ツールバーが表示されたら、ユーザーにスクロールして、マウス ボタンを押したドロップダウン ツールバーからボタンを選択することができますボタンをクリックします。 ユーザーがドロップダウン ツールバーのボタンを選択すると、そのボタンは、最上位のツールバーの現在のボタンとして表示されます。  
+### <a name="remarks"></a>Remarks  
+ A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの動作では、ツールバーの外観を結合します。 ユーザーが押すし、ドロップダウン ツール バー ボタンを保持 (を参照してください[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md))、ドロップダウン ツールバーが表示され、ユーザーはまでスクロールし、マウスを解放してドロップダウン ツール バーからボタンを選択することができますボタンをクリックします。 ドロップダウン ツールバー ボタンを選択すると、そのボタンが最上位レベルのツールバーの現在のボタンとして表示されます。  
   
- ドロップダウン ツールバーをカスタマイズまたは、ドッキングされていることはできませんし、ティアオフ状態はありません。  
+ ドロップダウン ツールバーのカスタマイズや、ドッキングされていることはできませんし、ティアオフ状態はありません。  
   
  次の図は、`CMFCDropDownToolBar`オブジェクト。  
   
  ![CMFCDropDownToolbar の例](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")  
   
- 作成する、`CMFCDropDownToolBar`オブジェクトの通常のツールバーの作成と同じ方法 (を参照してください[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md))。  
+ 作成する、`CMFCDropDownToolBar`オブジェクトの通常のツールバーを作成すると同じ方法 (を参照してください[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md))。  
   
- 親ツールバーに、ドロップダウン ツールバーの挿入。  
+ 親ツールバーのドロップダウン ツール バーを挿入します。  
   
  1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。  
   
- 2. 作成、`CMFCDropDownToolBarButton`ドロップダウン ツールバーを含むオブジェクトです (詳細については、次を参照してください。 [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。  
+ 2. 作成、`CMFCDropDownToolBarButton`ドロップダウン ツール バーを格納しているオブジェクト (詳細については、次を参照してください。 [CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md#cmfcdropdowntoolbarbutton))。  
   
- 3. ダミー ボタンに置き換える、`CMFCDropDownToolBarButton`オブジェクトを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)です。  
+ 3. ダミー ボタンに置き換える、`CMFCDropDownToolBarButton`オブジェクトを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。  
   
- ツール バー ボタンの詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)です。 ドロップダウン ツールバーの例は、サンプル プロジェクト VisualStudioDemo を参照してください。  
+ ツール バー ボタンの詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。 ドロップダウン ツール バーの例は、サンプル プロジェクト VisualStudioDemo を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例で使用する方法、`Create`メソッドで、`CMFCDropDownToolBar`クラスです。 このコード スニペットの一部である、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、使用する方法、`Create`メソッドで、`CMFCDropDownToolBar`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]  
@@ -104,7 +105,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
  [CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdropdowntoolbar.h  
   
 ##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu  
@@ -116,7 +117,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap  
  アプリケーション リソースからツール バー イメージを読み込みます。  
@@ -132,29 +133,29 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResID`  
+ [in]*uiResID*  
  ツール バーのホット イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiColdResID`  
+ [in]*uiColdResID*  
  ツール バーのコールド イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuResID`  
+ [in]*uiMenuResID*  
  ツール バーの通常のメニュー イメージを参照するビットマップのリソース ID。  
   
- [入力] `bLocked`  
- `TRUE` ツールバーをロックするにはそれ以外の場合`FALSE`です。  
+ [in]*ブロック*  
+ ツールバーをロックする場合は TRUEそれ以外の場合は FALSE です。  
   
- [入力] `uiDisabledResID`  
+ [in]*uiDisabledResID*  
  ツール バーの無効イメージを参照するビットマップのリソース ID。  
   
- [入力] `uiMenuDisabledResID`  
+ [in]*uiMenuDisabledResID*  
  メニューの無効イメージを参照するビットマップのリソース ID です。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は 0 以外。それ以外の場合は 0。  
   
-### <a name="remarks"></a>コメント  
- [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドは、ツールバーに関連付けられているイメージを読み込むには、このメソッドを呼び出します。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。  
+### <a name="remarks"></a>Remarks  
+ [Cmfctoolbar::loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドは、ツールバーに関連付けられているイメージを読み込むには、このメソッドを呼び出します。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。  
   
  ツール バーの作成後に、 `LoadBitmapEx` メソッドを呼び出して追加のイメージを読み込みます。  
   
@@ -173,17 +174,17 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `uiResID`  
- [入力] `uiColdResID`  
- [入力] `uiMenuResID`  
- [入力] `BOOL`  
- [入力] `uiDisabledResID`  
- [入力] `uiMenuDisabledResID`  
- [入力] `uiHotResID`  
+ [in]*uiResID*  
+ [in]*uiColdResID*  
+ [in]*uiMenuResID*  
+ [in]*BOOL*  
+ [in]*uiDisabledResID*  
+ [in]*uiMenuDisabledResID*  
+ [in]*uiHotResID*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp  
 
@@ -195,10 +196,10 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nFlags`  
- [入力] `point`  
+ [in]*nFlags*  
+ [in]*ポイント*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove  
 
@@ -210,10 +211,10 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nFlags`  
- [入力] `point`  
+ [in]*nFlags*  
+ [in]*ポイント*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand  
 
@@ -223,11 +224,11 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pButton`  
+ [in]*pButton*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI  
 
@@ -239,10 +240,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pTarget`  
- [入力] `bDisableIfNoHndler`  
+ [in]*pTarget*  
+ [in]*持たず*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

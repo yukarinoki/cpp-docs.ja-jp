@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99b7416339350ae7e5f8d342974a750584acdd73
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960044"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -173,7 +174,7 @@ class array;
 |[array::operator=](#op_eq)|被制御シーケンスを置き換えます。|
 |[array::operator[]](#op_at)|指定した位置にある要素にアクセスします。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 たとえば、オブジェクトに適用された
 
@@ -183,7 +184,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 このコードは、4 つの整数値を保持するオブジェクト `ai` を作成し、最初の 3 つの要素はそれぞれ値 1、2、3 に初期化し、4 番目の要素は 0 に初期化します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **Header:** \<array>
 
@@ -201,9 +202,9 @@ array(const array& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*オブジェクトまたは範囲を挿入します。
+*適切な*オブジェクトまたは範囲を挿入します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定のコンストラクター `array()` は、被制御シーケンスを初期化されない状態 (または既定の初期化された状態) のままにします。 これを使用して、初期化されていない被制御シーケンスを指定します。
 
@@ -256,11 +257,11 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>パラメーター
 
-`val` 代入する値。
+*val*代入する値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、`*this` によって制御されているシーケンスを、値 `val` の `N` 個の要素の繰り返しで置き換えます。
+メンバー関数は、によって制御されるシーケンス`*this`の繰り返しで`N`値の要素*val*します。
 
 ### <a name="example"></a>例
 
@@ -312,11 +313,11 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`off` アクセスする要素の位置。
+*オフ*にアクセスする要素の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`off` 位置にある被制御シーケンスの要素への参照を返します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
+メンバー関数は、位置にある、被制御シーケンスの要素への参照を返す*オフ*します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
 
 ### <a name="example"></a>例
 
@@ -357,7 +358,7 @@ reference back();
 constexpr const_reference back() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスの最後の要素への参照を返します。被制御シーケンスを空にすることはできません。
 
@@ -403,7 +404,7 @@ iterator begin() noexcept;
 const_iterator begin() const noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示すランダム アクセス反復子を返します。
 
@@ -443,7 +444,7 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-範囲内の最初の要素を示す `const` 反復子を返します。
+返します、 **const**範囲の最初の要素を指す反復子。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -451,13 +452,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合、`const`) を指し示す `cbegin() == cend()` ランダム アクセス反復子。
+A **const**最初の要素の範囲、または空の範囲の末尾の次の場所を指すランダム アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `begin()` と`cbegin()` をサポートする任意の種類の変更可能な (非 `const`) コンテナーであると見なします。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`begin()`と`cbegin()`します。
 
 ```cpp
 auto i1 = Container.begin();
@@ -469,7 +470,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-範囲内の最後の要素の次の位置を指す `const` 反復子を返します。
+返します、 **const**範囲の最後の要素の次の位置を指す反復子。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -479,11 +480,11 @@ const_iterator cend() const noexcept;
 
 範囲の末尾の次の位置を指し示すランダム アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `end()` と`cend()` をサポートする任意の種類の変更可能な (非 `const`) コンテナーであると見なします。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
 
 ```cpp
 auto i1 = Container.end();
@@ -503,7 +504,7 @@ auto i2 = Container.cend();
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの定数ランダム アクセス反復子として使用できるオブジェクトを表します。
 
@@ -554,7 +555,7 @@ it2: 0
 typedef const Ty *const_pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、シーケンスの要素への定数ポインターとして使用できるオブジェクトを表します。
 
@@ -600,7 +601,7 @@ int main()
 typedef const Ty& const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
@@ -646,7 +647,7 @@ int main()
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの定数反転反復子として使用できるオブジェクトを表します。
 
@@ -696,7 +697,7 @@ const_reverse_iterator crbegin() const;
 
 反転された配列の最初の要素を指すか、反転されていない配列の最後の要素だったものを指す、定数逆順ランダム アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 戻り値が `crbegin` の場合、配列オブジェクトは変更できません。
 
@@ -742,7 +743,7 @@ const_reverse_iterator crend() const noexcept;
 
 逆順の配列内の最後の要素の次の位置 (通常の順序の配列内の最初の要素の前の位置) を指す定数逆順ランダム アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `crend` は、[array::cend](#cend) が配列で使用されるときと同様の方法により、逆順の配列で使用されます。
 
@@ -786,7 +787,7 @@ Ty *data();
 const Ty *data() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、被制御シーケンス内の最初の要素のアドレスを返します。
 
@@ -832,7 +833,7 @@ int main()
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。 これは `std::ptrdiff_t` 型のシノニムです。
 
@@ -878,7 +879,7 @@ int main()
 constexpr bool empty() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `N == 0` の場合にのみ、メンバー関数は true を返します。
 
@@ -932,7 +933,7 @@ reference end();
 const_reference end() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、シーケンスの最後を越えたところを示すランダム アクセス反復子を返します。
 
@@ -982,9 +983,9 @@ void fill(const Type& val);
 
 |パラメーター|説明|
 |-|-|
-|`val`|配列に挿入される要素の値。|
+|*val*|配列に挿入される要素の値。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `fill` は、配列の各要素を、指定された値に置き換えます。
 
@@ -1025,7 +1026,7 @@ reference front();
 constexpr const_reference front() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスの最初の要素への参照を返します。被制御シーケンスを空にすることはできません。
 
@@ -1070,7 +1071,7 @@ int main()
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスのランダム アクセス反復子として使用できるオブジェクトを表します。
 
@@ -1123,7 +1124,7 @@ it2: 0
 constexpr size_type max_size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`N` を返します。
 
@@ -1172,13 +1173,13 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`off` アクセスする要素の位置。
+*オフ*にアクセスする要素の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`off` 位置にある被制御シーケンスの要素への参照を返します。 その位置が無効な場合、動作は定義されません。
+メンバー関数は、位置にある、被制御シーケンスの要素への参照を返す*オフ*します。 その位置が無効な場合、動作は定義されません。
 
-`array` の要素への参照を取得するのに使用できる非メンバー [get](array-functions.md#get) 関数もあります。
+メンバー以外はも[取得](array-functions.md#get)関数の要素への参照を取得できる、**配列**。
 
 ### <a name="example"></a>例
 
@@ -1224,11 +1225,11 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>パラメーター
 
-コピーする右のコンテナー。
+*適切な*コンテナーにコピーします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー演算子は、`right` の各要素を被制御シーケンスの対応する要素に割り当ててから、`*this` を返します。 これを使用して、被制御シーケンスを `right` の被制御シーケンスのコピーと置き換えます。
+メンバー演算子はの各要素に代入*右*を被制御シーケンスの対応する要素を返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。
 
 ### <a name="example"></a>例
 
@@ -1276,7 +1277,7 @@ int main()
 typedef Ty *pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、シーケンスの要素へのポインターとして使用できるオブジェクトを表します。
 
@@ -1323,7 +1324,7 @@ reverse_iterator rbegin()noexcept;
 const_reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、被制御シーケンスの最後を越えたところを示す反転反復子を返します。 したがって、反転シーケンスの先頭を指定します。
 
@@ -1369,7 +1370,7 @@ int main()
 typedef Ty& reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの要素への参照として使用できるオブジェクトを表します。
 
@@ -1416,7 +1417,7 @@ reverse_iterator rend()noexcept;
 const_reverse_iterator rend() const noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す反転反復子を返します。 したがって、反転シーケンスの末尾を指定します。
 
@@ -1462,7 +1463,7 @@ int main()
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスの反転反復子として使用できるオブジェクトを表します。
 
@@ -1508,7 +1509,7 @@ int main()
 constexpr size_type size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`N` を返します。
 
@@ -1553,7 +1554,7 @@ int main()
 typedef std::size_t size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。 これは `std::size_t` 型のシノニムです。
 
@@ -1601,13 +1602,13 @@ void swap(array& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` コンテンツを交換する配列。
+*適切な*コンテンツを交換する配列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`*this` と `right` の間で被制御シーケンスを交換します。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
+メンバー関数は、交換の間で被制御シーケンス`*this`と*右*します。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
 
-2 つの `array` インスタンスを交換するのに使用できる非メンバー [swap](array-functions.md#swap) 関数もあります。
+メンバー以外はも[スワップ](array-functions.md#swap)関数の 2 つのスワップを使用できる**配列**インスタンス。
 
 ### <a name="example"></a>例
 
@@ -1664,7 +1665,7 @@ int main()
 typedef Ty value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Ty` のシノニムです。
 

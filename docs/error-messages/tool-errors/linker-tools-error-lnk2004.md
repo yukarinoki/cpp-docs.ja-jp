@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314341"
 ---
 # <a name="linker-tools-error-lnk2004"></a>リンカ ツール エラー LNK2004
 gp 相対 fixup オーバーフローを 'ターゲット';short セクション 'section' が大きすぎるか範囲外です。  

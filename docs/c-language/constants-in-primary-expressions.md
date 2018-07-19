@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382274"
 ---
 # <a name="constants-in-primary-expressions"></a>一次式の定数
 定数オペランドは、値を持ち、それが表す定数値の型を持ちます。 文字定数は、`int` 型です。 整数定数は、整数のサイズおよび値が指定される方法によって、`int`、**long**、`unsigned int`、または `unsigned long` 型です。 詳細については、「[定数](../c-language/c-constants.md)」を参照してください。  

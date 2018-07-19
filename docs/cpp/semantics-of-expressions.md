@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424129"
 ---
 # <a name="semantics-of-expressions"></a>式のセマンティクス
 式は、式の演算子の優先順位とグループ化に従って評価されます ([演算子の優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)で[構文規則](../cpp/lexical-conventions.md)式に演算子を示している、C++ の関係を示しています)。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318429"
 ---
 # <a name="resource-compiler-error-rc2107"></a>リソース コンパイラ エラー RC2107
 **数値のコマンドの値が必要です。**  

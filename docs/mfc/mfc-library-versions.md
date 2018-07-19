@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931766"
 ---
 # <a name="mfc-library-versions"></a>MFC ライブラリのバージョン
 
@@ -88,7 +89,7 @@ MFC ANSI/MBCS ライブラリのバージョンは、ASCII などの両方の 1 
 
 IDE で 1 バイト、マルチバイト、文字またはワイド文字の Unicode 文字列と文字サポートを使用する、プロジェクトの構成を設定するには、使用、**プロジェクト プロパティ**ダイアログ。 **構成プロパティ** > **全般** ページで、設定、**文字セット**プロパティを**未設定**を使用する、1 バイト文字セット。 プロパティを設定します**マルチ バイト文字セットを使用して**マルチバイト文字セットを使用するか**Unicode 文字セットを使用して**utf-16 としてエンコードされた Unicode を使用します。
 
-MFC プロジェクト プリプロセッサ シンボルを使用して **\_UNICODE** utf-16 ワイド文字の Unicode サポートを示すために、  **\_MBCS** MBCS のサポートを示すためにします。 これらのオプションは、プロジェクトに相互に排他的です。
+MFC プロジェクト プリプロセッサ シンボルを使用して\_utf-16 ワイド文字の Unicode サポートを示すために UNICODE と\_MBCS を示すために MBCS をサポートします。 これらのオプションは、プロジェクトに相互に排他的です。
 
 ## <a name="mfc-static-library-naming-conventions"></a>MFC スタティック ライブラリの名前付け規則
 

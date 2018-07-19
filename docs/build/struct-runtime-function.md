@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379927"
 ---
 # <a name="struct-runtimefunction"></a>構造体 RUNTIME_FUNCTION
 テーブル ベースの例外処理では、スタック領域を割り当てるか、または別の関数 (たとえば、非リーフ関数) を呼び出すすべての関数のテーブルのエントリが必要です。 関数のテーブルのエントリではの形式があります。  

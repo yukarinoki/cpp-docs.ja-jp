@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef0be002676860acb4f55d989416114ec23ce809
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ad86773fdc78f3cb8d5219ce14919a035755f3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955333"
 ---
 # <a name="pair-structure"></a>pair 構造体
 
@@ -53,25 +54,25 @@ struct pair
 
 ### <a name="parameters"></a>パラメーター
 
-`Val1` 最初の要素を初期化する値`pair`です。
+*Val1*の最初の要素を初期化する値`pair`します。
 
-`Val2` 2 番目の要素を初期化する値`pair`です。
+*Val2*の 2 番目の要素を初期化する値`pair`します。
 
-`Right` 別のペアの要素を初期化するために使用するのには、値がペア。
+*右*別の 1 組の要素を初期化するために使用するのには、値がペア。
 
 ## <a name="return-value"></a>戻り値
 
-最初の (既定の) コンストラクターがペアの最初の要素を既定の **T1** 型に初期化し、2 番目の要素を既定の **T2** 型に初期化します。
+(既定値) の最初のコンス トラクターが型の既定値のペアの最初の要素を初期化します`T1`と 2 番目の要素型の既定値に`T2`します。
 
-2 番目のコンストラクターは、ペアの最初の要素を `Val1` に初期化し、2 番目の要素を *Val2.* に初期化します。
+2 番目のコンス トラクターがペアの最初の要素を初期化します*Val1*し、2 番目*Val2 です。*
 
-3 番目の (テンプレート) コンストラクターは、ペアの最初の要素を `Right`. **first** および 2 つ目の要素を `Right`. **second** に初期化します。
+3 番目の (テンプレート) コンストラクターは、ペアの最初の要素を `Right`. **first** および 2 つ目の要素を `Right`. **second**。
 
-4 番目のコンストラクターは、[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) を使用して、ペアの最初の要素を `Val1` に初期化し、2 番目の要素を *Val2* に初期化します。
+4 番目のコンス トラクターがペアの最初の要素を初期化します*Val1*し、2 番目*Val2*を使用して[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート構造体は、**T1** 型と **T2** 型のオブジェクトのペアをそれぞれ格納します。 **first_type** 型はテンプレート パラメーター **T1** と同一で、**second_type** 型はテンプレート パラメーター **T2** と同一です。 **T1** および **T2** には、それぞれ既定のコンストラクター、引数が 1 つのコンストラクター、およびデストラクターのみ指定する必要があります。 `pair` 型は**クラス**としてではなく `struct` として宣言されているため、この型のメンバーはすべてパブリックです。 ペアの最も一般的な用途としては、2 つの値を返す関数の戻り値の型としての用途と、連想コンテナー クラスの [map クラス](../standard-library/map-class.md)と [multimap クラス](../standard-library/multimap-class.md)の要素としての用途の 2 つが挙げられます。これらのクラスはどちらも、キーと、各要素に関連付けられている値の型を持っています。 後者は、ペアの連想コンテナーの要件を満たしており、`pair`< **const**`key_type`, `mapped_type`> 形式の値の型を持っています。
+テンプレート構造体の型のオブジェクトのペアを格納する`T1`と`T2`、それぞれします。 型`first_type`はテンプレート パラメーターと同じ`T1`と種類`second_type`はテンプレート パラメーターと同じ`T2`します。 `T1` `T2`それぞれ既定のコンス トラクターにのみ、引数が 1 つのコンス トラクター、およびデストラクターを指定する必要があります。 `pair` 型は**クラス**としてではなく `struct` として宣言されているため、この型のメンバーはすべてパブリックです。 ペアの最も一般的な用途としては、2 つの値を返す関数の戻り値の型としての用途と、連想コンテナー クラスの [map クラス](../standard-library/map-class.md)と [multimap クラス](../standard-library/multimap-class.md)の要素としての用途の 2 つが挙げられます。これらのクラスはどちらも、キーと、各要素に関連付けられている値の型を持っています。 後者は、ペアの連想コンテナーの要件を満たしており、`pair`< **const**`key_type`, `mapped_type`> 形式の値の型を持っています。
 
 ## <a name="example"></a>例
 
@@ -162,7 +163,7 @@ The element with a key value of
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<utility>
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369329"
 ---
 # <a name="calculating-necessary-values"></a>必要な値の計算
 2 つの重要な情報は、遅延読み込みヘルパー ルーチンで計算される必要があります。 そのために、2 つのインライン関数にはこの情報を計算するための delayhlp.cpp です。  

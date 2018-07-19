@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864916"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>クラスと構造体 (C++ コンポーネント拡張)
 クラスまたは構造体の宣言が*オブジェクトの有効期間*自動的に管理されます。 Visual C++ では、オブジェクトがアクセス不能になるかスコープ外になると、そのオブジェクトに割り当てられているメモリを自動的に破棄します。  

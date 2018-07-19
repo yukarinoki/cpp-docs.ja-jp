@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347712"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>オーバーライド可能な CWinApp のメンバー関数
 [CWinApp](../mfc/reference/cwinapp-class.md)いくつかのキーのオーバーライド可能なメンバー関数は、(`CWinApp`クラスからこれらのメンバーをオーバーライド[CWinThread](../mfc/reference/cwinthread-class.md)、元の`CWinApp`派生)。  

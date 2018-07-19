@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690544"
 ---
 # <a name="a6---using-the-lastprivate-clause"></a>A.6 lastprivate 句の使用
 正しい実行場合によっては、ループの最後の反復変数に代入する値に依存します。 このようなプログラムへの引数としてこのようなすべての変数を一覧表示する必要があります、`lastprivate`句 ([セクション 2.7.2.3](../../parallel/openmp/2-7-2-3-lastprivate.md) [27] ページ) できるように、変数の値は、ループが順番に実行されるときと同じです。  

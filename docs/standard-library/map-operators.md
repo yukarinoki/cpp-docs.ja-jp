@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 60813074eb112836295a72b1c11a24a8c9800313
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 22d8d5d348dc4bf4bd50ee56db360e4490503b78
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959259"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 演算子
 
@@ -47,15 +48,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**マップ**です。
+*左*型のオブジェクト`map`します。
 
-`right` 型のオブジェクト**マップ**です。
+*適切な*型のオブジェクト`map`します。
 
 ### <a name="return-value"></a>戻り値
 
 map が等しくない場合は **true**、map が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの map は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -109,15 +110,15 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**マップ**です。
+*左*型のオブジェクト`map`します。
 
-`right` 型のオブジェクト**マップ**です。
+*適切な*型のオブジェクト`map`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の map が演算子の右辺の map より厳密に小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -171,9 +172,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**マップ**です。
+*左*型のオブジェクト`map`します。
 
-`right` 型のオブジェクト**マップ**です。
+*適切な*型のオブジェクト`map`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -236,15 +237,15 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**マップ**です。
+*左*型のオブジェクト`map`します。
 
-`right` 型のオブジェクト**マップ**です。
+*適切な*型のオブジェクト`map`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の map が演算子の右辺の map と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの map は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -298,15 +299,15 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**マップ**です。
+*左*型のオブジェクト`map`します。
 
-`right` 型のオブジェクト**マップ**です。
+*適切な*型のオブジェクト`map`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の map が演算子の右辺の map より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -360,9 +361,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**マップ**です。
+*左*型のオブジェクト`map`します。
 
-`right` 型のオブジェクト**マップ**です。
+*適切な*型のオブジェクト`map`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -425,15 +426,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multimap`です。
+*左*型のオブジェクト`multimap`します。
 
-`right` 型のオブジェクト`multimap`です。
+*適切な*型のオブジェクト`multimap`します。
 
 ### <a name="return-value"></a>戻り値
 
 multimap が等しくない場合は **true**、multimap が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの multimap は、同じ数の要素を持ち各要素の値が同じである場合に、等しくなります。 それ以外の場合は等しくありません。
 
@@ -487,15 +488,15 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multimap`です。
+*左*型のオブジェクト`multimap`します。
 
-`right` 型のオブジェクト`multimap`です。
+*適切な*型のオブジェクト`multimap`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multimap が演算子の右辺の multimap より厳密に小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -549,9 +550,9 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multimap`です。
+*左*型のオブジェクト`multimap`します。
 
-`right` 型のオブジェクト`multimap`です。
+*適切な*型のオブジェクト`multimap`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -614,15 +615,15 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multimap`です。
+*左*型のオブジェクト`multimap`します。
 
-`right` 型のオブジェクト`multimap`です。
+*適切な*型のオブジェクト`multimap`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multimap が演算子の右辺の multimap と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの multimap は、同じ数の要素を持ち各要素の値が同じである場合に、等しくなります。 それ以外の場合は等しくありません。
 
@@ -676,15 +677,15 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multimap`です。
+*左*型のオブジェクト`multimap`します。
 
-`right` 型のオブジェクト`multimap`です。
+*適切な*型のオブジェクト`multimap`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multimap が演算子の右辺の multimap より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -738,9 +739,9 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multimap`です。
+*左*型のオブジェクト`multimap`します。
 
-`right` 型のオブジェクト`multimap`です。
+*適切な*型のオブジェクト`multimap`します。
 
 ### <a name="return-value"></a>戻り値
 

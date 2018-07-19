@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354038"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>インターネット クライアント クラスの必要条件
 (たとえば、ファイルの読み取り)、インターネット クライアントによって実行されるいくつかの操作 (この場合は、インターネット接続を確立する) の前提条件を持つことです。 次の表は、一部のクライアント操作の前提条件を一覧表示します。  

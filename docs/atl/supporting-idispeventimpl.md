@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362220"
 ---
 # <a name="supporting-idispeventimpl"></a>IDispEventImpl をサポートします。
 このテンプレート クラスは[IDispEventImpl](../atl/reference/idispeventimpl-class.md) ATL クラス内での接続ポイント シンクのサポートを提供するために使用できます。 接続ポイント シンクは、外部の COM オブジェクトで発生したイベントを処理するクラスを使用します。 これらの接続ポイント シンクは、クラスによって提供される、イベント シンク マップにマップされます。  

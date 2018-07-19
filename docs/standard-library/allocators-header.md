@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f578ab4ea06db68b23a03374bcd787dc03715ab5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1a1d2d710631c01a39b910e7d9b15f14179b3125
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965744"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 #include <allocators>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 \<allocators> ヘッダーは、ノード ベースのコンテナーのメモリ管理方法を選択するために使用できる 6 つのアロケーター テンプレートを提供します。 これらのテンプレートで使用するため、さまざまなマルチスレッド スキーム (なしを含む) に合わせてメモリ管理方法を調整するためのさまざまな同期フィルターも用意されています。 メモリ管理方法を、既知のメモリ使用パターン、および特定のアプリケーションの同期の要件に合わせることで、多くの場合、アプリケーション全体の速度の向上やメモリ要件を軽減できます。
 
@@ -86,7 +87,7 @@ _List0 は、`allocator_chunklist` と既定の同期フィルターを使用し
 
 _Lst1 は、`allocator_chunklist` と [sync_per_thread](../standard-library/sync-per-thread-class.md) 同期フィルターを使用してノードを割り当てます。
 
-ブロック アロケーターは、キャッシュまたはフィルターです。 キャッシュは、std::size_t 型の引数を 1 つ取るテンプレート クラスです。 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。 演算子 `new` を使用してメモリを取得する必要がありますが、ブロックごとに演算子 `new` を呼び出す必要はありません。 たとえば、より大規模なブロックからサブ割り当てしたり、割り当て解除したブロックを後続の再割り当てのためにキャッシュしたりすることができます。
+ブロック アロケーターは、キャッシュまたはフィルターです。 キャッシュは、std::size_t 型の引数を 1 つ取るテンプレート クラスです。 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。 演算子を使用してメモリを取得する必要があります**新しい**、オペレーターに別個の呼び出しをする必要がなくなりますが、**新しい**ブロックごとにします。 たとえば、より大規模なブロックからサブ割り当てしたり、割り当て解除したブロックを後続の再割り当てのためにキャッシュしたりすることができます。
 
 再バインドをコンパイルできないコンパイラでは、テンプレートがインスタンス化されたときに使用した std::size_t 引数の値は、必ずしもキャッシュのメンバー関数 allocate と deallocate に渡された引数 _Sz の値ではありません。
 
@@ -149,11 +150,14 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](../standard-library/sync
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|同期フィルターからユーザー定義のアロケーターを作成するために必要な、基底クラスと共通の関数を定義します。|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|[cache_chunklist](../standard-library/cache-chunklist-class.md) 型のキャッシュを使用して、オブジェクトに対してストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|[cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_fixed_size](../standard-library/max-fixed-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|`operator delete` を使用してメモリ ブロックの割り当てを解除し、`operator new` を使用してメモリ ブロックを割り当てるアロケーターを実装します。|
+|[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|
+  [cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_fixed_size](../standard-library/max-fixed-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|使用するアロケーターを実装する**delete 演算子**、メモリの割り当てを解除するブロックと**演算子 new**メモリ ブロックを割り当てます。|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|[cache_suballoc](../standard-library/cache-suballoc-class.md) 型のキャッシュを使用して、`Type` 型のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|[cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_unbounded](../standard-library/max-unbounded-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|[cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_variable_size](../standard-library/max-variable-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|
+  [cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_unbounded](../standard-library/max-unbounded-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|
+  [cache_freelist](../standard-library/cache-freelist-class.md) 型のキャッシュと [max_variable_size](../standard-library/max-variable-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[cache_chunklist](../standard-library/cache-chunklist-class.md)|1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。|
 |[cache_freelist](../standard-library/cache-freelist-class.md)|1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。|
 |[cache_suballoc](../standard-library/cache-suballoc-class.md)|1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除するブロック アロケーターを定義します。|
@@ -168,7 +172,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](../standard-library/sync
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|スレッドごとに個別のキャッシュ オブジェクトを提供する同期フィルターを記述します。|
 |[sync_shared](../standard-library/sync-shared-class.md)|すべてのアロケーターによって共有されているキャッシュ オブジェクトへのアクセスを制御するためにミューテックスを使用する同期フィルターを表します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 

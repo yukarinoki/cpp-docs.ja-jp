@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385912"
 ---
 # <a name="using-ctoolbarctrl"></a>CToolBarCtrl の使い方
 ツール バー コントロールを使用することができます ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) ボタンと省略可能なスペースを含むコントロール ウィンドウを作成します。 ツール バー コントロールのウィンドウ内の各ボタンは、ユーザーがその親ウィンドウにコマンド メッセージを送信します。 通常、ツールバーのボタンは、アプリケーションのコマンドにアクセスするユーザーの追加と直接的な方法を提供するアプリケーションのメニュー内の項目に対応しています。  

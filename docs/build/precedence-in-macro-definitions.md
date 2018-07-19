@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368614"
 ---
 # <a name="precedence-in-macro-definitions"></a>マクロ定義の優先順位
 マクロは、複数の定義を持つ、NMAKE は最も高い優先順位の定義を使用します。 次に、最上位から最下位からの優先順位の順序を示します。  

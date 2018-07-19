@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296277"
 ---
 # <a name="compiler-warning-level-1-c4928"></a>コンパイラの警告 (レベル 1) C4928
 コピー初期化が正しくありません。複数のユーザー定義の変換が暗黙的に適用されています。  

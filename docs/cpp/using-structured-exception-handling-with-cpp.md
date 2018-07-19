@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421947"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>C++ での構造化例外処理の使用
 これらの技術情報で説明されている構造化例外処理では、C および C++ ソース ファイルを使用します。 ただし、特に C++ 用にデザインされていないため、推奨されません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理メカニズムは、任意の型の例外を処理できるという点で、より柔軟です。  

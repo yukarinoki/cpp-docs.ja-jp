@@ -1,5 +1,5 @@
 ---
-title: CComCritSecLock クラス |Microsoft ドキュメント
+title: CComCritSecLock クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b03d22a7daff614c560c7531143b718de7351c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880252"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock クラス
-このクラスは、ロックおよびロック解除、クリティカル セクション オブジェクトのメソッドを提供します。  
+このクラスは、ロックとクリティカル セクション オブジェクトをロック解除のためのメソッドを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,10 +56,10 @@ template<class TLock> class CComCritSecLock
 |[CComCritSecLock::Lock](#lock)|クリティカル セクション オブジェクトをロックするには、このメソッドを呼び出します。|  
 |[CComCritSecLock::Unlock](#unlock)|クリティカル セクション オブジェクトのロックを解除するには、このメソッドを呼び出します。|  
   
-## <a name="remarks"></a>コメント  
- このクラスを使用してロックおよびでより安全な方法でオブジェクトをロック解除、 [CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)または[CComAutoCriticalSection クラス](../../atl/reference/ccomautocriticalsection-class.md)です。  
+## <a name="remarks"></a>Remarks  
+ ロックおよびより安全な方法でオブジェクトをロック解除をこのクラスを使用して、 [CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)または[CComAutoCriticalSection クラス](../../atl/reference/ccomautocriticalsection-class.md)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock  
@@ -72,10 +73,10 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
  *cs*  
  クリティカル セクション オブジェクト。  
   
- `bInitialLock`  
- 最初のロックの状態: **true**がロックされていることを意味します。  
+ *bInitialLock*  
+ 最初のロックの状態: **true**ロックされていることを意味します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  クリティカル セクション オブジェクトを初期化します。  
   
 ##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
@@ -85,7 +86,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ~CComCritSecLock() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  クリティカル セクション オブジェクトのロックを解除します。  
   
 ##  <a name="lock"></a>  CComCritSecLock::Lock  
@@ -96,10 +97,10 @@ HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- オブジェクトは正常にロックされて 場合は S_OK、またはエラーの hresult 値を返します。  
+ オブジェクトが正常にロックされた場合、S_OK またはエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- オブジェクトは既にロックされている場合、デバッグ ビルドでアサート エラーが発生します。  
+### <a name="remarks"></a>Remarks  
+ オブジェクトが既にロックされているデバッグ ビルドでアサート エラーが発生します。  
   
 ##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  クリティカル セクション オブジェクトのロックを解除するには、このメソッドを呼び出します。  
@@ -108,7 +109,7 @@ HRESULT Lock() throw();
 void Unlock() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オブジェクトは、既にロックされているが、デバッグ ビルドでアサート エラーが発生します。  
   
 ## <a name="see-also"></a>関連項目  

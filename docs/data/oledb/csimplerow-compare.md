@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098966"
 ---
 # <a name="csimplerowcompare"></a>CSimpleRow::Compare
 同じ行インスタンスを参照しているかを参照してください。 2 つの行を比較します。  

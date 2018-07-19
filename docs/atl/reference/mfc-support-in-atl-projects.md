@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360642"
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL プロジェクトで MFC サポート
 選択した場合**サポート MFC** ATL プロジェクト ウィザードで、プロジェクトが MFC アプリケーション オブジェクト (クラス) としてアプリケーションを宣言します。 プロジェクトが MFC ライブラリを初期化し、クラスをインスタンス化 (クラス*ProjName*) から派生する[CWinApp](../../mfc/reference/cwinapp-class.md)です。  

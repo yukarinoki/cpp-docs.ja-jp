@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341899"
 ---
 # <a name="creating-windows"></a>ウィンドウの作成
 フレームワークは、フレームワーク プログラムで必要がある windows のほとんどを自動的に作成します。 [ドキュメント/ビューの作成](../mfc/document-view-creation.md)フレームワークがドキュメントとビューに関連付けられているフレーム ウィンドウを作成する方法を示しています。 な特別な用途のための独自のウィンドウを作成することができますが、— フレーム ウィンドウまたはビューの独自の子ウィンドウを含む — フレームワークによって提供される windows だけでなくです。  

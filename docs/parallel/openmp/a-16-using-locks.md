@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695903"
 ---
 # <a name="a16---using-locks"></a>A.16 ロックの使用
 次の例では、(の[セクション 3.2](../../parallel/openmp/3-2-lock-functions.md) 41 ページの) 注ロック関数の引数は型である必要があります`omp_lock_t`、それをフラッシュする必要はありません。  ロック関数により、スレッドは最初のクリティカル セクション エントリの待機中にアイドル状態であるが 2 番目のエントリの待機中に他の作業を行います。  `omp_set_lock`関数ブロックが、`omp_test_lock`関数は、実行する skip() で作業を許可します。  

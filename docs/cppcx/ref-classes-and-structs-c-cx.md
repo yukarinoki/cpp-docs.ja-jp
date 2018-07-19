@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092445"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref クラスと構造体 (C++/CX)
 C + + CX サポートがユーザー定義*ref クラス*と*ref 構造体*、およびユーザー定義*値クラス*と*構造体の値*です。 これらのデータ構造は、の主コンテナーする C + + CX は、Windows ランタイムの型システムをサポートしています。 その内容は、特定の規則に従ってメタデータに出力され、Windows ランタイム コンポーネントおよび C++ やその他の言語で記述されているユニバーサル Windows プラットフォーム アプリ間で渡されることができます。  

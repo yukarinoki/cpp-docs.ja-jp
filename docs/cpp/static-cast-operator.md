@@ -1,5 +1,5 @@
 ---
-title: static_cast 演算子 |Microsoft ドキュメント
+title: static_cast 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a0cd6ea7e2268940febca9e1e564f30d29dcff0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ad9af76787780ebe2a25b3fab46ce1951085b8e8
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943858"
 ---
 # <a name="staticcast-operator"></a>static_cast 演算子
-変換、*式*の型に*タイプ id*は式内に存在する型にのみ基づいてです。  
+変換、*式*の型に*型 id、* 式に存在する型のみに基づいて。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,16 +32,16 @@ ms.lasthandoff: 05/03/2018
 static_cast <type-id> ( expression )   
 ```  
   
-## <a name="remarks"></a>コメント  
- 標準 C++ では、変換の安全性を確認する実行時の型チェックはありません。 C++/CX では、コンパイル時チェックと実行時チェックが実行されます。 詳細については、次を参照してください。[キャスト](casting.md)です。  
+## <a name="remarks"></a>Remarks  
+ 標準 C++ では、変換の安全性を確認する実行時の型チェックはありません。 C++/CX では、コンパイル時チェックと実行時チェックが実行されます。 詳細については、次を参照してください。[キャスト](casting.md)します。  
   
- `static_cast` 演算子は、基底クラスへのポインターを派生クラスへのポインターに変換するなどの操作に使用できます。 このような変換は、必ずしも安全であるとは限りません。  
+ **Static_cast**演算子は派生クラスへのポインターを基底クラスへのポインターに変換するなどの操作に使用できます。 このような変換は、必ずしも安全であるとは限りません。  
   
- 一般に、列挙から int、または int から float のような数値データ型の変換には、`static_cast` を使用することで、データ型を特定して変換を行うことができます。 `static_cast` が実行時の型チェックを実行する一方で `dynamic_cast` は実行しないため、`static_cast` 変換は `dynamic_cast` 変換ほど安全ではありません。 あいまいなポインターへの `dynamic_cast` は失敗しますが、`static_cast` は何も問題ないように戻ります。これは危険です。 `dynamic_cast` 変換がより安全ですが、`dynamic_cast` は、ポインターまたは参照にのみ機能し、ランタイム型チェックはオーバーヘッドです。 詳細については、次を参照してください。 [dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)です。  
+ 一般的に使用する**static_cast**列挙型などの数値データ型を整数または浮動小数点と整数に変換するときのデータ型の特定のものが、変換に関係します。 **static_cast**の変換はほど安全**dynamic_cast**変換では、ため**static_cast**中は実行時の型チェック、 **dynamic_cast**します。 A **dynamic_cast**あいまいなポインターは失敗し中、 **static_cast**何も問題があります。 これは、危険な場合に返されます。 **Dynamic_cast**変換は安全な**dynamic_cast**のみポインターまたは参照、および実行時の型チェックの動作がのオーバーヘッドが発生します。 詳細については、次を参照してください。 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)します。  
   
  次の例では、`D* pd2 = static_cast<D*>(pb);` は `D` にないフィールドとメソッドがあるため、行 `B` は安全ではありません。 ただし、`B* pb2 = static_cast<B*>(pd);` には `D` のすべてが常に含まれているため、行 `B` は安全な変換です。  
   
-```  
+```cpp 
 // static_cast_Operator.cpp  
 // compile with: /LD  
 class B {};  
@@ -56,11 +57,11 @@ void f(B* pb, D* pd) {
 }  
 ```  
   
- 対照的に[dynamic_cast](../cpp/dynamic-cast-operator.md)、実行時チェックが行われません、`static_cast`への変換`pb`です。 `pb` によってポイントされるオブジェクトは、型 `D` のオブジェクトではない場合があります。その場合は、`*pd2` を使用すると、深刻な結果が発生する可能性があります。 たとえば、`D` クラスではなく、`B` クラスのメンバーである関数を呼び出すと、アクセス違反が発生する可能性があります。  
+ 対照的に[dynamic_cast](../cpp/dynamic-cast-operator.md)で実行時のチェックは行われません、 **static_cast**への変換`pb`します。 `pb` によってポイントされるオブジェクトは、型 `D` のオブジェクトではない場合があります。その場合は、`*pd2` を使用すると、深刻な結果が発生する可能性があります。 たとえば、`D` クラスではなく、`B` クラスのメンバーである関数を呼び出すと、アクセス違反が発生する可能性があります。  
   
- `dynamic_cast` と `static_cast` 演算子は、クラス階層構造のあらゆる場所にポインターを移動します。 ただし、`static_cast` はキャスト ステートメントで提供される情報に排他的に依存するため、安全でない場合があります。 例えば:  
+ **Dynamic_cast**と**static_cast**演算子は、クラス階層全体にポインターを移動します。 ただし、 **static_cast** cast ステートメントで提供される情報に排他的に依存しはそのため安全できません。 例えば:  
   
-```  
+```cpp 
 // static_cast_Operator_2.cpp  
 // compile with: /LD /GR  
 class B {  
@@ -77,15 +78,15 @@ void f(B* pb) {
   
  `pb` が `D` 型のオブジェクトを実際に指し示している場合、`pd1` および `pd2` は同じ値になります。 また、`pb == 0` の場合、同じ値も取得します。  
   
- `pb` が `B` 型のオブジェクトを指し示し、完全な `D` クラスを指し示していない場合、`dynamic_cast` には、0 を返す十分な認識があります。 ただし、`static_cast` は、`pb` が `D` 型のオブジェクトを指し示すというプログラマのアサーションに依存し、単純にその想定される `D` オブジェクトへのポインターを返します。  
+ 場合`pb`型のオブジェクトを指す`B`とが完全な`D`クラスし**dynamic_cast**十分 0 を返すことがわかります。 ただし、 **static_cast**プログラマのアサーションに依存する`pb`型のオブジェクトを指す`D`、単にその想定されるポインターを返します`D`オブジェクト。  
   
- その結果、`static_cast` は暗黙的な型変換の逆の操作を行うことができますが、その場合の結果は未定義になります。 `static_cast` 変換の結果が安全かどうかの検証は、プログラマが行うことです。  
+ その結果、 **static_cast**暗黙的な変換の逆を行うことができます、この場合、結果は定義されていません。 結果、プログラマがいることを確認する左は、 **static_cast**変換が安全です。  
   
- この動作は、クラス型以外の型にも適用されます。 たとえば、int から `static_cast` に変換するために `char` を使用できます。 ただし、結果の `char` には、`int` 値全体を格納できる十分なビットがない場合があります。 もう一度に任されていることを確認するプログラマの結果、`static_cast`変換が安全です。  
+ この動作は、クラス型以外の型にも適用されます。 たとえば、 **static_cast**から int に変換するために使用できる、 **char**します。 ただし、その結果、 **char**全体を保持するために十分なビットがない可能性があります**int**値。 ここでも、これは左ことを確認するプログラマからの結果、 **static_cast**変換が安全です。  
   
- `static_cast` 演算子は、標準変換やユーザー定義変換など、暗黙の変換を実行するために使用することもできます。 例えば:  
+ **Static_cast**演算子が標準変換とユーザー定義の変換を含む、暗黙の変換を実行することもできます。 例えば:  
   
-```  
+```cpp 
 // static_cast_Operator_3.cpp  
 // compile with: /LD /GR  
 typedef unsigned char BYTE;  
@@ -102,15 +103,15 @@ void f() {
 }  
 ```  
   
- `static_cast` 演算子では、整数値を明示的に列挙型に変換できます。 整数型の値が列挙値の範囲内にない場合、結果の列挙値は未定義になります。  
+ **Static_cast**演算子が列挙型を整数値を明示的に変換できます。 整数型の値が列挙値の範囲内にない場合、結果の列挙値は未定義になります。  
   
- `static_cast` 演算子は、null ポインター値を変換先の型の null ポインター値に変換します。  
+ **Static_cast**演算子は、null ポインターの値を変換先の型の null ポインター値に変換します。  
   
- 式は、`static_cast` 演算子で void 型に明示的に変換できます。 変換先の void 型は、オプションで、`const`、`volatile`、または `__unaligned` 属性を含むことができます。  
+ 任意の式は、void 型に明示的に変換できる、 **static_cast**演算子。 変換先の void 型を含めることができます必要に応じて、 **const**、**揮発性**、または **_ _unaligned**属性。  
   
- `static_cast` 演算子は、`const`、`volatile`、または `__unaligned` 属性をキャストできません。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)これらの属性を削除する方法についてです。  
+ **Static_cast**演算子はキャストできません、 **const**、**揮発性**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。  
   
- 再配置を行うガベージ コレクターの先頭で unchecked キャストを実行する危険性があるため、`static_cast` は、正しく機能することがわかっている場合にパフォーマンスが重要なコードでのみ使用する必要があります。 使用する場合は`static_cast`リリース モードでは、置換後[safe_cast](../windows/safe-cast-cpp-component-extensions.md)にデバッグ ビルドで成功を確認してください。  
+ 次のように再配置を行うガベージ コレクターの使用の先頭で unchecked キャストを実行する危険性のため**static_cast**限定すべきパフォーマンス クリティカルなコードで正しく機能することを確認します。 使用する場合**static_cast**リリース モードで置き換える[safe_cast](../windows/safe-cast-cpp-component-extensions.md)デバッグ ビルドで成功を確実にします。  
   
 ## <a name="see-also"></a>関連項目  
  [キャスト演算子](../cpp/casting-operators.md)   

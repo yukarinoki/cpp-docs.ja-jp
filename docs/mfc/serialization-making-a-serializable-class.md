@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b8e52750f6f4589f90048e248305b2f0f5b4855
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953075"
 ---
 # <a name="serialization-making-a-serializable-class"></a>シリアル化 : シリアル化可能なクラスの作成
 5 つの主要な手順は、クラスをシリアル化可能にする必要があります。 以下に示すされ、次のセクションで説明します。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/04/2018
  使用することも、[読み書きするとき](../mfc/reference/carchive-class.md#read)と[CArchive::Write](../mfc/reference/carchive-class.md#write)大量の型指定されていないデータを読み書きするメンバー関数。  
   
 ##  <a name="_core_using_the_declare_serial_macro"></a> DECLARE_SERIAL マクロを使用します。  
- `DECLARE_SERIAL`次のように、シリアル化をサポートするクラスの宣言にマクロが必要があります。  
+ 次のように、シリアル化をサポートするクラスの宣言で DECLARE_SERIAL マクロが必要です。  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
@@ -80,18 +81,18 @@ ms.lasthandoff: 05/04/2018
  このコンス トラクターは、パブリック、プロテクト、またはプライベートに宣言できます。 加えた場合、プライベート、保護されたまたは、それがのみ使用されることによってシリアル化の関数を確認できます。 コンス トラクターは、必要に応じて削除することを許可する状態オブジェクトを配置する必要があります。  
   
 > [!NOTE]
->  引数なしのコンス トラクターを使用するクラスを定義するを忘れた場合、`DECLARE_SERIAL`と`IMPLEMENT_SERIAL`マクロ、行に「既定コンス トラクターがない使用可能な」コンパイラの警告が表示されます、`IMPLEMENT_SERIAL`マクロを使用します。  
+>  忘れた場合は、ストリームのマクロを使用するクラスに引数なしのコンス トラクターを定義する、IMPLEMENT_SERIAL マクロが使用されている行に「既定コンス トラクターがない使用可能な」コンパイラの警告が表示されます。  
   
 ##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> IMPLEMENT_SERIAL マクロを使用して、実装ファイル  
- `IMPLEMENT_SERIAL`マクロを使用して、さまざまな関数を定義するために必要なときに、シリアル化可能なからクラスを派生`CObject`です。 実装ファイルでこのマクロを使用する (です。CPP) クラス。 マクロの最初の 2 つの引数は、クラスの名前とその直接の基本クラスの名前です。  
+ IMPLEMENT_SERIAL マクロは、さまざまな関数を定義するために必要なときに、シリアル化可能なからクラスを派生するために使用`CObject`です。 実装ファイルでこのマクロを使用する (です。CPP) クラス。 マクロの最初の 2 つの引数は、クラスの名前とその直接の基本クラスの名前です。  
   
  このマクロの 3 番目の引数は、スキーマの数です。 スキーマ番号は、本質的に、クラスのオブジェクトのバージョン番号です。 スキーマの数を 0 以上の整数を使用します。 (と混同しないでデータベース用語では、このスキーマ数です。)  
   
  MFC のシリアル化コードをメモリにオブジェクトを読み取るときにスキーマの数を確認します。 ディスク上のオブジェクトのスキーマの数がメモリ内のクラスのスキーマの数が一致しない場合、ライブラリがスローされます、`CArchiveException`オブジェクトの正しくないバージョンの読み取りからプログラムを防止します。  
   
- 場合は、`Serialize`メンバー関数を複数のバージョンを読み取ることができる、別のバージョンのアプリケーションで記述されたファイルは、— 値を使用することができます**VERSIONABLE_SCHEMA**への引数として、 `IMPLEMENT_SERIAL`マクロです。 使用状況情報と例では、次を参照してください。、`GetObjectSchema`クラスのメンバー関数`CArchive`です。  
+ 場合は、`Serialize`メンバー関数を複数のバージョンを読み取ることができる、別のバージョンのアプリケーションで記述されたファイルは、— 値を使用することができます*VERSIONABLE_SCHEMA* IMPLEMENT_SERIAL への引数としてマクロです。 使用状況情報と例では、次を参照してください。、`GetObjectSchema`クラスのメンバー関数`CArchive`です。  
   
- 次の例は、使用する方法を示しています`IMPLEMENT_SERIAL`クラスは、 `CPerson`、つまりから派生した`CObject`:。  
+ 次の例は、クラスは、IMPLEMENT_SERIAL を使用する方法を示しています`CPerson`、つまりから派生した`CObject`:。  
   
  [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]  
   

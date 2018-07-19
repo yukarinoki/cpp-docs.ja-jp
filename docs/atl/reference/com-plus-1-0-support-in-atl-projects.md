@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359358"
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM + 1.0 ATL プロジェクトでサポートします。
 使用することができます、 [ATL プロジェクト ウィザード](../../atl/reference/creating-an-atl-project.md)COM + 1.0 コンポーネントの基本的なサポートと、プロジェクトを作成します。  

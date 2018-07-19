@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356687"
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL ウィンドウ クラスの概要
 実装し、ウィンドウの操作は、次の ATL クラスが設計されています。  

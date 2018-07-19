@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171927"
 ---
 # <a name="compiler-error-c2286"></a>コンパイラ エラー C2286
 'identifier' の形式のメンバーへのポインターは、既に '継承の' 宣言は無視に設定します。  

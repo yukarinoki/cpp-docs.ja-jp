@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140174"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>方法: アセンブリから STL/CLR コンテナーを公開する
 などの STL/CLR コンテナー`list`と`map`テンプレート ref クラスとして実装されます。 C++ テンプレート、コンパイル時にインスタンス化されているために、正確に同じシグネチャが異なるアセンブリにある 2 つのテンプレート クラスは、実際にはさまざまな種類になります。 つまり、テンプレート クラスは、アセンブリ境界を越えて使用できません。  

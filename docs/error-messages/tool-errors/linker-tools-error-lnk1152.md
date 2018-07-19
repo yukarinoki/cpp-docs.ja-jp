@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297951"
 ---
 # <a name="linker-tools-error-lnk1152"></a>リンカ ツール エラー LNK1152
 1 つまたは複数の装飾されていないシンボルを解決することはできません。  

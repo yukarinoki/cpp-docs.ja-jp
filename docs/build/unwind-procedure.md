@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382024"
 ---
 # <a name="unwind-procedure"></a>アンワインド プロシージャ
 アンワインド コード配列は、降順に並べ替えられます。 例外が発生する場合は、完全なコンテキストがコンテキスト レコードのオペレーティング システムで格納されます。 例外のディスパッチ ロジックが呼び出され、例外ハンドラーを検索する次の手順を繰り返し実行します。  

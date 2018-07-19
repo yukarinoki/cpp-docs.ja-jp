@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051144"
 ---
 # <a name="dq"></a>DQ
 割り当て、ごとに 8 バイトの記憶領域を必要に応じて初期化`initializer`です。 型指定子としても使用できる、型が有効な任意の場所。 `DQ` シノニムは、 [QWORD](../../assembler/masm/qword.md)です。  

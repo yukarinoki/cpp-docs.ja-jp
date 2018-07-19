@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371531"
 ---
 # <a name="cresourceexception-class"></a>関数クラス
 Windows が要求されたリソースを見つけられないか、割り当てられないときに生成されます。  

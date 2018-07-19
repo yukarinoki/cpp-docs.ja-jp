@@ -25,14 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e6e5eeab0be13eb64052eb9e90a570dcc5124d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929053"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX コントロール : カスタム イベントの追加
-カスタム イベントとは異なりストック イベントからクラスによって自動的に起動しません`COleControl`です。 カスタム イベントは、特定のアクション、イベントとして、コントロールの開発者によって決定を認識します。 カスタム イベントのイベントのマップ エントリがによって表される、`EVENT_CUSTOM`マクロです。 次のセクションでは、ActiveX コントロール ウィザードを使用して作成された ActiveX コントロール プロジェクトのカスタム イベントを実装します。  
+カスタム イベントとは異なりストック イベントからクラスによって自動的に起動しません`COleControl`です。 カスタム イベントは、特定のアクション、イベントとして、コントロールの開発者によって決定を認識します。 EVENT_CUSTOM マクロでは、カスタム イベントのイベントのマップ エントリが表されます。 次のセクションでは、ActiveX コントロール ウィザードを使用して作成された ActiveX コントロール プロジェクトのカスタム イベントを実装します。  
   
 ##  <a name="_core_adding_a_custom_event_with_classwizard"></a> カスタム イベントを追加する、イベント追加ウィザード  
  次の手順では、特定のカスタム イベント ClickIn を追加します。 この手順を使用すると、その他のカスタム イベントを追加します。 カスタム イベントの名前と ClickIn イベントの名前およびパラメーターについては、そのパラメーターを置き換えてください。  
@@ -47,13 +48,13 @@ ms.lasthandoff: 05/04/2018
   
      イベントの追加ウィザードが開きます。  
   
-4.  **イベント名**ボックスを最初に、既存のイベントを選択して、をクリックして、**カスタム**ラジオ ボタンをクリックし、入力`ClickIn`です。  
+4.  **イベント名**ボックスを最初に、既存のイベントを選択して、をクリックして、**カスタム**ラジオ ボタンをクリックし、入力*ClickIn*です。  
   
 5.  **内部名**ボックスに、イベントの起動処理関数の名前を入力します。 この例では、イベントの追加ウィザードによって提供される既定値を使用 (`FireClickIn`)。  
   
-6.  という名前のパラメーターを追加`xCoord`(型`OLE_XPOS_PIXELS`) を使用して、**パラメーター名**と**パラメーターの型**コントロール。  
+6.  という名前のパラメーターを追加*xCoord* (型*OLE_XPOS_PIXELS*) を使用して、**パラメーター名**と**パラメーターの型**コントロール。  
   
-7.  呼ばれる 2 番目のパラメーターを追加`yCoord`(型`OLE_YPOS_PIXELS`)。  
+7.  呼ばれる 2 番目のパラメーターを追加*yCoord* (型*OLE_YPOS_PIXELS*)。  
   
 8.  をクリックして**完了**イベントを作成します。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/04/2018
  この行は、ClickIn イベント イベントのイベントの追加ウィザード ボックスの一覧で、イベントの位置から取得する、特定の ID 番号を割り当てます。 イベント一覧内のエントリは、イベントに対応するためのコンテナーを使用できます。 たとえば、イベントが発生したときに実行されるハンドラー コードを提供、可能性があります。  
   
 ##  <a name="_core_calling_fireclickin"></a> FireClickIn を呼び出す  
- イベントの追加ウィザードを使用して、ClickIn カスタム イベントを追加すると、これで、このイベントが発生する場合を決定する必要があります。 呼び出すことによって、これを行う`FireClickIn`適切な操作が発生したとき。 ここでは、コントロールを使用して、`InCircle`関数、 `WM_LBUTTONDOWN` ClickIn イベントを円または楕円領域内に、ユーザーがクリックしたときに発生させるメッセージ ハンドラー。 次の手順を追加、`WM_LBUTTONDOWN`ハンドラー。  
+ イベントの追加ウィザードを使用して、ClickIn カスタム イベントを追加すると、これで、このイベントが発生する場合を決定する必要があります。 呼び出すことによって、これを行う`FireClickIn`適切な操作が発生したとき。 ここでは、コントロールを使用して、 `InCircle` ClickIn イベントを円または楕円領域内に、ユーザーがクリックしたときに発生させる WM_LBUTTONDOWN メッセージ ハンドラー内の関数。 次の手順では、WM_LBUTTONDOWN ハンドラーを追加します。  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>イベントの追加ウィザードでメッセージのハンドラーを追加するには  
   
@@ -91,13 +92,13 @@ ms.lasthandoff: 05/04/2018
   
      [プロパティ] ウィンドウには、ActiveX コントロールによって処理できるメッセージの一覧が表示されます。 既に太字で表示されているメッセージには、それに割り当てられているハンドラー機能があります。  
   
-4.  [プロパティ] ウィンドウから、処理するメッセージを選択します。 この例では、選択`WM_LBUTTONDOWN`です。  
+4.  [プロパティ] ウィンドウから、処理するメッセージを選択します。 この例では、WM_LBUTTONDOWN を選択します。  
   
 5.  右側のドロップダウン リスト ボックスから選択**\<追加 > OnLButtonDown**です。  
   
 6.  クラス ビュー、実装ではメッセージ ハンドラーのコードに移動することで、新しいハンドラー関数をダブルクリックして (です。ActiveX コントロールの CPP) ファイルです。  
   
- 次のコード サンプルの呼び出し、 **InCircle**コントロール ウィンドウ内でマウスの左ボタンをクリックするたびに機能します。 このサンプルは含まれて、`WM_LBUTTONDOWN`ハンドラー関数`OnLButtonDown`で、 [Circ サンプル](../visual-cpp-samples.md)抽象です。  
+ 次のコード サンプルの呼び出し、`InCircle`コントロール ウィンドウ内でマウスの左ボタンをクリックするたびに機能します。 このサンプルは含まれて、WM_LBUTTONDOWN ハンドラー関数`OnLButtonDown`で、 [Circ サンプル](../visual-cpp-samples.md)抽象です。  
   
  [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   

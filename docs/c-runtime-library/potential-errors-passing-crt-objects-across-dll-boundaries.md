@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391260"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>DLL の境界を越えて CRT オブジェクトを渡す場合に発生する可能性のあるエラー
 ファイル ハンドル、ロケール、環境変数などの C ランタイム (CRT) オブジェクトを DLL の境界を越えて渡す場合 (DLL の境界を越えた関数の呼び出し)、DLL またはその DLL を呼び出すファイルが異なる CRT ライブラリのコピーを使用していると、予想外の動作が発生する可能性があります。  

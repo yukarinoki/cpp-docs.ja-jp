@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381252"
 ---
 # <a name="spin-button-member-functions"></a>スピン ボタンのメンバー関数
 いくつかのメンバー関数は、スピン コントロールの使用可能な ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md))。 スピン ボタンの次の属性を変更するのにには、これらの関数を使用します。  

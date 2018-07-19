@@ -1,5 +1,5 @@
 ---
-title: _ _uuidof 演算子 |Microsoft ドキュメント
+title: _ _uuidof 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70731665ca2a2eba739f139678e0f7eaface2b85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 92f7e0f3652a1142c97f878784edba6229fb19cd
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943516"
 ---
 # <a name="uuidof-operator"></a>__uuidof 演算子
 **Microsoft 固有の仕様**  
@@ -33,29 +34,27 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      __uuidof (  
-   expression   
-)  
+__uuidof (expression)  
 ```  
   
-## <a name="remarks"></a>コメント  
- *式*型名、ポインター、参照、またはその型の配列を使用できますが、これらの型、またはこれらの型の変数に特化したテンプレートです。 引数は、アタッチされた GUID を見つけるためにコンパイラが使用できる限り有効です。  
+## <a name="remarks"></a>Remarks  
+ *式*型名、ポインター、参照、またはその型の配列にすることができます、これらの型、またはこれらの型の変数に特化したテンプレートです。 引数は、アタッチされた GUID を見つけるためにコンパイラが使用できる限り有効です。  
   
- ときに、この組み込みの特殊なケースか**0**または**NULL**引数として提供されています。 この場合、`__uuidof` はゼロで構成された GUID を返します。  
+ この組み込みの特殊なケースはいつか**0**か、引数として NULL が指定されています。 この場合、 **_ _uuidof**はゼロで構成された GUID を返します。  
   
  このキーワードを使用すると、次のものにアタッチされている GUID を抽出できます。  
   
--   オブジェクト、 [uuid](../cpp/uuid-cpp.md)拡張属性。  
+-   オブジェクトによって、 [uuid](../cpp/uuid-cpp.md)拡張属性。  
   
 -   作成されたライブラリ ブロック、[モジュール](../windows/module-cpp.md)属性。  
   
 > [!NOTE]
->  デバッグ ビルドでは、`__uuidof` は常にオブジェクトを動的に (実行時に) 初期化します。 リリース ビルドでは、`__uuidof` は静的に (コンパイル時に) オブジェクトを初期化できます。  
+>  デバッグ ビルドで **_ _uuidof**常に動的に (実行時) にオブジェクトを初期化します。 リリース ビルドで **_ _uuidof**静的 (コンパイル時) にオブジェクトを初期化できます。  
   
 ## <a name="example"></a>例  
  次のコード (ole32.lib でコンパイル) は、module 属性で作成されたライブラリ ブロックの uuid を表示します。  
   
-```  
+```cpp 
 // expre_uuidof.cpp  
 // compile with: ole32.lib  
 #include "stdio.h"  
@@ -77,9 +76,9 @@ int main() {
 ```  
   
 ## <a name="comments"></a>コメント  
- ここで、ライブラリ名は不要になったスコープ内の場合、__LIBID を使用することができます\_の代わりに`__uuidof`です。 例えば:  
+ ライブラリ名が不要になったスコープ内の場合、使用することができます`__LIBID_`の代わりに **_ _uuidof**します。 例えば:  
   
-```  
+```cpp 
 StringFromCLSID(__LIBID_, &lpolestr);  
 ```  
   

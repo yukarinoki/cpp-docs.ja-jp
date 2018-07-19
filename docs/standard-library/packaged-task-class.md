@@ -30,11 +30,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], valid
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37d6fc7b01c179f017e04f8064a789b8f4ad2b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7eb5b8d003682f5b941dd805f424afbe4a36cc85
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964796"
 ---
 # <a name="packagedtask-class"></a>packaged_task クラス
 
@@ -74,7 +75,7 @@ class packaged_task;
 |[packaged_task::operator()](#op_call)|関連付けられた非同期状態に格納された呼び出し可能オブジェクトを呼び出し、戻り値をアトミックに格納し、状態を *ready* に設定します。|
 |[packaged_task::operator bool](#op_bool)|オブジェクトが関連付けられた非同期状態であるかどうかを指定します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<将来 >
 
@@ -88,7 +89,7 @@ class packaged_task;
 future<Ty> get_future();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `packaged_task` オブジェクトが関連付けられた非同期状態ではない場合、このメソッドはエラー コード `no_state` で [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -102,7 +103,7 @@ future<Ty> get_future();
 void make_ready_at_thread_exit(ArgTypes... args);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `packaged_task` オブジェクトが関連付けられた非同期状態ではない場合、このメソッドはエラー コード `no_state` で [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -122,15 +123,15 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` A`packaged_task`オブジェクト。
+*右*A`packaged_task`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `*this`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-操作の後、`Right` に関連付けられた非同期状態は既にありません。
+操作の後*右*関連付けられた非同期状態にはなくなりました。
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -140,7 +141,7 @@ packaged_task& operator=(packaged_task&& Right);
 void operator()(ArgTypes... args);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `packaged_task` オブジェクトが関連付けられた非同期状態ではない場合、このメソッドはエラー コード `no_state` で [future_error](../standard-library/future-error-class.md) をスローします。
 
@@ -158,7 +159,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが関連付けられた非同期状態である場合は `true` を返します。それ以外の場合は `false` を返します。
+**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task コンストラクター
 
@@ -177,21 +178,21 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` A`packaged_task`オブジェクト。
+*右*A`packaged_task`オブジェクト。
 
-`alloc` メモリ割り当て。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」を参照してください。
+*alloc*メモリ アロケーター。 詳細については、「[\<allocators>](../standard-library/allocators-header.md)」を参照してください。
 
-`fn` 関数オブジェクト。
+*fn*関数オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、*関連付けられた非同期状態*がない `packaged_task` オブジェクトを構築します。
 
-2 つ目のコンストラクターは、`packaged_task` オブジェクトを構築し、`Right` から関連付けられた非同期状態を転送します。 操作の後、`Right` に関連付けられた非同期状態は既にありません。
+2 番目のコンス トラクターの構成要素を`packaged_task`オブジェクトし、関連付けられた非同期状態からの転送*右*します。 操作の後*右*関連付けられた非同期状態にはなくなりました。
 
-3 つ目のコンストラクターは、関連付けられた非同期状態に格納された `packaged_task` のコピーを持つ `fn` オブジェクトを構築します。
+3 番目のコンス トラクターの構成要素を`packaged_task`オブジェクトのコピーを持っている*fn*関連付けられた非同期状態に格納されています。
 
-4 つ目のコンストラクターは、関連付けられた非同期状態に格納された `packaged_task` のコピーを持つ `fn` オブジェクトを構築し、メモリ割り当てのために `alloc` を使用します。
+4 番目のコンス トラクターの構成要素を`packaged_task`オブジェクトのコピーを持っている*fn*使用してその関連付けられた非同期状態に格納されている`alloc`メモリの割り当て。
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task デストラクター
 
@@ -201,7 +202,7 @@ template <class Fn, class Alloc>
 ~packaged_task();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 *関連付けられた非同期状態*が*準備完了*ではない場合、デストラクターは、関連付けられた非同期状態の結果としてエラー コード `broken_promise` で [future_error](../standard-library/future-error-class.md) 例外を格納し、関連付けられた非同期状態でブロックされているすべてのスレッドがブロック解除されます。
 
@@ -213,7 +214,7 @@ template <class Fn, class Alloc>
 void reset();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 実際には、このメソッドは `*this = packaged_task(move(fn))` を実行します。ここで、*fn* は、このオブジェクトの関連付けられた非同期状態に格納された関数オブジェクトです。 そのため、オブジェクトの状態が削除され、[get_future](#get_future)、[operator()](#op_call)、および [make_ready_at_thread_exit](#make_ready_at_thread_exit) を新しく構築されたオブジェクトでのように呼び出すことができます。
 
@@ -227,7 +228,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` A`packaged_task`オブジェクト。
+*右*A`packaged_task`オブジェクト。
 
 ## <a name="valid"></a>  packaged_task::valid
 
@@ -239,7 +240,7 @@ bool valid() const;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが関連付けられた非同期状態である場合は `true` を返します。それ以外の場合は `false` を返します。
+**true**場合は、オブジェクトに関連付けられた非同期状態です。 それ以外の場合、 **false**します。
 
 ## <a name="see-also"></a>関連項目
 

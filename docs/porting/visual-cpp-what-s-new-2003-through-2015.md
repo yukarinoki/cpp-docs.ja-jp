@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705606"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271397"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -1588,7 +1588,7 @@ C++11 の明示的な変換演算子、初期化子リスト、スコープ指�
 
 - クラス型を表すセミコロンを追加します。
 - 未加工リテラル文字列のかっこを補完します。
-- 複数行コメント (/* */) を補完します
+- 複数行コメント (/\* \*/) を補完します
 
 **[すべての参照の検索]** は、一致するテキストの一覧を表示した後、参照の解決とフィルター処理をバックグラウンドで自動的に実行するようになりました。
 

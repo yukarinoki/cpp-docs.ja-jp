@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6dbd817e6bcb9c7ff526bef98bd5c2c8c1f1bb3e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955171"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>テクニカル ノート 40: MFC/OLE 埋め込み先サイズ変更とズーム
 > [!NOTE]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 -   コンテナーとサーバーの両方には、同じメトリックを使用してオブジェクトを表示する必要があります。 数に基づくマッピング モードを使用してつまり*論理*インチあたりのピクセル — 物理インチあたりのピクセル、ディスプレイ デバイスに表示するときにします。  
   
 > [!NOTE]
->  インプレース アクティブ化のみに適用されるため (リンクされていない) は埋め込まれているアイテムにはズームの埋め込みオブジェクトにのみ適用されます。 両方の Api を参照して、`COleServerDoc`と`COleServerItem`拡大表示するために使用されています。 この二分の理由は、リンクと埋め込みの両方の項目に対して有効では関数のみがである`COleServerItem`(これにより、一般的な実装があります) には埋め込みオブジェクトに対してのみ有効な関数が存在し、 `COleServerDoc`クラス (サーバーの観点からは、`document`が埋め込まれている)。  
+>  インプレース アクティブ化のみに適用されるため (リンクされていない) は埋め込まれているアイテムにはズームの埋め込みオブジェクトにのみ適用されます。 両方の Api を参照して、`COleServerDoc`と`COleServerItem`拡大表示するために使用されています。 この二分の理由は、リンクと埋め込みの両方の項目に対して有効では関数のみがである`COleServerItem`(これにより、一般的な実装があります) には埋め込みオブジェクトに対してのみ有効な関数が存在し、 `COleServerDoc`クラス (サーバーの観点からは、**ドキュメント**が埋め込まれている)。  
   
  サーバーをコンテナーの倍率を認識する、必要に応じて編集インターフェイスを変更する必要があります、負担の大部分は、サーバーの実行者に配置されます。 サーバーが、コンテナーを使用して倍率に決定します。  
   
@@ -57,7 +58,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  位置の四角形は、コンテナーによって決定されます。 インプレース アクティブ化時に、サーバーに返されるときに`COleClientItem::OnGetItemPosition`が呼び出され、コンテナーの呼び出し、サーバーの場合は更新`COleServerDoc::OnSetItemRects`(への呼び出しに`COleClientItem::SetItemRects`)。  
   
- コンテナーのエクステントを計算するやや複雑です。 コンテナーが呼び出された場合`COleServerItem::OnSetExtent`(への呼び出しに`COleClientItem::SetExtent`)、コンテナーの範囲はこの値をピクセル単位の論理インチあたりのピクセルの数に変換します。 コンテナーは (これは通常の大文字と小文字) SetExtent が呼び出されない場合は、コンテナー エクステントから返されるサイズ`COleServerItem::OnGetExtent`です。 そのため、コンテナーが SetExtent が呼び出されない場合、フレームワーク前提として こと場合は、コンテナーがその呼び出し元が 100% の自然なエクステントの (から返された値**COleServerItem::GetExtent**)。 別の方法を説明したように、フレームワークでは、コンテナーの項目の 100% (でない) が表示されている前提としています。  
+ コンテナーのエクステントを計算するやや複雑です。 コンテナーが呼び出された場合`COleServerItem::OnSetExtent`(への呼び出しに`COleClientItem::SetExtent`)、コンテナーの範囲はこの値をピクセル単位の論理インチあたりのピクセルの数に変換します。 コンテナーは (これは通常の大文字と小文字) SetExtent が呼び出されない場合は、コンテナー エクステントから返されるサイズ`COleServerItem::OnGetExtent`です。 そのため、コンテナーが SetExtent が呼び出されない場合、フレームワーク前提として こと場合は、コンテナーがその呼び出し元が 100% の自然なエクステントの (から返された値`COleServerItem::GetExtent`)。 別の方法を説明したように、フレームワークでは、コンテナーの項目の 100% (でない) が表示されている前提としています。  
   
  重要な点がある`COleServerItem::OnSetExtent`と`COleServerItem::OnGetExtent`のような名前を持つ項目の同じ属性を操作しません。 `OnSetExtent` サーバーにオブジェクトの量が (ズーム倍数) に関係なく、コンテナーに表示されるかを認識させるために呼び出されると`OnGetExtent`はオブジェクトの理想的なサイズを決定するコンテナーによって呼び出されます。  
   
@@ -70,7 +71,7 @@ Position Rectangle (PR) / Container Extent (CE)
  コンテナーが「増減」オブジェクトの表示時に、この関数が呼び出されます。 ほとんどのコンテナーを呼び出しませんこのまったくです。 既定の実装で使用されている 'です' 内のコンテナーから受信した最後の値を格納する`COleServerDoc::GetZoomFactor`上で説明したコンテナーの範囲値を計算するときにします。  
   
 ## <a name="coleserverdoconsetitemrects"></a>COleServerDoc::OnSetItemRects  
- ドキュメントが、インプレース アクティブである場合にのみ、この関数が呼び出されます。 コンテナーの項目の位置またはアイテムに適用される領域のいずれかを更新するときに呼び出されます。 位置の四角形、前述のとおりズーム率計算の分子を提供します。 呼び出して、項目の位置を変更すること、サーバーに要求できます`COleServerDoc::RequestPositionChange`です。 コンテナーのことがありますまたは呼び出すことによってこの要求に応答しない可能性があります`OnSetItemRects`(への呼び出しに**必要**)。  
+ ドキュメントが、インプレース アクティブである場合にのみ、この関数が呼び出されます。 コンテナーの項目の位置またはアイテムに適用される領域のいずれかを更新するときに呼び出されます。 位置の四角形、前述のとおりズーム率計算の分子を提供します。 呼び出して、項目の位置を変更すること、サーバーに要求できます`COleServerDoc::RequestPositionChange`です。 コンテナーのことがありますまたは呼び出すことによってこの要求に応答しない可能性があります`OnSetItemRects`(への呼び出しに`COleServerItem::SetItemRects`)。  
   
 ## <a name="coleserverdocondraw"></a>COleServerDoc::OnDraw  
  メタファイルがのオーバーライドすることによって作成されたことを実現することが重要`COleServerItem::OnDraw`現在のズームに関係なく、正確に同じメタファイルが生成されます。 コンテナーには、必要に応じてメタファイルは拡大縮小します。 これは、ビューの間で重要な相違点`OnDraw`とサーバーのアイテムの`OnDraw`します。 ズーム ビュー ハンドル、項目を作成します、*ズーム可能な*メタファイルを適切なズームを行うには、コンテナーまで状態のままとします。  
@@ -78,13 +79,13 @@ Position Rectangle (PR) / Container Extent (CE)
  実装を使用する、サーバーが正常に動作できることを確認する最善の方法は、`COleServerDoc::GetZoomFactor`文書の場合は、インプレース アクティブです。  
   
 ## <a name="mfc-support-for-in-place-resizing"></a>MFC で埋め込み先サイズ変更のサポート  
- OLE 2 の仕様」の説明に従って、MFC は完全に埋め込み先サイズ変更のインターフェイスを実装します。 によって、ユーザー インターフェイスがサポートされている、`COleResizeBar`クラス、カスタム メッセージ**WM_SIZECHILD**、および特別な処理でこのメッセージの`COleIPFrameWnd`します。  
+ OLE 2 の仕様」の説明に従って、MFC は完全に埋め込み先サイズ変更のインターフェイスを実装します。 によって、ユーザー インターフェイスがサポートされている、`COleResizeBar`クラス、カスタム メッセージ WM_SIZECHILD、および特別な処理でこのメッセージの`COleIPFrameWnd`します。  
   
  フレームワークによって提供されるよりもこのメッセージのさまざまな処理を実装する場合があります。 前述のように、フレームワークがコンテナーの最大サイズを変更するインプレースでの結果を離れる — サーバー、倍率の変更に応答します。 場合は、両方を設定して、コンテナーが反応コンテナー エクステントおよび位置四角形の処理中にその`COleClientItem::OnChangeItemPosition`(への呼び出しの結果として呼び出された`COleServerDoc::RequestPositionChange`)、埋め込み先サイズ変更が、編集中「とは」アイテムの表示中に発生し、ウィンドウです。 場合の処理中に四角形の位置を設定するだけで、コンテナーが反応`COleClientItem::OnChangeItemPosition`ズームの倍率を変更、および「拡大または縮小します」項目が表示されます。  
   
  サーバーは、このネゴシエーションの実行時の動作 (ある程度) に制御できます。 たとえば、スプレッドシート、またはより少ないセルときに表示するユーザー、項目の編集中にウィンドウのサイズ変更、インプレース変える必要があります。 ワード プロセッサは、余白を変更する、"ページ"、ウィンドウと同じですし、新しい余白の折り返し変える必要があります。 サーバーが本来のエクステントを変更することによってこれを実装 (から返されるサイズ`COleServerItem::OnGetExtent`)、サイズ変更が完了するとします。 これは、位置四角形とで同じ倍率が大きくまたは小さく表示領域は、同じ量だけを変更するコンテナーのエクステントの両方により、します。 さらより小さいか、ドキュメントに表示されますによって生成されたメタファイル`OnDraw`です。 ここでは、ドキュメント自体では、ユーザー表示領域での代わりに、アイテムのサイズが変更されます。  
   
- カスタムのサイズ変更を実装し、によって提供されるユーザー インターフェイスを活用することができます`COleResizeBar`オーバーライドすることで、 **WM_SIZECHILD**でメッセージ、`COleIPFrameWnd`クラスです。 仕様の詳細については**WM_SIZECHILD**を参照してください[テクニカル ノート 24](../mfc/tn024-mfc-defined-messages-and-resources.md)です。  
+ カスタムのサイズ変更を実装し、によって提供されるユーザー インターフェイスを活用することができます`COleResizeBar`WM_SIZECHILD のメッセージを上書きすることで、`COleIPFrameWnd`クラスです。 WM_SIZECHILD の仕様の詳細については、次を参照してください。[テクニカル ノート 24](../mfc/tn024-mfc-defined-messages-and-resources.md)です。  
   
 ## <a name="see-also"></a>関連項目  
  [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   

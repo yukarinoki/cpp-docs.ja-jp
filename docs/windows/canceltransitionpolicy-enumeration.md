@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860347"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 列挙型
 どの非同期操作しようのターミナル状態に移行することを示します。 完了するか、クライアントが要求の取り消された状態に関してエラーが動作する必要があります。  

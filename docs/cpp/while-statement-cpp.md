@@ -1,5 +1,5 @@
 ---
-title: while ステートメント (C++) |Microsoft ドキュメント
+title: while ステートメント (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc826b588f133abb93c9942e7907dd8b0fce9574
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943282"
 ---
 # <a name="while-statement-c"></a>while ステートメント (C++)
 実行*ステートメント*まで繰り返し*式*0 に評価します。  
@@ -30,18 +31,18 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      while ( expression )  
+while ( expression )  
    statement  
 ```  
   
-## <a name="remarks"></a>コメント  
- テスト*式*ループの各実行する前に処理を行うのため、`while`ループは、0 回以上を実行します。 *式*の整数型、ポインター型、または、整数への明確な変換を持つクラス型またはポインター型である必要があります。  
+## <a name="remarks"></a>Remarks  
+ テスト*式*ループの各実行前に、の処理を行うのため、**中に**ループは 0 回以上を実行します。 *式*の整数型、ポインター型、または整数への明確な変換を持つクラス型またはポインター型である必要があります。  
   
- A`while`ループは終了時にも、 [break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)、または[返す](../cpp/return-statement-cpp.md)本体の実行ステートメント内で。 使用して[続行](../cpp/continue-statement-cpp.md)を終了せず、現在のイテレーションを終了する、`while`ループします。 **続行**の次のイテレーションに制御を渡します、`while`ループします。  
+ A**中に**ループがときに終了することできますも、 [break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)、または[を返す](../cpp/return-statement-cpp.md)ステートメント本体が実行されます。 使用[続行](../cpp/continue-statement-cpp.md)を終了する前に、現在のイテレーションを終了する、**中**ループします。 **引き続き**の次のイテレーションに制御を渡します、**中**ループします。  
   
- 次のコードは、文字列の末尾のアンダースコアをトリミングするために `while` ループを使用します。  
+ 次のコードでは、**中**文字列から末尾をトリミングするループがアンダー スコアします。  
   
-```  
+```cpp 
 // while_statement.cpp  
   
 #include <string.h>  

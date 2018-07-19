@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363530"
 ---
 # <a name="atl-control-wizard"></a>ATL コントロール ウィザード
 ATL プロジェクト (または ATL サポートを MFC プロジェクト) への挿入、ATL コントロール。 このウィザードを使用して、3 種類のコントロールの 1 つを挿入することができます。  

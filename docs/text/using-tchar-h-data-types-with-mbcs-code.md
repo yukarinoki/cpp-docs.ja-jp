@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858355"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>_MBCS コードでの TCHAR.H データ型の使用
 ときにマニフェスト定数 **_MBCS**は、定義されている、特定の汎用テキスト ルーチンを次のようなルーチンのいずれかにマップします。  

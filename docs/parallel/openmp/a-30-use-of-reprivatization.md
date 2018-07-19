@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689611"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30 再プライベート化の使用
 次の例では、変数のプライベート化を示します。 プライベート変数を指定できる`private`入れ子になったディレクティブにもう一度です。 外側の並行領域内の共有にはありません。  

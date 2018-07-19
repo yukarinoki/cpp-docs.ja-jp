@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272306"
 ---
 # <a name="compiler-error-c3859"></a>コンパイラ エラー C3859
 PCH の仮想メモリの範囲が超えています。'-Zmvalue' 以上のコマンド ライン オプションで再コンパイルしてください。  

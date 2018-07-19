@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375842"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (組み込み関数の生成)
 置換関数は、アプリケーションに役立つ固有またはそれ以外の場合に特別な形式と一部の関数の呼び出しの実行速度が向上します。  

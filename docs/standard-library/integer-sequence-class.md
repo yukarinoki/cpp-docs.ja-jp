@@ -24,11 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58700d1f52189afb1d8baf3456bac4ed84920fab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: be1d3c6d583783c391321555ae52077fba4bee3a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960740"
 ---
 # <a name="integersequence-class"></a>integer_sequence クラス
 
@@ -43,9 +44,9 @@ struct integer_sequence
 
 ### <a name="parameters"></a>パラメーター
 
-T; の値の型整数型でなければなりません: bool、char、char16_t、char32_t、wchar_t、符号付きまたは符号なし整数型。
+*T* ; の値の型、整数型でなければなりません: bool、char、char16_t、char32_t、wchar_t、符号付きまたは符号なしの整数型。
 
-整数型 T の値のシーケンスを表す非型テンプレート パラメーター パック。 Vals A
+*Vals*整数型 T の値のシーケンスを表す非型テンプレート パラメーター パック
 
 ## <a name="members"></a>メンバー
 
@@ -54,7 +55,7 @@ T; の値の型整数型でなければなりません: bool、char、char16_t�
 |`static size_t size() noexcept`|シーケンス内の要素の数。|
 |typedef T value_type|シーケンス内の各要素の型。 整数型である必要があります。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 関数に直接渡されるパラメーター パックは、特別なライブラリ ヘルパーなしでアンパックできます。 パラメーター パックが関数に渡される型の一部であるときに要素にアクセスするためにインデックスが必要な場合、これをアンパックする最も簡単な方法は、`integer_sequence` とその関連する型のエイリアス `make_integer_sequence`、`index_sequence`、`make_index_sequence`、`index_sequence_for` を使用する方法です。
 
@@ -126,7 +127,7 @@ int main()
 
 `index_sequence` をパラメーター パック用に設定するために `index_sequence_for`\<T...> を使用していますが、これは `make_index_sequence`\<sizeof...(T)> のエイリアスです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ヘッダー: <type_traits>
 

@@ -192,11 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b280f697a5e743f0f4d802c52894684f047c961
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9bef1baa8724106c7ac64b7f6c36aa60b10c1e3
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123228"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 Windows ツール バー コモン コントロールの機能が用意されています。  
@@ -307,7 +308,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetToolTips](#settooltips)|ツール ヒント コントロールをツール バー コントロールに関連付けます。|  
 |[CToolBarCtrl::SetWindowTheme](#setwindowtheme)|ツール バー コントロールの表示スタイルを設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このコントロール (したがって、`CToolBarCtrl`クラス) は、Windows 95/98 および Windows NT 3.51 の下で実行されているプログラムにのみ使用可能な以降。  
   
  Windows のツール バー コモン コントロールは、1 つまたは複数のボタンを含んだ四角形の子ウィンドウです。 これらのボタンには、ビットマップ、文字列、またはその両方を表示できます。 ユーザーがボタンを選択するときに、ツールバーのオーナー ウィンドウにコマンドのメッセージを送信します。 ツールバーのボタンがアプリケーションのメニュー項目に対応する通常は、ユーザーがアプリケーションのコマンドにアクセスするための直接的な方法を提供します。  
@@ -318,7 +319,7 @@ class CToolBarCtrl : public CWnd
   
 1.  構築、`CToolBarCtrl`オブジェクト。  
   
-2.  呼び出す[作成](#create)Windows ツール バー コモン コントロールを作成してアタッチする、`CToolBarCtrl`オブジェクト。 などのスタイルを使用して、ツールバーのスタイルを示す**バーオブジェクト**透明なツールバーのまたは**TBSTYLE_DROPDOWN**ボックス スタイルのボタンをサポートするためのツールバーにします。  
+2.  呼び出す[作成](#create)Windows ツール バー コモン コントロールを作成してアタッチする、`CToolBarCtrl`オブジェクト。 透過的なツールバーのバーオブジェクトまたはドロップダウン スタイルのボタンをサポートするツールバーの TBSTYLE_DROPDOWN などのスタイルを使用して、ツールバーのスタイルを示します。  
   
 3.  ボタンがツールバーの表示にする方法を識別します。  
   
@@ -330,7 +331,7 @@ class CToolBarCtrl : public CWnd
   
 4.  呼び出して、ツールバーにボタンの構造を追加[AddButtons](#addbuttons)です。  
   
-5.  ツールバーのボタンではないオーナー ウィンドウのツール ヒントを表示する場合、 `CFrameWnd`、処理する必要があります、 **TTN_NEEDTEXT** 」の説明に従って、ツールバーのオーナー ウィンドウにメッセージ[ツール ヒントの通知の処理](../../mfc/handling-tool-tip-notifications.md). ツールバーの親ウィンドウがから派生している`CFrameWnd`、ツール ヒントが表示されてから余分な作成作業なし`CFrameWnd`既定のハンドラーを提供します。  
+5.  ツールバーのボタンではないオーナー ウィンドウのツール ヒントを表示する場合、 `CFrameWnd`、」の説明に従って、ツールバーのオーナー ウィンドウで TTN_NEEDTEXT メッセージを処理する必要があります[ツール ヒントの通知の処理](../../mfc/handling-tool-tip-notifications.md)です。 ツールバーの親ウィンドウがから派生している`CFrameWnd`、ツール ヒントが表示されてから余分な作成作業なし`CFrameWnd`既定のハンドラーを提供します。  
   
 6.  ツールバーをカスタマイズすることができるようにする場合は、」の説明に従って、オーナー ウィンドウのカスタマイズの通知メッセージを処理[カスタマイズ通知の処理](../../mfc/handling-customization-notifications.md)です。  
   
@@ -339,7 +340,7 @@ class CToolBarCtrl : public CWnd
 ## <a name="support-for-internet-explorer-version-40-and-later"></a>Internet Explorer のバージョン 4.0 以降のサポート  
  Internet Explorer 4.0 以降のバージョンで導入された新機能をサポートするためには、MFC は、ツール バー コントロールのイメージ リストのサポートと透過的とフラット スタイルを提供します。  
   
- 透明なツールバーは、クライアントは、ツールバーの下が透けてをできます。 透明なツールバーを作成するには、両方を使用**TBSTYLE_FLAT**と**バーオブジェクト**スタイル。 透明なツールバー機能のホット トラッキングです。つまり、マウス ポインターが移動ホット ボタン、ツールバーで、ボタンの外観が変更されます。 作成したツールバーだけ**TBSTYLE_FLAT**スタイルに透明ではないボタンにが含まれます。  
+ 透明なツールバーは、クライアントは、ツールバーの下が透けてをできます。 透明なツールバーを作成するには、TBSTYLE_FLAT とバーオブジェクトの両方のスタイルを使用します。 透明なツールバー機能のホット トラッキングです。つまり、マウス ポインターが移動ホット ボタン、ツールバーで、ボタンの外観が変更されます。 TBSTYLE_FLAT スタイルだけで作成したツールバーは透明ではないボタンが含まれます。  
   
  イメージ リストのサポートは、既定の動作、ホット イメージ、および無効なイメージをより柔軟に制御を許可します。 使用[GetImageList](#getimagelist)、 [GetHotImageList](#gethotimagelist)と[GetDisabledImageList](#getdisabledimagelist)の状態に従ってイメージを操作する透過的なツールバーを使用します。  
   
@@ -354,7 +355,7 @@ class CToolBarCtrl : public CWnd
   
  `CToolBarCtrl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcmn.h  
   
 ##  <a name="addbitmap"></a>  CToolBarCtrl::AddBitmap  
@@ -372,20 +373,20 @@ int AddBitmap(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNumButtons`  
+ *nNumButtons*  
  ビットマップのボタンのイメージの数。  
   
- `nBitmapID`  
+ *nBitmapID*  
  ボタン イメージを追加するイメージを含むビットマップのリソース識別子。  
   
- `pBitmap`  
+ *pBitmap*  
  ポインター、`CBitmap`ボタン イメージを追加するイメージを含むオブジェクトです。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は、最初の新しいイメージの 0 から始まるインデックスそれ以外の場合 - 1。  
   
-### <a name="remarks"></a>コメント  
- Windows API を使用して[CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467)にビットマップをツールバーに追加する前に色をマップします。 ポインターを渡す場合、 **CBitMap**オブジェクト、ツールバーの破棄後に、ビットマップがするまで破棄されないことを確認する必要があります。  
+### <a name="remarks"></a>Remarks  
+ Windows API を使用して[CreateMappedBitmap](http://msdn.microsoft.com/library/windows/desktop/bb787467)にビットマップをツールバーに追加する前に色をマップします。 ポインターを渡す場合、`CBitMap`オブジェクト、ツールバーの破棄後に、ビットマップがするまで破棄されないことを確認する必要があります。  
   
 ##  <a name="addbuttons"></a>  CToolBarCtrl::AddButtons  
  ツール バー コントロールに 1 つまたは複数のボタンを追加します。  
@@ -397,17 +398,17 @@ BOOL AddButtons(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNumButtons`  
+ *nNumButtons*  
  追加するボタンの数。  
   
- `lpButtons`  
- 配列のアドレス`TBBUTTON`を追加するボタンに関する情報を格納する構造体。 指定されたボタンと同じ配列の要素数が存在する必要があります`nNumButtons`です。  
+ *lpButtons*  
+ 配列のアドレス`TBBUTTON`を追加するボタンに関する情報を格納する構造体。 指定されたボタンと同じ配列の要素数が存在する必要があります*nNumButtons*です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- `lpButtons`ポインターの配列を指します`TBBUTTON`構造体。 各`TBBUTTON`構造体は、ボタンのスタイル、イメージや文字列、コマンドの ID、状態、およびユーザー定義データの追加 ボタンを関連付けます。  
+### <a name="remarks"></a>Remarks  
+ *LpButtons*ポインターの配列を指します`TBBUTTON`構造体。 各`TBBUTTON`構造体は、ボタンのスタイル、イメージや文字列、コマンドの ID、状態、およびユーザー定義データの追加 ボタンを関連付けます。  
   
  `typedef struct _TBBUTTON {`  
   
@@ -427,44 +428,44 @@ BOOL AddButtons(
   
  メンバーは次のとおりです。  
   
- **iBitmap**  
+ `iBitmap`  
  このボタンのイメージがない場合は-1、ボタンの画像の 0 から始まるインデックスです。  
   
- **idCommand**  
- ボタンに関連付けられているコマンドの識別子。 この識別子で送信、 **WM_COMMAND**  ボタンを選択するときのメッセージします。 場合、 **fsStyle**メンバーが、`TBSTYLE_SEP`値、このメンバーは 0 にする必要があります。  
+ `idCommand`  
+ ボタンに関連付けられているコマンドの識別子。 この識別子は、ボタンを選択するときに、WM_COMMAND メッセージで送信されます。 場合、`fsStyle`メンバー TBSTYLE_SEP 値には、このメンバーは 0 にする必要があります。  
   
- **fsState**  
+ `fsState`  
  状態フラグ ボタンをクリックします。 次の値の組み合わせであることができます。  
   
-- `TBSTATE_CHECKED` このボタンは、**スタイル**スタイルを設定して、押されました。  
+- TBSTATE_CHECKED ボタンは、スタイルのスタイルを持ち、押されているがします。  
   
-- `TBSTATE_ENABLED` ボタンは、ユーザー入力を受け入れます。 この状態がないボタンは、ユーザー入力は受け付けられません、淡色表示にします。  
+- ボタン、ボタンは、ユーザー入力を受け入れます。 この状態がないボタンは、ユーザー入力は受け付けられません、淡色表示にします。  
   
-- `TBSTATE_HIDDEN` ボタンが表示されていないと、ユーザー入力を受け取ることはできません。  
+- TBSTATE_HIDDEN ボタンは表示されず、ユーザー入力を受け取ることはできません。  
   
-- `TBSTATE_INDETERMINATE` ボタンは淡色表示にします。  
+- TBSTATE_INDETERMINATE ボタンは淡色表示にします。  
   
-- `TBSTATE_PRESSED` ボタンが押されたされています。  
+- TBSTATE_PRESSED ボタンが押されました。  
   
-- `TBSTATE_WRAP` 行の区切りには、ボタンが次に示します。 ボタンが必要、`TBSTATE_ENABLED`状態です。  
+- TBSTATE_WRAP A 改行には、ボタンが次に示します。 ボタンは、ボタンの状態も必要です。  
   
- **fsStyle**  
+ `fsStyle`  
  ボタンのスタイル。 次の値の組み合わせであることができます。  
   
-- `TBSTYLE_BUTTON` 標準プッシュ ボタンを作成します。  
+- TBSTYLE_BUTTON では、標準的なプッシュ ボタンを作成します。  
   
-- `TBSTYLE_CHECK` ユーザーがクリックするたびに押された状態と押されていない状態の状態を切り替えるボタンを作成します。 ボタンには、別の背景色は、押された状態にあるときです。  
+- TBSTYLE_CHECK を作成、ユーザーごとに押された状態と押されていない状態の状態を切り替えるボタンがクリックしました。 ボタンには、別の背景色は、押された状態にあるときです。  
   
-- `TBSTYLE_CHECKGROUP` グループ内の別のボタンが押されるまで押されたチェック ボタンを作成します。  
+- TBSTYLE_CHECKGROUP では、グループ内の別のボタンが押されるまで保持されるチェック ボタンが押されたを作成します。  
   
-- `TBSTYLE_GROUP` グループ内の別のボタンが押されるまで押されたボタンを作成します。  
+- TBSTYLE_GROUP では、グループ内の別のボタンが押されるまで保持されるボタンが押されたを作成します。  
   
-- `TBSTYLE_SEP` ボタンのグループ間で小さなギャップを提供する、区切り記号を作成します。 このスタイルを持つボタンは、ユーザー入力を受け取りません。  
+- TBSTYLE_SEP では、ボタン グループ間で小さなギャップを提供する、区切り記号を作成します。 このスタイルを持つボタンは、ユーザー入力を受け取りません。  
   
  `dwData`  
  ユーザー定義データ。  
   
- **iString**  
+ `iString`  
  ボタンのラベル、このボタンの文字列がない場合は-1 を使用する文字列の 0 から始まるインデックス。  
   
  イメージや文字列のインデックス位置を指定する必要がある必要がありますが以前に追加されて、ツール バー コントロールの一覧を使用して[表示](#addbitmap)、 [AddString](#addstring)、や[AddStrings](#addstrings)です。  
@@ -497,7 +498,7 @@ int AddStrings(LPCTSTR lpszStrings);
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は、追加する最初の新しい文字列の 0 から始まるインデックスそれ以外の場合は-1。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  バッファー内の文字列は、null 文字で区切る必要があります。 最後の文字列が 2 つの null 終端文字を持つことを確認する必要があります。 定数文字列を正しく書式設定には、としてを記述する場合があります。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#72](../../mfc/codesnippet/cpp/ctoolbarctrl-class_1.cpp)]  
@@ -515,7 +516,7 @@ int AddStrings(LPCTSTR lpszStrings);
 void AutoSize();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  親ウィンドウのサイズが変更されたときに、または (ときに、ボタンまたはビットマップのサイズの設定や、文字列を追加する)、ツールバーのサイズが変更されたときに、この関数を呼び出す必要があります。  
   
 ##  <a name="changebitmap"></a>  CToolBarCtrl::ChangeBitmap  
@@ -531,13 +532,13 @@ BOOL ChangeBitmap(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `idButton`|新しいビットマップを受け取るには、ボタンのコマンド id。|  
-|[入力] `iBitmap`|現在のツール バー コントロールのイメージ リスト内のイメージの 0 から始まるインデックス。|  
+|[in]*idButton*|新しいビットマップを受け取るには、ボタンのコマンド id。|  
+|[in]*iBitmap*|現在のツール バー コントロールのイメージ リスト内のイメージの 0 から始まるインデックス。|  
   
 ### <a name="return-value"></a>戻り値  
- `true` このメソッドが成功した場合それ以外の場合、`false`です。  
+ このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドが成功した場合は、指定したボタンで、指定されたイメージが表示されます。  
   
  このメソッドは、送信、 [TB_CHANGEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787301) Windows SDK で説明するメッセージ。  
@@ -557,16 +558,16 @@ BOOL CheckButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  オンまたはオフにするボタンのコマンド id。  
   
  *bCheck*  
- **TRUE**ボタンをオンにする**FALSE**をオフにします。  
+ True の場合、ボタン、チェックをオフに FALSE です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタンがチェックされている、押されたように表示されます。 1 つ以上のボタンの状態を変更する場合は、呼び出すことを検討してください。 [SetState](#setstate)代わりにします。  
   
 ##  <a name="commandtoindex"></a>  CToolBarCtrl::CommandToIndex  
@@ -577,13 +578,13 @@ UINT CommandToIndex(UINT nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  検索するインデックスを持つボタン コマンド ID です。  
   
 ### <a name="return-value"></a>戻り値  
  コマンド ID に関連付けられているボタンの 0 から始まるインデックス  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="create"></a>  CToolBarCtrl::Create  
  ツール バー コントロールを作成し、それにアタッチ、`CToolBarCtrl`オブジェクト。  
@@ -597,29 +598,29 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
- ツール バー コントロールのスタイルを指定します。 ツールバーには、 **WS_CHILD**スタイル。 下の説明に従って、ツール バー スタイルやウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**です。  
+ *dwStyle*  
+ ツール バー コントロールのスタイルを指定します。 ツールバーには、WS_CHILD スタイルが常に必要です。 下の説明に従って、ツール バー スタイルやウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**です。  
   
- `rect`  
+ *rect*  
  ツール バー コントロールのサイズと位置を指定します。 いずれかになります、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。  
   
- `pParentWnd`  
- ツール バー コントロールの親ウィンドウを指定します。 なければなりません**NULL**です。  
+ *pParentWnd*  
+ ツール バー コントロールの親ウィンドウを指定します。 NULL は指定できません。  
   
- `nID`  
+ *nID*  
  ツール バー コントロールの ID を指定します  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 構築する、 `CToolBarCtrl` 2 つの手順でします。 最初に、コンス トラクターを呼び出しておよびを呼び出す**作成**、ツール バー コントロールを作成しにアタッチする、`CToolBarCtrl`オブジェクト。 ツール バー コントロールに次のウィンドウ スタイルを適用します。  
+### <a name="remarks"></a>Remarks  
+ 構築する、 `CToolBarCtrl` 2 つの手順でします。 最初に、コンス トラクターを呼び出しておよびを呼び出す`Create`、ツール バー コントロールを作成しにアタッチする、`CToolBarCtrl`オブジェクト。 ツール バー コントロールに次のウィンドウ スタイルを適用します。  
   
-- **WS_CHILD**常に  
+- WS_CHILD 常に  
   
-- **WS_VISIBLE**通常  
+- WS_VISIBLE 通常  
   
-- **WS_DISABLED**ことはほとんどありません  
+- WS_DISABLED ことはほとんどありません。  
   
  参照してください[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)ウィンドウ スタイルの詳細については、Windows SDK に含まれています。  
   
@@ -627,9 +628,9 @@ virtual BOOL Create(
   
  コントロールまたはボタン自体にツール バー スタイルの組み合わせを適用します。 スタイルは、トピックで説明されて[ツール バー コントロールとボタンのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK に含まれています。  
   
- 拡張ツール バー スタイルを使用するのには、呼び出す[拡張](#setextendedstyle)を呼び出した後**作成**です。 拡張ウィンドウ スタイルを使用して、ツールバーを作成するには、呼び出す[するに](#createex)の代わりに**作成**です。  
+ 拡張ツール バー スタイルを使用するのには、呼び出す[拡張](#setextendedstyle)を呼び出した後`Create`です。 拡張ウィンドウ スタイルを使用して、ツールバーを作成するには、呼び出す[するに](#createex)の代わりに`Create`です。  
   
- ツール バー コントロールは、ツールバー、ウィンドウの位置とサイズを自動的に設定します。 高さは、ツールバーのボタンの高さに基づきます。 幅は、親ウィンドウのクライアント領域の幅と同じです。 `CCS_TOP`と`CCS_BOTTOM`スタイルでは、上部または下部にあるクライアント領域のツールバーが配置されているかどうかを判断します。 既定では、ツールバーが、`CCS_TOP`スタイル。  
+ ツール バー コントロールは、ツールバー、ウィンドウの位置とサイズを自動的に設定します。 高さは、ツールバーのボタンの高さに基づきます。 幅は、親ウィンドウのクライアント領域の幅と同じです。 CCS_TOP と CCS_BOTTOM のスタイルは、上部または下部にあるクライアント領域のツールバーが配置されているかどうかを決定します。 既定では、ツールバーは CCS_TOP スタイルがします。  
   
 ##  <a name="createex"></a>  するに  
  コントロール (子ウィンドウ) を作成しに関連付けます、`CToolBarCtrl`オブジェクト。  
@@ -644,26 +645,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwExStyle`  
- 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、`dwExStyle`パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
+ *dwExStyle*  
+ 作成されるコントロールの拡張スタイルを指定します。 拡張ウィンドウ スタイルの一覧は、次を参照してください。、 *dwExStyle*パラメーターを[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK に含まれています。  
   
- `dwStyle`  
- ツール バー コントロールのスタイルを指定します。 ツールバーには、 **WS_CHILD**スタイル。 」の説明に従って、ツール バー スタイルやウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**のセクション[作成](#create)です。  
+ *dwStyle*  
+ ツール バー コントロールのスタイルを指定します。 ツールバーには、WS_CHILD スタイルが常に必要です。 」の説明に従って、ツール バー スタイルやウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**のセクション[作成](#create)です。  
   
- `rect`  
- 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体`pParentWnd`です。  
+ *rect*  
+ 参照、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するウィンドウの位置とサイズを記述する構造体*pParentWnd*です。  
   
- `pParentWnd`  
+ *pParentWnd*  
  コントロールの親であるウィンドウへのポインター。  
   
- `nID`  
+ *nID*  
  コントロールの子ウィンドウ ID  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。 **CreateEx**で指定された拡張ウィンドウ スタイルでコントロールが作成され`dwExStyle`です。 拡張を使用してコントロールに固有のスタイル セット[拡張](#setextendedstyle)です。 たとえば、使用して`CreateEx`としてこのようなスタイルを設定する**WS_EX_CONTEXTHELP**が使用して`SetExtendedStyle`としてこのようなスタイルを設定する**TBSTYLE_EX_DRAWDDARROWS**です。 詳細についてで説明されているスタイルを参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK に含まれています。  
+### <a name="remarks"></a>Remarks  
+ 使用して`CreateEx`の代わりに[作成](#create)Windows 拡張スタイル「はじめに」で指定された Windows の拡張スタイルを適用する**ws_ex**です。 `CreateEx` 指定された拡張ウィンドウ スタイルでコントロールが作成され*dwExStyle*です。 拡張を使用してコントロールに固有のスタイル セット[拡張](#setextendedstyle)です。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`TBSTYLE_EX_DRAWDDARROWS としてこのようなスタイルを設定します。 詳細についてで説明されているスタイルを参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)Windows SDK に含まれています。  
   
 ##  <a name="ctoolbarctrl"></a>  CToolBarCtrl::CToolBarCtrl  
  `CToolBarCtrl` オブジェクトを構築します。  
@@ -672,7 +673,7 @@ virtual BOOL CreateEx(
 CToolBarCtrl();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す必要があります[作成](#create)ツールバーを使用できるようにします。  
   
 ##  <a name="customize"></a>  CToolBarCtrl::Customize  
@@ -682,8 +683,8 @@ CToolBarCtrl();
 void Customize();
 ```  
   
-### <a name="remarks"></a>コメント  
- このダイアログ ボックスでは、ユーザーを追加し、ボタンを削除して、ツールバーをカスタマイズします。 カスタマイズをサポートするために、ツールバーの親ウィンドウ必要があります、カスタマイズ通知メッセージを処理」の説明に従って[カスタマイズ通知の処理](../../mfc/handling-customization-notifications.md)です。 ツールバーの必要がありますもで作成されている、`CCS_ADJUSTABLE`スタイルを」の説明に従って[CToolBarCtrl::Create](#create)です。  
+### <a name="remarks"></a>Remarks  
+ このダイアログ ボックスでは、ユーザーを追加し、ボタンを削除して、ツールバーをカスタマイズします。 カスタマイズをサポートするために、ツールバーの親ウィンドウ必要があります、カスタマイズ通知メッセージを処理」の説明に従って[カスタマイズ通知の処理](../../mfc/handling-customization-notifications.md)です。 ツールバーの必要がありますもで作成されているツール スタイル」の説明に従って[CToolBarCtrl::Create](#create)です。  
   
  詳細については、サポート技術情報の記事 Q241850 を参照してください: PRB: CToolBarCtrl::Customize を保持しませんへの呼び出しをカスタマイズ ダイアログ表示します。  
   
@@ -695,13 +696,13 @@ BOOL DeleteButton(int nIndex);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  削除するボタンの 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="enablebutton"></a>  CToolBarCtrl::EnableButton  
  有効またはツール バー コントロールの指定したボタンを無効にします。  
@@ -713,16 +714,16 @@ BOOL EnableButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  有効または無効にするボタンのコマンド id。  
   
- `bEnable`  
- **TRUE** ;、ボタンを有効にするには**FALSE**  ボタンを無効にします。  
+ *bEnable*  
+ ボタンを有効にする場合は TRUEボタンを無効にする場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタンが有効にすると、押されたおよびチェックすることができます。 1 つ以上のボタンの状態を変更する場合は、呼び出すことを検討してください。 [SetState](#setstate)代わりにします。  
   
 ##  <a name="getanchorhighlight"></a>  CToolBarCtrl::GetAnchorHighlight  
@@ -735,7 +736,7 @@ BOOL GetAnchorHighlight() const;
 ### <a name="return-value"></a>戻り値  
  ゼロ以外の場合、アンカーの強調表示が有効になっています。 0 の場合、アンカーの強調表示が無効です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787313)Windows SDK で説明されている。  
   
 ##  <a name="getbitmap"></a>  CToolBarCtrl::GetBitmap  
@@ -746,13 +747,13 @@ int GetBitmap(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ビットマップのインデックスを取得するボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、ビットマップのインデックスを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  機能を実装[TB_GETBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787315) Windows SDK に含まれています。  
   
 ##  <a name="getbitmapflags"></a>  CToolBarCtrl::GetBitmapFlags  
@@ -763,9 +764,9 @@ UINT GetBitmapFlags() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A **UINT**を持つ、 **TBBF_LARGE**表示では、大きいツール バー ビットマップをクリアそれ以外の場合サポートできる場合にフラグが設定されます。  
+ それ以外の場合オフ TBBF_LARGE フラグの表示が大きいツール バー ビットマップをサポートできる場合は、設定される UINT にします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ツールバーを作成した後は、ツールバーのビットマップを追加する前に、それを呼び出す必要があります。 戻り値は、表示に大きいビットマップがサポートしているかどうかどうかを示します。 表示は、大規模なビットマップをサポートしている場合、およびそれらを使用して、呼び出しを選択する[SetBitmapSize](#setbitmapsize)と[いて](#setbuttonsize)大きいビットマップを使用して、追加する前に[表示](#addbitmap)です。  
   
 ##  <a name="getbutton"></a>  CToolBarCtrl::GetButton  
@@ -778,10 +779,10 @@ BOOL GetButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  情報を取得する対象のボタンの 0 から始まるインデックス番号します。  
   
- `lpButton`  
+ *lpButton*  
  アドレス、`TBBUTTON`構造体をボタンの情報のコピーを取得します。 参照してください[CToolBarCtrl::AddButtons](#addbuttons)については、`TBBUTTON`構造体。  
   
 ### <a name="return-value"></a>戻り値  
@@ -807,16 +808,16 @@ int GetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ボタンの識別子です。  
   
- `ptbbi`  
+ *ptbbi*  
  ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760478)ボタンの情報を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合、ボタンの 0 から始まるインデックスそれ以外の場合は-1。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787321)Windows SDK で説明されている。  
   
 ##  <a name="getbuttonsize"></a>  CToolBarCtrl::GetButtonSize  
@@ -827,7 +828,7 @@ DWORD GetButtonSize() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A `DWORD` LOWORD とください、幅と高さの値をそれぞれ含む値です。  
+ LOWORD とください、幅と高さの値をそれぞれ含む DWORD 値です。  
   
 ##  <a name="getbuttontext"></a>  CToolBarCtrl::GetButtonText  
  現在のツール バー コントロールの指定したボタンの表示テキストを取得します。  
@@ -840,12 +841,12 @@ CString GetButtonText(int idButton) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `idButton`|表示テキストを取得するボタンの識別子。|  
+|[in]*idButton*|表示テキストを取得するボタンの識別子。|  
   
 ### <a name="return-value"></a>戻り値  
  A [CString](../../atl-mfc-shared/using-cstring.md)指定したボタンの表示テキストを格納しています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [TB_GETBUTTONTEXT](http://msdn.microsoft.com/library/windows/desktop/bb787325) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getcolorscheme"></a>  CToolBarCtrl::GetColorScheme  
@@ -859,12 +860,12 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[出力] `lpColorScheme`|ポインター、 [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502)色スキームの情報を受け取る。 このメソッドが戻るとき、強調表示色とツール バー コントロールの影の色、構造体について説明します。|  
+|[out]*lpColorScheme*|ポインター、 [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502)色スキームの情報を受け取る。 このメソッドが戻るとき、強調表示色とツール バー コントロールの影の色、構造体について説明します。|  
   
 ### <a name="return-value"></a>戻り値  
- `true` このメソッドが成功した場合それ以外の場合、`false`です。  
+このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [TB_GETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787327) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getdisabledimagelist"></a>  CToolBarCtrl::GetDisabledImageList  
@@ -875,9 +876,9 @@ CImageList* GetDisabledImageList() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、または**NULL**無効なイメージ リストが設定されていない場合。  
+ ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、または無効になっているイメージ リストが設定されていない場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787329)Windows SDK で説明されている。 MFC 実装の`GetDisabledImageList`を使用して、`CImageList`イメージ リストへのハンドルではなく、ツール バー コントロールのボタンを含むオブジェクトのイメージです。  
   
 ##  <a name="getdroptarget"></a>  CToolBarCtrl::GetDropTarget  
@@ -888,13 +889,13 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppDropTarget`  
- ポインター、 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)インターフェイス ポインター。 エラーが発生する場合、 **NULL**ポインターがこのアドレスに配置されます。  
+ *ppDropTarget*  
+ ポインター、 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)インターフェイス ポインター。 エラーが発生する場合は、このアドレスに NULL ポインターが配置されます。  
   
 ### <a name="return-value"></a>戻り値  
- 返します、`HRESULT`操作の成功または失敗を示す値。  
+ 操作の成功または失敗を示す HRESULT 値を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787343)Windows SDK で説明されている。  
   
 ##  <a name="getextendedstyle"></a>  CToolBarCtrl::GetExtendedStyle  
@@ -905,9 +906,9 @@ DWORD GetExtendedStyle() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`ツール バー コントロールの使用されている拡張スタイルを表すです。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)、Windows SDK に含まれています。  
+ ツール バー コントロールの使用されている拡張スタイルを表す DWORD。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)、Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787331)Windows SDK で説明されている。  
   
 ##  <a name="gethotimagelist"></a>  CToolBarCtrl::GetHotImageList  
@@ -918,9 +919,9 @@ CImageList* GetHotImageList() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、または**NULL**無効なイメージ リストが設定されていない場合。  
+ ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、または無効になっているイメージ リストが設定されていない場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787334)Windows SDK で説明されている。 その上にマウス ポインターがあるときに強調表示されているホット ボタンが表示されます。  
   
 ##  <a name="gethotitem"></a>  CToolBarCtrl::GetHotItem  
@@ -933,7 +934,7 @@ int GetHotItem() const;
 ### <a name="return-value"></a>戻り値  
  ツールバーのホット アイテムの 0 から始まるインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787336)Windows SDK で説明されている。  
   
 ##  <a name="getimagelist"></a>  CToolBarCtrl::GetImageList  
@@ -944,9 +945,9 @@ CImageList* GetImageList() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、または**NULL**イメージ リストが設定されていない場合。  
+ ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)オブジェクト、またはイメージ リストが設定されていない場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787337)Windows SDK で説明されている。  
   
 ##  <a name="getinsertmark"></a>  CToolBarCtrl::GetInsertMark  
@@ -957,10 +958,10 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ptbim`  
+ *ptbim*  
  ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760480)挿入マークを受け取る。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787338)Windows SDK で説明されている。  
   
 ##  <a name="getinsertmarkcolor"></a>  CToolBarCtrl::GetInsertMarkColor  
@@ -971,9 +972,9 @@ COLORREF GetInsertMarkColor() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A **COLORREF**挿入マークの現在の色を表す値です。  
+ 現在の挿入マークの色を含む COLORREF 値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787339)Windows SDK で説明されている。  
   
 ##  <a name="getitemrect"></a>  CToolBarCtrl::GetItemRect  
@@ -986,17 +987,17 @@ BOOL GetItemRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  情報を取得する対象のボタンの 0 から始まるインデックス番号します。  
   
- `lpRect`  
+ *lpRect*  
  アドレス、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、または[CRect](../../atl-mfc-shared/reference/crect-class.md)外接する四角形の座標を受け取るオブジェクトです。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- この関数は、状態が に設定されているボタンの外接する四角形を取得できません`TBSTATE_HIDDEN`です。  
+### <a name="remarks"></a>Remarks  
+ この関数は、状態が TBSTATE_HIDDEN に設定されているボタンの外接する四角形を取得できません。  
   
 ##  <a name="getmaxsize"></a>  CToolBarCtrl::GetMaxSize  
  表示可能なボタンとツールバーの区切り記号のすべての合計サイズを取得します。  
@@ -1006,13 +1007,13 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSize`  
+ *pSize*  
  ポインター、[サイズ](http://msdn.microsoft.com/library/windows/desktop/dd145106)項目のサイズを受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETMAXSIZE](http://msdn.microsoft.com/library/windows/desktop/bb787341)Windows SDK で説明されている。  
   
 ##  <a name="getmaxtextrows"></a>  CToolBarCtrl::GetMaxTextRows  
@@ -1033,10 +1034,10 @@ void GetMetrics(LPTBMETRICS ptbm) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ptbm`  
+ *ptbm*  
  ポインター、 [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482)の構造、`CToolBarCtrl`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 [TB_GETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787342)メッセージ、Windows SDK で説明します。  
   
 ##  <a name="getpadding"></a>  CToolBarCtrl::GetPadding  
@@ -1052,13 +1053,13 @@ BOOL GetPadding(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[出力] `pnHorzPadding`|ツール バー コントロールの水平の埋め込みをピクセル単位で受信する整数。|  
-|[出力] `pnVertPadding`|ピクセル単位で、ツール バー コントロールの垂直方向の余白を受信する整数。|  
+|[out]*pnHorzPadding*|ツール バー コントロールの水平の埋め込みをピクセル単位で受信する整数。|  
+|[out]*pnVertPadding*|ピクセル単位で、ツール バー コントロールの垂直方向の余白を受信する整数。|  
   
 ### <a name="return-value"></a>戻り値  
- `true` このメソッドが成功した場合それ以外の場合、`false`です。  
+ このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [TB_GETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787344) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getpressedimagelist"></a>  CToolBarCtrl::GetPressedImageList  
@@ -1069,9 +1070,9 @@ CImageList* GetPressedImageList();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)現在のコントロールのイメージ リストを格納しているか、`NULL`このようなイメージ リストが設定されていない場合。  
+ ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)このようなイメージ リストが設定されていない場合、現在のコントロール、または NULL のイメージ リストを格納します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [TB_GETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787345) Windows SDK で説明するメッセージ。  
   
 ##  <a name="getrect"></a>  CToolBarCtrl::GetRect  
@@ -1084,16 +1085,16 @@ BOOL GetRect(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ボタンの識別子です。  
   
- `lpRect`  
+ *lpRect*  
  ポインター、 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
- **TRUE**成功した場合は**FALSE**です。  
+ 成功した場合は TRUE、それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb787346)Windows SDK で説明されている。  
   
 ##  <a name="getrows"></a>  CToolBarCtrl::GetRows  
@@ -1106,8 +1107,8 @@ int GetRows() const;
 ### <a name="return-value"></a>戻り値  
  現在、ツールバーに表示するボタンの行の数。  
   
-### <a name="remarks"></a>コメント  
- 行の数は常にである 1 つで、ツールバーが作成された場合を除き、`TBSTYLE_WRAPABLE`スタイル。  
+### <a name="remarks"></a>Remarks  
+ ある行の数は常にいずれかには、ツールバーが作成された場合を除き、注意してください。  
   
 ##  <a name="getstate"></a>  CToolBarCtrl::GetState  
  か有効になっている、押された、またはチェックなどのツール バー コントロールの指定したボタンの状態に関する情報を取得します。  
@@ -1117,14 +1118,14 @@ int GetState(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  情報を取得する対象のボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合、ボタンの状態情報または、それ以外の場合 1 します。 ボタンの状態情報に示された値の組み合わせが可能[CToolBarCtrl::AddButtons](#addbuttons)です。  
   
-### <a name="remarks"></a>コメント  
- この関数は、複数のボタンの状態を取得する場合に特に便利です。 1 つの状態をだけ取得するには、次のメンバー関数のいずれかを使用: [IsButtonEnabled](#isbuttonenabled)、 [IsButtonChecked](#isbuttonchecked)、 [IsButtonPressed](#isbuttonpressed)、[に](#isbuttonhidden)、または[IsButtonIndeterminate](#isbuttonindeterminate)です。 ただし、`GetState`メンバー関数は、検出する唯一の方法、`TBSTATE_WRAP`状態のボタンをクリックします。  
+### <a name="remarks"></a>Remarks  
+ この関数は、複数のボタンの状態を取得する場合に特に便利です。 1 つの状態をだけ取得するには、次のメンバー関数のいずれかを使用: [IsButtonEnabled](#isbuttonenabled)、 [IsButtonChecked](#isbuttonchecked)、 [IsButtonPressed](#isbuttonpressed)、[に](#isbuttonhidden)、または[IsButtonIndeterminate](#isbuttonindeterminate)です。 ただし、`GetState`メンバー関数は、TBSTATE_WRAP ボタンの状態を検出する唯一の方法です。  
   
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString  
  ツールバーの文字列を取得します。  
@@ -1150,13 +1151,13 @@ int GetString(
  *cchMaxLen*  
  バッファーのバイト単位の長さです。  
   
- `str`  
+ *str*  
  文字列。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は、文字列の長さ以外の場合は-1。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_GETSTRING](http://msdn.microsoft.com/library/windows/desktop/bb787349)Windows SDK で説明されている。  
   
 ##  <a name="getstyle"></a>  CToolBarCtrl::GetStyle  
@@ -1167,7 +1168,7 @@ DWORD GetStyle() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`の組み合わせを含む[ツール バー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK で説明されている。  
+ 組み合わせを含む DWORD[ツール バー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK で説明されている。  
   
 ##  <a name="gettooltips"></a>  CToolBarCtrl::GetToolTips  
  ツール バー コントロールに関連付けられている場合は、ツール ヒント コントロールのハンドルを取得します。  
@@ -1177,9 +1178,9 @@ CToolTipCtrl* GetToolTips() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)このツールバーに関連付けられているオブジェクトまたは**NULL**ツールバーに関連付けられているツール ヒント コントロールがあるない場合。  
+ ポインター、 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)ツールバーに関連付けられているツール ヒント コントロールがあるない場合は、このツールバーと関連付けられているオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  通常、ツール バー コントロールは、作成し、独自のツール ヒント コントロールを保持しますので、ほとんどのプログラムをこの関数を呼び出す必要です。  
   
 ##  <a name="hittest"></a>  CToolBarCtrl::HitTest  
@@ -1190,15 +1191,15 @@ int HitTest(LPPOINT ppt) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppt`  
- ポインター、[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)でヒット テストの x 座標を格納する構造体、 **x**メンバーの y 座標のヒット テスト、 **y**メンバー。 座標は、ツールバーのクライアント領域と相対的はします。  
+ *ppt*  
+ ポインター、[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)でヒット テストの x 座標を格納する構造体、`x`メンバーの y 座標のヒット テスト、`y`メンバー。 座標は、ツールバーのクライアント領域と相対的はします。  
   
 ### <a name="return-value"></a>戻り値  
  ツールバー上のポイントの場所を示す整数値。 値がゼロまたは正の値の場合は、この戻り値は、ポイントにある区切り記号以外の項目の 0 から始まるインデックス。  
   
  戻り値が負の場合、ポイントに入らない、ボタンをクリックします。 戻り値の絶対値は、区切り記号アイテムまたは最も近いの区切り記号以外の項目のインデックスです。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_HITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787360)Windows SDK で説明されている。  
   
 ##  <a name="hidebutton"></a>  CToolBarCtrl::HideButton  
@@ -1211,16 +1212,16 @@ BOOL HideButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ボタンを表示または非表示のコマンド id。  
   
- `bHide`  
- **TRUE** 、ボタンを非表示にする**FALSE**を表示します。  
+ *bHide*  
+ False の場合にこれを表示する、ボタンを非表示にする場合は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  1 つ以上のボタンの状態を変更する場合は、呼び出すことを検討してください。 [SetState](#setstate)代わりにします。  
   
 ##  <a name="indeterminate"></a>  CToolBarCtrl::Indeterminate  
@@ -1233,16 +1234,16 @@ BOOL Indeterminate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  不確定な状態がある設定、またはクリアするボタンのコマンド id。  
   
  *bIndeterminate*  
- **TRUE**を指定したボタンの中間の状態を設定する**FALSE**をオフにします。  
+ オフにする場合は FALSE を指定したボタンの中間の状態を設定する場合は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  不確定なボタンが表示される、グレーで表示されるなど、ワード プロセッサの方法、ツールバーの [太字] ボタンが選択されているテキストに太字と正規の両方の文字が含まれている場合になります。 1 つ以上のボタンの状態を変更する場合は、呼び出すことを検討してください。 [SetState](#setstate)代わりにします。  
   
 ##  <a name="insertbutton"></a>  CToolBarCtrl::InsertButton  
@@ -1255,16 +1256,16 @@ BOOL InsertButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  ボタンの 0 から始まるインデックス。 この関数は、このボタンの左側に新しいボタンを挿入します。  
   
- `lpButton`  
+ *lpButton*  
  アドレス、`TBBUTTON`挿入するボタンに関する情報を含む構造体。 参照してください[CToolBarCtrl::AddButtons](#addbuttons)の詳細については、`TBBUTTON`構造体。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  イメージや文字列のインデックス位置を指定する必要がある必要がありますが以前に追加されて、ツール バー コントロールの一覧を使用して[表示](#addbitmap)、 [AddString](#addstring)、や[AddStrings](#addstrings)です。  
   
 ##  <a name="insertmarkhittest"></a>  CToolBarCtrl::InsertMarkHitTest  
@@ -1277,16 +1278,16 @@ BOOL InsertMarkHitTest(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ppt`  
+ *ppt*  
  ポインター、[ポイント](http://msdn.microsoft.com/library/windows/desktop/dd162805)ツールバーのクライアント領域と相対的、ヒット テストを含む構造体を調整します。  
   
- `ptbim`  
+ *ptbim*  
  ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760480)挿入マーク情報を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb787367)Windows SDK で説明されている。  
   
 ##  <a name="isbuttonchecked"></a>  CToolBarCtrl::IsButtonChecked  
@@ -1297,13 +1298,13 @@ BOOL IsButtonChecked(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ツールバーのボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンがチェックされている場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出すことを検討してください[GetState](#getstate)を 1 つ以上のボタンの状態を取得する場合。  
   
 ##  <a name="isbuttonenabled"></a>  CToolBarCtrl::IsButtonEnabled  
@@ -1314,13 +1315,13 @@ BOOL IsButtonEnabled(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ツールバーのボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンが有効である場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出すことを検討してください[GetState](#getstate)を 1 つ以上のボタンの状態を取得する場合。  
   
 ##  <a name="isbuttonhidden"></a>  CToolBarCtrl::IsButtonHidden  
@@ -1331,13 +1332,13 @@ BOOL IsButtonHidden(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ツールバーのボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンが非表示の場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出すことを検討してください[GetState](#getstate)を 1 つ以上のボタンの状態を取得する場合。  
   
 ##  <a name="isbuttonhighlighted"></a>  CToolBarCtrl::IsButtonHighlighted  
@@ -1348,7 +1349,7 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  ツール バー ボタンのコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1362,13 +1363,13 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  ツールバーのボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  正の整数、ボタンは、不確定なできませんまたは-1 の場合、エラーが発生した場合は、ボタンが不確定である場合 0 します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  不確定なボタンが表示される、淡色表示のワード プロセッサにより、ツールバーの [太字] ボタンは、選択したテキストに太字と正規の両方の文字が含まれている場合、参照などです。 呼び出すことを検討してください[GetState](#getstate)を 1 つ以上のボタンの状態を取得する場合。  
   
 ##  <a name="isbuttonpressed"></a>  CToolBarCtrl::IsButtonPressed  
@@ -1379,13 +1380,13 @@ BOOL IsButtonPressed(int nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ツールバーのボタンのコマンド id。  
   
 ### <a name="return-value"></a>戻り値  
  ボタンが押された場合、それ以外の場合 0 0 以外の値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出すことを検討してください[GetState](#getstate)を 1 つ以上のボタンの状態を取得する場合。  
   
 ##  <a name="loadimages"></a>  CToolBarCtrl::LoadImages  
@@ -1399,7 +1400,7 @@ void LoadImages(
   
 ### <a name="parameters"></a>パラメーター  
  *iBitmapID*  
- 読み込まれるイメージを含むビットマップの ID。 ビットマップのリソースを指定するビットマップ リソースの ID にこのパラメーターを設定し、設定`hInst`に**NULL**です。 ビットマップ リソースは、1 つのイメージとしてイメージ リストに追加されます。 標準的なシステム定義のビットマップを追加するには、設定*hinst*に**HINST_COMMCTRL**し、このパラメーターを次の Id のいずれかに設定。  
+ 読み込まれるイメージを含むビットマップの ID。 ビットマップのリソースを指定するビットマップ リソースの ID にこのパラメーターを設定し、設定*hInst*を NULL にします。 ビットマップ リソースは、1 つのイメージとしてイメージ リストに追加されます。 標準的なシステム定義のビットマップを追加するには、設定*hinst* HINST_COMMCTRL を次の Id のいずれかにこのパラメーターを設定します。  
   
 |ビットマップの ID|説明|  
 |---------------|-----------------|  
@@ -1411,9 +1412,9 @@ void LoadImages(
 |IDB_VIEW_SMALL_COLOR|小さなサイズで表示ビットマップ|  
   
  *hinst*  
- 呼び出し元のアプリケーションへのプログラム インスタンス ハンドル。 このパラメーターを指定できます**HINST_COMMCTRL**標準のイメージ リストを読み込めません。  
+ 呼び出し元のアプリケーションへのプログラム インスタンス ハンドル。 このパラメーターは、標準のイメージの一覧を読み込む HINST_COMMCTRL を指定できます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_LOADIMAGES](http://msdn.microsoft.com/library/windows/desktop/bb787381)Windows SDK で説明されている。  
   
 ##  <a name="mapaccelerator"></a>  CToolBarCtrl::MapAccelerator  
@@ -1426,16 +1427,16 @@ BOOL MapAccelerator(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `chAccel`  
+ *chAccel*  
  マップするアクセラレータ文字です。 この文字は、ボタンのテキストに下線が引かれますを同じ文字です。  
   
  *pIDBtn*  
- ポインター、 **UINT**で指定されたアクセラレータに対応するボタンのコマンド識別子を受け取る`chAccel`です。  
+ 指定されたアクセラレータに対応するボタンのコマンド識別子を受け取る UINT へのポインター *chAccel*です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_MAPACCELERATOR](http://msdn.microsoft.com/library/windows/desktop/bb787383)Windows SDK で説明されている。  
   
 ##  <a name="markbutton"></a>  CToolBarCtrl::MarkButton  
@@ -1448,16 +1449,16 @@ BOOL MarkButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ボタンの識別子です。  
   
- `fHighlight`  
- 設定する、強調表示状態を指定します。 既定では、 **TRUE**です。 場合に設定**FALSE**ボタンが既定の状態に設定します。  
+ *fHighlight*  
+ 設定する、強調表示状態を指定します。 既定では、次のように TRUE です。 場合は FALSE、ボタンには、既定の状態に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_MARKBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787385)Windows SDK で説明されている。  
   
 ##  <a name="movebutton"></a>  CToolBarCtrl::MoveButton  
@@ -1479,7 +1480,7 @@ BOOL MoveButton(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_MOVEBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787387)Windows SDK で説明されている。  
   
 ##  <a name="pressbutton"></a>  CToolBarCtrl::PressButton  
@@ -1490,16 +1491,16 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  コマンド キーを押すか、リリースするボタンの id。  
   
- [入力] `bPress`  
- `true` 指定したボタンを押す`false`を指定したボタンを解放します。 既定値は `true` です。  
+ [in]*bPress*  
+ 指定したボタンを数回押さなければならない場合は TRUE。指定したボタンを解放する場合は FALSE。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
- このメソッドが成功した場合は `true`。それ以外の場合は `false`。  
+ メソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  1 つ以上のボタンの状態を変更する場合は、呼び出すことを検討してください。 [SetState](#setstate)代わりにします。  
   
  このメソッドは、送信、 [TB_PRESSBUTTON](http://msdn.microsoft.com/library/windows/desktop/bb787389) Windows SDK で説明するメッセージ。  
@@ -1515,12 +1516,12 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `pReplaceBitmap`|ポインター、 [TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484)ビットマップを置換して、新しいビットマップを記述する構造体。|  
+|[in]*pReplaceBitmap*|ポインター、 [TBREPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb760484)ビットマップを置換して、新しいビットマップを記述する構造体。|  
   
 ### <a name="return-value"></a>戻り値  
- `true` このメソッドが成功した場合それ以外の場合、`false`です。  
+ このメソッドが成功した場合は TRUE。それ以外の場合は FALSE です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [TB_REPLACEBITMAP](http://msdn.microsoft.com/library/windows/desktop/bb787391) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -1539,21 +1540,21 @@ void RestoreState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hKeyRoot`  
+ *hKeyRoot*  
  レジストリまたは定義済みの予約されたハンドルの値は次のいずれかで現在開いているキーを識別します。  
   
-- **HKEY_CLASSES_ROOT**  
+- HKEY_CLASSES_ROOT  
   
-- **HKEY_CURRENT_USER**  
+- HKEY_CURRENT_USER  
   
-- **HKEY_LOCAL_MACHINE**  
+- HKEY_LOCAL_MACHINE  
   
-- **HKEY_USERS**  
+- HKEY_USERS  
   
- `lpszSubKey`  
- 値が関連付けられているサブキーの名前を表す null で終わる文字列へのポインター。 このパラメーターには、null または空の文字列へのポインターを指定できます。 パラメーターがある場合**NULL**、値によって識別されるキーに追加されます、`hKeyRoot`パラメーター。  
+ *lpszSubKey*  
+ 値が関連付けられているサブキーの名前を表す null で終わる文字列へのポインター。 このパラメーターには、null または空の文字列へのポインターを指定できます。 によって識別されるキーに、値は追加パラメーターが NULL の場合、 *hKeyRoot*パラメーター。  
   
- `lpszValueName`  
+ *lpszValueName*  
  取得する値の名前を含む文字列へのポインター。 この名前の値が存在しないキーで、関数により、キーを追加します。  
   
 ##  <a name="savestate"></a>  CToolBarCtrl::SaveState  
@@ -1567,21 +1568,21 @@ void SaveState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hKeyRoot`  
+ *hKeyRoot*  
  レジストリまたは定義済みの予約されたハンドルの値は次のいずれかで現在開いているキーを識別します。  
   
-- **HKEY_CLASSES_ROOT**  
+- HKEY_CLASSES_ROOT  
   
-- **HKEY_CURRENT_USER**  
+- HKEY_CURRENT_USER  
   
-- **HKEY_LOCAL_MACHINE**  
+- HKEY_LOCAL_MACHINE  
   
-- **HKEY_USERS**  
+- HKEY_USERS  
   
- `lpszSubKey`  
- 値が関連付けられているサブキーの名前を表す null で終わる文字列へのポインター。 このパラメーターには、null または空の文字列へのポインターを指定できます。 パラメーターがある場合**NULL**、値によって識別されるキーに追加されます、`hKeyRoot`パラメーター。  
+ *lpszSubKey*  
+ 値が関連付けられているサブキーの名前を表す null で終わる文字列へのポインター。 このパラメーターには、null または空の文字列へのポインターを指定できます。 によって識別されるキーに、値は追加パラメーターが NULL の場合、 *hKeyRoot*パラメーター。  
   
- `lpszValueName`  
+ *lpszValueName*  
  設定する値の名前を含む文字列へのポインター。 この名前の値が存在しないキーで、関数により、キーを追加します。  
   
 ##  <a name="setanchorhighlight"></a>  CToolBarCtrl::SetAnchorHighlight  
@@ -1592,13 +1593,13 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `fAnchor`  
+ [in]*fAnchor*  
  アンカーの強調表示を有効になっているまたは無効になっているかどうかを指定します。 この値が 0 以外の場合は、アンカーの強調表示可能になります。 この値が 0 の場合は、アンカーの強調表示が無効になります  
   
 ### <a name="return-value"></a>戻り値  
  以前のアンカー設定します。 強調表示が有効な場合、この値は 0 以外の値です。 強調表示が有効でない場合、この値は 0 です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、Win32 メッセージの動作を実装して[TB_SETANCHORHIGHLIGHT](http://msdn.microsoft.com/library/windows/desktop/bb787396)Windows SDK で説明されている。  
   
 ##  <a name="setbitmapsize"></a>  CToolBarCtrl::SetBitmapSize  
@@ -1609,13 +1610,13 @@ BOOL SetBitmapSize(CSize size);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  幅と高さをビットマップ イメージのピクセル単位で。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、ツールバーにビットマップを追加する前にのみ呼び出す必要があります。 アプリケーションが、ビットマップのサイズを明示的に設定されていない場合の既定値は 16 x 15 ピクセルです。  
   
 ##  <a name="setbuttoninfo"></a>  CToolBarCtrl::SetButtonInfo  
@@ -1628,16 +1629,16 @@ BOOL SetButtonInfo(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ボタンの識別子です。  
   
- `ptbbi`  
+ *ptbbi*  
  ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760478)ボタンの情報を受け取る。  
   
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装する[TB_SETBUTTONINFO](http://msdn.microsoft.com/library/windows/desktop/bb787413)Windows SDK で説明されている。  
   
 ##  <a name="setbuttonsize"></a>  CToolBarCtrl::SetButtonSize  
@@ -1648,13 +1649,13 @@ BOOL SetButtonSize(CSize size);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `size`  
+ *size*  
  幅と高さ (ピクセル単位) のボタン。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ボタンのサイズは、少なくとも、それを囲むビットマップのサイズとして常に場合があります。 この関数は、ツールバーにビットマップを追加する前にのみ呼び出す必要があります。 アプリケーションが、ボタンのサイズを明示的に設定されていない場合の既定値は 24 で 22 ピクセルです。  
   
 ### <a name="example"></a>例  
@@ -1668,10 +1669,10 @@ void SetButtonStructSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nSize`  
+ *nSize*  
  サイズ (バイト単位)、`TBBUTTON`構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  余分なデータを格納する必要がある場合、`TBBUTTON`構造から新しい構造体か派生でした`TBBUTTON`、メンバーを追加するために必要なまたは作成するを含む新しい構造体、`TBBUTTON`構造体を最初のメンバーです。 ツール バー コントロールに新しい構造体のサイズを確認するには、この関数を呼び出すとします。  
   
  参照してください[CToolBarCtrl::AddButtons](#addbuttons)の詳細について、`TBBUTTON`構造体。  
@@ -1686,7 +1687,7 @@ BOOL SetButtonWidth(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cxMin`  
+ *cxMin*  
  ボタンの最小の幅 (ピクセル単位)。 ツール バー ボタンは、この値よりも幅の狭いできなくなります。  
   
  *cxMax*  
@@ -1695,7 +1696,7 @@ BOOL SetButtonWidth(
 ### <a name="return-value"></a>戻り値  
  正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETBUTTONWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb787417)Windows SDK で説明されている。  
   
 ##  <a name="setcmdid"></a>  CToolBarCtrl::SetCmdID  
@@ -1708,10 +1709,10 @@ BOOL SetCmdID(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nIndex`  
+ *nIndex*  
  コマンド ID を設定するボタンの 0 から始まるインデックス。  
   
- `nID`  
+ *nID*  
  選択したボタンに設定するコマンド ID。  
   
 ### <a name="return-value"></a>戻り値  
@@ -1728,9 +1729,9 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `lpColorScheme`|ポインター、 [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502)強調表示色とツール バー コントロールの影の色を記述する構造体。|  
+|[in]*lpColorScheme*|ポインター、 [COLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb775502)強調表示色とツール バー コントロールの影の色を記述する構造体。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドには効果がない場合、[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]ビジュアル テーマを設定します。  
   
  このメソッドは、送信、 [TB_SETCOLORSCHEME](http://msdn.microsoft.com/library/windows/desktop/bb787421) Windows SDK で説明するメッセージ。  
@@ -1748,13 +1749,13 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pImageList`  
+ *pImageList*  
  ポインター、`CImageList`ボタン イメージの表示を無効にする、ツール バー コントロールで使用するイメージを含むオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)ボタン イメージの表示を無効にする、ツール バー コントロールで使用していたオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETDISABLEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787423)Windows SDK で説明されている。 MFC 実装の`SetDisabledImageList`を使用して、`CImageList`イメージ リストへのハンドルではなく、オブジェクトを含むツール バー コントロールの無効にされたボタンのイメージです。  
   
 ##  <a name="setdrawtextflags"></a>  CToolBarCtrl::SetDrawTextFlags  
@@ -1767,16 +1768,16 @@ DWORD SetDrawTextFlags(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwMask`  
- 1 つまたは複数の dt _ フラグは、Win32 関数で指定された組み合わせ[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)、ビットでこれを示す`dwDTFlags`テキストを描画するときに使用されます。  
+ *dwMask*  
+ 1 つまたは複数の dt _ フラグは、Win32 関数で指定された組み合わせ[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)、ビットでこれを示す*dwDTFlags*テキストを描画するときに使用されます。  
   
- `dwDTFlags`  
+ *dwDTFlags*  
  1 つまたは複数の dt _ フラグは、Win32 関数で指定された組み合わせ`DrawText`ボタンのテキストの描画方法を示すです。 この値は`DrawText`ボタンのテキストを描画するときにします。  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`フラグを描画前のテキストを格納します。  
+ 前のテキストの描画を含む DWORD フラグを設定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETDRAWTEXTFLAGS](http://msdn.microsoft.com/library/windows/desktop/bb787425)Windows SDK で説明されている。 このメンバー関数は、Win32 関数でフラグを設定`DrawText`フラグを設定する方法に従って書式設定された、指定した四角形でテキストを描画します。  
   
 ##  <a name="setextendedstyle"></a>  CToolBarCtrl::SetExtendedStyle  
@@ -1787,13 +1788,13 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwExStyle`  
+ *dwExStyle*  
  新しい拡張スタイルを指定する値。 このパラメーターは、拡張スタイルのツールバーの組み合わせを指定できます。  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`拡張スタイルを表す前です。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)、Windows SDK に含まれています。  
+ 表す、以前の拡張スタイル DWORD。 スタイルの一覧は、次を参照してください。[ツールバー拡張スタイル](http://msdn.microsoft.com/library/windows/desktop/bb760430)、Windows SDK に含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb787427)Windows SDK で説明されている。  
   
 ##  <a name="sethotimagelist"></a>  CToolBarCtrl::SetHotImageList  
@@ -1804,13 +1805,13 @@ CImageList* SetHotImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pImageList`  
+ *pImageList*  
  ポインター、`CImageList`ホット ボタンの画像を表示する、ツール バー コントロールで使用される画像を含むオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)ホット ボタンの画像を表示する、ツール バー コントロールで使用していたオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETHOTIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787429)Windows SDK で説明されている。  
   
  MFC 実装の`SetHotImageList`を使用して、`CImageList`イメージ リストへのハンドルではなく、ツール バー コントロールのホット ボタンを含むオブジェクトのイメージです。 ポインターが上にあるときに強調表示されているホット ボタンが表示されます。  
@@ -1829,7 +1830,7 @@ int SetHotItem(int nHot);
 ### <a name="return-value"></a>戻り値  
  前のホット項目またはホット項目がなかった場合は-1 のインデックス。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETHOTITEM](http://msdn.microsoft.com/library/windows/desktop/bb787431)Windows SDK で説明されている。  
   
 ##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList  
@@ -1840,13 +1841,13 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pImageList`  
+ *pImageList*  
  ポインター、`CImageList`は既定の状態でボタンのイメージを表示する、ツール バー コントロールで使用される画像を含むオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)ツール バー コントロールでボタン イメージは既定の状態の表示を使用していたオブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787433)Windows SDK で説明されている。  
   
  MFC 実装の`SetImageList`を使用して、`CImageList`イメージ リストへのハンドルではなく、ツール バー コントロールのボタンを含むオブジェクトのイメージです。  
@@ -1873,10 +1874,10 @@ void SetInsertMark(TBINSERTMARK* ptbim);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ptbim`  
+ *ptbim*  
  ポインター、[受け取る](http://msdn.microsoft.com/library/windows/desktop/bb760480)挿入マークを格納する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb787437)Windows SDK で説明されている。  
   
 ##  <a name="setinsertmarkcolor"></a>  CToolBarCtrl::SetInsertMarkColor  
@@ -1887,13 +1888,13 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `clrNew`  
- A **COLORREF**新しい挿入マークの色を表す値です。  
+ *clrNew*  
+ 新しい挿入マークの色を含む COLORREF 値です。  
   
 ### <a name="return-value"></a>戻り値  
- A **COLORREF**挿入マークの以前の色を表す値です。  
+ 挿入マークの以前の色を含む COLORREF 値です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数は、Win32 メッセージの動作を実装して[TB_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb787439)Windows SDK で説明されている。  
   
 ##  <a name="setmaxtextrows"></a>  CToolBarCtrl::SetMaxTextRows  
@@ -1918,10 +1919,10 @@ void SetMetrics(LPTBMETRICS ptbm);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ptbm`  
+ *ptbm*  
  ポインター、 [TBMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb760482)の構造、`CToolBarCtrl`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 [TB_SETMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb787446)メッセージ、Windows SDK で説明します。  
   
 ##  <a name="setowner"></a>  CToolBarCtrl::SetOwner  
@@ -1932,10 +1933,10 @@ void SetOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *pWnd*  
  ポインター、`CWnd`または`CWnd`-ツール バー コントロールの新しいオーナー ウィンドウとなるオブジェクトを派生します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  オーナー ウィンドウには、ウィンドウ、ツールバーから通知を受け取るですが。  
   
 ##  <a name="setpadding"></a>  CToolBarCtrl::SetPadding  
@@ -1951,13 +1952,13 @@ DWORD SetPadding(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `nHorzPadding`|ツール バー コントロールの水平方向の余白を指定します (ピクセル単位)。|  
-|[入力] `nVertPadding`|ツール バー コントロールの上下のスペースをピクセル単位で指定します。|  
+|[in]*nHorzPadding*|ツール バー コントロールの水平方向の余白を指定します (ピクセル単位)。|  
+|[in]*nVertPadding*|ツール バー コントロールの上下のスペースをピクセル単位で指定します。|  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`下位ワード値を含む、以前の左右のスペース、および上位ワードには、前の垂直方向の余白の値が含まれています。 パディング値はピクセル単位で測定されます。  
+ DWORD 下位ワード値を含む、以前の左右のスペース、および上位ワードには、前の垂直方向の余白の値が含まれています。 パディング値はピクセル単位で測定されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [TB_SETPADDING](http://msdn.microsoft.com/library/windows/desktop/bb787448) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -1978,13 +1979,13 @@ CImagelist* SetPressedImageList(
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|[入力] `iImageID`|イメージ リストの 0 から始まるインデックス。 イメージ リストの 1 つだけを使用する場合は、このパラメーターを 0 に設定します。|  
-|[入力] `pImageList`|ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)新しいイメージ リストを格納します。|  
+|[in]*iImageID*|イメージ リストの 0 から始まるインデックス。 イメージ リストの 1 つだけを使用する場合は、このパラメーターを 0 に設定します。|  
+|[in]*pImageList*|ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)新しいイメージ リストを格納します。|  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)現在のコントロールの直前のイメージ リストを格納しているまたは`NULL`場合、このようなイメージ リストが設定されていません。  
+ ポインター、 [CImageList](../../mfc/reference/cimagelist-class.md)このようなイメージ リストが設定されていない場合、現在のコントロール、または NULL の前のイメージ リストを格納します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、送信、 [TB_SETPRESSEDIMAGELIST](http://msdn.microsoft.com/library/windows/desktop/bb787453) Windows SDK で説明するメッセージ。  
   
 ### <a name="example"></a>例  
@@ -2003,27 +2004,27 @@ void SetRows(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nRows`  
+ *nRows*  
  要求された行数です。  
   
- `bLarger`  
+ *き*  
  要求された行数をツールバーのサイズを変更できない場合に、複数の行または行を減らしてを使用するかどうかを通知します。  
   
- `lpRect`  
+ *lpRect*  
  指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)ツールバーの新しい外接する四角形を受け取る。  
   
-### <a name="remarks"></a>コメント  
- 場合は、要求された行数にサイズ変更ことはできません、ツールバー、自体のサイズを調整するか、[次へ] 大きくまたは次小さい有効なサイズの値に応じて`bLarger`です。 場合`bLarger`は**TRUE**、新しい行の数が、要求された数よりも大きくなります。 場合`bLarger`は**FALSE**、新しい行の数は、要求された数より小さくなります。  
+### <a name="remarks"></a>Remarks  
+ 場合は、要求された行数にサイズ変更ことはできません、ツールバー、自体のサイズを調整するか、[次へ] 大きくまたは次小さい有効なサイズの値に応じて*き*です。 場合*き*が true の場合、新しい行の数が、要求された数よりも大きくなります。 場合*き*false で、新しい行の数は、要求された数より小さくなります。  
   
- 指定された行数が正しく、ツールバーの場合は、同じ数の (おそらく、最後の行を除く) のボタンがあるすべての行になるように、ボタンを配置できます。 たとえばを 4 つのボタンを含むツールバーでしたはサイズ変更 3 つの行にため、最後の 2 つの行が小さい値を指定する必要があります。 場合に 4 つの行を得られる場合は 3 つの行にサイズを変更しようとすると、`bLarger`が**TRUE**場合 2 つの行と`bLarger`が**FALSE**です。  
+ 指定された行数が正しく、ツールバーの場合は、同じ数の (おそらく、最後の行を除く) のボタンがあるすべての行になるように、ボタンを配置できます。 たとえばを 4 つのボタンを含むツールバーでしたはサイズ変更 3 つの行にため、最後の 2 つの行が小さい値を指定する必要があります。 場合に 4 つの行を得られる場合は 3 つの行にサイズを変更しようとすると、*き*場合に TRUE と 2 つの行が*き*が FALSE です。  
   
  ツールバーに区切り記号がある場合は、指定された行数が有効な場合の規則は複雑です。 レイアウトは、ボタンのグループ (前に 区切り記号のボタン) と、グループ内の最後のボタンに分割されない複数の行グループが 1 つの行に収まらない場合を除き、されるように計算されます。  
   
  グループが 1 つの行に収まらない場合、次のグループは、大規模なグループが終了した行に収まる場合でも、次の行で開始されます。 この規則の目的は、大規模なグループより顕著に表れます間を分離させるです。 結果として得られる垂直区切り記号は行としてカウントされます。  
   
- なお、`SetRows`メンバー関数はツールバーのサイズを最小になるレイアウトを選択して常にします。 ツールバーの作成、`TBSTYLE_WRAPABLE`スタイルとし、コントロールのサイズ変更は、コントロールの幅を指定した上記で説明したメソッドを適用するだけです。  
+ なお、`SetRows`メンバー関数はツールバーのサイズを最小になるレイアウトを選択して常にします。 TBSTYLE_WRAPABLE でツールバーを作成したスタイルとコントロールが上記で説明した手法を適用し、サイズ変更は、新たなコントロールの幅を指定します。  
   
- この関数は、ツールバーを使用して作成に対してのみ呼び出すことができます、`TBSTYLE_WRAPABLE`スタイル。  
+ この関数は、ツールバーは、作成されたに対してのみ呼び出すことができます。  
   
 ##  <a name="setstate"></a>  CToolBarCtrl::SetState  
  ツール バー コントロールの指定したボタンの状態を設定します。  
@@ -2035,16 +2036,16 @@ BOOL SetState(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  ボタンのコマンド id。  
   
- `nState`  
+ *%n 状態*  
  状態フラグ。 ボタンの状態の表示されている値の組み合わせであることができます[CToolBarCtrl::AddButtons](#addbuttons)です。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数は、ボタンの状態の 1 つ以上を設定する場合に特に便利です。 だけ 1 つの状態を設定するには、次のメンバー関数のいずれかを使用: [EnableButton](#enablebutton)、[切り替わるよう](#checkbutton)、[に](#hidebutton)、[不定](#indeterminate)、または[PressButton](#pressbutton)です。  
   
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle  
@@ -2055,8 +2056,8 @@ void SetStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwStyle`  
- A`DWORD`の組み合わせを含む[ツール バー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK で説明されている。  
+ *dwStyle*  
+ 組み合わせを含む DWORD[ツール バー コントロールのスタイル](http://msdn.microsoft.com/library/windows/desktop/bb760439)Windows SDK で説明されている。  
   
 ##  <a name="settooltips"></a>  CToolBarCtrl::SetToolTips  
  ツール ヒント コントロールをツール バー コントロールに関連付けます。  
@@ -2077,13 +2078,13 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszSubAppName`  
+ *pszSubAppName*  
  設定するツールバーの表示スタイルを表す Unicode 文字列へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  戻り値は使用されません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメンバー関数の機能をエミュレートする、 [TB_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb787465)メッセージ、Windows SDK で説明します。  
   
 ## <a name="see-also"></a>関連項目  

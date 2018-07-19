@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379449469d37f01c7c0fd225688a019eaec9e977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931568"
 ---
 # <a name="opening-files"></a>ファイルを開く
 MFC では、ファイルを開くの最も一般的な方法は、2 段階プロセスです。  
@@ -54,7 +55,7 @@ MFC では、ファイルを開くの最も一般的な方法は、2 段階プ�
  [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  この例では、作成し、ファイルを開きます。 問題がある場合、`Open`の呼び出しが戻る、`CFileException`次に示すように、最後のパラメーター オブジェクトです。 `TRACE`マクロは、ファイル名と失敗の理由を示すコードを出力します。 呼び出すことができます、`AfxThrowFileException`エラー報告の詳細が必要な場合に機能します。  
+>  この例では、作成し、ファイルを開きます。 問題がある場合、`Open`の呼び出しが戻る、`CFileException`次に示すように、最後のパラメーター オブジェクトです。 TRACE マクロは、ファイル名と失敗の理由を示すコードの両方を出力します。 呼び出すことができます、`AfxThrowFileException`エラー報告の詳細が必要な場合に機能します。  
   
 ## <a name="see-also"></a>関連項目  
  [CFile クラス](../mfc/reference/cfile-class.md)   

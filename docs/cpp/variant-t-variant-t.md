@@ -1,5 +1,5 @@
 ---
-title: _variant_t::_variant_t |Microsoft ドキュメント
+title: _variant_t::_variant_t |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ec19adc66a72a7c98772db99aaab3eee4e3b2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14386e737d136b91f8864eeaa182038b62df72e0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943318"
 ---
 # <a name="varianttvariantt"></a>_variant_t::_variant_t
 **Microsoft 固有の仕様**  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      _variant_t( ) throw( );  
+_variant_t( ) throw( );  
   
 _variant_t(  
    const VARIANT& varSrc   
@@ -139,64 +140,64 @@ _variant_t(
   
 #### <a name="parameters"></a>パラメーター  
  *varSrc*  
- A**バリアント**新しいにコピーされるオブジェクト`_variant_t`オブジェクト。  
+ 新しい `VARIANT` オブジェクトにコピーされる `_variant_t` オブジェクト。  
   
  *pVarSrc*  
- ポインター、**バリアント**新しいにコピーされるオブジェクト`_variant_t`オブジェクト。  
+ ポインターを`VARIANT`新しいにコピーされるオブジェクト`_variant_t`オブジェクト。  
   
  *var_t_Src*  
  新しい `_variant_t` オブジェクトにコピーされる `_variant_t` オブジェクト。  
   
- `fCopy`  
- False の場合、指定された**バリアント**を新しいオブジェクトがアタッチされる`_variant_t`によって新しいコピーを作成せずオブジェクト**VariantCopy**です。  
+ *fCopy*  
+ 場合**false**、指定された`VARIANT`を新しいオブジェクトがアタッチされる`_variant_t`オブジェクトでの新しいコピーを作成せず`VariantCopy`します。  
   
  *ISrc、sSrc*  
  新しい `_variant_t` オブジェクトにコピーされる整数値。  
   
- `vtSrc`  
- **VARTYPE**新しい`_variant_t`オブジェクト。  
+ *vtSrc*  
+ `VARTYPE`新しい`_variant_t`オブジェクト。  
   
  *fltSrc、dblSrc*  
  新しい `_variant_t` オブジェクトにコピーされる数値。  
   
- `cySrc`  
- A **CY**新しいにコピーされるオブジェクト`_variant_t`オブジェクト。  
+ *cySrc*  
+ 新しい `CY` オブジェクトにコピーされる `_variant_t` オブジェクト。  
   
- `bstrSrc`  
+ *bstrSrc*  
  新しい `_bstr_t` オブジェクトにコピーされる `_variant_t` オブジェクト。  
   
  *strSrc、wstrSrc*  
  新しい `_variant_t` オブジェクトにコピーされる文字列。  
   
- `bSrc`  
- 新しい `bool` オブジェクトにコピーされる `_variant_t` 値。  
+ *bSrc*  
+ A **bool**新しいにコピーされる値`_variant_t`オブジェクト。  
   
- `pIUknownSrc`  
- COM インターフェイス ポインター、 **VT_UNKNOWN**新しいにカプセル化されるオブジェクト`_variant_t`オブジェクト。  
+ *pIUknownSrc*  
+ 新しいにカプセル化 VT_UNKNOWN オブジェクトへの COM インターフェイス ポインター`_variant_t`オブジェクト。  
   
- `pDispSrc`  
- COM インターフェイス ポインター、 **VT_DISPATCH**新しいにカプセル化されるオブジェクト`_variant_t`オブジェクト。  
+ *pDispSrc*  
+ 新しいにカプセル化 VT_DISPATCH オブジェクトへの COM インターフェイス ポインター`_variant_t`オブジェクト。  
   
- `decSrc`  
- A **DECIMAL**新しいにコピーされる値`_variant_t`オブジェクト。  
+ *decSrc*  
+ 新しい `DECIMAL` オブジェクトにコピーされる `_variant_t` 値。  
   
- `bSrc`  
- A**バイト**新しいにコピーされる値`_variant_t`オブジェクト。  
+ *bSrc*  
+ 新しい `BYTE` オブジェクトにコピーされる `_variant_t` 値。  
   
- `cSrc`  
- 新しい `char` オブジェクトにコピーされる `_variant_t` 値。  
+ *cSrc*  
+ A **char**新しいにコピーされる値`_variant_t`オブジェクト。  
   
  *usSrc*  
  A **unsigned short**新しいにコピーされる値`_variant_t`オブジェクト。  
   
  *ulSrc*  
- 新しい `unsigned long` オブジェクトにコピーされる `_variant_t` 値。  
+ A **unsigned long**新しいにコピーされる値`_variant_t`オブジェクト。  
   
- `iSrc`  
- 新しい `int` オブジェクトにコピーされる `_variant_t` 値。  
+ *iSrc*  
+ **Int**新しいにコピーされる値`_variant_t`オブジェクト。  
   
  *uiSrc*  
- 新しい `unsigned int` オブジェクトにコピーされる `_variant_t` 値。  
+ **符号なし int**新しいにコピーされる値`_variant_t`オブジェクト。  
   
  *i8Src*  
  _ _**Int64**新しいにコピーされる値`_variant_t`オブジェクト。  
@@ -204,43 +205,43 @@ _variant_t(
  *ui8Src*  
  **符号なし _ _int64**新しいにコピーされる値`_variant_t`オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
--   **_variant_t ()** 、空の構築`_variant_t`オブジェクト、`VT_EMPTY`です。  
+-   **_variant_t ()** 空を構築します`_variant_t`オブジェクト、`VT_EMPTY`します。  
   
--   **_variant_t( VARIANT&**  *varSrc*  **)** Constructs a `_variant_t` object from a copy of the **VARIANT** object. バリアント型は保持されます。  
+-   **_variant_t (VARIANT &***varSrc***)** を構築、`_variant_t`オブジェクトのコピーから、`VARIANT`オブジェクト。     バリアント型は保持されます。  
   
--   **_variant_t( VARIANT\***  *pVarSrc*  **)** Constructs a `_variant_t` object from a copy of the **VARIANT** object. バリアント型は保持されます。  
+-   **_variant_t (VARIANT\****pVarSrc***)** を構築、`_variant_t`オブジェクトのコピーから、`VARIANT`オブジェクト。     バリアント型は保持されます。  
   
 -   **_variant_t( _variant_t&**  *var_t_Src*  **)** Constructs a `_variant_t` object from another `_variant_t` object. バリアント型は保持されます。  
   
--   **_variant_t( VARIANT&**  *varSrc* **, bool**  `fCopy`  **)** Constructs a `_variant_t` object from an existing **VARIANT** object. 場合`fCopy`は**false**、**バリアント**オブジェクトは、コピーを作成せず、新しいオブジェクトにアタッチされています。  
+-   **_variant_t (VARIANT &***varSrc* **、bool**`fCopy`**)** を構築、`_variant_t`既存のオブジェクト`VARIANT`オブジェクト。       場合`fCopy`は**false**、**バリアント**オブジェクトは、コピーを作成せず、新しいオブジェクトにアタッチされています。  
   
--   **_variant_t( short**  *sSrc* **, VARTYPE**  `vtSrc`  **= VT_I2 )** Constructs a `_variant_t` object of type `VT_I2` or `VT_BOOL` from a **short** integer value. その他の**VARTYPE**結果、`E_INVALIDARG`エラーです。  
+-   **_variant_t (short***sSrc* **、VARTYPE**`vtSrc`**= VT_I2)** を構築、 `_variant_t` からVT_I2またはVT_BOOLの型のオブジェクト**短い**整数値。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。  
   
--   **_variant_t( long**  `lSrc` **, VARTYPE**  `vtSrc`  **= VT_I4 )** Constructs a `_variant_t` object of type `VT_I4`, `VT_BOOL`, or `VT_ERROR` from a **long** integer value. その他の**VARTYPE**結果、`E_INVALIDARG`エラーです。  
+-   **_variant_t (long** `lSrc` **、VARTYPE**`vtSrc`**= VT_I4)** を構築、 `_variant_t` VT_I4、VT_BOOL、またはから VT_ERROR 型のオブジェクトを**長**整数値。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。  
   
--   **_variant_t (float**`fltSrc`**)** 構築、`_variant_t`型のオブジェクト`VT_R4`から、 **float**数値を指定します。  
+-   **_variant_t (float**`fltSrc`**)** を構築します、 `_variant_t` VT_R4 からの型のオブジェクトを**float**数値を指定します。      
   
--   **_variant_t( double**  `dblSrc` **, VARTYPE**  `vtSrc`  **= VT_R8 )** Constructs a `_variant_t` object of type `VT_R8` or `VT_DATE` from a **double** numerical value. その他の**VARTYPE**結果、`E_INVALIDARG`エラーです。  
+-   **_variant_t (double** `dblSrc` **、VARTYPE**`vtSrc`**= VT_R8)** を構築、 `_variant_t` VT_R8 または VT_DATE から型のオブジェクトを**倍**数値を指定します。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。  
   
--   **_variant_t (CY (& a)**`cySrc`**)** 構築、`_variant_t`型のオブジェクト`VT_CY`から、 **CY**オブジェクト。      
+-   **_variant_t (CY &**`cySrc`**)** を構築、 `_variant_t` VT_CY からの型のオブジェクトを`CY`オブジェクト。      
   
--   **_variant_t (_bstr_t &**`bstrSrc`**)** 構築、`_variant_t`型のオブジェクト`VT_BSTR`から、`_bstr_t`オブジェクト。     新しい `BSTR` を割り当てます。  
+-   **_variant_t (_bstr_t &**`bstrSrc`**)** を構築、 `_variant_t` VT_BSTR からの型のオブジェクトを`_bstr_t`オブジェクト。     新しい `BSTR` を割り当てます。  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** 構築、`_variant_t`型のオブジェクト`VT_BSTR`Unicode 文字列。   新しい `BSTR` を割り当てます。  
+-   **_variant_t (wchar_t \***  *wstrSrc***)** を構築、`_variant_t`型 VT_BSTR Unicode 文字列からのオブジェクト。   新しい `BSTR` を割り当てます。  
   
--   **_variant_t (char\***`strSrc`**)** 構築、`_variant_t`型のオブジェクト`VT_BSTR`文字列からです。     新しい `BSTR` を割り当てます。  
+-   **_variant_t (char\***`strSrc`**)** を構築、`_variant_t`型 VT_BSTR 文字列からのオブジェクト。     新しい `BSTR` を割り当てます。  
   
--   **_variant_t (bool**`bSrc`**)** 構築、`_variant_t`型のオブジェクト`VT_BOOL`から、`bool`値。      
+-   **_variant_t (bool**`bSrc`**)** を構築、 `_variant_t` VT_BOOL からの型のオブジェクトを**bool**値。      
   
--   **_variant_t (IUnknown\***  `pIUknownSrc` **、bool**`fAddRef`**= true)** 構築、`_variant_t`型のオブジェクト**VT_UNKNOWN** COM インターフェイス ポインターから。       場合`fAddRef`は**true**、し、`AddRef`への呼び出しの一致するように指定されたインターフェイス ポインターで呼び出されると**リリース**が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは**リリース**で指定されたインターフェイス ポインター。 場合`fAddRef`は**false**、指定されたインターフェイス ポインターの所有権をこのコンス トラクター以外の場合は呼び出さないでください**リリース**で指定されたインターフェイス ポインター。  
+-   **_variant_t (IUnknown\***  `pIUknownSrc` **、bool**`fAddRef`**= true)** を構築、 `_variant_t` VT_UNKNOWN の COM インターフェイス ポインターから型のオブジェクト.       場合`fAddRef`は**true**、し`AddRef`への呼び出しが一致するように指定されたインターフェイス ポインターで呼び出される`Release`が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは`Release`で指定されたインターフェイス ポインター。 場合`fAddRef`は**false**、このコンス トラクターは、指定されたインターフェイス ポインターの所有権を受け取ります。 呼び出さない`Release`で指定されたインターフェイス ポインター。  
   
--   **_variant_t (IDispatch\***  `pDispSrc` **、bool**`fAddRef`**= true)** 構築、`_variant_t`型のオブジェクト**VT_DISPATCH** COM インターフェイス ポインターから。       場合`fAddRef`は**true**、し、`AddRef`への呼び出しの一致するように指定されたインターフェイス ポインターで呼び出されると**リリース**が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは**リリース**で指定されたインターフェイス ポインター。 場合**fAddRef**が false の場合、このコンス トラクターの所有権を指定されたインターフェイス ポインター以外の場合は呼び出さないでください**リリース**で指定されたインターフェイス ポインター。  
+-   **_variant_t (IDispatch\***  `pDispSrc` **、bool**`fAddRef`**= true)** を構築、`_variant_t`型が VT_DISPATCH COM インターフェイスからのオブジェクトポインター。       場合`fAddRef`は**true**、し`AddRef`への呼び出しが一致するように指定されたインターフェイス ポインターで呼び出される`Release`が発生するときに、`_variant_t`オブジェクトは破棄されます。 呼び出すかどうかは`Release`で指定されたインターフェイス ポインター。 場合`fAddRef`は**false**、このコンス トラクターは、指定されたインターフェイス ポインターの所有権を受け取ります。 呼び出さない`Release`で指定されたインターフェイス ポインター。  
   
--   **_variant_t( DECIMAL&**  `decSrc`  **)** Constructs a `_variant_t` object of type **VT_DECIMAL** from a **DECIMAL** value.  
+-   **_variant_t (10 進数 (& a)**`decSrc`**)** を構築、 `_variant_t` VT_DECIMAL からの型のオブジェクトを`DECIMAL`値。      
   
--   **_variant_t (バイト**`bSrc`**)** 構築、`_variant_t`型のオブジェクト`VT_UI1`から、**バイト**値。      
+-   **_variant_t (バイト**`bSrc`**)** を構築、`_variant_t`型のオブジェクト`VT_UI1`から、`BYTE`値。      
   
  **Microsoft 固有の仕様はここまで**  
   

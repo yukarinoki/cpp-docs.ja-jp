@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386359"
 ---
 # <a name="strerror-function"></a>strerror 関数
 **ANSI 4.11.6.2** `strerror` 関数によって返されるエラー メッセージ文字列の内容  

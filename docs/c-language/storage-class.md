@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391432"
 ---
 # <a name="storage-class"></a>ストレージ クラス
 関数定義では、ストレージ クラス指定子により、関数に `extern` または **static** のストレージ クラスが指定されます。  

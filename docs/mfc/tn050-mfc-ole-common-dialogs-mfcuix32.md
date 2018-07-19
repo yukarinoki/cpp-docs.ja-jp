@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380904"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>テクニカル ノート 50: MFC/OLE コモン ダイアログ (MFCUIx32)
 このメモは、最初、いくつかの問題と提供され、MFC で使用する OLE コモン ダイアログの将来について説明します。 OLE コモン ダイアログが (OLEDLG システムに組み込まれてコンポーネントとして提供されるようになりました。DLL) と、製品ドキュメントに記載されています。  

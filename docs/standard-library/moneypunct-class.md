@@ -56,15 +56,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28acc1eb2f2ed265d20507d2b47efa657c2d1bb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0ed808d8b28071978e89d873d0af9735167e4dbf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957510"
 ---
 # <a name="moneypunct-class"></a>moneypunct クラス
 
-このテンプレート クラスは、通貨入力フィールドまたは通貨出力フィールドを表すために使用される `CharType` 型のシーケンスを表すロケール ファセットとして使用できるオブジェクトを表します。 テンプレート パラメーター `Intl` が `true` である場合、国際的な規則が確認されます。
+このテンプレート クラスは、型のシーケンスを表すためにロケール ファセットとして使用できるオブジェクトを表します*CharType*通貨入力フィールドまたは通貨出力フィールドを表すために使用します。 場合、テンプレート パラメーター *Intl*は*true*、国際対応の規則が確認されます。
 
 ## <a name="syntax"></a>構文
 
@@ -75,15 +76,15 @@ class moneypunct;
 
 ### <a name="parameters"></a>パラメーター
 
-`CharType` プログラム内で文字をエンコードするために使用する型。
+*CharType*プログラム内で文字をエンコードするために使用する型。
 
-`Intl` 国際的な規則を確認するかどうかを指定するフラグ。
+*Intl*国際的な規則が見られるかどうかを指定するフラグ。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、**id** に一意の正の値が格納されます。
 
-const 静的オブジェクト intl は、テンプレート パラメーター **Intl** の値を格納します。
+const 静的オブジェクト intl は、テンプレート パラメーター *Intl* の値を格納します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -121,7 +122,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 |[positive_sign](#positive_sign)|正の記号として使用する要素のロケール固有のシーケンスを返します。|
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用する要素のロケール固有のシーケンスを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 
@@ -135,7 +136,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター **CharType** のシノニムです。
 
@@ -151,7 +152,7 @@ string_type curr_symbol() const;
 
 通貨記号を含む文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_curr_symbol](#do_curr_symbol) を返します。
 
@@ -188,7 +189,7 @@ CharType decimal_point() const;
 
 小数点記号として使用する要素のロケール固有のシーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_decimal_point](#do_decimal_point) を返します。
 
@@ -284,7 +285,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>例
 
-[grouping](#grouping) の例 (仮想メンバー関数が **grouping** で呼び出される) を参照してください。
+例をご覧ください[グループ化](#grouping)で仮想メンバー関数が呼び出される、`grouping`します。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -296,19 +297,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>戻り値
 
-このプロテクト仮想メンバー関数は、負の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 **pattern::field** の 4 つの要素のそれぞれに値を設定できます。
+このプロテクト仮想メンバー関数は、負の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 4 つの要素の各`pattern::field`値を持つことができます。
 
-- **none**: 0 個以上の空白に一致するか、何も生成しません。
+- `none` 一致する 0 個以上の空白文字か何も生成しません。
 
-- **sign**: 正の記号または負の記号に一致するか、正の記号または負の記号を生成します。
+- `sign` 一致するか、正または負の記号を生成します。
 
-- **space**: 0 個以上の空白に一致するか、1 個の空白を生成します。
+- `space` 0 個以上の空白文字と一致するか、空白を生成します。
 
-- **symbol**: 通貨記号に一致するか、通貨記号を生成します。
+- `symbol` 一致するか、通貨記号を生成します。
 
-- **value**: 通貨の値に一致するか、通貨の値を生成します。
+- `value` 一致するか、通貨値を生成します。
 
-通貨出力フィールドのコンポーネントが生成され、通貨入力フィールドのコンポーネントが、これらの要素が **pattern::field** に出現する順序で一致します。 値 **sign**、**symbol**、**value**、および **none** か **space** のいずれかが、それぞれ 1 回のみ出現している必要があります。 値 **none** を最初に出現させることはできません。 値 space を最初または最後に出現させることは**できません**。 **Intl** が true の場合、順序は **symbol**、**sign**、**none**、**value** です。
+通貨出力フィールドのコンポーネントが生成され、通貨入力フィールドのコンポーネントがこれらの要素に表示される順序で一致する`pattern::field`します。 各値`sign`、 `symbol`、 `value`、いずれかと`none`または`space`1 回のみ出現する必要があります。 値`none`最初いない必要があります。 値 space を最初または最後に出現させることは**できません**。 場合`Intl`が true の場合、順序は`symbol`、 `sign`、 `none`、し`value`します。
 
 `moneypunct` のテンプレート バージョン \< **CharType**, **Intl**> は、`{`**money_base::symbol**、**money_base::sign**、**money_base::value**、**money_base::none**`}` を返します。
 
@@ -394,7 +395,7 @@ int frac_digits() const;
 
 小数点の右側に表示する桁数のロケール固有の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_frac_digits](#do_frac_digits) を返します。
 
@@ -463,7 +464,7 @@ string grouping() const;
 
 小数点の左側の数字をグループ化する方法を決定するロケール固有の規則。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_grouping](#do_grouping) を返します。
 
@@ -530,11 +531,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Refs` オブジェクトのメモリ管理の種類を指定するために使用する整数値です。
+*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`_Refs` パラメーターの可能な値とその重要性は次のとおりです。
+使用可能な値を *_Refs*パラメーターとその重要性は。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
@@ -558,7 +559,7 @@ pattern neg_format() const;
 
 負の値の出力を書式設定するためのロケール固有の規則。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_neg_format](#do_neg_format) を返します。
 
@@ -606,7 +607,7 @@ string_type negative_sign() const;
 
 負の記号として使用する要素のロケール固有のシーケンスを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_negative_sign](#do_negative_sign) を返します。
 
@@ -668,7 +669,7 @@ pattern pos_format() const;
 
 正の値の出力を書式設定するためのロケール固有の規則。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_pos_format](#do_pos_format) を返します。
 
@@ -716,7 +717,7 @@ string_type positive_sign() const;
 
 正の記号として使用する要素のロケール固有のシーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_positive_sign](#do_positive_sign) を返します。
 
@@ -774,7 +775,7 @@ French_France.1252 domestic positive sign:
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、オブジェクトに区切り記号シーケンスのコピーを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
 
@@ -790,7 +791,7 @@ CharType thousands_sep() const;
 
 桁区切り記号として使用する要素のロケール固有のシーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_thousands_sep](#do_thousands_sep) を返します。
 

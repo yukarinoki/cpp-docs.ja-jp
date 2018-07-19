@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286930"
 ---
 # <a name="compiler-warning-level-1-c4350"></a>コンパイラの警告 (レベル 1) C4350
 動作変更: 'member1' が 'member2' の代わりに呼び出されました。  

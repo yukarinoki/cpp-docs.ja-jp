@@ -30,11 +30,12 @@ helpviewer_keywords:
 - std::condition_variable::wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55598e4d4aad92e9f4557886bbcb3bd442917624
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca85765d6fed21938a61f52f25c1a377ec43c499
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965179"
 ---
 # <a name="conditionvariable-class"></a>condition_variable クラス
 
@@ -65,7 +66,7 @@ class condition_variable;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<condition_variable >
 
@@ -79,7 +80,7 @@ class condition_variable;
 condition_variable();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 十分なメモリが使用できない場合、コンストラクターは `not_enough_memory` エラー コードがある [system_error](../standard-library/system-error-class.md) オブジェクトをスローします。 他のリソースをいくつか使用できないためにオブジェクトが構築できない場合、コンストラクターは `system_error` エラー コードがある `resource_unavailable_try_again` オブジェクトをスローします。
 
@@ -124,11 +125,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>パラメーター
 
-`Lck` A [unique_lock\<ミュー テックス >](../standard-library/unique-lock-class.md)オブジェクト。
+*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md)オブジェクト。
 
-`Pred` 任意の式を返す`true`または`false`です。
+*Pred*を返す任意の式**true**または**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のメソッドは `condition_variable` オブジェクトが [notify_one](#notify_one) または [notify_all](#notify_all) への呼び出しによって通知されるまでブロックします。 また、擬似的に開始することもできます。
 
@@ -158,21 +159,21 @@ bool wait_for(
 
 ### <a name="parameters"></a>パラメーター
 
-`Lck` A [unique_lock\<ミュー テックス >](../standard-library/unique-lock-class.md)オブジェクト。
+*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md)オブジェクト。
 
-`Rel_time` A`chrono::duration`スリープ状態のスレッドの前に時間を指定するオブジェクト。
+*Rel_time* A`chrono::duration`スリープ状態にする前に、スレッドの量を指定するオブジェクト。
 
-`Pred` 任意の式を返す`true`または`false`です。
+*Pred*を返す任意の式**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
 
-`cv_status::timeout` が経過したときに待機が終了した場合、最初のメソッドは `Rel_time` を返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+最初のメソッドを返します`cv_status::timeout`待機が終了したときに場合*Rel_time*が経過しました。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-2 番目のメソッドは、`Pred` の値を返します。
+2 番目のメソッドの値を返します*Pred*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のメソッドは `condition_variable` オブジェクトが [notify_one](#notify_one) または [notify_all](#notify_all) への呼び出しによって通知されるか、時間間隔 `Rel_time` が経過するまでブロックします。 また、擬似的に開始することもできます。
+最初のメソッドがブロックされるまで、`condition_variable`への呼び出しによってオブジェクトがシグナル状態[notify_one](#notify_one)または[notify_all](#notify_all)または時間間隔まで*Rel_time*が経過しました。 また、擬似的に開始することもできます。
 
 実際には、2 つ目のメソッドは次のコードを実行します。
 
@@ -213,19 +214,19 @@ bool wait_until(
 
 ### <a name="parameters"></a>パラメーター
 
-`Lck` A [unique_lock\<ミュー テックス >](../standard-library/unique-lock-class.md)オブジェクト。
+*Lck* A [unique_lock\<mutex >](../standard-library/unique-lock-class.md)オブジェクト。
 
-`Abs_time` A [chrono::time_point](../standard-library/time-point-class.md)オブジェクト。
+*Abs_time* A [chrono::time_point](../standard-library/time-point-class.md)オブジェクト。
 
-`Pred` 任意の式を返す`true`または`false`です。
+*Pred*を返す任意の式**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
 
-`cv_status` が経過すると待機が終了する場合に、`cv_status::timeout` 型の戻り値の `Abs_time` を返すメソッド。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+返すメソッドを`cv_status`戻り値を入力`cv_status::timeout`待機が終了したときに場合*Abs_time*が経過するとします。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-`bool` の `Pred` 戻り値を返すメソッド。
+返すメソッドを**bool**の値を返す*Pred*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のメソッドは `condition_variable` オブジェクトが [notify_one](#notify_one) または [notify_all](#notify_all) への呼び出しによって通知されるか、`Abs_time` までブロックします。 また、擬似的に開始することもできます。
 

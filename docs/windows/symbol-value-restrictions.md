@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889555"
 ---
 # <a name="symbol-value-restrictions"></a>シンボル値の制限
 シンボル値には、#define プリプロセッサ ディレクティブに対して通常の方法で表現される整数を指定できます。 シンボル値の例をいくつか次に示します。  

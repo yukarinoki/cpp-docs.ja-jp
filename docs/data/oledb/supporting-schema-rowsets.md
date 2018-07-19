@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111758"
 ---
 # <a name="supporting-schema-rowsets"></a>スキーマ行セットのサポート
 スキーマ行セットでは、コンシューマーはその基になる構造体、またはスキーマを知らなくてもデータ ストアの情報を取得できるようにします。 たとえば、データ ストアには、そのため、読み込むことを除く、スキーマの知識を確認する方法ではありませんは、ユーザー定義の階層に編成されるテーブルがあります。 (別の例としてメモ、Visual C ウィザードでスキーマ行セットを使用して、コンシューマーのアクセサーを生成することです。)これを行うコンシューマーを許可するには、プロバイダーのセッション オブジェクトでメソッドを公開、 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)インターフェイスです。 Visual C アプリケーションで使用して、 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)を実装するクラス**IDBSchemaRowset**です。  

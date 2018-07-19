@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de12a21c4b411f3cd1fe25d7d6badd8d26318351
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929813"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールの描画
 この記事では、ActiveX コントロールの描画プロセスとプロセスを最適化する描画コードを変更する方法について説明します。 (を参照してください[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)ないコントロールを個別に描画を最適化する方法の手法が以前に選択した GDI オブジェクトを復元します。 すべてのコントロールの描画されたが、コンテナーが自動的に復元元のオブジェクトです。)  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX コントロールの描画プロセス  
  1 つの重要な違いと、MFC を使用して開発された他のアプリケーションのような描画プロセスに従うと ActiveX コントロールが最初に表示されますが再描画される、: ActiveX コントロールがアクティブまたは非アクティブな状態にすることができます。  
   
- アクティブなコントロールは、子ウィンドウで ActiveX コントロール コンテナーで表されます。 他のウィンドウと同様に、それ自体を描画時に、`WM_PAINT`メッセージを受信します。 コントロールの基底クラス、 [COleControl](../mfc/reference/colecontrol-class.md)でメッセージを処理、`OnPaint`関数。 この既定の実装を呼び出す、`OnDraw`コントロールの関数。  
+ アクティブなコントロールは、子ウィンドウで ActiveX コントロール コンテナーで表されます。 その他のウィンドウと同様が WM_PAINT メッセージを受信すると、それ自体を描画です。 コントロールの基底クラス、 [COleControl](../mfc/reference/colecontrol-class.md)でメッセージを処理、`OnPaint`関数。 この既定の実装を呼び出す、`OnDraw`コントロールの関数。  
   
  非アクティブなコントロールの描画方法が異なります。 コントロールがアクティブでない場合は、そのウィンドウは非表示、または存在しない場合は、描画メッセージを受け取ることができません。 コントロールのコンテナーを直接呼び出す代わりに、`OnDraw`コントロールの機能です。 これで、アクティブなコントロールの描画のプロセスとは異なります、`OnPaint`メンバー関数が呼び出されることはありません。  
   
@@ -62,12 +63,12 @@ ms.lasthandoff: 05/04/2018
   
  ActiveX コントロールの描画の既定の実装では、コントロール全体の領域を描画します。 これは単純なコントロールは、のための十分なが多くの場合、コントロールを再描画するは高速更新が必要な部分が再描画される、コントロール全体ではなくだけの場合。  
   
- `OnDraw`関数を渡すことによって最適化の簡単な方法を提供する`rcInvalid`、再描画が必要なコントロールの四角形の領域。 描画プロセスを高速化に通常領域よりも小さければ、コントロール全体、この領域を使用します。  
+ `OnDraw`関数を渡すことによって最適化の簡単な方法を提供する*rcInvalid*、再描画が必要なコントロールの四角形の領域。 描画プロセスを高速化に通常領域よりも小さければ、コントロール全体、この領域を使用します。  
   
 ##  <a name="_core_painting_your_control_using_metafiles"></a> メタファイルを使用して、コントロールの描画  
- ほとんどの場合、`pdc`パラメーターを`OnDraw`関数が画面デバイス コンテキスト (DC) を指します。 、または印刷プレビュー セッション中に、コントロールのイメージを印刷する場合に表示するために受信した DC が「メタファイル DC」と呼ばれる特殊な種類です。 送信された要求をすぐに処理するには、画面、DC とは異なりは、メタファイル DC は、後で再生するための要求を格納します。 コンテナー アプリケーションによっては、メタファイル デザイン モードでの DC を使用してコントロールのイメージをレンダリングすることもできます。  
+ ほとんどの場合、 *pdc*パラメーターを`OnDraw`関数が画面デバイス コンテキスト (DC) を指します。 、または印刷プレビュー セッション中に、コントロールのイメージを印刷する場合に表示するために受信した DC が「メタファイル DC」と呼ばれる特殊な種類です。 送信された要求をすぐに処理するには、画面、DC とは異なりは、メタファイル DC は、後で再生するための要求を格納します。 コンテナー アプリケーションによっては、メタファイル デザイン モードでの DC を使用してコントロールのイメージをレンダリングすることもできます。  
   
- 要求を描画するメタファイル使用できる 2 つのインターフェイス関数を使用して、コンテナー: **IViewObject::Draw** (この関数できますも呼び出される非メタファイルの描画の) と**IDataObject::GetData**です。 MFC フレームワークへの呼び出しは、DC は、パラメーターの 1 つとして渡されるメタファイル、ときに[COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)です。 これは、仮想メンバー関数であるため、特別な処理を実行するコントロール クラスのこの関数をオーバーライドします。 既定の動作`COleControl::OnDraw`です。  
+ 要求を描画するメタファイル使用できる 2 つのインターフェイス関数を使用して、コンテナー: `IViewObject::Draw` (この関数できますも呼び出される非メタファイルの描画の) と`IDataObject::GetData`です。 MFC フレームワークへの呼び出しは、DC は、パラメーターの 1 つとして渡されるメタファイル、ときに[COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)です。 これは、仮想メンバー関数であるため、特別な処理を実行するコントロール クラスのこの関数をオーバーライドします。 既定の動作`COleControl::OnDraw`です。  
   
  画面とメタファイルの両方のデバイス コンテキストで、コントロールに描画できるようにするには、画面とメタファイル DC の両方でサポートされているメンバー関数のみを使用する必要があります。 座標系をピクセル単位で計測いない可能性がありますに注意してください。  
   
@@ -75,11 +76,11 @@ ms.lasthandoff: 05/04/2018
   
 |円弧|BibBlt|弦|  
 |---------|------------|-----------|  
-|**楕円**|**Escape**|`ExcludeClipRect`|  
+|`Ellipse`|`Escape`|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**多角形**|`Polyline`|  
+|`Pie`|`Polygon`|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/04/2018
   
  関数は、メタファイルは記録されません[消去](../mfc/reference/cdc-class.md#drawfocusrect)、 [DrawIcon](../mfc/reference/cdc-class.md#drawicon)、 [DrawText](../mfc/reference/cdc-class.md#drawtext)、 [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn)、 [。FillRect](../mfc/reference/cdc-class.md#fillrect)、 [FrameRect](../mfc/reference/cdc-class.md#framerect)、[とき](../mfc/reference/cdc-class.md#graystring)、 [InvertRect](../mfc/reference/cdc-class.md#invertrect)、 [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)、および[TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)です。 メタファイル DC には実際には、デバイスに関連付けられていないためには、メタファイル DC を SetDIBits、GetDIBits、および CreateDIBitmap を使用できません。 エクスポート先として、SetDIBitsToDevice と StretchDIBits をメタファイル DC を使用できます。 [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc)、[ビットマップ](../mfc/reference/cbitmap-class.md#createcompatiblebitmap)、および[CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap)メタファイル DC で意味がありません。  
   
- メタファイル DC を使用する際に考慮する別のポイントは、座標系をピクセル単位で計測いない可能性があります。 この理由により、四角形に収まるように、描画コードを調整する必要がありますすべてに渡されます`OnDraw`で、`rcBounds`パラメーター。 これにより、コントロール外の描画、ため`rcBounds`コントロールのウィンドウのサイズを表します。  
+ メタファイル DC を使用する際に考慮する別のポイントは、座標系をピクセル単位で計測いない可能性があります。 この理由により、四角形に収まるように、描画コードを調整する必要がありますすべてに渡されます`OnDraw`で、 *rcBounds*パラメーター。 これにより、コントロール外の描画、ため*rcBounds*コントロールのウィンドウのサイズを表します。  
   
  コントロールのレンダリングをメタファイルを実装した後は、テスト コンテナーを使用して、メタファイルをテストします。 Test Container にアクセスする方法について詳しくは、「 [テスト コンテナーでのプロパティとイベントのテスト](../mfc/testing-properties-and-events-with-test-container.md) 」をご覧ください。  
   

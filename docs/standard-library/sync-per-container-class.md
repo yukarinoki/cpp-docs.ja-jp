@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af1db124d7fa73a9483d2c77f0a1e78349224023
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957122"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container クラス
 
@@ -39,7 +40,7 @@ class sync_per_container
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Cache`|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
+|*キャッシュ*|同期フィルターに関連付けられているキャッシュの型。 これは、[cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md)、[cache_suballoc](../standard-library/cache-suballoc-class.md) のいずれかです。|
 
 ### <a name="member-functions"></a>メンバー関数
 
@@ -47,7 +48,7 @@ class sync_per_container
 |-|-|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
@@ -65,14 +66,14 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Cache`|同期フィルターのキャッシュ オブジェクト。|
-|`Other`|等しいかどうかを比較するキャッシュ オブジェクト。|
+|*キャッシュ*|同期フィルターのキャッシュ オブジェクト。|
+|*その他*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は常に `false` を返します。
+メンバー関数は常に返します**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

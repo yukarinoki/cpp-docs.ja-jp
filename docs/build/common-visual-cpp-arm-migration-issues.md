@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376235"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ の ARM への移行に関する一般的な問題
 

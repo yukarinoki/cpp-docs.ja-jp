@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386265"
 ---
 # <a name="l-value-and-r-value-expressions"></a>左辺値と右辺値の式
 メモリ位置を示す式は「左辺値」式と呼ばれます。 左辺値は記憶領域の "ロケーター" 値や、等号 (**=**) の左側に表示されることを意味する "左" 値を表します。 多くの場合、左辺値は識別子です。  

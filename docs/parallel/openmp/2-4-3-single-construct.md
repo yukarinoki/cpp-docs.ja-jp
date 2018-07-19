@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690583"
 ---
 # <a name="243-single-construct"></a>2.4.3 single コンストラクト
 **単一**ディレクティブが関連付けられている構造化ブロックが、チーム (必ずしもマスター スレッド) 内の 1 つだけのスレッドによって実行されることを指定する構成を識別します。 構文、**単一**ディレクティブは、次のようにします。  

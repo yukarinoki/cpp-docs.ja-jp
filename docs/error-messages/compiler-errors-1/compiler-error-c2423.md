@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195855"
 ---
 # <a name="compiler-error-c2423"></a>コンパイラ エラー C2423
 'number': 無効な小数点以下桁数  

@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e7153fa77c7a0aa213bfb01587f2ea080c6ddd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f6a9fa05a4cb8c421a511a30fd62310d69003fde
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966434"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) に置き換えられています。このマクロは、[チェックを行う反復子](../standard-library/checked-iterators.md)を有効にするかどうかを定義します。 既定では、チェックを行う反復子はデバッグ ビルドで有効になっており、製品版ビルドで無効になっています。
 
 > [!IMPORTANT]
-> `_SECURE_SCL` マクロは直接非推奨とされました。 代わりに、`_ITERATOR_DEBUG_LEVEL` を使用して、チェックを行う反復子の設定を制御します。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)」を参照してください。
+> _SECURE_SCL マクロの直接的な使用は非推奨とされます。 代わりに、コントロールを使用して _ITERATOR_DEBUG_LEVEL は反復子の設定を確認します。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-チェックを行う反復子が有効になっている場合、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 チェックを行う反復子を有効にするには、`_ITERATOR_DEBUG_LEVEL` を 1 または 2 に設定します。 これは、`_SECURE_SCL` を 1 または enabled に設定するのと同等です。
+チェックを行う反復子が有効になっている場合、反復子の安全でない使用によってランタイム エラーが発生し、プログラムが終了します。 Checked 反復子を有効にするには、1 または 2 に _ITERATOR_DEBUG_LEVEL を設定します。 これは、1 の _SECURE_SCL 設定に相当または有効になっています。
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 1
 ```
 
-チェックを行う反復子を無効にするには、`_ITERATOR_DEBUG_LEVEL` を 0 に設定します。 これは、`_SECURE_SCL` を 0 または disabled に設定するのと同等です。
+Checked 反復子を無効にするには、_ITERATOR_DEBUG_LEVEL を 0 に設定します。 これは 0、_SECURE_SCL 設定に相当または無効になっています。
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0

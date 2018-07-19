@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881004"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++ のジェネリックの概要
 ジェネリックは、共通言語ランタイムでサポートされているパラメーター化された型です。 パラメーター化された型は、ジェネリックを使用する場合に指定されている不明な型パラメーターで定義されている型です。  

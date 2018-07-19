@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128798"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>方法: gcnew を使用して値型を作成し、暗黙的なボックス化を使用する
 使用して[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)値の型が、管理、ガベージ コレクトされたヒープに配置することができます、ボックス化された値の型を作成します。  

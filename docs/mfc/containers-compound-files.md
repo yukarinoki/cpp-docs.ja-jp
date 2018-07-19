@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930226"
 ---
 # <a name="containers-compound-files"></a>コンテナー : 複合ファイル
 この記事では、コンポーネントと複合ファイルと利点の実装の長所と短所、OLE アプリケーションで複合ファイルについて説明します。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
 -   ディレクトリのように、ストレージ オブジェクトには、その他の記憶域とストリーム オブジェクトを含めることができます。  
   
--   **LockBytes**オブジェクトは、記憶域オブジェクトと、物理ハードウェア間のインターフェイスを表します。 実際のバイト数がどのような記憶域デバイスに書き込まれる方法を判断する、 **LockBytes**オブジェクトにアクセスする、ハード ドライブなどのグローバル メモリの領域。 詳細については**LockBytes**オブジェクトおよび`ILockBytes`インターフェイスを参照してください、 *OLE プログラマーズ リファレンス*です。  
+-   `LockBytes` オブジェクトは、記憶域オブジェクトと、物理ハードウェア間のインターフェイスを表します。 実際のバイト数がどのような記憶域デバイスに書き込まれる方法を判断する、`LockBytes`オブジェクトにアクセスする、ハード ドライブなどのグローバル メモリの領域。 詳細については`LockBytes`オブジェクトおよび`ILockBytes`インターフェイスを参照してください、 *OLE プログラマーズ リファレンス*です。  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> 複合ファイルの長所と短所  
  複合ファイルでは、ファイル ストレージの以前のメソッドで不可の利点があります。 Windows コモン コントロールには以下が含まれます。  

@@ -1,5 +1,5 @@
 ---
-title: sizeof 演算子 |Microsoft ドキュメント
+title: sizeof 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff35b6ef4674121a645fb3d80c96f5da3edded9f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58724d2e17947c69d1aaf2ed0af66137fe20cc74
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943294"
 ---
 # <a name="sizeof-operator"></a>sizeof 演算子
-型 `char` のサイズに対するオペランドのサイズが出力されます。  
+型のサイズに対するオペランドのサイズが得られます**char**します。  
   
 > [!NOTE]
->  については、`sizeof ...`演算子を参照してください[楕円および可変値引数テンプレート](../cpp/ellipses-and-variadic-templates.md)です。  
+>  については、`sizeof ...`演算子を参照してください[楕円および可変個引数テンプレート](../cpp/ellipses-and-variadic-templates.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,20 +36,20 @@ sizeof unary-expression
 sizeof  ( type-name )  
 ```  
   
-## <a name="remarks"></a>コメント  
- 結果、`sizeof`演算子は型`size_t`、インクルード ファイルで定義されている整数型\<stddef.h >。 この演算子を使うと、コンピューターに依存するデータ サイズをプログラムで指定せずに済みます。  
+## <a name="remarks"></a>Remarks  
+ 結果、 **sizeof**演算子`size_t`、インクルード ファイルで定義されている整数型\<stddef.h >。 この演算子を使うと、コンピューターに依存するデータ サイズをプログラムで指定せずに済みます。  
   
- `sizeof` のオペランドには、次のいずれかを指定できます。  
+ オペランド**sizeof**次のいずれかを指定できます。  
   
--   型の名前。 `sizeof` を型名を指定して使用するには、名前をかっこで囲む必要があります。  
+-   型の名前。 使用する**sizeof**型の名前を持つ名前をかっこで囲む必要があります。  
   
--   任意の式を指定します。 式で使用する場合、`sizeof` はかっこ付きでもかっこなしでも指定できます。 式は評価されません。  
+-   任意の式を指定します。 式を使用すると**sizeof**またはかっこがない場合に指定することができます。 式は評価されません。  
   
- `sizeof` 演算子を `char` 型のオブジェクトに適用すると、1 になります。 `sizeof` 演算子を配列に適用すると、配列識別子によって表されるポインターのサイズではなく、その配列の合計バイト数になります。 配列識別子によって表されるポインターのサイズを取得するには、`sizeof` を使用する関数にそれをパラメーターとして渡します。 例えば:  
+ ときに、 **sizeof**演算子は型のオブジェクトに適用**char**1 になります。 ときに、 **sizeof**演算子が配列に適用される場合、配列識別子によって表されるポインターのサイズではなく、その配列内のバイトの合計数になります。 配列識別子によって表されるポインターのサイズを取得することをパラメーターとして渡す関数を使用する**sizeof**します。 例えば:  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 #include <iostream>  
 using namespace std;  
   
@@ -72,25 +73,25 @@ int main()
   
 ## <a name="sample-output"></a>出力例  
   
-```  
+```Output  
 The size of a char is: 1  
 The length of Hello, world! is: 14  
 The size of the pointer is 4  
 ```  
   
- `sizeof` 演算子を `class`、`struct`、または `union` 型に適用すると、結果はその型のオブジェクトのバイト数に、ワード境界にメンバーをアラインするために追加されたパディングを加えたものになります。 結果は、個々のメンバーのストレージ要件を追加することで計算されたサイズには必ずしも対応しません。 [/Zp](../build/reference/zp-struct-member-alignment.md)コンパイラ オプションおよび[パック](../preprocessor/pack.md)プラグマは、メンバーのアラインメント境界に影響します。  
+ ときに、 **sizeof**演算子に適用されます、**クラス**、**構造体**、または**共用体**型、結果は、そのオブジェクト内のバイトの数単語の境界にメンバーをアラインする追加の埋め込みと入力します。 結果は、個々のメンバーのストレージ要件を追加することで計算されたサイズには必ずしも対応しません。 [/Zp](../build/reference/zp-struct-member-alignment.md)コンパイラ オプションおよび[パック](../preprocessor/pack.md)プラグマは、メンバーのアラインメント境界に影響します。  
   
- `sizeof` 演算子は、空のクラスの場合でも 0 を生成しません。  
+ **Sizeof**演算子は空のクラスの場合でも、0 を生成することはありません。  
   
- `sizeof` 演算子は、次のオペランドには使用できません。  
+ **Sizeof**演算子は、次のオペランドでは使用できません。  
   
--   関数  (ただし、関数へのポインターに `sizeof` を適用することはできます)。  
+-   関数  (ただし、 **sizeof**関数へのポインターに適用できます)。  
   
 -   ビット フィールド。  
   
 -   定義されていないクラス。  
   
--   型 `void`。  
+-   型**void**します。  
   
 -   動的に割り当てられる配列。  
   
@@ -100,13 +101,13 @@ The size of the pointer is 4
   
 -   かっこで囲まれた不完全な型の名前。  
   
- `sizeof` 演算子を参照に適用すると、結果は `sizeof` をオブジェクト自体に適用した場合と同じです。  
+ ときに、 **sizeof**演算子は参照に適用、結果は、同じまるで**sizeof**オブジェクト自体に適用されている必要があります。  
   
- 可変長配列が構造の最後の要素である場合、`sizeof` 演算子は配列のない構造体のサイズを返します。  
+ 可変長配列が構造体の最後の要素の場合、 **sizeof**演算子は配列のない構造体のサイズを返します。  
   
- `sizeof` 演算子は、通常、次の形式の式を使用して配列の要素の数を計算するために使用されます。  
+ **Sizeof**形式の式を使用して、配列内の要素の数を計算する演算子が使用される多くの場合。  
   
-```  
+```cpp 
 sizeof array / sizeof array[0]  
 ```  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243562"
 ---
 # <a name="compiler-error-c3022"></a>コンパイラ エラー C3022
 'clause': スケジュールの種類 'value' が OpenMP 'directive' ディレクティブで無効です  

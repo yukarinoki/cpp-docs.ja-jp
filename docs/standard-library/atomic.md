@@ -58,11 +58,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74dc0fde7ea066707bb6e93592420009b882ee21
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 54ea69a53204de2d304340ed042b3ba028dd404c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966642"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/07/2018
 #include <atomic>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 > [!NOTE]
 > 使用してコンパイルされたコードで **/clr**、このヘッダーはブロックされます。
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/07/2018
 
 **C++11**: 通知ハンドラーでは、`obj.is_lock_free()` または `atomic_is_lock_free(x)` が true の場合、オブジェクト `obj` でのアトミック操作を実行できます。
 
-クラス [atomic_flag](../standard-library/atomic-flag-structure.md) は、`bool` フラグを保持する最小のアトミック型を提供します。 その操作は常にロック制御不要です。
+クラスは、 [atomic_flag](../standard-library/atomic-flag-structure.md)を保持する最小のアトミック型の提供、 **bool**フラグ。 その操作は常にロック制御不要です。
 
 テンプレート クラス `atomic<T>` はその引数の型 `T` のオブジェクトを格納し、その格納されている値へのアトミック アクセスを提供します。 これは、[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) を使用してコピーでき、[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) を使用して等価性をテストできる任意の型を使用してインスタンス化することができます。 具体的には、これらの要件を満たすユーザー定義の型と、多くの場合、浮動小数点型で使用できます。
 
@@ -109,20 +110,20 @@ ms.lasthandoff: 05/07/2018
 
 |`atomic_integral` の型|整数型|`atomic_is_lock_free` マクロ|
 |----------------------------|-------------------|---------------------------------|
-|`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_uchar`|`unsigned char`|`ATOMIC_CHAR_LOCK_FREE`|
-|`atomic_char16_t`|`char16_t`|`ATOMIC_CHAR16_T_LOCK_FREE`|
-|`atomic_char32_t`|`char32_t`|`ATOMIC_CHAR32_T_LOCK_FREE`|
-|`atomic_wchar_t`|`wchar_t`|`ATOMIC_WCHAR_T_LOCK_FREE`|
-|`atomic_short`|`short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_ushort`|`unsigned short`|`ATOMIC_SHORT_LOCK_FREE`|
-|`atomic_int`|`int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_uint`|`unsigned int`|`ATOMIC_INT_LOCK_FREE`|
-|`atomic_long`|`long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_ulong`|`unsigned long`|`ATOMIC_LONG_LOCK_FREE`|
-|`atomic_llong`|`long long`|`ATOMIC_LLONG_LOCK_FREE`|
-|`atomic_ullong`|`unsigned long long`|`ATOMIC_LLONG_LOCK_FREE`|
+|`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**符号付き文字**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
+|`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
+|`atomic_wchar_t`|**wchar_t**|ATOMIC_WCHAR_T_LOCK_FREE|
+|`atomic_short`|**short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_ushort`|**unsigned short**|ATOMIC_SHORT_LOCK_FREE|
+|`atomic_int`|**int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_uint`|**unsigned int**|ATOMIC_INT_LOCK_FREE|
+|`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
+|`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**符号なし long long 型**|ATOMIC_LLONG_LOCK_FREE|
 
 Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型のアトミック テンプレートの特殊化のために存在します。
 
@@ -161,14 +162,14 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 
 ## <a name="structs"></a>構造体
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
 |[atomic 構造体](../standard-library/atomic-structure.md)|格納された値に対してアトミック操作を実行するオブジェクトについて記述します。|
-|[atomic_flag 構造体](../standard-library/atomic-flag-structure.md)|`bool` フラグをアトミックに設定およびクリアするオブジェクトについて記述します。|
+|[atomic_flag 構造体](../standard-library/atomic-flag-structure.md)|アトミックに設定し、クリアするオブジェクトについて説明します、 **bool**フラグ。|
 
 ## <a name="enums"></a>列挙体
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
 |[memory_order 列挙型](../standard-library/atomic-enums.md#memory_order_enum)|メモリ位置に対する同期操作のシンボル名を提供します。 これらの操作は、1 つのスレッドの割り当てが別のスレッドにおいて表示される方法に影響します。|
 
@@ -176,7 +177,7 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 
 次の一覧では、末尾が `_explicit` ではない関数は、`memory_order_seq_cst` の暗黙的な [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数を持っている場合を除き、対応する `_explicit` のセマンティクスを持っています。
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|*アトミックの比較および交換*の操作を実行します。|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|*アトミックの比較および交換*の操作を実行します。|
@@ -194,10 +195,10 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|指定した値を格納されている既存の値から減算します。|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|指定されている値と格納されている既存の値でビットごとの `exclusive or` を実行します。|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|指定されている値と格納されている既存の値でビットごとの `exclusive or` を実行します。|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|`atomic_flag` オブジェクト内のフラグを `false` に設定します。|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|`atomic_flag` オブジェクト内のフラグを `false` に設定します。|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|`atomic_flag` オブジェクト内のフラグを `true` に設定します。|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|`atomic_flag` オブジェクト内のフラグを `true` に設定します。|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|内のフラグ設定、`atomic_flag`オブジェクトを**false**します。|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|内のフラグ設定、`atomic_flag`オブジェクトを**false**します。|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|内のフラグ設定、`atomic_flag`オブジェクトを**true**します。|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|内のフラグ設定、`atomic_flag`オブジェクトを**true**します。|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|`atomic` オブジェクトに格納されている値を設定します。|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|指定されたオブジェクトに対するアトミック操作がロック制御不要かどうかを指定します。|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|アトミックに値を取得します。|

@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891819"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>リソース エディターでのリソースの表示と編集
 各リソースの種類には、そのリソースの種類に固有のリソース エディターがあります。 再配置してサイズを変更する、コントロールや機能を追加するか、またはそれ以外の場合、関連付けられているエディターを使用してリソースの側面を変更できます。 内のリソースを編集することもできます。[テキスト形式](../windows/how-to-open-a-resource-script-file-in-text-format.md)と[バイナリ形式](../windows/opening-a-resource-for-binary-editing.md)です。  

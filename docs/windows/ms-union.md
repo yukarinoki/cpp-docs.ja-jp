@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882038"
 ---
 # <a name="msunion"></a>ms_union
 カプセル化されていない共用体のネットワーク データ表現のアラインメントを制御します。  

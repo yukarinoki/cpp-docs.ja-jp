@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375917"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>DLL の遅延読み込みの制約
 インポートの遅延読み込みには制約があります。  

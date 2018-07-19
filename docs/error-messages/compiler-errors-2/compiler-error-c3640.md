@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267187"
 ---
 # <a name="compiler-error-c3640"></a>コンパイラ エラー C3640
 'member': ローカル クラスの参照されたまたは仮想メンバー関数を定義する必要があります  

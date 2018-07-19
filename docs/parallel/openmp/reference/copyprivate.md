@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692939"
 ---
 # <a name="copyprivate"></a>copyprivate
 すべてのスレッド間で 1 つまたは複数の変数を共有する必要がありますを指定します。  

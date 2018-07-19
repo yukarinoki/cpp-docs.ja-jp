@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387633"
 ---
 # <a name="example-program"></a>サンプル プログラム
 次の C ソース プログラムは 2 つのソース ファイルで構成されています。 C プログラムで使用できるさまざまな宣言と定義の一部について、概要を示します。 後のセクションでは、これらの宣言、定義、および初期化を記述する方法と、**static** や `extern` のような C のキーワードを使用する方法について説明します。 `printf` 関数は C ヘッダー ファイル STDIO.H. で宣言されます。  

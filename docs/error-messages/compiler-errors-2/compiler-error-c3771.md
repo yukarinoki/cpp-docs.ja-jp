@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272546"
 ---
 # <a name="compiler-error-c3771"></a>コンパイラ エラー C3771
 "identifier" : フレンド宣言が一番近い名前空間スコープに見つかりませんでした  

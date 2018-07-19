@@ -1,5 +1,5 @@
 ---
-title: '方法: 移動コンス トラクターと移動代入演算子 (C++) の定義 |Microsoft ドキュメント'
+title: '方法: 移動コンス トラクターと移動代入演算子 (C++) の定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028152"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動コンストラクターと移動代入演算子 (C++)
-このトピックの内容を記述する方法を説明します、*移動コンス トラクター*と C++ のクラスの移動代入演算子。 移動コンス トラクターは、右辺値をコピーすることがなく左辺値に移動するオブジェクトによって所有されているリソースを使用できます。 移動セマンティクスの詳細については、次を参照してください。[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)です。  
+このトピックでは、記述する方法を説明します、*移動コンス トラクター*と C++ のクラスの移動代入演算子。 移動コンス トラクターには、右辺値をコピーせず、左辺値に移動するオブジェクトによって所有されているリソースができます。 移動セマンティクスの詳細については、次を参照してください。[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。  
   
  このセクションは、メモリ バッファーを管理する次の C++ クラス、`MemoryBlock` に基づいています。  
   
@@ -225,7 +226,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>例  
- 次の例は、移動セマンティクスがアプリケーションのパフォーマンスをどのように改善するかを示します。 この例では、2 つの要素をベクター オブジェクトに追加し、2 つの既存の要素の間に新しい要素を挿入しています。 `vector`移動セマンティクスをコピーすることではなくベクトルの要素を移動することによって、挿入操作を効率的に実行クラス使用します。  
+ 次の例は、移動セマンティクスがアプリケーションのパフォーマンスをどのように改善するかを示します。 この例では、2 つの要素をベクター オブジェクトに追加し、2 つの既存の要素の間に新しい要素を挿入しています。 `vector`クラスは、移動セマンティクスを効率的にコピーすることではなくベクトルの要素を移動することによって、挿入操作を実行します。  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -302,7 +303,8 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  クラスに移動コンストラクターと移動代入演算子の両方を指定する場合、移動代入演算子を呼び出すように移動コンストラクターを記述することで、重複するコードを除去できます。 次の例は、移動代入演算子を呼び出す移動コンストラクターの変更済みのバージョンを示します。  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [Std::move](../standard-library/utility-functions.md#move)関数の rvalue プロパティを保持する、`other`パラメーター。  
+ [Std::move](../standard-library/utility-functions.md#move)関数の rvalue プロパティを保持する、*他*パラメーター。  
   
 ## <a name="see-also"></a>関連項目  
- [右辺値参照宣言子: & (& a)](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<ユーティリティ > に移動](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<ユーティリティ > に移動](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

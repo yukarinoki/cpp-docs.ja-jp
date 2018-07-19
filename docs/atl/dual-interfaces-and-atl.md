@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355047"
 ---
 # <a name="dual-interfaces-and-atl"></a>デュアル インターフェイスと ATL
 デュアル インターフェイスは、そのメソッドまたは vtable メソッドのディスパッチ インターフェイス メソッドとしてアクセスを許可します。 このセクションでは、ATL の観点からデュアル インターフェイスの機能の一部について説明します。  

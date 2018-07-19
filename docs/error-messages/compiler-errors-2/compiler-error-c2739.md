@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231850"
 ---
 # <a name="compiler-error-c2739"></a>コンパイラ エラー C2739
 'number': 明示的なマネージまたは WinRT 配列の次元は 1 から 32 の間でなければなりません  

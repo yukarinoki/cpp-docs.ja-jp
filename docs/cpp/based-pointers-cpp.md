@@ -1,5 +1,5 @@
 ---
-title: ベース ポインター (C++) |Microsoft ドキュメント
+title: ベース ポインター (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6cc2e45574d30ae1a544da78a4f7a75321a1156
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f24c2ad56f91be3ed413f6967e6e40749693fe1b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943300"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C++)
 **Microsoft 固有の仕様**  
   
- `__based` キーワードを使用すると、ポインター ベースのポインター (既存のポインターからのオフセットであるポインター) を宣言できます。  
+ **_ _Based**キーワードでは、ポインター (既存のポインターからのオフセットであるポインター) に基づくポインターを宣言できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,12 +38,12 @@ ms.lasthandoff: 05/03/2018
 type __based( base ) declarator   
 ```  
   
-## <a name="remarks"></a>コメント  
- ポインター アドレスに基づくポインターは、32 ビットまたは 64 ビット コンパイルで有効な `__based` キーワードの唯一の形式です。 Microsoft の 32 ビット C/C++ コンパイラでは、based ポインターは 32 ビットのポインター ベースからの 32 ビットのオフセットになります。 同様の制限は 64 ビット環境にもあり、based ポインターは 64 ビット ベースからの 64 ビット オフセットになります。  
+## <a name="remarks"></a>Remarks  
+ ポインター アドレスに基づくポインターは唯一の形式では、 **_ _based** 32 ビットまたは 64 ビット コンパイルで有効なキーワード。 Microsoft の 32 ビット C/C++ コンパイラでは、based ポインターは 32 ビットのポインター ベースからの 32 ビットのオフセットになります。 同様の制限は 64 ビット環境にもあり、based ポインターは 64 ビット ベースからの 64 ビット オフセットになります。  
   
  ポインターに基づいたポインターの使用方法の 1 つは、ポインターを含む永続的な識別子での使用です。 ポインターに基づくポインターで構成されるリンク リストをディスクに保存でき、メモリ内の別の場所に再読み込みしても、ポインターは有効なままです。 例えば:  
   
-```  
+```cpp 
 // based_pointers1.cpp  
 // compile with: /c  
 void *vpBuffer;  
@@ -55,16 +56,16 @@ struct llist_t {
  ポインター `vpBuffer` には、プログラムの後の段階で割り当てられるメモリ アドレスが代入されます。 リンク リストは `vpBuffer` の値を基準として再配置されます。  
   
 > [!NOTE]
->  使用してポインターを含む識別子の永続化を実行することできますも[メモリ マップト ファイル](http://msdn.microsoft.com/library/windows/desktop/aa366556)です。  
+>  使用してポインターを含む識別子の永続化を行うことできますも[メモリ マップト ファイル](http://msdn.microsoft.com/library/windows/desktop/aa366556)します。  
   
  based ポインターを逆参照する場合、ベースは、明示的に指定されているか、または宣言によって暗黙的に認識されている必要があります。  
   
- 以前のバージョンとの互換性のため **_based**の同意語です`__based`です。  
+ 以前のバージョンとの互換性のため **_based**のシノニムです **_ _based**します。  
   
 ## <a name="example"></a>例  
  次のコードは、ベースの変更による based ポインターの変更を示します。  
   
-```  
+```cpp 
 // based_pointers2.cpp  
 // compile with: /EHsc  
 #include <iostream>  

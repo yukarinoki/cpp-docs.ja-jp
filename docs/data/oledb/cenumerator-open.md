@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096926"
 ---
 # <a name="cenumeratoropen"></a>CEnumerator::Open
 モニカーを指定すると、いずれかの場合は、列挙子を呼び出すことによって、行セットを取得、列挙子のバインド[isourcesrowset:](https://msdn.microsoft.com/en-us/library/ms711200.aspx)です。  

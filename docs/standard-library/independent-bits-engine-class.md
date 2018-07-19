@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f89e6e0fc83a83ece82793050441fec9a1e7978b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f802dc91c3429ba718778d122d1a787aad0dec87
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964224"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine クラス
 
@@ -35,11 +36,11 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-`Engine` ベース エンジンの種類。
+*エンジン*ベース エンジンの種類。
 
-`W` **ワード サイズ**です。 生成される各数値のサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W* **ワード サイズ**します。 生成される各数値のサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-`UIntType` 結果の型が符号なし整数。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*UIntType*符号なし整数の結果の型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="members"></a>メンバー
 
@@ -50,11 +51,11 @@ class independent_bits_engine;
 
 エンジンのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ベースのエンジンから返された値のビットを再パックして `W` ビットの値にすることで値を生成する*エンジン アダプター*を表します。
+このテンプレート クラスについて説明します、*エンジン アダプター*結果として、ベースのエンジンによって返される値のビットを再パックすることで値を生成する*W*-ビット値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 

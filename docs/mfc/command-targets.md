@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341298"
 ---
 # <a name="command-targets"></a>コマンド ターゲット
 図[フレームワークにおけるコマンド](../mfc/user-interface-objects-and-command-ids.md)メニュー項目とその結果、コマンド オブジェクトがクリックされたときに実行するためにフレームワークから呼び出されるハンドラー関数などのユーザー インターフェイス オブジェクト間の接続を示しています。  

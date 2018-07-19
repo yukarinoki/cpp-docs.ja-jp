@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057670"
 ---
 # <a name="union"></a>UNION
 1 つまたは複数のデータ型の共用体を宣言します。 *Fielddeclarations*有効なデータの定義をする必要があります。 省略、[終了](../../assembler/masm/ends-masm.md)*名前*ラベルの上に入れ子になった**共用体**定義します。  

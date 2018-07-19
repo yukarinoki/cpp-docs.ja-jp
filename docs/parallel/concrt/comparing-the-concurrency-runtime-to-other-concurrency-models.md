@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694070"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>同時実行ランタイムとその他の同時実行モデルの比較
 このドキュメントでは、同時実行ランタイムとその他のテクノロジの機能やプログラミング モデルの違いについて説明します。 同時実行ランタイムのメリットと他のプログラミング モデルのメリットの違いを理解しておくことによって、アプリケーションの要件に最も適したテクノロジを選択できます。  

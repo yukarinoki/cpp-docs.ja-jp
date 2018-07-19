@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930824"
 ---
 # <a name="handlers-for-message-map-ranges"></a>範囲内のメッセージのハンドラー
 この記事では、メッセージの範囲を (1 つのメッセージを 1 つだけの関数にマッピング) ではなく 1 つのメッセージ ハンドラー関数にマップする方法について説明します。  
@@ -95,7 +96,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- 1 つのコマンド ハンドラー関数には、パラメーターを通常使用するものはありません。 更新ハンドラー関数を除くメッセージ マップの範囲をハンドラー関数は、余分なパラメーターを必要と`nID`、型の**UINT**です。 このパラメーターは、最初のパラメーターです。 このパラメーターには、ユーザーが実際に選択したコマンドを指定するために必要なコマンド ID が対応しています。  
+ 1 つのコマンド ハンドラー関数には、パラメーターを通常使用するものはありません。 更新ハンドラー関数を除くメッセージ マップの範囲をハンドラー関数は、余分なパラメーターを必要と*nID*、型の**UINT**です。 このパラメーターは、最初のパラメーターです。 このパラメーターには、ユーザーが実際に選択したコマンドを指定するために必要なコマンド ID が対応しています。  
   
  更新ハンドラー関数のパラメーターの要件の詳細については、次を参照してください。[例の Id の範囲コマンド](#_core_example_for_a_range_of_command_ids)です。  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 05/04/2018
   
 -   2 つのコマンド Id、開始と、連続した範囲を終了します。  
   
-     ここでは`ID_VIEW_ZOOM25`と`ID_VIEW_ZOOM300`です。  
+     ここでは**ID_VIEW_ZOOM25**と**ID_VIEW_ZOOM300**です。  
   
 -   コマンドのハンドラー関数の名前。  
   
@@ -118,9 +119,9 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- 更新ハンドラー関数の場合と同様より広範に使用できる可能性があります。 よく書き込む`ON_UPDATE_COMMAND_UI`コマンドの数のハンドラーを書き込み、またはコピーを同じコードを繰り返し、自分で検索します。 ソリューションは、さまざまなコマンド ハンドラー関数を使用して Id を 1 つの更新をマップする、`ON_UPDATE_COMMAND_UI_RANGE`マクロです。 コマンド Id は、連続する範囲を形成する必要があります。 例については、次を参照してください。、 **OnUpdateZoom**ハンドラーとその`ON_UPDATE_COMMAND_UI_RANGE`hiersvr のビュー クラスのメッセージ マップ エントリです。  
+ 更新ハンドラー関数の場合と同様より広範に使用できる可能性があります。 よく書き込む`ON_UPDATE_COMMAND_UI`コマンドの数のハンドラーを書き込み、またはコピーを同じコードを繰り返し、自分で検索します。 ソリューションは、さまざまなコマンド ハンドラー関数を使用して Id を 1 つの更新をマップする、`ON_UPDATE_COMMAND_UI_RANGE`マクロです。 コマンド Id は、連続する範囲を形成する必要があります。 例については、次を参照してください。、`OnUpdateZoom`ハンドラーとその`ON_UPDATE_COMMAND_UI_RANGE`hiersvr のビュー クラスのメッセージ マップ エントリです。  
   
- 通常実行する 1 つのコマンドは、単一のパラメーターのハンドラー関数を更新する`pCmdUI`、型の**CCmdUI\*** です。 ハンドラー関数とは異なりメッセージ マップの範囲の更新プログラム ハンドラー関数が不要で追加のパラメーター `nID`、型の**UINT**です。 ユーザーが実際に選択したコマンドを指定するため、コマンド ID がで見つかった、`CCmdUI`オブジェクト。  
+ 通常実行する 1 つのコマンドは、単一のパラメーターのハンドラー関数を更新する*対応付けられた*、型の`CCmdUI*`します。 ハンドラー関数とは異なりメッセージ マップの範囲の更新プログラム ハンドラー関数が不要で追加のパラメーター *nID*、型の**UINT**です。 ユーザーが実際に選択したコマンドを指定するため、コマンド ID がで見つかった、`CCmdUI`オブジェクト。  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> 範囲のコントロール Id の例  
  もう 1 つの興味深い例では、コントロール Id の範囲に対するコントロール通知メッセージを 1 つのハンドラーにマップします。 たとえば、ユーザーが 10 個のボタンをクリックします。 10 のすべてのボタンを 1 つのハンドラーにマップするには、メッセージ マップ エントリは次のようになります。  
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/04/2018
   
 -   コントロールの範囲に関連付けられているコントロールの ID 値です。  
   
-     ここではこれら`IDC_BUTTON1`と`IDC_BUTTON10`です。  
+     ここではこれら**IDC_BUTTON1**と**IDC_BUTTON10**です。  
   
 -   メッセージ ハンドラー関数の名前。  
   

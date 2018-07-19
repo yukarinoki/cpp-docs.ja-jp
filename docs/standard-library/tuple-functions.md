@@ -17,11 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: d6f921f85ffc6ef6d7985d66fe8637f044965176
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966408"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 関数
 
@@ -63,17 +64,21 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>パラメーター
 
-`Index` 取得する要素のインデックス。
+*Index*  
+ 取得する要素のインデックス。
 
-`Types` 宣言の順序で、タプルで宣言された型のシーケンス。
+*型*  
+ タプルで宣言された型のシーケンス (宣言順)。
 
-`T` 取得する要素の型。
+*T*  
+ 取得する要素の型。
 
-`Tuple` 任意の数の要素を含む std::tuple。
+*Tuple*  
+ 任意の数の要素を含む std::tuple。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数は、 `Index`オブジェクトのインデックス `T` 、または型 `tuple` の値への参照を返します。
+テンプレート関数は、インデックス位置にある値への参照を返す*インデックス*、または型の*T*で、`tuple`オブジェクト。
 
 タプルに含まれる型 T の要素の数が 1 より大きいか小さい場合、 `get<T>(Tuple)` を呼び出すと、コンパイラ エラーが生成されます。
 
@@ -117,11 +122,13 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の関数パラメーターの型。
+*TN*  
+ N 番目の関数パラメーターの型。
 
-`tN` N 番目の関数パラメーターの値。
+*TN*  
+ N 番目の関数パラメーターの値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)` を返します。ここで、各 `Vi` 型は、対応する `Ti` 型が `cv` `reference_wrapper<X>` である場合は `X&`、それ以外の場合は `Ti` になります。
 
@@ -173,9 +180,10 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>パラメーター
 
-`TN` N 番目の tuple 要素の基本データ型。
+*TN*  
+ N 番目の tuple 要素の基本データ型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)` を返します。
 

@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a410dae35771d89b9d9ae72c8221501f051d10e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f58622230541b0eedf4e7c73d12e81c36ea70fc9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953476"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-含める、`iostreams`標準ヘッダー \<iomanip > そのそれぞれ 1 つの引数を受け取る複数のマニピュレーターを定義します。
+含める、`iostreams`標準ヘッダー \<iomanip > 複数のマニピュレーターを定義するそのそれぞれ 1 つの引数を受け取ります。
 
 ## <a name="syntax"></a>構文
 
@@ -34,9 +35,9 @@ ms.lasthandoff: 05/07/2018
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各マニピュレーターは、`basic_istream`\<**Elem**, **Tr**>`::`[operator>>](../standard-library/istream-operators.md#op_gt_gt) と `basic_ostream`\<**Elem**, **Tr**>`::`[operator<<](../standard-library/ostream-operators.md#op_lt_lt) の両方をオーバーロードする、**T1** から **T10** の未指定の型を返します。
+これらのマニピュレーターの各と呼ばれる、未指定の型を返します`T1`を通じて`T10`、両方をオーバー ロード`basic_istream` \< **Elem**、 **Tr** >`::`[演算子 >>](../standard-library/istream-operators.md#op_gt_gt)と`basic_ostream` \< **Elem**、 **Tr** > `::` [演算子 <<](../standard-library/ostream-operators.md#op_lt_lt)します。
 
 ### <a name="manipulators"></a>マニピュレーター
 

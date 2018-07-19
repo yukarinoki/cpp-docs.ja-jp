@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688142"
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock クラス
 accelerator_view オブジェクトに対する D3D アクセス ロックの RAII ラッパーです。  

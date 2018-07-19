@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377856"
 ---
 # <a name="bscmake-options"></a>BSCMAKE オプション
 ここでは、BSCMAKE を制御するためのオプションを説明します。 一部のオプションでは、特定の情報を除外するか、または含めることによってブラウザー情報ファイルの内容を制御できます。 除外オプションを使用すると、BSCMAKE の処理が速くなるだけでなく、.bsc ファイルのサイズが小さくなります。 オプション名は大文字小文字を区別 (除く **/help**と **/NOLOGO**)。  

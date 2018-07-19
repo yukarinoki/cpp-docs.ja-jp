@@ -22,17 +22,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965878"
 ---
 # <a name="slice-class"></a>slice クラス
 
 親 valarray の 1 次元サブセットを定義するために使用する valarray のユーティリティ クラス。 valarray が配列内のすべての要素を持つ 2 次元行列と見なされる場合、スライスにより 2 次元配列のうち 1 次元のベクターが抽出されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 クラスは、[slice_array](../standard-library/slice-array-class.md) 型のオブジェクトを特徴とするパラメーターを格納します。クラスのスライスのオブジェクトが [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** クラスのオブジェクトの引数として現れる場合、valarray のサブセットは間接的に構築されます。 親の valarray から選択したサブセットを指定する格納値には、以下が含まれています。
 
@@ -60,7 +61,7 @@ valarray での操作は、スライスによって定義されたソースと�
 |[start](#start)|`valarray` のスライスの開始インデックスを検索します。|
 |[stride](#stride)|`valarray` のスライスにある要素間の距離を検索します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<valarray>
 
@@ -145,17 +146,17 @@ slice(
 
 ### <a name="parameters"></a>パラメーター
 
-`_StartIndex` サブセットの最初の要素の valarray のインデックス。
+*_StartIndex*サブセット内の最初の要素の valarray インデックス。
 
-`_Len` サブセット内の要素の数。
+*_Len*サブセット内の要素の数。
 
-`stride` サブセット内の要素間の距離。
+*stride*サブセット内の要素間の距離。
 
 ### <a name="return-value"></a>戻り値
 
-既定のコンストラクターは、開始インデックス、長さの合計、およびストライドに対して 0 を格納します。 2 番目のコンストラクターは、開始インデックスには `_StartIndex`、長さの合計には `_Len`、ストライドには `stride` を格納します。
+既定のコンストラクターは、開始インデックス、長さの合計、およびストライドに対して 0 を格納します。 2 番目のコンス トラクター ストア *_StartIndex* 、開始インデックスの *_Len*の合計の長さと*stride* stride の。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ストライドは負となる場合があります。
 

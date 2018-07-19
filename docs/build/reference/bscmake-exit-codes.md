@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369229"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE 終了コード
 BSCMAKE では、オペレーティング システムまたは呼び出し元のプログラム (リターン コードまたはエラー コードとも呼ばれます)、終了コードを返します。  

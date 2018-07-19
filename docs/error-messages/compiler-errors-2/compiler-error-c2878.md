@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244873"
 ---
 # <a name="compiler-error-c2878"></a>コンパイラ エラー C2878
 'name': 名前空間またはこの名前のクラスが存在しません  

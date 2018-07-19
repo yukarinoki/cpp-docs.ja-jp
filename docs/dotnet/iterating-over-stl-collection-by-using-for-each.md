@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131343"
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>For each を使用して、C++ 標準ライブラリのコレクションを反復処理します。
 `for each`キーワードは、C++ 標準ライブラリのコレクションを反復処理するために使用できます。  

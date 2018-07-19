@@ -1,5 +1,5 @@
 ---
-title: continue ステートメント (C++) |Microsoft ドキュメント
+title: continue ステートメント (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943866"
 ---
 # <a name="continue-statement-c"></a>continue ステートメント (C++)
-制御の転送を強制的に外側にある最小の制御式[は](../cpp/do-while-statement-cpp.md)、[の](../cpp/for-statement-cpp.md)、または[中](../cpp/while-statement-cpp.md)ループします。  
+外側にある最小の制御式を強制的にコントロールの転送[は](../cpp/do-while-statement-cpp.md)、[の](../cpp/for-statement-cpp.md)、または[中](../cpp/while-statement-cpp.md)ループします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,18 +32,18 @@ ms.lasthandoff: 05/03/2018
 continue;  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  現在のイテレーションの残りのステートメントは実行されません。 ループの次のイテレーションは、次のように決定されます。  
   
--   `do` または `while` ループ内では、次のイテレーションは `do` または `while` ステートメントの制御式を再評価することによって開始されます。  
+-   **は**または**中**、ループの制御式を再評価によって次の反復処理が開始されます、**は**または**中に**ステートメント。  
   
--   `for` ループ (構文 `for`(`init-expr`; `cond-expr`; `loop-expr`) を使用) では、`loop-expr` 句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。  
+-   **の**ループ (構文を使用して`for`(`init-expr`;`cond-expr`;`loop-expr`))、`loop-expr`句が実行されます。 次に、`cond-expr` 句が再評価され、その結果に応じて、ループが終了するか、別のイテレーションが発生します。  
   
- 次の例は、`continue` ステートメントを使用してコードのセクションをバイパスし、ループの次のイテレーションを開始する方法を示しています。  
+ 次の例は、**続行**コードのセクションをバイパスし、ループの次のイテレーションを開始するステートメントを使用できます。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

@@ -1,5 +1,5 @@
 ---
-title: _ _raise |Microsoft ドキュメント
+title: _ _raise |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bd00c89df69d655f42c06509ef0360eff0c092
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9a95f012b36e30c171fde1cbc8d28a21a074e281
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943264"
 ---
 # <a name="raise"></a>__raise
 イベントの呼び出しサイトを強調します。  
@@ -30,23 +31,21 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-__raise   
-method-declarator  
-;  
+__raise method-declarator;  
   
 ```  
   
-## <a name="remarks"></a>コメント  
- マネージ コードからは、イベントが定義されたクラス内からのみイベントを発生させることができます。 参照してください[イベント](../windows/event-cpp-component-extensions.md)詳細についてはします。  
+## <a name="remarks"></a>Remarks  
+ マネージド コードからは、イベントが定義されたクラス内からのみイベントを発生させることができます。 参照してください[イベント](../windows/event-cpp-component-extensions.md)詳細についてはします。  
   
- キーワード `__raise` は、非イベントを呼び出すときにエラーを生成します。  
+ キーワード **_ _raise**非イベントを呼び出す場合に生成されるエラーが発生します。  
   
 > [!NOTE]
 >  テンプレート クラスまたは構造体にイベントを含めることはできません。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // EventHandlingRef_raise.cpp  
 struct E {  
    __event void func1();  

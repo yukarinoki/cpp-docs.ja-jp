@@ -1,5 +1,5 @@
 ---
-title: BITMAP 構造体 |Microsoft ドキュメント
+title: BITMAP 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339348"
 ---
 # <a name="bitmap-structure"></a>BITMAP 構造体
-**ビットマップ**構造体は、高さ、幅、色の書式、および論理ビットマップのビット値を定義します。**です。**  
+**ビットマップ**構造体は、高さ、幅、色の書式、および論理ビットマップのビット値を定義します。**します。**  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  ラスター行数を使用してビットマップの高さを指定します。 高さは 0 より大きい値でなければなりません。  
   
  *bmWidthBytes*  
- 各ラスター行に含まれるバイト数を指定します。 グラフィック デバイス インターフェイス (GDI) は、ビットマップ形式のビット値が整数値 (2 バイト) の配列を形成することを想定するため、この値は偶数であることが必要です。 つまり、 **bmWidthBytes** \* 8 が 16 より大きいか等しい場合に得られる値の倍数にする必要があります、 **bmWidth**メンバーを掛けた、 **bmBitsPixel**メンバー。  
+ 各ラスター行に含まれるバイト数を指定します。 グラフィック デバイス インターフェイス (GDI) は、ビットマップ形式のビット値が整数値 (2 バイト) の配列を形成することを想定するため、この値は偶数であることが必要です。 つまり、 *bmWidthBytes* \* 8 は、ときに取得した値以上の 16 の倍数である必要があります、 *bmWidth*メンバーを乗算して、 *bmBitsPixel*メンバー。  
   
  *bmPlanes*  
  ビットマップ内でのカラー プレーンの数を指定します。  
@@ -59,9 +60,9 @@ typedef struct tagBITMAP {  /* bm */
  ピクセルを定義するために必要とされる各プレーンで、隣接するカラー ビット数を指定します。  
   
  *bmBits*  
- ビットマップのビット値が配置されている位置へのポインター。 **BmBits**メンバーは 1 バイト値の配列への long ポインターである必要があります。  
+ ビットマップのビット値が配置されている位置へのポインター。 *BmBits*メンバーは 1 バイト値の配列への long ポインターである必要があります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  現在使用されているビットマップ形式は、モノクロおよびカラーです。 モノクロ ビットマップは、1 ビット、1 プレーンのファイル形式を使用します。 各スキャンは 16 ビットの倍数です。  
   
  モノクロ ビットマップの高さのスキャンが次のように編成された*n*:  
@@ -82,11 +83,11 @@ typedef struct tagBITMAP {  /* bm */
   
  モノクロ デバイス上のピクセルは黒と白のどちらかです。 ビットマップ内で対応するビットが 1 の場合、そのピクセルはオン (白) になります。 ビットマップ内で対応するビットが 0 の場合、そのピクセルはオフ (黒) になります。  
   
- すべてのデバイスをサポートしているビットマップを**RC_BITBLT**ビットが設定、 **RASTERCAPS**のインデックス、[について](../../mfc/reference/cdc-class.md#getdevicecaps)メンバー関数。  
+ すべてのデバイスの RASTERCAPS インデックスのビット RC_BITBLT セット ビットマップをサポートする、[は](../../mfc/reference/cdc-class.md#getdevicecaps)メンバー関数。  
   
  各デバイスには、独自のカラー形式があります。 別に 1 つのデバイスからビットマップを転送するために使用して、 [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879)と[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 関数。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** wingdi.h  
   
 ## <a name="see-also"></a>関連項目  

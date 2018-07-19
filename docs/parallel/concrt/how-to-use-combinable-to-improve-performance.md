@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692091"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>方法: combinable を使用してパフォーマンスを向上させる
 この例を使用する方法を示しています、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラス内の数値の合計を計算する、 [std::array](../../standard-library/array-class-stl.md)素数であるオブジェクト。 `combinable` クラスは、共有状態を解消することでパフォーマンスを向上します。  

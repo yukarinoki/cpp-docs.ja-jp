@@ -1,5 +1,5 @@
 ---
-title: final 指定子 |Microsoft ドキュメント
+title: final 指定子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 594bc432cb12b63c76172b06ee078d5b0f72de55
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943165"
 ---
 # <a name="final-specifier"></a>final 指定子
-`final` キーワードを使用して、派生クラスでオーバーライドできない仮想関数を指定できます。 また、このキーワードは、継承できないクラスの指定にも使用できます。  
+使用することができます、**最終的な**キーワードを派生クラスでオーバーライドできない仮想関数を指定します。 また、このキーワードは、継承できないクラスの指定にも使用できます。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
   
 function-declaration final;  
-```  
-  
-```  
-  
 class class-name final base-classes  
 ```  
   
-## <a name="remarks"></a>コメント  
- `final` は状況依存のキーワードで、関数宣言またはクラス名の後で使用した場合にのみ特別な意味を持ちますが、それ以外の場合は予約済みのキーワードではありません。  
+## <a name="remarks"></a>Remarks  
+ **最終的な**は状況依存と予約済みキーワードではありません関数宣言の後に使用されますか、クラスの名前。 それ以外の場合、だけに特別な意味を持ちます。  
   
- `final` をクラス宣言内で使用した場合、その宣言の `base-classes` の部分は省略可能になります。  
+ ときに**最終的な**クラスの宣言で使用される、`base-classes`宣言の省略可能な部分です。  
   
 ## <a name="example"></a>例  
- 次の例では、`final` キーワードを使用して、仮想関数をオーバーライドできないことを指定しています。  
+ 次の例では、**最終的な**仮想関数をオーバーライドできないことを指定するキーワード。  
   
 ```cpp  
 class BaseClass  
@@ -58,9 +55,9 @@ class DerivedClass: public BaseClass
 };  
 ```  
   
- メンバー関数をオーバーライドできることを指定する方法については、次を参照してください。[オーバーライド指定子](../cpp/override-specifier.md)です。  
+ メンバー関数をオーバーライドできることを指定する方法については、次を参照してください。[オーバーライド指定子](../cpp/override-specifier.md)します。  
   
- 次の例では、`final` キーワードを使用して、クラスが継承できないことを指定しています。  
+ 次の例では、**最終**クラスを継承できないことを指定するキーワード。  
   
 ```cpp  
 class BaseClass final   

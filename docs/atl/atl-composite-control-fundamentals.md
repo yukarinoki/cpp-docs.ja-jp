@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354618"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 複合コントロールの基本
 複合コントロール (ダイアログ ボックスに似ています) を含めることができる ActiveX コントロールの種類は、他の ActiveX コントロールまたは Windows のコントロールです。 複合コントロールをビルドすると、その挿入できる ActiveX コントロールをホストできる任意の場所。  

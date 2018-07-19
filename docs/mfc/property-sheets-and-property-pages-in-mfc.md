@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348607"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>MFC のプロパティ シートとプロパティ ページ
 タブ ダイアログ ボックスとも呼ばれるプロパティ シートは、プロパティ ページを含むダイアログ ボックスです。 各プロパティ ページでは、ダイアログ テンプレート リソースに基づいており、コントロールが含まれています。 上部のタブで、ページに囲まれています。 タブ、ページの名前をその目的を示します。 ユーザーは、コントロールのセットを選択するプロパティ シートのタブをクリックします。  

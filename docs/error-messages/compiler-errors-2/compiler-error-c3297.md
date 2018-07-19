@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249367"
 ---
 # <a name="compiler-error-c3297"></a>コンパイラ エラー C3297
 'constraint_2':  'constraint_1' に値の制約があるために、'constraint_1' は制約として使用できません  

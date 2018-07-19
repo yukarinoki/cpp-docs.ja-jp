@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345557"
 ---
 # <a name="collections"></a>コレクション
 Microsoft Foundation Class ライブラリでは、オブジェクトのグループを管理するコレクション クラスを提供します。 これらのクラスは、次の 2 種類があります。  

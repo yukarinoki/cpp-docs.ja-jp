@@ -1,5 +1,5 @@
 ---
-title: main 関数に関する制約 |Microsoft ドキュメント
+title: main 関数に関する制約 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5be2df6e152b26bcade1970b35ad33655e8e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3114f1ef379495f36f4231dbad6fd41ac145bcfe
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941747"
 ---
 # <a name="main-function-restrictions"></a>main 関数に関する制約
-いくつかの制限を適用する、**メイン**関数を他の C++ 関数には適用されません。 **メイン**関数。  
+いくつかの制限が適用されます、`main`関数を他の C++ 関数には適用されません。 `main`関数。  
   
 -   オーバー ロードできません (を参照してください[関数のオーバー ロード](function-overloading.md))。  
   
--   として宣言することはできません**インライン**です。  
+-   として宣言できません**インライン**します。  
   
--   として宣言することはできません**静的**です。  
+-   として宣言できません**静的**します。  
   
 -   そのアドレスを取得することはできません。  
   

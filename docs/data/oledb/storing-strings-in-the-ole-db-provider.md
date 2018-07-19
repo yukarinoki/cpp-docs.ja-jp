@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106987"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の格納
 ATL OLE DB プロバイダー ウィザードと呼ばれる既定のユーザー レコードの作成 myproviderrs.h、`CWindowsFile`です。 変更するか、2 つの文字列を処理する`CWindowsFile`または次のコードに示すように、ユーザー レコードを追加します。  

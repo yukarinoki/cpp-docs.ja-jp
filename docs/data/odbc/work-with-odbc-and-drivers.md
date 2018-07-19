@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095116"
 ---
 # <a name="work-with-odbc-and-drivers"></a>ODBC と ODBC ドライバーの使用
 ODBC では、1 つのデータベース管理システム (DBMS) に依存していないアプリケーションを作成することができます。 ユーザーは、適切な DBMS に固有の ODBC ドライバーがある複数の Dbms に操作できる 1 つのアプリケーションを記述できます。  

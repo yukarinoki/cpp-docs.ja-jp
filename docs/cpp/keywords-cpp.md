@@ -1,5 +1,5 @@
 ---
-title: キーワード (C++) |Microsoft ドキュメント
+title: キーワード (C++) |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 25bb47c0297d7e1e472f69334c17aa458aaa57b6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940450"
 ---
 # <a name="keywords-c"></a>キーワード (C++)
 キーワードは、特別な意味を持つ定義済みおよび予約済みの識別子です。 プログラムでは、キーワードを識別子として使用することはできません。 次のキーワードは Microsoft C++ 用に予約されています。 先頭にアンダースコアが付いているキーワードは Microsoft の拡張機能です。  
@@ -40,8 +41,8 @@ ms.lasthandoff: 05/03/2018
 |[__interface](../cpp/interface.md)|[__leave](../cpp/try-finally-statement.md)|[__m128](../cpp/m128.md)|  
 |[__m128d](../cpp/m128d.md)|[__m128i](../cpp/m128i.md)|[__m64](../cpp/m64.md)|  
 |[_ _multiple_inheritance](../cpp/inheritance-keywords.md)|[_ _nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__noop](../intrinsics/noop.md)|  
-|`__pin` <sup>2</sup>|`__property` <sup>2</sup>|[__raise](../cpp/raise.md)|  
-|`__sealed` <sup>2</sup>|[_ _single_inheritance](../cpp/inheritance-keywords.md)|[__stdcall](../cpp/stdcall.md)|  
+|**_ _pin** <sup>2</sup>|**_ _property** <sup>2</sup>|[__raise](../cpp/raise.md)|  
+|**_ _sealed** <sup>2</sup>|[_ _single_inheritance](../cpp/inheritance-keywords.md)|[__stdcall](../cpp/stdcall.md)|  
 |[__super](../cpp/super.md)|[__thiscall](../cpp/thiscall.md)|[_ _try/\__except](../cpp/try-except-statement.md)、 [_ _try/\__finally](../cpp/try-finally-statement.md)|  
 |[_ _try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[__unaligned](../cpp/unaligned.md)|[_ _unhook](../cpp/unhook.md) <sup>3</sup>|  
 |[_ _uuidof](../cpp/uuidof-operator.md)|[_ _value](../dotnet/value-type-semantics.md) <sup>2</sup>|[_ _virtual_inheritance](../cpp/inheritance-keywords.md)|  
@@ -51,14 +52,14 @@ ms.lasthandoff: 05/03/2018
 |[char](../cpp/fundamental-types-cpp.md)|[class](../cpp/class-cpp.md)|[const](../cpp/const-cpp.md)|  
 |[const_cast](../cpp/const-cast-operator.md)|[continue](../cpp/continue-statement-cpp.md)|[decltype](../cpp/decltype-cpp.md)|  
 |[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[delete](../cpp/delete-operator-cpp.md)|  
-|[非推奨](../cpp/deprecated-cpp.md) <sup>1</sup>|[dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[dllimport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
+|[非推奨とされます](../cpp/deprecated-cpp.md) <sup>1</sup>|[dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[dllimport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
 |[do](../cpp/do-while-statement-cpp.md)|[double](../cpp/fundamental-types-cpp.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|  
 |[else](../cpp/if-else-statement-cpp.md)|[enum](../cpp/enumerations-cpp.md)|[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)|  
 |[列挙型の構造体](../windows/enum-class-cpp-component-extensions.md)|[event](../windows/event-cpp-component-extensions.md)|[explicit](../cpp/user-defined-type-conversions-cpp.md)|  
 |[extern](../cpp/using-extern-to-specify-linkage.md)|[false](../cpp/false-cpp.md)|[finally](../dotnet/finally.md)|  
 |[float](../cpp/fundamental-types-cpp.md)|[for](../cpp/for-statement-cpp.md)|[for each、in](../dotnet/for-each-in.md)|  
 |[friend](../cpp/friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|[ジェネリック](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
+|[汎用](../windows/generics-cpp-component-extensions.md)|[goto](../cpp/goto-statement-cpp.md)|[if](../cpp/if-else-statement-cpp.md)|  
 |[initonly](../dotnet/initonly-cpp-cli.md)|[インライン](../cpp/inline-functions-cpp.md)|[int](../cpp/fundamental-types-cpp.md)|  
 |[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)|[インターフェイス構造体](../windows/interface-class-cpp-component-extensions.md)|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|  
 |[リテラル](../windows/literal-cpp-component-extensions.md)|[long](../cpp/fundamental-types-cpp.md)|[変更可能です](../cpp/mutable-data-members-cpp.md)|  
@@ -80,24 +81,24 @@ ms.lasthandoff: 05/03/2018
 |[値クラス](../windows/classes-and-structs-cpp-component-extensions.md)|[値構造体](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](../cpp/virtual-cpp.md)|  
 |[void](../cpp/void-cpp.md)|[volatile](../cpp/volatile-cpp.md)|[while](../cpp/while-statement-cpp.md)|  
   
- 拡張属性を 1、`__declspec`キーワード。  
+ 1 の拡張属性、 **_ _declspec**キーワード。  
   
- 2 C++ のみのマネージ拡張に適用します。 この構文は現在非推奨とされます。  
+ 2 のみ C++ マネージ拡張に適用できます。 この構文は現在非推奨とされます。  
   
- イベント処理で使用される 3 つの組み込み関数。  
+ イベントの処理に使用される 3 つの組み込み関数。  
   
- 参照してください[ランタイム プラットフォームのコンポーネント拡張](../windows/component-extensions-for-runtime-platforms.md)詳細についてはします。  
+ 参照してください[Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)詳細についてはします。  
   
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
  Microsoft C++ では、先頭に 2 つのアンダースコアが付いている識別子はコンパイラ実装用に予約されています。 Microsoft の規約では、Microsoft 固有のキーワードには先頭に 2 つのアンダースコアを付けることになっています。 したがって、これらの単語を識別子名として使用することはできません。  
   
- Microsoft 拡張機能は既定で有効になっています。 プログラムが完全に移植可能であることを確認、ANSI 互換の指定を Microsoft 拡張機能を無効にする[/Za](../build/reference/za-ze-disable-language-extensions.md)コンパイル時にコマンド ライン オプション (ANSI 互換性用にコンパイル)。 これにより、Microsoft 固有のキーワードが無効になります。  
+ Microsoft 拡張機能は既定で有効になっています。 プログラムには完全に移植可能であることを確認するには、する、ANSI と互換性のあるを指定することで、Microsoft の拡張機能を無効にする[/Za](../build/reference/za-ze-disable-language-extensions.md)コンパイル時にコマンド ライン オプション (ANSI 互換性用にコンパイルします)。 これにより、Microsoft 固有のキーワードが無効になります。  
   
- Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワードをプログラム内で使用できます。 ANSI 準拠のために、これらのキーワードは 2 つのアンダースコアで始まります。 下位互換性維持のために、アンダースコア 2 文字のキーワードの、アンダースコア 1 文字のバージョンがサポートされています。ただし、`__except`、`__finally`、`__leave`、`__try` は除きます。 また、`__cdecl` は先頭にアンダースコアなしで使用できます。  
+ Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワードをプログラム内で使用できます。 ANSI 準拠のために、これらのキーワードは 2 つのアンダースコアで始まります。 旧バージョンと互換性のため、1 つのアンダー スコアのバージョン以外のすべての二重文字キーワードの **_ _except**、 **_ _finally**、 **_ _leave**、および **__try**はサポートされています。 さらに、 **_ _cdecl**は先頭にアンダー スコアなしで使用できます。  
   
- `__asm` キーワードは C++ の `asm` 構文に置き換わるものです。 `asm` は他の C++ 実装との互換性を維持するために予約されていますが、実装されていません。 `__asm` を使用してください。  
+ **_ _Asm**キーワードに置き換えられます C++`asm`構文。 `asm` は他の C++ 実装との互換性を維持するために予約されていますが、実装されていません。 使用 **_ _asm**します。  
   
- `__based` キーワードには、32 ビットおよび 64 ビット ターゲット コンパイルに関する使用制限があります。  
+ **__based** キーワードには、32 ビットおよび 64 ビット ターゲット コンパイルに関する使用制限があります。  
   
 **Microsoft 固有の仕様はここまで**  
   

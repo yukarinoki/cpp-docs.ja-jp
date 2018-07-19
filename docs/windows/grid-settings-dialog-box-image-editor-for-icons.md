@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873577"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>[グリッドの設定] ダイアログ ボックス (アイコン用イメージ エディター)
 イメージのグリッドの設定を指定することができ、編集した画像の上のグリッド線を表示します。 行は、イメージを編集するために便利ですが、イメージ自体の一部としては保存されません。  

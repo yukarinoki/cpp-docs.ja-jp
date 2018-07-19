@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384968"
 ---
 # <a name="zero-length-files"></a>長さゼロのファイル
 **ANSI 4.9.3** 長さゼロのファイルが実際に存在するかどうか  

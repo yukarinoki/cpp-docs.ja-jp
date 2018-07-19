@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390936"
 ---
 # <a name="type-float"></a>float 型
 浮動小数点数が IEEE (米国電気電子技術者協会) 形式を使用します。 Float 型の単精度値は、符号ビット、余分な 127 形式 (8 ビット) 2 進指数、および 23 ビットの仮数から成る 4 バイトを持ちます。 仮数は、1.0 と 2.0 の間の数字を表します。 仮数の上位ビットは常に 1 であるため、数に格納されません。 この表現は、float 型のために、約 3.4E-38 から 3.4E+38 の範囲を提供します。  

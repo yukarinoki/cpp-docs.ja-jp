@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285617"
 ---
 # <a name="compiler-warning-level-1-c4659"></a>コンパイラの警告 (レベル 1) C4659
 \#プラグマ ': 予約されたセグメント 'segment' の使用には、動作が定義されていませんが、#pragma comment (linker,...) を使用します。  

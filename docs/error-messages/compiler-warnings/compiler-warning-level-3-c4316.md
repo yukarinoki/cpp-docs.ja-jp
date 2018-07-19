@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298383"
 ---
 # <a name="compiler-warning-level-3-c4316"></a>コンパイラの警告 (レベル 3) C4316
 ヒープで割り当てられているオブジェクトが、この型にアラインされていない可能性があります。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691652"
 ---
 # <a name="ordered-openmp-clauses"></a>ordered (OpenMP 句)
 並列で必要な[の](../../../parallel/openmp/reference/for-openmp.md)ステートメント場合、[順序付け](../../../parallel/openmp/reference/ordered-openmp-directives.md)ディレクティブは、ループで使われます。  

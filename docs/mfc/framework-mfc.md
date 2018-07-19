@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344397"
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
 Microsoft Foundation Class (MFC) ライブラリのフレームワークを使用する作業は、いくつかの主要なクラスといくつかの Visual C ツールに主に基づいています。 一部のクラスでは、Win32 アプリケーション プログラミング インターフェイス (API) の大部分をカプセル化します。 その他のクラスには、ドキュメント、ビュー、および、アプリケーション自体などのアプリケーションの概念がカプセル化します。 まだ他のユーザーは、OLE の機能とデータ アクセス機能が ODBC と DAO カプセル化します。  

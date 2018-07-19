@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169622"
 ---
 # <a name="compiler-error-c2092"></a>コンパイラ エラー C2092
 '配列 name' の配列要素の型が関数にすることはできません。  

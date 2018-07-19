@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692913"
 ---
 # <a name="threadprivate"></a>threadprivate
 変数が、スレッドに対してプライベートであることを指定します。  

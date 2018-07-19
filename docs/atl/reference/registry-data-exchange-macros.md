@@ -1,5 +1,5 @@
 ---
-title: レジストリ データ交換マクロ |Microsoft ドキュメント
+title: レジストリ データ交換マクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,55 +21,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a26e8d602010ce637114464a844d2f95e635c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7473bed5e4bf973dcea4d186e9b5b3367fb03ff1
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880360"
 ---
-# <a name="registry-data-exchange-macros"></a>レジストリ データ交換マクロ
+# <a name="registry-data-exchange-macros"></a>レジストリ データ エクス チェンジに関するマクロ
 これらのマクロは、レジストリ データの交換操作を実行します。  
   
 |||  
 |-|-|  
-|[BEGIN_RDX_MAP](#begin_rdx_map)|レジストリ データ エクス チェンジ マップの開始位置をマークします。|  
-|[END_RDX_MAP](#end_rdx_map)|レジストリ データ エクス チェンジ マップの最後をマークします。|  
-|[RDX_BINARY](#rdx_binary)|BYTE 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|指定したレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。|  
-|[RDX_DWORD](#rdx_dword)|指定したレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。|  
-|[RDX_TEXT](#rdx_text)|TCHAR 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。|  
+|[BEGIN_RDX_MAP](#begin_rdx_map)|レジストリ データ エクス チェンジ マップの先頭をマークします。|  
+|[END_RDX_MAP](#end_rdx_map)|レジストリ データ エクス チェンジ map の末尾をマークします。|  
+|[RDX_BINARY](#rdx_binary)|BYTE 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|指定されたレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。|  
+|[RDX_DWORD](#rdx_dword)|指定されたレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。|  
+|[RDX_TEXT](#rdx_text)|TCHAR 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlplus.h  
    
 ##  <a name="begin_rdx_map"></a>  BEGIN_RDX_MAP  
- レジストリ データ エクス チェンジ マップの開始位置をマークします。  
+ レジストリ データ エクス チェンジ マップの先頭をマークします。  
   
 ```
 BEGIN_RDX_MAP
 ```  
   
-### <a name="remarks"></a>コメント  
- 次のマクロは、システム レジストリのエントリを読み書きをレジストリ データ エクス チェンジ マップ内で使用されます。  
+### <a name="remarks"></a>Remarks  
+ 次のマクロは、システム レジストリにエントリを読み書きするレジストリ データ エクス チェンジ マップ内で使用されます。  
   
 |マクロ|説明|  
 |-----------|-----------------|  
-|[RDX_BINARY](#rdx_binary)|BYTE 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。|  
-|[RDX_DWORD](#rdx_dword)|指定したレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。|  
-|[RDX_CSTRING_TEXT](#rdx_cstring_text)|指定したレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。|  
-|[RDX_TEXT](#rdx_text)|TCHAR 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。|  
+|[RDX_BINARY](#rdx_binary)|BYTE 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。|  
+|[RDX_DWORD](#rdx_dword)|指定されたレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。|  
+|[RDX_CSTRING_TEXT](#rdx_cstring_text)|指定されたレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。|  
+|[RDX_TEXT](#rdx_text)|TCHAR 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。|  
   
- グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`コードがシステム レジストリの間でデータを交換する必要があるたびに、マクロを使用する必要があります、RDX マップで指定された変数です。  
+ グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、か、コードは、システム レジストリの間でデータを交換する必要があるとき、BEGIN_RDX_MAP と END_RDX_MAP マクロによって作成された同じ名前のメンバー関数を使用して、RDX マップで指定する変数。  
   
 ##  <a name="end_rdx_map"></a>  END_RDX_MAP  
- レジストリ データ エクス チェンジ マップの最後をマークします。  
+ レジストリ データ エクス チェンジ map の末尾をマークします。  
   
 ```
 END_RDX_MAP
 ```  
   
 ##  <a name="rdx_binary"></a>  RDX_BINARY  
- BYTE 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。  
+ BYTE 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。  
   
 ```
 RDX_BINARY(
@@ -81,26 +82,26 @@ RDX_BINARY(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rootkey`  
- レジストリ キーのルートです。  
+ *Rootkey*  
+ レジストリ キーのルート。  
   
- `subkey`  
- レジストリのサブキーです。  
+ *サブキー*  
+ レジストリのサブキー。  
   
- `valuename`  
+ *valuename*  
  レジストリ キー。  
   
- `member`  
+ *メンバー*  
  指定されたレジストリ エントリに関連付けるメンバー変数です。  
   
- `member_size`  
+ *member_size*  
  メンバー変数のバイト単位のサイズ。  
   
-### <a name="remarks"></a>コメント  
- 組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
+### <a name="remarks"></a>Remarks  
+ このマクロは、メンバー変数を特定のレジストリ エントリに関連付ける BEGIN_RDX_MAP と END_RDX_MAP マクロと組み合わせて使用します。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、BEGIN_RDX_MAP END_RDX_MAP マクロによって作成された同じ名前のメンバー関数は、システム レジストリとメンバー変数の間のデータ交換を実行するために使用する必要がありますかRDX マップします。  
   
 ##  <a name="rdx_cstring_text"></a>  RDX_CSTRING_TEXT  
- 指定したレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。  
+ 指定されたレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。  
   
 ```
 RDX_CSTRING_TEXT(
@@ -112,26 +113,26 @@ RDX_CSTRING_TEXT(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rootkey`  
- レジストリ キーのルートです。  
+ *Rootkey*  
+ レジストリ キーのルート。  
   
- `subkey`  
- レジストリのサブキーです。  
+ *サブキー*  
+ レジストリのサブキー。  
   
- `valuename`  
+ *valuename*  
  レジストリ キー。  
   
- `member`  
+ *メンバー*  
  指定されたレジストリ エントリに関連付けるメンバー変数です。  
   
- `member_size`  
+ *member_size*  
  メンバー変数のバイト単位のサイズ。  
   
-### <a name="remarks"></a>コメント  
- 組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
+### <a name="remarks"></a>Remarks  
+ このマクロは、メンバー変数を特定のレジストリ エントリに関連付ける BEGIN_RDX_MAP と END_RDX_MAP マクロと組み合わせて使用します。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、BEGIN_RDX_MAP END_RDX_MAP マクロによって作成された同じ名前のメンバー関数は、システム レジストリとメンバー変数の間のデータ交換を実行するために使用する必要がありますかRDX マップします。  
   
 ##  <a name="rdx_dword"></a>  RDX_DWORD  
- 指定したレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。  
+ 指定されたレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。  
   
 ```
 RDX_DWORD(
@@ -143,26 +144,26 @@ RDX_DWORD(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rootkey`  
- レジストリ キーのルートです。  
+ *Rootkey*  
+ レジストリ キーのルート。  
   
- `subkey`  
- レジストリのサブキーです。  
+ *サブキー*  
+ レジストリのサブキー。  
   
- `valuename`  
+ *valuename*  
  レジストリ キー。  
   
- `member`  
+ *メンバー*  
  指定されたレジストリ エントリに関連付けるメンバー変数です。  
   
- `member_size`  
+ *member_size*  
  メンバー変数のバイト単位のサイズ。  
   
-### <a name="remarks"></a>コメント  
- 組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
+### <a name="remarks"></a>Remarks  
+ このマクロは、メンバー変数を特定のレジストリ エントリに関連付ける BEGIN_RDX_MAP と END_RDX_MAP マクロと組み合わせて使用します。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、BEGIN_RDX_MAP END_RDX_MAP マクロによって作成された同じ名前のメンバー関数は、システム レジストリとメンバー変数の間のデータ交換を実行するために使用する必要がありますかRDX マップします。  
   
 ##  <a name="rdx_text"></a>  RDX_TEXT  
- TCHAR 型の指定したメンバー変数に指定したレジストリ エントリを関連付けます。  
+ TCHAR 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。  
   
 ```
 RDX_TEXT(
@@ -174,23 +175,23 @@ RDX_TEXT(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rootkey`  
- レジストリ キーのルートです。  
+ *Rootkey*  
+ レジストリ キーのルート。  
   
- `subkey`  
- レジストリのサブキーです。  
+ *サブキー*  
+ レジストリのサブキー。  
   
- `valuename`  
+ *valuename*  
  レジストリ キー。  
   
- `member`  
+ *メンバー*  
  指定されたレジストリ エントリに関連付けるメンバー変数です。  
   
- `member_size`  
+ *member_size*  
  メンバー変数のバイト単位のサイズ。  
   
-### <a name="remarks"></a>コメント  
- 組み合わせてこのマクロを使用、`BEGIN_RDX_MAP`と`END_RDX_MAP`にメンバー変数を指定されたレジストリ エントリに関連付けるマクロです。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、またはで作成された同じ名前のメンバー関数、`BEGIN_RDX_MAP`と`END_RDX_MAP`マクロを使用して、システム レジストリとメンバー間のデータ交換を実行する必要がありますRDX マップ内の変数。  
+### <a name="remarks"></a>Remarks  
+ このマクロは、メンバー変数を特定のレジストリ エントリに関連付ける BEGIN_RDX_MAP と END_RDX_MAP マクロと組み合わせて使用します。 グローバル関数[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)、BEGIN_RDX_MAP END_RDX_MAP マクロによって作成された同じ名前のメンバー関数は、システム レジストリとメンバー変数の間のデータ交換を実行するために使用する必要がありますかRDX マップします。  
   
 ## <a name="see-also"></a>関連項目  
  [マクロ](../../atl/reference/atl-macros.md)   

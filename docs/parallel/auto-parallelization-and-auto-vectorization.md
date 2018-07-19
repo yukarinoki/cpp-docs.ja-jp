@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688467"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動並行化と自動ベクター化
 自動並行化と自動ベクター化は、コード内のループのパフォーマンスが自動的に向上するように設計されています。  

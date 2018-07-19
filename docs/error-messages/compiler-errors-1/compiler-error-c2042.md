@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164025"
 ---
 # <a name="compiler-error-c2042"></a>コンパイラ エラー C2042
 'signed' と 'unsigned' が 1 つの宣言内で同時に使われています。  

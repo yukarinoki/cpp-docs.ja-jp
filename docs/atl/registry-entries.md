@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359730"
 ---
 # <a name="registry-entries"></a>レジストリ エントリ
 DCOM では、アプリケーション Id (Appid)、レジストリで一元的な場所に 1 つまたは複数の DCOM オブジェクトの構成オプションをグループ化の概念が導入されました。 AppID を指定するには、名前付きの下にあるオブジェクトの CLSID 値 AppID の値を示すです。  

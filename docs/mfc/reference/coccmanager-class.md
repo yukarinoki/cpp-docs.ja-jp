@@ -1,5 +1,5 @@
 ---
-title: 関数クラス |Microsoft ドキュメント
+title: COccManager クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -40,13 +40,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b292196eb6ac8178ba43f0e66bd4814368c916fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cabf1cde43f11997de27b2b2f148482d4f024455
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852368"
 ---
-# <a name="coccmanager-class"></a>関数クラス
+# <a name="coccmanager-class"></a>COccManager クラス
 `COleControlContainer` オブジェクトと `COleControlSite` オブジェクトによって実装されるさまざまなカスタム コントロール サイトを管理します。  
   
 ## <a name="syntax"></a>構文  
@@ -61,28 +62,29 @@ class COccManager : public CNoTrackObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[COccManager::CreateContainer](#createcontainer)|作成、 **COleContainer**オブジェクト。|  
-|[COccManager::CreateDlgControls](#createdlgcontrols)|関連付けられたによってホストされている ActiveX コントロールを作成`COleContainer`オブジェクト。|  
+|[COccManager::CreateContainer](#createcontainer)|
+          `COleContainer` オブジェクトを作成します。|  
+|[COccManager::CreateDlgControls](#createdlgcontrols)|関連付けられているによってホストされている、ActiveX コントロールを作成します`COleContainer`オブジェクト。|  
 |[COccManager::CreateSite](#createsite)|`COleClientSite` オブジェクトを作成します。|  
 |[COccManager::GetDefBtnCode](#getdefbtncode)|既定のボタンのコードを取得します。|  
-|[COccManager::IsDialogMessage](#isdialogmessage)|ダイアログ メッセージの対象を決定します。|  
-|[COccManager::IsLabelControl](#islabelcontrol)|指定されたコントロールがラベル コントロールであるかどうかを判断します。|  
-|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|現在のアクセラレータ キーが指定されたコントロールのニーモニックと一致するかどうかを判断します。|  
+|[COccManager::IsDialogMessage](#isdialogmessage)|ダイアログ メッセージのターゲットを決定します。|  
+|[COccManager::IsLabelControl](#islabelcontrol)|指定したコントロールがラベル コントロールであるかどうかを判断します。|  
+|[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|現在のアクセラレータ キーが指定したコントロールのニーモニックと一致するかどうかを決定します。|  
 |[COccManager::OnEvent](#onevent)|指定したイベントを処理しようとしています。|  
-|[COccManager::PostCreateDialog](#postcreatedialog)|ダイアログの作成時に割り当てられているリソースを解放します。|  
+|[COccManager::PostCreateDialog](#postcreatedialog)|ダイアログの作成中に割り当てられているリソースを解放します。|  
 |[COccManager::PreCreateDialog](#precreatedialog)|ActiveX コントロール用のダイアログ テンプレートを処理します。|  
 |[COccManager::SetDefaultButton](#setdefaultbutton)|指定したコントロールの既定の状態を切り替えます。|  
-|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|指定したダイアログ テンプレートでのコモン コントロールから、既存の ActiveX コントロールを区切ります。|  
+|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|指定されたダイアログのテンプレートでコモン コントロールから既存の ActiveX コントロールを分離します。|  
   
-## <a name="remarks"></a>コメント  
- 基本クラス、**ラップ**、(AFXTLS にありますドキュメントに未記載の基本クラスです。H)。 MFC フレームワークによっては、使用するために設計されたから派生したクラス、**ラップ**クラスは、メモリ リークの検出から除外されます。 直接派生させることはお勧めできません**ラップ**です。  
+## <a name="remarks"></a>Remarks  
+ 基本クラス、 `CNoTrackObject`、(AFXTLS にありますドキュメントに未記載の基本クラスです。H)。 MFC フレームワークによっては、使用するために設計されたから派生したクラス、`CNoTrackObject`クラスはメモリ リークの検出から除外されます。 直接派生させることはお勧めできません`CNoTrackObject`します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CNoTrackObject`  
   
  `COccManager`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxocc.h  
   
 ##  <a name="createcontainer"></a>  COccManager::CreateContainer  
@@ -93,17 +95,17 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *我が物*  
  カスタムのサイト コンテナーに関連付けられたウィンドウ オブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 新しく作成されたコンテナーへのポインターそれ以外の場合**NULL**です。  
+ 新しく作成されたコンテナーへのポインターそれ以外の場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
- カスタムのサイトを作成する方法の詳細については、次を参照してください。 [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)です。  
+### <a name="remarks"></a>Remarks  
+ カスタムのサイトを作成する方法の詳細については、次を参照してください。 [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)します。  
   
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
- 指定された ActiveX コントロールを作成するには、この関数を呼び出して、`pOccDialogInfo`パラメーター。  
+ 指定された ActiveX コントロールを作成するには、この関数を呼び出して、 *pOccDialogInfo*パラメーター。  
   
 ```  
 virtual BOOL CreateDlgControls(
@@ -122,34 +124,34 @@ virtual BOOL CreateDlgControls(
  *pWndParent*  
  ダイアログ オブジェクトの親へのポインター。  
   
- `lpszResourceName`  
- 作成するリソースの名前。  
+ *lpszResourceName*  
+ 作成されるリソースの名前。  
   
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  ダイアログ オブジェクトの作成に使用するダイアログ テンプレートへのポインター。  
   
- `lpResource`  
+ *lpResource*  
  リソースへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- コントロールが正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
+ コントロールが正常に作成された場合は 0 以外それ以外の場合 0 を返します。  
   
 ##  <a name="createsite"></a>  COccManager::CreateSite  
- によって示されるコンテナーによってホストされるコントロール サイトを作成するためにフレームワークによって呼び出されます`pCtrlCont`です。  
+ によって示されるコンテナーにホスト コントロール サイトを作成するためにフレームワークによって呼び出される*pCtrlCont*します。  
   
 ```  
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pCtrlCont`  
- 新しいコントロール サイトをホストするコントロールのコンテナーへのポインター。  
+ *pCtrlCont*  
+ 新しいコントロール サイトをホストしているコントロールのコンテナーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  新しく作成されたコントロール サイトへのポインター。  
   
-### <a name="remarks"></a>コメント  
- カスタム コントロールを作成するには、この関数をオーバーライドしてサイトを使用して、[メンバー](../../mfc/reference/colecontrolsite-class.md)-クラスを派生します。  
+### <a name="remarks"></a>Remarks  
+ カスタム コントロールを作成するには、この関数をオーバーライドを使用して、サイト、 [COleControlSite](../../mfc/reference/colecontrolsite-class.md)-クラスを派生します。  
   
  各コントロールのコンテナーには、複数のサイトをホストできます。 複数の呼び出しで追加サイトを作成`CreateSite`です。  
   
@@ -161,20 +163,20 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
- ボタン コントロールを含むウィンドウのオブジェクト。  
+ *我が物*  
+ ボタン コントロールを含むウィンドウ オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  次のいずれかの値です。  
   
-- **DLGC_DEFPUSHBUTTON**コントロールがダイアログ ボックスで既定のボタンです。  
+- DLGC_DEFPUSHBUTTON コントロールは、ダイアログ ボックスで既定のボタンです。  
   
-- **DLGC_UNDEFPUSHBUTTON**コントロールはダイアログ ボックスで既定のボタンではありません。  
+- DLGC_UNDEFPUSHBUTTON コントロールは、ダイアログ ボックスで既定のボタンではありません。  
   
 - **0**コントロールがボタンではありません。  
   
 ##  <a name="isdialogmessage"></a>  COccManager::IsDialogMessage  
- かどうか、メッセージとを決定指定のダイアログ ボックスのためのものである場合は、メッセージを処理するためにフレームワークによって呼び出されます。  
+ メッセージが、指定されたダイアログ ボックスにして場合は、メッセージを処理するかどうかを判断するためにフレームワークによって呼び出されます。  
   
 ```  
 virtual BOOL IsDialogMessage(
@@ -186,19 +188,19 @@ virtual BOOL IsDialogMessage(
  *pWndDlg*  
  メッセージの対象となるダイアログへのポインター。  
   
- `lpMsg`  
- ポインター、`MSG`確認するメッセージを格納する構造体。  
+ *lpMsg*  
+ ポインター、`MSG`確認するメッセージを含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
- メッセージが処理された場合は 0 以外。それ以外の場合 0 を返します。  
+ メッセージが処理された場合は 0 以外それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定の動作`IsDialogMessage`はキーボード メッセージを確認し、対応するダイアログ ボックスの選択項目に変換します。 たとえば、TAB キーを押すと、[次へ] のコントロールまたはコントロールのグループを選択します。  
+### <a name="remarks"></a>Remarks  
+ 既定の動作`IsDialogMessage`キーボード メッセージを確認し、対応するダイアログ ボックスの選択に変換します。 たとえば、TAB キーを押すと、[次へ] のコントロールまたはコントロールのグループを選択します。  
   
- 指定されたダイアログに送信されるメッセージのカスタム動作を提供するには、この関数をオーバーライドします。  
+ 指定されたダイアログに送信されるメッセージのカスタム動作を指定するには、この関数をオーバーライドします。  
   
 ##  <a name="islabelcontrol"></a>  COccManager::IsLabelControl  
- この関数では、指定されたコントロールがラベル コントロールかどうかを決定します。  
+ この関数では、指定したコントロールがラベル コントロールかどうかを決定します。  
   
 ```  
 static BOOL AFX_CDECL IsLabelControl(CWnd* pWnd);  
@@ -206,14 +208,14 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *我が物*  
  コントロールを含むウィンドウへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- コントロールのラベルである場合は 0 以外。それ以外の場合 0  
+ コントロールがラベルである場合、0 以外の場合それ以外の場合 0  
   
-### <a name="remarks"></a>コメント  
- ラベル コントロールは、任意のコントロールは、順序付けにおける次のラベルのように機能する 1 つです。  
+### <a name="remarks"></a>Remarks  
+ ラベル コントロールは、任意のコントロールは、順序の [次へ] のラベルのように機能する 1 つです。  
   
 ##  <a name="ismatchingmnemonic"></a>  COccManager::IsMatchingMnemonic  
  現在のアクセラレータ キーがコントロールによって表されると一致するかどうかを判断するには、この関数を呼び出します。  
@@ -230,16 +232,16 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *我が物*  
  コントロールを含むウィンドウへのポインター。  
   
- `lpMsg`  
- ニーモニックを含むメッセージと一致するへのポインター。  
+ *lpMsg*  
+ 一致するようにニーモニックを含むメッセージへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- ニーモニック コントロールに一致する場合は 0 以外。それ以外の場合 0  
+ ニーモニックがコントロールと一致する場合、0 以外の場合それ以外の場合 0  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onevent"></a>  COccManager::OnEvent  
  指定したイベントを処理するためにフレームワークによって呼び出されます。  
@@ -254,25 +256,25 @@ virtual BOOL OnEvent(
   
 ### <a name="parameters"></a>パラメーター  
  *pCmdTarget*  
- ポインター、`CCmdTarget`オブジェクト、イベントを処理しようとしています。  
+ ポインター、`CCmdTarget`オブジェクト イベントを処理しようとしています。  
   
- `idCtrl`  
- コントロールのリソース ID です。  
+ *idCtrl*  
+ コントロールのリソース ID。  
   
- `pEvent`  
+ *pEvent*  
  処理されるイベント。  
   
- `pHandlerInfo`  
- ない場合**NULL**、`OnEvent`を入力、 **pTarget**と**pmf**のメンバー、 **AFX_CMDHANDLERINFO**の代わりに構造体コマンドをディスパッチします。 通常、このパラメーターを指定する必要があります**NULL**です。  
+ *pHandlerInfo*  
+ NULL 以外の場合`OnEvent`塗りつぶす、`pTarget`と`pmf`のメンバー、`AFX_CMDHANDLERINFO`コマンドをディスパッチするのではなく構造体。 通常、このパラメーターは NULL を指定する必要があります。  
   
 ### <a name="return-value"></a>戻り値  
  イベントが処理された場合、それ以外の場合 0 0 以外の値。  
   
-### <a name="remarks"></a>コメント  
- イベント処理の既定のプロセスをカスタマイズするには、この関数をオーバーライドします。  
+### <a name="remarks"></a>Remarks  
+ 既定のイベント処理プロセスをカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="precreatedialog"></a>  COccManager::PreCreateDialog  
- 実際のダイアログ ボックスを作成する前に ActiveX コントロールのダイアログ テンプレートを処理するためにフレームワークによって呼び出されます。  
+ 実際のダイアログ ボックスを作成する前に ActiveX コントロール用のダイアログ テンプレートを処理するためにフレームワークによって呼び出されます。  
   
 ```  
 virtual const DLGTEMPLATE* PreCreateDialog(
@@ -281,8 +283,8 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pOccDialogInfo`  
- **_AFX_OCC_DIALOG_INFO**ダイアログ テンプレートと、ダイアログによってホストされているすべての ActiveX コントロールに関する情報を含む構造体。  
+ *pOccDialogInfo*  
+ `_AFX_OCC_DIALOG_INFO`ダイアログ テンプレートと、ダイアログによってホストされているすべての ActiveX コントロールに関する情報を含む構造体。  
   
  *pOrigTemplate*  
  ダイアログ ボックスの作成に使用するダイアログ テンプレートへのポインター。  
@@ -290,10 +292,10 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ### <a name="return-value"></a>戻り値  
  ダイアログ ボックスを作成するために使用するダイアログ テンプレート構造体へのポインター。  
   
-### <a name="remarks"></a>コメント  
- 既定の動作への呼び出しは、`SplitDialogTemplate`任意 ActiveX がある場合は、存在制御を決定する、および、表示されるダイアログ テンプレートを返します。  
+### <a name="remarks"></a>Remarks  
+ 既定の動作への呼び出しは、 `SplitDialogTemplate`ActiveX がある場合は、存在するコントロールの特定および結果のダイアログ テンプレートを返します。  
   
- ActiveX コントロールをホストしているダイアログ ボックスの作成のプロセスをカスタマイズするには、この関数をオーバーライドします。  
+ ActiveX コントロールのホスト ダイアログ ボックスを作成するプロセスをカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="postcreatedialog"></a>  COccManager::PostCreateDialog  
  ダイアログ テンプレートに割り当てられたメモリを解放するためにフレームワークによって呼び出されます。  
@@ -303,16 +305,16 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pOccDialogInfo`  
- **_AFX_OCC_DIALOG_INFO**ダイアログ テンプレートと、ダイアログによってホストされているすべての ActiveX コントロールに関する情報を含む構造体。  
+ *pOccDialogInfo*  
+ `_AFX_OCC_DIALOG_INFO`ダイアログ テンプレートと、ダイアログによってホストされているすべての ActiveX コントロールに関する情報を含む構造体。  
   
-### <a name="remarks"></a>コメント  
- 呼び出しでこのメモリが割り当てられた`SplitDialogTemplate`、すべてのホストされている ActiveX コントロール ダイアログ ボックスで使用されたとします。  
+### <a name="remarks"></a>Remarks  
+ このメモリはへの呼び出しによって割り当てられた`SplitDialogTemplate`、ダイアログ ボックスで、ホストされている ActiveX コントロールに使用されたとします。  
   
- ダイアログ ボックスのオブジェクトによって使用されているリソースをクリーンアップするプロセスをカスタマイズするには、この関数をオーバーライドします。  
+ ダイアログ ボックスのオブジェクトによって使用されているリソースのクリーンアップのプロセスをカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="setdefaultbutton"></a>  COccManager::SetDefaultButton  
- この関数では、既定のボタンとして設定します。  
+ 既定のボタンとして設定するには、この関数を呼び出します。  
   
 ```  
 static void AFX_CDECL SetDefaultButton(
@@ -321,22 +323,22 @@ static void AFX_CDECL SetDefaultButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pWnd`  
+ *我が物*  
  コントロールを含むウィンドウへのポインター。  
   
- `bDefault`  
+ *bDefault*  
  以外の場合は、コントロールが既定のボタンになる必要があります。それ以外の場合 0 を返します。  
   
 ### <a name="return-value"></a>戻り値  
  成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  コントロールがあります、 **OLEMISC_ACTSLIKEBUTTON**ステータス ビットが設定されます。 詳細については**入ります**フラグを参照してください、[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK のトピックです。  
+>  コントロールには、OLEMISC_ACTSLIKEBUTTON ステータス ビット セットが必要です。 入りますフラグの詳細については、次を参照してください。、[入ります](http://msdn.microsoft.com/library/windows/desktop/ms678497)Windows SDK のトピックです。  
   
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate  
- コモン ダイアログ コントロールからの ActiveX コントロールを分割するためにフレームワークによって呼び出されます。  
+ コモン ダイアログのコントロールからの ActiveX コントロールを分割するためにフレームワークによって呼び出されます。  
   
 ```  
 virtual DLGTEMPLATE* SplitDialogTemplate(
@@ -345,26 +347,26 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pTemplate`  
- 調査するダイアログ テンプレートへのポインター。  
+ *pTemplate*  
+ 確認するダイアログ テンプレートへのポインター。  
   
- `ppOleDlgItems`  
- ActiveX コントロールは、ダイアログ ボックスの項目へのポインターのリスト。  
+ *ppOleDlgItems*  
+ ActiveX コントロールでは、ダイアログ ボックスの項目へのポインターのリスト。  
   
 ### <a name="return-value"></a>戻り値  
- 非 ActiveX コントロールのみを含むダイアログ テンプレート構造体へのポインター。 ActiveX コントロールが、存在しない場合**NULL**が返されます。  
+ 非 ActiveX コントロールのみを含むダイアログ テンプレートの構造体へのポインター。 ActiveX コントロールが存在しない場合は、NULL が返されます。  
   
-### <a name="remarks"></a>コメント  
- すべての ActiveX コントロールが見つからない場合は、テンプレートが分析され、非 ActiveX コントロールのみを含む、新しいテンプレートを作成します。 このプロセス中に見つかった任意の ActiveX コントロールに追加する`ppOleDlgItems`です。  
+### <a name="remarks"></a>Remarks  
+ すべての ActiveX コントロールが見つかった場合は、テンプレートが分析され、ActiveX 以外のコントロールのみを含む、新しいテンプレートが作成されます。 このプロセス中に見つかったすべての ActiveX コントロールに追加されます*ppOleDlgItems*します。  
   
- テンプレートで、ActiveX コントロールがない場合**NULL**が返されます*です。*  
+ テンプレート内に ActiveX コントロールがない場合は、NULL が返されます*します。*  
   
 > [!NOTE]
->  新しいテンプレートが解放されるを割り当てられたメモリ、`PostCreateDialog`関数。  
+>  新しいテンプレートが空き状態に割り当てられるメモリ、`PostCreateDialog`関数。  
   
  このプロセスをカスタマイズするには、この関数をオーバーライドします。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   
- [メンバー クラス](../../mfc/reference/colecontrolsite-class.md)   
+ [COleControlSite クラス](../../mfc/reference/colecontrolsite-class.md)   
  [COleControlContainer クラス](../../mfc/reference/colecontrolcontainer-class.md)

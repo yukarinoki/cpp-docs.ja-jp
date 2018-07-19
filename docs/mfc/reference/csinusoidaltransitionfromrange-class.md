@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 646878a1cfd77dd61fbb854512c56512083ff609
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078684"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange クラス
 振幅が指定の範囲である正弦波範囲遷移をカプセル化します。  
@@ -69,7 +70,7 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 |[CSinusoidalTransitionFromRange::m_period](#m_period)|秒単位で正弦波の振幅の期間。|  
 |[CSinusoidalTransitionFromRange::m_slope](#m_slope)|移行の開始時に傾斜です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アニメーション変数の値は、正弦波範囲遷移の期間全体にわたって指定した最小値と最大値の間で変動します。 傾斜パラメーターを使用すると、その他のパラメーターで指定された 2 つの可能な正弦波の間であいまいさを解消します。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -79,7 +80,7 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
   
  [CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create  
@@ -92,7 +93,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLibrary`  
+ *pLibrary*  
  これは標準的な遷移の作成を担当する遷移ライブラリへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -111,19 +112,19 @@ CSinusoidalTransitionFromRange(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
- `dblMinimumValue`  
+ *dblMinimumValue*  
  正弦波の谷のアニメーション変数の値です。  
   
- `dblMaximumValue`  
+ *dblMaximumValue*  
  正弦波のピーク時のアニメーション変数の値。  
   
- `period`  
+ *期間*  
  秒単位で正弦波の振幅の期間。  
   
- `slope`  
+ *傾斜*  
  移行の開始時に傾斜です。  
   
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  

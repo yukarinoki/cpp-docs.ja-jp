@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381538"
 ---
 # <a name="trackers"></a>トラッカー
 [CRectTracker](../mfc/reference/crecttracker-class.md)クラスには、四角形のアイテムをアプリケーションに、さまざまな表示スタイルを提供することにより、ユーザーのユーザー インターフェイスが用意されています。 これらのスタイルが実線、斜線、または破線の罫線; を含めるアイテムをカバーするハッチ パターン外部または枠線内にあることができるハンドルのサイズを変更します。 トラッカーは多くの場合で使用される OLE アイテムと共にから派生したオブジェクトは、`COleClientItem`です。 トラッカーの四角形は、アイテムの現在の状態の視覚的な手掛かりを付与します。  

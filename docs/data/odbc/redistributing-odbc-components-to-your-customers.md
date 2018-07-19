@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090225"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>ODBC の構成要素の配布
 Odbc データ ソース アドミニストレーターの機能をアプリケーションに組み込む場合必要がありますもファイルを配布するユーザーに、これらのプログラムを実行しています。 これらの ODBC ファイルは、Visual C++ CD-ROM の \OS\System ディレクトリに存在します。 Redistrb.wri ファイルと同じディレクトリに使用許諾契約書は、再配布する ODBC ファイルの一覧を含みます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387779"
 ---
 # <a name="statements-c"></a>ステートメント (C)
 C プログラムのステートメントは、プログラムの実行フローを制御します。 他のプログラミング言語と同様に C では、複数種類のステートメントでループを実行し、実行する他のステートメントを選択して、制御を移すことができます。 このセクションでは、簡単な[ステートメントの構文の概要](../c-language/overview-of-c-statements.md)の後に、C ステートメントをアルファベット順に説明します。  

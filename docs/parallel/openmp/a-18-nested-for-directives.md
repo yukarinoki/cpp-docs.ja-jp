@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690869"
 ---
 # <a name="a18---nested-for-directives"></a>A.18 入れ子になった for ディレクティブ
 次の例の`for`ディレクティブの入れ子 ([セクション 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 ページ上) は準拠していませんので内側と外側`for`ディレクティブが別々 の並行領域にバインドします。  

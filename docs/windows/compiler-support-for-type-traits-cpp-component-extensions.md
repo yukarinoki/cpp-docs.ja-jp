@@ -76,6 +76,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862417"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>型の特徴のコンパイラ サポート (C++ コンポーネント拡張)
 コンパイラ サポート*特徴 (traits) を入力*コンパイル時に、型のさまざまな特性をかを示すです。  

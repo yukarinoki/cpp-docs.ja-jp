@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347631"
 ---
 # <a name="message-handlers"></a>メッセージ ハンドラー
 MFC では、専用*ハンドラー*関数は、各メッセージを処理します。 メッセージ ハンドラー関数は、クラスのメンバー関数です。 このドキュメントでは、用語*メッセージ ハンドラー メンバー関数は、*、*メッセージ ハンドラー関数*、*メッセージ ハンドラー*、および*ハンドラー*同義です。 一部のメッセージ ハンドラーとも呼ばれます「コマンド ハンドラー」  

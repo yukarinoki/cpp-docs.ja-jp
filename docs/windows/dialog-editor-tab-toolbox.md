@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882577"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>[ダイアログ エディター] タブ ([ツールボックス])
 ダイアログ エディターのタブに表示されます、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)ダイアログ エディターで作業する場合。 新しいダイアログ ボックスにコントロールを追加するを作成する ダイアログ ボックスに、ツールボックスからコントロールをドラッグします。 (詳細については、次を参照してください。 [ ダイアログ ボックスにコントロールを追加する](adding-a-control-to-a-dialog-box.md))。 次いでコントロールの移動、またはサイズと形状の変更ができます。  

@@ -31,11 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e48a657d15fbb6526ebc9d717825f409f10928f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 309b01fac7e6461a48992ee1c2c091439353aee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961013"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution クラス
 
@@ -73,11 +74,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型、既定値は`double`します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、スチューデントの *t* 分布に従って分布した、ユーザー指定の整数型の値または型 `double` の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**二重**何も指定されない場合は、スチューデントに従って分布*t*-配布します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -165,7 +166,7 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -182,11 +183,12 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*n* 、`n`分布パラメーター。
+*n*  
+ `n` 分布パラメーター。
 
-*パラメーター*分布の作成に使用されるパラメーター パッケージ。
+*parm*分布の作成に使用されるパラメーター パッケージ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < n`
 
@@ -211,11 +213,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*n* 、`n`分布パラメーター。
+*n*  
+`n` 分布パラメーター。
 
-*右*、`param_type`これと比較するオブジェクト。
+*right*  
+このオブジェクトと比較する `param_type` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < n`
 

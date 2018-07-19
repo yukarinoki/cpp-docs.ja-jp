@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957225"
 ---
 # <a name="tn029-splitter-windows"></a>テクニカル ノート 29: 分割ウィンドウ
 この注の説明、MFC [CSplitterWnd クラス](../mfc/reference/csplitterwnd-class.md)ウィンドウを分割し、その他のウィンドウのウィンドウのサイズ変更の管理を提供します。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/04/2018
  ウィンドウ:  
  特定のアプリケーション ウィンドウを`CSplitterWnd`を管理します。 ペインがから派生したオブジェクトでは通常、 [CView クラス](../mfc/reference/cview-class.md)、いずれかを指定できますが、 [CWnd](../mfc/reference/cwnd-class.md)適切な子ウィンドウ ID を持つオブジェクト  
   
- 使用する、 `CWnd`-派生オブジェクトを渡す、`RUNTIME_CLASS`するオブジェクトの`CreateView`関数を使用していた場合と同様、 `CView`-クラスを派生します。 クラスを使用する必要があります`DECLARE_DYNCREATE`と`IMPLEMENT_DYNCREATE`フレームワークは、実行時に動的な作成を使用するためです。 多くのコードでが`CSplitterWnd`に固有である、`CView`クラス、[使うため](../mfc/reference/cobject-class.md#iskindof)それらのアクションが実行される前に、は常に使用します。  
+ 使用する、 `CWnd`-派生オブジェクトを渡すオブジェクトの対象となる、`CreateView`関数を使用していた場合と同様、 `CView`-派生クラス。 クラスは、フレームワークは、実行時に動的な作成を使用するため DECLARE_DYNCREATE と IMPLEMENT_DYNCREATE を使用する必要があります。 多くのコードでが`CSplitterWnd`に固有である、`CView`クラス、[使うため](../mfc/reference/cobject-class.md#iskindof)それらのアクションが実行される前に、は常に使用します。  
   
  分割バー:  
  ペインの行と列の間に配置されるコントロールです。 行のサイズまたはウィンドウの列を調整するために使用する可能性があります。  
@@ -87,14 +88,14 @@ ms.lasthandoff: 05/04/2018
 [      ][      ][v]  
 ```  
   
- ユーザーが、スクロール バーを移動すると`WM_VSCROLL`メッセージは、両方のビューに送信されます。 スクロール バーの位置を設定すると、いずれかのビューとは、共有のスクロール バーが設定されます。  
+ ユーザーは、スクロール バーを移動、両方のビューに付加が送信されます。 スクロール バーの位置を設定すると、いずれかのビューとは、共有のスクロール バーが設定されます。  
   
  共有のスクロール バーが同種のビュー オブジェクトで最も便利なことに注意してください。 分割ウィンドウ内のさまざまな種類のビューを混在している場合は、それらのスクロール位置を調整するための特別なコードを記述する必要があります。 どの`CView`-派生クラスを使用する、`CWnd`スクロール バーが存在する場合は、Api を共有のスクロール バーを委任します。 `CScrollView`実装の 1 つの例では、`CView`をサポートするクラスは、スクロール バーを共有します。 クラスから派生していない`CView`、非コントロールのスクロール バーに依存しているクラスまたは標準の Windows 実装を使用するクラス (たとえば、 `CEditView`) の共有のスクロール バーの機能では動作しません`CSplitterWnd`です。  
   
 ## <a name="minimum-sizes"></a>最小サイズ  
  行ごとには、各行の高さ、および列ごとには、列の最小幅。 この最小値は、ウィンドウは完全な詳細に表示するのには小さすぎるいないことを保証します。  
   
- 静的な分割ウィンドウでは、最初の行の最小の高さと列の幅は 0 です。 によって、動的分割ウィンドウの最初の行の最小の高さと列の幅の設定、`sizeMin`のパラメーター、`CSplitterWnd::Create`関数。  
+ 静的な分割ウィンドウでは、最初の行の最小の高さと列の幅は 0 です。 によって、動的分割ウィンドウの最初の行の最小の高さと列の幅の設定、 *sizeMin*のパラメーター、`CSplitterWnd::Create`関数。  
   
  使用してこれらの最小サイズを変更することができます、 [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo)と[CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo)関数。  
   

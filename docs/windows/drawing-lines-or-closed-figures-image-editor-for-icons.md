@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882776"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>線または閉じた図形の描画 (アイコン用イメージ エディター)
 線を描画用イメージ エディターのツールし、閉じた図形のすべてが同じ方法で作業します。 1 つの時点でカーソルを配置し、別にドラッグします。 線、これらのポイントは、エンドポイントです。 閉じた図形は、これらのポイントは、図を囲む四角形の角を反対です。  

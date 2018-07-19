@@ -1,5 +1,5 @@
 ---
-title: break ステートメント (C++) |Microsoft ドキュメント
+title: break ステートメント (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00a1122dffac0bdb61ba3799ce78ed3403e6d478
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943534"
 ---
 # <a name="break-statement-c"></a>break ステートメント (C++)
-`break` ステートメントは、それを囲む最も近いループまたは条件付きステートメントの実行を終了させます。 このステートメントの終了の後ろにステートメントがある場合は、そこに制御が移動します。  
+**Break**ステートメントは、最も外側の実行を終了ループまたは条件付きステートメントが表示されます。 このステートメントの終了の後ろにステートメントがある場合は、そこに制御が移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,17 +32,17 @@ ms.lasthandoff: 05/03/2018
 break;  
 ```  
   
-## <a name="remarks"></a>コメント  
- `break` 、条件付きステートメントが使用される[スイッチ](../cpp/switch-statement-cpp.md)ステートメントを使用して、[は](../cpp/do-while-statement-cpp.md)、[の](../cpp/for-statement-cpp.md)、および[中に](../cpp/while-statement-cpp.md)ループステートメント。  
+## <a name="remarks"></a>Remarks  
+ **Break** 、条件付きステートメントを使用[切り替える](../cpp/switch-statement-cpp.md)ステートメントを使用して、[は](../cpp/do-while-statement-cpp.md)、[の](../cpp/for-statement-cpp.md)、および[中に](../cpp/while-statement-cpp.md)ステートメントをループします。  
   
- `switch` ステートメントでは、`break` ステートメントがあると、その `switch` ステートメントの外側にある次のステートメントが実行されます。 `break` ステートメントがない場合は、一致する `case` ラベルから `switch` ステートメントの最後までのすべてのステートメントが、`default` 句も含めて実行されます。  
+ **切り替える**ステートメントでは、 **break**ステートメントは、外にある次のステートメントを実行するプログラム、**切り替える**ステートメント。 なし、 **break**ステートメントでは、すべてのステートメントから、一致する**ケース**の末尾にラベル、**切り替える**ステートメントを含む、**既定**句が実行されます。  
   
- ループでは、`break` ステートメントは、そのすぐ外側の `do`、`for`、または `while` ステートメントの実行を終了します。 終了したステートメントの次にステートメントがある場合は、そこに制御が移動します。  
+ 、ループで、 **break**ステートメントが最も近い外側の実行が終了**は**、**の**、または**中**ステートメント。 終了したステートメントの次にステートメントがある場合は、そこに制御が移動します。  
   
- 入れ子になったステートメント内では、`break` ステートメントは、それを直接囲む `do`、`for`、`switch`、または `while` ステートメントだけを終了させます。 `return` ステートメントまたは `goto` ステートメントを使用して、より深い入れ子構造から制御を移すことができます。  
+ 入れ子になったステートメント内で、**中断**だけステートメントを終了、**は**、**の**、**スイッチ**、または**中に**をすぐにそれを囲むステートメント。 使用することができます、**返す**または**goto**入れ子構造のレベルが深複数から制御を転送するステートメント。  
   
 ## <a name="example"></a>例  
- 次のコードでは、`break` ループ内で `for` ステートメントを使用する方法を示しています。  
+ 次のコードを使用する方法を示しています、 **break**内のステートメントを**の**ループします。  
   
 ```cpp  
 #include <iostream>  
@@ -52,9 +53,10 @@ int main()
     // An example of a standard for loop  
     for (int i = 1; i < 10; i++)  
     {  
-        cout << i << '\n';  
-        if (i == 4)  
+        if (i == 4) {  
             break;  
+        }  
+        cout << i << '\n';  
     }  
   
     // An example of a range-based for loop  
@@ -76,7 +78,7 @@ In each case:
 3  
 ```  
   
- 次のコードでは、`break` ループ内と `while` ループ内で `do` ステートメントを使用する方法を示しています。  
+ 次のコードを使用する方法を示します**break**で、**中に**ループと**は**ループします。  
   
 ```cpp  
 #include <iostream>  
@@ -109,7 +111,7 @@ In each case:
 0123  
 ```  
   
- 次のコードでは、switch ステートメント内で `break` を使用する方法を示しています。 各 case を個別に処理する場合は、それぞれの case で `break` を使用する必要があります。`break` を使用しない場合、コードの実行は次の case にフォール スルーします。  
+ 次のコードは、使用する方法を示しています。 **break** switch ステートメントでします。 使用する必要があります**break**を使用しない場合は各ケースを個別に処理する場合、すべてのケースで**break**コードの実行が次の case にフォール スルーします。  
   
 ```cpp  
 #include <iostream>  

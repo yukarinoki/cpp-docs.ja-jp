@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104998"
 ---
 # <a name="using-accessors"></a>アクセサーの使用
 次のトピックでは、データに最適なアクセサーの種類を判断する方法を説明するアプリケーションと、さまざまな種類の使用可能なアクセサーの使用方法。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382594"
 ---
 # <a name="walkthroughs-mfc"></a>チュートリアル (MFC)
 ここでは、新しい MFC ライブラリ機能に関連するさまざまなタスクを解説している記事を紹介します。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360421"
 ---
 # <a name="alloca"></a>alloca
 [_alloca](../c-runtime-library/reference/alloca.md)配置し、さらにフレーム ポインターを使用するために必要なは、16 バイトにする必要です。  

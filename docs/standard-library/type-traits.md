@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026352"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -33,9 +34,9 @@ ms.lasthandoff: 05/08/2018
 #include <type_traits>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-クラスと内のテンプレート\<type_traits > 型の推定、分類、および種類に関連するエラーが検出されると、ジェネリック コードを最適化するため、コンパイル時に変換をサポートするために使用します。 これらのクラスとテンプレートには、型のプロパティについて記述する単項の型の特徴、型間の関係を記述する二項の型の特徴、および型のプロパティを変更する変換の特徴が含まれます。
+クラスとテンプレートは、 \<type_traits > 型の推定、分類、および種類関連のエラーを検出して、ジェネリック コードを最適化するため、コンパイル時に変換をサポートするために使用されます。 これらのクラスとテンプレートには、型のプロパティについて記述する単項の型の特徴、型間の関係を記述する二項の型の特徴、および型のプロパティを変更する変換の特徴が含まれます。
 
 型の特徴をサポートするために、ヘルパー クラス `integral_constant` が定義されています。 これには、型の述語の基底クラスを形成するテンプレート特殊化 `true_type` と `false_type` があります。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が *true を保持*する場合は、[true_type](../standard-library/type-traits-typedefs.md#true_type) からパブリックに (直接または間接的に) 派生されます。 型の述語が *false を保持*する場合は、[false_type](../standard-library/type-traits-typedefs.md#false_type) からパブリックに (直接または間接的に) 派生されます。
 
@@ -73,7 +74,7 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|型が `void` であるかどうかをテストします。|
+|[is_void](../standard-library/is-void-class.md)|型があるかどうかをテスト**void**します。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|型が `std::nullptr_t` であるかどうかをテストします。|
 |[is_integral](../standard-library/is-integral-class.md)|型が整数型であるかどうかをテストします。|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|型が浮動小数点型であるかどうかをテストします。|
@@ -94,7 +95,7 @@ using add_const_t = typename add_const<T>::type;
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|型が参照であるかどうかをテストします。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|型が演算型であるかどうかをテストします。|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|型が `void` または演算型であるかどうかをテストします。|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|型があるかどうかをテスト**void**や演算。|
 |[is_object](../standard-library/is-object-class.md)|型がオブジェクト型であるかどうかをテストします。|
 |[is_scalar](../standard-library/is-scalar-class.md)|型がスカラーであるかどうかをテストします。|
 |[is_compound](../standard-library/is-compound-class.md)|型が非スカラーであるかどうかをテストします。|
@@ -104,8 +105,8 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|型が `const` であるかどうかをテストします。|
-|[is_volatile](../standard-library/is-volatile-class.md)|型が `volatile` であるかどうかをテストします。|
+|[is_const](../standard-library/is-const-class.md)|型があるかどうかをテスト**const**します。|
+|[is_volatile](../standard-library/is-volatile-class.md)|型があるかどうかをテスト**揮発性**します。|
 |[is_trivial](../standard-library/is-trivial-class.md)|型が単純であるかどうかをテストします。|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|型が普通にコピー可能であるかどうかをテストします。|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|型が標準レイアウト型であるかどうかをテストします。|
@@ -141,7 +142,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|型が、コピーで割り当て可能で、割り当てがスローしないと判明しているかどうかをテストします。|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|型が、移動で割り当て可能で、割り当てがスローしないと判明しているかどうかをテストします。|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|型が破棄可能で、デストラクターがスローしないと判明しているかどうかをテストします。|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|型に仮想デストラクターが存在するかどうかをテストします。|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|型に仮想デストラクターが存在するかどうかをテストします。|
 
 型プロパティのクエリ
 
@@ -163,9 +164,9 @@ const/volatile の変更
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|型から `const` 型を生成します。|
-|[add_volatile](../standard-library/add-volatile-class.md)|型から `volatile` 型を生成します。|
-|[add_cv](../standard-library/add-cv-class.md)|型から `const volatile` 型を生成します。|
+|[add_const](../standard-library/add-const-class.md)|生成、 **const**型からの型。|
+|[add_volatile](../standard-library/add-volatile-class.md)|生成、**揮発性**型からの型。|
+|[add_cv](../standard-library/add-cv-class.md)|生成、 **const volatile**型からの型。|
 |[remove_const](../standard-library/remove-const-class.md)|型から非 const 型を生成します。|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|型から非 volatile 型を生成します。|
 |[remove_cv](../standard-library/remove-cv-class.md)|型から非 const の非 volatile 型を生成します。|

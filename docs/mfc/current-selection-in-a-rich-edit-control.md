@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345011"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>リッチ エディット コントロールでの現在の選択項目
 ユーザーは、リッチ エディット コントロールでテキストを選択することができます ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))、マウスまたはキーボードを使用しています。 現在の選択は、選択した文字の範囲または文字を含まない場合に、カーソルの位置を選択します。 アプリケーションは現在の選択に関する情報を取得、現在の選択範囲を設定、現在の選択内容、および表示または非表示、選択範囲が強調表示を決定します。  

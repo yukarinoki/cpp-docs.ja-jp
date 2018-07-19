@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353890"
 ---
 # <a name="date-and-time-database-support"></a>日付と時刻: データベースのサポート
 MFC データベース プログラミングの使用のバージョン 4.0 の時点で、 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)と[メンバー](../atl-mfc-shared/reference/coledatetimespan-class.md)日付と時刻のデータを表すクラス。 Automation では、使用しても、これらのクラスがクラスから派生した[COleVariant](../mfc/reference/colevariant-class.md)です。 も、日付と時刻のデータを管理するための優れたサポートが提供される[CTime](../atl-mfc-shared/reference/ctime-class.md)と[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)です。  

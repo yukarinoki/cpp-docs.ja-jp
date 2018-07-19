@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372101"
 ---
 # <a name="building-an-import-library-and-export-file"></a>インポート ライブラリとエクスポート ファイルのビルド
 ファイルをエクスポート、インポート ライブラリをビルドしてには次の構文を使用します。  

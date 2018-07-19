@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094258"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 C + +/CX プログラムすることができますの標準テンプレート ライブラリ (STL) コンテナー、またはその他のユーザー定義コレクション型を自由に使用します。 ただし、コレクションを渡す場合前後 Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を越えて — たとえば、XAML コントロールまたは JavaScript クライアントに-Windows ランタイムのコレクション型を使用する必要があります。  

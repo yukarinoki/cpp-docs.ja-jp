@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685594"
 ---
 # <a name="15-normative-references"></a>1.5 標準リファレンス
 -   ISO/IEC 9899:1999*情報テクノロジのプログラミング言語 - C*です。OpenMP API 仕様では、ISO/IEC 9899:1999 を C99 と呼びます。  

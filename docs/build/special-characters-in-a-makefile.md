@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380459"
 ---
 # <a name="special-characters-in-a-makefile"></a>メイクファイルの特殊文字
 NMAKE の特殊文字をリテラル文字としてを使用するのには、前にキャレット (^) を配置します。 NMAKE では、その他の文字の前にキャレットを無視します。 特殊文字は次のとおりです。  

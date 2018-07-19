@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369371"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>正規の MFC DLL のモジュールの状態は、MFC と動的にリンク
 MFC DLL に標準 MFC DLL を動的にリンクする機能は、非常に複雑になっているいくつかの構成を許可します。 たとえば、標準 MFC DLL とそれを使用する実行可能ファイル両方動的にリンクできます MFC DLL にし、任意の MFC 拡張 Dll にします。  

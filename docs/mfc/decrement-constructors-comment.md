@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b78e74b4b8d974fceaf5f854c9890cd7cdd1a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929583"
 ---
 # <a name="-constructors-comment"></a>// Constructors コメント
-`// Constructors`の MFC クラス宣言のセクションでは、実際にオブジェクトを使用するために必要なすべての初期化関数と同様に (C++ の) コンス トラクターを宣言しています。 たとえば、`CWnd::Create`使用する前にあるために、コンス トラクターに記載されて、`CWnd`オブジェクト、その必要があります「を完全に構築」まず C++ コンス トラクターを呼び出すし、呼び出すことによって、**作成**関数。 通常、これらのメンバーはパブリックです。  
+`// Constructors`の MFC クラス宣言のセクションでは、実際にオブジェクトを使用するために必要なすべての初期化関数と同様に (C++ の) コンス トラクターを宣言しています。 たとえば、`CWnd::Create`コンス トラクターのセクションでは、使用する前にあるため、`CWnd`オブジェクト、その必要があります「を完全に構築」まず C++ コンス トラクターを呼び出すし、呼び出すことによって、`Create`関数。 通常、これらのメンバーはパブリックです。  
   
  たとえば、クラス`CStdioFile`の下の一覧に表示されるうちの 1 つ、3 つのコンス トラクターを持つ[コメントの例を](../mfc/an-example-of-the-comments.md)です。  
   

@@ -1,5 +1,5 @@
 ---
-title: 既定のクラス ファクトリと集計モデルの変更 |Microsoft ドキュメント
+title: 既定のクラス ファクトリと集計モデルの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,28 +22,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db2e684565589eb736b135db3460ed8b83d382b1
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850879"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>既定のクラス ファクトリと集計モデルの変更
 ATL を使用して[CComCoClass](../atl/reference/ccomcoclass-class.md)オブジェクトの既定のクラス ファクトリと集計モデルを定義します。 `CComCoClass` 次の 2 つのマクロを指定します。  
   
--   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory)を宣言するクラス ファクトリ[CComClassFactory](../atl/reference/ccomclassfactory-class.md)です。  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory)宣言をクラス ファクトリ[CComClassFactory](../atl/reference/ccomclassfactory-class.md)します。  
   
 -   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable)オブジェクトを集計できることを宣言します。  
   
- これらの既定値のいずれかのクラスの定義で別のマクロを指定することによってオーバーライドできます。 例については、使用する[CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)の代わりに`CComClassFactory`を指定して、 [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2)マクロ。  
+ これらの既定値のいずれかのクラスの定義で別のマクロを指定することによってオーバーライドできます。 たとえば、使用する[CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)の代わりに`CComClassFactory`、指定、 [DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2)マクロ。  
   
  [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
   
- クラス ファクトリを定義するその他の 2 つのマクロは[DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)と[DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)です。  
+ クラス ファクトリを定義するその他の 2 つのマクロは[DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)と[DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)します。  
   
- ATL を使用しても、`typedef`既定の動作を実装するためのメカニズムです。 たとえば、`DECLARE_AGGREGATABLE`マクロを使用して`typedef`と呼ばれる型を定義する **_CreatorClass**、ATL. 全体で参照されているが、 派生クラスでは、ことに注意してください。、 `typedef` 、基本クラスのと同じ名前を使用`typedef`ATL の定義を使用して、既定の動作をオーバーライドすると発生します。  
+ ATL を使用しても、 **typedef**既定の動作を実装するためのメカニズムです。 たとえば、DECLARE_AGGREGATABLE マクロを使用して**typedef**と呼ばれる型を定義する`_CreatorClass`、ATL. 全体で参照されているが、 派生クラスで、 **typedef** 、基本クラスの同じ名前を使用して**typedef** ATL の定義を使用して、既定の動作をオーバーライドする結果します。  
   
 ## <a name="see-also"></a>関連項目  
- [ATL COM オブジェクトの基本事項](../atl/fundamentals-of-atl-com-objects.md)   
+ [ATL COM オブジェクトの基礎](../atl/fundamentals-of-atl-com-objects.md)   
  [集計とクラス ファクトリに関するマクロ](../atl/reference/aggregation-and-class-factory-macros.md)
 

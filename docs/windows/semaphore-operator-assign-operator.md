@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892528"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 演算子
 セマフォ オブジェクトから指定したハンドルを現在のセマフォ オブジェクトに移動します。  

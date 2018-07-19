@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346257"
 ---
 # <a name="printing-and-print-preview"></a>印刷および印刷プレビュー
 MFC クラスを使用して、プログラムのドキュメントの印刷と印刷プレビューをサポートしています[CView](../mfc/reference/cview-class.md)です。 基本的な印刷と印刷プレビューでは、単に上書きビュー クラスの[OnDraw](../mfc/reference/cview-class.md#ondraw)メンバー関数を行うことができます。 その関数が実際のプリンターのプリンター デバイス コンテキストを画面上の表示を描画できるまたは画面にプリンターをシミュレートするデバイス コンテキストにします。  

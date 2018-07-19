@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861546"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>コントロールのタブ オーダーの変更
 タブ オーダーでは、TAB キーに移動する入力フォーカス 1 つのコントロールから、[次へ] ダイアログ ボックス内で順序です。 通常、タブ オーダーは、左右から、上からダイアログ ボックスの下部に続行されます。 各コントロールには、 **Tabstop**コントロールが入力フォーカスを受け取るかどうかを決定するプロパティです。  

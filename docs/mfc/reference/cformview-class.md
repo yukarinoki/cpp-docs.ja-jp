@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3486285b7b6430e9cd6f0e4a936aa3341bd72e0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa06581dc28293073e8094dad779be0eebabbd10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953491"
 ---
 # <a name="cformview-class"></a>CFormView クラス
 フォーム ビューの基底クラスです。  
@@ -49,7 +50,7 @@ class CFormView : public CScrollView
 |----------|-----------------|  
 |[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|初期化中に同期に使用されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  フォーム ビューは、基本的には、コントロールを含むビューです。 これらのコントロールは、ダイアログ テンプレート リソースに基づいて配置されます。 アプリケーションでフォームが必要な場合は、`CFormView` を使用します。 これらのビューをサポートして、スクロールを使用して、必要に応じて、 [CScrollView](../../mfc/reference/cscrollview-class.md)機能します。  
   
  できたら[フォーム ベースのアプリケーションを作成する](../../mfc/reference/creating-a-forms-based-mfc-application.md)、そのビュー クラスの基`CFormView`、フォーム ベースのアプリケーションを作成します。  
@@ -71,7 +72,7 @@ class CFormView : public CScrollView
   
  `CFormView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxext.h  
   
 ##  <a name="cformview"></a>  CFormView::CFormView  
@@ -83,13 +84,13 @@ CFormView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  ダイアログ テンプレート リソースの名前を指定する null で終わる文字列が含まれています。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  ダイアログ テンプレート リソースの ID 番号が含まれています。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  派生した型のオブジェクトを作成するときに`CFormView`、ビュー オブジェクトを作成し、ビューの基になるダイアログ リソースを識別するコンス トラクターの 1 つを呼び出します。 名前 (コンス トラクターの引数として文字列を渡す) で、または ID (パスを符号なし整数の引数として) では、リソースを識別できます。  
   
  まで、フォーム ビュー ウィンドウおよび子コントロールを作成しない`CWnd::Create`と呼びます。 `CWnd::Create` ドキュメント テンプレートによりドキュメントとビューの作成プロセスの一環としてフレームワークによって呼び出されます。  

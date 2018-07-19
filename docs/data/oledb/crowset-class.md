@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098577"
 ---
 # <a name="crowset-class"></a>CRowset クラス
 OLE DB 行セット オブジェクトおよび関連するいくつかをカプセル化インターフェイスし、行セットのデータの操作メソッドを提供します。  

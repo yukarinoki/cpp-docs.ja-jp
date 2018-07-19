@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161551747455bae1347e5059ec3afffd2649294c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e5f7a4d5ad1d7991e69a5092333974ec3a8ade07
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956623"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic クラス
 
@@ -36,11 +37,11 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型述語のインスタンスは、型 `Ty` が演算型 (つまり、整数型または浮動小数点型)、またはそのいずれかの `cv-qualified` 形式の場合は true を保持し、それ以外の場合は false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*は演算型、つまり、整数型または浮動小数点型、または`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
 
 ## <a name="example"></a>例
 
@@ -74,7 +75,7 @@ is_arithmetic<int> == true
 is_arithmetic<float> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

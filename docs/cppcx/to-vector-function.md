@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087976"
 ---
 # <a name="tovector-function"></a>to_vector 関数
 値が、指定された IVector または IVectorView パラメーターの基になるコレクションと同じである `std::vector` を返します。  

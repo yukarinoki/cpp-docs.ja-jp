@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299748"
 ---
 # <a name="c-runtime-error-r6035"></a>C ランタイム エラー R6035
 Microsoft Visual C++ ランタイム ライブラリ、エラー R6035 - あるグローバル セキュリティ クッキーに依存している関数がアクティブになっている間に、このアプリケーション内のモジュールが、そのモジュールに所属するそのセキュリティ クッキーを初期化しました。  __security_init_cookie を既に呼び出しました。  

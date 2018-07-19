@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931978"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 ActiveX コントロールは、更新されたバージョンの OLE コントロールの仕様です。 コントロールは、さまざまなインターネット上の COM 対応の Web ブラウザーも含めて、別のコンテナーで使用できるプログラミング可能なソフトウェア コンポーネントを開発するための基本的なアーキテクチャです。 ActiveX コントロール インターネット制御とできます作業中の文書にその機能を追加したり、Web ページの一部にします。 Web ページ上のコントロールは、スクリプトを使用して相互に通信できます。  
@@ -38,7 +39,7 @@ ActiveX コントロールは、更新されたバージョンの OLE コント�
   
  **ActiveX コントロールをするために、コントロールが必要です。**  
   
--   サポート、 **IUnknown**インターフェイスです。  
+-   サポート、`IUnknown`インターフェイスです。  
   
 -   COM オブジェクトであります。  
   
@@ -84,7 +85,7 @@ ActiveX コントロールは、更新されたバージョンの OLE コント�
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>MFC ActiveX コントロール ウィザードを使用して、プロジェクトを作成するには  
   
-1.  をクリックして`New`上、**ファイル**メニュー。  
+1.  をクリックして**新規**上、**ファイル**メニュー。  
   
 2.  選択**MFC ActiveX コントロール ウィザード**から Visual C プロジェクトし、プロジェクトの名前します。  
   
@@ -128,7 +129,7 @@ ActiveX コントロールは、更新されたバージョンの OLE コント�
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  実装、 **Get/set**メソッドです。 **取得**文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。  
+5.  `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

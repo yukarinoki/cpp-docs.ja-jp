@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846364"
 ---
 # <a name="message"></a>message
 コンパイルを終了せずに、標準出力に文字列リテラルを送信します。  

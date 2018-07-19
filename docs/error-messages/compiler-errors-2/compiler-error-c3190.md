@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248527"
 ---
 # <a name="compiler-error-c3190"></a>コンパイラ エラー C3190
 指定されたテンプレート引数のインスタンス化が 'type' のメンバー関数の明示的なインスタンス化ではありません。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691909"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 データ共有属性句
 いくつかのディレクティブには、ユーザーが、領域の間の変数の共有の属性を制御できるようにする句がそのまま使用します。 共有属性句は、句が表示されます、ディレクティブの構文の範囲内の変数にのみ適用されます。 次の句の一部は、すべてのディレクティブで許可されます。 特定のディレクティブでは有効では、句の一覧については、ディレクティブを使用して説明します。  

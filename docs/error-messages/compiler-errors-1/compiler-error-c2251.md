@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169856"
 ---
 # <a name="compiler-error-c2251"></a>コンパイラ エラー C2251
 名前空間 'namespace' にはメンバー 'member' がありません。'member' は正しいですか。  

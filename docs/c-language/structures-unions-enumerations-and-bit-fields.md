@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384719"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>構造体、共用体、列挙体、ビット フィールド
 -   [共用体への不適切なアクセス](../c-language/improper-access-to-a-union.md)  

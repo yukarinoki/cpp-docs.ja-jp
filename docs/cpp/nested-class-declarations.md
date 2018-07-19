@@ -1,5 +1,5 @@
 ---
-title: クラスの宣言を入れ子になった |Microsoft ドキュメント
+title: クラス宣言を入れ子になった |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,18 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86c61792ab20bc0c10c9297d2a66588dd3c066ef
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943324"
 ---
 # <a name="nested-class-declarations"></a>入れ子にされたクラス宣言
 クラスのスコープ内で別のクラスを宣言できます。 このようなクラスを "入れ子のクラス" といいます。 入れ子のクラスには外側のクラスのスコープが適用され、そのスコープ内で使用できます。 すぐ外側のスコープ以外のスコープから入れ子のクラスを参照するには、完全修飾名を使用する必要があります。  
   
  次に、入れ子のクラスを宣言する方法を示します。  
   
-```  
+```cpp 
 // nested_class_declarations.cpp  
 class BufferedIO  
 {  
@@ -73,7 +74,7 @@ int main()
   
  入れ子になったクラス宣言のスコープの参照可能範囲の例外は、型名が事前宣言と共に宣言されている場合です。  この場合、事前宣言によって宣言されたクラス名は、それを囲んでいるクラス (そのスコープは、最も小さく囲んでいる非クラス スコープと定義される) の外部から参照可能です。  例えば:  
   
-```  
+```cpp 
 // nested_class_declarations_2.cpp  
 class C  
 {  
@@ -104,7 +105,7 @@ int main()
 ## <a name="member-functions-in-nested-classes"></a>入れ子にされたクラスのメンバー関数  
  入れ子のクラスで宣言されたメンバー関数はファイル スコープで定義できます。 前の例は、次のように記述することができます。  
   
-```  
+```cpp 
 // member_functions_in_nested_classes.cpp  
 class BufferedIO  
 {  
@@ -140,26 +141,26 @@ int main()
 }  
 ```  
   
- 前の例で、*修飾型名*関数名を宣言する構文を使用します。 宣言:  
+ 上記の例では、*修飾型名*関数名を宣言する構文を使用します。 宣言:  
   
-```  
+```cpp 
 BufferedIO::BufferedInput::read()  
 ```  
   
- "`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言を使用するため、*修飾型名*構文を次の形式の構成要素も有効であります。  
+ "`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言を使用するため、*修飾型名*構文の次の形式の構造が考えられます。  
   
-```  
+```cpp 
 typedef BufferedIO::BufferedInput BIO_INPUT;  
   
 int BIO_INPUT::read()  
 ```  
   
- 前の宣言は、前の例と等価ですが、クラス名の代わりに `typedef` 名を使用します。  
+ 前の宣言は、1 つ前と同じですが、使用、 **typedef**クラス名の代わりに名前。  
   
 ## <a name="friend-functions-in-nested-classes"></a>入れ子にされたクラスのフレンド関数  
  入れ子になったクラスで宣言された friend 関数は、それを囲んでいるクラスではなく、入れ子になったクラスのスコープ内にあると見なされます。 したがって、フレンド関数は、外側のクラスのメンバー関数に対する特別なアクセス特権を取得しません。 フレンド関数がファイルのスコープで定義されている場合に、そのフレンド関数の入れ子になったクラスで宣言されている名前を使用するには、次のように修飾型名を使用します。  
   
-```  
+```cpp 
 // friend_functions_and_nested_classes.cpp  
   
 #include <string.h>  
@@ -205,7 +206,7 @@ int main()
   
  次のコードは、フレンド関数として宣言された `GetExtendedErrorStatus` 関数を示します。 この関数はファイル スコープで定義されており、メッセージは、静的配列からクラス メンバーにコピーされます。 より適した `GetExtendedErrorStatus` の実装では次のように宣言します。  
   
-```  
+```cpp 
 int GetExtendedErrorStatus( char *message )  
 ```  
   

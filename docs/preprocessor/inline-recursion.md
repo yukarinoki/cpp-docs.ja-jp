@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849497"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 直接呼び出しまたは相互再帰関数の呼び出しのインライン展開を制御します。  

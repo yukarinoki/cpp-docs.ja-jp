@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891338"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 整数オーバーフローを防ぐために役立つ整数プリミティブを拡張し、異なる型の整数を比較できます。  

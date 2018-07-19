@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745711e1dd5abde022d0a21d5cb1ea6c013931a8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d9c8ddf5941394a8979832a753ed73cfda5f0876
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959125"
 ---
 # <a name="removepointer-class"></a>remove_pointer クラス
 
@@ -39,11 +40,11 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`remove_pointer<T>` のインスタンスは、`T1` の形式が `T`、`T1*`、`T1* const`、または `T1* volatile` である場合は、修飾型 `T1* const volatile` を保持します。それ以外の場合は、`T` を保持します。
+インスタンス`remove_pointer<T>`、修飾型であるを保持`T1`とき*T*の形式は`T1*`、 `T1* const`、 `T1* volatile`、または`T1* const volatile`それ以外の場合、 *T*します。
 
 ## <a name="example"></a>例
 
@@ -67,7 +68,7 @@ int main()
 remove_pointer_t<int *> == int
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio での C++ プロジェクトのビルド |Microsoft ドキュメント
+title: Visual Studio での C++ プロジェクトのビルド | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,40 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340503"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Visual Studio での C++ プロジェクトのビルド
 Visual Studio 統合開発環境 (IDE) では、ソリューション全体または 1 つのプロジェクトのみをビルドする複数の方法があります。 また、ビルド設定を変更し、カスタム ビルド ステップを指定して、開発プロセスを効率的にすることもできます。  
   
- Visual Studio で開いて、選択された状態では、ソリューションを構築する**ソリューション エクスプ ローラー**、することができます。  
+ Visual Studio で開いており、**ソリューション エクスプローラー**で選択したソリューションをビルドするために、次の操作を行うことができます。  
   
 -   メニュー バーの **[ビルド]**、 **[ソリューションのビルド]** の順にクリックします。  
   
--   または、**ソリューション エクスプ ローラー**ソリューションのショートカット メニューを開きを選択し、**ソリューションのビルド**です。  
+-   または、**ソリューション エクスプローラー**でソリューションのショートカット メニューを開き、**[ソリューションのビルド]** を選択します。  
   
 -   または、F7 キーを押します。 (これは、C/C++ 開発設定の既定のキーボード ショートカットです)。  
   
--   または、[コマンド ウィンドウ](/visualstudio/ide/reference/command-window)(メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、**コマンド ウィンドウ**)、入力`Build.BuildSolution`です。  
+-   または、[コマンド ウィンドウ](/visualstudio/ide/reference/command-window) (メニュー バーで **[表示]**、**[その他のウィンドウ]**、**[コマンド ウィンドウ]** の順に選択) で、「`Build.BuildSolution`」と入力します。  
   
--   または、[サイド](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box)ボックスに、入力`build build solution`です。  
+-   または、[[クイック起動]](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) ボックスに、「`build build solution`」と入力します。  
   
- 選択されているプロジェクトをビルドする**ソリューション エクスプ ローラー**、することができます。  
+ **ソリューション エクスプローラー**で選択したプロジェクトをビルドするために、次の操作を行うことができます。  
   
--   メニュー バーで、次のように選択します。**ビルド**、**ビルド\<プロジェクト名 >** です。  
+-   メニュー バーで、**[ビルド]**、**[\<プロジェクト名> のビルド]** の順に選択します。  
   
--   または、**ソリューション エクスプ ローラー**プロジェクトのショートカット メニューを開きを選択し、**ビルド**です。  
+-   または、**ソリューション エクスプローラー**でプロジェクトのショートカット メニューを開き、**[ビルド]** を選択します。  
   
--   または、コマンド ウィンドウ (メニュー バーで、次のように選択します。**ビュー**、**その他のウィンドウ**、**コマンド ウィンドウ**)、入力`Build.BuildOnlyProject`です。  
+-   または、コマンド ウィンドウ (メニュー バーで **[表示]**、**[その他のウィンドウ]**、**[コマンド ウィンドウ]** の順に選択) で、「`Build.BuildOnlyProject`」と入力します。  
   
--   または、クイック起動ボックスで、次のように入力します。`build project only build only <project name>`です。  
+-   または、[クイック起動] ボックスに、「`build project only build only <project name>`」と入力します。  
   
- Visual Studio で Visual C++ アプリケーションをビルドする場合、プロジェクトの [プロパティ ページ] ダイアログ ボックスでビルドの設定の多くを変更できます。 プロジェクトのプロパティを設定する方法については、次を参照してください。[のプロジェクト プロパティの操作](../ide/working-with-project-properties.md)です。  
+ Visual Studio で Visual C++ アプリケーションをビルドする場合、プロジェクトの [プロパティ ページ] ダイアログ ボックスでビルドの設定の多くを変更できます。 プロジェクトのプロパティの設定方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
- 例については、IDE を使用して、作成、ビルド、および C++ プロジェクトをデバッグする方法について、次を参照してください。[チュートリアル: C++ での Visual Studio IDE の調査](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)です。 IDE を使用して、C + を構築する方法の例については +/CLR プロジェクトを参照してください[チュートリアル: Visual Studio で CLR を対象とする C++ プログラムのコンパイル](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)です。 例については、IDE を使用して、Windows ランタイム アプリを作成する方法について、次を参照してください。 [C++ を使った初めての Windows ランタイム アプリを作成する](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)です。  
+ IDE を使用して C++ プロジェクトを作成、ビルド、およびデバッグする方法の例については、「[Walkthrough: Explore the Visual Studio IDE with C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)」(チュートリアル: C++ での Visual Studio IDE の調査) を参照してください。 IDE を使用して C++/CLR プロジェクトをビルドする方法の例については、「[チュートリアル: Visual Studio で CLR をターゲットにした C++ プログラムのコンパイル](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)」を参照してください。 IDE を使用して Windows ランタイム アプリを作成する方法の例については、「[Create your first Windows Runtime app using C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)」(C++ を使った初めての Windows ランタイム アプリの作成) を参照してください。  
   
  ビルド、ビルド設定の変更、およびカスタム ビルド ステップの指定を行う方法の詳細については、次の記事を参照してください。  
   
@@ -67,8 +68,8 @@ Visual Studio 統合開発環境 (IDE) では、ソリューション全体ま�
  .vcxproj ファイルの XML データ構造を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Vc++ ディレクトリの場合、プロジェクトでは、オプション ダイアログ ボックス](vcpp-directories-property-page.md)  
- (MSBuild プロジェクトの場合のみ)インクルード ファイル、ライブラリ ファイル、およびソース コード ファイル、ビルド時に、実行可能ファイルの検索パスを変更する方法について説明します。  
+ [VC++ ディレクトリ、プロジェクト、オプション ダイアログ ボックス](vcpp-directories-property-page.md)  
+ (MSBuild プロジェクトの場合のみ) ビルド時の実行可能ファイル、インクルード ファイル、ライブラリ ファイル、およびソース コード ファイルの検索パスの変更方法について説明します。  
   
  [コードのコンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Visual Studio でのビルドについて説明します。  
@@ -80,10 +81,10 @@ Visual Studio 統合開発環境 (IDE) では、ソリューション全体ま�
  C++ でのプログラムのビルド、コンパイラ オプションとリンカー オプション、およびその他のビルド ツールの概要へのリンクがあります。  
   
  [旧バージョンの Visual C++ からのプロジェクトのアップグレード](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- 新しいバージョンのコンパイラ ツールセットを C++ プロジェクトのアップグレードに関する問題を説明するトピックへのリンクを提供します。  
+ より新しいバージョンのコンパイラ ツールセットへの C++ プロジェクトのアップグレードに関する問題を説明するトピックへのリンクを提供します。  
   
 [Visual C++ 移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)  
-  Visual Studio 以外のツールを使用して作成されたアプリケーションを移行する方法と、Visual Studio の以前のバージョンで作成された C++ アプリケーションをアップグレードする方法の詳細についてはします。  
+  Visual Studio の旧バージョンで作成された C++ アプリケーションをアップグレードする方法と、Visual Studio 以外のツールを使用して作成されたアプリケーションを移行する方法について詳しく説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ユニバーサル Windows アプリ (C++)](../windows/universal-windows-apps-cpp.md)

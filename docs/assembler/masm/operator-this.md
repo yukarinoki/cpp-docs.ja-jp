@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057124"
 ---
 # <a name="operator-this"></a>THIS 演算子
 オペランドで指定したを返します`type`オフセットとセグメントの値を持つが、現在の場所カウンターの値に等しい。  

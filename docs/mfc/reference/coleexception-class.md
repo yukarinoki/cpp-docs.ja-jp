@@ -1,5 +1,5 @@
 ---
-title: COleException クラス |Microsoft ドキュメント
+title: COleException クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 731ec7b359995fc8ecbfdeae89595442d8186eeb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851393"
 ---
 # <a name="coleexception-class"></a>COleException クラス
 OLE 操作に関する例外条件を表します。  
@@ -41,7 +42,7 @@ class COleException : public CException
   
 |名前|説明|  
 |----------|-----------------|  
-|[COleException::Process](#process)|OLE のリターン コードにキャッチした例外を変換します。|  
+|[COleException::Process](#process)|OLE のリターン コードにキャッチされた例外に変換します。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -49,12 +50,12 @@ class COleException : public CException
 |----------|-----------------|  
 |[COleException::m_sc](#m_sc)|例外の原因を示すステータス コードが含まれています。|  
   
-## <a name="remarks"></a>コメント  
- `COleException`クラスには、例外の理由を示すステータス コードが含まれる、パブリック データ メンバーが含まれています。  
+## <a name="remarks"></a>Remarks  
+ `COleException`クラスには、例外の理由を示すステータス コードを保持するパブリック データ メンバーが含まれています。  
   
- 一般に、作成しないようにする、`COleException`オブジェクト直接; 代わりに、呼び出す必要があります[AfxThrowOleException](exception-processing.md#afxthrowoleexception)です。  
+ 一般に、作成しないようにする、`COleException`オブジェクトは、直接呼び出す必要があります[AfxThrowOleException](exception-processing.md#afxthrowoleexception)します。  
   
- 例外の詳細については、記事を参照してください。[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)と[例外: OLE 例外](../../mfc/exceptions-ole-exceptions.md)です。  
+ 例外の詳細については、記事をご覧ください。[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)と[例外: OLE 例外](../../mfc/exceptions-ole-exceptions.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -63,26 +64,26 @@ class COleException : public CException
   
  `COleException`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー :** afxdisp.h  
   
 ##  <a name="m_sc"></a>  COleException::m_sc  
- このデータ メンバーでは、例外の原因を示す OLE ステータス コードを保持します。  
+ OLE の例外の理由を示すステータス コードを保持します。  
   
 ```  
 SCODE m_sc;  
 ```  
   
-### <a name="remarks"></a>コメント  
- この変数の値によって設定されます[AfxThrowOleException](exception-processing.md#afxthrowoleexception)です。  
+### <a name="remarks"></a>Remarks  
+ この変数の値によって設定されます[AfxThrowOleException](exception-processing.md#afxthrowoleexception)します。  
   
- 詳細については`SCODE`を参照してください[COM エラー コードの構造体](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
+ SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
 ##  <a name="process"></a>  COleException::Process  
- 呼び出す、**プロセス**OLE のステータス コードにキャッチした例外に変換します。  
+ 呼び出す、**プロセス**OLE のステータス コードにキャッチされた例外に変換します。  
   
 ```  
 static SCODE PASCAL Process(const CException* pAnyException);
@@ -90,20 +91,20 @@ static SCODE PASCAL Process(const CException* pAnyException);
   
 ### <a name="parameters"></a>パラメーター  
  *pAnyException*  
- キャッチした例外へのポインター。  
+ キャッチされた例外へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  OLE のステータス コード。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  この関数は、**静的**です。  
+>  この関数は**静的**します。  
   
- 詳細については`SCODE`を参照してください[COM エラー コードの構造体](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
+ SCODE の詳細については、次を参照してください。 [COM エラー コードの構造](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK に含まれています。  
   
 ### <a name="example"></a>例  
-  例を参照して[coledispatchdriver::createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)です。  
+  例をご覧ください[coledispatchdriver::createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)します。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル CALCDRIV](../../visual-cpp-samples.md)   

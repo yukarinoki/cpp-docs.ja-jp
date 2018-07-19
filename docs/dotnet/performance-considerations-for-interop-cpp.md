@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164051"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Interop (C++) のパフォーマンスに関する考慮事項
 このトピックでは、実行時のパフォーマンス上の相互運用機能の遷移をマネージ/アンマネージの影響を軽減するためのガイドラインを提供します。  

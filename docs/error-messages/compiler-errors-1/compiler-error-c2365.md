@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33223636"
 ---
 # <a name="compiler-error-c2365"></a>コンパイラ エラー C2365
 'class member': 再定義; 以前の定義は 'class member' でした  

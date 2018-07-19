@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688701"
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. OpenMP C と C++ の実装で定義される動作
 この付録の内容は、"実装定義として"この API で記述されている動作をまとめたものです。  各動作は、メインの仕様では、その説明に相互参照です。  

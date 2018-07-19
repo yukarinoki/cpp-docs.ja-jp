@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347069"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>MFC プロジェクトへの ATL サポートの追加
 既に MFC ベースのアプリケーションを作成した場合、サポートを追加できますアクティブ テンプレート ライブラリ (ATL) を簡単に MFC プロジェクト ウィザードに ATL サポートを追加を実行しています。  

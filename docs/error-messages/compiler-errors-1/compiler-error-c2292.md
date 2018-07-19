@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171357"
 ---
 # <a name="compiler-error-c2292"></a>コンパイラ エラー C2292
 'identifier': 最適な継承の処理形式: 'representation1' 必須 'representation2' が宣言されています。  

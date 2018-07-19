@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391179"
 ---
 # <a name="union-declarations"></a>共用体の宣言
 "共有体宣言" は、一連の変数の値、および共有体に名前を付けるタグ (オプション) を指定します。 変数の値は共用体の "メンバー" と呼ばれ、異なる型を指定できます。 共有体は他の言語における "バリアント レコード" に似ています。  

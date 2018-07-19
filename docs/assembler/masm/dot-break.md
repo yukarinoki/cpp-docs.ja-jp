@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051557"
 ---
 # <a name="break"></a>.BREAK
 終了コードを生成、[です。中に](../../assembler/masm/dot-while.md)または[です。繰り返します](../../assembler/masm/dot-repeat.md)ブロック*条件*は true です。  

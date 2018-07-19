@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419912"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
 使用して**typename**の指定した修飾名が型を指定することをコンパイラに指示するテンプレート定義で修飾名。 詳細については、次を参照してください。 [typename](../cpp/typename.md)です。  

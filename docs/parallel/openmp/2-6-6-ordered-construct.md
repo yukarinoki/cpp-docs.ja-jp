@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690346"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 ordered コンストラクト
 構造化ブロック次、**注文**ディレクティブが順次ループ内でのイテレーションが実行される順序で実行します。 構文、**注文**ディレクティブは、次のようにします。  

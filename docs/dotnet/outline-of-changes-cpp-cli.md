@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138302"
 ---
 # <a name="outline-of-changes-ccli"></a>変更の概略 (C++/CLI)
 このアウトライン例を示す変更のいくつかのマネージ拡張からの言語で Visual c の C++ の。 詳細については、各項目に付属しているリンクを辿ってください。  

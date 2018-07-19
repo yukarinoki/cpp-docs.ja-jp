@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694749"
 ---
 # <a name="parallel-containers-and-objects"></a>並列コンテナーと並列オブジェクト
 並列パターン ライブラリ (PPL) には、いくつかのコンテナーとその要素にスレッド セーフなアクセスを提供するオブジェクトが含まれています。  

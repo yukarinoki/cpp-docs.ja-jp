@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 291abd2cc3ec1d40a448e593b5dc09d64ab95ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b6b9cd3778ceb90e5e73a927f098c62d2c1e9bad
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964298"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; クラス
 
-テンプレート クラス **valarray\<Type>** を `bool` 型の要素に特化したバージョン。
+テンプレート クラスの特殊なバージョン**valarray\<型 >** 型の要素を**bool**します。
 
 ## <a name="syntax"></a>構文
 
@@ -80,7 +81,7 @@ The result of the less-than comparison test is the
 *\
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<valarray>
 

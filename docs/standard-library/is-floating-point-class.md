@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63129ad04e2e74cdae9c590c76e1910e95117431
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52bc5ff0fe53dc89f932bf62dc98f7c8a03a725f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957006"
 ---
 # <a name="isfloatingpoint-class"></a>is_floating_point クラス
 
@@ -36,13 +37,13 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` が浮動小数点型または浮動小数点型の `cv-qualified` 形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*が浮動小数点型または`cv-qualified`形式の浮動小数点型、それ以外の場合は false を保持します。
 
-浮動小数点型は、`float`、`double`、`long double` のいずれかです。
+A の 1 つは、浮動小数点型**float**、**二重**、または**long double**します。
 
 ## <a name="example"></a>例
 
@@ -77,7 +78,7 @@ is_floating_point<int> == false
 is_floating_point<float> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

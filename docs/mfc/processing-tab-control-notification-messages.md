@@ -18,16 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ce59bfe298798d4574bf158998e989c4a6af62c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462d9177b1f6300eb356d052cbdfff3b85db86a1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928063"
 ---
 # <a name="processing-tab-control-notification-messages"></a>タブ コントロールの通知メッセージの処理
 ユーザーは、タブまたはボタン、タブ コントロールをクリックして、([CTabCtrl](../mfc/reference/ctabctrl-class.md))、親ウィンドウに通知メッセージを送信します。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーは、タブをクリックすると、可能性がある表示する前に、ページ上のコントロール データを事前設定します。  
   
- プロセス**WM_NOTIFY**ビューまたはダイアログ クラスでのタブ コントロールからのメッセージ。 [プロパティ] ウィンドウを使って作成、 [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) switch ステートメントを持つハンドラー関数が通知メッセージを処理しているに基づいて。 タブ コントロールは自らの親ウィンドウに送信できます通知の一覧は、次を参照してください。、**通知**のセクション[タブ コントロールの参照](http://msdn.microsoft.com/library/windows/desktop/bb760548)Windows SDK に含まれています。  
+ ビューまたはダイアログ クラスでのタブ コントロールから WM_NOTIFY メッセージを処理します。 [プロパティ] ウィンドウを使って作成、 [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) switch ステートメントを持つハンドラー関数が通知メッセージを処理しているに基づいて。 タブ コントロールは自らの親ウィンドウに送信できます通知の一覧は、次を参照してください。、**通知**のセクション[タブ コントロールの参照](http://msdn.microsoft.com/library/windows/desktop/bb760548)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
  [CTabCtrl の使い方](../mfc/using-ctabctrl.md)   

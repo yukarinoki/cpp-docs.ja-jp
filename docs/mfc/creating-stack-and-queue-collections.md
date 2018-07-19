@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345714"
 ---
 # <a name="creating-stack-and-queue-collections"></a>スタック コレクションとキュー コレクションの作成
 この記事などその他のデータ構造を作成する方法を説明します[スタック](#_core_stacks)と[キュー](#_core_queues)、MFC クラスのリストします。 例から派生したクラスを使用して`CList`、使用することができますが、`CList`直接機能を追加する必要がある場合を除き、します。  

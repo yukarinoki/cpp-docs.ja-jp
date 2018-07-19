@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883343"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>ジェネリック型パラメーターの制約 (C++/CLI)
 ジェネリック型またはメソッドの宣言では、制約と型パラメーターを修飾することができます。 制約は、型引数として使用される型が満たす必要がある要件です。 たとえば、型引数が特定のインターフェイスを実装するか、特定のクラスから継承する必要があります、制約があります。  

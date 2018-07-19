@@ -18,15 +18,16 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 355b9945e8783879c9d35aab9893dffa32596d00
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d369ba9b2af313c27e96e9981129fe2cf1da3c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961072"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 関数
 
-\<array> ヘッダーには、`array` オブジェクトで動作する `get` と`swap` の 2 つの非メンバー関数が含まれています。
+\<Array > ヘッダーには、2 つの非メンバー関数が含まれています。`get`と`swap`、で動作する**配列**オブジェクト。
 
 |||
 |-|-|
@@ -49,13 +50,13 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Index` 要素のオフセット。
+*インデックス*要素のオフセット。
 
-`T` 要素の型。
+*T*要素の型。
 
-`N` 配列内の要素の数。
+*N*配列内の要素の数。
 
-`arr` 選択する配列。
+*arr*から選択する配列。
 
 ### <a name="example"></a>例
 
@@ -91,7 +92,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-2 つの `array` オブジェクトを交換する `std::swap` の非メンバー テンプレートの特殊化。
+非メンバー テンプレートの特殊化`std::swap`交換する 2 つ**配列**オブジェクト。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -100,15 +101,15 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 要素の型。
+*Ty*要素の型。
 
-`N` 配列のサイズ。
+*N*配列のサイズ。
 
-`left` スワップする最初の配列。
+*左*スワップする最初の配列。
 
-`right` スワップする 2 番目の配列。
+*適切な*交換する 2 番目の配列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、`left.swap(right)` を実行します。
 

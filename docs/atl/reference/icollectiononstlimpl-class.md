@@ -1,5 +1,5 @@
 ---
-title: 単独クラス |Microsoft ドキュメント
+title: ICollectionOnSTLImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,137 +21,139 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7001474bc766410092c6b9d6f9759b6f44cdd3e4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 812deba7cb33a713d8b1a55eaa4c375092168dce
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881673"
 ---
-# <a name="icollectiononstlimpl-class"></a>単独クラス
-このクラスは、コレクション クラスによって使用されるメソッドを提供します。  
+# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl クラス
+このクラスは、コレクション クラスで使用されるメソッドを提供します。  
   
 ## <a name="syntax"></a>構文  
   
 ```
 template <class T, class CollType, class ItemType, class CopyItem, class EnumType>  
-class ICollectionOnSTLImpl : public T```  
+class ICollectionOnSTLImpl : public T
+```  
   
-#### Parameters  
- `T`  
- A COM collection interface.  
+#### <a name="parameters"></a>パラメーター  
+ *T*  
+ COM コレクションのインターフェイス。  
   
- `CollType`  
- A C++ Standard Library container class.  
+ *CollType*  
+ C++ 標準ライブラリ コンテナー クラス。  
   
  *ItemType*  
- The type of item exposed by the container interface.  
+ コンテナー インターフェイスによって公開される項目の種類。  
   
  *CopyItem*  
- A [copy policy class](../../atl/atl-copy-policy-classes.md).  
+ A[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)します。  
   
  *EnumType*  
- A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-compatible enumerator class.  
+ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-互換性のある列挙子クラス。  
   
-## Members  
+## <a name="members"></a>メンバー  
   
-### Public Methods  
+### <a name="public-methods"></a>パブリック メソッド  
   
-|Name|Description|  
+|名前|説明|  
 |----------|-----------------|  
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Returns an enumerator object for the collection.|  
-|[ICollectionOnSTLImpl::getcount](#get_count)|Returns the number of elements in the collection.|  
-|[ICollectionOnSTLImpl::get_Item](#get_item)|Returns the requested item from the collection.|  
+|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|コレクションの列挙子オブジェクトを返します。|  
+|[ICollectionOnSTLImpl::getcount](#get_count)|コレクション内の要素の数を返します。|  
+|[ICollectionOnSTLImpl::get_Item](#get_item)|要求された項目をコレクションから返します。|  
   
-### Public Data Members  
+### <a name="public-data-members"></a>パブリック データ メンバー  
   
-|Name|Description|  
+|名前|説明|  
 |----------|-----------------|  
-|[ICollectionOnSTLImpl::m_coll](#m_coll)|The collection.|  
+|[ICollectionOnSTLImpl::m_coll](#m_coll)|コレクション。|  
   
-## Remarks  
- This class provides the implementation for three methods of a collection interface: [getcount](#get_count), [get_Item](#get_item), and [get__NewEnum](#newenum).  
+## <a name="remarks"></a>Remarks  
+ このクラスは、3 つの方法、コレクション インターフェイスの実装を提供します。 [getcount](#get_count)、 [get_Item](#get_item)、および[get__NewEnum](#newenum)します。  
   
- To use this class:  
+ このクラスを使用します。  
   
--   Define (or borrow) a collection interface that you wish to implement.  
+-   実装するコレクション インターフェイスを定義 (または借用)。  
   
--   Derive your class from a specialization of `ICollectionOnSTLImpl` based on this collection interface.  
+-   特殊化クラスを派生`ICollectionOnSTLImpl`このコレクションのインターフェイスに基づいています。  
   
--   Use your derived class to implement any methods from the collection interface not handled by `ICollectionOnSTLImpl`.  
+-   派生クラスを使用してによって処理されないコレクション インターフェイスからすべてのメソッドを実装する`ICollectionOnSTLImpl`します。  
   
 > [!NOTE]
->  If the collection interface is a dual interface, derive your class from [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), passing the `ICollectionOnSTLImpl` specialization as the first template parameter if you want ATL to provide the implementation of the `IDispatch` methods.  
+>  コレクション インターフェイスがデュアル インターフェイスの場合は、派生クラスから[IDispatchImpl](../../atl/reference/idispatchimpl-class.md)を渡して、`ICollectionOnSTLImpl`特殊化の実装を提供する場合は、最初のテンプレート パラメーターとして、 `IDispatch`メソッド。  
   
--   Add items to the [m_coll](#m_coll) member to populate the collection.  
+-   項目の追加、 [m_coll](#m_coll)コレクションを設定するメンバー。  
   
- For more information and examples, see [ATL Collections and Enumerators](../../atl/atl-collections-and-enumerators.md).  
+ 詳細と例については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。  
   
-## Inheritance Hierarchy  
+## <a name="inheritance-hierarchy"></a>継承階層  
  `T`  
   
  `ICollectionOnSTLImpl`  
   
-## Requirements  
- **Header:** atlcom.h  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** atlcom.h  
   
 ##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount  
- This method returns the number of items in the collection.  
+ このメソッドは、コレクション内の項目の数を返します。  
   
 ```
-STDMETHOD(getcount) (時間の長い * pcount) です。
+STDMETHOD(getcount)(long* pcount);
 ```  
   
-### Parameters  
+### <a name="parameters"></a>パラメーター  
  *pcount*  
- [out] The number of elements in the collection.  
+ [out]コレクション内の要素の数。  
   
-### Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>戻り値  
+ 標準の HRESULT 値。  
   
 ##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item  
- This method returns the specified item from the collection.  
+ このメソッドは、指定した項目をコレクションから返します。  
   
 ```
-STDMETHOD(get_Item) (長いインデックス、ItemType * pvar) です。
+STDMETHOD(get_Item)(long Index, ItemType* pvar);
 ```  
   
-### Parameters  
- `Index`  
- [in] The 1-based index of an item in the collection.  
+### <a name="parameters"></a>パラメーター  
+ *Index*  
+ [in]コレクション内の項目の 1 から始まるインデックス。  
   
- `pvar`  
- [out] The item corresponding to `Index`.  
+ *pvar*  
+ [out]対応する項目*インデックス*します。  
   
-### Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>戻り値  
+ 標準の HRESULT 値。  
   
-### Remarks  
- The item is obtained by copying the data at the specified position in [m_coll](#m_coll) using the copy method of the [copy policy class](../../atl/atl-copy-policy-classes.md) passed as a template argument in the `ICollectionOnSTLImpl` specialization.  
+### <a name="remarks"></a>Remarks  
+ 指定した位置にあるデータをコピーすることによって、アイテムの取得は[m_coll](#m_coll)の copy メソッドを使用して、[コピー ポリシー クラス](../../atl/atl-copy-policy-classes.md)のテンプレート引数として渡される、`ICollectionOnSTLImpl`特殊化します。  
   
 ##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum  
- Returns an enumerator object for the collection.  
+ コレクションの列挙子オブジェクトを返します。  
   
 ```
-STDMETHOD(get__NewEnum) (IUnknown * * ppUnk) です。
+STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 ```  
   
-### Parameters  
- `ppUnk`  
- [out] The **IUnknown** pointer of a newly created enumerator object.  
+### <a name="parameters"></a>パラメーター  
+ *ppUnk*  
+ [out]**IUnknown**新しく作成された列挙子オブジェクトのポインター。  
   
-### Return Value  
- A standard `HRESULT` value.  
+### <a name="return-value"></a>戻り値  
+ 標準の HRESULT 値。  
   
-### Remarks  
- The newly created enumerator maintains an iterator on the original collection, `m_coll`, (so no copy is made) and holds a COM reference on the collection object to ensure that the collection remains alive while there are outstanding enumerators.  
+### <a name="remarks"></a>Remarks  
+ 新しく作成された列挙子が元のコレクションの反復子を保持`m_coll`(コピーは作成されません) ため、未処理の列挙子があるときに、コレクションが存続することを確認するコレクション オブジェクトの COM の参照を保持しています。  
   
 ##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll  
- This member holds the items represented by the collection.  
+ このメンバーは、コレクションによって表される項目を保持します。  
   
 ```
-CollType m_coll です。
+CollType m_coll;
 ```  
   
-## See Also  
- [ATLCollections Sample](../../visual-cpp-samples.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>関連項目  
+ [ATLCollections サンプル](../../visual-cpp-samples.md)   
+ [クラスの概要](../../atl/atl-class-overview.md)

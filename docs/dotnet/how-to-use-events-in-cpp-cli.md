@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138040"
 ---
 # <a name="how-to-use-events-in-ccli"></a>方法: C++/CLI でイベントを使用する
 この記事では、イベントと、そのイベントを呼び出す関数を宣言するインターフェイスとインターフェイスを実装するクラスとイベント ハンドラーを使用する方法を示します。  

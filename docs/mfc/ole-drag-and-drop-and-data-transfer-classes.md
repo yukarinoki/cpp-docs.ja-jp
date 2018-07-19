@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347043"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>OLE ドラッグ アンド ドロップおよびデータ転送クラス
 これらのクラスは、OLE データ転送に使用されます。 これらは、アプリケーションでクリップボードの使用方法やドラッグ アンド ドロップの間で転送されるデータを許可します。  

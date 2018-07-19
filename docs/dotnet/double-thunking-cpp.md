@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111209"
 ---
 # <a name="double-thunking-c"></a>ダブル サンキング (C++)
 ダブル サンキング Visual C マネージ関数とプログラムの実行をここでは、マネージ コンテキスト呼び出し内の関数呼び出しはマネージ関数を呼び出すために、関数のネイティブ エントリ ポイントを呼び出すときに発生する可能性がパフォーマンスの低下を指します。 このトピックでは、ダブル サンキングが発生して、パフォーマンスを向上させることを回避する方法について説明します。  

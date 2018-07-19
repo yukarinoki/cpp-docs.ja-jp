@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928770"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外処理 : 例外のキャッチと削除
-次の手順と例についてをキャッチして例外を削除する方法を示します。 詳細については、**再試行**、**キャッチ**と`throw`キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)です。  
+次の手順と例についてをキャッチして例外を削除する方法を示します。 詳細については、**を再試行してください**、**キャッチ**、および**スロー**キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)です。  
   
  例外ハンドラーは、そのコードが例外をキャッチするたびに、例外の削除に失敗が、メモリ リークを引き起こします処理した例外オブジェクトを削除する必要があります。  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 -   内から実行を返します、**キャッチ**ブロックします。  
   
 > [!NOTE]
->  削除するときに、`CException`を使用して、**削除**例外を削除するメンバー関数。 使用しないでください、**削除**キーワードでは失敗する場合、この例外は、ヒープ上にないためです。  
+>  削除するときに、`CException`を使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**削除**キーワードでは失敗する場合、この例外は、ヒープ上にないためです。  
   
 #### <a name="to-catch-and-delete-exceptions"></a>キャッチおよび例外を削除するには  
   

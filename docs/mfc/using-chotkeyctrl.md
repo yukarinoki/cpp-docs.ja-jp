@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381805"
 ---
 # <a name="using-chotkeyctrl"></a>CHotKeyCtrl の使い方
 クラスによって表されるホット キー コントロール[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)CTRL + SHIFT + Q など、ユーザーが、そこに型のキーの組み合わせのテキスト表現を表示するウィンドウです。 このキーをシフト状態を表すフラグのセットと仮想キー コードの形式での内部表現も保持されます。 ホット キー コントロールがホット キーを実際に設定していない — これまで、プログラムはします。 (標準の仮想キー コードの一覧は、Winuser.h を参照してください)。  

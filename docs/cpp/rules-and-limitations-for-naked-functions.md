@@ -1,5 +1,5 @@
 ---
-title: Naked 関数の規則と制限 |Microsoft ドキュメント
+title: Naked 関数に関する規則と制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1a6f88717b8fb371c343d17a9b38608876cd900
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943306"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>naked 関数の規則と制限
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
  次の規則と制約が naked 関数に適用されます。  
   
--   `return` ステートメントは許可されていません。  
+-   **返す**ステートメントは許可されていません。  
   
 -   構造化例外処理コンストラクトと C++ の例外処理コンストラクトは、スタック フレームを越えてアンワインドする必要があるため許可されていません。  
   
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 -   関数の構文スコープでは C++ クラス オブジェクトを宣言できません。 ただし、入れ子になったブロックではオブジェクトを宣言できます。  
   
--   `naked`でコンパイルするときに、キーワードは無視されます[/clr](../build/reference/clr-common-language-runtime-compilation.md)です。  
+-   **Naked**でコンパイルするときに、キーワードは無視されます[/clr](../build/reference/clr-common-language-runtime-compilation.md)します。  
   
--   [_ _Fastcall](../cpp/fastcall.md) naked 関数は、レジスタ引数のいずれかにコードと C/C++ コードの参照があるたびに、プロローグ コードがその変数のスタックの場所にそのレジスタの値を格納する必要があります。 例えば:  
+-   [_ _Fastcall](../cpp/fastcall.md) naked 関数は、レジスタ引数のいずれかに C と C++ コードでの参照があるときに、プロローグ コードがその変数のスタックの場所にそのレジスタの値を格納する必要があります。 例えば:  
   
-```  
+```cpp 
 // nkdfastcl.cpp  
 // compile with: /c  
 // processor: x86  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33262580"
 ---
 # <a name="compiler-error-c3538"></a>コンパイラ エラー C3538
 宣言リストでは 'auto' は常に同じ型に推測される必要があります  

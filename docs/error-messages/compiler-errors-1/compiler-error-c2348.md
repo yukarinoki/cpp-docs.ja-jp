@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222242"
 ---
 # <a name="compiler-error-c2348"></a>コンパイラ エラー C2348
 'type name': C スタイルの集合ではありません、埋め込み IDL 内でエクスポートできません。  

@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLinkCtrl クラス |Microsoft ドキュメント
+title: CMFCRibbonLinkCtrl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,11 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851497"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl クラス
 リボン上に配置するハイパーリンクを実装します。 ハイパーリンクをクリックすると、Web ページが表示されます。  
@@ -83,19 +84,19 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |[CMFCRibbonLinkCtrl::OpenLink](#openlink)|ハイパーリンクで指定されている Web ページを開きます。|  
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|ハイパーリンクの値を設定します。|  
   
-## <a name="remarks"></a>コメント  
- ハイパーリンクを作成した後に追加パネルを呼び出して[cmfcribbonpanel::add](../../mfc/reference/cmfcribbonpanel-class.md#add)です。  
+## <a name="remarks"></a>Remarks  
+ ハイパーリンクを作成した後に追加パネルを呼び出すことによって[cmfcribbonpanel::add](../../mfc/reference/cmfcribbonpanel-class.md#add)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
  [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxRibbonLinkCtrl.h  
   
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
- 構築して初期化、 [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)オブジェクト。  
+ 構築し、初期化、 [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)オブジェクト。  
   
 ```  
 CMFCRibbonLinkCtrl(
@@ -105,17 +106,17 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `nID`  
+ [in]*nID*  
  リンク コントロールがクリックされたときに実行されるコマンドのコマンド ID を指定します。  
   
- [入力] `lpszText`  
+ [in]*lpszText*  
  リンク コントロールに表示するラベルを指定します。  
   
- [入力] `lpszLink`  
- リンク コントロールに関連付けられているハイパーリンクを指定します。  
+ [in]*lpszLink*  
+ リンク コントロールに関連付けられたハイパーリンクを指定します。  
   
 ### <a name="example"></a>例  
- 次の例でのコンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラスです。 このコード スニペットの一部である、[リボン ガジェット サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、コンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラス。 このコード スニペットの一部、[リボン ガジェット サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -127,9 +128,9 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonLinkCtrl::GetCompactSize  
 
@@ -139,11 +140,11 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getlink"></a>  CMFCRibbonLinkCtrl::GetLink  
  ハイパーリンクの値を返します。  
@@ -155,7 +156,7 @@ LPCTSTR GetLink() const;
 ### <a name="return-value"></a>戻り値  
  ハイパーリンクの現在の値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getregularsize"></a>  CMFCRibbonLinkCtrl::GetRegularSize  
 
@@ -165,11 +166,11 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="gettooltiptext"></a>  CMFCRibbonLinkCtrl::GetToolTipText  
 
@@ -180,7 +181,7 @@ virtual CString GetToolTipText() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage  
 
@@ -190,12 +191,12 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `CDC*`  
- [入力] `CRect`  
+ [in]*CDC**  
+ [in]*CRect*  
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage  
 
@@ -206,7 +207,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw  
 
@@ -216,9 +217,9 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `pDC`  
+ [in]*pDC*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove  
 
@@ -228,9 +229,9 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `point`  
+ [in]*ポイント*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon  
 
@@ -239,7 +240,7 @@ virtual void OnMouseMove(CPoint point);
 virtual void OnSetIcon();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="openlink"></a>  CMFCRibbonLinkCtrl::OpenLink  
  ハイパーリンクで指定されている Web ページを開きます。  
@@ -249,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 関連付けられている Web ページが正常に開かれた場合それ以外の場合、`FALSE`です。  
+ 関連付けられている web ページが正常に開かれた場合は TRUE。それ以外の場合、FALSE です。  
   
-### <a name="remarks"></a>コメント  
- 関連付けられているハイパーリンクを使用し、web ページを開き、`CMFCRibbonLinkCtrl`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 関連付けられているハイパーリンクを使用して web ページを開き、`CMFCRibbonLinkCtrl`オブジェクト。  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  ハイパーリンクの値を設定します。  
@@ -262,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `lpszLink`  
+ [in]*lpszLink*  
  ハイパーリンクのテキストを指定します。  
   
 ## <a name="see-also"></a>関連項目  

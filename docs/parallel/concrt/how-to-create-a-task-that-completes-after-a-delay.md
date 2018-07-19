@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688412"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>方法: 遅延後に完了するタスクを作成する
 この例を使用する方法を示しています、 [concurrency::task](../../parallel/concrt/reference/task-class.md)、 [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)、 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)、 [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)、 [concurrency::timer](../../parallel/concrt/reference/timer-class.md)、および[concurrency::call](../../parallel/concrt/reference/call-class.md)遅延後に完了するタスクを作成するクラス。 このメソッドは、ループをときどきデータをポーリングのタイムアウトを導入、あらかじめ決められた時間は、ユーザー入力の処理を遅延に表示され、ビルドを使用することができます。  

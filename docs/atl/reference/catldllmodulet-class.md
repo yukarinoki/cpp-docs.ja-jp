@@ -1,5 +1,5 @@
 ---
-title: CAtlDllModuleT クラス |Microsoft ドキュメント
+title: CAtlDllModuleT クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1ea8b5922454d32961f0e7d87eda16f55fe52c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86fae3c77f06ab7dd3fb2104eda928c1a72b8cc3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883545"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT クラス
 このクラスは、DLL のモジュールを表します。  
@@ -41,8 +42,8 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 派生したクラス`CAtlDllModuleT`です。  
+ *T*  
+ クラスから派生した`CAtlDllModuleT`します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -57,17 +58,17 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
   
 |名前|説明|  
 |----------|-----------------|  
-|[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|DLL をアンロードできるかどうか。|  
+|[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|DLL をアンロードできるかどうかをテストします。|  
 |[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)|クラス ファクトリを返します。|  
-|[CAtlDllModuleT::DllMain](#dllmain)|ダイナミック リンク ライブラリ (DLL) への省略可能なエントリ ポイントです。|  
+|[CAtlDllModuleT::DllMain](#dllmain)|ダイナミック リンク ライブラリ (DLL) への省略可能なエントリ ポイント。|  
 |[CAtlDllModuleT::DllRegisterServer](#dllregisterserver)|DLL 内のオブジェクトのシステム レジストリにエントリを追加します。|  
-|[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|DLL 内のオブジェクトのシステム レジストリのエントリを削除します。|  
-|[CAtlDllModuleT::GetClassObject](#getclassobject)|クラス ファクトリを返します。 によって呼び出された[DllGetClassObject](#dllgetclassobject)です。|  
+|[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|DLL 内のオブジェクトのシステム レジストリにエントリを削除します。|  
+|[CAtlDllModuleT::GetClassObject](#getclassobject)|クラス ファクトリを返します。 によって呼び出された[DllGetClassObject](#dllgetclassobject)します。|  
   
-## <a name="remarks"></a>コメント  
- `CAtlDllModuleT` ダイナミック リンク ライブラリ (DLL) 用のモジュールを表し、DLL のすべてのプロジェクトで使用される関数を提供します。 この特殊化[CAtlModuleT](../../atl/reference/catlmodulet-class.md)クラスには、登録のサポートが含まれています。  
+## <a name="remarks"></a>Remarks  
+ `CAtlDllModuleT` ダイナミック リンク ライブラリ (DLL) 用のモジュールを表し、すべての DLL プロジェクトで使用される関数を提供します。 この特殊化[CAtlModuleT](../../atl/reference/catlmodulet-class.md)クラスには、登録のサポートが含まれています。  
   
- ATL でモジュールの詳細については、次を参照してください。 [ATL モジュール クラス](../../atl/atl-module-classes.md)です。  
+ ATL でモジュールの詳細については、次を参照してください。 [ATL モジュール クラス](../../atl/atl-module-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -78,7 +79,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
   
  `CAtlDllModuleT`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ##  <a name="catldllmodulet"></a>  CAtlDllModuleT::CAtlDllModuleT  
@@ -96,14 +97,14 @@ CAtlDllModuleT() throw();
 ```  
   
 ##  <a name="dllcanunloadnow"></a>  CAtlDllModuleT::DllCanUnloadNow  
- DLL をアンロードできるかどうか。  
+ DLL をアンロードできるかどうかをテストします。  
   
 ```
 HRESULT DllCanUnloadNow() throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- できない場合は、DLL が読み込まれた、指定できる場合は s_ok S_FALSE を返します。  
+ できない場合は、DLL をアンロードできる場合は S_OK または S_FALSE を返します。  
   
 ##  <a name="dllgetclassobject"></a>  CAtlDllModuleT::DllGetClassObject  
  クラス ファクトリを返します。  
@@ -116,28 +117,28 @@ HRESULT DllGetClassObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rclsid`  
+ *rclsid*  
  作成するオブジェクトの CLSID。  
   
- `riid`  
- 要求されたインターフェイスの IID です。  
+ *riid*  
+ 要求されたインターフェイスの IID。  
   
- `ppv`  
- によって識別されるインターフェイス ポインターへのポインター`riid`です。 オブジェクトは、このインターフェイスをサポートしていない場合`ppv`は NULL に設定します。  
+ *ppv*  
+ によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppv* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ##  <a name="dllmain"></a>  CAtlDllModuleT::DllMain  
- ダイナミック リンク ライブラリ (DLL) への省略可能なエントリ ポイントです。  
+ ダイナミック リンク ライブラリ (DLL) への省略可能なエントリ ポイント。  
   
 ```
 BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwReason`  
- DLL_PROCESS_ATTACH DLL_THREAD_ATTACH、DLL_THREAD_DETACH の通知呼び出しに設定が無効になって 場合。  
+ *dwReason*  
+ 場合は、DLL_PROCESS_ATTACH、DLL_THREAD_ATTACH および DLL_THREAD_DETACH 通知の呼び出しに設定が無効です。  
   
  *lpReserved*  
  予約済み。  
@@ -145,8 +146,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 ### <a name="return-value"></a>戻り値  
  常に TRUE を返します。  
   
-### <a name="remarks"></a>コメント  
- DLL_THREAD_ATTACH を無効にして、DLL_THREAD_DETACH 通知の呼び出しは、多くの Dll があるマルチ スレッド アプリケーションの有効な最適化をすることができますを頻繁に作成スレッド、および削除が Dll では、これらのスレッド レベル通知は必要はありません。添付ファイル/デタッチします。  
+### <a name="remarks"></a>Remarks  
+ DLL_THREAD_ATTACH を無効にして、呼び出しは、多くの Dll を持つアプリケーションはマルチ スレッドの有効な最適化を指定できます、DLL_THREAD_DETACH 通知を頻繁に作成し、スレッドを削除、Dll を持つ必要はありませんのこれらのスレッド レベル通知添付ファイル/デタッチできません。  
   
 ##  <a name="dllregisterserver"></a>  CAtlDllModuleT::DllRegisterServer  
  DLL 内のオブジェクトのシステム レジストリにエントリを追加します。  
@@ -156,28 +157,28 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bRegTypeLib`  
- タイプ ライブラリは、登録する場合は TRUE。 既定値は TRUE です。  
+ *bRegTypeLib*  
+ TRUE の場合、タイプ ライブラリを登録します。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ##  <a name="dllunregisterserver"></a>  CAtlDllModuleT::DllUnregisterServer  
- DLL 内のオブジェクトのシステム レジストリのエントリを削除します。  
+ DLL 内のオブジェクトのシステム レジストリにエントリを削除します。  
   
 ```
 HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bUnRegTypeLib`  
- タイプ ライブラリをレジストリから削除する場合は TRUE。 既定値は TRUE です。  
+ *bUnRegTypeLib*  
+ タイプ ライブラリは、レジストリから削除する場合は TRUE。 既定値は TRUE です。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ##  <a name="getclassobject"></a>  CAtlDllModuleT::GetClassObject  
- 指定された CLSID のオブジェクトを作成します。  
+ 指定した CLSID のオブジェクトを作成します。  
   
 ```
 HRESULT GetClassObject(
@@ -187,20 +188,20 @@ HRESULT GetClassObject(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rclsid`  
+ *rclsid*  
  作成するオブジェクトの CLSID。  
   
- `riid`  
- 要求されたインターフェイスの IID です。  
+ *riid*  
+ 要求されたインターフェイスの IID。  
   
- `ppv`  
- によって識別されるインターフェイス ポインターへのポインター`riid`です。 オブジェクトは、このインターフェイスをサポートしていない場合`ppv`は NULL に設定します。  
+ *ppv*  
+ によって識別されるインターフェイス ポインターへのポインター *riid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppv* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドによって呼び出されます[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)と下位互換性のために用意されています。  
+### <a name="remarks"></a>Remarks  
+ このメソッドを呼び出して[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)と下位互換性のために用意されています。  
   
 ## <a name="see-also"></a>関連項目  
  [CAtlModuleT クラス](../../atl/reference/catlmodulet-class.md)   

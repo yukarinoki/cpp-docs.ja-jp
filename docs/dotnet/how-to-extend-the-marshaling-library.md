@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135890"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>方法: マーシャリング ライブラリを拡張する
 このトピックでは、データ型間の複数の変換を提供する、マーシャ リング ライブラリを拡張する方法について説明します。 ユーザーは、ライブラリによってサポートされていないデータ変換のマーシャ リング ライブラリを拡張できます。  

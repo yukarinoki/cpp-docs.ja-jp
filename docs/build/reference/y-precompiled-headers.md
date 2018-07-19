@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377539"
 ---
 # <a name="y-precompiled-headers"></a>/Y (プリコンパイル済みヘッダー)
 次のコンパイラ オプションは、プリコンパイル済みヘッダーを使用して、生成に影響します。  

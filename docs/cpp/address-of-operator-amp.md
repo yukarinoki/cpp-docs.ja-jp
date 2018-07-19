@@ -1,5 +1,5 @@
 ---
-title: 'Address-of 演算子: &amp; |Microsoft ドキュメント'
+title: 'Address-of 演算子: &amp; |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df243cac3b48a120345760f814a97b77667c770f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e770a90427d12d79a18c346d74140d07c5c5c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958586"
 ---
 # <a name="address-of-operator-amp"></a>Address-of 演算子: &amp;
 ## <a name="syntax"></a>構文  
@@ -31,21 +32,21 @@ ms.lasthandoff: 05/03/2018
 & cast-expression  
 ```  
   
-## <a name="remarks"></a>コメント  
- 単項 address-of 演算子 (**&**)、オペランドのアドレスを取得します。 Address-of 演算子のオペランドには、関数指定子またはビット フィールドではないオブジェクトを指定する左辺値のいずれかを指定できます。  
+## <a name="remarks"></a>Remarks  
+ 単項アドレス演算子 (**&**) は、オペランドのアドレスを取得します。 Address-of 演算子のオペランドには、関数指定子またはビット フィールドではないオブジェクトを指定する左辺値のいずれかを指定できます。  
   
  アドレス演算子は、ファイル スコープ レベルで宣言された基本型、構造体型、クラス型、または共用体型を持つ変数、または添字配列参照だけに適用できます。 これらの式では、アドレス演算子を含まない定数式を、アドレス式に加算したりアドレス式から減算できます。  
   
- 関数または左辺値に適用されたときの式の結果は、オペランドの型から派生したポインター型 (右辺値) です。 たとえば、オペランドが `char` 型の場合、式の結果は `char` へのポインター型になります。 アドレスの演算子に適用される**const**または`volatile`オブジェクトの場合に評価**const** `type` **\*** または`volatile` `type` **\*** ここで、`type`元のオブジェクトの種類です。  
+ 関数または左辺値に適用されたときの式の結果は、オペランドの型から派生したポインター型 (右辺値) です。 たとえば、オペランドの型は**char**へのポインター型の式の結果は、 **char**します。 Address-of 演算子を適用する**const**または**揮発性**オブジェクトの場合に評価されます**const 型\*** または**volatile 型\*** ここで、**型**元のオブジェクトの種類です。  
   
- アドレス演算子を適用すると、[修飾名](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df)、結果は異なるかどうか、*修飾名*静的メンバーを指定します。 その場合、結果はメンバーの宣言で指定した型へのポインターです。 メンバーが静的でない場合、結果は、メンバーへのポインターは*名前*で示されたクラスの*修飾クラス名*です。 (を参照してください[一次式](../cpp/primary-expressions.md)について*修飾クラス名*)。次のコードは、メンバーが静的かどうかによって、どのように結果が違うかを示します。  
+ 結果がかどうかに依存する修飾名に address-of 演算子が適用されると、*修飾名*静的メンバーを指定します。 その場合、結果はメンバーの宣言で指定した型へのポインターです。 メンバーが静的でない場合、結果は、メンバーへのポインターは*名前*で示されたクラスの*修飾クラス名*します。 (を参照してください[一次式](../cpp/primary-expressions.md)の詳細については*修飾クラス名*)。次のコードは、メンバーが静的かどうかによって、どのように結果が違うかを示します。  
   
-```  
+```cpp 
 // expre_Address_Of_Operator.cpp  
 // C2440 expected  
 class PTM {  
 public:  
-           int   iValue;  
+    int iValue;  
     static float fValue;  
 };  
   
@@ -64,7 +65,7 @@ int main() {
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_Address_Of_Operator2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -87,7 +88,7 @@ int main() {
   
  次の例は、関数へのポインター引数を受け渡すためにアドレス演算子を使用します。  
   
-```  
+```cpp 
 // expre_Address_Of_Operator3.cpp  
 // compile with: /EHsc  
 // Demonstrate address-of operator &  
@@ -114,6 +115,6 @@ int main() {
   
 ## <a name="see-also"></a>関連項目  
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)   
  [間接演算子とアドレス演算子](../c-language/indirection-and-address-of-operators.md)

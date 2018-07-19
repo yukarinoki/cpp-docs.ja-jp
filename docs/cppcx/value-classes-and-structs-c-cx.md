@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090715"
 ---
 # <a name="value-classes-and-structs-ccx"></a>値クラスと構造体 (C++/CX)
 A*値構造体*または*値クラス*は、Windows ランタイムと互換性のある POD ("plain old data structure") です。 これは、サイズが固定され、フィールドだけで構成されています。ref クラスとは異なり、プロパティはありません。  

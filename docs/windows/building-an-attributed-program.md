@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862278"
 ---
 # <a name="building-an-attributed-program"></a>属性付きプログラムの作成
 Visual C 属性をソース コードに配置すると後のタイプ ライブラリおよび .idl ファイルを生成するために、Visual C コンパイラもかまいません。 次のリンカー オプション、.tlb および .idl ファイルをビルドするときに役立ちます。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089719"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: ODBC API 関数の直接呼び出し
 データベース クラスを提供するシンプルなインターフェイス、[データソース](../../data/odbc/data-source-odbc.md)ODBC よりもします。 その結果、クラスには、すべての ODBC API はカプセル化されません。 クラスの機能の外側にあるすべての機能を直接 ODBC API 関数を呼び出す必要があります。 たとえば、ODBC カタログ関数を呼び出す必要があります (**:: SQLColumns**、 **:: SQLProcedures**、 **:: SQLTables**、およびその他) 直接です。  

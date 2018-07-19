@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d80dc3d02a7530ee54c9ff26cd0a03465bd77cdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acbbd4ec8e075abbcbbeeaf199cae0d3a8d3c41a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930453"
 ---
 # <a name="handling-the-apply-button"></a>[適用] ボタンの処理
 プロパティ シートの標準的なダイアログ ボックスがない機能があります: プロパティ シートを閉じる前に行った変更を適用するユーザーを許可します。 これは、[適用] ボタンを使用します。 この記事では、この機能を正しく実装に使用できるメソッドについて説明します。  
@@ -32,11 +33,11 @@ ms.lasthandoff: 05/04/2018
   
  ユーザーに適用機能を提供しない場合、[適用] ボタンを削除する必要はありません。 使用できなくなり、将来のバージョンの Windows で使用できる標準のプロパティ シートのサポートを使用してアプリケーションに共通するはそのままでかまいません。  
   
- 変更されると、ページのレポートを [適用] ボタンを有効にするには、呼び出す**CPropertyPage::SetModified (TRUE)** です。 変更されているページのレポートのいずれか場合、[適用] ボタンは引き続き現在のページが変更されたかどうかに関係なく、有効です。  
+ 変更されると、ページのレポートを [適用] ボタンを有効にするには、呼び出す`CPropertyPage::SetModified( TRUE )`です。 変更されているページのレポートのいずれか場合、[適用] ボタンは引き続き現在のページが変更されたかどうかに関係なく、有効です。  
   
  呼び出す必要があります[CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified)ユーザーが任意のページで設定が変更されるたびにします。 ページで設定を変更するときを検出する方法の 1 つなどのプロパティ ページで、コントロールの変更通知のハンドラーを実装する**EN_CHANGE**または**BN_CLICKED**です。  
   
- [適用] ボタンの効果を実装するのにプロパティ シートは、アプリケーションで、プロパティ ページで、現在の設定を適用する、所有者、またはその他の外部オブジェクトを伝えます必要があります。 同時に、プロパティ シートを無効に適用 ボタンを呼び出して**CPropertyPage::SetModified (FALSE)** すべてのページの外部のオブジェクトに、その変更を適用します。  
+ [適用] ボタンの効果を実装するのにプロパティ シートは、アプリケーションで、プロパティ ページで、現在の設定を適用する、所有者、またはその他の外部オブジェクトを伝えます必要があります。 同時に、プロパティ シートを無効に適用 ボタンを呼び出して`CPropertyPage::SetModified( FALSE )`すべてのページの外部のオブジェクトに、その変更を適用します。  
   
  このプロセスの例は、MFC 標準サンプルを参照してください。 [PROPDLG](../visual-cpp-samples.md)です。  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889308"
 ---
 # <a name="safeint-functions"></a>SafeInt 関数
 SafeInt ライブラリには、インスタンスを作成せずに使用できるいくつかの関数が用意されています、 [SafeInt クラス](../windows/safeint-class.md)です。 整数オーバーフローから単一の数値演算を保護する場合は、これらの関数を使用することができます。 作成する必要があります複数の数値演算を保護する場合は、`SafeInt`オブジェクト。 作成する方が効率的である`SafeInt`にこれらの関数を複数回使用よりもオブジェクトです。  

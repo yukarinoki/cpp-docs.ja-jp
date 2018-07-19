@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368310"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>[複合ドキュメント サポート] \(MFC アプリケーション ウィザード)
 MFC アプリケーション ウィザードのこのページでは、どのようなレベルに複合とアクティブなドキュメントのサポートを提供するアプリケーションを指定します。 アプリケーションでは、複合ドキュメントおよびドキュメント テンプレートをサポートするためにドキュメント/ビュー アーキテクチャをサポートする必要があります。  

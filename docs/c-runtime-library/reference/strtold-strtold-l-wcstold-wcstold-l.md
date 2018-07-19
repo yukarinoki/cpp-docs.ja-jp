@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417078"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、wcstold、_wcstold_l
 
@@ -83,7 +84,7 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtold**と浮動小数点数の値を返します、**長い****二重**、ときに、引き起こすを除き、オーバーフロー —+/-関数が返す場合は、**返す。**です。 符号**返す。**表現できない値の符号と一致します。 **strtold**変換を実行できないか、アンダー フローが発生した場合は 0 を返します。
+**strtold**と浮動小数点数の値を返します、**長い****二重**、ときに、引き起こすを除き、オーバーフロー —+/-関数が返す場合は、**返す。** です。 符号**返す。** 表現できない値の符号と一致します。 **strtold**変換を実行できないか、アンダー フローが発生した場合は 0 を返します。
 
 **wcstold**戻り値を返します**strtold**です。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローまたはアンダー フローが発生し、で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 

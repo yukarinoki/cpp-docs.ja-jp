@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054612"
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM アセンブラーのコマンド ライン リファレンス
 この記事は、Microsoft ARM アセンブラーに関するコマンド ラインの情報を提供*armasm*、Microsoft による実装のオブジェクト ファイル形式 COFF (Common) に常に ARMv7 Thumb アセンブリ言語をコンパイルします。 リンカーは、COFF コードと ARM アセンブラーによって、またはオブジェクト ライブラリ、ライブラリアンによって作成されると共に、C コンパイラによって生成されるオブジェクト コードをリンクできます。  

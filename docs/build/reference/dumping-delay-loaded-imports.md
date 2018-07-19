@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372868"
 ---
 # <a name="dumping-delay-loaded-imports"></a>遅延読み込みしたインポートのダンプ
 遅延読み込みしたインポートのダンプを使用して[dumpbin/imports](../../build/reference/imports-dumpbin.md)標準インポートよりも少しずつ異なる情報を表示します。 これらは、ダンプ/imports の独自のセクションに分離され、明示的に遅延読み込みしたインポートとしてラベルが付けられます。 イメージに存在する情報をアンロードする場合は、それが表示されます。 バインド情報がある場合は、インポートのバインド アドレスと DLL のターゲットの日付/時刻スタンプが表示されます。  

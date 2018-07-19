@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296677"
 ---
 # <a name="compiler-warning-level-3-c4278"></a>コンパイラの警告 (レベル 3) C4278
 'identifier': タイプ ライブラリ 'tlb' の識別子は既にマクロです。'rename' 修飾子を使用します。  

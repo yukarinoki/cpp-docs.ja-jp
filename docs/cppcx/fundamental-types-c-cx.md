@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098538"
 ---
 # <a name="fundamental-types-ccx"></a>基本的な型 (C++/CX)
 だけでなく、標準 C++ の組み込み型、C + + CX 基本的な Windows ランタイム型の標準の C++ 型にマップする typedef を提供することにより、Windows ランタイムのアーキテクチャによって定義されている型システムをサポートしています. C + + CX はブール値を文字、および数値の基本型を実装します。 これらの typedefs は、 `default` 名前空間 (明示的に指定する必要はない) で定義されます。 さらに、C + + CX が特定の Windows ランタイム型とインターフェイスのラッパーと具体的な実装を提供します。  

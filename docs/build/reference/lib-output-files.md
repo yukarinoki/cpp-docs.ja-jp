@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370489"
 ---
 # <a name="lib-output-files"></a>LIB の出力ファイル
 LIB によって生成された出力ファイルは、次の表に示すように、モードによって異なります。  

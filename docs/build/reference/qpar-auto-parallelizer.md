@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375689"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (自動並行化)
 により、[自動並行化](../../parallel/auto-parallelization-and-auto-vectorization.md)を自動的に、コード内のループを並列化するコンパイラの機能です。  

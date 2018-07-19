@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6bd7a97330a8a646a880bf229562dbec9a70181
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e12c212939a708a4411a28bff0ebe5026a21b1e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932131"
 ---
 # <a name="list-items-and-image-lists"></a>リスト項目とイメージ リスト
 リスト コントロールの"item"([CListCtrl](../mfc/reference/clistctrl-class.md))、アイコン、ラベル、および可能性のある他の情報 (「サブ項目」) で構成されます。  
@@ -29,11 +30,11 @@ ms.lasthandoff: 05/04/2018
  リスト コントロール項目のアイコンは、イメージ リストに格納されます。 1 つのイメージ リストには、アイコン表示で使用されているフル サイズのアイコンが含まれています。 2 番目、省略可能、イメージの一覧には、コントロールの他のビューで使用する同じアイコンの縮小版が含まれています。 3 番目の省略可能な一覧には、特定のビューに小さいアイコンの前に表示するためのチェック ボックスなどの"state"イメージが含まれています。 4 番目の省略可能な一覧には、リスト コントロールの個々 のヘッダー項目に表示されるイメージが含まれています。  
   
 > [!NOTE]
->  リスト ビュー コントロールが作成された場合、`LVS_SHAREIMAGELISTS`スタイルを使用するには不要になったときに、イメージ リストを破棄します。 複数のリスト ビュー コントロールを同じイメージを割り当てる場合は、このスタイルの一覧を指定します。それ以外の場合、複数のコントロールは同じイメージのリストを破棄しよう可能性があります。  
+>  LVS_SHAREIMAGELISTS スタイルを使用してリスト ビュー コントロールを作成する場合を使用するには不要になったときに、イメージ リストを破棄します。 複数のリスト ビュー コントロールを同じイメージを割り当てる場合は、このスタイルの一覧を指定します。それ以外の場合、複数のコントロールは同じイメージのリストを破棄しよう可能性があります。  
   
  リスト項目の詳細については、次を参照してください。[リスト ビューのイメージ リスト](http://msdn.microsoft.com/library/windows/desktop/bb774736)と[アイテムとサブアイテム](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK にします。 クラスを参照して[CImageList](../mfc/reference/cimagelist-class.md)で、 *『 MFC リファレンス*と[を使用して CImageList](../mfc/using-cimagelist.md)この一連のトピックでします。  
   
- リスト コントロールを作成するには、一覧に新しい項目を挿入するときに使用されるイメージ リストを提供する必要があります。 次の例では、この手順では、ここで`m_pImagelist`型のポインターは、`CImageList`と`m_listctrl`は、`CListCtrl`データ メンバーです。  
+ リスト コントロールを作成するには、一覧に新しい項目を挿入するときに使用されるイメージ リストを提供する必要があります。 次の例では、この手順では、ここで*m_pImagelist*型のポインターは、`CImageList`と*m_listctrl*は、`CListCtrl`データ メンバーです。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   

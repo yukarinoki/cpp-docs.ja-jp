@@ -1,5 +1,5 @@
 ---
-title: '単項プラス演算子と否定演算子: +、- |Microsoft ドキュメント'
+title: '単項加算演算子と否定演算子: +、- |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1441337275ac07b0d1ba39e8bfa34e7165f87f82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa500288ec4982ca4e1d304fac2cd577d58f4207
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943922"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>単項加算演算子と否定演算子: + および -
 ## <a name="syntax"></a>構文  
@@ -33,20 +34,16 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 + cast-expression  
-```  
-  
-```  
-  
 - cast-expression  
 ```  
   
 ## <a name="-operator"></a>+ 演算子  
- 単項プラス演算子の結果 (**+**)、オペランドの値です。 単項プラス演算子のオペランドは数値型である必要があります。  
+ 単項プラス演算子の結果 (**+**) は、オペランドの値です。 単項プラス演算子のオペランドは数値型である必要があります。  
   
- 整数の上位変換が整数オペランドに対して実行されます。 結果の型は、オペランドの上位変換先の型です。 したがって、式 `+ch` (`ch` が `char` 型) は、結果が `int` 型になります。値は変更されません。 参照してください[標準変換](standard-conversions.md)昇格を実行する方法の詳細についてはします。  
+ 整数の上位変換が整数オペランドに対して実行されます。 結果の型は、オペランドの上位変換先の型です。 したがって、式`+ch`ここで、`ch`の種類は**char**、結果の種類、 **int**; 値は変更されません。 参照してください[標準変換](standard-conversions.md)昇格を行う方法の詳細についてはします。  
   
 ## <a name="--operator"></a>- 演算子  
- 単項否定演算子 (**-**)、オペランドの負数を生成します。 単項否定演算子のオペランドには数値型を指定する必要があります。  
+ 単項否定演算子 (**-**) オペランドの負数を生成します。 単項否定演算子のオペランドには数値型を指定する必要があります。  
   
  整数の上位変換は、整数オペランドに対して実行され、結果の型は、そのオペランドが昇格される型になります。 参照してください[標準変換](standard-conversions.md)昇格を実行する方法の詳細についてはします。  
   

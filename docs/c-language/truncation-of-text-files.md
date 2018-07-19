@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385577"
 ---
 # <a name="truncation-of-text-files"></a>テキスト ファイルの切り捨て
 **ANSI 4.9.3** テキスト ストリームに書き込むと関連付けられたファイルがそれ以降切り捨てられるかどうか  

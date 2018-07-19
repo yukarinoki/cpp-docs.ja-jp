@@ -1,5 +1,5 @@
 ---
-title: クラスの |Microsoft ドキュメント
+title: CComEnumOnSTL クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c380ba7b6c2c13f178a15263e1ff510f9f3c31c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca7b7d38c204d7dd8402b9d610a5800dcef6ced9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883230"
 ---
-# <a name="ccomenumonstl-class"></a>クラス
-このクラスは、C++ 標準ライブラリ コレクションに基づく COM 列挙子オブジェクトを定義します。  
+# <a name="ccomenumonstl-class"></a>CComEnumOnSTL クラス
+このクラスは、C++ 標準ライブラリ コレクションに基づいて COM 列挙子オブジェクトを定義します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,41 +40,41 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `Base`  
+ *ベース*  
  COM の列挙子 ([として](https://msdn.microsoft.com/library/ms680089.aspx)) インターフェイス。  
   
- `piid`  
+ *piid*  
  列挙子インターフェイスのインターフェイス ID へのポインター。  
   
- `T`  
- 列挙子インターフェイスによって公開されている項目の種類。  
+ *T*  
+ 列挙子インターフェイスによって公開される項目の種類。  
   
- `Copy`  
- A[ポリシーをコピー](../../atl/atl-copy-policy-classes.md)クラスです。  
+ *コピー*  
+ A[コピー ポリシー](../../atl/atl-copy-policy-classes.md)クラス。  
   
- `CollType`  
- C++ 標準ライブラリのコンテナー クラスです。  
+ *CollType*  
+ C++ 標準ライブラリ コンテナー クラス。  
   
-## <a name="remarks"></a>コメント  
- `CComEnumOnSTL` C++ 標準ライブラリ コレクションに基づく COM 列挙子オブジェクトを定義します。 自身またはと共に、このクラスを使用することができます[単独](../../atl/reference/icollectiononstlimpl-class.md)です。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)です。  
+## <a name="remarks"></a>Remarks  
+ `CComEnumOnSTL` C++ 標準ライブラリ コレクションに基づいて COM 列挙子オブジェクトを定義します。 このクラスは、単独または組み合わせて使用できます[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。  
   
-## <a name="to-use-this-class-with-icollectiononstlimpl"></a>単独では、このクラスを使用します。  
+## <a name="to-use-this-class-with-icollectiononstlimpl"></a>単独でこのクラスを使用します。  
   
-- `typedef` このクラスの特殊化です。  
+- **typedef**このクラスの特殊化します。  
   
--   使用して、`typedef`の特殊化での最終的なテンプレート引数として`ICollectionOnSTLImpl`です。  
+-   使用して、 **typedef**の特殊化で最終的なテンプレート引数として`ICollectionOnSTLImpl`します。  
   
  参照してください[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)例についてはします。  
   
-## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>クラスを使用するこのクライアントとは無関係に。  
+## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>ICollectionOnSTLImpl とは無関係に、このクラスを使用します。  
   
-- `typedef` このクラスの特殊化です。  
+- **typedef**このクラスの特殊化します。  
   
--   使用して、`typedef`の特殊化のテンプレート引数として`CComObject`です。  
+-   使用して、 **typedef**の特殊化のテンプレート引数として`CComObject`します。  
   
--   インスタンスを作成、`CComObject`特殊化です。  
+-   インスタンスを作成、`CComObject`特殊化します。  
   
--   呼び出して列挙子オブジェクトを初期化する[保ちます](../../atl/reference/ienumonstlimpl-class.md#init)です。  
+-   列挙子オブジェクトを呼び出すことによって初期化[保ちます](../../atl/reference/ienumonstlimpl-class.md#init)します。  
   
 -   列挙子インターフェイスをクライアントに返します。  
   
@@ -88,23 +89,23 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
  `CComEnumOnSTL`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
   
 ## <a name="example"></a>例  
- 次に示すコードでは、作成、列挙子オブジェクトの初期化を処理するジェネリック関数を示します。  
+ 次に示すコードでは、作成、列挙子オブジェクトの初期化を処理するジェネリック関数を提供します。  
   
  [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]  
   
- このテンプレート関数を実装するために使用できる、`_NewEnum`次に示すように、コレクション インターフェイスのプロパティ。  
+ このテンプレート関数を実装するために使用できます、`_NewEnum`次に示すように、コレクション インターフェイスのプロパティ。  
   
  [!code-cpp[NVC_ATL_COM#35](../../atl/codesnippet/cpp/ccomenumonstl-class_2.h)]  
   
- このコードを作成、`typedef`の`CComEnumOnSTL`のベクターを公開する`CComVariant`により s、 **IEnumVariant**インターフェイスです。 **CVariantCollection**クラスを特化するだけ**CreateSTLEnumerator**この型の列挙子オブジェクトを使用します。  
+ このコードを作成、 **typedef**の`CComEnumOnSTL`のベクターを公開する`CComVariant`の s、`IEnumVariant`インターフェイス。 `CVariantCollection`クラスは単に専門`CreateSTLEnumerator`この型の列挙子オブジェクトを操作します。  
   
 ## <a name="see-also"></a>関連項目  
- [つまり](../../atl/reference/ienumonstlimpl-class.md)   
- [ATLCollections サンプル: 単独、CComEnumOnSTL、およびカスタム コピー ポリシー クラス](../../visual-cpp-samples.md)   
+ [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
+ [ATLCollections サンプル: ICollectionOnSTLImpl、CComEnumOnSTL、およびカスタム コピー ポリシー クラス](../../visual-cpp-samples.md)   
  [クラスの概要](../../atl/atl-class-overview.md)   
  [CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)   
  [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   

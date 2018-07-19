@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec5ca351f6ac96fd8420ee921ca95b78ee2f487d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959749"
 ---
 # <a name="basicregex-class"></a>basic_regex クラス
 
@@ -83,19 +84,19 @@ class basic_regex {
 
 ### <a name="parameters"></a>パラメーター
 
-`Elem` 一致する要素の型。
+*Elem*と一致する要素の型。
 
-`RXtraits` 要素の特徴 (traits) クラス。
+*RXtraits*要素用の特性クラス。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、正規表現を保持するオブジェクトを表します。 このテンプレート クラスのオブジェクトは、テンプレート関数に渡すことができます[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、および[regex_replace](../standard-library/regex-functions.md#regex_replace)、適切な文字列引数と共に、テキストを検索する正規表現に一致します。 このテンプレート クラスには特定の型定義に対する 2 つの特殊化があります。`char` 型の要素に特殊化した [regex](../standard-library/regex-typedefs.md#regex) と、`wchar_t` 型の要素に特殊化した [wregex](../standard-library/regex-typedefs.md#wregex) です。
+このテンプレート クラスは、正規表現を保持するオブジェクトを表します。 このテンプレート クラスのオブジェクトは、テンプレート関数に渡すことができます[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、および[regex_replace](../standard-library/regex-functions.md#regex_replace)、適切な文字列引数と共に正規表現に一致するテキストを検索します。 型定義は、このテンプレート クラスの 2 つの特殊化がある[regex](../standard-library/regex-typedefs.md#regex)型の要素に対して**char**と[wregex](../standard-library/regex-typedefs.md#wregex)型の要素に対して**wchar_t**します。
 
-テンプレートの引数 `RXtraits` は、このテンプレート クラスでサポートされている正規表現の構文に関連した各種の重要なプロパティを表します。 こうした正規表現の特性を指定するクラスは、テンプレート クラス [regex_traits クラス](../standard-library/regex-traits-class.md)のオブジェクトと同じ外部インターフェイスを持っている必要があります。
+テンプレート引数*RXtraits*テンプレート クラスをサポートする正規表現の構文のさまざまな重要なプロパティについて説明します。 こうした正規表現の特性を指定するクラスは、テンプレート クラス [regex_traits クラス](../standard-library/regex-traits-class.md)のオブジェクトと同じ外部インターフェイスを持っている必要があります。
 
 一部の関数は、正規表現を定義するオペランド シーケンスを受け取ります。 その場合、オペランド シーケンスは次のような方法で指定できます。
 
-`ptr` : `Elem` (null ポインター以外) で始まり、null で終わるシーケンスとして (`char` 型の `ptr` の場合は C 文字列など)。終端の要素は、`value_type()` の値であり、オペランド シーケンスには属しません。
+`ptr` -null 終端シーケンスが (C 文字列などの*Elem*型の**char**) から始まる`ptr`(する必要がありますできません null ポインター)、終端の要素が値は`value_type()`オペランド シーケンスに含まれていません
 
 `ptr`、`count` : `count` (null ポインター以外) で始まる `ptr` 個の要素のシーケンスとして。
 
@@ -105,9 +106,9 @@ class basic_regex {
 
 `right` : `basic_regex` オブジェクト `right` として。
 
-これらのメンバー関数は、`flags` 型での定義に加え、正規表現の解釈に関連した各種オプションを指定する `RXtraits` を引数として受け取ります。
+これらのメンバー関数を引数として受け取ります`flags`で説明されているものに加えて正規表現の解釈のさまざまなオプションを指定する、 *RXtraits*型。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
@@ -147,29 +148,29 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>パラメーター
 
-`STtraits` 文字列ソースの特徴 (traits) クラス。
+*STtraits*文字列ソースの特性クラス。
 
-`STalloc` 文字列ソースのアロケーター クラス。
+*STalloc*文字列ソースのアロケーター クラス。
 
-`InIt` 範囲ソースの入力反復子の型。
+*InIt*範囲ソースの反復子の型を入力します。
 
-`right` コピーする Regex ソース。
+*適切な*コピーする Regex ソース。
 
-`ptr` コピーするシーケンスの先頭を指すポインターです。
+*ptr*をコピーするシーケンスの先頭を指すポインター。
 
-`flags` コピー中に追加する構文オプション フラグ。
+*フラグ*コピー中に追加する構文オプション フラグ。
 
-`len/TD>` コピーするシーケンスの長さです。
+*len/TD >* をコピーするシーケンスの長さ。
 
-`str` コピーする文字列。
+*str*コピーする文字列。
 
-`first` コピーするシーケンスの先頭。
+*最初*をコピーするシーケンスの最初します。
 
-`last` コピーするシーケンスの最後。
+*最後*をコピーするシーケンスの末尾。
 
-`IList` コピーする initializer_list。
+*IList*をコピーする initializer_list。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 いずれのメンバー関数も、`*this` が保持している正規表現を、オペランド シーケンスが保持している正規表現に置き換えて、`*this` を返します。
 
@@ -292,35 +293,35 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>パラメーター
 
-`STtraits` 文字列ソースの特徴 (traits) クラス。
+*STtraits*文字列ソースの特性クラス。
 
-`STalloc` 文字列ソースのアロケーター クラス。
+*STalloc*文字列ソースのアロケーター クラス。
 
-`InIt` 範囲ソースの入力反復子の型。
+*InIt*範囲ソースの反復子の型を入力します。
 
-`right` コピーする Regex ソース。
+*適切な*コピーする Regex ソース。
 
-`ptr` コピーするシーケンスの先頭を指すポインターです。
+*ptr*をコピーするシーケンスの先頭を指すポインター。
 
-`flags` コピー中に追加する構文オプション フラグ。
+*フラグ*コピー中に追加する構文オプション フラグ。
 
-`len/TD>` コピーするシーケンスの長さです。
+*len/TD >* をコピーするシーケンスの長さ。
 
-`str` コピーする文字列。
+*str*コピーする文字列。
 
-`first` コピーするシーケンスの先頭。
+*最初*をコピーするシーケンスの最初します。
 
-`last` コピーするシーケンスの最後。
+*最後*をコピーするシーケンスの末尾。
 
-`IList` コピーする initializer_list。
+*IList*をコピーする initializer_list。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 すべてのコンストラクターは、既定で構築される、`RXtraits` 型のオブジェクトを格納します。
 
 1 つ目のコンストラクターは、空の `basic_regex` オブジェクトを構築します。 それ以外のコンストラクターは、オペランド シーケンスで記述された正規表現を保持する `basic_regex` オブジェクトを構築します。
 
-空`basic_regex`オブジェクトに渡した場合にどの文字シーケンスと一致しない[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、または[regex_replace](../standard-library/regex-functions.md#regex_replace)です。
+空`basic_regex`オブジェクトがどの文字シーケンスに渡されると一致しない[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、または[regex_replace](../standard-library/regex-functions.md#regex_replace)します。
 
 ### <a name="example"></a>例
 
@@ -412,7 +413,7 @@ match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == tru
 typedef regex_constants::syntax_option_type flag_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) のシノニムです。
 
@@ -509,7 +510,7 @@ getloc == imbued == true
 flag_type flags() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[basic_regex::assign](#assign) メンバー関数のうち直前に呼び出された関数に渡された `flag_type` 引数の値を返します。これに当たる呼び出しが行われていなかった場合は、コンストラクターに渡した値が返されます。
 
@@ -606,7 +607,7 @@ getloc == imbued == true
 locale_type getloc() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()` を返します。
 
@@ -705,9 +706,9 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-`loc` 格納するロケール オブジェクト。
+*loc*を格納するロケール オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は `*this` を空にして、`traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)` を返します。
 
@@ -804,7 +805,7 @@ getloc == imbued == true
 typedef typename RXtraits::locale_type locale_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type) のシノニムです。
 
@@ -901,7 +902,7 @@ getloc == imbued == true
 unsigned mark_count() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、正規表現のキャプチャ グループの数を返します。
 
@@ -1005,15 +1006,15 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>パラメーター
 
-`STtraits` 文字列ソースの特徴 (traits) クラス。
+*STtraits*文字列ソースの特性クラス。
 
-`STalloc` 文字列ソースのアロケーター クラス。
+*STalloc*文字列ソースのアロケーター クラス。
 
-`right` コピーする Regex ソース。
+*適切な*コピーする Regex ソース。
 
-`str` コピーする文字列。
+*str*コピーする文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 それぞれの演算子が、 `*this` に保持されている正規表現を、オペランド シーケンスで記述された正規表現に置き換えてから、 `*this`を返します。
 
@@ -1112,11 +1113,11 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 交換する正規表現オブジェクト。
+*適切な*交換する正規表現オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、 `*this` と `right`の間で正規表現を交換します。 一定時間に実行し、例外をスローしません。
+メンバー関数は、交換の間では、正規表現`*this`と*右*します。 一定時間に実行し、例外をスローしません。
 
 ### <a name="example"></a>例
 
@@ -1211,9 +1212,9 @@ getloc == imbued == true
 typedef Elem value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター `Elem` のシノニムです。
+型はテンプレート パラメーターのシノニム*Elem*します。
 
 ### <a name="example"></a>例
 

@@ -22,15 +22,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49626cbb33ed1220ad82cbec10ad675769b054d6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963525"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator クラス
 
-テンプレート クラス ostream_iterator は、抽出**演算子 <<** を使用して連続する要素を出力ストリームに書き込む出力反復子オブジェクトを表します。
+テンプレート クラス ostream_iterator を連続する要素を抽出出力ストリームに書き込む出力反復子オブジェクト`operator <<`します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,9 +44,9 @@ class ostream_iterator
 
 *型*出力ストリームに挿入するオブジェクトの型。
 
-`CharType` 文字の種類を表す型、`ostream_iterator`です。 この引数は省略可能であり、既定値は `char` です。
+*CharType*の文字の種類を表す型、`ostream_iterator`します。 この引数は省略可能、既定値は**char**します。
 
-`Traits` 文字の種類を表す型、`ostream_iterator`です。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
+*Traits*の文字の種類を表す型、`ostream_iterator`します。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
 
 ostream_iterator クラスは出力反復子の要件を満たす必要があります。 アルゴリズムは `ostream_iterator` を使用して出力ストリームに直接書き込むことができます。
 
@@ -71,7 +72,7 @@ ostream_iterator クラスは出力反復子の要件を満たす必要があり
 |[operator++](#op_add_add)|操作が呼び出される前に示したものと同じオブジェクトに `ostream_iterator` を返す、実質的な機能を持たないインクリメント演算子。|
 |[operator=](#op_eq)|出力ストリームに書き込むための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 
@@ -85,9 +86,9 @@ ostream_iterator クラスは出力反復子の要件を満たす必要があり
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **CharType** のシノニムです。
+この型は、テンプレート パラメーター `CharType` のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -138,7 +139,7 @@ ostream_iterator<Type, CharType, Traits>& operator*();
 
 `ostream_iterator` への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `ostream_iterator` が満たす必要のある出力反復子の要件は、式 \* *ii* = *t* が有効であることを必要とするのみで、**演算子** または `operator=` 自体については何も必要としないことです。 この実装のメンバー演算子は **\*this** を返します。
 
@@ -188,7 +189,7 @@ ostream_iterator<Type, CharType, Traits> operator++(int);
 
 `ostream_iterator` への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 これらのメンバー演算子はいずれも **\*this** を返します。
 
@@ -235,13 +236,13 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-`val` 型のオブジェクトの値`Type`出力ストリームに挿入します。
+*val*型のオブジェクトの値`Type`出力ストリームに挿入します。
 
 ### <a name="return-value"></a>戻り値
 
-この演算子はオブジェクトに関連付けられた出力ストリームに `val` を挿入してから、[ostream_iterator コンストラクター](#ostream_iterator)で指定された区切り記号を挿入して (存在する場合)、`ostream_iterator` への参照を返します。
+演算子の挿入*val*で指定された区切り記号の後に、オブジェクトに関連付けられた出力ストリームに、 [ostream_iterator コンス トラクター](#ostream_iterator) (ある場合)、への参照を返します`ostream_iterator`.
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `ostream_iterator` が満たす必要のある出力反復子の要件は、式 * `ii` = `t` が有効であることを必要とするのみで、この演算子または operator= 自体については何も必要としないことです。 このメンバー演算子は、`*this` を返します。
 
@@ -293,15 +294,15 @@ ostream_iterator(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Ostr` 型の出力ストリーム[ostream_iterator::ostream_type](#ostream_type)を反復処理します。
+*_Ostr*型の出力ストリーム[ostream_iterator::ostream_type](#ostream_type)を反復処理します。
 
-`_Delimiter` 値の間の出力ストリームに挿入される区切り記号です。
+*_Delimiter*値の間での出力ストリームに挿入する区切り記号。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターは、出力ストリーム ポインターを `&_Ostr` で初期化します。 区切り記号文字列ポインターは、空の文字列を指定します。
 
-2 番目のコンス トラクターは、出力ストリーム ポインターを `&_Ostr` で初期化し、区切り記号文字列ポインターを `_Delimiter` で初期化します。
+2 番目のコンス トラクターを使用して、出力ストリーム ポインターを初期化します`&_Ostr`と区切り記号文字列ポインターを *_Delimiter*します。
 
 ### <a name="example"></a>例
 
@@ -358,7 +359,7 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 typedef basic_ostream<CharType, Traits> ostream_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、書き込みに使用できるオブジェクトを定義する iostream 階層のストリーム クラスである [basic_ostream](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`> のシノニムです。
 
@@ -374,9 +375,9 @@ typedef basic_ostream<CharType, Traits> ostream_type;
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **Traits** のシノニムです。
+この型は、テンプレート パラメーター `Traits` のシノニムです。
 
 ### <a name="example"></a>例
 

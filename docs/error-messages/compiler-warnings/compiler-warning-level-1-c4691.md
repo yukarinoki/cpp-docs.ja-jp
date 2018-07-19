@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282598"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>コンパイラの警告 (レベル 1) C4691
 'type': 参照されていないアセンブリ 'file'、代わりに使用される現在の翻訳単位で定義された型で参照される型が見つかりました  

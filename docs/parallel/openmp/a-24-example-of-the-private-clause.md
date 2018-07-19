@@ -17,9 +17,10 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691389"
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24 private 句の例
-`private`句 ([セクション 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) [25] ページ) の並行領域のみが有効になって、領域の動的範囲ではなく、地域の構文の範囲に対するです。  そのため、変数の使用を次の例で*、*内で、`for`ルーチンでループ*f*のプライベート コピーを指します*、*、一方で、使用方法ルーチン*g*グローバル*、*です。  
+`private`句 ([セクション 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) [25] ページ) の並行領域のみが有効になって、領域の動的範囲ではなく、地域の構文の範囲に対するです。  そのため、変数の使用を次の例で *、* 内で、`for`ルーチンでループ*f*のプライベート コピーを指します *、*、一方で、使用方法ルーチン*g*グローバル *、* です。  
   
 ```  
 int a;  

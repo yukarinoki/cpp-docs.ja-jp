@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136003"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>方法: デリゲートを定義および使用する (C++/CLI)
 この記事の内容を定義および C + でのデリゲートを使用する方法を示しています。 + CLI です。  

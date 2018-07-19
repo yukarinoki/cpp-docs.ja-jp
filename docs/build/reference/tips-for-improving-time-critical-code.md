@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379511"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>タイム クリティカルなコードを高速化するためのヒント
 実行が速いコードを書くには、アプリケーションのすべての側面およびシステムとのやり取りを理解する必要があります。 このトピックでは、コードのタイム クリティカルな部分が満足に機能するよう、よく知られたコーディング テクニックの代わりとなるものを提案します。  

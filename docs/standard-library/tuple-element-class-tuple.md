@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e71cdbfad883d1d9560ee88fde0338958240bd19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ae46a78484a2ee2737f3d949e525ce89d8401cd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959070"
 ---
 # <a name="tupleelement-class"></a>tuple_element クラス
 
@@ -65,29 +66,35 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>パラメーター
 
-*インデックス*指定した要素のインデックス。
+*Index*  
+指定した要素のインデックス。
 
-*タプル*タプルの型。
+*Tuple*  
+タプルの型。
 
-*Elem*配列要素の型。
+*Elem*  
+配列要素の型。
 
-*サイズ*配列のサイズ。
+*Size*  
+配列のサイズ。
 
-*T1* ペアの 1 番目の要素の型。
+*T1*  
+ペアの最初の要素の型。
 
-*T2* 1 組の 2 番目の要素の型。
+*T2*  
+ペアの 2 番目の要素の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラス `tuple_element` では、タプル型 `Tuple` のインデックス `Index` にある型のシノニムである typedef `type` が入れ子になっています。
+テンプレート クラスは、`tuple_element`が入れ子になった typedef`type`インデックス位置にある型のシノニムである*インデックス*のタプル型の*タプル*します。
 
 Typedef `tuple_element_t` は `tuple_element<Index, Tuple>::type` の便利なエイリアスです。
 
-配列のテンプレート クラスの特殊化では、同じ型の `Size` 要素のタプルとして `array` にインターフェイスを提供します。 それぞれの特殊化は入れ子の typedef `type` を持ち、これは `Index` の `array`要素の型のシノニムであり、const-volatile 制限が保持されます。
+配列のテンプレート クラスの特殊化では、同じ型の `Size` 要素のタプルとして `array` にインターフェイスを提供します。 それぞれの特殊化が入れ子になった typedef`type`型のシノニムである、*インデックス*の要素、 `array`、const volatile の制限が保持されます。
 
 `pair` の型のテンプレートの特殊化では、それぞれ 1 つのメンバーの typedef である `type` を提供します。これはペアの指定された位置にある要素の型のシノニムであり、const または volatile の制限が保持されます。 Typedef `tuple_element_t` は `tuple_element<N, pair<T1, T2>>::type` の便利なエイリアスです。
 
-使用して、 [get 関数&lt;ユーティリティ&gt;](../standard-library/utility-functions.md#get)または指定した種類の指定位置にある要素を返します。
+使用して、 [get 関数&lt;ユーティリティ&gt;](../standard-library/utility-functions.md#get)指定の位置にある、または指定した型の要素を返します。
 
 ## <a name="example"></a>例
 
@@ -175,9 +182,9 @@ int main() {
  0 1.333
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<組 >**ヘッダー:** \<配列 > (配列の特殊化) の**ヘッダー** \<ユーティリティ > のペアの特殊化) ( 。**Namespace:** std
+**ヘッダー:** \<タプル >**ヘッダー:** \<array > (配列の特殊化) 用**ヘッダー:** \<ユーティリティ > (ペアの特殊化) の**Namespace:** std
 
 ## <a name="see-also"></a>関連項目
 

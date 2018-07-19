@@ -69,6 +69,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057800"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML および ML64 のコマンド ライン リファレンス
 アセンブルし、1 つまたは複数のアセンブリ言語のソース ファイルをリンクします。 コマンド ライン オプションは、大文字小文字を区別します。  

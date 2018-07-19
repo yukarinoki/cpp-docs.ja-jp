@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381239"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>メモリ内のダイアログ テンプレートの使用
 指定されたメソッドを使用する代わりに、[ダイアログの作成テーブル](../mfc/creating-a-dialog-class-with-code-wizards.md)を作成できません ダイアログ ボックスのいずれかのような直接メモリ内のダイアログ テンプレートからです。 詳細については、クラスを参照してください。 [CDialog](../mfc/reference/cdialog-class.md)で、 *『 MFC リファレンス*です。  

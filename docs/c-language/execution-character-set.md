@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382826"
 ---
 # <a name="execution-character-set"></a>実行文字セット
 このコンテンツは、多くの場合、"実行文字セット" と呼ばれます。 実行文字セットは、C プログラムを作成する場合に使用するソース文字セットと必ずしも同じではありません。 実行文字セットは、ソース文字セットのすべての文字、null 文字、改行文字、バックスペース、水平タブ、垂直タブ、キャリッジ リターン、エスケープ シーケンスを含みます。 ソース文字セットと実行文字セットは、他の実装では異なることがあります。  

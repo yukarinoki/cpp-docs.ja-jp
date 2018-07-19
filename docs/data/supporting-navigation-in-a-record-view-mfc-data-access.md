@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102385"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>レコード ビュー内の移動 (MFC データ アクセス)
 このトピックの内容がレコード間の移動をサポートする方法について説明します、 [CRecordView](../mfc/reference/crecordview-class.md)に関する情報などのクラス。  

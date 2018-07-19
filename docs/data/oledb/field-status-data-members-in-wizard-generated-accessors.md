@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104400"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
 ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを作成するときに、ウィザードは、ユーザー レコード クラスのマップには、列を指定している各フィールドのデータ メンバーを生成します。 各データ メンバーが型`DWORD`該当するフィールドに対応する状態値が含まれています。  

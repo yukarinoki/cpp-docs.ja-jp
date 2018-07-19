@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd9c9f643b6766dfca4f008f14c9d470a5bcc34
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 30523a7db07dba1359af59c9fcc988feb0e4ec18
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953827"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>1 つの引数を使用する他の出力ストリーム マニピュレーター
 
-次の例ではクラス `money` を使用していますが、このクラスは `long` 型です。 `setpic` マニピュレーターにより、"画像" の書式設定文字列を、`money` クラスのオーバーロードされたストリーム挿入演算子で使用可能なクラスに関連付けています。 画像文字列はストリーム クラスのデータ メンバーではなく `money` クラスの静的変数として格納されるため、新しい出力ストリーム クラスを派生させる必要はありません。
+次の例は、クラスを使用して`money`、これは、**長い**型。 `setpic` マニピュレーターにより、"画像" の書式設定文字列を、`money` クラスのオーバーロードされたストリーム挿入演算子で使用可能なクラスに関連付けています。 画像文字列はストリーム クラスのデータ メンバーではなく `money` クラスの静的変数として格納されるため、新しい出力ストリーム クラスを派生させる必要はありません。
 
 ## <a name="example"></a>例
 

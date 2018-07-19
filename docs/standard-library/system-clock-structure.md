@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: b56a493ce91c6ac7f0864a1bf4e10476603d79fd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959044"
 ---
 # <a name="systemclock-structure"></a>system_clock 構造体
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/23/2018
 struct system_clock;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 *クロック型*は、UTC で現在時刻を取得するために使用されます。 型は [duration](../standard-library/duration-class.md) とクラス テンプレート [time_point](../standard-library/time-point-class.md) のインスタンス化を具体化し、時間を返す静的メンバー関数 `now()` を定義します。
 
@@ -64,12 +65,12 @@ struct system_clock;
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|name|説明|
 |----------|-----------------|
 |[system_clock::is_monotonic 定数](#is_monotonic_constant)|クロック型が単調かどうかを指定します。|
 |[system_clock::is_steady 定数](#is_steady_constant)|クロック型が一定かどうかを指定します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<chrono >
 
@@ -77,7 +78,7 @@ struct system_clock;
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-`Tm` によって表される時刻に最も近い [time_point](../standard-library/time-point-class.md) を返す静的メソッド。
+返す静的メソッド、 [time_point](../standard-library/time-point-class.md)大半に近い時刻で表される*Tm*します。
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -85,7 +86,8 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Tm` A [time_t](../c-runtime-library/standard-types.md)オブジェクト。
+*Tm*  
+ [time_t](../c-runtime-library/standard-types.md) オブジェクト
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 定数
 
@@ -97,9 +99,9 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>戻り値
 
-この実装では、`system_clock::is_monotonic` は常に `false` を返します。
+この実装で`system_clock::is_monotonic`は常に返します**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `now()` への最初の呼び出しによって返される値が、`now()` への以降の呼び出しによって返される値以下である場合、クロックは常に*単調*になります。
 
@@ -113,9 +115,9 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>戻り値
 
-この実装では、`system_clock::is_steady` は常に `false` を返します。
+この実装で`system_clock::is_steady`は常に返します**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 [単調](#is_monotonic_constant)で、クロックのティック間の時間が一定のクロックは*安定しています*。
 
@@ -133,7 +135,7 @@ static time_point now() noexcept;
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-`Time` によって表される時刻に最も近い [time_t](../c-runtime-library/standard-types.md) を返す静的メソッド。
+返す静的メソッド、 [time_t](../c-runtime-library/standard-types.md)大半に近い時刻で表される*時間*します。
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -141,7 +143,8 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-`Time` A [time_point](../standard-library/time-point-class.md)オブジェクト。
+*時刻*  
+ [time_point](../standard-library/time-point-class.md) オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 

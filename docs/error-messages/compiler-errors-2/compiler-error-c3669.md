@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266312"
 ---
 # <a name="compiler-error-c3669"></a>コンパイラ エラー C3669
 'member': オーバーライド指定子 'override' の静的メンバー関数またはコンス トラクターでは許可されていません  

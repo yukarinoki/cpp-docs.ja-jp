@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a21ae615a3f4c644f6f0aa7c8f1306378a00ae5c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957186"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>テクニカル ノート 24: MFC で定義されているメッセージおよびリソース
 > [!NOTE]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
  これらのプライベート Windows メッセージと関連付けられているパラメーター構造体が MFC プライベート ヘッダーで宣言された ' AFXPRIV です。H' です。 このヘッダーを含むコードのいずれかの可能性がありますに依存ドキュメントに未記載の動作とが壊れる可能性が高い将来のバージョンの MFC を警告表示されます。  
   
- まれなケースをこれらのメッセージのいずれかの処理を必要とするのでは、使用することは、`ON_MESSAGE`メッセージ マップ マクロと汎用 LRESULT/WPARAM/LPARAM 形式のメッセージを処理します。  
+ これらのメッセージを処理する必要があるというまれなケースを ON_MESSAGE メッセージ マップ マクロを使用し、汎用 LRESULT/WPARAM/LPARAM 形式のメッセージを処理します。  
   
  **WM_QUERYAFXWNDPROC**  
   
@@ -59,12 +60,12 @@ ms.lasthandoff: 05/04/2018
   
  **WM_SIZEPARENT**  
   
- このメッセージは送信したフレーム ウィンドウでその直接の子にサイズ変更時に (**送られます**呼び出し`CFrameWnd::RecalcLayout`呼び出し`CWnd::RepositionBars`) フレームの周囲のコントロール バーの位置を変更します。 **AFX_SIZEPARENTPARAMS**構造を呼び出す親と (を NULL にすることがあります) HDWP の現在の使用可能なクライアントの四角形に含まれる`DeferWindowPos`を再描画を最小限にします。  
+ このメッセージは送信したフレーム ウィンドウでその直接の子にサイズ変更時に (`CFrameWnd::OnSize`呼び出し`CFrameWnd::RecalcLayout`呼び出し`CWnd::RepositionBars`) フレームの周囲のコントロール バーの位置を変更します。 AFX_SIZEPARENTPARAMS 構造を持つ、現在使用可能なクライアントの四角形、親と (を NULL にすることがあります) HDWP を呼び出す`DeferWindowPos`を再描画を最小限にします。  
   
 |||  
 |-|-|  
 |wParam|未使用|  
-|lParam|アドレス、 **AFX_SIZEPARENTPARAMS**構造体|  
+|lParam|AFX_SIZEPARENTPARAMS 構造体のアドレス|  
 |の場合、|(0) を使用できません。|  
   
  メッセージを無視して、ウィンドウはレイアウトの一部を受け取らないことを示します。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/04/2018
   
  **WM_IDLEUPDATECMDUI**  
   
- このメッセージは、更新コマンド UI ハンドラーのアイドル時間の更新プログラムを実装するアイドル時間で送信されます。 作成ウィンドウ (通常はコントロール バー) は、メッセージを処理する場合、`CCmdUI`オブジェクト (または派生クラスのオブジェクト) を呼び出すと**受け取る**ウィンドウ内の「アイテム」の各します。 これはさらに確認、`ON_UPDATE_COMMAND_UI`コマンド ハンドラー チェーン内のオブジェクトのハンドラー。  
+ このメッセージは、更新コマンド UI ハンドラーのアイドル時間の更新プログラムを実装するアイドル時間で送信されます。 作成ウィンドウ (通常はコントロール バー) は、メッセージを処理する場合、`CCmdUI`オブジェクト (または派生クラスのオブジェクト) を呼び出すと`CCmdUI::DoUpdate`ウィンドウ内の「アイテム」の各します。 これは、コマンド ハンドラー チェーン内のオブジェクトの ON_UPDATE_COMMAND_UI ハンドラーに対するさらに確認します。  
   
 |||  
 |-|-|  
@@ -89,11 +90,11 @@ ms.lasthandoff: 05/04/2018
 |lParam|(0) を使用できません。|  
 |の場合、|(0) を使用できません。|  
   
- *bDisableIfNoHandler*どちらを使用する必要がある場合は、UI オブジェクトを無効にする 0 以外の場合、`ON_UPDATE_COMMAND_UI`も、`ON_COMMAND`ハンドラー。  
+ *bDisableIfNoHandler* 0 以外の場合、ON_UPDATE_COMMAND_UI も ON_COMMAND ハンドラーがある場合は、UI オブジェクトを無効にします。  
   
  **WM_EXITHELPMODE**  
   
- このメッセージをポスト、`CFrameWnd`終了状況に依存するヘルプ モード。 このメッセージの受信によって開始されたモーダル ループを終了する**受信します。**  
+ このメッセージをポスト、`CFrameWnd`終了状況に依存するヘルプ モード。 このメッセージの受信によって開始されたモーダル ループは終了`CFrameWnd::OnContextHelp`です。  
   
 |||  
 |-|-|  
@@ -149,35 +150,35 @@ ms.lasthandoff: 05/04/2018
   
  **WM_FLOATSTATUS**  
   
- このメッセージは、フレームがアクティブまたは別のトップレベル フレーム ウィンドウを非アクティブ化されたときに、フレーム ウィンドウが所有するすべてのポップアップ ウィンドウに送信されます。 これはの実装によって使用**返さ**で`CMiniFrameWnd`、ポップアップ ウィンドウのアクティブ化の同期を保つ、トップ レベルのフレーム ウィンドウのライセンス認証を使用します。  
+ このメッセージは、フレームがアクティブまたは別のトップレベル フレーム ウィンドウを非アクティブ化されたときに、フレーム ウィンドウが所有するすべてのポップアップ ウィンドウに送信されます。 これは返さでの実装によって使用`CMiniFrameWnd`、ポップアップ ウィンドウのアクティブ化の同期を保つ、トップ レベルのフレーム ウィンドウのライセンス認証を使用します。  
   
 |||  
 |-|-|  
-|wParam|次の値のいずれかです。<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|wParam|次の値のいずれかです。<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|  
 |lParam|(0) を使用できません。|  
   
- 戻り値が 0 以外にする必要がある場合**FS_SYNCACTIVE**が設定され、ウィンドウと、親フレームがアクティブにします。 `CMiniFrameWnd` スタイルを設定すると、0 以外を返します**返さです。**  
+ 戻り値は 0 以外の場合、FS_SYNCACTIVE が設定され、ウィンドウとがアクティブにする必要があります、親フレーム。 `CMiniFrameWnd` 返さにスタイルが設定されている場合は、0 以外を返します。  
   
  詳細については、の実装を参照してください。`CMiniFrameWnd`です。  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- それ"最上位レベルのグループに"ウィンドウがアクティブまたは非アクティブ化されたとき、このメッセージはトップレベル ウィンドウに送信します。 ウィンドウがトップレベル ウィンドウなし親 (所有者)、またはそのようなウィンドウによって所有されている場合、最上位グループの一部です。 このメッセージは使用中のような**使い方**いますが、1 つのウィンドウの階層 (OLE アプリケーションで一般的) 内の別のプロセスに属している windows の混合がの状況で動作します。  
+ それ"最上位レベルのグループに"ウィンドウがアクティブまたは非アクティブ化されたとき、このメッセージはトップレベル ウィンドウに送信します。 ウィンドウがトップレベル ウィンドウなし親 (所有者)、またはそのようなウィンドウによって所有されている場合、最上位グループの一部です。 このメッセージは使い方を使用すると似ていますが、(OLE アプリケーションで一般的な) 1 つのウィンドウ階層の混在している別のプロセスに属している windows のある状況で動作します。  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>よう、領域、WM_EXITHELPMODE  
  これらのメッセージは、状況依存のヘルプの実装で使用されます。 参照してください[テクニカル ノート 28:](../mfc/tn028-context-sensitive-help-support.md)詳細についてはします。  
   
 ## <a name="mfc-private-resource-formats"></a>MFC プライベート リソース形式  
- MFC が現時点では、2 つのプライベートなリソース形式を定義します。 **RT_TOOLBAR**と**リソース形**です。  
+ MFC が現時点では、2 つのプライベートなリソース形式を定義します。 RT_TOOLBAR とリソース形です。  
   
 ## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR リソース形式  
- AppWizard によって提供される既定のツールバーがに基づいて、 **RT_TOOLBAR**カスタム リソースは、MFC 4.0 で導入されました。 ツール バー エディターを使用してこのリソースを編集することができます。  
+ AppWizard によって提供される既定のツールバーは、MFC 4.0 で導入された、RT_TOOLBAR カスタム リソースに基づいています。 ツール バー エディターを使用してこのリソースを編集することができます。  
   
 ## <a name="rtdlginit-resource-format"></a>リソース形リソース形式  
  MFC のプライベートなリソースの 1 つの形式を使用して、余分なダイアログの初期化情報を格納します。 これには、コンボ ボックスに格納されている最初の文字列が含まれます。 このリソースの形式は、手動で編集するものでありませんが、Visual C によって処理されます。  
   
- Visual C が、これ**リソース形**リソースがリソースの情報を使用する代わりに API があるために、MFC の関連する機能を使用する必要はありません。 Visual C を使用しやすくはるかを記述、保守、および長期的に、アプリケーションに変換します。  
+ Visual C およびこのリソース形リソースは、リソースの情報を使用する代わりに API があるために、MFC の関連する機能を使用する必要はありません。 Visual C を使用しやすくはるかを記述、保守、および長期的に、アプリケーションに変換します。  
   
- 基本的な構造、**リソース形**リソースのとおりです。  
+ リソース形リソースの基本的な構造は次のとおりです。  
   
 ```  
 +---------------+    \  

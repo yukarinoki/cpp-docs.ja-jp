@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890115"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>イメージの領域の選択 (アイコン用イメージ エディター)
 選択ツールを使用すると、切り取り、コピー、クリア、サイズ変更、反転、または移動するイメージの領域を定義します。 **矩形選択**ツールを定義し、イメージの四角形の領域を選択できます。 **不規則選択**ツール、切り取り、コピー、またはその他の操作を選択する領域のフリーハンド アウトラインを描画することができます。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343776"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>ダイアログ データ エクスチェンジとダイアログ データ検証
 ダイアログ データ エクス (チェンジ DDX) は、ダイアログ ボックスでコントロールを初期化して、ユーザーがデータの入力を収集するための簡単な方法です。 ダイアログ データ バリデーション (DDV) は、ダイアログ ボックスでのデータ入力を検証する簡単な方法です。 活用するために DDX ルーチンおよび DDV ダイアログ ボックスで、使用、[変数の追加メンバー ウィザード](../ide/add-member-variable-wizard.md)データ メンバーを作成してそのデータ型を設定、検証規則を指定します。  

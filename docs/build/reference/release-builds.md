@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376651"
 ---
 # <a name="release-builds"></a>リリース ビルド
 リリース ビルドでは、最適化を使用します。 最適化を使用して、リリース ビルドを作成するときに、コンパイラには、シンボリック デバッグ情報は生成されません。 トレースと ASSERT コードが生成されないことのファクトと共に、シンボリック デバッグ情報がない場合を呼び出すと、実行可能ファイルのサイズが少なくなり、高速化できるためことを意味します。  

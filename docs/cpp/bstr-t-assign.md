@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::assign |Microsoft ドキュメント
+title: _bstr_t::assign |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de790fa55299999be8c4cb4d2945e2b004d20a9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943189"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 固有の仕様**  
   
- コピー、`BSTR`に、`BSTR`によってラップされた、 **_**`bstr_t`です。  
+ コピーを`BSTR`に、`BSTR`によってラップされた、 **_**`bstr_t`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,15 +37,15 @@ void Assign(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `s`  
+ *s*  
  `BSTR` でラップされた `BSTR` にコピーする `_bstr_t`。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `Assign` はバイナリ コピーを実行します。つまり、内容に関係なく `BSTR` の全長がコピーされます。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // _bstr_t_Assign.cpp  
   
 #include <comdef.h>  

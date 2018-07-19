@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357845"
 ---
 # <a name="using-a-template-library"></a>テンプレート ライブラリを使用します。
 テンプレートは、マクロに似ています。 同様に、マクロでは、テンプレートを呼び出すと (適切なパラメーターの置換) の展開に記述したコードをします。 ただし、テンプレート パラメーターとして渡された型に基づいて新しいクラスの作成を許可するよりもさらに移動します。 これらの新しいクラスでは、テンプレート コードで表される操作を実行する: タイプ セーフな方法を実装します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104010"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>使用するアクセサーの種類の決定
 コンパイル時または実行時に、行セットでのデータ型を指定できます。  

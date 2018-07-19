@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112746"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB プロバイダー テンプレート (C++)
 OLE DB は、Microsoft Universal Data Access 戦略の重要な部分です。 OLE DB デザインでは、任意のデータ ソースからのパフォーマンスの高いデータ アクセスを許可します。 表形式データがデータベースからに送信するかどうかに関係なく表示可能な OLE DB を使用します。 柔軟では、膨大な電力量を示します。  

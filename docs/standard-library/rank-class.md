@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be250d2908522ac85902563d64bf57ca7cde88a0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 615da57a092a9cbdc1933ed57adbbaed6afdcf65
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960604"
 ---
 # <a name="rank-class"></a>rank クラス
 
@@ -36,11 +37,11 @@ struct rank;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この型クエリは、配列型 `Ty` の次元数の値を保持します。`Ty` が配列型でない場合は 0 になります。
+型のクエリは、配列型の次元数の値を保持*Ty*、0 の場合、または*Ty*配列型ではありません。
 
 ## <a name="example"></a>例
 
@@ -70,7 +71,7 @@ rank<int[5]> == 1
 rank<int[5][10]> == 2
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

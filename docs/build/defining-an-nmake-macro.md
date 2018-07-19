@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367135"
 ---
 # <a name="defining-an-nmake-macro"></a>NMAKE マクロの定義
 ## <a name="syntax"></a>構文  

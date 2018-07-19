@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250430"
 ---
 # <a name="compiler-error-c3226"></a>コンパイラ エラー C3226
 テンプレート宣言は、ジェネリック宣言の内部では使用できません  

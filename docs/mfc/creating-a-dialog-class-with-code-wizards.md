@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342200"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>コード ウィザードによるダイアログ クラスの作成
 次の表は、ダイアログに関連するタスクを管理する際に役立つコード ウィザードを一覧表示します。  

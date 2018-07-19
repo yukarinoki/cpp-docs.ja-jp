@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354280"
 ---
 # <a name="displaying-assertions"></a>アサーションの表示
 サービスに接続しているクライアントが応答を停止する場合は、サービスがアサートされるが表示されない、メッセージ ボックスが表示されますが可能性があります。 これは、コードをデバッグする Visual C のデバッガーを使用して確認できます (を参照してください[タスク マネージャーを使用して](../atl/using-task-manager.md)このセクションで前述した)。  

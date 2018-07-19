@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111186"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB リソース プールとサービス
 OLE DB のプール、密接に連携または任意の OLE DB サービスを使用するには、プロバイダーは、すべてのオブジェクトの集計をサポートする必要があります。 これは、任意の OLE DB 1.5 またはそれ以降のプロバイダーの要件です。 サービスを利用するために重要です。 集約をサポートしないプロバイダーをプールできないため、追加のサービスが指定されていません。  

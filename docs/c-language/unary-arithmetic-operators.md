@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390369"
 ---
 # <a name="unary-arithmetic-operators"></a>単項算術演算子
 C の単項プラス演算子、算術否定演算子、補数演算子、および論理否定演算子については、後の一覧で説明します。  

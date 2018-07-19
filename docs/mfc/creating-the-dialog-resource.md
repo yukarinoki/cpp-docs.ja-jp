@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342086"
 ---
 # <a name="creating-the-dialog-resource"></a>ダイアログ リソースの作成
 デザイン、 [ ダイアログ ボックス](../mfc/dialog-boxes.md)ダイアログ リソースを作成、使用して、[ダイアログ エディター](../windows/dialog-editor.md)です。 ダイアログ エディターでは、次のことができます。  

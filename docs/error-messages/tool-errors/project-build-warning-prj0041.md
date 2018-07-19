@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318062"
 ---
 # <a name="project-build-warning-prj0041"></a>プロジェクト ビルドの警告 PRJ0041
 見つかりません 'への依存関係' ファイル 'file' の依存関係。 プロジェクトがビルドできますは、このファイルが見つかるまで、最新バージョンを続けることがあります。  

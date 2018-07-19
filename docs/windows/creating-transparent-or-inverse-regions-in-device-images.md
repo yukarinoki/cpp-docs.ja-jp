@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882551"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>デバイス イメージの透明な領域または反転領域の作成 (アイコン用イメージ エディター)
 [イメージ エディター](../windows/image-editor-for-icons.md)、初期のアイコンまたはカーソルのイメージが透明な属性です。 アイコンとカーソルのイメージは、四角形は、多くはために表示されないため、イメージの部分は透過的です。画面の基になるイメージは、アイコンやカーソルを示しています。 アイコンをドラッグするとき、反転色でイメージの部分を引き起こすことがあります。 画面の色との逆の色を設定してこの特殊効果を作成する、 [[色] ウィンドウ](../windows/colors-window-image-editor-for-icons.md)します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317061"
 ---
 # <a name="project-build-error-prj0033"></a>プロジェクト ビルド エラー PRJ0033
 カスタム ビルド ' 追加の依存関係プロパティを 'macro_expansion' をファイル 'file' が含まれている 'macro' 評価を出すのステップします。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256187"
 ---
 # <a name="compiler-error-c3185"></a>コンパイラ エラー C3185
 マネージまたは WinRT 型 'type' で 'typeid' が使用されました。代わりに 'operator' を使用してください  

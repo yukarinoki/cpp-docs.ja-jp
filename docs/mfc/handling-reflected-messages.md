@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05b5f62169d2b65010ec75ab8c8b5c30959b77b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b317f4c1b55e04f61aa0639bbd6953e5f36187a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931841"
 ---
 # <a name="handling-reflected-messages"></a>反映されたメッセージの処理方法
-リフレクションを使用してなど、コントロールのメッセージを処理できるメッセージ`WM_CTLCOLOR`、 **WM_COMMAND**、および**WM_NOTIFY**、コントロール自体の内部です。 これによってより自己完結してポータブル コントロール。 メカニズムは、Windows のコモン コントロール、および ActiveX コントロール (旧称 OLE コントロール) では動作します。  
+リフレクションを使用してなど、コントロールのメッセージを処理できるメッセージ**WM_CTLCOLOR**、 **WM_COMMAND**、および**WM_NOTIFY**、コントロール自体の内部です。 これによってより自己完結してポータブル コントロール。 メカニズムは、Windows のコモン コントロール、および ActiveX コントロール (旧称 OLE コントロール) では動作します。  
   
  メッセージ リフレクションでは、再利用することができます、 `CWnd`-派生クラスをより容易にします。 メッセージのリフレクションの動作を使用して[CWnd::OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify)、特別なを使用して**ON_XXX_REFLECT**メッセージ マップ エントリ: たとえば、 **ON_CTLCOLOR_REFLECT**と**ON_CONTROL_REFLECT**です。 [テクニカル ノート 62](../mfc/tn062-message-reflection-for-windows-controls.md)さらに詳しくメッセージ リフレクションについて説明します。  
   

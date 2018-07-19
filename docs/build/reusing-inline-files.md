@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379901"
 ---
 # <a name="reusing-inline-files"></a>インライン ファイルの再利用
 インライン ファイルを再利用するには指定 <<*filename*ファイルが定義されていて、最初に使用される、それを再利用*filename*せず << 同一または別の後半コマンド。 インライン ファイルを作成するコマンドは、ファイルを使用するすべてのコマンドの前に実行する必要があります。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376222"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (アーキテクチャ固有の最適化)
 **/favor:** `option` AMD および Intel アーキテクチャのマイクロ アーキテクチャの仕様または特定のアーキテクチャ用に最適化されたコードが生成されます。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171823"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR ライブラリ リファレンス
 STL/CLR ライブラリは、C++ と .NET Framework 共通言語ランタイム (CLR) で使用するための C++ 標準ライブラリのサブセットのパッケージ化します。 Stl/clr、すべてのコンテナー、反復子、および管理された環境で、標準ライブラリのアルゴリズムを使用することができます。  

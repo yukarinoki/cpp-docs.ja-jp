@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276530"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>コンパイラの警告 (レベル 1) C4369
 '列挙子': 列挙子の値 'value' を 'type' として表現できず、値は 'new_value'  

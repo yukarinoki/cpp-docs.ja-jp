@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689299"
 ---
 # <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 結合された並行動作共有のコンストラクト
 結合された並行動作共有のコンストラクトは、1 つだけの work-sharing コンス トラクターを含む並列領域を指定するためのショートカットです。 これらのディレクティブのセマンティクスは明示的に指定するのと同じ、**並列**ディレクティブの後に 1 つ work-sharing コンス トラクターです。  

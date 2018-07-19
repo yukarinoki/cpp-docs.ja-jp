@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889408"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>カーソルを設定&#39;s ホット スポット (アイコン用イメージ エディター)
 ホット スポット、[カーソル](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)ポイントは、カーソルの位置を追跡するのには Windows にします。 既定では、ホット スポットは、カーソル (座標 0, 0) の左上隅に設定されます。 ホット スポットのプロパティ、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)ホット スポットの座標を示しています。  

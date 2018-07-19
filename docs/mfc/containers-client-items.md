@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14979f1c5f11e9a229c408e33e7c17d8776a54a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929344"
 ---
 # <a name="containers-client-items"></a>コンテナー : クライアント アイテム
 この記事では、クライアント アイテムについて説明し、アプリケーションでそのクライアント アイテムを派生する必要があります。  
   
  クライアント アイテムに含まれているまたは OLE コンテナー アプリケーションのドキュメントによって参照される他のアプリケーションに属するデータ アイテムです。 ドキュメント内に含まれるデータを含むクライアント アイテムが埋め込まれます。データを含むが、コンテナー ドキュメントによって参照されている別の場所に保存されているものがリンクされています。  
   
- OLE アプリケーションでドキュメント クラスがクラスから派生した[COleDocument](../mfc/reference/coledocument-class.md)からではなく**CDocument**です。 `COleDocument`クラスから継承**CDocument**どの MFC アプリケーションの基にドキュメント/ビュー アーキテクチャを使用するために必要なすべての機能です。 `COleDocument` コレクションとして、ドキュメントを処理するインターフェイスも定義`CDocItem`オブジェクト。 いくつか`COleDocument`の追加、取得、およびそのコレクションの要素を削除するメンバー関数が用意されています。  
+ OLE アプリケーションでドキュメント クラスがクラスから派生した[COleDocument](../mfc/reference/coledocument-class.md)からではなく`CDocument`です。 `COleDocument`クラスから継承`CDocument`どの MFC アプリケーションの基にドキュメント/ビュー アーキテクチャを使用するために必要なすべての機能です。 `COleDocument` コレクションとして、ドキュメントを処理するインターフェイスも定義`CDocItem`オブジェクト。 いくつか`COleDocument`の追加、取得、およびそのコレクションの要素を削除するメンバー関数が用意されています。  
   
  すべてのコンテナー アプリケーションから少なくとも 1 つのクラスを派生する必要があります`COleClientItem`です。 このクラスのオブジェクトは、埋め込みまたはリンク、OLE ドキュメント内の項目を表します。 ドキュメントから削除される場合を除き、これらのオブジェクトは、それらを含むドキュメントの有効期間存在します。  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359996"
 ---
 # <a name="what-is-atlaxwin100"></a>AtlAxWin100 とは何ですか。
 `AtlAxWin100` ATL のコントロール ホスト機能を提供できるウィンドウ クラスの名前です。 このクラスのインスタンスを作成するときに、ウィンドウ プロシージャは自動的に使用されているウィンドウに関連付けられているホスト オブジェクトを作成し、ウィンドウのタイトルとして指定したコントロールに読み込むコントロール ホスト API を使用します。  

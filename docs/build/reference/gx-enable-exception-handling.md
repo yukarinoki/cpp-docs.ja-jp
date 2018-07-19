@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376716"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (例外処理の有効化)
 非推奨。 使用して宣言されていると想定される関数を使用して同期例外処理を有効`extern "C"`例外はスローされません。  

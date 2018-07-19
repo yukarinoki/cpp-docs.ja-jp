@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107179"
 ---
 # <a name="ole-db-programming"></a>OLE DB プログラミング
 Microsoft OLE DB は、レガシ テクノロジです。新しいアプリケーションのリンクの SQL サーバーの必要なデータ アクセス API です。 その他のすべての新しいアプリケーションでは、ODBC を使用する必要があります。 SQL Server の現在の OLE DB プロバイダーは、SQLNCLI11 です。DLL です。 プロバイダーは SQL Server 2016 でまだ出荷されています。 このドキュメントは、OLE DB を既に使用している既存のアプリケーションを維持している開発者向けです。

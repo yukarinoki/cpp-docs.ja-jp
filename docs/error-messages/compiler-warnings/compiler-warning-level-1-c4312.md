@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279676"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>コンパイラの警告 (レベル 1) C4312
 '操作' :  'type1' からより大きいサイズの 'type2' へ変換します。  

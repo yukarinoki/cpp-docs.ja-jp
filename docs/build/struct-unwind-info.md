@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383242"
 ---
 # <a name="struct-unwindinfo"></a>構造体 UNWIND_INFO
 アンワインド データの情報の構造体を使用して、関数があり、スタック ポインターでスタックでの不揮発性レジスタの保存場所の効果を記録します。  

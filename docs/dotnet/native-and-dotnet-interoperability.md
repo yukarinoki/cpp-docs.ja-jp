@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134092"
 ---
 # <a name="native-and-net-interoperability"></a>ネイティブと .NET の相互運用性
 Visual C++ では相互運用機能をサポートしており、マネージ構造とアンマネージ構造が共存して同じアセンブリ内ではもちろん、同じファイル内でも相互運用できます。 この機能の小さなサブセット (P/Invoke など) は他の .NET 言語でもサポートされていますが、Visual C++ が提供する相互運用性サポートのほとんどは他の言語では使用できません。  

@@ -24,17 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930504"
 ---
 # <a name="files-in-mfc"></a>MFC のファイル
 Microsoft Foundation Class ライブラリ (MFC) でクラス[CFile](../mfc/reference/cfile-class.md)通常のファイル I/O 操作を処理します。 この一連のトピックでは、開くファイルを閉じるだけでなくしそれらのファイルにデータを書き込む方法を説明します。 ファイルの状態の操作についても説明します。 データ読み取りおよび書き込みファイル内の別の方法としての MFC オブジェクト ベースのシリアル化機能を使用する方法については、記事を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)です。  
   
 > [!NOTE]
->  MFC を使用すると**CDocument**フレームワークは、シリアル化操作の多くのオブジェクトします。 具体的には、フレームワークを作成して、`CFile`オブジェクト。 のみのオーバーライドでコードを記述する必要がある、`Serialize`クラスのメンバー関数**CDocument**です。  
+>  MFC を使用すると`CDocument`フレームワークは、シリアル化操作の多くのオブジェクトします。 具体的には、フレームワークを作成して、`CFile`オブジェクト。 のみのオーバーライドでコードを記述する必要がある、`Serialize`クラスのメンバー関数`CDocument`です。  
   
  `CFile`クラスのインターフェイスのバイナリ ファイルを汎用的な操作を提供します。 `CStdioFile`と`CMemFile`から派生したクラス`CFile`と`CSharedFile`から派生したクラス`CMemFile`より専門的なファイル サービスを提供します。  
   

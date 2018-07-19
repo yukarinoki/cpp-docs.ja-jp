@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361767"
 ---
 # <a name="strings-atl-property-page-wizard"></a>文字列、ATL プロパティ ページ ウィザード
 プロパティ ページに関連付けられているテキストを提供します。  

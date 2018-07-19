@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fb9a3ff1c27aade9f74a8ed95a8016829874ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953763"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows ソケット : ソケット クラスからの派生
 この記事では、いくつかのいずれかのソケット クラスから独自のクラスを派生させることによって利用できる機能について説明します。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
  さらに、クラス`CSocket`提供、 [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending)メンバー関数は、(高度なオーバーライド可能)。 MFC は、ソケットは、Windows ベースのメッセージをポンプ中に、この関数を呼び出します。 オーバーライドできます`OnMessagePending`を Windows からの特定のメッセージを確認し、それらに応答します。  
   
- 既定のバージョン`OnMessagePending`クラスで提供される`CSocket`用のメッセージ キューを調べて`WM_PAINT`ブロッキング呼び出しが完了の待機中にメッセージ。 表示品質を向上させるために描画メッセージをディスパッチします。 別に便利な操作を行うには、この方法について説明、関数をオーバーライドする可能性があります自分でします。 別の例としては、使用を検討して`OnMessagePending`次のタスクのです。 たとえば、ネットワーク トランザクションの完了を待っている間に、モードレス ダイアログ ボックスを表示します。 ダイアログ ボックスには、ユーザーは、時間がかかりすぎるブロックしているトランザクションのキャンセルに使用できる [キャンセル] ボタンが含まれています。 `OnMessagePending`オーバーライドがこのモードレス ダイアログ ボックスに関連するメッセージをポンプ可能性があります。  
+ 既定のバージョン`OnMessagePending`クラスで提供される`CSocket`ブロッキング呼び出しが完了の待機中に WM_PAINT メッセージ用のメッセージ キューを検査します。 表示品質を向上させるために描画メッセージをディスパッチします。 別に便利な操作を行うには、この方法について説明、関数をオーバーライドする可能性があります自分でします。 別の例としては、使用を検討して`OnMessagePending`次のタスクのです。 たとえば、ネットワーク トランザクションの完了を待っている間に、モードレス ダイアログ ボックスを表示します。 ダイアログ ボックスには、ユーザーは、時間がかかりすぎるブロックしているトランザクションのキャンセルに使用できる [キャンセル] ボタンが含まれています。 `OnMessagePending`オーバーライドがこのモードレス ダイアログ ボックスに関連するメッセージをポンプ可能性があります。  
   
  `OnMessagePending`上書き、いずれかを返す**TRUE**またはの基本クラスのバージョンへの呼び出しから返される`OnMessagePending`です。 実行する必要のある作業を実行する場合は、基本クラスのバージョンを呼び出します。  
   

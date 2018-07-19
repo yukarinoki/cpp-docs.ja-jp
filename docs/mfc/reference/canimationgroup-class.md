@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955736"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup クラス
 アニメーションのストーリー ボード、アニメーション オブジェクト、およびアニメーションを定義する切り替え効果を組み合わせたアニメーション グループを実装します。  
@@ -114,18 +115,18 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|アニメーションのグループの一意の識別子。|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|このグループに属しているアニメーション コント ローラーへのポインター。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アニメーション グループは、CAnimationController::AddAnimationObject を使用してアニメーション オブジェクトを追加する場合も、アニメーション コント ローラー (CAnimationController) によって自動的に作成されます。 アニメーション グループは、通常、アニメーション グループを操作パラメーターとして取得された GroupID によって識別されます。 GroupID は、新しいアニメーション グループに追加する最初のアニメーション オブジェクトから取得されます。 CAnimationController::AnimateGroup を呼び出すし、パブリック メンバー m_pStoryboard 経由でアクセスできるカプセル化されたアニメーション ストーリー ボードが作成されます。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CAnimationGroup`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup:: ~ CAnimationGroup  
@@ -143,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pStoryboard`  
+ *pStoryboard*  
  ストーリー ボード COM オブジェクトへのポインター。  
   
- `bAddDeep`  
+ *bAddDeep*  
  このメソッドは、他のキーフレームに依存しているストーリー ボードのキーフレームに追加する必要があるかどうかを指定します。  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -159,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pStoryboard`  
+ *pStoryboard*  
  ストーリー ボード COM オブジェクトへのポインター。  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  グループをアニメーション化します。  
@@ -175,14 +176,14 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。それ以外の場合は FALSE。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、内部のストーリー ボードを作成、作成し、遷移を適用したうえで、bScheduleNow が TRUE の場合は、アニメーションをスケジュールします。 BScheduleNow が FALSE の場合は、指定した時刻にアニメーションを開始するスケジュールを呼び出す必要があります。  
   
 ##  <a name="applytransitions"></a>  CAnimationGroup::ApplyTransitions  
@@ -192,7 +193,7 @@ BOOL Animate(
 void ApplyTransitions();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、ストーリー ボードが作成されていないかどうか、デバッグ モードでアサートします。 最初に、すべての遷移を作成し、「静的」キーフレーム (オフセットに依存するキーフレーム) を追加、キーフレームに依存しない遷移の追加、遷移に応じてキーフレームやその他のキーフレームを追加およびキーフレームに依存する遷移を最後に追加.  
   
 ##  <a name="canimationgroup"></a>  CAnimationGroup::CAnimationGroup  
@@ -203,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentController`  
+ *pParentController*  
  グループを作成するアニメーション コント ローラーへのポインター。  
   
- `nGroupID`  
+ *nGroupID*  
  GroupID を指定します。  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -227,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pVariable`  
+ *pVariable*  
  アニメーション変数へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -306,7 +307,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 void RemoveKeyframes();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  M_bAutodestroyKeyframes メンバーが TRUE の場合のキーフレームが削除され、破棄されると、それ以外の場合、キーフレームをだけキーフレームの内部リストから削除します。  
   
 ##  <a name="removetransitions"></a>  CAnimationGroup::RemoveTransitions  
@@ -316,7 +317,7 @@ void RemoveKeyframes();
 void RemoveTransitions();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  M_bAutoclearTransitions フラグが TRUE に設定されている場合、このメソッドは、グループに属しているすべてのアニメーション オブジェクトをループ処理し、CAnimationObject::ClearTransitions(FALSE) を呼び出します。  
   
 ##  <a name="schedule"></a>  CAnimationGroup::Schedule  
@@ -327,16 +328,16 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pTimer`  
+ *pTimer*  
  アニメーション タイマーへのポインター。  
   
- `time`  
+ *time*  
  アニメーションをスケジュールする時間を指定します。  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は TRUE。FALSE、メソッドが失敗した場合、またはアニメーション場合いないで呼び出されました bScheduleNow を FALSE に設定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  指定した時刻にアニメーションをスケジュールするには、この関数を呼び出します。 アニメーション bScheduleNow を FALSE に設定を最初に呼び出す必要があります。  
   
 ##  <a name="setautodestroytransitions"></a>  CAnimationGroup::SetAutodestroyTransitions  
@@ -347,10 +348,10 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  遷移を破棄する方法を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この値をスタック上のトランジションを割り当てる場合にのみ、FALSE に設定します。 既定値は TRUE、したがってが強くお勧め新しい演算子を使用して移行のオブジェクトを割り当てます。  
   
 ## <a name="see-also"></a>関連項目  

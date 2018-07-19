@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341105"
 ---
 # <a name="clipboard"></a>クリップボードのトピック
 この一連のトピックでは、MFC アプリケーションの Windows クリップボードのサポートを実装する方法について説明します。 Windows のクリップボードは、2 つの方法で使用されます。  

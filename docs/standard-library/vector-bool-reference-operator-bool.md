@@ -20,15 +20,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0fd249dd7591caaaf62a0b8a698085efedb1f25
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00ccd9e9ffbab78534c5b6417b7567ba03d007ab
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963681"
 ---
 # <a name="vectorltboolgtreferenceoperator-bool"></a>vector&lt;bool&gt;::reference::operator bool
 
-`vector<bool>::reference` から `bool` への暗黙の変換を提供します。
+暗黙的な変換`vector<bool>::reference`に**bool**します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,11 +41,11 @@ operator bool() const;
 
 [vector\<bool>](../standard-library/vector-bool-class.md) オブジェクトの要素のブール値。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `vector<bool>` オブジェクトはこの演算子では変更できません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<vector>
 

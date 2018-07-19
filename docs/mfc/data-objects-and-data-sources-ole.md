@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342980"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>データ オブジェクトとデータ ソース (OLE)
 データ転送では、クリップボードまたはドラッグ アンド ドロップを使用して、いずれかを実行すると、データには、ソースおよび変換先があります。 1 つのアプリケーションは、コピーするため、データを提供し、別のアプリケーションでは、それを受け入れ貼り付けられるようにします。 転送のそれぞれの側では、同じデータを正常に転送するために別の操作を実行する必要があります。 Microsoft Foundation Class (MFC) ライブラリには、この転送のそれぞれの側を表す 2 つのクラスが用意されています。  

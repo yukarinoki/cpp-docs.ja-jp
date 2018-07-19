@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052587"
 ---
 # <a name="setframe"></a>.SETFRAME
 指定のレジスタを使用してアンワインド情報のフレームの塗りつぶしレジスタ フィールドとオフセット (`reg`) とオフセット (`offset`)。 オフセットは 16 の倍数である必要があります 240 以下です。 このディレクティブはまた、生成、`UWOP_SET_FPREG`アンワインド コード エントリを現在のプロローグのオフセットを使用して、指定した登録します。  

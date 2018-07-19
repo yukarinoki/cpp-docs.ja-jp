@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388923"
 ---
 # <a name="inp-inpw"></a>inp、inpw
 これらの POSIX 関数は非推奨とされました。 代わりに、ISO C++ に準拠する [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) を使用します。  

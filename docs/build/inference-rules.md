@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368422"
 ---
 # <a name="inference-rules"></a>推論規則
 推論規則は、ターゲットを更新し、ターゲットの依存ファイルを推測するコマンドを指定します。 推論規則の拡張機能が 1 つのターゲットと一致し、同じ基本名がある依存します。 推論のルールは、ユーザー定義または定義済みです。定義済みの規則を再定義することができます。  

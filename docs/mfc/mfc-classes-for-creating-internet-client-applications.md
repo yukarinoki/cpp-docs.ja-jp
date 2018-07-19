@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348662"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>インターネット クライアント アプリケーションの作成用の MFC クラス
 MFC には、インターネット クライアント アプリケーションを記述するための次のクラスとグローバル関数が用意されています。 インデントは、その上にインデントされていないクラスから派生したクラスは、ことを示します。 `CGopherFile` および`CHttpFile`から派生`CInternetFile`、例を示します。 これらのクラスとグローバル関数は、AFXINET で宣言されます。H、除く`CFileFind`AFX で宣言されています。H.  

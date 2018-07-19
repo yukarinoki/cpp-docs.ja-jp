@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370615"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>新しいコントロール クラスに基づいた変数の宣言
 MFC コントロール クラスを作成した後は、それに基づく変数を宣言することができます。 新しい変数のコンテキストを提供するには、は、ダイアログ エディターを開き、編集 ダイアログ ボックスが再利用可能なコントロールを使用する必要があります。 また、ダイアログ ボックスは、関連付けられているクラスを既にが必要です。 ダイアログ エディターの使用方法の詳細については、次を参照してください。[ダイアログ エディター](../../windows/dialog-editor.md)です。  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386564"
 ---
 # <a name="cifmod"></a>_CIfmod
 スタックの 2 つのトップ値の浮動小数点の剰余を計算します。  

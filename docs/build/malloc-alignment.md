@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368666"
 ---
 # <a name="malloc-alignment"></a>malloc アライメント
 [malloc](../c-runtime-library/reference/malloc.md)割り当てられているメモリの量に合わせてでした基本的なアラインメントとを持つ任意のオブジェクトを格納するのに適切に配置されるメモリを返すことが保証されます。 A*基本的なアラインメント*が小さいアラインメント指定せずに実装によってサポートされている最大の配置を配置します。 (Visual C++ の基本的なアラインメントは、`double` つまり 8 バイトに対して必要なアラインメントです。 64 ビット プラットフォームを対象としたコードでは 16 バイトです)。たとえば、4 バイト割り当ての場合、4 バイト以下のオブジェクトをサポートする境界上にアラインメントされます。  

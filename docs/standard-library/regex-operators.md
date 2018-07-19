@@ -14,11 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 73469182938a51d89a9ca9777f5481824e54dbeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ccabc523ed502a3841cb9299ea2ccd2115115743
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961543"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 演算子
 
@@ -69,17 +70,17 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` 反復子の型。
+*BidIt*反復子の型。
 
-`IOtraits` 文字列の特徴 (traits) クラス。
+*IOtraits*文字列の特性クラス。
 
-`Alloc` アロケーター クラス。
+*Alloc*アロケーター クラス。
 
-`left` 比較する左のオブジェクト。
+*左*を比較する左のオブジェクト。
 
-`right` 比較する右のオブジェクト。
+*適切な*を比較する右のオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 各々のテンプレート演算子は `!(left == right)` を返します。
 
@@ -180,19 +181,19 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` 反復子の型。
+*BidIt*反復子の型。
 
-`IOtraits` 文字列の特徴 (traits) クラス。
+*IOtraits*文字列の特性クラス。
 
-`Alloc` アロケーター クラス。
+*Alloc*アロケーター クラス。
 
-`left` 比較する左のオブジェクト。
+*左*を比較する左のオブジェクト。
 
-`right` 比較する右のオブジェクト。
+*適切な*を比較する右のオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-各テンプレート演算子はその引数を文字列型に変換し、`left` の変換値が `right` の変換値より小さい場合にのみ true を返します。
+各テンプレート演算子は、その引数を文字列型に変換し、場合にのみ true を返しますの変換後の値*左*の変換後の値よりも小さい*右*します。
 
 ### <a name="example"></a>例
 
@@ -261,19 +262,19 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>パラメーター
 
-`Elem` 要素の型。
+*Elem*要素の型。
 
-`IOtraits` 文字列の特徴 (traits) クラス。
+*IOtraits*文字列の特性クラス。
 
-`Alloc` アロケーター クラス。
+*Alloc*アロケーター クラス。
 
-`BidIt` 反復子の型。
+*BidIt*反復子の型。
 
-`os` 出力ストリーム。
+*os*出力ストリーム。
 
-`right` 挿入するオブジェクト。
+*適切な*挿入するオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート演算子は `os << right.str()` を返します。
 
@@ -341,17 +342,17 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` 反復子の型。
+*BidIt*反復子の型。
 
-`IOtraits` 文字列の特徴 (traits) クラス。
+*IOtraits*文字列の特性クラス。
 
-`Alloc` アロケーター クラス。
+*Alloc*アロケーター クラス。
 
-`left` 比較する左のオブジェクト。
+*左*を比較する左のオブジェクト。
 
-`right` 比較する右のオブジェクト。
+*適切な*を比較する右のオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 各々のテンプレート演算子は `!(right < left)` を返します。
 
@@ -451,17 +452,17 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` 反復子の型。
+*BidIt*反復子の型。
 
-`IOtraits` 文字列の特徴 (traits) クラス。
+*IOtraits*文字列の特性クラス。
 
-`Alloc` アロケーター クラス。
+*Alloc*アロケーター クラス。
 
-`left` 比較する左のオブジェクト。
+*左*を比較する左のオブジェクト。
 
-`right` 比較する右のオブジェクト。
+*適切な*を比較する右のオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 各テンプレート演算子はそれぞれの引数を文字列型に変換し、変換後のオブジェクトが等しいかどうかを比較した結果を返します。
 
@@ -570,17 +571,17 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` 反復子の型。
+*BidIt*反復子の型。
 
-`IOtraits` 文字列の特徴 (traits) クラス。
+*IOtraits*文字列の特性クラス。
 
-`Alloc` アロケーター クラス。
+*Alloc*アロケーター クラス。
 
-`left` 比較する左のオブジェクト。
+*左*を比較する左のオブジェクト。
 
-`right` 比較する右のオブジェクト。
+*適切な*を比較する右のオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 各々のテンプレート演算子は `right < left` を返します。
 
@@ -676,17 +677,17 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` 反復子の型。
+*BidIt*反復子の型。
 
-`IOtraits` 文字列の特徴 (traits) クラス。
+*IOtraits*文字列の特性クラス。
 
-`Alloc` アロケーター クラス。
+*Alloc*アロケーター クラス。
 
-`left` 比較する左のオブジェクト。
+*左*を比較する左のオブジェクト。
 
-`right` 比較する右のオブジェクト。
+*適切な*を比較する右のオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 各々のテンプレート演算子は `!(left < right)` を返します。
 

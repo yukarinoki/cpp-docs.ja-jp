@@ -1,5 +1,5 @@
 ---
-title: CAtlException クラス |Microsoft ドキュメント
+title: CAtlException クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaafdf42d218e2c3bca1e8ee28c27898f80bcf40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fed15dc2348fa540c1f33e7742c5cbcda96b5846
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882534"
 ---
 # <a name="catlexception-class"></a>CAtlException クラス
 このクラスは、ATL の例外を定義します。  
@@ -46,7 +47,7 @@ class CAtlException
   
 |名前|説明|  
 |----------|-----------------|  
-|[CAtlException::operator HRESULT](#operator_hresult)|HRESULT 値を現在のオブジェクトをキャストします。|  
+|[CAtlException::operator HRESULT](#operator_hresult)|HRESULT 値を現在のオブジェクトにキャストします。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
@@ -54,12 +55,12 @@ class CAtlException
 |----------|-----------------|  
 |[CAtlException::m_hr](#m_hr)|型の変数 HRESULT は、オブジェクトによって作成され、エラー状態を格納するために使用します。|  
   
-## <a name="remarks"></a>コメント  
- A`CAtlException`オブジェクト ATL 操作に関する例外条件を表します。 `CAtlException`クラスには、例外と HRESULT の場合と同様に、例外を処理できるようにするキャスト演算子の原因を示すステータス コードを格納するパブリック データ メンバーが含まれています。  
+## <a name="remarks"></a>Remarks  
+ A`CAtlException`オブジェクトは、ATL 操作に関する例外条件を表します。 `CAtlException`クラスにキャスト演算子を使用すると、HRESULT の場合と同様に、例外を処理して、例外の原因を示すステータス コードを格納するパブリック データ メンバーが含まれています。  
   
- 一般が呼び出す`AtlThrow`を作成するのではなく、`CAtlException`オブジェクトに直接です。  
+ 一般を呼び出す`AtlThrow`を作成するのではなく、`CAtlException`オブジェクトに直接します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlexcept.h  
   
 ##  <a name="catlexception"></a>  CAtlException::CAtlException  
@@ -71,25 +72,25 @@ CAtlException() throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hr`  
- `HRESULT`エラー コード。  
+ *hr*  
+ HRESULT エラー コード。  
   
 ##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT 
- HRESULT 値を現在のオブジェクトをキャストします。  
+ HRESULT 値を現在のオブジェクトにキャストします。  
   
 ```  
 operator HRESULT() const throw ();
 ```  
   
 ##  <a name="m_hr"></a>  CAtlException::m_hr  
- `HRESULT`データ メンバーです。  
+ HRESULT データ メンバー。  
   
 ```
 HRESULT m_hr;
 ```  
   
-### <a name="remarks"></a>コメント  
- エラー状態を格納するデータ メンバーです。 HRESULT 値は、コンス トラクターによって設定[CAtlException::CAtlException](#catlexception)です。  
+### <a name="remarks"></a>Remarks  
+ エラー状態を格納するデータ メンバー。 HRESULT 値は、コンス トラクターによって設定[CAtlException::CAtlException](#catlexception)します。  
   
 ## <a name="see-also"></a>関連項目  
  [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   

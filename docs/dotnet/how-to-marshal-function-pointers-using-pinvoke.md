@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132178"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>方法: PInvoke を使用して関数ポインターをマーシャリングする
 このトピックには、マネージ デリゲートがについて説明しますと相互運用するアンマネージ関数を .NET Framework P/invoke 機能を使用するときに関数ポインターの代わりに使用できます。 ただし、Visual C (可能な場合)、代わりに、C++ Interop 機能を使用することをお勧め、ために、プログラマ P/invoke ほとんどのコンパイル時エラーを報告がタイプ セーフではありませんし、実装に時間がかかることができます。 アンマネージ API が DLL としてパッケージ化されたソース コードを使用できない場合は、P/invoke、唯一のオプションです。 それ以外の場合、次のトピックを参照してください。  

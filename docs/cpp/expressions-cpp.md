@@ -1,5 +1,5 @@
 ---
-title: 式 (C++) |Microsoft ドキュメント
+title: 式 (C++) |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953364"
 ---
 # <a name="expressions-c"></a>式 (C++)
 このセクションでは、C++ 式について説明します。 式は、次の 1 つ以上の目的で使用されるオペランドと演算子のシーケンスです。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 -   "副作用" の生成  (副作用は、オブジェクトの値を変更するなど、式の評価以外の操作です)。  
   
- C++ では、演算子はオーバーロード可能であり、意味をユーザー定義できます。 ただし、受け取るオペランドの優先順位と数を変更することはできません。 このセクションでは、言語によって提供されたままでオーバーロードされていない演算子の構文とセマンティクスについて説明します。 加え[式の型](../cpp/types-of-expressions.md)と[式のセマンティクス](../cpp/semantics-of-expressions.md)、次のトピックが含まれています。  
+ C++ では、演算子はオーバーロード可能であり、意味をユーザー定義できます。 ただし、受け取るオペランドの優先順位と数を変更することはできません。 このセクションでは、言語によって提供されたままでオーバーロードされていない演算子の構文とセマンティクスについて説明します。 加え[式の種類](../cpp/types-of-expressions.md)と[式のセマンティクス](../cpp/semantics-of-expressions.md)は次のトピックについて説明します。  
   
 -   [一次式](../cpp/primary-expressions.md)  
   
@@ -45,11 +46,9 @@ ms.lasthandoff: 05/03/2018
   
 -   [定数式](../cpp/cpp-constant-expressions.md)  
   
--   [明示的な型変換を含む式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
-  
 -   [キャスト演算子](../cpp/casting-operators.md)  
   
--   [実行時型情報](../cpp/run-time-type-information.md)  
+-   [実行時の型情報](../cpp/run-time-type-information.md)  
   
  他のセクションの演算子に関するトピック:  
   

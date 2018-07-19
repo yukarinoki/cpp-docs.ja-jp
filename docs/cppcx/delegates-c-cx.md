@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092389"
 ---
 # <a name="delegates-ccx"></a>デリゲート (C++/CX)
 `delegate`関数オブジェクトには、標準 C++ の Windows ランタイムに相当する参照型を宣言するキーワードを使用します。 関数シグネチャに似たデリゲート宣言。これは、ラップされた関数が持つ必要のある、戻り値の型およびパラメーターの型を指定します。 これは、ユーザー定義のデリゲート宣言です。  

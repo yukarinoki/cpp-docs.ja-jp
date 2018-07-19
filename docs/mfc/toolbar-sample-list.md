@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381525"
 ---
 # <a name="toolbar-sample-list"></a>ツール バーのサンプル一覧
 MFC のツールバーの使用方法を説明する次のサンプル プログラムを参照してください。  

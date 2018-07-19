@@ -1,5 +1,5 @@
 ---
-title: ソフトウェア例外の発生 |Microsoft ドキュメント
+title: ソフトウェア例外の発生 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,26 +23,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa925a01633d72f43b165b87c27e5203a143d1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6e1ea4abadc3b751b8bad9f9521462d510c5227
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943773"
 ---
 # <a name="raising-software-exceptions"></a>ソフトウェア例外の発生
 プログラム エラーの最も一般的な原因のいくつかは、システムによって例外としてフラグが設定されません。 たとえば、メモリ ブロックを割り当てるときにメモリが不足していると、ランタイム関数または API 関数で例外は発生しませんが、エラー コードが返されます。  
   
- ただし、処理できますいずれかの条件を例外として、コードでその条件を検出し、呼び出すことによってレポートによって、 [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)関数。 この方法でエラーにフラグを設定すれば、構造化例外処理の長所をあらゆるランタイム エラーに取り込むことができます。  
+ ただし、扱うことができますいずれかの条件を例外として、コードでその状態を検出して呼び出すことによって、報告、 [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552)関数。 この方法でエラーにフラグを設定すれば、構造化例外処理の長所をあらゆるランタイム エラーに取り込むことができます。  
   
  エラーで構造化例外処理を使用するには、次の手順に従います。  
   
 -   イベントごとに例外コードを定義します。  
   
--   呼び出す**RaiseException**問題を検出したときにします。  
+-   呼び出す`RaiseException`問題を検出した場合。  
   
 -   例外処理フィルターを使用して、定義した例外コードをテストします。  
   
- \<Winerror.h > ファイルは、例外コードの形式を示しています。 既存の例外コードと競合するコードを定義しないように、第 3 上位ビットを 1 に設定します。 4 つの最上位ビットは、次の表に示すように設定する必要があります。  
+ \<Winerror.h > ファイルは例外コードの形式を示しています。 既存の例外コードと競合するコードを定義しないように、第 3 上位ビットを 1 に設定します。 4 つの最上位ビットは、次の表に示すように設定する必要があります。  
   
 |Bits|推奨バイナリ設定|説明|  
 |----------|--------------------------------|-----------------|  
@@ -52,16 +53,16 @@ ms.lasthandoff: 05/03/2018
   
  必要であれば、最初の 2 ビットをバイナリ 11 以外に設定できますが、通常はほとんどの例外に "エラー" を設定します。 注意すべき重要事項は、前の表に示すようにビット 29 と 28 を設定することです。  
   
- 結果のエラー コードは、最上位 4 つのビット 16 進数の E に設定を必要したがってたとえば、次の定義は、Windows 例外コードと競合しない例外コードを定義します。 (ただし、サード パーティの DLL がどのコードを使用するか確認する必要があります)。  
+ 結果のエラー コードが最上位 4 ビットを 16 進数の E に設定したがって必要たとえば、次の定義は、任意の Windows 例外コードと競合しない例外コードを定義します。 (ただし、サード パーティの DLL がどのコードを使用するか確認する必要があります)。  
   
-```  
+```cpp 
 #define STATUS_INSUFFICIENT_MEM       0xE0000001  
 #define STATUS_FILE_BAD_FORMAT        0xE0000002  
 ```  
   
  例外コードを定義したら、そのコードを使用して例外を発生させることができます。 たとえば、次のコードでは、メモリ割り当てエラーを検出すると STATUS_INSUFFICIENT_MEM 例外が発生します。  
   
-```  
+```cpp 
 lpstr = _malloc( nBufferSize );  
 if (lpstr == NULL)  
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
@@ -71,7 +72,7 @@ if (lpstr == NULL)
   
  例外処理フィルターで、定義したコードをテストできます。 例えば:  
   
-```  
+```cpp 
 __try {  
     ...  
 }  

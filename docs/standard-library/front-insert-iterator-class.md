@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacb6fda870f698bef23184912fc3becfd6c7e2d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964386"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator クラス
 
@@ -39,9 +40,9 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>パラメーター
 
-`Container` によって挿入される要素になっている前面にコンテナーの種類、`front_insert_iterator`です。
+*コンテナー*要素がによって挿入されるの前面にコンテナーの種類、`front_insert_iterator`します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 コンテナーは償却定数時間でシーケンスの先頭に要素を挿入できる、有効な前方挿入シーケンスの要件を満たしている必要があります。 [deque クラス](../standard-library/deque-class.md)と [list クラス](../standard-library/list-class.md)によって定義された、C++標準ライブラリのシーケンス コンテナーは、必要な `push_front` メンバー関数を提供し、次の要件を満たします。 一方、[vector クラス](../standard-library/vector-class.md)で定義されるシーケンス コンテナーは、以下の要件を満たさず、`front_insert_iterator` を使用するように調整することはできません。 `front_insert_iterator` は、常に、コンテナーで初期化されている必要があります。
 
@@ -66,7 +67,7 @@ class front_insert_iterator;
 |[operator++](#op_add_add)|値を格納できる次の位置に `front_insert_iterator` をインクリメントします。|
 |[operator=](#op_eq)|前方挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<iterator>
 
@@ -80,9 +81,9 @@ class front_insert_iterator;
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **Container** のシノニムです。
+この型は、テンプレート パラメーター *Container* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -124,7 +125,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Cont` コンテナー オブジェクトを`front_insert_iterator`要素を挿入することです。
+*_Cont*先コンテナー オブジェクト、`front_insert_iterator`要素が挿入されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -188,9 +189,9 @@ front_insert_iterator<Container>& operator*();
 
 このメンバー関数は、アドレス指定された要素の値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-出力反復子式 **\*Iter** = **value** を実装するために使用されます。 **Iter** がシーケンス内の要素をアドレス指定する反復子である場合、**\*Iter** = **value** はその要素を値に置き換え、シーケンス内の要素の合計数は変えません。
+出力反復子式 **\*Iter** = **value** を実装するために使用されます。 場合`Iter`し、シーケンス内の要素を指す反復子は、  **\*Iter** = **値**その要素の値を置き換えますの合計数は変わりません。シーケンス内の要素。
 
 ### <a name="example"></a>例
 
@@ -251,7 +252,7 @@ front_insert_iterator<Container> operator++(int);
 
 値を格納できる次の位置をアドレス指定する `front_insert_iterator`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 preincrementation と postincrementation の演算子は、どちらも同じ結果を返します。
 
@@ -300,13 +301,13 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>パラメーター
 
-`val` コンテナーに割り当てられる値です。
+*val*コンテナーに割り当てられる値。
 
 ### <a name="return-value"></a>戻り値
 
 コンテナーの前に挿入される最後の要素への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のメンバー演算子は、`container.push_front( val)` を評価し、`*this` を返します。
 

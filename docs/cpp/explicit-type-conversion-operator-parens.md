@@ -1,5 +1,5 @@
 ---
-title: '明示的な型変換演算子: () |Microsoft ドキュメント'
+title: '明示的な型変換演算子: () |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93cbd58b3259821292254d8395f5d2435ecaa365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966935"
 ---
 # <a name="explicit-type-conversion-operator-"></a>明示的な型変換演算子: ()
 C++ では、関数呼び出しの構文に似た構文を使用して、明示的な型変換を実行できます。  
@@ -33,18 +34,18 @@ C++ では、関数呼び出しの構文に似た構文を使用して、明示�
 simple-type-name ( expression-list )  
 ```  
   
-## <a name="remarks"></a>コメント  
- A*単純な型名*続けて、*式リスト*かっこの構造体で指定された式を使用して、指定した型のオブジェクトを囲みます。 次の例は、int 型への明示的な型変換を示しています。  
+## <a name="remarks"></a>Remarks  
+ A*単純な型名*続けて、*式リスト*指定された式を使用して、指定した型のオブジェクト構造をかっこで囲まれています。 次の例は、int 型への明示的な型変換を示しています。  
   
-```  
+```cpp 
 int i = int( d );  
 ```  
   
- 次の例は、`Point`クラスです。  
+ 次の例は、`Point`クラス。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_Explicit_Type_Conversion_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -90,14 +91,14 @@ int main()
   
 ## <a name="output"></a>出力  
   
-```  
+```Output  
 x = 20, y = 10  
 x = 0, y = 0  
 ```  
   
  前の例では定数を使用した明示的な型変換を示しましたが、同じ手法でオブジェクトにこのような変換を実行しても、正常に動作します。 次のコードに、このことを示します。  
   
-```  
+```cpp 
 int i = 7;  
 float d;  
   
@@ -106,13 +107,16 @@ d = float( i );
   
  明示的な型変換は、"キャスト" 構文を使用して指定することもできます。 キャスト構文を使用して前の例を書き換えると、次のようになります。  
   
-```  
+```cpp
+
 d = (float)i;  
+
 ```  
   
  キャストでの変換も関数形式の変換も、1 つの値から変換する場合は同じ結果になります。 ただし、関数形式の構文では、変換に複数の引数を指定できます。 この違いは、ユーザー定義型の場合は重要です。 `Point` クラスとその変換を考えます。  
   
-```  
+```cpp
+
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -121,14 +125,15 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-```  
+
+```
   
- 関数形式の変換を使用して、前の例では、2 つの値を変換する方法を示します (のいずれかの*x*と 1 つずつ*y*)、ユーザー定義型を`Point`です。  
+ 関数形式の変換を使用して、前の例では、2 つの値を変換する方法を示します (の 1 つ*x*とに 1 つずつ*y*)、ユーザー定義型`Point`します。  
   
 > [!CAUTION]
 >  明示的な型変換は C++ コンパイラの組み込みの型チェックをオーバーライドするため、慎重に使用してください。  
   
- [キャスト](../cpp/cast-operator-parens.md)を持たない型への変換の表記を使用する必要があります、*単純な型名*(ポインターまたは参照型であるなど)。 表すことができる型への変換、*単純な型名*いずれかの形式で記述できます。 参照してください[型指定子](http://msdn.microsoft.com/en-us/34b6c737-0ef1-4470-9b77-b26e46c0bbd4)構成要素の詳細については、*単純な型名*です。  
+ [キャスト](../cpp/cast-operator-parens.md)がない型への変換の表記を使用する必要があります、*単純な型名*(ポインターまたは参照型の場合など)。 表現できる型への変換、*単純な型名*いずれかの形式で記述できます。  
   
  キャスト内の型定義は無効です。  
   

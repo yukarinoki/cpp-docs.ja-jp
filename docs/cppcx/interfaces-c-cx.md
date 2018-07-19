@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090653"
 ---
 # <a name="interfaces-ccx"></a>インターフェイス (C++/CX)
 ref クラスは多くても 1 つの具象基底クラスからしか継承できませんが、任意の数のインターフェイス クラスを実装できます。 インターフェイス クラス (インターフェイス構造体) 自体は、複数のインターフェイス クラスを継承 (または要求) でき、メンバー関数をオーバーロードすることができ、型パラメーターを持つことができます。  

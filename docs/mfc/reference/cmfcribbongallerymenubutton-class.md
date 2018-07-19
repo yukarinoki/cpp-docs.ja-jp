@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041261"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton クラス
 リボン ギャラリーを含むリボン メニュー ボタンを実装します。  
@@ -62,7 +63,7 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 |[CMFCRibbonGalleryMenuButton::HasButton](#hasbutton)|(`CMFCToolBarMenuButton::HasButton` をオーバーライドします)。|  
 |[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(上書き[cmfctoolbarmenubutton::isemptymenuallowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed))。|  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ギャラリー メニュー ボタンが、矢印付きのポップアップ メニューとして表示されます。 ユーザーがこのボタンをクリックすると、イメージのギャラリーが表示されます。 ギャラリー メニュー ボタンを構築する場合は、それらのイメージが含まれているイメージ リストを指定する必要があります。  
   
 ## <a name="example"></a>例  
@@ -96,7 +97,7 @@ ASSERT_VALID (pExButton);
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxRibbonPaletteGallery.h  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom  
@@ -107,9 +108,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [入力] `src`  
+ [in]*src*  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton  
  構築して初期化、 [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)オブジェクト。  
@@ -131,25 +132,25 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `uiID`  
- ボタンのコマンド ID。 これで送信される値は、 **WM_COMMAND**メッセージが表示される、このボタンをクリックします。  
+ *uiID*  
+ ボタンのコマンド ID。 これは、ユーザーがこのボタンをクリックしたときに、WM_COMMAND メッセージで送信される値です。  
   
- `iImage`  
- ギャラリー メニュー ボタンに表示するイメージのインデックス。 イメージが格納されている、`imagesPalette`パラメーター。  
+ *画像*  
+ ギャラリー メニュー ボタンに表示するイメージのインデックス。 イメージが格納されている、 *imagesPalette*パラメーター。  
   
- `lpszText`  
+ *lpszText*  
  メニュー ボタンに表示するテキスト。  
   
- `imagesPalette`  
+ *imagesPalette*  
  ギャラリーに表示するイメージの一覧が含まれています。  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  ギャラリーに表示するイメージのイメージ リストのリソース ID。  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  ギャラリーに表示するイメージのピクセル単位の幅を指定します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ギャラリー メニュー ボタンは、矢印がポップアップ メニューとして表示されます。 ユーザーがこのボタンをクリックすると、イメージのギャラリーが表示されます。  
   
 ### <a name="example"></a>例  
@@ -166,7 +167,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="getpalette"></a>  CMFCRibbonGalleryMenuButton::GetPalette  
 
@@ -177,7 +178,7 @@ CMFCRibbonGallery& GetPalette();
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="hasbutton"></a>  CMFCRibbonGalleryMenuButton::HasButton  
 
@@ -188,7 +189,7 @@ virtual BOOL HasButton() const;
   
 ### <a name="return-value"></a>戻り値  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="isemptymenuallowed"></a>  CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed  
 

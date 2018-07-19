@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347332"
 ---
 # <a name="property-sheets-as-wizards"></a>ウィザードとしてのプロパティ シート
 ウィザードのプロパティ シートの主な特徴は、タブの代わりに、[次へ] または [完了]、バックアップ、および [キャンセル] ボタンでナビゲーションが提供されることです。 呼び出す必要がある[CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode)呼び出す前に[する](../mfc/reference/cpropertysheet-class.md#domodal)プロパティ シート オブジェクトでこの機能を活用するためにします。  

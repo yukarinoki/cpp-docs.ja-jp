@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258135"
 ---
 # <a name="compiler-error-c3485"></a>コンパイラ エラー C3485
 ラムダ定義に cv 修飾子は使用できません  

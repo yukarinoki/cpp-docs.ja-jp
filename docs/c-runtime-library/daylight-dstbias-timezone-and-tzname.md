@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391458"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone、および _tzname
 `_daylight`、`_dstbias`、`_timezone`、`_tzname` は、日付と時刻に関する一部のルーチンでローカル時刻の調整に使われます。 これらのグローバル変数は非推奨となりました。セキュリティを強化したバージョンを代わりに使う必要があります。  

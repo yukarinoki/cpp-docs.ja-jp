@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111446"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>スキーマ行セット クラスと Typedef クラス
 スキーマが所有する、または特定のユーザーによって作成されたデータベース オブジェクトのコレクションです。 カタログでは、1 つまたは複数のスキーマを含めることができますが、ビューとスキーマ情報のドメインを含む INFORMATION_SCHEMA というスキーマを常に含める必要があります。 OLE DB のスキーマ情報は、定義済みのスキーマ行セットの使用が取得され、型、テーブル、列、インデックス、ビュー、アサーションおよび制約、統計、文字セット、照合順序、およびドメインが含まれています。  

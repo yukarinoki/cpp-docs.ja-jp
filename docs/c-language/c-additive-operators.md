@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382865"
 ---
 # <a name="c-additive-operators"></a>C 加法演算子
 加法演算子は加算 (**+**) と減算 (**-**) を実行します。  

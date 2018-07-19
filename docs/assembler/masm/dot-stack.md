@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052301"
 ---
 # <a name="stack"></a>.STACK
 使用すると[です。モデル](../../assembler/masm/dot-model.md)、(セグメント名スタック) のスタック セグメントを定義します。 省略可能な`size`スタック (既定値は 1,024) のバイト数を指定します。 `.STACK`ディレクティブは、スタックのステートメントを自動的に閉じます。  

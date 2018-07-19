@@ -9,6 +9,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424852"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>単純な場合は、標準レイアウト、POD、およびリテラル型
 

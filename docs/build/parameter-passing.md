@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369358"
 ---
 # <a name="parameter-passing"></a>パラメーターの引き渡し
 最初の 4 つの整数引数は、レジスタに渡されます。 整数値は、RCX、RDX、R8、R9 で (左右からの順序) で渡されます。 引数 5 以上、スタックに渡されます。 すべての引数はレジスタ内で右揃えがします。 場合、呼び出し先は、レジスタの上位ビットを無視できますので、これを行う必要があり、レジスタの必要な部分のみアクセスできます。  

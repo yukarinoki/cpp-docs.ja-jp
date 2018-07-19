@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb54ae332dac556333516c5e50129b9ba43ce07
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 01eb327458331ca457b7b7f23d8c69668fbf1fa7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964159"
 ---
 # <a name="binaryfunction-struct"></a>binary_function 構造体
 
@@ -36,7 +37,7 @@ struct binary_function {
    };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート構造体は、フォームのメンバー関数を定義するクラスの基本として機能します。
 
@@ -44,7 +45,7 @@ struct binary_function {
 
 **const second_argument_type&** ) **const**
 
-このような二項関数はすべて、最初の引数の型として **first_argument_type** を参照し、2 つ目の引数の型として **second_argument_type** を参照し、戻り値の型として ***result_type*** を参照できます。
+二項関数はすべてこのようなこととして最初の引数の型を参照してください`first_argument_type`、として、2 番目の引数の型`second_argument_type`、および戻り値の型として***result_type***します。
 
 ## <a name="example"></a>例
 
@@ -107,7 +108,7 @@ The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
 
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

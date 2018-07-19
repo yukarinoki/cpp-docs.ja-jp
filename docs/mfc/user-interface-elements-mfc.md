@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383243"
 ---
 # <a name="user-interface-elements-mfc"></a>ユーザー インターフェイス要素 (MFC)
 Microsoft Foundation Class (MFC) ライブラリを使用して、アプリケーションのユーザー インターフェイスを作成する方法については、次のトピックを参照してください。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348092"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>ドキュメント テンプレートとドキュメント/ビューの作成手順
 フレームワークを関連するビューとフレーム ウィンドウとドキュメントを作成する複雑なプロセスを管理するには、次の 2 つのドキュメント テンプレート クラスを使用して:[関数](../mfc/reference/csingledoctemplate-class.md)SDI アプリケーション用と[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) MDI アプリケーション用。 A`CSingleDocTemplate`を作成し、同時に 1 つの型の 1 つのドキュメントを保存できます。 A`CMultiDocTemplate`は 1 つの型の多くの開いているドキュメントの一覧を保持します。  

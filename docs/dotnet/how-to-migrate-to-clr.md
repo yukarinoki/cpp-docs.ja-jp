@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138441"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /clr に移行する
 このトピックのネイティブ コードをコンパイルするときに発生する問題について説明 **/clr** (を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細については)。 **/clr**により、Visual C モジュールを起動し、アンマネージ モジュールとの互換性を維持しながら、.NET アセンブリから呼び出すことです。 参照してください[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブ モードと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)でコンパイルした場合の利点について **/clr**です。  

@@ -1,5 +1,5 @@
 ---
-title: IPersistPropertyBagImpl クラス |Microsoft ドキュメント
+title: IPersistPropertyBagImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,14 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41d26b84fd4c113120afefd572caed8ab27214c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f214a112c1baedd507a9eeeca02e955aeceedd3e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879216"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl クラス
-このクラスは実装**IUnknown**でき、そのプロパティをクライアントが提供するプロパティ バッグに保存するオブジェクト。  
+このクラスは実装`IUnknown`でき、そのプロパティをクライアントが指定したプロパティ バッグに保存するオブジェクト。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -41,8 +42,8 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 派生したクラス、`IPersistPropertyBagImpl`です。  
+ *T*  
+ 派生したクラス、`IPersistPropertyBagImpl`します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -51,14 +52,14 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 |名前|説明|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|オブジェクトの CLSID を取得します。|  
-|[IPersistPropertyBagImpl::InitNew](#initnew)|新しく作成されたオブジェクトを初期化します。 ATL の実装を返します`S_OK`です。|  
-|[IPersistPropertyBagImpl::Load](#load)|クライアントが提供するプロパティ バッグからのオブジェクトのプロパティを読み込みます。|  
-|[IPersistPropertyBagImpl::Save](#save)|オブジェクトのプロパティは、クライアントが提供するプロパティ バッグに保存されます。|  
+|[IPersistPropertyBagImpl::InitNew](#initnew)|新しく作成されたオブジェクトを初期化します。 ATL の実装では、S_OK を返します。|  
+|[IPersistPropertyBagImpl::Load](#load)|クライアントが指定したプロパティ バッグからオブジェクトのプロパティを読み込みます。|  
+|[IPersistPropertyBagImpl::Save](#save)|オブジェクトのプロパティは、クライアントが指定したプロパティ バッグに保存します。|  
   
-## <a name="remarks"></a>コメント  
- [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)インターフェイスにより、そのプロパティをクライアントが提供するプロパティ バッグに保存するオブジェクト。 クラス`IPersistPropertyBagImpl`このインターフェイスの既定の実装を提供し、実装**IUnknown**ダンプ情報を送信することによってデバッグ デバイスを構築します。  
+## <a name="remarks"></a>Remarks  
+ [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)インターフェイスにより、クライアントが指定したプロパティ バッグのプロパティを保存するオブジェクト。 クラス`IPersistPropertyBagImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
- **IPersistPropertyBag**と連携して[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)と[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)です。 クライアントによって後者 2 つのインターフェイスを実装する必要があります。 を通じて`IPropertyBag`クライアントを保存し、オブジェクトの個々 のプロパティを読み込みます。 を通じて**IErrorLog**オブジェクトとクライアントの両方が発生したエラーを報告できます。  
+ `IPersistPropertyBag` 連携して[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)と[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)します。 クライアントによってこれら後者の 2 つのインターフェイスを実装する必要があります。 を通じて`IPropertyBag`クライアントが保存され、オブジェクトの個々 のプロパティを読み込みます。 を通じて`IErrorLog`オブジェクトとクライアントの両方が発生したエラーを報告できます。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   
@@ -67,7 +68,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
   
  `IPersistPropertyBagImpl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID  
@@ -77,7 +78,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  参照してください[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK にします。  
   
 ##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew  
@@ -88,25 +89,25 @@ STDMETHOD(InitNew)();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `S_OK` を返します。  
+ S_OK を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  参照してください[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) Windows SDK にします。  
   
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load  
- クライアントが提供するプロパティ バッグからのオブジェクトのプロパティを読み込みます。  
+ クライアントが指定したプロパティ バッグからオブジェクトのプロパティを読み込みます。  
   
 ```
 STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ```  
   
-### <a name="remarks"></a>コメント  
- ATL では、オブジェクトのプロパティ マップを使用して、この情報を取得します。  
+### <a name="remarks"></a>Remarks  
+ ATL では、オブジェクトのプロパティのマップを使用して、この情報を取得します。  
   
  参照してください[IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) Windows SDK にします。  
   
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save  
- オブジェクトのプロパティは、クライアントが提供するプロパティ バッグに保存されます。  
+ オブジェクトのプロパティは、クライアントが指定したプロパティ バッグに保存します。  
   
 ```
 STDMETHOD(Save)(
@@ -115,8 +116,8 @@ STDMETHOD(Save)(
     BOOL fSaveAllProperties);
 ```  
   
-### <a name="remarks"></a>コメント  
- ATL は、この情報を格納するのにオブジェクトのプロパティ マップを使用します。 既定では、このメソッドの値に関係なく、すべてのプロパティを保存*fSaveAllProperties*です。  
+### <a name="remarks"></a>Remarks  
+ ATL では、オブジェクトのプロパティ マップを使用して、この情報を格納します。 既定では、このメソッドの値に関係なく、すべてのプロパティを保存します。 *fSaveAllProperties*します。  
   
  参照してください[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) Windows SDK にします。  
   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372442"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (コード生成スレッド)
 最適化とコード生成に使用するための cl.exe スレッドの数を設定します。  

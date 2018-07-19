@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690531"
 ---
 # <a name="a26---using-the-threadprivate-directive"></a>A.26 threadprivate ディレクティブの使用
 次の例を使用する方法を示します、`threadprivate`ディレクティブ ([セクション 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) 23 ページの) スレッドごとに別々 にカウンターを提供します。  

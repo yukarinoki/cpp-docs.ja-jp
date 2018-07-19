@@ -1,5 +1,5 @@
 ---
-title: ATL_URL_SCHEME 列挙 |Microsoft ドキュメント
+title: ATL_URL_SCHEME 列挙型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d180454b3189988752c9002ddc462eb460d51ff4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7dc33d4806e02541f45bfde2ecb5acdc0133ad3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962225"
 ---
 # <a name="atlurlscheme"></a>ATL_URL_SCHEME  
 
-この列挙体のメンバーがで認識されるスキームの定数を提供[CUrl](curl-class.md)です。  
+この列挙体のメンバーで認識されるスキーマの定数を提供する[CUrl](curl-class.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 };  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlutil.h  
   
 ## <a name="see-also"></a>関連項目  

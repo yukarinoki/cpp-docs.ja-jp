@@ -1,5 +1,5 @@
 ---
-title: _ _super |Microsoft ドキュメント
+title: _ _super |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9caa3d08140887da45916b931b6a4850358db16
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943965"
 ---
 # <a name="super"></a>__super
 **Microsoft 固有の仕様**  
@@ -31,24 +32,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-__super::  
-member_function  
-();  
+__super::member_function();  
   
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  オーバーロード解決フェーズ時にすべてのアクセス可能な基底クラス メソッドが考慮され、最優先の一致を示す関数が呼び出されます。  
   
- `__super` は、メンバー関数の本体でのみ表示できます。  
+ **_ _super**メンバー関数の本体でのみ表示できます。  
   
- `__super` は、using 宣言と共に使用することはできません。 参照してください[宣言を使用して](../cpp/using-declaration.md)詳細についてはします。  
+ **_ _super**を使用してでは使用できません宣言します。 参照してください[宣言を使用して](../cpp/using-declaration.md)詳細についてはします。  
   
- 導入に伴い[属性](../windows/cpp-attributes-reference.md)コードを挿入する、コードがわからない場合がありますが、名前に呼び出すメソッドを含む 1 つまたは複数の基底クラスを含めることがあります。  
+ 導入に伴い[属性](../windows/cpp-attributes-reference.md)コードを挿入する、コードには、名前がわからないに呼び出すメソッドを含む 1 つまたは複数の基底クラスが含まれます。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // deriv_super.cpp  
 // compile with: /c  
 struct B1 {  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388326"
 ---
 # <a name="sizeof-operator-c"></a>sizeof 演算子 (C)
 `sizeof` 演算子はオペランドの型のオブジェクトを格納するために必要なストレージの量をバイト単位で示します。 この演算子を使うと、コンピューターに依存するデータ サイズをプログラムで指定せずに済みます。  

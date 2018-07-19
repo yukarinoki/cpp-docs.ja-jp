@@ -37,6 +37,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694707"
 ---
 # <a name="array-class"></a>array クラス
 データをアクセラレータに移動するために使用するデータ コンテナーを表します。  

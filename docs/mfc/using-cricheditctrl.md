@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382168"
 ---
 # <a name="using-cricheditctrl"></a>CRichEditCtrl の使い方
 リッチ エディット コントロールは、ユーザーを入力し、テキストを編集するウィンドウです。 テキストは、文字と段落の書式に割り当てることができるし、埋め込み OLE オブジェクトを含めることができます。 リッチ エディット コントロールは、MFC では、 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)クラスです。  

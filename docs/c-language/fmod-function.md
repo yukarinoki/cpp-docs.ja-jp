@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384412"
 ---
 # <a name="fmod-function"></a>fmod 関数
 **ANSI 4.5.6.4** `fmod`関数の 2 番目の引数がゼロのとき、ドメイン エラーが発生するか、ゼロが返されるか  

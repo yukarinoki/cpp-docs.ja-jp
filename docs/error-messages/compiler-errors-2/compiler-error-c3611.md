@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252013"
 ---
 # <a name="compiler-error-c3611"></a>コンパイラ エラー C3611
 'function': シール関数は純粋指定子を持つことはできません  

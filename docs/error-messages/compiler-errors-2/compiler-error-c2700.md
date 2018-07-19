@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235299"
 ---
 # <a name="compiler-error-c2700"></a>コンパイラ エラー C2700
 'identifier': スローできません (詳細な情報が必要であれば /W4 オプションを指定してください)  

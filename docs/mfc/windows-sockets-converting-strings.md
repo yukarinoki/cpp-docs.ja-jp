@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383761"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows ソケット : 文字列の変換
 この記事の内容と 2 部構成の記事は、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、文字列の変換について説明します。 その他の問題については、「 [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)と[Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)です。  

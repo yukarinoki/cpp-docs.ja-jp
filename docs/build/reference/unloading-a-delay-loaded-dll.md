@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375215"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>遅延読み込みした DLL のアンロード
 既定値が指定した遅延読み込みヘルパーは、遅延読み込み記述子がポインターの元のインポート アドレス テーブル (IAT) のコピーと pUnloadIAT フィールドを確認します。 その場合へのポインターをインポート遅延記述子のリストで保存します。 これにより、その DLL を明示的にアンロードをサポートするために名前で DLL を検索するヘルパー関数。  

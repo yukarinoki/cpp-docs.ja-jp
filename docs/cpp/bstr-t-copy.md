@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::copy |Microsoft ドキュメント
+title: _bstr_t::copy |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7337669cae68c088265d812585a44fadd6bcb76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d23f204e7e8a545fbee7ab516495ed711d7984a9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943685"
 ---
 # <a name="bstrtcopy"></a>_bstr_t::copy
 **Microsoft 固有の仕様**  
@@ -32,21 +33,19 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      BSTR copy(  
-  bool fCopy = true  
-) const;  
+BSTR copy( bool fCopy = true ) const;  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `fCopy`  
- 場合**true**、**コピー**格納されているのコピーを返します`BSTR`それ以外の場合、**コピー**は実際の BSTR を返します。  
+ *fCopy*  
+ TRUE の場合、`copy`格納されているのコピーを返します`BSTR`それ以外の場合、`copy`実際の BSTR を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  カプセル化された `BSTR` オブジェクトの新しく割り当てられたコピーを返します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
    *pVal = m_bsConStr.copy();  
 }  

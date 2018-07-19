@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694993"
 ---
 # <a name="c2-rules"></a>C.2 規則
 表記法は、C 規格の 6.1 で説明します。 この文法付録では、OpenMP C および C++ のディレクティブの基本言語の文法に拡張機能を示します。  

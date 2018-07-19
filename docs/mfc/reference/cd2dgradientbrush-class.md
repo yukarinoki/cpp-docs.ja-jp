@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956234"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush クラス
 CD2DLinearGradientBrush および CD2DRadialGradientBrush クラスの基底クラス。  
@@ -60,7 +61,7 @@ class CD2DGradientBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 構造体の配列。|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|グラデーション境界間の補間を実行する色で領域です。|  
@@ -76,7 +77,7 @@ class CD2DGradientBrush : public CD2DBrush;
   
  `CD2DGradientBrush`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush  
@@ -101,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 構造体の配列へのポインター。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  大きいか gradientStops 配列でグラデーション境界の数を示す 1 に等しい値です。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  グラデーション境界間の補間を実行する色で領域です。  
   
- `extendMode`  
+ *オン*  
  [0, 1] の正規化された範囲外のグラデーションの動作です。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  不透明度およびブラシの変換へのポインター。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  

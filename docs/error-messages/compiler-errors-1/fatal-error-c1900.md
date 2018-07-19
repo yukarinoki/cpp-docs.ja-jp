@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228988"
 ---
 # <a name="fatal-error-c1900"></a>致命的なエラー C1900
 'tool1' の Version 'number1' と 'tool2' の Version 'number2' が一致しません。  

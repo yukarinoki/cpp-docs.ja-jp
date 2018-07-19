@@ -1,5 +1,5 @@
 ---
-title: _com_error::Error |Microsoft ドキュメント
+title: _com_error::Error |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02afac78de5eb5908d477f8503ceeebffe46f672
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 21f2da8c10b9b796740144f81d0390f1af124cab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942056"
 ---
 # <a name="comerrorerror"></a>_com_error::Error
 **Microsoft 固有の仕様**  
   
- コンストラクターに渡された `HRESULT` を取得します。  
+ コンス トラクターに渡された HRESULT を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +38,10 @@ HRESULT Error( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>戻り値  
- コンストラクターに渡された未処理の `HRESULT` 項目。  
+ 生の HRESULT 項目は、コンス トラクターに渡されます。  
   
-## <a name="remarks"></a>コメント  
- `HRESULT` オブジェクト内のカプセル化された `_com_error` 項目を取得します。  
+## <a name="remarks"></a>Remarks  
+ カプセル化された HRESULT 項目を取得、`_com_error`オブジェクト。  
   
  **Microsoft 固有の仕様はここまで**  
   

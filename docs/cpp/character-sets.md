@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414784"
 ---
 # <a name="character-sets"></a>文字セット
 C++ プログラムのテキストは、特定の文字エンコーディングを使用するソース ファイルに保存されます。 C++ 標準では、ソース ファイル用の基本ソース文字セットと、コンパイル済みファイル用の基本実行文字セットを規定しています。 Visual C++ では、ソース ファイルとコンパイル済みファイルに、ロケール固有の追加の文字セットを使用できます。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053302"
 ---
 # <a name="arm-assembler-directives"></a>ARM アセンブラー ディレクティブ
 ほとんどの場合、Microsoft ARM アセンブラー言語を使用して、ARM アセンブリの第 7 章に記載されている、 [ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?linkid=246102)です。 ただし、一部のアセンブリ ディレクティブの Microsoft 実装は、ARM assembly ディレクティブによって異なります。 この記事では、相違点について説明します。  

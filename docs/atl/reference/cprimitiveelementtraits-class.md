@@ -1,5 +1,5 @@
 ---
-title: CPrimitiveElementTraits クラス |Microsoft ドキュメント
+title: CPrimitiveElementTraits クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bec944c4b9a505cc817dbe7aa3ce09a317954f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2219be699e879afb6ec19ad84acc50f18d93a9a9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885810"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits クラス
-このクラスは、既定のメソッドを提供し、プリミティブ データ型のコレクション クラスの関数で構成されます。  
+このクラスは既定のメソッドとプリミティブ データ型のコレクション クラスの関数で構成されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +37,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
+ *T*  
  コレクション クラスのオブジェクトに格納されるデータの型。  
   
 ## <a name="members"></a>メンバー  
@@ -46,12 +47,12 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 |名前|説明|  
 |----------|-----------------|  
 |[CPrimitiveElementTraits::INARGTYPE](#inargtype)|コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。|  
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|コレクション クラスのオブジェクトから要素を取得するのに使用するデータ型。|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|コレクション クラスのオブジェクトから要素を取得するために使用するデータ型。|  
   
-## <a name="remarks"></a>コメント  
- このクラスは、既定の静的な関数と移動、コピー、比較、およびコレクション クラスのオブジェクトに格納されているプリミティブ データ型の要素をハッシュするためのメソッドを提供します。  
+## <a name="remarks"></a>Remarks  
+ このクラスは、既定の静的関数および移動、コピー、比較、およびコレクション クラスのオブジェクトに格納されているプリミティブ データ型の要素をハッシュするためのメソッドを提供します。  
   
- 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)です。  
+ 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -64,7 +65,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
   
  `CPrimitiveElementTraits`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE  
@@ -75,7 +76,7 @@ typedef T INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE  
- コレクション クラスのオブジェクトから要素を取得するのに使用するデータ型。  
+ コレクション クラスのオブジェクトから要素を取得するために使用するデータ型。  
   
 ```
 typedef T& OUTARGTYPE;

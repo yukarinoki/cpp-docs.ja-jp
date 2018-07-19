@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090196"
 ---
 # <a name="odbc-administrator"></a>ODBC データ ソース アドミニストレーター
 ODBC アドミニストレーターを登録し、構成、[データ ソース](../../data/odbc/data-source-odbc.md)に使用できるローカルまたはネットワーク上でします。 ウィザードは、ODBC データ ソース アドミニストレーターの提供する情報を利用して、データ ソースに接続するコードを生成します。  

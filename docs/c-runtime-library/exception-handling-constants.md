@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388228"
 ---
 # <a name="exception-handling-constants"></a>例外処理定数
 **try-except** ステートメントの保護されたセクションの実行中に例外が発生すると、定数 `EXCEPTION_CONTINUE_SEARCH`、`EXCEPTION_CONTINUE_EXECUTION`、または `EXCEPTION_EXECUTE_HANDLER` が返されます。 例外を処理する方法は戻り値によって決まります。 詳細については、『*C++ 言語リファレンス*』の「[try-except ステートメント](../cpp/try-except-statement.md)」をご覧ください。  

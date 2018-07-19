@@ -1,5 +1,5 @@
 ---
-title: MFC クラス |Microsoft ドキュメント
+title: MFC クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027814"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示すクラスが含まれています。  
@@ -167,7 +168,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ショートカット メニューを管理します。ショートカット メニューは、コンテキスト メニューとも呼ばれます。  
   
  [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)  
- コントロール バー クラスの基本クラス[CStatusBar クラス](../../mfc/reference/cstatusbar-class.md)、 [CToolBar クラス](../../mfc/reference/ctoolbar-class.md)、 [CDialogBar クラス](../../mfc/reference/cdialogbar-class.md)、 [CReBar クラス](../../mfc/reference/crebar-class.md)、および[COleResizeBar クラス](../../mfc/reference/coleresizebar-class.md)です。  
+ コントロール バー クラスの基本クラス[CStatusBar クラス](../../mfc/reference/cstatusbar-class.md)、 [CToolBar クラス](../../mfc/reference/ctoolbar-class.md)、 [CDialogBar クラス](../../mfc/reference/cdialogbar-class.md)、 [CReBar クラス](../../mfc/reference/crebar-class.md)、および[COleResizeBar クラス](../../mfc/reference/coleresizebar-class.md)します。  
   
  [CCriticalSection クラス](../../mfc/reference/ccriticalsection-class.md)  
  "クリティカル セクション" を表します。これは、一度に 1 つのスレッドだけがリソースまたはコード セクションにアクセスできるようにする同期オブジェクトです。  
@@ -392,7 +393,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ファイルに関連した例外状態を表します。  
   
  [CFileFind クラス](../../mfc/reference/cfilefind-class.md)  
- 基本クラスにはローカル ファイルの検索を実行し、 [CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)と[CFtpFileFind クラス](../../mfc/reference/cftpfilefind-class.md)、インターネット ファイル検索を実行します。  
+ ローカル ファイルを検索し、基本クラスです[CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)と[CFtpFileFind クラス](../../mfc/reference/cftpfilefind-class.md)、インターネット ファイル検索を実行します。  
   
  [CFindReplaceDialog クラス](../../mfc/reference/cfindreplacedialog-class.md)  
  文字列の検索と置換を行う標準のダイアログ ボックスをアプリケーションに実装できます。  
@@ -416,7 +417,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ウィンドウを管理するメンバーと共に、Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を提供します。  
   
  [CFrameWndEx クラス](../../mfc/reference/cframewndex-class.md)  
- Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を実装し、ウィンドウを管理するメンバーを提供します。 拡張されて、 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)クラスです。  
+ Windows のシングル ドキュメント インターフェイス (SDI: Single Document Interface) のオーバーラップ フレーム ウィンドウまたはポップアップ フレーム ウィンドウの機能を実装し、ウィンドウを管理するメンバーを提供します。 拡張、 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)クラス。  
   
  [CFtpConnection クラス](../../mfc/reference/cftpconnection-class.md)  
  インターネット サーバーへの FTP 接続を管理します。さらに、そのサーバー上のフォルダーとファイルを直接操作できます。  
@@ -437,7 +438,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  gopher サーバーのインターネット ファイル検索を支援します。  
   
  [CGopherLocator クラス](../../mfc/reference/cgopherlocator-class.md)  
- Gopher「ロケーター」を gopher サーバーから取得、ロケーターの種類を決定し、ロケーターを可能に[CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)です。  
+ Gopher「ロケーター」を gopher サーバーから取得、ロケーターの種類を決定およびロケーターを使用できるように[CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)します。  
   
  [CHeaderCtrl クラス](../../mfc/reference/cheaderctrl-class.md)  
  Windows コモン ヘッダー コントロールの機能が用意されています。  
@@ -452,7 +453,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  HTML 編集コンポーネントを表します。  
   
  [CHtmlEditDoc クラス](../../mfc/reference/chtmleditdoc-class.md)  
- [CHtmlEditView クラス](../../mfc/reference/chtmleditview-class.md)、MFC ドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。  
+ [CHtmlEditView クラス](../../mfc/reference/chtmleditview-class.md)MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。  
   
  [CHtmlEditView クラス](../../mfc/reference/chtmleditview-class.md)  
  MFC のドキュメント/ビュー アーキテクチャのコンテキストで WebBrowser 編集プラットフォームの機能を提供します。  
@@ -524,7 +525,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  "リスト ビュー コントロール" の機能をカプセル化します。このコントロールには項目のコレクションを表示され、各項目はイメージ リストのアイコンとラベルで構成されます。  
   
  [CListView クラス](../../mfc/reference/clistview-class.md)  
- リスト コントロールの使用との使用を簡略化[CListCtrl クラス](../../mfc/reference/clistctrl-class.md)MFC のドキュメント/ビュー アーキテクチャのリスト コントロールの機能をカプセル化するクラス。  
+ リスト コントロールとの使用を簡略化[CListCtrl クラス](../../mfc/reference/clistctrl-class.md)MFC のドキュメント/ビュー アーキテクチャのリスト コントロールの機能をカプセル化するクラス。  
   
  [CLongBinary クラス](../../mfc/reference/clongbinary-class.md)  
  データベース上の大きなバイナリ データ オブジェクト (BLOB または "バイナリ ラージ オブジェクト" と呼びます) を使った作業を単純にします。  
@@ -557,13 +558,13 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ウィンドウ管理用のメンバーも含めて、Windows のマルチ ドキュメント インターフェイス (MDI: multiple document interface) の子ウィンドウの機能が用意されています。  
   
  [CMDIChildWndEx クラス](../../mfc/reference/cmdichildwndex-class.md)  
- Windows のマルチ ドキュメント インターフェイス (MDI) の子ウィンドウの機能を提供します。 機能を拡張[CMDIChildWnd クラス](../../mfc/reference/cmdichildwnd-class.md)です。 ある特定の MFC クラスを MDI アプリケーションで使用するときは、フレームワークにこのクラスが必要です。  
+ Windows のマルチ ドキュメント インターフェイス (MDI) の子ウィンドウの機能を提供します。 機能を拡張[CMDIChildWnd クラス](../../mfc/reference/cmdichildwnd-class.md)します。 ある特定の MFC クラスを MDI アプリケーションで使用するときは、フレームワークにこのクラスが必要です。  
   
  [CMDIFrameWnd クラス](../../mfc/reference/cmdiframewnd-class.md)  
  Windows のマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) のフレーム ウィンドウの機能が用意されています。さらに、ウィンドウを管理するメンバーも用意されています。  
   
  [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)  
- 機能を拡張[CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)Windows のマルチ ドキュメント インターフェイス (MDI) のフレーム ウィンドウです。  
+ 機能を拡張[CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)Windows のマルチ ドキュメント インターフェイス (MDI) のフレーム ウィンドウ。  
   
  [CMDITabInfo クラス](../../mfc/reference/cmditabinfo-class.md)  
  [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) メソッドにパラメーターを渡すために使用します。 MDI タブ付きグループの動作を制御するために、このクラスのメンバーを設定します。  
@@ -596,7 +597,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  タブ付きウィンドウの基本的な機能を実装します。  
   
  [CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)  
- 機能を追加、 [CButton クラス](../../mfc/reference/cbutton-class.md)ボタン テキストの配置、ボタンのテキストとイメージの組み合わせ、カーソル、カーソルを選択すると、ツール ヒントを指定するなどのクラスです。  
+ 機能を追加、 [CButton クラス](../../mfc/reference/cbutton-class.md)ボタン テキストの配置、ボタンのテキストとイメージの組み合わせ、カーソルの選択、ツール ヒントの指定などのクラス。  
   
  [CMFCCaptionBar クラス](../../mfc/reference/cmfccaptionbar-class.md)  
  ボタン、テキスト ラベル、ビットマップという 3 つの要素を表示できるコントロール バーです。 表示できる各要素の数は 1 つずつです。 各要素は、コントロールの左端、右端、または中央に揃えて配置できます。 また、キャプション バーの上部または下部の境界線にフラット スタイルまたは 3D スタイルを適用することもできます。  
@@ -608,7 +609,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ドキュメントまたはアプリケーションで色を選択できるドッキング コントロール バーを表します。  
   
  [CMFCColorButton クラス](../../mfc/reference/cmfccolorbutton-class.md)  
- `CMFCColorButton`と[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)カラー ピッカー コントロールを実装するクラスが一緒に使用されます。  
+ `CMFCColorButton`と[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)カラー ピッカー コントロールを実装するクラスを組み合わせて使用します。  
   
  [CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)  
  色を選択するダイアログ ボックスを表します。  
@@ -635,7 +636,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ユーザーがトップレベルのツール バー ボタンを押し続けたときに表示されるツール バーです。  
   
  [CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
- ツール バー ボタンの一種で、クリックされたときは標準ボタンと同じように動作します。 ただし、ドロップダウン ツールバーを開きます ([CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)ユーザーが押すし、ツール バー ボタンを押したままかどうか。  
+ ツール バー ボタンの一種で、クリックされたときは標準ボタンと同じように動作します。 ただし、ドロップダウン ツールバーを開きます ([CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)押すし、ツール バー ボタンを押したかどうか。  
   
  [CMFCDynamicLayout クラス](../../mfc/reference/cmfcdynamiclayout-class.md)  
  ユーザーによるウィンドウ サイズの変更時に、ウィンドウのコントロールをどのように移動して、サイズを変更するかを指定します。  
@@ -665,7 +666,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ボタンをハイパーリンクとして表示し、ボタンがクリックされたときにリンク先を呼び出します。  
   
  [CMFCListCtrl クラス](../../mfc/reference/cmfclistctrl-class.md)  
- 機能を拡張[CListCtrl クラス](../../mfc/reference/clistctrl-class.md)クラス、高度なヘッダー コントロールの機能をサポートすることにより、 [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)です。  
+ 機能を拡張[CListCtrl クラス](../../mfc/reference/clistctrl-class.md)クラスの高度なヘッダー コントロール機能をサポートすることによって、 [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)します。  
   
  [CMFCMaskedEdit クラス](../../mfc/reference/cmfcmaskededit-class.md)  
  マスク エディット コントロールをサポートします。これは、ユーザーの入力をマスクと検証し、テンプレートに従って検証結果を表示します。  
@@ -677,7 +678,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  ポップアップ メニューを表示してユーザーのメニュー選択を報告するボタンです。  
   
  [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)  
- Microsoft Outlook 2000 または Outlook 2003 の **ナビゲーション ウィンドウ** と同じ外観を持つタブ付きペインです。 `CMFCOutlookBar`オブジェクトが含まれています、 [CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)オブジェクトと一連のタブです。 タブには、いずれかを指定できる[CMFCOutlookBarPane クラス](../../mfc/reference/cmfcoutlookbarpane-class.md)オブジェクトまたは`CWnd`-派生オブジェクト。 ユーザーに対しては、Outlook バーは一連のボタンおよび表示領域として表示されます。 ユーザーがボタンをクリックすると、対応するコントロールまたはボタン ペインが表示されます。  
+ Microsoft Outlook 2000 または Outlook 2003 の **ナビゲーション ウィンドウ** と同じ外観を持つタブ付きペインです。 `CMFCOutlookBar`オブジェクトが含まれています、 [CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)オブジェクトと一連のタブ。 タブは、 [CMFCOutlookBarPane クラス](../../mfc/reference/cmfcoutlookbarpane-class.md)オブジェクトまたは`CWnd`の派生オブジェクト。 ユーザーに対しては、Outlook バーは一連のボタンおよび表示領域として表示されます。 ユーザーがボタンをクリックすると、対応するコントロールまたはボタン ペインが表示されます。  
   
  [CMFCOutlookBarPane クラス](../../mfc/reference/cmfcoutlookbarpane-class.md)  
  派生したコントロール[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)Outlook バーに挿入できる ([CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md))。 Outlook バー ペインには、大きいボタンの列があります。 ボタンのリストがペインより長い場合、ユーザーはリストを上下にスクロールできます。 ユーザーが Outlook バー ペインを Outlook バーから切り離すと、そのペインをフローティング状態にするかメイン フレーム ウィンドウにドッキングできます。  
@@ -722,7 +723,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  アプリケーション ウィンドウの左上隅に表示される特殊なボタンを実装します。 このボタンがクリックされると、通常は、一般的な **[ファイル]** メニューのコマンド ( **[開く]**、 **[上書き保存]**、 **[終了]** など) を含むメニューが開かれます。  
   
  [CMFCRibbonBaseElement クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)  
- 基底クラスに追加できるすべての要素を[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)です。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
+ 追加できるすべての要素の基本クラスを[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)します。 リボン要素とは、リボン ボタン、リボン チェック ボックス、リボン コンボ ボックスなどです。  
   
  [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)  
  パネル、クイック アクセス ツール バー、ポップアップ メニューなど、リボン バー要素に配置できるボタンを実装します。  
@@ -731,7 +732,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  複数のリボン ボタンを 1 つのグループに編成できます。 グループ内のすべてのボタンは互いに隣接して水平に並べられ、1 つの枠で囲まれます。  
   
  [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)  
- グループを含むリボン タブを実装する[CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)です。  
+ リボン タブのグループを含む実装[CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)します。  
   
  [CMFCRibbonCheckBox クラス](../../mfc/reference/cmfcribboncheckbox-class.md)  
  リボン パネル、クイック アクセス ツール バー、またはポップアップ メニューに追加できるチェック ボックスを実装します。  
@@ -764,7 +765,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  リボン上に配置するハイパーリンクを実装します。 ハイパーリンクをクリックすると、Web ページが表示されます。  
   
  [CMFCRibbonMainPanel クラス](../../mfc/reference/cmfcribbonmainpanel-class.md)  
- クリックしたときに表示されるリボン パネルを実装、 [CMFCRibbonApplicationButton クラス](../../mfc/reference/cmfcribbonapplicationbutton-class.md)です。  
+ クリックしたときに表示されるリボン パネルを実装、 [CMFCRibbonApplicationButton クラス](../../mfc/reference/cmfcribbonapplicationbutton-class.md)します。  
   
  [CMFCRibbonMiniToolBar クラス](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
  コンテキスト ポップアップ ツール バーを実装します。  
@@ -797,7 +798,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  スピン ボタン コントロールを描画するビジュアル マネージャーをサポートします。  
   
  [CMFCStatusBar クラス](../../mfc/reference/cmfcstatusbar-class.md)  
- `CStatusBar` クラスに似たステータス バーを実装します。 ただし、 `CMFCStatusBar` クラスには、イメージ、アニメーション、およびプログレス バーを表示する機能や、マウスのダブルクリックに応答する機能など、 `CStatusBar` クラスでは提供されない機能が含まれています。  
+ `CStatusBar` クラスに似たステータス バーを実装します。 ただし、`CMFCStatusBar` クラスには、イメージ、アニメーション、およびプログレス バーを表示する機能や、マウスのダブルクリックに応答する機能など、`CStatusBar` クラスでは提供されない機能が含まれています。  
   
  [CMFCTabCtrl クラス](../../mfc/reference/cmfctabctrl-class.md)  
  タブ コントロールの機能を提供します。 タブ コントロールは、上または下にフラットまたは 3D のタブを持つ、ドッキング可能なウィンドウを表示します。 タブにはテキストとイメージを表示でき、アクティブな状態のときに色を変更することもできます。  
@@ -809,25 +810,25 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  クリック可能な項目 (タスク) のリストを実装します。  
   
  [CMFCTasksPaneTask クラス](../../mfc/reference/cmfctaskspanetask-class.md)  
- 作業ウィンドウ コントロールのタスクを表すヘルパー クラスです ([CMFCTasksPane クラス](../../mfc/reference/cmfctaskspane-class.md))。 タスク オブジェクトは、タスク グループ内の項目を表します ([CMFCTasksPaneTaskGroup クラス](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 各タスクには、ユーザーがタスク名の左側に表示されるタスクやアイコンをクリックしたときにフレームワークが実行するコマンドを設定できます。  
+ タスク作業ウィンドウ コントロールを表すヘルパー クラス ([CMFCTasksPane クラス](../../mfc/reference/cmfctaskspane-class.md))。 タスク オブジェクトは、タスク グループ内の項目を表します ([CMFCTasksPaneTaskGroup クラス](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 各タスクには、ユーザーがタスク名の左側に表示されるタスクやアイコンをクリックしたときにフレームワークが実行するコマンドを設定できます。  
   
  [CMFCTasksPaneTaskGroup クラス](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
  によって使用されるヘルパー クラス、 [CMFCTasksPane クラス](../../mfc/reference/cmfctaskspane-class.md)コントロール。 `CMFCTasksPaneTaskGroup` 型のオブジェクトは *タスク グループ*を表します。 タスク グループは、閉じるボタンがある独立したボックスにフレームワークによって表示される項目の一覧です。 このボックスには、オプションのキャプション (グループ名) があります。 グループが閉じると、タスクの一覧は表示されません。  
   
  [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)  
- 似た[CToolBar クラス](../../mfc/reference/ctoolbar-class.md)が、ユーザー インターフェイス機能に対する追加サポートを提供します。 フラット ツール バー、ホット イメージのツール バー、大きいアイコン、ページャー ボタン、ロックされたツール バー、rebar コントロール、イメージの下のテキスト、背景イメージ、およびタブ付きのツール バーなどがサポートされます。 `CMFCToolBar` クラスには、ツール バーおよびメニューに対するユーザーのカスタマイズ、ツール バーとメニューの間のドラッグ アンド ドロップ、コンボ ボックス ボタン、エディット ボックス ボタン、カラー ピッカー、およびロールアップ ボタンのサポートも組み込まれています。  
+ よう[CToolBar クラス](../../mfc/reference/ctoolbar-class.md)がユーザー インターフェイス機能に対する追加のサポートを提供します。 フラット ツール バー、ホット イメージのツール バー、大きいアイコン、ページャー ボタン、ロックされたツール バー、rebar コントロール、イメージの下のテキスト、背景イメージ、およびタブ付きのツール バーなどがサポートされます。 `CMFCToolBar` クラスには、ツール バーおよびメニューに対するユーザーのカスタマイズ、ツール バーとメニューの間のドラッグ アンド ドロップ、コンボ ボックス ボタン、エディット ボックス ボタン、カラー ピッカー、およびロールアップ ボタンのサポートも組み込まれています。  
   
  [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)  
  アプリケーション リソースまたはファイルから読み込んだツール バー イメージを管理します。  
   
  [CMFCToolBarInfo クラス](../../mfc/reference/cmfctoolbarinfo-class.md)  
- さまざまな状態のツール バー イメージのリソース ID を含みます。 `CMFCToolBarInfo` パラメーターとして使用されるヘルパー クラスには、 [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッドです。  
+ さまざまな状態のツール バー イメージのリソース ID を含みます。 `CMFCToolBarInfo` パラメーターとして使用されるヘルパー クラスには、 [cmfctoolbar::loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)メソッド。  
   
  [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  ポップアップ メニューを含むツール バー ボタンです。  
   
  [CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)  
- モードレス タブ ダイアログ ボックス ([CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md)) を使用して、ツールバー、メニューのキーボード ショートカット、ユーザー定義のツールおよびアプリケーションで visual スタイルをカスタマイズします。 通常、このダイアログ ボックスを表示するには、 **[ツール]** メニューの **[ユーザー設定]** をクリックします。  
+ モードレス タブ ダイアログ ボックス ([CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md)) ユーザーがツールバー、メニューのキーボード ショートカット、ユーザー定義のツール、およびアプリケーションでの visual スタイルをカスタマイズできるようにします。 通常、このダイアログ ボックスを表示するには、 **[ツール]** メニューの **[ユーザー設定]** をクリックします。  
   
  [CMFCToolTipCtrl クラス](../../mfc/reference/cmfctooltipctrl-class.md)  
  [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)に基づいた拡張ツールヒントの実装です。 `CMFCToolTipCtrl` クラスに基づいたツールヒントは、アイコン、ラベル、および説明を表示できます。 グラデーション塗りつぶし、カスタム テキストと境界線の色、太字、角を丸く表示、またはバルーン形式を使用して、外観をカスタマイズできます。  
@@ -866,7 +867,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  月間予定表コントロールの機能がカプセル化されています。  
   
  [CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)  
- さまざまなコマンドを関連付ける特定のユーザーに許可[CView クラス](../../mfc/reference/cview-class.md)オブジェクトのビューの内側をダブルクリックします。  
+ 特定の別のコマンドを関連付けられるように[CView クラス](../../mfc/reference/cview-class.md)ユーザーがそのビューの内側でダブルクリックしたときのオブジェクトします。  
   
  [CMultiDocTemplate クラス](../../mfc/reference/cmultidoctemplate-class.md)  
  MDI (マルチ ドキュメント インターフェイス) を実装するドキュメント テンプレートを定義します。  
@@ -878,7 +879,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  マルチページ ダイアログは、複数の HTML ページを順番に表示し、各ページのイベントを処理します。  
   
  [CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md)  
- 拡張[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)です。 複数のペインをサポートします。 コントロール バーに埋め込まれたハンドルは 1 つではなく`CMultiPaneFrameWnd`が含まれています、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)いずれかをドッキングするのには、ユーザーを有効にするオブジェクト`CMultiPaneFrameWnd`別に、動的に複数の浮動小数点の作成、タブ付きwindows です。  
+ 拡張[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)します。 複数のペインをサポートします。 コントロール バーへの単一の埋め込みハンドルではなく`CMultiPaneFrameWnd`が含まれています、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)により、1 つをドッキングするのには、ユーザー オブジェクト`CMultiPaneFrameWnd`別に、動的に作成する複数のフローティング、タブ付きwindows とします。  
   
  [CMutex クラス](../../mfc/reference/cmutex-class.md)  
  ミューテックスを表します。これは、1 つのスレッドがリソースに排他アクセスできるようにする同期オブジェクトです。  
@@ -929,7 +930,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  クライアント側のカスタム コントロール インターフェイスをサポートします。  
   
  [COleConvertDialog クラス](../../mfc/reference/coleconvertdialog-class.md)  
- 詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK 内の構造。  
+ 詳細については、次を参照してください。、 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK の構造体。  
   
  [COleCurrency クラス](../../mfc/reference/colecurrency-class.md)  
  OLE オートメーションで使用される `CURRENCY` データ型をカプセル化します。  
@@ -1019,7 +1020,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  OLE の [リンクの編集] ダイアログ ボックスを使って、ドキュメント内の既存のリンク オブジェクトや埋め込みオブジェクトの更新のみを行います。これは、OLE の [リンクの編集] ダイアログ ボックスの特別な使い方です。  
   
  [COleVariant クラス](../../mfc/reference/colevariant-class.md)  
- [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) データ型をカプセル化します。  
+ カプセル化、[バリアント](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118)データ型。  
   
  [CPagerCtrl クラス](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` クラスは、Windows のページャー コントロールをラップします。ページャー コントロールには、外側のウィンドウに収まらない内側のウィンドウをスクロールによって表示する機能があります。  
@@ -1028,7 +1029,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  印刷マージンの設定や変更の追加サポートと共に [OLE ページの設定] ダイアログ ボックスにより提供されるサービスをカプセル化します。  
   
  [CPaintDC クラス](../../mfc/reference/cpaintdc-class.md)  
- デバイス コンテキスト クラスから派生[CDC クラス](../../mfc/reference/cdc-class.md)です。  
+ デバイス コンテキスト クラスから派生した[CDC クラス](../../mfc/reference/cdc-class.md)します。  
   
  [CPalette クラス](../../mfc/reference/cpalette-class.md)  
  Windows のカラー パレットをカプセル化します。  
@@ -1067,7 +1068,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  Windows のコモン ダイアログ ボックスである [印刷] ダイアログで提供されるサービスをカプセル化したものです。  
   
  [CPrintDialogEx クラス](../../mfc/reference/cprintdialogex-class.md)  
- Windows の 印刷のプロパティ シートによって提供されるサービスをカプセル化します。  
+ Windows 印刷のプロパティ シートによって提供されるサービスをカプセル化します。  
   
  [CProgressCtrl クラス](../../mfc/reference/cprogressctrl-class.md)  
  Windows コモン プログレス バー コントロールの機能が用意されています。  
@@ -1106,7 +1107,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  コントロール内にデータベース レコードを表示するビューです。  
   
  [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)  
- Windows のような[RECT 構造体](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)です。  
+ Windows のような[RECT 構造体](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)します。  
   
  [CRectTracker クラス](../../mfc/reference/crecttracker-class.md)  
  アイテムを異なる方法で表示、移動、サイズ変更できるようにします。  
@@ -1211,7 +1212,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  Windows コモン ステータス バー コントロール の機能が用意されています。  
   
  [CStdioFile クラス](../../mfc/reference/cstdiofile-class.md)  
- ランタイム関数によって開かれると、C ランタイム ストリーム ファイルを表す[fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)です。  
+ 実行時の関数で開かれた C ランタイム ストリーム ファイルを表す[fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)します。  
   
  [CStringArray クラス](../../mfc/reference/cstringarray-class.md)  
  `CString` オブジェクトの配列をサポートします。  
@@ -1229,7 +1230,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  Windows のコモン タブ コントロールの機能が用意されています。  
   
  [CTabView クラス](../../mfc/reference/ctabview-class.md)  
- タブ コントロール クラスの使用を簡略化 ([CTabView クラス](../../mfc/reference/ctabview-class.md)) MFC のドキュメント/ビュー アーキテクチャを使用するアプリケーションでします。  
+ 簡単に、タブ コントロール クラスの使用 ([CTabView クラス](../../mfc/reference/ctabview-class.md)) MFC のドキュメント/ビュー アーキテクチャを使用するアプリケーションでします。  
   
  [CTaskDialog クラス](../../mfc/reference/ctaskdialog-class.md)  
  メッセージ ボックスのような機能を持つだけでなく、ユーザーに対する追加情報も表示できる、ポップアップ ダイアログ ボックスです。 `CTaskDialog` には、ユーザーから情報を収集するための機能も用意されています。  
@@ -1268,7 +1269,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
  エンド ユーザーの操作を中止するためにスローします。  
   
  [CUserTool クラス](../../mfc/reference/cusertool-class.md)  
- 外部アプリケーションを実行するメニュー項目です。 **ツール**のタブ、**カスタマイズ** ダイアログ ボックス ([CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) ユーザー ツールを追加し、名前、コマンド、引数を指定するユーザーを有効にし、各ユーザー ツールの初期ディレクトリです。  
+ 外部アプリケーションを実行するメニュー項目です。 **ツール**のタブ、**カスタマイズ** ダイアログ ボックス ([CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) により、ユーザー ツールのユーザーを追加し、名前、コマンド、引数を指定し、各ユーザー ツールの初期ディレクトリ。  
   
  [CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)  
  コレクションを保持[CUserTool クラス](../../mfc/reference/cusertool-class.md)アプリケーション内のオブジェクト。 ユーザー ツールは、外部アプリケーションを実行するメニュー項目です。 `CUserToolsManager` オブジェクトは、ユーザーまたは開発者がアプリケーションに新しいユーザー ツールを追加できるようにします。 ユーザー ツールに関連するコマンドの実行をサポートし、Windows レジストリにユーザー ツールに関する情報を保存します。  

@@ -1,5 +1,5 @@
 ---
-title: _ _restrict |Microsoft ドキュメント
+title: _ _restrict |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d96abd70990f1c01229004e9be000ec4e35a8595
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e402fc9a32b92960f251796365199a608d6d1137
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943978"
 ---
 # <a name="restrict"></a>__restrict
-同様に、 **_ _declspec ([制限](../cpp/restrict.md))** 修飾子、`__restrict`キーワードは、シンボルは、現在のスコープで別名を指定ではないことを示します。 `__restrict` キーワードは、`__declspec ( restrict )` 修飾子とは次の点で相違があります。  
+ように、 **_ _declspec ([制限](../cpp/restrict.md))** 修飾子、 **_ _restrict**キーワードは、シンボルがエイリアス化された現在のスコープ内ではないことを示します。 **_ _Restrict**キーワードとは異なります、`__declspec ( restrict )`修飾子は、次の方法で。  
   
--   `__restrict` キーワードは変数に対してのみ有効です。`__declspec ( restrict )` は関数の宣言と定義内でのみ有効です。  
+-   **_ _Restrict**キーワードは、変数にのみ有効ですし、`__declspec ( restrict )`関数宣言と定義でのみ有効です。  
   
--   `__restrict` は C99 仕様の `restrict` に似ていますが、`__restrict` は C++ または C プログラムで使用できます。  
+-   **_ _restrict**のような**制限**C99 仕様からが **_ _restrict** C++ または C プログラムで使用できます。  
   
--   `__restrict` が使用されていると、コンパイラは変数の非エイリアスのプロパティを伝達しません。 つまり、`__restrict` 変数を `__restrict` ではない変数に割り当てる場合、コンパイラは引き続き non-__restrict 変数のエイリアス化を許可します。 これは C99 仕様の `restrict` キーワードの動作とは異なります。  
+-   ときに **_ _restrict**が使用すると、コンパイラは伝達されません変数の非エイリアスのプロパティ。 つまりを割り当てた場合、 **_ _restrict**変数以外に **_ _restrict**変数コンパイラも、-_ _restrict 以外には別名を変数。 これは、別の動作、**制限**C99 仕様のキーワード。  
   
  一般に、関数全体の動作に影響を及ぼす場合、キーワードよりも `__declspec ( restrict )` を使用する方が適切です。  
   
- Visual Studio 2015 以降では、C++ 参照で `__restrict` を使用できます。  
+ Visual Studio 2015 以降では、 **_ _restrict** C++ 参照で使用できます。  
   
 > [!NOTE]
->  持っている変数で使用すると、[揮発性](../cpp/volatile-cpp.md)キーワード、`volatile`が優先されます。  
+>  持っている変数に対して使用すると、[揮発性](../cpp/volatile-cpp.md)キーワード、**揮発性**が優先されます。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // __restrict_keyword.c  
 // compile with: /LD  
 // In the following function, declare a and b as disjoint arrays  

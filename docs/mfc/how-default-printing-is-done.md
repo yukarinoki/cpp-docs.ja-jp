@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358916"
 ---
 # <a name="how-default-printing-is-done"></a>既定の印刷プロセス
 この記事では、MFC フレームワークの観点から Windows の既定の印刷プロセスについて説明します。  

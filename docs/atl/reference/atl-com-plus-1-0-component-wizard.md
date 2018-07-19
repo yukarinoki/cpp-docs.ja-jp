@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361304"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 コンポーネント ウィザード
 このウィザードを使用すると、オブジェクトを COM + 1.0 services、トランザクションを含むをサポートするプロジェクトに追加します。  

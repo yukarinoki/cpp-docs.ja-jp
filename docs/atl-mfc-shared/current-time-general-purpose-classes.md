@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354596"
 ---
 # <a name="current-time-general-purpose-classes"></a>現在の時刻: 汎用クラス
 次の手順を作成する方法を示しています、`CTime`オブジェクトを現在の時刻に初期化します。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419675"
 ---
 # <a name="numerical-limits-c"></a>数値制限 (C++)
 2 つの標準のインクルード ファイル、 \<limits.h > と\<float.h >、数値の制限、または指定された型の変数を保持できる最小値と最大値を定義します。 これらの最小値と最大値は ANSI C と同じデータ表現を使用する C++ コンパイラに移植することは保証します。\<Limits.h > は、ファイルを定義、[整数型の数値の制限](../cpp/integer-limits.md)、および\<float.h > を定義、[浮動小数点型の数値の制限](../cpp/floating-limits.md)です。  

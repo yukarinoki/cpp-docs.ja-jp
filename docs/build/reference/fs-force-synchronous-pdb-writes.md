@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374792"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (同期 PDB 書き込みの強制)
 プログラム データベース (PDB) ファイルの書き込みを — によって作成された[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)または[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— MSPDBSRV をシリアル化します。EXE です。  

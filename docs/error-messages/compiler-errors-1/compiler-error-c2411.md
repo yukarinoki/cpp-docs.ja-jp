@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196468"
 ---
 # <a name="compiler-error-c2411"></a>コンパイラ エラー C2411
 'identifier': 'context' で無効な構造体/共用体メンバー  

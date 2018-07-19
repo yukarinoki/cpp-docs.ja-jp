@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108331"
 ---
 # <a name="delegates-and-events"></a>デリゲートとイベント
 デリゲートおよびイベントを宣言するための方法は、Visual C を c++ マネージ拡張から変更されました。  

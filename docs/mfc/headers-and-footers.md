@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348251"
 ---
 # <a name="headers-and-footers"></a>ヘッダーとフッター
 この記事では、印刷ドキュメントにヘッダーとページ フッターを追加する方法について説明します。  

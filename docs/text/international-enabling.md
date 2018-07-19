@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858703"
 ---
 # <a name="international-enabling"></a>国際化対応について
 従来のほとんどの C および C++ コードによって、国際対応のアプリケーションに対して適切に動作しない文字と文字列の操作に関する仮定を行います。 MFC とランタイム ライブラリの両方は、Unicode や MBCS をサポートしてが、まだ作業を行うには このセクションで Visual C の「国際化対応」の意味について説明します。  

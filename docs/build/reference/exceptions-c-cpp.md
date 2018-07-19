@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373388"
 ---
 # <a name="exceptions-cc"></a>例外 (C/C++)
 2 つの例外コードは、エラーが発生したときに発生する可能性が。  

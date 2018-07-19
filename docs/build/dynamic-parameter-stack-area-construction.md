@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367473"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>動的なパラメーター スタック領域の構成
 フレーム ポインターを使用する場合は、パラメーター スタック領域を動的に作成するオプションが存在します。 これは、現在で実行されません、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]コンパイラです。  

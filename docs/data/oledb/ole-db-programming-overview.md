@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106194"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB プログラミングの概要
 OLE DB は、高パフォーマンス、COM ベース データベース テクノロジです。 格納されている形式に関係なくデータにアクセスする一般的な方法を提供します。 一般的に、ビジネスの現場では、大量の情報が企業データベースの外部に格納されています。 このような情報は、ファイル システム (FAT や NTFS など)、インデックス付きのシーケンシャル ファイル、パーソナル データベース (Access など)、スプレッドシート (Excel など)、プロジェクト プランニング アプリケーション (Project など)、および電子メール (Outlook など) に含まれています。 OLE DB をデータ ストアがある OLE DB プロバイダーにある限り、同じ方法であらゆる種類のデータ ストアにアクセスできます。

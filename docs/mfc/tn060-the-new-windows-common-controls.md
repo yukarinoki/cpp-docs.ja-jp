@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381479"
 ---
 # <a name="tn060-the-new-windows-common-controls"></a>テクニカル ノート 60: 新しい Windows コモン コントロール
 テクニカル ノート 60、新しい Windows コモン コントロールと、その使用方法を説明する機能に組み込まれました[コントロール](../mfc/controls-mfc.md)です。  

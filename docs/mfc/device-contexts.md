@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348571"
 ---
 # <a name="device-contexts"></a>デバイス コンテキスト
 デバイス コンテキストは、ディスプレイやプリンターなどのデバイスの描画属性に関する情報を含む Windows のデータ構造です。 すべての描画呼び出しは、線、図形、およびテキストの描画の Windows Api をカプセル化されているデバイス コンテキスト オブジェクトを通じて行われます。 デバイス コンテキストでは、Windows のデバイスに依存しない描画できるようにします。 デバイス コンテキストを使用して、画面、プリンター、またはメタファイルを描画することです。  

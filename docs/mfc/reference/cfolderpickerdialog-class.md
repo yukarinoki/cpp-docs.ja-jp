@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956525"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog クラス
 CFolderPickerDialog クラスは、フォルダー ピッカー モードの CFileDialog を実装します。  
@@ -42,7 +43,7 @@ class CFolderPickerDialog : public CFileDialog;
 |[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|デストラクターです。|  
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|コンストラクターです。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -59,7 +60,7 @@ class CFolderPickerDialog : public CFileDialog;
   
  `CFolderPickerDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxdlgs.h  
   
 ##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
@@ -74,19 +75,19 @@ explicit CFolderPickerDialog(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszFolder`  
+ *lpszFolder*  
  初期のフォルダー。  
   
- `dwFlags`  
+ *dwFlags*  
  ダイアログ ボックスをカスタマイズすることは 1 つまたは複数のフラグの組み合わせ。  
   
- `pParentWnd`  
+ *pParentWnd*  
  ダイアログ ボックスのオブジェクトの親ウィンドウまたはオーナー ウィンドウへのポインター。  
   
- `dwSize`  
+ *dwSize*  
  OPENFILENAME 構造体のサイズ。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog  
  デストラクターです。  
@@ -95,7 +96,7 @@ explicit CFolderPickerDialog(
 virtual ~CFolderPickerDialog();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>関連項目  
  [クラス](../../mfc/reference/mfc-classes.md)

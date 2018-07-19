@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371942"
 ---
 # <a name="lib-reference"></a>LIB リファレンス
 Microsoft ライブラリ マネージャー (LIB.exe) を作成およびオブジェクト ファイル形式 COFF (Common) オブジェクト ファイルのライブラリを管理します。 LIB は、エクスポート ファイルの作成し、エクスポート参照の定義をインポート ライブラリにも使用できます。  

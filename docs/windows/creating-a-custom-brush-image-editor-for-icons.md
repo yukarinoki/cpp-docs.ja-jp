@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873148"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>カスタム ブラシの作成 (アイコン用イメージ エディター)
 カスタム ブラシは、四角形を取得し、イメージ エディターの既製のブラシのいずれかのように使用するイメージの一部です。 な選択で実行できる操作はすべて、カスタム ブラシも実行できます。  

@@ -1,5 +1,5 @@
 ---
-title: IQuickActivateImpl クラス |Microsoft ドキュメント
+title: IQuickActivateImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,14 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87427408483a60cf33b46a1a670095d211b3d80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9131a1cc1f8d0c66f2eb3616f4903db74ea4bdf0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881374"
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl クラス
-このクラスは、1 回の呼び出しにコンテナーのコントロールの初期化を結合します。  
+このクラスは、1 つの呼び出しにコンテナーのコントロールの初期化を結合します。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -43,8 +44,8 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 派生したクラス、`IQuickActivateImpl`です。  
+ *T*  
+ 派生したクラス、`IQuickActivateImpl`します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -54,10 +55,10 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 |----------|-----------------|  
 |[IQuickActivateImpl::GetContentExtent](#getcontentextent)|実行中のコントロールの現在の表示サイズを取得します。|  
 |[IQuickActivateImpl::QuickActivate](#quickactivate)|読み込む対象のコントロールの初期化を迅速に実行します。|  
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|コンテナーが割り当てられて表示領域の量のコントロールに通知します。|  
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|コンテナーに割り当てられている表示領域の量のコントロールに通知します。|  
   
-## <a name="remarks"></a>コメント  
- [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146)インターフェイスにより、コンテナーが 1 回の呼び出しで初期化を組み合わせることによってコントロールを読み込むときの遅延を回避します。 `QuickActivate`メソッドにより、コンテナーへのポインターを渡す、 [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630)構造コントロールすべてのインターフェイスへのポインターを保持する必要があります。 戻り時に、制御が渡されるバックアップへのポインター、[戻り値](http://msdn.microsoft.com/library/windows/desktop/ms693721)コンテナーで使用される、独自のインターフェイスへのポインターを保持する構造体。 クラス`IQuickActivateImpl`の既定の実装を提供**IQuickActivate**を実装して**IUnknown**ダンプ情報を送信することによってデバッグ デバイスを構築します。  
+## <a name="remarks"></a>Remarks  
+ [IQuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms690146)インターフェイス コンテナーは 1 回の呼び出しで初期化を組み合わせることでコントロールを読み込むときに遅延を避けるために役立ちます。 `QuickActivate`メソッドにより、コンテナーへのポインターを渡す、 [QACONTAINER](http://msdn.microsoft.com/library/windows/desktop/ms688630)構造、コントロールにすべてのインターフェイス ポインターを保持する必要があります。 返された場合、制御が渡されるバックアップへのポインターを[戻り値](http://msdn.microsoft.com/library/windows/desktop/ms693721)コンテナーで使用される、独自のインターフェイス ポインターを保持する構造体。 クラス`IQuickActivateImpl`の既定の実装を提供します。`IQuickActivate`実装と`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   
@@ -66,7 +67,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
   
  `IQuickActivateImpl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent  
@@ -76,8 +77,8 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 ```  
   
-### <a name="remarks"></a>コメント  
- サイズは、フル コントロールの表示はあり、HIMETRIC 単位で指定します。  
+### <a name="remarks"></a>Remarks  
+ サイズは、コントロールの完全なレンダリングは、HIMETRIC 単位で指定されます。  
   
  参照してください[IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) Windows SDK にします。  
   
@@ -90,19 +91,19 @@ STDMETHOD(QuickActivate)(
     QACONTROL* pQACtrl);
 ```  
   
-### <a name="remarks"></a>コメント  
- 構造体には、コントロールと一部のアンビエント プロパティの値によって必要なインターフェイスへのポインターが含まれています。 コントロールがへのポインターを渡す関数が戻るとき、[戻り値](http://msdn.microsoft.com/library/windows/desktop/ms693721)コンテナーを必要とする独自のインターフェイスと追加の状態情報へのポインターを格納する構造体。  
+### <a name="remarks"></a>Remarks  
+ 構造体には、コントロールと一部のアンビエント プロパティの値で必要なインターフェイスへのポインターが含まれています。 戻り時に、コントロールがへのポインターを渡す、[戻り値](http://msdn.microsoft.com/library/windows/desktop/ms693721)コンテナーが必要とする独自のインターフェイスと追加の状態情報へのポインターを含む構造体。  
   
  参照してください[IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) Windows SDK にします。  
   
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
- コンテナーが割り当てられて表示領域の量のコントロールに通知します。  
+ コンテナーに割り当てられている表示領域の量のコントロールに通知します。  
   
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  サイズは、HIMETRIC 単位で指定されます。  
   
  参照してください[IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) Windows SDK にします。  

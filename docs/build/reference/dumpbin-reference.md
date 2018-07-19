@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372657"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN リファレンス
 Microsoft COFF Binary File Dumper (DUMPBIN です。EXE) では、オブジェクト ファイル形式 COFF (Common) のバイナリ ファイルに関する情報を表示します。 DUMPBIN を使用して、COFF オブジェクト ファイル、COFF オブジェクト、実行可能ファイル、およびダイナミック リンク ライブラリ (Dll) の標準ライブラリを調べることができます。  

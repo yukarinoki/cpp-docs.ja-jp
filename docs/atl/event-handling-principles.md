@@ -1,5 +1,5 @@
 ---
-title: イベント処理の原則 (ATL) |Microsoft ドキュメント
+title: イベント処理の原則 (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,37 +18,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb7577dc7d9fb58f43ee67d5e5b8f00393dca1bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 239ea94343652d379048bbeee87d2650d3f1ed72
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852537"
 ---
 # <a name="event-handling-principles"></a>イベント処理の原則
-3 つの手順はすべてのイベント処理に共通です。 する必要があります。  
+3 つの手順はすべてのイベント処理に共通します。 必要があります。  
   
--   オブジェクトのイベント インターフェイスを実装します。  
+-   オブジェクトには、イベント インターフェイスを実装します。  
   
 -   オブジェクトがイベントを受信することは、イベント ソースにお勧めします。  
   
 -   オブジェクトが不要になったイベントを受信する必要がある場合は、イベント ソースをアドバイズです。  
   
- イベント インターフェイスを実装する方法は、その型によって異なります。 イベント インターフェイスには、vtable、デュアルまたはディスパッチ インターフェイスを指定できます。 インターフェイスを定義するイベント ソースのデザイナーには設定すると、そのインターフェイスを実装します。  
+ イベント インターフェイスを実装することをする方法は、その型によって異なります。 イベント インターフェイス vtable、デュアルまたはディスパッチ インターフェイスを使用できます。 インターフェイスを定義するイベント ソースのデザイナーにはそのインターフェイスを実装するためです。  
   
 > [!NOTE]
->  イベント インターフェイスをデュアルにすることはできません技術的な理由はありませんが、デュアルの使用を回避する適切な設計上の理由の数があります。 ただし、この設定は、イベントのデザイナー/インプリメンタによって行われた*ソース*です。 イベントの観点から作業しているため`sink`、デュアルのイベント インターフェイスを実装するが、任意の選択肢がなくても発生する可能性を許可する必要があります。 デュアル インターフェイスの詳細については、次を参照してください。[デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)です。  
+>  イベント インターフェイスを二重にすることはできませんが、技術的な理由はありませんは、さまざまなデュアルの使用を回避するために適切な設計上の理由があります。 ただし、これは、イベントのデザイナー/実装者によって行われた決定*ソース*します。 イベントの観点から作業しているため`sink`、デュアル イベント インターフェイスを実装するが、任意の選択肢がないことの可能性を考慮する必要があります。 デュアル インターフェイスの詳細については、次を参照してください。[デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)します。  
   
  イベント ソースを通知するのに分けることが 3 つの手順。  
   
--   ソース オブジェクトをクエリ[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)です。  
+-   クエリのソース オブジェクトは[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)します。  
   
--   呼び出す[IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476)興味イベント インターフェイスの IID を渡します。 かどうか、正常に返されます、 [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)接続ポイント オブジェクトのインターフェイスです。  
+-   呼び出す[IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476)興味イベント インターフェイスの IID を渡します。 かどうか、正常に返されます、 [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)コネクション ポイント オブジェクトのインターフェイス。  
   
--   呼び出す[iconnectionpoint::advise](http://msdn.microsoft.com/library/windows/desktop/ms678815)渡す、 **IUnknown**イベント シンクのです。 かどうか、正常に返されます、`DWORD`の接続を表すクッキー。  
+-   呼び出す[iconnectionpoint::advise](http://msdn.microsoft.com/library/windows/desktop/ms678815)を渡す、`IUnknown`イベント シンクの。 かどうか、正常に返されます、`DWORD`接続を表すクッキー。  
   
- イベントの受信にご興味を正常に登録した後は、ソース オブジェクトによって発生したイベントに従ってオブジェクトのイベント インターフェイスのメソッドが呼び出されます。 不要になったイベントを受信する必要がある場合は、経由で接続ポイントに cookie を渡すことができます[IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608)です。 これにより、ソースとシンク間の接続が切断されます。  
+ イベントの受信にご関心を正常に登録した後は、ソース オブジェクトによって発生したイベントに従ってオブジェクトのイベント インターフェイスでメソッドが呼び出されます。 イベントを受信するが不要になったときに経由で接続ポイントに cookie を渡すことができます[:unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608)します。 これにより、ソースとシンク間の接続が中断されます。  
   
- 参照を回避するように注意するイベントを処理するときのサイクルです。  
+ 参照しないように注意するイベントを処理するときのサイクルです。  
   
 ## <a name="see-also"></a>関連項目  
  [イベント処理](../atl/event-handling-and-atl.md)

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b847280209b7844da6b1b9093a9a514aad7b423a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 45710c4a1abca000b5cc8bca4a9db8032e874d9c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958959"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; クラス
 
@@ -33,11 +34,11 @@ template <>
 class regex_traits<wchar_t>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート クラス [regex_traits](../standard-library/regex-traits-class.md) を `wchar_t` 型の要素用に特化したクラスです (そのため、この型のオブジェクトを操作するライブラリ関数を利用できます)。
+クラスはテンプレート クラスの明示的な特殊化[regex_traits](../standard-library/regex-traits-class.md)型の要素に対して**wchar_t** (ようにこの型のオブジェクトを操作するライブラリ関数が利用できます)。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 

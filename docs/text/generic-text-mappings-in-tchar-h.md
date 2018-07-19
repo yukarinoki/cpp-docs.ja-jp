@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867104"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキストのマッピング
 コードを簡単に国際対応にできるように、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] のランタイム ライブラリには、多くのデータ型やルーチンなどのオブジェクトに対して、[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の汎用テキストのマッピングが用意されています。 Tchar.h で定義されているこれらのマッピングを使用すると、[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] ステートメントで定義したマニフェスト定数に応じて、1 バイト、マルチバイト、`#define` のどの文字セットにも対応できるジェネリック コードを記述できます。 汎用テキスト マッピングは [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 固有の拡張機能であり、[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] とは互換性がありません。  

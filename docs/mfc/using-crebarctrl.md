@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383310"
 ---
 # <a name="using-crebarctrl"></a>CReBarCtrl の使い方
 Rebar コントロールは、子ウィンドウのコンテナーとして機能します。 Rebar コントロール バンドには、これらの子ウィンドウ、多くの場合、その他のコントロールが割り当てられます。 Rebar コントロールでは、グリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを 1 つまたは複数のバンドを含めることができます。 ただし、バンドは、1 つ以上の子ウィンドウを含めることはできません。  

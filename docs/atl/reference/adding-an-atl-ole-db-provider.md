@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357559"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>ATL OLE DB プロバイダーを追加します。
 このウィザードを使用すると、プロジェクトに ATL OLE DB プロバイダーを追加します。 ATL OLE DB プロバイダーは、データ ソース、セッション、コマンド、および行セット クラスで構成されます。 ATL COM アプリケーション プロジェクトを作成されている必要があります。  

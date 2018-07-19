@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340165"
 ---
 # <a name="active-document-servers"></a>Active ドキュメント サーバー
 その他のアプリケーションの種類のホスト文書を Word、Excel、または PowerPoint などの active ドキュメント サーバーには、アクティブなドキュメントが呼び出されます。 Ole の埋め込みオブジェクトが別のドキュメントのページ内で単に表示されます)、Active ドキュメントは、完全なインターフェイスとそれを作成したサーバー アプリケーションのネイティブ機能を完了します。 ユーザーがドキュメントを作成できる、お気に入り (アクティブなドキュメントが有効になっている場合)、アプリケーションの全機能を使用してまだ扱うことができます、結果として得られるプロジェクトを 1 つのエンティティとして。  

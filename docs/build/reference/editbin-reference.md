@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372309"
 ---
 # <a name="editbin-reference"></a>EDITBIN リファレンス
 Microsoft COFF Binary ファイル エディター (EDITBIN です。EXE) では、オブジェクト ファイル形式 COFF (Common) のバイナリ ファイルを変更します。 EDITBIN を使用して、オブジェクト ファイル、実行可能ファイル、およびダイナミック リンク ライブラリ (DLL) を変更することができます。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243526"
 ---
 # <a name="compiler-error-c2948"></a>コンパイラ エラー C2948
 明示的なインスタンス生成。ストレージ クラス指定子 'specifier' は特殊化では使用できません。  

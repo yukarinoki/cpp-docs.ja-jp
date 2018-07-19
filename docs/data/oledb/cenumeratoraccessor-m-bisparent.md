@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095087"
 ---
 # <a name="cenumeratoraccessormbisparent"></a>CEnumeratorAccessor::m_bIsParent
 行が列挙子である場合は、列挙子は、親列挙子を回復するかどうかを示す変数です。  

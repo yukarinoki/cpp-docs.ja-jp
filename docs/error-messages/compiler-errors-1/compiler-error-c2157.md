@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168543"
 ---
 # <a name="compiler-error-c2157"></a>コンパイラ エラー C2157
 'function' : プラグマ リスト内で参照される前に宣言されていなければなりません  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368627"
 ---
 # <a name="mxcsr"></a>MxCsr
 レジスタの状態には、MxCsr も含まれています。 呼び出し規約は、揮発性の部分と不揮発性部分にこのレジスタを分割します。 揮発性の部分から成る 6 つの状態フラグ、MXCSR [0:5]、6:15、MXCSR レジスタの残りの部分には、不揮発性と見なされます。  

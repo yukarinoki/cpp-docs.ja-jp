@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890128"
 ---
 # <a name="sizing-individual-controls"></a>各コントロールのサイズ変更
 コントロールのサイズを変更するのにには、サイズ変更ハンドルを使用します。 サイズ変更ハンドルにポインターを配置すると、コントロールをサイズ変更できる方向を示す形状を変更します。 アクティブなサイズ変更ハンドルは、純色です。サイズ変更ハンドルが中空の場合は、その軸に沿ったコントロールのサイズ調整することはできません。  

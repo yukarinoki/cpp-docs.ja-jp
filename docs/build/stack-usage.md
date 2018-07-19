@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379859"
 ---
 # <a name="stack-usage"></a>スタックの使用
 RSP の現在のアドレスを超えるすべてのメモリは不安定なものと見なされます: OS、または、デバッガーは、ユーザーのデバッグ セッションでは、または、割り込みハンドラーの中にこのメモリを上書き可能性があります。 したがって、RSP は常に読み取りまたはスタックのフレームの値の書き込みを試行する前に設定する必要があります。  

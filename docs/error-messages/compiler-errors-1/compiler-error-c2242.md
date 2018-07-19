@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166115"
 ---
 # <a name="compiler-error-c2242"></a>コンパイラ エラー C2242
 列挙型、構造体、共用体の後に typedef 名を書くことはできません。  

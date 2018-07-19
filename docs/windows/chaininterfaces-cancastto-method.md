@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860295"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo メソッド
 指定されたインターフェイス ID を既定以外のテンプレート パラメーターで定義された特殊化の各にキャストできるかどうかを示します。  

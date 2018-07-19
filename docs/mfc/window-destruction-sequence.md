@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382610"
 ---
 # <a name="window-destruction-sequence"></a>ウィンドウの破棄順序
 ユーザーがウィンドウの既定値であるフレーム ウィンドウを閉じるときに、MFC フレームワーク[OnClose](../mfc/reference/cwnd-class.md#onclose)ハンドラーの呼び出し[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)です。 Windows のウィンドウが破棄されるときに呼び出されます最後のメンバー関数は、 [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)、呼び出しを行って、クリーンアップ処理によって、[既定](../mfc/reference/cwnd-class.md#default)メンバーが、Windows のクリーンアップを実行する関数を呼び出す最後に、仮想メンバー関数[PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)です。 [CFrameWnd](../mfc/reference/cframewnd-class.md)の実装`PostNcDestroy`C++ ウィンドウ オブジェクトを削除します。  

@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7f322003a36d89927930c0a57fd060078755f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb378bba1505f8bbc3739c070d52abe9ef4f8afc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953827"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>CStatusBarCtrl を使用して CStatusBarCtrl オブジェクトを作成する方法
 一般的な使用例を次に示します[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
   
 4.  呼び出す[呼び出した](../mfc/reference/cstatusbarctrl-class.md#setparts)をステータス バー コントロールと各部分の右端の座標で部分の数を設定します。  
   
-5.  呼び出す[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)ステータス バー コントロールの特定の部分でテキストを設定します。 メッセージによって、変更されたコントロールの部分が無効になり、コントロールが次に `WM_PAINT` のメッセージを受信したときに新しいテキストが表示されます。  
+5.  呼び出す[SetText](../mfc/reference/cstatusbarctrl-class.md#settext)ステータス バー コントロールの特定の部分でテキストを設定します。 メッセージには、テキストを表示する、新しいコントロールが WM_PAINT メッセージを次に受信され、変更されたコントロールの一部が無効になります。  
   
  場合によっては、ステータス バーのみする必要がある、行のテキストを表示します。 この場合、呼び出しを行う[SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)です。 これは、ステータス バー コントロールは、「単純」モードは、1 行のテキストを表示になります。  
   

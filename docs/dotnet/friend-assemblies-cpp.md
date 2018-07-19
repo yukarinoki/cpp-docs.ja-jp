@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113760"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
 適用可能なランタイムは、の*フレンド アセンブリ*言語機能を使用する名前空間のスコープまたは 1 つまたは複数のクライアント アセンブリまたは .netmodule にアクセスできるアセンブリ コンポーネント内のグローバル スコープにある型です。  

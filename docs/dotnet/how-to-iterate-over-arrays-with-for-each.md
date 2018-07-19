@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130504"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>方法: for each を使用して配列を反復処理する
 このトピックの内容を使用する方法を示しています、[ごとで](../dotnet/for-each-in.md)さまざまな種類の配列ではキーワードです。  

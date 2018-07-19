@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957118"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler クラス
 ストーリーボードのステータスの変更時またはストーリーボードの更新時に Animation API によって呼び出されるコールバックを実装します。  
@@ -58,7 +59,7 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 |[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|処理`OnStoryboardUpdated`ストーリー ボードが更新されたときに発生するイベント (オーバーライド`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`)。|  
 |[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングする、アニメーション コント ローラーへのポインターを格納します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このイベント ハンドラーが作成されに渡される`IUIAnimationStoryboard::SetStoryboardEventHandler`メソッドを呼び出すときに`CAnimationController::EnableStoryboardEventHandler`です。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -68,7 +69,7 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
   
  `CAnimationStoryboardEventHandler`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
@@ -88,10 +89,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pAnimationController`  
+ *pAnimationController*  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。  
@@ -107,13 +108,13 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `storyboard`  
+ *ストーリー ボード*  
  状態が変更されたストーリー ボードへのポインター。  
   
- `newStatus`  
+ *newStatus*  
  新しいストーリー ボードのステータスを指定します。  
   
- `previousStatus`  
+ *previousStatus*  
  ストーリー ボードの以前のステータスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -127,7 +128,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `storyboard`  
+ *ストーリー ボード*  
  更新された、ストーリー ボードへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
@@ -141,7 +142,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pAnimationController`  
+ *pAnimationController*  
  イベントを受信するアニメーション コント ローラーへのポインター。  
   
 ## <a name="see-also"></a>関連項目  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379433"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮動小数点表現
 Microsoft Visual C は、IEEE 数値標準に準拠したです。 実数の 3 種類の内部表現があります。 Real\*4 と real\*8 は、Visual C で使用されます。 Real\*4 は、word を使用して宣言されている**float**です。 Real\*8 は、word を使用して宣言されている**二重**です。 Windows 32 ビットのプログラミングでは、`long double`データ型にマップ**二重**です。 ただし、アセンブリ言語サポート、実数を使用した計算 * 10 個のデータ型。  

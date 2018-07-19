@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351496"
 ---
 # <a name="derived-window-classes"></a>ウィンドウ クラスの派生
 Windows から直接を作成する[CWnd](../mfc/reference/cwnd-class.md)から新しいウィンドウ クラスを派生または`CWnd`です。 これは、独自のカスタム ウィンドウを作成する一般的な方法です。 ただし、フレームワーク プログラムで使用されるほとんどのウィンドウは、MFC に用意されている、`CWnd` から派生するフレーム ウィンドウ クラスのいずれかから作成されます。  

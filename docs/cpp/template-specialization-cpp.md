@@ -1,5 +1,5 @@
 ---
-title: テンプレートの特殊化 (C++) |Microsoft ドキュメント
+title: テンプレートの特殊化 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2cc25bab72532e1bfb425646d76b69aaf07f5d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edef104cafc4b56b5f785537db1c836da4e427dc
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941172"
 ---
 # <a name="template-specialization-c"></a>テンプレートの特殊化 (C++)
 
@@ -79,7 +80,7 @@ PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
   
 ## <a name="example"></a>例
 
- 任意の型を受け取るテンプレート コレクション クラスがあるかどうかは**T**、任意のポインター型を受け取る部分的特殊化を作成することができます * * T * * *。 次のコードは、コレクション クラス テンプレート `Bag` と、配列にコピーする前にコレクションがポインター型を逆参照するポインター型の部分的特殊化を示します。 次に、コレクションは、指されている値を格納します。 元のテンプレートでは、ポインター自体だけがコレクションに格納され、データは削除や変更の危険性がある状態のままにされます。 コレクションのこの特殊なポインター バージョンでは、`add` メソッドの null ポインターを確認するコードが追加されます。  
+ 任意の型を受け取るテンプレート コレクション クラスがあるかどうかは`T`、任意のポインター型を受け取る部分的特殊化を作成する`T*`します。 次のコードは、コレクション クラス テンプレート `Bag` と、配列にコピーする前にコレクションがポインター型を逆参照するポインター型の部分的特殊化を示します。 次に、コレクションは、指されている値を格納します。 元のテンプレートでは、ポインター自体だけがコレクションに格納され、データは削除や変更の危険性がある状態のままにされます。 コレクションのこの特殊なポインター バージョンでは、`add` メソッドの null ポインターを確認するコードが追加されます。  
   
 ```cpp
 // partial_specialization_of_class_templates2.cpp  
@@ -191,7 +192,7 @@ Null pointer!
   
 ## <a name="example"></a>例
 
- 次の例では、2 つの型のペアを受け取り、型の 1 つが `int` になるように、特殊化されたそのテンプレート クラスの部分的特殊化を定義するテンプレート クラスを定義しています。 特殊化では、整数に基づいて簡単なバブル ソートを実装する追加のソート メソッドを定義します。  
+ 次の例では、テンプレートを定義しますが、型のいずれかのように、2 つの型のペアを受け取り、そのテンプレート クラスの部分的特殊化を定義するクラスが特殊な**int**します。特殊化では、整数に基づいて簡単なバブル ソートを実装する追加のソート メソッドを定義します。  
   
 ```cpp
 // partial_specialization_of_class_templates3.cpp  

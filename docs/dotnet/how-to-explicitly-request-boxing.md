@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127345"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>方法: 明示的にボックス化を要求する
 型の変数に変数を割り当てることでボックス化を明示的に要求できます`Object`です。  

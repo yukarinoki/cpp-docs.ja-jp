@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374259"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Windows アプリケーションの最適化)
 スレッド ローカル ストレージ (TLS) の変数へのアクセスの .exe ファイルをより効率的なコードでの結果。  

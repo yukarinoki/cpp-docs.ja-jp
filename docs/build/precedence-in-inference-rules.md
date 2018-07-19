@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368487"
 ---
 # <a name="precedence-in-inference-rules"></a>推論規則の優先順位
 推論規則は重複定義されて、NMAKE は最も高い優先順位の定義を使用します。 次に、最上位から最下位までの優先順位の順序を示します。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342908"
 ---
 # <a name="month-calendar-control-examples"></a>月間予定表コントロールの例
 [CMNCTRL1](../visual-cpp-samples.md)サンプル アプリケーションは、さまざまな属性、`CMonthCalCtrl`クラスです。 サンプルでは、別のタブにあるコントロールは、基本的な機能を示し、特定の属性を動的に変更することができます。  

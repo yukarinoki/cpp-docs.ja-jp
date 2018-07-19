@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375663"
 ---
 # <a name="specifying-the-pathname"></a>パス名の指定
 出力ファイルの各オプションを受け入れる、 *pathname*引数で、場所と、出力ファイルの名前を指定できます。 引数には、ドライブ名、ディレクトリ、およびファイル名を含めることができます。 オプションと引数の間にスペースは使用できません。  

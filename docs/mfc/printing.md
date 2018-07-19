@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348234"
 ---
 # <a name="printing"></a>印刷
 Microsoft Windows では、デバイスに依存しないディスプレイを実装します。 MFC では、つまり、同じの描画呼び出しで、`OnDraw`ビュー クラスのメンバー関数は、表示にし、プリンターなどの他のデバイスに描画します。 印刷プレビューは、ターゲット デバイスは、表示するためのシミュレートされたプリンターの出力です。  

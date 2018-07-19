@@ -87,6 +87,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688662"
 ---
 # <a name="norm3-class"></a>norm_3 クラス
 3 個の正規数の short ベクターを表します。  

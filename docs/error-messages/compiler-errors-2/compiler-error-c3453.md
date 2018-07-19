@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257036"
 ---
 # <a name="compiler-error-c3453"></a>コンパイラ エラー C3453
 'attribute': 修飾子 'assembly' が一致しなかったため、属性は適用されませんでした  

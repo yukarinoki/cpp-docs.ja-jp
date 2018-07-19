@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458915"
 ---
 # <a name="compiler-error-c3533"></a>コンパイラ エラー C3533
 'type': パラメーターは 'auto' を含む型を持つことはできません  

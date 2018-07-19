@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354731"
 ---
 # <a name="building-and-testing-the-atl-project"></a>ビルドと ATL プロジェクトのテスト
 説明したよう[複合コントロールの挿入](../atl/inserting-a-composite-control.md)、新しい複合コントロールをホストする既定の HTML ページ、プロジェクトの初期のコンポーネントの 1 つです。 複合コントロールの変更が完了したらをクリックして**ソリューションのビルド**または**ソリューションのリビルド**から、**ビルド**メニュー。 プロジェクトを正常にビルドするとは、Internet Explorer または他のブラウザーに、複合コントロール プロジェクトのルート ディレクトリ内にある、HTML ページを読み込んで、コントロールの機能をテストします。  

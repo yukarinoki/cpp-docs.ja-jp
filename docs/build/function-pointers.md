@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367148"
 ---
 # <a name="function-pointers"></a>関数ポインター
 関数ポインターは、それぞれの関数のラベルへのポインターだけです。 関数ポインターの目次 (TOC) の要件の表はありません。  

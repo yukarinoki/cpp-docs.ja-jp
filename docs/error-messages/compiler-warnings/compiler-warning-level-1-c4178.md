@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277541"
 ---
 # <a name="compiler-warning-level-1-c4178"></a>コンパイラの警告 (レベル 1) C4178
 case 定数 'constant' が switch 式の型としては大きすぎます  

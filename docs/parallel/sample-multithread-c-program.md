@@ -17,9 +17,10 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687993"
 ---
 # <a name="sample-multithread-c-program"></a>マルチスレッドの C サンプル プログラム
-Bounce.c は新たに作成するサンプルのマルチ スレッド プログラム スレッドごとに、文字**、**または**A**が型指定されています。 各スレッドは、それぞれ異なる色のハッピー フェイスを画面上で移動します。 最大で 32 のスレッドを作成できます。 プログラムの通常の終了が発生したときに`q`または**Q**は型指定します。 コンパイルと Bounce.c のリンクについては、次を参照してください。[コンパイルとリンクのマルチ スレッド プログラム](../parallel/compiling-and-linking-multithread-programs.md)です。  
+Bounce.c は新たに作成するサンプルのマルチ スレッド プログラム スレッドごとに、文字 **、** または**A**が型指定されています。 各スレッドは、それぞれ異なる色のハッピー フェイスを画面上で移動します。 最大で 32 のスレッドを作成できます。 プログラムの通常の終了が発生したときに`q`または**Q**は型指定します。 コンパイルと Bounce.c のリンクについては、次を参照してください。[コンパイルとリンクのマルチ スレッド プログラム](../parallel/compiling-and-linking-multithread-programs.md)です。  
   
 ## <a name="example"></a>例  
   

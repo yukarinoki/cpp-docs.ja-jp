@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878672"
 ---
 # <a name="previewing-resources"></a>リソースのプレビュー
 リソースをプレビューするには、グラフィカルなリソースを開かずに表示することができます。 プレビューは、リソース識別子を数値に変更されるため、コンパイルした後にも実行可能ファイルに役立ちます。 多くの場合、これらの数値識別子は、十分な情報を提供しない、ため、リソースのプレビューがすばやく識別できます。  

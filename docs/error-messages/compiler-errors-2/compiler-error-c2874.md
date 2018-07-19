@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243288"
 ---
 # <a name="compiler-error-c2874"></a>コンパイラ エラー C2874
 using 宣言をによって 'symbol' の複数の宣言  

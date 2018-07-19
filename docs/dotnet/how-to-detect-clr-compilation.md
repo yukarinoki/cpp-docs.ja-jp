@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130771"
 ---
 # <a name="how-to-detect-clr-compilation"></a>方法: Detect /clr コンパイルを検出する
 使用して、`_MANAGED`または`_M_CEE`かどうかにコンパイルされたモジュールを表示するマクロ **/clr**です。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。  

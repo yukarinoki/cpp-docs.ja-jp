@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303925"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>式エバリュエーター エラー CXX0034
 **演算子と互換性のない型**  

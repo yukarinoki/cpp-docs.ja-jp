@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686257"
 ---
 # <a name="a5---using-the-critical-directive"></a>A.5 critical ディレクティブの使用
 次の例では、いくつか含まれています`critical`ディレクティブ ([セクション 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) 18 ページ)。 この例では、タスクがキューから削除して作業対象のキューのモデルを示します。 同じタスクをキューから削除する複数のスレッドを防ぐには、デキュー操作に必要な`critical`セクションです。 によって保護されているため、この例では 2 つのキューは独立して、 `critical` 、異なる名前のディレクティブ*xaxis*と*yaxis*です。  

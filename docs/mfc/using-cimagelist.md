@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385792"
 ---
 # <a name="using-cimagelist"></a>CImageList の使い方
 イメージ リストは、クラスによって表される[CImageList](../mfc/reference/cimagelist-class.md)、それぞれの参照インデックスを使用して、同じサイズのイメージのコレクションです。 イメージ リストを使用して、多数のアイコンまたはビットマップを効率的に管理できます。 イメージ リスト; windows ではないために、コントロールをそれ自体されませんただし、いくつかのさまざまな種類のコントロール、リスト コントロールが含むされる ([CListCtrl](../mfc/reference/clistctrl-class.md))、ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))、およびコントロールのタブ ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。  

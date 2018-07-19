@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695695"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
 この句に表示される変数を共有する、*変数一覧*チーム内のすべてのスレッド間でします。 チーム内のすべてのスレッドの同じ記憶域にアクセス**共有**変数。  

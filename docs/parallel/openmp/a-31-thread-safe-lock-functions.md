@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690443"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31 スレッド セーフなロック関数
 次の C++ の例を使用して、並行領域内のロックの配列を初期化する方法を示します`omp_init_lock`([セクション 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)ページ 42 で)。  

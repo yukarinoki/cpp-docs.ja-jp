@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316726"
 ---
 # <a name="missing-function-body-or-variable"></a>関数本体または変数の未定義
 だけ関数のプロトタイプでは、コンパイラがエラーを発生させず続行できますが、関数のコードまたは予約された変数の領域がないために、リンカーが、アドレスへの呼び出しを解決することはできません。 リンカーが解決する必要がある関数への呼び出しを作成するまで、このエラーを表示はされません。  

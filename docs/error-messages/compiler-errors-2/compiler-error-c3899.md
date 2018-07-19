@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275997"
 ---
 # <a name="compiler-error-c3899"></a>コンパイラ エラー C3899
 'var': クラス 'class' の並行領域内で直接 initonly データ メンバーの左辺値の使用が許可されていません  

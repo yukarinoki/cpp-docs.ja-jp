@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419667"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>ABI の境界での移植性 (Modern C++)
 バイナリ インターフェイスの境界で十分にポータブル型と規則を使用します。 "ポータブル type"は、C の組み込み型または C の組み込み型のみを含む構造体です。 クラスの型は、呼び出し元と呼び出し先が一致レイアウト、規則などを呼び出すことときにのみ使用できます。これは、同じコンパイラおよびコンパイラ設定で両方がコンパイルされるときにのみ可能です。  

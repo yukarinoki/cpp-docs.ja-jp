@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391949"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>scanf 関数と wscanf 関数の書式指定フィールド
 ここにある情報は、セキュリティが強化されたバージョンを含む `scanf` 系の関数すべてに当てはまり、`scanf` に対する `stdin` などの入力ストリームを解析してプログラム変数に挿入する値に変換する方法を `scanf` 関数に指示するために使用するシンボルについても説明します。  

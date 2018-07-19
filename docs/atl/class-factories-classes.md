@@ -1,5 +1,5 @@
 ---
-title: " ATL クラス ファクトリ クラス |Microsoft ドキュメント"
+title: " ATL クラス ファクトリ クラス |Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 197e9d538b51ec69c0d2b2ab5dd7395f98bee7e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958492"
 ---
 # <a name="class-factories-classes"></a>クラス ファクトリ クラス
-次のクラスを実装またはクラス ファクトリをサポートします。  
+次のクラスを実装またはクラス ファクトリのサポートします。  
   
--   [CComClassFactory](../atl/reference/ccomclassfactory-class.md)オブジェクトの作成に既定のクラス ファクトリを提供します。  
+-   [CComClassFactory](../atl/reference/ccomclassfactory-class.md)オブジェクトの作成の既定のクラス ファクトリを提供します。  
   
--   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)ライセンスを通じてオブジェクト作成を制御します。  
+-   [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)ライセンスでのオブジェクトの作成を制御します。  
   
--   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md)オブジェクトが複数のスレッド プールのアパートメント内で作成することができます。  
+-   [CComClassFactoryAutoThread](../atl/reference/ccomclassfactoryautothread-class.md)により、複数のスレッド プール アパートメント内に作成するオブジェクト。  
   
 -   [CComClassFactorySingleton](../atl/reference/ccomclassfactorysingleton-class.md) 1 つのオブジェクトを作成します。  
   

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098005"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>トランザクション: トランザクションが更新処理に与える影響 (ODBC)
 更新、[データソース](../../data/odbc/data-source-odbc.md)エディット バッファー (トランザクションの外部で使用される同じメソッド) を使用してトランザクション中には、管理します。 レコード セットのフィールド データ メンバーは総称して、レコード セットのバックアップを取得中に一時的に現在のレコードを格納しているエディット バッファーとして機能する`AddNew`または**編集**です。 中に、**削除**操作、現在のレコードはトランザクション内でバックアップされません。 エディット バッファーおよび更新プログラムが現在のレコードを格納する方法の詳細については、次を参照してください。[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)です。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227875"
 ---
 # <a name="fatal-error-c1109"></a>致命的なエラー C1109
 DLL ファイル 'dll' に 'entry point' が見つかりません  

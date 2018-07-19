@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160837"
 ---
 # <a name="property-index-declaration"></a>プロパティ インデックスの宣言
 インデックス付きプロパティを宣言する構文は、Visual C を c++ マネージ拡張から変更されました。  

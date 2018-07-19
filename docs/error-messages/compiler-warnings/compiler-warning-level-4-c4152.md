@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291165"
 ---
 # <a name="compiler-warning-level-4-c4152"></a>コンパイラの警告 (レベル 4) C4152
 非標準の拡張機能、式における関数/データ間のポインター変換  

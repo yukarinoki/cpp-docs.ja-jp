@@ -16,21 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929800"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX コントロール : ストック メソッドの追加
-ストック メソッドは、クラスによって既に実装されている点で、カスタム メソッドとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 たとえば、`COleControl`コントロールの更新メソッドをサポートしている定義済みのメンバー関数が含まれています。 このストック メソッドのディスパッチ マップ エントリが**DISP_STOCKFUNC_REFRESH**です。  
+ストック メソッドは、クラスによって既に実装されている点で、カスタム メソッドとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)です。 たとえば、`COleControl`コントロールの更新メソッドをサポートしている定義済みのメンバー関数が含まれています。 このストック メソッドのディスパッチ マップ エントリは、DISP_STOCKFUNC_REFRESH です。  
   
  `COleControl` 2 つのストック メソッドをサポートしています: DoClick および更新します。 更新は、すぐに、コントロールの外観を更新するコントロールのユーザーによって呼び出されます。コントロールのクリックを発生させる DoClick が呼び出されるイベント。  
   
 |メソッド|ディスパッチ マップ エントリ|コメント|  
 |------------|------------------------|-------------|  
 |`DoClick`|**DISP_STOCKPROP_DOCLICK に関するページ)**|Click イベントを発生させます。|  
-|**最新の情報に更新**|**DISP_STOCKPROP_REFRESH に関するページ)**|コントロールの外観はすぐに更新します。|  
+|`Refresh`|**DISP_STOCKPROP_REFRESH に関するページ)**|コントロールの外観はすぐに更新します。|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> ストック メソッドを使用して、追加する、メソッドの追加ウィザード  
  単純なストック メソッドの追加を使用して、[メソッド追加ウィザード](../ide/add-method-wizard.md)です。 次の手順では、MFC ActiveX コントロール ウィザードを使用して作成されたコントロールへの更新メソッドの追加を示します。  

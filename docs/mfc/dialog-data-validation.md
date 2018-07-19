@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344881"
 ---
 # <a name="dialog-data-validation"></a>ダイアログ データ検証
 例に示すように、DDV 関数を呼び出すことによりデータ交換だけでなく検証を指定できます[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)です。 `DDV_MaxChars`呼び出しの例では、テキスト ボックス コントロールに入力した文字列が 20 文字を超えていないことを検証します。 DDV 関数は、通常、ユーザーに警告、メッセージ ボックスで検証が失敗するし、データを再入力できるように、問題のあるコントロールにフォーカスを設定します。 特定のコントロールの DDV 関数は、同じコントロールに対して、DDX 関数の直後後に呼び出される必要があります。  

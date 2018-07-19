@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338976"
 ---
 # <a name="activex-control-containers"></a>ActiveX コントロール コンテナー
 ActiveX コントロール コンテナーは完全に ActiveX コントロールをサポートするコンテナーであり、独自のウィンドウまたはダイアログに組み込むことができます。 ActiveX コントロールは、多くの開発プロジェクトで使用できる再利用可能なソフトウェア要素です。 コントロールをできるように、アプリケーションのデータベースへのアクセス、データを監視し、アプリケーション内でさまざまな選択を行います。 ActiveX コントロールの詳細については、記事を参照してください。 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)です。  

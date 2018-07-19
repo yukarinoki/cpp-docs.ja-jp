@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955103"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry クラス
 ID2D1Geometry のラッパーです。  
@@ -111,7 +112,7 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="protected-data-members"></a>プロテクト データ メンバー  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|ID2D1Geometry へのポインター。|  
   
@@ -122,7 +123,7 @@ class CD2DGeometry : public CD2DResource;
   
  `CD2DGeometry`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxrendertarget.h  
   
 ##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry  
@@ -140,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pResource`  
+ *pResource*  
  既存のリソースのインターフェイスです。 NULL をすることはできません。  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -153,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pParentTarget`  
+ *pParentTarget*  
  レンダー ターゲットへのポインター。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -172,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `inputGeometry`  
+ *inputGeometry*  
  このインスタンスと結合するジオメトリ。  
   
- `combineMode`  
+ *combineMode*  
  実行する結合操作の種類。  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  結合前に、inputGeometry に適用する変換です。  
   
- `geometrySink`  
+ *geometrySink*  
  結合操作の結果。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -201,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `inputGeometry`  
+ *inputGeometry*  
  テストするジオメトリ。  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  InputGeometry に適用する変換です。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -224,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `worldTransform`  
+ *worldTransform*  
  その領域を計算する前にこのジオメトリに適用する変換です。  
   
- `area`  
+ *領域*  
  このメソッドが戻るとき、変換されたフラット化されたバージョンのこの geometry の領域へのポインターが含まれています。 このパラメーターには、記憶域を割り当てる必要があります。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -247,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `worldTransform`  
+ *worldTransform*  
  長さを計算する前に、ジオメトリに適用する変換です。  
   
- `length`  
+ *length*  
  このメソッドが戻るときに、ジオメトリの長さへのポインターが含まれています。 閉じている場合は、長さには、暗黙的な終わりセグメントが含まれています。 このパラメーターには、記憶域を割り当てる必要があります。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -272,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `length`  
+ *length*  
  ポイントと検索に正接のジオメトリに沿った距離。 この距離が小さいし 0 の場合、このメソッドは、ジオメトリの最初のポイントを計算します。 この距離が、ジオメトリの長さより大きい場合は、このメソッドは、ジオメトリの最後の点を計算します。  
   
- `worldTransform`  
+ *worldTransform*  
  指定した点と正接を計算する前に、ジオメトリに適用する変換です。  
   
- `point`  
+ *ポイント*  
  指定されたジオメトリに沿った距離にある場所です。 このポイントにはで、x および y と NaN が含まれています、ジオメトリが空の場合の値。  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  このメソッドが戻るときに、指定されたジオメトリに沿った距離にある正接ベクトルへのポインターが含まれています。 その x および y NaN がこのベクターに含まれています、ジオメトリが空の場合の値。 このパラメーターには、記憶域を割り当てる必要があります。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -319,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  テストする点です。  
   
- `worldTransform`  
+ *worldTransform*  
  コンテインメントのためのテストの前に、ジオメトリに適用する変換です。  
   
- `contains`  
+ *contains*  
  このメソッドが戻るとき、ジオメトリが塗りつぶし領域には、ポイントが含まれている場合は TRUE となるブール値が含まれています。それ以外の場合は FALSE です。 このパラメーターには、記憶域を割り当てる必要があります。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  これを使用した数値の精度幾何学模様の正確なパスとパスの交差部分を計算します。 許容範囲より小さいして塗りつぶしを見つからないポイントは内側考慮されます。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -353,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *境界*  
   
 ### <a name="return-value"></a>戻り値  
   
@@ -371,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `strokeWidth`  
+ *strokeWidth*  
  アウトラインを描画してジオメトリを拡大するために量。  
   
- `strokeStyle`  
+ *strokeStyle*  
  ジオメトリを拡大する線のスタイルです。  
   
- `worldTransform`  
+ *worldTransform*  
  ジオメトリの変換後と、ジオメトリが描画された後に、ジオメトリに適用する変換です。  
   
- `bounds`  
+ *境界*  
  このメソッドが戻るとき、拡張された geometry の境界を格納します。 このパラメーターには、記憶域を割り当てる必要があります。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -427,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `worldTransform`  
+ *worldTransform*  
  輪郭のジオメトリに適用する変換です。  
   
- `geometrySink`  
+ *geometrySink*  
  ジオメトリのアウトラインの変換先 ID2D1SimplifiedGeometrySink が追加されます。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -451,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `simplificationOption`  
+ *simplificationOption*  
  簡略化されたジオメトリが曲線を含めるかどうかを指定する値。  
   
- `worldTransform`  
+ *worldTransform*  
  簡略化されたジオメトリに適用する変換です。  
   
- `geometrySink`  
+ *geometrySink*  
  簡略化されたジオメトリを追加する ID2D1SimplifiedGeometrySink です。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -480,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `point`  
+ *ポイント*  
  含有をテストする点です。  
   
- `strokeWidth`  
+ *strokeWidth*  
  適用する線の太さ。  
   
- `strokeStyle`  
+ *strokeStyle*  
  適用する線のスタイルです。  
   
- `worldTransform`  
+ *worldTransform*  
  線のジオメトリに適用する変換です。  
   
- `contains`  
+ *contains*  
  このメソッドが戻るときに、ジオメトリの線には、指定した点が含まれている場合に TRUE に設定するブール値が含まれていますそれ以外の場合は FALSE です。 このパラメーターには、記憶域を割り当てる必要があります。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  これを使用した数値の精度幾何学模様の正確なパスとパスの交差部分を計算します。 許容範囲より小さいして線を見つからないポイントは内側考慮されます。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -512,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `worldTransform`  
+ *worldTransform*  
  この geometry 型、または NULL に適用する変換です。  
   
- `tessellationSink`  
+ *tessellationSink*  
  テセレーションされた追加 ID2D1TessellationSink です。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  
@@ -537,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `strokeWidth`  
+ *strokeWidth*  
  ジオメトリを拡大するために量。  
   
- `strokeStyle`  
+ *strokeStyle*  
  Geometry 型、または NULL に適用する線のスタイルです。  
   
- `worldTransform`  
+ *worldTransform*  
  これを拡大した後、ジオメトリに適用する変換です。  
   
- `geometrySink`  
+ *geometrySink*  
  拡張されたジオメトリが追加されます ID2D1SimplifiedGeometrySink です。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  多角形近似のジオメトリの点の間の距離の上限。 小さい値より正確な結果の作成が、実行速度が低下します。  
   
 ### <a name="return-value"></a>戻り値  

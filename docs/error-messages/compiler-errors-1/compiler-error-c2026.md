@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167666"
 ---
 # <a name="compiler-error-c2026"></a>コンパイラ エラー C2026
 文字列が大きすぎるため、末尾の文字は切り捨てられます  

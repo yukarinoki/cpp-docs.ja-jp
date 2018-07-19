@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691171"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>方法: Parallel.Invoke を使用して並列操作を実行する
 この例を使用する方法を示しています、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)共有データ ソースに対して複数の操作を実行するプログラムのパフォーマンスを向上するためのアルゴリズムです。 操作によってソースが変更されるわけではないため、簡単に並列実行できます。  

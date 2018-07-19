@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Attach |Microsoft ドキュメント
+title: _com_ptr_t::Attach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7341695ad0cbc8384da859b80a72a63d8d52215f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e982ebd9a09d4dfcb5e4b5e150b42a1e8d5c75
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943794"
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Microsoft 固有の仕様**  
@@ -32,27 +33,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      void Attach(  
-   Interface* pInterface   
-) throw( );  
-void Attach(  
-   Interface* pInterface,  
-   bool fAddRef   
-) throw( );  
+void Attach( Interface* pInterface ) throw( );  
+void Attach( Interface* pInterface, bool fAddRef ) throw( );  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `pInterface`  
+ *pInterface*  
  生のインターフェイス ポインター。  
   
- `fAddRef`  
- 場合は**true**、し`AddRef`と呼びます。 場合は**false**、`_com_ptr_t`オブジェクトは、所有権を呼び出さずに生のインターフェイス ポインターの`AddRef`します。  
+ *fAddRef*  
+ 場合は TRUE、`AddRef`が呼び出されます。 FALSE の場合、`_com_ptr_t`オブジェクト呼び出さずに生のインターフェイス ポインターの所有権を取得する`AddRef`します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
--   **アタッチ (**`pInterface`**)** `AddRef`は呼び出されません。     インターフェイスの所有権は、この `_com_ptr_t` オブジェクトに渡されます。 **リリース**は以前にカプセル化されたポインターの参照カウントをデクリメントするために呼び出されます。  
+-   **アタッチ (***pInterface***)** `AddRef`は呼び出されません。     インターフェイスの所有権は、この `_com_ptr_t` オブジェクトに渡されます。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。  
   
--   **アタッチ (** `pInterface` **、**`fAddRef`**)** 場合`fAddRef`は**true**、`AddRef`参照をインクリメントするために呼び出されるカプセル化されたインターフェイス ポインターの数。       場合`fAddRef`は**false**、この`_com_ptr_t`オブジェクトは、所有権を呼び出さずに生のインターフェイス ポインターの`AddRef`します。 **リリース**は以前にカプセル化されたポインターの参照カウントをデクリメントするために呼び出されます。  
+-   **アタッチ (***pInterface* **、***fAddRef***)** 場合*fAddRef*が true の場合、 `AddRef`カプセル化されたインターフェイス ポインターの参照カウントをインクリメントすると呼びます。       場合*fAddRef* false で、この`_com_ptr_t`オブジェクト呼び出さずに生のインターフェイス ポインターの所有権を取得する`AddRef`します。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。  
   
  **Microsoft 固有の仕様はここまで**  
   

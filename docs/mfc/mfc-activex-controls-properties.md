@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347108"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX コントロール : プロパティ
 ActiveX コントロールは、コントロール コンテナーと通信するためにイベントを発生させます。 コンテナーでは、コントロールと通信するメソッドとプロパティを戻り値を使用します。 メソッドとプロパティを使用すると、目的のようなそれぞれ、メンバー関数と C++ のクラスのメンバー変数にします。 プロパティは、任意のコンテナーに公開されている ActiveX コントロールのデータ メンバーです。 プロパティは、オートメーション クライアントや ActiveX コントロール コンテナーなど、ActiveX コントロールを含むアプリケーションでインターフェイスを提供します。  

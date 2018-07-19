@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342034"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl の vs です。CTreeView
 MFC には、ツリー コントロールをカプセル化する 2 つのクラスが用意されています: [CTreeCtrl](../mfc/reference/ctreectrl-class.md)と[CTreeView](../mfc/reference/ctreeview-class.md)です。 各クラスは、さまざまな状況で役に立ちます。  

@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414325"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf、vwscanf
 
@@ -76,7 +77,7 @@ int vwscanf(
 **Vscanf**関数は、標準入力ストリームからデータを読み取ります**stdin**で指定されている場所にデータを書き込みます、 *arglist*引数リスト。 リスト内の各引数は、型指定子に対応する型の変数へのポインターである必要があります*形式*です。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 使用すると**vscanf**文字列を読み取る、向けに幅を必ず指定、 **%s**形式 (たとえば、 **「% 男女」**の代わりに **"%s"**) です。それ以外の場合、正しくない形式の入力には、バッファー オーバーランを可能性があります。 代わりに、[vscanf_s、vwscanf_s](vscanf-s-vwscanf-s.md) または [fgets](fgets-fgetws.md) を使用できます。
+> 使用すると**vscanf**文字列を読み取る、向けに幅を必ず指定、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**) です。それ以外の場合、正しくない形式の入力には、バッファー オーバーランを可能性があります。 代わりに、[vscanf_s、vwscanf_s](vscanf-s-vwscanf-s.md) または [fgets](fgets-fgetws.md) を使用できます。
 
 **vwscanf**のワイド文字バージョンは、 **vscanf**;*形式*に渡す引数**vwscanf**ワイド文字列です。 **vwscanf**と**vscanf**ストリームが ANSI モードで開かれている場合の動作は同じです。 **vscanf** UNICODE ストリームからの入力をサポートしていません。
 

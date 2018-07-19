@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255588"
 ---
 # <a name="compiler-error-c2839"></a>コンパイラ エラー C2839
 無効な戻り値の型 'type' の 'operator ->' をオーバー ロード  

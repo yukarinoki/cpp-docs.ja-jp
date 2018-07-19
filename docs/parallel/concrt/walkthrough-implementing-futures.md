@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690118"
 ---
 # <a name="walkthrough-implementing-futures"></a>チュートリアル: フューチャの実装
 このトピックでは、アプリケーションにフューチャを実装する方法について説明します。 このトピックでは、同時実行ランタイムの既存の機能を組み合わせて、より効果的に使用する方法を示します。  

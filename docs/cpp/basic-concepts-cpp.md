@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409577"
 ---
 # <a name="basic-concepts--c"></a>基本的な概念 (C++)
 このセクションでは、C++ の理解にとって重要な概念について説明します。 C プログラマは、これらの概念の多くをよく知っていますが、プログラムの予期しない結果を引き起こす可能性のある微妙な違いがいくつかあります。 ここでは、次のトピックについて説明します。  

@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::Detach |Microsoft ドキュメント
+title: _bstr_t::Detach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 117a2df667b9aa9ee13fc30dd0eff4bd201907c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b8b7bc86ae487843f925668bccfbfd8e67b8685
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940252"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Microsoft 固有の仕様**  
@@ -39,7 +40,7 @@ BSTR Detach( ) throw;
  `BSTR` によってラップされる `_bstr_t`。  
   
 ## <a name="example"></a>例  
- 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)使用例については**デタッチ**です。  
+ 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、`Detach`します。  
   
  **Microsoft 固有の仕様はここまで**  
   

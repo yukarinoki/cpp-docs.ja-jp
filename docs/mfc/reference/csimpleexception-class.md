@@ -1,5 +1,5 @@
 ---
-title: CSimpleException クラス |Microsoft ドキュメント
+title: CSimpleException クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 109801ff1dc974488abdc61e6b6fb4af4fafb1bd
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853034"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException クラス
 このクラスは、リソース クリティカルな MFC 例外の基底クラスです。  
@@ -49,20 +50,20 @@ class AFX_NOVTABLE CSimpleException : public CException
 |----------|-----------------|  
 |[CSimpleException::GetErrorMessage](#geterrormessage)|発生したエラーに関するテキストを提供します。|  
   
-## <a name="remarks"></a>コメント  
- `CSimpleException` リソース クリティカルな MFC 例外の基底クラスと所有権とエラー メッセージの初期化を処理します。 次のクラスを使用して`CSimpleException`その基本クラスとして。  
+## <a name="remarks"></a>Remarks  
+ `CSimpleException` リソース クリティカルな MFC 例外の基本クラスですし、所有権とエラー メッセージの初期化を処理します。 次のクラスの使用`CSimpleException`その基本クラスとして。  
   
 |||  
 |-|-|  
 |[CMemoryException クラス](../../mfc/reference/cmemoryexception-class.md)|メモリ不足の例外|  
-|[CNotSupportedException クラス](../../mfc/reference/cnotsupportedexception-class.md)|サポートされていない操作に対する要求|  
-|[CResourceException クラス](../../mfc/reference/cresourceexception-class.md)|Windows リソース見つからないか、または不可能|  
+|[CNotSupportedException クラス](../../mfc/reference/cnotsupportedexception-class.md)|サポートされていない操作の要求|  
+|[CResourceException クラス](../../mfc/reference/cresourceexception-class.md)|見つからないか、またはできない Windows リソース|  
 |[CUserException クラス](../../mfc/reference/cuserexception-class.md)|リソースを示す例外が見つかりませんでした。|  
 |[CInvalidArgException クラス](../../mfc/reference/cinvalidargexception-class.md)|無効な引数を示す例外|  
   
- `CSimpleException`抽象基本クラスでは、宣言することはできません、`CSimpleException`オブジェクトに直接できます。 代わりに、前の表に示すなどの派生オブジェクトを宣言する必要があります。 派生クラスを宣言する場合は、モデルとして前のクラスを使用します。  
+ `CSimpleException`抽象基本クラスでは、宣言することはできません、`CSimpleException`オブジェクトに直接します。 代わりに、前の表にあるなどの派生オブジェクトを宣言する必要があります。 派生クラスを宣言している場合は、モデルとして前のクラスを使用します。  
   
- 詳細については、次を参照してください。、 [CException クラス](../../mfc/reference/cexception-class.md)トピックおよび[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)です。  
+ 詳細については、次を参照してください。、 [CException クラス](../../mfc/reference/cexception-class.md)トピックと[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -71,7 +72,7 @@ class AFX_NOVTABLE CSimpleException : public CException
   
  `CSimpleException`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afx.h  
   
 ##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
@@ -83,11 +84,11 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bAutoDelete`  
- 指定**TRUE**場合のメモリを`CSimpleException`オブジェクトは、ヒープに割り当てられました。 これにより、`CSimpleException`ときに削除されるオブジェクト、**削除**例外を削除するメンバー関数が呼び出されます。 指定**FALSE**場合、`CSimpleException`オブジェクトがスタック上またはグローバル オブジェクトです。 この場合、`CSimpleException`されない時に削除、**削除**メンバー関数が呼び出されます。  
+ *bAutoDelete*  
+ 場合は TRUE を指定のメモリ、`CSimpleException`オブジェクトがヒープに割り当てられています。 これにより、`CSimpleException`ときに削除するオブジェクト、`Delete`例外を削除するメンバー関数が呼び出されます。 場合は FALSE を指定、`CSimpleException`オブジェクトがスタック上にまたはグローバル オブジェクトです。 ここで、`CSimpleException`オブジェクトができない場合に削除されます、`Delete`メンバー関数が呼び出されます。  
   
-### <a name="remarks"></a>コメント  
- このコンス トラクターを直接呼び出す必要は通常ありません。 例外をスローした関数がのインスタンスを作成する必要があります、 `CException`-クラスを派生し、そのコンス トラクター、または呼び出しが、MFC のいずれかを使用スローすることは、関数など[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、定義済みの型をスローします。  
+### <a name="remarks"></a>Remarks  
+ このコンス トラクターを直接呼び出す必要は通常ありません。 例外をスローする関数のインスタンスを作成する必要があります、 `CException`-クラスを派生し、コンス トラクターまたはそれを呼び出す必要があります、MFC のいずれかを使用してスロー関数など[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、定義済みの型をスローします。  
   
 ##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  発生したエラーに関するテキストを提供するには、このメンバー関数を呼び出します。  
@@ -100,20 +101,20 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lpszError`  
- エラー メッセージを受信するバッファーへのポインター。  
+ *lpszError*  
+ エラー メッセージを受け取るバッファーへのポインター。  
   
- `nMaxError`  
- バッファーに保持できる文字の最大数、 **NULL**ターミネータです。  
+ *nMaxError*  
+ NULL ターミネータを含めた、バッファーが保持できる文字の最大数。  
   
- `pnHelpContext`  
- アドレス、 **UINT**ヘルプ コンテキスト ID を受信します。 場合**NULL**ID は返されません。  
+ *pnHelpContext*  
+ ヘルプ コンテキスト ID を受け取る UINT のアドレス NULL の場合、ID は返されません。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合は 0 以外。それ以外の場合 0 (ゼロ) の場合、エラー メッセージ テキストは使用できます。  
+ 関数が成功した場合、0 以外の場合それ以外の場合 0 の場合、エラー メッセージ テキストは使用できます。  
   
-### <a name="remarks"></a>コメント  
- 詳細については、次を参照してください。 [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)です。  
+### <a name="remarks"></a>Remarks  
+ 詳細については、次を参照してください。 [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

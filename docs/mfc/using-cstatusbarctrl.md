@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383551"
 ---
 # <a name="using-cstatusbarctrl"></a>CStatusBarCtrl の使い方
 ステータス バー コントロールを使用することができます ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) さまざまな種類のアプリケーションに関する状態情報を反映するコントロールのウィンドウを作成します。 ステータス ウィンドウは、情報の 2 つ以上の型を表示する部分に分けることができます。  

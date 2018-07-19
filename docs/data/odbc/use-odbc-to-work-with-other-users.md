@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093521"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>ODBC の使用による他のユーザーとの共同作業
 複数のユーザーが、同じ ODBC データベースで作業している環境で ODBC を使用します。  

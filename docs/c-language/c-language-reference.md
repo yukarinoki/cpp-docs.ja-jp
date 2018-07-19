@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381188"
 ---
 # <a name="c-language-reference"></a>C 言語リファレンス
 「*C 言語リファレンス*」では、Microsoft C に実装されている C プログラミング言語について説明しています。このリファレンスの構成は ANSI C 標準 (C89 とも呼ばれます) に基づいていますが、ANSI C 標準に対する Microsoft 拡張機能に関する補足事項が含まれます。  

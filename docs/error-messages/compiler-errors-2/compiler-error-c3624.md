@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257541"
 ---
 # <a name="compiler-error-c3624"></a>コンパイラ エラー C3624
 'type': この型の使用には、アセンブリ 'assembly' への参照が必要です  

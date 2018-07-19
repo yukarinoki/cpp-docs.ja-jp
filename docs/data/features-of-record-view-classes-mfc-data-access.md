@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089573"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>レコード ビュー クラスの機能 (MFC データ アクセス)
 クラスとフォーム ベースのデータ アクセス プログラミングを行うことができます[CFormView](../mfc/reference/cformview-class.md)が[CRecordView](../mfc/reference/crecordview-class.md)向上から派生するクラスでは、通常、します。 加え、`CFormView`機能、 `CRecordView`:  

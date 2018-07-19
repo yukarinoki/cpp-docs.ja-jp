@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69302202059914217e066eb0389bb14e7c5190c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4979b75a7644ab747d1a32c14826a25678e276b6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929761"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>プログラム実行時のメニューの操作
-クラスを使用して`CMenu`メニューと、実行時にメニュー項目を操作します。 `CMenu` Windows をカプセル化`HMENU`を処理し、メニューを操作するためのメンバー関数を提供します。  
+クラスを使用して`CMenu`メニューと、実行時にメニュー項目を操作します。 `CMenu` Windows HMENU ハンドルをカプセル化し、メニューを操作するためのメンバー関数を提供します。  
   
  クラスの概要を参照してください[CMenu](../mfc/reference/cmenu-class.md)詳細についてはします。  
   

@@ -60,11 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122716"
 ---
 # <a name="cstringlist-class"></a>CStringList クラス
 `CString` オブジェクトのリストをサポートします。  
@@ -124,10 +125,10 @@ class CStringList : public CObject
 |[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|リストの末尾から要素を削除します。|  
 |[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|指定された位置に要素を設定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  すべての比較は、値、つまり、文字列のアドレスではなく、文字列内の文字を比較することによって実行されます。  
   
- `CStringList` には、`IMPLEMENT_SERIAL` マクロが組み込まれており、その要素のシリアル化とダンプがサポートされます。 リストの場合`CString`オブジェクトが格納されているか、オーバー ロードされた挿入演算子のいずれか、アーカイブ、`Serialize`メンバー関数は、各`CString`要素はさらにシリアル化します。  
+ `CStringList` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 リストの場合`CString`オブジェクトが格納されているか、オーバー ロードされた挿入演算子のいずれか、アーカイブ、`Serialize`メンバー関数は、各`CString`要素はさらにシリアル化します。  
   
  個別にダンプする必要がある場合`CString`要素、1 以上、ダンプ コンテキストの深さを設定する必要があります。  
   
@@ -138,7 +139,7 @@ class CStringList : public CObject
   
  `CStringList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ## <a name="see-also"></a>関連項目  

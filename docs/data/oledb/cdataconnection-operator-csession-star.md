@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094470"
 ---
 # <a name="cdataconnectionoperator-csession"></a>CDataConnection::operator CSession*
 格納されているポインターを返します`CSession`オブジェクト。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882616"
 ---
 # <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll メソッド
 現在関連付けられている各イベント ハンドラーを呼び出します[EventSource](../windows/eventsource-class.md)オブジェクトの指定した引数型と引数を使用します。  

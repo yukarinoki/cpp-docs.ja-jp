@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407987"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof と alignas (C++)
 `alignas` 型指定子は、変数およびユーザー定義型のカスタムの配置を指定する移植可能な C++ の標準的な方法です。 `alignof` 演算子も同様に、指定された型または変数の配置を取得する、標準的で移植可能な方法です。  

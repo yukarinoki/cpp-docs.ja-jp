@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376469"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (標準インクルード パスの無視)
 コンパイラが PATH および INCLUDE 環境変数で指定したディレクトリ内のインクルード ファイルを検索するを防ぎます。  

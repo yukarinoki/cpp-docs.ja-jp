@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101423"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl クラス
 OLE DB を実装する[IRowsetIdentity](https://msdn.microsoft.com/en-us/library/ms715913.aspx)インターフェイスで、行 id のテストできるようにします。  

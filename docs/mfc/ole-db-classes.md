@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345105"
 ---
 # <a name="ole-db-classes"></a>OLE DB クラス
 クラスの現在は、mfc、OLE DB サポート[COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)です。 `COleDBRecordView` フォーム ビューに直接接続を介して、コントロール内のデータベース レコードを表示、 [CRowset](../data/oledb/crowset-class.md)オブジェクト。 OLE DB コンシューマー テンプレートの詳細については、次を参照してください。[一覧の OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)です。  

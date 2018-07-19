@@ -1,7 +1,7 @@
 ---
-title: Comptr::asiid メソッド |Microsoft ドキュメント
+title: Comptr::asiid メソッド |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,11 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26f56a9d94620067ae31f5b4984ff24fe703822e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: db5bc6b2547fb77dd887f96b6c33dee536e43f77
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025904"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID メソッド
 指定されたインターフェイス ID で識別されるインターフェイスを表す ComPtr オブジェクトを返します。  
@@ -40,12 +41,12 @@ WRL_NOTHROW HRESULT AsIID(
  インターフェイス ID。  
   
  `p`  
- 指定されたインターフェイスへの二重間接ポインター サポートされている場合、`riid`パラメーター、それ以外の IUnknown へのポインター。  
+ オブジェクトのインターフェイス ID を持つと等しい場合`riid`で指定されたインターフェイスを二重間接ポインター、`riid`パラメーター、それ以外の IUnknown へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** client.h  
   
  **名前空間:** Microsoft::WRL  

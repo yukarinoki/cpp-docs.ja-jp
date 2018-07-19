@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954028"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition クラス
 連続的遷移をカプセル化します。  
@@ -57,7 +58,7 @@ class CConstantTransition : public CBaseTransition;
 |----------|-----------------|  
 |[CConstantTransition::m_duration](#m_duration)|移行の期間です。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アニメーション変数の値は、連続的遷移中に、遷移の期間にわたって初期値でままです。 すべての遷移が自動的にクリアされますをお勧めして割り当てられた新しい演算子を使用します。 カプセル化された IUIAnimationTransition COM オブジェクトは、NULL を指定してから、まで CAnimationController::AnimateGroup、によって作成されます。 この COM オブジェクトの作成も何も起こりません後は、メンバー変数を変更します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -67,7 +68,7 @@ class CConstantTransition : public CBaseTransition;
   
  `CConstantTransition`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxanimationcontroller.h  
   
 ##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
@@ -78,7 +79,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `duration`  
+ *duration*  
  移行の期間です。  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
@@ -91,7 +92,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pLibrary`  
+ *pLibrary*  
  ポインター、 [IUIAnimationTransitionLibrary インターフェイス](https://msdn.microsoft.com/library/windows/desktop/dd371897)、標準的な遷移のライブラリを定義します。  
 
 ### <a name="return-value"></a>戻り値  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371357"
 ---
 # <a name="errlook-reference"></a>ERRLOOK リファレンス
 ユーティリティ、として、[ツール] メニューから利用できる**エラー ルックアップ**、入力された値に基づいて、システム エラー メッセージまたはモジュール エラー メッセージを取得します。 ERRLOOK がエラー メッセージ テキストを取得する際に自動的にしてからドラッグ アンド ドロップ、16 進数または 10 進数の値に、Visual Studio デバッガー、**値**コントロールを編集します。 入力することも、値でそれを入力するか、**値**エディット コントロールまたはでクリップボードから貼り付けるをクリックすると**ルックアップ**です。  

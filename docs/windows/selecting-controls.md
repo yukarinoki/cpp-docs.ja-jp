@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892775"
 ---
 # <a name="selecting-controls"></a>コントロールの選択
 サイズにコントロールを選択、配置、移動、コピー、または削除したり、および必要な操作を実行します。 ほとんどの場合は、ツールを使用して、サイズと位置合わせの 1 つ以上のコントロールを選択する必要があります、[ダイアログ エディター ツールバー](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)です。  

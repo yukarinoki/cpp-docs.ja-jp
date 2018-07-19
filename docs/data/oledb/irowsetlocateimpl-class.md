@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111030"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl クラス
 OLE DB を実装する[IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)インターフェイスで、行セットから任意の行をフェッチします。  
@@ -92,7 +93,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
   
  OLE DB のブックマークを行セットをサポートするには、このクラスから継承行セットを確認します。  
   
- ブックマーク サポートを実装する方法については、次を参照してください[プロバイダーのブックマークをサポートして](../../data/oledb/provider-support-for-bookmarks.md)で、 *Visual C++ プログラマ ガイド*と[ブックマーク](https://msdn.microsoft.com/en-us/library/ms709728.aspx)、で*。OLE DB プログラマーズ リファレンス*Platform SDK でします。  
+ ブックマーク サポートを実装する方法については、次を参照してください[プロバイダーのブックマークをサポートして](../../data/oledb/provider-support-for-bookmarks.md)で、 *Visual C++ プログラマ ガイド*と[ブックマーク](https://msdn.microsoft.com/en-us/library/ms709728.aspx)、で *。OLE DB プログラマーズ リファレンス*Platform SDK でします。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー**: atldb.h  

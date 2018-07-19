@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056475"
 ---
 # <a name="sqword"></a>SQWORD
 割り当て、必要に応じて各 8 の符号付きバイトのストレージを初期化`initializer`です。 型指定子としても使用できる、型が有効な任意の場所。  

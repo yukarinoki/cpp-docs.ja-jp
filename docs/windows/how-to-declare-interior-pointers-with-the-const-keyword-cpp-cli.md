@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875046"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>方法: const キーワードを含む内部ポインターを宣言する (C++/CLI)
 次の例は、使用する方法を示しています。`const`内部ポインターの宣言でします。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112014"
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 参照クラスのオブジェクトの宣言
 宣言や参照クラス型のオブジェクトのインスタンスを作成する構文は、Visual C を c++ マネージ拡張から変更されました。  

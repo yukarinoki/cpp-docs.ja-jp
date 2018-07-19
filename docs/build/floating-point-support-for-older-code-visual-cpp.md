@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367161"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>旧形式のコードのための浮動小数点サポート (Visual C++)
 MMX および浮動小数点スタック レジスタ (MM0-MM7/st0 を割り当てます-ST7) は、コンテキストの切り替えの間で保持されます。  これらのレジスタの明示的な呼び出し規則はありません。  これらのレジスタの使用は、カーネル モード コードで禁じられています。  

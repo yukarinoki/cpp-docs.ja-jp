@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092595"
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: ODBC カーソル ライブラリ
 このトピックでは、ODBC カーソル ライブラリについて説明し、その使用方法について説明します。 詳細については次を参照してください:  

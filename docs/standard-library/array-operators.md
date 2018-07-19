@@ -13,15 +13,16 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 09d09e47103fa263adc4c5cf288803835b112142
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 782acd7fda671d84252ab226d095fe21c75645bf
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965459"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 演算子
 
-\<array> ヘッダーには、以下の `array` の非メンバー比較テンプレート関数が含まれます。
+\<Array > ヘッダーでは、以下**配列**非メンバー比較テンプレート関数。
 
 ||||
 |-|-|-|
@@ -41,15 +42,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 要素の型。
+*Ty*要素の型。
 
-`N` 配列のサイズ。
+*N*配列のサイズ。
 
-`left` 比較する左のコンテナーです。
+*左*を比較する左のコンテナー。
 
-`right` 比較する右のコンテナーです。
+*適切な*を比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `!(left == right)` を返します。
 
@@ -110,15 +111,15 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 要素の型。
+*Ty*要素の型。
 
-`N` 配列のサイズ。
+*N*配列のサイズ。
 
-`left` 比較する左のコンテナーです。
+*左*を比較する左のコンテナー。
 
-`right` 比較する右のコンテナーです。
+*適切な*を比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、テンプレート クラス [array クラス](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較する `operator<` をオーバーロードします。 `lexicographical_compare(left.begin(), left.end(), right.begin())` が返されます。
 
@@ -180,15 +181,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 要素の型。
+*Ty*要素の型。
 
-`N` 配列のサイズ。
+*N*配列のサイズ。
 
-`left` 比較する左のコンテナーです。
+*左*を比較する左のコンテナー。
 
-`right` 比較する右のコンテナーです。
+*適切な*を比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `!(right < left)` を返します。
 
@@ -250,15 +251,15 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 要素の型。
+*Ty*要素の型。
 
-`N` 配列のサイズ。
+*N*配列のサイズ。
 
-`left` 比較する左のコンテナーです。
+*左*を比較する左のコンテナー。
 
-`right` 比較する右のコンテナーです。
+*適切な*を比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、テンプレート クラス [array クラス](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較する `operator==` をオーバーロードします。 `equal(left.begin(), left.end(), right.begin())` が返されます。
 
@@ -320,15 +321,15 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 要素の型。
+*Ty*要素の型。
 
-`N` 配列のサイズ。
+*N*配列のサイズ。
 
-`left` 比較する左のコンテナーです。
+*左*を比較する左のコンテナー。
 
-`right` 比較する右のコンテナーです。
+*適切な*を比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `(right < left)` を返します。
 
@@ -390,15 +391,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 要素の型。
+*Ty*要素の型。
 
-`N` 配列のサイズ。
+*N*配列のサイズ。
 
-`left` 比較する左のコンテナーです。
+*左*を比較する左のコンテナー。
 
-`right` 比較する右のコンテナーです。
+*適切な*を比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `!(left < right)` を返します。
 

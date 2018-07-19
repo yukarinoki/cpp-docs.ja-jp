@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358213"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
 ATL COM + 1.0 コンポーネント ウィザードのこのページを使用すると、サポートするには、インターフェイスの種類と追加のインターフェイスを指定できます。  

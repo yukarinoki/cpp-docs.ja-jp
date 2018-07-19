@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385111"
 ---
 # <a name="terminating-newline-characters"></a>改行文字の終了
 **ANSI 4.9.2** テキスト ストリームの最後の行が、終了の改行文字を必要とするかどうか  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385098"
 ---
 # <a name="c-floating-point-constants"></a>C 浮動小数点定数
 "浮動小数点定数" は符号付き実数を表す 10 進数です。 符号付き実数の表現には、整数部分、小数部分、および指数が含まれます。 変更できない浮動小数点値を表すには、浮動小数点定数を使用します。  

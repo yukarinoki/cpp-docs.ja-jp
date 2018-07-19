@@ -1,5 +1,5 @@
 ---
-title: 匿名クラス型 |Microsoft ドキュメント
+title: 匿名クラス型 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4200548100804d1e64c16311875e85ffcdd717
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943917"
 ---
 # <a name="anonymous-class-types"></a>匿名クラス型
-クラスは匿名にすることができます: 宣言することがなく、*識別子*です。 これは、次のようにクラス名を `typedef` で置き換える場合に役立ちます。  
+クラスを匿名にすることができます: 宣言することがなくこれは、*識別子*します。 クラス名を置き換えるときに便利ですが、 **typedef**次のように、名前。  
   
-```  
+```cpp 
 typedef struct  
 {  
     unsigned x;  
@@ -33,11 +34,11 @@ typedef struct
 ```  
   
 > [!NOTE]
->  前の例で示した匿名クラスの使用は、既存の C コードとの互換性を維持するために役立ちます。 一部の C コードでは、無名構造体と共に `typedef` を使用するのが一般的です。  
+>  前の例で示した匿名クラスの使用は、既存の C コードとの互換性を維持するために役立ちます。 一部の C コードでの使用で**typedef**匿名構造体と組み合わせては普及しています。  
   
  匿名クラスは、次のように、クラス メンバーへの参照が別のクラスに含まれていないかのように見せる場合にも役立ちます。  
   
-```  
+```cpp 
 struct PTValue  
 {  
     POINT ptLoc;  
@@ -51,9 +52,9 @@ struct PTValue
 PTValue ptv;  
 ```  
   
- 前述のコードで`iValue`オブジェクト メンバー選択演算子を使用してアクセスできます (**.**) 次のようにします。  
+ 上記のコードで`iValue`オブジェクトのメンバー選択演算子を使用してアクセスできます (**.**) 次のようにします。  
   
-```  
+```cpp 
 int i = ptv.iValue;  
 ```  
   
@@ -72,7 +73,7 @@ int i = ptv.iValue;
   
  匿名構造体のメンバーには、包含構造体のメンバーと同じようにアクセスできます。  
   
-```  
+```cpp 
 // anonymous_structures.c  
 #include <stdio.h>  
   

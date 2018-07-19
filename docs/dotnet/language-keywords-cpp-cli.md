@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134414"
 ---
 # <a name="language-keywords-ccli"></a>言語キーワード (C++/CLI)
 複数言語のキーワードが Visual c、c++ マネージ拡張から変更します。  

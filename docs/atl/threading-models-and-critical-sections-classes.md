@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359919"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>スレッド モデルと重要なセクション クラス
 次のクラスを定義、スレッド処理モデルと重要なセクション。  

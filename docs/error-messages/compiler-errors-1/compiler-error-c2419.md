@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33223735"
 ---
 # <a name="compiler-error-c2419"></a>コンパイラ エラー C2419
 'context' 内で使われた MOD 演算子 '/' の 2 番目の引数が 0 です。  

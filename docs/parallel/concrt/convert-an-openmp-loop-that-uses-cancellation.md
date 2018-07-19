@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693264"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>方法: キャンセル処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する
 並列ループによっては、すべての反復を必ずしも実行する必要はありません。 たとえば、値を検索するアルゴリズムは、値が見つかれば終了できます。 OpenMP には、並列ループを抜けるための機構は用意されていません。 ただし、ブール値 (フラグ) を使用して、ループの反復処理時に、解決策が見つかったことを通知できます。 同時実行ランタイムの場合、先行のタスクによって、まだ開始されていない他のタスクを取り消すことができます。  

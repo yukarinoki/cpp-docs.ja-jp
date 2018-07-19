@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384543"
 ---
 # <a name="declarations-and-types"></a>宣言と型
 このセクションでは、変数、関数、および型の宣言と初期化について説明します。 C 言語には、基本データ型の標準セットが含まれます。 定義済みの型に基づいて新しい型を宣言することにより、"派生型" と呼ばれる独自のデータ型を追加することもできます。 検討されているトピックは、次のとおりです。  

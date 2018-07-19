@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385873"
 ---
 # <a name="tab-controls-and-property-sheets"></a>タブ コントロールとプロパティ シート
 プロパティ シートは、複数のページのダイアログや「タブ ダイアログ ボックス」を最大で 24 のダイアログ テンプレート リソース ユーザーを表示できます。 プロパティ シートの例については、Windows の表示プロパティ ダイアログ ボックスまたは次の MFC サンプル アプリケーションを参照してください。  

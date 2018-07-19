@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382248"
 ---
 # <a name="deleting-open-files"></a>開いているファイルの削除
 **ANSI 4.9.4.1** 開いているファイルへの削除関数の効果  

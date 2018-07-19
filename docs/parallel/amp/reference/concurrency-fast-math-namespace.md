@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692159"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 名前空間
 `fast_math` 名前空間の関数は精度が低く、単精度 (`float`) のみをサポートし、DirectX の組み込み関数を呼び出します。 各関数には、2 種類のバージョン (たとえば、`cos` と `cosf`) があります。 どちらのバージョンも `float` を受け取り、返しますが、それぞれの DirectX の同じ組み込み関数を呼び出します。  

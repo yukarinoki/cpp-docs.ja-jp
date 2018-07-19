@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340885"
 ---
 # <a name="an-example-of-the-comments"></a>コメントの例
 クラスの次の部分的なリスト`CChildFrame`の使用方法でクラスのメンバーを除算するそのクラスで MFC を使用する標準のコメントのほとんどを使用します。  

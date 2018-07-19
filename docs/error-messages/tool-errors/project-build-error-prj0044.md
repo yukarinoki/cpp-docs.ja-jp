@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324539"
 ---
 # <a name="project-build-error-prj0044"></a>プロジェクト ビルド エラー PRJ0044
 カスタム ビルド規則 'rule' のファイル 'file' に割り当てられている ' 追加の依存関係プロパティが正しくありません。 'value' に評価される 'string' がプロパティに含まれていました。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290997"
 ---
 # <a name="compiler-warning-level-2-c4653"></a>コンパイラの警告 (レベル 2) C4653
 コンパイラ オプション 'option' はプリコンパイル済みヘッダーです。現在のコマンド ライン オプションが無視されます。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689494"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 関数
 `omp_get_wtime` 「過去の時間」からの秒数で関数が経過ウォール クロック時間に等しいにある倍精度浮動小数点値を返します。  実際「の時間、過去に」は任意、されるわけでは、アプリケーション プログラムの実行中に変更しないようにします。 形式は次のとおりです。  

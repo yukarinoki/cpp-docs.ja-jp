@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093897"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: ドキュメントとビューを用いないデータベース クラスの使用
 場合があります、データベース アプリケーションのフレームワークのドキュメント/ビュー アーキテクチャを使用しない場合があります。 このトピックでは、次の内容について説明します。  

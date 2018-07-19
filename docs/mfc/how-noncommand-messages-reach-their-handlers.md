@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343883"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>コマンド以外のメッセージのハンドラー検索方法
 コマンドとは異なり標準 Windows メッセージは、チェーン コマンド ターゲットを通じてルーティングされませんが、Windows メッセージを送信する先ウィンドウによって処理される通常。 ウィンドウには、メイン フレーム ウィンドウ、MDI 子ウィンドウ、標準のコントロール、ダイアログ ボックス、ビュー、またはその他の何らかの子ウィンドウがあります。  

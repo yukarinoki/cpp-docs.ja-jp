@@ -30,11 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740ebe26dd36dd89786806c3960e6184b117daeb
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 607a200230e1dfb167707e785f7f8fbbde118587
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964783"
 ---
 # <a name="submatch-class"></a>sub_match クラス
 
@@ -64,9 +65,10 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` サブマッチの反復子の型。
+*BidIt*  
+ サブマッチの反復子の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、 [regex_match](../standard-library/regex-functions.md#regex_match) または [regex_search](../standard-library/regex-functions.md#regex_search)に対する呼び出しでキャプチャ グループと一致した文字のシーケンスを指定するオブジェクトを表します。 [match_results Class](../standard-library/match-results-class.md) 型のオブジェクトは、検索に使用された正規表現内のキャプチャ グループごとに 1 つずつ、これらのオブジェクトの配列を保持します。
 
@@ -78,7 +80,7 @@ public:
 
 "b(a*)b" は、ターゲット シーケンス "bb" と一致します。キャプチャ グループ 1 に対応する `sub_match` オブジェクトは、両方がシーケンスの 2 つ目の文字を指す反復子を保持します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
@@ -96,13 +98,16 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 比較するサブマッチ。
+*right*  
+ 比較するサブマッチ。
 
-`str` 比較する文字列。
+*str*  
+ 比較対象の文字列。
 
-`ptr` 比較する null で終わるシーケンス。
+*ptr*  
+ null で終わる比較対象のシーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のメンバー関数は、一致するシーケンス `[first, second)` と一致したシーケンス `[right.first, right.second)` とを比較します。 2 つ目のメンバー関数は、一致するシーケンス `[first, second)` と文字シーケンス `[right.begin(), right.end())` とを比較します。 3 つ目のメンバー関数は、一致するシーケンス `[first, second)` と文字シーケンス `[right, right + std::char_traits<value_type>::length(right))` とを比較します。
 
@@ -175,7 +180,7 @@ compare(sub) == 0
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、`iterator_traits<BidIt>::difference_type` の同意語です。
 
@@ -240,7 +245,7 @@ compare(sub) == 0
 typedef BidIt iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この typedef は、テンプレート型引数 `Bidit` のシノニムです。
 
@@ -305,7 +310,7 @@ compare(sub) == 0
 difference_type length() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 メンバー関数は、一致するシーケンスの長さを返します。または、一致するシーケンスが存在しない場合、0 を返します。
 
@@ -370,9 +375,9 @@ compare(sub) == 0
 bool matched;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバーは、 `true` に関連付けられているキャプチャ グループが、正規表現の一致に含まれていた場合にのみ、 `*this` を保持します。
+メンバーを保持**true**キャプチャ グループに関連付けられている場合にのみ`*this`正規表現の一致の一部であった。
 
 ### <a name="example"></a>例
 
@@ -435,7 +440,7 @@ compare(sub) == 0
 operator basic_string<value_type>() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、 `str()`を返します。
 
@@ -500,7 +505,7 @@ compare(sub) == 0
 basic_string<value_type> str() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`basic_string<value_type>(first, second)` を返します。
 
@@ -565,7 +570,7 @@ compare(sub) == 0
 typedef typename iterator_traits<BidIt>::value_type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、`iterator_traits<BidIt>::value_type` の同意語です。
 

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094567"
 ---
 # <a name="cdberrorinfogeterrorparameters"></a>CDBErrorInfo::GetErrorParameters
 呼び出し[IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/en-us/library/ms715793.aspx)エラー パラメーターを取得します。  

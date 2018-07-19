@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd414e2e6f23cb2fe44e6de4b5f53b33ef3555
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a399fa8a9f8fc9a73d75605f31245e42a2154b7c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963629"
 ---
 # <a name="iterator-struct"></a>iterator 構造体
 
-ユーザー定義の iterator クラスが **iterator_traits** で正しく動作することを確実にするために使用される空の基本構造体。
+ユーザー定義の iterator クラスが適切に動作することを確認するために使用する空の基底構造体`iterator_trait`秒。
 
 ## <a name="syntax"></a>構文
 
@@ -40,13 +41,13 @@ struct iterator {
    };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート構造体は、すべての反復子の基本データ型として機能します。 これは、メンバーの型を定義します。
 
 - `iterator_category` (テンプレート パラメーター `Category` のシノニム)。
 
-- `value_type` (テンプレート パラメーター **Type** のシノニム)。
+- `value_type` (テンプレート パラメーター `Type` のシノニム)。
 
 - `difference_type` (テンプレート パラメーター `Distance` のシノニム)。
 
@@ -56,13 +57,13 @@ struct iterator {
 
 - `reference` (テンプレート パラメーター `Reference` のシノニム)。
 
-**ポインター**が const **Type** のオブジェクトを指しており、参照が const **Type** のオブジェクトを指定している場合でも、`value_type` を定数型にすることはできません。
+なお`value_type`定数型の場合でもをすることはできません`pointer`のオブジェクトを指して**const** `Type`参照のオブジェクトを指定して**const** `Type`します。
 
 ## <a name="example"></a>例
 
 反復子の基底クラスの型の宣言方法や使用例については、「[iterator_traits](../standard-library/iterator-traits-struct.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 

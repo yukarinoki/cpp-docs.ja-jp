@@ -1,5 +1,5 @@
 ---
-title: XML ドキュメント ジェネレーター プロパティ ページ |Microsoft ドキュメント
+title: '[XML ドキュメント ジェネレーター] プロパティ ページ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,30 +19,31 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33339077"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>[XML ドキュメント ジェネレーター] プロパティ ページ
-XML ドキュメント ジェネレーター ツール プロパティ ページでは、xdcmake.exe の機能を公開します。 xdcmake.exe が、ソース コードには、ドキュメントのコメントが含まれている場合に、.xml ファイルに .xdc ファイルをマージし、 [/doc (ドキュメント コメントの処理) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)が指定されている。 参照してください[ドキュメント コメントとして推奨されるタグ](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)ソース コードをドキュメントのコメントを追加する方法についてです。  
+[XML ドキュメント ジェネレーター] プロパティ ページでは、xdcmake.exe の機能が公開されます。 xdcmake.exe は、ソース コードにドキュメントのコメントが含まれていて、[/doc (ドキュメント コメントの処理) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) が指定されている場合に、.xdc ファイルを .xml ファイルにマージします。 ドキュメントのコメントをソース コードに追加する詳細については、「[ドキュメント コメントとして推奨されるタグ](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)」を参照してください。  
   
 > [!NOTE]
->  開発環境 (プロパティ ページ) で xdcmake.exe オプションは、xdcmake.exe をコマンドラインで使用すると、オプションとは異なります。 コマンドラインで xdcmake.exe の使用方法の詳細については、次を参照してください。 [XDCMake リファレンス](../ide/xdcmake-reference.md)です。  
+>  開発環境 (プロパティ ページ) の xdcmake.exe オプションは、コマンド ラインで xdcmake.exe を使用する場合のオプションとは異なります。 コマンド ラインで xdcmake.exe を使用する詳細については、「[XDCMake リファレンス](../ide/xdcmake-reference.md)」を参照してください。  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
- **著作権情報を抑制します。**  
- 著作権メッセージを抑制します。  
+ **著作権情報の非表示**  
+ 著作権メッセージを表示しません。  
   
- **追加のドキュメントのファイル**  
- プロジェクト システムは、.xdc ファイルを検索するディレクトリを追加します。 xdcmake は、常に、プロジェクトによって生成される .xdc ファイルを探します。 複数のディレクトリを指定することができます。  
+ **追加ドキュメント ファイル**  
+ プロジェクト システムが .xdc ファイルを検索する追加のディレクトリ。 xdcmake は、常に、プロジェクトによって生成される .xdc ファイルを探します。 複数のディレクトリを指定することができます。  
   
  **出力ドキュメント ファイル**  
- 出力の .xml ファイルの名前とディレクトリの場所。 参照してください[のビルドのコマンドとプロパティの一般的なマクロ](../ide/common-macros-for-build-commands-and-properties.md)マクロを使用して、ディレクトリの場所を指定する方法についてはします。  
+ .xml 出力ファイルの名前とディレクトリの場所。 マクロを使用してディレクトリの場所を指定する詳細については、「[ビルドのコマンドとプロパティのマクロ](../ide/common-macros-for-build-commands-and-properties.md)」を参照してください。  
   
  **ドキュメント ライブラリの依存関係**  
- 場合は、プロジェクト、ソリューション内の .lib プロジェクトに依存している、現在のプロジェクトの .xml ファイルに .lib プロジェクトから .xdc ファイルを処理できます。  
+ プロジェクトにソリューション内の .lib プロジェクトへの依存関係がある場合は、.lib プロジェクトから現在のプロジェクトの .xml ファイルに .xdc ファイルを処理できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)

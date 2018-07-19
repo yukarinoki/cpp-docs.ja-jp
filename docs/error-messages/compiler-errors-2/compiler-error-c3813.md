@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273108"
 ---
 # <a name="compiler-error-c3813"></a>コンパイラ エラー C3813
 プロパティ宣言はマネージ型または WinRT 型の定義内でのみ使用できます  

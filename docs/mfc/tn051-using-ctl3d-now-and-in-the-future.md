@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382273"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>テクニカル ノート 51: 今後の CTL3D の使い方
 まで CTL3D と MFC に説明した、このテクニカル ノートでは廃止されました。 コントロールの 3D 効果は、MFC によって自動的に実装されます。  

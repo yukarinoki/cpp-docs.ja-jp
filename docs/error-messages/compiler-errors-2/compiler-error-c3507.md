@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252918"
 ---
 # <a name="compiler-error-c3507"></a>コンパイラ エラー C3507
 ProgID は、超える 39 文字 'id';除いて、区切り記号も '.';また、数字で始まる  

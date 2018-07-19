@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360032"
 ---
 # <a name="scope-of-atl"></a>ATL のスコープ
 ATL では、COM オブジェクト、オートメーション サーバー、および ActiveX コントロールを簡単に作成することができます。 ATL は、基本的な COM インターフェイスの多くの組み込みサポートを提供します。  

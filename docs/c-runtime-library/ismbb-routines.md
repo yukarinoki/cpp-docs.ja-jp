@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392498"
 ---
 # <a name="ismbb-routines"></a>_ismbb 系ルーチン
 現在のロケールまたは指定された LC_CTYPE 変換状態カテゴリを使用して、特定の条件に対して整数値 `c` をテストします。  

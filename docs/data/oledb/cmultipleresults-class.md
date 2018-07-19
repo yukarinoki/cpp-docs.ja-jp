@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096221"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults クラス
 複数の結果セットを処理するコマンドを実行する場合に、使用`CMultipleResults`の`CCommand`テンプレート引数*TMultiple*です。  

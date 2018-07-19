@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234585"
 ---
 # <a name="compiler-error-c2765"></a>コンパイラ エラー C2765
 'function': 関数テンプレートの明示的な特殊化は、既定引数を持つことはできません  

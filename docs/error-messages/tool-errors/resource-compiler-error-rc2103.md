@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332092"
 ---
 # <a name="resource-compiler-error-rc2103"></a>リソース コンパイラ エラー RC2103
 予期しない終了途中でファイルの文字列リテラル  

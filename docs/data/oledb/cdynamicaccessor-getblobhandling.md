@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097641"
 ---
 # <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
 現在の行の値を処理する BLOB を取得します。  

@@ -1,5 +1,5 @@
 ---
-title: ISupportErrorInfoImpl クラス |Microsoft ドキュメント
+title: ISupportErrorInfoImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e226f66d6ddd20181f083f723568acb1cc647c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 849107cc9f0d0611eb3dc9259fc317f73a961407
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026174"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl クラス
-このクラスの既定の実装を提供する、 [ISupportErrorInfo インターフェイス](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32)1 つのインターフェイスのみがオブジェクトでのエラーを生成するときに使用できます。  
+このクラスの既定の実装を提供する、 [ISupportErrorInfo インターフェイス](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32)1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -41,8 +42,8 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `piid`  
- サポートするインターフェイスの IID へのポインター [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)です。  
+ *piid*  
+ サポートするインターフェイスの IID へのポインター [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -50,12 +51,12 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
 |名前|説明|  
 |----------|-----------------|  
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|インターフェイスが識別されるかどうかを示す`riid`をサポートしている、 [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)インターフェイスです。|  
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)インターフェイス。|  
   
-## <a name="remarks"></a>コメント  
- [ISupportErrorInfo インターフェイス](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32)クライアントにエラー情報を返すことがあることを確認します。 使用するオブジェクト**IErrorInfo**実装する必要があります**ISupportErrorInfo**です。  
+## <a name="remarks"></a>Remarks  
+ [ISupportErrorInfo インターフェイス](http://msdn.microsoft.com/42d33066-36b4-4a5b-aa5d-46682e560f32)により、クライアントにエラー情報を返されることができます。 使用するオブジェクト`IErrorInfo`実装する必要があります`ISupportErrorInfo`します。  
   
- クラス`ISupportErrorInfoImpl`の既定の実装を提供**ISupportErrorInfo** 1 つのインターフェイスのみがオブジェクトでのエラーを生成するときに使用できます。 例えば:  
+ クラス`ISupportErrorInfoImpl`の既定の実装を提供します。 `ISupportErrorInfo` 、1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。 例えば:  
   
  [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]  
   
@@ -64,52 +65,52 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
   
  `ISupportErrorInfoImpl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
- インターフェイスが識別されるかどうかを示す`riid`をサポートしている、 [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)インターフェイスです。  
+ インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](http://msdn.microsoft.com/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)インターフェイス。  
   
 ```
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```  
   
-### <a name="remarks"></a>コメント  
- 参照してください[ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) Windows SDK にします。  
+### <a name="remarks"></a>Remarks  
+ 参照してください[ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/a54ef18d-ee3f-4483-ac4a-99d758f0960a) Windows SDK にします。  
   
 ##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
- このメソッドを呼び出して、プール内のスレッドの数を取得します。  
+ プールのスレッドの数を取得するには、このメソッドを呼び出します。  
   
 ```
 STDMETHOD(GetSize)(int* pnNumThreads);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pnNumThreads`  
- [out]成功した場合、プール内のスレッドの数を受け取る変数のアドレスです。  
+ *pnNumThreads*  
+ [out]成功した場合、プールのスレッドの数を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
 ##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
- このメソッドを呼び出して、スレッド プールがシャット ダウンするスレッドを待機するミリ秒単位で時間の最大値を取得します。  
+ スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時刻を取得するには、このメソッドを呼び出します。  
   
 ```
 STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pdwMaxWait`  
- [out]成功した場合、スレッド プールがシャット ダウンするスレッドを待機するミリ秒単位で時間の最大値を受け取る変数のアドレスです。  
+ *pdwMaxWait*  
+ [out]成功した場合、スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で時間の最大値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="example"></a>例  
- 参照してください[IThreadPoolConfig::GetSize](#getsize)です。  
+ 参照してください[IThreadPoolConfig::GetSize](#getsize)します。  
   
 ##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  プールのスレッドの数を設定するには、このメソッドを呼び出します。  
@@ -119,35 +120,35 @@ STDMETHOD(SetSize)int nNumThreads);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nNumThreads`  
- プール内のスレッドの要求数。  
+ *nNumThreads*  
+ 要求されたプール内のスレッド数。  
   
- 場合`nNumThreads`は負の場合、その絶対値を掛けたスレッドの合計数を取得するマシンでプロセッサの数。  
+ 場合*nNumThreads*が負の場合、その絶対値で乗算されますスレッドの合計数を取得するマシンでプロセッサの数。  
   
- 場合`nNumThreads`ゼロ、 [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)スレッドの合計数を取得するマシンのプロセッサ数で乗算されます。  
+ 場合*nNumThreads*ゼロ、 [ATLS_DEFAULT_THREADSPERPROC](http://msdn.microsoft.com/library/e0dcf107-72a9-4122-abb4-83c63aa7d571)スレッドの合計数を取得するマシンのプロセッサ数が乗算されます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="example"></a>例  
- 参照してください[IThreadPoolConfig::GetSize](#getsize)です。  
+ 参照してください[IThreadPoolConfig::GetSize](#getsize)します。  
   
 ##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
- このメソッドを呼び出して、スレッド プールがシャット ダウンするスレッドを待機するミリ秒単位で時間の最大値を設定します。  
+ スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で最大の時間を設定するには、このメソッドを呼び出します。  
   
 ```
 STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwMaxWait`  
- スレッド プールがシャット ダウンするスレッドを待機するミリ秒単位で要求の最大時間。  
+ *dwMaxWait*  
+ スレッド プール スレッドをシャット ダウンを待機するミリ秒単位で要求された最大時間。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
 ### <a name="example"></a>例  
- 参照してください[IThreadPoolConfig::GetSize](#getsize)です。  
+ 参照してください[IThreadPoolConfig::GetSize](#getsize)します。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

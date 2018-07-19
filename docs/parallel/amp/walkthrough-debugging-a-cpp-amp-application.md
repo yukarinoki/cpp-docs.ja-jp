@@ -22,6 +22,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463093"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル : C++ AMP アプリケーションのデバッグ
 このトピックでは、C++ Accelerated Massive Parallelism (C++ AMP) を使用して、グラフィックス処理装置 (GPU) を利用するアプリケーションをデバッグする方法を示します。 整数の大きな配列を合計する並列リダクション プログラムを使用します。 このチュートリアルでは、次の作業について説明します。  

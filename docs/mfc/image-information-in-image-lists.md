@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343714"
 ---
 # <a name="image-information-in-image-lists"></a>イメージ リストのイメージ情報
 [CImageList](../mfc/reference/cimagelist-class.md)はイメージ リストの情報を取得する関数の数が含まれています。 [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo)メンバー関数、`IMAGEINFO`イメージとマスク ビットマップ、カラー プレーン数と、ピクセルあたりのビットの数および外接する四角形のハンドルを含む単一のイメージに関する情報を含む構造体イメージ、ビットマップ内のイメージです。 この情報を使用すると、イメージのビットマップを直接操作します。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266530"
 ---
 # <a name="compiler-error-c3668"></a>コンパイラ エラー C3668
 'method': オーバーライド指定子 'override' を持つメソッドは、基底クラス メソッドをオーバーライドしませんでした  

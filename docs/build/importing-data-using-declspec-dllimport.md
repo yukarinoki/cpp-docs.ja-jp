@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368513"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>__declspec(dllimport) を使ったデータのインポート
 使用して、データの場合 **_declspec**は、間接レイヤーの役割を削除する便利な項目です。 DLL からデータをインポートするときにまだインポート アドレス テーブルを通過する必要があります。 前に **_declspec (dllimport)**、つまりを DLL からエクスポートされたデータにアクセスするときに、余分なレベルの間接参照を行うには注意する必要がありました。  

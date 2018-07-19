@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138679"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
 MFC には、このテンプレート クラスは[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) Windows フォーム ユーザー コントロールをホストできるように (<xref:System.Windows.Forms.UserControl>) モーダルまたはモードレスの MFC ダイアログ ボックスでします。 `CWinFormsDialog` MFC クラスから派生した[CDialog](../mfc/reference/cdialog-class.md)ので、ダイアログ ボックスをモーダルまたはモードレスとして起動することができます。  

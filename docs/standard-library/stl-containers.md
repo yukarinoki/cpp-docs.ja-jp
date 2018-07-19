@@ -15,11 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd851ae3cf47ca260b1923d969123b21293d8623
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a3b758c5db483f74ddb43031ab41f2d2b46514e4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965243"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準ライブラリのコンテナー
 
@@ -176,7 +177,7 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 ### <a name="comparing-dissimilar-containers-c14"></a>異なるコンテナーの比較 (C++ 14)
 
-C++14 以降では、2 つの範囲全体を対象とする **std::equal**、**std::mismatch**、**std::is_permutation** のいずれかの関数オーバーロードを使用して、異なるコンテナー型や要素型を比較できます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
+異なるコンテナー型や要素型を比較のいずれかを使用して c++ 14 以降では、 `std::equal`、 `std::mismatch`、または`std::is_permutation`関数オーバー ロードを 2 つの完全な範囲です。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
 
 ## <a name="see-also"></a>関連項目
 

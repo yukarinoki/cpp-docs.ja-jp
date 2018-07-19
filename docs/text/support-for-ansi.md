@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854231"
 ---
 # <a name="support-for-ansi"></a>ANSI のサポート
 ほとんどの MFC クラスとメソッドをサポート、ANSI 文字セットが全体としての MFC フレームワークが Unicode のみをサポートする方向徐々 に変化し続ける文字セット。 継続的な機能強化のため[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]Windows コモン コントロール バージョン 6.1、いくつかの ANSI クラスやメソッドのサポートは推奨されていません。  詳細については、次を参照してください。 [ANSI Api の廃止](../mfc/deprecated-ansi-apis.md)と[Unicode のサポート](../text/support-for-unicode.md)です。  

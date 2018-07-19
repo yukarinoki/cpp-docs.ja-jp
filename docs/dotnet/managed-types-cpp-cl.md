@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135860"
 ---
 # <a name="managed-types-ccl"></a>マネージ型 (C++/CL)
 これらの型のオブジェクトの使用とマネージ型と作成の宣言の構文が大幅に変更されましたマネージ拡張から C++ の Visual c。 これは、ISO C 型システム内の統合を促進します。 これらの変更は、次のサブセクションで詳細に表示されます。  

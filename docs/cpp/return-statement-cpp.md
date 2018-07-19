@@ -1,5 +1,5 @@
 ---
-title: return ステートメント (C++) |Microsoft ドキュメント
+title: return ステートメント (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1252e6833dae0f04e1cb148c5703d04d42cee353
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aea9999adc7089499028850017a32245bba97db6
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943505"
 ---
 # <a name="return-statement-c"></a>return ステートメント (C++)
 関数の実行を終了し、呼び出し元の関数 (`main` 関数から制御を転送する場合はオペレーティング システム) に制御を返します。 呼び出し直後の位置から、呼び出し元の関数で実行が再開します。  
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/03/2018
 return [expression];  
 ```  
   
-## <a name="remarks"></a>コメント  
- `expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型から関数の `return` 型に変換すると、一時的なオブジェクトが作成される場合があります。 一時要素を作成する方法とタイミングの詳細については、次を参照してください。[一時オブジェクト](../cpp/temporary-objects.md)です。  
+## <a name="remarks"></a>Remarks  
+ `expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型からの変換、**返す**関数の型は、一時オブジェクトを作成できます。 一時要素を作成する方法とタイミングの詳細については、次を参照してください。[一時オブジェクト](../cpp/temporary-objects.md)します。  
   
- `expression` 句の値が呼び出し元の関数に返されます。 expression が省略されている場合、関数の戻り値は未定義です。 コンス トラクターとデストラクター、および関数型の`void`、内の式を指定することはできません、`return`ステートメントです。 他のすべての型の関数は、`return` ステートメントで式を指定する必要があります。  
+ `expression` 句の値が呼び出し元の関数に返されます。 expression が省略されている場合、関数の戻り値は未定義です。 コンス トラクターとデストラクター、および関数型の**void**で式を指定することはできません、**返す**ステートメント。 その他のすべての種類の関数で式を指定する必要があります、**返す**ステートメント。  
   
- 制御フローが関数定義を含むブロックを終了するときの結果は、式のない `return` ステートメントが実行された場合と同じです。 これは、値を返すように宣言された関数では無効です。  
+ コントロールのフローでは、関数定義の外側のブロックを終了すると、結果は同じになること場合、**返す**式ステートメントが実行されている必要があります。 これは、値を返すように宣言された関数では無効です。  
   
- 関数には、`return` ステートメントを必要に応じていくつでも追加できます。  
+ 関数は、任意の数を持つことができます**返す**ステートメント。  
   
- 次の例は、2 つの整数値の大きい方を取得するために、`return` ステートメントを含む式を使用します。  
+ 次の例の式を使用して、**返す**最大規模の 2 つの整数を取得するステートメント。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // return_statement2.cpp  
 #include <stdio.h>  
   

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342944"
 ---
 # <a name="creating-document-frame-windows"></a>ドキュメント フレーム ウィンドウの作成
 [ドキュメント/ビューの作成](../mfc/document-view-creation.md)を示していますが、どのように[CDocTemplate](../mfc/reference/cdoctemplate-class.md)オブジェクト統制フレーム ウィンドウ、ドキュメント、およびビューを作成し、それらをすべて同時に接続します。 次の 3 つ[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)への引数、`CDocTemplate`コンス トラクターは、フレーム ウィンドウ、ドキュメント、およびファイルの新しいコマンドなどのユーザー コマンドに応答ドキュメント テンプレートを動的に作成するビュー クラスを指定します。メニューまたは MDI ウィンドウ メニューで、新しいウィンドウ コマンド。 ドキュメント テンプレートは、ビューおよびドキュメントのフレーム ウィンドウを作成するときに、後で使用するためのこの情報を格納します。  

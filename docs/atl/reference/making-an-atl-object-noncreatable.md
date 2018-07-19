@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358262"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>ATL オブジェクトを作成できないを行う
 クライアントは、オブジェクトを直接作成できないように ATL ベースの COM オブジェクトの属性を変更することができます。 ここでは、オブジェクトとする別のオブジェクトのメソッド呼び出しによって返されるではなく直接作成します。  

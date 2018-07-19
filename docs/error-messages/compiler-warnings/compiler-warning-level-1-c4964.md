@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290317"
 ---
 # <a name="compiler-warning-level-1-c4964"></a>コンパイラの警告 (レベル 1) C4964
 最適化のオプションが指定されていません。プロファイル情報は収集されません。  

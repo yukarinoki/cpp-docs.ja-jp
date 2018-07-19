@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343809"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>ダイアログ ボックスでの Windows メッセージの処理
 ダイアログ ボックスでは、適切なハンドラー関数を指定する場合に Windows メッセージを処理できるように、windows がされます。 クラスの追加ウィザードとダイアログ クラスを作成するときに、ウィザードは、空のメッセージ マップをクラスに追加します。 任意の Windows メッセージや、クラスを処理するコマンドにマップするのにには、[プロパティ] ウィンドウを使用します。  

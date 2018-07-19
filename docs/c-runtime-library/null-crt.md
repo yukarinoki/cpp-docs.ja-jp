@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387610"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 **NULL** は、多くのポインター操作と関数で使用される Null ポインター値です。 これは 0 と同じです。 **NULL** は、CRTDBG.H、LOCALE.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H、TCHAR.H、TIME.H、WCHAR.H のヘッダー ファイルで定義されます。  

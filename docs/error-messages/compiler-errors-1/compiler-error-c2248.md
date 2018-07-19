@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172133"
 ---
 # <a name="compiler-error-c2248"></a>コンパイラ エラー C2248
 '*メンバー*': アクセスできない'*access_level*'クラスで宣言されたメンバー'*クラス*'  

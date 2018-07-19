@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104283"
 ---
 # <a name="schema-rowsets"></a>スキーマ行セット
 スキーマ (メタデータ) は、データベースの構造や、プロバイダー、行セット、テーブルの列に関する情報などの組織に関する情報、または実際のデータベースの内容は、その他の情報。 OLE DB では、スキーマ行セットを使用して、行セットを開かずにこのような情報を取得することができます。  

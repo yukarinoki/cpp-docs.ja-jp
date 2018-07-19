@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c13cd76f5d353cf91997406c8e7f74b5383cf8e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6e1111ede44edc36e5399d82b3c4e088b20cc1c9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38957299"
 ---
 # <a name="timebase-class"></a>time_base クラス
 
-このクラスは、time_get テンプレート クラスのファセットの基底クラスとして使用されます。**dateorder** 列挙型とこの型の複数の定数のみを定義します。
+クラスは、time_get テンプレート クラスの列挙型だけを定義するファセットの基底クラスとして機能`dateorder`とこの型の複数の定数。
 
 ## <a name="syntax"></a>構文
 
@@ -43,21 +44,21 @@ public:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 各定数は、日付部分を順序付けるための異なる方法を特徴付けます。 定数は次のとおりです。
 
-- **no_order** は、特定の順序を指定しません。
+- `no_order` 特定の順序は指定されません。
 
-- **dmy** は、2 December 1979 のように日、月、年という順序を指定します。
+- `dmy` 注文日、月、年、2 December 1979 のように指定します。
 
-- **dmy** は、December 2, 1979 のように、月、日、年という順序を指定します。
+- `mdy` 注文月、日、その後、December 2, 1979年のように、年を指定します。
 
-- **ymd** は、1979/12/2 のように、年、月、日という順序を指定します。
+- `ymd` 注文年、月、日、1979/12/2 のように指定します。
 
-- **ymd** は、1979: 2 Dec のように、年、日、月という順序を指定します。
+- `ydm` 注文年、日、その後、1979: 2 Dec のように、1 か月を指定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

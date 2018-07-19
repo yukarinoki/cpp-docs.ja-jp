@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857913"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>透明または不透明な背景の選択 (アイコン用イメージ エディター)
 移動またはイメージから、選択内容をコピーするときに現在の背景色に一致するピクセルが、選択では、既定で、透過的です。ターゲットの場所にピクセルそれらが見えにくくならないしないでください。  

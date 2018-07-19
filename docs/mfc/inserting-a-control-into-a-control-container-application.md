@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346338"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX コントロール コンテナー : コントロール コンテナー アプリケーションへのコントロールの追加
 ActiveX コントロールは、ActiveX コントロール コンテナー アプリケーションからアクセスすることができます、前に、アプリケーションを使用してコンテナーに ActiveX コントロールを追加する必要があります、 [ActiveX コントロールの挿入](../windows/insert-activex-control-dialog-box.md) ダイアログ ボックス。  

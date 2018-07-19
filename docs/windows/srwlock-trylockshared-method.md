@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892284"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared メソッド
 現在または指定した SRWLock オブジェクトの共有モードで SRWLock オブジェクトを取得しようとしています。  

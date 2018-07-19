@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354170"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>ATL DHTML コントロールの作成
 ATL コントロール ウィザードでは、DHTML コントロールの作成のプロセスを自動化します。 サンプル コードを含む HTML ファイルなど、必要なリソース ファイルを生成します。  

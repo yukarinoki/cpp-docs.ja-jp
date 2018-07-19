@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371422"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (コンパイラ スレッド)
 リンク時のコード生成を指定した場合に最適化とコード生成に使う cl.exe スレッドの数を設定します。  

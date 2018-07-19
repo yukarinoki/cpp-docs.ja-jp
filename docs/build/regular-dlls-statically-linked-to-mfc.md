@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383749"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>MFC と静的にリンクされている標準 MFC Dll
 MFC DLL が MFC と静的にリンク、通常は内部的には、MFC を使用する DLL と、MFC または非 MFC の実行可能ファイルによって、DLL からエクスポートされた関数を呼び出すことができます。 名前が示すようこの種の DLL は MFC のスタティック リンク ライブラリ バージョンを使用して構築します。 通常、関数は、通常、標準の C インターフェイスを使用して MFC DLL からエクスポートします。 作成、ビルド、および標準 MFC DLL を使用する方法の例は、サンプルを参照してください。[は](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)します。  

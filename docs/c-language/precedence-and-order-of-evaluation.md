@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392186"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順位と評価順序
 C 演算子の優先順位と結合規則は、式のオペランドのグループ化と評価に影響します。 演算子の優先順位は、他に優先順位が高いまたは低い演算子がある場合にだけ有効です。 優先順位の高い演算子を含む式が最初に評価されます。 優先順位は、"バインド" という言葉で説明することもできます。 優先順位の高い演算子は、より強力なバインドを持つと考えられます。  

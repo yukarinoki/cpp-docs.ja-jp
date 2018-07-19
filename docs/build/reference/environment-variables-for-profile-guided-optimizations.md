@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379446"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>ガイド付き最適化のプロファイルの環境変数
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-この環境変数は推奨されません。 使用して、 **EXACT**または**noexact は、**引数 **/GENPROFILE**または **/FASTGENPROFILE**この動作を制御します。
+この環境変数は推奨されません。 使用して、 **EXACT**または**noexact は、** 引数 **/GENPROFILE**または **/FASTGENPROFILE**この動作を制御します。
 
 オフに設定するか、 **PogoSafeMode** x86 でプロファイリングをアプリケーションに高速モードとセーフ モードを使用するかどうかを指定する環境変数のシステムです。
 

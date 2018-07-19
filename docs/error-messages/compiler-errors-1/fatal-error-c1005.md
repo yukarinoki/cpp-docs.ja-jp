@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197716"
 ---
 # <a name="fatal-error-c1005"></a>致命的なエラー C1005
 コンパイラの中間ファイルの文字列がバッファーの大きさを超えました。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891426"
 ---
 # <a name="win32-application-wizard"></a>Win32 アプリケーション ウィザード
 Visual C++ の Win32 アプリケーション ウィザードを使用すると、以下の表の見出しに示す 4 種類のプロジェクトを作成できます。 いずれの場合でも、開くプロジェクトの種類に応じて追加のオプションを指定できます。 次の表では、使用できるオプションをアプリケーション タイプ別に示します。  

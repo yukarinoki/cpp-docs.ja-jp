@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373869"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (挿入されたコードのマージ)
 挿入されたコードをソースにマージして、各ソース ファイルのコピーを生成します。  

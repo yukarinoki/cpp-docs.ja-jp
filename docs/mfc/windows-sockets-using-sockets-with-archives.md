@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21c08dbd1d26e519fe7108018299d3d4e94854
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954368"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows ソケット: アーカイブ付きソケットの使用
 この記事の内容について説明します、 [CSocket プログラミング モデル](#_core_the_csocket_programming_model)です。 クラス[CSocket](../mfc/reference/csocket-class.md)クラスよりも高い抽象化レベルでのソケットのサポートを提供[CAsyncSocket](../mfc/reference/casyncsocket-class.md)です。 `CSocket` MFC のシリアル化プロトコルのバージョンを介して MFC ソケット オブジェクトからデータを受け渡すを使用して[CArchive](../mfc/reference/carchive-class.md)オブジェクト。 `CSocket` ブロックしているときに Windows メッセージのバック グラウンド処理の管理) を提供し、により利用できる`CArchive`、raw API またはクラスのいずれかを使用して自分で行う必要があります、通信の多くの側面を管理する`CAsyncSocket`です。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  オブジェクトを使用して、基になる作成**ソケット**を処理します。  
   
-     `CSocket`クライアント オブジェクトを既定のパラメーターを使用する必要があります通常[作成](../mfc/reference/casyncsocket-class.md#create)データグラム ソケットが必要でない限り、します。 `CSocket`サーバー オブジェクトでポートを指定する必要があります、**作成**呼び出します。  
+     `CSocket`クライアント オブジェクトを既定のパラメーターを使用する必要があります通常[作成](../mfc/reference/casyncsocket-class.md#create)データグラム ソケットが必要でない限り、します。 `CSocket`サーバー オブジェクトでポートを指定する必要があります、`Create`呼び出します。  
   
     > [!NOTE]
     >  `CArchive` データグラム ソケットでは機能しません。 使用する場合`CSocket`データグラム ソケットに関して、使用すると、クラスを使用する必要があります`CAsyncSocket`,、つまり、アーカイブせずにします。 データグラムは信頼性が高くないため、(必ず到着して、繰り返される可能性がありますいない、または誤った順序)、アーカイブをシリアル化と互換性がありません。 シリアル化操作が確実、かつシーケンス内を完了するはずです。 使用しようとする場合`CSocket`で、 `CArchive` MFC アサーションは失敗し、データグラムのオブジェクトします。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/04/2018
      ソケットがサーバーの場合は、呼び出す[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)を開始するクライアントからの接続の試行がリッスンしています。 接続要求を受信するには、その内容に同意を呼び出して[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)です。  
   
     > [!NOTE]
-    >  **Accept**メンバー関数は、新しい空への参照を受け取ります`CSocket`オブジェクトをパラメーターとして。 呼び出す前に、このオブジェクトを構築する必要があります**Accept**です。 このソケット オブジェクトがスコープ外に出ると、接続は閉じられます。 呼び出す必要はありません**作成**この新しいソケット オブジェクト。  
+    >  `Accept`メンバー関数は、新しい空への参照を受け取ります`CSocket`オブジェクトをパラメーターとして。 呼び出す前に、このオブジェクトを構築する必要があります`Accept`です。 このソケット オブジェクトがスコープ外に出ると、接続は閉じられます。 呼び出す必要はありません`Create`この新しいソケット オブジェクト。  
   
 4.  作成、 [CSocketFile](../mfc/reference/csocketfile-class.md)オブジェクト、関連付け、`CSocket`それを持つオブジェクト。  
   

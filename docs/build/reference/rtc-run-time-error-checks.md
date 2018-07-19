@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378458"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (ランタイム エラー チェック)
 組み合わせて、実行時エラー チェック機能を無効にするために使用、 [runtime_checks](../../preprocessor/runtime-checks.md)プラグマ。  

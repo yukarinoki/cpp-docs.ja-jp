@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302660"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>CVTRES の致命的なエラー CVT1100
 リソースの複製-型: 型、名前: name、言語: 言語、フラグ: フラグ、サイズ: サイズ  

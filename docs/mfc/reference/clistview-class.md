@@ -22,11 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037623"
 ---
 # <a name="clistview-class"></a>CListView クラス
 リスト コントロールの使用との使用を簡略化[CListCtrl](../../mfc/reference/clistctrl-class.md)MFC のドキュメント/ビュー アーキテクチャのリスト コントロールの機能をカプセル化するクラス。  
@@ -57,7 +58,7 @@ class CListView : public CCtrlView
 |----------|-----------------|  
 |[CListView::RemoveImageList](#removeimagelist)|リスト ビューから指定されたイメージ リストを削除します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このアーキテクチャの詳細については、「の概要、 [CView](../../mfc/reference/cview-class.md)クラスおよびクロス リファレンスがあります。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
@@ -73,7 +74,7 @@ class CListView : public CCtrlView
   
  `CListView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcview.h  
   
 ##  <a name="clistview"></a>  CListView::CListView  
@@ -104,7 +105,7 @@ void RemoveImageList(int nImageList);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nImageList`  
+ *nImageList*  
  削除するイメージの 0 から始まるインデックス。  
   
 ## <a name="see-also"></a>関連項目  

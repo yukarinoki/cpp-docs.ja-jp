@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356555"
 ---
 # <a name="providing-flicker-free-activation"></a>ちらつきなしのアクティベーションの提供
 場合は、コントロールは、非アクティブとアクティブな状態で同一の描画 (および、ウィンドウなしのアクティベーションを使用しません)、描画操作と、非アクティブの間の移行を行うときに通常発生するちらつきを除去することができます。アクティブな状態です。 これを行うには、含める、 **noFlickerActivate**によって返されるフラグのセットでフラグ[オン](../mfc/reference/colecontrol-class.md#getcontrolflags)です。 例えば:  

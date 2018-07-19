@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391471"
 ---
 # <a name="global-constants"></a>グローバル定数
 Microsoft ランタイム ライブラリには、ライブラリ ルーチンで使用されるグローバル定数の定義が含まれています。 これらの定数を使用するには、各定数の説明に記載されている通りに、適切なヘッダー ファイルをインクルードします。 次の表は、グローバル定数の一覧です。  

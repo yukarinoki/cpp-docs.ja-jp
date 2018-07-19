@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f040978c898dae3bfd4ca21c2cf9886fde9b5238
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951280"
 ---
 # <a name="window-objects"></a>ウィンドウ オブジェクト
 MFC クラスを提供する[CWnd](../mfc/reference/cwnd-class.md)をカプセル化する、`HWND`ウィンドウのハンドル。 `CWnd`オブジェクトが C++ ウィンドウ オブジェクト、別個のもの、`HWND`を表す Windows ウィンドウが、それを含むです。 使用して`CWnd`子ウィンドウを派生するクラス、または多数の MFC クラスのいずれかから派生した`CWnd`です。 クラス`CWnd`フレーム ウィンドウ、ダイアログ ボックス、子ウィンドウ、コントロール、およびツールバーなどのコントロール バーを含む、すべての windows の基本クラスです。 よく理解[C++ ウィンドウ オブジェクトと HWND の関係](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)MFC で効果的なプログラミングは特に重要です。  
@@ -43,7 +44,7 @@ MFC クラスを提供する[CWnd](../mfc/reference/cwnd-class.md)をカプセ�
  `CWnd` その[ウィンドウ クラスを派生](../mfc/derived-window-classes.md)コンス トラクター、デストラクター、およびメンバー関数、オブジェクトを初期化するために、基になる Windows 構造体を作成し、カプセル化されたアクセスを提供`HWND`です。 `CWnd` 座標の変換、更新、ウィンドウの状態へのアクセス、メッセージを送信するための Windows Api をカプセル化するメンバー関数も用意されてスクロール、クリップボード、およびその他の多くのタスクへのアクセスします。 実行するほとんどの Windows ウィンドウ管理 Api、`HWND`引数がのメンバー関数としてカプセル化された`CWnd`です。 関数およびそのパラメーターの名前が保持、`CWnd`メンバー関数。 によってカプセル化された Windows Api の詳細について`CWnd`、クラスを参照して[CWnd](../mfc/reference/cwnd-class.md)です。  
   
 ## <a name="cwnd-and-windows-messages"></a>CWnd と Windows メッセージ  
- 主な目的は、のいずれかの`CWnd`など Windows メッセージを処理するためのインターフェイスを提供する`WM_PAINT`または`WM_MOUSEMOVE`です。 メンバー関数の多くは`CWnd`標準のメッセージのハンドラーは、— 識別子で始まる**afx_msg**と、「で、」プレフィックスなど`OnPaint`と**OnMouseMove**です。 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)メッセージおよびメッセージ処理の詳細について説明します。 情報は、フレームワークのウィンドウとの特別な目的で作成したものに平等に適用されます。  
+ 主な目的は、のいずれかの`CWnd`WM_PAINT か WM_MOUSEMOVE などの Windows メッセージを処理するためのインターフェイスを提供することです。 メンバー関数の多くは`CWnd`標準のメッセージのハンドラーは、— 識別子で始まる**afx_msg**と、「で、」プレフィックスなど`OnPaint`と`OnMouseMove`です。 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)メッセージおよびメッセージ処理の詳細について説明します。 情報は、フレームワークのウィンドウとの特別な目的で作成したものに平等に適用されます。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
   

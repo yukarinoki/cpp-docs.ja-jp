@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356593"
 ---
 # <a name="adding-connection-points-to-an-object"></a>オブジェクトへの接続ポイントの追加
 [ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)コネクション ポイントのサポートでコントロールを作成する方法、イベントを追加する方法と、接続ポイントを実装する方法を示しています。 ATL 接続ポイントでは、 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)クラスです。  

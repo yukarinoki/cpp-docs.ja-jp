@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876853"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>イメージの一部の編集 (アイコン用イメージ エディター)
 標準の編集操作を行うことができます: 切り取り、コピー、解除、および移動 — 上、[選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)選択範囲が画像全体またはその一部だけであるかどうか、します。 イメージ エディターは、Windows のクリップボードを使用しているために、イメージ エディターとその他の Windows アプリケーションの間でイメージを転送できます。  

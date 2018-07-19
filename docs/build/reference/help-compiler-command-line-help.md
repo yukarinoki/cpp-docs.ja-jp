@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371386"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (コンパイラのコマンド ライン ヘルプ)
 標準出力をコンパイラ オプションの一覧を表示します。  

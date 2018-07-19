@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858089"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>メニュー コマンドとアクセラレータ キーの関連付け
 メニュー コマンドとキーボードの組み合わせで同じプログラム コマンドを発行したいと思うことはよくあります。 これを行うには、メニュー エディターを使用して、メニュー コマンドと、アプリケーションのアクセラレータ テーブル内のエントリに、同じリソース識別子を割り当てます。 次に、メニュー コマンドの [キャプション](../windows/menu-command-properties.md) を編集して、アクセラレータ キーの名前を表示します。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342967"
 ---
 # <a name="derived-message-maps"></a>メッセージ マップの派生
 メッセージの処理、クラスのメッセージを確認中には、マップと、メッセージ マップのストーリーの終わりではありません。 場合の対処クラス`CMyView`(から派生した`CView`) メッセージに対応するエントリがありません  

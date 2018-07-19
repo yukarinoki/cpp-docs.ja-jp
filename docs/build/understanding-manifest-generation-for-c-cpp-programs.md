@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381632"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>C/C++ プログラムのマニフェスト生成についての理解
 A[マニフェスト](http://msdn.microsoft.com/library/aa375365)アプリケーションまたはアセンブリの内部、外部 XML ファイルまたはリソースが可能な XML ドキュメントが埋め込まれています。 マニフェスト、[分離アプリケーション](http://msdn.microsoft.com/library/aa375190)の名前と、アプリケーションから実行時にバインドする共有のサイド バイ サイド アセンブリのバージョンを管理するために使用します。 サイド バイ サイド アセンブリのマニフェストは、名前、バージョン、リソース、およびその他のアセンブリをその依存関係を指定します。  

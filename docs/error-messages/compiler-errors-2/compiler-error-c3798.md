@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269055"
 ---
 # <a name="compiler-error-c3798"></a>コンパイラ エラー C3798
 'specifier': プロパティの宣言 (プロパティ get または set メソッドに配置する必要があります) のオーバーライド指定子を持つことはできません  

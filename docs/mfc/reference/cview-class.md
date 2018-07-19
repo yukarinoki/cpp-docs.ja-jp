@@ -62,11 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca94e9d1f870fe028faec413a79f13d8a3b8eaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7ff4e48bd7006c3706909d1791b82aa8cda2658
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123124"
 ---
 # <a name="cview-class"></a>CView クラス
 ユーザーが定義するビュークラスの基本機能が用意されています。  
@@ -117,7 +118,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[のみ](#onprint)|印刷または印刷ドキュメントのページをプレビューするには、呼び出されます。|  
 |[CView::OnUpdate](#onupdate)|そのドキュメントがされているビューを通知するために呼び出されますを変更します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ビューがドキュメントにアタッチし、ドキュメントとユーザー間の媒介として機能します。 ビューは、画面またはプリンター上のドキュメントのイメージを表示しますと、ユーザー入力をドキュメントに操作として解釈します。  
   
  ビューは、フレーム ウィンドウの子です。 複数のビューには、分割ウィンドウの場合と同様に、フレーム ウィンドウを共有できます。 ビュー クラス、フレーム ウィンドウ クラス、およびドキュメント クラス間の関係を確立、`CDocTemplate`オブジェクト。 ユーザーが新しいウィンドウを開きます。 または、既存の分割、1 つ、framework 新しいビューを構築してドキュメントにアタッチします。  
@@ -154,7 +155,7 @@ class AFX_NOVTABLE CView : public CWnd
   
 - [CTreeView](../../mfc/reference/ctreeview-class.md)、ドキュメント/ビュー アーキテクチャのツリー コントロールを利用できるビュー。  
   
- `CView`クラスという名前の実装の派生クラスにもあります**CPreviewView**、ありの印刷プレビューを実行するために、フレームワークによって使用されます。 このクラスは、ツールバーでは、単一または二重ページ プレビューなどの印刷プレビュー ウィンドウに固有の機能のサポートを提供し、ズーム、プレビュー イメージを拡大する、します。 呼び出しまたはのいずれかをオーバーライドする必要はありません**CPreviewView**のメンバー関数 (たとえば、印刷プレビュー モードで編集をサポートする) 場合は、印刷プレビューの独自のインターフェイスを実装する場合を除き、します。 使用する方法についての`CView`を参照してください[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)と[印刷](../../mfc/printing.md)です。 さらを参照してください[テクニカル ノート 30:](../../mfc/tn030-customizing-printing-and-print-preview.md)印刷プレビューのカスタマイズの詳細についてはします。  
+ `CView`クラスという名前の実装の派生クラスにもあります`CPreviewView`、ありの印刷プレビューを実行するために、フレームワークによって使用されます。 このクラスは、ツールバーでは、単一または二重ページ プレビューなどの印刷プレビュー ウィンドウに固有の機能のサポートを提供し、ズーム、プレビュー イメージを拡大する、します。 呼び出しまたはのいずれかをオーバーライドする必要はありません`CPreviewView`のメンバー関数 (たとえば、印刷プレビュー モードで編集をサポートする) 場合は、印刷プレビューの独自のインターフェイスを実装する場合を除き、します。 使用する方法についての`CView`を参照してください[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)と[印刷](../../mfc/printing.md)です。 さらを参照してください[テクニカル ノート 30:](../../mfc/tn030-customizing-printing-and-print-preview.md)印刷プレビューのカスタマイズの詳細についてはします。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -165,7 +166,7 @@ class AFX_NOVTABLE CView : public CWnd
   
  `CView`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxwin.h  
   
 ##  <a name="cview"></a>  CView::CView  
@@ -175,7 +176,7 @@ class AFX_NOVTABLE CView : public CWnd
 CView();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  フレームワークは、新しいフレーム ウィンドウが作成されるか、ウィンドウを分割時に、コンス トラクターを呼び出します。 上書き、[フィルターと並べ替え順序](#oninitialupdate)ドキュメントをアタッチした後に、ビューを初期化するためにメンバー関数。  
   
 ##  <a name="doprepareprinting"></a>  しません  
@@ -186,14 +187,14 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pInfo`  
+ *pInfo*  
  指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  印刷または印刷のプレビューが開始できる場合は 0 以外。操作が取り消された場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- この関数の動作は、印刷または印刷プレビューの呼び出されたかどうかによって異なります (によって指定された、**されます**のメンバー、`pInfo`パラメーター)。 この関数が、印刷 ダイアログ ボックスで値を使用してを起動して、ファイルを印刷する場合、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)構造体`pInfo`指す; ユーザーがダイアログ ボックスを閉じた後、この関数はプリンター デバイス コンテキストを作成ダイアログ ボックスで指定されたユーザーの設定に基づくしを使ってデバイス コンテキストを返します、`pInfo`パラメーター。 このデバイス コンテキストは、ドキュメントの印刷に使用されます。  
+### <a name="remarks"></a>Remarks  
+ この関数の動作は、印刷または印刷プレビューの呼び出されたかどうかによって異なります (によって指定された、`m_bPreview`のメンバー、 *pInfo*パラメーター)。 この関数が、印刷 ダイアログ ボックスで値を使用してを起動して、ファイルを印刷する場合、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)構造体*pInfo*指す; 関数を作成、ユーザーがダイアログ ボックスを閉じた後、プリンター デバイス コンテキスト ダイアログ ボックスで指定されたユーザーの設定に基づくしを使ってデバイス コンテキストを返します、 *pInfo*パラメーター。 このデバイス コンテキストは、ドキュメントの印刷に使用されます。  
   
  この関数は、現在のプリンターの設定を使用してプリンター デバイス コンテキストを作成、ファイルがプレビューされている場合このデバイス コンテキストはプレビュー期間中は、プリンターをシミュレートするために使用されます。  
   
@@ -205,9 +206,9 @@ CDocument* GetDocument() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、 [CDocument](../../mfc/reference/cdocument-class.md)ビューに関連付けられているオブジェクト。 **NULL**ビューがドキュメントにアタッチされていない場合。  
+ ポインター、 [CDocument](../../mfc/reference/cdocument-class.md)ビューに関連付けられているオブジェクト。 ビューがドキュメントにアタッチされていない場合は NULL です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  これにより、ドキュメントのメンバー関数を呼び出すことができます。  
   
 ##  <a name="isselected"></a>  CView::IsSelected  
@@ -218,14 +219,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDocItem`  
+ *pDocItem*  
  テスト対象のドキュメント アイテムへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  指定したドキュメント項目がオンの場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- この関数の既定の実装を返します**FALSE**です。 選択範囲を使用して実装する場合は、この関数をオーバーライド[CDocItem](../../mfc/reference/cdocitem-class.md)オブジェクト。 ビューには、OLE アイテムが含まれている場合は、この関数をオーバーライドする必要があります。  
+### <a name="remarks"></a>Remarks  
+ この関数の既定の実装では、FALSE を返します。 選択範囲を使用して実装する場合は、この関数をオーバーライド[CDocItem](../../mfc/reference/cdocitem-class.md)オブジェクト。 ビューには、OLE アイテムが含まれている場合は、この関数をオーバーライドする必要があります。  
   
 ##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
  ビューを含むフレーム ウィンドウがアクティブまたは非アクティブ化されたときに、フレームワークによって呼び出されます。  
@@ -237,19 +238,19 @@ virtual void OnActivateFrame(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nState`  
+ *%n 状態*  
  フレーム ウィンドウがされているかどうかを指定します。 アクティブ化または非アクティブにします。 次の値のいずれかを指定できます。  
   
-- **WA_INACTIVE**フレーム ウィンドウを非アクティブ化します。  
+- WA_INACTIVE フレーム ウィンドウを非アクティブ化します。  
   
-- **WA_ACTIVE**フレーム ウィンドウがアクティブ化されているいくつかの方法で (たとえば、ウィンドウを選択するキーボード インターフェイスの使用) して、マウスのクリックしてではないです。  
+- フレーム ウィンドウをマウス以外のいくつかの方法でアクティブ化して WA_ACTIVE は、(たとえば、ウィンドウを選択するキーボード インターフェイスの使用など) をクリックします。  
   
-- **WA_CLICKACTIVE**フレーム ウィンドウをマウスのクリックによってアクティブ化  
+- マウスのクリックによって WA_CLICKACTIVE フレーム ウィンドウをアクティブ化  
   
- `pFrameWnd`  
+ *pFrameWnd*  
  アクティブ化するのには、フレーム ウィンドウへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ビューに関連付けられているフレーム ウィンドウがアクティブまたは非アクティブ化されたときに、特別な処理を実行する場合は、このメンバー関数をオーバーライドします。 たとえば、 [CFormView](../../mfc/reference/cformview-class.md)を保存し、フォーカスがあるコントロールを復元するときに、この上書きを実行します。  
   
 ##  <a name="onactivateview"></a>  CView::OnActivateView  
@@ -263,19 +264,19 @@ virtual void OnActivateView(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bActivate`  
+ *bActivate*  
  表示されているかどうかを示しますがアクティブまたは非アクティブ化します。  
   
- `pActivateView`  
+ *pActivateView*  
  アクティブ化されたビュー オブジェクトへのポインター。  
   
- `pDeactiveView`  
+ *pDeactiveView*  
  非アクティブになるビュー オブジェクトへのポインター。  
   
-### <a name="remarks"></a>コメント  
- この関数の既定の実装では、アクティブ化されているビューにフォーカスを設定します。 ビューがアクティブまたは非アクティブ化されたときに特別な処理を実行する場合は、この関数をオーバーライドします。 たとえば、非アクティブなビューと、アクティブなビューを区別する特殊なビジュアル キューを提供する場合とを確認する、`bActivate`パラメーターと、ビューの外観を適宜更新します。  
+### <a name="remarks"></a>Remarks  
+ この関数の既定の実装では、アクティブ化されているビューにフォーカスを設定します。 ビューがアクティブまたは非アクティブ化されたときに特別な処理を実行する場合は、この関数をオーバーライドします。 たとえば、非アクティブなビューと、アクティブなビューを区別する特殊なビジュアル キューを提供する場合とを確認する、 *bActivate*パラメーターと、ビューの外観を適宜更新します。  
   
- `pActivateView`と`pDeactiveView`パラメーターは、アプリケーションのメイン フレーム ウィンドウがアクティブなビューで変更が行われていないアクティブな場合、同じビューを指す — たとえば、次のいずれかからではなく、このいずれかに、別のアプリケーションからフォーカスが転送されます。表示別にアプリケーション内、または MDI 子ウィンドウの間で切り替えるときにします。 これにより、必要な場合は、そのパレットを再現するためのビューです。  
+ *PActivateView*と*pDeactiveView*パラメーターは、アプリケーションのメイン フレーム ウィンドウがアクティブなビューで変更が行われていないアクティブな場合、同じビューを指す — たとえば、フォーカスされている場合MDI 子ウィンドウの間で切り替えると、別に、アプリケーション内で、または 1 つのビューではなくこのいずれかに、別のアプリケーションからを転送します。 これにより、必要な場合は、そのパレットを再現するためのビューです。  
   
  これらのパラメーターが異なるとき[CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview)新機能とは異なるビューで呼び出された[CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview)を返します。 これは、分割ウィンドウでよく発生します。  
   
@@ -289,13 +290,13 @@ virtual void OnBeginPrinting(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  プリンター デバイス コンテキストを指し示します。  
   
- `pInfo`  
+ *pInfo*  
  指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数の既定の実装は、何も行いません。 この関数をオーバーライドして、特に印刷のために必要な GDI リソース (ペン、フォントなど) を割り当てます。 内からデバイス コンテキストに GDI オブジェクトを選択、 [OnPrint](#onprint)それらを使用する各ページのメンバー関数。 同じビュー オブジェクトを使用して画面の表示と印刷の両方を実行している場合は、各表示に必要な GDI リソースに別個の変数を使用します。これにより、印刷時に画面を更新することができます。  
   
  さらに、この関数を使用して、プリンター デバイス コンテキストのプロパティに依存する初期化を実行することもできます。 たとえば、ドキュメントを印刷するために必要なページ数は、印刷ダイアログ ボックスでユーザーが指定した設定 (たとえば、ページの長さ) によって異なる可能性があります。 このような状況で、ドキュメントの長さを指定することはできません、 [OnPreparePrinting](#onprepareprinting)メンバー関数の場合、通常行うようにする場所です ダイアログ ボックスの設定に基づいてプリンター デバイス コンテキストが作成されるまでに待機する必要があります。 [OnBeginPrinting](#onbeginprinting)への最初のオーバーライド可能な関数を提供するアクセスは、 [CDC](../../mfc/reference/cdc-class.md)のため、この関数からドキュメントの長さを設定することができます、プリンター デバイス コンテキストを表すオブジェクト。 この時点でドキュメントの長さを指定しない場合、印刷プレビュー時にスクロール バーは表示されません。  
@@ -311,30 +312,30 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDataObject`  
+ *pDataObject*  
  指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)ビューのドロップ領域にドラッグしています。  
   
- `dwKeyState`  
- 修飾子キーの状態を格納します。 これは、次の任意の数の組み合わせ: **MK_CONTROL**、 **MK_SHIFT**、 **MK_ALT**、 **MK_LBUTTON**、 **MK_MBUTTON**、および**MK_RBUTTON**です。  
+ *ドロップ*  
+ 修飾子キーの状態を格納します。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON です。  
   
- `point`  
+ *ポイント*  
  ビューのクライアント領域と相対的現在のマウスの位置。  
   
 ### <a name="return-value"></a>戻り値  
- 値、`DROPEFFECT`列挙型、ユーザーがこの位置にあるオブジェクトを削除する場合に発生するドロップダウンの型を示します。 Drop の種類は、によって示される現在のキーの状態に通常依存`dwKeyState`です。 Keystates の標準的なマッピング`DROPEFFECT`値は。  
+ DROPEFFECT からの値の列挙型、ユーザーがこの位置にあるオブジェクトを削除する場合に発生するドロップダウンの型を示します。 Drop の種類は、によって示される現在のキーの状態に通常依存*ドロップ*です。 Keystates DROPEFFECT 値の標準的なマッピングは次のとおりです。  
   
-- `DROPEFFECT_NONE` このウィンドウで、データ オブジェクトを削除できません。  
+- このウィンドウで、せず、データ オブジェクトを削除できません。  
   
-- `DROPEFFECT_LINK` **MK_CONTROL &#124; MK_SHIFT** 、オブジェクトとサーバー間のリンケージを作成します。  
+- MK_CONTROL の DROPEFFECT_LINK &#124; MK_SHIFT が、オブジェクトとサーバー間のリンケージを作成します。  
   
-- `DROPEFFECT_COPY` **MK_CONTROL**ドロップされたオブジェクトのコピーを作成します。  
+- DROPEFFECT_COPY MK_CONTROL のでは、ドロップされたオブジェクトのコピーを作成します。  
   
-- `DROPEFFECT_MOVE` **MK_ALT**ドロップされたオブジェクトのコピーを作成し、元のオブジェクトを削除します。 これは、通常既定ドロップ操作の結果、ビューは、このデータ オブジェクトを受け取ることができます。  
+- MK_ALT を行ったでは、ドロップされたオブジェクトと削除元のオブジェクトのコピーを作成します。 これは、通常既定ドロップ操作の結果、ビューは、このデータ オブジェクトを受け取ることができます。  
   
  詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../visual-cpp-samples.md)です。  
   
-### <a name="remarks"></a>コメント  
- 既定の実装では、何も返す`DROPEFFECT_NONE`です。  
+### <a name="remarks"></a>Remarks  
+ 既定の実装では、何もしないし、せずにします。  
   
  将来の呼び出しを準備するには、この関数をオーバーライド、 [OnDragOver](#ondragover)メンバー関数。 この時点で後で使用できるデータ オブジェクトから必要なすべてのデータを取得する必要があります、`OnDragOver`メンバー関数。 ビューは、ユーザーの視覚的フィードバックを提供するには、この時点でも更新する必要があります。 詳細については、記事を参照してください。[ドラッグ アンド ドロップ: ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)です。  
   
@@ -345,7 +346,7 @@ virtual DROPEFFECT OnDragEnter(
 virtual void OnDragLeave();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  現在のビューは、中に行った操作をクリーンアップする必要がある場合は、この関数をオーバーライド[OnDragEnter](#ondragenter)または[OnDragOver](#ondragover)オブジェクトがドラッグ アンド ドロップ中に、ビジュアル ユーザー フィードバックを削除するなどの呼び出し.  
   
 ##  <a name="ondragover"></a>  直前  
@@ -359,30 +360,30 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDataObject`  
+ *pDataObject*  
  指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグします。  
   
- `dwKeyState`  
- 修飾子キーの状態を格納します。 これは、次の任意の数の組み合わせ: **MK_CONTROL**、 **MK_SHIFT**、 **MK_ALT**、 **MK_LBUTTON**、 **MK_MBUTTON**、および**MK_RBUTTON**です。  
+ *ドロップ*  
+ 修飾子キーの状態を格納します。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON です。  
   
- `point`  
+ *ポイント*  
  ビューのクライアント領域の基準とした現在のマウスの位置。  
   
 ### <a name="return-value"></a>戻り値  
- 値、`DROPEFFECT`列挙型、ユーザーがこの位置にあるオブジェクトを削除する場合に発生するドロップダウンの型を示します。 種類ドロップの多くの場合、異なりますキーの現在の状態によって示される`dwKeyState`です。 Keystates の標準的なマッピング`DROPEFFECT`値は。  
+ DROPEFFECT からの値の列挙型、ユーザーがこの位置にあるオブジェクトを削除する場合に発生するドロップダウンの型を示します。 種類ドロップの多くの場合、異なりますキーの現在の状態によって示される*ドロップ*です。 Keystates DROPEFFECT 値の標準的なマッピングは次のとおりです。  
   
-- `DROPEFFECT_NONE` このウィンドウで、データ オブジェクトを削除できません。  
+- このウィンドウで、せず、データ オブジェクトを削除できません。  
   
-- `DROPEFFECT_LINK` **MK_CONTROL &#124; MK_SHIFT** 、オブジェクトとサーバー間のリンケージを作成します。  
+- MK_CONTROL の DROPEFFECT_LINK &#124; MK_SHIFT が、オブジェクトとサーバー間のリンケージを作成します。  
   
-- `DROPEFFECT_COPY` **MK_CONTROL**ドロップされたオブジェクトのコピーを作成します。  
+- DROPEFFECT_COPY MK_CONTROL のでは、ドロップされたオブジェクトのコピーを作成します。  
   
-- `DROPEFFECT_MOVE` **MK_ALT**ドロップされたオブジェクトのコピーを作成し、元のオブジェクトを削除します。 これは、通常既定ドロップ操作の結果、ビューは、データ オブジェクトを受け取ることができます。  
+- MK_ALT を行ったでは、ドロップされたオブジェクトと削除元のオブジェクトのコピーを作成します。 これは、通常既定ドロップ操作の結果、ビューは、データ オブジェクトを受け取ることができます。  
   
  詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../visual-cpp-samples.md)です。  
   
-### <a name="remarks"></a>コメント  
- 既定の実装は、何も返す`DROPEFFECT_NONE`です。  
+### <a name="remarks"></a>Remarks  
+ 既定の実装では、何もしないし、せずにします。  
   
  ドラッグ操作中にユーザーに視覚的フィードバックを提供するには、この関数をオーバーライドします。 以降、この関数は継続的に呼び出されると、それに含まれるすべてのコードをできるだけ最適化してください。 詳細については、記事を参照してください。[ドラッグ アンド ドロップ: ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)です。  
   
@@ -396,28 +397,28 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwKeyState`  
- 修飾子キーの状態を格納します。 これは、次の任意の数の組み合わせ: **MK_CONTROL**、 **MK_SHIFT**、 **MK_ALT**、 **MK_LBUTTON**、 **MK_MBUTTON**、および**MK_RBUTTON**です。  
+ *ドロップ*  
+ 修飾子キーの状態を格納します。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON です。  
   
- `point`  
+ *ポイント*  
  画面に対して相対的ピクセル単位で、カーソルの位置が含まれています。  
   
 ### <a name="return-value"></a>戻り値  
- 値、`DROPEFFECT`列挙型、ユーザーがこの位置にあるオブジェクトを削除する場合に発生するドロップダウンの型を示します。 Drop の種類は、によって示される現在のキーの状態に通常依存`dwKeyState`です。 Keystates の標準的なマッピング`DROPEFFECT`値は。  
+ DROPEFFECT からの値の列挙型、ユーザーがこの位置にあるオブジェクトを削除する場合に発生するドロップダウンの型を示します。 Drop の種類は、によって示される現在のキーの状態に通常依存*ドロップ*です。 Keystates DROPEFFECT 値の標準的なマッピングは次のとおりです。  
   
-- `DROPEFFECT_NONE` このウィンドウで、データ オブジェクトを削除できません。  
+- このウィンドウで、せず、データ オブジェクトを削除できません。  
   
-- `DROPEFFECT_LINK` **MK_CONTROL &#124; MK_SHIFT** 、オブジェクトとサーバー間のリンケージを作成します。  
+- MK_CONTROL の DROPEFFECT_LINK &#124; MK_SHIFT が、オブジェクトとサーバー間のリンケージを作成します。  
   
-- `DROPEFFECT_COPY` **MK_CONTROL**ドロップされたオブジェクトのコピーを作成します。  
+- DROPEFFECT_COPY MK_CONTROL のでは、ドロップされたオブジェクトのコピーを作成します。  
   
-- `DROPEFFECT_MOVE` **MK_ALT**ドロップされたオブジェクトのコピーを作成し、元のオブジェクトを削除します。  
+- MK_ALT を行ったでは、ドロップされたオブジェクトと削除元のオブジェクトのコピーを作成します。  
   
-- `DROPEFFECT_SCROLL` ドラッグ スクロール操作が発生するか、対象のビューで発生していることを示します。  
+- DROPEFFECT_SCROLL では、ドラッグ スクロール操作が発生するか、対象のビューで発生していることを示します。  
   
  詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../visual-cpp-samples.md)です。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このイベントの特別な動作を提供する場合は、この関数をオーバーライドします。 既定の実装では、カーソルが各ウィンドウの枠線内の既定のスクロール領域にドラッグされると、windows が自動的にスクロールします。詳細については、記事を参照してください。[ドラッグ アンド ドロップ: ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)です。  
   
 ##  <a name="ondraw"></a>  詳細  
@@ -428,13 +429,13 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  ドキュメントのイメージの描画に使用するデバイス コンテキストへのポインター。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  各ケースで別のデバイス コンテキストを渡すし、画面表示、印刷、および印刷プレビューを実行するには、この関数呼び出し、します。 既定の実装はありません。  
   
- ドキュメントのビューを表示するには、この関数をオーバーライドする必要があります。 使用してグラフィック デバイス インターフェイス (GDI) 呼び出しを行うことができます、 [CDC](../../mfc/reference/cdc-class.md)によって指されるオブジェクト、`pDC`パラメーター。 描画前にデバイス コンテキストにペン、フォントなどの GDI リソースを選択し、後に選択解除できます。 多くの場合、描画コードをできるデバイスに依存しません。つまり、デバイスの種類が、イメージを表示する方法についての情報をする必要がないです。  
+ ドキュメントのビューを表示するには、この関数をオーバーライドする必要があります。 使用してグラフィック デバイス インターフェイス (GDI) 呼び出しを行うことができます、 [CDC](../../mfc/reference/cdc-class.md)によって指されるオブジェクト、 *pDC*パラメーター。 描画前にデバイス コンテキストにペン、フォントなどの GDI リソースを選択し、後に選択解除できます。 多くの場合、描画コードをできるデバイスに依存しません。つまり、デバイスの種類が、イメージを表示する方法についての情報をする必要がないです。  
   
  描画を最適化する呼び出し、[ため](../../mfc/reference/cdc-class.md#rectvisible)を指定した四角形を描画するかどうかを調べるには、デバイス コンテキストのメンバー関数。 通常の画面表示と印刷を区別する必要がある場合は、呼び出し、 [IsPrinting](../../mfc/reference/cdc-class.md#isprinting)デバイス コンテキストのメンバー関数。  
   
@@ -449,28 +450,28 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDataObject`  
+ ' pDataObject *  
  指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)がドロップ ターゲットにドロップします。  
   
- `dropEffect`  
+ *dropEffect*  
  ユーザーが要求しているドロップ効果。  
   
-- `DROPEFFECT_COPY` 削除されるデータ オブジェクトのコピーを作成します。  
+- DROPEFFECT_COPY では、破棄されるデータ オブジェクトのコピーを作成します。  
   
-- `DROPEFFECT_MOVE` データ オブジェクトを現在のマウスの位置に移動します。  
+- 行ったは、データ オブジェクトを現在のマウスの位置に移動します。  
   
-- `DROPEFFECT_LINK` データ オブジェクトとサーバー間のリンクを作成します。  
+- DROPEFFECT_LINK では、データ オブジェクトとサーバー間のリンクを作成します。  
   
- `point`  
+ *ポイント*  
  ビューのクライアント領域の基準とした現在のマウスの位置。  
   
 ### <a name="return-value"></a>戻り値  
  ドロップダウンが成功した場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
- 既定の実装は何もしませんし、返します**FALSE**です。  
+### <a name="remarks"></a>Remarks  
+ 既定の実装では、何も実行し、FALSE を返します。  
   
- ビューのクライアント領域に OLE ドロップの効果を実装するには、この関数をオーバーライドします。 使用して、データ オブジェクトを調べることができます`pDataObject`クリップボード データ形式とデータ削除指定した位置にします。  
+ ビューのクライアント領域に OLE ドロップの効果を実装するには、この関数をオーバーライドします。 使用して、データ オブジェクトを調べることができます*pDataObject*クリップボード データ形式とデータ削除指定した位置にします。  
   
 > [!NOTE]
 >  オーバーライドがある場合、フレームワークはこの関数を呼び出しません[OnDropEx](#ondropex)このビュー クラスにします。  
@@ -487,22 +488,22 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDataObject`  
+ *pDataObject*  
  指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)がドロップ ターゲットにドロップします。  
   
- `dropDefault`  
- 現在のキーの状態に基づく既定のドロップ操作のユーザーが選択した結果。 可能性がある`DROPEFFECT_NONE`です。 ドロップ効果は、「解説」セクションで説明します。  
+ *dropDefault*  
+ 現在のキーの状態に基づく既定のドロップ操作のユーザーが選択した結果。 せずがある可能性があります。 ドロップ効果は、「解説」セクションで説明します。  
   
- `dropList`  
+ *ドロップダウン リスト*  
  ドロップ ソースでサポートされる、ドロップ効果の一覧。 ビットごとの OR を使用して、ドロップ効果の値を結合することができます ( **&#124;**) 操作です。 ドロップ効果は、「解説」セクションで説明します。  
   
- `point`  
+ *ポイント*  
  ビューのクライアント領域の基準とした現在のマウスの位置。  
   
 ### <a name="return-value"></a>戻り値  
- によって指定された位置にドロップしようとしたときの原因となったドロップ効果`point`です。 によって示される値のいずれかがこのあります*dropEffectList*です。 ドロップ効果は、「解説」セクションで説明します。  
+ によって指定された位置にドロップしようとしたときの原因となったドロップ効果*ポイント*です。 によって示される値のいずれかがこのあります*dropEffectList*です。 ドロップ効果は、「解説」セクションで説明します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装が何もしないし、フレームワークを呼び出す必要がありますを示すためにダミーの値 (-1) を返すには、 [OnDrop](#ondrop)ハンドラー。  
   
  マウスの右ボタンのドラッグ アンド ドロップの効果を実装するには、この関数をオーバーライドします。 マウスの右ボタンのドラッグ アンド ドロップ、マウスの右ボタンが離されると、メニュー項目を通常表示します。  
@@ -511,27 +512,27 @@ virtual DROPEFFECT OnDropEx(
   
 -   マウスの右ボタンがダウンしている場合、上書きにはドロップ ソースが、ドロップ効果のサポートを提供するポップアップ メニューが表示されます。  
   
-    -   調べる`dropList`をドロップ ソースがサポートされているドロップ効果を判断します。 ポップアップ メニューにこれらのアクションのみを有効にします。  
+    -   調べる*ドロップダウン リスト ボックスから*をドロップ ソースがサポートされているドロップ効果を判断します。 ポップアップ メニューにこれらのアクションのみを有効にします。  
   
-    -   使用して[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)に基づいて既定のアクションを設定する`dropDefault`です。  
+    -   使用して[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)に基づいて既定のアクションを設定する*dropDefault*です。  
   
     -   最後に、対処をポップアップ メニューからユーザーの選択によって示されます。  
   
--   マウスの右ボタンが押されていない場合、オーバーライドする必要があります。 この処理標準ドロップ要求として。 指定されたドロップ効果を使用して`dropDefault`です。 代わりに、オーバーライドできることを示すためにダミーの値 (-1) を返す`OnDrop`このドロップ操作を処理します。  
+-   マウスの右ボタンが押されていない場合、オーバーライドする必要があります。 この処理標準ドロップ要求として。 指定されたドロップ効果を使用して*dropDefault*です。 代わりに、オーバーライドできることを示すためにダミーの値 (-1) を返す`OnDrop`このドロップ操作を処理します。  
   
- 使用して`pDataObject`を調べる、`COleDataObject`クリップボード データ形式とデータ削除指定した位置にします。  
+ 使用して*pDataObject*を調べる、`COleDataObject`クリップボード データ形式とデータ削除指定した位置にします。  
   
  ドロップ効果には、drop 操作に関連付けられたアクションがについて説明します。 次のようなドロップ効果の一覧を参照してください。  
   
-- `DROPEFFECT_NONE` ドロップは許可されていません。  
+- せず、削除は許可されていません。  
   
-- `DROPEFFECT_COPY` コピー操作が実行されます。  
+- DROPEFFECT_COPY コピー操作が実行されます。  
   
-- `DROPEFFECT_MOVE` 移動操作が実行されます。  
+- 行った移動操作が実行されます。  
   
-- `DROPEFFECT_LINK` ドロップされたデータから、元のデータへのリンクが確立できません。  
+- ドロップされたデータから、元のデータへの DROPEFFECT_LINK A リンクが確立されます。  
   
-- `DROPEFFECT_SCROLL` ドラッグ スクロール操作が発生するか、ターゲットで発生していることを示します。  
+- DROPEFFECT_SCROLL では、ドラッグ スクロール操作が発生するか、ターゲットで発生していることを示します。  
   
  既定のメニュー コマンドの設定の詳細については、次を参照してください。 [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) Windows sdk と[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)このボリュームにします。  
   
@@ -545,13 +546,13 @@ virtual void OnEndPrinting(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  プリンター デバイス コンテキストを指し示します。  
   
- `pInfo`  
+ *pInfo*  
  指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数の既定の実装は、何も行いません。 割り当てられている GDI リソースを解放するには、この関数をオーバーライドします[OnBeginPrinting](#onbeginprinting)メンバー関数。  
   
 ##  <a name="onendprintpreview"></a>  CView::OnEndPrintPreview  
@@ -566,20 +567,20 @@ virtual void OnEndPrintPreview(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  プリンター デバイス コンテキストを指し示します。  
   
- `pInfo`  
+ *pInfo*  
  指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。  
   
- `point`  
+ *ポイント*  
  プレビュー モードで最後に表示されたページで、ポイントを指定します。  
   
- `pView`  
+ *pView*  
  プレビューに使用するビュー オブジェクトへのポインター。  
   
-### <a name="remarks"></a>コメント  
- この関数の既定の実装、 [OnEndPrinting](#onendprinting)印刷プレビューの前に、の状態をメイン フレーム ウィンドウが開始されたメンバー関数を復元します。 プレビュー モードが終了した場合に、特別な処理を実行するには、この関数をオーバーライドします。 たとえば、プレビュー モードから通常の表示モードに切り替える際に、ドキュメント内のユーザーの位置を維持する場合は、スクロールできますで説明されている位置に、`point`パラメーターおよび`m_nCurPage`のメンバー、`CPrintInfo`構造体`pInfo`パラメーターをポイントします。  
+### <a name="remarks"></a>Remarks  
+ この関数の既定の実装、 [OnEndPrinting](#onendprinting)印刷プレビューの前に、の状態をメイン フレーム ウィンドウが開始されたメンバー関数を復元します。 プレビュー モードが終了した場合に、特別な処理を実行するには、この関数をオーバーライドします。 たとえば、プレビュー モードから通常の表示モードに切り替える際に、ドキュメント内のユーザーの位置を維持する場合は、スクロールできますで説明されている位置に、*ポイント*パラメーターおよび`m_nCurPage`のメンバー`CPrintInfo`構造体、 *pInfo*パラメーターをポイントします。  
   
  常に、基本クラスのバージョンを呼び出す`OnEndPrintPreview`関数の末尾には通常、オーバーライドします。  
   
@@ -590,8 +591,8 @@ virtual void OnEndPrintPreview(
 virtual void OnInitialUpdate();
 ```  
   
-### <a name="remarks"></a>コメント  
- この関数の既定の実装、 [OnUpdate](#onupdate)ヒント情報なしのメンバー関数 (つまり、0 を既定値を使用して、`lHint`パラメーターと**NULL** の`pHint`パラメーター)。 ドキュメントに関する情報を必要とする任意の 1 回だけ初期化を実行するには、この関数をオーバーライドします。 たとえば、アプリケーションに固定サイズのドキュメントがある場合は、ドキュメントのサイズに基づくビューのスクロールの範囲を初期化するためにこの関数を使用できます。 アプリケーションでは、可変サイズのドキュメントをサポートする場合を使用して[OnUpdate](#onupdate)スクロールを更新する制限たびにドキュメントの変更。  
+### <a name="remarks"></a>Remarks  
+ この関数の既定の実装、 [OnUpdate](#onupdate)ヒント情報なしのメンバー関数 (つまり、0 を既定値を使用して、 *lHint*パラメーターとの場合は NULL、 *pHint*パラメーター)。 ドキュメントに関する情報を必要とする任意の 1 回だけ初期化を実行するには、この関数をオーバーライドします。 たとえば、アプリケーションに固定サイズのドキュメントがある場合は、ドキュメントのサイズに基づくビューのスクロールの範囲を初期化するためにこの関数を使用できます。 アプリケーションでは、可変サイズのドキュメントをサポートする場合を使用して[OnUpdate](#onupdate)スクロールを更新する制限たびにドキュメントの変更。  
   
 ##  <a name="onpreparedc"></a>  付け  
  前にフレームワークによって呼び出されます、 [OnDraw](#ondraw)画面表示とする前に、メンバー関数が呼び出される、 [OnPrint](#onprint)印刷または印刷のプレビュー期間中の各ページのメンバー関数が呼び出されます。  
@@ -603,24 +604,24 @@ virtual void OnPrepareDC(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  ドキュメントのイメージの描画に使用するデバイス コンテキストへのポインター。  
   
- `pInfo`  
- 指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)場合は、現在の印刷ジョブを記述する構造体`OnPrepareDC`印刷または印刷プレビューで呼び出されたが、`m_nCurPage`メンバーを印刷するページを指定します。 このパラメーターは**NULL**場合`OnPrepareDC`画面に対して呼び出されます。  
+ *pInfo*  
+ 指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)場合は、現在の印刷ジョブを記述する構造体`OnPrepareDC`印刷または印刷プレビューで呼び出されたが、`m_nCurPage`メンバーを印刷するページを指定します。 このパラメーターが NULL 場合`OnPrepareDC`画面に対して呼び出されます。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この関数の既定の実装は画面表示のため、関数が呼び出された場合に、何も行いません。 ただし、この関数は、派生クラスでオーバーライドなど[CScrollView](../../mfc/reference/cscrollview-class.md)のデバイス コンテキストの属性を調整するには、オーバーライドした関数の先頭に基本クラス実装を呼び出すは常にその結果、します。  
   
- 印刷の関数が呼び出されると場合、既定の実装に格納されているページの情報を調べて、`pInfo`パラメーター。 ドキュメントの長さが指定されていない場合`OnPrepareDC`1 ページにあるドキュメントを前提としていて、1 つのページが印刷された後に印刷ループを停止します。 関数を設定して印刷ループを停止する、`m_bContinuePrinting`に構造体のメンバー **FALSE**です。  
+ 印刷の関数が呼び出されると場合、既定の実装に格納されているページの情報を調べて、 *pInfo*パラメーター。 ドキュメントの長さが指定されていない場合`OnPrepareDC`1 ページにあるドキュメントを前提としていて、1 つのページが印刷された後に印刷ループを停止します。 関数を設定して印刷ループを停止する、`m_bContinuePrinting`を FALSE に構造体のメンバーです。  
   
  オーバーライド`OnPrepareDC`の原因は次のいずれか。  
   
 -   指定されたページの必要に応じて、デバイス コンテキストの属性を調整します。 たとえば、マップ モードまたはデバイス コンテキストの他の特性を設定する必要がある場合ではこの関数。  
   
--   印刷時の改ページを実行します。 使用して、印刷の開始時にドキュメントの長さを指定する通常、 [OnPreparePrinting](#onprepareprinting)メンバー関数。 ただし、理解していない場合、事前にどのくらいの時間のドキュメント (たとえば、印刷時に、何らかの数のレコードをデータベースから) は、オーバーライド`OnPrepareDC`が出力されているときに、ドキュメントの末尾をテストします。 ある場合、ドキュメントを印刷するはこれ以上、設定、`m_bContinuePrinting`のメンバー、`CPrintInfo`構造の**FALSE**です。  
+-   印刷時の改ページを実行します。 使用して、印刷の開始時にドキュメントの長さを指定する通常、 [OnPreparePrinting](#onprepareprinting)メンバー関数。 ただし、理解していない場合、事前にどのくらいの時間のドキュメント (たとえば、印刷時に、何らかの数のレコードをデータベースから) は、オーバーライド`OnPrepareDC`が出力されているときに、ドキュメントの末尾をテストします。 ある場合、ドキュメントを印刷するはこれ以上、設定、`m_bContinuePrinting`のメンバー、`CPrintInfo`構造を FALSE にします。  
   
--   エスケープ コードをページ単位ごとにプリンターに送信します。 エスケープ コードを送信する`OnPrepareDC`を呼び出して、**エスケープ**のメンバー関数、`pDC`パラメーター。  
+-   エスケープ コードをページ単位ごとにプリンターに送信します。 エスケープ コードを送信する`OnPrepareDC`を呼び出して、`Escape`のメンバー関数、 *pDC*パラメーター。  
   
  基本クラスを呼び出して`OnPrepareDC`オーバーライドの先頭にします。  
   
@@ -635,22 +636,22 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pInfo`  
+ *pInfo*  
  指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。  
   
 ### <a name="return-value"></a>戻り値  
  印刷が開始する 0 以外の値印刷ジョブが取り消された場合は 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  既定の実装では、何も行われません。  
   
- 印刷と印刷プレビューを有効にするには、この関数をオーバーライドする必要があります。 呼び出す、 [DoPreparePrinting](#doprepareprinting)を引数としてメンバー関数の場合、`pInfo`パラメーター、その戻り値を返す`DoPreparePrinting`印刷 ダイアログ ボックスを表示し、プリンター デバイス コンテキストを作成します。 既定以外の値を持つ [印刷] ダイアログ ボックスを初期化する場合は、メンバーに値を割り当てる`pInfo`です。 たとえば、ドキュメントの長さがわかっている場合に値を渡す、 [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)のメンバー関数`pInfo`呼び出す前に`DoPreparePrinting`です。 この値が表示されます。 範囲 の 印刷 ダイアログ ボックスのボックスです。  
+ 印刷と印刷プレビューを有効にするには、この関数をオーバーライドする必要があります。 呼び出す、 [DoPreparePrinting](#doprepareprinting)を引数としてメンバー関数の場合、 *pInfo*パラメーター、その戻り値を返す`DoPreparePrinting`印刷 ダイアログ ボックスを表示し、プリンター デバイス コンテキストを作成します。 既定以外の値を持つ [印刷] ダイアログ ボックスを初期化する場合は、メンバーに値を割り当てる*pInfo*です。 たとえば、ドキュメントの長さがわかっている場合に値を渡す、 [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)のメンバー関数*pInfo*呼び出す前に`DoPreparePrinting`です。 この値が表示されます。 範囲 の 印刷 ダイアログ ボックスのボックスです。  
   
- `DoPreparePrinting` プレビュー ジョブの印刷 ダイアログ ボックスは表示されません。 印刷ジョブの印刷 ダイアログ ボックスをバイパスする場合は、ことを確認、**されます**のメンバー`pInfo`は**FALSE**に設定および**TRUE**に渡す前に`DoPreparePrinting`; にリセット**FALSE**後です。  
+ `DoPreparePrinting` プレビュー ジョブの印刷 ダイアログ ボックスは表示されません。 印刷ジョブの印刷 ダイアログ ボックスをバイパスする場合は、ことを確認、`m_bPreview`のメンバー *pInfo*に渡す前に TRUE に設定が FALSE で、 `DoPreparePrinting`; その後、FALSE にリセットします。  
   
  アクセスを必要とする初期化を実行する必要があるかどうか、 `CDC` (たとえば、ドキュメントの長さを指定する前に、ページ サイズを知る必要がある場合)、プリンター デバイス コンテキストを表すオブジェクトを上書き、`OnBeginPrinting`メンバー関数。  
   
- 値を設定する場合、 **m_nNumPreviewPages**または**関数**のメンバー、`pInfo`パラメーターで呼び出した後に行う`DoPreparePrinting`です。 `DoPreparePrinting`メンバー関数のセットを**m_nNumPreviewPages**アプリケーションの値にします。INI ファイル設定と**関数**を既定値にします。  
+ 値を設定する場合、`m_nNumPreviewPages`または`m_strPageDesc`のメンバー、 *pInfo*パラメーターで呼び出した後に行う`DoPreparePrinting`です。 `DoPreparePrinting`メンバー関数のセットを`m_nNumPreviewPages`アプリケーションの値にします。INI ファイル設定と`m_strPageDesc`を既定値にします。  
   
 ### <a name="example"></a>例  
   オーバーライド`OnPreparePrinting`を呼び出すと`DoPreparePrinting`オーバーライドからフレームワークは、[印刷] ダイアログ ボックスを表示し、プリンター DC を作成してようにします。  
@@ -671,14 +672,14 @@ virtual void OnPrint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDC`  
+ *pDC*  
  プリンター デバイス コンテキストを指し示します。  
   
- `pInfo`  
+ *pInfo*  
  指す、`CPrintInfo`現在の印刷ジョブを記述する構造体。  
   
-### <a name="remarks"></a>コメント  
- 印刷されるページごとに、フレームワークを呼び出し、この関数呼び出し直後後、 [OnPrepareDC](#onpreparedc)メンバー関数。 印刷されるページが指定された、`m_nCurPage`のメンバー、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)構造体`pInfo`を指します。 既定の実装、 [OnDraw](#ondraw)メンバー関数はプリンター デバイス コンテキストを渡します。  
+### <a name="remarks"></a>Remarks  
+ 印刷されるページごとに、フレームワークを呼び出し、この関数呼び出し直後後、 [OnPrepareDC](#onpreparedc)メンバー関数。 印刷されるページが指定された、`m_nCurPage`のメンバー、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)構造体*pInfo*を指します。 既定の実装、 [OnDraw](#ondraw)メンバー関数はプリンター デバイス コンテキストを渡します。  
   
  次の理由のいずれかに対してこの関数をオーバーライドします。  
   
@@ -690,7 +691,7 @@ virtual void OnPrint(
   
 -   ヘッダーまたはフッターを実装します。 使用することもできます`OnDraw`で印刷できる領域を制限することで、表示を行う。  
   
- なお、 **m_rectDraw**のメンバー、`pInfo`パラメーターは、論理ユニットのページの印刷可能領域をについて説明します。  
+ なお、`m_rectDraw`のメンバー、 *pInfo*パラメーターは、論理ユニットのページの印刷可能領域をについて説明します。  
   
  呼び出す必要はありません`OnPrepareDC`のオーバーライドで`OnPrint`以外の場合は、フレームワークによって`OnPrepareDC`呼び出す前に自動的に`OnPrint`です。  
   
@@ -712,34 +713,34 @@ virtual BOOL OnScroll(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nScrollCode`  
+ *nScrollCode*  
  スクロール バーのコードをユーザーを示すには、要求のスクロールします。 このパラメーターは 2 つの部分で構成されます: を水平方向にスクロール発生の種類を決定するには、下位バイトおよび高位バイトのことで、垂直方向にスクロール発生の種類を決定します。  
   
-- **SB_BOTTOM**一番下までスクロールします。  
+- 下へスクロールする SB_BOTTOM。  
   
-- **SB_LINEDOWN**が 1 行下へスクロールします。  
+- 1 行下 SB_LINEDOWN 上にスクロールします。  
   
-- **SB_LINEUP**を 1 つの行にスクロールします。  
+- 1 行上 SB_LINEUP 上にスクロールします。  
   
-- **SB_PAGEDOWN**が 1 ページ下へスクロールします。  
+- 1 つ page down SB_PAGEDOWN スクロール。  
   
-- **SB_PAGEUP**を 1 つのページをスクロールします。  
+- 1 つのページを SB_PAGEUP スクロールします。  
   
-- **SB_THUMBTRACK**指定した位置にスクロール ボックスをドラッグします。 現在の位置を指定`nPos`です。  
+- SB_THUMBTRACK ドラッグは、指定した位置にボックスをスクロールします。 現在の位置を指定*nPos*です。  
   
-- **SB_TOP**上部までスクロールします。  
+- ページのトップへ SB_TOP にスクロールします。  
   
- `nPos`  
- スクロール バーのコードがある場合、現在のスクロール ボックスの位置を含む**SB_THUMBTRACK**です。 それ以外の場合は使用されません。 初期のスクロールの範囲に応じて`nPos`が負の数およびにキャストする必要があります、`int`必要な場合です。  
+ *nPos*  
+ 現在のスクロール ボックスの位置が含まれる場合、スクロール バーのコードは SB_THUMBTRACK;それ以外の場合は使用されません。 初期のスクロールの範囲に応じて*nPos*が負の数およびにキャストする必要があります、 **int**必要な場合です。  
   
- `bDoScroll`  
- 指定されたスクロール動作を実際に行うかどうかを判断します。 場合**true の場合、**スクロールを行う; 場合、 **FALSE**、スクロールする必要がありますが実行されません。  
+ *bDoScroll*  
+ 指定されたスクロール動作を実際に行うかどうかを判断します。 TRUE の場合、スクロールし、処理を実行します。FALSE の場合、スクロールしは発生しません。  
   
 ### <a name="return-value"></a>戻り値  
- 場合`bDoScroll`は**TRUE**とビューをスクロール実際には、戻りますは 0 以外。 それ以外の場合 0 です。 場合`bDoScroll`は**FALSE**、するが返される場合、値を返す`bDoScroll`された**TRUE**場合でも、実際には、スクロールを行わないと、します。  
+ 場合*bDoScroll*戻りますは 0 以外。 それ以外の場合、TRUE は、ビューをスクロール実際には 0 です。 場合*bDoScroll*が FALSE でが返された場合は値を返します*bDoScroll*場合でも、実際には、スクロールを行わないと、true の場合がします。  
   
-### <a name="remarks"></a>コメント  
- 1 つのケースで、この関数がフレームワークによって呼び出されます`bDoScroll`'éý' **TRUE**ビューがスクロール バーのメッセージを受信するとします。 この場合、ビューを実際にスクロールする必要があります。 その他の場合は、この関数が呼び出されます`bDoScroll`'éý' **FALSE** OLE 項目が最初にドロップときのドロップ ターゲットの自動スクロール領域にスクロール実際に行われる前にします。 ここでは、する必要がありますいない実際にビューをスクロールします。  
+### <a name="remarks"></a>Remarks  
+ 1 つのケースで、この関数がフレームワークによって呼び出されます*bDoScroll*ビューが、スクロール バーのメッセージを受信すると、TRUE に設定します。 この場合、ビューを実際にスクロールする必要があります。 その他の場合は、この関数が呼び出されます*bDoScroll* OLE アイテムはスクロール実際に行われる前に、最初にドロップ ターゲットの自動スクロール領域にドラッグすると、FALSE に設定します。 ここでは、する必要がありますいない実際にビューをスクロールします。  
   
 ##  <a name="onscrollby"></a>  CView::OnScrollBy  
  ユーザーがビューの現在の罫線に対して OLE 項目をドラッグして、または垂直方向または水平方向のスクロール バーを操作することで、ドキュメントの存在のビューを超える領域を表示するときに、フレームワークによって呼び出されます。  
@@ -751,21 +752,21 @@ virtual BOOL OnScrollBy(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `sizeScroll`  
+ *sizeScroll*  
  ピクセル数は、水平方向および垂直方向にスクロールします。  
   
- `bDoScroll`  
- ビューのスクロールするかどうかを判断します。 場合**true の場合、**場合; スクロールの受け取りを配置し、 **FALSE**、スクロールは発生しません。  
+ *bDoScroll*  
+ ビューのスクロールするかどうかを判断します。 TRUE の場合、スクロールし、行われる。FALSE の場合、スクロールし、発生しません。  
   
 ### <a name="return-value"></a>戻り値  
  ビューがこの方向にスクロールするできた場合は 0 以外。それ以外の場合 0 を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  派生クラスでは、このメソッドは、ビューは、ユーザーが要求され、必要に応じて、新しい領域を更新し、方向にスクロールできるかどうかを確認します。 この関数は自動的に呼び出されます[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)と[ために](../../mfc/reference/cwnd-class.md#onvscroll)を実際のスクロールの要求を実行します。  
   
  このメソッドの既定の実装には、ビューは変わりませんが呼び出されない場合、ビューをスクロールするのには`CScrollView`-クラスを派生します。  
   
- ドキュメントの幅または高さが 32767 ピクセルを超えると、過去の 32767 スクロールのため失敗します`OnScrollBy`が正しくないと呼びます`sizeScroll`引数。  
+ ドキュメントの幅または高さが 32767 ピクセルを超えると、過去の 32767 スクロールのため失敗します`OnScrollBy`が正しくないと呼びます*sizeScroll*引数。  
   
 ##  <a name="onupdate"></a>  CView::OnUpdate  
  ビューのドキュメントが変更された後に、フレームワークによって呼び出されますこの関数は[CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews)と、それらの変更を反映するように表示を更新します。  
@@ -778,23 +779,23 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pSender`  
- ドキュメントを変更するビューへのポインターまたは**NULL**場合、すべてのビューを更新します。  
+ *pSender*  
+ ドキュメントを変更するビューへのポインターまたはすべてのビューは、更新する場合は NULL です。  
   
- `lHint`  
+ *lHint*  
  変更についての情報が含まれています。  
   
- `pHint`  
+ *pHint*  
  変更についての情報を格納するオブジェクトへのポインター。  
   
-### <a name="remarks"></a>コメント  
- 既定の実装によって呼び出されますも[フィルターと並べ替え順序](#oninitialupdate)です。 既定の実装がクライアント領域全体、ときに描画するためにマークを無効になります次`WM_PAINT`メッセージを受信します。 ドキュメントの変更後の部分に割り当てられた領域のみを更新する場合は、この関数をオーバーライドします。 これを行うには、ヒントのパラメーターを使用して変更についての情報を渡す必要があります。  
+### <a name="remarks"></a>Remarks  
+ 既定の実装によって呼び出されますも[フィルターと並べ替え順序](#oninitialupdate)です。 既定の実装には、全体のクライアント領域で、[次へ] の WM_PAINT メッセージを受信すると、描画のマークすることが無効になります。 ドキュメントの変更後の部分に割り当てられた領域のみを更新する場合は、この関数をオーバーライドします。 これを行うには、ヒントのパラメーターを使用して変更についての情報を渡す必要があります。  
   
- 使用する`lHint`ビットマスクまたは列挙型では、通常、特別なヒントの値を定義、およびドキュメントをこれらの値のいずれかを渡します。 使用する`pHint`からヒント クラスを派生[CObject](../../mfc/reference/cobject-class.md)ドキュメントをオーバーライドする場合のヒントにポインターを渡す`OnUpdate`を使用して、[使うため](../../mfc/reference/cobject-class.md#iskindof)するメンバー関数ヒント オブジェクトの実行時の型を決定します。  
+ 使用する*lHint*ビットマスクまたは列挙型では、通常、特別なヒントの値を定義、およびドキュメントをこれらの値のいずれかを渡します。 使用する*pHint*からヒント クラスを派生[CObject](../../mfc/reference/cobject-class.md)ドキュメントをオーバーライドする場合のヒントにポインターを渡す`OnUpdate`を使用して、[使うため](../../mfc/reference/cobject-class.md#iskindof)ヒント オブジェクトの実行時の型を決定するメンバー関数。  
   
  通常実行するいずれかから直接描画`OnUpdate`です。 代わりに、デバイスの座標で、更新; が必要な領域を示す四角形を決定します。この四角形を渡す[エディット](../../mfc/reference/cwnd-class.md#invalidaterect)です。 これを次に行うことが原因で、 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)メッセージを受信します。  
   
- 場合`lHint`は 0 と`pHint`は**NULL**ドキュメントが汎用的な更新の通知を送信します。 ビューは、汎用的な更新プログラムの通知を受信した場合、または、ヒントをデコードできない場合は、そのクライアント領域全体を無効にします。  
+ 場合*lHint*は 0 と*pHint* NULL の場合は、ドキュメントが汎用的な更新の通知を送信します。 ビューは、汎用的な更新プログラムの通知を受信した場合、または、ヒントをデコードできない場合は、そのクライアント領域全体を無効にします。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプルは](../../visual-cpp-samples.md)   

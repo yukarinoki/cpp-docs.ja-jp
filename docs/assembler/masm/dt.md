@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055555"
 ---
 # <a name="dt"></a>DT
 割り当て、必要に応じて各 10 バイトのストレージを初期化`initializer`です。 型指定子として使用することも、型が有効な任意の場所。 `DT` シノニムは、 [TBYTE](../../assembler/masm/tbyte.md)です。  

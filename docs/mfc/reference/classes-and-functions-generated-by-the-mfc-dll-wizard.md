@@ -1,5 +1,5 @@
 ---
-title: クラスと MFC DLL ウィザードによって生成される関数 |Microsoft ドキュメント
+title: クラスと MFC DLL ウィザードによって生成される関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda791b5b064ff40e0df0a411e0a4e90e7e2c91a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd1b1d65148a951ba78e0408ab590a2c979648f7
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339580"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL ウィザードによって生成されるクラスと関数
-MFC DLL ウィザードによって生成されるコードは、DLL を作成し、選択したオプションの種類によって異なります。 MFC DLL ウィザードでは、標準の MFC Dll の両方の形式を同じコードを生成します。  
+MFC DLL ウィザードによって生成されるコードは、DLL を作成して、選択したオプションの種類によって異なります。 MFC DLL ウィザードでは、レギュラー MFC Dll の両方の形式の同じコードを生成します。  
   
 |DLL の種類|オプション|クラス|関数|  
 |-----------------|------------|-------------|---------------|  
 |[拡張機能](../../build/extension-dlls-overview.md)|なし|なし|`DllMain`|  
-|[通常](../../build/regular-dlls-dynamically-linked-to-mfc.md)|なし|を派生したアプリケーション クラス `CWinApp`|なし|  
-|[通常](../../build/regular-dlls-dynamically-linked-to-mfc.md)|オートメーション|を派生したアプリケーション クラス `CWinApp`|**DllGetClassObjectDllCanUnloadNowDllRegisterServer**|  
+|[正規表現](../../build/regular-dlls-dynamically-linked-to-mfc.md)|なし|を派生したクラスのアプリケーション `CWinApp`|なし|  
+|[正規表現](../../build/regular-dlls-dynamically-linked-to-mfc.md)|オートメーション|を派生したクラスのアプリケーション `CWinApp`|`DllGetClassObjectDllCanUnloadNowDllRegisterServer`|  
 |[拡張機能](../../build/extension-dlls-overview.md)|ウィンドウのソケット|なし|`DllMain`|  
-|[通常](../../build/regular-dlls-dynamically-linked-to-mfc.md)|ウィンドウのソケット|を派生したアプリケーション クラス `CWinApp`|`InitInstance` 呼び出しが含まれています `AfxSocketInit`|  
+|[正規表現](../../build/regular-dlls-dynamically-linked-to-mfc.md)|ウィンドウのソケット|を派生したクラスのアプリケーション `CWinApp`|`InitInstance` 呼び出しが含まれています `AfxSocketInit`|  
   
 ## <a name="see-also"></a>関連項目  
  [MFC DLL ウィザード](../../mfc/reference/mfc-dll-wizard.md)

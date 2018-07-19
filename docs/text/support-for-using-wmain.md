@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856489"
 ---
 # <a name="support-for-using-wmain"></a>wmain の使用
 Visual C のサポートを定義する、 **wmain**関数を Unicode アプリケーションにワイド文字の引数を渡すことです。 仮パラメーターを宣言する**wmain**と同様の形式を使用して**メイン**です。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 例えば:  

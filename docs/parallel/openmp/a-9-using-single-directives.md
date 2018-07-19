@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690382"
 ---
 # <a name="a9---using-single-directives"></a>A.9 single ディレクティブの使用
 次の例で、`single`ディレクティブ ([セクション 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) [15] ページ)。 例では、1 つのスレッド (通常、最初のスレッドが発生した、`single`ディレクティブ)、進行状況メッセージを出力します。 ユーザー必要があります、どのスレッドは実行するようにどのような想定を行わない、`single`セクションです。 その他のすべてのスレッドはスキップされます、`single`セクションし、最後のバリアを停止、`single`を構築します。 その他のスレッドがスレッドを実行するために待機することがなく続行できないかどうか、 `single`  セクションで、`nowait`に句を指定することができます、`single`ディレクティブです。  

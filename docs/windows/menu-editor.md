@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879439"
 ---
 # <a name="menu-editor"></a>メニュー エディター
 メニューを使用すると、論理的かつ見つけやすい方法でコマンドを配置できます。 メニュー エディターでは、完成したアプリケーションとよく似たメニュー バーを直接操作することでメニューの作成と編集ができます。  

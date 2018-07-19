@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386905"
 ---
 # <a name="array-declarations"></a>配列の宣言
 "配列宣言" では、配列に名前を付けて、その要素の型を指定します。 また、配列の要素数も定義できます。 配列型の変数は、配列要素の型へのポインターと見なされます。  

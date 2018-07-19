@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388116"
 ---
 # <a name="storage-of-basic-types"></a>基本型の格納
 次の表は、各基本型に関連付けられたストレージをまとめたものです。  

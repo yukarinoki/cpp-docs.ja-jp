@@ -1,5 +1,5 @@
 ---
-title: MSG Structure1 |Microsoft ドキュメント
+title: MSG Structure1 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338813"
 ---
 # <a name="msg-structure1"></a>MSG Structure1
 `MSG`構造体には、スレッドのメッセージ キューからメッセージの情報が含まれています。  
@@ -42,22 +43,22 @@ typedef struct tagMSG {     // msg
  *hwnd*  
  ウィンドウ プロシージャがメッセージを受け取るウィンドウを識別します。  
   
- `message`  
- メッセージ番号を指定します。  
+ *message*  
+ メッセージの数を指定します。  
   
- `wParam`  
- メッセージに関する追加情報を指定します。 厳密な意味は、の値によって異なります、**メッセージ**メンバー。  
+ *wParam*  
+ メッセージに関する追加情報を指定します。 厳密な意味は、の値によって異なります、`message`メンバー。  
   
- `lParam`  
- メッセージに関する追加情報を指定します。 厳密な意味は、の値によって異なります、**メッセージ**メンバー。  
+ *lParam*  
+ メッセージに関する追加情報を指定します。 厳密な意味は、の値によって異なります、`message`メンバー。  
   
- `time`  
- メッセージがポストされた時間を指定します。  
+ *time*  
+ メッセージが投稿された時刻を指定します。  
   
- `pt`  
- メッセージがポストされたときに、カーソルの位置を画面座標を指定します。  
+ *pt*  
+ カーソルの位置を画面座標では、メッセージがポストされたときに指定します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** winuser.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880531"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>[イメージ] メニュー (アイコン用イメージ エディター)
 イメージ エディターがアクティブな場合にのみが表示されたら、[イメージ] メニューには、イメージを編集、カラー パレットを管理およびイメージ エディター ウィンドウのオプションを設定するコマンドがあります。 さらに、アイコンとカーソルを使用する場合は、デバイスのイメージを使用するためのコマンドを使用。  

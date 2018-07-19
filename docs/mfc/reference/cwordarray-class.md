@@ -52,11 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf19865b4c11bb8305bea62b3682faebe39bef74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 562f0eff1470a4754d3eaac15a94d08fefb95951
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123020"
 ---
 # <a name="cwordarray-class"></a>CWordArray クラス
 16 ビットのワードの配列をサポートします。  
@@ -68,7 +69,7 @@ class CWordArray : public CObject
 ```  
   
 ## <a name="members"></a>メンバー  
- メンバー関数は、`CWordArray`クラスのメンバー関数に似ています[CObArray](../../mfc/reference/cobarray-class.md)です。 メンバー関数については `CObArray` クラスの説明を参照してください。 任意の場所が表示、 [CObject](../../mfc/reference/cobject-class.md)ポインター関数パラメーターまたは戻り値は、置換、 **WORD**です。  
+ メンバー関数は、`CWordArray`クラスのメンバー関数に似ています[CObArray](../../mfc/reference/cobarray-class.md)です。 メンバー関数については `CObArray` クラスの説明を参照してください。 任意の場所が表示、 [CObject](../../mfc/reference/cobject-class.md)関数パラメーターまたは戻り値としてのポインターが単語を置換します。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
@@ -93,7 +94,7 @@ class CWordArray : public CObject
 |[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|  
 |[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|指定されたインデックス位置にある値を返します。|  
 |[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|この配列内の要素の数を取得します。|  
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 指定できます**NULL**です。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|  
 |[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|この配列内の要素の数を取得します。|  
 |[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|有効な最大のインデックスを返します。|  
 |[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|  
@@ -110,7 +111,7 @@ class CWordArray : public CObject
 |----------|-----------------|  
 |[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CWordArray` 組み込まれており、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロをシリアル化とその要素のダンプをサポートします。 単語の配列がアーカイブか、オーバー ロードされた挿入演算子のいずれかに格納されている場合、 [cobject::serialize](../../mfc/reference/cobject-class.md#serialize)メンバー関数は、各要素は、逆に、シリアル化します。  
   
 > [!NOTE]
@@ -125,7 +126,7 @@ class CWordArray : public CObject
   
  `CWordArray`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxcoll.h  
   
 ##  <a name="icommandsource_interface"></a>  関数のインターフェイス  
@@ -135,7 +136,7 @@ class CWordArray : public CObject
 interface class ICommandSource  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  MFC ビュー内のユーザー コントロールをホストしている場合[CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 実装すると、割り当てるユーザー コントロールへの参照、`ICommandSource`オブジェクト。  
   
  参照してください[する方法: Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)の使用方法の例については`ICommandTarget`します。  
@@ -152,14 +153,14 @@ void AddCommandHandler(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
+ *cmdID*  
  コマンド ID。  
   
- `cmdHandler`  
+ *cmdHandler*  
  コマンド ハンドラー メソッドへのハンドル。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、コマンド ハンドラーを追加`cmdHandler`コマンド ソース オブジェクトにし、そのハンドラーに`cmdID`です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、コマンド ハンドラーを追加*cmdHandler*コマンド ソース オブジェクトにし、そのハンドラーに*cmdID*です。  
   
  参照してください[する方法: Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)の使用方法の例については`AddCommandHandler`します。  
   
@@ -174,16 +175,16 @@ void AddCommandRangeHandler(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdIDMin`  
+ *cmdIDMin*  
  コマンド ID 範囲の開始インデックス。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  コマンド ID 範囲の終了インデックスです。  
   
- `cmdHandler`  
+ *cmdHandler*  
  コマンドがマップされているメッセージ ハンドラー メソッドへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、1 つのメッセージ ハンドラーに連続した範囲のコマンド Id をマップし、コマンド ソース オブジェクトに追加します。 これは、は、1 つのメソッドを使用して関連するボタンのグループを処理するために使用されます。  
   
 ##  <a name="addcommandrangeuihandler"></a>  ICommandSource::AddCommandRangeUIHandler  
@@ -197,16 +198,16 @@ void AddCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdIDMin`  
+ *cmdIDMin*  
  コマンド ID 範囲の開始インデックス。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  コマンド ID 範囲の終了インデックスです。  
   
- `cmdHandler`  
+ *cmdHandler*  
  コマンドがマップされているメッセージ ハンドラー メソッドへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、1 人のユーザー インターフェイスのコマンドのメッセージ ハンドラーに連続した範囲のコマンド Id をマップし、コマンド ソース オブジェクトに追加します。 これは、は、1 つのメソッドを使用して関連するボタンのグループを処理するために使用されます。  
   
 ##  <a name="addcommanduihandler"></a>  ICommandSource::AddCommandUIHandler  
@@ -219,14 +220,14 @@ void AddCommandUIHandler(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
+ *cmdID*  
  コマンド ID。  
   
- `cmdUIHandler`  
+ *cmdUIHandler*  
  ユーザー インターフェイスのコマンドのメッセージ ハンドラー メソッドへのハンドル。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、ユーザー インターフェイスのコマンドのメッセージ ハンドラーを追加`cmdHandler`コマンド ソース オブジェクトにし、そのハンドラーに`cmdID`です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、ユーザー インターフェイスのコマンドのメッセージ ハンドラーを追加*cmdHandler*コマンド ソース オブジェクトにし、そのハンドラーに*cmdID*です。  
   
 ##  <a name="postcommand"></a>  ICommandSource::PostCommand  
  処理されるまで待つことがなく、メッセージをポストします。  
@@ -236,11 +237,11 @@ void PostCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `command`  
+ *command*  
  メッセージをポストのコマンド ID。  
   
-### <a name="remarks"></a>コメント  
- このメソッドで指定した ID にマップされているメッセージを非同期的にポスト`command`です。 呼び出す[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)ウィンドウのメッセージ キューと返しますに対応するウィンドウ メッセージを処理するを待たず、メッセージを配置します。  
+### <a name="remarks"></a>Remarks  
+ このメソッドで指定した ID にマップされているメッセージを非同期的にポスト*コマンド*です。 呼び出す[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)ウィンドウのメッセージ キューと返しますに対応するウィンドウ メッセージを処理するを待たず、メッセージを配置します。  
   
 ##  <a name="removecommandhandler"></a>  ICommandSource::RemoveCommandHandler  
  コマンド ソース オブジェクトから、コマンド ハンドラーを削除します。  
@@ -250,11 +251,11 @@ void RemoveCommandHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
+ *cmdID*  
  コマンド ID。  
   
-### <a name="remarks"></a>コメント  
- このメソッドにマップされているコマンド ハンドラーを削除する`cmdID`コマンド ソース オブジェクトからです。  
+### <a name="remarks"></a>Remarks  
+ このメソッドにマップされているコマンド ハンドラーを削除する*cmdID*コマンド ソース オブジェクトからです。  
   
 ##  <a name="removecommandrangehandler"></a>  ICommandSource::RemoveCommandRangeHandler  
  コマンド ソース オブジェクトから一連のコマンド ハンドラーを削除します。  
@@ -266,14 +267,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdIDMin`  
+ *cmdIDMin*  
  コマンド ID 範囲の開始インデックス。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  コマンド ID 範囲の終了インデックスです。  
   
-### <a name="remarks"></a>コメント  
- このメソッドによって指定されたコマンド Id にマップされているメッセージ ハンドラーのグループを削除して`cmdIDMin`と`cmdIDMax`、コマンド ソース オブジェクトからです。  
+### <a name="remarks"></a>Remarks  
+ このメソッドによって指定されたコマンド Id にマップされているメッセージ ハンドラーのグループを削除して*cmdIDMin*と*cmdIDMax*、コマンド ソース オブジェクトからです。  
   
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler  
  コマンド ソース オブジェクトからのユーザー インターフェイスのコマンドのメッセージ ハンドラーのグループを削除します。  
@@ -285,14 +286,14 @@ void RemoveCommandRangeUIHandler(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdIDMin`  
+ *cmdIDMin*  
  コマンド ID 範囲の開始インデックス。  
   
- `cmdIDMax`  
+ *cmdIDMax*  
  コマンド ID 範囲の終了インデックスです。  
   
-### <a name="remarks"></a>コメント  
- このメソッドによって指定されたコマンド Id にマップされている、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除して`cmdIDMin`と`cmdIDMax`、コマンド ソース オブジェクトからです。  
+### <a name="remarks"></a>Remarks  
+ このメソッドによって指定されたコマンド Id にマップされている、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除して*cmdIDMin*と*cmdIDMax*、コマンド ソース オブジェクトからです。  
   
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler  
  コマンド ソース オブジェクトからのユーザー インターフェイスのコマンドのメッセージ ハンドラーを削除します。  
@@ -302,11 +303,11 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdID`  
+ *cmdID*  
  コマンド ID。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、ユーザー インターフェイス コマンド メッセージ ハンドラーにマップを削除`cmdID`コマンド ソース オブジェクトからです。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、ユーザー インターフェイス コマンド メッセージ ハンドラーにマップを削除*cmdID*コマンド ソース オブジェクトからです。  
   
 ##  <a name="sendcommand"></a>  ICommandSource::SendCommand  
  メッセージを送信し、返す前に処理されるまで待機します。  
@@ -316,11 +317,11 @@ void SendCommand(unsigned int command);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `command`  
+ *command*  
  送信されるメッセージのコマンド ID。  
   
-### <a name="remarks"></a>コメント  
- このメソッドで指定した ID に割り当てられたメッセージを同期的に送信する`command`です。 呼び出す[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)ウィンドウ プロシージャが返す前に、メッセージが処理されるまでに、ウィンドウのメッセージ キューと待機にメッセージを配置します。  
+### <a name="remarks"></a>Remarks  
+ このメソッドで指定した ID に割り当てられたメッセージを同期的に送信する*コマンド*です。 呼び出す[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)ウィンドウ プロシージャが返す前に、メッセージが処理されるまでに、ウィンドウのメッセージ キューと待機にメッセージを配置します。  
   
 ##  <a name="icommandtarget_interface"></a>  ICommandTarget インターフェイス  
  コマンド ソース オブジェクトからのコマンドを受信するインターフェイスを使用するユーザー コントロールを提供します。  
@@ -329,7 +330,7 @@ void SendCommand(unsigned int command);
 interface class ICommandTarget  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  MFC ビュー内のユーザー コントロールをホストしている場合[CWinFormsView](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 実装することによって`ICommandTarget`、ユーザー コントロールに、オブジェクトへの参照を提供します。  
   
  参照してください[する方法: Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)の使用方法の例については`ICommandTarget`します。  
@@ -344,13 +345,13 @@ void Initialize(ICommandSource^ cmdSource);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `cmdSource`  
+ *cmdSource*  
  コマンド ソース オブジェクトへのハンドル。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  MFC ビュー内のユーザー コントロールをホストしている場合[CWinFormsView](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンドを処理できるようにします。  
   
- このメソッドは、コマンド ターゲット オブジェクトを初期化し、指定したコマンドのソース オブジェクトに関連付けます`cmdSource`です。 ユーザー コントロール クラスの実装で呼び出す必要があります。 初期化でする必要がありますに登録するコマンド ハンドラー コマンド ソース オブジェクトを呼び出して[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)で、`Initialize`実装します。 参照してください[する方法: Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)の使用方法の例については`Initialize`これを行う。  
+ このメソッドは、コマンド ターゲット オブジェクトを初期化し、指定したコマンドのソース オブジェクトに関連付けます*cmdSource*です。 ユーザー コントロール クラスの実装で呼び出す必要があります。 初期化でする必要がありますに登録するコマンド ハンドラー コマンド ソース オブジェクトを呼び出して[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)で、`Initialize`実装します。 参照してください[する方法: Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)の使用方法の例については`Initialize`これを行う。  
   
 ##  <a name="icommandui_interface"></a>  ICommandUI インターフェイス  
  ユーザー インターフェイスのコマンドを管理します。  
@@ -359,7 +360,7 @@ void Initialize(ICommandSource^ cmdSource);
 interface class ICommandUI  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このインターフェイスは、ユーザー インターフェイスのコマンドを管理するメソッドとプロパティを提供します。 `ICommandUI` ような[CCmdUI クラス](../../mfc/reference/ccmdui-class.md)する点を除いて、 `ICommandUI` .NET コンポーネントと相互運用可能な MFC アプリケーションのために使用します。  
   
  `ICommandUI` 内で使用される、`ON_UPDATE_COMMAND_UI`ハンドラーの派生クラスでします。 有効になっていると、各メニュー項目、メニューが表示されます (選択またはクリックする) アプリケーションのユーザーがアクティブにしたときまたは無効にします。 各メニュー コマンドのターゲットが実装することでこの情報を提供する`ON_UPDATE_COMMAND_UI`ハンドラー。 アプリケーション内のコマンドのユーザー インターフェイス オブジェクトごとに、[プロパティ] ウィンドウを使用して、メッセージ マップ エントリと各ハンドラーの関数プロトタイプを作成します。  
@@ -377,7 +378,7 @@ interface class ICommandUI
 property UICheckState Check;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態を設定します。 設定`Check`次の値にします。  
   
 |用語|定義|  
@@ -393,8 +394,8 @@ property UICheckState Check;
 void ContinueRouting();
 ```  
   
-### <a name="remarks"></a>コメント  
- これは、高度なメンバー関数と組み合わせて使用する、 [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)返すハンドラー`FALSE`です。 詳細については、テクニカル ノートを参照してください。 [TN006: メッセージ マップ](../../mfc/tn006-message-maps.md)です。  
+### <a name="remarks"></a>Remarks  
+ これは、高度なメンバー関数と組み合わせて使用する、 [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)ハンドラーを FALSE を返します。 詳細については、テクニカル ノートを参照してください。 [TN006: メッセージ マップ](../../mfc/tn006-message-maps.md)です。  
   
 ##  <a name="enabled"></a>  ICommandUI::Enabled  
  有効またはこのコマンドのユーザー インターフェイス項目を無効にします。  
@@ -403,8 +404,8 @@ void ContinueRouting();
 property bool Enabled;  
 ```  
   
-### <a name="remarks"></a>コメント  
- このプロパティは、有効またはこのコマンドのユーザー インターフェイス項目を無効にします。 設定`Enabled`に`TRUE`、項目を有効にする`FALSE`を無効にします。  
+### <a name="remarks"></a>Remarks  
+ このプロパティは、有効またはこのコマンドのユーザー インターフェイス項目を無効にします。 設定`Enabled`で無効にする false の場合、項目を有効にする場合は TRUE にします。  
   
 ##  <a name="id"></a>  ICommandUI::ID  
  によって表されるユーザー インターフェイス オブジェクトの ID を取得、`ICommandUI`オブジェクト。  
@@ -413,7 +414,7 @@ property bool Enabled;
 property unsigned int ID;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このプロパティは、ツール バー ボタン、メニュー項目の ID (ハンドル) を取得またはその他のユーザー インターフェイス オブジェクトで表されます、`ICommandUI`オブジェクト。  
   
 ##  <a name="index"></a>  ICommandUI::Index  
@@ -423,7 +424,7 @@ property unsigned int ID;
 property unsigned int Index;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このプロパティは、ツール バー ボタン、メニュー項目のインデックス (ハンドル) を取得またはその他のユーザー インターフェイス オブジェクトで表されます、`ICommandUI`オブジェクト。  
   
 ##  <a name="radio"></a>  ICommandUI::Radio  
@@ -433,8 +434,8 @@ property unsigned int Index;
 property bool Radio;  
 ```  
   
-### <a name="remarks"></a>コメント  
- このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態を設定します。 設定`Radio`に`TRUE`; 項目を有効にするそれ以外の場合`FALSE`です。  
+### <a name="remarks"></a>Remarks  
+ このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態を設定します。 設定`Radio`項目です。 それ以外の場合は FALSE を有効にする場合は TRUE にします。  
   
 ##  <a name="text"></a>  ICommandUI::Text  
  このコマンドのユーザー インターフェイスの項目のテキストを設定します。  
@@ -443,7 +444,7 @@ property bool Radio;
 property String^ Text;  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このプロパティは、このコマンドのユーザー インターフェイスのアイテムのテキストを設定します。 設定`Text`をテキスト文字列のハンドル。  
   
 ##  <a name="iview_interface"></a>  IView インターフェイス  
@@ -453,7 +454,7 @@ property String^ Text;
 interface class IView  
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  `IView` いくつかのメソッドを実装する`CWinFormsView`を使用してホストされるマネージ コントロールに共通の通知の表示を転送します。 これらは[フィルターと並べ替え順序](../../mfc/reference/iview-interface.md)、 [OnUpdate](../../mfc/reference/iview-interface.md)と[OnActivateView](../../mfc/reference/iview-interface.md)です。  
   
  `IView` ような[CView](../../mfc/reference/cview-class.md)が管理対象のビューおよびコントロールでのみ使用されます。  
@@ -468,7 +469,7 @@ void OnActivateView(bool activate);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `activate`  
+ *アクティブ化します。*  
  表示されているかどうかを示しますがアクティブまたは非アクティブ化します。  
   
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate  
@@ -485,7 +486,7 @@ void OnInitialUpdate();
 void OnUpdate();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  この機能は、変更を反映するには、その表示を更新するビューを使用します。  
   
 ## <a name="see-also"></a>関連項目  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317480"
 ---
 # <a name="project-build-error-prj0006"></a>プロジェクト ビルド エラー PRJ0006
 一時ファイル 'file' を開けませんでした。 ファイルが存在し、ディレクトリ書き込みで保護されていないことを確認してください。  

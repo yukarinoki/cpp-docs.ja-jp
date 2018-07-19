@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692653"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate ディレクティブ
 `threadprivate`ディレクティブによって、ファイルの名前付きスコープ、名前空間スコープ、または静的ブロック スコープ変数で指定された、*変数一覧*スレッドに対してプライベートです。 *変数リスト*不完全な型を持たない変数のコンマ区切り一覧を示します。 構文、`threadprivate`ディレクティブは、次のようにします。  

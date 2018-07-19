@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367434"
 ---
 # <a name="environment-variable-macros"></a>環境変数マクロ
 (Nmake の) は、セッションの開始前に存在する環境変数のマクロ定義を継承します。 変数は、オペレーティング システムの環境で設定されている場合は、NMAKE マクロとして使用できます。 継承された名前は大文字に変換します。 継承は、前処理する前に発生します。 /E オプションを使用して、メイクファイルで同じ名前を持つすべてのマクロをオーバーライドする環境変数から継承されたマクロが発生します。  

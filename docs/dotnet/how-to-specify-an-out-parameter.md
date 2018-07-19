@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128294"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>方法: out パラメーターを指定する
 このサンプルでは、関数のパラメーターが出力パラメーターであることを指定する方法と、c# プログラムからその関数を呼び出す方法を示します。  

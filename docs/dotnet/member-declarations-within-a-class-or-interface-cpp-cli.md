@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135119"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>クラスまたはインターフェイス内でのメンバー宣言 (C++/CLI)
 プロパティおよび演算子の宣言が広範な見直され、マネージ拡張から C++ の Visual C、マネージ拡張のデザインで公開されている基になる実装の詳細を非表示にします。 イベントの宣言は、同様に変更されています。  

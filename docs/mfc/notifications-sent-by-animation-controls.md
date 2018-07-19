@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345249"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>アニメーション コントロールによる通知の送信
 アニメーション コントロール ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) 2 つのさまざまな種類の通知メッセージを送信します。 形式で、通知を送信[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)メッセージ。  

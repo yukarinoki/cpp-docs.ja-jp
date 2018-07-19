@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373843"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (著作権情報の非表示) (C/C++)
 コンパイル中に情報メッセージの表示と、コンパイラの起動時に著作権の見出しの表示を抑制します。  

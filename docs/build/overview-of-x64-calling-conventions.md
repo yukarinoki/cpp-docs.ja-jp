@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374909"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 呼び出し規則の概要
 X86 の 2 つの重要な違いと[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]は 64 ビット アドレッシング機能と、一般的な用途のレジスタを 64 ビットの 16 のフラットなセット。 展開した特定の登録のセット、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]を使用して、 [_ _fastcall](../cpp/fastcall.md)呼び出し規約および RISC ベースの例外処理モデル。 `__fastcall`規則では、最初の 4 つの引数と、スタック フレームのレジスタを使用して、追加の引数を渡します。  

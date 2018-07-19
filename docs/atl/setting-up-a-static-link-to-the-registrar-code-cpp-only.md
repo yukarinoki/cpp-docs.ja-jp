@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360189"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>レジストラー コード (C++ のみ) への静的リンクを設定します。
 C++ のクライアントは、レジストラーのコードに静的なリンクを作成できます。 リリース ビルドを約 5 K を追加、レジストラーのパーサーの静的にリンクします。  

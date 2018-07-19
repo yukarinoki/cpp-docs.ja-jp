@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384425"
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>有効期間、スコープ、可視性、およびリンケージ
 C プログラムの動作を理解するには、変数と関数がプログラム内でどのように使用されるかを決定する規則を理解する必要があります。 そのためには、次の概念が不可欠です。  

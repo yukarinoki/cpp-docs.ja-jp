@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73aa47a2d888c88dd58d114dd4f5ca9a3f086cd3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956253"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>ツリー コントロールのドラッグ アンド ドロップ操作
-ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))、ユーザーが項目のドラッグを開始すると、通知を送信します。 コントロールが送信、 [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) 、ユーザーがマウスの左ボタンを持つ項目のドラッグを始めたときに通知メッセージと[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)ユーザーがのドラッグを始めたときに通知メッセージ右ボタンをクリックします。 ツリー コントロールのツリー コントロールを付けることでこれらの通知を送信されないようにできます、 **TVS_DISABLEDRAGDROP**スタイル。  
+ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))、ユーザーが項目のドラッグを開始すると、通知を送信します。 コントロールが送信、 [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) 、ユーザーがマウスの左ボタンを持つ項目のドラッグを始めたときに通知メッセージと[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)ユーザーがのドラッグを始めたときに通知メッセージ右ボタンをクリックします。 ツリー コントロールは、これらの通知を送信する TVS_DISABLEDRAGDROP スタイルのツリー コントロールが提供されないようにできます。  
   
  呼び出すことによって、ドラッグ操作中に表示するイメージを取得する、 [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage)メンバー関数。 ツリー コントロールでは、ドラッグされている項目のラベルに基づくドラッグ用のビットマップを作成します。 ツリー コントロールのイメージ リストを作成、ビットマップを追加し、されへのポインターを返します、 [CImageList](../mfc/reference/cimagelist-class.md)オブジェクト。  
   

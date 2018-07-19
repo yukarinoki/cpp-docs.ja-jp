@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/21/2018
+ms.locfileid: "34422681"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトの構成
 このトピックでは、Visual Studio Linux プロジェクトを構成する方法について説明します。 CMake Linux プロジェクトに関する詳細については、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。

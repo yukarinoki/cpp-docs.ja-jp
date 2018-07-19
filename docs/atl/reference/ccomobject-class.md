@@ -1,5 +1,5 @@
 ---
-title: CComObject クラス |Microsoft ドキュメント
+title: CComObject クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 89a909b715633488cff37fa87ea5950681e208cd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881842"
 ---
 # <a name="ccomobject-class"></a>CComObject クラス
-このクラスは実装**IUnknown**非集約オブジェクト。  
+このクラスは実装`IUnknown`非集約オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +40,7 @@ class CComObject : public Base
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `Base`  
+ *ベース*  
  派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のすべてのインターフェイスからも、します。  
   
 ## <a name="members"></a>メンバー  
@@ -60,17 +61,17 @@ class CComObject : public Base
 |[CComObject::QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|  
 |[CComObject::Release](#release)|オブジェクトの参照カウントをデクリメントします。|  
   
-## <a name="remarks"></a>コメント  
- `CComObject` 実装する[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非集約オブジェクト。 ただし、呼び出し`QueryInterface`、 `AddRef`、および**リリース**に委任され`CComObjectRootEx`です。  
+## <a name="remarks"></a>Remarks  
+ `CComObject` 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非集約オブジェクト。 ただし、呼び出し`QueryInterface`、 `AddRef`、および`Release`に委任されます`CComObjectRootEx`します。  
   
- 使用しての詳細については`CComObject`、記事を参照して[ATL COM オブジェクトの基本事項](../../atl/fundamentals-of-atl-com-objects.md)です。  
+ 使用しての詳細については`CComObject`、記事をご覧ください[ATL COM オブジェクトの基本事項](../../atl/fundamentals-of-atl-com-objects.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Base`  
   
  `CComObject`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComObject::AddRef  
@@ -81,7 +82,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- この関数は、オブジェクトの新しいインクリメント参照カウントを返します。 この値は、診断やテストに役立つである可能性があります。  
+ この関数は、オブジェクトの新しいインクリメントされた参照カウントを返します。 この値は、診断やテストに便利な可能性があります。  
   
 ##  <a name="ccomobject"></a>  CComObject::CComObject  
  コンス トラクターは、モジュールのロック カウントをインクリメントします。  
@@ -92,12 +93,12 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>パラメーター  
  **void\***  
- [in]この名前のないパラメーターは使用されません。 その他を含む対称に存在する場合 **ほか * * * XXX*`Object`*XXX*コンス トラクターです。  
+ [in]この名前のないパラメーターは使用されません。 他の対称性が存在する **ほか * * * XXX*`Object`*XXX*コンス トラクター。  
   
-### <a name="remarks"></a>コメント  
- デストラクターをデクリメントことです。  
+### <a name="remarks"></a>Remarks  
+ デストラクターをデクリメントこと。  
   
- 場合、 `CComObject`-派生オブジェクトが正常に作成されたを使用して、**新しい**演算子、初期の参照カウントが 0 です。 参照カウントを適切な値 (1) に設定するには、呼び出しを行う、 [AddRef](#addref)関数。  
+ 場合、 `CComObject`-を使用して派生オブジェクトが正常に作成、**新しい**オペレーターは、初期の参照カウントが 0 です。 参照カウントを適切な値 (1) を設定するへの呼び出しを行い、 [AddRef](#addref)関数。  
   
 ##  <a name="dtor"></a>  CComObject:: ~ CComObject  
  デストラクターです。  
@@ -106,28 +107,28 @@ CComObject(void* = NULL);
 CComObject();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出し、割り当てられているすべてのリソースを解放[FinalRelease](ccomobjectrootex-class.md#finalrelease)、およびモジュールのロック カウントをデクリメントします。  
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- この静的関数では、新しいを作成することができます**CComObject <** `Base` **>** のオーバーヘッドがなく、オブジェクト[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)です。  
+ この静的関数では、新たに作成することができます**CComObject <** `Base` **>** のオーバーヘッドがなく、オブジェクト[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)します。  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pp`  
- [out]ポインター、 **CComObject <** `Base` **>** ポインター。 場合`CreateInstance`は成功せず`pp`に設定されている**NULL**です。  
+ *pp*  
+ [out]ポインターを**CComObject <** `Base` **>** ポインター。 場合`CreateInstance`が成功すると、 *pp* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- 返されるオブジェクトが参照カウントは 0、ためコール`AddRef`、すぐに使用して**リリース**を完了するとオブジェクトへのポインターの参照を解放します。  
+### <a name="remarks"></a>Remarks  
+ 返されるオブジェクトが参照カウントを 0、ためコール`AddRef`しを使用して、すぐに`Release`完了すると、オブジェクトへのポインターの参照を解放します。  
   
- 必要な送信しないオブジェクトへのアクセスが、引き続きのオーバーヘッドがなく、新しいオブジェクトを作成する場合`CoCreateInstance`を使用して[あって](../../atl/reference/ccomcoclass-class.md#createinstance)代わりにします。  
+ オブジェクトへのアクセスが直接必要ありませんが、引き続きのオーバーヘッドなしの新しいオブジェクトを作成する場合`CoCreateInstance`を使用して、[あって](../../atl/reference/ccomcoclass-class.md#createinstance)代わりにします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
@@ -144,17 +145,17 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iid`  
+ *iid*  
  [in]要求されているインターフェイスの識別子。  
   
- `ppvObject`  
- [out]によって識別されるインターフェイス ポインターへのポインター`iid`です。 オブジェクトは、このインターフェイスをサポートしていない場合`ppvObject`に設定されている**NULL**です。  
+ *ppvObject*  
+ [out]によって識別されるインターフェイス ポインターへのポインター *iid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObject* NULL に設定されます。  
   
- `pp`  
- [out]型で識別されるインターフェイス ポインターへのポインター`Q`です。 オブジェクトは、このインターフェイスをサポートしていない場合`pp`に設定されている**NULL**です。  
+ *pp*  
+ [out]型によって識別されるインターフェイス ポインターへのポインター`Q`します。 オブジェクトは、このインターフェイスをサポートしていない場合*pp* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
 ##  <a name="release"></a>  CComObject::Release  
  オブジェクトの参照カウントをデクリメントします。  
@@ -164,10 +165,10 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- この関数は、オブジェクトの新しいデクリメント参照カウントを返します。 デバッグ ビルドで、戻り値の値は、診断に役に立たず、テストを指定できます。 非デバッグ ビルドでは、**リリース**常に 0 を返します。  
+ この関数は、オブジェクトの新しいデクリメントの参照カウントを返します。 デバッグ ビルドでは、戻り値は診断に役立ちますやテストを使用可能性があります。 非デバッグ ビルドで`Release`常に 0 を返します。  
   
 ## <a name="see-also"></a>関連項目  
- [クラス](../../atl/reference/ccomaggobject-class.md)   
+ [CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)   
  [CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   

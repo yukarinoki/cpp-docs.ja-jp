@@ -17,15 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4179ddae0506d21ca3969559b05c618ab4d73e0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0585396d2cacc2bb41abf364e3d01ca81629146f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953555"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; クラス
 
-`void` 型へのテンプレート クラスのアロケーターを特殊化し、このコンテキストで意味を持つ型を定義します。
+入力するテンプレート クラス アロケーターの特殊化**void**、このコンテキストで意味のある型を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -48,9 +49,9 @@ class allocator<void> {
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このクラスは、*void* 型のテンプレート クラス [allocator](../standard-library/allocator-class.md) を明示的に特殊化します。 コンストラクターと代入演算子の動作は、同じテンプレート クラスの動作と同じですが、次の型のみを定義します。
+クラスは、テンプレート クラスを明示的に特殊化[アロケーター](../standard-library/allocator-class.md)型**void**します。 コンストラクターと代入演算子の動作は、同じテンプレート クラスの動作と同じですが、次の型のみを定義します。
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer)
 
@@ -60,7 +61,7 @@ class allocator<void> {
 
 - [rebind](../standard-library/allocator-class.md#rebind)、入れ子になったテンプレート クラス
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 

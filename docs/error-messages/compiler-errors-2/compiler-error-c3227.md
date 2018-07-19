@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249536"
 ---
 # <a name="compiler-error-c3227"></a>コンパイラ エラー C3227
 'parameter': 'キーワード' を使用して、ジェネリック型を割り当てることはできません  

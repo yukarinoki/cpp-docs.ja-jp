@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956435"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>サーバー : 埋め込み先フレーム ウィンドウの実装
 この記事では、サーバー アプリケーションを作成するアプリケーションのウィザードを使用しない場合、ビジュアル編集サーバー アプリケーションに埋め込み先フレーム ウィンドウを実装する必要な操作について説明します。 この記事で説明した手順に従うと、代わりに、アプリケーション ウィザードで生成されたアプリケーションまたは Visual C で提供されたサンプルのいずれかから既存の埋め込み先フレーム ウィンドウ クラスを使用する可能性があります。  
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
   
 1.  埋め込み先フレーム ウィンドウ クラスを派生`COleIPFrameWnd`です。  
   
-    -   使用して、`DECLARE_DYNCREATE`クラスのヘッダー ファイルでマクロです。  
+    -   クラスのヘッダー ファイルで DECLARE_DYNCREATE マクロを使用します。  
   
-    -   使用して、`IMPLEMENT_DYNCREATE`クラスは、実装 (.cpp) ファイルでマクロです。 これにより、フレームワークによって作成するには、このクラスのオブジェクト。  
+    -   クラスは、実装 (.cpp) ファイルで、IMPLEMENT_DYNCREATE マクロを使用します。 これにより、フレームワークによって作成するには、このクラスのオブジェクト。  
   
 2.  宣言、`COleResizeBar`フレーム ウィンドウ クラスのメンバーです。 インプレースでのサーバー アプリケーションでサイズ変更をサポートする場合、これが必要です。  
   
-     宣言、`OnCreate`メッセージ ハンドラー (を使用して、**プロパティ**ウィンドウ)、呼び出すと**作成**の`COleResizeBar`メンバーを定義している場合。  
+     宣言、`OnCreate`メッセージ ハンドラー (を使用して、**プロパティ**ウィンドウ)、呼び出す`Create`の`COleResizeBar`メンバーを定義している場合。  
   
 3.  ツールバーがあれば、宣言、`CToolBar`フレーム ウィンドウ クラスのメンバーです。  
   

@@ -1,5 +1,5 @@
 ---
-title: ATL ウィザードとダイアログ ボックス |Microsoft ドキュメント
+title: ATL ウィザードとダイアログ ボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfdb246f5d331936993093fce068efdcdceee5c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bc65cd853646ae447b9cf4b97b62390d2facd53
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960617"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL ウィザードとダイアログ ボックス
-アクティブ テンプレート ライブラリ (ATL) ウィザードでは、COM オブジェクトのさまざまな種類の定型コードを生成します。 プロジェクトのショートカット メニューを開き、ウィザードを実行することができます**ソリューション エクスプ ローラー**を選択して**追加**、**クラス**です。  
+Active Template Library (ATL) ウィザードでは、COM オブジェクトのさまざまな種類の定型コードを生成します。 プロジェクトのショートカット メニューを開き、ウィザードを実行する**ソリューション エクスプ ローラー**を選択して**追加**、**クラス**します。  
   
 ## <a name="related-articles"></a>関連トピック  
   
@@ -36,5 +37,5 @@ ms.lasthandoff: 05/03/2018
 |[ATL コントロール](../../atl/reference/adding-an-atl-control.md)|基本的な ActiveX コントロールを作成します。|  
 |[ATL COM + 1.0 コンポーネント](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|基本的な ATL COM + 1.0 コンポーネントを作成します。|  
 |[ATL Active Server Page コンポーネント](../../atl/reference/adding-an-atl-active-server-page-component.md)|基本的な ATL Active Server Page コンポーネントを作成します。|  
-|[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)|ATL ドキュメントへのリンク。|
+|[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)|ATL のドキュメントにリンクします。|
 

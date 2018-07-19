@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380579"
 ---
 # <a name="tool-tips"></a>ツール ヒント
 MFC クラスから派生した windows に含まれるコントロールにツールヒントを追加するは、手順が異なる[CFrameWnd](../mfc/reference/cframewnd-class.md) windows から派生していないと`CFrameWnd`です。  

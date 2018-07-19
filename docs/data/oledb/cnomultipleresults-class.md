@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096829"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults クラス
 テンプレート引数として使用 (*TMultiple*) に[CCommand](../../data/oledb/ccommand-class.md)セットを 1 つの結果を処理する最適化されたコマンドを作成します。  

@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 578dd43f747eddbf37f76c41a2fa35df8edca658
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954800"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/08/2018
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらのテンプレート クラスと関数には、パフォーマンス向上を目的として特別な許容度が認められています。 具体的には、**valarray\<** T1**>** 型を返す関数はすべて、他の T2 型のオブジェクトを返すこともできます。 その場合、**valarray\<** T2**>** 型の 1 つ以上の引数を受け取る関数すべてに、T2 型引数に置換された個々の引数が任意に組み合わされたものを受け取るオーバーロードが必要です。
 
@@ -65,8 +66,8 @@ ms.lasthandoff: 05/08/2018
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|サイズが等しい 2 つの valarray の対応する要素が等しくないか、あるいはある valarray のすべての要素が valarray の要素型の指定値と等しくないかをテストします。|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|サイズが等しい 2 つの valarray の対応する要素を除算した剰余か、valarray の要素型の指定値で valarray を除算した剰余、または valarray で指定値を除算した剰余を取得します。|
-|[operator&](../standard-library/valarray-operators.md#op_amp)|サイズが等しい 2 つの valarray の対応する要素間、または valarray と要素型の指定値との間でビットごとの **AND** を計算した結果を取得します。|
-|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|サイズが等しい 2 つの valarray の対応する要素間、または valarray と valarray の要素型の指定値との間で論理 **AND** を計算した結果を取得します。|
+|[operator&](../standard-library/valarray-operators.md#op_amp)|サイズが等しい 2 つの valarray の対応する要素間、または valarray と要素型の指定値との間でビットごとの `AND` を計算した結果を取得します。|
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|サイズが等しい 2 つの valarray の対応する要素間、または valarray と valarray の要素型の指定値との間で論理 `AND` を計算した結果を取得します。|
 |[operator>](../standard-library/valarray-operators.md#op_gt)|ある valarray の要素がサイズが等しい valarray の要素より大きいか、またはある valarray のすべての要素が valarray の要素型の指定値より大きいか、もしくは指定値より小さいかをテストします。|
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|ある valarray の要素がサイズが等しい valarray の要素以上であるか、またはある valarray のすべての要素が valarray の要素型の指定値以上であるか、もしくは指定値以下であるかをテストします。|
 |[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|valarray の各要素のビットを、指定された位置数だけ右にシフトさせるか、2 番目の valarray で指定された要素ごとの量だけ右にシフトさせます。|
@@ -92,13 +93,13 @@ ms.lasthandoff: 05/08/2018
 |[mask_array Class](../standard-library/mask-array-class.md)|サブセット配列間の演算を提供することにより、ブール式で指定された親 valarray のサブセットとして機能するオブジェクトをサポートする、内部の補助テンプレート クラス。|
 |[slice Class](../standard-library/slice-class.md)|valarray のベクター的 1 次元サブセットを定義するのに使用する valarray のユーティリティ クラス。|
 |[slice_array Class](../standard-library/slice-array-class.md)|valarray のスライスで定義されるサブセット配列間の演算を提供することによりスライス オブジェクトをサポートする、内部の補助テンプレート クラス。|
-|[valarray Class](../standard-library/valarray-class.md)|このテンプレート クラスは、配列として格納され、高速数値演算を実行するように設計されている、計算パフォーマンス用に最適化された **Type** 型の要素のシーケンスを制御するオブジェクトについて記述します。|
+|[valarray クラス](../standard-library/valarray-class.md)|このテンプレート クラスは、型の要素のシーケンスを制御するオブジェクトを表します`Type`を配列として格納され、計算パフォーマンス用に最適化された高速の数学的演算を実行するために設計されています。|
 
 ### <a name="specializations"></a>特殊化
 
 |||
 |-|-|
-|[valarray\<bool> クラス](../standard-library/valarray-bool-class.md)|テンプレート クラス valarray\<**Type**> を `bool` 型の要素に特化したバージョン。|
+|[valarray\<bool> クラス](../standard-library/valarray-bool-class.md)|テンプレート クラス valarray に特化したバージョン\<**型**> 型の要素を**bool**します。|
 
 ## <a name="see-also"></a>関連項目
 

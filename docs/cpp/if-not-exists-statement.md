@@ -1,5 +1,5 @@
 ---
-title: _ _if_not_exists ステートメント |Microsoft ドキュメント
+title: _ _if_not_exists ステートメント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4e586a211d7c4e2ead1ce3f225e2d92d2bd5a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37148a3849e859d7ca77595416616cfa0b952ecf
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939950"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists ステートメント
-`__if_not_exists` ステートメントは、指定された識別子があるかどうかをテストします。 ID が存在しない場合、指定されたステートメント ブロックが実行されます。  
+**_ _If_not_exists**ステートメントは、指定した識別子が存在するかどうかをテストします。 ID が存在しない場合、指定されたステートメント ブロックが実行されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,25 +39,25 @@ statements
 |パラメーター|説明|  
 |---------------|-----------------|  
 |`identifier`|存在をテストしたい識別子。|  
-|`statements`|場合に実行する 1 つまたは複数のステートメント`identifier`存在しません。|  
+|`statements`|1 つ以上の場合に実行されるステートメント`identifier`存在しません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!CAUTION]
->  最も信頼できる結果を得るには、次の制約に基づいて `__if_not_exists` ステートメントを使用します。  
+>  最も信頼性の高い結果を実現するために使用して、 **_ _if_not_exists**次の制約の下のステートメント。  
   
--   テンプレートではなく、単純型にのみ `__if_not_exists` ステートメントを適用します。  
+-   適用、 **_ _if_not_exists**テンプレートではなく、唯一の単純型のステートメント。  
   
--   クラスの内部または外部の識別子に `__if_not_exists` ステートメントを適用します。 ローカル変数に `__if_not_exists` ステートメントを適用しないでください。  
+-   適用、 **_ _if_not_exists**ステートメントの内部または外部クラスの識別子。 適用されません、 **_ _if_not_exists**ローカル変数にステートメント。  
   
--   `__if_not_exists` ステートメントは関数の本体でのみ使用します。 関数本体の外側では、`__if_not_exists` ステートメントは完全に定義された型のみテストできます。  
+-   使用して、 **_ _if_not_exists**関数の本体でのみステートメント。 関数の本文の外側、 **_ _if_not_exists**ステートメントは、型を完全に定義のみをテストできます。  
   
 -   オーバーロードされた関数をテストする場合、特定の形式のオーバーロードはテストできません。  
   
- 補完する、`__if_not_exists`ステートメントは、 [_ _if_exists](../cpp/if-exists-statement.md)ステートメントです。  
+ 補完する、 **_ _if_not_exists**ステートメントは、 [_ _if_exists](../cpp/if-exists-statement.md)ステートメント。  
   
 ## <a name="example"></a>例  
- 使用する方法の例については`__if_not_exists`を参照してください[_ _if_exists ステートメント](../cpp/if-exists-statement.md)です。  
+ 使用する方法の例については **_ _if_not_exists**を参照してください[_ _if_exists ステートメント](../cpp/if-exists-statement.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [選択ステートメント](../cpp/selection-statements-cpp.md)   

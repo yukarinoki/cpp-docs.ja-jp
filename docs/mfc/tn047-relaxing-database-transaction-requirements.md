@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380935"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>テクニカル ノート 47: データベース トランザクション要件の緩和
 MFC ODBC データベース クラスのトランザクションの要件を説明するには、このテクニカル ノートでは廃止されました。 データベース クラスがレコード セットの後にカーソルを保持することを必須 MFC 4.2 の前に、 **CommitTrans**または**ロールバック**操作します。 ODBC ドライバーと DBMS がこのレベルのカーソル位置の保存をサポートしていない場合、データベース クラスは、有効にしなかったトランザクションです。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336506"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>組み込み関数のアルファベット順の一覧
 次のセクションでは、一部またはすべてのアーキテクチャで使用可能な Microsoft 固有の組み込み関数について説明します。 サポートされているその他の組み込みについては、プロセッサの製造元により、ヘッダー ファイルまたは各社の Web サイトで文書化されています。 参照してください、 [ARM 組み込み](../intrinsics/arm-intrinsics.md)、 [x86 組み込み](../intrinsics/x86-intrinsics-list.md)、および[x64 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)セクションでは、製造元のドキュメントへのリンク。 組み込みがそれらの実装されている C ランタイム ライブラリ (CRT) 関数がここに記載されていません。これらの関数については、『、 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)です。  

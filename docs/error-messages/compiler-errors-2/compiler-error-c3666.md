@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264814"
 ---
 # <a name="compiler-error-c3666"></a>コンパイラ エラー C3666
 'constructor': オーバーライド指定子 'キーワード' コンス トラクターでは使用できません  

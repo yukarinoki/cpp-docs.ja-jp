@@ -1,5 +1,5 @@
 ---
-title: CComQIPtr クラス |Microsoft ドキュメント
+title: CComQIPtr クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e480fe81f8a6181aa8543710d050f0f20f288681
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884832"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr クラス
 COM インターフェイス ポインターを管理するためのスマート ポインター クラスです。  
@@ -35,11 +36,11 @@ class CComQIPtr: public CComPtr<T>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 格納するポインターの種類を指定する COM インターフェイスです。  
+ *T*  
+ COM インターフェイスを格納するポインターの種類を指定します。  
   
- `piid`  
- IID へのポインター`T`です。  
+ *piid*  
+ ポインターの IID を*T*します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -55,8 +56,8 @@ class CComQIPtr: public CComPtr<T>
 |----------|-----------------|  
 |[CComQIPtr::operator =](#operator_eq)|メンバーのポインターにポインターを割り当てます。|  
   
-## <a name="remarks"></a>コメント  
- ATL を使用して`CComQIPtr`と[CComPtr](../../atl/reference/ccomptr-class.md)から派生する COM インターフェイス ポインターを管理する[CComPtrBase](../../atl/reference/ccomptrbase-class.md)です。 両方のクラスを呼び出すことでカウント自動参照を実行する`AddRef`と**リリース**です。 オーバー ロードされた演算子は、ポインターの操作を処理します。  
+## <a name="remarks"></a>Remarks  
+ ATL を使用して`CComQIPtr`と[CComPtr](../../atl/reference/ccomptr-class.md)から派生する COM インターフェイス ポインターを管理する[CComPtrBase](../../atl/reference/ccomptrbase-class.md)します。 両方のクラスの呼び出しを通じてカウント自動参照を実行する`AddRef`と`Release`します。 オーバー ロードされた演算子は、ポインター演算を処理します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -65,7 +66,7 @@ class CComQIPtr: public CComPtr<T>
   
  `CComQIPtr`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcomcli.h  
   
 ##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr  
@@ -79,14 +80,14 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lp`  
- インターフェイス ポインターを初期化するために使用します。  
+ *lp*  
+ インターフェイス ポインターを初期化するために使用されます。  
   
- `T`  
+ *T*  
  COM インターフェイスです。  
   
- `piid`  
- IID へのポインター`T`です。  
+ *piid*  
+ ポインターの IID を*T*します。  
   
 ##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  代入演算子です。  
@@ -98,17 +99,17 @@ T* operator= (IUnknown* lp) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lp`  
- インターフェイス ポインターを初期化するために使用します。  
+ *lp*  
+ インターフェイス ポインターを初期化するために使用されます。  
   
- `T`  
+ *T*  
  COM インターフェイスです。  
   
- `piid`  
- IID へのポインター`T`です。  
+ *piid*  
+ ポインターの IID を*T*します。  
   
 ### <a name="return-value"></a>戻り値  
- 更新後にポインターを返します`CComQIPtr`オブジェクト。  
+ 更新されたポインターを返します`CComQIPtr`オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   

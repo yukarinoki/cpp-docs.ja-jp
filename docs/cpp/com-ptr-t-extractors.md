@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t 抽出 |Microsoft ドキュメント
+title: _com_ptr_t 抽出 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943637"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 抽出
 **Microsoft 固有の仕様**  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -53,19 +54,19 @@ Interface** operator&( ) throw( );
 operator bool( ) const throw( );  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
--   **演算子インターフェイス\*** 可能性のあるカプセル化されたインターフェイス ポインターを返します。 **NULL**です。  
+-   **演算子インターフェイス\*** 場合 NULL にはカプセル化されたインターフェイス ポインターを返します。  
   
--   **演算子インターフェイス &** カプセル化されたインターフェイス ポインターへの参照を返し、ポインターがある場合はエラー **NULL**です。  
+-   **演算子インターフェイス &** をカプセル化されたインターフェイス ポインター、参照を取得し、ポインターが NULL の場合はエラーを発行します。  
   
--   **演算子\*** 逆参照時に、実際のカプセル化されたインターフェイスのように動作するスマート ポインター オブジェクトを使用します。  
+-   **演算子\*** 逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。  
   
--   **-> 演算子**逆参照時に、実際のカプセル化されたインターフェイスのように動作するスマート ポインター オブジェクトを使用します。  
+-   **演算子 ->** 逆参照される場合に、実際のカプセル化されたインターフェイスと同様に機能するスマート ポインター オブジェクトを使用します。  
   
--   **演算子 &** 置き換えることで、任意のカプセル化されたインターフェイス ポインターを解放**NULL**、カプセル化されたポインターのアドレスを返します。 これにより、アドレスを持つ関数に渡されるスマート ポインター、**アウト**パラメーターを使用するインターフェイス ポインターを返します。  
+-   **演算子 &** null の場合に置き換えて、任意のカプセル化されたインターフェイス ポインターを解放し、カプセル化されたポインターのアドレスを返します。 これにより、スマート ポインターによってアドレスが関数に渡される、*アウト*パラメーターが使用されるインターフェイス ポインターを返します。  
   
--   **operator bool**条件式で使用するスマート ポインター オブジェクトを使用します。 この演算子を返します**true**ポインターがない場合**NULL**です。  
+-   **operator bool**条件式で使用するスマート ポインター オブジェクトを使用します。 この演算子は、ポインターが NULL でない場合に TRUE を返します。  
   
  **Microsoft 固有の仕様はここまで**  
   

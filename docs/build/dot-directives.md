@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367665"
 ---
 # <a name="dot-directives"></a>ドット ディレクティブ
 行の先頭の記述ブロックの外側のドット ディレクティブを指定します。 ドット ディレクティブの先頭にピリオド (です。 )、コロン (:) が続きます。 スペース、タブが許可されています。 ドット ディレクティブの名前は、大文字小文字を区別、大文字です。  

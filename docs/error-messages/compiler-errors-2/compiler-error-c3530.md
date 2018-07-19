@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253519"
 ---
 # <a name="compiler-error-c3530"></a>コンパイラ エラー C3530
 'auto' は、その他の型指定子と組み合わせることはできません。  
