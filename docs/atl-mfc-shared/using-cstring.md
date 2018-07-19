@@ -1,5 +1,5 @@
 ---
-title: CString の使用 |Microsoft ドキュメント
+title: CString の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/18/2018
 ms.technology:
@@ -16,29 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
-ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
+ms.openlocfilehash: 92807995183d2e5a34391250b36129e9bea01d66
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238722"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025845"
 ---
 # <a name="using-cstring"></a>CString の使用
-このセクションのトピックでは、`CString` を使用したプログラミング方法について説明します。 に関するリファレンス ドキュメント、`CString`クラス、ドキュメントを参照して[CStringT](../atl-mfc-shared/reference/cstringt-class.md)です。  
+このセクションのトピックでは、`CString` を使用したプログラミング方法について説明します。 に関するリファレンス ドキュメント、`CString`クラス、ドキュメントを参照して[CStringT](../atl-mfc-shared/reference/cstringt-class.md)します。  
   
  `CString` を使用するには、`atlstr.h` ヘッダーをインクルードします。  
   
- `CString`、 `CStringA`、および`CStringW`クラスと呼ばれるクラス テンプレートの特殊化は、 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)サポートされる文字データの種類に基づきます。  
+ `CString`、 `CStringA`、および`CStringW`クラスと呼ばれるクラス テンプレートの特殊化は、 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)サポートする、文字データの種類に基づきます。  
   
- `CStringW` オブジェクトには `wchar_t` 型が格納され、Unicode 文字列がサポートされます。 `CStringA` オブジェクトには `char` 型が格納され、1 バイト文字列とマルチバイト (MBCS) 文字列がサポートされます。 `CString` オブジェクトでは、コンパイル時に `char` シンボルと `wchar_t` シンボルのどちらが定義されているかに従って、`MBCS` 型または `UNICODE` 型のいずれかがサポートされます。  
+ A`CStringW`オブジェクトが含まれています、 **wchar_t**を入力し、Unicode 文字列がサポートされます。 A`CStringA`オブジェクトが含まれています、 **char**型、およびサポートするシングル バイト文字とマルチバイト (MBCS) 文字列。 A`CString`オブジェクトがサポートするか、 **char**型または`wchar_t`MBCS シンボルまたは UNICODE 記号はコンパイル時に定義されているかどうかに応じて、種類。  
   
- `CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` 受け付ける`null`-C スタイルの文字列を終了します。 `CString` パフォーマンスを向上させることが、文字列の長さも保持トラック、 `null` LPCWSTR への変換をサポートするために格納されている文字データの文字です。 `CString` C スタイルの文字列をエクスポートする際に、null 終端文字が含まれます。 挿入することができます、`null`内の他の場所で、 `CString`、予期しない結果が生じる。  
+ `CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` NULL で終わる C スタイルの文字列を受け入れます。 `CString` 文字列の追跡のパフォーマンスを向上させることが、長さも LPCWSTR への変換をサポートするために格納されている文字データに NULL 文字を保持します。 `CString` C スタイルの文字列をエクスポートする場合、null 終端文字が含まれます。 その他の場所に NULL を挿入できる、 `CString`、予期しない結果が生じる。  
   
  文字列クラス `CAtlString`、`CAtlStringA`、および `CAtlStringW` は、CRT サポートがある場合もない場合も、MFC ライブラリにリンクせずに使用できます。  
   
  `CString` は、ネイティブ プロジェクトで使用されます。 マネージ コード (C++/CLI) プロジェクトの場合は、`System::String` を使用します。  
   
- `CString`、`CStringA`、または `CStringW` で現在提供されているよりも多くの機能を追加するには、追加機能を含む `CStringT` のサブクラスを作成する必要があります。  
+ 
+  `CString`、`CStringA`、または `CStringW` で現在提供されているよりも多くの機能を追加するには、追加機能を含む `CStringT` のサブクラスを作成する必要があります。  
   
  次のコードは、`CString` を作成して標準出力に表示する方法を示しています。  
   
@@ -65,7 +66,7 @@ int main() {
  C スタイルの null で終わる文字列のように `CString` オブジェクトの内容を操作する方法について説明します。  
   
  [BSTR 用のメモリの割り当てと解放](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
- `BSTR` と COM オブジェクトのメモリの使用方法について説明します。  
+ BSTR および COM オブジェクトのメモリの使用について説明します。  
   
  [CString の例外の後処理](../atl-mfc-shared/cstring-exception-cleanup.md)  
  MFC 3.0 以降で明示的な後処理が不要になったことについて説明します。  

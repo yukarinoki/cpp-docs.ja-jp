@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4f2b455b362bcb170a09c89a0bfef8013286971
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 138ec5bb28e108751a7d4b03651826db38c098fa
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855267"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026933"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -38,14 +38,14 @@ ms.locfileid: "33855267"
 
 |型名|説明|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|`char` を使用する `basic_streambuf` をテンプレート パラメーターとして特化したクラス。|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|`wchar_t` を使用する `basic_streambuf` をテンプレート パラメーターとして特化したクラス。|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|特殊化`basic_streambuf`を使用して**char**テンプレート パラメーターとして。|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|特殊化`basic_streambuf`を使用して**wchar_t**テンプレート パラメーターとして。|
 
 ### <a name="classes"></a>クラス
 
 |クラス|説明|
 |-|-|
-|[basic_streambuf クラス](http://msdn.microsoft.com/en-us/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|このテンプレート クラスは、ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラスについて説明します。|
+|[basic_streambuf クラス](http://msdn.microsoft.com/d9c706ba-ce01-43e0-b0b2-a558fc53ea8d)|このテンプレート クラスは、ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラスについて説明します。|
 
 ## <a name="see-also"></a>関連項目
 
