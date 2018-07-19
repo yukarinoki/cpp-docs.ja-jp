@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d2fa3ef6113add6bcf72f85f74b8722033cb8d5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6b716248c6fe9d0734cd580800c9254cf01f2a17
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846611"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962875"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -38,23 +38,23 @@ ms.locfileid: "33846611"
 
 |型名|説明|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|`char` テンプレート パラメーターに特殊化された型 `basic_filebuf`。|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|`char` テンプレート パラメーターに特殊化された型 `basic_fstream`。|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|`char` テンプレート パラメーターに特殊化された型 `basic_ifstream`。|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|`char` テンプレート パラメーターに特殊化された型 `basic_ofstream`。|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|`wchar_t` テンプレート パラメーターに特殊化された型 `basic_fstream`。|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|`wchar_t` テンプレート パラメーターに特殊化された型 `basic_ifstream`。|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|`wchar_t` テンプレート パラメーターに特殊化された型 `basic_ofstream`。|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|`wchar_t` テンプレート パラメーターに特殊化された型 `basic_filebuf`。|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|型`basic_filebuf`に特殊化された**char**テンプレート パラメーター。|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|型`basic_fstream`に特殊化された**char**テンプレート パラメーター。|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|型`basic_ifstream`に特殊化された**char**テンプレート パラメーター。|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|型`basic_ofstream`に特殊化された**char**テンプレート パラメーター。|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|型`basic_fstream`に特殊化された**wchar_t**テンプレート パラメーター。|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|型`basic_ifstream`に特殊化された**wchar_t**テンプレート パラメーター。|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|型`basic_ofstream`に特殊化された**wchar_t**テンプレート パラメーター。|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|型`basic_filebuf`に特殊化された**wchar_t**テンプレート パラメーター。|
 
 ### <a name="classes"></a>クラス
 
 |クラス|説明|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|このテンプレート クラスは、**Elem** 型の要素と外部ファイルに格納されている要素のシーケンスとの間でやり取りされる転送を制御するストリーム バッファーを記述します。Elem 型の特性は **Tr** クラスによって決められます。|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|このテンプレート クラスは、**Elem** 型の要素を含む [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> クラスのストリーム バッファーを使用して要素とエンコードされたオブジェクトを挿入または抽出する際に、その処理を制御するオブジェクトを記述します。Elem 型の特性は **Tr** クラスによって決められます。|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|このテンプレート クラスは、**Elem** 型の要素を含む [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> クラスのストリーム バッファーから要素とエンコードされたオブジェクトを抽出する処理を制御するオブジェクトを記述します。Elem 型の特性は **Tr** クラスによって決められます。|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|このテンプレート クラスは、**Elem** 型の要素を含む [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**, **Tr**> クラスのストリーム バッファーに要素とエンコードされたオブジェクトを挿入する処理を制御するオブジェクトを記述します。Elem 型の特性は **Tr** クラスによって決められます。|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|このテンプレート クラスは、文字の特徴がクラス `Tr` によって決まる型 `Elem` の要素と、外部ファイルに格納されている要素のシーケンスとの間でやり取りされる転送を制御するストリーム バッファーを記述します。|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|テンプレート クラスは、要素の挿入と抽出を制御するオブジェクトとクラスのストリーム バッファーを使用してエンコードされたオブジェクトについて説明します[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**、  **。Tr**>、型の要素を含む`Elem`、その文字特性はクラスによって決まります`Tr`します。|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|テンプレート クラスは、クラスのストリーム バッファーからエンコードされたオブジェクトと要素の抽出を制御するオブジェクトについて説明します[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**、 **Tr**。>、型の要素を含む`Elem`、その文字特性はクラスによって決まります`Tr`します。|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|テンプレート クラスは、クラスのストリーム バッファーにエンコードされたオブジェクトと要素の挿入を制御するオブジェクトを説明します[basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**、 **Tr**。>、型の要素を含む`Elem`、その文字特性はクラスによって決まります`Tr`します。|
 
 ## <a name="see-also"></a>関連項目
 

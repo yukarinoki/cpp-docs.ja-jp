@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d344beea880bb576a681a4797c7bdd8ff8d88e5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ada95adb2d82bfccf05f3b9141a1b940feaed50
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843601"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966447"
 ---
 # <a name="isclass-class"></a>is_class クラス
 
@@ -37,11 +37,11 @@ struct is_class;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` が `class` か `struct`、またはそのいずれかの `cv-qualified` 形式として定義された型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*Ty*として型が定義されて、**クラス**または**構造体**、または`cv-qualified`形式のうち 1 つ、それ以外の場合は false を保持します。
 
 ## <a name="example"></a>例
 
@@ -73,7 +73,7 @@ is_class<trivial> == true
 is_class<int> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

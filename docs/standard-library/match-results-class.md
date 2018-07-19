@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407da94d8d813e4951f12ad9951dc64ac298f61d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964484"
 ---
 # <a name="matchresults-class"></a>match_results クラス
 
@@ -69,15 +69,15 @@ class match_results {
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` サブマッチの反復子の型。
+*BidIt*サブマッチの反復子の型。
 
-`Alloc` 記憶域を管理するためのアロケーターの型。
+*Alloc*記憶域を管理するためのアロケーターの型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、正規表現の検索で生成された `sub_match<BidIt>` 型の要素の変更不可能なシーケンスを制御するオブジェクトを表します。 各要素は、それに対応するキャプチャ グループと一致したサブシーケンスを指します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
@@ -91,9 +91,9 @@ class match_results {
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この typedef は、テンプレート引数 `Alloc` のシノニムです。
+この typedef は、テンプレート引数のシノニム*アロケーション*します。
 
 ### <a name="example"></a>例
 
@@ -212,7 +212,7 @@ empty == false
 const_iterator begin() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示すランダム アクセス反復子を返します。
 
@@ -333,7 +333,7 @@ empty == false
 typedef typename iterator_traits<BidIt>::value_type char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この typedef は、検索された文字シーケンスの要素の型である `iterator_traits<BidIt>::value_type`型のシノニムです。
 
@@ -454,7 +454,7 @@ empty == false
 typedef T0 const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、被制御シーケンスの定数ランダム アクセス反復子として使用できるオブジェクトを表します。
 
@@ -575,7 +575,7 @@ empty == false
 typedef const typename Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この typedef は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
@@ -696,7 +696,7 @@ empty == false
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は `iterator_traits<BidIt>::difference_type`型の同意語です。被制御シーケンスの要素を指す任意の 2 つの反復子の差を表現することが可能なオブジェクトを表します。
 
@@ -817,7 +817,7 @@ empty == false
 bool empty() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、正規表現検索に失敗した場合にのみ true を返します。
 
@@ -938,7 +938,7 @@ empty == false
 const_iterator end() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、シーケンスの最後を越えたところを示す反復子を返します。
 
@@ -1066,17 +1066,17 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>パラメーター
 
-`OutIt` 出力反復子の型。
+*OutIt*出力反復子の型。
 
-`out` 書き込む出力ストリーム。
+*out*に書き込む出力ストリーム。
 
-`fmt` 書式指定文字列。
+*fmt*書式指定文字列。
 
-`flags` 書式指定フラグ。
+*フラグ*書式指定フラグ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-各メンバー関数は、`fmt` の形式に従って書式指定されたテキストを生成します。 1 つ目のメンバー関数は、書式指定されたテキストを、引数 `out` で定義されたシーケンスに出力し、`out` を返します。 2 つ目のメンバー関数は、書式指定されたテキストのコピーを保持する文字列オブジェクトを返します。
+各メンバー関数は、形式の制御下で書式設定されたテキストを生成します。 *fmt*します。 最初のメンバー関数は、その引数で定義されているシーケンスを書式設定されたテキストを書き込みます*アウト*返します*アウト*します。2 つ目のメンバー関数は、書式指定されたテキストのコピーを保持する文字列オブジェクトを返します。
 
 書式指定されたテキストを生成する際、 書式指定文字列内のリテラル テキストは、ターゲット シーケンスにコピーされるのが一般的です。 書式指定文字列内の各エスケープ シーケンスは、それが表すテキストに置き換えられます。 コピーと置換の詳細な動作は、関数に渡された書式指定フラグによって制御されます。
 
@@ -1197,7 +1197,7 @@ empty == false
 allocator_type get_allocator() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は `sub_match` オブジェクトを割り当てる `*this` で使用されるアロケーター オブジェクトのコピーを返します。
 
@@ -1318,7 +1318,7 @@ empty == false
 typedef const_iterator iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、被制御シーケンスのランダム アクセス反復子として使用できるオブジェクトを表します。
 
@@ -1441,9 +1441,9 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`sub` サブマッチのインデックス。
+*sub*サブマッチのインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`(*this)[sub].length()` を返します。
 
@@ -1568,13 +1568,13 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`alloc` 格納するアロケーター オブジェクト。
+*alloc*を格納するアロケーター オブジェクト。
 
-`right` コピーする match_results オブジェクトです。
+*適切な*match_results オブジェクトをコピーします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-1 つ目のコンストラクターは、サブマッチを保持しない `match_results` オブジェクトを構築します。 2 番目のコンストラクターは、`right` オブジェクトのコピーである `match_results` を構築します。
+1 つ目のコンストラクターは、サブマッチを保持しない `match_results` オブジェクトを構築します。 2 番目のコンス トラクターの構成要素を`match_results`オブジェクトのコピーである*右*します。
 
 ### <a name="example"></a>例
 
@@ -1693,7 +1693,7 @@ empty == false
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、オブジェクトが制御できる最も長いシーケンスの長さを返します。
 
@@ -1816,11 +1816,11 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` コピーする match_results オブジェクトです。
+*適切な*match_results オブジェクトをコピーします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー演算子は、`*this` によって制御されるシーケンスを `right` によって制御されるシーケンスのコピーと置き換えます。
+メンバー演算子は、置換によって制御されるシーケンス`*this`によって制御されるシーケンスのコピーを持つ*右*します。
 
 ### <a name="example"></a>例
 
@@ -1941,11 +1941,11 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`n` サブマッチのインデックス。
+*n*サブマッチのインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、被制御シーケンスの要素 `n` への参照、あるいは、 `sub_match` の場合またはキャプチャ グループ `size() <= n` が一致の一部でなかった場合に空の `n` オブジェクトを返します。
+このメンバー関数は要素への参照を返します*n*被制御シーケンス、または空への参照の`sub_match`オブジェクトの場合`size() <= n`場合またはキャプチャ グループ*n*一致の一部でした。
 
 ### <a name="example"></a>例
 
@@ -2066,9 +2066,9 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`sub` サブマッチのインデックス。
+*sub*サブマッチのインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、 `std::distance(prefix().first, (*this)[sub].first)`、つまり、ターゲット シーケンス内の最初の文字から被制御シーケンスの要素 `n` によって示されるサブマッチ内の最初の文字までの距離を返します。
 
@@ -2189,7 +2189,7 @@ empty == false
 const_reference prefix() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、ターゲット シーケンスの先頭から始まって `sub_match<BidIt>` で終わる文字シーケンスを指す、`(*this)[0].first` 型のオブジェクトへの参照を返します。つまり、この参照は一致したサブシーケンスの直前のテキストを指すことになります。
 
@@ -2310,7 +2310,7 @@ empty == false
 typedef const_reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、 `const_reference`型のシノニムです。
 
@@ -2431,7 +2431,7 @@ empty == false
 size_type size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、検索に使用された正規表現内のキャプチャ グループの数 + 1 を返します。検索が実行されなかった場合は 0 を返します。
 
@@ -2552,7 +2552,7 @@ empty == false
 typedef typename Alloc::size_type size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、 `Alloc::size_type`型のシノニムです。
 
@@ -2675,9 +2675,9 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`sub` サブマッチのインデックス。
+*sub*サブマッチのインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`string_type((*this)[sub])` を返します。
 
@@ -2798,7 +2798,7 @@ empty == false
 typedef basic_string<char_type> string_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、 `basic_string<char_type>`型のシノニムです。
 
@@ -2919,7 +2919,7 @@ empty == false
 const_reference suffix() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、 `sub_match<BidIt>` から始まってターゲット シーケンスの末尾で終わる文字シーケンスを指す (つまり、一致したサブシーケンスに続くテキストを指す) `(*this)[size() - 1].second` 型のオブジェクトへの参照を返します。
 
@@ -3042,11 +3042,11 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 交換する match_results オブジェクトです。
+*適切な*match_results オブジェクトでのスワップをします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、一定時間で `*this` と `right` のコンテンツを交換し、例外をスローしません。
+メンバー関数は、コンテンツを交換する`*this`と*右*定数時間で、例外をスローしません。
 
 ### <a name="example"></a>例
 
@@ -3165,7 +3165,7 @@ empty == false
 typedef sub_match<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、型 `sub_match<BidIt>` の同意語です。
 

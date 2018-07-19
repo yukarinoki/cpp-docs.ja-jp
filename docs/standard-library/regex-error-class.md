@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae7d6e9e3a50ad6a0b78d2b47a732b6b5fa9fc0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7983857b3814f8ddd9c10ab37676bc2e87e9a59c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853704"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964146"
 ---
 # <a name="regexerror-class"></a>regex_error クラス
 
@@ -42,11 +42,11 @@ public:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このクラスは、 `basic_regex` オブジェクトの構築時または使用時に発生したエラーを報告するためにスローされる例外オブジェクトを表します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
@@ -60,7 +60,7 @@ public:
 regex_constants::error_code code() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、オブジェクトのコンストラクターに渡された値を返します。
 
@@ -111,11 +111,11 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>パラメーター
 
-`error` エラー コード。
+*エラー*エラー コード。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-コンストラクターは、値 `error`を保持するオブジェクトを構築します。
+コンス トラクターは、値を保持するオブジェクトを構築します。*エラー*します。
 
 ### <a name="example"></a>例
 

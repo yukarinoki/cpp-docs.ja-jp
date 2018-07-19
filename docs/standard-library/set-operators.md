@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a7ec98b2c6fc4de1a85b0f942dd109dfe94839f1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: adc817c92bfaa79422dacafd17e4b1706e5a1af8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861767"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965644"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; operators
 
@@ -46,15 +46,15 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**設定**です。
+*左*型のオブジェクト`set`します。
 
-`right` 型のオブジェクト**設定**です。
+*適切な*型のオブジェクト`set`します。
 
 ### <a name="return-value"></a>戻り値
 
 set が等しくない場合は **true**、set が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの set は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -105,15 +105,15 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**設定**です。
+*左*型のオブジェクト`set`します。
 
-`right` 型のオブジェクト**設定**です。
+*適切な*型のオブジェクト`set`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の set が演算子の右辺の set より厳密に小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -164,15 +164,15 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**設定**です。
+*左*型のオブジェクト`set`します。
 
-`right` 型のオブジェクト**設定**です。
+*適切な*型のオブジェクト`set`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の set が演算子の右辺の set 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以下" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -230,15 +230,15 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**設定**です。
+*左*型のオブジェクト`set`します。
 
-`right` 型のオブジェクト**設定**です。
+*適切な*型のオブジェクト`set`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の set が演算子の右辺の set と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの set は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -289,15 +289,15 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**設定**です。
+*左*型のオブジェクト`set`します。
 
-`right` 型のオブジェクト**設定**です。
+*適切な*型のオブジェクト`set`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の set が演算子の右辺の set より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -348,15 +348,15 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**設定**です。
+*左*型のオブジェクト`set`します。
 
-`right` 型のオブジェクト**設定**です。
+*適切な*型のオブジェクト`set`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の set が演算子の右辺の set 以上の場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 set オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以上" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -414,15 +414,15 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multiset`です。
+*左*型のオブジェクト`multiset`します。
 
-`right` 型のオブジェクト`multiset`です。
+*適切な*型のオブジェクト`multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 set または multiset が等しくない場合は **true**、set または multiset が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの set または multisets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -473,15 +473,15 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multiset`です。
+*左*型のオブジェクト`multiset`します。
 
-`right` 型のオブジェクト`multiset`です。
+*適切な*型のオブジェクト`multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multiset が演算子の右辺の multiset より厳密に小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -536,15 +536,15 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multiset`です。
+*左*型のオブジェクト`multiset`します。
 
-`right` 型のオブジェクト`multiset`です。
+*適切な*型のオブジェクト`multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multiset が演算子の右辺の multiset 以下の場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以下" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -608,15 +608,15 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multiset`です。
+*左*型のオブジェクト`multiset`します。
 
-`right` 型のオブジェクト`multiset`です。
+*適切な*型のオブジェクト`multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multiset と演算子の右辺の multiset が等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの set または multisets は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -667,15 +667,15 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multiset`です。
+*左*型のオブジェクト`multiset`します。
 
-`right` 型のオブジェクト`multiset`です。
+*適切な*型のオブジェクト`multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multiset が演算子の右辺の multiset より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -730,15 +730,15 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト`multiset`です。
+*左*型のオブジェクト`multiset`します。
 
-`right` 型のオブジェクト`multiset`です。
+*適切な*型のオブジェクト`multiset`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の multiset が演算子の右辺の multiset 以上の場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 multiset オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以上" 関係は、最初の等しくない要素のペアの比較に基づいています。
 

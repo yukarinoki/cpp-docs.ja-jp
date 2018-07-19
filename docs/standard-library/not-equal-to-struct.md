@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e50e613885215cf13504f8c9b72e0e48d5a6447
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e02a48fddfb2e5ff8f85b59b1ff241492461e521
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966356"
 ---
 # <a name="notequalto-struct"></a>not_equal_to 構造体
 
@@ -49,19 +49,19 @@ struct not_equal_to<void>
 
 ### <a name="parameters"></a>パラメーター
 
-`Type`、 `T`、`U`をサポートする任意の型、`operator!=`指定または推論された型のオペランドを取得します。
+*型*、 *T*、 *U*をサポートする任意の型、`operator!=`指定または推論された型のオペランドを受け取る。
 
-`Left` 非等値演算の左オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `T` の左辺値および右辺値参照引数の完全転送を行います。
+*左*非等価演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-`Right` 非等値演算の右オペランド。 特殊化されていないテンプレートでは、`Type` 型の左辺値参照引数を使用します。 特殊化されたテンプレートは、推論された型 `U` の左辺値および右辺値参照引数の完全転送を行います。
+*右*非等価演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
 
 `Left != Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator!=` によって返された型が含まれます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`Type` 型のオブジェクトは、等値比較できる型であることが必要です。 オブジェクトのセットに対して定義されている `operator!=` が、等価関係の数学的性質を満たしている必要があります。 組み込みの数値型とポインター型はすべて、この要件を満たします。
+型のオブジェクト*型*等しいかどうかを比較する必要があります。 オブジェクトのセットに対して定義されている `operator!=` が、等価関係の数学的性質を満たしている必要があります。 組み込みの数値型とポインター型はすべて、この要件を満たします。
 
 ## <a name="example"></a>例
 
@@ -122,7 +122,7 @@ between v1 & v2 is: ( 0 0 1 0 1 0 )
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

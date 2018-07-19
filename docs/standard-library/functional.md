@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848012"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961237"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -36,11 +36,11 @@ ms.locfileid: "33848012"
 #include <functional>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 アルゴリズムでは、単項および二項という 2 種類の関数オブジェクトが使用されます。 単項関数オブジェクトは 1 つの引数を必要とし、二項関数オブジェクトは 2 つの引数を必要とします。 関数オブジェクトと関数ポインターは述語としてアルゴリズムに渡すことができますが、関数オブジェクトは適応性があり、C++ 標準ライブラリのスコープ、柔軟性、効率が向上します。 たとえば、値をアルゴリズムに渡す前に、その値を関数にバインドする必要がある場合は、関数ポインターを使用できないことがあります。 関数アダプターを利用すると、関数ポインターが、値にバインドできる適応性のある関数オブジェクトに変換されます。 ヘッダー \<functional> には、メンバー関数を適応性のある関数オブジェクトとして呼び出すことができるメンバー関数アダプターも含まれます。 関数が引数と戻り値の型を指定する入れ子になった型宣言を持っている場合、それらの関数は適応性があります。 C++ 標準では、すべての標準オブジェクト クラスで、unary_function 基底クラスや binary_function 基底クラスから継承することによって、この適応性を実装する必要があります。 関数オブジェクトとそのアダプターを使用すると、C++ 標準ライブラリで既存のアプリケーションをアップグレードでき、ライブラリと C++ プログラミング環境との統合に役立てることができます。
 
-内の関数オブジェクトの Visual C 実装\<機能 > が含まれています*透過的な演算子のファンクター*、関数オブジェクト、テンプレート パラメーターを受け取らない標準の特殊化は、関数の引数の完全転送と結果の完全取得を実行します。 この機能は、C++14 ドラフト標準の仕様の一部です。 これらのテンプレートの特殊化では、算術演算子のファンクター、比較演算子のファンクター、論理演算子のファンクター、ビットごとの演算子のファンクターを呼び出すときに、引数の型を指定する必要はありません。 ユーザー独自の型または異なる種類の型の組み合わせに対して算術演算子、比較演算子、論理演算子、ビットごとの演算子をオーバーロードしてから、透過的な演算子のファンクターを関数の引数として使用できます。 たとえば、ユーザー独自の型 *MyType* が `operator<` を実装する場合、型 `sort(my_collection.begin(), my_collection.end(), less<MyType>())` を明示的に指定する代わりに、`sort(my_collection.begin(), my_collection.end(), less<>())` を呼び出すことができます。
+Visual C の実装内の関数オブジェクトの\<機能 > が含まれています*透過的な演算子のファンクター*標準の特殊化である関数オブジェクトとテンプレートのパラメーターを受け取らず、関数の引数の完全転送と結果の完全取得を実行します。 この機能は、C++14 ドラフト標準の仕様の一部です。 これらのテンプレートの特殊化では、算術演算子のファンクター、比較演算子のファンクター、論理演算子のファンクター、ビットごとの演算子のファンクターを呼び出すときに、引数の型を指定する必要はありません。 ユーザー独自の型または異なる種類の型の組み合わせに対して算術演算子、比較演算子、論理演算子、ビットごとの演算子をオーバーロードしてから、透過的な演算子のファンクターを関数の引数として使用できます。 たとえば、ユーザー独自の型 *MyType* が `operator<` を実装する場合、型 `sort(my_collection.begin(), my_collection.end(), less<MyType>())` を明示的に指定する代わりに、`sort(my_collection.begin(), my_collection.end(), less<>())` を呼び出すことができます。
 
 ## <a name="c11c14-implementation"></a>C++11/C++14 実装
 
@@ -100,10 +100,10 @@ C++11/C++14 の Visual C++ 実装では、次の機能が追加されます。
 |[hash](../standard-library/hash-class.md)|値のハッシュ コードを計算するクラス。|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|`bind` を呼び出すことによって特定の型が生成されるかどうかをテストするクラス。|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|特定の型がプレースホルダーであるかどうかをテストするクラス。|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|参照引数による初期化を行うときに、引数を使用しない **non_const** メンバー関数を単項関数オブジェクトとして呼び出せるようにするアダプター クラス。|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|ポインター引数による初期化を行うときに、引数を使用しない **non_const** メンバー関数を単項関数オブジェクトとして呼び出せるようにするアダプター クラス。|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|参照引数による初期化を行うときに、1 つの引数を使用する **non_const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|ポインター引数による初期化を行うときに、1 つの引数を使用する **non_const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|使用するアダプター クラスを`non_const`参照引数による初期化時に、単項関数オブジェクトとして呼び出せるようにする引数を受け取らないメンバー関数。|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|使用するアダプター クラスを`non_const`ポインター引数による初期化時に、単項関数オブジェクトとして呼び出せるようにする引数を受け取らないメンバー関数。|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|使用するアダプター クラスを`non_const`メンバー関数を 1 つの引数の参照引数による初期化時に、二項関数オブジェクトとして呼び出せるようにします。|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|使用するアダプター クラスを`non_const`メンバー関数を 1 つの引数のポインター引数による初期化時に、二項関数オブジェクトとして呼び出せるようにします。|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|二項関数ポインターを適応性のある二項関数に変換します。|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|単項関数ポインターを適応性のある単項関数に変換します。|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|参照をラップするクラス。|

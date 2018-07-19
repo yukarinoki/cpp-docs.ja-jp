@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2b6c5e4847737ce0208b35a2db9fac783c225f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848077"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966460"
 ---
 # <a name="collate-class"></a>collate クラス
 
@@ -52,11 +52,11 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-`CharType` プログラム内で文字をエンコードするために使用する型。
+*CharType*プログラム内で文字をエンコードするために使用する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、**id** に一意の正の値が格納されます。一部の言語では、複数の文字が 1 文字のように処理され、また別の言語では、個々の文字が 2 文字であるかのように処理されます。 照合クラスが提供する照合サービスは、これらの状況で文字を並べ替える方法を示します。
+すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、`id` に一意の正の値が格納されます。 一部の言語では、複数の文字が 1 文字のように処理され、また別の言語では、個々の文字が 2 文字であるかのように処理されます。 照合クラスが提供する照合サービスは、これらの状況で文字を並べ替える方法を示します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -82,7 +82,7 @@ class collate : public locale::facet;
 |[hash](#hash)|ファセット固有の規則に従ってシーケンスのハッシュ値を決定します。|
 |[transform](#transform)|ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 
@@ -90,15 +90,15 @@ class collate : public locale::facet;
 
 ## <a name="char_type"></a>  collate::char_type
 
-**CharType** 型の文字を表す型。
+`CharType` 型の文字を表す型。
 
 ```cpp
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **CharType** のシノニムです。
+この型は、テンプレート パラメーター `CharType` のシノニムです。
 
 ## <a name="collate"></a>  collate::collate
 
@@ -117,13 +117,13 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-`_Refs` オブジェクトのメモリ管理の種類を指定するために使用する整数値です。
+*_Refs*オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-`_Locname` ロケールの名前。
+*_Locname*ロケールの名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`_Refs` パラメーターの可能な値とその重要性は次のとおりです。
+使用可能な値を *_Refs*パラメーターとその重要性は。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
@@ -131,7 +131,7 @@ protected:
 
 - \> 1: これらの値が定義されていません。
 
-コンス トラクターは、ベース オブジェクトと**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+コンス トラクターを使用してその基本オブジェクトを初期化します**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
 ## <a name="compare"></a>  collate::compare
 
@@ -146,13 +146,13 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-`first1` 比較する最初のシーケンスの最初の要素へのポインター。
+*first1*と比較する最初のシーケンスの最初の要素へのポインター。
 
-`last1` 比較する最初のシーケンスの最後の要素へのポインター。
+*last1*と比較する最初のシーケンスの最後の要素へのポインター。
 
-`first2` 比較する 2 番目のシーケンスの最初の要素へのポインター。
+*first2*と比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-`last2` 比較する 2 番目のシーケンスの最後の要素へのポインター。
+*last2*と比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -164,7 +164,7 @@ int compare(const CharType* first1,
 
 - シーケンスが等しい場合は 0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
 
@@ -208,13 +208,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-`first1` 比較する最初のシーケンスの最初の要素へのポインター。
+*first1*と比較する最初のシーケンスの最初の要素へのポインター。
 
-`last1` 比較する最初のシーケンスの最後の要素へのポインター。
+*last1*と比較する最初のシーケンスの最後の要素へのポインター。
 
-`first2` 比較する 2 番目のシーケンスの最初の要素へのポインター。
+*first2*と比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-`last2` 比較する 2 番目のシーケンスの最後の要素へのポインター。
+*last2*と比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -226,9 +226,9 @@ virtual int do_compare(const CharType* first1,
 
 - シーケンスが等しい場合は 0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数でシーケンスを比較し [* first1, Last1) * でシーケンスに *[first2、last2*)。 値を比較する場合、**CharType** 型の対応する要素のペア間で **operator<** を適用します。 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
+プロテクト仮想メンバー関数は、あるシーケンスを比較します。 [* first1, Last1) * をでシーケンス *[first2, last2*)。 適用することで値を比較`operator<`型の対応する要素のペア間`CharType`します。 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
 
 ### <a name="example"></a>例
 
@@ -244,15 +244,15 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 値がシーケンスの最初の文字へのポインターを確認します。
+*最初*値のシーケンスの最初の文字へのポインターを確認します。
 
-`last` 値がシーケンスの最後の文字へのポインターを確認します。
+*最後*値のシーケンスの最後の文字へのポインターを確認します。
 
 ### <a name="return-value"></a>戻り値
 
 シーケンスの **long** 型のハッシュ値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ハッシュ値は、リストの配列で擬似ランダムにシーケンスを分散させる場合などに役立ちます。
 
@@ -270,15 +270,15 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 変換するシーケンスの最初の文字へのポインター。
+*最初*変換されるシーケンスの最初の文字へのポインター。
 
-`last` 変換するシーケンスの最後の文字へのポインター。
+*最後*変換されるシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 変換された文字シーケンスである文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 protected 仮想メンバー関数は、被制御シーケンスがシーケンス [ `first`, `last`) のコピーである [string_type](#string_type) クラスのオブジェクトを返します。 collate\< **CharType**> から派生したクラスで [do_compare](#do_compare) をオーバーライドする場合は、それに合わせて `do_transform` もオーバーライドする必要があります。 `collate::compare` に渡した場合、変換された 2 つの文字列の結果は、派生クラスで比較するために未変換文字列を渡した場合と同じものが生成される必要があります。
 
@@ -296,15 +296,15 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 値がシーケンスの最初の文字へのポインターを確認します。
+*最初*値のシーケンスの最初の文字へのポインターを確認します。
 
-`last` 値がシーケンスの最後の文字へのポインターを確認します。
+*最後*値のシーケンスの最後の文字へのポインターを確認します。
 
 ### <a name="return-value"></a>戻り値
 
 シーケンスの **long** 型のハッシュ値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、[do_hash](#do_hash)( `first`, `last`) を返します。
 
@@ -340,13 +340,13 @@ int main( )
 
 ## <a name="string_type"></a>  collate::string_type
 
-**CharType** 型の文字を格納する `basic_string` 型の文字列を表す型。
+`basic_string` 型の文字を格納する `CharType` 型の文字列を表す型。
 
 ```cpp
 typedef basic_string<CharType> string_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、オブジェクトにソース シーケンスのコピーを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
 
@@ -364,17 +364,17 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 変換するシーケンスの最初の文字へのポインター。
+*最初*変換されるシーケンスの最初の文字へのポインター。
 
-`last` 変換するシーケンスの最後の文字へのポインター。
+*最後*変換されるシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 変換された文字シーケンスを含む文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-このメンバー関数は、[do_transform](#do_transform)( `first`, `last`) を返します。
+メンバー関数を返します[do_transform](#do_transform)(`first`、 `last`)。
 
 ### <a name="example"></a>例
 

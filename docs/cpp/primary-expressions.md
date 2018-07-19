@@ -1,5 +1,5 @@
 ---
-title: 一次式 |Microsoft ドキュメント
+title: 一次式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c419bf65a02d13359335bc6cb527fc189d596d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4356e15d1b74508b7fc2606b45b5fb2bc9a435eb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966945"
 ---
 # <a name="primary-expressions"></a>一次式
 基本式は、より複雑な式のビルド ブロックです。 つまり、リテラル、名前、スコープ解決演算子 (`::`) で修飾された名前です。  基本式は次のいずれかの形式になります。  
   
 ```  
   
-      literal  
-      this  
-:: namename( expression )  
+literal  
+this
+name  
+::name ( expression )  
 ```  
   
- A*リテラル*は定数基本式です。 その型は、リテラルの指定の形式によって決まります。 参照してください[リテラル](../cpp/numeric-boolean-and-pointer-literals-cpp.md)詳細については、リテラルを指定します。  
+ A*リテラル*プライマリ定数式です。 その型は、リテラルの指定の形式によって決まります。 参照してください[リテラル](../cpp/numeric-boolean-and-pointer-literals-cpp.md)リテラルを指定する詳細についてはします。  
   
- **この**キーワードはクラス オブジェクトへのポインター。 非静的メンバー関数内で使用でき、その関数が呼び出されたクラスのインスタンスを参照します。 **この**クラス メンバー関数の本体の外側キーワードは使用できません。  
+ **この**キーワードはクラス オブジェクトへのポインター。 非静的メンバー関数内で使用でき、その関数が呼び出されたクラスのインスタンスを参照します。 **この**クラス メンバー関数の本体の外にキーワードを使用できません。  
   
- 型、**この**ポインターが`type`  **\*const** (ここで`type`クラスの名前を指定) 以外に変更する関数内で、**この**ポインター。 次の例は、関数宣言との型にメンバーを示します**この**:  
+ 種類、**この**ポインターが`type`  **\*const** (場所`type`クラスの名前を指定) 特に変更関数内で、**この**ポインター。 次の例では、関数の宣言と型のメンバーを示しています**この**:  
   
-```  
+```cpp 
 // expre_Primary_Expressions.cpp  
 // compile with: /LD  
 class Example  
@@ -52,17 +54,15 @@ public:
 };  
 ```  
   
- 参照してください[このポインター](this-pointer.md)の型を変更する方法について、**この**ポインター。  
+ 参照してください[this ポインター](this-pointer.md)の種類の変更の詳細については、**この**ポインター。  
   
  名前の前のスコープ解決演算子 (`::`) は基本式です。  そのような名前は、メンバー名ではなく、グローバル スコープでの名前であることが必要です。  この式の型は名前の宣言によって決まります。 宣言名が左辺値である場合は、左辺値 (代入演算子式の左辺になる式) です。 スコープ解決演算子を使用すると、グローバル名が現在のスコープでは隠されていても、その名前を参照できます。 参照してください[スコープ](../cpp/scope-visual-cpp.md)スコープ解決演算子を使用する方法の例についてはします。  
   
  かっこで囲まれた式も基本式であり、その型と値はかっこで囲まれていない式のものと一致します。 この式は、かっこで囲まれていない式が左辺値であれば、左辺値です。  
   
- プライマリの式の構文が、上記のコンテキストで*名前*意味を説明する構文では何も[名](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db)がときに、名前、種類の名前の前に、スコープ解決演算子を使用クラスでのみ発生することが許可されていません。  このような名前には、ユーザー定義の変換関数やデストラクターの名前が該当します。  
-  
  次に示しているのは、基本式の例です。  
   
-```  
+```cpp 
 100 // literal  
 'c' // literal  
 this // in a member function, a pointer to the class instance  
@@ -72,9 +72,9 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- 次の例はすべてと見なされます*名*、さまざまな形式で、つまり基本式。  
+ 次の例では、内容はすべてと*名*、さまざまな形式で、つまり基本式。  
   
-```  
+```cpp 
 MyClass // a identifier  
 MyClass::f // a qualified name  
 operator = // an operator function name  

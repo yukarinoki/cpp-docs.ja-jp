@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cad92eb5ce664d22cc5ee0ad8b4c26d41c88d883
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 13883e1426be22c8cf3d329be33258c69511900d
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842847"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966020"
 ---
 # <a name="container-classreference"></a>コンテナー クラス::reference
 
@@ -35,9 +35,9 @@ ms.locfileid: "33842847"
 typedef T2 reference;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ここでは、指定されていない型 **T2** のシノニムとして記述されています (通常は **Alloc::reference**)。 **reference** 型のオブジェクトは、[const_reference](../standard-library/container-class-const-reference.md) 型のオブジェクトにキャストできます。
+説明されている、ここで指定されていない型のシノニムとして`T2`(通常`Alloc::reference`)。 型のオブジェクト`reference`型のオブジェクトにキャストできる[const_reference](../standard-library/container-class-const-reference.md)します。
 
 ## <a name="see-also"></a>関連項目
 

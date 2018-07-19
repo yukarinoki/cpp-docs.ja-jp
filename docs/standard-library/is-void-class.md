@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13fee96611e2a2618de6ea6e1671ece9986a22d9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 35a40b016fa8fb25782393ea462b5cff2a3c3fac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857585"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963254"
 ---
 # <a name="isvoid-class"></a>is_void クラス
 
@@ -37,11 +37,11 @@ struct is_void;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 照会する型。
+*T*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `T` が `void` か `void`の cv-qualified 形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+場合、型述語のインスタンスは true を保持型*T*は**void**または cv で修飾された形式の**void**、それ以外の場合は false を保持します。
 
 ## <a name="example"></a>例
 
@@ -76,7 +76,7 @@ is_void<void()> == false
 is_void<void> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

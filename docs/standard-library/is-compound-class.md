@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d062912a441f16e9eb26415287fbbb574b829e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 91132492ab6173d9d462eeb74d6393dce41f6833
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843809"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961592"
 ---
 # <a name="iscompound-class"></a>is_compound クラス
 
@@ -37,11 +37,11 @@ struct is_compound;
 
 ### <a name="parameters"></a>パラメーター
 
-`Ty` 照会する型。
+*Ty*照会する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型述語のインスタンスを保持`false`場合の種類`Ty`基本型は、(場合は、 [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > を保持`true`) 以外の場合、保持している`true`です。 したがって、`Ty` が配列型、関数型、`void` またはオブジェクトや関数へのポインター、参照、クラス、共用体、列挙体、非静的クラス メンバーへのポインター、または、これらのいずれかの *cv で修飾された*形式である場合、述語は `true` を保持します。
+型述語のインスタンスを保持**false**場合の種類*Ty*が基本型 (場合に、 [is_fundamental](../standard-library/is-fundamental-class.md)\<Ty > を保持**true**)。それ以外の場合、保持している**true**します。 そのため、述語を保持して**true**場合*Ty*配列型、関数型へのポインターは、 **void**またはオブジェクトまたは関数、参照、クラス、共用体、列挙体は、または、非静的クラス メンバーへのポインターまたは*cv で修飾された*それらのいずれかの形式。
 
 ## <a name="example"></a>例
 
@@ -85,7 +85,7 @@ is_compound<void *> == true
 is_compound<int> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

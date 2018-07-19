@@ -108,12 +108,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fde78a6a7fdbd89be2f98cd2ab794ada3728008
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b31f1562e5db85f0638dfd32ba6e2db0f6f70fea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863083"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962918"
 ---
 # <a name="list-class"></a>list クラス
 
@@ -130,9 +130,9 @@ class list
 
 *型*リストに格納される要素のデータを入力します。
 
-`Allocator` リストの割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は**アロケーター**\<*型*>。
+*アロケーター*リストの割り当てとメモリの解放に関する詳細をカプセル化する格納されたアロケーター オブジェクトを表す型です。 この引数は省略可能で、既定値は**アロケーター**\<*型*>。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 一般的に、コンテナー型の選択は、アプリケーションにおいて必要な検索および挿入の種類に基づいている必要があります。 ベクターは、任意の要素へのランダム アクセスが優先事項であり、要素の挿入または削除がシーケンスの最後にのみ必要な場合に、シーケンスを管理するための推奨されるコンテナーです。 クラスの deque コンテナーでは、ランダム アクセスが必要であり、シーケンスの先頭と末尾の両方における挿入と削除が優先事項である場合に、より優れたパフォーマンスになります。
 
@@ -153,14 +153,14 @@ C++ 標準ライブラリ標準ヘッダー \<list> を定義するには、[コ
 |型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|リスト オブジェクトの `allocator` クラスを表す型。|
-|[const_iterator](#const_iterator)|リスト内の 1 つの `const` 要素を読み取ることができる双方向反復子を提供する型。|
-|[const_pointer](#const_pointer)|リスト内の `const` 要素へのポインターを提供する型。|
-|[const_reference](#const_reference)|読み取りと `const` 操作の実行のために、リストに格納された `const` 要素への参照を提供する型。|
-|[const_reverse_iterator](#const_reverse_iterator)|リスト内の任意の `const` 要素を読み取ることができる双方向反復子を提供する型。|
+|[const_iterator](#const_iterator)|リスト内の 1 つの **const** 要素を読み取ることができる双方向反復子を提供する型。|
+|[const_pointer](#const_pointer)|ポインターを提供する型、 **const**リスト内の要素。|
+|[const_reference](#const_reference)|読み取りと **const** 操作の実行のために、リストに格納された **const** 要素への参照を提供する型。|
+|[const_reverse_iterator](#const_reverse_iterator)|リスト内の任意の **const** 要素を読み取ることができる双方向反復子を提供する型。|
 |[difference_type](#difference_type)|同じリスト内の要素を参照する 2 反復子の違いを提供する型。|
 |[Iterator](#iterator)|リスト内の任意の要素の読み取りまたは変更ができる双方向反復子を提供する型。|
 |[pointer](#pointer)|リスト内の要素へのポインターを提供する型。|
-|[reference](#reference)|読み取りと `const` 操作の実行のために、リストに格納された `const` 要素への参照を提供する型。|
+|[reference](#reference)|読み取りと **const** 操作の実行のために、リストに格納された **const** 要素への参照を提供する型。|
 |[reverse_iterator](#reverse_iterator)|逆順のリスト内の 1 つの要素の読み取りまたは変更ができる双方向反復子を提供する型。|
 |[size_type](#size_type)|リスト内の要素の数をカウントする型。|
 |[value_type](#value_type)|リスト内に格納されているデータ型を表す型。|
@@ -210,7 +210,7 @@ C++ 標準ライブラリ標準ヘッダー \<list> を定義するには、[コ
 |-|-|
 |[list::operator=](#op_eq)|別のリストのコピーでリストの要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<list>
 
@@ -222,9 +222,9 @@ C++ 標準ライブラリ標準ヘッダー \<list> を定義するには、[コ
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`allocator_type` は、テンプレート パラメーター **Allocator** のシノニムです。
+`allocator_type` テンプレート パラメーターのシノニムです*アロケーター*します。
 
 ### <a name="example"></a>例
 
@@ -250,17 +250,17 @@ void assign(
 
 ### <a name="parameters"></a>パラメーター
 
-`First` 引数リストからコピーされる要素の範囲内の最初の要素の位置。
+*最初*引数リストからコピーされる要素の範囲の最初の要素の位置。
 
-`Last` 引数リストからコピーされる要素の範囲を超えてだけ最初の要素の位置。
+*最後*引数リストからコピーされる要素の範囲を越えた最初の要素の位置。
 
-`Count` リストに挿入される要素のコピーの数。
+*カウント*リストに挿入される要素のコピーの数。
 
-`Val` リストに挿入される要素の値。
+*Val*リストに挿入される要素の値。
 
-`IList` 挿入される要素を含む initializer_list。
+*IList*を挿入する要素を含む initializer_list。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 対象のリスト内にある既存の要素が消去されると、assign によって、元のリストまたは他のリストからコピーされる指定の要素範囲が対象のリストに挿入されるか、指定した値の新しい要素のコピーが対象のリストに挿入されます。
 
@@ -328,9 +328,9 @@ const_reference back() const;
 
 リストの最後の要素。 リストが空の場合、戻り値は定義されません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**back** の戻り値が `const_reference` に割り当てられている場合、リスト オブジェクトを変更することはできません。 **back** の戻り値が **reference** に割り当てられている場合、リスト オブジェクトを変更できます。
+`back` の戻り値が `const_reference` に割り当てられている場合、リスト オブジェクトを変更することはできません。 `back` の戻り値が `reference` に割り当てられている場合、リスト オブジェクトを変更できます。
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 に定義してコンパイルすると、空のリスト内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
@@ -378,9 +378,9 @@ iterator begin();
 
 リスト内の最初の要素、または空のリストの次の位置を指す双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**begin** の戻り値が `const_iterator` に割り当てられている場合、リスト オブジェクト内の要素は変更できません。 **begin** の戻り値が **iterator** に割り当てられている場合、リスト オブジェクト内の要素を変更できます。
+場合の戻り値`begin`に割り当てられている、 `const_iterator`、リスト オブジェクト内の要素を変更することはできません。 場合の戻り値`begin`に割り当てられている、 `iterator`、リスト オブジェクト内の要素を変更できます。
 
 ### <a name="example"></a>例
 
@@ -419,7 +419,7 @@ The first element of c1 is now 20
 
 ## <a name="cbegin"></a>  list::cbegin
 
-範囲内の最初の要素を示す `const` 反復子を返します。
+返します、 **const**範囲の最初の要素を指す反復子。
 
 ```cpp
 const_iterator cbegin() const;
@@ -427,13 +427,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合、`const`) を指し示す `cbegin() == cend()` 双方向アクセス反復子。
+A **const**最初の要素の範囲、または空の範囲の末尾の次の場所を指す双方向アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `begin()` と`cbegin()` をサポートする任意の種類の変更可能な (非 `const`) コンテナーであると見なします。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`begin()`と`cbegin()`します。
 
 ```cpp
 auto i1 = Container.begin();
@@ -455,11 +455,11 @@ const_iterator cend() const;
 
 範囲の末尾の次の位置を指し示す `const` 双方向アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、`Container` が `end()` と`cend()` をサポートする任意の種類の変更可能な (非 `const`) コンテナーであると見なします。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
 
 ```cpp
 auto i1 = Container.end();
@@ -514,7 +514,7 @@ The size of list after clearing is 0
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_iterator` 型で要素の値を変更することはできません。
 
@@ -524,13 +524,13 @@ typedef implementation-defined const_iterator;
 
 ## <a name="const_pointer"></a>  list::const_pointer
 
-リストの `const` 要素へのポインターを提供します。
+ポインターを**const**リスト内の要素。
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_pointer` 型で要素の値を変更することはできません。
 
@@ -544,7 +544,7 @@ typedef typename Allocator::const_pointer const_pointer;
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_reference` 型で要素の値を変更することはできません。
 
@@ -588,7 +588,7 @@ The second element is 20
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `const_reverse_iterator` 型は要素の値を変更できず、逆の順序でリストを反復処理するために使用します。
 
@@ -608,7 +608,7 @@ const_reverse_iterator rbegin() const;
 
 逆順のリスト内の最初の要素を指す定数逆順双方向反復子 (または通常の順序の `list` 内の最後の要素だったものを指す定数逆順双方向反復子)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `crbegin` は、[list::begin](#begin) が `list` で使用されるように、逆順のリストで使用されます。
 
@@ -652,7 +652,7 @@ const_reverse_iterator rend() const;
 
 逆順の [list](../standard-library/list-class.md) 内の最後の要素の次の場所 (通常の順序の `list` 内の最初の要素の前の場所) を指す定数逆順双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `crend` は、[list::end](#end) が `list` で使用されるように、逆順のリストで使用されます。
 
@@ -699,7 +699,7 @@ list の要素の数を、反復子が指す要素の範囲に基づいて表す
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常、`difference_type` は、[ `first`, `last`) の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
 
@@ -760,10 +760,10 @@ void emplace(iterator Where, Type&& val);
 
 |パラメーター|説明|
 |-|-|
-|`Where`|最初の要素が挿入される、ターゲット [list](../standard-library/list-class.md) 内の位置。|
-|`val`|`list` の末尾に追加する要素。|
+|*Where*|最初の要素が挿入される、ターゲット [list](../standard-library/list-class.md) 内の位置。|
+|*val*|`list` の末尾に追加する要素。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 例外がスローされた場合、`list` は変更されず、例外が再度スローされます。
 
@@ -803,9 +803,9 @@ void emplace_back(Type&& val);
 
 |パラメーター|説明|
 |-|-|
-|`val`|[list](../standard-library/list-class.md) の末尾に追加する要素。|
+|*val*|[list](../standard-library/list-class.md) の末尾に追加する要素。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 例外がスローされた場合、`list` は変更されず、例外が再度スローされます。
 
@@ -845,9 +845,9 @@ void emplace_front(Type&& val);
 
 |パラメーター|説明|
 |-|-|
-|`val`|[list](../standard-library/list-class.md) の先頭に追加する要素。|
+|*val*|[list](../standard-library/list-class.md) の先頭に追加する要素。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 例外がスローされた場合、`list` は変更されず、例外が再度スローされます。
 
@@ -925,9 +925,9 @@ iterator end();
 
 リスト内の最後の要素の次の位置を指す双方向反復子。 リストが空の場合は、`list::end == list::begin`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**end** は、反復子がリストの末尾に達したかどうかをテストするために使用します。
+`end` 反復子がリストの末尾に達したかどうかをテストに使用されます。
 
 ### <a name="example"></a>例
 
@@ -983,21 +983,21 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>パラメーター
 
-`Where` 一覧から削除する要素の位置。
+*場所*一覧から削除する要素の位置。
 
-`first` 最初の要素の位置は、一覧から削除します。
+*最初*一覧から削除する最初の要素の位置。
 
-`last` 最後の要素の次の位置は、一覧から削除します。
+*最後*の最後の要素の次の位置が、一覧から削除します。
 
 ### <a name="return-value"></a>戻り値
 
 削除された要素の後に残る最初の要素を指定する双方向反復子。このような要素が存在しない場合は、リストの末尾へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 再割り当ては発生しないため、反復子と参照は、消去された要素に対してのみ無効になります。
 
-**erase** は例外をスローしません。
+`erase` は例外をスローしません。
 
 ### <a name="example"></a>例
 
@@ -1057,9 +1057,9 @@ const_reference front() const;
 
 リストが空の場合、戻り値は定義されません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`front` の戻り値が `const_reference` に割り当てられている場合、リスト オブジェクトを変更することはできません。 `front` の戻り値が **reference** に割り当てられている場合、リスト オブジェクトを変更できます。
+`front` の戻り値が `const_reference` に割り当てられている場合、リスト オブジェクトを変更することはできません。 `front` の戻り値が `reference` に割り当てられている場合、リスト オブジェクトを変更できます。
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 に定義してコンパイルすると、空のリスト内の要素にアクセスしようとした場合に実行時エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
@@ -1103,7 +1103,7 @@ Allocator get_allocator() const;
 
 リストで使用されるアロケーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 list クラスのアロケーターは、クラスがどのようにストレージを管理するかを指定します。 C++ 標準ライブラリ コンテナー クラスで提供される既定のアロケーターは、ほとんどのプログラミング要件に対応しています。 独自のアロケーター クラスを作成して使用することは、C++ における高度な作業の 1 つです。
 
@@ -1150,11 +1150,11 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 |パラメーター|説明|
 |-|-|
-|`Where`|最初の要素が挿入される、ターゲット リスト内の位置。|
-|`Val`|リストに挿入される要素の値。|
-|`Count`|リストに挿入される要素の数。|
-|`First`|コピーされる引数リストの要素範囲内にある最初の要素の位置。|
-|`Last`|コピーされる引数リストの要素範囲外にある最初の要素の位置。|
+|*Where*|最初の要素が挿入される、ターゲット リスト内の位置。|
+|*val*|リストに挿入される要素の値。|
+|*カウント*|リストに挿入される要素の数。|
+|*まずは*|コピーされる引数リストの要素範囲内にある最初の要素の位置。|
+|*前の*|コピーされる引数リストの要素範囲外にある最初の要素の位置。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1238,9 +1238,9 @@ int main()
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**iterator** 型を使って要素の値を変更できます。
+型`iterator`要素の値を変更するために使用できます。
 
 ### <a name="example"></a>例
 
@@ -1272,29 +1272,29 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 |パラメーター|説明|
 |-|-|
-|`Al`|このオブジェクトに対して使用するアロケーター クラス。|
-|`Count`|構築されたリスト内の要素の数。|
-|`Val`|リスト内の要素の値。|
-|`Right`|構築されたリストがコピーになる元のリスト。|
-|`First`|コピーする要素範囲内の最初の要素の位置。|
-|`Last`|コピーする要素範囲を超える最初の要素の位置。|
-|`IList`|コピーされる要素を含む initializer_list。|
+|*Al*|このオブジェクトに対して使用するアロケーター クラス。|
+|*カウント*|構築されたリスト内の要素の数。|
+|*val*|リスト内の要素の値。|
+|*右*|構築されたリストがコピーになる元のリスト。|
+|*まずは*|コピーする要素範囲内の最初の要素の位置。|
+|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*IList*|コピーされる要素を含む initializer_list。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-すべてのコンストラクターが、アロケーター オブジェクト (`Al`) を格納し、リストを初期化します。
+すべてのコンス トラクターは、アロケーター オブジェクトを格納 (*Al*) し、リストを初期化します。
 
 [get_allocator](#get_allocator) は、リストの構築に使用されるアロケーター オブジェクトのコピーを返します。
 
-最初の 2 つのコンストラクターは、空の初期リストを指定し、2 番目のコンストラクターは、使用するアロケーターの型 (`Al`) を指定します。
+最初の 2 つのコンス トラクターを指定する空の初期リスト、2 番目のアロケーターの型を指定する (*Al*) を使用します。
 
-3 番目のコンストラクターは、**Type** クラスの、指定された数 (`Count`) の既定値の要素を繰り返すことを指定します。
+3 番目のコンス トラクターを指定された数の繰り返しを指定します (*カウント*) クラスの既定値の要素の`Type`します。
 
-4 番目と 5 番目のコンストラクターは、値 `Val` の `Count` 個の要素の繰り返しを指定します。
+4 番目と 5 番目のコンス トラクターの繰り返しを指定する (*カウント*) の値の要素*Val*します。
 
-6 番目のコンストラクターは、リスト `Right` のコピーを指定します。
+6 番目のコンス トラクターは、リストのコピーを指定する*右*します。
 
-7 番目のコンストラクターは、リスト `Right` を移動します。
+7 番目のコンス トラクターは、リストを移動*右*します。
 
 8 番目のコンストラクターは、initializer_list を使用して要素を指定します。
 
@@ -1437,15 +1437,15 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 対象のリストにマージする引数リスト。
+*適切な*ターゲット リストにマージする引数リスト。
 
-`comp` 対象のリストの要素の並べ替えに使用される比較演算子です。
+*comp*ターゲット リストの要素の並べ替えに使用される比較演算子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-引数のリスト `right` は対象のリストにマージされます。
+引数リスト*右*ターゲット リストに結合されます。
 
-引数リストと対象のリストはどちらも、結果のシーケンスを並べ替える場合と同じ比較関係を使用して並べ替える必要があります。 1 つ目のメンバー関数の既定の順序は昇順です。 2 つ目のメンバー関数は、**Traits** クラスのユーザー指定比較演算 `comp` を強制します。
+引数リストと対象のリストはどちらも、結果のシーケンスを並べ替える場合と同じ比較関係を使用して並べ替える必要があります。 1 つ目のメンバー関数の既定の順序は昇順です。 2 番目のメンバー関数は、ユーザー指定比較演算*comp*クラスの`Traits`します。
 
 ### <a name="example"></a>例
 
@@ -1519,11 +1519,11 @@ list& operator=(list&& right);
 
 |パラメーター|説明|
 |-|-|
-|`right`|`list` にコピーする [list](../standard-library/list-class.md)。|
+|*right*|`list` にコピーする [list](../standard-library/list-class.md)。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`list` 内の既存の要素を消去した後、この演算子は `right` の内容を `list` 内にコピーまたは移動します。
+既存の要素を消去した後、 `list`、演算子がコピーまたは移動の内容*右*に、 `list`。
 
 ### <a name="example"></a>例
 
@@ -1574,9 +1574,9 @@ int main( )
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-**pointer** 型を使って要素の値を変更できます。
+型`pointer`要素の値を変更するために使用できます。
 
 ほとんどの場合、リスト オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
@@ -1588,7 +1588,7 @@ typedef typename Allocator::pointer pointer;
 void pop_back();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最後の要素は空でない必要があります。 `pop_back` は例外をスローしません。
 
@@ -1630,7 +1630,7 @@ After deleting the element at the end of the list, the last element is: 1
 void pop_front();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初の要素は空でない必要があります。 `pop_front` は例外をスローしません。
 
@@ -1676,9 +1676,9 @@ void push_back(void push_back(Type&& val);
 
 |パラメーター|説明|
 |-|-|
-|`val`|リストの末尾に追加する要素。|
+|*val*|リストの末尾に追加する要素。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 例外がスローされた場合、リストは変更されず、例外が再度スローされます。
 
@@ -1732,9 +1732,9 @@ void push_front(Type&& val);
 
 |パラメーター|説明|
 |-|-|
-|`val`|リストの先頭に追加する要素。|
+|*val*|リストの先頭に追加する要素。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 例外がスローされた場合、リストは変更されず、例外が再度スローされます。
 
@@ -1788,7 +1788,7 @@ reverse_iterator rbegin();
 
 逆順のリスト内の最初の要素を指す反転双方向反復子 (または通常の順序のリスト内の最後の要素だったものを指す反転双方向反復子)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `rbegin` は、[begin](#begin) がリストで使用されるように、逆順のリストで使用されます。
 
@@ -1892,9 +1892,9 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-`val` 要素によって保持されている場合は、一覧から削除される要素の原因となる値です。
+*val*要素によって保持されている場合に、一覧からその要素の削除が発生する値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 要素の残りの順序は影響を受けません。
 
@@ -1949,7 +1949,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>パラメーター
 
-`pred` 要素によって満たされる場合は、結果的に、一覧からその要素の削除、単項述語。
+*pred*その一覧からその要素の削除結果、要素によって満たされる場合、単項述語。
 
 ### <a name="example"></a>例
 
@@ -2015,7 +2015,7 @@ reverse_iterator rend();
 
 逆順のリスト内の最後の要素の次の場所 (通常の順序のリスト内の最初の要素の前の場所) を指す逆順双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `rend` は、[end](#end) がリストで使用されるように、逆順のリストで使用されます。
 
@@ -2099,15 +2099,15 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Newsize` 一覧の新しいサイズ。
+*_Newsize*リストの新しいサイズ。
 
-`val` 新しいサイズが大きい場合、一覧に追加する新しい要素の値を元のサイズ。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
+*val*新しいサイズが大きい場合、一覧に追加する新しい要素の値を元のサイズ。 この値を省略した場合、新しい要素にはそのクラスの既定値が割り当てられます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-リストのサイズが要求されたサイズ (`_Newsize`) よりも小さい場合は、要求されたサイズになるまで、リストに要素が追加されます。
+リストのサイズが要求されたサイズより小さい場合 *_Newsize*、要求されたサイズに達するまで、要素が一覧に追加されます。
 
-リストのサイズが要求されたサイズよりも大きい場合は、リストのサイズが `_Newsize` になるまで、リストの末尾に近い要素から順に削除されます。
+サイズに到達するまで、リストの末尾に近い要素が削除された、リストのサイズが要求されたサイズよりも大きい場合は、 *_Newsize*します。
 
 リストの現在のサイズが要求されたサイズと同じ場合は、何も実行されません。
 
@@ -2205,7 +2205,7 @@ Reversed c1 = 30 20 10
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 型 `reverse_iterator` は、逆の順序でリストを反復処理するために使用します。
 
@@ -2279,13 +2279,13 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>パラメーター
 
-`comp` 一連の要素の並べ替えに使用される比較演算子です。
+*comp*連続する要素の並べ替えに使用される比較演算子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定では、最初のメンバー関数は要素を昇順に並べ替えます。
 
-メンバー テンプレート関数は、**Traits** クラスのユーザー指定の比較演算 `comp` に従って要素を並べ替えます。
+メンバー テンプレート関数は、ユーザー指定比較演算に従って要素を並べ替えます*comp*クラスの`Traits`します。
 
 ### <a name="example"></a>例
 
@@ -2350,23 +2350,23 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-`Where` 挿入する前に、ターゲット リスト内の位置。
+*場所*を挿入する前に、ターゲット リスト内の位置。
 
-`Source` ターゲット リストに挿入されるソース リスト。
+*ソース*ターゲット リストに挿入されるソース リスト。
 
-`Iter` ソース リストから挿入される要素。
+*Iter*ソース リストから挿入される要素。
 
-`First` ソース リストから挿入される範囲内で最初の要素。
+*最初*ソース リストから挿入される範囲の最初の要素。
 
-`Last` ソース リストから挿入される範囲内の最後の要素を超える最初の位置。
+*最後*ソース リストから挿入される範囲内の最後の要素を超える最初の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数の最初のペアは、ソース リスト内のすべての要素を、ターゲット リスト内の `Where` で参照される位置の前に挿入し、ソース リストからすべての要素を削除します (`&Source` を `this` と同じにすることはできません)。
+最初のメンバー関数のペアでは、ソース リスト内のすべての要素を挿入で参照される位置の前に、ターゲット リストに*場所*ソース リストからすべての要素を削除します。 (`&Source`と同じにしないで`this`)。
 
-メンバー関数の 2 つ目のペアは、`Iter` で参照される要素を、ターゲット リスト内の `Where` で参照される位置の前に挿入し、ソース リストから `Iter` を削除します (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
+メンバー関数の 2 つ目のペアによって参照される要素を挿入する*Iter*によって参照される、ターゲット リスト内の位置の前に*場所*削除と*Iter*から、ソースの一覧です。 (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
 
-メンバー関数の 3 つ目のペアは、[ `First`, `Last`) で指定された範囲を、ターゲット リスト内の `Where` で参照される要素の前に挿入し、ソース リストからその要素の範囲を削除します。 (`&Source == this` の場合、範囲 `[First, Last)` に `Where` で指し示される要素を含めることはできません)。
+メンバー関数の 3 番目のペアで指定された範囲の挿入 [ `First`、 `Last`) で参照される、ターゲット リスト内の要素の前に*場所*ソース リストからその要素の範囲を削除します。 (場合`&Source == this`、範囲`[First, Last)`が指す要素を含めることはできません*場所*)。
 
 範囲指定されたスプライスで `N` 個の要素が挿入され、さらに `&Source != this` の場合、クラス [iterator](../standard-library/forward-list-class.md#iterator) のオブジェクトは `N` 回インクリメントされます。
 
@@ -2460,9 +2460,9 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 交換する要素を提供するリストまたはリストのものと交換される要素は、リスト`left`です。
+*適切な*を交換する要素を提供するリストまたはリストのものと交換される要素がリスト*左*します。
 
-`left` 要素があるリストのものと交換されるリスト`right`です。
+*左*要素がリストのものと交換されるリスト*右*します。
 
 ### <a name="example"></a>例
 
@@ -2525,15 +2525,15 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>パラメーター
 
-`pred` 連続する要素を比較するために使用する二項述語。
+*pred*一連の要素を比較するために使用する二項述語。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は、すべての重複要素が隣接するように list が並べ替えられていることを前提とします。 隣接していない重複要素は削除されません。
 
 1 つ目のメンバー関数は、その直前の要素に一致するすべての要素を削除します。
 
-2 番目のメンバー関数が述語関数を満たすすべての要素を削除*pred*直前の要素と比較した場合。 宣言された二項関数オブジェクトのいずれかを使用することができます、\<機能 > 引数のヘッダー *pred*独自に作成することもできます。
+2 番目のメンバー関数は、述語関数を満たすすべての要素を削除します。 *pred* 、直前の要素と比較した場合。 宣言された二項関数オブジェクトのいずれかを使用することができます、\<機能 > 引数のヘッダー *pred*独自に作成することもできます。
 
 ### <a name="example"></a>例
 
@@ -2592,9 +2592,9 @@ After removing successive unequal elements, c3 = -10 -10
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`value_type` は、テンプレート パラメーター **Type** のシノニムです。
+`value_type` は、テンプレート パラメーター *Type* のシノニムです。
 
 ### <a name="example"></a>例
 

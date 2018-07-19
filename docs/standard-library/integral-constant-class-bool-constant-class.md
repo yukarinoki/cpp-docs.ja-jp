@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844537"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962534"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant クラス、bool_constant クラス
 
@@ -50,11 +50,11 @@ struct integral_constant {
 
 *v*定数の値。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `integral_constant` テンプレート クラスは、整数型 *T* とその型の値 *v* で特殊化されると、指定された値の整数型の定数を保持するオブジェクトを表します。 `type` という名前のメンバーは、生成済みテンプレートの特殊化型のエイリアスです。`value` メンバーは、特殊化を作成するために使用された値 *v* を保持します。
 
-`bool_constant` テンプレート クラスは、*T* 引数として `bool` を使用する `integral_constant` の明示的な部分的特殊化です。
+`bool_constant`テンプレート クラスの明示的な部分的特殊化は、`integral_constant`を使用して**bool**として、 *T*引数。
 
 ## <a name="example"></a>例
 
@@ -81,7 +81,7 @@ integral_constant<int, 5> == 5
 integral_constant<bool, false> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

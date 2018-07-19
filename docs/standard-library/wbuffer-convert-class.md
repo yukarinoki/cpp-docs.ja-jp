@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36df93b54accbfdc3ff8f486c41a47af72032c3f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 364ae6c544f58f09208cefeec9d3984de35120e1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854611"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965217"
 ---
 # <a name="wbufferconvert-class"></a>wbuffer_convert クラス
 
@@ -39,11 +39,11 @@ class wbuffer_convert
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Codecvt`|変換オブジェクトを表す[ロケール](../standard-library/locale-class.md) ファセット。|
-|`Elem`|ワイド文字要素型。|
-|`Traits`|*Elem* と関連付けられている特徴。|
+|*Codecvt*|変換オブジェクトを表す[ロケール](../standard-library/locale-class.md) ファセット。|
+|*Elem*|ワイド文字要素型。|
+|*Traits*|*Elem* と関連付けられている特徴。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、文字の特徴がクラス `Traits` によって記述される型 `_Elem` の要素の、型 `std::streambuf` のバイト ストリーム バッファーとの間での転送を制御するストリーム バッファーについて説明します。
 

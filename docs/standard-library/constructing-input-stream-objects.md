@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7066ffe50dc76c26528e7bfcd3dc9e9778e1473a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2c640f1b338fa4b0aa6dbcc408e0729fbf8ff90a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963551"
 ---
 # <a name="constructing-input-stream-objects"></a>入力ストリーム オブジェクトのコンストラクト
 
@@ -33,7 +33,7 @@ ms.locfileid: "33842873"
 
 入力ファイル ストリームは、2 つの方法で作成できます。
 
-- `void` 引数コンストラクターを使った後、`open` メンバー関数を呼び出します。
+- 使用して、 **void**引数コンス トラクターを呼び出して、`open`メンバー関数。
 
    ```cpp
    ifstream myFile; // On the stack

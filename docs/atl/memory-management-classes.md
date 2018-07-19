@@ -1,5 +1,5 @@
 ---
-title: メモリ管理クラス (ATL) |Microsoft ドキュメント
+title: メモリ管理クラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6849327d796afd1f500102167b82b08b9c60be18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2b7b66989b140b7c93abefdd8075adb640b04b6f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356509"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961098"
 ---
 # <a name="memory-management-classes"></a>メモリ管理クラス
 これらのクラスは、ヒープのポインター、スマート ポインター、およびその他のメモリ割り当てルーチンをサポートします。  
   
 -   [CAutoPtr](../atl/reference/cautoptr-class.md)このクラスは、スマート ポインター オブジェクトを表します。  
   
--   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md)スマート ポインターの配列を構築するときに、このクラスに役立つメソッドを提供します。  
+-   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md)このクラスは、スマート ポインターの配列を構築するときに便利なメソッドを提供します。  
   
--   [CAutoPtrList](../atl/reference/cautoptrlist-class.md)スマート ポインターのリストを構築するときに、このクラスに役立つメソッドを提供します。  
+-   [CAutoPtrList](../atl/reference/cautoptrlist-class.md)このクラスは、スマート ポインターのリストを構築するときに便利なメソッドを提供します。  
   
--   [出たリソース](../atl/reference/cautovectorptr-class.md)このクラスは、ベクター型の new と delete 演算子を使用して、スマート ポインター オブジェクトを表します。  
+-   [CAutoVectorPtr](../atl/reference/cautovectorptr-class.md)このクラスは、ベクター型の new と delete 演算子を使用して、スマート ポインター オブジェクトを表します。  
   
--   [CComAllocator](../atl/reference/ccomallocator-class.md)このクラスは、COM メモリ ルーチンを使用しているメモリを管理するためのメソッドを提供します。  
+-   [CComAllocator](../atl/reference/ccomallocator-class.md)このクラスは、COM メモリのルーチンを使用してメモリを管理するためのメソッドを提供します。  
   
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md)このクラスはインターフェイス ポインターと、グローバル インターフェイス テーブル (GIT) を処理するためのメソッドを提供します。  
+-   [CComGITPtr](../atl/reference/ccomgitptr-class.md)このクラスは、インターフェイス ポインターとグローバル インターフェイス テーブル (GIT) を処理するためのメソッドを提供します。  
   
 -   [CComHeap](../atl/reference/ccomheap-class.md)このクラスは実装[IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) COM メモリの割り当て関数を使用します。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "32356509"
   
 -   [CComPtr](../atl/reference/ccomptr-class.md) COM インターフェイス ポインターを管理するためのスマート ポインター クラス。  
   
--   [CComPtrBase](../atl/reference/ccomptrbase-class.md)このクラスは、メモリの COM ベースのルーチンを使用するスマート ポインター クラスの基礎を提供します。  
+-   [CComPtrBase](../atl/reference/ccomptrbase-class.md)このクラスは、メモリの COM ベースのルーチンを使用するスマート ポインター クラスの基盤を提供します。  
   
 -   [CComQIPtr](../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインターを管理するためのスマート ポインター クラス。  
   
--   [CCRTAllocator](../atl/reference/ccrtallocator-class.md)このクラスは、CRT メモリ ルーチンを使用しているメモリを管理するためのメソッドを提供します。  
+-   [CCRTAllocator](../atl/reference/ccrtallocator-class.md)このクラスは、CRT メモリ ルーチンを使用してメモリを管理するためのメソッドを提供します。  
   
 -   [CCRTHeap](../atl/reference/ccrtheap-class.md)このクラスは実装[IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) CRT ヒープ関数を使用します。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "32356509"
   
 -   [CHeapPtrBase](../atl/reference/cheapptrbase-class.md)このクラスはいくつかのスマート ポインター クラスをヒープの基礎を形成します。  
   
--   [CHeapPtrList](../atl/reference/cheapptrlist-class.md)ヒープのポインターのリストを構築するときに、このクラスに役立つメソッドを提供します。  
+-   [CHeapPtrList](../atl/reference/cheapptrlist-class.md)このクラスは、ヒープのポインターのリストを構築するときに便利なメソッドを提供します。  
   
 -   [CLocalHeap](../atl/reference/clocalheap-class.md)このクラスは実装[IAtlMemMgr](../atl/reference/iatlmemmgr-class.md)ローカル ヒープの Win32 関数を使用します。  
   
 -   [CWin32Heap](../atl/reference/cwin32heap-class.md)このクラスは実装[IAtlMemMgr](../atl/reference/iatlmemmgr-class.md) Win32 ヒープ割り当て関数を使用します。  
   
--   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md)このクラスは、メモリ マネージャーへのインターフェイスを表します。  
+-   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md)このクラスは、メモリ マネージャー インターフェイスを表します。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../atl/atl-class-overview.md)

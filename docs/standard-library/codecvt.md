@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d4e07c4869bd345e77f0af4f30f694773aed114
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 973f183980e89ac0be268e5cbbec42de83a378f4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845142"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965816"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-テンプレート クラス [codecvt](../standard-library/codecvt-class.md) に基づいてオブジェクトを記述するいくつかのテンプレート クラスを定義します。 これらのオブジェクトは、`Elem` 型の値のシーケンスと `char` 型の値のシーケンスとの変換を制御する[ロケール ファセット](../standard-library/locale-class.md#facet_class)として使用できます。
+テンプレート クラス [codecvt](../standard-library/codecvt-class.md) に基づいてオブジェクトを記述するいくつかのテンプレート クラスを定義します。 これらのオブジェクトとして使用できる[ロケール ファセット](../standard-library/locale-class.md#facet_class)型の値のシーケンス間の変換を制御する`Elem`と型の値のシーケンス**char**します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ ms.locfileid: "33845142"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このヘッダーで宣言されているロケール ファセットは、いくつかの文字エンコード間の変換を行います。 ワイド文字 (固定サイズの整数で表され、プログラム内に格納される) については、次のようになります。
 
@@ -45,7 +45,7 @@ ms.locfileid: "33845142"
 
 - UTF-16 は、1 つまたは 2 つの 16 ビットの整数で表される、プログラムにおける Unicode のエンコード形式です  (これは、標準 C または標準 C++ の有効なワイド文字エンコードの要件をすべて満たしているわけではないことに注意してください。 しかし、これ自体は広く利用されています)。
 
-バイト ストリーム (ファイルに格納されるか、バイト シーケンスとして送信されるか、あるいは `char` の配列でプログラム内に格納される) については、次のようになります。
+バイト ストリーム (ファイルに格納されている、バイト シーケンスとして送信またはの配列で、プログラム内に格納された**char**)。
 
 - UTF-8 は、バイト順が確定されている 1 つ以上の 8 ビット バイトで表される、バイト ストリームにおける Unicode のエンコード形式です。
 
@@ -67,7 +67,7 @@ ms.locfileid: "33845142"
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|UTF-16 としてエンコードされたワイド文字と、UTF-8 としてエンコードされたバイト ストリームを変換するロケール ファセットを表します。|
 |[codecvt_utf16](codecvt-utf16-class.md)|UCS-2 または UCS-4 としてエンコードされたワイド文字と、UTF-16LE または UTF-16BE としてエンコードされたバイト ストリームを変換するロケール ファセットを表します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<codecvt>
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 805045e4ea63f153e9a35b0d4b068bd69874b93f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3195d2c988abcfb2d62acb4ece957c8c5156bbd7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864087"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965689"
 ---
 # <a name="moneybase-class"></a>money_base クラス
 
@@ -36,21 +36,21 @@ struct pattern
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-列挙型 **part** は、構造パターンの配列フィールドの要素で使用可能な値を表します。 **part** の値は次のとおりです。
+列挙体`part`構造パターンの配列フィールドの要素で指定できる値について説明します。 値`part`は。
 
-- **none**: 0 個以上の空白に一致するか、何も生成しません。
+- `none` 一致する 0 個以上の空白文字か何も生成しません。
 
-- **sign**: 正の記号または負の記号に一致するか、正の記号または負の記号を生成します。
+- `sign` 一致するか、正または負の記号を生成します。
 
-- **space**: 0 個以上の空白に一致するか、1 個の空白を生成します。
+- `space` 0 個以上の空白文字と一致するか、空白を生成します。
 
-- **symbol**: 通貨記号に一致するか、通貨記号を生成します。
+- `symbol` 一致するか、通貨記号を生成します。
 
-- **value**: 通貨の値に一致するか、通貨の値を生成します。
+- `value` 一致するか、通貨値を生成します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

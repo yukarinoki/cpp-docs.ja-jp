@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c90838bf4ae49e372b35ca2e9a2f0feede4eb9b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d73beb5b935a729eb5e304eb03cbc37536c4d0e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33864061"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963155"
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t クラス
 
-ポインター引数による初期化を行うときに、1 つの引数を使用する **non_const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。
+使用するアダプター クラスを`non_const`メンバー関数を 1 つの引数のポインター引数による初期化時に、二項関数オブジェクトとして呼び出せるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -44,25 +44,25 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ### <a name="parameters"></a>パラメーター
 
-`_Pm` クラスのメンバー関数へのポインター**型**関数オブジェクトに変換します。
+*_Pm*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
 
-`_Pleft` オブジェクトを`_Pm`でメンバー関数が呼び出されます。
+*_Pleft*オブジェクトを *_Pm*でメンバー関数が呼び出されます。
 
-`right` 指定された引数`_Pm`です。
+*適切な*に渡される引数 *_Pm*します。
 
 ## <a name="return-value"></a>戻り値
 
 適合可能な二項関数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは `_Pm` のコピーをプライベート メンバー オブジェクトに格納します。これは、**Type** クラスのメンバー関数へのポインターである必要があります。 そのメンバー関数 `operator()` は ( **_Pleft**->\* `_Pm`)( **right**) を返すように定義されています。
+テンプレート クラスのコピーを格納する *_Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数 `operator()` は ( **_Pleft**->\* `_Pm`)( **right**) を返すように定義されています。
 
 ## <a name="example"></a>例
 
 `mem_fun1_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun](../standard-library/functional-functions.md#mem_fun)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

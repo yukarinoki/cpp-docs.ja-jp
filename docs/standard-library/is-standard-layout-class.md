@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9c56ecc8b27b18498de225bbba6f0d110d2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6223151acbce299178101735db05f7b4bd516f2f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852085"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965514"
 ---
 # <a name="isstandardlayout-class"></a>is_standard_layout クラス
 
@@ -39,13 +39,13 @@ struct is_standard_layout;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`Ty`|照会する型|
+|*Ty*|照会する型|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型 `Ty` がメモリ内にメンバー オブジェクトの標準レイアウトを持つクラスである場合、この型述語のインスタンスは true を保持します。それ以外の場合は false を保持します。
+場合はこの型述語のインスタンスは true を保持型*Ty*はメンバー オブジェクトの標準的なレイアウトが、メモリ、それ以外の場合は false を保持するクラスです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

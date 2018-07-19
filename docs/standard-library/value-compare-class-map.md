@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: effa754f50f8c092cef727969a0f4036e765f888
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 46f8d00877aa4147e4b3e4ec2a6a23b70d8154c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856047"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965849"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare クラス (&lt;map&gt;)
 
@@ -43,9 +43,9 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-マップに含まれる要素全体の **value_type** 間で `value_compare` によって提供される比較の基準は、補助型クラスの構築によって各要素のキーの間で比較を行うことから導き出されます。 メンバー関数の演算子は、`value_compare` によって提供される関数オブジェクトに格納されている型 `key_compare` のオブジェクト **comp** を使って、2 つの要素の並べ替えキー構成要素を比較します。
+によって提供される比較の基準`value_compare`間`value_types`マップに含まれる要素全体の補助型クラスの構築によって各要素のキーの間の比較から出されます。 メンバー関数の演算子は、オブジェクトを使用して`comp`型の`key_compare`によって提供される関数オブジェクトに格納されている`value_compare`を 2 つの要素の並べ替えキー構成要素を比較します。
 
 セットとマルチセット (キーの値が要素の値と同一である単純なコンテナー) の場合、`value_compare` は `key_compare` と等価です。マップとマルチマップの場合、型 `pair` の要素の値が要素のキーの値と同一ではないため、その 2 つは等価ではありません。
 
@@ -53,7 +53,7 @@ protected:
 
 `value_compare` の宣言方法や使用方法の例については、[value_comp](../standard-library/map-class.md#value_comp)の例を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<map>
 

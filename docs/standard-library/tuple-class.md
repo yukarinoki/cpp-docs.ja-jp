@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d265938eb024a41d8b90f3b9891c35ec1ec251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3735b6cd8b0397ae1e1092fdb37ba094248ab507
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963927"
 ---
 # <a name="tuple-class"></a>タプル クラス
 
@@ -48,17 +48,18 @@ public:
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
    };
+```
 
-### Parameters
+### <a name="parameters"></a>パラメーター
 
-`TN`
- The type of the Nth tuple element.
+*TN*  
+ N 番目の tuple 要素の型。
 
-## Remarks
+## <a name="remarks"></a>Remarks
 
-The template class describes an object that stores N objects of types `T1`, `T2`, ..., `TN`, respectively, where where `0 <= N <= Nmax`. The extent of a tuple instance `tuple<T1, T2, ..., TN>` is the number `N` of its template arguments. The index of the template argument `Ti` and of the corresponding stored value of that type is `i - 1`. Thus, while we number the types from 1 to N in this documentation, the corresponding index values range from 0 to N - 1.
+このテンプレート クラスは、型の N のオブジェクトを格納するオブジェクトを表します`T1`、 `T2`,..., `TN`、それぞれ、where`0 <= N <= Nmax`します。 タプル インスタンスのエクステント`tuple<T1, T2, ..., TN>`番号`N`テンプレート引数の。 テンプレート引数のインデックス`Ti`し、その型の対応する格納されている値は`i - 1`します。 そのため、1 から N へこのドキュメントで型に番号を振れば、中に、対応するインデックスは 0 ~ n-1 の範囲を値です。
 
-## Example
+## <a name="example"></a>例
 
 ```cpp
 // tuple.cpp
@@ -126,7 +127,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<tuple>
 
@@ -153,13 +154,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-`UN` N 番目の型は、タプル要素をコピーします。
+*解除*  
+ N 番目のコピーされたタプル要素の型。
 
-`right` コピーされるタプル。
+*right*  
+ コピー元のタプル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初の 2 つのメンバー演算子は、`right` の要素を `*this` の対応する要素に割り当てます。 3 番目のメンバー演算子は、`*this` のインデックス 0 位置の要素に `right.first` を割り当て、インデックス 1 の要素に `right.second` を割り当てます。 これらの 3 つすべてのメンバー演算子は、`*this` を返します。
+最初の 2 つのメンバー演算子は、の要素を割り当てる*右*の対応する要素に`*this`します。 3 番目のメンバー演算子は、`*this` のインデックス 0 位置の要素に `right.first` を割り当て、インデックス 1 の要素に `right.second` を割り当てます。 これらの 3 つすべてのメンバー演算子は、`*this` を返します。
 
 残りのメンバー演算子はそれ以前のコンストラクターと似ていますが、[Rvalue 参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) を使用します。
 
@@ -226,10 +229,10 @@ template <class... Types>
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`left`|要素がタプル `right` の要素と交換されるタプル。|
-|`right`|要素がタプル `left` の要素と交換されるタプル。|
+|*left*|要素がタプルのものと交換されるタプル*右*します。|
+|*right*|要素がタプルのものと交換されるタプル*左*します。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は、`left.swap(right)` を実行します。
 
@@ -260,17 +263,19 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-`UN` N 番目の型は、タプル要素をコピーします。
+*解除*  
+ N 番目のコピーされたタプル要素の型。
 
-`right` コピーされるタプル。
+*right*  
+ コピー元のタプル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、要素が既定で構築されるオブジェクトを構築します。
 
 2 番目のコンス トラクターは、引数 `P1`、`P2`...`PN` に基づいて構築されるコピーを要素とするオブジェクトを構築します。これらの `Pi` は、インデックス `i - 1` で要素を初期化します。
 
-3 番目と 4 番目のコンストラクターは、`right` の対応する要素から構築されたコピーを要素として含むオブジェクトを構築します。
+3 番目と 4 番目のコンス トラクターは要素がコピーの対応する要素から構築されたオブジェクトを構築*右*します。
 
 5 番目のコンストラクターは、インデックス 0 の要素が `right.first` から構築されたコピーで、インデックス 1 の要素が `right.second` から構築されたコピーであるオブジェクトを構築します。
 

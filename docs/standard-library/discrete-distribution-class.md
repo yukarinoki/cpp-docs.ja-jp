@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af8f5c543847c91903c9cb4ddf2502c0cc59dfa0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 00c23cf21b8d9c5c46976f522f837dddb941f24f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964211"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution クラス
 
@@ -82,9 +82,9 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数結果型が既定で`int`です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 この標本分布には均等幅の区間が含まれ、各区間には一様確率が含まれます。 他のサンプリング分布の詳細については、「[piecewise_linear_distribution クラス](../standard-library/piecewise-linear-distribution-class.md)」および「[piecewise_constant_distribution クラス](../standard-library/piecewise-constant-distribution-class.md)」をご覧ください。
 
@@ -178,7 +178,7 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -209,11 +209,11 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*firstW*分布を構築する元のリストの最初の反復子。
+*firstW*分布の作成元となるリストの最初の反復子。
 
-*lastW* (非包含的反復子は、最後の空の要素を使用するため) の分布を構築する元のリストの最後の反復子。
+*lastW* (非包含的反復子は、末尾の空の要素を使用するため)、分布の作成元となるリストの最後の反復子。
 
-*weightlist* 、 [initializer_list](../cpp/initializers.md)分布が構築されるからです。
+*weightlist* 、 [initializer_list](../cpp/initializers.md)分布の作成元。
 
 *カウント*分布範囲内の要素の数。 `count==0` の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
 
@@ -221,11 +221,11 @@ explicit discrete_distribution(const param_type& parm);
 
 *高*分布範囲内の最大値。
 
-*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方が `double` に変換可能である必要があります。
+*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
 
-*パラメーター* 、`param_type`分布の作成に使用される構造体。
+*parm* 、`param_type`分布の作成に使用される構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 既定のコンストラクターは、格納された確率値が値 1 である 1 つの要素を持つオブジェクトを構築します。 この結果、常に 0 を生成する分布になります。
 
@@ -236,7 +236,7 @@ explicit discrete_distribution(const param_type& parm);
 *count*、*low*、*high*、*weightfunc* パラメーターを持つコンストラクターは、以下のルールに基づいて初期化された分布オブジェクトを作成します。
 
 - *count* < 1 の場合、**n** = 1 で、このような場合は既定のコンストラクターと同じで、常に 0 を生成します。
-- *count* > 0 の場合、**n** = *count* です。 指定された**d** = (*高* - *低*)/ **n**がより大きい場合は 0 を使用して**d** uniform部分範囲には、各重みが割り当てられている次のように:`weight[k] = weightfunc(x)`ここで、 **x** = *低* + **k**  * **d** + **d** /2 の**k** 0 を =..., **n** - 1。
+- *count* > 0 の場合、**n** = *count* です。 提供される**d** = (*高* - *低*)/ **n**よりも大きい値は 0 を使用して**d** uniform部分範囲には、各重みが割り当てられている次のように:`weight[k] = weightfunc(x)`ここで、 **x** = *低* + **k**  * **d** + **d** /2 の**k** = 0 の場合は...、 **n** - 1。
 
 `param_type` パラメーター *parm* を持つコンストラクターは、格納されたパラメーター構造体として *parm* を使う分布オブジェクトを作成します。
 
@@ -269,11 +269,11 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*firstW*分布を構築する元のリストの最初の反復子。
+*firstW*分布の作成元となるリストの最初の反復子。
 
-*lastW* (非包含的反復子は、最後の空の要素を使用するため) の分布を構築する元のリストの最後の反復子。
+*lastW* (非包含的反復子は、末尾の空の要素を使用するため)、分布の作成元となるリストの最後の反復子。
 
-*weightlist* 、 [initializer_list](../cpp/initializers.md)分布が構築されるからです。
+*weightlist* 、 [initializer_list](../cpp/initializers.md)分布の作成元。
 
 *カウント*分布範囲内の要素の数。 *count* が 0 の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
 
@@ -281,11 +281,11 @@ struct param_type {
 
 *高*分布範囲内の最大値。
 
-*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方が `double` に変換可能である必要があります。
+*weightfunc*分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方に変換できる必要があります**二重**します。
 
-*右*、`param_type`これと比較するオブジェクト。
+*適切な*、`param_type`これと比較するオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このパラメーター パッケージを `operator()` に渡して、戻り値を生成できます。
 

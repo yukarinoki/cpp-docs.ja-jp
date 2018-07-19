@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e84ed8ed97a529d67c6d136fd8464cd13c8a502
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b9bc37213ed2e5690f85fca738d44e6eecfaa8c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845220"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962050"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 演算子
 
@@ -44,13 +44,13 @@ bool operator==(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>パラメーター
 
-`Fty` ラップする関数の型。
+*Fty*をラップする関数の型。
 
-`f` Function オブジェクト
+*f*関数オブジェクト
 
-`npc` Null のポインター。
+*npc* null ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 どちらの演算子も、`function` オブジェクトへの参照である引数と null ポインター定数である引数を受け取ります。 `function` オブジェクトが空の場合にのみ、両方とも true を返します。
 
@@ -101,13 +101,13 @@ bool operator!=(null_ptr_type npc, const function<Fty>& f);
 
 ### <a name="parameters"></a>パラメーター
 
-`Fty` ラップする関数の型。
+*Fty*をラップする関数の型。
 
-`f` Function オブジェクト
+*f*関数オブジェクト
 
-`npc` Null のポインター。
+*npc* null ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 どちらの演算子も、`function` オブジェクトへの参照である引数と null ポインター定数である引数を受け取ります。 `function` オブジェクトが空ではない場合にのみ、両方とも true を返します。
 

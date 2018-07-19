@@ -7,12 +7,12 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: c52376f504e526c03d4f2c2afd39c029761f3c99
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f930fb43ea554e1dd445dabb382adecc6f67e35f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852609"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964965"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 関数
 
@@ -22,13 +22,13 @@ ms.locfileid: "33852609"
 
 ## <a name="nothrow"></a>  nothrow
 
-引数として使用するオブジェクトを `nothrow` バージョンの **new** および **delete** に提供します。
+引数として使用するオブジェクトを提供します、 **nothrow**のバージョンの**新しい**と**削除**します。
 
 ```cpp
 extern const std::nothrow_t nothrow;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 オブジェクトは、パラメーターの型 [std::nothrow_t](../standard-library/nothrow-t-structure.md) に一致する関数の引数として使用されます。
 
@@ -38,7 +38,7 @@ extern const std::nothrow_t nothrow;
 
 ## <a name="set_new_handler"></a>  set_new_handler
 
-`operator new` がメモリ割り当ての試行に失敗した場合に呼び出されるユーザー関数をインストールします。
+インストールするときに呼び出されるユーザー関数**new 演算子**メモリの割り当ての試行に失敗します。
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -46,15 +46,16 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-`Pnew` インストールする new_handler です。
+*Pnew*  
+`new_handler`をインストールします。
 
 ### <a name="return-value"></a>戻り値
 
 最初の呼び出しの場合は 0、それ以降の呼び出しの場合は以前の `new_handler`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この関数は、関数が保持する静的な [new handler](../standard-library/new-typedefs.md#new_handler) ポインターに `Pnew` を格納し、ポインターに以前に格納された値を返します。 新しいハンドラーは [operator new](../standard-library/new-operators.md#op_new)( **size_t**) によって使用されます。
+関数は*Pnew*静的な[新しいハンドラー](../standard-library/new-typedefs.md#new_handler)ポインターが保持するポインターに以前に格納されている値が返されます。 新しいハンドラーを使って[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)。
 
 ### <a name="example"></a>例
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51397080267dd50f012b274e95ac4c9aa4fa64
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57e01cbfd7cb291ff7d2651e3244b74ae96adbea
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841877"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962401"
 ---
 # <a name="conditional-class"></a>conditional クラス
 
@@ -40,17 +40,17 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`B` 選択した種類を決定する値。
+*B*選択した型を決定する値。
 
-`T1` B が true の場合の型の結果。
+*T1* B が true の場合の型の結果。
 
-`T2` B が false の場合の型の結果。
+*T2* B が false の場合の型の結果。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート メンバー typedef `conditional<B, T1, T2>::type` は、 `T1` が `B` に評価されるときは `true`として、 `T2` が `B` に評価されるときは `false`として評価されます。
+テンプレート メンバー typedef`conditional<B, T1, T2>::type`に評価される*T1*とき*B*に評価される**true**に評価されると*T2*とき*B*に評価される**false**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

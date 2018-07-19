@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c7d7babe1112bbfcc80485d54d5a4a005b4dfc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3ce85d846d142e2c15a0fba6d2d3fb76c924b97f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848636"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966603"
 ---
 # <a name="fpos-class"></a>fpos クラス
 
@@ -34,7 +34,7 @@ ms.locfileid: "33848636"
 
 - [streamoff](../standard-library/ios-typedefs.md#streamoff) 型のバイト オフセット。
 
-- basic_filebuf クラスのオブジェクトで使用するための **St** 型の変換状態 (通常は `mbstate_t`)。
+- Basic_filebuf クラスのオブジェクトによって使用される型の変換状態`St`、通常`mbstate_t`します。
 
 [basic_filebuf](../standard-library/basic-filebuf-class.md) クラスのオブジェクトで使用するために、`fpos_t` 型の任意のファイル位置も格納できます。 ただし、ファイル サイズが制限された環境では、`streamoff` と `fpos_t` が区別されずに使用される場合があります。 状態依存のエンコードを使用したストリームがない環境では、実際に `mbstate_t` が使用されていない場合があります。 したがって、格納されるメンバー オブジェクトの数が異なる場合があります。
 
@@ -74,7 +74,7 @@ class fpos
 |[operator==](#op_eq_eq)|ファイル位置インジケーターが等しいかどうかをテストします。|
 |[operator streamoff](#op_streamoff)|`fpos` 型のオブジェクトを `streamoff` 型のオブジェクトにキャストします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<ios>
 
@@ -92,17 +92,17 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` ストリームへのオフセット。
+*_Off*ストリームへのオフセット。
 
-`_State` 最初の状態、`fpos`オブジェクト。
+*_State*の開始時の状態、`fpos`オブジェクト。
 
 *_Filepos*ストリームへのオフセット。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、ファイルの先頭に対するオフセット `_Off` を初期の変換状態で格納します (必要に応じて)。 `_Off` が -1 の場合、結果として得られるオブジェクトは無効なストリーム位置を表します。
+最初のコンス トラクターのオフセットを格納する *_Off*(必要に応じて) の場合、初期の変換状態にあるファイルの先頭からの相対します。 場合 *_Off* -1 で、結果のオブジェクトが、無効なストリームの位置を表します。
 
-2 番目のコンストラクターは、ゼロ オフセットとオブジェクト `_State` を格納します。
+2 番目のコンス トラクターがゼロのオフセットとオブジェクトを格納 *_State*します。
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -114,13 +114,13 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 比較するファイル位置インジケーター。
+*適切な*を比較する対象のファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
 
 ファイル位置インジケーターが等しくない場合は **true**。それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`!(*this == right)` を返します。
 
@@ -186,13 +186,13 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` ファイル位置インジケーターをインクリメントするオフセットです。
+*_Off*ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
 ファイル内の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、**fpos(\*this) +=** `_Off` を返します。
 
@@ -210,15 +210,15 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` ファイル位置インジケーターをインクリメントするオフセットです。
+*_Off*ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
 ファイル内の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は、格納されたオフセット メンバー オブジェクトに `_Off` を追加し、**\*this** を返します。 ファイル内の位置を特定する場合、結果は一般に状態依存エンコーディングを持たないバイナリ ストリームについてのみ有効です。
+メンバー関数は、追加 *_Off*格納されたオフセット メンバー オブジェクトとし、返します**\*この**します。 ファイル内の位置を特定する場合、結果は一般に状態依存エンコーディングを持たないバイナリ ストリームについてのみ有効です。
 
 ### <a name="example"></a>例
 
@@ -236,9 +236,9 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` ファイルの位置。
+*適切な*ファイルの位置。
 
-`_Off` ストリームのオフセットです。
+*_Off* Stream オフセット。
 
 ### <a name="return-value"></a>戻り値
 
@@ -258,13 +258,13 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` ストリームのオフセットです。
+*_Off* Stream オフセット。
 
 ### <a name="return-value"></a>戻り値
 
 このメンバー関数は、`fpos(*this) -= _Off` を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ファイル内の位置を特定する場合、結果は一般に状態依存エンコーディングを持たないバイナリ ストリームについてのみ有効です。
 
@@ -282,13 +282,13 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 比較するファイル位置インジケーター。
+*適切な*を比較する対象のファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
 
 ファイル位置インジケーターが等しい場合は **true**。それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`(streamoff)*this == (streamoff)right` を返します。
 
@@ -304,7 +304,7 @@ bool operator==(const fpos<Statetype>& right) const;
 operator streamoff() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、格納されたオフセット メンバー オブジェクト、および `fpos_t` メンバー オブジェクトの一部として格納された追加のオフセットを返します。
 
@@ -355,15 +355,15 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>パラメーター
 
-`_State` 新しい変換状態。
+*_State*新しい変換状態。
 
 ### <a name="return-value"></a>戻り値
 
 変換状態。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のメンバー関数は、**St** メンバー オブジェクトに格納されている値を返します。 2 番目のメンバー関数は、`_State`St**メンバー オブジェクトに** を格納します。
+最初のメンバー関数に格納されている値を返します、`St`メンバー オブジェクトです。 2 番目のメンバー関数は *_State*で、`St`メンバー オブジェクトです。
 
 ### <a name="example"></a>例
 

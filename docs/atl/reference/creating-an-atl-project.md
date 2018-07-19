@@ -1,5 +1,5 @@
 ---
-title: ATL プロジェクトの作成 |Microsoft ドキュメント
+title: ATL プロジェクトの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,33 +19,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37badfba693357cb14b34e0f26f717b2ebe8f024
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61302df754c0657fb201d555c6e7491ba1414f7f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359004"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962944"
 ---
 # <a name="creating-an-atl-project"></a>ATL プロジェクトの作成
-ATL プロジェクトを作成する最も簡単な方法は、の Win32 プロジェクト フォルダーにある、ATL プロジェクト ウィザードを使用して、**新しいプロジェクト ダイアログ ボックス**です。  
+ATL プロジェクトを作成する最も簡単な方法は、の Win32 プロジェクト フォルダーにある、ATL プロジェクト ウィザードを使用して、**新しいプロジェクト ダイアログ ボックス**します。  
   
 ### <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>ATL プロジェクト ウィザードを使用して ATL プロジェクトを作成するには  
   
-1.  トピックの指示に従って、 [Visual C のアプリケーション ウィザードでプロジェクトを作成する](../../ide/creating-desktop-projects-by-using-application-wizards.md)です。  
+1.  トピックの指示に従って[Visual C アプリケーションのウィザードでプロジェクトを作成する](../../ide/creating-desktop-projects-by-using-application-wizards.md)します。  
   
-2.  選択、 **ATL プロジェクト**を開くには、ATL プロジェクト ウィザードの [テンプレート] ペインでアイコン。  
+2.  選択、 **ATL プロジェクト**ATL プロジェクト ウィザードを開く [テンプレート] ペインでアイコン。  
   
-3.  使用して、アプリケーションの設定を定義、[アプリケーション設定](../../atl/reference/application-settings-atl-project-wizard.md)のページ、`ATL Project Wizard`です。  
+3.  使用して、アプリケーションの設定を定義、[アプリケーション設定](../../atl/reference/application-settings-atl-project-wizard.md)のページ、`ATL Project Wizard`します。  
   
     > [!NOTE]
     >  ウィザードの既定の設定を使用する場合は、この手順を省略します。  
   
-4.  をクリックして**完了**ウィザードを終了し、開発環境で、新しいプロジェクトを開きます。  
+4.  クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。  
   
- 作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**です。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)です。 新しい ATL プロジェクト、およびそれらを変更する方法の構成の詳細については、次を参照してください。 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)です。  
+ 作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。 新しい ATL プロジェクト、およびそれらを変更する方法の構成の詳細については、次を参照してください。 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
- [アプリケーションを展開します。](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

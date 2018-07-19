@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: b2647cf836fb565115b8a582085b6108c01a3420
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ba77722abb28f246d305b44fb78379b2297ccc14
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856649"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965718"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 演算子
 
@@ -46,15 +46,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**リスト**です。
+*左*型のオブジェクト`list`します。
 
-`right` 型のオブジェクト**リスト**です。
+*適切な*型のオブジェクト`list`します。
 
 ### <a name="return-value"></a>戻り値
 
 リストが等しくない場合は **true**、リストが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの list は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -95,15 +95,15 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**リスト**です。
+*左*型のオブジェクト`list`します。
 
-`right` 型のオブジェクト**リスト**です。
+*適切な*型のオブジェクト`list`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list 未満である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -148,15 +148,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**リスト**です。
+*左*型のオブジェクト`list`します。
 
-`right` 型のオブジェクト**リスト**です。
+*適切な*型のオブジェクト`list`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以下" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -201,15 +201,15 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**リスト**です。
+*左*型のオブジェクト`list`します。
 
-`right` 型のオブジェクト**リスト**です。
+*適切な*型のオブジェクト`list`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの list は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -250,15 +250,15 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**リスト**です。
+*左*型のオブジェクト`list`します。
 
-`right` 型のオブジェクト**リスト**です。
+*適切な*型のオブジェクト`list`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -303,15 +303,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 型のオブジェクト**リスト**です。
+*左*型のオブジェクト`list`します。
 
-`right` 型のオブジェクト**リスト**です。
+*適切な*型のオブジェクト`list`します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list 以上である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以上" 関係は、最初の等しくない要素のペアの比較に基づいています。
 

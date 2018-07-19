@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882248ab4f9ed692aa36bac5873251867b2fff54
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a1695306ddc53a8150917eef8b27f5d3edce2bf3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856636"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961865"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
-`char` オブジェクトに割り当てられた配列に格納されているシーケンスの iostreams 操作をサポートする複数のクラスを定義します。 このようなシーケンスは、C 文字列と簡単に相互変換できます。
+割り当てられた配列に格納されているシーケンスの iostreams 操作をサポートするクラスがいくつか定義**char**オブジェクト。 このようなシーケンスは、C 文字列と簡単に相互変換できます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,18 +34,18 @@ ms.locfileid: "33856636"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 型 `strstream` のオブジェクトは C 文字列の `char` * を使用します。 [\<sstream](../standard-library/sstream.md) は、型 [basic_string](../standard-library/basic-string-class.md) のオブジェクトを操作するために使用します。
 
 > [!NOTE]
-> クラスは、 \<strstream > は使用されなくなりました。 クラスの使用を検討\<sstream > 代わりにします。
+> クラスは、 \<strstream > は非推奨とされます。 クラスの使用を検討\<sstream > 代わりにします。
 
 ### <a name="classes"></a>クラス
 
 |クラス|説明|
 |-|-|
-|[strstreambuf クラス](../standard-library/strstreambuf-class.md)|このクラスは `char` 配列オブジェクトに格納されている要素のシーケンス間で要素の送信を制御するストリーム バッファーを表します。|
+|[strstreambuf クラス](../standard-library/strstreambuf-class.md)|クラスが要素に格納されている要素のシーケンスとの間の転送を制御するストリーム バッファーについて説明します、 **char**配列オブジェクト。|
 |[istrstream クラス](../standard-library/istrstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーからの、要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを表します。|
 |[ostrstream クラス](../standard-library/ostrstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーへの、要素とエンコードされたオブジェクトの挿入を制御するオブジェクトを表します。|
 |[strstream クラス](../standard-library/strstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーを使用して要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを表します。|

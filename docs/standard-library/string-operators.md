@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: b0ca7da732786c2f0ff6087052b5867150702a5e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862485"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966629"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 演算子
 
@@ -107,17 +107,17 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` C スタイルの文字列または型のオブジェクト`basic_string`連結します。
+*左*C スタイル文字列または型のオブジェクト`basic_string`連結します。
 
-`right` C スタイルの文字列または型のオブジェクト`basic_string`連結します。
+*適切な*C スタイル文字列または型のオブジェクト`basic_string`連結します。
 
 ### <a name="return-value"></a>戻り値
 
 入力文字列を連結した文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り値`basic_string` \< **CharType**、 **Traits**、**アロケーター**> (_*左*)。 [追加](../standard-library/basic-string-class.md#append)(\_ *右*)。
+関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string` \< **CharType**、 **Traits**、**アロケーター**> (_*左*)。 [追加](../standard-library/basic-string-class.md#append)(\_ *右*)。
 
 ### <a name="example"></a>例
 
@@ -194,15 +194,15 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
-`right` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトと辞書順で等しくない場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列オブジェクト間の比較は、文字のペアの辞書順比較に基づいています。 2 つの文字列は、同じ数の文字を持ち、各文字の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -283,15 +283,15 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
-`right` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトと辞書順で等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列オブジェクト間の比較は、文字のペアの辞書順比較に基づいています。 2 つの文字列は、同じ数の文字を持ち、各文字の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -372,15 +372,15 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
-`right` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の文字列オブジェクトが辞書順で右辺の文字列オブジェクト未満の場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列間の辞書順比較は、次の条件を満たすまで文字ごとに比較します。
 
@@ -466,15 +466,15 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
-`right` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の文字列オブジェクトが辞書順で右辺の文字列オブジェクト以下の場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列間の辞書順比較は、次の条件を満たすまで文字ごとに比較します。
 
@@ -557,17 +557,17 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-_Ostr に書き込まれる出力ストリーム。
+*_Ostr*に書き込まれている出力ストリーム。
 
-`str` 出力ストリームに入力する文字列。
+*str*出力ストリームに入力される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-指定された文字列の値を出力ストリーム `_Ostr` に書き込みます。
+指定した文字列の値を出力ストリームに書き込みます *_Ostr*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数は **operator<<** をオーバーロードして、テンプレート クラス [basic_string](../standard-library/basic-string-class.md) のオブジェクト _ *Str* ストリーム \_ *Ostr* に挿入します。 関数を効果的に返します\_ *Ostr*です。 **書き込む**( \_ *Str*です。 [c_str](../standard-library/basic-string-class.md#c_str)、 \_ *Str*です。 [サイズ](../standard-library/basic-string-class.md#size))。
+テンプレート関数は **operator<<** をオーバーロードして、テンプレート クラス [basic_string](../standard-library/basic-string-class.md) のオブジェクト _ *Str* ストリーム \_ *Ostr* に挿入します。 関数は効果的に返します\_ *Ostr*します。 **書き込み**( \_ *Str*します。 [c_str](../standard-library/basic-string-class.md#c_str)、 \_ *Str*します。 [サイズ](../standard-library/basic-string-class.md#size))。
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -592,15 +592,15 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
-`right` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の文字列オブジェクトが辞書順で右辺の文字列オブジェクトよりも大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列間の辞書順比較は、次の条件を満たすまで文字ごとに比較します。
 
@@ -693,15 +693,15 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*左*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
-`right` C スタイルの文字列または型のオブジェクト`basic_string`と比較します。
+*適切な*C スタイル文字列または型のオブジェクト`basic_string`と比較します。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の文字列オブジェクトが辞書順で右辺の文字列オブジェクト以上の場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 文字列間の辞書順比較は、次の条件を満たすまで文字ごとに比較します。
 
@@ -784,19 +784,19 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-`_Istr` シーケンスを抽出するために使用する入力ストリーム
+*_Istr*シーケンスを抽出するために使用する入力ストリーム
 
-`right` 入力ストリームから抽出されている文字列。
+*適切な*入力ストリームから抽出されている文字列。
 
 ### <a name="return-value"></a>戻り値
 
-指定した文字列の値を読み取ります`_Istr`にそれを返しますと`right`です。
+指定した文字列の値を読み取ります *_Istr*にそれを返しますと*右*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `skipws` フラグが設定されていない場合、演算子は先頭の余白をスキップします。 次の文字が余白か、ファイルの終わりに到達するまでは、次のすべての文字を読み取ります。
 
-テンプレート関数は **operator>>** をオーバーロードして、`right` で制御されるシーケンスをストリーム `_Istr` から抽出された要素のシーケンスで置き換えます。 抽出は、次で停止します。
+テンプレート関数のオーバー ロード**演算子 >>** によって制御されるシーケンスを置き換える*右*ストリームから抽出された要素のシーケンスを持つ *_Istr*します。 抽出は、次で停止します。
 
 - ファイルの終わり。
 
@@ -806,7 +806,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 関数が [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`) の要素 *ch* を抽出した後。 **is**( **ctype**\< **CharType**>:: **space**, *ch*) が true の場合、文字が戻されます。
 
-関数が要素を抽出しなかった場合、[setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`) を呼び出します。 いずれの場合を呼び出す**istr**です。 **幅**(0) を返しますと\***この**です。
+呼び出す関数が要素を抽出しなかった場合[setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`)。 いずれの場合も、 **istr**します。 **幅**(0) を返します\***この**します。
 
 ### <a name="example"></a>例
 

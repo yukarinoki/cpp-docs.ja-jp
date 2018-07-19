@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedb88ae44faaea9d65b41dcc98a4e83354ea71b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 222aef46fb8080ba044904dbbedd5546cec51929
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858735"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963089"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution クラス
 
@@ -81,9 +81,9 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*浮動小数点の結果の型、既定値は`double`します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、すべての値の可能性が同様となるように、分布を使用してユーザー指定の整数浮動小数点型の値を生成する、下限を含み上限を含まない分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
@@ -182,7 +182,7 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -199,17 +199,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*a*包括的なランダムな値の下限の境界。
+*a*  
+乱数値の下限 (包含的)。
 
-*b*排他、ランダムな値の上限の境界。
+*b*  
+乱数値の上限 (排他的)。
 
-*パラメーター* 、`param_type`分布の作成に使用される構造体。
+*parm*  
+分布の作成に使用される `param_type` の構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `a < b`
 
-1 つ目のコンストラクターは、格納されている値 `a` と `b` にそれぞれ *a* と *b* の値を保持するオブジェクトを作成します。
+最初のコンス トラクターは、オブジェクトを構築します。 がストアド *、* 値を保持 *、* し、そのストアド*b*値を保持*b*します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
@@ -231,13 +234,16 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*a*包括的なランダムな値の下限の境界。
+*a*  
+乱数値の下限 (包含的)。
 
-*b*排他、ランダムな値の上限の境界。
+*b*  
+乱数値の上限 (排他的)。
 
-*右*、`param_type`これと比較するオブジェクト。
+*right*  
+このオブジェクトと比較する `param_type` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `a < b`
 

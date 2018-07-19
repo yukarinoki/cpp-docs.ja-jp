@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d0a556505370078f599d6d667fa856723d9bac8f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 974b1294f8ef23936d79e64926595779a9019368
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856799"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963694"
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 演算子
 
@@ -38,14 +38,14 @@ bool operator==(const error_condition& left,
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`left`|等しいかどうかをテストするオブジェクト。|
-|`right`|等しいかどうかをテストするオブジェクト。|
+|*left*|等しいかどうかをテストするオブジェクト。|
+|*right*|等しいかどうかをテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
 オブジェクトが等しい場合は **true**、オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は `left.category() == right.category() && left.value() == right.value()` を返します。
 
@@ -65,14 +65,14 @@ bool operator!=(const error_condition& left,
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`left`|不等性をテストするオブジェクト。|
-|`right`|不等性をテストするオブジェクト。|
+|*left*|不等性をテストするオブジェクト。|
+|*right*|不等性をテストするオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-`left` で渡されるオブジェクトが `right` で渡されるオブジェクトと等しくない場合は **true**、それ以外の場合は **false**。
+**true**オブジェクトが渡された場合*左*が渡されたオブジェクトと等しく*右*。 そうしないと**false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は `!(left == right)` を返します。
 
@@ -108,14 +108,14 @@ inline bool operator<(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`left`|比較されるオブジェクト。|
-|`right`|比較されるオブジェクト。|
+|*left*|比較されるオブジェクト。|
+|*right*|比較されるオブジェクト。|
 
 ### <a name="return-value"></a>戻り値
 
-`left` で渡されるオブジェクトが `right` で渡されるオブジェクトより小さい場合は **true**、それ以外の場合は **false**。
+**true**オブジェクトが渡された場合*左*で渡されるオブジェクトより小さい*右*;それ以外の場合、 **false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数はエラー順序をテストします。
 

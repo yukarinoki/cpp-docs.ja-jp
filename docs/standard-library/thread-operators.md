@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 1f5f523b19581fe11f01266c90e6b8612da125fc
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ac9a436637f9acf5f3818454706eb146d814b3bc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964822"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 演算子
 
@@ -49,15 +49,17 @@ bool operator>= (
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`thread::id`オブジェクト。
+*左*  
+ 左側の `thread::id` オブジェクト。
 
-`Right` 右側の`thread::id`オブジェクト。
+*右*  
+ 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数では、例外がスローされません。
 
@@ -73,15 +75,17 @@ bool operator> (
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`thread::id`オブジェクト。
+*左*  
+ 左側の `thread::id` オブジェクト。
 
-`Right` 右側の`thread::id`オブジェクト。
+*右*  
+ 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `Right < Left`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数では、例外がスローされません。
 
@@ -97,15 +101,17 @@ bool operator<= (
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`thread::id`オブジェクト。
+*左*  
+ 左側の `thread::id` オブジェクト。
 
-`Right` 右側の`thread::id`オブジェクト。
+*右*  
+ 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数では、例外がスローされません。
 
@@ -121,15 +127,17 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`thread::id`オブジェクト。
+*左*  
+ 左側の `thread::id` オブジェクト。
 
-`Right` 右側の`thread::id`オブジェクト。
+*右*  
+ 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-全体の順序付けの中で `Left` が `Right` よりも前にある場合は `true`、それ以外の場合は `false`。
+**true**場合*左*前*右*合計順序のそれ以外の場合、 **false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この演算子は、すべての `thread::id` オブジェクトでの全体の順序付けを定義します。 これらのオブジェクトは、連想コンテナー内のキーとして使用できます。
 
@@ -147,15 +155,17 @@ bool operator!= (
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 左側の`thread::id`オブジェクト。
+*左*  
+ 左側の `thread::id` オブジェクト。
 
-`Right` 右側の`thread::id`オブジェクト。
+*右*  
+ 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数では、例外がスローされません。
 
@@ -170,16 +180,18 @@ bool operator== (
 ```
 
 ### <a name="parameters"></a>パラメーター
+ 
+*左*  
+ 左側の `thread::id` オブジェクト。
 
-`Left` 左側の`thread::id`オブジェクト。
-
-`Right` 右側の`thread::id`オブジェクト。
+*右*  
+ 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-2 つのオブジェクトが同じ実行スレッドを表している場合、またはいずれのオブジェクトも実行スレッドを表していない場合は `true`、それ以外の場合は `false`。
+**true** 2 つのオブジェクトが同じスレッドの実行を表す場合、またはどちらのオブジェクトは、実行のスレッドを表す場合それ以外の場合、 **false**します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数では、例外がスローされません。
 
@@ -195,17 +207,19 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ostr` A [basic_ostream](../standard-library/basic-ostream-class.md)オブジェクト。
+*Ostr*  
+ [basic_ostream](../standard-library/basic-ostream-class.md) オブジェクト。
 
-`Id` A`thread::id`オブジェクト。
+*Id*  
+ `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-`Ostr`。
+*Ostr*します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この関数は、`Ostr` に `Id` を挿入します。
+この関数は、挿入*Id*に*Ostr*します。
 
 2 つの `thread::id` オブジェクトが等しい場合、これらのオブジェクトの挿入されたテキスト表現は同じです。
 

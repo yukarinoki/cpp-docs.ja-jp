@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: 85ed95250b5563cd8a7c1ef9cfc0ee048cb3bc60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: df52b5bdf9b7054fd838b1892c4e641cdf9d4dcc
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858213"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962189"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 関数および変数
 
@@ -50,15 +50,15 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>パラメーター
 
-`Flag` A [once_flag](../standard-library/once-flag-structure.md)を呼び出し可能オブジェクトは 1 回のみ呼び出すことを確認するオブジェクト。
+*フラグ*A [once_flag](../standard-library/once-flag-structure.md)オブジェクトにより、呼び出し可能オブジェクトが 1 回呼び出されますのみです。
 
-`F` 呼び出し可能オブジェクト。
+*F*呼び出し可能オブジェクト。
 
-`A` 引数リスト。
+*A*引数リストを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`Flag` が有効でない場合、関数はエラー コードが `invalid_argument` である [system_error](../standard-library/system-error-class.md) をスローします。 それ以外の場合、テンプレート関数は `Flag` 引数を使用して、テンプレート関数が呼び出される回数に関係なく `F(A...)` が 1 回だけ呼び出されるようにします。 `F(A...)` が例外をスローして終了した場合、呼び出しは失敗です。
+場合*フラグ*が無効ですが、関数、 [system_error](../standard-library/system-error-class.md)のエラー コードを持つ`invalid_argument`します。 それ以外の場合、テンプレート関数を使用してその*フラグ*を呼び出していることを確認する引数`F(A...)`回数にかかわらずが 1 回だけにテンプレート関数が呼び出されます。 `F(A...)` が例外をスローして終了した場合、呼び出しは失敗です。
 
 ## <a name="defer_lock"></a>  defer_lock 変数
 
@@ -77,7 +77,7 @@ template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数に対する引数は、例外をスローする可能性がある `try_lock` への呼び出しを除いて、*mutex 型*である必要があります。
 

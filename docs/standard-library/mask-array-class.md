@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b19ac68f1d1db9ac73e0519b566f68443775db11
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1dc03a9d8f5f11b08ab2d5cb9d21190ac0a75925
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852205"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962674"
 ---
 # <a name="maskarray-class"></a>mask_array クラス
 
@@ -29,13 +29,13 @@ ms.locfileid: "33852205"
 
 ## <a name="syntax"></a>構文
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このクラスは、クラス [valarray](../standard-library/valarray-class.md)**\<Type>** のオブジェクト **va** と共に、クラス [valarray\<bool>](../standard-library/valarray-bool-class.md) のオブジェクト **ba** への参照を格納するオブジェクトを表します。これらは **valarray\<Type>** オブジェクトから選択する要素のシーケンスを説明します。
+クラスは、オブジェクトへの参照を格納するオブジェクトを表します`va`クラスの[valarray](../standard-library/valarray-class.md)**\<型 >**、オブジェクトと共に`ba`クラスの[valarray\<bool >](../standard-library/valarray-bool-class.md)から選択する要素のシーケンスを説明する、`valarray<Type>`オブジェクト。
 
-**mask_array\<Type>** オブジェクトの構築は、[va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) という形式の式を記述するだけです。 クラス mask_array のメンバー関数は **valarray\<Type>** に対して定義された対応する関数のシグネチャのように動作しますが、選択された要素のシーケンスだけが影響を受けるという点が異なります。
+構築する、`mask_array<Type>`オブジェクト形式の式を記述するだけ[va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)します。 クラス mask_array のメンバー関数に対して定義された対応する関数のシグネチャのように動作します`valarray<Type>`選択した要素のシーケンスだけが影響を受けることを除いて、します。
 
-シーケンスは最大で **ba.size** 個の要素で構成されます。 要素 *J* は **ba**[ *J*] が true である場合にのみ含まれます。 このため、 **ba**内の true の要素の数だけシーケンス内に要素があります。 `I` が **ba**内の最下位の true 要素である場合、 **va**[ `I`] は選択されているシーケンス内で要素 0 です。
+シーケンスは最大で成る`ba.size`要素。 要素 *J* は **ba**[ *J*] が true である場合にのみ含まれます。 したがって、シーケンス内で true の要素がある多くの要素がある`ba`します。 場合`I`最下位の true 要素でのインデックスは、 `ba`、し**va**[ `I`] は選択した順序で要素 0 です。
 
 ## <a name="example"></a>例
 
@@ -78,7 +78,7 @@ The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
 The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<valarray>
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a149269117f83b18838d54c728d6d8da580882b0
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdd2a8417f66c0e095f571c914d5a4624179fdb6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840701"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962114"
 ---
 # <a name="alignedunion-class"></a>aligned_union クラス
 
@@ -39,13 +39,13 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-`Len` 共用体の最大の型のアラインメント値。
+*Len*共用体の最大の型のアラインメント値です。
 
-`Types` 基になる共用体での個別の型。
+*型*基になる共用体での個別の型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-テンプレート クラスを使用して、初期化されていない記憶域に共用体を格納するために必要なサイズと配置を取得します。 メンバー typedef `type` は、`Types` にリストされたすべての型を格納するのに適した POD 型を指定します。最小サイズは `Len` です。 型 `std::size_t` の静的メンバー `alignment_value` には、`Types` にリストされているすべての型に必要な最も厳格な配置が含まれます。
+テンプレート クラスを使用して、初期化されていない記憶域に共用体を格納するために必要なサイズと配置を取得します。 メンバー typedef `type` pod 型で表示されている任意の型のストレージに適した*型*; 最小サイズは*Len*します。 静的メンバー`alignment_value`型の`std::size_t`で表示されているすべての種類のために必要な最も厳格な配置を含む*型*します。
 
 ## <a name="example"></a>例
 
@@ -85,7 +85,7 @@ int main()
 value of u->i is 1065353216
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

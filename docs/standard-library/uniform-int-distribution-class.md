@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f59e7f6595d89b0078e650ab1ce8a36139f03486
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d982aee3f5542e8bfcff1da96ce3e70775ead5fe
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859749"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961579"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution クラス
 
@@ -81,9 +81,9 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*整数結果型が既定で`int`です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、すべての値が等しくあり得るように、分布を使用してユーザー指定の整数型の値を生成する、下限と上限を含む分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
@@ -182,7 +182,7 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -200,17 +200,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*a*包括的なランダムな値の下限の境界。
+*a*  
+乱数値の下限 (包含的)。
 
-*b*ランダムな値は、包含的上限の境界。
+*b*  
+乱数値の上限 (包含的)。
 
-*パラメーター* 、`param_type`分布の作成に使用される構造体。
+*parm*  
+分布の作成に使用される `param_type` の構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `a ≤ b`
 
-1 つ目のコンストラクターは、格納されている値 `a` と `b` にそれぞれ *a* と *b* の値を保持するオブジェクトを作成します。
+最初のコンス トラクターは、オブジェクトを構築します。 がストアド *、* 値を保持 *、* し、そのストアド*b*値を保持*b*します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
@@ -233,13 +236,16 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*a*包括的なランダムな値の下限の境界。
+*a*  
+乱数値の下限 (包含的)。
 
-*b*ランダムな値は、包含的上限の境界。
+*b*  
+乱数値の上限 (包含的)。
 
-*右*、`param_type`これと比較するオブジェクト。
+*right*  
+このオブジェクトと比較する `param_type` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `a ≤ b`
 

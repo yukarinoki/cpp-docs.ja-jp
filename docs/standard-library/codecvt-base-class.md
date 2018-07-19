@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe2a27a79705e9850df2c9fb54037278abd8cd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a471cdd63ed46e15c9ec41968ed341eefaf36963
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843263"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965393"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base クラス
 
-変換の結果を示すためにファセットのメンバー関数の戻り値の型として使用される、**result** と呼ばれる列挙型を定義するために使用される codecvt クラスの基底クラス。
+列挙型を定義するために使用される codecvt クラスの基本クラスとして参照`result`変換の結果を示すためにファセットのメンバー関数の戻り値の型として使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -46,19 +46,19 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このクラスは、テンプレート クラス [codecvt](../standard-library/codecvt-class.md) のすべての特殊化に共通する列挙型を表します。 列挙の結果には、次のような [do_in](../standard-library/codecvt-class.md#do_in) または [do_out](../standard-library/codecvt-class.md#do_out) からの可能な戻り値が示されます。
 
-- 内部と外部の文字エンコーディングの変換が正常に行われた場合は、**ok**。
+- `ok` 内部および外部の文字エン コードの間の変換が成功するとします。
 
-- 変換先が、変換を正常に行うのに十分な大きさでない場合は、**partial**。
+- `partial` 場合は、変換先が変換を正常に十分な大きさではありません。
 
-- ソース シーケンスが無効な形式である場合は、**error**。
+- `error` ソース シーケンスが無効である場合は、次の形式。
 
-- 関数で変換が行われない場合は、**noconv**。
+- 関数で変換が行われない場合は、`noconv`。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

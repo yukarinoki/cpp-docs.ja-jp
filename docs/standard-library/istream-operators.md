@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5068c0bd540b1c44d2cdc484c2e511276bd12666
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 60ec526dd8874529b60558f7131c31f0bf4a2d3b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853061"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961114"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 演算子
 
@@ -64,19 +64,19 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` 文字です。
+*Ch*文字。
 
-`Istr` ストリームです。
+*Istr*ストリーム。
 
-`str` 文字列。
+*str*文字列。
 
-`val` 型。
+*val*型。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `basic_istream` クラスもいくつかの抽出演算子を定義します。 詳細については、「[basic_istream::operator >>](../standard-library/basic-istream-class.md#op_gt_gt)」を参照してください。
 
@@ -88,9 +88,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-最大で *N* - 1 の要素を抽出し、_ *Str* から始まる配列にこれらを格納します。 `Istr`. [width](../standard-library/ios-base-class.md#width) が 0 より大きい場合、*N* は `Istr`. **width** です。そうでない場合は、宣言できる **Elem** の最大の配列のサイズになります。 この関数は常に、格納する抽出された要素の後に値 **Elem()** を格納します。 抽出は、ファイルの最後の早い段階で、値 **Elem**(0) (これは抽出されません) を持つ文字、または [ws](../standard-library/istream-functions.md#ws) によって破棄される任意の要素 (これは抽出されません) で停止します。 関数が要素を抽出しなかった場合、`Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) が呼び出されます。 いずれの場合も、`Istr`. **width**(0) が呼び出され、`Istr` が返されます。
+最大で *N* - 1 の要素を抽出し、_ *Str* から始まる配列にこれらを格納します。 `Istr`. [width](../standard-library/ios-base-class.md#width) が 0 より大きい場合、*N* は `Istr`. **幅**。 それ以外の最大の配列のサイズが`Elem`を宣言することができます。 関数は常に値を格納`Elem()`後、抽出された要素が格納されます。 抽出は、ファイルの最後の早い段階で、値 **Elem**(0) (これは抽出されません) を持つ文字、または [ws](../standard-library/istream-functions.md#ws) によって破棄される任意の要素 (これは抽出されません) で停止します。 関数が要素を抽出しなかった場合、`Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 いずれの場合も、`Istr`. **幅**(0) を返します*Istr*します。
 
-**セキュリティに関するメモ** 入力ストリームから抽出された、null で終わる文字列が、コピー先バッファー `str` のサイズを超えないようにする必要があります。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
+**セキュリティに関する注意**入力ストリームから抽出される null で終わる文字列がコピー先のバッファーのサイズを超えない*str*します。 詳しくは、「 [バッファー オーバーランの回避](http://msdn.microsoft.com/library/windows/desktop/ms717795)」をご覧ください。
 
 下記のテンプレート関数は
 
@@ -100,7 +100,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-可能な場合は要素を抽出し、この要素を `Ch` に格納します。 そうでない場合は、**is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。 いずれの場合も、`Istr` を返します。
+格納し、可能であれば場合、に、要素を抽出します*Ch*します。 そうでない場合は、**is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。 いずれのケースを返します*Istr*します。
 
 下記のテンプレート関数は
 

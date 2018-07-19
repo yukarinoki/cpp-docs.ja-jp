@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112da495673517f86a00437672ccc52429fbd251
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4c4a96224b86cb12af4e3abfed1f02b33e8a2594
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38966564"
 ---
 # <a name="isnothrowconstructible-class"></a>is_nothrow_constructible クラス
 
@@ -37,15 +37,15 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-`T` 照会する型。
+*T*照会する型。
 
-`Args` 引数の型のコンス トラクターで一致するように`T`です。
+*Args*のコンス トラクターで一致させる引数型*T*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-型の述語のインスタンスは、型 `T` が `Args` の引数型を使用して構築可能であり、コンストラクターがスローしないとコンパイラによって認識されている場合 true を保持します。それ以外の場合は false を保持します。 型 `T` を構築できるのは、変数定義 `T t(std::declval<Args>()...);` が整形式である場合です。 `T` と `Args` のすべての型は両方とも、完全な型、`void`、または不明なバインドの配列にする必要があります。
+場合、型述語のインスタンスは true を保持型*T*の引数の型を使用して構築できる*Args*、コンス トラクターがコンパイラによってスローしないと判明あり、それ以外の場合は false を保持します。 型*T*を構築できる場合は、変数定義`T t(std::declval<Args>()...);`が整形式。 両方*T*とすべての種類で*Args*完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 
