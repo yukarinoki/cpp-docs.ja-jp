@@ -1,5 +1,5 @@
 ---
-title: ワイルドカードの展開 |Microsoft ドキュメント
+title: ワイルドカードの展開 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb58d5da479d686cac0d18c9d36e500bd6b5a632
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f4de54cbbe978534a42dcb9cbfa677eb1597aa5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420651"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939137"
 ---
 # <a name="wildcard-expansion"></a>ワイルドカードの展開
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
  コマンド ラインでファイル名とパスの引数を指定するときに、ワイルドカード (疑問符 (?) およびアスタリスク (*)) を使用できます。  
   
- コマンドライン引数はというルーチンによって処理される **_setargv** (または **_wsetargv**ワイド文字環境で)、既定では展開されませんワイルドカード、で個別の文字列に`argv`文字列配列。 参照してワイルドカードの展開を有効にする方法の詳細については、[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)です。  
+ コマンドライン引数はというルーチンによって処理される`_setargv`(または`_wsetargv`ワイド文字環境で)、ワイルドカードの展開で個別の文字列に既定ではありません、`argv`文字列配列。 ワイルドカードの展開の有効化の詳細についてを参照してください[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)します。  
   
 **Microsoft 固有の仕様はここまで**  
   

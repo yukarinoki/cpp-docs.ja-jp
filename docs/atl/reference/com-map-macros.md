@@ -1,5 +1,5 @@
 ---
-title: COM マップ マクロ |Microsoft ドキュメント
+title: COM マップに関するマクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00c15bf8567456254c8a338ed395a726fcbe8c9b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358424"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879310"
 ---
-# <a name="com-map-macros"></a>COM マップ マクロ
+# <a name="com-map-macros"></a>COM マップに関するマクロ
 これらのマクロは、COM インターフェイス マップを定義します。  
   
 |||  
 |-|-|  
-|[BEGIN_COM_MAP](#begin_com_map)|COM インターフェイス マップのエントリの先頭をマークします。|  
-|[END_COM_MAP](#end_com_map)|COM インターフェイス マップのエントリの末尾をマークします。|  
+|[BEGIN_COM_MAP](#begin_com_map)|COM インターフェイスのマップ エントリの先頭をマークします。|  
+|[END_COM_MAP](#end_com_map)|COM インターフェイスのマップ エントリの終了を示します。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
    
 ##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
- COM マップを介してクライアントにオブジェクト上のインターフェイスを公開するメカニズムは、`QueryInterface`です。  
+ COM マップを介してクライアントにオブジェクトのインターフェイスを公開するメカニズムは、`QueryInterface`します。  
   
 ```
 BEGIN_COM_MAP(x)
@@ -44,14 +44,14 @@ BEGIN_COM_MAP(x)
   
 ### <a name="parameters"></a>パラメーター  
  *x*  
- [in]インターフェイスを公開するのには、クラスのオブジェクトの名前です。  
+ [in]インターフェイスを公開するのには、クラス オブジェクトの名前。  
   
-### <a name="remarks"></a>コメント  
- [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)のみ COM マップ内のインターフェイス ポインターを返します。 インターフェイス マップを開始、`BEGIN_COM_MAP`マクロをインターフェイスの各エントリを追加、 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)マクロ、またはそのバリエーションの 1 つでマップを完了し、 [END_COM_MAP](#end_com_map)マクロです。  
+### <a name="remarks"></a>Remarks  
+ [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)のみ COM マップ内のインターフェイス ポインターを返します。 BEGIN_COM_MAP マクロとインターフェイス マップを開始、使用して、インターフェイスの各エントリを追加、 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)マクロ、またはそのバリエーションの 1 つを含むマップを完了して、 [END_COM_MAP](#end_com_map)マクロ。  
 
   
 ### <a name="example"></a>例  
- ATL から[ポケットベル](../../visual-cpp-samples.md)サンプル。  
+ ATL から[BEEPER](../../visual-cpp-samples.md)サンプル。  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   

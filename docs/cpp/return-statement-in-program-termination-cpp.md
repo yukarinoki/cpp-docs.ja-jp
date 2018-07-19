@@ -1,5 +1,5 @@
 ---
-title: return ステートメントで、プログラムの終了 (C++) |Microsoft ドキュメント
+title: return ステートメントで、プログラムの終了 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943146"
 ---
 # <a name="return-statement-in-program-termination-c"></a>プログラム終了時の return ステートメント (C++)
-発行、`return`ステートメントから**メイン**機能的には、呼び出し元は、**終了**関数。 次に例を示します。  
+発行、`return`ステートメントから**メイン**呼び出しと同じ機能が、**終了**関数。 次に例を示します。  
   
-```  
+```cpp 
 // return_statement.cpp  
 #include <stdlib.h>  
 int main()  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- **終了**と`return`前の例でのステートメントは機能的には同じです。 ただし、C++ では、`void` 以外の戻り値の型を持つ関数は、値を返す必要があります。 `return`ステートメントを使用するから値を返す**メイン**です。  
+ **終了**と**返す**前の例のステートメントは機能的に同じです。 ただし、C++ を持つ関数が以外の型を返す必要**void**値を返します。 **返す**ステートメントを使用するから値を返す`main`します。  
   
 ## <a name="see-also"></a>関連項目  
  [プログラムの終了](../cpp/program-termination.md)

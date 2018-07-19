@@ -25,16 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962781"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; クラス
 
-`vector<bool>` クラスは、`bool` 型の要素の [vector](../standard-library/vector-class.md) の部分的特殊化です。 このクラスには、特殊化によって使用される基になる型のアロケーターがあり、ビットごとに 1 つの `bool` 値を格納することによって領域を最適化します。
+`vector<bool>`クラスの部分的特殊化は、[ベクター](../standard-library/vector-class.md)型の要素に対して**bool**します。 1 つを格納することで、スペースの最適化を提供する特殊化で使用される基になる型のアロケーターを**bool**ビットごとの値。
 
 ## <a name="syntax"></a>構文
 
@@ -43,18 +43,18 @@ template <class Allocator = allocator<bool>>
 class vector<bool, Allocator>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このクラス テンプレートの特殊化は vector と同様に動作しますが、この記事で説明する違いがあります。
 
-`bool` 型を処理する操作は、コンテナーのストレージの値に対応します。 `allocator_traits::construct` はこれらの値の構築には使用されません。
+処理する操作、 **bool**型は、コンテナーのストレージの値に対応します。 `allocator_traits::construct` はこれらの値の構築には使用されません。
 
 ### <a name="typedefs"></a>Typedefs
 
 |型名|説明|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` のブール型要素への定数ポインターとして使用できる `vector<bool>` への typedef。|
-|[const_reference](#const_reference)|`bool` の typedef。 初期化後に、元の値への更新を確認しません。|
+|[const_reference](#const_reference)|Typedef **bool**します。 初期化後に、元の値への更新を確認しません。|
 |[pointer](#pointer)|`iterator` のブール型要素へのポインターとして使用できる `vector<bool>` への typedef。|
 
 ### <a name="member-functions"></a>メンバー関数
@@ -74,7 +74,7 @@ class vector<bool, Allocator>
 |-|-|
 |[vector\<bool> reference クラス](#reference_class)|`bool&` の動作をシミュレートするためのプロキシとして機能するクラスで、そのオブジェクトは `vector<bool>` オブジェクト内の要素 (単一ビット) への参照を提供できます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<vector>
 
@@ -96,7 +96,7 @@ typedef const_iterator const_pointer;
 typedef bool const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細とコード例については、「[vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)」を参照してください。
 
@@ -153,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |パラメーター|説明|
 |-|-|
-|`Pos`|`vector<bool>` 要素の位置。|
+|*pos*|`vector<bool>` 要素の位置。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -161,9 +161,9 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 指定された位置がコンテナーのサイズ以上の場合、結果は未定義になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`_ITERATOR_DEBUG_LEVEL` を設定してコンパイルした場合、ベクターの境界の外にある要素にアクセスしようとすると、実行時エラーが発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+_ITERATOR_DEBUG_LEVEL セットでコンパイルする場合、実行時エラーには、ベクターの境界外にある要素にアクセスしようとした場合に発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -208,7 +208,7 @@ typedef iterator pointer;
 
 `vector<bool>::reference` クラスは `bool&` をシミュレートするために [vector\<bool> クラス](../standard-library/vector-bool-class.md)によって提供されるプロキシ クラスです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 C++ では、ネイティブにビットを直接参照しないため、シミュレートされた参照が必要です。 `vector<bool>` は、要素ごとに 1 ビットだけ使用します。このビットは、このプロキシ クラスを使用して参照できます。 ただし、参照のシミュレーションは、特定の代入が有効でないため、完全ではありません。 たとえば、`vector<bool>::reference` オブジェクトのアドレスを受け取ることができないため、[vector\<bool>::operator&#91;&#93;](#op_at) を使用する次のコードは正しくありません。
 
@@ -268,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-`vector<bool>::reference` から `bool` への暗黙の変換を提供します。
+暗黙的な変換`vector<bool>::reference`に**bool**します。
 
 ```cpp
 operator bool() const;
@@ -278,7 +278,7 @@ operator bool() const;
 
 vector\<bool> オブジェクトの要素のブール値。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 `vector<bool>` オブジェクトはこの演算子では変更できません。
 
@@ -293,9 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>パラメーター
 
-`Right` ビットに割り当てられるには、値を持つ要素の参照。
+*右*  
+ 値がビットに割り当てられている要素の参照。
 
-`Val` ビットに割り当てられるブール値。
+*val*  
+ ビットに割り当てられるブール値。
 
 #### <a name="example"></a>例
 
@@ -380,11 +382,13 @@ static void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-`Left` 要素と交換される、`Right`要素。
+*左*  
+ 要素と交換される、*右*要素。
 
-`Right` 要素と交換される、`Left`要素。
+*右*  
+ 要素と交換される、*左*要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このオーバーロードは `vector<bool>` の特別なプロキシの要件をサポートします。 [vector](../standard-library/vector-class.md)::swap には、`vector<bool>::swap()` の単一引数のオーバーロードと同じ機能があります。
 

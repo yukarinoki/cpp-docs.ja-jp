@@ -1,5 +1,5 @@
 ---
-title: クラスの使用 |Microsoft ドキュメント
+title: CWorkerThread クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365521"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885641"
 ---
-# <a name="cworkerthread-class"></a>クラスの使用
-このクラスは、ワーカー スレッドを作成または既存のものを使用して化し、1 つまたは複数のカーネル オブジェクトのハンドルを待機がシグナルを受け取るハンドルのいずれかに指定されたクライアント関数を実行します。  
+# <a name="cworkerthread-class"></a>CWorkerThread クラス
+このクラスは、ワーカー スレッドを作成します。 または、既存のものを使用して化し、1 つ以上のカーネル オブジェクトのハンドルを待機ハンドルがシグナル通知されたときに、指定したクライアント関数を実行します。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -46,14 +46,14 @@ class CWorkerThread
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `ThreadTraits`  
- スレッドの作成関数をなどを提供するクラス[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)または[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)です。  
+ *ThreadTraits*  
+ など、スレッド作成関数を提供するクラス[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)または[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)します。  
   
 ## <a name="members"></a>メンバー  
   
-### <a name="protected-structures"></a>保護された構造体  
+### <a name="protected-structures"></a>保護されている構造体  
   
-|名前|説明|  
+|name|説明|  
 |----------|-----------------|  
 |`WorkerClientEntry`||  
   
@@ -62,45 +62,45 @@ class CWorkerThread
 |名前|説明|  
 |----------|-----------------|  
 |[CWorkerThread::CWorkerThread](#cworkerthread)|ワーカー スレッドのコンス トラクターです。|  
-|[使用:: ~ 使用](#dtor)|ワーカー スレッドのデストラクターです。|  
+|[CWorkerThread:: ~ CWorkerThread](#dtor)|ワーカー スレッドのデストラクターです。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CWorkerThread::AddHandle](#addhandle)|このメソッドを呼び出して待機可能オブジェクトのハンドルをワーカー スレッドによって保持されたリストに追加します。|  
-|[CWorkerThread::AddTimer](#addtimer)|ワーカー スレッドによって保持されたリストに、定期的な待機可能なタイマーを追加するには、このメソッドを呼び出します。|  
-|[CWorkerThread::GetThreadHandle](#getthreadhandle)|ワーカー スレッドのスレッド ハンドルを取得するには、このメソッドを呼び出します。|  
+|[CWorkerThread::AddHandle](#addhandle)|待機可能オブジェクトのハンドルをワーカー スレッドによって管理されるリストに追加するには、このメソッドを呼び出します。|  
+|[CWorkerThread::AddTimer](#addtimer)|ワーカー スレッドによって保持される一覧に定期的な待機可能なタイマーを追加するには、このメソッドを呼び出します。|  
+|[CWorkerThread::GetThreadHandle](#getthreadhandle)|ワーカー スレッドのスレッドのハンドルを取得するには、このメソッドを呼び出します。|  
 |[CWorkerThread::GetThreadId](#getthreadid)|ワーカー スレッドのスレッド ID を取得するには、このメソッドを呼び出します。|  
-|[CWorkerThread::Initialize](#initialize)|このメソッドを呼び出して、ワーカー スレッドを初期化します。|  
-|[CWorkerThread::RemoveHandle](#removehandle)|このメソッドを呼び出して待機可能オブジェクトの一覧からハンドルを削除します。|  
+|[CWorkerThread::Initialize](#initialize)|ワーカー スレッドを初期化するためには、このメソッドを呼び出します。|  
+|[CWorkerThread::RemoveHandle](#removehandle)|ハンドルを待機可能オブジェクトの一覧から削除するには、このメソッドを呼び出します。|  
 |[CWorkerThread::Shutdown](#shutdown)|ワーカー スレッドをシャット ダウンするには、このメソッドを呼び出します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
-### <a name="to-use-cworkerthread"></a>使用を使用するには  
+### <a name="to-use-cworkerthread"></a>CWorkerThread を使用するには  
   
 1.  このクラスのインスタンスを作成します。  
   
-2.  呼び出す[CWorkerThread::Initialize](#initialize)です。  
+2.  呼び出す[CWorkerThread::Initialize](#initialize)します。  
   
-3.  呼び出す[CWorkerThread::AddHandle](#addhandle)カーネル オブジェクトとの実装へのポインターのハンドルを持つ[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)です。  
+3.  呼び出す[CWorkerThread::AddHandle](#addhandle)カーネル オブジェクトとの実装へのポインターのハンドルを持つ[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)します。  
   
      - または  
   
-     呼び出す[CWorkerThread::AddTimer](#addtimer)の実装へのポインターを[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)です。  
+     呼び出す[CWorkerThread::AddTimer](#addtimer)の実装へのポインターを[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)します。  
   
-4.  実装[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルまたはタイマーが通知されるときに何らかのアクションを実行します。  
+4.  実装[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルまたはタイマーがシグナル通知されたときに、何らかのアクションを実行します。  
   
-5.  待機可能オブジェクトの一覧からオブジェクトを削除するには、呼び出す[CWorkerThread::RemoveHandle](#removehandle)です。  
+5.  待機可能オブジェクトの一覧からオブジェクトを削除するには、呼び出す[CWorkerThread::RemoveHandle](#removehandle)します。  
   
-6.  スレッドを終了するには、呼び出す[CWorkerThread::Shutdown](#shutdown)です。  
+6.  スレッドを終了するには、呼び出す[CWorkerThread::Shutdown](#shutdown)します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlutil.h  
   
 ##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
- このメソッドを呼び出して待機可能オブジェクトのハンドルをワーカー スレッドによって保持されたリストに追加します。  
+ 待機可能オブジェクトのハンドルをワーカー スレッドによって管理されるリストに追加するには、このメソッドを呼び出します。  
   
 ```
 HRESULT AddHandle(
@@ -110,23 +110,23 @@ HRESULT AddHandle(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hObject`  
- 待機可能オブジェクトのハンドルです。  
+ *hObject*  
+ 待機可能オブジェクトへのハンドル。  
   
- `pClient`  
- ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナルを受け取るときに呼び出されるオブジェクトのインターフェイスです。  
+ *pClient*  
+ ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナル通知されたときに呼び出されるオブジェクトのインターフェイス。  
   
- `dwParam`  
- 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナルを受け取るときにします。  
+ *について*  
+ 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナル通知されたとき。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)を介して呼び出される`pClient`ときに、ハンドル`hObject`、通知されます。  
+### <a name="remarks"></a>Remarks  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)を介して呼び出される*pClient*ときに、ハンドル*hObject*、通知されます。  
   
 ##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
- ワーカー スレッドによって保持されたリストに、定期的な待機可能なタイマーを追加するには、このメソッドを呼び出します。  
+ ワーカー スレッドによって保持される一覧に定期的な待機可能なタイマーを追加するには、このメソッドを呼び出します。  
   
 ```
 HRESULT AddTimer(
@@ -140,22 +140,22 @@ HRESULT AddTimer(
  *dwInterval*  
  タイマーの間隔をミリ秒単位で指定します。  
   
- `pClient`  
- ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナルを受け取るときに呼び出されるオブジェクトのインターフェイスです。  
+ *pClient*  
+ ポインター、 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)ハンドルがシグナル通知されたときに呼び出されるオブジェクトのインターフェイス。  
   
- `dwParam`  
- 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナルを受け取るときにします。  
+ *について*  
+ 渡されるパラメーター [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルがシグナル通知されたとき。  
   
- `phTimer`  
- [out]成功した場合、新しく作成されたタイマーを識別するハンドルを受け取るハンドル変数のアドレスです。  
+ *phTimer*  
+ [out]成功した場合、新しく作成した、タイマーを識別するハンドルを受け取るハンドル変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)を介して呼び出される`pClient`タイマーが通知されます。  
+### <a name="remarks"></a>Remarks  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)を介して呼び出される*pClient*タイマーが通知されます。  
   
- タイマー ハンドルを渡す`phTimer`に[CWorkerThread::RemoveHandle](#removehandle)タイマーを閉じます。  
+ タイマー ハンドルを渡す*phTimer*に[CWorkerThread::RemoveHandle](#removehandle)タイマーを閉じます。  
   
 ##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  コンストラクターです。  
@@ -164,18 +164,18 @@ HRESULT AddTimer(
 CWorkerThread() throw();
 ```  
   
-##  <a name="dtor"></a>  使用:: ~ 使用  
+##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread  
  デストラクターです。  
   
 ```
 ~CWorkerThread() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
- 呼び出し[CWorkerThread::Shutdown](#shutdown)です。  
+### <a name="remarks"></a>Remarks  
+ 呼び出し[CWorkerThread::Shutdown](#shutdown)します。  
   
 ##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
- ワーカー スレッドのスレッド ハンドルを取得するには、このメソッドを呼び出します。  
+ ワーカー スレッドのスレッドのハンドルを取得するには、このメソッドを呼び出します。  
   
 ```
 HANDLE GetThreadHandle() throw();
@@ -195,7 +195,7 @@ DWORD GetThreadId() throw();
  ワーカー スレッドが初期化されていない場合は、スレッド ID または NULL を返します。  
   
 ##  <a name="initialize"></a>  CWorkerThread::Initialize  
- このメソッドを呼び出して、ワーカー スレッドを初期化します。  
+ ワーカー スレッドを初期化するためには、このメソッドを呼び出します。  
   
 ```
 HRESULT Initialize() throw();
@@ -204,35 +204,35 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pThread`  
- 既存のワーカー スレッドです。  
+ *pThread*  
+ 既存のワーカー スレッド。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、作成後、または呼び出しの後に、オブジェクトを初期化するために呼び出す必要があります[CWorkerThread::Shutdown](#shutdown)です。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、作成後、または呼び出しの後に、オブジェクトを初期化するために呼び出す必要があります[CWorkerThread::Shutdown](#shutdown)します。  
   
- 2 つ以上に`CWorkerThread`オブジェクトが同じワーカー スレッドを使用して、任意の引数は、オブジェクトを指すポインターを渡す渡されずうち 1 つを初期化、`Initialize`他のメソッドです。 ポインターを使用して初期化されたオブジェクトは、オブジェクトの初期化に使用する前にシャット ダウンする必要があります。  
+ 2 つ以上が`CWorkerThread`オブジェクトが同じワーカー スレッドを使用して、任意の引数には、そのオブジェクトへのポインターを渡すし渡さずにそれらのいずれかの初期化、`Initialize`他のメソッド。 ポインターを使用して初期化されるオブジェクトは、オブジェクトの初期化に使用する前にシャット ダウンする必要があります。  
   
- 参照してください[CWorkerThread::Shutdown](#shutdown)については、既存のオブジェクトへのポインターを使用して初期化されるときに、そのメソッドの動作がどのように変化するかをします。  
+ 参照してください[CWorkerThread::Shutdown](#shutdown)については、既存のオブジェクトへのポインターを使用して初期化されるときに、そのメソッドの動作がどのように変化するか。  
   
 ##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
- このメソッドを呼び出して待機可能オブジェクトの一覧からハンドルを削除します。  
+ ハンドルを待機可能オブジェクトの一覧から削除するには、このメソッドを呼び出します。  
   
 ```
 HRESULT RemoveHandle(HANDLE hObject) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hObject`  
+ *hObject*  
  削除するハンドル。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、S_OK またはエラー発生時にエラーの hresult 値を返します。  
+ 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。  
   
-### <a name="remarks"></a>コメント  
- ハンドルが削除されたとき[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)に渡された関連付けられたオブジェクトで呼び出される[AddHandle](#addhandle)です。 この呼び出しが失敗した場合、 `CWorkerThread` 、Windows を呼び出す[CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)ハンドルの関数。  
+### <a name="remarks"></a>Remarks  
+ ハンドルが削除されたとき[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)に渡された関連付けられているオブジェクトで呼び出される[AddHandle](#addhandle)します。 この呼び出しが失敗した場合、 `CWorkerThread` 、Windows を呼び出す[CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)関数のハンドル。  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  ワーカー スレッドをシャット ダウンするには、このメソッドを呼び出します。  
@@ -242,19 +242,19 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `dwWait`  
- ワーカー スレッドをシャット ダウンするまで待機するミリ秒単位の時間。 ATL_WORKER_THREAD_WAIT の既定値は 10 秒です。 Atlutil.h する前に、必要に応じて、このシンボルに独自の値を定義できます。 
+ *内部*  
+ ワーカー スレッドをシャット ダウンするを待機するミリ秒単位の時間。 ATL_WORKER_THREAD_WAIT の既定値は 10 秒です。 Atlutil.h する前に、必要に応じて、このシンボルは、独自の値を定義できます。 
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、または失敗した場合の場合など、エラーの hresult 値は S_OK を返します、タイムアウト値を`dwWait`を超過します。  
+ 成功した場合、または場合など、エラー発生時のエラー HRESULT が S_OK を返します、タイムアウト値を*内部*を超えています。  
   
-### <a name="remarks"></a>コメント  
- オブジェクトを再利用する[CWorkerThread::Initialize](#initialize)このメソッドを呼び出した後。  
+### <a name="remarks"></a>Remarks  
+ オブジェクトを再利用するには、呼び出す[CWorkerThread::Initialize](#initialize)このメソッドを呼び出した後。  
   
- 呼び出して**シャット ダウン**別にポインターを使用して初期化されるオブジェクトで`CWorkerThread`オブジェクトの影響は生じず、常に S_OK を返します。  
+ 呼び出して`Shutdown`別にポインターを使用して初期化されるオブジェクトで`CWorkerThread`オブジェクトが影響を与えませんし、常に S_OK を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [クラス](../../atl/reference/atl-classes.md)   
- [マルチ スレッド: ワーカー スレッドの作成](../../parallel/multithreading-creating-worker-threads.md)   
+ [マルチ スレッド: ワーカー スレッドを作成します。](../../parallel/multithreading-creating-worker-threads.md)   
  [IWorkerThreadClient インターフェイス](../../atl/reference/iworkerthreadclient-interface.md)

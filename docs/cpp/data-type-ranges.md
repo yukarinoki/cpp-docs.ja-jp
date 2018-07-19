@@ -1,5 +1,5 @@
 ---
-title: データ型の範囲 |Microsoft ドキュメント
+title: データ型の範囲 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c809249bbe7513e5a1e439ebaf5e4e44a2f758
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418394"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940642"
 ---
 # <a name="data-type-ranges"></a>データ型の範囲
 Visual C++ の 32 ビットおよび 64 ビット コンパイラは、この記事の次の表に示す型を認識します。  
@@ -88,7 +88,7 @@ Visual C++ の 32 ビットおよび 64 ビット コンパイラは、この記
 |__int64|8|long long、signed long long|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|  
 |unsigned __int64|8|unsigned long long|0 ～ 18,446,744,073,709,551,615|  
 |bool|1|none|false または true|  
-|char|1|none|、既定では 128 ~ 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|  
+|char|1|none|既定では、128 ~ 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|  
 |signed char|1|none|-128 ～ 127|  
 |unsigned char|1|none|0 ～ 255|  
 |short|2|short int、signed short int|-32,768 ～ 32,767|  
@@ -105,9 +105,9 @@ Visual C++ の 32 ビットおよび 64 ビット コンパイラは、この記
   
  `__wchar_t` 型の変数には、その使用方法に応じて、ワイド文字型またはマルチバイト文字型のいずれかを指定します。 ワイド文字型の定数を指定するには、文字または文字列定数の前に `L` のプレフィックスを使用します。  
   
- `signed` と `unsigned` は、 `bool`以外の任意の整数型と組み合わせて使用できる修飾子です。 `char`、 `signed char`、 `unsigned char` は、オーバーロードやテンプレートのようなしくみのために用意された、3 つの異なる型であることに注意してください。  
+ **署名**と**符号なし**修飾子を除く任意の整数型で使用できるは**bool**します。 なお**char**、 **char を署名**、および**unsigned char**オーバー ロードやテンプレートなどのメカニズムの目的では 3 つの型。  
   
- `int` 型と `unsigned int` 型のサイズは 4 バイトです。 ただし、移植可能なコードでは `int` 型のサイズに依存しないようにしてください。言語の標準では、そのサイズは実装固有になるためです。  
+ **Int**と**符号なし int**型のサイズは 4 バイトがあります。 ただし、移植可能なコードは、のサイズに依存する必要がありますしない**int**標準の言語は、この実装に固有であるためです。  
   
  Visual Studio での C/C++ では、サイズが設定された整数型をサポートしています。 詳細については、「[__int8、\__int16、\__int32、\__int64](../cpp/int8-int16-int32-int64.md)」および「[整数の制限](../cpp/integer-limits.md)」を参照してください。  
   

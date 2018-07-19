@@ -1,5 +1,5 @@
 ---
-title: CMFCShellTreeCtrl クラス |Microsoft ドキュメント
+title: CMFCShellTreeCtrl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e014219a12985142c6d45aae711d0410ff12642
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 9c0508f0042f63441b3a9bdf66cd29ca0a9a73e6
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041946"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849803"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl クラス
-`CMFCShellTreeCtrl`クラスを拡張[CTreeCtrl クラス](../../mfc/reference/ctreectrl-class.md)シェル項目の階層を表示することによって機能します。  
+`CMFCShellTreeCtrl`クラスは拡張[CTreeCtrl クラス](../../mfc/reference/ctreectrl-class.md)シェル項目の階層を表示することによって機能します。  
 
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>構文  
@@ -61,20 +61,20 @@ class CMFCShellTreeCtrl : public CTreeCtrl
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|有効またはショートカット メニューを無効にします。|  
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|渡されるフラグの組み合わせを返します[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)です。|  
+|[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|有効または、ショートカット メニューを無効にします。|  
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|渡されるフラグの組み合わせを返します[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)します。|  
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|アイテムへのパスを取得します。|  
-|[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|ポインターを返します、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)これと共に使用されるオブジェクト`CMFCShellTreeCtrl`オブジェクト エクスプ ローラーのようなウィンドウを作成します。|  
-|[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|このメンバー関数は、このウィンドウに適用される通知メッセージを受信したときに、このウィンドウの親ウィンドウによって呼び出されます。 (上書き[CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify))。|  
+|[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|ポインターを返します、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)これと共に使用されるオブジェクト`CMFCShellTreeCtrl`エクスプ ローラーのようなウィンドウを作成するオブジェクト。|  
+|[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|このメンバー関数は、このウィンドウに適用される通知メッセージを受信すると、このウィンドウの親ウィンドウによって呼び出されます。 (上書き[CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify))。|  
 |[CMFCShellTreeCtrl::OnGetItemIcon](#ongetitemicon)||  
 |[CMFCShellTreeCtrl::OnGetItemText](#ongetitemtext)||  
-|[CMFCShellTreeCtrl::Refresh](#refresh)|更新し、現在の再描画`CMFCShellTreeCtrl`オブジェクト。|  
-|[CMFCShellTreeCtrl::SelectPath](#selectpath)|指定した PIDL または文字列のパスに基づいて、適切なツリー コントロール項目を選択します。|  
-|[CMFCShellTreeCtrl::SetFlags](#setflags)|ツリーのコンテキスト フィルターを適用するフラグを設定 (を使用するフラグのような`IShellFolder::EnumObjects`)。|  
-|[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)|現在の間の関係を設定`CMFCShellTreeCtrl`オブジェクトおよび`CMFCShellListCtrl`オブジェクト。|  
+|[CMFCShellTreeCtrl::Refresh](#refresh)|更新して、現在の再描画`CMFCShellTreeCtrl`オブジェクト。|  
+|[CMFCShellTreeCtrl::SelectPath](#selectpath)|指定した PIDL または文字列のパスに基づく適切なツリー コントロール項目を選択します。|  
+|[CMFCShellTreeCtrl::SetFlags](#setflags)|ツリーのコンテキスト フィルターを適用するフラグを設定します (で使用するフラグのような`IShellFolder::EnumObjects`)。|  
+|[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)|現在の間の関係を設定`CMFCShellTreeCtrl`オブジェクトと`CMFCShellListCtrl`オブジェクト。|  
   
 ## <a name="remarks"></a>Remarks  
- このクラスは、`CTreeCtrl`項目を含める Windows シェル ツリーで、プログラムを有効にするクラス。 このクラスが関連付けられることができます、`CMFCShellListCtrl`完了エクスプ ローラー ウィンドウを作成するオブジェクト。 次に、ツリー内の項目の選択に表示されます Windows シェル項目の一覧、関連付けられたリスト。  
+ このクラスは拡張、`CTreeCtrl`クラスを Windows シェル項目のツリーに含めるプログラムを有効にします。 このクラスが関連付けられる、`CMFCShellListCtrl`完了エクスプ ローラー ウィンドウを作成するオブジェクト。 次に、ツリー内の項目を選択リストが表示されます、Windows シェル項目の関連一覧に。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -91,7 +91,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
  **ヘッダー:** afxshelltreeCtrl.h  
   
 ## <a name="example"></a>例  
- 次の例では、`CMFCShellTreeCtrl` クラスのオブジェクトを作成する方法を示します。 このコード スニペットの一部である、[エクスプ ローラー サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、`CMFCShellTreeCtrl` クラスのオブジェクトを作成する方法を示します。 このコード スニペットの一部、 [Explorer サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]  
@@ -115,10 +115,10 @@ DWORD GetFlags() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A`DWORD`を現在のフラグの組み合わせを示す値を設定します。  
+ 現在のフラグの組み合わせを指定する DWORD 値を設定します。  
   
 ### <a name="remarks"></a>Remarks  
- フラグ設定、`CMFCShellTreeCtrl`メソッドに送信される[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)オブジェクトを更新するたびにします。 フラグを変更することができます、 [CMFCShellTreeCtrl::SetFlags](#setflags)メソッドです。  
+ フラグを設定、 `CMFCShellTreeCtrl` 、メソッドに送信される[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)オブジェクトが更新されるたびにします。 使用するフラグを変更することができます、 [CMFCShellTreeCtrl::SetFlags](#setflags)メソッド。  
   
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath  
  内の項目のパスを取得、 [CMFCShellTreeCtrl クラス](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクト。  
@@ -131,18 +131,18 @@ BOOL GetItemPath(
   
 ### <a name="parameters"></a>パラメーター  
  [out]*strPath*  
- 文字列型のパラメーターへの参照。 メソッドは、このパラメーターに、項目のパスを記述します。  
+ 文字列パラメーターへの参照。 メソッドは、このパラメーターに、項目のパスを書き込みます。  
   
  [in]*htreeItem*  
  メソッドは、このツリー コントロール項目のパスを取得します。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合は 0 以外。それ以外の場合は 0 です。  
+ 成功した場合、0 以外の場合それ以外の場合は 0 です。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドが失敗した場合、 *strPath*空の文字列が含まれています。  
   
- 指定しない場合*hTreeItem*、このメソッドは現在選択されている項目の文字列を取得しようとしています。 項目が選択されていない場合、 *hTreeItem*は`NULL`、このメソッドは失敗します。  
+ 指定しない場合*hTreeItem*、このメソッドは、現在選択されているアイテムの文字列を取得しようとしています。 項目が選択されていない場合、 *hTreeItem*が null の場合、このメソッドは失敗します。  
   
 ##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList  
  ポインターを返します、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)これに関連付けられているオブジェクト[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクト。  
@@ -155,7 +155,7 @@ CMFCShellListCtrl* GetRelatedList() const;
  ポインター、`CMFCShellListCtrl`このツリーのコントロール オブジェクトに関連付けられているオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 使用して、`CMFCShellListCtrl`オブジェクトと共に、`CMFCShellTreeCtrl`オブジェクト エクスプ ローラーのようなウィンドウを作成することができます。 メソッドを使用して[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)に 2 つのクラスを関連付けます。 フレームワークが自動的に更新が関連付けられている後に、`CMFCShellListCtrl`場合の選択内容、`CMFCShellTreeCtrl`変更します。  
+ 使用して、`CMFCShellListCtrl`オブジェクトと共に、`CMFCShellTreeCtrl`オブジェクトには、エクスプ ローラーのようなウィンドウを作成することができます。 メソッドを使用して[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)に 2 つのクラスを関連付けます。 フレームワークが自動的に更新した後、関連付けられている、`CMFCShellListCtrl`場合で、選択、`CMFCShellTreeCtrl`変更します。  
   
 ##  <a name="onchildnotify"></a>  CMFCShellTreeCtrl::OnChildNotify  
 
@@ -210,14 +210,14 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="refresh"></a>  CMFCShellTreeCtrl::Refresh  
- 更新して再描画、 [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)です。  
+ 更新して再描画、 [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)します。  
   
 ```  
 void Refresh();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 表示される項目の階層を更新するには、このメソッドを呼び出して、`CMFCShellTreeCtrl`です。  
+ 表示される項目の階層を更新するには、このメソッドを呼び出して、`CMFCShellTreeCtrl`します。  
   
 ##  <a name="selectpath"></a>  CMFCShellTreeCtrl::SelectPath  
  内の項目を選択、 [CMFCShellTreeCtrl クラス](../../mfc/reference/cmfcshelltreectrl-class.md)指定されたパスに基づきます。  
@@ -235,10 +235,10 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
  項目を指定する PIDL  
   
 ### <a name="return-value"></a>戻り値  
- `S_OK` 成功した場合`E_FAIL`それ以外の場合。  
+ 成功した場合は s_ok を返します。E_FAIL をそれ以外の場合。  
   
 ##  <a name="setflags"></a>  CMFCShellTreeCtrl::SetFlags  
- ツリーのコンテキスト フィルターを適用するためのフラグを設定します。  
+ ツリーのコンテキスト フィルターを適用するフラグを設定します。  
   
 ```  
 void SetFlags(
@@ -254,7 +254,7 @@ void SetFlags(
  ブール値を指定するかどうか、`CMFCShellTreeCtrl`すぐに更新する必要があります。  
   
 ### <a name="remarks"></a>Remarks  
- `CMFCShellTreeCtrl`すべてにフラグを設定するパス[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)です。 さまざまなフラグの値に関する詳細については、次を参照してください。 [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)です。  
+ `CMFCShellTreeCtrl`すべてにフラグを設定するパス[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)します。 さまざまなフラグの値の詳細については、次を参照してください。 [IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)します。  
   
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList  
  関連付けます、 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)オブジェクトを[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)オブジェクト。  
@@ -265,12 +265,12 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pShellList*  
- ポインター、`CMFCShellListCtrl`オブジェクト。  
+ ポインターを`CMFCShellListCtrl`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドに関連付けます、`CMFCShellListCtrl`で、`CMFCShellTreeCtrl`です。 これらのオブジェクトは、エクスプ ローラーのようなウィンドウとして表示される可能性があります: ユーザーが内のオブジェクトを選択した場合、 `CMFCShellTreeCtrl`、内の項目が関連付けられている、`CMFCShellListCtrl`が自動的に更新します。  
+ このメソッドを関連付けます、`CMFCShellListCtrl`で、`CMFCShellTreeCtrl`します。 これらのオブジェクトは、エクスプ ローラーのようなウィンドウとして表示される可能性があります: ユーザーが内のオブジェクトを選択した場合、 `CMFCShellTreeCtrl`、内の項目に関連付けられている、`CMFCShellListCtrl`が自動的に更新します。  
   
- メソッドを使用して[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)を取得する、`CMFCShellListCtrl`に関連付けられている、`CMFCShellTreeCtrl`です。  
+ メソッドを使用して[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)を取得する、`CMFCShellListCtrl`に関連付けられている、`CMFCShellTreeCtrl`します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22dc1282dc165941c1a611583138c2d9aed51090
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca0b25f5df6d4efb70e27fea6ef2323568134b2e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964470"
 ---
 # <a name="basicistream-class"></a>basic_istream クラス
 
@@ -62,7 +62,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_istream : virtual public basic_ios<Elem, Tr>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 [operator>>](#op_gt_gt) をオーバーロードするメンバー関数のほとんどは、書式設定された入力関数です。 これらは以下のパターンに従います。
 
@@ -129,13 +129,13 @@ if (ok)
 setstate(state);
 ```
 
-要素の抽出中にファイルの終わりに到達した場合、どちらの関数グループも [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) を呼び出します。
+関数呼び出しの両方のグループ[setstate](../standard-library/basic-ios-class.md#setstate)(`eofbit`) 要素を抽出中にファイルの終わりが発生した場合。
 
 クラス `basic_istream`< `Elem`, *Tr*> のオブジェクトは次のものを格納します。
 
 - クラス [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.` の仮想パブリック基本オブジェクト
 
-- 最後の書式設定されていない入力操作の抽出カウント (以前のコードで **count** と呼ばれていたもの)。
+- 最後の書式設定されていない入力操作の抽出カウント (と呼ばれる`count`上記のコードで)。
 
 ## <a name="example"></a>例
 
@@ -173,7 +173,7 @@ setstate(state);
 |[operator>>](#op_gt_gt)|入力ストリームで関数を呼び出すか、または入力ストリームから書式設定されたデータを読み取ります。|
 |[operator=](#op_eq)|演算子の右辺の `basic_istream` をこのオブジェクトに代入します。 これは、コピーを残さない `rvalue` 参照を伴う移動代入です。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<istream>
 
@@ -193,13 +193,13 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`strbuf` 型のオブジェクト[basic_streambuf](../standard-library/basic-streambuf-class.md)です。
+*strbuf*型のオブジェクト[basic_streambuf](../standard-library/basic-streambuf-class.md)します。
 
-`_Isstd` `true` 場合、これは、標準的なストリームです。それ以外の場合、`false`です。
+*_Isstd* **true**場合、これは、標準的なストリームです。 それ以外の場合、 **false**します。
 
-`right` A`basic_istream`コピー先のオブジェクト。
+*適切な*A`basic_istream`オブジェクトにコピーします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 最初のコンストラクターが [init](../standard-library/basic-ios-class.md#init)(_S `trbuf`) を呼び出して基底クラスを初期化します。 ゼロも抽出カウントに格納されます。 この抽出カウントの詳細については、「[basic_istream クラス](../standard-library/basic-istream-class.md)」の概要トピックの「コメント」セクションを参照してください。
 
@@ -221,7 +221,7 @@ streamsize gcount() const;
 
 抽出カウント。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 書式設定されていない文字を読み取るには、[basic_istream::get](#get) を使用します。
 
@@ -277,41 +277,41 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>パラメーター
 
-`count` 読み取られた文字数`strbuf`です。
+*カウント*から読み取る文字数`strbuf`します。
 
-`Delim` 文字の前に検出された場合、読み取りを終了する必要がありますを`count`です。
+*Delim*をする前にこれが発生した場合、読み取りを終了する文字*カウント*します。
 
-`str` 書き込み先の文字列。
+*str*書き込み先の文字列。
 
-`Ch` 取得する文字。
+*Ch*取得する文字。
 
-`strbuf` 書き込み先のバッファーです。
+*strbuf*書き込み先のバッファー。
 
 ### <a name="return-value"></a>戻り値
 
 get のパラメーターなしの形式は、整数またはファイルの終わりとして読み取られる要素を返します。 残りの形式はストリーム (* `this`) を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-これらの書式設定されていない 1 番目の入力関数は、可能であれば、`rdbuf`-> `sbumpc` を返す場合と同じように、要素を抽出します。 それ以外の場合は、**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) を返します。 関数が要素を抽出しなかった場合、[setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。
+これらの書式設定されていない 1 番目の入力関数は、可能であれば、`rdbuf`-> `sbumpc` を返す場合と同じように、要素を抽出します。 それ以外の場合は、**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) を返します。 呼び出す関数が要素を抽出しなかった場合[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。
 
 2 番目の関数は、同じ方法で [int_type](../standard-library/basic-ios-class.md#int_type) 要素 `meta` を抽出します。 `meta` が **traits_type::eof** と等しい場合、関数は `setstate`( **failbit**) を呼び出します。 それ以外の場合は、**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) を `Ch` に格納します。 関数は **\*this** を返します。
 
 3 番目の関数は、**get**(_ *Str*, `count`, `widen`('\ **n**')) を返します。
 
-4 番目の関数は、最大 `count` - 1 の要素を抽出し、それらを _ *Str* で始まる配列に格納します。 これは格納する抽出した要素の後に常に `char_type` を格納します。 テストの順に抽出は停止します。
+4 番目の関数を抽出して最大*カウント*- 1 要素 _ で始まる配列に格納および*Str*します。 これは格納する抽出した要素の後に常に `char_type` を格納します。 テストの順に抽出は停止します。
 
 - ファイルの終わり。
 
-- 関数が `Delim` と等しい要素を抽出した後。この場合、抽出された要素が制御対象シーケンスに戻されます。
+- 関数と等しい要素を抽出後*Delim*、被制御シーケンスへの要素の再度の検疫場合。
 
-- 関数が `count` - 1 要素を抽出した後。
+- 関数抽出後*カウント*- 1 要素。
 
 関数が要素を抽出しなかった場合、`setstate`( **failbit**) を呼び出します。 いずれの場合も、**\*this** を返します。
 
 5 番目の関数は、**get**( **strbuf**, `widen`('\ **n**')) を返します。
 
-6 番目の関数は、要素を抽出し、それらを **strbuf** に挿入します。 抽出は、ファイルの終わりまたは _ *Delim* と等しい要素で停止し、抽出はされません。 また、挿入が失敗した場合または (キャッチされるが再スローされない) 例外をスローする場合は、対象の要素を抽出せずに停止します。 関数が要素を抽出しなかった場合、`setstate`( **failbit**) を呼び出します。 いずれの場合も関数は **\*this** を返します。
+6 番目の関数が要素を抽出し、それらで挿入`strbuf`します。 抽出は、ファイルの終わりまたは _ *Delim* と等しい要素で停止し、抽出はされません。 また、挿入が失敗した場合または (キャッチされるが再スローされない) 例外をスローする場合は、対象の要素を抽出せずに停止します。 関数が要素を抽出しなかった場合、`setstate`( **failbit**) を呼び出します。 いずれの場合も関数は **\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -356,29 +356,29 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>パラメーター
 
-`count` 読み取られた文字数**strbuf**です。
+*カウント*から読み取る文字数`strbuf`します。
 
-`Delim` 文字の前に検出された場合、読み取りを終了する必要がありますを`count`です。
+*Delim*をする前にこれが発生した場合、読み取りを終了する文字*カウント*します。
 
-`str` 書き込み先の文字列。
+*str*書き込み先の文字列。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム ( **\*this**)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 これらの書式設定されていない最初の入力関数は、**getline**(_ *Str*, `count`, `widen`(' `\`**n**')) を返します。
 
-2 番目の関数は、最大 `count` - 1 の要素を抽出し、それらを _ *Str* で始まる配列に格納します。 これは格納する抽出した要素の後に常に文字列終端文字を格納します。 テストの順に抽出は停止します。
+2 番目の関数を抽出して最大*カウント*- 1 要素 _ で始まる配列に格納し、 *Str*します。 これは格納する抽出した要素の後に常に文字列終端文字を格納します。 テストの順に抽出は停止します。
 
 - ファイルの終わり。
 
-- 関数が `Delim` と等しい要素を抽出した場合。このとき、抽出された要素が制御対象シーケンスに戻されたり、追加されたりすることはありません。
+- 関数と等しい要素を抽出後*Delim*、その場合、要素が戻されたり、被制御シーケンスに追加されます。
 
-- 関数が `count` - 1 要素を抽出した後。
+- 関数抽出後*カウント*- 1 要素。
 
-関数が要素を抽出しなかった場合、または `count` - 1 要素を抽出した場合、[setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。 いずれの場合も、**\*this** を返します。
+関数が要素を抽出しなかった場合または*カウント*- 1 要素を呼び出す[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 いずれの場合も、**\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -414,17 +414,17 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>パラメーター
 
-`count` 現在の読み取り位置からスキップする要素の数。
+*カウント*数、現在からスキップする要素の読み取り位置。
 
-`Delim` 要素をカウント、前に発生した場合**を無視する**を返すため、すべての要素の後に`Delim`読み取られます。
+*Delim* before count、発生した場合に発生する要素`ignore`を返すの後にすべての要素を許可して*Delim*を読み取る。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム ( **\*this**)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-書式設定されていない入力関数は、最大 `count` の要素を抽出し、これらを破棄します。 ただし、`count` が **numeric_limits\<int>::max** と等しい場合、任意の大きさとして取得されます。 ファイルの終わりに、または要素の抽出を早い段階停止`Ch`ように**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) 比較と等しい*Delim* (抽出されます)。 関数は **\*this** を返します。
+書式設定されていない入力関数が最大を抽出*カウント*要素と、これらを破棄します。 場合*カウント*equals **numeric_limits\<int >:: max**、任意の大きさとしてただし、作成します。 ファイルの終わりまたは要素の抽出を早期停止`Ch`ように**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) と同じ*Delim* (抽出されます)。 関数は **\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -474,19 +474,19 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>パラメーター
 
-`Pfn` 関数のポインター。
+*Pfn*関数ポインター。
 
-`strbuf` 型のオブジェクト**stream_buf**です。
+*strbuf*型のオブジェクト`stream_buf`します。
 
-`val` ストリームから読み取った値。
+*val*ストリームから読み取る値。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム ( **\*this**)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-\<Istream > ヘッダーもいくつかのグローバル抽出演算子を定義します。 詳細については、「[operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt)」を参照してください。
+\<Istream > ヘッダーでは、いくつかのグローバル抽出演算子も定義します。 詳細については、「[operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt)」を参照してください。
 
 最初のメンバー関数は、**istr** >> `ws` 形式の式が [ws](../standard-library/istream-functions.md#ws)( **istr**) を呼び出し、**\*this** を返すことを保証します。 2 番目と 3 番目の関数は、[hex](../standard-library/ios-functions.md#hex) などの他のマニピュレーターが同じように動作することを保証します。 残りの関数は、書式設定された入力関数を構成します。
 
@@ -497,7 +497,7 @@ basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-_ *Strbuf*が Null ポインターではない場合に、要素を抽出し、それらを `strbuf` に挿入します。 抽出は、ファイルの終わりで停止します。 また、挿入が失敗した場合または (キャッチされるが再スローされない) 例外をスローする場合は、対象の要素を抽出せずに停止します。 関数が要素を抽出しなかった場合、[setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。 いずれの場合も関数は **\*this** を返します。
+場合、要素を抽出します _ *Strbuf*が null ポインターの場合とでそれらを挿入*strbuf*します。 抽出は、ファイルの終わりで停止します。 また、挿入が失敗した場合または (キャッチされるが再スローされない) 例外をスローする場合は、対象の要素を抽出せずに停止します。 呼び出す関数が要素を抽出しなかった場合[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 いずれの場合も関数は **\*this** を返します。
 
 関数:
 
@@ -521,9 +521,9 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-それぞれがフィールドを抽出し、`use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) を呼び出して、それを数値に変換します。 ここでは、 **InIt**として定義されて`istreambuf_iterator` \< **Elem**、 **Tr**>、および`val`型を持つ**長い**、`unsigned long`、または**void \*** に応じて。
+それぞれがフィールドを抽出し、`use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) を呼び出して、それを数値に変換します。 ここでは、 **InIt**として定義されます`istreambuf_iterator` \< **Elem**、 **Tr**>、および`val`型を持つ**長い**、**unsigned long**、または**void \*** に応じて。
 
-変換後の値を `val` の型として表すことができない場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。 いずれの場合も関数は **\*this** を返します。
+変換後の値の型として表すことができないかどうか`val`、関数呼び出し[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 いずれの場合も関数は **\*this** を返します。
 
 関数:
 
@@ -533,7 +533,7 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```
 
-それぞれがフィールドを抽出し、`use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) を呼び出して、それを数値に変換します。 ここで、**InIt** は `istreambuf_iterator`\< **Elem**, **Tr**> として定義され、必要に応じて `val` に **double** または `long double` の型を指定します。
+それぞれがフィールドを抽出し、`use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) を呼び出して、それを数値に変換します。 ここでは、`InIt`として定義されます`istreambuf_iterator` \< **Elem**、 **Tr**>、および`val`型を持つ**二重**または**長二重**に応じて。
 
 変換後の値を `val` の型として表すことができない場合、関数は `setstate`( **failbit**) を呼び出します。 いずれの場合も、**\*this** を返します。
 
@@ -584,13 +584,13 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `rvalue`への参照、`basic_ifstream`オブジェクト。
+*適切な*、`rvalue`への参照を`basic_ifstream`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 *this を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー演算子は、swap `( right)` を呼び出します。
 
@@ -606,7 +606,7 @@ int_type peek();
 
 読み取る次の文字。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 これらの書式設定されていない入力関数は、可能であれば、`rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc) を返すように、要素を抽出します。 それ以外の場合は、**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) を返します。
 
@@ -653,15 +653,15 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` ストリームに文字です。
+*Ch*に文字をストリームに戻されます。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム ( **\*this**)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-[書式設定されていない入力関数](../standard-library/basic-istream-class.md)は、可能な場合には [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc) を呼び出すのと同じように `Ch`を戻します。 rdbuf が Null ポインターの場合、または `sputbackc` への呼び出しが **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) を返す場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) を呼び出します。 いずれの場合も、**\*this** を返します。
+[書式設定されていない入力関数](../standard-library/basic-istream-class.md)戻す*Ch*を呼び出した場合、可能な場合、 [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc)します。 Rdbuf が null ポインターの場合、または場合に呼び出し`sputbackc`返します**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、関数呼び出し[setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`)。 いずれの場合も、**\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -702,17 +702,17 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 文字の読み込み先となる配列。
+*str*文字の読み取り先の配列。
 
-`count` 読み取る文字の数。
+*カウント*読み取る文字の数。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム ( `*this`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-書式設定されていない入力関数は、最大 `count` の要素を抽出し、それらを _ `Str` で始まる配列に格納します。 抽出は、関数が [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`) を呼び出す場合には、ファイルの終わりの早い段階で停止します。 いずれの場合も、`*this` を返します。
+書式設定されていない入力関数を抽出して最大*カウント*要素 _ で始まる配列に格納および`Str`します。 抽出は、ファイルの終わりで、関数の呼び出しを早い段階は停止します[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 いずれの場合も、`*this` を返します。
 
 ### <a name="example"></a>例
 
@@ -764,17 +764,17 @@ streamsize readsome(
 
 ### <a name="parameters"></a>パラメーター
 
-`str` 配列`readsome`読み取った文字を格納します。
+*str*先の配列`readsome`が読み取る文字を格納します。
 
-`count` 読み取る文字の数。
+*カウント*読み取る文字の数。
 
 ### <a name="return-value"></a>戻り値
 
 実際に読み取った文字数、[gcount](#gcount)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この書式設定されていない入力関数は、最大 `count` の要素を入力ストリームから抽出し、それらを配列 `str` に格納します。
+この書式設定されていない入力関数を抽出して最大*カウント*入力からの要素はストリームし、配列に格納*str*します。
 
 この関数は入力を待機しません。 使用できる任意のデータを読み取ります。
 
@@ -819,24 +819,24 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>パラメーター
 
-`pos` 読み取りのポインターを移動するための絶対位置。
+*pos*読み取りポインターを移動先の絶対位置。
 
-`off` に対して相対的な読み取りのポインターを移動するオフセット`way`です。
+*オフ*に対して相対的に読み取りポインターを移動するオフセット*方法*します。
 
-`way` 1 つ、 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)列挙体です。
+*方法*の 1 つ、 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)列挙体。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム ( **\*this**)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のメンバー関数は絶対シークを実行し、2 つ目のメンバー関数は相対シークを実行します。
 
 > [!NOTE]
 > 標準 C++ ではテキスト ファイルでの相対シークをサポートしていないため、2 つ目のメンバー関数をテキスト ファイルで使用しないでください。
 
-[fail](../standard-library/basic-ios-class.md#fail) が false の場合、1 つ目のメンバー関数は、一部の**pos_type** の一時オブジェクト **newpos** に対し、**newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`) を呼び出します。 **fail** が false の場合、2 つ目の関数は **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`) を呼び出します。 いずれの場合も、( `off_type`) **newpos** == ( `off_type`)(-1) (位置指定操作が失敗) の場合、関数は **istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。 どちらの関数も **\*this** を返します。
+場合[失敗](../standard-library/basic-ios-class.md#fail)が false の場合、最初のメンバー関数は**newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`)、一部の`pos_type`一時オブジェクト`newpos`します。 場合`fail`が false の場合、2 番目の関数は**newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`、 `way`). いずれの場合も場合、( `off_type`) **newpos** = = ( `off_type`)(-1) (、位置指定操作が失敗)、関数呼び出し`istr`します。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 どちらの関数も **\*this** を返します。
 
 [fail](../standard-library/basic-ios-class.md#fail) が true の場合、メンバー関数は何もしません。
 
@@ -865,9 +865,9 @@ int main ( )
 
 この入れ子になったクラスは、オブジェクトの宣言が書式設定された入力関数と書式設定されていない入力関数を構築するオブジェクトについて記述します。
 
-クラス sentry {パブリック: 明示的な sentry (basic_istream\<Elem, Tr > & _Istr、bool _Noskip = false); 演算子 bool() const;} です。
+クラスの sentry {パブリック: 明示的な sentry (basic_istream\<Elem, Tr > & _Istr、bool _Noskip = false); 演算子 bool() const;};
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `_Istr.`[good](../standard-library/basic-ios-class.md#good) が true の場合、コンストラクターは以下を実行します。
 
@@ -875,7 +875,7 @@ int main ( )
 
 - [ws](../standard-library/istream-functions.md#ws)( `_Istr`) を効果的に呼び出す (`_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) がゼロ以外の場合)
 
-このような準備作業の後に、`_Istr`. **good** が false の場合、コンストラクターは `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**) を呼び出します。 いずれの場合も、コンストラクターは `_Istr`. **good** で返された値を **status** に格納します。 **operator bool** への以降の呼び出しは、格納されているこの値を提供します。
+このような準備作業の後に、`_Istr`. `good` false の場合、コンス トラクターは`_Istr`します。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 いずれの場合も、コンストラクターは `_Istr`. `good` `status`します。 以降の呼び出し`operator bool`この格納されている値を提供します。
 
 ## <a name="swap"></a>  basic_istream::swap
 
@@ -887,11 +887,11 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 左辺値参照、`basic_istream`オブジェクト。
+*適切な*への左辺値参照を`basic_istream`オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-メンバー関数は [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)` を呼び出します。 また、抽出カウントを `right` の抽出カウントと交換します。
+メンバー関数は [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)` を呼び出します。 抽出カウントの抽出カウントと交換*右*します。
 
 ## <a name="sync"></a>  basic_istream::sync
 
@@ -903,7 +903,7 @@ int sync();
 
 ### <a name="return-value"></a>戻り値
 
-[rdbuf](../standard-library/basic-ios-class.md#rdbuf) が Null ポインターの場合、この関数は -1 を返します。 そうでない場合は、`rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync) を呼び出します。 -1 を返す場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**)を呼び出して -1 を返します。 それ以外の場合、関数は 0 を返します。
+[rdbuf](../standard-library/basic-ios-class.md#rdbuf) が Null ポインターの場合、この関数は -1 を返します。 そうでない場合は、`rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync) を呼び出します。 -1 を返す場合、関数は[setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`)-1 を返します。 それ以外の場合、関数は 0 を返します。
 
 ## <a name="tellg"></a>  basic_istream::tellg
 
@@ -917,7 +917,7 @@ pos_type tellg();
 
 ストリームの現在の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 [fail](../standard-library/basic-ios-class.md#fail) が false の場合、メンバー関数は [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**) を返します。 それ以外の場合は、`pos_type`(-1) を返します。
 
@@ -959,9 +959,9 @@ basic_istream<Elem, Tr>& unget();
 
 ストリーム ( **\*this**)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-[書式設定されていない入力関数](../standard-library/basic-istream-class.md)は、可能であれば、`rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) を呼び出した場合と同じように、前の要素をストリームに戻します。 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) が Null ポインターの場合、または `sungetc` への呼び出しが **traits_type::**[eof](../standard-library/basic-ios-class.md#eof) を返す場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) を呼び出します。 いずれの場合も、**\*this** を返します。
+[書式設定されていない入力関数](../standard-library/basic-istream-class.md)は、可能であれば、`rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) を呼び出した場合と同じように、前の要素をストリームに戻します。 場合[rdbuf](../standard-library/basic-ios-class.md#rdbuf)が null ポインターの場合、またはへの呼び出し`sungetc`返します**traits_type::**[eof](../standard-library/basic-ios-class.md#eof)、関数呼び出し[setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`). いずれの場合も、**\*this** を返します。
 
 `unget` がどのように失敗する可能性があるかについては、「[basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc)」を参照してください。
 

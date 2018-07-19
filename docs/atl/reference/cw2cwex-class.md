@@ -1,5 +1,5 @@
 ---
-title: CW2CWEX クラス |Microsoft ドキュメント
+title: CW2CWEX クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f97ddd87194d9cf7cce0b5fcd898b6a9f391d908
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363283"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879382"
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX クラス
-このクラスは、文字列変換マクロによって使用`CW2CTEX`と`CT2CWEX`、および typedef`CW2W`です。  
+このクラスは、文字列変換マクロ CW2CTEX と CT2CWEX、typedef CW2W によって使用されます。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -40,8 +40,8 @@ class CW2CWEX
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `t_nBufferLength`  
- 変換プロセスで使用するバッファーのサイズ。 既定の長さは 128 バイトです。  
+ *t_nBufferLength*  
+ 変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。  
   
 ## <a name="members"></a>メンバー  
   
@@ -56,35 +56,35 @@ class CW2CWEX
   
 |名前|説明|  
 |----------|-----------------|  
-|[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|変換演算子です。|  
+|[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|変換演算子。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CW2CWEX::m_psz](#m_psz)|ソース文字列を格納するデータ メンバーです。|  
+|[CW2CWEX::m_psz](#m_psz)|ソース文字列が格納されるデータ メンバー。|  
   
-## <a name="remarks"></a>コメント  
- 追加の機能が必要な場合を除き、使用`CW2CTEX`、 `CT2CWEX`、または`CW2W`コードにします。  
+## <a name="remarks"></a>Remarks  
+ 追加の機能が必要な場合を除き、CW2CTEX、CT2CWEX、または CW2W をコードで使用します。  
   
- このクラスは、安全にループで使用し、スタック オーバーフローが発生しません。 既定では、ATL 変換クラスとマクロは、変換の現在のスレッドの ANSI コード ページを使用します。  
+ このクラスは、安全にループ内で使用し、スタック オーバーフローが発生しません。 既定では、ATL 変換クラスとマクロは、変換の現在のスレッドの ANSI コード ページを使用します。  
   
  次のマクロは、このクラスに基づいています。  
   
-- `CW2CTEX`  
+- CW2CTEX  
   
-- `CT2CWEX`  
+- CT2CWEX  
   
  次の typedef は、このクラスに基づいています。  
   
-- `CW2W`  
+- CW2W  
   
- これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL および MFC 文字列変換マクロ](string-conversion-macros.md)です。  
+ これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)します。  
   
 ## <a name="example"></a>例  
- 参照してください[ATL および MFC 文字列変換マクロ](string-conversion-macros.md)をこれらの文字列変換マクロを使用する例についてはします。  
+ 参照してください[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)のこれらの文字列変換マクロの使用例についてはします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlconv.h  
   
 ##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX  
@@ -96,14 +96,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `psz`  
+ *2 つ*  
  変換するテキスト文字列。  
   
- `nCodePage`  
+ *nCodePage*  
  コード ページです。 このクラスでは使用されません。  
   
-### <a name="remarks"></a>コメント  
- 変換プロセスで使用するバッファーを割り当てます。  
+### <a name="remarks"></a>Remarks  
+ 変換プロセスで使用されるバッファーを割り当てます。  
   
 ##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  デストラクターです。  
@@ -112,25 +112,25 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ~CW2CWEX() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  割り当てられたバッファーを解放します。  
   
 ##  <a name="m_psz"></a>  CW2CWEX::m_psz  
- ソース文字列を格納するデータ メンバーです。  
+ ソース文字列が格納されるデータ メンバー。  
   
 ```
 LPCWSTR m_psz;
 ```  
   
 ##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator LPCWSTR  
- 変換演算子です。  
+ 変換演算子。  
   
 ```  
 operator LPCWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 種類としてテキスト文字列を返す**LPCWSTR です。**  
+ LPCWSTR を入力すると、テキスト文字列を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [CA2AEX クラス](../../atl/reference/ca2aex-class.md)   

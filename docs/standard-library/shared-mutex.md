@@ -55,18 +55,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4a9cd6c4533b3b59fdb3c5cab17ffaba071fb08
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 98ceeff060436701efb60aeb59987ae087c191b1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860087"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960282"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
-&lt;Shared_mutex > ヘッダーは、複数のスレッドがアクセスできる共有のデータの保護の同期プリミティブを提供します。 ミューテックス クラスで提供される排他アクセス制御だけでなく、共有ミューテックス クラスによって非排他的なアクセス用の複数のスレッドによる共有所有権も可能になります。 共有ミューテックスを使用して、競合状態を発生させず複数のスレッドで読み取ることができるリソースを制御できますが、共有ミューテックスは 1 つのスレッドによって排他的に書き込まれる必要があります。
+&lt;Shared_mutex > ヘッダーは、複数のスレッドによってアクセスできる共有のデータの保護の同期プリミティブを提供します。 ミューテックス クラスで提供される排他アクセス制御だけでなく、共有ミューテックス クラスによって非排他的なアクセス用の複数のスレッドによる共有所有権も可能になります。 共有ミューテックスを使用して、競合状態を発生させず複数のスレッドで読み取ることができるリソースを制御できますが、共有ミューテックスは 1 つのスレッドによって排他的に書き込まれる必要があります。
 
-ヘッダー &lt;shared_mutex > クラスを定義`shared_mutex`と`shared_timed_mutex`、テンプレート クラスは、 `shared_lock`、およびテンプレート関数は、`swap`のミュー テックスのサポートを共有します。
+ヘッダー &lt;shared_mutex > クラスを定義`shared_mutex`と`shared_timed_mutex`、テンプレート クラスは、 `shared_lock`、テンプレート関数と`swap`共有ミュー テックスのサポート。
 
 |クラス|説明|
 |-------------|-----------------|
@@ -91,7 +91,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 }
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 クラス `shared_mutex` のインスタンスは、*共有 mutex 型*、つまり、スコープ内でのミューテックスの共有所有権を制御する型です。 共有 mutex 型は、mutex 型および共有の非排他的な所有権をサポートするためのメンバーの要件をすべて満たしています。
 
@@ -101,20 +101,20 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 - `unlock_shared` メソッドは、スレッドの呼び出しによって保持されるミューテックスの共有所有権を解放します。
 
-- `try_lock_shared` メソッドは、ミューテックスをブロックせずに共有所有権を取得しようとします。 その戻り値の型は、`bool` に変換でき、メソッドが所有権を得ると `true` になりますが、それ以外の場合は `false` です。
+- `try_lock_shared` メソッドは、ミューテックスをブロックせずに共有所有権を取得しようとします。 戻り値の型に変換できる**bool**は**true**メソッドは、所有権を取得しますが、それ以外の場合は、場合**false**します。
 
 クラス `shared_timed_mutex` は、*共有 timed mutex 型*、つまり、共有 mutex 型と timed mutex 型の両方の要件を満たす型です。
 
 共有 timed mutex 型は、追加のメソッド `try_lock_shared_for` および `try_lock_shared_until` をサポートします。
 
-- `try_lock_shared_for` メソッドは、パラメーターで指定した期間が経過するまで、ミューテックスの共有所有権を取得しようとします。 この期間が正ではない場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した期間内では返しません。 その戻り値は、メソッドが所有権を取得した場合は `true`、それ以外の場合は `false` です。
+- `try_lock_shared_for` メソッドは、パラメーターで指定した期間が経過するまで、ミューテックスの共有所有権を取得しようとします。 この期間が正ではない場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した期間内では返しません。 戻り値は**true**メソッドは、所有権を取得しますが、それ以外の場合は、場合**false**します。
 
-- `try_lock_shared_until` メソッドは、指定された絶対時間が経過するまで、ミューテックスの共有所有権を取得しようとします。 指定した時間が既に経過している場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した時間の前に返しません。 その戻り値は、メソッドが所有権を取得した場合は `true`、それ以外の場合は `false` です。
+- `try_lock_shared_until` メソッドは、指定された絶対時間が経過するまで、ミューテックスの共有所有権を取得しようとします。 指定した時間が既に経過している場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した時間の前に返しません。 戻り値は**true**メソッドは、所有権を取得しますが、それ以外の場合は、場合**false**します。
 
 `shared_lock` テンプレート クラスは時間指定のロックのサポートおよび共有ミューテックスへの所有権の転送のサポートを拡張します。 ミューテックスの所有権は構築時または構築後に取得でき、別の `shared_lock` オブジェクトに転送できます。 `shared_lock` 型のオブジェクトは移動できますが、コピーできません。
 
 > [!WARNING]
-> Visual Studio 2015 以降では、C++ 標準ライブラリの同期型は Windows 同期プリミティブに基づいており、不要になった (ターゲット プラットフォームが Windows XP の場合) を除く ConcRT を使用します。 定義された型&lt;shared_mutex > は、ConcRT 型または関数では使用できません。
+> Visual Studio 2015 以降では、C++ 標準ライブラリ同期型は、は Windows 同期プリミティブに基づいており、(ターゲット プラットフォームが Windows XP の場合を除き、ConcRT を使用できなくします。 定義された型&lt;shared_mutex >、ConcRT 型または関数は使えません。
 
 ## <a name="classes"></a>クラス
 
@@ -236,7 +236,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 2 つの `shared_lock` オブジェクトの内容を交換します。 実質的に `x.swap(y)` と同じです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** &lt;shared_mutex>
 
@@ -245,4 +245,4 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 ## <a name="see-also"></a>関連項目
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)
-[&lt;ミュー テックス >](../standard-library/mutex.md)
+[&lt;mutex >](../standard-library/mutex.md)

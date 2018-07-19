@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFileProperty クラス |Microsoft ドキュメント
+title: CMFCPropertyGridFileProperty クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c1ba2bb78260ade8dc95685789ec6af7e0ff58a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0dd70e67769d35bf50e52b7be4b2c8848c089cb0
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038914"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851603"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty クラス
 `CMFCPropertyGridFileProperty`クラスは、ファイルの選択 ダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートしています。  
@@ -47,7 +47,7 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
   
 |名前|説明|  
 |----------|-----------------|  
-|`CMFCPropertyGridFileProperty::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCPropertyGridFileProperty::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
 |`CMFCPropertyGridFileProperty::OnClickButton`|(上書き[cmfcpropertygridproperty::onclickbutton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton))。|  
   
 ### <a name="remarks"></a>Remarks  
@@ -82,33 +82,33 @@ CMFCPropertyGridFileProperty(
  プロパティ名。  
   
  [in]*bOpenFileDialog*  
- `TRUE` 開くには、**ファイルを開く** ダイアログ ボックスです。`FALSE`を開くには、**ファイルを保存** ダイアログ ボックス。  
+ オープンする場合は True、**ファイルを開く**; ダイアログ ボックス開く場合は FALSE、**ファイルを保存** ダイアログ ボックス。  
   
  [in]*strFileName*  
  初期ファイル名。  
   
  [in]*lpszDefExt*  
- 1 つ以上のファイル名拡張子の文字列。 既定値は `NULL` です。  
+ 1 つ以上のファイル名拡張子の文字列。 既定値は、NULL です。  
   
  [in]*dwFlags*  
- ダイアログ ボックスのフラグ。 既定値は、`OFN_HIDEREADONLY` と `OFN_OVERWRITEPROMPT` のビットごとの組み合わせ (OR) です。  
+ ダイアログ ボックスのフラグ。 既定値は OFN_HIDEREADONLY と OFN_OVERWRITEPROMPT のビットごとの組み合わせ (OR) です。  
   
  [in]*lpszFilter*  
- 1 つ以上のファイル フィルターの文字列。 既定値は `NULL` です。  
+ 1 つ以上のファイル フィルターの文字列。 既定値は、NULL です。  
   
  [in]*lpszDescr*  
- プロパティ項目の説明。 既定値は `NULL` です。  
+ プロパティ項目の説明。 既定値は、NULL です。  
   
- [in]*dwData*  
+ [in]*指定*  
  プロパティ項目に関連付けられたアプリケーション固有のデータ。 たとえば、32 ビット整数またはその他のデータへのポインター。 既定値は 0 です。  
   
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- 使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](https://msdn.microsoft.com/library/ms646839.aspx)です。  
+ 使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](https://msdn.microsoft.com/library/ms646839.aspx)します。  
   
 ### <a name="example"></a>例  
- 次の例では、`CMFCPropertyGridFileProperty` クラスのコンストラクターを使用してオブジェクトを作成する方法を示します。 この例の一部である、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、`CMFCPropertyGridFileProperty` クラスのコンストラクターを使用してオブジェクトを作成する方法を示します。 この例は、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]  
   

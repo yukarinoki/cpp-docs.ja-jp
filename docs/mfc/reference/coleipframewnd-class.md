@@ -1,5 +1,5 @@
 ---
-title: COleIPFrameWnd クラス |Microsoft ドキュメント
+title: COleIPFrameWnd クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: ee4a9d3156a4d5efecd74406b92a1a7bcec48d1f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040026"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849147"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd クラス
 アプリケーションの埋め込み先編集ウィンドウの基底クラスです。  
@@ -50,13 +50,13 @@ class COleIPFrameWnd : public CFrameWnd
   
 |名前|説明|  
 |----------|-----------------|  
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|埋め込み先編集のため、アイテムがアクティブになったときに、フレームワークによって呼び出されます。|  
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|埋め込み先編集ウィンドウの位置を変更するためにフレームワークによって呼び出されます。|  
+|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|一括編集するため、項目がアクティブになったときに、フレームワークによって呼び出されます。|  
+|[COleIPFrameWnd::RepositionFrame](#repositionframe)|一括編集ウィンドウの位置を変更するためにフレームワークによって呼び出されます。|  
   
 ## <a name="remarks"></a>Remarks  
- このクラスを作成し、コントロール コンテナー アプリケーションのドキュメント ウィンドウ内でバーの位置。 また、埋め込みで生成された通知を処理[COleResizeBar](../../mfc/reference/coleresizebar-class.md)ユーザー インプレース編集ウィンドウのサイズ変更されるとします。  
+ このクラスを作成し、コントロール コンテナー アプリケーションのドキュメント ウィンドウ内でバーの位置。 また、埋め込みで生成された通知を処理[COleResizeBar](../../mfc/reference/coleresizebar-class.md)オブジェクトのユーザーのインプレース編集ウィンドウのサイズ変更時にします。  
   
- 使用する方法についての`COleIPFrameWnd`、記事を参照して[アクティブ化](../../mfc/activation-cpp.md)です。  
+ 使用しての詳細については`COleIPFrameWnd`、記事をご覧ください[アクティベーション](../../mfc/activation-cpp.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -73,7 +73,7 @@ class COleIPFrameWnd : public CFrameWnd
  **ヘッダー:** afxole.h  
   
 ##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
- 構築、`COleIPFrameWnd`オブジェクトし、型の構造体に格納されているが、インプレース状態情報を初期化します**受け取る**です。  
+ 構築、`COleIPFrameWnd`オブジェクトし、そのインプレース状態については、受け取る型の構造に格納されているを初期化します。  
   
 ```  
 COleIPFrameWnd();
@@ -83,7 +83,7 @@ COleIPFrameWnd();
  詳細については、次を参照してください。[受け取る](http://msdn.microsoft.com/library/windows/desktop/ms693737)Windows SDK に含まれています。  
   
 ##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
- フレームワークによって、`OnCreateControlBars`で埋め込み先編集の項目がアクティブになったときに機能します。  
+ フレームワークによって、`OnCreateControlBars`で埋め込み先編集の項目がアクティブ化時に機能します。  
   
 ```  
 virtual BOOL OnCreateControlBars(
@@ -101,16 +101,16 @@ virtual BOOL OnCreateControlBars(
  コンテナー アプリケーションのフレーム ウィンドウへのポインター。  
   
  *pWndDoc*  
- コンテナーのドキュメント レベルのウィンドウへのポインター。 指定できます**NULL**コンテナーが SDI アプリケーションの場合。  
+ コンテナーのドキュメント レベルのウィンドウへのポインター。 コンテナーが SDI アプリケーションの場合、NULL を指定できます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合は 0 以外の値それ以外の場合、0 を返します。  
+ 成功した場合は 0 以外。それ以外の場合、0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
  既定の実装では、何も行われません。 コントロール バーが作成されたときに必要な特別な処理を実行するには、この関数をオーバーライドします。  
   
 ##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
- フレームワークによって、`RepositionFrame`コントロール バー レイアウトし、そのすべてが表示されるよう、埋め込み先編集ウィンドウの位置を指定するメンバー関数。  
+ フレームワークによって、`RepositionFrame`メンバー関数をコントロール バーをレイアウトし、すべてが表示されているため、インプレース編集ウィンドウの位置を指定します。  
   
 ```  
 virtual void RepositionFrame(
@@ -120,13 +120,13 @@ virtual void RepositionFrame(
   
 ### <a name="parameters"></a>パラメーター  
  *lpPosRect*  
- ポインター、`RECT`構造体、または`CRect`オブジェクトを含む、その場でのフレーム ウィンドウの現在の位置座標をクライアント領域と相対的です。  
+ ポインターを`RECT`構造または`CRect`オブジェクトの場所を含むフレーム ウィンドウの現在位置座標をピクセル単位のクライアント領域を基準とします。  
   
  *lpClipRect*  
- ポインター、`RECT`構造体、または`CRect`オブジェクトを含む、その場でフレーム ウィンドウの現在クリッピング四角形の座標を (クライアント領域と相対的のピクセル単位)。  
+ ポインターを`RECT`構造または`CRect`オブジェクトの場所を含むフレーム ウィンドウの現在クリッピング四角形座標をピクセル単位のクライアント領域を基準とします。  
   
 ### <a name="remarks"></a>Remarks  
- コンテナー ウィンドウのコントロール バーのレイアウトが異なる非 OLE フレーム ウィンドウで実行します。 非 OLE フレーム ウィンドウ、コントロール バーやその他のオブジェクトへの呼び出しと同様に、特定のフレーム ウィンドウのサイズからの位置を計算する[表示](../../mfc/reference/cframewnd-class.md#recalclayout)です。 クライアント領域は、残りのコントロール バーおよびその他のオブジェクト用の領域を減算します。 A`COleIPFrameWnd`ウィンドウは、特定のクライアント領域に従ってツールバーを配置する一方で、します。 つまり、`CFrameWnd::RecalcLayout`一方で、外部"から"動作`COleIPFrameWnd::RepositionFrame`"から、inside out 』 です"。  
+ コンテナー ウィンドウで、コントロール バーのレイアウトとは異なります非 OLE フレーム ウィンドウで実行します。 非 OLE フレーム ウィンドウのコントロール バー、およびその他のオブジェクトへの呼び出しのように、特定のフレーム ウィンドウのサイズを位置を計算する[表示](../../mfc/reference/cframewnd-class.md#recalclayout)します。 クライアント領域は、残りのコントロール バー、およびその他のオブジェクト用の領域が減算されます。 A`COleIPFrameWnd`ウィンドウはその一方で、に従って、特定のクライアント領域ツールバーを配置します。 つまり、`CFrameWnd::RecalcLayout`一方で、外部"から"動作`COleIPFrameWnd::RepositionFrame`"から、徹底解剖"。  
   
 ## <a name="see-also"></a>関連項目  
  [MFC サンプル HIERSVR](../../visual-cpp-samples.md)   

@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::Detach |Microsoft ドキュメント
+title: _com_ptr_t::Detach |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbe8fd203c3fda75e83aee623254676dacaf1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c07a9ce1d315c6738472850b987ccb397feda267
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410581"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941354"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
 **Microsoft 固有の仕様**  
@@ -36,8 +36,8 @@ Interface* Detach( ) throw( );
   
 ```  
   
-## <a name="remarks"></a>コメント  
- 抽出、カプセル化されたインターフェイス ポインターを返し、カプセル化されたポインター ストレージをクリア**NULL**です。 これによって、カプセル化からインターフェイス ポインターが削除されます。 呼び出すかどうかは**リリース**返されたインターフェイス ポインター。  
+## <a name="remarks"></a>Remarks  
+ 抽出し、カプセル化されたインターフェイス ポインターを返しますを NULL にカプセル化されたポインター ストレージをクリアします。 これによって、カプセル化からインターフェイス ポインターが削除されます。 呼び出すかどうかは`Release`返されたインターフェイス ポインター。  
   
  **Microsoft 固有の仕様はここまで**  
   

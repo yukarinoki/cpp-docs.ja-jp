@@ -1,5 +1,5 @@
 ---
-title: 明示的なインスタンス化 |Microsoft ドキュメント
+title: 明示的なインスタンス化 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4925a60843ada350a2795709d9257ab796616a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 834a71f5fd670874fd7dad5a77cb89a837119c2d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415188"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940616"
 ---
 # <a name="explicit-instantiation"></a>明示的なインスタンス化
 明示的なインスタンス化によって、テンプレート化されたクラスまたは関数をコードで実際に使用することなく、そのインスタンスを作成できます。 配布用のテンプレートを使用するライブラリ (.lib) ファイルを作成する場合は、この方法が便利です。そのため、インスタンス化されないテンプレート定義はオブジェクト (.obj) ファイルに格納されません。  
   
- 次のコードは `MyStack` 変数と 6 つの項目に対して明示的に `int` をインスタンス化します。  
+ このコードは明示的にインスタンス化`MyStack`の**int**変数と 6 つの項目。  
   
 ```cpp  
 template class MyStack<int, 6>;  
@@ -40,9 +40,9 @@ template class MyStack<int, 6>;
 template MyStack<int, 6>::MyStack( void );  
 ```  
   
- 明示的にインスタンス化関数テンプレートを使用して、特定の型引数をそれらを再宣言の例で示すように[関数テンプレートのインスタンス化](../cpp/function-template-instantiation.md)です。  
+ 例で示すように、再宣言する特定の型引数を使用して、関数テンプレートをインスタンス化することが明示的に[関数テンプレートのインスタンス化](../cpp/function-template-instantiation.md)します。  
   
- `extern` キーワードを使用して、メンバーが自動的にインスタンス化されないようにすることができます。 例えば:  
+ 使用することができます、 **extern**メンバーの自動インスタンス化されないようにするキーワード。 例えば:  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
@@ -54,10 +54,10 @@ extern template class MyStack<int, 6>;
 extern template MyStack<int, 6>::MyStack( void );  
 ```  
   
- `extern` キーワードを使用して、コンパイル時、複数のオブジェクト モジュールで同じコードがインスタンスされないようにできます。 関数が呼び出される場合には、少なくとも 1 つのリンクされたモジュールで指定した明示的なテンプレート パラメーターを使用して、テンプレート関数をインスタンス化する必要があります。そのようにインスタンス化しないと、プログラムのビルド時にリンカー エラーが発生します。  
+ 使用することができます、 **extern**キーワードをコンパイラがオブジェクトの 1 つ以上のモジュールで、同じインスタンス化コードを生成することを防止します。 関数が呼び出される場合には、少なくとも 1 つのリンクされたモジュールで指定した明示的なテンプレート パラメーターを使用して、テンプレート関数をインスタンス化する必要があります。そのようにインスタンス化しないと、プログラムのビルド時にリンカー エラーが発生します。  
   
 > [!NOTE]
->  特殊化の `extern` キーワードは、クラス本体の外部で定義されたメンバー関数にのみ適用されます。 クラス宣言内で定義されている関数はインライン関数と見なされ、常にインスタンス化されます。  
+>  **Extern**特殊化のキーワードはクラスの本体の外部で定義されているメンバー関数にのみ適用されます。 クラス宣言内で定義されている関数はインライン関数と見なされ、常にインスタンス化されます。  
   
 ## <a name="see-also"></a>関連項目  
  [関数テンプレート](../cpp/function-templates.md)

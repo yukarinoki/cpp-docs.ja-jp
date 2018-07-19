@@ -1,5 +1,5 @@
 ---
-title: 非標準動作 |Microsoft ドキュメント
+title: 非標準動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d421f00839d21236741e8d33f1415fe129b18c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b7334fdc420c096c42360dd6b75fc400b8b34f3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420296"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941799"
 ---
 # <a name="nonstandard-behavior"></a>非標準動作
 ここからのセクションでは、C++ の Visual C++ 実装が C++ 規格に準拠しない部分をいくつか示します。 ここで示している節番号は C++ 11 規格 (ISO/IEC 14882:2011(E)) の節番号に対応しています。  
   
- C++ 標準で定義されているものとは異なるコンパイラの制限の一覧が指定された[コンパイラの制限](../cpp/compiler-limits.md)です。  
+ C++ 標準で定義されているものとは異なるコンパイラの制限の一覧が記載[コンパイラの制限](../cpp/compiler-limits.md)します。  
   
 ## <a name="covariant-return-types"></a>共変の戻り値の型  
- 仮想関数が可変個の引数を持つ場合、仮想既定クラスは共変の戻り値の型としてサポートされません。 このことは C++ ISO 仕様の 10.3 節 7 項に準拠していません。 次の例はコンパイルされず、コンパイル エラー [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
+ 仮想関数が可変個の引数を持つ場合、仮想既定クラスは共変の戻り値の型としてサポートされません。 このことは C++ ISO 仕様の 10.3 節 7 項に準拠していません。 次のサンプルがコンパイルできないコンパイラ エラー [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)  
   
 ```cpp  
 // CovariantReturn.cpp  
@@ -78,10 +78,10 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used  
 ```  
   
- 例外の仕様の詳細については、次を参照してください。[例外指定](../cpp/exception-specifications-throw-cpp.md)です。  
+ 例外の仕様の詳細については、次を参照してください。[例外仕様](../cpp/exception-specifications-throw-cpp.md)します。  
   
 ## <a name="chartraitseof"></a>char_traits::eof()  
- C++ 規格[char_traits::eof](../standard-library/char-traits-struct.md#eof)有効なに対応する必要がありますしない`char_type`値。 Visual C++ コンパイラは `char` 型ではなく、`wchar_t` 型にこの制約を適用します。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。  
+ C++ 標準では、ことを示す[char_traits::eof](../standard-library/char-traits-struct.md#eof)を有効にする必要があります対応していない`char_type`値。 Visual C コンパイラの種類には、この制約を適用する**char**、型ではなく`wchar_t`します。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。  
   
 ```cpp  
 #include <iostream>  

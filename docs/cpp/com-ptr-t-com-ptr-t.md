@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::_com_ptr_t |Microsoft ドキュメント
+title: _com_ptr_t::_com_ptr_t |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d47cfc48a7d73ca1159c4a1862281c01c16cc11
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413935"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939072"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 固有の仕様**  
@@ -143,32 +143,32 @@ explicit _com_ptr_t(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `pInterface`  
+ *pInterface*  
  生のインターフェイス ポインター。  
   
- `fAddRef`  
- 場合**true**、`AddRef`が呼び出され、カプセル化されたインターフェイス ポインターの参照カウントをインクリメントします。  
+ *fAddRef*  
+ TRUE の場合、`AddRef`カプセル化されたインターフェイス ポインターの参照カウントをインクリメントすると呼びます。  
   
  *cp*  
  `_com_ptr_t` オブジェクト。  
   
- `p`  
+ *p*  
  この `_com_ptr_t` オブジェクトのスマート ポインター型とは異なる型である生のインターフェイス ポインター。  
   
  *varSrc*  
  `_variant_t` オブジェクト。  
   
- `clsid`  
- **CLSID**コクラスのです。  
+ *clsid*  
+ `CLSID`コクラスの。  
   
- `dwClsContext`  
+ *dwClsContext*  
  実行可能コードを実行するコンテキスト。  
   
  *lpcStr*  
- 保持するマルチバイト文字列、 **CLSID** (以降で"**{**") または**ProgID**です。  
+ 保持するマルチバイト文字列を`CLSID`(以降では"**{**") または`ProgID`します。  
   
- `pOuter`  
- 外側、不明な[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)です。  
+ *pOuter*  
+ 不明な外部の[集計](http://msdn.microsoft.com/library/windows/desktop/ms686558)します。  
   
 ## <a name="see-also"></a>関連項目  
  [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

@@ -14,30 +14,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a8d28f19e32988bfa179642a87e880413bb0ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4275b99ada0dbfe1c974446d21862f7fa73aab38
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964497"
 ---
 # <a name="onceflag-structure"></a>once_flag 構造体
 
-テンプレート関数 [call_once](../standard-library/mutex-functions.md#call_once) で使用する `struct` を表し、実行する複数スレッドがある場合でも、初期化コードが 1 回だけ呼び出されるようにします。
+表す、**構造体**テンプレート関数で使用されている[call_once](../standard-library/mutex-functions.md#call_once)ように初期化するコードは 1 回だけ呼び出す、複数の実行スレッドがある場合でもです。
 
 ## <a name="syntax"></a>構文
 
 struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); once_flag& operator=(const once_flag&); };
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`once_flag` `struct`既定のコンス トラクターのみです。
+`once_flag` **構造体**既定のコンス トラクターのみです。
 
 `once_flag` 型のオブジェクトは、作成することはできますがコピーはできません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ミュー テックス >
+**ヘッダー:** \<mutex >
 
 **名前空間:** std
 

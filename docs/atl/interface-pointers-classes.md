@@ -1,5 +1,5 @@
 ---
-title: インターフェイス ポインターのクラス (ATL) |Microsoft ドキュメント
+title: インターフェイス ポインター クラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa649b6d290244a62cf94dcd68617a2926ad3e44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c9176d6ac22b4b9f802efabbb53d64fee3e3fef
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961799"
 ---
 # <a name="interface-pointers-classes"></a>インターフェイス ポインター クラス
-次のクラスは、指定されたインターフェイス ポインターを管理します。  
+次のクラスには、特定のインターフェイス ポインターが管理します。  
   
 -   [CComPtr](../atl/reference/ccomptr-class.md)自動参照カウントを実行します。  
   
--   [CComQIPtr](../atl/reference/ccomqiptr-class.md)と同様に`CComPtr`が、同時にインターフェイスのクエリを実行します。  
+-   [CComQIPtr](../atl/reference/ccomqiptr-class.md)と同様に`CComPtr`がも行いインターフェイスのクエリを実行します。  
   
--   [CInterfaceArray](../atl/reference/cinterfacearray-class.md) COM の配列を構築するときに便利です。 提供メソッド インターフェイス ポインター。  
+-   [CInterfaceArray](../atl/reference/cinterfacearray-class.md)インターフェイス ポインターを提供メソッドを COM の配列を構築するときに便利です。  
   
--   [CInterfaceList](../atl/reference/cinterfacelist-class.md)インターフェイス ポインターを提供メソッド COM のリストを構築する場合に便利です。  
+-   [CInterfaceList](../atl/reference/cinterfacelist-class.md)インターフェイス ポインターを提供メソッドを COM のリストを構築するときに便利です。  
   
--   [CComGITPtr](../atl/reference/ccomgitptr-class.md)インターフェイス ポインターと、グローバル インターフェイス テーブル (GIT) を処理するメソッドを提供します。  
+-   [CComGITPtr](../atl/reference/ccomgitptr-class.md)インターフェイス ポインターとグローバル インターフェイス テーブル (GIT) への対処方法を提供します。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../atl/atl-class-overview.md)

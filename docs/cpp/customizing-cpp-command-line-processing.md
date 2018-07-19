@@ -1,5 +1,5 @@
 ---
-title: C++ コマンドライン処理のカスタマイズ |Microsoft ドキュメント
+title: C++ コマンドライン処理のカスタマイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,20 +24,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2691ba3b83cd536c6f0a152bf4de2a855f81e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9415073630505e3cc879f53de14ed469c7e0e2ba
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411112"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939053"
 ---
 # <a name="customizing-c-command-line-processing"></a>C++ コマンド ライン処理のカスタマイズ
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- プログラムがコマンド ラインの引数を受け取らない場合は、コマンド ライン処理を実行するライブラリ ルーチンの使用を制約することで、領域を節約できます。 このルーチンを呼び出す **_setargv**しで説明されているが[ワイルドカードの展開](../cpp/wildcard-expansion.md)です。 使用を抑制するには、定義を含むファイルで何も実行しないルーチン、**メイン**関数、および名前を付けます **_setargv**です。 呼び出し **_setargv**の定義によって満たされる **_setargv**ライブラリのバージョンは読み込まれません。  
+ プログラムがコマンド ラインの引数を受け取らない場合は、コマンド ライン処理を実行するライブラリ ルーチンの使用を制約することで、領域を節約できます。 このルーチンを呼び出す`_setargv`しで説明されているが[ワイルドカードの展開](../cpp/wildcard-expansion.md)します。 使用を抑制するには、含んでいるファイルで何も実行しないルーチンを定義、`main`関数、および名前を付けます`_setargv`します。 呼び出し`_setargv`の定義によって満たされる`_setargv`ライブラリのバージョンは読み込まれません。  
   
- 同様に、環境を使用してテーブルにアクセスしない場合、`envp`引数の代わりに使用する独自の空ルーチンを提供できます **_setenvp**、環境処理ルーチンです。 同様、 **_setargv**関数、 **_setenvp**として宣言する必要があります**extern"C"** です。  
+ 同様に、使用して環境テーブルにアクセスしない場合、`envp`引数の代わりに使用する独自の空ルーチンを提供できます`_setenvp`、環境処理ルーチン。 同様、`_setargv`関数、`_setenvp`として宣言する必要があります**extern"C"** します。  
   
- プログラムは、呼び出しを行うことがあります、**生成**または`exec`C ランタイム ライブラリ ルーチンのファミリです。 この場合、このルーチンは親プロセスから子プロセスに環境を渡すために使用されるため、環境処理ルーチンを抑制しないでください。  
+ プログラムは、呼び出しを行うことがあります、`spawn`または`exec`C ランタイム ライブラリ ルーチンのファミリです。 この場合、このルーチンは親プロセスから子プロセスに環境を渡すために使用されるため、環境処理ルーチンを抑制しないでください。  
   
 **Microsoft 固有の仕様はここまで**  
   

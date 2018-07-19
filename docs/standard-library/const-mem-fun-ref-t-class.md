@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c86f71912c5fe4cf3f5d2fc0df37c8530a8517
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5051fe82a4d197a1518ccf9c0f3c797108c665e0
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842137"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961250"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t クラス
 
@@ -41,23 +41,23 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>パラメーター
 
-`Pm` クラスのメンバー関数へのポインター**型**関数オブジェクトに変換します。
+*Pm*クラスのメンバー関数へのポインター`Type`関数オブジェクトに変換します。
 
-`left` オブジェクトを`Pm`でメンバー関数が呼び出されます。
+*左*オブジェクトを*Pm*でメンバー関数が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
 
 適合可能な単項関数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは `Pm` のコピーをプライベート メンバー オブジェクトに格納します。これは、**Type** クラスのメンバー関数へのポインターである必要があります。 そのメンバー関数を定義`operator()`を返すよう (**左**.\*`Pm`) () **const**です。
+テンプレート クラスのコピーを格納する*Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数`operator()`返すよう (**左**.\*`Pm`) () **const**します。
 
 ## <a name="example"></a>例
 
 `const_mem_fun_ref_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun_ref` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

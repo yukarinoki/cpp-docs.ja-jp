@@ -1,5 +1,5 @@
 ---
-title: ポインター (C++) |Microsoft ドキュメント
+title: ポインター (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943523"
 ---
 # <a name="pointers-c"></a>ポインター (C++)
 ポインターは次の順序で宣言します。  
@@ -39,25 +40,25 @@ ms.lasthandoff: 05/03/2018
   
  1. 宣言指定子:  
   
--   ストレージ クラスの指定子 (省略可能)。 詳細については、次を参照してください。[指定子](../cpp/specifiers.md)です。  
+    - ストレージ クラスの指定子 (省略可能)。 詳細については、次を参照してください。[指定子](../cpp/specifiers.md)します。  
   
--   ポイントされるオブジェクトの型に適用する `const` または `volatile` キーワード (省略可能)。  
+    - 省略可能な**const**または**揮発性**指されるオブジェクトの型に適用するキーワード。  
   
--   型指定子: ポイントされるオブジェクトの型を表す型の名前。  
+    - 型指定子: ポイントされるオブジェクトの型を表す型の名前。  
   
  2. 宣言子:   
   
--   オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)です。  
+    - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。  
   
--   `*` 演算子。  
+    - `*` 演算子。  
   
--   ポインター自体に適用する `const` または `volatile` キーワード (省略可能)。  
+    - 省略可能な**const**または**揮発性**ポインター自体に適用するキーワード。  
   
--   識別子。  
+    - 識別子。  
   
--   初期化子 (省略可能)。  
+    - 初期化子 (省略可能)。  
   
- 関数へのポインターの宣言子は次のようになります。  
+     関数へのポインターの宣言子は次のようになります。  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ ms.lasthandoff: 05/03/2018
   
  ポインター宣言の簡単な例は次のとおりです。  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- 上記の宣言は、`pch` が `char` 型のオブジェクトをポイントすることを指定しています。  
+ 前の宣言を指定する`pch`型のオブジェクトを指す**char**します。  
   
  さらに複雑な例を次に示します。  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- 上記の宣言を指定する`ptr`型のオブジェクトへの定数ポインターは、 `unsigned` `int`静的ストレージ存続期間とします。  
+ 前の宣言を指定する`ptr`型のオブジェクトへの定数ポインターは、**符号なし** **int**静的ストレージ存続期間。  
   
  次の例は、複数のポインターを宣言および初期化する方法を示しています。  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- 上記の例では、p ポインターと q ポインターはどちらも `int` 型のオブジェクトをポイントし、それぞれ i と j のアドレスに初期化されます。  ストレージ クラス指定子 `static` は、両方のポインターに適用されます。  
+ ポインターの p と q が型のオブジェクトへのポイントに前の例では、 **int**されそれぞれ i と j のアドレスに初期化されます。  ストレージ クラス指定子**静的**両方のポインターに適用されます。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -189,7 +190,7 @@ dog dog
 ## <a name="example"></a>例  
  別の例として、データ構造 (この場合、リンク リスト) でのポインターの使用を示します。  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

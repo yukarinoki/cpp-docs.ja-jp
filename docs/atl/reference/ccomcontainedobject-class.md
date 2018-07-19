@@ -1,5 +1,5 @@
 ---
-title: したクラス |Microsoft ドキュメント
+title: CComContainedObject クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360176"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881059"
 ---
-# <a name="ccomcontainedobject-class"></a>したクラス
-このクラスは実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)所有者オブジェクトの委任することによって**IUnknown**です。  
+# <a name="ccomcontainedobject-class"></a>CComContainedObject クラス
+このクラスは実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)所有者オブジェクトの委任することによって`IUnknown`します。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -45,8 +45,8 @@ class CComContainedObject : public Base
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `Base`  
- 派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)です。  
+ *ベース*  
+ 派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -54,27 +54,27 @@ class CComContainedObject : public Base
   
 |名前|説明|  
 |----------|-----------------|  
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|コンストラクターです。 所有者オブジェクトのメンバーのポインターを初期化します`IUnknown`です。|  
-|[した:: ~ しました。](#dtor)|デストラクターです。|  
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|コンストラクターです。 所有者のオブジェクトのメンバーのポインターを初期化します`IUnknown`します。|  
+|[CComContainedObject:: ~ CComContainedObject](#dtor)|デストラクターです。|  
   
 ### <a name="public-methods"></a>パブリック メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
 |[CComContainedObject::AddRef](#addref)|所有者オブジェクトの参照カウントをインクリメントします。|  
-|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|所有者オブジェクトの取得`IUnknown`です。|  
+|[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|所有者オブジェクトの取得`IUnknown`します。|  
 |[CComContainedObject::QueryInterface](#queryinterface)|所有者オブジェクトの要求されたインターフェイスへのポインターを取得します。|  
 |[CComContainedObject::Release](#release)|所有者オブジェクトの参照カウントをデクリメントします。|  
   
-## <a name="remarks"></a>コメント  
- ATL を使用して`CComContainedObject`クラスに[すると](../../atl/reference/ccomaggobject-class.md)、 [CComPolyObject](../../atl/reference/ccompolyobject-class.md)、および[ティアオフ](../../atl/reference/ccomcachedtearoffobject-class.md)です。 `CComContainedObject` 実装する[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)所有者オブジェクトの委任することによって**IUnknown**です。 (所有者は、集計の外部オブジェクトまたはティアオフ インターフェイスの作成対象のオブジェクトのいずれか)。`CComContainedObject`呼び出し`CComObjectRootEx`の`OuterQueryInterface`、 `OuterAddRef`、および`OuterRelease`から継承されたすべて、`Base`です。  
+## <a name="remarks"></a>Remarks  
+ ATL を使用して`CComContainedObject`クラスで[CComAggObject](../../atl/reference/ccomaggobject-class.md)、 [CComPolyObject](../../atl/reference/ccompolyobject-class.md)、および[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)します。 `CComContainedObject` 実装[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)所有者オブジェクトの委任することによって`IUnknown`します。 (所有者は、集計の外側のオブジェクトまたはティアオフ インターフェイスが作成される対象のオブジェクトのいずれか)。`CComContainedObject`呼び出し`CComObjectRootEx`の`OuterQueryInterface`、 `OuterAddRef`、および`OuterRelease`から継承されたすべて、`Base`します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `Base`  
   
  `CComContainedObject`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
   
 ##  <a name="addref"></a>  CComContainedObject::AddRef  
@@ -85,7 +85,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 診断に役に立たず、テスト可能な値です。  
+ テストや診断に使用する値。  
   
 ##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  コンストラクターです。  
@@ -95,34 +95,34 @@ CComContainedObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pv`  
- [in]所有者オブジェクトの**IUnknown**です。  
+ *現在価値*  
+ [in]所有者オブジェクトの`IUnknown`します。  
   
-### <a name="remarks"></a>コメント  
- セット、`m_pOuterUnknown`メンバー ポインター (を通じて継承、`Base`クラス) を`pv`です。  
+### <a name="remarks"></a>Remarks  
+ セット、`m_pOuterUnknown`メンバー ポインター (から継承、`Base`クラス) に*pv*します。  
   
-##  <a name="dtor"></a>  した:: ~ しました。  
+##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  デストラクターです。  
   
 ```
 ~CComContainedObject();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  割り当てられているすべてのリソースを解放します。  
   
 ##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
- 返します、`m_pOuterUnknown`メンバー ポインター (を通じて継承、*ベース*クラス)、所有者オブジェクトの保持している**IUnknown**です。  
+ 返します、`m_pOuterUnknown`メンバー ポインター (から継承、*ベース*クラス)、所有者オブジェクトの格納されている`IUnknown`します。  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 所有者オブジェクトの**IUnknown**です。  
+ 所有者オブジェクトの`IUnknown`します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドを仮想にすることがある場合`Base`に宣言されている、 [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)マクロです。  
+### <a name="remarks"></a>Remarks  
+ このメソッドが仮想にする場合は`Base`が宣言されている、 [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)マクロ。  
   
 ##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
  所有者オブジェクトの要求されたインターフェイスへのポインターを取得します。  
@@ -134,17 +134,17 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `iid`  
+ *iid*  
  [in]要求されているインターフェイスの識別子。  
   
- `ppvObject`  
- [out]によって識別されるインターフェイス ポインターへのポインター`iid`です。 オブジェクトは、このインターフェイスをサポートしていない場合`ppvObject`に設定されている**NULL**です。  
+ *ppvObject*  
+ [out]によって識別されるインターフェイス ポインターへのポインター *iid*します。 オブジェクトは、このインターフェイスをサポートしていない場合*ppvObject* NULL に設定されます。  
   
- `pp`  
- [out]型で識別されるインターフェイス ポインターへのポインター`Q`です。 オブジェクトは、このインターフェイスをサポートしていない場合`pp`に設定されている**NULL**です。  
+ *pp*  
+ [out]型によって識別されるインターフェイス ポインターへのポインター`Q`します。 オブジェクトは、このインターフェイスをサポートしていない場合*pp* NULL に設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
 ##  <a name="release"></a>  CComContainedObject::Release  
  所有者オブジェクトの参照カウントをデクリメントします。  
@@ -154,7 +154,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- デバッグ ビルドで、**リリース**診断に役に立たず、テスト可能な値を返します。 非デバッグ ビルドでは、**リリース**常に 0 を返します。  
+ デバッグ ビルドで`Release`テストや診断に使用する値を返します。 非デバッグ ビルドで`Release`常に 0 を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

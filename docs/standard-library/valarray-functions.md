@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 53a7c666684783a85b2aeb0318cfedd738cc4b60
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862768"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962472"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 関数
 
@@ -69,7 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -123,13 +124,14 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
 入力 valarray の要素のアークコサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 返される要素の単位はラジアンです。
 
@@ -195,17 +197,18 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
 入力 valarray の要素のアークサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 返される要素の単位はラジアンです。
 
-戻り値は、プリンシパル間にある値 + π/2-π/2 がサインの値と一致する値が入力されます。
+戻り値は、プリンシパル間の値 + pi/2 から π/2 サインで一貫性のある値の入力。
 
 ### <a name="example"></a>例
 
@@ -267,17 +270,18 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
 入力 valarray の要素のアークタンジェントと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 返される要素の単位はラジアンです。
 
-戻り値は、プリンシパル間にある値 + π/2-π/2 タンジェントと整合性がある値が入力されます。
+戻り値は、プリンシパル間の値 + pi/2 から π/2 のタンジェントと整合性がある値の入力。
 
 ### <a name="example"></a>例
 
@@ -348,9 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 定数の数値データ型または入力 valarray と valarray 要素は、アーク タンジェント引数の y 座標の値を提供します。
+*left*  
+ 定数の数値データ型、またはアークタンジェント引数の y 座標の値を提供する要素から成る入力 valarray。
 
-`right` 定数の数値データ型または入力 valarray と valarray 要素は、アーク タンジェント引数の x 座標の値を提供します。
+*right*  
+ 定数の数値データ型、またはアークタンジェント引数の x 座標の値を提供する要素から成る入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -362,13 +368,13 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 - 3 番目のテンプレート関数の場合は、`left` / `right` [ *I* ]。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 返される要素の単位はラジアンです。
 
-この関数は、のコンポーネントが標準のタンジェント関数によって失われることを指定する引数の兆候に関する情報を保持し、この作業領域のことが可能に戻り値の間の一意の角度を割り当てられる + π し、-π をします。
+この関数は、コンポーネントが標準のタンジェント関数によって失われることを指定する引数の符号に関する情報を保持し、作業領域のこの知識により、戻り値の間の一意の角度を割り当てられる + pi し、-π をします。
 
-`left` と `right` の要素数が異なる場合、結果は未定義です。
+場合*左*と*右*さまざまな要素数が、結果は未定義です。
 
 ### <a name="example"></a>例
 
@@ -434,7 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -510,13 +517,14 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
 入力 valarray の要素のハイパーボリック コサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 指数関数によってハイパーボリック コサインを定義する恒等式:
 
@@ -592,7 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -654,7 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -716,7 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -795,9 +806,11 @@ pow(
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 累乗にするには、各要素の基本クラスを指定する要素を持つ、入力 valarray です。
+*left*  
+ 各要素を累乗する底を指定する要素から成る入力 valarray。
 
-`right` 要素は、累乗にするには、各要素の電力を供給、入力 valarray です。
+*right*  
+ 各要素を累乗する指数を指定する要素から成る入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -809,9 +822,9 @@ pow(
 
 - 3 番目のテンプレート関数の場合、`left` の `right` [ *I* ] 乗。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`left` と `right` の要素数が異なる場合、結果は未定義です。
+場合*左*と*右*さまざまな要素数が、結果は未定義です。
 
 ### <a name="example"></a>例
 
@@ -875,7 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -951,13 +965,14 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
 入力 valarray の要素のハイパーボリック サインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 指数関数によってハイパーボリック サインを定義する恒等式:
 
@@ -1033,7 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1090,10 +1106,10 @@ void swap(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|`left`|`valarray` 型のオブジェクト。|
-|`right`|`valarray` 型のオブジェクト。|
+|*left*|`valarray` 型のオブジェクト。|
+|*right*|`valarray` 型のオブジェクト。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、` left.swap( right)` を実行します。
 
@@ -1108,7 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1184,13 +1201,14 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>パラメーター
 
-`left` 要素を持つが、メンバー関数で処理されるには、入力 valarray です。
+*left*  
+ 要素がこのメンバー関数の演算の対象となる入力 valarray。
 
 ### <a name="return-value"></a>戻り値
 
 入力 valarray の要素のハイパーボリック コサインと等しい要素を持つ valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 指数関数によってハイパーボリック タンジェントを定義する恒等式:
 

@@ -1,5 +1,5 @@
 ---
-title: 関数クラス |Microsoft ドキュメント
+title: COleDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368661"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853622"
 ---
-# <a name="coledialog-class"></a>関数クラス
+# <a name="coledialog-class"></a>COleDialog クラス
 OLE のダイアログ ボックスに共通の機能が用意されています。  
   
 ## <a name="syntax"></a>構文  
@@ -42,7 +42,7 @@ class COleDialog : public CCommonDialog
 |----------|-----------------|  
 |[COleDialog::GetLastError](#getlasterror)|ダイアログ ボックスによって返されたエラー コードを取得します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  Microsoft Foundation Class ライブラリは、いくつかのクラスから派生した`COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
@@ -63,7 +63,7 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)です。  
+ OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -78,11 +78,11 @@ class COleDialog : public CCommonDialog
   
  `COleDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- 呼び出す、`GetLastError`追加のエラー情報を取得するメンバー関数と`DoModal`返します**IDABORT**。  
+ 呼び出す、`GetLastError`メンバー関数は、追加のエラー情報を取得するときに`DoModal`IDABORT を返します。  
   
 ```  
 UINT GetLastError() const;  
@@ -91,8 +91,8 @@ UINT GetLastError() const;
 ### <a name="return-value"></a>戻り値  
  によって返されるエラー コード`GetLastError`表示される特定のダイアログ ボックスに依存します。  
   
-### <a name="remarks"></a>コメント  
- 参照してください、`DoModal`固有のエラー メッセージについては、派生クラスでメンバー関数。  
+### <a name="remarks"></a>Remarks  
+ 参照してください、`DoModal`特定のエラー メッセージについては、派生クラスでメンバー関数。  
   
 ## <a name="see-also"></a>関連項目  
  [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)   

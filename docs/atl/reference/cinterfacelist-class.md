@@ -1,5 +1,5 @@
 ---
-title: CInterfaceList クラス |Microsoft ドキュメント
+title: CInterfaceList クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fc523b1eccc88678cda48a0c7e429ea0fc09f9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 33cfcc072e000bc903cceb4ac5551071e35610d9
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362175"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884377"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList クラス
 このクラスは、COM インターフェイス ポインターのリストを構築するときに役立つメソッドを提供します。  
@@ -38,11 +38,11 @@ class CInterfaceList
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `I`  
- 格納するポインターの種類を指定する COM インターフェイスです。  
+ *I*  
+ COM インターフェイスを格納するポインターの種類を指定します。  
   
- `piid`  
- IID へのポインター`I`です。  
+ *piid*  
+ ポインターの IID を*は*します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -50,34 +50,34 @@ class CInterfaceList
   
 |名前|説明|  
 |----------|-----------------|  
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|インターフェイス リストのコンス トラクターです。|  
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|インターフェイスの一覧のコンス トラクター。|  
   
-## <a name="remarks"></a>コメント  
- このクラスは、コンス トラクターおよび COM インターフェイス ポインターのリストを作成するための派生メソッドを提供します。 使用して[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)配列が必要な場合です。  
+## <a name="remarks"></a>Remarks  
+ このクラスは、コンス トラクターおよび COM インターフェイス ポインターのリストを作成するための派生メソッドを提供します。 使用[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)配列が必要な場合。  
   
- 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)です。  
+ 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CAtlList](../../atl/reference/catllist-class.md)  
   
  `CInterfaceList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcoll.h  
   
 ##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList  
- インターフェイス リストのコンス トラクターです。  
+ インターフェイスの一覧のコンス トラクター。  
   
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBlockSize`  
- ブロック サイズを既定値は 10 です。  
+ *nBlockSize*  
+ 既定値は 10 でのブロック サイズ。  
   
-### <a name="remarks"></a>コメント  
- ブロック サイズは、新しい要素が必要な場合に割り当てられたメモリの量の測定です。 ブロック サイズを大きくはメモリ割り当てルーチンに呼び出しを減らすことより多くのリソースを使用します。  
+### <a name="remarks"></a>Remarks  
+ ブロック サイズは、新しい要素が必要なときに割り当てられたメモリ量の測定です。 ブロック サイズの増加はメモリ割り当てルーチンの呼び出しを減らすためがより多くのリソースを使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [CAtlList クラス](../../atl/reference/catllist-class.md)   

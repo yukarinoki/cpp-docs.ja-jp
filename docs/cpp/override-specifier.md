@@ -1,5 +1,5 @@
 ---
-title: オーバーライド指定子 |Microsoft ドキュメント
+title: オーバーライド指定子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d43620ceeb0404c3ad8b10cee3d0a00e7b2f467
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b50ffc096cc710f4028c7effc2dda8822f077f29
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420182"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940655"
 ---
 # <a name="override-specifier"></a>override 指定子
-`override` キーワードを使用して、基底クラスの仮想関数をオーバーライドするメンバー関数を指定できます。  
+使用することができます、**オーバーライド**キーワードを基底クラスで仮想関数をオーバーライドする関数のメンバーを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,11 +31,11 @@ ms.locfileid: "32420182"
 function-declaration override;  
 ```  
   
-## <a name="remarks"></a>コメント  
- `override` は状況依存のキーワードで、メンバー関数の宣言の後で使用した場合のみ特別な意味を持ちますが、それ以外の場合は、予約済みのキーワードではありません。  
+## <a name="remarks"></a>Remarks  
+ **オーバーライド**状況依存であり、つまり場合にのみ特別なは、メンバー関数宣言の後に使用されます。 それ以外の場合は、予約済みキーワード。  
   
 ## <a name="example"></a>例  
- `override` を使用すると、コード内での誤った継承動作を防止するのに役立ちます。 次の例では、`override` を使用しない場合に、派生クラスのメンバー関数で意図しない動作が発生する可能性があることを示します。 このコードに対してコンパイラ エラーは発生しません。  
+ 使用**オーバーライド**コードでの誤った継承動作を防ぐためです。 次の例を使用せず、where を示しています**オーバーライド**、派生クラスのメンバー関数の動作が意図されていません。 このコードに対してコンパイラ エラーは発生しません。  
   
 ```cpp  
 class BaseClass  
@@ -61,7 +61,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- `override` を使用すると、コンパイラが自動的に新しいメンバー関数を作成するのではなく、エラーを生成するようになります。  
+ 使用すると**オーバーライド**コンパイラは自動的に新しいメンバー関数を作成するのではなくエラーを生成します。  
   
 ```cpp  
 class BaseClass  
@@ -89,7 +89,7 @@ class DerivedClass: public BaseClass
   
 ```  
   
- 関数をオーバーライドできないことと、クラスの継承ができないことを指定するには、使用、[最終](../cpp/final-specifier.md)キーワード。  
+ 関数をオーバーライドできないこととクラスを継承できないことを指定するには、使用、[最終的な](../cpp/final-specifier.md)キーワード。  
   
 ## <a name="see-also"></a>関連項目  
  [final 指定子](../cpp/final-specifier.md)   

@@ -1,5 +1,5 @@
 ---
-title: CSecurityAttributes クラス |Microsoft ドキュメント
+title: CSecurityAttributes クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc37dd8025009e4f904373fc8aa106c93dc8210
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357507"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879348"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes クラス
 このクラスは、セキュリティ属性の構造体の thin ラッパーです。  
@@ -52,17 +52,17 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 |----------|-----------------|  
 |[Csecurityattributes::set](#set)|属性を設定するには、このメソッドを呼び出して、`CSecurityAttributes`オブジェクト。|  
   
-## <a name="remarks"></a>コメント  
- **SECURITY_ATTRIBUTES**構造に含まれる、[セキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa379561)オブジェクトの作成に使用して、この構造体を指定することによって取得されたハンドルが継承可能かどうかを指定します。  
+## <a name="remarks"></a>Remarks  
+ `SECURITY_ATTRIBUTES`構造に含まれる、[セキュリティ記述子](http://msdn.microsoft.com/library/windows/desktop/aa379561)のオブジェクトの作成に使用して、この構造体を指定することによって取得されたハンドルが継承可能かどうかを指定します。  
   
- Windows でアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `SECURITY_ATTRIBUTES`  
   
  `CSecurityAttributes`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes  
@@ -74,10 +74,10 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  セキュリティ記述子への参照。  
   
- `bInheritsHandle`  
+ *bInheritsHandle*  
  新しいプロセスの作成時に、返されたハンドルを継承するかどうかを指定します。 このメンバーが true の場合、新しいプロセスは、返されたハンドルを継承します。  
   
 ##  <a name="set"></a>  Csecurityattributes::set  
@@ -88,14 +88,14 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rSecurityDescriptor`  
+ *rSecurityDescriptor*  
  セキュリティ記述子への参照。  
   
- `bInheritHandle`  
+ *bInheritHandle*  
  新しいプロセスの作成時に、返されたハンドルを継承するかどうかを指定します。 このメンバーが true の場合、新しいプロセスは、返されたハンドルを継承します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、コンス トラクターによって初期化に使用、`CSecurityAttributes`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、コンス トラクターで初期化するために使用されます、`CSecurityAttributes`オブジェクト。  
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティのサンプル](../../visual-cpp-samples.md)   

@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManager クラス |Microsoft ドキュメント
+title: CMFCVisualManager クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -354,12 +354,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77049c53f3e1e536f8d4b036ee15084a8d650a91
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 021b66393b37cdc83a514ca194baef8049f5c62f
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123189"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853564"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager クラス
 グローバル レベルでアプリケーションの外観変更のサポートを提供します。 `CMFCVisualManager` クラスは、一貫したスタイルを使用してアプリケーションの GUI コントロールを描画する機能を提供するクラスと連携します。 これらの連携するクラスはビジュアル マネージャーと呼ばれ、 `CMFCBaseVisualManager`から継承されます。  
@@ -386,22 +386,22 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |----------|-----------------|  
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||  
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||  
-|[CMFCVisualManager::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|3D のタブを強調表示色を使用して描画常にかどうかを判断するためにフレームワークによって呼び出されます。|  
+|[CMFCVisualManager::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|強調表示色を使用して 3D のタブを描画常にかどうかを判断するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::DestroyInstance](#destroyinstance)||  
 |[CMFCVisualManager::DoDrawHeaderSortArrow](#dodrawheadersortarrow)||  
 |[CMFCVisualManager::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)||  
 |[CMFCVisualManager::DrawPushButtonWinXP](#drawpushbuttonwinxp)||  
 |[CMFCVisualManager::DrawTextOnGlass](#drawtextonglass)||  
 |[CMFCVisualManager::GetAutoHideButtonTextColor](#getautohidebuttontextcolor)|自動的に隠すボタンのテキストの色を取得するためにフレームワークによって呼び出されます。|  
-|[CMFCVisualManager::GetButtonExtraBorder](#getbuttonextraborder)|ボタンを描画する現在のビジュアル マネージャーを必要とする拡大されたボタン サイズを取得するためにフレームワークによって呼び出されます。|  
+|[CMFCVisualManager::GetButtonExtraBorder](#getbuttonextraborder)|ボタンを描画するために現在のビジュアル マネージャーを必要とする拡大されたボタンのサイズを取得するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetCaptionBarTextColor](#getcaptionbartextcolor)|キャプション バーのテキストの色を取得するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetDockingTabsBordersSize](#getdockingtabsborderssize)|ドッキング タブ バーの境界線のサイズを取得するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)||  
 |[CMFCVisualManager::GetInstance](#getinstance)|ポインターを返します、`CMFCVisualManager`オブジェクト。|  
 |[CMFCVisualManager::GetMDITabsBordersSize](#getmditabsborderssize)|MDITabs ウィンドウの境界線のサイズを取得するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetMenuItemTextColor](#getmenuitemtextcolor)||  
-|[CMFCVisualManager::GetMenuShadowDepth](#getmenushadowdepth)|幅と影をメニューの高さを決定する値を返します。|  
-|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|現在のビジュアル マネージャーに基づくシステム ボタンのサイズを決定するためにフレームワークによって呼び出されます。 システム ボタンとは、コマンドにマップされるのメイン フレーム キャプションのボタン**閉じる**、**最小化**、**最大化**、および**復元**.|  
+|[CMFCVisualManager::GetMenuShadowDepth](#getmenushadowdepth)|幅とメニューの影の高さを決定する値を返します。|  
+|[CMFCVisualManager::GetNcBtnSize](#getncbtnsize)|現在のビジュアル マネージャーに基づくシステム ボタンのサイズを決定するためにフレームワークによって呼び出されます。 システム ボタンは、コマンドにマップされるメイン フレームのキャプションのボタン**閉じる**、**最小化**、**最大化**、および**復元**.|  
 |[CMFCVisualManager::GetPopupMenuBorderSize](#getpopupmenubordersize)|ポップアップ メニューの境界線のサイズを取得するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|プロパティ リストの背景色を取得するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetPropertyGridGroupTextColor](#getpropertygridgrouptextcolor)|プロパティ リストのテキストの色を取得するためにフレームワークによって呼び出されます。|  
@@ -414,22 +414,22 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::GetSmartDockingHighlightToneColor](#getsmartdockinghighlighttonecolor)||  
 |[CMFCVisualManager::GetSmartDockingTheme](#getsmartdockingtheme)|スマート ドッキング マーカーの表示に使用されるテーマを返します。|  
 |[CMFCVisualManager::GetStatusBarPaneTextColor](#getstatusbarpanetextcolor)||  
-|[CMFCVisualManager::GetTabFrameColors](#gettabframecolors)|タブにフレームを描画するときに使用する色のセットを取得するためにフレームワークによって呼び出されます。|  
+|[CMFCVisualManager::GetTabFrameColors](#gettabframecolors)|タブのフレームを描画するときに使用する色のセットを取得するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetTabTextColor](#gettabtextcolor)||  
 |[CMFCVisualManager::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|ツール バー ボタンのテキストの現在の色を取得するためにフレームワークによって呼び出されます。 この色は、現在のビジュアル マネージャーとボタンの状態によって異なります。|  
-|[CMFCVisualManager::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)|無効なツール バー要素に表示されるテキストの色を決定するためにフレームワークによって呼び出されます。|  
+|[CMFCVisualManager::GetToolbarDisabledTextColor](#gettoolbardisabledtextcolor)|ツールバーを無効になっている要素に表示されるテキストの色を決定するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::GetToolbarHighlightColor](#gettoolbarhighlightcolor)||  
 |[CMFCVisualManager::GetToolTipInfo](#gettooltipinfo)||  
 |[CMFCVisualManager::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|自動的に隠すボタンが重複しているかどうかを指定します。|  
 |[CMFCVisualManager::IsDockingTabHasBorder](#isdockingtabhasborder)|現在のビジュアル マネージャーがタブ付きのドッキング バーの境界線を描画するかどうかを指定します。|  
 |[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)|無効なイメージをエンボスするかどうかを指定します。|  
-|[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)|ツールバーまたはメニューのアクティブでないイメージが淡色表示に表示されるかどうかを決定するためにフレームワークによって呼び出されます。|  
+|[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)|ツールバーまたはメニューで非アクティブなイメージが淡色表示に表示されるかどうかを決定するためにフレームワークによって呼び出されます。|  
 |[CMFCVisualManager::IsMenuFlatLook](#ismenuflatlook)|メニュー ボタンの外観がフラットかどうかを指定します。|  
-|[CMFCVisualManager::IsOfficeXPStyleMenus](#isofficexpstylemenus)|ビジュアル マネージャーが Office XP スタイルのメニューを実装するかどうかを指定します。|  
+|[CMFCVisualManager::IsOfficeXPStyleMenus](#isofficexpstylemenus)|ビジュアル マネージャーが、Office XP スタイルのメニューを実装するかどうかを指定します。|  
 |[CMFCVisualManager::IsOwnerDrawCaption](#isownerdrawcaption)|現在のビジュアル マネージャーがフレーム ウィンドウのオーナー描画のキャプションを実装しているかどうかを指定します。|  
-|[CMFCVisualManager::IsShadowHighlightedImage](#isshadowhighlightedimage)|強調表示されたイメージに影があるかどうかを指定します。|  
+|[CMFCVisualManager::IsShadowHighlightedImage](#isshadowhighlightedimage)|影を強調表示されているイメージがあるかどうかを指定します。|  
 |[CMFCVisualManager::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|自動的に隠すボタンの境界線を描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawBarGripper](#ondrawbargripper)|コントロール バーのグリップを描画するときに、フレームワークによって呼び出されます。 ユーザーは、コントロール バーを移動するために、グリッパーをクリックする必要があります。|  
+|[CMFCVisualManager::OnDrawBarGripper](#ondrawbargripper)|コントロール バーのグリップを描画するときに、フレームワークによって呼び出されます。 ユーザーは、コントロール バーを移動するためにグリップをクリックする必要があります。|  
 |[CMFCVisualManager::OnDrawBrowseButton](#ondrawbrowsebutton)|エディット コントロールに属している [参照] ボタンを描画するときに、フレームワークによって呼び出されます ( [CMFCEditBrowseCtrl クラス](../../mfc/reference/cmfceditbrowsectrl-class.md))。|  
 |[CMFCVisualManager::OnDrawButtonBorder](#ondrawbuttonborder)|ツール バー ボタンの境界線を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawButtonSeparator](#ondrawbuttonseparator)||  
@@ -443,25 +443,25 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnDrawComboDropButton](#ondrawcombodropbutton)|コンボ ボックスのドロップダウン ボタンを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawControlBorder](#ondrawcontrolborder)||  
 |[CMFCVisualManager::OnDrawDefaultRibbonImage](#ondrawdefaultribbonimage)|既定のリボンのイメージを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawEditBorder](#ondraweditborder)|周囲に罫線を描画するときに、フレームワークによって呼び出されます、 [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)オブジェクト。|  
+|[CMFCVisualManager::OnDrawEditBorder](#ondraweditborder)|周りに罫線を描画するときに、フレームワークによって呼び出されます、 [CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)オブジェクト。|  
 |[CMFCVisualManager::OnDrawExpandingBox](#ondrawexpandingbox)||  
 |[CMFCVisualManager::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|フローティング ツールバーの境界線を描画するときに、フレームワークによって呼び出されます。 フローティング ツールバーは、ミニフレーム ウィンドウとして表示されるツールバーです。|  
-|[CMFCVisualManager::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|ヘッダー コントロールを含む境界線を描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|ヘッダー コントロールの並べ替えの矢印を描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|ヘッダー コントロールを含んでいる境界線を描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|ヘッダー コントロールの並べ替え矢印を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawMenuArrowOnCustomizeList](#ondrawmenuarrowoncustomizelist)||  
 |[CMFCVisualManager::OnDrawMenuBorder](#ondrawmenuborder)|メニューの境界線を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawMenuCheck](#ondrawmenucheck)||  
 |[CMFCVisualManager::OnDrawMenuItemButton](#ondrawmenuitembutton)||  
 |[CMFCVisualManager::OnDrawMenuLabel](#ondrawmenulabel)||  
 |[CMFCVisualManager::OnDrawMenuResizeBar](#ondrawmenuresizebar)||  
-|[CMFCVisualManager::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|メニュー スクロール ボタンを描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawMenuScrollButton](#ondrawmenuscrollbutton)|メニューのスクロール ボタンを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawMenuShadow](#ondrawmenushadow)||  
-|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|システムのメニュー ボタンを描画するときに、フレームワークによって呼び出されます**閉じる**、**最小化**、**最大化**、および**復元**です。|  
+|[CMFCVisualManager::OnDrawMenuSystemButton](#ondrawmenusystembutton)|システムのメニュー ボタンを描画するときに、フレームワークによって呼び出されます**閉じる**、**最小化**、**最大化**、および**復元**します。|  
 |[CMFCVisualManager::OnDrawMiniFrameBorder](#ondrawminiframeborder)||  
-|[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Outlook バーの分割線を描画するときに、フレームワークによって呼び出されます。 分割境界線が、水平バー コントロールをグループ化するために使用します。|  
-|[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Outlook のページ ボタンの境界線を描画するときに、フレームワークによって呼び出されます。 Outlook バー ペインに表示できるようにより多くのボタンが含まれている場合、outlook のページ ボタンが表示されます。|  
-|[CMFCVisualManager::OnDrawPaneBorder](#ondrawpaneborder)|境界線を描画するときに、フレームワークによって呼び出されます、 [CPane クラス](../../mfc/reference/cpane-class.md)です。|  
-|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|キャプションを描画するときに、フレームワークによって呼び出されます、`CPane`です。|  
+|[CMFCVisualManager::OnDrawOutlookBarSplitter](#ondrawoutlookbarsplitter)|Outlook バーの分割線を描画するときに、フレームワークによって呼び出されます。 分割線を水平のバーをコントロールのグループ化するために使用します。|  
+|[CMFCVisualManager::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Outlook のページ ボタンの境界線を描画するときに、フレームワークによって呼び出されます。 Outlook バー ペインに表示できるより多くのボタンが含まれている場合、outlook のページのボタンが表示されます。|  
+|[CMFCVisualManager::OnDrawPaneBorder](#ondrawpaneborder)|境界線を描画するときに、フレームワークによって呼び出されます、 [CPane クラス](../../mfc/reference/cpane-class.md)します。|  
+|[CMFCVisualManager::OnDrawPaneCaption](#ondrawpanecaption)|キャプションを描画するときに、フレームワークによって呼び出されます、`CPane`します。|  
 |[CMFCVisualManager::OnDrawPaneDivider](#ondrawpanedivider)||  
 |[CMFCVisualManager::OnDrawPopupWindowBorder](#ondrawpopupwindowborder)||  
 |[CMFCVisualManager::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)||  
@@ -469,8 +469,8 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnDrawRibbonApplicationButton](#ondrawribbonapplicationbutton)|描画するときに、フレームワークによって呼び出されます、**メイン ボタン**リボン上。|  
 |[CMFCVisualManager::OnDrawRibbonButtonBorder](#ondrawribbonbuttonborder)|リボン ボタンの境界線を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawRibbonButtonsGroup](#ondrawribbonbuttonsgroup)|リボンのボタンのグループを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawRibbonCaption](#ondrawribboncaption)|リボン バーがフレームに統合されている場合にのみが、メイン フレーム キャプションを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)|リボン バー上にあるキャプション ボタンを描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawRibbonCaption](#ondrawribboncaption)|リボン バーに、フレームが統合されている場合にのみが、メインのフレームのキャプションを描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawRibbonCaptionButton](#ondrawribboncaptionbutton)|リボン バーのキャプションのボタンを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawRibbonCategory](#ondrawribboncategory)|リボン カテゴリを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawRibbonCategoryCaption](#ondrawribboncategorycaption)|リボン カテゴリのキャプションを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawRibbonCategoryScroll](#ondrawribboncategoryscroll)||  
@@ -478,91 +478,91 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnDrawRibbonCheckBoxOnList](#ondrawribboncheckboxonlist)||  
 |[CMFCVisualManager::OnDrawRibbonColorPaletteBox](#ondrawribboncolorpalettebox)||  
 |[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext](#ondrawribbondefaultpanebuttoncontext)||  
-|[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)|リボン ウィンドウの既定のボタンを描画するときに、フレームワークによって呼び出されます。 リボン要素を表示するには小さすぎることができるように、ユーザーがリボン パネルを縮小する場合、既定のボタンが表示されます。 既定のボタンが代わりに描画され、リボン要素がドロップ ダウン メニュー上の項目として追加されます。|  
+|[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](#ondrawribbondefaultpanebutton)|リボン ペインの既定のボタンを描画するときに、フレームワークによって呼び出されます。 ユーザーがリボン要素を表示するには小さすぎるためようにリボン パネルが縮小したときに、既定のボタンが表示されます。 既定のボタンが代わりに描画され、リボン要素がドロップ ダウン メニュー上のアイテムとして追加されます。|  
 |[CMFCVisualManager::OnDrawRibbonDefaultPaneButtonIndicator](#ondrawribbondefaultpanebuttonindicator)||  
 |[CMFCVisualManager::OnDrawRibbonGalleryBorder](#ondrawribbongalleryborder)||  
 |[CMFCVisualManager::OnDrawRibbonGalleryButton](#ondrawribbongallerybutton)||  
 |[CMFCVisualManager::OnDrawRibbonKeyTip](#ondrawribbonkeytip)||  
 |[CMFCVisualManager::OnDrawRibbonLabel](#ondrawribbonlabel)|リボンのラベルを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)|上に配置されるリボン ボタンの境界線を描画するときに、フレームワークによって呼び出されます、 **Main**パネルです。 **Main**パネルは、ユーザーがクリックしたときに表示されるパネル、**メイン ボタン**です。|  
-|[CMFCVisualManager::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)|囲むフレームを描画するときに、フレームワークによって呼び出されます、 **Main**パネルです。|  
+|[CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder](#ondrawribbonmainpanelbuttonborder)|配置されるリボン ボタンの境界線を描画するときに、フレームワークによって呼び出されます、 **Main**パネル。 **Main**パネルは、ユーザーがクリックしたときに表示されるパネル、**メイン ボタン**します。|  
+|[CMFCVisualManager::OnDrawRibbonMainPanelFrame](#ondrawribbonmainpanelframe)|周囲にフレームを描画するときに、フレームワークによって呼び出されます、 **Main**パネル。|  
 |[CMFCVisualManager::OnDrawRibbonMenuCheckFrame](#ondrawribbonmenucheckframe)||  
 |[CMFCVisualManager::OnDrawRibbonPanel](#ondrawribbonpanel)|リボン パネルを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawRibbonPanelCaption](#ondrawribbonpanelcaption)|リボン パネルのキャプションを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawRibbonProgressBar](#ondrawribbonprogressbar)|描画するときに、フレームワークによって呼び出されます、 [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)オブジェクト。|  
-|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|リボンの区分線を描画するときに、フレームワークによって呼び出されます**クイック アクセス ツールバー**です。|  
-|[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|最近使ったファイル の周囲にフレームを描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator](#ondrawribbonquickaccesstoolbarseparator)|リボンの区分線を描画するときに、フレームワークによって呼び出されます**クイック アクセス ツールバー**します。|  
+|[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](#ondrawribbonrecentfilesframe)|最近使ったファイル リストの周囲にフレームを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawRibbonSliderChannel](#ondrawribbonsliderchannel)|チャネルを描画するときに、フレームワークによって呼び出されます、 [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)オブジェクト。|  
 |[CMFCVisualManager::OnDrawRibbonSliderThumb](#ondrawribbonsliderthumb)|つまみを描画するときに、フレームワークによって呼び出されます、`CMFCRibbonSlider`オブジェクト。|  
 |[CMFCVisualManager::OnDrawRibbonSliderZoomButton](#ondrawribbonsliderzoombutton)|ズーム ボタンを描画するときに、フレームワークによって呼び出されます、`CMFCRibbonSlider`オブジェクト。|  
 |[CMFCVisualManager::OnDrawRibbonStatusBarPane](#ondrawribbonstatusbarpane)|リボンのステータス バー ペインを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|[リボン] タブのセットの周囲にフレームを描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawRibbonTabsFrame](#ondrawribbontabsframe)|一連のリボン タブの周囲にフレームを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawScrollButtons](#ondrawscrollbuttons)||  
-|[CMFCVisualManager::OnDrawSeparator](#ondrawseparator)|区分線を描画するときに、フレームワークによって呼び出されます。 区切り記号は、アイコンのグループを区切るためのコントロール バーで通常使用です。|  
+|[CMFCVisualManager::OnDrawSeparator](#ondrawseparator)|区分線を描画するときに、フレームワークによって呼び出されます。 区切り記号は、アイコンのグループを区切るためのコントロール バーで通常使用されます。|  
 |[CMFCVisualManager::OnDrawShowAllMenuItems](#ondrawshowallmenuitems)||  
 |[CMFCVisualManager::OnDrawSpinButtons](#ondrawspinbuttons)|スピン ボタンを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawSplitterBorder](#ondrawsplitterborder)|分割ウィンドウの枠線を描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawSplitterBox](#ondrawsplitterbox)|分割ウィンドウの分割ドラッグ ボックスを描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawSplitterBorder](#ondrawsplitterborder)|分割ウィンドウの境界線を描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawSplitterBox](#ondrawsplitterbox)|分割ウィンドウのスプリッター ドラッグ ボックスを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|ステータス バー ペインの境界線を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|ステータス バーの進行状況インジケーターを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|ステータス バーのサイズ ボックスを描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|ステータス バーのサイズのボックスを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawTab](#ondrawtab)|描画するときに、フレームワークによって呼び出されます、 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)オブジェクト。|  
 |[CMFCVisualManager::OnDrawTabCloseButton](#ondrawtabclosebutton)|描画するときに、フレームワークによって呼び出されます、**閉じる**アクティブなタブにボタンをクリックします。|  
-|[CMFCVisualManager::OnDrawTabContent](#ondrawtabcontent)|タブの内部 (画像、テキスト) を描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawTabContent](#ondrawtabcontent)|(イメージ、テキスト) タブの内部を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|タブのボタンの境界線を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawTask](#ondrawtask)|タスク ウィンドウでタスクを描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|タスク ウィンドウで、グループ領域の周りに罫線を描画するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|タスク ウィンドウで、グループ領域の周囲に罫線を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|タスク ウィンドウで、タスク グループのキャプションを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawTasksGroupIcon](#ondrawtasksgroupicon)||  
 |[CMFCVisualManager::OnDrawTearOffCaption](#ondrawtearoffcaption)|ティアオフ バーのティアオフ キャプションを描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnDrawToolBoxFrame](#ondrawtoolboxframe)||  
 |[CMFCVisualManager::OnEraseMDIClientArea](#onerasemdiclientarea)|MDI クライアント領域を消去するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnErasePopupWindowButton](#onerasepopupwindowbutton)||  
-|[CMFCVisualManager::OnEraseTabsArea](#onerasetabsarea)|タブ ウィンドウ内のタブ領域を消去するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnEraseTabsButton](#onerasetabsbutton)|アイコン、およびタブ ボタンのテキストを消去するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnEraseTabsArea](#onerasetabsarea)|タブのウィンドウでタブ領域を消去するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnEraseTabsButton](#onerasetabsbutton)|アイコンとタブ ボタンのテキストを消去するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnEraseTabsFrame](#onerasetabsframe)|タブのフレームを消去するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|自動的に隠すボタンの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillBarBackground](#onfillbarbackground)|コントロール バーの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillButtonInterior](#onfillbuttoninterior)|ツール バー ボタンの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillCaptionBarButton](#onfillcaptionbarbutton)||  
-|[CMFCVisualManager::OnFillCommandsListBackground](#onfillcommandslistbackground)|コマンドの一部である、さらに、[カスタマイズ] ダイアログ ボックスの一覧に属しているツール バー ボタンの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnFillCommandsListBackground](#onfillcommandslistbackground)|一方、[カスタマイズ] ダイアログ ボックスの一部は、コマンド リストが属しているツール バー ボタンの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillHeaderCtrlBackground](#onfillheaderctrlbackground)|ヘッダー コントロールの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnFillMiniFrameCaption](#onfillminiframecaption)|ミニフレーム ウィンドウのキャプションを塗りつぶすときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Outlook のキャプションの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnFillMiniFrameCaption](#onfillminiframecaption)|ミニフレーム ウィンドウのキャプションを入力するときに、フレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnFillOutlookBarCaption](#onfilloutlookbarcaption)|Outlook バーのキャプションの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Outlook のページ ボタンの内部を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillPopupWindowBackground](#onfillpopupwindowbackground)|ポップアップ ウィンドウの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillRibbonButton](#onfillribbonbutton)|リボン ボタンの内部を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillRibbonEdit](#onfillribbonedit)|リボンのエディット コントロールの内部を塗りつぶすときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)|あるリボン ボタンの内部を塗りつぶすときに、フレームワークによって呼び出されます、 **Main**パネルです。|  
+|[CMFCVisualManager::OnFillRibbonMainPanelButton](#onfillribbonmainpanelbutton)|上にあるリボン ボタンの内部を塗りつぶすときに、フレームワークによって呼び出されます、 **Main**パネル。|  
 |[CMFCVisualManager::OnFillRibbonMenuFrame](#onfillribbonmenuframe)|メイン リボン パネル メニュー フレームを塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](#onfillribbonquickaccesstoolbarpopup)||  
 |[CMFCVisualManager::OnFillSplitterBackground](#onfillsplitterbackground)|分割ウィンドウの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnFillTab](#onfilltab)|タブの背景を塗りつぶすときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|内部を塗りつぶすときに、フレームワークによって呼び出されます、 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)上のオブジェクト、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)です。|  
+|[CMFCVisualManager::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|内部を塗りつぶすときに、フレームワークによって呼び出されます、 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)上のオブジェクト、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)します。|  
 |[CMFCVisualManager::OnFillTasksPaneBackground](#onfilltaskspanebackground)|背景を塗りつぶすときに、フレームワークによって呼び出されます、`CMFCTasksPane`コントロール。|  
 |[CMFCVisualManager::OnHighlightMenuItem](#onhighlightmenuitem)|強調表示されたメニュー項目を描画するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|使用頻度の低いメニュー項目と、強調表示を描画するときにフレームワークによって呼び出されます。|  
+|[CMFCVisualManager::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|描画を強調表示されたときに、フレームワークと使用頻度の低い メニューによって呼び出されます。|  
 |[CMFCVisualManager::OnNcPaint](#onncpaint)|非クライアント領域を描画するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnSetWindowRegion](#onsetwindowregion)|フレームとポップアップ メニューが含まれる領域を設定するときに、フレームワークによって呼び出されます。|  
 |[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|システム カラーの設定を変更するときに、フレームワークによって呼び出されます。|  
-|[CMFCVisualManager::RedrawAll](#redrawall)|アプリケーションのすべてのコントロール バーを再描画します。|  
+|[CMFCVisualManager::RedrawAll](#redrawall)|アプリケーションでは、すべてのコントロール バーを再描画されます。|  
 |[CMFCVisualManager::RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||  
-|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|既定のビジュアル マネージャーを設定します。|  
+|[Cmfcvisualmanager::setdefaultmanager](#setdefaultmanager)|既定のビジュアル マネージャーを設定します。|  
 |[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|有効または無効になっているツール バー イメージのエンボスのモードを無効にします。|  
-|[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|有効またはメニューまたはツールバーを非アクティブなイメージの照明効果を無効にします。|  
-|[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|アプリケーションのメニュー ボタン フラット化された外観であるかどうかを示すフラグを設定します。|  
-|[CMFCVisualManager::SetMenuShadowDepth](#setmenushadowdepth)|幅とメニュー シャドウの高さを設定します。|  
+|[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|有効または、メニューまたはツールバーを非アクティブなイメージの照明効果を無効にします。|  
+|[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|アプリケーションのメニュー ボタンの外観がフラットかどうかを示すフラグを設定します。|  
+|[CMFCVisualManager::SetMenuShadowDepth](#setmenushadowdepth)|幅と高さのメニューの影を設定します。|  
 |[CMFCVisualManager::SetShadowHighlightedImage](#setshadowhighlightedimage)|強調表示されたイメージを表示するときに影を表示するかどうかを示すフラグを設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `CMFCVisualManager`クラスは、アプリケーションの GUI を制御、各アプリケーションは、いずれか 1 つのインスタンスを持つことができます、`CMFCVisualManager`から派生したクラスの 1 つのインスタンスまたは`CMFCVisualManager`です。 せず、アプリケーションが機能させることも、`CMFCVisualManager`です。 静的メソッドを使用して`GetInstance`現在へのポインターを取得する`CMFCVisualManager`-派生オブジェクト。  
+ `CMFCVisualManager`クラスは、アプリケーションの GUI をコントロールで、各アプリケーションは、いずれか 1 つのインスタンスを持つことができます、`CMFCVisualManager`から派生したクラスの 1 つのインスタンスまたは`CMFCVisualManager`します。 アプリケーションも機能せず、`CMFCVisualManager`します。 静的メソッドを使用して`GetInstance`現在へのポインターを取得する`CMFCVisualManager`の派生オブジェクト。  
   
- アプリケーションの外観を変更するには、すべてのアプリケーションのビジュアル要素を描画するためのメソッドを提供するその他のクラスを使用する必要があります。 これらのクラスの例としては[CMFCVisualManagerOfficeXP クラス](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)、 [CMFCVisualManagerOffice2003 クラス](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)、および[CMFCVisualManagerOffice2007 クラス](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)です。 アプリケーションの外観を変更する場合はこれらのビジュアル マネージャーのいずれかのメソッドに渡す`SetDefaultManager`です。 例については、アプリケーションが Microsoft Office 2003 の外観を模倣する方法を示す、次を参照してください。 [CMFCVisualManagerOffice2003 クラス](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)です。  
+ アプリケーションの外観を変更するには、他のすべてのアプリケーションのビジュアル要素を描画するためのメソッドを提供するクラスを使用する必要があります。 これらのクラスの例としては、 [CMFCVisualManagerOfficeXP クラス](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)、 [CMFCVisualManagerOffice2003 クラス](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)、および[CMFCVisualManagerOffice2007 クラス](../../mfc/reference/cmfcvisualmanageroffice2007-class.md)します。 アプリケーションの外観を変更する場合はこれらのビジュアル マネージャーのいずれかのメソッドに渡す`SetDefaultManager`します。 アプリケーションが Microsoft Office 2003 の外観を模倣する方法を示す例を参照してください。 [CMFCVisualManagerOffice2003 クラス](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)します。  
   
- すべての描画方法は、仮想です。 これにより、アプリケーションの GUI にカスタムの visual スタイルを作成することができます。 独自の visual スタイルを作成する場合は、いずれかのビジュアル マネージャー クラスからクラスを派生し、変更する描画メソッドをオーバーライドします。  
+ すべての描画メソッドは、仮想です。 これにより、アプリケーションの GUI をカスタムの visual スタイルを作成することができます。 独自の visual スタイルを作成する場合は、ビジュアル マネージャー クラスの 1 つからクラスを派生し、変更する描画メソッドをオーバーライドします。  
   
 ## <a name="example"></a>例  
- このサンプルは、standard、およびカスタムのインスタンスを作成する方法を示します`CMFCVisualManager`オブジェクト。  
+ このサンプルは、標準とカスタムのインスタンスを作成する方法を示します。`CMFCVisualManager`オブジェクト。  
   
 ```cpp
 void CMFCSkinsApp::SetSkin (int iIndex)  
@@ -593,7 +593,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 ```  
   
 ## <a name="example"></a>例  
- 次の例は、の既定値を取得する方法を示します、`CMFCVisualManager`オブジェクト。 このコード スニペットの一部である、[タスク ウィンドウのサンプル](../../visual-cpp-samples.md)です。  
+ 次の例は、の既定値を取得する方法を示します、`CMFCVisualManager`オブジェクト。 このコード スニペットの一部、[タスク ウィンドウのサンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]  
   
@@ -626,17 +626,17 @@ static void __stdcall AdjustToolbars();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManager::AlwaysHighlight3DTabs  
- フレームワークは、アプリケーションで 3D のタブをハイライト常にかどうかを決定するには、このメソッドを呼び出します。  
+ フレームワークは、アプリケーションで 3D のタブをハイライト常にかどうかを判断するには、このメソッドを呼び出します。  
   
 ```  
 virtual BOOL AlwaysHighlight3DTabs() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 3D のタブは強調表示する場合。  
+ `TRUE` 3D のタブが強調表示されている必要がある場合。  
   
 ### <a name="remarks"></a>Remarks  
- 派生のビジュアル マネージャーでは、この関数をオーバーライドし、返す`TRUE`場合は 3D のタブは常に強調表示される必要があります。 このメソッドの既定の実装を返します`FALSE`です。  
+ 派生のビジュアル マネージャーと戻り値が TRUE の場合は、3 D のタブは常に強調表示される必要がありますには、この関数をオーバーライドします。 このメソッドの既定の実装では、FALSE を返します。  
   
 ##  <a name="cmfcvisualmanager"></a>  CMFCVisualManager::CMFCVisualManager  
 
@@ -790,26 +790,26 @@ virtual COLORREF GetAutoHideButtonTextColor(CMFCAutoHideButton* pButton);
  自動的に隠すボタンへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)のテキストの色を指定するパラメーター *pButton*です。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)のテキストの色を指定するパラメーター *pButton*します。  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションで自動的に隠すボタンのテキストの色をカスタマイズする派生クラスでこのメソッドをオーバーライドします。 これを行うには、テキストの色として使用するアプリケーションを使用する色を返します。  
+ アプリケーションで自動的に隠すボタンのテキストの色をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。 これを行うには、テキストの色として使用するアプリケーションを使用する色を返します。  
   
 ##  <a name="getbuttonextraborder"></a>  CMFCVisualManager::GetButtonExtraBorder  
- フレームワークは、ツールバーのボタンを描画するときに、このメソッドを呼び出します。  
+ フレームワークは、ツール バー ボタンを描画するときに、このメソッドを呼び出します。  
   
 ```  
 virtual CSize GetButtonExtraBorder() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)ツール バー ボタンの境界線の余分なサイズを含むオブジェクトです。  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md)追加のツール バー ボタンの境界線のサイズを格納しているオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- 一部のスキンは、ツール バー ボタンの境界を拡張する必要があります。 アプリケーションでのツール バー ボタンの境界を拡張する場合は、カスタム ビジュアル マネージャーでこのメソッドをオーバーライドします。 このメソッドの既定の実装では、空のサイズを返します。  
+ 一部のスキンは、ツール バー ボタンの境界を拡張する必要があります。 アプリケーションでのツール バー ボタンの境界を拡張する場合は、カスタム ビジュアル マネージャーでは、このメソッドをオーバーライドします。 このメソッドの既定の実装では、空のサイズを返します。  
   
 ##  <a name="getcaptionbartextcolor"></a>  CMFCVisualManager::GetCaptionBarTextColor  
- フレームワークがキャプション バーのテキストの色を取得するには、このメソッドを呼び出します。  
+ フレームワークは、キャプション バーにテキストの色を取得するには、このメソッドを呼び出します。  
   
 ```  
 virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
@@ -820,10 +820,10 @@ virtual COLORREF GetCaptionBarTextColor(CMFCCaptionBar* pBar);
  キャプション バーへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター内のテキストの色を示す*pBar*です。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター内のテキストの色を示す*pBar*します。  
   
 ### <a name="remarks"></a>Remarks  
- キャプション バーのテキストの色をカスタマイズする、派生クラスでこのメソッドをオーバーライドします。 オーバーライド メソッドでは、目的の色を返します。  
+ キャプション バーのテキストの色をカスタマイズする、派生クラスでは、このメソッドをオーバーライドします。 オーバーライドされたメソッドでは、目的の色を返します。  
   
 ##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManager::GetCaptionButtonExtraBorder  
 
@@ -858,9 +858,9 @@ virtual int GetDockingTabsBordersSize();
  ドッキング、タブ付きウィンドウの境界線のサイズを示す整数。  
   
 ### <a name="remarks"></a>Remarks  
- ドッキング ウィンドウは、ユーザー、アプリケーション内の同じ場所に複数のペインをドッキングするときにタブ付きになります。  
+ ドッキング ウィンドウは、ユーザーがアプリケーション内の同じ場所に複数のペインをドッキングとにタブ付きになります。  
   
- ドッキング タブ付きコントロール バーの境界線のサイズを変更する場合は、カスタム ビジュアル マネージャーでこのメソッドをオーバーライドします。 既定の実装では、-1 が返されます。  
+ タブ付きのドッキング コントロール バーの境界線のサイズを変更する場合は、カスタム ビジュアル マネージャーでこのメソッドをオーバーライドします。 既定の実装では、-1 が返されます。  
   
 ##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManager::GetHighlightedMenuItemTextColor  
 
@@ -884,13 +884,13 @@ static CMFCVisualManager* GetInstance();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ポインター、`CMFCVisualManager`オブジェクト。  
+ ポインターを`CMFCVisualManager`オブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションが 1 つだけある`CMFCVisualManager`オブジェクトが関連付けられています。 派生したオブジェクトが含まれます、`CMFCVisualManager`クラスです。 このメソッドは、関連付けられているポインターを返します`CMFCVisualManager`オブジェクト。 アプリケーションに関連付けられていない場合`CMFCVisualManager`オブジェクト、このメソッドは 1 つが作成され、アプリケーションと関連付けます。  
+ アプリケーションは 1 つをのみ`CMFCVisualManager`関連付けられているオブジェクト。 派生したオブジェクトが含まれます、`CMFCVisualManager`クラス。 このメソッドは、関連付けられているポインターを返します`CMFCVisualManager`オブジェクト。 アプリケーションに関連付けられていない場合`CMFCVisualManager`オブジェクト、このメソッドは 1 つが作成され、それをアプリケーションに関連付けます。  
   
 ##  <a name="getmditabsborderssize"></a>  CMFCVisualManager::GetMDITabsBordersSize  
- フレームワークは、ウィンドウを描画前に、MDITabs ウィンドウの境界線のサイズを確認するには、このメソッドを呼び出します。  
+ フレームワークは、ウィンドウを描画する前に、MDITabs ウィンドウの境界線のサイズを判断するには、このメソッドを呼び出します。  
   
 ```  
 virtual int GetMDITabsBordersSize();
@@ -933,17 +933,17 @@ virtual COLORREF GetMenuItemTextColor(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="getmenushadowdepth"></a>  CMFCVisualManager::GetMenuShadowDepth  
- 幅とメニュー シャドウの高さを取得します。  
+ 幅とメニューの影の高さを取得します。  
   
 ```  
 int GetMenuShadowDepth() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 幅と高さ (ピクセル単位)] メニューの [シャドウします。  
+ 幅と高さ (ピクセル単位) メニューの影の。  
   
 ### <a name="remarks"></a>Remarks  
- 幅と高さメニュー シャドウは等価です。 既定値は、7 ピクセルです。  
+ 幅と高さのメニューの影は等価です。 既定値は、7 ピクセルです。  
   
 ##  <a name="getncbtnsize"></a>  CMFCVisualManager::GetNcBtnSize  
  システム ボタンのサイズを取得する必要があるときに、フレームワークによって呼び出されます。  
@@ -954,13 +954,13 @@ virtual CSize GetNcBtnSize(BOOL bSmall) const;
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bSmall*  
- 示すブール値パラメーターかどうか`GetNcBtnSize`小規模または大規模なシステム ボタンのサイズを取得する必要があります。 場合*bSmall*は`TRUE`、`GetNcBtnSize`小型のシステム ボタンのサイズを返します。 それ以外の場合、大規模なシステム ボタンのサイズを返します。  
+ 示すブール値パラメーターかどうか`GetNcBtnSize`小規模または大規模なシステムのボタンのサイズを取得する必要があります。 場合*bSmall*が true の場合、`GetNcBtnSize`小型のシステム ボタンのサイズを返します。 それ以外の場合、大規模なシステムのボタンのサイズを返します。  
   
 ### <a name="return-value"></a>戻り値  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)システム ボタンのサイズを示すためのパラメーターです。  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md)のシステム ボタンのサイズを指定するパラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- システム ボタンとは、コマンドにマップされるフレーム ウィンドウのキャプションのボタン**閉じる**、**最小化**、**最大化**、および**の復元**. これらのボタンのサイズは、現在のビジュアル マネージャーに依存します。 アプリケーションのシステム ボタンのサイズをカスタマイズする場合は、このメソッドをオーバーライドします。  
+ システム ボタンは、コマンドにマップされるフレーム ウィンドウのキャプションのボタン**閉じる**、**最小化**、**最大化**、および**の復元**. これらのボタンのサイズは、現在のビジュアル マネージャーに依存します。 アプリケーションでのシステム ボタンのサイズをカスタマイズする場合は、このメソッドをオーバーライドします。  
   
 ##  <a name="getpopupmenubordersize"></a>  CMFCVisualManager::GetPopupMenuBorderSize  
  フレームワークは、ポップアップ メニューの境界線のサイズを取得するには、このメソッドを呼び出します。  
@@ -973,7 +973,7 @@ virtual int GetPopupMenuBorderSize() const;
  ポップアップ メニューの境界線のサイズを指定する整数。  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションでポップアップ メニューの境界線のサイズをカスタマイズするには、このメソッドをオーバーライドします。  
+ アプリケーションのポップアップ メニューの境界線のサイズをカスタマイズするには、このメソッドをオーバーライドします。  
   
 ##  <a name="getpopupmenugap"></a>  CMFCVisualManager::GetPopupMenuGap  
 
@@ -995,16 +995,16 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pPropList*  
- フレームワークが描画プロパティ リストへのポインター。  
+ フレームワークを描画するプロパティ リストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)の背景色を示すパラメーター *pPropList*です。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)の背景色を示すパラメーター *pPropList*します。  
   
 ### <a name="remarks"></a>Remarks  
  アプリケーションのプロパティ リストの背景色をカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="getpropertygridgrouptextcolor"></a>  CMFCVisualManager::GetPropertyGridGroupTextColor  
- フレームワークは、プロパティ リストのテキストの色を取得するには、このメソッドを呼び出します。  
+ フレームワークでは、プロパティ リストのテキストの色を取得するには、このメソッドを呼び出します。  
   
 ```  
 virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
@@ -1172,7 +1172,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 次の列挙値のいずれかを返します: AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 です。  
+ 次の列挙値のいずれかを返します: AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -1214,31 +1214,31 @@ virtual void GetTabFrameColors(
  フレームがタブを描画はタブ付きウィンドウへのポインター。  
   
  [out]*clrDark*  
- 参照、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーターがこのメソッドがタブの暗い境界線の色を格納します。  
+ 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーターがこのメソッドが、タブの濃い境界線の色を格納します。  
   
  [out]*clrBlack*  
- 参照、`COLORREF`パラメーターがこのメソッドがタブ ウィンドウの境界線の色を格納します。 罫線の既定の色は黒です。  
+ このメソッドがタブ ウィンドウの境界線の色を格納する COLORREF パラメーターへの参照。 境界線用の既定の色は黒です。  
   
  [out]*clrHighlight*  
- 参照、`COLORREF`パラメーターがこのメソッドがタブ ウィンドウの強調表示状態の色を格納します。  
+ このメソッドがタブ ウィンドウの強調表示状態の色を格納する COLORREF パラメーターへの参照。  
   
  [out]*clrFace*  
- 参照、`COLORREF`パラメーターがこのメソッドがタブ ウィンドウの表面の色を格納します。  
+ このメソッドがタブ ウィンドウの表面の色を格納する COLORREF パラメーターへの参照。  
   
  [out]*clrDarkShadow*  
- 参照、`COLORREF`パラメーターがこのメソッドがタブ ウィンドウの影の色を格納します。  
+ このメソッドがタブ ウィンドウの影の色を格納する COLORREF パラメーターへの参照。  
   
  [out]*clrLight*  
- 参照、`COLORREF`パラメーターがこのメソッドがタブ ウィンドウの右端の色を格納します。  
+ このメソッドがタブ ウィンドウの右端の色を格納する COLORREF パラメーターへの参照。  
   
  [out]*pbrFace*  
- ブラシのリファレンスへのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの表面を塗りつぶすために使用するブラシを格納します。  
+ ブラシの参照へのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの表面を塗りつぶすために使用されるブラシを格納します。  
   
  [out]*pbrBlack*  
- ブラシのリファレンスへのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの黒色のエッジを塗りつぶすために使用するブラシを格納します。  
+ ブラシの参照へのポインター。 このメソッドは、このパラメーターにタブ ウィンドウの黒の端を塗りつぶすために使用するブラシを格納します。  
   
 ### <a name="remarks"></a>Remarks  
- タブ ウィンドウを描画するときにフレームワークが使用されている色のセットをカスタマイズする場合は、派生クラスでは、この関数をオーバーライドします。  
+ タブ ウィンドウを描画するときに、フレームワークが使用されている色のセットをカスタマイズする場合は、派生クラスでは、この関数をオーバーライドします。  
   
 ##  <a name="gettabhorzmargin"></a>  CMFCVisualManager::GetTabHorzMargin  
 
@@ -1389,12 +1389,12 @@ virtual COLORREF GetToolbarButtonTextColor(
  ツール バー ボタンの状態。  
   
 ### <a name="return-value"></a>戻り値  
- テキストの色*pButton*によって示される状態は*状態*です。  
+ テキストの色*pButton*によって示される状態がいつ*状態*します。  
   
 ### <a name="remarks"></a>Remarks  
- テキストの色、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトは、ボタンの状態によって異なります。 ツール バー ボタンの状態には`ButtonsIsRegular`、 `ButtonsIsPressed`、または`ButtonsIsHighlighted`です。  
+ テキストの色、 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトは、ボタンの状態によって異なります。 ツール バー ボタンの状態には、 `ButtonsIsRegular`、 `ButtonsIsPressed`、または`ButtonsIsHighlighted`します。  
   
- アプリケーションのツールバー ボタンのテキストの色をカスタマイズするには、この関数をオーバーライドします。  
+ アプリケーションのツール バー ボタンのテキストの色をカスタマイズするには、この関数をオーバーライドします。  
   
 ##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManager::GetToolBarCustomizeButtonMargin  
 
@@ -1429,7 +1429,7 @@ virtual COLORREF GetToolbarDisabledTextColor();
  フレームワークが使用できるツール バー ボタンのテキストの色に使用される色。  
   
 ### <a name="remarks"></a>Remarks  
- 使用できるツール バー ボタンのテキストの色を設定する場合は、カスタム ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ 使用できるツール バー ボタンのテキストの色を設定する場合は、カスタム ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="gettoolbarhighlightcolor"></a>  CMFCVisualManager::GetToolbarHighlightColor  
 
@@ -1453,21 +1453,21 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*params*  
- [in]*タイプ*  
+ [in]*%n タイプ*  
   
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManager::HasOverlappedAutoHideButtons  
- 現在のビジュアル マネージャー内の重複を自動的に隠すボタンかどうかを返します。  
+ 現在のビジュアル マネージャーで自動的に隠すボタンが重複しているかどうかを返します。  
   
 ```  
 virtual BOOL HasOverlappedAutoHideButtons() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 自動的に隠すボタンが重なり合っている; 場合`FALSE`が存在しない場合。  
+ 自動的に隠すボタンが重複している場合は TRUE。そうでない場合は FALSE。  
   
 ##  <a name="isautodestroy"></a>  CMFCVisualManager::IsAutoDestroy  
 
@@ -1495,43 +1495,43 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton*) const;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="isdockingtabhasborder"></a>  CMFCVisualManager::IsDockingTabHasBorder  
- 現在のビジュアル マネージャーがドッキング、タブ付きペインの周囲の境界線を描画するかどうかを返します。  
+ 現在のビジュアル マネージャーがドッキングされ、タブ付きペインの周囲の境界線を描画するかどうかを返します。  
   
 ```  
 virtual BOOL IsDockingTabHasBorder();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ビジュアル マネージャーには、ドッキング、タブ付きペインの周囲の境界線が描画される場合`FALSE`それ以外の場合。  
+ ビジュアル マネージャーはドッキングされ、タブ付きペインの周囲の境界線を描画する場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
- ドッキング ウィンドウは、複数のペインが同じ場所にドッキングされているときにタブ付きになります。  
+ ドッキング ペインは、複数のペインが同じ場所にドッキングされているときにタブ付きになります。  
   
 ##  <a name="isembossdisabledimage"></a>  CMFCVisualManager::IsEmbossDisabledImage  
- フレームワーク浮き出し使用可能なイメージを設定するかどうかを指定します。  
+ フレームワークに使用できるイメージ浮き出しを設定するかどうかを指定します。  
   
 ```  
 BOOL IsEmbossDisabledImage() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- フレームワークは利用できません。 イメージ浮き出し効果を付ける場合は 0 以外。それ以外の場合 0 を返します。  
+ フレームワークを使用できません。 イメージ浮き出し効果を付ける場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドによって呼び出されます[CMFCToolBarImages::Draw](../../mfc/reference/cmfctoolbarimages-class.md#draw)ときに、ツールバーにあることはできません、イメージを描画します。  
+ このメソッドを呼び出して[CMFCToolBarImages::Draw](../../mfc/reference/cmfctoolbarimages-class.md#draw)ときに、ツールバーにあることはできません、イメージを描画します。  
   
 ##  <a name="isfadeinactiveimage"></a>  CMFCVisualManager::IsFadeInactiveImage  
- フレームワークは、ツールバーまたはメニューには、アクティブでないイメージを描画するときに、このメソッドを呼び出します。  
+ フレームワークは、ツールバーまたはメニューには、非アクティブなイメージを描画するときに、このメソッドを呼び出します。  
   
 ```  
 BOOL IsFadeInactiveImage() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ツールバーまたはメニュー以外の非アクティブなイメージを描画するときにフレームワークが照明効果を使用する場合は 0 以外。それ以外の場合 0 を返します。  
+ フレームワークは、ツールバーまたはメニューには、非アクティブなイメージを描画するときに、照明効果を使用している場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- アクティブ化するかを呼び出して照明効果を非アクティブ化[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)です。 照明効果は、どの利用不可のイメージがグレー表示されています。  
+ アクティブ化したり、呼び出すことによって、照明効果を非アクティブ化[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)します。 照明効果は、こそがグレー表示されて利用不可のイメージです。  
   
 ##  <a name="isframemenucheckeditems"></a>  CMFCVisualManager::IsFrameMenuCheckedItems  
 
@@ -1585,23 +1585,23 @@ BOOL IsMenuFlatLook() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- フラットなメニュー ボタンが表示されない場合は 0 以外。それ以外の場合は 0 です。  
+ フラットなメニュー ボタンが表示されない場合、0 以外の場合それ以外の場合は 0 です。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、メニュー ボタンがフラットは表示します。 使用して、 [CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)メソッドでこの動作を変更します。 フラットなメニュー ボタンが表示されたら、それらは変わりません外観に、ユーザーがクリックしたとき。  
+ 既定では、メニュー ボタンがフラットは表示します。 使用して、 [CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)メソッドでこの動作を変更します。 フラットなメニュー ボタンが表示されたら、ユーザーがクリックして、外観が変わりますはありません。  
   
 ##  <a name="isofficexpstylemenus"></a>  CMFCVisualManager::IsOfficeXPStyleMenus  
- ビジュアル マネージャーが Office XP スタイルのメニューを実装するかどうかを示します。  
+ ビジュアル マネージャーが、Office XP スタイルのメニューを実装するかどうかを示します。  
   
 ```  
 virtual BOOL IsOfficeXPStyleMenus() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ビジュアル マネージャーには、Office XP スタイルのメニューが表示される場合は 0 以外。それ以外の場合 0 を返します。  
+ ビジュアル マネージャーは、Office XP スタイルのメニューを表示する場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)メニューおよび影を描画する必要があるときに、このメソッドを呼び出します。 既定では、このメソッドが戻る`FALSE`です。 Office XP のポップアップ メニューのようなポップアップ メニューを使用する場合は、カスタム ビジュアル マネージャーでこのメソッドをオーバーライドし、返します`TRUE`です。  
+ [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)メニューとシャドウを描画する必要がある場合は、このメソッドを呼び出します。 既定では、このメソッドは、FALSE を返します。 ポップアップ メニューのようなポップアップ メニューを使用して、Office XP の場合は、カスタム ビジュアル マネージャーでは、このメソッドをオーバーライドし、TRUE を返します。  
   
 ##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManager::IsOffsetPressedButton  
 
@@ -1622,7 +1622,7 @@ virtual BOOL IsOwnerDrawCaption();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` アプリケーション内のすべてのフレーム ウィンドウがオーナー描画キャプションがある場合`FALSE`それ以外の場合。  
+ アプリケーション内のすべてのフレーム ウィンドウがオーナー描画のキャプションがある場合は TRUE。FALSE それ以外の場合。  
   
 ##  <a name="isownerdrawmenucheck"></a>  CMFCVisualManager::IsOwnerDrawMenuCheck  
 
@@ -1636,14 +1636,14 @@ virtual BOOL IsOwnerDrawMenuCheck();
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="isshadowhighlightedimage"></a>  CMFCVisualManager::IsShadowHighlightedImage  
- 強調表示されたイメージを表示するときに、ビジュアル マネージャーに影を表示するかどうかを示します。  
+ ビジュアル マネージャーが強調表示されたイメージを表示するときに影を表示するかどうかを示します。  
   
 ```  
 BOOL IsShadowHighlightedImage() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ビジュアル マネージャーが強調表示されたイメージの下に影を表示するときは 0 以外。それ以外の場合は 0 です。  
+ ビジュアル マネージャーが強調表示されているイメージの下に影を表示するときに、0 以外の場合それ以外の場合は 0 です。  
   
 ##  <a name="istoolbarbuttonfillenabled"></a>  CMFCVisualManager::IsToolbarButtonFillEnabled  
 
@@ -1691,7 +1691,7 @@ virtual void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*描画*  
   
 ### <a name="remarks"></a>Remarks  
@@ -1712,18 +1712,18 @@ virtual void OnDrawAutoHideButtonBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*rectBounds*  
- サイズと、自動的に隠すボタンの場所。  
+ サイズと、自動的に隠すボタンの位置。  
   
  [in]*rectBorderSize*  
- A [CRect](../../atl-mfc-shared/reference/crect-class.md)の境界線のサイズを含むパラメーターです。  
+ A [CRect](../../atl-mfc-shared/reference/crect-class.md)の枠線のサイズを含むパラメーター。  
   
  [in]*pButton*  
- 自動的に隠すボタンへのポインター。 フレームワークがこのボタンの境界線を描画します。  
+ 自動的に隠すボタンへのポインター。 フレームワークには、このボタンの境界線が描画します。  
   
 ### <a name="remarks"></a>Remarks  
- 自動的に隠すボタンの境界線の外観をカスタマイズする場合は、派生クラスでは、このメソッドをオーバーライドします。 既定では、このメソッドは、アプリケーションの既定の影の色でフラットな境界線を塗りつぶします。  
+ 自動的に隠すボタンの境界線の外観をカスタマイズする場合は、派生クラスでこのメソッドをオーバーライドします。 既定では、このメソッドは、アプリケーションの既定の影の色でフラットな境界線を塗りつぶします。  
   
- *RectBorderSize*パラメーターには、罫線の座標が含まれていません。 境界線のサイズが含まれている、 `top`、 `bottom`、 `left`、および`right`データ メンバーです。 値 0 未満の罫線を自動的に隠すボタンの指定された側を示しません。  
+ *RectBorderSize*パラメーターに罫線の座標が含まれていません。 境界線のサイズが含まれている、 `top`、 `bottom`、 `left`、および`right`データ メンバー。 値 0 が自動的に隠すボタンの側に境界線を示しません。  
   
 ##  <a name="ondrawbargripper"></a>  CMFCVisualManager::OnDrawBarGripper  
  コントロール バーのグリップを描画するときに、フレームワークによって呼び出されます。  
@@ -1738,19 +1738,19 @@ virtual void OnDrawBarGripper(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pDC*  
- コントロール バーをデバイス コンテキストへのポインター。  
+ コントロール バー用にデバイス コンテキストへのポインター。  
   
  [in]*rectGripper*  
  コントロール バーの外接する四角形。  
   
  [in]*bHorz*  
- コントロール バーが水平方向または垂直方向にドッキングされているかどうかを指定するブール型のパラメーターです。  
+ コントロール バーが水平方向または垂直方向にドッキングされているかどうかを指定するブール型パラメーター。  
   
  [in]*pBar*  
  コントロール バーへのポインター。 ビジュアル マネージャーでは、このコントロール バーのグリップを描画します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、標準のグリップを表示します。 グリッパーの外観をカスタマイズするから派生したカスタム クラスでは、このメソッドをオーバーライドします`CMFCVisualManager`クラスです。  
+ このメソッドの既定の実装は、標準のグリップを表示します。 グリッパーの外観をカスタマイズするから派生したカスタム クラスでは、このメソッドをオーバーライド、`CMFCVisualManager`クラス。  
   
 ##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManager::OnDrawBrowseButton  
  フレームワークは、エディット コントロールの [参照] ボタンを描画するときに、このメソッドを呼び出します。  
@@ -1778,13 +1778,13 @@ virtual BOOL OnDrawBrowseButton(
  ボタンの状態を指定する列挙値。  
   
  [out]*clrText*  
- 参照、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 これは、予約済みの値は、現在使用されています。  
+ 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 これは、予約済みの値があり、現在使用されているではありません。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合は `TRUE`。それ以外の場合は `FALSE`。  
+ 成功した場合は TRUE、それ以外の場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- インスタンスで、[参照] ボタンの外観をカスタマイズする場合は、派生クラスでは、この関数をオーバーライドします[CMFCEditBrowseCtrl クラス](../../mfc/reference/cmfceditbrowsectrl-class.md)です。 ボタンの状態を指定できる値は`ButtonsIsRegular`、 `ButtonsIsPressed`、および`ButtonsIsHighlighted`です。  
+ インスタンスで [参照] ボタンの外観をカスタマイズする場合は、派生クラスでは、この関数をオーバーライド、 [CMFCEditBrowseCtrl クラス](../../mfc/reference/cmfceditbrowsectrl-class.md)します。 ボタンの状態を指定できる値は`ButtonsIsRegular`、 `ButtonsIsPressed`、および`ButtonsIsHighlighted`します。  
   
 ##  <a name="ondrawbuttonborder"></a>  CMFCVisualManager::OnDrawButtonBorder  
  フレームワークは、ツール バー ボタンの境界線を描画するときに、このメソッドを呼び出します。  
@@ -1802,7 +1802,7 @@ virtual void OnDrawButtonBorder(
  ツール バー ボタンのデバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ツール バー ボタンへのポインター。 フレームワークでは、このボタンの境界線を描画します。  
+ ツール バー ボタンへのポインター。 フレームワークは、このボタンの境界線を描画します。  
   
  [in]*rect*  
  ツール バー ボタンの境界を指定する四角形。  
@@ -1811,9 +1811,9 @@ virtual void OnDrawButtonBorder(
  ツール バー ボタンの現在の状態を指定する列挙型。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、標準の罫線を表示します。 ツール バー ボタンの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ このメソッドの既定の実装では、標準の罫線が表示されます。 ツール バー ボタンの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
- ツール バー ボタンの状態には`ButtonsIsRegular`、 `ButtonsIsPressed`、または`ButtonsIsHighlighted`です。  
+ ツール バー ボタンの状態には、 `ButtonsIsRegular`、 `ButtonsIsPressed`、または`ButtonsIsHighlighted`します。  
   
 ##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManager::OnDrawButtonSeparator  
 
@@ -1837,7 +1837,7 @@ virtual void OnDrawButtonSeparator(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManager::OnDrawCaptionBarBorder  
- フレームワークは、の枠線を描画するときにこのメソッドを呼び出して、 [CMFCCaptionBar クラス](../../mfc/reference/cmfccaptionbar-class.md)オブジェクト。  
+ 境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCCaptionBar クラス](../../mfc/reference/cmfccaptionbar-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawCaptionBarBorder(
@@ -1853,16 +1853,16 @@ virtual void OnDrawCaptionBarBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*pBar*  
- ポインター、`CMFCCaptionBar`オブジェクト。 フレームワークは、このキャプション バーを描画します。  
+ ポインターを`CMFCCaptionBar`オブジェクト。 フレームワークは、このキャプション バーを描画します。  
   
  [in]*rect*  
  キャプション バーの境界を指定する四角形。  
   
  [in]*clrBarBorder*  
- 罫線の色です。  
+ 罫線の色。  
   
  [in]*bFlatBorder*  
- 境界線がフラットな 2D の外観を持つかどうかを指定するブール型のパラメーターです。  
+ 境界線がフラットな 2D の外観を持つかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  キャプション バーの境界線の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
@@ -1912,7 +1912,7 @@ virtual void OnDrawCaptionBarInfoArea(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManager::OnDrawCaptionButton  
- フレームワークは、描画するときにこのメソッドを呼び出して、 [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)オブジェクト。  
+ 描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawCaptionButton (
@@ -1930,25 +1930,25 @@ virtual void OnDrawCaptionButton (
  デバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ポインター、`CMFCCaptionButton`オブジェクト。 フレームワークでは、キャプションは、このボタンを描画します。  
+ ポインターを`CMFCCaptionButton`オブジェクト。 フレームワークは、キャプションは、このボタンを描画します。  
   
  [in]*描画*  
- ボタンがアクティブかどうかを示すブール値パラメーター。  
+ ボタンがアクティブかどうかを指定するブール型パラメーター。  
   
  [in]*bHorz*  
- キャプションが水平方向かどうかを指定するブール型のパラメーターです。  
+ キャプションが水平方向かどうかを指定するブール型パラメーター。  
   
  [in]*bMaximized*  
- 親ウィンドウを最大化するかどうかを指定するブール値パラメーターです。  
+ 親ウィンドウが最大化されているかどうかを指定するブール型パラメーター。  
   
  [in]*bDisabled*  
- キャプション ボタンが無効になっているかどうかを指定するブール型のパラメーターです。  
+ キャプション ボタンが無効になっているかどうかを指定するブール型パラメーター。  
   
  [in]*nImageID*  
- ボタンに使用するアイコンのイメージのインデックス。 場合*nImageID* -1 で、このメソッドを使用してイメージのインデックスに記録*pButton*です。  
+ ボタンに使用するアイコンのイメージのインデックス。 場合*nImageID* -1 で、このメソッドを使用して、イメージのインデックスに記録*pButton*します。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装のグローバル インスタンスから小さいボタンが表示されます、`CMenuImages`クラスです。 用のヘッダー ファイルで、ボタンが表示されている`CMenuImages`です。 いくつかの例は、 `CMenuImages::IdClose`、 `CMenuImages::IdArowLeft`、 `CMenuImages::IdArowRight`、 `CMenuImages::IdArowDown`、 `CMenuImages::IdArowUp`、および`CMenuImages::IdPinHorz`です。  
+ このメソッドの既定の実装のグローバル インスタンスから小さいボタンが表示されます、`CMenuImages`クラス。 ヘッダー ファイルで、ボタンが表示されている`CMenuImages`します。 例をいくつか含める`CMenuImages::IdClose`、 `CMenuImages::IdArowLeft`、 `CMenuImages::IdArowRight`、 `CMenuImages::IdArowDown`、 `CMenuImages::IdArowUp`、および`CMenuImages::IdPinHorz`します。  
   
  キャプション ボタンの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
@@ -1989,7 +1989,7 @@ virtual void OnDrawCheckBoxEx(
 ### <a name="parameters"></a>パラメーター  
  [in]*pDC*  
  [in]*rect*  
- [in]*%n 状態*  
+ [in]*状態*  
  [in]*bHighlighted*  
  [in]*bPressed*  
  [in]*bEnabled*  
@@ -1997,7 +1997,7 @@ virtual void OnDrawCheckBoxEx(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawcomboborder"></a>  CMFCVisualManager::OnDrawComboBorder  
- インスタンスの周りの境界線を描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCToolBarComboBoxButton クラス](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)です。  
+ インスタンスの周りの境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCToolBarComboBoxButton クラス](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。  
   
 ```  
 virtual void OnDrawComboBorder(
@@ -2020,19 +2020,19 @@ virtual void OnDrawComboBorder(
  コンボ ボックス ボタンが使用できるかどうかを示すブール値パラメーター。  
   
  [in]*bIsDropped*  
- コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーターです。  
+ コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーター。  
   
  [in]*bIsHighlighted*  
- コンボ ボックス ボタンが強調表示されているかどうかを示すブール値パラメーターです。  
+ コンボ ボックス ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*pButton*  
- ポインター、`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークでは、このコンボ ボックス ボタンを描画します。  
+ ポインターを`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークは、このコンボ ボックス ボタンを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  コンボ ボックスの枠線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManager::OnDrawComboDropButton  
- ドロップダウン ボタンを描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)です。  
+ ドロップダウン ボタンを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。  
   
 ```  
 virtual void OnDrawComboDropButton(
@@ -2052,16 +2052,16 @@ virtual void OnDrawComboDropButton(
  ドロップ ボタンの境界を指定する四角形。  
   
  [in]*bDisabled*  
- ドロップ ボタンが使用できるかどうかを示すブール値パラメーター。  
+ ドロップ ボタンは使用できないかどうかを示すブール値パラメーター。  
   
  [in]*bIsDropped*  
- コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーターです。  
+ コンボ ボックスがドロップダウンになっているかどうかを示すブール値パラメーター。  
   
  [in]*bIsHighlighted*  
- ドロップ ボタンが強調表示されているかどうかを示すブール値パラメーターです。  
+ ドロップ ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*pButton*  
- ポインター、`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークは、このコンボ ボックス ボタンのドロップダウン ボタンを描画します。  
+ ポインターを`CMFCToolBarComboBoxButton`オブジェクト。 フレームワークでは、このコンボ ボックス ボタンのドロップダウン ボタンを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  コンボ ボックス ボタンのドロップダウン ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
@@ -2098,19 +2098,19 @@ virtual void OnDrawDefaultRibbonImage(
  既定のイメージの境界を指定する四角形。  
   
  [in]*bIsDisabled*  
- リボンのボタンが使用できるかどうかを示すブール値パラメーター。  
+ リボンのボタンは使用できないかどうかを示すブール値パラメーター。  
   
  [in]*bIsPressed*  
- リボンのボタンが押されたかどうかを示すブール値パラメーターです。  
+ リボンのボタンが押されたかどうかを示すブール値パラメーター。  
   
  [in]*bIsHighlighted*  
- リボンのボタンが強調表示されているかどうかを示すブール値パラメーターです。  
+ リボンのボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- リボンのボタンに使用されるイメージをカスタマイズする場合は、派生のビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ リボン ボタンに使用するイメージをカスタマイズする場合は、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondraweditborder"></a>  CMFCVisualManager::OnDrawEditBorder  
- インスタンスの周りの境界線を描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCToolBarEditBoxButton クラス](../../mfc/reference/cmfctoolbareditboxbutton-class.md)です。  
+ インスタンスの周りの境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCToolBarEditBoxButton クラス](../../mfc/reference/cmfctoolbareditboxbutton-class.md)します。  
   
 ```  
 virtual void OnDrawEditBorder(
@@ -2126,16 +2126,16 @@ virtual void OnDrawEditBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- 境界を指定する四角形、`CMFCToolBarEditBoxButton`オブジェクト。  
+ 四角形の境界を指定する、`CMFCToolBarEditBoxButton`オブジェクト。  
   
  [in]*bDisabled*  
- ボタンは使用できないかどうかを示すブール値パラメーターです。  
+ ボタンが使用できるかどうかを示すブール値パラメーター。  
   
  [in]*bIsHighlighted*  
- ボタンが強調表示されているかどうかを示すブール値パラメーターです。  
+ ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*pButton*  
- ポインター、`CMFCToolBarEditBoxButton`オブジェクト。 フレームワークは、このエディット ボックス ボタンの境界線を描画します。  
+ ポインターを`CMFCToolBarEditBoxButton`オブジェクト。 フレームワークは、このエディット ボックス ボタンの境界線を描画します。  
   
 ### <a name="remarks"></a>Remarks  
  境界線をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCToolBarEditBoxButton`オブジェクト。  
@@ -2181,17 +2181,17 @@ virtual void OnDrawFloatingToolbarBorder(
  フローティング ツールバーの境界を指定する四角形。  
   
  [in]*rectBorderSize*  
- ツールバーの境界線のサイズを指定する四角形。  
+ ツールバーの境界線のサイズを示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
- フローティング ツールバーは、ミニフレーム ウィンドウとして表示されるツールバーです。 通常、このエラーが不要になったドッキングされているように、ユーザーがツールバーをドラッグしたときに発生します。  
+ フローティング ツールバーは、ミニフレーム ウィンドウとして表示されるツールバーです。 通常、これが不要になったドッキングされているように、ユーザーがツールバーをドラッグしたときに発生します。  
   
- 境界線のサイズが、対応するパラメーターで指定された*rectBorderSize*です。 ツールバーの上罫線の幅を指定するなど、`rectBorderSize.top`です。  
+ 境界線のサイズが対応するパラメーターで指定された*rectBorderSize*します。 ツールバーの上罫線の幅を指定するなど、`rectBorderSize.top`します。  
   
- フローティング ツールバーの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ フローティング ツールバーの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManager::OnDrawHeaderCtrlBorder  
- インスタンスの周りの境界線を描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)です。  
+ インスタンスの周りの境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)します。  
   
 ```  
 virtual void OnDrawHeaderCtrlBorder(
@@ -2204,7 +2204,7 @@ virtual void OnDrawHeaderCtrlBorder(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pCtrl*  
- ポインター、`CMFCHeaderCtrl`オブジェクト。 フレームワークでは、このヘッダー コントロールの枠線を描画します。  
+ ポインターを`CMFCHeaderCtrl`オブジェクト。 フレームワークは、このヘッダー コントロールの境界線を描画します。  
   
  [in]*pDC*  
  デバイス コンテキストへのポインター。  
@@ -2213,16 +2213,16 @@ virtual void OnDrawHeaderCtrlBorder(
  ヘッダー コントロールの境界を指定する四角形。  
   
  [in]*bIsPressed*  
- ヘッダー コントロールが押されたかどうかを示すブール値パラメーターです。  
+ ヘッダー コントロールが押されたかどうかを示すブール値パラメーター。  
   
  [in]*bIsHighlighted*  
- ヘッダー コントロールが強調表示されているかどうかを示すブール値パラメーターです。  
+ ヘッダー コントロールが強調表示されているかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- ヘッダー コントロールの境界線をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ ヘッダー コントロールの境界線をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManager::OnDrawHeaderCtrlSortArrow  
- フレームワークは、ヘッダー コントロールの並べ替え方向を描画するときに、この関数を呼び出します。  
+ フレームワークは、ヘッダー コントロールの並べ替え矢印を描画するときに、この関数を呼び出します。  
   
 ```  
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -2240,13 +2240,13 @@ virtual void OnDrawHeaderCtrlSortArrow(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- 並べ替えの矢印の境界を指定する四角形。  
+ 並べ替え矢印の境界を指定する四角形。  
   
  [in]*bIsUp*  
- 並べ替えの矢印の方向を指定するブール値。  
+ 並べ替え矢印の方向を指定するブール値。  
   
 ### <a name="remarks"></a>Remarks  
- 場合*bIsUp*は`TRUE`、ビジュアル マネージャーは、上矢印の並べ替えを描画します。 場合は`FALSE`、ビジュアル マネージャーをソートし、下矢印を描画します。 オーバーライド`OnDrawHeaderCtrlSortArrow`並べ替えボタンの外観をカスタマイズする派生クラスでします。  
+ 場合*bIsUp*が true の場合、ビジュアル マネージャーが上向きの並べ替え矢印を描画します。 FALSE の場合、ビジュアル マネージャーは、下向きの並べ替え矢印を描画します。 オーバーライド`OnDrawHeaderCtrlSortArrow`並べ替えボタンの外観をカスタマイズする派生クラスでします。  
   
 ##  <a name="ondrawmenuarrowoncustomizelist"></a>  CMFCVisualManager::OnDrawMenuArrowOnCustomizeList  
 
@@ -2266,7 +2266,7 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuborder"></a>  CMFCVisualManager::OnDrawMenuBorder  
- フレームワークは、の枠線を描画するときにこのメソッドを呼び出して、 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)です。  
+ 境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)します。  
   
 ```  
 virtual void OnDrawMenuBorder(
@@ -2277,16 +2277,16 @@ virtual void OnDrawMenuBorder(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pDC*  
- デバイス コンテキストへのポインター、`CMFCPopupMenu`オブジェクト。  
+ デバイス コンテキストへのポインターを`CMFCPopupMenu`オブジェクト。  
   
  [in]*pMenu*  
- ポインター、`CMFCPopupMenu`オブジェクト。 フレームワークでは、このポップアップ メニューの周囲に罫線を描画します。  
+ ポインターを`CMFCPopupMenu`オブジェクト。 フレームワークは、このポップアップ メニューの周りに罫線を描画します。  
   
  [in]*rect*  
  ポップアップ メニューの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、標準のメニューの境界線を表示します。 メニューの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ このメソッドの既定の実装では、標準のメニューの境界線が表示されます。 メニューの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawmenucheck"></a>  CMFCVisualManager::OnDrawMenuCheck  
 
@@ -2365,7 +2365,7 @@ virtual void OnDrawMenuResizeBar(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawmenuscrollbutton"></a>  CMFCVisualManager::OnDrawMenuScrollButton  
- フレームワークは、メニュー スクロール ボタンを描画するときに、このメソッドを呼び出します。  
+ フレームワークは、メニューのスクロール ボタンを描画するときに、このメソッドを呼び出します。  
   
 ```  
 virtual void OnDrawMenuScrollButton(
@@ -2385,7 +2385,7 @@ virtual void OnDrawMenuScrollButton(
  スクロール ボタンの境界を指定する四角形。  
   
  [in]*bIsScrollDown*  
- ボタンの種類を示すブール値をビジュアル マネージャーを描画します。 値`TRUE`下矢印ボタンを描画するビジュアル マネージャーを示します。  
+ ビジュアル マネージャーを描画するボタンの種類を示すブール値。 TRUE の値は、下矢印ボタンを描画するビジュアル マネージャーを示します。  
   
  [in]*bIsHighlited*  
  ボタンが強調表示されているかどうかを示すブール値。  
@@ -2397,7 +2397,7 @@ virtual void OnDrawMenuScrollButton(
  ボタンが無効になっているかどうかを示すブール値。  
   
 ### <a name="remarks"></a>Remarks  
- メニュー スクロール ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。 メニュー項目の合計の高さがポップアップ メニューの高さを超えたときに、ポップアップ メニューの端にスクロール ボタンのメニューが表示されます。  
+ メニューのスクロール ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。 メニュー項目全体の高さが、ポップアップ メニューの高さを超えると、ポップアップ メニューの端にスクロール ボタンのメニューが表示されます。  
   
 ##  <a name="ondrawmenushadow"></a>  CMFCVisualManager::OnDrawMenuShadow  
 
@@ -2445,21 +2445,21 @@ virtual void OnDrawMenuSystemButton(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- ボタンの境界を指定する四角形。  
+ ボタンの境界を示す四角形。  
   
  [in]*uiSystemCommand*  
- システム コマンドを指定するフラグは、ボタンに関連付けられます。 使用可能な値は SC_CLOSE、SC_MINIMIZE、および SC_RESTORE です。  
+ システム コマンドを指定するフラグは、ボタンに関連付けられます。 指定できる値は、SC_CLOSE、SC_MINIMIZE、および SC_RESTORE は。  
   
  [in]*nStyle*  
- ボタンの現在のスタイルを指定するフラグ。 使用可能な値は TBBS_PRESSED、TBBS_DISABLED、および 0 です。  
+ ボタンの現在のスタイルを指定するフラグ。 指定できる値は TBBS_PRESSED、TBBS_DISABLED、および 0 です。  
   
  [in]*bHighlight*  
- ボタンが強調表示されているかどうかを指定するブール型のパラメーターです。  
+ ボタンが強調表示されているかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- メニュー システム ボタンは、**閉じる**、**最小化**、**最大化**、および**復元**のタイトル バーのボタンがあります。  
+ システムのメニュー ボタンは、**閉じる**、**最小化**、**最大化**、および**復元**ボタンはタイトル バーにあります。  
   
- このメソッドの既定の実装を呼び出す[CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol)で、`DFC_CAPTION`型です。 システム ボタンの外観をカスタマイズするビジュアル マネージャーの派生クラスでこのメソッドをオーバーライドします。  
+ このメソッドの既定の実装を呼び出す[CDC::DrawFrameControl](../../mfc/reference/cdc-class.md#drawframecontrol) DFC_CAPTION 型。 システム ボタンの外観をカスタマイズするビジュアル マネージャーを派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawminiframeborder"></a>  CMFCVisualManager::OnDrawMiniFrameBorder  
 
@@ -2494,10 +2494,10 @@ virtual void OnDrawOutlookBarSplitter(
  デバイス コンテキストへのポインター。  
   
  [in]*rectSplitter*  
- 分割ウィンドウの境界を指定する四角形。  
+ 分割線の境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- Outlook バーの分割線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ Outlook バーの分割線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManager::OnDrawOutlookPageButtonBorder  
  Outlook のページ ボタンの境界線を描画するときに、フレームワークによって呼び出されます。  
@@ -2515,7 +2515,7 @@ virtual void OnDrawOutlookPageButtonBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*rectBtn*  
- Outlook のページ ボタンの境界を指定する四角形。  
+ Outlook の [ページ] ボタンの境界を示す四角形。  
   
  [in]*bIsHighlighted*  
  ボタンが強調表示されているかどうかを指定するブール値。  
@@ -2524,10 +2524,10 @@ virtual void OnDrawOutlookPageButtonBorder(
  ボタンが押されたかどうかを指定するブール値。  
   
 ### <a name="remarks"></a>Remarks  
- Outlook のページ ボタンの外観を変更する場合は、カスタム ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ Outlook のページ ボタンの外観を変更する場合は、カスタム ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawpaneborder"></a>  CMFCVisualManager::OnDrawPaneBorder  
- フレームワークは、の枠線を描画するときにこのメソッドを呼び出して、 [CPane クラス](../../mfc/reference/cpane-class.md)オブジェクト。  
+ 境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CPane クラス](../../mfc/reference/cpane-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawPaneBorder(
@@ -2541,16 +2541,16 @@ virtual void OnDrawPaneBorder(
  コントロール バーのデバイス コンテキストへのポインター。  
   
  [in]*pBar*  
- ペインへのポインター。 ビジュアル マネージャーでは、このウィンドウの枠線を描画します。  
+ ウィンドウへのポインター。 ビジュアル マネージャーでは、このウィンドウの枠線を描画します。  
   
  [in]*rect*  
  ウィンドウの境界を示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、標準の罫線を表示します。 罫線の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
+ このメソッドの既定の実装では、標準の罫線が表示されます。 罫線の外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawpanecaption"></a>  CMFCVisualManager::OnDrawPaneCaption  
- インスタンスのキャプションを描画するときにフレームワークがこのメソッドを呼び出して、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)です。  
+ インスタンスのキャプションを描画するとき、フレームワークはこのメソッドを呼び出して、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。  
   
 ```  
 virtual COLORREF OnDrawPaneCaption(
@@ -2566,13 +2566,13 @@ virtual COLORREF OnDrawPaneCaption(
  デバイス コンテキストへのポインター。  
   
  [in]*pBar*  
- ポインター、`CDockablePane`オブジェクト。 フレームワークは、このウィンドウのキャプションを描画します。  
+ ポインターを`CDockablePane`オブジェクト。 フレームワークは、このペインのキャプションを描画します。  
   
  [in]*描画*  
  コントロール バーがアクティブかどうかを示すブール値パラメーター。  
   
  [in]*rectCaption*  
- キャプションの境界を指定する四角形。  
+ キャプションの境界を示す四角形。  
   
  [in]*rectButtons*  
  キャプション ボタンの境界を指定する四角形。  
@@ -2581,7 +2581,7 @@ virtual COLORREF OnDrawPaneCaption(
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)キャプションのテキストの色を示すパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
- ウィンドウのキャプションの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ ウィンドウのキャプションの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawpanedivider"></a>  CMFCVisualManager::OnDrawPaneDivider  
 
@@ -2654,7 +2654,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonapplicationbutton"></a>  CMFCVisualManager::OnDrawRibbonApplicationButton  
- フレームワークは、描画するときにこのメソッドを呼び出して、**メイン ボタン**リボン上。  
+ 描画するとき、フレームワークはこのメソッドを呼び出して、**メイン ボタン**リボン上。  
   
 ```  
 virtual void OnDrawRibbonApplicationButton(
@@ -2670,7 +2670,7 @@ virtual void OnDrawRibbonApplicationButton(
  ポインター、**メイン ボタン**リボン上。  
   
 ### <a name="remarks"></a>Remarks  
- 外観をカスタマイズする場合は、派生のビジュアル マネージャーでこのメソッドをオーバーライドします**メイン ボタン**です。  
+ 外観をカスタマイズする場合は、派生のビジュアル マネージャーでは、このメソッドをオーバーライド、**メイン ボタン**します。  
   
 ##  <a name="ondrawribbonbuttonborder"></a>  CMFCVisualManager::OnDrawRibbonButtonBorder  
  フレームワークは、リボンのボタンの境界線を描画するときに、このメソッドを呼び出します。  
@@ -2686,10 +2686,10 @@ virtual void OnDrawRibbonButtonBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ポインター、 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークでは、このリボン ボタンの境界線を描画します。  
+ ポインターを[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンの境界線を描画します。  
   
 ### <a name="remarks"></a>Remarks  
- 外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonButton`です。  
+ 外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonButton`します。  
   
 ##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManager::OnDrawRibbonButtonsGroup  
  フレームワークは、リボンのボタンのグループを描画するときに、このメソッドを呼び出します。  
@@ -2706,19 +2706,19 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
  デバイス コンテキストへのポインター。  
   
  [in]*pGroup*  
- リボンのボタンのグループへのポインター。 フレームワークでは、このボタンのグループを描画します。  
+ リボンのボタンのグループへのポインター。 フレームワークは、このボタンのグループを描画します。  
   
  [in]*rectGroup*  
- グループの境界を指定する四角形。  
+ グループの境界を示す四角形。  
   
 ### <a name="return-value"></a>戻り値  
  予約済みの値。 既定の実装では、-1 が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- リボンのボタンのグループの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ リボンのボタンのグループの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribboncaption"></a>  CMFCVisualManager::OnDrawRibbonCaption  
- フレームワークは、メイン フレーム ウィンドウのキャプション バーを描画するときに、このメソッドを呼び出します。 フレームワークは、リボンがメイン フレームに統合されている場合にのみ、このメソッドを呼び出します。  
+ フレームワークは、メイン フレーム ウィンドウのキャプション バーを描画するときに、このメソッドを呼び出します。 フレームワークは、リボンにメイン フレームが統合されている場合にのみ、このメソッドを呼び出します。  
   
 ```  
 virtual void OnDrawRibbonCaption(
@@ -2742,10 +2742,10 @@ virtual void OnDrawRibbonCaption(
  キャプション バーのテキストの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- キャプション バーの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこの関数をオーバーライドします。 このメソッドは、リボンがメイン フレーム ウィンドウに統合されている場合にのみ、キャプション バーに影響します。  
+ キャプション バーの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、この関数をオーバーライドします。 このメソッドは、リボンがメイン フレーム ウィンドウに統合されている場合にのみ、キャプション バーに影響します。  
   
 ##  <a name="ondrawribboncaptionbutton"></a>  CMFCVisualManager::OnDrawRibbonCaptionButton  
- フレームワークは、リボン バー上にあるキャプション ボタンを描画するときに、このメソッドを呼び出します。  
+ フレームワークは、リボン バーのキャプションのボタンを描画するときに、このメソッドを呼び出します。  
   
 ```  
 virtual void OnDrawRibbonCaptionButton(
@@ -2758,13 +2758,13 @@ virtual void OnDrawRibbonCaptionButton(
  デバイス コンテキストへのポインター。  
   
  *pButton*  
- ポインター、`CMFCRibbonCaptionButton`クラスです。 フレームワークでは、キャプションは、このボタンを描画します。  
+ ポインターを`CMFCRibbonCaptionButton`クラス。 フレームワークは、キャプションは、このボタンを描画します。  
   
 ### <a name="remarks"></a>Remarks  
- リボン上のキャプション ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ リボンのキャプション ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribboncategory"></a>  CMFCVisualManager::OnDrawRibbonCategory  
- フレームワークは、描画するときにこのメソッドを呼び出して、 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)オブジェクト。  
+ 描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawRibbonCategory(
@@ -2778,15 +2778,15 @@ virtual void OnDrawRibbonCategory(
  デバイス コンテキストへのポインター。  
   
  [in]*pCategory*  
- ポインター、`CMFCRibbonCategory`オブジェクト。 フレームワークでは、このリボン カテゴリを描画します。  
+ ポインターを`CMFCRibbonCategory`オブジェクト。 フレームワークは、このリボン カテゴリを描画します。  
   
  [in]*rectCategory*  
- リボンのカテゴリのすべてのパネルの境界を指定する四角形。  
+ リボンのカテゴリのすべてのパネルの境界を示す四角形。  
   
 ### <a name="remarks"></a>Remarks  
- リボン カテゴリは、メニュー コマンドの論理グループです。 リボン カテゴリの詳細については、次を参照してください。 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)です。  
+ リボン カテゴリは、メニュー コマンドの論理グループです。 リボン カテゴリの詳細については、次を参照してください。 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)します。  
   
- リボン カテゴリの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ リボン カテゴリの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManager::OnDrawRibbonCategoryCaption  
  フレームワークは、リボン カテゴリのキャプション バーを描画するときに、このメソッドを呼び出します。  
@@ -2805,10 +2805,10 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
  キャプション バーへのポインター。 ビジュアル マネージャーでは、この描画[CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)キャプション バーのテキストの色を示すパラメーターです。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)キャプション バーにテキストの色を示すパラメーターです。  
   
 ### <a name="remarks"></a>Remarks  
- リボン カテゴリのタイトル バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。 キャプション バーの詳細については、次を参照してください。 [CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)です。  
+ リボン カテゴリのタイトル バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。 キャプション バーの詳細については、次を参照してください。 [CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)します。  
   
 ##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManager::OnDrawRibbonCategoryScroll  
 
@@ -2840,16 +2840,16 @@ virtual COLORREF OnDrawRibbonCategoryTab(
  デバイス コンテキストへのポインター。  
   
  [in]*pTab*  
- インスタンスへのポインター、`CMFCRibbonTab`クラスです。 フレームワークでは、このタブを描画します。  
+ インスタンスへのポインター、`CMFCRibbonTab`クラス。 フレームワークは、このタブを描画します。  
   
  [in]*bIsActive*  
  タブがアクティブかどうかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
- カテゴリのリボン タブのテキストに使用される色。  
+ リボンの [カテゴリ] タブでテキストに使用される色。  
   
 ### <a name="remarks"></a>Remarks  
- リボンのカテゴリ タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。リボン カテゴリの詳細については、次を参照してください。 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)です。  
+ リボンのカテゴリ タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。リボン カテゴリの詳細については、次を参照してください。 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)します。  
   
 ##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManager::OnDrawRibbonCheckBoxOnList  
 
@@ -2904,7 +2904,7 @@ virtual void OnDrawRibbonColorPaletteBox(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbondefaultpanebutton"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButton  
- フレームワークは、リボン ウィンドウの既定のボタンを描画するときに、このメソッドを呼び出します。  
+ フレームワークは、リボン ペインの既定のボタンを描画するときに、このメソッドを呼び出します。  
   
 ```  
 virtual void OnDrawRibbonDefaultPaneButton(
@@ -2917,12 +2917,12 @@ virtual void OnDrawRibbonDefaultPaneButton(
  デバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- 既定のボタンをリボン ウィンドウへのポインター。  
+ リボン ペインの既定のボタンへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークでは、リボン ウィンドウのサイズは、最小サイズに変更して、パネルのコンテンツを表示する領域がない場合、既定のボタンが表示されます。 ユーザーは、既定のボタンをクリックすると、フレームワークには、ドロップダウン パネルのコンテンツを含むメニューが表示されます。  
+ フレームワークでは、リボン ペインは、最小サイズにサイズ変更し、パネルのコンテンツを表示する領域がない場合、既定のボタンが表示されます。 ユーザーは、既定のボタンをクリックすると、フレームワークには、ドロップダウン パネルのコンテンツを含むメニューが表示されます。  
   
- 既定のボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ 既定のボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbondefaultpanebuttoncontext"></a>  CMFCVisualManager::OnDrawRibbonDefaultPaneButtonContext  
 
@@ -3026,7 +3026,7 @@ virtual void OnDrawRibbonLabel(
  デバイス コンテキストへのポインター。  
   
  [in]*pLabel*  
- ポインター、 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)オブジェクト。 フレームワークでは、このリボンのラベルを描画します。  
+ ポインターを[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)オブジェクト。 フレームワークは、このリボンのラベルを描画します。  
   
  [in]*rect*  
  リボン パネルの境界を指定する四角形。  
@@ -3035,7 +3035,7 @@ virtual void OnDrawRibbonLabel(
  リボンのラベルをカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbonmainpanelbuttonborder"></a>  CMFCVisualManager::OnDrawRibbonMainPanelButtonBorder  
- フレームワークは、の枠線を描画するときにこのメソッドを呼び出して、 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)に配置されている、 **Main**パネルです。  
+ 境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)に配置されている、 **Main**パネル。  
   
 ```  
 virtual void OnDrawRibbonMainPanelButtonBorder(
@@ -3048,13 +3048,13 @@ virtual void OnDrawRibbonMainPanelButtonBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ポインター、`CMFCRibbonButton`のリボンのメイン パネルにあります。 フレームワークでは、このボタンの境界線を描画します。  
+ ポインター、`CMFCRibbonButton`リボンのメイン パネルにあります。 フレームワークは、このボタンの境界線を描画します。  
   
 ### <a name="remarks"></a>Remarks  
- 境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライド、`CMFCRibbonButton`上、 **Main**パネルです。  
+ 境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、`CMFCRibbonButton`上、 **Main**パネル。  
   
 ##  <a name="ondrawribbonmainpanelframe"></a>  CMFCVisualManager::OnDrawRibbonMainPanelFrame  
- 囲むフレームを描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)です。  
+ フレームワークは、周囲にフレームを描画するときにこのメソッドを呼び出して、 [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)します。  
   
 ```  
 virtual void OnDrawRibbonMainPanelFrame(
@@ -3068,13 +3068,13 @@ virtual void OnDrawRibbonMainPanelFrame(
  デバイス コンテキストへのポインター。  
   
  [in]*pPanel*  
- ポインター、`CMFCRibbonMainPanel`です。  
+ ポインター、`CMFCRibbonMainPanel`します。  
   
  [in]*rect*  
- 境界を指定する四角形、`CMFCRibbonMainPanel`です。  
+ 四角形の境界を指定する、`CMFCRibbonMainPanel`します。  
   
 ### <a name="remarks"></a>Remarks  
- フレームの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、`CMFCRibbonMainPanel`です。  
+ フレームの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライド、`CMFCRibbonMainPanel`します。  
   
 ##  <a name="ondrawribbonmenucheckframe"></a>  CMFCVisualManager::OnDrawRibbonMenuCheckFrame  
 
@@ -3094,7 +3094,7 @@ virtual void OnDrawRibbonMenuCheckFrame(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawribbonpanel"></a>  CMFCVisualManager::OnDrawRibbonPanel  
- フレームワークは、描画するときにこのメソッドを呼び出して、 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)オブジェクト。  
+ 描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)オブジェクト。  
   
 ```  
 virtual COLORREF OnDrawRibbonPanel(
@@ -3109,22 +3109,22 @@ virtual COLORREF OnDrawRibbonPanel(
  デバイス コンテキストへのポインター。  
   
  [in]*pPanel*  
- ポインター、`CMFCRibbonPanel`オブジェクト。 フレームワークでは、このリボン パネルを描画します。  
+ ポインターを`CMFCRibbonPanel`オブジェクト。 フレームワークは、このリボン パネルを描画します。  
   
  [in]*rectPanel*  
- パネルの境界を指定する四角形。  
+ パネルの境界を示す四角形。  
   
  [in]*rectCaption*  
  パネルのキャプションの境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
- リボン パネル上のテキストの色です。  
+ リボン パネル上のテキストの色。  
   
 ### <a name="remarks"></a>Remarks  
- リボン パネルの外観をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。  
+ リボン パネルの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbonpanelcaption"></a>  CMFCVisualManager::OnDrawRibbonPanelCaption  
- キャプションを描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)です。  
+ キャプションを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)します。  
   
 ```  
 virtual void OnDrawRibbonPanelCaption(
@@ -3138,7 +3138,7 @@ virtual void OnDrawRibbonPanelCaption(
  デバイス コンテキストへのポインター。  
   
  [in]*pPanel*  
- ポインター、`CMFCRibbonPanel`オブジェクト。 フレームワークは、このリボン パネルのキャプションを描画します。  
+ ポインターを`CMFCRibbonPanel`オブジェクト。 フレームワークは、このリボン パネルのキャプションを描画します。  
   
  [in]*rectCaption*  
  リボン パネルのキャプションの境界を指定する四角形。  
@@ -3147,7 +3147,7 @@ virtual void OnDrawRibbonPanelCaption(
  リボン パネルのキャプションの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManager::OnDrawRibbonProgressBar  
- フレームワークは、描画するときにこのメソッドを呼び出して、 [CMFCRibbonProgressBar クラス](../../mfc/reference/cmfcribbonprogressbar-class.md)です。  
+ 描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCRibbonProgressBar クラス](../../mfc/reference/cmfcribbonprogressbar-class.md)します。  
   
 ```  
 virtual void OnDrawRibbonProgressBar(
@@ -3163,22 +3163,22 @@ virtual void OnDrawRibbonProgressBar(
  デバイス コンテキストへのポインター。  
   
  [in]*pProgress*  
- ポインター、`CMFCRibbonProgressBar`オブジェクト。 フレームワークでは、この進行状況バーを描画します。  
+ ポインターを`CMFCRibbonProgressBar`オブジェクト。 フレームワークは、この進行状況バーを描画します。  
   
  [in]*rectProgress*  
  進行状況バーの境界を指定する四角形。  
   
  [in]*rectChunk*  
- 進行状況バーを囲む領域の境界を指定する四角形。  
+ 進行状況バーを周囲の領域の境界を指定する四角形。  
   
  [in]*bInfiniteMode*  
- 進行状況バーのモードを示すブール値パラメーター。 値`TRUE`バーが無限のモードを意味します。 既定の実装では、このパラメーターは使用しません。  
+ 進行状況バーのモードを示すブール値パラメーター。 値が TRUE の場合、バーは無限モードです。 既定の実装では、このパラメーターを使用しません。  
   
 ### <a name="remarks"></a>Remarks  
- 進行状況バーの外観をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。  
+ 進行状況バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManager::OnDrawRibbonQuickAccessToolBarSeparator  
- フレームワークは、区分線を描画するときにこのメソッドを呼び出して、**クイック アクセス ツールバー**リボンのです。  
+ 区切り記号を描画するとき、フレームワークはこのメソッドを呼び出して、**クイック アクセス ツールバー**リボンの。  
   
 ```  
 virtual void OnDrawRibbonQuickAccessToolBarSeparator(
@@ -3192,13 +3192,13 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
  デバイス コンテキストへのポインター。  
   
  [in]*pSeparator*  
- ポインター、 [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)オブジェクト。 フレームワークでは、このリボンの区分線を描画します。  
+ ポインターを[CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)オブジェクト。 フレームワークは、このリボンの区分線を描画します。  
   
  [in]*rect*  
  区切り記号の境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドでリボンの区分線の外観をカスタマイズする派生クラスでオーバーライドして、**クイック アクセス ツールバー**です。  
+ 派生クラスでのリボン区切り記号の外観をカスタマイズするには、このメソッドをオーバーライド、**クイック アクセス ツールバー**します。  
   
 ##  <a name="ondrawribbonrecentfilesframe"></a>  CMFCVisualManager::OnDrawRibbonRecentFilesFrame  
  フレームワークは、最近使ったファイルの一覧の周囲にフレームを描画するときに、このメソッドを呼び出します。  
@@ -3215,16 +3215,16 @@ virtual void OnDrawRibbonRecentFilesFrame(
  デバイス コンテキストへのポインター。  
   
  [in]*pPanel*  
- ポインター、 **Main**リボン上のパネルです。  
+ ポインター、 **Main**リボン パネル。  
   
  [in]*rect*  
  最近使ったファイルの一覧については、フレームの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- 最近使ったファイルの一覧の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ 最近使ったファイルのリストの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManager::OnDrawRibbonSliderChannel  
- フレームワークは、のチャネルを描画するときにこのメソッドを呼び出して、 [CMFCRibbonSlider クラス](../../mfc/reference/cmfcribbonslider-class.md)です。  
+ チャネルを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCRibbonSlider クラス](../../mfc/reference/cmfcribbonslider-class.md)します。  
   
 ```  
 virtual void OnDrawRibbonSliderChannel(
@@ -3238,13 +3238,13 @@ virtual void OnDrawRibbonSliderChannel(
  デバイス コンテキストへのポインター。  
   
  [in]*pSlider*  
- CMFCRibbonSlider オブジェクトへのポインター。 フレームワークでは、このリボン スライダーのチャネルを描画します。  
+ CMFCRibbonSlider オブジェクトへのポインター。 フレームワークは、このリボン スライダーのチャネルを描画します。  
   
  [in]*rect*  
  リボン スライダーのチャネルの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- リボン スライダーのチャネルの外観をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。  
+ リボン スライダーのチャネルの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManager::OnDrawRibbonSliderThumb  
  フレームワークは、のつまみを描画するときにこのメソッドを呼び出して、 [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)オブジェクト。  
@@ -3264,25 +3264,25 @@ virtual void OnDrawRibbonSliderThumb(
  デバイス コンテキストへのポインター。  
   
  [in]*pSlider*  
- ポインター、`CMFCRibbonSlider`です。 フレームワークでは、このリボン スライダーのつまみを描画します。  
+ ポインター、`CMFCRibbonSlider`します。 フレームワークは、このリボン スライダーのつまみを描画します。  
   
  [in]*rect*  
  リボン スライダーのつまみの境界を指定する四角形。  
   
  [in]*bIsHighlighted*  
- つまみを強調表示するかを示すブール値パラメーターです。  
+ Thumb が強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*bIsPressed*  
- Thumb が押されたかどうかを示すブール値パラメーターです。  
+ Thumb が押されたかどうかを示すブール値パラメーター。  
   
  [in]*bIsDisabled*  
- つまみが利用可能なかどうかを示すブール値パラメーター。  
+ Thumb が使用可能なかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- 場合はつまみの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonSlider`です。  
+ 場合はつまみの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonSlider`します。  
   
 ##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManager::OnDrawRibbonSliderZoomButton  
- ズーム ボタンを描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)オブジェクト。  
+ ズーム ボタンを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawRibbonSliderZoomButton(
@@ -3300,25 +3300,25 @@ virtual void OnDrawRibbonSliderZoomButton(
  デバイス コンテキストへのポインター。  
   
  [in]*pSlider*  
- ポインター、`CMFCRibbonSlider`オブジェクト。 フレームワークは、このリボン スライダーを描画します。  
+ ポインターを`CMFCRibbonSlider`オブジェクト。 フレームワークでは、このリボン スライダーを描画します。  
   
  [in]*rect*  
  リボン スライダーのズーム ボタンの境界を指定する四角形。  
   
  [in]*bIsZoomOut*  
- ボタンを示すブール値パラメーターのフレームワークを描画します。 値`TRUE`で左ボタンを示す、"-"縮小します。値`FALSE`zoom での「+」で右側のボタンを示します。  
+ どちらのボタンを示すブール型パラメーター、フレームワークを描画します。 TRUE の値がで左ボタンを示します、"-"ズーム アウトします。FALSE の値では、拡大「+」で右側のボタンを示します。  
   
  [in]*bIsHighlighted*  
- ボタンが強調表示されているかどうかを示すブール値パラメーターです。  
+ ボタンが強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*bIsPressed*  
- ボタンが押されたかどうかを示すブール値パラメーターです。  
+ ボタンが押されたかどうかを示すブール値パラメーター。  
   
  [in]*bIsDisabled*  
- ボタンは使用できないかどうかを示すブール値パラメーターです。  
+ ボタンが使用できるかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、リボン スライダーのズーム ボタンはいずれかで、円、+ または -、センターにサインインします。 ズーム ボタンの外観をカスタマイズするには、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
+ リボン スライダーのズーム ボタンは既定では、いずれかで、円は、+ または -、センターにサインインします。 ズーム ボタンの外観をカスタマイズするには、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManager::OnDrawRibbonStatusBarPane  
  フレームワークは、ステータス バーに、ウィンドウを描画するときに、このメソッドを呼び出します。  
@@ -3335,19 +3335,19 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
  デバイス コンテキストへのポインター。  
   
  [in]*pBar*  
- ステータス バー ペインを含むへのポインター。  
+ ウィンドウを含むステータス バーへのポインター。  
   
  [in]*pPane*  
- ステータス バー ペインへのポインター。 フレームワークは、この描画[CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)オブジェクト。  
+ ステータス バー ペインへのポインター。 このフレームワークは、描画[CMFCRibbonStatusBarPane](../../mfc/reference/cmfcribbonstatusbarpane-class.md)オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  予約済みの値。 既定の実装では、-1 が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- ステータス バー上のウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ ステータス バー上のウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawribbontabsframe"></a>  CMFCVisualManager::OnDrawRibbonTabsFrame  
- フレームワークは、[リボン] タブのセットを囲むフレームを描画するときに、このメソッドを呼び出します。  
+ フレームワークは、一連のリボン タブの周囲にフレームを描画するときに、このメソッドを呼び出します。  
   
 ```  
 virtual COLORREF OnDrawRibbonTabsFrame(
@@ -3361,10 +3361,10 @@ virtual COLORREF OnDrawRibbonTabsFrame(
  デバイス コンテキストへのポインター。  
   
  *pWndRibbonBar*  
- ポインター、 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)オブジェクト。 フレームワークでは、このリボン バーのフレームを描画します。  
+ ポインターを[CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)オブジェクト。 フレームワークでは、このリボン バーの枠を描画します。  
   
  *rectTab*  
- [リボン] タブの境界を指定する四角形。  
+ リボン タブの境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
  予約済みの値。 既定では、このメソッドは、-1 を返します。  
@@ -3388,7 +3388,7 @@ virtual void OnDrawScrollButtons(
  [in]*pDC*  
  [in]*rect*  
  [in]*nBorderSize*  
- [in]*画像*  
+ [in]*画像を*  
  [in]*bHilited*  
   
 ### <a name="remarks"></a>Remarks  
@@ -3406,19 +3406,19 @@ virtual void OnDrawSeparator(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pDC*  
- コントロール バーをデバイス コンテキストへのポインター。  
+ コントロール バー用にデバイス コンテキストへのポインター。  
   
  [in]*pBar*  
- 区切り記号を含む、ウィンドウへのポインター。  
+ 区切り記号を格納するウィンドウへのポインター。  
   
  [in]*rect*  
  区切り記号の境界を指定する四角形。  
   
  [in]*bIsHoriz*  
- ドッキング ウィンドウの向きを示すブール値パラメーターです。 値`TRUE`ウィンドウが水平にドッキングされることを示します。 値`FALSE`ウィンドウが垂直方向にドッキングされていることを示します。  
+ ドッキング ウィンドウの向きを示すブール値パラメーター。 TRUE は、水平方向のウィンドウがドッキングされることを示します。 値が FALSE のでは、垂直方向のウィンドウがドッキングされることを示します。  
   
 ### <a name="remarks"></a>Remarks  
- 区切り記号は、関連するアイコンをグループ分けするコントロール バーで使用されます。 このメソッドの既定の実装には、標準の区切り記号が表示されます。 区切り記号の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ 区切り記号は、関連するアイコンをグループ分けするコントロール バーで使用されます。 このメソッドの既定の実装では、標準の区切り記号が表示されます。 区切り記号の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManager::OnDrawShowAllMenuItems  
 
@@ -3438,7 +3438,7 @@ virtual void OnDrawShowAllMenuItems(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawspinbuttons"></a>  CMFCVisualManager::OnDrawSpinButtons  
- インスタンスを描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCSpinButtonCtrl クラス](../../mfc/reference/cmfcspinbuttonctrl-class.md)です。  
+ インスタンスを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCSpinButtonCtrl クラス](../../mfc/reference/cmfcspinbuttonctrl-class.md)します。  
   
 ```  
 virtual void OnDrawSpinButtons(
@@ -3454,19 +3454,19 @@ virtual void OnDrawSpinButtons(
  デバイス コンテキストへのポインター。  
   
  [in]*rectSpin*  
- スピン コントロールの境界を指定する四角形。  
+ スピン コントロールの境界を示す四角形。  
   
- [in]*%n 状態*  
- スピン コントロールの状態を示すフラグです。 詳細については、次の「解説」を参照してください。  
+ [in]*状態*  
+ スピン コントロールの状態を示すフラグ。 詳細については、次の「解説」を参照してください。  
   
  [in]*bOrientation*  
- ブール値パラメーターには、スピン コントロールの向きを指定します。 値`TRUE`スピン コントロールが水平方向であることを示します。 それ以外の場合は、縦です。  
+ スピン コントロールの向きを指定するブール型パラメーター。 TRUE の値では、スピン コントロールが水平方向を示します。 それ以外の場合、垂直方向です。  
   
  [in]*pSpinCtrl*  
- スピン コントロールへのポインター。 フレームワークでは、このコントロールのボタンを描画します。  
+ スピン コントロールへのポインター。 フレームワークは、このコントロールのボタンを描画します。  
   
 ### <a name="remarks"></a>Remarks  
- *%N 状態*パラメーターは、スピン コントロールの状態を示します。 パラメーターは、次の値のいずれか。  
+ *状態*パラメーターは、スピン コントロールの状態を示します。 パラメーターでは、次の値の 1 つです。  
   
 -   AFX_SPIN_PRESSEDUP  
   
@@ -3478,10 +3478,10 @@ virtual void OnDrawSpinButtons(
   
 -   AFX_SPIN_DISABLED  
   
- スピン コントロールの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ スピン コントロールの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawsplitterborder"></a>  CMFCVisualManager::OnDrawSplitterBorder  
- インスタンスの周りの境界線を描画するときにフレームワークがこのメソッドを呼び出して、 [CSplitterWndEx クラス](csplitterwndex-class.md)です。  
+ インスタンスの周りの境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CSplitterWndEx クラス](csplitterwndex-class.md)します。  
   
 ```  
 virtual void OnDrawSplitterBorder(
@@ -3495,16 +3495,16 @@ virtual void OnDrawSplitterBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*pSplitterWnd*  
- 分割ウィンドウへのポインター。 フレームワークでは、このウィンドウの境界線を描画します。  
+ スプリッター ウィンドウへのポインター。 フレームワークは、このウィンドウの境界線を描画します。  
   
  [in]*rect*  
- 分割ウィンドウの境界を指定する四角形。  
+ スプリッター ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- 分割ウィンドウの枠線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ スプリッター ウィンドウの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawsplitterbox"></a>  CMFCVisualManager::OnDrawSplitterBox  
- インスタンスのドラッグ ボックスを描画するときにフレームワークがこのメソッドを呼び出して、 [CSplitterWndEx クラス](csplitterwndex-class.md)です。 ドラッグ ボックスは、ユーザーが分割バーを選択し、子ウィンドウのサイズを変更と表示されます。  
+ インスタンスのドラッグのボックスを描画するとき、フレームワークはこのメソッドを呼び出して、 [CSplitterWndEx クラス](csplitterwndex-class.md)します。 ダイアログ ボックスでは、ユーザーは、分割バーを選択し、子ウィンドウの寸法を変更するときに表示されます。  
   
 ```  
 virtual void OnDrawSplitterBox(
@@ -3518,16 +3518,16 @@ virtual void OnDrawSplitterBox(
  デバイス コンテキストへのポインター。  
   
  [in]*pSplitterWnd*  
- 分割ウィンドウへのポインター。 フレームワークは、分割ウィンドウでこのボックスを描画します。  
+ スプリッター ウィンドウへのポインター。 フレームワークでは、このスプリッター ウィンドウのボックスを描画します。  
   
  [in]*rect*  
- 分割ウィンドウの境界を指定する四角形。  
+ スプリッター ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- 分割ウィンドウのドラッグ ボックスの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ スプリッター ウィンドウのドラッグのボックスの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManager::OnDrawStatusBarPaneBorder  
- 境界線を描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)オブジェクト。  
+ 境界線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawStatusBarPaneBorder(
@@ -3543,22 +3543,22 @@ virtual void OnDrawStatusBarPaneBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*pBar*  
- ポインター、`CMFCStatusBar`オブジェクト。 フレームワークでは、このステータス バー オブジェクトを描画します。  
+ ポインターを`CMFCStatusBar`オブジェクト。 フレームワークは、このステータス バーのオブジェクトを描画します。  
   
  [in]*rectPane*  
  ステータス バーの境界を指定する四角形。  
   
  [in]*uiID*  
- ステータス バーの ID です。  
+ ステータス バーの ID。  
   
  [in]*nStyle*  
- ステータス バーのスタイルです。  
+ ステータス バーのスタイル。  
   
 ### <a name="remarks"></a>Remarks  
  境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCStatusBar`オブジェクト。  
   
 ##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManager::OnDrawStatusBarProgress  
- フレームワークは、進行状況インジケーターを描画するときにこのメソッドを呼び出して、 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)オブジェクト。  
+ 進行状況インジケーターを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawStatusBarProgress(
@@ -3578,34 +3578,34 @@ virtual void OnDrawStatusBarProgress(
  ステータス バーのデバイス コンテキストへのポインター。  
   
  [in]*pStatusBar*  
- `CMFCStatusBar`進行状況バーを含むオブジェクトです。  
+ `CMFCStatusBar`進行状況バーを格納しているオブジェクト。  
   
  [in]*rectProgress*  
  進行状況バーの境界を指定する四角形。  
   
  [in]*nProgressTotal*  
- 進行状況バーの総数です。  
+ 進行状況バーの合計数です。  
   
  [in]*nProgressCurr*  
  進行状況バーの現在の進行状況。  
   
  [in]*clrBar*  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)進行状況バーの初期の色を示すパラメーターです。 値は、色のグラデーションの開始または終了のプログレス バーの色のいずれかです。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)進行状況バーが初期の色を示すパラメーターです。 値は、いずれかの色グラデーションの開始または終了の進行状況バーの色です。  
   
  [in]*clrProgressBarDest*  
- A`COLORREF`を示すプログレス バーの色のグラデーションの最後のパラメーターです。 場合*clrProgressBarDest* -1 で、フレームワークで色のグラデーションと進行状況バーが描画されません。 代わりに、全体の進行状況バーで指定された色で塗りつぶす*clrBar*です。  
+ 進行状況バーの色グラデーションの終了位置を示す COLORREF パラメーター。 場合*clrProgressBarDest* -1 で、フレームワークは色のグラデーションとして進行状況バーを描画できません。 代わりに、全体の進行状況バーで指定された色で塗りつぶす*clrBar*します。  
   
  [in]*clrProgressText*  
- A`COLORREF`を現在の進行状況のテキスト形式のテキストの色を示すパラメーターです。 場合、このパラメーターは無視されます*bProgressText*に設定されている`FALSE`です。  
+ 現在の進行状況のテキスト表現のテキストの色を示す COLORREF パラメーター。 場合、このパラメーターは無視されます*bProgressText*が FALSE に設定します。  
   
  [in]*bProgressText*  
- 現在の進行状況のテキスト表現を表示するかどうかを示すブール値パラメーターです。  
+ 現在の進行状況のテキスト表現を表示するかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、`CMFCStatusBar`オブジェクト。  
   
 ##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManager::OnDrawStatusBarSizeBox  
- フレームワークは、の [サイズ] ボックスを描画するときにこのメソッドを呼び出して、 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)です。  
+ フレームワークは、の [サイズ] ボックスを描画するときにこのメソッドを呼び出して、 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)します。  
   
 ```  
 virtual void OnDrawStatusBarSizeBox(
@@ -3619,13 +3619,13 @@ virtual void OnDrawStatusBarSizeBox(
  デバイス コンテキストへのポインター。  
   
  [in]*pStatBar*  
- ステータス バーへのポインター。 フレームワークでは、このステータス バーの [サイズ] ボックスを描画します。  
+ ステータス バーへのポインター。 フレームワークでは、このステータス バーのサイズのボックスを描画します。  
   
  [in]*rectSizeBox*  
  [サイズ] ボックスの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- サイズ ボックスの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCStatusBar`です。  
+ サイズ ボックスの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCStatusBar`します。  
   
 ##  <a name="ondrawtab"></a>  CMFCVisualManager::OnDrawTab  
  フレームワークは、タブを描画するときにこのメソッドを呼び出して、 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクト。  
@@ -3647,13 +3647,13 @@ virtual void OnDrawTab(
  タブ コントロールの境界を指定する四角形。  
   
  [in]*iTab*  
- フレームワークによって描画されるタブのインデックス。  
+ フレームワークを描画するタブのインデックス。  
   
  [in]*bIsActive*  
- タブがアクティブかどうかを示すブール値パラメーター。  
+ タブがアクティブかどうかを指定するブール型パラメーター。  
   
  [in]*pTabWnd*  
- ポインター、`CMFCBaseTabCtrl`オブジェクト。 フレームワークでは、このタブ コントロールを描画します。  
+ ポインターを`CMFCBaseTabCtrl`オブジェクト。 フレームワークでは、このタブ コントロールを描画します。  
   
 ### <a name="remarks"></a>Remarks  
  A`CMFCBaseTabCtrl`オブジェクトが WM_PAINT メッセージを処理するときに、このメソッドを呼び出します。  
@@ -3661,7 +3661,7 @@ virtual void OnDrawTab(
  タブの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManager::OnDrawTabCloseButton  
- フレームワークは、描画するときにこのメソッドを呼び出して、**閉じる**アクティブなタブにボタンをクリックします。  
+ 描画するとき、フレームワークはこのメソッドを呼び出して、**閉じる**アクティブなタブにボタンをクリックします。  
   
 ```  
 virtual void OnDrawTabCloseButton(
@@ -3678,10 +3678,10 @@ virtual void OnDrawTabCloseButton(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- 境界を指定する四角形、**閉じる**ボタンをクリックします。  
+ 四角形の境界を指定する、**閉じる**ボタンをクリックします。  
   
  [in]*pTabWnd*  
- タブ コントロールへのポインター。 フレームワークは、描画、**閉じる**このタブ コントロールのボタンをクリックします。  
+ タブ コントロールへのポインター。 フレームワークは、描画、**閉じる**タブ コントロールのボタンをクリックします。  
   
  [in]*bIsHighlighted*  
  示すブール値パラメーターかどうか、**閉じる**ボタンが強調表示されます。  
@@ -3693,10 +3693,10 @@ virtual void OnDrawTabCloseButton(
  示すブール値パラメーターかどうか、**閉じる**ボタンが無効になります。  
   
 ### <a name="remarks"></a>Remarks  
- 外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、**閉じる**のアクティブなタブ上のボタン*pTabWnd*です。  
+ 外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、**閉じる**のアクティブなタブにボタン*pTabWnd*します。  
   
 ##  <a name="ondrawtabcontent"></a>  CMFCVisualManager::OnDrawTabContent  
- インスタンスの内部にある内容を描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)です。  
+ インスタンスの内部にある内容を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)します。  
   
 ```  
 virtual void OnDrawTabContent(
@@ -3713,22 +3713,22 @@ virtual void OnDrawTabContent(
  デバイス コンテキストへのポインター。  
   
  [in]*rectTab*  
- タブの内容の境界を指定する四角形。  
+ タブの内部の境界を指定する四角形。  
   
  [in]*iTab*  
- タブの 0 から始まるインデックス。フレームワークでは、このタブの内部を描画します。  
+ タブの 0 から始まるインデックス。フレームワークは、このタブの内部を描画します。  
   
  [in]*bIsActive*  
  タブがアクティブかどうかを示すブール値パラメーター。  
   
  [in]*pTabWnd*  
- 描画するタブを含むタブ付きコントロールへのポインター。  
+ 描画されているタブを含むタブ付きコントロールへのポインター。  
   
  [in]*clrText*  
  タブの内部のテキストの色。  
   
 ### <a name="remarks"></a>Remarks  
- タブの内部には、テキストと、タブのアイコンが含まれています。タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ タブの内部には、テキスト、タブのアイコンが含まれています。タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManager::OnDrawTabsButtonBorder  
  フレームワークは、タブ ボタンの境界線を描画するときに、このメソッドを呼び出します。  
@@ -3750,19 +3750,19 @@ virtual void OnDrawTabsButtonBorder(
  [タブ] ボタンの境界を指定する四角形。  
   
  [in]*pButton*  
- ポインター、 [CMFCButton](../../mfc/reference/cmfcbutton-class.md)オブジェクト。 フレームワークはこの枠線を描画`CMFCButton`インスタンス。  
+ ポインターを[CMFCButton](../../mfc/reference/cmfcbutton-class.md)オブジェクト。 フレームワークは、この境界線を描画`CMFCButton`インスタンス。  
   
  [in]*uiState*  
  ボタンの状態を指定する符号なし整数。  
   
  [in]*pWndTab*  
- 親タブ ウィンドウへのポインター。  
+ 親のタブ ウィンドウへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- [タブ] ボタンの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ [タブ] ボタンの境界線の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawtask"></a>  CMFCVisualManager::OnDrawTask  
- フレームワークは、描画するときにこのメソッドを呼び出して、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)オブジェクト。  
+ 描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawTask(
@@ -3778,24 +3778,24 @@ virtual void OnDrawTask(
  デバイス コンテキストへのポインター。  
   
  [in]*pTask*  
- ポインター、 [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)オブジェクト。 フレームワークでは、このタスクを描画します。  
+ ポインターを[CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)オブジェクト。 フレームワークは、このタスクを描画します。  
   
  [in]*pIcons*  
  作業ウィンドウに関連付けられているイメージ リストへのポインター。 各タスクには、このリスト内のイメージのインデックスが含まれています。  
   
  [in]*bIsHighlighted*  
- 表示対象のタスクが強調表示されているかどうかを指定するブール型のパラメーターです。  
+ 表示されるタスクが強調表示されているかどうかを指定するブール型パラメーター。  
   
  [in]*bIsSelected*  
- 表示対象のタスクが選択されているかどうかを指定するブール型のパラメーターです。  
+ 表示されるタスクが選択されているかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークでは、タスク バーで、アイコンとテキストの両方としてタスクが表示されます。 *PIcons*パラメーターによって示されるタスクのアイコンが含まれる*pTask*です。  
+ フレームワークには、タスク バー アイコンおよびテキストの両方でタスクが表示されます。 *PIcons*パラメーターによって示されるタスクのアイコンが含まれる*pTask*します。  
   
- タスク バー上のタスクの外観をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。  
+ タスク バー上のタスクの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManager::OnDrawTasksGroupAreaBorder  
- フレームワークは、グループの周囲に罫線を描画するときにこのメソッドを呼び出して、 [CMFCTasksPane クラス](../../mfc/reference/cmfctaskspane-class.md)です。  
+ グループの周りに罫線を描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCTasksPane クラス](../../mfc/reference/cmfctaskspane-class.md)します。  
   
 ```  
 virtual void OnDrawTasksGroupAreaBorder(
@@ -3810,19 +3810,19 @@ virtual void OnDrawTasksGroupAreaBorder(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- タスク ウィンドウで [グループ] 領域の境界を指定する四角形。  
+ タスク ウィンドウで、グループ領域の境界を示す四角形。  
   
  [in]*bSpecial*  
- 枠線を強調表示するかを示すブール型パラメーターです。 値`TRUE`枠線が強調表示されていることを示します。  
+ 境界線が強調表示されているかどうかを指定するブール型パラメーター。 TRUE の値は、枠線が強調表示されていることを示します。  
   
  [in]*bNoTitle*  
- [グループ] 領域にタイトルが付いているかどうかを指定するブール型のパラメーターです。 値`TRUE`グループ領域にタイトルがないことを示します。  
+ [グループ] 領域にタイトルが付いているかどうかを指定するブール型パラメーター。 TRUE の値は、グループ領域にタイトルがないことを示します。  
   
 ### <a name="remarks"></a>Remarks  
  タスク ウィンドウで、グループ領域の周りの境界線をカスタマイズする派生クラスでは、この関数をオーバーライドします。  
   
 ##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManager::OnDrawTasksGroupCaption  
- キャプションを描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)オブジェクト。  
+ キャプションを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)オブジェクト。  
   
 ```  
 virtual void OnDrawTasksGroupCaption(
@@ -3838,21 +3838,21 @@ virtual void OnDrawTasksGroupCaption(
  デバイス コンテキストへのポインター。  
   
  [in]*pGroup*  
- ポインター、`CMFCTasksPaneTaskGroup`オブジェクト。 フレームワークは、このグループのキャプションを描画します。  
+ ポインターを`CMFCTasksPaneTaskGroup`オブジェクト。 フレームワークは、このグループのキャプションを描画します。  
   
  [in]*bIsHighlighted*  
- グループが強調表示されているかどうかを示すブール値パラメーターです。  
+ グループが強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*bIsSelected*  
- グループが現在選択されているかどうかを示すブール値パラメーターです。  
+ グループが現在選択されているかどうかを示すブール値パラメーター。  
   
  [in]*bCanCollapse*  
- グループを折りたためるかどうかを示すブール値パラメーターです。  
+ グループを折りたためるかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
  タスク グループが表示されます、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)オブジェクト。  
   
- キャプションをカスタマイズする派生クラスでは、このメソッドをオーバーライドして、`CMFCTasksPaneTaskGroup`です。  
+ キャプションをカスタマイズする派生クラスでは、このメソッドをオーバーライドして、`CMFCTasksPaneTaskGroup`します。  
   
 ##  <a name="ondrawtasksgroupicon"></a>  CMFCVisualManager::OnDrawTasksGroupIcon  
 
@@ -3878,7 +3878,7 @@ virtual void OnDrawTasksGroupIcon(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManager::OnDrawTearOffCaption  
- キャプションを描画するときにフレームワークがこのメソッドを呼び出して、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)です。  
+ キャプションを描画するとき、フレームワークはこのメソッドを呼び出して、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)します。  
   
 ```  
 virtual void OnDrawTearOffCaption(
@@ -3892,15 +3892,15 @@ virtual void OnDrawTearOffCaption(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- キャプションの境界を指定する四角形。  
+ キャプションの境界を示す四角形。  
   
  [in]*bIsActive*  
- `TRUE` キャプションがアクティブである場合`FALSE`それ以外の場合。  
+ キャプションがアクティブである場合は TRUEFALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、フレームワークによって呼び出されますときに、`CMFCPopupMenu`オブジェクトが WM_PAINT メッセージを処理し、ティアオフ キャプションを描画する必要があります。  
+ この関数がフレームワークによって呼び出されたときに、`CMFCPopupMenu`オブジェクトが WM_PAINT メッセージを処理し、ティアオフ キャプションを描画する必要があります。  
   
- ティアオフ バーのキャプションの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。  
+ ティアオフ バーのキャプションの外観をカスタマイズする派生クラスでは、このメソッドをオーバーライドします。  
   
 ##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManager::OnDrawToolBoxFrame  
 
@@ -3934,7 +3934,7 @@ virtual BOOL OnEraseMDIClientArea(
  MDI クライアント領域の境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
- 予約済みの値。 既定の実装では、`FALSE` が返されます。  
+ 予約済みの値。 既定の実装では、FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
  ビジュアル マネージャー MDI クライアント領域を消去するときに、カスタム コードを実行するには、このメソッドをオーバーライドします。  
@@ -3977,9 +3977,9 @@ virtual void OnEraseTabsArea(
  タブ ウィンドウへのポインター。 フレームワークは、指定したタブ ウィンドウのタブ領域を消去します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、フレームワークによって呼び出されますときに、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクトが WM_PAINT メッセージを処理し、タブ領域を消去します。  
+ この関数がフレームワークによって呼び出されたときに、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクトが WM_PAINT メッセージを処理し、タブ領域を消去します。  
   
- タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onerasetabsbutton"></a>  CMFCVisualManager::OnEraseTabsButton  
  フレームワークは、タブ ボタンのアイコンとテキストを消去するときに、このメソッドを呼び出します。  
@@ -4006,12 +4006,12 @@ virtual void OnEraseTabsButton(
  [タブ] ボタンを含むタブ コントロールへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークには、テキストとボタンのアイコンが消去されるときに、 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクトは処理されます。  
+ フレームワークは、テキストとボタンのアイコン、消去時に、 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) WM_ERASEBKGND メッセージを処理するオブジェクト。  
   
- タブ ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ タブ ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onerasetabsframe"></a>  CMFCVisualManager::OnEraseTabsFrame  
- フレームワークは、上のフレームを消去するときにこのメソッドを呼び出して、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)です。  
+ 上のフレームを消去するとき、フレームワークはこのメソッドを呼び出して、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)します。  
   
 ```  
 virtual BOOL OnEraseTabsFrame(
@@ -4028,10 +4028,10 @@ virtual BOOL OnEraseTabsFrame(
  タブ ウィンドウの境界を指定する四角形。  
   
  [in]*pTabWnd*  
- タブ ウィンドウへのポインター。 フレームワークはこのフレームを消去`CMFCBaseTabCtrl`です。  
+ タブ ウィンドウへのポインター。 フレームワークは、このフレームを消去`CMFCBaseTabCtrl`します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合`FALSE`それ以外の場合。  
+ メソッドが成功した場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
  このメソッドで示された領域を塗りつぶします*rect*アクティブなタブの背景色を使用します。呼び出されたときに、`CMFCBaseTabCtrl`オブジェクトが WM_PAINT メッセージを処理し、タブ フレームを消去します。  
@@ -4051,13 +4051,13 @@ virtual void OnFillAutoHideButtonBackground(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- 自動的に隠すボタンの境界を指定する四角形。  
+ 自動的に隠すボタンの境界を示す四角形。  
   
  [in]*pButton*  
- ポインター、 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクト。 フレームワークは、この自動的に隠すボタンの背景を塗りつぶします。  
+ ポインターを[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクト。 フレームワークは、この自動的に隠すボタンの背景を塗りつぶします。  
   
 ### <a name="remarks"></a>Remarks  
- 自動的に隠すボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ 自動的に隠すボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfillbarbackground"></a>  CMFCVisualManager::OnFillBarBackground  
  背景を塗りつぶすときに、フレームワークはこのメソッドを呼び出して、 [CBasePane](../../mfc/reference/cbasepane-class.md)オブジェクト。  
@@ -4073,25 +4073,25 @@ virtual void OnFillBarBackground(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pDC*  
- コントロール バーをデバイス コンテキストへのポインター。  
+ コントロール バー用にデバイス コンテキストへのポインター。  
   
  [in]*pBar*  
- ポインター、`CBasePane`オブジェクト。 フレームワークは、このペインの背景を塗りつぶします。  
+ ポインターを`CBasePane`オブジェクト。 フレームワークは、このペインの背景を塗りつぶします。  
   
  [in]*rectClient*  
  ウィンドウの境界を指定する四角形。  
   
  [in]*rectClip*  
- ウィンドウのクリッピング領域を指定する四角形。  
+ ウィンドウのクリッピング領域を示す四角形。  
   
  [in]*bNCArea*  
  予約済みの値。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装は、グローバル変数からの 3d の背景色でバーの背景を塗りつぶす`afxGlobalData`です。 ウィンドウの背景をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ このメソッドの既定の実装は、グローバル変数からの 3d の背景色でバーの背景を塗りつぶす`afxGlobalData`します。 ウィンドウの背景をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ### <a name="example"></a>例  
- 次の例で使用する方法、`OnFillBarBackground`で、`CMFCVisualManager`クラスです。 このコード スニペットの一部である、 [Outlook デモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、使用する方法、`OnFillBarBackground`で、`CMFCVisualManager`クラス。 このコード スニペットの一部、 [Outlook デモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]  
   
@@ -4111,7 +4111,7 @@ virtual void OnFillButtonInterior(
  ツール バー ボタンのデバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ポインター、 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)です。 フレームワークは、このボタンの背景を塗りつぶします。  
+ ポインターを[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)します。 フレームワークは、このボタンの背景を塗りつぶします。  
   
  [in]*rect*  
  ツール バー ボタンの境界を指定する四角形。  
@@ -4120,9 +4120,9 @@ virtual void OnFillButtonInterior(
  ツール バー ボタンの状態。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、既定の色を使用して背景を塗りつぶします。 ツール バー ボタンの背景をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ このメソッドの既定の実装では、背景の塗りつぶしに既定の色を使用します。 ツール バー ボタンの背景をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
- ツール バー ボタンの状態には`ButtonsIsRegular`、 `ButtonsIsPressed`、または`ButtonsIsHighlighted`です。  
+ ツール バー ボタンの状態には、 `ButtonsIsRegular`、 `ButtonsIsPressed`、または`ButtonsIsHighlighted`します。  
   
 ##  <a name="onfillcaptionbarbutton"></a>  CMFCVisualManager::OnFillCaptionBarButton  
 
@@ -4154,7 +4154,7 @@ virtual COLORREF OnFillCaptionBarButton(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManager::OnFillCommandsListBackground  
- フレームワークは、コマンド リストが属しているツール バー ボタンの背景を塗りつぶすときに、このメソッドを呼び出します。 このコマンドの一覧は、カスタム ダイアログの一部です。  
+ フレームワークは、コマンドの一覧に属するツール バー ボタンの背景を塗りつぶすときに、このメソッドを呼び出します。 このコマンドの一覧には、カスタマイズ ダイアログの一部です。  
   
 ```  
 virtual COLORREF OnFillCommandsListBackground(
@@ -4168,16 +4168,16 @@ virtual COLORREF OnFillCommandsListBackground(
  デバイス コンテキストへのポインター。  
   
  [in]*rect*  
- ボタンの境界を指定する四角形。  
+ ボタンの境界を示す四角形。  
   
  [in]*bIsSelected*  
- ボタンが選択されているかどうかを示すブール値パラメーターです。  
+ ボタンが選択されているかどうかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  ツール バー ボタンのテキストの色。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、[カスタマイズ] ボックスの一覧、次を参照してください。 [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)です。 このメソッドの既定の実装では、現在選択されているスキンの配色に基づく背景を塗りつぶします。  
+ カスタマイズの一覧に関する詳細については、次を参照してください。 [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)します。 このメソッドの既定の実装では、現在選択されているスキンのカラー スキームに基づく背景を塗りつぶします。  
   
 ##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManager::OnFillHeaderCtrlBackground  
  フレームワークは、ヘッダー コントロールの背景を塗りつぶすときに、このメソッドを呼び出します。  
@@ -4191,7 +4191,7 @@ virtual void OnFillHeaderCtrlBackground(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pCtrl*  
- ポインター、 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)オブジェクト。 フレームワークは、このヘッダー コントロールの背景を塗りつぶします。  
+ ポインターを[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)オブジェクト。 フレームワークは、このヘッダー コントロールの背景を塗りつぶします。  
   
  [in]*pDC*  
  デバイス コンテキストへのポインター。  
@@ -4200,7 +4200,7 @@ virtual void OnFillHeaderCtrlBackground(
  ヘッダー コントロールの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- ヘッダー コントロールの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ ヘッダー コントロールの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfillminiframecaption"></a>  CMFCVisualManager::OnFillMiniFrameCaption  
  ミニフレーム ウィンドウのキャプション バーを塗りつぶすときに、フレームワークはこのメソッドを呼び出します。  
@@ -4221,16 +4221,16 @@ virtual COLORREF OnFillMiniFrameCaption(
  キャプション バーの境界を指定する四角形。  
   
  [in]*pFrameWnd*  
- ミニフレーム ウィンドウへのポインター。 フレームワークでは、このウィンドウのキャプション バーを描画します。  
+ ミニフレーム ウィンドウへのポインター。 フレームワークは、このウィンドウのキャプション バーを描画します。  
   
  [in]*描画*  
- ウィンドウがアクティブかを示すブール値パラメーター。  
+ ウィンドウがアクティブであるかを示すブール値パラメーター。  
   
 ### <a name="return-value"></a>戻り値  
  キャプション バーの背景の塗りつぶしに使用される色。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、アクティブなスキンの現在のキャプションの色とキャプション バーを塗りつぶします。  
+ このメソッドの既定の実装では、アクティブなスキンの現在のキャプション色でキャプション バーを塗りつぶします。  
   
 ##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManager::OnFillOutlookBarCaption  
  フレームワークは、Outlook のキャプション バーの背景を塗りつぶすときに、このメソッドを呼び出します。  
@@ -4250,10 +4250,10 @@ virtual void OnFillOutlookBarCaption(
  キャプション バーの境界を指定する四角形。  
   
  [out]*clrText*  
- 参照、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 メソッドは、このパラメーターに、キャプション バーのテキストの色を書き込みます。  
+ 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 メソッドは、このパラメーターに、キャプション バーにテキストの色を書き込みます。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装では、現在のスキンに基づく影の色でキャプション バーを塗りつぶします。 Outlook のキャプション バーの色をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ このメソッドの既定の実装では、現在のスキンを使用して影の色でキャプション バーを塗りつぶします。 Outlook のキャプション バーの色をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManager::OnFillOutlookPageButton  
  フレームワークは、Outlook のページ ボタンの内部を塗りつぶすときに、このメソッドを呼び出します。  
@@ -4275,16 +4275,16 @@ virtual void OnFillOutlookPageButton(
  Outlook のページ ボタンの境界を指定する四角形。  
   
  [in]*bIsHighlighted*  
- ボタンが強調表示されているかどうかを指定するブール型のパラメーターです。  
+ ボタンが強調表示されているかどうかを指定するブール型パラメーター。  
   
  [in]*bIsPressed*  
  ボタンが押されたかどうかを指定するブール型パラメーター。  
   
  [out]*clrText*  
- 参照、 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 このメソッドは、このパラメーターに、outlook のページ ボタンのテキストの色を格納します。  
+ 参照を[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)パラメーター。 このメソッドは、このパラメーターに outlook のページ ボタンのテキストの色を格納します。  
   
 ### <a name="remarks"></a>Remarks  
- Outlook のページ ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこの関数をオーバーライドします。  
+ Outlook のページ ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、この関数をオーバーライドします。  
   
 ##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManager::OnFillPopupWindowBackground  
  フレームワークは、ポップアップ ウィンドウの背景を塗りつぶすときに、このメソッドを呼び出します。  
@@ -4303,7 +4303,7 @@ virtual void OnFillPopupWindowBackground(
  ポップアップ ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- ポップアップ ウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ ポップアップ ウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfillribbonbutton"></a>  CMFCVisualManager::OnFillRibbonButton  
  フレームワークは、リボン ボタンの内部を塗りつぶすときに、このメソッドを呼び出します。  
@@ -4319,16 +4319,16 @@ virtual COLORREF OnFillRibbonButton(
  デバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ポインター、 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンの内部を塗りつぶします。  
+ ポインターを[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンの内部を塗りつぶします。  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたリボン ボタンのテキストの色*pButton*リボン ボタンのテキストをサポートしている場合。 テキストは、リボン ボタンの無効の場合は-1 の値です。  
+ 指定されたリボン ボタンのテキストの色*pButton*リボン ボタンのテキストをサポートしている場合。 テキストがリボン ボタンの有効な場合は-1 の値。  
   
 ### <a name="remarks"></a>Remarks  
- リボン ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ リボン ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfillribbonedit"></a>  CMFCVisualManager::OnFillRibbonEdit  
- インスタンスの内部を塗りつぶすときに、フレームワークはこのメソッドを呼び出して、`CMFCRibbonRichEditCtrl`クラスです。  
+ インスタンスの内部を塗りつぶすときに、フレームワークはこのメソッドを呼び出して、`CMFCRibbonRichEditCtrl`クラス。  
   
 ```  
 virtual void OnFillRibbonEdit(
@@ -4348,36 +4348,36 @@ virtual void OnFillRibbonEdit(
  デバイス コンテキストへのポインター。  
   
  [in]*pEdit*  
- ポインター、`CMFCRibbonRichEditCtrl`オブジェクト。 フレームワークは、このエディット コントロールの内部を塗りつぶします。  
+ ポインターを`CMFCRibbonRichEditCtrl`オブジェクト。 フレームワークは、このエディット コントロールの内部を塗りつぶします。  
   
  [in]*rect*  
  エディット コントロールの境界を指定する四角形。  
   
  [in]*bIsHighlighted*  
- エディット コントロールが強調表示されているかどうかを示すブール値パラメーターです。  
+ 編集コントロールが強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*bIsPaneHighlighted*  
- 親ウィンドウが強調表示されているかどうかを示すブール値パラメーターです。  
+ 親ウィンドウが強調表示されているかどうかを示すブール値パラメーター。  
   
  [in]*bIsDisabled*  
  エディット コントロールが使用できるかどうかを示すブール値パラメーター。  
   
  [in]*clrText*  
- エディット コントロールのテキストの色への参照。  
+ 編集コントロールのテキストの色への参照。  
   
  [in]*clrSelBackground*  
- エディット コントロールが強調表示されているときの背景色への参照。  
+ 強調表示されている場合は、エディット コントロールの背景色への参照。  
   
  [in]*clrSelText*  
- エディット コントロールで選択したテキストの色への参照。  
+ 編集コントロールに、選択したテキストの色への参照。  
   
 ### <a name="remarks"></a>Remarks  
- `CMFCRibbonRichEditCtrl`によって示される*pEdit*リボンのコンボ ボックス ボタンの一部にできます。  
+ `CMFCRibbonRichEditCtrl`によって示される*pEdit*リボンのコンボ ボックス ボタンを含めることができます。  
   
- 外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonRichEditCtrl`です。  
+ 外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドする`CMFCRibbonRichEditCtrl`します。  
   
 ##  <a name="onfillribbonmainpanelbutton"></a>  CMFCVisualManager::OnFillRibbonMainPanelButton  
- あるリボン ボタンの内部を塗りつぶすときに、フレームワークはこのメソッドを呼び出して、 **Main**パネルです。  
+ 上にあるリボン ボタンの内部を塗りつぶすときに、フレームワークはこのメソッドを呼び出して、 **Main**パネル。  
   
 ```  
 virtual COLORREF OnFillRibbonMainPanelButton(
@@ -4390,13 +4390,13 @@ virtual COLORREF OnFillRibbonMainPanelButton(
  デバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ポインター、 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンを塗りつぶします。  
+ ポインターを[CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)オブジェクト。 フレームワークは、このリボン ボタンを塗りつぶします。  
   
 ### <a name="return-value"></a>戻り値  
- 指定されたリボン ボタンのテキストの色*pButton*リボン ボタンのテキストをサポートしている場合。 テキストは、リボン ボタンの無効の場合は-1 の値です。  
+ 指定されたリボン ボタンのテキストの色*pButton*リボン ボタンのテキストをサポートしている場合。 テキストがリボン ボタンの有効な場合は-1 の値。  
   
 ### <a name="remarks"></a>Remarks  
- リボン ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、 **Main**パネルです。  
+ リボン ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドして、 **Main**パネル。  
   
 ##  <a name="onfillribbonmenuframe"></a>  CMFCVisualManager::OnFillRibbonMenuFrame  
  フレームワークは、リボン パネルのメニューのフレームを塗りつぶすときに、このメソッドを呼び出します。  
@@ -4413,13 +4413,13 @@ virtual void OnFillRibbonMenuFrame(
  デバイス コンテキストへのポインター。  
   
  [in]*pPanel*  
- インスタンスへのポインター、 [CMFCRibbonMainPanel クラス](../../mfc/reference/cmfcribbonmainpanel-class.md)です。 フレームワークは、このリボン パネル メニュー フレームを塗りつぶします。  
+ インスタンスへのポインター、 [CMFCRibbonMainPanel クラス](../../mfc/reference/cmfcribbonmainpanel-class.md)します。 フレームワークは、このリボン パネル メニュー フレームを塗りつぶします。  
   
  [in]*rect*  
- メニューのフレームの境界を指定する四角形。  
+ メニュー フレームの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- メニュー バーの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドして、`CMFCRibbonMainPanel`です。  
+ メニュー バーの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライド、`CMFCRibbonMainPanel`します。  
   
 ##  <a name="onfillribbonquickaccesstoolbarpopup"></a>  CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup  
 
@@ -4439,7 +4439,7 @@ virtual void OnFillRibbonQuickAccessToolBarPopup(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onfillsplitterbackground"></a>  CMFCVisualManager::OnFillSplitterBackground  
- 分割ウィンドウの背景を塗りつぶすときに、フレームワークはこのメソッドを呼び出します。  
+ フレームワークは、分割ウィンドウの背景を塗りつぶすときに、このメソッドを呼び出します。  
   
 ```  
 virtual void OnFillSplitterBackground(
@@ -4453,13 +4453,13 @@ virtual void OnFillSplitterBackground(
  デバイス コンテキストへのポインター。  
   
  [in]*pSplitterWnd*  
- インスタンスへのポインター、 [CSplitterWndEx クラス](csplitterwndex-class.md)です。 フレームワークは、この分割ウィンドウの背景を塗りつぶします。  
+ インスタンスへのポインター、 [CSplitterWndEx クラス](csplitterwndex-class.md)します。 フレームワークは、このスプリッター ウィンドウの背景を塗りつぶします。  
   
  [in]*rect*  
- 分割ウィンドウの境界を指定する四角形。  
+ スプリッター ウィンドウの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- 分割ウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ スプリッター ウィンドウの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfilltab"></a>  CMFCVisualManager::OnFillTab  
  フレームワークは、タブ ウィンドウの背景を塗りつぶすときに、このメソッドを呼び出します。  
@@ -4482,19 +4482,19 @@ virtual void OnFillTab(
  タブ ウィンドウの境界を指定する四角形。  
   
  [in]*pbrFill*  
- ブラシへのポインター。 フレームワークでは、このブラシを使用して、[タブ] ウィンドウを塗りつぶします。  
+ ブラシへのポインター。 フレームワークでは、このブラシを使用してタブ ウィンドウを塗りつぶします。  
   
  [in]*iTab*  
- 対象のフレームワークが背景を塗りつぶす タブの 0 から始まる タブのインデックス。  
+ フレームワークの背景を塗りつぶす タブのタブの 0 から始まるインデックス。  
   
  [in]*bIsActive*  
- `TRUE` タブがアクティブである場合、それ以外の場合`FALSE`です。  
+ タブがアクティブである場合は TRUE。それ以外の場合は FALSE です。  
   
  [in]*pTabWnd*  
  親のタブ コントロールへのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManager::OnFillTasksGroupInterior  
  内部を塗りつぶすときに、フレームワークはこのメソッドを呼び出して、 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)オブジェクト。  
@@ -4517,7 +4517,7 @@ virtual void OnFillTasksGroupInterior(
  内部は特別な色で塗りつぶされますかどうかを示すブール値。  
   
 ### <a name="remarks"></a>Remarks  
- タスク グループの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ タスク グループの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManager::OnFillTasksPaneBackground  
  背景を塗りつぶすときに、フレームワークはこのメソッドを呼び出して、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)コントロール。  
@@ -4554,18 +4554,18 @@ virtual void OnHighlightMenuItem(
  メニューのデバイス コンテキストへのポインター。  
   
  [in]*pButton*  
- ポインター、 [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)を表示するオブジェクト。 既定の実装では、このパラメーターは使用しません。  
+ ポインターを[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)を表示するオブジェクト。 既定の実装では、このパラメーターを使用しません。  
   
  [in]*rect*  
  メニュー項目の境界を指定する四角形。  
   
  [in]*clrText*  
- 強調表示されたメニュー項目の現在のテキストの色。 既定の実装では、このパラメーターは使用しません。  
+ 強調表示されたメニュー項目の現在のテキストの色。 既定の実装では、このパラメーターを使用しません。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドの既定の実装は、パラメーターを使用していない*pButton*または*clrText*です。 によって指定される四角形を塗りつぶす*rect*標準の背景色を使用します。  
+ このメソッドの既定の実装は、パラメーターを使用しない*pButton*または*clrText*します。 指定された四角形を塗りつぶします*rect*標準の背景色を使用します。  
   
- 強調表示されたメニュー項目の外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。 使用して、 *clrText*を強調表示されたメニュー項目のテキストの色を変更するパラメーターです。  
+ 強調表示されたメニュー項目の外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。 使用して、 *clrText*を強調表示されたメニュー項目のテキストの色を変更するパラメーター。  
   
 ##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManager::OnHighlightRarelyUsedMenuItems  
  フレームワークは、強調表示されたメニュー コマンドを描画するときに、このメソッドを呼び出します。  
@@ -4581,10 +4581,10 @@ virtual void OnHighlightRarelyUsedMenuItems(
  デバイス コンテキストへのポインター。  
   
  [in]*rectRarelyUsed*  
- 強調表示されたコマンドの境界を指定する四角形。  
+ 強調表示されているコマンドの境界を指定する四角形。  
   
 ### <a name="remarks"></a>Remarks  
- 強調表示されたメニュー コマンドの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ 強調表示されたメニュー コマンドの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onncactivate"></a>  CMFCVisualManager::OnNcActivate  
 
@@ -4596,7 +4596,7 @@ virtual BOOL OnNcActivate(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  [in]*描画*  
   
 ### <a name="return-value"></a>戻り値  
@@ -4614,20 +4614,20 @@ virtual BOOL OnNcPaint(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  フレームワークは、描画非クライアント領域を持つウィンドウへのポインター。  
   
  [in]*lstSysButtons*  
- システム ボタンの一覧。 キャプション ボタンとも呼ばれます。  
+ システム ボタンの一覧。 これらは、キャプション ボタンとも呼ばれます。  
   
  [in]*rectRedraw*  
  非クライアント領域の境界を指定する四角形。  
   
 ### <a name="return-value"></a>戻り値  
- 予約済みの値。 既定の実装では、`FALSE` が返されます。  
+ 予約済みの値。 既定の実装では、FALSE を返します。  
   
 ### <a name="remarks"></a>Remarks  
- ウィンドウ フレームとキャプション ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ ウィンドウ フレームとキャプション ボタンの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="onsetwindowregion"></a>  CMFCVisualManager::OnSetWindowRegion  
  フレームワークは、フレームとポップアップ メニューが含まれる領域を設定した後に、このメソッドを呼び出します。  
@@ -4639,17 +4639,17 @@ virtual BOOL OnSetWindowRegion(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [in]*pWnd*  
+ [in]*我が物*  
  変更領域のあるウィンドウへのポインター。  
   
  [in]*sizeWindow*  
  ウィンドウのサイズ。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メソッドが成功した場合`FALSE`それ以外の場合。  
+ メソッドが成功した場合は TRUE。FALSE それ以外の場合。  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークは、フレームとポップアップ メニューの領域が設定されているビジュアル マネージャーに通知するには、このメソッドを呼び出します。 詳細については、次を参照してください。 [CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)です。  
+ フレームワークは、フレームとポップアップ メニューの領域が設定されているビジュアル マネージャーに通知するには、このメソッドを呼び出します。 詳細については、次を参照してください。 [CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)します。  
   
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManager::OnUpdateSystemColors  
  フレームワークは、システム カラーが変更されたときに、この関数を呼び出します。  
@@ -4659,7 +4659,7 @@ virtual void OnUpdateSystemColors();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- フレームワークは、WM_SYSCOLORCHANGE メッセージの処理の一部としてこのメソッドを呼び出します。 既定の実装では、何も行われません。 色は、アプリケーションの変更時にカスタム コードを実行する場合は、派生のビジュアル マネージャーでこのメソッドをオーバーライドします。  
+ フレームワークでは、WM_SYSCOLORCHANGE メッセージの処理の一部としてこのメソッドを呼び出します。 既定の実装では、何も行われません。 アプリケーションで色を変更するときに、カスタム コードを実行する場合は、派生のビジュアル マネージャーでは、このメソッドをオーバーライドします。  
   
 ##  <a name="redrawall"></a>  CMFCVisualManager::RedrawAll  
  アプリケーションのすべてのコントロール バーをすぐに再描画します。  
@@ -4682,7 +4682,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
   
 ### <a name="remarks"></a>Remarks  
   
-##  <a name="setdefaultmanager"></a>  CMFCVisualManager::SetDefaultManager  
+##  <a name="setdefaultmanager"></a>  Cmfcvisualmanager::setdefaultmanager  
  既定のマネージャーを設定します。  
   
 ```  
@@ -4694,7 +4694,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
  ビジュアル マネージャーのランタイム情報へのポインター。  
   
 ### <a name="remarks"></a>Remarks  
- 使用して、`CMFCVisualManager`クラスおよびアプリケーションの外観をカスタマイズするビジュアル マネージャーを派生します。 既定のビジュアル マネージャーを設定すると、後にこのメソッドによって新しいビジュアル マネージャーを使用して、アプリケーションが再描画します。 ビジュアル マネージャーを使用する方法の詳細については、次を参照してください。[ビジュアル マネージャー](../../mfc/visualization-manager.md)です。  
+ 使用して、`CMFCVisualManager`クラスと派生した、アプリケーションの外観をカスタマイズするビジュアル マネージャー。 既定のビジュアル マネージャーを設定すると、このメソッドでは、新しいビジュアル マネージャーを使用してのアプリケーションが再描画します。 ビジュアル マネージャーを使用する方法の詳細については、次を参照してください。[ビジュアル マネージャー](../../mfc/visualization-manager.md)します。  
   
  このメソッドを使用すると、アプリケーションで使用するビジュアル マネージャーを変更できます。  
   
@@ -4707,13 +4707,13 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bEmboss*  
- エンボス モードを有効にするかどうかを示すブール値パラメーターには、ツール バー イメージが無効になります。  
+ エンボスのモードを有効にするかどうかを示すブール値パラメーターには、ツール バー イメージが無効になります。  
   
 ### <a name="remarks"></a>Remarks  
- 関数を使用して[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)エンボス モードが有効になっているかどうかを決定します。  
+ 関数を使用して[CMFCVisualManager::IsEmbossDisabledImage](#isembossdisabledimage)エンボス モードが有効になっているかどうかを判断します。  
   
 ##  <a name="setfadeinactiveimage"></a>  CMFCVisualManager::SetFadeInactiveImage  
- 有効またはメニューまたはツールバーを非アクティブなイメージの照明効果を無効にします。  
+ 有効または、メニューまたはツールバーを非アクティブなイメージの照明効果を無効にします。  
   
 ```  
 void SetFadeInactiveImage(BOOL bFade = TRUE);
@@ -4724,7 +4724,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
  照明効果を有効にするかどうかを指定するブール型パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- この機能は、メニューまたはツールバー フェード アクティブでないイメージが表示されるかどうかを制御します。 メソッドを使用して[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)をこの機能が有効になっているかどうかを判断します。  
+ この機能は、メニューまたはツールバーにフェードアウトされている非アクティブなイメージが表示されるかどうかを制御します。 メソッドを使用して[CMFCVisualManager::IsFadeInactiveImage](#isfadeinactiveimage)をこの機能が有効になっているかどうかを判断します。  
   
 ##  <a name="setmenuflatlook"></a>  CMFCVisualManager::SetMenuFlatLook  
  メニュー ボタンがフラットに表示されるかどうかを示すフラグを設定します。 それ以外の場合、3 次元表示されます。  
@@ -4738,10 +4738,10 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
  メニュー ボタンがフラットに表示されるかどうかを示すブール値パラメーター。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、この機能は無効です。  
+ 既定では、この機能は有効になっていません。  
   
 ##  <a name="setmenushadowdepth"></a>  CMFCVisualManager::SetMenuShadowDepth  
- 幅とメニュー シャドウの高さを設定します。  
+ 幅と高さのメニューの影を設定します。  
   
 ```  
 void SetMenuShadowDepth(int nDepth);
@@ -4752,7 +4752,7 @@ void SetMenuShadowDepth(int nDepth);
  メニューの影の深さをピクセル単位で指定する整数。  
   
 ### <a name="remarks"></a>Remarks  
- メニュー シャドウの幅と高さは同一でなければなりません。 既定値は、7 ピクセルです。  
+ メニューの影の幅と高さは、同一である必要があります。 既定値は、7 ピクセルです。  
   
 ##  <a name="setshadowhighlightedimage"></a>  CMFCVisualManager::SetShadowHighlightedImage  
  示すフラグを設定するかどうか、 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)強調表示されたイメージの影を表示します。  
@@ -4763,10 +4763,10 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bShadow*  
- ビジュアル マネージャーが強調表示されたイメージの下に影を表示するかどうかを示すブール値パラメーターです。  
+ ビジュアル マネージャーが下に影を表示するかどうかを指定するブール型パラメーターには、イメージが強調表示されます。  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、この機能は無効です。  
+ 既定では、この機能は無効になります。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

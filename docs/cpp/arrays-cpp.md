@@ -1,5 +1,5 @@
 ---
-title: 配列 (C++) |Microsoft ドキュメント
+title: 配列 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943547"
 ---
 # <a name="arrays-c"></a>配列 (C++)
 配列は同様なオブジェクトのコレクションです。 配列の最も簡単な例は、次のシーケンスで宣言できるベクターです。  
   
 ```  
   
-      decl-specifier identifier [ constant-expression ]  
+decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
 decl-specifier identifier [ constant-expression ]  
@@ -38,7 +39,7 @@ decl-specifier identifier [ constant-expression ]
   
 -   ストレージ クラスの指定子 (省略可能)。  
   
--   省略可能な**const**や`volatile`指定子。  
+-   省略可能な**const**や**揮発性**指定子。  
   
 -   配列要素の型の名前。  
   
@@ -46,17 +47,17 @@ decl-specifier identifier [ constant-expression ]
   
 -   識別子。  
   
--   角かっこで囲んだ整数型の定数式**です。** 追加の角かっこを使用して複数のディメンションが宣言されている場合は、角かっこの最初のセットに定数式を省略可能です。  
+-   角かっこで囲んだ整数型の定数式 **:operator[]** します。 追加の角かっこを使用して複数のディメンションが宣言された場合は、最初の組の角かっこで定数式を省略する可能性があります。  
   
 -   定数式を囲む追加の山かっこ (省略可能)。  
   
- 3. 初期化子 (省略可能)。  参照してください[初期化子](../cpp/initializers.md)です。  
+ 3. 初期化子 (省略可能)。  参照してください[初期化子](../cpp/initializers.md)します。  
   
- 配列の要素の数は、定数式によって取得できます。 配列の最初の要素は、ゼロ番目の要素と、最後の要素は、(*n*-1) 要素、場所*n*配列が格納できる要素の数です。 *定数式*整数型でなければなりませんし、0 より大きくなければなりません。 サイズが 0 の配列は配列の最後のフィールドが場合にのみ、`struct`または**共用体**Microsoft 拡張機能 (/Ze) が有効になっているとします。  
+ 配列の要素の数は、定数式によって取得できます。 配列の最初の要素は 0 番目の要素と、最後の要素は、(*n*-1) 要素を*n*配列が含む要素の数です。 *定数式*整数型である必要があるあり、0 より大きくなければなりません。 サイズが 0 の配列は、配列の最後のフィールドが場合にのみ、**構造体**または**共用体**Microsoft 拡張機能 (/Ze) が有効になっているとします。  
   
  次の例では、実行時に配列を定義する方法を示します。  
   
-```  
+```cpp 
 // arrays.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,22 +78,22 @@ int main() {
 }  
 ```  
   
- 配列は派生型であるため、関数、参照、および `void` を除く他の派生型または基本型から生成できます。  
+ 配列は、その他の派生型または基本型ただし関数は、参照から構築できるため、派生型と**void**します。  
   
  他の配列から生成された配列は、多次元配列です。 これらの多次元配列は、角かっこで囲まれた定数式を複数並べることで指定されます。 たとえば、次の宣言について考えます。  
   
-```  
+```cpp 
 int i2[5][7];  
 ```  
   
- これは、5 行 7 列の 2 次元行列に概念的に並べられる `int` 型の配列を指定します。  
+ 型の配列を指定します**int**、次の図に示すように 5 つの行と 7 つの列の 2 次元行列に概念的には配置後。  
   
  ![複数の概念レイアウト&#45;次元配列](../cpp/media/vc38rc1.gif "vc38RC1")  
 多次元配列の概念レイアウト  
   
- 初期化子リストを持つ多次元配列の宣言で (」の説明に従って[初期化子](../cpp/initializers.md))、最初の次元の境界を指定する定数式を省略することができます。 例えば:  
+ 初期化子リストを持つ多次元配列の宣言で (」の説明に従って[初期化子](../cpp/initializers.md))、最初の次元の境界を指定する定数式を省略できます。 例えば:  
   
-```  
+```cpp 
 // arrays2.cpp  
 // compile with: /c  
 const int cMarkets = 4;  
@@ -121,7 +122,7 @@ double TransportCosts[][cMarkets] = {
 ## <a name="example"></a>例  
  多次元配列の最初の次元の境界指定を省略する手法は、次のとおり関数宣言で使用することもできます。  
   
-```  
+```cpp 
 // multidimensional_arrays.cpp  
 // compile with: /EHsc  
 // arguments: 3  

@@ -1,5 +1,5 @@
 ---
-title: '例外処理のタイミング: 概要 |Microsoft ドキュメント'
+title: '例外処理のタイミング: 概要 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446925b6e00f4771229357effee0707af3fae52a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff2ac5abb13ae700e464635efc90a91c4a5835ab
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422177"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939417"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>例外処理のタイミング: 概要
-終了ハンドラーは、`__try` ステートメント ブロックがどのように終了された場合も常に実行されます。 終了の原因としては、`__try` ブロックからのジャンプ、制御がブロックの外に移動する `longjmp` ステートメント、例外処理によるスタックのアンワインドなどが考えられます。  
+終了ハンドラーの実行方法に関係なく **_ _try**ステートメント ブロックが終了します。 原因としてからのジャンプ、 **_ _try**ブロック、`longjmp`ステートメント ブロック、および例外処理によるスタックのアンワインドから制御を転送します。  
   
 > [!NOTE]
 >  Visual C++ は、`setjmp` ステートメントと `longjmp` ステートメントの 2 つの形式をサポートします。 高速なバージョンは終了処理をバイパスしますが、より効率的です。 このバージョンを使用するファイルをインクルード\<setjmp.h >。 もう一方のバージョンは、前の段落で説明したような終了処理をサポートします。 このバージョンを使用するファイルをインクルード\<setjmpex.h >。 高速バージョンでパフォーマンスがどの程度向上するかは、ハードウェア構成によって異なります。  
@@ -44,7 +44,7 @@ ms.locfileid: "32422177"
   
 3.  制御がこのフィルターを通過する (フィルターが 0 を返す) と、制御が通過できないフィルターが見つかるまで処理が続行されます。  
   
-4.  このフィルターには、-1 が返された場合、ここで例外が発生した、および終了は行われません、実行が続行されます。  
+4.  このフィルターは、-1 を返す場合、例外が発生したし、終了を行わずに実行が続行されます。  
   
 5.  フィルターが 1 を返すと、次のイベントが発生します。  
   

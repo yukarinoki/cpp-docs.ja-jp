@@ -1,5 +1,5 @@
 ---
-title: 単項演算子を含む式 |Microsoft ドキュメント
+title: 単項演算子を含む式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9301d4fdb09c63b7dc8e875e2b03a4990acec054
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416172"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941159"
 ---
 # <a name="expressions-with-unary-operators"></a>単項演算子を含む式
 単項演算子は、式の中で 1 つのオペランドに対してのみ作用します。 単項演算子は、次のとおりです。  
@@ -50,7 +50,7 @@ ms.locfileid: "32416172"
   
 -   [_ _alignof 演算子](../cpp/alignof-operator.md)  
   
--   [New 演算子](../cpp/new-operator-cpp.md)  
+-   [new 演算子](../cpp/new-operator-cpp.md)  
   
 -   [delete 演算子](../cpp/delete-operator-cpp.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "32416172"
   
 -   *単項演算子**キャスト式*  
   
--   `sizeof` *単項式*  
+-   **sizeof** *単項式*  
   
 -   `sizeof(` *型名* `)`  
   
@@ -76,15 +76,15 @@ ms.locfileid: "32416172"
   
 -   *割り当て解除式*  
   
- 任意*後置式*と見なされます、*単項式*、および任意の主な式と見なされるため、*後置式*、すべて一次式は、見なされます、*単項式*もします。 詳細については、次を参照してください。[後置式](../cpp/postfix-expressions.md)と[一次式](../cpp/primary-expressions.md)です。  
+ すべて*後置式*と見なされます、*単項式*、し、どの 1 次式と見なされるため、*後置式*、どの 1 次式は、見なされます、*単項式*もします。 詳細については、次を参照してください。[後置式](../cpp/postfix-expressions.md)と[一次式](../cpp/primary-expressions.md)します。  
   
- A*単項演算子*次の記号の 1 つ以上で構成されます。 `* & + - ! ~`  
+ A*単項演算子*の 1 つ以上の次の記号で構成されます。 `* & + - ! ~`  
   
- *キャスト式*型を変更する省略可能なキャストを単項式です。 詳細については、次を参照してください。[キャスト演算子: ()](../cpp/cast-operator-parens.md)です。  
+ *キャスト式*単項式の種類を変更する、省略可能なキャストです。 詳細については、次を参照してください。[キャスト演算子: ()](../cpp/cast-operator-parens.md)します。  
   
- *式*任意の式を指定できます。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)です。  
+ *式*式にできます。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)します。  
   
- *割り当て式*を指す、`new`演算子。 *解放式*を指す、`delete`演算子。 詳細については、このトピックで前述したリンクを参照してください。  
+ *割り当て式*を指す、**新しい**演算子。 *解放式*を指す、**削除**演算子。 詳細については、このトピックで前述したリンクを参照してください。  
   
 ## <a name="see-also"></a>関連項目  
  [式の型](../cpp/types-of-expressions.md)

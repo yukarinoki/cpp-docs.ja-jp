@@ -1,5 +1,5 @@
 ---
-title: CMultiLock クラス |Microsoft ドキュメント
+title: CMultiLock クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e578d3aece15f191bfad858923470d09bede74
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a098f275ec0c7b553d7ac192d7b588ffa6dcfa1b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039808"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849874"
 ---
 # <a name="cmultilock-class"></a>CMultiLock クラス
 マルチスレッド プログラムで複数のリソースのアクセス制御に使うアクセス コントロール機構を表します。  
@@ -52,20 +52,20 @@ class CMultiLock
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMultiLock::IsLocked](#islocked)|配列内の特定の同期オブジェクトがロックされているかどうかを判断します。|  
+|[CMultiLock::IsLocked](#islocked)|配列内の特定の同期オブジェクトがロックされているかどうかを決定します。|  
 |[CMultiLock::Lock](#lock)|同期オブジェクトの配列を待機します。|  
 |[CMultiLock::Unlock](#unlock)|すべての所有する同期オブジェクトを解放します。|  
   
 ## <a name="remarks"></a>Remarks  
  `CMultiLock` 基本クラスはありません。  
   
- 同期クラスを使用する[CSemaphore](../../mfc/reference/csemaphore-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)、および[CEvent](../../mfc/reference/cevent-class.md)、いずれかを作成することができます、`CMultiLock`または[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトを待機し、同期オブジェクトを解放します。 使用して`CMultiLock`特定の時点で使用できる複数のオブジェクトがある場合。 使用して`CSingleLock`のみ必要がある場合、一度に 1 つのオブジェクトで待機します。  
+ 同期クラスを使用する[CSemaphore](../../mfc/reference/csemaphore-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)、および[CEvent](../../mfc/reference/cevent-class.md)、いずれかを作成することができます、`CMultiLock`または[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトを待機し、同期オブジェクトを解放します。 使用して、`CMultiLock`特定の時刻に使用できる複数のオブジェクトがある場合。 使用`CSingleLock`のみ必要がある場合、一度に 1 つのオブジェクトで待機します。  
   
- 使用する、`CMultiLock`オブジェクト、最初待機する同期オブジェクトの配列を作成します。 次に、呼び出し、`CMultiLock`被制御リソースのクラスのメンバー関数内のオブジェクトのコンス トラクターです。 まず、[ロック](#lock)リソースが利用可能なかどうかを判断するメンバー関数 (通知)。 いずれかの場合は、メンバー関数の残りの部分を続行します。 リソースが使用できない場合は、リソースが解放されるまでの時間数を指定した待つか、failure を返します。 リソースの使用が完了したらを呼び出して、 [Unlock](#unlock)関数の場合、`CMultiLock`オブジェクトがもう一度、使用するか、許可、`CMultiLock`オブジェクトを破棄します。  
+ 使用する、`CMultiLock`オブジェクトは、まずで待機する同期オブジェクトの配列を作成します。 次に、呼び出し、`CMultiLock`制御されるリソースのクラスのメンバー関数内のオブジェクトのコンス トラクター。 呼び出して、[ロック](#lock)リソースが使用可能なかどうかを判断するメンバー関数 (通知)。 1 つは、メンバー関数の残りの部分に進みます。 リソースが使用できない場合は、一定のリソースが解放されるまでの時間を待つか、failure を返します。 リソースの使用が完了したら、後、 [Unlock](#unlock)関数の場合、`CMultiLock`オブジェクトがもう一度、使用するか、許可するが、`CMultiLock`オブジェクトを破棄します。  
   
- `CMultiLock` オブジェクトは、スレッドの数が多い場合、最も役に立つ`CEvent`オブジェクトに対応できます。 すべてを含む配列を作成、`CEvent`ポインター、および呼び出し`Lock`です。 これにより、イベントのいずれかが通知されるまで待機するスレッド。  
+ `CMultiLock` オブジェクトは、スレッドの数が多いが最も役に立つ`CEvent`オブジェクトに対応できます。 すべてを含む配列を作成、`CEvent`ポインター、および呼び出し`Lock`します。 これにより、イベントのいずれかが通知されるまで待機するスレッド。  
   
- 使用する方法の詳細についての`CMultiLock`、オブジェクトが、記事を参照して[マルチ スレッド: 同期クラスを使用する方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)です。  
+ 使用する方法の詳細についての`CMultiLock`オブジェクトは、記事を参照して[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CMultiLock`  
@@ -85,16 +85,16 @@ CMultiLock(
   
 ### <a name="parameters"></a>パラメーター  
  *ppObjects*  
- 待機する同期オブジェクトへのポインターの配列。 ことはできません**NULL**です。  
+ 待機する同期オブジェクトへのポインターの配列。 Nll は指定できません。  
   
  *dwCount*  
- 内のオブジェクト数*ppObjects*です。 1 以上であることが必要です。  
+ オブジェクトの数*ppObjects*します。 1 以上であることが必要です。  
   
  *bInitialLock*  
  最初に指定されたオブジェクトのいずれかにアクセスしようとするかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、待機する同期オブジェクトの配列の作成後に呼び出されます。 通常使用可能になる同期オブジェクトの 1 つを待機する必要があります、スレッド内から呼び出されます。  
+ この関数は待機する同期オブジェクトの配列を作成後に呼び出されます。 通常、使用可能になる同期オブジェクトの 1 つを待機する必要がありますのスレッド内から呼び出されます。  
   
 ##  <a name="islocked"></a>  CMultiLock::IsLocked  
  指定したオブジェクトが非シグナル状態かどうかを (使用不可)。  
@@ -108,10 +108,10 @@ BOOL IsLocked(DWORD dwItem);
  状態が照会されるオブジェクトに対応するオブジェクトの配列内のインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- 指定したオブジェクトがロックされている場合は 0 以外。それ以外の場合 0 を返します。  
+ 指定したオブジェクトがロックされている場合は 0 以外それ以外の場合 0 を返します。  
   
 ##  <a name="lock"></a>  CMultiLock::Lock  
- この関数に指定された同期オブジェクトによって制御されるリソースの 1 つ以上にアクセスするために、`CMultiLock`コンス トラクターです。  
+ 指定された同期オブジェクトによって制御されるリソースの 1 つ以上にアクセスするには、この関数を呼び出して、`CMultiLock`コンス トラクター。  
   
 ```  
 DWORD Lock(
@@ -122,40 +122,40 @@ DWORD Lock(
   
 ### <a name="parameters"></a>パラメーター  
  *dwTimeOut*  
- 同期オブジェクトを使用できるまで待機する時間を指定します (通知)。 場合**無限**、`Lock`がオブジェクトを返す前に通知されるまで待機します。  
+ 使用できる同期オブジェクトを待機する時間を指定します (通知)。 場合、無限`Lock`を返す前に、オブジェクトがシグナル状態になるまで待機します。  
   
  *bWaitForAll*  
- 返す前に、同時に待機しているすべてのオブジェクトをシグナル状態になる必要があるかどうかを指定します。 場合**FALSE**、`Lock`が待機しているオブジェクトのいずれかが通知されるときに返されます。  
+ 待機時間のすべてのオブジェクトを返す前に同時にシグナル状態になる必要があるかどうかを指定します。 FALSE の場合、`Lock`待機オブジェクトのいずれかがシグナルを受け取るが返されます。  
   
  *dwWakeMask*  
- 待機を中止できるはその他の条件を指定します。 このパラメーターの使用可能なオプションの一覧については、次を参照してください。 [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) Windows SDK に含まれています。  
+ 待機を中止できるはその他の条件を指定します。 このパラメーターの使用可能なオプションの完全な一覧は、次を参照してください。 [MsgWaitForMultipleObjects](http://msdn.microsoft.com/library/windows/desktop/ms684242) Windows SDK に含まれています。  
   
 ### <a name="return-value"></a>戻り値  
- 場合`Lock`失敗すると、以下の値を返します - 1。 成功した場合、次の値のいずれかを返します。  
+ 場合`Lock`失敗すると、以下の値を返します - 1。 成功した場合、次の値のいずれかが返されます。  
   
--   間**WAIT_OBJECT_0**と**WAIT_OBJECT_0** + (1 - オブジェクトの数)  
+-   WAIT_OBJECT_0 と WAIT_OBJECT_0 と (1 - オブジェクトの数) の間  
   
-     場合*bWaitForAll*は**TRUE**、すべてのオブジェクトが (使用可能) に通知されます。 場合*bWaitForAll*は**FALSE**、戻り値の**WAIT_OBJECT_0**が通知されるオブジェクトのオブジェクトの配列内のインデックスが (使用可能)。  
+     場合*bWaitForAll*が true の場合、すべてのオブジェクトが (使用可能) に通知されます。 場合*bWaitForAll* false で、戻り値 - WAIT_OBJECT_0 が (使用可能) に通知されるオブジェクトのオブジェクトの配列内のインデックス。  
   
-- **WAIT_OBJECT_0** + (オブジェクトの数)  
+- WAIT_OBJECT_0 + (オブジェクトの数)  
   
-     指定されたイベント*dwWakeMask*は、スレッドの入力キューで使用できます。  
+     指定されたイベント*dwWakeMask*はスレッドの入力キューで使用できます。  
   
--   間**WAIT_ABANDONED_0**と**WAIT_ABANDONED_0** + (1 - オブジェクトの数)  
+-   WAIT_ABANDONED_0 と WAIT_ABANDONED_0 と (1 - オブジェクトの数) の間  
   
-     場合*bWaitForAll*は**TRUE**、すべてのオブジェクトがシグナル状態、および放棄されたミュー テックス オブジェクトは、少なくとも 1 つのオブジェクト。 場合*bWaitForAll*は**FALSE**、戻り値の**WAIT_ABANDONED_0**待機を実行する放棄されたミュー テックス オブジェクトのオブジェクトの配列内のインデックスです。  
+     場合*bWaitForAll* true、すべてのオブジェクトがシグナル状態、および放棄されたミュー テックス オブジェクトは、少なくとも 1 つのオブジェクト。 場合*bWaitForAll* false で、戻り値 - WAIT_ABANDONED_0 は待機を実行する放棄されたミュー テックス オブジェクトのオブジェクトの配列内のインデックス。  
   
-- **正常に終了しました。**  
+- 正常に終了しました。  
   
-     指定したタイムアウト間隔*dwTimeOut*待機成功しません有効期限が切れています。  
+     指定されたタイムアウト間隔*dwTimeOut*待機に成功することがなく有効期限が切れました。  
   
 ### <a name="remarks"></a>Remarks  
- 場合*bWaitForAll*は**TRUE**、`Lock`は同時にすべての同期オブジェクトがシグナル状態になるとすぐに正常に復帰します。 場合*bWaitForAll*は**FALSE**、`Lock`が、1 つまたは複数の同期オブジェクトがシグナル状態にすぐに返されます。  
+ 場合*bWaitForAll*が true の場合、`Lock`は正常に同時にすべての同期オブジェクトがシグナル状態になるとすぐに返します。 場合*bWaitForAll* false で、`Lock`が、1 つまたは複数の同期オブジェクトがシグナル状態にすると、すぐに返されます。  
   
- 場合`Lock`を待機するミリ秒単位で指定された数を超えないことが、すぐに返すことはありません、 *dwTimeOut*パラメーターを返す前にします。 場合*dwTimeOut*は**無限**、`Lock`オブジェクトへのアクセスが得られるか、条件で指定されるまでは返されません*dwWakeMask*が満たされています。 それ以外の場合`Lock`された同期オブジェクトを取得できない、これは正常に復帰以外の場合は、エラーが返されます。  
+ 場合`Lock`以上で指定されたミリ秒数を待つ、すぐに返すことがない、 *dwTimeOut*パラメーターを返す前にします。 場合*dwTimeOut*無限、`Lock`オブジェクトへのアクセスを獲得またはで指定された条件になるまでは返されません*dwWakeMask*が満たされています。 の場合`Lock`された同期オブジェクトを取得すること、が返されますが正常にはない場合は、エラーが返されます。  
   
 ##  <a name="unlock"></a>  CMultiLock::Unlock  
- 所有する同期オブジェクトを解放`CMultiLock`です。  
+ によって所有されている同期オブジェクトを解放`CMultiLock`します。  
   
 ```  
 BOOL Unlock();
@@ -168,18 +168,18 @@ BOOL Unlock(
   
 ### <a name="parameters"></a>パラメーター  
  *lCount*  
- 解放する参照の数をカウントします。 1 以上であることが必要です。 場合は、指定された時間を最大値を超えるオブジェクトの数となる、カウントが変更されていないと、関数を返します**FALSE**です。  
+ 解放する参照の数をカウントします。 1 以上であることが必要です。 指定された量を最大値を超えるオブジェクトの数となる、カウントは変更されませんし、関数は FALSE を返します。  
   
  *lPrevCount*  
- 同期オブジェクトが、前のカウントを受け取るように、変数へのポインター。 場合**NULL**、前のカウントは返されません。  
+ 同期オブジェクトが、前のカウントを受け取るように、変数へのポインター。 NULL の場合、前のカウントは返されません。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合は 0 以外。それ以外の場合 0 を返します。  
+ 関数が成功した場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は`CMultiLock`のデストラクターです。  
+ この関数を呼び出して`CMultiLock`のデストラクター。  
   
- 最初のフォーム`Unlock`によって管理される同期オブジェクトのロックを解除しようとしています。`CMultiLock`です。 2 番目の形式の`Unlock`のロックを解除しようとする、`CSemaphore`が所有するオブジェクト`CMultiLock`です。 場合`CMultiLock`いずれかを所有していないロック`CSemaphore`オブジェクトを関数が返されます**FALSE**以外の場合が返されます**TRUE**です。 *lCount*と*lpPrevCount*のパラメーターと同じでは、まったく[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)です。 2 番目の形式の`Unlock`は多重状況に該当することはほとんどありません。  
+ 最初のフォーム`Unlock`によって管理される同期オブジェクトのロックを解除しようとしています。`CMultiLock`します。 2 番目の形式の`Unlock`のロックを解除しようとする、`CSemaphore`が所有するオブジェクト`CMultiLock`します。 場合`CMultiLock`いずれかを所有していないロック`CSemaphore`オブジェクト、関数は FALSE を返します。 それ以外の場合、TRUE を返します。 *lCount*と*lpPrevCount*のパラメーターと同じではまったく[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)します。 2 番目の形式の`Unlock`は多重状況に適用可能なことはほとんどありません。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)

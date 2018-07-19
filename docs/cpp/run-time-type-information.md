@@ -1,5 +1,5 @@
 ---
-title: 実行時型情報 |Microsoft ドキュメント
+title: 実行時の型情報 |Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23188b3dd49afb619576fa9cdcece69feca94f3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14eafc1ebb50faaffb4c0a95e0cc929c89fb7c0b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419993"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37938916"
 ---
 # <a name="run-time-type-information"></a>ランタイム型情報
 実行時型情報 (RTTI: Run-Time Type Information) は、プログラムの実行中にオブジェクトの型を決定するための機能です。 クラス ライブラリの多くのベンダーがこの機能を独自に実装していたことから、RTTI が C++ 言語に追加されましたが、 これによってライブラリの間に非互換性が発生しました。 したがって、実行時型情報を言語レベルでサポートする必要があります。  
@@ -40,9 +40,9 @@ ms.locfileid: "32419993"
   
      オブジェクトの正確な型を特定します。  
   
--   [Type_info](../cpp/type-info-class.md)クラスです。  
+-   [Type_info](../cpp/type-info-class.md)クラス。  
   
-     `typeid` 演算子によって返される型情報を格納します。  
+     によって返される型情報を保持するために使用される、 **typeid**演算子。  
   
 ## <a name="see-also"></a>関連項目  
  [キャスト](../cpp/casting.md)

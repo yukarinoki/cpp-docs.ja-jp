@@ -1,5 +1,5 @@
 ---
-title: ATL 演算子 |Microsoft ドキュメント
+title: ATL 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,30 +14,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75c9ffb8c918cce70ad1e150dd80cb07ebdd7b34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7ffb1c782e4b527b5e8a930a07d74859f7d8824c
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360937"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880204"
 ---
 # <a name="atl-operators"></a>ATL 演算子
 このセクションには、ATL グローバル演算子のリファレンス トピックが含まれています。  
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[operator ==](#operator_eq_eq)|比較する 2 つ`CSid`オブジェクトまたは`SID`構造が等しいかどうか。|  
-|[operator !=](#operator_neq)|比較する 2 つ`CSid`オブジェクトまたは`SID`非等値の構造体。|  
-|[演算子 <](#operator_lt)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体より小さい`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|  
-|[演算子 >](#operator_gt)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体より大きい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|  
+|[operator ==](#operator_eq_eq)|2 つ`CSid`オブジェクトまたは`SID`構造体が等しいかどうか。|  
+|[operator !=](#operator_neq)|2 つ`CSid`オブジェクトまたは`SID`構造体が等しくないです。|  
+|[演算子 <](#operator_lt)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより小さい`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|  
+|[演算子 >](#operator_gt)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより大きい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|  
 |[operator <=](#operator_lt__eq)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体は、以下に、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|  
 |[operator > =](#operator_gt__eq)|かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造がより大きいか等しい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。|  
   
-## <a name="requirements"></a>要件  
- **ヘッダー:** atlsecurity.h です。  
+## <a name="requirements"></a>必要条件  
+ **ヘッダー:** atlsecurity.h します。  
   
 ##  <a name="operator_eq_eq"></a>  operator ==  
- 比較`CSid`オブジェクトまたは`SID`等しいかどうか (セキュリティ識別子) 構造体。  
+ 比較`CSid`オブジェクトまたは`SID`(セキュリティ識別子) 構造体が等しいかどうか。  
   
 ```   
 bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
@@ -45,70 +45,70 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
   
 ### <a name="parameters"></a>パラメーター  
  `lhs`  
- 最初の`CSid`オブジェクトまたは`SID`に比較します。  
+ 最初の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
  `rhs`  
- 2 番目`CSid`オブジェクトまたは`SID`に比較します。  
+ 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**true**オブジェクトが等しい場合は**false**両者が等しくない場合。  
+ かどうか、オブジェクトが等しいか、FALSE 等しくない場合は TRUE を返します。  
   
-##  <a name="operator_neq"></a>  operator! =  
- 比較`CSid`オブジェクトまたは`SID`非等値の (セキュリティ識別子) 構造体。  
+##  <a name="operator_neq"></a>  演算子! =  
+ 比較`CSid`オブジェクトまたは`SID`(セキュリティ識別子) 構造体が等しくないです。  
   
 ```   
 bool operator==(const CSid& lhs, const CSid& rhs) throw(); 
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lhs`  
- 最初の`CSid`オブジェクトまたは`SID`に比較します。  
+ *lhs*  
+ 最初の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
- `rhs`  
- 2 番目`CSid`オブジェクトまたは`SID`に比較します。  
+ *rhs*  
+ 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**true**オブジェクトが等しくない場合**false**が等しい場合は。  
+ オブジェクトが等しくない、等しい場合は FALSE がないかどうかは TRUE を返します。  
   
 ##  <a name="operator_lt"></a>  演算子 <  
- かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体より小さい`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。  
+ かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより小さい`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。  
   
 ```   
 bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lhs`  
- 最初の`CSid`オブジェクトまたは`SID`に比較します。  
+ *lhs*  
+ 最初の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
- `rhs`  
- 2 番目`CSid`オブジェクトまたは`SID`に比較します。  
+ *rhs*  
+ 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**true**場合のアドレス、`lhs`オブジェクトがのアドレスより小さい、`rhs`オブジェクト、 **false**それ以外の場合。  
+ True の場合のアドレス、 *lhs*オブジェクトがのアドレスより小さい、 *rhs*オブジェクト、FALSE それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造、および C++ 標準ライブラリのコレクション クラスとの互換性を提供する実装します。  
+### <a name="remarks"></a>Remarks  
+ この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造体、および C++ 標準ライブラリ コレクション クラスとの互換性を提供する実装されます。  
   
 ##  <a name="operator_gt"></a>  operator >  
- かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体より大きい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。  
+ かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体がより大きい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。  
   
 ```   
 bool operator<(const CSid& lhs, const CSid& rhs) throw(); 
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lhs`  
- 最初の`CSid`オブジェクトまたは`SID`に比較します。  
+ *lhs*  
+ 最初の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
- `rhs`  
- 2 番目`CSid`オブジェクトまたは`SID`に比較します。  
+ *rhs*  
+ 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**true**場合のアドレス、`lhs`のアドレスより大きい、 `rhs`、 **false**それ以外の場合。  
+ True の場合のアドレス、 *lhs*のアドレスより大きい、 *rhs*FALSE、それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造、および C++ 標準ライブラリのコレクション クラスとの互換性を提供する実装します。  
+### <a name="remarks"></a>Remarks  
+ この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造体、および C++ 標準ライブラリ コレクション クラスとの互換性を提供する実装されます。  
   
 ##  <a name="operator_lt__eq"></a>  operator <=  
  かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造体は、以下に、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。  
@@ -118,17 +118,17 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lhs`  
- 最初の`CSid`オブジェクトまたは`SID`に比較します。  
+ *lhs*  
+ 最初の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
- `rhs`  
- 2 番目`CSid`オブジェクトまたは`SID`に比較します。  
+ *rhs*  
+ 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**true**場合のアドレス、`lhs`以下のアドレスには、 `rhs`、 **false**それ以外の場合。  
+ True の場合のアドレス、 *lhs*が未満のアドレス、 *rhs*FALSE、それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造、および C++ 標準ライブラリのコレクション クラスとの互換性を提供する実装します。  
+### <a name="remarks"></a>Remarks  
+ この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造体、および C++ 標準ライブラリ コレクション クラスとの互換性を提供する実装されます。  
   
 ##  <a name="operator_gt__eq"></a>  operator > =  
  かどうか、`CSid`オブジェクトまたは`SID`演算子の左側にある構造がより大きいか等しい、`CSid`オブジェクトまたは`SID`(C++ 標準ライブラリの互換性) の右側にある構造体。  
@@ -138,17 +138,17 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `lhs`  
- 最初の`CSid`オブジェクトまたは`SID`に比較します。  
+ *lhs*  
+ 最初の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
- `rhs`  
- 2 番目`CSid`オブジェクトまたは`SID`に比較します。  
+ *rhs*  
+ 2 番目の`CSid`オブジェクトまたは`SID`比較する構造体。  
   
 ### <a name="return-value"></a>戻り値  
- 返します**true**場合のアドレス、`lhs`以上のアドレスには、 `rhs`、 **false**それ以外の場合。  
+ 場合に TRUE を返しますのアドレス、 *lhs*のアドレス以上、 *rhs*FALSE、それ以外の場合。  
   
-### <a name="remarks"></a>コメント  
- この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造、および C++ 標準ライブラリのコレクション クラスとの互換性を提供する実装します。
+### <a name="remarks"></a>Remarks  
+ この演算子のアドレスに、`CSid`オブジェクトまたは`SID`構造体、および C++ 標準ライブラリ コレクション クラスとの互換性を提供する実装されます。
 
 
 

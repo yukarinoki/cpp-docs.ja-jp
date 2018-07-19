@@ -1,5 +1,5 @@
 ---
-title: マネージ型 (C + + CLI) |Microsoft ドキュメント
+title: マネージ型 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,33 +12,228 @@ helpviewer_keywords:
 - managed data types [C++]
 - .NET Framework [C++], managed types
 - data types [C++], .NET feature access
+- main function, in managed applications
+- managed code, main() function
+- .NET Framework [C++], C++ equivalents
+- __nogc type declarations
+- __value keyword, issues when nesting
+- equality, testing for
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3be1f6d3bf0ac76565ec3f7bf69c84fbe7496266
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a14b217df2bdc8aec8e8d823df7661e8b4754b38
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137679"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39092995"
 ---
-# <a name="managed-types-ccli"></a>マネージ型 (C++/CLI)
-Visual C では、共通言語ランタイムの機能サポートを提供され、利点、およびランタイムの制限の対象とするマネージ型をによる .NET 機能へのアクセスを許可します。  
+# <a name="managed-types-ccli"></a>マネージド型 (C++/CLI)
+Visual C では、共通言語ランタイムの機能のサポートを提供し、利点、およびランタイムの制限を マネージ型を使用して .NET 機能へのアクセスを許可します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
+## <a name="main_functions"></a> マネージ型と main 関数
+使用して、アプリケーションの書き込み時に **/clr**の引数、 **main()** 関数をマネージ型にすることはできません。  
   
--   [マネージ型と main 関数](../dotnet/managed-types-and-the-main-function-cpp-cli.md)  
+ 適切な署名の例を示します。  
   
--   [C++ ネイティブ型と等価な .NET Framework ネイティブ型 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)  
+```cpp  
+// managed_types_and_main.cpp  
+// compile with: /clr  
+int main(int, char*[], char*[]) {}  
+```  
+
+## <a name="dotnet"></a> C++ ネイティブ型に対応する .NET framework
+次の表は、定義済みの型のエイリアスである組み込みの Visual C 型のキーワードで、**システム**名前空間。  
   
--   [ネイティブ型に入れ子になっている値型のバージョンの問題 (C++/CLI)](../dotnet/version-issues-for-value-types-nested-in-native-types-cpp-cli.md)  
+|C++ のビジュアルの種類|.NET Framework 型|  
+|-----------------------|-------------------------|  
+|**bool**|**System.Boolean**|  
+|**char を署名**(を参照してください[/J](../build/reference/j-default-char-type-is-unsigned.md)詳細)|**System.SByte**|  
+|**unsigned char**|**System.Byte**|  
+|**wchar_t**|**System.Char**|  
+|**二重**と**long double**|**System.Double**|  
+|**float**|**System.Single**|  
+|**int**、 **int を署名**、**長い**、および**時間の長い署名**|**System.Int32**|  
+|**符号なし int**と**unsigned long**|**System.UInt32**|  
+|**_ _int64**と **_ _int64 の署名**|**System.Int64**|  
+|**unsigned __int64**|**System.UInt64**|  
+|**短い**と**つまり署名**|**System.Int16**|  
+|**unsigned short**|**System.UInt16**|  
+|**void**|**System.Void**|  
   
--   [方法: 等価性をテストする (C++/CLI)](../dotnet/how-to-test-for-equality-cpp-cli.md)  
+## <a name="version_issues"></a> ネイティブ型に入れ子になった値の型のバージョンの問題
+クライアント アセンブリをビルドするために使用する署名 (厳密な名前) アセンブリのコンポーネントを検討してください。 コンポーネントには、ネイティブの共用体、クラス、または配列のメンバーの種類として、クライアントで使用される値の型が含まれています。 コンポーネントの将来のバージョンでは、サイズまたは値型のレイアウトを変更する場合、クライアントが再コンパイルする必要があります。  
   
--   [方法: アセンブリの互換性の問題を診断し修復する (C++/CLI)](../dotnet/how-to-diagnose-and-fix-assembly-compatibility-problems-cpp-cli.md)  
+ キー ファイルを作成[sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`)。  
   
+### <a name="example"></a>例  
+ 次の例は、コンポーネントです。  
+  
+```cpp 
+// nested_value_types.cpp  
+// compile with: /clr /LD  
+using namespace System::Reflection;  
+[assembly:AssemblyVersion("1.0.0.*"),   
+assembly:AssemblyKeyFile("mykey.snk")];  
+  
+public value struct S {  
+   int i;  
+   void Test() {  
+      System::Console::WriteLine("S.i = {0}", i);  
+   }  
+};  
+```  
+  
+### <a name="example"></a>例  
+ このサンプルでは、クライアントです。  
+  
+```cpp  
+// nested_value_types_2.cpp  
+// compile with: /clr  
+#using <nested_value_types.dll>  
+  
+struct S2 {  
+   S MyS1, MyS2;  
+};  
+  
+int main() {  
+   S2 MyS2a, MyS2b;  
+   MyS2a.MyS1.i = 5;  
+   MyS2a.MyS2.i = 6;  
+   MyS2b.MyS1.i = 10;  
+   MyS2b.MyS2.i = 11;  
+  
+   MyS2a.MyS1.Test();  
+   MyS2a.MyS2.Test();  
+   MyS2b.MyS1.Test();  
+   MyS2b.MyS2.Test();  
+}  
+```  
+  
+### <a name="output"></a>出力  
+  
+```  
+S.i = 5  
+S.i = 6  
+S.i = 10  
+S.i = 11  
+```  
+  
+### <a name="comments"></a>コメント  
+ ただし、する別のメンバーを追加する場合`struct S`nested_value_types.cpp で (たとえば、 `double d;`) と、クライアントを再コンパイルしなくても、コンポーネントを再コンパイル、ハンドルされない例外になります (型の<xref:System.IO.FileLoadException?displayProperty=fullName>)。  
+
+## <a name="test_equality"></a> 方法: 等価性をテスト
+次の例では、c++ マネージ拡張を使用して等しいかどうかのテストはハンドルの参照先に基づいています。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// mcppv2_equality_test.cpp  
+// compile with: /clr /LD  
+using namespace System;  
+  
+bool Test1() {  
+   String ^ str1 = "test";  
+   String ^ str2 = "test";  
+   return (str1 == str2);  
+}  
+```  
+  
+ このプログラムの IL では、戻り値が op_Equality への呼び出しを使用して実装されることを示します。  
+  
+```  
+IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,  
+                                                               string)  
+```  
+
+## <a name="diagnose_fix"></a> 方法: 診断し、アセンブリの互換性の問題を修正
+このトピックでは、コンパイル時に参照されるアセンブリのバージョンは、実行時に参照されるアセンブリのバージョンと一致しないときに生じると、問題を回避する方法。  
+  
+ その他のアセンブリを参照するアセンブリをコンパイルすると、`#using`構文。 、コンパイル時にこれらのアセンブリは、コンパイラによってアクセスします。 これらのアセンブリからの情報は、最適化の決定に使用されます。  
+  
+ ただし、参照アセンブリが変更され、再コンパイルし、それに依存する参照元のアセンブリを再コンパイルしないで、アセンブリが可能性がありますいない互換性のあるものです。 有効だった最適化処理を行う最初できないアセンブリの新しいバージョンに対して適切です。 これらの非互換性による、さまざまなのランタイム エラーが発生する可能性があります。 このような場合に生成される特定の例外はありません。 実行時に、エラーを報告する方法は、問題の原因となったコードの変更の性質によって異なります。  
+  
+ アプリケーション全体が、製品のリリース版の再構築する限り、これらのエラーは、最終的な運用環境のコードで問題をしないでください。 これらの問題を回避することにより、正式なバージョン番号では、パブリックにリリースされているアセンブリをマークする必要があります。 詳細については、「[アセンブリのバージョン管理](/dotnet/framework/app-domains/assembly-versioning)」を参照してください。  
+  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>診断と非互換性エラーを修正  
+  
+1.  ランタイムの例外や、別のアセンブリを参照しているコードで発生するその他のエラー条件が発生し、その他の原因がある場合、古いアセンブリを扱って可能性があります。  
+  
+2.  最初に、分離し、例外またはその他のエラー状態を再現します。 期限切れの例外のために発生する問題を再現可能なことがあります。  
+  
+3.  アプリケーションで参照されるアセンブリのタイムスタンプを確認します。  
+  
+4.  参照先アセンブリのタイムスタンプが、アプリケーションの最後のコンパイルのタイムスタンプより後の場合は、アプリケーションが期限切れです。 このような場合、最新のアセンブリを使用してアプリケーションを再コンパイルし、必要なコード変更を行います。  
+  
+5.  アプリケーションを再実行で問題を再現して、例外が発生しないことを確認する手順を実行します。  
+  
+### <a name="example"></a>例  
+ 次のプログラムでは、メソッドのアクセシビリティを削減し、再コンパイルしなくても、別のアセンブリには、そのメソッドにアクセスしようとして問題を示しています。 コンパイルしてみてください`changeaccess.cpp`最初。 これは、参照アセンブリが変更されます。 コンパイルし、`referencing.cpp`します。 コンパイルは成功します。 次に、呼び出されたメソッドのアクセシビリティを削減します。 再コンパイル`changeaccess.cpp`フラグ`/DCHANGE_ACCESS`します。 これにより、メソッド、プライベートではなく、保護されているため、合法的に呼び出すになったことができます。 再コンパイルしなくても`referencing.exe`アプリケーションを再実行します。 例外<xref:System.MethodAccessException>になります。  
+  
+```cpp  
+// changeaccess.cpp  
+// compile with: /clr:safe /LD  
+// After the initial compilation, add /DCHANGE_ACCESS and rerun  
+// referencing.exe to introduce an error at runtime. To correct  
+// the problem, recompile referencing.exe  
+  
+public ref class Test {  
+#if defined(CHANGE_ACCESS)  
+protected:  
+#else  
+public:  
+#endif  
+  
+  int access_me() {  
+    return 0;  
+  }  
+  
+};  
+  
+```  
+  
+```cpp  
+// referencing.cpp  
+// compile with: /clr:safe   
+#using <changeaccess.dll>  
+  
+// Force the function to be inline, to override the compiler's own  
+// algorithm.  
+__forceinline  
+int CallMethod(Test^ t) {  
+  // The call is allowed only if access_me is declared public  
+  return t->access_me();  
+}  
+  
+int main() {  
+  Test^ t = gcnew Test();  
+  try  
+  {  
+    CallMethod(t);  
+    System::Console::WriteLine("No exception.");  
+  }  
+  catch (System::Exception ^ e)  
+  {  
+    System::Console::WriteLine("Exception!");  
+  }  
+  return 0;  
+}  
+  
+```  
+
 ## <a name="see-also"></a>関連項目  
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+ [他の .NET 言語との相互運用性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+
+ 
+  [マネージド型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)
+
+ [#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md) 

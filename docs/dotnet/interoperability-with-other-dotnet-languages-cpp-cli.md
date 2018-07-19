@@ -1,5 +1,5 @@
 ---
-title: 他の .NET 言語と相互運用性 (C + + CLI) |Microsoft ドキュメント
+title: 他の .NET 言語と相互運用性 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -7,28 +7,187 @@ ms.technology:
 ms.topic: conceptual
 dev_langs:
 - C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
+- as C# keyword [C++]
+- is C# keyword [C++]
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80f7c99cf4b4127a1b4862aae64cc604ae3e0f69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 000009eca8150774150ab1e1d8f6d228aaf5c912
+ms.sourcegitcommit: 27be37ae07ee7b657a54d23ed34438220d977fdc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129100"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39110300"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>他の .NET 言語との相互運用性 (C++/CLI)
-このセクションのトピックでは、Visual C から使用するか、機能を c# または Visual Basic で記述されたアセンブリのアセンブリを作成する方法を示します。  
+このセクションのトピックでは、c# または Visual Basic で記述されたアセンブリに機能を提供するかを消費する Visual C のアセンブリを作成する方法を示します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [方法: is キーワードと as C# キーワードを実装する (C++/CLI)](../dotnet/how-to-implement-is-and-as-csharp-keywords-cpp-cli.md)  
+## <a name="consume_indexer"></a> C# インデクサーを使用します。
+Visual C にインデクサー; が含まれていませんそれには、プロパティがインデックス付け。 インデックス付きプロパティの場合と同様に c# インデクサーを使用するには、インデクサーにアクセスします。  
   
- [方法: C# lock キーワードを実装する (C++/CLI)](../dotnet/how-to-implement-the-lock-csharp-keyword-cpp-cli.md)  
+ インデクサーの詳細についてを参照してください。  
   
- [方法: C# インデクサーを使用する (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)  
+-   [インデクサー](/dotnet/csharp/programming-guide/indexers/index)  
+  
+### <a name="example"></a>例  
+ 次の c# プログラムでは、インデクサーを定義します。  
+  
+```csharp  
+// consume_cs_indexers.cs  
+// compile with: /target:library  
+using System;  
+public class IndexerClass {  
+   private int [] myArray = new int[100];   
+   public int this [int index] {   // Indexer declaration  
+      get {  
+         // Check the index limits.  
+         if (index < 0 || index >= 100)  
+            return 0;  
+         else  
+            return myArray[index];  
+      }  
+      set {  
+         if (!(index < 0 || index >= 100))  
+            myArray[index] = value;  
+      }  
+   }  
+}  
+/*  
+// code to consume the indexer  
+public class MainClass {  
+   public static void Main() {  
+      IndexerClass b = new IndexerClass();  
+  
+      // Call indexer to initialize elements 3 and 5  
+      b[3] = 256;  
+      b[5] = 1024;  
+      for (int i = 0 ; i <= 10 ; i++)   
+         Console.WriteLine("Element #{0} = {1}", i, b[i]);  
+   }  
+}  
+*/  
+```  
+  
+### <a name="example"></a>例  
+ この Visual C プログラムでは、インデクサーを使用します。  
+  
+```cpp  
+// consume_cs_indexers_2.cpp  
+// compile with: /clr  
+#using "consume_cs_indexers.dll"  
+using namespace System;  
+  
+int main() {  
+   IndexerClass ^ ic = gcnew IndexerClass;  
+   ic->default[0] = 21;  
+   for (int i = 0 ; i <= 10 ; i++)  
+      Console::WriteLine("Element #{0} = {1}", i, ic->default[i]);  
+}  
+```  
+  
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+
+## <a name="implement_isas"></a> 実装は、キーワードと as c# キーワード
+このトピックでは、の機能を実装する方法を示します、`is`と`as`Visual C での c# のキーワード。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// CS_is_as.cpp  
+// compile with: /clr  
+using namespace System;  
+  
+interface class I {  
+public:  
+   void F();  
+};  
+  
+ref struct C : public I {  
+   virtual void F( void ) { }  
+};  
+  
+template < class T, class U >   
+Boolean isinst(U u) {  
+   return dynamic_cast< T >(u) != nullptr;  
+}  
+  
+int main() {  
+   C ^ c = gcnew C();  
+   I ^ i = safe_cast< I ^ >(c);   // is (maps to castclass in IL)  
+   I ^ ii = dynamic_cast< I ^ >(c);   // as (maps to isinst in IL)  
+  
+   // simulate 'as':  
+   Object ^ o = "f";  
+   if ( isinst< String ^ >(o) )  
+      Console::WriteLine("o is a string");  
+}  
+```  
+  
+```Output  
+o is a string  
+```  
+
+## <a name="implement_locak"></a> Lock c# キーワードを実装します。
+このトピックでは、c# を実装する方法を示しています。 `lock` Visual c でキーワード。 
+  
+ 使用することも、 `lock` C++ サポート ライブラリ内のクラス。 参照してください[同期 (lock クラス)](../dotnet/synchronization-lock-class.md)詳細についてはします。  
+  
+### <a name="example"></a>例  
+  
+```cpp  
+// CS_lock_in_CPP.cpp  
+// compile with: /clr  
+using namespace System::Threading;  
+ref class Lock {  
+   Object^ m_pObject;  
+public:  
+   Lock( Object ^ pObject ) : m_pObject( pObject ) {  
+      Monitor::Enter( m_pObject );  
+   }  
+   ~Lock() {  
+      Monitor::Exit( m_pObject );  
+   }  
+};  
+  
+ref struct LockHelper {  
+   void DoSomething();  
+};  
+  
+void LockHelper::DoSomething() {  
+   // Note: Reference type with stack allocation semantics to provide   
+   // deterministic finalization  
+  
+   Lock lock( this );     
+   // LockHelper instance is locked  
+}  
+  
+int main()  
+{  
+   LockHelper lockHelper;  
+   lockHelper.DoSomething();  
+   return 0;  
+}  
+```  
   
 ## <a name="see-also"></a>関連項目  
  [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

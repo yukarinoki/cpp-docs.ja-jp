@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35ac7686706aad871b95f8b94d2bb11b459a64e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848688"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961741"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator クラス
 
@@ -44,7 +44,7 @@ template <class _Iterator>
 class checked_array_iterator;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このクラスは、[stdext](../standard-library/stdext-namespace.md) 名前空間で定義されます。
 
@@ -189,7 +189,7 @@ int main()
 |[operator-](#operator-)|反復子からオフセットをデクリメントし、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。|
 |[operator&#91;&#93;](#op_at)|`checked_array_iterator` によってアドレス指定される要素からの要素のオフセットへの参照を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 
@@ -203,7 +203,7 @@ int main()
 _Iterator base() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -253,13 +253,13 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>パラメーター
 
-`ptr` 配列へのポインター。
+*ptr*配列へのポインター。
 
-`size` 配列のサイズ。
+*サイズ*配列のサイズ。
 
-`index` (省略可能)反復子を初期化するために、配列内の要素。  既定では、反復子は、配列内の最初の要素に初期化されます。
+*インデックス*(オプション)、配列内の要素を反復子を初期化します。  既定では、反復子は、配列内の最初の要素に初期化されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -307,7 +307,7 @@ int main() {
 typedef typename iterator_traits<_Iterator>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 `checked_array_iterator` の異なる型は、反復子の異なる型と同じです。
 
@@ -325,9 +325,9 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `checked_array_iterator`対象となると、等しいかどうかを確認します。
+*適切な*、`checked_array_iterator`対象となると、等しいかどうかを確認します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -380,9 +380,9 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `checked_array_iterator`を非等値をチェックします。
+*適切な*、`checked_array_iterator`に対して非等値をチェックします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -435,9 +435,9 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `checked_array_iterator`を非等値をチェックします。
+*適切な*、`checked_array_iterator`に対して非等値をチェックします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -490,9 +490,9 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `checked_array_iterator`と比較します。
+*適切な*、`checked_array_iterator`と比較します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コード サンプルについては、[checked_array_iterator::operator&lt;](#op_lt) を参照してください。
 
@@ -508,9 +508,9 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `checked_array_iterator`と比較します。
+*適切な*、`checked_array_iterator`と比較します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コード サンプルについては、 [checked_array_iterator::operator&gt;=](#op_gt_eq) を参照してください。
 
@@ -526,9 +526,9 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` `checked_array_iterator`と比較します。
+*適切な*、`checked_array_iterator`と比較します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -583,7 +583,7 @@ reference operator*() const;
 
 `checked_array_iterator` によってアドレス指定される要素の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -644,7 +644,7 @@ pointer operator->() const;
 
 `checked_array_iterator` によってアドレス指定される要素へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コード サンプルについては、[checked_array_iterator::pointer](#pointer) を参照してください。
 
@@ -664,7 +664,7 @@ checked_array_iterator<_Iterator> operator++(int);
 
 最初の演算子は、プリインクリメントされた `checked_array_iterator` を返し、2 番目のポストインクリメント演算子は、インクリメントされた `checked_array_iterator` のコピーを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -712,7 +712,7 @@ checked_array_iterator<_Iterator> operator--(int);
 
 最初の演算子はプリデクリメントされた `checked_array_iterator` を返し、2 番目のポストデクリメント演算子は、デクリメントされた `checked_array_iterator` のコピーを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -756,13 +756,13 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` 反復子をインクリメントするオフセット。
+*_Off*反復子をインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
 `checked_array_iterator` によってアドレス指定される要素への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -803,13 +803,13 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` 追加するオフセット、`checked_array_iterator`です。
+*_Off*に追加するオフセット、`checked_array_iterator`します。
 
 ### <a name="return-value"></a>戻り値
 
 オフセット要素を指す `checked_array_iterator`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -850,13 +850,13 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` 反復子をインクリメントするオフセット。
+*_Off*反復子をインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
 
 `checked_array_iterator` によってアドレス指定される要素への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -900,13 +900,13 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` デクリメントされるまでのオフセット、`checked_array_iterator`です。
+*_Off*からデクリメントされるオフセット、`checked_array_iterator`します。
 
 ### <a name="return-value"></a>戻り値
 
 オフセット要素を指す `checked_array_iterator`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コード サンプルについては、 [checked_array_iterator::operator-](#operator-) を参照してください。
 
@@ -922,13 +922,13 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`_Off` オフセット、`checked_array_iterator`アドレス。
+*_Off*からのオフセット、`checked_array_iterator`アドレス。
 
 ### <a name="return-value"></a>戻り値
 
 オフセット要素への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -969,7 +969,7 @@ int main() {
 typedef typename iterator_traits<_Iterator>::pointer pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コード サンプルについては、 [checked_array_iterator::operator*](#op_star) を参照してください。
 
@@ -983,7 +983,7 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 typedef typename iterator_traits<_Iterator>::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コード サンプルについては、[checked_array_iterator::operator[]](#op_at) を参照してください。
 

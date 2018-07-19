@@ -1,5 +1,5 @@
 ---
-title: jitintrinsic |Microsoft ドキュメント
+title: jitintrinsic |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cd88882ea104275e4c1a43ccf05494a859d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418755"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939391"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 64 ビット共通言語ランタイムにとって重要であると関数をマークします。 これは、Microsoft が提供するライブラリの特定の関数で使用されます。  
@@ -34,10 +34,10 @@ ms.locfileid: "32418755"
 __declspec(jitintrinsic)  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `jitintrinsic` は、関数シグネチャに MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) を追加します。  
   
- 予期しない結果が発生する可能性があるため、ユーザーはこの `__declspec` 修飾子を使用しないでください。  
+ ユーザーはこれを使用してから推奨されません **_ _declspec**修飾子は、予期しない結果として発生することができます。  
   
 ## <a name="see-also"></a>関連項目  
  [__declspec](../cpp/declspec.md)   

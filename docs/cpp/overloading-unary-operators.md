@@ -1,5 +1,5 @@
 ---
-title: 単項演算子のオーバー ロード |Microsoft ドキュメント
+title: 単項演算子のオーバー ロード |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f242fac0d81c6d46c2d810bf07459fde2fb2ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f20268e9d67ed59e52f3716e9203dadd2a2715d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421060"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941692"
 ---
 # <a name="overloading-unary-operators"></a>単項演算子のオーバーロード
 オーバーロードできる単項演算子は次のとおりです。  
@@ -37,7 +37,7 @@ ms.locfileid: "32421060"
   
 3.  `~` ([1 の補数](../cpp/one-s-complement-operator-tilde.md))  
   
-4.  `*` ([ポインターが逆参照](../cpp/indirection-operator-star.md))  
+4.  `*` ([ポインター逆参照](../cpp/indirection-operator-star.md))  
   
 5.  `+` ([単項プラス](../cpp/additive-operators-plus-and.md))  
   
@@ -49,9 +49,9 @@ ms.locfileid: "32421060"
   
 9. 変換演算子  
   
- 後置インクリメントとデクリメント演算子 (`++`と**--**) で個別に扱われます[インクリメントおよびデクリメント](../cpp/increment-and-decrement-operator-overloading-cpp.md)です。  
+ 後置インクリメントとデクリメント演算子 (`++`と`--`) で個別に扱われます[インクリメントおよびデクリメント](../cpp/increment-and-decrement-operator-overloading-cpp.md)します。  
   
- 変換演算子は、別のトピックでは説明も参照してください[ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)です。  
+ 変換演算子も、別のトピックで説明します。参照してください[ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)します。  
   
  次の規則は他のすべての単項演算子に適用されます。 単項演算子関数を非静的メンバーとして宣言するには、次の形式で宣言する必要があります。  
   

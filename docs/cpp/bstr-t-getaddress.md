@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::GetAddress |Microsoft ドキュメント
+title: _bstr_t::GetAddress |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88accb8b614a5a07a7abf688790a80786f465607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4895153abe248265e0aacfbe636b9a4bd46ed205
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409971"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941198"
 ---
 # <a name="bstrtgetaddress"></a>_bstr_t::GetAddress
 **Microsoft 固有の仕様**  
@@ -39,11 +39,11 @@ BSTR* GetAddress( );
 ## <a name="return-value"></a>戻り値  
  `BSTR` でラップされた `_bstr_t` へのポインター。  
   
-## <a name="remarks"></a>コメント  
- `GetAddress` は、`_bstr_t` を共有するすべての `BSTR` オブジェクトに影響します。 複数の `_bstr_t` がコピー コンストラクターおよび `BSTR` を使用して `operator=` を共有できます。  
+## <a name="remarks"></a>Remarks  
+ `GetAddress` は、`_bstr_t` を共有するすべての `BSTR` オブジェクトに影響します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用してとおよび**演算子 =** します。  
   
 ## <a name="example"></a>例  
- 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)使用例については`GetAddress`します。  
+ 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、`GetAddress`します。  
   
  **Microsoft 固有の仕様はここまで**  
   

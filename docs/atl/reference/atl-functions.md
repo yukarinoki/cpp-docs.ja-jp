@@ -1,5 +1,5 @@
 ---
-title: ATL 関数 |Microsoft ドキュメント
+title: ATL 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c5e63e884a44b310330c05fc4a77e3e7f37bec5
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: bbd6e799998abcac650ee32dd86739c157f1035d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34257101"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879473"
 ---
 # <a name="atl-functions"></a>ATL 関数
 
 
-カテゴリ別に ATL 関数を探すには、次のトピックを参照してください。  
+カテゴリ別、ATL 関数を探すには、次のトピックを参照してください。  
   
  [ATL パス関数](../../atl/reference/com-map-global-functions.md)  
  ファイルのパスを操作するためのサポートを提供します。
  
  [COM マップに関するグローバル関数](../../atl/reference/com-map-global-functions.md)  
- COM マップは、サポート**IUnknown**実装します。  
+ COM マップは、サポート`IUnknown`実装します。  
   
  [複合コントロールに関するグローバル関数](../../atl/reference/composite-control-global-functions.md)  
- ダイアログ ボックスの作成と、作成、ホストおよび ActiveX コントロールのライセンスは、サポートを提供します。  
+ ダイアログ ボックスの作成と、作成、ホスト、および ActiveX コントロールのライセンスは、サポートを提供します。  
   
  [コネクション ポイントに関するグローバル関数](../../atl/reference/connection-point-global-functions.md)  
- コネクション ポイントのサポートを提供し、シンクにマップします。  
+ コネクション ポイントのサポートを提供し、シンクがマップされます。  
   
  [デバッグとエラー報告に関するグローバル関数](../../atl/reference/debugging-and-error-reporting-global-functions.md)  
  デバッグとトレースに役立つ機能を提供します。  
@@ -49,25 +49,25 @@ ms.locfileid: "34257101"
  イベント ハンドラーを提供します。  
   
  [マーシャリングに関するグローバル関数](../../atl/reference/marshaling-global-functions.md)  
- マーシャ リングとのインターフェイス ポインターにマーシャ リング データを変換のサポートを提供します。  
+ マーシャ リングとマーシャ リング インターフェイス ポインターへのデータ変換のサポートを提供します。  
   
- [ピクセル/HIMETRIC 変換のグローバル関数](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
- ピクセルおよび HIMETRIC 単位の間に変換するためのサポートを提供します。  
+ [ピクセル/HIMETRIC 変換に関するグローバル関数](../../atl/reference/pixel-himetric-conversion-global-functions.md)  
+ ピクセル HIMETRIC 単位から変換するためのサポートを提供します。  
   
  [レジストリとタイプ ライブラリに関するグローバル関数](../../atl/reference/registry-and-typelib-global-functions.md)  
- 読み込みとタイプ ライブラリを登録するには、サポートを提供します。  
+ 読み込みと登録のタイプ ライブラリのサポートを提供します。  
   
  [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)  
- オブジェクトの SID と ACL オブジェクトを変更するためのサポートを提供します。  
+ オブジェクトの SID と ACL を変更するためのサポートを提供します。  
   
  [セキュリティ識別子に関するグローバル関数](../../atl/reference/security-identifier-global-functions.md)  
- オブジェクトに共通の既知の SID を返します。  
+ オブジェクトの一般的な既知の SID を返します。  
   
  [サーバー登録に関するグローバル関数](../../atl/reference/server-registration-global-functions.md)  
- 登録およびオブジェクト マップ内のサーバー オブジェクトの登録を解除するためのサポートを提供します。  
+ 登録とオブジェクト マップ内のサーバー オブジェクトを登録解除のサポートを提供します。  
   
  [WinModule に関するグローバル関数](../../atl/reference/winmodule-global-functions.md)  
- サポートを提供`_AtlCreateWndData`操作を構成します。  
+ サポートを提供`_AtlCreateWndData`操作を構造体します。  
   
 ## <a name="see-also"></a>関連項目  
     

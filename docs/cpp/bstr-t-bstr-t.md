@@ -1,5 +1,5 @@
 ---
-title: _bstr_t::_bstr_t |Microsoft ドキュメント
+title: _bstr_t::_bstr_t |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824108b78ede3999a83b1c7c1ac75cc847f182f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb2e870c7418c0d0a6cf3cd82bc0a8acb45466a0
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413285"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941266"
 ---
 # <a name="bstrtbstrt"></a>_bstr_t::_bstr_t
 **Microsoft 固有の仕様**  
@@ -53,31 +53,31 @@ _bstr_t(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `s1`  
+ *s1*  
  コピーされる `_bstr_t` オブジェクト。  
   
- `s2`  
+ *s2*  
  マルチバイト文字列。  
   
- `s3`  
+ *s3*  
  Unicode 文字列。  
   
- `var`  
+ *var*  
  A [_variant_t](../cpp/variant-t-class.md)オブジェクト。  
   
- `bstr`  
+ *bstr*  
  既存の `BSTR` オブジェクト。  
   
- `fCopy`  
- `false` の場合、`bstr` を呼び出してコピーを作成せずに、`SysAllocString` 引数が新しいオブジェクトにアタッチされます。  
+ *fCopy*  
+ FALSE の場合、 *bstr*引数が呼び出すことによって、コピーを作成せず、新しいオブジェクトに接続されている`SysAllocString`します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `_bstr_t` のコンストラクターについて次の表で説明します。  
   
 |コンストラクター|説明|  
 |-----------------|-----------------|  
-|`_bstr_t( )`|既定値を構築`_bstr_t`null 値をカプセル化するオブジェクト`BSTR`オブジェクト。|  
-|`_bstr_t( _bstr_t&`  `s1`  `)`|別のコピーとして `_bstr_t` オブジェクトを構築します。<br /><br /> これは、*シャロー*コピーで、カプセル化された参照カウントをインクリメント`BSTR`作成する代わりに、新しいオブジェクト。|  
+|`_bstr_t( )`|既定値を構築します`_bstr_t`null 値をカプセル化するオブジェクト`BSTR`オブジェクト。|  
+|`_bstr_t( _bstr_t&`  `s1`  `)`|別のコピーとして `_bstr_t` オブジェクトを構築します。<br /><br /> これは、*浅い*コピーで、カプセル化されたの参照カウントをインクリメント`BSTR`オブジェクトを新規に作成する代わりにします。|  
 |`_bstr_t( char*`  `s2`  `)`|`_bstr_t` を呼び出して新しい `SysAllocString` オブジェクトを作成することで `BSTR` オブジェクトを構築し、そのオブジェクトをカプセル化します。<br /><br /> このコンストラクターは、マルチバイトから Unicode への変換を最初に実行します。|  
 |`_bstr_t( wchar_t*`  `s3`  `)`|`_bstr_t` を呼び出して新しい `SysAllocString` オブジェクトを作成することで `BSTR` オブジェクトを構築し、そのオブジェクトをカプセル化します。|  
 |`_bstr_t( _variant_t&`  `var`  `)`|最初に、カプセル化された VARIANT オブジェクトから `_bstr_t` オブジェクトを取得することによって、`_variant_t` オブジェクトから `BSTR` オブジェクトを構築します。|  

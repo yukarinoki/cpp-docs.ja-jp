@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0734c4044dba77e07ec4b18fc6381618b7592d1b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 802e831fc884762c169b2752ae06fad7e46db2d8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844589"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960366"
 ---
 # <a name="container-classdifferencetype"></a>コンテナー クラス::difference_type
 
@@ -35,9 +35,9 @@ ms.locfileid: "33844589"
 typedef T1 difference_type;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ここでは、指定されていない型 **T1** のシノニムとして記述されています (通常は **Alloc::difference_type**)。
+説明されている、ここで指定されていない型のシノニムとして`T1`(通常`Alloc::difference_type`)。
 
 ## <a name="see-also"></a>関連項目
 

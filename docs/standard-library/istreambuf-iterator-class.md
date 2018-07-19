@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810f565d85a923379a25f49c6fe1c7d7cc4efbc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0f96fbe8525ee4eef44da70261bd62e079aa279a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859281"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960592"
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator クラス
 
@@ -49,15 +49,15 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-`CharType` Istreambuf_iterator の文字型を表す型。
+*CharType* istreambuf_iterator の文字の種類を表す型です。
 
-`Traits` Istreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
+*Traits* istreambuf_iterator の文字の種類を表す型です。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 istreambuf_iterator クラスは入力反復子の要件を満たす必要があります。
 
-null 以外の格納されたポインターを使用して istreambuf_iterator クラスのオブジェクトを構築またはインクリメントすると、オブジェクトは、関連付けられている入力ストリームから **CharType** 型のオブジェクトを効果的に抽出および格納することを試行します。 ただし、抽出はオブジェクトが実際に逆参照またはコピーされるまで遅延することがあります。 抽出が失敗した場合、オブジェクトは効果的に格納されたポインターを null ポインターに置き換え、シーケンス終端のインジケーターを作成します。
+null 以外の格納されたポインターを使用して istreambuf_iterator クラスのオブジェクトを構築またはインクリメントすると、オブジェクトは、関連付けられている入力ストリームから *CharType* 型のオブジェクトを効果的に抽出および格納することを試行します。 ただし、抽出はオブジェクトが実際に逆参照またはコピーされるまで遅延することがあります。 抽出が失敗した場合、オブジェクトは効果的に格納されたポインターを null ポインターに置き換え、シーケンス終端のインジケーターを作成します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -89,7 +89,7 @@ null 以外の格納されたポインターを使用して istreambuf_iterator 
 |[operator++](#op_add_add)|入力ストリームから次の文字を返すか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
 |[operator->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 
@@ -103,9 +103,9 @@ null 以外の格納されたポインターを使用して istreambuf_iterator 
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **CharType** のシノニムです。
+この型は、テンプレート パラメーター *CharType* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -150,15 +150,15 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 等しいかどうかを確認する対象の反復子。
+*適切な*等しいかどうかを確認する対象の反復子。
 
 ### <a name="return-value"></a>戻り値
 
 両方の `istreambuf_iterator` がストリームの終わりの反復子であるか、どちらもストリームの終わりの反復子でない場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-範囲は、現在の位置への `istreambuf_iterator` 反復子とストリームの終わりの反復子によって定義されます。ただし、ストリームの終わりではない反復子は、**equal** メンバー関数の下では等価であるため、`istreambuf_iterator` を使用して部分範囲を定義することはできません。 `==` 演算子と `!=` 演算子は同じセマンティクスを持ちます。
+範囲がによって定義されている、`istreambuf_iterator`反復子要素は同等の現在の位置をストリームの終わり反復子がすべて非 - ストリームの終わり以降、`equal`メンバー関数は、ことはできませんを使用して部分範囲を定義する`istreambuf_iterator`秒。 `==` 演算子と `!=` 演算子は同じセマンティクスを持ちます。
 
 ### <a name="example"></a>例
 
@@ -196,9 +196,9 @@ int main( )
 typedef typename traits_type::int_type int_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、**Traits::int_type** のシノニムです。
+この型は `Traits::int_type` の同意語です。
 
 ### <a name="example"></a>例
 
@@ -227,7 +227,7 @@ The inttype1 = 100.
 typedef basic_istream<CharType, Traits> istream_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`basic_istream`\< **CharType**, **Traits**> のシノニムです。
 
@@ -246,13 +246,13 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-`strbuf` 先の入力ストリームのバッファー、`istreambuf_iterator`が接続されています。
+*strbuf*入力ストリーム バッファーへ、`istreambuf_iterator`が関連付けられています。
 
-`_Istr` 元の入力ストリーム、`istreambuf_iterator`が接続されています。
+*_Istr*先の入力ストリーム、`istreambuf_iterator`が関連付けられています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、入力ストリームバッファー ポインターを `strbuf` で初期化します。 2 番目のコンストラクターは、入力ストリームバッファー ポインターを `_Istr`. `rdbuf` で初期化してから、最終的に **CharType** 型のオブジェクトの抽出と格納を試行します。
+最初のコンス トラクターによって初期化、入力ストリームバッファー ポインターを*strbuf*します。 2 番目のコンス トラクターによって初期化、入力ストリームバッファー ポインターを *_Istr*します。 `rdbuf`、し、最終的に抽出し、型のオブジェクトを格納する試行`CharType`します。
 
 ### <a name="example"></a>例
 
@@ -339,9 +339,9 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 `istreambuf_iterator` または、`istreambuf_iterator` への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-最終的に最初の演算子は、関連付けられている入力ストリームから **CharType** 型のオブジェクトの抽出と格納を試行します。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
+1 つ目の演算子は、最終的に抽出し、型のオブジェクトを格納を試みます`CharType`関連付けられている入力ストリームから。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
 
 ### <a name="example"></a>例
 
@@ -391,13 +391,13 @@ istreambuf_iterator のストリーム型を提供する型。
 typedef basic_streambuf<CharType, Traits> streambuf_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は、`basic_streambuf`\< **CharType**, **Traits**> のシノニムです。
 
 ### <a name="example"></a>例
 
-**istreambuf_type** を宣言して使用する方法の例については、[istreambuf_iterator](#istreambuf_iterator) に関するセクションをご覧ください。
+`istreambuf_type` を宣言して使用する方法の例については、[istreambuf_iterator](#istreambuf_iterator) に関するセクションをご覧ください。
 
 ## <a name="traits_type"></a>  istreambuf_iterator::traits_type
 
@@ -407,9 +407,9 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 typedef Traits traits_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター **Traits** のシノニムです。
+この型は、テンプレート パラメーター *Traits* のシノニムです。
 
 ### <a name="example"></a>例
 

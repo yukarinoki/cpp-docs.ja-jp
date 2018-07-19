@@ -1,5 +1,5 @@
 ---
-title: CSmartDockingInfo クラス |Microsoft ドキュメント
+title: CSmartDockingInfo クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b787828c59535f0e3008816df6f4ab209e1d882c
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079135"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849816"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo クラス
 スマート ドッキング マーカーの外観を定義します。  
@@ -64,15 +64,15 @@ class CSmartDockingInfo : public CObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[CSmartDockingInfo::CopyTo](#copyto)|現在スマート ドッキング情報のパラメーターに指定されたコピー [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)オブジェクト。|  
+|[CSmartDockingInfo::CopyTo](#copyto)|現在のスマート ドッキング情報パラメーターに指定されたコピー [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)オブジェクト。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
 |name|説明|  
 |----------|-----------------|  
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|フレームワーク スマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。|  
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|フレームワークはスマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|スマート ドッキング マーカーの基本の背景色を指定します。|  
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|置換する色を指定`m_clrToneSrc`スマート ドッキング マーカー ビットマップにします。|  
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|置換する色を指定します`m_clrToneSrc`スマート ドッキング マーカー ビットマップにします。|  
 |[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|スマート ドッキング マーカー ビットマップの色を指定します。|  
 |[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|透過的な場合は、スマート ドッキング マーカー ビットマップの色を指定します。|  
 |[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|サーバーの全体のグループの四角形の境界からスマート ドッキング マーカーの中央のグループのオフセットを指定します。|  
@@ -81,27 +81,27 @@ class CSmartDockingInfo : public CObject
 |[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|フレームワークが強調表示されているスマート ドッキング マーカーに使用されるビットマップのリソース Id を定義します。|  
   
 ## <a name="remarks"></a>Remarks  
- Framework ハンドル スマート ドッキング マーカーを内部的にします。 次の図は、標準のスマート ドッキング マーカーを示しています。  
+ 内部的には、framework ハンドルでスマート ドッキング マーカー。 次の図は、標準のスマート ドッキング マーカーを示しています。  
   
- ![スマート ドッキングの標準マーカー](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
+ ![スマート ドッキングの標準的なマーカー](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")  
   
- この図では、左側のイメージは、有効になっているタブへのドッキングを持たない集約型のグループのスマート ドッキング マーカーを示します。 中央のイメージは、右の端のスマート ドッキング マーカーを示しています。 右側の画像は、中央のグループ スマート ドッキング マーカーが有効になっているタブへのドッキングを示します。 サーバーの全体のグループのスマート ドッキング マーカーはメインのビットマップを持ち、5 つのスマート ドッキング マーカー ビットマップ。  
+ この図では、左側のイメージは、有効になっているタブへのドッキングを持たないサーバーの全体のグループのスマート ドッキング マーカーを示します。 中央のイメージは、右端のスマート ドッキング マーカーを示しています。 右側のイメージは、有効になっているタブへのドッキングが中央のグループのスマート ドッキング マーカーを示します。 サーバーの全体のグループのスマート ドッキング マーカーはメインのビットマップを備え、5 つのスマート ドッキング マーカー ビットマップ。  
   
  スマート ドッキング マーカーの次のパラメーターをカスタマイズすることができます。  
   
--   色 たとえば、任意のユーザー定義の色と図内のマーカーの青の色を置き換えることができます。  
+-   色 たとえば、すべてのユーザー定義の色で、図のマーカーの青の色を置き換えることができます。  
   
 -   透明色。  
   
 -   外接する四角形の枠線から中央のグループ内のスマート ドッキング マーカーのオフセットします。  
   
--   サーバーの全体のグループを表すメイン ビットマップ。  
+-   サーバーの全体のグループを表すメインのビットマップ。  
   
--   標準と強調表示されたスマート ドッキング マーカーを表すビットマップです。  
+-   正規表現と強調表示されたスマート ドッキング マーカーを表すビットマップ。  
   
  次の図は、カスタマイズされたスマート ドッキング マーカーの例を示します。  
   
- ![スマート ドッキングのカスタム マーカー](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
+ ![スマート ドッキング カスタム マーカー](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -112,7 +112,7 @@ class CSmartDockingInfo : public CObject
  **ヘッダー:** afxDockingManager.h  
   
 ##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo  
- スマート ドッキングの現在のパラメーターに指定されたコピー [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)オブジェクト。  
+ 現在のスマート ドッキングのパラメーターに指定されたコピー [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)オブジェクト。  
   
 ```  
 void CopyTo(CSmartDockingInfo& params);
@@ -120,19 +120,19 @@ void CopyTo(CSmartDockingInfo& params);
   
 ### <a name="parameters"></a>パラメーター  
  [out]*params*  
- 型のオブジェクト`CSmartDockingInfo`現在スマート ドッキングのパラメーターに設定されます。  
+ 型のオブジェクト`CSmartDockingInfo`スマート ドッキングの現在のパラメーターに設定されます。  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
- フレームワーク スマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。  
+ フレームワークはスマート ドッキング マーカーを表示するときに、現在のテーマの色を使用するかどうかを指定します。  
   
 ```  
 BOOL m_bUseThemeColorInShading;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 場合`TRUE`マーカーは、現在のテーマの色を使用して描画されます。 明るい青色でマーカーを描画するそれ以外の場合。  
+ 現在のテーマの色を使用して、マーカーを描画する場合は TRUE、それ以外の場合、マーカーは、薄い青色で描画されます。  
   
- 既定値は `FALSE` です。  
+ 既定値は FALSE です。  
   
 ##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground  
  スマート ドッキング マーカーの基本の背景色を指定します。  
@@ -142,16 +142,16 @@ COLORREF m_clrBaseBackground;
 ```  
   
 ##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest  
- 置換される色を指定`m_clrToneSrc`スマート ドッキング マーカー ビットマップにします。  
+ 置き換える色を指定します`m_clrToneSrc`スマート ドッキング マーカー ビットマップにします。  
   
 ```  
 COLORREF m_clrToneDest;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- プログラムでマーカー ビットマップの色を変更するには、この値を設定します。 たとえば、フレームワークで提供される標準的なマーカーの色を変更する場合は、目的の色にこの値を設定します。 既定では、 [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) RGB (61、123、241) に設定されている (青み色)。  
+ プログラムでマーカー ビットマップの色を変更するには、この値を設定します。 たとえば、フレームワークで提供される標準的なマーカーの色を変更する場合は、この値を目的の色に設定します。 既定では、 [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) RGB (61、123、241) に設定されている (青み色)。  
   
- カスタム マーカーの色を変更する、両方を指定する必要があります`m_clrToneDest`と`m_clrToneSrc`です。  
+ カスタム マーカーの色を変更する、両方を指定する必要があります`m_clrToneDest`と`m_clrToneSrc`します。  
   
 ##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc  
  スマート ドッキング マーカー ビットマップの色を指定します。  
@@ -161,9 +161,9 @@ COLORREF m_clrToneSrc;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 別の色のカスタム ビットマップの色を置換する場合にのみ、この値を設定します。 標準 (提供されているフレームワーク) の色を変更する場合は、この値を設定する必要はありませんマーカー。  
+ 別の色でカスタムのビットマップの色を置換する場合にのみ、この値を設定します。 標準 (フレームワークが提供) の色を変更する場合は、この値を設定する必要はありませんマーカー。  
   
- 使用して`(COLORREF)-1`スマート ドッキングのグループのメンバーは空のままにします。  
+ 使用`(COLORREF)-1`スマート ドッキングのグループのメンバーは空のままにします。  
   
 ##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent  
  透過的な場合は、スマート ドッキング マーカー ビットマップの色を指定します。  
@@ -183,7 +183,7 @@ int m_nCentralGroupOffset;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- カスタム マーカーとスマート ドッキング マーカーの中央のグループの境界間の既定オフセットを変更する場合は、この値を指定します。 既定のオフセットは、5 ピクセルです。  
+ カスタム マーカーとスマート ドッキング マーカーの中央のグループの境界間の既定オフセットを変更したい場合は、この値を指定します。 既定のオフセットは、5 ピクセルです。  
   
 ##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal  
  中央のグループ内のすべてのスマート ドッキング マーカーを囲む外接する四角形の合計サイズを指定します。  
@@ -193,7 +193,7 @@ CSize m_sizeTotal;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 設定`m_sizeTotal`サーバーの全体のグループのマーカーの外接する四角形のサイズにします。 マーカーのカスタム ビットマップを使用している場合は、この値を指定する必要があります。  
+ 設定`m_sizeTotal`外接する四角形の中心グループ マーカーのサイズにします。 マーカーのカスタム ビットマップを使用している場合は、この値を指定することが必要です。  
   
 ##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID  
  強調表示されている非カスタム スマート ドッキング マーカーに使用されるビットマップのリソース Id を定義します。  
@@ -203,7 +203,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Remarks  
- スマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 `AFX_SD_MARKERS_NUM` 現在 5 と定義されます。 配列は次のように入力します。  
+ スマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 現在、AFX_SD_MARKERS_NUM は 5 として定義されています。 次のように配列に格納します。  
   
  `params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;`  
   
@@ -223,7 +223,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 強調表示されたスマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 `AFX_SD_MARKERS_NUM` 現在 5 と定義されます。 配列は次のように入力します。  
+ 強調表示されたスマート ドッキング マーカーを表すビットマップのリソース Id をこの配列に格納します。 現在、AFX_SD_MARKERS_NUM は 5 として定義されています。 次のように配列に格納します。  
   
  `params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;`  
   

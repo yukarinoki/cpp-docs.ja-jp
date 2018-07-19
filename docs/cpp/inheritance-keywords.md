@@ -1,5 +1,5 @@
 ---
-title: 継承キーワード |Microsoft ドキュメント
+title: 継承キーワード |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088a920e5d023e4dea78e55610bebc0f20c2bac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 44cdb2b8149d2e8faf09ed715f96bc069620076b
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943486"
 ---
 # <a name="inheritance-keywords"></a>継承キーワード
 **Microsoft 固有の仕様**  
@@ -50,20 +51,20 @@ class [__virtual_inheritance] class-name;
   
  C++ では、クラスを定義する前にクラス メンバーへのポインターを宣言できます。 例えば:  
   
-```  
+```cpp 
 class S;  
 int S::*p;  
 ```  
   
- 上記のコードで`p`クラス %s の整数メンバーへのポインターとして宣言されました。ただし、`class S`が宣言されただけです。 このコードで定義されていません。 コンパイラがこのようなポインターを検出した場合、そのポインターの汎化表現を作成する必要があります。 この表現のサイズは、指定した継承モデルによって異なります。 コンパイラに継承モデルを指定するには 4 つの方法があります。  
+ 上記のコードで`p`クラス S. の整数メンバーへのポインターとして宣言されますただし、`class S`が宣言されているだけです。 このコードで定義されていません。 コンパイラがこのようなポインターを検出した場合、そのポインターの汎化表現を作成する必要があります。 この表現のサイズは、指定した継承モデルによって異なります。 コンパイラに継承モデルを指定するには 4 つの方法があります。  
   
--   下にある IDE で**メンバーへのポインター表現**  
+-   Ide の**メンバーへのポインター表現**  
   
 -   使用して、コマンドラインで、 [/vmg](../build/reference/vmb-vmg-representation-method.md)スイッチ  
   
 -   使用して、 [pointers_to_members](../preprocessor/pointers-to-members.md)プラグマ  
   
--   継承キーワード `__single_inheritance`、`__multiple_inheritance`、および `__virtual_inheritance` を使って指定する この手法により、クラス単位で継承モデルを制御します。  
+-   継承キーワードを使用して **_ _single_inheritance**、 **_ _multiple_inheritance**、および **_ _virtual_inheritance**します。 この手法により、クラス単位で継承モデルを制御します。  
   
     > [!NOTE]
     >  常にクラスを定義した後で、そのクラスのメンバーへのポインターを宣言する場合は、これらのオプションを使用する必要がありません。  
@@ -72,7 +73,7 @@ int S::*p;
   
  上記の例を次のように変更します。  
   
-```  
+```cpp 
 class __single_inheritance S;  
 int S::*p;  
 ```  

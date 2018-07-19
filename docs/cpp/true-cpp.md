@@ -1,5 +1,5 @@
 ---
-title: true (C++) |Microsoft ドキュメント
+title: true (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44df8d3e9429c272d83025b600fc8d43cc8f8b73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a469b47d54cef9084ba686538219d62a2d5ec50
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943276"
 ---
 # <a name="true-c"></a>true (C++)
 ## <a name="syntax"></a>構文  
   
 ```  
   
-      bool-identifier = true ;  
+bool-identifier = true ;  
 bool-expression logical-operator true ;  
 ```  
   
-## <a name="remarks"></a>コメント  
- このキーワードは、型の変数の 2 つの値のいずれかの[bool](../cpp/bool-cpp.md)または (条件式は true ブール式では今すぐ) 条件式。 場合`i`の種類は`bool`、then ステートメント`i = true;`割り当てます**true**に`i`です。  
+## <a name="remarks"></a>Remarks  
+ このキーワードは、2 つの型の変数値のいずれかの[bool](../cpp/bool-cpp.md)または条件式 (条件式は true ブール式ではようになりました)。 場合`i`の種類は**bool**、then ステートメント`i = true;`割り当てます**true**に`i`します。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // bool_true.cpp  
 #include <stdio.h>  
 int main()  

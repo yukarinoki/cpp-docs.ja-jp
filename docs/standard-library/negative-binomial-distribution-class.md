@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f1bcdfa87eac674d935eeaa8007434f930636e9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 52f9c1335304cc3eefec76abde641e62932eb727
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854991"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964409"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution クラス
 
@@ -77,36 +77,36 @@ public:
     result_type min() const;
     result_type max() const;
 };
+```
 
-### Parameters
+### <a name="parameters"></a>パラメーター
 
-*IntType*
-The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).
+*IntType*整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## Remarks
+## <a name="remarks"></a>Remarks
 
-The template class describes a distribution that produces values of a user-specified integral type, or type `int` if none is provided, distributed according to the Negative Binomial Distribution discrete probability function. The following table links to articles about individual members.
+テンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**int**がない場合は、負の二項分布の離散確率関数に従って分散されます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-The property members `k()` and `p()` return the currently stored distribution parameter values *k* and *p* respectively.
+プロパティ メンバー`k()`と`p()`格納されている分布パラメーター値を返す*k*と*p*それぞれします。
 
-The property member `param()` sets or returns the `param_type` stored distribution parameter package.
+プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
-The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.
+メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
-The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.
+`reset()` メンバー関数は、次回 `operator()` を呼び出したときに、その結果が、その前にエンジンから取得された値に左右されないようにするため、キャッシュされている値をすべて破棄します。
 
-The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
+`operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).
+分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-For detailed information about the negative binomial distribution discrete probability function, see the Wolfram MathWorld article [Negative Binomial Distribution](http://go.microsoft.com/fwlink/p/?linkid=400516).
+負の二項分布の離散確率関数の詳細については、Wolfram MathWorld の記事を参照してください。[負の二項分布](http://go.microsoft.com/fwlink/p/?linkid=400516)します。
 
-## Example
+## <a name="example"></a>例
 
 ```cpp
 // compile with: /EHsc /W4
@@ -225,7 +225,7 @@ Histogram for 100 samples:
     69 ::::
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -246,9 +246,9 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* 、`p`分布パラメーター。
 
-*パラメーター*分布の作成に使用されるパラメーターの構造体。
+*parm*分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < k` かつ `0.0 < p ≤ 1.0`
 
@@ -260,7 +260,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 分布のパラメーターを格納します。
 
-構造体 param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1、p をダブルクリック = 0.5); const; result_type k() 二重の原点を結んだ const です。
+構造体 param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1、p を 2 倍 = 0.5); result_type 報告 const; const; 原点を結んだをダブルクリック
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
@@ -270,9 +270,9 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 *p* 、`p`分布パラメーター。
 
-*右*、`param_type`構造体を比較するために使用します。
+*適切な*、`param_type`構造体を比較するために使用します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 **前提条件:** `0.0 < k` および `0.0 < p ≤ 1.0`
 

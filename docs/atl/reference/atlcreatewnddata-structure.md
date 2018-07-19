@@ -1,5 +1,5 @@
 ---
-title: _AtlCreateWndData 構造 |Microsoft ドキュメント
+title: _AtlCreateWndData 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: cf51197750e9595570a7b011c179c2ed4c7902c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255796"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880009"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 構造体
-この構造体には、ATL の windowing コードのクラス インスタンス データが含まれています。  
+この構造体には、ATL でウィンドウ作成コードのクラス インスタンスのデータが含まれています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,16 +40,16 @@ ms.locfileid: "34255796"
 ```  
   
 ## <a name="members"></a>メンバー  
- **m_pThis**  
- **この**ポインターをウィンドウ プロシージャに、クラスのインスタンスへのアクセスを取得するために使用します。  
+ `m_pThis`  
+ **この**ポインターをウィンドウ プロシージャで、クラスのインスタンスへのアクセスを取得するために使用します。  
   
  `m_dwThreadID`  
  現在のクラス インスタンスのスレッド ID。  
   
- **m_pNext**  
+ `m_pNext`  
  次へのポインター`_AtlCreateWndData`オブジェクト。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ## <a name="see-also"></a>関連項目  

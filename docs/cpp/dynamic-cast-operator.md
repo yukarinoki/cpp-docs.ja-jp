@@ -1,5 +1,5 @@
 ---
-title: dynamic_cast 演算子 |Microsoft ドキュメント
+title: dynamic_cast 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 697f4a83cb0b5f9aabb7ce477c4664cb39fb7f97
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943997"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 演算子
 オペランド `expression` を `type-id` 型のオブジェクトに変換します。  
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/03/2018
 dynamic_cast < type-id > ( expression )  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `type-id` は、以前に定義されたクラス型への参照またはポインター、または "void 型へのポインター" である必要があります。 `expression` の型は、`type-id` がポインターの場合はポインター、`type-id` が参照の場合は左辺値である必要があります。  
   
- 参照してください[static_cast](../cpp/static-cast-operator.md)と各を使用する適切な静的および動的なキャスト変換では、間の違いの説明。  
+ 参照してください[static_cast](../cpp/static-cast-operator.md)各を使用する適切なタイミングと、静的および動的なキャスト変換の間の違いの詳細についてはします。  
   
- マネージ コードの `dynamic_cast` の動作には、次の 2 つの大きな変更があります。  
+ 動作の 2 つの重大な変更がある**dynamic_cast**マネージ コードで。  
   
--   ボックス化された列挙体の基になる型へのポインターへの `dynamic_cast` は、実行時に失敗し、変換されたポインターではなく 0 を返します。  
+-   **dynamic_cast**ボックス化された列挙型の基になる型へのポインターに変換されたポインターではなく 0 を返す、実行時に失敗します。  
   
--   `dynamic_cast` は、`type-id` が値型への内部ポインターであり、キャストが実行時に失敗した場合に、例外をスローしなくなりました。  キャストは、スローする代わりに、ポインター値 0 を返します。  
+-   **dynamic_cast**は例外をスローしないとき`type-id`は実行時に失敗したキャストの値の型への内部ポインター。  キャストは、スローする代わりに、ポインター値 0 を返します。  
   
  `type-id` が `expression` の明確でアクセス可能な直接または間接的な基底クラスへのポインターである場合、結果は `type-id` 型の一意のサブオブジェクトへのポインターになります。 例えば:  
   
-```  
+```cpp 
 // dynamic_cast_1.cpp  
 // compile with: /c  
 class B { };  
@@ -64,7 +65,7 @@ void f(D* pd) {
   
  `type-id` が void* の場合、`expression` の実際の型を確認するためにランタイム チェックが行われます。 結果は `expression` によってポイントされた完全なオブジェクトへのポインターです。 例えば:  
   
-```  
+```cpp 
 // dynamic_cast_2.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -85,7 +86,7 @@ void f() {
   
  `expression` の型が `type-id` の型の基底クラスである場合は、ランタイム チェックが実行されて、`expression` が `type-id` の型の完全なオブジェクトを実際に指し示しているかどうかが確認されます。 実際に指し示している場合、結果は `type-id` の型の完全なオブジェクトへのポインターになります。 例えば:  
   
-```  
+```cpp 
 // dynamic_cast_3.cpp  
 // compile with: /c /GR  
 class B {virtual void f();};  
@@ -104,11 +105,11 @@ void f() {
   
  多重継承の場合、あいまいさが生じる可能性があります。 次の図に示すクラスの階層構造の場合を考えてみましょう。  
   
- CLR 型の場合、`dynamic_cast` を実行すると、暗黙的な変換が可能な場合、何も行われません。変換が失敗した場合は、動的チェックを実行し、`isinst` を返す MSIL `nullptr` 命令が実行されます。  
+ CLR 型**dynamic_cast** no-op、変換を暗黙的に実行できない場合または MSIL のいずれかで結果`isinst`命令では、動的チェックを実行し、返します**nullptr**場合、変換は失敗します。  
   
- 次のサンプルでは、クラスが特定の型のインスタンスであるかどうかを判断するために `dynamic_cast` を使用します。  
+ 次のサンプルは**dynamic_cast**クラスが特定の種類のインスタンスかどうかを決定します。  
   
-```  
+```cpp 
 // dynamic_cast_clr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -129,12 +130,12 @@ int main() {
 }  
 ```  
   
- ![クラスの複数の継承を示す階層](../cpp/media/vc39011.gif "vc39011")  
+ ![クラスを示す複数継承階層](../cpp/media/vc39011.gif "vc39011")  
 複数の継承を示すクラスの階層構造  
   
  `D` 型のオブジェクトへのポインターは、`B` または `C` に安全にキャストできます。 しかし、`D` が `A` オブジェクトを指し示すようにキャストされる場合、結果は `A` のどのインスタンスになるでしょうか。 このような場合に、あいまいなキャスト エラーが発生します。 この問題を回避するには、2 種類の明確なキャストを実行します。 例えば:  
   
-```  
+```cpp 
 // dynamic_cast_4.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -153,16 +154,16 @@ void f() {
  ![クラスの仮想基底クラスを示す階層](../cpp/media/vc39012.gif "vc39012")  
 仮想基底クラスを示すクラスの階層構造  
   
- この階層構造では、`A` は仮想基底クラスです。 `E` クラスのインスタンスと `A` サブオブジェクトへのポインターがある場合、`dynamic_cast` へのポインターへの `B` はあいまいさが原因で失敗します。 最初に、完全な `E` オブジェクトにキャストし、その後、明確な方法で階層を上へとたどり、正しい `B` オブジェクトに到達する必要があります。  
+ この階層構造では、`A` は仮想基底クラスです。 クラスのインスタンスを指定された`E`へのポインター、`A`サブオブジェクトを**dynamic_cast**へのポインターに`B`あいまいさが原因で失敗します。 最初に、完全な `E` オブジェクトにキャストし、その後、明確な方法で階層を上へとたどり、正しい `B` オブジェクトに到達する必要があります。  
   
  次の図に示すクラスの階層構造の場合を考えてみましょう。  
   
- ![クラスの重複する基底クラスを示す階層](../cpp/media/vc39013.gif "vc39013")  
+ ![クラスの基底クラスの複製を示す階層](../cpp/media/vc39013.gif "vc39013")  
 基底クラスの複製を示すクラスの階層構造  
   
- `E` 型のオブジェクトと `D` サブオブジェクトへのポインターがあるとして、`D` サブオブジェクトから左端の `A` サブオブジェクトに移動するには、変換を 3 回行います。 `dynamic_cast` ポインターから `D` ポインターへの `E` 変換を実行してから、`dynamic_cast` から `E` への変換 (`B` または暗黙の型変換) を実行し、最後に `B` から `A` への暗黙の型変換を実行することができます。 例えば:  
+ `E` 型のオブジェクトと `D` サブオブジェクトへのポインターがあるとして、`D` サブオブジェクトから左端の `A` サブオブジェクトに移動するには、変換を 3 回行います。 行うことができます、 **dynamic_cast**からの変換、`D`へのポインター、`E`ポインターの場合、変換 (か**dynamic_cast**または暗黙の変換)から`E`に`B`、および暗黙的な変換から最後に`B`に`A`します。 例えば:  
   
-```  
+```cpp 
 // dynamic_cast_5.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -178,11 +179,11 @@ void f(D* pd) {
 }  
 ```  
   
- `dynamic_cast` 演算子を使用して、"クロス キャスト" を実行することもできます。 同じクラス階層を使用すると、完全なオブジェクトが `B` 型であれば、たとえば `D` サブオブジェクトから `E` サブオブジェクトへのように、ポインターをキャストできます。  
+ **Dynamic_cast**演算子が「クロス キャスト」を実行することもできます 同じクラス階層を使用すると、完全なオブジェクトが `B` 型であれば、たとえば `D` サブオブジェクトから `E` サブオブジェクトへのように、ポインターをキャストできます。  
   
  クロス キャストを考慮すると、`D` へのポインターから左端の `A` サブオブジェクトへのポインターへの変換は、実際には 2 ステップで行うことができます。 `D` から `B` にクロス キャストを実行してから、`B` から `A` への暗黙の型変換を実行できます。 例えば:  
   
-```  
+```cpp 
 // dynamic_cast_6.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -197,11 +198,11 @@ void f(D* pd) {
 }  
 ```  
   
- null ポインター値は、`dynamic_cast` によって変換先の型の null ポインター値に変換されます。  
+ Null ポインター値は、変換先の型の null ポインター値に変換されます**dynamic_cast**します。  
   
  `dynamic_cast < type-id > ( expression )` を使用するときに、`expression` を型 `type-id` に安全に変換できない場合、ランタイム チェックにより、キャストは失敗します。 例えば:  
   
-```  
+```cpp 
 // dynamic_cast_7.cpp  
 // compile with: /c /GR  
 class A {virtual void f();};  
@@ -214,16 +215,16 @@ void f() {
 }  
 ```  
   
- ポインター型への失敗したキャストの値は、null ポインターです。 参照型をスローする失敗したキャスト、 [bad_cast 例外](../cpp/bad-cast-exception.md)です。   場合`expression`、有効なオブジェクトを参照または をポイントしません、`__non_rtti_object`例外がスローされます。  
+ ポインター型への失敗したキャストの値は、null ポインターです。 失敗したキャスト型のスローを参照する、 [bad_cast 例外](../cpp/bad-cast-exception.md)します。   場合`expression` をポイントまたは有効なオブジェクトを参照しません、`__non_rtti_object`例外がスローされます。  
   
- 参照してください[typeid](../cpp/typeid-operator.md)の詳細について、`__non_rtti_object`例外。  
+ 参照してください[typeid](../cpp/typeid-operator.md)の詳細については、`__non_rtti_object`例外。  
   
 ## <a name="example"></a>例  
  次のサンプルは、オブジェクト (構造体 C) への基底クラス (構造体 A) ポインターを作成します。  このことと、仮想関数があるという事実によって、実行時ポリモーフィズムが可能になります。  
   
  このサンプルでは、階層内の非仮想関数も呼び出します。  
   
-```  
+```cpp 
 // dynamic_cast_8.cpp  
 // compile with: /GR /EHsc  
 #include <stdio.h>  

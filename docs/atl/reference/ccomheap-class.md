@@ -1,5 +1,5 @@
 ---
-title: CComHeap クラス |Microsoft ドキュメント
+title: CComHeap クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d45a999f777a2d497542544c2d3c7f079b7a32b0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359864"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881605"
 ---
 # <a name="ccomheap-class"></a>CComHeap クラス
 このクラスは実装[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) COM メモリの割り当て関数を使用します。  
@@ -51,18 +51,18 @@ class CComHeap : public IAtlMemMgr
 |[CComHeap::GetSize](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。|  
 |[Ccomheap::reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|  
   
-## <a name="remarks"></a>コメント  
- `CComHeap` COM 割り当て関数を使用してメモリ割り当て関数を実装する[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)、 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)、 [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)、および[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)です。 割り当てることができるメモリの最大量と等しい**INT_MAX** (2,147, 483,647) バイトです。  
+## <a name="remarks"></a>Remarks  
+ `CComHeap` COM 割り当て関数を使用して、メモリ割り当て関数を実装する[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)、 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)、 [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)、および[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)します。 割り当て可能なメモリの最大量は INT_MAX (2147483647) バイトです。  
   
 ## <a name="example"></a>例  
- 例を参照して[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)です。  
+ 例をご覧ください[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `IAtlMemMgr`  
   
  `CComHeap`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** ATLComMem.h  
   
 ##  <a name="allocate"></a>  CComHeap::Allocate  
@@ -73,16 +73,16 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBytes`  
+ *nBytes*  
  新しいメモリ ブロック内の要求されたバイト数。  
   
 ### <a name="return-value"></a>戻り値  
  新しく割り当てられたメモリ ブロックの先頭へのポインターを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[ccomheap::free](#free)または[ccomheap::reallocate](#reallocate)このメソッドによって割り当てられたメモリを解放します。  
   
- 使用して実装[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)です。  
+ 使用して実装[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)します。  
   
 ##  <a name="free"></a>  Ccomheap::free  
  このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。  
@@ -92,11 +92,11 @@ virtual void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `p`  
- このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値であり、何も行われません。  
+ *p*  
+ このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値を何も行われません。  
   
-### <a name="remarks"></a>コメント  
- 使用して実装[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)です。  
+### <a name="remarks"></a>Remarks  
+ 使用して実装[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)します。  
   
 ##  <a name="getsize"></a>  CComHeap::GetSize  
  このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。  
@@ -106,14 +106,14 @@ virtual size_t GetSize(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `p`  
+ *p*  
  このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
  割り当てられたメモリ ブロックのサイズをバイト単位で返します。  
   
-### <a name="remarks"></a>コメント  
- 使用して実装[IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)です。  
+### <a name="remarks"></a>Remarks  
+ 使用して実装[IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)します。  
   
 ##  <a name="reallocate"></a>  Ccomheap::reallocate  
  このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。  
@@ -123,19 +123,19 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `p`  
+ *p*  
  このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。  
   
- `nBytes`  
+ *nBytes*  
  新しいメモリ ブロック内の要求されたバイト数。  
   
 ### <a name="return-value"></a>戻り値  
  新しく割り当てられたメモリ ブロックの先頭へのポインターを返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  呼び出す[ccomheap::free](#free)このメソッドによって割り当てられたメモリを解放します。  
   
- 使用して実装[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)です。  
+ 使用して実装[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)します。  
   
 ## <a name="see-also"></a>関連項目  
  [DynamicConsumer サンプル](../../visual-cpp-samples.md)   

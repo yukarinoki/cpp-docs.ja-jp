@@ -1,5 +1,5 @@
 ---
-title: IPropertyPage2Impl クラス |Microsoft ドキュメント
+title: IPropertyPage2Impl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 204f62e667bd149dd174f960ba31d8388e01394e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361903"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882898"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl クラス
-このクラスは実装**IUnknown**の既定の実装の継承と[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)です。  
+このクラスは実装`IUnknown`の既定の実装の継承と[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)します。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -41,8 +41,8 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 派生したクラス、`IPropertyPage2Impl`です。  
+ *T*  
+ 派生したクラス、`IPropertyPage2Impl`します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -50,14 +50,14 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
   
 |名前|説明|  
 |----------|-----------------|  
-|[IPropertyPage2Impl::EditProperty](#editproperty)|プロパティ ページがアクティブになったときにどのプロパティ コントロールがフォーカスを受け取るを指定します。 ATL の実装を返します**E_NOTIMPL**です。|  
+|[IPropertyPage2Impl::EditProperty](#editproperty)|プロパティ ページがアクティブになったときにどのプロパティ コントロールがフォーカスを受け取るを指定します。 ATL の実装では、E_NOTIMPL を返します。|  
   
-## <a name="remarks"></a>コメント  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996)インターフェイスを拡張[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)追加することによって、`EditProperty`メソッドです。 このメソッドは、プロパティ ページ オブジェクトで特定のプロパティを選択するクライアントを使用します。  
+## <a name="remarks"></a>Remarks  
+ [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996)インターフェイスは、拡張[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)を追加して、`EditProperty`メソッド。 このメソッドは、プロパティ ページのオブジェクトで特定のプロパティを選択するクライアントを使用します。  
   
- クラス`IPropertyPage2Impl`を単純に返します**E_NOTIMPL**の**IPropertyPage2::EditProperty**です。 ただし、既定の実装を継承[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)を実装して**IUnknown**ダンプ情報を送信することによってデバッグ デバイスを構築します。  
+ クラス`IPropertyPage2Impl`の E_NOTIMPL を単純に返します`IPropertyPage2::EditProperty`します。 ただしの既定の実装を継承[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)実装と`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。  
   
- プロパティ ページを作成するとき、クラスがから派生した通常`IPropertyPageImpl`です。 特別なサポートを提供する**IPropertyPage2**、クラス定義を変更、および上書き、`EditProperty`メソッドです。  
+ クラスは一般から派生するプロパティ ページを作成するときに`IPropertyPageImpl`します。 特別なサポートを提供する`IPropertyPage2`、クラス定義を変更し、上書き、`EditProperty`メソッド。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   
@@ -68,7 +68,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
   
  `IPropertyPage2Impl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty  
@@ -79,9 +79,9 @@ HRESULT EditProperty(DISPID dispID);
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 返します**E_NOTIMPL**です。  
+ E_NOTIMPL を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  参照してください[IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) Windows SDK にします。  
   
 ## <a name="see-also"></a>関連項目  

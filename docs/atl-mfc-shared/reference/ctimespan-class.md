@@ -1,5 +1,5 @@
 ---
-title: CTimeSpan クラス |Microsoft ドキュメント
+title: CTimeSpan クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -33,15 +33,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd95d26dd2df41f16091379c892f67319c218cc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30b110e9c9f737f8dbbe46782613ca80240fb943
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32365319"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880431"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan クラス
-時間間隔の秒数として内部的に格納されている時間の量。  
+時間間隔の秒数として内部的に格納されている、時間。  
   
 ## <a name="syntax"></a>構文  
   
@@ -61,43 +61,43 @@ class CTimeSpan
   
 |名前|説明|  
 |----------|-----------------|  
-|[CTimeSpan::Format](#format)|変換、`CTimeSpan`を書式設定された文字列にします。|  
-|[CTimeSpan::GetDays](#getdays)|これで完了日の数を表す値を返します`CTimeSpan`です。|  
+|[CTimeSpan::Format](#format)|変換を`CTimeSpan`書式設定された文字列にします。|  
+|[CTimeSpan::GetDays](#getdays)|この完全な日数を表す値を返します`CTimeSpan`します。|  
 |[CTimeSpan::GetHours](#gethours)|現在の日付 (-23 ~ 23) の時間数を表す値を返します。|  
 |[CTimeSpan::GetMinutes](#getminutes)|現在の時間 (-59 ~ 59) で分単位の数を表す値を返します。|  
 |[CTimeSpan::GetSeconds](#getseconds)|現在の分 (-59 ~ 59) の秒数を表す値を返します。|  
 |[CTimeSpan::GetTimeSpan](#gettimespan)|値を返します、`CTimeSpan`オブジェクト。|  
-|[CTimeSpan::GetTotalHours](#gettotalhours)|これで完了時間の合計数を表す値を返します`CTimeSpan`です。|  
-|[CTimeSpan::GetTotalMinutes](#gettotalminutes)|この分数の合計数を表す値を返します`CTimeSpan`です。|  
-|[CTimeSpan::GetTotalSeconds](#gettotalseconds)|これで完了秒の合計数を表す値を返します`CTimeSpan`です。|  
-|[CTimeSpan::Serialize64](#serialize64)|またはアーカイブからデータをシリアル化します。|  
+|[CTimeSpan::GetTotalHours](#gettotalhours)|これで完了時間の合計数を表す値を返します`CTimeSpan`します。|  
+|[CTimeSpan::GetTotalMinutes](#gettotalminutes)|この分数の合計数を表す値を返します`CTimeSpan`します。|  
+|[CTimeSpan::GetTotalSeconds](#gettotalseconds)|これで完了秒の合計数を表す値を返します`CTimeSpan`します。|  
+|[CTimeSpan::Serialize64](#serialize64)|アーカイブからデータをシリアル化します。|  
   
 ### <a name="operators"></a>演算子  
   
 |||  
 |-|-|  
 |[演算子 + -](#operator_add_-)|追加し、減算`CTimeSpan`オブジェクト。|  
-|[演算子 + = =](#operator_add_eq_-_eq)|追加し、減算、`CTimeSpan`オブジェクトからこの`CTimeSpan`です。|  
-|[演算子 = = < などです。](#ctimespan_comparison_operators)|2 つの相対時間値を比較します。|  
+|[operator + = =](#operator_add_eq_-_eq)|追加し、減算、`CTimeSpan`オブジェクトとの間この`CTimeSpan`します。|  
+|[演算子 = = < など。](#ctimespan_comparison_operators)|2 つの相対時刻値を比較します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `CTimeSpan` 基本クラスはありません。  
   
- `CTimeSpan` 関数は、さまざまな組み合わせで、日、時間、分、秒および秒に変換します。  
+ `CTimeSpan` 関数は、さまざまな組み合わせの日、時間、分、秒と秒に変換します。  
   
  `CTimeSpan`にオブジェクトが格納されている、 **_ _time64_t**構造体は、8 バイトです。  
   
- コンパニオン クラス[CTime](../../atl-mfc-shared/reference/ctime-class.md)、絶対時刻を表します。  
+ コンパニオン クラス、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)、絶対時刻を表します。  
   
- `CTime`と`CTimeSpan`クラスが派生させるために設計されていません。 両方のサイズの仮想関数が存在しないため`CTime`と`CTimeSpan`オブジェクトは、厳密に 8 バイト。 ほとんどのメンバー関数はインラインです。  
+ `CTime`と`CTimeSpan`クラスが派生させるために設計されていません。 両方のサイズの仮想関数が存在しないため`CTime`と`CTimeSpan`オブジェクトは、厳密に 8 バイト。 ほとんどのメンバー関数は、インラインです。  
   
- 使用する方法について`CTimeSpan`、記事を参照して[日付と時刻](../../atl-mfc-shared/date-and-time.md)、および[時間管理](../../c-runtime-library/time-management.md)で、*ランタイム ライブラリ リファレンス*です。  
+ 使用しての詳細については`CTimeSpan`、記事を参照して[日付と時刻](../../atl-mfc-shared/date-and-time.md)、および[時間管理](../../c-runtime-library/time-management.md)で、*ランタイム ライブラリ リファレンス*します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atltime.h  
   
 ##  <a name="ctimespan_comparison_operators"></a>  CTimeSpan 比較演算子  
- 比較演算子です。  
+ 比較演算子。  
   
 ```
 bool operator==(CTimeSpan span) const throw();
@@ -109,12 +109,12 @@ bool operator>=(CTimeSpan span) const throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `span`  
+ *スパン*  
   
  比較対象のオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- これらの演算子は、2 つの相対時間値を比較します。 返される**true**条件の場合は true。 それ以外の場合**false**です。  
+ これらの演算子は、2 つの相対時間の値を比較します。 条件が true である場合は TRUE、返すそれ以外の場合は FALSE です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#169](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_1.cpp)]  
@@ -137,37 +137,37 @@ CTimeSpan(
  *timeSpanSrc*  
  A`CTimeSpan`既に存在するオブジェクト。  
   
- `time`  
- A **_ _time64_t**時間間隔の秒数は、時刻の値。  
+ *time*  
+ A **_ _time64_t**時刻の値は、時間間隔の秒数です。  
   
- `lDays`, `nHours`, `nMins`, `nSecs`  
- 日、時間、分、および秒、それぞれします。  
+ *lDays*、 *nHours*、 *nMins*、 *nSecs*  
+ 日数、時間、分、および秒に、それぞれします。  
   
-### <a name="remarks"></a>コメント  
- これらすべてのコンストラクタは、新しい作成`CTimeSpan`指定の相対時刻で初期化されるオブジェクト。 各コンス トラクターは、次に示します。  
+### <a name="remarks"></a>Remarks  
+ これらすべてのコンス トラクターを作成する新しい`CTimeSpan`オブジェクトの指定された相対時間を使用して初期化します。 各コンス トラクターは、次に示します。  
   
-- **CTimeSpan ();** 構築、初期化されていない`CTimeSpan`オブジェクト。  
+- `CTimeSpan( );` 作成、初期化されていない`CTimeSpan`オブジェクト。  
   
-- **CTimeSpan (const CTimeSpan (& a)) です。** 構築、`CTimeSpan`から別のオブジェクト`CTimeSpan`値。  
+- `CTimeSpan( const CTimeSpan& );` 構築、`CTimeSpan`から別のオブジェクト`CTimeSpan`値。  
   
-- **CTimeSpan (_ _time64_t) です。** 構築、`CTimeSpan`オブジェクトから、 **_ _time64_t**型です。  
+- `CTimeSpan( __time64_t );` 構築、`CTimeSpan`オブジェクトから、 **_ _time64_t**型。  
   
-- **CTimeSpan (長い**、 **int, int, int);** 構築、`CTimeSpan`オブジェクトの各構成要素からは、次の範囲に制限します。  
+- `CTimeSpan( LONG, int, int, int );` 構築、`CTimeSpan`の各構成要素からオブジェクトが、次の範囲に制限されます。  
   
     |コンポーネント|範囲|  
     |---------------|-----------|  
-    |`lDays`|0-25,000 (概算)|  
-    |`nHours`|0-23|  
-    |`nMins`|0-59|  
-    |`nSecs`|0-59|  
+    |*lDays*|0 ~ 25,000 (概算)|  
+    |*nHours*|0-23|  
+    |*nMins*|0-59|  
+    |*nSecs*|0-59|  
   
- Microsoft Foundation Class ライブラリのデバッグ バージョンでは、1 つ以上の時間帯は、コンポーネントが範囲外アサートすることに注意してください。 ユーザーの責任を呼び出す前に引数を検証することをお勧めします。  
+ Microsoft Foundation Class ライブラリのデバッグ バージョンのかどうか、時刻のコンポーネントの 1 つ以上が範囲外ですがアサートすることに注意してください。 呼び出す前に引数を検証するユーザーの責任になります。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#162](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_2.cpp)]  
   
 ##  <a name="format"></a>  CTimeSpan::Format  
- これに対応する書式設定された文字列を生成`CTimeSpan`です。  
+ これに対応する書式設定された文字列を生成`CTimeSpan`します。  
   
 ```
 CString Format(LPCSTR pFormat) const;
@@ -176,43 +176,43 @@ CString Format(UINT nID) const;
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFormat`, `pszFormat`  
- 書式文字列のような`printf`文字列の書式設定します。 割合に続くコードの書式設定 ( `%`) 署名は、対応する置き換え`CTimeSpan`コンポーネントです。 その他の文字書式指定文字列では、返される文字列に変更されずにコピーされます。 値との書式指定コードの意味**形式**以下に示します。  
+ *pFormat*、 *pszFormat*  
+ ような文字列を書式設定、`printf`文字列の書式設定します。 割合に続くコードの書式設定 (`%`) 署名は、対応する置き換え`CTimeSpan`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 値との書式設定コードの意味`Format`を以下に示します。  
   
-- **%D**この日数の合計 `CTimeSpan`  
+- **%D**この日の合計 `CTimeSpan`  
   
-- **%H**現在の日付の時間  
+- **%H**は現在の日の時間  
   
-- **%M**で現在の時間 (分)  
+- **%M**現在の 1 時間分  
   
 - **%S**現在の時間 (秒)  
   
 - **%%** パーセント記号  
   
- `nID`  
+ *nID*  
  この形式を識別する文字列の ID。  
   
 ### <a name="return-value"></a>戻り値  
- A`CString`書式設定された時間を含むオブジェクト。  
+ A`CString`書式設定された時刻を表すオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- ライブラリのデバッグ バージョンでは、書式指定コードをチェックし、コードは、上記の一覧に含まれないかどうかをアサートします。  
+### <a name="remarks"></a>Remarks  
+ ライブラリのデバッグ バージョンは、書式設定コードをチェックし、コードは、上記の一覧にないかどうかをアサートします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#163](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_3.cpp)]  
   
 ##  <a name="getdays"></a>  CTimeSpan::GetDays  
- これで完了日の数を表す値を返します`CTimeSpan`です。  
+ この完全な日数を表す値を返します`CTimeSpan`します。  
   
 ```
 LONGLONG GetDays() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 時間間隔内には 24 日単位の数を返します。 この値は、時間間隔が負の場合は、負である可能性があります。  
+ 時間範囲内の 24 時間の完全な日数を返します。 この値は、時間間隔が負の場合は負にあります。  
   
-### <a name="remarks"></a>コメント  
- 夏時間の原因となる注`GetDays`可能性があることにより意外結果が返されます。 たとえば、ときに夏時間が有効で**GetDays**年 4 月 1 日 1 時間を短縮し、そのため、1 日に完了とは見なされませんのでない 30 日、29 と 4 月 1 日から 5 月 1日までの日数の数を報告します。  
+### <a name="remarks"></a>Remarks  
+ 夏時間を引き起こす可能性のある注`GetDays`可能性のある意外な結果が返されます。 たとえば、ときに DST が有効で`GetDays`年 4 月の 1 日 1 時間を短縮し、そのため、完了日とは見なされませんので、29、30、として 4 月 1 日と月 1 日の数を報告します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#164](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_4.cpp)]  
@@ -225,7 +225,7 @@ LONG GetHours() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在の日付の時間数を返します。 範囲は、-23 ~ 23 です。  
+ 現在の日付、時間数を返します。 範囲は、-23 ~ 23 です。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#165](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_5.cpp)]  
@@ -238,10 +238,10 @@ LONG GetMinutes() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 現在の時刻の分単位の数を返します。 範囲は、-59 ~ 59 です。  
+ 現在の時間の分数を返します。 範囲は、-59 ~ 59 です。  
   
 ### <a name="example"></a>例  
- 例を参照して[GetHours](#gethours)です。  
+ 例をご覧ください[GetHours](#gethours)します。  
   
 ##  <a name="getseconds"></a>  CTimeSpan::GetSeconds  
  現在の分 (-59 ~ 59) の秒数を表す値を返します。  
@@ -254,7 +254,7 @@ LONG GetSeconds() const throw();
  現在の分の秒数を返します。 範囲は、-59 ~ 59 です。  
   
 ### <a name="example"></a>例  
- 例を参照して[GetHours](#gethours)です。  
+ 例をご覧ください[GetHours](#gethours)します。  
   
 ##  <a name="gettimespan"></a>  CTimeSpan::GetTimeSpan  
  値を返します、`CTimeSpan`オブジェクト。  
@@ -267,43 +267,43 @@ __ time64_t GetTimeSpan() const throw();
  現在の値を返します、`CTimeSpan`オブジェクト。  
   
 ##  <a name="gettotalhours"></a>  CTimeSpan::GetTotalHours  
- これで完了時間の合計数を表す値を返します`CTimeSpan`です。  
+ これで完了時間の合計数を表す値を返します`CTimeSpan`します。  
   
 ```
 LONGLONG GetTotalHours() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- これで完了時間の合計数を返します`CTimeSpan`です。  
+ これで完了時間の合計数を返します`CTimeSpan`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#166](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_6.cpp)]  
   
 ##  <a name="gettotalminutes"></a>  CTimeSpan::GetTotalMinutes  
- この分数の合計数を表す値を返します`CTimeSpan`です。  
+ この分数の合計数を表す値を返します`CTimeSpan`します。  
   
 ```
 LONGLONG GetTotalMinutes() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- この分数の合計数を返します`CTimeSpan`です。  
+ この分数の合計数を返します`CTimeSpan`します。  
   
 ### <a name="example"></a>例  
- 例を参照して[従来](#gettotalhours)です。  
+ 例をご覧ください[従来](#gettotalhours)します。  
   
 ##  <a name="gettotalseconds"></a>  CTimeSpan::GetTotalSeconds  
- これで完了秒の合計数を表す値を返します`CTimeSpan`です。  
+ これで完了秒の合計数を表す値を返します`CTimeSpan`します。  
   
 ```
 LONGLONG GetTotalSeconds() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- これで完了秒の合計数を返します`CTimeSpan`です。  
+ これで完了秒の合計数を返します`CTimeSpan`します。  
   
 ### <a name="example"></a>例  
- 例を参照して[従来](#gettotalhours)です。  
+ 例をご覧ください[従来](#gettotalhours)します。  
   
 ##  <a name="operator_add_-"></a>  CTimeSpan::operator +、-  
  追加し、減算`CTimeSpan`オブジェクト。  
@@ -314,20 +314,20 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `span`  
+ *スパン*  
  追加する値、`CTimeSpan`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  A`CTimeSpan`操作の結果を表すオブジェクト。  
   
-### <a name="remarks"></a>コメント  
- これら 2 つの演算子を使用すると、加算し、減算`CTimeSpan`をおよび他のオブジェクト。  
+### <a name="remarks"></a>Remarks  
+ これら 2 つの演算子を許可する加算および減算`CTimeSpan`との相互間のオブジェクト。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]  
   
 ##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator + =、=  
- 追加し、減算、`CTimeSpan`オブジェクトからこの`CTimeSpan`です。  
+ 追加し、減算、`CTimeSpan`オブジェクトとの間この`CTimeSpan`します。  
   
 ```
 CTimeSpan& operator+=(CTimeSpan span) throw();
@@ -335,14 +335,14 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `span`  
+ *スパン*  
  追加する値、`CTimeSpan`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
  更新された`CTimeSpan`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- これらの演算子を使用すると、加算し、減算、`CTimeSpan`オブジェクトからこの`CTimeSpan`です。  
+### <a name="remarks"></a>Remarks  
+ これらの演算子を許可する加算および減算にする、`CTimeSpan`オブジェクトとの間この`CTimeSpan`します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATLMFC_Utilities#168](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_8.cpp)]  
@@ -350,16 +350,16 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 ##  <a name="serialize64"></a>  CTimeSpan::Serialize64  
   
 > [!NOTE]
->  このメソッドを MFC プロジェクトで使用できるだけです。  
+>  このメソッドは、MFC プロジェクトで使用できるだけです。  
   
- メンバー変数とアーカイブの間に関連付けられているデータをシリアル化します。  
+ 関連付けられたメンバー変数に、アーカイブからデータをシリアル化します。  
   
 ```
 CArchive& Serialize64(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `ar`  
+ *ar*  
  `CArchive`を更新するオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  

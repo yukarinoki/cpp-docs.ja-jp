@@ -1,5 +1,5 @@
 ---
-title: CMFCPreviewCtrlImpl クラス |Microsoft ドキュメント
+title: CMFCPreviewCtrlImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -46,15 +46,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0ab9cd717d8e035d9cfc75e0f856af792c392cf7
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040078"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848998"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl クラス
-このクラスは、リッチ プレビュー用にシェルによって提供されるホスト ウィンドウに配置されているウィンドウを実装します。  
+このクラスは、リッチ プレビュー用に、シェルによって提供されるホスト ウィンドウに配置されているウィンドウを実装します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -75,14 +75,14 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::Create](#create)|オーバーロードされます。 Windows のウィンドウを作成する豊富なプレビュー ハンドラーによって呼び出されます。|  
+|[CMFCPreviewCtrlImpl::Create](#create)|オーバーロードされます。 Windows ウィンドウを作成する豊富なプレビュー ハンドラーによって呼び出されます。|  
 |[CMFCPreviewCtrlImpl::Destroy](#destroy)|このコントロールを破棄する必要があるときに、豊富なプレビュー ハンドラーによって呼び出されます。|  
 |[CMFCPreviewCtrlImpl::Focus](#focus)|このコントロールにフォーカスが入力を設定します。|  
 |[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|このプレビュー コントロールに接続されているドキュメントを返します。|  
 |[CMFCPreviewCtrlImpl::Redraw](#redraw)|このコントロールを再描画するように指示します。|  
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|ドキュメント実装とプレビュー コントロール間のリレーションシップを作成、プレビュー ハンドラーによって呼び出されます。|  
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|ドキュメントの実装と、プレビュー コントロールの間のリレーションシップを作成、プレビュー ハンドラーによって呼び出されます。|  
 |[CMFCPreviewCtrlImpl::SetHost](#sethost)|このコントロールの新しい親を設定します。|  
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|によって呼び出されますリッチ プレビュー ハンドラーのリッチ プレビューでのビジュアルを設定する必要があるときにコンテンツ。|  
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|によって呼び出されます、豊富なプレビュー ハンドラーの豊富なプレビュー ビジュアルを設定する必要があるコンテンツ。|  
 |[CMFCPreviewCtrlImpl::SetRect](#setrect)|このコントロールの新しい外接する四角形を設定します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
@@ -97,7 +97,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|プレビュー ウィンドウの背景色です。|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|プレビュー ウィンドウのテキストの色。|  
-|[CMFCPreviewCtrlImpl::m_font](#m_font)|プレビュー ウィンドウでテキストを表示するために使用するフォントです。|  
+|[CMFCPreviewCtrlImpl::m_font](#m_font)|プレビュー ウィンドウにテキストを表示するために使用するフォントです。|  
 |[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|コントロールにコンテンツを持つがプレビューされているドキュメントへのポインター。|  
   
 ## <a name="requirements"></a>必要条件  
@@ -116,10 +116,10 @@ class CMFCPreviewCtrlImpl : public CWnd;
 プレビュー コントロール オブジェクトを構築します。
 
 ### <a name="syntax"></a>構文
-CMFCPreviewCtrlImpl() です。  
+CMFCPreviewCtrlImpl();  
 
 ## <a name="create"></a> CMFCPreviewCtrlImpl::Create
-オーバーロードされます。 Windows のウィンドウを作成する豊富なプレビュー ハンドラーによって呼び出されます。  
+オーバーロードされます。 Windows ウィンドウを作成する豊富なプレビュー ハンドラーによって呼び出されます。  
   
 ### <a name="syntax"></a>構文  
   
@@ -137,16 +137,16 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>パラメーター  
  *hWndParent*  
- リッチ プレビュー用にシェルによって提供される、ホスト ウィンドウへのハンドル。  
+ リッチ プレビュー用に、シェルによって提供されるホスト ウィンドウへのハンドル。  
   
  *中華人民共和国*  
  初期サイズとウィンドウの位置を指定します。  
   
  *pContext*  
- コンテキストの作成へのポインター。  
+ 作成のコンテキストへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 作成が成功した場合それ以外の場合`FALSE`です。  
+ 作成が成功した場合は TRUE。それ以外の場合は FALSE。  
   
 ## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
 このコントロールを破棄する必要があるときに、豊富なプレビュー ハンドラーによって呼び出されます。  
@@ -210,7 +210,7 @@ COLORREF m_clrBackColor;
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font フォントが、プレビュー ウィンドウのテキストを表示するために使用します。  
+## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font フォントが、プレビュー ウィンドウにテキストを表示するために使用します。  
   
 ### <a name="syntax"></a>構文  
   
@@ -235,7 +235,7 @@ ATL::IDocument* m_pDocument;
 virtual void Redraw();  
 ```  
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
-ドキュメント実装とプレビュー コントロール間のリレーションシップを作成、プレビュー ハンドラーによって呼び出されます。  
+ドキュメントの実装と、プレビュー コントロールの間のリレーションシップを作成、プレビュー ハンドラーによって呼び出されます。  
   
 ### <a name="syntax"></a>構文  
   
@@ -247,7 +247,7 @@ void SetDocument(
   
 ### <a name="parameters"></a>パラメーター  
  *pDocument*  
- ドキュメント実装へのポインター。  
+ ドキュメントの実装へのポインター。  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
 このコントロールの新しい親を設定します。  
@@ -265,7 +265,7 @@ virtual void SetHost(
  新しい親ウィンドウへのハンドル。  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
-によって呼び出されますリッチ プレビュー ハンドラーのリッチ プレビューでのビジュアルを設定する必要があるときにコンテンツ。  
+によって呼び出されます、豊富なプレビュー ハンドラーの豊富なプレビュー ビジュアルを設定する必要があるコンテンツ。  
   
 ### <a name="syntax"></a>構文  
   
@@ -285,7 +285,7 @@ virtual void SetPreviewVisuals(
  プレビュー ウィンドウのテキストの色。  
   
  *plf*  
- プレビュー ウィンドウでテキストを表示するために使用するフォントです。 
+ プレビュー ウィンドウにテキストを表示するために使用するフォントです。 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
 このコントロールの新しい外接する四角形を設定します。  
@@ -301,13 +301,13 @@ virtual void SetRect(
   
 ### <a name="parameters"></a>パラメーター  
  *中華人民共和国*  
- 新しいサイズとプレビュー コントロールの位置を指定します。  
+ 新しいサイズと、プレビュー コントロールの位置を指定します。  
   
  *bRedraw*  
- コントロールを再描画されるかどうかを指定します。  
+ コントロールが再描画が必要かどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
- 通常、ホスト コントロールがサイズ変更されると、新しい外接する四角形が設定されます。  
+ 通常は新しい外接する四角形は、ホスト コントロールがサイズ変更時に設定されています。  
 
 ## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 プレビュー コントロール オブジェクトを破棄します。  

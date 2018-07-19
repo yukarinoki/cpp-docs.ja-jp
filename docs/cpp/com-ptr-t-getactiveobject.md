@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t::GetActiveObject |Microsoft ドキュメント
+title: _com_ptr_t::GetActiveObject |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca25ca31475d2870e62d00676e7bf3717c10fa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414745"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940369"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Microsoft 固有の仕様**  
   
- 指定されたオブジェクトの既存のインスタンスにアタッチ、 **CLSID**または**ProgID**です。  
+ 指定したオブジェクトの既存のインスタンスにアタッチ、`CLSID`または`ProgID`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,23 +44,23 @@ HRESULT GetActiveObject(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `rclsid`  
- **CLSID**のオブジェクト。  
+ *rclsid*  
+ `CLSID`のオブジェクト。  
   
- `clsidString`  
- 保持する Unicode 文字列、 **CLSID** (以降で"**{**") または**ProgID**です。  
+ *clsidString*  
+ 保持する Unicode 文字列、 `CLSID` (以降では"**{**") または`ProgID`します。  
   
- `clsidStringA`  
- 保持する、ANSI コード ページを使用し、マルチバイト文字列、 **CLSID** (以降で"**{**") または**ProgID**です。  
+ *clsidStringA*  
+ いずれかを保持する ANSI コード ページを使用し、マルチバイト文字列を`CLSID`(以降では"**{**") または`ProgID`します。  
   
-## <a name="remarks"></a>コメント  
- これらのメンバー関数は、`GetActiveObject` を呼び出して、OLE に登録されている実行中のオブジェクトへのポインターを取得し、このスマート ポインターのインターフェイス型を照会します。 結果のポインターは、この `_com_ptr_t` オブジェクトの中にカプセル化されます。 **リリース**は以前にカプセル化されたポインターの参照カウントをデクリメントするために呼び出されます。 このルーチンは、成功または失敗を示すために、`HRESULT` を返します。  
+## <a name="remarks"></a>Remarks  
+ これらのメンバー関数は、`GetActiveObject` を呼び出して、OLE に登録されている実行中のオブジェクトへのポインターを取得し、このスマート ポインターのインターフェイス型を照会します。 結果のポインターは、この `_com_ptr_t` オブジェクトの中にカプセル化されます。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。 このルーチンは、成功または失敗を示す HRESULT を返します。  
   
--   **GetActiveObject (**`rclsid`**)** が指定されたオブジェクトの既存のインスタンスにアタッチ、 **CLSID**です。      
+-   **GetActiveObject (**`rclsid`**)** 指定したオブジェクトの既存のインスタンスにアタッチ、`CLSID`します。      
   
--   **GetActiveObject (**`clsidString`**)** を保持する Unicode 文字列を指定してオブジェクトの既存のインスタンスにアタッチ、 **CLSID** (以降で"**{**") または**ProgID**です。      
+-   **GetActiveObject (**`clsidString`**)** 保持する Unicode 文字列を指定したオブジェクトの既存のインスタンスにアタッチ、 `CLSID` (以降では"**{**") または、 `ProgID`.      
   
--   **GetActiveObject (**`clsidStringA`**)** を保持するマルチバイト文字の文字列を指定してオブジェクトの既存のインスタンスにアタッチ、 **CLSID** (以降で"**{**") または**ProgID**です。     呼び出し[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)文字列は OEM コード ページではなく、ANSI コード ページで、ことを想定しています。  
+-   **GetActiveObject (**`clsidStringA`**)** 保持するマルチバイト文字の文字列を指定したオブジェクトの既存のインスタンスにアタッチ、 `CLSID` (以降では"**{**") または`ProgID`.     呼び出し[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)、OEM コード ページではなく、ANSI コード ページで、文字列が想定しています。  
   
  **Microsoft 固有の仕様はここまで**  
   

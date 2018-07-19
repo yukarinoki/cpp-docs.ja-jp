@@ -1,5 +1,5 @@
 ---
-title: サービス マップ マクロ |Microsoft ドキュメント
+title: サービス マップに関するマクロ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,43 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 932cc50095ddbe908e9a3f451c1d6f8e3803fb74
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364155"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882372"
 ---
-# <a name="service-map-macros"></a>サービス マップ マクロ
+# <a name="service-map-macros"></a>サービス マップに関するマクロ
 これらのマクロは、サービス マップとエントリを定義します。  
   
 |||  
 |-|-|  
 |[BEGIN_SERVICE_MAP](#begin_service_map)|ATL サービス マップの先頭をマークします。|  
-|[END_SERVICE_MAP](#end_service_map)|ATL サービス マップの最後をマークします。|  
+|[END_SERVICE_MAP](#end_service_map)|ATL サービス マップの末尾をマークします。|  
 |[SERVICE_ENTRY](#service_entry)|オブジェクトが特定のサービス ID をサポートしていることを示します。|  
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl::QueryService](#queryservice)を指定したオブジェクトのチェーン。|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl::QueryService](#queryservice)チェーンして、指定されたオブジェクト。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcom.h  
    
 ##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
- サービス マップの開始位置をマークします。  
+ サービス マップの先頭をマークします。  
   
 ```
 BEGIN_SERVICE_MAP(theClass)
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `theClass`  
+ *クラス*  
  [in]サービス マップを含むクラスを指定します。  
   
-### <a name="remarks"></a>コメント  
- サービス マップを使用して、COM オブジェクトにサービス プロバイダーの機能を実装します。 クラスを派生させる必要があります最初に、 [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)です。 エントリの 2 つの種類があります。  
+### <a name="remarks"></a>Remarks  
+ サービス マップを使用すると、COM オブジェクトをサービス プロバイダーの機能を実装します。 クラスを派生する必要があります最初に、 [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)します。 2 つの種類のエントリがあります。  
   
 - [SERVICE_ENTRY](#service_entry)指定したサービス ID (SID) のサポートを示します。  
   
-- [SERVICE_ENTRY_CHAIN](#service_entry_chain)ように指示[IServiceProviderImpl::QueryService](#queryservice)チェーンして、指定した別のオブジェクトにします。  
+- [SERVICE_ENTRY_CHAIN](#service_entry_chain)ように指示[IServiceProviderImpl::QueryService](#queryservice) 、別の指定したオブジェクトにチェーンします。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
@@ -66,10 +66,10 @@ END_SERVICE_MAP()
 ```  
   
 ### <a name="example"></a>例  
- 例を参照して[BEGIN_SERVICE_MAP](#begin_service_map)です。  
+ 例をご覧ください[BEGIN_SERVICE_MAP](#begin_service_map)します。  
   
 ##  <a name="service_entry"></a>  SERVICE_ENTRY  
- オブジェクトで指定したサービス id をサポートしていることを示します*SID*です。  
+ オブジェクトで指定したサービス id をサポートしていることを示します*SID*します。  
   
 ```
 SERVICE_ENTRY( SID )
@@ -77,27 +77,27 @@ SERVICE_ENTRY( SID )
   
 ### <a name="parameters"></a>パラメーター  
  *SID*  
- サービス id。  
+ サービス id です。  
   
 ### <a name="example"></a>例  
- 例を参照して[BEGIN_SERVICE_MAP](#begin_service_map)です。  
+ 例をご覧ください[BEGIN_SERVICE_MAP](#begin_service_map)します。  
   
 ##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
- 指示[IServiceProviderImpl::QueryService](#queryservice)で指定されたオブジェクトへのチェーンを`punk`です。  
+ 指示[IServiceProviderImpl::QueryService](#queryservice)で指定されたオブジェクトをチェーンする*punk*します。  
   
 ```
 SERVICE_ENTRY_CHAIN( punk )
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `punk`  
- ポインター、 **IUnknown**をチェーンするインターフェイスです。  
+ *punk*  
+ ポインター、 **IUnknown**チェーンにするインターフェイス。  
   
 ### <a name="example"></a>例  
- 例を参照して[BEGIN_SERVICE_MAP](#begin_service_map)です。  
+ 例をご覧ください[BEGIN_SERVICE_MAP](#begin_service_map)します。  
   
 ##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
- 作成または指定したサービスにアクセスして、サービスの指定したインターフェイスにインターフェイス ポインターを返します。  
+ 作成または指定したサービスにアクセスし、サービスの指定したインターフェイスにインターフェイス ポインターを返します。  
   
 ```
 STDMETHOD(QueryService)( 
@@ -107,40 +107,40 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [IN] `guidService`  
- サービス識別子 (SID) へのポインター。  
+ [IN]*guidService*  
+ サービス id (SID) へのポインター。  
   
- [IN] `riid`  
- 呼び出し元がアクセスするためをインターフェイスの識別子。  
+ [IN]*riid*  
+ 呼び出し元がアクセスできるインターフェイスの識別子です。  
   
- [出力]. `ppvObj`  
+ [OUT]*ppvObj*  
  要求されたインターフェイスへの間接ポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 返された`HRESULT`値は、次のいずれか。  
+ 返された HRESULT の値は、次のいずれか。  
   
 |戻り値|説明|  
 |------------------|-------------|  
 |S_OK|サービスが正常に作成または取得します。|  
 |E_INVALIDARG|1 つ以上の引数が無効です。|  
-|E_OUTOFMEMORY|メモリは、サービスを作成するための十分ながありません。|  
+|E_OUTOFMEMORY|メモリは、サービスを作成するには不十分です。|  
 |E_UNEXPECTED|不明なエラーが発生しました。|  
-|E_NOINTERFACE|要求されたインターフェイスは、このサービスの一部ではないか、サービスが不明です。|  
+|E_NOINTERFACE|要求されたインターフェイスは、このサービスの一部ではないか、サービスが既知です。|  
   
-### <a name="remarks"></a>コメント  
- `QueryService` 指定されたサービスで要求されたインターフェイスへの間接ポインターを返します。 呼び出し元が必要でなくなったときにこのポインターを解放するためです。  
+### <a name="remarks"></a>Remarks  
+ `QueryService` 指定されたサービスで要求されたインターフェイスへの間接ポインターを返します。 呼び出し元が必要でなくなったときにこのポインターを解放します。  
   
- 呼び出すと`QueryService`、両方のサービス識別子を渡す ( `guidService`) とインターフェイス識別子 ( `riid`)。 `guidService` 、アクセス サービスを指定し、`riid`サービスの一部であるインターフェイスを識別します。 代わりに、インターフェイスへの間接ポインターが表示されます。  
+ 呼び出すと`QueryService`、両方のサービスの識別子を渡す (*guidService*) とインターフェイス識別子 (*riid*)。 *GuidService* 、アクセス サービスを指定します、 *riid*サービスの一部であるインターフェイスを識別します。 代わりに、インターフェイスへの間接ポインターが表示されます。  
   
  インターフェイスを実装するオブジェクトは、他のサービスの一部であるインターフェイスを実装も可能性があります。 次に例を示します。  
   
--   これらのインターフェイスの一部は、省略可能な可能性があります。 サービスの説明で定義されていないすべてのインターフェイスはサービスのすべての実装、またはすべての返されたオブジェクトで必ずしも存在します。  
+-   これらのインターフェイスの一部は、省略可能な可能性があります。 サービスの説明で定義されているすべてのインターフェイスは、サービスのすべての実装またはすべての返されたオブジェクトに必ずしも存在します。  
   
--   呼び出しとは異なり`QueryInterface`、さまざまなサービス識別子を渡すことが必ずしも別のコンポーネント オブジェクト モデル (COM) オブジェクトが返されることです。  
+-   呼び出しとは異なり`QueryInterface`、さまざまなサービス識別子を渡すことが必ずしもその別のコンポーネント オブジェクト モデル (COM) オブジェクトが返されます。  
   
--   返されたオブジェクトは、サービスの定義の一部ではない追加のインターフェイスがあります。  
+-   返されるオブジェクトは、サービスの定義の一部ではない追加のインターフェイスがあります。  
   
- SID_SMyService SID_SYourService などの 2 つの異なるサービス両方を指定できます、同じインターフェイスの使用、インターフェイスの実装には、2 つのサービス間で共通の何もいる場合でも。 この動作を呼び出す`QueryService`よりも、別のオブジェクトを返すことができます (SID_SMyService、IID_IDispatch) `QueryService` (SID_SYourService、IID_IDispatch)。 オブジェクト id は、さまざまなサービス識別子を指定するときにないと見なされます。  
+ SID_SMyService SID_SYourService などの 2 つの異なるサービス両方を指定できます、同じインターフェイスの使用場合でも、何も 2 つのサービスで共通のインターフェイスの実装があります。 この動作を呼び出す`QueryService`よりも、別のオブジェクトを返すことができます (SID_SMyService、IID_IDispatch) `QueryService` (SID_SYourService、IID_IDispatch)。 オブジェクト id が異なるサービスの識別子を指定する場合とは見なされません。  
   
 ## <a name="see-also"></a>関連項目  
  [[マクロ]](../../atl/reference/atl-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: _com_error::HRESULTToWCode |Microsoft ドキュメント
+title: _com_error::HRESULTToWCode |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3955fcda665e08e5415652a1e8f1f232d0fe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbcbd73f1a4a6d80ed30a5d70ca43d5fe45677f9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412265"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941718"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Microsoft 固有の仕様**  
   
- 32 ビットの `HRESULT` を 16 ビットの `wCode` にマップします。  
+ 16 ビットに 32 ビットの HRESULT をマップ`wCode`します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +38,13 @@ ms.locfileid: "32412265"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `hr`  
- 32 ビット`HRESULT`16 ビットにマップする`wCode`です。  
+ *hr*  
+ 16 ビットにマップする 32 ビット HRESULT`wCode`します。  
   
 ## <a name="return-value"></a>戻り値  
- 16 ビット`wCode`32 ビットからマップされた`HRESULT`です。  
+ 16 ビット`wCode`32 ビット HRESULT からマップされます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  参照してください[_com_error::wcode](../cpp/com-error-wcode.md)詳細についてはします。  
   
  **Microsoft 固有の仕様はここまで**  

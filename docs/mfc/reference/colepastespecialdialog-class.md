@@ -1,5 +1,5 @@
 ---
-title: 関数クラス |Microsoft ドキュメント
+title: COlePasteSpecialDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -38,14 +38,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 42f4a45dc2b49b784f74175203e892c253ea1f5e
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039168"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851434"
 ---
-# <a name="colepastespecialdialog-class"></a>関数クラス
+# <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog クラス
 OLE の [形式を選択して貼り付け] ダイアログ ボックス用に使用されます。  
   
 ## <a name="syntax"></a>構文  
@@ -68,26 +68,26 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|アプリケーションで貼り付けできる形式の一覧には、カスタム書式を追加します。|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|サポートされているクリップボード形式の一覧に新しいエントリを追加します。|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|追加**CF_BITMAP**、 **CF_DIB**、 **CF_METAFILEPICT**、および必要に応じて**CF_LINKSOURCE**形式の一覧に、アプリケーションを貼り付けることができます.|  
-|[静的オブジェクト](#createitem)|指定された形式を使用して、コンテナー ドキュメント内の項目を作成します。|  
-|[COlePasteSpecialDialog::DoModal](#domodal)|OLE の [形式を選択して貼り付け] ダイアログ ボックスが表示されます。|  
-|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|かアイテムをアイコンとして描画するかどうかを通知します。|  
-|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|この項目のアイコンの形式に関連付けられているメタファイルへのハンドルを取得します。|  
-|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|ユーザーが選択した使用可能な貼り付けのオプションのインデックスを取得します。|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|CF_BITMAP、CF_DIB、CF_METAFILEPICT を追加し、必要に応じて CF_LINKSOURCE 形式の一覧にアプリケーションに貼り付けることができます。|  
+|[静的オブジェクト](#createitem)|指定した形式を使用して、コンテナーのドキュメントで、項目を作成します。|  
+|[COlePasteSpecialDialog::DoModal](#domodal)|貼り付け特別なダイアログ ボックスが表示されます。|  
+|[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|かどうかのアイテムをアイコンとして描画するかどうかを指示します。|  
+|[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|この項目の象徴的な形式に関連付けられているメタファイルを識別するハンドルを取得します。|  
+|[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|使用可能な貼り付けのオプションのユーザーによって選択されたインデックスを取得します。|  
 |[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|選択の種類を取得します。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[COlePasteSpecialDialog::m_ps](#m_ps)|型の構造体**選択して貼り付け** ダイアログ ボックスの機能を制御します。|  
+|[COlePasteSpecialDialog::m_ps](#m_ps)|コントロールをダイアログ ボックスの機能を選択して貼り付け型の構造体。|  
   
 ## <a name="remarks"></a>Remarks  
- クラスのオブジェクトを作成`COlePasteSpecialDialog`をこのダイアログ ボックスを呼び出したいとします。 後に、`COlePasteSpecialDialog`オブジェクトが構築された、使用することができます、 [AddFormat](#addformat)と[AddStandardFormats](#addstandardformats)  ダイアログ ボックスにクリップボードの形式を追加するメンバー関数。 使用することも、[塗りつぶす対象となる](#m_ps)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_ps`構造体は型**選択して貼り付け**です。  
+ クラスのオブジェクトを作成`COlePasteSpecialDialog`をこのダイアログ ボックスを呼び出す場合します。 後に、`COlePasteSpecialDialog`オブジェクトが構築された、使用することができます、 [AddFormat](#addformat)と[AddStandardFormats](#addstandardformats)  ダイアログ ボックスに、クリップボードの形式を追加するメンバー関数。 使用することも、[塗りつぶす対象となる](#m_ps)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_ps`構造体には、型を選択して貼り付けします。  
   
- 詳細については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms692434)Windows SDK 内の構造。  
+ 詳細については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms692434)Windows SDK の構造体。  
   
- OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)です。  
+ OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -108,7 +108,7 @@ class COlePasteSpecialDialog : public COleDialog
  **ヘッダー:** afxodlgs.h  
   
 ##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
- 貼り付け操作では、アプリケーションをサポートできる形式の一覧に新しい形式を追加するには、この関数を呼び出します。  
+ 貼り付け操作で、アプリケーションがサポートできる形式の一覧に新しい形式を追加するには、この関数を呼び出します。  
   
 ```  
 void AddFormat(
@@ -137,29 +137,29 @@ void AddFormat(
  この形式をダイアログ ボックスで選択した場合、結果を説明する文字列。  
   
  *flags*  
- さまざまなリンクと埋め込みこの形式の使用可能なオプションです。 このフラグは、1 つまたは複数の異なる値のビットごとの組み合わせ、 **OLEUIPASTEFLAG**列挙型。  
+ さまざまなリンクと埋め込みこの形式の使用可能なオプションです。 このフラグは、1 つのビットごとの組み合わせや、OLEUIPASTEFLAG で別の値の列挙型。  
   
  *cf*  
- クリップボードの形式を追加します。  
+ 追加するクリップボード形式。  
   
  *tymed*  
- この形式で使用可能なメディアの種類。 これは、内の値の 1 つ以上のビットごとの組み合わせ、 **TYMED**列挙型。  
+ この形式で使用可能なメディアの種類。 これは、1 つのビットごとの組み合わせまたは TYMED 内の値の列挙型。  
   
  *nFormatID*  
- この形式を識別する文字列の ID。 この文字列の形式は、'\n' 文字で区切られた 2 つの個別の文字列です。 渡されると、同じ最初の文字列は、 *lpstrFormat*パラメーター、および 2 番目のと同じでは、 *lpstrResult*パラメーター。  
+ この形式を識別する文字列の ID。 この文字列の形式は、'\n' 文字で区切られた 2 つの文字列です。 最初の文字列で渡されると同じである、 *lpstrFormat*パラメーター、および 2 つ目のと同じでは、 *lpstrResult*パラメーター。  
   
  *bEnableIcon*  
- この形式は、リスト ボックスで選択されたときにアイコンで表示 チェック ボックスが有効にするかどうかを決定するフラグです。  
+ この形式が、リスト ボックスで選択されたときにアイコンで表示 チェック ボックスが有効かどうかを決定するフラグ。  
   
- *点滅*  
- この形式は、リスト ボックスで選択すると、リンク貼り付け のラジオ ボタンが有効にするかどうかを決定するフラグです。  
+ *点滅を行う*  
+ リスト ボックスで次の形式を選択するとリンクの貼り付けのオプション ボタンが有効かどうかを決定するフラグ。  
   
 ### <a name="remarks"></a>Remarks  
- この関数を呼び出すなど、標準の形式を追加することができます**エディット**または**呼び出す**またはアプリケーションがシステムに登録したカスタムの書式。 データ オブジェクトを貼り付け、アプリケーションの詳細については、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)です。  
+ この関数は、追加されているテキストまたは呼び出すなどの標準的な形式か、カスタム形式、アプリケーションがシステムに登録されているを呼び出すことができます。 データ オブジェクトを貼り付け、アプリケーションの詳細については、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。  
   
- 詳細については、次を参照してください。、 [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列挙型、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内の構造。  
+ 詳細については、次を参照してください。、 [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列挙型、および[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK の構造体。  
   
- 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Windows SDK 内の型を列挙します。  
+ 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Windows SDK の種類を列挙します。  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  サポートされているクリップボード形式の一覧に新しいエントリを追加します。  
@@ -170,13 +170,13 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
   
 ### <a name="parameters"></a>パラメーター  
  *cf*  
- クリップボードの形式を追加します。  
+ 追加するクリップボード形式。  
   
 ### <a name="return-value"></a>戻り値  
- [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)新しいリンク エントリの情報を含む構造体。  
+ [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)構造体の新しいリンクのエントリの情報を格納します。  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
- 貼り付け操作では、アプリケーションをサポートできる形式の一覧に、次のクリップボード形式を追加するには、この関数を呼び出します。  
+ 貼り付け操作で、アプリケーションがサポートできる形式の一覧に、次のクリップボード形式を追加するには、この関数を呼び出します。  
   
 ```  
 void AddStandardFormats(BOOL bEnableLink = TRUE);
@@ -184,15 +184,15 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  *bEnableLink*  
- 追加するかどうかを決定するフラグ`CF_LINKSOURCE`形式の一覧に、アプリケーションを貼り付けることができます。  
+ アプリケーション CF_LINKSOURCE を形式の一覧に追加するかどうかを決定するフラグを貼り付けることができます。  
   
 ### <a name="remarks"></a>Remarks  
   
-- **CF_BITMAP**  
+- CF_BITMAP  
   
-- **CF_DIB**  
+- CF_DIB  
   
-- **CF_METAFILEPICT**  
+- CF_METAFILEPICT  
   
 - **「埋め込みオブジェクト」**  
   
@@ -214,24 +214,24 @@ COlePasteSpecialDialog(
  *dwFlags*  
  作成フラグには、次のフラグのビットごとの OR 演算子を使用して結合の任意の数が含まれています。  
   
-- `PSF_SELECTPASTE` ダイアログ ボックスが呼び出されたときに、[貼り付け] ラジオ ボタンを最初に確認することを指定します。 組み合わせて使用することはできません`PSF_SELECTPASTELINK`です。 既定値です。  
+- PSF_SELECTPASTE 指定貼り付けのオプション ボタンとなるチェック最初に、ダイアログ ボックスが呼び出された場合。 PSF_SELECTPASTELINK と組み合わせて使用することはできません。 既定値です。  
   
-- `PSF_SELECTPASTELINK` ラジオ ボタン リンク貼り付けオンになっている最初に、ダイアログ ボックスが呼び出されたときを指定します。 組み合わせて使用することはできません`PSF_SELECTPASTE`です。  
+- PSF_SELECTPASTELINK 指定リンクの貼り付けのオプション ボタンとなるチェック最初に、ダイアログ ボックスが呼び出された場合。 PSF_SELECTPASTE と組み合わせて使用することはできません。  
   
-- `PSF_CHECKDISPLAYASICON` ダイアログ ボックスが呼び出されたときにアイコンで表示 チェック ボックスを最初にチェックすることを指定します。  
+- PSF_CHECKDISPLAYASICON 指定アイコンで表示する チェック ボックスをオンになるチェック最初にダイアログ ボックスが呼び出された場合。  
   
-- `PSF_SHOWHELP` ダイアログ ボックスが呼び出されたときに、[ヘルプ] ボタンが表示されることを指定します。  
+- PSF_SHOWHELP では、ダイアログ ボックスが呼び出されたときに、[ヘルプ] ボタンが表示されることを指定します。  
   
  *pDataObject*  
- 指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)貼り付けられるようにします。 この値がある場合**NULL**、取得、`COleDataObject`クリップボードからです。  
+ 指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)貼り付けられます。 この値が NULL の場合は、取得、`COleDataObject`クリップボードから。  
   
  *pParentWnd*  
- 親またはオーナー ウィンドウ オブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 場合は**NULL**、ダイアログ ボックスの親ウィンドウがアプリケーションのメイン ウィンドウに設定します。  
+ 親またはオーナー ウィンドウのオブジェクトを指し示す (型の`CWnd`) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ ボックスの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。  
   
 ### <a name="remarks"></a>Remarks  
  この関数は、`COlePasteSpecialDialog`オブジェクト。 ダイアログ ボックスを表示するには[DoModal](#domodal)関数。  
   
- 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Windows SDK 内の型を列挙します。  
+ 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) Windows SDK の種類を列挙します。  
   
 ##  <a name="createitem"></a>  静的オブジェクト  
  貼り付け ダイアログ ボックスで選択された新しい項目を作成します。  
@@ -242,37 +242,37 @@ BOOL CreateItem(COleClientItem* pNewItem);
   
 ### <a name="parameters"></a>パラメーター  
  *pNewItem*  
- 指す、`COleClientItem`インスタンス。 ことはできません**NULL**です。  
+ 指す、`COleClientItem`インスタンス。 Nll は指定できません。  
   
 ### <a name="return-value"></a>戻り値  
- 項目が正常に作成された場合は 0 以外。それ以外の場合 0 を返します。  
+ 項目が正常に作成された場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、後にのみ呼び出す必要があります[DoModal](#domodal)返します**IDOK**です。  
+ この関数は、後にのみ呼び出す必要があります[DoModal](#domodal) IDOK を返します。  
   
 ##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal  
- OLE の [形式を選択して貼り付け] ダイアログ ボックスが表示されます。  
+ 貼り付け特別なダイアログ ボックスが表示されます。  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ダイアログ ボックスの終了ステータスです。 次のいずれかの値です。  
+ ダイアログ ボックスの完了ステータス。 次のいずれかの値です。  
   
-- **IDOK**  ダイアログ ボックスが正常に表示された場合。  
+- IDOK ダイアログ ボックスが正常に表示されている場合。  
   
-- **IDCANCEL**場合は、ユーザーがダイアログ ボックスをキャンセルします。  
+- ユーザーには、ダイアログ ボックスが取り消された場合は IDCANCEL。  
   
-- **IDABORT**場合はエラーが発生しました。 場合**IDABORT**は呼び出し、返される、`COleDialog::GetLastError`の詳細については、発生したエラーの種類を取得します。 考えられるエラーの一覧については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms694512)Windows SDK 内の関数。  
+- IDABORT 場合は、エラーが発生しました。 IDABORT が返される場合、`COleDialog::GetLastError`発生したエラーの種類に関する詳細を取得します。 考えられるエラーの一覧については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms694512)Windows SDK 内の関数。  
   
 ### <a name="remarks"></a>Remarks  
- メンバーを設定してさまざまなダイアログ ボックスのコントロールを初期化する場合、[塗りつぶす対象となる](#m_ps)構造体、呼び出す前にこれを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
+ メンバーを設定して、さまざまなダイアログ ボックス コントロールを初期化する場合、[塗りつぶす対象となる](#m_ps)構造体を呼び出す前に、これを行う必要があります`DoModal`はダイアログ オブジェクトを構築します。  
   
- 場合`DoModal`返します**IDOK**、他のメンバーは、ダイアログ ボックスに、設定や、ユーザーが入力した情報を取得する関数で呼び出すことができます。  
+ 場合`DoModal`返します IDOK、他のメンバー、ダイアログ ボックスに、設定やユーザーによって入力された情報を取得する関数を呼び出すことができます。  
   
 ##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect  
- ユーザーがアイコンとして選択した項目を表示する選択したかどうかを判断します。  
+ ユーザーがアイコンとして選択した項目を表示する選択したかどうかを決定します。  
   
 ```  
 DVASPECT GetDrawAspect() const;  
@@ -281,14 +281,14 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>戻り値  
  メソッドは、オブジェクトを表示するために必要です。  
   
-- `DVASPECT_CONTENT` ダイアログ ボックスが破棄されたときに、アイコンで表示 チェック ボックスがチェックされないかどうかが返されます。  
+- アイコンで表示する チェック ボックスをオンしていなかった場合に返される DVASPECT_CONTENT ダイアログ ボックスが終了したときにチェックされます。  
   
-- `DVASPECT_ICON` ダイアログ ボックスを閉じたときにアイコンで表示 チェック ボックスをオンがかどうか返されます。  
+- ダイアログ ボックスを閉じたときにアイコンで表示のチェック ボックスがオンの場合、DVASPECT_ICON が返されます。  
   
 ### <a name="remarks"></a>Remarks  
- この関数の後にのみ呼び出す[DoModal](#domodal)返します**IDOK**です。  
+ この関数の後にのみ呼び出す[DoModal](#domodal) IDOK を返します。  
   
- アスペクトの描画の詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 内の構造。  
+ 描画の側面の詳細については、次を参照してください。、 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK の構造体。  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  ユーザーが選択した項目に関連付けられているメタファイルを取得します。  
@@ -298,7 +298,7 @@ HGLOBAL GetIconicMetafile() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- アイコンで表示 チェック ボックスを選択して、ダイアログ ボックスが破棄されたときに選択した場合に、選択したアイテムのアイコンの外観を持つメタファイル ハンドル**OK**それ以外の**NULL**です。  
+ 選択してダイアログ ボックスを閉じたときにアイコンで表示 チェック ボックスが選択された場合は、選択した項目のアイコンの外観を含むメタファイルを識別するハンドル**OK**null それ以外の場合。  
   
 ##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex  
  取得、ユーザーが選択したエントリに関連付けられているインデックス値。  
@@ -308,23 +308,23 @@ int GetPasteIndex() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 配列のインデックス**OLEUIPASTEENTRY**ユーザーによって選択された構造体。 貼り付け操作を実行するときに、選択されたインデックスに対応する形式を使用してください。  
+ 配列のインデックス`OLEUIPASTEENTRY`ユーザーによって選択された構造体。 貼り付け操作を実行するときに、選択されたインデックスに対応する形式を使用する必要があります。  
   
 ### <a name="remarks"></a>Remarks  
- 詳細については、次を参照してください。、 [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) Windows SDK 内の構造。  
+ 詳細については、次を参照してください。、 [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) Windows SDK の構造体。  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
- ユーザーが行った選択内容の種類を決定します。  
+ ユーザーの選択の種類を決定します。  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 選択された型を返す。  
+ 選択された型を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 戻り値の型の値がで指定された、**選択**で宣言された列挙型、`COlePasteSpecialDialog`クラスです。  
+ 戻り値の型の値がで指定された、`Selection`で宣言された列挙型、`COlePasteSpecialDialog`クラス。  
   
 ```  
 enum Selection {
@@ -335,30 +335,30 @@ enum Selection {
     };  
 ```  
   
- 次のこれらの値の簡単に説明します。  
+ 次にこれらの値の簡単に説明します  
   
-- **COlePasteSpecialDialog::pasteLink**貼り付け Link オプション ボタンがチェックされて、選択した形式は、標準の OLE 形式です。  
+- `COlePasteSpecialDialog::pasteLink` リンクの貼り付けのラジオ ボタンが選択されましたが、選択した形式は、標準の OLE 形式です。  
   
-- **COlePasteSpecialDialog::pasteNormal** [貼り付け] ラジオ ボタンがチェックされて、選択した形式は、標準の OLE 形式です。  
+- `COlePasteSpecialDialog::pasteNormal` 貼り付けのラジオ ボタンが選択されましたが、選択した形式は、標準の OLE 形式です。  
   
-- **COlePasteSpecialDialog::pasteOther**選択した形式は、標準の OLE 形式ではありません。  
+- `COlePasteSpecialDialog::pasteOther` 選択した形式は、標準の OLE 形式ではありません。  
   
-- **COlePasteSpecialDialog::pasteStatic**選択した形式がメタファイル。  
+- `COlePasteSpecialDialog::pasteStatic` 選択した形式では、メタファイルをしました。  
   
 ##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps  
- 型の構造体**選択して貼り付け**貼り付け ダイアログ ボックスの動作を制御するために使用します。  
+ 選択して貼り付け型の構造体の貼り付け ダイアログ ボックスの動作を制御するために使用します。  
   
 ```  
 OLEUIPASTESPECIAL m_ps;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この構造体のメンバーは、直接またはメンバー関数を使って変更できます。  
+ この構造体のメンバーは、直接またはメンバー関数を使用して変更できます。  
   
- 詳細については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms692434)Windows SDK 内の構造。  
+ 詳細については、次を参照してください。、[選択して貼り付け](http://msdn.microsoft.com/library/windows/desktop/ms692434)Windows SDK の構造体。  
   
 ## <a name="see-also"></a>関連項目  
- [MFC サンプル OCLIENT](../../visual-cpp-samples.md)   
- [関数クラス](../../mfc/reference/coledialog-class.md)   
+ [MFC サンプルの OCLIENT](../../visual-cpp-samples.md)   
+ [COleDialog クラス](../../mfc/reference/coledialog-class.md)   
  [階層図](../../mfc/hierarchy-chart.md)   
  [COleDialog クラス](../../mfc/reference/coledialog-class.md)

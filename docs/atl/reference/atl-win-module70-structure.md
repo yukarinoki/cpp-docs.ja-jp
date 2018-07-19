@@ -1,5 +1,5 @@
 ---
-title: _ATL_WIN_MODULE70 構造 |Microsoft ドキュメント
+title: _ATL_WIN_MODULE70 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587b115c428b0d82183abbec9f712ff06ea448f4
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: e330beda4770f60d5358ed8baf8d3b2fae260d3a
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256081"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883035"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 構造体
-ATL の windowing コードによって使用されます。  
+ATL でウィンドウ作成コードで使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +45,18 @@ struct _ATL_WIN_MODULE70 {
  バージョン管理に使用される、構造のサイズ。  
   
  `m_csWindowCreate`  
- ウィンドウの登録コードへのアクセスをシリアル化に使用します。 ATL で内部的に使用  
+ ウィンドウの登録コードへのアクセスをシリアル化するために使用します。 ATL で内部的に使用  
   
- **m_pCreateWndList**  
+ `m_pCreateWndList`  
  Windows をそれらのオブジェクトにバインドするために使用します。 ATL で内部的に使用  
   
- **m_rgWindowClassAtoms**  
- 終了時に正しく登録いないことができるように、ウィンドウ クラスの登録を追跡するために使用されます。 ATL で内部的に使用  
+ `m_rgWindowClassAtoms`  
+ 終了時に正しく登録それらができるように、ウィンドウ クラスの登録を追跡するために使用します。 ATL で内部的に使用  
   
-## <a name="remarks"></a>コメント  
- [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)の typedef として定義された`_ATL_WIN_MODULE70`です。  
+## <a name="remarks"></a>Remarks  
+ [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)の typedef として定義されて`_ATL_WIN_MODULE70`します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ## <a name="see-also"></a>関連項目  

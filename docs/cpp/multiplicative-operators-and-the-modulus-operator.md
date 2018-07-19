@@ -1,5 +1,5 @@
 ---
-title: 乗算演算子と剰余演算子 |Microsoft ドキュメント
+title: 乗算演算子と剰余演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 129dce32dfe0ba50a07b71d2fcfaf72bdade090e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de826b1ac86656b9225560bfd9003ce0b03c1111
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943861"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乗算演算子と剰余演算子
 ## <a name="syntax"></a>構文  
@@ -40,7 +41,7 @@ expression / expression
 expression % expression  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  乗算演算子は次のとおりです。  
   
 -   乗算 (**\***)  
@@ -51,17 +52,17 @@ expression % expression
   
  これらの二項演算子の結合規則は、左から右方向です。  
   
- 乗算演算子は、数値型のオペランドを受け取ります。 剰余演算子 (`%`) には、そのオペランドが整数型でなければならないという点で、より厳しい要件があります  (浮動小数点除算の剰余を取得するには、ランタイム関数を使用して[fmod](../c-runtime-library/reference/fmod-fmodf.md))。変換は、「[標準変換](standard-conversions.md)オペランドに適用され結果は変換後の型のです。  
+ 乗算演算子は、数値型のオペランドを受け取ります。 剰余演算子 (`%`) には、そのオペランドが整数型でなければならないという点で、より厳しい要件があります  (浮動小数点除算の剰余を取得、実行時の関数を使用する[fmod](../c-runtime-library/reference/fmod-fmodf.md))。変換は、「[標準変換](standard-conversions.md)オペランドに適用され結果は変換後の型のです。  
   
  乗算演算子は、最初のオペランドを 2 番目のオペランドで乗算した結果を生成します。  
   
  除算演算子は、最初のオペランドを 2 番目のオペランドで除算した結果を生成します。  
   
- 剰余演算子は、次の式で指定した残りの部分を生成、 *e1*最初のオペランドと*e2* 2 番目の: *e1* -(*e1* /  *e2*) \* *e2*では、両方のオペランドは整数型。  
+ 剰余演算子は、次の式で指定された残りの部分を生成ここ*e1*最初のオペランドと*e2* 2 番目の: *e1* -(*e1* /  *e2*) \* *e2*両方のオペランドが整数型が、します。  
   
  除算または剰余式における 0 での除算は未定義になり、実行時エラーが発生します。 したがって、次の式は未定義の間違った結果を生成します。  
   
-```  
+```cpp 
 i % 0  
 f / 0.0  
 ```  
@@ -75,14 +76,14 @@ f / 0.0
  Microsoft C++ では、剰余式の結果は常に最初のオペランドと同じ符号になります。  
   
 **Microsoft 固有の仕様はここまで**  
- 2 つの整数の計算された除算が正確ではなく、1 つのオペランドだけが負の値の場合、結果は、除算演算で算出された正確な値未満の最大の整数 (大きさでは、符号を無視します) になります。 -11 の計算値など、3 は-3.666666666/です。 整数の除算の結果は-3 です。  
+ 2 つの整数の計算された除算が正確ではなく、1 つのオペランドだけが負の値の場合、結果は、除算演算で算出された正確な値未満の最大の整数 (大きさでは、符号を無視します) になります。 たとえば、-11 計算値-3.666666666 は。 整数の除算の結果は-3 です。  
   
- 乗算演算子間のリレーションシップは、id によって指定されます (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*です。  
+ 乗算演算子の間のリレーションシップは、id で指定されます (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*します。  
   
 ## <a name="example"></a>例  
- 次のプログラムは乗算演算子を示します。 注意してくださいいずれかのオペランド`10 / 3`型に明示的にキャストする必要があります`float`ように両方のオペランド型の切り捨てを回避する`float`除算する前にします。  
+ 次のプログラムは乗算演算子を示します。 注意のいずれかのオペランド`10 / 3`型に明示的にキャストする必要があります**float**ように両方のオペランド型の切り捨てを回避するために**float**除算する前にします。  
   
-```  
+```cpp 
 // expre_Multiplicative_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -98,5 +99,5 @@ int main() {
   
 ## <a name="see-also"></a>関連項目  
  [二項演算子を含む式](../cpp/expressions-with-binary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 乗算演算子](../c-language/c-multiplicative-operators.md)

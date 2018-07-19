@@ -1,5 +1,5 @@
 ---
-title: IObjectSafetyImpl クラス |Microsoft ドキュメント
+title: IObjectSafetyImpl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 592a23286ad6592bc0ce6faab999cb362aac42f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f474c73a63c7eaeb7452e88812180a24d1321df
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364038"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881189"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl クラス
-このクラスの既定の実装を提供する、`IObjectSafety`インターフェイスを取得し、オブジェクトの安全性レベルを設定するクライアントを許可します。  
+このクラスの既定の実装を提供する、`IObjectSafety`クライアントを取得し、オブジェクトの安全性レベルを設定できるようにするインターフェイス。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -44,15 +44,15 @@ class IObjectSafetyImpl
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- 派生したクラス、`IObjectSafetyImpl`です。  
+ *T*  
+ 派生したクラス、`IObjectSafetyImpl`します。  
   
  *dwSupportedSafety*  
  コントロールのサポートされている安全性のオプションを指定します。 次のいずれかの値になります。  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_CALLER**で識別されるインターフェイス、 [SetInterfaceSafetyOptions](#setinterfacesafetyoptions)パラメーター`riid`加える必要のあるスクリプトを実行します。  
+- INTERFACESAFE_FOR_UNTRUSTED_CALLER で識別されるインターフェイス、 [SetInterfaceSafetyOptions](#setinterfacesafetyoptions)パラメーター`riid`スクリプトに対して安全で行う必要があります。  
   
-- **INTERFACESAFE_FOR_UNTRUSTED_DATA**で識別されるインターフェイス、`SetInterfaceSafetyOptions`パラメーター`riid`加える必要のある信頼されていないデータの安全な初期化中にします。  
+- INTERFACESAFE_FOR_UNTRUSTED_DATA で識別されるインターフェイス、`SetInterfaceSafetyOptions`パラメーター`riid`に信頼されていないデータの安全な初期化中にします。  
   
 ## <a name="members"></a>メンバー  
   
@@ -60,7 +60,7 @@ class IObjectSafetyImpl
   
 |名前|説明|  
 |----------|-----------------|  
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|オブジェクトに現在設定安全性のオプションと同様に、オブジェクトでサポートされている安全性のオプションを取得します。|  
+|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|現在設定されて、オブジェクトの安全性のオプションと同様に、オブジェクトでサポートされている安全性のオプションを取得します。|  
 |[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|オブジェクトを初期化またはスクリプトに対して安全になります。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
@@ -69,10 +69,10 @@ class IObjectSafetyImpl
 |----------|-----------------|  
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|オブジェクトの現在の安全性レベルを格納します。|  
   
-## <a name="remarks"></a>コメント  
- クラス`IObjectSafetyImpl`の既定の実装を提供`IObjectSafety`です。 `IObjectSafety`インターフェイスにより、クライアントが取得され、オブジェクトの安全性レベルを設定します。 たとえば、web ブラウザーを呼び出すことができます**IObjectSafety::SetInterfaceSafetyOptions**初期化に対して安全またはスクリプトを実行して安全なコントロールを作成します。  
+## <a name="remarks"></a>Remarks  
+ クラス`IObjectSafetyImpl`の既定の実装を提供します。`IObjectSafety`します。 `IObjectSafety`インターフェイスにより、クライアントは、オブジェクトの安全性レベルの設定を取得します。 たとえば、web ブラウザーを呼び出すことができます`IObjectSafety::SetInterfaceSafetyOptions`初期化に対して安全またはスクリプトを実行して安全なコントロールを作成します。  
   
- 使用して、 [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)マクロを**CATID_SafeForScripting**と**CATID_SafeForInitializing**コンポーネントのカテゴリは、代替手法を提供コンポーネントが安全でないことを指定する方法です。  
+ 使用して、 [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)マクロ CATID_SafeForScripting と CATID_SafeForInitializing コンポーネントのカテゴリが別のコンポーネントは安全であることを指定する方法を提供します。  
   
  **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)  
   
@@ -81,11 +81,11 @@ class IObjectSafetyImpl
   
  `IObjectSafetyImpl`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlctl.h  
   
 ##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions  
- オブジェクトに現在設定安全性のオプションと同様に、オブジェクトでサポートされている安全性のオプションを取得します。  
+ 現在設定されて、オブジェクトの安全性のオプションと同様に、オブジェクトでサポートされている安全性のオプションを取得します。  
   
 ```
 HRESULT GetInterfaceSafetyOptions(  
@@ -94,11 +94,11 @@ HRESULT GetInterfaceSafetyOptions(
     DWORD* pdwEnabledOptions);
 ```  
   
-### <a name="remarks"></a>コメント  
- 実装のオブジェクトの実装でサポートされている任意のインターフェイスの適切な値を返します**iunknown::queryinterface**です。  
+### <a name="remarks"></a>Remarks  
+ 実装のオブジェクトの実装でサポートされている任意のインターフェイスの適切な値を返します`IUnknown::QueryInterface`します。  
   
 > [!IMPORTANT]
->  サポートする任意のオブジェクト`IObjectSafety`に独自のセキュリティと任意のオブジェクトを代行させるを担当します。 プログラマ必要があります、ユーザーのコンテキストでのコードを実行する際に生じる問題を考慮、クロスサイト スクリプティングと適切なゾーン チェックを実行します。  
+>  任意のオブジェクトをサポートする`IObjectSafety`は自身のセキュリティと任意のオブジェクトのデリゲートを担当します。 プログラマする必要があります、ユーザーのコンテキストでコードを実行してから発生した問題を考慮、クロスサイト スクリプティングおよび適切なゾーン チェックを実行します。  
   
  参照してください[IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) Windows SDK にします。  
   
@@ -110,7 +110,7 @@ DWORD m_dwCurrentSafety;
 ```  
   
 ##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
- により、オブジェクトを設定してスクリプトまたは初期化の安全な[m_dwCurrentSafety](#m_dwcurrentsafety)適切な値のメンバーです。  
+ により、オブジェクトを設定してスクリプトまたは初期化の安全な[m_dwCurrentSafety](#m_dwcurrentsafety)適切な値のメンバー。  
   
 ```
 HRESULT SetInterfaceSafetyOptions(  
@@ -119,11 +119,11 @@ HRESULT SetInterfaceSafetyOptions(
     DWORD dwEnabledOptions);
 ```  
   
-### <a name="remarks"></a>コメント  
- 実装を返します**E_NOINTERFACE**のオブジェクトの実装でサポートされていない任意のインターフェイスの**iunknown::queryinterface**です。  
+### <a name="remarks"></a>Remarks  
+ 実装では、E_NOINTERFACE を返しますのすべてのインターフェイスのオブジェクトの実装でサポートされていない`IUnknown::QueryInterface`します。  
   
 > [!IMPORTANT]
->  サポートする任意のオブジェクト`IObjectSafety`に独自のセキュリティと任意のオブジェクトを代行させるを担当します。 プログラマ必要があります、ユーザーのコンテキストでのコードを実行する際に生じる問題を考慮、クロスサイト スクリプティングと適切なゾーン チェックを実行します。  
+>  任意のオブジェクトをサポートする`IObjectSafety`は自身のセキュリティと任意のオブジェクトのデリゲートを担当します。 プログラマする必要があります、ユーザーのコンテキストでコードを実行してから発生した問題を考慮、クロスサイト スクリプティングおよび適切なゾーン チェックを実行します。  
   
  参照してください[IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) Windows SDK にします。  
   

@@ -1,5 +1,5 @@
 ---
-title: CTokenPrivileges クラス |Microsoft ドキュメント
+title: CTokenPrivileges クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,15 +28,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31e313381eac3158a6cb72c7681bc49013e92f90
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366511"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881754"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges クラス
-このクラスは、用のラッパー、 **TOKEN_PRIVILEGES**構造体。  
+このクラスは、のラッパー、`TOKEN_PRIVILEGES`構造体。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -61,33 +61,33 @@ class CTokenPrivileges
 |名前|説明|  
 |----------|-----------------|  
 |[CTokenPrivileges::Add](#add)|1 つまたは複数の権限を追加、`CTokenPrivileges`オブジェクト。|  
-|[CTokenPrivileges::Delete](#delete)|権限を削除、`CTokenPrivileges`オブジェクト。|  
+|[CTokenPrivileges::Delete](#delete)|特権を削除、`CTokenPrivileges`オブジェクト。|  
 |[CTokenPrivileges::DeleteAll](#deleteall)|すべての特権を削除、`CTokenPrivileges`オブジェクト。|  
 |[CTokenPrivileges::GetCount](#getcount)|特権のエントリの数を返します、`CTokenPrivileges`オブジェクト。|  
-|[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|取得の表示名に含まれている特権、`CTokenPrivileges`オブジェクト。|  
-|[CTokenPrivileges::GetLength](#getlength)|バッファー サイズを保持するために必要なバイト数で返します、 **TOKEN_PRIVILEGES**構造によって表されます、`CTokenPrivileges`オブジェクト。|  
-|[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|ローカル一意識 (別子 Luid) とから属性のフラグを取得、`CTokenPrivileges`オブジェクト。|  
-|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|権限の名前と属性のフラグから取得、`CTokenPrivileges`オブジェクト。|  
-|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|ポインターを返します、 **TOKEN_PRIVILEGES**構造体。|  
-|[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|指定した権限の名前に関連付けられている属性を取得します。|  
+|[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|取得しますに含まれる権限の名前を表示、`CTokenPrivileges`オブジェクト。|  
+|[CTokenPrivileges::GetLength](#getlength)|保持するために必要なバイトのバッファー サイズを返します、`TOKEN_PRIVILEGES`構造によって表されます、`CTokenPrivileges`オブジェクト。|  
+|[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|ローカル一意識別子 (Luid) とから属性フラグを取得、`CTokenPrivileges`オブジェクト。|  
+|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|特権の名前と属性のフラグをから取得、`CTokenPrivileges`オブジェクト。|  
+|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|ポインターを返します、`TOKEN_PRIVILEGES`構造体。|  
+|[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|指定した権限の名前に関連付けられた属性を取得します。|  
   
 ### <a name="public-operators"></a>パブリック演算子  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CTokenPrivileges::operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|ポインターに値をキャスト、 **TOKEN_PRIVILEGES**構造体。|  
+|[CTokenPrivileges::operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|値へのポインターにキャスト、`TOKEN_PRIVILEGES`構造体。|  
 |[CTokenPrivileges::operator =](#operator_eq)|代入演算子。|  
   
-## <a name="remarks"></a>コメント  
- [アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)プロセスまたはスレッドのセキュリティ コンテキストを記述し、Windows システムにログオンしている各ユーザーに割り当てられているオブジェクトです。  
+## <a name="remarks"></a>Remarks  
+ [アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)プロセスまたはスレッドのセキュリティ コンテキストを示し、Windows システムにログオンしている各ユーザーに割り当てられているオブジェクトです。  
   
- アクセス トークンを使用して、各ユーザーに与えられているさまざまなセキュリティ特権を記述します。 ローカル一意識別子と呼ばれる 64 ビットの数値の特権で構成されます ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) と記述子の文字列。  
+ アクセス トークンは、各ユーザーに与えられているさまざまなセキュリティ特権の記述に使用されます。 特権は、ローカルで一意な識別子と呼ばれる 64 ビットの数値で構成されています ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) と記述子の文字列。  
   
- `CTokenPrivileges`クラスは、ラッパーの[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体し、0 または多くの特権が含まれています。 削除、または、指定されたクラスのメソッドを使用して照会された、特権を追加することができます。  
+ `CTokenPrivileges`クラスは、のラッパー、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体し、0 または多くの権限が含まれています。 削除、または指定されたクラスのメソッドを使用して照会された特権を追加することができます。  
   
- Windows でアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
+ Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK に含まれています。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlsecurity.h  
   
 ##  <a name="add"></a>  CTokenPrivileges::Add  
@@ -99,17 +99,17 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszPrivilege`  
+ *pszPrivilege*  
  WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。  
   
- `bEnable`  
- True の場合、特権が有効にします。 False の場合、この特権は無効です。  
+ *bEnable*  
+ True の場合、特権が有効にします。 False の場合、特権は無効です。  
   
- `rPrivileges`  
- 参照、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。 特権と属性がこの構造体からコピーされ、追加、`CTokenPrivileges`オブジェクト。  
+ *rPrivileges*  
+ 参照を[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。 特権と属性がこの構造体からコピーされに追加、`CTokenPrivileges`オブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- このメソッドの最初のフォームは、特権が正常に追加された場合、false それ以外の場合は true を返します。  
+ このメソッドの最初のフォーム、特権が正常に追加された場合、false それ以外の場合は true を返します。  
   
 ##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges  
  コンストラクターです。  
@@ -121,14 +121,14 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rhs`  
+ *rhs*  
  `CTokenPrivileges`新しいオブジェクトに割り当てるオブジェクト。  
   
- `rPrivileges`  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)に割り当てる新しい構造`CTokenPrivileges`オブジェクト。  
+ *rPrivileges*  
+ [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造に割り当てる新しい`CTokenPrivileges`オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- `CTokenPrivileges`を使用してオブジェクトを作成することができます必要に応じて、 **TOKEN_PRIVILEGES**構造体または以前に定義された`CTokenPrivileges`オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ `CTokenPrivileges`を使用してオブジェクトを作成することができます必要に応じて、`TOKEN_PRIVILEGES`構造体または以前に定義された`CTokenPrivileges`オブジェクト。  
   
 ##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges  
  デストラクターです。  
@@ -137,24 +137,24 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 virtual ~CTokenPrivileges() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  デストラクターは、割り当てられているすべてのリソースを解放します。  
   
 ##  <a name="delete"></a>  CTokenPrivileges::Delete  
- 権限を削除、`CTokenPrivileges`アクセス トークンのオブジェクト。  
+ 特権を削除、`CTokenPrivileges`アクセス トークンのオブジェクト。  
   
 ```
 bool Delete(LPCTSTR pszPrivilege) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszPrivilege`  
- WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。 たとえば、このパラメーター指定定数 SE_SECURITY_NAME、またはその対応する文字列"SeSecurityPrivilege"  
+ *pszPrivilege*  
+ WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。 定数 SE_SECURITY_NAME、またはその対応する文字列、"SeSecurityPrivilege"たとえば、このパラメーターを指定可能性があります。  
   
 ### <a name="return-value"></a>戻り値  
- 正常に削除された場合は false がそれ以外の場合は、特権がある場合は、true を返します。  
+ 場合は、特権が正常に削除された、false それ以外の場合は true を返します。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  このメソッドは、制限付きトークンを作成するためのツールとして役立ちます。  
   
 ##  <a name="deleteall"></a>  CTokenPrivileges::DeleteAll  
@@ -164,24 +164,24 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 void DeleteAll() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  含まれているすべての特権を削除、`CTokenPrivileges`アクセス トークンのオブジェクト。  
   
 ##  <a name="getdisplaynames"></a>  CTokenPrivileges::GetDisplayNames  
- 取得の表示名に含まれている特権、`CTokenPrivileges`アクセス トークンのオブジェクト。  
+ 取得しますに含まれる権限の名前を表示、`CTokenPrivileges`アクセス トークンのオブジェクト。  
   
 ```
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pDisplayNames`  
- `CString` オブジェクトの配列へのポインター。 **CNames** typedef として定義されます: **CTokenPrivileges::CAtlArray\<CString >** です。  
+ *pDisplayNames*  
+ `CString` オブジェクトの配列へのポインター。 `CNames` typedef として定義されます:`CTokenPrivileges::CAtlArray<CString>`します。  
   
-### <a name="remarks"></a>コメント  
- パラメーター`pDisplayNames`の配列を指すポインター`CString`オブジェクトに格納されている権限に対応する表示名が表示される`CTokenPrivileges`オブジェクト。 このメソッドは、のみ WINNT の権限の定義のセクションで指定された権限の表示名を取得します。H.  
+### <a name="remarks"></a>Remarks  
+ パラメーター`pDisplayNames`の配列へのポインターは、`CString`オブジェクトに含まれる権限に対応する表示名を受け取る、`CTokenPrivileges`オブジェクト。 このメソッドは、のみ WINNT の特権の定義で指定した権限の表示名を取得します。H.  
   
- このメソッドは、表示可能な名前を取得しますたとえば、属性名が SE_REMOTE_SHUTDOWN_NAME の場合は、表示可能な名前は、"強制シャット ダウン、リモート システムからです。"。 システム名を取得するには使用[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)です。  
+ このメソッドは、表示可能な名前を取得しますたとえば、属性名が SE_REMOTE_SHUTDOWN_NAME の場合は、表示可能な名前は、"強制シャット ダウン、リモート システムからです。"。 システム名を取得するには使用[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)します。  
   
 ##  <a name="getcount"></a>  CTokenPrivileges::GetCount  
  特権のエントリの数を返します、`CTokenPrivileges`オブジェクト。  
@@ -201,10 +201,10 @@ UINT GetLength() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 保持するために必要なバイト数を返します、 **TOKEN_PRIVILEGES**構造によって表されます、`CTokenPrivileges`を含むすべての権限エントリが含まれているオブジェクト。  
+ 保持するために必要なバイト数を返します、`TOKEN_PRIVILEGES`構造によって表されます、`CTokenPrivileges`を含むすべての特権エントリが含まれているオブジェクト。  
   
 ##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes  
- ローカル一意識 (別子 Luid) とから属性のフラグを取得、`CTokenPrivileges`オブジェクト。  
+ ローカル一意識別子 (Luid) とから属性フラグを取得、`CTokenPrivileges`オブジェクト。  
   
 ```
 void GetLuidsAndAttributes(
@@ -213,14 +213,14 @@ void GetLuidsAndAttributes(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pPrivileges`  
- 配列を指すポインター [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)オブジェクト。 **CLUIDArray** typedef 定義として**CAtlArray\<LUID > CLUIDArray**です。  
+ *pPrivileges*  
+ 配列を指すポインター [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)オブジェクト。 `CLUIDArray` typedef 定義として`CAtlArray<LUID> CLUIDArray`します。  
   
- `pAttributes`  
- DWORD オブジェクトの配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。 **CAttributes** typedef 定義として**CAtlArray \<DWORD > CAttributes**です。  
+ *pAttributes*  
+ DWORD オブジェクトの配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。 `CAttributes` typedef 定義として`CAtlArray <DWORD> CAttributes`します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドはすべてに含まれる権限の列挙は、`CTokenPrivileges`トークンのオブジェクトにアクセスし、それぞれの Luid および (必要に応じて) 属性フラグ配列オブジェクトに移動します。  
+### <a name="remarks"></a>Remarks  
+ このメソッドには、すべてに含まれる権限の列挙は、`CTokenPrivileges`トークンのオブジェクトにアクセスし、配列オブジェクトに、それぞれの Luid および (オプション) 属性フラグを配置します。  
   
 ##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes  
  名前と属性のフラグを取得、`CTokenPrivileges`オブジェクト。  
@@ -233,18 +233,18 @@ void GetNamesAndAttributes(
   
 ### <a name="parameters"></a>パラメーター  
  *pNames*  
- 配列を指すポインター`CString`オブジェクト。 **CNames** typedef 定義として**CAtlArray \<CString > Cname**です。  
+ 配列を指すポインター`CString`オブジェクト。 `CNames` typedef 定義として`CAtlArray <CString> CNames`します。  
   
- `pAttributes`  
- DWORD オブジェクトの配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。 **CAttributes** typedef 定義として**CAtlArray \<DWORD > CAttributes**です。  
+ *pAttributes*  
+ DWORD オブジェクトの配列へのポインター。 このパラメーターが省略するか、NULL の場合は、属性は取得されません。 `CAttributes` typedef 定義として`CAtlArray <DWORD> CAttributes`します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドはすべてに含まれる権限の列挙は、`CTokenPrivileges`オブジェクト、配列オブジェクトに、名前と (必要に応じて) 属性のフラグを配置することです。  
+### <a name="remarks"></a>Remarks  
+ このメソッドには、すべてに含まれる権限の列挙は、`CTokenPrivileges`オブジェクト、配列オブジェクトに名前と (必要に応じて) 属性フラグを配置することです。  
   
- このメソッドは、表示可能な名前ではなく、属性名を取得しますたとえば、属性名が SE_REMOTE_SHUTDOWN_NAME の場合は、システム名には "を返します。"。 表示可能な名前を取得するメソッドを使用して[CTokenPrivileges::GetDisplayNames](#getdisplaynames)です。  
+ このメソッドは、表示可能な名前ではなく、属性名を取得しますたとえば、属性名が SE_REMOTE_SHUTDOWN_NAME の場合は、システム名は、"を返します。"。 表示可能な名前を取得するメソッドを使用して[CTokenPrivileges::GetDisplayNames](#getdisplaynames)します。  
   
 ##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES  
- ポインターを返します、 **TOKEN_PRIVILEGES**構造体。  
+ ポインターを返します、`TOKEN_PRIVILEGES`構造体。  
   
 ```
 const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
@@ -254,7 +254,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
  ポインターを返します、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。  
   
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
- 指定した権限の名前に関連付けられている属性を取得します。  
+ 指定した権限の名前に関連付けられた属性を取得します。  
   
 ```
 bool LookupPrivilege(
@@ -263,14 +263,14 @@ bool LookupPrivilege(
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pszPrivilege`  
- WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。 たとえば、このパラメーター指定定数 SE_SECURITY_NAME、またはその対応する文字列"SeSecurityPrivilege"  
+ *pszPrivilege*  
+ WINNT で定義されている、権限の名前を指定する null で終わる文字列へのポインター。H ヘッダー ファイルです。 定数 SE_SECURITY_NAME、またはその対応する文字列、"SeSecurityPrivilege"たとえば、このパラメーターを指定可能性があります。  
   
- `pdwAttributes`  
- 属性を受け取る変数へのポインター。  
+ *pdwAttributes*  
+ 属性が格納される変数へのポインター。  
   
 ### <a name="return-value"></a>戻り値  
- 属性は正常に取得された場合は false をそれ以外の場合がある場合は true を返します。  
+ 属性は正常に取得された、false をそれ以外の場合がある場合に true を返します。  
   
 ##  <a name="operator_eq"></a>  CTokenPrivileges::operator =  
  代入演算子。  
@@ -281,24 +281,24 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `rPrivileges`  
- [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)に代入する構造体、`CTokenPrivileges`オブジェクト。  
+ *rPrivileges*  
+ [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造に割り当てる、`CTokenPrivileges`オブジェクト。  
   
- `rhs`  
- `CTokenPrivileges`オブジェクトに代入するオブジェクト。  
+ *rhs*  
+ `CTokenPrivileges`オブジェクトに割り当てるオブジェクト。  
   
 ### <a name="return-value"></a>戻り値  
- 更新されたを返します`CTokenPrivileges`オブジェクト。  
+ 更新された返します`CTokenPrivileges`オブジェクト。  
   
 ##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
- ポインターに値をキャスト、 **TOKEN_PRIVILEGES**構造体。  
+ 値へのポインターにキャスト、`TOKEN_PRIVILEGES`構造体。  
   
 ```  
 operator const TOKEN_PRIVILEGES *() const throw(...);
 ```  
   
-### <a name="remarks"></a>コメント  
- ポインターに値をキャスト、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。  
+### <a name="remarks"></a>Remarks  
+ 値へのポインターにキャスト、 [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)構造体。  
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティのサンプル](../../visual-cpp-samples.md)   

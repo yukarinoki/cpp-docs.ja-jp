@@ -1,5 +1,5 @@
 ---
-title: プロローグ エピローグ コードの記述に関する考慮事項 |Microsoft ドキュメント
+title: プロローグ/エピローグ コードの記述に関する考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd87d4af4c797d324e6f882cc5c2e139a784543
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7f4e2c25d7ead3399020221c1e0e9633557d24
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414771"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942108"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>プロローグ コードとエピローグ コードを記述する際の考慮事項
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
- 独自のプロローグとエピローグのコード シーケンスを記述する前に、スタック フレームがどのように配置されるかを理解することが重要です。使用する方法を知っておくと便利ではまた、 **_ _local_size**シンボル。  
+ 独自のプロローグとエピローグのコード シーケンスを記述する前に、スタック フレームがどのように配置されるかを理解することが重要です。_ _Local_size 記号を使用する方法を知っておくと便利です。  
   
 ##  <a name="_pluslang_c.2b2b_.stack_frame_layout"></a> スタック フレームのレイアウト  
  この例は、32 ビット関数で使用される標準プロローグ コードを示しています。  
@@ -51,16 +51,16 @@ ret                       ; Return from function
  スタックは、常に下に (上位メモリ アドレスから下位メモリ アドレスに) 向かって大きくなります。 基本ポインター (`ebp`) は、プッシュされた `ebp` の値を指します。 ローカル領域は `ebp-4` で始まります。 ローカル変数にアクセスするには、`ebp` からのオフセットを計算します。そのためには、`ebp` から適切な値を減算します。  
   
 ##  <a name="_pluslang___local_size"></a> _ _LOCAL_SIZE  
- コンパイラは、シンボルを用意 **_ _local_size**、関数プロローグ コードのインライン アセンブラー ブロックで使用します。 カスタム プロローグ コードで、スタック フレームにローカル変数の領域を割り当てるときに、このシンボルを使用します。  
+ コンパイラは、関数プロローグ コードのインライン アセンブラー ブロックで使用するための _ _local_size、シンボルを提供します。 カスタム プロローグ コードで、スタック フレームにローカル変数の領域を割り当てるときに、このシンボルを使用します。  
   
- **__LOCAL_SIZE** の値は、コンパイラによって決定されます。 その値は、すべてのユーザー定義のローカル変数とコンパイラにより生成された一時変数の合計バイト数です。 **__LOCAL_SIZE** は、イミディエイト (即値) オペランドとしてのみ使用できます。式では使用できません。 このシンボルの値は、変更することも再定義することもできません。 例えば:  
+ コンパイラは、_ _local_size の値を決定します。 その値は、すべてのユーザー定義のローカル変数とコンパイラにより生成された一時変数の合計バイト数です。 _ _Local_size は、即時のオペランドとしてのみ使用できます。これは、式で使用できません。 このシンボルの値は、変更することも再定義することもできません。 例えば:  
   
 ```  
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay  
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error  
 ```  
   
- 次の例のカスタム プロローグとエピローグを含む naked 関数のシーケンスの使用、 **_ _local_size**プロローグ シーケンス内の記号。  
+ カスタムのプロローグおよびエピローグ シーケンスを含む naked 関数の次の例では、プロローグ シーケンスで _ _local_size シンボルを使用します。  
   
 ```  
 // the__local_size_symbol.cpp  

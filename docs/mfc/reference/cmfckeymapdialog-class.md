@@ -1,5 +1,5 @@
 ---
-title: CMFCKeyMapDialog クラス |Microsoft ドキュメント
+title: CMFCKeyMapDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,15 +36,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037289"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853671"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog クラス
-`CMFCKeyMapDialog`クラスは、コマンドをキーボードのキーにマップされるコントロールをサポートします。  
+`CMFCKeyMapDialog`クラスは、コマンドをキーボードのキーにマップされるコントロールをサポートしています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,25 +64,25 @@ class CMFCKeyMapDialog : public CDialogEx
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::DoModal](#domodal)|キーボード マップ ダイアログ ボックスが表示されます。|  
+|[CMFCKeyMapDialog::DoModal](#domodal)|キーボード マッピングのダイアログ ボックスが表示されます。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|キーのマッピングを説明する文字列を構築するためにフレームワークによって呼び出されます。 既定では、文字列には、コマンド名、ショートカット キー、およびショートカット キーの説明が含まれています。|  
+|[CMFCKeyMapDialog::FormatItem](#formatitem)|キーのマッピングを記述する文字列を作成するためにフレームワークによって呼び出されます。 既定では、文字列には、コマンド名、使用すると、ショートカット キー、およびショートカット キーの説明が含まれています。|  
 |[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|指定されたコマンドに関連付けられているショートカット キーの一覧を含む文字列を取得します。|  
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|キーボード マップ コントロールをサポートする内部リスト コントロールに新しい項目を挿入する前に、フレームワークによって呼び出されます。|  
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|新しいページに、キーボード マップのヘッダーを印刷するためにフレームワークによって呼び出されます。|  
+|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|キーボード マップ コントロールをサポートする内部リスト コントロールに新しい項目が挿入される前に、フレームワークによって呼び出されます。|  
+|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|新しいページのキーボード マップのヘッダーを印刷するためにフレームワークによって呼び出されます。|  
 |[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|キーボード マップ項目を印刷するためにフレームワークによって呼び出されます。|  
 |[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|キーボード マップ コントロールをサポートする内部リスト コントロール内の列のキャプションを設定するためにフレームワークによって呼び出されます。|  
 |[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|ユーザーがクリックしたときに、フレームワークによって呼び出されます、**印刷**ボタンをクリックします。|  
 |[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|キーボード マップ コントロールをサポートする内部リスト コントロール内の列の幅を設定するためにフレームワークによって呼び出されます。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、`CMFCKeyMapDialog`サイズ変更可能なキーボード マッピング ダイアログ ボックスを実装するクラス。 ダイアログ ボックスでは、リスト ビュー コントロールを使用して、キーボード ショートカットとそれに関連付けられているコマンドを表示します。  
+ 使用して、`CMFCKeyMapDialog`サイズ変更可能なキーボード マッピング ダイアログ ボックスを実装するクラス。 ダイアログ ボックスでは、キーボード ショートカットとそれに関連付けられているコマンドを表示するのにリスト ビュー コントロールを使用します。  
   
- 使用する、`CMFCKeyMapDialog`クラスをアプリケーション内にパラメーターとしてメイン フレーム ウィンドウへのポインターに渡さ、`CMFCKeyMapDialog`コンス トラクターです。 まず、`DoModal`モーダル ダイアログ ボックスを起動する方法です。  
+ 使用する、`CMFCKeyMapDialog`クラスのアプリケーションで、ポインターを渡すメイン フレーム ウィンドウにパラメーターとして、`CMFCKeyMapDialog`コンス トラクター。 呼び出して、`DoModal`モーダル ダイアログ ボックスを起動する方法。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -114,30 +114,30 @@ CMFCKeyMapDialog(
  親ウィンドウへのポインター、`CMFCKeyMapDialog`オブジェクト。  
   
  [in]*bEnablePrint*  
- `TRUE` アクセラレータ キーの一覧を印刷する場合それ以外の場合、`FALSE`です。 既定値は `FALSE` です。  
+ アクセラレータ キーの一覧を印刷する場合は TRUE。それ以外の場合、FALSE です。 既定では FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
 ### <a name="example"></a>例  
- 次の例でのオブジェクトを作成する方法、`CMFCKeyMapDialog`クラスです。 この例の一部である、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)です。  
+ 次の例のオブジェクトを構築する方法、`CMFCKeyMapDialog`クラス。 この例は、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
 ##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
- キーボード マップ ダイアログ ボックスが表示されます。  
+ キーボード マッピングのダイアログ ボックスが表示されます。  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 符号付き整数など`IDOK`または`IDCANCEL`、つまりに渡される、 [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)メソッドです。 メソッドは、さらに、ダイアログ ボックスを閉じます。 詳細については、次を参照してください。 [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)です。  
+ IDOK、IDCANCEL に渡されるなどの符号付き整数の[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)メソッド。 メソッドは、さらに、ダイアログ ボックスを閉じます。 詳細については、次を参照してください。 [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)します。  
   
 ### <a name="remarks"></a>Remarks  
- キーボード マップ ダイアログ ボックスを使用すると、選択し、コマンドのさまざまなカテゴリにアクセラレータ キーを割り当てることができます。 さらに、選択されたアクセラレータ キーとその説明をクリップボードにコピーすることができます。  
+ キーボード マッピングのダイアログ ボックスを使用すると、選択し、アクセラレータ キーをコマンドのさまざまなカテゴリに割り当てることができます。 さらに、選択したアクセラレータ キーとその説明をクリップボードにコピーできます。  
   
 ##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
- キーのマッピングを説明する文字列を構築するためにフレームワークによって呼び出されます。 既定では、文字列には、コマンド名、ショートカット キー、およびショートカット キーの説明が含まれています。  
+ キーのマッピングを記述する文字列を作成するためにフレームワークによって呼び出されます。 既定では、文字列には、コマンド名、使用すると、ショートカット キー、およびショートカット キーの説明が含まれています。  
   
 ```  
 virtual CString FormatItem(int nItem) const;  
@@ -145,10 +145,10 @@ virtual CString FormatItem(int nItem) const;
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nItem*  
- キー マッピングの内部リスト内の項目の 0 から始まるインデックス。  
+ キー マッピングの内部リストの項目の 0 から始まるインデックス。  
   
 ### <a name="return-value"></a>戻り値  
- A`CString`書式設定された項目のテキストを含むオブジェクトです。  
+ A`CString`書式設定された項目のテキストを格納しているオブジェクト。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -164,12 +164,12 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
  コマンド id。  
   
 ### <a name="return-value"></a>戻り値  
- セミコロンで区切られた、指定されたコマンドに関連付けられているショートカット キーの (';') の一覧です。  
+ セミコロンで区切られた、指定したコマンドに関連付けられているショートカット キーの (';') の一覧。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
- キーボード マップ コントロールをサポートする内部リスト コントロールに新しい項目を挿入する前に、フレームワークによって呼び出されます。  
+ キーボード マップ コントロールをサポートする内部リスト コントロールに新しい項目が挿入される前に、フレームワークによって呼び出されます。  
   
 ```  
 virtual void OnInsertItem(
@@ -179,7 +179,7 @@ virtual void OnInsertItem(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pButton*  
- コマンドの名前と説明をキーボードのキーの組み合わせをマップに使用されるツール バー ボタンへのポインター。 キー マップ項目は、内部リスト コントロールに格納されます。  
+ コマンドの名前と説明をキーボードのキーの組み合わせにマップするために使用するツール バー ボタンへのポインター。 キー マップ項目は、内部のリスト コントロールに格納されます。  
   
  [in]*nItem*  
  内部リスト コントロールに新しいキー マップ項目を挿入する場所を指定する 0 から始まるインデックス。  
@@ -187,7 +187,7 @@ virtual void OnInsertItem(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
- 新しいページに、キーボード マップのヘッダーを印刷するためにフレームワークによって呼び出されます。  
+ 新しいページのキーボード マップのヘッダーを印刷するためにフレームワークによって呼び出されます。  
   
 ```  
 virtual int OnPrintHeader(
@@ -200,14 +200,14 @@ virtual int OnPrintHeader(
  [in]*dc*  
  プリンター デバイス コンテキスト。  
   
- [in]*nPage*  
- 印刷するページ番号です。  
+ [in]*n ページ レイアウト*  
+ 印刷するページ番号。  
   
  [in]*cx*  
- ピクセル単位でヘッダーの横方向のオフセット。  
+ ピクセル単位でヘッダーの水平オフセット。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、印刷したテキストの高さ。 詳細についてを参照してください、戻り値の[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)です。  
+ 成功した場合、印刷したテキストの高さ。 詳細については、の戻り値のセクションを参照してください。 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)します。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークでは、このメソッドを使用して、キーボード マップを印刷します。 既定では、このメソッドは、ページ番号、アプリケーション名、およびダイアログ ボックスのタイトルを出力します。  
@@ -232,16 +232,16 @@ virtual int OnPrintItem(
  印刷する項目の 0 から始まるインデックス。  
   
  [in]*y*  
- ページの上部とアイテムの位置の垂直方向のオフセット。  
+ ページの上部および項目の位置間の垂直オフセット。  
   
  [in]*cx*  
- ページの左側と項目の位置の水平方向のオフセット。  
+ ページの左側と項目の位置の水平オフセット。  
   
  [in]*bCalcHeight*  
- `TRUE` 最適な印刷項目の高さを計算するには`FALSE`を切り捨てます印刷既定の領域に収まるようにします。  
+ 印刷の項目の最適な高さを計算する場合は TRUE既定の領域に収まるように、印刷の項目を切り捨てる場合は FALSE。  
   
 ### <a name="return-value"></a>戻り値  
- 印刷対象の項目の高さ。  
+ 印刷された項目の高さ。  
   
 ### <a name="remarks"></a>Remarks  
  フレームワークは、キー マップ ダイアログ ボックスの項目を印刷するには、このメソッドを呼び出します。 既定では、このメソッドは、項目のコマンド名、ショートカット キー、およびコマンドの説明を出力します。  
@@ -254,7 +254,7 @@ virtual void OnSetColumns();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 既定では、このメソッドは、3 つのリソースから列のキャプションを取得します。 コマンドの列のキャプション IDS_AFXBARRES_COMMAND、IDS_AFXBARRES_KEYS からは、キー列のキャプション、説明の列のキャプションは IDS_AFXBARRES_DESCRIPTION から。  
+ 既定では、このメソッドは、3 つのリソースからの列のキャプションを取得します。 コマンドの列のキャプションは IDS_AFXBARRES_COMMAND、IDS_AFXBARRES_KEYS からのキー列のキャプションは、説明の列のキャプションは IDS_AFXBARRES_DESCRIPTION から。  
   
 ##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
  ユーザーがクリックしたときに、フレームワークによって呼び出されます、**印刷**ボタンをクリックします。  
@@ -264,7 +264,7 @@ virtual void PrintKeyMap();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- `PrintKeyMap`メソッドは、キー マップを出力します。 新しい印刷ジョブを開始し、繰り返し呼び出し、 [CMFCKeyMapDialog::OnPrintHeader](#onprintheader)と[CMFCKeyMapDialog::OnPrintItem](#onprintitem)メソッド キーのすべてのマッピングが印刷されるまでです。  
+ `PrintKeyMap`メソッドは、キー マップを出力します。 新しい印刷ジョブを開始し、繰り返し呼び出し、 [CMFCKeyMapDialog::OnPrintHeader](#onprintheader)と[CMFCKeyMapDialog::OnPrintItem](#onprintitem)メソッドまで、キーのすべてのマッピングが出力されます。  
   
 ##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
  キーボード マップ コントロールをサポートする内部リスト コントロール内の列の幅を設定するためにフレームワークによって呼び出されます。  
@@ -274,7 +274,7 @@ virtual void SetColumnsWidth();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドは、既定の幅のコントロールの列を内部リストに設定します。 最初に、ショートカット キー列の幅が計算されます。 残りの幅の 3 分の 1 つが、[コマンド] 列に割り当てられているし、[説明] 列に、残りの 3 分の 2 が割り当てられています。  
+ このメソッドは、内部のリスト コントロールの列を既定の幅に設定します。 最初に、ショートカット キーの列の幅が計算されます。 残りの幅の 3 分の 1 つは、コマンドの列に割り当てられているし、残りの 2/3 は、[説明] 列に割り当てられています。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

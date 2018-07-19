@@ -1,5 +1,5 @@
 ---
-title: 変更可能なデータ メンバー (C++) |Microsoft ドキュメント
+title: 変更可能なデータ メンバー (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd639cbf1ef076dee6e447f317533bf12dae10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 65d2fc42021a01a1260b57f9516e53c439c8e604
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943882"
 ---
 # <a name="mutable-data-members-c"></a>変更可能なデータ メンバー (C++)
-このキーワードは、クラスの non-static データ メンバーおよび non-const データ メンバーにのみ適用できます。 データ メンバーが宣言されている場合`mutable`からこのデータ メンバーに値を代入することは、 **const**メンバー関数。  
+このキーワードは、クラスの non-static データ メンバーおよび non-const データ メンバーにのみ適用できます。 データ メンバーが宣言されている場合**変更可能な**からこのデータ メンバーに値を代入することはその後、 **const**メンバー関数。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/03/2018
 mutable member-variable-declaration;  
 ```  
   
-## <a name="remarks"></a>コメント  
- たとえば次のコードは、`m_accessCount` が `mutable` として宣言されており、したがって `GetFlag` が const メンバー関数であっても `GetFlag` によって変更できるために、エラーなくコンパイルされます。  
+## <a name="remarks"></a>Remarks  
+ に次のコードがエラーなくコンパイルするなど、`m_accessCount`するとして宣言されている**変更可能な**で変更することができます`GetFlag`にもかかわらず`GetFlag`が const メンバー関数。  
   
-```  
+```cpp 
 // mutable.cpp  
 class X  
 {  

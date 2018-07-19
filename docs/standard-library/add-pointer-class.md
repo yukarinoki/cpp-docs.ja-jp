@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841419"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963577"
 ---
 # <a name="addpointer-class"></a>add_pointer クラス
 
@@ -40,11 +40,11 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*変更する型。
+*T*を変更する型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-メンバー typedef `type` は、`remove_reference<T>::type*` と同じ型を指定します。 別名 `add_pointer_t` は、メンバー typedef `type` にアクセスするショートカットです。
+メンバー **typedef** `type`と同じ型の名前を付けます`remove_reference<T>::type*`します。 エイリアス`add_pointer_t`メンバーにアクセスするショートカット**typedef** `type`します。
 
 参照からポインターを作成することは無効であるため、`add_pointer` は型へのポインターを作成する前に、指定された型から参照を削除します (存在する場合)。 その結果、型が参照であるかどうかを気にすることなく、型を `add_pointer` で使用できます。
 
@@ -72,7 +72,7 @@ int main()
 add_pointer_t<int> == int *
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

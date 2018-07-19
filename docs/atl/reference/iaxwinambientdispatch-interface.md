@@ -1,5 +1,5 @@
 ---
-title: IAxWinAmbientDispatch インターフェイス |Microsoft ドキュメント
+title: IAxWinAmbientDispatch インターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d082faf4c25f76fd7a98cc897760adc424ffb49e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2354992dfdffd6d2ccb122689fb16d549c0c9457
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366329"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881809"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch インターフェイス
 このインターフェイスは、ホストされるコントロールまたはコンテナーの特性を指定するためのメソッドを提供します。  
@@ -70,55 +70,55 @@ interface IAxWinAmbientDispatch : IDispatch
   
 |||  
 |-|-|  
-|[get_AllowContextMenu](#get_allowcontextmenu)|**ショートカット メニューの表示**プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。|  
-|[get_AllowShowUI](#get_allowshowui)|**AllowShowUI**プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。|  
-|[get_AllowWindowlessActivation](#get_allowwindowlessactivation)|**AllowWindowlessActivation**プロパティは、コンテナーがウィンドウなしのアクティベーションを許可するかどうかを指定します。|  
-|[get_BackColor](#get_backcolor)|`BackColor`プロパティは、コンテナーのアンビエント背景色を指定します。|  
-|[get_DisplayAsDefault](#get_displayasdefault)|**DisplayAsDefault**アンビエント プロパティを調べるかどうか、既定のコントロールを制御できるようにします。|  
-|[get_DocHostDoubleClickFlags](#get_dochostdoubleclickflags)|**DocHostDoubleClickFlags**プロパティは、処理を実行するダブルクリックに応答する操作を指定します。|  
-|[get_DocHostFlags](#get_dochostflags)|**DocHostFlags**プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。|  
-|[get_Font](#get_font)|**フォント**プロパティは、コンテナーのアンビエント フォントを指定します。|  
-|[get_ForeColor](#get_forecolor)|`ForeColor`プロパティは、コンテナーのアンビエント前景色を指定します。|  
-|[get_LocaleID](#get_localeid)|**LocaleID**プロパティは、コンテナーのアンビエント ロケール ID を指定します。|  
-|[get_MessageReflect](#get_messagereflect)|**MessageReflect**アンビエント プロパティは、コンテナーがホストされるコントロールへのメッセージを反映するかどうかを指定します。|  
-|[get_OptionKeyPath](#get_optionkeypath)|**OptionKeyPath**プロパティは、ユーザー設定をレジストリ キーのパスを指定します。|  
-|[get_ShowGrabHandles](#get_showgrabhandles)|**ShowGrabHandles**アンビエント プロパティがかどうかにする必要があります自体を使用して描画グラブ ハンドル検索するコントロールを使用します。|  
-|[get_ShowHatching](#get_showhatching)|**ShowHatching**アンビエント プロパティでは、コントロールを調べるかどうかハッチ自体を描画する必要があります。|  
-|[get_UserMode](#get_usermode)|**UserMode**プロパティは、コンテナーのアンビエント ユーザー モードを指定します。|  
-|[put_AllowContextMenu](#put_allowcontextmenu)|**ショートカット メニューの表示**プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。|  
-|[put_AllowShowUI](#put_allowshowui)|**AllowShowUI**プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。|  
-|[put_AllowWindowlessActivation](#put_allowwindowlessactivation)|**AllowWindowlessActivation**プロパティは、コンテナーがウィンドウなしのアクティベーションを許可するかどうかを指定します。|  
-|[put_BackColor](#put_backcolor)|`BackColor`プロパティは、コンテナーのアンビエント背景色を指定します。|  
-|[put_DisplayAsDefault](#put_displayasdefault)|**DisplayAsDefault**アンビエント プロパティを調べるかどうか、既定のコントロールを制御できるようにします。|  
-|[put_DocHostDoubleClickFlags](#put_dochostdoubleclickflags)|**DocHostDoubleClickFlags**プロパティは、処理を実行するダブルクリックに応答する操作を指定します。|  
-|[put_DocHostFlags](#put_dochostflags)|**DocHostFlags**プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。|  
-|[put_Font](#put_font)|**フォント**プロパティは、コンテナーのアンビエント フォントを指定します。|  
-|[put_ForeColor](#put_forecolor)|`ForeColor`プロパティは、コンテナーのアンビエント前景色を指定します。|  
-|[put_LocaleID](#put_localeid)|**LocaleID**プロパティは、コンテナーのアンビエント ロケール ID を指定します。|  
-|[put_MessageReflect](#put_messagereflect)|**MessageReflect**アンビエント プロパティは、コンテナーがホストされるコントロールへのメッセージを反映するかどうかを指定します。|  
-|[put_OptionKeyPath](#put_optionkeypath)|**OptionKeyPath**プロパティは、ユーザー設定をレジストリ キーのパスを指定します。|  
-|[put_UserMode](#put_usermode)|**UserMode**プロパティは、コンテナーのアンビエント ユーザー モードを指定します。|  
+|[get_AllowContextMenu](#get_allowcontextmenu)|`AllowContextMenu`プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。|  
+|[get_AllowShowUI](#get_allowshowui)|`AllowShowUI`プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。|  
+|[get_AllowWindowlessActivation](#get_allowwindowlessactivation)|`AllowWindowlessActivation`プロパティは、コンテナーでウィンドウなしのアクティベーションを許可するかどうかを指定します。|  
+|[get_BackColor](#get_backcolor)|`BackColor`プロパティをコンテナーのアンビエント背景色を指定します。|  
+|[get_DisplayAsDefault](#get_displayasdefault)|`DisplayAsDefault` アンビエント プロパティを調べるかどうかは、既定のコントロールのコントロールを許可します。|  
+|[get_DocHostDoubleClickFlags](#get_dochostdoubleclickflags)|`DocHostDoubleClickFlags`プロパティは、ダブルクリックに応答で実行される操作を指定します。|  
+|[get_DocHostFlags](#get_dochostflags)|`DocHostFlags`プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。|  
+|[get_Font](#get_font)|`Font`プロパティは、コンテナーのアンビエント フォントを指定します。|  
+|[get_ForeColor](#get_forecolor)|`ForeColor`プロパティをコンテナーのアンビエント前景色を指定します。|  
+|[get_LocaleID](#get_localeid)|`LocaleID`プロパティをコンテナーのアンビエント ロケール ID を指定します。|  
+|[get_MessageReflect](#get_messagereflect)|`MessageReflect`アンビエント プロパティは、コンテナーがホストされているコントロールへのメッセージを反映するかどうかを指定します。|  
+|[get_OptionKeyPath](#get_optionkeypath)|`OptionKeyPath`プロパティをユーザー設定をレジストリ キーのパスを指定します。|  
+|[get_ShowGrabHandles](#get_showgrabhandles)|`ShowGrabHandles`アンビエント プロパティでは、コントロールを調べるかどうかは、グラブ ハンドルを描画、自体する必要があります。|  
+|[get_ShowHatching](#get_showhatching)|`ShowHatching`アンビエント プロパティでは、コントロールを調べるかどうかハッチ自体を描画する必要があります。|  
+|[get_UserMode](#get_usermode)|`UserMode`プロパティをコンテナーのアンビエント ユーザー モードを指定します。|  
+|[put_AllowContextMenu](#put_allowcontextmenu)|`AllowContextMenu`プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。|  
+|[put_AllowShowUI](#put_allowshowui)|`AllowShowUI`プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。|  
+|[put_AllowWindowlessActivation](#put_allowwindowlessactivation)|`AllowWindowlessActivation`プロパティは、コンテナーでウィンドウなしのアクティベーションを許可するかどうかを指定します。|  
+|[put_BackColor](#put_backcolor)|`BackColor`プロパティをコンテナーのアンビエント背景色を指定します。|  
+|[put_DisplayAsDefault](#put_displayasdefault)|`DisplayAsDefault` アンビエント プロパティを調べるかどうかは、既定のコントロールのコントロールを許可します。|  
+|[put_DocHostDoubleClickFlags](#put_dochostdoubleclickflags)|`DocHostDoubleClickFlags`プロパティは、ダブルクリックに応答で実行される操作を指定します。|  
+|[put_DocHostFlags](#put_dochostflags)|`DocHostFlags`プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。|  
+|[put_Font](#put_font)|`Font`プロパティは、コンテナーのアンビエント フォントを指定します。|  
+|[put_ForeColor](#put_forecolor)|`ForeColor`プロパティをコンテナーのアンビエント前景色を指定します。|  
+|[put_LocaleID](#put_localeid)|`LocaleID`プロパティをコンテナーのアンビエント ロケール ID を指定します。|  
+|[put_MessageReflect](#put_messagereflect)|`MessageReflect`アンビエント プロパティは、コンテナーがホストされているコントロールへのメッセージを反映するかどうかを指定します。|  
+|[put_OptionKeyPath](#put_optionkeypath)|`OptionKeyPath`プロパティをユーザー設定をレジストリ キーのパスを指定します。|  
+|[put_UserMode](#put_usermode)|`UserMode`プロパティをコンテナーのアンビエント ユーザー モードを指定します。|  
   
-## <a name="remarks"></a>コメント  
- このインターフェイスは、ATL の ActiveX コントロールをホストしているオブジェクトによって公開されます。 ホストされるコントロールに使用可能なアンビエント プロパティを設定するか、コンテナーの動作の他の側面を指定する、このインターフェイスでメソッドを呼び出します。 提供されるプロパティを補足する`IAxWinAmbientDispatch`を使用して[IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)です。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスは、オブジェクトのホスト、ATL の ActiveX コントロールによって公開されます。 ホストされるコントロールに使用可能なアンビエント プロパティを設定するか、コンテナーの動作の他の側面を指定するこのインターフェイスでメソッドを呼び出します。 によって提供されるプロパティを補足する`IAxWinAmbientDispatch`を使用して、 [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)します。  
   
- [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)をに関する型情報を読み込んでみます`IAxWinAmbientDispatch`と`IAxWinAmbientDispatchEx`コードが含まれるタイプ ライブラリからです。  
+ [AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)をに関する型情報を読み込んでみます`IAxWinAmbientDispatch`と`IAxWinAmbientDispatchEx`コードを含むタイプ ライブラリから。  
   
- ATL90.dll にリンクする場合は**AXHost**が DLL にタイプ ライブラリから型情報を読み込みます。  
+ ATL90.dll にリンクしている場合**AXHost**は DLL にタイプ ライブラリから型情報を読み込みます。  
   
- 参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)詳細についてはします。  
+ 参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)の詳細。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このインターフェイスの定義は、次の表に示すようにさまざまな形式で使用できます。  
   
-|定義の型|ファイル|  
+|定義の種類|ファイル|  
 |---------------------|----------|  
 |IDL|atliface.idl|  
 |タイプ ライブラリ|ATL.dll|  
-|C++|atliface.h (ATLBase.h にも含まれます)|  
+|C++|atliface.h (ATLBase.h にも含まれています)|  
   
 ##  <a name="get_allowcontextmenu"></a>  IAxWinAmbientDispatch::get_AllowContextMenu  
- **ショートカット メニューの表示**プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。  
+ `AllowContextMenu`プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。  
   
 ```
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
@@ -129,13 +129,13 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ##  <a name="get_allowshowui"></a>  IAxWinAmbientDispatch::get_AllowShowUI  
- **AllowShowUI**プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。  
+ `AllowShowUI`プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。  
   
 ```
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
@@ -146,13 +146,13 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**VARIANT_FALSE**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として VARIANT_FALSE を使用します。  
   
 ##  <a name="get_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::get_AllowWindowlessActivation  
- **AllowWindowlessActivation**プロパティは、コンテナーがウィンドウなしのアクティベーションを許可するかどうかを指定します。  
+ `AllowWindowlessActivation`プロパティは、コンテナーでウィンドウなしのアクティベーションを許可するかどうかを指定します。  
   
 ```
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
@@ -163,13 +163,13 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ##  <a name="get_backcolor"></a>  IAxWinAmbientDispatch::get_BackColor  
- `BackColor`プロパティは、コンテナーのアンビエント背景色を指定します。  
+ `BackColor`プロパティをコンテナーのアンビエント背景色を指定します。  
   
 ```
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
@@ -180,13 +180,13 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**COLOR_BTNFACE**または**COLOR_WINDOW** (かどうかに応じて、ホスト ウィンドウの親ダイアログか) には、このプロパティの既定値として。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、COLOR_BTNFACE または COLOR_WINDOW を (ホスト ウィンドウの親がダイアログ ボックスかどうか) に応じて、このプロパティの既定値として使用します。  
   
 ##  <a name="get_displayasdefault"></a>  IAxWinAmbientDispatch::get_DisplayAsDefault  
- **DisplayAsDefault**アンビエント プロパティを調べるかどうか、既定のコントロールを制御できるようにします。  
+ `DisplayAsDefault` アンビエント プロパティを調べるかどうかは、既定のコントロールのコントロールを許可します。  
   
 ```
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
@@ -197,13 +197,13 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**VARIANT_FALSE**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として VARIANT_FALSE を使用します。  
   
 ##  <a name="get_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
- **DocHostDoubleClickFlags**プロパティは、処理を実行するダブルクリックに応答する操作を指定します。  
+ `DocHostDoubleClickFlags`プロパティは、ダブルクリックに応答で実行される操作を指定します。  
   
 ```
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
@@ -214,13 +214,13 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**DOCHOSTUIDBLCLK_DEFAULT**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として DOCHOSTUIDBLCLK_DEFAULT を使用します。  
   
 ##  <a name="get_dochostflags"></a>  IAxWinAmbientDispatch::get_DocHostFlags  
- **DocHostFlags**プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。  
+ `DocHostFlags`プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。  
   
 ```
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
@@ -231,30 +231,30 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**DOCHOSTUIFLAG_NO3DBORDER**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として DOCHOSTUIFLAG_NO3DBORDER を使用します。  
   
 ##  <a name="get_font"></a>  IAxWinAmbientDispatch::get_Font  
- **フォント**プロパティは、コンテナーのアンビエント フォントを指定します。  
+ `Font`プロパティは、コンテナーのアンビエント フォントを指定します。  
   
 ```
 STDMETHOD(get_Font)(IFontDisp** pFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFont`  
- [out]アドレス、**この**インターフェイス ポインターがこのプロパティの現在の値を受信するために使用します。  
+ *pFont*  
+ [out]アドレス、`IFontDisp`インターフェイス ポインターがこのプロパティの現在の値を受信するために使用します。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装は、このプロパティの既定値として既定の GUI フォントやシステム フォントを使用します。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として既定の GUI フォントまたはシステム フォントを使用します。  
   
 ##  <a name="get_forecolor"></a>  IAxWinAmbientDispatch::get_ForeColor  
- `ForeColor`プロパティは、コンテナーのアンビエント前景色を指定します。  
+ `ForeColor`プロパティをコンテナーのアンビエント前景色を指定します。  
   
 ```
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
@@ -265,13 +265,13 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ATL のホスト オブジェクトの実装では、このプロパティの既定値としてシステム ウィンドウのテキストの色を使用します。  
   
 ##  <a name="get_localeid"></a>  IAxWinAmbientDispatch::get_LocaleID  
- **LocaleID**プロパティは、コンテナーのアンビエント ロケール ID を指定します。  
+ `LocaleID`プロパティをコンテナーのアンビエント ロケール ID を指定します。  
   
 ```
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
@@ -282,15 +282,15 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ATL のホスト オブジェクトの実装では、このプロパティの既定値として、ユーザーの既定のロケールを使用します。  
   
- このメソッドを使用してアンビエント LocalID を検出することができます、つまり、プログラムのロケール Id、コントロールが使用されています。 ロケール Id がわかれば、リソース ファイルまたはサテライト DLL からなどを読み込むコードをロケール固有のキャプション、エラー メッセージ テキストを呼び出すことができます。  
+ この方法では、アンビエント LocalID を見つけることができます、つまり、プログラムの LocaleID コントロールで使用されています。 ロケール Id がわかれば、リソース ファイルまたはサテライト DLL からなどロケール固有のキャプションを読み込むためのコード、エラー メッセージのテキストを呼び出すことができます。  
   
 ##  <a name="get_messagereflect"></a>  IAxWinAmbientDispatch::get_MessageReflect  
- **MessageReflect**アンビエント プロパティは、コンテナーがホストされるコントロールへのメッセージを反映するかどうかを指定します。  
+ `MessageReflect`アンビエント プロパティは、コンテナーがホストされているコントロールへのメッセージを反映するかどうかを指定します。  
   
 ```
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
@@ -301,13 +301,13 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ##  <a name="get_optionkeypath"></a>  IAxWinAmbientDispatch::get_OptionKeyPath  
- **OptionKeyPath**プロパティは、ユーザー設定をレジストリ キーのパスを指定します。  
+ `OptionKeyPath`プロパティをユーザー設定をレジストリ キーのパスを指定します。  
   
 ```
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
@@ -318,10 +318,10 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
 ##  <a name="get_showgrabhandles"></a>  IAxWinAmbientDispatch::get_ShowGrabHandles  
- **ShowGrabHandles**アンビエント プロパティがかどうかにする必要があります自体を使用して描画グラブ ハンドル検索するコントロールを使用します。  
+ `ShowGrabHandles`アンビエント プロパティでは、コントロールを調べるかどうかは、グラブ ハンドルを描画、自体する必要があります。  
   
 ```
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
@@ -332,13 +332,13 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL ホスト オブジェクト実装は、常に**VARIANT_FALSE**としてこのプロパティの値。  
+### <a name="remarks"></a>Remarks  
+ 常に ATL ホスト オブジェクト実装では、このプロパティの値として VARIANT_FALSE を返します。  
   
 ##  <a name="get_showhatching"></a>  IAxWinAmbientDispatch::get_ShowHatching  
- **ShowHatching**アンビエント プロパティでは、コントロールを調べるかどうかハッチ自体を描画する必要があります。  
+ `ShowHatching`アンビエント プロパティでは、コントロールを調べるかどうかハッチ自体を描画する必要があります。  
   
 ```
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
@@ -349,13 +349,13 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL ホスト オブジェクト実装は、常に**VARIANT_FALSE**としてこのプロパティの値。  
+### <a name="remarks"></a>Remarks  
+ 常に ATL ホスト オブジェクト実装では、このプロパティの値として VARIANT_FALSE を返します。  
   
 ##  <a name="get_usermode"></a>  IAxWinAmbientDispatch::get_UserMode  
- **UserMode**プロパティは、コンテナーのアンビエント ユーザー モードを指定します。  
+ `UserMode`プロパティをコンテナーのアンビエント ユーザー モードを指定します。  
   
 ```
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
@@ -366,13 +366,13 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
  [out]このプロパティの現在の値を受け取る変数のアドレス。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ##  <a name="put_allowcontextmenu"></a>  IAxWinAmbientDispatch::put_AllowContextMenu  
- **ショートカット メニューの表示**プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。  
+ `AllowContextMenu`プロパティは、ホストされるコントロールが、独自のコンテキスト メニューを表示できるかどうかを指定します。  
   
 ```
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
@@ -383,13 +383,13 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ##  <a name="put_allowshowui"></a>  IAxWinAmbientDispatch::put_AllowShowUI  
- **AllowShowUI**プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。  
+ `AllowShowUI`プロパティは、ホストされるコントロールが、独自のユーザー インターフェイスを表示できるかどうかを指定します。  
   
 ```
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
@@ -400,13 +400,13 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**VARIANT_FALSE**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として VARIANT_FALSE を使用します。  
   
 ##  <a name="put_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::put_AllowWindowlessActivation  
- **AllowWindowlessActivation**プロパティは、コンテナーがウィンドウなしのアクティベーションを許可するかどうかを指定します。  
+ `AllowWindowlessActivation`プロパティは、コンテナーでウィンドウなしのアクティベーションを許可するかどうかを指定します。  
   
 ```
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
@@ -417,13 +417,13 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ##  <a name="put_backcolor"></a>  IAxWinAmbientDispatch::put_BackColor  
- `BackColor`プロパティは、コンテナーのアンビエント背景色を指定します。  
+ `BackColor`プロパティをコンテナーのアンビエント背景色を指定します。  
   
 ```
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
@@ -434,30 +434,30 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**COLOR_BTNFACE**または**COLOR_WINDOW** (かどうかに応じて、ホスト ウィンドウの親ダイアログか) には、このプロパティの既定値として。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、COLOR_BTNFACE または COLOR_WINDOW を (ホスト ウィンドウの親がダイアログ ボックスかどうか) に応じて、このプロパティの既定値として使用します。  
   
 ##  <a name="put_displayasdefault"></a>  IAxWinAmbientDispatch::put_DisplayAsDefault  
- **DisplayAsDefault**アンビエント プロパティを調べるかどうか、既定のコントロールを制御できるようにします。  
+ `DisplayAsDefault` アンビエント プロパティを調べるかどうかは、既定のコントロールのコントロールを許可します。  
   
 ```
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bDisplayAsDefault`  
+ *bDisplayAsDefault*  
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**VARIANT_FALSE**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として VARIANT_FALSE を使用します。  
   
 ##  <a name="put_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
- **DocHostDoubleClickFlags**プロパティは、処理を実行するダブルクリックに応答する操作を指定します。  
+ `DocHostDoubleClickFlags`プロパティは、ダブルクリックに応答で実行される操作を指定します。  
   
 ```
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
@@ -468,13 +468,13 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**DOCHOSTUIDBLCLK_DEFAULT**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として DOCHOSTUIDBLCLK_DEFAULT を使用します。  
   
 ##  <a name="put_dochostflags"></a>  IAxWinAmbientDispatch::put_DocHostFlags  
- **DocHostFlags**プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。  
+ `DocHostFlags`プロパティが、そのホスト オブジェクトのユーザー インターフェイス機能を指定します。  
   
 ```
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
@@ -485,30 +485,30 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して**DOCHOSTUIFLAG_NO3DBORDER**としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として DOCHOSTUIFLAG_NO3DBORDER を使用します。  
   
 ##  <a name="put_font"></a>  IAxWinAmbientDispatch::put_Font  
- **フォント**プロパティは、コンテナーのアンビエント フォントを指定します。  
+ `Font`プロパティは、コンテナーのアンビエント フォントを指定します。  
   
 ```
 STDMETHOD(put_Font)(IFontDisp* pFont);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `pFont`  
+ *pFont*  
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装は、このプロパティの既定値として既定の GUI フォントやシステム フォントを使用します。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値として既定の GUI フォントまたはシステム フォントを使用します。  
   
 ##  <a name="put_forecolor"></a>  IAxWinAmbientDispatch::put_ForeColor  
- `ForeColor`プロパティは、コンテナーのアンビエント前景色を指定します。  
+ `ForeColor`プロパティをコンテナーのアンビエント前景色を指定します。  
   
 ```
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
@@ -519,13 +519,13 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ATL のホスト オブジェクトの実装では、このプロパティの既定値としてシステム ウィンドウのテキストの色を使用します。  
   
 ##  <a name="put_localeid"></a>  IAxWinAmbientDispatch::put_LocaleID  
- **LocaleID**プロパティは、コンテナーのアンビエント ロケール ID を指定します。  
+ `LocaleID`プロパティをコンテナーのアンビエント ロケール ID を指定します。  
   
 ```
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
@@ -536,30 +536,30 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  ATL のホスト オブジェクトの実装では、このプロパティの既定値として、ユーザーの既定のロケールを使用します。  
   
 ##  <a name="put_messagereflect"></a>  IAxWinAmbientDispatch::put_MessageReflect  
- **MessageReflect**アンビエント プロパティは、コンテナーがホストされるコントロールへのメッセージを反映するかどうかを指定します。  
+ `MessageReflect`アンビエント プロパティは、コンテナーがホストされているコントロールへのメッセージを反映するかどうかを指定します。  
   
 ```
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bMessageReflect`  
+ *bMessageReflect*  
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ##  <a name="put_optionkeypath"></a>  IAxWinAmbientDispatch::put_OptionKeyPath  
- **OptionKeyPath**プロパティは、ユーザー設定をレジストリ キーのパスを指定します。  
+ `OptionKeyPath`プロパティをユーザー設定をレジストリ キーのパスを指定します。  
   
 ```
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
@@ -570,24 +570,24 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
 ##  <a name="put_usermode"></a>  IAxWinAmbientDispatch::put_UserMode  
- **UserMode**プロパティは、コンテナーのアンビエント ユーザー モードを指定します。  
+ `UserMode`プロパティをコンテナーのアンビエント ユーザー モードを指定します。  
   
 ```
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `bUserMode`  
+ *bUserMode*  
  [in]このプロパティの新しい値。  
   
 ### <a name="return-value"></a>戻り値  
- 標準の `HRESULT` 値。  
+ 標準の HRESULT 値。  
   
-### <a name="remarks"></a>コメント  
- ATL のホスト オブジェクトの実装を使用して`VARIANT_TRUE`としてこのプロパティの既定値です。  
+### <a name="remarks"></a>Remarks  
+ ATL のホスト オブジェクトの実装では、このプロパティの既定値に VARIANT_TRUE を使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [IAxWinAmbientDispatchEx インターフェイス](../../atl/reference/iaxwinambientdispatchex-interface.md)   

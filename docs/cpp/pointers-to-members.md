@@ -1,5 +1,5 @@
 ---
-title: メンバーへのポインター |Microsoft ドキュメント
+title: メンバーへのポインター |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34686852"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943842"
 ---
 # <a name="pointers-to-members"></a>メンバーへのポインター
 メンバーへのポインターの宣言は、ポインター宣言の特殊なケースです。  これらは次のシーケンスで宣言します。  
@@ -33,45 +33,33 @@ ms.locfileid: "34686852"
 [= & qualified-name :: member-name];  
 ```  
   
-1.  宣言指定子:   
+1. 宣言指定子:   
+  - ストレージ クラスの指定子 (省略可能)。  
   
-    -   ストレージ クラスの指定子 (省略可能)。  
+  - 省略可能な**const**や**揮発性**指定子。  
   
-    -   省略可能な**const**や`volatile`指定子。  
+  - 型指定子: 型の名前。  これは指されるメンバーのクラスではなく、種類です。  
   
-    -   型指定子: 型の名前。  これは指されるメンバーのクラスではなく、種類です。  
+1. 宣言子:   
+
+  - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。  
+1. 指されるメンバーが含まれるクラスの修飾名。  
+  - :: 演算子。  
+  - **\*** 演算子。  
+  - 省略可能な**const**や**揮発性**指定子。  
+  - メンバーへのポインターを指定する識別子。  
   
-2.  宣言子:   
-  
-    -   オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)です。  
-  
-    -   指されるメンバーが含まれるクラスの修飾名。   
-  
-    -   :: 演算子。  
-  
-    -   **\*** 演算子。  
-  
-    -   省略可能な**const**や`volatile`指定子。  
-  
-    -   メンバーへのポインターを指定する識別子。  
-  
-    -   初期化子 (省略可能):  
-  
- **=** 演算子。  
-  
- **&** 演算子。  
-  
- クラスの修飾名。  
-  
- `::` 演算子。  
-  
- 適切な型のクラスの非静的メンバーの名前。  
-  
- 当然ながら、1 つの宣言で複数の宣言子 (および関連する初期化子) を使用できます。  
+  - 初期化子 (省略可能):  
+  - **=** 演算子。  
+  - **&** 演算子。  
+  - クラスの修飾名。  
+  - `::` 演算子。  
+  - 適切な型のクラスの非静的メンバーの名前。  
+  -  当然ながら、1 つの宣言で複数の宣言子 (および関連する初期化子) を使用できます。  
   
  クラスのメンバーへのポインターは、メンバーの型およびメンバーが属するクラスの情報を持つ点で通常のポインターとは異なります。 通常のポインターは、メモリ内の 1 つのオブジェクトだけを識別します (1 つのオブジェクトのアドレスだけを持ちます)。 クラスのメンバーへのポインターは、クラスのインスタンスのメンバーを識別します。 次の例では、`Window` クラス、およびメンバー データへのポインターをいくつか宣言します。  
   
-```  
+```cpp 
 // pointers_to_members1.cpp  
 class Window  
 {  
@@ -91,16 +79,16 @@ int main()
 }  
 ```  
   
- 前の例で`pwCaption`クラスの任意のメンバーへのポインターは、`Window`型を持つ**char\*** です。 `pwCaption` の型は `char * Window::* ` です。 次のコードでは、メンバー関数 `SetCaption` および `GetCaption` へのポインターを宣言します。  
+ 前の例では、`pwCaption`クラスのメンバーへのポインターは、`Window`型を持つ**char\*** します。 `pwCaption` の型は `char * Window::* ` です。 次のコードでは、メンバー関数 `SetCaption` および `GetCaption` へのポインターを宣言します。  
   
-```  
+```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
 bool (Window::*pfnwSC)( const char * ) = &Window::SetCaption;  
 ```  
   
  ポインター `pfnwGC` および `pfnwSC` はそれぞれ、`GetCaption` クラスの `SetCaption` および `Window` を指します。 次のコードは、メンバー `pwCaption` へのポインターを使用してウィンドウ キャプションに情報を直接コピーします。  
   
-```  
+```cpp 
 Window wMainWindow;  
 Window *pwChildWindow = new Window;  
 char   *szUntitled    = "Untitled -  ";  
@@ -113,13 +101,13 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 間の違い、 **.\*** と**-> \*** 演算子 (メンバーへのポインター演算子) は、 **.\*** 演算子メンバーが選択オブジェクトまたはオブジェクト参照を指定するには、中に、 **-> \*** 演算子はポインターを通じてメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。  
+ 間の差、 **.\*** と**-> \*** 演算子 (メンバーへのポインター演算子) は、 **.\*** 演算子は、メンバーを選択します。 オブジェクトまたはオブジェクトの参照を指定すると、while、 **-> \*** 演算子は、ポインターからメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。  
   
- メンバーへのポインター演算子の結果は、メンバーの種類: この場合、 **char \*** です。  
+ メンバーへのポインター演算子の結果は、メンバーの型: この場合、 **char \*** します。  
   
  次のコードでは、メンバーへのポインターを使用して、メンバー関数 `GetCaption` および `SetCaption` を呼び出します。  
   
-```  
+```cpp 
 // Allocate a buffer.  
 enum {  
     sizeOfBuffer = 100  
@@ -135,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>メンバーへのポインターに関する制約  
- 静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 静的メンバーの 1 つだけのインスタンスが通常アドレスの特定のクラスのすべてのオブジェクトが存在するので **(&)** を逆参照と **(\*)** 演算子を使用できます。  
+ 静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 通常アドレスの特定のクラスのすべてのオブジェクトの静的メンバーを 1 つだけのインスタンスが存在するので、 **(&)** 逆参照と **(\*)** 演算子を使用できます。  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>メンバーと仮想関数へのポインター  
  メンバー関数へのポインターによる仮想関数の呼び出しは、関数が直接呼び出されているように機能します。v-table から正しい関数が検索され、呼び出されます。  
@@ -144,7 +132,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
   
  次のコードは、メンバー関数へのポインターを介して仮想関数を呼び出す方法を示しています。  
   
-```  
+```cpp 
 // virtual_functions.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -152,35 +140,35 @@ using namespace std;
   
 class Base  
 {  
-public:  
-virtual void Print();  
+    public:  
+    virtual void Print();  
 };  
 void (Base ::* bfnPrint)() = &Base :: Print;  
 void Base :: Print()  
 {  
-cout << "Print function for class Base\n";  
+    cout << "Print function for class Base\n";  
 }  
   
 class Derived : public Base  
 {  
-public:  
-void Print();  // Print is still a virtual function.  
+    public:  
+    void Print();  // Print is still a virtual function.  
 };  
   
 void Derived :: Print()  
 {  
-cout << "Print function for class Derived\n";  
+    cout << "Print function for class Derived\n";  
 }  
   
 int main()  
 {  
     Base   *bPtr;  
     Base    bObject;  
-Derived dObject;  
-bPtr = &bObject;    // Set pointer to address of bObject.  
-(bPtr->*bfnPrint)();  
-bPtr = &dObject;    // Set pointer to address of dObject.  
-(bPtr->*bfnPrint)();  
+    Derived dObject;  
+    bPtr = &bObject;    // Set pointer to address of bObject.  
+    (bPtr->*bfnPrint)();  
+    bPtr = &dObject;    // Set pointer to address of dObject.  
+    (bPtr->*bfnPrint)();  
 }  
   
 //Output: Print function for class Base  

@@ -1,5 +1,5 @@
 ---
-title: _com_error::Description |Microsoft ドキュメント
+title: _com_error::Description |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4be038bff05ce7a37b09ec3b3c61572635747864
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414260"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939898"
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Microsoft 固有の仕様**  
   
- 呼び出し**ierrorinfo::getdescription**関数。  
+ `IErrorInfo::GetDescription` 関数を呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ _bstr_t Description( ) const;
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 結果を返します**ierrorinfo::getdescription**の**IErrorInfo**内オブジェクトに記録された、`_com_error`オブジェクト。 結果の `BSTR` は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は**IErrorInfo**は空白を返しますが、記録`_bstr_t`です。  
+ 結果を返します`IErrorInfo::GetDescription`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 結果の `BSTR` は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は`IErrorInfo`が記録されると、空を返します`_bstr_t`します。  
   
-## <a name="remarks"></a>コメント  
- 呼び出し、 **ierrorinfo::getdescription**関数と取得**IErrorInfo**内に記録された、`_com_error`オブジェクト。 呼び出すときの失敗、 **ierrorinfo::getdescription**メソッドは無視されます。  
+## <a name="remarks"></a>Remarks  
+ 呼び出し、`IErrorInfo::GetDescription`関数を取得します`IErrorInfo`内に記録された、`_com_error`オブジェクト。 呼び出すときの失敗、`IErrorInfo::GetDescription`メソッドは無視されます。  
   
  **Microsoft 固有の仕様はここまで**  
   

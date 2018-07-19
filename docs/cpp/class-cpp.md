@@ -1,5 +1,5 @@
 ---
-title: クラス (C++) |Microsoft ドキュメント
+title: クラス (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bffa79760e9c597c5a6d736104dc856fc1de16b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bf975a9d64508368ac5d61c82fecc07edda28b5
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943213"
 ---
 # <a name="class-c"></a>class (C++)
-`class` キーワードは、クラス型を宣言したり、クラス型のオブジェクトを定義したりします。  
+**クラス**キーワードはクラス型を宣言またはクラス型のオブジェクトを定義します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
   
-      [template-spec]  
-       class [ms-decl-spec] [tag [: base-list ]]  
+[template-spec]  
+class [ms-decl-spec] [tag [: base-list ]]  
 {  
    member-list  
 } [declarators];  
@@ -39,28 +40,28 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `template-spec`  
- テンプレートの指定 (省略可能)。 詳細についてを参照してください[テンプレート](templates-cpp.md)です。  
+ *テンプレートの仕様*  
+ テンプレートの指定 (省略可能)。 詳細についてを参照してください[テンプレート](templates-cpp.md)します。  
   
- `class`  
- `class` キーワード。  
+ *class*  
+ **クラス**キーワード。  
   
- `ms-decl-spec`  
+ *ms 宣言の仕様*  
  ストレージ クラスの指定 (省略可能)。 詳細についてを参照してください、 [_ _declspec](../cpp/declspec.md)キーワード。  
   
- `tag`  
- クラスに渡す型名。 タグは、クラスのスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名クラスが定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)です。  
+ *タグ*  
+ クラスに渡す型名。 タグは、クラスのスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名クラスが定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)します。  
   
- `base-list`  
- このクラスがメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラス](../cpp/base-classes.md)詳細についてはします。 各基底クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワードです。 メンバー アクセス テーブルを参照してください[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。  
+ *基本リスト*  
+ このクラスがメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラスの](../cpp/base-classes.md)詳細についてはします。 各基本クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワード。 メンバー アクセス テーブルを参照してください。[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。  
   
- `member-list`  
+ *メンバー リスト*  
  クラス メンバーのリスト。 参照してください[クラス メンバーの概要](../cpp/class-member-overview.md)詳細についてはします。  
   
- `declarators`  
- クラス型の 1 つ以上のインスタンスの名前を指定する宣言子リスト。 宣言子には、クラスのすべてのデータ メンバーが `public` である場合、初期化子リストが含まれる場合があります。 これは、クラスよりも、データ メンバーが既定で `public` である構造体で、より一般的です。 参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。  
+ *宣言子*  
+ クラス型の 1 つ以上のインスタンスの名前を指定する宣言子リスト。 クラスのすべてのデータ メンバーがある場合、宣言子は初期化子リストを含めることができます**パブリック**します。 これは、そのデータ メンバーは、構造の一般的な**パブリック**よりも、既定でクラス。 参照してください[概要の宣言子](../cpp/overview-of-declarators.md)詳細についてはします。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  一般的なクラスの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [struct](../cpp/struct-cpp.md)  
@@ -73,11 +74,11 @@ ms.lasthandoff: 05/03/2018
   
 -   [_ _virtual_inheritance](../cpp/inheritance-keywords.md)  
   
- 詳細については、マネージ クラスと構造体は、次を参照してください[クラスと構造体。](../windows/classes-and-structs-cpp-component-extensions.md)  
+ マネージ クラスと構造体については、次を参照してください[クラスと構造体。](../windows/classes-and-structs-cpp-component-extensions.md)  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // class.cpp  
 // compile with: /EHsc  
 // Example of the class keyword  

@@ -1,5 +1,5 @@
 ---
-title: _com_error::GUID |Microsoft ドキュメント
+title: _com_error::GUID |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee1952e50251cfac7563357c7626ab8603589e4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e324a84a16874a7e33f8687943b1302fbdd73a7a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409689"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939027"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
 **Microsoft 固有の仕様**  
   
- 呼び出し**ierrorinfo::getguid**関数。  
+ `IErrorInfo::GetGUID` 関数を呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ GUID GUID( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 結果を返します**ierrorinfo::getguid**の**IErrorInfo**内オブジェクトに記録された、`_com_error`オブジェクト。 ない場合は**IErrorInfo**返しますオブジェクトが記録されて、`GUID_NULL`です。  
+ 結果を返します`IErrorInfo::GetGUID`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 ない場合は`IErrorInfo`オブジェクトが記録されて、GUID_ を返します。  
   
-## <a name="remarks"></a>コメント  
- 呼び出すときの失敗、 **ierrorinfo::getguid**メソッドは無視されます。  
+## <a name="remarks"></a>Remarks  
+ 呼び出すときの失敗、`IErrorInfo::GetGUID`メソッドは無視されます。  
   
  **Microsoft 固有の仕様はここまで**  
   

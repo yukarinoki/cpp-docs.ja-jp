@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLinkCtrl クラス |Microsoft ドキュメント
+title: CMFCRibbonLinkCtrl クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 26837b4eda881bdf83e2f34f0c81a1b0e7034ffe
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039012"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851497"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl クラス
 リボン上に配置するハイパーリンクを実装します。 ハイパーリンクをクリックすると、Web ページが表示されます。  
@@ -85,7 +85,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |[CMFCRibbonLinkCtrl::SetLink](#setlink)|ハイパーリンクの値を設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- ハイパーリンクを作成した後に追加パネルを呼び出して[cmfcribbonpanel::add](../../mfc/reference/cmfcribbonpanel-class.md#add)です。  
+ ハイパーリンクを作成した後に追加パネルを呼び出すことによって[cmfcribbonpanel::add](../../mfc/reference/cmfcribbonpanel-class.md#add)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -96,7 +96,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
  **ヘッダー:** afxRibbonLinkCtrl.h  
   
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl  
- 構築して初期化、 [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)オブジェクト。  
+ 構築し、初期化、 [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)オブジェクト。  
   
 ```  
 CMFCRibbonLinkCtrl(
@@ -113,10 +113,10 @@ CMFCRibbonLinkCtrl(
  リンク コントロールに表示するラベルを指定します。  
   
  [in]*lpszLink*  
- リンク コントロールに関連付けられているハイパーリンクを指定します。  
+ リンク コントロールに関連付けられたハイパーリンクを指定します。  
   
 ### <a name="example"></a>例  
- 次の例でのコンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラスです。 このコード スニペットの一部である、[リボン ガジェット サンプル](../../visual-cpp-samples.md)です。  
+ 次の例では、コンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラス。 このコード スニペットの一部、[リボン ガジェット サンプル](../../visual-cpp-samples.md)します。  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
   
@@ -250,10 +250,10 @@ BOOL OpenLink();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 関連付けられている Web ページが正常に開かれた場合それ以外の場合、`FALSE`です。  
+ 関連付けられている web ページが正常に開かれた場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 関連付けられているハイパーリンクを使用し、web ページを開き、`CMFCRibbonLinkCtrl`オブジェクト。  
+ 関連付けられているハイパーリンクを使用して web ページを開き、`CMFCRibbonLinkCtrl`オブジェクト。  
   
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink  
  ハイパーリンクの値を設定します。  

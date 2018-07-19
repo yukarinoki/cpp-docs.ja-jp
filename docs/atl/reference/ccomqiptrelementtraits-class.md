@@ -1,5 +1,5 @@
 ---
-title: CComQIPtrElementTraits クラス |Microsoft ドキュメント
+title: CComQIPtrElementTraits クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9122431d0d71d33406250a624048dbede46fd387
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e99299d1232fda75d6b0552b5236a060903a08e5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361936"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879653"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits クラス
-このクラスは、COM インターフェイス ポインターのコレクションを作成するときに、メソッド、静的関数、および typedef 便利を提供します。  
+このクラスは、COM インターフェイス ポインターのコレクションを作成するときに、メソッド、静的関数、および便利な typedef を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,11 +37,11 @@ class CComQIPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `I`  
- 格納するポインターの種類を指定する COM インターフェイスです。  
+ *I*  
+ COM インターフェイスを格納するポインターの種類を指定します。  
   
- `piid`  
- IID へのポインター`I`です。  
+ *piid*  
+ ポインターの IID を*は*します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -51,10 +51,10 @@ class CComQIPtrElementTraits :
 |----------|-----------------|  
 |[CComQIPtrElementTraits::INARGTYPE](#inargtype)|コレクション クラスのオブジェクトに要素を追加するために使用するデータ型。|  
   
-## <a name="remarks"></a>コメント  
- このクラスは、メソッドを派生しのコレクション クラスを作成するときに、便利 typedef を提供[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインター オブジェクトです。 このクラスは、両方で使用される、 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md)と[CInterfaceList](../../atl/reference/cinterfacelist-class.md)クラスです。  
+## <a name="remarks"></a>Remarks  
+ このクラスは、メソッドを派生しのコレクション クラスを作成するときに、便利な typedef を提供します[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインター オブジェクト。 このクラスは、両方によって使用されて、 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md)と[CInterfaceList](../../atl/reference/cinterfacelist-class.md)クラス。  
   
- 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)です。  
+ 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -67,7 +67,7 @@ class CComQIPtrElementTraits :
   
  `CComQIPtrElementTraits`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE  

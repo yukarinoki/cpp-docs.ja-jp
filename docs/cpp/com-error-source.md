@@ -1,5 +1,5 @@
 ---
-title: _com_error::Source |Microsoft ドキュメント
+title: _com_error::Source |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33834df20606e8380e6a328a41435522185ac70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f904fa11195c27f8e08856ef391d0ba8adbedece
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412346"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939678"
 ---
 # <a name="comerrorsource"></a>_com_error::Source
 **Microsoft 固有の仕様**  
   
- 呼び出し**ierrorinfo::getsource**関数。  
+ `IErrorInfo::GetSource` 関数を呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ _bstr_t Source() const;
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 結果を返します**ierrorinfo::getsource**の**IErrorInfo**内オブジェクトに記録された、`_com_error`オブジェクト。 結果の BSTR は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は**IErrorInfo**は空白を返しますが、記録`_bstr_t`です。  
+ 結果を返します`IErrorInfo::GetSource`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 結果の BSTR は `_bstr_t` オブジェクトにカプセル化されます。 ない場合は`IErrorInfo`が記録されると、空を返します`_bstr_t`します。  
   
-## <a name="remarks"></a>コメント  
- 呼び出すときの失敗、 **ierrorinfo::getsource**メソッドは無視されます。  
+## <a name="remarks"></a>Remarks  
+ 呼び出すときの失敗、`IErrorInfo::GetSource`メソッドは無視されます。  
   
  **Microsoft 固有の仕様はここまで**  
   

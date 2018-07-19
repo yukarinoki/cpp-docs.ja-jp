@@ -1,5 +1,5 @@
 ---
-title: CSimpleDialog クラス |Microsoft ドキュメント
+title: CSimpleDialog クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0c713781ff6c780e63fdf19545f83bf693a081b
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362388"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881660"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog クラス
-このクラスは、基本のモーダル ダイアログ ボックスを実装します。  
+このクラスは、基本的なモーダル ダイアログ ボックスを実装します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,10 +41,10 @@ class CSimpleDialog : public CDialogImplBase
 #### <a name="parameters"></a>パラメーター  
  *t_wDlgTemplateID*  
   
- ダイアログ テンプレート リソースのリソース ID です。  
+ ダイアログ テンプレート リソースのリソース ID。  
   
  *t_bCenter*  
- **TRUE**ダイアログ オブジェクトする場合は、オーナー ウィンドウの中央に配置します。 それ以外の**FALSE**です。  
+ ダイアログ オブジェクトは、オーナー ウィンドウの 中央揃えにする場合は TRUE。それ以外の場合は FALSE です。  
   
 ## <a name="members"></a>メンバー  
   
@@ -54,10 +54,10 @@ class CSimpleDialog : public CDialogImplBase
 |----------|-----------------|  
 |[CSimpleDialog::DoModal](#domodal)|モーダル ダイアログ ボックスを作成します。|  
   
-## <a name="remarks"></a>コメント  
- 基本的な機能を持つモーダル ダイアログ ボックスを実装します。 `CSimpleDialog` Windows コモン コントロールのみのサポートを提供します。 作成、モーダル ダイアログ ボックスを表示するには、ダイアログ ボックスの既存のリソース テンプレートの名前を提供する、このクラスのインスタンスを作成します。 ユーザー (IDOK、IDCANCEL など) の定義済みの値を持つ任意のコントロールがクリックしたときに、ダイアログ ボックスのオブジェクトを閉じます。  
+## <a name="remarks"></a>Remarks  
+ 基本的な機能を持つモーダル ダイアログ ボックスを実装します。 `CSimpleDialog` Windows のコモン コントロールのみのサポートを提供します。 作成し、モーダル ダイアログ ボックスを表示するには、ダイアログ ボックスの既存のリソース テンプレートの名前を指定する、このクラスのインスタンスを作成します。 (IDOK、IDCANCEL など) の定義済みの値を持つ任意のコントロールをクリックすると、ダイアログ ボックスのオブジェクトを閉じます。  
   
- `CSimpleDialog` モーダル ダイアログ ボックスのみを作成できます。 `CSimpleDialog` 既定のメッセージ マップを使用して、適切なハンドラーへのメッセージを送信するためのダイアログ ボックス プロシージャを提供します。  
+ `CSimpleDialog` モーダル ダイアログ ボックスのみを作成することができます。 `CSimpleDialog` メッセージを適切なハンドラーを送信する既定のメッセージ マップを使用して、ダイアログ ボックス プロシージャを提供します。  
   
  参照してください[ ダイアログ ボックスを実装する](../../atl/implementing-a-dialog-box.md)詳細についてはします。  
   
@@ -66,7 +66,7 @@ class CSimpleDialog : public CDialogImplBase
   
  `CSimpleDialog`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="domodal"></a>  CSimpleDialog::DoModal  
@@ -77,16 +77,16 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `hWndParent`  
+ *hWndParent*  
  ダイアログ ボックスの親へのハンドル。 値が指定されていない場合は、親が現在アクティブなウィンドウに設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合、戻り値は、ダイアログ ボックスを閉じて、コントロールのリソース ID です。  
+ 成功した場合、戻り値は、ダイアログ ボックスを閉じているコントロールのリソース ID です。  
   
  関数が失敗した場合、戻り値は-1 です。 拡張されたエラー情報を取得するには、`GetLastError` を呼び出します。  
   
-### <a name="remarks"></a>コメント  
- このメソッドは、ダイアログ ボックスがアクティブな間に、ユーザーとすべての対話を処理します。 モーダル ダイアログ ボックスは、します。ユーザーは、ダイアログ ボックスが閉じられるまで、他のウィンドウを操作できません。  
+### <a name="remarks"></a>Remarks  
+ このメソッドは、ダイアログ ボックスがアクティブな間、ユーザーとすべての対話を処理します。 これにより、ダイアログ ボックスがモーダル; は、します。ユーザーは、ダイアログ ボックスが閉じられるまで、他のウィンドウを操作できません。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

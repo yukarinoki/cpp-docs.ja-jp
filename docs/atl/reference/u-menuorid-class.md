@@ -1,5 +1,5 @@
 ---
-title: _U_MENUorID クラス |Microsoft ドキュメント
+title: _U_MENUorID クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32363461"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884738"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID クラス
-このクラスのラッパーを提供する**CreateWindow**と**について**です。  
+このクラスのラッパーを提供する`CreateWindow`と`CreateWindowEx`します。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -52,26 +52,26 @@ class _U_MENUorID
 |----------|-----------------|  
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|メニューへのハンドル。|  
   
-## <a name="remarks"></a>コメント  
- この引数のアダプター クラスにより、いずれかの Id ( **UINT**s) またはメニューのハンドル ( `HMENU`s)、呼び出し元の一部で明示的なキャストを必要とせず、関数に渡されます。  
+## <a name="remarks"></a>Remarks  
+ この引数のアダプター クラスは、呼び出し元の側 (ついて) Id またはメニューのハンドルの明示的なキャストを必要とせず、関数に渡される (HMENUs) のいずれかを使用できます。  
   
- このクラスは、Windows api のラッパーを実装するために設計されていますが、特に[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)と[について](http://msdn.microsoft.com/library/windows/desktop/ms632680)関数、どちらもそのまま使用、`HMENU`の子になる可能性があります引数ウィンドウの識別子 ( **UINT**) メニューのハンドルではなくです。 たとえばへのパラメーターとしてこのクラスの使用を確認できます[CWindowImpl::Create](cwindowimpl-class.md#create)です。  
+ このクラスは、Windows API にラッパーを実装するために設計されていますが、特に[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)と[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)が子ウィンドウがあります HMENU 引数を受け取るいずれ関数。識別子 (UINT) ではなくメニュー ハンドル。 たとえば、このクラスの使用を表示のパラメーターとして[CWindowImpl::Create](cwindowimpl-class.md#create)します。  
 
   
- 2 つのコンス トラクター オーバー ロードがクラスで定義: 1 つを受け入れる、 **UINT**引数で、もう一方を受け入れる、`HMENU`引数。 **UINT**引数にキャスト、`HMENU`コンス トラクターと、クラスの 1 つのデータ メンバーに格納されている結果[m_hMenu](#_u_menuorid__m_hmenu)です。 引数、`HMENU`コンス トラクターは変換せずに直接格納します。  
+ クラスは、2 つのコンス トラクター オーバー ロードを定義します。 UINT 引数を受け取るいずれかと、その他の HMENU 引数を受け取ります。 UINT 引数は、コンス トラクターとクラスの 1 つのデータのメンバーに格納されている結果の HMENU にキャスト[m_hMenu](#_u_menuorid__m_hmenu)します。 HMENU コンス トラクターの引数は、変換せずに直接格納されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlwin.h  
   
 ##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
- クラスでは、渡された値をそのコンス トラクターのいずれかとしてパブリック`HMENU`データ メンバーです。  
+ クラスは、パブリックの HMENU データ メンバーとしてコンス トラクターのいずれかに渡される値を保持します。  
   
 ```
 HMENU m_hMenu;
 ```  
   
 ##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
- **UINT**引数にキャスト、`HMENU`コンス トラクターと、クラスの 1 つのデータ メンバーに格納されている結果[m_hMenu](#_u_menuorid__m_hmenu)です。  
+ UINT 引数は、コンス トラクターとクラスの 1 つのデータのメンバーに格納されている結果の HMENU にキャスト[m_hMenu](#_u_menuorid__m_hmenu)します。  
   
 ```
 _U_MENUorID(UINT nID);  
@@ -79,14 +79,14 @@ _U_MENUorID(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nID`  
+ *nID*  
  子ウィンドウの識別子。  
   
- `hMenu`  
+ *hMenu*  
  メニューのハンドル。  
   
-### <a name="remarks"></a>コメント  
- 引数、`HMENU`コンス トラクターは変換せずに直接格納します。  
+### <a name="remarks"></a>Remarks  
+ HMENU コンス トラクターの引数は、変換せずに直接格納されます。  
   
 ## <a name="see-also"></a>関連項目  
  [クラスの概要](../../atl/atl-class-overview.md)

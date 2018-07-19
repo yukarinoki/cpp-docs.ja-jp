@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonButton クラス |Microsoft ドキュメント
+title: CMFCRibbonButton クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: d1da517ef952dd3fcdb0772feedb8e576be9502b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040039"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850021"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton クラス
 `CMFCRibbonButton` クラスは、パネル、クイック アクセス ツール バー、ポップアップ メニューなど、リボン バー要素に配置できるボタンを実装します。  
@@ -219,7 +219,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
  [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
   
 ## <a name="remarks"></a>Remarks  
- リボンのボタンを使用して、アプリケーションで、ボタン オブジェクトを作成して、適切なリボンに追加[パネル](../../mfc/reference/cmfcribbonpanel-class.md)です。  
+ リボンのボタンを使用して、アプリケーションで、ボタン オブジェクトを作成し、適切なリボンに追加[パネル](../../mfc/reference/cmfcribbonpanel-class.md)します。  
   
 ```  
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
@@ -262,10 +262,10 @@ void AddSubItem(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pSubItem*  
- 追加する新しい要素を指すポインターを指定します。  
+ 追加する新しい要素へのポインターを指定します。  
   
  [in]*nIndex*  
- ボタンのメニュー項目の配列に要素を追加する位置を示すインデックスを指定しますメニュー項目の配列の末尾に要素を追加する-1 です。  
+ ボタンのメニュー項目の配列に要素を追加する位置のインデックスを指定しますメニュー項目の配列の末尾に要素を追加するのには-1。  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -325,16 +325,16 @@ CMFCRibbonButton(
  ボタンのテキスト ラベルを指定します。  
   
  [in]*nSmallImageIndex*  
- イメージ リストには、親カテゴリのボタンの小さな画像の 0 から始まるインデックスを指定します。  
+ 親カテゴリのイメージ リストで、ボタンの小さなイメージの 0 から始まるインデックスを指定します。  
   
  [in]*nLargeImageIndex*  
- イメージ リストには、親カテゴリのボタンの大きな画像の 0 から始まるインデックスを指定します。  
+ 親カテゴリのイメージ リストで、ボタンの大きいイメージの 0 から始まるインデックスを指定します。  
   
  [in]*hIcon*  
- アプリケーションがボタンのイメージとして使用するアイコンへのハンドルを指定します。  
+ アプリケーションがボタンのイメージとして使用するアイコンを識別するハンドルを指定します。  
   
 ### <a name="example"></a>例  
- 次の例で作成する方法、`CMFCRibbonButton`オブジェクト。  
+ 次の例は、構築する方法を示します、`CMFCRibbonButton`オブジェクト。  
   
  [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
   
@@ -407,7 +407,7 @@ int FindSubItemIndexByID(UINT uiID) const;
  ポップアップ メニュー項目のコマンド ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- 関連付けられているサブ項目の 0 から始まるインデックス、 *uiID*です。 このようなサブ項目が存在しない場合は-1。  
+ 関連付けられているサブ項目の 0 から始まるインデックス、 *uiID*します。 このようなサブ項目がない場合は-1。  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -457,7 +457,7 @@ int GetImageIndex(BOOL bLargeImage) const;
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bLargeImage*  
- 場合`TRUE`、大きなサイズのイメージが含まれている小さな画像が含まれているイメージ リストのイメージのインデックスを返しますそれ以外の場合のイメージ リストのイメージのインデックスを返します。  
+ TRUE の場合、大きなサイズのイメージを格納するイメージの一覧で、イメージのインデックスを返しますそれ以外の場合、小さいイメージを格納するイメージの一覧で、イメージのインデックスを返します。  
   
 ### <a name="return-value"></a>戻り値  
  関連付けられているイメージ リスト内のボタンのイメージのインデックス。  
@@ -498,7 +498,7 @@ HMENU GetMenu() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- ボタンに割り当てられている Windows メニューへのハンドル`NULL`かどうかは、割り当てられたメニューはありません。  
+ ボタンに割り当てられている Windows メニューへのハンドル割り当てられているメニューがない場合は NULL です。  
   
 ##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect  
 
@@ -654,7 +654,7 @@ BOOL IsDefaultCommand() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` リボン ボタンの既定のコマンドを有効にした場合`FALSE`それ以外の場合。  
+ リボン ボタンの既定のコマンドを有効にした場合は TRUE。FALSE それ以外の場合。  
   
 ##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton  
 
@@ -723,14 +723,14 @@ virtual BOOL IsPopupDefaultMenuLook() const;
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu  
- メニューが右揃えであるかどうかを指定します。  
+ メニューは右揃えするかどうかを指定します。  
   
 ```  
 BOOL IsRightAlignMenu() const;  
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メニューが右揃えの場合それ以外の場合`FALSE`です。  
+ メニューが右揃えの場合は TRUE。それ以外の場合は FALSE です。  
   
 ##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText  
 
@@ -767,7 +767,7 @@ virtual void OnClick(CPoint point);
  マウス クリックの位置を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- このイベントを処理する場合は、派生クラスでは、このメソッドをオーバーライドします。  
+ このイベントを処理する場合は、派生クラスでこのメソッドをオーバーライドします。  
   
 ##  <a name="ondraw"></a>  Cmfcribbonbutton::ondraw  
 
@@ -826,7 +826,7 @@ BOOL RemoveSubItem(int nIndex);
  削除するメニュー項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 指定した項目が正常に削除された場合それ以外の場合`FALSE`場合*nIndex*が負の値またはポップアップ メニューのメニュー項目の数を超えています。  
+ 指定した項目が正常に削除された場合は TRUE。それ以外の場合は FALSE の場合*nIndex*が負の値またはポップアップ メニューにメニュー項目の数を超えています。  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbutton::setaccdata  
  リボン ボタンのアクセシビリティ データを設定します。  
@@ -845,7 +845,7 @@ virtual BOOL SetACCData(
  リボン要素のアクセシビリティ データ。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合は `TRUE` を、それ以外の場合は FALSE を返します。  
+ 成功した場合、TRUE を返しますそれ以外の場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -858,7 +858,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bSet*  
- 場合`TRUE`ボタンは、大きな画像を表示します。 それ以外の場合、ボタンには、小さな画像が表示されます。  
+ TRUE の場合、ボタンには、大きいイメージが表示されます。 それ以外の場合、ボタンには、小さいイメージが表示されます。  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  リボン ボタンの既定のコマンドを有効にします。  
@@ -869,10 +869,10 @@ void SetDefaultCommand(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bSet*  
- 場合`TRUE`ボタンは、既定のコマンドを実行できます。 場合`FALSE`ボタンは、既定のコマンドを実行できません。  
+ TRUE の場合、ボタンは既定のコマンドを実行できます。 FALSE の場合、ボタンは既定のコマンドを実行できません。  
   
 ### <a name="remarks"></a>Remarks  
- *bSet*はボタンがメニューには、ときにのみ関連します。 場合*bSet*は`TRUE`ボタンは、既定のコマンドを実行できる、および割り当てられたポップアップ メニューでは、ユーザーがボタンの右端にある矢印にクリックしたときにのみ表示されます。 それ以外の場合、ボタンは、既定のコマンドを実行できませんし、ユーザーがクリックしたボタンの領域に関係なく、ポップアップ メニューが表示されます。  
+ *bSet*はボタンがメニューには、ときにのみ関連します。 場合*bSet* TRUE にも、ボタンは既定のコマンドを実行できる、のみ、ユーザーがボタンの右端にある矢印をクリックすると、割り当てられたポップアップ メニューが表示されます。 それ以外の場合、ボタンは既定のコマンドを実行できませんし、ユーザーがクリックしたボタンの領域に関係なく、ポップアップ メニューが表示されます。  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -900,7 +900,7 @@ void SetImageIndex(
  イメージのインデックスを指定します。  
   
  [in]*bLargeImage*  
- 場合`TRUE`、指定したインデックスが大きいイメージの一覧を参照します。 それ以外の場合、インデックスは、小さいイメージの一覧を参照します。  
+ TRUE の場合、指定したインデックスは、大きいイメージの一覧を参照します。 それ以外の場合、インデックスは、小さいイメージのリストを参照します。  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  リボン ボタンにポップアップ メニューを割り当てます。  
@@ -922,16 +922,16 @@ void SetMenu(
  Windows メニューへのハンドル。  
   
  *bIsDefaultCommand*  
- 場合`TRUE`ボタンは、既定のコマンドを実行できます。 それ以外の場合、[] ボタンがポップアップ メニューを表示します。  
+ TRUE の場合、ボタンが; 既定のコマンドを実行できます。それ以外の場合、ボタンには、ポップアップ メニューが表示されます。  
   
  *bRightAlign*  
- 場合`TRUE`メニューが右揃え。 それ以外の場合、メニューは、左揃えにします。  
+ TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃えにします。  
   
  *uiMenuResID*  
- メニュー リソースの id です。  
+ メニュー リソースの id。  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションでは、ボタン、メニューが割り当てられ、ボタンの右側に、矢印が表示されます。 場合*bIsDefaultCommand*は`TRUE`メニューは、ユーザーに矢印がクリックしたときにのみ表示されます。 ユーザーには、ボタンがクリックすると、既定のコマンドが実行されます。 場合*bIsDefaultCommand*は`FALSE`、ボタンをクリックして、メニューが表示されます。  
+ アプリケーションに割り当てると、メニュー ボタンに、その右側にある矢印ボタンを表示します。 場合*bIsDefaultCommand*が TRUE にのみ、ユーザーが矢印をクリックすると、メニューが表示されます。 ユーザーは、ボタンをクリックすると、既定のコマンドが実行されます。 場合*bIsDefaultCommand* false で、ボタンをクリックして、メニューが表示されます。  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -946,7 +946,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu  
- ポップアップ メニューをボタンの端に揃えて配置します。  
+ ポップアップ メニュー ボタンの端に揃えて配置します。  
   
 ```  
 void SetRightAlignMenu(BOOL bSet=TRUE);
@@ -954,7 +954,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bSet*  
- 場合`TRUE`メニューが右揃え。 それ以外の場合、メニューは、左揃え  
+ TRUE の場合は、メニューは右揃えです。 それ以外の場合、メニューは、左揃え  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

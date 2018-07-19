@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGallery クラス |Microsoft ドキュメント
+title: CMFCRibbonGallery クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: af14457e10758c696a4141e58249e43134cf385a
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039324"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851527"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery クラス
 Office 2007 スタイルのリボン ギャラリーを実装します。  
@@ -117,24 +117,24 @@ class CMFCRibbonGallery : public CMFCRibbonButton
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCRibbonGallery::AddGroup](#addgroup)|ギャラリーを新しいグループを追加します。|  
+|[CMFCRibbonGallery::AddGroup](#addgroup)|ギャラリーには、新しいグループを追加します。|  
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|ドロップダウン メニューに新しいメニュー項目を追加します。|  
 |[CMFCRibbonGallery::Clear](#clear)|ギャラリーのコンテンツを消去します。|  
-|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|有効または無効メニュー パネルのサイズを変更します。|  
-|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|有効またはポップアップ メニューの左側に、サイド バーを無効にします。|  
+|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|有効または、メニューのパネルのサイズ変更を無効にします。|  
+|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|有効またはポップアップ メニューの左側にサイド バーを無効にします。|  
 |[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(上書き[cmfcribbonbutton::getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize))。|  
 |[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(上書き[CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown))。|  
 |[CMFCRibbonGallery::GetGroupName](#getgroupname)|指定したインデックス位置にあるグループの名前を返します。|  
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||  
 |[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|リボン ギャラリーの行の項目の数を返します。|  
 |[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|ギャラリー内の項目に関連付けられているツールヒント テキストを返します。|  
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|ユーザーが選択されて、ギャラリー内の最後の項目のインデックスを返します。|  
+|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|ユーザーが選択したギャラリーの最後の項目のインデックスを返します。|  
 |[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|現在のギャラリーのコマンド ID を返します。|  
 |[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(上書き[cmfcribbonbutton::getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize))。|  
 |[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||  
 |[CMFCRibbonGallery::HasMenu](#hasmenu)|(上書き[CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu))。|  
 |[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|ギャラリー ボタンで、ギャラリーが含まれているかどうかを指定します。|  
-|[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|メニューのサイズ変更が有効か無効かを指定します。|  
+|[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|メニューのサイズ変更を有効にするか無効かを指定します。|  
 |[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||  
 |[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|サイド バーを有効または無効になっているかどうかを指定します。|  
 |[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(`CMFCRibbonButton::OnAfterChangeRect` をオーバーライドします)。|  
@@ -142,15 +142,15 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::OnEnable](#onenable)|(`CMFCRibbonBaseElement::OnEnable` をオーバーライドします)。|  
 |[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(上書き[CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged))。|  
 |[CMFCRibbonGallery::RedrawIcons](#redrawicons)|ギャラリーを再描画します。|  
-|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|ギャラリー内のすべての項目から、ツール ヒントを削除します。|  
+|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|ギャラリー内のすべての項目からヒントを削除します。|  
 |[CMFCRibbonGallery::SelectItem](#selectitem)||  
 |[CMFCRibbonGallery::SetACCData](#setaccdata)|(上書き[cmfcribbonbutton::setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata))。|  
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|リボン上で直接パレットとして、またはドロップダウン ボタンとしてリボン ギャラリーを表示するかどうかを指定します。|  
+|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|リボンの直接のパレットとして、またはドロップダウン ボタンとしてリボン ギャラリーを表示するかどうかを指定します。|  
 |[CMFCRibbonGallery::SetGroupName](#setgroupname)|グループの名前を設定します。|  
 |[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|ギャラリー内の行ごとの項目の数を定義します。|  
-|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|ギャラリー項目のツールヒントのテキストを設定します。|  
-|[CMFCRibbonGallery::SetPalette](#setpalette)|リボン ギャラリーのパレットをアタッチします。|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|ギャラリー項目が選択されている場合に、WM_COMMAND メッセージで送信されるコマンド ID を定義します。|  
+|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|ギャラリーで項目のツールヒントのテキストを設定します。|  
+|[CMFCRibbonGallery::SetPalette](#setpalette)|リボン ギャラリーにパレットをアタッチします。|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|ギャラリー項目が選択されている場合に、WM_COMMAND メッセージで送信されたコマンド ID を定義します。|  
   
 ### <a name="protected-methods"></a>プロテクト メソッド  
   
@@ -159,10 +159,10 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|ギャラリーのアイコンが描画されるときに、フレームワークによって呼び出されます。|  
   
 ## <a name="remarks"></a>Remarks  
- ギャラリー ボタンは、ユーザーが開いたときにギャラリーを表示する点を除いて、標準のメニュー ボタンと同じように動作します。 ギャラリー項目を選択するときに、フレームワークは、ボタンのコマンド ID と共に WM_COMMAND メッセージを送信します。 メッセージを処理するときに呼び出す必要は[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)ギャラリーから選択されたどの項目を確認します。  
+ ギャラリー ボタンは、ユーザーが開いたときにギャラリーを表示する点を除いて、通常のメニュー ボタンと同様は動作します。 ギャラリーで項目を選択すると、フレームワークは、ボタンのコマンド ID と共に WM_COMMAND メッセージを送信します。 メッセージを処理するときに呼び出す必要があります[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)をギャラリーから選択されたアイテムを決定します。  
   
 ## <a name="example"></a>例  
- 次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonGallery`を構成するクラス、`CMFCRibbonGallery`オブジェクト。 この例では、ギャラリー内の行ごとの項目の数を指定、メニュー パネルのサイズ変更を有効にする、ポップアップ メニューの左側に、サイド バーを有効にする、およびリボン バーに直接パレットとしてリボン ギャラリーを表示する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
+ 次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonGallery`を構成するクラス、`CMFCRibbonGallery`オブジェクト。 例では、ギャラリー内の行ごとの項目の数を指定 メニュー パネルのサイズ変更を有効にする、ポップアップ メニューの左側にサイド バーを有効にする、およびリボン バーに直接パレットとしてリボン ギャラリーを表示する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  
   
@@ -175,7 +175,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
  **ヘッダー:** afxRibbonPaletteGallery.h  
   
 ##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup  
- ギャラリーを新しいグループを追加します。  
+ ギャラリーには、新しいグループを追加します。  
   
 ```  
 void AddGroup(
@@ -199,19 +199,19 @@ void AddGroup(
  グループの名前を指定します。  
   
  [in]*uiImagesPaletteResID*  
- グループの画像が含まれているイメージ リストのリソース ID を指定します。  
+ グループのイメージを格納するイメージの一覧のリソース ID を指定します。  
   
  [in]*cxPaletteImage*  
  イメージのピクセル単位の幅を指定します。  
   
  [in]*imagesGroup*  
- グループのイメージを含むイメージ リストへの参照。  
+ イメージのグループ化を含むイメージ リストへの参照。  
   
  [in]*nIconsNum*  
- グループ内のアイコンの数を指定します。 このパラメーターは、カスタム (オーナー描画) に対してのみ指定する必要がありますグループ。  
+ グループでアイコンの数を指定します。 カスタム (オーナー描画) に対してのみ、このパラメーターを指定する必要がありますグループ。  
   
 ### <a name="remarks"></a>Remarks  
- リボン ギャラリーのアイテムは、このメソッドを呼び出すことによって複数のグループに分割できます。 各グループには、キャプションを持つことができます。  
+ リボン ギャラリーの項目は、このメソッドを呼び出すことによって複数のグループに分割できます。 各グループには、キャプションを設定できます。  
   
 ##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem  
  ドロップダウン メニューに新しいメニュー項目を追加します。  
@@ -228,18 +228,18 @@ void AddSubItem(
  メニューに追加する項目へのポインター。  
   
  [in]*nIndex*  
- 位置の 0 から始まるインデックスに項目を挿入する場所を指定します。  
+ 場所の 0 から始まるインデックスに項目を挿入する場所を指定します。  
   
  [in]*bOnTop*  
- `TRUE` リボン ギャラリーの前に、項目を挿入することを指定するにはそれ以外の場合、`FALSE`です。  
+ リボン ギャラリーの前に、項目を挿入することを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドを呼び出すことにより、ポップアップ メニュー項目を含むポップアップ ギャラリーを組み合わせることができます。 ギャラリーの前後には、メニュー項目を配置することができます。  
+ このメソッドを呼び出すことによって、ポップアップ メニュー項目を含むポップアップ ギャラリーを組み合わせることができます。 メニュー項目は、ギャラリーの前後に配置できます。  
   
- ギャラリーの前に項目を挿入するには、次のように設定します。 *bOnTop*に`TRUE`です。 設定*bOnTop*に`FALSE`下、ギャラリー アイテムを挿入します。  
+ ギャラリーの前に項目を挿入するのには次のように設定します。 *bOnTop*を TRUE にします。 設定*bOnTop*ギャラリーの下の項目を挿入する場合は FALSE にします。  
   
 > [!NOTE]
->  パラメーター *nIndex*挿入インデックス ギャラリーの上部にあると、ギャラリーの下部の両方を指定します。 ギャラリーの前にアイテム 1 つの位置を挿入する必要がある場合の設定など、 *nIndex* 1 と*bOnTop*に`TRUE`です。 同様に、ギャラリーの下部のアイテム 1 つの位置を挿入する必要がある場合設定*nIndex* 1 と*bOnTop*に`FALSE`です。  
+>  パラメーター *nIndex*挿入インデックス ギャラリーの上部にあると、ギャラリーの下部の両方を指定します。 ギャラリーの前に項目 1 つの位置を挿入する必要がある場合の設定など、 *nIndex* 1 と*bOnTop*を TRUE にします。 同様に、ギャラリーの下の項目 1 つの位置を挿入する場合は、設定*nIndex* 1 と*bOnTop*を FALSE にします。  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  ギャラリーのコンテンツを消去します。  
@@ -249,10 +249,10 @@ virtual void Clear();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- リボン ギャラリーからのすべてのコンテンツを削除するには、このメソッドを呼び出します。 リボン ギャラリーを新しいリボン ギャラリーまたはグループのセットをアタッチする前に、これを行う必要があります。  
+ リボン ギャラリーからのすべてのコンテンツを削除するには、このメソッドを呼び出します。 リボン ギャラリーに新しいリボン ギャラリーまたはグループのセットをアタッチする前に、これを実行する必要があります。  
   
 ##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery  
- 構築して初期化、 [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)オブジェクト。  
+ 構築し、初期化、 [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)オブジェクト。  
   
 ```  
 CMFCRibbonGallery (
@@ -287,16 +287,16 @@ CMFCRibbonGallery (
  ユーザーがボタンをクリックしたときに実行するコマンドのコマンド ID を指定します。  
   
  *lpszText*  
- ボタンに表示するテキストを指定します。  
+ ボタンに表示されるテキストを指定します。  
   
  *nSmallImageIndex*  
- ボタンに表示する小さな画像の 0 から始まるインデックス。  
+ ボタンを表示する小さいイメージの 0 から始まるインデックス。  
   
  *nLargeImageIndex*  
- ボタンに表示する大きいイメージの 0 から始まるインデックス。  
+ ボタンを表示する大きいイメージの 0 から始まるインデックス。  
   
  *imagesPalette*  
- 参照、 [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md)ギャラリーに表示するイメージを含むオブジェクトです。  
+ 参照、 [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md)ギャラリーに表示するイメージを保持するオブジェクト。  
   
  *uiImagesPaletteResID*  
  ギャラリーに表示するイメージの一覧のリソース ID。  
@@ -305,18 +305,18 @@ CMFCRibbonGallery (
  ギャラリーのイメージのピクセル単位の幅を指定します。  
   
  *sizeIcon*  
- ギャラリーのイメージのピクセル単位のサイズを指定します。  
+ ギャラリーのイメージのピクセル単位で、サイズを指定します。  
   
  *nIconsNum*  
  ギャラリーでアイコンの数を指定します。  
   
  *bDefaultButtonStyle*  
- 既定値またはオーナー描画ボタンのスタイルを使用するかどうかを指定します。  
+ 既定値またはオーナー描画ボタン スタイルを使用するかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize  
- 有効または無効メニュー パネルのサイズを変更します。  
+ 有効または、メニューのパネルのサイズ変更を無効にします。  
   
 ```  
 void EnableMenuResize(
@@ -326,16 +326,16 @@ void EnableMenuResize(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bEnable*  
- `TRUE` メニューのサイズ変更を有効にするにはそれ以外の場合、`FALSE`です。  
+ メニューのサイズ変更を有効にする場合は TRUEそれ以外の場合、FALSE です。  
   
  [in]*bVertcalOnly*  
- `TRUE` ギャラリーが垂直方向にのみ変更できるように指定するには`FALSE`ギャラリーがあることを指定するサイズ変更両方垂直および水平方向です。  
+ ギャラリーが垂直方向にのみ変更できるように指定する場合は TRUE場合は、ギャラリーに垂直方向および水平方向に変更できるように指定する場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
- 有効または無効にリボン ギャラリーのサイズを変更するには、このメソッドを使用します。 サイズ変更を有効にすると、リボン ギャラリーはサイズを変更するユーザーが使用できるグリップを表示します。  
+ このメソッドを使用して、有効またはリボン ギャラリーのサイズ変更を無効にします。 サイズ変更を有効にすると、リボン ギャラリーはサイズを変更するユーザーが使用できるグリップを表示します。  
   
 ##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar  
- 有効またはポップアップ メニューの左側に、サイド バーを無効にします。  
+ 有効またはポップアップ メニューの左側にサイド バーを無効にします。  
   
 ```  
 void EnablMenuSideBar(BOOL bEnable=TRUE);
@@ -343,10 +343,10 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bEnable*  
- `TRUE` サイド バーが有効であるを指定するにはそれ以外の場合、`FALSE`です。  
+ サイド バーが有効であるかを指定する場合は TRUEそれ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
- 有効にするにまたはメニューの左側にある Office XP スタイルのサイド バーを無効にするには、このメソッドを呼び出します。  
+ 有効または、メニューの左側にある Office XP スタイルのサイド バーを無効にするには、このメソッドを呼び出します。  
   
 ##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize  
 
@@ -421,10 +421,10 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nItemIndex*  
- ツールヒントのテキストを取得する対象の項目の 0 から始まるインデックスを指定します。  
+ ツールヒント テキストを取得する対象の項目の 0 から始まるインデックスを指定します。  
   
 ### <a name="return-value"></a>戻り値  
- リボン ギャラリー内の項目に割り当てられているツールヒント文字列へのポインター。 できます`NULL`ツール ヒントがその項目に割り当てられていない場合。  
+ リボン ギャラリー内の項目に割り当てられているツールヒント文字列へのポインター。 ツールヒントがその項目に割り当てられていない場合は、NULL をられます。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -440,7 +440,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
  リボン ギャラリーを開くメニュー項目のコマンド ID を指定します。  
   
 ### <a name="return-value"></a>戻り値  
- ユーザーは、リボン ギャラリーのいずれかの項目を選択するときに、ライブラリは、リボン ギャラリーを開く] メニューの [ボタンのコマンド ID と共に WM_COMMAND メッセージを送信します。  
+ ユーザーは、リボン ギャラリーのいずれかの項目を選択するときに、ライブラリ リボン ギャラリーを開くメニュー ボタンのコマンド ID と共に WM_COMMAND メッセージを送信します。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -500,7 +500,7 @@ BOOL IsButtonMode() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` パレットが、ドロップ ダウン メニュー ボタンとして表示されている場合`FALSE`場合は、リボン上で直接、パレットが表示されます。  
+ パレットは、ドロップ ダウン メニュー ボタンとして表示されている場合は TRUE。リボン上で直接、パレットが表示されている場合は FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -512,7 +512,7 @@ BOOL IsMenuResizeEnabled() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` メニューのサイズ変更が有効になって; 場合それ以外の場合、`FALSE`です。  
+ メニューのサイズ変更が有効になって; は、TRUE を返します。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -535,7 +535,7 @@ BOOL IsMenuSideBar() const;
 ```  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` ポップアップ メニューの左側にある Office XP スタイルのサイド バーが描画された場合それ以外の場合、`FALSE`です。  
+ ポップアップ メニューの左側にある、Office XP スタイルのサイド バーが描画される場合は TRUE。それ以外の場合、FALSE です。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -577,16 +577,16 @@ virtual void OnDrawPaletteIcon(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*pDC*  
- 描画に使用されるデバイス コンテキストへのポインター。  
+ 描画に使用されているデバイス コンテキストへのポインター。  
   
  [in]*rectIcon*  
- 描画するアイコンに外接する四角形を指定します。  
+ 描画するために、アイコンの外接する四角形を指定します。  
   
  [in]*nIconIndex*  
- 描画するアイコンのギャラリー アイコンのイメージ リストの 0 から始まるインデックスを指定します。  
+ 描画するために、アイコンのギャラリーのアイコンのイメージ リスト内の 0 から始まるインデックスを指定します。  
   
  [in]*pIcon*  
- 描画されるアイコンへのポインター。  
+ 描画されているアイコンへのポインター。  
   
  [in]*clrText*  
  描画する項目のテキストの色を指定します。  
@@ -626,10 +626,10 @@ void RedrawIcons();
 ```  
   
 ### <a name="remarks"></a>Remarks  
- ギャラリーを再描画するには、この関数を呼び出します。 実行時に、ギャラリーの内容を変更している場合は、このメソッドを呼び出す必要があります。  
+ ギャラリーを再描画するには、この関数を呼び出します。 実行時に、ギャラリーの内容を変更した場合は、このメソッドを呼び出す必要があります。  
   
 ##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips  
- ギャラリー内のすべての項目から、ツール ヒントを削除します。  
+ ギャラリー内のすべての項目からヒントを削除します。  
   
 ```  
 void RemoveItemToolTips();
@@ -668,10 +668,10 @@ virtual BOOL SetACCData(
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- このメソッドが成功した場合は `TRUE`。それ以外の場合は `FALSE`。  
+ メソッドが成功した場合は TRUE。それ以外の場合、FALSE です。  
   
 ##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode  
- リボン上で直接パレットとして、またはドロップダウン ボタンとしてリボン ギャラリーを表示するかどうかを判断します。  
+ リボンの直接のパレットとして、またはドロップダウン ボタンとしてリボン ギャラリーを表示するかどうかを決定します。  
   
 ```  
 void SetButtonMode(BOOL bSet=TRUE);
@@ -679,7 +679,7 @@ void SetButtonMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*bSet*  
- `TRUE` ドロップ ダウン メニュー ボタンとしてリボン ギャラリーを表示するには`FALSE`リボン上で直接リボン ギャラリーの内容を表示します。  
+ ドロップダウン メニューのボタンとしてリボン ギャラリーを表示する場合は TRUEリボン上で直接リボン ギャラリーの内容を表示する場合は FALSE。  
   
 ### <a name="remarks"></a>Remarks  
   
@@ -700,10 +700,10 @@ void SetGroupName(
  グループの新しい名前を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- グループの名前を変更する必要がありますが追加されたを使用して、 [CMFCRibbonGallery::AddGroup](#addgroup)メソッドです。  
+ グループの名前が変更されている必要がありますが追加されましたを使用して、 [CMFCRibbonGallery::AddGroup](#addgroup)メソッド。  
   
 ##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow  
- ギャラリー内の行ごとの項目の数を指定します。  
+ ギャラリーでは、行ごとの項目の数を指定します。  
   
 ```  
 void SetIconsInRow(int nIconsInRow);
@@ -717,7 +717,7 @@ void SetIconsInRow(int nIconsInRow);
  リボン ギャラリーの幅を指定するのにには、このメソッドを使用します。  
   
 ##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip  
- ギャラリー項目のツールヒントのテキストを設定します。  
+ ギャラリーで項目のツールヒントのテキストを設定します。  
   
 ```  
 void SetItemToolTip(
@@ -727,15 +727,15 @@ void SetItemToolTip(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nItemIndex*  
- ツールヒントを関連付けられるパレット項目の 0 から始まるインデックス。  
+ 関連付けるツールヒント パレット項目の 0 から始まるインデックス。  
   
  [in]*lpszToolTip*  
- ツールヒントに表示するテキストです。  
+ ツールヒントに表示するテキスト。  
   
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette  
- リボン ギャラリーのパレットをアタッチします。  
+ リボン ギャラリーにパレットをアタッチします。  
   
 ```  
 void SetPalette(CMFCToolBarImages& imagesPalette);
@@ -748,10 +748,10 @@ void SetPalette(
   
 ### <a name="parameters"></a>パラメーター  
  [in]*imagesPalette*  
- ギャラリーに表示するアイコンが格納されているイメージ リストを指定します。  
+ ギャラリーに表示するアイコンを格納するイメージ リストを指定します。  
   
  [in]*uiImagesPaletteResID*  
- ギャラリーに表示するアイコンが格納されているイメージ リストのリソース ID を指定します。  
+ ギャラリーに表示するアイコンを格納するイメージ リストのリソース ID を指定します。  
   
  [in]*cxPaletteImage*  
  ギャラリーのイメージのピクセル単位の幅を指定します。  
@@ -759,7 +759,7 @@ void SetPalette(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- ユーザーは、ギャラリー項目を選択したときに、WM_COMMAND メッセージで送信されるコマンド ID を定義します。  
+ ユーザーがギャラリー項目を選択すると、WM_COMMAND メッセージで送信されたコマンド ID を定義します。  
   
 ```  
 void SetPaletteID(UINT nID);
@@ -767,10 +767,10 @@ void SetPaletteID(UINT nID);
   
 ### <a name="parameters"></a>パラメーター  
  [in]*nID*  
- ユーザーは、ギャラリー項目を選択したときに、WM_COMMAND メッセージで送信されるコマンド ID を指定します。  
+ ユーザーがギャラリー項目を選択すると、WM_COMMAND メッセージで送信されたコマンド ID を指定します。  
   
 ### <a name="remarks"></a>Remarks  
- ギャラリーから、ユーザーが選択した特定の項目を特定するのには、呼び出し、 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)静的メソッドです。  
+ ギャラリーから、ユーザーが選択した特定の項目を確認するのには、呼び出し、 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)静的メソッド。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

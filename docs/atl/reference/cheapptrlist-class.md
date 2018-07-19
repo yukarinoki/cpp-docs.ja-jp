@@ -1,5 +1,5 @@
 ---
-title: CHeapPtrList クラス |Microsoft ドキュメント
+title: CHeapPtrList クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5b164fda27775a7b3fb272d8718c31815cb1ca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd3342e7c64a13761830073cd3ed82b627b8c407
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358816"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879297"
 ---
 # <a name="cheapptrlist-class"></a>CHeapPtrList クラス
 このクラスは、ヒープのポインターのリストを構築するときに役立つメソッドを提供します。  
@@ -41,11 +41,11 @@ class CHeapPtrList
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `E`  
- コレクション クラスに格納されるオブジェクトの型。  
+ *E*  
+ コレクション クラスに格納されるオブジェクトの種類。  
   
- `Allocator`  
- メモリの割り当ては、使用するクラス。 既定値は[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)です。  
+ *アロケーター*  
+ メモリの割り当ては、使用するクラス。 既定値は[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)します。  
   
 ## <a name="members"></a>メンバー  
   
@@ -55,15 +55,15 @@ class CHeapPtrList
 |----------|-----------------|  
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|コンストラクターです。|  
   
-## <a name="remarks"></a>コメント  
- このクラスは、コンス トラクターを提供し、メソッドからの派生[CAtlList](../../atl/reference/catllist-class.md)と[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)ヒープ ポインターを格納するコレクション クラスのオブジェクトの作成を支援するためにします。  
+## <a name="remarks"></a>Remarks  
+ このクラスは、コンス トラクターを提供し、メソッドからの派生[CAtlList](../../atl/reference/catllist-class.md)と[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)ヒープ ポインターを格納するコレクション クラスのオブジェクトの作成を支援します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CAtlList](../../atl/reference/catllist-class.md)  
   
  `CHeapPtrList`  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlcoll.h  
   
 ##  <a name="cheapptrlist"></a>  CHeapPtrList::CHeapPtrList  
@@ -74,11 +74,11 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `nBlockSize`  
+ *nBlockSize*  
  ブロック サイズ。  
   
-### <a name="remarks"></a>コメント  
- ブロック サイズは、新しい要素が必要な場合に割り当てられたメモリの量の測定です。 ブロック サイズを大きくはメモリ割り当てルーチンに呼び出しを減らすことより多くのリソースを使用します。  
+### <a name="remarks"></a>Remarks  
+ ブロック サイズは、新しい要素が必要なときに割り当てられたメモリ量の測定です。 ブロック サイズの増加はメモリ割り当てルーチンの呼び出しを減らすためがより多くのリソースを使用します。  
   
 ## <a name="see-also"></a>関連項目  
  [CAtlList クラス](../../atl/reference/catllist-class.md)   

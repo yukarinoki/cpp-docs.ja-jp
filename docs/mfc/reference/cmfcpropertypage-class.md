@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyPage クラス |Microsoft ドキュメント
+title: CMFCPropertyPage クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 2081053f406d9985d722da7d4cd9f3dad56f061c
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042083"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37848737"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage クラス
-`CMFCPropertyPage`クラスは、プロパティ ページでのポップアップ メニューの表示をサポートします。  
+`CMFCPropertyPage`クラスは、[プロパティ] ページのポップアップ メニューの表示をサポートしています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -48,14 +48,14 @@ class CMFCPropertyPage : public CPropertyPage
 |名前|説明|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|  
-|`CMFCPropertyPage::GetThisClass`|ポインターを取得するために、フレームワークで使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
-|`CMFCPropertyPage::OnSetActive`|このメンバー関数はページがユーザーによって選択され、アクティブになったときに、フレームワークによって呼び出されます。 (上書き[CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive))。|  
-|`CMFCPropertyPage::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換、 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 詳細とメソッドの構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)です。 (`CPropertyPage::PreTranslateMessage` をオーバーライドします)。|  
+|`CMFCPropertyPage::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|  
+|`CMFCPropertyPage::OnSetActive`|このメンバー関数は、ページは、ユーザーが選択され、アクティブになったときにフレームワークによって呼び出されます。 (上書き[CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive))。|  
+|`CMFCPropertyPage::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)と[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CPropertyPage::PreTranslateMessage` をオーバーライドします)。|  
   
 ## <a name="remarks"></a>Remarks  
- `CMFCPropertyPage`クラスは、[タブ] ダイアログ ボックスとして知られている、プロパティ シートの各ページを表します。  
+ `CMFCPropertyPage`クラスは、[タブ] ダイアログ ボックスとも呼ばれる、プロパティ シートの各ページを表します。  
   
- 使用して、`CMFCPropertyPage`クラスと共に、 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)クラスです。 [プロパティ] ページのメニューを使用するすべて置換の`CPropertyPage`クラス、`CMFCPropertyPage`クラスです。  
+ 使用して、`CMFCPropertyPage`クラスと組み合わせて、 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)クラス。 プロパティ ページ メニューを使用するには、すべての出現箇所を置き換えます、`CPropertyPage`クラス、`CMFCPropertyPage`クラス。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -89,18 +89,18 @@ CMFCPropertyPage(
   
 ### <a name="parameters"></a>パラメーター  
  *nIDTemplate*  
- このページのテンプレートのリソース ID です。  
+ このページのテンプレートのリソース ID。  
   
  *nIDCaption*  
- このページのタブにラベルのリソース ID。 0 の場合、このページのダイアログ ボックス テンプレートから、名前を取得します。 既定値は 0 です。  
+ このページのタブに配置する、ラベルのリソース ID。 0 の場合、名前は、このページのダイアログ ボックス テンプレートから取得されます。 既定値は 0 です。  
   
  *lpszTemplateName*  
- このページのテンプレートの名前を指します。 ことはできません`NULL`です。  
+ このページのテンプレートの名前を指します。 Nll は指定できません。  
   
 ### <a name="return-value"></a>戻り値  
   
 ### <a name="remarks"></a>Remarks  
- コンス トラクターのパラメーターの詳細については、次を参照してください。 [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)です。  
+ コンス トラクターのパラメーターの詳細については、次を参照してください。 [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)します。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

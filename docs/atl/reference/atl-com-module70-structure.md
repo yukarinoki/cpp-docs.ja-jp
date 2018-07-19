@@ -1,5 +1,5 @@
 ---
-title: _ATL_COM_MODULE70 構造 |Microsoft ドキュメント
+title: _ATL_COM_MODULE70 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d78165481c8f2e9d8bba33ad14ebd0794f04fde
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 3a3140a0013d284b9145029575418054af22c65e
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255662"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883714"
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 構造体
 ATL で COM に関連するコードで使用されます。  
@@ -48,19 +48,19 @@ struct _ATL_COM_MODULE70 {
  `m_hInstTypeLib`  
  このモジュールのタイプ ライブラリへのハンドルのインスタンス。  
   
- **m_ppAutoObjMapFirst**  
- このモジュールのオブジェクトのマップ エントリの先頭を示す、配列要素のアドレスです。  
+ `m_ppAutoObjMapFirst`  
+ このモジュールのオブジェクトのマップ エントリの先頭を示す、配列要素のアドレス。  
   
- **m_ppAutoObjMapLast**  
- このモジュールのオブジェクトのマップ エントリの終了を示す、配列要素のアドレスです。  
+ `m_ppAutoObjMapLast`  
+ このモジュールのオブジェクトのマップ エントリの終了を示す、配列要素のアドレス。  
   
  `m_csObjMap`  
- オブジェクト マップ エントリへのアクセスをシリアル化するクリティカル セクション。 ATL で内部的に使用  
+ オブジェクトのマップ エントリへのアクセスをシリアル化するクリティカル セクション。 ATL で内部的に使用  
   
-## <a name="remarks"></a>コメント  
- [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)の typedef として定義された`_ATL_COM_MODULE70`です。  
+## <a name="remarks"></a>Remarks  
+ [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module) _ATL_COM_MODULE70 の typedef として定義されます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlbase.h  
   
 ## <a name="see-also"></a>関連項目  

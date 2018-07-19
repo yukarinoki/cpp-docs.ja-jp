@@ -1,5 +1,5 @@
 ---
-title: _com_error::ErrorMessage |Microsoft ドキュメント
+title: _com_error::ErrorMessage |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c16b8bb6859cd65b534d804764257b901050995b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bff5e8f84b316f028daf503c3013667c82aaa4e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411238"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940567"
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Microsoft 固有の仕様**  
   
- `HRESULT` オブジェクトに格納された `_com_error` の文字列メッセージを取得します。  
+ `_com_error` オブジェクトに格納された HRESULT の文字列メッセージを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ const TCHAR * ErrorMessage( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>戻り値  
- `HRESULT` オブジェクト内に記録された `_com_error` の文字列メッセージを返します。 場合、`HRESULT`マップされた 16 ビット[wCode](../cpp/com-error-wcode.md)、一般的なメッセージでは、"`IDispatch error #<wCode>`"が返されます。 メッセージがない場合、一般的なメッセージ "`Unknown error #<hresult>`" が返されます。 返される文字列は Unicode またはマルチバイト文字列は、の状態に応じて、 **_UNICODE**マクロです。  
+ 内に記録された HRESULT の文字列メッセージを返します、`_com_error`オブジェクト。 HRESULT がマップされた 16 ビット[wCode](../cpp/com-error-wcode.md)、汎用メッセージでは、"`IDispatch error #<wCode>`"が返されます。 メッセージがない場合、一般的なメッセージ "`Unknown error #<hresult>`" が返されます。 返される文字列とは、Unicode または _UNICODE マクロの状態に応じて、マルチバイト文字列です。  
   
-## <a name="remarks"></a>コメント  
- `HRESULT` オブジェクト内に記録された `_com_error` に適したシステム メッセージ テキストを取得します。 システム メッセージのテキストは、win32 取得[FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)関数。 返される文字列は `FormatMessage` API によって割り当てられ、`_com_error` オブジェクトが破棄されるときに解放されます。  
+## <a name="remarks"></a>Remarks  
+ 内に記録された HRESULT の適切なシステム メッセージのテキストを取得、`_com_error`オブジェクト。 システム メッセージのテキストは、Win32 を呼び出すことによって取得[FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)関数。 返される文字列は `FormatMessage` API によって割り当てられ、`_com_error` オブジェクトが破棄されるときに解放されます。  
   
  **Microsoft 固有の仕様はここまで**  
   

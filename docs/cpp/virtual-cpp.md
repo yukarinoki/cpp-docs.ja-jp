@@ -1,5 +1,5 @@
 ---
-title: 仮想 (C++) |Microsoft ドキュメント
+title: 仮想 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 909fd3fde92479b2e5407608026cb01ec17fced2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9eba5462caf739d78236e10df018fc07421ea876
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421797"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939121"
 ---
 # <a name="virtual-c"></a>virtual (C++)
-`virtual` キーワードは仮想関数または仮想基底クラスを宣言します。  
+**仮想**キーワードは、仮想関数または仮想基底クラスを宣言します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,22 +38,22 @@ virtual [access-specifier] base-class-name
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `type-specifiers`  
+ *型指定子*  
  仮想メンバー関数の戻り値の型を指定します。  
   
- `member-function-declarator`  
+ *メンバー関数宣言子*  
  メンバー関数を宣言します。  
   
- `access-specifier`  
- 基底クラスへのアクセス レベルとして `public`、`protected`、または `private` を定義します。 `virtual` キーワードの前または後に指定できます。  
+ *アクセス指定子*  
+ 基底クラスへのアクセスのレベルを定義**パブリック**、**保護**または**プライベート**します。 前に、または後に表示されることができます、**仮想**キーワード。  
   
- `base-class-name`  
+ *基本クラス名*  
  以前に宣言されたクラス型を識別します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  参照してください[仮想関数](../cpp/virtual-functions.md)詳細についてはします。  
   
- また、次のキーワードを参照してください:[クラス](../cpp/class-cpp.md)、[プライベート](../cpp/private-cpp.md)、[パブリック](../cpp/public-cpp.md)と[保護](../cpp/protected-cpp.md)です。  
+ また、次のキーワードを参照してください:[クラス](../cpp/class-cpp.md)、[プライベート](../cpp/private-cpp.md)、[パブリック](../cpp/public-cpp.md)と[保護](../cpp/protected-cpp.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [キーワード](../cpp/keywords-cpp.md)

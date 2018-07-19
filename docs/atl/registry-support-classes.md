@@ -1,5 +1,5 @@
 ---
-title: レジストリのサポート クラス (ATL) |Microsoft ドキュメント
+title: レジストリ サポート クラス (ATL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78d032bd6de104808600de97d20d2727f896e8e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7acfbfc29be7a2f6a091291e05fa55b49a5e112c
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361578"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960405"
 ---
-# <a name="registry-support-classes"></a>レジストリのサポート クラス
+# <a name="registry-support-classes"></a>レジストリ サポート クラス
 次のクラスは、レジストリのサポートを提供します。  
   
 -   [CRegKey](../atl/reference/cregkey-class.md)をシステム レジストリの値を操作するメソッドが含まれています。  

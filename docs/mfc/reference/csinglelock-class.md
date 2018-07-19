@@ -1,5 +1,5 @@
 ---
-title: CSingleLock クラス |Microsoft ドキュメント
+title: CSingleLock クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 65e969607e4017191539a0b0301b0c27ccb9f1ae
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 3d9b418e5f8aafc4199712063e137aadc9df04f3
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078985"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37852450"
 ---
 # <a name="csinglelock-class"></a>CSingleLock クラス
 マルチスレッド プログラムで 1 つのリソースのアクセス制御に使うアクセス コントロール機構を表します。  
@@ -50,18 +50,18 @@ class CSingleLock
   
 |名前|説明|  
 |----------|-----------------|  
-|[CSingleLock::IsLocked](#islocked)|オブジェクトがロックされているかどうかを判断します。|  
-|[CSingleLock::Lock](#lock)|同期オブジェクトで待機します。|  
+|[CSingleLock::IsLocked](#islocked)|オブジェクトがロックされているかどうかを決定します。|  
+|[CSingleLock::Lock](#lock)|同期オブジェクトを待機します。|  
 |[CSingleLock::Unlock](#unlock)|同期オブジェクトを解放します。|  
   
 ## <a name="remarks"></a>Remarks  
  `CSingleLock` 基本クラスはありません。  
   
- 同期クラスを使用するために[CSemaphore](../../mfc/reference/csemaphore-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)、 [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)、および[CEvent](../../mfc/reference/cevent-class.md)、いずれかを作成する必要があります、`CSingleLock`または[CMultiLock](../../mfc/reference/cmultilock-class.md)オブジェクトを待機し、同期オブジェクトを解放します。 使用して`CSingleLock`のみ必要がある場合、一度に 1 つのオブジェクトで待機します。 使用して`CMultiLock`特定の時点で使用できる複数のオブジェクトがある場合。  
+ 同期クラスを使用するには[CSemaphore](../../mfc/reference/csemaphore-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)、 [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)、および[CEvent](../../mfc/reference/cevent-class.md)、いずれかを作成する必要があります、`CSingleLock`または[CMultiLock](../../mfc/reference/cmultilock-class.md)オブジェクトを待機し、同期オブジェクトを解放します。 使用`CSingleLock`のみ必要がある場合、一度に 1 つのオブジェクトで待機します。 使用して、`CMultiLock`特定の時刻に使用できる複数のオブジェクトがある場合。  
   
- 使用する、`CSingleLock`オブジェクト、被制御リソースのクラスのメンバー関数内のコンス トラクターを呼び出します。 まず、 [IsLocked](#islocked)メンバー関数をリソースが利用可能なかどうかを判断します。 である場合は、メンバー関数の残りの部分を続行します。 リソースが使用できない場合は、リソースを解放する、指定された時間を待つか、エラーを返します。 リソースの使用が完了したらを呼び出して、 [Unlock](#unlock)関数の場合、`CSingleLock`オブジェクトがもう一度、使用するか、許可、`CSingleLock`オブジェクトを破棄します。  
+ 使用する、`CSingleLock`オブジェクト、被制御リソースのクラスのメンバー関数内でそのコンス トラクターを呼び出します。 呼び出して、 [IsLocked](#islocked)メンバー関数は、リソースが使用可能なかどうかを判断します。 である場合は、メンバー関数の残りの部分を続行します。 リソースが利用できない場合は、一定のリソースが解放されるまでの時間を待つか、エラーを返します。 リソースの使用が完了したら、後、 [Unlock](#unlock)関数の場合、`CSingleLock`オブジェクトがもう一度、使用するか、許可するが、`CSingleLock`オブジェクトを破棄します。  
   
- `CSingleLock` オブジェクトから派生したオブジェクトの存在を必要と[関数](../../mfc/reference/csyncobject-class.md)です。 これは、通常、被制御リソースのクラスのデータ メンバーです。 使用する方法の詳細についての`CSingleLock`、オブジェクトが、記事を参照して[マルチ スレッド: 同期クラスを使用する方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)です。  
+ `CSingleLock` オブジェクトから派生したオブジェクトの存在を必要と[CSyncObject](../../mfc/reference/csyncobject-class.md)します。 これは、通常は、被制御リソースのクラスのデータ メンバーです。 使用する方法の詳細についての`CSingleLock`オブジェクトは、記事を参照して[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。  
   
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `CSingleLock`  
@@ -80,32 +80,32 @@ explicit CSingleLock(
   
 ### <a name="parameters"></a>パラメーター  
  *pObject*  
- アクセスする同期オブジェクトを指します。 ことはできません**NULL**です。  
+ アクセスする同期オブジェクトを指します。 Nll は指定できません。  
   
  *bInitialLock*  
- 最初に指定されたオブジェクトにアクセスしようとするかどうかを指定します。  
+ 最初に、指定したオブジェクトにアクセスしようとするかどうかを指定します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は、被制御リソースのアクセス メンバー関数内から通常呼び出されます。  
+ この関数は一般制御されるリソースのアクセス メンバー関数内から呼び出されます。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#19](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
 ##  <a name="islocked"></a>  CSingleLock::IsLocked  
- オブジェクトに関連付けられているかどうかを判断、`CSingleLock`オブジェクトが非シグナル状態 (利用不可)。  
+ オブジェクトに関連付けられた決定、`CSingleLock`オブジェクトが非シグナル (使用不可)。  
   
 ```  
 BOOL IsLocked();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- オブジェクトがロックされている場合は 0 以外。それ以外の場合 0 を返します。  
+ オブジェクトがロックされている場合は 0 以外それ以外の場合 0 を返します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#20](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
 ##  <a name="lock"></a>  CSingleLock::Lock  
- この関数に指定された同期オブジェクトによって制御されているリソースにアクセスするために、`CSingleLock`コンス トラクターです。  
+ 指定された同期オブジェクトによって制御されるリソースにアクセスするには、この関数を呼び出して、`CSingleLock`コンス トラクター。  
   
 ```  
 BOOL Lock(DWORD dwTimeOut = INFINITE);
@@ -113,19 +113,19 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
   
 ### <a name="parameters"></a>パラメーター  
  *dwTimeOut*  
- 同期オブジェクトを使用できるまで待機する時間を指定します (通知)。 場合**無限**、`Lock`がオブジェクトを返す前に通知されるまで待機します。  
+ 使用できる同期オブジェクトを待機する時間を指定します (通知)。 場合、無限`Lock`を返す前に、オブジェクトがシグナル状態になるまで待機します。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合は 0 以外。それ以外の場合 0 を返します。  
+ 関数が成功した場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- 同期オブジェクトがシグナル状態される場合`Lock`は正常に復帰して、スレッドは、オブジェクトを所有します。 同期オブジェクトが非シグナル状態の場合 (利用不可)、`Lock`同期オブジェクトで指定されたミリ秒数までシグナル状態になるを待機は、 *dwTimeOut*パラメーター。 同期オブジェクトが指定された時間内シグナル状態になるいないしなかった場合`Lock`エラーを返します。  
+ 同期オブジェクトがシグナル状態になる場合`Lock`が正常に返され、スレッドは、オブジェクトを所有します。 同期オブジェクトを非シグナル状態にした場合 (利用不可)、`Lock`同期オブジェクトで指定されたミリ秒数までシグナル状態になるを待機は、 *dwTimeOut*パラメーター。 同期オブジェクトが指定された時間内シグナル状態になるいないしなかった場合`Lock`エラーを返します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
 ##  <a name="unlock"></a>  CSingleLock::Unlock  
- 所有する同期オブジェクトを解放`CSingleLock`です。  
+ によって所有されている同期オブジェクトを解放`CSingleLock`します。  
   
 ```  
 BOOL Unlock();
@@ -138,18 +138,18 @@ BOOL Unlock(
   
 ### <a name="parameters"></a>パラメーター  
  *lCount*  
- リリースへのアクセス数。 1 以上であることが必要です。 場合は、指定された時間を最大値を超えるオブジェクトの数となる、カウントが変更されていないと、関数を返します**FALSE**です。  
+ リリースへのアクセスの数。 1 以上であることが必要です。 指定された量を最大値を超えるオブジェクトの数となる、カウントは変更されませんし、関数は FALSE を返します。  
   
  *lPrevCount*  
- 同期オブジェクトの前のカウントを受け取るように、変数へのポインター。 場合**NULL**、前のカウントは返されません。  
+ 同期オブジェクトの前のカウントを受け取るように、変数へのポインター。 NULL の場合、前のカウントは返されません。  
   
 ### <a name="return-value"></a>戻り値  
- 関数が成功した場合は 0 以外。それ以外の場合 0 を返します。  
+ 関数が成功した場合、0 以外の場合それ以外の場合 0 を返します。  
   
 ### <a name="remarks"></a>Remarks  
- この関数は`CSingleLock`のデストラクターです。  
+ この関数を呼び出して`CSingleLock`のデストラクター。  
   
- 複数のアクセス数、セマフォを解放する必要がある場合は、2 番目の形式を使用して`Unlock`リリースへのアクセスの数を指定します。  
+ セマフォの 1 つ以上のアクセス数を解放する必要がある場合の 2 番目の形式を使用して、`Unlock`リリースへのアクセスの数を指定します。  
   
 ### <a name="example"></a>例  
  [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  

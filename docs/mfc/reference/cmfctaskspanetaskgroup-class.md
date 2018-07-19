@@ -1,5 +1,5 @@
 ---
-title: CMFCTasksPaneTaskGroup クラス |Microsoft ドキュメント
+title: CMFCTasksPaneTaskGroup クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -34,15 +34,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: e2f53aa98d7743ccee804ed7a89df160368c8a23
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037497"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849166"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup クラス
-`CMFCTasksPaneTaskGroup`クラスは、ヘルパー クラスによって使用される、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)コントロール。 `CMFCTasksPaneTaskGroup` 型のオブジェクトは *タスク グループ*を表します。 タスク グループは、閉じるボタンがある独立したボックスにフレームワークによって表示される項目の一覧です。 このボックスには、オプションのキャプション (グループ名) があります。 グループが閉じると、タスクの一覧は表示されません。  
+`CMFCTasksPaneTaskGroup`クラスで使用されるヘルパー クラス、 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)コントロール。 `CMFCTasksPaneTaskGroup` 型のオブジェクトは *タスク グループ*を表します。 タスク グループは、閉じるボタンがある独立したボックスにフレームワークによって表示される項目の一覧です。 このボックスには、オプションのキャプション (グループ名) があります。 グループが閉じると、タスクの一覧は表示されません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -63,16 +63,16 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 |名前|説明|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|現在のタスク グループのアクセシビリティ データを決定します。|  
+|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|現在のタスク グループのユーザー補助データを決定します。|  
   
 ### <a name="data-members"></a>データ メンバー  
   
 |name|説明|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|タスク グループが作業ウィンドウ コントロールの下部に揃えられているかどうかを判断します。|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|タスク グループを作業ウィンドウ コントロールの下部に配置されているかどうかを判断します。|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|タスク グループが折りたたまれているかどうかを判断します。|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|タスク グループがあるかどうかを判断*特殊です。* フレームワークは、別の色で特別なキャプションを表示します。|  
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|タスクの内部リストが含まれています。|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|タスク グループがあるかどうかを判断します*特殊です。* フレームワークには、異なる色で特別なキャプションが表示されます。|  
+|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|タスクの内部一覧に含まれています。|  
 |[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|グループ キャプションの外接する四角形を指定します。|  
 |[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|グループの外接する四角形を指定します。|  
 |[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|グループの名前を指定します。|  
@@ -90,7 +90,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
  ![キャプションのないタスク グループ](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- 次の図は、2 つのタスク グループを示します。 最初のタスク グループはマークされている、特殊なを設定して、`m_bIsSpecial`フラグを`TRUE`、2 番目のタスク グループは特殊ではありません。 最初のタスク グループのキャプションには、2 番目のタスク グループよりも暗い方法に注意してください。  
+ 次の図は、2 つのタスク グループを示します。 最初のタスク グループが設定して、特別なマーク、`m_bIsSpecial`フラグを true の場合、2 番目のタスク グループは特別ではありません。 最初のタスク グループのキャプションが 2 番目のタスク グループより暗い方法に注意してください。  
   
  ![特殊なタスク グループ](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
@@ -117,13 +117,13 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="parameters"></a>パラメーター  
  *lpszName*  
- グループ キャプションのグループの名前を指定します。  
+ グループ キャプションの グループの名前を指定します。  
   
  *bIsBottom*  
- グループは作業ウィンドウ コントロールの下部に配置されているかどうかを指定します。  
+ グループを作業ウィンドウ コントロールの下部に配置されているかどうかを指定します。  
   
  *bIsSpecial*  
- として、グループを指定するかどうかを示す*特別な*され、異なる色でグループのキャプションが塗りつぶされますかどうかにそのため、します。  
+ として、グループが指定されているかどうかを指定します。*特別な*異なる色でグループのキャプションが塗りつぶされたかどうかにそのため、と。  
   
  *bIsCollapsed*  
  グループが折りたたまれているかどうかを指定します。  
@@ -137,14 +137,14 @@ CMFCTasksPaneTaskGroup(
 ### <a name="remarks"></a>Remarks  
   
 ##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
- タスク グループが作業ウィンドウ コントロールの下部に揃えられているかどうかを判断します。  
+ タスク グループを作業ウィンドウ コントロールの下部に配置されているかどうかを判断します。  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 1 つのグループは、作業ウィンドウ コントロールの下部に配置できます。 このタスク グループが最後に追加する必要があります。 詳細については、次を参照してください。 [cmfctaskspane::addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)です。  
+ 1 つのグループは、作業ウィンドウ コントロールの下部に配置できます。 このタスク グループが最後に追加する必要があります。 詳細については、次を参照してください。 [cmfctaskspane::addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)します。  
   
 ##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  タスク グループが折りたたまれているかどうかを判断します。  
@@ -154,27 +154,27 @@ BOOL m_bIsCollapsed;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 有効にするにまたはを呼び出すことによって、タスク ウィンドウでグループを折りたたむ機能を無効にすることができます[:enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)です。  
+ 有効にするかを呼び出すことによって、タスク ウィンドウでグループを折りたたむ機能を無効にする[:enablegroupcollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)します。  
   
 ##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
- タスク グループがあるかどうかを判断*特別な*され、それぞれ異なる色で特殊なタスク グループのキャプションを識別する必要があるかどうか。  
+ タスク グループがあるかどうかを判断します*特殊*特殊なタスク グループのキャプションを異なる色で識別する必要があるかどうか。  
   
 ```  
 BOOL m_bIsSpecial;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- アプリケーションが Windows XP のビジュアル テーマを使用するかどうかと`m_bIsSpecial`は`FALSE`、フレームワークによって`DrawThemeBackground`で、`EBP_NORMALGROUPBACKGROUND`フラグ。 場合`m_bIsSpecial`は`TRUE`、フレームワークによって`DrawThemeBackground`で、`EBP_SPECIALGROUPBACKGROUND`フラグ。  
+ アプリケーションが Windows XP ビジュアル テーマを使用していると`m_bIsSpecial`false、フレームワークによって`DrawThemeBackground`EBP_NORMALGROUPBACKGROUND フラグを使用します。 場合`m_bIsSpecial`が true の場合、フレームワークによって`DrawThemeBackground`EBP_SPECIALGROUPBACKGROUND フラグを使用します。  
   
 ##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
- タスクの内部リストが含まれています。  
+ タスクの内部一覧に含まれています。  
   
 ```  
 CObList m_lstTasks;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この一覧に、呼び出す[cmfctaskspane::addtask](../../mfc/reference/cmfctaskspane-class.md#addtask)です。  
+ この一覧に、呼び出す[::addtask](../../mfc/reference/cmfctaskspane-class.md#addtask)します。  
   
 ##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
  グループ キャプションの外接する四角形を指定します。  
@@ -204,10 +204,10 @@ CString m_strName;
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この値が空の場合は、グループ キャプションは表示されず、グループを折りたたみ可能にすることはできません。  
+ この値が空の場合は、グループ キャプションが表示されないと、グループを折りたたむことができません。  
   
 ##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
- 現在のタスク グループのアクセシビリティ データを決定します。  
+ 現在のタスク グループのユーザー補助データを決定します。  
   
 ```  
 virtual BOOL SetACCData(
@@ -223,7 +223,7 @@ virtual BOOL SetACCData(
  型のオブジェクト`CAccessibilityData`の現在のタスク グループのユーザー補助データに設定されます。  
   
 ### <a name="return-value"></a>戻り値  
- `TRUE` 場合、*データ*パラメーターが正常に設定された状態の現在のタスク グループのユーザー補助データで、それ以外の`FALSE`します。  
+ TRUE の場合、*データ*パラメーターが正常に現在のタスク グループのユーザー補助データと共に設定されている場合は FALSE。  
   
 ## <a name="see-also"></a>関連項目  
  [階層図](../../mfc/hierarchy-chart.md)   

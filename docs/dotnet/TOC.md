@@ -17,8 +17,7 @@
 ### [方法: C++/CLI でプロパティを使用する](how-to-use-properties-in-cpp-cli.md)
 ### [方法: C++/CLI で safe_cast を使用する](how-to-use-safe-cast-in-cpp-cli.md)
 ## [ネイティブと .NET の相互運用性](native-and-dotnet-interoperability.md)
-### 
-  [混在 (ネイティブおよびマネージド) アセンブリ](mixed-native-and-managed-assemblies.md)
+### [混在 (ネイティブおよびマネージド) アセンブリ](mixed-native-and-managed-assemblies.md)
 #### [方法: -clr に移行する](how-to-migrate-to-clr.md)
 #### [方法: -clr を使用して MFC および ATL コードをコンパイルする](how-to-compile-mfc-and-atl-code-by-using-clr.md)
 #### [混在アセンブリの初期化](initialization-of-mixed-assemblies.md)
@@ -39,11 +38,9 @@
 ##### [方法: Windows フォーム コントロールにコマンド ルーティングを追加する](how-to-add-command-routing-to-the-windows-forms-control.md)
 ##### [方法: Windows フォーム コントロールのプロパティとメソッドを呼び出す](how-to-call-properties-and-methods-of-the-windows-forms-control.md)
 #### [MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト](hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)
-### 
-  [マネージド コードからのネイティブ関数の呼び出し](calling-native-functions-from-managed-code.md)
+### [マネージド コードからのネイティブ関数の呼び出し](calling-native-functions-from-managed-code.md)
 #### [C++ での明示的な PInvoke (DllImport 属性) の使用方法](using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
-##### 
-  [方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す](how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
+##### [方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す](how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
 ##### [方法: PInvoke を使用して文字列をマーシャリングする](how-to-marshal-strings-using-pinvoke.md)
 ##### [方法: PInvoke を使用して構造体をマーシャリングする](how-to-marshal-structures-using-pinvoke.md)
 ##### [方法: PInvoke を使用して配列をマーシャリングする](how-to-marshal-arrays-using-pinvoke.md)
@@ -79,10 +76,8 @@
 ## [C++/CLI 移行ガイド](cpp-cli-migration-primer.md)
 ### [変更の概略 (C++/CLI)](outline-of-changes-cpp-cli.md)
 ### [言語キーワード (C++/CLI)](language-keywords-cpp-cli.md)
-### 
-  [マネージド型 (C++-CL)](managed-types-cpp-cl.md)
-#### 
-  [マネージド クラス型の宣言](declaration-of-a-managed-class-type.md)
+### [マネージド型 (C++-CL)](managed-types-cpp-cl.md)
+#### [マネージド クラス型の宣言](declaration-of-a-managed-class-type.md)
 #### [CLR 参照クラスのオブジェクトの宣言](declaration-of-a-clr-reference-class-object.md)
 #### [CLR 配列の宣言](declaration-of-a-clr-array.md)
 #### [コンストラクターの初期化処理の順序における変更](changes-in-constructor-initialization-order.md)
@@ -121,8 +116,7 @@
 ## [他の .NET 言語との相互運用性 (C++/CLI)](interoperability-with-other-dotnet-languages-cpp-cli.md)
 ## [シリアル化 (C++/CLI)](serialization-cpp-cli.md)
 ## [フレンド アセンブリ (C++)](friend-assemblies-cpp.md)
-## 
-  [マネージド型 (C++/CLI)](managed-types-cpp-cli.md)
+## [マネージド型 (C++/CLI)](managed-types-cpp-cli.md)
 ## [リフレクションの問題 (C++/CLI)](reflection-cpp-cli.md)
 ## [厳密名アセンブリ (アセンブリ署名) (C++/CLI)](strong-name-assemblies-assembly-signing-cpp-cli.md)
 ## [Debug クラス (C++/CLI)](debug-class-cpp-cli.md)
@@ -229,8 +223,7 @@
 ##### [ptr::operator!](ptr-operator-logical-not.md)
 ##### [ptr::operator bool](ptr-operator-bool.md)
 ## [C++/CLI の例外](exceptions-in-cpp-cli.md)
-### 
-  [マネージド例外の使用についての基本概念](basic-concepts-in-using-managed-exceptions.md)
+### [マネージド例外の使用についての基本概念](basic-concepts-in-using-managed-exceptions.md)
 ### [-CLR における例外処理動作の相違点](differences-in-exception-handling-behavior-under-clr.md)
 ### [finally](finally.md)
 ### [方法: MSIL からスローされるネイティブ コードの例外をキャッチする](how-to-catch-exceptions-in-native-code-thrown-from-msil.md)

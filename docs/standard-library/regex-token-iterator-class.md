@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52b5d47908fd2889452a6c517b510930cbe2a10
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862145"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960968"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator クラス
 
@@ -87,19 +87,19 @@ private:
 
 ### <a name="parameters"></a>パラメーター
 
-`BidIt` サブマッチの反復子の型。
+*BidIt*サブマッチの反復子の型。
 
-`Elem` 一致する要素の型。
+*Elem*と一致する要素の型。
 
-`RXtraits` 要素の特徴 (traits) クラス。
+*RXtraits*要素用の特性クラス。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このテンプレート クラスは、定数前方反復子オブジェクトを表します。 概念的には、文字シーケンスで正規表現と一致するものを検索するために使用される `regex_iterator` オブジェクトを保持します。 また、正規表現の一致ごとに、格納されているベクター `sub_match<BidIt>` 内のインデックス値で識別されるサブマッチを表す `subs` 型のオブジェクトを抽出します。
 
 -1 のインデックス値は、前回の正規表現の一致の直後から始まる文字シーケンスまたは前回の正規表現の一致が存在しなかった場合の文字シーケンスの先頭から始まって現在の正規表現の一致の最初の文字の直前まで続く、または、現在の一致が存在しない場合の文字シーケンスの最後まで続く文字シーケンスを指定します。 その他のインデックス値 `idx` は、 `it.match[idx]`に保持されているキャプチャ グループの内容を指定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
@@ -113,7 +113,7 @@ private:
 typedef std::ptrdiff_t difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `std::ptrdiff_t` の同意語です。
 
@@ -221,7 +221,7 @@ match == z
 typedef std::forward_iterator_tag iterator_category;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `std::forward_iterator_tag` の同意語です。
 
@@ -335,9 +335,9 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-`right` 比較する反復子。
+*適切な*と比較する反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`!(*this == right)` を返します。
 
@@ -449,7 +449,7 @@ match == z
 const sub_match<BidIt>& operator*();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、インデックス値 `sub_match<BidIt>` で識別されるキャプチャ グループを表す `subs[pos]` オブジェクトを返します。
 
@@ -563,7 +563,7 @@ regex_token_iterator& operator++();
 regex_token_iterator& operator++(int);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 格納された反復子 `it` が、シーケンス末尾の反復子の場合、最初の演算子は、格納された値 `pos` を `subs.size()` の値に設定します (シーケンス末尾の反復子にするため)。 それ以外の場合、格納された値 `pos` をインクリメントします。結果が値 `subs.size()` に等しい場合は、格納された値 `pos` をゼロに設定し、格納された反復子 `it` をインクリメントします。 格納された反復子をインクリメントしてもシーケンス末尾の反復子と等しくならない場合、演算子はそれ以上何もしません。 それ以外の場合で、前の一致の末尾が文字シーケンスの末尾にある場合は、`pos` の格納された値を `subs.size()` に設定します。 それ以外の場合は、格納された値 `pos` を、`pos == subs.size()` または `subs[pos] == -1` になるまで繰り返しインクリメントします (インデックス値のいずれかが -1 の場合、反復子の次の逆参照で文字シーケンスの末尾が返されるようにします)。 すべての場合に、演算子はオブジェクトを返します。
 
@@ -679,9 +679,9 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-右を比較する反復子にします。
+*適切な*と比較する反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`it == right.it && subs == right.subs && pos == right.pos` を返します。
 
@@ -793,7 +793,7 @@ match == z
 const sub_match<BidIt> * operator->();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、インデックス値 `sub_match<BidIt>` で識別されるキャプチャ グループを表す `subs[pos]` オブジェクトのポインタを返します。
 
@@ -1005,7 +1005,7 @@ match == z
 
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `sub_match<BidIt>*`のシノニムです。ここで `BidIt` はテンプレート パラメーターです。
 
@@ -1017,7 +1017,7 @@ match == z
 typedef sub_match<BidIt>& reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `sub_match<BidIt>&`のシノニムです。ここで `BidIt` はテンプレート パラメーターです。
 
@@ -1144,15 +1144,15 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>パラメーター
 
-`first` 一致させるシーケンスの先頭。
+*最初*と一致するシーケンスの最初します。
 
-`last` 一致させるシーケンスの最後。
+*最後*と一致するシーケンスの末尾。
 
-`re` 照合する正規表現。
+*re*正規表現一致。
 
-`f` 一致のフラグ。
+*f*一致のフラグ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、シーケンス末尾の反復子を構築します。
 
@@ -1270,7 +1270,7 @@ match == z
 typedef basic_regex<Elem, RXtraits> regex_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 typedef は、`basic_regex<Elem, RXtraits>` の同意語です。
 
@@ -1382,7 +1382,7 @@ match == z
 typedef sub_match<BidIt> value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この型は `sub_match<BidIt>`のシノニムです。ここで `BidIt` はテンプレート パラメーターです。
 

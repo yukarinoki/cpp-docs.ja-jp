@@ -1,5 +1,5 @@
 ---
-title: const (C++) |Microsoft ドキュメント
+title: 定数 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882181bd3ac69257b69a79f42e12c2573f2f1da4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b6fea501724b24c07ab8b2199410a369d62dc9d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943630"
 ---
 # <a name="const-c"></a>const (C++)
-データの宣言を変更するときに、 **const**キーワードは、オブジェクトまたは変数は変更可能なを指定します。  
+データの宣言を変更するときに、 **const**キーワードは、オブジェクトまたは変数に変更がないを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
   
-      const declaration ;  
+const declaration ;  
 member-function const ;  
 ```  
   
 ## <a name="const-values"></a>const の値  
- **Const**キーワードは、変数の値は定数であり、プログラマがそれを変更しないようにするようにコンパイラに指示するを指定します。  
+ **Const**キーワードは、変数の値は定数であり、コンパイラは、プログラマがこれを変更できないようにすることを指定します。  
   
-```  
+```cpp 
 // constant_values1.cpp  
 int main() {  
    const int i = 5;  
@@ -45,9 +46,9 @@ int main() {
 }  
 ```  
   
- C++ では、使用することができます、 **const**キーワードの代わりに、 [#define](../preprocessor/hash-define-directive-c-cpp.md)プリプロセッサ ディレクティブの定数値を定義します。 定義されている値**const**型がチェックされ、定数式の代わりに使用することができます。 C++ では、使用して配列のサイズを指定することができます、 **const**次のように変数。  
+ C++ では、使用することができます、 **const**キーワードの代わりに、 [#define](../preprocessor/hash-define-directive-c-cpp.md)プリプロセッサ ディレクティブの定数値を定義します。 定義された値**const**型がチェックされる可能性があり、定数式の代わりに使用できます。 C++ では、使用して配列のサイズを指定することができます、 **const**変数として次のとおりです。  
   
-```  
+```cpp 
 // constant_values2.cpp  
 // compile with: /c  
 const int maxarray = 255;  
@@ -58,7 +59,7 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
   
  **Const**ポインター宣言でキーワードを使用することもできます。  
   
-```  
+```cpp 
 // constant_values3.cpp  
 int main() {  
    char *mybuf = 0, *yourbuf;  
@@ -68,9 +69,9 @@ int main() {
 }  
 ```  
   
- として宣言された変数へのポインター **const**としても宣言されているポインターにのみ割り当てることができます**const**です。  
+ として宣言された変数へのポインター **const**としても宣言されているポインターにのみ割り当てることができます**const**します。  
   
-```  
+```cpp 
 // constant_values4.cpp  
 #include <stdio.h>  
 int main() {  
@@ -89,19 +90,19 @@ int main() {
   
  として宣言されているオブジェクトの**const**、できるだけ定数メンバー関数を呼び出します。 これによって、定数オブジェクトは変更されなくなります。  
   
-```  
+```cpp 
 birthday.getMonth();    // Okay  
 birthday.setMonth( 4 ); // Error  
 ```  
   
- 非定数オブジェクトに対して、定数または非定数のメンバー関数を呼び出すことができます。 使用してメンバー関数をオーバー ロードできますも、 **const**キーワードです。 これにより、定数および非定数オブジェクトに対して呼び出される関数のバージョンが異なる。  
+ 非定数オブジェクトに対して、定数または非定数のメンバー関数を呼び出すことができます。 使用してメンバー関数をオーバー ロードできますも、 **const**キーワードです。 これにより、別のバージョンの定数および非定数オブジェクトに対して呼び出される関数。  
   
  コンス トラクターまたはデストラクターを宣言することはできません、 **const**キーワード。  
   
 ## <a name="const-member-functions"></a>const のメンバー関数  
- メンバー関数を宣言する、 **const**キーワードは、関数が呼び出されますが、オブジェクトを変更しない「読み取り専用」関数を指定します。 定数メンバー関数は、非静的データ メンバーを変更またはメンバー定数でない関数を呼び出すことはできません。定数メンバー関数を宣言するには、配置、 **const**キーワードの引数リストの閉じかっこの後にします。 **Const**キーワードは、宣言と定義の両方で必要です。  
+ メンバー関数を宣言すること、 **const**キーワードは、関数が呼び出されたオブジェクトを変更しない「読み取り専用」関数であるを指定します。 定数メンバー関数は、非静的データ メンバーを変更またはメンバー定数でない関数を呼び出すことはできません。定数メンバー関数を宣言するには、配置、 **const**引数リストのかっこの後のキーワード。 **Const**宣言と定義の両方のキーワードが必要です。  
   
-```  
+```cpp 
 // constant_member_function.cpp  
 class Date  
 {  
@@ -134,32 +135,32 @@ int main()
 ## <a name="c-and-c-const-differences"></a>C と C++ での const の相違点  
  として変数を宣言するときに**const** C ソース コード ファイルでこれを行うとします。  
   
-```  
+```cpp 
 const int i = 2;  
 ```  
   
  そして、次のように、この変数を別のモジュールで使用できます。  
   
-```  
+```cpp 
 extern const int i;  
 ```  
   
- C++ では、同じ動作を取得、宣言する必要がありますが、 **const**変数として。  
+ C++ で同じ動作を取得することを宣言する必要があります、 **const**変数として。  
   
-```  
+```cpp 
 extern const int i = 2;  
 ```  
   
- C ソース コード ファイルで使用できるように C++ ソース コード ファイルで `extern` 変数を宣言する場合は、次のコードを使用してください。  
+ 宣言する場合、 **extern** C ソース コード ファイルの使用で使用するためには、C++ ソース コード ファイルで変数。  
   
-```  
+```cpp 
 extern "C" const int x=10;  
 ```  
   
  C++ コンパイラによる名前修飾を防止します。  
   
-## <a name="remarks"></a>コメント  
- 次のメンバー関数のパラメーター リストと、 **const**関数が呼び出されますが、オブジェクトを変更していないキーワードを指定します。  
+## <a name="remarks"></a>Remarks  
+ 次のメンバー関数のパラメーター リストでは、ときに、 **const**キーワードは、関数が呼び出されたオブジェクトを変更しないことを指定します。  
   
  詳細については**const**、次のトピックを参照してください。  
     
@@ -169,7 +170,7 @@ extern "C" const int x=10;
   
 -   [volatile](../cpp/volatile-cpp.md)  
   
--   [#define](../preprocessor/hash-define-directive-c-cpp.md)です。  
+-   [#define](../preprocessor/hash-define-directive-c-cpp.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [キーワード](../cpp/keywords-cpp.md)

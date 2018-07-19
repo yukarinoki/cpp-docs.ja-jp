@@ -1,5 +1,5 @@
 ---
-title: 定義と宣言 (C++) |Microsoft ドキュメント
+title: 定義と宣言 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f4b8635f082f706ef07697653d56155414c5199d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411768"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940912"
 ---
 # <a name="definitions-and-declarations-c"></a>定義と宣言 (C++)
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様
- DLL インターフェイスは、システムの一部のプログラムによってエクスポートされることがわかっているすべての項目 (関数とデータ) を参照します。つまり、すべての項目として宣言されている`dllimport`または`dllexport`です。 DLL インターフェイスに含まれるすべての宣言は、いずれかを指定する必要があります、`dllimport`または`dllexport`属性。 ただし、定義では、`dllexport` 属性のみを指定する必要があります。 たとえば、次の関数定義はコンパイラ エラーになります。
+ DLL インターフェイスを指すは、システムの一部のプログラムによってエクスポートされる既知のすべての項目 (関数とデータ)つまり、すべての項目として宣言されている**dllimport**または**dllexport**します。 DLL インターフェイスに含まれるすべての宣言は、いずれかを指定する必要があります、 **dllimport**または**dllexport**属性。 ただし、定義をのみ指定する必要があります、 **dllexport**属性。 たとえば、次の関数定義はコンパイラ エラーになります。
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport
@@ -42,7 +42,7 @@ __declspec( dllimport ) int i = 10;  // Error; this is a definition.
 __declspec( dllexport ) int i = 10;  // Okay--export definition
 ```
 
- 使用`dllexport`は定義を意味中`dllimport`は宣言を意味します。 宣言を強制するには、`extern` と共に `dllexport` キーワードを使用する必要があります。このようにしない場合、暗黙の定義になります。 そのため、次の例は正しいコードになります。
+ 使用**dllexport** 、定義を意味、 **dllimport**は宣言を意味します。 使用する必要があります、 **extern**キーワード**dllexport** ; 宣言を強制する定義が含まれる場合は、します。 そのため、次の例は正しいコードになります。
 
 ```
 #define DllImport   __declspec( dllimport )

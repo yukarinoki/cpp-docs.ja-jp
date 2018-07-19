@@ -1,5 +1,5 @@
 ---
-title: '条件演算子: しますか? : |Microsoft ドキュメント'
+title: '条件演算子: でしょうか。 : |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 807754bb13f8302fe9583b6f4a8219e3aea81086
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 273572fd6ad79ba45ae2aabbf91296afd6e8308e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943529"
 ---
-# <a name="conditional-operator--"></a>条件演算子: しますか? :
+# <a name="conditional-operator--"></a>条件演算子: でしょうか。 :
 ## <a name="syntax"></a>構文  
   
-```  
+``` 
   
 expression ? expression : expression  
-```  
+``` 
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  条件演算子 (**?:**) は三項演算子 (3 つのオペランドを受け取ります)。 条件演算子は次のように機能します。  
   
--   最初のオペランドは `bool` に暗黙的に変換されます。 これが評価され、すべての副作用が完了してから続行されます。  
+-   最初のオペランドが暗黙的に変換**bool**します。 これが評価され、すべての副作用が完了してから続行されます。  
   
 -   最初のオペランドが評価された場合**true** (1)、2 番目のオペランドが評価されます。  
   
@@ -47,7 +48,7 @@ expression ? expression : expression
   
 -   両方のオペランドが同じ型である場合、結果もその型になります。  
   
--   両方のオペランドが演算型または列挙型の通常の算術変換がある場合 (「[標準変換](standard-conversions.md)) それら共通型に変換するために実行されます。  
+-   両方のオペランドが演算型または列挙型、通常の算術変換である場合 (記載[標準変換](standard-conversions.md)) を共通型に変換を実行します。  
   
 -   両方のオペランドがポインター型である場合、または一方がポインター型でもう一方が 0 に評価される定数式である場合、それらを共通型に変換するためにポインター変換が実行されます。  
   
@@ -66,7 +67,7 @@ expression ? expression : expression
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_Expressions_with_the_Conditional_Operator.cpp  
 // compile with: /EHsc  
 // Demonstrate conditional operator  
@@ -79,5 +80,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [条件式演算子](../c-language/conditional-expression-operator.md)

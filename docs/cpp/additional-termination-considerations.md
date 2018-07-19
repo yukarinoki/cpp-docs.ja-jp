@@ -1,5 +1,5 @@
 ---
-title: 追加の終了に関する考慮事項 |Microsoft ドキュメント
+title: 追加の終了に関する考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b634c7c792d4462f96f022f223d0b1eec2a750ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50cf3d7e5168ba40acde386b62cf02c0933f8ca4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408147"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941250"
 ---
 # <a name="additional-termination-considerations"></a>終了に関するその他の考慮事項
-使用して、C++ プログラムを終了する**終了**、 `return`、または**中止**です。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。  
+使用して、C++ プログラムを終了する**終了**、**返す**、または**中止**します。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。  
   
 ## <a name="see-also"></a>関連項目  
  [起動と終了](../cpp/startup-and-termination-cpp.md)

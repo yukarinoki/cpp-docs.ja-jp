@@ -1,5 +1,5 @@
 ---
-title: デバイス コンテキストのグローバル関数 |Microsoft ドキュメント
+title: デバイス コンテキストに関するグローバル関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d54fbe9391cb53cca1d84401e90bb6fd47a479
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4d45468674d274c5f20b5533d782390cf2a6cec6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358590"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881397"
 ---
-# <a name="device-context-global-functions"></a>デバイス コンテキストのグローバル関数
+# <a name="device-context-global-functions"></a>デバイス コンテキストに関するグローバル関数
 この関数は、特定のデバイスのデバイス コンテキストを作成します。  
   
 |||  
@@ -37,20 +37,20 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
   
 ### <a name="parameters"></a>パラメーター  
  *hdc*  
- [in]デバイス コンテキストの既存のハンドルまたは**NULL**です。  
+ [in]デバイス コンテキスト、または NULL の既存のハンドル。  
   
- `ptd`  
- [in]ポインター、 **DVTARGETDEVICE**ターゲット デバイスに関する情報を格納する構造体。  
+ *ptd*  
+ [in]ポインター、`DVTARGETDEVICE`対象デバイスに関する情報を含む構造体。  
   
 ### <a name="return-value"></a>戻り値  
- ハンドルで指定されたデバイスのデバイス コンテキストを返します、 **DVTARGETDEVICE**です。 デバイスが指定されていない場合は、既定のディスプレイ デバイスにハンドルを返します。  
+ 指定されたデバイスのデバイス コンテキストへのハンドルを返します、`DVTARGETDEVICE`します。 デバイスが指定されていない場合は、既定のディスプレイ デバイスにハンドルを返します。  
   
-### <a name="remarks"></a>コメント  
- 構造が場合**NULL**と*hdc*は**NULL**既定のディスプレイ デバイスのデバイス コンテキストを作成します。  
+### <a name="remarks"></a>Remarks  
+ 構造体が NULL の場合と*hdc*が NULL で、既定のディスプレイ デバイスのデバイス コンテキストを作成します。  
   
- 場合*hdc*は**NULL**と`ptd`は**NULL**、既存の関数を返します*hdc*です。  
+ 場合*hdc*が NULL でないと*ptd*が null の場合、既存の関数を返します*hdc*します。  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlwin.h  
    
 ## <a name="see-also"></a>関連項目  

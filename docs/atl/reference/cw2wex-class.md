@@ -1,5 +1,5 @@
 ---
-title: CW2WEX クラス |Microsoft ドキュメント
+title: CW2WEX クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70ba1fdf42ea2f00b057d9b95105b34d9eff5a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7710856f05204dbbbc2bc15e2e62056123cd85cc
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362421"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884075"
 ---
 # <a name="cw2wex-class"></a>CW2WEX クラス
-このクラスは、文字列変換マクロによって使用`CW2TEX`と`CT2WEX`、および typedef`CW2W`です。  
+このクラスは、文字列変換マクロ CW2TEX と CT2WEX、typedef CW2W によって使用されます。  
   
 > [!IMPORTANT]
 >  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。  
@@ -41,8 +41,8 @@ class CW2WEX
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `t_nBufferLength`  
- 変換プロセスで使用するバッファーのサイズ。 既定の長さは 128 バイトです。  
+ *t_nBufferLength*  
+ 変換プロセスで使用されるバッファーのサイズ。 既定の長さは 128 バイトです。  
   
 ## <a name="members"></a>メンバー  
   
@@ -57,40 +57,40 @@ class CW2WEX
   
 |名前|説明|  
 |----------|-----------------|  
-|[CW2WEX::operator LPWSTR](#operator_lpwstr)|変換演算子です。|  
+|[CW2WEX::operator LPWSTR](#operator_lpwstr)|変換演算子。|  
   
 ### <a name="public-data-members"></a>パブリック データ メンバー  
   
 |名前|説明|  
 |----------|-----------------|  
-|[CW2WEX::m_psz](#m_psz)|ソース文字列を格納するデータ メンバーです。|  
-|[CW2WEX::m_szBuffer](#m_szbuffer)|静的バッファー、変換後の文字列を格納するために使用します。|  
+|[CW2WEX::m_psz](#m_psz)|ソース文字列が格納されるデータ メンバー。|  
+|[CW2WEX::m_szBuffer](#m_szbuffer)|変換後の文字列の格納に使用される静的バッファー。|  
   
-## <a name="remarks"></a>コメント  
- 追加の機能が必要な場合を除き、使用`CW2TEX`、 `CT2WEX`、または`CW2W`コードにします。  
+## <a name="remarks"></a>Remarks  
+ 追加の機能が必要な場合を除き、CW2TEX、CT2WEX、または CW2W をコードで使用します。  
   
- このクラスには、変換の結果を格納するために使用が固定サイズの静的バッファーが含まれています。 結果が大きすぎて静的バッファーに収まらない場合、クラスは `malloc` を使用してメモリを割り当て、オブジェクトがスコープから外れときにそのメモリを解放します。 これにより、テキストとは異なり、ATL のこのクラスは、安全にループで使用して、スタックがオーバーフローするされませんの以前のバージョンで使用できる変換マクロです。  
+ このクラスには、固定サイズの静的バッファー変換の結果を格納するために使用が含まれています。 クラスでは、メモリを使用して割り当てます、結果が大きすぎて静的バッファーに収まるように場合、 **malloc**オブジェクトがスコープ外になるときに、メモリを解放します。 これにより、テキストとは異なり、ATL のこのクラスを安全にループ内で使用して、スタックがオーバーフローするしませんの以前のバージョンで使用できる変換マクロ。  
   
- クラスは、失敗をヒープにメモリを割り当てるしようとするが呼び出されます`AtlThrow`の引数を持つ**E_OUTOFMEMORY**です。  
+ クラスは、失敗をヒープにメモリの割り当てを試みると、それが呼び出す`AtlThrow`E_OUTOFMEMORY の引数を指定しています。  
   
  既定では、ATL 変換クラスとマクロは、変換の現在のスレッドの ANSI コード ページを使用します。  
   
  次のマクロは、このクラスに基づいています。  
   
-- `CW2TEX`  
+- CW2TEX  
   
-- `CT2WEX`  
+- CT2WEX  
   
  次の typedef は、このクラスに基づいています。  
   
-- `CW2W`  
+- CW2W  
   
- これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL および MFC 文字列変換マクロ](string-conversion-macros.md)です。  
+ これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)します。  
   
 ## <a name="example"></a>例  
- 参照してください[ATL および MFC 文字列変換マクロ](string-conversion-macros.md)をこれらの文字列変換マクロを使用する例についてはします。  
+ 参照してください[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)のこれらの文字列変換マクロの使用例についてはします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** atlconv.h  
   
 ##  <a name="cw2wex"></a>  CW2WEX::CW2WEX  
@@ -102,34 +102,34 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- `psz`  
+ *2 つ*  
  変換するテキスト文字列。  
   
- `nCodePage`  
+ *nCodePage*  
  コード ページです。 このクラスでは使用されません。  
   
-### <a name="remarks"></a>コメント  
- 変換に必要なバッファーを作成します。  
+### <a name="remarks"></a>Remarks  
+ 翻訳のために必要なバッファーを作成します。  
   
 ##  <a name="dtor"></a>  CW2WEX:: ~ CW2WEX  
- デストラクターは、.  
+ デストラクター.  
   
 ```
 ~CW2WEX() throw();
 ```  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  割り当てられたバッファーを解放します。  
   
 ##  <a name="m_psz"></a>  CW2WEX::m_psz  
- ソース文字列を格納するデータ メンバーです。  
+ ソース文字列が格納されるデータ メンバー。  
   
 ```
 LPWSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>  CW2WEX::m_szBuffer  
- 静的バッファー、変換後の文字列を格納するために使用します。  
+ 変換後の文字列の格納に使用される静的バッファー。  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
@@ -143,7 +143,7 @@ operator LPWSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>戻り値  
- 種類としてテキスト文字列を返す`LPWSTR`です。  
+ LPWSTR を入力すると、テキスト文字列を返します。  
   
 ## <a name="see-also"></a>関連項目  
  [CA2AEX クラス](../../atl/reference/ca2aex-class.md)   

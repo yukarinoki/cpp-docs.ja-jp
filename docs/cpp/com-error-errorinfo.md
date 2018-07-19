@@ -1,5 +1,5 @@
 ---
-title: _com_error::ErrorInfo |Microsoft ドキュメント
+title: _com_error::ErrorInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fbc735dfae1b30209eccfd14f1170826fb07680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 52935c81849ded072cb20d6c835b3a71b66c2871
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410994"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941315"
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Microsoft 固有の仕様**  
   
- 取得、 **IErrorInfo**オブジェクト コンス トラクターに渡されます。  
+ コンストラクターに渡された `IErrorInfo` オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>戻り値  
- Raw **IErrorInfo**項目が、コンス トラクターに渡されます。  
+ コンストラクターに渡された未処理の `IErrorInfo` 項目。  
   
-## <a name="remarks"></a>コメント  
- カプセル化された取得**IErrorInfo**内の項目、`_com_error`オブジェクト、または**NULL**いない場合**IErrorInfo**項目が記録されます。 呼び出し元が呼び出す必要があります**リリース**完了すると、返されたオブジェクトで使用します。  
+## <a name="remarks"></a>Remarks  
+ カプセル化された取得`IErrorInfo`内の項目を`_com_error`オブジェクト、または、ない場合は NULL`IErrorInfo`項目が記録されます。 呼び出し元が呼び出す必要があります`Release`完了すると、返されたオブジェクトを使用します。  
   
  **Microsoft 固有の仕様はここまで**  
   

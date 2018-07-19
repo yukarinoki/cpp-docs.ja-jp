@@ -1,5 +1,5 @@
 ---
-title: 制御の移動 |Microsoft ドキュメント
+title: 制御の移動 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ee906061c7b51ade818b164c1d371a88ef3d462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8bec66d25be2cb56c75f42f60af2ccd5e3f759ad
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943898"
 ---
 # <a name="transfers-of-control"></a>制御の移動
-使用することができます、`goto`ステートメントまたは**ケース**でラベル付け、`switch`初期化子を越えて分岐するプログラムを指定するステートメント。 初期化子を含む宣言がジャンプ ステートメントの発生元のブロックで囲まれたブロックに存在しない限り、このようなコードは無効です。  
+使用することができます、 **goto**ステートメントまたは**ケース**でラベル付け、**切り替える**初期化子を越えて分岐するプログラムを指定するステートメント。 初期化子を含む宣言がジャンプ ステートメントの発生元のブロックで囲まれたブロックに存在しない限り、このようなコードは無効です。  
   
- 次の例は、オブジェクト `total`、`ch`、`i` を宣言して初期化するループを示します。 初期化子を越えて制御を転送する、不適切な `goto` ステートメントもあります。  
+ 次の例は、オブジェクト `total`、`ch`、`i` を宣言して初期化するループを示します。 ありますが、不適切なも**goto**初期化子を越えて制御を転送するステートメント。  
   
-```  
+```cpp 
 // transfers_of_control.cpp  
 // compile with: /W1  
 // Read input until a nonnumeric character is entered.  
@@ -56,7 +57,7 @@ int main()
 }  
 ```  
   
- 前の例では、`goto` ステートメントは、`i` の初期化の後、制御権を委譲しようとします。 ただし、`i` が宣言されていても初期化されていない場合、転送は有効になります。  
+ 上記の例では、 **goto**ステートメントの初期化を越えて制御を転送しようとする`i`します。 ただし、`i` が宣言されていても初期化されていない場合、転送は有効になります。  
   
- オブジェクト`total`と`ch`として機能するブロックで宣言された、*ステートメント*の`while`ステートメントを使用して、そのブロックが終了したときに破棄されますが、`break`ステートメントです。  
+ オブジェクト`total`と`ch`として機能するブロックで宣言された、*ステートメント*の**中**ステートメントを使用して、そのブロックが終了したときに破棄されます、 **break**ステートメント。  
   

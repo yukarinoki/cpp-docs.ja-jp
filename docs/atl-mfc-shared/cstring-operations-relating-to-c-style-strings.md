@@ -1,5 +1,5 @@
 ---
-title: C スタイルの文字列に関連する CString の操作 |Microsoft ドキュメント
+title: CString の操作に関連する C スタイル文字列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d0683f82204b11d06b1952913d4dbdb1e4a468d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58e4d0b4bf9626d41aa14ff2350ea5132d1637df
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361815"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884507"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>C スタイルの文字列に関連する CString の操作方法
-A [CString](../atl-mfc-shared/using-cstring.md)オブジェクトには、文字列データが含まれています。 `CString` セットを継承、[メソッドと演算子](../atl-mfc-shared/reference/cstringt-class.md)クラス テンプレートで定義されている[CStringT](../atl-mfc-shared/reference/cstringt-class.md)文字列データを操作します。 (`CString`は、`typedef`を専門と`CStringT`文字データの種類を使用するを`CString`をサポートしています)。  
+A [CString](../atl-mfc-shared/using-cstring.md)オブジェクトには、文字列データが含まれています。 `CString` セットを継承、[メソッドと演算子](../atl-mfc-shared/reference/cstringt-class.md)クラス テンプレートで定義されている[CStringT](../atl-mfc-shared/reference/cstringt-class.md)文字列データを操作します。 (`CString`は、 **typedef**特化させた`CStringT`文字データの種類を使用するを`CString`をサポートしています)。  
   
  `CString` は文字データを C スタイルの null で終わる文字列として内部的に格納しません。 代わりに、`CString` は文字データの長さを追跡して、より安全にデータとそれに必要な領域を監視できるようにします。  
   
@@ -41,7 +41,7 @@ A [CString](../atl-mfc-shared/using-cstring.md)オブジェクトには、文字
   
 - [C スタイルの null で終わる文字列への変換](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)  
   
-- [標準ランタイム ライブラリ文字列関数の使用](#_core_working_with_standard_run.2d.time_library_string_functions)  
+- [標準のランタイム ライブラリ文字列関数の使用](#_core_working_with_standard_run.2d.time_library_string_functions)  
   
 - [CString の内容を直接変更](#_core_modifying_cstring_contents_directly)  
   
@@ -50,7 +50,7 @@ A [CString](../atl-mfc-shared/using-cstring.md)オブジェクトには、文字
 - [CString 仮パラメーターを指定します。](#_core_specifying_cstring_formal_parameters)  
   
 ##  <a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a> C スタイルの Null で終わる文字列としての CString の使用  
- `CString` オブジェクトを C スタイルの文字列として使用するには、オブジェクトを `LPCTSTR` にキャストします。 次の例では、`CString` は読み取り専用で C スタイルの null で終わる文字列へのポインターを返します。 `strcpy` 関数は、C スタイルの文字列のコピーを変数 `myString` に入れます。  
+ 使用する、 `CString` C スタイル文字列としてオブジェクト、LPCTSTR をオブジェクトにキャストします。 次の例では、`CString` は読み取り専用で C スタイルの null で終わる文字列へのポインターを返します。 `strcpy` 関数は、C スタイルの文字列のコピーを変数 `myString` に入れます。  
   
 ```  
 CString aCString = "A string";  
@@ -58,7 +58,7 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```  
   
- `CString` メソッド (`SetAt` など) を使用して、文字列オブジェクトの個々の文字を変更できます。 ただし、`LPCTSTR` は一時的なポインターであり、`CString` に対して変更が行われると無効になります。 `CString` がスコープから外れ、自動的に削除されることもあります。 `LPCTSTR` オブジェクトを使用するたびに、オブジェクトの新しい `CString` ポインターを取得することをお勧めします。  
+ `CString` メソッド (`SetAt` など) を使用して、文字列オブジェクトの個々の文字を変更できます。 ただし、LPCTSTR ポインターは一時的でありに変更された場合に無効になります`CString`します。 `CString` がスコープから外れ、自動的に削除されることもあります。 新しい LPCTSTR ポインターを取得することをお勧め、`CString`たびにオブジェクトのいずれかを使用します。  
   
  場合によっては、直接変更するために `CString` データのコピーが必要になる場合があります。 より安全な関数 `strcpy_s` (または Unicode/MBCS との移植性がある `_tcscpy_s`) を使用して、`CString` オブジェクトを別のバッファーにコピーします。 次の例に示すように、ここで文字を安全に変更できます。  
   
@@ -67,10 +67,10 @@ strcpy(myString, (LPCTSTR)aCString);
 > [!NOTE]
 >  3 番目の引数`strcpy_s`(または Unicode と MBCS ポータブル`_tcscpy_s`) か、 `const wchar_t*` (Unicode) または`const char*`(ANSI)。 前述の例では、この引数に `CString` を渡しています。 C++ コンパイラは `CString` クラス用に定義されている変換関数を自動的に適用します。この関数は `CString` を `LPCTSTR` に変換します。 ある型から別の型へのキャスト操作を定義する機能は、C++ の最も有効な機能の 1 つです。  
   
-##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> 標準ランタイム ライブラリ文字列関数の使用  
+##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> 標準のランタイム ライブラリ文字列関数の使用  
  `CString` などの標準 C ランタイム ライブラリ文字列関数 (または Unicode/MBCS との移植性がある `strcmp`) を使用して検討対象の文字列操作を実行するために、`_tcscmp` メソッドを検索できる必要があります。  
   
- C ランタイム文字列関数を使用する必要がある場合は、_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string で説明する手法を使用できます。 `CString` オブジェクトを同等の C スタイルの文字列バッファーにコピーし、そのバッファーに対して操作を実行してから、結果の C スタイルの文字列を `CString` オブジェクトに割り当てることができます。  
+ C ランタイム文字列関数を使用する場合は、_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string で説明する手法を使用できます。 `CString` オブジェクトを同等の C スタイルの文字列バッファーにコピーし、そのバッファーに対して操作を実行してから、結果の C スタイルの文字列を `CString` オブジェクトに割り当てることができます。  
   
 ##  <a name="_core_modifying_cstring_contents_directly"></a> CString の内容を直接変更  
  ほとんどの場合、`CString` オブジェクトの内容を変更するか、または `CString` を C スタイルの文字列に変換するには、`CString` メンバー関数を使用する必要があります。  
@@ -90,14 +90,14 @@ strcpy(myString, (LPCTSTR)aCString);
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> 可変個引数関数での CString オブジェクトの使用  
  一部の C 関数は、可変個の引数を受け取ります。 主な例として `printf_s` があります。 この種類の関数の宣言方法では、コンパイラは引数の型がわからず、それぞれの引数で実行する変換操作を決定できません。 そのため、可変個の引数を受け取る関数に `CString` オブジェクトを渡す場合は、明示的な型キャストを使用することが重要です。  
   
- 引数が可変個である関数で `CString` オブジェクトを使用するには、次の例に示すように、`CString` を `LPCTSTR` 文字列に明示的にキャストします。  
+ 使用する、`CString`可変個引数関数の場合、明示的にキャスト内のオブジェクト、 `CString` LPCTSTR 文字列の次の例に示すようにします。  
   
  [!code-cpp[NVC_ATLMFC_Utilities#190](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_2.cpp)]  
   
 ##  <a name="_core_specifying_cstring_formal_parameters"></a> CString 仮パラメーターを指定します。  
- 文字列引数を必要とするほとんどの関数では、`const` の代わりに文字への `LPCTSTR` ポインター (`CString`) として、関数プロトタイプの仮パラメーターを指定することをお勧めします。 仮パラメーターが文字への `const` ポインターとして指定されている場合、`TCHAR` 配列、リテラル文字列 [`"hi there"`]、または `CString` オブジェクトのいずれかにポインターを渡すことができます。 `CString` オブジェクトは、自動的に `LPCTSTR` に変換されます。 `LPCTSTR` を使用できる場所であればどこでも、`CString` オブジェクトを使用できます。  
+ 文字列引数を必要とするほとんどの関数では、`const` の代わりに文字への `LPCTSTR` ポインター (`CString`) として、関数プロトタイプの仮パラメーターを指定することをお勧めします。 として仮パラメーターが指定されている場合、`const`文字へのポインター、TCHAR 配列、リテラル文字列へのポインターを渡すことができます [`"hi there"`]、または`CString`オブジェクト。 `CString`オブジェクトは、LPCTSTR を自動的に変換されます。 任意の場所は、LPCTSTR を使用することができます、使用することも、`CString`オブジェクト。  
   
- 定数文字列参照として仮パラメーターを指定することもできます (つまり、 `const CString&`) 場合は、引数は変更されません。 文字列が関数で変更される場合は、`const` 修飾子を省略します。 既定の null 値が必要な場合は、次に示すように、これを null 文字列 [`""`] に初期化します。  
+ 定数文字列参照として、仮パラメーターを指定することもできます (つまり、 `const CString&`) 場合は、引数は変更されません。 削除、 **const**修飾子の場合は、文字列が関数によって変更されます。 既定の null 値が必要な場合は、次に示すように、これを null 文字列 [`""`] に初期化します。  
   
  [!code-cpp[NVC_ATLMFC_Utilities#191](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_3.cpp)]  
   
