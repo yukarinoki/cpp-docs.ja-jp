@@ -36,12 +36,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: fbe74dbd1218aec211bb600f1db6a1c2300f18e2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8b3f6ed544bd4726b8bed2b63394a8b28c54c339
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862404"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956073"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 関数
 
@@ -64,13 +64,13 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-`Loc` ファセットの存在をテストするロケール。
+*Loc*ファセットの有無をテストするロケール。
 
 ### <a name="return-value"></a>戻り値
 
 ロケールにテスト対象のファセットがある場合は **true**、ない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、`use_facet` を呼び出す前に必須ではないファセットがロケール内にリストされているかどうかを確認し、なかった場合に例外がスローされるのを回避するために役立ちます。
 
@@ -106,9 +106,9 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする英数字要素。
+*Ch*をテストする英数字要素。
 
-`Loc` テストする英数字要素を含むロケールです。
+*Loc*をテストする英数字要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
@@ -171,17 +171,17 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストするアルファベット要素を含むロケールです。
+*Loc*をテストする英字要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が英字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**アルファ**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**アルファ**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -234,17 +234,17 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が制御文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**コントロール**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **cntrl**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -297,17 +297,17 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が数字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**桁**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**桁**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -360,17 +360,17 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が英字または句読点である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**グラフ**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**グラフ**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -423,17 +423,17 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が小文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**低い**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**低い**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -486,17 +486,17 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が印刷可能である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**印刷**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**印刷**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -548,17 +548,17 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が句読点である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **punct**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **punct**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -611,17 +611,17 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が余白である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**領域**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**領域**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -674,17 +674,17 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストされた要素が大文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**上限**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>::**上限**、 `Ch`)。
 
 ### <a name="example"></a>例
 
@@ -737,17 +737,17 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` テストする要素。
+*Ch*をテストする要素。
 
-`Loc` テストする要素を含むロケールです。
+*Loc*をテストする要素を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 テストする要素が 16 進数を表すために使用される文字である場合は **true**、そうでない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [is](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **xdigit**、 `Ch`)。
+テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [](../standard-library/ctype-class.md#is)( **ctype** \< **CharType**>:: **xdigit**、 `Ch`)。
 
 16 進数字は、0 から 9 までの数字と A から F までの文字 (大文字と小文字を区別しない) を使用して 0 から 15 までの 10 進数字を表す 16 進数を使用します。
 
@@ -802,15 +802,15 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` 小文字に変換する文字。
+*ch*小文字に変換される文字。
 
-`Loc` 変換する文字を含むロケールです。
+*Loc*変換される文字を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 小文字に変換された文字。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [tolower](../standard-library/ctype-class.md#tolower)( `Ch`)。
 
@@ -849,15 +849,15 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>パラメーター
 
-`Ch` 大文字に変換する文字。
+*ch*大文字に変換される文字。
 
-`Loc` 変換する文字を含むロケールです。
+*Loc*変換される文字を含むロケール。
 
 ### <a name="return-value"></a>戻り値
 
 大文字に変換された文字。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 テンプレート関数を返します[use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**>> ( `Loc`)。 [toupper](../standard-library/ctype-class.md#toupper)( `Ch`)。
 
@@ -896,13 +896,13 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>パラメーター
 
-`Loc` 参照されているファセットの型を含む const ロケールです。
+*Loc*参照されるファセットの種類を含む const ロケール。
 
 ### <a name="return-value"></a>戻り値
 
 引数のロケールに含まれるクラス `Facet` のファセットへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このテンプレート関数によって返されるファセットへの参照は、含んでいるロケールのコピーが存在する限り有効です。 このようなクラス `Facet` のファセット オブジェクトが引数のロケールにリストされていない場合、この関数は `bad_cast` 例外をスローします。
 

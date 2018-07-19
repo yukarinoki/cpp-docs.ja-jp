@@ -1,5 +1,5 @@
 ---
-title: プライベート (C++) |Microsoft ドキュメント
+title: プライベート (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb0b8c748a3cf92faae451ab024d5592bb24b47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8acbfb92ad8139d01581561aa61a29b6e429538f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943186"
 ---
 # <a name="private-c"></a>private (C++)
 ## <a name="syntax"></a>構文  
@@ -31,28 +32,28 @@ private:
 private base-class  
 ```  
   
-## <a name="remarks"></a>コメント  
- クラス メンバーのリストを前に置くと、`private` キーワードは、それらのメンバーがクラスのメンバー関数およびフレンドからのみアクセスできることを指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。  
+## <a name="remarks"></a>Remarks  
+ 前に、クラス メンバーの一覧と、**プライベート**キーワードは、それらのメンバーが、クラスのメンバー関数とフレンドからのみアクセスできることを指定します。 これは、次のアクセス指定子またはクラスの末尾までで宣言されているすべてのメンバーに適用されます。  
   
- 基底クラスの名前を指定すると、`private` キーワードは、基底クラスのパブリック、プロテクト メンバーが派生クラスのプライベート メンバーであることを指定します。  
+ 基底クラスの名前、**プライベート**キーワードは、基底クラスのパブリックおよびプロテクト メンバーが派生クラスのプライベート メンバーを指定します。  
   
  クラスのメンバーの既定のアクセスはプライベートです。 構造体または共用体のメンバーの既定のアクセスはパブリックです。  
   
  基底クラスの既定のアクセスは、クラスの場合はプライベートで、構造体の場合はパブリックです。 共用体に基底クラスを設定することはできません。  
   
- 関連情報については、次を参照してください[フレンド](../cpp/friend-cpp.md)、[パブリック](../cpp/public-cpp.md)、[保護](../cpp/protected-cpp.md)、とでメンバー アクセス テーブル[クラス メンバーへのアクセスの制御](member-access-control-cpp.md).  
+ 関連情報については、次を参照してください[フレンド](../cpp/friend-cpp.md)、[パブリック](../cpp/public-cpp.md)、[保護](../cpp/protected-cpp.md)、とでメンバー アクセス テーブル[クラスのメンバーへのアクセスの制御](member-access-control-cpp.md).  
   
 ## <a name="clr-specific"></a>/clr 固有  
- CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、 `private`、および`protected`) 型とアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)です。  
+ CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、**プライベート**、および**保護**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。  
   
 > [!NOTE]
->  コンパイルされるファイル[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージ クラス (パブリックかプライベート) が表示されます。  
+>  ファイルがコンパイルされた[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。  
   
 ## <a name="end-clr-specific"></a>END /clr 固有  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // keyword_private.cpp  
 class BaseClass {  
 public:  
