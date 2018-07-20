@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f11e1ce8b016ab8c6e8af04e351e80307b2189e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 424fcf5b960182326dc1192d8d60f168ead59d98
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965416"
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable クラス
 
-`From` 型の値を `To` 型に代入できるかどうか、および代入でスローしないことが判明しているかどうかをテストします。
+値かどうかをテスト*から*型に割り当てることができます*に*型および割り当てがスローしないと判明します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,15 +37,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-オブジェクトの型には、割り当てを受け取る。
+*To*代入を受け取るオブジェクトの型。
 
-値を提供するオブジェクトの型。
+*From*値を提供するオブジェクトの型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-式 `declval<To>() = declval<From>()` は正しい形式である必要があり、スローしないことがコンパイラに判明している必要があります。 `From` と `To` の両方とも完全な型、`void`、または不明なバインドの配列にする必要があります。
+式 `declval<To>() = declval<From>()` は正しい形式である必要があり、スローしないことがコンパイラに判明している必要があります。 両方*から*と*に*完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 
