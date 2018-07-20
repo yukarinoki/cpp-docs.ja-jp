@@ -1,5 +1,5 @@
 ---
-title: '#using ディレクティブ (C + + CLR) |Microsoft ドキュメント'
+title: '#using ディレクティブ (C +/cli CLI) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,15 +22,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2255f5de9cc26505bb07110da6368a039009c6c
+ms.sourcegitcommit: b8b1cba85ff423142d73c888be26baa8c33f3cdc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33840737"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39093034"
 ---
-# <a name="using-directive-cclr"></a>#using ディレクティブ (C + + CLR)
-コンパイルされたプログラムにメタデータをインポート[/clr](../build/reference/clr-common-language-runtime-compilation.md)です。  
+# <a name="using-directive-ccli"></a>#using ディレクティブ (C +/cli CLI)
+コンパイルされたプログラムにメタデータをインポート[/clr](../build/reference/clr-common-language-runtime-compilation.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,27 +45,27 @@ ms.locfileid: "33840737"
  `#using <MyComponent.dll>`  
   
  as_friend  
- `file` のすべての型にアクセスできることを指定します。  詳細については、次を参照してください。[フレンド アセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)です。  
+ `file` のすべての型にアクセスできることを指定します。  詳細については、次を参照してください。[フレンド アセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)します。  
   
-## <a name="remarks"></a>コメント  
- `file` は、マネージ データとマネージ構造のためにインポートする Microsoft Intermediate Language (MSIL) ファイルにすることができます。 .Dll ファイルには、アセンブリ マニフェストが含まれてし、マニフェストで参照されているすべての .dll ファイルがインポートされており、アセンブリを作成するには一覧表示場合*ファイル*アセンブリ参照としてメタデータにします。  
+## <a name="remarks"></a>Remarks  
+ `file` は、マネージ データとマネージ構造のためにインポートする Microsoft Intermediate Language (MSIL) ファイルにすることができます。 ビルドしているアセンブリが一覧表示の .dll ファイルには、アセンブリ マニフェストが含まれていて、マニフェストで参照されているすべての .dll がインポートされる場合*ファイル*アセンブリ参照としてメタデータ内で。  
   
- 場合`file`アセンブリが含まれていない (場合`file`モジュール) だけモジュールが一部であることを示すオプションが、現在の (アセンブリ) アプリケーションで、モジュールから型情報を使用する予定がない場合は、アセンブリ;を使用して[/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)です。 その場合、アセンブリを参照するすべてのアプリケーションで、そのモジュール内の型を使用できます。  
+ 場合`file`アセンブリが含まれていない (場合`file`モジュール) だけモジュールが一部であることを示すオプションが現在の (アセンブリ) アプリケーションで、モジュールから型情報を使用する予定がない場合、アセンブリとを使用してください[/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)します。 その場合、アセンブリを参照するすべてのアプリケーションで、そのモジュール内の型を使用できます。  
   
  使用する代わりに`#using`は、 [/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラ オプション。  
   
- 渡される .exe アセンブリ`#using`をコンパイルするか、.NET の Visual Studio コンパイラ (Visual Basic または Visual C# の場合、たとえば) のいずれかを使用します。  コンパイルされた .exe アセンブリからメタデータをインポートしようとしています。 **/clr**ファイルの読み込み例外が発生します。  
+ 渡される .exe アセンブリ`#using`コンパイルする必要があります、Visual Studio の .NET コンパイラ (Visual Basic または Visual c#、たとえば) のいずれかを使用します。  コンパイルされた .exe アセンブリからメタデータをインポートしようとしています。 **/clr**ファイルの読み込み例外が発生します。  
   
 > [!NOTE]
 >  `#using` で参照されるコンポーネントは、コンパイル時にインポートされる別バージョンのファイルで実行することもできるため、クライアント アプリケーションで予期しない結果になります。  
   
  モジュールではなくアセンブリ内の型をコンパイラで認識するには、型の解決を強制する必要があります。型の解決を実行するには、たとえば、型のインスタンスを定義します。 アセンブリの型名を解決する方法は他にもあります。たとえば、アセンブリの型を継承すると、コンパイラで型名が認識されます。  
   
- 使用するソース コードでビルドしたメタデータをインポートするときに[_declspec](../cpp/thread.md)メタデータでは、スレッドのセマンティクスは保持されません。 たとえば、変数を使用して宣言 **_declspec**、.NET Framework 共通言語ランタイム用にビルドし、経由でインポートするプログラムでコンパイルされた`#using`がなくなる **_ _declspec (スレッド)** セマンティクス、変数にします。  
+ 使用するソース コードから構築されたメタデータをインポートするときに[_declspec](../cpp/thread.md)スレッドのセマンティクスはメタデータで保持されません。 たとえば、変数を使用して宣言 **_declspec**では、.NET Framework 共通言語ランタイムのビルドを使用して、インポートするプログラムをコンパイル`#using`はなくなります **_ _declspec (スレッド)** 変数のセマンティクスです。  
   
- `#using` によって参照されるファイル内のインポートされるすべての型 (マネージとネイティブの両方) を使用できますが、コンパイラはネイティブ型を定義ではなく宣言として扱います。  
+ `#using` によって参照されるファイル内のインポートされるすべての型 (マネージドとネイティブの両方) を使用できますが、コンパイラはネイティブ型を定義ではなく宣言として扱います。  
   
- コンパイルすると、mscorlib.dll が自動的に参照 **/clr**です。  
+ コンパイルすると、mscorlib.dll が自動的に参照 **/clr**します。  
   
  LIBPATH 環境変数は、`#using` に渡されたファイル名をコンパイラが解決しようとするときに検索されるディレクトリを指定します。  
   
