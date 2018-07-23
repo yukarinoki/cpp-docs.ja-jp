@@ -51,18 +51,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d83407efee1da2bc1c59cf0d869f54f6022a4eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 459192f5936db3c47d2377885cf3ca30dadb92df
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415530"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180791"
 ---
 # <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr、wcschr、_mbschr、_mbschr_l
 現在のロケールまたは指定された LC_CTYPE 変換状態カテゴリを使用し、文字列内の文字を探します。
 
 > [!IMPORTANT]
-> **_mbschr**と **_mbschr_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> `_mbschr` および `_mbschr_l` は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -133,32 +133,32 @@ NULL で終わる元の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数ポインターを返しますの最初に出現する*c*で*str*、または**NULL**場合*c*が見つかりません。
+これらの各関数の最初に出現するポインターを返します*c*で*str*場合は、NULL または*c*が見つかりません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strchr**関数は、最初に見つかった位置を検索*c*で*str*、またはを返します**NULL**場合*c*は見つかりませんでした。 検索対象には終端の null 文字が含まれます。
+`strchr`関数は、最初に見つかった位置を検索します。 *c*で*str*、または場合 NULL を返します*c*が見つかりません。 検索対象には終端の null 文字が含まれます。
 
-**wcschr**、 **_mbschr**と **_mbschr_l**のワイド文字とマルチバイト文字バージョンは、 **strchr**です。 引数と戻り値の**wcschr**ワイド文字は、文字列以外の **_mbschr**マルチバイト文字列です。 **_mbschr**マルチバイト文字のシーケンスを認識します。 また、文字列が null ポインターである場合、 **_mbschr** 」の説明に従って、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbschr**返します**NULL**設定と**errno**に**EINVAL**です。 **strchr**と**wcschr**はそのパラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+`wcschr` 関数、`_mbschr` 関数、および `_mbschr_l` 関数は、`strchr` 関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcschr` 関数の引数と戻り値はワイド文字列で、`_mbschr` 関数の引数と戻り値はマルチバイト文字列です。 `_mbschr` はマルチバイト文字シーケンスを認識します。 また、文字列が null ポインターの場合、`_mbschr` は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 続けるには、実行が許可された場合`_mbschr`NULL を返し、設定`errno`をします。 `strchr` および `wcschr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
-出力値の設定の影響を受けた、 **LC_CTYPE**カテゴリ; 詳細については、ロケールの設定、表示[setlocale、_wsetlocale](setlocale-wsetlocale.md)です。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの LC_CTYPE カテゴリの設定の設定の影響を受ける詳細については、次を参照してください。 [setlocale](setlocale-wsetlocale.md)します。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C では、これらの関数が受け取る、* * const * *、最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード * * const * * へのポインターを返します**const **; へのポインターを受け取る非**const * * へのポインターを返しますではない**const**です。マクロ **_CRT_CONST_CORRECT_OVERLOADS**場合は、両方が定義されている、 **const * * と非-** const * * これらの関数のバージョンを利用できます。必要な以外の場合**const * * 両方の C++ オーバー ロードの動作のシンボルを定義する **_CONST_RETURN**です。
+C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の C++ オーバー ロードの動作は、シンボル _CONST_RETURN を定義します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcschr**|**strchr**|**_mbschr**|**wcschr**|
-|**_n/a**|**該当なし**|**_mbschr_l**|**該当なし**|
+|`_tcschr`|`strchr`|`_mbschr`|`wcschr`|
+|**_n/a**|**n/a**|`_mbschr_l`|**該当なし**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**strchr**|\<string.h>|
-|**wcschr**|\<string.h> または \<wchar.h>|
-|**_mbschr**、 **_mbschr_l**|\<mbstring.h>|
+|`strchr`|\<string.h>|
+|`wcschr`|\<string.h> または \<wchar.h>|
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
