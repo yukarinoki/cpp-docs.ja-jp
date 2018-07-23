@@ -54,19 +54,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd62d95e971ac5fd927cce1b7b4eb600ebcf7df6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
+ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415879"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39181134"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
 文字列をスキャンして、指定された文字セットの文字を検索します。
 
 > [!IMPORTANT]
-> **_mbspbrk**と **_mbspbrk_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> `_mbspbrk` および `_mbspbrk_l` は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -137,36 +137,36 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-任意の文字から最初に見つかった位置のポインターを返します*strCharSet*で*str*、または**NULL** 2 つの文字列引数には文字がない共通のポインター。
+最初に見つかった位置の任意の文字にポインターを返します*strCharSet*で*str*、または 2 つの文字列引数の場合は、NULL ポインターのない文字に共通します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strpbrk**関数が最初に見つかった位置の文字へのポインターを返します*str*内の文字セットに属している*strCharSet*です。 検索には、終端の NULL 文字は含まれません。
+`strpbrk`関数内の文字の最初の出現箇所にポインターを返す*str*内の文字セットに属する*strCharSet*します。 検索には、終端の NULL 文字は含まれません。
 
-**wcspbrk**と **_mbspbrk**のワイド文字とマルチバイト文字バージョンは、 **strpbrk**です。 引数と戻り値の**wcspbrk**ワイド文字は、文字列以外の **_mbspbrk**マルチバイト文字列です。
+`wcspbrk` 関数と `_mbspbrk` 関数は、`strpbrk` 関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcspbrk` 関数の引数と戻り値はワイド文字列で、`_mbspbrk` 関数の引数と戻り値はマルチバイト文字列です。
 
-**_mbspbrk**パラメーターを検証します。 場合*str*または*strCharSet*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbspbrk**返します**NULL**設定と**errno**に**EINVAL**です。 **strpbrk**と**wcspbrk**はそのパラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+`_mbspbrk` はそのパラメーターを検証します。 場合*str*または*strCharSet*が null の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合`_mbspbrk`NULL を返し、設定`errno`をします。 `strpbrk` および `wcspbrk` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
-**_mbspbrk**に似ていますが **_mbscspn**する点を除いて **_mbspbrk**型の値ではなく、ポインターを返します[size_t](../../c-runtime-library/standard-types.md)です。
+`_mbspbrk` と `_mbscspn` は似ていますが、`_mbspbrk` は [size_t](../../c-runtime-library/standard-types.md) 型の値ではなくポインターを返す点が異なります。
 
-C では、これらの関数が受け取る、* * const * *、最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード * * const * * へのポインターを返します**const **; へのポインターを受け取る非**const * * へのポインターを返しますではない**const**です。マクロ **_CRT_CONST_CORRECT_OVERLOADS**場合は、両方が定義されている、 **const * * と非-** const * * これらの関数のバージョンを利用できます。必要な以外の場合**const * * 両方の C++ オーバー ロードの動作のシンボルを定義する **_CONST_RETURN**です。
+C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の C++ オーバー ロードの動作は、シンボル _CONST_RETURN を定義します。
 
-出力値の設定の影響を受けた、 **LC_CTYPE**カテゴリ; 詳細については、ロケールの設定、表示[setlocale、_wsetlocale](setlocale-wsetlocale.md)です。 この関数のバージョン、 **_l**サフィックスを使用してこのロケールに依存する動作に現在のロケール以外のバージョンで、 **_l**ロケール パラメーターを使用する点を除いて、サフィックスは同じ代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの LC_CTYPE カテゴリの設定の設定の影響を受ける詳細については、次を参照してください。 [setlocale](setlocale-wsetlocale.md)します。 この関数のバージョン、 **_l**このロケールに依存する動作の現在のロケールのサフィックス使用; のバージョン、 **_l**サフィックスは、ロケール パラメーターを使用すると同じです代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcspbrk**|**strpbrk**|**_mbspbrk**|**wcspbrk**|
-|**該当なし**|**該当なし**|**_mbspbrk_l**|**該当なし**|
+|`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
+|**該当なし**|**該当なし**|`_mbspbrk_l`|**該当なし**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**strpbrk**|\<string.h>|
-|**wcspbrk**|\<string.h> または \<wchar.h>|
-|**_mbspbrk**、 **_mbspbrk_l**|\<mbstring.h>|
+|`strpbrk`|\<string.h>|
+|`wcspbrk`|\<string.h> または \<wchar.h>|
+|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
