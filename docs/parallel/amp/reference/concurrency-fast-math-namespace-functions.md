@@ -1,5 +1,5 @@
 ---
-title: Concurrency::fast_math 名前空間の関数 |Microsoft ドキュメント
+title: Concurrency::fast_math 名前空間関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -54,14 +54,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bd20e2e1d88564c7e688e1e0c9c2392f1f4f2ac
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c4fad0d6f5823a205490038755f9de4eef10eae8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695312"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208511"
 ---
-# <a name="concurrencyfastmath-namespace-functions"></a>Concurrency::fast_math 名前空間の関数
+# <a name="concurrencyfastmath-namespace-functions"></a>Concurrency::fast_math 名前空間関数
 ||||  
 |-|-|-|  
 |[acos](#acos)|[acosf](#acosf)|[asin](#asin)|  
@@ -99,7 +99,7 @@ inline float acos(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の逆余弦の値を返します  
+ 引数のアーク コサイン値を返します  
   
 ##  <a name="acosf"></a>  acosf  
  引数の逆余弦を計算します。  
@@ -113,7 +113,7 @@ inline float acosf(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の逆余弦の値を返します  
+ 引数のアーク コサイン値を返します  
   
 ##  <a name="asin"></a>  asin  
  引数の逆正弦を計算します。  
@@ -127,7 +127,7 @@ inline float asin(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の逆正弦値を返します  
+ 引数のアークサイン値を返します  
   
 ##  <a name="asinf"></a>  asinf  
  引数の逆正弦を計算します。  
@@ -141,7 +141,7 @@ inline float asinf(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の逆正弦値を返します  
+ 引数のアークサイン値を返します  
   
 ##  <a name="atan"></a>  atan  
  引数の逆正接を計算します。  
@@ -155,7 +155,7 @@ inline float atan(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の逆正接値を返します  
+ 引数のアーク タンジェント値を返します  
   
 ##  <a name="atan2"></a>  atan2  
  _Y/_X の逆正接を計算します。  
@@ -174,7 +174,7 @@ inline float atan2(
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- _Y/_X の逆正接値を返します  
+ _Y/_X のアーク タンジェント値を返します  
   
 ##  <a name="atan2f"></a>  atan2f  
  _Y/_X の逆正接を計算します。  
@@ -193,7 +193,7 @@ inline float atan2f(
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- _Y/_X の逆正接値を返します  
+ _Y/_X のアーク タンジェント値を返します  
   
 ##  <a name="atanf"></a>  atanf  
  引数の逆正接を計算します。  
@@ -207,7 +207,7 @@ inline float atanf(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の逆正接値を返します  
+ 引数のアーク タンジェント値を返します  
   
 ##  <a name="ceil"></a>  ceil  
  引数の切り上げを計算します。  
@@ -305,7 +305,7 @@ inline float exp(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- E を底とする引数のべき乗を返します。  
+ E を底の引数の指数を返します  
   
 ##  <a name="exp2"></a>  exp2  
  2 を底とする引数のべき乗を計算します。  
@@ -319,7 +319,7 @@ inline float exp2(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 2 を底とする引数のべき乗を返します。  
+ 基本 2 引数の指数を返します。  
   
 ##  <a name="exp2f"></a>  exp2f  
  2 を底とする引数のべき乗を計算します。  
@@ -333,7 +333,7 @@ inline float exp2f(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 2 を底とする引数のべき乗を返します。  
+ 基本 2 引数の指数を返します。  
   
 ##  <a name="expf"></a>  expf  
  e を底とする引数のべき乗を計算します。  
@@ -347,7 +347,7 @@ inline float expf(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- E を底とする引数のべき乗を返します。  
+ E を底の引数の指数を返します  
   
 ##  <a name="fabs"></a>  fabs  
  引数の絶対値を返します。  
@@ -389,7 +389,7 @@ inline float floor(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の切り捨てを返します  
+ 引数の切り捨て値を返します  
   
 ##  <a name="floorf"></a>  floorf  
  引数の切り捨てを計算します。  
@@ -403,7 +403,7 @@ inline float floorf(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の切り捨てを返します  
+ 引数の切り捨て値を返します  
   
 ##  <a name="fmax"></a>  fmax  
  引数の最大数値を判断します。  
@@ -569,7 +569,7 @@ inline int isfinite(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数に有限値がある場合にのみ、0 以外の値を返します  
+ 引数は、有限の値を持つ場合にのみ、0 以外の値を返します  
   
 ##  <a name="isinf"></a>  isinf  
  引数が無限値であるかどうかを判断します。  
@@ -597,7 +597,7 @@ inline int isnan(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数が NaN 値を持つ場合にのみ、0 以外の値を返します  
+ 引数が NaN の値を持つ場合にのみ、0 以外の値を返します  
   
 ##  <a name="ldexp"></a>  ldexp  
  仮数と指数から実数を計算します。  
@@ -616,7 +616,7 @@ inline float ldexp(
  整数の指数  
   
 ### <a name="return-value"></a>戻り値  
- _X * 2^_Exp を返します  
+ _X を返します\*2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>  ldexpf  
  仮数と指数から実数を計算します。  
@@ -635,7 +635,7 @@ inline float ldexpf(
  整数の指数  
   
 ### <a name="return-value"></a>戻り値  
- _X * 2^_Exp を返します  
+ _X を返します\*2 ^ _Exp  
   
 ##  <a name="log"></a>  log  
  e を底とする引数の対数を計算します。  
@@ -649,7 +649,7 @@ inline float log(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の e を底と対数を返します  
+ 引数の e を底とする対数を返します  
   
 ##  <a name="log10"></a>  log10  
  10 を底とする引数の対数を計算します。  
@@ -691,7 +691,7 @@ inline float log2(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の底 2 の対数を返します  
+ 引数の 2 を底の対数を返します  
   
 ##  <a name="log2f"></a>  log2f  
  2 を底とする引数の対数を計算します。  
@@ -719,7 +719,7 @@ inline float logf(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 引数の e を底と対数を返します  
+ 引数の e を底とする対数を返します  
   
 ##  <a name="modf"></a>  modf  
  _X を小数部と整数部に分割します。  
@@ -768,7 +768,7 @@ inline float pow(
   
 ### <a name="parameters"></a>パラメーター  
  `_X`  
- 基本浮動小数点値  
+ 基本浮動小数点の値  
   
  `_Y`  
  浮動小数点値、指数  
@@ -787,7 +787,7 @@ inline float powf(
   
 ### <a name="parameters"></a>パラメーター  
  `_X`  
- 基本浮動小数点値  
+ 基本浮動小数点の値  
   
  `_Y`  
  浮動小数点値、指数  
@@ -924,7 +924,7 @@ inline void sincos(
  _X の正弦値を返します  
   
  `_C`  
- _X の余弦の値を返します  
+ _X のコサイン値を返します  
   
 ##  <a name="sincosf"></a>  sincosf  
  _X の正弦と余弦の値を計算します  
@@ -944,7 +944,7 @@ inline void sincosf(
  _X の正弦値を返します  
   
  `_C`  
- _X の余弦の値を返します  
+ _X のコサイン値を返します  
   
 ##  <a name="sinh"></a>  sinh  
  引数の双曲線正弦の値を計算します。  
@@ -1086,7 +1086,7 @@ inline float truncf(float _X) restrict(amp);
 ### <a name="return-value"></a>戻り値  
  引数の整数部分を返します  
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 **ヘッダー:** amp_math.h **Namespace:** concurrency::fast_math
   
 ## <a name="see-also"></a>関連項目  

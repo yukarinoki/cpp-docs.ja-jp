@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c984b2ef59e022a355d7c24915b5edbcf7f7e74d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 7a1e7abe1fbbf3667999852dd1810a8a337cac79
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880948"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208664"
 ---
 # <a name="cfiletime-class"></a>CFileTime クラス
 このクラスは、ファイルに関連付けられている日付と時刻の値を管理するためのメソッドを提供します。  
@@ -101,11 +101,11 @@ class CFileTime :  public FILETIME
 |メンバー変数|100 ナノ秒間隔の数|  
 |---------------------|-----------------------------------------|  
 |Millisecond|10,000|  
-|Second|ミリ秒 * 1,000|  
-|Minute|2 番目 * 60|  
-|Hour|分 * 60|  
-|Day|1 時間 * 24|  
-|週|1 日 * 7|  
+|Second|ミリ秒\*1,000|  
+|Minute|2 番目\*60|  
+|Hour|分\*60|  
+|Day|1 時間\*24|  
+|週|1 日\*7|  
   
  **注**作成を記録できるすべてのファイル システムと最終アクセス時刻およびすべてのファイル システム、同じ方法でそれらを記録します。 Windows NT FAT ファイル システム上の例の作成の時間が 10 ミリ秒の解像度、書き込み時間が 2 秒単位の解像度およびアクセス時間が 1 日 (アクセス日) の解像度。 NTFS では、アクセス時間は 1 時間の解像度が。 さらに、FAT ディスク上の時刻を現地時刻に記録するが、NTFS がディスク上の時刻を UTC に記録します。 詳細については、次を参照してください。[ファイル回](http://msdn.microsoft.com/library/windows/desktop/ms724290)します。  
   

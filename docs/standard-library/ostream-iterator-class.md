@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ee931abb2273ab3119fa62b9219ad69448b2048
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 308254fded0ac38a794233fb3f4eacd4d7d6fd19
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963525"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207920"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator クラス
 
@@ -68,9 +68,9 @@ ostream_iterator クラスは出力反復子の要件を満たす必要があり
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|出力反復子式 * `i` = `x` を実装するために使用される逆参照演算子。|
+|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `i`  = `x`します。|
 |[operator++](#op_add_add)|操作が呼び出される前に示したものと同じオブジェクトに `ostream_iterator` を返す、実質的な機能を持たないインクリメント演算子。|
-|[operator=](#op_eq)|出力ストリームに書き込むための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
+|[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`出力ストリームに書き込むためです。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -228,7 +228,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-出力ストリームに書き込むための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。
+出力反復子式を実装するために使用される代入演算子\* `i`  =  `x`出力ストリームに書き込むためです。
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -244,7 +244,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="remarks"></a>Remarks
 
-`ostream_iterator` が満たす必要のある出力反復子の要件は、式 * `ii` = `t` が有効であることを必要とするのみで、この演算子または operator= 自体については何も必要としないことです。 このメンバー演算子は、`*this` を返します。
+出力反復子の要件を`ostream_iterator`満たす必要があります式のみを必要と\* `ii`  =  `t`有効であり、演算子または演算子の詳細については示されません = 自体。 このメンバー演算子は、`*this` を返します。
 
 ### <a name="example"></a>例
 

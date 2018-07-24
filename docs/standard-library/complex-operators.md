@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: b65178b171b8717096eb19206877b033a52d1e44
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2491cb859de8908bbe0710f03d12f836bbd80e2f
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957699"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208677"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 演算子
 
@@ -172,7 +172,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  operator*
+## <a name="op_star"></a>  operator\*
 
 2 つの複素数を乗算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -196,9 +196,9 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*最初の 2 つの複素数または数値で乗算される複素数のパラメーターの型を * 操作。
+*左*最初の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
 
-*適切な*2 番目の 2 つの複素数または数値で乗算される複素数のパラメーターの型を * 操作。
+*適切な*2 番目の 2 つの複素数または数値で乗算される複素数のパラメーターの型を\*操作。
 
 ### <a name="return-value"></a>戻り値
 

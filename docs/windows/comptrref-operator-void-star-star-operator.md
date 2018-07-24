@@ -1,5 +1,5 @@
 ---
-title: Comptrref::operator void * * 演算子 |Microsoft ドキュメント
+title: Comptrref::operator void * 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3993cb0a5ce55996ae2ff793e83453040455aa7f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 9fb3cd0a4c180073499ec1bdde1ea4703ffbf9e8
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33887083"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207853"
 ---
-# <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void** 演算子
+# <a name="comptrrefoperator-void-operator"></a>Comptrref::operator void\* \*演算子
 WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。  
   
 ## <a name="syntax"></a>構文  
@@ -33,10 +33,10 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 operator void**() const;  
 ```  
   
-## <a name="remarks"></a>コメント  
- 現在の ComPtrRef オブジェクトを削除するには、ポインター-へのポインター - ComPtrRef オブジェクトによって表されるインターフェイスへのポインターをキャスト`void`、キャスト ポインターを返します。  
+## <a name="remarks"></a>Remarks  
+ 現在の ComPtrRef オブジェクトを削除します。、、ポインターでへのポインター-をとして ComPtrRef オブジェクトによって表されるインターフェイスへのポインターをキャスト`void`、キャストのポインターを返します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  

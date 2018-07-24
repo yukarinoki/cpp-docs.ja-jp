@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f3d4945ef339f5166bdd07bc8d5615b161d266
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3bcaebf6578bfb4168d17131989b9b200a7ef8f9
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407078"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209457"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -112,17 +112,17 @@ long double scalblnl(
 
 ## <a name="return-value"></a>戻り値
 
-**Scalbn**関数の値を返す*x* * **FLT_RADIX**<sup>exp</sup>成功するとします。 オーバーフローが発生 (の符号に応じて*x*)、 **scalbn** +/-返します**HUGE_VAL**; **errno**に値が設定されている**ERANGE**.
+**Scalbn**関数の値を返す*x* \* **FLT_RADIX**<sup>exp</sup>成功するとします。 オーバーフローが発生 (の符号に応じて*x*)、 **scalbn** +/-返します**HUGE_VAL**、 **errno**値に設定されて**ERANGE**.
 
-詳細については**errno**と考えられるエラーの値を返すを参照してください[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)です。
+詳細については**errno**および考えられるエラー戻り値は、「 [errno _doserrno _sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**FLT_RADIX**で定義された\<float.h > 2, の値があるネイティブ浮動小数点基数として; バイナリ システムと**scalbn**と等価[ldexp](ldexp.md)です。
+**FLT_RADIX**で定義されている\<float.h > ネイティブ浮動小数点基数としてバイナリ システムで、そのは値 2 と**scalbn**と等価[ldexp](ldexp.md)します。
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**scalbn**と**scalbln**を受け取り、返します**float**または**長い** **二重**型です。 C プログラムでは、 **scalbn**は常に、**二重**と**int**を返します、**二重**、および**scalbln**は常に、**二重**と**長い**を返します、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **scalbn**と**scalbln**を受け取って返す**float**または**長い** **二重**型。 C プログラムで**scalbn**は常に、**二重**と**int**を返します、**二重**、および**scalbln**は常に、**二重**と**長い**を返します、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

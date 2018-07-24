@@ -1,5 +1,5 @@
 ---
-title: ldexp、ldexpf、ldexpl |Microsoft ドキュメント
+title: ldexp、ldexpf、ldexpl |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 012315e11ccf2dbe63e32c6208487f324ef29289
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ead91ce542ce547f9453f52455dc76d61045b87
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401421"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208416"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、ldexpf、ldexpl
 
@@ -90,17 +90,17 @@ long double ldexpl(
 
 ## <a name="return-value"></a>戻り値
 
-**Ldexp**関数の値を返す*x* * 2<sup>*exp* </sup>正常終了した場合。 オーバーフローについてとの符号に応じて*x*、 **ldexp** +/-返します**HUGE_VAL**; **errno**に値が設定されている**ERANGE**.
+**Ldexp**関数の値を返す*x* \* 2<sup>*exp* </sup>成功した場合。 オーバーフローについてとの符号に応じて*x*、 **ldexp** +/-返します**HUGE_VAL**、 **errno**値に設定されて**ERANGE**.
 
-詳細については**errno**と考えられるエラーの値を返すを参照してください[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)です。
+詳細については**errno**および考えられるエラー戻り値は、「 [errno _doserrno _sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**ldexp**を受け取る**float**または**長い****二重**型です。 C プログラムでは、 **ldexp**は常に、**二重**と**int**を返します、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ldexp**を受け取る**float**または**長い****二重**型。 C プログラムで**ldexp**は常に、**二重**と**int**を返します、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**ldexp**、 **ldexpf**、 **ldexpl**|\<math.h>|\<cmath>|
 

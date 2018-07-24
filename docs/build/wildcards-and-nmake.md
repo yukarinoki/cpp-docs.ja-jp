@@ -1,5 +1,5 @@
 ---
-title: ワイルドカードと NMAKE |Microsoft ドキュメント
+title: ワイルドカードと NMAKE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfe11313a456437fca2dd03aa8367c5f380e689
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6834e37c9f6624e231861fa28063cdbc7bec8508
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380453"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208625"
 ---
 # <a name="wildcards-and-nmake"></a>ワイルドカードと NMAKE
-Nmake では、ファイル名のワイルドカード (* と?) 依存関係の線にします。 コマンドで指定されたワイルドカードは、コマンドに渡されますNMAKE によって展開されません。  
+NMAKE ファイル名のワイルドカードの展開 (\*としますか?) 依存関係の行にします。 コマンドで指定したワイルドカードがコマンドに渡されるNMAKE によって展開されません。  
   
 ## <a name="see-also"></a>関連項目  
  [メイクファイルの内容](../build/contents-of-a-makefile.md)

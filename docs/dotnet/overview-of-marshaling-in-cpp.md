@@ -1,5 +1,5 @@
 ---
-title: C++ におけるマーシャ リングの概要 |Microsoft ドキュメント
+title: C++ におけるマーシャ リングの概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -20,40 +20,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 747d9a67f7796b5a62115acf55343370aea77bdf
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079161"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207866"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ におけるマーシャリングの概要
-混合モードでは、ネイティブ型とマネージ型の間でデータをマーシャリングすることが必要な場合があります。 Visual Studio 2008 が導入された、*マーシャ リング ライブラリ*のためをマーシャ リングし、単純な方法でデータを変換します。  マーシャ リング ライブラリは一連の関数と`marshal_context`一般的な種類のマーシャ リングを実行するクラス。 これらのヘッダー内で、ライブラリが定義されている、**含める/msclr**ディレクトリを Visual Studio のエディション。
+混合モードでは、ネイティブ型とマネージド型の間でデータをマーシャリングすることが必要な場合があります。 Visual Studio 2008 が導入された、*マーシャ リング ライブラリ*に役立つをマーシャ リングし、単純な方法でデータを変換します。  マーシャ リング ライブラリは、一連の関数で構成されています、`marshal_context`共通型のマーシャ リングを実行するクラス。 これらのヘッダーで、ライブラリが定義されている、**含める/msclr**ディレクトリに、Visual Studio のエディション。
 
 |Header|説明|  
 |---------------|-----------------|
-|marshal.h|`marshal_context` クラスとマーシャ リングの関数のコンテキストに依存しません。|
-|marshal_atl.h| ATL 型のマーシャ リング関数|
+|marshal.h|`marshal_context` クラスとマーシャ リング関数のコンテキストに依存しません。|
+|marshal_atl.h| ATL の型をマーシャ リングするための関数|
 |marshal_cppstd.h|標準 C++ 型をマーシャ リングするための関数|
 |marshal_windows.h|Windows の型をマーシャ リングするための関数|
 
 
-既定のパス**msclr**フォルダーは、次のようにいずれかのエディションに応じてがあり、ビルド番号。
+既定のパス**msclr**フォルダーは、このようなものがあるどのエディションに応じておよびビルド番号。
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
- マーシャ リング ライブラリを使用するには、有無、 [marshal_context クラス](../dotnet/marshal-context-class.md)です。 一部の変換では、コンテキストが必要です。 使用して、その他の変換を実装することができます、 [marshal_as](../dotnet/marshal-as.md)関数。 次の表は、現在サポートされている変換と、コンテキストが必要かどうか、含める必要があるマーシャリング ファイルを示しています。  
+ マーシャ リング ライブラリを使用するには、有無、 [marshal_context クラス](../dotnet/marshal-context-class.md)します。 一部の変換では、コンテキストが必要です。 使用して、その他の変換を実装することができます、 [marshal_as](../dotnet/marshal-as.md)関数。 次の表は、現在サポートされている変換と、コンテキストが必要かどうか、含める必要があるマーシャリング ファイルを示しています。  
   
 |変換前の型|変換後の型|マーシャリング メソッド|インクルード ファイル|  
 |---------------|-------------|--------------------|------------------|  
-|System::String^|const char*|marshal_context|marshal.h|  
-|const char*|System::String^|marshal_as|marshal.h|  
-|char*|System::String^|marshal_as|marshal.h|  
-|System::String^|const wchar_t*|marshal_context|marshal.h|  
-|const wchar_t *|System::String^|marshal_as|marshal.h|  
-|wchar_t*|System::String^|marshal_as|marshal.h|  
+|System::String^|const char \*|marshal_context|marshal.h|  
+|const char \*|System::String^|marshal_as|marshal.h|  
+|Char \*|System::String^|marshal_as|marshal.h|  
+|System::String^|const wchar_t\*|marshal_context|marshal.h|  
+|const wchar_t \*|System::String^|marshal_as|marshal.h|  
+|wchar_t \*|System::String^|marshal_as|marshal.h|  
 |System::IntPtr|HANDLE|marshal_as|marshal_windows.h|  
 |HANDLE|System::IntPtr|marshal_as|marshal_windows.h|  
 |System::String^|BSTR|marshal_context|marshal_windows.h|  
@@ -71,7 +71,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 |System::String^|CComBSTR|marshal_as|marshal_atl.h|  
 |CComBSTR|System::String^|marshal_as|marshal_atl.h|  
   
- マーシャリングにコンテキストが必要なのは、マネージ データ型からネイティブ データ型にマーシャリングし、変換先のネイティブ型に自動クリーンアップ用のデストラクターがない場合のみです。 マーシャリング コンテキストは、デストラクターの中で割り当てられているネイティブ データ型を破棄します。 したがって、コンテキストを必要とする変換は、コンテキストが削除されるまでしか有効ではありません。 マーシャリングされた値を保存するには、独自の変数に値をコピーする必要があります。  
+ マーシャリングにコンテキストが必要なのは、マネージド データ型からネイティブ データ型にマーシャリングし、変換先のネイティブ型に自動クリーンアップ用のデストラクターがない場合のみです。 マーシャリング コンテキストは、デストラクターの中で割り当てられているネイティブ データ型を破棄します。 したがって、コンテキストを必要とする変換は、コンテキストが削除されるまでしか有効ではありません。 マーシャリングされた値を保存するには、独自の変数に値をコピーする必要があります。  
   
 > [!NOTE]
 >  文字列に `NULL` が埋め込まれている場合、文字列のマーシャリング結果は保証されません。 埋め込まれた `NULL` により、文字列が切り詰められたり残されたりする場合があります。  
@@ -80,10 +80,10 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
   
  `#include "msclr\marshal_cppstd.h"`  
   
- マーシャリング ライブラリは、独自のマーシャリング型を追加できるように拡張できます。 マーシャ リング ライブラリを拡張する方法の詳細については、次を参照してください。[する方法: マーシャ リング ライブラリを拡張する](../dotnet/how-to-extend-the-marshaling-library.md)です。  
+ マーシャリング ライブラリは、独自のマーシャリング型を追加できるように拡張できます。 マーシャ リング ライブラリを拡張する方法の詳細については、次を参照してください。[方法: マーシャ リング ライブラリを拡張する](../dotnet/how-to-extend-the-marshaling-library.md)します。  
   
- 以前のバージョンでしたマーシャ リングするデータを使用して[プラットフォーム呼び出し](/dotnet/framework/interop/consuming-unmanaged-dll-functions)です。 詳細については`PInvoke`を参照してください[マネージ コードからネイティブ関数を呼び出して](../dotnet/calling-native-functions-from-managed-code.md)です。  
+ 以前のバージョンでしたを使用してデータをマーシャ リング.[プラットフォーム呼び出し](/dotnet/framework/interop/consuming-unmanaged-dll-functions)します。 詳細については`PInvoke`を参照してください[マネージ コードからネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)します。  
   
 ## <a name="see-also"></a>関連項目  
- [C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)   
+ [C++ サポート ライブラリ](../dotnet/cpp-support-library.md)   
  [方法: マーシャリング ライブラリを拡張する](../dotnet/how-to-extend-the-marshaling-library.md)

@@ -1,5 +1,5 @@
 ---
-title: Platform::Collections::VectorViewIterator クラス |Microsoft ドキュメント
+title: Platform::Collections::VectorViewIterator クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
@@ -15,15 +15,15 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee104956bdfb5c7b72d20195fb3fb7a2789e236c
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093063"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207706"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
-Windows ランタイムの派生オブジェクトの標準テンプレート ライブラリ反復子を提供`IVectorView`インターフェイスです。  
+Windows ランタイムから派生したオブジェクトの標準テンプレート ライブラリ反復子を提供します。`IVectorView`インターフェイス。  
   
  `ViewVectorIterator` は、 `VectorProxy<T>`型の要素を格納するプロキシ反復子です。 ただし、プロキシ オブジェクトは、ユーザー コードにはほとんどは表示されません。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。  
   
@@ -79,7 +79,7 @@ class VectorViewIterator;
 ## <a name="inheritance-hierarchy"></a>継承階層  
  `VectorViewIterator`  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  **ヘッダー:** collection.h  
   
  **名前空間:** Platform::Collections  
@@ -113,14 +113,14 @@ VectorViewIterator operator--(int);
 ### <a name="return-value"></a>戻り値  
  最初の構文は、現在の VectorViewIterator をデクリメントしてから返します。 2 番目の構文は、現在の VectorViewIterator のコピーを返してから、現在の VectorViewIterator をデクリメントします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初の VectorViewIterator 構文は、現在の VectorViewIterator の前置デクリメントを実行します。  
   
- 2 番目の構文は、現在の VectorViewIterator の後置デクリメントを実行します。 `int` 2 番目の構文の型が後置デクリメント演算、実際の整数オペランドではないことを示します。  
+ 2 番目の構文は、現在の VectorViewIterator の後置デクリメントを実行します。 `int` 2 番目の構文で型を後置デクリメント演算、実際の整数オペランドではなくを示します。  
   
 
 
-## <a name="operator-dereference"></a>  Vectorviewiterator::operator * 演算子
+## <a name="operator-dereference"></a>  Vectorviewiterator::operator\*演算子
 現在の VectorViewIterator により指定された要素への参照を取得します。  
   
 ### <a name="syntax"></a>構文  
@@ -134,7 +134,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  Vectorviewiterator::operator = = 演算子
+## <a name="operator-equality"></a>  Vectorviewiterator::operator = 演算子
 現在の VectorViewIterator が、指定された VectorViewIterator と等しいかどうかを示します。  
   
 ### <a name="syntax"></a>構文  
@@ -204,7 +204,7 @@ VectorViewIterator operator++(int);
 ### <a name="return-value"></a>戻り値  
  最初の構文は、現在の VectorViewIterator をインクリメントしてから返します。 2 番目の構文は、現在の VectorViewIterator のコピーを返し、現在の VectorViewIterator をインクリメントします。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>Remarks  
  最初の VectorViewIterator 構文は、現在の VectorViewIterator の前置インクリメントを実行します。  
   
  2 番目の構文は、現在の VectorViewIterator の後置インクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置インクリメント演算を示します。  
@@ -225,7 +225,7 @@ bool operator!=(const VectorViewIterator& other) const;
  別の VectorViewIterator。  
   
 ### <a name="return-value"></a>戻り値  
- `true` 現在の VectorViewIterator と等しくない場合`other`、それ以外の`false`します。  
+ `true` 現在の VectorViewIterator が等しくない場合`other`、それ以外の`false`します。  
   
 
 
@@ -262,7 +262,7 @@ bool operator<=(const VectorViewIterator& other) const;
  別の VectorIterator。  
   
 ### <a name="return-value"></a>戻り値  
- `true` かどうか、現在の VectorIterator より小さいかに等しい`other`、それ以外の`false`します。  
+ `true` 現在の VectorIterator と等しいまたはそれよりも小さいかどうか`other`、それ以外の`false`します。  
   
 
 
@@ -337,7 +337,7 @@ inline VectorViewIterator<T> operator+
 ### <a name="return-value"></a>戻り値  
  最初の構文では、現在の VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator。  
   
- 2 番目の構文、パラメーターの先頭から指定された転置にある要素を参照する VectorViewIterator で`i`です。  
+ 2 番目の構文のパラメーターの先頭から指定された転置にある要素を参照する VectorViewIterator`i`します。  
   
 
 
@@ -395,8 +395,8 @@ explicit VectorViewIterator(
  `v`  
  IVectorView\<T > オブジェクト。  
   
-### <a name="remarks"></a>コメント  
- 最初の構文例は既定のコンストラクターです。 2 番目の構文例は、IVectorView から VectorViewIterator を構築するために使用される明示的なコンス トラクター\<T > オブジェクト。  
+### <a name="remarks"></a>Remarks  
+ 最初の構文例は既定のコンストラクターです。 2 番目の構文例は、IVectorView から VectorViewIterator を構築するために使用する明示的なコンス トラクター\<T > オブジェクト。  
   
 
   

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9292e4d5ff9bf0f6f829c14dd0ee11e77a641d2d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 05bae03a94eac7a783f4ccb7248c8699729a006d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027655"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208690"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
 Microsoft Foundation Class ライブラリのメッセージ マップ アーキテクチャの基本クラスです。  
@@ -326,7 +326,7 @@ HRESULT GetTypeInfoOfGuid(
  ポインターへのポインター、`ITypeInfo`インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合または呼び出しの失敗を示す HRESULT。 成功した場合、* *ppTypeInfo*型情報インターフェイスを指します。  
+ 成功した場合または呼び出しの失敗を示す HRESULT。 成功した場合、 \* *ppTypeInfo*型情報インターフェイスを指します。  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  タイプ ライブラリへのポインターを取得します。  
@@ -345,7 +345,7 @@ virtual HRESULT GetTypeLib(
  ポインターへのポインター、`ITypeLib`インターフェイス。  
   
 ### <a name="return-value"></a>戻り値  
- 成功した場合または呼び出しの失敗を示す HRESULT。 成功した場合、* *ppTypeLib*タイプ ライブラリのインターフェイスを指します。  
+ 成功した場合または呼び出しの失敗を示す HRESULT。 成功した場合、 \* *ppTypeLib*タイプ ライブラリのインターフェイスを指します。  
   
 ### <a name="remarks"></a>Remarks  
  派生クラスは、このメンバー関数をオーバーライドする必要があります (上書きされない場合、 `GetTypeLib` TYPE_E_CANTLOADLIBRARY を返します)。 使用して、 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)マクロで、実装も`GetTypeInfoCount`と`GetTypeLibCache`します。  
@@ -437,10 +437,10 @@ virtual BOOL OnCmdMsg(
   
 |*nCode*値|*pExtra*値|  
 |-------------------|--------------------|  
-|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
-|CN_EVENT|AFX_EVENT *|  
-|CN_UPDATE_COMMAND_UI|CCmdUI *|  
-|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|  
+|CN_EVENT|AFX_EVENT\*|  
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|  
+|CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|  
 |CN_OLE_UNREGISTER|NULL|  
   
 ### <a name="example"></a>例  
