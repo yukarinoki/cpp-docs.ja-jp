@@ -1,5 +1,5 @@
 ---
-title: Concurrency::direct3d 名前空間の関数 (AMP) |Microsoft ドキュメント
+title: Concurrency::direct3d 名前空間関数 (AMP) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -28,14 +28,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 457b2d176b518e9c846c8684b8d21b757fd81a11
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693729"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208953"
 ---
-# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 名前空間の関数 (AMP)
+# <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 名前空間関数 (AMP)
 ||||  
 |-|-|-|  
 |[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
@@ -48,7 +48,7 @@ ms.locfileid: "33693729"
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 **ヘッダー:** amp.h **Namespace:** 同時実行
   
 ##  <a name="abs"></a>  abs  
@@ -106,7 +106,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
  符号なし整数値  
   
 ### <a name="return-value"></a>戻り値  
- _X で設定されているビットの数を返します  
+ _X 内のセットのビット数を返します  
 
 ## <a name="create_accelerator_view"></a> create_accelerator_view  
 作成、 [accelerator_view](accelerator-view-class.md) Direct3D デバイス インターフェイスへのポインターからのオブジェクト。  
@@ -140,7 +140,7 @@ accelerator_view create_accelerator_view(
 ## <a name="return-value"></a>戻り値  
  渡された Direct3D デバイス インターフェイスから作成された `accelerator_view` オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この関数は、Direct3D デバイス インターフェイスへの既存のポインターから新しい `accelerator_view` オブジェクトを作成します。 関数呼び出しが成功した場合、パラメーターの参照カウントはインターフェイスに対する `AddRef` 呼び出しを使用してインクリメントされます。 DirectX コードで不要になった場合は、オブジェクトを安全に解放できます。 メソッドの呼び出しに失敗した場合、 [runtime_exception](runtime-exception-class.md)がスローされます。  
   
  この関数を使用して作成する `accelerator_view` オブジェクトはスレッド セーフです。 `accelerator_view` オブジェクトの同時使用を同期する必要があります。 `accelerator_view` オブジェクトと生の ID3D11Device インターフェイスを非同期で同時に使用すると、未定義の動作が発生します。  
@@ -328,7 +328,7 @@ inline unsigned int mad(
  3 番目の指定された引数。  
   
 ### <a name="return-value"></a>戻り値  
- 結果`_X`  *  `_Y`  + `_Z`です。  
+ 結果`_X` \* `_Y`  + `_Z`します。  
   
 ##  <a name="make_array"></a>  make_array  
  Direct3D バッファーのインターフェイス ポインターから配列を作成します。  
@@ -364,7 +364,7 @@ array<value_type, _Rank> make_array(
  用意された Direct3D バッファーを使用して作成された配列。  
   
 ##  <a name="noise"></a>  ノイズ  
- パーリン ノイズ アルゴリズムを使用して、ランダムな値が生成されます。  
+ パーリン ノイズ アルゴリズムを使用してランダムな値を生成します。  
   
 ```  
 inline float noise(float _X) restrict(amp);
@@ -375,7 +375,7 @@ inline float noise(float _X) restrict(amp);
  パーリン ノイズを生成する浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- -1 ~ 1 の間の範囲内のパーリン ノイズの値を返します  
+ -1 ~ 1 の間の範囲内、パーリン ノイズの値を返します  
   
 ##  <a name="radians"></a>  radians  
  _X を角度からラジアンに変換します。  
@@ -420,7 +420,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
  符号なし整数値  
   
 ### <a name="return-value"></a>戻り値  
- _X の逆にビットの順序と値を返します。  
+ _X の逆ビット順序の値を返します  
   
 ##  <a name="saturate"></a>  saturate  
  0 ～ 1 の範囲内で _X をクランプします。  
@@ -434,7 +434,7 @@ inline float saturate(float _X) restrict(amp);
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- 0 ~ 1 の範囲内で固定 _X を返します  
+ _X をクランプ 0 ~ 1 の範囲を返します  
   
 ##  <a name="sign"></a>  sign  
  指定された引数の符号を確認します。  
@@ -471,7 +471,7 @@ inline float smoothstep(
  浮動小数点値  
   
 ### <a name="return-value"></a>戻り値  
- _X が _Min; より小さい場合は 0 を返します_X が _Max; より大きい場合は 1それ以外の場合、0 ~ 1 の場合、_X が [_Min, _Max] の範囲内の値  
+ _X が _Min; より小さい場合は 0 を返します_X が _Max; より大きい場合は 1それ以外の場合、0 ~ _X が [_Min, _Max] の範囲内にある場合は 1 の値  
   
 ##  <a name="step"></a>  step  
  2 つの値を比較し、どちらの値が大きいかに応じて 0 または 1 を返します。  
