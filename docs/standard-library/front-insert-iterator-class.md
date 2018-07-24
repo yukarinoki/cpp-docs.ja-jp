@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e94b9f748924c9711c814f0f823467b313affcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e709ce37d60281bbc56a0e8ecf3cc7eafef5b0ee
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964386"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207612"
 ---
 # <a name="frontinsertiterator-class"></a>front_insert_iterator クラス
 
@@ -63,9 +63,9 @@ class front_insert_iterator;
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|前方挿入のための出力反復子式 * `i` = `x` を実装するために使用される逆参照演算子。|
+|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `i`  =  `x`前方挿入の。|
 |[operator++](#op_add_add)|値を格納できる次の位置に `front_insert_iterator` をインクリメントします。|
-|[operator=](#op_eq)|前方挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
+|[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`前方挿入の。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -177,7 +177,7 @@ After the front insertions, the list L is:
 *\
 ```
 
-## <a name="op_star"></a>  front_insert_iterator::operator*
+## <a name="op_star"></a>  front_insert_iterator::operator\*
 
 アドレス指定された要素を返す挿入反復子を逆参照します。
 

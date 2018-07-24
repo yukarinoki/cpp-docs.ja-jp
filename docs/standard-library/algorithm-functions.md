@@ -208,12 +208,12 @@ helpviewer_keywords:
 - std::swap [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79d9492588688c7dd7e7fa754e4a4f0b0f892d05
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: d905c8208bef98d584d3052c242de1ac127a4830
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027941"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209301"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -2705,7 +2705,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="remarks"></a>Remarks
 
-`swap` は、旧バージョンとの互換性のために C++ 標準に含まれていた i **ter_swap** よりも優先的に使用する必要があります。 `Fit1` と `Fit2` が前方反復子の場合、`iter_swap` ( `Fit1`, `Fit2` ) は `swap` ( * `Fit1`, \* `Fit2` ) と同じです。
+`swap` は、旧バージョンとの互換性のために C++ 標準に含まれていた i **ter_swap** よりも優先的に使用する必要があります。 場合`Fit1`と`Fit2`は前方反復子、 `iter_swap` ( `Fit1`、 `Fit2` ) と等価`swap`( \* `Fit1`、 \* `Fit2` )。
 
 入力前方反復子の値の型は、同じ値にする必要があります。
 

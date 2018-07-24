@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 34089ec501934f5d6aa8408acded821a67f67502
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5882a2fc31d5c9369429cdc39fb86a1c08e0c828
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958479"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208833"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -141,7 +141,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>パラメーター
 
-*str* std::string、char *、文字列リテラルまたは未加工の文字列リテラル、またはこれらのさまざまなバージョン (例: std::wstring, wchar_t\*)。
+*str* std::string、char\*、文字列リテラルまたは未加工の文字列リテラル、またはこれらのさまざまなバージョン (例: std::wstring, wchar_t\*)。
 
 *区切り記号*A ユーザー指定の文字またはワイド文字、先頭と文字列の末尾の区切り記号として使用します。
 

@@ -1,5 +1,5 @@
 ---
-title: _scalb、_scalbf |Microsoft ドキュメント
+title: _scalb、_scalbf |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2018
 ms.technology:
@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a465ca74af72a5114eac949439ab8493f89bcb39
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406265"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207521"
 ---
 # <a name="scalb-scalbf"></a>_scalb、_scalbf
 
@@ -71,17 +71,17 @@ float _scalbf(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は指数値が返されます。 オーバーフローが発生 (の符号に応じて*x*)、 **_scalb** +/-返します**HUGE_VAL**; **errno**に変数が設定されている**ERANGE**です。
+正常終了した場合は指数値が返されます。 オーバーフローが発生 (の符号に応じて*x*)、 **_scalb** +/-返します**HUGE_VAL**、 **errno**に変数が設定されている**ERANGE**します。
 
 このリターン コードとその他のリターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Scalb**関数の値を計算*x* * 2<sup>*exp*</sup>です。
+**_Scalb**関数の値を計算*x* \* 2<sup>*exp*</sup>します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_scalb**、 **_scalbf**|\<float.h>|
 

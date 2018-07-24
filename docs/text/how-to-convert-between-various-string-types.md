@@ -1,5 +1,5 @@
 ---
-title: '方法: さまざまな文字列型の間で変換 |Microsoft ドキュメント'
+title: '方法: さまざまな文字列型間の変換 |Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d54cafaa2f0b4d3db79e8b4c8fc381457952794
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861228"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208332"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間で変換する
-このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 対象となっている文字列型を含める`char *`、 `wchar_t*`、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および<xref:System.String?displayProperty=fullName>です。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。  
+このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 カバーされる文字列の種類を含める`char *`、 `wchar_t*`、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および<xref:System.String?displayProperty=fullName>します。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。  
   
-## <a name="converting-from-char-"></a>char * からの変換  
+## <a name="converting-from-char-"></a>Char からの変換 \*  
   
 ## <a name="example"></a>例  
   
@@ -128,7 +128,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## <a name="converting-from-wchart-"></a>wchar_t * からの変換  
+## <a name="converting-from-wchart-"></a>Wchar_t からの変換 \*  
   
 ## <a name="example"></a>例  
   
@@ -716,7 +716,7 @@ Hello, World! (System::String)
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- この例は、ワイド文字 (Unicode) から変換する方法を示します[system::string](assetId:///System::String?qualifyHint=True&autoUpgrade=True)上に示したその他の文字列型にします。  
+ この例では、ワイド文字 (Unicode) から変換[system::string](assetId:///System::String?qualifyHint=True&autoUpgrade=True)上に示したその他の文字列型。  
   
 ### <a name="code"></a>コード  
   

@@ -1,5 +1,5 @@
 ---
-title: Concurrency::precise_math Namespace |Microsoft ドキュメント
+title: Concurrency::precise_math Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -143,15 +143,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 181b80f97dd7ae3e44d3c7c51139d492da967ba3
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e8e6d0c6a33f9e981f50e847cde614299ed7b028
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695380"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208846"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math 名前空間
-`precise_math` 名前空間の関数は C99 に準拠しています。 両方の単一の精度と倍精度浮動小数点精度バージョンの各関数が含まれています。 たとえば、`acos`倍精度のバージョンと`acosf`単精度バージョンです。 単精度関数も含め、これらの関数では、アクセラレータでの拡張の倍精度サポートが必要です。 使用することができます、 [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision)を特定のかどうかは、特定のアクセラレータでこれらの関数を実行できます。 
+`precise_math` 名前空間の関数は C99 に準拠しています。 単一精度と倍精度浮動小数点精度バージョンの各関数が含まれています。 たとえば、`acos`倍精度のバージョンと`acosf`単精度バージョンです。 これらの関数は、単精度関数を含む、アクセラレータ上での倍精度の拡張サポートが必要です。 使用することができます、 [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision)するかどうかは、特定のアクセラレータでこれらの関数を実行できます。 
 
   
 ## <a name="syntax"></a>構文  
@@ -170,41 +170,41 @@ namespace precise_math;
 |----------|-----------------|  
 |[acos](concurrency-precise-math-namespace-functions.md#acos)|オーバーロードされます。 引数の逆余弦を計算します。|  
 |[acosf](concurrency-precise-math-namespace-functions.md#acosf)|引数の逆余弦を計算します。|  
-|[acosh](concurrency-precise-math-namespace-functions.md#acosh)|オーバーロードされます。 引数の逆ハイパーボリック コサインを計算します。|  
-|[acoshf](concurrency-precise-math-namespace-functions.md#acoshf)|引数の逆ハイパーボリック コサインを計算します。|  
+|[acosh](concurrency-precise-math-namespace-functions.md#acosh)|オーバーロードされます。 引数の逆双曲線余弦を計算します。|  
+|[acoshf](concurrency-precise-math-namespace-functions.md#acoshf)|引数の逆双曲線余弦を計算します。|  
 |[asin](concurrency-precise-math-namespace-functions.md#asin)|オーバーロードされます。 引数の逆正弦を計算します。|  
 |[asinf](concurrency-precise-math-namespace-functions.md#asinf)|引数の逆正弦を計算します。|  
-|[asinh](concurrency-precise-math-namespace-functions.md#asinh)|オーバーロードされます。 引数の双曲線逆正弦を計算します|  
-|[asinhf](concurrency-precise-math-namespace-functions.md#asinhf)|引数の双曲線逆正弦を計算します|  
+|[asinh](concurrency-precise-math-namespace-functions.md#asinh)|オーバーロードされます。 引数の逆双曲線正弦を計算します。|  
+|[asinhf](concurrency-precise-math-namespace-functions.md#asinhf)|引数の逆双曲線正弦を計算します。|  
 |[atan](concurrency-precise-math-namespace-functions.md#atan)|オーバーロードされます。 引数の逆正接を計算します。|  
 |[atan2](concurrency-precise-math-namespace-functions.md#atan2)|オーバーロードされます。 _Y/_X の逆正接を計算します。|  
 |[atan2f](concurrency-precise-math-namespace-functions.md#atan2f)|_Y/_X の逆正接を計算します。|  
 |[atanf](concurrency-precise-math-namespace-functions.md#atanf)|引数の逆正接を計算します。|  
-|[atanh](concurrency-precise-math-namespace-functions.md#atanh)|オーバーロードされます。 引数の双曲線逆正接を計算します|  
-|[atanhf](concurrency-precise-math-namespace-functions.md#atanhf)|引数の双曲線逆正接を計算します|  
-|[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|オーバーロードされます。 引数の実際の立方根を計算します|  
-|[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|引数の実際の立方根を計算します|  
+|[atanh](concurrency-precise-math-namespace-functions.md#atanh)|オーバーロードされます。 引数の双曲線逆正接を計算します。|  
+|[atanhf](concurrency-precise-math-namespace-functions.md#atanhf)|引数の双曲線逆正接を計算します。|  
+|[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|オーバーロードされます。 引数の実際の立方根を計算します。|  
+|[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|引数の実際の立方根を計算します。|  
 |[ceil](concurrency-precise-math-namespace-functions.md#ceil)|オーバーロードされます。 引数の切り上げを計算します。|  
 |[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|引数の切り上げを計算します。|  
-|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|オーバーロードされます。 引数の絶対値 _X と _Y の符号と値を生成します。|  
-|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|引数の絶対値 _X と _Y の符号と値を生成します。|  
+|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|オーバーロードされます。 引数の絶対値 _X と _Y の符号を持つ値を生成します。|  
+|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|引数の絶対値 _X と _Y の符号を持つ値を生成します。|  
 |[cos](concurrency-precise-math-namespace-functions.md#cos)|オーバーロードされます。 引数の余弦を計算します。|  
 |[cosf](concurrency-precise-math-namespace-functions.md#cosf)|引数の余弦を計算します。|  
 |[cosh](concurrency-precise-math-namespace-functions.md#cosh)|オーバーロードされます。 引数の双曲線余弦の値を計算します。|  
 |[coshf](concurrency-precise-math-namespace-functions.md#coshf)|引数の双曲線余弦の値を計算します。|  
-|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|オーバーロードされます。 Pi のコサインの値を計算 * _X|  
-|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Pi のコサインの値を計算 * _X|  
-|[erf](concurrency-precise-math-namespace-functions.md#erf)|オーバーロードされます。 _X の誤差関数を計算します|  
-|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|オーバーロードされます。 _X の相補誤差関数を計算します。|  
-|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|_X の相補誤差関数を計算します。|  
-|[erfcinv](concurrency-precise-math-namespace-functions.md#erfcinv)|オーバーロードされます。 _X の逆相補誤差関数を計算します。|  
-|[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|_X の逆相補誤差関数を計算します。|  
-|[erff](concurrency-precise-math-namespace-functions.md#erff)|_X の誤差関数を計算します|  
-|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|オーバーロードされます。 _X の逆エラー関数を計算します。|  
-|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|_X の逆エラー関数を計算します。|  
+|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|オーバーロードされます。 Pi のコサイン値を計算\*_X|  
+|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Pi のコサイン値を計算\*_X|  
+|[erf](concurrency-precise-math-namespace-functions.md#erf)|オーバーロードされます。 _X の誤差関数を計算します。|  
+|[erfc](concurrency-precise-math-namespace-functions.md#erfc)|オーバーロードされます。 _X の相補誤差関数を計算します|  
+|[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|_X の相補誤差関数を計算します|  
+|[erfcinv](concurrency-precise-math-namespace-functions.md#erfcinv)|オーバーロードされます。 _X の逆の相補誤差関数を計算します|  
+|[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|_X の逆の相補誤差関数を計算します|  
+|[erff](concurrency-precise-math-namespace-functions.md#erff)|_X の誤差関数を計算します。|  
+|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|オーバーロードされます。 _X の逆エラー関数を計算します|  
+|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|_X の逆エラー関数を計算します|  
 |[exp](concurrency-precise-math-namespace-functions.md#exp)|オーバーロードされます。 e を底とする引数のべき乗を計算します。|  
-|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|オーバーロードされます。 底 10 する引数のべき乗を計算します|  
-|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|底 10 する引数のべき乗を計算します|  
+|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|オーバーロードされます。 底 10 の引数の指数を計算します。|  
+|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|底 10 の引数の指数を計算します。|  
 |[exp2](concurrency-precise-math-namespace-functions.md#exp2)|オーバーロードされます。 2 を底とする引数のべき乗を計算します。|  
 |[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|2 を底とする引数のべき乗を計算します。|  
 |[expf](concurrency-precise-math-namespace-functions.md#expf)|e を底とする引数のべき乗を計算します。|  
@@ -212,42 +212,42 @@ namespace precise_math;
 |[expm1f](concurrency-precise-math-namespace-functions.md#expm1f)|e を底とする引数のべき乗マイナス 1 を計算します。|  
 |[fabs](concurrency-precise-math-namespace-functions.md#fabs)|オーバーロードされます。 引数の絶対値を返します。|  
 |[fabsf](concurrency-precise-math-namespace-functions.md#fabsf)|引数の絶対値を返します。|  
-|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|オーバーロードされます。 引数の正の値の差を決定します。|  
-|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|引数の正の値の差を決定します。|  
+|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|オーバーロードされます。 引数の正の違いを判断します。|  
+|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|引数の正の違いを判断します。|  
 |[floor](concurrency-precise-math-namespace-functions.md#floor)|オーバーロードされます。 引数の切り捨てを計算します。|  
 |[floorf](concurrency-precise-math-namespace-functions.md#floorf)|引数の切り捨てを計算します。|  
-|[fma](concurrency-precise-math-namespace-functions.md#fma)|オーバーロードされます。 コンピューティング (_X * _Y) + _Z、1 つの三項操作どおりに丸められました。|  
-|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|コンピューティング (_X * _Y) + _Z、1 つの三項操作どおりに丸められました。|  
+|[fma](concurrency-precise-math-namespace-functions.md#fma)|オーバーロードされます。 計算 (_X \* _Y) + _Z、1 つの三項操作どおりに丸められました。|  
+|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|計算 (_X \* _Y) + _Z、1 つの三項操作どおりに丸められました。|  
 |[fmax](concurrency-precise-math-namespace-functions.md#fmax)|オーバーロードされます。 引数の最大数値を判断します。|  
 |[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|引数の最大数値を判断します。|  
 |[fmin](concurrency-precise-math-namespace-functions.md#fmin)|オーバーロードされます。 引数の最小数値を判断します。|  
 |[fminf](concurrency-precise-math-namespace-functions.md#fminf)|引数の最小数値を判断します。|  
 |[fmod 関数 (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|オーバーロードされます。 _X/_Y の浮動小数点の剰余を計算します。|  
 |[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|_X/_Y の浮動小数点の剰余を計算します。|  
-|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|オーバーロードされます。 引数の値に NaN、無限、通常のある、0 として分類します。|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|オーバーロードされます。 NaN、無限、normal、ある、0 と引数の値は、分類します。|  
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|オーバーロードされます。 _X の仮数と指数を取得します。|  
 |[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|_X の仮数と指数を取得します。|  
 |[hypot](concurrency-precise-math-namespace-functions.md#hypot)|オーバーロードされます。 _X と _Y の 2 乗の合計の平方根を計算します。|  
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|_X と _Y の 2 乗の合計の平方根を計算します。|  
-|[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|オーバーロードされます。 符号付き整数値として _X の指数部を抽出します。|  
-|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|符号付き整数値として _X の指数部を抽出します。|  
+|[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|オーバーロードされます。 符号付き整数値として _X のうち指数部を抽出します。|  
+|[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|符号付き整数値として _X のうち指数部を抽出します。|  
 |[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|オーバーロードされます。 引数に有限値が存在するかどうかを判断します。|  
 |[isinf](concurrency-precise-math-namespace-functions.md#isinf)|オーバーロードされます。 引数が無限値であるかどうかを判断します。|  
 |[isnan](concurrency-precise-math-namespace-functions.md#isnan)|オーバーロードされます。 引数が NaN であるかどうかを判断します。|  
 |[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|オーバーロードされます。 引数は、通常、かどうかを決定します。|  
 |[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|オーバーロードされます。 仮数と指数から実数を計算します。|  
 |[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|仮数と指数から実数を計算します。|  
-|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|オーバーロードされます。 ガンマ値、引数の絶対値の自然対数を計算します|  
-|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|ガンマ値、引数の絶対値の自然対数を計算します|  
+|[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|オーバーロードされます。 ガンマ値、引数の絶対値の自然対数を計算します。|  
+|[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|ガンマ値、引数の絶対値の自然対数を計算します。|  
 |[log](concurrency-precise-math-namespace-functions.md#log)|オーバーロードされます。 e を底とする引数の対数を計算します。|  
 |[log10](concurrency-precise-math-namespace-functions.md#log10)|オーバーロードされます。 10 を底とする引数の対数を計算します。|  
 |[log10f](concurrency-precise-math-namespace-functions.md#log10f)|10 を底とする引数の対数を計算します。|  
-|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|オーバーロードされます。 1 を足した引数の e を底と対数を計算します。|  
-|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|1 を足した引数の e を底と対数を計算します。|  
+|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|オーバーロードされます。 1 を足した引数の e を底とする対数を計算します。|  
+|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|1 を足した引数の e を底とする対数を計算します。|  
 |[log2](concurrency-precise-math-namespace-functions.md#log2)|オーバーロードされます。 2 を底とする引数の対数を計算します。|  
 |[log2f](concurrency-precise-math-namespace-functions.md#log2f)|2 を底とする引数の対数を計算します。|  
-|[logb](concurrency-precise-math-namespace-functions.md#logb)|オーバーロードされます。 浮動小数点形式で符号付き整数値として、_X の指数部を抽出します。|  
-|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|浮動小数点形式で符号付き整数値として、_X の指数部を抽出します。|  
+|[logb](concurrency-precise-math-namespace-functions.md#logb)|オーバーロードされます。 浮動小数点形式の符号付き整数値として、_X のうち指数部を抽出します。|  
+|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|浮動小数点形式の符号付き整数値として、_X のうち指数部を抽出します。|  
 |[logf](concurrency-precise-math-namespace-functions.md#logf)|e を底とする引数の対数を計算します。|  
 |[modf](concurrency-precise-math-namespace-functions.md#modf)|オーバーロードされます。 _X を小数部と整数部に分割します。|  
 |[modff](concurrency-precise-math-namespace-functions.md#modff)|_X を小数部と整数部に分割します。|  
@@ -263,20 +263,20 @@ namespace precise_math;
 |[powf](concurrency-precise-math-namespace-functions.md#powf)|_X の _Y 乗を計算します。|  
 |[probit](concurrency-precise-math-namespace-functions.md#probit)|オーバーロードされます。 引数の逆累積分布関数を返します|  
 |[probitf](concurrency-precise-math-namespace-functions.md#probitf)|引数の逆累積分布関数を返します|  
-|[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|オーバーロードされます。 キューブのルート、引数の逆数を返します。|  
-|[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|キューブのルート、引数の逆数を返します。|  
+|[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|オーバーロードされます。 引数の立方根の逆数を返します。|  
+|[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|引数の立方根の逆数を返します。|  
 |[remainder](concurrency-precise-math-namespace-functions.md#remainder)|オーバーロードされます。 剰余を計算します _X REM _Y。|  
 |[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|剰余を計算します _X REM _Y。|  
-|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|オーバーロードされます。 _X REM _Y として同じ剰余を計算します。 また、23 の下位ビット整数の商 _X/_Y を計算し、_X/_Y と同じ符号をその値を提供します。 _Quo を指す整数で、この署名付きの値を格納します。|  
-|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|_X REM _Y として同じ剰余を計算します。 また、23 の下位ビット整数の商 _X/_Y を計算し、_X/_Y と同じ符号をその値を提供します。 _Quo を指す整数で、この署名付きの値を格納します。|  
+|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|オーバーロードされます。 _X REM _Y として同じの剰余を計算します。 整数の商の _X/_Y の下位の 23 ビットを計算し、_X/_Y と同じ符号にその値を提供します。 _Quo で示される整数の符号付きのこの値を格納します。|  
+|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|_X REM _Y として同じの剰余を計算します。 整数の商の _X/_Y の下位の 23 ビットを計算し、_X/_Y と同じ符号にその値を提供します。 _Quo で示される整数の符号付きのこの値を格納します。|  
 |[round](concurrency-precise-math-namespace-functions.md#round)|オーバーロードされます。 _X を最も近い整数値に丸めます。|  
 |[roundf](concurrency-precise-math-namespace-functions.md#roundf)|_X を最も近い整数値に丸めます。|  
 |[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|オーバーロードされます。 引数の平方根の逆数を返します。|  
 |[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|引数の平方根の逆数を返します。|  
-|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|オーバーロードされます。 乗算する電源 _Y FLT_RADIX により _X|  
-|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|乗算する電源 _Y FLT_RADIX により _X|  
-|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|オーバーロードされます。 乗算する電源 _Y FLT_RADIX により _X|  
-|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|乗算する電源 _Y FLT_RADIX により _X|  
+|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|オーバーロードされます。 Power _Y に FLT_RADIX により _X を乗算します。|  
+|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Power _Y に FLT_RADIX により _X を乗算します。|  
+|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|オーバーロードされます。 Power _Y に FLT_RADIX により _X を乗算します。|  
+|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Power _Y に FLT_RADIX により _X を乗算します。|  
 |[signbit](concurrency-precise-math-namespace-functions.md#signbit)|オーバーロードされます。 _X の符号が負の値であるかどうかを決定します。|  
 |[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|_X の符号が負の値であるかどうかを決定します。|  
 |[sin](concurrency-precise-math-namespace-functions.md#sin)|オーバーロードされます。 引数の正弦値を計算します。|  
@@ -285,22 +285,22 @@ namespace precise_math;
 |[sinf](concurrency-precise-math-namespace-functions.md#sinf)|引数の正弦値を計算します。|  
 |[sinh](concurrency-precise-math-namespace-functions.md#sinh)|オーバーロードされます。 引数の双曲線正弦の値を計算します。|  
 |[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|引数の双曲線正弦の値を計算します。|  
-|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|オーバーロードされます。 Pi の正弦値を計算 * _X|  
-|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Pi の正弦値を計算 * _X|  
+|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|オーバーロードされます。 Pi のサイン値を計算\*_X|  
+|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Pi のサイン値を計算\*_X|  
 |[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|オーバーロードされます。 引数の squre ルートを計算します。|  
 |[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|引数の squre ルートを計算します。|  
 |[tan](concurrency-precise-math-namespace-functions.md#tan)|オーバーロードされます。 引数の正接値を計算します。|  
 |[tanf](concurrency-precise-math-namespace-functions.md#tanf)|引数の正接値を計算します。|  
 |[tanh](concurrency-precise-math-namespace-functions.md#tanh)|オーバーロードされます。 引数の双曲線正接の値を計算します。|  
 |[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|引数の双曲線正接の値を計算します。|  
-|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|オーバーロードされます。 Pi の正接値を計算 * _X|  
-|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Pi の正接値を計算 * _X|  
-|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|オーバーロードされます。 _X のガンマ関数を計算します。|  
-|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|_X のガンマ関数を計算します。|  
+|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|オーバーロードされます。 Pi のタンジェント値を計算\*_X|  
+|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Pi のタンジェント値を計算\*_X|  
+|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|オーバーロードされます。 _X のガンマ関数を計算します|  
+|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|_X のガンマ関数を計算します|  
 |[trunc](concurrency-precise-math-namespace-functions.md#trunc)|オーバーロードされます。 引数を整数コンポーネントに切り捨てます。|  
 |[truncf](concurrency-precise-math-namespace-functions.md#truncf)|引数を整数コンポーネントに切り捨てます。|  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** amp_math.h  
   
  **名前空間:** Concurrency  

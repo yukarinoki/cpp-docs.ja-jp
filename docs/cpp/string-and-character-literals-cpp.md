@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16a4d3e663c0cb8d80d3b154f23082d88b446b6f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 360945f8156c5c92c62cb2209308c7cdd2860cbc
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942095"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208550"
 ---
 # <a name="string-and-character-literals--c"></a>文字列リテラルと文字リテラル (C++)
 C++ はさまざまな文字列と文字型をサポートし、これらの型のリテラル値を表す方法を提供しています。 ソース コードでは、文字セットを使用して文字リテラルと文字列リテラルの内容を表現します。 ユニバーサル文字名とエスケープ文字を使用すると、基本ソース文字セットのみを使用してあらゆる文字列を表現できます。 未加工文字列リテラルを使用すると、エスケープ文字の使用を避けられるとともに、全種類の文字列リテラルを表すことができます。 余分な構築または変換手順を実行することなく、std::string リテラルを作成することもできます。  
@@ -310,7 +310,7 @@ const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);  
 ```  
   
- 注意`strlen()`と`wcslen()`サイズが文字列型の要素のサイズと等しく、終端の null 文字のサイズが含まれていません: char * 文字列を 1 バイト、wchar_t に 2 バイト\*または char16_t\*文字列、4 バイト char32_t\*文字列。  
+ 注意して`strlen()`と`wcslen()`サイズが文字列型の要素のサイズと等しく、終端の null 文字のサイズが含まれていません 1 バイト文字を\*wchar_t に 2 つのバイトの文字列\*または char16_t\*。文字列、および char32_t は 4 バイト\*文字列。  
   
  文字列リテラルの最大長は 65535 バイトです。 この制限は、ナローとワイドの両方の文字列リテラルに適用されます。  
   
@@ -380,7 +380,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 ```  
   
 ### <a name="string-literals-with-universal-character-names"></a>ユニバーサル文字名を持つ文字列リテラル  
- ネイティブ (未加工でない) 文字列リテラルは、ユニバーサル文字名が文字列型の 1 つ以上の文字としてエンコードできる限り、ユニバーサル文字名を使用して任意の文字を表すことができます。  たとえば、拡張文字を表すユニバーサル文字名は、ANSI コード ページ内のナロー文字列でエンコードすることはできませんが、一部のマルチバイト コード ページ内のナロー文字列、UTF-8 文字列、またはワイド文字列でエンコードすることができます。 C++ 11 で、Unicode のサポートが char16_t * および char32_t によって拡張された\*文字列型。  
+ ネイティブ (未加工でない) 文字列リテラルは、ユニバーサル文字名が文字列型の 1 つ以上の文字としてエンコードできる限り、ユニバーサル文字名を使用して任意の文字を表すことができます。  たとえば、拡張文字を表すユニバーサル文字名は、ANSI コード ページ内のナロー文字列でエンコードすることはできませんが、一部のマルチバイト コード ページ内のナロー文字列、UTF-8 文字列、またはワイド文字列でエンコードすることができます。 C++ 11 で Unicode のサポートは、char16_t によって拡張された\*と char32_t\*文字列型。  
   
 ```cpp  
 // ASCII smiling face  

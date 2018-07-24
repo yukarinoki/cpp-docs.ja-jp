@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE コマンドライン |Microsoft ドキュメント
+title: BSCMAKE コマンドライン |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7866d2960acdd89c3015470ef3971307ba162cd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b79f7e7c181112877c795f3601e8211e70403563
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369498"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207748"
 ---
 # <a name="bscmake-command-line"></a>BSCMAKE コマンド ライン
 BSCMAKE を実行するには、次のコマンドライン構文を使用します。  
@@ -28,21 +28,21 @@ BSCMAKE を実行するには、次のコマンドライン構文を使用しま
 BSCMAKE [options] sbrfiles  
 ```  
   
- オプションでのみ使用できます、`options`コマンド ラインでフィールドです。  
+ オプションでのみ表示されます、`options`コマンドラインでフィールド。  
   
- *Sbrfiles*フィールドは、コンパイラやアセンブラーによって作成された 1 つ以上の .sbr ファイルを指定します。 スペースまたはタブでは、.sbr ファイルの名前を区切ります。 拡張子を指定する必要があります。既定値はありません。 ファイル名は、パスを指定して、オペレーティング システムのワイルドカードを使用することができます (* と?) です。  
+ *Sbrfiles*フィールドは、コンパイラまたはアセンブラーによって作成された 1 つ以上の .sbr ファイルを指定します。 スペースまたはタブでは、.sbr ファイルの名前を区切ります。 拡張子を指定する必要があります。既定値はありません。 ファイル名は、パスを指定して、オペレーティング システムのワイルドカードを使用することができます (\*と?)。  
   
- インクリメンタル ビルドで、最初のビルドに含まれていない新しい .sbr ファイルを指定できます。 すべてのコントリビューションをブラウザー情報ファイルに保持する場合は、.bsc ファイルの作成に使用された元 (ファイルの切り捨てを含む) すべての .sbr ファイルを指定する必要があります。 .Sbr ファイルを省略すると、ブラウザー情報ファイルにそのファイルの金額が削除されます。  
+ インクリメンタル ビルドでは、最初のビルドに含まれていない新しい .sbr ファイルを指定できます。 すべての貢献をブラウザー情報ファイルに保持する場合は、.bsc ファイルの作成に使用された最初 (切り捨てられたファイルを含む) すべての .sbr ファイルを指定する必要があります。 .Sbr ファイルを省略した場合は、ブラウザー情報ファイルをそのファイルの貢献度が削除されます。  
   
- フル ビルドの切り捨てられた .sbr ファイルを指定しません。 フル ビルドには、すべての指定した .sbr ファイルからの協力が必要です。 フル ビルドを実行する前に、プロジェクトを再コンパイルし、空のファイルで新しい .sbr ファイルを作成します。  
+ フル ビルドの切り捨てられた .sbr ファイルを指定しません。 完全なビルドでは、すべての指定した .sbr ファイルからの投稿が必要です。 フル ビルドを実行する前に、プロジェクトを再コンパイルし、空のファイルごとに新しい .sbr ファイルを作成します。  
   
- 次のコマンドは、3 つの .sbr ファイルから MAIN.bsc という名前のファイルをビルドするを実行します。  
+ 次のコマンドは、3 つの .sbr ファイルから MAIN.bsc をという名前のファイルをビルドするにを実行します。  
   
 ```  
 BSCMAKE main.sbr file1.sbr file2.sbr  
 ```  
   
- 関連情報については、次を参照してください。 [BSCMAKE コマンド ファイル](../../build/reference/bscmake-command-file-response-file.md)と[BSCMAKE オプション](../../build/reference/bscmake-options.md)です。  
+ 関連情報については、次を参照してください。 [BSCMAKE コマンド ファイル](../../build/reference/bscmake-command-file-response-file.md)と[BSCMAKE オプション](../../build/reference/bscmake-options.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [BSCMAKE リファレンス](../../build/reference/bscmake-reference.md)

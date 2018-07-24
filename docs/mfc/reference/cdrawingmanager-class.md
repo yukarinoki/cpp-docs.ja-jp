@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b5970f9d0ea6e3b0c7ed4715c8ff9c3578dc00
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2f19461b04f98ab06a2c828b0f61fb556f9a7d7d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337422"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209171"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
 `CDrawingManager`クラスは、複雑な描画アルゴリズムを実装します。  
@@ -932,7 +932,7 @@ static COLORREF __stdcall SmartMixColors(
 ### <a name="remarks"></a>Remarks  
  このメソッドは、どちらの場合はエラーで失敗*k1*または*k2* 0 未満です。 かどうかは、0 に設定がこれらのパラメーターを両方とも、メソッドを返します`RGB(0, 0, 0)`します。  
   
- 次の式で加重比率が計算されます: (color1 * k1 + color2 \* k2)/(k1 + k2) します。 加重比率が決定した後、メソッドは、混合の色の明るさを計算します。 掛けたして光度*dblLumRatio*します。 値が 1.0 よりも大きい場合は、メソッドは、新しい値に混合の色の明るさを設定します。 それ以外の場合、明るさは 1.0 に設定されます。  
+ 次の式で加重比率が計算されます: (color1 \* k1 + color2 \* k2)/(k1 + k2) します。 加重比率が決定した後、メソッドは、混合の色の明るさを計算します。 掛けたして光度*dblLumRatio*します。 値が 1.0 よりも大きい場合は、メソッドは、新しい値に混合の色の明るさを設定します。 それ以外の場合、明るさは 1.0 に設定されます。  
   
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated  
  指定した四角形内の DC のコンテンツ ソースを 90 度回転します。  

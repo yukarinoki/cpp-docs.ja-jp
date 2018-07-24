@@ -1,5 +1,5 @@
 ---
-title: Concurrency::direct3d Namespace |Microsoft ドキュメント
+title: Concurrency::direct3d Namespace |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e95a0cb4b2dc8dfae7667a147dc2912cd7922c3d
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687388"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207693"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 名前空間
 `direct3d` 名前空間は、D3D の相互運用性をサポートする関数を提供します。 これにより、AMP コードでの計算に D3D のリソースをシームレスに使用できるようになると共に、AMP で作成したリソースを D3D コードで使用することができ、冗長な中間コピーを作成する必要がありません。 C++ AMP を使用することによって、DirectX アプリケーションの計算中心のセクションの処理を加速し、AMP の計算から生成されるデータに対して D3D API を使用できます。  
@@ -67,7 +67,7 @@ namespace direct3d;
 |[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|2 つの値を比較し、大きい方の値を返します。|  
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|2 つの値を比較し、小さい方の値を返します。|  
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|指定された accelerator_view についてタイムアウトが無効であるかどうかを示すブール型のフラグを返します。|  
-|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|オーバーロードされます。 3 個の引数に対して乗算/加算算術演算 (_X * _Y + _Z) を実行します。|  
+|[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|オーバーロードされます。 3 つの引数に対して乗算/加算算術演算を実行します _X \* _Y + _Z。|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|D3D バッファーのインターフェイス ポインターから配列を作成します。|  
 |[ノイズ](concurrency-direct3d-namespace-functions-amp.md#noise)|パーリン ノイズ アルゴリズムを使用して乱数値を生成します。|  
 |[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|_X を角度からラジアンに変換します。|  
@@ -80,7 +80,7 @@ namespace direct3d;
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|2 つの符号なしの値を比較し、大きい方の値を返します。|  
 |[umin](concurrency-direct3d-namespace-functions-amp.md#umin)|2 つの符号なしの値を比較し、小さい方の値を返します。|  
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **ヘッダー:** amp.h  
   
  **名前空間:** Concurrency  

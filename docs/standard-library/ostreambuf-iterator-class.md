@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958254"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207722"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
 
@@ -78,7 +78,7 @@ ostreambuf_iterator クラスは出力反復子の要件を満たす必要があ
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|出力反復子式 * `i` = `x` を実装するために使用される逆参照演算子。|
+|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `i`  = `x`します。|
 |[operator++](#op_add_add)|操作が呼び出される前に示したものと同じオブジェクトに `ostreambuf_iterator` を返す、実質的な機能を持たないインクリメント演算子。|
 |[operator=](#op_eq)|この演算子は、関連付けられているストリーム バッファーに文字を挿入します。|
 
@@ -189,7 +189,7 @@ No insertions failed.
 *\
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator::operator*
+## <a name="op_star"></a>  ostreambuf_iterator::operator\*
 
 出力反復子式 \* *i* = *x* を実装するために使用される逆参照演算子。
 

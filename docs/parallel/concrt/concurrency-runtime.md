@@ -1,7 +1,7 @@
 ---
-title: 同時実行ランタイム |Microsoft ドキュメント
+title: 同時実行ランタイム |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/20/2018
 ms.technology:
 - cpp-concrt
 ms.topic: conceptual
@@ -16,27 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: be177574aa78080f3a950fb674adc0a8fab0b5c4
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693524"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208390"
 ---
 # <a name="concurrency-runtime"></a>同時実行ランタイム
 C++ の同時実行ランタイムにより、信頼性が高く、スケーラブルで、応答性の高い並行アプリケーションを作成できます。 このフレームワークでは抽象のレベルが引き上げられるので、同時実行に関連するインフラストラクチャの詳細を管理する必要はありません。 また、アプリケーションのサービスの品質への要求を満たすスケジューリング ポリシーを指定するためにも使用できます。 同時実行ランタイムを初めて使用する場合に役立つ情報が記載されている次の各ドキュメントを活用してください。  
   
- リファレンス ドキュメントは、次を参照してください。[参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)です。  
+ リファレンス ドキュメントについては、次を参照してください。[参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)します。  
   
 > [!TIP]
->  同時実行ランタイムは C++11 機能に大きく依存しており、最新の C++ のスタイルが採用されています。 詳細については、読み取り[ようこそ戻る C++](../../cpp/welcome-back-to-cpp-modern-cpp.md)です。  
+>  同時実行ランタイムは C++11 機能に大きく依存しており、最新の C++ のスタイルが採用されています。 詳細については、「[を C++ で戻る"ようこそ](../../cpp/welcome-back-to-cpp-modern-cpp.md)します。  
   
 ## <a name="choosing-concurrency-runtime-features"></a>同時実行ランタイムの機能を選択する  
   
 |||  
 |-|-|  
 |[概要](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|同時実行ランタイムが重要である理由とその主要機能について説明しています。|  
-|[その他の同時実行モデルとの比較](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|各自のアプリケーション要件に最も合った同時実行モデルを使用できるように、同時実行ランタイムと他の同時実行モデル (Windows スレッド プールや OpenMP など) の違いについて説明しています。|  
+|[その他の同時実行モデルを比較します。](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|各自のアプリケーション要件に最も合った同時実行モデルを使用できるように、同時実行ランタイムと他の同時実行モデル (Windows スレッド プールや OpenMP など) の違いについて説明しています。|  
 |[OpenMP から同時実行ランタイムへの移行](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|OpenMP と同時実行ランタイムの違いについて説明し、既存の OpenMP コードから同時実行ランタイムの使用に移行する方法の例を示します。|  
 |[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|並列ループ、タスク、および並列コンテナーを提供する PPL について説明します。|  
 |[非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)|非同期エージェントとメッセージ パッシングを使用して、アプリケーションにデータ フローおよびパイプライン処理タスクを簡単に組み込む方法について説明しています。|  
@@ -70,9 +70,9 @@ C++ の同時実行ランタイムにより、信頼性が高く、スケーラ�
   
 |||  
 |-|-|  
-|[C++ における UWP アプリ用の非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|同時実行ランタイムを使用して、UWP アプリでの非同期操作を生成するときに注意する重要な点について説明します。|  
-|[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|PPL タスクを結合する方法を示しています、`IXMLHTTPRequest2`と`IXMLHTTPRequest2Callback`インターフェイス UWP アプリでの web サービスに HTTP GET および POST 要求を送信します。|  
-|[Windows ランタイム アプリのサンプル](http://code.msdn.microsoft.com/windowsapps)|ダウンロード可能なコード サンプルおよびデモを含む Windows のアプリ 8.x です。 C++ のサンプルでは、UX の応答性を保つためにバックグラウンドでデータを処理する PPL のタスクなど、同時実行ランタイムの機能を使用します。|  
+|[C++ における UWP アプリ用の非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|同時実行ランタイムを使用して UWP アプリで非同期操作を生成するときに留意する重要な点について説明します。|  
+|[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|PPL タスクを結合する方法を示しています、`IXMLHTTPRequest2`と`IXMLHTTPRequest2Callback`インターフェイス UWP アプリで web サービスに HTTP GET および POST 要求を送信します。|  
+|[Windows ランタイム アプリのサンプル](http://code.msdn.microsoft.com/windowsapps)|ダウンロード可能なコード サンプルとデモを含む Windows 用のアプリ 8.x します。 C++ のサンプルでは、UX の応答性を保つためにバックグラウンドでデータを処理する PPL のタスクなど、同時実行ランタイムの機能を使用します。|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>非同期エージェント ライブラリでのデータ フロー プログラミング  
   
@@ -107,8 +107,8 @@ C++ の同時実行ランタイムにより、信頼性が高く、スケーラ�
   
 |||  
 |-|-|  
-|[Hilo での非同期プログラミング パターンとヒント (C++ と XAML を使った Windows ストア アプリ)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装する、同時実行ランタイムを使用して方法について説明します。|  
-|[同時実行ランタイムと Visual Studio 2010 での並列パターン ライブラリのサンプル コード](http://go.microsoft.com/fwlink/p/?linkid=183875)|同時実行ランタイムの例を示すサンプル アプリケーションおよびユーティリティを提供します。|  
+|[Hilo での非同期プログラミング パターンとヒント (C++ と XAML を使った Windows ストア アプリ)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|同時実行ランタイムを使用して C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装する方法について説明します。|  
+|[同時実行ランタイムと Visual Studio 2010 での並列パターン ライブラリのコード サンプル](http://go.microsoft.com/fwlink/p/?linkid=183875)|同時実行ランタイムの例を示すサンプル アプリケーションおよびユーティリティを提供します。|  
 |[ネイティブ コードのブログでの並列プログラミング](http://go.microsoft.com/fwlink/p/?linkid=183873)|同時実行ランタイムでの並列プログラミングに関する詳細なブログ記事を別途紹介しています。|  
 |[C++ とネイティブ コードのフォーラムでの並列コンピューティング](http://go.microsoft.com/fwlink/p/?linkid=183874)|同時実行ランタイムに関するコミュニティ ディスカッションに参加できます。|  
 |[並列プログラミング](/dotnet/standard/parallel-programming/index)|[!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)]に用意されている並列プログラミング モデルについて説明しています。|  

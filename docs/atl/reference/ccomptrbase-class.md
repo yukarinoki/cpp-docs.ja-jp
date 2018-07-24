@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7abcfcfe6aec722fa3540ad974017ab47e6cf71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 26e2984a3b52152b54d5f35ae72b8f3fdeaff474
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885452"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39209223"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 このクラスは、メモリの COM ベースのルーチンを使用するスマート ポインター クラスの基盤を提供します。  
@@ -77,7 +77,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|キャスト演算子です。|  
 |[CComPtrBase::operator!](#operator_not)|NOT 演算子。|  
 |[CComPtrBase::operator (& a)](#operator_amp)|& 演算子。|  
-|[CComPtrBase::operator *](#operator_star)|* 演算子。|  
+|[CComPtrBase::operator *](#operator_star)|\* 演算子。|  
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小さいの演算子よりもします。|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|等値演算子。|  
 |[CComPtrBase::operator -> します。](#operator_ptr)|メンバーへのポインター演算子。|  
@@ -246,8 +246,8 @@ T** operator&() throw();
 ### <a name="return-value"></a>戻り値  
  指すオブジェクトのアドレスを返して、`CComPtrBase`オブジェクト。  
   
-##  <a name="operator_star"></a>  CComPtrBase::operator *  
- * 演算子。  
+##  <a name="operator_star"></a>  CComPtrBase::operator \*  
+ \* 演算子。  
   
 ```
 T& operator*() const throw();
@@ -300,7 +300,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>戻り値  
  ポインターは、現在のオブジェクトによって管理されている場合は true を返しますでは、比較するポインターより小さいです。  
   
-##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T\*  
  キャスト演算子です。  
   
 ```  
