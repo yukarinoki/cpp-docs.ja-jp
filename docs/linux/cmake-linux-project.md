@@ -1,7 +1,8 @@
 ---
 title: Visual Studio で Linux CMake プロジェクトを構成する | Microsoft Docs
+description: Visual Studio で Linux CMake プロジェクトを構成する方法
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 07/20/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,22 +15,22 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 014d23996777d0660d4978e307b80e4f94c19686
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849260"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207788"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
 **Visual Studio 2017 バージョン 15.4 以降**  
-Linux C++ ワークロードをインストールすると、Linux の CMake サポートが既定で選択されます。 Visual Studio プロジェクトに変換しなくても、CMake を利用する既存のコード ベースで作業できるようになりました。 コード ベースがクロス プラットフォームの場合、Visual Studio 内から Windows と Linux の両方をターゲット設定できます。
+Visual Studio に Linux C++ ワークロードをインストールすると、Linux の CMake サポートが既定で選択されます。 Visual Studio プロジェクトに変換しなくても、CMake を利用する既存のコード ベースで作業できるようになりました。 コード ベースがクロス プラットフォームの場合、Visual Studio 内から Windows と Linux の両方をターゲット設定できます。
 
 このトピックは、Visual Studio の CMake サポートに関する基本的な知識が読者にあるものとして作成されています。 詳細については、「[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。 CMake 自体の詳細については、「[Build, Test and Package Your Software With CMake](https://cmake.org/)」 (CMake でソフトウェアをビルド、テスト、パッケージ化する) を参照してください。
 
 > [!NOTE]  
-> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 パッケージ マネージャーで古いバージョンの CMake が提供される場合は、[ソースから CMake をビルドする](#build-a-supported-cmake release-from-source)か、公式の [CMake ダウンロード ページ](https://cmake.org/download/)からダウンロードすることで、これを回避できます。
+> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 パッケージ マネージャーで古いバージョンの CMake が提供される場合は、[ソースから CMake をビルドする](#build-a-supported-cmake release-from-source)か、公式の [CMake ダウンロード ページ](https://cmake.org/download/)からダウンロードすることで、これを回避できます。 Visual Studio で [CMake ターゲット ビュー](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) ウィンドウをサポートする、Microsoft 提供の CMake バリアントの場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) で最新のビルド済みバイナリをダウンロードします。
 
 ## <a name="open-a-folder"></a>フォルダーを開く
 
@@ -143,7 +144,7 @@ sudo make install
 cmake -E capabilities
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)  
 [Visual C++ 用の CMake ツール](../ide/cmake-tools-for-visual-cpp.md)  

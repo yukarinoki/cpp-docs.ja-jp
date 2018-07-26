@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 28c99f5f45aba2c77b84dce63ea200fb33b76f84
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848779"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208810"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 この移植のケース スタディは、一般的な移植プロジェクトのアイデア、発生する可能性がある問題の種類、および移植の問題に対応するための一般的なヒントとコツを理解できるように設計されています。 プロジェクトの移植に関するエクスペリエンスは、コードの仕様により大きく依存するため、移植をわかりやすく案内するためのものではありません。  
@@ -195,7 +195,7 @@ MOUT << _T(" chUser:'") << chUser
   
 ```  
   
- マクロ `MOUT` が、型 `mstream` のオブジェクトである *g_pmout に解決されます。 mstream クラスは標準出力文字列クラスの `std::basic_ostream<TCHAR>.` から派生します。ただし、文字列リテラルの周囲に _T があり、私たちはこれを Unicode への変換の準備で挿入しましたが、演算子 << のオーバーロードの解決法が、次のエラー メッセージを表示して失敗します。  
+ マクロ `MOUT` が、型 `mstream` のオブジェクトである \*g_pmout に解決されます。 mstream クラスは標準出力文字列クラスの `std::basic_ostream<TCHAR>.` から派生します。ただし、文字列リテラルの周囲に _T があり、私たちはこれを Unicode への変換の準備で挿入しましたが、演算子 << のオーバーロードの解決法が、次のエラー メッセージを表示して失敗します。  
   
 ```Output  
 1>winmsgs.cpp(4612): error C2666: 'mstream::operator <<': 2 overloads have similar conversions

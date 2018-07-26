@@ -1,7 +1,8 @@
 ---
-title: リモートの Linux コンピューターへの接続 | Microsoft Docs
+title: Visual Studio でのリモートの Linux コンピューターへの接続 | Microsoft Docs
+description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンに接続する方法。
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: dd7f73a01b3b0941144ff59a683a9e42467f5a18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329323"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207667"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>リモートの Linux コンピューターへの接続
 
-ビルド時に、Linux コードはリモートの Linux コンピューターにコピーされ、Visual Studio で選択した設定に応じて、そのシステム上でコンパイルされます。  このリモート接続をセットアップするには、次のようにします。
+Visual Studio で C++ の Linux プロジェクトをビルドするときに、Linux コードはリモートの Linux コンピューターにコピーされ、Visual Studio の設定に基づいてコンパイルされます。 このリモート接続をセットアップするには、次のようにします。
 
 1. 最初にプロジェクトをビルドするか、新しいエントリを手動で作成します。その場合、**[ツール]、[オプション]** の順に選択し、**[クロス プラットフォーム]、[接続マネージャー]** ノードの順に開き、**[追加]** ボタンをクリックします。
 
