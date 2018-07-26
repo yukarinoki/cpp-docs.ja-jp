@@ -1,7 +1,8 @@
 ---
-title: Linux プロジェクトを配置、実行、デバッグする | Microsoft Docs
+title: Visual Studio で C++ Linux プロジェクトを配置、実行、デバッグする | Microsoft Docs
+description: Visual Studio の Linux C++ プロジェクト内からリモート ターゲット上のコードをコンパイル、実行、デバッグする方法について説明します。
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 07/20/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,16 +13,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b3f3742f8a63bf93f5686143daeea23ba13255be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 57f8aea7d3ff3ddfd28beff6647dc16885d972e3
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338056"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39207680"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Linux プロジェクトのデプロイ、実行、デバッグ
 
-Linux プロジェクトを作成し、[Linux 接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)でプロジェクトに接続したら、プロジェクトを実行し、デバッグできます。 リモート ターゲットでコードをコンパイル、実行、デバッグします。
+Visual Studio で Linux C++ プロジェクトを作成し、[Linux 接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)でプロジェクトに接続したら、プロジェクトを実行し、デバッグできます。 リモート ターゲットでコードをコンパイル、実行、デバッグします。
 
 Linux プロジェクトと対話してデバッグするには、いくつかの方法があります。
 
