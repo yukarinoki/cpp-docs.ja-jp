@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
+ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418524"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39208781"
 ---
 # <a name="standard-types"></a>基本データ型
 Microsoft ランタイム ライブラリには、次の基本データ型および Typedefs が用意されています。  
@@ -218,7 +218,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`fpos_t` (対象プラットフォームによって、long int、`__int64`、または構造体)|[fgetpos](../c-runtime-library/reference/fgetpos.md) および [fsetpos](../c-runtime-library/reference/fsetpos.md) によって、一意に指定したファイル内の各位置の情報を記録するために使用されます。|STDIO.H|  
 |`_fsize_t` (符号なし長整数)|ファイルのサイズを表すために使用されます。|IO.H、<br /><br /> WCHAR.H|  
 |`_HEAPINFO` 構造体|[_heapwalk](../c-runtime-library/reference/heapwalk.md) の次のヒープ エントリに関する情報を格納しています。|MALLOC.H|  
-|`_HFILE` (void *)|オペレーティング システムのファイル ハンドル|CRTDBG.H|  
+|`_HFILE` (void \*)|オペレーティング システムのファイル ハンドル|CRTDBG.H|  
 |`imaxdiv_t`|[imaxdiv](../c-runtime-library/reference/imaxdiv.md) 関数によって返される、商と剰余の両方を含む値の型。|inttypes.h|  
 |`ino_t`、`_ino_t` (unsigned short 型)|ステータス情報を返します。|WCHAR.H|  
 |`intmax_t`|任意の符号付き整数型の任意の値を表すことができる符号付き整数型。|stdint.h|  
