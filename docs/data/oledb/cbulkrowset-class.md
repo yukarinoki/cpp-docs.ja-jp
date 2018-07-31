@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 457091d5dc0a76ce0cd495679d7c5f978e483574
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 2fa455bbe4a5aa902232b502e129f6c8e21463a9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207628"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337723"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
 フェッチして、単一の呼び出しで複数の行ハンドルを取得することによって、データの一括で動作する行を操作できます。  
@@ -134,7 +134,7 @@ class CBulkRowset : public CRowset<TAccessor>
  *TAccessor*  
  アクセサー クラス。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
@@ -166,7 +166,6 @@ class CBulkRowset : public CRowset<TAccessor>
   
 ```cpp
 HRESULT AddRefRows() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -179,7 +178,6 @@ HRESULT AddRefRows() throw();
   
 ```cpp
 CBulkRowset();  
-  
 ```  
 
 ## <a name="movefirst"></a> Cbulkrowset::movefirst
@@ -189,7 +187,6 @@ CBulkRowset();
   
 ```cpp
 HRESULT MoveFirst() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -202,7 +199,6 @@ HRESULT MoveFirst() throw();
   
 ```cpp
 HRESULT MoveLast() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -215,7 +211,6 @@ HRESULT MoveLast() throw();
   
 ```cpp
 HRESULT MoveNext() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -228,7 +223,6 @@ HRESULT MoveNext() throw();
   
 ```cpp
 HRESULT MovePrev() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -240,7 +234,7 @@ HRESULT MovePrev() throw();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark,  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
    DBCOUNTITEM lSkip = 0) throw();  
 ```  
   
@@ -259,8 +253,8 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="syntax"></a>構文  
   
-```
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator,  
+```cpp
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
    DBCOUNTITEM nDenominator)throw();  
 ```  
   
@@ -287,8 +281,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ### <a name="syntax"></a>構文  
   
 ```cpp
-HRESULT ReleaseRows() throw();  
-  
+HRESULT ReleaseRows() throw();   
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -300,7 +293,7 @@ HRESULT ReleaseRows() throw();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      void SetRows(DBROWCOUNT nRows) throw();  
+void SetRows(DBROWCOUNT nRows) throw();  
 ```  
   
 #### <a name="parameters"></a>パラメーター  

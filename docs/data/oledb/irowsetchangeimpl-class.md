@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 70c9d1b5bc4952b0a56d8e136bc7b817a1e1b1c9
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 0f77f9a33b0cf51ea54d16f89e86ea914640f627
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269771"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339599"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl クラス
 OLE DB テンプレートの実装、 [IRowsetChange](https://msdn.microsoft.com/library/ms715790.aspx) OLE DB 仕様のインターフェイス。  
@@ -81,7 +81,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
  *MapClass*  
  プロバイダーによって保持されているすべての行ハンドルのストレージ ユニット。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
@@ -122,7 +122,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
+STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBROWSTATUS rgRowStatus[]);  
@@ -137,7 +137,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
+STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,  
    HACCESSOR hAccessor,  
    void* pData,  
    HROW* phRow);  
@@ -152,7 +152,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (SetData )(HROW hRow,  
+STDMETHOD (SetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pSrcData);  
 ```  

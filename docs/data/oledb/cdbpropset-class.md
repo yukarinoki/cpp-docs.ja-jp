@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e8415fdac405f0a639b03cc90a710214d2c8d0c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 15a1506980519880652abc637549ec2c7bf17e1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207839"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337598"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
 継承、`DBPROPSET`構造体し、キー フィールドを初期化するコンス トラクターを追加するだけでなく`AddProperty`メソッドにアクセスします。  
@@ -60,7 +60,7 @@ ms.locfileid: "39207839"
 class CDBPropSet : public tagDBPROPSET  
 ```  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
 
 ## <a name="members"></a>メンバー  
@@ -136,7 +136,7 @@ bool AddProperty(DWORD dwPropertyID,
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      CDBPropSet(const GUID& guid);  
+CDBPropSet(const GUID& guid);  
 
 CDBPropSet(const CDBPropSet& propset);  
 
@@ -156,7 +156,7 @@ CDBPropSet();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      void SetGUID(const GUID& guid) throw();  
+void SetGUID(const GUID& guid) throw();  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -172,7 +172,7 @@ CDBPropSet();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      CDBPropSet& operator =(CDBPropSet& propset) throw();  
+CDBPropSet& operator =(CDBPropSet& propset) throw();  
 ```  
   
 ## <a name="see-also"></a>関連項目  

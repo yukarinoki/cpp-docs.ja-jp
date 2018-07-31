@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9f869a901885b064ef4ddbbfddc23b246455a39
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: edc18dcb83b2dda63fd5cfb5c56c3c95baa72df0
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181186"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340730"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 行セットと 1 つのクラスに関連付けられているそのアクセサーをカプセル化します。  
@@ -55,7 +55,7 @@ ms.locfileid: "39181186"
 
 ```cpp
 template <class TAccessor = CNoAccessor, 
-          template <typename T> class TRowset = CRowset>  
+   template <typename T> class TRowset = CRowset>  
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
 ```  
   
@@ -66,7 +66,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
  *TRowset*  
  行セット クラスです。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
@@ -79,7 +79,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|コンストラクターです。|  
 |[閉じる](#close)|行セットとすべてのアクセサーを閉じます。|  
 |[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内の列を解放します。|  
-|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)します。|  
+|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)します。|  
   
 ## <a name="remarks"></a>Remarks  
  クラス`TAccessor`アクセサーを管理します。 クラス*TRowset*行セットを管理します。  
@@ -91,7 +91,6 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
   
 ```cpp
 HRESULT Bind();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -104,7 +103,6 @@ HRESULT Bind();
   
 ```cpp
 CAccessorRowset();  
-  
 ```  
 
 ## <a name="close"></a> Caccessorrowset::close
@@ -114,7 +112,6 @@ CAccessorRowset();
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -127,7 +124,6 @@ void Close();
   
 ```cpp
 void FreeRecordMemory();  
-  
 ```  
 
 ## <a name="getcolumninfo"></a> Caccessorrowset::getcolumninfo
@@ -136,16 +132,16 @@ void FreeRecordMemory();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns,  
-   DBCOLUMNINFO** ppColumnInfo,  
-   LPOLESTR* ppStrings) const;  
-
-HRESULT GetColumnInfo(DBORDINAL* pColumns,  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
+   DBCOLUMNINFO** ppColumnInfo, 
+   LPOLESTR* ppStrings) const; 
+    
+HRESULT GetColumnInfo(DBORDINAL* pColumns, 
    DBCOLUMNINFO** ppColumnInfo);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 参照してください[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 参照してください[icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="return-value"></a>戻り値  
  標準の HRESULT です。  
@@ -153,7 +149,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ### <a name="remarks"></a>Remarks  
  ユーザーは、返される列情報と文字列バッファーを解放する必要があります。 使用する場合は、このメソッドの 2 番目のバージョンを使用して[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)バインディングをオーバーライドする必要があります。  
   
- 詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
+ 詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](https://msdn.microsoft.com/library/ms722704.aspx)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   

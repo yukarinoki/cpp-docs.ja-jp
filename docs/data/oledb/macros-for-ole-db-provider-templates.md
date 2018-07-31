@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a1845f2e2404604aa187a8569954b3cb289ae3ec
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: a5c9132325af7c05980aac0d7b6b7d53958e4a2b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321930"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338045"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 OLE DB プロバイダー テンプレートのマクロは、次のカテゴリの機能を提供します。  
@@ -108,7 +108,7 @@ OLE DB プロバイダー テンプレートのマクロは、次のカテゴリ
 |[END_SCHEMA_MAP](#end_schema_map)|スキーマ マップの最後をマークします。|  
 |[SCHEMA_ENTRY](#schema_entry)|GUID をクラスに関連付けます。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
 
 ### <a name="begin_property_set"></a> BEGIN_PROPERTY_SET
@@ -118,7 +118,6 @@ OLE DB プロバイダー テンプレートのマクロは、次のカテゴリ
   
 ```cpp
 BEGIN_PROPERTY_SET(guid)  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -134,8 +133,7 @@ BEGIN_PROPERTY_SET(guid)
 #### <a name="syntax"></a>構文  
   
 ```cpp
-BEGIN_PROPERTY_SET_EX(guid  
-, flags )  
+BEGIN_PROPERTY_SET_EX(guid, flags)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -155,7 +153,6 @@ BEGIN_PROPERTY_SET_EX(guid
   
 ```cpp
 BEGIN_PROPSET_MAP(Class)  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -180,7 +177,6 @@ BEGIN_PROPSET_MAP(Class)
   
 ```cpp
 CHAIN_PROPERTY_SET(ChainClass)  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -200,7 +196,6 @@ CHAIN_PROPERTY_SET(ChainClass)
   
 ```cpp
 END_PROPERTY_SET(guid)  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -217,7 +212,6 @@ END_PROPERTY_SET(guid)
   
 ```cpp
 END_PROPSET_MAP()  
-  
 ```  
   
 #### <a name="example"></a>例  
@@ -230,7 +224,6 @@ END_PROPSET_MAP()
   
 ```cpp
 PROPERTY_INFO_ENTRY(dwPropID)  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -249,8 +242,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROPERTY_INFO_ENTRY_EX(dwPropID  
-, vt, dwFlags, value, options )  
+PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -281,8 +273,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROPERTY_INFO_ENTRY_VALUE(dwPropID  
-, value )  
+PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -305,7 +296,6 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID
   
 ```cpp
 BEGIN_PROVIDER_COLUMN_MAP(theClass)  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -324,7 +314,6 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
   
 ```cpp
 END_PROVIDER_COLUMN_MAP()  
-  
 ```  
   
 #### <a name="example"></a>例  
@@ -336,8 +325,7 @@ END_PROVIDER_COLUMN_MAP()
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY (name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY (name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -356,8 +344,7 @@ PROVIDER_COLUMN_ENTRY (name
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_FIXED(name  
-, ordinal, dbtype, member )  
+PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -385,8 +372,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_GN (name  
-, ordinal, flags, colSize, dbtype, precision, scale, guid )  
+PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scale, guid)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -423,8 +409,7 @@ PROVIDER_COLUMN_ENTRY_GN (name
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_LENGTH(name  
-, ordinal, size, member )  
+PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -452,8 +437,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_STR(name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -478,13 +462,11 @@ PROVIDER_COLUMN_ENTRY_STR(name
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name  
-, ordinal, dbtype, size, member )  
+PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  *name*  
-  
  [in]列の名前。  
   
  *序数*  
@@ -508,8 +490,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name
 #### <a name="syntax"></a>構文  
   
 ```cpp
-PROVIDER_COLUMN_ENTRY_WSTR(name  
-, ordinal, member )  
+PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -531,7 +512,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name
 #### <a name="syntax"></a>構文  
   
 ```cpp
-      BEGIN_SCHEMA_MAP(SchemaClass);  
+BEGIN_SCHEMA_MAP(SchemaClass);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -548,7 +529,6 @@ PROVIDER_COLUMN_ENTRY_WSTR(name
   
 ```cpp
 END_SCHEMA_MAP()  
-  
 ```  
   
 #### <a name="see-also"></a>関連項目  
@@ -560,7 +540,7 @@ GUID をクラスに関連付けます。
 #### <a name="syntax"></a>構文  
   
 ```cpp
-      SCHEMA_ENTRY(guid,  
+SCHEMA_ENTRY(guid,  
    rowsetClass);   
 ```  
   

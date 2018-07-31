@@ -60,12 +60,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 169feff6ce364cea682c43aade427a98d5810437
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 74cabc19dd21be78771fba177758131d13c8794d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208599"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338364"
 ---
 # <a name="ccommand-class"></a>CCommand クラス
 設定およびコマンドを実行するメソッドを提供します。  
@@ -74,12 +74,12 @@ ms.locfileid: "39208599"
 
 ```cpp
 template <class TAccessor = CNoAccessor,  
-          template <typename T> class TRowset = CRowset,  
-          class TMultiple = CNoMultipleResults>  
+   template <typename T> class TRowset = CRowset,  
+   class TMultiple = CNoMultipleResults>  
 class CCommand :   
-           public CAccessorRowset <TAccessor, TRowset>,  
-           public CCommandBase,  
-           public TMultiple  
+   public CAccessorRowset <TAccessor, TRowset>,  
+   public CCommandBase,  
+   public TMultiple  
 ```  
   
 ### <a name="parameters"></a>パラメーター  
@@ -92,7 +92,7 @@ class CCommand :
  *TMultiple*  
  複数の結果を返すことができる OLE DB コマンドを使用する指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)します。 それ以外の場合、使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)します。 詳細については、次を参照してください。 [IMultipleResults](https://msdn.microsoft.com/library/ms721289.aspx)します。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
@@ -151,7 +151,7 @@ void Close();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,  
+HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected, 
    bool bBind = true) throw();  
 ```  
   
@@ -184,7 +184,6 @@ HRESULT Open(const CSession& session,
    bool bBind = true,  
    ULONG ulPropSets = 0) throw();  
 
-
 HRESULT Open(const CSession& session,  
    LPCSTR szCommand,  
    DBPROPSET *pPropSet = NULL,  
@@ -193,7 +192,6 @@ HRESULT Open(const CSession& session,
    bool bBind = true,  
    ULONG ulPropSets = 0) throw();  
 
-
 HRESULT Open(const CSession& session,  
    INT szCommand = NULL,  
    DBPROPSET *pPropSet = NULL,  
@@ -201,7 +199,6 @@ HRESULT Open(const CSession& session,
    REFGUID guidCommand = DBGUID_DEFAULT,  
    bool bBind = true,  
    ULONG ulPropSets = 0) throw();  
-
 
 HRESULT Open(DBPROPSET *pPropSet = NULL,  
    DBROWCOUNT* pRowsAffected = NULL,  
@@ -266,7 +263,6 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 HRESULT CCommandBase::Create(const CSession& session,   
    LPCWSTR wszCommand,   
    REFGUID guidCommand = DBGUID_DEFAULT) throw ();  
-
 
 HRESULT CCommandBase::Create(const CSession& session,   
    LPCSTR szCommand,   
@@ -354,7 +350,6 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
   
 ```cpp
 void CCommandBase::ReleaseCommand() throw();  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -384,7 +379,6 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
   
 ```cpp
 HRESULT CCommandBase::Unprepare() throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  

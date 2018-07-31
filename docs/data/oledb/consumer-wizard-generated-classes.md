@@ -1,5 +1,5 @@
 ---
-title: コンシューマー ウィザード生成クラス |Microsoft ドキュメント
+title: コンシューマー ウィザードで生成されたクラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 030445a8e6b46afb9f893e21bceb221f7f9e89a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63713dd57695a54a58ce3d57b295cd57cdf393d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33091986"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338742"
 ---
 # <a name="consumer-wizard-generated-classes"></a>コンシューマー ウィザードで生成されたクラス
 ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを生成する場合、OLE DB テンプレートと OLE DB 属性のどちらかを使用するよう選択できます。 どちらの場合も、ウィザードによってコマンド クラスとユーザー レコード クラスが生成されます。 コマンド クラスには、ウィザードで指定したデータ ソースと行セットを開くためのコードが含まれています。 ユーザー レコード クラスには、選択したデータベース テーブルの列マップが含まれています。 ただし、生成されるコードはそれぞれ異なります。  
@@ -47,9 +47,9 @@ ATL OLE DB コンシューマー ウィザードを使用してコンシュー�
 >  ユーザー レコード クラスを変更するか、独自のコンシューマーを作成する場合、データ変数は、ステータス変数と長さ変数よりも前に記述する必要があります。  
   
 > [!NOTE]
->  ATL OLE DB コンシューマー ウィザードでは、 **DB_NUMERIC** 型を使用して数値データ型をバインドします。 これまでは、 **DBTYPE_VARNUMERIC** ( **DB_VARNUMERIC** 型で説明される形式については、Oledb.h を参照) が使用されていました。 コンシューマーの作成にウィザードを使用しない場合は、 **DB_NUMERIC**を使用することをお勧めします。  
+>  ATL OLE DB コンシューマー ウィザードを使用して、`DB_NUMERIC`数値データ型のバインド先の型。 これを使用していた`DBTYPE_VARNUMERIC`(される形式は、`DB_VARNUMERIC`入力は、Oledb.h を参照してください)。 コンシューマーの作成には、ウィザードを使用しない場合は、使用することをお勧め`DB_NUMERIC`します。  
   
-```  
+```cpp  
 // Products.H : Declaration of the CProducts class  
   
 class CProductsAccessor  
@@ -95,7 +95,7 @@ public:
 ### <a name="rowset-properties"></a>行セット プロパティ  
  次に、ウィザードは行セット プロパティを設定します。 ATL OLE DB コンシューマー ウィザードで **[変更]**、 **[挿入]**、または **[削除]** を選択した場合、適切なプロパティがここで設定されます (DBPROP_IRowsetChange は常に設定され、それぞれの場合に DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT、DBPROPVAL_UP_DELETE のいずれかが設定されます)。  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -108,7 +108,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 ### <a name="command-or-table-class"></a>コマンドまたはテーブル クラス  
  コマンド クラスを指定すると、ウィザードはコマンド クラスを宣言します。テンプレート化されたコードの場合は、コマンドは以下のようになります。  
   
-```  
+```cpp  
 DEFINE_COMMAND_EX(CProductsAccessor, L" \  
 SELECT \  
    ProductID, \  
@@ -146,7 +146,7 @@ SELECT \
 ### <a name="class-declaration"></a>クラス宣言  
  最後に、ウィザードでは、次のようなコマンド クラス宣言が生成されます。  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<CProductsAccessor>>  
 ```  
   
@@ -157,7 +157,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
   
  次の例では、ウィザードがクラス `COrders`の宣言を生成していますが、ユーザー レコード クラス `COrdersAccessor` は属性によって挿入されるため表示されません。  
   
-```  
+```cpp  
 #define _ATL_ATTRIBUTES  
 #include <atlbase.h>  
 #include <atldbcli.h>  

@@ -1,5 +1,5 @@
 ---
-title: パラメーター化クエリを発行する |Microsoft ドキュメント
+title: パラメーター クエリの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02ce5cbfdc6c5305ab356fc32993b6bdd34f1fac
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104576"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339537"
 ---
 # <a name="issuing-a-parameterized-query"></a>パラメーター クエリの実行
-次の例では、Microsoft Access データベース内のテーブルから (つまり、30 より大きい) 時効フィールドを持つレコードを取得する単純なパラメーター化クエリを発行します。 パラメーターをサポートするためには、追加のマップが、ユーザー レコードに必要です。 次のコードでは、ATL プロジェクトでは、使用、`CCommand`クラスの代わりに、`CTable`前の例で使用されるクラス[単純な行セットの走査](../../data/oledb/traversing-a-simple-rowset.md)です。  
+次の例では、Microsoft Access データベース内のテーブルから (つまり、30 より大きい) 時効フィールドのレコードを取得する単純なパラメーター化されたクエリを発行します。 パラメーターをサポートするには、ユーザー レコードは、追加のマップする必要があります。 次のコードでは、ATL プロジェクトでは、`CCommand`クラスの代わりに、`CTable`前の例で使用されるクラス[単純な行セットの走査](../../data/oledb/traversing-a-simple-rowset.md)します。  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -51,9 +51,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- ユーザー レコード`CArtists`、次に示します。  
+ ユーザー レコードでは、 `CArtists`、ようになります。  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

@@ -1,5 +1,5 @@
 ---
-title: プロバイダーで列を動的に結びつける |Microsoft ドキュメント
+title: プロバイダーで列を動的に結びつける |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 566a7248fabc1fcdb66224ccbc302e3f8038c5f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 345bc66200ea4a1d6d4bbb79313157e81b9a2edb
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101693"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336691"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>プロバイダーでの列の動的な連結
-動的な列バインディングが必要なことを確認してください。 必要があります。  
+動的な列のバインドが必要なことを確認します。 必要があります。  
   
--   行セットの列は、コンパイル時に定義されていません。  
+-   行セットの列はコンパイル時に定義されていません。  
   
 -   列を追加するブックマークなどの要素をサポートします。  
   
 ### <a name="to-implement-dynamic-column-binding"></a>動的な列バインディングを実装するには  
   
-1.  すべて削除**PROVIDER_COLUMN_MAP**コードからの秒。  
+1.  削除`PROVIDER_COLUMN_MAP`コードからの秒。  
   
 2.  ユーザー レコード (構造体) では、次の宣言を追加します。  
   
-    ```  
+    ```cpp  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  実装、`GetColumnInfo`関数。 この関数は、情報を格納する方法をレイアウトします。 プロパティまたはこの関数の他の情報を取得する必要があります。 ようなマクロを作成する場合があります、 [COLUMN_ENTRY](../../data/oledb/column-entry.md)マクロ、独自の情報を追加します。  
+3.  実装、`GetColumnInfo`関数。 この関数は、情報を格納する方法をレイアウトします。 プロパティまたはこの関数の他の情報を取得する必要があります。 似たマクロを作成したい場合があります、 [COLUMN_ENTRY](../../data/oledb/column-entry.md)マクロは、独自の情報を追加します。  
   
      次の例は、`GetColumnInfo`関数。  
   
-    ```  
+    ```cpp  
     // Check the property flag for bookmarks, if it is set, set the zero  
     // ordinal entry in the column map with the bookmark information.  
     CAgentRowset* pRowset = (CAgentRowset*) pThis;  

@@ -1,5 +1,5 @@
 ---
-title: プロバイダーのプロジェクトの作成 |Microsoft ドキュメント
+title: プロバイダーのプロジェクトを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08ceb80842d8552e19b62ff2ac2252d3f291b4ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dad3b020cb7f66fc4ba6535f79393c2d0ad0333f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098356"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339842"
 ---
 # <a name="creating-a-project-for-the-provider"></a>プロバイダーのプロジェクトの作成
-#### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>OLE DB プロバイダーが存在するプロジェクトを作成するには  
+### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>OLE DB プロバイダーが存在するプロジェクトを作成するには  
   
-1.  **ファイル** メニューのをクリックして`New`、クリックして**プロジェクト**です。  
+1.  **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  プロジェクトの種類 ウィンドウでは、Visual C プロジェクト フォルダーをクリックします。 テンプレート ウィンドウで  **ATL プロジェクト**です。  
+2.  プロジェクトの種類 ウィンドウでは、Visual C プロジェクトのフォルダーをクリックします。 [テンプレート] ペインで次のようにクリックします。 **ATL プロジェクト**します。  
   
-3.  **名前**ボックスで、プロジェクトの名前を入力し、をクリックして**OK**です。  
+3.  **名前**ボックスに、プロジェクトの名前を入力し、 をクリックして**OK**します。  
   
      ATL プロジェクト ウィザードが表示されます。  
   
-4.  ATL プロジェクト ウィザードで選択**ダイナミック リンク ライブラリ (DLL)** の**サーバーの種類**です。  
+4.  ATL プロジェクト ウィザードで選択**ダイナミック リンク ライブラリ (DLL)** の**サーバーの種類**します。  
   
 5.  **[完了]** をクリックします。  
   

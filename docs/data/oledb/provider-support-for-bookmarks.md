@@ -1,5 +1,5 @@
 ---
-title: プロバイダーのブックマーク サポート |Microsoft ドキュメント
+title: プロバイダーのブックマーク サポート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 139956fcd7d9244c486ad37797696817c7080fbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16605b8cd0b5855d7a6cc1f5ceac9f46ad495f4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112509"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337632"
 ---
 # <a name="provider-support-for-bookmarks"></a>プロバイダーのブックマーク サポート
-このトピックの例では追加、`IRowsetLocate`へのインターフェイス、`CMyProviderRowset`クラスです。 ほとんどの場合では、既存の COM オブジェクトへのインターフェイスを追加することで起動します。 その後、コンシューマー テンプレートからの呼び出しを追加してテストすることができます。 この例をする方法。  
+このトピックの例では、追加、`IRowsetLocate`へのインターフェイス、`CMyProviderRowset`クラス。 ほとんどの場合では、既存の COM オブジェクトへのインターフェイスを追加することで開始します。 コンシューマー テンプレートからより多くの呼び出しを追加することで、テストできます。 例を示す方法。  
   
--   プロバイダーへのインターフェイスを追加します。  
+-   インターフェイスをプロバイダーに追加します。  
   
--   コンシューマーに返される列を動的に決定します。  
+-   コンシューマーに返す列を動的に決定します。  
   
--   ブックマーク サポートを追加します。  
+-   ブックマークのサポートを追加します。  
   
- `IRowsetLocate` インターフェイスは `IRowset` のインターフェイスから継承されます。 追加する、`IRowsetLocate`インターフェイスでは、継承`CMyProviderRowset`から[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)です。  
+ `IRowsetLocate` インターフェイスは `IRowset` のインターフェイスから継承されます。 追加する、`IRowsetLocate`インターフェイスを継承`CMyProviderRowset`から[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)します。  
   
- 追加する、`IRowsetLocate`インターフェイスは、ほとんどのインターフェイスとは少し異なります。 プロバイダー テンプレートを OLE DB を vtable を行うには、派生インターフェイスを処理するテンプレート パラメーターにあります。 次のコードは、新しい継承のリストを示しています。  
+ 追加、`IRowsetLocate`インターフェイスは、ほとんどのインターフェイスとは少し異なります。 プロバイダー テンプレートを OLE DB を vtable を行うには、派生インターフェイスを処理するためにテンプレート パラメーターにあります。 次のコードは、新しい継承のリストを示しています。  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -50,9 +50,9 @@ class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,
           IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- 4 番目、5 番目と 6 番目のパラメーターがすべて追加します。 この例では、4 番目の既定の設定を使用して 5 番目のパラメーターを指定`IRowsetLocateImpl`6 番目のパラメーターとして。 `IRowsetLocateImpl` 2 つのテンプレート パラメーターを受け取る、OLE DB テンプレート クラスは、: これらをフックするため、`IRowsetLocate`へのインターフェイス、`CMyProviderRowset`クラスです。 ほとんどのインターフェイスを追加するには、この手順をスキップし、[次へ] のいずれかに移動できます。 のみ、`IRowsetLocate`と`IRowsetScroll`インターフェイスは、この方法で処理する必要があります。  
+ 4 番目、5 番目と 6 番目のパラメーターがすべて追加します。 この例では、4 つ目の既定の設定を使用して、5 番目のパラメーターを指定`IRowsetLocateImpl`6 番目のパラメーターとして。 `IRowsetLocateImpl` 2 つのテンプレート パラメーターを受け取る、OLE DB テンプレート クラスは、: これらのフック、`IRowsetLocate`へのインターフェイス、`CMyProviderRowset`クラス。 ほとんどのインターフェイスを追加するには、この手順をスキップしに移行すると、[次へ]。 のみ、`IRowsetLocate`と`IRowsetScroll`インターフェイスは、この方法で処理する必要があります。  
   
- 確認する必要があります、`CMyProviderRowset`を呼び出す`QueryInterface`の`IRowsetLocate`インターフェイスです。 行を追加`COM_INTERFACE_ENTRY(IRowsetLocate)`にマップします。 に対するインターフェイス マップ`CMyProviderRowset`が、次のコードに示すように表示されます。  
+ 指示する必要がありますし、`CMyProviderRowset`を呼び出す`QueryInterface`の`IRowsetLocate`インターフェイス。 行を追加`COM_INTERFACE_ENTRY(IRowsetLocate)`をマップします。 に対するインターフェイス マップ`CMyProviderRowset`次のコードのように表示する必要があります。  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -66,11 +66,11 @@ BEGIN_COM_MAP(CMyProviderRowset)
 END_COM_MAP()  
 ```  
   
- マップする必要があります、`CRowsetImpl`クラスです。 フックする COM_INTERFACE_ENTRY_CHAIN マクロの追加、`CRowsetImpl`マップします。 また、作成と呼ばれる typedef`RowsetBaseClass`継承情報で構成されます。 この typedef は任意無視してかまいません。  
+ マップする必要があります、`CRowsetImpl`クラス。 フックする COM_INTERFACE_ENTRY_CHAIN マクロの追加、`CRowsetImpl`マップします。 呼ばれる typedef を作成することも、`RowsetBaseClass`継承情報で構成されます。 この typedef は任意なので無視できます。  
   
- 最後に、ハンドル、 **icolumnsinfo::getcolumnsinfo**呼び出します。 通常、これを行う PROVIDER_COLUMN_ENTRY マクロを使用します。 ただし、コンシューマーはブックマークを使用する場合があります。 プロバイダーは、コンシューマーが、ブックマークを要求するかどうかに応じて返します列を変更できる必要があります。  
+ 最後に、処理、`IColumnsInfo::GetColumnsInfo`呼び出します。 通常、これを行う PROVIDER_COLUMN_ENTRY マクロを使用します。 ただし、コンシューマーはブックマークを使用する場合があります。 ブックマークのコンシューマーが要求するかどうかによってプロバイダーから返す列を変更できる必要があります。  
   
- 処理するために、 **icolumnsinfo::getcolumnsinfo**呼び出し、削除、 **PROVIDER_COLUMN**内のマップ、`CTextData`クラスです。 関数を定義して PROVIDER_COLUMN_MAP マクロ`GetColumnInfo`です。 定義する必要が独自`GetColumnInfo`関数。 関数の宣言は、次のようになります。  
+ 処理するために、`IColumnsInfo::GetColumnsInfo`呼び出し、削除、`PROVIDER_COLUMN`でマップ、`CTextData`クラス。 関数を定義して PROVIDER_COLUMN_MAP マクロ`GetColumnInfo`します。 定義する必要が、独自`GetColumnInfo`関数。 関数宣言は、このようになります。  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -88,7 +88,7 @@ class CTextData
 };  
 ```  
   
- 次に、実装、`GetColumnInfo`次ファイルで次のように機能します。  
+ 次に、実装、`GetColumnInfo`次のファイルで次のように機能します。  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
@@ -159,11 +159,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo` 最初に確認するかどうかというプロパティを参照してください**DBPROP_IRowsetLocate**が設定されています。 OLE DB 行セット オブジェクトから省略可能なインターフェイスの各プロパティがあります。 コンシューマーは、これらの省略可能なインターフェイスのいずれかを使用する場合、true にプロパティを設定します。 プロバイダーは、このプロパティを確認し、それに基づく特殊なアクションを実行します。  
+ `GetColumnInfo` プロパティと呼ばれるかどうかを確認するのには、まず`DBPROP_IRowsetLocate`設定されます。 OLE DB では、行セット オブジェクトから省略可能なインターフェイスの各プロパティがあります。 コンシューマーは、これらの省略可能なインターフェイスのいずれかを使用する場合、true に、プロパティを設定します。 プロバイダーはこのプロパティを確認し、それに基づく特殊なアクションを実行します。  
   
- 実装では、コマンド オブジェクトへのポインターを使用してプロパティを取得します。 `pThis`ポインターが行セットまたはコマンド クラスを表します。 これに渡す必要がここでテンプレートを使用するため、`void`ポインターまたはコードはコンパイルされません。  
+ 実装では、コマンド オブジェクトへのポインターを使用してプロパティを取得します。 `pThis`ポインターが行セットまたはコマンドのクラスを表します。 ここでテンプレートを使用するためとでこれを渡す必要があります。、`void`ポインター、または、コードはコンパイルされません。  
   
- 列情報を格納する静的な配列を指定します。 コンシューマーはブックマーク列をしない、配列内のエントリが無駄になります。 この配列を動的に割り当てることができますが、適切に破棄されることを確認する必要があります。 この例では、定義し、ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX マクロを使用して配列に情報を挿入します。 次のコードに示すように、MyProviderRS.H ファイルにマクロを追加できます。  
+ 列情報を格納する静的配列を指定します。 ブックマーク列がしない場合は、コンシューマー、配列内のエントリが無駄になります。 この配列を動的に割り当てることができますが、適切に破棄されることを確認する必要があります。 この例を定義し、ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX マクロを使用して、配列に情報を挿入します。 MyProviderRS.H ファイルに次のコードに示すように、マクロを追加できます。  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -194,7 +194,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- コンシューマーでコードをテストするに、いくつかの変更を加える必要があります、`OnRun`ハンドラー。 関数に対する最初の変更は、プロパティ、プロパティ セットを追加するコードを追加することです。 コード セット、 **DBPROP_IRowsetLocate**プロパティは、プロバイダーのブックマーク列を表示することをします。 `OnRun`ハンドラー コードは次のように記述する必要があります。  
+ コンシューマーでコードをテストするに、いくつかの変更を加える必要があります、`OnRun`ハンドラー。 関数に対する最初の変更は、プロパティ セットにプロパティを追加するコードを追加することです。 コードのセット、`DBPROP_IRowsetLocate`プロパティを true、ブックマーク列を表示するプロバイダーを示すためにします。 `OnRun`ハンドラーのコードは次のように表示する必要があります。  
   
 ```cpp
 //////////////////////////////////////////////////////////////////////  
@@ -246,9 +246,9 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
- While ループには呼び出すコードが含まれています、`Compare`メソッドで、`IRowsetLocate`インターフェイスです。 まったく同じブックマークを比較するため、コードがある場合は常に成功します。 また、1 つのブックマークを格納、一時変数ように while の後に行うこともできますループに呼び出しが完了すると、`MoveToBookmark`コンシューマー テンプレート内の関数。 `MoveToBookmark`関数呼び出し、`GetRowsAt`メソッド`IRowsetLocate`です。  
+ While ループには呼び出すコードが含まれています、`Compare`メソッドで、`IRowsetLocate`インターフェイス。 まったく同じブックマークを比較するためのコードには常に成功します。 While の後に使用できるように、また、一時変数に 1 つのブックマークが保存ループに呼び出しが完了すると、`MoveToBookmark`コンシューマー テンプレートの関数。 `MoveToBookmark`関数呼び出し、`GetRowsAt`メソッド`IRowsetLocate`します。  
   
- また、コンシューマーでユーザー レコードを更新する必要があります。 ブックマークおよび内のエントリを処理するクラスにエントリを追加、 **COLUMN_MAP**:  
+ また、コンシューマーでは、ユーザー レコードを更新する必要があります。 ブックマークと内のエントリを処理するクラスにエントリを追加、 `COLUMN_MAP`:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -273,7 +273,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- コードを更新したら、ビルドおよびを使用してプロバイダーを実行するはずの`IRowsetLocate`インターフェイスです。  
+ コードが更新されると、ビルドおよびを使用してプロバイダーを実行するはずの`IRowsetLocate`インターフェイス。  
   
 ## <a name="see-also"></a>関連項目  
  [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)

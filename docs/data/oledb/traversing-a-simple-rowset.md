@@ -1,5 +1,5 @@
 ---
-title: 単純な行セットの走査 |Microsoft ドキュメント
+title: 単純な行セットの走査 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,17 +19,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33102952"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336655"
 ---
 # <a name="traversing-a-simple-rowset"></a>単純な行セットの走査
-次の例は、迅速かつ簡単なデータベース アクセス コマンドを使用しないことを示しています。 ATL プロジェクトでは、次のコンシューマー コードは、という名前のテーブルからレコードを取得*アーティスト*Microsoft access データベース ODBC 用の Microsoft OLE DB Provider を使用します。 このコードを作成、 [CTable](../../data/oledb/ctable-class.md)アクセサーを使用してテーブル オブジェクトは、ユーザー レコード クラスに基づく`CArtists`です。 接続を開き、接続でセッションを開くとし、セッションでテーブルを開きます。  
+次の例では、コマンドを含まない素早く簡単にデータベースへのアクセスを示します。 ATL プロジェクトで、次のコンシューマー コードという名前のテーブルからレコードを取得する*アーティスト*ODBC 用の Microsoft OLE DB プロバイダーを使用して、データベースの Microsoft Access でします。 このコードを作成、 [CTable](../../data/oledb/ctable-class.md)アクセサーを使用してテーブルのオブジェクトは、ユーザー レコード クラスに基づく`CArtists`します。 接続を開き、接続、セッションを開きますをセッションでテーブルを開きます。  
   
-```  
+```cpp  
 #include <atldbcli.h>  
   
 CDataSource connection;  
@@ -53,9 +53,9 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- ユーザー レコード`CArtists`、次に示します。  
+ ユーザー レコードでは、 `CArtists`、ようになります。  
   
-```  
+```cpp  
 class CArtists  
 {  
 public:  

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6562689450aab15a766d315f9a948772613c5dd
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 74b6058c084a05b6cfb40ef9e16b3ebc1fc06c9d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209249"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340105"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: レコードセットの SQL ステートメントのカスタマイズ (ODBC)
 このトピックでは、次の内容について説明します。  
@@ -41,14 +41,14 @@ ms.locfileid: "39209249"
 ## <a name="sql-statement-construction"></a>SQL ステートメントの作成  
  レコード セットが主に、SQL レコード選択**選択**ステートメント。 オーバーライド元のバージョンのウィザードを使用して、クラスを宣言するときに書き込む、`GetDefaultSQL`次のようなメンバー関数 (レコード セット クラスと呼ばれる`CAuthors`)。  
   
-```  
+```cpp  
 CString CAuthors::GetDefaultSQL()  
 {  
     return "AUTHORS";  
 }  
 ```  
   
- 既定では、この上書きは、ウィザードで指定したテーブル名を返します。 例では、テーブル名は「作成者」にします。 レコード セットの後で呼び出す**オープン**メンバー関数は、**オープン**最終を構築します**選択**形式のステートメント。  
+ 既定では、この上書きは、ウィザードで指定したテーブル名を返します。 例では、テーブル名は「作成者」にします。 レコード セットの後で呼び出す`Open`メンバー関数は、`Open`最終を構築します**選択**形式のステートメント。  
   
 ```  
 SELECT rfx-field-list FROM table-name [WHERE m_strFilter]   
@@ -60,14 +60,14 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  スペースが含まれています (または含めたり) を列名を指定する場合は、角かっこで名前を囲む必要があります。 たとえば、名前「名」には、「[姓]」があります。  
   
- 既定値をオーバーライドする**選択**ステートメントでは、文字列、完全なパス**選択**ステートメントを呼び出すとき**オープン**。 独自の既定の文字列を作成する代わりに、レコード セットを指定する文字列を使用します。 置換ステートメントが含まれている場合、**場所**句内のフィルターを指定しない**か**ステートメントをフィルター処理し、必要がありますので、2 つ。 同様に、置換、ステートメントが含まれている場合、 **ORDER BY**句での並べ替えを指定しない`m_strSort`ステートメントで並べ替える 2 つがあるないようにします。  
+ 既定値をオーバーライドする**選択**ステートメントでは、文字列、完全なパス**選択**ステートメントを呼び出すとき`Open`します。 独自の既定の文字列を作成する代わりに、レコード セットを指定する文字列を使用します。 置換ステートメントが含まれている場合、**場所**句内のフィルターを指定しない`m_strFilter`ステートメントをフィルター処理し、必要がありますので、2 つ。 同様に、置換、ステートメントが含まれている場合、 **ORDER BY**句での並べ替えを指定しない`m_strSort`ステートメントで並べ替える 2 つがあるないようにします。  
   
 > [!NOTE]
 >  フィルター (または、SQL ステートメントの他の部分) でリテラル文字列を使用する場合は、"を"引用する必要があります (指定された区切り記号で囲みます) このような文字列を DBMS に固有のリテラル プレフィックスを持つとリテラル サフィックス文字 (または文字)。  
   
- DBMS によって外部結合などの操作の特別な構文の要件を生じる可能性があります。 ODBC 関数を使用して、dbms、ドライバーからこの情報を取得します。 たとえば、呼び出す **:: SQLGetTypeInfo**特定のデータ型の場合など**SQL_VARCHAR**を要求するには、 **LITERAL_PREFIX**と**LITERAL_SUFFIX**文字。 データベースに依存しないコードを記述する場合は、付録 C を参照してください、 *ODBC SDK * * プログラマーズ リファレンス*構文の詳細については、MSDN ライブラリ cd。  
+ DBMS によって外部結合などの操作の特別な構文の要件を生じる可能性があります。 ODBC 関数を使用して、dbms、ドライバーからこの情報を取得します。 たとえば、`::SQLGetTypeInfo`特定のデータ型の場合など`SQL_VARCHAR`LITERAL_PREFIX と LITERAL_SUFFIX 文字を要求するには、します。 データベースに依存しないコードを記述する場合は、付録 C を参照してください、 *ODBC SDK * * プログラマーズ リファレンス*構文の詳細については、MSDN ライブラリ cd。  
   
- レコード セット オブジェクトは、カスタム SQL ステートメントを指定しないと、レコードを選択するために使用する SQL ステートメントを構築します。 主に渡す値に依存これを行う方法、`lpszSQL`のパラメーター、**オープン**メンバー関数。  
+ レコード セット オブジェクトは、カスタム SQL ステートメントを指定しないと、レコードを選択するために使用する SQL ステートメントを構築します。 主に渡す値に依存これを行う方法、 *lpszSQL*のパラメーター、`Open`メンバー関数。  
   
  SQL の一般的な形式**選択**ステートメントは。  
   
@@ -88,16 +88,16 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
 >  読み取り専用で開かれたレコード セットでのみ、この手法を使用します。  
   
 ## <a name="overriding-the-sql-statement"></a>SQL ステートメントをオーバーライドします。  
- 次の表に、さまざまな可能性、`lpszSQL`パラメーターを**オープン**します。 次の表に、テーブル内のケースを説明します。  
+ 次の表に、さまざまな可能性、 *lpszSQL*パラメーター`Open`します。 次の表に、テーブル内のケースを説明します。  
   
  **LpszSQL パラメーターと結果の SQL 文字列**  
   
 |Case|LpszSQL を渡します|結果の SELECT ステートメント|  
 |----------|------------------------------|------------------------------------|  
-|1|**NULL**|**選択** *rfx* **FROM** *テーブル名*<br /><br /> `CRecordset::Open` 呼び出し`GetDefaultSQL`テーブル名を取得します。 結果の文字列がいずれかの内容に合わせてケース 2 ~ 5、`GetDefaultSQL`を返します。|  
-|2|テーブル名|**選択** *rfx* **FROM** *テーブル名*<br /><br /> フィールド一覧の RFX ステートメントから取得されます`DoFieldExchange`します。 場合**か**と`m_strSort`空ではない、追加、**場所**や**ORDER BY**句。|  
-|3 \*|完全な**選択**ステートメントがない、**場所**または**ORDER BY**句|渡されました。 場合**か**と`m_strSort`空ではない、追加、**場所**や**ORDER BY**句。|  
-|4 \*|完全な**選択**ステートメントを**場所**や**ORDER BY**句|渡されました。 **か**や`m_strSort`する必要があります空、またはこの 2 つのフィルターや並べ替えステートメントが生成されます。|  
+|1|NULL|**選択** *rfx* **FROM** *テーブル名*<br /><br /> `CRecordset::Open` 呼び出し`GetDefaultSQL`テーブル名を取得します。 結果の文字列がいずれかの内容に合わせてケース 2 ~ 5、`GetDefaultSQL`を返します。|  
+|2|テーブル名|**選択** *rfx* **FROM** *テーブル名*<br /><br /> フィールド一覧の RFX ステートメントから取得されます`DoFieldExchange`します。 場合`m_strFilter`と`m_strSort`空ではない、追加、**場所**や**ORDER BY**句。|  
+|3 \*|完全な**選択**ステートメントがない、**場所**または**ORDER BY**句|渡されました。 場合`m_strFilter`と`m_strSort`空ではない、追加、**場所**や**ORDER BY**句。|  
+|4 \*|完全な**選択**ステートメントを**場所**や**ORDER BY**句|渡されました。 `m_strFilter` や`m_strSort`する必要があります空、またはこの 2 つのフィルターや並べ替えステートメントが生成されます。|  
 |5 \*|ストアド プロシージャへの呼び出し|渡されました。|  
   
  \* `m_nFields` 指定された列の数以下である必要があります、**選択**ステートメント。 指定された各列のデータ型、**選択**ステートメントには、rfx 関数の対応する出力列のデータ型と同じである必要があります。  
@@ -110,7 +110,7 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
  次の例では、MFC データベース アプリケーションからレコードを選択する SQL ステートメントを作成します。 フレームワークを呼び出すと、`GetDefaultSQL`メンバー関数は、関数が、テーブルの名前を返します`SECTION`します。  
   
-```  
+```cpp  
 CString CEnrollSet::GetDefaultSQL()  
 {  
     return "SECTION";  
@@ -119,7 +119,7 @@ CString CEnrollSet::GetDefaultSQL()
   
  SQL の列の名前を取得する**選択**ステートメントでは、フレームワークによって、`DoFieldExchange`メンバー関数。  
   
-```  
+```cpp  
 void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)  
 {  
     pFX->SetFieldType(CFieldExchange::outputColumn);  
@@ -133,7 +133,7 @@ void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
   
  完了すると、SQL ステートメントがようになります。  
   
-```  
+```sql  
 SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo   
     FROM SECTION  
 ```  
@@ -145,7 +145,7 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
   
      内に列挙されている、列の一覧を列名と同じ順序で型が一致`DoFieldExchange`します。  
   
--   手動で ODBC 関数を使用して列の値を取得する理由がある **:: SQLGetData** RFX をバインドし、列を取得するのに頼ることがなく。  
+-   手動で ODBC 関数を使用して列の値を取得する理由がある`::SQLGetData`RFX をバインドし、列を取得するのに頼ることがなく。  
   
      など、アプリケーションの配布された後は、データベース テーブルに、アプリケーションの顧客が追加された新しい列に対応することができます。 ウィザードを使用して、クラスを宣言したときに認識されたありませんこれら追加のフィールド データ メンバーを追加する必要があります。  
   
@@ -156,10 +156,10 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
      情報と例では、次を参照してください。[レコード セット: 結合 (ODBC) を実行する](../../data/odbc/recordset-performing-a-join-odbc.md)します。  
   
 ### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>ケース 4 = 選択/から Plus、または ORDER BY  
- すべてのものを指定する: 列の一覧 (で rfx 関数の呼び出しに基づく`DoFieldExchange`)、テーブルのリストとの内容を**場所**や、 **ORDER BY**句。 指定した場合、**場所**や**ORDER BY**句、この方法は使用しないでください**か**や`m_strSort`します。  
+ すべてのものを指定する: 列の一覧 (で rfx 関数の呼び出しに基づく`DoFieldExchange`)、テーブルのリストとの内容を**場所**や、 **ORDER BY**句。 指定した場合、**場所**や**ORDER BY**句、この方法は使用しないでください`m_strFilter`や`m_strSort`します。  
   
 ### <a name="case-5---lpszsql--a-stored-procedure-call"></a>ケース 5 = ストアド プロシージャ コール  
- 記述する必要があります (Microsoft SQL Server データベースでストアド プロシージャ) などの定義済みのクエリを呼び出す必要がある場合、**呼び出す**に渡す文字列内のステートメント`lpszSQL`します。 ウィザードは、定義済みのクエリを呼び出すためのレコード セット クラスの宣言をサポートしていません。 定義済みのすべてのクエリでは、レコードが返されます。  
+ 記述する必要があります (Microsoft SQL Server データベースでストアド プロシージャ) などの定義済みのクエリを呼び出す必要がある場合、**呼び出す**に渡す文字列内のステートメント*lpszSQL*します。 ウィザードは、定義済みのクエリを呼び出すためのレコード セット クラスの宣言をサポートしていません。 定義済みのすべてのクエリでは、レコードが返されます。  
   
  定義済みのクエリがレコードを返さない場合は使用できます、`CDatabase`メンバー関数は`ExecuteSQL`直接します。 レコードが返されますが、定義済みクエリの記述する必要ありますも手動で呼び出し、RFX`DoFieldExchange`プロシージャは、列を返します。 Rfx 関数の呼び出しは、同じ順序であるし、定義済みのクエリと同じ型を返す必要があります。 詳細については、次を参照してください。[レコード セット: 定義済みクエリ (ODBC) のクラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)します。  
   

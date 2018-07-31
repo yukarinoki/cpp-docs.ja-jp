@@ -1,5 +1,5 @@
 ---
-title: レコード スクロール (MFC データ アクセス) のハンドラーをコマンド |Microsoft ドキュメント
+title: レコード (MFC データ アクセス) をスクロールするコマンド ハンドラー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03dec2e3eff0f61db5f4c8b7573400a589615b02
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef2b57bd37441b9a35c26ab36fcf3cb15cd0d878
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089380"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340329"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>レコード スクロール コマンドに対するコマンド ハンドラー (MFC データ アクセス)
 [CRecordView](../mfc/reference/crecordview-class.md)クラスには、既定のコマンドを次の標準コマンドの処理が用意されています。  
   
--   **ID_RECORD_MOVE_FIRST**  
+-   ID_RECORD_MOVE_FIRST  
   
--   **ID_RECORD_MOVE_LAST**  
+-   ID_RECORD_MOVE_LAST  
   
--   **ID_RECORD_MOVE_NEXT**  
+-   ID_RECORD_MOVE_NEXT  
   
--   **ID_RECORD_MOVE_PREV**  
+-   ID_RECORD_MOVE_PREV  
   
- `OnMove`メンバー関数は既定のコマンド レコード間を移動するすべての 4 つのコマンドの処理を提供します。 これらのコマンドが発行されると、RFX (または DFX) によってレコードセットのフィールドに新しいレコードが読み込まれ、DDX によってレコード フォームのコントロールに値が移動されます。 RFX については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../data/odbc/record-field-exchange-rfx.md)です。  
+ `OnMove`メンバー関数は、既定のコマンド レコード間を移動するすべての 4 つのコマンドの処理を提供します。 これらのコマンドが発行されると、RFX (または DFX) によってレコードセットのフィールドに新しいレコードが読み込まれ、DDX によってレコード フォームのコントロールに値が移動されます。 RFX については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../data/odbc/record-field-exchange-rfx.md)します。  
   
 > [!NOTE]
 >  標準的なレコード移動コマンドに関連付けられているユーザー インターフェイス オブジェクトには、必ずこれらの標準コマンド ID を使用してください。  
   
 ## <a name="see-also"></a>関連項目  
- [レコード ビューのナビゲーションをサポートします。](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+ [レコード ビュー内のナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e0aad7fe25205d4cf31cbe76db3f1fb441858858
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: 8b9f1c7aef4116ae057d771e66b5027c5783f64e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233400"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338013"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset クラス
 使用される、`CCommand`または`CTable`宣言します。  
@@ -59,7 +59,7 @@ class CStreamRowset
  *TAccessor*  
  アクセサー クラス。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
@@ -96,7 +96,6 @@ class CStreamRowset
   
 ```cpp
 CStreamRowset();  
-  
 ```  
 
 ## <a name="close"></a> Cstreamrowset::close
@@ -105,8 +104,7 @@ CStreamRowset();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-void Close();  
-  
+void Close();   
 ```  
   
 ## <a name="see-also"></a>関連項目  

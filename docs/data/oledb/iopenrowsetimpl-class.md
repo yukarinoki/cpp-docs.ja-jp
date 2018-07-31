@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dd3281aa21cfd20caa902572e9ad39e16a18e6f6
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: e2212a10269b852d0df6f10a87e08370c1d27cf8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269827"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340626"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl クラス
 実装を提供、`IOpenRowset`インターフェイス。  
@@ -46,7 +46,7 @@ class IOpenRowsetImpl : public IOpenRowset
  *SessionClass*  
  派生したクラス、`IOpenRowsetImpl`します。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
@@ -67,8 +67,7 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    DBID* pTableID,  
    DBID* pIndexID,  

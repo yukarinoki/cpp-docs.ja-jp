@@ -1,5 +1,5 @@
 ---
-title: OLE DB プロバイダーへの文字列を読み取る |Microsoft ドキュメント
+title: OLE DB プロバイダーへの文字列の読み取り |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 073ddbea18e728ffb6777ff16c86bfa4695e05cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3aa9b10b53f4b520ed6d42932ba3e73f11077fdc
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33110170"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337061"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の読み込み
-`RMyProviderRowset::Execute`関数は、ファイルを開き、文字列を読み取ります。 コンシューマーが、プロバイダーを呼び出すことによってファイルの名前を渡します[icommandtext::setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)です。 プロバイダーは、ファイル名を受け取るし、メンバー変数に格納`m_szCommandText`です。 `Execute` ファイル名を読み取って`m_szCommandText`です。 ファイル名が正しくないか、ファイルが使用できない場合`Execute`はエラーを返します。 ファイル、および呼び出しを開きます、それ以外の場合、`fgets`文字列を取得します。 各セットの文字列の読み取り、`Execute`ユーザー レコードのインスタンスを作成 (`CAgentMan`) と配列に配置します。  
+`RMyProviderRowset::Execute`関数は、ファイルを開くし、文字列を読み取る。 呼び出して、コンシューマーがプロバイダーにファイル名を渡します[icommandtext::setcommandtext](https://msdn.microsoft.com/library/ms709757.aspx)します。 プロバイダーは、ファイル名を受け取るし、メンバー変数に格納`m_szCommandText`します。 `Execute` ファイル名を読み取って`m_szCommandText`します。 ファイル名が無効か、ファイルが使用できない場合`Execute`エラーが返されます。 ファイルと呼び出しを開き、それ以外の場合、`fgets`文字列を取得します。 各セットの文字列の読み取り、`Execute`ユーザー レコードのインスタンスを作成します (`CAgentMan`) と配列に配置します。  
   
- ファイルを開けない場合`Execute`返す必要があります**DB_E_NOTABLE**です。 返された場合**E_FAIL**プロバイダーが代わりに、多くのコンシューマーでは動作しませんし、OLE DB に合格しない[準拠合致テスト](../../data/oledb/testing-your-provider.md)です。  
+ ファイルを開けない場合`Execute`DB_E_NOTABLE を返す必要があります。 E_FAIL を代わりに返された場合、プロバイダーが多数のコンシューマーでは動作せず、OLE DB に合格しない[準拠合致テスト](../../data/oledb/testing-your-provider.md)します。  
   
 ## <a name="example"></a>例  
   
 ### <a name="description"></a>説明  
- 編集した`Execute`関数は、次のようになります。  
+ 編集、`Execute`関数に次のようになります。  
   
 ### <a name="code"></a>コード  
   

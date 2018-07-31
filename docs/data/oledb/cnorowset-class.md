@@ -1,5 +1,5 @@
 ---
-title: CNoRowset クラス |Microsoft ドキュメント
+title: CNoRowset クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 87d005dc19ef286bc4b0da927ecabcd90e6f0235
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098161"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339563"
 ---
 # <a name="cnorowset-class"></a>CNoRowset クラス
-テンプレート引数として使用できます (`TRowset`) の[CCommand](../../data/oledb/ccommand-class.md)または[CTable](../../data/oledb/ctable-class.md)です。  
+テンプレート引数として使用できます (`TRowset`) の[CCommand](../../data/oledb/ccommand-class.md)または[CTable](../../data/oledb/ctable-class.md)します。  
   
 ## <a name="syntax"></a>構文
 
@@ -38,28 +38,28 @@ template <class TAccessor = CAccessorBase>
 class CNoRowset  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `TAccessor`  
- アクセサー クラス。 既定値は、`CAccessorBase` です。  
+### <a name="parameters"></a>パラメーター  
+ *TAccessor*  
+ アクセサー クラス。 既定値は `CAccessorBase` です。  
   
-## <a name="remarks"></a>コメント  
- 使用して`CNoRowset`コマンドが行セットを返さない場合は、テンプレート引数として。  
+## <a name="remarks"></a>Remarks  
+ 使用`CNoRowset`コマンドが行セットを返さない場合は、テンプレート引数として。  
   
- `CNoRowset` その他のアクセサー クラスのメソッドに対応しているそれぞれの次のスタブ メソッドを実装します。  
+ `CNoRowset` 次のスタブ メソッドは、それぞれのメソッドに対応するその他のアクセサー クラスを実装します。  
   
--   **BindFinished** -バインドが完了したことを示します (返します`S_OK`)。  
+-   `BindFinished` -バインドが完了したことを示します (返します`S_OK`)。  
   
--   **閉じる**-行と、現在の IRowset インターフェイスを解放します。  
+-   `Close` -行と、現在の IRowset インターフェイスを解放します。  
   
 -   `GetIID` -接続ポイントのインターフェイス ID を取得します。  
   
--   **GetInterface**のインターフェイスを取得します。  
+-   `GetInterface` -インターフェイスを取得します。  
   
 -   `GetInterfacePtr` -カプセル化されたインターフェイス ポインターを取得します。  
   
--   **SetAccessor** -アクセサーへのポインターを設定します。  
+-   `SetAccessor` -アクセサーにポインターを設定します。  
   
--   **SetupOptionalRowsetInterfaces** -行セットの省略可能なインターフェイスを設定します。  
+-   `SetupOptionalRowsetInterfaces` -行セットの省略可能なインターフェイスを設定します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
