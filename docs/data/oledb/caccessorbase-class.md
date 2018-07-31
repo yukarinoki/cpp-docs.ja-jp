@@ -36,12 +36,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 99f6be0815572b88f7c46406262ed21eaefdb77d
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 18199a700cbc5065d987a57cc076a5d0cf670577
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181199"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340665"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase クラス
 OLE DB テンプレートのすべてのアクセサーは、このクラスから派生します。 `CAccessorBase` 複数のアクセサーを管理する 1 つの行セットを使用できます。 パラメーターと出力列の両方のバインドも提供します。  
@@ -64,7 +64,7 @@ OLE DB テンプレートのすべてのアクセサーは、このクラスか�
 |[IsAutoAccessor](#isauto)|指定されたアクセサーが自動かどうかをテストします。|  
 |[ReleaseAccessors](#release)|アクセサーを解放します。|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
 
 ## <a name="close"></a> Caccessorbase::close
@@ -74,7 +74,6 @@ OLE DB テンプレートのすべてのアクセサーは、このクラスか�
   
 ```cpp
 void Close();  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -86,7 +85,7 @@ void Close();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      HACCESSOR GetHAccessor(ULONG nAccessor) const;  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -103,7 +102,6 @@ void Close();
   
 ```cpp
 ULONG GetNumAccessors() const;  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -115,7 +113,7 @@ ULONG GetNumAccessors() const;
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      bool IsAutoAccessor(ULONG nAccessor) const;  
+bool IsAutoAccessor(ULONG nAccessor) const;  
 ```  
   
 #### <a name="parameters"></a>パラメーター  

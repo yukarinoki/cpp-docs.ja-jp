@@ -138,12 +138,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 072820f556f8e4d43a88daaeb8b50ac56db9ab5d
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: a4a1b08d82e915780817a47abddcf417fe5ab715
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233387"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338247"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor クラス
 データベース スキーマ (データベースの基になる構造) の知識があるない場合にデータ ソースにアクセスすることができます。  
@@ -154,7 +154,7 @@ ms.locfileid: "39233387"
 class CDynamicAccessor : public CAccessorBase  
 ```  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー**: atldbcli.h  
   
 ## <a name="members"></a>メンバー  
@@ -216,7 +216,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
+CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
    DBLENGTH nBlobSize = 8000);  
 ```  
   
@@ -239,7 +239,6 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
   
 ```cpp
 void Close() throw();  
-  
 ```  
 
 ## <a name="getblobhandling"></a> Cdynamicaccessor::getblobhandling
@@ -249,7 +248,6 @@ BLOB の処理の現在の行の値を取得します。
   
 ```cpp
 const DBBLOBHANDLINGENUM GetBlobHandling() const;  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -262,7 +260,6 @@ BLOB の最大サイズ (バイト単位) を取得します。
   
 ```cpp
 const DBLENGTH GetBlobSizeLimit() const;  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -294,7 +291,6 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
   
 ```cpp
 DBORDINAL GetColumnCount() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -307,7 +303,7 @@ DBORDINAL GetColumnCount() const throw();
   
 ```cpp
 bool GetColumnFlags(DBORDINAL nColumn,   
-  DBCOLUMNFLAGS* pFlags) const throw();  
+   DBCOLUMNFLAGS* pFlags) const throw();  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -360,7 +356,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
+LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -377,7 +373,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
   
 ```cpp
 bool GetColumnType(DBORDINAL nColumn,   
-  DBTYPE* pType) const throw();  
+   DBTYPE* pType) const throw();  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -397,7 +393,7 @@ bool GetColumnType(DBORDINAL nColumn,
   
 ```cpp
 bool GetLength(DBORDINAL nColumn,   
-  DBLENGTH* pLength) const throw();  
+   DBLENGTH* pLength) const throw();  
 
 bool GetLength(const CHAR* pColumnName,   
    DBLENGTH* pLength) const throw();  
@@ -428,7 +424,7 @@ bool GetLength(const WCHAR* pColumnName,
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      bool GetOrdinal(const CHAR* pColumnName,  
+bool GetOrdinal(const CHAR* pColumnName,  
    DBORDINAL* pOrdinal) const throw();  
 
 bool GetOrdinal(const WCHAR* pColumnName,  
@@ -452,7 +448,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
   
 ```cpp
 bool GetStatus(DBORDINAL nColumn,   
-  DBSTATUS* pStatus) const throw();  
+   DBSTATUS* pStatus) const throw();  
 
 bool GetStatus(const CHAR* pColumnName,  
    DBSTATUS* pStatus) const throw();  
@@ -525,7 +521,7 @@ BLOB の現在の行の値の処理を設定します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
+bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -549,7 +545,7 @@ BLOB の最大サイズをバイト単位で設定します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      void SetBlobSizeLimit(DBLENGTH nBlobSize);  
+void SetBlobSizeLimit(DBLENGTH nBlobSize);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  

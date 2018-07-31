@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbcd69168b70e8d85bf2b90c3f456f79cd1c228c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e9ee36d2300ed1e86c1f867012ed54c85692f5bd
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954585"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340639"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 
@@ -30,7 +30,7 @@ ms.locfileid: "38954585"
   
  このトピックでは、実行可能なプロバイダーを起動することを前提としています。 更新可能なプロバイダーを作成する 2 つの手順があります。 プロバイダーが、データ ストアに変更を加える方法をまず決定する必要があります。具体的には、変更するかどうかをすぐに実行する、更新コマンドが実行されるまで延期されます。 セクション"[プロバイダーを更新可能にする](#vchowmakingprovidersupdatable)"の変更と、プロバイダー コードで行う必要がある設定について説明します。  
   
- 次に、ご利用のプロバイダーには、コンシューマーの要求をサポートするためのすべての機能が含まれています。 確認する必要があります。 コンシューマーは、データ ストアを更新する場合、プロバイダーをデータ ストアにデータを保存するコードが含まれる必要があります。 たとえば、C ランタイム ライブラリまたは MFC を使用、データ ソースには、このような操作を実行するのに可能性があります。 セクション"[データ ソースへの書き込み](#vchowwritingtothedatasource)"データ ソースへの書き込みを処理する方法について説明します`NULL`と既定値、および列のフラグを設定します。  
+ 次に、ご利用のプロバイダーには、コンシューマーの要求をサポートするためのすべての機能が含まれています。 確認する必要があります。 コンシューマーは、データ ストアを更新する場合、プロバイダーをデータ ストアにデータを保存するコードが含まれる必要があります。 たとえば、C ランタイム ライブラリまたは MFC を使用、データ ソースには、このような操作を実行するのに可能性があります。 セクション"[データ ソースへの書き込み](#vchowwritingtothedatasource)"データ ソースへの書き込み、NULL、既定値の処理、および列のフラグを設定する方法について説明します。  
   
 > [!NOTE]
 >  UpdatePV では、更新可能なプロバイダーの例を示します。 UpdatePV インストールされている MyProv として更新をサポートしています。  
@@ -55,7 +55,7 @@ ms.locfileid: "38954585"
   
      追加`IRowsetChangeImpl`継承チェーンをこの形式を使用します。  
   
-    ```  
+    ```cpp  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
@@ -65,7 +65,7 @@ ms.locfileid: "38954585"
   
      追加`IRowsetUpdate`継承チェーンをこの形式を使用します。  
   
-    ```  
+    ```cpp  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
@@ -88,7 +88,7 @@ ms.locfileid: "38954585"
   
 4.  プロパティ セット マップにも含めますすべて、次の設定の下に表示されます。  
   
-    ```  
+    ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
       DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
     PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  

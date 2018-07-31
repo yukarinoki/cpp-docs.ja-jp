@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5cbafe7f43d8a6c7acfaccb52fd22b595bdd0ec4
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 55c9b4b7e14a9572f5a8922b65a41a9a92a0d688
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322099"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337710"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl クラス
 OLE DB 実装[IRowsetIdentity](https://msdn.microsoft.com/library/ms715913.aspx)インターフェイスで、行の id のテストが可能です。  
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
  *RowClass*  
  記憶域ユニット、`HROW`します。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
@@ -67,7 +67,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(IsSameRow )(HROW hThisRow,  
+STDMETHOD(IsSameRow )(HROW hThisRow,  
    HROW hThatRow);  
 ```  
   

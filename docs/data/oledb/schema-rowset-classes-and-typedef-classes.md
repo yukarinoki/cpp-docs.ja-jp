@@ -1083,12 +1083,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6c7b2cd83c9c0ce5dcaa32f04257bbbbe9618ca6
-ms.sourcegitcommit: 0bf5f6634d66ed92fffb32291ad9f854d9895b17
+ms.openlocfilehash: 02d0787ebb40379ac438880ab7a23aa36a0b0f56
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250655"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338299"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>スキーマ行セット クラスと Typedef クラス
 スキーマが所有する、または特定のユーザーによって作成されたデータベース オブジェクトのコレクションとは。 カタログは、1 つまたは複数のスキーマを含めることができますが、INFORMATION_SCHEMA ビューとスキーマ情報のドメインが含まれるというスキーマを常に含める必要があります。 OLE DB でのスキーマ情報は、定義済みのスキーマ行セットの使用が取得され、型、テーブル、列、インデックス、ビュー、アサーションと制約、統計、文字セット、照合順序、およびドメインが含まれています。  
@@ -1814,7 +1814,7 @@ Typedef クラスを呼び出す`CViewTableUsage`そのパラメーター クラ
 |m_szTableSchema|TABLE_SCHEMA|  
 |m_szTableName|TABLE_NAME|  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbsch.h  
   
 ## <a name="see-also"></a>関連項目  

@@ -1,5 +1,5 @@
 ---
-title: OLE DB コンシューマー テンプレートの操作 |Microsoft ドキュメント
+title: OLE DB コンシューマー テンプレートの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9118732b1c52934b0d914340e592dfa0eac5da18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d172d3b390c2c4ebedaf5ad934a95fc25e206c7
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108278"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340057"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレートの操作
-次のトピックでは、一般的なシナリオで、OLE DB コンシューマー テンプレートを使用する方法の例をいくつかを説明します。  
+次のトピックでは、一般的なシナリオでの OLE DB コンシューマー テンプレートを使用する方法の例をいくつかを説明します。  
   
 -   [データベース属性によるデータ アクセスの簡略化](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
@@ -58,15 +58,15 @@ ms.locfileid: "33108278"
   
 -   [通知の受信](../../data/oledb/receiving-notifications.md)  
   
- 作成して、OLE DB コンシューマーの実装の例は、次を参照してください。[単純なコンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer.md)です。  
+ 作成して、OLE DB コンシューマーの実装の例は、次を参照してください。[単純なコンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer.md)します。  
   
- 次のサンプルで OLE DB コンシューマー テンプレートを使用する方法の例を見つけることもできます。  
+ 次の例では、OLE DB コンシューマー テンプレートを使用する方法の例を検索することもできます。  
   
--   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/21459014-4409-413c-b826-a41f0413be61)  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

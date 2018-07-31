@@ -1,5 +1,5 @@
 ---
-title: プロパティ マップ |Microsoft ドキュメント
+title: プロパティ マップ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d7664562ff31f1f5871fab4ce74c1652370a540d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c1b109b86e35a3f27b95c5dbf3b729629235d3a2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103217"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338656"
 ---
 # <a name="property-maps"></a>プロパティ マップ
-セッション、行セット、および省略可能なコマンド オブジェクトで、他は、各プロバイダーは、1 つまたは複数のプロパティをサポートします。 これらのプロパティは、OLE DB プロバイダー ウィザードによって作成されたヘッダー ファイルに含まれているプロパティのマップで定義されます。 各ヘッダー ファイルには、オブジェクトまたはそのファイルで定義されたオブジェクトに対して定義されている OLE DB プロパティ グループ内のプロパティのマップが含まれています。 データ ソース オブジェクトを含むヘッダー ファイルにものプロパティ マップが含まれています、 [DataSource プロパティ](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx)です。 Session.h にはプロパティ マップが含まれています、[セッション プロパティ](https://msdn.microsoft.com/en-us/library/ms714221.aspx)です。 という 1 つのヘッダー ファイルに行セットとコマンド オブジェクトが存在する*projectname*RS.h です。 これらのプロパティのメンバーである、[行セット プロパティ](https://msdn.microsoft.com/en-us/library/ms711252.aspx)グループ。  
+に加えて、セッション、行セットと省略可能なコマンド オブジェクトは、各プロバイダーは、1 つまたは複数のプロパティをサポートします。 これらのプロパティは OLE DB プロバイダー ウィザードで作成されたヘッダー ファイルに含まれているプロパティのマップで定義されます。 各ヘッダー ファイルには、オブジェクトまたはそのファイルで定義されたオブジェクトに対して定義されている OLE DB プロパティのグループのプロパティのマップが含まれています。 データ ソース オブジェクトを含むヘッダー ファイルには、プロパティのマップも含まれています、 [DataSource プロパティ](https://msdn.microsoft.com/library/ms724188\(v=vs.140\).aspx)します。 Session.h にはプロパティのマップが含まれています、[セッション プロパティ](https://msdn.microsoft.com/library/ms714221.aspx)します。 行セットとコマンドのオブジェクトと呼ばれる、1 つのヘッダー ファイル内に存在*projectname*RS.h します。 これらのプロパティのメンバーである、[行セット プロパティ](https://msdn.microsoft.com/library/ms711252.aspx)グループ。  
   
 ## <a name="see-also"></a>関連項目  
  [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: コンシューマー ウィザードで生成されたメソッド |Microsoft ドキュメント
+title: コンシューマー ウィザード生成メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,39 +25,39 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0e03d24f61b3eba1ff4c6fa1e4d888a0252a21b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c8a3605a94e0feffa1072d1c7cd92a8bdfecb66
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098603"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340881"
 ---
 # <a name="consumer-wizard-generated-methods"></a>コンシューマー ウィザードで生成されたメソッド
-ATL OLE DB コンシューマー ウィザードおよび MFC アプリケーション ウィザード、うち注意すべき特定の関数を生成します。 一部のメソッドが実装される異なる方法で、属性付きプロジェクトで; いくつかの注意事項があるので注意してください。各ケースは、以下について説明します。 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。  
+ATL OLE DB コンシューマー ウィザードおよび MFC アプリケーション ウィザードは、特定の機能を把握しておく必要がありますを生成します。 いくつかのメソッドが実装される異なる方法で属性付きプロジェクトではいくつかの注意事項があるために注意してください。各ケースは、以下について説明します。 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。  
   
--   `OpenAll` 行セットをデータ ソースを開き、ブックマークを有効に利用できる場合。  
+-   `OpenAll` データ ソース、行セットを開き、利用できる場合は、ブックマークをオンにします。  
   
--   `CloseAll` 開いているすべての行セットを閉じるし、すべてのコマンドの実行を解放します。  
+-   `CloseAll` 開いているすべての行セットを終了し、すべてのコマンドの実行を解放します。  
   
--   `OpenRowset` OpenAll を開くには、コンシューマーの行セットまたは行セットによって呼び出されます。  
+-   `OpenRowset` コンシューマーの行セットまたは行セットを開く OpenAll によって呼び出されます。  
   
 -   `GetRowsetProperties` 設定するプロパティを設定すると、行セットのプロパティへのポインターを取得します。  
   
--   `OpenDataSource` 指定した初期化文字列を使用して、データ ソースを開き、**データ リンク プロパティ** ダイアログ ボックス。  
+-   `OpenDataSource` 指定した、初期化文字列を使用してデータ ソースを開き、**データ リンク プロパティ** ダイアログ ボックス。  
   
 -   `CloseDataSource` 適切な方法でデータ ソースを閉じます。  
   
-## <a name="openall-and-closeall"></a>OpenAll と CloseAll  
+## <a name="openall-and-closeall"></a>OpenAll and CloseAll  
   
-```  
+```cpp  
 HRESULT OpenAll();   
 
 void CloseAll();  
 ```  
   
- 次の例を呼び出す方法を示しています。`OpenAll`と`CloseAll`繰り返し、同じコマンドを実行するとします。 コード例を比較[ccommand::close](../../data/oledb/ccommand-close.md)、バリエーションを呼び出すことが示されます**閉じる**と`ReleaseCommand`の代わりに`CloseAll`です。  
+ 次の例は、呼び出す方法を示しています。`OpenAll`と`CloseAll`繰り返し、同じコマンドを実行するとします。 コード例を比較[ccommand::close](../../data/oledb/ccommand-close.md)を呼び出すバリエーションを示す`Close`と`ReleaseCommand`の代わりに`CloseAll`します。  
   
-```  
+```cpp  
 int main(int argc, char* argv[])  
 {  
    HRESULT hr;  
@@ -88,19 +88,19 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## <a name="remarks"></a>コメント  
- 定義する場合、 `HasBookmark` 、メソッド、 `OpenAll` DBPROP_IRowsetLocate プロパティを設定します。 のみこれを行う場合は、プロバイダーは、そのプロパティをサポートしているかどうかを確認します。  
+## <a name="remarks"></a>Remarks  
+ 定義する場合、`HasBookmark`メソッド、 `OpenAll` DBPROP_IRowsetLocate プロパティを設定するコードは、プロバイダーは、そのプロパティをサポートしている場合にのみ、このメソッドを定義してください。  
   
 ## <a name="openrowset"></a>OpenRowset  
   
-```  
+```cpp  
 // OLE DB Template version:   
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll**コンシューマーの行セットまたは行セットを開くには、このメソッドを呼び出します。 通常、呼び出す必要はありません`OpenRowset`複数データ ソースとセッション/行セットを使用する場合を除き、します。 `OpenRowset` コマンドまたはテーブル クラスのヘッダー ファイルで宣言されます。  
+ `OpenAll` コンシューマーの行セットまたは行セットを開くには、このメソッドを呼び出します。 通常、呼び出す必要はない`OpenRowset`複数データ ソース/セッション/行セットを使用する場合を除き、します。 `OpenRowset` コマンドまたはテーブル クラスのヘッダー ファイルで宣言されます。  
   
 ```  
 // OLE DB Template version:  
@@ -115,9 +115,9 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- 属性は、異なる方法でこのメソッドを実装します。 このバージョンは、セッション オブジェクトと別の名前を渡すことができますが、db_command で指定したコマンド文字列を既定値とするコマンド文字列を受け取ります。 定義する場合、 `HasBookmark` 、メソッド、 `OpenRowset` DBPROP_IRowsetLocate プロパティを設定します。 のみこれを行う場合は、プロバイダーは、そのプロパティをサポートしているかどうかを確認します。  
+ 属性は、異なる方法でこのメソッドを実装します。 このバージョンでは、セッション オブジェクトおよびその db_command で指定されたコマンド文字列を既定値は、別のアカウントを渡すことができますが、コマンド文字列を受け取ります。 定義する場合、`HasBookmark`メソッド、 `OpenRowset` DBPROP_IRowsetLocate プロパティを設定するコードは、プロバイダーは、そのプロパティをサポートしている場合にのみ、このメソッドを定義してください。  
   
-```  
+```cpp  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)  
 {  
@@ -136,13 +136,13 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
   
 ## <a name="getrowsetproperties"></a>GetRowsetProperties  
   
-```  
+```cpp 
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- このメソッドは、行セットのプロパティ セットへのポインターを取得します。このポインターを使用して、DBPROP_IRowsetChange などのプロパティを設定することができます。 `GetRowsetProperties` 以下を使用、ユーザー レコード クラスにします。 追加の行セット プロパティを設定するには、このコードを変更できます。  
+ このメソッドは、行セットのプロパティ セットへのポインターを取得しますこのポインターを使用して、DBPROP_IRowsetChange などのプロパティを設定することができます。 `GetRowsetProperties` 以下を使用、ユーザー レコード クラスにします。 追加の行セット プロパティを設定するには、このコードを変更することができます。  
   
-```  
+```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
 {  
    pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true, DBPROPOPTIONS_OPTIONAL);  
@@ -152,19 +152,19 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }  
 ```  
   
-## <a name="remarks"></a>コメント  
- グローバル定義しないでください`GetRowsetProperties`メソッドのいずれかと、競合する可能性がありますのでによって定義されたウィザード。 これは、テンプレートおよび属性のプロジェクトで得られるウィザードで生成されたメソッドであることに注意してください。属性は、このコードを挿入しません。  
+## <a name="remarks"></a>Remarks  
+ グローバル定義しないでください`GetRowsetProperties`メソッドのいずれかの競合がため、ウィザードによって定義されます。 これは、テンプレートおよび属性のプロジェクトで得られるウィザードで生成されたメソッドであることに注意してください。属性は、このコードを挿入しません。  
   
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource および CloseDataSource  
   
-```  
+```cpp  
 HRESULT OpenDataSource();   
 
 void CloseDataSource();  
 ```  
   
-## <a name="remarks"></a>コメント  
- ウィザードは、メソッドを定義`OpenDataSource`と`CloseDataSource`です。`OpenDataSource`呼び出し[cdatasource::openfrominitializationstring](../../data/oledb/cdatasource-openfrominitializationstring.md)です。  
+## <a name="remarks"></a>Remarks  
+ ウィザードは、メソッドを定義します`OpenDataSource`と`CloseDataSource`;。`OpenDataSource`呼び出し[cdatasource::openfrominitializationstring](../../data/oledb/cdatasource-openfrominitializationstring.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b39a5428fa5ba57e38e0190255ac0dcf60b1a5e
-ms.sourcegitcommit: b217daee32d3413cf33753d9b4dc35a0022b1bfa
+ms.openlocfilehash: a20be1a92c93be38d901f58339bb02b24cf2661f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39233712"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339956"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl クラス
 実装し、登録[IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)コンシューマー (別名「シンク」) の通知を処理できるようにします。  
@@ -47,7 +47,7 @@ ms.locfileid: "39233712"
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify  
 ```  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
@@ -120,7 +120,7 @@ STDMETHOD(OnRowChange)(
 ### <a name="syntax"></a>構文  
   
 ```cpp
-   STDMETHOD(OnRowsetChange)(   
+STDMETHOD(OnRowsetChange)(   
 /* [in] */ IRowset* /* pRowset */,  
 /* [in] */ DBREASON /* eReason */,  
 /* [in] */ DBEVENTPHASE /* ePhase */,  

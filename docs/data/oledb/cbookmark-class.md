@@ -78,12 +78,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7545a9a31ff9bd7426002ef97176c59dd308dd49
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 9bd662c827650112d0e9bcf1d59086f4205aea58
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209145"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337619"
 ---
 # <a name="cbookmark-class"></a>CBookmark クラス
 バッファーには、ブックマークの値を保持します。  
@@ -102,7 +102,7 @@ class CBookmark< 0 > : public CBookmarkBase
  *nSize*  
  ブックマーク バッファーのバイト単位のサイズ。 ときに*nSize* 0 の場合は、実行時に、ブックマークのバッファーを動的に作成されます。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldbcli.h  
   
 ## <a name="members"></a>メンバー  
@@ -131,8 +131,8 @@ class CBookmark< 0 > : public CBookmarkBase
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      CBookmark();   
-
+CBookmark();
+   
 CBookmark(DBLENGTH nSize);  
 ```  
   
@@ -153,7 +153,6 @@ CBookmark(DBLENGTH nSize);
   
 ```cpp
 virtual BYTE* GetBuffer() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -166,7 +165,6 @@ virtual BYTE* GetBuffer() const throw();
   
 ```cpp
 virtual DBLENGTH GetSize() const throw();  
-  
 ```  
   
 ### <a name="return-value"></a>戻り値  
@@ -177,9 +175,8 @@ virtual DBLENGTH GetSize() const throw();
   
 ### <a name="syntax"></a>構文  
   
-```
-HRESULT SetBookmark(DBLENGTH nSize,  
-  BYTE* pBuffer) throw();  
+```cpp
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -201,7 +198,7 @@ HRESULT SetBookmark(DBLENGTH nSize,
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      CBookmark& operator =(const CBookmark& bookmark) throw();  
+CBookmark& operator =(const CBookmark& bookmark) throw();  
 ```  
   
 ### <a name="remarks"></a>Remarks  

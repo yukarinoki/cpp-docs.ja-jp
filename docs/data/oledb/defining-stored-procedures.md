@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャの定義 |Microsoft ドキュメント
+title: ストアド プロシージャの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,23 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1e03a5ae2e7c75d905216a6be92630376484d047
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2856418da13cc80d47c10295234b47813071a4ec
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101303"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336954"
 ---
 # <a name="defining-stored-procedures"></a>ストアド プロシージャの定義
-ストアド プロシージャを呼び出す前にする必要があります最初にそれを定義してを使用して、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロです。 コマンドを定義するときに、パラメーター マーカーとして疑問符 (?) でパラメーターを表します。  
+ストアド プロシージャを呼び出す前に最初に定義してそれを使用して、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロ。 コマンドを定義するときに、パラメーター マーカーとして疑問符 (?) でパラメーターを表します。  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
- このトピックのコード例で使用される構文 (中かっこの使用など) が SQL Server に固有である注意してください。 ストアド プロシージャで使用する構文を使用するプロバイダーに応じて異なる可能性があります。  
+ このトピックのコード例で使用される構文 (中かっこの使用) が SQL Server に固有であるに注意してください。 使用するプロバイダーに応じて、ストアド プロシージャで使用する構文が異なる場合があります。  
   
- 次に、マップでは、パラメーターには、コマンドで発生した順序でパラメーターを一覧表示のコマンドで使用したパラメーターを指定します。  
+ 次に、パラメーターのマップでは、コマンドで出現する順序でパラメーターを一覧表示コマンドで使用するパラメーターを指定します。  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,7 +45,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- 前の例は、ストアド プロシージャを定義します。 通常、コードの再利用できるように効率的なデータベースのセットを含む"Year Sales"や"dt_adduserobject"などの名前を持つ定義済みのストアド プロシージャ SQL Server Enterprise Manager を使用してその定義を表示することができます。 次のように呼び出します (の配置、'?' パラメーターは、ストアド プロシージャのインターフェイスによって異なります)。  
+ 前の例が移動するときに、ストアド プロシージャを定義します。 通常、コードを効率的に再利用のデータベースのセットを含む"Sales を Year"や"dt_adduserobject"などの名前を持つ定義済みのストアド プロシージャ SQL Server Enterprise Manager を使用してその定義を表示することができます。 次のように呼び出します (の配置、'?' パラメーターは、ストアド プロシージャのインターフェイスによって異なります)。  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
@@ -54,13 +54,13 @@ DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")
   
  次に、コマンド クラスを宣言します。  
   
-```  
+```cpp  
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>  
 ```  
   
- 最後に、ストアド プロシージャを呼び出して`OpenRowset`次のようにします。  
+ 最後、ストアド プロシージャを呼び出す`OpenRowset`次のようにします。  
   
-```  
+```cpp  
 CSession m_session;  
 
 HRESULT OpenRowset()  
@@ -69,9 +69,9 @@ HRESULT OpenRowset()
 }  
 ```  
   
- データベース属性を使用してストアド プロシージャを定義できることにも注意してください[db_command](../../windows/db-command.md)次のようにします。  
+ またデータベース属性を使用してストアド プロシージャを定義できることに注意してください[db_command](../../windows/db-command.md)次のようにします。  
   
-```  
+```cpp  
 db_command("{ ? = CALL dbo.dt_adduserobject }")  
 ```  
   

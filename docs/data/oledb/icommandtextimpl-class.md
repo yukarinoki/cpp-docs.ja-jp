@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2223958f2f5dbacb7c86bf2735c1de3a85d9d488
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 2b54d0db22181089a8470c540ccd72f85c717fbe
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269492"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340294"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 実装を提供、 [ICommandText](https://msdn.microsoft.com/library/ms714914.aspx)インターフェイス。  
@@ -53,9 +53,9 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ### <a name="parameters"></a>パラメーター  
  *T*  
- コマンド クラスから派生した**ICommandTextImpl**します。 
+ コマンド クラスから派生した`ICommandTextImpl`します。 
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** altdb.h  
   
 ## <a name="members"></a>メンバー  
@@ -82,7 +82,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(GetCommandText)(GUID * pguidDialect,   
+STDMETHOD(GetCommandText)(GUID * pguidDialect,   
    LPOLESTR * ppwszCommand);  
 ```  
   
@@ -95,7 +95,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
    LPCOLESTR pwszCommand);  
 ```  
   
@@ -109,7 +109,6 @@ class ATL_NO_VTABLE ICommandTextImpl
   
 ```cpp
 CComBSTR m_strCommandText;  
-  
 ```  
   
 ## <a name="see-also"></a>関連項目  

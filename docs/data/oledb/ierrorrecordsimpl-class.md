@@ -76,12 +76,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a4f12bd935e7dedf46e531d46e2ec91084059e9d
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 7339b345ad63f59a2db24251c06b80774305ab00
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269687"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338120"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl クラス
 OLE DB 実装[IErrorRecords](https://msdn.microsoft.com/library/ms718112.aspx)インターフェイスにレコードを追加して、データ メンバーからレコードを取得する ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 型の**CAtlArray <** `RecordClass`**>**.  
@@ -100,7 +100,7 @@ class IErrorRecordsImpl : public IErrorRecords
  *RecordClass*  
  OLE DB エラー オブジェクトを表すクラス。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
@@ -138,7 +138,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -154,7 +154,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      REFGUID GetErrorGUID(ERRORINFO& rCurError);  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -170,7 +170,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -186,7 +186,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -202,7 +202,7 @@ class IErrorRecordsImpl : public IErrorRecords
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -218,7 +218,7 @@ OLE DB エラー オブジェクトには、レコードを追加します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
    DWORD dwLookupID,  
    DISPPARAMS *pdispparams,  
    IUnknown *punkCustomError,  
@@ -234,7 +234,7 @@ OLE DB エラー オブジェクトには、レコードを追加します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
    ERRORINFO *pErrorInfo);  
 ```  
   
@@ -247,7 +247,7 @@ OLE DB エラー オブジェクトには、レコードを追加します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
    REFIID riid,  
    IUnknown **ppObject);  
 ```  
@@ -261,7 +261,7 @@ OLE DB エラー オブジェクトには、レコードを追加します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
    LCID lcid,  
    IErrorInfo **ppErrorInfo);  
 ```  
@@ -275,7 +275,7 @@ OLE DB エラー オブジェクトには、レコードを追加します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
    DISPPARAMS *pdispparams);  
 ```  
   
@@ -288,7 +288,7 @@ OLE DB レコード オブジェクト内のレコードの数を返します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -300,10 +300,7 @@ OLE DB レコード オブジェクト内のレコードの数を返します。
 ### <a name="syntax"></a>構文  
   
 ```cpp
-CAtlArray<  
-RecordClass  
-> m_rgErrors;  
-  
+CAtlArray< RecordClass > m_rgErrors;  
 ```  
   
 ## <a name="see-also"></a>関連項目  

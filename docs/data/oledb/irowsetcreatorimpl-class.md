@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b8d43c0824b2f4783b9a09782360940fb1327d99
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: 0c828708a088c8fe31075a8fe8504f3a1f8c14b4
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322060"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337098"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl クラス
 同じ機能を実行します。 `IObjectWithSite` OLE DB プロパティができますが、`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`します。  
@@ -52,7 +52,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
  *T*  
  派生したクラス`IRowsetCreator`します。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD(SetSite )(IUnknown* pCreator);  
+STDMETHOD(SetSite )(IUnknown* pCreator);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  

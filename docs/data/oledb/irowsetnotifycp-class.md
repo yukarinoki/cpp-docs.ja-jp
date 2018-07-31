@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 207128da3e46da492ebc812b68d9ef09847045e5
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: cf7cde624eeaa8a65ba5d5a2b4729ee94847d0e9
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322125"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39338182"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP クラス
 プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](https://msdn.microsoft.com/library/ms712959.aspx)します。  
@@ -70,7 +70,7 @@ class IRowsetNotifyCP :
  *DynamicUnkArray*  
  型の配列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)、これは、動的に割り当てられた配列の`IUnknown`シンク インターフェイスのクライアントへのポインター。 
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h   
   
 ## <a name="members"></a>メンバー  

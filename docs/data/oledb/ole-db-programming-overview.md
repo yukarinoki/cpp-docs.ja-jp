@@ -1,5 +1,5 @@
 ---
-title: OLE DB プログラミングの概要 |Microsoft ドキュメント
+title: OLE DB プログラミングの概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fdeca20ad97a09f9d5862fa43be680a2f907405f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 735e753412498d3285ad26e02b017fb931960daf
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106194"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39336895"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB プログラミングの概要
-OLE DB は、高パフォーマンス、COM ベース データベース テクノロジです。 格納されている形式に関係なくデータにアクセスする一般的な方法を提供します。 一般的に、ビジネスの現場では、大量の情報が企業データベースの外部に格納されています。 このような情報は、ファイル システム (FAT や NTFS など)、インデックス付きのシーケンシャル ファイル、パーソナル データベース (Access など)、スプレッドシート (Excel など)、プロジェクト プランニング アプリケーション (Project など)、および電子メール (Outlook など) に含まれています。 OLE DB をデータ ストアがある OLE DB プロバイダーにある限り、同じ方法であらゆる種類のデータ ストアにアクセスできます。
+OLE DB は、データベースの高パフォーマンスでは、COM ベース テクノロジです。 格納されている形式に関係なくデータにアクセスする一般的な方法を提供します。 一般的に、ビジネスの現場では、大量の情報が企業データベースの外部に格納されています。 このような情報は、ファイル システム (FAT や NTFS など)、インデックス付きのシーケンシャル ファイル、パーソナル データベース (Access など)、スプレッドシート (Excel など)、プロジェクト プランニング アプリケーション (Project など)、および電子メール (Outlook など) に含まれています。 OLE DB をデータ ストアは、OLE DB プロバイダーをされている限り、同様に、あらゆる種類のデータ ストアにアクセスできます。
   
  OLE DB を使用すると、DBMS かどうかにかかわらず、多様なデータ ソースにアクセスするアプリケーションを開発できます。 OLE DB では、特定のデータ ソースに適した DBMS 機能をサポートする COM インターフェイスを使用することにより、汎用アクセスが可能になります。 COM では、データ ソース間だけでなく、ほかのアプリケーションとの間でも、サービスおよび最大化された相互運用性の不要な二重化が削減されます。  
   
@@ -33,7 +33,6 @@ OLE DB は、高パフォーマンス、COM ベース データベース テク�
   
  COM の仕様に基づき、OLE DB は、DBMS 機能の一貫性があり再利用できる部分を分解してカプセル化する、拡張可能で保守性の高いインターフェイスの集合を定義します。 これらのインターフェイスは、行コンテナー、クエリ プロセッサ、トランザクション コーディネーターなどの DBMS コンポーネントの境界を定義し、多様な情報源への統一されたトランザクション アクセスを可能にします。  
  
-  
 ## <a name="see-also"></a>関連項目  
  [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)   
  [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)   

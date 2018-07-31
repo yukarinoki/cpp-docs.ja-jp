@@ -1,5 +1,5 @@
 ---
-title: リスト ボックスから 2 番目のレコード セット (MFC データ アクセス) |Microsoft ドキュメント
+title: リスト ボックスから 2 番目のレコード セット (MFC データ アクセス) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e980f42384052e0ab4fbd0f98889509c41accf0b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33090659"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339771"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>セカンド レコードセットを利用してリスト ボックスを表示する方法 (MFC データ アクセス)
 既定では、1 つのレコード ビューは 1 つのレコードセット オブジェクトに関連付けられ、そのオブジェクトのフィールドがレコード ビューのコントロールに対応付けられます。 場合によっては、レコード ビューにリスト ボックス コントロールまたはコンボ ボックス コントロールを配置して、そこに別の (セカンド) レコードセット オブジェクトの複数の値を設定することが必要となります。 ユーザーは、そのリスト ボックスを使用して、レコード ビューに表示された新しいカテゴリの情報を選択できます。 このトピックでは、いつどのようにこの処理を実行するかについて説明します。  
@@ -38,17 +38,17 @@ ms.locfileid: "33090659"
   
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>セカンド レコードセットからコンボ ボックスまたはリスト ボックスの値を設定するには  
   
-1.  レコード セット オブジェクトを作成 ([CRecordset](../mfc/reference/crecordset-class.md)です。  
+1.  レコード セット オブジェクトを作成 ([CRecordset](../mfc/reference/crecordset-class.md)します。  
   
 2.  ポインターを取得、 [CComboBox](../mfc/reference/ccombobox-class.md)コンボ ボックス コントロールのオブジェクト。  
   
 3.  コンボ ボックスの以前の内容をすべて空にします。  
   
-4.  レコード セット内のすべてのレコードを移動を呼び出す[ccombobox::addstring](../mfc/reference/ccombobox-class.md#addstring)の現在のレコードをコンボ ボックスに追加する各文字列。  
+4.  移動、レコード セット内のすべてのレコードを呼び出す[ccombobox:](../mfc/reference/ccombobox-class.md#addstring)コンボ ボックスに追加する現在のレコードから各文字列の。  
   
 5.  コンボ ボックスの選択内容を初期化します。  
   
-```  
+```cpp  
 void CSectionForm::OnInitialUpdate()  
 {  
     // ...  

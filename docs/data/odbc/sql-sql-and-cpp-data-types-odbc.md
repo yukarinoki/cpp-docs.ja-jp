@@ -1,5 +1,5 @@
 ---
-title: 'SQL: SQL と C++ のデータ型 (ODBC) |Microsoft ドキュメント'
+title: 'SQL: SQL と C++ のデータ型 (ODBC) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,27 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a137c4f648f518420d06f5cbd98ea189a030aee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b978356cead1f9b74ce59e58ab0191f5e00105b
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095409"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340769"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL と C++ のデータ型 (ODBC)
 > [!NOTE]
 >  この情報は、MFC ODBC クラスに適用されます。 MFC DAO クラスを使用する場合は、"比較の Microsoft Jet データベース エンジン SQL と ANSI SQL"DAO ヘルプのトピックを参照してください。  
   
- 次の表は、ANSI SQL データ型を C++ のデータ型にマップします。 これにより、C 言語を指定した情報の付録 D が強化、 *ODBC SDK* *プログラマーズ リファレンス*MSDN ライブラリの CD にします。 ウィザードでは、ほとんどのデータ型のマッピングを管理します。 ウィザードを使用しない場合は、フィールド exchange コードを手動で作成するのに役立つマッピング情報を使用することができます。  
+ 次の表は、ANSI SQL データ型を C++ のデータ型にマップします。 これの付録 D に記載されている C 言語情報を強化、 *ODBC SDK* *プログラマーズ リファレンス*MSDN ライブラリ cd。 ウィザードでは、ほとんどのデータ型マッピングを管理します。 ウィザードを使用しない場合は、フィールドの exchange のコードを手動で作成できるように、マッピング情報を使用できます。  
   
-### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>C++ のデータ型にマップされている ANSI SQL データ型  
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>C++ のデータ型にマップされている ANSI SQL のデータ型  
   
-|ANSI SQL データ型|C++ データ型|  
+|ANSI SQL のデータ型|C++ データ型|  
 |------------------------|---------------------|  
 |**CHAR**|`CString`|  
 |**DECIMAL**|`CString` 1|  
-|**SMALLINT**|`int`|  
-|`REAL`|**float**|  
+|**SMALLINT**|**int**|  
+|**REAL**|**float**|  
 |**INTEGER**|**long**|  
 |**FLOAT**|**double**|  
 |**DOUBLE**|**double**|  
@@ -46,23 +46,23 @@ ms.locfileid: "33095409"
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|  
 |**BIT**|**BOOL**|  
 |**TINYINT**|**BYTE**|  
-|**BIGINT 型**|`CString` 1|  
+|**BIGINT**|`CString` 1|  
 |**バイナリ**|`CByteArray`|  
 |**VARBINARY**|`CByteArray`|  
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|  
 |**DATE**|`CTime`, `CString`|  
-|**時間**|**CTime、CString**|  
-|**TIMESTAMP**|**CTime、CString**|  
+|**時間**|`CTime`, `CString`|  
+|**TIMESTAMP**|`CTime`, `CString`|  
   
- 1. ANSI **DECIMAL**と**数値**マップ`CString`ため**SQL_C_CHAR** ODBC の既定の転送種類は、します。  
+ 1. ANSI **DECIMAL**と**数値**にマップする`CString`ため**SQL_C_CHAR** ODBC の既定の転送種類は、します。  
   
- 2. マップされているときに既定では 255 文字を超える文字データは切り捨てられます`CString`です。 切り捨ての長さを拡張するには明示的に設定して、`nMaxLength`の引数`RFX_Text`です。  
+ 2. マップされている場合、既定で 255 文字を超える文字データが切り捨てられる`CString`します。 切り捨ての長さを拡張するには明示的に設定して、*格納*の引数`RFX_Text`します。  
   
- 3. マップされているときに既定では 255 文字を超えるバイナリ データは切り捨てられます`CByteArray`です。 切り捨ての長さを拡張するには明示的に設定して、`nMaxLength`の引数`RFX_Binary`です。  
+ 3. マップされている場合、既定で 255 文字を超えるバイナリ データが切り捨てられる`CByteArray`します。 切り捨ての長さを拡張するには明示的に設定して、*格納*の引数`RFX_Binary`します。  
   
- ODBC カーソル ライブラリを使用していない 2 つの更新を試みているとき、または、Microsoft SQL Server ODBC ドライバーと、MFC ODBC データベース クラスを使用して複数の長い可変長フィールドに問題が発生した可能性があります。 ODBC 型**SQL_LONGVARCHAR**と**SQL_LONGVARBINARY**テキストにマップ、およびイメージの SQL Server の種類。 A`CDBException`に同じ呼び出しで 2 つ以上の長い可変長のフィールドを更新する場合にスローされる`CRecordset::Update`です。 そのため、同時に、複数の長い列を更新しない`CRecordset::Update`です。 長い列が複数を同時に更新するには、ODBC API で**SQLPutData**です。 ODBC カーソル ライブラリを使用することもできますが、これは、カーソルをサポートし、カーソル ライブラリは必要ありません、SQL Server ドライバーなどのドライバーは推奨されません。  
+ ODBC カーソル ライブラリを使用していない 2 つを更新しようとしています。 または、Microsoft SQL Server ODBC ドライバーと MFC ODBC データベース クラスを使用して多くの時間の長い可変長フィールドに問題が発生する可能性があります。 ODBC 型、 **SQL_LONGVARCHAR**と**SQL_LONGVARBINARY**テキストにマップし、イメージの SQL Server の種類。 A`CDBException`同じ呼び出しで 2 つ以上の時間の長い可変長フィールドを更新する場合にスローされる`CRecordset::Update`します。 そのため、同時に、複数の長い列を更新できません`CRecordset::Update`します。 ODBC API を使用した複数の長い列を同時に更新`SQLPutData`します。 ODBC カーソル ライブラリを使用することもできますが、これは、カーソルをサポートし、カーソル ライブラリは必要ありません、SQL Server ドライバーなどのドライバーは推奨されません。  
   
- MFC ODBC データベース クラスと、Microsoft SQL Server ODBC ドライバーの ODBC カーソル ライブラリを使用している場合、 **ASSERT**と共に発生する可能性があります、`CDBException`への呼び出し`CRecordset::Update`への呼び出しに依存して`CRecordset::Requery`です。 代わりに、`CRecordset::Close`と`CRecordset::Open`なく`CRecordset::Requery`です。 別のソリューションをいないと、ODBC カーソル ライブラリが不要なネイティブ サポートするために ODBC カーソル ライブラリを使用します。  
+ MFC ODBC データベース クラスと、Microsoft SQL Server ODBC ドライバーは ODBC カーソル ライブラリを使用している場合、 **ASSERT**と共に発生する可能性があります、`CDBException`への呼び出し`CRecordset::Update`への呼び出しに依存して`CRecordset::Requery`します。 代わりに、`CRecordset::Close`と`CRecordset::Open`なく`CRecordset::Requery`します。 別のソリューションでと ODBC カーソル ライブラリは必要ありませんネイティブ サポートするために、ODBC カーソル ライブラリを使用しないこと。  
   
 ## <a name="see-also"></a>関連項目  
  [SQL](../../data/odbc/sql.md)   

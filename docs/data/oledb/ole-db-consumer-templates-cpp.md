@@ -1,5 +1,5 @@
 ---
-title: OLE DB コンシューマー テンプレート (C++) |Microsoft ドキュメント
+title: OLE DB コンシューマー テンプレート (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 636f98337cacdeddbdd42dd74e498c0fbd12e4f8
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33112109"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339400"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB コンシューマー テンプレート (C++)
-OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様をサポートしています (OLE DB コンシューマー テンプレートは OLE DB 2.6 に対してテストされますが、仕様ですべてのインターフェイスをサポートしません)。コンシューマー テンプレートを使用すると、OLE DB コンシューマーを実装するために記述するコードの量を最小限に抑えられます。 テンプレートには、次に示す機能があります。  
+OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様をサポートしています (OLE DB コンシューマー テンプレートは OLE DB 2.6 でテストされますが、仕様内のすべてのインターフェイスをサポートしない)。コンシューマー テンプレートを使用すると、OLE DB コンシューマーを実装するために記述するコードの量を最小限に抑えられます。 テンプレートには、次に示す機能があります。  
   
 -   OLE DB 機能への簡単なアクセスと ATL および MFC との簡単な統合。  
   
@@ -34,7 +34,7 @@ OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様�
   
 -   OLE DB プログラミング用のネイティブの C/C++ データ型。  
   
- OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB についてあまり知識がない場合は、『 [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/en-us/library/ms718124.aspx)』を参照してください。  
+ OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB に慣れていない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms718124.aspx)します。  
   
  OLE DB テンプレートは、新しいオブジェクト モデルを追加するのではなく、既存の OLE DB オブジェクト モデルをサポートします。 OLE DB コンシューマー テンプレートの最上位クラスは、OLE DB 仕様で定義されたコンポーネントと同等のものです。 OLE DB コンシューマー テンプレートのデザインには、1 つの行セットに対する複数のアクセサーなどの高度な機能が含まれます。 テンプレートと多重継承を使用することで、ライブラリを小型で柔軟なものにすることができます。  
   
@@ -68,5 +68,5 @@ OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様�
 ## <a name="see-also"></a>関連項目  
  [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)   
  [データ アクセス](../data-access-in-cpp.md)   
- [OLE DB SDK のドキュメント](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
- [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/en-us/library/ms713643.aspx)
+ [OLE DB SDK のドキュメント](https://msdn.microsoft.com/library/ms722784.aspx)   
+ [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/library/ms713643.aspx)

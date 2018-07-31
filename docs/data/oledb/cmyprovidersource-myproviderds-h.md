@@ -1,5 +1,5 @@
 ---
-title: CMyProviderSource (MyProviderDS.H) |Microsoft ドキュメント
+title: CMyProviderSource (MyProviderDS.H) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f141ad7565a78ff4e7a02b3847287879b81ccd6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 848f940c9aa974c838a4600235ab97d099bcbd06
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33098655"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340151"
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
-プロバイダー クラスは、複数の継承を使用します。 次のコードは、データ ソース オブジェクトの継承チェーンを示しています。  
+プロバイダー クラスは、多重継承を使用します。 次のコードは、データ ソース オブジェクトの継承チェーンを示しています。  
   
 ```cpp
 /////////////////////////////////////////////////////////////////////////  
@@ -42,12 +42,12 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- すべての COM コンポーネントから派生して`CComObjectRootEx`と`CComCoClass`です。 `CComObjectRootEx` すべての実装を提供、 **IUnknown**インターフェイスです。 すべてのスレッド モデルを処理できます。 `CComCoClass` 必要なすべてのエラー サポートを処理します。 詳細なエラー情報をクライアントに送信する場合は、Api のエラーの一部を使用で`CComCoClass`です。  
+ すべての COM コンポーネントが派生`CComObjectRootEx`と`CComCoClass`します。 `CComObjectRootEx` すべての実装を提供、`IUnknown`インターフェイス。 すべてのスレッド モデルを処理できます。 `CComCoClass` 必要なすべてのエラー サポートを処理します。 詳細なエラー情報をクライアントに送信する場合は、Api エラーの一部を使用で`CComCoClass`します。  
   
- データ ソース オブジェクトは、'Impl' クラスがいくつかからも継承します。 各クラスは、インターフェイスの実装を提供します。 データ ソース オブジェクトを実装して、 `IPersist`、 `IDBProperties`、 **IDBInitialize**、および**IDBCreateSession**インターフェイスです。 各インターフェイスには、データ ソース オブジェクトを実装する OLE DB が必要です。 サポートしたり、継承、またはそのいずれかのこれら 'Impl' クラスから継承せず、特定の機能をサポートしないことができます。 サポートする場合、 **IDBDataSourceAdmin**から継承するインターフェイスを**IDBDataSourceAdminImpl**のために必要な機能を実装するクラス。  
+ データ ソース オブジェクトは、'Impl' のいくつかのクラスからも継承します。 各クラスは、インターフェイスの実装を提供します。 データ ソース オブジェクトの実装、 `IPersist`、 `IDBProperties`、 `IDBInitialize`、および`IDBCreateSession`インターフェイス。 各インターフェイスは、OLE DB データ ソース オブジェクトを実装するために必要です。 サポートするか、継承、またはこれら 'Impl' のクラスのいずれかから継承せずによって特定の機能をサポートしていませんを選択することができます。 サポートする場合、`IDBDataSourceAdmin`から継承するインターフェイス、`IDBDataSourceAdminImpl`クラスに必要な機能を取得します。  
   
 ## <a name="com-map"></a>COM マップ  
- クライアントが呼び出すたびに`QueryInterface`インターフェイスについては、データ ソースで、次の COM マップを介してなります。  
+ クライアントが呼び出すたびに`QueryInterface`インターフェイスについては、データ ソースで、次の COM マップ経由になります。  
   
 ```  
 BEGIN_COM_MAP(CMyProviderSource)  
@@ -59,10 +59,10 @@ BEGIN_COM_MAP(CMyProviderSource)
 END_COM_MAP()  
 ```  
   
- COM_INTERFACE_ENTRY マクロと通知の実装は ATL からが`QueryInterface`で`CComObjectRootEx`を適切なインターフェイスを返します。  
+ COM_INTERFACE_ENTRY マクロが ATL からの通知の実装、`QueryInterface`で`CComObjectRootEx`を適切なインターフェイスを返します。  
   
 ## <a name="property-map"></a>プロパティ マップ  
- プロパティ マップは、プロバイダーによって指定されたすべてのプロパティを指定します。  
+ プロパティ マップは、プロバイダーが指定したすべてのプロパティを指定します。  
   
 ```  
 BEGIN_PROPSET_MAP(CMyProviderSource)  
@@ -132,11 +132,11 @@ BEGIN_PROPSET_MAP(CMyProviderSource)
 END_PROPSET_MAP()  
 ```  
   
- OLE db プロパティがグループ化されます。 データ ソース オブジェクトがプロパティの 2 つのグループを持つ: のいずれか、 **DBPROPSET_DATASOURCEINFO**セットから 1 つずつ、 **DBPROPSET_DBINIT**を設定します。 **DBPROPSET_DATASOURCEINFO**セットは、プロバイダーとそのデータ ソースのプロパティに対応しています。 **DBPROPSET_DBINIT**セットが初期化に使用されるプロパティに対応しています。 OLE DB プロバイダー テンプレートは、PROPERTY_SET マクロでこれらのセットを処理します。 マクロは、プロパティの配列を格納するブロックを作成します。 クライアントが呼び出すたびに、`IDBProperties`インターフェイス、プロバイダーは、プロパティ マップを使用します。  
+ OLE db プロパティのグループ化されます。 データ ソース オブジェクトが 2 つのグループのプロパティ: 設定、DBPROPSET_DATASOURCEINFO の 1 つと、DBPROPSET_DBINIT 設定に 1 つ。 DBPROPSET_DATASOURCEINFO セットは、プロバイダーとそのデータ ソースのプロパティに対応します。 DBPROPSET_DBINIT セットは、初期化時に使用されるプロパティに対応します。 OLE DB プロバイダー テンプレートは、PROPERTY_SET マクロでこれらのセットを処理します。 マクロは、プロパティの配列を含むブロックを作成します。 クライアントが呼び出すたびに、`IDBProperties`インターフェイス、プロバイダーは、プロパティ マップを使用します。  
   
- 仕様のすべてのプロパティを実装する必要はありません。 ただし、必要なプロパティをサポートする必要があります。詳細については、レベル 0 への準拠の仕様を参照してください。 プロパティをサポートしない場合は、マップから削除できます。 プロパティをサポートする場合は、追加、マップに PROPERTY_INFO_ENTRY マクロを使用しています。 マクロに対応する、 **UPROPINFO**次のコードに示すように構造体します。  
+ 仕様のすべてのプロパティを実装する必要はありません。 ただし、必須のプロパティをサポートする必要があります。詳細については、レベル 0 への準拠の仕様を参照してください。 プロパティをサポートしない場合は、マップから削除することができます。 プロパティをサポートする場合は、PROPERTY_INFO_ENTRY マクロを使用して、マップに追加、します。 マクロに対応する、`UPROPINFO`次のコードに示すように構造体します。  
   
-```  
+```cpp  
 struct UPROPINFO  
 {  
    DBPROPID    dwPropId;  
@@ -152,18 +152,18 @@ struct UPROPINFO
 };  
 ```  
   
- 構造内の各要素は、プロパティを処理する情報を表します。 含まれている、 **DBPROPID**プロパティの GUID と ID を指定します。 型とプロパティの値を特定のエントリも含まれています。  
+ 構造内の各要素は、プロパティを処理するために情報を表します。 含まれている、`DBPROPID`プロパティの GUID と ID を確認します。 型とプロパティの値を特定のエントリも含まれています。  
   
- プロパティ (コンシューマーがいつでも書き込み可能なプロパティの値を変更ことに注意してください) の既定値を変更する場合は、PROPERTY_INFO_ENTRY_VALUE または PROPERTY_INFO_ENTRY_EX マクロを使用することができます。 これらのマクロを使用すると、対応するプロパティの値を指定できます。 PROPERTY_INFO_ENTRY_VALUE マクロは、値を変更することができます略式の表記です。 PROPERTY_INFO_ENTRY_VALUE マクロは、PROPERTY_INFO_ENTRY_EX マクロを呼び出します。 このマクロでは、すべての属性の変更を追加することができます、 **UPROPINFO**構造体。  
+ プロパティ (コンシューマーが、書き込み可能なプロパティの値をいつでもでも変更できることに注意してください) の既定値を変更する場合は、PROPERTY_INFO_ENTRY_VALUE または PROPERTY_INFO_ENTRY_EX マクロを使用できます。 これらのマクロを使用すると、対応するプロパティの値を指定できます。 PROPERTY_INFO_ENTRY_VALUE マクロとは、値を変更することを許可する簡便な表記法です。 PROPERTY_INFO_ENTRY_VALUE マクロは PROPERTY_INFO_ENTRY_EX マクロを呼び出します。 このマクロでは、すべての属性の変更を追加することができます、`UPROPINFO`構造体。  
   
- 独自のプロパティ セットを定義する場合は、追加の BEGIN_PROPSET_MAP/END_PROPSET_MAP 組み合わせにすることで 1 つを追加できます。 プロパティ セットの GUID を定義し、独自のプロパティを定義する必要があります。 プロバイダー固有のプロパティがあれば、既存のものを使用する代わりに設定された新しいプロパティに追加します。 以降のバージョンの OLE DB での問題を回避できます。  
+ 独自のプロパティ セットを定義する場合は、追加の BEGIN_PROPSET_MAP/END_PROPSET_MAP 組み合わせを 1 つを追加できます。 プロパティ セットの GUID を定義し、独自のプロパティを定義する必要があります。 プロバイダー固有のプロパティがある場合は、設定、既存のものを使用する代わりに新しいプロパティに追加します。 以降のバージョンの OLE DB での問題を回避できます。  
   
 ## <a name="user-defined-property-sets"></a>ユーザー定義のプロパティ セット  
- Visual C には、ユーザー定義のプロパティ セットがサポートしています。 オーバーライドする必要はありません**GetProperties**または`GetPropertyInfo`です。 代わりに、テンプレートは、任意のユーザー定義のプロパティ セットを検出し、適切なオブジェクトに追加します。  
+ Visual C では、ユーザー定義のプロパティ セットをサポートします。 オーバーライドする必要はありません`GetProperties`または`GetPropertyInfo`します。 代わりに、テンプレートでは、任意のユーザー定義のプロパティ セットを検出し、適切なオブジェクトに追加します。  
   
- 初期化時に使用する必要があるユーザー定義のプロパティ セットがある場合 (コンシューマーを呼び出す前に、 **idbinitialize::initialize**) を使用してこれを指定することができます、 **UPROPSET_USERINIT** BEGIN_PROPERTY_SET_EX マクロと組み合わせてフラグ。 プロパティ セットは、これは、OLE DB 仕様が必要です) のデータ ソース オブジェクトでなければなりません。 例えば:  
+ 初期化時に使用する必要があるユーザー定義のプロパティ セットがある場合 (つまり、コンシューマーを呼び出す前に`IDBInitialize::Initialize`)、BEGIN_PROPERTY_SET_EX マクロと組み合わせて UPROPSET_USERINIT フラグを使用してこれを指定することができます。 プロパティ セットは、これを行う (OLE DB 仕様が必要です)、データ ソース オブジェクトでなければなりません。 例えば:  
   
-```  
+```cpp  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  
    PROPERTY_INFO_ENTRY(DBPROP_MYPROP)  
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)  

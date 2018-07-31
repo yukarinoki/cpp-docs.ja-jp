@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d58709e9a2b5bd86102e8323456c6bf9ca72fa1
-ms.sourcegitcommit: e5792fcb89b9ba64c401f90f4f26a8e45d4a2359
+ms.openlocfilehash: afbf8b42b4d518412c1004d78c5c718e54078c1c
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39322138"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39340782"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl クラス
 OLE DB テンプレートの実装、 [IRowsetUpdate](https://msdn.microsoft.com/library/ms714401.aspx)インターフェイス。  
@@ -108,7 +108,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
  *MapClass*  
  プロバイダーによって保持されているすべての行ハンドルのストレージ ユニット。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
@@ -161,7 +161,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (SetData )(HROW hRow,  
+STDMETHOD (SetData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pSrcData);  
 ```  
@@ -178,7 +178,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (GetOriginalData )(HROW hRow,  
+STDMETHOD (GetOriginalData )(HROW hRow,  
    HACCESSOR hAccessor,  
    void* pData);  
 ```  
@@ -192,7 +192,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,  
    DBPENDINGSTATUS dwRowStatus,  
    DBCOUNTITEM* pcPendingRows,  
    HROW** prgPendingRows,  
@@ -214,7 +214,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,  
+STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBPENDINGSTATUS rgPendingStatus[]);  
@@ -232,7 +232,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (Undo )(HCHAPTER /* hReserved */,  
+STDMETHOD (Undo )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[ ],  
    DBCOUNTITEM* pcRowsUndone,  
@@ -258,7 +258,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (Update )(HCHAPTER /* hReserved */,  
+STDMETHOD (Update )(HCHAPTER /* hReserved */,  
    DBCOUNTITEM cRows,  
    const HROW rghRows[],  
    DBCOUNTITEM* pcRows,  
@@ -305,7 +305,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      CAtlMap<   
+CAtlMap<   
    HROW hRow,    
    Storage* pData   
 >   

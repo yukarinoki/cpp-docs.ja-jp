@@ -1,5 +1,5 @@
 ---
-title: CDynamicStringAccessorA クラス |Microsoft ドキュメント
+title: CDynamicStringAccessorA クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6d05ac97846f55cf65d4010179b28d2b543ef66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e56f71a427fda2444992cc0ed2c3b6166993af1d
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096484"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39341024"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA クラス
-データベース スキーマ (構造体の基になる) の知識があるない場合にデータ ソースにアクセスできます。  
+データベース スキーマ (構造体の基になる) の知識があるない場合にデータ ソースにアクセスすることができます。  
   
 ## <a name="syntax"></a>構文
 
@@ -33,10 +33,10 @@ ms.locfileid: "33096484"
 typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;  
 ```  
   
-## <a name="remarks"></a>コメント  
- どちらも要求プロバイダーが、文字列データとしてデータ ストアからアクセスされるすべてのデータをフェッチするが、`CDynamicStringAccessor`要求 ANSI 文字列データです。  
+## <a name="remarks"></a>Remarks  
+ プロバイダーが、文字列データとしてデータ ストアからすべてのデータをフェッチすることを要求するには両方が`CDynamicStringAccessor`要求 ANSI 文字列データ。  
   
- `CDynamicStringAccessorA` 継承**GetString**と`SetString`から`CDynamicStringAccessor`です。 これらのメソッドを使用すると、`CDynamicStringAccessorA`オブジェクト、 ***BaseType***は**CHAR**です。  
+ `CDynamicStringAccessorA` 継承`GetString`と`SetString`から`CDynamicStringAccessor`します。 これらのメソッドを使用すると、`CDynamicStringAccessorA`オブジェクト、 ***BaseType***は**CHAR**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー**: atldbcli.h  

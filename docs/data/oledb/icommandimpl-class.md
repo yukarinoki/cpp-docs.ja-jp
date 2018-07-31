@@ -63,12 +63,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18174281baf76b383b56b10e86e2659279037b6c
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 07453e3040594332857ba75455b1847a3914fdd2
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269600"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39337795"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
 実装を提供、 [ICommand](https://msdn.microsoft.com/library/ms709737.aspx)インターフェイス。  
@@ -87,7 +87,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
  *CommandBase*  
  コマンド インターフェイスです。 既定値は `ICommand` です。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
   
 ## <a name="members"></a>メンバー  
@@ -121,7 +121,6 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
   
 ```cpp
 STDMETHOD(Cancel)();  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -134,7 +133,6 @@ STDMETHOD(Cancel)();
   
 ```cpp
 HRESULT CancelExecution();  
-  
 ```  
 
 ## <a name="createrowset"></a> Icommandimpl::createrowset
@@ -143,8 +141,7 @@ HRESULT CancelExecution();
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      template template <class RowsetClass  
-      >  
+template template <class RowsetClass>  
 HRESULT CreateRowset(IUnknown* pUnkOuter,  
    REFIID riid,  
    DBPARAMS* pParams,  
@@ -210,7 +207,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      STDMETHOD (GetDBSession) (REFIID riid,  
+STDMETHOD (GetDBSession) (REFIID riid,  
    IUnknown** ppSession);  
 ```  
   
@@ -227,7 +224,6 @@ HRESULT Execute(IUnknown* pUnkOuter,
   
 ```cpp
 ICommandImpl();  
-  
 ```  
 
 ## <a name="bcancel"></a> Icommandimpl::m_bcancel
@@ -237,7 +233,6 @@ ICommandImpl();
   
 ```cpp
 unsigned m_bCancel:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -250,7 +245,6 @@ unsigned m_bCancel:1;
   
 ```cpp
 unsigned m_bCancelWhenExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  
@@ -263,7 +257,6 @@ unsigned m_bCancelWhenExecuting:1;
   
 ```cpp
 unsigned m_bIsExecuting:1;  
-  
 ```  
   
 ### <a name="remarks"></a>Remarks  

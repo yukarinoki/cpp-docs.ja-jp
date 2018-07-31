@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7f37390b4ab5db4cb3b519c801052c4b02102af6
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: 94f90e4c60e5669789caadaaa827b4c12f1f157f
+ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269797"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39339784"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 使用されている行ハンドルの既定の実装を提供します、 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)クラス。  
@@ -62,7 +62,7 @@ ms.locfileid: "39269797"
 class CSimpleRow  
 ```  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** atldb.h  
 
 ## <a name="members"></a>メンバー  
@@ -93,7 +93,6 @@ class CSimpleRow
   
 ```cpp
 DWORD AddRefRow();  
-  
 ```  
 
 ## <a name="compare"></a> Csimplerow::compare
@@ -118,7 +117,7 @@ HRESULT Compare(CSimpleRow* pRow);
 ### <a name="syntax"></a>構文  
   
 ```cpp
-      CSimpleRow(DBCOUNTITEM iRowsetCur);  
+CSimpleRow(DBCOUNTITEM iRowsetCur);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
@@ -135,7 +134,6 @@ HRESULT Compare(CSimpleRow* pRow);
   
 ```cpp
 DWORD ReleaseRow();  
-  
 ```  
 
 ## <a name="dwref"></a> Csimplerow::m_dwref
@@ -145,7 +143,6 @@ DWORD ReleaseRow();
   
 ```cpp
 DWORD m_dwRef;  
-  
 ```  
 
 ## <a name="irowset"></a> Csimplerow::m_irowset
@@ -155,7 +152,6 @@ DWORD m_dwRef;
   
 ```cpp
 KeyType m_iRowset;  
-  
 ```  
   
 ## <a name="see-also"></a>関連項目  
