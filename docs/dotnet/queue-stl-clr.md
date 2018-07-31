@@ -1,5 +1,5 @@
 ---
-title: キュー (STL/CLR) |Microsoft ドキュメント
+title: キュー (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -73,21 +73,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ae23bf845e3fa78a1971def6ea0034c94b57991
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: adf65c4af70b0ba6bc1f089576d69160ab21a5b6
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079708"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375998"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
-このテンプレート クラスでは、先入れ先出しのアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`queue`キューとしてを基になるコンテナーを管理します。  
+テンプレート クラスは、先入れ先出しのアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`queue`キューとの基になるコンテナーを管理します。  
   
- 下記に、`GValue`と同じ`Value`ref 型を後者には、しない限り、どのケースでは`Value^`します。 同様に、`GContainer`と同じ`Container`ref 型を後者には、しない限り、どのケースでは`Container^`します。  
+ 下記の説明で`GValue`と同じ*値*しない限り、後者の場合は、ref 型である場合は`Value^`します。 同様に、`GContainer`と同じ*コンテナー*しない限り、後者の場合は、ref 型である場合は`Container^`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class queue  
@@ -98,13 +98,13 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [値]  
+ *値*  
  被制御シーケンス内の要素の型。  
   
- コンテナー  
+ *コンテナー*  
  基になるコンテナーの型。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/キュー >  
   
  **Namespace:** cliext  
@@ -143,22 +143,22 @@ template<typename Value,
 |演算子|説明|  
 |--------------|-----------------|  
 |[queue::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|  
-|[operator!= (queue) (STL/CLR)](#op_neq)|かどうかを`queue`オブジェクトが他と等しくない`queue`オブジェクト。|  
+|[operator!= (queue) (STL/CLR)](#op_neq)|かどうかを`queue`オブジェクトが等しく別`queue`オブジェクト。|  
 |[operator< (queue) (STL/CLR)](#op_lt)|かどうかを`queue`オブジェクトが他よりも小さい`queue`オブジェクト。|  
 |[operator<= (queue) (STL/CLR)](#op_lteq)|かどうかを`queue`オブジェクトが別に小さい`queue`オブジェクト。|  
-|[operator== (queue) (STL/CLR)](#op_eq)|かどうかを`queue`オブジェクトが他と等しい`queue`オブジェクト。|  
+|[operator== (queue) (STL/CLR)](#op_eq)|かどうかを`queue`オブジェクトが相互に等しい`queue`オブジェクト。|  
 |[operator> (queue) (STL/CLR)](#op_gt)|かどうかを`queue`オブジェクトが他よりも大きい`queue`オブジェクト。|  
-|[operator>= (queue) (STL/CLR)](#op_gteq)|かどうかを`queue`オブジェクトがより大きいか等しい間`queue`オブジェクト。|  
+|[operator>= (queue) (STL/CLR)](#op_gteq)|かどうかを`queue`オブジェクトより大きいまたは相互に等しい`queue`オブジェクト。|  
   
 ## <a name="interfaces"></a>インターフェイス  
   
 |Interface|説明|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|オブジェクトが重複してください。|  
-|I キュー\<値、コンテナー >|汎用的なコンテナーのアダプターを管理します。|  
+|<xref:System.ICloneable>|オブジェクトが重複しています。|  
+|I キュー\<値、コンテナー >|汎用コンテナー アダプターを管理します。|  
   
 ## <a name="remarks"></a>Remarks  
- オブジェクトは、割り当てし、型の基になるコンテナーを制御するシーケンスの記憶域を解放`Container`、格納する`Value`要素および要求時に増加します。 オブジェクトが最初の要素を押すだけへのアクセスを制限し、(FIFO キューまたはキューでは単とも呼ばれます) キューの最後の要素をポップ、先入れ先出しの実装します。  
+ 割り当ておよび解放型の基になるコンテナーを通じて制御してシーケンスに対するストレージの`Container`、格納する`Value`要素と、必要に応じて大きくなります。 オブジェクトが最初の要素を押すだけへのアクセスを制限し、(FIFO キューまたはキューでは単とも呼ばれます) のキューの最後の要素をポップするには、先入れ先出しを実装します。  
   
 ## <a name="members"></a>メンバー
 
@@ -167,16 +167,16 @@ template<typename Value,
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void assign(queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
- コンテナーのアダプターを挿入します。  
+ *right*  
+ 挿入するコンテナー アダプター。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数を割り当てます`right.get_container()`を基になるコンテナーにします。 使用するキューの内容全体を変更します。  
+ メンバー関数は、代入`right.get_container()`を基になるコンテナー。 キューの内容全体を変更するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -206,7 +206,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -219,12 +218,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、空でない必要があります、被制御シーケンスの最後の要素への参照を返します。 存在することがわかっている場合に、最後の要素をアクセスに使用するとします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素への参照を返します。 最後の要素へのアクセスが存在することがわかっている場合に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -256,7 +255,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -270,12 +268,12 @@ back() = c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- プロパティでは、空でない必要があります、被制御シーケンスの最後の要素にアクセスします。 これを使用するには存在することがわかっている場合に、最後の要素を読み書きします。  
+ プロパティでは、空でない必要があります、被制御シーケンスの最後の要素にアクセスします。 存在することがわかっている場合、最後の要素の読み書きに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -307,7 +305,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -321,7 +318,7 @@ back_item = c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -352,7 +349,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -364,7 +360,7 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
@@ -393,7 +389,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -405,12 +400,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、可能性のある負の値の要素の数を表します。  
+ この型は、場合によって負の値の要素の数を表します。  
   
 ### <a name="example"></a>例  
   
@@ -448,7 +443,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -462,12 +456,12 @@ popping 3 = 3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスが空の場合に true を返します。 等価である[queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`です。 これを使用するには、キューが空かどうかをテストします。  
+ このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`します。 これを使用するには、キューが空かどうかをテストします。  
   
 ### <a name="example"></a>例  
   
@@ -499,7 +493,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -515,12 +508,12 @@ empty() = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、空でない必要があります、被制御シーケンスの最初の要素への参照を返します。 存在することがわかっている場合に最初の要素へのアクセスに使用するとします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスの最初の要素への参照を返します。 存在することがわかっている場合に最初の要素へのアクセスに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -552,7 +545,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -566,12 +558,12 @@ front() = a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- プロパティでは、空でない必要があります、被制御シーケンスの最初の要素にアクセスします。 これを使用するには存在することがわかっている場合に、最初の要素を読み書きします。  
+ プロパティでは、空でない必要があります、被制御シーケンスの最初の要素にアクセスします。 存在することがわかっている場合、最初の要素の読み書きに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -603,7 +595,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -617,13 +608,13 @@ front_item = a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレート コンテナーのアダプター クラスのジェネリック インターフェイスを表します。  
+ この型は、このテンプレート コンテナー アダプター クラスのジェネリック インターフェイスを表します。  
   
 ### <a name="example"></a>例  
   
@@ -664,7 +655,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -679,12 +669,12 @@ a b c d e
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用することについて説明します。 (`GValue`か`value_type`または`value_type^`場合`value_type`ref 型です)。  
+ この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。 (`GValue`か`value_type`または`value_type^`場合`value_type`ref 型です)。  
   
 ### <a name="example"></a>例  
   
@@ -722,7 +712,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -736,12 +725,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 container_type^ get_container();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、基になるコンテナーを返します。 使用するコンテナー ラッパーによって指定された制限をバイパスします。  
+ このメンバー関数は、基になるコンテナーを返します。 これを使用して、コンテナー ラッパーによる制限を回避します。  
   
 ### <a name="example"></a>例  
   
@@ -764,7 +753,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -776,16 +764,16 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 queue <Value, Container>% operator=(queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
- コピーするコンテナーのアダプターです。  
+ *right*  
+ コピーするコンテナー アダプター。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー演算子コピー`right`オブジェクトを返します`*this`です。 これを使用して、被制御シーケンスを `right` の被制御シーケンスのコピーと置き換えます。  
+ メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。  
   
 ### <a name="example"></a>例  
   
@@ -814,8 +802,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -828,16 +815,16 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、空でない必要があります、被制御シーケンスの最後の要素を削除します。 使用するバックに 1 つの要素によって、キューを短くします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素を削除します。 後ろに 1 つの要素によって、キューを短縮するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
-```  
+```cpp  
 // cliext_queue_pop.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -862,7 +849,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -875,12 +861,12 @@ b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数が値を持つ要素を追加`val`キューの末尾にします。 使用するキューに要素を追加します。  
+ メンバー関数は、値を持つ要素を追加します`val`キューの末尾にします。 これを使用するにはキューに要素を追加します。  
   
 ### <a name="example"></a>例  
   
@@ -903,7 +889,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -915,7 +900,7 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 queue();  
 queue(queue<Value, Container>% right);  
 queue(queue<Value, Container>^ right);  
@@ -923,36 +908,36 @@ explicit queue(container_type% wrapped);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
+ *right*  
  コピーするオブジェクト。  
   
- ラップされました。  
+ *ラップされました。*  
  使用するラップされたコンテナーです。  
   
 ### <a name="remarks"></a>Remarks  
- : コンス トラクター  
+ コンス トラクター。  
   
  `queue();`  
   
  空のラップされたコンテナーを作成します。 空の初期被制御シーケンスの指定に使用するとします。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `queue(queue<Value, Container>% right);`  
   
- ラップされたコンテナーのコピーを作成する`right.get_container()`です。 キュー オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`です。  
+ コピーであるラップされたコンテナーを作成します。`right.get_container()`します。 使用すると、キュー オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスの指定を*右*します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `queue(queue<Value, Container>^ right);`  
   
- ラップされたコンテナーのコピーを作成する`right->get_container()`です。 キュー オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`*right`です。  
+ コピーであるラップされたコンテナーを作成します。`right->get_container()`します。 使用すると、キュー オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスの指定を`*right`します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `explicit queue(container_type wrapped);`  
   
- 既存のコンテナーを使用して`wrapped`ラップのコンテナーとして。 既存のコンテナーからキューを構築するために使用するとします。  
+ 既存のコンテナーを使用して*ラップ*ラップされたコンテナーとして。 既存のコンテナーからのキューの構築に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -991,7 +976,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1006,7 +990,7 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1041,7 +1025,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1054,12 +1037,12 @@ a b x
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの長さを返します。 これを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスが参照してください、0 以外のサイズを持つかどうかは、関心のあるすべて場合[queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`です。  
+ このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`します。  
   
 ### <a name="example"></a>例  
   
@@ -1092,7 +1075,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1107,7 +1089,7 @@ size() = 4 after adding 2
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
@@ -1142,7 +1124,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1155,16 +1136,16 @@ size difference = 2
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、被制御シーケンスを格納する配列を返します。 使用する配列形式の被制御シーケンスのコピーを入手します。  
+ メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。  
   
 ### <a name="example"></a>例  
   
-```  
+```cpp  
 // cliext_queue_to_array.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -1191,7 +1172,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1204,12 +1184,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、テンプレート パラメーター `Value` のシノニムです。  
+ 型はテンプレート パラメーターのシノニム*値*します。  
   
 ### <a name="example"></a>例  
   
@@ -1235,20 +1215,19 @@ int main()
         }   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
 a b c  
 ```  
 
-## <a name="op_neq"></a> operator! = (キュー) (STL/CLR)
+## <a name="op_neq"></a> 演算子! = (キュー) (STL/CLR)
 キューには、比較と等しくありません。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator!=(queue<Value, Container>% left,  
@@ -1256,14 +1235,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(left == right)`です。 テストするために使用するかどうか`left`順序付けされていないと同じ`right`要素によって比較対象の要素が 2 つのキューの場合。  
+ 演算子関数を返します`!(left == right)`します。 テストに使用するかどうか*左*順序付けされていないと同じ*右*要素によって比較対象の要素が 2 つのキューの場合。  
   
 ### <a name="example"></a>例  
   
@@ -1302,7 +1281,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1317,7 +1295,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<(queue<Value, Container>% left,  
@@ -1325,14 +1303,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返す場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`です。 返しますそれ以外の場合、 `left->` [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()`をテストするために使用するかどうか`left`前に順序付け`right`要素によって比較対象の要素が 2 つのキューの場合。  
+ 演算子関数を返します。 場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`します。 返しますそれ以外の場合、 `left->` [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `() <` `right->size()`テストに使用するかどうか*左*前に順序付けは*右*2 つのキューが要素で要素を比較します。  
   
 ### <a name="example"></a>例  
   
@@ -1370,8 +1348,7 @@ int main()
     System::Console::WriteLine("[a b c] < [a b d] is {0}",   
         c1 < c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1382,11 +1359,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> 演算子&lt;= (キュー) (STL/CLR)
-以下のキューの比較できます。  
+以下のキューの比較。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator<=(queue<Value, Container>% left,  
@@ -1394,14 +1371,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(right < left)`です。 テストするために使用するかどうか`left`後に順序付けされていない`right`要素によって比較対象の要素が 2 つのキューの場合。  
+ 演算子関数を返します`!(right < left)`します。 テストに使用するかどうか*左*後に順序付けされていない*右*要素によって比較対象の要素が 2 つのキューの場合。  
   
 ### <a name="example"></a>例  
   
@@ -1439,8 +1416,7 @@ int main()
     System::Console::WriteLine("[a b d] <= [a b c] is {0}",   
         c2 <= c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1450,12 +1426,12 @@ int main()
 [a b d] <= [a b c] is False  
 ```  
 
-## <a name="op_eq"></a> 演算子 = = (キュー) (STL/CLR)
-キューのと同じ比較します。  
+## <a name="op_eq"></a> 演算子 (キュー) (STL/CLR) = =
+キュー比較します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator==(queue<Value, Container>% left,  
@@ -1463,14 +1439,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子の関数が、シーケンスがによって制御される場合にのみ true を返します`left`と`right`同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`です。 テストするために使用するかどうか`left`が同じ順序付け`right`要素によって比較対象の要素が 2 つのキューの場合。  
+ 演算子の関数によって制御されるシーケンスの場合にのみ true を返します*左*と*右*同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`します。 テストに使用するかどうか*左*が同じ順序付け*右*要素によって比較対象の要素が 2 つのキューの場合。  
   
 ### <a name="example"></a>例  
   
@@ -1508,8 +1484,7 @@ int main()
     System::Console::WriteLine("[a b c] == [a b d] is {0}",   
         c1 == c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1520,11 +1495,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> 演算子&gt;(キュー) (STL/CLR)
-キューの比較を超えています。  
+キューの比較よりも大きいです。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>(queue<Value, Container>% left,  
@@ -1532,14 +1507,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`right` `<` `left`です。 テストするために使用するかどうか`left`が後に順序付け`right`要素によって比較対象の要素が 2 つのキューの場合。  
+ 演算子関数を返します`right` `<` `left`します。 テストに使用するかどうか*左*が後に順序付け*右*要素によって比較対象の要素が 2 つのキューの場合。  
   
 ### <a name="example"></a>例  
   
@@ -1577,8 +1552,7 @@ int main()
     System::Console::WriteLine("[a b d] > [a b c] is {0}",   
         c2 > c1);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -1589,11 +1563,11 @@ int main()
 ```  
 
 ## <a name="op_gteq"></a> 演算子&gt;= (キュー) (STL/CLR)
-キューより大きいまたは等しい比較します。  
+キューよりも大きいまたは等しい比較します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     bool operator>=(queue<Value, Container>% left,  
@@ -1601,14 +1575,14 @@ template<typename Value,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(left < right)`です。 テストするために使用するかどうか`left`する前に順序付けされていない`right`要素によって比較対象の要素が 2 つのキューの場合。  
+ 演算子関数を返します`!(left < right)`します。 テストに使用するかどうか*左*する前に順序付けされていない*右*要素によって比較対象の要素が 2 つのキューの場合。  
   
 ### <a name="example"></a>例  
   
@@ -1646,8 +1620,7 @@ int main()
     System::Console::WriteLine("[a b c] >= [a b d] is {0}",   
         c1 >= c2);   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  

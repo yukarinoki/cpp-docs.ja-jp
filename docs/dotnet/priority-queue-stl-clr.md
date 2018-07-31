@@ -1,5 +1,5 @@
 ---
-title: priority_queue (STL/CLR) |Microsoft ドキュメント
+title: priority_queue (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -61,21 +61,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: cb2ee3fa52612ee3c6abae7a57046564c10c8afb
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079532"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376038"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
-このテンプレート クラスは、可変長のアクセスが制限されている要素のシーケンスを順序付けを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`priority_queue`優先度のキューとしてを基になるコンテナーを管理します。  
+テンプレート クラスには、可変長のアクセスが制限されている要素のシーケンスを順序付けを制御するオブジェクトについて説明します。 コンテナー アダプターを使用する`priority_queue`優先順位キューとの基になるコンテナーを管理します。  
   
- 下記に、`GValue`と同じ`Value`ref 型を後者には、しない限り、どのケースでは`Value^`します。 同様に、`GContainer`と同じ`Container`ref 型を後者には、しない限り、どのケースでは`Container^`します。  
+ 下記の説明で`GValue`と同じ*値*しない限り、後者の場合は、ref 型である場合は`Value^`します。 同様に、`GContainer`と同じ*コンテナー*しない限り、後者の場合は、ref 型である場合は`Container^`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value,  
     typename Container>  
     ref class priority_queue  
@@ -85,13 +85,13 @@ template<typename Value,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [値]  
+ *値*  
  被制御シーケンス内の要素の型。  
   
- コンテナー  
+ *コンテナー*  
  基になるコンテナーの型。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/キュー >  
   
  **Namespace:** cliext  
@@ -107,7 +107,7 @@ template<typename Value,
 |[priority_queue::generic_value (STL/CLR)](#generic_value)|コンテナー アダプターのジェネリック インターフェイスの要素の型。|  
 |[priority_queue::reference (STL/CLR)](#reference)|要素への参照の型です。|  
 |[priority_queue::size_type (STL/CLR)](#size_type)|2 つの要素間の距離を表す、符号付きの型です。|  
-|[priority_queue::value_compare (STL/CLR)](#value_compare)|2 つの要素の順序付けのデリゲート。|  
+|[priority_queue::value_compare (STL/CLR)](#value_compare)|2 つの要素の順序付けデリゲート。|  
 |[priority_queue::value_type (STL/CLR)](#value_type)|要素の型。|  
   
 |メンバー関数|説明|  
@@ -115,13 +115,13 @@ template<typename Value,
 |[priority_queue::assign (STL/CLR)](#assign)|すべての要素を置換します。|  
 |[priority_queue::empty (STL/CLR)](#empty)|要素が存在しないかどうかをテストします。|  
 |[priority_queue::get_container (STL/CLR)](#get_container)|基になるコンテナーにアクセスします。|  
-|[priority_queue::pop (STL/CLR)](#pop)|Hghest 優先度要素を削除します。|  
+|[priority_queue::pop (STL/CLR)](#pop)|Hghest 優先順位の要素を削除します。|  
 |[priority_queue::priority_queue (STL/CLR)](#priority_queue)|コンテナー オブジェクトを構築します。|  
 |[priority_queue::push (STL/CLR)](#push)|新しい要素を追加します。|  
 |[priority_queue::size (STL/CLR)](#size)|要素の数をカウントします。|  
 |[priority_queue::top (STL/CLR)](#top)|最も高い優先順位の要素にアクセスします。|  
 |[priority_queue::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|  
-|[priority_queue::value_comp (STL/CLR)](#value_comp)|2 つの要素の順序付けのデリゲートをコピーします。|  
+|[priority_queue::value_comp (STL/CLR)](#value_comp)|2 つの要素の順序付けデリゲートをコピーします。|  
   
 |プロパティ|説明|  
 |--------------|-----------------|  
@@ -135,35 +135,35 @@ template<typename Value,
   
 |Interface|説明|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|オブジェクトが重複してください。|  
-|IPriorityQueue\<値、コンテナー >|汎用的なコンテナーのアダプターを管理します。|  
+|<xref:System.ICloneable>|オブジェクトが重複しています。|  
+|IPriorityQueue\<値、コンテナー >|汎用コンテナー アダプターを管理します。|  
   
 ## <a name="remarks"></a>Remarks  
- オブジェクトは、割り当てし、型の基になるコンテナーを制御するシーケンスの記憶域を解放`Container`、格納する`Value`要素および要求時に増加します。 アクセスとリムーバブル最も高い優先度要素 (最上位の要素) を持つ、ヒープとして順序付けられたシーケンスを保持します。 オブジェクトは、新しい要素をプッシュおよびポップだけでは、最も高い優先度要素優先度のキューの実装へのアクセスを制限します。  
+ 割り当ておよび解放型の基になるコンテナーを通じて制御してシーケンスに対するストレージの`Container`、格納する`Value`要素と、必要に応じて大きくなります。 最も高い優先順位要素 (最上位の要素) へのアクセスとリムーバブルでヒープとして順序付けられたシーケンスを保持します。 オブジェクトは、新しい要素をプッシュとポップだけ、最も高い優先順位要素、優先順位キューの実装へのアクセスを制限します。  
   
- オブジェクトがストアド デリゲート型のオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)です。 Priority_queue; を作成する場合は、ストアド デリゲート オブジェクトを指定することができます。デリゲート オブジェクトを指定しないと、既定値が比較`operator<(value_type, value_type)`です。 このメンバー関数を呼び出すことによってこのストアド オブジェクトにアクセスする[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`です。  
+ オブジェクトがストアド デリゲート型のオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)します。 Priority_queue を構築する際に、ストアド デリゲート オブジェクトを指定できます既定値は、比較でデリゲート オブジェクトを指定しない場合`operator<(value_type, value_type)`します。 メンバー関数を呼び出すことによって格納されているこのオブジェクトにアクセスする[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`します。  
   
- このようなデリゲート オブジェクト必要があります、厳密弱順序強制型の値で[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)です。 つまり、任意の 2 つのキーの`X`と`Y`:  
+ このようなデリゲート オブジェクトは、厳密弱順序を型の値に課す必要があります[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)します。 任意の 2 つのキーのつまり`X`と`Y`:  
   
- `value_comp()(X, Y)` すべての呼び出しでブール値を同じ結果を返します。  
+ `value_comp()(X, Y)` 呼び出しごとに、同じブール型の結果を返します。  
   
  場合`value_comp()(X, Y)`が true の場合、 `value_comp()(Y, X)` false である必要があります。  
   
- 場合`value_comp()(X, Y)`が true の場合、`X`をする前に並べ替えるといいます`Y`です。  
+ 場合`value_comp()(X, Y)`が true の場合、`X`前に順序付けすると言います`Y`します。  
   
- 場合`!value_comp()(X, Y) && !value_comp()(Y, X)`が true の場合、`X`と`Y`大小関係が等しいと呼ばれます。  
+ 場合`!value_comp()(X, Y) && !value_comp()(Y, X)`が true の場合、`X`と`Y`同等の順序を持つと言います。  
   
- 任意の要素に対して`X`の直前まで`Y`、被制御シーケンスの`key_comp()(Y, X)`は false。 (既定のデリゲート オブジェクトのキーしない値が減少します。)  
+ 任意の要素に対して`X`前になる`Y`で、被制御シーケンスの`key_comp()(Y, X)`は false です。 (既定のデリゲート オブジェクトのキーしない値が減少します。)  
   
- 最高の優先順位の要素は、その他の要素の前に順序付けされていない先の要素のいずれかでは、です。  
+ 最高の優先順位の要素は、他の任意の要素の前に順序付けされていない要素の 1 つではそのためです。  
   
- 基になるコンテナーでは、要素の順序に並べたヒープとして残される: ため  
+ 基になるコンテナーは、ヒープとして順序付けられた要素を保持: から  
   
  コンテナーは、ランダム アクセス反復子をサポートする必要があります。  
   
- 同じ順序で要素は、プッシュされたよりも、異なる順序でポップ可能性があります。 (順序付けが安定しない。)  
+ プッシュされたよりも、同等の順序で要素を異なる順序でポップ可能性があります。 (順序が安定しない。)  
   
- したがって、候補となる、基になるコンテナーを含める[deque (STL/CLR)](../dotnet/deque-stl-clr.md)と[ベクター (STL/CLR)](../dotnet/vector-stl-clr.md)です。  
+ したがって、基になるコンテナーの候補を含める[deque (STL/CLR)](../dotnet/deque-stl-clr.md)と[ベクトル (STL/CLR)](../dotnet/vector-stl-clr.md)します。  
   
 ## <a name="members"></a>メンバー
   
@@ -172,16 +172,16 @@ template<typename Value,
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void assign(priority_queue<Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
- コンテナーのアダプターを挿入します。  
+ *right*  
+ 挿入するコンテナー アダプター。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数を割り当てます`right.get_container()`を基になるコンテナーにします。 使用するキューの内容全体を変更します。  
+ メンバー関数は、代入`right.get_container()`を基になるコンテナー。 キューの内容全体を変更するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -211,7 +211,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -224,7 +223,7 @@ c a b
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -233,7 +232,7 @@ typedef value_type% const_reference;
   
 ### <a name="example"></a>例  
   
-```  
+```cpp  
 // cliext_priority_queue_const_reference.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -255,7 +254,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -267,7 +265,7 @@ c b a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Container value_type;  
 ```  
   
@@ -296,7 +294,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -308,12 +305,12 @@ c a b
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、可能性のある負の値の要素の数を表します。  
+ この型は、場合によって負の値の要素の数を表します。  
   
 ### <a name="example"></a>例  
   
@@ -351,7 +348,6 @@ int main()
     System::Console::WriteLine("popping 3 = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -365,12 +361,12 @@ popping 3 = 3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスが空の場合に true を返します。 等価である[priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`です。 Priority_queue が空かどうかをテストに使用するとします。  
+ このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`します。 これを使用するには、priority_queue が空かどうかをテストします。  
   
 ### <a name="example"></a>例  
   
@@ -402,7 +398,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -418,13 +413,13 @@ empty() = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::IPriorityQueue<Value>  
     generic_container;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレート コンテナーのアダプター クラスのジェネリック インターフェイスを表します。  
+ この型は、このテンプレート コンテナー アダプター クラスのジェネリック インターフェイスを表します。  
   
 ### <a name="example"></a>例  
   
@@ -465,7 +460,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -480,12 +474,12 @@ e d b a c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用することについて説明します。 (`GValue`か`value_type`または`value_type^`場合`value_type`ref 型です)。  
+ この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。 (`GValue`か`value_type`または`value_type^`場合`value_type`ref 型です)。  
   
 ### <a name="example"></a>例  
   
@@ -523,7 +517,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -537,12 +530,12 @@ c b a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 container_type get_container();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、基になるコンテナーを返します。 使用するコンテナー ラッパーによって指定された制限をバイパスします。  
+ このメンバー関数は、基になるコンテナーを返します。 これを使用して、コンテナー ラッパーによる制限を回避します。  
   
 ### <a name="example"></a>例  
   
@@ -565,7 +558,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -577,16 +569,16 @@ c a b
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
- コピーするコンテナーのアダプターです。  
+ *right*  
+ コピーするコンテナー アダプター。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー演算子コピー`right`オブジェクトを返します`*this`です。 これを使用して、被制御シーケンスを `right` の被制御シーケンスのコピーと置き換えます。  
+ メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。  
   
 ### <a name="example"></a>例  
   
@@ -615,8 +607,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -629,12 +620,12 @@ Proirity 最上位要素を削除します。
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void pop();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、空でない必要があります、被制御シーケンスの最も高い優先度要素を削除します。 使用するバックに 1 つの要素によって、キューを短くします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスの最も高い優先順位の要素を削除します。 後ろに 1 つの要素によって、キューを短縮するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -663,7 +654,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -676,7 +666,7 @@ b a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 priority_queue();  
 priority_queue(priority_queue<Value, Container> right);  
 priority_queue(priority_queue<Value, Container> right);  
@@ -693,69 +683,69 @@ template<typename InIt>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 続き  
+ *続き*  
  コピーするコンテナー。  
   
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- pred  
- 被制御シーケンスの述語を順序付けです。  
+ *Pred*  
+ 被制御シーケンスの述語を順序付けします。  
   
- 右  
+ *right*  
  挿入するオブジェクトまたは範囲。  
   
 ### <a name="remarks"></a>Remarks  
- : コンス トラクター  
+ コンス トラクター。  
   
  `priority_queue();`  
   
- 既定の順序の述語を空のラップされたコンテナーを作成します。 これを使用するには、既定の順序の述語を持つ、空の初期被制御シーケンスを指定します。  
+ 既定の順序の述語では、空のラップされたコンテナーを作成します。 これを使用するには、既定の順序の述語を持つ、空の初期被制御シーケンスを指定します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- ラップされたコンテナーのコピーを作成する`right.get_container()`、順序の指定の述語と`right.value_comp()`です。 キュー オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`、同じ順序の指定の述語に置き換えます。  
+ コピーであるラップされたコンテナーを作成します。 `right.get_container()`、順序付け述語で`right.value_comp()`します。 キュー オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*、同じ順序付け述語に置き換えます。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- ラップされたコンテナーのコピーを作成する`right->get_container()`、順序の指定の述語と`right->value_comp()`です。 キュー オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`*right`、同じ順序の指定の述語に置き換えます。  
+ コピーであるラップされたコンテナーを作成します。 `right->get_container()`、順序付け述語で`right->value_comp()`します。 キューのオブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`*right`、同じ順序付け述語に置き換えます。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- 順序の指定の述語で、空のラップされたコンテナーを作成`pred`です。 これを使用して、順序指定された述語を持つ、空の初期被制御シーケンスを指定します。  
+ 順序付け述語で空のラップされたコンテナーを作成します。 *pred*します。 指定した順序付け述語を持つ、空の初期被制御シーケンスを指定するのに使用するとします。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- 順序の指定の述語で、空のラップされたコンテナーを作成`pred`のすべての要素をプッシュ`cont`順序指定された述語で、既存のコンテナーからの初期被制御シーケンスを指定するために使用します。  
+ 順序付け述語で空のラップされたコンテナーを作成します*pred*、のすべての要素をプッシュし、*続き*で既存のコンテナーからの初期被制御シーケンスを指定するために使用します。順序付け述語を指定します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- 既定の順序付け述語で、空のラップされたコンテナーを作成し、シーケンスをプッシュ [`first`、 `last`)。 これを使用して、順序指定された述語を持つ、指定した eqeuence からの初期被制御シーケンスを指定します。  
+ 既定の順序付け述語で空のラップされたコンテナーを作成し、プッシュ シーケンス [`first`、 `last`)。 これを使用するには、指定した順序付け述語で指定された eqeuence からの初期被制御シーケンスを指定します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- 順序の指定の述語で、空のラップされたコンテナーを作成`pred`、シーケンスにプッシュし、[`first`、 `last`)。 これを使用して、順序指定された述語を持つ、指定した seqeuence からの初期被制御シーケンスを指定します。  
+ 順序付け述語で空のラップされたコンテナーを作成します。 *pred*、シーケンスをプッシュし、[`first`、 `last`)。 これを使用するには、指定した順序付け述語で指定された seqeuence からの初期被制御シーケンスを指定します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- 順序の指定の述語で、空のラップされたコンテナーを作成`pred`のすべての要素をプッシュ`cont`さらに、シーケンス [`first`、 `last`)。 これを使用して、順序指定された述語を持つ既存のコンテナーと、指定した seqeuence からの初期被制御シーケンスを指定します。  
+ 順序付け述語で空のラップされたコンテナーを作成します。 *pred*、、のすべての要素をプッシュ*続き*さらに、シーケンス [`first`、 `last`)。 これを使用するには、指定した順序付け述語を持つ既存のコンテナーと、指定の seqeuence からの初期被制御シーケンスを指定します。  
   
 ### <a name="example"></a>例  
   
@@ -839,7 +829,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -861,12 +850,12 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void push(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数は、値を持つ要素を挿入します。`val`に、被制御シーケンス ヒープ作業分野を維持するために、被制御シーケンスの順序を変更するとします。 使用するキューに別の要素を追加します。  
+ メンバー関数は、値を持つ要素を挿入する`val`に、被制御シーケンスはヒープ規範を維持するために、被制御シーケンスの順序を変更するとします。 これを使用するには、キューに別の要素を追加します。  
   
 ### <a name="example"></a>例  
   
@@ -889,7 +878,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -901,7 +889,7 @@ c a b
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -936,7 +924,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -949,12 +936,12 @@ x a b
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの長さを返します。 これを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスが参照してください、0 以外のサイズを持つかどうかは、関心のあるすべて場合[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`です。  
+ このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)`()`します。  
   
 ### <a name="example"></a>例  
   
@@ -987,7 +974,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1002,7 +988,7 @@ size() = 4 after adding 2
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
@@ -1037,7 +1023,6 @@ int main()
     System::Console::WriteLine("size difference = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1050,12 +1035,12 @@ size difference = 2
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、被制御シーケンスを格納する配列を返します。 使用する配列形式の被制御シーケンスのコピーを入手します。  
+ メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1086,7 +1071,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1099,12 +1083,12 @@ c a b
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reference top();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、空でない必要があります、被制御シーケンスのトップ (最高優先度) の要素への参照を返します。 要素にアクセスする、最も高い優先度、存在することがわかっている場合に使用するとします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスのトップ (最高優先順位) 要素への参照を返します。 存在することがわかっている場合に最も高い優先順位の要素へのアクセスに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1136,7 +1120,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
 
 ## <a name="top_item"></a> priority_queue::top_item (STL/CLR)
@@ -1144,12 +1127,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- プロパティでは、空でない必要があります、被制御シーケンスのトップ (最高優先度) 要素にアクセスします。 これを使用するには存在することがわかっている場合に、最も高い優先度要素を読み書きします。  
+ プロパティでは、空でない必要があります、被制御シーケンスのトップ (最高優先順位) 要素にアクセスします。 存在することがわかっている場合に最も高い優先順位の要素の読み書きに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1181,7 +1164,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1191,16 +1173,16 @@ top_item = c
 ```  
 
 ## <a name="value_comp"></a> priority_queue::value_comp (STL/CLR)
-2 つの要素の順序付けのデリゲートをコピーします。  
+2 つの要素の順序付けデリゲートをコピーします。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 使用する 2 つの値を比較します。  
+ このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 これを使用するには 2 つの値を比較します。  
   
 ### <a name="example"></a>例  
   
@@ -1235,7 +1217,6 @@ int main()
         vcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1249,16 +1230,16 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="value_compare"></a> priority_queue::value_compare (STL/CLR)
-2 つの値の順序付けのデリゲート。  
+2 つの値の順序付けデリゲート。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 binary_delegate<value_type, value_type, int> value_compare;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- 種類は、最初の引数が 2 つ目の前に順序付けするかどうかを決定するデリゲートのシノニムです。  
+ 型は、最初の引数が 2 つ目の順序付けられたかどうかを決定するデリゲートのシノニムです。  
   
 ### <a name="example"></a>例  
   
@@ -1293,7 +1274,6 @@ int main()
         vcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1311,12 +1291,12 @@ compare(L'b', L'a') = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、テンプレート パラメーター `Value` のシノニムです。  
+ 型はテンプレート パラメーターのシノニム*値*します。  
   
 ### <a name="example"></a>例  
   
@@ -1343,7 +1323,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  

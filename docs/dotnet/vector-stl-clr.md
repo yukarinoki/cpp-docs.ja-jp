@@ -1,5 +1,5 @@
 ---
-title: ベクトル (STL/CLR) |Microsoft ドキュメント
+title: ベクトル (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -107,21 +107,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 426fbb9b63065218158a199a32e5addca70eba9c
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079813"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376184"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
-このテンプレート クラスでは、ランダム アクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`vector`ストレージの連続ブロックとして要素のシーケンスを管理します。 ブロックは、必要に応じて大きくを配列として実装されます。  
+テンプレート クラスは、ランダムなアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`vector`ストレージの連続したブロックとして要素のシーケンスを管理します。 ブロックは、オンデマンドで拡大している配列として実装されます。  
   
- 下記に、`GValue`と同じ`Value`ref 型を後者には、しない限り、どのケースでは`Value^`します。  
+ 下記の説明で`GValue`と同じ*値*しない限り、後者の場合は、ref 型である場合は`Value^`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value>  
     ref class vector  
         :   public  
@@ -136,10 +136,10 @@ template<typename Value>
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- [値]  
+ *値*  
  被制御シーケンス内の要素の型。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/vector >  
   
  **Namespace:** cliext  
@@ -179,7 +179,7 @@ template<typename Value>
 |[vector::push_back (STL/CLR)](#push_back)|新しい最後の要素を追加します。|  
 |[vector::rbegin (STL/CLR)](#rbegin)|反転被制御シーケンスの先頭を指定します。|  
 |[vector::rend (STL/CLR)](#rend)|反転被制御シーケンスの末尾を指定します。|  
-|[vector::reserve (STL/CLR)](#reserve)|コンテナーの容量の最小の増加のことを確認します。|  
+|[vector::reserve (STL/CLR)](#reserve)|により、コンテナーの拡張最小容量。|  
 |[vector::resize (STL/CLR)](#resize)|要素の数を変更します。|  
 |[vector::size (STL/CLR)](#size)|要素の数をカウントします。|  
 |[vector::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|  
@@ -195,35 +195,35 @@ template<typename Value>
 |--------------|-----------------|  
 |[vector::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|  
 |[vector::operator(STL/CLR)](#op)|指定した位置にある要素にアクセスします。|  
-|[operator!= (vector) (STL/CLR)](#op_neq)|かどうかを`vector`オブジェクトが他と等しくない`vector`オブジェクト。|  
+|[operator!= (vector) (STL/CLR)](#op_neq)|かどうかを`vector`オブジェクトが等しく別`vector`オブジェクト。|  
 |[operator< (vector) (STL/CLR)](#op_lt)|かどうかを`vector`オブジェクトが他よりも小さい`vector`オブジェクト。|  
 |[operator<= (vector) (STL/CLR)](#op_lteq)|かどうかを`vector`オブジェクトが別に小さい`vector`オブジェクト。|  
-|[operator== (vector) (STL/CLR)](#op_eq)|かどうかを`vector`オブジェクトが他と等しい`vector`オブジェクト。|  
+|[operator== (vector) (STL/CLR)](#op_eq)|かどうかを`vector`オブジェクトが相互に等しい`vector`オブジェクト。|  
 |[operator> (vector) (STL/CLR)](#op_gt)|かどうかを`vector`オブジェクトが他よりも大きい`vector`オブジェクト。|  
-|[operator>= (vector) (STL/CLR)](#op_gteq)|かどうかを`vector`オブジェクトがより大きいか等しい間`vector`オブジェクト。|  
+|[operator>= (vector) (STL/CLR)](#op_gteq)|かどうかを`vector`オブジェクトより大きいまたは相互に等しい`vector`オブジェクト。|  
   
 ## <a name="interfaces"></a>インターフェイス  
   
 |Interface|説明|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|オブジェクトが重複してください。|  
-|<xref:System.Collections.IEnumerable>|要素を順番にします。|  
+|<xref:System.ICloneable>|オブジェクトが重複しています。|  
+|<xref:System.Collections.IEnumerable>|要素をシーケンス処理します。|  
 |<xref:System.Collections.ICollection>|要素のグループを管理します。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番にします。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素をシーケンス処理します。|  
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|  
 |<xref:System.Collections.Generic.IList%601>|型指定された要素の順序付きのグループを管理します。|  
 |IVector < 値\>|ジェネリックなコンテナーを管理します。|  
   
 ## <a name="remarks"></a>Remarks  
- オブジェクトは、割り当てし、ストアドの配列を制御するシーケンスの記憶域を解放`Value`要素で、必要に応じて大ききます。 拡張は、新しい要素を追加するだけのコストが償却定数時間であるような方法で発生します。 つまりの末尾に要素を追加のコストが増加せず、平均、被制御シーケンスを大きくの長さとして。 つまり、ベクトルとは、テンプレート クラスを基になるコンテナーで有力候補[スタック (STL/CLR)](../dotnet/stack-stl-clr.md)です。  
+ 割り当ておよび解放の保存されている配列を通じて制御してシーケンスに対するストレージの*値*要素で、必要に応じて大きくなります。 新しい要素を追加のコストが償却定数時間であるような方法で拡張が発生します。 つまり、末尾に要素を追加のコストは増加しません、平均、被制御シーケンスを大きくの長さとして。 そのため、ベクトルとは、基になるコンテナー テンプレート クラスの有力候補[スタック (STL/CLR)](../dotnet/stack-stl-clr.md)します。  
   
- A`vector`に (前) の最初の要素の 0 から数えて、数値の位置を直接指定された要素を参照できることを意味サポート ランダム アクセス反復子`size() - 1`(バックアップ) の最後の要素にします。 ベクターが基になるコンテナー テンプレート クラスに適した候補であることも意味[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)です。  
+ A`vector`に (前) の最初の要素の 0 からカウントの位置を直接指定された要素に参照できることを意味サポート ランダム アクセス反復子`size() - 1`(戻る) の最後の要素にします。 ベクターが基になるコンテナー テンプレート クラスに適した候補であることも意味[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)します。  
   
- ベクターの反復子は、指定した要素のバイアスと共にその関連付けられたベクター オブジェクトへのハンドルを格納します。 反復子は、それらの関連するコンテナー オブジェクトにのみ使用できます。 ベクトルの要素の時差とはその位置と同じです。  
+ ベクターの反復子は、要素の指定のバイアスとその関連のベクター オブジェクトを識別するハンドルを格納します。 関連付けられているコンテナー オブジェクトでのみ、反復子を使用することができます。 Vector 要素のバイアスは、位置の場合と同じです。  
   
- 挿入または要素を消去するには、反復子によって指定された値を変更することも、指定された位置に格納されている要素の値を変更できます。 (コンテナーは、要素にコピーまたは下矢印を挿入する前に穴を作成するか、消去後に穴を入力する必要があります)。いずれにしても、ベクターの反復子は有効ですが、範囲内にそのバイアス限り`[0, size()]`です。 さらに、有効な反復子は dereferencable--これを使用して、アクセスまたはそのバイアスと等しくない場合に限り指定--要素の値を変更することができます`size()`です。  
+ 挿入または要素を消去するには、反復子によって指定された値を変更することも、指定された位置に格納されている要素の値を変更できます。 (コンテナーを要素にコピーまたはスケール ダウンまたは穴を消去した後に挿入する前に穴を作成する必要があります)。それにもかかわらず、ベクターの反復子は有効ですが範囲内にそのバイアス限り`[0, size()]`します。 さらに、有効な反復子は dereferencable--これを使用するにはアクセスまたはそのバイアスがない限り、--指定する要素の値を変更する`size()`します。  
   
- 消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーには、その要素は破棄されません。  
+ 消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型を持つ ref クラスは、コンテナーによりする要素よりも長く保持しないコンテナーです。 ただし、ハンドルのコンテナーには、その要素は破棄されません。  
   
 ## <a name="members"></a>メンバー
 
@@ -232,7 +232,7 @@ template<typename Value>
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void assign(size_type count, value_type val);  
 template<typename InIt>  
     void assign(InIt first, InIt last);  
@@ -240,27 +240,27 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- count  
+ *count*  
  挿入する要素の数。  
   
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- 右  
- 列挙型を挿入します。  
+ *right*  
+ 挿入する列挙です。  
   
- Val  
- 挿入する要素の値です。  
+ *val*  
+ 挿入する要素の値。  
   
 ### <a name="remarks"></a>Remarks  
- 最初のメンバー関数では、被制御シーケンスを置き換えますの繰り返しで`count`値の要素`val`です。 使用する要素をコンテナーを格納するのに、同じ値を持ちます。  
+ 最初のメンバー関数は、被制御シーケンスの繰り返しを置き換えます*カウント*値の要素*val*します。 使用する要素をコンテナーと同じ値を持ちます。  
   
- 場合`InIt`整数型の場合は、2 番目のメンバー関数の動作と同じ`assign((size_type)first, (value_type)last)`です。 それ以外の場合、シーケンスを被制御シーケンスを置き換えます [`first`、 `last`)。 使用すると被制御シーケンスのコピーを別のシーケンス。  
+ 場合`InIt`整数型の場合は、2 番目のメンバー関数の動作と同じ`assign((size_type)first, (value_type)last)`します。 それ以外の場合、被制御シーケンスのシーケンスを置き換えます [`first`、 `last`)。 使用することを被制御シーケンスのコピーを別のシーケンス。  
   
- 3 番目のメンバー関数は、列挙子によって指定されたシーケンスに、被制御シーケンスを置き換えます`right`です。 これを使用するには、被制御シーケンスの列挙子によって説明されているシーケンスのコピーを作成します。  
+ 3 番目のメンバー関数は、被制御シーケンスを列挙子によって指定されたシーケンスに置き換えます*右*します。 これを使用するには、被制御シーケンスの列挙子によって説明されているシーケンスのコピーを作成します。  
   
 ### <a name="example"></a>例  
   
@@ -296,8 +296,7 @@ int main()
         System::Console::Write(" {0}", elem);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    }   
 ```  
   
 ```Output  
@@ -311,16 +310,16 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reference at(size_type pos);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 発注書  
+ *pos*  
  アクセスする要素の位置。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、位置にある被制御シーケンスの要素への参照を返します`pos`です。 読み取ったり書き込んだりする要素の位置に使用することがわかっています。  
+ このメンバー関数は、位置にある、被制御シーケンスの要素への参照を返します*pos*します。読み取りまたは要素の位置を記述するために使用がわかっています。  
   
 ### <a name="example"></a>例  
   
@@ -348,7 +347,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -361,12 +359,12 @@ a x c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reference back();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、空でない必要があります、被制御シーケンスの最後の要素への参照を返します。 存在することがわかっている場合に、最後の要素をアクセスに使用するとします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素への参照を返します。 最後の要素へのアクセスが存在することがわかっている場合に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -397,7 +395,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -411,12 +408,12 @@ back() = c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 property value_type back_item;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- プロパティでは、空でない必要があります、被制御シーケンスの最後の要素にアクセスします。 これを使用するには存在することがわかっている場合に、最後の要素を読み書きします。  
+ プロパティでは、空でない必要があります、被制御シーケンスの最後の要素にアクセスします。 存在することがわかっている場合、最後の要素の読み書きに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -447,7 +444,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -461,12 +457,12 @@ back_item = c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、または空のシーケンスの最後を越えたところ、被制御シーケンスの最初の要素を指定するランダム アクセス反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合は、被制御シーケンスが、そのステータスの先頭を変更できます。  
+ メンバー関数は、被制御シーケンス、または空のシーケンスの末尾を越えた最初の要素を指定するランダム アクセス反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、被制御シーケンスが、そのステータスの先頭を変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -500,7 +496,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -515,12 +510,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type capacity();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスと少なくとも同じ大きさの値を保持するために現在割り当てられている記憶域を返します[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`です。 これを使用するにを被制御シーケンスの記憶域を再割り当てする必要があります、前にどの程度コンテナー サイズを大きくを判断します。  
+ メンバー関数は、被制御シーケンスは少なくともと同じ大きさの値を保持するために現在割り当てられている記憶域を返します。 [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`します。 使用する前に、被制御シーケンスの記憶域を再割り当てする必要がありますが、どの程度のコンテナーを拡張できるかを判断します。  
   
 ### <a name="example"></a>例  
   
@@ -550,7 +545,6 @@ int main()
         c1.capacity(), cap + 5 <= c1.capacity());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -564,16 +558,16 @@ capacity() = 9, ok = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数が効果的に呼び出し[vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `())`. これを使用するには、被制御シーケンスが空であることを確認します。  
+ メンバー関数は、効果的に呼び出す[vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `())`. これを使用するには、被制御シーケンスが空であることを確認します。  
   
 ### <a name="example"></a>例  
   
-```  
+```cpp  
 // cliext_vector_clear.cpp   
 // compile with: /clr   
 #include <cliext/vector>   
@@ -605,7 +599,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -620,12 +613,12 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数ランダム アクセス反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数ランダム アクセス反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -648,7 +641,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -660,7 +652,7 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -691,7 +683,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -699,16 +690,16 @@ a b c
 ```  
 
 ## <a name="const_reverse_iterator"></a> vector::const_reverse_iterator (STL/CLR)
-被制御シーケンスの定数反転反復子の型。  
+被制御シーケンスの定数反転反復子の種類.  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -732,7 +723,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -744,12 +734,12 @@ c b a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、符号付き要素の数を表します。  
+ この型は、符号付きの要素の数を表します。  
   
 ### <a name="example"></a>例  
   
@@ -783,7 +773,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -797,12 +786,12 @@ begin()-end() = -3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスが空の場合に true を返します。 等価である[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() == 0`です。 これを使用して、ベクターが空かどうかをテストします。  
+ このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`() == 0`します。 ベクターが空かどうかをテストに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -831,7 +820,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -847,12 +835,12 @@ empty() = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの最後の位置を指し示すランダム アクセス反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合は、被制御シーケンスが、そのステータスの末尾を変更できます。  
+ メンバー関数では、被制御シーケンスの最後の位置を指し示すランダム アクセス反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、被制御シーケンスが、そのステータスの末尾を変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -887,7 +875,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -902,29 +889,29 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 先頭  
- 消去する範囲の開始しています。  
+ *first*  
+ 消去する範囲の先頭。  
   
- last  
+ *last*  
  消去する範囲の終了。  
   
- where  
+ *where*  
  消去する要素。  
   
 ### <a name="remarks"></a>Remarks  
- 最初のメンバー関数によって示される、被制御シーケンスの要素を削除する`where`です。 それを使用するには 1 つの要素を削除します。  
+ 最初のメンバー関数が指す被制御シーケンスの要素を削除する*場所*します。 これを使用するには 1 つの要素を削除します。  
   
  2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 これを使用するには 0 個以上の連続する要素を削除します。  
   
- 両方のメンバー関数が、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは[vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `()`このような要素が存在しない場合。  
+ 両方のメンバー関数は、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは[vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `()`そのような要素が存在しない場合。  
   
- 要素を消去するには、ときに要素のコピーの数は消去の終了と、シーケンスの最も近い最後の要素の数に比例します。 (シーケンスの先頭または末尾にある 1 つまたは複数の要素を消去するには、ときに要素のコピーは発生しません。)  
+ 要素を消去するときに要素のコピーの数が消去の末尾と、シーケンスの最も近い最後の要素の数に比例します。 (シーケンスのいずれかの側の 1 つまたは複数の要素を消去するときに要素のコピーは発生しません。)  
   
 ### <a name="example"></a>例  
   
@@ -962,8 +949,7 @@ int main()
         *c1.erase(c1.begin(), --it));   
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
-    }  
-  
+    }    
 ```  
   
 ```Output  
@@ -979,12 +965,12 @@ size() = 1
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reference front();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、空でない必要があります、被制御シーケンスの最初の要素への参照を返します。 これを使用するには存在することがわかっている場合に、最初の要素を読み書きします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスの最初の要素への参照を返します。 存在することがわかっている場合、最初の要素の読み書きに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1015,7 +1001,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1029,12 +1014,12 @@ front() = a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 property value_type front_item;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- プロパティでは、空でない必要があります、被制御シーケンスの最初の要素にアクセスします。 これを使用するには存在することがわかっている場合に、最初の要素を読み書きします。  
+ プロパティでは、空でない必要があります、被制御シーケンスの最初の要素にアクセスします。 存在することがわかっている場合、最初の要素の読み書きに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1065,7 +1050,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1079,7 +1063,7 @@ front_item = a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IVector<generic_value>  
     generic_container;  
@@ -1129,7 +1113,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1144,14 +1127,14 @@ a b c d e
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerRandomAccessIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反復子を表します。  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用的な反復子を表します。  
   
 ### <a name="example"></a>例  
   
@@ -1187,7 +1170,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1201,13 +1183,13 @@ a a c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value> generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用反転反復子を表します。  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反転反復子を表します。  
   
 ### <a name="example"></a>例  
   
@@ -1243,7 +1225,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1257,12 +1238,12 @@ a c c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用することについて説明します。  
+ この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。  
   
 ### <a name="example"></a>例  
   
@@ -1298,7 +1279,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1312,7 +1292,7 @@ a a c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator insert(iterator where, value_type val);  
 void insert(iterator where, size_type count, value_type val);  
 template<typename InIt>  
@@ -1322,36 +1302,36 @@ void insert(iterator where,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- count  
+ *count*  
  挿入する要素の数。  
   
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- 右  
- 列挙型を挿入します。  
+ *right*  
+ 挿入する列挙です。  
   
- Val  
- 挿入する要素の値です。  
+ *val*  
+ 挿入する要素の値。  
   
- where  
- 前に挿入するためのコンテナー内の場所。  
+ *where*  
+ 前に挿入するコンテナー内の場所。  
   
 ### <a name="remarks"></a>Remarks  
- メンバーの各関数が指す要素の前に、挿入`where`被制御シーケンスのシーケンスは、残りのオペランドで指定します。  
+ メンバーの関数が指す要素の前に、挿入、*場所*で、被制御シーケンスのシーケンスは、残りのオペランドで指定します。  
   
- 最初のメンバー関数は、値を持つ要素を挿入します。`val`し、新しく挿入される要素を指定する反復子を返します。 使用する反復子によって指定された場所の前に 1 つの要素を挿入します。  
+ 最初のメンバー関数は、値を持つ要素を挿入*val*し、新しく挿入された要素を指定する反復子を返します。 これを使用して、反復子によって指定された場所の前に 1 つの要素を挿入します。  
   
- 2 番目のメンバー関数は、値 `count` の要素を `val` 個挿入します。 使用する同じ値のすべてのコピーである 0 個以上の連続する要素を挿入します。  
+ 2 番目のメンバー関数は、挿入の繰り返しを*カウント*値の要素*val*します。 同じ値のすべてのコピーである 0 個以上の連続する要素を挿入するのに使用するとします。  
   
- `InIt` が整数型である場合、3 番目のメンバー関数は `insert(where, (size_type)first, (value_type)last)` と同じように動作します。 それ以外の場合、これは、シーケンスを挿入 [`first`、 `last`)。 使用する別のシーケンスからコピーした 0 個以上の連続する要素を挿入します。  
+ `InIt` が整数型である場合、3 番目のメンバー関数は `insert(where, (size_type)first, (value_type)last)` と同じように動作します。 シーケンスを挿入する場合は、[`first`、 `last`)。 これを使用するには 0 個以上の連続する要素を使用して、別のシーケンスからコピーを挿入します。  
   
- 4 番目のメンバー関数で指定されたシーケンスを挿入する、`right`です。 使用する列挙子によって説明されているシーケンスを挿入します。  
+ 4 番目のメンバー関数で指定されたシーケンスを挿入する、*右*します。 これを使用して、列挙子によって説明されているシーケンスを挿入します。  
   
- 1 つの要素を挿入するときに要素のコピーの数はカーソルと、シーケンスの最も近い最後の要素の数に比例します。 (1 つまたは複数の要素を挿入する、シーケンスの先頭または末尾にある、ときに要素のコピーは発生しません。)場合`InIt`は入力反復子は、3 番目のメンバー関数は、シーケンス内の各要素の 1 つの挿入を効果的に実行します。 それ以外の場合、挿入するときに`N`要素、要素のコピーの数が線形に`N`+ カーソルと、シーケンスの最も近い最後の要素の数。  
+ 1 つの要素を挿入するときに、要素のコピーの数を挿入ポイントと、シーケンスの最も近い最後の要素の数に比例します。 (一方の端のシーケンスの 1 つまたは複数の要素を挿入するときに要素のコピーは発生しません。)場合`InIt`、入力反復子は、3 番目のメンバー関数は、シーケンス内の各要素の 1 つの挿入を効果的に実行します。 それ以外の場合、挿入するときに`N`要素、要素のコピーの数が線形に`N`カーソルと最も近いシーケンスの最後の要素の数。  
   
 ### <a name="example"></a>例  
   
@@ -1402,7 +1382,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1419,12 +1398,12 @@ insert(begin()+1, L'x') = x
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスのランダム アクセス反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスのランダム アクセス反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -1454,7 +1433,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1467,16 +1445,16 @@ x b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 vector<Value>% operator=(vector<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
+ *right*  
  コピーするコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー演算子コピー`right`オブジェクトを返します`*this`です。 これを使用して、被制御シーケンスを `right` の被制御シーケンスのコピーと置き換えます。  
+ メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。  
   
 ### <a name="example"></a>例  
   
@@ -1505,7 +1483,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1518,16 +1495,16 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reference operator[](size_type pos);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 発注書  
+ *pos*  
  アクセスする要素の位置。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー演算子は、位置の要素を referene を返します`pos`です。 要素にアクセスすることがわかっている位置を使用するとします。  
+ メンバー演算子は、位置にある要素を referene を返します*pos*します。要素がわかっている位置へのアクセスに使用します。  
   
 ### <a name="example"></a>例  
   
@@ -1555,7 +1532,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1568,12 +1544,12 @@ a x c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void pop_back();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、空でない必要があります、被制御シーケンスの最後の要素を削除します。 使用するバックに 1 つの要素によって、ベクトルを短くします。  
+ メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素を削除します。 後ろに 1 つの要素によって、ベクターを短縮するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1601,7 +1577,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1614,12 +1589,12 @@ a b
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void push_back(value_type val);  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、値を持つ要素を挿入します。`val`被制御シーケンスの最後にします。 使用する別の要素をベクターに追加します。  
+ メンバー関数は、値を持つ要素を挿入する`val`被制御シーケンスの最後にします。 使用する別の要素をベクターに追加します。  
   
 ### <a name="example"></a>例  
   
@@ -1641,7 +1616,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1653,12 +1627,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、最後の要素または空のシーケンスの先頭を越えた、被制御シーケンスの指定、逆順反復子を返します。 したがって、これを指定、`beginning`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合、逆の順序で表示される、被制御シーケンスですがその状態の先頭は変更できます。  
+ このメンバー関数は、または空のシーケンスの先頭を越えた、被制御シーケンスの最後の要素を指定する反転反復子を返します。 したがって、指定、`beginning`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの先頭は変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -1692,7 +1666,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1707,7 +1680,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1748,7 +1721,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1761,12 +1733,12 @@ A B C
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの先頭位置を指し示す反転反復子を返します。 したがって、これを指定、`end`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合は逆の順序で表示される、被制御シーケンスですがその状態の終了を変更できます。  
+ メンバー関数は、被制御シーケンスの先頭を越えたを指す、逆順反復子を返します。 したがって、指定、`end`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの末尾は変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -1801,7 +1773,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1812,20 +1783,20 @@ int main()
 ```  
 
 ## <a name="reserve"></a> vector::reserve (STL/CLR)
-コンテナーの容量の最小の増加のことを確認します。  
+により、コンテナーの拡張最小容量。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void reserve(size_type count);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- count  
- コンテナーの新しいの最小容量。  
+ *count*  
+ コンテナーの新しい最小容量。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は確実に`capacity()`以降には、少なくともを返します`count`です。 これを使用するにはいるコンテナー必要がありますが再配置、被制御シーケンスの記憶域が指定されたサイズに拡大され、これまでのようにします。  
+ メンバー関数は、確実`capacity()`少なくとも以下を返します*カウント*します。 あるコンテナー必要がありますが再配置被制御シーケンスに対するストレージの指定されたサイズが大きくなるまでを使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1855,7 +1826,6 @@ int main()
         c1.capacity(), cap + 5 <= c1.capacity());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1869,20 +1839,20 @@ capacity() = 9, ok = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- new_size  
+ *new_size*  
  被制御シーケンスの新しいサイズ。  
   
- Val  
- 埋め込み要素の値です。  
+ *val*  
+ 埋め込み要素の値。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数の両方では、ことを確認[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()`記す返します`new_size`です。 被制御シーケンスを長くする必要がある場合、最初のメンバー関数では値 `value_type()` で要素を追加し、2 番目のメンバー関数では値 `val` で要素を追加します。 被制御シーケンスを短くするために、メンバー関数はどちら効果的に消去の最後の要素[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size`回です。 被制御シーケンスがサイズであることを確認するために使用`new_size`トリミングまたは現在の被制御シーケンスの余白で、します。  
+ メンバー関数の両方が必ず[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()`以後返します*new_size*。 最初のメンバー関数が値で要素を追加する場合は、被制御シーケンスを長くするには、する必要があります、 `value_type()`2 番目のメンバー関数は、値を持つ要素を追加します。 一方、 *val*します。 被制御シーケンスを短くするために、両方のメンバー関数効果的に消去する最後の要素[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size`時間。 被制御シーケンスは、サイズを持つようにするために使用する*new_size*トリミングまたは現在の被制御シーケンス内のスペースでは、します。  
   
 ### <a name="example"></a>例  
   
@@ -1912,7 +1882,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1927,12 +1896,12 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -1962,7 +1931,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1975,12 +1943,12 @@ x b a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの長さを返します。 これを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスが参照してください、0 以外のサイズを持つかどうかは、関心のあるすべて場合[vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)`()`です。  
+ このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)`()`します。  
   
 ### <a name="example"></a>例  
   
@@ -2012,7 +1980,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2027,7 +1994,7 @@ size() = 2 after adding 2
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
@@ -2058,7 +2025,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2071,16 +2037,16 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void swap(vector<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
+ *right*  
  コンテンツを交換するコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、`*this` と `right` の間で被制御シーケンスを交換します。 定数時間では、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。  
+ メンバー関数は、交換の間で被制御シーケンス`*this`と*右*します。 これは一定の時間内と、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2118,7 +2084,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2133,12 +2098,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 cli::array<Value>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、被制御シーケンスを格納する配列を返します。 使用する配列形式の被制御シーケンスのコピーを入手します。  
+ メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2168,7 +2133,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2181,12 +2145,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Value value_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、テンプレート パラメーター `Value` のシノニムです。  
+ 型はテンプレート パラメーターのシノニム*値*します。  
   
 ### <a name="example"></a>例  
   
@@ -2213,7 +2177,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2225,7 +2188,7 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 vector();  
 vector(vector<Value>% right);  
 vector(vector<Value>^ right);  
@@ -2237,65 +2200,65 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- count  
+ *count*  
  挿入する要素の数。  
   
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- 右  
+ *right*  
  挿入するオブジェクトまたは範囲。  
   
- Val  
- 挿入する要素の値です。  
+ *val*  
+ 挿入する要素の値。  
   
 ### <a name="remarks"></a>Remarks  
- : コンス トラクター  
+ コンス トラクター。  
   
  `vector();`  
   
- 要素を持たない被制御シーケンスを初期化します。 空の初期被制御シーケンスの指定に使用するとします。  
+ 要素のない、被制御シーケンスを初期化します。 空の初期被制御シーケンスの指定に使用するとします。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `vector(vector<Value>% right);`  
   
- シーケンスに、被制御シーケンスを初期化します。 [`right.begin()`、 `right.end()`)。 ベクター オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`です。  
+ シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)。 使用すると、vector オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスの指定を*右*します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `vector(vector<Value>^ right);`  
   
- シーケンスに、被制御シーケンスを初期化します。 [`right->begin()`、 `right->end()`)。 ハンドルがベクター オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`です。  
+ シーケンスが被制御シーケンスを初期化します [`right->begin()`、 `right->end()`)。 ハンドルが、vector オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `explicit vector(size_type count);`  
   
- 被制御シーケンスを初期化します`count`値を持つ要素各`value_type()`です。 使用する要素をコンテナーを格納するのに既定値を持ちます。  
+ 被制御シーケンスを初期化します*カウント*値を持つ要素各`value_type()`します。 使用する要素をコンテナーを格納するのに既定値を持ちます。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `vector(size_type count, value_type val);`  
   
- 被制御シーケンスを初期化します`count`値を持つ要素各`val`です。 使用する要素をコンテナーを格納するのに、同じ値を持ちます。  
+ 被制御シーケンスを初期化します*カウント*値を持つ要素各*val*します。 使用する要素をコンテナーと同じ値を持ちます。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIt>`  
   
  `vector(InIt first, InIt last);`  
   
- シーケンスに、被制御シーケンスを初期化します。 [`first`、 `last`)。 これを使用するには、被制御シーケンスの別のシーケンスのコピーを作成します。  
+ シーケンスが被制御シーケンスを初期化します [`first`、 `last`)。 これを使用するには、被制御シーケンスの別のシーケンスのコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `vector(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`です。 これを使用するには、被制御シーケンスの列挙子によって記述された別のシーケンスのコピーを作成します。  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*します。 これを使用するには、被制御シーケンスの列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。  
   
 ### <a name="example"></a>例  
   
@@ -2350,7 +2313,6 @@ int main()
   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2363,8 +2325,8 @@ size() = 0
  x x x x x x  
 ```  
 
-## <a name="op_neq"></a> operator! = (ベクトル) (STL/CLR)
-ベクターには、比較と等しくありません。  
+## <a name="op_neq"></a> 演算子! = (ベクター) (STL/CLR)
+非等値比較をベクターします。  
   
 ### <a name="syntax"></a>構文  
   
@@ -2375,14 +2337,14 @@ template<typename Value>
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(left == right)`です。 テストするために使用するかどうか`left`順序付けされていないと同じ`right`要素によって比較対象の要素が 2 つのベクトルの場合。  
+ 演算子関数を返します`!(left == right)`します。 テストに使用するかどうか*左*順序付けされていないと同じ*右*2 つのベクトルが比較対象の要素ごとの場合。  
   
 ### <a name="example"></a>例  
   
@@ -2420,7 +2382,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2430,26 +2391,26 @@ int main()
 [a b c] != [a b d] is True  
 ```  
 
-## <a name="op_lt"></a> 演算子&lt;(ベクトル) (STL/CLR)
-ベクター比較よりも小さいです。  
+## <a name="op_lt"></a> 演算子&lt;(ベクター) (STL/CLR)
+ベクターの比較よりも小さいです。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<(vector<Value>% left,  
         vector<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返す場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`です。 返しますそれ以外の場合、`left->size() < right->size()`をテストするために使用するかどうか`left`前に順序付け`right`要素によって比較対象の要素が 2 つのベクトルの場合。  
+ 演算子関数を返します。 場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`します。 返しますそれ以外の場合、`left->size() < right->size()`テストに使用するかどうか*左*前に順序付けは*右*2 つのベクトルが比較対象の要素ごとの場合。  
   
 ### <a name="example"></a>例  
   
@@ -2487,7 +2448,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2497,26 +2457,26 @@ int main()
 [a b c] < [a b d] is True  
 ```  
 
-## <a name="op_lteq"></a> 演算子&lt;= (ベクトル) (STL/CLR)
-以下のベクターの比較できます。  
+## <a name="op_lteq"></a> 演算子&lt;= (ベクター) (STL/CLR)
+以下のベクターの比較。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator<=(vector<Value>% left,  
         vector<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(right < left)`です。 テストするために使用するかどうか`left`後に順序付けされていない`right`要素によって比較対象の要素が 2 つのベクトルの場合。  
+ 演算子関数を返します`!(right < left)`します。 テストに使用するかどうか*左*後に順序付けされていない*右*2 つのベクトルが比較対象の要素ごとの場合。  
   
 ### <a name="example"></a>例  
   
@@ -2554,7 +2514,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2564,26 +2523,26 @@ int main()
 [a b d] <= [a b c] is False  
 ```  
 
-## <a name="op_eq"></a> 演算子 = = (ベクトル) (STL/CLR)
-ベクトルと等しい比較します。  
+## <a name="op_eq"></a> 演算子 (ベクター) (STL/CLR) = =
+ベクター比較します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator==(vector<Value>% left,  
         vector<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子の関数が、シーケンスがによって制御される場合にのみ true を返します`left`と`right`同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`です。 テストするために使用するかどうか`left`が同じ順序付け`right`要素によって比較対象の要素が 2 つのベクトルの場合。  
+ 演算子の関数によって制御されるシーケンスの場合にのみ true を返します*左*と*右*同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`します。 テストに使用するかどうか*左*が同じ順序付け*右*2 つのベクトルが比較対象の要素ごとの場合。  
   
 ### <a name="example"></a>例  
   
@@ -2621,7 +2580,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2631,26 +2589,26 @@ int main()
 [a b c] == [a b d] is False  
 ```  
 
-## <a name="op_gt"></a> 演算子&gt;(ベクトル) (STL/CLR)
-比較よりも大きい値のベクトル。  
+## <a name="op_gt"></a> 演算子&gt;(ベクター) (STL/CLR)
+ベクターの比較よりも大きいです。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>(vector<Value>% left,  
         vector<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`right` `<` `left`です。 テストするために使用するかどうか`left`が後に順序付け`right`要素によって比較対象の要素が 2 つのベクトルの場合。  
+ 演算子関数を返します`right` `<` `left`します。 テストに使用するかどうか*左*が後に順序付け*右*2 つのベクトルが比較対象の要素ごとの場合。  
   
 ### <a name="example"></a>例  
   
@@ -2688,7 +2646,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2698,26 +2655,26 @@ int main()
 [a b d] > [a b c] is True  
 ```  
 
-## <a name="op_gteq"></a> 演算子&gt;= (ベクトル) (STL/CLR)
-ベクターより大きいまたは等しい比較します。  
+## <a name="op_gteq"></a> 演算子&gt;= (ベクター) (STL/CLR)
+Vector より大きいまたは等しい比較します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Value>  
     bool operator>=(vector<Value>% left,  
         vector<Value>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(left < right)`です。 テストするために使用するかどうか`left`する前に順序付けされていない`right`要素によって比較対象の要素が 2 つのベクトルの場合。  
+ 演算子関数を返します`!(left < right)`します。 テストに使用するかどうか*左*する前に順序付けされていない*右*2 つのベクトルが比較対象の要素ごとの場合。  
   
 ### <a name="example"></a>例  
   
@@ -2755,7 +2712,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
