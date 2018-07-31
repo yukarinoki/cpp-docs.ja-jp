@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: b96c44f978be18e83736736b6edd5965f0f49ef6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
+ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207788"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39269541"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
@@ -38,13 +38,13 @@ Visual Studio に Linux C++ ワークロードをインストールすると、L
 次のサンプルでは、単純な CMakeLists.txt ファイルと .cpp ファイルを確認できます。
 
 ```cpp
-// Hello.cpp
+// hello.cpp
 
-#include <iostream>;
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
-    std::cout << "Hello" << std::endl;
+    std::cout << "Hello from Linux CMake" << std::endl;
 }
 ```
 
