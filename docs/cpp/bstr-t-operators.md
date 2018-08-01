@@ -1,5 +1,5 @@
 ---
-title: _bstr_t 演算子 |Microsoft ドキュメント
+title: _bstr_t 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d9776579aef7ef4cd32a2fe61fd1f1758e0640
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5db61b6106d34725e2edba8b5681391c6a7147a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407993"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405682"
 ---
 # <a name="bstrt-operators"></a>_bstr_t Operators
-については、`_bstr_t`演算子を参照してください[_bstr_t クラス](../cpp/bstr-t-class.md)です。  
+については、`_bstr_t`演算子を参照してください[_bstr_t クラス](../cpp/bstr-t-class.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [_bstr_t クラス](../cpp/bstr-t-class.md)

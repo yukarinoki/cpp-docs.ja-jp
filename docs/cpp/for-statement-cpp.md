@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b38b608d1d254d304c7182d5063f870e2bbfcffe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: feb14056e3054cdf0e802b16ce9ff20f67da43fe
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940820"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401575"
 ---
 # <a name="for-statement-c"></a>for ステートメント (C++)
 条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントについては、次を参照してください。[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)します。  
@@ -137,9 +137,9 @@ for (int i = 0 ; i < 5 ; i++) {
   
  既定では、 [/Ze](../build/reference/za-ze-disable-language-extensions.md)で宣言された変数を**の**までスコープ内にループが残り、**の**ループの外側のスコープが終了します。  
   
- [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) /Za を指定することがなく、for ループで宣言された変数の標準動作を有効にします。  
+ [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)を指定せずに for ループで宣言された変数の標準動作を有効に`/Za`します。  
   
- スコープの相違点を使用することも、**の**/Ze の下で変数を次のように再宣言をループします。  
+ スコープの相違点を使用することも、**の**ループの下で変数を再宣言を`/Ze`次のようにします。  
   
 ```cpp  
 // for_statement5.cpp  

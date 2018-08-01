@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656785fab5e5ffc8a6fa13711d2964f43cdc7d87
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94c97eaa987163aa35a3f763a1d56c2e6db6050c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393148"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405215"
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 
@@ -55,27 +55,27 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>パラメーター
 
-*size*<br/>
+*size*  
 要求されたメモリ割り当てのサイズ。
 
-*alignment*<br/>
+*alignment*  
 アラインメント値。2 の整数乗である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
-割り当てられたメモリ ブロックへのポインターまたは**NULL**場合は、操作に失敗しました。 ポインターがの倍数*配置*です。
+割り当てられたメモリ ブロックへのポインターまたは NULL の場合は、操作に失敗しました。 ポインターが、複数の*配置*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_aligned_malloc**に基づく[malloc](malloc.md)です。
+**_aligned_malloc**に基づいて[malloc](malloc.md)します。
 
-**_aligned_malloc**がマークされている`__declspec(noalias)`と`__declspec(restrict)`、グローバル変数を変更せず、関数が保証されると、返されるポインターがエイリアス化されないを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**_aligned_malloc**がマークされている`__declspec(noalias)`と`__declspec(restrict)`、グローバル変数を変更することがなく、関数が保証されると、返されるポインターがエイリアス化されないを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
-この関数は、設定**errno**に**ENOMEM**メモリの割り当てが失敗するか、要求されたサイズより大きい場合 **_HEAP_MAXREQ**です。 詳細については**errno**を参照してください[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)です。 また、 **_aligned_malloc**パラメーターを検証します。 場合*配置*が 2 の累乗でないまたは*サイズ*ゼロ、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、この関数を返します**NULL**設定と**errno**に**EINVAL**です。
+この関数は、メモリ割り当てが失敗するか、要求されたサイズが `errno` より大きかった場合に、`ENOMEM` を `_HEAP_MAXREQ` に設定します。 `errno` に関する詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また、 **_aligned_malloc**パラメーターを検証します。 場合*配置*が 2 の累乗でないまたは*サイズ*ゼロ、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、この関数は NULL を返し、セットを許可された場合`errno`に`EINVAL`します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_aligned_malloc**|\<malloc.h>|
 
@@ -163,4 +163,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>関連項目
 
-[データの整列](../../c-runtime-library/data-alignment.md)<br/>
+[データの整列](../../c-runtime-library/data-alignment.md)  

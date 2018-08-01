@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc84a0190430caea9592bf4eb8e47ad5bc1f6ce
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943842"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407781"
 ---
 # <a name="pointers-to-members"></a>メンバーへのポインター
 メンバーへのポインターの宣言は、ポインター宣言の特殊なケースです。  これらは次のシーケンスで宣言します。  
@@ -79,7 +79,7 @@ int main()
 }  
 ```  
   
- 前の例では、`pwCaption`クラスのメンバーへのポインターは、`Window`型を持つ**char\*** します。 `pwCaption` の型は `char * Window::* ` です。 次のコードでは、メンバー関数 `SetCaption` および `GetCaption` へのポインターを宣言します。  
+ 前の例では、`pwCaption`クラスのメンバーへのポインターは、`Window`型を持つ`char*`します。 `pwCaption` の型は `char * Window::* ` です。 次のコードでは、メンバー関数 `SetCaption` および `GetCaption` へのポインターを宣言します。  
   
 ```cpp 
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -103,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
   
  間の差、 **.\*** と**-> \*** 演算子 (メンバーへのポインター演算子) は、 **.\*** 演算子は、メンバーを選択します。 オブジェクトまたはオブジェクトの参照を指定すると、while、 **-> \*** 演算子は、ポインターからメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。  
   
- メンバーへのポインター演算子の結果は、メンバーの型: この場合、 **char \*** します。  
+ メンバーへのポインター演算子の結果は、メンバーの型: この場合、`char *`します。  
   
  次のコードでは、メンバーへのポインターを使用して、メンバー関数 `GetCaption` および `SetCaption` を呼び出します。  
   
@@ -174,6 +174,3 @@ int main()
 //Output: Print function for class Base  
 Print function for class Derived  
 ```  
-  
-## <a name="see-also"></a>関連項目  
- 

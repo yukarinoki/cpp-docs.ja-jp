@@ -1,5 +1,5 @@
 ---
-title: C++ 配列の順序 |Microsoft ドキュメント
+title: C++ 配列の順序 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cba08aeee123c8b4ed237f2ad5a8397e0f354d10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b85f1a97dd38be3e82b2d7e8a10ca8149788e6f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419967"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404689"
 ---
 # <a name="ordering-of-c-arrays"></a>C++ 配列の順序
 C++ 配列は、行優先順で格納されます。 行優先は、最後の添字が最も速く変化することを意味します。  

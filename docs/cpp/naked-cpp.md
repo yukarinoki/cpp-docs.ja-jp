@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1057754b5c98086de42daedd5e7aab70656eba69
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 3366995105f6295fd1d4d89ad85896fbb625519d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943250"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402497"
 ---
 # <a name="naked-c"></a>naked (C++)
 **Microsoft 固有の仕様**  
@@ -41,7 +41,6 @@ __declspec(naked) declarator
 
  関数も付いて場合でも、コンパイラが、naked 属性でマークされた関数のインライン関数を生成することはできません、 [_ _forceinline](inline-functions-cpp.md)キーワード。  
 
-  
  場合、コンパイラがエラーを発行、 **naked**属性メンバーではないメソッドの定義以外のすべてに適用されます。  
   
 ## <a name="examples"></a>使用例  

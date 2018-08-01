@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8890a128ff625ead27ef34be6d057e879b22a5f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943917"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402735"
 ---
 # <a name="anonymous-class-types"></a>匿名クラス型
 クラスを匿名にすることができます: 宣言することがなくこれは、*識別子*します。 クラス名を置き換えるときに便利ですが、 **typedef**次のように、名前。  
@@ -101,4 +101,3 @@ int main()
 ```  
   
 **Microsoft 固有の仕様はここまで**  
-  

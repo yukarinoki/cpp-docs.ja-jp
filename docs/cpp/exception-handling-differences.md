@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb3c41bd490e7c123e1aefe9ccaa04a4e6b233
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b9c17c0abbd8286d05423ac52abc2e2109253f6d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943558"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404624"
 ---
 # <a name="exception-handling-differences"></a>例外処理の相違点
 構造化例外処理と C++ 例外処理の主な違いは、C++ 例外の種類のモデルの取引を処理、C の中に構造化例外処理モデルで処理される 1 つの型、具体的には、 **符号なし int**します。つまり、C 例外は符号なし整数値で識別されますが、C++ 例外はデータ型で識別されます。 例外が C で発生すると、可能な各ハンドラーは、C 例外コンテキストをチェックするフィルターを実行して、例外を受け入れるか、他のハンドラーに渡すか、または無視するかを決定します。 C++ でスローされる例外は、どのような型でもかまいません。  
@@ -87,7 +87,6 @@ public:
       return nSE;  
    }  
 };  
-  
 ```  
   
  このクラスを使用するには、C 例外がスローされるたびに内部例外処理メカニズムによって呼び出されるカスタム C 例外変換関数をインストールします。 変換関数内では、任意の型指定された例外をスローします (おそらく、`SE_Exception`型、またはクラス型から派生した`SE_Exception`) を適切な一致する C++ でキャッチできる**キャッチ**ハンドラー。 変換関数は、単純に制御を返すことができます。これは、例外を処理しなかったことを示します。 変換関数自体が C の例外が発生した場合[終了](../c-runtime-library/reference/terminate-crt.md)が呼び出されます。  

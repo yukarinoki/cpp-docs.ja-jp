@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcfd93d1529844c7e5b72d61a6f1fd87d6dd3a7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940437"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408047"
 ---
 # <a name="c-bit-fields"></a>C++ ビット フィールド
 
@@ -94,5 +94,4 @@ struct Date {
 - 以外の初期化**const**ビット フィールドで参照します。
 
 ## <a name="see-also"></a>関連項目
-
-- [クラスと構造体](../cpp/classes-and-structs-cpp.md)
+ [クラスと構造体](../cpp/classes-and-structs-cpp.md)

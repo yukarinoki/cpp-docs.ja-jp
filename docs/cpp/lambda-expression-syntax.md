@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff66cb2efd1f095fee18e6db428b9f29c9f7812
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: cae12ecefebe81bf73ffdbc32c0ce253e726dda2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37938942"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405043"
 ---
 # <a name="lambda-expression-syntax"></a>ラムダ式の構文
 この記事では、ラムダ式の構文と構造体要素を説明します。 ラムダ式については、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)します。  
@@ -84,16 +84,15 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ### <a name="comments"></a>コメント  
  3 番目の引数の例で、 **for_each**関数は、ラムダ。 `[&evenCount]` の部分は、式の capture 句を指定します。`(int n)` はパラメーター リストを指定します。残りの部分は、式の本体を指定します。  
   
 ## <a name="example-2-using-a-function-object"></a>例 2: 関数オブジェクトの使用  
- ラムダは、前の例よりも拡張するのがはるかに複雑になる場合があります。 次の例と共に、ラムダではなく、関数オブジェクトを使用して、 **for_each**例 1 と同じ結果を生成する関数。 どちらの例でも `vector` オブジェクトに含まれる偶数の数を格納します。 操作の状態を保持するために、`FunctorClass` クラスはメンバー変数の参照として `m_evenCount` 変数を格納します。 操作を実行するには、`FunctorClass` が関数呼び出し演算子 `operator()` を実装します。 Visual C++ コンパイラは、サイズとパフォーマンスにおいて例 1. のラムダ コードと同等のコードを生成します。 ここで紹介したような基本的な問題の場合は、おそらく、より単純なラムダのデザインの方が関数オブジェクトよりも適切です。 ただし、後で大幅な機能拡張が必要となる可能性がある場合は、コードの保守が容易になるように、関数オブジェクトのデザインを使用します。  
+ ラムダは、前の例よりも拡張するのがはるかに複雑になる場合があります。 次の例と共に、ラムダではなく、関数オブジェクトを使用して、 **for_each**例 1 と同じ結果を生成する関数。 どちらの例でも `vector` オブジェクトに含まれる偶数の数を格納します。 操作の状態を保持するために、`FunctorClass` クラスはメンバー変数の参照として `m_evenCount` 変数を格納します。 操作を実行する`FunctorClass`、関数呼び出し演算子を実装する**operator()** します。 Visual C++ コンパイラは、サイズとパフォーマンスにおいて例 1. のラムダ コードと同等のコードを生成します。 ここで紹介したような基本的な問題の場合は、おそらく、より単純なラムダのデザインの方が関数オブジェクトよりも適切です。 ただし、後で大幅な機能拡張が必要となる可能性がある場合は、コードの保守が容易になるように、関数オブジェクトのデザインを使用します。  
   
- 詳細については、`operator()`を参照してください[関数を呼び出す](../cpp/function-call-cpp.md)します。 詳細については、 **for_each**関数を参照してください[for_each](../standard-library/algorithm-functions.md#for_each)します。  
+ 詳細については、 **operator()** を参照してください[関数を呼び出す](../cpp/function-call-cpp.md)します。 詳細については、 **for_each**関数を参照してください[for_each](../standard-library/algorithm-functions.md#for_each)します。  
   
 ### <a name="code"></a>コード  
   
@@ -150,7 +149,6 @@ int main()
     cout << "There are " << evenCount  
         << " even numbers in the vector." << endl;  
 }  
-  
 ```  
   
 ## <a name="output"></a>出力  
@@ -166,7 +164,6 @@ int main()
 8 is even  
 9 is odd  
 There are 4 even numbers in the vector.  
-  
 ```  
   
 ## <a name="see-also"></a>関連項目  

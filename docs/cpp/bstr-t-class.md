@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ed9c32a204bdef726a5ace88d811d2eeeb2c53
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: f7cb3d05997cfe3d803f522962ed9e7382269bd3
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027249"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404926"
 ---
 # <a name="bstrt-class"></a>_bstr_t クラス
 **Microsoft 固有の仕様**  
   
- A`_bstr_t`オブジェクトによってカプセル化、 [BSTR データ型](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)します。 クラスは、管理リソースの割り当てと割り当て解除関数の呼び出しを通じて`SysAllocString`と`SysFreeString`およびその他の`BSTR`ときに適切な Api。 `_bstr_t` クラスは、参照カウントを使用して過剰なオーバーヘッドを回避します。  
+ A`_bstr_t`オブジェクトによってカプセル化、 [BSTR データ型](http://msdn.microsoft.com/1b2d7d2c-47af-4389-a6b6-b01b7e915228)します。 クラスは、管理リソースの割り当てと割り当て解除関数の呼び出しを通じて`SysAllocString`と`SysFreeString`およびその他の`BSTR`ときに適切な Api。 **_Bstr_t**クラスは参照カウントの過剰なオーバーヘッドを回避するためを使用します。  
   
 ### <a name="construction"></a>構築  
   
@@ -61,7 +61,7 @@ ms.locfileid: "39027249"
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<comutil.h >  
   
  **Lib:** comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)  

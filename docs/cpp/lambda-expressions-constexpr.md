@@ -1,5 +1,5 @@
 ---
-title: C++ のラムダ式の constexpr |Microsoft ドキュメント
+title: C++ でのラムダ式の constexpr |Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e01f41aaf8b761020f57625e7cbf06f8fba2659
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b78fa3de7777ffc6702902cf967a405595caf12f
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418901"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408204"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>constexpr C++ のラムダ式
-**Visual Studio 2017 15.3 およびそれ以降のバージョン**(で利用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): としてラムダ式を宣言することは`constexpr`か指定する定数式で使用時に各データ メンバーの初期化がキャプチャまたはが導入されています、定数式は許可されています。  
+# <a name="constexpr-lambda-expressions-in-c"></a>C++ でのラムダ式の constexpr
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md)): としてラムダ式を宣言することがあります**constexpr**か指定する定数式で使用時にそれぞれの初期化キャプチャまたは導入されるデータ メンバーは、定数式内で許可されます。  
 
 ```cpp
     int y = 32;
@@ -36,9 +36,8 @@ ms.locfileid: "32418901"
     {
         return [n] { return n + 1; }();
     }
-
 ``` 
-ラムダは、暗黙的に`constexpr`その結果の要件を満たしている場合、`constexpr`関数。
+ラムダは暗黙的に**constexpr**その結果の要件を満たしている場合、 **constexpr**関数。
 ```cpp
     auto answer = [](int n) 
     {
@@ -47,7 +46,7 @@ ms.locfileid: "32418901"
 
     constexpr int response = answer(10);
 ``` 
-場合は、ラムダは、暗黙的または明示的に`constexpr`、関数ポインターに変換するは、結果として得られる関数も`constexpr`:
+ラムダが暗黙的または明示的に場合**constexpr**、および関数ポインターに変換する、結果として得られる関数も**constexpr**:
 
 ```cpp
     auto Increment = [](int n)

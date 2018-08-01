@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3ed5cee9d3742410c4316b0eb8c3c80b2f41353
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1b546e58b8a761660386c568c533ee2930871491
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943930"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403873"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>インクリメント演算子とデクリメント演算子のオーバーロード (C++)
 インクリメント演算子とデクリメント演算子は、それぞれに次の 2 種類のバリアントがあるため、特別なカテゴリに分類されています。  
@@ -133,7 +133,7 @@ int main()
 }  
 ```  
   
- 上記のコードに示すように、明示的に呼び出すこと以外に、インクリメント演算子またはデクリメント演算子を使用してこれらの値を渡すための構文はありません。 この機能を実装する簡単な方法は、加算/代入演算子 (`+=`) をオーバーロードすることです。  
+ 上記のコードに示すように、明示的に呼び出すこと以外に、インクリメント演算子またはデクリメント演算子を使用してこれらの値を渡すための構文はありません。 この機能を実装するより簡単な方法は、加算/代入演算子をオーバー ロード (**+=**)。  
   
 ## <a name="see-also"></a>関連項目  
  [演算子のオーバーロード](../cpp/operator-overloading.md)

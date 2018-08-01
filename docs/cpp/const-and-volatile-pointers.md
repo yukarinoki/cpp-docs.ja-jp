@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63e2da6286e6a8e10ecf29a37ec9d74e9f1dfc0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943226"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408191"
 ---
 # <a name="const-and-volatile-pointers"></a>const ポインターと volatile ポインター
 [Const](../cpp/const-cpp.md)と[揮発性](../cpp/volatile-cpp.md)キーワードは、ポインターの処理方法を変更します。 **Const**キーワードでは、初期化後に、ポインターを変更できないことを指定します。 ポインターがその後、変更から保護します。  
@@ -70,7 +70,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error  
 ```  
   
- `pch2` の宣言は、定数オブジェクトを変更する可能性があるポインターを宣言するため、許可されません。 宣言`pch3`ことを指定します、**ポインター**は定数、; オブジェクトではなく、宣言が同じ理由で許可されていない、`pch2`宣言は許可されません。  
+ `pch2` の宣言は、定数オブジェクトを変更する可能性があるポインターを宣言するため、許可されません。 宣言`pch3`、定数のポインターを指定します; オブジェクトではなく、宣言が同じ理由で許可されていない、`pch2`宣言は許可されません。  
   
  次の 8 つの代入は、ポインターを介した代入と、前に宣言したポインター値の変更を示しています。ここでは、初期化が `pch1` から `pch8` まで正しかったと仮定します。  
   
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  前のステートメントは、関数を宣言[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)へのポインター型の 3 つの引数の 2 つが、 **char**します。 引数が参照によって渡されますないため、値によって、関数は両方を変更する無料`strDestination`と`strSource`場合`strSource`として宣言されていない**const**します。 宣言`strSource`として**const**により、呼び出し元`strSource`呼び出された関数では変更できません。  
   
 > [!NOTE]
->  標準変換があるため、 *typename* **\*** に**const** *typename*  **\***、型の引数を渡すことは**char \*** に[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)します。 ただし、その逆は正しくありません。削除する暗黙的な変換が存在しない、 **const**オブジェクトまたはポインターからの属性。  
+>  標準変換があるため、 *typename* **\*** に**const** *typename*  **\***、型の引数を渡すことは`char *`に[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)します。 ただし、その逆は正しくありません。削除する暗黙的な変換が存在しない、 **const**オブジェクトまたはポインターからの属性。  
   
  A **const**指定された型のポインターは、同じ型のポインターに割り当てることができます。 ただし、ポインターでない**const**に割り当てることはできません、 **const**ポインター。 次のコードは、正しい代入と正しくない代入を示します。  
   

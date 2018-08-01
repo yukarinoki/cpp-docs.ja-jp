@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccff761cb9b738de9e2f0debc470746d1482ab56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 392460cde35096bc1c61db4d7e6bd2143932838d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940369"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403996"
 ---
 # <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
 **Microsoft 固有の仕様**  
@@ -31,8 +31,7 @@ ms.locfileid: "37940369"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      HRESULT GetActiveObject(  
+HRESULT GetActiveObject(  
    const CLSID& rclsid   
 ) throw( );  
 HRESULT GetActiveObject(  
@@ -54,13 +53,13 @@ HRESULT GetActiveObject(
  いずれかを保持する ANSI コード ページを使用し、マルチバイト文字列を`CLSID`(以降では"**{**") または`ProgID`します。  
   
 ## <a name="remarks"></a>Remarks  
- これらのメンバー関数は、`GetActiveObject` を呼び出して、OLE に登録されている実行中のオブジェクトへのポインターを取得し、このスマート ポインターのインターフェイス型を照会します。 結果のポインターは、この `_com_ptr_t` オブジェクトの中にカプセル化されます。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。 このルーチンは、成功または失敗を示す HRESULT を返します。  
+ これらのメンバー関数を呼び出す**GetActiveObject** OLE に登録されている実行中のオブジェクトへのポインターを取得し、このスマート ポインターのクエリはインターフェイス型とします。 結果のポインターは、この `_com_ptr_t` オブジェクトの中にカプセル化されます。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。 このルーチンは、成功または失敗を示す HRESULT を返します。  
   
--   **GetActiveObject (**`rclsid`**)** 指定したオブジェクトの既存のインスタンスにアタッチ、`CLSID`します。      
+-   **GetActiveObject (**`rclsid`**)** 指定したオブジェクトの既存のインスタンスにアタッチ、`CLSID`します。  
   
--   **GetActiveObject (**`clsidString`**)** 保持する Unicode 文字列を指定したオブジェクトの既存のインスタンスにアタッチ、 `CLSID` (以降では"**{**") または、 `ProgID`.      
+-   **GetActiveObject (**`clsidString`**)** 保持する Unicode 文字列を指定したオブジェクトの既存のインスタンスにアタッチ、 `CLSID` (以降では"**{**") または、 `ProgID`.  
   
--   **GetActiveObject (**`clsidStringA`**)** 保持するマルチバイト文字の文字列を指定したオブジェクトの既存のインスタンスにアタッチ、 `CLSID` (以降では"**{**") または`ProgID`.     呼び出し[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)、OEM コード ページではなく、ANSI コード ページで、文字列が想定しています。  
+-   **GetActiveObject (**`clsidStringA`**)** 保持するマルチバイト文字の文字列を指定したオブジェクトの既存のインスタンスにアタッチ、 `CLSID` (以降では"**{**") または`ProgID`. 呼び出し[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)、OEM コード ページではなく、ANSI コード ページで、文字列が想定しています。  
   
  **Microsoft 固有の仕様はここまで**  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b86ee4505792fbc3a90d34ece8e714eb3565ff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 47b2ce26ea9cba7f0c38d06546eb0d162332d047
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943218"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408298"
 ---
 # <a name="reference-type-function-returns"></a>Reference-Type Function Returns (参照型関数の戻り値)
 関数は、参照型を返すように宣言できます。 このような宣言をする場合は、次の 2 つの理由があります。  

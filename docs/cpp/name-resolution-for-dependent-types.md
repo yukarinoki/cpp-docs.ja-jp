@@ -1,5 +1,5 @@
 ---
-title: 依存する型の名前解決 |Microsoft ドキュメント
+title: 依存する型の名前解決 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d6421c634fb6d27bf79ea0ead9f0b6b8f5829f19
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419912"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402687"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
-使用して**typename**の指定した修飾名が型を指定することをコンパイラに指示するテンプレート定義で修飾名。 詳細については、次を参照してください。 [typename](../cpp/typename.md)です。  
+使用**typename**の修飾名で指定した修飾名が型を識別するようにコンパイラに指示するテンプレートの定義。 詳細については、次を参照してください。 [typename](../cpp/typename.md)します。  
   
 ```cpp  
 // template_name_resolution1.cpp  
@@ -49,7 +49,7 @@ int main()
 Name resolved by using typename keyword.  
 ```  
   
- 依存名の名前検索は、テンプレート定義の両方のコンテキストから名前を確認する: 次の例では、このコンテキストが見つかります`myFunction(char)`— およびテンプレートのインスタンス化のコンテキスト。Main で次の例では、テンプレートをインスタンス化します。したがって、`MyNamespace::myFunction`はインスタンス化時点から見ると、適合度の高いとして選択されます。 `MyNamespace::myFunction` の名前を変更した場合、`myFunction(char)` が代わりに呼び出されます。  
+ 依存名の名前検索はテンプレート定義の両方のコンテキストから名前を確認する: 次の例では、このコンテキストが見つかります`myFunction(char)`— とテンプレートのインスタンス化のコンテキスト。Main で次の例では、テンプレートがインスタンス化されます。そのため、`MyNamespace::myFunction`がインスタンス化時点から表示されるより適合として選択されます。 `MyNamespace::myFunction` の名前を変更した場合、`myFunction(char)` が代わりに呼び出されます。  
   
  すべての名前は依存名のように解決されます。 いずれにしても、名前の衝突が発生する可能性がある場合は、完全修飾名を使用することをお勧めします。  
   
@@ -93,12 +93,12 @@ int main()
   
 ### <a name="output"></a>出力  
   
-```  
+```Output  
 Int MyNamespace::myFunction  
 ```  
   
 ### <a name="template-disambiguation"></a>テンプレートのあいまいさの解消  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] は、template キーワードによるあいまいさの解消に関する C++ 98/03/11 規格の規則を強制します。 次の例では、Visual C 2010 が受け入れて準拠していない行と準拠している行の両方を設定します。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 準拠している行のみを受け入れます。  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] は、template キーワードによるあいまいさの解消に関する C++ 98/03/11 規格の規則を強制します。 次の例では、Visual C 2010 は準拠していない行と準拠している行の両方を受け入れるとします。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 準拠している行のみを受け入れます。  
   
 ```cpp  
 #include <iostream>  

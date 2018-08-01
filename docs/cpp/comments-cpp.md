@@ -1,5 +1,5 @@
 ---
-title: コメント (C++) |Microsoft ドキュメント
+title: コメント (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919c40dce53dd5d1c8847287099c61c3e1b229cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a412c2b4dd87bc3e8e3e1b77a524d2a5925aaf60
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411755"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405059"
 ---
 # <a name="comments-c"></a>コメント (C++)
-コメントは、コンパイラは無視しますが、プログラマにとって便利なテキストです。 コメントは、通常、後で参照できるようにコードに注釈を付けるために使用されます。 コンパイラは、それらを空白文字として処理します。 特定のコード行を非アクティブな; させるテストでコメントを使用することができます。ただし、 `#if` / `#endif`プリプロセッサ ディレクティブの方が適してこのコメントを含むコードを囲むことができますが、コメントを入れ子にすることはできません。  
+コメントは、コンパイラは無視しますが、プログラマにとって便利なテキストです。 コメントは、通常、後で参照できるようにコードに注釈を付けるために使用されます。 コンパイラは、それらを空白文字として処理します。 テストでコメントを使用するには特定のコード行を非アクティブです。ただし、 `#if` / `#endif`プリプロセッサ ディレクティブ機能強化は、このコメントを含むコードを囲むことができますが、コメントを入れ子にすることはできません。  
   
  C++ のコメントは、次のいずれかの方法で記述されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: 二項演算子を含む式 |Microsoft ドキュメント
+title: 二項演算子を含む式 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84738fa2c99e658d4e05dc45a9f942218964eb68
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7e7b426d3bc4f0913422f508279db9727f6e1f8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414677"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406820"
 ---
 # <a name="expressions-with-binary-operators"></a>二項演算子を含む式
 二項演算子は、式の中で 2 つのオペランドに作用します。 二項演算子は次のとおりです。  
@@ -52,7 +52,7 @@ ms.locfileid: "32414677"
   
     -   大なり (>)  
   
-    -   以下を (\<=)  
+    -   等しいまたはそれよりも小さい (\<=)  
   
     -   以上 (>=)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "32414677"
   
     -   [ビットごとの排他的 OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [ビット演算子包含的 OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [ビット演算包含的 OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   論理演算子  
   
@@ -96,7 +96,7 @@ ms.locfileid: "32414677"
   
     -   ビットごとの排他的 OR 代入 (^=)  
   
-    -   ビット演算子包含的 OR 代入 (&#124;=)  
+    -   ビット処理包括的 OR 代入 (&#124;=)  
   
 -   [コンマ演算子](../cpp/comma-operator.md)(,)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'メンバー アクセス演算子: です。 パラメーターと&gt;|Microsoft ドキュメント'
+title: 'メンバー アクセス演算子: です。 および&gt;|Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -24,13 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2958291551d081b4284c6683d62f6dd5de06f70d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 91ec7e11272e0a7286d77e3fc96b7437007a0f8d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408787"
 ---
-# <a name="member-access-operators--and--gt"></a>メンバー アクセス演算子: です。 パラメーターと&gt;
+# <a name="member-access-operators--and--gt"></a>メンバー アクセス演算子: です。 -&gt;
 ## <a name="syntax"></a>構文  
   
 ```  
@@ -38,19 +39,19 @@ postfix-expression . name
 postfix-expression -> name  
 ```  
   
-## <a name="remarks"></a>コメント  
- メンバー アクセス演算子**です。** および**->** 構造体、共用体、およびクラスのメンバーを参照するために使用します。 メンバー アクセス式は、選択したメンバーの値と型を持ちます。  
+## <a name="remarks"></a>Remarks  
+ メンバー アクセス演算子**します。** **->** 構造体、共用体、およびクラスのメンバーを参照するために使用します。 メンバー アクセス式は、選択したメンバーの値と型を持ちます。  
   
  メンバー アクセス式には、次の 2 つの形式があります。  
   
-1.  最初のフォームでは、*後置式*構造体、クラス、または共用体の型の値を表すと*名前*指定された構造体、共用体、またはクラスのメンバーに名前します。 操作の値は、の*名前*が左辺値の場合と*後置式*左辺値です。  
+1.  最初のフォームでは、*後置式*構造体、クラス、または共用体の型の値を表すと*名前*の指定された構造体、共用体、またはクラス メンバーの名前します。 操作の値はの*名前*が左辺値の場合と*後置式*左辺値です。  
   
-2.  2 番目の形式で*後置式*構造体、共用体、またはクラスへのポインターを表すと*名前*指定された構造体、共用体、またはクラスのメンバーに名前します。 値が*名前*左辺値です。 **->** 演算子には、ポインターが逆参照します。 そのため、式 * e ***->** `member`と **(\****e***)** です。`member` (場所*e*ポインターを表します) と同じ結果が生じる (する場合を除く演算子は、 **->** または**\*** はオーバー ロードされます)。  
+2.  2 番目の形式で*後置式*構造体、共用体、またはクラスへのポインターを表しますと*名前*の指定された構造体、共用体、またはクラス メンバーの名前します。 値はの*名前*左辺値です。 **->** 演算子は、ポインターを逆参照します。 したがって、式 * e ***->** `member`と **(\****e***)** します。`member` (場所*e*ポインターを表します) と同じ結果を生成する (する場合を除く演算子**->** または**\*** オーバー ロードされます)。  
   
 ## <a name="example"></a>例  
  次の例に、メンバー アクセス演算子の両方の形式を示します。  
   
-```  
+```cpp 
 // expre_Selection_Operator.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -84,6 +85,6 @@ int main() {
   
 ## <a name="see-also"></a>関連項目  
  [後置式](../cpp/postfix-expressions.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [クラスと構造体](../cpp/classes-and-structs-cpp.md)   
  [構造体と共用体のメンバー](../c-language/structure-and-union-members.md)

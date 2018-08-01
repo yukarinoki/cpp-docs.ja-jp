@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c269951eacfc2f7a5d40c8fad1e4fb67cc1d2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82390f7afe45b48539fb5c33130900ef75cf1967
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392092"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403304"
 ---
 # <a name="accesss-waccesss"></a>_access_s、_waccess_s
 
@@ -66,27 +66,27 @@ errno_t _waccess_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*path*<br/>
+*path*  
 ファイルまたはディレクトリ パス。
 
-*モード*<br/>
+*モード*  
 アクセス許可の設定。
 
 ## <a name="return-value"></a>戻り値
 
-ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 指定したファイルが存在しないか、特定のモードでアクセスできない場合、関数はエラー コードを返します。 この場合、関数の次のように、セットからエラー コードを返しも設定**errno**同じ値にします。
+ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 指定したファイルが存在しないか、特定のモードでアクセスできない場合、関数はエラー コードを返します。 この場合、関数は次のようにエラー コードをセットから返し、`errno` も同じ値に設定します。
 
 |errno の値|条件|
 |-|-|
-**EACCES**|アクセスが拒否されました。 ファイルのアクセス許可の設定では、指定したアクセスは許可されません。
-**ENOENT**|ファイル名またはパスが見つかりません。
-**EINVAL**|無効なパラメーター。
+`EACCES`|アクセスが拒否されました。 ファイルのアクセス許可の設定では、指定したアクセスは許可されません。
+`ENOENT`|ファイル名またはパスが見つかりません。
+`EINVAL`|無効なパラメーター。
 
 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ファイルを使用すると、 **_access_s**関数は、指定したファイルが存在し、としてアクセスできるかどうかを判断の値で指定された*モード*です。 ディレクトリを使用すると **_access_s**のみに指定されたディレクトリが存在するかどうかを判断します。 Windows 2000 以降のオペレーティング システムでは、すべてのディレクトリは読み取りおよび書き込みアクセス。
+ファイルを使用すると、 **_access_s**関数は、指定したファイルが存在し、としてアクセスできるかどうかを決定します。 の値で指定された*モード*します。 ディレクトリを使用すると **_access_s**だけを指定したディレクトリが存在するかどうか判断します。 Windows 2000 および以降のオペレーティング システムでは、すべてのディレクトリは読み取りおよび書き込みアクセス。
 
 |モード値|ファイル チェックの目的|
 |----------------|---------------------|
@@ -95,28 +95,28 @@ errno_t _waccess_s(
 |04|読み取りアクセス許可|
 |06|読み取りおよび書き込みアクセス許可|
 
-ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、ファイルが別のプロセスによってロックされている場合にできない可能性がありますアクセス可能な場合でも **_access_s** 0 を返します。
+ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、ファイルが別のプロセスによってロックされている場合、可能性がありますアクセスできない場合でも **_access_s** 0 を返します。
 
-**_waccess_s**のワイド文字バージョンは、 **_access_s**ここで、*パス*引数 **_waccess_s**ワイド文字列です。 それ以外の場合、 **_waccess_s**と **_access_s**動作は同じです。
+**_waccess_s**のワイド文字バージョンは、 **_access_s**ここで、*パス*引数 **_waccess_s**はワイド文字列です。 それ以外の場合、 **_waccess_s**と **_access_s**動作は同じです。
 
-これらの関数では、パラメーターの検証が行われます。 場合*パス*は**NULL**または*モード*有効なモードが指定されていません」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**返す**EINVAL**です。
+これらの関数では、パラメーターの検証が行われます。 場合*パス*null または*モード*有効なモードを指定しない」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、`EINVAL` を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess_s**|**_access_s**|**_access_s**|**_waccess_s**|
+|`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_access_s**|\<io.h>|\<errno.h>|
 |**_waccess_s**|\<wchar.h> または \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>例
 
-この例では **_access_s**をという名前のファイルが存在するかどうかと書き込みが許可されているかどうかを表示する crt_access_s.c を確認します。
+この例では **_access_s**が存在し、書き込みが許可されているかどうかを確認する crt_access_s.c という名前のファイルをチェックします。
 
 ```C
 // crt_access_s.c
@@ -160,9 +160,9 @@ File crt_access_s.c does not have write permission.
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
-[_access、_waccess](access-waccess.md)<br/>
-[_chmod、_wchmod](chmod-wchmod.md)<br/>
-[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open、_wopen](open-wopen.md)<br/>
-[_stat、_wstat 関数](stat-functions.md)<br/>
+[ファイル処理](../../c-runtime-library/file-handling.md)  
+[_access、_waccess](access-waccess.md)  
+[_chmod、_wchmod](chmod-wchmod.md)  
+[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open、_wopen](open-wopen.md)  
+[_stat、_wstat 関数](stat-functions.md)  

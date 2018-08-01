@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef56154f34f645b279ffccd99915d366388cb06
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 06a07c9d37994b4214da9b2eb53d02104525d7c4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026703"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408113"
 ---
 # <a name="c-constant-expressions"></a>C++ 定数式
 A*定数*値は変更されません。 C++ には、あるオブジェクトを変更しないという意思表示をして、その意志を行使するための 2 つのキーワードが用意されています。  
@@ -53,7 +53,7 @@ const double Size = 11.0;
 char chArray[(int)Size];  
 ```  
   
-定数式では、整数型への明示的な変換は有効です。`sizeof` 演算子へのオペランドとして使用する場合を除き、他のすべての型とその派生型は無効です。  
+整数型への明示的な変換は定数式; で有効です。その他のすべての型と派生型は、特定へのオペランドとして使用する場合を除き、 **sizeof**演算子。  
   
 コンマ演算子および代入演算子は定数式では使用できません。  
   

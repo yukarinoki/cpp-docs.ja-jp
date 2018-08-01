@@ -1,5 +1,5 @@
 ---
-title: constexpr (C++) |Microsoft ドキュメント
+title: constexpr (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f95f6c98138ff1eb52750c1b8593795ca28c784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe13dbe61b0a50226f82ae8fb09ab46c922309d1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417998"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406937"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
-キーワード**constexpr**が c++ 11 で導入され、c++ 14 で改良されました。 意味*定数式*です。 同様に**const**、任意のコード値を変更しようとすると、コンパイラ エラーが発生するようには、変数に適用することができます。 異なり**const**、 **constexpr**関数にも適用でき、クラスのコンス トラクターです。 **constexpr**があること示し、値、または戻り値は、定数、可能な場合は、コンパイル時に計算されます。
+キーワード**constexpr** c++ 11 で導入され、c++ 14 で改良されました。 意味*定数式*します。 ような**const**値を変更しようとしているすべてのコードと、コンパイラ エラーが発生するためには、変数に適用することができます。 異なり**const**、 **constexpr**関数に適用することもでき、クラスのコンス トラクター。 **constexpr**ことを示します値、または戻り値は、定数、可能であれば、コンパイル時に計算されます。
 
-A **constexpr** const の整数がなど、必要に応じてテンプレート引数や配列の宣言で場所で、整数値を使用することができます。 実行時ではなくコンパイル時に値を計算することができる場合、に、実行速度が向上しより少ないメモリを使用して、プログラムが役立ちます。
+A **constexpr** const の整数がテンプレート引数や配列の宣言など、必要な整数値を使用できます。 値は、実行時ではなくコンパイル時に計算することができます、ときに実行速度が向上しより少ないメモリを使用して、プログラムに役立ちます。
 
-コンピューティングのコンパイル時定数の複雑さと、コンパイル時の潜在的な影響を制限するため、c++ 14 標準できる必要があります定数式に含まれる型に制限[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)です。
+定数式に含まれる型に制限することが標準の c++ 14 コンピューティングのコンパイル時定数の複雑さと、コンパイル時の潜在的な影響を制限するため必要[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,22 +41,21 @@ constexpr ctor (params);
 ## <a name="parameters"></a>パラメーター
 
  *params*  
-リテラルの型にする必要があるあり、自体をする必要がある 1 つまたは複数のパラメーターには、定数式があります。
+リテラル型である必要がありますし、それ自体をする必要があります、1 つまたは複数のパラメーターには、定数式があります。
 
 ## <a name="return-value"></a>戻り値
 
-
- Constexpr 変数または関数が返す必要があります、[リテラルの型](trivial-standard-layout-and-pod-types.md#literal_types)です。
+ Constexpr 変数または関数が返す必要があります、[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)します。
 
 ## <a name="constexpr-variables"></a>constexpr 変数
 
  const 変数と constexpr 変数の主な違いとして、const 変数の初期化は実行時まで遅延できるのに対し、constexpr 変数はコンパイル時に初期化する必要があります。  すべての constexpr 変数は、const です。
 
-- 変数を宣言できる**constexpr**が初期化され、リテラル型を持ち、します。 コンス トラクターによって初期化が実行される場合、コンス トラクターとして宣言されなければなりません**constexpr**です。
+- 変数を宣言することができます**constexpr**、リテラルの型と初期化されます。 コンス トラクターによって初期化が実行される場合、コンス トラクターとして宣言する必要があります**constexpr**します。
 
 - 参照するオブジェクトが定数式で初期化され、初期化中に呼び出される暗黙の変換もすべて定数式である場合には、参照を constexpr と宣言することができます。
 
-- すべての宣言、 **constexpr**変数または関数があります、 **constexpr**指定子。
+- すべての宣言を**constexpr**変数または関数が必要、 **constexpr**指定子。
 
 ```cpp
 constexpr float x = 42.0;
@@ -69,33 +68,33 @@ constexpr int k = j + 1; //Error! j not a constant expression
 
 ## <a name="constexpr_functions"></a> constexpr 関数
 
-A **constexpr**関数は、1 つ使用コードで要求されたとき、コンパイル時戻り値を返すを計算できます。  ときに、引数が**constexpr**値、および利用側のコードを初期化する例については、コンパイル時に、戻り値が必要です、 **constexpr**変数や、非型テンプレート引数がコンパイル時定数を生成します。 以外で呼び出されると**constexpr**引数、またはその値がコンパイル時に必要ない場合に、正規関数と同様に実行時に値を生成します。  (この 2 重の動作を記述する必要がなくなります**constexpr**と非-**constexpr**同じ関数のバージョンです)。
+A **constexpr**関数は、1 つの要求コードを実行されたときにコンパイル時の戻り値を計算することができます。  ときに、引数が**constexpr**値、および使用側コードを初期化する例については、コンパイル時に、戻り値が必要です、 **constexpr**変数を非型テンプレート引数を指定または、コンパイル時定数を生成します。 以外で呼び出されたときに**constexpr**引数で正規関数のように実行時に値を生成、その値がコンパイル時に必要な場合は、または。  (この 2 重の動作と記述する手間が省けます**constexpr**と非-**constexpr**同じ関数のバージョン)。
 
-A **constexpr**関数またはコンス トラクターは暗黙的に**インライン**です。
+A **constexpr**関数またはコンス トラクターは暗黙的に**インライン**します。
 
-Constexpr 関数に、次の規則が適用されます。
+Constexpr 関数に次の規則が適用されます。
 
-- A **constexpr**関数がそのまま使用し、のみを返す必要があります[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)です。
+- A **constexpr**関数がそのまま使用する必要があり、のみを返します[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)します。
 
 - A **constexpr**関数が再帰的なをすることができます。
 
-- できません[仮想](../cpp/virtual-cpp.md)です。 A、外側のクラスが仮想基底クラス コンス トラクターは constexpr として定義できません。
+- できません[仮想](../cpp/virtual-cpp.md)します。 場合は、外側のクラスがある仮想基底クラス コンス トラクターは constexpr として定義できません。
 
-- として本文を定義することができます **= 既定**または **= delete**です。
+- 本体は `= default` または `= delete` として定義できます。
 
-- 本文は、いいえを含めることができます**goto**ステートメントまたは try ブロックします。
+- 本文を含まない**goto**ステートメントまたはブロックをお試しください。
 
-- 非 constexpr のテンプレートの明示的な特殊化として宣言できます**constexpr**:
+- Constexpr ではないテンプレートの明示的な特殊化として宣言できます**constexpr**:
 
-- 明示的な特殊化、 **constexpr**テンプレートにもする必要はありません**constexpr**:
+- 明示的な特殊化を**constexpr**テンプレートがあることがありません**constexpr**:
 
-次の規則を適用する**constexpr**以降では、Visual Studio 2017 関数。
+次の規則に適用されます**constexpr** Visual Studio 2017 以降の機能。
 
-- 含まれて**場合**と**切り替える**ステートメント、およびすべてのループ ステートメントを含む**の**、範囲に基づく、**中**、および**操作の中に**です。
+- いる可能性がある**場合**と**スイッチ**ステートメント、およびすべてのループ ステートメントを含む**の**、範囲に基づく、**中**、および**は-中**します。
  
-- ローカル変数の宣言を含めることがありますが、変数の初期化する必要があります、リテラルの型にする必要があります、および静的あるいはスレッド ローカルにすることはできません。 ローカルに宣言された変数は const を指定する必要はありませんし、変更可能性があります。
+- ローカル変数の宣言を含めることができますが、変数の初期化する必要があります、リテラルの型である必要があります、および静的あるいはスレッド ローカルにすることはできません。 ローカルに宣言された変数は const を指定する必要はありませんし、変更可能性があります。
 
-- Constexpr 静的でないメンバー関数は、暗黙的に const を指定する必要はありません。
+- Constexpr の非静的メンバー関数は、暗黙的に const を指定する必要はありません。
 
 
 ```cpp
@@ -108,15 +107,15 @@ constexpr float exp(float x, int n)
 ```
 
 > [!TIP]
-> 注意: Visual Studio デバッガーでビルド、デバッグ非最適化のデバッグとわかるかどうか、 **constexpr**中にブレークポイントを設定することによって関数がコンパイル時に評価されています。 ブレークポイントにヒットすると、実行時に関数が呼び出されます。  ヒットしなければ、コンパイル時に関数が呼び出されます。
+> 注: Visual Studio デバッガーで、ビルドをデバッグする非最適化をデバッグするを区別するかどうかを**constexpr**関数は、内部にブレークポイントを設定することによってコンパイル時に評価されるは。 ブレークポイントにヒットすると、実行時に関数が呼び出されます。  ヒットしなければ、コンパイル時に関数が呼び出されます。
 
 ## <a name="extern-constexpr"></a>extern constexpr
 
-[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)コンパイラ オプションは、適用するコンパイラ[外部リンケージ]()を使用して宣言される変数に**extern constexpr**です。 以前のバージョンの Visual Studio で、既定の場合、または **/Zc:externConstexpr-** を指定すると、Visual Studio に内部リンケージを適用する**constexpr**変数場合であっても、 **extern**キーワードを使用します。 **/Zc:externConstexpr**オプションは、Visual Studio 2017 更新 15.6 以降を使用します。 既定では無効になっているとします。 /Permissive-option に/Zc:externConstexpr が有効にできません。
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)コンパイラ オプションは、適用するコンパイラ[外部リンケージ]()を使用して宣言された変数に**extern constexpr**します。 以前のバージョンの Visual Studio で、既定の場合、または **/Zc:externConstexpr-** を指定すると、Visual Studio に内部リンケージを適用する**constexpr**変数場合でも、 **extern**キーワードを使用します。 **/Zc: externconstexpr**オプションは、Visual Studio 2017 Update 15.6 以降を使用します。 既定で無効であるとします。 促す/permissive-オプションには、/zc: externconstexpr が有効にしません。
 
 ## <a name="example"></a>例
 
- 次の例は**constexpr**変数、関数およびユーザー定義の型。 なお、main() の最後のステートメントで、 **constexpr**値がコンパイル時に既知である必要はないために、メンバー関数 GetValue() は実行時の呼び出しです。
+ 次の例は**constexpr**変数、関数、およびユーザー定義の型。 なお、main() の最後のステートメントで、 **constexpr**値がコンパイル時に既知である必要はないために、メンバー関数 GetValue() は実行時の呼び出し。
 
 ```cpp
 #include <iostream>
@@ -183,7 +182,6 @@ int main()
     cout << "The value of foo is " << foo.GetValue() << endl;
 
 }
-
 ```
 
 ## <a name="requirements"></a>要件
@@ -191,6 +189,5 @@ int main()
 Visual Studio 2015
 
 ## <a name="see-also"></a>関連項目
-
-- [宣言と定義](../cpp/declarations-and-definitions-cpp.md)
-- [const](../cpp/const-cpp.md)
+ [宣言と定義](../cpp/declarations-and-definitions-cpp.md)  
+ [const](../cpp/const-cpp.md)

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8f04962593dff13559f49f7f7c23014968c266
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940761"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406664"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
@@ -152,11 +152,11 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- 上記の 2 つの形式の 1 つだけは、特定のクラスに対して使用できます。 最初の形式では、型の 1 つの引数を受け取ります**void \*** 、割り当てを解除するオブジェクトへのポインターが含まれています。 2 番目の形式: サイズ割り当て解除、割り当てを解除するメモリ ブロックへのポインター 1 つ目は、2 番目の割り当てを解除するバイト数は、2 つの引数します。 両方のフォームの戻り値の型は**void** (**delete 演算子**値を返すことはできません)。  
+ 上記の 2 つの形式の 1 つだけは、特定のクラスに対して使用できます。 最初の形式では、型の 1 つの引数を受け取ります`void *`、割り当てを解除するオブジェクトへのポインターが含まれています。 2 番目の形式: サイズ割り当て解除、割り当てを解除するメモリ ブロックへのポインター 1 つ目は、2 番目の割り当てを解除するバイト数は、2 つの引数します。 両方のフォームの戻り値の型は**void** (**delete 演算子**値を返すことはできません)。  
   
  2 番目の形式の目的は、多くの場合自体割り当て近接して格納し、キャッシュを無効可能性があります。 速度、削除するオブジェクトの適切なサイズのカテゴリの検索をする2 番目の形式が役立つ場合に、 **delete 演算子**基底クラスから関数を使用して、派生クラスのオブジェクトを削除します。  
   
- **Delete 演算子**関数は静的; 仮想そのため、できません。 `operator delete` 」の説明に従って関数がアクセスの制御に従います[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)します。  
+ **Delete 演算子**関数は静的; 仮想そのため、できません。 **Delete 演算子**」の説明に従って関数がアクセスの制御に従います[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)します。  
   
  次の例は、ユーザー定義**new 演算子**と**delete 演算子**関数がメモリの割り当てと解放を記録するように設計します。  
   
@@ -229,4 +229,3 @@ void f() {
    delete [] pX;  
 }  
 ```  
-

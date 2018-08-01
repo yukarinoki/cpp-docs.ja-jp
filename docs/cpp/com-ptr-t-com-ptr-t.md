@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27d6f1a09f46dfb3906825bdf4f2347a02f2d38
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939072"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403827"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Microsoft 固有の仕様**  
   
- `_com_ptr_t` オブジェクトを構築します。  
+ 構築、 **_com_ptr_t**オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
@@ -150,10 +150,10 @@ explicit _com_ptr_t(
  TRUE の場合、`AddRef`カプセル化されたインターフェイス ポインターの参照カウントをインクリメントすると呼びます。  
   
  *cp*  
- `_com_ptr_t` オブジェクト。  
+ A **_com_ptr_t**オブジェクト。  
   
  *p*  
- この `_com_ptr_t` オブジェクトのスマート ポインター型とは異なる型である生のインターフェイス ポインター。  
+ このスマート ポインター型と異なる型で生のインターフェイス ポインター **_com_ptr_t**オブジェクト。  
   
  *varSrc*  
  `_variant_t` オブジェクト。  

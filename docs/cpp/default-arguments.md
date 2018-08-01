@@ -1,5 +1,5 @@
 ---
-title: 既定の引数 |Microsoft ドキュメント
+title: 既定の引数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,16 +20,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ddcd094ae828272744060cea5604865d17562890
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409197"
 ---
 # <a name="default-arguments"></a>既定の引数
-多くの場合、関数には引数がありますが、ほとんど使用されることはありません。既定値で十分です。 これに対処するために、既定の引数機能では、特定の呼び出しで有効な引数だけを関数に指定できます。 この概念を示すために示されている例を検討してください。[関数のオーバー ロード](../cpp/function-overloading.md)です。  
+多くの場合、関数には引数がありますが、ほとんど使用されることはありません。既定値で十分です。 これに対処するために、既定の引数機能では、特定の呼び出しで有効な引数だけを関数に指定できます。 この概念を示すために示されている例を検討してください。[関数のオーバー ロード](../cpp/function-overloading.md)します。  
   
-```  
+```cpp 
 // Prototype three print functions.  
 int print( char *s );                  // Print a string.  
 int print( double dvalue );            // Print a double.  
@@ -39,16 +40,16 @@ int print( double dvalue, int prec );  // Print a double with a
   
  多くのアプリケーションでは、適切な既定値は `prec` で指定できるので、次の 2 つの関数は不要です。  
   
-```  
+```cpp 
 // Prototype two print functions.  
 int print( char *s );                    // Print a string.  
 int print( double dvalue, int prec=2 );  // Print a double with a  
 //  given precision.  
 ```  
   
- 実装、`print`関数は型の 1 つだけこのような関数が存在するという事実を反映するように少し変更**二重**:  
+ 実装、`print`型の 1 つだけこのような関数が存在するという事実を反映するように関数が若干変更**二重**:  
   
-```  
+```cpp 
 // default_arguments.cpp  
 // compile with: /EHsc /c  
   
@@ -81,7 +82,7 @@ int print( double dvalue, int prec ) {
   
  新しい `print` 関数を呼び出すには、次のようなコードを使用します:  
   
-```  
+```cpp 
 print( d );    // Precision of 2 supplied by default argument.  
 print( d, 0 ); // Override default argument to achieve other  
 //  results.  
@@ -91,13 +92,13 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   既定の引数は、後続の引数を省略した関数呼び出しでのみ使用されます。既定の引数は、最後の引数である必要があります。 したがって、次のコードは正しくありません。  
   
-    ```  
+    ```cpp 
     int print( double dvalue = 0.0, int prec );  
     ```  
   
 -   既定の引数は、以降の宣言で再定義が元と同じでも再定義できません。 したがって、次のコードはエラーになります。  
   
-    ```  
+    ```cpp 
     // Prototype for print function.  
     int print( double dvalue, int prec = 2 );  
   
@@ -116,9 +117,6 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   既定の引数は、関数へのポインターに対して指定できます。 例えば:  
   
-    ```  
+    ```cpp 
     int (*pShowIntVal)( int i = 0 );  
     ```  
-  
-## <a name="see-also"></a>関連項目  
- 

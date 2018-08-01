@@ -1,5 +1,5 @@
 ---
-title: C++ コマンドライン引数の解析 |Microsoft ドキュメント
+title: C++ コマンドライン引数の解析 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147461584f1a978be55502d783bc527b5632d20f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eca85baea71052525d70c90ac521ef5fa95a5118
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409207"
 ---
 # <a name="parsing-c-command-line-arguments"></a>C++ コマンド ライン引数の解析
 **Microsoft 固有の仕様**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   キャレット (^) は、エスケープ文字やデリミターとしては認識されません。 文字は、プログラムの `argv` 配列に渡される前に、オペレーティング システムのコマンド ライン パーサーによって完全に処理されます。  
   
--   二重引用符で囲まれた文字列 ("*文字列*") 内に含まれる空白文字に関係なく、1 つの引数として解釈されます。 二重引用符で囲んだ文字列を引数に埋め込むこともできます。  
+-   二重引用符で囲まれた文字列 ("*文字列*") に含まれる空白文字に関係なく、1 つの引数として解釈されます。 二重引用符で囲んだ文字列を引数に埋め込むこともできます。  
   
 -   円記号を前に付けた二重引用符 (\\") は、リテラル二重引用符文字 (") として解釈されます。  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="example"></a>例  
  次のプログラムは、コマンド ライン引数がどのように受け渡されるかを示します。  
   
-```  
+```cpp 
 // command_line_arguments.cpp  
 // compile with: /EHsc  
 #include <iostream>  

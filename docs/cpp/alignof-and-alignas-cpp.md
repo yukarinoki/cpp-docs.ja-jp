@@ -1,5 +1,5 @@
 ---
-title: alignof と alignas (C++) |Microsoft ドキュメント
+title: alignof と alignas (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c10821f7e71c928fa749c2b85bd076cb9af6d04a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407987"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402417"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof と alignas (C++)
-`alignas` 型指定子は、変数およびユーザー定義型のカスタムの配置を指定する移植可能な C++ の標準的な方法です。 `alignof` 演算子も同様に、指定された型または変数の配置を取得する、標準的で移植可能な方法です。  
+**Alignas**型指定子は変数およびユーザー定義型のカスタムの配置を指定する移植可能で、C++ の標準的な方法です。 **Alignof**演算子は、指定した型または変数の配置を取得する標準的な移植可能な方法でも同様にします。  
   
 ## <a name="example"></a>例  
- クラス、スタックまたは共用体、あるいは個々のメンバーで `alignas` を使用できます。 複数の `alignas` 指定子が検出された場合、コンパイラは、最も厳密なもの (最大値を持つもの) を選択します。  
+ 使用することができます**alignas**クラス、スタックまたは共用体、または個々 のメンバー。 ときに複数**alignas**指定子が検出された場合、コンパイラは、最も厳密なもの、(最大値を含む 1 つ) を選択します。  
   
 ```cpp  
 // alignas_alignof.cpp

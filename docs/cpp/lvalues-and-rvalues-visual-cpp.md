@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6f9a11b6cf2a0045729acbc79d8e45103064ea
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 68f13848c01f91f9302246a763dd478ee8fccdda
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940187"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403924"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左辺値と右辺値 (Visual C)
 
@@ -79,5 +79,6 @@ int main()
 条件*左辺値*と*rvalue*オブジェクト参照を参照する場合は、よく使用します。 参照の詳細については、次を参照してください。[左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)と[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。
 
 ## <a name="see-also"></a>関連項目
-
- [基本的な概念](../cpp/basic-concepts-cpp.md)[左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md) [右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)
+ [基本的な概念](../cpp/basic-concepts-cpp.md)  
+ [左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)  
+ [右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)

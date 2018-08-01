@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50cdb9899582b3e398909e4fcb7ad571025dbcf0
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce55a0eb7f6fe3861f3a5ab398e7d186449dc2e9
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941575"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402108"
 ---
 # <a name="hardware-exceptions"></a>ハードウェア例外
 オペレーティング システムによって認識される標準例外のほとんどは、ハードウェア定義された例外です。 Windows はいくつかの低レベルのソフトウェア例外を認識しますが、それらは通常、オペレーティング システムで処理するのが適しています。  

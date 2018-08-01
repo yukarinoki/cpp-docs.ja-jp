@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3bd43c9ceb4f0a0f73b86e3a4ecf4d851d504b3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 058979420e5bb1426879522e70ec8b1ac768d9cc
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939313"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407404"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -61,6 +61,5 @@ if (condexpr1) statement1;
  **Bool**型が整数の上位変換に参加します。 型の右辺**bool**右辺値の型に変換できる**int**、FALSE になることを TRUE になりつつある 1 つと 0 です。 別個の型として**bool**オーバー ロードの解決に関与します。  
   
 ## <a name="see-also"></a>関連項目
-
-[キーワード](../cpp/keywords-cpp.md)<br/>
-[基本的な型](../cpp/fundamental-types-cpp.md)<br/>
+[キーワード](../cpp/keywords-cpp.md)  
+[基本的な型](../cpp/fundamental-types-cpp.md)  

@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775d0b699c6ac9664bae8cd0e6e28438ef019e69
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ada1377efea8bd05dea1fd59dbbe6cd4495e6ea2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393744"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404643"
 ---
 # <a name="access-waccess"></a>_access、_waccess
 
@@ -67,27 +67,27 @@ int _waccess(
 
 ### <a name="parameters"></a>パラメーター
 
-*path*<br/>
+*path*  
 ファイルまたはディレクトリ パス。
 
-*モード*<br/>
+*モード*  
 読み取り/書き込み属性。
 
 ## <a name="return-value"></a>戻り値
 
-ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 名前付きのファイルが存在しないか、特定のモードがない場合、関数は-1 を返しますこの場合、 **errno**次の表に示すように設定します。
+ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 名前付きのファイルが存在しないか、特定のモードがない場合は-1 を返しますこの場合、`errno`に次の表に示すように設定します。
 
 |||
 |-|-|
-**EACCES**|アクセス拒否: ファイルのアクセス許可の設定では、指定したアクセスは許可されません。
-**ENOENT**|ファイル名またはパスが見つかりません。
-**EINVAL**|無効なパラメーター。
+`EACCES`|アクセス拒否: ファイルのアクセス許可の設定では、指定したアクセスは許可されません。
+`ENOENT`|ファイル名またはパスが見つかりません。
+`EINVAL`|無効なパラメーター。
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ファイルを使用すると、 **_access**関数は、指定したファイルまたはディレクトリが存在しの値によって指定された属性を持つかどうかを判断*モード*です。 ディレクトリを使用すると **_access**のみに指定されたディレクトリが存在するかどうかを判断; Windows 2000 以降のオペレーティング システムを保存のすべてのディレクトリの読み取りおよび書き込みアクセス。
+ファイルを使用すると、 **_access**関数は、指定したファイルまたはディレクトリが存在しの値で指定された属性を持つかどうかを決定します。*モード*します。 ディレクトリを使用すると **_access**だけを指定したディレクトリが存在するかどうか判断します。 Windows 2000 以降のオペレーティング システムを保存のすべてのディレクトリの読み取りおよび書き込みアクセス。
 
 |*モード*値|ファイル チェックの目的|
 |------------------|---------------------|
@@ -98,26 +98,26 @@ int _waccess(
 
 この関数は、ファイルとディレクトリが読み取り専用かどうかだけを確認し、ファイルシステムのセキュリティ設定は確認しません。 そのためには、アクセス トークンが必要です。 ファイルシステムのセキュリティの詳細については、「[アクセス トークン](http://msdn.microsoft.com/library/windows/desktop/aa374909)」を参照してください。 ATL クラスはこの機能を提供するために存在します。「[CAccessToken クラス](../../atl/reference/caccesstoken-class.md)」を参照してください。
 
-**_waccess**のワイド文字バージョンは、 **_access**;*パス*に渡す引数 **_waccess**ワイド文字列です。 **_waccess**と **_access**それ以外の場合の動作は同じです。
+**_waccess**のワイド文字バージョンです **_access**、*パス*への引数 **_waccess**はワイド文字列です。 **_waccess**と **_access**動作は同じです。
 
-この関数は、パラメーターを検証します。 場合*パス*は**NULL**または*モード*有効なモードが指定されていません」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**し、-1 を返します。
+この関数は、パラメーターを検証します。 場合*パス*null または*モード*有効なモードを指定しない」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_taccess**|**_access**|**_access**|**_waccess**|
+|`_taccess`|**_access**|**_access**|**_waccess**|
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> または \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>例
 
-次の例で **_access**はという名前のファイルを確認します。C に存在するかどうかと書き込みが許可されているかどうかを参照してください。
+次の例では **_access**はという名前のファイルを確認します。C が存在するかどうかと、書き込みが許可されているかどうかを確認します。
 
 ```C
 // crt_access.c
@@ -151,8 +151,8 @@ File crt_ACCESS.C does not have write permission.
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
-[_chmod、_wchmod](chmod-wchmod.md)<br/>
-[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_open、_wopen](open-wopen.md)<br/>
-[_stat、_wstat 関数](stat-functions.md)<br/>
+[ファイル処理](../../c-runtime-library/file-handling.md)  
+[_chmod、_wchmod](chmod-wchmod.md)  
+[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)  
+[_open、_wopen](open-wopen.md)  
+[_stat、_wstat 関数](stat-functions.md)  

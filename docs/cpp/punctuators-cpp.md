@@ -1,5 +1,5 @@
 ---
-title: 区切り記号 (C++) |Microsoft ドキュメント
+title: 区切り記号 (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecaa90598ce07cd0db52b7a4c30cfacc12566aba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1602857896745daae6e7af969add76ca2c1e1ead
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420089"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406755"
 ---
 # <a name="punctuators-c"></a>区切り記号 (C++)
 C++ の区切り記号はコンパイラに対する構文上およびセマンティック上の意味を持ちますが、それ自体は値を生成する演算を指定しません。 一部の区切り記号 (単独または組み合わせ) は、C++ の演算子としても使用できたり、プリプロセッサで意味を持つことがあります。  

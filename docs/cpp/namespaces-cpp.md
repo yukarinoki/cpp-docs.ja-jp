@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 223bf6996d5142cbe8d3521c65596beb40312f2c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5a68a0a67748e79fe4379cb5f820cca0c845f392
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941186"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405484"
 ---
 # <a name="namespaces-c"></a>名前空間 (C++)
 名前空間は、その内部にある識別子 (型、関数、変数などの名前) のスコープを定める宣言領域です。 名前空間は、コードを論理グループにまとめるため、およびコード ベースに複数のライブラリが含まれる場合に特に発生する名前の競合を回避するために使用されます。 名前空間スコープのすべての識別子は互いどうしを修飾なしで参照できます。 名前空間の外部識別子の各識別子は、完全修飾名を使用してメンバーにアクセスできる`std::vector<std::string> vec;`、または else で、[宣言を使用して](../cpp/using-declaration.md)、単一の識別子の (`using std::string`)、または、 [ディレクティブを使用して](../cpp/namespaces-cpp.md#using_directives)、名前空間内のすべての識別子 (`using namespace std;`)。 ヘッダー ファイル内のコードは、常に完全修飾された名前空間の名前を使用する必要があります。  
@@ -59,7 +59,6 @@ ContosoData::Func(mgr);
 using ContosoData::ObjectManager;  
 ObjectManager mgr;  
 mgr.DoSomething();  
-  
 ```  
   
  using ディレクティブを使用すると、名前空間にあるすべてのものをスコープに挿入できます。  
@@ -70,7 +69,6 @@ using namespace ContosoData;
 ObjectManager mgr;  
 mgr.DoSomething();  
 Func(mgr);  
-  
 ```  
   
 ## <a id="using_directives"></a> using ディレクティブ  
@@ -91,11 +89,10 @@ namespace ContosoDataServer
 {  
     void Foo();  
     int Bar();  
-  
 }  
 ```  
   
- 配置する場合でも、contosodata.cpp で関数の実装は、完全修飾名を使用する必要があります、`using`ファイルの上部にあるディレクティブ。  
+ 配置する場合でも、contosodata.cpp で関数の実装は、完全修飾名を使用する必要があります、**を使用して**ファイルの上部にあるディレクティブ。  
   
 ```cpp  
 #include "contosodata.h"  
@@ -154,7 +151,6 @@ namespace ContosoDataServer
   
     int Bar(){...};  
     int Baz(int i) { return Details::CountImpl; }      
-  
 }  
 ```  
   
@@ -211,7 +207,6 @@ namespace Parent
      template<>  
      class C<int> {};  
 }  
-  
 ```  
   
  ライブラリのパブリック インターフェイスに対する変更を管理するためのバージョン管理のメカニズムとして、インライン名前空間を使用することができます。 たとえば、単一の親名前空間を作成し、インターフェイスの各バージョンを、親の中に入れ子になっている、それぞれ独自の名前空間にカプセル化することができます。 最新または最優先のバージョンを保持する名前空間をインラインとして修飾することで、これを親の名前空間の直接のメンバーであるかのように公開できます。 Parent::Class を呼び出すクライアント コードは、新しいコードに自動的にバインドされます。 古いバージョンを使用するクライアントは、そのコードを持つ入れ子になった名前空間への完全修飾パスを使用すれば、引き続き古いバージョンにアクセスできます。  
@@ -252,7 +247,6 @@ namespace Contoso
       };  
     }  
 }  
-  
 ```  
   
 ## <a id="namespace_aliases"></a> Namespace エイリアス  
@@ -262,7 +256,6 @@ namespace Contoso
 namespace a_very_long_namespace_name { class Foo {}; }  
 namespace AVLNN = a_very_long_namespace_name;  
 void Bar(AVLNN::Foo foo){ }  
-  
 ```  
   
 ## <a name="anonymous-or-unnamed-namespaces"></a>匿名または名前のない名前空間  

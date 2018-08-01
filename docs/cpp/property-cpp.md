@@ -1,5 +1,5 @@
 ---
-title: プロパティ (C++) |Microsoft ドキュメント
+title: プロパティ (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4673101d41b896ed3fc19aa1998aa9329064b41
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409067"
 ---
 # <a name="property-c"></a>property (C++)
 **Microsoft 固有の仕様**  
@@ -31,18 +32,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>構文  
   
 ```  
-  
    __declspec( property( get=get_func_name ) ) declarator  
    __declspec( property( put=put_func_name ) ) declarator  
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
-## <a name="remarks"></a>コメント  
- コンパイラがメンバー選択演算子の右側にこの属性で宣言されたデータ メンバーを表示する場合 ("**.**「または」**->**") に変換する操作、 **の取得**または**put**関数は、このような式は、左辺値または右辺値かどうかによって異なります。 複雑なコンテキストなど"`+=`"、両方の手順を実行して書き換えが行わ**取得**と**put**です。  
+## <a name="remarks"></a>Remarks  
+ コンパイラがメンバー選択演算子の右側で、この属性で宣言されたデータ メンバーを表示する場合 ("**.**「または」**->**") に変換する操作、`get`または`put`関数は、このような式は、左辺値または右辺値かどうかによって異なります。 さらに複雑なコンテキストなど"`+=`"、両方の手順を実行して、再書き込みが実行される`get`と`put`します。  
   
  この属性は、クラスまたは構造体の定義の空の配列の宣言でも使用できます。 例えば:  
   
-```  
+```cpp 
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
@@ -52,7 +52,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // declspec_property.cpp  
 struct S {  
    int i;  

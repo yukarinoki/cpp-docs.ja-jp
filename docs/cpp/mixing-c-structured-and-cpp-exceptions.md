@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f0fe9faf0c75257f2ac7bbe0a3457438ffdf9
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 6e632faddb3b4f59733710a915ed121a12f4e0c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37942043"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404864"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>C (構造化) と C++ の混合例外
 移植性の高いコードを記述する場合は、C++ プログラムで構造化例外処理を使用することはお勧めしません。 ただしを使用してコンパイルする可能性がありますも **/EHa**構造化例外と C++ のソース コードを混在させるし、両方の種類の例外を処理するためのいくつかの機能を必要しします。 C++ のコードによってスローされた例外を処理できない構造化例外ハンドラーには、オブジェクトまたは型指定された例外の概念はありません、ただし、C++**キャッチ**ハンドラーは、構造化例外を処理できます。 このような C++ 例外処理の構文として (**お試しください**、**スロー**、**キャッチ**) は受け入れられませんでしたが、C コンパイラで、構造化例外処理構文 (**_ _try**、 **_ _except**、 **_ _finally**) は、C++ コンパイラでサポートされています。  

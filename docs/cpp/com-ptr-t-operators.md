@@ -1,5 +1,5 @@
 ---
-title: _com_ptr_t 演算子 |Microsoft ドキュメント
+title: _com_ptr_t 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298b9d482934566a41dc6117e8f82bfc1eb85200
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7130146ceb0031224304cb41fd9264956e5fba61
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408472"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408454"
 ---
 # <a name="comptrt-operators"></a>_com_ptr_t 演算子
-については、`_com_ptr_t`演算子を参照してください[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)です。  
+については、`_com_ptr_t`演算子を参照してください[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

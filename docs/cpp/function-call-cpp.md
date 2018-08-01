@@ -1,5 +1,5 @@
 ---
-title: 関数呼び出し (C++) |Microsoft ドキュメント
+title: 関数呼び出し (C++) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85e7a752630b391d09140fa7552a452b3d2b751a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a2c3e28d4d69265c86e3c88d07de460558b3f71b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409357"
 ---
 # <a name="function-call-c"></a>関数呼び出し (C++)
 かっこを使用して呼び出される関数呼び出し演算子は二項演算子です。  
@@ -33,23 +34,22 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 primary-expression ( expression-list )  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このコンテキストでは、`primary-expression` は最初のオペランドであり、`expression-list` (空の可能性がある引数リスト) は 2 番目のオペランドです。 関数呼び出し演算子は、多数のパラメーターを必要とする演算で使用されます。 これが機能するのは、`expression-list` が単一オペランドではなくリストであるためです。 関数呼び出し演算子は、非静的メンバー関数である必要があります。  
   
  関数呼び出し演算子は、オーバーロードしたとき、関数をどのように呼び出すかを変更するのではなく、特定のクラス型のオブジェクトに適用されるときに演算子をどのように解釈するかを変更します。 たとえば、次のコードは、通常、無意味です。  
   
-```  
+```cpp 
 Point pt;  
 pt( 3, 2 );  
 ```  
   
  ただし、適切にオーバーロードされた関数呼び出し演算子を指定すると、この構文を使用して `x` 座標の 3 つの単位と `y` 座標の 2 つの単位をオフセットできます。 次のコードは、そのような定義を示しています。  
   
-```  
+```cpp 
 // function_call.cpp  
 class Point  
 {  

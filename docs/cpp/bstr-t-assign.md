@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a415f695f512a9d6263025fc6e45d5f9df754f80
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943189"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403908"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 固有の仕様**  
@@ -41,7 +41,7 @@ void Assign(
  `BSTR` でラップされた `BSTR` にコピーする `_bstr_t`。  
   
 ## <a name="remarks"></a>Remarks  
- `Assign` はバイナリ コピーを実行します。つまり、内容に関係なく `BSTR` の全長がコピーされます。  
+ **割り当てる**はバイナリ コピーをつまり、全体の長さ、`BSTR`コンテンツに関係なく、コピーされます。  
   
 ## <a name="example"></a>例  
   

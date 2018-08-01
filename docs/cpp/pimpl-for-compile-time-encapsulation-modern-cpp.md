@@ -1,5 +1,5 @@
 ---
-title: コンパイル時のカプセル化 (Modern C) Pimpl |Microsoft ドキュメント
+title: コンパイル時 (Modern C) をカプセル化の Pimpl |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2e80c4bd86cd4c7400e3937fcb8d164fe6b14106
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420156"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404656"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>コンパイル時のカプセル化の Pimpl (Modern C++)
-*Pimpl 表現*インターフェイスを分離したり結合度を最小限に抑えるの実装を非表示に最新の C++ 手法です。 Pimpl はの短縮形「へのポインターの実装です」 既に概念を理解するが、Cheshire Cat またはコンパイラのファイアウォールの表現形式のようなその他の名前を知っている可能性があります。  
+*Pimpl イディオム*はインターフェイスを分離したり結合度を最小限に抑えるの実装を非表示にする最新の C++ 手法です。 Pimpl は省略形で"実装へのポインター" 既にある概念を理解できます。 ただし Cheshire Cat またはコンパイラのファイアウォールの表現形式のような他の名前を知っています。  
   
 ## <a name="why-use-pimpl"></a>Pimpl を使用する理由  
- Pimpl 表現形式が、ソフトウェア開発ライフ サイクルを改善する方法を次に示します。  
+ Pimpl 表現形式を使用して、ソフトウェア開発ライフ サイクルを改善する方法を次に示します。  
   
 -   コンパイルの依存関係の最小化します。  
   
@@ -40,13 +40,12 @@ class my_class {
 private:  
    class impl; unique_ptr<impl> pimpl; // opaque type here  
 };  
-  
 ```  
   
- および当てオブジェクトのレイアウトを再構築を連鎖 pimpl 表現形式を回避できます。 (推移的に) 一般的な種類にも適しています。  
+ Pimpl 表現形式は、再構築を連鎖と不安定オブジェクトのレイアウトを回避できます。 (推移的) 人気のある型にも適しています。  
   
 ## <a name="pimpl-implementation"></a>Pimpl 実装  
- 定義、 `impl` .cpp ファイル内のクラスです。  
+ 定義、 `impl` .cpp ファイル内のクラス。  
   
 ```cpp  
 // my_class.cpp  
@@ -61,7 +60,7 @@ my_class::my_class(): pimpl( new impl )
 ```  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- 例外をスローしないスワップ特殊化のサポートを追加するかどうかを検討してください。  
+ スローしないスワップの特殊化のサポートを追加するかどうかを検討してください。  
   
 ## <a name="see-also"></a>関連項目  
  [C++ へようこそ](../cpp/welcome-back-to-cpp-modern-cpp.md)   

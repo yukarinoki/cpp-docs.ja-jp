@@ -1,5 +1,5 @@
 ---
-title: '前置インクリメント演算子と前置デクリメント演算子: + + および--|Microsoft ドキュメント'
+title: '前置インクリメント演算子と前置デクリメント演算子: + + および--|Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 071f21080bd093e5cb299471c8de7009741482f6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1af68c630717a71df11e4ac22b96058356354f1
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409217"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>前置インクリメント演算子と前置デクリメント演算子: ++ および --
 ## <a name="syntax"></a>構文  
@@ -37,16 +38,16 @@ ms.lasthandoff: 05/03/2018
 -- unary-expression  
 ```  
   
-## <a name="remarks"></a>コメント  
- 前置インクリメント演算子 (`++`) は、オペランドに 1 を追加します。このインクリメントされた値が式の結果になります。 オペランドがない型の左辺値にする必要があります**const**です。 結果は、オペランドと同じ型の左辺値です。  
+## <a name="remarks"></a>Remarks  
+ 前置インクリメント演算子 (**++**) そのオペランドの値に 1 つを追加します。 このインクリメントされた値は、式の結果。 オペランドの種類が左辺値である必要があります**const**します。 結果は、オペランドと同じ型の左辺値です。  
   
- 前置デクリメント演算子 (**--**) が、オペランドから 1 が減算され、結果はこのデクリメントされた値は、前置インクリメント演算子と似ています。  
+ 前置デクリメント演算子 (**--**) は、オペランドが 1 だけデクリメントし、結果はこのデクリメントされた値にする点を除いて、前置インクリメント演算子に似ています。  
 
- **Visual Studio 2017 15.3 およびそれ以降のバージョン**(で利用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 型のインクリメントまたはデクリメント演算子のオペランドができない可能性があります`bool`です。
+ **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 型のインクリメントまたはデクリメント演算子のオペランドができない可能性があります**bool**します。
   
  前置および後置インクリメントおよびデクリメント演算子は、オペランドに影響します。 これらの主要な違いは、式の評価でインクリメントまたはデクリメントが発生する順序です。 (詳細については、次を参照してください[後置インクリメント演算子と前置デクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)。)。前置形式では、値が式評価で使用される前にインクリメントまたはデクリメントが発生するため、式の値はオペランドの値と異なります。 後置形式では、値が式評価で使用された後にインクリメントまたはデクリメントが発生するため、式の値はオペランドの値と同じになります。 たとえば、次のプログラムでは、"`++i = 6`" と出力されます。  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -61,9 +62,9 @@ int main() {
   
  整数または浮動小数点型のオペランドは、整数値 1 ずつインクリメントまたはデクリメントされます。 結果の型は、オペランドの型と同じです。 ポインター型のオペランドは、アドレス指定するオブジェクトのサイズだけインクリメントまたはデクリメントされます。 インクリメントされたポインターは、次のオブジェクトを指します。デクリメントされたポインターは、前のオブジェクトを指します。  
   
- インクリメントおよびデクリメント演算子に副作用があるでインクリメントまたはデクリメント演算子を含む式を使用して、[プリプロセッサ マクロ](../preprocessor/macros-c-cpp.md)望ましくない結果を持つことができます。 次の例について考えます。  
+ ため、インクリメントおよびデクリメント演算子があるでインクリメントまたはデクリメント演算子を含む式を使用して、副作用を[プリプロセッサ マクロ](../preprocessor/macros-c-cpp.md)望ましくない結果を持つことができます。 次の例について考えます。  
   
-```  
+```cpp 
 // expre_Increment_and_Decrement_Operators2.cpp  
 #define max(a,b) ((a)<(b))?(b):(a)  
   
@@ -76,7 +77,7 @@ int main()
   
  マクロは次のように展開されます。  
   
-```  
+```cpp 
 k = ((++i)<(j))?(j):(++i);  
 ```  
   
@@ -87,5 +88,5 @@ k = ((++i)<(j))?(j):(++i);
   
 ## <a name="see-also"></a>関連項目  
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [前置インクリメント演算子と前置デクリメント演算子](../c-language/prefix-increment-and-decrement-operators.md)

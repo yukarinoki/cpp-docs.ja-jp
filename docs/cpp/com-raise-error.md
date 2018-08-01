@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f38a0d97b90f1512e5f16b3bd147bda3e0614e4f
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 54cb2183bccc45446cd68b8d5d6d2753f571009b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943511"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408090"
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Microsoft 固有の仕様**  
@@ -31,7 +31,6 @@ ms.locfileid: "37943511"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 void __stdcall _com_raise_error(  
    HRESULT hr,  
    IErrorInfo* perrinfo = 0  
@@ -46,11 +45,11 @@ void __stdcall _com_raise_error(
  `IErrorInfo` オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
- `_com_raise_error`、定義されている\<comdef.h >、同じ名前とプロトタイプのユーザー作成のバージョンで置き換えることができます。 `#import` を使用し、C++ 例外処理を使用しない場合は、こうすることができます。 その場合、ユーザー バージョンので`_com_raise_error`実行することがあります、`longjmp`またはメッセージ ボックスを表示し、停止します。 ユーザー バージョンで返すことはできません。コンパイラ COM サポート コードがそれを予期していないためです。  
+ **_com_raise_error**、定義されている\<comdef.h >、同じ名前とプロトタイプのユーザー作成のバージョンで置き換えることができます。 `#import` を使用し、C++ 例外処理を使用しない場合は、こうすることができます。 その場合、ユーザー バージョンので **_com_raise_error**実行することがあります、`longjmp`またはメッセージ ボックスを表示し、停止します。 ユーザー バージョンで返すことはできません。コンパイラ COM サポート コードがそれを予期していないためです。  
   
  使用することも[_set_com_error_handler](../cpp/set-com-error-handler.md)を既定のエラー処理関数を置き換えます。  
   
- 既定では、`_com_raise_error` は次のように定義されています。  
+ 既定では、 **_com_raise_error**が次のように定義されています。  
   
 ```cpp  
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {  
@@ -60,7 +59,7 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<comdef.h >  
   
  **Lib:** 場合、 **wchar_t をネイティブ型**コンパイラ オプションは、comsuppw.lib または comsuppwd.lib を使用します。 場合**wchar_t をネイティブ型**オフ、comsupp.lib を使用します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: 引数の渡し規則と名前付け規則 |Microsoft ドキュメント
+title: 引数を渡すと、名前付け規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43aa3430b641f6333c6c35d618f9e9de123b7390
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4e1a6a8e837a44a966f262f581db04f1589233c8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413487"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404042"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引数の渡し規則と名前付け規則
 **Microsoft 固有の仕様**  
@@ -42,9 +42,9 @@ ms.locfileid: "32413487"
 > [!NOTE]
 >  構造体、共用体、またはクラスが値渡しで関数から戻される場合は、型のすべての定義が同じである必要があります。そうでないと、実行時にプログラムが失敗することがあります。  
   
- 独自の関数プロローグおよびエピローグ コードを定義する方法については、次を参照してください。 [Naked 関数の呼び出し](../cpp/naked-function-calls.md)です。  
+ 独自の関数プロローグおよびエピローグ コードを定義する方法については、次を参照してください。 [Naked 関数の呼び出し](../cpp/naked-function-calls.md)します。  
   
- ターゲット x64 プラットフォームでは、「コードの呼び出し規則について、既定値は[x64 の概要については呼び出し規約](../build/overview-of-x64-calling-conventions.md)です。 ARM プラットフォームを対象とするコードの呼び出し規約問題については、次を参照してください。[一般的な Visual c ARM 移行に関する問題](../build/common-visual-cpp-arm-migration-issues.md)です。  
+ ターゲットが x64 プラットフォームでは、「コードで呼び出し規則については、既定[x64 の概要呼び出し規則](../build/overview-of-x64-calling-conventions.md)します。 ARM プラットフォームを対象とするコードの呼び出し規約の問題については、次を参照してください。[一般的な Visual c ARM の移行に関する問題](../build/common-visual-cpp-arm-migration-issues.md)します。  
   
  次の呼び出し規則は Visual C/C++ コンパイラでサポートされます。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "32413487"
 |[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**この**ECX に格納されているポインター|  
 |[__vectorcall](../cpp/vectorcall.md)|Callee|レジスタに格納されてから、スタックに逆の順序で (右から左に) プッシュされる|  
   
- 関連情報については、次を参照してください。[廃止された呼び出し規約](../cpp/obsolete-calling-conventions.md)です。  
+ 関連情報については、次を参照してください。[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)します。  
   
  **Microsoft 固有の仕様はここまで**  
   

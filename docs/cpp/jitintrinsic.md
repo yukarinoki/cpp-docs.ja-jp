@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b1c932f53651b8ad116139724348714b183506
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f0b114089567de06a71f15b69c556e08d1e4e9c6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939391"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404081"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 64 ビット共通言語ランタイムにとって重要であると関数をマークします。 これは、Microsoft が提供するライブラリの特定の関数で使用されます。  
@@ -35,7 +35,7 @@ __declspec(jitintrinsic)
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `jitintrinsic` は、関数シグネチャに MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) を追加します。  
+ **jitintrinsic** MODOPT を追加します (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) 関数のシグネチャにします。  
   
  ユーザーはこれを使用してから推奨されません **_ _declspec**修飾子は、予期しない結果として発生することができます。  
   

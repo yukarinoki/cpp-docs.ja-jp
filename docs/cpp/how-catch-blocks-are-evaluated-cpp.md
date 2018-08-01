@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0190b62491dbb9d15ee4f01a1cbc4c2741f74dbe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f073f82114c2d58b6d4d94bfeb35048b9e676c45
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943853"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405536"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch ブロックの評価方法 (C++)
 C++ では任意の型の例外をスローすることができますが、一般に std::exception から派生した型をスローすることが推奨されます。 C++ 例外をキャッチできる、**キャッチ**または任意の種類の例外をキャッチできるハンドラーによってスローされた例外として、同じ型を指定するハンドラー。  
