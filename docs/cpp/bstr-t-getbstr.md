@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3041e8a4ece0ddff813b7ef9cd2ccb258e520a82
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 8863f3a6c37693ec28f931c2af4cb0d299788daa
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940483"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402664"
 ---
 # <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
 **Microsoft 固有の仕様**  
@@ -31,19 +31,17 @@ ms.locfileid: "37940483"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 BSTR& GetBSTR( );  
-  
 ```  
   
 ## <a name="return-value"></a>戻り値  
  `BSTR` でラップされた `_bstr_t` の先頭。  
   
 ## <a name="remarks"></a>Remarks  
- `GetBSTR` は、`_bstr_t` を共有するすべての `BSTR` オブジェクトに影響します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用してとおよび**演算子 =** します。  
+ **GetBSTR**すべて影響`_bstr_t`オブジェクトをその共有を`BSTR`します。 1 つ以上`_bstr_t`を共有できる、`BSTR`コピー コンス トラクターを使用してとおよび**演算子 =** します。  
   
 ## <a name="example"></a>例  
- 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)使用例について`GetBSTR`します。  
+ 参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)使用例について**GetBSTR**します。  
   
  **Microsoft 固有の仕様はここまで**  
   

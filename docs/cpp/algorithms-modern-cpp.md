@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ce233b4ffa33873b752ebc409fb8570856acbff
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b3c4592255c56aae6bc4d959757164fd9c11f2a5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940200"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407810"
 ---
 # <a name="algorithms-modern-c"></a>アルゴリズム (Modern C++)
 最新の C++ プログラミングをお勧めのアルゴリズムを使用すること、 [C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)します。 次に重要な例を示します。  
@@ -69,14 +69,14 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ### <a name="range-based-for-loops"></a>範囲ベースの for ループ  
  範囲に基づく**の**ループは、c++ 11 言語の機能、C++ 標準ライブラリ アルゴリズムではありません。 しかし、ループに関するこの説明と併せて理解すると便利です。 範囲ベースの**の**ループはの拡張機能、**の**キーワードと値の範囲を反復処理するループを記述する便利で効率的な方法を提供します。 C++ 標準ライブラリ コンテナー、文字列、および配列は既製の範囲に基づく**の**ループします。 この新しいイテレーション構文をユーザー定義型に対して有効にするには、次のサポートを追加します。  
   
--   A**開始**を構造体の先頭に、反復子を返すメソッドと**エンド**を構造体の末尾に反復子を返すメソッド。  
+-   反復子を構造体の先頭に返す `begin` メソッドと、反復子を構造体の末尾に返す `end` メソッド。  
   
 -   これらのメソッドの反復子のサポート: * * 演算子 * * *、**演算子! =**、および**operator++** (前置バージョン)。  
   
  これらのメソッドは、メンバー関数かスタンドアロン関数のいずれかです。  
   
 ## <a name="random-numbers"></a>乱数  
- シークレットではありませんが古い CRT **rand()** 関数には、C++ コミュニティ内で説明していますが、多くの欠点です。 最新の c++ では、これらの欠陥に対処する必要はありません — 独自一様に分布した乱数ジェネレーターを作成する必要はも —で示すように、迅速かつ簡単に作成するためのツールは、C++標準ライブラリで使用できるため、[\<ランダム >](../standard-library/random.md)します。  
+ 従来の CRT の `rand()` 関数に多くの欠陥があることは広く知られた事実であり、C++ コミュニティで長年にわたって議論されてきました。 最新の c++ では、これらの欠陥に対処する必要はありません — 独自一様に分布した乱数ジェネレーターを作成する必要はも —で示すように、迅速かつ簡単に作成するためのツールは、C++標準ライブラリで使用できるため、[\<ランダム >](../standard-library/random.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [C++ へようこそ](../cpp/welcome-back-to-cpp-modern-cpp.md)   

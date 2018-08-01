@@ -1,5 +1,5 @@
 ---
-title: 式の配列 |Microsoft ドキュメント
+title: 式の配列 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3e57a97d9be3ef6245c09c6112caf72318fe784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b792bc02cf620cbd961830a99e35ae0c61898fed
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39409347"
 ---
 # <a name="arrays-in-expressions"></a>式の配列
-配列型の識別子が表示される場合、式で以外の`sizeof`、アドレスの (**&**)、または初期化の参照、配列の最初の要素へのポインターに変換されます。 例えば:  
+配列型の識別子が表示されたら、式で他にも`sizeof`、アドレスの (**&**)、または初期化の参照、配列の最初の要素へのポインターに変換されます。 例えば:  
   
-```  
+```cpp 
 char szError1[] = "Error: Disk drive not ready.";  
 char *psz = szError1;  
 ```  
   
  ポインター `psz` は、配列 `szError1` の最初の要素をポイントします。 配列は、ポインターとは異なり、変更できる左辺値ではないことに注意してください。 したがって、次の割り当ては正しくありません。  
   
-```  
+```cpp 
 szError1 = psz;  
 ```  
   

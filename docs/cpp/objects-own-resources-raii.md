@@ -1,5 +1,5 @@
 ---
-title: オブジェクト (RAII) のリソースを所有して |Microsoft ドキュメント
+title: 所有するオブジェクト (RAII) のリソース |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 265eccc4c1a9f51a03e5a84433a9f7e9cc6d6a92
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32419934"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402137"
 ---
 # <a name="objects-own-resources-raii"></a>リソースを所有するオブジェクト (RAII)
-独自のリソース オブジェクトを確認します。 この原則とも呼ばれる"resource acquisition is 初期化"または"RAII"。  
+独自のリソース オブジェクトを確認します。 この原則とも呼ばれます"resource acquisition is 初期化"または"RAII"。  
   
 ## <a name="example"></a>例  
- コンス トラクターの引数として (unique_ptr ほとんどの場合) を所有する別の名前付きオブジェクトのすべての「新規」オブジェクトを渡します。  
+ (ほとんどの場合に unique_ptr) それを所有する別の名前付きオブジェクトをコンス トラクター引数としてすべての「新しい」オブジェクトを渡します。  
   
 ```cpp  
 void f() {  
@@ -34,7 +34,7 @@ void f() {
   // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"  
 ```  
   
- 常にすぐに所有されている別のオブジェクトを新しいリソースを渡します。  
+ 常にすぐに、新しいリソースを所有する別のオブジェクトに渡します。  
   
 ```cpp  
 void g() {  

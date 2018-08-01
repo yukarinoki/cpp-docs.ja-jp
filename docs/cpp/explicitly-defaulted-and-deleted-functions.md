@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be96658d5e2920f480747e484f60bed5c16f09c1
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 887ab1e29cf2a0eab656cc6d1b4587252871d328
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943546"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402823"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明示的に既定された関数および削除された関数
 C++11 では、特殊なメンバー関数を自動的に生成するかどうかを、既定化および削除指定関数によって明示的に制御できます。 また削除指定関数には、問題となる型の上位変換がすべての種類の関数 (特殊なメンバー関数、通常のメンバー関数、メンバー関数以外の関数) への引数で実行されて、不要な関数が呼び出されないようにするための、シンプルな言語が用意されています。  
@@ -145,5 +145,4 @@ template < typename T >
 void call_with_true_double_only(T) =delete; //prevent call through type promotion of any T to double from succeeding.  
   
 void call_with_true_double_only(double param) { return; } // also define for const double, double&, etc. as needed.  
-  
 ```

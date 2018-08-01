@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ad0c50330d174a6139ce6e588b278e03cd99562
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 5deee0209866580afd038fbce068a9275f5b5874
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943612"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406969"
 ---
 # <a name="novtable"></a>novtable
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様  
@@ -30,7 +30,7 @@ ms.locfileid: "37943612"
   
  この形式の **_ _declspec**任意のクラス宣言に適用できますが、自分でインスタンス化されないクラスを示す、純粋なインターフェイス クラスにのみ適用する必要があります。 **_ _Declspec**のコンス トラクターおよびクラスのデストラクターの vfptr を初期化するコードの生成を停止します。 多くの場合、これは、クラスに関連付けられている vtable への参照のみを削除するので、リンカーはこれを削除します。 このような形態を使用して **_ _declspec**コードのサイズが大幅に短縮されることができます。  
   
- `novtable` でマークされたクラスをインスタンス化してから、クラス メンバーにアクセスしようとすると、アクセス違反 (AV) となります。  
+ マークされたクラスをインスタンス化しようとした場合**novtable**およびクラス メンバーにアクセスし、アクセス違反 (AV) が表示されます。  
   
 ## <a name="example"></a>例  
   

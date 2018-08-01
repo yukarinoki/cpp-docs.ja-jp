@@ -1,5 +1,5 @@
 ---
-title: メンバーへのポインター演算子:. */&gt;* |Microsoft ドキュメント
+title: メンバーへのポインター演算子:. * - と&gt;* |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdece555ea58f0a1321258405fa76ba02cf12efa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b266d167b34c1c773d79ea92813a310eb18441
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408967"
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>メンバーへのポインター演算子:. */&gt;*
 ## <a name="syntax"></a>構文  
@@ -35,10 +36,10 @@ expression .* expression
 expression ->* expression  
 ```  
   
-## <a name="remarks"></a>コメント  
- メンバーへのポインター演算子です。 * および ->\*、式の左側にある指定されたオブジェクトの特定のクラス メンバーの値を返します。  右側では、クラスのメンバーを指定する必要があります。  これらの演算子を使用する方法を次の例に示します。  
+## <a name="remarks"></a>Remarks  
+ メンバーへのポインター演算子。 * および ->\*、式の左側にある指定されたオブジェクトの特定のクラス メンバーの値を返します。  右側では、クラスのメンバーを指定する必要があります。  これらの演算子を使用する方法を次の例に示します。  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -78,7 +79,7 @@ int main() {
   
 ## <a name="output"></a>出力  
   
-```  
+```Output  
 m_func1  
 m_func1  
 1  
@@ -89,16 +90,16 @@ m_func1
   
  二項演算子 .* は、クラス型のオブジェクトである最初のオペランドを、メンバーへのポインター型である 2 番目のオペランドと組み合わせます。  
   
- 二項演算子 -> * 最初のオペランドをクラス型のオブジェクトへのポインターであるとメンバーへのポインター型である必要があります、2 番目のオペランドを結合します。  
+ 二項演算子 -> * 最初のオペランド、クラス型のオブジェクトへのポインターである必要がありますをメンバーへのポインター型である必要があります、2 番目のオペランドを結合します。  
   
  .* 演算子を含む式では、最初のオペランドは、2 番目のオペランドで指定されるメンバーへのポインターのクラス型であってそのポインターにアクセスできるか、または、そのクラスから明確に派生しているアクセス可能な型であってそのクラスにアクセスできる必要があります。  
   
- -> を含む式で * 演算子、最初のオペランド型の「クラス型へのポインター」型を指定してください、2 番目のオペランドまたはその必要がある、型の明確に派生クラスをします。  
+ ]-> [を含む式で * 演算子、最初のオペランド型の「クラス型へのポインター」型を指定する 2 番目のオペランドかにする必要がある型の明確にそのクラスから派生します。  
   
 ## <a name="example"></a>例  
  次のクラスとプログラムのフラグメントを考えます。  
   
-```  
+```cpp 
 // expre_Expressions_with_Pointer_Member_Operators2.cpp  
 // C2440 expected  
 class BaseClass {  
@@ -134,11 +135,10 @@ int main() {
 }  
 ```  
   
- 結果、します。 * または ->\*メンバーへのポインター演算子は、オブジェクトまたはメンバーへのポインターの宣言で指定された型の関数。 このため、上の例では、式 `ADerived.*pmfnFunc1()` の結果は void を返す関数へのポインターです。 この結果は、第 2 オペランドが左辺値の場合は左辺値です。  
+ 結果、。 * または ->\*メンバーへのポインター演算子は、オブジェクトまたはメンバーへのポインターの宣言で指定された型の関数。 このため、上の例では、式 `ADerived.*pmfnFunc1()` の結果は void を返す関数へのポインターです。 この結果は、第 2 オペランドが左辺値の場合は左辺値です。  
   
 > [!NOTE]
 >  メンバーへのポインター演算子のいずれかの結果が関数である場合、結果は関数呼び出し演算子のオペランドとしてのみ使用できます。  
   
 ## <a name="see-also"></a>関連項目  
  [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

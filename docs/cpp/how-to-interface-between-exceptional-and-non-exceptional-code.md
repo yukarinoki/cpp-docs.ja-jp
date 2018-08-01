@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74805c7ecd4b4ecef71d8ac1358fd6c2014e27d5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: e6c3217360f504d2433551d6ad624a378f4403af
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940119"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407973"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外的なコードと非例外的なコードをインターフェイスで連結する
 ここでは、C++ モジュールで一貫した例外処理を実装する方法と、例外の境界でエラー コードとの間でそれらの例外を変換する方法を説明します。  
@@ -161,7 +161,6 @@ int main ( int argc, char* argv[] )
         cout.copyfmt(state); // restore previous formatting  
     }  
 }  
-  
 ```  
   
 ## <a name="calling-exceptional-code-from-non-exceptional-code"></a>非例外コードからの例外コードの呼び出し  
@@ -194,7 +193,6 @@ BOOL DiffFiles2(const string& file1, const string& file2)
     }   
     return FALSE;   
 }  
-  
 ```  
   
  例外からエラー コードに変換するとき、考えられる 1 つの問題は、例外に格納できるような豊富な情報がエラー コードに含まれていないことが多いということです。 これに対処を行うことができます、**キャッチ**がスローされ、エラー コードに変換される前に、例外の詳細を記録するログ記録を実行する特定の例外の種類ごとにブロックします。 複数の関数すべての同じセットを使用する場合、このアプローチは、たくさんの繰り返しのコードを作成できます**キャッチ**ブロックします。 コードの繰り返しを回避するために適切な方法は、それらのブロックを実装する 1 つのプライベート ユーティリティ関数にリファクタリングすることにより、**お試しください**と**キャッチ**をブロックし、で呼び出される関数オブジェクトを受け取ります**お試しください**ブロックします。 各パブリック関数では、ラムダ式としてユーティリティ関数にコードを渡します。  
@@ -217,7 +215,6 @@ bool Win32ExceptionBoundary(Func&& f)
     }   
     return false;   
 }  
-  
 ```  
   
  次の例は、ファンクタを定義するラムダ式を記述する方法を示しています。 ラムダ式を使用して "インライン" でファンクタを定義すると、多くの場合、名前付きの関数オブジェクトとして記述するよりも理解しやすくなります。  
@@ -237,7 +234,6 @@ bool DiffFiles3(const string& file1, const string& file2)
         return true;   
     });   
 }  
-  
 ```  
   
  ラムダ式について詳しくは、「[ラムダ式](../cpp/lambda-expressions-in-cpp.md)」をご覧ください。  

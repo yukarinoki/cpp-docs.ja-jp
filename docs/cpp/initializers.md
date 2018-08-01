@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 79deaacbb00638c690d052668f60d9d072a2060d
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939866"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408165"
 ---
 # <a name="initializers"></a>初期化子
 初期化子は変数の初期値を指定します。 変数は次のコンテキストで初期化できます。  
@@ -46,7 +46,6 @@ ms.locfileid: "37939866"
     ```cpp  
     Point get_new_point(int x, int y) { return { x, y }; }  
     Point get_new_point(int x, int y) { return Point{ x, y }; }  
-  
     ```  
   
  初期化子は次の形式で指定できます。  
@@ -93,7 +92,7 @@ ms.locfileid: "37939866"
   
 -   Char 型の変数に初期化される`'\0'`します。  
   
--   ポインターは `nullptr` に初期化されます。  
+-   初期化されたポインターは**nullptr**します。  
   
 -   配列、[ポッド](../standard-library/is-pod-class.md)クラス、構造体、および共用体があるそのメンバーの値をゼロに初期化します。  
   
@@ -214,7 +213,6 @@ int main() {
     int a{};     // value of a is 0  
     double b{};  // value of b is 0.00000000000000000  
 }  
-  
 ```  
   
 ### <a name="copy-initialization"></a>コピー初期化  
@@ -533,4 +531,3 @@ int main()
   
 ### <a name="initialization-of-external-variables"></a>外部変数の初期化  
  自動、static、および外部変数の宣言は、初期化子を含めることができます。 ただし、外部変数の宣言は初期化子を含めるとして変数が宣言されていない場合にのみ**extern**します。
-  

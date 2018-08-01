@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abfda38c6c35c3e7172b187c89fa78bed5ee7616
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 74b79edb24396896a6c8a50965081e9466720ca4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943553"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407826"
 ---
 # <a name="event"></a>__event
 イベントを宣言します。  
@@ -31,7 +31,6 @@ ms.locfileid: "37943553"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 __event method-declarator;  
 __event __interface interface-specifier;  
 __event member-declarator;  
@@ -67,7 +66,7 @@ __event HRESULT OnClick(int* b, char* s);
  参照してください[ネイティブ C++ でのイベント処理](../cpp/event-handling-in-native-cpp.md)サンプル コードについてはします。  
   
 ## <a name="com-events"></a>COM イベント  
- COM イベントはインターフェイスです。 イベント ソース インターフェイスのメソッドのパラメーターがある`in`パラメーター (ただし、これは厳格に強制されていません)、ため、`out`パラメーターはマルチキャストした場合に便利です。 使用する場合に、レベル 1 の警告が発行される、`out`パラメーター。  
+ COM イベントはインターフェイスです。 イベント ソース インターフェイスのメソッドのパラメーターがある*で*パラメーター (ただし、これは厳格に強制されていません)、ため、*アウト*パラメーターはマルチキャストした場合に便利です。 使用する場合に、レベル 1 の警告が発行される、*アウト*パラメーター。  
   
  戻り値の型は、通常、HRESULT または**void**、任意の整数型を指定できますが、含む**列挙型**します。 イベントが整数の戻り値の型を使用していて、イベント ハンドラーがゼロ以外の値を返すと、これはエラー状態であり、発生するイベントは他のデリゲートの呼び出しをアボートします。 コンパイラはイベント ソース インターフェイスとしてのマークで自動的に注意してください、[ソース](../windows/source-cpp.md)生成された IDL にします。  
   

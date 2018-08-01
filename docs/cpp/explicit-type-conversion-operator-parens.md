@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f749f8cd43588eea8476c2746134b706737b6f5
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3f6f0017bcc4e26802093f449742f9a2cfb137b8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966935"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406784"
 ---
 # <a name="explicit-type-conversion-operator-"></a>明示的な型変換演算子: ()
 C++ では、関数呼び出しの構文に似た構文を使用して、明示的な型変換を実行できます。  
@@ -108,15 +108,12 @@ d = float( i );
  明示的な型変換は、"キャスト" 構文を使用して指定することもできます。 キャスト構文を使用して前の例を書き換えると、次のようになります。  
   
 ```cpp
-
 d = (float)i;  
-
 ```  
   
  キャストでの変換も関数形式の変換も、1 つの値から変換する場合は同じ結果になります。 ただし、関数形式の構文では、変換に複数の引数を指定できます。 この違いは、ユーザー定義型の場合は重要です。 `Point` クラスとその変換を考えます。  
   
 ```cpp
-
 struct Point  
 {  
     Point( short x, short y ) { _x = x; _y = y; }  
@@ -125,7 +122,6 @@ struct Point
 };  
 ...  
 Point pt = Point( 3, 10 );  
-
 ```
   
  関数形式の変換を使用して、前の例では、2 つの値を変換する方法を示します (の 1 つ*x*とに 1 つずつ*y*)、ユーザー定義型`Point`します。  

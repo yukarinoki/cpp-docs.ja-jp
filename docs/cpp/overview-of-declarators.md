@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405ef6da02c15e93e516069c1fedc22f002bdf2c
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208563"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404939"
 ---
 # <a name="overview-of-declarators"></a>宣言の概要
 宣言子は、オブジェクトまたは関数の名前を指定する宣言の構成要素です。 また、宣言子は、名前付きオブジェクトがオブジェクト、ポインター、参照、または配列であるかどうかも指定します。  宣言子は基本型を指定しませんが、ポインター、参照、配列などの派生型を指定するために、基本型の型情報を変更します。  関数に適用されると、宣言子は型指定子と組み合わせて、関数の戻り値の型がオブジェクト、ポインター、または参照であるかを完全に指定します  (指定子で説明した[宣言と定義](declarations-and-definitions-cpp.md)型やストレージ クラスなどのプロパティを伝達します。 このセクションで説明した修飾子[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)、宣言子を変更します)。次の図は、`MyFunction` の宣言全体と宣言の構成要素を示します。  
@@ -172,13 +172,11 @@ int a, *b, c[5], **d, &e=a;
   - ポインター演算子の宣言子   
   - (宣言子)  
 
-  
 - *ポインター演算子*の 1 つです。  
   
   - \* [cv 修飾子]  
   - (& a) [cv 修飾子]:: 入れ子になった名前子\*[cv 修飾子]  
 
-  
  宣言子は宣言子を含んでもよいため、上記の規則を使用して、ポインターの配列、関数ポインターの配列を返す関数など、さらに複雑な派生型を構築することもできます。  構築の各ステップを実行するには、まず、基本データ型を表す識別子を作成し、前の式を `declarator` として上記の構文規則を適用します。  構文規則を適用する順序は、式を日本語で説明するときと同じ順序にする必要があります。  適用する場合、*ポインター演算子*する場合は、配列または関数を次の表の最後の行へのポインター、配列または関数の式の構文規則はかっこを使用します。  
   
  次の例は、「int へのポインターを 10 個含む配列へのポインター」の構造を示します。  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53a05467a876a8b305aba64e49e0763cf5690a56
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 52d1727018fd2ad214e031229945daa4d843f115
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940886"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403064"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
@@ -30,7 +30,6 @@ ms.locfileid: "37940886"
 コンス トラクターは、メンバー初期化リストを受け取る必要に応じてことができます。 これは、コンス トラクターの本体で値を割り当てるよりも、クラス メンバーを初期化するより効率的な方法です。 次の例では、クラス`Box`3 つのコンス トラクターはオーバー ロードします。 最後の 2 つは、メンバー初期化リストを使用します。
 
 ```cpp
-
 class Box {
 public:
     // Default constructor
@@ -55,13 +54,11 @@ private:
     int m_length{ 0 };
     int m_height{ 0 };
 };
-
 ```
 
 クラスのインスタンスを宣言するときに、オーバー ロードの解決の規則に基づいてどのコンス トラクターを呼び出す、コンパイラが選択されます。
 
 ```cpp
-
 int main()
 {
     Box b; // Calls Box()
@@ -73,7 +70,6 @@ int main()
     // Using function-style notation:
     Box b4(2, 4, 6); // Calls Box(int, int, int)
 }
-
 ```
 
 - としてコンス トラクターを宣言することがあります**インライン**、[明示的な](#explicit_constructors)、**フレンド**または[constexpr](#constexpr_constructors)します。
@@ -87,7 +83,6 @@ int main()
 メンバー初期化子リストを使用するは、直接のメンバーを初期化するので、コンス トラクターの本体の値より優先されます。 次の例を示しています、メンバー初期化子リストはすべての**identifier(argument)** コロンの後の式。
 
 ```cpp
-  
     Box(int width, int length, int height)
         : m_width(width), m_length(length), m_height(height)
     {}
@@ -133,7 +128,6 @@ int main() {
     Box box1; // Invoke compiler-generated constructor
     cout << "box1.Volume: " << box1.Volume() << endl; // Outputs 0
 }
-
 ```
 
 暗黙の既定のコンス トラクターに依存する場合は、前の例で示すように、クラス定義内のメンバーを初期化することを確認します。 これらの初期化子のないメンバーが初期化されたできなくなるし、Volume() 呼び出しガベージ値が生成されます。 一般は、暗黙の既定のコンス トラクターに依存しない場合でも、この方法でメンバーを初期化することをお勧めします。
@@ -141,7 +135,6 @@ int main() {
 コンパイラがその定義によって暗黙の既定のコンス トラクターを生成するように[削除](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
-
     // Default constructor
     Box() = delete;
 
@@ -180,14 +173,12 @@ int main(){
     Box box2{ 2, 3, 4 };
     Box box3; // C2512: no appropriate default constructor available
 }
-
 ```
 
 クラスに既定のコンストラクターがない場合、そのクラスのオブジェクトの配列は、角かっこ構文を使用して構築することはできません。 たとえば、前に示したコード ブロックでは、Boxes の配列は次のように宣言することはできません。
 
 ```cpp
 Box boxes[3]; // C2512: no appropriate default constructor available
-
 ```
 
 ただし、一連の初期化子リストをボックス オブジェクトの配列を初期化するために使用できます。
@@ -205,7 +196,6 @@ A*コピー コンス トラクター*同じ型のオブジェクトからメン
 コピー コンス トラクターは、これらの署名のいずれかのがあります。
 
 ```cpp
-
     Box(Box& other); // Avoid if possible--allows modification of other.
     Box(const Box& other);
     Box(volatile Box& other);
@@ -240,7 +230,6 @@ Box(Box&& other);
 #include <string>
 #include <algorithm>
 using namespace std;
-
 
 class Box {
 public:
@@ -298,8 +287,6 @@ int main()
     cin >> ch; // keep window open
     return 0;
 }
-
-
 ```
 
 クラスは、移動コンス トラクターを定義していない場合、コンパイラは、ユーザーに宣言されたコピー コンス トラクター、コピー代入演算子、移動代入演算子またはデストラクターが存在しない場合、暗黙的なものを生成します。 明示的または暗黙的な移動コンス トラクターが定義されていない場合、移動コンス トラクターを使用して、それ以外の場合は操作はコピー コンス トラクターを代わりに使用します。 クラスは、移動コンス トラクターまたは移動代入演算子を宣言する場合、暗黙的に宣言されたコピー コンス トラクターは、削除済みとして定義されます。
@@ -338,7 +325,6 @@ public:
 - すべての非静的データ メンバーと基本クラスのサブオブジェクトが初期化されています。
 - クラスは、バリアント型のメンバーの和集合 (a) または (b) が無名共用体、共用体のメンバーの 1 つだけ初期化されます。
 - constexpr コンス トラクターがあるクラス型のすべての非静的データ メンバーとすべての基底クラスのサブ オブジェクト
-
 
 ## <a name="init_list_constructors"></a> 初期化子リスト コンス トラクター
 
@@ -385,13 +371,11 @@ private:
 }
 //elsewhere...
     ShippingOrder so(42, 10.8);
-
 ```
 
 このような変換が便利な場合もありますが、微妙でありながら重大なコードのエラーにつながることが多くあります。 一般的な規則として使用する必要があります、**明示的な**キーワードでは、このような暗黙的な型変換を防ぐために、コンス トラクター (およびユーザー定義演算子)。
 
 ```cpp
-
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
@@ -412,7 +396,6 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 次の例に、基底クラスとメンバーのコンストラクターが派生クラスのコンストラクターで呼び出される順序を示します。 まず、基底コンストラクターが呼び出され、基底クラスのメンバーがクラス宣言内の出現順に初期化されて、その後に派生コンストラクターが呼び出されます。
 
 ```cpp
-
 #include <iostream>
 
 using namespace std;
@@ -450,12 +433,11 @@ private:
 int main() {
     DerivedContainer dc;
 }
-
 ```
 
 出力を次に示します。
 
-```output
+```Output
 Contained1 ctor
 Contained2 ctor
 BaseContainer ctor
@@ -463,7 +445,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-派生クラスのコンストラクターは常に、基底クラスのコンストラクターを呼び出します。それにより、完全に構築された基底クラスに依存して、追加の処理を実行できるようになります。 基底クラスのコンストラクターは派生の順序で呼び出されます。たとえば、ClassA が ClassB から派生され、ClassB が ClassC から派生されている場合、まず ClassC のコンストラクター、次に ClassB のコンストラクター、最後に ClassA のコンストラクターが呼び出されます。
+派生クラスのコンストラクターは常に、基底クラスのコンストラクターを呼び出します。それにより、完全に構築された基底クラスに依存して、追加の処理を実行できるようになります。 基本クラスのコンス トラクターが派生の順序で呼び出されます: たとえば場合、`ClassA`から派生`ClassB`から派生`ClassC`、`ClassC`コンス トラクターが最初に、呼び出されます、`ClassB`コンス トラクター、`ClassA`コンス トラクター。
 
 基底クラスに既定のコンストラクターがない場合は、派生クラスのコンストラクターで基底クラスのコンストラクターのパラメーターを指定する必要があります。
 
@@ -537,18 +519,15 @@ public:
 int main() {
     DerivedClass dc;
 }
-
 ```
 
 予想される出力を次に示します。
 
-```output
-
+```Output
 BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-
 ```
 
 ## <a name="virtual_functions_in_constructors"></a> コンス トラクターの仮想関数
@@ -587,7 +566,7 @@ int main() {
 
 出力を次に示します。
 
-```output
+```Output
 BaseClass print_it
 Derived Class print_it
 ```
@@ -666,7 +645,6 @@ Derived d1(5) calls: Base(int)
 Derived d1('c') calls: Base(char)
 Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
-
 ```
 
 using 宣言を使用すると、派生クラス内のコンストラクターとシグネチャが同じであるものを除き、基底クラスのすべてのコンストラクターがスコープ内に取りこまれます。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。
@@ -679,7 +657,6 @@ class Derived : T {
     using T::T;   // declare the constructors from T
     // ...
 };
-
 ```
 
 派生クラスは、複数の基底クラスに同じシグネチャを持つコンストラクターがある場合、複数の基底クラスからは継承できません。

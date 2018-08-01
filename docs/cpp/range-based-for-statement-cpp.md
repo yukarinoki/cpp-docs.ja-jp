@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1284e4f6e096ab8021c597b841a8e983673561bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 0edf350289d04824dc2e06e4e11144a4f3141770
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943594"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407034"
 ---
 # <a name="range-based-for-statement-c"></a>範囲ベースの for ステートメント (C++)
 `statement` 内の各要素に対して `expression` を繰り返し順番に実行します。  
@@ -25,7 +25,6 @@ ms.locfileid: "37943594"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 for ( for-range-declaration : expression )  
    statement   
 ```  
@@ -90,7 +89,6 @@ int main()
     cout << endl;  
     cout << "end of vector test" << endl;  
 }  
-  
 ```  
   
  出力を次に示します。  

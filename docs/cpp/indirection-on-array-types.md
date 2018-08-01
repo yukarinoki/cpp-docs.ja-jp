@@ -1,5 +1,5 @@
 ---
-title: 配列型の間接参照 |Microsoft ドキュメント
+title: 配列型の間接参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ae5f97d0136ecf86506d03a63b9bb92aa28daa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3593e218418d946cee471c501db5d5746fbe9a43
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418840"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406160"
 ---
 # <a name="indirection-on-array-types"></a>配列型の間接参照
-間接演算子の使用 (**\***) で、 *n*の次元の配列型を生成、 *n*-1 次元配列。 場合*n* 1 の場合は、スカラー (または配列の要素) が返されます。  
+間接演算子の使用 (**\***) で、 *n*-次元の配列型の生成、 *n*-1 次元配列。 場合*n*は 1 です。 スカラー (または配列の要素) が返されます。  
   
 ## <a name="see-also"></a>関連項目  
  [配列](../cpp/arrays-cpp.md)

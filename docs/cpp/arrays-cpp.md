@@ -16,18 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60c7baaaf20158c29c34aea364e70c0d040a42e3
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: ce914f47f62a742b24830d848fd9d82b91796f31
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943547"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408053"
 ---
 # <a name="arrays-c"></a>配列 (C++)
 配列は同様なオブジェクトのコレクションです。 配列の最も簡単な例は、次のシーケンスで宣言できるベクターです。  
   
 ```  
-  
 decl-specifier identifier [ constant-expression ]  
 decl-specifier identifier []  
 decl-specifier identifer [][ constant-expression] . . .  
@@ -174,7 +173,4 @@ The minimum cost to Market 3 is: 17.29
 ```  
   
 ## <a name="comments"></a>コメント  
- `FindMinToMkt` 関数は、新しいファクトリを追加してもコード変更の必要はなく、再コンパイルだけすればいいように書かれています。  
-  
-## <a name="see-also"></a>関連項目  
- 
+ `FindMinToMkt` 関数は、新しいファクトリを追加してもコード変更の必要はなく、再コンパイルだけすればいいように書かれています。 

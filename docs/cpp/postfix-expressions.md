@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6299249b477b568579063f7ee61060514c3028bd
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a951c45da8c5c6b672540c03bc1d97b5d54d9338
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943933"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39403142"
 ---
 # <a name="postfix-expressions"></a>後置式
 後置式は、1 次式、または後置演算子が 1 次式に続く式で構成されます。 次の表は、後置演算子の一覧です。  
@@ -34,13 +34,12 @@ ms.locfileid: "37943933"
 |[関数呼び出し演算子](../cpp/function-call-operator-parens.md)|**( )**|  
 |[明示的な型変換演算子](../cpp/explicit-type-conversion-operator-parens.md)|*型名* **)**|  
 |[メンバー アクセス演算子](../cpp/member-access-operators-dot-and.md)|**.** または **->**|  
-|[後置インクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
+|[後置インクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|  
 |[後置デクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
  次の構文は、可能な後置式について説明しています。  
   
 ```  
-  
 primary-expression   
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )  
 ```  
@@ -51,7 +50,7 @@ postfix-expression[expression]postfix-expression(expression-list)simple-type-nam
 func(1)->GetValue()++  
 ```  
   
- 上の式では、func は 1 次式で、func(1) は関数後置式です。func(1)->GetData は、クラスのメンバーを指定する後置式です。func(1)->GetData() は、もう 1 つの関数後置式です。式全体は GetData の戻り値をインクリメントする後置式です。  全体として式の意味は、「引数として 1 を渡す関数を呼び出し、戻り値としてクラスへのポインターを取得します。  次に、そのクラスで GetValue() を呼び出し、返される値をインクリメントします。  
+ 上記の式で`func`基本の式は、`func(1)`は関数後置式では、 `func(1)->GetData` 、クラスのメンバーを指定する後置式は、`func(1)->GetData()`は別の関数後置式全体式は、GetData の戻り値をインクリメントする後置式です。  全体として式の意味は、「引数として 1 を渡す関数を呼び出し、戻り値としてクラスへのポインターを取得します。  呼び出して`GetValue()`、そのクラスで返される値をインクリメントします。  
   
  前の式は、代入式です。つまり、これらの式の結果が右辺値である必要があります。  
   
@@ -191,7 +190,7 @@ void print( const char *string, const char *terminator )
 }  
 ```  
   
- 上のプログラムでは 2 個の引数を受け取る関数、`print` を宣言します。 ただし、2 番目の引数 `terminator` には既定値 `"\n"` が指定されます。 `main`、最初の 2 つの呼び出し`print`印刷文字列の末尾に新しい行を指定する既定の 2 番目の引数を許可します。 3 番目の呼び出しでは、2 番目の引数の明示的な値が指定されます。 このプログラムによる出力は次のとおりです。  
+ 上のプログラムでは 2 個の引数を受け取る関数、`print` を宣言します。 ただし、2 番目の引数*ターミネータ*、既定の値を持つ`"\n"`します。 `main`、最初の 2 つの呼び出し`print`印刷文字列の末尾に新しい行を指定する既定の 2 番目の引数を許可します。 3 番目の呼び出しでは、2 番目の引数の明示的な値が指定されます。 このプログラムによる出力は次のとおりです。  
   
 ```Output 
 hello,  

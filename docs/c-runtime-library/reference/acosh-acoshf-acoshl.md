@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc5ec18eec5be6ee0cc696768be65cd62b74bdc7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392784"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404753"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -66,21 +66,21 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*x*  
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Acosh**関数の逆ハイパーボリック コサイン (アーク ハイパーボリック コサイン) を返す*x*です。 これらの関数は有効では、ドメインにおける*x* ≥ 1 です。 場合*x*が 1 より小さい**errno**に設定されている**EDOM**され、結果は簡易な NaN です。 場合*x*簡易な NaN、不定値、または無限大の場合は、同じ値が返されます。
+**Acosh**関数の逆ハイパーボリック コサイン (アーク ハイパーボリック コサイン) を返す*x*します。 ドメイン上でこれらの関数は有効な*x* ≥ 1。 場合*x*が 1 より小さい、`errno`に設定されている`EDOM`され、結果は簡易な NaN です。 場合*x*は簡易な NaN、不定値、または無限大の場合、同じ値が返されます。
 
-|入力|SEH 例外|**_matherr**例外|
+|入力|SEH 例外|`_matherr` 例外|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|none|none|
 |*x* < 1|none|none|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ を使用する場合は、オーバー ロードを呼び出すことができます**acosh**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **acosh**は**二重**です。
+C++ を使用する場合のオーバー ロードを呼び出すことができます**acosh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**acosh**は**二重**します。
 
 ## <a name="requirements"></a>要件
 
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>
-[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)<br/>
-[tanh、tanhf、tanhl](tanh-tanhf-tanhl.md)<br/>
+[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)  
+[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)  
+[atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)  
+[cosh、coshf、coshl](cosh-coshf-coshl.md)  
+[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)  
+[tanh、tanhf、tanhl](tanh-tanhf-tanhl.md)  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6021de0e012797b811fa032547f2b95142176cc
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: b1a878fe1c18889c1abfef995786ffcc9a267981
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943552"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39404055"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置インクリメント演算子と後置デクリメント演算子: ++ および --
 ## <a name="syntax"></a>構文  
@@ -46,7 +46,7 @@ postfix-expression --
 i++;  
 ```  
   
- 後置インクリメント演算子 (`++`) を適用する効果は、オペランドの値が適切な型の 1 単位分、増加することです。 同様に、後置デクリメント演算子を適用する効果 (**--**) で、適切な型の 1 つの単位、オペランドの値が減少したことができます。  
+ 後置のインクリメント演算子を適用する効果 (**++**)、オペランドの値が、適切な型の 1 つの単位で増加したことができます。 同様に、後置デクリメント演算子を適用する効果 (**--**) で、適切な型の 1 つの単位、オペランドの値が減少したことができます。  
   
  後置のインクリメントを確認することが重要デクリメント式は、式の値に評価または*より前のバージョン*各演算子のアプリケーション。 インクリメントまたはデクリメント操作が行われる*後*オペランドが評価されます。 この問題は、後置インクリメントまたはデクリメント演算が、より大きな式のコンテキストで行われる場合にのみ発生します。  
   

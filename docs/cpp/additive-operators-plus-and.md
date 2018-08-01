@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89fc0f122f0859e6fc891ddfccd4bc99e7034bfe
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 313e4602c06c1baf090ed7a66c51b308a3f6f586
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943941"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402751"
 ---
 # <a name="additive-operators--and--"></a>加法演算子: + および -
 ## <a name="syntax"></a>構文  
@@ -115,7 +115,7 @@ for( int i = 0; i < 10; ++i )
 >  `pIntArray = pIntArray + 1` のような形式のコードは、C++ プログラムではあまり見られません。インクリメントを行う場合は、`pIntArray++` または `pIntArray += 1` のような形式を使用することをお勧めします。  
   
 ## <a name="pointer-subtraction"></a>ポインターの減算  
- 両方のオペランドがポインターの場合、減算の結果は、オペランド間の (配列要素内の) 差になります。 減算式には、符号付き整数型の結果が得られます**ptrdiff_t** (標準インクルード ファイルで定義されている\<stddef.h >)。  
+ 両方のオペランドがポインターの場合、減算の結果は、オペランド間の (配列要素内の) 差になります。 減算式には、符号付き整数型の結果が得られます`ptrdiff_t`(標準インクルード ファイルで定義されている\<stddef.h >)。  
   
  それが 2 番目のオペランドである限り、オペランドの 1 つは整数型にできます。 減算の結果は、元のポインターと同じ型です。 減算の値はへのポインター、(*n* - *は*) 番目の配列要素、 *n*要素を指しています、元のポインターと*は*2 番目のオペランドの整数値です。  
   

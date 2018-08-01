@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 610a46c7906cda3c44cdf1f0aaf652552efb9bcb
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 1ac866487c25ee4ce75abbebe9b9f9c2a5e97828
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943242"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405945"
 ---
 # <a name="ifexists-statement"></a>__if_exists ステートメント
 **_ _If_exists**ステートメントは、指定した識別子が存在するかどうかをテストします。 ID が存在する場合、指定されたステートメント ブロックが実行されます。  
@@ -40,8 +40,8 @@ statements
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|`identifier`|存在をテストしたい識別子。|  
-|`statements`|1 つ以上の場合に実行されるステートメント`identifier`存在します。|  
+|*identifier*|存在をテストしたい識別子。|  
+|*ステートメント*|1 つ以上の場合に実行されるステートメント*識別子*存在します。|  
   
 ## <a name="remarks"></a>Remarks  
   

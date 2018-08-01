@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd89d0c8657df4bec2da5bf021c8964ad418cd9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51220aaf47056f63d37471c61857f8a128a67179
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393369"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402449"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,17 +54,17 @@ void _aligned_free (
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*に返されたメモリ ブロックへのポインター、 **_aligned_malloc**または **_aligned_offset_malloc**関数。
+*_expand*に返されたメモリ ブロックへのポインター、`_aligned_malloc`または`_aligned_offset_malloc`関数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_aligned_free**がマークされている`__declspec(noalias)`関数がグローバル変数を変更せず保証されることを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
+**_aligned_free**がマークされている`__declspec(noalias)`、グローバル変数を変更することがなく、関数が保証されることを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
 
-この関数は、他の _aligned CRT 関数とは異なり、パラメーターを検証しません。 場合 *_expand*は、 **NULL**ポインター、この関数がありませんアクションを実行するだけです。 変更されません。 **errno**し、無効なパラメーター ハンドラーを引き起こすことはありません。 以前にメモリのブロックを割り当てるために _aligned 関数を使用しなかったために関数でエラーが発生する場合、または何らかの予期しない災害によってメモリの不整合が発生する場合、関数は [_RPT、_RPTF、_RPTW、_RPTFW のマクロ](rpt-rptf-rptw-rptfw-macros.md)からデバッグ レポートを生成します。
+この関数は、他の _aligned CRT 関数とは異なり、パラメーターを検証しません。 場合 *_expand* NULL ポインターでは、この関数がないアクションを実行だけです。 この関数は `errno` を変更せず、無効なパラメーター ハンドラーを呼び出しません。 以前にメモリのブロックを割り当てるために _aligned 関数を使用しなかったために関数でエラーが発生する場合、または何らかの予期しない災害によってメモリの不整合が発生する場合、関数は [_RPT、_RPTF、_RPTW、_RPTFW のマクロ](rpt-rptf-rptw-rptfw-macros.md)からデバッグ レポートを生成します。
 
 ## <a name="requirements"></a>要件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_aligned_free**|\<malloc.h>|
 
@@ -74,4 +74,4 @@ void _aligned_free (
 
 ## <a name="see-also"></a>関連項目
 
-[データの整列](../../c-runtime-library/data-alignment.md)<br/>
+[データの整列](../../c-runtime-library/data-alignment.md)  

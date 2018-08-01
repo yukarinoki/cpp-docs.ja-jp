@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b37df4146b23404463ec869e00a8cf5298b7acf5
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 45dc0dfe85e7693cdea9c6e469ff347d75c13d57
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941006"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402947"
 ---
 # <a name="ellipses-and-variadic-templates"></a>楕円および可変値引数テンプレート
 ここでは、C++ の可変個引数テンプレートを使用して省略記号 (`...`) を指定する方法を示します。 省略記号は、C および C++ で多くの用途にしました。 たとえば、関数の可変個引数リストなどです。 C ランタイム ライブラリの `printf()` 関数は、最も一般的な例の 1 つです。  
@@ -47,7 +47,7 @@ template<typename ... Arguments> class classname;
   
  この記事では最初の例に示している規約を使用する (省略記号を `typename` に接続する) ことに注目してください。  
   
- 前に示した例で、`Arguments` はパラメーター パックです。 `classname` クラスには、次の例のように、可変個の引数を指定できます。  
+ 上記の例で*引数*はパラメーター パックです。 `classname` クラスには、次の例のように、可変個の引数を指定できます。  
   
 ```cpp  
 template<typename... Arguments> class vtclass;  
@@ -56,14 +56,12 @@ vtclass< > vtinstance1;
 vtclass<int> vtinstance2;  
 vtclass<float, bool> vtinstance3;  
 vtclass<long, std::vector<int>, std::string> vtinstance4;  
-  
 ```  
   
  可変個引数テンプレート クラス定義を使用して、1 つ以上のパラメーターを要求することもできます。  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
-  
 ```  
   
  基本的な例を次に示します*可変個引数テンプレート関数*構文。  
@@ -72,7 +70,7 @@ template <typename First, typename... Rest> class classname;
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- `Arguments`を使用するは、次のセクションで示すようにパラメーター パックを展開し、**可変個引数テンプレートを理解する**します。  
+ *引数*を使用するは、次のセクションで示すようにパラメーター パックを展開し、**可変個引数テンプレートを理解する**します。  
   
  可変個引数テンプレート関数の構文は、他の形式を使用することもできます。いくつかの例を次に示します。  
   
@@ -86,14 +84,12 @@ template <typename... Arguments> returntype functionname(Arguments*... args);
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
-  
 ```  
   
  可変個引数テンプレート クラス定義を使用して、1 つ以上のパラメーターを要求する関数を作成することができます。  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
-  
 ```  
   
  可変個引数テンプレートでは、`sizeof...()` 演算子が使用されます (従来の `sizeof()` 演算子とは無関係です)。  
@@ -108,7 +104,6 @@ void tfunc(const Arguments&... args)
   
     helper_func(xobj, args...);  
 }  
-  
 ```  
   
 ## <a name="more-about-ellipsis-placement"></a>省略記号の配置の詳細  
@@ -160,13 +155,11 @@ int main()
     print(100, 200, 300);  
     print("first", 2, "third", 3.14159);  
 }  
-  
 ```  
   
 ## <a name="output"></a>出力  
   
-```  
-  
+```Output  
 1  
 10, 20  
 100, 200, 300  
@@ -175,4 +168,3 @@ first, 2, third, 3.14159
   
 > [!NOTE]
 >  可変個引数テンプレート関数を組み込むほとんどの実装を使用して、何らかの形式の再帰呼び出しは、従来の再帰が若干異なる。  従来の再帰には、同じシグネチャを使用して自身を呼び出す関数が含まれます。 (オーバーロードまたはテンプレート宣言できますが、毎回、同じシグネチャが選択されます)。可変個引数テンプレートの再帰では、異なる数の引数 (ほとんどの場合、徐々に減少) を使用して可変個引数関数テンプレートを呼び出します。したがって、毎回、異なるシグネチャを押すことになります。 "基本ケース" が必要なのは同じですが、再帰の性質は異なります。  
-  

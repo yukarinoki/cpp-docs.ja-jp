@@ -1,5 +1,5 @@
 ---
-title: C++ ステートメントの概要 |Microsoft ドキュメント
+title: C++ ステートメントの概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2858807816178115dd34c05d6c88c3dd6fecdee3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 426709857447d972365aa034059bcd34305d6d40
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421748"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402511"
 ---
 # <a name="overview-of-c-statements"></a>C++ ステートメントの概要
 C++ ステートメントは、式ステートメント、選択ステートメント、繰り返しステートメント、またはジャンプ ステートメントによって特にその順序を変更した場合を除き、順次実行されます。  
@@ -27,7 +27,6 @@ C++ ステートメントは、式ステートメント、選択ステートメ�
  ステートメントは、次の型で構成できます。  
   
 ```  
-  
 labeled-statement  
 expression-statement  
 compound-statement  
@@ -36,10 +35,9 @@ iteration-statement
 jump-statement  
 declaration-statement  
 try-throw-catch  
-  
 ```  
   
- ほとんどの場合、C++ ステートメントの構文は ANSI C のものと同じ2 つの主な違いは C では、宣言は許可されて; ブロックの開始時のみC++ の追加、*宣言ステートメント*、これは実質的にこの制限を削除します。 これによって、プログラム内で、事前計算される初期値を計算できる時点で変数を導入できます。  
+ ほとんどの場合、C++ ステートメントの構文は ANSI C の場合と同じ2 つの主な違い C では、宣言は許可されて; ブロックの開始時のみC++ の追加、*宣言ステートメント*、効果的にこの制限を削除します。 これによって、プログラム内で、事前計算される初期値を計算できる時点で変数を導入できます。  
   
  また、ブロック内部で変数を宣言しても、これらの変数のスコープと有効期間を正確に制御できます。  
   

@@ -1,5 +1,5 @@
 ---
-title: コンパイラ COM グローバル関数 |Microsoft ドキュメント
+title: コンパイラ COM グローバル関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4116d82ef38d7aaab29fe682e0881ac2e2ff5903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa138b045fcb5851a65b68d898b99a8cab269f6e
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412190"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402534"
 ---
 # <a name="compiler-com-global-functions"></a>コンパイラ COM のグローバル関数
 **Microsoft 固有の仕様**  
@@ -29,10 +29,10 @@ ms.locfileid: "32412190"
   
 |関数|説明|  
 |--------------|-----------------|  
-|[_com_raise_error](../cpp/com-raise-error.md)|スロー、 [_com_error](../cpp/com-error-class.md)エラーに応答します。|  
+|[_com_raise_error](../cpp/com-raise-error.md)|スローされます、 [_com_error](../cpp/com-error-class.md)エラーに応答します。|  
 |[_set_com_error_handler](../cpp/set-com-error-handler.md)|COM のエラー処理に使用する既定の関数を置き換えます。|  
-|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|変換、`BSTR`値を**char \*** です。|  
-|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|変換、 **char \*** 値を`BSTR`です。|  
+|[ConvertBSTRToString](../cpp/convertbstrtostring.md)|変換を`BSTR`値を`char *`します。|  
+|[ConvertStringToBSTR](../cpp/convertstringtobstr.md)|変換を`char *`値を`BSTR`します。|  
   
 **Microsoft 固有の仕様はここまで**  
   

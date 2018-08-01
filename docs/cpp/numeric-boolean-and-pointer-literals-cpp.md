@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 178c75efa84ebc7d27c19feb81e81314dc4c5bd7
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a445e9c435f9e077899a2a473dc5862f98a36bf4
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943583"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405520"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>数値、ブール値、およびポインターのリテラル (C++)
 リテラルとは、値を直接に表すプログラム要素です。 ここでは、整数型、浮動小数点型、ブール値型、およびポインター型のリテラルについて説明します。 文字列と文字リテラルについては、次を参照してください。[文字列と文字リテラル (C++)](../cpp/string-and-character-literals-cpp.md)します。 これらのカテゴリのいずれかに基づく独自のリテラルを定義することもできます。詳細については、次を参照してください[ユーザー定義リテラル (C++)。](../cpp/user-defined-literals-cpp.md)  
@@ -33,7 +33,6 @@ const int answer = 42; // integer literal
 double d = sin(108.87);     //floating point literal passed to sin function  
 bool b = true;              // boolean literal  
 MyClass* mc = nullptr;      // pointer literal  
-  
 ```  
   
  リテラルの解釈方法やリテラルに与える特定の型を、コンパイラに指示することが重要な場合があります。 リテラルにプレフィックスまたはサフィックスを追加することによってこれを行います。 たとえば、プレフィックス 0x は、それに続く数値を 16 進数値として解釈するようコンパイラに指示します (0x35 など)。 ULL サフィックスとして、値を処理するようにコンパイラに指示する**unsigned long long 型**5894345ULL のように、型。 各リテラル型のプレフィックスおよびサフィックスの完全な一覧については、次のセクションを参照してください。  
@@ -129,7 +128,6 @@ void func( long double );
  `0B` または `0b` をプレフィックスとして使用することにより、その後に一連の 1 と 0 が続く、バイナリ文字列を指定することができます。  
   
 ```cpp 
-  
 auto x = 0B001101 ; // int  
 auto y = 0b000001 ; // int  
 ```  
@@ -140,7 +138,6 @@ auto y = 0b000001 ; // int
 ```cpp 
 if (num < 100)  
     return "Success";  
-  
 ```  
   
  前の例では、"MAXIMUM_ERROR_THRESHOLD"など、明確な意味を伝達する名前付き定数を使用する方がよい場合があります。 戻り値の "Success" がエンドユーザーに表示される場合は、ファイルの 1 つの場所に格納でき他の言語にローカライズできる名前付き文字列定数を使用する方がよい場合があります。 名前付き定数を使用すると、他のユーザーにとってもコードの意図が理解しやすくなります。  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef6bf658cd290e23be59eb7d26a6b0d353b52c6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941773"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405231"
 ---
 # <a name="identifiers-c"></a>識別子 (C++)
 識別子は、次のいずれかを示すために使用される文字のシーケンスです。  
@@ -81,7 +81,7 @@ N O P Q R S T U V W X Y Z
   
  ドル記号 `$` は、Visual C++ の有効な識別子文字です。 Visual C++ では、許可される範囲のユニバーサル文字名で表される実際の文字を、識別子内で使用することもできます。 これらの文字を使用するには、それらを含むファイル エンコーディング コードページを使用してファイルを保存する必要があります。  この例は、拡張文字とユニバーサル文字名の両方をコード内で区別せずに使用する方法を示しています。  
   
-```  
+```cpp  
 // extended_identifier.cpp  
 // In Visual Studio, use File, Advanced Save Options to set  
 // the file encoding to Unicode codepage 1200  

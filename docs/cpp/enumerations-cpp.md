@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75344e8fef933b493177f812b06edd3c187046f6
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 48f9328ef6a862ffc8888b99b16764978b0005c2
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943925"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406254"
 ---
 # <a name="enumerations-c"></a>列挙型 [C++]
 列挙体は、列挙子と呼ばれる一連の名前付き整数定数で構成されるユーザー定義型です。  
@@ -98,12 +98,11 @@ namespace CardGame_NonScoped
   
 ```cpp  
 enum Suit { Diamonds = 1, Hearts, Clubs, Spades };  
-  
 ```  
   
  `Diamonds` 列挙子に値 `1` を割り当てます。 明示的な値を指定しない場合、後続の列挙子は前の列挙子の値に 1 を加えた数値が指定されます。 前の例では、`Hearts` の値が 2、`Clubs` の値が 3 などのようになります。  
   
- すべての列挙子は定数として扱われ、`enum` が定義されているスコープ内で (スコープを持たない列挙型の場合)、または列挙型自体のスコープ内で (スコープを持つ列挙型の場合)、列挙子の名前は一意である必要があります。 列挙子の名前に対応する値は一意である必要はありません。 たとえば、スコープを持たない列挙型 `Suit` が次のように宣言されているとします。  
+ すべての列挙子は定数として扱われ、スコープ内で一意の名前を指定する必要があります、**列挙型**(スコープを持たない列挙型) に対して定義されて内、または、 **enum**自体 (のスコープを持つ列挙型)。 列挙子の名前に対応する値は一意である必要はありません。 たとえば、スコープを持たない列挙型 `Suit` が次のように宣言されているとします。  
   
 ```cpp  
 enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };  
@@ -119,7 +118,6 @@ enum Suit { Diamonds = 5, Hearts, Clubs = 4, Spades };
 int account_num = 135692;  
 Suit hand;  
 hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'  
-  
 ```  
   
  変換には、キャストが必要、 **int**スコープを持つまたは持たない列挙子にします。 ただし、スコープを持たない列挙子はキャストなしで整数値に上位変換できます。  
@@ -147,7 +145,6 @@ namespace ScopedEnumConversions
         account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'  
         account_num = static_cast<int>(Suit::Hearts); // OK  
 }  
-  
 ```  
   
  `hand = account_num;` 行では、前に示したように、スコープを持たない列挙型に関連するエラーが発生することに注意してください。 これは、明示的にキャストすることでエラーを回避できます。 ただし、スコープを持つ列挙型を使用しても、次のステートメント、`account_num = Suit::Hearts;` での変換の試みは、明示的なキャストなしではエラーが発生します。 

@@ -1,5 +1,5 @@
 ---
-title: 関数テンプレート呼び出しのオーバー ロード解決 |Microsoft ドキュメント
+title: 関数テンプレート呼び出しのオーバー ロード解決 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d4a0e2867c5057eb5808c4d39687961eabba6dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62041f78af18d6ac2f521fea763a11bb2859fbf5
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32420029"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39401926"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>関数テンプレート呼び出しのオーバーロード解決
-関数テンプレートは同じ名前の非テンプレート関数をオーバーロードできます。 このシナリオでは、一意の特殊化により関数テンプレートをインスタンス化するため、関数呼び出しは、最初にテンプレート引数の推論を使用して解決されます。 テンプレート引数の推論が失敗した場合、他の関数オーバーロードが呼び出しを解決すると見なされます。 これらのオーバーロード (候補の集合とも呼ばれます) には、非テンプレート関数、およびその他のインスタンス化された関数テンプレートが含まれています。 テンプレート引数の推論に成功すると、オーバーロード解決の規則に従って最適な一致項目を決定するために、生成された関数は他の関数と比較されます。 詳細については、次を参照してください。[関数のオーバー ロード](function-overloading.md)です。  
+関数テンプレートは同じ名前の非テンプレート関数をオーバーロードできます。 このシナリオでは、一意の特殊化により関数テンプレートをインスタンス化するため、関数呼び出しは、最初にテンプレート引数の推論を使用して解決されます。 テンプレート引数の推論が失敗した場合、他の関数オーバーロードが呼び出しを解決すると見なされます。 これらのオーバーロード (候補の集合とも呼ばれます) には、非テンプレート関数、およびその他のインスタンス化された関数テンプレートが含まれています。 テンプレート引数の推論に成功すると、オーバーロード解決の規則に従って最適な一致項目を決定するために、生成された関数は他の関数と比較されます。 詳細については、次を参照してください。[関数のオーバー ロード](function-overloading.md)します。  
   
 ## <a name="example"></a>例
 
@@ -90,7 +90,5 @@ void f(T1, T2)
 ```  
   
 ## <a name="see-also"></a>関連項目
-
  [名前解決](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
- 

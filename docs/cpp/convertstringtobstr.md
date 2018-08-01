@@ -16,28 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2683daf4fd1293d3fad043037165fa3cbc13de3c
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: c579437ef0d5bd786b7066756b8e0bac4fa59e4a
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943170"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408503"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Microsoft 固有の仕様**  
   
- 変換を**char \*** 値を`BSTR`します。  
+ 変換を`char *`値を`BSTR`します。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 BSTR __stdcall ConvertStringToBSTR(const char* pSrc)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
  *pSrc*  
- A **char \*** 変数。  
+ A`char *`変数。  
   
 ## <a name="example"></a>例  
   
@@ -67,7 +66,7 @@ BSTR text: Test
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<comutil.h >  
   
  **Lib:** comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)  

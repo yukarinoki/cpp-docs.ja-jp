@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c90db941f2eb760c4e3a36d15eca64a293bec
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 73c15cfb08bab96acf85bc517165926faced86ad
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955466"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39406192"
 ---
 # <a name="multiple-base-classes"></a>複数の基本クラス
 クラスは、1 つ以上の基底クラスから派生できます。 (クラスが 1 つ以上の基底クラスから派生した、) 多重継承モデルを使用して基底クラスが指定されて、*基本リスト*文法要素。 たとえば、`CollectionOfBook` および `Collection` から派生する `Book` のクラス宣言は指定できます。  
@@ -97,9 +97,9 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 > [!NOTE]
 >  仮想継承は、非仮想継承と比較してサイズに関して大きな利点があります。 ただし、余分な処理オーバーヘッドが生じる場合があります。  
   
- 派生クラスが仮想基底クラスから継承する仮想関数をオーバーライドする場合、および派生基底クラスのコンストラクターまたはデストラクターが仮想基底クラスへのポインターを使用してその関数を呼び出す場合、コンパイラは仮想基底クラスを含むクラスに追加の vtordisp 隠しフィールドを導入する場合があります。 /vd0 コンパイラ オプションは、隠された vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーの追加を抑制します。 /vd1 コンパイラ オプション (既定) は、これらを必要に応じて有効にします。 すべてのクラス コンストラクターとデストラクターが仮想的に仮想関数を呼び出すことが確実な場合にだけ、vtordisp をオフにしてください。  
+ 派生クラスが仮想基底クラスから継承する仮想関数をオーバーライドする場合、および派生基底クラスのコンストラクターまたはデストラクターが仮想基底クラスへのポインターを使用してその関数を呼び出す場合、コンパイラは仮想基底クラスを含むクラスに追加の vtordisp 隠しフィールドを導入する場合があります。 `/vd0`コンパイラ オプションは、隠し vtordisp コンストラクター/デストラクター ディスプレイスメント メンバーの追加を抑制します。 `/vd1`コンパイラ オプションで、既定では、依存関係が必要できます。 すべてのクラス コンストラクターとデストラクターが仮想的に仮想関数を呼び出すことが確実な場合にだけ、vtordisp をオフにしてください。  
   
- /vd コンパイラ オプションは、コンパイル モジュール全体に影響します。 使用して、 **vtordisp**しクラスによって単位で vtordisp フィールドを再度有効に抑制するプラグマ。  
+ `/vd`コンパイラ オプションがコンパイル モジュール全体に影響します。 使用して、`vtordisp`を抑制し、再度有効にするプラグマ`vtordisp`クラスによってごとにフィールド。  
   
 ```cpp 
 #pragma vtordisp( off )  

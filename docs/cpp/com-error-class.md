@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d59782b62ddfb51601505be6d12f01ce14cd4f1
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 60fc445d51cfa72a6c72984ff19b877d916ded53
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026635"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407762"
 ---
 # <a name="comerror-class"></a>_com_error クラス
 **Microsoft 固有の仕様**  
   
- `_com_error` オブジェクトは、タイプ ライブラリから生成されるヘッダー ファイル内のエラー処理ラッパー関数によって、またはいずれかの COM サポート クラスによって検出される例外条件を表します。 `_com_error` HRESULT エラー コードおよび関連クラスがカプセル化`IErrorInfo Interface`オブジェクト。  
+ A **_com_error**オブジェクトは、タイプ ライブラリから生成されたヘッダー ファイル内のエラー処理ラッパー関数によって、または COM サポート クラスのいずれかで検出された例外条件を表します。 **_Com_error** HRESULT エラー コードおよび関連クラスがカプセル化`IErrorInfo Interface`オブジェクト。  
   
 ### <a name="construction"></a>構築  
   
 |||  
 |-|-|  
-|[_com_error](../cpp/com-error-com-error.md)|`_com_error` オブジェクトを構築します。|  
+|[_com_error](../cpp/com-error-com-error.md)|構築、 **_com_error**オブジェクト。|  
   
 ### <a name="operators"></a>演算子  
   
 |||  
 |-|-|  
-|[演算子 =](../cpp/com-error-operator-equal.md)|既存の `_com_error` オブジェクトを別のオブジェクトに割り当てます。|  
+|[演算子 =](../cpp/com-error-operator-equal.md)|既存 **_com_error**を別のオブジェクト。|  
   
 ### <a name="extractor-functions"></a>抽出関数  
   
@@ -62,7 +62,7 @@ ms.locfileid: "39026635"
   
 |||  
 |-|-|  
-|[エラー メッセージ](../cpp/com-error-errormessage.md)|`_com_error` オブジェクトに格納された HRESULT の文字列メッセージを取得します。|  
+|[エラー メッセージ](../cpp/com-error-errormessage.md)|格納された HRESULT の文字列メッセージを取得、 **_com_error**オブジェクト。|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode と HRESULT のマッパー  
   
@@ -73,7 +73,7 @@ ms.locfileid: "39026635"
   
 **Microsoft 固有の仕様はここまで**  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<comdef.h >  
   
  `Lib:` comsuppw.lib または comsuppwd.lib (を参照してください[/Zc:wchar_t (wchar_t をネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)詳細)  

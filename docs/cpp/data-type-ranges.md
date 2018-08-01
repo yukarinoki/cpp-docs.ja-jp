@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93a399f922d79c073cc6471ebe702d8ef7fcd842
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: d55a2102299957a40cd9f742f91868ee2b5b849b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37940642"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407677"
 ---
 # <a name="data-type-ranges"></a>データ型の範囲
 Visual C++ の 32 ビットおよび 64 ビット コンパイラは、この記事の次の表に示す型を認識します。  
@@ -77,33 +77,33 @@ Visual C++ の 32 ビットおよび 64 ビット コンパイラは、この記
   
 |型の名前|バイト|その他の名前|値の範囲|  
 |---------------|-----------|-----------------|---------------------|  
-|int|4|signed|-2,147,483,648 ～ 2,147,483,647|  
-|unsigned int|4|unsigned|0 ～ 4,294,967,295|  
-|__int8|1|char|-128 ～ 127|  
-|unsigned __int8|1|unsigned char|0 ～ 255|  
-|__int16|2|short、short int、signed short int|-32,768 ～ 32,767|  
-|unsigned __int16|2|unsigned short、unsigned short int|0 ～ 65,535|  
-|__int32|4|signed、signed int、int|-2,147,483,648 ～ 2,147,483,647|  
-|unsigned __int32|4|unsigned、unsigned int|0 ～ 4,294,967,295|  
-|__int64|8|long long、signed long long|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|  
-|unsigned __int64|8|unsigned long long|0 ～ 18,446,744,073,709,551,615|  
-|bool|1|none|false または true|  
-|char|1|none|既定では、128 ~ 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|  
-|signed char|1|none|-128 ～ 127|  
-|unsigned char|1|none|0 ～ 255|  
-|short|2|short int、signed short int|-32,768 ～ 32,767|  
-|unsigned short|2|unsigned short int|0 ～ 65,535|  
-|long|4|long int、signed long int|-2,147,483,648 ～ 2,147,483,647|  
-|unsigned long|4|unsigned long int|0 ～ 4,294,967,295|  
-|long long|8|none (__int64 と同等ではない)|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|  
-|unsigned long long|8|none (unsigned __int64 と同等ではない)|0 ～ 18,446,744,073,709,551,615|  
-|enum|可変|none| |  
-|float|4|none|3.4E +/- 38 (7 桁)|  
-|double|8|none|1.7E +/- 308 (15 桁)|  
-|long double|double と同じ|none|double と同じ|  
-|wchar_t|2|__wchar_t|0 ～ 65,535|  
+|**int**|4|**signed**|-2,147,483,648 ～ 2,147,483,647|  
+|**unsigned int**|4|**unsigned**|0 ～ 4,294,967,295|  
+|**__int8**|1|**char**|-128 ～ 127|  
+|**符号なし _ _int8**|1|**unsigned char**|0 ～ 255|  
+|**__int16**|2|**短い**、 **short int**、**署名 short int**|-32,768 ～ 32,767|  
+|**符号なし _ _int16**|2|**unsigned short**、**符号なし short int**|0 ～ 65,535|  
+|**__int32**|4|**署名**、 **int を署名**、 **int**|-2,147,483,648 ～ 2,147,483,647|  
+|**符号なし _ _int32**|4|**符号なし**、**符号なし int**|0 ～ 4,294,967,295|  
+|**__int64**|8|**long**、 **long long 型の署名**|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|  
+|**unsigned __int64**|8|**符号なし long long 型**|0 ～ 18,446,744,073,709,551,615|  
+|**bool**|1|none|**false**または**は true。**|  
+|**char**|1|none|既定では、128 ~ 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|  
+|**符号付き文字**|1|none|-128 ～ 127|  
+|**unsigned char**|1|none|0 ～ 255|  
+|**short**|2|**short int**、**署名 short int**|-32,768 ～ 32,767|  
+|**unsigned short**|2|**unsigned short int**|0 ～ 65,535|  
+|**long**|4|**long int**、 **long int の署名**|-2,147,483,648 ～ 2,147,483,647|  
+|**unsigned long**|4|**unsigned long int**|0 ～ 4,294,967,295|  
+|**long long**|8|none (と同等では **_ _int64**)|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|  
+|**符号なし long long 型**|8|none (と同等では**符号なし _ _int64**)|0 ～ 18,446,744,073,709,551,615|  
+|**enum**|可変|none| |  
+|**float**|4|none|3.4E +/- 38 (7 桁)|  
+|**double**|8|none|1.7E +/- 308 (15 桁)|  
+|**long double**|同じ**double**|none|同じ**double**|  
+|**wchar_t**|2|**_ _wchar_t**|0 ～ 65,535|  
   
- `__wchar_t` 型の変数には、その使用方法に応じて、ワイド文字型またはマルチバイト文字型のいずれかを指定します。 ワイド文字型の定数を指定するには、文字または文字列定数の前に `L` のプレフィックスを使用します。  
+ 使用方法に応じて、変数の **_ _wchar_t**ワイド文字型またはマルチバイト文字の種類のいずれかを指定します。 ワイド文字型の定数を指定するには、文字または文字列定数の前に `L` のプレフィックスを使用します。  
   
  **署名**と**符号なし**修飾子を除く任意の整数型で使用できるは**bool**します。 なお**char**、 **char を署名**、および**unsigned char**オーバー ロードやテンプレートなどのメカニズムの目的では 3 つの型。  
   

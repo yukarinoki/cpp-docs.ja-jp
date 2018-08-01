@@ -1,5 +1,5 @@
 ---
-title: '方法: unique_ptr インスタンスを作成して |Microsoft ドキュメント'
+title: '方法: unique_ptr インスタンスを作成して |Microsoft Docs'
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4562fcb738cc7f692c1bffe1b4b06e413392dd60
-ms.sourcegitcommit: ee9fb774e82dfbda1dfaeb197aed36b97e408978
+ms.openlocfilehash: eed34b3c356b36c824e22739697b7967575792f6
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34755772"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39402651"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>方法: unique_ptr インスタンスを作成して使用する
-A [unique_ptr](../standard-library/unique-ptr-class.md)がそのポインターを共有していません。 別コピーできない`unique_ptr`関数に値渡しまたは作成するコピーを必要とするすべての C++ 標準ライブラリ アルゴリズムで使用されます。 `unique_ptr` ができるのは移動だけです。 この場合、メモリ リソースの所有権は別の `unique_ptr` に移動し、元の `unique_ptr` はそれ以降、所有権を失います。 複数の所有者がオブジェクトを所有するとプログラム ロジックが複雑になるため、所有者を 1 人に制限することをお勧めします。 したがって、プレーンな C++ オブジェクトにスマート ポインターが必要なときに使用`unique_ptr`、構築する場合と、`unique_ptr`を使用して、 [make_unique](../standard-library/memory-functions.md#make_unique)ヘルパー関数。  
+A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを共有しません。 これは、別にコピーできません`unique_ptr`値によって、関数に渡す、または、作成するコピーを必要とする任意の C++ 標準ライブラリ アルゴリズムで使用します。 `unique_ptr` ができるのは移動だけです。 この場合、メモリ リソースの所有権は別の `unique_ptr` に移動し、元の `unique_ptr` はそれ以降、所有権を失います。 複数の所有者がオブジェクトを所有するとプログラム ロジックが複雑になるため、所有者を 1 人に制限することをお勧めします。 したがって、プレーンな C++ オブジェクト用にスマート ポインターを確認する場合は、使用`unique_ptr`、および構築する際に、`unique_ptr`を使用して、 [make_unique](../standard-library/memory-functions.md#make_unique)ヘルパー関数。  
   
  次の図では、2 つの `unique_ptr` のインスタンス間での所有権の移転を示します。  
   
  ![一意の所有権の移動&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr` 定義された、 `<memory>` C++ 標準ライブラリのヘッダー。 生のポインターと同じくらい効率的と、C++ 標準ライブラリのコンテナーで使用できます。 追加`unique_ptr`C++ 標準ライブラリのコンテナーにインスタンスが効率的なのでの移動コンス トラクター、`unique_ptr`コピー操作の必要性を排除します。  
+ `unique_ptr` 定義されている、 `<memory>` C++ 標準ライブラリのヘッダー。 生のポインターと同じくらい効率的と、C++ 標準ライブラリ コンテナーで使用できます。 追加`unique_ptr`C++ 標準ライブラリ コンテナーにインスタンスが効率的なための移動コンス トラクター、`unique_ptr`コピー操作の必要がなくなります。  
   
 ## <a name="example"></a>例  
  次の例では、`unique_ptr` インスタンスを作成し、関数間で渡す方法を示します。  
@@ -48,11 +48,11 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)がそのポインター�
  [!code-cpp[stl_smart_pointers#212](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_3.cpp)]  
   
 ## <a name="example"></a>例  
- 使用することができます[make_unique](../standard-library/memory-functions.md#make_unique)を作成する、 `unique_ptr` 、配列に使用することはできませんが、`make_unique`配列の要素を初期化するためにします。  
+ 使用することができます[make_unique](../standard-library/memory-functions.md#make_unique)を作成する、 `unique_ptr` 、配列に使用することはできませんが、`make_unique`配列要素を初期化します。  
   
  [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]  
   
- 例については、次を参照してください。 [make_unique](../standard-library/memory-functions.md#make_unique)です。  
+ 例については、次を参照してください。 [make_unique](../standard-library/memory-functions.md#make_unique)します。  
   
 ## <a name="see-also"></a>関連項目  
  [スマート ポインター](../cpp/smart-pointers-modern-cpp.md)   

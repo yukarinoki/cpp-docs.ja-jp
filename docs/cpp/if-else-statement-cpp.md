@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42174837f0f60f9a4e3ba9f19702210d6d34ccca
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: 15748249a39813edc4446fa25511d20361b0706c
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37943157"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405111"
 ---
 # <a name="if-else-statement-c"></a>if-else ステートメント (C++)
 条件分岐を制御します。 内のステートメント、 *if ブロック*が実行された場合にのみ、 *if 式*0 以外の値 (または TRUE) に評価されます。 場合の値*式*0 以外の場合、 *statement1*とブロック内の他のステートメントが実行され、存在する場合、他のブロックはスキップされます。 場合の値*式*0 の場合は、if ブロックはスキップされ、他のブロックが存在する場合が実行されます。 0 以外に評価される式は、
@@ -36,7 +36,6 @@ ms.locfileid: "37943157"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 if ( expression )  
 {
    statement1;
@@ -131,7 +130,6 @@ int main()
 #include <string>
 #include <algorithm>
 
-
 using namespace std;
 
 map<int, string> m;
@@ -159,13 +157,11 @@ int main()
         shared_flag = false;
     }
 
-
     string s{ "if" };
     if (auto keywords = { "if", "for", "while" }; any_of(keywords.begin(), keywords.end(), [&s](const char* kw) { return s == kw; }))
     {
         cout << "Error! Token must not be a keyword\n";
     }
-
 }
 ```
 
@@ -196,8 +192,6 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-  
- 
 ## <a name="see-also"></a>関連項目  
  [選択ステートメント](../cpp/selection-statements-cpp.md)   
  [キーワード](../cpp/keywords-cpp.md)   

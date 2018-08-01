@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b4b9e2526d621e9e9fee1d1f8c05c5a05d3312
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: a02ed2a19f44f19396038f8e41cb1c7f5a069407
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37941679"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39405887"
 ---
 # <a name="auto-keyword"></a>auto キーワード
 **自動**キーワードは宣言指定子。 ただし、C++ 標準ではこのキーワードの元の意味と変更後の意味が定義されます。 Visual C 2010 では、前に、**自動**キーワードで変数の宣言、*自動*ストレージ クラス、つまり、ローカルな有効期間を持つ変数です。 Visual C 2010 では、以降、**自動**キーワードは、その宣言の初期化式から推測される型の変数を宣言します。 [/Zc:auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)コンパイラ オプションの意味を制御する、**自動**キーワード。  
@@ -35,7 +35,6 @@ auto declarator initializer;
  次のトピックについて説明します、**自動**キーワードと、対応するコンパイラ オプション。  
   
 -   [自動](../cpp/auto-cpp.md)の新しい定義を説明します、**自動**キーワード。  
-  
   
 -   [/Zc:auto (変数の型の推測)](../build/reference/zc-auto-deduce-variable-type.md)のどの定義をコンパイラに指示するコンパイラ オプションについて説明します、**自動**キーワードを使用します。  
   

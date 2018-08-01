@@ -1,5 +1,5 @@
 ---
-title: 'キャスト演算子: () |Microsoft ドキュメント'
+title: 'キャスト演算子: () |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ef2d370f4344e4a66c70989582da8d7ac7d5186
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e7f9c723f605a4f66d5e2bdbb4c39f50645b58b
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39408747"
 ---
 # <a name="cast-operator-"></a>キャスト演算子: ()
 型キャストは、特定の状況におけるオブジェクトの型の明示的な変換方法を示します。  
@@ -27,19 +28,17 @@ ms.lasthandoff: 05/03/2018
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      unary-expression  
-( type-name ) cast-expression  
+unary-expression ( type-name ) cast-expression  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  単項式は、すべてキャスト式と見なされます。  
   
  コンパイラは、型キャストが実行された後で、*cast-expression* を *type-name* 型として処理します。 キャストを使用すると、スカラー型オブジェクトの型を他のスカラー型との間で変換できます。 明示的な型キャストは、暗黙的な変換の結果を決定するのと同じ規則によって制限されます。 特定の型の実際のサイズまたは表現から、キャストにさらに制限が課せられる場合があります。  
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // expre_CastOperator.cpp  
 // compile with: /EHsc  
 // Demonstrate cast operator  
@@ -59,7 +58,7 @@ int main()
   
 ## <a name="example"></a>例  
   
-```  
+```cpp 
 // expre_CastOperator2.cpp  
 // The following sample shows how to define and use a cast operator.   
 #include <string.h>  
@@ -129,7 +128,7 @@ Raw Bytes after cast:   Exciting
   
 ## <a name="see-also"></a>関連項目  
  [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)   
- [C++ 組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [明示的な型変換演算子:)](../cpp/explicit-type-conversion-operator-parens.md)   
  [キャスト演算子](../cpp/casting-operators.md)   
  [キャスト演算子](../c-language/cast-operators.md)

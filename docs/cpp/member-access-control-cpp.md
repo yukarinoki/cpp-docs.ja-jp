@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116baca2303807748a4d282acda81233ed32957
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28f0cedbe20ebea21b3b10e5016605c1bce51383
+ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957388"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39407388"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 アクセス制御を分離することを有効にする、[パブリック](../cpp/public-cpp.md)からクラスのインターフェイス、[プライベート](../cpp/private-cpp.md)実装の詳細と[保護](../cpp/protected-cpp.md)のみであるメンバーを使用して派生クラス。 アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。  
@@ -42,7 +42,6 @@ private:                 // Declare private state variables.
 protected:      // Declare protected function for derived classes only.  
     Point ToWindowCoords();  
 };  
-  
 ``` 
   
  既定のアクセスは**プライベート**クラスと**パブリック**構造体または共用体の。 クラスのアクセス指定子は、任意の順序で何回でも使用できます。 クラス型のオブジェクトに対するストレージの割り当ては実装に依存しますが、メンバーはアクセス指定子の間で順次上位メモリ アドレスが割り当てられることが保証されます。  
