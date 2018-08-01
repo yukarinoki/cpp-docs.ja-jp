@@ -1,5 +1,5 @@
 ---
-title: multimap (STL/CLR) |Microsoft ドキュメント
+title: multimap (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -107,29 +107,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 693d4f8b8f0e7271a4c1f7df9931e0a85e57c332
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 0dcbab8f6ced483c54b7eb3efed68efacd60c858
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079721"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376223"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
-このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`multimap`1 つの要素を格納する各ノードのバランスの取れた (ほとんど) の順序付けられたツリーとして要素のシーケンスを管理します。 要素は、シーケンスとよいに沿って移動する、マップされた値は、管理するためのキーで構成されます。  
+テンプレート クラスは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`multimap`1 つの要素を格納する各ノードの場合は、バランスの取れた (ほぼ) 順序付けられたツリーとしての要素のシーケンスを管理します。 要素は、シーケンスと使いこなせるようになりますが、マップされた値を管理するためのキーで構成されます。  
   
- 下記に、`GValue`と同じです。  
+ 下記の説明で`GValue`と同じです。  
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
  それぞれの文字について以下に説明します。  
   
- `GKey` 同じ`Key`ref 型を後者には、しない限り、どのケースでは `Key^`  
+ `GKey` 同じ*キー*しない限り、後者の場合は、ref 型である場合は `Key^`  
   
- `GMapped` 同じ`Mapped`ref 型を後者には、しない限り、どのケースでは `Mapped^`  
+ `GMapped` 同じ*マップ済み*しない限り、後者の場合は、ref 型である場合は `Mapped^`  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     ref class multimap  
@@ -145,13 +145,13 @@ template<typename Key,
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- キー  
- 被制御シーケンス内の要素の主要な構成要素の型。  
+ *Key*  
+ 被制御シーケンス内の要素の主要なコンポーネントの型。  
   
- マップ  
+ *マップ*  
  被制御シーケンス内の要素の追加のコンポーネントの型。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext マップ/>  
   
  **Namespace:** cliext  
@@ -169,27 +169,27 @@ template<typename Key,
 |[multimap::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリック インターフェイスの反転反復子の型。|  
 |[multimap::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリック インターフェイスの要素の型。|  
 |[multimap::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|  
-|[multimap::key_compare (STL/CLR)](#key_compare)|2 つのキーの順序付けのデリゲート。|  
+|[multimap::key_compare (STL/CLR)](#key_compare)|2 つのキーの順序付けデリゲート。|  
 |[multimap::key_type (STL/CLR)](#key_type)|順序付けキーの型です。|  
-|[multimap::mapped_type (STL/CLR)](#mapped_type)|各キーに関連付けられているマップされた値の型。|  
+|[multimap::mapped_type (STL/CLR)](#mapped_type)|各キーに関連付けられたマップされた値の型。|  
 |[multimap::reference (STL/CLR)](#reference)|要素への参照の型です。|  
 |[multimap::reverse_iterator (STL/CLR)](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|  
-|[multimap::size_type (STL/CLR)](#size_type)|(負符号) 距離は 2 つの要素の型。|  
-|[multimap::value_compare (STL/CLR)](#value_compare)|2 つの要素値の順序付けのデリゲート。|  
+|[multimap::size_type (STL/CLR)](#size_type)|(負ではない) 距離は 2 つの要素の型。|  
+|[multimap::value_compare (STL/CLR)](#value_compare)|2 つの要素の値の順序付けデリゲート。|  
 |[multimap::value_type (STL/CLR)](#value_type)|要素の型。|  
   
 |メンバー関数|説明|  
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](#begin)|被制御シーケンスの先頭を指定します。|  
 |[multimap::clear (STL/CLR)](#clear)|すべての要素を削除します。|  
-|[multimap::count (STL/CLR)](#count)|指定したキーに一致する要素の数をカウントします。|  
+|[multimap::count (STL/CLR)](#count)|指定したキーに一致する要素をカウントします。|  
 |[multimap::empty (STL/CLR)](#empty)|要素が存在しないかどうかをテストします。|  
 |[multimap::end (STL/CLR)](#end)|被制御シーケンスの末尾を指定します。|  
 |[multimap::equal_range (STL/CLR)](#equal_range)|指定したキーに一致する範囲を検索します。|  
 |[multimap::erase (STL/CLR)](#erase)|指定した位置にある要素を削除します。|  
 |[multimap::find (STL/CLR)](#find)|指定したキーに一致する要素を検索します。|  
 |[multimap::insert (STL/CLR)](#insert)|要素を追加します。|  
-|[multimap::key_comp (STL/CLR)](#key_comp)|2 つのキーの順序付けのデリゲートをコピーします。|  
+|[multimap::key_comp (STL/CLR)](#key_comp)|2 つのキーの順序付けデリゲートをコピーします。|  
 |[multimap::lower_bound (STL/CLR)](#lower_bound)|指定したキーに一致する範囲の先頭を検出します。|  
 |[multimap::make_value (STL/CLR)](#make_value)|値オブジェクトを構築します。|  
 |[multimap::multimap (STL/CLR)](#multimap)|コンテナー オブジェクトを構築します。|  
@@ -199,55 +199,55 @@ template<typename Key,
 |[multimap::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|  
 |[multimap::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|  
 |[multimap::upper_bound (STL/CLR)](#upper_bound)|指定したキーに一致する範囲の末尾を検索します。|  
-|[multimap::value_comp (STL/CLR)](#value_comp)|2 つの要素値の順序付けのデリゲートをコピーします。|  
+|[multimap::value_comp (STL/CLR)](#value_comp)|2 つの要素の値の順序付けデリゲートをコピーします。|  
   
 |演算子|説明|  
 |--------------|-----------------|  
 |[multimap::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|  
-|[operator!= (multimap) (STL/CLR)](#op_neq)|かどうかを`multimap`オブジェクトが他と等しくない`multimap`オブジェクト。|  
+|[operator!= (multimap) (STL/CLR)](#op_neq)|かどうかを`multimap`オブジェクトが等しく別`multimap`オブジェクト。|  
 |[operator< (multimap) (STL/CLR)](#op_lt)|かどうかを`multimap`オブジェクトが他よりも小さい`multimap`オブジェクト。|  
 |[operator<= (multimap) (STL/CLR)](#op_lteq)|かどうかを`multimap`オブジェクトが別に小さい`multimap`オブジェクト。|  
-|[operator== (multimap) (STL/CLR)](#op_eq)|かどうかを`multimap`オブジェクトが他と等しい`multimap`オブジェクト。|  
+|[operator== (multimap) (STL/CLR)](#op_eq)|かどうかを`multimap`オブジェクトが相互に等しい`multimap`オブジェクト。|  
 |[operator> (multimap) (STL/CLR)](#op_gt)|かどうかを`multimap`オブジェクトが他よりも大きい`multimap`オブジェクト。|  
-|[operator>= (multimap) (STL/CLR)](#op_gteq)|かどうかを`multimap`オブジェクトがより大きいか等しい間`multimap`オブジェクト。|  
+|[operator>= (multimap) (STL/CLR)](#op_gteq)|かどうかを`multimap`オブジェクトより大きいまたは相互に等しい`multimap`オブジェクト。|  
   
 ## <a name="interfaces"></a>インターフェイス  
   
 |Interface|説明|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|オブジェクトが重複してください。|  
-|<xref:System.Collections.IEnumerable>|要素を順番にします。|  
+|<xref:System.ICloneable>|オブジェクトが重複しています。|  
+|<xref:System.Collections.IEnumerable>|要素をシーケンス処理します。|  
 |<xref:System.Collections.ICollection>|要素のグループを管理します。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番にします。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素をシーケンス処理します。|  
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|  
-|ITree\<キー、値 >|ジェネリックなコンテナーを管理します。|  
+|ITree\<キーの値 >|ジェネリックなコンテナーを管理します。|  
   
 ## <a name="remarks"></a>Remarks  
- オブジェクトは、割り当てし、個々 のノードとして、制御するシーケンスの記憶域を解放します。 順序付けられた 1 つのノードの内容を別にコピーからではなく、ノード間のリンクを変更することにより保持される (ほとんど) バランスの良いツリーに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。  
+ オブジェクトは、割り当て、個々 のノードとして、制御するシーケンスの記憶域を解放します。 別の 1 つのノードの内容のコピーからではなく、ノード間のリンクを変更することで順序付けられた保持する (ほぼ) バランスの取れたツリーに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。  
   
- オブジェクトがストアド デリゲート型のオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)です。 Multimap を構築するときにストアド デリゲート オブジェクトを指定することができますデリゲート オブジェクトを指定しないと、既定値が比較`operator<(key_type, key_type)`です。 このメンバー関数を呼び出すことによってこのストアド オブジェクトにアクセスする[multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`です。  
+ オブジェクトがストアド デリゲート型のオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)します。 Multimap を構築する際に、ストアド デリゲート オブジェクトを指定できます既定値は、比較でデリゲート オブジェクトを指定しない場合`operator<(key_type, key_type)`します。 メンバー関数を呼び出すことによって格納されているこのオブジェクトにアクセスする[multimap::key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)`()`します。  
   
- このようなデリゲート オブジェクト必要があります、厳密弱順序強制型のキーで[multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)です。 つまり、任意の 2 つのキーの`X`と`Y`:  
+ このようなデリゲート オブジェクトは、厳密弱順序の種類のキーを課す必要があります[multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)します。 任意の 2 つのキーのつまり`X`と`Y`:  
   
- `key_comp()(X, Y)` すべての呼び出しでブール値を同じ結果を返します。  
+ `key_comp()(X, Y)` 呼び出しごとに、同じブール型の結果を返します。  
   
  場合`key_comp()(X, Y)`が true の場合、 `key_comp()(Y, X)` false である必要があります。  
   
- 場合`key_comp()(X, Y)`が true の場合、`X`をする前に並べ替えるといいます`Y`です。  
+ 場合`key_comp()(X, Y)`が true の場合、`X`前に順序付けすると言います`Y`します。  
   
- 場合`!key_comp()(X, Y) && !key_comp()(Y, X)`が true の場合、`X`と`Y`大小関係が等しいと呼ばれます。  
+ 場合`!key_comp()(X, Y) && !key_comp()(Y, X)`が true の場合、`X`と`Y`同等の順序を持つと言います。  
   
- 任意の要素に対して`X`の直前まで`Y`、被制御シーケンスの`key_comp()(Y, X)`は false。 (既定のデリゲート オブジェクトのキーしない値が減少します。)テンプレート クラスとは異なり[マップ (STL/CLR)](../dotnet/map-stl-clr.md)、テンプレート クラスのオブジェクト`multimap`すべての要素のキーが一意であることは不要です。 (2 つまたは複数のキーが持てると同じ順序です。)  
+ 任意の要素に対して`X`前になる`Y`で、被制御シーケンスの`key_comp()(Y, X)`は false です。 (既定のデリゲート オブジェクトのキーしない値が減少します。)テンプレート クラスとは異なり[マップ (STL/CLR)](../dotnet/map-stl-clr.md)、テンプレート クラスのオブジェクト`multimap`はすべての要素のキーが一意である必要ありません。 (2 つ以上のキーと同じ順序付けします。)  
   
- 各要素には、個別のキーと、マップされた値が含まれています。 シーケンスは、シーケンス (対数時間) の検索、挿入、削除、任意の要素数の要素の数の対数に比例して操作できるような方法で表されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。  
+ 各要素には、個別のキーと、マップされた値が含まれています。 シーケンスは、シーケンス (対数時間) 内の参照、挿入、および要素の数の対数に比例して操作の数が、任意の要素の削除を許可するように表されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。  
   
- Multimap は、被制御シーケンス内の要素を指定する反復子を指定する、隣接する要素をステップ実行できますが、双方向反復子をサポートします。 特殊なヘッド ノードによって返される反復子に対応[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`です。 存在する場合、被制御シーケンスの最後の要素に到達するこの反復子をデクリメントすることができます。 ヘッド ノードに到達する multimap の反復子をインクリメントすることができは、比較に等しい`end()`です。 によって返される反復子を逆参照することはできませんが、`end()`です。  
+ Multimap は、隣接する要素を被制御シーケンス内の要素を指定する反復子を指定する手順は、双方向反復子をサポートします。 特別なヘッド ノードによって返される反復子に対応[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`します。 存在する場合は、被制御シーケンスの最後の要素に到達するこの反復子をデクリメントできます。 ヘッド ノードに到達する multimap の反復子をインクリメントして等しく比較がし`end()`します。 によって返される反復子を逆参照することはできませんが、`end()`します。  
   
- ランダム アクセス反復子が必要です--数値の位置を直接指定 multimap の要素を参照できないことに注意してください。  
+ その位置を表す数値を直接指定 multimap の要素を参照することはできないことに注意してください。--ランダム アクセス反復子が必要です。  
   
- Multimap の反復子は、そのノードに関連付けられた multimap、さらに関連付けられているコンテナーへのハンドルを格納するへのハンドルを格納します。 反復子は、それらの関連するコンテナー オブジェクトにのみ使用できます。 その multimap ノードに関連付けられたはいくつかの multimap に関連付けられていれば、multimap の反復子は有効です。 さらに、有効な反復子が dereferencable--と等しくない場合に限り指定--要素の値を変更またはアクセスを行うこともできます`end()`です。  
+ Multimap の反復子は、関連付けられているそのノードに関連付けられているコンテナーを識別するハンドルを格納する multimap を識別するハンドルを格納します。 関連付けられているコンテナー オブジェクトでのみ、反復子を使用することができます。 Multimap の反復子は、multimap に関連付けられたノードがいくつかの multimap に関連付けられている限り有効です。 さらに、有効な反復子は dereferencable--へのアクセスまたは--指定する要素の値を変更すると等しくない限り、使用する`end()`します。  
   
- 消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーは`not`その要素を破棄します。  
+ 消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型を持つ ref クラスは、コンテナーによりする要素よりも長く保持しないコンテナーです。 ただし、ハンドルのコンテナーは*いない*その要素を破棄します。  
   
 ## <a name="members"></a>メンバー
 
@@ -256,12 +256,12 @@ template<typename Key,
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、または空のシーケンスの最後を越えたところ、被制御シーケンスの最初の要素を指定する双方向反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合は、被制御シーケンスが、そのステータスの先頭を変更できます。  
+ メンバー関数は、被制御シーケンス、または空のシーケンスの末尾を越えた最初の要素を指定する双方向反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、被制御シーケンスが、そのステータスの先頭を変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -292,7 +292,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -306,12 +305,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数が効果的に呼び出し[multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`())`. これを使用するには、被制御シーケンスが空であることを確認します。  
+ メンバー関数は、効果的に呼び出す[multimap::erase (STL/CLR)](../dotnet/multimap-erase-stl-clr.md) `(` [multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md) `(),` [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`())`. これを使用するには、被制御シーケンスが空であることを確認します。  
   
 ### <a name="example"></a>例  
   
@@ -348,7 +347,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -363,12 +361,12 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数の双方向反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数双方向反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -392,7 +390,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -404,7 +401,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -436,7 +433,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -448,12 +444,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -477,7 +473,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -489,16 +484,16 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数と同じ順序付けする被制御シーケンスの要素の数を返します`key`です。 それを使用して、指定したキーと一致する、被制御シーケンスの現在の要素の数を決定します。  
+ メンバー関数と同等の順序を持つ被制御シーケンス内の要素の数を返します*キー*します。 指定したキーと一致する、被制御シーケンスの現在の要素の数を決定するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -525,7 +520,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -540,12 +534,12 @@ count(L'C') = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、可能性のある負の値の要素の数を表します。  
+ この型は、場合によって負の値の要素の数を表します。  
   
 ### <a name="example"></a>例  
   
@@ -580,7 +574,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -594,12 +587,12 @@ begin()-end() = -3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスが空の場合に true を返します。 等価である[multimap::size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`です。 これを使用するには、multimap が空かどうかをテストします。  
+ このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[multimap::size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)`() == 0`します。 これを使用するには、multimap が空かどうかをテストします。  
   
 ### <a name="example"></a>例  
   
@@ -629,7 +622,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -645,12 +637,12 @@ empty() = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの最後の位置を指し示す双方向反復子を返します。 被制御シーケンスの末尾を指定する反復子を取得するのにために使用します。その状態は、被制御シーケンスの長さが変更された場合は変更されません。  
+ メンバー関数は、被制御シーケンスの最後の位置を指し示す双方向反復子を返します。 被制御シーケンスの末尾を指定する反復子を取得するのにために使用します。そのステータスは被制御シーケンスの長さが変更された場合は変更されません。  
   
 ### <a name="example"></a>例  
   
@@ -683,7 +675,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -697,16 +688,16 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 pair_iter_iter equal_range(key_type _Keyval);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `_Keyval`  
+ *_Keyval*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- メソッドは、反復子のペアを返します`-` [multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`です。 使用する指定したキーと一致する、被制御シーケンスの現在の要素の範囲が決まります。  
+ 反復子のペアを返します`-` [multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`します。 指定したキーに一致する要素を被制御シーケンスの現在の範囲を決定するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -742,7 +733,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -756,33 +746,33 @@ equal_range(L'x') empty = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 先頭  
- 消去する範囲の開始しています。  
+ *first*  
+ 消去する範囲の先頭。  
   
- key  
+ *key*  
  消去するキー値。  
   
- last  
+ *last*  
  消去する範囲の終了。  
   
- where  
+ *where*  
  消去する要素。  
   
 ### <a name="remarks"></a>Remarks  
- 最初のメンバー関数によって示される、被制御シーケンスの要素を削除する`where`、し、削除、要素の後に残る最初の要素を指定する反復子を返しますまたは[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`このような要素が存在しない場合。 それを使用するには 1 つの要素を削除します。  
+ 最初のメンバー関数が指す被制御シーケンスの要素を削除する*場所*、および削除するには、要素の後に残る最初の要素を指定する反復子を返しますまたは[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`そのような要素が存在しない場合。 これを使用するには 1 つの要素を削除します。  
   
- 2 番目のメンバー関数、被制御シーケンスの要素の範囲内の削除 [`first`、 `last`)、し、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは`end()`場合、このような要素がないです。存在する. これを使用するには 0 個以上の連続する要素を削除します。  
+ 2 番目のメンバー関数は、範囲の被制御シーケンスの要素を削除する [`first`、 `last`)、し、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは`end()`場合、このような要素がないです。存在する. これを使用するには 0 個以上の連続する要素を削除します。  
   
- 3 番目のメンバー関数と同じ順序キーを持つは、被制御シーケンスのいずれかの要素を削除する`key`、削除された要素の数のカウントを返します。 これを使用して、削除し、指定したキーと一致するすべての要素をカウントします。  
+ 3 番目のメンバー関数は、キーを持つと同じ順序付けの被制御シーケンスの任意の要素を削除します。 を*キー*、削除された要素の数のカウントを返します。 削除や、指定したキーと一致するすべての要素のカウントを使用するとします。  
   
- 各要素の消去では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。  
+ 各要素のデータ消去では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。  
   
 ### <a name="example"></a>例  
   
@@ -829,7 +819,6 @@ int main()
     System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -847,16 +836,16 @@ erase(L'e') = 1
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
+ 被制御シーケンス内の少なくとも 1 つの要素があるのと同じ順序付け場合*キー*、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[(STL/CLR)multimap::end](../dotnet/multimap-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用します。  
   
 ### <a name="example"></a>例  
   
@@ -889,7 +878,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -904,7 +892,7 @@ find C = False
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     ITree<GKey, GValue>  
     generic_container;  
@@ -952,7 +940,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -967,14 +954,14 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反復子を表します。  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用的な反復子を表します。  
   
 ### <a name="example"></a>例  
   
@@ -1009,7 +996,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1023,14 +1009,14 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用反転反復子を表します。  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反転反復子を表します。  
   
 ### <a name="example"></a>例  
   
@@ -1064,7 +1050,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1078,12 +1063,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用することについて説明します。  
+ この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。  
   
 ### <a name="example"></a>例  
   
@@ -1117,7 +1102,6 @@ int main()
     System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1131,7 +1115,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1140,33 +1124,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- 右  
- 列挙型を挿入します。  
+ *right*  
+ 挿入する列挙です。  
   
- Val  
+ *val*  
  挿入するキー値。  
   
- where  
- (ヒントのみ) を挿入するためのコンテナー内の場所。  
+ *where*  
+ (ヒントのみ) を挿入するコンテナー内の場所。  
   
 ### <a name="remarks"></a>Remarks  
  各メンバー関数は、残りのオペランドで指定されたシーケンスを挿入します。  
   
- 最初のメンバー関数は、値を持つ要素を挿入します。 `val`、し、新しく挿入される要素を指定する反復子を返します。 使用する 1 つの要素を挿入します。  
+ 最初のメンバー関数は、値を持つ要素を挿入*val*、し、新しく挿入された要素を指定する反復子を返します。 これを使用して、1 つの要素を挿入します。  
   
- 2 番目のメンバー関数は、値を持つ要素を挿入します。`val`を使用して、 `where` (パフォーマンスを向上させる) をヒントとしてし、新しく挿入される要素を指定する反復子を返します。 使用することがわかって要素に隣接する可能性のある 1 つの要素を挿入します。  
+ 2 番目のメンバー関数は、値を持つ要素を挿入する*val*を使用して、*場所*(パフォーマンスを向上させる) をヒントとしてし、新しく挿入された要素を指定する反復子を返します。 これを使用するにはわかって要素に隣接する可能性のある 1 つの要素を挿入します。  
   
- 3 番目のメンバー関数は、シーケンスを挿入します。 [`first`、 `last`)。 使用する別のシーケンスからコピーした 0 個以上の要素を挿入します。  
+ 3 番目のメンバー関数は、シーケンスを挿入します。 [`first`、 `last`)。 これを使用して、別のシーケンスからコピーした 0 個以上の要素を挿入します。  
   
- 4 番目のメンバー関数で指定されたシーケンスを挿入する、`right`です。 使用する列挙子によって説明されているシーケンスを挿入します。  
+ 4 番目のメンバー関数で指定されたシーケンスを挿入する、*右*します。 これを使用して、列挙子によって説明されているシーケンスを挿入します。  
   
- 各要素の挿入では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。 挿入は、カーソル位置に隣接する要素を指定するヒントの指定、償却定数時間でただし、実行できます。  
+ 各要素の挿入では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。 挿入は発生償却定数時間でただし、カーソル位置に隣接する要素を指定するヒントを指定します。  
   
 ### <a name="example"></a>例  
   
@@ -1228,7 +1212,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1247,12 +1230,12 @@ insert(begin(), [L'y' 25]) = [y 25]
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスの双方向反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスの双方向反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -1276,7 +1259,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1284,16 +1266,16 @@ int main()
 ```  
 
 ## <a name="key_comp"></a> multimap::key_comp (STL/CLR)
-2 つのキーの順序付けのデリゲートをコピーします。  
+2 つのキーの順序付けデリゲートをコピーします。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 2 つのキーの比較に使用するとします。  
+ このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 2 つのキーの比較に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1328,7 +1310,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1342,11 +1323,11 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="key_compare"></a> multimap::key_compare (STL/CLR)
-2 つのキーの順序付けのデリゲート。  
+2 つのキーの順序付けデリゲート。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
@@ -1387,7 +1368,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1405,12 +1385,12 @@ compare(L'b', L'a') = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、テンプレート パラメーター `Key` のシノニムです。  
+ 型はテンプレート パラメーターのシノニム*キー*します。  
   
 ### <a name="example"></a>例  
   
@@ -1437,7 +1417,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1449,16 +1428,16 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、最初の要素を決定する`X`をするのと同じ順序を持つ被制御シーケンス内`key`です。 このような要素が存在しないかどうかが返されます[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 指定する反復子を返しますそれ以外の場合`X`です。 これを使用して、指定したキーと一致する、被制御シーケンス内で現在の要素のシーケンスの先頭を検索します。  
+ メンバー関数は、最初の要素を決定する`X`と同等の順序を持つ被制御シーケンス内*キー*します。 このような要素が存在しないかどうか、それを返します[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; 指定する反復子を返します`X`します。 指定したキーと一致する、被制御シーケンス内で要素のシーケンスの先頭を現在検索を使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1491,7 +1470,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1506,19 +1484,19 @@ lower_bound(L'x')==end() = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  使用するキー値。  
   
- マップ  
+ *マップ*  
  検索する値をマップします。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数を返します、`value_type`オブジェクト キーを持つ`key`値を持つマップ`mapped`です。 他のいくつかのメンバー関数で使用するために適切なオブジェクトの作成に使用するとします。  
+ メンバー関数を返します、`value_type`オブジェクト キーを持つ*キー*し、マップされた値が*マップ*します。 その他のいくつかのメンバー関数で使用するための適切なオブジェクトの作成に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1541,7 +1519,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1553,12 +1530,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Mapped mapped_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、テンプレート パラメーター `Mapped` のシノニムです。  
+ 型はテンプレート パラメーターのシノニム*マップ済み*します。  
   
 ### <a name="example"></a>例  
   
@@ -1585,7 +1562,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1597,7 +1573,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 multimap();  
 explicit multimap(key_compare^ pred);  
 multimap(multimap<Key, Mapped>% right);  
@@ -1613,66 +1589,66 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- pred  
- 被制御シーケンスの述語を順序付けです。  
+ *Pred*  
+ 被制御シーケンスの述語を順序付けします。  
   
- 右  
+ *right*  
  挿入するオブジェクトまたは範囲。  
   
 ### <a name="remarks"></a>Remarks  
- : コンス トラクター  
+ コンス トラクター。  
   
  `multimap();`  
   
- 既定の順序の述語を使用して要素を持たない、被制御シーケンスを初期化`key_compare()`です。 これを使用するには、既定の順序の述語を持つ、空の初期被制御シーケンスを指定します。  
+ 既定の順序の述語を使用して要素のない、被制御シーケンスを初期化`key_compare()`します。 これを使用するには、既定の順序の述語を持つ、空の初期被制御シーケンスを指定します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `explicit multimap(key_compare^ pred);`  
   
- 順序の指定の述語での要素を持たない被制御シーケンスを初期化します`pred`です。 これを使用して、順序指定された述語を持つ、空の初期被制御シーケンスを指定します。  
+ 順序付け述語で、要素のない、被制御シーケンスを初期化します*pred*します。 指定した順序付け述語を持つ、空の初期被制御シーケンスを指定するのに使用するとします。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `multimap(multimap<Key, Mapped>% right);`  
   
- シーケンスに、被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)、既定の順序の述語とします。 使用して、multimap オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定する`right`既定の順序の述語とします。  
+ シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)、既定の順序の述語とします。 Multimap オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*既定の順序の述語とします。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `multimap(multimap<Key, Mapped>^ right);`  
   
- シーケンスに、被制御シーケンスを初期化します [`right->begin()`、 `right->end()`)、既定の順序の述語とします。 使用して、multimap オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定する`right`既定の順序の述語とします。  
+ シーケンスが被制御シーケンスを初期化します [`right->begin()`、 `right->end()`)、既定の順序の述語とします。 Multimap オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*既定の順序の述語とします。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIter> multimap(InIter first, InIter last);`  
   
- シーケンスに、被制御シーケンスを初期化します [`first`、 `last`)、既定の順序の述語とします。 使用する既定の順序の述語で被制御シーケンスの別のシーケンスのコピーを作成します。  
+ シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、既定の順序の述語とします。 それを使用するには、述語を順序付け、既定値は、被制御シーケンスの別のシーケンスをコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIter> multimap(InIter first, InIter last, key_compare^ pred);`  
   
- シーケンスに、被制御シーケンスを初期化します。 [`first`、 `last`)、順序の指定の述語に置き換えます`pred`です。 これを使用するには、被制御シーケンスの順序指定された述語を持つ、別のシーケンスのコピーを作成します。  
+ シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、順序付け述語で*pred*します。 これを使用するには、被制御シーケンスの順序付け述語の指定したもう 1 つのシーケンスのコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`既定の順序の述語とします。 これを使用するには、被制御シーケンスの既定の順序の述語と、列挙子によって記述された別のシーケンスのコピーを作成します。  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*既定の順序の述語とします。 これを使用するには、被制御シーケンスの既定の順序の述語で、列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`、順序の指定の述語と`pred`です。 これを使用するには、被制御シーケンスの順序指定された述語を持つ、列挙子によって記述された別のシーケンスのコピーを作成します。  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*、順序付け述語で*pred*します。 これを使用するには、被制御シーケンスの順序付け述語の指定の列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。  
   
 ### <a name="example"></a>例  
   
@@ -1747,7 +1723,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1768,16 +1743,16 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
+ *right*  
  コピーするコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー演算子コピー`right`オブジェクトを返します`*this`です。 これを使用して、被制御シーケンスを `right` の被制御シーケンスのコピーと置き換えます。  
+ メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。  
   
 ### <a name="example"></a>例  
   
@@ -1807,8 +1782,7 @@ int main()
         System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
     System::Console::WriteLine();   
     return (0);   
-    }  
-  
+    } 
 ```  
   
 ```Output  
@@ -1821,12 +1795,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、最後の要素または空のシーケンスの先頭を越えた、被制御シーケンスの指定、逆順反復子を返します。 したがって、これを指定、`beginning`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合、逆の順序で表示される、被制御シーケンスですがその状態の先頭は変更できます。  
+ このメンバー関数は、または空のシーケンスの先頭を越えた、被制御シーケンスの最後の要素を指定する反転反復子を返します。 したがって、指定、`beginning`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの先頭は変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -1857,7 +1831,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1871,7 +1844,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -1903,7 +1876,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1915,12 +1887,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの先頭位置を指し示す反転反復子を返します。 したがって、これを指定、`end`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合は逆の順序で表示される、被制御シーケンスですがその状態の終了を変更できます。  
+ メンバー関数は、被制御シーケンスの先頭を越えたを指す、逆順反復子を返します。 したがって、指定、`end`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの末尾は変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -1953,7 +1925,6 @@ int main()
         rit->first, rit->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1967,12 +1938,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -1996,7 +1967,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2008,12 +1978,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの長さを返します。 これを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスが参照してください、0 以外のサイズを持つかどうかは、関心のあるすべて場合[multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`です。  
+ このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[multimap::empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)`()`します。  
   
 ### <a name="example"></a>例  
   
@@ -2045,7 +2015,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2059,7 +2028,7 @@ size() = 2 after adding 2
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
@@ -2093,7 +2062,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2106,16 +2074,16 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void swap(multimap<Key, Mapped>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
+ *right*  
  コンテンツを交換するコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、`this` と `right` の間で被制御シーケンスを交換します。 定数時間では、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。  
+ メンバー関数は、交換の間で被制御シーケンス`this`と*右*します。 これは一定の時間内と、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2157,7 +2125,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2172,12 +2139,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、被制御シーケンスを格納する配列を返します。 使用する配列形式の被制御シーケンスのコピーを入手します。  
+ メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2208,7 +2175,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2221,16 +2187,16 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の最後の要素を決定する`X`をするのと同じ順序を持つ被制御シーケンス内`key`です。 このような要素が存在しない場合、または場合`X`、被制御シーケンスの最後の要素では返します[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`;最初の要素を指定する反復子を返しますそれ以外の場合`X`. これを使用して、指定したキーと一致する、被制御シーケンス内で現在の要素のシーケンスの末尾を検索します。  
+ メンバー関数は、最後の要素を決定する`X`と同等の順序を持つ被制御シーケンス内*キー*します。 このような要素が存在しない場合、または場合`X`、被制御シーケンスの最後の要素では返します[multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`;を超える最初の要素を指定する反復子を返します`X`. 指定したキーと一致する、被制御シーケンス内で要素のシーケンスの末尾を現在検索を使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2263,7 +2229,6 @@ int main()
         it->first, it->second);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2274,16 +2239,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> multimap::value_comp (STL/CLR)
-2 つの要素値の順序付けのデリゲートをコピーします。  
+2 つの要素の値の順序付けデリゲートをコピーします。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 使用する 2 つの要素値を比較します。  
+ このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 これを使用するには 2 つの要素の値を比較します。  
   
 ### <a name="example"></a>例  
   
@@ -2310,7 +2275,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2320,11 +2284,11 @@ compare([L'b', 2], [L'a', 1]) = False
 ```  
 
 ## <a name="value_compare"></a> multimap::value_compare (STL/CLR)
-2 つの要素値の順序付けのデリゲート。  
+2 つの要素の値の順序付けデリゲート。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
@@ -2357,7 +2321,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2371,7 +2334,7 @@ compare([L'b', 2], [L'a', 1]) = False
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
@@ -2402,19 +2365,18 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
 [a 1] [b 2] [c 3]  
 ```  
 
-## <a name="op_neq"></a> operator! = (multimap) (STL/CLR)
-等しくない比較を一覧表示します。  
+## <a name="op_neq"></a> 演算子! = (multimap) (STL/CLR)
+非等値比較を一覧表示します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator!=(multimap<Key, Mapped>% left,  
@@ -2422,14 +2384,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(left == right)`です。 テストするために使用するかどうか`left`順序付けされていないと同じ`right`要素によって比較対象の要素が 2 つの multimaps の場合。  
+ 演算子関数を返します`!(left == right)`します。 テストに使用するかどうか*左*順序付けされていないと同じ*右*2 つの multimap が要素によって比較対象の要素の場合。  
   
 ### <a name="example"></a>例  
   
@@ -2468,7 +2430,6 @@ int main()
         c1 != c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2483,7 +2444,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<(multimap<Key, Mapped>% left,  
@@ -2491,14 +2452,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返す場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`です。 返しますそれ以外の場合、`left->size() < right->size()`をテストするために使用するかどうか`left`前に順序付け`right`要素によって比較対象の要素が 2 つの multimaps の場合。  
+ 演算子関数を返します。 場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`します。 返しますそれ以外の場合、`left->size() < right->size()`テストに使用するかどうか*左*前に順序付けは*右*2 つの multimap が要素によって比較対象の要素の場合。  
   
 ### <a name="example"></a>例  
   
@@ -2537,7 +2498,6 @@ int main()
         c1 < c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2548,11 +2508,11 @@ int main()
 ```  
 
 ## <a name="op_lteq"></a> 演算子&lt;= (multimap) (STL/CLR)
-以下の一覧の比較できます。  
+以下の一覧を表示の比較。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator<=(multimap<Key, Mapped>% left,  
@@ -2560,14 +2520,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(right < left)`です。 テストするために使用するかどうか`left`後に順序付けされていない`right`要素によって比較対象の要素が 2 つの multimaps の場合。  
+ 演算子関数を返します`!(right < left)`します。 テストに使用するかどうか*左*後に順序付けされていない*右*2 つの multimap が要素によって比較対象の要素の場合。  
   
 ### <a name="example"></a>例  
   
@@ -2606,7 +2566,6 @@ int main()
         c2 <= c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2616,12 +2575,12 @@ int main()
 [a b d] <= [a b c] is False  
 ```  
 
-## <a name="op_eq"></a> 演算子 = = (multimap) (STL/CLR)
+## <a name="op_eq"></a> operator = (multimap) (STL/CLR)
 比較を一覧表示します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator==(multimap<Key, Mapped>% left,  
@@ -2629,14 +2588,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子の関数が、シーケンスがによって制御される場合にのみ true を返します`left`と`right`同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`です。 テストするために使用するかどうか`left`が同じ順序付け`right`要素によって比較対象の要素が 2 つの multimaps の場合。  
+ 演算子の関数によって制御されるシーケンスの場合にのみ true を返します*左*と*右*同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`します。 テストに使用するかどうか*左*が同じ順序付け*右*2 つの multimap が要素によって比較対象の要素の場合。  
   
 ### <a name="example"></a>例  
   
@@ -2675,7 +2634,6 @@ int main()
         c1 == c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2686,11 +2644,11 @@ int main()
 ```  
 
 ## <a name="op_gt"></a> 演算子&gt;(multimap) (STL/CLR)
-比較よりも大きい値を一覧表示します。  
+比較よりも大きい値の一覧を表示します。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>(multimap<Key, Mapped>% left,  
@@ -2698,14 +2656,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`right` `<` `left`です。 テストするために使用するかどうか`left`が後に順序付け`right`要素によって比較対象の要素が 2 つの multimaps の場合。  
+ 演算子関数を返します`right` `<` `left`します。 テストに使用するかどうか*左*が後に順序付け*右*2 つの multimap が要素によって比較対象の要素の場合。  
   
 ### <a name="example"></a>例  
   
@@ -2744,7 +2702,6 @@ int main()
         c2 > c1);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2759,7 +2716,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key,  
     typename Mapped>  
     bool operator>=(multimap<Key, Mapped>% left,  
@@ -2767,14 +2724,14 @@ template<typename Key,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 左へ  
+ *left*  
  比較する左のコンテナー。  
   
- 右  
+ *right*  
  比較する右のコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- 演算子関数を返します`!(left` `<` `right)`です。 テストするために使用するかどうか`left`する前に順序付けされていない`right`要素によって比較対象の要素が 2 つの multimaps の場合。  
+ 演算子関数を返します`!(left` `<` `right)`します。 テストに使用するかどうか*左*する前に順序付けされていない*右*2 つの multimap が要素によって比較対象の要素の場合。  
   
 ### <a name="example"></a>例  
   
@@ -2813,7 +2770,6 @@ int main()
         c1 >= c2);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
