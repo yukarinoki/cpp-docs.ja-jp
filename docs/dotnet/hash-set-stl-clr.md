@@ -1,5 +1,5 @@
 ---
-title: hash_set (STL/CLR) |Microsoft ドキュメント
+title: hash_set (STL/CLR) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -105,21 +105,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9c701bfa64e96594050ddaf46d56c12849a0ad30
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 041f4ef77872bad4ed7177c6ae36187b6035de7f
+ms.sourcegitcommit: bad2441d1930275ff506d44759d283d94cccd1c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079750"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376278"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
-このテンプレート クラスでは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`hash_set`双方向を格納するテーブルの各エントリをハッシュ テーブルとして要素のシーケンスを管理するには、ノード、および 1 つの要素を格納する各ノードの一覧がリンクされています。 各要素の値は、シーケンスの順序で、キーとして使用されます。  
+テンプレート クラスは、双方向のアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`hash_set`双方向を格納するテーブルの各エントリをハッシュ テーブルとして要素のシーケンスを管理するには、ノード、および 1 つの要素を格納する各ノードの一覧がリンクされています。 各要素の値は、シーケンスを順序付けをキーとして使用されます。  
   
- 下記に、`GValue`と同じ`GKey`、さらには同じ`Key`ref 型を後者には、しない限り、どのケースでは`Key^`です。  
+ 下記の説明で`GValue`と同じです`GKey`、さらには同じ*キー*しない限り、後者の場合は、ref 型である場合は`Key^`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 template<typename Key>  
     ref class hash_set  
         :   public  
@@ -134,10 +134,10 @@ template<typename Key>
 ```  
   
 ### <a name="parameters"></a>パラメーター  
- キー  
- 被制御シーケンス内の要素の主要な構成要素の型。  
+ *Key*  
+ 被制御シーケンス内の要素の主要なコンポーネントの型。  
 
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **ヘッダー:** \<cliext/hash_set >  
   
  **Namespace:** cliext  
@@ -156,12 +156,12 @@ template<typename Key>
 |[hash_set::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリック インターフェイスの要素の型。|  
 |[hash_set::hasher (STL/CLR)](#hasher)|キーのハッシュのデリゲート。|  
 |[hash_set::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|  
-|[hash_set::key_compare (STL/CLR)](#key_compare)|2 つのキーの順序付けのデリゲート。|  
+|[hash_set::key_compare (STL/CLR)](#key_compare)|2 つのキーの順序付けデリゲート。|  
 |[hash_set::key_type (STL/CLR)](#key_type)|順序付けキーの型です。|  
 |[hash_set::reference (STL/CLR)](#reference)|要素への参照の型です。|  
 |[hash_set::reverse_iterator (STL/CLR)](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|  
-|[hash_set::size_type (STL/CLR)](#size_type)|(負符号) 距離は 2 つの要素の型。|  
-|[hash_set::value_compare (STL/CLR)](#value_compare)|2 つの要素値の順序付けのデリゲート。|  
+|[hash_set::size_type (STL/CLR)](#size_type)|(負ではない) 距離は 2 つの要素の型。|  
+|[hash_set::value_compare (STL/CLR)](#value_compare)|2 つの要素の値の順序付けデリゲート。|  
 |[hash_set::value_type (STL/CLR)](#value_type)|要素の型。|  
   
 |メンバー関数|説明|  
@@ -169,7 +169,7 @@ template<typename Key>
 |[hash_set::begin (STL/CLR)](#begin)|被制御シーケンスの先頭を指定します。|  
 |[hash_set::bucket_count (STL/CLR)](#bucket_count)|バケットの数をカウントします。|  
 |[hash_set::clear (STL/CLR)](#clear)|すべての要素を削除します。|  
-|[hash_set::count (STL/CLR)](#count)|指定したキーに一致する要素の数をカウントします。|  
+|[hash_set::count (STL/CLR)](#count)|指定したキーに一致する要素をカウントします。|  
 |[hash_set::empty (STL/CLR)](#empty)|要素が存在しないかどうかをテストします。|  
 |[hash_set::end (STL/CLR)](#end)|被制御シーケンスの末尾を指定します。|  
 |[hash_set::equal_range (STL/CLR)](#equal_range)|指定したキーに一致する範囲を検索します。|  
@@ -178,7 +178,7 @@ template<typename Key>
 |[hash_set::hash_delegate (STL/CLR)](#hash_delegate)|キーのハッシュのデリゲートをコピーします。|  
 |[hash_set::hash_set (STL/CLR)](#hash_set)|コンテナー オブジェクトを構築します。|  
 |[hash_set::insert (STL/CLR)](#insert)|要素を追加します。|  
-|[hash_set::key_comp (STL/CLR)](#key_comp)|2 つのキーの順序付けのデリゲートをコピーします。|  
+|[hash_set::key_comp (STL/CLR)](#key_comp)|2 つのキーの順序付けデリゲートをコピーします。|  
 |[hash_set::load_factor (STL/CLR)](#load_factor)|バケットごとの平均要素数をカウントします。|  
 |[hash_set::lower_bound (STL/CLR)](#lower_bound)|指定したキーに一致する範囲の先頭を検出します。|  
 |[hash_set::make_value (STL/CLR)](#make_value)|値オブジェクトを構築します。|  
@@ -190,7 +190,7 @@ template<typename Key>
 |[hash_set::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|  
 |[hash_set::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|  
 |[hash_set::upper_bound (STL/CLR)](#upper_bound)|指定したキーに一致する範囲の末尾を検索します。|  
-|[hash_set::value_comp (STL/CLR)](#value_comp)|2 つの要素値の順序付けのデリゲートをコピーします。|  
+|[hash_set::value_comp (STL/CLR)](#value_comp)|2 つの要素の値の順序付けデリゲートをコピーします。|  
   
 |演算子|説明|  
 |--------------|-----------------|  
@@ -200,45 +200,45 @@ template<typename Key>
   
 |Interface|説明|  
 |---------------|-----------------|  
-|<xref:System.ICloneable>|オブジェクトが重複してください。|  
-|<xref:System.Collections.IEnumerable>|要素を順番にします。|  
+|<xref:System.ICloneable>|オブジェクトが重複しています。|  
+|<xref:System.Collections.IEnumerable>|要素をシーケンス処理します。|  
 |<xref:System.Collections.ICollection>|要素のグループを管理します。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番にします。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素をシーケンス処理します。|  
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|  
-|IHash\<キー、値 >|ジェネリックなコンテナーを管理します。|  
+|IHash\<キーの値 >|ジェネリックなコンテナーを管理します。|  
   
 ## <a name="remarks"></a>Remarks  
- オブジェクトは、割り当てし、双方向のリンク リスト内の個々 のノードとして、制御するシーケンスの記憶域を解放します。 アクセスを高速化、オブジェクトのサブリストのシーケンスとしてリスト全体を効果的に管理する (ハッシュ テーブル) の場合は、リストへのポインターの可変長配列を保持するか、バケットします。 順序付けられた 1 つのノードの内容を別にコピーからではなく、ノード間のリンクを変更することにより保持されるバケットに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。  
+ オブジェクトでは、割り当ておよび双方向リンク リスト内の個々 のノードとして、制御するシーケンスの記憶域を解放します。 アクセスを高速化、オブジェクトもサブリストのシーケンスとしてリスト全体を効果的に管理する (ハッシュ テーブル) の一覧へのポインターの可変長配列を保持するか、バケットします。 別の 1 つのノードの内容のコピーからではなく、ノード間のリンクを変更することで順序付けられた保持するバケットに要素を挿入します。 つまり、挿入し、残りの要素を中断することがなく自由に要素を削除することができます。  
   
- オブジェクトが各バケット ストアド デリゲート型のオブジェクトを呼び出すことによって、制御を注文[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)です。 Hash_set; を作成する場合は、ストアド デリゲート オブジェクトを指定することができます。デリゲート オブジェクトを指定しないと、既定値が比較`operator<=(key_type, key_type)`です。  
+ オブジェクトは、各バケット ストアド デリゲート型のオブジェクトを呼び出すことによって、制御を注文[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)します。 Hash_set; を作成する場合は、ストアド デリゲート オブジェクトを指定できます。既定値は、比較でデリゲート オブジェクトを指定しない場合`operator<=(key_type, key_type)`します。  
   
- このメンバー関数を呼び出すことによってストアド デリゲート オブジェクトにアクセスする[hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`です。 このようなデリゲート オブジェクトが型のキーと同じ順序を定義する必要があります[hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)です。 つまり、任意の 2 つのキーの`X`と`Y`:  
+ メンバー関数を呼び出すことによって、ストアド デリゲート オブジェクトにアクセスする[hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`します。 このようなデリゲート オブジェクトがキー型の間の同等の順序を定義する必要があります[hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)します。 任意の 2 つのキーのつまり`X`と`Y`:  
   
- `key_comp()(X, Y)` すべての呼び出しでブール値を同じ結果を返します。  
+ `key_comp()(X, Y)` 呼び出しごとに、同じブール型の結果を返します。  
   
- 場合`key_comp()(X, Y) && key_comp()(Y, X)`が true の場合、`X`と`Y`大小関係が等しいと呼ばれます。  
+ 場合`key_comp()(X, Y) && key_comp()(Y, X)`が true の場合、`X`と`Y`同等の順序を持つと言います。  
   
- ように動作している順序ルール`operator<=(key_type, key_type)`、`operator>=(key_type, key_type)`または`operator==(key_type, key_type)`eqivalent 順序を定義します。  
+ ように動作する任意の順序付けルール`operator<=(key_type, key_type)`、`operator>=(key_type, key_type)`または`operator==(key_type, key_type)`eqivalent の順序を定義します。  
   
- コンテナーが保証されるだけ要素キーを持つと同じ順序 (あり同じ整数値にどのハッシュ) が、バケット内で隣接する注意してください。 テンプレート クラスとは異なり[hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)、テンプレート クラスのオブジェクト`hash_set`すべての要素のキーが一意であることを確認します。 (2 つのキーも大小関係が等しい。)  
+ コンテナーにより要素キーを持つは、同等の順序がある (および同じ整数値にハッシュ) が、バケット内の隣接するのみことに注意してください。 テンプレート クラスとは異なり[hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)、テンプレート クラスのオブジェクト`hash_set`によりすべての要素のキーが一意であるようになります。 (2 つのキーもある同等の順序)。  
   
- オブジェクトを決定するバケット ストアド デリゲート型のオブジェクトを呼び出すことによって指定された順序付けキーを含める必要があります[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)です。 このメンバー関数を呼び出すことによってこのストアド オブジェクトにアクセスする[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()`キーの値に依存する整数値を取得します。 Hash_set; を作成する場合は、ストアド デリゲート オブジェクトを指定することができます。既定値は、関数、デリゲート オブジェクトを指定しない場合`System::Object::hash_value(key_type)`です。 つまり、すべてのキーの`X`と`Y`:  
+ オブジェクトを決定するバケット ストアド デリゲート型のオブジェクトを呼び出すことによって特定の順序付けキーを含める必要があります[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)します。 メンバー関数を呼び出すことによって格納されているこのオブジェクトにアクセスする[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()`キーの値に依存する整数値を取得します。 Hash_set; を作成する場合は、ストアド デリゲート オブジェクトを指定できます。既定値は、関数でデリゲート オブジェクトを指定しない場合`System::Object::hash_value(key_type)`します。 任意のキー、つまり`X`と`Y`:  
   
  `hash_delegate()(X)` すべての呼び出しで同じ結果の整数値を返します。  
   
- 場合`X`と`Y`大小関係が等しい、し`hash_delegate()(X)`として同じ整数の結果を返す必要があります`hash_delegate()(Y)`です。  
+ 場合`X`と`Y`と同じ順序付け、し`hash_delegate()(X)`として同じ整数の結果を返す必要があります`hash_delegate()(Y)`します。  
   
- 各要素は、キーと値の両方として機能します。 シーケンスは、検索、挿入、削除、任意の要素内にある (定数時間)--シーケンス内の要素の数とは無関係には、少なくともケースの最適な操作の数にできるような方法で表されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。  
+ 各要素は、キーと値の両方として機能します。 シーケンスは、検索、挿入、および内にある (定数時間) - シーケンス内の要素の数の独立した少なくともケースの最適な操作の数と、任意の要素の削除を許可するように表されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。  
   
- ハッシュされた値が均等に分散していない場合、ハッシュ テーブルは逆ことができます。 常に同じの値を返す--ハッシュ関数の場合--極度の検索、挿入、削除は、シーケンス (線形時間) 内の要素の数に比例します。 コンテナーが妥当なハッシュ関数、バケットの平均サイズを選択するよう努めてし、ハッシュ テーブルのサイズ (バケットの合計数) ですが、これらのオプションの一部またはすべてをオーバーライドできます。 関数を参照して、 [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)と[hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md)です。  
+ ハッシュされた値が均等に分散していない場合、ハッシュ テーブルは逆ことができます。 ハッシュ関数を常に、同じ値を返す--極度の検索、挿入、削除は、シーケンス (線形時間) 内の要素の数に比例します。 コンテナーは、適切なハッシュ関数、mean のバケットのサイズを選択するしますが、ハッシュ テーブルのサイズ (バケットの合計数) は、これらの選択肢の一部またはすべてをオーバーライドできます。 、たとえば、関数を参照してください[hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)と[hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md)します。  
   
- Hash_set は、ステップ隣接する要素を被制御シーケンス内の要素を指定する反復子を指定することができますが、双方向反復子をサポートします。 特殊なヘッド ノードによって返される反復子に対応[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`です。 存在する場合、被制御シーケンスの最後の要素に到達するこの反復子をデクリメントすることができます。 ヘッド ノードに到達する hash_set 反復子をインクリメントすることができは、比較に等しい`end()`です。 によって返される反復子を逆参照することはできませんが、`end()`です。  
+ Hash_set は、隣接する要素を被制御シーケンス内の要素を指定する反復子を指定する手順は、双方向反復子をサポートします。 特別なヘッド ノードによって返される反復子に対応[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`します。 存在する場合は、被制御シーケンスの最後の要素に到達するこの反復子をデクリメントできます。 ヘッド ノードに到達する hash_set 反復子をインクリメントして等しく比較がし`end()`します。 によって返される反復子を逆参照することはできませんが、`end()`します。  
   
- ランダム アクセス反復子が必要です--数値の位置を直接指定 hash_set の要素を参照することはできないことに注意してください。  
+ その位置を表す数値を直接指定 hash_set の要素を参照することはできないことに注意してください。--ランダム アクセス反復子が必要です。  
   
- Hash_set の反復子は、それに関連付けられているコンテナーへのハンドルを格納する関連付けられた hash_set ノードへのハンドルを格納します。 反復子は、それらの関連するコンテナー オブジェクトにのみ使用できます。 Hash_set の反復子は、関連付けられている hash_set ノードにいくつかの hash_set に関連付けられている限り有効です。 さらに、有効な反復子が dereferencable--と等しくない場合に限り指定--要素の値を変更またはアクセスを行うこともできます`end()`です。  
+ Hash_set の反復子は、それに関連付けられているコンテナーを識別するハンドルを格納する hash_set が関連付けられているノードを識別するハンドルを格納します。 関連付けられているコンテナー オブジェクトでのみ、反復子を使用することができます。 Hash_set の反復子は、hash_set が関連付けられているノードがいくつかの hash_set に関連付けられている限り有効です。 さらに、有効な反復子は dereferencable--へのアクセスまたは--指定する要素の値を変更すると等しくない限り、使用する`end()`します。  
   
- 消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型が ref クラスは、コンテナーを実現する要素よりも長くありませんコンテナー ただし、ハンドルのコンテナーは`not`その要素を破棄します。  
+ 消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型を持つ ref クラスは、コンテナーによりする要素よりも長く保持しないコンテナーです。 ただし、ハンドルのコンテナーは*いない*その要素を破棄します。  
   
 ## <a name="members"></a>メンバー
 
@@ -247,12 +247,12 @@ template<typename Key>
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator begin();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、または空のシーケンスの最後を越えたところ、被制御シーケンスの最初の要素を指定する双方向反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合は、被制御シーケンスが、そのステータスの先頭を変更できます。  
+ メンバー関数は、被制御シーケンス、または空のシーケンスの末尾を越えた最初の要素を指定する双方向反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、被制御シーケンスが、そのステータスの先頭を変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -280,7 +280,6 @@ int main()
     System::Console::WriteLine("*++begin() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
 
 ## <a name="bucket_count"></a> hash_set::bucket_count (STL/CLR)
@@ -288,12 +287,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 int bucket_count();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数では、現在のバケット数を返します。 使用するハッシュ テーブルのサイズを決定します。  
+ メンバー関数は、現在のバケット数を返します。 これを使用するにはハッシュ テーブルのサイズを決定します。  
   
 ### <a name="example"></a>例  
   
@@ -338,7 +337,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -361,12 +359,12 @@ max_load_factor() = 0.25
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void clear();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数が効果的に呼び出し[hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`())`. これを使用するには、被制御シーケンスが空であることを確認します。  
+ メンバー関数は、効果的に呼び出す[hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`())`. これを使用するには、被制御シーケンスが空であることを確認します。  
   
 ### <a name="example"></a>例  
   
@@ -403,7 +401,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -418,12 +415,12 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T2 const_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数の双方向反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数双方向反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -447,7 +444,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -459,7 +455,7 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% const_reference;  
 ```  
   
@@ -491,7 +487,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -499,16 +494,16 @@ a b c
 ```  
 
 ## <a name="const_reverse_iterator"></a> hash_set::const_reverse_iterator (STL/CLR)
-被制御シーケンスの定数反転反復子の型。  
+被制御シーケンスの定数反転反復子の種類.  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T4 const_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -532,7 +527,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -544,16 +538,16 @@ c b a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type count(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数と同じ順序付けする被制御シーケンスの要素の数を返します`key`です。 それを使用して、指定したキーと一致する、被制御シーケンスの現在の要素の数を決定します。  
+ メンバー関数と同等の順序を持つ被制御シーケンス内の要素の数を返します*キー*します。 指定したキーと一致する、被制御シーケンスの現在の要素の数を決定するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -580,7 +574,6 @@ int main()
     System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -595,12 +588,12 @@ count(L'C') = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int difference_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、可能性のある負の値の要素の数を表します。  
+ この型は、場合によって負の値の要素の数を表します。  
   
 ### <a name="example"></a>例  
   
@@ -635,7 +628,6 @@ int main()
     System::Console::WriteLine("begin()-end() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -649,12 +641,12 @@ begin()-end() = -3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 bool empty();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスが空の場合に true を返します。 等価である[hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`です。 これを使用するには、hash_set が空かどうかをテストします。  
+ このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`します。 これを使用するには、hash_set が空かどうかをテストします。  
   
 ### <a name="example"></a>例  
   
@@ -684,7 +676,6 @@ int main()
     System::Console::WriteLine("empty() = {0}", c1.empty());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -700,12 +691,12 @@ empty() = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator end();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの最後の位置を指し示す双方向反復子を返します。 被制御シーケンスの末尾を指定する反復子を取得するのにために使用します。その状態は、被制御シーケンスの長さが変更された場合は変更されません。  
+ メンバー関数は、被制御シーケンスの最後の位置を指し示す双方向反復子を返します。 被制御シーケンスの末尾を指定する反復子を取得するのにために使用します。そのステータスは被制御シーケンスの長さが変更された場合は変更されません。  
   
 ### <a name="example"></a>例  
   
@@ -734,7 +725,6 @@ int main()
     System::Console::WriteLine("*--end() = {0}", *++it);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -748,16 +738,16 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数が組の反復子を返します`cliext::pair<iterator, iterator>(` [hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`です。 使用する指定したキーと一致する、被制御シーケンスの現在の要素の範囲が決まります。  
+ メンバー関数は、反復子のペアを返します。 `cliext::pair<iterator, iterator>(` [hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`します。 指定したキーに一致する要素を被制御シーケンスの現在の範囲を決定するのに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -792,7 +782,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -806,33 +795,33 @@ equal_range(L'x') empty = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 bool erase(key_type key)  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 先頭  
- 消去する範囲の開始しています。  
+ *first*  
+ 消去する範囲の先頭。  
   
- key  
+ *key*  
  消去するキー値。  
   
- last  
+ *last*  
  消去する範囲の終了。  
   
- where  
+ *where*  
  消去する要素。  
   
 ### <a name="remarks"></a>Remarks  
- 最初のメンバー関数によって示される、被制御シーケンスの要素を削除する`where`、し、削除、要素の後に残る最初の要素を指定する反復子を返しますまたは[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`このような要素が存在しない場合。 それを使用するには 1 つの要素を削除します。  
+ 最初のメンバー関数が指す被制御シーケンスの要素を削除する*場所*、および削除するには、要素の後に残る最初の要素を指定する反復子を返しますまたは[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()`そのような要素が存在しない場合。 これを使用するには 1 つの要素を削除します。  
   
- 2 番目のメンバー関数、被制御シーケンスの要素の範囲内の削除 [`first`、 `last`)、し、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは`end()`場合、このような要素がないです。存在する. これを使用するには 0 個以上の連続する要素を削除します。  
+ 2 番目のメンバー関数は、範囲の被制御シーケンスの要素を削除する [`first`、 `last`)、し、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは`end()`場合、このような要素がないです。存在する. これを使用するには 0 個以上の連続する要素を削除します。  
   
- 3 番目のメンバー関数と同じ順序キーを持つは、被制御シーケンスのいずれかの要素を削除する`key`、削除された要素の数のカウントを返します。 これを使用して、削除し、指定したキーと一致するすべての要素をカウントします。  
+ 3 番目のメンバー関数は、キーを持つと同じ順序付けの被制御シーケンスの任意の要素を削除します。 を*キー*、削除された要素の数のカウントを返します。 削除や、指定したキーと一致するすべての要素のカウントを使用するとします。  
   
- 各要素の消去では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。  
+ 各要素のデータ消去では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。  
   
 ### <a name="example"></a>例  
   
@@ -872,7 +861,6 @@ int main()
     System::Console::WriteLine("size() = {0}", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -888,16 +876,16 @@ size() = 1
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator find(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- 被制御シーケンス内の少なくとも 1 つの要素と同じ順序付け`key`、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用するとします。  
+ 被制御シーケンス内の少なくとも 1 つの要素があるのと同じ順序付け場合*キー*、メンバー関数は、それらの要素のいずれかを指定する反復子を返しますそれ以外の場合を返します[(STL/CLR)hash_set::end](../dotnet/hash-set-end-stl-clr.md)`()`。 指定したキーに一致する制御シーケンス内の要素を検索に使用します。  
   
 ### <a name="example"></a>例  
   
@@ -927,7 +915,6 @@ int main()
         L'C', c1.find(L'C') != c1.end());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -942,7 +929,7 @@ find C = False
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::  
     IHash<GKey, GValue>  
     generic_container;  
@@ -990,7 +977,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1005,14 +991,14 @@ a b c d e
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ContainerBidirectionalIterator<generic_value>  
     generic_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反復子を表します。  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用的な反復子を表します。  
   
 ### <a name="example"></a>例  
   
@@ -1046,7 +1032,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1060,14 +1045,14 @@ a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseRandomAccessIterator<generic_value>  
     generic_reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用反転反復子を表します。  
+ この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反転反復子を表します。  
   
 ### <a name="example"></a>例  
   
@@ -1101,7 +1086,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1115,12 +1099,12 @@ c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef GValue generic_value;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用することについて説明します。  
+ この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。  
   
 ### <a name="example"></a>例  
   
@@ -1154,7 +1138,6 @@ int main()
     System::Console::WriteLine(" {0}", gcval);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1168,12 +1151,12 @@ a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 hasher^ hash_delegate();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、キーの値を整数に変換するために使用されるデリゲートを返します。 キーのハッシュに使用するとします。  
+ メンバー関数では、キーの値を整数に変換するために使用するデリゲートを返します。 キーのハッシュに使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1192,7 +1175,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1205,7 +1187,7 @@ hash(L'b') = 570892832
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 hash_set();  
 explicit hash_set(key_compare^ pred);  
 hash_set(key_compare^ pred, hasher^ hashfn);  
@@ -1227,87 +1209,87 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- hashfn  
- ハッシュ バケットにマッピング キーの関数。  
+ *hashfn*  
+ ハッシュ バケットにマッピングのキーの関数。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- pred  
- 被制御シーケンスの述語を順序付けです。  
+ *Pred*  
+ 被制御シーケンスの述語を順序付けします。  
   
- 右  
+ *right*  
  挿入するオブジェクトまたは範囲。  
   
 ### <a name="remarks"></a>Remarks  
- : コンス トラクター  
+ コンス トラクター。  
   
  `hash_set();`  
   
- 既定の順序の述語を使用して要素を持たない、被制御シーケンスを初期化`key_compare()`既定のハッシュ関数を使用しています。 これを使用するには、既定の述語とハッシュ関数の順序を持つ、空の初期被制御シーケンスを指定します。  
+ 既定の順序の述語を使用して要素のない、被制御シーケンスを初期化`key_compare()`、および既定のハッシュ関数を使用します。 これを使用するには、既定の順序の述語とハッシュ関数を持つ、空の初期被制御シーケンスを指定します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `explicit hash_set(key_compare^ pred);`  
   
- 順序の指定の述語での要素を持たない被制御シーケンスを初期化します`pred`既定のハッシュ関数を使用しています。 これを使用するには、空の初期被制御シーケンスを指定された順序の指定の述語と既定のハッシュ関数を指定します。  
+ 順序付け述語で、要素のない、被制御シーケンスを初期化します*pred*、および既定のハッシュ関数を使用します。 指定した順序付け述語および既定のハッシュ関数を持つ、空の初期被制御シーケンスを指定して使用します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `hash_set(key_compare^ pred, hasher^ hashfn);`  
   
- 順序の指定の述語での要素を持たない被制御シーケンスを初期化します`pred`、ハッシュ関数を使用して`hashfn`です。 これを使用して、指定の順序の指定の述語とハッシュ関数で、空の初期被制御シーケンスを指定します。  
+ 順序付け述語で、要素のない、被制御シーケンスを初期化します*pred*、ハッシュ関数を使用して*hashfn*します。 これを使用して、順序指定された述語とハッシュ関数を持つ、空の初期被制御シーケンスを指定します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `hash_set(hash_set<Key>% right);`  
   
- シーケンスに、被制御シーケンスを初期化します。 [`right.begin()`、 `right.end()`)、既定の順序の述語、および既定のハッシュ関数です。 Hash_set オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`既定の順序の指定の述語とハッシュ関数を使用します。  
+ シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)、既定の順序の述語、および既定のハッシュ関数。 Hash_set オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*既定の順序付け述語およびハッシュ関数を使用します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `hash_set(hash_set<Key>^ right);`  
   
- シーケンスに、被制御シーケンスを初期化します。 [`right->begin()`、 `right->end()`)、既定の順序の述語、および既定のハッシュ関数です。 Hash_set オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用`right`既定の順序の指定の述語とハッシュ関数を使用します。  
+ シーケンスが被制御シーケンスを初期化します [`right->begin()`、 `right->end()`)、既定の順序の述語、および既定のハッシュ関数。 Hash_set オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*既定の順序付け述語およびハッシュ関数を使用します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIter> hash_set(InIter first, InIter last);`  
   
- シーケンスに、被制御シーケンスを初期化します。 [`first`、 `last`)、既定の順序の述語、および既定のハッシュ関数です。 使用する既定の順序の述語とハッシュ関数で被制御シーケンスの別のシーケンスのコピーを作成します。  
+ シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、既定の順序の述語、および既定のハッシュ関数。 これを使用するには述語とハッシュ関数を順序付け、既定値は、被制御シーケンスの別のシーケンスをコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`  
   
- シーケンスに、被制御シーケンスを初期化します [`first`、 `last`)、順序の指定の述語に置き換えます`pred`既定のハッシュ関数を使用しています。 これを使用するには、被制御シーケンスの順序指定された述語と既定のハッシュ関数、別のシーケンスのコピーを作成します。  
+ シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、順序付け述語で*pred*と既定のハッシュ関数を使用します。 これを使用するには、被制御シーケンスの別のシーケンスを指定した順序付け述語と既定のハッシュ関数のコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- シーケンスに、被制御シーケンスを初期化します [`first`、 `last`)、順序の指定の述語と`pred`、ハッシュ関数を使用して`hashfn`です。 これを使用するには、被制御シーケンスの指定の順序の指定の述語とハッシュ関数で、別のシーケンスのコピーを作成します。  
+ シーケンスが被制御シーケンスを初期化します [`first`、 `last`)、順序付け述語で*pred*、ハッシュ関数を使用して*hashfn*します。 これを使用するには、被制御シーケンスの順序指定された述語とハッシュ関数で、もう 1 つのシーケンスのコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`既定の順序の述語、および既定のハッシュ関数です。 これを使用するには、被制御シーケンスの既定の順序の述語とハッシュ関数と、列挙子によって記述された別のシーケンスのコピーを作成します。  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*既定の順序の述語、および既定のハッシュ関数。 これを使用するには、被制御シーケンスの既定の順序の述語とハッシュ関数で、列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`、順序の指定の述語に置き換えます`pred`既定のハッシュ関数を使用しています。 これを使用するには、被制御シーケンスに指定された順序の指定の述語と既定ハッシュ関数、列挙子によって記述された別のシーケンスのコピーを作成します。  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*、順序付け述語で*pred*と既定のハッシュ関数を使用します。 これを使用するには、被制御シーケンスの指定した順序付け述語と既定ハッシュ関数を使用した、列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。  
   
- : コンス トラクター  
+ コンス トラクター。  
   
  `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します`right`、順序の指定の述語と`pred`、ハッシュ関数を使用して`hashfn`です。 これを使用するには、被制御シーケンスの指定の順序の指定の述語とハッシュ関数で、列挙子によって記述された別のシーケンスのコピーを作成します。  
+ 列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*、順序付け述語で*pred*、ハッシュ関数を使用して*hashfn*します。 これを使用するには、被制御シーケンスの順序指定された述語とハッシュ関数で、列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。  
   
 ### <a name="example"></a>例  
   
@@ -1415,7 +1397,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1443,7 +1424,7 @@ size() = 0
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
     hasher;  
 ```  
@@ -1468,7 +1449,6 @@ int main()
     System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1481,7 +1461,7 @@ hash(L'b') = 570892832
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 cliext::pair<iterator, bool> insert(value_type val);  
 iterator insert(iterator where, value_type val);  
 template<typename InIter>  
@@ -1490,33 +1470,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 先頭  
- 挿入する範囲の開始しています。  
+ *first*  
+ 挿入する範囲の先頭。  
   
- last  
+ *last*  
  挿入する範囲の終了。  
   
- 右  
- 列挙型を挿入します。  
+ *right*  
+ 挿入する列挙です。  
   
- Val  
+ *val*  
  挿入するキー値。  
   
- where  
- (ヒントのみ) を挿入するためのコンテナー内の場所。  
+ *where*  
+ (ヒントのみ) を挿入するコンテナー内の場所。  
   
 ### <a name="remarks"></a>Remarks  
  各メンバー関数は、残りのオペランドで指定されたシーケンスを挿入します。  
   
- 最初のメンバー関数が値を持つ要素を挿入するよう努めて`val`、値のペアを返しますと`X`です。 場合`X.second`が true の場合、`X.first`新しく挿入される要素を指定以外の場合`X.first`それと同等の要素を指定既に順序付けが存在し、新しい要素が挿入されません。 使用する 1 つの要素を挿入します。  
+ 最初のメンバー関数が値を持つ要素を挿入しようと*val*、値のペアを返しますと`X`します。 場合`X.second`が true の場合`X.first`新しく挿入される要素を指定します。 それ以外の`X.first`と同等の要素を指定既に順序付けが存在し、新しい要素は挿入されません。 これを使用して、1 つの要素を挿入します。  
   
- 2 番目のメンバー関数は、値を持つ要素を挿入します。`val`を使用して、 `where` (パフォーマンスを向上させる) をヒントとしてし、新しく挿入される要素を指定する反復子を返します。 使用することがわかって要素に隣接する可能性のある 1 つの要素を挿入します。  
+ 2 番目のメンバー関数は、値を持つ要素を挿入する*val*を使用して、*場所*(パフォーマンスを向上させる) をヒントとしてし、新しく挿入された要素を指定する反復子を返します。 これを使用するにはわかって要素に隣接する可能性のある 1 つの要素を挿入します。  
   
- 3 番目のメンバー関数は、シーケンスを挿入します。 [`first`、 `last`)。 使用する別のシーケンスからコピーした 0 個以上の要素を挿入します。  
+ 3 番目のメンバー関数は、シーケンスを挿入します。 [`first`、 `last`)。 これを使用して、別のシーケンスからコピーした 0 個以上の要素を挿入します。  
   
- 4 番目のメンバー関数で指定されたシーケンスを挿入する、`right`です。 使用する列挙子によって説明されているシーケンスを挿入します。  
+ 4 番目のメンバー関数で指定されたシーケンスを挿入する、*右*します。 これを使用して、列挙子によって説明されているシーケンスを挿入します。  
   
- 各要素の挿入では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。 挿入は、カーソル位置に隣接する要素を指定するヒントの指定、償却定数時間でただし、実行できます。  
+ 各要素の挿入では、被制御シーケンス内の要素の数の対数に比例して時間がかかります。 挿入は発生償却定数時間でただし、カーソル位置に隣接する要素を指定するヒントを指定します。  
   
 ### <a name="example"></a>例  
   
@@ -1576,7 +1556,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1595,12 +1574,12 @@ insert(begin(), L'y') = y
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T1 iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスの双方向反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスの双方向反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -1624,7 +1603,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1632,16 +1610,16 @@ a b c
 ```  
 
 ## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
-2 つのキーの順序付けのデリゲートをコピーします。  
+2 つのキーの順序付けデリゲートをコピーします。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 2 つのキーの比較に使用するとします。  
+ このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 2 つのキーの比較に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1676,7 +1654,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1690,16 +1667,16 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
-2 つのキーの順序付けのデリゲートをコピーします。  
+2 つのキーの順序付けデリゲートをコピーします。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 key_compare^key_comp();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 2 つのキーの比較に使用するとします。  
+ このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 2 つのキーの比較に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1734,7 +1711,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1748,11 +1724,11 @@ compare(L'b', L'a') = True
 ```  
 
 ## <a name="key_compare"></a> hash_set::key_compare (STL/CLR)
-2 つのキーの順序付けのデリゲート。  
+2 つのキーの順序付けデリゲート。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
@@ -1793,7 +1769,6 @@ int main()
         kcomp(L'b', L'a'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1811,12 +1786,12 @@ compare(L'b', L'a') = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef Key key_type;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型は、テンプレート パラメーター `Key` のシノニムです。  
+ 型はテンプレート パラメーターのシノニム*キー*します。  
   
 ### <a name="example"></a>例  
   
@@ -1843,7 +1818,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1855,12 +1829,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 float load_factor();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数を返します`(float)` [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`です。 使用するバケットの平均サイズを決定します。  
+ メンバー関数を返します`(float)` [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`します。 これを使用して、バケットの平均サイズを決定します。  
   
 ### <a name="example"></a>例  
   
@@ -1905,7 +1879,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1928,16 +1901,16 @@ max_load_factor() = 0.25
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator lower_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、最初の要素を決定する`X`同じバケットにハッシュされる被制御シーケンス内`key`と同じ順序が`key`です。 このような要素が存在しないかどうかが返されます[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; 指定する反復子を返しますそれ以外の場合`X`です。 これを使用して、指定したキーと一致する、被制御シーケンス内で現在の要素のシーケンスの先頭を検索します。  
+ メンバー関数は、最初の要素を決定する`X`として同じバケットにハッシュを被制御シーケンス内*キー*と同等の順序あり*キー*します。 このような要素が存在しないかどうか、それを返します[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; 指定する反復子を返します`X`します。 指定したキーと一致する、被制御シーケンス内で要素のシーケンスの先頭を現在検索を使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -1968,7 +1941,6 @@ int main()
         *c1.lower_bound(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -1983,16 +1955,16 @@ lower_bound(L'x')==end() = True
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 static value_type make_value(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  使用するキー値。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数を返します、`value_type`オブジェクト キーを持つ`key`します。 他のいくつかのメンバー関数で使用するために適切なオブジェクトの作成に使用するとします。  
+ メンバー関数を返します、`value_type`オブジェクト キーを持つ*キー*します。 その他のいくつかのメンバー関数で使用するための適切なオブジェクトの作成に使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2015,7 +1987,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2027,19 +1998,19 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- new_factor  
+ *new_factor*  
  新しい最大値を格納する要素を読み込みます。  
   
 ### <a name="remarks"></a>Remarks  
- 最初のメンバー関数は、現在格納されている最大占有率を返します。 使用する最大バケットの平均サイズを決定します。  
+ 最初のメンバー関数は、現在格納されている最大テーブル要素を返します。 これを使用するには最大バケットの平均サイズを決定します。  
   
- 2 番目のメンバー関数とストアの最大テーブル占有率が置き換えられます`new_factor`です。 自動再ハッシュは行われませんまで後続の挿入します。  
+ 2 番目のメンバー関数は、ストアの最大テーブル占有率を*new_factor*します。 自動再ハッシュは行われませんまで後続の挿入します。  
   
 ### <a name="example"></a>例  
   
@@ -2084,7 +2055,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
 
 ## <a name="op"></a> hash_set::operator = (STL/CLR)
@@ -2092,16 +2062,16 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 hash_set<Key>% operator=(hash_set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
+ *right*  
  コピーするコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- メンバー演算子コピー`right`オブジェクトを返します`*this`です。 これを使用して、被制御シーケンスを `right` の被制御シーケンスのコピーと置き換えます。  
+ メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。  
   
 ### <a name="example"></a>例  
   
@@ -2132,7 +2102,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2145,12 +2114,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reverse_iterator rbegin();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、最後の要素または空のシーケンスの先頭を越えた、被制御シーケンスの指定、逆順反復子を返します。 したがって、これを指定、`beginning`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合、逆の順序で表示される、被制御シーケンスですがその状態の先頭は変更できます。  
+ このメンバー関数は、または空のシーケンスの先頭を越えた、被制御シーケンスの最後の要素を指定する反転反復子を返します。 したがって、指定、`beginning`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの先頭は変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -2178,7 +2147,6 @@ int main()
     System::Console::WriteLine("*++rbegin() = {0}", *++rit);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2192,7 +2160,7 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef value_type% reference;  
 ```  
   
@@ -2224,7 +2192,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2236,12 +2203,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void rehash();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、ことを確認する、ハッシュ テーブルをリビルド[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)です。 それ以外の場合、挿入後に必要な場合のみ、ハッシュ テーブルはサイズで増加します。 (が自動的にサイズは小さくなります。)使用するハッシュ テーブルのサイズを調整します。  
+ メンバー関数は、ことを確認するハッシュ テーブルを再構築[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)します。 それ以外の場合、挿入後に必要な場合にのみ、ハッシュ テーブルはサイズで増加します。 (が自動的にサイズは小さくなります。)これを使用して、ハッシュ テーブルのサイズを調整します。  
   
 ### <a name="example"></a>例  
   
@@ -2286,7 +2253,6 @@ int main()
         c1.max_load_factor());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2309,12 +2275,12 @@ max_load_factor() = 0.25
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 reverse_iterator rend();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの先頭位置を指し示す反転反復子を返します。 したがって、これを指定、`end`反転シーケンスのです。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さを変更した場合は逆の順序で表示される、被制御シーケンスですがその状態の終了を変更できます。  
+ メンバー関数は、被制御シーケンスの先頭を越えたを指す、逆順反復子を返します。 したがって、指定、`end`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの末尾は変更できます。  
   
 ### <a name="example"></a>例  
   
@@ -2343,7 +2309,6 @@ int main()
     System::Console::WriteLine("*--rend() = {0}", *++rit);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2357,12 +2322,12 @@ int main()
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef T3 reverse_iterator;  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として使用されることができます。  
+ この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として機能することができます。  
   
 ### <a name="example"></a>例  
   
@@ -2386,7 +2351,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2398,12 +2362,12 @@ c b a
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 size_type size();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、被制御シーケンスの長さを返します。 これを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスが参照してください、0 以外のサイズを持つかどうかは、関心のあるすべて場合[hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`です。  
+ このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`します。  
   
 ### <a name="example"></a>例  
   
@@ -2436,7 +2400,6 @@ int main()
     System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2451,7 +2414,7 @@ size() = 2 after adding 2
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef int size_type;  
 ```  
   
@@ -2485,7 +2448,6 @@ int main()
     System::Console::WriteLine("end()-begin() = {0}", diff);   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2498,16 +2460,16 @@ end()-begin() = 3
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void swap(hash_set<Key>% right);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- 右  
+ *right*  
  コンテンツを交換するコンテナー。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数は、`this` と `right` の間で被制御シーケンスを交換します。 定数時間では、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。  
+ メンバー関数は、交換の間で被制御シーケンス`this`と*右*します。 これは一定の時間内と、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2549,7 +2511,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2564,12 +2525,12 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 cli::array<value_type>^ to_array();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数では、被制御シーケンスを格納する配列を返します。 使用する配列形式の被制御シーケンスのコピーを入手します。  
+ メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2600,7 +2561,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2613,16 +2573,16 @@ a b c
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 iterator upper_bound(key_type key);  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- key  
+ *key*  
  検索対象のキー値。  
   
 ### <a name="remarks"></a>Remarks  
- このメンバー関数の最後の要素を決定する`X`同じバケットにハッシュされる被制御シーケンス内`key`と同じ順序が`key`です。 このような要素が存在しない場合、または場合`X`、被制御シーケンスの最後の要素では返します[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`;最初の要素を指定する反復子を返しますそれ以外の場合`X`. これを使用して、指定したキーと一致する、被制御シーケンス内で現在の要素のシーケンスの末尾を検索します。  
+ メンバー関数は、最後の要素を決定する`X`として同じバケットにハッシュを被制御シーケンス内*キー*と同等の順序あり*キー*します。 このような要素が存在しない場合、または場合`X`、被制御シーケンスの最後の要素では返します[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`;を超える最初の要素を指定する反復子を返します`X`. 指定したキーと一致する、被制御シーケンス内で要素のシーケンスの末尾を現在検索を使用するとします。  
   
 ### <a name="example"></a>例  
   
@@ -2653,7 +2613,6 @@ int main()
         *c1.upper_bound(L'b'));   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2664,16 +2623,16 @@ upper_bound(L'x')==end() = True
 ```  
 
 ## <a name="value_comp"></a> hash_set::value_comp (STL/CLR)
-2 つの要素値の順序付けのデリゲートをコピーします。  
+2 つの要素の値の順序付けデリゲートをコピーします。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 value_compare^ value_comp();  
 ```  
   
 ### <a name="remarks"></a>Remarks  
- メンバー関数では、被制御シーケンスの並べ替えに使用される順序付けのデリゲートを返します。 使用する 2 つの要素値を比較します。  
+ このメンバー関数は、被制御シーケンスの並べ替えに使用される順序付けデリゲートを返します。 これを使用するには 2 つの要素の値を比較します。  
   
 ### <a name="example"></a>例  
   
@@ -2707,11 +2666,11 @@ compare(L'b', L'a') = False
 ```  
 
 ## <a name="value_compare"></a> hash_set::value_compare (STL/CLR)
-2 つの要素値の順序付けのデリゲート。  
+2 つの要素の値の順序付けデリゲート。  
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
@@ -2741,7 +2700,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
@@ -2755,7 +2713,7 @@ compare(L'b', L'a') = False
   
 ### <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef generic_value value_type;  
 ```  
   
@@ -2787,7 +2745,6 @@ int main()
     System::Console::WriteLine();   
     return (0);   
     }  
-  
 ```  
   
 ```Output  
