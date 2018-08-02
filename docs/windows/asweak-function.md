@@ -1,5 +1,5 @@
 ---
-title: AsWeak 関数 |Microsoft ドキュメント
+title: AsWeak 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 039d210e9a204c485e2f44c39ea87b4d35089d88
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a51b7095ec654c4ebb393c9a83d1e30fb52ce019
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854825"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462626"
 ---
 # <a name="asweak-function"></a>AsWeak 関数
 指定されたインスタンスへの弱い参照を取得します。  
@@ -38,17 +38,17 @@ HRESULT AsWeak(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- パラメーターの型へのポインター`p`です。  
+ *T*  
+ パラメーターの型へのポインター *p*します。  
   
- `p`  
+ *p*  
  型のインスタンス。  
   
- `pWeak`  
- この操作の完了時、パラメーターへの弱い参照へのポインター`p`です。  
+ *pWeak*  
+ ときにこの操作が完了すると、パラメーターへの弱い参照へのポインター *p*します。  
   
 ## <a name="return-value"></a>戻り値  
- この操作が成功した場合は S_OK、それ以外の場合、エラーのエラーの原因を示す hresult 値。  
+ この操作に成功した場合は S_OK、それ以外の場合、エラーのエラーの原因を示す hresult 値。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

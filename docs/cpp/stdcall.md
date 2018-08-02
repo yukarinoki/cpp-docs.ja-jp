@@ -16,22 +16,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09efc905507d93bbb80b003f93b885d9d27fcb1d
-ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
+ms.openlocfilehash: f8b845fd147f51e3546f7a11afa0bae6deb5d527
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37939846"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461466"
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 固有の仕様**  
   
- **_ _Stdcall**呼び出し規約は、Win32 API 関数を呼び出すには使用できます。 コンパイラは、呼び出し先がスタックを消去**vararg**関数 **_ _cdecl**します。 この呼び出し規則を使用する関数には、関数プロトタイプが必要です。  
+ **_ _Stdcall**呼び出し規約は、Win32 API 関数を呼び出すには使用できます。 コンパイラは、呼び出し先がスタックを消去`vararg`関数 **_ _cdecl**します。 この呼び出し規則を使用する関数には、関数プロトタイプが必要です。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
@@ -73,7 +72,7 @@ void __stdcall CMyClass::mymethod() { return; }
 ```  
   
 ## <a name="example"></a>例  
- _ _ を使用して次の例では、**stdcall**すべて`WINAPI`標準呼び出しとして処理される関数の型します。  
+ 次の例での使用 **_ _stdcall**すべて`WINAPI`標準呼び出しとして処理される関数の型します。  
   
 ```cpp  
 // Example of the __stdcall keyword  

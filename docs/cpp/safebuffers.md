@@ -1,5 +1,5 @@
 ---
-title: safebuffers |Microsoft ドキュメント
+title: safebuffers |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbfc9317b5ed7c63e9c70b081c3f241b86a65e5f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467840"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft 固有の仕様**  
@@ -34,27 +35,27 @@ ms.lasthandoff: 05/03/2018
 __declspec( safebuffers )  
 ```  
   
-## <a name="remarks"></a>コメント  
- **/GS**コンパイラ オプションは、スタック上のセキュリティ チェックを挿入することによってバッファー オーバーランをテストするコンパイラです。 セキュリティ チェックの対象になるデータ構造の種類は「 [/GS (バッファー セキュリティ チェック)](../build/reference/gs-buffer-security-check.md)です。 バッファー オーバーランの検出の詳細については、次を参照してください。[コンパイラ セキュリティ チェックで深さ](http://go.microsoft.com/fwlink/p/?linkid=7260)MSDN Web サイトです。  
+## <a name="remarks"></a>Remarks  
+ **/GS**コンパイラ オプションによって、コンパイラは、スタック上でセキュリティ チェックを挿入してバッファー オーバーランをテストします。 セキュリティ チェックの対象となるデータ構造体の型が記載されて[/GS (バッファー セキュリティ チェック)](../build/reference/gs-buffer-security-check.md)します。 バッファー オーバーランの検出の詳細については、次を参照してください。[コンパイラ セキュリティの徹底](http://go.microsoft.com/fwlink/p/?linkid=7260)MSDN Web サイト。  
   
- 専門家による手動コード レビューまたは外部解析によって、関数がバッファー オーバーランしないと判断される場合もあります。 その場合は、適用することで、関数のセキュリティ チェックを抑制できます、`__declspec(safebuffers)`関数の宣言キーワード。  
+ 専門家による手動コード レビューまたは外部解析によって、関数がバッファー オーバーランしないと判断される場合もあります。 その場合は、適用することで、関数のセキュリティ チェックを抑制できます、 **__declspec(safebuffers)** 関数の宣言キーワード。  
   
 > [!CAUTION]
 >  バッファー セキュリティ チェックは重要なセキュリティ保護を提供し、パフォーマンスにはほとんど影響がありません。 したがって、関数のパフォーマンスが重視され、関数が安全であることが判明しているまれなケースを除き、チェックを抑制しないことをお勧めします。  
   
 ## <a name="inline-functions"></a>インライン関数  
- A*プライマリ関数*使用できる、[インライン展開](inline-functions-cpp.md)のコピーを挿入するキーワード、*セカンダリ関数*です。 場合、`__declspec(safebuffers)`キーワードが関数に適用される、その関数のバッファー オーバーランの検出を抑制します。 ただし、インライン展開に影響、`__declspec(safebuffers)`キーワードを次のようにします。  
+ A*プライマリ関数*使用できる、[インライン展開](inline-functions-cpp.md)のコピーを挿入するキーワード、*セカンダリ関数*。 場合、 **__declspec(safebuffers)** キーワードが関数に適用される、その関数のバッファー オーバーランの検出は抑制されます。 ただし、インライン展開の影響、 **__declspec(safebuffers)** キーワードが次のようにします。  
   
- たとえば、 **/GS**どちらの関数のコンパイラ オプションが指定されましたが、主な機能を指定します、`__declspec(safebuffers)`キーワード。 セカンダリ関数のデータ構造によってセキュリティ チェックの対象となり、関数はこれらのチェックを抑制しません。 この場合、次のようになります。  
+ たとえば、 **/GS**コンパイラ オプションが両方の関数に対して指定されたが、主な機能を指定します、 **__declspec(safebuffers)** キーワード。 セカンダリ関数のデータ構造によってセキュリティ チェックの対象となり、関数はこれらのチェックを抑制しません。 この場合、次のようになります。  
   
--   指定して、 [_ _forceinline](inline-functions-cpp.md)コンパイラの最適化に関係なく関数のインライン展開を強制的にセカンダリ関数ではキーワードです。  
+-   指定、 [_ _forceinline](inline-functions-cpp.md)コンパイラの最適化に関係なく関数のインライン展開を強制的にセカンダリ関数のキーワード。  
   
--   セカンダリ関数はセキュリティ チェックの対象となるため、セキュリティ チェックにも適用されます、主な機能を指定しても、`__declspec(safebuffers)`キーワード。  
+-   指定する場合でも、セキュリティ チェックが主な機能に適用もセカンダリ関数は、セキュリティ チェックの対象であるため、 **__declspec(safebuffers)** キーワード。  
   
 ## <a name="example"></a>例  
- 次のコードを使用する方法を示しています、`__declspec(safebuffers)`キーワード。  
+ 次のコードを使用する方法を示しています、 **__declspec(safebuffers)** キーワード。  
   
-```  
+```cpp 
 // compile with: /c /GS  
 typedef struct {  
     int x[20];  

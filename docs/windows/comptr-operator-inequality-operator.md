@@ -1,5 +1,5 @@
 ---
-title: Comptr::operator! = 演算子 |Microsoft ドキュメント
+title: Comptr::operator! = 演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,15 +15,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2450b5d473d1caadae171516cf337479bfd5d603
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0a4c15946862a66c0d4d830f590230763ce3e6f9
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33881882"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461823"
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator!= 演算子
-2 つの ComPtr オブジェクトが等しくないかどうかを示します。  
+示す 2 つかどうか**ComPtr**オブジェクトが等しくないです。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,20 +42,19 @@ bool operator!=(
    decltype(__nullptr),  
    const ComPtr<T>& a  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `a`  
- ComPtr オブジェクトへの参照。  
+ *a*  
+ 参照を**ComPtr**オブジェクト。  
   
- `b`  
- もう 1 つの ComPtr オブジェクトへの参照。  
+ *b*  
+ 別の参照**ComPtr**オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 最初の演算子によって生成`true`場合オブジェクト`a`がオブジェクトと等しくない`b`、それ以外の`false`します。  
+ 最初の演算子と**true**場合オブジェクト *、* オブジェクトと等しくない*b*、それ以外の**false**します。  
   
- 2 番目と 3 番目の演算子の yield`true`場合オブジェクト`a`は等しくありません`nullptr`、それ以外の`false`します。  
+ 2 番目と 3 番目の演算子を生成**true**場合オブジェクト *、* が等しくない**nullptr**、それ以外の**false**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

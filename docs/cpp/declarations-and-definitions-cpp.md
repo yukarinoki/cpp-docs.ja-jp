@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895a2e3a78c425511f978454d07cf9574f7d8337
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: fdf87e9db7ecd419897615ab45cc967360b67fc2
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403720"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39462402"
 ---
 # <a name="declarations-and-definitions-c"></a>宣言と定義 (C++)
 宣言は、プログラムでは、名前であり、変数、名前空間、関数およびクラスの名前などを紹介します。 また、宣言では、型情報だけでなく、宣言されるオブジェクトの他の特性も指定します。 名前は使用する前に宣言する必要があります。C++ では、名前が宣言される位置でコンパイラから可視になるかどうかが決まります。 関数またはコンパイル単位で宣言されているクラスを参照することはできません。使用することができます*宣言を転送*この制限を回避します。  
@@ -39,7 +39,7 @@ ms.locfileid: "39403720"
   
 5.  **Typedef**ステートメント。  
   
- 定義でもある宣言の例を次に示します。  
+定義でもある宣言の例を次に示します。  
   
 ```cpp 
 // Declare and define int variables i and j.  
@@ -58,7 +58,7 @@ public:
 };  
 ```  
   
- 定義でない宣言のいくつかを次に示します。  
+定義でない宣言のいくつかを次に示します。  
   
 ```cpp 
 extern int i;  

@@ -1,5 +1,5 @@
 ---
-title: ActivateInstance 関数 |Microsoft ドキュメント
+title: ActivateInstance 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 413bf73d5aeaef2c210be89f3c6f4ca3a4254ba4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855576"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461972"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 関数
-登録し、指定したクラス ID で定義されている、指定した型のインスタンスを取得します  
+登録し、指定したクラス ID で定義されている指定された型のインスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,17 +39,17 @@ inline HRESULT ActivateInstance(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `T`  
- アクティブ化する型。  
+ *T*  
+ アクティブにする型。  
   
- `activatableClassId`  
- パラメーターを定義するクラスの ID の名前`T`です。  
+ *activatableClassId*  
+ パラメーターを定義するクラスの ID の名前*T*します。  
   
- `instance`  
- この操作の完了時のインスタンスへの参照を`T`です。  
+ *インスタンス*  
+ ときにこの操作が完了したらのインスタンスへの参照を*T*します。  
   
 ## <a name="return-value"></a>戻り値  
- 正常終了した場合は S_OK、それ以外の場合、エラーのエラーの原因を示す hresult 値。  
+ 成功した場合は s_ok を返します。それ以外の場合、エラーのエラーの原因を示す hresult 値。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** client.h  

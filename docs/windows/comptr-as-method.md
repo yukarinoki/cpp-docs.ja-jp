@@ -1,5 +1,5 @@
 ---
-title: Comptr::as メソッド |Microsoft ドキュメント
+title: Comptr::as メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb9fd0ff09f6775a95ff881d9f8cbaa3edc61065
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8307411994fb2f850a71e91b63b44052cca40e0
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857273"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461011"
 ---
 # <a name="comptras-method"></a>ComPtr::As メソッド
-指定されたテンプレート パラメーターで識別されるインターフェイスを表す ComPtr オブジェクトを返します。  
+返します、 **ComPtr**指定されたテンプレート パラメーターで識別されるインターフェイスを表すオブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 template<typename U>  
 HRESULT As(  
    _Out_ ComPtr<U>* p  
@@ -40,17 +39,16 @@ template<typename U>
 HRESULT As(  
    _Out_ Details::ComPtrRef<ComPtr<U>> p  
 ) const;  
-  
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `U`  
- パラメーターによって表されるインターフェイス`p`です。  
+ *U*  
+ パラメーターで表されるインターフェイス*p*します。  
   
- `p`  
- パラメーターで指定されたインターフェイスを表す ComPtr オブジェクト`U`です。 パラメーター`p`現在の ComPtr オブジェクトを参照する必要があります。  
+ *p*  
+ A **ComPtr**パラメーターで指定されたインターフェイスを表すオブジェクトを*U*します。パラメーター *p*現在を指していない**ComPtr**オブジェクト。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  最初のテンプレートは、コードで使用する必要があるフォームです。 2 番目のテンプレートは、 [auto](../cpp/auto-cpp.md) 型推論キーワードなどの C++ 言語の機能をサポートしている内部ヘルパーの特殊化です。  
   
 ## <a name="return-value"></a>戻り値  

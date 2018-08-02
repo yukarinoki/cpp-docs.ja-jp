@@ -1,5 +1,5 @@
 ---
-title: 属性 |Microsoft ドキュメント
+title: 属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d72506e3f384a784bce4d159e8e76e88098c79f7
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33862063"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461810"
 ---
 # <a name="attribute"></a>属性
-カスタム属性を作成できます。  
+カスタム属性を作成することができます。  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
-      [ attribute(  
+[ attribute(  
    AllowOn,  
    AllowMultiple=boolean,  
    Inherited=boolean  
@@ -43,34 +42,34 @@ ms.locfileid: "33862063"
   
 #### <a name="parameters"></a>パラメーター  
  *AllowOn*  
- カスタム属性の適用先の言語要素を指定します。 既定値は**System::AttributeTargets::All** (を参照してください[値](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx))。  
+ カスタム属性を適用できる言語要素を指定します。 既定値は`System::AttributeTargets::All`(を参照してください[値](https://msdn.microsoft.com/library/system.attributetargets.aspx))。  
   
- `AllowMultiple`  
- カスタム属性を構成要素に繰り返し適用できるかどうかを指定します。 既定値は**FALSE**です。  
+ *AllowMultiple*  
+ 構成要素にカスタム属性を繰り返し適用できるかどうかを指定します。 既定値は FALSE です。  
   
- `Inherited`  
- 属性をサブクラスに継承するかどうかを示します。 コンパイラです。 この機能を特別なサポートはありません。この情報を処理する属性コンシューマー (リフレクションの使用例) のジョブには。 場合`Inherited`は**TRUE**属性を継承します。 場合`AllowMultiple`は**TRUE**、属性が派生メンバーであるに蓄積される場合`AllowMultiple`は**FALSE**属性はオーバーライド (または 置換) で継承します。 場合`Inherited`は**FALSE**属性は継承できません。 既定値は**TRUE**です。  
+ *継承*  
+ サブクラスに継承される属性を示します。 コンパイラは特別なサポートしていません。 この機能のこの情報を尊重する属性のコンシューマー (リフレクションの使用例) のジョブになります。 場合*継承された*が true の場合、この属性を継承します。 場合*AllowMultiple*が true の場合場合に、派生メンバーでは、属性が蓄積されます*AllowMultiple* false で、属性はオーバーライド (または置換) 継承します。 場合*継承された*false で、属性は継承されません。 既定値は TRUE です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  `attribute`属性は推奨されなくなりました。  共通言語ランタイム属性 System.Attribute に直接を使用すると、子のユーザー定義属性を作成できます。  詳細については、次を参照してください。[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)です。  
+>  `attribute`属性が非推奨となりました。  直接の共通言語ランタイム属性 System.Attribute を使用すると、ユーザー定義の子の属性を作成できます。  詳細については、次を参照してください。[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)します。  
   
- 定義する、[カスタム属性](../windows/custom-attributes-cpp.md)配置することによって、`attribute`マネージ クラスまたは構造体定義の属性です。 クラスの名前は、カスタム属性です。 例えば:  
+ 定義する、[カスタム属性](../windows/custom-attributes-cpp.md)配置することで、`attribute`マネージ クラスまたは構造体の定義に対する属性。 クラスの名前は、カスタム属性です。 例えば:  
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- myattr 関数パラメーターに適用できる属性を定義します。 クラスは、属性が他のアセンブリで使用する場合はパブリックである必要があります。  
+ という名前の属性を定義します。`MyAttr`関数パラメーターに適用できます。 クラスは、属性が他のアセンブリで使用する場合は、パブリックである必要があります。  
   
 > [!NOTE]
->  名前空間の競合を防ぐためには、すべての属性名に暗黙的に付いて"Attribute"です。この例では、属性とクラスの名前が MyAttrAttribute 実際には、MyAttr と MyAttrAttribute を置き換えて使用することができます。  
+>  名前空間の競合を防ぐためには、すべての属性名に暗黙的に"Attribute"終わる;属性とクラスの名前を実際には、この例では`MyAttrAttribute`が`MyAttr`と`MyAttrAttribute`同じ意味で使用できます。  
   
- クラスのパブリック コンス トラクターは、属性の名前のないパラメーターを定義します。 オーバー ロードされたコンス トラクターは、複数の方法は、そのカスタム属性には、次の方法が定義されているため、属性を指定するを許可します。  
+ クラスのパブリック コンス トラクターは、属性の名前のないパラメーターを定義します。 オーバー ロードされたコンス トラクターは、複数の方法であるカスタム属性には、次の方法が定義されているため、属性を指定するを許可します。  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -90,7 +89,7 @@ ref class ClassB {};   // Attribute with one parameter
   
  クラスのパブリック データ メンバーおよびプロパティは、属性の省略可能な名前付きパラメーターには。  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_2.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -112,13 +111,13 @@ public:
 ref class ClassC {};  
 ```  
   
- 可能な属性パラメーター型の一覧は、次を参照してください。[カスタム属性](../windows/custom-attributes-cpp.md)です。  
+ 可能な属性パラメーターの型の一覧は、次を参照してください。[カスタム属性](../windows/custom-attributes-cpp.md)します。  
   
  参照してください[ユーザー定義の属性](../windows/user-defined-attributes-cpp-component-extensions.md)属性の対象の詳細についてはします。  
   
- `attribute`属性が、`AllowMultiple`カスタム属性が 1 つ使用するかどうかを指定するパラメーターまたは multiuse (が複数回表示される同じエンティティで)。  
+ `attribute`属性が、 *AllowMultiple*カスタム属性が 1 回使用するかどうかを指定するパラメーターまたは multiuse (に表示できる複数回、同じエンティティ)。  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_3.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -131,7 +130,7 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- カスタム属性クラスの派生直接的または間接的にから<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>メタデータの高速で簡単に属性の定義を識別するため、します。 `attribute`属性は、明示的な派生が必要ではないために、system::attribute から継承を意味します。  
+ カスタム属性クラスは直接または間接的にから派生<xref:System.ComponentModel.AttributeCollection.%23ctor%2A>、高速かつ簡単にメタデータ内の属性定義を識別するため、します。 `attribute`属性が明示的な派生が必要ないために、system::attribute からの継承を意味します。  
   
 ```  
 [ attribute(Class) ]  
@@ -145,7 +144,7 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` エイリアス<xref:System.AttributeUsageAttribute?displayProperty=fullName>(AttributeAttribute されません。 これは、属性の名前付け規則の例外)。  
+ `attribute` 別名です<xref:System.AttributeUsageAttribute?displayProperty=fullName>(AttributeAttribute されません。 これは、属性の名前付け規則の例外)。  
   
 ## <a name="requirements"></a>要件  
   
@@ -153,8 +152,8 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 |||  
 |-|-|  
-|**対象**|`ref` **クラス**、 **ref 構造体**|  
-|**反復可能**|×|  
+|**対象**|**ref クラス**、 **ref 構造体**|  
+|**反復可能**|いいえ|  
 |**必要な属性**|なし|  
 |**無効な属性**|なし|  
   
@@ -162,7 +161,7 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 ## <a name="example"></a>例  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_4.cpp  
 // compile with: /c /clr  
 using namespace System;  
@@ -176,9 +175,9 @@ ref class MyClass {};
 ```  
   
 ## <a name="example"></a>例  
- `Inherited`名前付き引数には、基本クラスに適用されるカスタム属性が派生クラスのリフレクションで示されるかどうかを指定します。  
+ `Inherited`名前付き引数は基本クラスに適用されるカスタム属性が派生クラスのリフレクションで示されるかどうかを指定します。  
   
-```  
+```cpp  
 // cpp_attr_ref_attribute_5.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -218,4 +217,4 @@ int main() {
   
 ## <a name="see-also"></a>関連項目  
  [属性のアルファベット順リファレンス](../windows/attributes-alphabetical-reference.md)   
- [カスタム属性](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [カスタム属性](http://msdn.microsoft.com/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

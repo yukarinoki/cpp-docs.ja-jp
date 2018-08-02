@@ -1,5 +1,5 @@
 ---
-title: tile_static キーワード |Microsoft ドキュメント
+title: tile_static キーワード |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f905904668aaba0e16aa20b646085e8e1a973d4
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32422164"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461876"
 ---
 # <a name="tilestatic-keyword"></a>tile_static キーワード
-`tile_static` キーワードは、スレッドのタイル内のすべてのスレッドによってアクセスできる変数を宣言するために使用されます。 実行が宣言の位置を達したときに変数の有効期間が開始し、カーネル関数の復帰時に終了します。 タイルを使用する方法については、次を参照してください。[を使用してタイル](../parallel/amp/using-tiles.md)です。  
+**Tile_static**スレッドのタイルのすべてのスレッドによってアクセスできる変数を宣言するキーワードを使用します。 実行が宣言の位置を達したときに変数の有効期間が開始し、カーネル関数の復帰時に終了します。 タイルの使用に関する詳細については、次を参照してください。[を使用してタイル](../parallel/amp/using-tiles.md)します。  
   
- `tile_static` キーワードには、次の制限があります。  
+ **Tile_static**キーワードには、次の制限事項。  
   
 -   `restrict(amp)` 修飾子を持つ関数内の変数でのみ使用できます。  
   
 -   ポインターまたは参照型の変数では使用できません。  
   
--   `tile_static` 変数には、初期化子を含めることができません。 既定のコンストラクターおよびデストラクターは自動的に呼び出されません。  
+-   A **tile_static**変数は初期化子を含めることはできません。 既定のコンストラクターおよびデストラクターは自動的に呼び出されません。  
   
--   初期化されていない `tile_static` 変数の値は未定義です。  
+-   初期化されていない値**tile_static**変数が定義されていません。  
   
--   `tile_static` に対する非タイル呼び出しをルートとする呼び出し先内で `parallel_for_each` 変数が宣言されている場合、警告が生成されます。変数の動作は未定義です。  
+-   場合、 **tile_static**非タイル呼び出しによってルートと呼び出し先で変数が宣言されている`parallel_for_each`警告が生成され、変数の動作は未定義です。  
   
 ## <a name="example"></a>例  
- 次の例では、タイル内で複数のスレッドにわたりデータを蓄積するために、`tile_static` 変数を使用する方法を示しています。  
+ 次の例はどのように、 **tile_static**タイル内の複数のスレッド間でデータを蓄積する変数を使用できます。  
   
 ```cpp  
 // Sample data:  
@@ -150,7 +150,6 @@ for (int i = 0; i < 4; i++) {
 // 3 3 8 8 3 3  
 // 5 5 2 2 4 4  
 // 5 5 2 2 4 4  
-  
 ```  
   
 ## <a name="see-also"></a>関連項目  

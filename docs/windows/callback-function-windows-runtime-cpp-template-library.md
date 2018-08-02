@@ -1,5 +1,5 @@
 ---
-title: コールバック関数 (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft ドキュメント
+title: コールバック関数 (Windows ランタイム C++ テンプレート ライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 27d89f60f27c71cec0f158375805e3e8487fd7a6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 92cb3dd6d21f2ca7e4a119d110510d91085f38da
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33860854"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461493"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>コールバック関数 (Windows ランタイム C++ テンプレート ライブラリ)
 メンバー関数がコールバック メソッドであるオブジェクトを作成します。  
@@ -199,56 +199,56 @@ ComPtr<TDelegateInterface> Callback(
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `TDelegateInterface`  
+ *TDelegateInterface*  
  イベントが発生したときに呼び出すデリゲートのインターフェイスを指定するテンプレート パラメーター。  
   
- `TCallback`  
+ *TCallback*  
  オブジェクトとそのコールバック メンバー関数を表すオブジェクト型を指定するテンプレート パラメーター。  
   
- `TCallbackObject`  
+ *TCallbackObject*  
  イベントが発生したときに呼び出されるメソッドをメンバー関数に持つオブジェクトを指定するテンプレート パラメーター。  
   
- `TArg1`  
+ *TArg1*  
  最初のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg2`  
+ *TArg2*  
  2 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg3`  
+ *TArg3*  
  3 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg4`  
+ *TArg4*  
  4 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg5`  
+ *TArg5*  
  5 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg6`  
+ *TArg6*  
  6 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg7`  
+ *TArg7*  
  7 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg8`  
+ *TArg8*  
  8 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `TArg9`  
+ *TArg9*  
  9 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。  
   
- `callback`  
+ *コールバック*  
  コールバック オブジェクトおよびそのメンバー関数を表すオブジェクト。  
   
- `object`  
+ *object*  
  イベントが発生したときにメンバー関数が呼び出されるオブジェクト。  
   
- `method`  
+ *method*  
  イベントが発生したときに呼び出すメンバー関数。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたコールバック メソッドをメンバー関数に持つオブジェクト。  
   
-## <a name="remarks"></a>コメント  
- デリゲート オブジェクトのベースは、IInspectable ではなく、IUnknown である必要があります。  
+## <a name="remarks"></a>Remarks  
+ デリゲート オブジェクトの基本である必要があります`IUnknown`ではなく、`IInspectable`します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** event.h  

@@ -1,5 +1,5 @@
 ---
-title: Criticalsection::isvalid メソッド |Microsoft ドキュメント
+title: Criticalsection::isvalid メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d004fd43a6cad78df62a19e5b703867a990861f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: add94320728ad21d07a1953f14ac911883580982
+ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33870375"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39461237"
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid メソッド
 現在の重要なセクションが有効かどうかを示します。  
@@ -34,7 +34,7 @@ bool IsValid() const;
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 既定では、常に返します`true`です。  
+ 既定では、常に返します**true**します。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** corewrappers.h  
